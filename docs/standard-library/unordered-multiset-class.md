@@ -1,0 +1,131 @@
+---
+title: "unordered_multiset (Clase) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "tr1::unordered_multiset"
+  - "std::tr1::unordered_multiset"
+  - "unordered_multiset"
+  - "std.tr1.unordered_multiset"
+  - "unordered_set/std::tr1::unordered_multiset"
+  - "tr1.unordered_multiset"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "unordered_multiset (clase)"
+  - "unordered_multiset (clase) [TR1]"
+ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
+caps.latest.revision: 24
+caps.handback.revision: 14
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# unordered_multiset (Clase)
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos de tipo `const Key`.  La secuencia está ordenada débilmente por una función hash, que divide la secuencia en un conjunto ordenado subsecuencias denominadas depósitos.  Dentro de cada depósito una función de comparación determina si algún par de elementos tiene una ordenación equivalente.  Cada elemento actúa como clave de ordenación y como valor.  La secuencia se representan de tal forma que permite la búsqueda, inserción y eliminación de un elemento arbitrario con una serie de operaciones que pueden ser independientes del número de elementos de la secuencia \(tiempo constante\), al menos cuando todos los depósitos tienen una longitud aproximadamente igual.  En el peor de los casos, cuando todos los elementos están en un depósito, el número de operaciones es proporcional al número de elementos de la secuencia \(tiempo lineal\).  Además, la inserción de un elemento no invalida ningún iterador y al quitar un elemento solo se invalidan los iteradores que apuntan al elemento quitado.  
+  
+## Sintaxis  
+  
+```  
+template<class Key,  
+    class Hash = std::hash<Key>,  
+    class Pred = std::equal_to<Key>,  
+    class Alloc = std::allocator<Key> >  
+    class unordered_multiset;  
+```  
+  
+#### Parámetros  
+  
+|||  
+|-|-|  
+|Parámetro|Descripción|  
+|`Key`|El tipo de clave.|  
+|`Hash`|El tipo de objeto de la función hash.|  
+|`Pred`|El tipo de objeto de función de comparación de igualdad.|  
+|`Alloc`|Clase de asignador.|  
+  
+## Miembros  
+  
+|||  
+|-|-|  
+|Definición de tipo|Descripción|  
+|[unordered\_multiset::allocator\_type](../Topic/unordered_multiset::allocator_type.md)|El tipo de un asignador para administrar el almacenamiento.|  
+|[unordered\_multiset::const\_iterator](../Topic/unordered_multiset::const_iterator.md)|El tipo de un iterador constante para la secuencia controlada.|  
+|[unordered\_multiset::const\_local\_iterator](../Topic/unordered_multiset::const_local_iterator.md)|El tipo de un iterador de depósito constante para la secuencia controlada.|  
+|[unordered\_multiset::const\_pointer](../Topic/unordered_multiset::const_pointer.md)|El tipo de un puntero constante a un elemento.|  
+|[unordered\_multiset::const\_reference](../Topic/unordered_multiset::const_reference.md)|El tipo de una referencia constante a un elemento.|  
+|[unordered\_multiset::difference\_type](../Topic/unordered_multiset::difference_type.md)|El tipo de una distancia con signo entre dos elementos.|  
+|[unordered\_multiset::hasher](../Topic/unordered_multiset::hasher.md)|El tipo de la función hash.|  
+|[unordered\_multiset::iterator](../Topic/unordered_multiset::iterator.md)|El tipo de un iterador para la secuencia controlada.|  
+|[unordered\_multiset::key\_equal](../Topic/unordered_multiset::key_equal.md)|El tipo de la función de comparación.|  
+|[unordered\_multiset::key\_type](../Topic/unordered_multiset::key_type.md)|El tipo de una clave de ordenación.|  
+|[unordered\_multiset::local\_iterator](../Topic/unordered_multiset::local_iterator.md)|El tipo de un iterador de depósito para la secuencia controlada.|  
+|[unordered\_multiset::pointer](../Topic/unordered_multiset::pointer.md)|El tipo de un puntero a un elemento.|  
+|[unordered\_multiset::reference](../Topic/unordered_multiset::reference.md)|El tipo de una referencia a un elemento.|  
+|[unordered\_multiset::size\_type](../Topic/unordered_multiset::size_type.md)|El tipo de una distancia sin signo entre dos elementos.|  
+|[unordered\_multiset::value\_type](../Topic/unordered_multiset::value_type.md)|El tipo de un elemento.|  
+  
+|||  
+|-|-|  
+|Función miembro|Descripción|  
+|[unordered\_multiset::begin](../Topic/unordered_multiset::begin.md)|Designa el principio de la secuencia controlada.|  
+|[unordered\_multiset::bucket](../Topic/unordered_multiset::bucket.md)|Obtiene el número de depósito para un valor de clave.|  
+|[unordered\_multiset::bucket\_count](../Topic/unordered_multiset::bucket_count.md)|Obtiene el número de depósitos.|  
+|[unordered\_multiset::bucket\_size](../Topic/unordered_multiset::bucket_size.md)|Obtiene el tamaño de un depósito.|  
+|[unordered\_multiset::cbegin](../Topic/unordered_multiset::cbegin.md)|Designa el principio de la secuencia controlada.|  
+|[unordered\_multiset::cend](../Topic/unordered_multiset::cend.md)|Designa el final de la secuencia controlada.|  
+|[unordered\_multiset::clear](../Topic/unordered_multiset::clear.md)|Quita todos los elementos.|  
+|[unordered\_multiset::count](../Topic/unordered_multiset::count.md)|Busca el número de elementos que coinciden con una clave especificada.|  
+|[unordered\_multiset::emplace](../Topic/unordered_multiset::emplace.md)|Agrega un elemento construido en contexto.|  
+|[unordered\_multiset::emplace\_hint](../Topic/unordered_multiset::emplace_hint.md)|Agrega un elemento construido en contexto, con sugerencia.|  
+|[unordered\_multiset::empty](../Topic/unordered_multiset::empty.md)|Comprueba si no hay ningún elemento presente.|  
+|[unordered\_multiset::end](../Topic/unordered_multiset::end.md)|Designa el final de la secuencia controlada.|  
+|[unordered\_multiset::equal\_range](../Topic/unordered_multiset::equal_range.md)|Busca el intervalo que coincide con una clave especificada.|  
+|[unordered\_multiset::erase](../Topic/unordered_multiset::erase.md)|Quita los elementos de las posiciones especificadas.|  
+|[unordered\_multiset::find](../Topic/unordered_multiset::find.md)|Busca un elemento que coincide con una clave especificada.|  
+|[unordered\_multiset::get\_allocator](../Topic/unordered_multiset::get_allocator.md)|Obtiene el objeto de asignador almacenado.|  
+|[unordered\_multiset::hash\_function](../Topic/unordered_multiset::hash_function.md)|Obtiene el objeto de función hash almacenado.|  
+|[unordered\_multiset::insert](../Topic/unordered_multiset::insert.md)|Agrega elementos.|  
+|[unordered\_multiset::key\_eq](../Topic/unordered_multiset::key_eq.md)|Obtiene el objeto de función de comparación almacenado.|  
+|[unordered\_multiset::load\_factor](../Topic/unordered_multiset::load_factor.md)|Cuenta los elementos promedio por depósito.|  
+|[unordered\_multiset::max\_bucket\_count](../Topic/unordered_multiset::max_bucket_count.md)|Obtiene el número máximo de depósitos.|  
+|[unordered\_multiset::max\_load\_factor](../Topic/unordered_multiset::max_load_factor.md)|Obtiene o establece los elementos máximos por depósito.|  
+|[unordered\_multiset::max\_size](../Topic/unordered_multiset::max_size.md)|Obtiene el tamaño máximo de la secuencia controlada.|  
+|[unordered\_multiset::rehash](../Topic/unordered_multiset::rehash.md)|Recompila la tabla hash.|  
+|[unordered\_multiset::size](../Topic/unordered_multiset::size.md)|Cuenta el número de elementos.|  
+|[unordered\_multiset::swap](../Topic/unordered_multiset::swap.md)|Intercambia el contenido de dos contenedores.|  
+|[unordered\_multiset::unordered\_multiset](../Topic/unordered_multiset::unordered_multiset.md)|Construye un objeto contenedor.|  
+  
+|||  
+|-|-|  
+|Operador|Descripción|  
+|[unordered\_multiset::operator\=](../Topic/unordered_multiset::operator=.md)|Copia una tabla hash.|  
+  
+## Comentarios  
+ El objeto ordena la secuencia que controla llamando a dos objetos almacenados, un objeto de función de comparación de tipo [unordered\_multiset::key\_equal](../Topic/unordered_multiset::key_equal.md) y un objeto de función hash de tipo [unordered\_multiset::hasher](../Topic/unordered_multiset::hasher.md).  Se tiene acceso al primer objeto almacenado llamando a la función miembro [unordered\_multiset::key\_eq](../Topic/unordered_multiset::key_eq.md)`()`; y se tiene acceso al segundo objeto almacenado llamando a la función miembro [unordered\_multiset::hash\_function](../Topic/unordered_multiset::hash_function.md)`()`.  Concretamente, para todos los valores `X` e `Y` de tipo `Key`, la llamada a `key_eq()(X, Y)` solo devuelve true si los dos valores de argumento tienen una ordenación equivalente; la llamada a `hash_function()(keyval)` produce una distribución de valores de tipo `size_t`.  A diferencia de la clase de plantilla [unordered\_set \(Clase\)](../standard-library/unordered-set-class.md), un objeto de clase de plantilla `unordered_multiset` no garantiza que `key_eq()(X, Y)` es siempre false para dos elementos cualesquiera de la secuencia controlada. \(No es necesario que las claves sean únicas\).  
+  
+ El objeto también almacena un factor de carga máxima, que especifica el número promedio deseado máximo de elementos por depósito.  Si la inserción de un elemento hace que [unordered\_multiset::load\_factor](../Topic/unordered_multiset::load_factor.md)`()` supere el factor de carga máxima, el contenedor aumenta el número de depósitos y recompila la tabla hash según sea necesario.  
+  
+ El orden real de los elementos de la secuencia controlada depende de la función hash, la función de comparación, el orden de inserción, el factor de carga máxima y el número actual de depósitos.  En general no se puede predecir el orden de los elementos de la secuencia controlada.  Sin embargo, siempre se puede asegurar que cualquier subconjunto de elementos que tengan una ordenación equivalente son adyacentes en la secuencia controlada.  
+  
+ El objeto asigna y libera almacenamiento para la secuencia que controla a través de un objeto asignador almacenado de tipo [unordered\_multiset::allocator\_type](../Topic/unordered_multiset::allocator_type.md).  Ese objeto de asignador debe tener la misma interfaz externa que un objeto de clase de plantilla `allocator`.  Tenga en cuenta que el objeto de asignador almacenado no se copia cuando se asigna el objeto contenedor.  
+  
+## Requisitos  
+ **Encabezado:** \<unordered\_set\>  
+  
+ **Espacio de nombres:** std  
+  
+## Vea también  
+ [\<unordered\_set\>](../standard-library/unordered-set.md)   
+ [Contenedores](../cpp/containers-modern-cpp.md)   
+ [Seguridad para subprocesos en la biblioteca estándar de C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Biblioteca de plantillas estándar](../misc/standard-template-library.md)

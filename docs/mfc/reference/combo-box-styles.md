@@ -1,0 +1,84 @@
+---
+title: "Estilos de cuadro combinado | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CBS_LOWERCASE"
+  - "CBS_SORT"
+  - "CBS_OWNERDRAWVARIABLE"
+  - "CBS_OEMCONVERT"
+  - "CBS_AUTOHSCROLL"
+  - "CBS_NOINTEGRALHEIGHT"
+  - "CBS_SIMPLE"
+  - "CBS_DROPDOWNLIST"
+  - "CBS_DROPDOWN"
+  - "CBS_UPPERCASE"
+  - "CBS_HASSTRINGS"
+  - "CBS_DISABLENOSCROLL"
+  - "CBS_OWNERDRAWFIXED"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "CBS_OWNERDRAWVARIABLE (constante)"
+  - "CBS_NOINTEGRALHEIGHT (constante)"
+  - "CBS_SIMPLE (constante)"
+  - "CBS_AUTOHSCROLL (constante)"
+  - "CBS_OEMCONVERT (constante)"
+  - "CBS_DISABLENOSCROLL (constante)"
+  - "CBS_HASSTRINGS (constante)"
+  - "CBS_LOWERCASE (constante)"
+  - "CBS_SORT (constante)"
+  - "CBS_DROPDOWN (constante)"
+  - "CBS_OWNERDRAWFIXED (constante)"
+  - "cuadros combinados, estilos"
+  - "CBS_UPPERCASE (constante)"
+  - "CBS_DROPDOWNLIST (constante)"
+ms.assetid: d21a5023-e6a2-495b-a6bd-010a515cbc63
+caps.latest.revision: 12
+caps.handback.revision: 7
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# Estilos de cuadro combinado
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+Los siguientes estilos de cuadro combinado están disponibles en MFC.  
+  
+-   **CBS\_AUTOHSCROLL** Desplaza automáticamente el texto del control de edición hacia la derecha cuando el usuario escribe un carácter al final de la línea. Si no se establece este estilo, solo se permite el texto que entre dentro del límite rectangular.  
+  
+-   **CBS\_DISABLENOSCROLL** El cuadro de lista muestra una barra de desplazamiento vertical deshabilitada si el cuadro de lista no contiene suficientes elementos por los que desplazarse. Sin este estilo, la barra de desplazamiento está oculta cuando el cuadro de lista no contiene suficientes elementos.  
+  
+-   **CBS\_DROPDOWN** Similar a **CBS\_SIMPLE**, salvo que el cuadro de lista no se muestra a menos que el usuario seleccione un icono junto al control de edición.  
+  
+-   **CBS\_DROPDOWNLIST** Similar a **CBS\_DROPDOWN**, salvo que el control de edición se reemplaza por un elemento de texto estático que muestra la selección actual del cuadro de lista.  
+  
+-   **CBS\_HASSTRINGS** Un cuadro combinado dibujado por el propietario contiene elementos que se componen de cadenas. El cuadro combinado conserva la memoria y los punteros de las cadenas, de modo que la aplicación puede usar la función miembro `GetText` para recuperar el texto de un elemento determinado.  
+  
+-   **CBS\_LOWERCASE** Pasa a minúsculas todo el texto tanto del campo de selección como de la lista.  
+  
+-   **CBS\_NOINTEGRALHEIGHT** Especifica que el tamaño del cuadro combinado será exactamente igual al tamaño especificado por la aplicación cuando creó el cuadro combinado. Normalmente, Windows aplica un tamaño a los cuadros combinados que hace que estos no muestren elementos parciales.  
+  
+-   **CBS\_OEMCONVERT** El texto escrito en el control de edición del cuadro combinado se convierte del juego de caracteres ANSI al juego de caracteres OEM y, de nuevo, a ANSI. Esto garantiza que los caracteres se van a convertir correctamente cuando la aplicación llame a la función `AnsiToOem` de Windows para convertir una cadena ANSI del cuadro combinado en caracteres OEM. Este estilo es de máxima utilidad en los cuadros combinados que contienen nombres de archivo y es válido únicamente para los cuadros combinados creados con los estilos **CBS\_SIMPLE** o **CBS\_DROPDOWN**.  
+  
+-   **CBS\_OWNERDRAWFIXED** El propietario del cuadro de lista es responsable de dibujar su contenido. Los elementos del cuadro de lista tienen todos la misma altura.  
+  
+-   **CBS\_OWNERDRAWVARIABLE** El propietario del cuadro de lista es responsable de dibujar su contenido. Los elementos del cuadro de lista tienen una altura variable.  
+  
+-   **CBS\_SIMPLE** El cuadro de lista se muestra en todo momento. La selección actual del cuadro de lista se muestra en el control de edición.  
+  
+-   **CBS\_SORT** Ordena automáticamente las cadenas especificadas en el cuadro de lista.  
+  
+-   **CBS\_UPPERCASE** Pasa a mayúsculas todo el texto tanto del campo de selección como de la lista.  
+  
+## Vea también  
+ [Estilos utilizados por MFC](../../mfc/reference/styles-used-by-mfc.md)   
+ [CComboBox::Create](../Topic/CComboBox::Create.md)   
+ [Combo Box Styles](_win32_combo_box_styles)

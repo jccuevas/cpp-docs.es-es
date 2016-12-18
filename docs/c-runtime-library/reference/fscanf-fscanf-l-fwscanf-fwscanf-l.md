@@ -1,0 +1,200 @@
+---
+title: "fscanf, _fscanf_l, fwscanf, _fwscanf_l | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+apiname: 
+  - "fscanf"
+  - "_fwscanf_l"
+  - "_fscanf_l"
+  - "fwscanf"
+apilocation: 
+  - "msvcrt.dll"
+  - "msvcr80.dll"
+  - "msvcr90.dll"
+  - "msvcr100.dll"
+  - "msvcr100_clr0400.dll"
+  - "msvcr110.dll"
+  - "msvcr110_clr0400.dll"
+  - "msvcr120.dll"
+  - "msvcr120_clr0400.dll"
+  - "ucrtbase.dll"
+apitype: "DLLExport"
+f1_keywords: 
+  - "fscanf"
+  - "fwscanf"
+  - "_ftscanf_l"
+  - "_fwscanf_l"
+  - "_ftscanf"
+  - "_fscanf_l"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "_fscanf_l (función)"
+  - "_ftscanf (función)"
+  - "_ftscanf_l (función)"
+  - "_fwscanf_l (función)"
+  - "datos [CRT], leer secuencias"
+  - "datos con formato [C++], leer secuencias"
+  - "fscanf (función)"
+  - "fscanf_l (función)"
+  - "ftscanf (función)"
+  - "ftscanf_l (función)"
+  - "fwscanf (función)"
+  - "fwscanf_l (función)"
+  - "secuencias [C++], leer datos con formato de"
+ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
+caps.latest.revision: 24
+caps.handback.revision: 22
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# fscanf, _fscanf_l, fwscanf, _fwscanf_l
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+Lea los datos con formato de una secuencia.  Hay disponibles versiones más seguras de estas funciones; vea [fscanf\_s, \_fscanf\_s\_l, fwscanf\_s, \_fwscanf\_s\_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md).  
+  
+## Sintaxis  
+  
+```  
+int fscanf(   
+   FILE *stream,  
+   const char *format [,  
+   argument ]...   
+);  
+int _fscanf_l(   
+   FILE *stream,  
+   const char *format,  
+   locale_t locale [,  
+   argument ]...   
+);  
+int fwscanf(   
+   FILE *stream,  
+   const wchar_t *format [,  
+   argument ]...   
+);  
+int _fwscanf_l(   
+   FILE *stream,  
+   const wchar_t *format,  
+   locale_t locale [,  
+   argument ]...   
+);  
+```  
+  
+#### Parámetros  
+ `stream`  
+ Puntero a la estructura `FILE`.  
+  
+ `format`  
+ Cadena de control de formato.  
+  
+ `argument`  
+ Argumentos opcionales.  
+  
+ `locale`  
+ Configuración regional que se va a usar.  
+  
+## Valor devuelto  
+ Cada una de estas funciones devuelve el número de campos convierten y asignados correctamente; el valor devuelto no incluye los campos que se leyeron pero no asignados.  Un valor devuelto de 0 indica que no se ha asignado ningún campo.  Si se produce un error, o si se llega al final del flujo de archivo antes de la primera conversión, el valor devuelto es `EOF` para `fscanf` y `fwscanf`.  
+  
+ Estas funciones validan sus parámetros.  Si `stream` o `format` es un puntero NULL, se invoca el controlador no válido de parámetro, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, estas funciones devuelven `EOF` y establecen `errno` en `EINVAL`.  
+  
+## Comentarios  
+ La función de `fscanf` lee datos de la posición actual de `stream` en las ubicaciones especificadas por `argument` \(si existe\).  Cada `argument` debe ser un puntero a una variable de un tipo que se corresponda con un especificador de tipo en `format`.  `format` controla la interpretación de los campos de entrada y tiene el mismo formato y función que el argumento de `format` para `scanf`; vea [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) para obtener una descripción de *`format`.*  
+  
+ `fwscanf` es una versión con caracteres anchos de `fscanf`; el argumento de formato para `fwscanf` es una cadena de caracteres anchos.  Estas funciones se comportan exactamente igual si la secuencia se abre en modo ANSI.  `fscanf` no admite actualmente la entrada desde un flujo UNICODE.  
+  
+ Las versiones de estas funciones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.  
+  
+### Asignaciones de rutina de texto genérico  
+  
+|Rutina TCHAR.H|\_UNICODE y \_MBCS no definidos|\_MBCS definido|\_UNICODE definido|  
+|--------------------|-------------------------------------|---------------------|------------------------|  
+|`_ftscanf`|`fscanf`|`fscanf`|`fwscanf`|  
+|`_ftscanf_l`|`_fscanf_l`|`_fscanf_l`|`_fwscanf_l`|  
+  
+ Para obtener más información, vea [Campos de especificación de formato: funciones scanf y wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
+  
+## Requisitos  
+  
+|Función|Encabezado necesario|  
+|-------------|--------------------------|  
+|`fscanf`, `_fscanf_l`|\<stdio.h\>|  
+|`fwscanf`, `_fwscanf_l`|\<stdio.h\> o \<wchar.h\>|  
+  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+  
+## Ejemplo  
+  
+```  
+// crt_fscanf.c  
+// compile with: /W3  
+// This program writes formatted  
+// data to a file. It then uses fscanf to  
+// read the various data back from the file.  
+  
+#include <stdio.h>  
+  
+FILE *stream;  
+  
+int main( void )  
+{  
+   long l;  
+   float fp;  
+   char s[81];  
+   char c;  
+  
+   if( fopen_s( &stream, "fscanf.out", "w+" ) != 0 )  
+      printf( "The file fscanf.out was not opened\n" );  
+   else  
+   {  
+      fprintf( stream, "%s %ld %f%c", "a-string",   
+               65000, 3.14159, 'x' );  
+      // Security caution!  
+      // Beware loading data from a file without confirming its size,  
+      // as it may lead to a buffer overrun situation.  
+  
+      // Set pointer to beginning of file:  
+      fseek( stream, 0L, SEEK_SET );  
+  
+      // Read data back from file:  
+      fscanf( stream, "%s", s );   // C4996  
+      fscanf( stream, "%ld", &l ); // C4996  
+  
+      fscanf( stream, "%f", &fp ); // C4996  
+      fscanf( stream, "%c", &c );  // C4996  
+      // Note: fscanf is deprecated; consider using fscanf_s instead  
+  
+      // Output data read:   
+      printf( "%s\n", s );  
+      printf( "%ld\n", l );  
+      printf( "%f\n", fp );  
+      printf( "%c\n", c );  
+  
+      fclose( stream );  
+   }  
+}  
+```  
+  
+  **a\-string**  
+**65000**  
+**3.141590**  
+**x**   
+## Equivalente en .NET Framework  
+ [System::IO::StreamReader::ReadLine](https://msdn.microsoft.com/en-us/library/system.io.streamreader.readline.aspx). Vea también los métodos `Parse`, como [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
+  
+## Vea también  
+ [E\/S de secuencia](../../c-runtime-library/stream-i-o.md)   
+ [\_cscanf, \_cscanf\_l, \_cwscanf, \_cwscanf\_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
+ [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [fscanf\_s, \_fscanf\_s\_l, fwscanf\_s, \_fwscanf\_s\_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)

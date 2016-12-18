@@ -1,0 +1,40 @@
+---
+title: "Operandos y expresiones | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "expresiones [C++], sintaxis"
+  - "operandos"
+  - "operandos, definición"
+ms.assetid: 8453b095-a017-4c70-9a64-e3b2bd1e35e5
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# Operandos y expresiones
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Un "operando" es una entidad en la que actúa un operador.  Una "expresión" es una secuencia de operadores y operandos que realiza cualquier combinación de estas acciones:  
+  
+-   Calcula un valor  
+  
+-   Designa un objeto o una función  
+  
+-   Genera efectos secundarios  
+  
+ Los operandos de C incluyen constantes, identificadores, cadenas, llamada de función, expresiones subíndice, expresiones de selección de miembro, y expresiones complejas que se forman combinando operandos con operadores o incluyendo operandos entre paréntesis.  La sintaxis de estos operandos se proporciona en [Expresiones primarias](../c-language/c-primary-expressions.md).  
+  
+## Vea también  
+ [Expresiones y asignaciones](../c-language/expressions-and-assignments.md)

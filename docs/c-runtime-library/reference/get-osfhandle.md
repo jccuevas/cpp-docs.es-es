@@ -1,0 +1,84 @@
+---
+title: "_get_osfhandle | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+apiname: 
+  - "_get_osfhandle"
+apilocation: 
+  - "msvcrt.dll"
+  - "msvcr80.dll"
+  - "msvcr90.dll"
+  - "msvcr100.dll"
+  - "msvcr100_clr0400.dll"
+  - "msvcr110.dll"
+  - "msvcr110_clr0400.dll"
+  - "msvcr120.dll"
+  - "msvcr120_clr0400.dll"
+  - "ucrtbase.dll"
+  - "api-ms-win-crt-stdio-l1-1-0.dll"
+apitype: "DLLExport"
+f1_keywords: 
+  - "get_osfhandle"
+  - "_get_osfhandle"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "sistemas operativos, obtener identificadores de archivo"
+  - "get_osfhandle (función)"
+  - "_get_osfhandle (función)"
+  - "identificadores de archivo [C++], sistema operativo"
+ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
+caps.latest.revision: 14
+caps.handback.revision: 14
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# _get_osfhandle
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+Recupera el identificador de archivo del sistema operativo que está asociado al archivo especificado descriptor.  
+  
+## Sintaxis  
+  
+```  
+intptr_t _get_osfhandle(   
+   int fd   
+);  
+```  
+  
+#### Parámetros  
+ `fd`  
+ Un archivo existente descriptor.  
+  
+## Valor devuelto  
+ Un identificador de archivo del sistema operativo si `fd` es válido.  Si no, se invoca el controlador no válido de parámetro, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, esta función devuelve `INVALID_HANDLE_VALUE` \(– 1\) y establece `errno` a `EBADF`, que indica un identificador de archivo no válido.  
+  
+## Comentarios  
+ Para cerrar un archivo abierto con `_get_osfhandle`, llama a `_close`.  El identificador subyacente también es cerrado por una llamada a `_close`, por lo que no es necesario llamar a la función `CloseHandle` Win32 en el identificador original.  
+  
+## Requisitos  
+  
+|Rutina|Encabezado necesario|  
+|------------|--------------------------|  
+|`_get_osfhandle`|\<io.h\>|  
+  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+  
+## Equivalente en .NET Framework  
+ No es aplicable Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+  
+## Vea también  
+ [Control de archivos](../../c-runtime-library/file-handling.md)   
+ [\_close](../../c-runtime-library/reference/close.md)   
+ [\_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [\_dup, \_dup2](../../c-runtime-library/reference/dup-dup2.md)   
+ [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
