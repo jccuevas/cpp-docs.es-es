@@ -1,8 +1,7 @@
 ---
 title: "Conversiones aritm&#233;ticas habituales | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "conversiones aritméticas [C++]"
   - "operadores aritméticos [C++], conversiones de tipos"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "conversión de tipos [C++], aritméticos"
 ms.assetid: bfa49803-0efd-45d0-b987-111412a140d7
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Conversiones aritm&#233;ticas habituales
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

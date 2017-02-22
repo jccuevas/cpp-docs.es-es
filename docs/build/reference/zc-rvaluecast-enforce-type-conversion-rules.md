@@ -1,8 +1,7 @@
 ---
 title: "/Zc:rvalueCast (Exigir reglas de conversi&#243;n de tipos) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "-Zc (opción del compilador) (C++)"
 ms.assetid: 7825277d-e565-4c48-b0fb-76ac0b0c6e38
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /Zc:rvalueCast (Exigir reglas de conversi&#243;n de tipos)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

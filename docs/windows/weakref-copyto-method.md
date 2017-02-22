@@ -1,8 +1,7 @@
 ---
 title: "WeakRef::CopyTo (M&#233;todo) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CopyTo (método)"
 ms.assetid: f83de6da-b3d4-41a6-9845-cd725ecf3b75
 caps.latest.revision: 5
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # WeakRef::CopyTo (M&#233;todo)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

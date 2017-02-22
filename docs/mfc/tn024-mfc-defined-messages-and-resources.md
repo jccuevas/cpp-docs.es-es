@@ -1,8 +1,7 @@
 ---
 title: "TN024: Mensajes y recursos definidos por MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "mensajes de Windows [C++], definidos por MFC"
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # TN024: Mensajes y recursos definidos por MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

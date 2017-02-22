@@ -1,8 +1,7 @@
 ---
 title: "Servidores de automatizaci&#243;n: Problemas de duraci&#243;n de objetos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "servidores, duración de automatización"
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Servidores de automatizaci&#243;n: Problemas de duraci&#243;n de objetos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

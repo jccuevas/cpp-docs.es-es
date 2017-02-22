@@ -1,8 +1,7 @@
 ---
 title: "/Yd (Incluir informaci&#243;n de depuraci&#243;n en un archivo objeto) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-Yd (opción del compilador) [C++]"
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # /Yd (Incluir informaci&#243;n de depuraci&#243;n en un archivo objeto)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

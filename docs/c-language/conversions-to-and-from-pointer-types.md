@@ -1,8 +1,7 @@
 ---
 title: "Conversiones entre tipos de puntero | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "conversiones, puntero"
   - "punteros, convertir"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "punteros void"
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Conversiones entre tipos de puntero
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

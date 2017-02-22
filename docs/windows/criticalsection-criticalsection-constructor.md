@@ -1,8 +1,7 @@
 ---
 title: "CriticalSection::CriticalSection (Constructor) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CriticalSection, constructor"
 ms.assetid: 930b89be-4d74-46bd-8879-5dd4d15bcbd0
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # CriticalSection::CriticalSection (Constructor)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "P&#225;gina de propiedades General (Proyecto) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -37,10 +36,10 @@ helpviewer_keywords:
   - "Unicode, crear una configuración de compilación en C++"
 ms.assetid: 593b383c-cd0f-4dcd-ad65-9ec9b4b19c45
 caps.latest.revision: 30
-caps.handback.revision: 30
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # P&#225;gina de propiedades General (Proyecto)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

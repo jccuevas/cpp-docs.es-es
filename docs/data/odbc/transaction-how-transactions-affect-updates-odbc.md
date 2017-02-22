@@ -1,8 +1,7 @@
 ---
 title: "Transacci&#243;n: C&#243;mo afectan las transacciones a las actualizaciones (ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "transacciones, actualizar conjuntos de registros"
 ms.assetid: 9e00bbf4-e9fb-4332-87fc-ec8ac61b3f68
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Transacci&#243;n: C&#243;mo afectan las transacciones a las actualizaciones (ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

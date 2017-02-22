@@ -1,8 +1,7 @@
 ---
 title: "Funciones establecidas como valor predeterminado y eliminadas expl&#237;citamente | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Funciones establecidas como valor predeterminado y eliminadas expl&#237;citamente
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Otros manipuladores de flujos de salida con un argumento | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "flujos de salida, manipuladores de un argumento"
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
 caps.latest.revision: 11
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Otros manipuladores de flujos de salida con un argumento
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

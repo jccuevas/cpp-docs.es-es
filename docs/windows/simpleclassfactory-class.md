@@ -1,8 +1,7 @@
 ---
 title: "SimpleClassFactory (Clase) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "SimpleClassFactory (clase)"
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # SimpleClassFactory (Clase)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

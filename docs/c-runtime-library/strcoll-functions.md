@@ -1,8 +1,7 @@
 ---
 title: "strcoll (Funciones) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,7 +20,6 @@ f1_keywords:
   - "strcoll"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "páginas de códigos, usar para comparaciones de cadenas"
   - "strcoll (función)"
@@ -29,10 +27,10 @@ helpviewer_keywords:
   - "cadenas [C++], comparar por página de códigos"
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # strcoll (Funciones)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

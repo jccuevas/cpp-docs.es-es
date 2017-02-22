@@ -1,8 +1,7 @@
 ---
 title: "/GH (Habilitar la funci&#243;n de enlace _pexit) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-Gh (opción del compilador) [C++]"
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /GH (Habilitar la funci&#243;n de enlace _pexit)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

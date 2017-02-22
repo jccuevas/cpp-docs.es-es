@@ -1,8 +1,7 @@
 ---
 title: "EventSource::addRemoveLock_ (Miembro de datos) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "addRemoveLock_ (miembro de datos)"
 ms.assetid: e2d69256-4891-4aad-ad0b-76479c0bb076
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # EventSource::addRemoveLock_ (Miembro de datos)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

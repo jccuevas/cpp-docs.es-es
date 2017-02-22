@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo simplifica WinInet la creaci&#243;n de aplicaciones cliente de Internet | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "WinInet (clases), frente a WinSock"
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # C&#243;mo simplifica WinInet la creaci&#243;n de aplicaciones cliente de Internet
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Operadores de multiplicaci&#243;n y el operador de m&#243;dulo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "operadores [C++], multiplicativo"
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Operadores de multiplicaci&#243;n y el operador de m&#243;dulo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

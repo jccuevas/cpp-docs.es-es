@@ -1,8 +1,7 @@
 ---
 title: "Vinculaci&#243;n en nombres con &#225;mbito de clase | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "ámbito [C++], reglas de vinculación"
 ms.assetid: 45275ff3-6e94-4967-82c8-ba540ef4da28
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Vinculaci&#243;n en nombres con &#225;mbito de clase
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

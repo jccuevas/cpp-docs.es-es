@@ -1,8 +1,7 @@
 ---
 title: "Saltar a etiquetas en un ensamblado alineado | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "etiquetas, en ensamblado alineado"
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Saltar a etiquetas en un ensamblado alineado
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

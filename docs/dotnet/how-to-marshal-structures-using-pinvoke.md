@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Calcular las referencias a estructuras mediante PInvoke | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "invocación de plataforma [C++], estructuras"
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
 caps.latest.revision: 30
-caps.handback.revision: 28
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # C&#243;mo: Calcular las referencias a estructuras mediante PInvoke
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

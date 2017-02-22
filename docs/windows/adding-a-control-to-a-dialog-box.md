@@ -1,8 +1,7 @@
 ---
 title: "Agregar un control a un cuadro de di&#225;logo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "vc.editors.dialog.dialog"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "cuadros de diálogo, agregar controles a"
   - "controles de cuadro de diálogo, agregar a cuadros de diálogo"
   - "controles [C++], agregar a cuadros de diálogo"
 ms.assetid: b2a26d19-093f-49ca-93da-fef00dfbb381
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Agregar un control a un cuadro de di&#225;logo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

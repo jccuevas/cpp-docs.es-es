@@ -1,8 +1,7 @@
 ---
 title: "Conjunto de registros: Crear y cerrar conjuntos de registros (ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "conjuntos de registros, abrir"
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Conjunto de registros: Crear y cerrar conjuntos de registros (ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Directives pragma y la palabra clave __pragma | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "#pragma"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "#pragma (directivas), C/C++"
   - "__pragma (palabra clave)"
@@ -25,10 +23,10 @@ helpviewer_keywords:
   - "preprocesador, pragma (directivas)"
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Directives pragma y la palabra clave __pragma
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

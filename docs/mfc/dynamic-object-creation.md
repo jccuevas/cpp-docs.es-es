@@ -1,8 +1,7 @@
 ---
 title: "Creaci&#243;n de objetos din&#225;micos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "objetos [C++], crear dinámicamente en tiempo de ejecución"
 ms.assetid: 3e0f51cb-3e24-4231-817f-1c0ce9f2d5df
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Creaci&#243;n de objetos din&#225;micos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

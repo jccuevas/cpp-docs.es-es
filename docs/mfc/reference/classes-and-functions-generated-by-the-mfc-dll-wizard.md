@@ -1,8 +1,7 @@
 ---
 title: "Clases y funciones generadas por el Asistente para archivos DLL de MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "Asistente para archivos DLL de MFC"
 ms.assetid: e69e62fe-4953-42bf-a2fc-50bbf9bdaeaf
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Clases y funciones generadas por el Asistente para archivos DLL de MFC
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Operadores postfijos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "operadores [C], postfijo"
   - "operadores postfijos"
 ms.assetid: 76260011-1624-484e-8bef-72ae7ab556cc
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Operadores postfijos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

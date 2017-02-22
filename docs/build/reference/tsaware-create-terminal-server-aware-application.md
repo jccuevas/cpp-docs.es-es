@@ -1,8 +1,7 @@
 ---
 title: "/TSAWARE (Crear una aplicaci&#243;n que reconozca Terminal Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-TSAWARE (opción del vinculador)"
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /TSAWARE (Crear una aplicaci&#243;n que reconozca Terminal Server)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Funciones de miembro de flujo de archivos de salida | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "flujos de salida, funciones miembro"
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Funciones de miembro de flujo de archivos de salida
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Asignaciones de rutinas | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "c.mappings"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tWinMain"
   - "asignaciones de texto genérico"
   - "tipos de datos de TCHAR.H, lista de asignaciones de rutinas"
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Asignaciones de rutinas
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

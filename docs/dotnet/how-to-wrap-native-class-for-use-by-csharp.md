@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Envolver una clase nativa para utilizarla en C# | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "código nativo [C++], Visual C# y"
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # C&#243;mo: Envolver una clase nativa para utilizarla en C# #
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Variables de entorno de LINK | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "variables, entorno"
 ms.assetid: 9a3d3291-0cc4-4a7d-9d50-80e351b90708
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Variables de entorno de LINK
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

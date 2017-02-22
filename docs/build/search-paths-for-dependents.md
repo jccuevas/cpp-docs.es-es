@@ -1,8 +1,7 @@
 ---
 title: "Rutas de b&#250;squeda para dependientes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "NMAKE (programa), dependientes"
 ms.assetid: bf998e47-da74-48b5-891d-d3d8ce57264b
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Rutas de b&#250;squeda para dependientes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

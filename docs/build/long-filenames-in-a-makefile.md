@@ -1,8 +1,7 @@
 ---
 title: "Nombres de archivo largos en un archivo MAKE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "NMAKE (programa), nombres de archivo largos"
 ms.assetid: 626d56fc-8879-46ba-9c2d-dd386c78cccc
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Nombres de archivo largos en un archivo MAKE
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

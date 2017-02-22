@@ -1,8 +1,7 @@
 ---
 title: "Controles ActiveX MFC: Agregar eventos personalizados | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "controles ActiveX en MFC, eventos"
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
 caps.latest.revision: 14
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Controles ActiveX MFC: Agregar eventos personalizados
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Operadores de conversi&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "operadores de conversión"
   - "operadores [C++], conversión"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "conversión de tipos, operadores de conversión"
 ms.assetid: 43b90bbd-39ef-43e6-ae5d-e8a67a01de40
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Operadores de conversi&#243;n
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

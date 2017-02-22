@@ -1,8 +1,7 @@
 ---
 title: "context_unblock_unbalanced (Clase) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "context_unblock_unbalanced (clase)"
 ms.assetid: a76066c8-19dd-44fa-959a-6941ec1b0d2d
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # context_unblock_unbalanced (Clase)
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

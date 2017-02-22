@@ -1,8 +1,7 @@
 ---
 title: "Unicode: el juego de caracteres anchos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "c.international"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "Unicode [C++], juego de caracteres anchos"
   - "caracteres anchos [C++], Unicode"
 ms.assetid: b6a05a21-59a5-4d30-8c85-2dbe185f7a74
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Unicode: el juego de caracteres anchos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

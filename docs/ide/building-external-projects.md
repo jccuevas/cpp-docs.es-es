@@ -1,8 +1,7 @@
 ---
 title: "Compilar proyectos externos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "proyectos de Visual C++, proyectos externos"
 ms.assetid: 650b7803-ea91-489d-bee3-8f3e990e223c
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Compilar proyectos externos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

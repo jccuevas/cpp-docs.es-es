@@ -1,8 +1,7 @@
 ---
 title: "M&#233;todos de creaci&#243;n de una barra de estado | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "barras de estado, crear"
 ms.assetid: 9aeaf290-7099-4762-a5ba-9c26705333c9
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # M&#233;todos de creaci&#243;n de una barra de estado
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

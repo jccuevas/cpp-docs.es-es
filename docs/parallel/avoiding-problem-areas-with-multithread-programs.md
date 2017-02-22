@@ -1,8 +1,7 @@
 ---
 title: "Evitar &#225;reas de riesgo en programas multiproceso | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "solucionar problemas [C++], multithreading"
 ms.assetid: 06cc231d-bb5a-409d-8bd3-676c9e2a8c5b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Evitar &#225;reas de riesgo en programas multiproceso
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

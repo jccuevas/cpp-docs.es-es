@@ -1,8 +1,7 @@
 ---
 title: "hash_map (Clase) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "hash_map (clase)"
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
 caps.latest.revision: 25
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # hash_map (Clase)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

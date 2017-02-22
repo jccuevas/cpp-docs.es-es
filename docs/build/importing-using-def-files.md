@@ -1,8 +1,7 @@
 ---
 title: "Importar mediante archivos DEF | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "importar archivos DLL [C++], DEF (archivos)"
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Importar mediante archivos DEF
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

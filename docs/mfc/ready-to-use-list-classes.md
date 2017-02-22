@@ -1,8 +1,7 @@
 ---
 title: "Clases de lista preparadas para usar | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "lista de clases"
 ms.assetid: aed8e9bd-edb7-4620-84a2-77c20322abd7
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Clases de lista preparadas para usar
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

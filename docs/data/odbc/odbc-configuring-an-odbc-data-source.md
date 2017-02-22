@@ -1,8 +1,7 @@
 ---
 title: "ODBC: Configurar un origen de datos ODBC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "orígenes de datos ODBC, configurar"
 ms.assetid: 1cd03e6a-8d59-4eca-a8c6-1010582d5e67
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # ODBC: Configurar un origen de datos ODBC
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

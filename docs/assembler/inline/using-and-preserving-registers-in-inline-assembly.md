@@ -1,8 +1,7 @@
 ---
 title: "Usar y preservar registros en los ensamblados alineados | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "registros, ensamblado en línea"
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Usar y preservar registros en los ensamblados alineados
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

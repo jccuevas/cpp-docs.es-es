@@ -1,8 +1,7 @@
 ---
 title: "Trabajar con ODBC y controladores | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "controladores ODBC, utilizar"
 ms.assetid: ae1bf357-4ca4-4748-9336-8fc317f294ab
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Trabajar con ODBC y controladores
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Cargar paleta de colores (Cuadro de di&#225;logo) (Editor de im&#225;genes para iconos) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Cargar paleta de colores (cuadro de diálogo)"
 ms.assetid: a1b17203-3e02-4498-91de-4ed089156df1
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Cargar paleta de colores (Cuadro de di&#225;logo) (Editor de im&#225;genes para iconos)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

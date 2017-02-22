@@ -1,8 +1,7 @@
 ---
 title: "Hospedar un control de usuario de Windows Forms en un cuadro de di&#225;logo MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "formularios Windows Forms [C++], hospedar como cuadro de diálogo MFC"
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Hospedar un control de usuario de Windows Forms en un cuadro de di&#225;logo MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

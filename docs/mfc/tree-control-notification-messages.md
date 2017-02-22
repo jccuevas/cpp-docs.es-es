@@ -1,8 +1,7 @@
 ---
 title: "Mensajes de notificaci&#243;n de controles de &#225;rbol | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "controles de árbol, mensajes de notificación"
 ms.assetid: ac7013b4-91dd-4668-bd75-439ca0680ef9
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Mensajes de notificaci&#243;n de controles de &#225;rbol
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

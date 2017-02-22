@@ -1,8 +1,7 @@
 ---
 title: "Migraci&#243;n y actualizaci&#243;n: ejemplos y casos pr&#225;cticos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: d48bbff9-1ea7-467f-8c8b-758601f01573
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Migraci&#243;n y actualizaci&#243;n: ejemplos y casos pr&#225;cticos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

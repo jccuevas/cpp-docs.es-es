@@ -1,8 +1,7 @@
 ---
 title: "Mostrar u ocultar la ventana Colores (Editor de im&#225;genes para iconos) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Ventana Colores, mostrar colores"
 ms.assetid: 43ba728d-2b69-47a1-a23a-94f82d88a26d
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Mostrar u ocultar la ventana Colores (Editor de im&#225;genes para iconos)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

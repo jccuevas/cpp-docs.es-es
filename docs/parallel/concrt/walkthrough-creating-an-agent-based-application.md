@@ -1,8 +1,7 @@
 ---
 title: "Tutorial: Crear una aplicaci&#243;n basada en agente | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "agent (clase), ejemplo"
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
 caps.latest.revision: 24
-caps.handback.revision: 21
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Tutorial: Crear una aplicaci&#243;n basada en agente
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

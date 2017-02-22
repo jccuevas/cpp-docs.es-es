@@ -1,8 +1,7 @@
 ---
 title: "Asistente para proyectos de archivo MAKE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "proyectos de archivos Make, Asistente para proyectos de archivo MAKE"
 ms.assetid: 38219802-320d-4c48-a118-4792de8f3b2d
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Asistente para proyectos de archivo MAKE
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

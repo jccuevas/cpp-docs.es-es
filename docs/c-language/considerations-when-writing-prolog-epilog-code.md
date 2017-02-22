@@ -1,8 +1,7 @@
 ---
 title: "Consideraciones para escribir c&#243;digo de pr&#243;logo y ep&#237;logo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__LOCAL_SIZE (constante)"
   - "diseños, marco de pila"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "pila, diseño de marco de pila"
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Consideraciones para escribir c&#243;digo de pr&#243;logo y ep&#237;logo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

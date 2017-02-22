@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Agregar enrutamientos de comandos al control de Windows Forms | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Enrutamiento de comandos de controles de formularios Windows Forms [C++]"
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # C&#243;mo: Agregar enrutamientos de comandos al control de Windows Forms
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

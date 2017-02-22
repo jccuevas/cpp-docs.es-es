@@ -1,8 +1,7 @@
 ---
 title: "L&#237;nea de comandos de BSCMAKE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "BSCMAKE, línea de comandos"
 ms.assetid: 8006e8cf-8bfe-4c23-868a-b0a25e6bbf0f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # L&#237;nea de comandos de BSCMAKE
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

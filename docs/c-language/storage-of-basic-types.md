@@ -1,8 +1,7 @@
 ---
 title: "Almacenamiento de tipos b&#225;sicos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "operaciones aritméticas [C++], tipos"
   - "tipos de datos [C], especificadores"
@@ -33,10 +31,10 @@ helpviewer_keywords:
   - "tipos sin signo [C++], almacenamiento"
 ms.assetid: bd1f33c1-c6b9-4558-8a72-afb21aef3318
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Almacenamiento de tipos b&#225;sicos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

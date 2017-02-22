@@ -1,8 +1,7 @@
 ---
-title: "Llamar a funciones de C en ensamblados alineados | Microsoft Docs"
+title: "Llamar a funciones de C++ en ensamblados alineados | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,17 @@ dev_langs:
   - "C++"
 helpviewer_keywords: 
   - "__asm (palabra clave) [C++], llamar a funciones"
-  - "llamadas a funciones, funciones de C"
+  - "llamadas a funciones, funciones de C++"
   - "llamadas a funciones, en ensamblado alineado"
-  - "funciones [C], llamar en ensamblado alineado"
+  - "funciones [C++], llamar en ensamblado alineado"
   - "ensamblado en línea, llamar a funciones"
-  - "Visual C, funciones"
+  - "Visual C++, funciones"
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Llamar a funciones de C en ensamblados alineados
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

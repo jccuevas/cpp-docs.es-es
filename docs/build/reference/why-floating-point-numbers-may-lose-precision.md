@@ -1,8 +1,7 @@
 ---
 title: "Por qu&#233; los n&#250;meros de punto flotante pierden precisi&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "FLT_EPSILON (constante)"
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
 caps.latest.revision: 10
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Por qu&#233; los n&#250;meros de punto flotante pierden precisi&#243;n
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

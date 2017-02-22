@@ -1,8 +1,7 @@
 ---
 title: "Archivos DLL est&#225;ndar vinculados est&#225;ticamente a MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "USRDLL, vinculados estáticamente a MFC"
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Archivos DLL est&#225;ndar vinculados est&#225;ticamente a MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

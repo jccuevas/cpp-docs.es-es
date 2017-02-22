@@ -1,8 +1,7 @@
 ---
 title: "/ZW (Compilaci&#243;n de Windows en tiempo de ejecuci&#243;n) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-ZW (opción del compilador)"
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # /ZW (Compilaci&#243;n de Windows en tiempo de ejecuci&#243;n)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Usar botones desplegables en un control de barra de herramientas | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "barras de herramientas [C++], botones desplegables"
 ms.assetid: b859f758-d2f6-40d9-9c26-0ff61993b9b2
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Usar botones desplegables en un control de barra de herramientas
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

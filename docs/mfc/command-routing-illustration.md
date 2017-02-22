@@ -1,8 +1,7 @@
 ---
 title: "Ilustraci&#243;n de enrutamiento de comandos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MFC, enrutamiento de comandos"
 ms.assetid: 4b7b4741-565f-4878-b076-fd85c670f87f
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Ilustraci&#243;n de enrutamiento de comandos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

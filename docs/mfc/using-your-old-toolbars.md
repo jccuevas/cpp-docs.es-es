@@ -1,8 +1,7 @@
 ---
 title: "Usar las barras de herramientas antiguas | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "barras de herramientas [C++], compatibilidad con versiones anteriores"
 ms.assetid: 3543257c-8547-43f0-a66a-ee641dc1cf89
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Usar las barras de herramientas antiguas
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

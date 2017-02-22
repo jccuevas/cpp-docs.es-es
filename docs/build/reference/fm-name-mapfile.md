@@ -1,8 +1,7 @@
 ---
 title: "/Fm (Asignar nombre al archivo de asignaciones) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "archivos de asignaciones [C++], crear vinculador"
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /Fm (Asignar nombre al archivo de asignaciones)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

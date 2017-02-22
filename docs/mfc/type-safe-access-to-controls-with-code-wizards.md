@@ -1,8 +1,7 @@
 ---
 title: "Acceso con seguridad de tipos a los controles con Asistentes para c&#243;digo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "cuadros de diálogo, obtener acceso a controles"
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Acceso con seguridad de tipos a los controles con Asistentes para c&#243;digo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

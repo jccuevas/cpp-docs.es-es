@@ -1,8 +1,7 @@
 ---
 title: "Usar CTreeCtrl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "controles de árbol, utilizar"
 ms.assetid: 6a262f2c-3540-43e5-b03f-e4b6f9cb0325
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Usar CTreeCtrl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

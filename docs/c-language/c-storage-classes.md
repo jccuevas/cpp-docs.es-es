@@ -1,8 +1,7 @@
 ---
 title: "Clases de almacenamiento de C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "duración, variables"
   - "especificadores, clase de almacenamiento"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "duración de almacenamiento"
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Clases de almacenamiento de C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

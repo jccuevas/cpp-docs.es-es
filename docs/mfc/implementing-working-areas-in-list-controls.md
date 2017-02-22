@@ -1,8 +1,7 @@
 ---
 title: "Implementar las &#225;reas de trabajo en los controles de lista | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "áreas de trabajo en control de lista"
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Implementar las &#225;reas de trabajo en los controles de lista
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

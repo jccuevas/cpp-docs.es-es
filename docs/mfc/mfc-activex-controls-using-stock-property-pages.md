@@ -1,8 +1,7 @@
 ---
 title: "Controles ActiveX MFC: Usar p&#225;ginas de propiedades est&#225;ndar | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "propiedades estándar, páginas de propiedades estándar"
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Controles ActiveX MFC: Usar p&#225;ginas de propiedades est&#225;ndar
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

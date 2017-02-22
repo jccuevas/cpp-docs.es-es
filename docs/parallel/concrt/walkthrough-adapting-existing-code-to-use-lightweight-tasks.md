@@ -1,8 +1,7 @@
 ---
 title: "Tutorial: Adaptar el c&#243;digo existente para usar tareas ligeras | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "tareas ligeras, usar [Runtime de simultaneidad]"
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
 caps.latest.revision: 14
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Tutorial: Adaptar el c&#243;digo existente para usar tareas ligeras
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

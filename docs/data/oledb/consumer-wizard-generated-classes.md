@@ -1,8 +1,7 @@
 ---
 title: "Clases generadas por el Asistente para consumidores | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "clases de registro de usuario en el consumidor OLE DB"
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Clases generadas por el Asistente para consumidores
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Clase CMDIChildWndEx | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,10 +34,10 @@ helpviewer_keywords:
   - "CreateObject (método)"
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
 caps.latest.revision: 35
-caps.handback.revision: 24
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 37
 ---
 # Clase CMDIChildWndEx
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

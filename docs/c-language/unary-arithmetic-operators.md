@@ -1,8 +1,7 @@
 ---
 title: "Operadores aritm&#233;ticos unarios | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "! (operador), operadores aritméticos unarios"
   - "~ (operador), operador de complemento de uno"
@@ -25,10 +23,10 @@ helpviewer_keywords:
   - "operadores unarios"
 ms.assetid: 78c91415-d469-499e-9dfe-4435350fd333
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Operadores aritm&#233;ticos unarios
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

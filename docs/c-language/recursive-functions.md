@@ -1,8 +1,7 @@
 ---
 title: "Funciones recursivas | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "llamadas a funciones, recursivos"
   - "funciones [C], llamar de forma recursiva"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "llamadas a funciones recursivas"
 ms.assetid: 59739040-3081-4006-abbc-9d8423992bce
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Funciones recursivas
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

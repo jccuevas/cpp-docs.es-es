@@ -1,8 +1,7 @@
 ---
 title: "Serializaci&#243;n: Serializar un objeto | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "serializar objetos [C++]"
 ms.assetid: 1db772b1-ad55-4fcf-b133-126cca082510
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Serializaci&#243;n: Serializar un objeto
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

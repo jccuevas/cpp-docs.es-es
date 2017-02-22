@@ -1,8 +1,7 @@
 ---
 title: "Almacenamiento local de subprocesos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "almacenamiento, almacenamiento local de subprocesos"
   - "atributo de clase de almacenamiento de subprocesos"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "TLS (almacenamiento local de subprocesos)"
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Almacenamiento local de subprocesos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

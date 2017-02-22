@@ -1,8 +1,7 @@
 ---
 title: "Asignaci&#243;n de caracteres | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "MBCS [C++], asignación de caracteres"
 ms.assetid: dcc329cd-92df-4e20-817d-364be62ff28f
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Asignaci&#243;n de caracteres
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

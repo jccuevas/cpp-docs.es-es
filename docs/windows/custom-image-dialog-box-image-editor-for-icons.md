@@ -1,8 +1,7 @@
 ---
 title: "Tipo de imagen personalizada (Cuadro de di&#225;logo) (Editor de im&#225;genes para iconos) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Tipo de imagen personalizada (cuadro de diálogo)"
 ms.assetid: 68e2cc5c-19de-428e-bc25-ec6b260247d0
 caps.latest.revision: 8
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Tipo de imagen personalizada (Cuadro de di&#225;logo) (Editor de im&#225;genes para iconos)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

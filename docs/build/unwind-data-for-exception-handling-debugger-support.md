@@ -1,8 +1,7 @@
 ---
 title: "Datos de desenredo para la compatibilidad con el control de excepciones y el depurador | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 68f1e30d-9038-41af-a48f-02129bfe8928
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Datos de desenredo para la compatibilidad con el control de excepciones y el depurador
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

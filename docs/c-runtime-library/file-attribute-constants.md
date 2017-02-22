@@ -1,8 +1,7 @@
 ---
 title: "Constantes de atributo de archivo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,7 +23,6 @@ f1_keywords:
   - "A_ARCH"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_A_ARCH (constante)"
   - "_A_HIDDEN (constante)"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "archivos [C++], constantes de atributo de archivo"
 ms.assetid: 8dc8ccb9-99f5-446b-876c-7ebecc2f764f
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Constantes de atributo de archivo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

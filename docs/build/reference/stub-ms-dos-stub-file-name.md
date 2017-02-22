@@ -1,8 +1,7 @@
 ---
 title: "/STUB (Nombre del archivo de c&#243;digo auxiliar de MS-DOS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "API de Windows [C++], asociar un programa de código auxiliar de MS-DOS"
 ms.assetid: 65221ffe-4f9a-4a14-ac69-3cfb79b40b5f
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /STUB (Nombre del archivo de c&#243;digo auxiliar de MS-DOS)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

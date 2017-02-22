@@ -1,8 +1,7 @@
 ---
 title: "Windows Sockets: Ejemplo de Sockets que usan archivos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Windows Sockets [C++], que contengan archivos"
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Windows Sockets: Ejemplo de Sockets que usan archivos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

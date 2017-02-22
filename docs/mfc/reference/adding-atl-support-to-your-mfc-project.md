@@ -1,8 +1,7 @@
 ---
 title: "Agregar compatibilidad con ATL a un proyecto MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "MFC, compatibilidad ATL"
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Agregar compatibilidad con ATL a un proyecto MFC
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

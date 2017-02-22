@@ -1,8 +1,7 @@
 ---
 title: "/INCLUDE (Forzar referencias de s&#237;mbolos) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "símbolos, agregar a tabla de símbolos"
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /INCLUDE (Forzar referencias de s&#237;mbolos)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

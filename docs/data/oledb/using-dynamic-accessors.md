@@ -1,8 +1,7 @@
 ---
 title: "Utilizar descriptores de acceso din&#225;micos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "descriptores de acceso dinámicos"
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Utilizar descriptores de acceso din&#225;micos
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

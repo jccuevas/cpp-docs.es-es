@@ -1,8 +1,7 @@
 ---
 title: "Error PRJ0006 al compilar el proyecto | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "PRJ0006"
 ms.assetid: ce092be4-1652-414f-8cb5-b97ef5841f89
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Error PRJ0006 al compilar el proyecto
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "L&#237;nea de comandos de EDITBIN | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "EDITBIN (programa), línea de comandos"
 ms.assetid: 28ff7f92-6c4e-4e7f-86d8-80d5b2f91662
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # L&#237;nea de comandos de EDITBIN
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

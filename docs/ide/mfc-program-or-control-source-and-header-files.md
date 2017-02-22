@@ -1,8 +1,7 @@
 ---
 title: "Archivos de encabezado y c&#243;digo fuente de controles o programas MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "tipos de archivo [C++], código fuente y encabezados de MFC"
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Archivos de encabezado y c&#243;digo fuente de controles o programas MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

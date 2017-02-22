@@ -1,8 +1,7 @@
 ---
 title: "Usar un contexto de dispositivo no recortado | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "controles ActiveX en MFC, contexto de dispositivo no recortado"
 ms.assetid: 9c020063-73da-4803-bf7b-2e1fd950c9ed
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Usar un contexto de dispositivo no recortado
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

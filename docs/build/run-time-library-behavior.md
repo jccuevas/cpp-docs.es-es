@@ -1,8 +1,7 @@
 ---
 title: "Comportamiento de la biblioteca en tiempo de ejecuci&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "tiempo de ejecución [C++], secuencia de inicio de DLL"
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Comportamiento de la biblioteca en tiempo de ejecuci&#243;n
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

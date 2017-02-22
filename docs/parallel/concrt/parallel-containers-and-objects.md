@@ -1,8 +1,7 @@
 ---
 title: "Contenedores y objetos paralelos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "contenedores simultáneos"
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
 caps.latest.revision: 34
-caps.handback.revision: 34
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 34
 ---
 # Contenedores y objetos paralelos
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

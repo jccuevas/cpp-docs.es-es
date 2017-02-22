@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Usar contenedores paralelos para aumentar la eficacia | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "concurrent_vector (clase), ejemplos"
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
 caps.latest.revision: 13
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # C&#243;mo: Usar contenedores paralelos para aumentar la eficacia
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

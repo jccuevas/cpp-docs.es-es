@@ -1,8 +1,7 @@
 ---
 title: "ClassFactory::Release (M&#233;todo) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Release (método)"
 ms.assetid: 49da2002-f9d6-4d7f-8a65-48c20b1bf99f
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # ClassFactory::Release (M&#233;todo)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

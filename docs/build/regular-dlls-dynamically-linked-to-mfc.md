@@ -1,8 +1,7 @@
 ---
 title: "Archivos DLL est&#225;ndar vinculados din&#225;micamente a MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "versiones de DLL compartidas [C++]"
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Archivos DLL est&#225;ndar vinculados din&#225;micamente a MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

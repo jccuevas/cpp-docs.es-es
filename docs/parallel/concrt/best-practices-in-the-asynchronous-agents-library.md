@@ -1,8 +1,7 @@
 ---
 title: "Procedimientos recomendados en la biblioteca de agentes asincr&#243;nicos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "procedimientos que deben evitarse, Biblioteca de agentes asincrónicos"
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
 caps.latest.revision: 15
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Procedimientos recomendados en la biblioteca de agentes asincr&#243;nicos
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

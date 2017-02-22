@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Definir e instalar un controlador de excepciones global | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "controladores, globales"
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # C&#243;mo: Definir e instalar un controlador de excepciones global
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

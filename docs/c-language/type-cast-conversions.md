@@ -1,8 +1,7 @@
 ---
 title: "Conversiones de tipos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "conversiones [C++], conversión de tipos"
   - "conversión de tipos de datos [C++], conversiones de tipos"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "conversiones de tipos [C++]"
 ms.assetid: 57ab5902-f12f-4326-a2f6-6282f1d4025a
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Conversiones de tipos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

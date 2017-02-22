@@ -1,8 +1,7 @@
 ---
 title: "Cu&#225;ndo se llama a los controladores actualizados | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "actualizar objetos de la interfaz de usuario"
 ms.assetid: 7359f6b1-4669-477d-bd99-690affed08d9
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Cu&#225;ndo se llama a los controladores actualizados
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

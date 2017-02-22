@@ -1,8 +1,7 @@
 ---
 title: "Contenedores de controles ActiveX: Conectar un control ActiveX a una variable de miembro | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "variables miembro [C++], controles ActiveX del proyecto"
 ms.assetid: 7898a336-440d-4a60-be43-cb062b807aee
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Contenedores de controles ActiveX: Conectar un control ActiveX a una variable de miembro
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

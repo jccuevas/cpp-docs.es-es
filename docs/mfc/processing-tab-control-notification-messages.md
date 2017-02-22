@@ -1,8 +1,7 @@
 ---
 title: "Procesar los mensajes de notificaci&#243;n del control de pesta&#241;a | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "controles de fichas, procesar notificaciones"
 ms.assetid: 758ccb7a-9e73-48f8-9073-23f7cb09918c
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Procesar los mensajes de notificaci&#243;n del control de pesta&#241;a
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Especificar un archivo insertado | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "NMAKE (programa), archivos en línea"
 ms.assetid: 393eccfb-3fc9-4bac-a30c-8ac8d221cca3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Especificar un archivo insertado
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

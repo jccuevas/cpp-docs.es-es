@@ -1,8 +1,7 @@
 ---
 title: "/Od (Deshabilitar (Depurar)) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "-Od (opción del compilador) [C++]"
 ms.assetid: b1ac31b7-e086-4eeb-be5e-488f7513f5f5
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # /Od (Deshabilitar (Depurar))
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Tipo de aplicaci&#243;n, Asistente para aplicaciones MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "bibliotecas estáticas, MFC"
 ms.assetid: c3f62b0e-3f13-42c5-9859-d3890d0c3e1d
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Tipo de aplicaci&#243;n, Asistente para aplicaciones MFC
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

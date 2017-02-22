@@ -1,8 +1,7 @@
 ---
 title: "Informaci&#243;n general sobre los estados de los elementos de control de &#225;rbol | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "controles de árbol, información general de los estados del elemento"
 ms.assetid: 2db11ae0-0d87-499d-8c1f-5e0dbe9e94c8
 caps.latest.revision: 14
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Informaci&#243;n general sobre los estados de los elementos de control de &#225;rbol
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

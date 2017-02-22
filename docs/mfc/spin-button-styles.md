@@ -1,8 +1,7 @@
 ---
 title: "Estilos de bot&#243;n de cuadro de n&#250;mero | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "estilos, control de botón de número"
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Estilos de bot&#243;n de cuadro de n&#250;mero
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

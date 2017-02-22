@@ -1,8 +1,7 @@
 ---
 title: "Archivos HTML | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "asistentes [C++], interfaz de usuario para asistentes personalizados"
 ms.assetid: 3b6ed080-6560-418b-b908-d84d71bdf145
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Archivos HTML
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

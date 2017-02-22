@@ -1,8 +1,7 @@
 ---
 title: "Tipos de mensajes asociados a objetos de la interfaz de usuario | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "tipos de mensaje y objetos de interfaz de usuario"
 ms.assetid: 681ee1a7-f6e6-4ea0-9fc6-1fb53a35516e
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Tipos de mensajes asociados a objetos de la interfaz de usuario
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

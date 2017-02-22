@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Agregar un paso de compilaci&#243;n personalizado a proyectos de MSBuild | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "msbuild (C++), cómo: agregar un paso de compilación personalizado"
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # C&#243;mo: Agregar un paso de compilaci&#243;n personalizado a proyectos de MSBuild
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

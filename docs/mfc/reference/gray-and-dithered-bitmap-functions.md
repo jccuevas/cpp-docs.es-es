@@ -1,8 +1,7 @@
 ---
 title: "Funciones de mapa de bits grises o interpoladas | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "funciones de mapa de bits grises o interpoladas"
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
 caps.latest.revision: 13
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Funciones de mapa de bits grises o interpoladas
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

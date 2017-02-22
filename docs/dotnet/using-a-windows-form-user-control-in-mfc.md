@@ -1,8 +1,7 @@
 ---
 title: "Utilizar un control de usuario de Windows Forms en MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "Soporte de Windows Forms [C++], MFC"
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Utilizar un control de usuario de Windows Forms en MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

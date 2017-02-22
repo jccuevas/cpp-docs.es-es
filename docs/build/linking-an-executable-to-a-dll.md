@@ -1,8 +1,7 @@
 ---
 title: "Vincular un ejecutable a un archivo DLL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "tiempo de ejecución [C++], vincular"
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Vincular un ejecutable a un archivo DLL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Tutorial: Implementar futuros | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "futuros, implementar [Runtime de simultaneidad]"
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
 caps.latest.revision: 25
-caps.handback.revision: 25
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # Tutorial: Implementar futuros
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

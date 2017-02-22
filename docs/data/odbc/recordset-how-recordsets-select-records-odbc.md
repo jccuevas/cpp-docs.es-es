@@ -1,8 +1,7 @@
 ---
 title: "Conjunto de registros: C&#243;mo se seleccionan los registros (ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "instrucciones SQL, conjunto de registros"
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Conjunto de registros: C&#243;mo se seleccionan los registros (ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

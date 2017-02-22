@@ -1,8 +1,7 @@
 ---
 title: "/LIBPATH (Directorios de bibliotecas adicionales) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "ruta de acceso a la biblioteca (opción del vinculador)"
 ms.assetid: 7240af0b-9a3d-4d53-8169-2a92cd6958ba
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /LIBPATH (Directorios de bibliotecas adicionales)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

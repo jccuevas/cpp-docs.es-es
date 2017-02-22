@@ -1,8 +1,7 @@
 ---
 title: "Identificadores de mensaje de ventana reflejada | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -57,10 +56,10 @@ helpviewer_keywords:
   - "mensajes reflejados, identificadores de mensaje de ventana"
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
 caps.latest.revision: 8
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Identificadores de mensaje de ventana reflejada
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

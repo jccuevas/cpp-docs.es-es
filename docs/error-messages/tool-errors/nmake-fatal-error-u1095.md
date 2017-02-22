@@ -1,8 +1,7 @@
 ---
 title: "Error grave de NMAKE U1095 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "U1095"
 ms.assetid: a392582b-06db-4568-9c13-450293a4fbda
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Error grave de NMAKE U1095
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

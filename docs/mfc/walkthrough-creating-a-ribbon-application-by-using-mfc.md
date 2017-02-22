@@ -1,8 +1,7 @@
 ---
 title: "Tutorial: Crear una aplicaci&#243;n de cinta usando MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "aplicación de cinta, crear (MFC)"
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 caps.latest.revision: 21
-caps.handback.revision: 17
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Tutorial: Crear una aplicaci&#243;n de cinta usando MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

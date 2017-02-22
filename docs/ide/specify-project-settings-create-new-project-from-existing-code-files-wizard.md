@@ -1,8 +1,7 @@
 ---
 title: "Especificar configuraci&#243;n de proyecto, Asistente para crear nuevo proyecto de archivos de c&#243;digo fuente existentes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Asistente para crear nuevo proyecto de archivos de código fuente existentes, configuración de proyecto"
 ms.assetid: 9b8860c9-d35f-4f18-9565-2934d3d7f569
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Especificar configuraci&#243;n de proyecto, Asistente para crear nuevo proyecto de archivos de c&#243;digo fuente existentes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

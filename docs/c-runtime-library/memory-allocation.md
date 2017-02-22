@@ -1,8 +1,7 @@
 ---
 title: "Asignaci&#243;n de memoria | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "c.memory"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "asignación de memoria, rutinas"
   - "memoria, asignación"
   - "memoria, administrar"
 ms.assetid: b4470556-a128-4782-9943-2ccf7a7d9979
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Asignaci&#243;n de memoria
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

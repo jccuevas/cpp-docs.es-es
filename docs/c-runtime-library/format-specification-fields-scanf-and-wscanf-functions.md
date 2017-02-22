@@ -1,8 +1,7 @@
 ---
 title: "Campos de especificaci&#243;n de formato: funciones scanf y wscanf | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,7 +21,6 @@ f1_keywords:
   - "scanf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "ancho, especificaciones de scanf (función)"
   - "especificaciones de formato de scanf"
@@ -33,10 +31,10 @@ helpviewer_keywords:
   - "campos de tipo"
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Campos de especificaci&#243;n de formato: funciones scanf y wscanf
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

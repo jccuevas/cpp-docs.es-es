@@ -1,8 +1,7 @@
 ---
 title: "Conceptos de aplicaciones aisladas y ensamblados simult&#225;neos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "ensamblados aislados [C++]"
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Conceptos de aplicaciones aisladas y ensamblados simult&#225;neos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

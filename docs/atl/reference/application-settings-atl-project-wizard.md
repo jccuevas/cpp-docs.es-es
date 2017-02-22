@@ -1,8 +1,7 @@
 ---
 title: "Configuraci&#243;n de la aplicaci&#243;n, Asistente para proyectos ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Asistente para proyectos ATL, configuración de la aplicación"
 ms.assetid: d48c9fc5-f439-49fd-884c-8bcfa7d52991
 caps.latest.revision: 17
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Configuraci&#243;n de la aplicaci&#243;n, Asistente para proyectos ATL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

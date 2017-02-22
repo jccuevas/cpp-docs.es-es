@@ -1,8 +1,7 @@
 ---
 title: "Configuraci&#243;n regional | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.international"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "información de país"
   - "rutinas de información de idioma"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "setlocale (función)"
 ms.assetid: 442f8112-9288-44d7-be3c-15d22652093a
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Configuraci&#243;n regional
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

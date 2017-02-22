@@ -1,8 +1,7 @@
 ---
 title: "Colocar el control en una p&#225;gina web (Tutorial de ATL, Parte 7) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
 caps.latest.revision: 15
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Colocar el control en una p&#225;gina web (Tutorial de ATL, Parte 7)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

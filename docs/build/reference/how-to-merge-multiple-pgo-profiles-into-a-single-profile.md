@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Combinar varios perfiles PGO en un solo perfil | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "optimizaciones guiadas por perfiles, combinar perfiles"
 ms.assetid: aab686b5-59dd-40d1-a04b-5064690f65a6
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # C&#243;mo: Combinar varios perfiles PGO en un solo perfil
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

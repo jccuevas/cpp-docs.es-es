@@ -1,8 +1,7 @@
 ---
 title: "Crear archivos de encabezado precompilados | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "archivos de encabezado precompilados, crear"
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Crear archivos de encabezado precompilados
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

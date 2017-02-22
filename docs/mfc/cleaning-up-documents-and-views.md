@@ -1,8 +1,7 @@
 ---
 title: "Limpiar documentos y vistas | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "vistas, limpieza"
 ms.assetid: 0c454db2-3644-434d-9e53-8108a7aedfe1
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Limpiar documentos y vistas
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

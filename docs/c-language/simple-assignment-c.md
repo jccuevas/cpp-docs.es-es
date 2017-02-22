@@ -1,8 +1,7 @@
 ---
 title: "Asignaci&#243;n simple (C) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "operadores de asignación [C++], simples"
   - "conversión de tipos de datos [C++], asignación simple"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "conversión de tipos [C++], asignación simple"
 ms.assetid: e7140a0a-7104-4b3a-b293-7adcc1fdd52b
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Asignaci&#243;n simple (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

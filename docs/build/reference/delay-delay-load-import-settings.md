@@ -1,8 +1,7 @@
 ---
 title: "/DELAY (Configuraci&#243;n de las importaciones de carga retrasada) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "carga retrasada de archivos DLL, /DELAY (opción)"
 ms.assetid: 9334b332-cc58-4dae-b10f-a4c75972d50c
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /DELAY (Configuraci&#243;n de las importaciones de carga retrasada)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Procesar mensajes de notificaci&#243;n en los controles de selector de fecha y hora | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "DTN_FORMAT (notificación)"
 ms.assetid: ffbe29ab-ff80-4609-89f7-260b404439c4
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Procesar mensajes de notificaci&#243;n en los controles de selector de fecha y hora
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Error PRJ0008 al compilar el proyecto | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "PRJ0008"
 ms.assetid: 6bf7f17a-d2a8-4826-99c7-d600d846952f
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Error PRJ0008 al compilar el proyecto
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
