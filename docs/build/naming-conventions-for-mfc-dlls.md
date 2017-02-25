@@ -1,8 +1,7 @@
 ---
 title: "Convenciones de nomenclatura para archivos DLL de MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "versiones de DLL compartidas [C++]"
 ms.assetid: 0db9c3f3-87d3-40e8-8964-250f9d2a2209
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Convenciones de nomenclatura para archivos DLL de MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

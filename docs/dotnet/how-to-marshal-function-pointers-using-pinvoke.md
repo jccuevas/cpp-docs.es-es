@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Calcular las referencias de punteros a funci&#243;n mediante PInvoke | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "invocación de plataforma [C++], devoluciones de llamada y delegados"
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # C&#243;mo: Calcular las referencias de punteros a funci&#243;n mediante PInvoke
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

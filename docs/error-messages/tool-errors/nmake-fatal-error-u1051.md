@@ -1,8 +1,7 @@
 ---
 title: "Error grave de NMAKE U1051 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "U1051"
 ms.assetid: fede5cd5-dac3-47b7-b86d-e1acfb78699f
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Error grave de NMAKE U1051
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

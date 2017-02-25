@@ -1,8 +1,7 @@
 ---
 title: "Control de excepciones en el runtime de simultaneidad | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "grupos de tareas, control de excepciones [Runtime de simultaneidad]"
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
 caps.latest.revision: 29
-caps.handback.revision: 26
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # Control de excepciones en el runtime de simultaneidad
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

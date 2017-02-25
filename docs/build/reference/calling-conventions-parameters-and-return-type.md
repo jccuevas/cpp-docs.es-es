@@ -1,8 +1,7 @@
 ---
 title: "Convenciones de llamada, par&#225;metros y tipo de valor devuelto | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "funciones auxiliares, tipos de valor devueltos"
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Convenciones de llamada, par&#225;metros y tipo de valor devuelto
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

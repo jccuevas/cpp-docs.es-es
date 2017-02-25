@@ -1,8 +1,7 @@
 ---
 title: "_heapwalk | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,17 +28,16 @@ f1_keywords:
   - "_heapwalk"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_heapwalk (función)"
   - "depurar [CRT], problemas relacionados con los montones"
   - "heapwalk (función)"
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
 caps.latest.revision: 22
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # _heapwalk
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

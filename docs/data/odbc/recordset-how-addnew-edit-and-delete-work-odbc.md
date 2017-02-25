@@ -1,8 +1,7 @@
 ---
 title: "Conjunto de registros: Funcionamiento de AddNew, Edit y Delete (ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "conjuntos de registros [C++], actualizar"
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Conjunto de registros: Funcionamiento de AddNew, Edit y Delete (ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

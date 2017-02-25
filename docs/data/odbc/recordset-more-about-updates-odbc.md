@@ -1,8 +1,7 @@
 ---
 title: "Conjunto de registros: Informaci&#243;n adicional sobre las actualizaciones (ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "actualizar conjuntos de registros"
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Conjunto de registros: Informaci&#243;n adicional sobre las actualizaciones (ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

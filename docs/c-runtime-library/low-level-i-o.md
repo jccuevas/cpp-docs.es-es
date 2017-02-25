@@ -1,8 +1,7 @@
 ---
 title: "E/S de bajo nivel | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.io"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "identificadores de archivos [C++]"
   - "identificadores de archivos [C++], E/S (funciones)"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "rutinas de E/S de bajo nivel"
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # E/S de bajo nivel
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

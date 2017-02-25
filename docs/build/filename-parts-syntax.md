@@ -1,8 +1,7 @@
 ---
 title: "Sintaxis de las partes de un nombre de archivo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "sintaxis, partes de nombre de archivos"
 ms.assetid: 48fe38e0-3f3b-40e6-894c-330ee775a656
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Sintaxis de las partes de un nombre de archivo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

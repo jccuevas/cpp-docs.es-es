@@ -1,8 +1,7 @@
 ---
 title: "Subprocesamiento m&#250;ltiple: Crear subprocesos de trabajo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "subprocesos de trabajo [C++]"
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Subprocesamiento m&#250;ltiple: Crear subprocesos de trabajo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

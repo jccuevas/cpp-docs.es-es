@@ -1,8 +1,7 @@
 ---
 title: "Contenedores de controles ActiveX: Ver y modificar propiedades de los controles | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "editores de recursos, ver y modificar controles ActiveX"
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Contenedores de controles ActiveX: Ver y modificar propiedades de los controles
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

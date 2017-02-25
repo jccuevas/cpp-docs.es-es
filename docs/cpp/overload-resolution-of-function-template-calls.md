@@ -1,8 +1,7 @@
 ---
 title: "Resoluci&#243;n de sobrecarga de llamadas de plantilla de funci&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "resolución de sobrecarga de plantillas de función"
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
 caps.latest.revision: 11
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Resoluci&#243;n de sobrecarga de llamadas de plantilla de funci&#243;n
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

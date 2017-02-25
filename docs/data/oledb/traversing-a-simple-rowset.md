@@ -1,8 +1,7 @@
 ---
 title: "Recorrer un conjunto de filas simple | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "conjuntos de filas simples"
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Recorrer un conjunto de filas simple
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
-title: "Error en tiempo de ejecuci&#243;n de C R6025 | Microsoft Docs"
+title: "R6025 de Error de tiempo de ejecuci&#243;n de C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "R6025"
 ms.assetid: afa06d98-9c36-445b-b3e7-b6409bc8e779
 caps.latest.revision: 8
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Error en tiempo de ejecuci&#243;n de C R6025
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

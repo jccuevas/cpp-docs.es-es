@@ -1,8 +1,7 @@
 ---
 title: "Editor de cuadros de di&#225;logo (Ficha, Cuadro de herramientas) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "controles [C++], agregar a cuadros de diálogo"
 ms.assetid: 253885c2-dcb9-4d8e-ac9b-805ea31cbf5e
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Editor de cuadros de di&#225;logo (Ficha, Cuadro de herramientas)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

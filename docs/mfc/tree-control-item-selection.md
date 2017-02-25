@@ -1,8 +1,7 @@
 ---
 title: "Selecci&#243;n de elementos de control de &#225;rbol | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "controles de árbol, selección de elementos"
 ms.assetid: 7bcb3b16-b9c8-4c06-9350-7bc3c1c5009b
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Selecci&#243;n de elementos de control de &#225;rbol
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

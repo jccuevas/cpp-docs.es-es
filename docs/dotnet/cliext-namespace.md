@@ -1,8 +1,7 @@
 ---
 title: "cliext (Espacio de nombres) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "STL/CLR, espacio de nombres"
 ms.assetid: 75a0c1f8-6e21-46d5-adaf-899845c15b38
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # cliext (Espacio de nombres)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Errores y advertencias de las herramientas del vinculador | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "vinculador [C++], errores y advertencias"
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Errores y advertencias de las herramientas del vinculador
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Precedencia y orden de evaluaci&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "asociatividad de operadores [C++]"
   - "enlace de datos [C++], prioridad de operadores"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "prioridad [C++], operadores"
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Precedencia y orden de evaluaci&#243;n
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

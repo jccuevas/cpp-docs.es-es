@@ -1,8 +1,7 @@
 ---
 title: "Pasos de una aplicaci&#243;n cliente FTP t&#237;pica | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "WinInet (clases), FTP"
 ms.assetid: 70bed7b5-6040-40d1-bc77-702e63a698f2
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Pasos de una aplicaci&#243;n cliente FTP t&#237;pica
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

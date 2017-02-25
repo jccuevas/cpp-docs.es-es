@@ -1,8 +1,7 @@
 ---
 title: "Omitir el mecanismo de serializaci&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "serialización [C++], rol de marco de trabajo"
 ms.assetid: 48d4a279-b51c-4ba5-81cd-ed043312b582
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Omitir el mecanismo de serializaci&#243;n
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

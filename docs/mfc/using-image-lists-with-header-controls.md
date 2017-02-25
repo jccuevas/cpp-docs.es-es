@@ -1,8 +1,7 @@
 ---
 title: "Usar listas de im&#225;genes con controles de encabezado | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "listas de imágenes [C++], controles del encabezado"
 ms.assetid: d5e9b310-6278-406c-909c-eefa09549a47
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Usar listas de im&#225;genes con controles de encabezado
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

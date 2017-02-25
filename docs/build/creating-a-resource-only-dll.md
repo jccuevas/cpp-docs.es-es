@@ -1,8 +1,7 @@
 ---
 title: "Crear un archivo DLL de recursos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "DLL sólo de recursos [C++], crear"
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Crear un archivo DLL de recursos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

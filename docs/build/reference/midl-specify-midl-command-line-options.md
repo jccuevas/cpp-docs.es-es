@@ -1,8 +1,7 @@
 ---
 title: "/MIDL (Especificar las opciones de la l&#237;nea de comandos de MIDL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "MIDL, opciones de la línea de comandos"
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /MIDL (Especificar las opciones de la l&#237;nea de comandos de MIDL)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

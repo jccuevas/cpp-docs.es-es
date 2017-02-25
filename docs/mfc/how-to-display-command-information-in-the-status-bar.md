@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Mostrar informaci&#243;n de comandos en la barra de estado | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "barras de estado, área del mensaje"
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # C&#243;mo: Mostrar informaci&#243;n de comandos en la barra de estado
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

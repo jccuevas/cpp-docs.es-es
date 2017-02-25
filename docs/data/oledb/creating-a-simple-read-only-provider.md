@@ -1,8 +1,7 @@
 ---
 title: "Crear un proveedor sencillo de s&#243;lo lectura | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "proveedores OLE DB, crear"
 ms.assetid: ade8ccdd-9ea4-4e46-a964-18460c2a2401
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Crear un proveedor sencillo de s&#243;lo lectura
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

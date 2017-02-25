@@ -1,8 +1,7 @@
 ---
 title: "Informaci&#243;n de tipos en tiempo de ejecuci&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "información de tipos, comprobación de tipo en tiempo de ejecución"
 ms.assetid: becbd0e5-0439-4c61-854f-8a74f7160c54
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Informaci&#243;n de tipos en tiempo de ejecuci&#243;n
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "CDaoErrorInfo (Estructura) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "DAO (objetos de acceso a datos), colección de errores"
 ms.assetid: cd37ef71-b0b3-401d-bc2b-540c9147f532
 caps.latest.revision: 13
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # CDaoErrorInfo (Estructura)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

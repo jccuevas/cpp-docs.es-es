@@ -1,8 +1,7 @@
 ---
 title: "Optimizaci&#243;n guiada por perfiles del concentrador Rendimiento y diagn&#243;sticos | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: dc3a1914-dbb6-4401-bc63-10665a8c8943
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Optimizaci&#243;n guiada por perfiles del concentrador Rendimiento y diagn&#243;sticos
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

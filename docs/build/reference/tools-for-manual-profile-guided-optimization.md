@@ -1,8 +1,7 @@
 ---
 title: "Herramientas para la optimizaci&#243;n basada en perfiles | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "optimizaciones guiadas por perfiles, herramientas"
 ms.assetid: c6254018-d462-4fc1-a899-ac8637487c44
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Herramientas para la optimizaci&#243;n basada en perfiles
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

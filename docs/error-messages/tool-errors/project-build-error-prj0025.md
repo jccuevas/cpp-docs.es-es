@@ -1,8 +1,7 @@
 ---
 title: "Error PRJ0025 al compilar el proyecto | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "PRJ0025"
 ms.assetid: 57725c78-bc63-44f3-9667-2969b2d7c41d
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Error PRJ0025 al compilar el proyecto
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

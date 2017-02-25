@@ -1,8 +1,7 @@
 ---
 title: "&#205;ndices de byte | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "MBCS [C++], índices de byte"
 ms.assetid: f6e7774a-86c6-41c2-89e3-74fd46432e47
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # &#205;ndices de byte
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

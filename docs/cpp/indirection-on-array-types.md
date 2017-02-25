@@ -1,8 +1,7 @@
 ---
 title: "Direccionamiento indirecto de tipos de matriz | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "operador de direccionamiento indirecto, tipos de matriz"
 ms.assetid: 4adc3840-68d1-4602-9db2-8809d4388279
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Direccionamiento indirecto de tipos de matriz
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Objetos de datos y or&#237;genes de datos: manipulaci&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "OLE [C++], orígenes de datos"
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Objetos de datos y or&#237;genes de datos: manipulaci&#243;n
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

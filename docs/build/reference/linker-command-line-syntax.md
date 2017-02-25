@@ -1,8 +1,7 @@
 ---
 title: "Sintaxis de la l&#237;nea de comandos del vinculador | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "línea de comandos del vinculador [C++]"
 ms.assetid: e2a31e17-77bd-4e74-9305-75b105b26539
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Sintaxis de la l&#237;nea de comandos del vinculador
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

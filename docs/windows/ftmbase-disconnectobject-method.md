@@ -1,8 +1,7 @@
 ---
 title: "FtmBase::DisconnectObject (M&#233;todo) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "DisconnectObject (método)"
 ms.assetid: 33253eec-3a65-4e72-8525-0249245a4790
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # FtmBase::DisconnectObject (M&#233;todo)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

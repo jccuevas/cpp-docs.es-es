@@ -1,8 +1,7 @@
 ---
-title: "Error en tiempo de ejecuci&#243;n de C R6016 | Microsoft Docs"
+title: "R6016 de Error de tiempo de ejecuci&#243;n de C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "R6016"
 ms.assetid: 7bd3f274-d9c4-4bc4-8252-80bf168c4c3a
 caps.latest.revision: 12
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Error en tiempo de ejecuci&#243;n de C R6016
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

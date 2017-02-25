@@ -1,8 +1,7 @@
 ---
 title: "Requisitos previos para las clases de cliente Internet | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "URL [C++], aplicaciones cliente de Internet"
 ms.assetid: c51d1dfe-260c-4228-8100-e4efd90e9599
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Requisitos previos para las clases de cliente Internet
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

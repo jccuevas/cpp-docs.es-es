@@ -1,8 +1,7 @@
 ---
 title: "Plantillas de documento y el proceso de creaci&#243;n de documentos y vistas | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "plantillas, plantillas de documento"
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Plantillas de documento y el proceso de creaci&#243;n de documentos y vistas
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

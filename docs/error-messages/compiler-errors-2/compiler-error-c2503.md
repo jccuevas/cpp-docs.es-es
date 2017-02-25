@@ -1,8 +1,7 @@
 ---
 title: "Error del compilador C2503 | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2503"
 ms.assetid: da86cc89-fd04-400b-aa8d-a5ffaf7e3918
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Error del compilador C2503
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

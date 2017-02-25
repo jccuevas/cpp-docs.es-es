@@ -1,8 +1,7 @@
 ---
 title: "Iteradores | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Biblioteca estándar de C++, convenciones de iteradores"
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
 caps.latest.revision: 12
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Iteradores
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

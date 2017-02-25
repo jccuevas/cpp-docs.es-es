@@ -1,8 +1,7 @@
 ---
 title: "Constantes de tipo de par&#225;metro Variant | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -46,10 +45,10 @@ helpviewer_keywords:
   - "VTS_YSIZE_PIXELS (constante)"
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
 caps.latest.revision: 14
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Constantes de tipo de par&#225;metro Variant
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

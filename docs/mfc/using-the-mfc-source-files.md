@@ -1,8 +1,7 @@
 ---
 title: "Usar los archivos de c&#243;digo fuente de MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "archivos de código fuente, MFC"
 ms.assetid: 3230e8fb-3b69-4ddf-9538-365ac7ea5e72
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Usar los archivos de c&#243;digo fuente de MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

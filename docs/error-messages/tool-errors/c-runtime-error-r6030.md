@@ -1,8 +1,7 @@
 ---
-title: "Error en tiempo de ejecuci&#243;n de C R6030 | Microsoft Docs"
+title: "Error de tiempo de ejecuci&#243;n de en ejecuci&#243;n de C R6030 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,13 +13,13 @@ f1_keywords:
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "R6030"
+  - "EN EJECUCIÓN R6030"
 ms.assetid: 0238a6c3-a033-4046-8adc-f8f99d961153
 caps.latest.revision: 9
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Error en tiempo de ejecuci&#243;n de C R6030
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

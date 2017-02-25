@@ -1,8 +1,7 @@
 ---
 title: "SafeInt (Funciones) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "funciones, SafeInt"
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # SafeInt (Funciones)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Controles ActiveX MFC: M&#233;todos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "controles ActiveX en MFC, métodos"
 ms.assetid: e20271de-6ffa-4ba0-848b-bafe6c9e510c
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Controles ActiveX MFC: M&#233;todos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

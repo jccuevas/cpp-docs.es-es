@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Usar la clase transformer en una canalizaci&#243;n de datos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "usar la clase transformer en las canalizaciones de datos [Runtime de simultaneidad]"
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
 caps.latest.revision: 16
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # C&#243;mo: Usar la clase transformer en una canalizaci&#243;n de datos
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

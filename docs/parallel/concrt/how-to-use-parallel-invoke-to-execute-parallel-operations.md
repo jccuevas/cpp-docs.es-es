@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Usar parallel.invoke para ejecutar operaciones paralelas | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "llamar a varias funciones en paralelo [Runtime de simultaneidad]"
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
 caps.latest.revision: 18
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # C&#243;mo: Usar parallel.invoke para ejecutar operaciones paralelas
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

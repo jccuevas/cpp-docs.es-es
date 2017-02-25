@@ -1,8 +1,7 @@
 ---
 title: "Advertencia del compilador (nivel 4) C4487 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4487"
 ms.assetid: 796144cf-cd3c-4edc-b6a4-96192b7eb4f0
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Advertencia del compilador (nivel 4) C4487
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

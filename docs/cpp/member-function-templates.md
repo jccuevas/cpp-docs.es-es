@@ -1,8 +1,7 @@
 ---
 title: "Plantillas de funci&#243;n miembro | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "plantillas de función, funciones miembro"
 ms.assetid: 83d51835-6a27-40ed-997c-7d90dc9182d8
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Plantillas de funci&#243;n miembro
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

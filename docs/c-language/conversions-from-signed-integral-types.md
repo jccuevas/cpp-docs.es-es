@@ -1,8 +1,7 @@
 ---
 title: "Conversiones de tipos enteros con signo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "conversiones [C++], integrales"
   - "conversión de tipos de datos [C++], enteros con y sin signo"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "conversión de tipos [C++], enteros con y sin signo"
 ms.assetid: 5eea32f8-8b14-413d-acac-c063b3d118d7
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Conversiones de tipos enteros con signo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
-title: "Error en tiempo de ejecuci&#243;n de C R6019 | Microsoft Docs"
+title: "R6019 de Error de tiempo de ejecuci&#243;n de C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "R6019"
 ms.assetid: 8129923e-7db2-40ee-9602-def9365f8d28
 caps.latest.revision: 7
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Error en tiempo de ejecuci&#243;n de C R6019
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

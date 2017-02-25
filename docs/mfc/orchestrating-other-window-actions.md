@@ -1,8 +1,7 @@
 ---
 title: "Orquestar otras acciones de ventana | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "vista previa de impresión, y ventanas de marco"
 ms.assetid: 5f34eea8-2bf8-4479-95c7-45e8f443db8f
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Orquestar otras acciones de ventana
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

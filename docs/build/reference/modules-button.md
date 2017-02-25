@@ -1,8 +1,7 @@
 ---
 title: "M&#243;dulos (Bot&#243;n) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "Módulos (botón)"
 ms.assetid: 51552765-865a-4acc-aeae-f78afb73289a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # M&#243;dulos (Bot&#243;n)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

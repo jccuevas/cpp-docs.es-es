@@ -1,8 +1,7 @@
 ---
 title: "Determinar din&#225;micamente las columnas que se devuelven al consumidor | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "determinar columnas dinámicamente [C++]"
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Determinar din&#225;micamente las columnas que se devuelven al consumidor
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

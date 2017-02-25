@@ -1,8 +1,7 @@
 ---
 title: "Juegos de caracteres de un solo byte y de varios bytes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.character.multibyte"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "juegos de caracteres [C++], multibyte"
   - "juegos de caracteres [C++], un solo byte"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "SBCS (juego de caracteres de un solo byte)"
 ms.assetid: 2cbc78ea-33c0-4cfb-b0df-7ce2458431ce
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Juegos de caracteres de un solo byte y de varios bytes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

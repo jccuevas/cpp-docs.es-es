@@ -1,8 +1,7 @@
 ---
 title: "Archivos PCH en el proceso de compilaci&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "PCH (archivos), proceso de compilación"
 ms.assetid: ebb4b368-8a11-4009-b347-01e79af02fbc
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Archivos PCH en el proceso de compilaci&#243;n
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

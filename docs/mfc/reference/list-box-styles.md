@@ -1,8 +1,7 @@
 ---
 title: "Estilos de cuadro de lista | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -48,10 +47,10 @@ helpviewer_keywords:
   - "cuadros de lista, estilos"
 ms.assetid: 3f357b8d-9118-4f41-9e28-02ed92d1e88f
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Estilos de cuadro de lista
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

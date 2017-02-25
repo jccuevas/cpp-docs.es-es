@@ -1,8 +1,7 @@
 ---
 title: "Diferencias de programaci&#243;n entre formularios Windows Forms y MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "formularios Windows Forms [C++], en comparación con MFC"
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Diferencias de programaci&#243;n entre formularios Windows Forms y MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

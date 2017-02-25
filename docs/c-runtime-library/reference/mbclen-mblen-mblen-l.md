@@ -1,8 +1,7 @@
 ---
 title: "_mbclen, mblen, _mblen_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -37,7 +36,6 @@ f1_keywords:
   - "mbclen"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbclen (función)"
   - "_mblen_l (función)"
@@ -48,10 +46,10 @@ helpviewer_keywords:
   - "tclen (función)"
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _mbclen, mblen, _mblen_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

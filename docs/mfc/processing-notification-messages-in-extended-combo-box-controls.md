@@ -1,8 +1,7 @@
 ---
 title: "Procesar mensajes de notificaci&#243;n en los controles de cuadro combinado extendido | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "notificaciones, controles de cuadro combinado extendido"
 ms.assetid: 4e442758-d054-4746-bb1a-6ff84accb127
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Procesar mensajes de notificaci&#243;n en los controles de cuadro combinado extendido
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo simplifica MFC la creaci&#243;n de aplicaciones cliente de Internet | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MFC, aplicaciones de Internet"
 ms.assetid: 94437b3f-f15c-437d-b5fd-264a2efec9ab
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # C&#243;mo simplifica MFC la creaci&#243;n de aplicaciones cliente de Internet
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Hojas de propiedades y p&#225;ginas de propiedades (MFC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "hojas de propiedades, páginas de propiedades"
 ms.assetid: de8fea12-6c35-4cef-8625-b8073a379446
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Hojas de propiedades y p&#225;ginas de propiedades (MFC)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

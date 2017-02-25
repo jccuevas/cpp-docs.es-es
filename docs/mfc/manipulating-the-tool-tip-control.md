@@ -1,8 +1,7 @@
 ---
 title: "Manipular el control de informaci&#243;n sobre herramientas | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "información sobre herramientas [C++], atributos"
 ms.assetid: 3600afe5-712a-4b56-8456-96e85fe879af
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Manipular el control de informaci&#243;n sobre herramientas
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

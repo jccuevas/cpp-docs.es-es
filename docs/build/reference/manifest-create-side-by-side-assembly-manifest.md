@@ -1,8 +1,7 @@
 ---
 title: "/MANIFEST (Crear el manifiesto del ensamblado simult&#225;neo) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-MANIFEST (opción del vinculador)"
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # /MANIFEST (Crear el manifiesto del ensamblado simult&#225;neo)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

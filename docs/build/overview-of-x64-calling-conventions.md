@@ -1,8 +1,7 @@
 ---
 title: "Informaci&#243;n general sobre las convenciones de llamada x64 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: a05db5eb-0844-4d9d-8b92-b1b2434be0ea
 caps.latest.revision: 12
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Informaci&#243;n general sobre las convenciones de llamada x64
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

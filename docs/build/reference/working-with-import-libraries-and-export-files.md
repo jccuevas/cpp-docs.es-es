@@ -1,8 +1,7 @@
 ---
 title: "Trabajar con bibliotecas de importaci&#243;n y archivos de exportaci&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "LIB [C++], bibliotecas de importación y archivos de exportación"
 ms.assetid: d8175596-9773-4c2f-959d-b05b065a5161
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Trabajar con bibliotecas de importaci&#243;n y archivos de exportaci&#243;n
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Declaraci&#243;n de un tipo de clase administrada | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "tipos de valor, declarar"
 ms.assetid: 16de9c94-91d7-492f-8ac7-f0729cc627e9
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Declaraci&#243;n de un tipo de clase administrada
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

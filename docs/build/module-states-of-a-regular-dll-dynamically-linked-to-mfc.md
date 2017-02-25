@@ -1,8 +1,7 @@
 ---
 title: "Estados de m&#243;dulos de un archivo DLL est&#225;ndar vinculado din&#225;micamente a MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "DLL estándar [C++], vinculados dinámicamente a MFC"
 ms.assetid: b4493e79-d25e-4b7f-a565-60de5b32c723
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Estados de m&#243;dulos de un archivo DLL est&#225;ndar vinculado din&#225;micamente a MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

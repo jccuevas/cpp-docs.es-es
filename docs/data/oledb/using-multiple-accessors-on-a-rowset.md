@@ -1,8 +1,7 @@
 ---
 title: "Utilizar varios descriptores de acceso en un conjunto de filas | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "conjuntos de filas [C++], múltiples descriptores de acceso"
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Utilizar varios descriptores de acceso en un conjunto de filas
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

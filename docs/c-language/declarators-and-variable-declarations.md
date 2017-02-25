@@ -1,8 +1,7 @@
 ---
 title: "Declaradores y declaraciones de variables | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "declaradores, definición"
   - "declarar variables, instrucciones de declaración"
   - "declarar variables, declaradores"
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Declaradores y declaraciones de variables
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

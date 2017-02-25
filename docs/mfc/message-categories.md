@@ -1,8 +1,7 @@
 ---
 title: "Categor&#237;as de mensaje | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "mensajes de Windows [C++], categorías"
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Categor&#237;as de mensaje
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

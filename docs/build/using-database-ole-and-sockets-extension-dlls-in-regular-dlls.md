@@ -1,8 +1,7 @@
 ---
 title: "Utilizar archivos DLL de extensi&#243;n de base de datos, OLE y Sockets en archivos DLL est&#225;ndar | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "DLL [C++], estándar"
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Utilizar archivos DLL de extensi&#243;n de base de datos, OLE y Sockets en archivos DLL est&#225;ndar
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

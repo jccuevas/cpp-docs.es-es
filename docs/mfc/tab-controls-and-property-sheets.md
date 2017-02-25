@@ -1,8 +1,7 @@
 ---
 title: "Controles de pesta&#241;a y hojas de propiedades | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "controles de fichas, y hojas de propiedades"
 ms.assetid: f3b87bea-9ad9-41e6-a7ff-a9285308267e
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Controles de pesta&#241;a y hojas de propiedades
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

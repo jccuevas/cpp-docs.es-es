@@ -1,8 +1,7 @@
 ---
 title: "Almacenamiento y alineaci&#243;n de estructuras | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "alineación de estructuras"
   - "empaquetar estructuras"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "almacenamiento de estructuras"
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Almacenamiento y alineaci&#243;n de estructuras
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/RTC (Comprobaciones de errores en tiempo de ejecuci&#243;n) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -36,10 +35,10 @@ helpviewer_keywords:
   - "errores en tiempo de ejecución, comprobaciones en tiempo de ejecución"
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
 caps.latest.revision: 18
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # /RTC (Comprobaciones de errores en tiempo de ejecuci&#243;n)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

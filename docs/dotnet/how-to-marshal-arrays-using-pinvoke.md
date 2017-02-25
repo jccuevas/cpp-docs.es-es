@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Calcular las referencias a matrices mediante PInvoke | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "invocación de plataforma [C++], matrices"
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # C&#243;mo: Calcular las referencias a matrices mediante PInvoke
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

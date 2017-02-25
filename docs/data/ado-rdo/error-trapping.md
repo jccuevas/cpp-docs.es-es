@@ -1,8 +1,7 @@
 ---
 title: "Interceptaci&#243;n de errores | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "interceptación de errores [C++]"
 ms.assetid: c509b089-a542-44be-8f22-dc5832967a48
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Interceptaci&#243;n de errores
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

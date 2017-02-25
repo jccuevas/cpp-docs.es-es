@@ -1,8 +1,7 @@
 ---
 title: "Fuente de herramienta de texto (Cuadro de di&#225;logo) (Editor de im&#225;genes para iconos) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "Fuente de herramienta de texto (cuadro de diálogo)"
   - "fuentes, cambiar en una imagen"
   - "texto, en imágenes"
 ms.assetid: c398e2e7-0263-43c1-9ab4-768a280c2407
 caps.latest.revision: 8
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Fuente de herramienta de texto (Cuadro de di&#225;logo) (Editor de im&#225;genes para iconos)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

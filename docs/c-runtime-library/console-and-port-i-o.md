@@ -1,8 +1,7 @@
 ---
 title: "E/S de consola y de puerto | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.io"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "E/S [CRT], consola"
   - "E/S [CRT], puerto"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "rutinas, E/S de consola y puerto"
 ms.assetid: 0eee1c92-9b3d-41e0-a43a-257e546eeec8
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # E/S de consola y de puerto
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

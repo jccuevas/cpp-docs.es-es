@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Convertir un bucle OpenMP paralelo para usar el runtime de simultaneidad | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "bucles paralelos, convertir de OpenMP a Runtime de simultaneidad"
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
 caps.latest.revision: 13
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # C&#243;mo: Convertir un bucle OpenMP paralelo para usar el runtime de simultaneidad
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

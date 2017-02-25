@@ -1,8 +1,7 @@
 ---
 title: "Definir bloques __asm como macros de C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Visual C, macros"
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Definir bloques __asm como macros de C
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

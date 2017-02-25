@@ -1,8 +1,7 @@
 ---
 title: "Estilos de bot&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/09/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -69,10 +68,10 @@ helpviewer_keywords:
   - "estilos, objetos de botón"
 ms.assetid: 41206f72-2b92-4250-ae32-31184046402f
 caps.latest.revision: 20
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Estilos de bot&#243;n
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Portapapeles: Agregar otros formatos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "registrar formatos de datos personalizados del Portapapeles"
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Portapapeles: Agregar otros formatos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

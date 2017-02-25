@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Enlazar datos DDX/DDV con formularios Windows Forms | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "formularios Windows Forms [C++], compatibilidad con MFC"
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # C&#243;mo: Enlazar datos DDX/DDV con formularios Windows Forms
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

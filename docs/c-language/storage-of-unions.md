@@ -1,8 +1,7 @@
 ---
 title: "Almacenamiento de uniones | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "almacenamiento, union"
   - "union (palabra clave) [C]"
   - "union (palabra clave) [C], almacenamiento"
 ms.assetid: b33d246a-8d20-41c4-89b2-ab05f1428792
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Almacenamiento de uniones
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Comandos y tablas | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "tablas [C++], Plantillas de consumidor OLE DB"
 ms.assetid: 4bd3787b-6d26-40a9-be0c-083080537c12
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Comandos y tablas
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

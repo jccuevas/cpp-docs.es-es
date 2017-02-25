@@ -1,8 +1,7 @@
 ---
 title: "Cerrar el cuadro de di&#225;logo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "cuadros de diálogo de MFC, cerrar"
 ms.assetid: 946f5675-c482-46a4-a5dd-34fe138ffae5
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Cerrar el cuadro de di&#225;logo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

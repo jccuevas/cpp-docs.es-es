@@ -1,8 +1,7 @@
 ---
 title: "D&#243;nde buscar mapas de mensajes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "macros de mapa de mensajes"
 ms.assetid: bf59fbc8-b222-42d3-b5d3-0a79aa3cb923
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # D&#243;nde buscar mapas de mensajes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

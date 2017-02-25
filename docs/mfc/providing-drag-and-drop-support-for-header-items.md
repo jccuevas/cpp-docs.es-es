@@ -1,8 +1,7 @@
 ---
 title: "Proporcionar compatibilidad con arrastrar y colocar para los elementos de encabezado | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "elementos de encabezado en controles de encabezado"
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Proporcionar compatibilidad con arrastrar y colocar para los elementos de encabezado
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

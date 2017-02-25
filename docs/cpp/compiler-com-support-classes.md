@@ -1,8 +1,7 @@
 ---
 title: "Clases de compatibilidad con COM del compilador | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "COM, compatibilidad del compilador"
 ms.assetid: 6d800d9b-b902-4033-9639-740a30b06f88
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Clases de compatibilidad con COM del compilador
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

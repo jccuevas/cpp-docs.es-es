@@ -1,8 +1,7 @@
 ---
 title: "Sintaxis de especificaci&#243;n de formato: Funciones printf y wprintf | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,7 +20,6 @@ f1_keywords:
   - "wprintf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "directivas de marca, función printf"
   - "campos de especificación de formato para la función printf"
@@ -33,10 +31,10 @@ helpviewer_keywords:
   - "campos de tipo, printf (función)"
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Sintaxis de especificaci&#243;n de formato: Funciones printf y wprintf
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

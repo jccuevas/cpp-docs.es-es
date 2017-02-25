@@ -1,8 +1,7 @@
 ---
 title: "Dar formato a la presentaci&#243;n de un paso de compilaci&#243;n personalizada o un evento de compilaci&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "eventos [C++], build"
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Dar formato a la presentaci&#243;n de un paso de compilaci&#243;n personalizada o un evento de compilaci&#243;n
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

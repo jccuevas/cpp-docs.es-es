@@ -1,8 +1,7 @@
 ---
 title: "Constantes de uso compartido | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,7 +16,6 @@ f1_keywords:
   - "_SH_COMPAT"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_SH_COMPAT (constante)"
   - "_SH_DENYNO (constante)"
@@ -32,10 +30,10 @@ helpviewer_keywords:
   - "compartir constantes"
 ms.assetid: 95fadc3a-55dc-473d-98b5-e8211900465d
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Constantes de uso compartido
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

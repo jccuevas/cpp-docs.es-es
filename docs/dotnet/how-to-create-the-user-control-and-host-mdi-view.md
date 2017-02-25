@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Crear el control de usuario y hospedarlo en una vista MDI | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "formularios Windows Forms [C++], compatibilidad con MFC"
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
 caps.latest.revision: 25
-caps.handback.revision: 25
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # C&#243;mo: Crear el control de usuario y hospedarlo en una vista MDI
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

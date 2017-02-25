@@ -1,8 +1,7 @@
 ---
 title: "Crear una clase de di&#225;logo con los Asistentes para c&#243;digo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "cuadros de diálogo de MFC, crear"
 ms.assetid: a7157b9d-f1a8-4381-a4cf-180cd2c7f1b2
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Crear una clase de di&#225;logo con los Asistentes para c&#243;digo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

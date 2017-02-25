@@ -1,8 +1,7 @@
 ---
 title: "Funciones de CRT no compatibles con Windows en tiempo de ejecuci&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Windows en tiempo de ejecución, funciones CRT no admitidas"
 ms.assetid: bb8386d6-0ef8-460c-88d8-addff009b6f1
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Funciones de CRT no compatibles con Windows en tiempo de ejecuci&#243;n
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

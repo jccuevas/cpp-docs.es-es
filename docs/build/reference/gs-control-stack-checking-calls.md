@@ -1,8 +1,7 @@
 ---
 title: "/Gs (Controlar llamadas de comprobaci&#243;n de la pila) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "pila, comprobaciones de la pila"
 ms.assetid: 40daed7c-f942-4085-b872-01e12b37729e
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # /Gs (Controlar llamadas de comprobaci&#243;n de la pila)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

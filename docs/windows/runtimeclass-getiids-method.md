@@ -1,8 +1,7 @@
 ---
 title: "RuntimeClass::GetIids (M&#233;todo) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "GetIids (método)"
 ms.assetid: 826a67d1-ebc4-4940-b5d5-7cd66885e4a1
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # RuntimeClass::GetIids (M&#233;todo)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

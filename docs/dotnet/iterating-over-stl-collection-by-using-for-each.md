@@ -1,8 +1,7 @@
 ---
 title: "Iterar por una colecci&#243;n STL mediante for each | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "colecciones DTL, recorriendo en iteración"
 ms.assetid: 9358ca29-b982-4a19-bbfd-bef50fe66c9a
 caps.latest.revision: 14
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Iterar por una colecci&#243;n STL mediante for each
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

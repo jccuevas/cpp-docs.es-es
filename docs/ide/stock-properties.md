@@ -1,8 +1,7 @@
 ---
 title: "Propiedades est&#225;ndar | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "propiedades estándar, acerca de las propiedades estándar"
 ms.assetid: a89fc454-0b8e-447a-9033-4c8af46a24d9
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Propiedades est&#225;ndar
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

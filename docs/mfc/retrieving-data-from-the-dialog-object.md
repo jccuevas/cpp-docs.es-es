@@ -1,8 +1,7 @@
 ---
 title: "Recuperar datos del objeto de cuadro de di&#225;logo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,10 +31,10 @@ helpviewer_keywords:
   - "datos proporcionados por el usuario [C++], recuperar de los cuadros de diálogo de MFC"
 ms.assetid: bdca2b61-6b53-4c2e-b426-8712c7a38ec0
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Recuperar datos del objeto de cuadro de di&#225;logo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

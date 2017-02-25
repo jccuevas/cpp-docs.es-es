@@ -1,8 +1,7 @@
 ---
 title: "Configuraci&#243;n del control, Asistente para controles ActiveX MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Asistente para controles ActiveX MFC, configuración del control"
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
 caps.latest.revision: 16
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Configuraci&#243;n del control, Asistente para controles ActiveX MFC
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

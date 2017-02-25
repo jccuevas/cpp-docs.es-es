@@ -1,8 +1,7 @@
 ---
 title: "Controles ActiveX MFC: Crear un servidor de automatizaci&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "controles ActiveX en MFC [C++], servidor de automatización"
 ms.assetid: e0c24ed2-d61c-49ad-a4fa-4e1098d1d39b
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Controles ActiveX MFC: Crear un servidor de automatizaci&#243;n
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

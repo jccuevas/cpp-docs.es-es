@@ -1,8 +1,7 @@
 ---
 title: "Servicios del modelo de objetos en tiempo de ejecuci&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "macros de servicios del modelo de objetos en tiempo de ejecución"
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
 caps.latest.revision: 15
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Servicios del modelo de objetos en tiempo de ejecuci&#243;n
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Operadores de asignaci&#243;n de C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "%= (operador)"
   - "&= (operador)"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "operador de resta, operadores de asignación de C"
 ms.assetid: 11688dcb-c941-44e7-a636-3fc98e7dac40
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Operadores de asignaci&#243;n de C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Informaci&#243;n adicional sobre las clases ODBC de MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "clases ODBC de MFC"
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Informaci&#243;n adicional sobre las clases ODBC de MFC
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

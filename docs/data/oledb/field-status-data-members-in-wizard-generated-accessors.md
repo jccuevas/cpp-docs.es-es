@@ -1,8 +1,7 @@
 ---
 title: "Miembros de datos sobre el estado de un campo en los descriptores de acceso generados por el asistente | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "plantillas de consumidor OLE DB, estado de campos"
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Miembros de datos sobre el estado de un campo en los descriptores de acceso generados por el asistente
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

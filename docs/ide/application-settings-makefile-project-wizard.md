@@ -1,8 +1,7 @@
 ---
 title: "Configuraci&#243;n de la aplicaci&#243;n, Asistente para proyectos de archivo MAKE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Asistente para proyectos de archivos Make, configuración de la aplicación"
 ms.assetid: e0cbce59-5984-4f68-8a1d-f7fb2007c9b4
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Configuraci&#243;n de la aplicaci&#243;n, Asistente para proyectos de archivo MAKE
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

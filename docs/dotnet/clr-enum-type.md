@@ -1,8 +1,7 @@
 ---
 title: "Tipo de enumeraci&#243;n de CLR | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ámbito, de enumeración de CLR"
 ms.assetid: 4541d952-97bb-4e35-a7f8-d14f5f6a6606
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Tipo de enumeraci&#243;n de CLR
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Configuraci&#243;n de la aplicaci&#243;n, Asistente para archivos DLL de MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Asistente para archivos DLL de MFC, configuración de la aplicación"
 ms.assetid: 0a96b94f-ae36-4975-951b-c9ffb3def21c
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Configuraci&#243;n de la aplicaci&#243;n, Asistente para archivos DLL de MFC
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

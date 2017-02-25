@@ -1,8 +1,7 @@
 ---
 title: "Temas generales de MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MFC, desarrollo de aplicaciones"
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
 caps.latest.revision: 17
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Temas generales de MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

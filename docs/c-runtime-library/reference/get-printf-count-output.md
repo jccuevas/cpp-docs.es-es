@@ -1,8 +1,7 @@
 ---
 title: "_get_printf_count_output | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,17 +28,16 @@ f1_keywords:
   - "_get_printf_count_output"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "%n (formato)"
   - "_get_printf_count_output (función)"
   - "get_printf_count_output (función)"
 ms.assetid: 850f9f33-8319-433e-98d8-6a694200d994
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _get_printf_count_output
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

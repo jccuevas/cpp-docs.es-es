@@ -1,8 +1,7 @@
 ---
 title: "Comprobar errores en tiempo de ejecuci&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "c.runtime"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "comprobar errores en tiempo de ejecución"
   - "errores en tiempo de ejecución, comprobar"
 ms.assetid: c965dd01-57ad-4a3c-b1d6-5aa04f920501
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Comprobar errores en tiempo de ejecuci&#243;n
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

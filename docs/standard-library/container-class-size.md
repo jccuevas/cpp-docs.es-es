@@ -1,8 +1,7 @@
 ---
 title: "Clase de contenedor::size | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "size (método)"
 ms.assetid: 67073661-2699-4534-ad3b-31a906658dc5
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Clase de contenedor::size
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

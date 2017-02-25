@@ -1,8 +1,7 @@
 ---
 title: "Crear pesta&#241;as dibujadas por el propietario | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "pestañas, dibujadas por el propietario"
 ms.assetid: 11af2926-41d7-47e3-9eec-c595283f6371
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Crear pesta&#241;as dibujadas por el propietario
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

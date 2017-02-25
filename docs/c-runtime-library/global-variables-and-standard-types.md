@@ -1,8 +1,7 @@
 ---
 title: "Variables globales y tipos est&#225;ndar | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.variables"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "variables globales, CRT"
   - "tipos estándar"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "tipos [CRT]"
 ms.assetid: 8f8bad6f-2b78-4068-a0dc-77d58d978920
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Variables globales y tipos est&#225;ndar
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

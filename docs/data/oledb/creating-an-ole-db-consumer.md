@@ -1,8 +1,7 @@
 ---
 title: "Crear un consumidor OLE DB | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "consumidores OLE DB, crear"
 ms.assetid: 652309d3-7736-4354-89ec-28ec80a83f9a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Crear un consumidor OLE DB
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

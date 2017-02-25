@@ -1,8 +1,7 @@
 ---
 title: "Marcas de control | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "c.flags"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "montón de depuración, marcas de control"
   - "marcas, control"
   - "asignación en el montón, marcas de control"
 ms.assetid: 8dbd24a5-0633-42d1-9771-776db338465f
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Marcas de control
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

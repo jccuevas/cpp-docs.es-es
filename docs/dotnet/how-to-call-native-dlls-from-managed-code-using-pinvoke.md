@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Llamar a archivos DLL nativos desde el c&#243;digo administrado mediante PInvoke | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "invocación de plataforma [C++], llamar a DLL nativas"
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # C&#243;mo: Llamar a archivos DLL nativos desde el c&#243;digo administrado mediante PInvoke
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

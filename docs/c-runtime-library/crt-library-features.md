@@ -1,8 +1,7 @@
 ---
 title: "Caracter&#237;sticas de la biblioteca CRT | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.runtime"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "MSVCR71.dll"
   - "bibliotecas [C++], multiproceso"
@@ -30,10 +28,10 @@ helpviewer_keywords:
   - "vinculación [C++], bibliotecas"
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
 caps.latest.revision: 32
-caps.handback.revision: 32
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # Caracter&#237;sticas de la biblioteca CRT
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

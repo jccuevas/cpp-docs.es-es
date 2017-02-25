@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Usar la referencia cruzada del mapa de mensajes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ventanas [C++], mapas de mensajes"
 ms.assetid: 2e863d23-9e58-45ba-b5e4-a8ceefccd0c8
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # C&#243;mo: Usar la referencia cruzada del mapa de mensajes
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

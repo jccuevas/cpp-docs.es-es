@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Usar parallel.invoke para escribir una rutina de ordenaci&#243;n en paralelo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "mejorar el rendimiento paralelo con grupos de tareas [Runtime de simultaneidad]"
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
 caps.latest.revision: 23
-caps.handback.revision: 20
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # C&#243;mo: Usar parallel.invoke para escribir una rutina de ordenaci&#243;n en paralelo
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

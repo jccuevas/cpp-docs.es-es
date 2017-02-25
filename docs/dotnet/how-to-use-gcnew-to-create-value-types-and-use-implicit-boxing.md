@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Usar gcnew para crear tipos de valor y usar la conversi&#243;n boxing impl&#237;cita | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "tipos de valor, crear"
 ms.assetid: ceb48841-d6bd-47be-a167-57f44c961603
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # C&#243;mo: Usar gcnew para crear tipos de valor y usar la conversi&#243;n boxing impl&#237;cita
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

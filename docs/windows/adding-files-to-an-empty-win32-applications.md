@@ -1,8 +1,7 @@
 ---
 title: "Agregar archivos a una aplicaci&#243;n de Win32 vac&#237;a | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "proyectos [C++], agregar elementos"
 ms.assetid: 070098e8-0396-49fe-a697-3daa2f1be6de
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Agregar archivos a una aplicaci&#243;n de Win32 vac&#237;a
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Servidores: Implementar ventanas de marco en contexto | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "servidores, ventanas de marco en contexto"
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Servidores: Implementar ventanas de marco en contexto
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

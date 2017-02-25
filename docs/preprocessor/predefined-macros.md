@@ -1,8 +1,7 @@
 ---
 title: "Macros predefinidas | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -78,7 +77,6 @@ f1_keywords:
   - "__func__"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "marcas de tiempo de macro de preprocesador"
   - "cl.exe (compilador), número de versión"
@@ -154,10 +152,10 @@ helpviewer_keywords:
   - "identificador de __func__"
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
 caps.latest.revision: 75
-caps.handback.revision: 75
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 75
 ---
 # Macros predefinidas
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

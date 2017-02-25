@@ -1,8 +1,7 @@
 ---
 title: "typeid (Operador) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "typeid (operador)"
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # typeid (Operador)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

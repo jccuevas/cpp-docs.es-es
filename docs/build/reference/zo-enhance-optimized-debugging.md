@@ -1,8 +1,7 @@
 ---
 title: "/Zo (Mejorar la depuraci&#243;n optimizada) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-Zo (opción del compilador) [C++]"
 ms.assetid: eea8d89a-7fe0-4fe1-86b2-7689bbebbd7f
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # /Zo (Mejorar la depuraci&#243;n optimizada)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

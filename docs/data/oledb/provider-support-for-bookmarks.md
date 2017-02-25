@@ -1,8 +1,7 @@
 ---
 title: "Compatibilidad del proveedor con los marcadores | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "proveedores OLE DB, compatibilidad con marcadores"
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Compatibilidad del proveedor con los marcadores
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

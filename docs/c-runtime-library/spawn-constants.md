@@ -1,8 +1,7 @@
 ---
 title: "spawn (Constantes) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,7 +16,6 @@ f1_keywords:
   - "_P_NOWAITO"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_P_DETACH (constante)"
   - "_P_NOWAIT (constante)"
@@ -32,10 +30,10 @@ helpviewer_keywords:
   - "spawn (constantes)"
 ms.assetid: e0533e88-d362-46fc-b53c-5f193226d879
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # spawn (Constantes)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

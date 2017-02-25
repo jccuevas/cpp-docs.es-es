@@ -1,8 +1,7 @@
 ---
 title: "Asistente para p&#225;ginas de propiedades ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Asistente para páginas de propiedades ATL"
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
 caps.latest.revision: 13
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Asistente para p&#225;ginas de propiedades ATL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

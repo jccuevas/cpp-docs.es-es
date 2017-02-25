@@ -1,8 +1,7 @@
 ---
 title: "Nombres del control, Asistente para controles ActiveX MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Asistente para controles ActiveX MFC, nombres del control"
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Nombres del control, Asistente para controles ActiveX MFC
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

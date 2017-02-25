@@ -1,8 +1,7 @@
 ---
 title: "/Zp (Alineaci&#243;n de miembros de estructura) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-Zp (opción del compilador) [C++]"
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /Zp (Alineaci&#243;n de miembros de estructura)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

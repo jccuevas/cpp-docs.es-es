@@ -1,8 +1,7 @@
 ---
 title: "Etiquetas de elemento de control de &#225;rbol | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "controles de árbol, etiquetas del elemento"
 ms.assetid: fe834107-1a25-4280-aced-774c11565805
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Etiquetas de elemento de control de &#225;rbol
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

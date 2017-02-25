@@ -1,8 +1,7 @@
 ---
 title: "Controles ActiveX MFC: Agregar propiedades est&#225;ndar | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "propiedades [MFC], agregar estándar"
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Controles ActiveX MFC: Agregar propiedades est&#225;ndar
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Vinculaci&#243;n impl&#237;cita | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "vinculación de carga estática [C++]"
 ms.assetid: 3ea4c316-4e70-4111-9944-c1b4ad00c605
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Vinculaci&#243;n impl&#237;cita
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

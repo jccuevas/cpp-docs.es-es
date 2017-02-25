@@ -1,8 +1,7 @@
 ---
 title: "Configuraci&#243;n de la cuadr&#237;cula (Cuadro de di&#225;logo) (Editor de im&#225;genes para iconos) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,15 +13,14 @@ f1_keywords:
   - "vc.editors.gridsettings"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "Configuración de la cuadrícula (cuadro de diálogo)"
 ms.assetid: 59ce033a-ff10-48cd-b414-f9cb74da6789
 caps.latest.revision: 8
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Configuraci&#243;n de la cuadr&#237;cula (Cuadro de di&#225;logo) (Editor de im&#225;genes para iconos)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

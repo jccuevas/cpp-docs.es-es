@@ -1,8 +1,7 @@
 ---
 title: "Cambios en la sem&#225;ntica de los destructores | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "finalizadores [C++]"
 ms.assetid: f1869944-a407-452f-b99a-04d8c209f0dc
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Cambios en la sem&#225;ntica de los destructores
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

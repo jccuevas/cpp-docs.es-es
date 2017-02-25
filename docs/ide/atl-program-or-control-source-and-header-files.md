@@ -1,8 +1,7 @@
 ---
 title: "Archivos de encabezado y c&#243;digo fuente de controles o programas ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "tipos de archivo [C++], código fuente y encabezados de ATL"
 ms.assetid: cb65372f-4880-4007-b582-a52eaa568fd1
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Archivos de encabezado y c&#243;digo fuente de controles o programas ATL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Gu&#237;a de migraci&#243;n: Scribble de MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
 caps.latest.revision: 5
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Gu&#237;a de migraci&#243;n: Scribble de MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

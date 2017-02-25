@@ -1,8 +1,7 @@
 ---
 title: "Constantes de punto flotante de C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "constantes, punto flotante"
   - "double (tipo de datos), constantes de punto flotante"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "tipos [C], constantes"
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Constantes de punto flotante de C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

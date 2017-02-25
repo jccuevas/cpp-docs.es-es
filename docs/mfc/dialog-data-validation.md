@@ -1,8 +1,7 @@
 ---
 title: "Validaci&#243;n de datos de cuadro de di&#225;logo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "validar datos [C++], cuadros de mensaje"
 ms.assetid: f070c309-2044-4ff2-8c92-1ec1ea84af58
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Validaci&#243;n de datos de cuadro de di&#225;logo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

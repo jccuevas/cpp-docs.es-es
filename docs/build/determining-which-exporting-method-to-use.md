@@ -1,8 +1,7 @@
 ---
 title: "Determinar el m&#233;todo de exportaci&#243;n que se debe utilizar | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "exportar DLL [C++], comparación de métodos"
 ms.assetid: 66d773ed-935c-45c2-ad03-1a060874b34d
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Determinar el m&#233;todo de exportaci&#243;n que se debe utilizar
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

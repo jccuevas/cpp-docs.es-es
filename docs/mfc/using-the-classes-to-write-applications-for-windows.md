@@ -1,8 +1,7 @@
 ---
 title: "Usar las clases para escribir aplicaciones para Windows | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "aplicaciones Windows [C++], marco de trabajo de la aplicación MFC"
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Usar las clases para escribir aplicaciones para Windows
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

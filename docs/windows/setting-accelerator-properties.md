@@ -1,8 +1,7 @@
 ---
 title: "Establecer las propiedades de los aceleradores | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Modifier (propiedad)"
 ms.assetid: 0fce9156-3025-4e18-b034-e219a4c65812
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Establecer las propiedades de los aceleradores
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

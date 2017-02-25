@@ -1,8 +1,7 @@
 ---
 title: "Internacionalizaci&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.international"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "aplicaciones internacionales, rutinas en tiempo de ejecución para"
   - "rutinas de internacionalización"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "adaptación, rutinas para"
 ms.assetid: ee536a04-3558-4729-8e10-6dabcde055fd
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Internacionalizaci&#243;n
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

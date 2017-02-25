@@ -1,8 +1,7 @@
 ---
 title: "Operador de evaluaci&#243;n secuencial | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "coma (operador)"
   - "operadores [C++], evaluación secuencial"
   - "operador de evaluación secuencial"
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Operador de evaluaci&#243;n secuencial
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

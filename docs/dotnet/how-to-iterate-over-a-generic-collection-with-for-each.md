@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Iterar por una colecci&#243;n gen&#233;rica con for each | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "colección genérica, recorriendo en iteración"
 ms.assetid: 00288d53-3d41-44d0-be5b-b3033456ceaa
 caps.latest.revision: 13
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # C&#243;mo: Iterar por una colecci&#243;n gen&#233;rica con for each
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

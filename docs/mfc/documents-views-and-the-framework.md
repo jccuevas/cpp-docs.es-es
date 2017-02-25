@@ -1,8 +1,7 @@
 ---
 title: "Documentos, vistas y el marco | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "objetos de vista, relación con otros objetos MFC"
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Documentos, vistas y el marco
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

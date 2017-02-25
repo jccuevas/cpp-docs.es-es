@@ -1,8 +1,7 @@
 ---
 title: "Controles y bandas Rebar | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "controles rebar, trabajar con bandas en"
 ms.assetid: b647e7a5-9ea7-48b1-8e5f-096d104748f0
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Controles y bandas Rebar
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Clases de aplicaci&#243;n y de compatibilidad con subprocesos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "subprocesamiento [MFC]"
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Clases de aplicaci&#243;n y de compatibilidad con subprocesos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

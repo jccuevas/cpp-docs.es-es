@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Crear una colecci&#243;n con seguridad de tipos | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "colecciones de tipo seguras"
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
 caps.latest.revision: 10
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # C&#243;mo: Crear una colecci&#243;n con seguridad de tipos
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

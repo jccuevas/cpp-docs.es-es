@@ -1,8 +1,7 @@
 ---
 title: "Informaci&#243;n de im&#225;genes en las listas de im&#225;genes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "listas de imágenes [C++], información de imagen en"
 ms.assetid: 73c41543-fa91-405d-b15b-0feffa6a72c1
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Informaci&#243;n de im&#225;genes en las listas de im&#225;genes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

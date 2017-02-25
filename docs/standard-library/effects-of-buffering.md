@@ -1,8 +1,7 @@
 ---
 title: "Efectos del almacenamiento en b&#250;fer | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "almacenamiento en búfer, efectos del"
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
 caps.latest.revision: 9
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Efectos del almacenamiento en b&#250;fer
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

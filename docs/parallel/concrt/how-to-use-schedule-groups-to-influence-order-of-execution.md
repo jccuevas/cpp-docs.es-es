@@ -1,8 +1,7 @@
 ---
 title: "C&#243;mo: Usar grupos de programaci&#243;n para influir en el orden de ejecuci&#243;n | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "usar grupos de programación [Runtime de simultaneidad]"
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
 caps.latest.revision: 15
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # C&#243;mo: Usar grupos de programaci&#243;n para influir en el orden de ejecuci&#243;n
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

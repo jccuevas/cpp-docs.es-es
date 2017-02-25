@@ -1,8 +1,7 @@
 ---
 title: "/DYNAMICBASE (Usar selecci&#243;n aleatoria del dise&#241;o del espacio de direcciones) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/09/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-DYNAMICBASE (opción del vinculador)"
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /DYNAMICBASE (Usar selecci&#243;n aleatoria del dise&#241;o del espacio de direcciones)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

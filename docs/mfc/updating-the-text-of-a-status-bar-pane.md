@@ -1,8 +1,7 @@
 ---
 title: "Actualizar el texto de un panel de barra de estado | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "objetos de interfaz de usuario, actualizar"
 ms.assetid: 4984a3f4-9905-4d8c-a927-dca19781053b
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Actualizar el texto de un panel de barra de estado
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

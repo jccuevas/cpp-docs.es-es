@@ -1,8 +1,7 @@
 ---
 title: "Constantes de traducci&#243;n de archivo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.constants.file"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "constantes [C++], modo de traducción de archivos"
   - "traducción de archivos [C++]"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "traslación, constantes de traducción de archivo"
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Constantes de traducci&#243;n de archivo
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

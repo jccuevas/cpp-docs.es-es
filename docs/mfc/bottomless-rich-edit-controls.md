@@ -1,8 +1,7 @@
 ---
 title: "Controles Rich Edit sin l&#237;mite | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "controles Rich Edit, sin límite"
 ms.assetid: 2877dd32-1e9a-4fd1-98c0-66dcbbeef1de
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Controles Rich Edit sin l&#237;mite
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

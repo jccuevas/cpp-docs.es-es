@@ -1,8 +1,7 @@
 ---
 title: "Clase de contenedor::end | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "end (método)"
 ms.assetid: 6fa38a20-3798-4387-9c6e-20fc3e90d813
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Clase de contenedor::end
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

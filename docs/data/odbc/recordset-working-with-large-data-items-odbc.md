@@ -1,8 +1,7 @@
 ---
 title: "Conjunto de registros: Trabajar con grandes elementos de datos (ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "conjuntos de registros, objetos binarios grandes"
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Conjunto de registros: Trabajar con grandes elementos de datos (ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

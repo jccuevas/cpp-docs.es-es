@@ -1,8 +1,7 @@
 ---
 title: "Men&#250;s y recursos: Combinaci&#243;n de men&#250;s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "edición visual, menús y recursos de la aplicación"
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
 caps.latest.revision: 9
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Men&#250;s y recursos: Combinaci&#243;n de men&#250;s
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
