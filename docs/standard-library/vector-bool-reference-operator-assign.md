@@ -1,55 +1,67 @@
 ---
-title: "vector&lt;bool&gt;::reference::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "="
-  - "operator="
-  - "vector<bool>::reference::operator="
-  - "std::vector<bool>::reference::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= (operador), con objetos específicos de la biblioteca estándar de C++"
-  - "reference::operator="
+title: vector&lt;bool&gt;::reference::operator= | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- =
+- operator=
+- vector<bool>::reference::operator=
+- std::vector<bool>::reference::operator=
+dev_langs:
+- C++
+helpviewer_keywords:
+- = operator, with specific C++ Standard Library objects
+- reference::operator=
 ms.assetid: eed20d81-36b9-40b2-a3b6-340ed0bb4f34
 caps.latest.revision: 20
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# vector&lt;bool&gt;::reference::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 82c542fff74866ac57d65dc25b8ee8f75d53415d
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="vectorltboolgtreferenceoperator"></a>vector&lt;bool&gt;::reference::operator=
 Asigna un valor booleano a un bit o asigna el valor contenido en un elemento al que se hace referencia a un bit.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-reference& operator=(  
-   const reference& Right  
-);  
-reference& operator=(  
-   bool Val  
-);  
+reference& operator=(const reference& Right);
+
+reference& operator=(bool Val);
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `Right`  
  Referencia del elemento cuyo valor se asigna al bit.  
   
  `Val`  
  Valor booleano que se asigna al bit.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // vector_bool_ref_op_assign.cpp  
@@ -108,14 +120,14 @@ int main()
   
 ```  
   
-## Output  
+## <a name="output"></a>Salida  
   
 ```  
 The vector is: true false false true true  
 The original value of the 1st element stored in a bool: true  
 The original value of the 2nd element stored in a bool: false  
 The original value of the 3rd element stored in a bool: false  
-  
+ 
 The vector after assigning refelem1 to refelem2 is now: true true false true true  
 The vector after assigning false to refelem1 is now: true true true true true  
 The original value of the 1st element still stored in a bool: true  
@@ -123,11 +135,13 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false  
 ```  
   
-## Requisitos  
- **Encabezado:** \<vector\>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<vector>  
   
  **Espacio de nombres:** std  
   
-## Vea también  
- [vector\<bool\>::reference \(Clase\)](../standard-library/vector-bool-reference-class.md)   
- [Biblioteca de plantillas estándar](../misc/standard-template-library.md)
+## <a name="see-also"></a>Vea también  
+ [vector\<bool>::reference (Clase)](../standard-library/vector-bool-reference-class.md)   
+ [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
+
+

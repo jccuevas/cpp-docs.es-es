@@ -1,30 +1,46 @@
 ---
-title: "Archivos de salida binarios | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "datos binarios, archivos de salida binarios"
-  - "archivos [C++], archivos de salida binarios"
-  - "E/S [C++], archivos de salida binarios"
+title: Archivos de salida binarios | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- I/O [C++], binary output files
+- files [C++], binary output files
+- binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Archivos de salida binarios
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: f566da8ea00f0a52db3539c81bb3d19d6fc9da99
+ms.lasthandoff: 02/24/2017
 
-Las secuencias se diseñaron originalmente para el texto, por lo que el modo de salida predeterminado es texto.  En modo de texto, el carácter de nueva línea \(hexadecimal 10\) expanda un retorno\- avance de línea de carro \(de 16 bits solo\).  La extensión puede producir problemas, como se muestra aquí:  
+---
+# <a name="binary-output-files"></a>Archivos de salida binarios
+Los flujos se diseñaron originalmente para texto, por lo que el modo de salida predeterminado es texto. En modo de texto, el carácter de nueva línea (hexadecimal 10) se expande a un retorno de carro y salto de línea (solo de 16 bits). La expansión puede causar problemas, como se muestra aquí:  
   
 ```  
 // binary_output_files.cpp  
@@ -39,7 +55,7 @@ int main( )
 }  
 ```  
   
- Se espera que este programa genere la secuencia de bytes {99, 0, 10, 0}; en su lugar, genera {99, 0, 13, 10, 0}, que produce problemas para un programa que cuenta con entrada binaria.  Si necesita el binario verdadero generar, en el que los caracteres se escriben sin traducir, puede especificar el binario generado utilizando el argumento de modo de constructor de [ofstream](../Topic/ofstream.md) :  
+ Puede esperar que este programa envíe la secuencia de bytes { 99, 0, 10, 0 }; en su lugar, envía { 99, 0, 13, 10, 0 }, lo que provoca problemas para un programa que esperaba una entrada binaria. Si necesita una salida binaria True, en la que se escriben caracteres sin traducir, puede especificar la salida binaria mediante el argumento openmode del constructor [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream__basic_ofstream):  
   
 ```  
 // binary_output_files2.cpp  
@@ -57,5 +73,7 @@ int main()
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Flujos de salida](../standard-library/output-streams.md)
+
+

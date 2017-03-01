@@ -1,53 +1,69 @@
 ---
-title: "_resetstkoflw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_resetstkoflw"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "resetstkoflw"
-  - "_resetstkoflw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_resetstkoflw (función)"
-  - "resetstkoflw (función)"
-  - "desbordamiento de pila"
-  - "pila, recuperar"
+title: _resetstkoflw | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _resetstkoflw
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- resetstkoflw
+- _resetstkoflw
+dev_langs:
+- C++
+helpviewer_keywords:
+- resetstkoflw function
+- stack overflow
+- stack, recovering
+- _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _resetstkoflw
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 23b9a848acb3e1dcd5003fb9369de2c1daf55ce9
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="resetstkoflw"></a>_resetstkoflw
 Se recupera de un desbordamiento de pila.  
   
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución.  Para obtener más información, vea [Funciones de CRT no admitidas con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -55,35 +71,35 @@ int _resetstkoflw ( void );
   
 ```  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  Valor distinto de cero si la función se ejecuta correctamente, cero si se produce un error.  
   
-## Comentarios  
- La función `_resetstkoflw` se recupera de una condición del desbordamiento de pila, lo que permite que el continúe en lugar de generar un error de excepción grave.  Si no se llama a la función `_resetstkoflw`, no queda ninguna página de protección después de la excepción anterior.  La próxima vez que haya un desbordamiento de pila, no habrá ninguna excepción en absoluto y el proceso finalizará sin avisar.  
+## <a name="remarks"></a>Comentarios  
+ La función `_resetstkoflw` se recupera de una condición del desbordamiento de pila, lo que permite que el continúe en lugar de generar un error de excepción grave. Si no se llama a la función `_resetstkoflw`, no queda ninguna página de protección después de la excepción anterior. La próxima vez que haya un desbordamiento de pila, no habrá ninguna excepción en absoluto y el proceso finalizará sin avisar.  
   
- Si un subproceso de una aplicación provoca una excepción **EXCEPTION\_STACK\_OVERFLOW**, el subproceso ha dejado la pila en estado dañado.  Este caso es distinto de los de otras excepciones como **EXCEPTION\_ACCESS\_VIOLATION** o **EXCEPTION\_INT\_DIVIDE\_BY\_ZERO**, en los que la pila no está dañada.  La pila se establece de forma arbitraria en un valor pequeño la primera vez que se carga el programa.  Después, la pila aumenta de tamaño a petición para satisfacer las necesidades del subproceso.  Para que sea así, se pone una página con acceso de PAGE\_GUARD al final de la pila actual.  Para obtener más información, vea [Crear páginas de protección](http://msdn.microsoft.com/library/windows/desktop/aa366549).  
+ Si un subproceso de una aplicación provoca una excepción **EXCEPTION_STACK_OVERFLOW**, el subproceso ha dejado la pila en estado dañado. Este caso es distinto de los de otras excepciones como **EXCEPTION_ACCESS_VIOLATION** o **EXCEPTION_INT_DIVIDE_BY_ZERO**, en los que la pila no está dañada. La pila se establece de forma arbitraria en un valor pequeño la primera vez que se carga el programa. Después, la pila aumenta de tamaño a petición para satisfacer las necesidades del subproceso. Para que sea así, se pone una página con acceso de PAGE_GUARD al final de la pila actual. Para obtener más información, vea [Creating Guard Pages](http://msdn.microsoft.com/library/windows/desktop/aa366549) (Crear páginas de protección).  
   
  Si el código hace que el puntero de pila señale a una dirección de esta página, se produce una excepción y el sistema realiza las tres operaciones siguientes:  
   
--   Quita la protección de PAGE\_GUARD de la página de protección, de modo que el subproceso pueda leer y escribir datos en la memoria.  
+-   Quita la protección de PAGE_GUARD de la página de protección, de modo que el subproceso pueda leer y escribir datos en la memoria.  
   
 -   Asigna una nueva página de protección que se ubica una página por detrás de la última.  
   
 -   Vuelve a ejecutar la instrucción que provocó la excepción.  
   
- De esta manera, el sistema puede aumentar automáticamente el tamaño de la pila del subproceso.  Cada subproceso de un proceso tiene un tamaño de pila máximo.  El tamaño de pila se establece en tiempo de compilación mediante [\/STACK \(Asignaciones de la pila\)](../../build/reference/stack-stack-allocations.md), o mediante la instrucción [STACKSIZE](../../build/reference/stacksize.md) del archivo .def del proyecto.  
+ De esta manera, el sistema puede aumentar automáticamente el tamaño de la pila del subproceso. Cada subproceso de un proceso tiene un tamaño de pila máximo. El tamaño de pila se establece en tiempo de compilación mediante [/STACK (Asignaciones de la pila)](../../build/reference/stack-stack-allocations.md) o mediante la instrucción [STACKSIZE](../../build/reference/stacksize.md) del archivo .def del proyecto.  
   
  Cuando se supera este tamaño de pila máximo, el sistema realiza las tres operaciones siguientes:  
   
--   Quite la protección de PAGE\_GUARD de la página de protección, como ya se ha descrito.  
+-   Quite la protección de PAGE_GUARD de la página de protección, como ya se ha descrito.  
   
--   Intenta asignar una nueva página de protección detrás de la última.  Sin embargo, se produce un error porque se ha superado el tamaño de pila máximo.  
+-   Intenta asignar una nueva página de protección detrás de la última. Sin embargo, se produce un error porque se ha superado el tamaño de pila máximo.  
   
 -   Provoca una excepción para que el subproceso pueda controlarla en el bloque de excepciones.  
   
- Observe que, en este punto, la pila ya no tiene una página de protección.  La próxima vez que el programa aumente el tamaño de la pila hasta el final, donde debe haber una página de protección, el programa escribe más allá del final de la pila y provoca una infracción de acceso.  
+ Observe que, en este punto, la pila ya no tiene una página de protección. La próxima vez que el programa aumente el tamaño de la pila hasta el final, donde debe haber una página de protección, el programa escribe más allá del final de la pila y provoca una infracción de acceso.  
   
- Llame a `_resetstkoflw` para restaurar la página de protección siempre que la recuperación se realice después de una excepción de desbordamiento de pila.  Se puede llamar a esta función desde dentro del cuerpo principal de un bloque `__except` o desde fuera de un bloque **\_\_except**.  Sin embargo, hay restricciones en cuanto a cuándo se debe usar.  Nunca se debe llamar a `_resetstkoflw` desde:  
+ Llame a `_resetstkoflw` para restaurar la página de protección siempre que la recuperación se realice después de una excepción de desbordamiento de pila. Se puede llamar a esta función desde dentro del cuerpo principal de un bloque `__except` o desde fuera de un bloque **__except**. Sin embargo, hay restricciones en cuanto a cuándo se debe usar. Nunca se debe llamar a `_resetstkoflw` desde:  
   
 -   Una expresión de filtro.  
   
@@ -91,31 +107,31 @@ int _resetstkoflw ( void );
   
 -   Una función a la que se llama desde una función de filtro.  
   
--   Un bloque **catch**.  
+-   Bloque **catch**.  
   
 -   Un bloque `__finally`.  
   
  En estos puntos, la pila no está suficientemente desenredada todavía.  
   
- Las excepciones de desbordamiento de pila se generan como excepciones estructuradas, y no excepciones de C\+\+, por lo que `_resetstkoflw` no resulta útil en un bloque **catch** normal, porque no detecta excepciones de desbordamiento de pila.  Sin embargo, si se usa [\_set\_se\_translator](../../c-runtime-library/reference/set-se-translator.md) para implementar un traductor de excepciones estructurado que provoca excepciones de C\+\+ \(como en el segundo ejemplo\), una excepción de desbordamiento de pila da lugar a una excepción de C\+\+ que un bloque catch de C\+\+ puede controlar.  
+ Las excepciones de desbordamiento de pila se generan como excepciones estructuradas, y no excepciones de C++, por lo que `_resetstkoflw` no resulta útil en un bloque **catch** normal, porque no detecta excepciones de desbordamiento de pila. Sin embargo, si se usa [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) para implementar un traductor de excepciones estructuradas que provoca excepciones de C++ (como en el segundo ejemplo), una excepción de desbordamiento de pila da lugar a una excepción de C++ que un bloque catch de C++ puede controlar.  
   
- No es seguro llamar a **\_resetstkoflw** en un bloque catch de C\+\+ al que se llega desde una excepción provocada por la función del traductor de excepciones estructurado.  En ese caso, no se libera espacio de pila y el puntero de pila no se restablece hasta que está fuera del bloque catch, aunque se haya llamado a destructores para todos los objetos que se puedan destruir antes del bloque catch.  No se debe llamar a esta función hasta que se libere espacio en la pila y se haya restablecido el puntero de la pila.  Por consiguiente, solo se debe llamar después de salir del bloque catch.  En el bloque catch se debe usar el menor espacio de pila posible, porque un desbordamiento de pila que tenga lugar en el bloque catch que está tratando de recuperarse de un desbordamiento de pila anterior no es recuperable, y podría hacer que el programa dejara de responder porque el desbordamiento en el bloque catch desencadena una excepción controlada por el mismo bloque catch.  
+ No es seguro llamar a **_resetstkoflw** en un bloque catch de C++ al que se llega desde una excepción provocada por la función del traductor de excepciones estructuradas. En ese caso, no se libera espacio de pila y el puntero de pila no se restablece hasta que está fuera del bloque catch, aunque se haya llamado a destructores para todos los objetos que se puedan destruir antes del bloque catch. No se debe llamar a esta función hasta que se libere espacio en la pila y se haya restablecido el puntero de la pila. Por consiguiente, solo se debe llamar después de salir del bloque catch. En el bloque catch se debe usar el menor espacio de pila posible, porque un desbordamiento de pila que tenga lugar en el bloque catch que está tratando de recuperarse de un desbordamiento de pila anterior no es recuperable, y podría hacer que el programa dejara de responder porque el desbordamiento en el bloque catch desencadena una excepción controlada por el mismo bloque catch.  
   
- Hay situaciones en las que **\_resetstkoflw** puede producir un error aunque se use en una ubicación adecuada, por ejemplo en un bloque **\_\_except**.  Si, incluso después de desenredar la pila, no queda suficiente espacio de pila para ejecutar **\_resetstkoflw** sin escribir en la última página de la pila, **\_resetstkoflw** no puede restablecer la última página de pila como página de protección y devuelve 0, que indica error.  Por consiguiente, para que el uso de esta función sea seguro se debe comprobar el valor devuelto en lugar de suponer que la pila es seguro y se puede usar.  
+ Hay situaciones en las que **_resetstkoflw** puede producir un error aunque se use en una ubicación adecuada (por ejemplo, en un bloque **__except**). Si, incluso después de desenredar la pila, no queda suficiente espacio de pila para ejecutar **_resetstkoflw** sin escribir en la última página de la pila, **_resetstkoflw** no puede restablecer la última página de pila como página de protección y devuelve 0, que indica error. Por consiguiente, para que el uso de esta función sea seguro se debe comprobar el valor devuelto en lugar de suponer que la pila es seguro y se puede usar.  
   
- El control de excepciones estructurado no detecta una excepción `STATUS_STACK_OVERFLOW` cuando la aplicación se compila con `/clr` o `/clr:pure` \(vea [\/clr \(Compilación de Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md)\).  
+ Control estructurado de excepciones no detectará un `STATUS_STACK_OVERFLOW` excepción cuando la aplicación se compila con `/clr` (consulte [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`_resetstkoflw`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_resetstkoflw`|\<malloc.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
- **Bibliotecas:** Todas las versiones de [Características de la biblioteca CRT](../../c-runtime-library/crt-library-features.md).  
+ **Bibliotecas:** todas las versiones de las [características de la biblioteca de CRT](../../c-runtime-library/crt-library-features.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra el uso recomendado de la función `_resetstkoflw`.  
   
 ```  
@@ -185,7 +201,7 @@ int main(int ac)
 }  
 ```  
   
-## Resultados del ejemplo  
+## <a name="sample-output"></a>Resultados del ejemplo  
  Sin argumentos de programa:  
   
 ```  
@@ -219,10 +235,10 @@ loop #10
 resetting stack overflow  
 ```  
   
-### Descripción  
- En el ejemplo siguiente se muestra el uso recomendado de `_resetstkoflw` en un programa en el que las excepciones estructuradas se convierten en excepciones de C\+\+.  
+### <a name="description"></a>Descripción  
+ En el ejemplo siguiente se muestra el uso recomendado de `_resetstkoflw` en un programa en el que las excepciones estructuradas se convierten en excepciones de C++.  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // crt_resetstkoflw2.cpp  
@@ -304,7 +320,7 @@ int main ( )
 }  
 ```  
   
-## Resultados del ejemplo  
+## <a name="sample-output"></a>Resultados del ejemplo  
   
 ```  
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  
@@ -312,8 +328,8 @@ Stack overflow!
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.  
 ```  
   
-## Equivalente en .NET Framework  
- No es aplicable Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
+ No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Vea también  
- [\_alloca](../../c-runtime-library/reference/alloca.md)
+## <a name="see-also"></a>Vea también  
+ [_alloca](../../c-runtime-library/reference/alloca.md)

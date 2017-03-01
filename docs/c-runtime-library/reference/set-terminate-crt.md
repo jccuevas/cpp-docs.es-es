@@ -1,49 +1,65 @@
 ---
-title: "set_terminate (CRT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "set_terminate"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "set_terminate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "control de excepciones, terminación"
-  - "set_terminate (función)"
-  - "terminate (función)"
+title: set_terminate (CRT) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- set_terminate
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- set_terminate
+dev_langs:
+- C++
+helpviewer_keywords:
+- set_terminate function
+- terminate function
+- exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# set_terminate (CRT)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 657c03ebed8e077e3a6c2eac96eae264f4a19998
+ms.lasthandoff: 02/24/2017
 
-Instala poseen la rutina de finalización que se denomine por `terminate`.  
+---
+# <a name="setterminate-crt"></a>set_terminate (CRT)
+Instala su propia rutina de finalización a la que debe llamar `terminate`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 terminate_function set_terminate(  
@@ -51,49 +67,47 @@ terminate_function set_terminate(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `termFunction`  
- Puntero a una función de terminación que escribe.  
+ Puntero a una función de finalización que se escribe.  
   
-## Valor devuelto  
- Devuelve un puntero a la función anterior registrada por `set_terminate` para poder restaurar la función anterior más adelante.  Si no se ha establecido ninguna función anterior, el valor devuelto se puede utilizar para restaurar el comportamiento predeterminado; este valor puede ser NULL.  
+## <a name="return-value"></a>Valor devuelto  
+ Devuelve un puntero a la función anterior registrada por `set_terminate` para que después se pueda restaurar dicha función. Si no se ha establecido ninguna función anterior, el valor devuelto se puede usar para restaurar el comportamiento predeterminado; puede que este valor sea NULL.  
   
-## Comentarios  
- La función de `set_terminate` instala `termFunction` como la función llamada por `terminate`.  `set_terminate` se utiliza con el control de excepciones de C\+\+ y se puede llamar en cualquier punto del programa antes de que se produzca la excepción.  llamadas `abort` de`terminate` de forma predeterminada.  Puede cambiar este valor predeterminado escribiendo dispone de la función de finalización y llamando `set_terminate` con el nombre de la función como argumento.  `terminate` llama a la función última especificada como argumento a `set_terminate`.  Después de realizar las tareas deseadas de limpieza, `termFunction` debe salir del programa.  Si no sale \(si vuelve a su llamador\), se llama a `abort` .  
+## <a name="remarks"></a>Comentarios  
+ La función `set_terminate` instala `termFunction` como la función llamada por `terminate`. `set_terminate` se usa con el control de excepciones de C++ y se puede llamar en cualquier momento en el programa antes de que se produzca la excepción. `terminate` llama a `abort` de forma predeterminada. Puede cambiar este comportamiento predeterminado si escribe su propia función de finalización y llama a `set_terminate` con el nombre de esta función como argumento. `terminate` llama a la última función especificada como argumento para `set_terminate`. Después de llevar a cabo cualquier tarea de limpieza deseada, `termFunction` debe salir del programa. En caso contrario (si regresa a su llamador), se llama a `abort`.  
   
- En un entorno multiproceso, finalice las funciones se mantienen por separado para cada subproceso.  Cada nuevo subproceso necesita instalar sus propios finaliza la función.  Así, cada subproceso está responsable de su propio control de finalización.  
+ En un entorno multiproceso, las funciones de finalización se mantienen por separado para cada subproceso. Cada subproceso nuevo debe instalar su propia función de finalización. Por lo tanto, cada subproceso se encarga de su propio control de finalización.  
   
- Define el tipo de `terminate_function` en EH.H como puntero a una función definida por el usuario de finalización, `termFunction` que devuelve `void`.  La función personalizada `termFunction` no puede tomar ningún argumento y no debe volver al llamador.  Si lo hace, se llama `abort` .  Una excepción no puede producirse dentro de `termFunction`.  
+ El tipo `terminate_function` está definido en EH.H como puntero a una función de finalización definida por el usuario, `termFunction` que devuelve `void`. La función personalizada `termFunction` no puede tomar ningún argumento y no debe volver al llamador. Si es así, se llama a `abort`. Es posible que no se pueda producir una excepción desde `termFunction`.  
   
 ```  
 typedef void ( *terminate_function )( );  
 ```  
   
 > [!NOTE]
->  La función de `set_terminate` sólo funciona fuera del depurador.  
+>  La función `set_terminate` solo funciona fuera del depurador.  
   
- Hay solo controlador de `set_terminate` para todos los archivos DLL o EXE dinámicamente vinculados; incluso si llama a `set_terminate` el controlador puede reemplazar por otro, o puede reemplazar un controlador establecido por otra DLL o EXE.  
+ Solo hay un controlador `set_terminate` para todos los archivos EXE y DLL vinculados dinámicamente; incluso si llama a `set_terminate`, es posible que el controlador se reemplace por otro o que esté reemplazando un controlador establecido por otro archivo EXE o DLL.  
   
- Esta función no se admite en **\/clr:pure**.  
-  
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`set_terminate`|\<eh.h\>|  
+|-------------|---------------------|  
+|`set_terminate`|\<eh.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Ejemplo  
- Vea el ejemplo para [finalice](../../c-runtime-library/reference/terminate-crt.md).  
+## <a name="example"></a>Ejemplo  
+ Vea el ejemplo de [terminate](../../c-runtime-library/reference/terminate-crt.md).  
   
-## Equivalente en .NET Framework  
- No es aplicable Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
+ No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Rutinas para el control de excepciones](../../c-runtime-library/exception-handling-routines.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
- [\_get\_terminate](../../c-runtime-library/reference/get-terminate.md)   
- [set\_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
+ [_get_terminate](../../c-runtime-library/reference/get-terminate.md)   
+ [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
  [terminate](../../c-runtime-library/reference/terminate-crt.md)   
  [unexpected](../../c-runtime-library/reference/unexpected-crt.md)

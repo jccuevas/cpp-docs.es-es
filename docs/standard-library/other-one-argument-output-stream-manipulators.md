@@ -1,32 +1,48 @@
 ---
-title: "Otros manipuladores de flujos de salida con un argumento | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "flujos de salida, manipuladores de un argumento"
+title: Otros manipuladores de flujos de salida con un argumento | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- output streams, one-argument manipulators
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Otros manipuladores de flujos de salida con un argumento
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9a2162085b6a78cb376c5bbd7d76943f76115d30
+ms.lasthandoff: 02/24/2017
 
-El ejemplo siguiente se utiliza una clase `money`, que es un tipo de `long` .  El manipulador de `setpic` adjunta una cadena de “imagen” de formato a la clase que se puede utilizar el operador sobrecargado de inserción de la secuencia de la clase `money`.  La cadena de imagen se almacena como variable estática en la clase de `money` en lugar de como el miembro de datos de una clase de secuencia, por lo que no tienen que derivar una nueva clase del flujo de salida.  
+---
+# <a name="other-one-argument-output-stream-manipulators"></a>Otros manipuladores de flujos de salida con un argumento
+El siguiente ejemplo usa una clase `money`, que es un tipo `long`. El manipulador `setpic` adjunta una cadena formato de "imagen" a la clase que puede usarse mediante el operador de inserción de secuencia sobrecargado de la clase `money`. La cadena de imagen se almacena como una variable estática en la clase `money` en lugar de como un miembro de datos de una clase de secuencia, por lo que no tiene que derivar una nueva clase de flujo de salida.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // one_arg_output.cpp  
 // compile with: /GR /EHsc  
 #include <iostream>  
@@ -84,5 +100,7 @@ int main( )
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Manipuladores personalizados con argumentos](../standard-library/custom-manipulators-with-arguments.md)
+
+

@@ -1,52 +1,68 @@
 ---
-title: "_ASSERT, _ASSERTE, _ASSERT_EXPR (macros) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ASSERTE"
-  - "ASSERTE"
-  - "_ASSERT"
-  - "_ASSERT_EXPR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "depurar [CRT], usar macros"
-  - "_ASSERTE (macro)"
-  - "macros, depurar con"
-  - "macros de informes de depuración"
-  - "_ASSERT (macro)"
-  - "_ASSERT_EXPR (macro)"
+title: _ASSERT, _ASSERTE, _ASSERT_EXPR (Macros) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _ASSERTE
+- ASSERTE
+- _ASSERT
+- _ASSERT_EXPR
+dev_langs:
+- C++
+helpviewer_keywords:
+- debugging [CRT], using macros
+- _ASSERTE macro
+- macros, debugging with
+- debug reporting macros
+- _ASSERT macro
+- _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# _ASSERT, _ASSERTE, _ASSERT_EXPR (macros)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 99698cf158118a876a3bb78edaaa52f2b9177d0a
+ms.lasthandoff: 02/24/2017
 
-Evalúa una expresión y genera un informe de depuración cuando el resultado es `False` \(solo la versión de depuración\).  
+---
+# <a name="assert-asserte-assertexpr-macros"></a>_ASSERT, _ASSERTE, _ASSERT_EXPR (macros)
+Evalúa una expresión y genera un informe de depuración cuando el resultado es `False` (solo la versión de depuración).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 _ASSERT_EXPR(  
@@ -62,48 +78,46 @@ _ASSERTE(
   
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `booleanExpression`  
- Una expresión escalar \(incluidas las expresiones de puntero\) que se evalúa en un valor que no es cero \(true\) o 0 \(false\).  
+ Una expresión escalar (incluidas las expresiones de puntero) que se evalúa en un valor que no es cero (true) o 0 (false).  
   
  `message`  
  Una cadena de caracteres anchos para mostrarla como parte del informe.  
   
-## Comentarios  
- Las `_ASSERT_EXPR`, `_ASSERT` y `_ASSERTE` ofrecen una aplicación con un mecanismo simple y limpio para comprobar suposiciones durante el proceso de depuración. Son muy flexibles porque no tienen que incluirse en instrucciones `#ifdef` para evitar que se llamen en una compilación comercial de una aplicación. Esta flexibilidad se logra mediante la macro [\_DEBUG](../../c-runtime-library/debug.md).`_ASSERT_EXPR`, `_ASSERT` y `_ASSERTE` solo están disponibles cuando `_DEBUG` se define en tiempo de compilación. Cuando no se define `_DEBUG`, las llamadas a estas macros se quitan durante el preprocesamiento.  
+## <a name="remarks"></a>Comentarios  
+ Las `_ASSERT_EXPR`, `_ASSERT` y `_ASSERTE` ofrecen una aplicación con un mecanismo simple y limpio para comprobar suposiciones durante el proceso de depuración. Son muy flexibles porque no tienen que incluirse en instrucciones `#ifdef` para evitar que se llamen en una compilación comercial de una aplicación. Esta flexibilidad se logra mediante la macro [_DEBUG](../../c-runtime-library/debug.md). `_ASSERT_EXPR`, `_ASSERT` y `_ASSERTE` solo están disponibles cuando `_DEBUG` se define en tiempo de compilación. Cuando no se define `_DEBUG` , las llamadas a estas macros se quitan durante el preprocesamiento.  
   
- `_ASSERT_EXPR`, `_ASSERT` y `_ASSERTE` evalúan su argumento `booleanExpression` y cuando el resultado es `false` \(0\), imprimen un mensaje de diagnóstico y llaman a [\_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) para generar un informe de depuración. La macro `_ASSERT` imprime un mensaje de diagnóstico simple, `_ASSERTE` incluye una representación de cadena de la expresión del error en el mensaje y `_ASSERT_EXPR` incluye la cadena `message` en el mensaje de diagnóstico. Estas macros no hacen nada cuando `booleanExpression` se evalúa como un valor diferente a cero.  
+ `_ASSERT_EXPR`, `_ASSERT` y `_ASSERTE` evalúan su argumento `booleanExpression` y, cuando el resultado es `false` (0), imprimen un mensaje de diagnóstico y llaman a [_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) para generar un informe de depuración. La macro `_ASSERT` imprime un mensaje de diagnóstico simple,  `_ASSERTE` incluye una representación de cadena de la expresión del error en el mensaje y `_ASSERT_EXPR` incluye la cadena `message` en el mensaje de diagnóstico. Estas macros no hacen nada cuando `booleanExpression` se evalúa como un valor diferente a cero.  
   
- `_ASSERT_EXPR`, `_ASSERT` y `_ASSERTE` invocan `_CrtDbgReportW`, lo que hace que toda la salida esté en caracteres anchos.`_ASSERTE` imprime correctamente los caracteres Unicode en `booleanExpression` y `_ASSERT_EXPR` imprime caracteres Unicode en `message`.  
+ `_ASSERT_EXPR`, `_ASSERT` y `_ASSERTE` invocan a `_CrtDbgReportW`, lo que hace que toda la salida esté en caracteres anchos. `_ASSERTE` imprime correctamente los caracteres Unicode en `booleanExpression` y `_ASSERT_EXPR` imprime caracteres Unicode en `message`.  
   
- Dado que la macro `_ASSERTE` especifica la expresión del error y que `_ASSERT_EXPR` permite especificar un mensaje en el informe generado, permiten que los usuarios identifiquen el problema sin hacer referencia al código fuente. Sin embargo, existe una desventaja en el sentido de que se incluye cada `message` que se imprime por `_ASSERT_EXPR` y cada expresión evaluada por `_ASSERTE` en el archivo de salida \(versión de depuración\) de la aplicación como una constante de cadena. Por tanto, si se realiza un gran número de llamadas a `_ASSERT_EXPR` o `_ASSERTE`, estas expresiones pueden aumentar considerablemente el tamaño del archivo de salida.  
+ Dado que la macro `_ASSERTE` especifica la expresión del error y que `_ASSERT_EXPR` permite especificar un mensaje en el informe generado, permiten que los usuarios identifiquen el problema sin hacer referencia al código fuente. Sin embargo, existe una desventaja en el sentido de que se incluye cada `message` que se imprime por `_ASSERT_EXPR` y cada expresión evaluada por `_ASSERTE` en el archivo de salida (versión de depuración) de la aplicación como una constante de cadena. Por tanto, si se realiza un gran número de llamadas a `_ASSERT_EXPR` o `_ASSERTE`, estas expresiones pueden aumentar considerablemente el tamaño del archivo de salida.  
   
- A menos que se especifique lo contrario con las funciones [\_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) y [\_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md), aparecen mensajes en un cuadro de diálogo emergente equivalente a establecer lo siguiente:  
+ A menos que se especifique lo contrario con las funciones [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) y [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md), aparecen mensajes en un cuadro de diálogo emergente equivalente a establecer lo siguiente:  
   
-```c  
-_CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);  
-```  
+`_CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);`  
   
- `_CrtDbgReportW` genera el informe de depuración y determina los destinos en función de los modos de informe actuales y el archivo definidos para el tipo de informe `_CRT_ASSERT`. De manera predeterminada, los errores de aserción y los demás errores se dirigen a una ventana de mensajes de depuración. Las funciones [\_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) y [\_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) se usan para definir los destinos de cada tipo de informe.  
+ `_CrtDbgReportW` genera el informe de depuración y determina los destinos en función de los modos de informe actuales y el archivo definidos para el tipo de informe `_CRT_ASSERT`. De manera predeterminada, los errores de aserción y los demás errores se dirigen a una ventana de mensajes de depuración. Las funciones [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) y [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) se usan para definir los destinos de cada tipo de informe.  
   
- Cuando el destino es una ventana de mensaje de depuración y el usuario hace clic en el botón **Reintentar**, `_CrtDbgReportW` devuelve 1, lo que hace que las macros `_ASSERT_EXPR`, `_ASSERT` y `_ASSERTE` inicien el depurador siempre que está habilitada la depuración just\-in\-time \(JIT\).  
+ Cuando el destino es una ventana de mensaje de depuración y el usuario hace clic en el botón **Reintentar** , `_CrtDbgReportW` devuelve 1, lo que hace que las macros `_ASSERT_EXPR`, `_ASSERT` y `_ASSERTE` inicien el depurador siempre que está habilitada la depuración just-in-time (JIT).  
   
- Para más información sobre el proceso de creación de informes, vea la función [\_CrtDbgReport, \_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md). Para más información sobre cómo resolver errores de aserción y usar estas macros como mecanismo de control de errores de depuración, vea [Uso de macros para comprobación e informes](../Topic/Macros%20for%20Reporting.md).  
+ Para obtener más información sobre el proceso de creación de informes, consulte la función [_CrtDbgReport, _CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) . Para obtener más información sobre cómo resolver errores de aserción y usar estas macros como mecanismo de control de errores de depuración, consulte [Uso de macros para comprobación e informes](/visualstudio/debugger/macros-for-reporting).  
   
- Además de las macros `_ASSERT`, la macro [assert](../../c-runtime-library/reference/assert-macro-assert-wassert.md) se puede usar para comprobar la lógica del programa. Esta macro está disponible en las versiones de lanzamiento y depuración de las bibliotecas. Las macros de depuración [\_RPT, \_RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) también están disponibles para generar un informe de depuración, pero no evalúan una expresión. Las macros `_RPT` generan un informe sencillo. Las macros `_RPTF` incluyen el número de línea y el archivo de origen donde se llamó a la macro de informe en el informe generado. Las versiones de caracteres anchos de estas macros están disponibles \(`_RPTWn`, `_RPTFWn`\). Las versiones de caracteres anchos son idénticas a las versiones de caracteres estrechos, salvo que se usan cadenas de caracteres anchos para todos los parámetros de cadena y la salida.  
+ Además de las macros `_ASSERT`, la macro [assert](../../c-runtime-library/reference/assert-macro-assert-wassert.md) se puede usar para comprobar la lógica del programa. Esta macro está disponible en las versiones de lanzamiento y depuración de las bibliotecas. Las macros de depuración [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) también están disponibles para generar un informe de depuración, pero no evalúan una expresión. Las macros `_RPT` generan un informe sencillo. Las macros `_RPTF` incluyen el número de línea y el archivo de origen donde se llamó a la macro de informe en el informe generado. Las versiones de caracteres anchos de estas macros están disponibles (`_RPTWn`, `_RPTFWn`). Las versiones de caracteres anchos son idénticas a las versiones de caracteres estrechos, salvo que se usan cadenas de caracteres anchos para todos los parámetros de cadena y la salida.  
   
- Aunque `_ASSERT_EXPR`, `_ASSERT` y `_ASSERTE` son macros y están disponibles mediante la inclusión de \< crtdbg.h \>, la aplicación debe vincularse a una versión de depuración de la biblioteca de tiempo de ejecución de C cuando se define `_DEBUG`, ya que estas macros llaman a otras funciones en tiempo de ejecución.  
+ Aunque `_ASSERT_EXPR`, `_ASSERT` y `_ASSERTE` son macros y están disponibles mediante la inclusión de \<crtdbg.h>, la aplicación debe vincularse a una versión de depuración de la biblioteca en tiempo de ejecución de C cuando se define `_DEBUG`, ya que estas macros llaman a otras funciones en tiempo de ejecución.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Macro|Encabezado necesario|  
-|-----------|--------------------------|  
-|`_ASSERT_EXPR`, `_ASSERT`, `_ASSERTE`|\<crtdbg.h\>|  
+|-----------|---------------------|  
+|`_ASSERT_EXPR`,                  `_ASSERT`, `_ASSERTE`|\<crtdbg.h>|  
   
-## Ejemplo  
- En este programa, se realizan llamadas a las macros `_ASSERT` y `_ASSERTE` para probar la condición `string1 == string2`. Si se produce un error en la condición, estas macros imprimen un mensaje de diagnóstico. También se aplican el grupo de macros `_RPTn` y `_RPTFn` en este programa como alternativa a la función `printf`.  
+## <a name="example"></a>Ejemplo  
+ En este programa, se realizan llamadas a las macros `_ASSERT` y `_ASSERTE` para probar la condición `string1 == string2`. Si se produce un error en la condición, estas macros imprimen un mensaje de diagnóstico. También se aplican el grupo de macros `_RPTn` y `_RPTFn` en este programa como alternativa a la función `printf` .  
   
-```  
+```C  
 // crt_ASSERT_macro.c  
 // compile with: /D_DEBUG /MTd /Od /Zi /link /verbose:lib /debug  
 //  
@@ -164,13 +178,21 @@ int main()
 ```  
   
 ```Output  
-Use las macros de aserción para evaluar la expresión p1 == p2. crt_ASSERT_macro.c(54) : Will _ASSERT find 'I am p1' == 'I am p2' ? crt_ASSERT_macro.c(55): error de aserción. ¿crt_assert_macro.c(58): _ASSERTE encontrará 'Estoy p1' == 'Estoy p2'? crt_ASSERT_macro.c(59) : Assertion failed: p1 == p2 'I am p1' != 'I am p2'  
+Use the assert macros to evaluate the expression p1 == p2.  
+crt_ASSERT_macro.c(54) :   
+ Will _ASSERT find 'I am p1' == 'I am p2' ?  
+crt_ASSERT_macro.c(55) : Assertion failed!  
+crt_ASSERT_macro.c(58) :   
+  
+ Will _ASSERTE find 'I am p1' == 'I am p2' ?  
+crt_ASSERT_macro.c(59) : Assertion failed: p1 == p2  
+'I am p1' != 'I am p2'  
 ```  
   
-## Equivalente en .NET Framework  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
  [System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Rutinas de depuración](../../c-runtime-library/debug-routines.md)   
- [assert \(macro\), \_assert, \_wassert](../../c-runtime-library/reference/assert-macro-assert-wassert.md)   
- [\_RPT, \_RPTF, \_RPTW, \_RPTFW \(Macros\)](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)
+ [assert Macro, _assert, _wassert](../../c-runtime-library/reference/assert-macro-assert-wassert.md)   
+ [_RPT, _RPTF, _RPTW, _RPTFW (Macros)](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)

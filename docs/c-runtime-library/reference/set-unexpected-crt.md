@@ -1,48 +1,64 @@
 ---
-title: "set_unexpected (CRT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "set_unexpected"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "set_unexpected"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "control de excepciones, terminación"
-  - "set_unexpected (función)"
-  - "función inesperada"
+title: set_unexpected (CRT) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- set_unexpected
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- set_unexpected
+dev_langs:
+- C++
+helpviewer_keywords:
+- set_unexpected function
+- unexpected function
+- exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# set_unexpected (CRT)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 97be545243fb4ef60bff8b8244ca9fd943b25cd6
+ms.lasthandoff: 02/24/2017
 
-Instala por la función de finalización que se denomine por `unexpected`.  
+---
+# <a name="setunexpected-crt"></a>set_unexpected (CRT)
+Instala la función de finalización a la que debe llamar `unexpected`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 unexpected_function set_unexpected(  
@@ -50,45 +66,45 @@ unexpected_function set_unexpected(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `unexpFunction`  
- Puntero a una función que se escribe para reemplazar la función de `unexpected` .  
+ Puntero a una función que se escribe para reemplazar la función `unexpected`.  
   
-## Valor devuelto  
- Devuelve un puntero a la función anterior de finalización registrada por `_set_unexpected` para poder restaurar la función anterior más adelante.  Si no se ha establecido ninguna función anterior, el valor devuelto se puede utilizar para restaurar el comportamiento predeterminado; este valor puede ser NULL.  
+## <a name="return-value"></a>Valor devuelto  
+ Devuelve un puntero a la función de finalización anterior registrada por `_set_unexpected` para que después se pueda restaurar dicha función. Si no se ha establecido ninguna función anterior, el valor devuelto se puede usar para restaurar el comportamiento predeterminado; puede que este valor sea NULL.  
   
-## Comentarios  
- La función de `set_unexpected` instala `unexpFunction` como la función llamada por `unexpected`.  `unexpected` no se utiliza en la implementación actual del control de excepciones de C\+\+.  Define el tipo de `unexpected_function` en EH.H como puntero a una función inesperada definido por el usuario, `unexpFunction` que devuelve `void`.  La función personalizada de `unexpFunction` no debe volver al llamador.  
+## <a name="remarks"></a>Comentarios  
+ La función `set_unexpected` instala `unexpFunction` como la función llamada por `unexpected`. `unexpected` no se usa en la implementación actual del control de excepciones de C++. El tipo `unexpected_function` se define en EH.H como puntero a una función inesperada definida por el usuario, `unexpFunction` que devuelve `void`. La función personalizada `unexpFunction` no debe volver al llamador.  
   
 ```  
 typedef void ( *unexpected_function )( );  
 ```  
   
- De forma predeterminada, llamadas `terminate`de `unexpected` .  Puede cambiar este comportamiento predeterminado escribiendo dispone de la función de finalización y llamando `set_unexpected` con el nombre de la función como argumento.  `unexpected` llama a la función última especificada como argumento a `set_unexpected`.  
+ De forma predeterminada, `unexpected` llama a `terminate`. Puede cambiar este comportamiento predeterminado si escribe su propia función de finalización y llama a `set_unexpected` con el nombre de esta función como argumento. `unexpected` llama a la última función especificada como argumento para `set_unexpected`.  
   
- A diferencia de la función personalizada de finalización instalada por una llamada a `set_terminate`, una excepción puede producirse dentro de `unexpFunction`.  
+ A diferencia de la función de terminación personalizada instalada mediante una llamada a `set_terminate`, se puede producir una excepción desde `unexpFunction`.  
   
- En un entorno multiproceso, funciones inesperadas se mantienen por separado para cada subproceso.  Cada nuevo subproceso necesita instalar su propia función inesperada.  Así, cada subproceso está responsable de su propia administración inesperado.  
+ En un entorno multiproceso, las funciones inesperadas se mantienen por separado para cada subproceso. Cada subproceso nuevo debe instalar su propia función inesperada. Por lo tanto, cada subproceso se encarga de su propio control inesperado.  
   
- En la implementación de Microsoft actual del control de excepciones de C\+\+, `unexpected` llama `terminate` de forma predeterminada y nunca llama la biblioteca en tiempo de ejecución excepción\- que administra.  No hay ninguna ventaja concreta a `unexpected` en lugar de `terminate`.  
+ En la implementación actual de Microsoft sobre el control de excepciones de C++, `unexpected` llama a `terminate` de forma predeterminada; la biblioteca de tiempo de ejecución del control de excepciones nunca la llama. No hay ninguna ventaja particular si se llama a `unexpected` en vez de llamar a `terminate`.  
   
- Hay solo controlador de `set_unexpected` para todos los archivos DLL o EXE dinámicamente vinculados; incluso si llama a `set_unexpected` el controlador puede reemplazar por otro o que se está reemplazando un controlador establecido por otra DLL o EXE.  
+ Solo hay un controlador `set_unexpected` para todos los archivos EXE y DLL vinculados dinámicamente; incluso si se llama a `set_unexpected`, es posible que el controlador se reemplace por otro establecido por otro archivo EXE o DLL.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`set_unexpected`|\<eh.h\>|  
+|-------------|---------------------|  
+|`set_unexpected`|\<eh.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
-## Equivalente en .NET Framework  
- No es aplicable Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
+ No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Rutinas para el control de excepciones](../../c-runtime-library/exception-handling-routines.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
- [\_get\_unexpected](../../c-runtime-library/reference/get-unexpected.md)   
- [set\_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
+ [_get_unexpected](../../c-runtime-library/reference/get-unexpected.md)   
+ [set_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
  [terminate](../../c-runtime-library/reference/terminate-crt.md)   
  [unexpected](../../c-runtime-library/reference/unexpected-crt.md)

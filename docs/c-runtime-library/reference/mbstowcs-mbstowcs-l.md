@@ -1,50 +1,66 @@
 ---
-title: "mbstowcs, _mbstowcs_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "mbstowcs"
-  - "_mbstowcs_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbstowcs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbstowcs_l (función)"
-  - "mbstowcs (función)"
-  - "mbstowcs_l (función)"
+title: mbstowcs, _mbstowcs_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- mbstowcs
+- _mbstowcs_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbstowcs
+dev_langs:
+- C++
+helpviewer_keywords:
+- _mbstowcs_l function
+- mbstowcs_l function
+- mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# mbstowcs, _mbstowcs_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 484ecd12490eab00c02fb4184edcaa55f346c3a8
+ms.lasthandoff: 02/24/2017
 
-Convierte una secuencia de caracteres multibyte en una secuencia correspondiente de caracteres anchos.  Hay disponibles versiones más seguras de estas funciones; vea [mbstowcs\_s, \_mbstowcs\_s\_l](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md).  
+---
+# <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
+Convertir una secuencia de caracteres multibyte en una secuencia correspondiente de caracteres anchos. Hay disponibles versiones más seguras de estas funciones; vea [mbstowcs_s, _mbstowcs_s_l](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 size_t mbstowcs(  
@@ -73,46 +89,46 @@ size_t _mbstowcs_l(
 ); // C++ only  
 ```  
   
-#### Parámetros  
- \[out\] `wcstr`  
- La dirección de una secuencia de caracteres anchos.  
+#### <a name="parameters"></a>Parámetros  
+ [out] `wcstr`  
+ Dirección de una secuencia de caracteres anchos.  
   
- \[in\] `mbstr`  
- La dirección de una secuencia de null finalizó caracteres multibyte.  
+ [in] `mbstr`  
+ Dirección de una secuencia de caracteres multibyte terminados en nulo.  
   
- \[in\] `count`  
- El número máximo de caracteres multibyte a convertir.  
+ [in] `count`  
+ El número máximo de caracteres multibyte que se van a convertir.  
   
- \[in\] `locale`  
+ [in] `locale`  
  Configuración regional que se va a usar.  
   
-## Valor devuelto  
- Si `mbstowcs` convierte correctamente la cadena de origen, devuelve el número de caracteres convertidos multibyte.  Si el argumento de `wcstr` es `NULL`, la función devuelve el tamaño necesario \(en caracteres anchos\) de la cadena de destino.  Si `mbstowcs` encuentra un carácter no válido multibyte, devuelve – 1.  Si el valor devuelto es `count`, la cadena de caracteres no termina en null.  
+## <a name="return-value"></a>Valor devuelto  
+ Si `mbstowcs` convierte correctamente la cadena de origen, devuelve el número de caracteres multibyte convertidos. Si el argumento `wcstr` es `NULL`, la función devuelve el tamaño necesario (en caracteres anchos) de la cadena de destino. Si `mbstowcs` encuentra un carácter multibyte no válido, devuelve -1. Si el valor devuelto es `count`, la cadena de caracteres anchos no termina en nulo.  
   
 > [!IMPORTANT]
->  Asegúrese de que `wcstr` y `mbstr` no se superpongan, y que `count` correctamente refleja el número de caracteres multibyte convertir.  
+>  Asegúrese de que `wcstr` y `mbstr` no se superponen, y de que `count` refleja correctamente el número de caracteres multibyte a convertir.  
   
-## Comentarios  
- La función de `mbstowcs` convierte hasta un número máximo de caracteres multibyte de `count` indicada por `mbstr` en una cadena de caracteres anchos correspondientes que están determinados por la configuración regional actual.  Almacena la cadena de caracteres resultante en la dirección representada por *`wcstr`.* El resultado es similar a una serie de llamadas a `mbtowc`.  Si `mbstowcs` encuentra el carácter null de solo\- byte \(“\\0”\) o antes o cuando `count` aparece, convierte el carácter null a un carácter null de caracteres anchos \(L'\\0\) y se detiene.  Así la cadena de caracteres en `wcstr` terminado en null solo si un carácter null se encuentra durante la conversión.  Si las secuencias designadas por a `wcstr` y la superposición de `mbstr` , el comportamiento no están definidas.  
+## <a name="remarks"></a>Comentarios  
+ La función `mbstowcs` convierte un máximo de `count` caracteres multibyte señalados por `mbstr` en una cadena de caracteres anchos correspondientes que están determinados por la configuración regional actual. Almacena la cadena de caracteres anchos resultante en la dirección representada por `wcstr`*.* El resultado es similar a una serie de llamadas a `mbtowc`. Si `mbstowcs` encuentra el carácter nulo de un solo byte ('\0') cuando se produzca `count` (o antes), convierte el carácter nulo en un carácter nulo de caracteres anchos (L '\0') y se detiene. Por tanto, la cadena de caracteres anchos de `wcstr` termina en nulo solo si se encuentra un carácter nulo durante la conversión. Si las secuencias señaladas por `wcstr` y `mbstr` se superponen, el comportamiento no está definido.  
   
- Si el argumento de `wcstr` es `NULL`, `mbstowcs` devuelve el número de caracteres anchos que resultarían de conversión, sin incluir un carácter null final.  La cadena de origen debe ser terminado en null para el valor correcto que se devolverá.  Si necesita la cadena de caracteres anchos resultante hacer en null, agregue uno al valor devuelto.  
+ Si el `wcstr` argumento es `NULL`, `mbstowcs` devuelve el número de caracteres anchos que se generarían en la conversión, sin incluir ningún terminador nulo. La cadena de origen debe terminar en nulo para que se devuelva el valor correcto. Si necesita que la cadena de caracteres anchos resultante termine en nulo, agregue uno al valor devuelto.  
   
- Si el argumento de `mbstr` es `NULL`, o si `count` es \>`INT_MAX`, se invoca el controlador no válido de parámetro, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md) .  Si la ejecución puede continuar, el errno se establece en `EINVAL` y la función devuelve \-1.  
+ Si el argumento `mbstr` es `NULL`, o si `count` es > `INT_MAX`, se invoca el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, errno se establece en `EINVAL` y la función devuelve -1.  
   
- `mbstowcs` utiliza la configuración regional actual para cualquier comportamiento configuración regional\-dependiente; `_mbstowcs_l` es idéntico pero utiliza la configuración regional pasado en su lugar.  Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ `mbstowcs` usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; `_mbstowcs_l` es igual, salvo que en su lugar usa la configuración regional pasada. Para más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
   
- En C\+\+, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones.  Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`mbstowcs`|\<stdlib.h\>|  
-|`_mbstowcs_l`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`mbstowcs`|\<stdlib.h>|  
+|`_mbstowcs_l`|\<stdlib.h>|  
   
  Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_mbstowcs.c  
@@ -194,24 +210,28 @@ int main( void )
 }  
 ```  
   
-  **Información de configuración regional establecida en Japanese\_Japan.932**  
-**Convierte en la cadena multibyte:**  
- **Tamaño necesarios: 4**  
- **Número de bytes escritos en la cadena multibyte: 4**  
- **Valores hexadecimales de caracteres multibyte: 0x82 0xa0 0x82 0xa1**  
- **La página de códigos 932 utiliza 0x81 a 0x9f como bytes iniciales.**  
-**Convierte a cadena de caracteres:**  
- **Caracteres convertidos: 2**  
- **Valor hexadecimal de los primeros 2 caracteres anchos: 0x3042 0x3043**   
-## Equivalente en .NET Framework  
- No es aplicable Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Locale information set to Japanese_Japan.932  
+Convert to multibyte string:  
+  Required Size: 4  
+  Number of bytes written to multibyte string: 4  
+  Hex values of the  multibyte characters: 0x82 0xa0 0x82 0xa1  
+  Codepage 932 uses 0x81 to 0x9f as lead bytes.  
   
-## Vea también  
+Convert back to wide-character string:  
+  Characters converted: 2  
+  Hex value of first 2 wide characters: 0x3042 0x3043  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
+ No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Vea también  
  [Conversión de datos](../../c-runtime-library/data-conversion.md)   
  [Configuración regional](../../c-runtime-library/locale.md)   
  [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbclen, mblen, \_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbtowc, \_mbtowc\_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wcstombs, \_wcstombs\_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [wctomb, \_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
  [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)

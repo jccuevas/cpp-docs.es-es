@@ -1,50 +1,66 @@
 ---
-title: "rewind | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "rewind"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "rewind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "punteros a archivos [C++]"
-  - "punteros a archivos [C++], cambiar de posición"
-  - "cambiar de posición punteros a archivos"
-  - "rewind (función)"
+title: rewind | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- rewind
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- rewind
+dev_langs:
+- C++
+helpviewer_keywords:
+- rewind function
+- repositioning file pointers
+- file pointers [C++], repositioning
+- file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# rewind
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 814e09b9e3278ea4ea20752894584e502c9e6597
+ms.lasthandoff: 02/24/2017
 
-Coloca el puntero de archivo en el principio de un archivo.  
+---
+# <a name="rewind"></a>rewind
+Cambia la posición del puntero de archivo al principio de un archivo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -53,35 +69,35 @@ Coloca el puntero de archivo en el principio de un archivo.
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `stream`  
  Puntero a la estructura **FILE**.  
   
-## Comentarios  
- La función de **rewind** coloca el puntero de archivo de nuevo asociado a `stream` al principio del archivo.  Una llamada a **rewind** es similar a  
+## <a name="remarks"></a>Comentarios  
+ La función **rewind** cambia la posición del puntero de archivo asociado a `stream` al principio del archivo. Una llamada a **rewind** es similar a  
   
- **\(void\) fseek\(** `stream`**,0L,** `SEEK_SET`\);  
+ **(void) fseek(** `stream`**, 0L,** `SEEK_SET` **);**  
   
- Sin embargo, a diferencia de `fseek`, **rewind** borra los indicadores de error para la secuencia junto con la marca de fin de archivo.  Además, a diferencia de `fseek`, **rewind** no devuelve un valor para indicar si el puntero se ha movido correctamente.  
+ Sin embargo, a diferencia de `fseek`, **rewind** borra los indicadores de error de la secuencia, así como el indicador de fin de archivo. Además, a diferencia de `fseek`, **rewind** no devuelve ningún valor para indicar si el puntero se movió correctamente.  
   
- Para borrar el búfer de teclado, utilice **rewind** con la secuencia `stdin`, que se asocia el teclado de forma predeterminada.  
+ Para borrar el búfer del teclado, use **rewind** con la secuencia `stdin`, que está asociada al teclado de forma predeterminada.  
   
- Si la secuencia es un puntero de `NULL` , se invoca el controlador no válido de parámetro, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, esta función devuelve y `errno` se establece en `EINVAL`.  
+ Si la secuencia es un puntero `NULL`, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, se devuelve la función y `errno` se establece en `EINVAL`.  
   
- Para obtener información sobre estos y otros códigos de error, vea [\_doserrno, errno, \_sys\_errlist y \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|**rebobinado**|\<stdio.h\>|  
+|-------------|---------------------|  
+|**rewind**|\<stdio.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Bibliotecas  
+## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_rewind.c  
@@ -114,15 +130,15 @@ int main( void )
 }  
 ```  
   
-## Resultados  
+## <a name="output"></a>Salida  
   
 ```  
 The values written are: 1 and -37  
 The values read are: 1 and -37  
 ```  
   
-## Equivalente en .NET Framework  
- No es aplicable Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
+ No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Vea también  
- [E\/S de secuencia](../../c-runtime-library/stream-i-o.md)
+## <a name="see-also"></a>Vea también  
+ [E/S de secuencia](../../c-runtime-library/stream-i-o.md)

@@ -1,51 +1,71 @@
 ---
-title: "_SECURE_SCL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_SECURE_SCL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_SECURE_SCL"
+title: _SECURE_SCL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _SECURE_SCL
+dev_langs:
+- C++
+helpviewer_keywords:
+- _SECURE_SCL
 ms.assetid: 4ffbc788-cc12-4c6a-8cd7-490081675086
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# _SECURE_SCL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 9e2bfb1095c28ea3592c5af2b89cb2fbeddcb60c
+ms.openlocfilehash: f3712b4417c0fed972d9a20b6d82479561cce4b0
+ms.lasthandoff: 02/24/2017
 
-Define si [Iteradores activados](../standard-library/checked-iterators.md) está habilitado.  Si se define como 1, el uso no seguro de iterador produce un error en tiempo de ejecución y se finaliza el programa.  Si se define como 0, se deshabilitan los iteradores comprobados.  En modo de depuración, el valor predeterminado de **\_SECURE\_SCL** es 1, lo que significa que los iteradores comprobados están habilitados.  En modo de lanzamiento, el valor predeterminado de `_SECURE_SCL` es 0.  
+---
+# <a name="securescl"></a>_SECURE_SCL
+  
+Reemplazada por [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), esta macro define los [iteradores activados](../standard-library/checked-iterators.md) están habilitados. De forma predeterminada, los iteradores activados están habilitados en las compilaciones de depuración y deshabilitados en las compilaciones comerciales.  
   
 > [!IMPORTANT]
->  Uso `_ITERATOR_DEBUG_LEVEL` de controlar `_SECURE_SCL`.  Para obtener más información, vea [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md).  
+> El uso directo de la macro `_SECURE_SCL` está en desuso. En su lugar, use `_ITERATOR_DEBUG_LEVEL` para controlar la configuración de iteradores activados. Para más información, vea [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).  
   
-## Comentarios  
- Para habilitar comprobó iteradores, establezca **\_SECURE\_SCL** a 1:  
+## <a name="remarks"></a>Comentarios  
   
-```  
-#define _SECURE_SCL 1  
-```  
-  
- Para deshabilitar comprobó iteradores, establezca **\_SECURE\_SCL** a 0:  
+Cuando los iteradores activados están habilitados, el uso de iteradores no seguros produce un error en tiempo de ejecución y finaliza el programa. Para habilitar los iteradores activados, establezca `_ITERATOR_DEBUG_LEVEL` en 1 o 2. Esto es equivalente a una configuración de `_SECURE_SCL` de 1 o habilitado:  
   
 ```  
-#define _SECURE_SCL 0  
+#define _ITERATOR_DEBUG_LEVEL 1  
 ```  
   
- Para obtener información sobre cómo deshabilitar advertencias sobre iteradores comprobados, vea [\_SCL\_SECURE\_NO\_WARNINGS](../standard-library/scl-secure-no-warnings.md).  
+Para deshabilitar los iteradores activados, establezca `_ITERATOR_DEBUG_LEVEL` en 0. Esto es equivalente a una configuración de `_SECURE_SCL` de 0 o deshabilitado:  
   
-## Vea también  
- [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md)   
- [Iteradores activados](../standard-library/checked-iterators.md)   
- [Compatibilidad de los iteradores de depuración](../standard-library/debug-iterator-support.md)   
- [Bibliotecas seguras: Biblioteca estándar de C\+\+](../standard-library/safe-libraries-cpp-standard-library.md)
+```  
+#define _ITERATOR_DEBUG_LEVEL 0  
+```  
+  
+Para más información sobre cómo deshabilitar las advertencias sobre iteradores activados, vea [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).  
+  
+## <a name="see-also"></a>Vea también  
+[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)   
+[Iteradores activados](../standard-library/checked-iterators.md)   
+[Compatibilidad de los iteradores de depuración](../standard-library/debug-iterator-support.md)   
+[Bibliotecas seguras: Biblioteca estándar de C++](../standard-library/safe-libraries-cpp-standard-library.md)
+
+
