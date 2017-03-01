@@ -1,64 +1,103 @@
 ---
-title: "_U_RECT Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::_U_RECT"
-  - "_U_RECT"
-  - "ATL._U_RECT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_U_RECT class"
-  - "U_RECT class"
+title: Clase _U_RECT | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::_U_RECT
+- _U_RECT
+- ATL._U_RECT
+dev_langs:
+- C++
+helpviewer_keywords:
+- U_RECT class
+- _U_RECT class
 ms.assetid: 5f880a2d-09cf-4327-bf32-a3519c4dcd63
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _U_RECT Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: 5a375921fd51b19eb2e9020d3175a56df8549461
+ms.lasthandoff: 02/24/2017
 
-Esta clase de adaptador de argumento permite punteros o referencias de `RECT` que se pasarán a una función que se implemente en términos de punteros.  
+---
+# <a name="urect-class"></a>Clase _U_RECT
+Esta clase de adaptador de argumento permite `RECT` punteros o referencias a pasarse a una función que se implementa en términos de punteros.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en Windows en tiempo de ejecución.  
+>  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
-```  
-  
-class _U_RECT  
-  
-```  
+```
+class _U_RECT```  
   
 ## Members  
   
-### Constructores públicos  
+### Public Constructors  
   
-|Name|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[\_U\_RECT::\_U\_RECT](../Topic/_U_RECT::_U_RECT.md)|el constructor.|  
+|[_U_RECT::_U_RECT](#_u_rect___u_rect)|The constructor.|  
   
-### Miembros de datos públicos  
+### Public Data Members  
   
-|Name|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[\_U\_RECT::m\_lpRect](../Topic/_U_RECT::m_lpRect.md)|Puntero a `RECT`.|  
+|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Pointer to a `RECT`.|  
   
-## Comentarios  
- La clase define dos sobrecargas del constructor: uno acepta un argumento de **RECT&** y el otro acepta un argumento de `LPRECT` .  El primer constructor almacena la dirección del argumento de referencia en el único miembro de datos de la clase, [m\_lpRect](../Topic/_U_RECT::m_lpRect.md).  El argumento al constructor del puntero se almacena directamente sin conversión.  
+## Remarks  
+ The class defines two constructor overloads: one accepts a **RECT&** argument and the other accepts an `LPRECT` argument. The first constructor stores the address of the reference argument in the class's single data member, [m_lpRect](#_u_rect__m_lprect). The argument to the pointer constructor is stored directly without conversion.  
   
-## Requisitos  
- **encabezado:** atlwin.h  
+## Requirements  
+ **Header:** atlwin.h  
   
-## Vea también  
+##  <a name="_u_rect__m_lprect"></a>  _U_RECT::m_lpRect  
+ The class holds the value passed to either of its constructors as a public `LPRECT` data member.  
+  
+```
+LPRECT m_lpRect;
+```  
+  
+##  <a name="_u_rect___u_rect"></a>  _U_RECT::_U_RECT  
+ The address of the reference argument is stored in the class's single data member, [m_lpRect](#_u_rect__m_lprect).  
+  
+```
+_U_RECT (RECT aspecto rc);  
+_U_RECT (LPRECT lpRect);
+```  
+  
+### Parameters  
+ `rc`  
+ A `RECT` reference.  
+  
+ `lpRect`  
+ A `RECT` pointer.  
+  
+### Remarks  
+ The argument to the pointer constructor is stored directly without conversion.  
+  
+## See Also  
  [Class Overview](../../atl/atl-class-overview.md)
+

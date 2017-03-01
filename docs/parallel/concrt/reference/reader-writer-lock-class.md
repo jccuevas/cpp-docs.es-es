@@ -1,74 +1,228 @@
 ---
-title: "reader_writer_lock (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::reader_writer_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reader_writer_lock (clase)"
+title: reader_writer_lock (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::reader_writer_lock
+dev_langs:
+- C++
+helpviewer_keywords:
+- reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# reader_writer_lock (Clase)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: d5d2fde890b0836621fcd1db5bb87b1933bb2a04
+ms.lasthandoff: 02/24/2017
 
-Un bloqueo de lectura o escritura basado en cola, con preferencia del sistema de escritura y con giro solo local.  El bloqueo permite el acceso primero en entrar, primero en salir \(FIFO\) a los sistemas de escritura y lectores agotados bajo una carga continua de sistemas de escritura.  
+---
+# <a name="readerwriterlock-class"></a>reader_writer_lock (Clase)
+Un bloqueo de lectura o escritura basado en cola, con preferencia del sistema de escritura y con giro solo local. El bloqueo permite el acceso primero en entrar, primero en salir (FIFO) a los sistemas de escritura y lectores agotados bajo una carga continua de sistemas de escritura.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+class reader_writer_lock;
 ```  
-class reader_writer_lock;  
-```  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Clases públicas  
+### <a name="public-classes"></a>Clases públicas  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[reader\_writer\_lock::scoped\_lock \(Clase\)](../Topic/reader_writer_lock::scoped_lock%20Class.md)|Una excepción segura del contenedor RAII que se puede usar para adquirir objetos de bloqueo `reader_writer_lock` como un sistema de escritura.|  
-|[reader\_writer\_lock::scoped\_lock\_read \(Clase\)](../Topic/reader_writer_lock::scoped_lock_read%20Class.md)|Una excepción segura del contenedor RAII que se puede usar para adquirir objetos de bloqueo `reader_writer_lock` como un lector.|  
+|[reader_writer_lock:: scoped_lock (clase)](#scoped_lock_class)|Una excepción segura del contenedor RAII que se puede utilizar para adquirir `reader_writer_lock` bloquear objetos como un sistema de escritura.|  
+|[reader_writer_lock:: scoped_lock_read (clase)](#scoped_lock_read_class)|Una excepción segura del contenedor RAII que se puede utilizar para adquirir `reader_writer_lock` objetos de bloqueo como lector.|  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[reader\_writer\_lock::reader\_writer\_lock \(Constructor\)](../Topic/reader_writer_lock::reader_writer_lock%20Constructor.md)|Crea un nuevo objeto `reader_writer_lock`.|  
-|[reader\_writer\_lock::~reader\_writer\_lock \(Destructor\)](../Topic/reader_writer_lock::~reader_writer_lock%20Destructor.md)|Destruye el objeto `reader_writer_lock`.|  
+|[reader_writer_lock (Constructor)](#ctor)|Construye un nuevo objeto `reader_writer_lock`.|  
+|[~ reader_writer_lock (destructor)](#dtor)|Destruye el objeto `reader_writer_lock`.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[reader\_writer\_lock::lock \(Método\)](../Topic/reader_writer_lock::lock%20Method.md)|Adquiere el bloqueo de lectura o escritura como un sistema de escritura.|  
-|[reader\_writer\_lock::lock\_read \(Método\)](../Topic/reader_writer_lock::lock_read%20Method.md)|Adquiere el bloqueo de lectura o escritura como un lector.  Si hay sistemas de escritura, los lectores activos tienen que esperar hasta que hayan terminado.  El lector simplemente registra un interés en el bloqueo y espera que los sistemas de escritura lo liberen.|  
-|[reader\_writer\_lock::try\_lock \(Método\)](../Topic/reader_writer_lock::try_lock%20Method.md)|Intenta adquirir el bloqueo reader\-writer como un sistema de escritura sin bloqueo.|  
-|[reader\_writer\_lock::try\_lock\_read \(Método\)](../Topic/reader_writer_lock::try_lock_read%20Method.md)|Intenta adquirir el bloqueo reader\-writer como un lector sin bloqueo.|  
-|[reader\_writer\_lock::unlock \(Método\)](../Topic/reader_writer_lock::unlock%20Method.md)|Desbloquea el bloqueo del sistema de escritura del lector basado en quién lo bloqueó, en el lector o en el sistema de escritura.|  
+|[lock (método)](#lock)|Adquiere el bloqueo de lector y escritor como escritor.|  
+|[lock_read (método)](#lock_read)|Adquiere el bloqueo de lector y escritor como lector. Si hay sistemas de escritura, los lectores activos tienen que esperar hasta que hayan terminado. El lector simplemente registra un interés en el bloqueo y espera para que escritores de liberarlo.|  
+|[try_lock (método)](#try_lock)|Intenta adquirir el bloqueo de lector y escritor como un sistema de escritura sin bloqueo.|  
+|[try_lock_read (método)](#try_lock_read)|Intenta adquirir el bloqueo de lector y escritor como un lector sin bloqueo.|  
+|[Unlock (método)](#unlock)|Desbloquea el bloqueo de lector y escritor según quién bloqueó, lector o escritor.|  
   
-## Comentarios  
- Para obtener más información, vea [Estructuras de datos de sincronización](../../../parallel/concrt/synchronization-data-structures.md).  
+## <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [estructuras de datos de sincronización](../../../parallel/concrt/synchronization-data-structures.md).  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `reader_writer_lock`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** concrt.h  
   
  **Espacio de nombres:** simultaneidad  
   
-## Vea también  
- [concurrency \(Espacio de nombres\)](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [critical\_section \(Clase\)](../../../parallel/concrt/reference/critical-section-class.md)
+##  <a name="a-namelocka-lock"></a><a name="lock"></a>bloqueo 
+
+ Adquiere el bloqueo de lector y escritor como escritor.  
+  
+```
+void lock();
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ A menudo es más seguro usar la [scoped_lock](#scoped_lock_class) construcción para adquirir y liberar un `reader_writer_lock` objeto como un sistema de escritura en una excepción forma segura.  
+  
+ Después de un sistema de escritura intenta adquirir el bloqueo, cualquier lector futuro se bloqueará hasta que los escritores ha adquirido y liberado el bloqueo. Este bloqueo está orientado hacia los escritores y puede privar a los lectores bajo una carga continua de sistemas de escritura.  
+  
+ Escritores se encadenan para que un escritor de salir del bloqueo libera el escritor en la línea siguiente.  
+  
+ Si el bloqueo ya es retenido por el contexto de llamada, un [improper_lock](improper-lock-class.md) se producirá la excepción.  
+  
+##  <a name="a-namelockreada-lockread"></a><a name="lock_read"></a>lock_read 
+
+ Adquiere el bloqueo de lector y escritor como lector. Si hay sistemas de escritura, los lectores activos tienen que esperar hasta que hayan terminado. El lector simplemente registra un interés en el bloqueo y espera para que escritores de liberarlo.  
+  
+```
+void lock_read();
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ A menudo es más seguro usar la [scoped_lock_read](#scoped_lock_read_class) construcción para adquirir y liberar un `reader_writer_lock` objeto como lector en una excepción forma segura.  
+  
+ Si hay escritores que esperan el bloqueo, el lector esperará hasta que hayan adquirido y liberado el bloqueo todos los escritores en línea. Este bloqueo está orientado hacia los escritores y puede privar a los lectores bajo una carga continua de sistemas de escritura.  
+  
+##  <a name="a-namectora-readerwriterlock"></a><a name="ctor"></a>reader_writer_lock 
+
+ Construye un nuevo objeto `reader_writer_lock`.  
+  
+```
+reader_writer_lock();
+```  
+  
+##  <a name="a-namedtora-readerwriterlock"></a><a name="dtor"></a>~ reader_writer_lock 
+
+ Destruye el objeto `reader_writer_lock`.  
+  
+```
+~reader_writer_lock();
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Se espera que ya no se mantiene el bloqueo cuando el destructor se ejecuta. Lo que permite el bloqueo de escritor de lector destruya con el bloqueo, sigue dando resultados de comportamiento no definido.  
+  
+##  <a name="a-namescopedlockclassa--readerwriterlockscopedlock-class"></a><a name="scoped_lock_class"></a>reader_writer_lock:: scoped_lock (clase)  
+ Una excepción segura del contenedor RAII que se puede utilizar para adquirir `reader_writer_lock` bloquear objetos como un sistema de escritura.  
+  
+```
+class scoped_lock;
+``` 
+## <a name="a-namescopedlockctora-scopedlockscopedlock"></a><a name="scoped_lock_ctor"></a>scoped_lock::scoped_lock 
+
+Construye un `scoped_lock` de objetos y adquiere el `reader_writer_lock` objeto pasado en el `_Reader_writer_lock` parámetro como un sistema de escritura. Si otro subproceso mantiene el bloqueo, esta llamada se bloqueará.  
+  
+  
+```
+explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
+```  
+  
+#### <a name="parameters"></a>Parámetros  
+ `_Reader_writer_lock`  
+ La `reader_writer_lock` objeto a adquirir como un sistema de escritura.  
+  
+## <a name="a-namescopedlockdtora-scopedlockscopedlock"></a><a name="scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
+
+Destruye un `reader_writer_lock` de objetos y libera el bloqueo proporcionado en su constructor.   
+
+```
+~scoped_lock();
+```  
+  
+##  <a name="a-namescopedlockreadclassa--readerwriterlockscopedlockread-class"></a><a name="scoped_lock_read_class"></a>reader_writer_lock:: scoped_lock_read (clase)  
+ Una excepción segura del contenedor RAII que se puede utilizar para adquirir `reader_writer_lock` objetos de bloqueo como lector.  
+  
+```
+class scoped_lock_read;
+```  
+  
+##  <a name="a-nametrylocka-trylock"></a><a name="try_lock"></a>try_lock 
+
+ Intenta adquirir el bloqueo de lector y escritor como un sistema de escritura sin bloqueo.  
+
+## <a name="a-namescopedlockreadctora-scopedlockreadscopedlockread"></a><a name="scoped_lock_read_ctor"></a>scoped_lock_read::scoped_lock_read 
+
+Construye un `scoped_lock_read` de objetos y adquiere el `reader_writer_lock` objeto pasado en el `_Reader_writer_lock` parámetro como lector. Si el bloqueo se mantiene por otro subproceso como un sistema de escritura o hay sistemas de escritura pendientes, esta llamada se bloqueará.  
+  
+```
+explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
+```  
+  
+#### <a name="parameters"></a>Parámetros  
+ `_Reader_writer_lock`  
+ La `reader_writer_lock` objeto que se va a adquirir como lector.  
+  
+## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">reader_writer_lock:: scoped_lock_read:: ~ scoped_lock_read (destructor)
+Destruye un `scoped_lock_read` de objetos y libera el bloqueo proporcionado en su constructor.  
+
+```
+~scoped_lock_read();
+```  
+  
+## <a name="a-nametrylocka-trylock"></a><a name="try_lock"></a>try_lock 
+
+```
+bool try_lock();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Si se adquirió el bloqueo, el valor `true`; en caso contrario, el valor `false`.  
+  
+##  <a name="a-nametrylockreada-trylockread"></a><a name="try_lock_read"></a>try_lock_read 
+
+ Intenta adquirir el bloqueo de lector y escritor como un lector sin bloqueo.  
+  
+```
+bool try_lock_read();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Si se adquirió el bloqueo, el valor `true`; en caso contrario, el valor `false`.  
+  
+##  <a name="a-nameunlocka-unlock"></a><a name="unlock"></a>desbloquear 
+
+ Desbloquea el bloqueo de lector y escritor según quién bloqueó, lector o escritor.  
+  
+```
+void unlock();
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Si hay escritores que esperan el bloqueo, la liberación del bloqueo siempre irá al sistema de escritura siguiente en orden FIFO. Este bloqueo está orientado hacia los escritores y puede privar a los lectores bajo una carga continua de sistemas de escritura.  
+  
+## <a name="see-also"></a>Vea también  
+ [simultaneidad Namespace](concurrency-namespace.md)   
+ [critical_section (clase)](critical-section-class.md)
+

@@ -1,42 +1,59 @@
 ---
-title: "Editar un controlador de mensajes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.editing.msghandler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controladores de mensajes"
-  - "control de mensajes, editar controladores"
+title: Editar un controlador de mensajes | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.editing.msghandler
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handlers
+- message handling, editing handlers
 ms.assetid: 7babb496-1f14-43b1-a14d-2e54402a92e2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Editar un controlador de mensajes
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
+ms.openlocfilehash: e9befbe9bf05623b3ecd05248985dd74f2526b43
+ms.lasthandoff: 02/24/2017
 
-Una vez definido un controlador de mensajes, se puede ir a la definición de la función miembro para agregar o modificar código.  
+---
+# <a name="editing-a-message-handler"></a>Editar un controlador de mensajes
+Una vez haya definido un controlador de mensajes, puede ir a la definición de la función miembro para agregar o modificar el código.  
   
- Para saltar a la definición de una función miembro desde el [editor de cuadros de diálogo](../../mfc/dialog-editor.md), haga doble clic en un control para el cual ya se haya definido un controlador.  Al hacerlo navegará al archivo donde esté definido el controlador de mensajes del control seleccionado.  
+ Para saltar a una definición de función miembro de la [editor de cuadro de diálogo](../../windows/dialog-editor.md), haga doble clic en un control para el que se haya definido un controlador. Esto le lleva al archivo en el que se define el controlador de mensajes del control seleccionado.  
   
- Para ir a una definición de función miembro desde la [Vista de clases](http://msdn.microsoft.com/es-es/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga doble clic en el nombre de función en la Vista de clases.  
+ Para saltar a una definición de función miembro de [la vista de clases](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga doble clic en el nombre de función en la vista de clases.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Asignar mensajes a funciones](../../mfc/reference/mapping-messages-to-functions.md)   
- [Agregar funcionalidad con los Asistentes para código](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Agregar funcionalidad con los asistentes para código](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Agregar una clase](../../ide/adding-a-class-visual-cpp.md)   
  [Agregar una función miembro](../../ide/adding-a-member-function-visual-cpp.md)   
- [Agregar una variable miembro](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Reemplazar una función virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Controlador de mensajes de MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Explorar la estructura de clases](../../ide/navigating-the-class-structure-visual-cpp.md)
+ [Agregar una Variable miembro](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Reemplazar una función Virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [Controlador de mensajes MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navegar por la estructura de clases](../../ide/navigating-the-class-structure-visual-cpp.md)
+

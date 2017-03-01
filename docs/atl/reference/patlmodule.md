@@ -1,49 +1,69 @@
 ---
-title: "_pAtlModule | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATLBASE/_pAtlModule"
-  - "_pAtlModule"
-  - "ATL::_pAtlModule"
-  - "ATL._pAtlModule"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_pAtlModule variable"
-  - "pAtlModule variable"
+title: _pAtlModule | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATLBASE/_pAtlModule
+- _pAtlModule
+- ATL::_pAtlModule
+- ATL._pAtlModule
+dev_langs:
+- C++
+helpviewer_keywords:
+- pAtlModule variable
+- _pAtlModule variable
 ms.assetid: 0ecde3a9-3f4d-4c7b-bb54-713ce05c4777
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _pAtlModule
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: b20c5010616323eac9438223df64af9960192e2b
+ms.lasthandoff: 02/24/2017
 
-Una variable global que almacena un puntero al módulo actual.  
+---
+# <a name="patlmodule"></a>_pAtlModule
+Una variable global que se almacena un puntero al módulo actual.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-__declspec(selectany) CAtlModule * _pAtlModule  
+__declspec(selectany) CAtlModule* _pAtlModule  
 ```  
   
-## Comentarios  
- Los métodos de esta variable global se pueden utilizar para proporcionar la funcionalidad que \(ahora\) la clase obsoleto [CComModule](../../atl/reference/ccommodule-class.md) proporcionado en Visual C\+\+ 6,0.  
+## <a name="remarks"></a>Comentarios  
+ Métodos en esta variable global pueden utilizarse para proporcionar la funcionalidad que la clase (ya obsoleta) [CComModule](../../atl/reference/ccommodule-class.md) proporcionadas en Visual C++ 6.0.  
   
-## Ejemplo  
- [!code-cpp[NVC_ATL_Windowing#97](../../atl/codesnippet/CPP/patlmodule_1.cpp)]  
+## <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_ATL_Windowing&#97;](../../atl/codesnippet/cpp/patlmodule_1.cpp)]  
   
-## Requisitos  
- **encabezado:** atlbase.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atlbase.h  
   
-## Vea también  
- [Global Variables](../../atl/reference/atl-global-variables.md)
+## <a name="see-also"></a>Vea también  
+ [Variables globales](../../atl/reference/atl-global-variables.md)
+
+
+
+

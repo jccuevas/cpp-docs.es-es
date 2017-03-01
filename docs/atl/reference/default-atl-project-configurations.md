@@ -1,57 +1,75 @@
 ---
-title: "Configuraciones predeterminadas de un proyecto ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL projects, configuraciones predeterminadas"
+title: Configuraciones de proyectos ATL predeterminadas | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL projects, default configurations
 ms.assetid: 7e272722-41af-4330-b965-a6d74ec16880
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Configuraciones predeterminadas de un proyecto ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
+ms.openlocfilehash: 41ab65c411bef478d063e5165d3167f58ace37d7
+ms.lasthandoff: 02/24/2017
 
-En este tema se comparan las configuraciones predeterminadas de un proyecto ATL en Visual C\+\+ .NET con sus equivalentes en Visual C\+\+ 6.0.  
+---
+# <a name="default-atl-project-configurations"></a>Configuraciones predeterminadas de proyecto ATL
+Este tema comparan las configuraciones de proyecto ATL de forma predeterminada en Visual C++ .NET con las configuraciones de proyecto predeterminadas en Visual C++ 6.0.  
   
-## Configuraciones predeterminadas en Visual C\+\+ .NET  
- En Visual C\+\+ .NET, el Asistente para proyectos ATL crea dos configuraciones de proyecto de forma predeterminada.  
+## <a name="visual-c-net-default-configurations"></a>Configuraciones predeterminadas en Visual C++ .NET  
+ En Visual C++. NET, el Asistente para proyectos ATL crea dos configuraciones de proyecto de forma predeterminada.  
   
-### Configuraciones en Visual C\+\+ .NET  
+### <a name="visual-c-net-configurations"></a>Configuraciones en Visual C++ .NET  
   
-|Configuración.|Juego de caracteres|Uso de ATL|  
-|--------------------|-------------------------|----------------|  
-|Versión de lanzamiento|MBCS|Archivo DLL|  
-|Depuración|MBCS|Archivo DLL|  
+|Configuración|Juego de caracteres|Uso de ATL|  
+|-------------------|-------------------|----------------|  
+|Versión|MBCS|Archivo DLL|  
+|Depurar|MBCS|Archivo DLL|  
   
- Las configuraciones de **Juego de caracteres** y **Uso de ATL** se pueden cambiar en el cuadro de diálogo **Configuración del proyecto** de la ficha **General**.  También puede agregar sus propias configuraciones mediante el Administrador de configuración.  Para obtener más información, vea [Configuraciones de compilación](../Topic/Understanding%20Build%20Configurations.md).  
+ **Juego de caracteres**, **uso de ATL** y puede cambiarse en el **configuración del proyecto** cuadro de diálogo en el **General** ficha. También puede agregar sus propias configuraciones mediante el Administrador de configuración. Para obtener más información, consulte [las configuraciones de compilación](/visualstudio/ide/understanding-build-configurations).  
   
-## Configuraciones predeterminadas en la versión 6.0  
- En Visual C\+\+ versión 6.0, el Asistente para aplicaciones COM ATL \(que ahora se denomina Asistente para proyectos ATL\) creaba seis configuraciones de proyecto de forma predeterminada.  Las configuraciones eran variaciones de las opciones Liberar, Depurar, Unicode y Uso de CRT y ATL.  Estas configuraciones se pueden duplicar en Visual C\+\+ .NET mediante el Administrador de configuración, si se desea.  
+## <a name="version-60-default-configurations"></a>Configuraciones predeterminadas de la versión 6.0  
+ En Visual C++ versión 6.0, el Asistente para aplicaciones COM ATL (que ahora se llama al Asistente para proyectos ATL) creaba seis configuraciones de proyecto de forma predeterminada. Las configuraciones eran variaciones de lanzamiento, depurar, Unicode y uso de CRT y ATL. Todas estas configuraciones se pueden duplicar en Visual C++ .NET mediante el Administrador de configuración, si así lo desea.  
   
-### Configuraciones de la versión 6.0  
+### <a name="version-60-configurations"></a>Configuraciones de la versión 6.0  
   
-|Configuración.|Juego de caracteres|Uso de ATL|  
-|--------------------|-------------------------|----------------|  
-|Depuración|MBCS|Static|  
-|Depurar Unicode|UNICODE|Static|  
-|Liberar dependencia mínima|MBCS|Static|  
-|Liberar Unicode de dependencia mínima|UNICODE|Static|  
-|Liberar tamaño mínimo|MBCS|Archivo DLL|  
+|Configuración|Juego de caracteres|Uso de ATL|  
+|-------------------|-------------------|----------------|  
+|Depurar|MBCS|Estático|  
+|Depurar Unicode|UNICODE|Estático|  
+|Liberar dependencia mínima|MBCS|Estático|  
+|Liberar Unicode de dependencia mínima|UNICODE|Estático|  
+|Tamaño mínimo de versión|MBCS|Archivo DLL|  
 |Liberar Unicode de tamaño mínimo|UNICODE|Archivo DLL|  
   
-## Vea también  
- [Programar con ATL y código en tiempo de ejecución de C](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [Trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md)   
- [Configuration Manager Dialog Box](http://msdn.microsoft.com/es-es/fa182dca-282e-4ae5-bf37-e155344ca18b)   
- [Compilar aplicaciones en Visual Studio](../Topic/Compiling%20and%20Building%20in%20Visual%20Studio.md)
+## <a name="see-also"></a>Vea también  
+ [Programar con ATL y el código de tiempo de ejecución de C](../../atl/programming-with-atl-and-c-run-time-code.md)   
+ [Trabajar con propiedades de proyecto](../../ide/working-with-project-properties.md)   
+ [Cuadro de diálogo Administrador de configuración](http://msdn.microsoft.com/en-us/fa182dca-282e-4ae5-bf37-e155344ca18b)   
+ [Compilar y generar en Visual Studio](/visualstudio/ide/compiling-and-building-in-visual-studio)
+
+

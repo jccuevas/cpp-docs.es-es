@@ -1,92 +1,132 @@
 ---
-title: "CWinTraits Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CWinTraits"
-  - "CMDIChildWinTraits"
-  - "ATL.CWinTraits"
-  - "CFrameWinTraits"
-  - "ATL::CWinTraits"
-  - "CControlWinTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CControlWinTraits class"
-  - "CFrameWinTraits class"
-  - "CMDIChildWinTraits class"
-  - "CWinTraits class"
-  - "window styles, default values for ATL"
+title: Clase CWinTraits | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CWinTraits
+- CMDIChildWinTraits
+- ATL.CWinTraits
+- CFrameWinTraits
+- ATL::CWinTraits
+- CControlWinTraits
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMDIChildWinTraits class
+- window styles, default values for ATL
+- CWinTraits class
+- CFrameWinTraits class
+- CControlWinTraits class
 ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CWinTraits Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: abd62b916f976721bf85fc4bb2a94ffaf5b217ea
+ms.lasthandoff: 02/24/2017
 
-Esta clase proporciona un método para normalizar los estilos utilizados al crear un objeto de la ventana.  
+---
+# <a name="cwintraits-class"></a>Clase CWinTraits
+Esta clase proporciona un método para estandarizar los estilos utilizados al crear un objeto de ventana.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en Windows en tiempo de ejecución.  
+>  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 ```  
   
-      template <  
-DWORD t_dwStyle= 0,  
-DWORD t_dwExStyle= 0  
->  
-class CWinTraits  
-```  
-  
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `t_dwStyle`  
- Estilos de ventana estándar predeterminadas.  
+ Estilos de ventana estándar de manera predeterminada.  
   
  `t_dwExStyle`  
- Establezca como valor predeterminado los estilos de ventana extendidas.  
+ De forma predeterminada, los estilos de ventana extendidos.  
   
-## Members  
+## <a name="members"></a>Miembros  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CWinTraits::GetWndExStyle](../Topic/CWinTraits::GetWndExStyle.md)|\(Estático\) recupera los estilos extendidos para el objeto de `CWinTraits` .|  
-|[CWinTraits::GetWndStyle](../Topic/CWinTraits::GetWndStyle.md)|\(Estático\) recupera los estilos estándar para el objeto de `CWinTraits` .|  
+|[CWinTraits::GetWndExStyle](#getwndexstyle)|(Estático) Recupera los estilos extendidos para el `CWinTraits` objeto.|  
+|[CWinTraits::GetWndStyle](#getwndstyle)|(Estático) Recupera los estilos estándar para la `CWinTraits` objeto.|  
   
-## Comentarios  
- Esta clase de [rasgos de la ventana](../../atl/understanding-window-traits.md) proporciona un método simple para normalizar los estilos utilizados para la creación de un objeto de la ventana de ATL.  Utilice una especialización de esta clase como un parámetro de plantilla a [CWindowImpl](../../atl/reference/cwindowimpl-class.md) u otro de las clases de ventana ATL para especificar el estándar predeterminada y los estilos extendidos utilizados para las instancias de esta clase de ventana.  
+## <a name="remarks"></a>Comentarios  
+ Esto [rasgos de las ventanas](../../atl/understanding-window-traits.md) clase proporciona un método sencillo de estandarizar los estilos utilizados para la creación de un objeto de ventana ATL. Usar una especialización de esta clase como un parámetro de plantilla a [CWindowImpl](../../atl/reference/cwindowimpl-class.md) u otra de las clases de ventana de ATL para especificar los estilos predeterminados estándar y extendidos utilizados para instancias de esa clase de ventana.  
   
- Utilice esta plantilla cuando se desea proporcionar los estilos de ventana predeterminadas que se usarán cuando no se especifica ningún otros estilos en la llamada a [CWindowImpl:: Crear](../Topic/CWindowImpl::Create.md).  
+ Use esta plantilla cuando desee proporcionar predeterminado estilos de ventana que se utilizará sólo cuando no hay otros estilos especificados en la llamada a [CWindowImpl:: Create](../../atl/reference/cwindowimpl-class.md#create).  
   
- ATL proporciona tres especializaciones predefinidas de esta plantilla para combinaciones de uso general de estilos de ventana:  
+ ATL proporciona tres especializaciones predefinidas de esta plantilla para combinaciones utilizadas de estilos de ventana:  
   
  `CControlWinTraits`  
- diseñado para una ventana de control estándar.  Se utilizan los estilos estándar siguientes: **WS\_CHILD**, **WS\_VISIBLE**, **WS\_CLIPCHILDREN**, y **WS\_CLIPSIBLINGS**.  no hay estilos extendidos.  
+ Diseñado para una ventana de control estándar. Se utilizan los siguientes estilos estándares: **WS_CHILD**, **WS_VISIBLE**, **WS_CLIPCHILDREN**, y **WS_CLIPSIBLINGS**. No hay ningún estilos extendidos.  
   
  `CFrameWinTraits`  
- Diseñado para una ventana de marco estándar.  Inclusión utilizada estilos estándar: **WS\_OVERLAPPEDWINDOW**, **WS\_CLIPCHILDREN**, y **WS\_CLIPSIBLINGS**.  Inclusión utilizada estilos extendidos: **WS\_EX\_APPWINDOW** y **WS\_EX\_WINDOWEDGE**.  
+ Diseñado para una ventana de marco estándar. Incluyen los estilos estándares utilizados: **WS_OVERLAPPEDWINDOW**, **WS_CLIPCHILDREN**, y **WS_CLIPSIBLINGS**. Los estilos extendidos utilizados incluyen: **WS_EX_APPWINDOW** y **WS_EX_WINDOWEDGE**.  
   
  `CMDIChildWinTraits`  
- diseñado para una ventana secundaria estándar de MDI.  Inclusión utilizada estilos estándar: **WS\_OVERLAPPEDWINDOW**, **WS\_CHILD**, **WS\_VISIBLE**, **WS\_CLIPCHILDREN**, y **WS\_CLIPSIBLINGS**.  Inclusión utilizada estilos extendidos: **WS\_EX\_MDICHILD**.  
+ Diseñado para una ventana secundaria MDI estándar. Incluyen los estilos estándares utilizados: **WS_OVERLAPPEDWINDOW**, **WS_CHILD**, **WS_VISIBLE**, **WS_CLIPCHILDREN**, y **WS_CLIPSIBLINGS**. Los estilos extendidos utilizados incluyen: **WS_EX_MDICHILD**.  
   
- Si desea asegurarse de que ciertos estilos están establecidos para todas las instancias de la clase de ventana mientras permiten otros estilos están establecidos en una base de por instancia, utilice [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) en su lugar.  
+ Si desea asegurarse de que determinados estilos para todas las instancias de la clase de ventana al tiempo que permite a otros estilos a establecerse en una base por instancia, use [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) en su lugar.  
   
-## Requisitos  
- **encabezado:** atlwin.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atlwin.h  
   
-## Vea también  
- [Class Members](http://msdn.microsoft.com/es-es/dbe6a147-3f01-4aea-a3fb-fe6ebadc31f8)   
- [Class Overview](../../atl/atl-class-overview.md)   
- [Understanding Window Traits](../../atl/understanding-window-traits.md)
+##  <a name="a-namegetwndstylea--cwintraitsgetwndstyle"></a><a name="getwndstyle"></a>CWinTraits::GetWndStyle  
+ Llame a esta función para recuperar los estilos estándar de la `CWinTraits` objeto.  
+  
+```
+static DWORD GetWndStyle(DWORD dwStyle);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `dwStyle`  
+ Estilos utilizados para la creación de una ventana estándar. Si `dwStyle` es 0, los valores de estilo de plantilla ( `t_dwStyle`) se devuelven. Si `dwStyle` es distinto de cero, `dwStyle` se devuelve.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Los estilos de ventana estándar del objeto.  
+  
+##  <a name="a-namegetwndexstylea--cwintraitsgetwndexstyle"></a><a name="getwndexstyle"></a>CWinTraits::GetWndExStyle  
+ Llame a esta función para recuperar los estilos extendidos de la `CWinTraits` objeto.  
+  
+```
+static DWORD GetWndExStyle(DWORD dwExStyle);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `dwExStyle`  
+ Estilos extendidos utilizados para la creación de una ventana. Si `dwExStyle` es 0, los valores de estilo de plantilla ( `t_dwExStyle`) se devuelven. Si `dwExStyle` es distinto de cero, `dwExStyle` se devuelve.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Los estilos de ventana extendidos del objeto.  
+  
+## <a name="see-also"></a>Vea también  
+ [Miembros de clase](http://msdn.microsoft.com/en-us/dbe6a147-3f01-4aea-a3fb-fe6ebadc31f8)   
+ [Información general de la clase](../../atl/atl-class-overview.md)   
+ [Descripción de rasgos de las ventanas](../../atl/understanding-window-traits.md)
+
