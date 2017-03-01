@@ -1,55 +1,68 @@
 ---
-title: "is_enum (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_enum"
-  - "std.tr1.is_enum"
-  - "std::tr1::is_enum"
-  - "std.is_enum"
-  - "std::is_enum"
-  - "type_traits/std::is_enum"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_enum (clase) [TR1]"
-  - "is_enum"
+title: Clase is_enum | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_enum
+- std::is_enum
+- type_traits/std::is_enum
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_enum class
+- is_enum
 ms.assetid: df3b00b7-4f98-4b3a-96ce-10ad958ee69c
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# is_enum (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 1e57d67f920b6742c8ba6b732675c00a8b0df992
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isenum-class"></a>is_enum (Clase)
 Comprueba si el tipo es una enumeración.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-template<class Ty>  
-    struct is_enum;  
+template <class Ty>  
+struct is_enum;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `Ty`  
  Tipo que se va a consultar.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Una instancia del predicado de tipo contiene true si el tipo `Ty` es un tipo de enumeración o una forma `cv-qualified` de un tipo de enumeración; en caso contrario, contiene false.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-```  
-// std_tr1__type_traits__is_enum.cpp   
+```cpp  
+// std__type_traits__is_enum.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -76,14 +89,18 @@ int main()
   
 ```  
   
-  **is\_enum\<trivial\> \=\= false**  
-**is\_enum\<color\> \=\= true**  
-**is\_enum\<int\> \=\= false**   
-## Requisitos  
- **Encabezado:** \<type\_traits\>  
+```Output  
+is_enum<trivial> == false  
+is_enum<color> == true  
+is_enum<int> == false  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
  **Espacio de nombres:** std  
   
-## Vea también  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [is\_integral \(Clase\)](../standard-library/is-integral-class.md)
+## <a name="see-also"></a>Vea también  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Clase is_integral](../standard-library/is-integral-class.md)
+

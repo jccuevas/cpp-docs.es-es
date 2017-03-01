@@ -1,96 +1,118 @@
 ---
-title: "cwait | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_cwait"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-process-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cwait"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cwait (función)"
+title: _cwait | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _cwait
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-process-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _cwait
+dev_langs:
+- C++
+helpviewer_keywords:
+- cwait function
+- _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# _cwait
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 9f58035cc3e3159dc8bb54860e3c8e7454f35b51
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cwait"></a>_cwait
 Espera hasta que finaliza otro proceso.  
   
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Para más información, vea [Funciones de CRT no admitidas con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API no se puede usar en aplicaciones que se ejecutan en [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-intptr_t _cwait(     int *termstat,    intptr_t procHandle,    int action  );  
+intptr_t _cwait(   
+   int *termstat,  
+   intptr_t procHandle,  
+   int action   
+);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `termstat`  
  Puntero a un búfer en el que se almacenará el código de resultado del proceso especificado, o NULL.  
   
  `procHandle`  
- Identificador del proceso al que se va a esperar \(es decir, el proceso que tiene que finalizar antes de que `_cwait` pueda devolver un valor\).  
+ Identificador del proceso al que se va a esperar (es decir, el proceso que tiene que finalizar antes de que `_cwait` pueda devolver un valor).  
   
  `action`  
  NULL: las aplicaciones el sistema operativo Windows lo omiten; en el caso de otras aplicaciones: código de acción que se va a realizar en `procHandle`.  
   
-## Valor devuelto  
- Cuando el proceso especificado finaliza correctamente, devuelve el identificador del proceso especificado y establece `termstat` en el código de resultado devuelto por el proceso especificado.  De lo contrario, devuelve –1 y establece `errno` como se indica a continuación.  
+## <a name="return-value"></a>Valor devuelto  
+ Cuando el proceso especificado finaliza correctamente, devuelve el identificador del proceso especificado y establece `termstat` en el código de resultado devuelto por el proceso especificado. De lo contrario, devuelve –1 y establece `errno` como se indica a continuación.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|`ECHILD`|No existe ningún proceso especificado, `procHandle` no es válido o la llamada a la API [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx) o [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx) ha producido un error.|  
+|`ECHILD`|No existe ningún proceso especificado, `procHandle` no es válido o no se ha realizado la llamada a la API [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx) o [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx).|  
 |`EINVAL`|`action` no es válido.|  
   
- Para obtener más información sobre estos y otros códigos de retorno, vea [errno, \_doserrno, \_sys\_errlist y \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Para obtener más información sobre estos y otros códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentarios  
- La función `_cwait` espera a que finalice el proceso de identificación de proceso proporcionado por `procHandle` para el proceso especificado.  El valor de `procHandle` que se pasa a `_cwait` debe ser el valor devuelto por la llamada a la función [\_spawn](../../c-runtime-library/spawn-wspawn-functions.md) que creó el proceso especificado.  Si el identificador de proceso finaliza antes de que se llame a `_cwait`, `_cwait` devuelve un valor inmediatamente.  `_cwait` se puede usar en cualquier proceso para esperar a cualquier otro proceso conocido para el que existe un identificador válido \(`procHandle`\).  
+## <a name="remarks"></a>Comentarios  
+ La función `_cwait` espera a que finalice el proceso de identificación de proceso proporcionado por `procHandle` para el proceso especificado. El valor de `procHandle` que se pasa a `_cwait` debe ser el valor devuelto por la llamada a la función [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) que ha creado el proceso especificado. Si el identificador de proceso finaliza antes de que se llame a `_cwait`, `_cwait` devuelve un valor inmediatamente. `_cwait` se puede usar en cualquier proceso para esperar a cualquier otro proceso conocido para el que existe un identificador válido (`procHandle`).  
   
- `termstat` señala a un búfer en el que se almacenará el código devuelto del proceso especificado.  El valor de `termstat` indica si el proceso especificado terminó con normalidad mediante una llamada a la API de Windows [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx).  Se llama internamente a `ExitProcess` si el proceso especificado llama a `exit` o `_exit`, vuelve desde `main` o llega al final de `main`.  Para más información sobre el valor que se devuelve a través de `termstat`, vea [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx).  Si se llama a `_cwait` con un valor NULL para `termstat`, el código de retorno del proceso especificado no se almacena.  
+ `termstat` señala a un búfer en el que se almacenará el código devuelto del proceso especificado. El valor de `termstat` indica si el proceso especificado ha finalizado con normalidad mediante una llamada a la API [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx). Se llama internamente a `ExitProcess` si el proceso especificado llama a `exit` o `_exit`, vuelve desde `main` o llega al final de `main`. Para obtener más información sobre el valor que se pasa de nuevo con `termstat`, consulte [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx). Si se llama a `_cwait` con un valor NULL para `termstat`, el código de retorno del proceso especificado no se almacena.  
   
- El sistema operativo Windows omite el parámetro `action`, porque en estos entornos no están implementadas las relaciones elemento primario\-elemento secundario.  
+ El sistema operativo Windows omite el parámetro `action`, porque en estos entornos no están implementadas las relaciones elemento primario-elemento secundario.  
   
- A menos que `procHandle` sea \-1 o \-2 \(identificadores del proceso o subproceso actual\), el identificador se cierra.  Por consiguiente, en esta situación, no se debe usar el identificador devuelto.  
+ A menos que `procHandle` sea -1 o -2 (identificadores del proceso o subproceso actual), el identificador se cierra. Por consiguiente, en esta situación, no se debe usar el identificador devuelto.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|Encabezado opcional|  
-|------------|--------------------------|-------------------------|  
-|`_cwait`|\<process.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_cwait`|\<process.h>|\<errno.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
-// crt_cwait.c  
+  
+      // crt_cwait.c  
 // compile with: /c  
 // This program launches several processes and waits  
 // for a specified process to finish.  
@@ -146,10 +168,18 @@ int main( int argc, char *argv[] )
 }  
 ```  
   
-  **Hi, Dad.  It's Ann.  Come here, Ann.  Thank you, Ann.  Hi, Dad.  It's Beth.  Hi, Dad.  It's Carl.  Hi, Dad.  It's Dave.**    
-## Equivalente en .NET Framework  
+```Output  
+Hi, Dad. It's Ann.  
+Come here, Ann.  
+Thank you, Ann.  
+Hi, Dad. It's Beth.  
+Hi, Dad. It's Carl.  
+Hi, Dad. It's Dave.  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
  [System::Diagnostics::Process::WaitForExit](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.waitforexit.aspx)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)   
- [\_spawn, \_wspawn \(Funciones\)](../../c-runtime-library/spawn-wspawn-functions.md)
+ [_spawn, _wspawn (Funciones)](../../c-runtime-library/spawn-wspawn-functions.md)

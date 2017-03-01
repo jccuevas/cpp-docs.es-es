@@ -1,52 +1,69 @@
 ---
-title: "_CrtReportBlockType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtReportBlockType"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_CrtReportBlockType"
-  - "CrtReportBlockType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CrtReportBlockType (función)"
-  - "BLOCK_SUBTYPE (macro)"
-  - "_CrtReportBlockType (función)"
-  - "_BLOCK_TYPE (macro)"
-  - "_BLOCK_SUBTYPE (macro)"
-  - "BLOCK_TYPE (macro)"
+title: _CrtReportBlockType | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtReportBlockType
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _CrtReportBlockType
+- CrtReportBlockType
+dev_langs:
+- C++
+helpviewer_keywords:
+- CrtReportBlockType function
+- BLOCK_SUBTYPE macro
+- _CrtReportBlockType function
+- _BLOCK_TYPE macro
+- _BLOCK_SUBTYPE macro
+- BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _CrtReportBlockType
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 79724d6f719c3c482e25622ffbaa636f98517cdc
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="crtreportblocktype"></a>_CrtReportBlockType
 Devuelve el tipo o subtipo de bloque asociado a un puntero de bloque especificado del montón de depuración.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -55,30 +72,30 @@ Devuelve el tipo o subtipo de bloque asociado a un puntero de bloque especificad
 };  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *pBlock*  
  Puntero a un bloque válido del montón de depuración.  
   
-## Valor devuelto  
- Cuando se le pasa un puntero del montón de depuración válido, la función `_CrtReportBlockType` devuelve el tipo y subtipo de bloque en forma de `int`.  Cuando se le pasa un puntero no válido, la función devuelve \-1.  
+## <a name="return-value"></a>Valor devuelto  
+ Cuando se le pasa un puntero del montón de depuración válido, la función `_CrtReportBlockType` devuelve el tipo y subtipo de bloque en forma de `int`. Cuando se le pasa un puntero no válido, la función devuelve -1.  
   
-## Comentarios  
- Para extraer el tipo y subtipo devueltos por `_CrtReportBlockType`, use las macros **\_BLOCK\_TYPE** y **\_BLOCK\_SUBTYPE** \(ambas definidas en Crtdbg.h\) en el valor devuelto.  
+## <a name="remarks"></a>Comentarios  
+ Para extraer el tipo y el subtipo que `_CrtReportBlockType` devuelve, use las macros **_BLOCK_TYPE** y **_BLOCK_SUBTYPE** (ambas se definen en Crtdbg.h) en el valor devuelto.  
   
- Para obtener información sobre la asignación de tipos de bloque y cómo se usan, vea [Tipos de bloques en el montón de depuración](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap).  
+ Para obtener información sobre la asignación de tipos de bloque y cómo se usan, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`_CrtReportBlockType`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtReportBlockType`|\<crtdbg.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Bibliotecas  
- Solo las versiones de depuración de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotecas  
+ Solo versiones de depuración de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_crtreportblocktype.cpp  
@@ -118,7 +135,7 @@ int main(void)
 }  
 ```  
   
-## Resultados del ejemplo  
+## <a name="sample-output"></a>Resultados del ejemplo  
   
 ```  
 Dumper found block at 00314F78: type 4, subtype 3  
@@ -137,8 +154,8 @@ crt_crtreportblocktype.cpp(27) : {52} normal block at 0x00314EC8, 10 bytes long.
 Object dump complete.  
 ```  
   
-## Vea también  
- [\_CrtDoForAllClientObjects](../../c-runtime-library/reference/crtdoforallclientobjects.md)   
- [\_CrtSetDumpClient](../../c-runtime-library/reference/crtsetdumpclient.md)   
- [\_CrtMemDumpAllObjectsSince](../../c-runtime-library/reference/crtmemdumpallobjectssince.md)   
- [\_CrtDumpMemoryLeaks](../../c-runtime-library/reference/crtdumpmemoryleaks.md)
+## <a name="see-also"></a>Vea también  
+ [_CrtDoForAllClientObjects](../../c-runtime-library/reference/crtdoforallclientobjects.md)   
+ [_CrtSetDumpClient](../../c-runtime-library/reference/crtsetdumpclient.md)   
+ [_CrtMemDumpAllObjectsSince](../../c-runtime-library/reference/crtmemdumpallobjectssince.md)   
+ [_CrtDumpMemoryLeaks](../../c-runtime-library/reference/crtdumpmemoryleaks.md)

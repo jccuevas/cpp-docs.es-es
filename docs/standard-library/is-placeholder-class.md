@@ -1,78 +1,94 @@
 ---
-title: "is_placeholder (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_placeholder"
-  - "std.tr1.is_placeholder"
-  - "functional/std::tr1::is_placeholder"
-  - "std::tr1::is_placeholder"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_placeholder (clase) [TR1]"
+title: Clase is_placeholder | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_placeholder
+- std::is_placeholder
+- functional/std::is_placeholder
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_placeholder class
 ms.assetid: 2b21a792-96d1-4bb8-b911-0db796510835
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# is_placeholder (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: a3624a752a500410ad906ba43a6c65310ba1cb41
+ms.lasthandoff: 02/24/2017
 
-Comprueba si el tipo es un marcador.  
+---
+# <a name="isplaceholder-class"></a>is_placeholder (Clase)
+Comprueba si el tipo es un marcador de posición.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
-```  
-template<class Ty>  
-    struct is_placeholder {  
-    static const int value;  
-    };  
-```  
+struct is_placeholder {  
+   static const int value;  
+   };  
   
-## Comentarios  
- El valor constante `value` es 0 si el tipo `Ty` no es marcador; de lo contrario, su valor es la posición del argumento de la llamada de función a que enlaza.  Se utiliza para determinar el valor `N` para el marcador `_N`de Enésimo.  
+## <a name="remarks"></a>Comentarios  
+ El valor constante `value` es 0 si el tipo `Ty` no es un marcador de posición. En caso contrario, su valor es la posición del argumento de llamada de función al que enlaza. Se usa para determinar el valor `N` del enésimo marcador de posición `_N`.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-```  
-// std_tr1__functional__is_placeholder.cpp   
+```cpp  
+// std__functional__is_placeholder.cpp   
 // compile with: /EHsc   
 #include <functional>   
 #include <iostream>   
   
 using namespace std::placeholders;   
   
-template<class Expr>   
-    void test_for_placeholder(const Expr&)   
-    {   
-    std::cout << std::is_placeholder<Expr>::value << std::endl;   
-    }   
-  
-int main()   
-    {   
-    test_for_placeholder(3.0);   
-    test_for_placeholder(_3);   
-  
-    return (0);   
-    }  
-  
+template<class Expr>
+void test_for_placeholder(const Expr&)
+{
+    std::cout << std::is_placeholder<Expr>::value << std::endl;
+}
+
+int main()
+{
+    test_for_placeholder(3.0);
+    test_for_placeholder(_3);
+
+    return (0);
+}  
 ```  
   
-  **0**  
-**3**   
-## Requisitos  
- **Encabezado:** \<functional\>  
+```Output  
+0  
+3  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<functional>  
   
  **Espacio de nombres:** std  
   
-## Vea también  
- [\_1 \(Objeto\)](../standard-library/1-object.md)
+## <a name="see-also"></a>Vea también  
+ [Objeto _1](../standard-library/1-object.md)
+
+

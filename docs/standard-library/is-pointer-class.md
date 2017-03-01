@@ -1,55 +1,68 @@
 ---
-title: "is_pointer (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.is_pointer"
-  - "is_pointer"
-  - "std::tr1::is_pointer"
-  - "std.is_pointer"
-  - "std::is_pointer"
-  - "type_traits/std::is_pointer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_pointer (clase) [TR1]"
-  - "is_pointer"
+title: Clase is_pointer | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_pointer
+- std::is_pointer
+- type_traits/std::is_pointer
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_pointer class
+- is_pointer
 ms.assetid: 44e0a403-7241-4e0a-8922-32877bcb9a4c
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# is_pointer (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 3bb2597b11ed4b5ebafac0e8548f9ddc18ac5fc4
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="ispointer-class"></a>is_pointer (Clase)
 Comprueba si el tipo es un puntero.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-template<class Ty>  
-    struct is_pointer;  
+template <class Ty>  
+struct is_pointer;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `Ty`  
  Tipo que se va a consultar.  
   
-## Comentarios  
- Una instancia del predicado de tipo contiene true si el tipo `Ty` es un puntero a `void`, un puntero a un objeto o un puntero a una función, o bien un formulario `cv-qualified` de uno de ellos; en caso contrario, contiene false.  Tenga en cuenta que `is_pointer` es false si `Ty` es un puntero a un miembro o a una función miembro.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia del predicado de tipo contiene true si el tipo `Ty` es un puntero a `void`, un puntero a un objeto o un puntero a una función, o bien un formulario `cv-qualified` de uno de ellos; en caso contrario, contiene false. Tenga en cuenta que `is_pointer` es false si `Ty` es un puntero a un miembro o a una función miembro.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-```  
-// std_tr1__type_traits__is_pointer.cpp   
+```cpp  
+// std__type_traits__is_pointer.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -77,17 +90,21 @@ int main()
   
 ```  
   
-  **is\_pointer\<trivial\> \=\= false**  
-**is\_pointer\<int trivial::\*\> \=\= false**  
-**is\_pointer\<trivial \*\> \=\= true**  
-**is\_pointer\<int\> \=\= false**  
-**is\_pointer\<int \*\> \=\= true**   
-## Requisitos  
- **Encabezado:** \<type\_traits\>  
+```Output  
+is_pointer<trivial> == false  
+is_pointer<int trivial::*> == false  
+is_pointer<trivial *> == true  
+is_pointer<int> == false  
+is_pointer<int *> == true  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
  **Espacio de nombres:** std  
   
-## Vea también  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [is\_member\_pointer \(Clase\)](../standard-library/is-member-pointer-class.md)   
- [is\_reference \(Clase\)](../standard-library/is-reference-class.md)
+## <a name="see-also"></a>Vea también  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Clase is_member_pointer](../standard-library/is-member-pointer-class.md)   
+ [Clase is_reference](../standard-library/is-reference-class.md)
+

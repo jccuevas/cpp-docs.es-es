@@ -1,51 +1,67 @@
 ---
-title: "div | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "div"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "div"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "div (función)"
-  - "dividir enteros"
-  - "cocientes"
-  - "cocientes, calcular"
-  - "cálculo de restos"
+title: div | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- div
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- div
+dev_langs:
+- C++
+helpviewer_keywords:
+- div function
+- quotients, computing
+- quotients
+- dividing integers
+- remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# div
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 9e1389e2d8623e7e96ef3ad6af8772ee7026ec76
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="div"></a>div
 Calcula el cociente y el resto de dos valores enteros.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 div_t div(   
@@ -62,30 +78,30 @@ lldiv_t div(
 ); /* C++ only */  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `numer`  
  Numerador.  
   
  `denom`  
  Denominador.  
   
-## Valor devuelto  
- El `div` al que se llama mediante argumentos de tipo `int` devuelve una estructura de tipo `div_t`, formada por el cociente y el resto.  El valor devuelto de la sobrecarga con argumentos de tipo `long` es `ldiv_t`.  `div_t` y `ldiv_t` se definen en STDLIB.H.  
+## <a name="return-value"></a>Valor devuelto  
+ El `div` al que se llama mediante argumentos de tipo `int` devuelve una estructura de tipo `div_t`, formada por el cociente y el resto. El valor devuelto de la sobrecarga con argumentos de tipo `long` es `ldiv_t`. `div_t` y `ldiv_t` se definen en STDLIB.H.  
   
-## Comentarios  
- La función `div` divide `numer` por `denom` y, por tanto, calcula el cociente y el resto.  La estructura [div\_t](../../c-runtime-library/standard-types.md) contiene el cociente, `int` `quot`, y el resto, `int` `rem`.  El signo del cociente es el mismo que el del cociente matemático.  Su valor absoluto es el entero más grande que es menor que el valor absoluto del cociente matemático.  Si el denominador es 0, el programa se cierra con un mensaje de error.  
+## <a name="remarks"></a>Comentarios  
+ La función `div` divide `numer` por `denom` y, por tanto, calcula el cociente y el resto. La estructura [div_t](../../c-runtime-library/standard-types.md) contiene el cociente, `int``quot`, y el resto, `int``rem`. El signo del cociente es el mismo que el del cociente matemático. Su valor absoluto es el entero más grande que es menor que el valor absoluto del cociente matemático. Si el denominador es 0, el programa se cierra con un mensaje de error.  
   
- Las sobrecargas que toman argumentos de tipo `long` o `long long` solo se pueden usar en código de C\+\+.  El tipo devuelto [ldiv\_t](../../c-runtime-library/standard-types.md) contiene los miembros `long` `quot` y `long` `rem`, y el tipo devuelto [lldiv\_t](../../c-runtime-library/standard-types.md) contiene los miembros `long long quot` y `long long rem`, que tienen los mismos significados que los miembros de `div_t`.  
+ Las sobrecargas que toman argumentos de tipo `long` o `long long` solo se pueden usar en código de C++. El tipo devuelto [ldiv_t](../../c-runtime-library/standard-types.md) contiene los miembros `long``quot` y `long``rem`, y el tipo devuelto [lldiv_t](../../c-runtime-library/standard-types.md) contiene los miembros `long long quot` y `long long rem`, que tienen los mismos significados que los miembros de `div_t`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`div`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`div`|\<stdlib.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_div.c  
@@ -118,12 +134,15 @@ int main( int argc, char *argv[] )
 }  
 ```  
   
-  **x es 876, y es 13**  
-**El cociente es 67 y el resto es 5**   
-## Equivalente en .NET Framework  
- No es aplicable Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+x is 876, y is 13  
+The quotient is 67, and the remainder is 5  
+```  
   
-## Vea también  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
+ No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
  [ldiv, lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)   
  [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)

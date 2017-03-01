@@ -1,71 +1,87 @@
 ---
-title: "directory_iterator (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "filesystem/std::tr2::sys::directory_iterator"
-  - "directory_iterator"
-  - "filesystem/std::experimental::filesystem::v1::_Directory_iterator::_Directory_iterator"
-  - "filesystem/std::experimental::filesystem::v1::directory_iterator"
-  - "FILESYSTEM/std::experimental::filesystem::v1::directory_iterator::directory_iterator"
-  - "std::experimental::filesystem::v1::directory_iterator::directory_iterator"
-  - "FILESYSTEM/std::experimental::filesystem::v1::directory_iterator::increment"
-  - "std::experimental::filesystem::v1::directory_iterator::increment"
-  - "FILESYSTEM/std::experimental::filesystem::v1::directory_iterator::operator="
-  - "std::experimental::filesystem::v1::directory_iterator::operator="
-  - "FILESYSTEM/std::experimental::filesystem::v1::directory_iterator::operator=="
-  - "std::experimental::filesystem::v1::directory_iterator::operator=="
-  - "FILESYSTEM/std::experimental::filesystem::v1::directory_iterator::operator!="
-  - "std::experimental::filesystem::v1::directory_iterator::operator!="
-  - "FILESYSTEM/std::experimental::filesystem::v1::directory_iterator::operator*"
-  - "std::experimental::filesystem::v1::directory_iterator::operator*"
-  - "FILESYSTEM/std::experimental::filesystem::v1::directory_iterator::operator->"
-  - "std::experimental::filesystem::v1::directory_iterator::operator->"
-  - "FILESYSTEM/std::experimental::filesystem::v1::directory_iterator::operator++"
-  - "std::experimental::filesystem::v1::directory_iterator::operator++"
-dev_langs: 
-  - "C++"
+title: directory_iterator (Clase) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- filesystem/std::experimental::filesystem::directory_iterator
+- directory_iterator
+- filesystem/std::experimental::filesystem::_Directory_iterator::_Directory_iterator
+- filesystem/std::experimental::filesystem::directory_iterator
+- FILESYSTEM/std::experimental::filesystem::directory_iterator::directory_iterator
+- std::experimental::filesystem::directory_iterator::directory_iterator
+- FILESYSTEM/std::experimental::filesystem::directory_iterator::increment
+- std::experimental::filesystem::directory_iterator::increment
+- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator=
+- std::experimental::filesystem::directory_iterator::operator=
+- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator==
+- std::experimental::filesystem::directory_iterator::operator==
+- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator!=
+- std::experimental::filesystem::directory_iterator::operator!=
+- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator*
+- std::experimental::filesystem::directory_iterator::operator*
+- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator->
+- std::experimental::filesystem::directory_iterator::operator->
+- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator++
+- std::experimental::filesystem::directory_iterator::operator++
+dev_langs:
+- C++
 ms.assetid: dca2ecf8-3e69-4644-a83d-705061e10cc8
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# directory_iterator (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 4eb80d5309a7749c1374d72be16798dbeea33bdc
+ms.lasthandoff: 02/24/2017
 
-Describe un iterador de entrada que establece secuencias en los nombres de archivo en un directorio. En el caso de un iterador X, la expresión \*X se evalúa como un objeto de la clase directory\_entry que contiene el nombre de archivo y cualquier elemento conocido sobre su estado.  
+---
+# <a name="directoryiterator-class"></a>directory_iterator (Clase)
+Describe un iterador de entrada que establece secuencias en los nombres de archivo en un directorio. En el caso de un iterador X, la expresión *X se evalúa como un objeto de la clase directory_entry que contiene el nombre de archivo y cualquier elemento conocido sobre su estado.  
   
- La clase almacena un objeto de tipo path, denominado mydir aquí a efectos de la exposición, que representa el nombre del directorio que se va a secuenciar y un objeto de directory\_entry tipo denominado myentry aquí, que representa el nombre de archivo actual en la secuencia del directorio. Un objeto construido de forma predeterminada de tipo directory\_entry tiene un nombre de ruta de acceso mydir vacío y representa el iterador de final de secuencia.  
+ La clase almacena un objeto de tipo path, denominado mydir aquí a efectos de la exposición, que representa el nombre del directorio que se va a secuenciar y un objeto de directory_entry tipo denominado myentry aquí, que representa el nombre de archivo actual en la secuencia del directorio. Un objeto construido de forma predeterminada de tipo directory_entry tiene un nombre de ruta de acceso mydir vacío y representa el iterador de final de secuencia.  
   
  Por ejemplo, si tenemos el directorio abc con entradas def y ghi, el código:  
   
  `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`  
   
- llamará a visit con los argumentos path\("abc\/def"\) y path\("abc\/ghi"\).  
+ llamará a visit con los argumentos path("abc/def") y path("abc/ghi").  
   
- Para obtener más información y ejemplos de código, vea [Exploración del sistema de archivos \(C\+\+\)](../standard-library/file-system-navigation.md).  
+ Para obtener más información y ejemplos de código, vea [Exploración del sistema de archivos (C++)](../standard-library/file-system-navigation.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class directory_iterator;  
 ```  
   
-## directory\_iterator::directory\_iterator  
+## <a name="directoryiteratordirectoryiterator"></a>directory_iterator::directory_iterator  
   
-```cpp  
+```  
 directory_iterator() noexcept;  
-explicit directory_iterator(const path& pval);  
-directory_iterator(const path& pval,  
-    error_code& ec) noexcept;  
+explicit directory_iterator(const path& pval);
+
+directory_iterator(const path& pval, error_code& ec) noexcept;  
 directory_iterator(const directory_iterator&) = default;  
 directory_iterator(directory_iterator&&) noexcept = default;  
 ```  
@@ -74,72 +90,72 @@ directory_iterator(directory_iterator&&) noexcept = default;
   
  Los constructores predeterminados se comportan según lo previsto.  
   
-## directory\_iterator::increment  
+## <a name="directoryiteratorincrement"></a>directory_iterator::increment  
   
-```cpp  
-directory_iterator& increment(  
-    error_code& ec) noexcept;  
+```  
+directory_iterator& increment(error_code& ec) noexcept;  
 ```  
   
  La función intenta avanzar al siguiente nombre de archivo del directorio. Si es correcto, almacena ese nombre de archivo en myentry; en caso contrario, produce un iterador de final de secuencia.  
   
-## directory\_iterator::operator\!\=  
+## <a name="directoryiteratoroperator"></a>directory_iterator::operator!=  
   
-```cpp  
-bool operator!=(const directory_iterator& right) const;  
+```  
+bool operator!=(const directory_iterator& right) const;
 ```  
   
- El operador miembro devuelve \!\(\*this \=\= right\).  
+ El operador miembro devuelve !(*this == right).  
   
-## directory\_iterator::operator\=  
+## <a name="directoryiteratoroperator"></a>directory_iterator::operator=  
   
-```cpp  
+```  
 directory_iterator& operator=(const directory_iterator&) = default;  
 directory_iterator& operator=(directory_iterator&&) noexcept = default;  
 ```  
   
  Los operadores predeterminados de asignación de miembros se comportan según lo previsto.  
   
-## directory\_iterator::operator\=\=  
-  
-```cpp  
-bool operator==(const directory_iterator& right) const;  
+## <a name="directoryiteratoroperator"></a>directory_iterator::operator==  
   
 ```  
+bool operator==(const directory_iterator& right) const;
+```  
   
- El operador miembro solo devuelve true si \*this y right son iteradores de final de secuencia o si ninguno de los dos lo son.  
+ El operador miembro solo devuelve true si *this y right son iteradores de final de secuencia o si ninguno de los dos lo son.  
   
-## directory\_iterator::operator\*  
+## <a name="directoryiteratoroperator"></a>directory_iterator::operator*  
   
-```cpp  
-const directory_entry& operator*() const;  
+```  
+const directory_entry& operator*() const;
 ```  
   
  El operador miembro devuelve myentry.  
   
-## directory\_iterator::operator\-\>  
+## <a name="directoryiteratoroperator-"></a>directory_iterator::operator->  
   
-```cpp  
-const directory_entry *operator->() const;  
+```  
+const directory_entry * operator->() const;
 ```  
   
- La función miembro devuelve &\*\*this.  
+ La función miembro devuelve &**this.  
   
-## directory\_iterator::operator\+\+  
+## <a name="directoryiteratoroperator"></a>directory_iterator::operator++  
   
-```cpp  
-directory_iterator& operator++();  
-directory_iterator& operator++(int);  
+```  
+directory_iterator& operator++();
+directory_iterator& operator++(int);
 ```  
   
- La primera función miembro llama a increment\(\) y luego devuelve \*this. La segunda función miembro hace una copia del objeto, llama a increment\(\) y luego devuelve la copia.  
+ La primera función miembro llama a increment() y luego devuelve *this. La segunda función miembro hace una copia del objeto, llama a increment() y luego devuelve la copia.  
   
-## Requisitos  
- **Encabezado:** filesystem  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<experimental/filesystem>  
   
- **Espacio de nombres:** std::experimental::filesystem::v1  
+ **Espacio de nombres:** std::experimental::filesystem  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
- [\<filesystem\>](../standard-library/filesystem.md)   
- [Exploración del sistema de archivos \(C\+\+\)](../standard-library/file-system-navigation.md)
+ [\<filesystem>](../standard-library/filesystem.md)   
+ [Exploración del sistema de archivos (C++)](../standard-library/file-system-navigation.md)
+
+

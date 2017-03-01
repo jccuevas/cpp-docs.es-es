@@ -1,58 +1,71 @@
 ---
-title: "is_convertible (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_convertible"
-  - "std.tr1.is_convertible"
-  - "std::tr1::is_convertible"
-  - "std.is_convertible"
-  - "std::is_convertible"
-  - "type_traits/std::is_convertible"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_convertible (clase) [TR1]"
-  - "is_convertible"
+title: Clase is_convertible | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_convertible
+- std::is_convertible
+- type_traits/std::is_convertible
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_convertible class
+- is_convertible
 ms.assetid: 75614008-1894-42ea-bd57-974399628536
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# is_convertible (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 381fa9297dd9fad3efd84078a000fea65af0abfd
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isconvertible-class"></a>is_convertible (Clase)
 Comprueba si un tipo es convertible a otro.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-template<class From, class To>  
-    struct is_convertible;  
+template <class From, class To>  
+struct is_convertible;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `From`  
  Tipo desde el que se va a convertir.  
   
  `Ty`  
  Tipo al que se va a convertir.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Una instancia del predicado de tipo contiene true si la expresión `To to = from;`, donde `from` es un objeto de tipo `From`, tiene un formato correcto.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-```  
-// std_tr1__type_traits__is_convertible.cpp   
+```cpp  
+// std__type_traits__is_convertible.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -76,14 +89,18 @@ int main()
   
 ```  
   
-  **is\_convertible\<trivial, int\> \=\= false**  
-**is\_convertible\<trivial, trivial\> \=\= true**  
-**is\_convertible\<char, int\> \=\= true**   
-## Requisitos  
- **Encabezado:** \<type\_traits\>  
+```Output  
+is_convertible<trivial, int> == false  
+is_convertible<trivial, trivial> == true  
+is_convertible<char, int> == true  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
  **Espacio de nombres:** std  
   
-## Vea también  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [is\_base\_of \(Clase\)](../standard-library/is-base-of-class.md)
+## <a name="see-also"></a>Vea también  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Clase is_base_of](../standard-library/is-base-of-class.md)
+

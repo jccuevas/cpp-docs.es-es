@@ -1,55 +1,68 @@
 ---
-title: "is_fundamental (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_fundamental"
-  - "std.tr1.is_fundamental"
-  - "std::tr1::is_fundamental"
-  - "std.is_fundamental"
-  - "std::is_fundamental"
-  - "type_traits/std::is_fundamental"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_fundamental (clase) [TR1]"
-  - "is_fundamental"
+title: Clase is_fundamental | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_fundamental
+- std::is_fundamental
+- type_traits/std::is_fundamental
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_fundamental class
+- is_fundamental
 ms.assetid: b84eee84-2fb2-4611-beaf-b384074d8b6a
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# is_fundamental (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: ba389ba4db5b559314b9db19cbb08d9f86ba4e7d
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isfundamental-class"></a>is_fundamental (Clase)
 Prueba si el tipo es nulo o aritmético  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-template<class Ty>  
-    struct is_fundamental;  
+template <class Ty>  
+struct is_fundamental;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `Ty`  
  Tipo que se va a consultar.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Una instancia de tipo flotante contienen true si el tipo `Ty` es un tipo básico, es decir, `void`, un tipo entero, un tipo de punto flotante o un `cv-qualified` formulario de uno de ellos; en caso contrario, contiene false.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-```  
-// std_tr1__type_traits__is_fundamental.cpp   
+```cpp  
+// std__type_traits__is_fundamental.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -75,15 +88,19 @@ int main()
   
 ```  
   
-  **is\_fundamental\<trivial\> \=\= false**  
-**is\_fundamental\<int\> \=\= true**  
-**is\_fundamental\<const float\> \=\= true**  
-**is\_fundamental\<void\> \=\= true**   
-## Requisitos  
- **Encabezado:** \<type\_traits\>  
+```Output  
+is_fundamental<trivial> == false  
+is_fundamental<int> == true  
+is_fundamental<const float> == true  
+is_fundamental<void> == true  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
  **Espacio de nombres:** std  
   
-## Vea también  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [is\_compound \(Clase\)](../standard-library/is-compound-class.md)
+## <a name="see-also"></a>Vea también  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Clase is_compound](../standard-library/is-compound-class.md)
+

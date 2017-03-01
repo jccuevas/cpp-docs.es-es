@@ -1,53 +1,69 @@
 ---
-title: "expm1, expm1f, expm1l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "expm1l"
-  - "expm1"
-  - "expm1f"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "expm1l"
-  - "expm1"
-  - "expm1f"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "expm1 (función)"
-  - "expm1f (función)"
-  - "expm1l (función)"
+title: expm1, expm1f, expm1l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- expm1l
+- expm1
+- expm1f
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- expm1l
+- expm1
+- expm1f
+dev_langs:
+- C++
+helpviewer_keywords:
+- expm1f function
+- expm1l function
+- expm1 function
 ms.assetid: 2a4dd2d9-370c-42b0-9067-0625efa272e0
 caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# expm1, expm1f, expm1l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 0fbce9639718ca7316494b1f573a817d8ab0e6f1
+ms.lasthandoff: 02/24/2017
 
-Calcula el exponencial de base e de un valor menos uno.  
+---
+# <a name="expm1-expm1f-expm1l"></a>expm1, expm1f, expm1l
+Calcula el valor exponencial en base e de un valor, menos uno.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 double expm1(   
@@ -67,28 +83,28 @@ long double expm1l(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `x`  
- El valor exponencial de punto flotante.  
+ Valor exponencial del punto flotante.  
   
-## Valor devuelto  
- Las funciones `expm1` devuelven un valor de punto flotante que representa e<sup>x</sup> – 1, si se realizan correctamente.  Cuando se produce desbordamiento, `expm1` devuelve `HUGE_VAL`, `expm1f` devuelve `HUGE_VALF`, `expm1l` devuelve `HUGE_VALL` y `errno` se establece en `ERANGE`.  Para obtener más información sobre los códigos de retorno, vea [errno, \_doserrno, \_sys\_errlist y \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+## <a name="return-value"></a>Valor devuelto  
+ Las funciones `expm1` devuelven un valor de punto flotante que representa a e<sup>x</sup> – 1, si se realiza correctamente. En caso de desbordamiento, `expm1` devuelve `HUGE_VAL`, `expm1f` devuelve `HUGE_VALF`, `expm1l` devuelve `HUGE_VALL` y `errno` se establece en `ERANGE`. Para obtener más información sobre los códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentarios  
- Como C\+\+ permite las sobrecargas, puede llamar a las sobrecargas de `expm1` que toman y devuelven los valores `float` y `long double`.  En un programa C, `expm1` siempre y devuelve `double`.  
+## <a name="remarks"></a>Comentarios  
+ Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `expm1` que toman y devuelven los valores `float` y `long double`. En un programa C, `expm1` siempre y devuelve `double`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`expm1`, `expm1f`, `expm1l`|\<math.h\>|  
+|-------------|---------------------|  
+|`expm1`, `expm1f`, `expm1l`|\<math.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Equivalente en .NET Framework  
- No es aplicable Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
+ No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
- [exp2, exp2f, exp2l](http://msdn.microsoft.com/es-es/a7974629-be1e-4196-a562-6624a0732003)   
+ [exp2, exp2f, exp2l](http://msdn.microsoft.com/en-us/a7974629-be1e-4196-a562-6624a0732003)   
  [pow, powf, powl](../../c-runtime-library/reference/pow-powf-powl.md)

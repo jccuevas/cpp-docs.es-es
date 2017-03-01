@@ -1,62 +1,128 @@
 ---
-title: "geometric_distribution (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.geometric_distribution"
-  - "random/std::tr1::geometric_distribution"
-  - "tr1::geometric_distribution"
-  - "tr1.geometric_distribution"
-  - "geometric_distribution"
-  - "std::tr1::geometric_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "geometric_distribution (clase)"
-  - "geometric_distribution (clase) [TR1]"
+title: geometric_distribution (Clase) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- geometric_distribution
+- std::geometric_distribution
+- random/std::geometric_distribution
+- std::geometric_distribution::reset
+- random/std::geometric_distribution::reset
+- std::geometric_distribution::p
+- random/std::geometric_distribution::p
+- std::geometric_distribution::param
+- random/std::geometric_distribution::param
+- std::geometric_distribution::min
+- random/std::geometric_distribution::min
+- std::geometric_distribution::max
+- random/std::geometric_distribution::max
+- std::geometric_distribution::operator()
+- random/std::geometric_distribution::operator()
+- std::geometric_distribution::param_type
+- random/std::geometric_distribution::param_type
+- std::geometric_distribution::param_type::p
+- random/std::geometric_distribution::param_type::p
+- std::geometric_distribution::param_type::operator==
+- random/std::geometric_distribution::param_type::operator==
+- std::geometric_distribution::param_type::operator!=
+- random/std::geometric_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- geometric_distribution class
+- geometric_distribution
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# geometric_distribution (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 02dd887f1b20b42145ccc83165570b9f682e693c
+ms.openlocfilehash: 51952b8649f73120b6a017ae9b64e3e01f42f70e
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="geometricdistribution-class"></a>geometric_distribution (Clase)
 Genera una distribución geométrica.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-template<class IntType = int> class geometric_distribution { public:     // types     typedef IntType result_type;     struct param_type;     // constructors and reset functions     explicit geometric_distribution(double p = 0.5);     explicit geometric_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     double p() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
+template<class IntType = int>
+class geometric_distribution {
+public:    
+    // types 
+    typedef IntType result_type; 
+    struct param_type;   
+    
+    // constructors and reset functions 
+    explicit geometric_distribution(double p = 0.5);
+    explicit geometric_distribution(const param_type& parm);
+    void reset();
+    
+    // generating functions 
+    template <class URNG>  
+    result_type operator()(URNG& gen);
+    template <class URNG>
+    result_type operator()(URNG& gen, const param_type& parm);
+    
+    // property functions 
+    double p() const;
+    param_type param() const;
+    void param(const param_type& parm);
+    result_type min() const;
+    result_type max() const;
+}; 
 ```  
+#### <a name="parameters"></a>Parámetros  
+*IntType*  
+Un tipo de resultado de entero, el valor predeterminado es `int`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).  
   
-#### Parámetros  
- `IntType`  
- Tipo de resultado de entero, su valor predeterminado es `int`.  Para conocer los posibles tipos, vea [\<random\>](../standard-library/random.md).  
+*URNG* El motor de generador de números aleatorios uniformes. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).  
   
-## Comentarios  
- La clase de plantilla describe una distribución que genera valores de un tipo integral especificado por el usuario con la distribución geométrica.  En la siguiente tabla encontrará vínculos que llevan a artículos sobre miembros individuales.  
+## <a name="remarks"></a>Comentarios  
+La clase de plantilla describe una distribución que genera valores de un tipo integral especificado por el usuario con la distribución geométrica. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.  
   
 ||||  
 |-|-|-|  
-|[geometric\_distribution::geometric\_distribution](../Topic/geometric_distribution::geometric_distribution.md)|`geometric_distribution::p`|`geometric_distribution::param`|  
-|`geometric_distribution::operator()`||[geometric\_distribution::param\_type](../Topic/geometric_distribution::param_type.md)|  
+|[geometric_distribution::geometric_distribution](#geometric_distribution__geometric_distribution)|`geometric_distribution::p`|`geometric_distribution::param`|  
+|`geometric_distribution::operator()`||[geometric_distribution::param_type](#geometric_distribution__param_type)|  
   
- La función de propiedad `p()` devuelve el valor de parámetro de distribución `p` almacenado.  
+La función de propiedad `p()` devuelve el valor de parámetro de distribución `p` almacenado.  
   
- Para más información sobre las clases de distribución y sus correspondientes miembros, vea [\<random\>](../standard-library/random.md).  
+El miembro de propiedad `param()` establece o devuelve el paquete de parámetros de distribución almacenado `param_type`.  
+
+Las funciones miembro `min()` y `max()` devuelven el resultado posible más pequeño y el resultado posible más grande, respectivamente.  
   
- Para ver información detallada sobre la distribución chi cuadrado, consulte el artículo de Wolfram MathWorld sobre la [distribución geométrica](http://go.microsoft.com/fwlink/?LinkId=400529).  
+La función miembro `reset()` descarta cualquier valor almacenado en caché, de modo que la siguiente llamada a `operator()` no depende de ningún valor obtenido del motor antes de la llamada.  
   
-## Ejemplo  
+Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
+  
+Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).  
+  
+Para obtener información detallada sobre la distribución chi cuadrado, vea el artículo de Wolfram MathWorld sobre la [distribución geométrica](http://go.microsoft.com/fwlink/LinkId=400529).  
+  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -107,64 +173,118 @@ int main()
   
     test(p_dist, samples);  
 }  
-  
 ```  
   
-## Salida  
- Primera prueba:  
+Primera prueba:  
   
-  **Use CTRL\+Z para omitir la entrada de datos y ejecutar con los valores predeterminados.  Escriba un valor de punto flotante para el parámetro de distribución “p”:**  
-**Escriba un valor entero para el recuento de muestras: 100**  
-**min\(\) \=\= 0**  
-**max\(\) \=\= 2147483647**  
-**p\(\) \=\= 0.5000000000**  
-**Distribución de 100 muestras:**  
- **0 ::::::::::::::::::::::::::::::::::::::::::::::::::::**  
- **1 ::::::::::::::::::::::::**  
- **2 ::::::::::::::**  
- **3 :::::**  
- **4 ::**  
- **5 ::**  
- **6 :**  Segunda prueba:  
+```Output  
+Use CTRL-Z to bypass data entry and run using default values.
+Enter a floating point value for the 'p' distribution parameter: .5
+Enter an integer value for the sample count: 100
+
+min() == 0
+max() == 2147483647
+p() == 0.5000000000
+Distribution for 100 samples:
+    0 :::::::::::::::::::::::::::::::::::::::::::::::::::::
+    1 ::::::::::::::::::::::::::
+    2 ::::::::::::
+    3 ::::::
+    4 ::
+    5 :
+```  
   
-  **Use CTRL\+Z para omitir la entrada de datos y ejecutar con los valores predeterminados.  Escriba un valor de punto flotante para el parámetro de distribución “p”: .1**  
-**Escriba un valor entero para el recuento de muestras: 100**  
-**min\(\) \=\= 0**  
-**max\(\) \=\= 2147483647**  
-**p\(\) \=\= 0.1000000000**  
-**Distribución de 100 muestras:**  
- **0 :::::::::**  
- **1 :::::::::::**  
- **2 :::::::**  
- **3 ::::::::**  
- **4 ::::::::**  
- **5 ::::::**  
- **6 :::::**  
- **7 ::::::**  
- **8 :::::**  
- **9 ::::**  
- **10 ::::**  
- **11 ::**  
- **12 :**  
- **13 :**  
- **14 :::**  
- **15 ::::**  
- **16 :::**  
- **17 :**  
- **18 :**  
- **19 :**  
- **20 ::**  
- **21 :**  
- **22 :**  
- **23 :**  
- **28 ::**  
- **33 :**  
- **35 :**  
- **40 :**    
-## Requisitos  
- **Encabezado:** \<random\>  
+Segunda prueba:  
   
- **Espacio de nombres:** std  
+```Output  
+Use CTRL-Z to bypass data entry and run using default values.
+Enter a floating point value for the 'p' distribution parameter: .1
+Enter an integer value for the sample count: 100
+
+min() == 0
+max() == 2147483647
+p() == 0.1000000000
+Distribution for 100 samples:
+    0 :::::::::
+    1 :::::::::::
+    2 ::::::::::
+    3 :::::::
+    4 :::::
+    5 ::::::::
+    6 :::
+    7 ::::::
+    8 :::::::
+    9 :::::
+   10 :::
+   11 :::
+   12 ::
+   13 :
+   14 :::
+   15 ::
+   16 :::
+   17 :::
+   20 :::::
+   21 :
+   29 :
+   32 :
+   35 :
+```  
   
-## Vea también  
- [\<random\>](../standard-library/random.md)
+## <a name="requirements"></a>Requisitos  
+**Encabezado:** \<random>  
+  
+**Espacio de nombres:** std  
+  
+##  <a name="a-namegeometricdistributiongeometricdistributiona--geometricdistributiongeometricdistribution"></a><a name="geometric_distribution__geometric_distribution"></a>  geometric_distribution::geometric_distribution  
+Construye la distribución.  
+  
+```  
+explicit geometric_distribution(double p = 0.5);
+explicit geometric_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+*p*  
+El parámetro de distribución `p`.  
+  
+*parm*  
+La estructura de parámetros utilizada para construir la distribución.  
+  
+### <a name="remarks"></a>Comentarios  
+**Condición previa:** `0.0 < p && p < 1.0`  
+  
+El primer constructor crea un objeto cuyo valor `p` almacenado contiene el valor *p*.  
+  
+El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.  
+  
+##  <a name="a-namegeometricdistributionparamtypea--geometricdistributionparamtype"></a><a name="geometric_distribution__param_type"></a>  geometric_distribution::param_type  
+Almacena los parámetros de la distribución.  
+  
+```  
+struct param_type {  
+   typedef geometric_distribution<result_type> distribution_type;  
+   param_type(double p = 0.5);
+   double p() const;
+
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+  
+### <a name="parameters"></a>Parámetros  
+*p*  
+El parámetro de distribución `p`.  
+  
+*right*  
+La instancia `param_type` que comparar con esta.  
+  
+### <a name="remarks"></a>Comentarios  
+**Condición previa:** `0.0 < p && p < 1.0`  
+  
+Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.  
+  
+## <a name="see-also"></a>Vea también  
+[\<random>](../standard-library/random.md)
+
+
+

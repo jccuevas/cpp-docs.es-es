@@ -1,52 +1,73 @@
 ---
-title: "Clase is_nothrow_move_constructible | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_nothrow_move_constructible"
-  - "std.is_nothrow_move_constructible"
-  - "std::is_nothrow_move_constructible"
-  - "type_traits/std::is_nothrow_move_constructible"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_nothrow_move_constructible"
+title: Clase is_nothrow_move_constructible | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_nothrow_move_constructible
+- std.is_nothrow_move_constructible
+- std::is_nothrow_move_constructible
+- type_traits/std::is_nothrow_move_constructible
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_nothrow_move_constructible
 ms.assetid: d186d97b-7b89-470a-8d30-993046a83379
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Clase is_nothrow_move_constructible
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 1684b89765440a880dde26854327cb8e82821db0
+ms.lasthandoff: 02/24/2017
 
-Comprueba si el tipo tiene un constructor de movimiento [nothrow](../cpp/nothrow-cpp.md).  
+---
+# <a name="isnothrowmoveconstructible-class"></a>Clase is_nothrow_move_constructible
+Comprueba si el tipo tiene un constructor de movimiento **nothrow**.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+template <class Ty>
+struct is_nothrow_move_constructible;
 ```  
-template<class Ty>  
-    struct is_nothrow_move_constructible;  
-```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `Ty`  
  Tipo que se va a consultar.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Una instancia del predicado de tipo contiene true si el tipo `Ty` tiene un constructor de movimiento nothrow; en caso contrario, contiene false.  
   
-## Requisitos  
- **Encabezado:** \<type\_traits\>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
  **Espacio de nombres:** std  
   
-## Vea también  
- [\<type\_traits\>](../standard-library/type-traits.md)
+## <a name="see-also"></a>Vea también  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+
+
+

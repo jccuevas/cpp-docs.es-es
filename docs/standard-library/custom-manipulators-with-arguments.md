@@ -1,35 +1,53 @@
 ---
-title: "Manipuladores personalizados con argumentos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "manipuladores de flujos personalizados"
-  - "flujos de salida, manipuladores de flujos personalizados"
-  - "secuencias, manipuladores de flujos personalizados"
+title: Manipuladores personalizados con argumentos | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- custom stream manipulators
+- streams, custom stream manipulators
+- output streams, custom stream manipulators
 ms.assetid: fa4655a7-d68f-4fea-a26e-73c3ad5c90a5
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Manipuladores personalizados con argumentos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 7960fb03bfb13324888191be755596e1b3debe4b
+ms.lasthandoff: 02/24/2017
 
-En esta sección se describe cómo crear los manipuladores del flujo de salida con uno o más argumentos, y cómo utilizar los manipuladores para el nonoutput fluye.  
+---
+# <a name="custom-manipulators-with-arguments"></a>Manipuladores personalizados con argumentos
+En esta sección, se describe cómo crear manipuladores de flujos de salida con uno o varios argumentos y cómo usar manipuladores para flujos nonoutput.  
   
-## En esta sección  
- [Secuencia de salida Manipulators con el argumento Uno](../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md) \(`int` o `long`\)  
+## <a name="in-this-section"></a>En esta sección  
+ [Manipuladores de flujos de salida con un argumento](../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md) (`int` o `long`)  
   
- [Demás manipuladores del flujo de salida de Uno\- argumento](../standard-library/other-one-argument-output-stream-manipulators.md)  
+ [Otros manipuladores de flujos de salida con un argumento](../standard-library/other-one-argument-output-stream-manipulators.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Programación con iostream](../standard-library/iostream-programming.md)
+
+

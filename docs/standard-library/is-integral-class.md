@@ -1,57 +1,70 @@
 ---
-title: "is_integral (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::is_integral"
-  - "std.tr1.is_integral"
-  - "is_integral"
-  - "std.is_integral"
-  - "std::is_integral"
-  - "type_traits/std::is_integral"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_integral (clase) [TR1]"
-  - "is_integral"
+title: Clase is_integral | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_integral
+- std::is_integral
+- type_traits/std::is_integral
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_integral class
+- is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# is_integral (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 71e6db05a48cfc5433afc3dda38c3005ad24a7e8
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isintegral-class"></a>is_integral (Clase)
 Comprueba si el tipo es entero.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-template<class Ty>  
-    struct is_integral;  
+template <class Ty>  
+struct is_integral;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `Ty`  
  Tipo que se va a consultar.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Una instancia del predicado de tipo es true si el tipo `Ty` es uno de los tipos enteros o un formulario `cv-qualified` de uno de ellos; en caso contrario, es false.  
   
- Un tipo entero es uno de `bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long` y `unsigned long`.  Además, con los compiladores que los proporcionan, un tipo entero puede ser uno de `long long`, `unsigned long long`, `__int64` y `unsigned __int64`.  
+ Un tipo entero es uno de `bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long` y `unsigned long`. Además, con los compiladores que los proporcionan, un tipo entero puede ser uno de `long long`, `unsigned long long`, `__int64` y `unsigned __int64`.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-```  
-// std_tr1__type_traits__is_integral.cpp   
+```cpp  
+// std__type_traits__is_integral.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -75,15 +88,19 @@ int main()
   
 ```  
   
-  **is\_integral\<trivial\> \=\= false**  
-**is\_integral\<int\> \=\= true**  
-**is\_integral\<float\> \=\= false**   
-## Requisitos  
- **Encabezado:** \<type\_traits\>  
+```Output  
+is_integral<trivial> == false  
+is_integral<int> == true  
+is_integral<float> == false  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
  **Espacio de nombres:** std  
   
-## Vea también  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [is\_enum \(Clase\)](../standard-library/is-enum-class.md)   
- [is\_floating\_point \(Clase\)](../standard-library/is-floating-point-class.md)
+## <a name="see-also"></a>Vea también  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [Clase is_enum](../standard-library/is-enum-class.md)   
+ [Clase is_floating_point](../standard-library/is-floating-point-class.md)
+

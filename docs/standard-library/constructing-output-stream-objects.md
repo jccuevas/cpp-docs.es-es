@@ -1,65 +1,85 @@
 ---
-title: "Construir objetos de flujo de salida | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objetos de flujo de salida"
+title: Construir objetos de flujo de salida | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- output stream objects
 ms.assetid: 93c8eab6-610c-4f48-b76d-1d960cac7641
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Construir objetos de flujo de salida
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: ca8d4e9a44f4550d02e6d224ce0130d15e81da14
+ms.lasthandoff: 02/24/2017
 
-Si utiliza sólo `cout`predefinido, `cerr`, o los objetos de `clog` , no necesita construir una secuencia de salida.  Debe usar los constructores para:  
+---
+# <a name="constructing-output-stream-objects"></a>Construir objetos de flujo de salida
+Si solo usa los objeto predefinidos `cout`, `cerr` o `clog`, no es necesario que cree un flujo de salida. Debe usar constructores para:  
   
--   [Constructores de la secuencia de archivo de salida](#vclrfoutputfilestreamconstructorsanchor1)  
+- [Constructores de flujo de archivos de salida](#vclrfoutputfilestreamconstructorsanchor1)  
   
--   [Constructores de la secuencia de la cadena de salida](#vclrfoutputstringstreamconstructorsanchor2)  
+- [Constructores de flujo de cadenas de salida](#vclrfoutputstringstreamconstructorsanchor2)  
   
-##  <a name="vclrfoutputfilestreamconstructorsanchor1"></a> Constructores de la secuencia de archivo de salida  
- Puede crear un archivo de salida transmitir de dos maneras:  
+##  <a name="a-namevclrfoutputfilestreamconstructorsanchor1a-output-file-stream-constructors"></a><a name="vclrfoutputfilestreamconstructorsanchor1"></a> Constructores de flujo de archivos de salida  
+ Puede crear un flujo de archivo de salida de una de estas dos maneras:  
   
--   Utilice el constructor predeterminado, y llame a la función miembro de `open` .  
+-   Use el constructor predeterminado y después llame a la función miembro `open`.  
   
-    ```  
+ ```  
     ofstream myFile; // Static or on the stack  
-    myFile.open( "filename" );  
-  
+    myFile.open("filename");
+
+ 
     ofstream* pmyFile = new ofstream; // On the heap  
-    pmyFile->open( "filename" );  
-    ```  
+    pmyFile->open("filename");
+```  
   
--   Especifique los indicadores de un nombre de archivo y el modo en la llamada al constructor.  
+-   Especifique un nombre de archivo y marcas de modo en la llamada al constructor.  
   
-    ```  
-    ofstream myFile( "filename", ios_base::out);  
-    ```  
+ ```  
+    ofstream myFile("filename", ios_base::out);
+```  
   
-##  <a name="vclrfoutputstringstreamconstructorsanchor2"></a> Constructores de la secuencia de la cadena de salida  
- Para construir una secuencia de la cadena de salida, puede utilizar `ostringstream` así:  
+##  <a name="a-namevclrfoutputstringstreamconstructorsanchor2a-output-string-stream-constructors"></a><a name="vclrfoutputstringstreamconstructorsanchor2"></a> Constructores de flujo de cadenas de salida  
+ Para crear un flujo de cadenas de salida, puede usar `ostringstream` de la siguiente manera:  
   
 ```  
-   using namespace std;  
+    using namespace std;  
 string sp;  
 ostringstream myString;  
-myString << "this is a test" << ends;  
-sp = myString.str();  // Obtain string  
-cout << sp < endl;   
+myString <<"this is a test" <<ends;  
+sp = myString.str();
+// Obtain string  
+cout <<sp <endl;   
 ```  
   
- `ends` “manipulador” agrega el carácter null de terminación necesario a string.  
+ El "manipulador" `ends` agrega el carácter nulo de terminación necesario a la cadena.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Flujos de salida](../standard-library/output-streams.md)
+
+
