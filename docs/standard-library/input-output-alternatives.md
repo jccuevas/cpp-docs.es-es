@@ -1,42 +1,60 @@
 ---
-title: "Alternativas de entrada/salida | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "E/S [C++], alternativas"
+title: Alternativas de entrada/salida | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Alternativas de entrada/salida
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 45cec9f7c4c45ef12c7d22a7c3c311f7ce3f4cb5
+ms.lasthandoff: 02/24/2017
 
-Visual C\+\+ proporciona varias alternativas para la programación de E\/S:  
+---
+# <a name="inputoutput-alternatives"></a>Alternativas de entrada/salida
+Visual C++ proporciona varias alternativas para la programación de E/S:  
   
--   Biblioteca en tiempo de ejecución directa, E\/S inseparada de C.  
+-   E/S directa y no almacenada en búfer de la biblioteca en tiempo de ejecución de C.  
   
--   E\/S de secuencia de la biblioteca en tiempo de ejecución de ANSI C.  
+-   E/S de secuencia de la biblioteca en tiempo de ejecución de ANSI C.  
   
--   E\/S directa de la consola y el puerto.  
+-   E/S directa de consola y puerto.  
   
--   Biblioteca MFC \(Microsoft Foundation Class\).  
+-   Biblioteca MFC (Microsoft Foundation Class).  
   
--   Biblioteca estándar de Microsoft C\+\+.  
+-   Biblioteca estándar de Microsoft C++.  
   
- Las clases iostream son útiles para almacenado en búfer, E\/S de texto con formato.  También son útiles para E\/S inseparada o binaria si necesita la interfaz de programación de c\+\+. y decide no utilizar la biblioteca de \(MFC\) de la clase de la Microsoft foundation class.  Las clases iostream son una alternativa orientada a objetos de E\/S a funciones en tiempo de ejecución de C.  
+ Las clases iostream son útiles para la E/S de texto con formato almacenada en búfer. También son útiles para la E/S binaria o no almacenada en búfer si necesita una interfaz de programación en C++ y decide no usar la biblioteca MFC (Microsoft Foundation Class). Las clases iostream son una alternativa de E/S orientada a objetos que se puede usar en lugar de las funciones en tiempo de ejecución de C.  
   
- Puede utilizar clases iostream con el sistema operativo Microsoft Windows.  Las secuencias de la cadena y el archivo funcionan sin restricciones, pero los objetos de secuencia `cin`, `cout`, `cerr`, y `clog` de modo de carácter son incoherentes con la interfaz gráfica de usuario de Windows.  También puede derivar las clases personalizadas de secuencia que interactúan directamente con el entorno de Windows.  
+ Puede usar las clases iostream con el sistema operativo Microsoft Windows. Los flujos de cadenas y archivos funcionan sin restricciones, pero los objetos de flujo de modo de carácter `cin`, `cout`, `cerr` y `clog` no son coherentes con la interfaz gráfica de usuario de Windows. También puede derivar clases de flujo personalizadas que interactúan directamente con el entorno de Windows.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [¿Qué es un flujo?](../standard-library/what-a-stream-is.md)
+
+
