@@ -1,29 +1,45 @@
 ---
-title: "Clase choice | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "agents/concurrency::choice"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "choice (clase)"
+title: Clase Choice | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- agents/concurrency::choice
+dev_langs:
+- C++
+helpviewer_keywords:
+- choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# Clase choice
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 1ee8fe2197a41ad2abc14e24c372f808bdbc16d0
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="choice-class"></a>Clase choice
 Un bloque de mensajería `choice` es un bloque de varios orígenes y de destino único que representa una interacción del flujo de control con un conjunto de orígenes. El bloque de elección esperará a cualquiera de los orígenes para generar un mensaje y propagará el índice del origen que generó el mensaje.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -51,25 +67,25 @@ class choice: public ISource<size_t>;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[Constructor choice:: choice](#choice__choice_constructor)|Sobrecargado. Construye un bloque de mensajería `choice` .|  
-|[choice:: ~ choice (destructor)](#choice___dtorchoice_destructor)|Destruye el `choice` bloque de mensajería.|  
+|[elección del Constructor](#ctor)|Sobrecargado. Construye un bloque de mensajería `choice` .|  
+|[~ choice (destructor)](#dtor)|Destruye el `choice` bloque de mensajería.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[choice:: Accept (método)](#choice__accept_method)|Acepta un mensaje que fue proporcionado por este `choice` bloque, transfiriendo la propiedad al llamador.|  
-|[choice:: acquire_ref (método)](#choice__acquire_ref_method)|Adquiere un recuento de referencias en este `choice` bloque de mensajería, para evitar la eliminación.|  
-|[choice:: consume (método)](#choice__consume_method)|Consume un mensaje ofrecido previamente por este `choice` bloque de mensajería y correctamente reservado por el destino, transfiriendo la propiedad al llamador.|  
-|[choice:: has_value (método)](#choice__has_value_method)|Comprueba si este `choice` bloque de mensajería se ha inicializado con un valor aún.|  
-|[choice:: index (método)](#choice__index_method)|Devuelve el índice en el `tuple` que representa el elemento seleccionado por el `choice` bloque de mensajería.|  
-|[choice:: link_target (método)](#choice__link_target_method)|Vincula un bloque de destino a esta `choice` bloque de mensajería.|  
-|[choice:: Release (método)](#choice__release_method)|Libera una reserva de mensaje correcto anterior.|  
-|[choice:: release_ref (método)](#choice__release_ref_method)|Libera un recuento de referencias en este `choice` bloque de mensajería.|  
-|[choice:: reserve (método)](#choice__reserve_method)|Reserva un mensaje ofrecido previamente por este `choice` bloque de mensajería.|  
-|[choice:: unlink_target (método)](#choice__unlink_target_method)|Desvincula un bloque de destino de este `choice` bloque de mensajería.|  
-|[choice:: unlink_targets (método)](#choice__unlink_targets_method)|Desvincula todos los destinos de este `choice` bloque de mensajería. (Invalida [ISource:: Unlink_targets](../../../parallel/concrt/reference/isource-class.md#isource__unlink_targets_method).)|  
-|[choice:: value (método)](#choice__value_method)|Obtiene el mensaje cuyo índice seleccionó el `choice` bloque de mensajería.|  
+|[Accept (método)](#accept)|Acepta un mensaje que fue proporcionado por este `choice` bloque, transfiriendo la propiedad al llamador.|  
+|[acquire_ref (método)](#acquire_ref)|Adquiere un recuento de referencias en este `choice` bloque de mensajería, para evitar la eliminación.|  
+|[consume (método)](#consume)|Consume un mensaje ofrecido previamente por este `choice` bloque de mensajería y correctamente reservado por el destino, transfiriendo la propiedad al llamador.|  
+|[has_value (método)](#has_value)|Comprueba si este `choice` bloque de mensajería se ha inicializado con un valor aún.|  
+|[índice (método)](#index)|Devuelve un índice en la `tuple` que representa el elemento seleccionado por el `choice` bloque de mensajería.|  
+|[link_target (método)](#link_target)|Vincula un bloque de destino a esta `choice` bloque de mensajería.|  
+|[Release (método)](#release)|Libera una reserva de mensaje correcto anterior.|  
+|[release_ref (método)](#release_ref)|Libera un recuento de referencias en este `choice` bloque de mensajería.|  
+|[Reserve (método)](#reserve)|Reserva un mensaje ofrecido previamente por este `choice` bloque de mensajería.|  
+|[unlink_target (método)](#unlink_target)|Desvincula un bloque de destino de este `choice` bloque de mensajería.|  
+|[unlink_targets (método)](#unlink_targets)|Desvincula todos los destinos de este `choice` bloque de mensajería. (Invalida [ISource:: Unlink_targets](isource-class.md#unlink_targets).)|  
+|[valor (método)](#value)|Obtiene el mensaje cuyo índice seleccionó el `choice` bloque de mensajería.|  
   
 ## <a name="remarks"></a>Comentarios  
  El bloque de elección asegura que sólo uno de los mensajes entrantes se consume.  
@@ -77,7 +93,7 @@ class choice: public ISource<size_t>;
  Para obtener más información, consulte [bloques de mensajes asincrónicos](../../../parallel/concrt/asynchronous-message-blocks.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- [ISource](../../../parallel/concrt/reference/isource-class.md)  
+ [ISource](isource-class.md)  
   
  `choice`  
   
@@ -86,7 +102,8 @@ class choice: public ISource<size_t>;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-namechoiceacceptmethoda-choiceaccept-method"></a><a name="choice__accept_method"></a>  choice:: Accept (método)  
+##  <a name="a-nameaccepta-accept"></a><a name="accept"></a>Aceptar 
+
  Acepta un mensaje que fue proporcionado por este `choice` bloque, transfiriendo la propiedad al llamador.  
   
 ```  
@@ -105,7 +122,8 @@ virtual message<size_t>* accept(
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al mensaje que el llamador tiene ahora la propiedad.  
   
-##  <a name="a-namechoiceacquirerefmethoda-choiceacquireref-method"></a><a name="choice__acquire_ref_method"></a>  choice:: acquire_ref (método)  
+##  <a name="a-nameacquirerefa-acquireref"></a><a name="acquire_ref"></a>acquire_ref 
+
  Adquiere un recuento de referencias en este `choice` bloque de mensajería, para evitar la eliminación.  
   
 ```  
@@ -119,7 +137,8 @@ virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="remarks"></a>Comentarios  
  Este método es invocado por un `ITarget` objeto vinculado a este origen durante el `link_target` método.  
   
-##  <a name="a-namechoicechoiceconstructora-choicechoice-constructor"></a><a name="choice__choice_constructor"></a>  Constructor choice:: choice  
+##  <a name="a-namectora-choice"></a><a name="ctor"></a>opción 
+
  Construye un bloque de mensajería `choice` .  
   
 ```  
@@ -159,14 +178,16 @@ choice(
   
  La construcción de movimiento no se lleva acabo con un bloqueo, lo que significa que el usuario debe asegurarse de que no hay ninguna tarea ligera en marcha en el momento del movimiento. De lo contrario, se pueden producir numerosas carreras, que darán lugar a excepciones o a un estado incoherente.  
   
-##  <a name="a-namechoicedtorchoicedestructora-choicechoice-destructor"></a><a name="choice___dtorchoice_destructor"></a>  choice:: ~ choice (destructor)  
+##  <a name="a-namedtora-choice"></a><a name="dtor"></a>~ choice 
+
  Destruye el `choice` bloque de mensajería.  
   
 ```  
 ~choice();
 ```  
   
-##  <a name="a-namechoiceconsumemethoda-choiceconsume-method"></a><a name="choice__consume_method"></a>  choice:: consume (método)  
+##  <a name="a-nameconsumea-consume"></a><a name="consume"></a>consumir 
+
  Consume un mensaje ofrecido previamente por este `choice` bloque de mensajería y correctamente reservado por el destino, transfiriendo la propiedad al llamador.  
   
 ```  
@@ -186,9 +207,10 @@ virtual message<size_t>* consume(
  Un puntero a la `message` que el llamador tiene ahora la propiedad de objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- El `consume` es similar al método `accept`, pero siempre debe ir precedido por una llamada a `reserve` que devuelve `true`.  
+ El `consume` método es similar a `accept`, pero siempre debe ir precedido por una llamada a `reserve` que devuelve `true`.  
   
-##  <a name="a-namechoicehasvaluemethoda-choicehasvalue-method"></a><a name="choice__has_value_method"></a>  choice:: has_value (método)  
+##  <a name="a-namehasvaluea-hasvalue"></a><a name="has_value"></a>has_value 
+
  Comprueba si este `choice` bloque de mensajería se ha inicializado con un valor aún.  
   
 ```  
@@ -198,10 +220,11 @@ bool has_value() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true` Si el bloque ha recibido un valor `false` en caso contrario.  
+ `true`Si el bloque ha recibido un valor `false` en caso contrario.  
   
-##  <a name="a-namechoiceindexmethoda-choiceindex-method"></a><a name="choice__index_method"></a>  choice:: index (método)  
- Devuelve el índice en el `tuple` que representa el elemento seleccionado por el `choice` bloque de mensajería.  
+##  <a name="a-nameindexa-index"></a><a name="index"></a>índice 
+
+ Devuelve un índice en la `tuple` que representa el elemento seleccionado por el `choice` bloque de mensajería.  
   
 ```  
 size_t index();
@@ -213,7 +236,8 @@ size_t index();
 ### <a name="remarks"></a>Comentarios  
  Se puede extraer la carga del mensaje utilizando el `get` método.  
   
-##  <a name="a-namechoicelinktargetmethoda-choicelinktarget-method"></a><a name="choice__link_target_method"></a>  choice:: link_target (método)  
+##  <a name="a-namelinktargeta-linktarget"></a><a name="link_target"></a>link_target 
+
  Vincula un bloque de destino a esta `choice` bloque de mensajería.  
   
 ```  
@@ -224,7 +248,8 @@ virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
  `_PTarget`  
  Un puntero a un `ITarget` bloque para vincular a esta `choice` bloque de mensajería.  
   
-##  <a name="a-namechoicereleasemethoda-choicerelease-method"></a><a name="choice__release_method"></a>  choice:: Release (método)  
+##  <a name="a-namereleasea-release"></a><a name="release"></a>la versión 
+
  Libera una reserva de mensaje correcto anterior.  
   
 ```  
@@ -240,7 +265,8 @@ virtual void release(
  `_PTarget`  
  Un puntero al bloque de destino que llama a la `release` (método).  
   
-##  <a name="a-namechoicereleaserefmethoda-choicereleaseref-method"></a><a name="choice__release_ref_method"></a>  choice:: release_ref (método)  
+##  <a name="a-namereleaserefa-releaseref"></a><a name="release_ref"></a>release_ref 
+
  Libera un recuento de referencias en este `choice` bloque de mensajería.  
   
 ```  
@@ -254,7 +280,8 @@ virtual void release_ref(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="remarks"></a>Comentarios  
  Este método es invocado por un `ITarget` objeto que se desvincula de este origen. El bloque de origen puede liberar cualquier recurso reservado para el bloque de destino.  
   
-##  <a name="a-namechoicereservemethoda-choicereserve-method"></a><a name="choice__reserve_method"></a>  choice:: reserve (método)  
+##  <a name="a-namereservea-reserve"></a><a name="reserve"></a>reservar 
+
  Reserva un mensaje ofrecido previamente por este `choice` bloque de mensajería.  
   
 ```  
@@ -271,12 +298,13 @@ virtual bool reserve(
  Un puntero al bloque de destino que llama a la `reserve` (método).  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true` Si el mensaje se ha reservado correctamente, `false` en caso contrario. Las reservas pueden fallar por diversos motivos, incluidos: el mensaje ya se ha reservado o aceptó por otro destino, el origen podría denegar reservas etc..  
+ `true`Si el mensaje se ha reservado correctamente, `false` en caso contrario. Las reservas pueden fallar por diversos motivos, incluidos: el mensaje ya se ha reservado o aceptó por otro destino, el origen podría denegar reservas etc..  
   
 ### <a name="remarks"></a>Comentarios  
  Después de llamar a `reserve`, si se realiza correctamente, debe llamar `consume` o `release` para aceptar o ceder la posesión del mensaje, respectivamente.  
   
-##  <a name="a-namechoiceunlinktargetmethoda-choiceunlinktarget-method"></a><a name="choice__unlink_target_method"></a>  choice:: unlink_target (método)  
+##  <a name="a-nameunlinktargeta-unlinktarget"></a><a name="unlink_target"></a>unlink_target 
+
  Desvincula un bloque de destino de este `choice` bloque de mensajería.  
   
 ```  
@@ -287,7 +315,8 @@ virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
  `_PTarget`  
  Un puntero a un `ITarget` bloque desvincular desde este `choice` bloque de mensajería.  
   
-##  <a name="a-namechoiceunlinktargetsmethoda-choiceunlinktargets-method"></a><a name="choice__unlink_targets_method"></a>  choice:: unlink_targets (método)  
+##  <a name="a-nameunlinktargetsa-unlinktargets"></a><a name="unlink_targets"></a>unlink_targets 
+
  Desvincula todos los destinos de este `choice` bloque de mensajería.  
   
 ```  
@@ -297,7 +326,8 @@ virtual void unlink_targets();
 ### <a name="remarks"></a>Comentarios  
  Este método no necesita que se llame desde el destructor porque el destructor para interno `single_assignment` bloque desvinculará correctamente.  
   
-##  <a name="a-namechoicevaluemethoda-choicevalue-method"></a><a name="choice__value_method"></a>  choice:: value (método)  
+##  <a name="a-namevaluea-value"></a><a name="value"></a>valor 
+
  Obtiene el mensaje cuyo índice seleccionó el `choice` bloque de mensajería.  
   
 ```  
@@ -318,6 +348,7 @@ _Payload_type const& value();
  Dado que un `choice` bloque de mensajería puede tomar entradas con tipos de carga diferentes, debe especificar el tipo de la carga en el punto de recuperación. Puede determinar el tipo basado en el resultado de la `index` (método).  
   
 ## <a name="see-also"></a>Vea también  
- [espacio de nombres de simultaneidad](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Join (clase)](../../../parallel/concrt/reference/join-class.md)   
- [Clase single_assignment](../../../parallel/concrt/reference/single-assignment-class.md)
+ [simultaneidad Namespace](concurrency-namespace.md)   
+ [Join (clase)](join-class.md)   
+ [Clase single_assignment](single-assignment-class.md)
+

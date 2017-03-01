@@ -1,79 +1,130 @@
 ---
-title: "IQuickActivateImpl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::IQuickActivateImpl"
-  - "ATL::IQuickActivateImpl<T>"
-  - "ATL.IQuickActivateImpl"
-  - "ATL.IQuickActivateImpl<T>"
-  - "IQuickActivateImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "activating ATL controls"
-  - "controles [ATL], activar"
-  - "IQuickActivate ATL implementation"
-  - "IQuickActivateImpl class"
+title: Clase IQuickActivateImpl | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::IQuickActivateImpl
+- ATL::IQuickActivateImpl<T>
+- ATL.IQuickActivateImpl
+- ATL.IQuickActivateImpl<T>
+- IQuickActivateImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- activating ATL controls
+- controls [ATL], activating
+- IQuickActivateImpl class
+- IQuickActivate ATL implementation
 ms.assetid: aa80c056-1041-494e-b21d-2acca7dc27ea
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# IQuickActivateImpl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 4f6b75da64efa12e43fa160c57da4291acae03ca
+ms.lasthandoff: 02/24/2017
 
-Esta clase combina la inicialización del control de contenedores en una única llamada.  
+---
+# <a name="iquickactivateimpl-class"></a>Clase IQuickActivateImpl
+Esta clase combina la inicialización del control contenedor en una sola llamada.  
   
 > [!IMPORTANT]
 >  Esta clase y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+template <class T>  
+class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 ```  
   
-      template<   
-class T   
->  
-class ATL_NO_VTABLE IQuickActivateImpl :  
-public IQuickActivate  
-```  
-  
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- la clase, derivada de `IQuickActivateImpl`.  
+ La clase derivada de `IQuickActivateImpl`.  
   
-## Members  
+## <a name="members"></a>Miembros  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[IQuickActivateImpl::GetContentExtent](../Topic/IQuickActivateImpl::GetContentExtent.md)|Recupera el tamaño actual de presentación para un control actual.|  
-|[IQuickActivateImpl::QuickActivate](../Topic/IQuickActivateImpl::QuickActivate.md)|Realiza la inicialización rápida de los controles que se cargan.|  
-|[IQuickActivateImpl::SetContentExtent](../Topic/IQuickActivateImpl::SetContentExtent.md)|Informa al control cuánto espacio de pantalla le ha asignado el contenedor.|  
+|[IQuickActivateImpl::GetContentExtent](#getcontentextent)|Recupera el tamaño de presentación actual para un control de ejecución.|  
+|[IQuickActivateImpl::QuickActivate](#quickactivate)|Realiza la inicialización rápida de controles que se está cargando.|  
+|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|Informa al control de cuánto espacio tiene asignado el contenedor.|  
   
-## Comentarios  
- Los contenedores de la interfaz de [IQuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms690146) evitar retrasos a los controles de carga combinando la inicialización en una única llamada.  El método de `QuickActivate` permite que el contenedor pase un puntero a una estructura de [QACONTAINER](http://msdn.microsoft.com/library/windows/desktop/ms688630) que contiene punteros a todas las interfaces que el control necesita.  Al volver, el control pasa la devuelve un puntero a una estructura de [QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721) que contiene punteros a sus propias interfaces, utilizadas por el contenedor.  La clase `IQuickActivateImpl` proporciona una implementación predeterminada de **IQuickActivate** e implementa **IUnknown** enviando información del dispositivo de volcado en versiones de depuración.  
+## <a name="remarks"></a>Comentarios  
+ El [IQuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms690146) interfaz evita contenedores retrasos al cargar controles mediante la combinación de inicialización en una sola llamada. El `QuickActivate` método permite que el contenedor pasar un puntero a un [QACONTAINER](http://msdn.microsoft.com/library/windows/desktop/ms688630) tiene la estructura que contiene punteros a todas las interfaces del control. En la devolución, el control pase un puntero a un [QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721) estructura que contiene punteros a sus propias interfaces, que son utilizados por el contenedor. Clase `IQuickActivateImpl` proporciona una implementación predeterminada de **IQuickActivate** e implementa **IUnknown** mediante el envío de información para el volcado de memoria se basa el dispositivo en modo de depuración.  
   
- **artículos relacionados** [tutorial de ATL](../../atl/active-template-library-atl-tutorial.md), [Crear un proyecto ATL](../../atl/reference/creating-an-atl-project.md)  
+ **Artículos relacionados con** [Tutorial ATL](../../atl/active-template-library-atl-tutorial.md), [crear un proyecto ATL](../../atl/reference/creating-an-atl-project.md)  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `IQuickActivate`  
   
  `IQuickActivateImpl`  
   
-## Requisitos  
- **encabezado:** atlctl.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atlctl.h  
   
-## Vea también  
- [CComControl Class](../../atl/reference/ccomcontrol-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-namegetcontentextenta--iquickactivateimplgetcontentextent"></a><a name="getcontentextent"></a>IQuickActivateImpl::GetContentExtent  
+ Recupera el tamaño de presentación actual para un control de ejecución.  
+  
+```
+STDMETHOD(GetContentExtent)(LPSIZEL pSize);
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ El tamaño es para una representación completa del control y se especifica en unidades HIMETRIC.  
+  
+ Consulte [IQuickActivate::GetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms693792) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-namequickactivatea--iquickactivateimplquickactivate"></a><a name="quickactivate"></a>IQuickActivateImpl::QuickActivate  
+ Realiza la inicialización rápida de controles que se está cargando.  
+  
+```
+STDMETHOD(QuickActivate)(
+    QACONTAINER* pQACont,
+    QACONTROL* pQACtrl);
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ La estructura contiene punteros a las interfaces necesarias para el control y los valores de algunas propiedades de ambientales. Tras la devolución, el control pasa un puntero a un [QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721) estructura que contiene punteros a sus propias interfaces que requiere el contenedor y la información de estado adicional.  
+  
+ Consulte [IQuickActivate::QuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms682421) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-namesetcontentextenta--iquickactivateimplsetcontentextent"></a><a name="setcontentextent"></a>IQuickActivateImpl::SetContentExtent  
+ Informa al control de cuánto espacio tiene asignado el contenedor.  
+  
+```
+STDMETHOD(SetContentExtent)(LPSIZEL pSize);
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ El tamaño se especifica en unidades HIMETRIC.  
+  
+ Consulte [IQuickActivate::SetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms678806) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+## <a name="see-also"></a>Vea también  
+ [Clase CComControl](../../atl/reference/ccomcontrol-class.md)   
+ [Información general de la clase](../../atl/atl-class-overview.md)
+

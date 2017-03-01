@@ -1,68 +1,82 @@
 ---
-title: "Error de las herramientas del vinculador LNK2005 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2005"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2005"
+title: Las herramientas del vinculador LNK2005 Error | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- LNK2005
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Error de las herramientas del vinculador LNK2005
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
+ms.openlocfilehash: bf93f364b3dc7156a62eb1c474177eb7b85c7827
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="linker-tools-error-lnk2005"></a>Error de las herramientas del vinculador LNK2005
 símbolo ya definido en objeto  
   
- El `symbol` proporcionado, que se muestra en su forma representativa, se definió varias veces.  
+El `symbol` proporcionado, que se muestra en su forma representativa, se definió varias veces.  
   
- Para más información, consulte los artículos de Knowledge Base:  
+Para más información, consulte los artículos de Knowledge Base:  
   
--   “Errores LNK2005 cuando las bibliotecas de vínculos en tiempo de ejecución de C se vinculan antes que las bibliotecas MFC” \(Q148652\)  
+-   [Se produce un error de LNK2005 cuando la biblioteca CRT y bibliotecas MFC se vinculan en el orden incorrecto en Visual C++](https://support.microsoft.com/kb/148652)  
   
--   “Un operador delete sobrecargado globalmente provoca LNK2005” \(Q140440\)  
+-   [CORRECCIÓN: Global Delete sobrecargado operador causas LNK2005](https://support.microsoft.com/kb/140440)  
   
--   "Errores LNK2005 en new y delete al definir \_ATL\_MIN\_CRT" \(Q184235\).  
+-   [Recibe errores LNK2005 cuando se compila un proyecto ejecutable (.exe) de ATL de Visual C++](https://support.microsoft.com/kb/184235).  
   
- Encontrará artículos de Knowledge Base en el CD\-ROM de MSDN Library o en [http:\/\/support.microsoft.com\/search](http://support.microsoft.com/search).  
+Este error se sigue el error irrecuperable [LNK1169](../../error-messages/tool-errors/linker-tools-error-lnk1169.md).  
   
- A este error le sigue el error irrecuperable [LNK1169](../../error-messages/tool-errors/linker-tools-error-lnk1169.md).  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:  
   
-### Posibles causas del error:  
+1.  Mezcla de bibliotecas estáticas y dinámicas cuando también se utiliza [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  
   
-1.  Mezclar bibliotecas estáticas y dinámicas y, al mismo tiempo, usar [\/clr](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-2.  El símbolo es una función empaquetada \(creada al compilar con [\/Gy](../../build/reference/gy-enable-function-level-linking.md)\) y se incluyó en varios archivos pero se cambió de una compilación a otra.  Recompilar todos los archivos que incluyen `symbol`.  
+2.  El símbolo es una función empaquetada (creada al compilar con [/Gy](../../build/reference/gy-enable-function-level-linking.md)) y se incluyó en más de un archivo, pero se cambió entre las compilaciones. Recompilar todos los archivos que incluyen `symbol`.  
   
 3.  El símbolo está definido de manera distinta en dos objetos miembros de diferentes bibliotecas, y se utilizaron los dos objetos miembros.  
   
 4.  Hay un valor absoluto definido dos veces, con un valor distinto en cada definición.  
   
-5.  Un archivo de encabezado declaró y definió una variable.  Entre las posibles soluciones están:  
+5.  Un archivo de encabezado declaró y definió una variable. Entre las posibles soluciones están:  
   
-    -   Declarar la variable en .h: `extern BOOL MyBool;` y, luego, asignarle en un archivo .c o .cpp: `BOOL MyBool = FALSE;`.  
+    -   Declare la variable en. h: `extern BOOL MyBool;` y, a continuación, asignarle en un archivo .c o. cpp: `BOOL MyBool = FALSE;`.  
   
-    -   Declarar la variable [static](../../misc/static-cpp.md).  
+    -   Declarar la variable [estático](../../cpp/storage-classes-cpp.md#static).  
   
     -   Declarar la variable [selectany](../../cpp/selectany.md).  
   
-6.  Si usa uuid.lib combinado con otros archivos .lib que definen GUID \(por ejemplo, oledb.lib y adsiid.lib\).  Por ejemplo:  
+6.  Si usa uuid.lib combinado con otros archivos .lib que definen GUID (por ejemplo, oledb.lib y adsiid.lib). Por ejemplo:  
   
     ```  
     oledb.lib(oledb_i.obj) : error LNK2005: _IID_ITransactionObject  
     already defined in uuid.lib(go7.obj)  
     ```  
   
-     Para corregirlo, agregue [\/FORCE:MULTIPLE](../../build/reference/force-force-file-output.md) a las opciones de la línea de comandos del enlazador y compruebe que uuid.lib es la primera biblioteca a la que se hace referencia.
+     Para corregirlo, agregue [/Force: Multiple](../../build/reference/force-force-file-output.md) a las opciones de línea de comandos del vinculador y compruebe que uuid.lib es la primera biblioteca de referencia.

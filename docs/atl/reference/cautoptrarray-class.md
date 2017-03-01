@@ -1,78 +1,101 @@
 ---
-title: "CAutoPtrArray Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CAutoPtrArray<E>"
-  - "CAutoPtrArray"
-  - "ATL::CAutoPtrArray"
-  - "ATL.CAutoPtrArray<E>"
-  - "ATL.CAutoPtrArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAutoPtrArray class"
+title: Clase CAutoPtrArray | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CAutoPtrArray<E>
+- CAutoPtrArray
+- ATL::CAutoPtrArray
+- ATL.CAutoPtrArray<E>
+- ATL.CAutoPtrArray
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CAutoPtrArray Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 58ee329c7a3925fe3a29cf9738670cfa71df6777
+ms.lasthandoff: 02/24/2017
 
-Esta clase proporciona métodos útiles al crear una matriz de punteros inteligentes.  
+---
+# <a name="cautoptrarray-class"></a>Clase CAutoPtrArray
+Esta clase proporciona métodos útiles para construir una matriz de punteros inteligentes.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en Windows en tiempo de ejecución.  
+>  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+template <typename E>
+class CAutoPtrArray : public CAtlArray<
+                        ATL::CAutoPtr<E>,
+                        CAutoPtrElementTraits<E>>
 ```  
   
-      template<  
-typename E  
->  
-class CAutoPtrArray : public CAtlArray<  
-ATL::CAutoPtr< E>,  
-CAutoPtrElementTraits< E>  
->  
-```  
-  
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `E`  
- el tipo de puntero.  
+ El tipo de puntero.  
   
-## Members  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CAutoPtrArray::CAutoPtrArray](../Topic/CAutoPtrArray::CAutoPtrArray.md)|el constructor.|  
+|[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|El constructor.|  
   
-## Comentarios  
- Esta clase proporciona un constructor y deriva métodos de [CAtlArray](../../atl/reference/catlarray-class.md) y de [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) para facilitar la creación de un objeto de clase de colección que almacena punteros inteligentes.  
+## <a name="remarks"></a>Comentarios  
+ Esta clase proporciona un constructor y se deriva de métodos de [CAtlArray](../../atl/reference/catlarray-class.md) y [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) para facilitar la creación de un objeto de clase de colección almacena punteros inteligentes.  
   
- Para obtener más información, vea [clases de colección de ATL](../../atl/atl-collection-classes.md).  
+ Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `CAtlArray`  
   
  `CAutoPtrArray`  
   
-## Requisitos  
- **encabezado:** atlcoll.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atlcoll.h  
   
-## Vea también  
- [CAtlArray Class](../../atl/reference/catlarray-class.md)   
- [CAutoPtrElementTraits Class](../../atl/reference/cautoptrelementtraits-class.md)   
- [CAutoPtrList Class](../../atl/reference/cautoptrlist-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-namecautoptrarraya--cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray  
+ El constructor.  
+  
+```
+CAutoPtrArray() throw();
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Inicializa la matriz de puntero inteligente.  
+  
+## <a name="see-also"></a>Vea también  
+ [Clase CAtlArray](../../atl/reference/catlarray-class.md)   
+ [Clase CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
+ [Clase CAutoPtrList](../../atl/reference/cautoptrlist-class.md)   
+ [Información general de la clase](../../atl/atl-class-overview.md)
+

@@ -1,72 +1,247 @@
 ---
-title: "CInterpolatorBase (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "afxanimationcontroller/CInterpolatorBase"
-  - "CInterpolatorBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CInterpolatorBase (clase)"
+title: Clase CInterpolatorBase | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxanimationcontroller/CInterpolatorBase
+- CInterpolatorBase
+dev_langs:
+- C++
+helpviewer_keywords:
+- CInterpolatorBase class
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# CInterpolatorBase (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 44c67eef38b34a2a3cf677b42a40304c01668b42
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cinterpolatorbase-class"></a>Clase CInterpolatorBase
 Implementa una devolución de llamada, a la que llama la API de animación cuando tiene que calcular un nuevo valor de una variable de animación.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>;  
 ```  
   
-## Members  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CInterpolatorBase::CInterpolatorBase](../Topic/CInterpolatorBase::CInterpolatorBase.md)|Construye el objeto de `CInterpolatorBase` .|  
+|[CInterpolatorBase::CInterpolatorBase](#cinterpolatorbase)|Construye el `CInterpolatorBase` objeto.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CInterpolatorBase::CreateInstance](../Topic/CInterpolatorBase::CreateInstance.md)|Crea una instancia de `CInterpolatorBase` y almacena un puntero al interpolador personalizado, que administrará eventos.|  
-|[CInterpolatorBase::GetDependencies](../Topic/CInterpolatorBase::GetDependencies.md)|Obtiene las dependencias del interpolador.  \(Reemplaza `CUIAnimationInterpolatorBase::GetDependencies`.\)|  
-|[CInterpolatorBase::GetDuration](../Topic/CInterpolatorBase::GetDuration.md)|Obtiene la duración del interpolador.  \(Reemplaza `CUIAnimationInterpolatorBase::GetDuration`.\)|  
-|[CInterpolatorBase::GetFinalValue](../Topic/CInterpolatorBase::GetFinalValue.md)|Obtiene el valor final al que conduce el interpolador.  \(Reemplaza `CUIAnimationInterpolatorBase::GetFinalValue`.\)|  
-|[CInterpolatorBase::InterpolateValue](../Topic/CInterpolatorBase::InterpolateValue.md)|Interpola el valor en un desplazamiento especificado \(reemplaza `CUIAnimationInterpolatorBase::InterpolateValue`.\)|  
-|[CInterpolatorBase::InterpolateVelocity](../Topic/CInterpolatorBase::InterpolateVelocity.md)|Interpola la velocidad en un desplazamiento especificado \(reemplaza `CUIAnimationInterpolatorBase::InterpolateVelocity`.\)|  
-|[CInterpolatorBase::SetCustomInterpolator](../Topic/CInterpolatorBase::SetCustomInterpolator.md)|Almacena un puntero al interpolador personalizado, que administrará los eventos.|  
-|[CInterpolatorBase::SetDuration](../Topic/CInterpolatorBase::SetDuration.md)|Establece la duración de interpolador \(reemplaza `CUIAnimationInterpolatorBase::SetDuration`.\)|  
-|[CInterpolatorBase::SetInitialValueAndVelocity](../Topic/CInterpolatorBase::SetInitialValueAndVelocity.md)|Establece el valor inicial y el progreso del interpolador.  \(Reemplaza `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`.\)|  
+|[CInterpolatorBase::CreateInstance](#createinstance)|Crea una instancia de `CInterpolatorBase` y almacena un puntero a interpolador personalizado, que se pueden controlar los eventos.|  
+|[CInterpolatorBase::GetDependencies](#getdependencies)|Obtiene las dependencias del interpolador. (Invalida `CUIAnimationInterpolatorBase::GetDependencies`).|  
+|[CInterpolatorBase::GetDuration](#getduration)|Obtiene la duración del interpolador. (Invalida `CUIAnimationInterpolatorBase::GetDuration`).|  
+|[CInterpolatorBase::GetFinalValue](#getfinalvalue)|Obtiene el valor final a la que lleva el interpolador. (Invalida `CUIAnimationInterpolatorBase::GetFinalValue`).|  
+|[CInterpolatorBase::InterpolateValue](#interpolatevalue)|Interpola el valor en un desplazamiento dado (reemplaza `CUIAnimationInterpolatorBase::InterpolateValue`.)|  
+|[CInterpolatorBase::InterpolateVelocity](#interpolatevelocity)|Interpola la velocidad en un desplazamiento dado (reemplaza `CUIAnimationInterpolatorBase::InterpolateVelocity`.)|  
+|[CInterpolatorBase::SetCustomInterpolator](#setcustominterpolator)|Almacena un puntero a interpolador personalizado, que se pueden controlar los eventos.|  
+|[CInterpolatorBase::SetDuration](#setduration)|Establece la duración del interpolador (reemplaza `CUIAnimationInterpolatorBase::SetDuration`.)|  
+|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Establece el valor inicial y el progreso de la interpolador. (Invalida `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`).|  
   
-## Comentarios  
- Crean y se pasan a este controlador a `IUIAnimationTransitionFactory::CreateTransition` cuando se crea un objeto de `CCustomTransition` como parte del proceso de inicialización de animación \(iniciado por `CAnimationController::AnimateGroup`\).  No necesita normalmente utilizar esta clase directamente, simplemente encamina todos los eventos a `CCustomInterpolator`\- la clase derivada, cuyo puntero se pasa al constructor de `CCustomTransition`.  
+## <a name="remarks"></a>Comentarios  
+ Este controlador se crea y se pasa a `IUIAnimationTransitionFactory::CreateTransition` cuando un `CCustomTransition` se crea el objeto como parte del proceso de inicialización de animación (iniciado por `CAnimationController::AnimateGroup`). Normalmente no es necesario usar esta clase directamente, simplemente lo enruta todos los eventos en un `CCustomInterpolator`-cuyo puntero se pasa al constructor de clase derivada `CCustomTransition`.  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `CUIAnimationCallbackBase`  
   
  `CUIAnimationInterpolatorBase`  
   
  `CInterpolatorBase`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxanimationcontroller.h  
   
-## Vea también  
+##  <a name="a-namecinterpolatorbasea--cinterpolatorbasecinterpolatorbase"></a><a name="cinterpolatorbase"></a>CInterpolatorBase::CInterpolatorBase  
+ Construye el objeto CInterpolatorBase.  
+  
+```  
+CInterpolatorBase();
+```  
+  
+##  <a name="a-namecreateinstancea--cinterpolatorbasecreateinstance"></a><a name="createinstance"></a>CInterpolatorBase::CreateInstance  
+ Crea una instancia de CInterpolatorBase y almacena un puntero a interpolador personalizado, que se pueden controlar los eventos.  
+  
+```  
+static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
+    CCustomInterpolator* pInterpolator,  
+    IUIAnimationInterpolator** ppHandler);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `pInterpolator`  
+ Puntero a un interpolador personalizado.  
+  
+ `ppHandler`  
+ Salida. Cuando la función devuelve, contiene un puntero a la instancia de CInterpolatorBase.  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+##  <a name="a-namegetdependenciesa--cinterpolatorbasegetdependencies"></a><a name="getdependencies"></a>CInterpolatorBase::GetDependencies  
+ Obtiene las dependencias del interpolador.  
+  
+```  
+IFACEMETHOD(GetDependencies)(
+    __out UI_ANIMATION_DEPENDENCIES* initialValueDependencies,
+    __out UI_ANIMATION_DEPENDENCIES* initialVelocityDependencies,
+    __out UI_ANIMATION_DEPENDENCIES* durationDependencies);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `initialValueDependencies`  
+ Salida. Aspectos del interpolador que dependen del valor inicial que se pasan a SetInitialValueAndVelocity.  
+  
+ `initialVelocityDependencies`  
+ Salida. Aspectos del interpolador que dependen de la velocidad inicial que se pasan a SetInitialValueAndVelocity.  
+  
+ `durationDependencies`  
+ Salida. Aspectos del interpolador que dependen de la duración se pasan a SetDuration.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Si el método se ejecuta correctamente, devuelve S_OK. Si no se ha establecido CCustomInterpolator o implementación personalizada devuelve FALSE desde el método GetDependencies devuelve E_FAIL.  
+  
+##  <a name="a-namegetdurationa--cinterpolatorbasegetduration"></a><a name="getduration"></a>CInterpolatorBase::GetDuration  
+ Obtiene la duración del interpolador.  
+  
+```  
+IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `duration`  
+ Salida. La duración de la transición en segundos.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Si el método se ejecuta correctamente, devuelve S_OK. Si no se ha establecido CCustomInterpolator o implementación personalizada devuelve FALSE desde el método GetDuration devuelve E_FAIL.  
+  
+##  <a name="a-namegetfinalvaluea--cinterpolatorbasegetfinalvalue"></a><a name="getfinalvalue"></a>CInterpolatorBase::GetFinalValue  
+ Obtiene el valor final a la que lleva el interpolador.  
+  
+```  
+IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `value`  
+ Salida. El valor final de una variable al final de la transición.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Si el método se ejecuta correctamente, devuelve S_OK. Si no se ha establecido CCustomInterpolator o implementación personalizada devuelve FALSE desde el método GetFinalValue devuelve E_FAIL.  
+  
+##  <a name="a-nameinterpolatevaluea--cinterpolatorbaseinterpolatevalue"></a><a name="interpolatevalue"></a>CInterpolatorBase::InterpolateValue  
+ Interpola el valor en un desplazamiento dado  
+  
+```  
+IFACEMETHOD(InterpolateValue)(
+  __in UI_ANIMATION_SECONDS offset, 
+  __out DOUBLE* value);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `offset`  
+ Desplazamiento desde el inicio de la transición. El desplazamiento es siempre mayor o igual que cero y menor que la duración de la transición. No se llama a este método si la duración de la transición es cero.  
+  
+ `value`  
+ Salida. El valor interpolado.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Si el método se ejecuta correctamente, devuelve S_OK. Si no se ha establecido CCustomInterpolator o implementación personalizada devuelve FALSE desde el método InterpolateValue devuelve E_FAIL.  
+  
+##  <a name="a-nameinterpolatevelocitya--cinterpolatorbaseinterpolatevelocity"></a><a name="interpolatevelocity"></a>CInterpolatorBase::InterpolateVelocity  
+ Interpola la velocidad en un desplazamiento dado  
+  
+```  
+IFACEMETHOD(InterpolateVelocity)(
+  __in UI_ANIMATION_SECONDS offset,
+  __out DOUBLE* velocity);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `offset`  
+ Desplazamiento desde el inicio de la transición. El desplazamiento es siempre mayor o igual que cero y menor o igual a la duración de la transición. No se llama a este método si la duración de la transición es cero.  
+  
+ `velocity`  
+ Salida. La velocidad de la variable en el desplazamiento.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Si el método se ejecuta correctamente, devuelve S_OK. Si no se ha establecido CCustomInterpolator o implementación personalizada devuelve FALSE desde el método InterpolateVelocity devuelve E_FAIL.  
+  
+##  <a name="a-namesetcustominterpolatora--cinterpolatorbasesetcustominterpolator"></a><a name="setcustominterpolator"></a>CInterpolatorBase::SetCustomInterpolator  
+ Almacena un puntero a interpolador personalizado, que se pueden controlar los eventos.  
+  
+```  
+void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `pInterpolator`  
+ Puntero a un interpolador personalizado.  
+  
+##  <a name="a-namesetdurationa--cinterpolatorbasesetduration"></a><a name="setduration"></a>CInterpolatorBase::SetDuration  
+ Establece la duración del interpolador  
+  
+```  
+IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `duration`  
+ La duración de la transición.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Si el método se ejecuta correctamente, devuelve S_OK. Si no se ha establecido CCustomInterpolator o implementación personalizada devuelve FALSE desde el método SetDuration devuelve E_FAIL.  
+  
+##  <a name="a-namesetinitialvalueandvelocitya--cinterpolatorbasesetinitialvalueandvelocity"></a><a name="setinitialvalueandvelocity"></a>CInterpolatorBase::SetInitialValueAndVelocity  
+ Establece el valor inicial y el progreso de la interpolador.  
+  
+```  
+IFACEMETHOD(SetInitialValueAndVelocity)(
+  __in DOUBLE initialValue, 
+  __in DOUBLE initialVelocity);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `initialValue`  
+ El valor de la variable en el inicio de la transición.  
+  
+ `initialVelocity`  
+ La velocidad de la variable en el inicio de la transición.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Si el método se ejecuta correctamente, devuelve S_OK. Si no se ha establecido CCustomInterpolator o implementación personalizada devuelve FALSE desde el método SetInitialValueAndVelocity devuelve E_FAIL.  
+  
+## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
+

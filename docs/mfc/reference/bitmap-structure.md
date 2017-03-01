@@ -1,72 +1,87 @@
 ---
-title: "BITMAP (Estructura) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BITMAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BITMAP (estructura)"
+title: Estructura de mapa de bits | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- BITMAP
+dev_langs:
+- C++
+helpviewer_keywords:
+- BITMAP structure
 ms.assetid: 05d33b4d-7232-4643-a108-87dda8ff5f22
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# BITMAP (Estructura)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: cd7e63cfe9e7a0f2305ca5c3cd7c2571a080a718
+ms.lasthandoff: 02/24/2017
 
-La estructura **BITMAP** define el alto, el ancho, el formato de color y los valores de bit de un mapa de bits lógico**.**  
+---
+# <a name="bitmap-structure"></a>BITMAP (Estructura)
+El **BITMAP** estructura define el alto, ancho, formato de color y valores de bit de un mapa de bits lógico**.**  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      typedef struct tagBITMAP {  /* bm */  
-   int bmType;  
-   int bmWidth;  
-   int bmHeight;  
-   int bmWidthBytes;  
-   BYTE bmPlanes;  
-   BYTE bmBitsPixel;  
-   LPVOID bmBits;  
+typedef struct tagBITMAP {  /* bm */  
+    int bmType;  
+    int bmWidth;  
+    int bmHeight;  
+    int bmWidthBytes;  
+    BYTE bmPlanes;  
+    BYTE bmBitsPixel;  
+    LPVOID bmBits;  
 } BITMAP;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *bmType*  
- Especifica el tipo de mapa de bits.  Para los mapas de bits lógicos, este miembro debe ser 0.  
+ Especifica el tipo de mapa de bits. Para los mapas de bits lógicos, este miembro debe ser 0.  
   
- *bmWidth*  
- Especifica el ancho del mapa de bits en píxeles.  El ancho debe ser mayor que 0.  
+ *Bmbitspixel*  
+ Especifica el ancho del mapa de bits en píxeles. El ancho debe ser mayor que 0.  
   
  *bmHeight*  
- Especifica el alto del mapa de bits en líneas de trama.  El alto debe ser mayor que 0.  
+ Especifica el alto del mapa de bits en líneas de trama. El alto debe ser mayor que 0.  
   
  *bmWidthBytes*  
- Especifica el número de bytes de cada línea de la trama.  Este valor debe ser un número par, ya que la Interfaz de dispositivo gráfico \(GDI\) supone que los valores de bit de un formulario de mapa de bits componen una matriz de valores enteros \(2 bytes\).  Es decir, **bmWidthBytes** \* 8 debe ser el múltiplo siguiente de 16 mayor o igual que el valor obtenido cuando el miembro **bmBitsPixel** se multiplica por el miembro **bmWidth**.  
+ Especifica el número de bytes de cada línea de la trama. Este valor debe ser un número par, ya que la Interfaz de dispositivo gráfico (GDI) supone que los valores de bit de un formulario de mapa de bits componen una matriz de valores enteros (2 bytes). En otras palabras, **bmWidthBytes** \* 8 debe ser el siguiente múltiplo de 16 mayor o igual que el valor obtenido cuando el **Bmbitspixel** miembro se multiplica por el **Bmwidth** miembro.  
   
  *bmPlanes*  
  Especifica el número de planos de color del mapa de bits.  
   
- *bmBitsPixel*  
+ *Bmwidth*  
  Especifica el número de bits de color adyacentes en cada plano necesario para definir un píxel.  
   
  *bmBits*  
- Señala a la ubicación de los valores de bits para el mapa de bits.  El miembro **bmBits** debe ser un puntero largo a una matriz de valores de 1 byte.  
+ Señala a la ubicación de los valores de bits para el mapa de bits. El **bmBits** miembro debe ser un puntero largo a una matriz de valores de 1 byte.  
   
-## Comentarios  
- Los formatos de mapa de bits actualmente utilizados son monocromáticos y en color.  El mapa de bits monocromático utiliza el formato de un 1 bit y 1 plano.  Cada barrido es un múltiplo de 16 bits.  
+## <a name="remarks"></a>Comentarios  
+ Los formatos de mapa de bits actualmente utilizados son monocromáticos y en color. El mapa de bits monocromático utiliza el formato de un 1 bit y 1 plano. Cada barrido es un múltiplo de 16 bits.  
   
- Los barridos de un mapa de bits monocromático de alto *n* se organizan de la forma siguiente:  
+ Exámenes se organizan del siguiente modo para un mapa de bits monocromático de alto *n*:  
   
  `Scan 0`  
   
@@ -82,15 +97,16 @@ La estructura **BITMAP** define el alto, el ancho, el formato de color y los val
   
  `Scan n-1`  
   
- Los píxeles de un dispositivo monocromático son blanco o negro.  Si el bit correspondiente en el mapa de bits es 1, se activa el píxel \(blanco\).  Si el bit correspondiente en el mapa de bits es 0, se desactiva el píxel \(negro\).  
+ Los píxeles de un dispositivo monocromático son blanco o negro. Si el bit correspondiente en el mapa de bits es 1, se activa el píxel (blanco). Si el bit correspondiente en el mapa de bits es 0, se desactiva el píxel (negro).  
   
- Todos los dispositivos admiten los mapas de bits que tienen el bit **RC\_BITBLT** establecido en el índice **RASTERCAPS** de la función miembro [CDC::GetDeviceCaps](../Topic/CDC::GetDeviceCaps.md).  
+ Todos los dispositivos admiten los mapas de bits que tienen la **RC_BITBLT** bit establecido en el **RASTERCAPS** índice de la [CDC:: GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) función miembro.  
   
- Cada dispositivo tiene su propio formato de color único.  Para transferir un mapa de bits de un dispositivo a otro, utilice las funciones [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) y [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) de Windows.  
+ Cada dispositivo tiene su propio formato de color único. Para transferir un mapa de bits de un dispositivo a otro, utilice el [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) y [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funciones de Windows.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** wingdi.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CBitmap::CreateBitmapIndirect](../Topic/CBitmap::CreateBitmapIndirect.md)
+ [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)
+

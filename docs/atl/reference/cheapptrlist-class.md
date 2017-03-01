@@ -1,78 +1,104 @@
 ---
-title: "CHeapPtrList Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CHeapPtrList"
-  - "CHeapPtrList"
-  - "ATL.CHeapPtrList"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeapPtrList class"
+title: Clase CHeapPtrList | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CHeapPtrList
+- CHeapPtrList
+- ATL.CHeapPtrList
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHeapPtrList class
 ms.assetid: cc70e585-362a-4007-81db-c705eb181226
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CHeapPtrList Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 9acf18d0e0a72f27a335cefca81341c95d530ae5
+ms.lasthandoff: 02/24/2017
 
-Esta clase proporciona métodos útiles al crear una lista de punteros de la pila.  
+---
+# <a name="cheapptrlist-class"></a>Clase CHeapPtrList
+Esta clase proporciona métodos útiles para la construcción de una lista de punteros del montón.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en Windows en tiempo de ejecución.  
+>  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+template<typename E, class Allocator = ATL::CCRTAllocator>  
+class CHeapPtrList 
+   : public CAtlList<ATL::CHeapPtr<E, Allocator>,
+                     CHeapPtrElementTraits<E, Allocator>>
 ```  
   
-      template<  
-typename E,  
-class Allocator = ATL::CCRTAllocator  
->  
-class CHeapPtrList : public CAtlList<  
-ATL::CHeapPtr< E, Allocator>,  
-CHeapPtrElementTraits< E, Allocator>  
->  
-```  
-  
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `E`  
- El tipo de objeto que se va a almacenar en la clase de colección.  
+ El tipo de objeto que se almacenará en la clase de colección.  
   
  `Allocator`  
- La clase de asignación de memoria en uso.  El valor predeterminado es [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
+ La clase de asignación de memoria utilizada. El valor predeterminado es [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
   
-## Members  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CHeapPtrList::CHeapPtrList](../Topic/CHeapPtrList::CHeapPtrList.md)|el constructor.|  
+|[CHeapPtrList::CHeapPtrList](#cheapptrlist)|El constructor.|  
   
-## Comentarios  
- Esta clase proporciona un constructor y deriva métodos de [CAtlList](../../atl/reference/catllist-class.md) y de [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) para facilitar la creación de un objeto de clase de colección que almacena punteros de la pila.  
+## <a name="remarks"></a>Comentarios  
+ Esta clase proporciona un constructor y se deriva de métodos de [CAtlList](../../atl/reference/catllist-class.md) y [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) para facilitar la creación de un objeto de clase de colección almacena punteros del montón.  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CAtlList](../../atl/reference/catllist-class.md)  
   
  `CHeapPtrList`  
   
-## Requisitos  
- **encabezado:** atlcoll.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atlcoll.h  
   
-## Vea también  
- [CAtlList Class](../../atl/reference/catllist-class.md)   
- [CHeapPtr Class](../../atl/reference/cheapptr-class.md)   
- [CHeapPtrElementTraits Class](../../atl/reference/cheapptrelementtraits-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-namecheapptrlista--cheapptrlistcheapptrlist"></a><a name="cheapptrlist"></a>CHeapPtrList::CHeapPtrList  
+ El constructor.  
+  
+```
+CHeapPtrList(UINT nBlockSize = 10) throw();
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `nBlockSize`  
+ El tamaño del bloque.  
+  
+### <a name="remarks"></a>Comentarios  
+ El tamaño de bloque es una medida de la cantidad de memoria asignada cuando se requiere un nuevo elemento. Mayores tamaños de bloque reducen las llamadas a rutinas de asignación de memoria, pero utilizan más recursos.  
+  
+## <a name="see-also"></a>Vea también  
+ [Clase CAtlList](../../atl/reference/catllist-class.md)   
+ [Clase CHeapPtr](../../atl/reference/cheapptr-class.md)   
+ [Clase CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)   
+ [Información general de la clase](../../atl/atl-class-overview.md)
+
