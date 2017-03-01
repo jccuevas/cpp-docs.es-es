@@ -1,63 +1,82 @@
 ---
-title: "DEVNAMES (Estructura) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DEVNAMES"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DEVNAMES"
+title: Estructura DEVNAMES | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DEVNAMES
+dev_langs:
+- C++
+helpviewer_keywords:
+- DEVNAMES
 ms.assetid: aac97f60-2169-471a-ba5d-c0baed9eed9a
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# DEVNAMES (Estructura)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 698a338c94dfa402dd51fa4f683b92a5d30cc0cd
+ms.lasthandoff: 02/24/2017
 
-La estructura de `DEVNAMES` contiene las cadenas que identifican el controlador, el dispositivo, y los nombres de puerto de salida para una impresora.  
+---
+# <a name="devnames-structure"></a>DEVNAMES (Estructura)
+El `DEVNAMES` estructura contiene cadenas que identifican el controlador, el dispositivo y los nombres de puerto de salida de una impresora.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      typedef struct tagDEVNAMES { /* dvnm */  
+typedef struct tagDEVNAMES { /* dvnm */  
     WORD wDriverOffset;  
     WORD wDeviceOffset;  
     WORD wOutputOffset;  
-    WORD wDefault;  
-    /* driver, device, and port-name strings follow wDefault */  
+    WORD wDefault; */* driver,
+    device,
+    and port-name strings follow wDefault */  
 } DEVNAMES;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *wDriverOffset*  
- \(Entrada\) especifica el desplazamiento en caracteres en una cadena terminada en null que contiene el nombre de archivo \(sin extensión\) del controlador de dispositivo.  En la entrada, esta cadena se utiliza para determinar la impresora para mostrar inicialmente en el cuadro de diálogo.  
+ (Entrada/salida) Especifica el desplazamiento de caracteres en una cadena terminada en null que contiene el nombre de archivo (sin extensión) del controlador de dispositivo. En la entrada, esta cadena se usa para determinar la impresora para mostrar inicialmente en el cuadro de diálogo.  
   
  *wDeviceOffset*  
- \(Entrada\) especifica el desplazamiento en caracteres a la cadena terminada en null \(máximo de 32 bytes incluidos null\) que contiene el nombre del dispositivo.  Esta cadena debe ser idéntica al miembro de **dmDeviceName** de la estructura de [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) .  
+ (Entrada/salida) Especifica el desplazamiento de caracteres a la cadena terminada en null (un máximo de 32 bytes incluido el carácter null) que contiene el nombre del dispositivo. Esta cadena debe ser idéntica a la **dmDeviceName** miembro de la [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) estructura.  
   
  *wOutputOffset*  
- \(Entrada\) especifica el desplazamiento en caracteres a la cadena terminada en null que contiene el nombre de dispositivo de DOS para el medio físico de salida \(puerto de salida\).  
+ (Entrada/salida) Especifica el desplazamiento de caracteres a la cadena terminada en null que contiene el nombre de dispositivo de DOS para el medio físico de salida (puerto de salida).  
   
  *wDefault*  
- Especifica si las cadenas incluidas en la estructura de `DEVNAMES` identifican la impresora predeterminada.  Esta cadena se utiliza para comprobar que la impresora predeterminada no ha cambiado desde la operación de impresión última.  En la salida, si se establece la marca de **DN\_DEFAULTPRN** , los otros valores en la estructura de `DEVNAMES` se comprueban con respecto a la impresora predeterminada actual.  Si no coinciden cualquiera de las cadenas, un mensaje de advertencia se muestra que informa al usuario que el documento puede necesitar cambiar el formato.  En la salida, cambian el miembro de **wDefault** sólo si el cuadro de diálogo configuración de impresión se muestra y el usuario elija el botón ACEPTAR.  Se establece la marca de **DN\_DEFAULTPRN** si la impresora predeterminada está seleccionado.  Si se selecciona una impresora concreta, el marcador no se establece.  El resto de los bits de este miembro están reservados para uso interno por el procedimiento del cuadro de diálogo imprimir.  
+ Especifica si las cadenas contenidas en el `DEVNAMES` estructura identifican la impresora predeterminada. Esta cadena se usa para comprobar que la impresora predeterminada no ha cambiado desde la última operación de impresión. En la entrada, si la **DN_DEFAULTPRN** establecido, los demás valores el `DEVNAMES` estructura se comprueban con la impresora predeterminada actual. Si cualquiera de las cadenas no coinciden, se muestra un mensaje de advertencia que informa al usuario que se deba volver a formatear el documento. En la salida, la **wDefault** miembro solo cambia si se muestra el cuadro de diálogo Configuración de impresora y el usuario elige el botón Aceptar. El **DN_DEFAULTPRN** marca se establece si se ha seleccionado la impresora predeterminada. Si se selecciona una impresora determinada, no se estableció el marcador. Todos los demás bits este miembro se reservan para uso interno por el procedimiento de cuadro de diálogo Imprimir.  
   
-## Comentarios  
- La función de **PrintDlg** utiliza estas cadenas para inicializar los miembros en el cuadro de diálogo sistema\- definido de impresión.  Cuando el usuario cierra el cuadro de diálogo, la información sobre la impresora seleccionada se devuelve en esta estructura.  
+## <a name="remarks"></a>Comentarios  
+ El **PrintDlg** función usa estas cadenas para inicializar los miembros en el cuadro de diálogo de impresión definida por el sistema. Cuando el usuario cierra el cuadro de diálogo, se devuelve información sobre la impresora seleccionada en esta estructura.  
   
-## Requisitos  
- **Header:** commdlg.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** commdlg.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CPrintDialog::CreatePrinterDC](../Topic/CPrintDialog::CreatePrinterDC.md)
+ [CPrintDialog::CreatePrinterDC](../../mfc/reference/cprintdialog-class.md#createprinterdc)
+
+
+

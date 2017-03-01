@@ -1,58 +1,73 @@
 ---
-title: "WINDOWPOS estructura-1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WINDOWPOS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WINDOWPOS (estructura)"
+title: WINDOWPOS estructura-1 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- WINDOWPOS
+dev_langs:
+- C++
+helpviewer_keywords:
+- WINDOWPOS structure
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# WINDOWPOS (Estructura)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 522b15d630c3a5a3593010250db0491601493c69
+ms.lasthandoff: 02/24/2017
 
-La estructura de `WINDOWPOS` contiene información sobre el tamaño y la posición de una ventana.  
+---
+# <a name="windowpos-structure1"></a>WINDOWPOS estructura-1
+El `WINDOWPOS` estructura contiene información sobre el tamaño y la posición de una ventana.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      typedef struct tagWINDOWPOS { /* wp */  
-   HWND hwnd;  
-   HWND hwndInsertAfter;  
-   int x;  
-   int y;  
-   int cx;  
-   int cy;  
-   UINT flags;  
+typedef struct tagWINDOWPOS { /* wp */  
+    HWND hwnd;  
+    HWND hwndInsertAfter;  
+    int x;  
+    int y;  
+    int cx;  
+    int cy;  
+    UINT flags;  
 } WINDOWPOS;  
 ```  
   
-#### Parámetros  
- *hwnd*  
+#### <a name="parameters"></a>Parámetros  
+ *HWND*  
  Identifica la ventana.  
   
  *hwndInsertAfter*  
- Identifica la ventana detrás de la que se coloca esta ventana.  
+ Identifica la ventana subyacente que se coloca esta ventana.  
   
  *x*  
  Especifica la posición del borde izquierdo de la ventana.  
   
  *y*  
- Especifica la posición del borde derecho.  
+ Especifica la posición del borde derecho de la ventana.  
   
  `cx`  
  Especifica el ancho de la ventana, en píxeles.  
@@ -61,37 +76,39 @@ La estructura de `WINDOWPOS` contiene información sobre el tamaño y la posici�
  Especifica el alto de la ventana, en píxeles.  
   
  `flags`  
- Especifica la ventana\- posición de opciones.  Este miembro puede ser uno de los siguientes valores:  
+ Especifica las opciones de ubicación de ventana. Este miembro puede ser uno de los siguientes valores:  
   
--   **SWP\_DRAWFRAME** dibuja un cuadro \(definido en la clase de la ventana\) alrededor de la ventana.  La ventana recibe un mensaje de `WM_NCCALCSIZE` .  
+- **SWP_DRAWFRAME** dibuja un marco (definido en la descripción de la clase de la ventana) alrededor de la ventana. La ventana recibe un `WM_NCCALCSIZE` mensaje.  
   
--   **SWP\_FRAMECHANGED** Sends un mensaje de `WM_NCCALCSIZE` a la ventana, aunque el tamaño de la ventana no se está cambiando.  Si este marcador no se especifica, se envía `WM_NCCALCSIZE` cuando se cambia el tamaño de la ventana.  
+- **SWP_FRAMECHANGED** envía una `WM_NCCALCSIZE` a la ventana de mensajes incluso si no se está cambiando el tamaño de la ventana. Si no se especifica este marcador, `WM_NCCALCSIZE` sólo se envía cuando se cambia el tamaño de la ventana.  
   
--   **SWP\_HIDEWINDOW** oculta la ventana.  
+- **SWP_HIDEWINDOW** oculta la ventana.  
   
--   `SWP_NOACTIVATE` No no activar la ventana.  
+- `SWP_NOACTIVATE`No se activa la ventana.  
   
--   **SWP\_NOCOPYBITS** descarta el contenido completo del área de cliente.  Si este marcador no se especifica, el contenido válidos del área de cliente se guardan y se copian en el área cliente después de que se haya ordenado o se coloque de nuevo la ventana.  
+- **SWP_NOCOPYBITS** descarta todo el contenido del área de cliente. Si no se especifica este marcador, el contenido válido del área de cliente se guarda y se copia en el área de cliente después de la ventana es un tamaño o posición.  
   
--   `SWP_NOMOVE` conserva la posición actual \(omite los miembros de **x** y de **s** \).  
+- `SWP_NOMOVE`Conserva la posición actual (omite el **x** y **y** miembros).  
   
--   Cambio de**SWP\_NOOWNERZORDER**No no la posición de la ventana propietaria en el orden Z.  
+- **SWP_NOOWNERZORDER** no cambia la posición de la ventana de propietario en el orden Z.  
   
--   `SWP_NOSIZE` conserva el tamaño actual \(omite los miembros de **cx** y de **cy** \).  
+- `SWP_NOSIZE`Conserva el tamaño actual (omite el **cx** y **cy** miembros).  
   
--   Cambios no actualizars de**SWP\_NOREDRAW**No.  
+- **SWP_NOREDRAW** no volver a dibujar cambios.  
   
--   **SWP\_NOREPOSITION** Same que **SWP\_NOOWNERZORDER**.  
+- **SWP_NOREPOSITION** igual que **SWP_NOOWNERZORDER**.  
   
--   **SWP\_NOSENDCHANGING** evita que la ventana reciba el mensaje de `WM_WINDOWPOSCHANGING` .  
+- **SWP_NOSENDCHANGING** evita que la ventana de recepción el `WM_WINDOWPOSCHANGING` mensaje.  
   
--   `SWP_NOZORDER` conserva el orden de la actual \(omite el miembro de **hwndInsertAfter** \).  
+- `SWP_NOZORDER`Conserva el orden actual (omite el **hwndInsertAfter** miembro).  
   
--   **SWP\_SHOWWINDOW** muestra la ventana.  
+- **SWP_SHOWWINDOW** muestra la ventana.  
   
-## Requisitos  
- **Header:** winuser.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** winuser.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnWindowPosChanging](../Topic/CWnd::OnWindowPosChanging.md)
+ [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)
+
+

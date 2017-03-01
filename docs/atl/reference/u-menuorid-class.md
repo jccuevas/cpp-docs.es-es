@@ -1,68 +1,110 @@
 ---
-title: "_U_MENUorID Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL._U_MENUorID"
-  - "ATL::_U_MENUorID"
-  - "_U_MENUorID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_U_MENUorID class"
-  - "U_MENUorID class"
+title: Clase _U_MENUorID | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL._U_MENUorID
+- ATL::_U_MENUorID
+- _U_MENUorID
+dev_langs:
+- C++
+helpviewer_keywords:
+- U_MENUorID class
+- _U_MENUorID class
 ms.assetid: cfc8032b-61b4-4a68-ba3a-92b82500ccae
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _U_MENUorID Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: f7c0a5c34c4e103f830a029f58cdfa00dcb58a32
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="umenuorid-class"></a>Clase _U_MENUorID
 Esta clase proporciona contenedores para **CreateWindow** y **CreateWindowEx**.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en Windows en tiempo de ejecución.  
+>  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+class _U_MENUorID
 ```  
   
-class _U_MENUorID  
+## <a name="members"></a>Miembros  
   
+### <a name="public-constructors"></a>Constructores públicos  
+  
+|Nombre|Descripción|  
+|----------|-----------------|  
+|[_U_MENUorID::_U_MENUorID](#_u_menuorid___u_menuorid)|El constructor.|  
+  
+### <a name="public-data-members"></a>Miembros de datos públicos  
+  
+|Nombre|Descripción|  
+|----------|-----------------|  
+|[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Identificador de un menú.|  
+  
+## <a name="remarks"></a>Comentarios  
+ Esta clase de argumento de adaptador permite que cualquier IDs ( **UINT**s) o identificadores de menú ( `HMENU`s) que se pasan a una función sin necesidad de una conversión explícita en la parte del llamador.  
+  
+ Esta clase está diseñada para la implementación de contenedores de la API de Windows, especialmente el [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) y [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funciones, que aceptan un `HMENU` argumento que puede ser un identificador de ventana secundaria ( **UINT**) en lugar de un identificador de menú. Por ejemplo, puede ver esta clase en uso como un parámetro a [CWindowImpl:: Create](cwindowimpl-class.md#create).  
+
+  
+ La clase define dos sobrecargas de constructor: uno acepta una **UINT** acepta argumentos y el otro un `HMENU` argumento. El **UINT** sólo se convierte el argumento en un `HMENU` en el constructor y el resultado almacenado en el miembro de datos de la clase, [m_hMenu](#_u_menuorid__m_hmenu). El argumento para el `HMENU` constructor se almacena directamente, sin conversión.  
+  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atlwin.h  
+  
+##  <a name="a-nameumenuoridmhmenua--umenuoridmhmenu"></a><a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu  
+ La clase contiene el valor pasado a cualquiera de sus constructores como pública `HMENU` miembro de datos.  
+  
+```
+HMENU m_hMenu;
 ```  
   
-## Members  
+##  <a name="a-nameumenuoridumenuorida--umenuoridumenuorid"></a><a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID  
+ El **UINT** sólo se convierte el argumento en un `HMENU` en el constructor y el resultado almacenado en el miembro de datos de la clase, [m_hMenu](#_u_menuorid__m_hmenu).  
   
-### Constructores públicos  
+```
+_U_MENUorID(UINT nID);  
+_U_MENUorID(HMENU hMenu);
+```  
   
-|Name|Descripción|  
-|----------|-----------------|  
-|[\_U\_MENUorID::\_U\_MENUorID](../Topic/_U_MENUorID::_U_MENUorID.md)|el constructor.|  
+### <a name="parameters"></a>Parámetros  
+ `nID`  
+ Un identificador de ventana secundaria.  
   
-### Miembros de datos públicos  
+ `hMenu`  
+ Identificador de menú.  
   
-|Name|Descripción|  
-|----------|-----------------|  
-|[\_U\_MENUorID::m\_hMenu](../Topic/_U_MENUorID::m_hMenu.md)|un identificador a un menú.|  
+### <a name="remarks"></a>Comentarios  
+ El argumento para el `HMENU` constructor se almacena directamente, sin conversión.  
   
-## Comentarios  
- Esta clase de adaptador de argumento permite los id. \(s de**UINT**\) o identificadores de menú \(s de`HMENU`\) que se pasarán a una función sin requerir una conversión explícita del llamador.  
-  
- Esta clase está diseñada para implementar contenedores de [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) y de [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) a las funciones de la API de Windows, determinado, que aceptan un argumento de `HMENU` que puede ser un identificador de ventana secundaria \(**UINT**\) en lugar de un identificador de menú.  Por ejemplo, puede ver esta clase en uso como parámetro a [CWindowImpl:: Crear](../Topic/CWindowImpl::Create.md).  
-  
- La clase define dos sobrecargas del constructor: uno acepta un argumento de **UINT** y el otro acepta un argumento de `HMENU` .  El argumento de **UINT** es simplemente conversión a `HMENU` en el constructor y el resultado almacenados en el único miembro de datos de la clase, [m\_hMenu](../Topic/_U_MENUorID::m_hMenu.md).  El argumento al constructor de `HMENU` se almacena directamente sin conversión.  
-  
-## Requisitos  
- **encabezado:** atlwin.h  
-  
-## Vea también  
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>Vea también  
+ [Información general de la clase](../../atl/atl-class-overview.md)
+

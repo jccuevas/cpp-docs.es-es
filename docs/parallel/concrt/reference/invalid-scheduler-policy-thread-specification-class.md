@@ -1,57 +1,85 @@
 ---
-title: "invalid_scheduler_policy_thread_specification (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::invalid_scheduler_policy_thread_specification"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "invalid_scheduler_policy_thread_specification (clase)"
+title: invalid_scheduler_policy_thread_specification (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::invalid_scheduler_policy_thread_specification
+dev_langs:
+- C++
+helpviewer_keywords:
+- invalid_scheduler_policy_thread_specification class
 ms.assetid: 2d0fafb2-18f8-4284-8040-3db640d33303
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# invalid_scheduler_policy_thread_specification (Clase)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: c09719412e38a4f056eabc39a66a684caa0659d4
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="invalidschedulerpolicythreadspecification-class"></a>invalid_scheduler_policy_thread_specification (Clase)
 Esta clase describe una excepción que se produce cuando se realiza un intento para establecer los límites de simultaneidad de un objeto `SchedulerPolicy`, de tal forma que el valor de la clave `MinConcurrency` es menor que el valor de la clave `MaxConcurrency`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+class invalid_scheduler_policy_thread_specification : public std::exception;
 ```  
-class invalid_scheduler_policy_thread_specification : public std::exception;  
-```  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[invalid\_scheduler\_policy\_thread\_specification::invalid\_scheduler\_policy\_thread\_specification \(Constructor\)](../Topic/invalid_scheduler_policy_thread_specification::invalid_scheduler_policy_thread_specification%20Constructor.md)|Sobrecargado.  Construye un objeto `invalid_scheduler_policy_value`.|  
+|[invalid_scheduler_policy_thread_specification Constructor] (no válido-programador-directiva-valor-class.md #ctor|Sobrecargado. Construye un objeto `invalid_scheduler_policy_value`.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `exception`  
   
  `invalid_scheduler_policy_thread_specification`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** concrt.h  
   
  **Espacio de nombres:** simultaneidad  
+##  <a name="a-namectora-invalidschedulerpolicythreadspecification"></a><a name="ctor"></a>invalid_scheduler_policy_thread_specification 
+
+ Construye un objeto `invalid_scheduler_policy_value`.  
   
-## Vea también  
- [concurrency \(Espacio de nombres\)](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [SchedulerPolicy \(Clase\)](../../../parallel/concrt/reference/schedulerpolicy-class.md)   
- [PolicyElementKey \(Enumeración\)](../Topic/PolicyElementKey%20Enumeration.md)   
- [SchedulerPolicy::SetConcurrencyLimits \(Método\)](../Topic/SchedulerPolicy::SetConcurrencyLimits%20Method.md)
+```
+explicit _CRTIMP invalid_scheduler_policy_thread_specification(_In_z_ const char* _Message) throw();
+
+invalid_scheduler_policy_thread_specification() throw();
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `_Message`  
+ Mensaje descriptivo del error.  
+
+## <a name="see-also"></a>Vea también  
+ [simultaneidad Namespace](concurrency-namespace.md)   
+ [SchedulerPolicy (clase)](schedulerpolicy-class.md)
+
