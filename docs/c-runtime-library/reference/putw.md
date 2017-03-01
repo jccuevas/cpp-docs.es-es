@@ -1,51 +1,67 @@
 ---
-title: "_putw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_putw"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_putw"
-  - "putw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_putw (función)"
-  - "enteros, escribir en secuencias"
-  - "putw (función)"
-  - "secuencias, escribir enteros en"
+title: _putw | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _putw
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _putw
+- putw
+dev_langs:
+- C++
+helpviewer_keywords:
+- integers, writing to streams
+- putw function
+- streams, writing integers to
+- _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _putw
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ae689f0f299f307bdda9771d4929623e04a7196f
+ms.lasthandoff: 02/24/2017
 
-Escriba un entero a una secuencia.  
+---
+# <a name="putw"></a>_putw
+Escribe un entero en una secuencia.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -55,33 +71,33 @@ Escriba un entero a una secuencia.
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *binint*  
  Entero binario que se generará.  
   
  `stream`  
- Puntero a la estructura de **FILE**.  
+ Puntero a la estructura **FILE**.  
   
-## Valor devuelto  
- Devuelve el valor con tipo.  Un valor devuelto de `EOF` podría indicar un error.  Dado que `EOF` también es un valor entero legítimo, utilice `ferror` de comprobar un error.  Si `stream` es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve `EOF`.  
+## <a name="return-value"></a>Valor devuelto  
+ Devuelve el valor escrito. El valor devuelto `EOF` podría indicar un error. Como `EOF` también es un valor entero legítimo, use `ferror` para comprobar un error. Si `stream` es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve `EOF`.  
   
- Para obtener información sobre estos y otros códigos de error, vea [\_doserrno, errno, \_sys\_errlist y \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentarios  
- La función de `_putw` escribe un valor binario de `int` escritos en la posición actual *de la secuencia.* `_putw` no afecta a la alineación de elementos de la secuencia ni se supone ninguna alineación especial.  `_putw` sirve principalmente para la compatibilidad con bibliotecas anteriores.  Problemas de portabilidad pueden producirse con `_putw` porque el tamaño de `int` y el orden de bytes dentro de `int` difieren entre los sistemas.  
+## <a name="remarks"></a>Comentarios  
+ La función `_putw` escribe un valor binario de tipo `int` en la posición actual de *stream.* `_putw` no afecta a la alineación de los elementos de la secuencia ni tampoco supone ninguna alineación especial. `_putw` sirve principalmente para la compatibilidad con bibliotecas anteriores. Se pueden producir problemas de portabilidad con `_putw` porque el tamaño de un `int` y el orden de los bytes en un `int` son distintos en los sistemas.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`_putw`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`_putw`|\<stdio.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Bibliotecas  
+## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_putw.c  
@@ -113,15 +129,15 @@ int main( void )
 }  
 ```  
   
-## Resultados  
+## <a name="output"></a>Salida  
   
 ```  
 Wrote ten words  
 ```  
   
-## Equivalente en .NET Framework  
- No es aplicable Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
+ No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Vea también  
- [E\/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [\_getw](../../c-runtime-library/reference/getw.md)
+## <a name="see-also"></a>Vea también  
+ [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
+ [_getw](../../c-runtime-library/reference/getw.md)

@@ -1,36 +1,54 @@
 ---
-title: "&#191;Qu&#233; es un flujo? | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "datos [C++], leer"
-  - "leer datos [C++], programación con iostream"
-  - "secuencias [C++]"
-  - "secuencias [C++], en las clases iostream"
+title: "¿Qué es un flujo? | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- reading data [C++], iostream programming
+- data [C++], reading
+- streams [C++], in iostream classes
+- streams [C++]
 ms.assetid: a7e661e9-6cd1-4543-a9a4-c58ee9fd32f3
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# &#191;Qu&#233; es un flujo?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 75c23582cbbb42a417a7a5effdb879300c2a7732
+ms.lasthandoff: 02/24/2017
 
-Como C, C\+\+ no tiene capacidad integrada de entrada\/salida.  Todos los compiladores de C\+\+, sin embargo, proceden empaquetado con un paquete sistemático, orientada a objetos de E\/S, conocido como clases iostream.  La secuencia es el concepto central de las clases iostream.  Puede considerar un objeto de secuencia como archivo inteligente que actúa como origen y destino para los bytes.  Las características de una secuencia vienen determinadas por la clase y por operadores personalizados de inserción y de extracción.  
+---
+# <a name="what-a-stream-is"></a>¿Qué es un flujo?
+Al igual que C, C++ no tiene capacidad integrada de entrada y salida. Pero todos los compiladores de C++ incluyen un paquete sistemático de E/S orientado a objetos, conocido como las clases iostream. La secuencia es el concepto central de las clases iostream. Puede pensar en un objeto de secuencia como en un archivo inteligente que actúa como origen y destino de bytes. Las características de una secuencia se determinan por su clase y por operadores de inserción y extracción personalizados.  
   
- A través de los controladores de dispositivo, el sistema operativo de disco trata de teclado, de la pantalla, de la impresora, y puertos de comunicación como archivos extendidos.  Las clases iostream interactúan con estos archivos extendidos.  Las clases integradas admiten leer y escribir en memoria con la sintaxis idéntica a la de la E\/S de disco, que facilita derivar clases de la secuencia.  
+ A través de los controladores de dispositivo, el sistema operativo de disco se ocupa del teclado, la pantalla, la impresora y los puertos de comunicación como archivos extendidos. Las clases iostream interactúan con estos archivos extendidos. Las clases integradas admiten la lectura y escritura en la memoria con una sintaxis idéntica a la de E/S de disco, lo que facilita la derivación de las clases de secuencia.  
   
-## En esta sección  
- [Alternativas de entrada\/salida](../standard-library/input-output-alternatives.md)  
+## <a name="in-this-section"></a>En esta sección  
+ [Alternativas de entrada/salida](../standard-library/input-output-alternatives.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Programación con iostream](../standard-library/iostream-programming.md)
+
+

@@ -1,53 +1,66 @@
 ---
-title: "unary_function (Struct) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.unary_function"
-  - "unary_function"
-  - "functional/std::unary_function"
-  - "std::unary_function"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_function (clase)"
+title: unary_function (struct) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.unary_function
+- unary_function
+- functional/std::unary_function
+- std::unary_function
+dev_langs:
+- C++
+helpviewer_keywords:
+- unary_function class
 ms.assetid: 04c2fbdc-c1f6-48ed-b6cc-292a6d484627
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# unary_function (Struct)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 3b7f2da8315046e7ed39f73e76832940f5ba199b
+ms.lasthandoff: 02/24/2017
 
-Struct base vacío que define los tipos que pueden ser heredados por las clases derivadas que proporciona un objeto singular de la función.  
+---
+# <a name="unaryfunction-struct"></a>unary_function (Struct)
+Un struct base vacío que define los tipos que puede heredar la clase derivada que proporciona un objeto de función unario.  
   
-## Sintaxis  
-  
+## <a name="syntax"></a>Sintaxis  
 ```  
-  
-   template<class Arg, class Result>  
-struct unary_function {  
-   typedef Arg argument_type;  
-   typedef Result result_type;  
+struct unary_function 
+{
+   typedef Arg argument_type;
+   typedef Result result_type;
 };  
-```  
+``` 
+## <a name="remarks"></a>Comentarios  
+ El struct de plantilla sirve como base para las clases que define una función miembro con el formato **result_type**`operator()`( **constargument_type&**) **const**.  
   
-## Comentarios  
- Struct de plantilla sirve como base para las clases que definen una función miembro del formulario **result\_type** `operator()`\(**const argument\_type&**\) **const**.  
+ Todas estas funciones unarias derivadas pueden hacer referencia a su tipo de argumento único como **argument_type** y a su tipo de valor devuelto como **result_type**.  
   
- Todas estas funciones unarios derivadas pueden hacer referencia al único tipo de argumento como **argument\_type** y su tipo de valor devuelto como **result\_type**.  
+## <a name="example"></a>Ejemplo  
   
-## Ejemplo  
-  
-```  
+```cpp  
 // functional_unary_function.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -89,16 +102,21 @@ int main()
     cout << "The number of elements in v1 greater than 10 is: "  
          << result1 << "." << endl;  
 }  
+\* Output:   
+The vector v1 = ( 0 5 10 15 20 25 )  
+The number of elements in v1 greater than 10 is: 3.  
+*\  
 ```  
   
-  **The vector v1 \= \( 0 5 10 15 20 25 \)**  
-**El número de elementos en v1 mayor de 10 es: 3.**   
-## Requisitos  
- **Encabezado:** \<functional\>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<functional>  
   
  **Espacio de nombres:** std  
   
-## Vea también  
- [unary\_function\<\> \(Estructura\)](../misc/unary-function-angles-structure.md)   
- [Seguridad para subprocesos en la biblioteca estándar de C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Biblioteca de plantillas estándar](../misc/standard-template-library.md)
+## <a name="see-also"></a>Vea también  
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

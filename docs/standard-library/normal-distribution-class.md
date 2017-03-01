@@ -1,62 +1,131 @@
 ---
-title: "normal_distribution (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tr1::normal_distribution"
-  - "normal_distribution"
-  - "std::tr1::normal_distribution"
-  - "random/std::tr1::normal_distribution"
-  - "std.tr1.normal_distribution"
-  - "tr1.normal_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "normal_distribution (clase)"
-  - "normal_distribution (clase) [TR1]"
+title: normal_distribution (Clase) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- normal_distribution
+- std::normal_distribution
+- random/std::normal_distribution
+- std::normal_distribution::reset
+- random/std::normal_distribution::reset
+- std::normal_distribution::mean
+- random/std::normal_distribution::mean
+- std::normal_distribution::stddev
+- random/std::normal_distribution::stddev
+- std::normal_distribution::param
+- random/std::normal_distribution::param
+- std::normal_distribution::min
+- random/std::normal_distribution::min
+- std::normal_distribution::max
+- random/std::normal_distribution::max
+- std::normal_distribution::operator()
+- random/std::normal_distribution::operator()
+- std::normal_distribution::param_type
+- random/std::normal_distribution::param_type
+- std::normal_distribution::param_type::mean
+- random/std::normal_distribution::param_type::mean
+- std::normal_distribution::param_type::stddev
+- random/std::normal_distribution::param_type::stddev
+- std::normal_distribution::param_type::operator==
+- random/std::normal_distribution::param_type::operator==
+- std::normal_distribution::param_type::operator!=
+- random/std::normal_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- normal_distribution class
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# normal_distribution (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: d587cc1def88f67ccc521d9353318acca363ad57
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="normaldistribution-class"></a>normal_distribution (Clase)
 Genera una distribución normal.  
   
-## Sintaxis  
-  
+## <a name="syntax"></a>Sintaxis  
 ```  
-template<class RealType = double> class normal_distribution { public:     // types     typedef RealType result_type;     struct param_type;     // constructors and reset functions     explicit normal_distribution(RealType mean = 0.0, RealType stddev = 1.0);     explicit normal_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     RealType mean() const;     RealType stddev() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
+template<class RealType = double>
+class normal_distribution  
+   {  
+public:  
+   // types  
+   typedef RealType result_type;  
+   struct param_type;  
+
+   // constructors and reset functions  
+   explicit normal_distribution(result_type mean = 0.0, result_type stddev = 1.0);
+   explicit normal_distribution(const param_type& parm);
+   void reset();
+
+   // generating functions  
+   template <class URNG>  
+   result_type operator()(URNG& gen);
+   template <class URNG>  
+   result_type operator()(URNG& gen, const param_type& parm);
+
+   // property functions  
+   result_type mean() const;
+   result_type stddev() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
 ```  
   
-#### Parámetros  
- `RealType`  
- Un tipo de resultado de punto flotante, el valor predeterminado es `double`.  Para obtener más información sobre los tipos posibles, vea [\<random\>](../standard-library/random.md).  
+### <a name="parameters"></a>Parámetros  
+*RealType*  
+Un tipo de resultado de punto flotante, el valor predeterminado es `double`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).  
   
-## Comentarios  
- La clase de plantilla describe una distribución que produce valores de un tipo de entero especificado por el usuario o de tipo `double` si no se proporciona ninguno, distribuido según la distribución normal.  La tabla siguiente incluye vínculos a artículos sobre miembros individuales.  
+## <a name="remarks"></a>Comentarios  
+La clase de plantilla describe una distribución que produce valores de un tipo de entero especificado por el usuario o de tipo `double` si no se proporciona ninguno, distribuido según la distribución normal. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.  
   
 ||||  
 |-|-|-|  
-|[normal\_distribution::normal\_distribution](../Topic/normal_distribution::normal_distribution.md)|`normal_distribution::mean`|`normal_distribution::param`|  
-|`normal_distribution::operator()`|`normal_distribution::stddev`|[normal\_distribution::param\_type](../Topic/normal_distribution::param_type.md)|  
+|[normal_distribution::normal_distribution](#normal_distribution__normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|  
+|`normal_distribution::operator()`|`normal_distribution::stddev`|[normal_distribution::param_type](#normal_distribution__param_type)|  
   
- Las funciones de propiedad `mean()` y `stddev()` devuelven los valores para los parámetros de distribución almacenados `mean` y `stddev`, respectivamente.  
+Las funciones de propiedad `mean()` y `stddev()` devuelven los valores para los parámetros de distribución almacenados `mean` y `stddev`, respectivamente.  
   
- Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random\>](../standard-library/random.md).  
+El miembro de propiedad `param()` establece o devuelve el paquete de parámetros de distribución almacenado `param_type`.  
+
+Las funciones miembro `min()` y `max()` devuelven el resultado posible más pequeño y el resultado posible más grande, respectivamente.  
   
- Para más detalles sobre el algoritmo de la distribución normal, vea el artículo de Wolfram MathWorld sobre la [distribución normal](http://go.microsoft.com/fwlink/?LinkId=400924).  
+La función miembro `reset()` descarta cualquier valor almacenado en caché, de modo que la siguiente llamada a `operator()` no depende de ningún valor obtenido del motor antes de la llamada.  
   
-## Ejemplo  
+Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
+  
+Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).  
+  
+Para obtener más información sobre la distribución normal, vea el artículo de Wolfram MathWorld sobre la [distribución normal](http://go.microsoft.com/fwlink/LinkId=400924).  
+  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -118,35 +187,91 @@ int main()
   
 ```  
   
-## Salida  
-  
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter a floating point value for the 'mean' distribution parameter: 0  
 Enter a floating point value for the 'stddev' distribution parameter (must be greater than zero): 1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == -1.79769e+308  
 max() == 1.79769e+308  
 m() == 0.0000000000  
 s() == 1.0000000000  
 Distribution for 10 samples:  
-          1:  -0.8845823965  
-          2:  -0.1995761116  
-          3:  -0.1162665130  
-          4:  -0.0685154932  
-          5:   0.0403741461  
-          6:   0.1591327792  
-          7:   1.0414389924  
-          8:   1.5876269426  
-          9:   1.6362637713  
-         10:   2.7821317338  
+    1: -0.8845823965  
+    2: -0.1995761116  
+    3: -0.1162665130  
+    4: -0.0685154932  
+    5: 0.0403741461  
+    6: 0.1591327792  
+    7: 1.0414389924  
+    8: 1.5876269426  
+    9: 1.6362637713  
+    10: 2.7821317338  
 ```  
   
-## Requisitos  
- **Encabezado:** \<random\>  
+## <a name="requirements"></a>Requisitos  
+**Encabezado:** \<random>  
   
- **Espacio de nombres:** std  
+**Espacio de nombres:** std  
   
-## Vea también  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-namenormaldistributionnormaldistributiona--normaldistributionnormaldistribution"></a><a name="normal_distribution__normal_distribution"></a> normal_distribution::normal_distribution  
+Construye la distribución.  
+  
+```  
+explicit normal_distribution(result_type mean = 0.0, result_type stddev = 1.0);
+explicit normal_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+*mean*  
+El parámetro de distribución `mean`.  
+  
+*stddev*  
+El parámetro de distribución `stddev`.  
+  
+*parm*  
+La estructura de parámetros utilizada para construir la distribución.  
+  
+### <a name="remarks"></a>Comentarios  
+**Condición previa:** `0.0 ≤ stddev`  
+  
+El primer constructor crea un objeto cuyo valor `mean` almacenado contiene el valor *mean* y cuyo valor `stddev` almacenado contiene el valor *stddev*.  
+  
+El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.  
+  
+##  <a name="a-namenormaldistributionparamtypea--normaldistributionparamtype"></a><a name="normal_distribution__param_type"></a> normal_distribution::param_type  
+Almacena los parámetros de la distribución.  
+  
+```cpp  
+struct param_type {  
+   typedef normal_distribution<result_type> distribution_type;  
+   param_type(result_type mean = 0.0, result_type stddev = 1.0);
+   result_type mean() const;
+   result_type stddev() const;
+  
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+### <a name="parameters"></a>Parámetros  
+*mean*  
+El parámetro de distribución `mean`.  
+  
+*stddev*  
+El parámetro de distribución `stddev`.  
+  
+*right*  
+La estructura `param_type` que se usa para comparar.  
+  
+### <a name="remarks"></a>Comentarios  
+**Condición previa:** `0.0 ≤ stddev`  
+  
+Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.  
+  
+## <a name="see-also"></a>Vea también  
+ [\<random>](../standard-library/random.md)
+
+
+
+

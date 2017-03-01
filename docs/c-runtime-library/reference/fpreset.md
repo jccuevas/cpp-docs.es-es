@@ -1,69 +1,85 @@
 ---
-title: "_fpreset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fpreset"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fpreset"
-  - "fpreset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fpreset (función)"
-  - "números de punto flotante, restablecer paquete matemático"
-  - "fpreset (función)"
+title: _fpreset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fpreset
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fpreset
+- fpreset
+dev_langs:
+- C++
+helpviewer_keywords:
+- fpreset function
+- floating-point numbers, resetting math package
+- _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _fpreset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 0d5bf6ef97700e010a6565eccf7087a613adf9c3
+ms.lasthandoff: 02/24/2017
 
-Restablece el paquete flotante.  
+---
+# <a name="fpreset"></a>_fpreset
+Restablece el paquete de punto flotante.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void _fpreset( void );  
 ```  
   
-## Comentarios  
- La función de `_fpreset` reinicializa el paquete de software matemáticos flotante.  `_fpreset` se utiliza normalmente con `signal`, `system`, o las funciones de `_exec` o de `_spawn` .  Si las indicaciones de punto flotante de programa de un error de las capturas \(`SIGFPE`\) con `signal`, puede recuperar con seguridad de errores flotantes invocando `_fpreset` y utilizando `longjmp`.  
+## <a name="remarks"></a>Comentarios  
+ La función `_fpreset` reinicializa el paquete matemático de punto flotante. `_fpreset` suele usarse con `signal`, `system` o las funciones `_exec` o `_spawn`. Si un programa intercepta las señales de error de punto flotante (`SIGFPE`) con `signal`, puede recuperar de forma segura errores de punto flotante mediante la invocación de `_fpreset` y el uso de `longjmp`.  
   
- Se deja de utilizar esta función al compilar con [\/clr \(Compilación de Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md) o `/clr:pure` porque Common Language Runtime admite únicamente la precisión flotante predeterminada.  
+ Esta función está desusada al compilar con [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) porque common language runtime sólo admite la precisión de punto flotante predeterminada.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Función|Encabezado necesario|  
-|-------------|--------------------------|  
-|`_fpreset`|\<float.h\>|  
+|--------------|---------------------|  
+|`_fpreset`|\<float.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_fpreset.c  
@@ -172,11 +188,14 @@ void fpcheck( void )
 }  
 ```  
   
-  **Dividir 5 por 0…**  
-**Error 131: Divide mediante Zero**   
-## Vea también  
+```Output  
+Dividing    5 by    0...  
+Error 131: Divide by zero  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
- [\_exec, \_wexec \(Funciones\)](../../c-runtime-library/exec-wexec-functions.md)   
+ [_exec, _wexec (Funciones)](../../c-runtime-library/exec-wexec-functions.md)   
  [signal](../../c-runtime-library/reference/signal.md)   
- [\_spawn, \_wspawn \(Funciones\)](../../c-runtime-library/spawn-wspawn-functions.md)   
- [system, \_wsystem](../../c-runtime-library/reference/system-wsystem.md)
+ [_spawn, _wspawn (Funciones)](../../c-runtime-library/spawn-wspawn-functions.md)   
+ [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

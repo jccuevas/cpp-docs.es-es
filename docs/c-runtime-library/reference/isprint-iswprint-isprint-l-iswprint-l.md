@@ -1,59 +1,75 @@
 ---
-title: "isprint, iswprint, _isprint_l, _iswprint_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "iswprint"
-  - "isprint"
-  - "_isprint_l"
-  - "_iswprint_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "iswprint"
-  - "_istprint"
-  - "isprint"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_isprint_l (función)"
-  - "_istprint (función)"
-  - "_iswprint_l (función)"
-  - "isprint (función)"
-  - "isprint_l (función)"
-  - "istprint (función)"
-  - "iswprint (función)"
-  - "iswprint_l (función)"
+title: isprint, iswprint, _isprint_l, _iswprint_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- iswprint
+- isprint
+- _isprint_l
+- _iswprint_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- iswprint
+- _istprint
+- isprint
+dev_langs:
+- C++
+helpviewer_keywords:
+- _istprint function
+- iswprint function
+- _iswprint_l function
+- isprint_l function
+- istprint function
+- isprint function
+- iswprint_l function
+- _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# isprint, iswprint, _isprint_l, _iswprint_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3836d13d9f050ebdd7ed7502e11bbde2da76992a
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint, iswprint, _isprint_l, _iswprint_l
 Determina si un entero representa un carácter imprimible.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int isprint(  
@@ -72,41 +88,41 @@ int _iswprint_l(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `c`  
  Entero que se va a probar.  
   
  `locale`  
  Configuración regional que se va a usar.  
   
-## Valor devuelto  
- Cada una de estas rutinas devuelve un valor distinto de cero si `c` es una representación concreta de un carácter imprimible.  `isprint` devuelve un valor distinto de cero si `c` es un carácter imprimible, incluido el carácter de espacio \(0x20 – 0x7E\).  `iswprint` devuelve un valor distinto de cero si `c` es un carácter ancho imprimible, incluido el carácter ancho de espacio.  Cada una de estas rutinas devuelve 0 si `c` no cumple la condición de prueba.  
+## <a name="return-value"></a>Valor devuelto  
+ Cada una de estas rutinas devuelve un valor distinto de cero si `c` es una representación concreta de un carácter imprimible. `isprint` devuelve un valor distinto de cero si `c` es un carácter imprimible, incluido el carácter de espacio (0x20 – 0x7E). `iswprint` devuelve un valor distinto de cero si `c` es un carácter ancho imprimible, incluido el carácter ancho de espacio. Cada una de estas rutinas devuelve 0 si `c` no cumple la condición de prueba.  
   
- El resultado de la condición de prueba para estas funciones depende del valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información.  Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual del comportamiento dependiente de la configuración regional; las versiones que tienen el sufijo `_l` son idénticas salvo que usan el parámetro de configuración regional que se pasa.  Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ El resultado de la condición de prueba para estas funciones depende del valor de la categoría `LC_CTYPE` de la configuración regional; para obtener más información, vea [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual del comportamiento dependiente de la configuración regional; las versiones que tienen el sufijo `_l` son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
   
- El comportamiento de `isprint` e `_isprint_l` es indefinido si `c` no se encuentra al final del archivo ni en el intervalo de 0 a 0xFF, incluidos.  Cuando se usa una biblioteca CRT de depuración y `c` no es uno de estos valores, las funciones generan una aserción.  
+ El comportamiento de `isprint` e `_isprint_l` es indefinido si `c` no se encuentra al final del archivo ni en el intervalo de 0 a 0xFF, incluidos. Cuando se usa una biblioteca CRT de depuración y `c` no es uno de estos valores, las funciones generan una aserción.  
   
-### Asignaciones de rutina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
-|Rutina TCHAR.H|\_UNICODE y \_MBCS no definidos|\_MBCS definido|\_unicode definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
-|**\_** `istprint`|`isprint`|[\_ismbcprint](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswprint`|  
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_unicode definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
+|**_** `istprint`|`isprint`|[_ismbcprint](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswprint`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`isprint`|\<ctype.h\>|  
-|`iswprint`|\<ctype.h\> o \<wchar.h\>|  
-|`_isprint_l`|\<ctype.h\>|  
-|`_iswprint_l`|\<ctype.h\> o \<wchar.h\>|  
+|-------------|---------------------|  
+|`isprint`|\<ctype.h>|  
+|`iswprint`|\<ctype.h> o \<wchar.h>|  
+|`_isprint_l`|\<ctype.h>|  
+|`_iswprint_l`|\<ctype.h> o \<wchar.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Equivalente en .NET Framework  
- No es aplicable Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
+ No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Clasificación de caracteres](../../c-runtime-library/character-classification.md)   
  [Configuración regional](../../c-runtime-library/locale.md)   
- [is, isw \(Rutinas\)](../../c-runtime-library/is-isw-routines.md)
+ [is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)

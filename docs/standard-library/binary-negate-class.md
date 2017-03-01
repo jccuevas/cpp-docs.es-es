@@ -1,77 +1,86 @@
 ---
-title: "binary_negate (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xfunctional/std::binary_negate"
-  - "std::binary_negate"
-  - "binary_negate"
-  - "std.binary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_negate (clase)"
+title: binary_negate (Clase) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xfunctional/std::binary_negate
+- std::binary_negate
+- binary_negate
+- std.binary_negate
+dev_langs:
+- C++
+helpviewer_keywords:
+- binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# binary_negate (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: f71f13f00a458a375d4be98e9229b305ba9b751c
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="binarynegate-class"></a>binary_negate (Clase)
 Clase de plantilla que proporciona una función miembro que niega el valor devuelto de una función binaria especificada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+template <class Operation>
+class binary_negate
+    : public binaryFunction <typename Operation::first_argument_type,
+                              typename Operation::second_argument_type, bool>
+{
+public:    
+    explicit binary_negate(const Operation& Func);
+    bool operator()(const typename Operation::first_argument_type& left,
+                    const typename Operation::second_argument_type& right) const;
+};
 ```  
   
-   template<class Operation>  
-class binary_negate  
-   : public binary_function <  
-      typename Operation::first_argument_type,  
-      typename Operation::second_argument_type,   
-      bool>   
-{  
-public:  
-explicit binary_negate(  
-   const Operation& _Func  
-);  
-bool operator()(  
-   const typename Operation::first_argument_type& _Left,  
-   const typename Operation::second_argument_type& _Right  
-) const;  
-};  
-```  
+#### <a name="parameters"></a>Parámetros  
+ `Func`  
+ La función binaria que se va a negar.  
   
-#### Parámetros  
- `_Func`  
- La función binaria que se negará.  
+ `left`  
+ El operando izquierdo de la función binaria que se va a negar.  
   
- `_Left`  
- El operando izquierdo de la función binaria que se negará.  
+ `right`  
+ El operando derecho de la función binaria que se va a negar.  
   
- `_Right`  
- El operando derecho de la función binaria que se negará.  
-  
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  La negación de la función binaria.  
   
-## Comentarios  
- La clase de plantilla almacena una copia de un \_Func binario del objeto function.  Define la función `operator()` miembro como devolver el \_Func de \#\#\#\!*\(\_Left, \_Right\).*  
+## <a name="remarks"></a>Comentarios  
+ La clase de plantilla almacena una copia de un objeto de función binaria _ *Func*. Define su función miembro `operator()` para que devuelva **!**\_ *Func(left, right).*  
   
- El constructor de `binary_negate` raramente se utiliza directamente.  La función [not2](../Topic/not2%20Function.md) auxiliar normalmente es preferible usar para declarar y utilizar el predicado del adaptador de **binary\_negator** .  
+ El constructor de `binary_negate` no suele usarse directamente. La función auxiliar [not2](../standard-library/functional-functions.md#not2_function) se suele preferir para declarar y usar el predicado de adaptador **binary_negator**.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // functional_binary_negate.cpp  
 // compile with: /EHsc  
 #define _CRT_RAND_S  
@@ -125,16 +134,22 @@ int main( )
       cout << *Iter1 << " ";  
    cout << ")" << endl;  
 }  
+\* Output:   
+Original vector v1 = ( 6262 6262 2233879413 2621500314 580942933 3715465425 3739828298 )  
+Sorted vector v1 = ( 6262 6262 580942933 2233879413 2621500314 3715465425 3739828298 )  
+Resorted vector v1 = ( 3739828298 3715465425 2621500314 2233879413 580942933 6262 6262 )  
+*\  
 ```  
   
-  **Vector original v1 \= \(6262 6262 2233879413 2621500314 580942933 3715465425 3739828298\)**  
-**Vector ordenados v1 \= \(6262 6262 580942933 2233879413 2621500314 3715465425 3739828298\)**  
-**Vector recurrido v1 \= \(3739828298 3715465425 2621500314 2233879413 580942933 6262 6262\)**   
-## Requisitos  
- **Encabezado:** \<functional\>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<functional>  
   
  std  
   
-## Vea también  
- [Seguridad para subprocesos en la biblioteca estándar de C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Biblioteca de plantillas estándar](../misc/standard-template-library.md)
+## <a name="see-also"></a>Vea también  
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

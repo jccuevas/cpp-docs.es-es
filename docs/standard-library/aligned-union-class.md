@@ -1,56 +1,72 @@
 ---
-title: "Clase aligned_union | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "aligned_union"
-  - "std.aligned_union"
-  - "std::aligned_union"
-  - "type_traits/std::aligned_union"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aligned_union"
+title: Clase aligned_union | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- aligned_union
+- std.aligned_union
+- std::aligned_union
+- type_traits/std::aligned_union
+dev_langs:
+- C++
+helpviewer_keywords:
+- aligned_union
 ms.assetid: 9931a44d-3a67-4f29-a0f6-d47a7cf560ac
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Clase aligned_union
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: d6ecefd7d6877bc65bbf6f5542ae6b7f318a9d27
+ms.lasthandoff: 02/24/2017
 
-Proporciona un tipo POD convenientemente alineado y lo suficientemente grande como para almacenar un tipo de unión y el tamaño necesario.  
+---
+# <a name="alignedunion-class"></a>Clase aligned_union
+Proporciona un tipo POD lo suficientemente grande y convenientemente alineado para almacenar un tipo de unión y el tamaño necesario.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <std::size_t Len, class... Types>  
-    struct aligned_union;  
-  
+struct aligned_union;  
+ 
 template <std::size_t Len, class... Types>  
-    using aligned_union_t = typename aligned_union<Len, Types...>::type;  
+using aligned_union_t = typename aligned_union<Len, Types...>::type;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `Len`  
  El valor de alineación para el tipo más grande de la unión.  
   
  `Types`  
  Los distintos tipos de la unión subyacente.  
   
-## Comentarios  
- Utilice la clase de plantilla para obtener la alineación y el tamaño necesario para almacenar una unión en el almacenamiento sin inicializar. La definición de tipo de miembro `type` Escriba adecuados para el almacenamiento de cualquier tipo que aparece en una SUCESIÓN de nombres `Types`; el tamaño mínimo es `Len`. El miembro estático `alignment_value` de tipo `std::size_t` contiene la alineación más estricta necesaria de todos los tipos enumerados en `Types`.  
+## <a name="remarks"></a>Comentarios  
+ Use la clase de plantilla para obtener la alineación y el tamaño necesarios para almacenar una unión en el almacenamiento sin inicializar. El typedef de miembro `type` nombra a un tipo POD adecuado para el almacenamiento de cualquier tipo enumerado en `Types`; el tamaño mínimo es `Len`. El miembro estático `alignment_value` de tipo `std::size_t` contiene la alineación más estricta necesaria de todos los tipos enumerados en `Types`.  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar `aligned_union` para asignar un búfer de pila alineada para colocar una unión.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo usar `aligned_union` para asignar un búfer de pila alineada para colocar una unión.  
   
 ```  
 // std__type_traits__aligned_union.cpp  
@@ -83,14 +99,15 @@ int main()
 ```  
   
 ```Output  
-valor de se -> i es 1065353216  
+value of u->i is 1065353216  
 ```  
   
-## Requisitos  
- **Encabezado:** \<type\_traits\>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
  **Espacio de nombres:** std  
   
-## Vea también  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [alignment\_of \(Clase\)](../standard-library/alignment-of-class.md)
+## <a name="see-also"></a>Vea también  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [alignment_of (Clase)](../standard-library/alignment-of-class.md)
+

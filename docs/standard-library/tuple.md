@@ -1,30 +1,46 @@
 ---
-title: "&lt; tuple &gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<tuple>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tupla (encabezado) [TR1]"
+title: '&lt;tuple&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <tuple>
+dev_langs:
+- C++
+helpviewer_keywords:
+- tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# &lt; tuple &gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: 7771de57070961751e16294bc966e08843baef4c
+ms.lasthandoff: 02/24/2017
 
-Define una plantilla de `tuple` cuyas instancias almacenar los objetos de distintos tipos.  
+---
+# <a name="lttuplegt"></a>&lt;tuple&gt;
+Define una `tuple` de plantilla cuyas instancias contienen objetos de tipos diferentes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,29 +52,30 @@ Define una plantilla de `tuple` cuyas instancias almacenar los objetos de distin
   
 |||  
 |-|-|  
-|[tupla](../standard-library/tuple-class.md)|Ajusta una secuencia de longitud fija de elementos.|  
-|[tuple_element (clase)](../standard-library/tuple-element-class-tuple.md)|Ajusta el tipo de un elemento `tuple`.|  
-|[tuple_size (clase)](../standard-library/tuple-size-class-tuple.md)|Contiene el número de elementos `tuple`.|  
+|[tuple](../standard-library/tuple-class.md)|Ajusta una secuencia de elementos de longitud fija.|  
+|[tuple_element (Clase)](../standard-library/tuple-element-class-tuple.md)|Ajusta el tipo de un elemento `tuple`.|  
+|[tuple_size (Clase)](../standard-library/tuple-size-class-tuple.md)|Contiene el número de elementos `tuple`.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[operador ==](../Topic/%3Ctuple%3E%20operators.md#operator_eq_eq)|Comparación de `tuple` objetos, iguales|  
-|[operador! =](../Topic/%3Ctuple%3E%20operators.md#operator_neq)|Comparación de `tuple` objetos, no es iguales a|  
-|[operador <](../Topic/%3Ctuple%3E%20operators.md#operator_lt_)|Comparación de `tuple` objetos, menor que|  
-|[operador < =](../Topic/%3Ctuple%3E%20operators.md#operator_lt__eq)|Comparación de `tuple` objetos, menor o igual|  
-|[operador >](../Topic/%3Ctuple%3E%20operators.md#operator_gt_)|Comparación de `tuple` objetos, mayores que|  
-|[operador > =](../Topic/%3Ctuple%3E%20operators.md#operator_gt__eq)|Comparación de `tuple` objetos, iguales o mayores que|  
+|[operator==](../standard-library/tuple-operators.md#operator_eq_eq)|Comparación de objetos `tuple`, igualdad|  
+|[operator!=](../standard-library/tuple-operators.md#operator_neq)|Comparación de objetos `tuple`, desigualdad|  
+|[operator<](../standard-library/tuple-operators.md#operator_lt_)|Comparación de objetos `tuple`, menor que|  
+|[operator<=](../standard-library/tuple-operators.md#operator_lt__eq)|Comparación de objetos `tuple`, menor o igual que|  
+|[operator>](../standard-library/tuple-operators.md#operator_gt_)|Comparación de objetos `tuple`, mayor que|  
+|[operator>=](../standard-library/tuple-operators.md#operator_gt__eq)|Comparación de objetos `tuple`, mayor o igual que|  
   
 ### <a name="functions"></a>Funciones  
   
 |||  
 |-|-|  
-|[Obtener](../Topic/%3Ctuple%3E%20functions.md#get_function)|Obtiene un elemento de un objeto `tuple`.|  
-|[make_tuple)](../Topic/%3Ctuple%3E%20functions.md#make_tuple_function)|Realiza una `tuple` de valores de elemento.|  
-|[Lazo](../Topic/%3Ctuple%3E%20functions.md#tie_function)|Realiza una `tuple` de referencias del elemento.|  
+|[get](../standard-library/tuple-functions.md#get_function)|Obtiene un elemento de un objeto `tuple`.|  
+|[make_tuple](../standard-library/tuple-functions.md#make_tuple_function)|Crea una `tuple` a partir de valores de elemento.|  
+|[tie](../standard-library/tuple-functions.md#tie_function)|Crea una `tuple` a partir de referencias de elemento.|  
   
 ## <a name="see-also"></a>Vea también  
- [\< matriz>](../standard-library/array.md)
+ [\<array>](../standard-library/array.md)
+
 

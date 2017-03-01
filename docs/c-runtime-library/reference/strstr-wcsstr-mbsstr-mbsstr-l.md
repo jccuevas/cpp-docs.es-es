@@ -1,72 +1,88 @@
 ---
-title: "strstr, wcsstr, _mbsstr, _mbsstr_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsstr"
-  - "wcsstr"
-  - "_mbsstr_l"
-  - "strstr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntdll.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fstrstr"
-  - "_ftcsstr"
-  - "strstr"
-  - "wcsstr"
-  - "_mbsstr"
-  - "_tcsstr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fstrstr (función)"
-  - "_ftcsstr (función)"
-  - "_mbsstr (función)"
-  - "_mbsstr_l (función)"
-  - "_tcsstr (función)"
-  - "fstrstr (función)"
-  - "ftcsstr (función)"
-  - "mbsstr (función)"
-  - "mbsstr_l (función)"
-  - "cadenas [C++], buscar"
-  - "strstr (función)"
-  - "subcadenas, buscar"
-  - "tcsstr (función)"
-  - "wcsstr (función)"
+title: strstr, wcsstr, _mbsstr, _mbsstr_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsstr
+- wcsstr
+- _mbsstr_l
+- strstr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fstrstr
+- _ftcsstr
+- strstr
+- wcsstr
+- _mbsstr
+- _tcsstr
+dev_langs:
+- C++
+helpviewer_keywords:
+- strings [C++], searching
+- mbsstr function
+- _ftcsstr function
+- ftcsstr function
+- fstrstr function
+- _tcsstr function
+- substrings, finding
+- mbsstr_l function
+- tcsstr function
+- _mbsstr function
+- wcsstr function
+- _fstrstr function
+- _mbsstr_l function
+- strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
 caps.latest.revision: 32
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 32
----
-# strstr, wcsstr, _mbsstr, _mbsstr_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0402f647be21541222fe215760715eea1dee39d9
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 Devuelve un puntero a la primera aparición de una cadena de búsqueda en una cadena.  
   
 > [!IMPORTANT]
->  `_mbsstr` y `_mbsstr_l` no se pueden usar en aplicaciones que se ejecutan en [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Para obtener más información, vea [Funciones de CRT no admitidas con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsstr` y `_mbsstr_l` no se pueden usar en aplicaciones que se ejecutan en [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 char *strstr(  
@@ -122,7 +138,7 @@ const unsigned char *_mbsstr_l(
 ); // C++ only  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `str`  
  Cadena terminada en NULL que se va a buscar.  
   
@@ -132,40 +148,41 @@ const unsigned char *_mbsstr_l(
  `locale`  
  Configuración regional que se va a usar.  
   
-## Valor devuelto  
- Devuelve un puntero a la primera aparición de `strSearch` en `str`, o `NULL` si `strSearch` no aparece en `str`.  Si `strSearch` señala a una cadena de longitud cero, la función devuelve `str`.  
+## <a name="return-value"></a>Valor devuelto  
+ Devuelve un puntero a la primera aparición de `strSearch` en `str`, o `NULL` si `strSearch` no aparece en `str`. Si `strSearch` señala a una cadena de longitud cero, la función devuelve `str`.  
   
-## Comentarios  
- La función `strstr` devuelve un puntero a la primera aparición de `strSearch` en `str`.  En la búsqueda no se incluyen los caracteres nulos de finalización.  `wcsstr` es la versión con caracteres anchos de `strstr` y `_mbsstr` es la versión de caracteres multibyte.  Los argumentos y el valor devuelto de `wcsstr` son cadenas de caracteres anchos; los de `_mbsstr` son cadenas de caracteres multibyte.  `_mbsstr` valida sus parámetros.  Si `str` o `strSearch` es `NULL`, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, `_mbsstr` establece `errno` en `EINVAL` y devuelve 0.  `strstr` y `wcsstr` no validan sus parámetros.  Estas tres funciones se comportan exactamente igual.  
+## <a name="remarks"></a>Comentarios  
+ La función `strstr` devuelve un puntero a la primera aparición de `strSearch` en `str`. En la búsqueda no se incluyen los caracteres nulos de finalización. `wcsstr` es la versión con caracteres anchos de `strstr` y `_mbsstr` es la versión de caracteres multibyte. Los argumentos y el valor devuelto de `wcsstr` son cadenas de caracteres anchos; los de `_mbsstr` son cadenas de caracteres multibyte. `_mbsstr` valida sus parámetros. Si `str` o `strSearch` es `NULL`, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `_mbsstr` establece `errno` en `EINVAL` y devuelve 0. `strstr` y `wcsstr` no validan sus parámetros. Estas tres funciones se comportan exactamente igual.  
   
 > [!IMPORTANT]
->  Estas funciones podrían provocar la amenaza de un problema de saturación del búfer.  Los problemas de saturación del búfer se pueden usar para atacar un sistema, porque pueden permitir la ejecución de código arbitrario, lo que podría dar lugar a un aumento de privilegios injustificado.  Para obtener más información, vea [Evitar saturaciones del búfer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Estas funciones podrían provocar la amenaza de un problema de saturación del búfer. Los problemas de saturación del búfer se pueden usar para atacar un sistema, porque pueden permitir la ejecución de código arbitrario, lo que podría dar lugar a un aumento de privilegios injustificado. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).  
   
- En C, estas funciones toman un puntero `const` como primer argumento.  En C\+\+, hay disponibles dos sobrecargas.  La sobrecarga que toma un puntero a `const` devuelve un puntero a `const`; la versión que contiene un puntero a un valor que no es `const` devuelve un puntero a un valor que no es `const`.  La macro \_CONST\_CORRECT\_OVERLOADS se define si están disponibles tanto las versiones `const` como no `const` de estas funciones.  Si necesita un comportamiento que no sea `const` para ambas sobrecargas de C\+\+, defina el símbolo \_CONST\_RETURN.  
+ En C, estas funciones toman un puntero `const` como primer argumento. En C++, hay disponibles dos sobrecargas. La sobrecarga que toma un puntero a `const` devuelve un puntero a `const`; la versión que contiene un puntero a un valor que no es `const` devuelve un puntero a un valor que no es `const`. La macro _CONST_CORRECT_OVERLOADS se define si están disponibles tanto las versiones `const` como no `const` de estas funciones. Si necesita un comportamiento que no sea `const` para ambas sobrecargas de C++, defina el símbolo _CONST_RETURN.  
   
- El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información.  Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones que tienen el sufijo `_l` son idénticas salvo que usan el parámetro de configuración regional que se pasa.  Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; para obtener más información, vea [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones que tienen el sufijo `_l` son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
   
-### Asignaciones de rutina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
-|Rutina TCHAR.H|\_UNICODE y \_MBCS no definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsstr`|`strstr`|`_mbsstr`|`wcsstr`|  
-|**no disponible**|**no disponible**|`_mbsstr_l`|**no disponible**|  
+|**N/D**|**N/D**|`_mbsstr_l`|**N/D**|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`strstr`|\<string.h\>|  
-|`wcsstr`|\<string.h\> o \<wchar.h\>|  
-|`_mbsstr`, `_mbsstr_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strstr`|\<string.h>|  
+|`wcsstr`|\<string.h> o \<wchar.h>|  
+|`_mbsstr`, `_mbsstr_l`|\<mbstring.h>|  
   
  Para obtener más información sobre la compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
-// crt_strstr.c  
+  
+      // crt_strstr.c  
   
 #include <string.h>  
 #include <stdio.h>  
@@ -190,21 +207,25 @@ int main( void )
 }  
 ```  
   
-  **Cadena que se va a buscar:**  
- **The quick brown dog jumps over the lazy fox**  
- **1         2         3         4         5**  
- **12345678901234567890123456789012345678901234567890**  
-**lazy se encuentra en la posición 36**   
-## Equivalente en .NET Framework  
+```Output  
+String to be searched:  
+   The quick brown dog jumps over the lazy fox  
+            1         2         3         4         5  
+   12345678901234567890123456789012345678901234567890  
+  
+lazy found at position 36  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
  [System::String::IndexOf](https://msdn.microsoft.com/en-us/library/system.string.indexof.aspx)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)   
  [Configuración regional](../../c-runtime-library/locale.md)   
  [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn, wcscspn, \_mbscspn, \_mbscspn\_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
- [strcmp, wcscmp, \_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strpbrk, wcspbrk, \_mbspbrk, \_mbspbrk\_l](../../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)   
- [strrchr, wcsrchr, \_mbsrchr, \_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn, wcsspn, \_mbsspn, \_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
- [basic\_string::find](../Topic/basic_string::find.md)
+ [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l](../../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
+ [basic_string::find](http://msdn.microsoft.com/Library/e8254589-ae65-4414-b28f-54ba8f544656)

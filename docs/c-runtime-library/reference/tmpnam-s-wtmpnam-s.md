@@ -1,56 +1,72 @@
 ---
-title: "tmpnam_s, _wtmpnam_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "tmpnam_s"
-  - "_wtmpnam_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "tmpnam_s"
-  - "_wtmpnam_s"
-  - "L_tmpnam_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_wtmpnam_s (función)"
-  - "nombres de archivo [C++], crear temporales"
-  - "nombres de archivo [C++], temporal"
-  - "L_tmpnam_s (constante)"
-  - "archivos temporales, crear"
-  - "tmpnam_s (función)"
-  - "wtmpnam_s (función)"
+title: tmpnam_s, _wtmpnam_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- tmpnam_s
+- _wtmpnam_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- tmpnam_s
+- _wtmpnam_s
+- L_tmpnam_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- tmpnam_s function
+- file names [C++], creating temporary
+- _wtmpnam_s function
+- L_tmpnam_s constant
+- temporary files, creating
+- file names [C++], temporary
+- wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# tmpnam_s, _wtmpnam_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3635e551e54a36d8eafb0727c7bb4e7056df36f5
+ms.lasthandoff: 02/24/2017
 
-Genere los nombres que puede utilizar para crear los archivos temporales.  Éstas son versiones de [tmpnam y \_wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) con mejoras de seguridad como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="tmpnams-wtmpnams"></a>tmpnam_s, _wtmpnam_s
+Genere nombres que se puedan usar para crear archivos temporales. Estas son versiones de [tmpnam y _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) con mejoras de seguridad, como se explica en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 errno_t tmpnam_s(  
@@ -71,51 +87,51 @@ errno_t _wtmpnam_s(
 ); // C++ only  
 ```  
   
-#### Parámetros  
- \[out\] `str`  
- Puntero que contendrá el nombre generado.  
+#### <a name="parameters"></a>Parámetros  
+ [out] `str`  
+ Puntero que va a contener el nombre generado.  
   
- \[in\] `sizeInChars`  
- El tamaño del búfer en caracteres.  
+ [in] `sizeInChars`  
+ Tamaño del búfer en caracteres.  
   
-## Valor devuelto  
- Ambas funciones devuelven 0 si correctamente o un número de error en el error.  
+## <a name="return-value"></a>Valor devuelto  
+ Ambas funciones devuelven 0 si se realizan correctamente o un número de error en caso contrario.  
   
-### Condiciones de error  
+### <a name="error-conditions"></a>Condiciones de error  
   
 |||||  
 |-|-|-|-|  
-|`str`|`sizeInChars`|**Valor devuelto**|**Contents of**  `str`|  
-|`NULL`|any|`EINVAL`|no modificado|  
-|no `NULL` \(señala memoria válido\)|demasiado corto|`ERANGE`|no modificado|  
+|`str`|`sizeInChars`|**Valor devuelto**|**Contenido de** `str`|  
+|`NULL`|cualquiera|`EINVAL`|no modificado|  
+|no `NULL` (apunta a la memoria válida)|demasiado corto|`ERANGE`|no modificado|  
   
- Si `str` es `NULL`, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven `EINVAL`.  
+ Si `str` es `NULL`, se invoca al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven `EINVAL`.  
   
-## Comentarios  
- Cada una de estas funciones devuelve el nombre de un archivo que no existe actualmente.  `tmpnam_s` devuelve un nombre único en el directorio de trabajo actual.  La nota a un nombre de archivo con por una barra diagonal inversa y ninguna información de la ruta de acceso, como \\fname21, esto indica que el nombre es válido para el directorio de trabajo actual.  
+## <a name="remarks"></a>Comentarios  
+ Cada una de estas funciones devuelve el nombre de un archivo que no existe en este momento. `tmpnam_s` devuelve un nombre único en el directorio de trabajo actual. Tenga en cuenta que cuando un nombre de archivo va precedido por una barra diagonal inversa sin información de ruta de acceso, como \fname21, esto indica que el nombre es válido para el directorio de trabajo actual.  
   
- Para `tmpnam_s`, puede almacenar este nombre de archivo generado en `str`.  La longitud máxima de una cadena devuelta por `tmpnam_s` es `L_tmpnam_s`, definido en STDIO.H.  Si `str` es `NULL`, después `tmpnam_s` deja el resultado en un buffer estático interno.  Para cualquier llamada subsiguiente destruye este valor.  El nombre generado por `tmpnam_s` consta de un nombre de archivo programa\- generado y, después de la primera llamada a `tmpnam_s`, una extensión de archivo números secuenciales en base 32 \(.1\-.1vvvvvu, cuando `TMP_MAX_S` en STDIO.H es INT\_MAX\).  
+ En el caso de `tmpnam_s`, puede almacenar este nombre de archivo generado en `str`. La longitud máxima de una cadena devuelta por `tmpnam_s` es `L_tmpnam_s`, definida en STDIO.H. Si `str` es `NULL`, `tmpnam_s` deja el resultado en un búfer estático interno. Por lo tanto, las siguientes llamadas destruyen este valor. El nombre generado por `tmpnam_s` consta de un nombre de archivo generado por el programa y, tras la primera llamada a `tmpnam_s`, de una extensión de archivo de números secuenciales en base 32 (.1-.1vvvvvu cuando `TMP_MAX_S` en STDIO.H es INT_MAX).  
   
- `tmpnam_s` controla automáticamente argumentos de cadena de multibyte\- carácter según corresponda, reconociendo secuencias de multibyte\- carácter según la página de códigos OEM obtenida del sistema operativo.  `_wtmpnam_s` es una versión con caracteres anchos de `tmpnam_s`; el argumento y el valor devuelto de `_wtmpnam_s` son cadenas de caracteres anchos.  `_wtmpnam_s` y `tmpnam_s` se comportan exactamente igual excepto que `_wtmpnam_s` no controla las cadenas de multibyte\- carácter.  
+ `tmpnam_s` controla automáticamente argumentos de cadena de caracteres multibyte como sea necesario, reconociendo las secuencias de caracteres multibyte en función de la página de códigos OEM obtenida del sistema operativo. `_wtmpnam_s` es una versión con caracteres anchos de `tmpnam_s`; el argumento y el valor devuelto de `_wtmpnam_s` son cadenas de caracteres anchos. `_wtmpnam_s` y `tmpnam_s` se comportan de manera idéntica, salvo que `_wtmpnam_s` no controla cadenas de caracteres multibyte.  
   
- En C\+\+, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño.  Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulte [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
   
-### Asignaciones de rutina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
-|Rutina TCHAR.H|\_UNICODE y \_MBCS no definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ttmpnam_s`|`tmpnam_s`|`tmpnam_s`|`_wtmpnam_s`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`tmpnam_s`|\<stdio.h\>|  
-|`_wtmpnam_s`|\<stdio.h\> o \<wchar.h\>|  
+|-------------|---------------------|  
+|`tmpnam_s`|\<stdio.h>|  
+|`_wtmpnam_s`|\<stdio.h> o \<wchar.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_tmpnam_s.c  
@@ -148,12 +164,12 @@ int main( void )
 }  
 ```  
   
-## Equivalente en .NET Framework  
- No es aplicable Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
+ No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Vea también  
- [E\/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [\_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+## <a name="see-also"></a>Vea también  
+ [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
- [\_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
- [tmpfile\_s](../../c-runtime-library/reference/tmpfile-s.md)
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
+ [tmpfile_s](../../c-runtime-library/reference/tmpfile-s.md)

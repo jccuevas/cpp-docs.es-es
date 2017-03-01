@@ -1,54 +1,70 @@
 ---
-title: "_ismbbpunct, _ismbbpunct_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ismbbpunct"
-  - "_ismbbpunct_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "ismbbpunct"
-  - "ismbbpunct_l"
-  - "_ismbbpunct_l"
-  - "_ismbbpunct"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ismbbpunct (función)"
-  - "_ismbbpunct (función)"
-  - "ismbbpunct_l (función)"
-  - "_ismbbpunct_l (función)"
+title: _ismbbpunct, _ismbbpunct_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ismbbpunct
+- _ismbbpunct_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- ismbbpunct
+- ismbbpunct_l
+- _ismbbpunct_l
+- _ismbbpunct
+dev_langs:
+- C++
+helpviewer_keywords:
+- ismbbpunct function
+- _ismbbpunct function
+- ismbbpunct_l function
+- _ismbbpunct_l function
 ms.assetid: 1976c9d3-7d1a-415f-ac52-2715c7bb56eb
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _ismbbpunct, _ismbbpunct_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0cbcd2138d73a437afeafd61b13316a4739e0921
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="ismbbpunct-ismbbpunctl"></a>_ismbbpunct, _ismbbpunct_l
 Determina si un carácter determinado es un carácter de puntuación.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int _ismbbpunct(  
@@ -60,28 +76,28 @@ int _ismbbpunct_l(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `c`  
  Entero que se va a probar.  
   
  `locale`  
  Configuración regional que se va a usar.  
   
-## Valor devuelto  
- `_ismbbpunct` devuelve un valor distinto de cero si el entero `c` es un símbolo de puntuación no ASCII.`_ismbbpunct` usa la configuración regional actual para cualquier valor de los caracteres dependientes de la configuración regional.`_ismbbpunct_l` es exactamente igual, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+## <a name="return-value"></a>Valor devuelto  
+ `_ismbbpunct` devuelve un valor distinto de cero si el entero `c` es un símbolo de puntuación no ASCII. `_ismbbpunct` usa la configuración regional actual para cualquier valor de los caracteres dependientes de la configuración regional. `_ismbbpunct_l` es exactamente igual, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`_ismbbpunct`|\<mbctype.h\>|  
-|`_ismbbpunct_l`|\<mbctype.h\>|  
+|-------------|---------------------|  
+|`_ismbbpunct`|\<mbctype.h>|  
+|`_ismbbpunct_l`|\<mbctype.h>|  
   
  Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Equivalente en .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
+ No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Clasificación de bytes](../../c-runtime-library/byte-classification.md)   
- [\_ismbb \(Rutinas\)](../../c-runtime-library/ismbb-routines.md)
+ [_ismbb (Rutinas)](../../c-runtime-library/ismbb-routines.md)

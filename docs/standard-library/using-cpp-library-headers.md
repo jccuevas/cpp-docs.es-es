@@ -1,68 +1,85 @@
 ---
-title: "Usar encabezados de la biblioteca de C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "encabezados"
-  - "encabezados, asignación de nombres en la directiva include de C++"
-  - "encabezados, Biblioteca estándar de C++"
-  - "INCLUDE (directiva)"
-  - "encabezados de biblioteca"
-  - "Biblioteca estándar de C++, encabezados"
-  - "encabezado estándar de C++"
+title: Usar encabezados de la biblioteca de C++ | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- headers, naming in C++ include directive
+- standard header in C++
+- headers
+- INCLUDE directive
+- headers, C++ Standard Library
+- library headers
+- C++ Standard Library, headers
 ms.assetid: a36e889e-1af2-4cd9-a211-bfc7a3fd8e85
 caps.latest.revision: 10
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Usar encabezados de la biblioteca de C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 69a20e17403e755031466f269b932a4b14aa523b
+ms.lasthandoff: 02/24/2017
 
-Se incluye el contenido de un encabezado estándar llamarlo en una directiva include.  
+---
+# <a name="using-c-library-headers"></a>Usar encabezados de la biblioteca de C++
+Se incluye el contenido de un encabezado estándar al darle nombre en una directiva de inclusión.  
   
 ```  
-#include <iostream>   // include I/O facilities  
+#include <iostream>// include I/O facilities  
 ```  
   
- Puede incluir los encabezados estándar en cualquier orden, un encabezado estándar más de una vez, o dos o más encabezados estándar que definen la misma macro o el mismo tipo.  No incluye un encabezado estándar de una declaración.  No defina macros que tienen los mismos nombres que las palabras clave antes de que incluye un encabezado estándar.  
+ Puede incluir los encabezados estándar en cualquier orden, un encabezado estándar más de una vez o dos, o más encabezados estándar que definen la misma macro o el mismo tipo. No incluya un encabezado estándar dentro de una declaración. No defina macros que tengan los mismos nombres que las palabras clave antes de incluir un encabezado estándar.  
   
- El encabezado de la biblioteca de c\+\+. incluye cualquier otro encabezado de biblioteca de C\+\+ que necesite definir tipos necesarios. \(Siempre incluyen explícitamente que cualquier encabezado de biblioteca de C\+\+ necesarias en una unidad de traducción, sin embargo, al final del conjeture mal sobre sus dependencias reales.\) Un encabezado estándar de C nunca incluye otro encabezado estándar.  Un encabezado estándar declara o define sólo las entidades descritas para él en este documento.  
+ Un encabezado de la biblioteca de C++ incluye cualquier otro encabezado de la biblioteca de C++ que necesite para definir los tipos necesarios. (Pero siempre se deben incluir explícitamente los encabezados de la biblioteca de C++ necesarios en una unidad de traducción, para no equivocarse sobre sus dependencias reales). Un encabezado estándar de C nunca incluye otro encabezado estándar. Un encabezado estándar solo declara o define las entidades descritas para él en este documento.  
   
- Cada función de biblioteca se declara en un encabezado estándar.  A diferencia de c estándar, el encabezado estándar nunca proporciona una macro de enmascarado con el mismo nombre que la función que enmascara la declaración de función y alcanza el mismo efecto.  Para obtener más información acerca de las macros de máscara, vea [Convenciones de la biblioteca de C\+\+](../standard-library/cpp-library-conventions.md).  
+ Cada función de la biblioteca se declara en un encabezado estándar. A diferencia de C estándar, el encabezado estándar nunca proporciona una macro de enmascaramiento con el mismo nombre que la función que enmascara la declaración de la función y consigue el mismo efecto. Para más información sobre macros de enmascaramiento, vea [Convenciones de la biblioteca de C++](../standard-library/cpp-library-conventions.md).  
   
- Todos los nombres distinto de `operator delete` y de `operator new` en los encabezados de la biblioteca de C\+\+ se definen en el espacio de nombres `std` , o en un espacio de nombres anidado dentro del espacio de nombres `std` .  Se hace referencia al nombre `cin`, por ejemplo, como `std::cin`.  La nota, sin embargo, que los nombres de macro no están sujetos a la calificación de espacio de nombres, por lo que escribe siempre `__STD_COMPLEX` sin un calificador de espacio de nombres.  
+ Todos los nombres distintos de `operator delete` y `operator new` en los encabezados de la biblioteca de C++ se definen en el espacio de nombres `std` o en un espacio de nombres anidado dentro del espacio de nombres `std`. Se hace referencia al nombre `cin`, por ejemplo, como `std::cin`. Pero tenga en cuenta que los nombres de macro no están sujetos a la calificación de espacio de nombres, por lo siempre se escribe `__STD_COMPLEX` sin un calificador de espacio de nombres.  
   
- En algunos entornos de traducción, incluir el encabezado de la biblioteca de c\+\+. puede alzar los nombres externos declarados en el espacio de nombres `std` en el espacio de nombres global también, con declaraciones individuales de `using` para cada uno de los nombres.  Si no, el encabezado no presenta ninguna nombres de biblioteca en el espacio de nombres actual.  
+ En algunos entornos de traducción, incluir un encabezado de la biblioteca de C++ también puede elevar nombres externos declarados en el espacio de nombres `std` al espacio de nombres global, con declaraciones `using` individuales para cada uno de los nombres. De lo contrario, el encabezado *no* añade ningún nombre de biblioteca al espacio de nombres actual.  
   
- El estándar de C\+\+ requiere que los encabezados estándar de C declaran todos los nombres externos en el espacio de nombres `std`, los mejora en el espacio de nombres global con declaraciones individuales de `using` para cada uno de los nombres.  Pero en algunos entornos de traducción los encabezados estándar de C no incluyen ninguna declaración de espacio de nombres, declarando todos los nombres directamente en el espacio de nombres global.  Así, la manera más portátil de tratar de espacios de nombres es realizar dos reglas:  
+ El estándar de C++ requiere que los encabezados del estándar de C declaren todos los nombres externos en el espacio de nombres `std`, y después los eleven al espacio de nombres global con declaraciones `using` individuales para cada uno de los nombres. Pero en algunos entornos de traducción los encabezados del estándar de C no incluyen ninguna declaración de espacio de nombres y declaran todos los nombres directamente en el espacio de nombres global. Por tanto, la manera más portátil de tratar con los espacios de nombres es seguir dos reglas:  
   
--   Para confianza declarar en el espacio de nombres `std` un nombre externo que se declara tradicionalmente en \<stdlib.h, por\>ejemplo, incluye el cstdlib de encabezado \<.\>  Sabe que el nombre también se puede declarar en el espacio de nombres global.  
+-   Para declarar sin dudas en el espacio de nombres `std` un nombre externo que tradicionalmente se declara en \<stdlib.h>, por ejemplo, incluya el encabezado \<cstdlib>. Tenga en cuenta que es posible que el nombre también se declare en el espacio de nombres global.  
   
--   Para confianza declarar en el espacio de nombres global un nombre externo declarado en \<stdlib.h, incluya\>el encabezado stdlib.h \<directamente\> .  Sabe que el nombre también se puede declarar en el espacio de nombres `std`.  
+-   Para declarar sin dudas en el espacio de nombres global un nombre externo declarado en \<stdlib.h>, incluya el encabezado \<stdlib.h> directamente. Tenga en cuenta que es posible que el nombre también se declare en el espacio de nombres `std`.  
   
- Así, si desea llamar `std::abort` para producir la terminación anormal, debe incluir \<el cstdlib\>.  Si desea llamar `abort`, debe incluir \<stdlib.h.\>  
+ Por tanto, si quiere llamar a `std::abort` para que se produzca una finalización anómala, debe incluir \<cstdlib>. Si quiere llamar a `abort`, debe incluir \<stdlib.h>.  
   
- O bien, puede escribir la declaración:  
+ Como alternativa, puede escribir la declaración:  
   
 ```  
 using namespace std;  
 ```  
   
- qué aporta todos los nombres de biblioteca en el espacio de nombres actual.  Si escribe directivas include de esta declaración inmediatamente después de todo, se mejora los nombres en el espacio de nombres global.  Puede omitir posteriormente consideraciones de espacio de nombres en el resto de la unidad de traducción.  También impide la mayoría de las diferencias entre diferentes entornos de traducción.  
+ que añade todos los nombres de biblioteca al espacio de nombres actual. Si escribe esta declaración inmediatamente después de todas las directivas Include, se elevan los nombres al espacio de nombres global. Posteriormente, puede omitir las consideraciones de espacio de nombres en el resto de la unidad de traducción. También evita la mayoría de las diferencias entre entornos de traducción diferentes.  
   
- A menos que se indica específicamente de otra forma, no puede definir nombres en el espacio de nombres `std` , o en un espacio de nombres anidado dentro del espacio de nombres `std` , dentro del programa.  
+ A menos que se indique específicamente lo contrario, no puede definir nombres en el espacio de nombres `std`, o en un espacio de nombres anidado dentro del espacio de nombres `std`, dentro del programa.  
   
-## Vea también  
- [Información general de STL](../standard-library/cpp-standard-library-overview.md)   
- [Seguridad para subprocesos en la biblioteca estándar de C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Vea también  
+ [Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)   
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

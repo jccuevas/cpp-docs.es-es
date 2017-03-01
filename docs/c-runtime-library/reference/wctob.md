@@ -1,49 +1,65 @@
 ---
-title: "wctob | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wctob"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wctob"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caracteres, convertir"
-  - "wctob (función)"
-  - "caracteres anchos, convertir"
+title: wctob | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wctob
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wctob
+dev_langs:
+- C++
+helpviewer_keywords:
+- wide characters, converting
+- wctob function
+- characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# wctob
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 6c72cc32c5bd48bc6b7fc9c9187797f056ec7712
+ms.lasthandoff: 02/24/2017
 
-Determina si un carácter ancho corresponde a un carácter multibyte y devuelve su representación de caracteres multibyte.  
+---
+# <a name="wctob"></a>wctob
+Determina si un carácter ancho se corresponde con un carácter multibyte y devuelve su representación de carácter multibyte.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int wctob(  
@@ -51,28 +67,28 @@ int wctob(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `wchar`  
- Valor a traducir.  
+ Valor que se va a traducir.  
   
-## Valor devuelto  
- Si `wctob` convierte correctamente un carácter ancho, devuelve la representación de caracteres multibyte, sólo si el carácter multibyte es exactamente un byte de longitud.  Si `wctob` encuentra un carácter ancho que no puede convertir un carácter multibyte o carácter multibyte no es exactamente un byte de longitud, devuelve a – 1.  
+## <a name="return-value"></a>Valor devuelto  
+ Si `wctob` convierte correctamente un carácter ancho, devuelve su representación de carácter multibyte únicamente si el carácter multibyte tiene una longitud exacta de un byte. Si `wctob` encuentra un carácter ancho que no pueda convertir en un carácter multibyte o este no tiene una longitud exacta de un byte, devuelve -1.  
   
-## Comentarios  
- La función de `wctob` convierte un carácter ancho contenido en `wchar` el carácter correspondiente multibyte pasa por valor de retorno de `int` , si el carácter multibyte es exactamente un byte de longitud.  
+## <a name="remarks"></a>Comentarios  
+ La función `wctob` convierte un carácter ancho incluido en `wchar` en el carácter multibyte correspondiente pasado por el valor devuelto `int` si el carácter multibyte tiene una longitud exacta de un byte.  
   
- Si `wctob` era intentó y no se encontró ningún carácter correspondiente multibyte, la función establece `errno` a `EILSEQ` y devuelve \-1.  
+ Si `wctob` no se ha realizado correctamente y no se ha encontrado ningún carácter multibyte correspondiente, la función establece `errno` en `EILSEQ` y devuelve -1.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`wctob`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`wctob`|\<wchar.h>|  
   
  Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
-## Ejemplo  
- Este programa muestra el comportamiento de la función de `wcstombs` .  
+## <a name="example"></a>Ejemplo  
+ Este programa muestra el comportamiento de la función `wcstombs`.  
   
 ```  
 // crt_wctob.c  
@@ -101,15 +117,18 @@ int main( void )
   
 ```  
   
-  **Determinó el carácter correspondiente multibyte para ser “A”.**   
-## Equivalente en .NET Framework  
- No es aplicable Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Determined the corresponding multibyte character to be "A".  
+```  
   
-## Vea también  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
+ No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Vea también  
  [Conversión de datos](../../c-runtime-library/data-conversion.md)   
  [Configuración regional](../../c-runtime-library/locale.md)   
- [\_mbclen, mblen, \_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs, \_mbstowcs\_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc, \_mbtowc\_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wctomb, \_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
  [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)

@@ -1,70 +1,86 @@
 ---
-title: "va_arg, va_copy, va_end, va_start | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "va_arg"
-  - "va_end"
-  - "va_copy"
-  - "va_start"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "va_arg"
-  - "va_start"
-  - "va_list"
-  - "va_alist"
-  - "va_dcl"
-  - "va_copy"
-  - "va_end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "listas de argumentos variables, obtener acceso a"
-  - "va_start (macro)"
-  - "va_arg (macro)"
-  - "va_end (macro)"
-  - "argumentos [C++], listas de argumentos"
-  - "va_list (macro)"
-  - "va_dcl (macro)"
-  - "va_alist (macro)"
-  - "va_copy (macro)"
+title: va_arg, va_copy, va_end, va_start | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- va_arg
+- va_end
+- va_copy
+- va_start
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- va_arg
+- va_start
+- va_list
+- va_alist
+- va_dcl
+- va_copy
+- va_end
+dev_langs:
+- C++
+helpviewer_keywords:
+- variable argument lists, accessing
+- va_start macro
+- va_arg macro
+- va_end macro
+- arguments [C++], argument lists
+- va_list macro
+- va_dcl macro
+- va_alist macro
+- va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# va_arg, va_copy, va_end, va_start
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 5caea89460070402fc8dc5b38912e290d4c5798d
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
 Obtiene acceso a listas de argumentos de variable.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      type va_arg(  
+type va_arg(  
    va_list arg_ptr,  
    type   
-);void va_copy(  
+);
+void va_copy(  
    va_list dest,  
    va_list src  
 ); // (ISO C99 and later)  
@@ -77,7 +93,7 @@ void va_start(
 ); // (ANSI C89 and later)  
 void va_start(  
    arg_ptr   
-);  // (Pre-ANSI C89 standardization version)  
+);  // (deprecated Pre-ANSI C89 standardization version)  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -112,12 +128,12 @@ void va_start(
   
 -   `va_copy` realiza una copia de una lista de argumentos en su estado actual. El parámetro de `src` debe estar ya inicializado con `va_start`; puede haberse actualizado con llamadas de `va_arg`, pero no puede haberse restablecido con `va_end`. El siguiente argumento recuperado por `va_arg` de `dest` es el mismo que el siguiente argumento se recupera de `src`.  
   
--   Una vez recuperados todos los argumentos, `va_end` restablece el puntero en **NULL**. Es necesario llamar a `va_end` en cada lista de argumentos que se inicialice con `va_start` o `va_copy` antes de que la función devuelva su resultado.  
+-   Después de que todos los argumentos se hayan recuperado, `va_end` restablece el puntero en **NULL**. Es necesario llamar a `va_end` en cada lista de argumentos que se inicialice con `va_start` o `va_copy` antes de que la función devuelva su resultado.  
   
 > [!NOTE]
 >  Las macros de VARARGS.H han dejado de usarse y se conservan solo por compatibilidad con el código escrito antes de la existencia del estándar ANSI C89. En todos los demás casos, se deben usar las macros de STDARGS.H.  
   
- Cuando se compila utilizando [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), programas que utilizan estas macros pueden generar resultados inesperados debido a las diferencias entre los sistemas de tipos nativos y common language runtime (CLR). Observe este programa:  
+ Cuando se compilan con [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), los programas que usan estas macros pueden generar resultados inesperados por las diferencias existentes entre sistemas de código nativo y de Common Language Runtime (CLR). Observe este programa:  
   
 ```  
 #include <stdio.h>  
@@ -138,6 +154,8 @@ void testit (int i, ...)
         char *s = va_arg(argptr, char*);  
         printf("%s\n", s);  
     }  
+
+    va_end(argptr);  
 }  
   
 int main()  
@@ -155,23 +173,13 @@ int main()
 (null)  
 ```  
   
- Sin embargo, cuando se compila el programa mediante el uso de **/clr: pure**, las diferencias de tipo hacen que genere una excepción. La solución es utilizar conversiones explícitas:  
-  
-```  
-int main()  
-{  
-   testit( 0, (int)0xFFFFFFFF ); // cast unsigned to int  
-   testit( 1, (char*)NULL );     // cast int to char*  
-}  
-```  
-  
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** \< stdio.h > y \< stdarg.h >  
+ **Encabezado:** \<stdio.h> y \<stdarg.h>  
   
- **Encabezado en desuso:** \< varargs.h >  
+ **Encabezado en desuso:** \<varargs.h>  
   
 ## <a name="libraries"></a>Bibliotecas  
- Todas las versiones de la [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
+ Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Ejemplo  
   

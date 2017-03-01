@@ -1,73 +1,89 @@
 ---
-title: "terminate (CRT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "terminate"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "terminate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "control de excepciones, terminación"
-  - "terminate (función)"
+title: terminate (CRT) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- terminate
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- terminate
+dev_langs:
+- C++
+helpviewer_keywords:
+- terminate function
+- exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# terminate (CRT)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: a0a8536a1c7e0df05de17e5ee8f083b082b56ccc
+ms.lasthandoff: 02/24/2017
 
-Llamadas `abort` o una función especificada mediante `set_terminate`.  
+---
+# <a name="terminate-crt"></a>terminate (CRT)
+Llama a `abort` o a una función que se especifique mediante `set_terminate`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void terminate( void );  
 ```  
   
-## Comentarios  
- La función de `terminate` se utiliza con el control de excepciones de C\+\+ y se denomina en los casos siguientes:  
+## <a name="remarks"></a>Comentarios  
+ La función `terminate` se usa con el control de excepciones de C++ y se llama en los casos siguientes:  
   
--   Un controlador coincidente de captura no se encuentra para una excepción de C\+\+.  
+-   Cuando no se encuentra un controlador catch coincidente para una excepción de C++.  
   
--   Una excepción se produce por una función destructora durante pila desenredo.  
+-   Cuando una función de destructor produce una excepción durante un desenredo de pila.  
   
--   El montón está dañado después de que se produzca una excepción.  
+-   Cuando la pila se daña después de producir una excepción.  
   
- llamadas `abort` de`terminate` de forma predeterminada.  Puede cambiar este valor predeterminado escribiendo dispone de la función de finalización y llamando `set_terminate` con el nombre de la función como argumento.  `terminate` llama a la función última especificada como argumento a `set_terminate`.  Para obtener más información, vea [Excepciones de C\+\+ no controlados](../../cpp/unhandled-cpp-exceptions.md).  
+ `terminate` llama a `abort` de forma predeterminada. Puede cambiar este comportamiento predeterminado si escribe su propia función de finalización y llama a `set_terminate` con el nombre de esta función como argumento. `terminate` llama a la última función especificada como argumento para `set_terminate`. Para más información, vea [Excepciones de C++ no controladas](../../cpp/unhandled-cpp-exceptions.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`terminate`|\<eh.h\>|  
+|-------------|---------------------|  
+|`terminate`|\<eh.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_terminate.cpp  
@@ -109,14 +125,17 @@ void term_func()
 }  
 ```  
   
-  **term\_func\(\) se llama terminate\(\).**   
-## Equivalente en .NET Framework  
- No es aplicable Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+term_func() was called by terminate().  
+```  
   
-## Vea también  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
+ No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Vea también  
  [Rutinas para el control de excepciones](../../c-runtime-library/exception-handling-routines.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
- [\_set\_se\_translator](../../c-runtime-library/reference/set-se-translator.md)   
- [set\_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
- [set\_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
+ [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)   
+ [set_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
+ [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
  [unexpected](../../c-runtime-library/reference/unexpected-crt.md)

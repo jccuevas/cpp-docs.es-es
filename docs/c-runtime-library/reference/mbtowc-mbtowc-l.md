@@ -1,51 +1,67 @@
 ---
-title: "mbtowc, _mbtowc_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "mbtowc"
-  - "_mbtowc_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbtowc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbtowc_l (función)"
-  - "mbtowc (función)"
-  - "mbtowc_l (función)"
+title: mbtowc, _mbtowc_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- mbtowc
+- _mbtowc_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbtowc
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbtowc function
+- _mbtowc_l function
+- mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# mbtowc, _mbtowc_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 40fe628e045d8aa8930560ba8ab88a9e203022e3
+ms.lasthandoff: 02/24/2017
 
-Convierte un carácter multibyte a un carácter ancho correspondiente.  
+---
+# <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
+Convierte un carácter multibyte en el carácter ancho correspondiente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int mbtowc(  
@@ -61,38 +77,38 @@ int _mbtowc_l(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *wchar*  
- Dirección de un carácter ancho \(tipo `wchar_t`\).  
+ Dirección de un carácter ancho (tipo `wchar_t`).  
   
  `mbchar`  
- Dirección de una secuencia de bytes \(un carácter multibyte\).  
+ Dirección de una secuencia de bytes (un carácter multibyte).  
   
  *count*  
  Número de bytes que se va a comprobar.  
   
- *configuración regional*  
+ *locale*  
  Configuración regional que se va a usar.  
   
-## Valor devuelto  
- Si **mbchar** no es **nulo** y si el objeto que `mbchar` señala a los formularios un carácter válido multibyte, `mbtowc` devuelve la longitud en bytes de caracteres multibyte.  Si `mbchar` es **nulo** o el objeto al que señala es un carácter null de caracteres anchos \(L'\\0\), la función devuelve 0.  Si el objeto que `mbchar` elija no forma un carácter válido multibyte dentro de los primeros caracteres *de recuento* , devuelve – 1.  
+## <a name="return-value"></a>Valor devuelto  
+ Si **mbchar** no es **NULL** y si el objeto al que apunta `mbchar` forma un carácter multibyte válido, `mbtowc` devuelve la longitud en bytes del carácter multibyte. Si `mbchar` es **NULL** o el objeto al que apunta es un carácter nulo de caracteres anchos (L '\0'), la función devuelve 0. Si el objeto al que señala `mbchar` no forma un carácter multibyte válido en los primeros *count* caracteres, devuelve –1.  
   
-## Comentarios  
- La función de `mbtowc` convierte *el recuento* o menos bytes indicada por `mbchar`, si `mbchar` no es **nulo**, un carácter ancho correspondiente.  `mbtowc` almacena el carácter ancho resultante en *wchar,* si es *wchar* no es **nulo**.  `mbtowc` no examina más que los bytes de `MB_CUR_MAX` . `mbtowc` utiliza la configuración regional actual para el comportamiento configuración regional\-dependiente; `_mbtowc_l` es idéntico pero utiliza la configuración regional pasado en su lugar.  Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+## <a name="remarks"></a>Comentarios  
+ La función `mbtowc` convierte *count* o menos bytes a los que apunta `mbchar` (si `mbchar` no es **NULL**) en el carácter ancho correspondiente. `mbtowc` almacena el carácter ancho resultante en *wchar* si *wchar* no es **NULL**. `mbtowc` no examina más de `MB_CUR_MAX` bytes. `mbtowc` usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; `_mbtowc_l` es igual, salvo que en su lugar usa la configuración regional pasada. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`mbtowc`|\<stdlib.h\>|  
-|**\_mbtowc\_l**|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`mbtowc`|\<stdlib.h>|  
+|**_mbtowc_l**|\<stdlib.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Bibliotecas  
+## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_mbtowc.c  
@@ -132,7 +148,7 @@ int main( void )
 }  
 ```  
   
-## Resultados  
+## <a name="output"></a>Salida  
   
 ```  
 Convert a wide character to multibyte character:  
@@ -151,14 +167,14 @@ Attempt to convert a NULL pointer to a wide character:
   Bytes converted: 0  
 ```  
   
-## Equivalente en .NET Framework  
- No es aplicable Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
+ No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conversión de datos](../../c-runtime-library/data-conversion.md)   
  [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)   
  [Configuración regional](../../c-runtime-library/locale.md)   
  [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbclen, mblen, \_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [wcstombs, \_wcstombs\_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [wctomb, \_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)

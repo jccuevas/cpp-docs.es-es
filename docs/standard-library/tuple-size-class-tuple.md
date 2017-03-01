@@ -1,68 +1,114 @@
 ---
-title: "tuple_size (Clase) &lt;tuple&gt;  | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tuple_size"
-  - "std::tr1::tuple_size"
-  - "std.tr1.tuple_size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tuple_size (clase) <tuple> (TR1)"
+title: tuple_size (Clase) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- tuple_size
+- std::tuple_size
+- utility/std::tuple_size
+dev_langs:
+- C++
+helpviewer_keywords:
+- tuple_size Class
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# tuple_size (Clase) &lt;tuple&gt; 
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: f0ae102852f1db46b68d86438e20ce9645535d19
+ms.lasthandoff: 02/24/2017
 
-Informa del número de elementos que un `tuple` contiene.  
+---
+# <a name="tuplesize-class"></a>tuple_size (Clase);
+Informa el número de elementos que contiene una `tuple` .  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
 // TEMPLATE STRUCT tuple_size  
 template <class Tuple>  
-struct tuple_size;  
- 
+   struct tuple_size;  
+  
+// number of elements in array  
+template <class Elem, size_t Size>  
+   struct tuple_size<array<Elem, Size>>  
+      : integral_constant<size_t, Size>; 
+  
+// size of pair
+template <class T1, class T2>
+   struct tuple_size<pair<T1, T2>> 
+      : integral_constant<size_t, 2>
+
 // size of tuple  
 template <class... Types>  
-struct tuple_size<tuple<Types...>>  
-: integral_constant<size_t, sizeof...(Types)>;  
- 
+   struct tuple_size<tuple<Types...>>  
+      : integral_constant<size_t, sizeof...(Types)>;  
+  
 // size of const tuple  
 template <class Tuple>  
-struct tuple_size<const Tuple>;  
- 
+   struct tuple_size<const Tuple>;  
+  
 // size of volatile tuple  
 template <class Tuple>  
-struct tuple_size<volatile Tuple>;  
- 
+   struct tuple_size<volatile Tuple>;  
+  
 // size of const volatile tuple  
 template <class Tuple>  
-struct tuple_size<const volatile Tuple>;   
+   struct tuple_size<const volatile Tuple>;   
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `Tuple`  
- El tipo de tupla.  
+*Tuple*  
+El tipo de tupla. 
+  
+*Elem*  
+El tipo de los elementos de la matriz. 
+  
+*Size*  
+Se refiere al tamaño de la matriz. 
+  
+*T1*  
+El tipo del primer miembro del par. 
+  
+*T2*  
+El tipo del segundo miembro del par. 
+  
+*Tipos*  
+Los tipos de los elementos de tupla. 
+  
   
 ## <a name="remarks"></a>Comentarios  
- La clase de plantilla tiene un miembro `value` que es una expresión constante entera cuyo valor es la extensión del tipo de tupla `Tuple`.  
+La clase de plantilla tiene un miembro `value` que es una expresión constante entera cuyo valor es la extensión del tipo de tupla `Tuple`.  
+  
+La especialización de plantilla para matrices tiene un miembro `value` que es una expresión constante entera cuyo valor es `Size`, que es el tamaño de la matriz.  
+  
+La especialización de plantilla para pares tiene un miembro `value` que es una expresión constante entera cuyo valor es 2.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 #include <tuple>   
 #include <iostream>  
   
@@ -82,20 +128,21 @@ int main()
     // display size " 4"   
     cout << " " << tuple_size<MyTuple>::value << endl;  
 }  
+```  
   
-/*  
-Output:  
-0 1.5 2 3.7  
-4  
-*/  
+```Output  
+ 0 1.5 2 3.7  
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** \< tupla>  
+ **Encabezado:** \<tuple>  
+ **Encabezado:** \<array> (para la especialización de matrices)  
+ **Encabezado:** \<utility> (para la especialización de pares)  
   
  **Espacio de nombres:** std  
   
 ## <a name="see-also"></a>Vea también  
- [\< tupla>](../standard-library/tuple.md)   
- [tupla](../standard-library/tuple-class.md)  
- [tuple_element (clase)](../standard-library/tuple-element-class-tuple.md)
+ [\<tuple>](../standard-library/tuple.md)   
+ [tuple](../standard-library/tuple-class.md)  
+ [tuple_element (Clase)](../standard-library/tuple-element-class-tuple.md)
+

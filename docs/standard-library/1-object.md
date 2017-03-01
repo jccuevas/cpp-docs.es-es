@@ -1,48 +1,64 @@
 ---
-title: "_1 (Objeto) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1._1"
-  - "_1"
-  - "std::tr1::_1"
-  - "functional/std::tr1::_1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_1 (objeto) [TR1]"
+title: _1 Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _1
+- std::_1
+- functional/std::_1
+dev_langs:
+- C++
+helpviewer_keywords:
+- _1 object
 ms.assetid: 30c3c480-ff31-4708-94be-7d0d65f243c9
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _1 (Objeto)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
+ms.openlocfilehash: e90ee470e3cf990240f3c586c23fe8fd3d487f3d
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="1-object"></a>_1 (Objeto)
 Marcadores de posición para argumentos reemplazables.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 namespace placeholders {  
-  extern unspecified _1, _2, ... _M  
-  } // namespace placeholders (within std)  
+    extern unspecified _1,
+    _2, ... _M  
+ } // namespace placeholders (within std)  
 ```  
   
-## Comentarios  
- Los objetos `_1, _2, ... _M` son marcadores de posición que indican el primer, segundo, …, m\-ésimo argumentos, respectivamente en una llamada de función a un objeto devuelto por [bind \(Función\)](../Topic/bind%20Function.md).  Puede usar `_N` para especificar dónde debe incrustarse el enésimo argumento cuando se evalúa la expresión de enlace.  
+## <a name="remarks"></a>Comentarios  
+ Los objetos `_1, _2, ... _M` son marcadores de posición que designan el argumento primero, segundo, ..., Mth, respectivamente, en una llamada de función a un objeto devuelto por la [función bind](../standard-library/functional-functions.md#bind_function). `_N` se usa para especificar dónde se debe insertar el argumento Nth cuando se evalúa la expresión de enlace.  
   
- en esta implementación el valor de `M` es 20.  
+ En esta implementación, el valor de `M` es 20.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__functional_placeholder.cpp   
@@ -80,20 +96,26 @@ int main()
   
 ```  
   
-  **1^2 \=\= 1**  
-**2^2 \=\= 4**  
-**3^2 \=\= 9**  
-**1\*2 \=\= 2**  
-**2\*2 \=\= 4**  
-**3\*2 \=\= 6**  
-**1^2 \=\= 1**  
-**2^2 \=\= 4**  
-**3^2 \=\= 9**   
-## Requisitos  
- **Encabezado:** \<functional\>  
+```Output  
+1^2 == 1  
+2^2 == 4  
+3^2 == 9  
+  
+1*2 == 2  
+2*2 == 4  
+3*2 == 6  
+  
+1^2 == 1  
+2^2 == 4  
+3^2 == 9  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<functional>  
   
  **Espacio de nombres:** std  
   
-## Vea también  
- [bind \(Función\)](../Topic/bind%20Function.md)   
- [is\_placeholder \(Clase\)](../standard-library/is-placeholder-class.md)
+## <a name="see-also"></a>Vea también  
+ [bind Function (bind (Función))](../standard-library/functional-functions.md#bind_function)   
+ [is_placeholder (Clase)](../standard-library/is-placeholder-class.md)
+

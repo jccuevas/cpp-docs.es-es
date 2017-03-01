@@ -1,51 +1,68 @@
 ---
-title: "_fpieee_flt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fpieee_flt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fpieee_flt"
-  - "_fpieee_flt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fpieee_flt (función)"
-  - "control de excepciones, punto flotante"
-  - "control de excepciones de punto flotante"
-  - "fpieee_flt (función)"
+title: _fpieee_flt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fpieee_flt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fpieee_flt
+- _fpieee_flt
+dev_langs:
+- C++
+helpviewer_keywords:
+- _fpieee_flt function
+- exception handling, floating-point
+- floating-point exception handling
+- fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _fpieee_flt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 54718c64d7a6720ac0601792bfec5ffb196a9716
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="fpieeeflt"></a>_fpieee_flt
 Invoca un controlador de interceptaciones definido por el usuario para las excepciones de punto flotante del IEEE.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int _fpieee_flt(   
@@ -55,42 +72,42 @@ int _fpieee_flt(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `excCode`  
  Código de la excepción.  
   
  `excInfo`  
- Puntero a la estructura de información de excepción de Windows NT.  
+ Puntero a la estructura de información de excepción de Windows NT.  
   
  `handler`  
  Puntero a la rutina del controlador de interceptaciones del IEEE del usuario.  
   
-## Valor devuelto  
- El valor devuelto de `_fpieee_flt` es el valor devuelto por `handler`.  Por tanto, la rutina de filtro del IEEE podría usarse en la cláusula de excepción de un mecanismo de control de excepciones estructurado \(SEH\).  
+## <a name="return-value"></a>Valor devuelto  
+ El valor devuelto de `_fpieee_flt` es el valor devuelto por `handler`. Por tanto, la rutina de filtro del IEEE podría usarse en la cláusula de excepción de un mecanismo de control de excepciones estructurado (SEH).  
   
-## Comentarios  
- La función `_fpieee_flt` invoca un controlador de interceptaciones definido por el usuario para las excepciones de punto flotante del IEEE y le proporciona toda la información pertinente.  Esta rutina actúa como filtro de excepciones en el mecanismo de SEH, que invoca el controlador de excepciones del IEEE propio cuando es necesario.  
+## <a name="remarks"></a>Comentarios  
+ La función `_fpieee_flt` invoca un controlador de interceptaciones definido por el usuario para las excepciones de punto flotante del IEEE y le proporciona toda la información pertinente. Esta rutina actúa como filtro de excepciones en el mecanismo de SEH, que invoca el controlador de excepciones del IEEE propio cuando es necesario.  
   
- La estructura `_FPIEEE_RECORD`, definida en Fpieee.h, contiene información relativa a una excepción de punto flotante del IEEE.  `_fpieee_flt` pasa esta estructura al controlador de interceptaciones definido por el usuario.  
+ La estructura `_FPIEEE_RECORD`, definida en Fpieee.h, contiene información relativa a una excepción de punto flotante del IEEE. `_fpieee_flt` pasa esta estructura al controlador de interceptaciones definido por el usuario.  
   
-|campo \_FPIEEE\_RECORD|Descripción|  
+|campo _FPIEEE_RECORD|Descripción|  
 |----------------------------|-----------------|  
 |`unsigned int RoundingMode`, `unsigned int Precision`|Estos campos contienen información sobre el entorno de punto flotante en el momento que se produjo la excepción.|  
-|`unsigned int Operation`|Indica el tipo de operación que produjo la interceptación.  Si el tipo es una comparación \(`_FpCodeCompare`\), puede proporcionar uno de los valores especiales de `_FPIEEE_COMPARE_RESULT` \(definidos en Fpieee.h\) en el campo `Result.Value`.  El tipo de conversión \(`_FpCodeConvert`\) indica que la interceptación se produjo durante una operación de conversión de punto flotante.  Puede consultar los tipos de `Operand1` y  `Result` para determinar el tipo de conversión que se está intentando realizar.|  
-|`_FPIEEE_VALUE Operand1`, `_FPIEEE_VALUE Operand2`, `_FPIEEE_VALUE Result`|Estas estructuras indican los tipos y valores del resultado y los operandos propuestos:<br /><br /> `OperandValid` Marcador que indica si el valor de respuesta es válido.<br /><br /> `Format` Tipo de datos del valor correspondiente.  El tipo de formato se podría devolver incluso si el valor correspondiente no es válido.<br /><br /> `Value` Valor de los datos del resultado o el operando.|  
-|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|\_FPIEEE\_EXCEPTION\_FLAGS contiene un campo de bits por cada tipo de excepción de punto flotante.<br /><br /> Hay una correspondencia entre estos campos y los argumentos utilizados para aplicar máscaras a las excepciones proporcionadas a [\_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md).<br /><br /> El significado exacto de cada bit depende de contexto:<br /><br /> `Cause` Cada bit establecido indica la excepción concreta que se produjo.<br /><br /> `Enable` Cada bit establecido indica que la excepción concreta no tiene máscara actualmente.<br /><br /> `Status` Cada bit establecido indica que la excepción concreta está pendiente actualmente.  Se incluyen las excepciones que no se hayan producido porque `_controlfp` la había aplicado una máscara.|  
+|`unsigned int Operation`|Indica el tipo de operación que produjo la interceptación. Si el tipo es una comparación (`_FpCodeCompare`), puede proporcionar uno de los valores especiales de `_FPIEEE_COMPARE_RESULT` (definidos en Fpieee.h) en el campo `Result.Value`. El tipo de conversión (`_FpCodeConvert`) indica que la interceptación se produjo durante una operación de conversión de punto flotante. Puede consultar los tipos `Operand1` y `Result` para determinar el tipo de conversión que se intenta realizar.|  
+|`_FPIEEE_VALUE Operand1`, `_FPIEEE_VALUE Operand2`, `_FPIEEE_VALUE Result`|Estas estructuras indican los tipos y valores del resultado y los operandos propuestos:<br /><br /> `OperandValid` Marca que indica si el valor de respuesta es válido.<br /><br /> `Format` Tipo de datos del valor correspondiente. El tipo de formato se podría devolver incluso si el valor correspondiente no es válido.<br /><br /> `Value` Valor de los datos del resultado o el operando.|  
+|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|_FPIEEE_EXCEPTION_FLAGS contiene un campo de bits por cada tipo de excepción de punto flotante.<br /><br /> Hay una correspondencia entre estos campos y los argumentos usados para enmascarar las excepciones que se proporcionan en [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md).<br /><br /> El significado exacto de cada bit depende de contexto:<br /><br /> `Cause` Cada bit establecido indica la excepción concreta que se ha generado.<br /><br /> `Enable` Cada bit establecido indica que la excepción concreta no está enmascarada en este momento.<br /><br /> `Status` Cada bit establecido indica que la excepción concreta está pendiente en este momento. Se incluyen las excepciones que no se hayan producido porque `_controlfp` la había aplicado una máscara.|  
   
- Las excepciones pendientes que están deshabilitadas se producen cuando se habilitan.  Esto podría producir un comportamiento sin definir al utilizar `_fpieee_flt` como filtro de excepción.  Llame siempre a [\_clearfp](../../c-runtime-library/reference/clear87-clearfp.md) antes de habilitar excepciones de punto flotante.  
+ Las excepciones pendientes que están deshabilitadas se producen cuando se habilitan. Esto podría producir un comportamiento indefinido si se usa `_fpieee_flt` como filtro de excepción. Llame siempre a [_clearfp](../../c-runtime-library/reference/clear87-clearfp.md) antes de habilitar excepciones de punto flotante.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Función|Encabezado necesario|  
-|-------------|--------------------------|  
-|`_fpieee_flt`|\<fpieee.h\>|  
+|--------------|---------------------|  
+|`_fpieee_flt`|\<fpieee.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_fpieee.c  
@@ -157,10 +174,10 @@ int main( void )
 }  
 ```  
   
-## Equivalente en .NET Framework  
- No es aplicable Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
+ No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
- [\_control87, \_controlfp, \_\_control87\_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)   
- [\_controlfp\_s](../../c-runtime-library/reference/controlfp-s.md)
+ [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)   
+ [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md)

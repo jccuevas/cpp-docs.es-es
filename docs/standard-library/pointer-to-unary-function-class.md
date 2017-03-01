@@ -1,72 +1,88 @@
 ---
-title: "pointer_to_unary_function (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xfunctional/std::pointer_to_unary_function"
-  - "pointer_to_unary_function"
-  - "std.pointer_to_unary_function"
-  - "std::pointer_to_unary_function"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pointer_to_unary_function (clase)"
-  - "pointer_to_unary_function (función)"
+title: pointer_to_unary_function (Clase) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xfunctional/std::pointer_to_unary_function
+- pointer_to_unary_function
+- std.pointer_to_unary_function
+- std::pointer_to_unary_function
+dev_langs:
+- C++
+helpviewer_keywords:
+- pointer_to_unary_function function
+- pointer_to_unary_function class
 ms.assetid: 05600207-b916-4759-beca-6b6facd2d6f6
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# pointer_to_unary_function (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: f9e9b21833eb3d8c46d9bdf817a29350a77c22d4
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="pointertounaryfunction-class"></a>pointer_to_unary_function (Clase)
 Convierte un puntero a función unaria en una función unaria adaptable.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
-```  
-template<class Arg, class Result>  
-class pointer_to_unary_function  
-    : public unary_function<Arg, Result>   
-    {  
-    public:  
-        explicit pointer_to_unary_function(  
-            Result (*_pfunc)(Arg)  
-        );  
-        Result operator()(  
-            Arg _Left  
-        ) const;  
-    };  
+```
+template <class Arg, class Result>
+class pointer_to_unary_function
+    : public unary_function<Arg, Result>
+{
+public:
+    explicit pointer_to_unary_function(Result(*pfunc)(Arg));
+    Result operator()(Arg left) const;
+};
 ```  
   
-#### Parámetros  
- `_pfunc`  
+#### <a name="parameters"></a>Parámetros  
+ `pfunc`  
  La función binaria que se va a convertir.  
   
- `_Left`  
- El objeto que el *\*\_pfunc* está invitado.  
+ `left`  
+ El objeto al que *\*pfunc* está llamado.  
   
-## Valor devuelto  
- La clase de plantilla almacena una copia de **\_pfunc**.  Define la función `operator()` miembro como volver \(\***\_pfunc**\) \(\_Left\).  
+## <a name="return-value"></a>Valor devuelto  
+ La clase de plantilla almacena una copia de **pfunc**. Define su función miembro `operator()` para que devuelva (\* **pfunc**)(_ *Left*).  
   
-## Comentarios  
- Un puntero a función unario es un objeto de función y puede pasarse a cualquier algoritmo de la biblioteca de plantillas estándar que se espera una función unario como parámetro, pero no personalizarse.  Para utilizarlo con un adaptador, como enlazar un valor a o utilizarlo con un negador, debe proporcionarse con tipos anidados **argument\_type** y **result\_type** que crean tal adaptación posible.  La conversión por `pointer_to_unary_function` permite a los adaptadores de la función ejecutan los punteros a función binarios.  
+## <a name="remarks"></a>Comentarios  
+ Un puntero de función unaria es un objeto de función y puede pasarse a cualquier algoritmo de la biblioteca estándar de C++ que esté esperando una función unaria como un parámetro, pero no es adaptable. Para usarlo como un adaptador, por ejemplo al enlazar un valor a este o usándolo con un negador, debe proporcionarse con los tipos anidados **argument_type** y **result_type** que hacen posible dicha adaptación. La conversión mediante `pointer_to_unary_function` permite a los adaptadores de función que funcionen con punteros de función binaria.  
   
-## Ejemplo  
- El constructor de `pointer_to_unary_function` raramente se utiliza directamente.  Vea la función [ptr\_fun](../Topic/ptr_fun%20Function.md) auxiliar para obtener un ejemplo de cómo declarar y utilizar el predicado del adaptador de `pointer_to_unary_function` .  
+## <a name="example"></a>Ejemplo  
+ El constructor de `pointer_to_unary_function` no suele usarse directamente. Vea la función auxiliar [ptr_fun](../standard-library/functional-functions.md#ptr_fun_function) para obtener un ejemplo de cómo declarar y usar el predicador del adaptador de `pointer_to_unary_function`.  
   
-## Requisitos  
- **Encabezado:** \<functional\>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<functional>  
   
  **Espacio de nombres:** std  
   
-## Vea también  
- [Biblioteca de plantillas estándar](../misc/standard-template-library.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+
