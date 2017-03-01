@@ -1,64 +1,80 @@
 ---
-title: "CMFCCustomColorsPropertyPage Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCCustomColorsPropertyPage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCCustomColorsPropertyPage class"
+title: Clase CMFCCustomColorsPropertyPage | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCCustomColorsPropertyPage
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCCustomColorsPropertyPage class
 ms.assetid: 46a45ba2-1fda-440d-8018-d4dcd44f5816
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# CMFCCustomColorsPropertyPage Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: fa534f22438b7be37e7893e545c3e060df69384f
+ms.lasthandoff: 02/24/2017
 
-Representa una página de propiedades que pueda seleccionar colores personalizados en un cuadro de diálogo color.  
+---
+# <a name="cmfccustomcolorspropertypage-class"></a>Clase CMFCCustomColorsPropertyPage
+Representa una página de propiedades que puede seleccionar colores personalizados en un cuadro de diálogo color.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CMFCCustomColorsPropertyPage : public CPropertyPage  
 ```  
   
-## Members  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
 |||  
 |-|-|  
-|Name|Descripción|  
+|Nombre|Descripción|  
 |`CMFCCustomColorsPropertyPage::CMFCCustomColorsPropertyPage`|Constructor predeterminado.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
 |||  
 |-|-|  
-|Name|Descripción|  
-|`CMFCCustomColorsPropertyPage::CreateObject`|Utiliza el marco para crear una instancia dinámica de este tipo de clase.|  
-|`CMFCCustomColorsPropertyPage::GetThisClass`|Utiliza el marco para obtener un puntero al objeto de [Recursos](../../mfc/reference/cruntimeclass-structure.md) que está asociado a este tipo de clase.|  
-|[CMFCCustomColorsPropertyPage::Setup](../Topic/CMFCCustomColorsPropertyPage::Setup.md)|Establece los componentes de color de la página de propiedades.|  
+|Nombre|Descripción|  
+|`CMFCCustomColorsPropertyPage::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|  
+|`CMFCCustomColorsPropertyPage::GetThisClass`|Usar el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
+|[CMFCCustomColorsPropertyPage::Setup](#setup)|Establece los componentes de color de la página de propiedades.|  
   
-### Comentarios  
- La clase de `CMFCColorDialog` utiliza esta clase para mostrar la página de propiedades color personalizado.  Para obtener más información sobre `CMFCColorDialog`, vea [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md).  
+### <a name="remarks"></a>Comentarios  
+ La `CMFCColorDialog` clase utiliza esta clase para mostrar la página de propiedades de color personalizado. Para obtener más información acerca de `CMFCColorDialog`, consulte [CMFCColorDialog clase](../../mfc/reference/cmfccolordialog-class.md).  
   
-## Ejemplo  
- El ejemplo siguiente muestra cómo construir un objeto de `CMFCCustomColorsPropertyPage` y establecer los componentes de color de la página de propiedades.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo construir un `CMFCCustomColorsPropertyPage` de objeto y establecer los componentes de color de la página de propiedades.  
   
- [!code-cpp[NVC_MFC_RibbonApp#35](../../mfc/reference/codesnippet/CPP/cmfccustomcolorspropertypage-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp&#35;](../../mfc/reference/codesnippet/cpp/cmfccustomcolorspropertypage-class_1.cpp)]  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -71,11 +87,34 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
   
  [CMFCCustomColorsPropertyPage](../../mfc/reference/cmfccustomcolorspropertypage-class.md)  
   
-## Requisitos  
- **encabezado:** afxcustomcolorspropertypage.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxcustomcolorspropertypage.h  
   
-## Vea también  
- [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
+##  <a name="a-namesetupa--cmfccustomcolorspropertypagesetup"></a><a name="setup"></a>CMFCCustomColorsPropertyPage::Setup  
+ Establece los componentes de color de la página de propiedades.  
+  
+```  
+void Setup(
+    BYTE R,  
+    BYTE G,  
+    BYTE B);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+  
+|||  
+|-|-|  
+|Parámetro|Descripción|  
+|[in] `R`|El componente rojo del valor RGB.|  
+|[in] `G`|El componente verde del valor RGB.|  
+|[in] `B`|El componente azul del valor RGB.|  
+  
+### <a name="remarks"></a>Comentarios  
+ Este método actualiza el RGB actual y los asociados HLS (tono, luminosidad y saturación) valores de color de la página de propiedades. El [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) método llama a este método cuando el marco de trabajo inicializa el cuadro de diálogo color o el usuario presiona el botón primario del mouse. Para obtener más información acerca de `CMFCColorDialog`, consulte [CMFCColorDialog clase](../../mfc/reference/cmfccolordialog-class.md).  
+  
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
- [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md)   
- [CMFCStandardColorsPropertyPage Class](../../mfc/reference/cmfcstandardcolorspropertypage-class.md)
+ [Clase CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)   
+ [Clase CMFCStandardColorsPropertyPage](../../mfc/reference/cmfcstandardcolorspropertypage-class.md)
+

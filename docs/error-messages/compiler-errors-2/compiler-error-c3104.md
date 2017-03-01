@@ -1,39 +1,55 @@
 ---
-title: "Error del compilador C3104 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3104"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3104"
+title: C3104 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3104
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Error del compilador C3104
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 5df018fe26e66ed480ed2464c19c876adfac8dd1
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="compiler-error-c3104"></a>Error del compilador C3104
 argumento de atributo no válido  
   
- Se especificó un argumento no válido para un atributo.  
+ Ha especificado un argumento no válido a un atributo.  
   
- Para obtener más información, vea [Tipos de parámetros de atributo](../../windows/attribute-parameter-types-cpp-component-extensions.md).  
+ Consulte [tipos de parámetro de atributo](../../windows/attribute-parameter-types-cpp-component-extensions.md) para obtener más información.  
   
- Este error puede producirse como resultado del trabajo de conformidad del compilador realizado para Visual C\+\+ 2005: cuando se pasan matrices administradas a atributos personalizados, el tipo de matriz ya no se deduce de la lista de inicialización de agregado.  Ahora el compilador requiere que se especifique el tipo de la matriz así como la lista de inicializadores.  
+ Este error puede producirse como resultado del trabajo de conformidad del compilador realizado para Visual C++ 2005: cuando se pasan matrices administradas a atributos personalizados, el tipo de la matriz ya no se deduce de la lista de inicialización de agregado. Ahora, el compilador requiere que especifique el tipo de la matriz, así como la lista de inicializadores.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C3104.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C3104.  
   
 ```  
 // C3104a.cpp  
@@ -52,8 +68,8 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};  
 ```  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C3104.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C3104.  
   
 ```  
 // C3104b.cpp  
@@ -79,27 +95,4 @@ ref class B {};
 [A(0)]  
 ref class B {};  
 ```  
-  
-## Ejemplo  
- El ejemplo siguiente genera el error C3104.  
-  
-```  
-// C3104c.cpp  
-// compile with: /clr:oldSyntax /c  
-using namespace System;  
-  
-[ attribute(Class) ]  
-public __gc class AnotherAttr {  
-public:  
-   AnotherAttr(Object* arr __gc[]) : var0(arr) {}  
-   Object* var1 __gc[];  
-   Object* var0 __gc[];  
-};  
-  
-[ AnotherAttr( { __box(3.14159), S"pi" }, var1 = { S"a", S"b" } ) ]   // C3104  
-public __gc class Class1 {};  
-  
-// OK  
-[ AnotherAttr( new Object * __gc[] {__box(3.14159), S"pi" }, var1 = new Object * __gc[] { S"a", S"b" } ) ]  
-public __gc class Class2 {};  
-```
+

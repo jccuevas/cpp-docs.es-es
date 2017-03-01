@@ -1,75 +1,48 @@
 ---
-title: "Error del compilador C3815 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3815"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3815"
+title: C3815 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3815
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3815
 ms.assetid: c5a3b404-6341-4fd3-92af-152b404c4dde
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C3815
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 0c8c034d7d52e66bcd88c2a1046c40c68a9e0784
+ms.lasthandoff: 02/24/2017
 
-el tipo de valor devuelto del método 'get\_accessor' debe coincidir con el tipo del último parámetro de un establecedor  
+---
+# <a name="compiler-error-c3815"></a>Error del compilador C3815
+tipo de valor devuelto del método 'get_accessor' debe coincidir con el tipo del último parámetro de un establecedor  
   
- Al declarar [propiedades](../../misc/property.md), el valor devuelto del método `get_accessor` debe coincidir con el último parámetro de la declaración del método de descriptor de acceso Set.  
+ Al declarar propiedades, el valor devuelto de la `get_accessor` método debe coincidir con el último parámetro en la declaración del método de descriptor de acceso set.  
   
- El error C3815 solo se puede reproducir usando **\/clr:oldSyntax**.  
-  
- El código siguiente genera el error C3815:  
-  
-```  
-// C3815.cpp  
-// compile with: /clr:oldSyntax /LD  
-#using <mscorlib.dll>  
-__gc class X  
-{  
-public:  
-   __property char get_N()  
-   // try the following line instead  
-   // __property int get_N()  
-   {  
-      return m_val;  
-   }  
-  
-   __property void set_N( int val)  
-   {  
-      m_val = val;  
-   }  
-  
-private:  
-   int m_val;  
-};   // C3815  
-```  
-  
- En el ejemplo siguiente se muestra cómo sobrecargar las propiedades de manera que el tipo de valor devuelto del método Get no coincida con el último parámetro del método Set.  
-  
-```  
-// C3815b.cpp  
-// compile with: /clr:oldSyntax /c  
-#using <mscorlib.dll>  
-public __gc class MyClass {  
-public:  
-// 1st property:  
-   __property System::Int32 get_p1();  
-   __property void set_p1(System::Int32 i);  
-  
-// 2nd property (only setter):  
-   __property void set_p1(System::Int32* i);  
-  
-};  
-```
+ Solo es accesible mediante la opción del compilador obsoleta C3815 **/CLR: oldSyntax**.  
+

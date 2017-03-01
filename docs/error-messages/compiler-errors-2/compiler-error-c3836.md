@@ -1,34 +1,51 @@
 ---
-title: "Error del compilador C3836 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3836"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3836"
+title: C3836 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3836
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3836
 ms.assetid: 254f851b-7b7d-4c34-a740-fcf72f6a636a
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C3836
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 0708b8c9bf59e1c2ea3751fbb91192d6b873d8ec
+ms.lasthandoff: 02/24/2017
 
-no se permite que el constructor estático tenga una lista de inicializadores de miembro  
+---
+# <a name="compiler-error-c3836"></a>Error del compilador C3836
+constructor estático no puede tener una lista de inicializadores de miembro  
   
- Una clase administrada no puede tener un constructor estático que también tenga una lista de inicialización de miembros.  Los constructores de clases estáticas son llamados por Common Language Runtime para realizar la inicialización de clase, inicializando los miembros de datos estáticos.  
+ Una clase administrada no puede tener un constructor estático que también tiene una lista de inicialización de miembros. Constructores de clases estáticas se denominan por common language runtime para la inicialización de clase, inicializar a miembros de datos estáticos.  
   
- El código siguiente genera el error C3836:  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C3836:  
   
 ```  
 // C3836a.cpp  
@@ -47,25 +64,4 @@ int main()
 {  
 }  
 ```  
-  
- El código siguiente genera el error C3836:  
-  
-```  
-// C3836b.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-  
-__gc class M  
-{  
-   static int s_i;  
-  
-public:  
-   static M() :  s_i(1234)   // C3836, delete initializer to resolve  
-   {  
-   }  
-};  
-  
-int main()  
-{  
-}  
-```
+

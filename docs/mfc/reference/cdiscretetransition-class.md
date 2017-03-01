@@ -1,72 +1,146 @@
 ---
-title: "CDiscreteTransition (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CDiscreteTransition"
-  - "afxanimationcontroller/CDiscreteTransition"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDiscreteTransition (clase)"
+title: Clase CDiscreteTransition | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CDiscreteTransition
+- afxanimationcontroller/CDiscreteTransition
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDiscreteTransition class
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# CDiscreteTransition (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: dcec642fede0ec6895c928925676232319099be7
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cdiscretetransition-class"></a>Clase CDiscreteTransition
 Encapsula una transición discreta.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CDiscreteTransition : public CBaseTransition;  
 ```  
   
-## Members  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CDiscreteTransition::CDiscreteTransition](../Topic/CDiscreteTransition::CDiscreteTransition.md)|Construye un objeto de transición discreto e inicializa sus parámetros.|  
+|[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|Construye un objeto de transición discreta e inicializa sus parámetros.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CDiscreteTransition::Create](../Topic/CDiscreteTransition::Create.md)|Llama a la biblioteca de transiciones para crear el objeto COM de transición encapsulado.  \(Invalida [CBaseTransition::Create](../Topic/CBaseTransition::Create.md).\)|  
+|[CDiscreteTransition::Create](#create)|Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado. (Invalida [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-### Miembros de datos públicos  
+### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CDiscreteTransition::m\_dblFinalValue](../Topic/CDiscreteTransition::m_dblFinalValue.md)|El valor final de una variable de animación al final de la transición.|  
-|[CDiscreteTransition::m\_delay](../Topic/CDiscreteTransition::m_delay.md)|La cantidad de tiempo por el que retrasar el modificador instantáneo al valor final.|  
-|[CDiscreteTransition::m\_hold](../Topic/CDiscreteTransition::m_hold.md)|La cantidad de tiempo por el que retener la variable en su valor final.|  
+|[CDiscreteTransition::m_dblFinalValue](#m_dblfinalvalue)|El valor de la animación al final de la transición.|  
+|[CDiscreteTransition::m_delay](#m_delay)|La cantidad de tiempo que se va a retrasar el cambio instantáneo para el valor final.|  
+|[CDiscreteTransition::m_hold](#m_hold)|La cantidad de tiempo que se mantenga la variable en su valor final.|  
   
-## Comentarios  
- Durante una transición discreta, la variable de animación se mantiene en el valor inicial durante un tiempo de retraso especificado y, a continuación, cambia de forma instantánea a un valor final especificado y se mantiene en ese valor para un determinado tiempo de retención.  Como todas las transiciones se desactivan automáticamente, se recomienda asignarlas mediante "operator new".  CAnimationController::AnimateGroup crea el objeto COM encapsulado IUIAnimationTransition que hasta entonces es NULL.  Cambiar las variables miembro después de que la creación de este objeto COM no tiene ningún efecto.  
+## <a name="remarks"></a>Comentarios  
+ Durante una transición discreta, la variable de animación es el valor inicial para un tiempo de retraso especificado y, a continuación, cambia instantáneamente a un valor final especificado y permanece en ese valor para un tiempo de espera especificado. Debido a que todas las transiciones se desactivan automáticamente, se recomienda asignada a ellos con el operador nuevo. Se crea el objeto de IUIAnimationTransition COM encapsulado por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables miembro después de la creación de este objeto COM no tiene ningún efecto.  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  [CDiscreteTransition](../../mfc/reference/cdiscretetransition-class.md)  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxanimationcontroller.h  
   
-## Vea también  
+##  <a name="a-namecdiscretetransitiona--cdiscretetransitioncdiscretetransition"></a><a name="cdiscretetransition"></a>CDiscreteTransition::CDiscreteTransition  
+ Construye un objeto de transición discreta e inicializa sus parámetros.  
+  
+```  
+CDiscreteTransition(
+    UI_ANIMATION_SECONDS delay,  
+    DOUBLE dblFinalValue,  
+    UI_ANIMATION_SECONDS hold);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `delay`  
+ La cantidad de tiempo que se va a retrasar el cambio instantáneo para el valor final.  
+  
+ `dblFinalValue`  
+ El valor de la animación al final de la transición.  
+  
+ `hold`  
+ La cantidad de tiempo que se mantenga la variable en su valor final.  
+  
+##  <a name="a-namecreatea--cdiscretetransitioncreate"></a><a name="create"></a>CDiscreteTransition::Create  
+ Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado.  
+  
+```  
+virtual BOOL Create(
+    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionFactory* \*not used*\);
+```  
+  
+`pLibrary`  
+ Un puntero a un [IUIAnimationTransitionLibrary interfaz](https://msdn.microsoft.com/library/windows/desktop/dd371897), que define una biblioteca de transiciones estándares.  
+
+  
+### <a name="return-value"></a>Valor devuelto  
+ TRUE si la transición se crea correctamente; de lo contrario, FALSE.  
+  
+##  <a name="a-namemdblfinalvaluea--cdiscretetransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CDiscreteTransition::m_dblFinalValue  
+ El valor de la animación al final de la transición.  
+  
+```  
+DOUBLE m_dblFinalValue;  
+```  
+  
+##  <a name="a-namemdelaya--cdiscretetransitionmdelay"></a><a name="m_delay"></a>CDiscreteTransition::m_delay  
+ La cantidad de tiempo que se va a retrasar el cambio instantáneo para el valor final.  
+  
+```  
+UI_ANIMATION_SECONDS m_delay;  
+```  
+  
+##  <a name="a-namemholda--cdiscretetransitionmhold"></a><a name="m_hold"></a>CDiscreteTransition::m_hold  
+ La cantidad de tiempo que se mantenga la variable en su valor final.  
+  
+```  
+UI_ANIMATION_SECONDS m_hold;  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
+

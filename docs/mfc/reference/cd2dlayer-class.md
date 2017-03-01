@@ -1,80 +1,209 @@
 ---
-title: "CD2DLayer (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "afxrendertarget/CD2DLayer"
-  - "CD2DLayer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CD2DLayer (clase)"
+title: Clase CD2DLayer | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxrendertarget/CD2DLayer
+- CD2DLayer
+dev_langs:
+- C++
+helpviewer_keywords:
+- CD2DLayer class
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# CD2DLayer (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: d0034c37da7fa61c10cf6c7662ba361de8313aa0
+ms.lasthandoff: 02/24/2017
 
-Contenedor para ID2D1Layer.  
+---
+# <a name="cd2dlayer-class"></a>Clase CD2DLayer
+Un contenedor para ID2D1Layer.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CD2DLayer : public CD2DResource;  
 ```  
   
-## Members  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CD2DLayer::CD2DLayer](../Topic/CD2DLayer::CD2DLayer.md)|Construye un objeto CD2DLayer.|  
-|[CD2DLayer::~CD2DLayer](../Topic/CD2DLayer::~CD2DLayer.md)|El destructor.  Se llama cuando se destruye un objeto en capas D2D.|  
+|[CD2DLayer::CD2DLayer](#cd2dlayer)|Construye un objeto CD2DLayer.|  
+|[CD2DLayer:: ~ CD2DLayer](#_dtorcd2dlayer)|Destructor. Se llama cuando se destruye un objeto de capa de D2D.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CD2DLayer::Attach](../Topic/CD2DLayer::Attach.md)|Adjunta la interfaz de recurso existente al objeto|  
-|[CD2DLayer::Create](../Topic/CD2DLayer::Create.md)|Crea un CD2DLayer.  \(Invalida [CD2DResource::Create](../Topic/CD2DResource::Create.md).\)|  
-|[CD2DLayer::Destroy](../Topic/CD2DLayer::Destroy.md)|Destruye un objeto CD2DLayer.  \(Invalida [CD2DResource::Destroy](../Topic/CD2DResource::Destroy.md).\)|  
-|[CD2DLayer::Detach](../Topic/CD2DLayer::Detach.md)|Desasocia la interfaz de recurso del objeto|  
-|[CD2DLayer::Get](../Topic/CD2DLayer::Get.md)|Devuelve la interfaz ID2D1Layer|  
-|[CD2DLayer::GetSize](../Topic/CD2DLayer::GetSize.md)|Devuelve el tamaño del destino de representación en píxeles independientes del dispositivo|  
-|[CD2DLayer::IsValid](../Topic/CD2DLayer::IsValid.md)|Comprueba la validez del recurso \(invalida [CD2DResource::IsValid](../Topic/CD2DResource::IsValid.md)\).|  
+|[CD2DLayer::Attach](#attach)|Conexiones existentes de la interfaz de recursos para el objeto|  
+|[CD2DLayer::Create](#create)|Crea un CD2DLayer. (Invalida [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DLayer::Destroy](#destroy)|Destruye un objeto CD2DLayer. (Invalida [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
+|[CD2DLayer::Detach](#detach)|Separa la interfaz de recursos desde el objeto|  
+|[CD2DLayer::Get](#get)|Interfaz de ID2D1Layer devuelve|  
+|[CD2DLayer::GetSize](#getsize)|Devuelve el tamaño de destino de representación en píxeles independientes del dispositivo|  
+|[CD2DLayer::IsValid](#isvalid)|Comprueba la validez de los recursos (reemplaza [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
   
-### Operadores públicos  
+### <a name="public-operators"></a>Operadores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CD2DLayer::operator ID2D1Layer\*](../Topic/CD2DLayer::operator%20ID2D1Layer*.md)|Devuelve la interfaz ID2D1Layer|  
+|[CD2DLayer::operator ID2D1Layer *](#operator_id2d1layer_star)|Interfaz de ID2D1Layer devuelve|  
   
-### Miembros de datos protegidos  
+### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CD2DLayer::m\_pLayer](../Topic/CD2DLayer::m_pLayer.md)|Almacena un puntero a un objeto ID2D1Layer.|  
+|[CD2DLayer::m_pLayer](#m_player)|Almacena un puntero a un objeto ID2D1Layer.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
   
- [CD2DLayer](../../mfc/reference/cd2dlayer-class.md)  
+ `CD2DLayer`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxrendertarget.h  
   
-## Vea también  
+##  <a name="a-namedtorcd2dlayera--cd2dlayercd2dlayer"></a><a name="_dtorcd2dlayer"></a>CD2DLayer:: ~ CD2DLayer  
+ Destructor. Se llama cuando se destruye un objeto de capa de D2D.  
+  
+```  
+virtual ~CD2DLayer();
+```  
+  
+##  <a name="a-nameattacha--cd2dlayerattach"></a><a name="attach"></a>CD2DLayer::Attach  
+ Conexiones existentes de la interfaz de recursos para el objeto  
+  
+```  
+void Attach(ID2D1Layer* pResource);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `pResource`  
+ Interfaz de recursos existente. No puede ser NULL  
+  
+##  <a name="a-namecd2dlayera--cd2dlayercd2dlayer"></a><a name="cd2dlayer"></a>CD2DLayer::CD2DLayer  
+ Construye un objeto CD2DLayer.  
+  
+```  
+CD2DLayer(
+    CRenderTarget* pParentTarget,  
+    BOOL bAutoDestroy = TRUE);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `pParentTarget`  
+ Puntero para el destino de representación.  
+  
+ `bAutoDestroy`  
+ Indica que se destruirá el objeto propietario (pParentTarget).  
+  
+##  <a name="a-namecreatea--cd2dlayercreate"></a><a name="create"></a>CD2DLayer::Create  
+ Crea un CD2DLayer.  
+  
+```  
+virtual HRESULT Create(CRenderTarget* pRenderTarget);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `pRenderTarget`  
+ Puntero para el destino de representación.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Si el método se ejecuta correctamente, devuelve S_OK. De lo contrario, devuelve un código de error HRESULT.  
+  
+##  <a name="a-namedestroya--cd2dlayerdestroy"></a><a name="destroy"></a>CD2DLayer::Destroy  
+ Destruye un objeto CD2DLayer.  
+  
+```  
+virtual void Destroy();
+```  
+  
+##  <a name="a-namedetacha--cd2dlayerdetach"></a><a name="detach"></a>CD2DLayer::Detach  
+ Separa la interfaz de recursos desde el objeto  
+  
+```  
+ID2D1Layer* Detach();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Puntero a interfaz desasociadas recursos.  
+  
+##  <a name="a-namegeta--cd2dlayerget"></a><a name="get"></a>CD2DLayer::Get  
+ Interfaz de ID2D1Layer devuelve  
+  
+```  
+ID2D1Layer* Get();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Puntero a una interfaz ID2D1Layer o NULL si el objeto no se ha inicializado todavía.  
+  
+##  <a name="a-namegetsizea--cd2dlayergetsize"></a><a name="getsize"></a>CD2DLayer::GetSize  
+ Devuelve el tamaño de destino de representación en píxeles independientes del dispositivo  
+  
+```  
+CD2DSizeF GetSize() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ El tamaño actual del destino de representación en píxeles independientes del dispositivo  
+  
+##  <a name="a-nameisvalida--cd2dlayerisvalid"></a><a name="isvalid"></a>CD2DLayer::IsValid  
+ Comprobaciones de validez de los recursos  
+  
+```  
+virtual BOOL IsValid() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ TRUE si el recurso es válido; de lo contrario, FALSE.  
+  
+##  <a name="a-namemplayera--cd2dlayermplayer"></a><a name="m_player"></a>CD2DLayer::m_pLayer  
+ Almacena un puntero a un objeto ID2D1Layer.  
+  
+```  
+ID2D1Layer* m_pLayer;  
+```  
+  
+##  <a name="a-nameoperatorid2d1layerstara--cd2dlayeroperator-id2d1layer"></a><a name="operator_id2d1layer_star"></a>CD2DLayer::operator ID2D1Layer *  
+ Interfaz de ID2D1Layer devuelve  
+  
+```  
+operator ID2D1Layer* ();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Puntero a una interfaz ID2D1Layer o NULL si el objeto no se ha inicializado todavía.  
+  
+## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
+

@@ -1,53 +1,69 @@
 ---
-title: "CMFCImageEditorPaletteBar Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCImageEditorPaletteBar"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCImageEditorPaletteBar class"
+title: Clase CMFCImageEditorPaletteBar | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCImageEditorPaletteBar
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCImageEditorPaletteBar class
 ms.assetid: 3fb7ba8e-f254-4d56-b913-9941b4ed8138
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CMFCImageEditorPaletteBar Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: f6b987a27b43d713835a71dd5c31587020f23f2f
+ms.lasthandoff: 02/24/2017
 
-Proporciona funcionalidad de la barra de la paleta en un cuadro de diálogo del editor de imágenes.  
+---
+# <a name="cmfcimageeditorpalettebar-class"></a>Clase CMFCImageEditorPaletteBar
+Proporciona funcionalidad de la barra de paleta en un cuadro de diálogo del editor de imágenes.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CMFCImageEditorPaletteBar : public CMFCToolBar  
 ```  
   
-## Members  
+## <a name="members"></a>Miembros  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
 |||  
 |-|-|  
-|Name|Descripción|  
-|[CMFCImageEditorPaletteBar::GetRowHeight](../Topic/CMFCImageEditorPaletteBar::GetRowHeight.md)|devuelve el alto de botones de la barra de herramientas.  \(Reemplaza [CMFCToolBar::GetRowHeight](../Topic/CMFCToolBar::GetRowHeight.md).\)|  
-|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](../Topic/CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable.md)|Determina si la barra de herramientas puede mostrar botones que tienen bordes extendidos.  \(Reemplaza [CMFCToolBar::IsButtonExtraSizeAvailable](../Topic/CMFCToolBar::IsButtonExtraSizeAvailable.md).\)|  
+|Nombre|Descripción|  
+|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Devuelve el alto de los botones de barra de herramientas. (Invalida [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
+|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Determina si la barra de herramientas puede mostrar botones que se han extendido bordes. (Invalida [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
   
-### Comentarios  
- Esta clase no está pensada para utilizarla directamente desde el código.  
+### <a name="remarks"></a>Comentarios  
+ Esta clase no está diseñada para utilizarse directamente desde el código.  
   
- El marco de trabajo usa esta clase para mostrar una barra de la paleta en un cuadro de diálogo editor de imagen.  Para obtener más información sobre el cuadro de diálogo editor de imágenes, vea [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md).  
+ El marco de trabajo utiliza esta clase para mostrar una barra de paleta en un cuadro de diálogo del editor de imágenes. Para obtener más información sobre el cuadro de diálogo del editor de imágenes, consulte [CMFCImageEditorDialog clase](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -64,10 +80,31 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
   
  [CMFCImageEditorPaletteBar](../../mfc/reference/cmfcimageeditorpalettebar-class.md)  
   
-## Requisitos  
- **encabezado:** afximageeditordialog.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afximageeditordialog.h  
   
-## Vea también  
- [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
+##  <a name="a-namegetrowheighta--cmfcimageeditorpalettebargetrowheight"></a><a name="getrowheight"></a>CMFCImageEditorPaletteBar::GetRowHeight  
+ Devuelve el alto de los botones de barra de herramientas.  
+  
+```  
+virtual int GetRowHeight() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ El alto de cada botón de la barra de herramientas.  
+  
+##  <a name="a-nameisbuttonextrasizeavailablea--cmfcimageeditorpalettebarisbuttonextrasizeavailable"></a><a name="isbuttonextrasizeavailable"></a>CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
+ Determina si la barra de herramientas puede mostrar botones que se han extendido bordes.  
+  
+```  
+virtual BOOL IsButtonExtraSizeAvailable() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Este método devuelve `FALSE`.  
+  
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
- [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md)
+ [Clase CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)
+

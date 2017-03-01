@@ -1,110 +1,289 @@
 ---
-title: "CComEnumImpl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CComEnumImpl"
-  - "ATL::CComEnumImpl"
-  - "CComEnumImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComEnumImpl class"
+title: Clase CComEnumImpl | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CComEnumImpl
+- ATL::CComEnumImpl
+- CComEnumImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CComEnumImpl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 6dc6a8ed6a318642efe58dfb94835d45b2163b54
+ms.lasthandoff: 02/24/2017
 
-Esta clase proporciona la implementación de una interfaz COM de enumerador donde los elementos enumerados se almacenan en una matriz.  
+---
+# <a name="ccomenumimpl-class"></a>Clase CComEnumImpl
+Esta clase proporciona la implementación de una interfaz de enumerador COM donde se almacenan los elementos que se va a enumerar en una matriz.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+template <class Base,
+    const IID* piid, class T, class Copy>  
+class ATL_NO_VTABLE CComEnumImpl : public Base
 ```  
   
-      template <  
-   class Base,  
-   const IID* piid,  
-   class T,  
-   class Copy  
->  
-class ATL_NO_VTABLE CComEnumImpl :   
-   public Base  
-```  
-  
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `Base`  
- Una interfaz COM de enumerador \(\).  
+ Un enumerador COM ( [interfaz IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) interfaz.  
   
  `piid`  
- Un puntero al identificador de la interfaz de la interfaz del enumerador.  
+ Un puntero al identificador de interfaz de la interfaz de enumerador.  
   
  `T`  
- El tipo de elemento expuesto por la interfaz del enumerador.  
+ El tipo de elemento que expone la interfaz de enumerador.  
   
  `Copy`  
- [clase de directiva de copia](../../atl/atl-copy-policy-classes.md)homogéneo.  
+ Un homogéneos [copiar la clase de directiva](../../atl/atl-copy-policy-classes.md).  
   
-## Members  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CComEnumImpl::CComEnumImpl](../Topic/CComEnumImpl::CComEnumImpl.md)|el constructor.|  
-|[CComEnumImpl::~CComEnumImpl](../Topic/CComEnumImpl::~CComEnumImpl.md)|El destructor.|  
+|[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|El constructor.|  
+|[CComEnumImpl:: ~ CComEnumImpl](#dtor)|Destructor.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CComEnumImpl::Clone](../Topic/CComEnumImpl::Clone.md)|la implementación de [:: clon](https://msdn.microsoft.com/en-us/library/ms690336.aspx).|  
-|[CComEnumImpl::Init](../Topic/CComEnumImpl::Init.md)|Inicializa el enumerador.|  
-|[CComEnumImpl::Next](../Topic/CComEnumImpl::Next.md)|la implementación de [:: Siguiente](https://msdn.microsoft.com/en-us/library/ms695273.aspx).|  
-|[CComEnumImpl::Reset](../Topic/CComEnumImpl::Reset.md)|la implementación de [:: Restablecer](https://msdn.microsoft.com/en-us/library/ms693414.aspx).|  
-|[CComEnumImpl::Skip](../Topic/CComEnumImpl::Skip.md)|la implementación de [:: Omitir](https://msdn.microsoft.com/en-us/library/ms690392.aspx).|  
+|[CComEnumImpl::Clone](#clone)|La implementación de [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx).|  
+|[CComEnumImpl::Init](#init)|Inicializa el enumerador.|  
+|[CComEnumImpl::Next](#next)|La implementación de [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx).|  
+|[CComEnumImpl::Reset](#reset)|La implementación de [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx).|  
+|[CComEnumImpl:: Skip](#skip)|La implementación de [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx).|  
   
-### Miembros de datos públicos  
+### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CComEnumImpl::m\_begin](../Topic/CComEnumImpl::m_begin.md)|Un puntero al primer elemento de la matriz.|  
-|[CComEnumImpl::m\_dwFlags](../Topic/CComEnumImpl::m_dwFlags.md)|Indicadores de copia pasados con `Init`.|  
-|[CComEnumImpl::m\_end](../Topic/CComEnumImpl::m_end.md)|Un puntero a la ubicación simplemente más allá del último elemento de la matriz.|  
-|[CComEnumImpl::m\_iter](../Topic/CComEnumImpl::m_iter.md)|Un puntero al elemento actual en la matriz.|  
-|[CComEnumImpl::m\_spUnk](../Topic/CComEnumImpl::m_spUnk.md)|El puntero de **IUnknown** del objeto que proporciona la colección que es enumerada.|  
+|[CComEnumImpl::m_begin](#m_begin)|Un puntero al primer elemento de la matriz.|  
+|[CComEnumImpl::m_dwFlags](#m_dwflags)|Copie los indicadores que pasan a través de `Init`.|  
+|[CComEnumImpl::m_end](#m_end)|Puntero a la ubicación situada más allá del último elemento de la matriz.|  
+|[CComEnumImpl::m_iter](#m_iter)|Un puntero al elemento actual de la matriz.|  
+|[CComEnumImpl::m_spUnk](#m_spunk)|El **IUnknown** puntero del objeto proporciona la colección que se va a enumerar.|  
   
-## Comentarios  
- `CComEnumImpl` proporciona la implementación de una interfaz COM de enumerador donde los elementos enumerados se almacenan en una matriz.  Esta clase es análoga a la clase de `IEnumOnSTLImpl` , que proporciona una implementación de una interfaz de enumerador basada en un contenedor de STL.  
+## <a name="remarks"></a>Comentarios  
+ `CComEnumImpl`proporciona la implementación de una interfaz de enumerador COM donde se almacenan los elementos que se va a enumerar en una matriz. Esta clase es análoga a la `IEnumOnSTLImpl` clase, que proporciona una implementación de una interfaz de enumerador se basa en un contenedor de la biblioteca estándar de C++.  
   
 > [!NOTE]
->  Para obtener información sobre otras diferencias entre `CComEnumImpl` y `IEnumOnSTLImpl`, vea [CComEnumImpl:: Iniciar](../Topic/CComEnumImpl::Init.md).  
+>  Para obtener más información sobre aún más diferencias entre `CComEnumImpl` y `IEnumOnSTLImpl`, consulte [CComEnumImpl::Init](#init).  
   
- Normalmente, no necesitará crear dispone de la clase enumerator derivando de esta implementación de la interfaz.  Si desea utilizar un enumerador ATL\-proporcionado basado en una matriz, es más común crear una instancia de [CComEnum](../../atl/reference/ccomenum-class.md).  
+ Normalmente, será *no* que necesite crear su propia clase de enumerador derivando de esta implementación de la interfaz. Si desea utilizar un enumerador ATL proporcionado basado en una matriz, es más común para crear una instancia de [CComEnum](../../atl/reference/ccomenum-class.md).  
   
- Sin embargo, si necesita proporcionar un enumerador personalizado \(por ejemplo, uno que expone interfaces además de la interfaz del enumerador\), puede derivar de esta clase.  En esta situación, es probable que necesite reemplazar el método de [CComEnumImpl:: clon](../Topic/CComEnumImpl::Clone.md) para proporcionar dispone de la implementación.  
+ Sin embargo, si necesita proporcionar un enumerador personalizado (por ejemplo, uno que expone interfaces además de la interfaz de enumerador), puede derivar de esta clase. En esta situación, es probable que deba reemplazar el [CComEnumImpl::Clone](#clone) método para proporcionar su propia implementación.  
   
- Para obtener más información, vea [Colecciones y enumeradores ATL](../../atl/atl-collections-and-enumerators.md).  
+ Para obtener más información, consulte [colecciones y enumeradores ATL](../../atl/atl-collections-and-enumerators.md).  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `Base`  
   
  `CComEnumImpl`  
   
-## Requisitos  
- **encabezado:** atlcom.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atlcom.h  
   
-## Vea también  
- [IEnumOnSTLImpl Class](../../atl/reference/ienumonstlimpl-class.md)   
- [CComEnum Class](../../atl/reference/ccomenum-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameccomenumimpla--ccomenumimplccomenumimpl"></a><a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
+ El constructor.  
+  
+```
+CComEnumImpl();
+```  
+  
+##  <a name="a-namedtora--ccomenumimplccomenumimpl"></a><a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl  
+ Destructor.  
+  
+```
+~CComEnumImpl();
+```  
+  
+##  <a name="a-nameinita--ccomenumimplinit"></a><a name="init"></a>CComEnumImpl::Init  
+ Debe llamar a este método antes de pasar un puntero a la interfaz de enumerador a los clientes.  
+  
+```
+HRESULT Init(
+    T* begin,
+    T* end,
+    IUnknown* pUnk,
+    CComEnumFlags flags = AtlFlagNoCopy);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ *begin*  
+ Un puntero al primer elemento de la matriz que contiene los elementos que se van a enumerar.  
+  
+ `end`  
+ Puntero a la ubicación situada más allá del último elemento de la matriz que contiene los elementos que se van a enumerar.  
+  
+ *pUnk*  
+ [in] El **IUnknown** puntero de un objeto que debe mantenerse activo durante la vigencia del enumerador. Pasar **NULL** si no existe el objeto existe.  
+  
+ `flags`  
+ Marcadores que especifican si debe tomar posesión de la matriz o realizar una copia de él el enumerador. Los valores posibles se describen a continuación.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Un valor `HRESULT` estándar.  
+  
+### <a name="remarks"></a>Comentarios  
+ Solo llame a este método una vez, inicializar el enumerador, usar y, a continuación, deshacerse de él.  
+  
+ Si pasar punteros a elementos de una matriz que se mantienen en otro objeto (y no preguntar el enumerador para copiar los datos), puede utilizar el *pUnk* parámetro para garantizar que están disponibles para el objeto y la matriz contiene siempre y cuando las necesita el enumerador. El enumerador simplemente mantiene una referencia COM en el objeto para mantener activa. La referencia COM se libera automáticamente cuando se destruye el enumerador.  
+  
+ El `flags` parámetro le permite especificar cómo el enumerador debe tratar los elementos de matriz que se pasa a él. `flags`puede realizar uno de los valores de la **CComEnumFlags** (enumeración) se muestra a continuación:  
+  
+ `enum CComEnumFlags`  
+  
+ `{`  
+  
+ `AtlFlagNoCopy = 0,`  
+  
+ `AtlFlagTakeOwnership = 2, // BitOwn`  
+  
+ `AtlFlagCopy = 3           // BitOwn | BitCopy`  
+  
+ `};`  
+  
+ **AtlFlagNoCopy** significa que la duración de la matriz no está controlado por el enumerador. En este caso, estará bien la matriz estática o el objeto identificado por *pUnk* será responsable de liberar la matriz cuando ya no es necesario.  
+  
+ **AtlFlagTakeOwnership** significa que la destrucción de la matriz está controlado por el enumerador. En este caso, la matriz debe haber sido dinámicamente asignada mediante **nueva**. El enumerador eliminará de la matriz en su destructor. Normalmente, deberá pasar **NULL** de *pUnk*, aunque todavía puede pasar un puntero válido si necesita recibir una notificación de la destrucción del enumerador por algún motivo.  
+  
+ **AtlFlagCopy** significa que se crea copiando la matriz pasada a una nueva matriz `Init`. Duración de la nueva matriz es controlado por el enumerador. El enumerador eliminará de la matriz en su destructor. Normalmente, deberá pasar **NULL** de *pUnk*, aunque todavía puede pasar un puntero válido si necesita recibir una notificación de la destrucción del enumerador por algún motivo.  
+  
+> [!NOTE]
+>  El prototipo de este método especifica los elementos de la matriz como de tipo **T**, donde **T** se define como un parámetro de plantilla a la clase. Esto es del mismo tipo que se expone mediante el método de interfaz COM [CComEnumImpl::Next](#next). La implicación de esto es que, a diferencia de [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), esta clase no admite el almacenamiento diferentes y expone los tipos de datos. El tipo de datos de elementos de la matriz debe ser el mismo que el tipo de datos expuesto por medio de la interfaz COM.  
+  
+##  <a name="a-nameclonea--ccomenumimplclone"></a><a name="clone"></a>CComEnumImpl::Clone  
+ Este método proporciona la implementación de la [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) método mediante la creación de un objeto de tipo `CComEnum`, inicializar con la misma matriz e iterador utilizado por el objeto actual y devuelve la interfaz en el objeto recién creado.  
+  
+```
+STDMETHOD(Clone)(Base** ppEnum);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `ppEnum`  
+ [out] La interfaz de enumerador en un objeto recién creado se clona desde el enumerador actual.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Un valor `HRESULT` estándar.  
+  
+### <a name="remarks"></a>Comentarios  
+ Tenga en cuenta que los enumeradores clonados nunca realizan sus propia copia o tomar posesión de los datos utilizados por el enumerador original. Si es necesario, los enumeradores clonados mantendrá el enumerador original activo (mediante una referencia COM) para asegurarse de que los datos están disponibles para siempre y cuando lo necesiten.  
+  
+##  <a name="a-namemspunka--ccomenumimplmspunk"></a><a name="m_spunk"></a>CComEnumImpl::m_spUnk  
+ Este puntero inteligente mantiene una referencia en el objeto pasado a [CComEnumImpl::Init](#init), asegurándose de que permanece activo durante la vigencia del enumerador.  
+  
+```
+CComPtr<IUnknown> m_spUnk;
+```  
+  
+##  <a name="a-namembegina--ccomenumimplmbegin"></a><a name="m_begin"></a>CComEnumImpl::m_begin  
+ Puntero a la ubicación situada más allá del último elemento de la matriz que contiene los elementos que se van a enumerar.  
+  
+```
+T* m_begin;
+```  
+  
+##  <a name="a-namemenda--ccomenumimplmend"></a><a name="m_end"></a>CComEnumImpl::m_end  
+ Un puntero al primer elemento de la matriz que contiene los elementos que se van a enumerar.  
+  
+```
+T* m_end;
+```  
+  
+##  <a name="a-namemitera--ccomenumimplmiter"></a><a name="m_iter"></a>CComEnumImpl::m_iter  
+ Un puntero al elemento actual de la matriz que contiene los elementos que se van a enumerar.  
+  
+```
+T* m_iter;
+```  
+  
+##  <a name="a-namemdwflagsa--ccomenumimplmdwflags"></a><a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
+ Los indicadores que se pasan a [CComEnumImpl::Init](#init).  
+  
+```
+DWORD m_dwFlags;
+```  
+  
+##  <a name="a-namenexta--ccomenumimplnext"></a><a name="next"></a>CComEnumImpl::Next  
+ Este método proporciona la implementación de la [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) método.  
+  
+```
+STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `celt`  
+ [in] El número de elementos solicitados.  
+  
+ `rgelt`  
+ [out] La matriz que se debe rellenar con los elementos.  
+  
+ `pceltFetched`  
+ [out] El número de elementos realmente devueltos en `rgelt`. Esto puede ser menor que `celt` si hay menos de `celt` elementos permanecen en la lista.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Un valor `HRESULT` estándar.  
+  
+##  <a name="a-namereseta--ccomenumimplreset"></a><a name="reset"></a>CComEnumImpl::Reset  
+ Este método proporciona la implementación de la [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) método.  
+  
+```
+STDMETHOD(Reset)(void);
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Un valor `HRESULT` estándar.  
+  
+##  <a name="a-nameskipa--ccomenumimplskip"></a><a name="skip"></a>CComEnumImpl:: Skip  
+ Este método proporciona la implementación de la [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) método.  
+  
+```
+STDMETHOD(Skip)(ULONG celt);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `celt`  
+ [in] El número de elementos que se van a omitir.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Un valor `HRESULT` estándar.  
+  
+### <a name="remarks"></a>Comentarios  
+ Devuelve E_INVALIDARG si `celt` es cero, se devuelve S_FALSE si es menor que `celt` se devuelven los elementos, lo contrario, devuelve S_OK.  
+  
+## <a name="see-also"></a>Vea también  
+ [Clase IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)   
+ [Clase CComEnum](../../atl/reference/ccomenum-class.md)   
+ [Información general de la clase](../../atl/atl-class-overview.md)
+
