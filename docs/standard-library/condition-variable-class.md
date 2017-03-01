@@ -1,59 +1,240 @@
 ---
-title: "condition_variable (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "condition_variable/std::condition_variable"
-dev_langs: 
-  - "C++"
+title: condition_variable (Clase) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- condition_variable/std::condition_variable
+dev_langs:
+- C++
 ms.assetid: 80b1295c-b73d-4d46-b664-6e183f2eec1b
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# condition_variable (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 6ba1c9aae256029cc35f1815dbc7bfd3503254dc
+ms.lasthandoff: 02/24/2017
 
-Utilice la clase `condition_variable` para esperar un evento cuando tenga un `mutex` de tipo `unique_lock<mutex>`.  Los objetos de este tipo pueden tener un rendimiento mejor que los objetos de tipo [condition\_variable\_any\<unique\_lock\<mutex\>\>](../standard-library/condition-variable-any-class.md).  
+---
+# <a name="conditionvariable-class"></a>condition_variable (Clase)
+Utilice la clase `condition_variable` para esperar un evento cuando tenga un `mutex` de tipo `unique_lock<mutex>`. Los objetos de este tipo pueden tener un rendimiento mejor que los objetos de tipo [condition_variable_any<unique_lock\<mutex>>](../standard-library/condition-variable-any-class.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+class condition_variable;
 ```  
-class condition_variable;  
-```  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[condition\_variable::condition\_variable \(Constructor\)](../Topic/condition_variable::condition_variable%20Constructor.md)|Construye un objeto `condition_variable`.|  
+|[condition_variable::condition_variable (Constructor)](#condition_variable__condition_variable_constructor)|Construye un objeto `condition_variable`.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[condition\_variable::native\_handle \(Método\)](../Topic/condition_variable::native_handle%20Method.md)|Devuelve el tipo específico de la implementación que representa el identificador condition\_variable.|  
-|[condition\_variable::notify\_all \(Método\)](../Topic/condition_variable::notify_all%20Method.md)|Desbloquea todos los subprocesos que están esperando el objeto `condition_variable`.|  
-|[condition\_variable::notify\_one \(Método\)](../Topic/condition_variable::notify_one%20Method.md)|Desbloquea uno de los subprocesos que están esperando el objeto `condition_variable`.|  
-|[condition\_variable::wait \(Método\)](../Topic/condition_variable::wait%20Method.md)|Bloquea un subproceso.|  
-|[condition\_variable::wait\_for \(Método\)](../Topic/condition_variable::wait_for%20Method.md)|Bloquea un subproceso y establece un intervalo de tiempo después del cual el subproceso se desbloquea.|  
-|[condition\_variable::wait\_until \(Método\)](../Topic/condition_variable::wait_until%20Method.md)|Bloquea un subproceso y establece un punto máximo en el tiempo en el que el subproceso se desbloquea.|  
+|[condition_variable::native_handle (Método)](#condition_variable__native_handle_method)|Devuelve el tipo específico de la implementación que representa el identificador condition_variable.|  
+|[condition_variable::notify_all](#condition_variable__notify_all_method)|Desbloquea todos los subprocesos que están esperando el objeto `condition_variable`.|  
+|[condition_variable::notify_one](#condition_variable__notify_one_method)|Desbloquea uno de los subprocesos que están esperando el objeto `condition_variable`.|  
+|[condition_variable::wait](#condition_variable__wait_method)|Bloquea un subproceso.|  
+|[condition_variable::wait_for](#condition_variable__wait_for_method)|Bloquea un subproceso y establece un intervalo de tiempo después del cual el subproceso se desbloquea.|  
+|[condition_variable::wait_until](#condition_variable__wait_until_method)|Bloquea un subproceso y establece un punto máximo en el tiempo en el que el subproceso se desbloquea.|  
   
-## Requisitos  
- **Encabezado:** condition\_variable  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** condition_variable  
   
  **Espacio de nombres:** std  
   
-## Vea también  
+##  <a name="a-nameconditionvariableconditionvariableconstructora--conditionvariableconditionvariable-constructor"></a><a name="condition_variable__condition_variable_constructor"></a>  condition_variable::condition_variable (Constructor)  
+ Construye un objeto `condition_variable`.  
+  
+```
+condition_variable();
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Si no queda suficiente memoria disponible, el constructor produce un objeto [system_error](../standard-library/system-error-class.md) que tiene un código de error de `not_enough_memory`. Si el objeto no puede construirse porque algún otro recurso no está disponible, el constructor produce un objeto `system_error` que tiene un código de error de `resource_unavailable_try_again`.  
+  
+##  <a name="a-nameconditionvariablenativehandlemethoda--conditionvariablenativehandle"></a><a name="condition_variable__native_handle_method"></a>  condition_variable::native_handle  
+ Devuelve el tipo específico de la implementación que representa el identificador condition_variable.  
+  
+```
+native_handle_type native_handle();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ `native_handle_type` se define como un puntero a estructuras de datos internas del Runtime de simultaneidad.  
+  
+##  <a name="a-nameconditionvariablenotifyallmethoda--conditionvariablenotifyall"></a><a name="condition_variable__notify_all_method"></a>  condition_variable::notify_all  
+ Desbloquea todos los subprocesos que están esperando el objeto `condition_variable`.  
+  
+```
+void notify_all() noexcept;
+```  
+  
+##  <a name="a-nameconditionvariablenotifyonemethoda--conditionvariablenotifyone"></a><a name="condition_variable__notify_one_method"></a>  condition_variable::notify_one  
+ Desbloquea uno de los subprocesos que están esperando el objeto `condition_variable`.  
+  
+```
+void notify_one() noexcept;
+```  
+  
+##  <a name="a-nameconditionvariablewaitmethoda--conditionvariablewait"></a><a name="condition_variable__wait_method"></a>  condition_variable::wait  
+ Bloquea un subproceso.  
+  
+```
+void wait(unique_lock<mutex>& Lck);
+
+template <class Predicate>
+void wait(unique_lock<mutex>& Lck, Predicate Pred);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `Lck`  
+ Un objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).  
+  
+ `Pred`  
+ Cualquier expresión que devuelve `true` o `false`.  
+  
+### <a name="remarks"></a>Comentarios  
+ El primer método se bloquea hasta que el objeto `condition_variable` se señaliza mediante una llamada a [notify_one](#condition_variable__notify_one_method) o a [notify_all](#condition_variable__notify_all_method). También se puede reactivar en falso.  
+  
+ En efecto, el segundo método ejecuta el código siguiente.  
+  
+```cpp  
+while(!Pred())
+    wait(Lck);
+```    
+  
+##  <a name="a-nameconditionvariablewaitformethoda--conditionvariablewaitfor"></a><a name="condition_variable__wait_for_method"></a>  condition_variable::wait_for  
+ Bloquea un subproceso y establece un intervalo de tiempo después del cual el subproceso se desbloquea.  
+  
+```
+template <class Rep, class Period>
+cv_status wait_for(
+    unique_lock<mutex>& Lck,
+    const chrono::duration<Rep, Period>& Rel_time);
+
+template <class Rep, class Period, class Predicate>
+bool wait_for(
+    unique_lock<mutex>& Lck,
+    const chrono::duration<Rep, Period>& Rel_time, 
+    Predicate Pred);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `Lck`  
+ Un objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).  
+  
+ `Rel_time`  
+ Objeto `chrono::duration` que especifica la cantidad de tiempo que tiene que transcurrir hasta que el subproceso se reactive.  
+  
+ `Pred`  
+ Cualquier expresión que devuelve `true` o `false`.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ El primer método devuelve `cv_status::timeout` si la espera termina cuando ha transcurrido `Rel_time`. De lo contrario, el método devuelve `cv_status::no_timeout`.  
+  
+ El segundo método devuelve el valor de `Pred`.  
+  
+### <a name="remarks"></a>Comentarios  
+ El primer método se bloquea hasta que se señaliza el objeto `condition_variable` mediante una llamada a [notify_one](#condition_variable__notify_one_method) o [notify_all](#condition_variable__notify_all_method), o hasta que ha transcurrido el intervalo de tiempo `Rel_time`. También se puede reactivar en falso.  
+  
+ En efecto, el segundo método ejecuta el código siguiente.  
+  
+```cpp  
+while(!Pred())
+    if(wait_for(Lck, Rel_time) == cv_status::timeout)
+    return Pred();
+
+return true;
+```  
+  
+##  <a name="a-nameconditionvariablewaituntilmethoda--conditionvariablewaituntil"></a><a name="condition_variable__wait_until_method"></a>  condition_variable::wait_until  
+ Bloquea un subproceso y establece un punto máximo en el tiempo en el que el subproceso se desbloquea.  
+  
+```
+template <class Clock, class Duration>
+cv_status wait_until(
+    unique_lock<mutex>& Lck,
+    const chrono::time_point<Clock, Duration>& Abs_time);
+
+template <class Clock, class Duration, class Predicate>
+bool wait_until(
+    unique_lock<mutex>& Lck,
+    const chrono::time_point<Clock, Duration>& Abs_time, 
+    Predicate Pred);
+
+cv_status wait_until(
+    unique_lock<mutex>& Lck,
+    const xtime* Abs_time);
+
+template <class Predicate>
+bool wait_until(
+    unique_lock<mutex>& Lck,
+    const xtime* Abs_time, 
+    Predicate Pred);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `Lck`  
+ Un objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).  
+  
+ `Abs_time`  
+ Un objeto [chrono::time_point](../standard-library/time-point-class.md).  
+  
+ `Pred`  
+ Cualquier expresión que devuelve `true` o `false`.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Los métodos que devuelven un tipo `cv_status` devuelven `cv_status::timeout` si la espera termina cuando transcurre `Abs_time`. De lo contrario, los métodos devuelven `cv_status::no_timeout`.  
+  
+ Los métodos que devuelven un tipo `bool` devuelven el valor de `Pred`.  
+  
+### <a name="remarks"></a>Comentarios  
+ El primer método se bloquea hasta que el objeto `condition_variable` se señaliza mediante una llamada a [notify_one](#condition_variable__notify_one_method) o a [notify_all](#condition_variable__notify_all_method), o hasta que transcurre `Abs_time`. También se puede reactivar en falso.  
+  
+ En efecto, el segundo método ejecuta el código siguiente  
+  
+```cpp  
+while(!Pred())
+    if(wait_until(Lck, Abs_time) == cv_status::timeout)
+    return Pred();
+
+return true;
+```  
+  
+ Los métodos tercero y cuarto utilizan un puntero a un objeto de tipo `xtime` para reemplazar el objeto `chrono::time_point`. El objeto `xtime` especifica el tiempo máximo que hay que esperar una señal.  
+  
+## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
- [\<condition\_variable\>](../standard-library/condition-variable.md)
+ [<condition_variable>](../standard-library/condition-variable.md)
+
+
+
+

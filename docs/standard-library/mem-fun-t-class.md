@@ -1,66 +1,88 @@
 ---
-title: "mem_fun_t (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "mem_fun_t"
-  - "xfunctional/std::mem_fun_t"
-  - "std::mem_fun_t"
-  - "std.mem_fun_t"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mem_fun_t (clase)"
+title: Clase mem_fun_t | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- mem_fun_t
+- xfunctional/std::mem_fun_t
+- std::mem_fun_t
+- std.mem_fun_t
+dev_langs:
+- C++
+helpviewer_keywords:
+- mem_fun_t class
 ms.assetid: 242566d4-750c-4c87-9d63-2e2c9d19ca2a
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# mem_fun_t (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 0f30a83291abb804e10a6692bf0b0df54bcabc34
+ms.lasthandoff: 02/24/2017
 
-Clase de adaptadores que permite llamar a una función miembro **non\_const** que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de puntero.  
+---
+# <a name="memfunt-class"></a>mem_fun_t (Clase)
+Clase de adaptadores que permite llamar a una función miembro **non_const** que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de puntero.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+template <class Result, class Type>
+class mem_fun_t : public unary_function<Type *, Result> {
+    explicit mem_fun_t(Result (Type::* _Pm)());
+
+    Result operator()(Type* _Pleft) const;
+
+ };
 ```  
-template<class Result, class Type>  
-   class mem_fun_t : public unary_function<Type *, Result> {  
-      explicit mem_fun_t(Result ( Type::*_Pm )( ) );  
-      Result operator()( Type* _Pleft ) const;  
-   };  
-```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `_Pm`  
- Un puntero a una función miembro de clase **Tipo** para convertirse en un objeto de función.  
+ Un puntero a la función miembro de clase **Type** que se convertirá en un objeto de función.  
   
  `_Pleft`  
- El objeto que la función miembro de `_Pm` está invitada.  
+ El objeto en que se llama a la función miembro `_Pm`.  
   
-## Valor devuelto  
- Una función unario personalizable.  
+## <a name="return-value"></a>Valor devuelto  
+ Una función unaria adaptable.  
   
-## Comentarios  
- La clase de plantilla almacena una copia de `_Pm`, que debe ser un puntero a una función miembro de clase **Tipo**, en un objeto miembro privado.  Define la función `operator()` miembro como volver \(`_Pleft`\-\>\* `_Pm`\) \(\).  
+## <a name="remarks"></a>Comentarios  
+ La clase de plantilla almacena una copia de `_Pm`, que debe ser un puntero a una función miembro de clase **Type**, en un objeto miembro privado. Define su función miembro `operator()` para que devuelva ( `_Pleft`->* `_Pm`)( ).  
   
-## Ejemplo  
- El constructor de `mem_fun_t` no se suele utilizar directamente; la función `mem_fun` auxiliares se utiliza para adaptar las funciones miembro.  Vea [mem\_fun](../Topic/mem_fun%20Function.md) para obtener un ejemplo de cómo utilizar adaptadores de la función miembro.  
+## <a name="example"></a>Ejemplo  
+ Normalmente, no se usa el constructor de `mem_fun_t` directamente; la función auxiliar `mem_fun` se usa para adaptar funciones miembro. Vea [mem_fun](../standard-library/functional-functions.md#mem_fun_function) para obtener un ejemplo de cómo usar adaptadores de funciones miembro.  
   
-## Requisitos  
- **Encabezado:** \<functional\>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<functional>  
   
  **Espacio de nombres:** std  
   
-## Vea también  
- [\<functional\>](../standard-library/functional.md)   
- [Seguridad para subprocesos en la biblioteca estándar de C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Biblioteca de plantillas estándar](../misc/standard-template-library.md)
+## <a name="see-also"></a>Vea también  
+ [\<functional>](../standard-library/functional.md)   
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

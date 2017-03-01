@@ -1,73 +1,88 @@
 ---
-title: "&lt;allocators&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdext::<allocators>"
-  - "allocators/stdext::allocators"
-  - "<allocators>"
-  - "stdext.<allocators>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "allocators (encabezado)"
+title: '&lt;allocators&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- stdext::<allocators>
+- allocators/stdext::allocators
+- <allocators>
+- stdext.<allocators>
+dev_langs:
+- C++
+helpviewer_keywords:
+- allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
 caps.latest.revision: 19
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# &lt;allocators&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: fa76512c47fd7412227a26de3de05190c687c4b3
+ms.lasthandoff: 02/24/2017
 
-Define varias plantillas que ayudan a asignar y los bloques de memoria libre para los contenedores nodo\- basados en.  
+---
+# <a name="ltallocatorsgt"></a>&lt;allocators&gt;
+Define varias plantillas que ayudan a asignar y liberar bloques de memoria para contenedores basados en nodos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #include <allocators>  
 ```  
   
-## Comentarios  
- \<El encabezado\> de los asignadores proporciona seis plantillas de asignador que se pueden utilizar las estrategias de administración de memoria seleccionar para los contenedores nodo\- basados en.  Para el uso con estas plantillas, también proporciona varios filtros de sincronización para adaptar la estrategia de administración de memoria a distintos esquemas de multithreading \(sin incluida.  La coincidencia una estrategia de administración de memoria los modelos conocidos de utilización de memoria, y los requisitos de sincronización, una aplicación determinada puede aumentar la velocidad o reducir a menudo los requisitos de memoria total de una aplicación.  
+## <a name="remarks"></a>Comentarios  
+ El encabezado \<allocators> proporciona seis plantillas de asignador que se pueden usar para seleccionar estrategias de administración de memoria para los contenedores basados en nodos. Para su uso con estas plantillas, también proporciona varios filtros de sincronización diferentes para adaptar la estrategia de administración de memoria a una serie de esquemas multithreading distintos (incluso ninguno). La combinación de una estrategia de administración de memoria con los patrones de uso de memoria conocidos, y los requisitos de sincronización, de una determinada aplicación, puede aumentar la velocidad o reducir los requisitos de memoria generales de una aplicación.  
   
- Las plantillas de asignador se implementan con componentes reutilizables que pueden ser personalizados o reemplazar para proporcionar estrategias de administración de memoria adicionales.  
+ Las plantillas de asignador se implementan con componentes reutilizables que se pueden personalizar o reemplazar a fin de proporcionar estrategias de administración de memoria adicionales.  
   
- Los contenedores nodo\- basándose en la biblioteca estándar de C\+\+ \(std::list, std::set, std::multiset, std::map y std::multimap\) almacenan sus elementos en nodos.  Todos los nodos de un tipo de contenedor set son el mismo tamaño, por lo que la flexibilidad de un administrador de memoria de uso general no es necesaria.  Dado que el tamaño de cada bloque de memoria se conoce en tiempo de compilación, el administrador de memoria puede ser mucho más sencilla y más rápido.  
+ Los contenedores basados en nodos de la biblioteca estándar de C++ (std::list, std::set, std::multiset, std::map y std::multimap) almacenan sus elementos en nodos individuales. Todos los nodos de un tipo de contenedor determinado tienen el mismo tamaño, por lo que no es necesaria la flexibilidad de un administrador de memoria de propósito general. Dado que se conoce el tamaño de cada bloque de memoria en tiempo de compilación, el administrador de memoria puede ser mucho más rápido y sencillo.  
   
- Cuando se utilizan con contenedores que nodo\- no se basan \(como el std::deque estándar de std::vector de los contenedores de la biblioteca de C\+\+ y, std::basic\_string\), las plantillas de alllocator funcionarán correctamente, pero no probablemente proporcionar ninguna mejora de rendimiento sobre el asignador predeterminado.  
+ Cuando se usan con contenedores que no están basados en nodos (por ejemplo, los contenedores std::vector std::deque y std::basic_string de la biblioteca estándar de C++), las plantillas de asignador funcionan correctamente, pero no es probable que proporcionen ninguna mejora de rendimiento con respecto al asignador predeterminado.  
   
- Un asignador es una clase de plantilla que describe un objeto que administra la asignación de almacenamiento y liberar para los objetos y matrices de objetos de tipo designado.  Los objetos del asignador utilizan varias clases de plantilla de contenedor en la biblioteca estándar de C\+\+.  
+ Un asignador es una clase de plantilla que describe un objeto que administra la asignación de almacenamiento y la liberación de objetos y matrices de objetos de un tipo designado. Los objetos de asignador son usados por varias clases de plantilla de contenedor de la biblioteca estándar de C++.  
   
- Los asignadores son todas las plantillas de este tipo:  
+ Los asignadores son todos plantillas de este tipo:  
   
- `template<class`  `Type` `>`  
+ `template<class` `Type` `>`  
   
  `class allocator;`  
   
- donde es el tipo el argumento `Type` de plantilla administrado por la instancia del asignador.  La biblioteca estándar de C\+\+ proporciona un asignador predeterminado, la clase de plantilla [asignador](../standard-library/allocator-class.md), que se define en [\<memory\>](../standard-library/memory.md).  \<El encabezado\> de los asignadores proporciona los asignadores siguientes:  
+ donde el argumento de plantilla `Type` es el tipo administrado por la instancia de asignador. La biblioteca estándar de C++ proporciona un asignador predeterminado, la clase de plantilla [allocator](../standard-library/allocator-class.md), que se define en [\<memory>](../standard-library/memory.md). El encabezado \<allocators> proporciona los asignadores siguientes:  
   
--   [allocator\_newdel](../standard-library/allocator-newdel-class.md)  
+- [allocator_newdel](../standard-library/allocator-newdel-class.md)  
   
--   [allocator\_unbounded](../standard-library/allocator-unbounded-class.md)  
+- [allocator_unbounded](../standard-library/allocator-unbounded-class.md)  
   
--   [allocator\_fixed\_size](../standard-library/allocator-fixed-size-class.md)  
+- [allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)  
   
--   [allocator\_variable\_size](../standard-library/allocator-variable-size-class.md)  
+- [allocator_variable_size](../standard-library/allocator-variable-size-class.md)  
   
--   [allocator\_suballoc](../standard-library/allocator-suballoc-class.md)  
+- [allocator_suballoc](../standard-library/allocator-suballoc-class.md)  
   
--   [allocator\_chunklist](../standard-library/allocator-chunklist-class.md)  
+- [allocator_chunklist](../standard-library/allocator-chunklist-class.md)  
   
- Utilice una creación correcta de un asignador como segundo argumento de tipo al crear un contenedor, como en el ejemplo de código siguiente.  
+ Use una creación de instancias adecuada de un asignador como segundo argumento de tipo al crear un contenedor, como en el ejemplo de código siguiente.  
   
  `#include <list>`  
   
@@ -75,9 +90,9 @@ Define varias plantillas que ayudan a asignar y los bloques de memoria libre par
   
  `std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;`  
   
- \_List0 asigna nodos con `allocator_chunklist` y el filtro predeterminado de sincronización.  
+ _List0 asigna nodos con `allocator_chunklist` y el filtro de sincronización predeterminado.  
   
- Utilice la macro [ALLOCATOR\_DECL](../Topic/ALLOCATOR_DECL%20\(%3Callocators%3E\).md) para crear plantillas de asignador con los filtros de sincronización distinto del predeterminado:  
+ Use la macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) para crear plantillas de asignador con filtros de sincronización que no sean los predeterminados:  
   
  `#include <list>`  
   
@@ -87,94 +102,98 @@ Define varias plantillas que ayudan a asignar y los bloques de memoria libre par
   
  `std::list<int, alloc<int> > _List1;`  
   
- \_Lst1 asigna nodos con `allocator_chunklist` y el filtro de sincronización de [synchronization\_per\_thread](../standard-library/sync-per-thread-class.md) .  
+ _Lst1 asigna nodos con `allocator_chunklist` y el filtro de sincronización [sync_per_thread](../standard-library/sync-per-thread-class.md).  
   
- Un asignador de bloque es caché o un filtro.  Caché es una clase de plantilla que toma un argumento de std::size\_t escrito.  Define un asignador de bloque que asignar y desasignar cualquier espacio bloques de memoria de un solo tamaño.  Debe obtener memoria utilizando el operador `new`, pero no necesita realizar una llamada independiente al operador `new` para cada bloque.  Puede, por ejemplo, suballocate de un bloque mayor o bloques desasignados caché para la reasignación subsiguiente.  
+ Un asignador de bloques es una memoria caché o un filtro. Una memoria caché es una clase de plantilla que toma un argumento de tipo std::size_t. Define un asignador de bloques que asigna y desasigna bloques de memoria de un tamaño único. Debe obtener memoria mediante el operador `new`, pero no necesita realizar una llamada independiente al operador `new` para cada bloque. Por ejemplo, puede subasignar desde un bloque mayor o almacenar en caché bloques desasignados para una reasignación posterior.  
   
- Con un compilador que no pueda compilar reencuaderne el valor del argumento de std::size\_t se usa cuando la plantilla se han creado instancias no es necesariamente el valor de \_Sz del argumento pasado al miembro de caché que las funciones asignan y que desasignan.  
+ Con un compilador que no puede compilar el reenlace, el valor del argumento std:: size_t empleado al crear una instancia de la plantilla no es necesariamente el valor del argumento _Sz pasado a las funciones miembro allocate y deallocate de una memoria caché.  
   
- \<los asignadores\> proporcionan las siguientes plantillas de caché:  
+ \<allocators> proporciona las siguientes plantillas de caché:  
   
--   [cache\_freelist](../standard-library/cache-freelist-class.md)  
+- [cache_freelist](../standard-library/cache-freelist-class.md)  
   
--   [cache\_suballoc](../standard-library/cache-suballoc-class.md)  
+- [cache_suballoc](../standard-library/cache-suballoc-class.md)  
   
--   [cache\_chunklist](../standard-library/cache-chunklist-class.md)  
+- [cache_chunklist](../standard-library/cache-chunklist-class.md)  
   
- Un filtro es un asignador de bloque que implementa sus funciones miembro utilizando otro asignador del bloque que se pasa a como argumento de plantilla.  La forma más común de filtro es un filtro de sincronización, que aplica una directiva de sincronización para controlar el acceso a las funciones miembro de una instancia de otro asignador de bloque. \<los asignadores\> proporciona filtros siguientes de sincronización:  
+ Un filtro es un asignador de bloques que implementa sus funciones miembro mediante otro asignador de bloques que se le pasa como un argumento de plantilla. La forma más común de filtro es un filtro de sincronización, que aplica una directiva de sincronización para controlar el acceso a las funciones miembro de una instancia de otro asignador de bloques. \<allocators> proporciona los siguientes filtros de sincronización:  
   
--   [synchronization\_none](../standard-library/sync-none-class.md)  
+- [sync_none](../standard-library/sync-none-class.md)  
   
--   [synchronization\_per\_container](../standard-library/sync-per-container-class.md)  
+- [sync_per_container](../standard-library/sync-per-container-class.md)  
   
--   [synchronization\_per\_thread](../standard-library/sync-per-thread-class.md)  
+- [sync_per_thread](../standard-library/sync-per-thread-class.md)  
   
--   [synchronization\_shared](../standard-library/sync-shared-class.md)  
+- [sync_shared](../standard-library/sync-shared-class.md)  
   
- \<los asignadores\> también proporcionan el filtro [rts\_alloc](../standard-library/rts-alloc-class.md), que contiene las instancias del asignador de bloques de varias y determina que instancia a utilizar para la asignación o la desasignación en tiempo de ejecución en lugar de en tiempo de compilación.  Se utiliza con compiladores que no pueden compilar reencuadernan.  
+ \<allocators> también proporciona el filtro [rts_alloc](../standard-library/rts-alloc-class.md), que contiene varias instancias del asignador de bloques y determina la instancia que se va a usar para la asignación o desasignación en tiempo de ejecución, y no en tiempo de compilación. Se usa con los compiladores que no se pueden reenlazar mediante compilación.  
   
- Una directiva de sincronización determina cómo los identificadores de instancia las solicitudes simultáneas de asignación de un asignador y la desasignación de varios subprocesos.  La directiva más simple es pasar todas las solicitudes directamente a través del objeto de caché subyacente, ya que la administración de sincronización al usuario.  Una directiva más compleja podría ser utilizar una exclusión mutua para serializar el acceso al objeto de caché subyacente.  
+ Una directiva de sincronización determina cómo controla una instancia de asignador las solicitudes de asignación y desasignación simultáneas desde varios subprocesos. La directiva más sencilla es pasar todas las solicitudes directamente al objeto de caché subyacente, dejando la administración de la sincronización al usuario. Una directiva más compleja podría consistir en usar una exclusión mutua para serializar el acceso al objeto de caché subyacente.  
   
- Si un compilador admite la compilación de aplicaciones de un único subproceso y multiproceso, el filtro predeterminado de sincronización para las aplicaciones de un único subproceso es `sync_none`; para todos los demás casos es `sync_shared`.  
+ Si un compilador admite la compilación de aplicaciones de un único subproceso y de varios, el filtro de sincronización predeterminado para las aplicaciones de un único subproceso es `sync_none`; en todos los demás casos, es `sync_shared`.  
   
- La plantilla `cache_freelist` de caché toma un argumento máximo de la clase que determina el número máximo de elementos que se almacenan en la lista disponible.  
+ La plantilla caché `cache_freelist` toma un argumento de clase máxima que determina el número máximo de elementos que se van a almacenar en la lista libre.  
   
- \<los asignadores\> proporcionan las clases de siguientes:  
+ \<allocators> proporciona las siguientes clases máximas:  
   
--   [max\_none](../standard-library/max-none-class.md)  
+- [max_none](../standard-library/max-none-class.md)  
   
--   [max\_unbounded](../standard-library/max-unbounded-class.md)  
+- [max_unbounded](../standard-library/max-unbounded-class.md)  
   
--   [max\_fixed\_size](../standard-library/max-fixed-size-class.md)  
+- [max_fixed_size](../standard-library/max-fixed-size-class.md)  
   
--   [max\_variable\_size](../standard-library/max-variable-size-class.md)  
+- [max_variable_size](../standard-library/max-variable-size-class.md)  
   
-### Macros  
-  
-|||  
-|-|-|  
-|[ALLOCATOR\_DECL](../Topic/ALLOCATOR_DECL%20\(%3Callocators%3E\).md)|Genera una clase de plantilla de asignador.|  
-|[CACHE\_CHUNKLIST](../Topic/CACHE_CHUNKLIST%20\(%3Callocators%3E\).md)|Produce `stdext::allocators::cache_chunklist<sizeof(Type)>`.|  
-|[CACHE\_FREELIST](../Topic/CACHE_FREELIST%20\(%3Callocators%3E\).md)|Produce `stdext::allocators::cache_freelist<sizeof(Type), max>`.|  
-|[CACHE\_SUBALLOC](../Topic/CACHE_SUBALLOC%20\(%3Callocators%3E\).md)|Produce `stdext::allocators::cache_suballoc<sizeof(Type)>`.|  
-|[SYNC\_DEFAULT](../Topic/SYNC_DEFAULT%20\(%3Callocators%3E\).md)|Produce un filtro de sincronización.|  
-  
-### Operadores  
+### <a name="macros"></a>Macros  
   
 |||  
 |-|-|  
-|[operator\!\=](../Topic/operator!=%20\(%3Callocators%3E\).md)|Comprueba la desigualdad entre los objetos de asignador de una clase especificada.|  
-|[operator\=\=](../Topic/operator==%20\(%3Callocators%3E\).md)|Comprueba la igualdad entre los objetos de asignador de una clase especificada.|  
+|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Da como resultado una clase de plantilla de asignador.|  
+|[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|Produce `stdext::allocators::cache_chunklist<sizeof(Type)>`.|  
+|[CACHE_FREELIST](../standard-library/allocators-functions.md#cache_freelist)|Produce `stdext::allocators::cache_freelist<sizeof(Type), max>`.|  
+|[CACHE_SUBALLOC](../standard-library/allocators-functions.md#cache_suballoc)|Produce `stdext::allocators::cache_suballoc<sizeof(Type)>`.|  
+|[SYNC_DEFAULT](../standard-library/allocators-functions.md#sync_default)|Da como resultado un filtro de sincronización.|  
   
-### Clases  
+### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[allocator\_base](../standard-library/allocator-base-class.md)|Define la clase base y funciones comunes necesarias para crear un asignador definido por el usuario de un filtro de sincronización.|  
-|[allocator\_chunklist](../standard-library/allocator-chunklist-class.md)|Describe un objeto que administra la asignación de almacenamiento y liberar para los objetos en la memoria caché de [cache\_chunklist](../standard-library/cache-chunklist-class.md)escrito.|  
-|[allocator\_fixed\_size](../standard-library/allocator-fixed-size-class.md)|Describe un objeto que administra la asignación de almacenamiento y liberar para los objetos de `Type` escribe utilizando la memoria caché de [cache\_freelist](../standard-library/cache-freelist-class.md) escrito con una longitud administrada por [max\_fixed\_size](../standard-library/max-fixed-size-class.md).|  
-|[allocator\_newdel](../standard-library/allocator-newdel-class.md)|Implementa un asignador que utilice `operator delete` para desasignar un bloque y `operator new` de memoria para asignar un bloque de memoria.|  
-|[allocator\_suballoc](../standard-library/allocator-suballoc-class.md)|Describe un objeto que administra la asignación de almacenamiento y liberar para los objetos de `Type` escribe utilizando la memoria caché de [cache\_suballoc](../standard-library/cache-suballoc-class.md)escrito.|  
-|[allocator\_unbounded](../standard-library/allocator-unbounded-class.md)|Describe un objeto que administra la asignación de almacenamiento y liberar para los objetos de `Type` escribe utilizando la memoria caché de [cache\_freelist](../standard-library/cache-freelist-class.md) escrito con una longitud administrada por [max\_unbounded](../standard-library/max-unbounded-class.md).|  
-|[allocator\_variable\_size](../standard-library/allocator-variable-size-class.md)|Describe un objeto que administra la asignación de almacenamiento y liberar para los objetos de `Type` escribe utilizando la memoria caché de [cache\_freelist](../standard-library/cache-freelist-class.md) escrito con una longitud administrada por [max\_variable\_size](../standard-library/max-variable-size-class.md).|  
-|[cache\_chunklist](../standard-library/cache-chunklist-class.md)|Define un asignador de bloque que asignar y desasignar cualquier espacio bloques de memoria de un solo tamaño.|  
-|[cache\_freelist](../standard-library/cache-freelist-class.md)|Define un asignador de bloque que asignar y desasignar cualquier espacio bloques de memoria de un solo tamaño.|  
-|[cache\_suballoc](../standard-library/cache-suballoc-class.md)|Define un asignador de bloque que asignar y desasignar cualquier espacio bloques de memoria de un solo tamaño.|  
+|[operator!= (\<allocators>)](../standard-library/allocators-operators.md#operator_neq)|Comprueba la desigualdad entre los objetos de asignador de una clase especificada.|  
+|[operator== (\<allocators>)](../standard-library/allocators-operators.md#operator_eq_eq)|Comprueba la igualdad entre los objetos de asignador de una clase especificada.|  
+  
+### <a name="classes"></a>Clases  
+  
+|||  
+|-|-|  
+|[allocator_base](../standard-library/allocator-base-class.md)|Define la clase base y las funciones comunes necesarias para crear un asignador definido por el usuario a partir de un filtro de sincronización.|  
+|[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Describe un objeto que administra la asignación de almacenamiento y la liberación de objetos mediante una memoria caché de tipo [cache_chunklist](../standard-library/cache-chunklist-class.md).|  
+|[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|Describe un objeto que administra la asignación de almacenamiento y la liberación de objetos de tipo `Type` mediante una memoria caché de tipo [cache_freelist](../standard-library/cache-freelist-class.md) con una longitud administrada por [max_fixed_size](../standard-library/max-fixed-size-class.md).|  
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementa un asignador que usa `operator delete` para desasignar un bloque de memoria y `operator new` para asignar un bloque de memoria.|  
+|[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|Describe un objeto que administra la asignación de almacenamiento y la liberación de objetos de tipo `Type` mediante una memoria caché de tipo [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
+|[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|Describe un objeto que administra la asignación de almacenamiento y la liberación de objetos de tipo `Type` mediante una memoria caché de tipo [cache_freelist](../standard-library/cache-freelist-class.md) con una longitud administrada por [max_unbounded](../standard-library/max-unbounded-class.md).|  
+|[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|Describe un objeto que administra la asignación de almacenamiento y la liberación de objetos de tipo `Type` mediante una memoria caché de tipo [cache_freelist](../standard-library/cache-freelist-class.md) con una longitud administrada por [max_variable_size](../standard-library/max-variable-size-class.md).|  
+|[cache_chunklist](../standard-library/cache-chunklist-class.md)|Define un asignador de bloques que asigna y desasigna bloques de memoria de un tamaño único.|  
+|[cache_freelist](../standard-library/cache-freelist-class.md)|Define un asignador de bloques que asigna y desasigna bloques de memoria de un tamaño único.|  
+|[cache_suballoc](../standard-library/cache-suballoc-class.md)|Define un asignador de bloques que asigna y desasigna bloques de memoria de un tamaño único.|  
 |[freelist](../standard-library/freelist-class.md)|Administra una lista de bloques de memoria.|  
-|[max\_fixed\_size](../standard-library/max-fixed-size-class.md)|Describe un objeto máximo de la clase limitar un objeto de [freelist](../standard-library/freelist-class.md) a una longitud máxima fija.|  
-|[max\_none](../standard-library/max-none-class.md)|Describe un objeto máximo de la clase limitar un objeto de [freelist](../standard-library/freelist-class.md) a una longitud máxima de cero.|  
-|[max\_unbounded](../standard-library/max-unbounded-class.md)|Describe un objeto máximo de clase que no limita la longitud máxima de un objeto de [freelist](../standard-library/freelist-class.md) .|  
-|[max\_variable\_size](../standard-library/max-variable-size-class.md)|Describe un objeto máximo de la clase limitar un objeto de [freelist](../standard-library/freelist-class.md) a una longitud máxima que sea aproximadamente proporcional al número de bloques de memoria asignados.|  
-|[rts\_alloc](../standard-library/rts-alloc-class.md)|La clase de plantilla de rts\_alloc describe [filtro](../standard-library/allocators-header.md) que contiene una matriz de instancias de caché y determina que instancia a utilizar para la asignación y la desasignación en tiempo de ejecución en lugar de en tiempo de compilación.|  
-|[synchronization\_none](../standard-library/sync-none-class.md)|Describe un filtro de sincronización que no proporciona ninguna sincronización.|  
-|[synchronization\_per\_container](../standard-library/sync-per-container-class.md)|Describe un filtro de sincronización que proporciona un objeto de caché independiente para cada objeto de asignador.|  
-|[synchronization\_per\_thread](../standard-library/sync-per-thread-class.md)|Describe un filtro de sincronización que proporciona un objeto de caché independiente para cada subproceso.|  
-|[synchronization\_shared](../standard-library/sync-shared-class.md)|Describe un filtro de sincronización que utilice una exclusión mutua para controlar el acceso a un objeto de caché compartido por todos los asignadores.|  
+|[max_fixed_size](../standard-library/max-fixed-size-class.md)|Describe un objeto de clase máxima que limita un objeto [freelist](../standard-library/freelist-class.md) a una longitud máxima fija.|  
+|[max_none](../standard-library/max-none-class.md)|Describe un objeto de clase máxima que limita un objeto [freelist](../standard-library/freelist-class.md) a una longitud máxima de cero.|  
+|[max_unbounded](../standard-library/max-unbounded-class.md)|Describe un objeto de clase máxima que no limita la longitud máxima de un objeto [freelist](../standard-library/freelist-class.md).|  
+|[max_variable_size](../standard-library/max-variable-size-class.md)|Describe un objeto de clase máxima que limita un objeto [freelist](../standard-library/freelist-class.md) a una longitud máxima que es aproximadamente proporcional al número de bloques de memoria asignados.|  
+|[rts_alloc](../standard-library/rts-alloc-class.md)|La clase de plantilla rts_alloc describe un [filtro](../standard-library/allocators-header.md) que contiene una matriz de instancias de caché y determina la instancia que se va a usar para la asignación y la desasignación en tiempo de ejecución, y no en tiempo de compilación.|  
+|[sync_none](../standard-library/sync-none-class.md)|Describe un filtro de sincronización que no proporciona ninguna sincronización.|  
+|[sync_per_container](../standard-library/sync-per-container-class.md)|Describe un filtro de sincronización que proporciona un objeto de caché independiente para cada objeto de asignador.|  
+|[sync_per_thread](../standard-library/sync-per-thread-class.md)|Describe un filtro de sincronización que proporciona un objeto de caché independiente para cada subproceso.|  
+|[sync_shared](../standard-library/sync-shared-class.md)|Describe un filtro de sincronización que usa una exclusión mutua para controlar el acceso a un objeto de caché compartido por todos los asignadores.|  
   
-## Requisitos  
- asignadores \<de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<allocators>  
   
  **Espacio de nombres:** stdext  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+
