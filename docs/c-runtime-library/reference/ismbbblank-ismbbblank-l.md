@@ -1,47 +1,63 @@
 ---
-title: "_ismbbblank, _ismbbblank_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ismbbblank_l"
-  - "_ismbbblank"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-dev_langs: 
-  - "C++"
+title: _ismbbblank, _ismbbblank_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ismbbblank_l
+- _ismbbblank
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+dev_langs:
+- C++
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _ismbbblank, _ismbbblank_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 748dd47c43ae2f07a7a6b0d828775c4122062b6c
+ms.lasthandoff: 02/24/2017
 
-Determina si el carácter de multibytes especificado es un carácter en blanco.  
+---
+# <a name="ismbbblank-ismbbblankl"></a>_ismbbblank, _ismbbblank_l
+Determina si el carácter multibyte especificado es un carácter en blanco.  
   
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución.  Para obtener más información, vea [Funciones de CRT no admitidas con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int _ismbbblank(  
@@ -53,28 +69,28 @@ int _ismbbblank_l(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `c`  
  Entero que se va a probar.  
   
  `locale`  
  Configuración regional que se va a usar.  
   
-## Valor devuelto  
- `_ismbbblank` devuelve un valor distinto de cero si `c` representa un carácter de espacio \(0x20\), un carácter de tabulación horizontal \(0x09\) o un carácter específico de una configuración regional que se usa para separar palabras dentro de una línea de texto para la que `isspace` es true; de lo contrario, devuelve 0.  `_ismbbblank` usa la configuración regional actual para cualquier comportamiento que dependa de la configuración regional.  `_ismbbblank_l` es idéntico, salvo porque utiliza la configuración regional que se pasa.  Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+## <a name="return-value"></a>Valor devuelto  
+ `_ismbbblank` devuelve un valor distinto de cero si `c` representa un carácter de espacio (0x20), un carácter de tabulación horizontal (0x09) o un carácter específico de la configuración regional que se usa para separar las palabras dentro de una línea de texto para el que `isspace` es «true» (verdadero); en caso contrario, devuelve 0. `_ismbbblank` usa la configuración regional actual para cualquier comportamiento que dependa de la configuración regional. `_ismbbblank_l` es exactamente igual, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`_ismbbblank`|\<mbctype.h\>|  
-|`_ismbbblank_l`|\<mbctype.h\>|  
+|-------------|---------------------|  
+|`_ismbbblank`|\<mbctype.h>|  
+|`_ismbbblank_l`|\<mbctype.h>|  
   
  Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Equivalente en .NET Framework  
- No es aplicable Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
+ No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Clasificación de bytes](../../c-runtime-library/byte-classification.md)   
- [\_ismbb \(Rutinas\)](../../c-runtime-library/ismbb-routines.md)
+ [_ismbb (Rutinas)](../../c-runtime-library/ismbb-routines.md)

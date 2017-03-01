@@ -1,65 +1,78 @@
 ---
-title: "add_pointer (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::add_pointer"
-  - "std.tr1.add_pointer"
-  - "add_pointer"
-  - "std.add_pointer"
-  - "std::add_pointer"
-  - "type_traits/std::add_pointer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "add_pointer (clase) [TR1]"
-  - "add_pointer"
+title: add_pointer (Clase) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- add_pointer
+- std::add_pointer
+- type_traits/std::add_pointer
+dev_langs:
+- C++
+helpviewer_keywords:
+- add_pointer class
+- add_pointer
 ms.assetid: d8095cb0-6578-4143-b78f-87f82485298c
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# add_pointer (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 008f19421575b8a930498a615642fdfdad99b7b6
+ms.lasthandoff: 02/24/2017
 
-Crea un puntero\-a\-tipo a partir de un tipo especificado.  
+---
+# <a name="addpointer-class"></a>add_pointer (Clase)
+Crea un puntero-a-tipo a partir de un tipo especificado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-template<class Ty>  
-    struct add_pointer;  
-  
-template<class T>  
+template <class T>  
+struct add_pointer;  
+ 
+template <class T>
 using add_pointer_t = typename add_pointer<T>::type;  
 ```  
   
-#### Parámetros  
- `Ty`  
- Tipo que se va a modificar.  
+#### <a name="parameters"></a>Parámetros  
+*T*  
+Tipo que se va a modificar.  
   
-## Comentarios  
- El tipo miembro typedef denomina el mismo tipo como `remove_reference<T>::type*`.  
+## <a name="remarks"></a>Comentarios  
+El typedef de miembro `type` denomina al mismo tipo como `remove_reference<T>::type*`. El alias `add_pointer_t` es un acceso directo para acceder al typedef de miembro `type`.  
   
- Como no es válido crear punteros a partir de referencias, `add_pointer` quita la referencia, si existe, del tipo especificado antes de crear un puntero\-a\-tipo.  Por consiguiente, se puede usar un tipo con `add_pointer` sin que preocupe el hecho de si el tipo es una referencia.  
+Como no es válido crear punteros a partir de referencias, `add_pointer` quita la referencia, si existe, del tipo especificado antes de crear un puntero-a-tipo. Por consiguiente, se puede usar un tipo con `add_pointer` sin que preocupe el hecho de si el tipo es una referencia.  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra que `add_pointer` de un tipo es igual que un puntero a ese tipo.  
+## <a name="example"></a>Ejemplo  
+En el ejemplo siguiente se muestra que `add_pointer` de un tipo es igual que un puntero a ese tipo.  
   
-```  
+```cpp  
 #include <type_traits>   
 #include <iostream>   
   
 int main()   
-    {   
+{   
     std::add_pointer_t<int> *p = (int **)0;   
   
     p = p;  // to quiet "unused" warning   
@@ -67,16 +80,19 @@ int main()
         << typeid(*p).name() << std::endl;   
   
     return (0);   
-    }  
-  
+}  
 ```  
   
-  **add\_pointer\_t\<int\> \=\= int \***   
-## Requisitos  
- **Encabezado:** \<type\_traits\>  
+```Output  
+add_pointer_t<int> == int *  
+```  
+  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
  **Espacio de nombres:** std  
   
-## Vea también  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [remove\_pointer \(Clase\)](../standard-library/remove-pointer-class.md)
+## <a name="see-also"></a>Vea también  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [remove_pointer (Clase)](../standard-library/remove-pointer-class.md)
+

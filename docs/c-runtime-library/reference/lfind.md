@@ -1,47 +1,69 @@
 ---
-title: "lfind | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_lfind"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "lfind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lfind (función)"
+title: _lfind | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _lfind
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- lfind
+- _lfind
+dev_langs:
+- C++
+helpviewer_keywords:
+- linear searching
+- lfind function
+- arrays [CRT], searching
+- searching, linear
+- finding keys in arrays
+- _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# _lfind
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 4101348ee1344accb0a0117c997dceb1c79d0b40
+ms.lasthandoff: 02/24/2017
 
-Realiza una búsqueda lineal para la clave especificada.  Una versión más segura de esta función está disponible; vea [\_lfind\_s](../../c-runtime-library/reference/lfind-s.md).  
+---
+# <a name="lfind"></a>_lfind
+Realiza una búsqueda lineal de la clave especificada. Existe una versión más segura disponible de esta función; vea [_lfind_s](../../c-runtime-library/reference/lfind-s.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void *_lfind(  
@@ -53,39 +75,39 @@ void *_lfind(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `key`  
- Objeto para buscar.  
+ Objeto que se va a buscar.  
   
  `base`  
- Puntero a la base de datos de búsqueda.  
+ Puntero a la base de los datos de búsqueda.  
   
  `num`  
  Número de elementos de la matriz.  
   
  `width`  
- Ancho de los elementos de matriz.  
+ Ancho de los elementos de la matriz.  
   
  `compare`  
- Puntero a la rutina de comparación.  El primer parámetro es un puntero a cerrar para la búsqueda.  El segundo parámetro es un puntero al elemento de matriz que se va a comparar con la clave.  
+ Puntero a la rutina de comparación. El primer parámetro es un puntero a la clave de búsqueda. El segundo parámetro es un puntero al elemento de la matriz que se va a comparar con la clave.  
   
-## Valor devuelto  
- Si se encuentra la clave, `_lfind` devuelve un puntero al elemento de matriz en `base` que coincide con `key`.  Si no se encuentra la clave, `_lfind` devuelve `NULL`.  
+## <a name="return-value"></a>Valor devuelto  
+ Si se encuentra la clave, `_lfind` devuelve un puntero al elemento de la matriz en `base` que coincide con `key`. Si no se encuentra la clave, `_lfind` devuelve `NULL`.  
   
-## Comentarios  
- La función de `_lfind` realiza una búsqueda lineal por valor `key` en una matriz de elementos de `num` , cada uno de los bytes de `width` .  A diferencia de `bsearch`, `_lfind` no requiere una matriz ajustar su tamaño.  El argumento de `base` es un puntero a la base de la matriz que se buscará.  El argumento de `compare` es un puntero a una rutina usuario\- proporcionada que compara dos elementos de matriz y después devuelve un valor que especifica la relación.  `_lfind` llama a la rutina de `compare` una o más veces durante la búsqueda, pasando punteros a dos elementos de la matriz en cada llamada.  La rutina de `compare` debe comparar los elementos y después devolver cero \(indican los elementos sea diferente\) o 0 \(indican los elementos sea idéntico\).  
+## <a name="remarks"></a>Comentarios  
+ La función `_lfind` realiza una búsqueda lineal del valor `key` en una matriz de `num` elementos, cada uno de ellos de `width` bytes. A diferencia de `bsearch`, para `_lfind` no es necesario que la matriz esté ordenada. El argumento `base` es un puntero a la base de la matriz que se va a buscar. El argumento `compare` es un puntero a una rutina proporcionada por el usuario que compara dos elementos de la matriz y luego devuelve un valor que especifica su relación. `_lfind` llama a la rutina `compare` una o varias veces durante la búsqueda, pasando punteros a dos elementos de la matriz en cada llamada. La rutina `compare` debe comparar los elementos y luego devolver un valor distinto de cero (es decir, los elementos son diferentes) o 0 (es decir, los elementos son idénticos).  
   
- Esta función valida sus parámetros.  Si `compare`, `key` o `num` es `NULL`, o si `base` es NULL y \*`num` es distinto de cero, o si `width` es menor que cero, se invoca el controlador no válido de parámetro, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, `errno` se establece en `EINVAL` y la función devuelve `NULL`.  
+ Esta función valida sus parámetros. Si `compare`, `key` o `num` es `NULL`, o si `base` es NULL y *`num` es distinto de cero, o si `width` es menor que cero, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `errno` se establece en `EINVAL` y la función devuelve `NULL`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`_lfind`|\<search.h\>|  
+|-------------|---------------------|  
+|`_lfind`|\<search.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_lfind.c  
@@ -118,13 +140,16 @@ int main( )
 }  
 ```  
   
-  **Hello encontrado**   
-## Equivalente en .NET Framework  
+```Output  
+Hello found  
+```  
+  
+## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
  [System::Collections::ArrayList::Contains](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Buscar y ordenar](../../c-runtime-library/searching-and-sorting.md)   
- [\_lfind\_s](../../c-runtime-library/reference/lfind-s.md)   
+ [_lfind_s](../../c-runtime-library/reference/lfind-s.md)   
  [bsearch](../../c-runtime-library/reference/bsearch.md)   
- [\_lsearch](../../c-runtime-library/reference/lsearch.md)   
+ [_lsearch](../../c-runtime-library/reference/lsearch.md)   
  [qsort](../../c-runtime-library/reference/qsort.md)

@@ -1,32 +1,48 @@
 ---
-title: "locale (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xlocale/std::locale"
-  - "std::locale"
-  - "std.locale"
-  - "locale"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "locale (clase)"
+title: Clase locale | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xlocale/std::locale
+- std::locale
+- std.locale
+- locale
+dev_langs:
+- C++
+helpviewer_keywords:
+- locale class
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 caps.latest.revision: 28
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# locale (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: c32deb2524dc56925d3235c170f6ff0219c1b28c
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="locale-class"></a>locale (Clase)
 La clase que describe un objeto de configuración regional que encapsula la información específica de la configuración regional como un conjunto de facetas que definen colectivamente un entorno traducido y adaptado concreto.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,7 +52,7 @@ class locale;
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Una faceta es un puntero a un objeto de una clase derivada de la clase [faceta](#facet_class) que tiene un objeto público del formulario:  
+ Una faceta es un puntero a un objeto de una clase derivada de la clase [facet](#facet_class) que tiene un objeto público con el formato:  
   
 ```  
 static locale::id id;  
@@ -44,7 +60,7 @@ static locale::id id;
   
  Puede definir un conjunto abierto de estas facetas. También puede crear un objeto de configuración regional que designe un número arbitrario de facetas.  
   
- Los grupos predefinidos de estas facetas representan el [categorías de configuración regional](#locale__category) administradas tradicionalmente en la biblioteca estándar de C por la función `setlocale`.  
+ Los grupos predefinidos de estas facetas representan las [categorías de configuración regional](#locale__category) administradas tradicionalmente en la biblioteca estándar de C por la función `setlocale`.  
   
  La categoría collate (LC_COLLATE) incluye las facetas:  
   
@@ -108,7 +124,7 @@ messages<wchar_t>
   
  Las clases iostreams usan algunas de estas facetas predefinidas para controlar la conversión de valores numéricos a y desde secuencias de texto.  
   
- Un objeto de clase locale clase también almacena un nombre de configuración regional como un objeto de clase [cadena](../Topic/%3Cstring%3E%20typedefs.md#string). Uso de un nombre de configuración regional no válido para construir una faceta o un objeto de configuración regional produce un objeto de clase [runtime_error](../standard-library/runtime-error-class.md). El nombre almacenado de la configuración regional es `"*"` si el objeto de configuración regional no puede estar seguro de que una configuración regional de estilo C corresponde exactamente a la representada por el objeto. De lo contrario, puede establecer una configuración regional coincidente dentro de la biblioteca estándar de C, para el objeto de configuración regional `_Loc`, llamando `setlocale`(LC_ALL `,` `_Loc`. [nombre](#locale__name)`().c_str()`).  
+ Un objeto de clase locale clase también almacena un nombre de configuración regional como un objeto de la clase [string](../standard-library/string-typedefs.md#string). El uso de un nombre no válido de configuración regional para construir una faceta o un objeto de configuración regional produce un objeto de la clase [runtime_error](../standard-library/runtime-error-class.md). El nombre almacenado de la configuración regional es `"*"` si el objeto de configuración regional no puede estar seguro de que una configuración regional de estilo C corresponde exactamente a la representada por el objeto. De lo contrario, puede establecer una configuración regional coincidente dentro de la biblioteca estándar de C para el objeto de configuración regional `Loc` mediante una llamada a `setlocale`(LC_ALL `,` `Loc`. [name](#locale__name)`().c_str()`).  
   
  En esta implementación, también puede llamar a la función miembro estática:  
   
@@ -116,13 +132,13 @@ messages<wchar_t>
 static locale empty();
 ```  
   
- para construir un objeto de configuración regional que no tiene ninguna faceta. También es una configuración regional transparente; Si las funciones de plantilla [has_facet](../Topic/%3Clocale%3E%20functions.md#has_facet) y [use_facet](../Topic/%3Clocale%3E%20functions.md#use_facet) no se encuentra la faceta solicitada en una configuración regional transparente, consultan primero la configuración regional global y, a continuación, si es transparente, la configuración regional clásica. Así, puede escribir:  
+ para construir un objeto de configuración regional que no tiene ninguna faceta. También es una configuración regional transparente; si las funciones de plantilla [has_facet](../standard-library/locale-functions.md#has_facet) y [use_facet](../standard-library/locale-functions.md#use_facet) no encuentran la faceta solicitada en una configuración regional transparente, consultan primero la configuración regional global y después, si es transparente, la configuración regional clásica. Así, puede escribir:  
   
 ```  
 cout.imbue(locale::empty());
 ```  
   
- Las inserciones posteriores a [cout](../Topic/%3Ciostream%3E%20functions.md#cout) se realizan según el estado actual de la configuración regional global. Incluso puede escribir:  
+Las inserciones posteriores a [cout](../standard-library/iostream.md#cout) se realizan según el estado actual de la configuración regional global. Incluso puede escribir:  
   
 ```  
 locale loc(locale::empty(),
@@ -138,49 +154,49 @@ cout.imbue(loc);
   
 |||  
 |-|-|  
-|[configuración regional](#locale__locale)|Crea una configuración regional, una copia de una configuración regional o una copia de la configuración regional donde una faceta o una categoría se ha reemplazado por una faceta o una categoría de otra configuración regional.|  
+|[locale](#locale__locale)|Crea una configuración regional, una copia de una configuración regional o una copia de la configuración regional donde una faceta o una categoría se ha reemplazado por una faceta o una categoría de otra configuración regional.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Definiciones de tipo  
   
 |||  
 |-|-|  
-|[categoría](#locale__category)|Tipo entero que proporciona valores de máscara de bits para denotar familias de facetas estándar.|  
+|[category](#locale__category)|Tipo entero que proporciona valores de máscara de bits para denotar familias de facetas estándar.|  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |||  
 |-|-|  
-|[combinar](#locale__combine)|Inserta una faceta de una configuración regional especificada en una configuración regional de destino.|  
-|[nombre](#locale__name)|Devuelve el nombre de configuración regional almacenado.|  
+|[combine](#locale__combine)|Inserta una faceta de una configuración regional especificada en una configuración regional de destino.|  
+|[name](#locale__name)|Devuelve el nombre de configuración regional almacenado.|  
   
 ### <a name="static-functions"></a>Funciones estáticas  
   
 |||  
 |-|-|  
-|[clásico](#locale__classic)|La función miembro static devuelve un objeto de configuración regional que representa la configuración regional clásica de C.|  
+|[classic](#locale__classic)|La función miembro static devuelve un objeto de configuración regional que representa la configuración regional clásica de C.|  
 |[global](#locale__global)|Restablece la configuración regional predeterminada del programa.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[operador! =](#locale__operator_neq)|Comprueba si dos configuraciones regionales son distintas.|  
-|[operador)](#locale__operator__)|Compara dos objetos `basic_string`.|  
-|[operador ==](#locale__operator_eq_eq)|Comprueba si dos configuraciones regionales son iguales.|  
+|[operator!=](#locale__operator_neq)|Comprueba si dos configuraciones regionales son distintas.|  
+|[operator( )](#locale__operator__)|Compara dos objetos `basic_string`.|  
+|[operator==](#locale__operator_eq_eq)|Comprueba si dos configuraciones regionales son iguales.|  
   
 ### <a name="classes"></a>Clases  
   
 |||  
 |-|-|  
-|[faceta](#facet_class)|Clase que actúa como clase base para todas las facetas de configuración regional.|  
-|[Id.](#id_class)|La clase miembro proporciona un identificador único de faceta que se usa como índice para buscar facetas en una configuración regional.|  
+|[facet](#facet_class)|Clase que actúa como clase base para todas las facetas de configuración regional.|  
+|[id](#id_class)|La clase miembro proporciona un identificador único de faceta que se usa como índice para buscar facetas en una configuración regional.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** \< configuración regional>  
+ **Encabezado:** \<locale>  
   
  **Espacio de nombres:** std  
   
-##  <a name="a-namelocalecategorya-localecategory"></a><a name="locale__category"></a>  Locale:: Category  
+##  <a name="a-namelocalecategorya--localecategory"></a><a name="locale__category"></a>  locale::category  
  Tipo entero que proporciona valores de máscara de bits para denotar familias de facetas estándar.  
   
 ```  
@@ -196,29 +212,29 @@ static const int none = 0;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El tipo es un sinónimo de una `int` tipo que puede representar un grupo de elementos distintos de una máscara de bits, escriba local de clase locale o puede utilizarse para representar cualquiera de las categorías de configuración regional de C correspondientes. Los elementos son:  
+ El tipo es sinónimo de un tipo `int` que puede representar un grupo de elementos distintos de una configuración regional de tipo de máscara de bits en una configuración regional de clase o puede usarse para representar cualquiera de las categorías de configuración regional de C correspondientes. Los elementos son:  
   
-- **COLLATE**, que corresponde a la categoría de C LC_COLLATE  
+- **collate**, que se corresponde con la categoría LC_COLLATE de C  
   
-- **CType**, que corresponde a la categoría de C LC_CTYPE  
+- **ctype**, que se corresponde con la categoría LC_CTYPE de C  
   
-- **moneda**, que corresponde a la categoría de C LC_MONETARY  
+- **monetary**, que se corresponde con la categoría LC_MONETARY de C  
   
-- **numérico**, que corresponde a la categoría de C LC_NUMERIC  
+- **numeric**, que se corresponde con la categoría LC_NUMERIC de C  
   
-- **tiempo**, que corresponde a la categoría de C LC_TIME  
+- **time**, que se corresponde con la categoría LC_TIME de C  
   
-- **mensajes**, que corresponde a la categoría de Posix LC_MESSAGES  
+- **messages**, que se corresponde con la categoría LC_MESSAGES de Posix  
   
  Además, dos valores útiles son:  
   
-- **Ninguno**, que corresponde a ninguna de las categorías de C  
+- **none**, que no se corresponde con ninguna de las categorías de C  
   
-- **todos los**, que corresponde a la unión de C de todas las categorías LC_ALL  
+- **all**, que se corresponde con la unión de C de todas las categorías LC_ALL  
   
- Puede representar un grupo de categorías arbitrario mediante `OR` con estas constantes, como en **monetario** &#124; **tiempo**.  
+ Puede representar un grupo arbitrario de categorías mediante `OR` con estas constantes, como en **monetary** &#124; **time**.  
   
-##  <a name="a-namelocaleclassica-localeclassic"></a><a name="locale__classic"></a>  Locale:: Classic  
+##  <a name="a-namelocaleclassica--localeclassic"></a><a name="locale__classic"></a>  locale::classic  
  La función miembro static devuelve un objeto de configuración regional que representa la configuración regional clásica de C.  
   
 ```  
@@ -226,14 +242,14 @@ static const locale& classic();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una referencia a la configuración regional de C.  
+ Referencia a la configuración regional de C.  
   
 ### <a name="remarks"></a>Comentarios  
- La configuración regional clásica de C es Estados Unidos. Configuración regional de inglés ASCII dentro de la biblioteca estándar de C que se utiliza de forma implícita en los programas que no están internacionalizados.  
+ Configuración regional de C clásica de los Estados Unidos. Configuración regional ASCII de inglés dentro de la biblioteca estándar de C que se usa de forma implícita en los programas que no están internacionalizados.  
   
 ### <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // locale_classic.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -270,24 +286,24 @@ The previous locale was classic.
 The current locale is not classic.  
 ```  
   
-##  <a name="a-namelocalecombinea-localecombine"></a><a name="locale__combine"></a>  Locale:: combine  
+##  <a name="a-namelocalecombinea--localecombine"></a><a name="locale__combine"></a>  locale::combine  
  Inserta una faceta de una configuración regional especificada en una configuración regional de destino.  
   
 ```  
 template <class Facet>  
-locale combine(const locale& _Loc) const;
+locale combine(const locale& Loc) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Loc`  
- La configuración regional que contiene la faceta que se va a insertar en la configuración regional de destino.  
+ `Loc`  
+ Configuración regional que contiene la faceta que se va a insertar en la configuración regional de destino.  
   
 ### <a name="return-value"></a>Valor devuelto  
- La función miembro devuelve un objeto de configuración regional que se reemplaza en o agrega al **\*Esto** la faceta `Facet` enumerados en `_Loc`.  
+ La función miembro devuelve un objeto de configuración regional que reemplaza o agrega a **\*this** la faceta `Facet` indicada en `Loc`.  
   
 ### <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // locale_combine.cpp  
 // compile with: /EHsc  
 #include <locale>  
@@ -315,32 +331,41 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namefacetclassa-facet-class"></a><a name="facet_class"></a>  Facet (clase)  
+##  <a name="a-namefacetclassa--facet-class"></a><a name="facet_class"></a>  Clase facet  
  Clase que actúa como clase base para todas las facetas de configuración regional.  
-  
-faceta de la clase {protegido: faceta explícita (size_t _Refs = 0); virtual ~ facet(); private: facet(const facet&) / / no definido void (operador) =(const facet&) / / no definido};  
-  
+
+```    
+class facet { 
+protected:    
+    explicit facet(size_t _Refs = 0);
+   virtual ~facet();
+private:    
+   facet(const facet&)
+   // not defined void operator=(const facet&)
+     // not defined    
+};  
+```  
 ### <a name="remarks"></a>Comentarios  
- Tenga en cuenta que no puede copiar o asignar un objeto de faceta de la clase. Puede crear y destruir objetos derivados de la clase `locale::facet` pero no los objetos de la clase base correcta. Normalmente, se construye un objeto `_Myfac` deriva de faceta al construir una configuración regional, como en **localeloc**( `locale::classic`(), **nueva**`_Myfac`);  
+ Tenga en cuenta que no puede copiar o asignar un objeto de la clase facet. Puede crear y destruir objetos derivados de la clase `locale::facet`, pero no los objetos de la clase base correcta. Normalmente, se construye un objeto `_Myfac` derivado de facet al construir una configuración regional, como en **localeloc**( `locale::classic`( ), **new**`_Myfac`);  
   
- En tales casos, el constructor de la faceta de la clase base debe tener un cero `_Refs` argumento. Cuando el objeto ya no es necesario, se elimina. Por lo tanto, proporcione un _ es distinto de cero *Refs* argumento sólo en los pocos casos donde asume la responsabilidad de la duración del objeto.  
+ En tales casos, el constructor de la clase base facet debe tener un argumento `_Refs` cero. Cuando el objeto ya no es necesario, se elimina. Por lo tanto, proporcione un argumento _ *Refs* distinto de cero solo en los pocos casos en los que se haga responsable de la duración del objeto.  
   
-##  <a name="a-namelocaleglobala-localeglobal"></a><a name="locale__global"></a>  Locale:: global  
- Restablece la configuración regional predeterminada para el programa. Esto afecta a la configuración regional global de C y C++.  
+##  <a name="a-namelocaleglobala--localeglobal"></a><a name="locale__global"></a>  locale::global  
+ Restablece la configuración regional predeterminada del programa. Esto afecta a la configuración regional global de C y C++.  
   
 ```  
-static locale global(const locale& _Loc);
+static locale global(const locale& Loc);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Loc`  
- La configuración regional que se usará como la configuración regional predeterminada por el programa.  
+ `Loc`  
+ Configuración regional que el programa usará como configuración regional predeterminada.  
   
 ### <a name="return-value"></a>Valor devuelto  
- La configuración regional anterior antes de que se ha restablecido la configuración regional predeterminada.  
+ Configuración regional anterior al restablecimiento de la configuración regional predeterminada.  
   
 ### <a name="remarks"></a>Comentarios  
- Al inicio del programa, la configuración regional global es el mismo que la configuración regional clásica. El `global()` llamadas a función `setlocale( LC_ALL, loc.name. c_str())` para establecer una configuración regional coincidente en la biblioteca estándar de C++.  
+ Al inicio del programa, la configuración regional global es igual que la configuración regional clásica. La función `global()` llama a `setlocale( LC_ALL, loc.name. c_str())` para establecer una configuración regional coincidente en la biblioteca estándar de C++.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -370,84 +395,68 @@ The current locale is: German_Germany.1252
 The previous locale was: C  
 ```  
   
-##  <a name="a-nameidclassa-id-class"></a><a name="id_class"></a>  Id. de clase  
+##  <a name="a-nameidclassa--id-class"></a><a name="id_class"></a>  Clase id  
  La clase miembro proporciona un identificador único de faceta que se usa como índice para buscar facetas en una configuración regional.  
   
-Id. de clase {protegido: ID; private: id(const id&) / / no definido void (operador) =(const id&) / / no definido};  
+class id { protected:    id(); private:    id(const id&) // not defined void operator=(const id&)  // not defined    };  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de miembro describe el objeto de miembro estático requerido por cada faceta de configuración regional único. Tenga en cuenta que no puede copiar o asignar un objeto de clase **id**.  
+ La clase de miembro describe el objeto de miembro estático requerido por cada faceta de configuración regional única. Tenga en cuenta que no puede copiar o asignar un objeto de la clase **id**.  
   
-##  <a name="a-namelocalelocalea-localelocale"></a><a name="locale__locale"></a>  Locale:: Locale  
+##  <a name="a-namelocalelocalea--localelocale"></a><a name="locale__locale"></a>  locale::locale  
  Crea una configuración regional, una copia de una configuración regional o una copia de la configuración regional donde una faceta o una categoría se ha reemplazado por una faceta o una categoría de otra configuración regional.  
   
 ```  
 locale();
 
-explicit locale(
-    const char* _Locname,  
-    category _Cat = all);
-
-explicit locale(
-    const string& _Locname);
-
-locale(
-    const locale& _Loc);
-
-locale(
-    const locale& _Loc,   
-    const locale& _Other,  
-    category _Cat);
-
-locale(
-    const locale& _Loc,   
-    const char* _Locname,  
-    category _Cat);
+explicit locale(const char* Locname, category Cat = all);
+explicit locale(const string& Locname);
+locale( const locale& Loc);
+locale(const locale& Loc, const locale& Other, category Cat);
+locale(const locale& Loc, const char* Locname, category Cat);
 
 template <class Facet>  
-locale(
- const locale& _Loc,   
-    const Facet* _Fac);
+locale(const locale& Loc, const Facet* Fac);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_Locname`  
+ `Locname`  
  Nombre de una configuración regional.  
   
- `_Loc`  
- Una configuración regional que se va a copiar en la construcción de la nueva configuración regional.  
+ `Loc`  
+ Configuración regional que se va a copiar en la construcción de la nueva configuración regional.  
   
- `_Other`  
- Una configuración regional para seleccionar una categoría.  
+ `Other`  
+ Configuración regional de la que se va a seleccionar una categoría.  
   
- `_Cat`  
- La categoría que se sustituirá en la configuración regional construida.  
+ `Cat`  
+ Categoría que se va a sustituir en la configuración regional construida.  
   
- `_Fac`  
- La faceta que se sustituirá en la configuración regional construida.  
+ `Fac`  
+ Faceta que se va a sustituir en la configuración regional construida.  
   
 ### <a name="remarks"></a>Comentarios  
- El primer constructor inicializa el objeto para que coincida con la configuración regional global. El segundo y tercer constructor inicializa todas las categorías de configuración regional para tener un comportamiento coherente con el nombre de la configuración regional `_Locname`. Copian los constructores restantes `_Loc`, con las excepciones que se indican:  
+ El primer constructor inicializa el objeto para que coincida con la configuración regional global. El segundo y el tercer constructor inicializan todas las categorías de configuración regional para que tengan un comportamiento coherente con el nombre de la configuración regional `Locname`. Los demás constructores copian `Loc`, con las excepciones que se indican a continuación:  
   
- `locale(const locale& _Loc, const locale& _Other, category _Cat);`  
+ `locale(const locale& Loc, const locale& Other, category Cat);`  
   
- reemplaza desde `_Other` estas facetas correspondiente a una categoría de C para que C & `_Cat` es distinto de cero.  
+ reemplaza en `Other` las facetas que se corresponden con una categoría de C para la cual C & `Cat` es distinto de cero.  
   
- `locale(const locale& _Loc, const char* _Locname, category _Cat);`  
+ `locale(const locale& Loc, const char* Locname, category Cat);`  
   
- `locale(const locale& _Loc, const string& _Locname, category _Cat);`  
+ `locale(const locale& Loc, const string& Locname, category Cat);`  
   
- reemplaza desde `locale(_Locname, _All)` estas facetas correspondiente a una categoría de C para que C & `_Cat`es distinto de cero.  
+ reemplaza en `locale(Locname, _All)` las facetas que se corresponden con una categoría de C para la cual C & `Cat` es distinto de cero.  
   
- `template<class Facet> locale(const locale& _Loc, Facet* _Fac);`  
+ `template<class Facet> locale(const locale& Loc, Facet* Fac);`  
   
- sustituye en (o se agrega al) `_Loc` la faceta `_Fac`, Si `_Fac` no es un puntero nulo.  
+ reemplaza (o se agrega) en `Loc` la faceta `Fac` si `Fac` no es un puntero nulo.  
   
- Si un nombre de configuración regional `_Locname` es un puntero nulo o no válido, la función produce [runtime_error](../standard-library/runtime-error-class.md).  
+ Si un nombre de configuración regional `Locname` es un puntero nulo o no válido, la función produce un [runtime_error](../standard-library/runtime-error-class.md).  
   
 ### <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // locale_locale.cpp  
 // compile with: /EHsc  
 #include <locale>  
@@ -485,7 +494,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namelocalenamea-localename"></a><a name="locale__name"></a>  Locale:: Name  
+##  <a name="a-namelocalenamea--localename"></a><a name="locale__name"></a>  locale::name  
  Devuelve el nombre de configuración regional almacenado.  
   
 ```  
@@ -497,7 +506,7 @@ string name() const;
   
 ### <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // locale_name.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -522,7 +531,7 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.  
 ```  
   
-##  <a name="a-namelocaleoperatorneqa-localeoperator"></a><a name="locale__operator_neq"></a>  Locale:: operator! =  
+##  <a name="a-namelocaleoperatorneqa--localeoperator"></a><a name="locale__operator_neq"></a>  locale::operator!=  
  Comprueba si dos configuraciones regionales son distintas.  
   
 ```  
@@ -531,17 +540,17 @@ bool operator!=(const locale& right) const;
   
 ### <a name="parameters"></a>Parámetros  
  ` right`  
- Una de las configuraciones regionales que puede probar la desigualdad.  
+ Una de las configuraciones regionales cuya desigualdad se va a comprobar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor booleano que es **true** si las configuraciones regionales no son copias de la misma configuración regional; **false** si las configuraciones regionales son copias de la misma configuración regional.  
+ Valor booleano que es **true** si las configuraciones regionales no son copias de la misma configuración regional; **false** si las configuraciones regionales son copias de la misma configuración regional.  
   
 ### <a name="remarks"></a>Comentarios  
- Dos configuraciones regionales son iguales si son la misma configuración regional, si uno es una copia de la otra, o si tienen nombres idénticos.  
+ Dos configuraciones regionales son iguales si son la misma configuración regional, si una es una copia de la otra o si tienen nombres idénticos.  
   
 ### <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // locale_op_ne.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -579,7 +588,7 @@ locales loc1 (German_Germany.1252) and
  loc3 (English_United States.1252) are not equal.  
 ```  
   
-##  <a name="a-namelocaleoperatora-localeoperator"></a><a name="locale__operator__"></a>  Locale::operator()  
+##  <a name="a-namelocaleoperatora--localeoperator"></a><a name="locale__operator__"></a>  locale::operator()  
  Compara dos objetos `basic_string`.  
   
 ```  
@@ -599,9 +608,9 @@ bool operator()(
 ### <a name="return-value"></a>Valor devuelto  
  La función miembro devuelve:  
   
--   -1 si la primera secuencia compara menor que la segunda secuencia.  
+-   -1 si la primera secuencia compara menos que la segunda secuencia.  
   
--   + 1 si la segunda secuencia compara menor que la primera secuencia.  
+-   +1 si la segunda secuencia compara menos que la primera secuencia.  
   
 -   0 si las secuencias son equivalentes.  
   
@@ -614,11 +623,11 @@ const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
 return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) <0);
 ```  
   
- Por lo tanto, puede utilizar un objeto de configuración regional como un objeto de función.  
+ Por lo tanto, puede usar un objeto de configuración regional como un objeto de función.  
   
 ### <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // locale_op_compare.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -647,7 +656,7 @@ int main( )
 0  
 ```  
   
-##  <a name="a-namelocaleoperatoreqeqa-localeoperator"></a><a name="locale__operator_eq_eq"></a>  Locale:: operator ==  
+##  <a name="a-namelocaleoperatoreqeqa--localeoperator"></a><a name="locale__operator_eq_eq"></a>  locale::operator==  
  Comprueba si dos configuraciones regionales son iguales.  
   
 ```  
@@ -656,17 +665,17 @@ bool operator==(const locale& right) const;
   
 ### <a name="parameters"></a>Parámetros  
  ` right`  
- Una de las configuraciones regionales para las pruebas de igualdad.  
+ Una de las configuraciones regionales cuya igualdad se va a comprobar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor booleano que es **true** si las configuraciones regionales son copias de la misma configuración regional; **false** si las configuraciones regionales no son copias de la misma configuración regional.  
+ Valor booleano que es **true** si las configuraciones regionales son copias de la misma configuración regional; **false** si las configuraciones regionales no son copias de la misma configuración regional.  
   
 ### <a name="remarks"></a>Comentarios  
- Dos configuraciones regionales son iguales si son la misma configuración regional, si uno es una copia de la otra, o si tienen nombres idénticos.  
+ Dos configuraciones regionales son iguales si son la misma configuración regional, si una es una copia de la otra o si tienen nombres idénticos.  
   
 ### <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // locale_op_eq.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -709,8 +718,9 @@ locales loc1 (German_Germany.1252)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [\< configuración regional>](../standard-library/locale.md)   
+ [<locale>](../standard-library/locale.md)   
  [Páginas de códigos](../c-runtime-library/code-pages.md)   
- [Nombres de configuración regional, idiomas y cadenas de país o región](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
+ [Nombres de configuración regional, idiomas y cadenas de país/región](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
  [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 
