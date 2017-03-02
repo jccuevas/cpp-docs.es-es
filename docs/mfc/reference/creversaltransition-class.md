@@ -1,70 +1,121 @@
 ---
-title: "CReversalTransition (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "afxanimationcontroller/CReversalTransition"
-  - "CReversalTransition"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CReversalTransition (clase)"
+title: Clase CReversalTransition | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxanimationcontroller/CReversalTransition
+- CReversalTransition
+dev_langs:
+- C++
+helpviewer_keywords:
+- CReversalTransition class
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# CReversalTransition (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 028ea275cc345513248e76dcf5b0eba931823b7a
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="creversaltransition-class"></a>Clase CReversalTransition
 Encapsula una transición de inversión.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CReversalTransition : public CBaseTransition;  
 ```  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CReversalTransition::CReversalTransition](../Topic/CReversalTransition::CReversalTransition.md)|Construye un objeto de transición de inversión e inicializa su duración.|  
+|[CReversalTransition::CReversalTransition](#creversaltransition)|Construye un objeto de la transición de inversión e inicializa su duración.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CReversalTransition::Create](../Topic/CReversalTransition::Create.md)|Llama a la biblioteca de transiciones para crear el objeto COM de transición encapsulado.  \(Invalida [CBaseTransition::Create](../Topic/CBaseTransition::Create.md).\)|  
+|[CReversalTransition::Create](#create)|Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado. (Invalida [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-### Miembros de datos públicos  
+### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CReversalTransition::m\_duration](../Topic/CReversalTransition::m_duration.md)|Duración de la transición.|  
+|[CReversalTransition::m_duration](#m_duration)|La duración de la transición.|  
   
-## Comentarios  
- Una transición de inversión cambia sin problemas de dirección durante un período de tiempo determinado.  El valor final será igual que el valor inicial y el último progreso será el negativo del progreso inicial.  Como todas las transiciones se desactivan automáticamente, se recomienda asignarlas mediante "operator new".  CAnimationController::AnimateGroup crea el objeto COM encapsulado IUIAnimationTransition que hasta entonces es NULL.  Cambiar las variables miembro después de que la creación de este objeto COM no tiene ningún efecto.  
+## <a name="remarks"></a>Comentarios  
+ Una transición de inversión cambia suavemente la dirección en una duración determinada. El valor final será el mismo que el valor inicial y la velocidad final será el negativo de la velocidad inicial. Debido a que todas las transiciones se desactivan automáticamente, se recomienda asignada a ellos con el operador nuevo. Se crea el objeto de IUIAnimationTransition COM encapsulado por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables miembro después de la creación de este objeto COM no tiene ningún efecto.  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  [CReversalTransition](../../mfc/reference/creversaltransition-class.md)  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxanimationcontroller.h  
   
-## Vea también  
+##  <a name="a-namecreatea--creversaltransitioncreate"></a><a name="create"></a>CReversalTransition::Create  
+ Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado.  
+  
+```  
+virtual BOOL Create(
+    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionFactory* \*not used*\);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `pLibrary`  
+ Puntero a la biblioteca de transición, que es responsable de la creación de transiciones estándares.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ TRUE si la transición se crea correctamente; de lo contrario, FALSE.  
+  
+##  <a name="a-namecreversaltransitiona--creversaltransitioncreversaltransition"></a><a name="creversaltransition"></a>CReversalTransition::CReversalTransition  
+ Construye un objeto de la transición de inversión e inicializa su duración.  
+  
+```  
+CReversalTransition(UI_ANIMATION_SECONDS duration);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `duration`  
+ La duración de la transición.  
+  
+##  <a name="a-namemdurationa--creversaltransitionmduration"></a><a name="m_duration"></a>CReversalTransition::m_duration  
+ La duración de la transición.  
+  
+```  
+UI_ANIMATION_SECONDS m_duration;  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
+

@@ -1,76 +1,138 @@
 ---
-title: "IPointerInactiveImpl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "IPointerInactiveImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inactive objects"
-  - "IPointerInactive ATL implementation"
-  - "IPointerInactiveImpl class"
+title: Clase IPointerInactiveImpl | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- IPointerInactiveImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- IPointerInactive ATL implementation
+- inactive objects
+- IPointerInactiveImpl class
 ms.assetid: e1fe9ea6-d38a-4527-9112-eb344771e0b7
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# IPointerInactiveImpl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 05cf4b2247cabe713cfc6b0dd54c95c01e5bbddc
+ms.lasthandoff: 02/24/2017
 
-esta clase implementa **IUnknown** y los métodos de interfaz de [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) .  
+---
+# <a name="ipointerinactiveimpl-class"></a>Clase IPointerInactiveImpl
+Esta clase implementa **IUnknown** y [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) métodos de interfaz.  
   
 > [!IMPORTANT]
 >  Esta clase y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+template<class T>
+class IPointerInactiveImpl
 ```  
   
-      template< class   
-      T  
-      >  
-class IPointerInactiveImpl  
-```  
-  
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- la clase, derivada de `IPointerInactiveImpl`.  
+ La clase derivada de `IPointerInactiveImpl`.  
   
-## Members  
+## <a name="members"></a>Miembros  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[IPointerInactiveImpl::GetActivationPolicy](../Topic/IPointerInactiveImpl::GetActivationPolicy.md)|Recupera la directiva actual de activación para el objeto.  la implementación de ATL devuelve **E\_NOTIMPL**.|  
-|[IPointerInactiveImpl::OnInactiveMouseMove](../Topic/IPointerInactiveImpl::OnInactiveMouseMove.md)|Notifica al objeto que el puntero del mouse ha desplazado sobre él, que indica que el objeto puede desencadenar eventos del mouse.  la implementación de ATL devuelve **E\_NOTIMPL**.|  
-|[IPointerInactiveImpl::OnInactiveSetCursor](../Topic/IPointerInactiveImpl::OnInactiveSetCursor.md)|Establece el puntero del mouse para el objeto inactivo.  la implementación de ATL devuelve **E\_NOTIMPL**.|  
+|[IPointerInactiveImpl::GetActivationPolicy](#getactivationpolicy)|Recupera la directiva de activación actual del objeto. Devuelve la implementación de ATL **E_NOTIMPL**.|  
+|[IPointerInactiveImpl::OnInactiveMouseMove](#oninactivemousemove)|Notifica el objeto que se ha movido el puntero del mouse sobre él, que indica el objeto puede desencadenar los eventos del mouse. Devuelve la implementación de ATL **E_NOTIMPL**.|  
+|[IPointerInactiveImpl::OnInactiveSetCursor](#oninactivesetcursor)|Establece el puntero del mouse para el objeto inactivo. Devuelve la implementación de ATL **E_NOTIMPL**.|  
   
-## Comentarios  
- Un objeto inactivo es uno que se carga simplemente o su ejecución.  A diferencia de un objeto activo, un objeto inactivo no puede recibir mensajes del teclado y de mouse de Windows.  Así, los objetos inactivos utilizan menos recursos y suelen ser más eficaces.  
+## <a name="remarks"></a>Comentarios  
+ Un objeto inactivo es aquel que es simplemente cargado o en ejecución. A diferencia de un objeto activo, un objeto inactivo no puede recibir mensajes de mouse y teclado de Windows. Por lo tanto, los objetos inactivos utilizan menos recursos y son normalmente más eficaces.  
   
- La interfaz de [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) permite que un objeto admite un nivel mínimo de interacción con el mouse mientras permanece inactivo.  Esta funcionalidad es especialmente útil para los controles.  
+ El [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) interfaz permite que un objeto admitir un nivel mínimo de interacción con el mouse mientras permanece inactiva. Esta funcionalidad es especialmente útil para los controles.  
   
- La clase `IPointerInactiveImpl` implementa los métodos de `IPointerInactive` simplemente devuelve **E\_NOTIMPL**.  Sin embargo, implementa **IUnknown** enviando información del dispositivo de volcado en versiones de depuración.  
+ Clase `IPointerInactiveImpl` implementa la `IPointerInactive` métodos devolviendo simplemente **E_NOTIMPL**. Sin embargo, implementa **IUnknown** mediante el envío de información para el volcado de memoria se basa el dispositivo en modo de depuración.  
   
- **artículos relacionados** [tutorial de ATL](../../atl/active-template-library-atl-tutorial.md), [Crear un proyecto ATL](../../atl/reference/creating-an-atl-project.md)  
+ **Artículos relacionados con** [Tutorial ATL](../../atl/active-template-library-atl-tutorial.md), [crear un proyecto ATL](../../atl/reference/creating-an-atl-project.md)  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `IPointerInactive`  
   
  `IPointerInactiveImpl`  
   
-## Requisitos  
- **encabezado:** atlctl.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atlctl.h  
   
-## Vea también  
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-namegetactivationpolicya--ipointerinactiveimplgetactivationpolicy"></a><a name="getactivationpolicy"></a>IPointerInactiveImpl::GetActivationPolicy  
+ Recupera la directiva de activación actual del objeto.  
+  
+```
+HRESULT GetActivationPolicy(DWORD* pdwPolicy);
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve **E_NOTIMPL**.  
+  
+### <a name="remarks"></a>Comentarios  
+ Consulte [IPointerInactive::GetActivationPolicy](http://msdn.microsoft.com/library/windows/desktop/ms692470) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-nameoninactivemousemovea--ipointerinactiveimploninactivemousemove"></a><a name="oninactivemousemove"></a>IPointerInactiveImpl::OnInactiveMouseMove  
+ Notifica el objeto que se ha movido el puntero del mouse sobre él, que indica el objeto puede desencadenar los eventos del mouse.  
+  
+```
+HRESULT OnInactiveMouseMove(
+    LPCRECT pRectBounds,
+    long x,
+    long y,
+    DWORD dwMouseMsg);
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve **E_NOTIMPL**.  
+  
+### <a name="remarks"></a>Comentarios  
+ Consulte [IPointerInactive::OnInactiveMouseMove](http://msdn.microsoft.com/library/windows/desktop/ms693374) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-nameoninactivesetcursora--ipointerinactiveimploninactivesetcursor"></a><a name="oninactivesetcursor"></a>IPointerInactiveImpl::OnInactiveSetCursor  
+ Establece el puntero del mouse para el objeto inactivo.  
+  
+```
+HRESULT OnInactiveSetCursor(
+    LPCRECT pRectBounds,
+    long x,
+    long y,
+    DWORD dwMouseMsg,
+    BOOL fSetAlways);
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve **E_NOTIMPL**.  
+  
+### <a name="remarks"></a>Comentarios  
+ Consulte [IPointerInactive::OnInactiveSetCursor](http://msdn.microsoft.com/library/windows/desktop/ms694336) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+## <a name="see-also"></a>Vea también  
+ [Información general de la clase](../../atl/atl-class-overview.md)
+

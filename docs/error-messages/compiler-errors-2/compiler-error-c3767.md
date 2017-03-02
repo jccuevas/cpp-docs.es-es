@@ -1,36 +1,54 @@
 ---
-title: "Error del compilador C3767 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3767"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3767"
+title: Compilador Error C3767 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3767
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Error del compilador C3767
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: b0cce511d895aae218c1b2ab04d129173b049983
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="compiler-error-c3767"></a>Error del compilador C3767
 'función': no se puede obtener acceso a las funciones candidato  
   
- Se supone que una función friend definida en una clase no se va a tratar como si estuviera definida y declarada en el ámbito del espacio de nombres global.  Sin embargo, se puede encontrar en una búsqueda dependiente de argumentos.  
+ Se supone que una función friend definida en una clase no se va a tratar como si estuviera definida y declarada en el ámbito del espacio de nombres global. Sin embargo, se puede encontrar en una búsqueda dependiente de argumentos.  
   
- El error C3767 también lo puede causar un cambio importante: ahora los tipos nativos son privados de manera predeterminada en una compilación **\/clr**; vea [Visibilidad de tipos](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) para obtener más información.  
+ C3767 también puede deberse a un cambio importante: ahora los tipos nativos son privados de forma predeterminada en un **/CLR** compilación; vea [escriba visibilidad](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) para obtener más información.  
   
- El ejemplo siguiente genera el error C3767:  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C3767:  
   
 ```  
 // C3767a.cpp  
@@ -61,38 +79,7 @@ int main() {
 };  
 ```  
   
- El ejemplo siguiente genera el error C3767:  
-  
-```  
-// C3767b.cpp  
-// compile with: /clr:oldSyntax  
-using namespace System;  
-__delegate void TestDel();  
-  
-public __gc class MyClass {  
-public:  
-   static __event TestDel * MyClass_Event;  
-};  
-  
-public __gc class MyClass2 : public MyClass {  
-public:  
-   void Test() {  
-      MyClass* patient = new MyClass;  
-      patient->MyClass_Event();  
-    }  
-};  
-  
-int main() {  
-   MyClass* x = new MyClass;  
-   x->MyClass_Event();   // C3767  
-  
-   // OK  
-   MyClass2 * y = new MyClass2();  
-   y->Test();  
-};  
-```  
-  
- El ejemplo siguiente genera el error C3767:  
+ El ejemplo siguiente genera C3767:  
   
 ```  
 // C3767c.cpp  
@@ -114,31 +101,9 @@ ref class Der : public Base {
 };  
 ```  
   
- El ejemplo siguiente genera el error C3767:  
+ En Visual C++ .NET 2002, el compilador cambió la forma en la búsqueda de símbolos. En algunos casos, habría buscado símbolos automáticamente en un espacio de nombres especificado. Ahora, usa búsqueda dependiente de argumentos.  
   
-```  
-// C3767d.cpp  
-// compile with: /clr:oldSyntax /c  
-  
-__gc class Base {  
-protected:  
-   void Method() {  
-      System::Console::WriteLine("protected");  
-   }  
-};  
-  
-__gc class Der : public Base {  
-   void Method() {  
-      ((Base*)this)->Method();   // C3767  
-      // try the following line instead  
-      // Base::Method();  
-   }  
-};  
-```  
-  
- En Visual C\+\+ .NET 2002, el compilador realiza la búsqueda de símbolos de otra forma.  En algunos casos, habría buscado símbolos automáticamente en un espacio de nombres especificado.  Ahora utilizará una búsqueda dependiente de argumentos.  
-  
- El ejemplo siguiente genera el error C3767:  
+ El ejemplo siguiente genera C3767:  
   
 ```  
 // C3767e.cpp  
@@ -157,7 +122,7 @@ int main() {
 }  
 ```  
   
- En caso de que el código sea válido tanto para Visual C\+\+ .NET 2003 como para Visual C\+\+ .NET 2002, incluya la declaración de la función friend en el ámbito de la clase y la definición en el ámbito del espacio de nombres:  
+ Para que el código sea válido en Visual C++ .NET 2003 y Visual C++ .NET 2002, declare la función friend en el ámbito de clase y la definición en el ámbito de espacio de nombres:  
   
 ```  
 // C3767f.cpp  
