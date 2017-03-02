@@ -1,60 +1,93 @@
 ---
-title: "CSimpleArrayEqualHelper Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CSimpleArrayEqualHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSimpleArrayEqualHelper class"
+title: Clase CSimpleArrayEqualHelper | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CSimpleArrayEqualHelper
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSimpleArrayEqualHelper class
 ms.assetid: a2b55d89-78c9-42ef-842c-5304c6d20ad6
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CSimpleArrayEqualHelper Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 4a87879683257c66de5fe4e720dd29fa4c47031d
+ms.lasthandoff: 02/24/2017
 
-esta clase es una aplicación auxiliar para la clase de [CSimpleArray](../../atl/reference/csimplearray-class.md) .  
+---
+# <a name="csimplearrayequalhelper-class"></a>Clase CSimpleArrayEqualHelper
+Esta clase es una aplicación auxiliar para la [CSimpleArray](../../atl/reference/csimplearray-class.md) clase.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+template <class T>  
+class CSimpleArrayEqualHelper
 ```  
   
-      template <  
-   class T   
->  
-class CSimpleArrayEqualHelper  
-```  
-  
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- una clase derivada.  
+ Una clase derivada.  
   
-## Members  
+## <a name="members"></a>Miembros  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CSimpleArrayEqualHelper::IsEqual](../Topic/CSimpleArrayEqualHelper::IsEqual.md)|\(Estático\) prueba dos elementos de objeto de `CSimpleArray` para comprobar la igualdad.|  
+|[CSimpleArrayEqualHelper::IsEqual](#isequal)|(Estático) Comprueba si dos `CSimpleArray` elementos para la igualdad del objeto.|  
   
-## Comentarios  
- Esta clase de los rasgos es un extensor a la clase de `CSimpleArray` .  proporciona un método para comparar dos elementos almacenados en un objeto de `CSimpleArray` .  De forma predeterminada, los elementos se comparan mediante **operator\= \(\)**, pero si la matriz contiene los tipos de datos complejos que null un operador de igualdad, necesitará para invalidar esta clase.  
+## <a name="remarks"></a>Comentarios  
+ Esta clase de rasgos es un suplemento de la `CSimpleArray` clase. Proporciona un método para comparar dos elementos almacenados en un `CSimpleArray` objeto. De forma predeterminada, los elementos se comparan mediante **operator=()**, pero si la matriz contiene los tipos de datos complejos que no tienen su propio operador de igualdad, será necesario invalidar esta clase.  
   
-## Requisitos  
- **encabezado:** atlsimpcoll.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atlsimpcoll.h  
   
-## Vea también  
- [CSimpleArray Class](../../atl/reference/csimplearray-class.md)   
- [CSimpleArrayEqualHelperFalse Class](../../atl/reference/csimplearrayequalhelperfalse-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameisequala--csimplearrayequalhelperisequal"></a><a name="isequal"></a>CSimpleArrayEqualHelper::IsEqual  
+ Comprueba si dos `CSimpleArray` elementos para la igualdad del objeto.  
+  
+```
+static bool IsEqual(
+    const T& t1,
+    const T& t2);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ *T1*  
+ Un objeto de tipo T.  
+  
+ *T2*  
+ Un objeto de tipo T.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve true si los elementos de lo contrario, son iguales, false.  
+  
+## <a name="see-also"></a>Vea también  
+ [Clase CSimpleArray](../../atl/reference/csimplearray-class.md)   
+ [Clase CSimpleArrayEqualHelperFalse](../../atl/reference/csimplearrayequalhelperfalse-class.md)   
+ [Información general de la clase](../../atl/atl-class-overview.md)
+

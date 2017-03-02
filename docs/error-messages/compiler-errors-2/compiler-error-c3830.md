@@ -1,34 +1,51 @@
 ---
-title: "Error del compilador C3830 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3830"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3830"
+title: C3830 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3830
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3830
 ms.assetid: c9798f88-5001-4067-9fb1-09957ddc6fa8
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C3830
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 970a3f032ac367ec24cb5b036e3f3723732da754
+ms.lasthandoff: 02/24/2017
 
-'tipo1': no puede heredar de 'tipo2', los tipos de valor sólo pueden heredar de las clases de interfaz  
+---
+# <a name="compiler-error-c3830"></a>Error del compilador C3830
+'tipo1': no puede heredar de 'tipo2', valor de tipos sólo pueden heredar de clases de interfaz  
   
- Un tipo de valor no puede heredar una clase base.  Para obtener más información, vea [Clases y structs](../../windows/classes-and-structs-cpp-component-extensions.md).  
+ Un tipo de valor no puede heredar una clase base.  Para obtener más información, consulte [clases y Structs](../../windows/classes-and-structs-cpp-component-extensions.md).  
   
- El código siguiente genera el error C3830:  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C3830:  
   
 ```  
 // C3830a.cpp  
@@ -49,17 +66,4 @@ public:
    virtual void i(){}  
 };  
 ```  
-  
- **Extensiones administradas de C\+\+**  
-  
- Un tipo `__value` no puede heredar una clase base.  
-  
- El código siguiente genera el error C3830:  
-  
-```  
-// C3830b.cpp  
-// compile with: /clr:oldSyntax /c  
-#using <mscorlib.dll>  
-__value struct v : public System::Object {};   // C3830  
-__value struct w {};   // OK  
-```
+

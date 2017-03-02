@@ -1,49 +1,46 @@
 ---
-title: "Error del compilador C2690 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2690"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2690"
+title: C2690 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2690
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2690
 ms.assetid: f165a806-14bd-4942-99b7-8a9fc7dea227
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# Error del compilador C2690
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 53312e39815c70bcb9bb486a0c9d682a99e06ed4
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="compiler-error-c2690"></a>C2690 de Error del compilador
 'operator': no se puede realizar aritmética de puntero en una matriz de WinRT  
   
- La aritmética de puntero no se permite en una matriz administrada o de WinRT.  Use la notación de índice de matriz para recorrer la matriz.  
-  
- **Extensiones administradas de C\+\+**  
-  
- La aritmética de puntero no se permite en una matriz [\_\_gc](../../misc/gc.md).  Use la notación de índice de matriz para recorrer la matriz.  
-  
- El siguiente ejemplo genera el error C2690:  
-  
-```  
-// C2690b.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-using namespace System;  
-  
-int main() {  
-   String* x[] = new String*[10];  
-   x[0] = "test";  
-   Console::WriteLine(x[0]);  
-   x++;   // C2690  
-}  
-```
+ La aritmética de puntero no se permite en una matriz administrada o de WinRT. Use la notación de índice de matriz para recorrer la matriz.  
+

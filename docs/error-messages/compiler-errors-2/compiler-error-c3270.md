@@ -1,41 +1,64 @@
 ---
-title: "Error del compilador C3270 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C3270"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3270"
+title: C3270 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C3270
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3270
 ms.assetid: 70e6e76b-7415-48f5-a61e-2ed50caf08e4
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C3270
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 13ef4bca19de5b1dcda8fd0c22a15d43f00257b7
+ms.lasthandoff: 02/24/2017
 
-'field': el atributo FieldOffset solo se puede utilizar en el contexto de StructLayout\(LayoutKind::Explicit\), en cuyo caso es necesario  
+---
+# <a name="compiler-error-c3270"></a>Error del compilador C3270
+'field': el atributo FieldOffset solo se puede utilizar en el contexto de StructLayout(LayoutKind::Explicit), en cuyo caso es necesario  
   
- Se marcó un campo con [FieldOffset](frlrfSystemRuntimeInteropServicesFieldOffsetAttributeClassTopic), que solo se permite cuando [StructLayout](frlrfSystemRuntimeInteropServicesStructLayoutAttributeClassTopic) Explicit está activo.  
+Se marcó un campo con **FieldOffset**, que solo se permite cuando **StructLayout (Explicit)** está en vigor.  
   
- El ejemplo siguiente genera la advertencia C3270:  
-  
-```  
-// C3270_2.cpp // compile with: /clr /c using namespace System::Runtime::InteropServices; [ StructLayout(LayoutKind::Sequential) ] // try the following line instead // [ StructLayout(LayoutKind::Explicit) ] public value struct MYUNION { [FieldOffset(0)] int a;   // C3270 // ... };  
-```  
-  
- El ejemplo siguiente genera la advertencia C3270:  
+El ejemplo siguiente genera la advertencia C3270:  
   
 ```  
-// C3270.cpp // compile with: /clr:oldSyntax /LD #using <mscorlib.dll> using namespace System::Runtime::InteropServices; [ StructLayout(LayoutKind::Sequential) ] // try the following line instead // [ StructLayout(LayoutKind::Explicit) ] public __value struct MYUNION { [FieldOffset(0)] int a;   // C3270 // ... };  
-```
+// C3270_2.cpp  
+// compile with: /clr /c  
+using namespace System::Runtime::InteropServices;  
+  
+[ StructLayout(LayoutKind::Sequential) ]  
+// try the following line instead  
+// [ StructLayout(LayoutKind::Explicit) ]  
+public value struct MYUNION  
+{  
+   [FieldOffset(0)] int a;   // C3270  
+   // ...  
+};  
+```  
+

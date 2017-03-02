@@ -1,32 +1,48 @@
 ---
-title: "Error del compilador C3182 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3182"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3182"
+title: C3182 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3182
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3182
 ms.assetid: f3681266-308e-4990-a979-8eef8920e186
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Error del compilador C3182
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 3dfd76788c55e74625172dedf2ceb5b8bdfaa061
+ms.lasthandoff: 02/24/2017
 
-'class': no se permiten declaraciones using de miembro o declaraciones de acceso dentro de un tipo WinRT o administrado  
+---
+# <a name="compiler-error-c3182"></a>C3182 de Error del compilador
+'clase': una declaración de miembro de acceso o declaración using no es válida dentro de un administrado o WinRTtype  
   
- Una declaración [using](../../cpp/using-declaration.md) no es válida en todos los formularios de clases administradas.  
+ Un [con](../../cpp/using-declaration.md) declaración no es válida en todos los formularios de clases administradas.  
   
  En el ejemplo siguiente se genera el error C3182 y se muestra cómo corregirlo:  
   
@@ -44,28 +60,4 @@ ref struct D : B {
    }  
 };  
 ```  
-  
- En el ejemplo siguiente se genera el error C3182 y se muestra cómo corregirlo:  
-  
-```  
-// C3182b.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-  
-__gc struct B {  
-   void mf(int)  
-   {  
-   }  
-};  
-  
-__gc struct D : B {  
-   using B::mf;   // C3182, delete to resolve  
-   void mf(char)  
-   {  
-   }  
-};  
-  
-int main()  
-{  
-}  
-```
+

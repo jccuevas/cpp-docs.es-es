@@ -1,34 +1,52 @@
 ---
-title: "Error del compilador C3389 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3389"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3389"
+title: C3389 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3389
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3389
 ms.assetid: eaaffe17-23f2-413c-b1ad-f7220cfa1334
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C3389
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 6cfe5a03ecbb370eaf290f94ee5e26a5d185a1ae
+ms.lasthandoff: 02/24/2017
 
-\_\_declspec\(palabra clave\) no se puede utilizar con \/clr:pure o \/clr:safe  
+---
+# <a name="compiler-error-c3389"></a>Error del compilador C3389
+__declspec(Keyword) no se puede usar con/CLR: pure o/CLR: safe  
   
- Un modificador [\_\_declspec](../../cpp/declspec.md) utilizado implica un estado por proceso.  [\/clr:pure](../../build/reference/clr-common-language-runtime-compilation.md) implica un estado por [appdomain](../../cpp/appdomain.md).  Por tanto, no se permite declarar una variable con el modificador **\_\_declspec** `keyword` y compilar con **\/clr:pure**.  
+ El **/CLR: pure** y **/CLR: safe** opciones del compilador están desusadas en Visual Studio 2015.  
   
- El código siguiente genera el error C3389:  
+ Un [__declspec](../../cpp/declspec.md) modificador utilizado implica un estado por proceso.  [/ CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md) implica una por [appdomain](../../cpp/appdomain.md) estado.  Por lo tanto, declarar una variable con el `keyword` **__declspec** modificador y compilar con **/CLR: pure** no está permitido.  
+  
+ El ejemplo siguiente genera C3389:  
   
 ```  
 // C3389.cpp  

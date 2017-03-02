@@ -1,62 +1,181 @@
 ---
-title: "CNoWorkerThread Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CNoWorkerThread"
-  - "ATL.CNoWorkerThread"
-  - "CNoWorkerThread"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CNoWorkerThread class"
+title: Clase CNoWorkerThread | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CNoWorkerThread
+- ATL.CNoWorkerThread
+- CNoWorkerThread
+dev_langs:
+- C++
+helpviewer_keywords:
+- CNoWorkerThread class
 ms.assetid: 29f06bae-b658-4aac-9c14-331e996d25d1
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CNoWorkerThread Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 4c38d778849a31d55a657fc1022c2e9f4a370eec
+ms.lasthandoff: 02/24/2017
 
-Utilice esta clase como el argumento para que el parámetro de plantilla de `MonitorClass` almacene en caché clases si desea deshabilitar mantenimiento dinámico de caché.  
+---
+# <a name="cnoworkerthread-class"></a>Clase CNoWorkerThread
+Utilice esta clase como argumento para el `MonitorClass` parámetro de plantilla a las clases de caché si desea deshabilitar el mantenimiento de la memoria caché dinámica.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en Windows en tiempo de ejecución.  
+>  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+class CNoWorkerThread
 ```  
   
-class CNoWorkerThread  
+## <a name="members"></a>Miembros  
   
-```  
+### <a name="public-methods"></a>Métodos públicos  
   
-## Members  
-  
-### Métodos públicos  
-  
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CNoWorkerThread::AddHandle](../Topic/CNoWorkerThread::AddHandle.md)|equivalente no funcional de [CWorkerThread:: AddHandle](../Topic/CWorkerThread::AddHandle.md).|  
-|[CNoWorkerThread::AddTimer](../Topic/CNoWorkerThread::AddTimer.md)|equivalente no funcional de [CWorkerThread:: AddTimer](../Topic/CWorkerThread::AddTimer.md).|  
-|[CNoWorkerThread::GetThreadHandle](../Topic/CNoWorkerThread::GetThreadHandle.md)|Equivalente no funcional de [CWorkerThread::GetThreadHandle](../Topic/CWorkerThread::GetThreadHandle.md).|  
-|[CNoWorkerThread::GetThreadId](../Topic/CNoWorkerThread::GetThreadId.md)|Equivalente no funcional de [CWorkerThread::GetThreadId](../Topic/CWorkerThread::GetThreadId.md).|  
-|[CNoWorkerThread::Initialize](../Topic/CNoWorkerThread::Initialize.md)|equivalente no funcional de [CWorkerThread:: Inicialice](../Topic/CWorkerThread::Initialize.md).|  
-|[CNoWorkerThread::RemoveHandle](../Topic/CNoWorkerThread::RemoveHandle.md)|equivalente no funcional de [CWorkerThread:: RemoveHandle](../Topic/CWorkerThread::RemoveHandle.md).|  
-|[CNoWorkerThread::Shutdown](../Topic/CNoWorkerThread::Shutdown.md)|equivalente no funcional de [CWorkerThread:: Apagado](../Topic/CWorkerThread::Shutdown.md).|  
+|[CNoWorkerThread::AddHandle](#addhandle)|No funcional equivalente de [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).|  
+|[CNoWorkerThread::AddTimer](#addtimer)|No funcional equivalente de [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).|  
+|[CNoWorkerThread::GetThreadHandle](#getthreadhandle)|No funcional equivalente de [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).|  
+|[CNoWorkerThread::GetThreadId](#getthreadid)|No funcional equivalente de [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).|  
+|[CNoWorkerThread::Initialize](#initialize)|No funcional equivalente de [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).|  
+|[CNoWorkerThread::RemoveHandle](#removehandle)|No funcional equivalente de [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).|  
+|[CNoWorkerThread::Shutdown](#shutdown)|No funcional equivalente de [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).|  
   
-## Comentarios  
- Esta clase proporciona la misma interfaz pública que [CWorkerThread](../../atl/reference/cworkerthread-class.md).  Se espera que esta interfaz es proporcionada por el parámetro de plantilla de `MonitorClass` a las clases de caché.  
+## <a name="remarks"></a>Comentarios  
+ Esta clase proporciona la misma interfaz pública que [CWorkerThread](../../atl/reference/cworkerthread-class.md). Esta interfaz debe proporcionar el `MonitorClass` parámetro de plantilla a las clases de caché.  
   
- Los métodos de esta clase se implementan para no hacer nada.  Los métodos que devuelven un retorno S\_OK HRESULT siempre, y los métodos que devuelven un retorno 0 HANDLE o el identificador de subproceso siempre.  
+ Los métodos de esta clase se implementan que no haga nada. Los métodos que devuelven un HRESULT siempre devuelven S_OK y los métodos que devuelven un identificador de subproceso o de identificador siempre devuelven 0.  
   
-## Requisitos  
- **encabezado:** atlutil.h
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atlutil.h  
+  
+##  <a name="a-nameaddhandlea--cnoworkerthreadaddhandle"></a><a name="addhandle"></a>CNoWorkerThread::AddHandle  
+ No funcional equivalente de [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
+  
+```
+HRESULT AddHandle(HANDLE /* hObject
+ */,
+    IWorkerThreadClient* /* pClient
+ */,
+    DWORD_PTR /* dwParam
+ */) throw();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Siempre devuelve S_OK.  
+  
+### <a name="remarks"></a>Comentarios  
+ La implementación proporcionada por esta clase no hace nada.  
+  
+##  <a name="a-nameaddtimera--cnoworkerthreadaddtimer"></a><a name="addtimer"></a>CNoWorkerThread::AddTimer  
+ No funcional equivalente de [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).  
+  
+```
+HRESULT AddTimer(DWORD /* dwInterval
+ */,
+    IWorkerThreadClient* /* pClient
+ */,
+    DWORD_PTR /* dwParam
+ */,
+    HANDLE* /* phTimer
+ */) throw();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Siempre devuelve S_OK.  
+  
+### <a name="remarks"></a>Comentarios  
+ La implementación proporcionada por esta clase no hace nada.  
+  
+##  <a name="a-namegetthreadhandlea--cnoworkerthreadgetthreadhandle"></a><a name="getthreadhandle"></a>CNoWorkerThread::GetThreadHandle  
+ No funcional equivalente de [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).  
+  
+```
+HANDLE GetThreadHandle() throw();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Siempre devuelve NULL.  
+  
+### <a name="remarks"></a>Comentarios  
+ La implementación proporcionada por esta clase no hace nada.  
+  
+##  <a name="a-namegetthreadida--cnoworkerthreadgetthreadid"></a><a name="getthreadid"></a>CNoWorkerThread::GetThreadId  
+ No funcional equivalente de [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).  
+  
+```
+DWORD GetThreadId() throw();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Siempre devuelve 0.  
+  
+### <a name="remarks"></a>Comentarios  
+ La implementación proporcionada por esta clase no hace nada.  
+  
+##  <a name="a-nameinitializea--cnoworkerthreadinitialize"></a><a name="initialize"></a>CNoWorkerThread::Initialize  
+ No funcional equivalente de [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).  
+  
+```
+HRESULT Initialize() throw();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Siempre devuelve S_OK.  
+  
+### <a name="remarks"></a>Comentarios  
+ La implementación proporcionada por esta clase no hace nada.  
+  
+##  <a name="a-nameremovehandlea--cnoworkerthreadremovehandle"></a><a name="removehandle"></a>CNoWorkerThread::RemoveHandle  
+ No funcional equivalente de [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).  
+  
+```
+HRESULT RemoveHandle(HANDLE /* hObject
+ */) throw();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Siempre devuelve S_OK.  
+  
+### <a name="remarks"></a>Comentarios  
+ La implementación proporcionada por esta clase no hace nada.  
+  
+##  <a name="a-nameshutdowna--cnoworkerthreadshutdown"></a><a name="shutdown"></a>CNoWorkerThread::Shutdown  
+ No funcional equivalente de [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).  
+  
+```
+HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Siempre devuelve S_OK.  
+  
+### <a name="remarks"></a>Comentarios  
+ La implementación proporcionada por esta clase no hace nada.
+

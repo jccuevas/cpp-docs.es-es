@@ -1,60 +1,76 @@
 ---
-title: "Advertencia del compilador (niveles 1 y 3) C4793 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4793"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4793"
-  - "C6630"
-  - "C6631"
-  - "C6634"
-  - "C6635"
-  - "C6636"
-  - "C6637"
-  - "C6638"
-  - "C6639"
-  - "C6640"
+title: Compilador advertencia (niveles 1 y 3) C4793 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4793
+dev_langs:
+- C++
+helpviewer_keywords:
+- C6634
+- C6635
+- C6640
+- C6630
+- C6639
+- C6636
+- C6638
+- C6631
+- C6637
+- C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
 caps.latest.revision: 28
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# Advertencia del compilador (niveles 1 y 3) C4793
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: a217d2074affa1598aef93882fb299c6fcdef5a6
+ms.lasthandoff: 02/24/2017
 
-'función': la función está compilada como código nativo: 'razón'  
+---
+# <a name="compiler-warning-level-1-and-3-c4793"></a>Advertencia del compilador (niveles 1 y 3) C4793
+'función': función está compilada como código nativo: 'motivo'  
   
- El compilador no puede compilar *function* en código administrado, aunque se especifica la opción del compilador [\/clr](../../build/reference/clr-common-language-runtime-compilation.md) .  En su lugar, el compilador emite la advertencia C4793 y un mensaje explicativo a continuación y, a continuación compila *function* en código nativo.  El mensaje de continuación contiene el texto de *reason* que explica por qué *function* no se puede compilar en `MSIL`.  
+ El compilador no puede compilar *función* en código administrado, aunque el [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) se especifica la opción del compilador. En su lugar, el compilador emite la advertencia C4793 y un mensaje explicativo a continuación y, a continuación, compila *función* en código nativo. El mensaje de continuación contiene la *razón* texto que explica por qué *función* no se puede compilar para `MSIL`.  
   
- Se trata de una advertencia de nivel 1 cuando se especifica la opción del compilador `/clr:pure`.  
+ Se trata de una advertencia de nivel 1 cuando se especifica la `/clr:pure` opción del compilador.  El **/CLR: pure** opción del compilador está desusada en Visual Studio 2015.  
   
- En la siguiente tabla se muestran todos los mensajes que pueden incluirse a continuación del error.  
+ En la tabla siguiente se enumera todos los mensajes de continuación posibles.  
   
-|Mensaje con la razón|Comentarios|  
-|--------------------------|-----------------|  
-|Los tipos de datos alineados no se admiten en código administrado|CLR debe poder asignar datos en función de las necesidades, lo cual no es posible si los datos están alineados con declaraciones del tipo [\_\_m128](../../cpp/m128.md) o [align](../../cpp/align-cpp.md).|  
-|No se admiten funciones que utilizan '\_\_ImageBase' en el código administrado|`__ImageBase` es un símbolo especial del vinculador utilizado únicamente por el código nativo de bajo nivel para cargar una DLL.|  
-|La opción del compilador '\/clr' no admite varargs|Las funciones nativas no pueden llamar a funciones administradas que tienen [listas de argumentos variables](../../misc/variable-argument-lists.md) \(varargs\) porque las funciones presentan distintos requisitos de diseño de pila.  No obstante, si especifica la opción del compilador `/clr:pure`, sí que se admiten listas de argumentos variables porque el ensamblado sólo puede contener funciones administradas.  Para obtener más información, vea [Código puro y comprobable](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|  
-|El CLR de 64 bits no admite datos declarados con el modificador \_\_ptr32|Un puntero debe tener el mismo tamaño que un puntero nativo en la plataforma actual.  Para obtener más información, vea [\_\_ptr32, \_\_ptr64](../../cpp/ptr32-ptr64.md).|  
-|El CLR de 32 bits no admite datos declarados con el modificador \_\_ptr64|Un puntero debe tener el mismo tamaño que un puntero nativo en la plataforma actual.  Para obtener más información, vea [\_\_ptr32, \_\_ptr64](../../cpp/ptr32-ptr64.md).|  
-|No se admiten una o varias instrucciones intrínsecas en el código administrado|El nombre de la instrucción intrínseca no está disponible en el momento en que se emite el mensaje.  Sin embargo, una instrucción intrínseca que origina este mensaje suele representar una instrucción máquina de bajo nivel.|  
-|No se admite el ensamblado nativo insertado \('\_\_asm'\) en el código administrado|El [código de ensamblado insertado](../../assembler/inline/asm.md) puede incluir código nativo arbitrario, que no puede administrarse.|  
-|El código thunk de una función virtual distinta de \_\_clrcall debe compilarse como código nativo|El código thunk de una función virtual distinta de [\_\_clrcall](../../cpp/clrcall.md) debe utilizar una dirección no administrada.|  
-|Una función que utilice '\_setjmp' debe compilarse como nativa|El CLR debe ser capaz de controlar la ejecución de programas.  Sin embargo, la función [setjmp](../../cpp/using-setjmp-longjmp.md) omite la ejecución normal de programas ya que guarda y restaura información de bajo nivel, como registros y el estado de ejecución.|  
+|Mensaje motivo|Comentarios|  
+|--------------------|-------------|  
+|Tipos de datos alineados no se admiten en código administrado|El CLR debe poder asignar datos según sea necesario, que podría no ser posible si los datos están alineados con declaraciones como [__m128](../../cpp/m128.md) o [alinear](../../cpp/align-cpp.md).|  
+|Las funciones que usan '__ImageBase' no se admiten en código administrado|`__ImageBase`es un símbolo de vinculador especial que se utiliza normalmente sólo por el código nativo de bajo nivel para cargar un archivo DLL.|  
+|varargs no son compatibles con el ' / clr' opción del compilador|Funciones nativas no pueden llamar a las funciones administradas que tienen [listas de argumentos variables](../../cpp/functions-with-variable-argument-lists-cpp.md) (varargs) porque las funciones tienen requisitos de diseño de pila diferente. Sin embargo, si especifica el `/clr:pure` opción del compilador, porque el ensamblado puede contener sólo las funciones administradas se admiten las listas de argumentos variables. Para obtener más información, consulte [código puro y comprobable (C++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|  
+|El CLR de 64 bits no admite datos declarados con el modificador __ptr32|Un puntero debe ser el mismo tamaño que un puntero nativo en la plataforma actual. Para obtener más información, consulte [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|  
+|El CLR de 32 bits no admite datos declarados con el modificador __ptr64|Un puntero debe ser el mismo tamaño que un puntero nativo en la plataforma actual. Para obtener más información, consulte [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|  
+|No se admiten uno o más elementos intrínsecos en código administrado|El nombre de la función intrínseca no está disponible en el momento en que se emite el mensaje. Sin embargo, una función intrínseca que origina este mensaje suele representa una instrucción máquina de bajo nivel.|  
+|Ensamblado nativo insertado ('__asm') no se admite en código administrado|[Código de ensamblado alineado](../../assembler/inline/asm.md) pueden contener código nativo arbitrario, que no se pueden administrar.|  
+|Un thunk de función virtual distinta de __clrcall debe compilarse como nativa|No[__clrcall](../../cpp/clrcall.md) código thunk de función virtual debe utilizar una dirección no administrada.|  
+|Una función que utilice '_setjmp' debe compilarse como nativa|El CLR debe ser capaz de controlar la ejecución del programa. Sin embargo, el [setjmp](../../cpp/using-setjmp-longjmp.md) función omite la ejecución de programa normales por guardar y restaurar información de bajo nivel, como registros y el estado de ejecución.|  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C4793.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4793.  
   
 ```  
 // C4793.cpp  
@@ -67,10 +83,13 @@ int asmfunc(void) {   // C4793, compiled as unmanaged, native code
 }  
 ```  
   
-  **advertencia C4793: 'asmfunc': la función está compilada como código nativo:**  
- **No se admite el ensamblado nativo insertado \('\_\_asm'\) en el código administrado**   
-## Ejemplo  
- El ejemplo siguiente genera el error C4793.  
+```Output  
+warning C4793: 'asmfunc' : function is compiled as native code:  
+        Inline native assembly ('__asm') is not supported in managed code  
+```  
+  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4793.  
   
 ```  
 // C4793_b.cpp  
@@ -83,5 +102,7 @@ void f() {
 }  
 ```  
   
-  **advertencia C4793: 'f': la función está compilada como código nativo:**  
- **Una función que utilice '\_setjmp' debe compilarse como nativa**
+```Output  
+warning C4793: 'f' : function is compiled as native code:  
+        A function using '_setjmp' must be compiled as native  
+```
