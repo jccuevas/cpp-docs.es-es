@@ -1,143 +1,880 @@
 ---
-title: "CMFCRibbonButton Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCRibbonButton"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCRibbonButton class"
+title: Clase CMFCRibbonButton | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCRibbonButton
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCRibbonButton class
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
 caps.latest.revision: 42
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 44
----
-# CMFCRibbonButton Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 08672f10cf67a773f2af8d12130c4e3f5b497e11
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cmfcribbonbutton-class"></a>Clase CMFCRibbonButton
 La clase `CMFCRibbonButton` implementa botones que puede colocar en elementos de barra de cinta como paneles, barras de herramientas de acceso rápido y menús emergentes.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CMFCRibbonButton : public CMFCRibbonBaseElement  
 ```  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCRibbonButton::CMFCRibbonButton](../Topic/CMFCRibbonButton::CMFCRibbonButton.md)|Construye un objeto de botón de la cinta.|  
+|[CMFCRibbonButton::CMFCRibbonButton](#cmfcribbonbutton)|Construye un objeto de botón de la cinta.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCRibbonButton::AddSubItem](../Topic/CMFCRibbonButton::AddSubItem.md)|Agrega un elemento de menú al menú emergente asociado al botón.|  
-|[CMFCRibbonButton::CanBeStretched](../Topic/CMFCRibbonButton::CanBeStretched.md)|\(Invalida [CMFCRibbonBaseElement::CanBeStretched](../Topic/CMFCRibbonBaseElement::CanBeStretched.md)\).|  
-|[CMFCRibbonButton::CleanUpSizes](../Topic/CMFCRibbonButton::CleanUpSizes.md)|\(Invalida [CMFCRibbonBaseElement::CleanUpSizes](../Topic/CMFCRibbonBaseElement::CleanUpSizes.md)\).|  
-|[CMFCRibbonButton::ClosePopupMenu](../Topic/CMFCRibbonButton::ClosePopupMenu.md)|\(Invalida [CMFCRibbonBaseElement::ClosePopupMenu](../Topic/CMFCRibbonBaseElement::ClosePopupMenu.md)\).|  
-|[CMFCRibbonButton::DrawBottomText](../Topic/CMFCRibbonButton::DrawBottomText.md)||  
-|[CMFCRibbonButton::DrawImage](../Topic/CMFCRibbonButton::DrawImage.md)|\(Invalida [CMFCRibbonBaseElement::DrawImage](../Topic/CMFCRibbonBaseElement::DrawImage.md)\).|  
-|[CMFCRibbonButton::DrawRibbonText](../Topic/CMFCRibbonButton::DrawRibbonText.md)||  
-|[CMFCRibbonButton::FindSubItemIndexByID](../Topic/CMFCRibbonButton::FindSubItemIndexByID.md)|Devuelve el índice de un elemento de menú emergente asociado al id. de comando especificado.|  
-|[CMFCRibbonButton::GetCommandRect](../Topic/CMFCRibbonButton::GetCommandRect.md)||  
-|[CMFCRibbonButton::GetCompactSize](../Topic/CMFCRibbonButton::GetCompactSize.md)|Devuelve el tamaño compacto del elemento de la cinta.  \(Invalida [CMFCRibbonBaseElement::GetCompactSize](../Topic/CMFCRibbonBaseElement::GetCompactSize.md)\).|  
-|[CMFCRibbonButton::GetIcon](../Topic/CMFCRibbonButton::GetIcon.md)||  
-|[CMFCRibbonButton::GetImageIndex](../Topic/CMFCRibbonButton::GetImageIndex.md)|Devuelve el índice de la imagen asociada al botón.|  
-|[CMFCRibbonButton::GetImageSize](../Topic/CMFCRibbonButton::GetImageSize.md)|Devuelve el tamaño de la imagen del elemento de la cinta.  \(Invalida [CMFCRibbonBaseElement::GetImageSize](../Topic/CMFCRibbonBaseElement::GetImageSize.md)\).|  
-|[CMFCRibbonButton::GetIntermediateSize](../Topic/CMFCRibbonButton::GetIntermediateSize.md)|Devuelve el tamaño del elemento de la cinta en su estado intermedio.  \(Invalida [CMFCRibbonBaseElement::GetIntermediateSize](../Topic/CMFCRibbonBaseElement::GetIntermediateSize.md)\).|  
-|[CMFCRibbonButton::GetMenu](../Topic/CMFCRibbonButton::GetMenu.md)|Devuelve un controlador a un menú de Windows que se asigna al botón de la cinta.|  
-|[CMFCRibbonButton::GetMenuRect](../Topic/CMFCRibbonButton::GetMenuRect.md)||  
-|[CMFCRibbonButton::GetRegularSize](../Topic/CMFCRibbonButton::GetRegularSize.md)|Devuelve el tamaño normal del elemento de la cinta.  \(Invalida [CMFCRibbonBaseElement::GetRegularSize](../Topic/CMFCRibbonBaseElement::GetRegularSize.md)\).|  
-|[CMFCRibbonButton::GetSubItems](../Topic/CMFCRibbonButton::GetSubItems.md)||  
-|[CMFCRibbonButton::GetTextRowHeight](../Topic/CMFCRibbonButton::GetTextRowHeight.md)||  
-|[CMFCRibbonButton::GetToolTipText](../Topic/CMFCRibbonButton::GetToolTipText.md)|Devuelve el texto de información sobre herramientas del elemento de la cinta.  \(Invalida [CMFCRibbonBaseElement::GetToolTipText](../Topic/CMFCRibbonBaseElement::GetToolTipText.md)\).|  
-|[CMFCRibbonButton::HasCompactMode](../Topic/CMFCRibbonButton::HasCompactMode.md)|Especifica si el elemento de la cinta tiene un modo compacto.  \(Invalida [CMFCRibbonBaseElement::HasCompactMode](../Topic/CMFCRibbonBaseElement::HasCompactMode.md)\).|  
-|[CMFCRibbonButton::HasIntermediateMode](../Topic/CMFCRibbonButton::HasIntermediateMode.md)|Especifica si el elemento de la cinta tiene un modo intermedio.  \(Invalida [CMFCRibbonBaseElement::HasIntermediateMode](../Topic/CMFCRibbonBaseElement::HasIntermediateMode.md)\).|  
-|[CMFCRibbonButton::HasLargeMode](../Topic/CMFCRibbonButton::HasLargeMode.md)|Determina si el elemento de la cinta tiene un modo grande.  \(Invalida [CMFCRibbonBaseElement::HasLargeMode](../Topic/CMFCRibbonBaseElement::HasLargeMode.md)\).|  
-|[CMFCRibbonButton::HasMenu](../Topic/CMFCRibbonButton::HasMenu.md)|\(Invalida [CMFCRibbonBaseElement::HasMenu](../Topic/CMFCRibbonBaseElement::HasMenu.md)\).|  
-|[CMFCRibbonButton::IsAlwaysDrawBorder](../Topic/CMFCRibbonButton::IsAlwaysDrawBorder.md)||  
-|[CMFCRibbonButton::IsAlwaysLargeImage](../Topic/CMFCRibbonButton::IsAlwaysLargeImage.md)|\(Invalida [CMFCRibbonBaseElement::IsAlwaysLargeImage](../Topic/CMFCRibbonBaseElement::IsAlwaysLargeImage.md)\).|  
-|[CMFCRibbonButton::IsApplicationButton](../Topic/CMFCRibbonButton::IsApplicationButton.md)||  
-|[CMFCRibbonButton::IsCommandAreaHighlighted](../Topic/CMFCRibbonButton::IsCommandAreaHighlighted.md)||  
-|[CMFCRibbonButton::IsDefaultCommand](../Topic/CMFCRibbonButton::IsDefaultCommand.md)|Determina si se ha habilitado el comando predeterminado de un botón de la cinta.|  
-|[CMFCRibbonButton::IsDefaultPanelButton](../Topic/CMFCRibbonButton::IsDefaultPanelButton.md)||  
-|[CMFCRibbonButton::IsDrawTooltipImage](../Topic/CMFCRibbonButton::IsDrawTooltipImage.md)||  
-|[CMFCRibbonButton::IsLargeImage](../Topic/CMFCRibbonButton::IsLargeImage.md)||  
-|[CMFCRibbonButton::IsMenuAreaHighlighted](../Topic/CMFCRibbonButton::IsMenuAreaHighlighted.md)||  
-|[CMFCRibbonButton::IsMenuOnBottom](../Topic/CMFCRibbonButton::IsMenuOnBottom.md)||  
-|[CMFCRibbonButton::IsPopupDefaultMenuLook](../Topic/CMFCRibbonButton::IsPopupDefaultMenuLook.md)||  
-|[CMFCRibbonButton::IsRightAlignMenu](../Topic/CMFCRibbonButton::IsRightAlignMenu.md)|Determina si el menú está alineado a la derecha.|  
-|[CMFCRibbonButton::IsSingleLineText](../Topic/CMFCRibbonButton::IsSingleLineText.md)||  
-|[CMFCRibbonButton::OnCalcTextSize](../Topic/CMFCRibbonButton::OnCalcTextSize.md)|\(Invalida [CMFCRibbonBaseElement::OnCalcTextSize](../Topic/CMFCRibbonBaseElement::OnCalcTextSize.md)\).|  
-|[CMFCRibbonButton::OnDrawBorder](../Topic/CMFCRibbonButton::OnDrawBorder.md)||  
-|[CMFCRibbonButton::OnDraw](../Topic/CMFCRibbonButton::OnDraw.md)|Llamado por el marco de trabajo para dibujar el elemento de la cinta.  \(Invalida [CMFCRibbonBaseElement::OnDraw](../Topic/CMFCRibbonBaseElement::OnDraw.md)\).|  
-|[CMFCRibbonButton::OnFillBackground](../Topic/CMFCRibbonButton::OnFillBackground.md)||  
-|[CMFCRibbonButton::RemoveAllSubItems](../Topic/CMFCRibbonButton::RemoveAllSubItems.md)|Quita todos los elementos del menú emergente.|  
-|[CMFCRibbonButton::RemoveSubItem](../Topic/CMFCRibbonButton::RemoveSubItem.md)|Quita un elemento del menú emergente.|  
-|[CMFCRibbonButton::SetACCData](../Topic/CMFCRibbonButton::SetACCData.md)|\(Invalida [CMFCRibbonBaseElement::SetACCData](../Topic/CMFCRibbonBaseElement::SetACCData.md)\).|  
-|[CMFCRibbonButton::SetAlwaysLargeImage](../Topic/CMFCRibbonButton::SetAlwaysLargeImage.md)|Especifica si el botón muestra una imagen grande o pequeña cuando el usuario lo contrae.|  
-|[CMFCRibbonButton::SetDefaultCommand](../Topic/CMFCRibbonButton::SetDefaultCommand.md)|Habilita el comando predeterminado del botón de la cinta.|  
-|[CMFCRibbonButton::SetDescription](../Topic/CMFCRibbonButton::SetDescription.md)|Establece la descripción del elemento de la cinta.  \(Invalida [CMFCRibbonBaseElement::SetDescription](../Topic/CMFCRibbonBaseElement::SetDescription.md)\).|  
-|[CMFCRibbonButton::SetImageIndex](../Topic/CMFCRibbonButton::SetImageIndex.md)|Asigna un índice a la imagen del botón.|  
-|[CMFCRibbonButton::SetMenu](../Topic/CMFCRibbonButton::SetMenu.md)|Asigna un menú emergente al botón de la cinta.|  
-|[CMFCRibbonButton::SetParentCategory](../Topic/CMFCRibbonButton::SetParentCategory.md)|\(Invalida [CMFCRibbonBaseElement::SetParentCategory](../Topic/CMFCRibbonBaseElement::SetParentCategory.md)\).|  
-|[CMFCRibbonButton::SetRightAlignMenu](../Topic/CMFCRibbonButton::SetRightAlignMenu.md)|Alinea el menú emergente a la derecha del botón.|  
-|[CMFCRibbonButton::SetText](../Topic/CMFCRibbonButton::SetText.md)|Establece el texto para el elemento de la cinta.  \(Invalida [CMFCRibbonBaseElement::SetText](../Topic/CMFCRibbonBaseElement::SetText.md)\).|  
+|[CMFCRibbonButton::AddSubItem](#addsubitem)|Agrega un elemento de menú al menú emergente asociado al botón.|  
+|[CMFCRibbonButton::CanBeStretched](#canbestretched)|(Invalida [CMFCRibbonBaseElement::CanBeStretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched).)|  
+|[CMFCRibbonButton::CleanUpSizes](#cleanupsizes)|(Invalida [CMFCRibbonBaseElement::CleanUpSizes](../../mfc/reference/cmfcribbonbaseelement-class.md#cleanupsizes).)|  
+|[CMFCRibbonButton::ClosePopupMenu](#closepopupmenu)|(Invalida [CMFCRibbonBaseElement::ClosePopupMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#closepopupmenu).)|  
+|[CMFCRibbonButton::DrawBottomText](#drawbottomtext)||  
+|[CMFCRibbonButton::DrawImage](#drawimage)|(Invalida [CMFCRibbonBaseElement::DrawImage](../../mfc/reference/cmfcribbonbaseelement-class.md#drawimage).)|  
+|[CMFCRibbonButton::DrawRibbonText](#drawribbontext)||  
+|[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|Devuelve el índice de un elemento de menú emergente asociado al id. de comando especificado.|  
+|[CMFCRibbonButton::GetCommandRect](#getcommandrect)||  
+|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|Devuelve el tamaño compacto del elemento de la cinta. (Invalida [CMFCRibbonBaseElement::GetCompactSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|  
+|[CMFCRibbonButton::GetIcon](#geticon)||  
+|[CMFCRibbonButton::GetImageIndex](#getimageindex)|Devuelve el índice de la imagen asociada al botón.|  
+|[CMFCRibbonButton::GetImageSize](#getimagesize)|Devuelve el tamaño de la imagen del elemento de la cinta. (Invalida [CMFCRibbonBaseElement::GetImageSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|  
+|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|Devuelve el tamaño del elemento de la cinta en su estado intermedio. (Invalida [CMFCRibbonBaseElement::GetIntermediateSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).)|  
+|[CMFCRibbonButton::GetMenu](#getmenu)|Devuelve un controlador a un menú de Windows que se asigna al botón de la cinta.|  
+|[CMFCRibbonButton::GetMenuRect](#getmenurect)||  
+|[CMFCRibbonButton::GetRegularSize](#getregularsize)|Devuelve el tamaño normal del elemento de la cinta. (Invalida [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
+|[CMFCRibbonButton::GetSubItems](#getsubitems)||  
+|[CMFCRibbonButton::GetTextRowHeight](#gettextrowheight)||  
+|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|Devuelve el texto de información sobre herramientas del elemento de la cinta. (Invalida [CMFCRibbonBaseElement::GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|  
+|[CMFCRibbonButton::HasCompactMode](#hascompactmode)|Especifica si el elemento de la cinta tiene un modo compacto. (Invalida [CMFCRibbonBaseElement::HasCompactMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode).)|  
+|[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|Especifica si el elemento de la cinta tiene un modo intermedio. (Invalida [CMFCRibbonBaseElement::HasIntermediateMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode).)|  
+|[CMFCRibbonButton::HasLargeMode](#haslargemode)|Determina si el elemento de la cinta tiene un modo grande. (Invalida [CMFCRibbonBaseElement::HasLargeMode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode).)|  
+|[CMFCRibbonButton::HasMenu](#hasmenu)|(Invalida [CMFCRibbonBaseElement::HasMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#hasmenu).)|  
+|[CMFCRibbonButton::IsAlwaysDrawBorder](#isalwaysdrawborder)||  
+|[CMFCRibbonButton::IsAlwaysLargeImage](#isalwayslargeimage)|(Invalida [CMFCRibbonBaseElement::IsAlwaysLargeImage](../../mfc/reference/cmfcribbonbaseelement-class.md#isalwayslargeimage).)|  
+|[CMFCRibbonButton::IsApplicationButton](#isapplicationbutton)||  
+|[CMFCRibbonButton::IsCommandAreaHighlighted](#iscommandareahighlighted)||  
+|[CMFCRibbonButton::IsDefaultCommand](#isdefaultcommand)|Determina si se ha habilitado el comando predeterminado de un botón de la cinta.|  
+|[CMFCRibbonButton::IsDefaultPanelButton](#isdefaultpanelbutton)||  
+|[CMFCRibbonButton::IsDrawTooltipImage](#isdrawtooltipimage)||  
+|[CMFCRibbonButton::IsLargeImage](#islargeimage)||  
+|[CMFCRibbonButton::IsMenuAreaHighlighted](#ismenuareahighlighted)||  
+|[CMFCRibbonButton::IsMenuOnBottom](#ismenuonbottom)||  
+|[CMFCRibbonButton::IsPopupDefaultMenuLook](#ispopupdefaultmenulook)||  
+|[CMFCRibbonButton::IsRightAlignMenu](#isrightalignmenu)|Determina si el menú está alineado a la derecha.|  
+|[CMFCRibbonButton::IsSingleLineText](#issinglelinetext)||  
+|[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(Invalida [CMFCRibbonBaseElement::OnCalcTextSize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize).)|  
+|[CMFCRibbonButton::OnDrawBorder](#ondrawborder)||  
+|[CMFCRibbonButton::OnDraw](#ondraw)|Llamado por el marco de trabajo para dibujar el elemento de la cinta. (Invalida [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|  
+|[CMFCRibbonButton::OnFillBackground](#onfillbackground)||  
+|[CMFCRibbonButton::RemoveAllSubItems](#removeallsubitems)|Quita todos los elementos del menú emergente.|  
+|[CMFCRibbonButton::RemoveSubItem](#removesubitem)|Quita un elemento del menú emergente.|  
+|[CMFCRibbonButton::SetACCData](#setaccdata)|(Invalida [CMFCRibbonBaseElement::SetACCData](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).)|  
+|[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|Especifica si el botón muestra una imagen grande o pequeña cuando el usuario lo contrae.|  
+|[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|Habilita el comando predeterminado del botón de la cinta.|  
+|[CMFCRibbonButton::SetDescription](#setdescription)|Establece la descripción del elemento de la cinta. (Invalida [CMFCRibbonBaseElement::SetDescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription).)|  
+|[CMFCRibbonButton::SetImageIndex](#setimageindex)|Asigna un índice a la imagen del botón.|  
+|[CMFCRibbonButton::SetMenu](#setmenu)|Asigna un menú emergente al botón de la cinta.|  
+|[CMFCRibbonButton::SetParentCategory](#setparentcategory)|(Invalida [CMFCRibbonBaseElement::SetParentCategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|  
+|[CMFCRibbonButton::SetRightAlignMenu](#setrightalignmenu)|Alinea el menú emergente a la derecha del botón.|  
+|[CMFCRibbonButton::SetText](#settext)|Establece el texto para el elemento de la cinta. (Invalida [CMFCRibbonBaseElement::SetText](../../mfc/reference/cmfcribbonbaseelement-class.md#settext).)|  
   
-### Métodos protegidos  
+### <a name="protected-methods"></a>Métodos protegidos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCRibbonButton::OnClick](../Topic/CMFCRibbonButton::OnClick.md)|Llamado por el marco de trabajo cuando el usuario hace clic en el botón.|  
+|[CMFCRibbonButton::OnClick](#onclick)|Llamado por el marco de trabajo cuando el usuario hace clic en el botón.|  
   
-## Ejemplo  
- En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCRibbonButton`.  En el ejemplo se muestra cómo construir un objeto de la clase `CMFCRibbonButton`, asignar un menú emergente al botón de la cinta, establecer la descripción del botón, quitar un elemento del menú emergente y alinear a la derecha el menú emergente hacia el borde del botón.  
+## <a name="example"></a>Ejemplo  
+ En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCRibbonButton`. En el ejemplo se muestra cómo construir un objeto de la clase `CMFCRibbonButton`, asignar un menú emergente al botón de la cinta, establecer la descripción del botón, quitar un elemento del menú emergente y alinear a la derecha el menú emergente hacia el borde del botón.  
   
- [!code-cpp[NVC_MFC_RibbonApp#7](../../mfc/reference/codesnippet/CPP/cmfcribbonbutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp&#7;](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_1.cpp)]  
   
-## Comentarios  
- Para usar un botón de la cinta en una aplicación, construya el objeto de botón y agréguelo al [panel](../../mfc/reference/cmfcribbonpanel-class.md) de la cinta adecuado.  
+## <a name="remarks"></a>Comentarios  
+ Para usar un botón de la cinta de opciones en una aplicación, construya el objeto de botón y agregarlo a la cinta de opciones adecuada [panel](../../mfc/reference/cmfcribbonpanel-class.md).  
   
 ```  
-CMFCRibbonPanel* pPanel = pCategory->AddPanel (  
-    _T("Clipboard"),                       // Panel name  
-    m_PanelIcons.ExtractIcon (0));  // Panel icon  
+CMFCRibbonPanel* pPanel = pCategory->AddPanel (
+    _T("Clipboard"), // Panel name  
+    m_PanelIcons.ExtractIcon (0)); // Panel icon  
+
 // Create the first button ("Paste"):  
-CMFCRibbonButton* pPasteButton =   
-    new CMFCRibbonButton (ID_EDIT_PASTE, _T("Paste"), -1, 0);  
+CMFCRibbonButton* pPasteButton = 
+    new CMFCRibbonButton (ID_EDIT_PASTE, _T("Paste"), -1, 0);
+
 // The third parameter (-1) disables small images for button.  
 // This button is always displayed with a large image  
 // Associate a pop-up menu with the "Paste" button:  
-pPasteButton->SetMenu (IDR_CONTEXT_MENU);  
+pPasteButton->SetMenu (IDR_CONTEXT_MENU);
+
 // Add buttons to the panel. These buttons have only small images.  
-pPanel->Add (new CMFCRibbonButton (ID_EDIT_CUT, _T("Cut"), 1));  
-pPanel->Add (new CMFCRibbonButton (ID_EDIT_COPY, _T("Copy"), 2));  
-pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));  
+pPanel->Add (new CMFCRibbonButton (ID_EDIT_CUT, _T("Cut"), 1));
+pPanel->Add (new CMFCRibbonButton (ID_EDIT_COPY, _T("Copy"), 2));
+pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 ```  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
  [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxribbonbutton.h  
   
-## Vea también  
- [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
+##  <a name="a-nameaddsubitema--cmfcribbonbuttonaddsubitem"></a><a name="addsubitem"></a>CMFCRibbonButton::AddSubItem  
+ Agrega un elemento de menú al menú emergente asociado al botón.  
+  
+```  
+void AddSubItem(
+    CMFCRibbonBaseElement* pSubItem,  
+    int nIndex=-1);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pSubItem`  
+ Especifica un puntero para el nuevo elemento para agregar.  
+  
+ [in] `nIndex`  
+ Especifica el índice en el que se va a agregar el elemento a la matriz de elementos de menú del botón; -1 para agregar el elemento al final de la matriz de elementos de menú.  
+  
+##  <a name="a-namecanbestretcheda--cmfcribbonbuttoncanbestretched"></a><a name="canbestretched"></a>CMFCRibbonButton::CanBeStretched  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL CanBeStretched();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namecleanupsizesa--cmfcribbonbuttoncleanupsizes"></a><a name="cleanupsizes"></a>CMFCRibbonButton::CleanUpSizes  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void CleanUpSizes();
+```  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameclosepopupmenua--cmfcribbonbuttonclosepopupmenu"></a><a name="closepopupmenu"></a>CMFCRibbonButton::ClosePopupMenu  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void ClosePopupMenu();
+```  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namecmfcribbonbuttona--cmfcribbonbuttoncmfcribbonbutton"></a><a name="cmfcribbonbutton"></a>CMFCRibbonButton::CMFCRibbonButton  
+ Construye un objeto de botón de la cinta.  
+  
+```  
+CMFCRibbonButton(
+    UINT nID,  
+    LPCTSTR lpszText,  
+    int nSmallImageIndex=-1,  
+    int nLargeImageIndex=-1,  
+    BOOL bAlwaysShowDescription=FALSE);
+
+CMFCRibbonButton(
+    UINT nID,  
+    LPCTSTR lpszText,  
+    HICON hIcon,  
+    BOOL bAlwaysShowDescription=FALSE,  
+    HICON hIconSmall=NULL,  
+    BOOL bAutoDestroyIcon=FALSE,  
+    BOOL bAlphaBlendIcon=FALSE);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `nID`  
+ Especifica el identificador de comando del botón.  
+  
+ [in] `lpszText`  
+ Especifica la etiqueta de texto del botón.  
+  
+ [in] `nSmallImageIndex`  
+ Especifica un índice de base cero de la imagen del botón pequeño en la lista de imágenes de la categoría primaria.  
+  
+ [in] `nLargeImageIndex`  
+ Especifica un índice de base cero de la imagen del botón grande en la lista de imágenes de la categoría primaria.  
+  
+ [in] `hIcon`  
+ Especifica un identificador para el icono de la aplicación como la imagen del botón.  
+  
+### <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo construir un `CMFCRibbonButton` objeto.  
+  
+ [!code-cpp[NVC_MFC_RibbonApp Nº&6;](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_2.cpp)]  
+  
+##  <a name="a-namedrawbottomtexta--cmfcribbonbuttondrawbottomtext"></a><a name="drawbottomtext"></a>CMFCRibbonButton::DrawBottomText  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+CSize DrawBottomText(
+    CDC* pDC,  
+    BOOL bCalcOnly);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pDC`  
+ [in] `bCalcOnly`  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namedrawimagea--cmfcribbonbuttondrawimage"></a><a name="drawimage"></a>CMFCRibbonButton::DrawImage  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void DrawImage(
+    CDC* pDC,  
+    RibbonImageType type,  
+    CRect rectImage);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pDC`  
+ [in] `type`  
+ [in] `rectImage`  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namedrawribbontexta--cmfcribbonbuttondrawribbontext"></a><a name="drawribbontext"></a>CMFCRibbonButton::DrawRibbonText  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual int DrawRibbonText(
+    CDC* pDC,  
+    const CString& strText,  
+    CRect rectText,  
+    UINT uiDTFlags,  
+    COLORREF clrText = (COLORREF)-1);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pDC`  
+ [in] `strText`  
+ [in] `rectText`  
+ [in] `uiDTFlags`  
+ [in] `clrText`  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namefindsubitemindexbyida--cmfcribbonbuttonfindsubitemindexbyid"></a><a name="findsubitemindexbyid"></a>CMFCRibbonButton::FindSubItemIndexByID  
+ Devuelve el índice de un elemento de menú emergente asociado al id. de comando especificado.  
+  
+```  
+int FindSubItemIndexByID(UINT uiID) const;  
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `uiID`  
+ Especifica el identificador de comando del elemento de menú emergente.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Índice de base cero del elemento secundario que está asociado el `uiID`. -1 si no hay ningún elemento de subproceso.  
+  
+##  <a name="a-namegetcommandrecta--cmfcribbonbuttongetcommandrect"></a><a name="getcommandrect"></a>CMFCRibbonButton::GetCommandRect  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+CRect GetCommandRect() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namegetcompactsizea--cmfcribbonbuttongetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonButton::GetCompactSize  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual CSize GetCompactSize(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pDC`  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namegeticona--cmfcribbonbuttongeticon"></a><a name="geticon"></a>CMFCRibbonButton::GetIcon  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+HICON GetIcon(BOOL bLargeIcon = TRUE) const;  
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `bLargeIcon`  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namegetimageindexa--cmfcribbonbuttongetimageindex"></a><a name="getimageindex"></a>CMFCRibbonButton::GetImageIndex  
+ Devuelve el índice de la imagen asociada al botón.  
+  
+```  
+int GetImageIndex(BOOL bLargeImage) const;  
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `bLargeImage`  
+ Si `TRUE`, devuelve el índice de imagen en la lista de imágenes que contiene las imágenes grandes; en caso contrario devuelve el índice de imagen en la lista de imágenes que contiene las imágenes pequeñas.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ El índice de la imagen del botón en la lista de imágenes asociada.  
+  
+##  <a name="a-namegetimagesizea--cmfcribbonbuttongetimagesize"></a><a name="getimagesize"></a>CMFCRibbonButton::GetImageSize  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual CSize GetImageSize(RibbonImageType type) const;  
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `type`  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namegetintermediatesizea--cmfcribbonbuttongetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonButton::GetIntermediateSize  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual CSize GetIntermediateSize(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pDC`  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namegetmenua--cmfcribbonbuttongetmenu"></a><a name="getmenu"></a>CMFCRibbonButton::GetMenu  
+ Devuelve un controlador a un menú de Windows que se asigna al botón de la cinta.  
+  
+```  
+HMENU GetMenu() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Un identificador de un menú de Windows asignado al botón; `NULL` si no hay ningún menú asignado.  
+  
+##  <a name="a-namegetmenurecta--cmfcribbonbuttongetmenurect"></a><a name="getmenurect"></a>CMFCRibbonButton::GetMenuRect  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+CRect GetMenuRect() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namegetregularsizea--cmfcribbonbuttongetregularsize"></a><a name="getregularsize"></a>CMFCRibbonButton::GetRegularSize  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual CSize GetRegularSize(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pDC`  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namegetsubitemsa--cmfcribbonbuttongetsubitems"></a><a name="getsubitems"></a>CMFCRibbonButton::GetSubItems  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namegettextrowheighta--cmfcribbonbuttongettextrowheight"></a><a name="gettextrowheight"></a>CMFCRibbonButton::GetTextRowHeight  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+int GetTextRowHeight() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namegettooltiptexta--cmfcribbonbuttongettooltiptext"></a><a name="gettooltiptext"></a>CMFCRibbonButton::GetToolTipText  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual CString GetToolTipText() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namehascompactmodea--cmfcribbonbuttonhascompactmode"></a><a name="hascompactmode"></a>CMFCRibbonButton::HasCompactMode  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL HasCompactMode() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namehasintermediatemodea--cmfcribbonbuttonhasintermediatemode"></a><a name="hasintermediatemode"></a>CMFCRibbonButton::HasIntermediateMode  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL HasIntermediateMode() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namehaslargemodea--cmfcribbonbuttonhaslargemode"></a><a name="haslargemode"></a>CMFCRibbonButton::HasLargeMode  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL HasLargeMode() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namehasmenua--cmfcribbonbuttonhasmenu"></a><a name="hasmenu"></a>CMFCRibbonButton::HasMenu  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL HasMenu() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameisalwaysdrawbordera--cmfcribbonbuttonisalwaysdrawborder"></a><a name="isalwaysdrawborder"></a>CMFCRibbonButton::IsAlwaysDrawBorder  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL IsAlwaysDrawBorder() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameisalwayslargeimagea--cmfcribbonbuttonisalwayslargeimage"></a><a name="isalwayslargeimage"></a>CMFCRibbonButton::IsAlwaysLargeImage  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL IsAlwaysLargeImage() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameisapplicationbuttona--cmfcribbonbuttonisapplicationbutton"></a><a name="isapplicationbutton"></a>CMFCRibbonButton::IsApplicationButton  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL IsApplicationButton() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameiscommandareahighlighteda--cmfcribbonbuttoniscommandareahighlighted"></a><a name="iscommandareahighlighted"></a>CMFCRibbonButton::IsCommandAreaHighlighted  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL IsCommandAreaHighlighted() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameisdefaultcommanda--cmfcribbonbuttonisdefaultcommand"></a><a name="isdefaultcommand"></a>CMFCRibbonButton::IsDefaultCommand  
+ Especifica si está habilitado el comando predeterminado para un botón de la cinta de opciones.  
+  
+```  
+BOOL IsDefaultCommand() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si ha habilitado el comando predeterminado para un botón de la cinta de opciones; `FALSE` en caso contrario.  
+  
+##  <a name="a-nameisdefaultpanelbuttona--cmfcribbonbuttonisdefaultpanelbutton"></a><a name="isdefaultpanelbutton"></a>CMFCRibbonButton::IsDefaultPanelButton  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL IsDefaultPanelButton() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameisdrawtooltipimagea--cmfcribbonbuttonisdrawtooltipimage"></a><a name="isdrawtooltipimage"></a>CMFCRibbonButton::IsDrawTooltipImage  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL IsDrawTooltipImage() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameislargeimagea--cmfcribbonbuttonislargeimage"></a><a name="islargeimage"></a>CMFCRibbonButton::IsLargeImage  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+BOOL IsLargeImage() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameismenuareahighlighteda--cmfcribbonbuttonismenuareahighlighted"></a><a name="ismenuareahighlighted"></a>CMFCRibbonButton::IsMenuAreaHighlighted  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL IsMenuAreaHighlighted() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameismenuonbottoma--cmfcribbonbuttonismenuonbottom"></a><a name="ismenuonbottom"></a>CMFCRibbonButton::IsMenuOnBottom  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+BOOL IsMenuOnBottom() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameispopupdefaultmenulooka--cmfcribbonbuttonispopupdefaultmenulook"></a><a name="ispopupdefaultmenulook"></a>CMFCRibbonButton::IsPopupDefaultMenuLook  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL IsPopupDefaultMenuLook() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameisrightalignmenua--cmfcribbonbuttonisrightalignmenu"></a><a name="isrightalignmenu"></a>CMFCRibbonButton::IsRightAlignMenu  
+ Especifica si el menú está alineado a la derecha.  
+  
+```  
+BOOL IsRightAlignMenu() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si el menú está alineado a la derecha; de lo contrario, `FALSE`.  
+  
+##  <a name="a-nameissinglelinetexta--cmfcribbonbuttonissinglelinetext"></a><a name="issinglelinetext"></a>CMFCRibbonButton::IsSingleLineText  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+BOOL IsSingleLineText() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameoncalctextsizea--cmfcribbonbuttononcalctextsize"></a><a name="oncalctextsize"></a>CMFCRibbonButton::OnCalcTextSize  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnCalcTextSize(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pDC`  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameonclicka--cmfcribbonbuttononclick"></a><a name="onclick"></a>CMFCRibbonButton::OnClick  
+ Llamado por el marco de trabajo cuando el usuario hace clic en el botón.  
+  
+```  
+virtual void OnClick(CPoint point);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `point`  
+ Especifica la posición del clic del mouse.  
+  
+### <a name="remarks"></a>Comentarios  
+ Invalide este método en una clase derivada si desea controlar el evento.  
+  
+##  <a name="a-nameondrawa--cmfcribbonbuttonondraw"></a><a name="ondraw"></a>CMFCRibbonButton::OnDraw  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnDraw(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pDC`  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameondrawbordera--cmfcribbonbuttonondrawborder"></a><a name="ondrawborder"></a>CMFCRibbonButton::OnDrawBorder  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnDrawBorder(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pDC`  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameonfillbackgrounda--cmfcribbonbuttononfillbackground"></a><a name="onfillbackground"></a>CMFCRibbonButton::OnFillBackground  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual COLORREF OnFillBackground(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pDC`  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameremoveallsubitemsa--cmfcribbonbuttonremoveallsubitems"></a><a name="removeallsubitems"></a>CMFCRibbonButton::RemoveAllSubItems  
+ Quita todos los elementos del menú emergente.  
+  
+```  
+void RemoveAllSubItems();
+```  
+  
+##  <a name="a-nameremovesubitema--cmfcribbonbuttonremovesubitem"></a><a name="removesubitem"></a>CMFCRibbonButton::RemoveSubItem  
+ Quita un elemento del menú emergente.  
+  
+```  
+BOOL RemoveSubItem(int nIndex);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `nIndex`  
+ Especifica el índice de base cero del elemento de menú que desea quitar.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si el elemento especificado se ha quitado correctamente; de lo contrario, `FALSE` si `nIndex` es negativo o supera el número de elementos de menú en el menú emergente.  
+  
+##  <a name="a-namesetaccdataa--cmfcribbonbuttonsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonButton::SetACCData  
+ Establece los datos de accesibilidad para el botón de la cinta de opciones.  
+  
+```  
+virtual BOOL SetACCData(
+    CWnd* pParent,  
+    CAccessibilityData& data);  
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `pParent`  
+ La ventana principal para el elemento de la cinta de opciones.  
+  
+ `data`  
+ Los datos de accesibilidad para el elemento de la cinta de opciones.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `TRUE` si es correcto; en caso contrario, FALSE.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namesetalwayslargeimagea--cmfcribbonbuttonsetalwayslargeimage"></a><a name="setalwayslargeimage"></a>CMFCRibbonButton::SetAlwaysLargeImage  
+ Especifica si el botón muestra una imagen grande o pequeña cuando el usuario lo contrae.  
+  
+```  
+void SetAlwaysLargeImage(BOOL bSet=TRUE);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `bSet`  
+ Si `TRUE`, el botón muestra una imagen grande. De lo contrario, el botón muestra una imagen pequeña.  
+  
+##  <a name="a-namesetdefaultcommanda--cmfcribbonbuttonsetdefaultcommand"></a><a name="setdefaultcommand"></a>CMFCRibbonButton::SetDefaultCommand  
+ Habilita el comando predeterminado del botón de la cinta.  
+  
+```  
+void SetDefaultCommand(BOOL bSet=TRUE);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `bSet`  
+ Si `TRUE`, el botón puede ejecutar el comando predeterminado. Si `FALSE`, el botón no puede ejecutar el comando predeterminado.  
+  
+### <a name="remarks"></a>Comentarios  
+ `bSet`es relevante sólo cuando el botón tiene un menú. Si `bSet` es `TRUE`, el botón puede ejecutar su comando de forma predeterminada y el menú emergente asignado aparece sólo cuando un usuario hace clic en la flecha situada en el borde derecho del botón. De lo contrario, el botón no puede ejecutar el comando predeterminado, y aparece el menú emergente, independientemente de qué área del botón hace clic el usuario.  
+  
+##  <a name="a-namesetdescriptiona--cmfcribbonbuttonsetdescription"></a><a name="setdescription"></a>CMFCRibbonButton::SetDescription  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void SetDescription(LPCTSTR lpszText);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `lpszText`  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namesetimageindexa--cmfcribbonbuttonsetimageindex"></a><a name="setimageindex"></a>CMFCRibbonButton::SetImageIndex  
+ Asigna un índice a la imagen del botón.  
+  
+```  
+void SetImageIndex(
+    int nIndex,  
+    BOOL bLargeImage);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `nIndex`  
+ Especifica el índice de la imagen.  
+  
+ [in] `bLargeImage`  
+ Si `TRUE`, el índice especificado hace referencia a la lista de imágenes de gran tamaño. De lo contrario, el índice hace referencia a la lista de las imágenes pequeñas.  
+  
+##  <a name="a-namesetmenua--cmfcribbonbuttonsetmenu"></a><a name="setmenu"></a>CMFCRibbonButton::SetMenu  
+ Asigna un menú emergente al botón de la cinta.  
+  
+```  
+void SetMenu(
+    HMENU hMenu,  
+    BOOL bIsDefaultCommand=FALSE,  
+    BOOL bRightAlign=FALSE);
+
+void SetMenu(
+    UINT uiMenuResID,  
+    BOOL bIsDefaultCommand=FALSE,  
+    BOOL bRightAlign=FALSE);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `hMenu`  
+ Identificador de un menú de Windows.  
+  
+ `bIsDefaultCommand`  
+ Si `TRUE`, el botón puede ejecutar el comando predeterminado; en caso contrario, el botón muestra un menú emergente.  
+  
+ `bRightAlign`  
+ Si `TRUE`, el menú está alineado a la derecha. De lo contrario, el menú está alineado a la izquierda.  
+  
+ `uiMenuResID`  
+ Un identificador de recurso de menú.  
+  
+### <a name="remarks"></a>Comentarios  
+ Cuando la aplicación asigna el menú al botón, el botón muestra una flecha en su lado derecho. Si `bIsDefaultCommand` es `TRUE`, el menú aparece sólo cuando el usuario hace clic en la flecha. Si el usuario hace clic en el botón, se ejecuta el comando predeterminado. Si `bIsDefaultCommand` es `FALSE`, aparece el menú, haga clic en cualquier lugar en el botón.  
+  
+##  <a name="a-namesetparentcategorya--cmfcribbonbuttonsetparentcategory"></a><a name="setparentcategory"></a>CMFCRibbonButton::SetParentCategory  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void SetParentCategory(CMFCRibbonCategory* pParent);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pParent`  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namesetrightalignmenua--cmfcribbonbuttonsetrightalignmenu"></a><a name="setrightalignmenu"></a>CMFCRibbonButton::SetRightAlignMenu  
+ Alinea el menú emergente para el borde del botón.  
+  
+```  
+void SetRightAlignMenu(BOOL bSet=TRUE);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `bSet`  
+ Si `TRUE`, el menú está alineado a la derecha. De lo contrario, el menú está alineado a la izquierda  
+  
+##  <a name="a-namesettexta--cmfcribbonbuttonsettext"></a><a name="settext"></a>CMFCRibbonButton::SetText  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void SetText(LPCTSTR lpszText);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `lpszText`  
+  
+### <a name="remarks"></a>Comentarios  
+  
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)
+

@@ -1,70 +1,134 @@
 ---
-title: "CComCritSecLock Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CComCritSecLock"
-  - "ATL.CComCritSecLock<TLock>"
-  - "ATL::CComCritSecLock<TLock>"
-  - "ATL.CComCritSecLock"
-  - "CComCritSecLock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComCritSecLock class"
+title: Clase CComCritSecLock | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CComCritSecLock
+- ATL.CComCritSecLock<TLock>
+- ATL::CComCritSecLock<TLock>
+- ATL.CComCritSecLock
+- CComCritSecLock
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CComCritSecLock Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 71b9ab8b11adc946656c2192c2f0f06555ef1254
+ms.lasthandoff: 02/24/2017
 
-Esta clase proporciona los métodos para bloquear y desbloquear un objeto de sección crítica.  
+---
+# <a name="ccomcritseclock-class"></a>Clase CComCritSecLock
+Esta clase proporciona métodos para bloquear y desbloquear un objeto de sección crítica.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+template<class TLock> class CComCritSecLock
 ```  
   
-      template<  
-   class TLock  
-> class CComCritSecLock  
-```  
-  
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *TLock*  
- El objeto que se bloqueará y desbloqueado.  
+ El objeto de bloqueo y desbloqueado.  
   
-## Members  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CComCritSecLock::CComCritSecLock](../Topic/CComCritSecLock::CComCritSecLock.md)|el constructor.|  
-|[CComCritSecLock::~CComCritSecLock](../Topic/CComCritSecLock::~CComCritSecLock.md)|El destructor.|  
+|[CComCritSecLock::CComCritSecLock](#ctor)|El constructor.|  
+|[CComCritSecLock:: ~ CComCritSecLock](#dtor)|Destructor.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CComCritSecLock::Lock](../Topic/CComCritSecLock::Lock.md)|Llame a este método para bloquear el objeto de sección crítica.|  
-|[CComCritSecLock::Unlock](../Topic/CComCritSecLock::Unlock.md)|Llame a este método para desbloquear el objeto de sección crítica.|  
+|[CComCritSecLock::Lock](#lock)|Llame a este método para bloquear el objeto de sección crítica.|  
+|[CComCritSecLock::Unlock](#unlock)|Llame a este método para desbloquear el objeto de sección crítica.|  
   
-## Comentarios  
- Utilice esta clase para bloquear y desbloquear objetos de una manera más segura que con [clase de CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) o [clase de CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).  
+## <a name="remarks"></a>Comentarios  
+ Utilice esta clase para bloquear y desbloquear objetos de un modo más seguro que con la [clase CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) o [CComAutoCriticalSection clase](../../atl/reference/ccomautocriticalsection-class.md).  
   
-## Requisitos  
- **encabezado:** atlbase.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atlbase.h  
   
-## Vea también  
- [CComCriticalSection Class](../../atl/reference/ccomcriticalsection-class.md)   
- [CComAutoCriticalSection Class](../../atl/reference/ccomautocriticalsection-class.md)
+##  <a name="a-namectora--ccomcritseclockccomcritseclock"></a><a name="ctor"></a>CComCritSecLock::CComCritSecLock  
+ El constructor.  
+  
+```
+CComCritSecLock(TLock& cs, bool bInitialLock = true);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ *CS*  
+ El objeto de sección crítica.  
+  
+ `bInitialLock`  
+ El estado de bloqueo inicial: **true** significa bloqueado.  
+  
+### <a name="remarks"></a>Comentarios  
+ Inicializa el objeto de sección crítica.  
+  
+##  <a name="a-namedtora--ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock  
+ Destructor.  
+  
+```
+~CComCritSecLock() throw();
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Desbloquea el objeto de sección crítica.  
+  
+##  <a name="a-namelocka--ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock::Lock  
+ Llame a este método para bloquear el objeto de sección crítica.  
+  
+```
+HRESULT Lock() throw();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ha bloqueado correctamente el objeto, o un error HRESULT en caso de error.  
+  
+### <a name="remarks"></a>Comentarios  
+ Si el objeto ya está bloqueado, se producirá un error de aserción en compilaciones de depuración.  
+  
+##  <a name="a-nameunlocka--ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock::Unlock  
+ Llame a este método para desbloquear el objeto de sección crítica.  
+  
+```
+void Unlock() throw();
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Si el objeto ya está desbloqueado, se producirá un error de aserción en compilaciones de depuración.  
+  
+## <a name="see-also"></a>Vea también  
+ [Clase CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)   
+ [Clase CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)
+

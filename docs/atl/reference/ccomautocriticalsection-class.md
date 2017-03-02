@@ -1,66 +1,102 @@
 ---
-title: "CComAutoCriticalSection Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CComAutoCriticalSection"
-  - "ATL::CComAutoCriticalSection"
-  - "CComAutoCriticalSection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComAutoCriticalSection class"
+title: Clase CComAutoCriticalSection | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CComAutoCriticalSection
+- ATL::CComAutoCriticalSection
+- CComAutoCriticalSection
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComAutoCriticalSection class
 ms.assetid: 491a9d90-3398-4f90-88f5-fd2172a46b30
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CComAutoCriticalSection Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
+ms.openlocfilehash: 9f58a4cfd02af09a05b625a7e02b574b672adade
+ms.lasthandoff: 02/24/2017
 
-`CComAutoCriticalSection` proporciona métodos para obtener y liberar la propiedad de un objeto de sección crítica.  
+---
+# <a name="ccomautocriticalsection-class"></a>Clase CComAutoCriticalSection
+`CComAutoCriticalSection`Proporciona métodos para obtener y liberar la propiedad de un objeto de sección crítica.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+class CComAutoCriticalSection : public CComCriticalSection
 ```  
   
-class CComAutoCriticalSection : public CComCriticalSection  
+## <a name="members"></a>Miembros  
   
-```  
+### <a name="public-constructors"></a>Constructores públicos  
   
-## Members  
-  
-### Constructores públicos  
-  
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CComAutoCriticalSection::CComAutoCriticalSection](../Topic/CComAutoCriticalSection::CComAutoCriticalSection.md)|el constructor.|  
-|[CComAutoCriticalSection::~CComAutoCriticalSection](../Topic/CComAutoCriticalSection::~CComAutoCriticalSection.md)|El destructor.|  
+|[CComAutoCriticalSection::CComAutoCriticalSection](#ccomautocriticalsection)|El constructor.|  
+|[CComAutoCriticalSection:: ~ CComAutoCriticalSection](#dtor)|Destructor.|  
   
-## Comentarios  
- `CComAutoCriticalSection` es similar ordenar [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), a menos que inicializa `CComAutoCriticalSection` automáticamente el objeto de sección crítica en el constructor.  
+## <a name="remarks"></a>Comentarios  
+ `CComAutoCriticalSection`es similar a la clase [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), excepto `CComAutoCriticalSection` automáticamente inicializa el objeto de sección crítica en el constructor.  
   
- Normalmente, se utiliza `CComAutoCriticalSection` con el nombre [AutoCriticalSection](../Topic/CComMultiThreadModel::AutoCriticalSection.md)de `typedef` .  Referencias de este nombre `CComAutoCriticalSection` cuando se utiliza [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) .  
+ Normalmente, se utiliza `CComAutoCriticalSection` a través de la `typedef` nombre [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Este nombre hace referencia a `CComAutoCriticalSection` cuando [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) se está usando.  
+
   
- Los métodos de `Init` y de `Term` de [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) no están disponibles al utilizar esta clase.  
+ El `Init` y `Term` métodos de [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) no están disponibles cuando se utiliza esta clase.  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)  
   
  `CComAutoCriticalSection`  
   
-## Requisitos  
- **Header:** atlcore.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atlcore.h  
   
-## Vea también  
- [CComFakeCriticalSection Class](../../atl/reference/ccomfakecriticalsection-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)   
- [CComCriticalSection Class](../../atl/reference/ccomcriticalsection-class.md)
+##  <a name="a-nameccomautocriticalsectiona--ccomautocriticalsectionccomautocriticalsection"></a><a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalSection  
+ El constructor.  
+  
+```
+CComAutoCriticalSection();
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Llama a la función de Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), que inicializa el objeto de sección crítica.  
+  
+##  <a name="a-namedtora--ccomautocriticalsectionccomautocriticalsection"></a><a name="dtor"></a>CComAutoCriticalSection:: ~ CComAutoCriticalSection  
+ Destructor.  
+  
+```
+~CComAutoCriticalSection() throw();
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ El destructor llama [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552), que libera todos los recursos del sistema utilizados por el objeto de sección crítica.  
+  
+## <a name="see-also"></a>Vea también  
+ [Clase CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)   
+ [Información general de la clase](../../atl/atl-class-overview.md)   
+ [Clase CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)
+

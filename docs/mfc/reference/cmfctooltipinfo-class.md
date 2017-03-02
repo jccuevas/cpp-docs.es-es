@@ -1,79 +1,233 @@
 ---
-title: "CMFCToolTipInfo Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCToolTipInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCToolTipInfo class"
+title: Clase CMFCToolTipInfo | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCToolTipInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCToolTipInfo class
 ms.assetid: f9d3d7f8-1f08-4342-a7b2-683860e5d2a5
 caps.latest.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 29
----
-# CMFCToolTipInfo Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: ed15ce9f3e1abb48c0a6c4eacdf662cc2ef3f9c9
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cmfctooltipinfo-class"></a>Clase CMFCToolTipInfo
 Almacena información sobre el aspecto visual de la información sobre herramientas.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CMFCToolTipInfo  
 ```  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[CMFCToolTipInfo::operator\=](../Topic/CMFCToolTipInfo::operator=.md)||  
-  
-### Miembros de datos  
+### <a name="public-methods"></a>Métodos públicos  
   
 |Nombre|Descripción|  
-|------------|-----------------|  
-|[CMFCToolTipInfo::m\_bBalloonTooltip](../Topic/CMFCToolTipInfo::m_bBalloonTooltip.md)|Variable booleana que indica si la información sobre herramientas tiene apariencia de globo.|  
-|[CMFCToolTipInfo::m\_bBoldLabel](../Topic/CMFCToolTipInfo::m_bBoldLabel.md)|Variable booleana que indica si las etiquetas de información sobre herramientas se muestran en negrita.|  
-|[CMFCToolTipInfo::m\_bDrawDescription](../Topic/CMFCToolTipInfo::m_bDrawDescription.md)|Variable booleana que indica si la información sobre herramientas contiene una descripción.|  
-|[CMFCToolTipInfo::m\_bDrawIcon](../Topic/CMFCToolTipInfo::m_bDrawIcon.md)|Variable booleana que indica si la información sobre herramientas contiene un icono.|  
-|[CMFCToolTipInfo::m\_bDrawSeparator](../Topic/CMFCToolTipInfo::m_bDrawSeparator.md)|Variable booleana que indica si se muestra un separador entre la etiqueta de información sobre herramientas y la descripción de la información sobre herramientas.|  
-|[CMFCToolTipInfo::m\_bRoundedCorners](../Topic/CMFCToolTipInfo::m_bRoundedCorners.md)|Variable booleana que indica si la información sobre herramientas tiene esquinas redondeadas.|  
-|[CMFCToolTipInfo::m\_bVislManagerTheme](../Topic/CMFCToolTipInfo::m_bVislManagerTheme.md)|Variable booleana que indica si la apariencia de la información sobre herramientas debe controlarse mediante un administrador visual \(vea [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md)\).|  
-|[CMFCToolTipInfo::m\_clrBorder](../Topic/CMFCToolTipInfo::m_clrBorder.md)|Color del borde de la información sobre herramientas.|  
-|[CMFCToolTipInfo::m\_clrFill](../Topic/CMFCToolTipInfo::m_clrFill.md)|Color del fondo de la información sobre herramientas.|  
-|[CMFCToolTipInfo::m\_clrFillGradient](../Topic/CMFCToolTipInfo::m_clrFillGradient.md)|Color del relleno de degradado en la información sobre herramientas.|  
-|[CMFCToolTipInfo::m\_clrText](../Topic/CMFCToolTipInfo::m_clrText.md)|Color del texto en la información sobre herramientas.|  
-|[CMFCToolTipInfo::m\_nGradientAngle](../Topic/CMFCToolTipInfo::m_nGradientAngle.md)|Ángulo del relleno de degradado en la información sobre herramientas.|  
-|[CMFCToolTipInfo::m\_nMaxDescrWidth](../Topic/CMFCToolTipInfo::m_nMaxDescrWidth.md)|Ancho máximo posible, en píxeles, de la descripción en la información sobre herramientas.|  
+|----------|-----------------|  
+|[CMFCToolTipInfo::operator =](#operator_eq)||  
   
-## Comentarios  
- Use [CMFCToolTipCtrl Class](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo` y [CTooltipManager Class](../../mfc/reference/ctooltipmanager-class.md) juntos para implementar información sobre herramientas personalizada en su aplicación.  Para ver un ejemplo de cómo usar estas clases de información sobre herramientas, vea el tema [CMFCToolTipCtrl Class](../../mfc/reference/cmfctooltipctrl-class.md).  
+### <a name="data-members"></a>Miembros de datos  
   
-## Ejemplo  
+|Nombre|Descripción|  
+|----------|-----------------|  
+|[CMFCToolTipInfo::m_bBalloonTooltip](#m_bballoontooltip)|Variable booleana que indica si la información sobre herramientas tiene apariencia de globo.|  
+|[CMFCToolTipInfo::m_bBoldLabel](#m_bboldlabel)|Variable booleana que indica si las etiquetas de información sobre herramientas se muestran en negrita.|  
+|[CMFCToolTipInfo::m_bDrawDescription](#m_bdrawdescription)|Variable booleana que indica si la información sobre herramientas contiene una descripción.|  
+|[CMFCToolTipInfo::m_bDrawIcon](#m_bdrawicon)|Variable booleana que indica si la información sobre herramientas contiene un icono.|  
+|[CMFCToolTipInfo::m_bDrawSeparator](#m_bdrawseparator)|Variable booleana que indica si se muestra un separador entre la etiqueta de información sobre herramientas y la descripción de la información sobre herramientas.|  
+|[CMFCToolTipInfo::m_bRoundedCorners](#m_broundedcorners)|Variable booleana que indica si la información sobre herramientas tiene esquinas redondeadas.|  
+|[CMFCToolTipInfo::m_bVislManagerTheme](#m_bvislmanagertheme)|Una variable booleana que indica si se debe controlar la apariencia de la información sobre herramientas por un administrador visual (consulte [CMFCVisualManager clase](../../mfc/reference/cmfcvisualmanager-class.md)).|  
+|[CMFCToolTipInfo::m_clrBorder](#m_clrborder)|Color del borde de la información sobre herramientas.|  
+|[CMFCToolTipInfo::m_clrFill](#m_clrfill)|Color del fondo de la información sobre herramientas.|  
+|[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient)|Color del relleno de degradado en la información sobre herramientas.|  
+|[CMFCToolTipInfo::m_clrText](#m_clrtext)|Color del texto en la información sobre herramientas.|  
+|[CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)|Ángulo del relleno de degradado en la información sobre herramientas.|  
+|[CMFCToolTipInfo::m_nMaxDescrWidth](#m_nmaxdescrwidth)|Ancho máximo posible, en píxeles, de la descripción en la información sobre herramientas.|  
+  
+## <a name="remarks"></a>Comentarios  
+ Utilice [clase CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, y [CTooltipManager clase](../../mfc/reference/ctooltipmanager-class.md) conjuntamente para implementar personalizada de información sobre herramientas en la aplicación. Para obtener un ejemplo de cómo utilizar estas clases de información sobre herramientas, vea el [clase CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md) tema.  
+  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo establecer los valores de las distintas variables de miembro en la clase `CMFCToolTipInfo`.  
   
- [!code-cpp[NVC_MFC_RibbonApp#42](../../mfc/reference/codesnippet/CPP/cmfctooltipinfo-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp&#42;](../../mfc/reference/codesnippet/cpp/cmfctooltipinfo-class_1.cpp)]  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxtooltipctrl.h  
   
-## Vea también  
- [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
+##  <a name="a-namembballoontooltipa--cmfctooltipinfombballoontooltip"></a><a name="m_bballoontooltip"></a>CMFCToolTipInfo::m_bBalloonTooltip  
+ Especifica el estilo de presentación de todas las informaciones sobre herramientas.  
+  
+```  
+BOOL m_bBalloonTooltip;  
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ `TRUE`indica que la información sobre herramientas usa el estilo de globo `FALSE` indica que la información sobre herramientas usa el estilo rectangular.  
+  
+##  <a name="a-namembboldlabela--cmfctooltipinfombboldlabel"></a><a name="m_bboldlabel"></a>CMFCToolTipInfo::m_bBoldLabel  
+ Especifica si la fuente del texto de información sobre herramientas está en negrita.  
+  
+```  
+BOOL m_bBoldLabel;  
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Este miembro del grupo `TRUE` para mostrar el texto de información sobre herramientas en negrita, o `FALSE` para mostrar las etiquetas de información sobre herramientas con una fuente no esté en negrita.  
+  
+##  <a name="a-namembdrawdescriptiona--cmfctooltipinfombdrawdescription"></a><a name="m_bdrawdescription"></a>CMFCToolTipInfo::m_bDrawDescription  
+ Especifica si cada información sobre herramientas muestra texto de descripción.  
+  
+```  
+BOOL m_bDrawDescription;  
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Este miembro del grupo `TRUE` para mostrar la descripción o `FALSE` para ocultar la descripción. Puede especificar la descripción en una información sobre herramientas mediante una llamada a [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
+  
+##  <a name="a-namembdrawicona--cmfctooltipinfombdrawicon"></a><a name="m_bdrawicon"></a>CMFCToolTipInfo::m_bDrawIcon  
+ Especifica si todas las informaciones sobre herramientas mostrar iconos.  
+  
+```  
+BOOL m_bDrawIcon;  
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Este miembro del grupo `TRUE` para mostrar un icono en cada información sobre herramientas, o `FALSE` para mostrar información sobre herramientas sin iconos.  
+  
+##  <a name="a-namembdrawseparatora--cmfctooltipinfombdrawseparator"></a><a name="m_bdrawseparator"></a>CMFCToolTipInfo::m_bDrawSeparator  
+ Especifica si cada información sobre herramientas tiene un separador entre la etiqueta y su descripción.  
+  
+```  
+BOOL m_bDrawSeparator;  
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Este miembro del grupo `TRUE` para mostrar el separador entre la etiqueta de información sobre herramientas y la descripción, o `FALSE` para mostrar información sobre herramientas con ningún separador.  
+  
+##  <a name="a-namembroundedcornersa--cmfctooltipinfombroundedcorners"></a><a name="m_broundedcorners"></a>CMFCToolTipInfo::m_bRoundedCorners  
+ Especifica si todas las informaciones sobre herramientas tienen esquinas redondeadas.  
+  
+```  
+BOOL m_bRoundedCorners;  
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Este miembro del grupo `TRUE` para mostrar las esquinas redondeadas de informaciones sobre herramientas, o `FALSE` para mostrar las esquinas rectangulares de informaciones sobre herramientas.  
+  
+##  <a name="a-namemclrbordera--cmfctooltipinfomclrborder"></a><a name="m_clrborder"></a>CMFCToolTipInfo::m_clrBorder  
+ Especifica el color de los bordes de todas las informaciones sobre herramientas.  
+  
+```  
+COLORREF m_clrBorder;  
+```  
+  
+##  <a name="a-namemclrfilla--cmfctooltipinfomclrfill"></a><a name="m_clrfill"></a>CMFCToolTipInfo::m_clrFill  
+ Especifica el color de fondo de la información sobre herramientas.  
+  
+```  
+COLORREF m_clrFill;  
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Si [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) es -1, el color de fondo de la información sobre herramientas es `m_clrFill`. De lo contrario, `m_clrFill` especifica el color inicial del degradado y `m_clrFillGradient` especifica el color final del degradado. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) determina la dirección del degradado.  
+  
+##  <a name="a-namemclrfillgradienta--cmfctooltipinfomclrfillgradient"></a><a name="m_clrfillgradient"></a>CMFCToolTipInfo::m_clrFillGradient  
+ Especifica el color final de un fondo degradado para la información sobre herramientas.  
+  
+```  
+COLORREF m_clrFillGradient;  
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Si `m_clrFillGradient` es -1, no hay ningún degradado. De lo contrario, se especifica el color inicial del degradado por [CMFCToolTipInfo::m_clrFill](#m_clrfill) y el color final del degradado que se especifica mediante `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) determina la dirección del degradado.  
+  
+##  <a name="a-namemclrtexta--cmfctooltipinfomclrtext"></a><a name="m_clrtext"></a>CMFCToolTipInfo::m_clrText  
+ Especifica el color del texto de todas las informaciones sobre herramientas.  
+  
+```  
+COLORREF m_clrText;  
+```  
+  
+##  <a name="a-namemngradientanglea--cmfctooltipinfomngradientangle"></a><a name="m_ngradientangle"></a>CMFCToolTipInfo::m_nGradientAngle  
+ Especifica el ángulo en el que se dibuja un degradado del fondo de la información sobre herramientas.  
+  
+```  
+int m_nGradientAngle;  
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ `m_nGradientAngle`Especifica el ángulo, en grados, en que el degradado del fondo de la información sobre herramientas está desplazado desde horizontal. Si `m_nGradientAngle` es 0, se dibuja el degradado de izquierda a derecha. Si `m_nGradientAngle` está comprendido entre 1 y 360, el degradado es girar hacia la derecha por el número de grados. Si `m_nGradientAngle` es -1, que es el valor predeterminado, se dibuja el degradado de arriba abajo. Esto es lo mismo que establecer `m_nGradientAngle` en 90.  
+  
+ [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` especifica el color inicial del degradado y [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` especifica el color final del degradado. Si `m_clrFillGradient` es -1, no hay ningún degradado.  
+  
+##  <a name="a-namemnmaxdescrwidtha--cmfctooltipinfomnmaxdescrwidth"></a><a name="m_nmaxdescrwidth"></a>CMFCToolTipInfo::m_nMaxDescrWidth  
+ Especifica el ancho máximo de la descripción que muestra en cada información sobre herramientas. Si el ancho de la descripción supera el valor especificado, el texto se ajusta.  
+  
+```  
+int m_nMaxDescrWidth;  
+```  
+  
+##  <a name="a-namembvislmanagerthemea--cmfctooltipinfombvislmanagertheme"></a><a name="m_bvislmanagertheme"></a>CMFCToolTipInfo::m_bVislManagerTheme  
+ Especifica si el administrador visual de la aplicación controla el aspecto de todas las informaciones sobre herramientas.  
+  
+```  
+BOOL m_bVislManagerTheme;  
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Si `m_bVislManagerTheme` es `TRUE`, cada tooltip solicita un nuevo [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) desde el Administrador de la aplicación antes de que aparecen en la pantalla y utiliza los valores de ese objeto para determinar su apariencia visual. Los demás miembros de la [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) se omiten.  
+  
+##  <a name="a-nameoperatoreqa--cmfctooltipinfooperator"></a><a name="operator_eq"></a>CMFCToolTipInfo::operator =  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `src`  
+  
+### <a name="return-value"></a>Valor devuelto  
+  
+### <a name="remarks"></a>Comentarios  
+  
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
- [CTooltipManager Class](../../mfc/reference/ctooltipmanager-class.md)   
- [CMFCToolTipCtrl Class](../../mfc/reference/cmfctooltipctrl-class.md)
+ [Clase CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)   
+ [Clase CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md)
+

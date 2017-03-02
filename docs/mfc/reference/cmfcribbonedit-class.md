@@ -1,95 +1,632 @@
 ---
-title: "CMFCRibbonEdit Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCRibbonEdit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCRibbonEdit class"
+title: Clase CMFCRibbonEdit | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCRibbonEdit
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCRibbonEdit class
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
 caps.latest.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# CMFCRibbonEdit Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 03eb96bf971b53a2100e6f93bac2f0641f0298e1
+ms.lasthandoff: 02/24/2017
 
-Implementa un control de edición que se encuentra en una barra de la cinta de opciones.  
+---
+# <a name="cmfcribbonedit-class"></a>Clase CMFCRibbonEdit
+Implementa un control de edición que se encuentra en una barra de cinta.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CMFCRibbonEdit : public CMFCRibbonButton  
 ```  
   
-## Members  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCRibbonEdit::CMFCRibbonEdit](../Topic/CMFCRibbonEdit::CMFCRibbonEdit.md)|Crea un objeto `CMFCRibbonEdit`.|  
+|[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|Construye un objeto `CMFCRibbonEdit`.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCRibbonEdit::CanBeStretched](../Topic/CMFCRibbonEdit::CanBeStretched.md)|Indica si el alto del control de `CMFCRibbonEdit` puede aumentar verticalmente el alto de una fila de la cinta de opciones.|  
-|[CMFCRibbonEdit::CMFCRibbonEdit](../Topic/CMFCRibbonEdit::CMFCRibbonEdit.md)|Crea un objeto `CMFCRibbonEdit`.|  
-|[CMFCRibbonEdit::CopyFrom](../Topic/CMFCRibbonEdit::CopyFrom.md)|Copia el estado del objeto especificado de `CMFCRibbonEdit` al objeto actual de `CMFCRibbonEdit` .|  
-|[CMFCRibbonEdit::CreateEdit](../Topic/CMFCRibbonEdit::CreateEdit.md)|crea un nuevo cuadro de texto para el objeto de `CMFCRibbonEdit` .|  
-|[CMFCRibbonEdit::DestroyCtrl](../Topic/CMFCRibbonEdit::DestroyCtrl.md)|Destruye el objeto `CMFCRibbonEdit`.|  
-|[CMFCRibbonEdit::DropDownList](../Topic/CMFCRibbonEdit::DropDownList.md)|Quita inactivo un cuadro de lista.|  
-|[CMFCRibbonEdit::EnableSpinButtons](../Topic/CMFCRibbonEdit::EnableSpinButtons.md)|Permisos y establece el intervalo de botones de número para el cuadro de texto.|  
-|[CMFCRibbonEdit::GetCompactSize](../Topic/CMFCRibbonEdit::GetCompactSize.md)|Recupera el tamaño compacto del objeto de `CFMCRibbonEdit` .|  
-|[CMFCRibbonEdit::GetEditText](../Topic/CMFCRibbonEdit::GetEditText.md)|Recupera el texto del cuadro de texto.|  
-|[CMFCRibbonEdit::GetIntermediateSize](../Topic/CMFCRibbonEdit::GetIntermediateSize.md)|Recupera el tamaño medio del objeto de `CMFCRibbonEdit` .|  
-|[CMFCRibbonEdit::GetTextAlign](../Topic/CMFCRibbonEdit::GetTextAlign.md)|Recupera la alineación del texto en el cuadro de texto.|  
-|[CMFCRibbonEdit::GetWidth](../Topic/CMFCRibbonEdit::GetWidth.md)|Recupera el ancho, en píxeles, del control de `CMFCRibbonEdit` .|  
-|[CMFCRibbonEdit::HasCompactMode](../Topic/CMFCRibbonEdit::HasCompactMode.md)|Indica si el tamaño de la presentación del control de `CMFCRibbonEdit` puede ser compacto.|  
-|[CMFCRibbonEdit::HasFocus](../Topic/CMFCRibbonEdit::HasFocus.md)|Indica si el control de `CMFCRIbbonEdit` tiene el foco.|  
-|[CMFCRibbonEdit::HasLargeMode](../Topic/CMFCRibbonEdit::HasLargeMode.md)|Indica si el tamaño de la presentación del control de `CMFCRibbonEdit` puede ser muy grande.|  
-|[CMFCRibbonEdit::HasSpinButtons](../Topic/CMFCRibbonEdit::HasSpinButtons.md)|Indica si el cuadro de texto tiene un botón de número.|  
-|[CMFCRibbonEdit::IsHighlighted](../Topic/CMFCRibbonEdit::IsHighlighted.md)|Indica si el control de `CMFCRibbonEdit` aparecerá resaltada.|  
-|[CMFCRibbonEdit::OnAfterChangeRect](../Topic/CMFCRibbonEdit::OnAfterChangeRect.md)|Llamado por el marco cuando las dimensiones del rectángulo de presentación para los cambios de control de `CMFCRibbonEdit` .|  
-|[CMFCRibbonEdit::OnDraw](../Topic/CMFCRibbonEdit::OnDraw.md)|Llamado por el marco para dibujar el control de `CMFCRibbonEdit` .|  
-|[CMFCRibbonEdit::OnDrawLabelAndImage](../Topic/CMFCRibbonEdit::OnDrawLabelAndImage.md)|Llamado por el marco para dibujar la etiqueta y la imagen para el control de `CMFCRibbonEdit` .|  
-|[CMFCRibbonEdit::OnDrawOnList](../Topic/CMFCRibbonEdit::OnDrawOnList.md)|Llamado por el marco para dibujar el control de `CMFCRibbonEdit` en un cuadro de lista de comandos.|  
-|[CMFCRibbonEdit::OnEnable](../Topic/CMFCRibbonEdit::OnEnable.md)|Llamado por el marco para habilitar o deshabilitar el control de `CMFCRibbonEdit` .|  
-|[CMFCRibbonEdit::OnHighlight](../Topic/CMFCRibbonEdit::OnHighlight.md)|Llamado por el marco cuando el puntero entra o sale de los límites del control de `CMFCRibbonEdit` .|  
-|[CMFCRibbonEdit::OnKey](../Topic/CMFCRibbonEdit::OnKey.md)|Llamado por el marco cuando el usuario presiona un keytip y el control de `CMFCRibbonEdit` tiene el foco.|  
-|[CMFCRibbonEdit::OnLButtonDown](../Topic/CMFCRibbonEdit::OnLButtonDown.md)|Llamado por el marco para actualizar el control de `CMFCRibbonEdit` cuando el usuario presiona el botón primario en el control.|  
-|[CMFCRibbonEdit::OnLButtonUp](../Topic/CMFCRibbonEdit::OnLButtonUp.md)|Llamado por el marco cuando el usuario suelta el botón primario.|  
-|[CMFCRibbonEdit::OnRTLChanged](../Topic/CMFCRibbonEdit::OnRTLChanged.md)|Llamado por el marco para actualizar el control de `CMFCRibbonEdit` cuando el diseño cambia la dirección.|  
-|[CMFCRibbonEdit::OnShow](../Topic/CMFCRibbonEdit::OnShow.md)|Llamado por el marco para mostrar u ocultar el control de `CMFCRibbonEdit` .|  
-|[CMFCRibbonEdit::Redraw](../Topic/CMFCRibbonEdit::Redraw.md)|Actualiza la presentación del control de `CMFCRibbonEdit` .|  
-|[CMFCRibbonEdit::SetACCData](../Topic/CMFCRibbonEdit::SetACCData.md)|Establece los datos de accesibilidad para el objeto de `CMFCRibbonEdit` .|  
-|[CMFCRibbonEdit::SetEditText](../Topic/CMFCRibbonEdit::SetEditText.md)|Establece el texto del cuadro de texto.|  
-|[CMFCRibbonEdit::SetTextAlign](../Topic/CMFCRibbonEdit::SetTextAlign.md)|Establece la alineación del texto del cuadro de texto.|  
-|[CMFCRibbonEdit::SetWidth](../Topic/CMFCRibbonEdit::SetWidth.md)|Establece el ancho del cuadro de texto del control de `CMFCRibbonEdit` .|  
+|[CMFCRibbonEdit::CanBeStretched](#canbestretched)|Indica si el alto de la `CMFCRibbonEdit` control puede aumentar verticalmente a la altura de una fila de la cinta de opciones.|  
+|[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|Construye un objeto `CMFCRibbonEdit`.|  
+|[CMFCRibbonEdit::CopyFrom](#copyfrom)|Copia el estado de especificado `CMFCRibbonEdit` objeto actual `CMFCRibbonEdit` objeto.|  
+|[CMFCRibbonEdit::CreateEdit](#createedit)|Crea un nuevo cuadro de texto para el `CMFCRibbonEdit` objeto.|  
+|[CMFCRibbonEdit::DestroyCtrl](#destroyctrl)|Destruye el objeto `CMFCRibbonEdit`.|  
+|[CMFCRibbonEdit::DropDownList](#dropdownlist)|Quita un cuadro de lista desplegable.|  
+|[CMFCRibbonEdit::EnableSpinButtons](#enablespinbuttons)|Habilita y configura el intervalo de botón de número para el cuadro de texto.|  
+|[CMFCRibbonEdit::GetCompactSize](#getcompactsize)|Recupera el tamaño compacto de la `CFMCRibbonEdit` objeto.|  
+|[CMFCRibbonEdit::GetEditText](#getedittext)|Recupera el texto del cuadro de texto.|  
+|[CMFCRibbonEdit::GetIntermediateSize](#getintermediatesize)|Recupera el tamaño intermedio de la `CMFCRibbonEdit` objeto.|  
+|[CMFCRibbonEdit::GetTextAlign](#gettextalign)|Recupera la alineación del texto en el cuadro de texto.|  
+|[CMFCRibbonEdit::GetWidth](#getwidth)|Recupera el ancho, en píxeles, de la `CMFCRibbonEdit` control.|  
+|[CMFCRibbonEdit::HasCompactMode](#hascompactmode)|Indica si la pantalla de tamaño para el `CMFCRibbonEdit` control puede ser compacto.|  
+|[CMFCRibbonEdit::HasFocus](#hasfocus)|Indica si el `CMFCRIbbonEdit` control tiene el foco.|  
+|[CMFCRibbonEdit::HasLargeMode](#haslargemode)|Indica si la pantalla de tamaño para el `CMFCRibbonEdit` control puede ser grande.|  
+|[CMFCRibbonEdit::HasSpinButtons](#hasspinbuttons)|Indica si el cuadro de texto tiene un botón de número.|  
+|[CMFCRibbonEdit::IsHighlighted](#ishighlighted)|Indica si el `CMFCRibbonEdit` control aparece resaltado.|  
+|[CMFCRibbonEdit::OnAfterChangeRect](#onafterchangerect)|Llamado por el marco cuando las dimensiones del rectángulo de presentación para el `CMFCRibbonEdit` control de cambios.|  
+|[CMFCRibbonEdit::OnDraw](#ondraw)|Llamado por el marco para dibujar el `CMFCRibbonEdit` control.|  
+|[CMFCRibbonEdit::OnDrawLabelAndImage](#ondrawlabelandimage)|Llamado por el marco para dibujar la etiqueta y la imagen para el `CMFCRibbonEdit` control.|  
+|[CMFCRibbonEdit::OnDrawOnList](#ondrawonlist)|Llamado por el marco para dibujar el `CMFCRibbonEdit` control en un cuadro de lista de comandos.|  
+|[CMFCRibbonEdit::OnEnable](#onenable)|Llamado por el marco para habilitar o deshabilitar la `CMFCRibbonEdit` control.|  
+|[CMFCRibbonEdit::OnHighlight](#onhighlight)|Llamado por el marco de trabajo cuando el puntero entra o sale de los límites de la `CMFCRibbonEdit` control.|  
+|[CMFCRibbonEdit::OnKey](#onkey)|Llamado por el marco de trabajo cuando el usuario presiona keytip y `CMFCRibbonEdit` control tiene el foco.|  
+|[CMFCRibbonEdit::OnLButtonDown](#onlbuttondown)|Llamado por el marco de trabajo para actualizar la `CMFCRibbonEdit` control cuando el usuario presiona el botón primario del mouse en el control.|  
+|[CMFCRibbonEdit::OnLButtonUp](#onlbuttonup)|Lo llama el marco de trabajo cuando el usuario suelta el botón primario del mouse.|  
+|[CMFCRibbonEdit::OnRTLChanged](#onrtlchanged)|Llamado por el marco de trabajo para actualizar la `CMFCRibbonEdit` control cuando cambia el diseño dirección.|  
+|[CMFCRibbonEdit::OnShow](#onshow)|Llamado por el marco para mostrar u ocultar el `CMFCRibbonEdit` control.|  
+|[CMFCRibbonEdit::Redraw](#redraw)|Actualiza la presentación de la `CMFCRibbonEdit` control.|  
+|[CMFCRibbonEdit::SetACCData](#setaccdata)|Establece los datos de accesibilidad para el `CMFCRibbonEdit` objeto.|  
+|[CMFCRibbonEdit::SetEditText](#setedittext)|Establece el texto del cuadro de texto.|  
+|[CMFCRibbonEdit::SetTextAlign](#settextalign)|Establece la alineación del texto del cuadro de texto.|  
+|[CMFCRibbonEdit::SetWidth](#setwidth)|Establece el ancho del cuadro de texto para el `CMFCRibbonEdit` control.|  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
   
-## Ejemplo  
- El ejemplo siguiente muestra cómo construir un objeto de `CMFCRibbonEdit` , muestra los botones de número junto al control de edición, y establece el texto del control de edición.  Este fragmento de código es parte de [Ejemplo 2007 de demostración de MS Office](../../top/visual-cpp-samples.md).  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo construir un `CMFCRibbonEdit` objeto, mostrar botones de número situado junto al control de edición y establecer el texto del control de edición. Este fragmento de código forma parte de la [ejemplo de demostración de Microsoft Office 2007](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/CPP/cmfcribbonedit-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_MSOffice2007Demo&#7;](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]  
   
-## Requisitos  
- **encabezado:** afxRibbonEdit.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxRibbonEdit.h  
   
-## Vea también  
- [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
+##  <a name="a-namecanbestretcheda--cmfcribboneditcanbestretched"></a><a name="canbestretched"></a>CMFCRibbonEdit::CanBeStretched  
+ Indica si el alto de la [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control puede aumentar verticalmente a la altura de una fila de la cinta de opciones.  
+  
+```  
+virtual BOOL CanBeStretched();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Siempre devuelve `FALSE`.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namecmfcribbonedita--cmfcribboneditcmfcribbonedit"></a><a name="cmfcribbonedit"></a>CMFCRibbonEdit::CMFCRibbonEdit  
+ Construye un [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) objeto.  
+  
+```  
+CMFCRibbonEdit(
+    UINT nID,  
+    int nWidth,  
+    LPCTSTR lpszLabel = NULL,  
+    int nImage = -1);
+
+CMFCRibbonEdit();
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `nID`  
+ Comando ID para el `CMFCRibbonEdit` control.  
+  
+ [in] `nWidth`  
+ El ancho, en píxeles, del cuadro de texto para el `CMFCRibbonEdit` control.  
+  
+ [in] `lpszLabel`  
+ La etiqueta para el `CMFCRibbonEdit` control.  
+  
+ [in] `nImage`  
+ Índice de la imagen que se utilizará para el `CMFCRibbonEdit` control. La categoría de cinta principal mantiene la colección de imágenes pequeñas.  
+  
+### <a name="remarks"></a>Comentarios  
+ El `CMFCRibbonEdit` control no utiliza una imagen grande.  
+  
+##  <a name="a-namecopyfroma--cmfcribboneditcopyfrom"></a><a name="copyfrom"></a>CMFCRibbonEdit::CopyFrom  
+ Copia el estado de especificado [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) objeto actual [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) objeto.  
+  
+```  
+virtual void CopyFrom(const CMFCRibbonBaseElement& src);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `src`  
+ Objeto `CMFCRibbonEdit` de origen.  
+  
+### <a name="remarks"></a>Comentarios  
+ El `src` parámetro debe ser de tipo `CMFCRibbonEdit`.  
+  
+##  <a name="a-namecreateedita--cmfcribboneditcreateedit"></a><a name="createedit"></a>CMFCRibbonEdit::CreateEdit  
+ Crea un nuevo cuadro de texto para el [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) objeto.  
+  
+```  
+virtual CMFCRibbonRichEditCtrl* CreateEdit(
+    CWnd* pWndParent,  
+    DWORD dwEditStyle);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pWndParent`  
+ Un puntero a la ventana primaria de la `CMFCRibbonEdit` objeto.  
+  
+ [in] `dwEditStyle`  
+ Especifica el estilo del cuadro de texto. Puede combinar los estilos de ventana que aparece en la sección de comentarios con la [Editar estilos de control](http://msdn.microsoft.com/library/windows/desktop/bb775464) que se describen en el SDK de Windows.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero al nuevo cuadro de texto si el método se realizó correctamente; de lo contrario, `NULL`.  
+  
+### <a name="remarks"></a>Comentarios  
+ Invalide este método en una clase derivada para crear un cuadro de texto personalizado.  
+  
+ Puede aplicar la siguiente [estilos de ventana](../../mfc/reference/window-styles.md) al cuadro de texto:  
+  
+- **WS_CHILD**  
+  
+- **WS_VISIBLE**  
+  
+- **WS_DISABLED**  
+  
+- **WS_GROUP**  
+  
+- **WS_TABSTOP**  
+  
+##  <a name="a-namedestroyctrla--cmfcribboneditdestroyctrl"></a><a name="destroyctrl"></a>CMFCRibbonEdit::DestroyCtrl  
+ Destruye el [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) objeto.  
+  
+```  
+virtual void DestroyCtrl();
+```  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namedropdownlista--cmfcribboneditdropdownlist"></a><a name="dropdownlist"></a>CMFCRibbonEdit::DropDownList  
+ Quita un cuadro de lista desplegable.  
+  
+```  
+virtual void DropDownList();
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ De forma predeterminada este método no hace nada. Invalide este método para un cuadro de lista desplegable.  
+  
+##  <a name="a-nameenablespinbuttonsa--cmfcribboneditenablespinbuttons"></a><a name="enablespinbuttons"></a>CMFCRibbonEdit::EnableSpinButtons  
+ Habilita y configura el intervalo de botón de número para el cuadro de texto.  
+  
+```  
+void EnableSpinButtons(
+    int nMin,  
+    int nMax);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `nMin`  
+ El valor mínimo de botón de número.  
+  
+ [in] `nMax`  
+ El valor máximo de botón de número.  
+  
+### <a name="remarks"></a>Comentarios  
+ Botones Mostrar activo y la flecha hacia abajo y permiten a los usuarios desplazarse por un conjunto fijo de valores.  
+  
+##  <a name="a-namegetcompactsizea--cmfcribboneditgetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonEdit::GetCompactSize  
+ Recupera el tamaño compacto de la [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) objeto.  
+  
+```  
+virtual CSize GetCompactSize(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pDC`  
+ Puntero a un contexto de dispositivo para la `CMFCRibbonEdit` objeto.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ El tamaño compacto de la `CMFCRibbonEdit` objeto.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namegetedittexta--cmfcribboneditgetedittext"></a><a name="getedittext"></a>CMFCRibbonEdit::GetEditText  
+ Recupera el texto del cuadro de texto.  
+  
+```  
+CString GetEditText() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ El texto en el cuadro de texto.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namegetintermediatesizea--cmfcribboneditgetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonEdit::GetIntermediateSize  
+ Recupera el tamaño intermedio de la [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) objeto.  
+  
+```  
+virtual CSize GetIntermediateSize(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pDC`  
+ Puntero a un contexto de dispositivo para la `CMFCRibbonEdit` objeto.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ El tamaño intermedio de la `CMFCRibbonEdit` objeto.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namegettextaligna--cmfcribboneditgettextalign"></a><a name="gettextalign"></a>CMFCRibbonEdit::GetTextAlign  
+ Recupera la alineación del texto en el cuadro de texto.  
+  
+```  
+int GetTextAlign() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Un valor enumerado de alineación de texto. Vea la sección Comentarios para los valores posibles.  
+  
+### <a name="remarks"></a>Comentarios  
+ El valor devuelto es uno de los siguientes estilos de control de edición:  
+  
+- **ES_LEFT** para alineación a la izquierda  
+  
+- **ES_CENTER** para centrar  
+  
+- **ES_RIGHT** para alineación a la derecha  
+  
+ Para obtener más información acerca de estos estilos, consulte [Editar estilos de Control](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+  
+##  <a name="a-namegetwidtha--cmfcribboneditgetwidth"></a><a name="getwidth"></a>CMFCRibbonEdit::GetWidth  
+ Recupera el ancho, en píxeles, de la [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control.  
+  
+```  
+int GetWidth(BOOL bInFloatyMode = FALSE) const;  
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `bInFloatyMode`  
+ `TRUE`Si el `CMFCRibbonEdit` control está en modo flotante; de lo contrario, `FALSE`.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ El ancho, en píxeles, de la `CMFCRibbonEdit` control.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namehascompactmodea--cmfcribbonedithascompactmode"></a><a name="hascompactmode"></a>CMFCRibbonEdit::HasCompactMode  
+ Indica si la pantalla de tamaño para el [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control puede ser compacto.  
+  
+```  
+virtual BOOL HasCompactMode() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Siempre devuelve `TRUE`.  
+  
+### <a name="remarks"></a>Comentarios  
+ De forma predeterminada este método siempre devuelve `TRUE`. Invalide este método para indicar si el tamaño de presentación puede ser compacto.  
+  
+##  <a name="a-namehasfocusa--cmfcribbonedithasfocus"></a><a name="hasfocus"></a>CMFCRibbonEdit::HasFocus  
+ Indica si la [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control tiene el foco.  
+  
+```  
+virtual BOOL HasFocus() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si el `CMFCRibbonEdit` control tiene el foco; en caso contrario `FALSE`.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namehaslargemodea--cmfcribbonedithaslargemode"></a><a name="haslargemode"></a>CMFCRibbonEdit::HasLargeMode  
+ Indica si la pantalla de tamaño para el [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control puede ser grande.  
+  
+```  
+virtual BOOL HasLargeMode() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Siempre devuelve `FALSE`.  
+  
+### <a name="remarks"></a>Comentarios  
+ De forma predeterminada este método siempre devuelve `FALSE`. Invalide este método para indicar si el tamaño de presentación puede ser grande.  
+  
+##  <a name="a-namehasspinbuttonsa--cmfcribbonedithasspinbuttons"></a><a name="hasspinbuttons"></a>CMFCRibbonEdit::HasSpinButtons  
+ Indica si el cuadro de texto tiene un botón de número.  
+  
+```  
+virtual BOOL HasSpinButtons() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si el cuadro de texto tiene un botón de número; de lo contrario, `FALSE`.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameishighlighteda--cmfcribboneditishighlighted"></a><a name="ishighlighted"></a>CMFCRibbonEdit::IsHighlighted  
+ Indica si la [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control aparece resaltado.  
+  
+```  
+virtual BOOL IsHighlighted() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si el `CMFCRibbonEdit` control está resaltado; de lo contrario `FALSE`.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameonafterchangerecta--cmfcribboneditonafterchangerect"></a><a name="onafterchangerect"></a>CMFCRibbonEdit::OnAfterChangeRect  
+ Llamado por el marco cuando las dimensiones del rectángulo de presentación para el [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) controlar el cambio.  
+  
+```  
+virtual void OnAfterChangeRect(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pDC`  
+ Puntero a un contexto de dispositivo para el `CMFCRibbonEdit` control.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameondrawa--cmfcribboneditondraw"></a><a name="ondraw"></a>CMFCRibbonEdit::OnDraw  
+ Llamado por el marco para dibujar el [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control.  
+  
+```  
+virtual void OnDraw(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pDC`  
+ Puntero a un contexto de dispositivo para el `CMFCRibbonEdit` control.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameondrawlabelandimagea--cmfcribboneditondrawlabelandimage"></a><a name="ondrawlabelandimage"></a>CMFCRibbonEdit::OnDrawLabelAndImage  
+ Llamado por el marco para dibujar la etiqueta y la imagen para la [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control.  
+  
+```  
+virtual void OnDrawLabelAndImage(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pDC`  
+ Puntero a un contexto de dispositivo para el `CMFCRibbonEdit` control.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameondrawonlista--cmfcribboneditondrawonlist"></a><a name="ondrawonlist"></a>CMFCRibbonEdit::OnDrawOnList  
+ Llamado por el marco para dibujar el [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control en un cuadro de lista de comandos.  
+  
+```  
+virtual void OnDrawOnList(
+    CDC* pDC,  
+    CString strText,  
+    int nTextOffset,  
+    CRect rect,  
+    BOOL bIsSelected,  
+    BOOL bHighlighted);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `pDC`  
+ Puntero a un contexto de dispositivo para el `CMFCRibbonEdit` control.  
+  
+ [in] `strText`  
+ El texto [ ](../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit class").  
+  
+ [in] `nTextOffset`  
+ Distancia, en píxeles, del lado izquierdo del cuadro de lista para el texto para mostrar.  
+  
+ [in] `rect`  
+ El rectángulo de presentación para el `CMFCRibbonEdit` control.  
+  
+ [in] `bIsSelected`  
+ Este parámetro no se utiliza.  
+  
+ [in] `bHighlighted`  
+ Este parámetro no se utiliza.  
+  
+### <a name="remarks"></a>Comentarios  
+ El cuadro de lista de comandos muestra los controles de la cinta de opciones para permitir a los usuarios personalizar la barra de herramientas de acceso rápido.  
+  
+##  <a name="a-nameonenablea--cmfcribboneditonenable"></a><a name="onenable"></a>CMFCRibbonEdit::OnEnable  
+ Llamado por el marco para habilitar o deshabilitar la [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control.  
+  
+```  
+virtual void OnEnable(BOOL bEnable);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `bEnable`  
+ `TRUE`Para habilitar el control; `FALSE` para deshabilitar el control.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameonhighlighta--cmfcribboneditonhighlight"></a><a name="onhighlight"></a>CMFCRibbonEdit::OnHighlight  
+ Llamado por el marco de trabajo cuando el puntero entra o sale de los límites de la [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control.  
+  
+```  
+virtual void OnHighlight(BOOL bHighlight);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `bHighlight`  
+ `TRUE`Si el puntero está en los límites de la `CMFCRibbonEdit` control; en caso contrario, `FALSE`.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameonkeya--cmfcribboneditonkey"></a><a name="onkey"></a>CMFCRibbonEdit::OnKey  
+ Llamado por el marco de trabajo cuando el usuario presiona keytip y [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control tiene el foco.  
+  
+```  
+virtual BOOL OnKey(BOOL bIsMenuKey);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `bIsMenuKey`  
+ `TRUE`Si la keytip muestra un menú emergente; de lo contrario, `FALSE`.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE` si se controló el evento; de lo contrario, `FALSE`.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameonlbuttondowna--cmfcribboneditonlbuttondown"></a><a name="onlbuttondown"></a>CMFCRibbonEdit::OnLButtonDown  
+ Llamado por el marco de trabajo para actualizar la [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control cuando el usuario presiona el botón primario del mouse en el control.  
+  
+```  
+virtual void OnLButtonDown(CPoint point);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `point`  
+ Este parámetro no se utiliza.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameonlbuttonupa--cmfcribboneditonlbuttonup"></a><a name="onlbuttonup"></a>CMFCRibbonEdit::OnLButtonUp  
+ Lo llama el marco de trabajo cuando el usuario suelta el botón primario del mouse.  
+  
+```  
+virtual void OnLButtonUp(CPoint point);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `point`  
+ Este parámetro no se utiliza.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameonrtlchangeda--cmfcribboneditonrtlchanged"></a><a name="onrtlchanged"></a>CMFCRibbonEdit::OnRTLChanged  
+ Llamado por el marco de trabajo para actualizar la [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control cuando cambia el diseño dirección.  
+  
+```  
+virtual void OnRTLChanged(BOOL bIsRTL);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `bIsRTL`  
+ `TRUE`Si el diseño es de derecha a izquierda; `FALSE` si el diseño es de izquierda a derecha.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameonshowa--cmfcribboneditonshow"></a><a name="onshow"></a>CMFCRibbonEdit::OnShow  
+ Llamado por el marco para mostrar u ocultar la [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control.  
+  
+```  
+virtual void OnShow(BOOL bShow);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `bShow`  
+ `TRUE`para mostrar el control; `FALSE` para ocultar el control.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-nameredrawa--cmfcribboneditredraw"></a><a name="redraw"></a>CMFCRibbonEdit::Redraw  
+ Actualiza la presentación de la [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control.  
+  
+```  
+virtual void Redraw();
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Este método vuelve a dibujar el rectángulo de presentación para el `CMFCRibbonEdit` objeto llamando indirectamente [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) con el `RDW_INVALIDATE`, `RDW_ERASE`, y `RDW_UPDATENOW` conjunto.  
+  
+##  <a name="a-namesetaccdataa--cmfcribboneditsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonEdit::SetACCData  
+ Establece los datos de accesibilidad para el [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) objeto.  
+  
+```  
+virtual BOOL SetACCData(
+    CWnd* pParent,  
+    CAccessibilityData& data);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `pParent`  
+ Puntero a la ventana primaria para el `CMFCRibbonEdit` objeto.  
+  
+ `data`  
+ Los datos de accesibilidad para el `CMFCRibbonEdit` objeto.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Siempre devuelve `TRUE`.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namesetedittexta--cmfcribboneditsetedittext"></a><a name="setedittext"></a>CMFCRibbonEdit::SetEditText  
+ Establece el texto del cuadro de texto.  
+  
+```  
+void SetEditText(CString strText);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `strText`  
+ El texto del cuadro de texto.  
+  
+##  <a name="a-namesettextaligna--cmfcribboneditsettextalign"></a><a name="settextalign"></a>CMFCRibbonEdit::SetTextAlign  
+ Establece la alineación del texto del cuadro de texto.  
+  
+```  
+void SetTextAlign(int nAlign);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `nAlign`  
+ Un valor enumerado de alineación de texto. Vea la sección Comentarios para los valores posibles.  
+  
+### <a name="remarks"></a>Comentarios  
+ El parámetro `nAlign` es uno de la siguiente edición estilos de control:  
+  
+- **ES_LEFT** para alineación a la izquierda  
+  
+- **ES_CENTER** para centrar  
+  
+- **ES_RIGHT** para alineación a la derecha  
+  
+ Para obtener más información acerca de estos estilos, consulte [Editar estilos de Control](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+  
+##  <a name="a-namesetwidtha--cmfcribboneditsetwidth"></a><a name="setwidth"></a>CMFCRibbonEdit::SetWidth  
+ Establece el ancho del cuadro de texto para el [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control.  
+  
+```  
+void SetWidth(
+    int nWidth,  
+    BOOL bInFloatyMode = FALSE);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ [in] `nWidth`  
+ El ancho, en píxeles, del cuadro de texto.  
+  
+ `bInFloatyMode`  
+ `TRUE`Para establecer el ancho de modo flotante; `FALSE` para establecer el ancho de modo normal.  
+  
+### <a name="remarks"></a>Comentarios  
+ El `CMFCRibbonEdit` control tiene dos anchos según su modo de visualización: flotante modo y el modo normal.  
+  
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonButton Class](../../mfc/reference/cmfcribbonbutton-class.md)   
- [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)
+ [Clase CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)   
+ [Clase CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)

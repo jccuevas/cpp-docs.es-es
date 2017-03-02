@@ -1,85 +1,417 @@
 ---
-title: "CAtlFile Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CAtlFile"
-  - "ATL::CAtlFile"
-  - "ATL.CAtlFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAtlFile class"
+title: Clase CAtlFile | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CAtlFile
+- ATL::CAtlFile
+- ATL.CAtlFile
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# CAtlFile Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 5ba8aa0bc5544d8d541fecb87e2eb0108c2c5ebd
+ms.lasthandoff: 02/24/2017
 
-Esta clase proporciona un contenedor delgado de Windows de administra API.  
+---
+# <a name="catlfile-class"></a>Clase CAtlFile
+Esta clase proporciona un contenedor fino alrededor de las ventanas de API de control de archivos.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en Windows en tiempo de ejecución.  
+>  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+class CAtlFile : public CHandle
 ```  
   
-class CAtlFile : public CHandle  
-```  
+## <a name="members"></a>Miembros  
   
-## Members  
+### <a name="public-constructors"></a>Constructores públicos  
   
-### Constructores públicos  
-  
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CAtlFile::CAtlFile](../Topic/CAtlFile::CAtlFile.md)|el constructor.|  
+|[CAtlFile::CAtlFile](#catlfile)|El constructor.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CAtlFile::Create](../Topic/CAtlFile::Create.md)|Llame a este método para crear o abrir un archivo.|  
-|[CAtlFile::Flush](../Topic/CAtlFile::Flush.md)|Llame a este método para borrar los búferes para el archivo y producir todos los datos almacenados en búfer que se van a escribir en el archivo.|  
-|[CAtlFile::GetOverlappedResult](../Topic/CAtlFile::GetOverlappedResult.md)|Llame a este método para obtener los resultados de una operación superpuesta en el archivo.|  
-|[CAtlFile::GetPosition](../Topic/CAtlFile::GetPosition.md)|Llame a este método para obtener el puntero de archivo posición actual del archivo.|  
-|[CAtlFile::GetSize](../Topic/CAtlFile::GetSize.md)|Llame a este método para obtener el tamaño en bytes del archivo.|  
-|[CAtlFile::LockRange](../Topic/CAtlFile::LockRange.md)|Llame a este método para bloquear una región en el archivo para evitar que otros procesos tengan acceso.|  
-|[CAtlFile::Read](../Topic/CAtlFile::Read.md)|Llame a este método para leer los datos de un archivo que comienza en la posición indicada por el puntero de archivo.|  
-|[CAtlFile::Seek](../Topic/CAtlFile::Seek.md)|Llame a este método para mover el puntero de archivo del archivo.|  
-|[CAtlFile::SetSize](../Topic/CAtlFile::SetSize.md)|Llame a este método para establecer el tamaño del archivo.|  
-|[CAtlFile::UnlockRange](../Topic/CAtlFile::UnlockRange.md)|Llame a este método para desbloquear una región del archivo.|  
-|[CAtlFile::Write](../Topic/CAtlFile::Write.md)|Llame a este método para escribir datos en el archivo que comienza en la posición indicada por el puntero de archivo.|  
+|[CAtlFile::Create](#create)|Llame a este método para crear o abrir un archivo.|  
+|[CAtlFile::Flush](#flush)|Llamar a este método para borrar los búferes para el archivo y hacer que todos los datos almacenados en búfer se escriban en el archivo.|  
+|[CAtlFile::GetOverlappedResult](#getoverlappedresult)|Llamar a este método para obtener los resultados de una operación superpuesta en el archivo.|  
+|[CAtlFile::GetPosition](#getposition)|Llame a este método para obtener la posición actual del puntero de archivo del archivo.|  
+|[CAtlFile::GetSize](#getsize)|Llame a este método para obtener el tamaño en bytes del archivo.|  
+|[CAtlFile::LockRange](#lockrange)|Llame a este método para bloquear una región en el archivo para impedir que otros procesos tengan acceso a él.|  
+|[CAtlFile::Read](#read)|Llame a este método para leer datos de un archivo a partir de la posición indicada por el puntero de archivo.|  
+|[CAtlFile::Seek](#seek)|Llamar a este método para mover el puntero de archivo del archivo.|  
+|[CAtlFile::SetSize](#setsize)|Llamar a este método para establecer el tamaño del archivo.|  
+|[CAtlFile::UnlockRange](#unlockrange)|Llamar a este método para desbloquear una región del archivo.|  
+|[CAtlFile::Write](#write)|Llamar a este método para escribir datos en el archivo en la posición indicada por el puntero de archivo.|  
   
-### Miembros de datos protegidos  
+### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CAtlFile::m\_pTM](../Topic/CAtlFile::m_pTM.md)|Puntero al objeto de `CAtlTransactionManager`|  
+|[CAtlFile::m_pTM](#m_ptm)|Puntero a `CAtlTransactionManager` objeto|  
   
-## Comentarios  
- Utilice esta clase cuando el archivo\-administrar necesita es relativamente sencillo, pero más abstracción que la API de Windows proporciona se requiere, sin incluir las dependencias de MFC.  
+## <a name="remarks"></a>Comentarios  
+ Utilice esta clase cuando las necesidades de administración de archivos son relativamente simples, pero más abstracción que proporciona la API de Windows es necesario, sin incluir las dependencias MFC.  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CHandle](../../atl/reference/chandle-class.md)  
   
  `CAtlFile`  
   
-## Requisitos  
- **encabezado:** atlfile.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atlfile.h  
   
-## Vea también  
- [Ejemplo de la marquesina](../../top/visual-cpp-samples.md)   
- [Class Overview](../../atl/atl-class-overview.md)   
- [CHandle Class](../../atl/reference/chandle-class.md)
+##  <a name="a-namecatlfilea--catlfilecatlfile"></a><a name="catlfile"></a>CAtlFile::CAtlFile  
+ El constructor.  
+  
+```
+CAtlFile() throw();
+CAtlFile(CAtlTransactionManager* pTM = NULL) throw();
+CAtlFile(CAtlFile& file) throw();
+explicit CAtlFile(HANDLE hFile) throw();
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `file`  
+ El objeto de archivo.  
+  
+ `hFile`  
+ El identificador de archivo.  
+  
+ `pTM`  
+ Puntero al objeto CAtlTransactionManager  
+  
+### <a name="remarks"></a>Comentarios  
+ El constructor de copias transfiere la propiedad del identificador del archivo del original `CAtlFile` objeto en el objeto recién creado.  
+  
+##  <a name="a-namecreatea--catlfilecreate"></a><a name="create"></a>CAtlFile::Create  
+ Llame a este método para crear o abrir un archivo.  
+  
+```
+HRESULT Create(
+    LPCTSTR szFilename,
+    DWORD dwDesiredAccess,
+    DWORD dwShareMode,
+    DWORD dwCreationDisposition,
+    DWORD dwFlagsAndAttributes = FILE_ATTRIBUTE_NORMAL,
+    LPSECURITY_ATTRIBUTES lpsa = NULL,
+    HANDLE hTemplateFile = NULL) throw();
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ *szFilename*  
+ Nombre del archivo.  
+  
+ `dwDesiredAccess`  
+ El acceso deseado. Consulte `dwDesiredAccess` en [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+ `dwShareMode`  
+ El modo compartido. Consulte `dwShareMode` en **CreateFile**.  
+  
+ `dwCreationDisposition`  
+ La disposición de creación. Consulte `dwCreationDisposition` en **CreateFile**.  
+  
+ `dwFlagsAndAttributes`  
+ Los indicadores y atributos. Consulte `dwFlagsAndAttributes` en **CreateFile**.  
+  
+ `lpsa`  
+ Los atributos de seguridad. Consulte *lpSecurityAttributes* en **CreateFile**.  
+  
+ `hTemplateFile`  
+ El archivo de plantilla. Consulte `hTemplateFile` en **CreateFile**.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `S_OK` éxito o error `HRESULT` en caso de error.  
+  
+### <a name="remarks"></a>Comentarios  
+ Llamadas [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) para crear o abrir el archivo.  
+  
+##  <a name="a-nameflusha--catlfileflush"></a><a name="flush"></a>CAtlFile::Flush  
+ Llamar a este método para borrar los búferes para el archivo y hacer que todos los datos almacenados en búfer se escriban en el archivo.  
+  
+```
+HRESULT Flush() throw();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `S_OK` éxito o error `HRESULT` en caso de error.  
+  
+### <a name="remarks"></a>Comentarios  
+ Llamadas [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) vaciar datos almacenados en búfer en el archivo.  
+  
+##  <a name="a-namegetoverlappedresulta--catlfilegetoverlappedresult"></a><a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
+ Llamar a este método para obtener los resultados de una operación superpuesta en el archivo.  
+  
+```
+HRESULT GetOverlappedResult(
+    LPOVERLAPPED pOverlapped,
+    DWORD& dwBytesTransferred,
+    BOOL bWait) throw();
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `pOverlapped`  
+ La estructura superpuesta. Consulte `lpOverlapped` en [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+ *dwBytesTransferred*  
+ Los bytes se transfieren. Consulte *lpNumberOfBytesTransferred* en `GetOverlappedResult`.  
+  
+ `bWait`  
+ La opción de espera. Vea `bWait` en `GetOverlappedResult`.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `S_OK` éxito o error `HRESULT` en caso de error.  
+  
+### <a name="remarks"></a>Comentarios  
+ Llamadas [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) para obtener los resultados de una operación superpuesta en el archivo.  
+  
+##  <a name="a-namegetpositiona--catlfilegetposition"></a><a name="getposition"></a>CAtlFile::GetPosition  
+ Llame a este método para obtener la posición actual del puntero de archivo.  
+  
+```
+HRESULT GetPosition(ULONGLONG& nPos) const throw();
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `nPos`  
+ La posición de bytes.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `S_OK` éxito o error `HRESULT` en caso de error.  
+  
+### <a name="remarks"></a>Comentarios  
+ Llamadas [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) para obtener la posición actual del puntero de archivo.  
+  
+##  <a name="a-namegetsizea--catlfilegetsize"></a><a name="getsize"></a>CAtlFile::GetSize  
+ Llame a este método para obtener el tamaño en bytes del archivo.  
+  
+```
+HRESULT GetSize(ULONGLONG& nLen) const throw();
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `nLen`  
+ El número de bytes en el archivo.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `S_OK` éxito o error `HRESULT` en caso de error.  
+  
+### <a name="remarks"></a>Comentarios  
+ Llamadas [GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) para obtener el tamaño en bytes del archivo.  
+  
+##  <a name="a-namelockrangea--catlfilelockrange"></a><a name="lockrange"></a>CAtlFile::LockRange  
+ Llame a este método para bloquear una región en el archivo para impedir que otros procesos tengan acceso a él.  
+  
+```
+HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `nPos`  
+ La posición del archivo donde debe comenzar el bloqueo.  
+  
+ `nCount`  
+ La longitud del intervalo de bytes que se bloquee.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `S_OK` éxito o error `HRESULT` en caso de error.  
+  
+### <a name="remarks"></a>Comentarios  
+ Llamadas [encontraba](http://msdn.microsoft.com/library/windows/desktop/aa365202) bloquear una región en el archivo. El bloqueo de bytes en un archivo impide que otros procesos obtengan acceso a dichos bytes. Puede bloquear más de una región de un archivo, pero no las áreas superpuestas se permiten. Al desbloquear una región, usando [CAtlFile::UnlockRange](#unlockrange), el intervalo de bytes debe corresponder exactamente con la región que se ha bloqueado anteriormente. `LockRange`no combina regiones adyacentes; Si dos regiones bloqueadas son adyacentes, debe desbloquear cada uno por separado.  
+  
+##  <a name="a-namemptma--catlfilemptm"></a><a name="m_ptm"></a>CAtlFile::m_pTM  
+ Puntero a un `CAtlTransactionManager` objeto.  
+  
+```
+CAtlTransactionManager* m_pTM;
+```  
+  
+### <a name="remarks"></a>Comentarios  
+  
+##  <a name="a-namereada--catlfileread"></a><a name="read"></a>CAtlFile::Read  
+ Llame a este método para leer datos de un archivo a partir de la posición indicada por el puntero de archivo.  
+  
+```
+HRESULT Read(
+    LPVOID pBuffer,
+    DWORD nBufSize) throw();
+
+HRESULT Read(
+    LPVOID pBuffer,
+    DWORD nBufSize,
+    DWORD& nBytesRead) throw();
+
+HRESULT Read(
+    LPVOID pBuffer,
+    DWORD nBufSize,
+    LPOVERLAPPED pOverlapped) throw();
+
+HRESULT Read(
+    LPVOID pBuffer,
+    DWORD nBufSize,
+    LPOVERLAPPED pOverlapped,
+    LPOVERLAPPED_COMPLETION_ROUTINE pfnCompletionRoutine) throw();
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `pBuffer`  
+ Puntero al búfer que recibirá los datos leídos desde el archivo.  
+  
+ `nBufSize`  
+ El tamaño del búfer en bytes.  
+  
+ `nBytesRead`  
+ Número de bytes leídos.  
+  
+ `pOverlapped`  
+ La estructura superpuesta. Consulte `lpOverlapped` en [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+ `pfnCompletionRoutine`  
+ La rutina de finalización. Consulte *lpCompletionRoutine* en [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `S_OK` éxito o error `HRESULT` en caso de error.  
+  
+### <a name="remarks"></a>Comentarios  
+ Llamar las tres primeras formas [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), el último [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) para leer los datos del archivo. Utilice [CAtlFile::Seek](#seek) para mover el puntero de archivo.  
+  
+##  <a name="a-nameseeka--catlfileseek"></a><a name="seek"></a>CAtlFile::Seek  
+ Llamar a este método para mover el puntero de archivo del archivo.  
+  
+```
+HRESULT Seek(
+    LONGLONG nOffset,
+    DWORD dwFrom = FILE_CURRENT) throw();
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `nOffset`  
+ El desplazamiento desde el punto inicial especificado por `dwFrom`.  
+  
+ `dwFrom`  
+ El punto de partida (FILE_BEGIN, FILE_CURRENT o FILE_END).  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `S_OK` éxito o error `HRESULT` en caso de error.  
+  
+### <a name="remarks"></a>Comentarios  
+ Llamadas [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) para mover el puntero de archivo.  
+  
+##  <a name="a-namesetsizea--catlfilesetsize"></a><a name="setsize"></a>CAtlFile::SetSize  
+ Llamar a este método para establecer el tamaño del archivo.  
+  
+```
+HRESULT SetSize(ULONGLONG nNewLen) throw();
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `nNewLen`  
+ La nueva longitud del archivo en bytes.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `S_OK` éxito o error `HRESULT` en caso de error.  
+  
+### <a name="remarks"></a>Comentarios  
+ Llamadas [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) y [SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) para establecer el tamaño del archivo. En la devolución, se sitúa el puntero de archivo al final del archivo.  
+  
+##  <a name="a-nameunlockrangea--catlfileunlockrange"></a><a name="unlockrange"></a>CAtlFile::UnlockRange  
+ Llamar a este método para desbloquear una región del archivo.  
+  
+```
+HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `nPos`  
+ La posición del archivo donde debe comenzar el desbloqueo.  
+  
+ `nCount`  
+ La longitud del intervalo de bytes que se desbloquearán.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `S_OK` éxito o error `HRESULT` en caso de error.  
+  
+### <a name="remarks"></a>Comentarios  
+ Llamadas [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) para desbloquear una región del archivo.  
+  
+##  <a name="a-namewritea--catlfilewrite"></a><a name="write"></a>CAtlFile::Write  
+ Llamar a este método para escribir datos en el archivo en la posición indicada por el puntero de archivo.  
+  
+```
+HRESULT Write(
+    LPCVOID pBuffer,
+    DWORD nBufSize,
+    LPOVERLAPPED pOverlapped,
+    LPOVERLAPPED_COMPLETION_ROUTINE pfnCompletionRoutine) throw();
+
+HRESULT Write(
+    LPCVOID pBuffer,
+    DWORD nBufSize,
+    DWORD* pnBytesWritten = NULL) throw();
+
+HRESULT Write(
+    LPCVOID pBuffer,
+    DWORD nBufSize,
+    LPOVERLAPPED pOverlapped) throw();
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `pBuffer`  
+ Búfer que contiene los datos se escriban en el archivo.  
+  
+ `nBufSize`  
+ El número de bytes que se transfieren desde el búfer.  
+  
+ `pOverlapped`  
+ La estructura superpuesta. Consulte `lpOverlapped` en [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+ `pfnCompletionRoutine`  
+ La rutina de finalización. Consulte *lpCompletionRoutine* en [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+ `pnBytesWritten`  
+ Bytes escritos.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `S_OK` éxito o error `HRESULT` en caso de error.  
+  
+### <a name="remarks"></a>Comentarios  
+ Llamar las tres primeras formas [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747), las llamadas última [WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) para escribir datos en el archivo. Utilice [CAtlFile::Seek](#seek) para mover el puntero de archivo.  
+  
+## <a name="see-also"></a>Vea también  
+ [Ejemplo de marquesina](../../visual-cpp-samples.md)   
+ [Información general de la clase](../../atl/atl-class-overview.md)   
+ [Clase CHandle](../../atl/reference/chandle-class.md)
+

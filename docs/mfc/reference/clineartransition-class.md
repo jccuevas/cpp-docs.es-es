@@ -1,71 +1,134 @@
 ---
-title: "CLinearTransition (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CLinearTransition"
-  - "afxanimationcontroller/CLinearTransition"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CLinearTransition (clase)"
+title: Clase CLinearTransition | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CLinearTransition
+- afxanimationcontroller/CLinearTransition
+dev_langs:
+- C++
+helpviewer_keywords:
+- CLinearTransition class
 ms.assetid: 7fcb2dba-beb8-4933-9f5d-3b7fb1585ef0
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# CLinearTransition (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: c39a3961600401f47f2f38d1a0cd735b1237813f
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="clineartransition-class"></a>Clase CLinearTransition
 Encapsula una transición lineal.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CLinearTransition : public CBaseTransition;  
 ```  
   
-## Members  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CLinearTransition::CLinearTransition](../Topic/CLinearTransition::CLinearTransition.md)|Construye un objeto de transición lineal y lo inicializa con duración y valor final.|  
+|[CLinearTransition::CLinearTransition](#clineartransition)|Construye un objeto de transición lineal y la inicializa con el valor final y la duración.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CLinearTransition::Create](../Topic/CLinearTransition::Create.md)|Llama a la biblioteca de transiciones para crear el objeto COM de transición encapsulado.  \(Invalida [CBaseTransition::Create](../Topic/CBaseTransition::Create.md).\)|  
+|[CLinearTransition::Create](#create)|Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado. (Invalida [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-### Miembros de datos públicos  
+### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CLinearTransition::m\_dblFinalValue](../Topic/CLinearTransition::m_dblFinalValue.md)|El valor final de una variable de animación al final de la transición.|  
-|[CLinearTransition::m\_duration](../Topic/CLinearTransition::m_duration.md)|Duración de la transición.|  
+|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|El valor de la animación al final de la transición.|  
+|[CLinearTransition::m_duration](#m_duration)|La duración de la transición.|  
   
-## Comentarios  
- Durante una transición lineal, el valor de la variable de animación realiza transiciones linealmente desde su valor inicial a un valor final especificado.  Como todas las transiciones se desactivan automáticamente, se recomienda asignarlas mediante "operator new".  CAnimationController::AnimateGroup crea el objeto COM encapsulado IUIAnimationTransition que hasta entonces es NULL.  Cambiar las variables miembro después de que la creación de este objeto COM no tiene ningún efecto.  
+## <a name="remarks"></a>Comentarios  
+ Durante una transición lineal, el valor de la variable de animación realiza la transición linealmente desde su valor inicial a un valor final especificado. Debido a que todas las transiciones se desactivan automáticamente, se recomienda asignada a ellos con el operador nuevo. Se crea el objeto de IUIAnimationTransition COM encapsulado por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables miembro después de la creación de este objeto COM no tiene ningún efecto.  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  [CLinearTransition](../../mfc/reference/clineartransition-class.md)  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxanimationcontroller.h  
   
-## Vea también  
+##  <a name="a-nameclineartransitiona--clineartransitionclineartransition"></a><a name="clineartransition"></a>CLinearTransition::CLinearTransition  
+ Construye un objeto de transición lineal y la inicializa con el valor final y la duración.  
+  
+```  
+CLinearTransition(
+    UI_ANIMATION_SECONDS duration,  
+    DOUBLE dblFinalValue);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `duration`  
+ La duración de la transición.  
+  
+ `dblFinalValue`  
+ El valor de la animación al final de la transición.  
+  
+##  <a name="a-namecreatea--clineartransitioncreate"></a><a name="create"></a>CLinearTransition::Create  
+ Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado.  
+  
+```  
+virtual BOOL Create(
+    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionFactory* \*not used*\);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+`pLibrary`  
+ Un puntero a un [IUIAnimationTransitionLibrary interfaz](https://msdn.microsoft.com/library/windows/desktop/dd371897), que define una biblioteca de transiciones estándares.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ TRUE si la transición se crea correctamente; de lo contrario, FALSE.  
+  
+##  <a name="a-namemdblfinalvaluea--clineartransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CLinearTransition::m_dblFinalValue  
+ El valor de la animación al final de la transición.  
+  
+```  
+DOUBLE m_dblFinalValue;  
+```  
+  
+##  <a name="a-namemdurationa--clineartransitionmduration"></a><a name="m_duration"></a>CLinearTransition::m_duration  
+ La duración de la transición.  
+  
+```  
+UI_ANIMATION_SECONDS m_duration;  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
+

@@ -1,101 +1,160 @@
 ---
-title: "CA2CAEX (clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CA2CAEX"
-  - "ATL.CA2CAEX<t_nBufferLength>"
-  - "ATLCONV/CA2CAEX"
-  - "ATL::CA2CAEX<t_nBufferLength>"
-  - "ATL::CA2CAEX"
-  - "CA2CAEX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CA2CAEX (clase)"
+title: Clase CA2CAEX | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CA2CAEX
+- ATL.CA2CAEX<t_nBufferLength>
+- ATLCONV/CA2CAEX
+- ATL::CA2CAEX<t_nBufferLength>
+- ATL::CA2CAEX
+- CA2CAEX
+dev_langs:
+- C++
+helpviewer_keywords:
+- CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CA2CAEX (clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: f104a62144e7fd8ac802c27dfe940a7f96d0e79a
+ms.lasthandoff: 02/24/2017
 
-Esta clase es utilizada por las macros `CA2CTEX` y `CT2CAEX`de la conversión de cadenas, y typedef **CA2 CA**.  
+---
+# <a name="ca2caex-class"></a>Clase CA2CAEX
+Esta clase es utilizada por las macros de conversión de cadena `CA2CTEX` y `CT2CAEX`y la definición de tipo **CA2CA**.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en Windows en tiempo de ejecución.  
+>  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+template<int t_nBufferLength = 128>  
+class CA2CAEX
 ```  
   
-      template<  
-int t_nBufferLength= 128  
->  
-class CA2CAEX  
-```  
-  
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `t_nBufferLength`  
- El tamaño del búfer utilizado en el proceso de traducción.  la longitud predeterminada es 128 bytes.  
+ El tamaño del búfer utilizado en el proceso de traducción. La longitud predeterminada es 128 bytes.  
   
-## Members  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CA2CAEX::CA2CAEX](../Topic/CA2CAEX::CA2CAEX.md)|el constructor.|  
-|[CA2CAEX::~CA2CAEX](../Topic/CA2CAEX::~CA2CAEX.md)|El destructor.|  
+|[CA2CAEX::CA2CAEX](#ca2caex)|El constructor.|  
+|[CA2CAEX:: ~ CA2CAEX](#dtor)|Destructor.|  
   
-### Operadores públicos  
+### <a name="public-operators"></a>Operadores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CA2CAEX::operator LPCSTR](../Topic/CA2CAEX::operator%20LPCSTR.md)|operador de conversión.|  
+|[CA2CAEX::operator LPCSTR](#operator_lpcstr)|Operador de conversión.|  
   
-### Miembros de datos públicos  
+### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CA2CAEX::m\_psz](../Topic/CA2CAEX::m_psz.md)|El miembro de datos que almacena la cadena de origen.|  
+|[CA2CAEX::m_psz](#m_psz)|El miembro de datos que almacena la cadena de origen.|  
   
-## Comentarios  
- A menos que sea adicional se requiere la funcionalidad, utilice `CA2CTEX`, `CT2CAEX`, o **CA2CA** en su propio código.  
+## <a name="remarks"></a>Comentarios  
+ A menos que se requiere funcionalidad adicional, use `CA2CTEX`, `CT2CAEX`, o **CA2CA** en su propio código.  
   
- Esta clase es seguro utilizar en bucles y no desbordará la pila.  De forma predeterminada, las clases de conversión ATL y las macros utilizarán la página de códigos ANSI actual del subproceso para la conversión.  
+ Esta clase es segura utilizar en bucles y no desbordarán la pila. Las macros y clases de conversión de ATL utilizarán de forma predeterminada la página de código ANSI del subproceso actual para la conversión.  
   
- las macros siguientes se basan en esta clase:  
+ Las macros siguientes se basan en esta clase:  
   
--   `CA2CTEX`  
+- `CA2CTEX`  
   
--   `CT2CAEX`  
+- `CT2CAEX`  
   
- Typedef siguiente está basada en esta clase:  
+ La siguiente definición de tipo se basa en esta clase:  
   
--   **CA2CA**  
+- **CA2CA**  
   
- Para consultar estas macros de conversión de texto, vea [Macros de conversión de cadena ATL y MFC](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md).  
+ Para obtener una explicación de estas macros de conversión de texto, consulte [Macros de conversión de cadenas de MFC y ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
   
-## Ejemplo  
- Vea [Macros de conversión de cadena ATL y MFC](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md) para obtener un ejemplo de cómo utilizar estas macros de la conversión de cadenas.  
+## <a name="example"></a>Ejemplo  
+ Consulte [Macros de conversión de cadenas de MFC y ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) para obtener un ejemplo del uso de estas macros de conversión de cadena.  
   
-## Requisitos  
- **encabezado:** atlconv.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atlconv.h  
   
-## Vea también  
- [CA2AEX \(clase\)](../../atl/reference/ca2aex-class.md)   
- [CA2WEX \(clase\)](../../atl/reference/ca2wex-class.md)   
- [CW2AEX \(clase\)](../../atl/reference/cw2aex-class.md)   
- [CW2CWEX \(clase\)](../../atl/reference/cw2cwex-class.md)   
- [CW2WEX \(clase\)](../../atl/reference/cw2wex-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameca2caexa--ca2caexca2caex"></a><a name="ca2caex"></a>CA2CAEX::CA2CAEX  
+ El constructor.  
+  
+```
+CA2CAEX(LPCSTR psz, UINT nCodePage) throw(...);
+CA2CAEX(LPCSTR psz) throw(...);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `psz`  
+ La cadena de texto que se va a convertir.  
+  
+ `nCodePage`  
+ No utilizado en esta clase.  
+  
+### <a name="remarks"></a>Comentarios  
+ Crea el búfer necesario para la traducción.  
+  
+##  <a name="a-namedtora--ca2caexca2caex"></a><a name="dtor"></a>CA2CAEX:: ~ CA2CAEX  
+ Destructor.  
+  
+```
+~CA2CAEX() throw();
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Libera el búfer asignado.  
+  
+##  <a name="a-namempsza--ca2caexmpsz"></a><a name="m_psz"></a>CA2CAEX::m_psz  
+ El miembro de datos que almacena la cadena de origen.  
+  
+```
+LPCSTR m_psz;
+```  
+  
+##  <a name="a-nameoperatorlpcstra--ca2caexoperator-lpcstr"></a><a name="operator_lpcstr"></a>CA2CAEX::operator LPCSTR  
+ Operador de conversión.  
+  
+```  
+operator LPCSTR() const throw();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve la cadena de texto como tipo `LPCSTR`.  
+  
+## <a name="see-also"></a>Vea también  
+ [Clase CA2AEX](../../atl/reference/ca2aex-class.md)   
+ [Clase CA2WEX](../../atl/reference/ca2wex-class.md)   
+ [Clase CW2AEX](../../atl/reference/cw2aex-class.md)   
+ [Clase CW2CWEX](../../atl/reference/cw2cwex-class.md)   
+ [Clase CW2WEX](../../atl/reference/cw2wex-class.md)   
+ [Información general de la clase](../../atl/atl-class-overview.md)
+
