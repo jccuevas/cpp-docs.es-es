@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 5ac891241f29df515864c01fc449197f39bbaedd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 56b8b5c3574a7a53a4e259412b1b1326973bcac9
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="ctime-class"></a>CTime (clase)
@@ -183,13 +183,13 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
 ### <a name="remarks"></a>Comentarios  
  A continuación se describe cada constructor:  
   
-- **CTime (de); **Construye sin inicializar `CTime` objeto. Este constructor permite definir `CTime` matrices de objetos. Se deben inicializar estas matrices con horas válidas antes de usar.  
+- **CTime(); ** Construye sin inicializar `CTime` objeto. Este constructor permite definir `CTime` matrices de objetos. Se deben inicializar estas matrices con horas válidas antes de usar.  
   
-- **CTime (const CTime aspecto); **Construye una `CTime` objeto desde otro `CTime` valor.  
+- **CTime (const CTime aspecto); ** Construye una `CTime` objeto desde otro `CTime` valor.  
   
-- **CTime (__time64_t); **Construye una `CTime` objeto a partir de un **__time64_t** tipo. Este constructor espera una hora UTC y convierte el resultado en una hora local antes de almacenar el resultado.  
+- **CTime (__time64_t); ** Construye una `CTime` objeto a partir de un **__time64_t** tipo. Este constructor espera una hora UTC y convierte el resultado en una hora local antes de almacenar el resultado.  
   
-- **CTime (int, int,...); **Construye un `CTime` objeto de componentes de hora local con cada componente se limita a los siguientes intervalos:  
+- **CTime (int, int,...); ** Construye un `CTime` objeto de componentes de hora local con cada componente se limita a los siguientes intervalos:  
   
     |Componente|Intervalo|  
     |---------------|-----------|  
@@ -202,11 +202,11 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
   
      Este constructor realiza la conversión apropiada a la hora UTC. La versión de depuración de la biblioteca Microsoft Foundation Class aserciones si uno o más de los componentes de tiempo están fuera del intervalo. Debe validar los argumentos antes de llamar a. Este constructor espera una hora local.  
   
-- `CTime`( **WORD, WORD** ) **;** Construye un `CTime` objeto a partir de los valores de fecha y hora de MS-DOS especificados. Este constructor espera una hora local.  
+- **CTime (WORD, WORD); ** Construye un `CTime` objeto a partir de los valores de fecha y hora de MS-DOS especificados. Este constructor espera una hora local.  
   
-- `CTime`( **const SYSTEMTIME&** ) **;** Construye un `CTime` objeto a partir de un `SYSTEMTIME` estructura. Este constructor espera una hora local.  
+- **CTime (const SYSTEMTIME aspecto); ** Construye una `CTime` objeto a partir de un `SYSTEMTIME` estructura. Este constructor espera una hora local.  
   
-- `CTime`( **const FILETIME&** ) **;** Construye un `CTime` objeto a partir de un `FILETIME` estructura. Probablemente no utilizará `CTime``FILETIME` inicialización directamente. Si utiliza un `CFile` objeto para manipular un archivo `CFile::GetStatus` recupera la marca de tiempo del archivo a través de un `CTime` objeto inicializado con un `FILETIME` estructura. Este constructor supone que la hora UTC según y convierte automáticamente el valor en hora local antes de almacenar el resultado.  
+- **CTime (const FILETIME aspecto); ** Construye una `CTime` objeto a partir de un `FILETIME` estructura. Probablemente no utilizará `CTime FILETIME` inicialización directamente. Si utiliza un `CFile` objeto para manipular un archivo `CFile::GetStatus` recupera la marca de tiempo del archivo a través de un `CTime` objeto inicializado con un `FILETIME` estructura. Este constructor supone que la hora UTC según y convierte automáticamente el valor en hora local antes de almacenar el resultado.  
   
     > [!NOTE]
     >  El constructor utilizando **DBTIMESTAMP** parámetro solo está disponible cuando se incluye OLEDB.h.  

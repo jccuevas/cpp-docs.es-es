@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 791b9ec18cc71fe19f633c12afdc48c835c2bf14
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: e273aff69b9c8dbea4fb829798b2e9d58351b9dd
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="csimplestringt-class"></a>Clase CSimpleStringT
@@ -269,7 +269,7 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
  Construye un nuevo objeto `CSimpleStringT`. Dado que los constructores copian los datos de entrada en el nuevo almacenamiento asignado, pueden producir excepciones de memoria.  
   
 ### <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra el uso de `CSimpleStringT::CSimpleStringT` utilizando ATL `typedef``CSimpleString`. `CSimpleString`es una especialización de plantilla de clase utiliza `CSimpleStringT`.  
+ En el ejemplo siguiente se muestra el uso de `CSimpleStringT::CSimpleStringT` mediante el uso de la biblioteca ATL `typedef` `CSimpleString`. `CSimpleString`es una especialización de plantilla de clase utiliza `CSimpleStringT`.  
   
 ```cpp  
 CSimpleString s1(pMgr);
@@ -408,7 +408,7 @@ PXSTR GetBuffer();
  Si `nMinBufferLength` es mayor que la longitud del búfer actual, `GetBuffer` destruye el búfer actual, lo reemplaza con un búfer de tamaño solicitado y restablece el recuento de referencias de objeto a cero. Si previamente ha llamado [LockBuffer](#lockbuffer) en este búfer, se pierde el bloqueo del búfer.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un `PXSTR` puntero al búfer de caracteres (terminado en null) del objeto.  
+ Un `PXSTR` puntero al búfer de caracteres (terminadas en null) del objeto.  
   
 ### <a name="remarks"></a>Comentarios  
  Llamar a este método para devolver el contenido del búfer de la `CSimpleStringT` objeto. El valor devuelto `PXSTR` no es una constante y, por tanto, permite la modificación directa de `CSimpleStringT` contenido.  

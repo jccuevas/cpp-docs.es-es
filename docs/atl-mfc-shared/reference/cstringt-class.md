@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9660db5ff0d41a31f7d2a4e824df4e4bdf6a00e6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 961dc75623ec04993d118e46e1d4ba73a9aadcec
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="cstringt-class"></a>CStringT (clase)
@@ -650,7 +650,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 > [!NOTE]
 > `FormatMessage`intenta asignar memoria del sistema para la cadena recién formateada. Si este intento falla, se inicia automáticamente una excepción de memoria.  
   
- Cada inserción debe tener un parámetro correspondiente que sigue la `pszFormat` o `nFormatID` parámetro. En el texto del mensaje, se admiten varias secuencias de escape dinámicamente formato del mensaje. Para obtener más información, consulte Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) funcionan en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Cada inserción debe tener un parámetro correspondiente que sigue la `pszFormat` o `nFormatID` parámetro. En el texto del mensaje, se admiten varias secuencias de escape para el formato de forma dinámica el mensaje. Para obtener más información, consulte Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) funcionan en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATLMFC_Utilities&#118;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
@@ -1340,7 +1340,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
  Una cadena se interpreta como un conjunto de caracteres.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una subcadena que contiene caracteres de la cadena que se encuentran en `pszCharSet`, empezando por el primer carácter de la cadena y la finalización cuando se encuentra un carácter en la cadena que no está en `pszCharSet.``SpanIncluding` devuelve una subcadena vacía si el primer carácter de la cadena no está en el conjunto especificado.  
+ Una subcadena que contiene caracteres de la cadena que se encuentran en `pszCharSet`, empezando por el primer carácter de la cadena y la finalización cuando se encuentra un carácter en la cadena que no está en `pszCharSet`. `SpanIncluding`Devuelve una subcadena vacía si el primer carácter de la cadena no está en el conjunto especificado.  
   
 ### <a name="remarks"></a>Comentarios  
  Si el primer carácter de la cadena no está en el juego de caracteres, a continuación, `SpanIncluding` devuelve una cadena vacía. De lo contrario, devuelve una secuencia de caracteres consecutivos que se encuentran en el conjunto.  
