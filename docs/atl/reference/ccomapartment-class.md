@@ -1,75 +1,174 @@
 ---
-title: "CComApartment Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CComApartment"
-  - "CComApartment"
-  - "ATL.CComApartment"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "apartments in ATL EXE modules"
-  - "CComApartment class"
+title: Clase CComApartment | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CComApartment
+- CComApartment
+- ATL.CComApartment
+dev_langs:
+- C++
+helpviewer_keywords:
+- apartments in ATL EXE modules
+- CComApartment class
 ms.assetid: dbc177d7-7ee4-45f2-b563-d578a467ca93
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CComApartment Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
+ms.openlocfilehash: 9359e2ab8c4a84ab66441e3eb8cfd39520fd4e8d
+ms.lasthandoff: 02/24/2017
 
-Esta clase proporciona compatibilidad para administrar un apartamento de un módulo subproceso\-reunido EXE.  
+---
+# <a name="ccomapartment-class"></a>Clase CComApartment
+Esta clase proporciona compatibilidad para la administración de un apartamento de un módulo EXE agrupada por subproceso.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en Windows en tiempo de ejecución.  
+>  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+class CComApartment
 ```  
   
-class CComApartment  
+## <a name="members"></a>Miembros  
   
+### <a name="public-constructors"></a>Constructores públicos  
+  
+|Nombre|Descripción|  
+|----------|-----------------|  
+|[CComApartment::CComApartment](#ccomapartment)|El constructor.|  
+  
+### <a name="public-methods"></a>Métodos públicos  
+  
+|Nombre|Descripción|  
+|----------|-----------------|  
+|[CComApartment::Apartment](#apartment)|Marca la dirección inicial del subproceso.|  
+|[CComApartment::GetLockCount](#getlockcount)|Devuelve el recuento de bloqueo actual del subproceso.|  
+|[CComApartment::Lock](#lock)|Incrementa el recuento de bloqueo del subproceso.|  
+|[CComApartment::Unlock](#unlock)|Reduce el recuento de bloqueo del subproceso.|  
+  
+### <a name="public-data-members"></a>Miembros de datos públicos  
+  
+|Nombre|Descripción|  
+|----------|-----------------|  
+|[CComApartment::m_dwThreadID](#m_dwthreadid)|Contiene el identificador del subproceso.|  
+|[CComApartment::m_hThread](#m_hthread)|Contiene el identificador del subproceso.|  
+|[CComApartment::m_nLockCnt](#m_nlockcnt)|Contiene el recuento de bloqueo actual del subproceso.|  
+  
+## <a name="remarks"></a>Comentarios  
+ `CComApartment`se utiliza por [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) para administrar un apartamento de un módulo EXE agrupada por subproceso. `CComApartment`Proporciona métodos para aumentar y disminuir el bloqueo de contar con un subproceso.  
+  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atlbase.h  
+  
+##  <a name="a-nameapartmenta--ccomapartmentapartment"></a><a name="apartment"></a>CComApartment::Apartment  
+ Marca la dirección inicial del subproceso.  
+  
+```
+DWORD Apartment();
 ```  
   
-## Members  
+### <a name="return-value"></a>Valor devuelto  
+ Siempre es 0.  
   
-### Constructores públicos  
+### <a name="remarks"></a>Comentarios  
+ Configura automáticamente durante la [CComAutoThreadModule::Init](../../atl/reference/ccomautothreadmodule-class.md#init).  
   
-|Name|Descripción|  
-|----------|-----------------|  
-|[CComApartment::CComApartment](../Topic/CComApartment::CComApartment.md)|el constructor.|  
+##  <a name="a-nameccomapartmenta--ccomapartmentccomapartment"></a><a name="ccomapartment"></a>CComApartment::CComApartment  
+ El constructor.  
   
-### Métodos públicos  
+```
+CComApartment();
+```  
   
-|Name|Descripción|  
-|----------|-----------------|  
-|[CComApartment::Apartment](../Topic/CComApartment::Apartment.md)|Marca la dirección inicial del subproceso.|  
-|[CComApartment::GetLockCount](../Topic/CComApartment::GetLockCount.md)|Devuelve el recuento de bloqueo actual del subproceso.|  
-|[CComApartment::Lock](../Topic/CComApartment::Lock.md)|Incrementa el recuento de bloqueo de subprocesos.|  
-|[CComApartment::Unlock](../Topic/CComApartment::Unlock.md)|Disminuye el recuento de bloqueo de subprocesos.|  
+### <a name="remarks"></a>Comentarios  
+ Inicializa el `CComApartment` miembros de datos [m_nLockCnt](#m_nlockcnt) y [m_hThread](#m_hthread).  
   
-### Miembros de datos públicos  
+##  <a name="a-namegetlockcounta--ccomapartmentgetlockcount"></a><a name="getlockcount"></a>CComApartment::GetLockCount  
+ Devuelve el recuento de bloqueo actual del subproceso.  
   
-|Name|Descripción|  
-|----------|-----------------|  
-|[CComApartment::m\_dwThreadID](../Topic/CComApartment::m_dwThreadID.md)|Contiene el identificador del subproceso.|  
-|[CComApartment::m\_hThread](../Topic/CComApartment::m_hThread.md)|Contiene el identificador del subproceso.|  
-|[CComApartment::m\_nLockCnt](../Topic/CComApartment::m_nLockCnt.md)|Contiene el número de bloqueo actual del subproceso.|  
+```
+LONG GetLockCount();
+```  
   
-## Comentarios  
- `CComApartment` es utilizado por [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) para administrar un apartamento de un módulo subproceso\-reunido EXE.  `CComApartment` proporciona métodos para aumentar y disminuir el recuento de bloqueo en un subproceso.  
+### <a name="return-value"></a>Valor devuelto  
+ El recuento de bloqueos en el subproceso.  
   
-## Requisitos  
- **encabezado:** atlbase.h  
+##  <a name="a-namelocka--ccomapartmentlock"></a><a name="lock"></a>CComApartment::Lock  
+ Incrementa el recuento de bloqueo del subproceso.  
   
-## Vea también  
- [Class Overview](../../atl/atl-class-overview.md)
+```
+LONG Lock();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Un valor que puede ser útil para el diagnóstico o de pruebas.  
+  
+### <a name="remarks"></a>Comentarios  
+ Llama a [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock).  
+  
+ El recuento de bloqueos en el subproceso se utiliza para fines estadísticos.  
+  
+##  <a name="a-namemdwthreadida--ccomapartmentmdwthreadid"></a><a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
+ Contiene el identificador del subproceso.  
+  
+```
+DWORD m_dwThreadID;
+```  
+  
+##  <a name="a-namemhthreada--ccomapartmentmhthread"></a><a name="m_hthread"></a>CComApartment::m_hThread  
+ Contiene el identificador del subproceso.  
+  
+```
+HANDLE m_hThread;
+```  
+  
+##  <a name="a-namemnlockcnta--ccomapartmentmnlockcnt"></a><a name="m_nlockcnt"></a>CComApartment::m_nLockCnt  
+ Contiene el recuento de bloqueo actual del subproceso.  
+  
+```
+LONG m_nLockCnt;
+```  
+  
+##  <a name="a-nameunlocka--ccomapartmentunlock"></a><a name="unlock"></a>CComApartment::Unlock  
+ Reduce el recuento de bloqueo del subproceso.  
+  
+```
+LONG Unlock();
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Un valor que puede ser útil para el diagnóstico o de pruebas.  
+  
+### <a name="remarks"></a>Comentarios  
+ Llama a [CComAutoThreadModule::Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock).  
+  
+ El recuento de bloqueos en el subproceso se utiliza para fines estadísticos.  
+  
+## <a name="see-also"></a>Vea también  
+ [Información general de la clase](../../atl/atl-class-overview.md)
+
