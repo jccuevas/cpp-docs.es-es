@@ -1,4 +1,4 @@
-# [ARM Assembler Reference](arm-assembler-reference.md)
-# [ARM Assembler Command-Line Reference](arm-assembler-command-line-reference.md)
-# [ARM Assembler Directives](arm-assembler-directives.md)
-# [ARM Assembler Diagnostic Messages](arm-assembler-diagnostic-messages.md)
+# [Referencia del ensamblador de ARM](arm-assembler-reference.md)
+## [Referencia de la línea de comandos del ensamblador de ARM](arm-assembler-command-line-reference.md)
+## [Mensajes de diagnóstico del ensamblador de ARM](arm-assembler-diagnostic-messages.md)
+## [Directivas del ensamblador de ARM](arm-assembler-directives.md)
