@@ -1,46 +1,62 @@
 ---
-title: "Comprobar errores en tiempo de ejecuci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.runtime"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "comprobar errores en tiempo de ejecución"
-  - "errores en tiempo de ejecución, comprobar"
+title: "Comprobación de errores en tiempo de ejecución | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.runtime
+dev_langs:
+- C++
+helpviewer_keywords:
+- run-time error checking
+- run-time errors, checking
 ms.assetid: c965dd01-57ad-4a3c-b1d6-5aa04f920501
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Comprobar errores en tiempo de ejecuci&#243;n
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e5ffb6d3321637b662790a32cce65e6908b4778d
+ms.lasthandoff: 02/24/2017
 
-La biblioteca en tiempo de ejecución de C contiene funciones que las comprobaciones de errores en tiempo de ejecución admiten \(RTC\).  La comprobación de errores en tiempo de ejecución permite compilar el programa tales que ciertos tipos de errores en tiempo de ejecución se comunican.  Especifica cómo se notifican errores pero que se informa de las clases de errores.  Para obtener más información, vea [Comprobaciones de errores en tiempo de ejecución](../Topic/How%20to:%20Use%20Native%20Run-Time%20Checks.md).  
+---
+# <a name="run-time-error-checking"></a>Comprobar errores en tiempo de ejecución
+La biblioteca de tiempo de ejecución de C contiene las funciones que admiten las comprobaciones de errores en tiempo de ejecución. La comprobación de errores en tiempo de ejecución permite compilar el programa de manera que se notifiquen determinados tipos de errores en tiempo de ejecución. El usuario especifica cómo se notifican los errores y qué tipos de errores se notifican. Para obtener más información, consulte [/RTC (Comprobaciones de errores en tiempo de ejecución)](http://msdn.microsoft.com/Library/dc7b2f1e-5ff6-42e0-89b3-dc9dead83ee1).  
   
- Utilice las siguientes funciones para personalizar la manera en que el programa haga la comprobación de errores en tiempo de ejecución.  
+ Utilice las siguientes funciones para personalizar la forma en que el programa realiza la comprobación de errores en tiempo de ejecución.  
   
-### Comprobación de errores en tiempo de ejecución funciones  
+### <a name="run-time-error-checking-functions"></a>Funciones de comprobación de errores en tiempo de ejecución  
   
-|Función|Utilice|Equivalente de .NET Framework|  
-|-------------|-------------|-----------------------------------|  
-|[\_RTC\_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|Devuelve una descripción breve de un tipo de comprobación de errores en tiempo de ejecución.||  
-|[\_RTC\_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|Devuelve el número total de errores que puedan detectar por las comprobaciones de errores en tiempo de ejecución.||  
-|[\_RTC\_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|Señala una función como el controlador para la notificación de comprobaciones de errores en tiempo de ejecución.||  
-|[\_RTC\_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|Asocia un error que sea detectado por las comprobaciones de errores en tiempo de ejecución con un tipo.||  
+|Función|Uso|Equivalente de .NET Framework|  
+|--------------|---------|-------------------------------|  
+|[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|Devuelve una breve descripción de un tipo de comprobación de error en tiempo de ejecución.||  
+|[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|Devuelve el número total de errores que se pueden detectar mediante las comprobaciones de errores en tiempo de ejecución.||  
+|[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|Designa una función como el controlador para notificar comprobaciones de errores en tiempo de ejecución.||  
+|[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|Asocia un error que se detecta mediante comprobaciones de errores en tiempo de ejecución con un tipo.||  
   
-## Vea también  
- [Rutinas de tiempo de ejecución por categoría](../c-runtime-library/run-time-routines-by-category.md)   
- [\/RTC \(Comprobaciones de errores en tiempo de ejecución\)](../build/reference/rtc-run-time-error-checks.md)   
- [runtime\_checks](../preprocessor/runtime-checks.md)   
- [RTC sample](http://msdn.microsoft.com/es-es/b3415b09-f6fd-43dc-8c02-9a910bc2574e)   
+## <a name="see-also"></a>Vea también  
+ [Rutinas en tiempo de ejecución por categoría](../c-runtime-library/run-time-routines-by-category.md)   
+ [RTC (Comprobaciones de errores en tiempo de ejecución)](../build/reference/rtc-run-time-error-checks.md)   
+ [runtime_checks](../preprocessor/runtime-checks.md)   
+ [RTC sample](http://msdn.microsoft.com/en-us/b3415b09-f6fd-43dc-8c02-9a910bc2574e)  (Ejemplo de RTC)  
  [Rutinas de depuración](../c-runtime-library/debug-routines.md)

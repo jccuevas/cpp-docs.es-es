@@ -1,73 +1,89 @@
 ---
-title: "Opciones de v&#237;nculo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nothrownew.obj"
-  - "newmode.obj"
-  - "noenv.obj"
-  - "psetargv.obj"
-  - "loosefpmath.obj"
-  - "smallheap.obj"
-  - "fp10.obj"
-  - "nochkclr.obj"
-  - "chkstk.obj"
-  - "pcommode.obj"
-  - "pnoenv.obj"
-  - "opciones de vínculo [C++]"
-  - "invalidcontinue.obj"
-  - "pnothrownew.obj"
-  - "pwsetargv.obj"
-  - "pinvalidcontinue.obj"
-  - "wsetargv.obj"
-  - "binmode.obj"
-  - "setargv.obj"
-  - "noarg.obj"
-  - "pnewmode.obj"
-  - "commode.obj"
-  - "pthreadlocale.obj"
-  - "pbinmode.obj"
-  - "threadlocale.obj"
-  - "pnoarg.obj"
+title: "Opciones de vínculo | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- nothrownew.obj
+- newmode.obj
+- noenv.obj
+- psetargv.obj
+- loosefpmath.obj
+- smallheap.obj
+- fp10.obj
+- nochkclr.obj
+- chkstk.obj
+- pcommode.obj
+- pnoenv.obj
+- link options [C++]
+- invalidcontinue.obj
+- pnothrownew.obj
+- pwsetargv.obj
+- pinvalidcontinue.obj
+- wsetargv.obj
+- binmode.obj
+- setargv.obj
+- noarg.obj
+- pnewmode.obj
+- commode.obj
+- pthreadlocale.obj
+- pbinmode.obj
+- threadlocale.obj
+- pnoarg.obj
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Opciones de v&#237;nculo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 3747170eb13e1b6fe5d489bc6cfdcf4c24195606
+ms.lasthandoff: 02/24/2017
 
-El directorio de lib CRT incluye varios pequeños archivos objeto que habilitan las características específicas de CRT sin ningún cambio en el código.  Éstas se conocen como “opciones de vínculo” título que tiene que agregarlos a la línea de comandos del vinculador para utilizarlos.  
+---
+# <a name="link-options"></a>Opciones de vínculo
+El directorio lib de CRT incluye una serie de archivos de objetos pequeños que habilitan características de CRT específicas sin realizar ningún cambio en el código. Se denominan "opciones de vínculo" puesto que solo hay que agregarlas a la línea de comandos del enlazador para usarlas.  
   
- Se han agregado las versiones puros de modo.  Utilice las versiones estándar para código nativo y el código de \/clr, utiliza las versiones puras \(prefijadas con un p\) para el modo de \/clr:pure .  
+ Las versiones de modo puro existen pero están en desuso en Visual Studio 2015. Use las versiones normales con código nativo y /clr, use las versiones puras (usando una p como prefijo) con el modo /clr:pure. Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso en Visual Studio 2015.  
   
-|Nativo y \/clr|Modo puro|Descripción|  
-|--------------------|---------------|-----------------|  
-|binmode.obj|pbinmode.obj|Establece el modo predeterminado del archivo \(el archivo traducción a binario.  Vea [\_fmode](../c-runtime-library/fmode.md).|  
-|chkstk.obj|no disponible|Proporciona compatibilidad el pila\- comprobar y alloca memory cuando no mediante CRT.|  
-|commode.obj|pcommode.obj|Establece la marca global de confirmación “para confirmar”.  Vea [fopen, \_wfopen](../c-runtime-library/reference/fopen-wfopen.md) y [fopen\_s, \_wfopen\_s](../c-runtime-library/reference/fopen-s-wfopen-s.md).|  
-|fp10.obj|no disponible|Cambia el control predeterminado de precisión a 64 bits.  Vea [Compatibilidad con el punto flotante](../c-runtime-library/floating-point-support.md).|  
-|invalidcontinue.obj|pinvalidcontinue.obj|Establezca un controlador no válido predeterminado del parámetro que no hace nada, lo que significa que los parámetros no válidos pasados a funciones CRT solo aparecen errno y devolverán un resultado de error.|  
-|loosefpmath.obj|no disponible|Garantiza que el código de punto flotante tolere valores denormal.|  
-|newmode.obj|pnewmode.obj|Haga [malloc](../c-runtime-library/reference/malloc.md) para llamar al nuevo controlador del error.  Vea [\_set\_new\_mode](../c-runtime-library/reference/set-new-mode.md), [\_set\_new\_handler](../c-runtime-library/reference/set-new-handler.md), [calloc](../c-runtime-library/reference/calloc.md) y [realloc](../c-runtime-library/reference/realloc.md).|  
-|noarg.obj|pnoarg.obj|Deshabilita el procesamiento de argc y argv.|  
-|nochkclr.obj|no disponible|No hace nada.  Quite del proyecto.|  
-|noenv.obj|pnoenv.obj|Deshabilita la creación de un entorno almacenado en caché para CRT.|  
-|nothrownew.obj|pnothrownew.obj|Habilita la versión no que produce de CRT.  Vea [Operadores new y delete](../cpp/new-and-delete-operators.md).|  
-|setargv.obj|psetargv.obj|Permite la extensión del comodín de argumentos de la línea de comandos.  Vea [Expandir argumentos de caracteres comodín](../c-language/expanding-wildcard-arguments.md).|  
-|smalheap.obj|no disponible|Instala un pequeño administrador muy sencillo de la pila.|  
-|threadlocale.obj|pthreadlocale.obj|Habilita la configuración regional de por\- subproceso para todos los subprocesos de forma predeterminada.|  
-|wsetargv.obj|pwsetargv.obj|Permite la extensión del comodín de argumentos de la línea de comandos.  Vea [Expandir argumentos de caracteres comodín](../c-language/expanding-wildcard-arguments.md).|  
+|Nativo y /clr|Modo puro|Descripción|  
+|----------------------|---------------|-----------------|  
+|binmode.obj|pbinmode.obj|Establece el modo de traducción de archivo predeterminado en binario. Consulte [_fmode](../c-runtime-library/fmode.md).|  
+|chkstk.obj|no disponible|Ofrece compatibilidad con comprobación de pila y alloca cuando no se use CRT.|  
+|commode.obj|pcommode.obj|Establece la marca global de confirmación en "commit". Consulte [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) y [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md).|  
+|fp10.obj|no disponible|Cambia el control de precisión predeterminado a 64 bits. Consulte [Compatibilidad con el punto flotante](../c-runtime-library/floating-point-support.md).|  
+|invalidcontinue.obj|pinvalidcontinue.obj|Establece un controlador de parámetros no válidos predeterminado que no hace nada, lo que significa que los parámetros no válidos que se pasen a funciones de CRT solo establecerán errno y devolverán un resultado de error.|  
+|loosefpmath.obj|no disponible|Se asegura de que el código de punto flotante tolera valores desnormalizados.|  
+|newmode.obj|pnewmode.obj|Hace que [malloc](../c-runtime-library/reference/malloc.md) llame al nuevo controlador en caso de error. Consulte [_set_new_mode](../c-runtime-library/reference/set-new-mode.md), [_set_new_handler](../c-runtime-library/reference/set-new-handler.md), [calloc](../c-runtime-library/reference/calloc.md) y [realloc](../c-runtime-library/reference/realloc.md).|  
+|noarg.obj|pnoarg.obj|Deshabilita todo el procesamiento de argc y argv.|  
+|nochkclr.obj|no disponible|No hace nada. Quitar del proyecto.|  
+|noenv.obj|pnoenv.obj|Deshabilita la creación de un entorno almacenado en caché para el CRT.|  
+|nothrownew.obj|pnothrownew.obj|Habilita la versión que no produce excepciones de new en el CRT. Consulte [Operadores new y delete](../cpp/new-and-delete-operators.md).|  
+|setargv.obj|psetargv.obj|Habilita la expansión de caracteres comodín de argumento de línea de comandos. Consulte [Expandir argumentos de caracteres comodín](../c-language/expanding-wildcard-arguments.md).|  
+|threadlocale.obj|pthreadlocale.obj|Habilita de forma predeterminada la configuración regional por subproceso para todos los nuevos subprocesos.|  
+|wsetargv.obj|pwsetargv.obj|Habilita la expansión de caracteres comodín de argumento de línea de comandos. Consulte [Expandir argumentos de caracteres comodín](../c-language/expanding-wildcard-arguments.md).|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Características de la biblioteca CRT](../c-runtime-library/crt-library-features.md)

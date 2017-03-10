@@ -1,62 +1,74 @@
 ---
-title: "Constantes de punto flotante de C | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "constantes, punto flotante"
-  - "double (tipo de datos), constantes de punto flotante"
-  - "constantes de punto flotante"
-  - "constantes de punto flotante, acerca de las constantes de punto flotante"
-  - "números de punto flotante, constantes de punto flotante"
-  - "tipos [C], constantes"
+title: Constantes de punto flotante de C | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- types [C], constants
+- floating-point numbers, floating-point constants
+- constants, floating-point
+- floating-point constants
+- floating-point constants, about floating-point constants
+- double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Constantes de punto flotante de C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: c4c0e4de99d0d700f04f235a4bd5f7afd83937fb
+ms.lasthandoff: 02/24/2017
 
-Una "constante de punto flotante" es un número decimal que representa un número real con signo.  La representación de un número real con signo incluye una parte entera, una parte fraccionaria y un exponente.  Utilice constantes de punto flotante para representar valores de punto flotante que no se pueden modificar.  
+---
+# <a name="c-floating-point-constants"></a>Constantes de punto flotante de C
+Una "constante de punto flotante" es un número decimal que representa un número real con signo. La representación de un número real con signo incluye una parte entera, una parte fraccionaria y un exponente. Utilice constantes de punto flotante para representar valores de punto flotante que no se pueden modificar.  
   
-## Sintaxis  
- *floating\-point\-constant*:  
- *fractional\-constant exponent\-part*  opt *floating\-suffix* opt  
+## <a name="syntax"></a>Sintaxis  
+ *floating-point-constant*:  
+ &nbsp;&nbsp; *fractional-constant exponent-part*<sub>opt</sub> *floating-suffix*<sub>opt</sub>  
+ &nbsp;&nbsp; *digit-sequence exponent-part floating-suffix*<sub>opt</sub>  
   
- *digit\-sequence exponent\-part floating\-suffix*  opt  
+ *fractional-constant*:  
+ &nbsp;&nbsp; *digit-sequence*<sub>opt</sub> **.** *digit-sequence*  
+ &nbsp;&nbsp; *digit-sequence*  **.**  
   
- *fractional\-constant*:  
- *digit\-sequence*  opt **.** *digit\-sequence*  
-  
- *digit\-sequence*  **.**  
-  
- *exponent\-part*:  
- **e**  *sign*  opt *digit\-sequence*  
-  
- **E**  *sign*  opt *digit\-sequence*  
+ *exponent-part*:  
+ &nbsp;&nbsp; **e**  *sign*<sub>opt</sub> *digit-sequence*  
+ &nbsp;&nbsp; **E**  *sign*<sub>opt</sub> *digit-sequence*  
   
  *sign* : one of  
- **\+ –**  
+ &nbsp;&nbsp; **+ –**  
   
- *digit\-sequence*:  
- *digit*  
+ *digit-sequence*:  
+ &nbsp;&nbsp; *digit*  
+ &nbsp;&nbsp; *digit-sequence digit*  
   
- *digit\-sequence digit*  
+ *floating-suffix* : one of  
+ &nbsp;&nbsp; **f l F L**  
   
- *floating\-suffix* : one of  
- **f l F L**  
-  
- Se pueden omitir los dígitos que hay delante del separador decimal \(la parte entera del valor\) o los dígitos que hay detrás del separador decimal \(la parte fraccionaria\), pero no ambos.  Solo se puede omitir el separador decimal si se incluye un exponente.  No se pueden utilizar caracteres de espacio en blanco para separar los dígitos o los caracteres de la constante.  
+ Se pueden omitir los dígitos que hay delante del separador decimal (la parte entera del valor) o los dígitos que hay detrás del separador decimal (la parte fraccionaria), pero no ambos. Solo se puede omitir el separador decimal si se incluye un exponente. No se pueden utilizar caracteres de espacio en blanco para separar los dígitos o los caracteres de la constante.  
   
  En los ejemplos siguientes se muestran algunas formas de constantes y expresiones de punto flotante:  
   
@@ -68,18 +80,18 @@ Una "constante de punto flotante" es un número decimal que representa un númer
 25E-4     /* =  0.0025 */  
 ```  
   
- Las constantes de punto flotante son positivas a menos que vayan precedidas de un signo menos \(**–**\).  En este caso, el signo menos se trata como un operador unario de negación aritmética.  Las constantes de punto flotante tienen el tipo **float**, **double** o `long double`.  
+ Las constantes de punto flotante son positivas a menos que vayan precedidas de un signo menos (**–**). En este caso, el signo menos se trata como un operador unario de negación aritmética. Las constantes de punto flotante tienen el tipo `float`, `double` o `long double`.  
   
- Una constante de punto flotante sin un sufijo **f**, **F**, **l** o **L** tiene el tipo **double**.  Si el sufijo es la letra **f** o **F**, la constante tiene el tipo **float**.  Si el sufijo es la letra **l** o **L**, tiene el tipo `long double`.  Por ejemplo:  
+ Una constante de punto flotante sin un sufijo **f**, **F**, **l** o **L** tiene el tipo `double`. Si el sufijo es la letra **f** o **F**, la constante tiene el tipo `float`. Si el sufijo es la letra **l** o **L**, tiene el tipo `long double`. Por ejemplo:  
   
 ```  
 100L  /* Has type long double  */  
 100F  /* Has type float        */  
 ```  
   
- Tenga en cuenta que el compilador de Microsoft C asigna **long double** al tipo **double**.  Vea [Almacenamiento de tipos básicos](../c-language/storage-of-basic-types.md) para obtener información sobre los tipos **double**, **float** y **long**.  
+ Tenga en cuenta que el compilador deMicrosoft C representa internamente `long double` igual que el tipo `double`. Vea [Almacenamiento de tipos básicos](../c-language/storage-of-basic-types.md) para obtener información sobre los tipos `double`, `float` y `long double`.  
   
- Se puede omitir la parte entera de la constante de punto flotante, como se muestra en los ejemplos siguientes.  El número .75 se puede expresar de muchas maneras, incluidas las siguientes:  
+ Se puede omitir la parte entera de la constante de punto flotante, como se muestra en los ejemplos siguientes. El número .75 se puede expresar de muchas maneras, incluidas las siguientes:  
   
 ```  
 .0075e2  
@@ -88,5 +100,5 @@ Una "constante de punto flotante" es un número decimal que representa un númer
 75e-2  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Constantes de C](../c-language/c-constants.md)
