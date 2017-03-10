@@ -2,6 +2,7 @@
 # [Biblioteca de plantillas activas (ATL)](../atl/TOC.md)
 # [Microsoft Foundation Classes (MFC)](../mfc/TOC.md)
 # [Clases compartidas ATL y MFC](../atl-mfc-shared/TOC.md)
+# [C++/CX](../cppcx/TOC.md)
 # [Extensiones de componentes para plataformas de tiempo de ejecución](component-extensions-for-runtime-platforms.md)
 ## [Operador de referencia de seguimiento (Extensiones de componentes de C++)](tracking-reference-operator-cpp-component-extensions.md)
 ## [Operador de identificador de objeto (^) (Extensiones de componentes de C++)](handle-to-object-operator-hat-cpp-component-extensions.md)

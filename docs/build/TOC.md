@@ -8,7 +8,7 @@
 ## [Introducción a la generación de manifiestos para los programas de C/C++](understanding-manifest-generation-for-c-cpp-programs.md)
 ### [Generación de manifiestos en Visual Studio](manifest-generation-in-visual-studio.md)
 ### [Generación de manifiestos en la línea de comandos](manifest-generation-at-the-command-line.md)
-### [Procedimiento para incrustar un manifiesto en una aplicación de C/C++](how-to-embed-a-manifest-inside-a-c-cpp-application.md)
+### [Cómo: Incrustar un manifiesto en una aplicación de C/C++](how-to-embed-a-manifest-inside-a-c-cpp-application.md)
 ## [Solución de problemas de aplicaciones aisladas y ensamblados simultáneos de C/C++](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
 # [Configuración de programas de 64 bits (Visual C++)](configuring-programs-for-64-bit-visual-cpp.md)
 ## [Procedimiento para configurar proyectos de Visual C++ en plataformas de 64 bits de destino](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
