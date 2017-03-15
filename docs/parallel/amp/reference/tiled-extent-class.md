@@ -1,0 +1,236 @@
+---
+title: tiled_extent (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp/Concurrency::tiled_extent
+dev_langs:
+- C++
+ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
+caps.latest.revision: 9
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: c2f7ebdb9c82ae24cf74064e710ddfb177670359
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="tiledextent-class"></a>tiled_extent (Clase)
+Un `tiled_extent` objeto es un `extent` objeto de uno a tres dimensiones que divide el espacio de la extensión en una, dos o mosaicos tridimensionales.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```  
+template <
+    int _Dim0,  
+    int _Dim1,  
+    int _Dim2  
+>  
+class tiled_extent : public Concurrency::extent<3>;  
+ 
+template <
+    int _Dim0,  
+    int _Dim1  
+>  
+class tiled_extent<_Dim0, _Dim1, 0> : public Concurrency::extent<2>;  
+ 
+template <
+    int _Dim0  
+>  
+class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;  
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `_Dim0`  
+ La longitud de la dimensión más importante.  
+  
+ `_Dim1`  
+ La longitud de la dimensión importante siguiente a la mayoría.  
+  
+ `_Dim2`  
+ La longitud de la dimensión menos significativa.  
+  
+## <a name="members"></a>Miembros  
+  
+### <a name="public-constructors"></a>Constructores públicos  
+  
+|Nombre|Descripción|  
+|----------|-----------------|  
+|[tiled_extent (Constructor)](#ctor)|Inicializa una nueva instancia de la clase `tiled_extent`.|  
+
+  
+### <a name="public-methods"></a>Métodos públicos  
+  
+|Nombre|Descripción|  
+|----------|-----------------|  
+|[get_tile_extent (método)](#tiled_extent__get_tile_extent)|Devuelve un `extent` objeto que captura los valores de la `tiled_extent` argumentos de plantilla `_Dim0`, `_Dim1`, y `_Dim2`.|  
+|[PAD (método)](#tiled_extent__pad)|Devuelve un nuevo `tiled_extent` objeto con extensiones ajustado de ser divisible por las dimensiones del mosaico.|  
+|[TRUNCATE (método)](#tiled_extent__truncate)|Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas hacia abajo para ser divisible por las dimensiones del mosaico.|  
+  
+### <a name="public-operators"></a>Operadores públicos  
+  
+|Nombre|Descripción|  
+|----------|-----------------|  
+|[operador = (operador)](#operator_eq)|Copia el contenido del elemento `tiled_index` objeto en éste.|  
+
+  
+### <a name="public-constants"></a>Constantes públicas  
+  
+|Nombre|Descripción|  
+|----------|-----------------|  
+|[tile_dim0 (constante)](#tiled_extent__tile_dim0)|Almacena la longitud de la dimensión más importante.|  
+|[tile_dim1 (constante)](#tiled_extent__tile_dim1)|Almacena la longitud de la dimensión de siguiente a más significativo.|  
+|[tile_dim2 (constante)](#tiled_extent__tile_dim2)|Almacena la longitud de la dimensión menos significativa.|  
+
+  
+### <a name="public-data-members"></a>Miembros de datos públicos  
+  
+|Nombre|Descripción|  
+|----------|-----------------|  
+|[tile_extent miembro de datos](#tiled_extent__tile_extent)|Obtiene un `extent` objeto que captura los valores de la `tiled_extent` argumentos de plantilla `_Dim0`, `_Dim1`, y `_Dim2`.|  
+  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+ `extent`  
+  
+ `tiled_extent`  
+  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** amp.h  
+  
+ **Espacio de nombres:** Concurrency  
+
+## <a name="tiled_extent__ctor"></a> tiled_extent (Constructor)  
+Inicializa una nueva instancia de la clase `tiled_extent`.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```  
+tiled_extent();  
+  
+tiled_extent(  
+    const Concurrency::extent<rank>& _Other );  
+  
+tiled_extent(  
+    const tiled_extent& _Other );  
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `_Other`  
+ El `extent` o `tiled_extent` objeto que se va a copiar.  
+  
+
+  
+
+## <a name="tiled_extent__get_tile_extent"></a> get_tile_extent   
+Devuelve un `extent` objeto que captura los valores de la `tiled_extent` argumentos de plantilla `_Dim0`, `_Dim1`, y `_Dim2`.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```  
+Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Un `extent` objeto que captura las dimensiones de este `tiled_extent` instancia.  
+  
+
+## <a name="tiled_extent__pad"></a>  pad   
+Devuelve un nuevo `tiled_extent` objeto con extensiones ajustado de ser divisible por las dimensiones del mosaico.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```  
+tiled_extent pad() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ El nuevo `tiled_extent` objeto por valor. 
+## <a name="tiled_extent__truncate"></a> truncar   
+Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas hacia abajo para ser divisible por las dimensiones del mosaico.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```  
+tiled_extent truncate() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas hacia abajo para ser divisible por las dimensiones del mosaico.  
+
+## <a name="tiled_extent__operator_eq"></a> operador =   
+Copia el contenido del elemento `tiled_index` objeto en éste.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```  
+tiled_extent&  operator= (  
+    const tiled_extent& _Other ) restrict (amp, cpu);  
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `_Other`  
+ La `tiled_index` objeto que se va a copiar de.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Una referencia a este `tiled_index` instancia.  
+
+## <a name="tiled_extent__tile_dim0"></a> tile_dim0   
+Almacena la longitud de la dimensión más importante.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```  
+static const int tile_dim0 = _Dim0;  
+```  
+  
+## <a name="tiled_extent__tile_dim1"></a> tile_dim1   
+Almacena la longitud de la dimensión de siguiente a más significativo.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```  
+static const int tile_dim1 = _Dim1;  
+```  
+## <a name="tiled_extent__tile_dim2"></a> tile_dim2   
+Almacena la longitud de la dimensión menos significativa.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```  
+static const int tile_dim2 = _Dim2;  
+```  
+## <a name="tiled_extent__tile_extent"></a> tile_extent   
+  Obtiene un `extent` objeto que captura los valores de la `tiled_extent` argumentos de plantilla `_Dim0`, `_Dim1`, y `_Dim2`.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```  
+__declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent;  
+```  
+  
+  
+## <a name="see-also"></a>Vea también  
+ [Namespace de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)
+
