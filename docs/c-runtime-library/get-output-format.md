@@ -49,9 +49,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e923c8f4dcfbf2a2392c6b70fee2c5dc423c34c6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 23646d03e920ae187286885dbd24e1d312973048
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="getoutputformat"></a>_get_output_format
@@ -84,7 +84,8 @@ unsigned int _get_output_format();
  No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
+[Sintaxis de especificación de formato: printf y wprintf (funciones)](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)  
  [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
  [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
- [printf (Caracteres de campo de tipo)](../c-runtime-library/printf-type-field-characters.md)   
- [_set_output_format](../c-runtime-library/set-output-format.md)
+ [_set_output_format](../c-runtime-library/set-output-format.md)  
+
