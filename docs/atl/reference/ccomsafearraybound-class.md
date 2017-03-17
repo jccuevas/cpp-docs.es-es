@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComSafeArrayBound
-- ATL::CComSafeArrayBound
 - CComSafeArrayBound
+- ATLSAFE/ATL::CComSafeArrayBound
+- ATLSAFE/ATL::CComSafeArrayBound
+- ATLSAFE/ATL::GetCount
+- ATLSAFE/ATL::GetLowerBound
+- ATLSAFE/ATL::GetUpperBound
+- ATLSAFE/ATL::SetCount
+- ATLSAFE/ATL::SetLowerBound
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +82,7 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlsafe.h  
   
-##  <a name="a-nameccomsafearraybounda--ccomsafearrayboundccomsafearraybound"></a><a name="ccomsafearraybound"></a>CComSafeArrayBound::CComSafeArrayBound  
+##  <a name="ccomsafearraybound"></a>CComSafeArrayBound::CComSafeArrayBound  
  El constructor.  
   
 ```
@@ -94,7 +99,7 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
 ### <a name="remarks"></a>Comentarios  
  Si la matriz es tener acceso desde un programa de Visual C++, se recomienda que el límite inferior se define como 0. Es preferible utilizar un valor de límite inferior diferente si la matriz es para su uso con otros lenguajes, como Visual Basic.  
   
-##  <a name="a-namegetcounta--ccomsafearrayboundgetcount"></a><a name="getcount"></a>CComSafeArrayBound::GetCount  
+##  <a name="getcount"></a>CComSafeArrayBound::GetCount  
  Llame a este método para devolver el número de elementos.  
   
 ```
@@ -107,7 +112,7 @@ ULONG GetCount() const throw();
 ### <a name="remarks"></a>Comentarios  
  Si el asociado `CComSafeArray` objeto representa una matriz multidimensional, este método sólo devolverá el número total de elementos en la dimensión del extremo derecho. Utilice [CComSafeArray::GetCount](../../atl/reference/ccomsafearray-class.md#getcount) para obtener el número total de elementos.  
   
-##  <a name="a-namegetlowerbounda--ccomsafearrayboundgetlowerbound"></a><a name="getlowerbound"></a>CComSafeArrayBound::GetLowerBound  
+##  <a name="getlowerbound"></a>CComSafeArrayBound::GetLowerBound  
  Llame a este método para devolver el límite inferior.  
   
 ```
@@ -117,7 +122,7 @@ LONG GetLowerBound() const throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el límite inferior de la `CComSafeArrayBound` objeto.  
   
-##  <a name="a-namegetupperbounda--ccomsafearrayboundgetupperbound"></a><a name="getupperbound"></a>CComSafeArrayBound::GetUpperBound  
+##  <a name="getupperbound"></a>CComSafeArrayBound::GetUpperBound  
  Llame a este método para devolver el límite superior.  
   
 ```
@@ -130,7 +135,7 @@ LONG GetUpperBound() const throw();
 ### <a name="remarks"></a>Comentarios  
  El límite superior depende del número de elementos y el valor de límite inferior. Por ejemplo, si el límite inferior es 0 y el número de elementos es 10, el límite superior se establecerá automáticamente al 9.  
   
-##  <a name="a-nameoperatoreqa--ccomsafearrayboundoperator-"></a><a name="operator_eq"></a>CComSafeArrayBound::operator =  
+##  <a name="operator_eq"></a>CComSafeArrayBound::operator =  
  Establece el `CComSafeArrayBound` en un nuevo valor.  
   
 ```
@@ -151,7 +156,7 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
 ### <a name="remarks"></a>Comentarios  
  El `CComSafeArrayBound` objeto se puede asignar mediante existente `CComSafeArrayBound`, o proporcionando el número de elementos, en el que el límite inferior del caso se establece en 0 de forma predeterminada.  
   
-##  <a name="a-namesetcounta--ccomsafearrayboundsetcount"></a><a name="setcount"></a>CComSafeArrayBound::SetCount  
+##  <a name="setcount"></a>CComSafeArrayBound::SetCount  
  Llame a este método para establecer el número de elementos.  
   
 ```
@@ -165,7 +170,7 @@ ULONG SetCount(ULONG ulCount) throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el número de elementos de la `CComSafeArrayBound` objeto.  
   
-##  <a name="a-namesetlowerbounda--ccomsafearrayboundsetlowerbound"></a><a name="setlowerbound"></a>CComSafeArrayBound::SetLowerBound  
+##  <a name="setlowerbound"></a>CComSafeArrayBound::SetLowerBound  
  Llame a este método para establecer el límite inferior.  
   
 ```

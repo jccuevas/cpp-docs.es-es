@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCmdUI
+- AFXWIN/CCmdUI
+- AFXWIN/CCmdUI::ContinueRouting
+- AFXWIN/CCmdUI::Enable
+- AFXWIN/CCmdUI::SetCheck
+- AFXWIN/CCmdUI::SetRadio
+- AFXWIN/CCmdUI::SetText
+- AFXWIN/CCmdUI::m_nID
+- AFXWIN/CCmdUI::m_nIndex
+- AFXWIN/CCmdUI::m_pMenu
+- AFXWIN/CCmdUI::m_pOther
+- AFXWIN/CCmdUI::m_pSubMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +116,7 @@ class CCmdUI
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h  
   
-##  <a name="a-namecontinueroutinga--ccmduicontinuerouting"></a><a name="continuerouting"></a>CCmdUI::ContinueRouting  
+##  <a name="continuerouting"></a>CCmdUI::ContinueRouting  
  Llame a esta función miembro para indicar el mecanismo de enrutamiento de comandos para continuar el enrutamiento del mensaje actual por la cadena de controladores.  
   
 ```  
@@ -115,7 +126,7 @@ void ContinueRouting();
 ### <a name="remarks"></a>Comentarios  
  Esta es una función miembro avanzado que debe utilizarse junto con un `ON_COMMAND_EX` controlador que devuelve **FALSE**. Para obtener más información, consulte [6 de nota técnica](../../mfc/tn006-message-maps.md).  
   
-##  <a name="a-nameenablea--ccmduienable"></a><a name="enable"></a>A CCmdUI:: Enable  
+##  <a name="enable"></a>A CCmdUI:: Enable  
  Llame a esta función miembro para habilitar o deshabilitar el elemento de interfaz de usuario para este comando.  
   
 ```  
@@ -131,21 +142,21 @@ virtual void Enable(BOOL bOn = TRUE);
   
  [!code-cpp[NVC_MFCDocView&#47;](../../mfc/codesnippet/cpp/ccmdui-class_2.cpp)]  
   
-##  <a name="a-namemnida--ccmduimnid"></a><a name="m_nid"></a>CCmdUI::m_nID  
+##  <a name="m_nid"></a>CCmdUI::m_nID  
  El identificador del elemento de menú, botón de barra de herramientas u otro objeto de interfaz de usuario representado por la `CCmdUI` objeto.  
   
 ```  
 UINT m_nID;  
 ```  
   
-##  <a name="a-namemnindexa--ccmduimnindex"></a><a name="m_nindex"></a>CCmdUI::m_nIndex  
+##  <a name="m_nindex"></a>CCmdUI::m_nIndex  
  El índice del elemento de menú, botón de barra de herramientas u otro objeto de interfaz de usuario representado por la `CCmdUI` objeto.  
   
 ```  
 UINT m_nIndex;  
 ```  
   
-##  <a name="a-namempmenua--ccmduimpmenu"></a><a name="m_pmenu"></a>CCmdUI::m_pMenu  
+##  <a name="m_pmenu"></a>CCmdUI::m_pMenu  
  Puntero (de `CMenu` tipo) en el menú representado por la `CCmdUI` objeto.  
   
 ```  
@@ -155,7 +166,7 @@ CMenu* m_pMenu;
 ### <a name="remarks"></a>Comentarios  
  **NULL** si el elemento no es un menú.  
   
-##  <a name="a-namempsubmenua--ccmduimpsubmenu"></a><a name="m_psubmenu"></a>CCmdUI::m_pSubMenu  
+##  <a name="m_psubmenu"></a>CCmdUI::m_pSubMenu  
  Puntero (de `CMenu` tipo) en el submenú independiente, representado por la `CCmdUI` objeto.  
   
 ```  
@@ -165,7 +176,7 @@ CMenu* m_pSubMenu;
 ### <a name="remarks"></a>Comentarios  
  **NULL** si el elemento no es un menú. Si el submenú es una ventana emergente, `m_nID` contiene el identificador del primer elemento en el menú emergente. Para obtener más información, consulte [21 de nota técnica](../../mfc/tn021-command-and-message-routing.md).  
   
-##  <a name="a-namempothera--ccmduimpother"></a><a name="m_pother"></a>CCmdUI::m_pOther  
+##  <a name="m_pother"></a>CCmdUI::m_pOther  
  Puntero (de tipo `CWnd`) al objeto de ventana, como una barra de estado o la herramienta, que envía la notificación.  
   
 ```  
@@ -175,7 +186,7 @@ CWnd* m_pOther;
 ### <a name="remarks"></a>Comentarios  
  **NULL** si el elemento es un menú o no `CWnd` objeto.  
   
-##  <a name="a-namesetchecka--ccmduisetcheck"></a><a name="setcheck"></a>CCmdUI::SetCheck  
+##  <a name="setcheck"></a>CCmdUI::SetCheck  
  Llame a esta función miembro para establecer el elemento de interfaz de usuario para este comando en el estado de verificación adecuada.  
   
 ```  
@@ -189,7 +200,7 @@ virtual void SetCheck(int nCheck = 1);
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro funciona para los elementos de menú y botones de barra de herramientas. El estado indeterminado sólo se aplica a los botones de barra de herramientas.  
   
-##  <a name="a-namesetradioa--ccmduisetradio"></a><a name="setradio"></a>CCmdUI::SetRadio  
+##  <a name="setradio"></a>CCmdUI::SetRadio  
  Llame a esta función miembro para establecer el elemento de interfaz de usuario para este comando en el estado de verificación adecuada.  
   
 ```  
@@ -203,7 +214,7 @@ virtual void SetRadio(BOOL bOn = TRUE);
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro actúa como `SetCheck`, excepto en que opera en los elementos de interfaz de usuario que actúa como parte de un grupo de radio. Desactive los demás elementos en el grupo no es automática, a menos que los propios elementos de mantendrán el comportamiento del grupo de radio.  
   
-##  <a name="a-namesettexta--ccmduisettext"></a><a name="settext"></a>CCmdUI::SetText  
+##  <a name="settext"></a>CCmdUI::SetText  
  Llame a esta función miembro para establecer el texto del elemento de interfaz de usuario para este comando.  
   
 ```  

@@ -9,11 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CW2AEX<t_nBufferLength>
 - CW2AEX
-- ATL.CW2AEX<t_nBufferLength>
-- ATL::CW2AEX
-- ATL.CW2AEX
+- ATLCONV/ATL::CW2AEX
+- ATLCONV/ATL::CW2AEX::CW2AEX
+- ATLCONV/ATL::CW2AEX::m_psz
+- ATLCONV/ATL::CW2AEX::m_szBuffer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +113,7 @@ class CW2AEX
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlconv.h  
   
-##  <a name="a-namecw2aexa--cw2aexcw2aex"></a><a name="cw2aex"></a>CW2AEX::CW2AEX  
+##  <a name="cw2aex"></a>CW2AEX::CW2AEX  
  El constructor.  
   
 ```
@@ -131,7 +131,7 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>Comentarios  
  Asigna el búfer que se utiliza en el proceso de traducción.  
   
-##  <a name="a-namedtora--cw2aexcw2aex"></a><a name="dtor"></a>CW2AEX:: ~ CW2AEX  
+##  <a name="dtor"></a>CW2AEX:: ~ CW2AEX  
  Destructor.  
   
 ```
@@ -141,21 +141,21 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>Comentarios  
  Libera el búfer asignado.  
   
-##  <a name="a-namempsza--cw2aexmpsz"></a><a name="m_psz"></a>CW2AEX::m_psz  
+##  <a name="m_psz"></a>CW2AEX::m_psz  
  El miembro de datos que almacena la cadena de origen.  
   
 ```
 LPSTR m_psz;
 ```  
   
-##  <a name="a-namemszbuffera--cw2aexmszbuffer"></a><a name="m_szbuffer"></a>CW2AEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>CW2AEX::m_szBuffer  
  El búfer estático, utilizado para almacenar la cadena convertida.  
   
 ```
 char m_szBuffer[t_nBufferLength];
 ```  
   
-##  <a name="a-nameoperatorlpstra--cw2aexoperator-lpstr"></a><a name="operator_lpstr"></a>CW2AEX::operator LPSTR  
+##  <a name="operator_lpstr"></a>CW2AEX::operator LPSTR  
  Operador de conversión.  
   
 ```  

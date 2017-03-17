@@ -9,12 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CA2AEX<t_nBufferLength>
 - CA2AEX
-- ATL.CA2AEX<t_nBufferLength>
-- ATLCONV/CA2AEX
-- ATL.CA2AEX
-- ATL::CA2AEX
+- ATLCONV/ATL::CA2AEX
+- ATLCONV/ATL::CA2AEX::CA2AEX
+- ATLCONV/ATL::CA2AEX::m_psz
+- ATLCONV/ATL::CA2AEX::m_szBuffer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +109,7 @@ class CA2AEX
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlconv.h  
   
-##  <a name="a-nameca2aexa--ca2aexca2aex"></a><a name="ca2aex"></a>CA2AEX::CA2AEX  
+##  <a name="ca2aex"></a>CA2AEX::CA2AEX  
  El constructor.  
   
 ```
@@ -128,7 +127,7 @@ CA2AEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>Comentarios  
  Crea el búfer necesario para la traducción.  
   
-##  <a name="a-namedtora--ca2aexca2aex"></a><a name="dtor"></a>CA2AEX:: ~ CA2AEX  
+##  <a name="dtor"></a>CA2AEX:: ~ CA2AEX  
  Destructor.  
   
 ```
@@ -138,21 +137,21 @@ CA2AEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>Comentarios  
  Libera el búfer asignado.  
   
-##  <a name="a-namempsza--ca2aexmpsz"></a><a name="m_psz"></a>CA2AEX::m_psz  
+##  <a name="m_psz"></a>CA2AEX::m_psz  
  El miembro de datos que almacena la cadena de origen.  
   
 ```
 LPSTR m_psz;
 ```  
   
-##  <a name="a-namemszbuffera--ca2aexmszbuffer"></a><a name="m_szbuffer"></a>CA2AEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>CA2AEX::m_szBuffer  
  El búfer estático, utilizado para almacenar la cadena convertida.  
   
 ```
 char m_szBuffer[ t_nBufferLength];
 ```  
   
-##  <a name="a-nameoperatorlpstra--ca2aexoperator-lpstr"></a><a name="operator_lpstr"></a>CA2AEX::operator LPSTR  
+##  <a name="operator_lpstr"></a>CA2AEX::operator LPSTR  
  Operador de conversión.  
   
 ```

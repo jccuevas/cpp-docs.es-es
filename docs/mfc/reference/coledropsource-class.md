@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDropSource
+- AFXOLE/COleDropSource
+- AFXOLE/COleDropSource::COleDropSource
+- AFXOLE/COleDropSource::GiveFeedback
+- AFXOLE/COleDropSource::OnBeginDrag
+- AFXOLE/COleDropSource::QueryContinueDrag
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,14 +91,14 @@ class COleDropSource : public CCmdTarget
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxole.h  
   
-##  <a name="a-namecoledropsourcea--coledropsourcecoledropsource"></a><a name="coledropsource"></a>COleDropSource::COleDropSource  
+##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
  Construye un objeto `COleDropSource`.  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="a-namegivefeedbacka--coledropsourcegivefeedback"></a><a name="givefeedback"></a>COleDropSource::GiveFeedback  
+##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
  Llamado por el marco después de llamar a [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) o [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).  
   
 ```  
@@ -122,7 +127,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
   
  Para obtener más información, consulte [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [DoDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms680129), y [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonbegindraga--coledropsourceonbegindrag"></a><a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
+##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
  Llamado por el marco de trabajo cuando produce un evento que pudiera iniciar una operación de arrastre, como presionar el botón primario del mouse.  
   
 ```  
@@ -139,7 +144,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ### <a name="remarks"></a>Comentarios  
  Reemplace esta función si desea modificar la forma en que se inicia el proceso de arrastre. La implementación predeterminada captura el mouse y permanece en modo de arrastre hasta que el usuario hace clic en el botón izquierdo o derecho del mouse o presiona ESC, momento en el que suelta el mouse.  
   
-##  <a name="a-namequerycontinuedraga--coledropsourcequerycontinuedrag"></a><a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
+##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
  Después de que comience a arrastrar, esta función se invoca varias veces por el marco de trabajo hasta que la operación de arrastre se cancela o finaliza.  
   
 ```  

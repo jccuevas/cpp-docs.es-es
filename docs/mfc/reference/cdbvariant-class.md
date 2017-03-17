@@ -10,6 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDBVariant
+- AFXDB/CDBVariant
+- AFXDB/CDBVariant::CDBVariant
+- AFXDB/CDBVariant::Clear
+- AFXDB/CDBVariant::m_dwType
+- AFXDB/CDBVariant::m_boolVal
+- AFXDB/CDBVariant::m_chVal
+- AFXDB/CDBVariant::m_dblVal
+- AFXDB/CDBVariant::m_fltVal
+- AFXDB/CDBVariant::m_iVal
+- AFXDB/CDBVariant::m_lVal
+- AFXDB/CDBVariant::m_pbinary
+- AFXDB/CDBVariant::m_pdate
+- AFXDB/CDBVariant::m_pstring
+- AFXDB/CDBVariant::m_pstringA
+- AFXDB/CDBVariant::m_pstringW
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +113,7 @@ class CDBVariant
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdb.h  
   
-##  <a name="a-namecdbvarianta--cdbvariantcdbvariant"></a><a name="cdbvariant"></a>CDBVariant::CDBVariant  
+##  <a name="cdbvariant"></a>CDBVariant::CDBVariant  
  Crea un valor NULL `CDBVariant` objeto.  
   
 ```  
@@ -108,7 +123,7 @@ CDBVariant();
 ### <a name="remarks"></a>Comentarios  
  Establece la [m_dwType](#m_dwtype) miembro de datos **DBVT_NULL**.  
   
-##  <a name="a-namecleara--cdbvariantclear"></a><a name="clear"></a>CDBVariant::Clear  
+##  <a name="clear"></a>CDBVariant::Clear  
  Llame a esta función miembro para borrar la `CDBVariant` objeto.  
   
 ```  
@@ -120,25 +135,25 @@ void Clear();
   
  El `CDBVariant` llamadas de destructor **borrar**.  
   
-##  <a name="a-namemboolvala--cdbvariantmboolval"></a><a name="m_boolval"></a>CDBVariant::m_boolVal  
+##  <a name="m_boolval"></a>CDBVariant::m_boolVal  
  Almacena un valor de tipo **BOOL**.  
   
 ### <a name="remarks"></a>Comentarios  
  El **m_boolVal** miembro de datos pertenece a una unión. Antes de acceder a **m_boolVal**, compruebe primero el valor de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` está establecido en **DBVT_BOOL**, a continuación, **m_boolVal** contendrá un valor válido; en caso contrario, obtener acceso a **m_boolVal** producirá resultados poco confiables.  
   
-##  <a name="a-namemchvala--cdbvariantmchval"></a><a name="m_chval"></a>CDBVariant::m_chVal  
+##  <a name="m_chval"></a>CDBVariant::m_chVal  
  Almacena un valor de tipo `unsigned char`.  
   
 ### <a name="remarks"></a>Comentarios  
  El **m_chVal** miembro de datos pertenece a una unión. Antes de acceder a **m_chVal**, compruebe primero el valor de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` está establecido en **DBVT_UCHAR**, a continuación, **m_chVal** contiene un valor válido; en caso contrario, obtener acceso a **m_chVal** producirá resultados poco confiables.  
   
-##  <a name="a-namemdblvala--cdbvariantmdblval"></a><a name="m_dblval"></a>CDBVariant::m_dblVal  
+##  <a name="m_dblval"></a>CDBVariant::m_dblVal  
  Almacena un valor de tipo **doble**.  
   
 ### <a name="remarks"></a>Comentarios  
  El **m_dblVal** miembro de datos pertenece a una unión. Antes de acceder a **m_dblVal**, compruebe primero el valor de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` está establecido en **DBVT_DOUBLE**, a continuación, **m_dblVal** contiene un valor válido; en caso contrario, obtener acceso a **m_dblVal** producirá resultados poco confiables.  
   
-##  <a name="a-namemdwtypea--cdbvariantmdwtype"></a><a name="m_dwtype"></a>CDBVariant::m_dwType  
+##  <a name="m_dwtype"></a>CDBVariant::m_dwType  
  Este miembro de datos contiene el tipo de datos para el valor almacenado actualmente en el `CDBVariant` miembro de datos de unión del objeto.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -159,31 +174,31 @@ void Clear();
 |**DBVT_ASTRING**|[m_pstringA](#m_pstringa)|  
 |**DBVT_WSTRING**|[m_pstringW](#m_pstringw)|  
   
-##  <a name="a-namemfltvala--cdbvariantmfltval"></a><a name="m_fltval"></a>CDBVariant::m_fltVal  
+##  <a name="m_fltval"></a>CDBVariant::m_fltVal  
  Almacena un valor de tipo **float**.  
   
 ### <a name="remarks"></a>Comentarios  
  El **m_fltVal** miembro de datos pertenece a una unión. Antes de acceder a **m_fltVal**, compruebe primero el valor de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` está establecido en **DBVT_SINGLE**, a continuación, **m_fltVal** contiene un valor válido; en caso contrario, obtener acceso a **m_fltVal** producirá resultados poco confiables.  
   
-##  <a name="a-namemivala--cdbvariantmival"></a><a name="m_ival"></a>CDBVariant::m_iVal  
+##  <a name="m_ival"></a>CDBVariant::m_iVal  
  Almacena un valor de tipo **breve**.  
   
 ### <a name="remarks"></a>Comentarios  
  El **m_iVal** miembro de datos pertenece a una unión. Antes de acceder a **m_iVal**, compruebe primero el valor de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` está establecido en **DBVT_SHORT**, a continuación, **m_iVal** contiene un valor válido; en caso contrario, obtener acceso a **m_iVal** producirá resultados poco confiables.  
   
-##  <a name="a-namemlvala--cdbvariantmlval"></a><a name="m_lval"></a>CDBVariant::m_lVal  
+##  <a name="m_lval"></a>CDBVariant::m_lVal  
  Almacena un valor de tipo **largo**.  
   
 ### <a name="remarks"></a>Comentarios  
  El **m_lVal** miembro de datos pertenece a una unión. Antes de acceder a **m_lVal**, compruebe primero el valor de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` está establecido en **DBVT_LONG**, a continuación, **m_lVal** contiene un valor válido; en caso contrario, obtener acceso a **m_lVal** producirá resultados poco confiables.  
   
-##  <a name="a-namempbinarya--cdbvariantmpbinary"></a><a name="m_pbinary"></a>CDBVariant::m_pbinary  
+##  <a name="m_pbinary"></a>CDBVariant::m_pbinary  
  Almacena un puntero a un objeto de tipo [CLongBinary](../../mfc/reference/clongbinary-class.md).  
   
 ### <a name="remarks"></a>Comentarios  
  El **m_pbinary** miembro de datos pertenece a una unión. Antes de acceder a **m_pbinary**, compruebe primero el valor de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` está establecido en **DBVT_BINARY**, a continuación, **m_pbinary** contiene un puntero válido; en caso contrario, obtener acceso a **m_pbinary** producirá resultados poco confiables.  
   
-##  <a name="a-namempdatea--cdbvariantmpdate"></a><a name="m_pdate"></a>CDBVariant::m_pdate  
+##  <a name="m_pdate"></a>CDBVariant::m_pdate  
  Almacena un puntero a un objeto de tipo **TIMESTAMP_STRUCT**.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -191,19 +206,19 @@ void Clear();
   
  Para obtener más información acerca de la **TIMESTAMP_STRUCT** tipo de datos, vea el tema [tipos de datos C](https://msdn.microsoft.com/library/ms714556.aspx) en el apéndice D de la *referencia del programador de ODBC* en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namempstringa--cdbvariantmpstring"></a><a name="m_pstring"></a>CDBVariant::m_pstring  
+##  <a name="m_pstring"></a>CDBVariant::m_pstring  
  Almacena un puntero a un objeto de tipo [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
   
 ### <a name="remarks"></a>Comentarios  
  El **m_pstring** miembro de datos pertenece a una unión. Antes de acceder a **m_pstring**, compruebe primero el valor de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` está establecido en **DBVT_STRING**, a continuación, **m_pstring** contiene un puntero válido; en caso contrario, obtener acceso a **m_pstring** producirá resultados poco confiables.  
   
-##  <a name="a-namempstringaa--cdbvariantmpstringa"></a><a name="m_pstringa"></a>CDBVariant::m_pstringA  
+##  <a name="m_pstringa"></a>CDBVariant::m_pstringA  
  Almacena un puntero a ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto.  
   
 ### <a name="remarks"></a>Comentarios  
  El **m_pstringA** miembro de datos pertenece a una unión. Antes de acceder a **m_pstringA**, compruebe primero el valor de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` está establecido en **DBVT_ASTRING**, a continuación, **m_pstringA** contiene un puntero válido; en caso contrario, obtener acceso a **m_pstringA** producirá resultados poco confiables.  
   
-##  <a name="a-namempstringwa--cdbvariantmpstringw"></a><a name="m_pstringw"></a>CDBVariant::m_pstringW  
+##  <a name="m_pstringw"></a>CDBVariant::m_pstringW  
  Almacena un puntero a una amplia [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto.  
   
 ### <a name="remarks"></a>Comentarios  

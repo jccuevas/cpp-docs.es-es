@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComCriticalSection
 - CComCriticalSection
-- ATL::CComCriticalSection
+- ATLCORE/ATL::CComCriticalSection
+- ATLCORE/ATL::CComCriticalSection::CComCriticalSection
+- ATLCORE/ATL::CComCriticalSection::Init
+- ATLCORE/ATL::CComCriticalSection::Lock
+- ATLCORE/ATL::CComCriticalSection::Term
+- ATLCORE/ATL::CComCriticalSection::Unlock
+- ATLCORE/ATL::CComCriticalSection::m_sec
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class CComCriticalSection
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcore.h  
   
-##  <a name="a-nameccomcriticalsectiona--ccomcriticalsectionccomcriticalsection"></a><a name="ccomcriticalsection"></a>CComCriticalSection::CComCriticalSection  
+##  <a name="ccomcriticalsection"></a>CComCriticalSection::CComCriticalSection  
  El constructor.  
   
 ```
@@ -94,7 +99,7 @@ CComCriticalSection() throw();
 ### <a name="remarks"></a>Comentarios  
  Establece la [m_sec](#m_sec) miembro de datos NULL **.**  
   
-##  <a name="a-nameinita--ccomcriticalsectioninit"></a><a name="init"></a>CComCriticalSection::Init  
+##  <a name="init"></a>CComCriticalSection::Init  
  Llama a la función de Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), que inicializa el objeto de sección crítica contenido en el [m_sec](#m_sec) miembro de datos.  
   
 ```
@@ -104,7 +109,7 @@ HRESULT Init() throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve `S_OK` correctamente, **E_OUTOFMEMORY** o **E_FAIL** en caso de error.  
   
-##  <a name="a-namelocka--ccomcriticalsectionlock"></a><a name="lock"></a>CComCriticalSection::Lock  
+##  <a name="lock"></a>CComCriticalSection::Lock  
  Llama a la función de Win32 [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), que espera hasta que el subproceso puede tomar posesión del objeto de sección crítica contenida en el [m_sec](#m_sec) miembro de datos.  
   
 ```
@@ -117,14 +122,14 @@ HRESULT Lock() throw();
 ### <a name="remarks"></a>Comentarios  
  Primero se debe inicializar el objeto de sección crítica con una llamada a la [Init](#init) método. Cuando el código protegido ha terminado de ejecutarse, el subproceso debe llamar a [Unlock](#unlock) para liberar la propiedad de la sección crítica.  
   
-##  <a name="a-namemseca--ccomcriticalsectionmsec"></a><a name="m_sec"></a>CComCriticalSection::m_sec  
+##  <a name="m_sec"></a>CComCriticalSection::m_sec  
  Contiene un objeto de sección crítica que se utiliza en todos los `CComCriticalSection` métodos.  
   
 ```
 CRITICAL_SECTION m_sec;
 ```  
   
-##  <a name="a-nameterma--ccomcriticalsectionterm"></a><a name="term"></a>CComCriticalSection::Term  
+##  <a name="term"></a>CComCriticalSection::Term  
  Llama a la función de Win32 [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552), que libera todos los recursos utilizados por el objeto de sección crítica contenido en el [m_sec](#m_sec) miembro de datos.  
   
 ```
@@ -137,7 +142,7 @@ HRESULT Term() throw();
 ### <a name="remarks"></a>Comentarios  
  Una vez `Term` se ha llamado, críticos sección ya no se puede utilizar para la sincronización.  
   
-##  <a name="a-nameunlocka--ccomcriticalsectionunlock"></a><a name="unlock"></a>CComCriticalSection::Unlock  
+##  <a name="unlock"></a>CComCriticalSection::Unlock  
  Llama a la función de Win32 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), lo que libera la propiedad del objeto de sección crítica contenida en el [m_sec](#m_sec) miembro de datos.  
   
 ```

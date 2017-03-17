@@ -10,8 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IDispEventSimpleImpl
-- ATL::IDispEventSimpleImpl
-- ATL.IDispEventSimpleImpl
+- ATLCOM/ATL::IDispEventSimpleImpl
+- ATLCOM/ATL::IDispEventSimpleImpl::Advise
+- ATLCOM/ATL::IDispEventSimpleImpl::DispEventAdvise
+- ATLCOM/ATL::IDispEventSimpleImpl::DispEventUnadvise
+- ATLCOM/ATL::IDispEventSimpleImpl::GetIDsOfNames
+- ATLCOM/ATL::IDispEventSimpleImpl::GetTypeInfo
+- ATLCOM/ATL::IDispEventSimpleImpl::GetTypeInfoCount
+- ATLCOM/ATL::IDispEventSimpleImpl::Invoke
+- ATLCOM/ATL::IDispEventSimpleImpl::Unadvise
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +120,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="a-nameadvisea--idispeventsimpleimpladvise"></a><a name="advise"></a>IDispEventSimpleImpl::Advise  
+##  <a name="advise"></a>IDispEventSimpleImpl::Advise  
  Llamar a este método para establecer una conexión con el origen del evento representado por *pUnk*.  
   
 ```
@@ -135,7 +142,7 @@ HRESULT Advise(IUnknown* pUnk);
   
  `Advise`establece una conexión con el origen de eventos de forma predeterminada, obtiene el IID del origen de evento predeterminado del objeto determinado por [AtlGetObjectSourceInterface](http://msdn.microsoft.com/library/a8528f45-fbfb-4e24-ad1a-1d69b2897155).  
   
-##  <a name="a-namedispeventadvisea--idispeventsimpleimpldispeventadvise"></a><a name="dispeventadvise"></a>IDispEventSimpleImpl:: DispEventAdvise  
+##  <a name="dispeventadvise"></a>IDispEventSimpleImpl:: DispEventAdvise  
  Llamar a este método para establecer una conexión con el origen del evento representado por *pUnk*.  
   
 ```
@@ -160,7 +167,7 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
   
  `DispEventAdvise`establece una conexión con el origen de eventos especificado en `pdiid`.  
   
-##  <a name="a-namedispeventunadvisea--idispeventsimpleimpldispeventunadvise"></a><a name="dispeventunadvise"></a>IDispEventSimpleImpl:: DispEventUnadvise  
+##  <a name="dispeventunadvise"></a>IDispEventSimpleImpl:: DispEventUnadvise  
  Interrumpe la conexión con el origen del evento representado por *pUnk*.  
   
 ```
@@ -185,7 +192,7 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
   
  `DispEventAdvise`interrumpe una conexión establecida con el origen de eventos especificado en `pdiid`.  
   
-##  <a name="a-namegetidsofnamesa--idispeventsimpleimplgetidsofnames"></a><a name="getidsofnames"></a>IDispEventSimpleImpl::GetIDsOfNames  
+##  <a name="getidsofnames"></a>IDispEventSimpleImpl::GetIDsOfNames  
  Esta implementación de **IDispatch:: GetIDsOfNames** devuelve **E_NOTIMPL**.  
   
 ```
@@ -200,7 +207,7 @@ STDMETHOD(GetIDsOfNames)(
 ### <a name="remarks"></a>Comentarios  
  Consulte [IDispatch:: GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegettypeinfoa--idispeventsimpleimplgettypeinfo"></a><a name="gettypeinfo"></a>IDispEventSimpleImpl::GetTypeInfo  
+##  <a name="gettypeinfo"></a>IDispEventSimpleImpl::GetTypeInfo  
  Esta implementación de **IDispatch:: GetTypeInfo** devuelve **E_NOTIMPL**.  
   
 ```
@@ -213,7 +220,7 @@ STDMETHOD(GetTypeInfo)(
 ### <a name="remarks"></a>Comentarios  
  Consulte [IDispatch:: GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegettypeinfocounta--idispeventsimpleimplgettypeinfocount"></a><a name="gettypeinfocount"></a>IDispEventSimpleImpl::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>IDispEventSimpleImpl::GetTypeInfoCount  
  Esta implementación de **IDispatch:: GetTypeInfoCount** devuelve **E_NOTIMPL**.  
   
 ```
@@ -223,7 +230,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 ### <a name="remarks"></a>Comentarios  
  Consulte [IDispatch:: GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameinvokea--idispeventsimpleimplinvoke"></a><a name="invoke"></a>IDispEventSimpleImpl::Invoke  
+##  <a name="invoke"></a>IDispEventSimpleImpl::Invoke  
  Esta implementación de **IDispatch:: Invoke** llamadas a los controladores de eventos mostrado en el evento mapa de receptores.  
   
 ```
@@ -241,7 +248,7 @@ STDMETHOD(Invoke)(
 ### <a name="remarks"></a>Comentarios  
  Consulte [IDispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
   
-##  <a name="a-nameunadvisea--idispeventsimpleimplunadvise"></a><a name="unadvise"></a>IDispEventSimpleImpl::Unadvise  
+##  <a name="unadvise"></a>IDispEventSimpleImpl::Unadvise  
  Interrumpe la conexión con el origen del evento representado por *pUnk*.  
   
 ```

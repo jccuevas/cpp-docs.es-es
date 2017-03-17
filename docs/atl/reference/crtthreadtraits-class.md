@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CRTThreadTraits
-- ATL.CRTThreadTraits
 - CRTThreadTraits
+- ATLBASE/ATL::CRTThreadTraits
+- ATLBASE/ATL::CRTThreadTraits::CreateThread
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +77,7 @@ class CRTThreadTraits
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
   
-##  <a name="a-namecreatethreada--crtthreadtraitscreatethread"></a><a name="createthread"></a>CRTThreadTraits::CreateThread  
+##  <a name="createthread"></a>CRTThreadTraits::CreateThread  
  Llame a esta función para crear un subproceso que se puede utilizar funciones de CRT.  
   
 ```

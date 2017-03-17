@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMonikerFile
+- AFXOLE/CMonikerFile
+- AFXOLE/CMonikerFile::CMonikerFile
+- AFXOLE/CMonikerFile::Close
+- AFXOLE/CMonikerFile::Detach
+- AFXOLE/CMonikerFile::GetMoniker
+- AFXOLE/CMonikerFile::Open
+- AFXOLE/CMonikerFile::CreateBindContext
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +102,7 @@ class CMonikerFile : public COleStreamFile
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxole.h  
   
-##  <a name="a-nameclosea--cmonikerfileclose"></a><a name="close"></a>CMonikerFile::Close  
+##  <a name="close"></a>CMonikerFile::Close  
  Llame a esta función para separar y la versión de la secuencia y el moniker de la versión.  
   
 ```  
@@ -105,14 +112,14 @@ virtual void Close();
 ### <a name="remarks"></a>Comentarios  
  Se puede llamar en secuencias no abiertos o cerrados ya.  
   
-##  <a name="a-namecmonikerfilea--cmonikerfilecmonikerfile"></a><a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
+##  <a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
  Construye un objeto `CMonikerFile`.  
   
 ```  
 CMonikerFile();
 ```  
   
-##  <a name="a-namecreatebindcontexta--cmonikerfilecreatebindcontext"></a><a name="createbindcontext"></a>CMonikerFile::CreateBindContext  
+##  <a name="createbindcontext"></a>CMonikerFile::CreateBindContext  
  Llame a esta función para crear un contexto de enlace predeterminada inicializado.  
   
 ```  
@@ -129,7 +136,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ### <a name="remarks"></a>Comentarios  
  Un contexto de enlace es un objeto que almacena información sobre una operación de enlace de moniker concreto. Puede reemplazar esta función para proporcionar un contexto de enlace personalizada.  
   
-##  <a name="a-namedetacha--cmonikerfiledetach"></a><a name="detach"></a>CMonikerFile::Detach  
+##  <a name="detach"></a>CMonikerFile::Detach  
  Llame a esta función para cerrar la secuencia.  
   
 ```  
@@ -143,7 +150,7 @@ BOOL Detach(CFileException* pError = NULL);
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
-##  <a name="a-namegetmonikera--cmonikerfilegetmoniker"></a><a name="getmoniker"></a>CMonikerFile::GetMoniker  
+##  <a name="getmoniker"></a>CMonikerFile::GetMoniker  
  Llame a esta función para recuperar un puntero para el moniker actual.  
   
 ```  
@@ -156,7 +163,7 @@ IMoniker* GetMoniker() const;
 ### <a name="remarks"></a>Comentarios  
  Puesto que `CMonikerFile` no es una interfaz, el puntero devuelto no incrementa el recuento de referencias (a través de [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), y se libera el moniker cuando el `CMonikerFile` se libera el objeto. Si desea retener el moniker o liberar de usted mismo, debe `AddRef` .  
   
-##  <a name="a-nameopena--cmonikerfileopen"></a><a name="open"></a>CMonikerFile::Open  
+##  <a name="open"></a>CMonikerFile::Open  
  Llame a esta función miembro para abrir un objeto de archivo o el moniker.  
   
 ```  

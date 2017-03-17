@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComControl
+- ATLCTL/ATL::CComControl
+- ATLCTL/ATL::CComControl::CComControl
+- ATLCTL/ATL::CComControl::ControlQueryInterface
+- ATLCTL/ATL::CComControl::CreateControlWindow
+- ATLCTL/ATL::CComControl::FireOnChanged
+- ATLCTL/ATL::CComControl::FireOnRequestEdit
+- ATLCTL/ATL::CComControl::MessageBox
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +108,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlctl.h  
   
-##  <a name="a-nameccomcontrola--ccomcontrolccomcontrol"></a><a name="ccomcontrol"></a>CComControl::CComControl  
+##  <a name="ccomcontrol"></a>CComControl::CComControl  
  El constructor.  
   
 ```
@@ -111,7 +118,7 @@ CComControl();
 ### <a name="remarks"></a>Comentarios  
  Llamadas del [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase) constructor y le pasa el `m_hWnd` hereda el miembro de datos a través de [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
   
-##  <a name="a-namecontrolqueryinterfacea--ccomcontrolcontrolqueryinterface"></a><a name="controlqueryinterface"></a>CComControl::ControlQueryInterface  
+##  <a name="controlqueryinterface"></a>CComControl::ControlQueryInterface  
  Recupera un puntero a la interfaz solicitada.  
   
 ```
@@ -131,7 +138,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_COM&#15;](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
   
-##  <a name="a-namecreatecontrolwindowa--ccomcontrolcreatecontrolwindow"></a><a name="createcontrolwindow"></a>CComControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>CComControl::CreateControlWindow  
  De forma predeterminada, crea una ventana para el control mediante una llamada a `CWindowImpl::Create`.  
   
 ```
@@ -151,7 +158,7 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_COM Nº&16;](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
   
-##  <a name="a-namefireonchangeda--ccomcontrolfireonchanged"></a><a name="fireonchanged"></a>CComControl::FireOnChanged  
+##  <a name="fireonchanged"></a>CComControl::FireOnChanged  
  Notifica a los receptores del contenedor que ha cambiado una propiedad de control.  
   
 ```
@@ -173,7 +180,7 @@ HRESULT FireOnChanged(DISPID dispID);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_COM&#17;](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
   
-##  <a name="a-namefireonrequestedita--ccomcontrolfireonrequestedit"></a><a name="fireonrequestedit"></a>CComControl::FireOnRequestEdit  
+##  <a name="fireonrequestedit"></a>CComControl::FireOnRequestEdit  
  Notifica a los receptores del contenedor que una propiedad de control se va a cambiar y que el objeto está solicitando el receptor cómo proceder.  
   
 ```
@@ -196,7 +203,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_COM&#18;](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]  
   
-##  <a name="a-namemessageboxa--ccomcontrolmessagebox"></a><a name="messagebox"></a>CComControl::MessageBox  
+##  <a name="messagebox"></a>CComControl::MessageBox  
  Llame a este método para crear, ver y trabajar con un cuadro de mensaje.  
   
 ```

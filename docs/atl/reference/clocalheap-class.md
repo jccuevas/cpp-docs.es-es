@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CLocalHeap
-- ATL::CLocalHeap
 - CLocalHeap
+- ATLMEM/ATL::CLocalHeap
+- ATLMEM/ATL::CLocalHeap::Allocate
+- ATLMEM/ATL::CLocalHeap::Free
+- ATLMEM/ATL::CLocalHeap::GetSize
+- ATLMEM/ATL::CLocalHeap::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +84,7 @@ class CLocalHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlmem.h  
   
-##  <a name="a-nameallocatea--clocalheapallocate"></a><a name="allocate"></a>CLocalHeap::Allocate  
+##  <a name="allocate"></a>CLocalHeap::Allocate  
  Llame a este método para asignar un bloque de memoria.  
   
 ```
@@ -100,7 +103,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implementa mediante [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) con un parámetro de marca de **LMEM_FIXED**.  
   
-##  <a name="a-namefreea--clocalheapfree"></a><a name="free"></a>CLocalHeap::Free  
+##  <a name="free"></a>CLocalHeap::Free  
  Llame a este método para liberar un bloque de memoria asignada por el Administrador de memoria.  
   
 ```
@@ -114,7 +117,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Comentarios  
  Implementa mediante [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730).  
   
-##  <a name="a-namegetsizea--clocalheapgetsize"></a><a name="getsize"></a>CLocalHeap::GetSize  
+##  <a name="getsize"></a>CLocalHeap::GetSize  
  Llame a este método para obtener el tamaño de un bloque de memoria asignado por el Administrador de memoria asignado.  
   
 ```
@@ -131,7 +134,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Comentarios  
  Implementa mediante [LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745).  
   
-##  <a name="a-namereallocatea--clocalheapreallocate"></a><a name="reallocate"></a>CLocalHeap::Reallocate  
+##  <a name="reallocate"></a>CLocalHeap::Reallocate  
  Llame a este método para reasignar la memoria asignada por este administrador de memoria.  
   
 ```

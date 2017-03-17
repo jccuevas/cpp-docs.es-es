@@ -9,11 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAutoVectorPtr
-- ATL.CAutoVectorPtr
-- ATL.CAutoVectorPtr<T>
 - CAutoVectorPtr
-- ATL::CAutoVectorPtr<T>
+- ATLBASE/ATL::CAutoVectorPtr
+- ATLBASE/ATL::CAutoVectorPtr::CAutoVectorPtr
+- ATLBASE/ATL::CAutoVectorPtr::Allocate
+- ATLBASE/ATL::CAutoVectorPtr::Attach
+- ATLBASE/ATL::CAutoVectorPtr::Detach
+- ATLBASE/ATL::CAutoVectorPtr::Free
+- ATLBASE/ATL::CAutoVectorPtr::m_p
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +103,7 @@ class CAutoVectorPtr
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
   
-##  <a name="a-nameallocatea--cautovectorptrallocate"></a><a name="allocate"></a>CAutoVectorPtr::Allocate  
+##  <a name="allocate"></a>CAutoVectorPtr::Allocate  
  Llamar a este método para asignar la memoria necesaria por la matriz de objetos que apunta `CAutoVectorPtr`.  
   
 ```
@@ -117,7 +120,7 @@ bool Allocate(size_t nElements) throw();
 ### <a name="remarks"></a>Comentarios  
  En compilaciones de depuración, se producirá un error de aserción si el [CAutoVectorPtr::m_p](#m_p) variable miembro actualmente apunta a un valor existente; es decir, no es igual a NULL.  
   
-##  <a name="a-nameattacha--cautovectorptrattach"></a><a name="attach"></a>CAutoVectorPtr::Attach  
+##  <a name="attach"></a>CAutoVectorPtr::Attach  
  Llamar a este método para tomar posesión de un puntero existente.  
   
 ```
@@ -133,7 +136,7 @@ void Attach(T* p) throw();
   
  En compilaciones de depuración, se producirá un error de aserción si el [CAutoVectorPtr::m_p](#m_p) variable miembro actualmente apunta a un valor existente; es decir, no es igual a NULL.  
   
-##  <a name="a-namecautovectorptra--cautovectorptrcautovectorptr"></a><a name="cautovectorptr"></a>CAutoVectorPtr::CAutoVectorPtr  
+##  <a name="cautovectorptr"></a>CAutoVectorPtr::CAutoVectorPtr  
  El constructor.  
   
 ```
@@ -149,7 +152,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>Comentarios  
  El `CAutoVectorPtr` se puede crear el objeto mediante un puntero existente, en cuyo caso transfiere la propiedad del puntero.  
   
-##  <a name="a-namedtora--cautovectorptrcautovectorptr"></a><a name="dtor"></a>CAutoVectorPtr:: ~ CAutoVectorPtr  
+##  <a name="dtor"></a>CAutoVectorPtr:: ~ CAutoVectorPtr  
  Destructor.  
   
 ```
@@ -159,7 +162,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>Comentarios  
  Libera los recursos asignados. Llamadas [CAutoVectorPtr::Free](#free).  
   
-##  <a name="a-namedetacha--cautovectorptrdetach"></a><a name="detach"></a>CAutoVectorPtr::Detach  
+##  <a name="detach"></a>CAutoVectorPtr::Detach  
  Llamar a este método para liberar la propiedad de un puntero.  
   
 ```
@@ -172,7 +175,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>Comentarios  
  Libera la posesión de un puntero, se establece la [CAutoVectorPtr::m_p](#m_p) variable miembro en NULL y devuelve una copia del puntero. Después de llamar a **separar**, es hasta el programador para liberarlos recursos asignado que la `CAutoVectorPtr` objeto puede haber supuesto previamente responsabilidad.  
   
-##  <a name="a-namefreea--cautovectorptrfree"></a><a name="free"></a>CAutoVectorPtr::Free  
+##  <a name="free"></a>CAutoVectorPtr::Free  
  Llamar a este método para eliminar un objeto al que señala un `CAutoVectorPtr`.  
   
 ```
@@ -182,7 +185,7 @@ void Free() throw();
 ### <a name="remarks"></a>Comentarios  
  El objeto al que apunta el `CAutoVectorPtr` se liberan y el [CAutoVectorPtr::m_p](#m_p) variable miembro se establece en NULL.  
   
-##  <a name="a-namempa--cautovectorptrmp"></a><a name="m_p"></a>CAutoVectorPtr::m_p  
+##  <a name="m_p"></a>CAutoVectorPtr::m_p  
  La variable de miembro de datos de puntero.  
   
 ```
@@ -192,7 +195,7 @@ T* m_p;
 ### <a name="remarks"></a>Comentarios  
  Esta variable miembro contiene la información de puntero.  
   
-##  <a name="a-nameoperatoreqa--cautovectorptroperator-"></a><a name="operator_eq"></a>CAutoVectorPtr::operator =  
+##  <a name="operator_eq"></a>CAutoVectorPtr::operator =  
  El operador de asignación.  
   
 ```
@@ -209,7 +212,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>Comentarios  
  El operador de asignación se separa la `CAutoVectorPtr` objeto desde el puntero actual y se asocia el nuevo puntero, `p`, en su lugar.  
   
-##  <a name="a-nameoperatortstara--cautovectorptroperator-t-"></a><a name="operator_t__star"></a>CAutoVectorPtr::operator T *  
+##  <a name="operator_t__star"></a>CAutoVectorPtr::operator T *  
  El operador de conversión.  
   
 ```  

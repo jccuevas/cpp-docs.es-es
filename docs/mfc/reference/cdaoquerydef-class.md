@@ -10,6 +10,37 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoQueryDef
+- AFXDAO/CDaoQueryDef
+- AFXDAO/CDaoQueryDef::CDaoQueryDef
+- AFXDAO/CDaoQueryDef::Append
+- AFXDAO/CDaoQueryDef::CanUpdate
+- AFXDAO/CDaoQueryDef::Close
+- AFXDAO/CDaoQueryDef::Create
+- AFXDAO/CDaoQueryDef::Execute
+- AFXDAO/CDaoQueryDef::GetConnect
+- AFXDAO/CDaoQueryDef::GetDateCreated
+- AFXDAO/CDaoQueryDef::GetDateLastUpdated
+- AFXDAO/CDaoQueryDef::GetFieldCount
+- AFXDAO/CDaoQueryDef::GetFieldInfo
+- AFXDAO/CDaoQueryDef::GetName
+- AFXDAO/CDaoQueryDef::GetODBCTimeout
+- AFXDAO/CDaoQueryDef::GetParameterCount
+- AFXDAO/CDaoQueryDef::GetParameterInfo
+- AFXDAO/CDaoQueryDef::GetParamValue
+- AFXDAO/CDaoQueryDef::GetRecordsAffected
+- AFXDAO/CDaoQueryDef::GetReturnsRecords
+- AFXDAO/CDaoQueryDef::GetSQL
+- AFXDAO/CDaoQueryDef::GetType
+- AFXDAO/CDaoQueryDef::IsOpen
+- AFXDAO/CDaoQueryDef::Open
+- AFXDAO/CDaoQueryDef::SetConnect
+- AFXDAO/CDaoQueryDef::SetName
+- AFXDAO/CDaoQueryDef::SetODBCTimeout
+- AFXDAO/CDaoQueryDef::SetParamValue
+- AFXDAO/CDaoQueryDef::SetReturnsRecords
+- AFXDAO/CDaoQueryDef::SetSQL
+- AFXDAO/CDaoQueryDef::m_pDAOQueryDef
+- AFXDAO/CDaoQueryDef::m_pDatabase
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -151,7 +182,7 @@ class CDaoQueryDef : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdao.h  
   
-##  <a name="a-nameappenda--cdaoquerydefappend"></a><a name="append"></a>CDaoQueryDef:: Append  
+##  <a name="append"></a>CDaoQueryDef:: Append  
  Llame a esta función miembro después de llamar a [crear](#create) para crear un nuevo objeto de definición de consulta.  
   
 ```  
@@ -163,7 +194,7 @@ virtual void Append();
   
  Si intenta agregar un objeto de definición de consulta temporal, MFC inicia una excepción de tipo [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
-##  <a name="a-namecanupdatea--cdaoquerydefcanupdate"></a><a name="canupdate"></a>CDaoQueryDef::CanUpdate  
+##  <a name="canupdate"></a>CDaoQueryDef::CanUpdate  
  Llame a esta función miembro para determinar si se puede modificar la definición de consulta, como cambiar su nombre o la cadena SQL.  
   
 ```  
@@ -182,7 +213,7 @@ BOOL CanUpdate();
   
      Esto depende de si se han implementado las características de seguridad. MFC no ofrece soporte para la seguridad; debe implementarlo usted mismo al llamar a DAO directamente o mediante el uso de Microsoft Access. Consulte el tema "Propiedad permisos" en la Ayuda de DAO.  
   
-##  <a name="a-namecdaoquerydefa--cdaoquerydefcdaoquerydef"></a><a name="cdaoquerydef"></a>CDaoQueryDef::CDaoQueryDef  
+##  <a name="cdaoquerydef"></a>CDaoQueryDef::CDaoQueryDef  
  Construye un **CDaoQueryDef** objeto.  
   
 ```  
@@ -206,7 +237,7 @@ CDaoQueryDef(CDaoDatabase* pDatabase);
   
  Cuando termine con el objeto de definición de consulta, llame a su [cerrar](#close) función miembro. Si tiene un puntero a la definición de consulta, utilice la **eliminar** operador para destruir el objeto de C++.  
   
-##  <a name="a-nameclosea--cdaoquerydefclose"></a><a name="close"></a>CDaoQueryDef::Close  
+##  <a name="close"></a>CDaoQueryDef::Close  
  Llame a esta función miembro cuando haya terminado de utilizar el objeto de definición de consulta.  
   
 ```  
@@ -216,7 +247,7 @@ virtual void Close();
 ### <a name="remarks"></a>Comentarios  
  Cierre la definición de consulta libera el objeto DAO subyacente pero no destruye el objeto de definición de consulta DAO guardado o C++ `CDaoQueryDef` objeto. No es igual a [CDaoDatabase::DeleteQueryDef](../../mfc/reference/cdaodatabase-class.md#deletequerydef), que elimina la definición de consulta en la colección de definiciones de consulta de la base de datos de DAO (si no es una definición de consulta temporal).  
   
-##  <a name="a-namecreatea--cdaoquerydefcreate"></a><a name="create"></a>CDaoQueryDef:: Create  
+##  <a name="create"></a>CDaoQueryDef:: Create  
  Llame a esta función miembro para crear una nueva consulta guardada o una nueva consulta temporal.  
   
 ```  
@@ -237,7 +268,7 @@ virtual void Create(
   
  Si no se proporciona una instrucción SQL en `lpszSQL`, no se puede ejecutar la consulta con **Execute** pero se puede utilizar para crear un conjunto de registros. En ese caso, MFC utiliza la instrucción de SQL predeterminada del conjunto de registros.  
   
-##  <a name="a-nameexecutea--cdaoquerydefexecute"></a><a name="execute"></a>CDaoQueryDef:: Execute  
+##  <a name="execute"></a>CDaoQueryDef:: Execute  
  Llame a esta función miembro para ejecutar la consulta definida por el objeto de definición de consulta.  
   
 ```  
@@ -281,7 +312,7 @@ virtual void Execute(int nOptions = dbFailOnError);
   
  **Ejecutar** no devuelve un conjunto de registros. Usando **Execute** en una consulta que selecciona los registros hace MFC producir una excepción de tipo [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
-##  <a name="a-namegetconnecta--cdaoquerydefgetconnect"></a><a name="getconnect"></a>CDaoQueryDef::GetConnect  
+##  <a name="getconnect"></a>CDaoQueryDef::GetConnect  
  Llame a esta función miembro para obtener la cadena de conexión asociada con el origen de datos de la definición de la consulta.  
   
 ```  
@@ -299,7 +330,7 @@ CString GetConnect();
   
  Para obtener información acerca de las cadenas de conexión, vea el tema "Propiedad conectarse" en la Ayuda de DAO.  
   
-##  <a name="a-namegetdatecreateda--cdaoquerydefgetdatecreated"></a><a name="getdatecreated"></a>CDaoQueryDef::GetDateCreated  
+##  <a name="getdatecreated"></a>CDaoQueryDef::GetDateCreated  
  Llame a esta función miembro para obtener la fecha en que se creó el objeto de definición de consulta.  
   
 ```  
@@ -312,7 +343,7 @@ COleDateTime GetDateCreated();
 ### <a name="remarks"></a>Comentarios  
  Para obtener información relacionada, vea el tema "DateCreated y LastUpdated propiedades" en la Ayuda de DAO.  
   
-##  <a name="a-namegetdatelastupdateda--cdaoquerydefgetdatelastupdated"></a><a name="getdatelastupdated"></a>CDaoQueryDef::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>CDaoQueryDef::GetDateLastUpdated  
  Llamada a esta función miembro para obtener el objeto de definición de consulta de la fecha en que se actualizó por última vez, cuando cualquiera de sus propiedades se han cambiado, como su nombre, su cadena SQL o la cadena de conexión.  
   
 ```  
@@ -325,7 +356,7 @@ COleDateTime GetDateLastUpdated();
 ### <a name="remarks"></a>Comentarios  
  Para obtener información relacionada, vea el tema "DateCreated y LastUpdated propiedades" en la Ayuda de DAO.  
   
-##  <a name="a-namegetfieldcounta--cdaoquerydefgetfieldcount"></a><a name="getfieldcount"></a>CDaoQueryDef::GetFieldCount  
+##  <a name="getfieldcount"></a>CDaoQueryDef::GetFieldCount  
  Llame a esta función miembro para recuperar el número de campos de la consulta.  
   
 ```  
@@ -338,7 +369,7 @@ short GetFieldCount();
 ### <a name="remarks"></a>Comentarios  
  `GetFieldCount`es útil para recorrer en iteración todos los campos de la definición de consulta. Para ello, utilice `GetFieldCount` junto con [GetFieldInfo](#getfieldinfo).  
   
-##  <a name="a-namegetfieldinfoa--cdaoquerydefgetfieldinfo"></a><a name="getfieldinfo"></a>CDaoQueryDef::GetFieldInfo  
+##  <a name="getfieldinfo"></a>CDaoQueryDef::GetFieldInfo  
  Llame a esta función miembro para obtener información acerca de un campo definido en la definición de consulta de diferentes tipos.  
   
 ```  
@@ -376,7 +407,7 @@ void GetFieldInfo(
 ### <a name="remarks"></a>Comentarios  
  Para obtener una descripción de la información devuelta en `fieldinfo`, consulte el [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) estructura. Esta estructura no tiene miembros que corresponden a la información descriptiva en `dwInfoOptions` anteriormente. Si se solicita un nivel de información, obtendrá los niveles anteriores de información.  
   
-##  <a name="a-namegetnamea--cdaoquerydefgetname"></a><a name="getname"></a>CDaoQueryDef::GetName  
+##  <a name="getname"></a>CDaoQueryDef::GetName  
  Llame a esta función miembro para recuperar el nombre de la consulta representada por la definición de consulta.  
   
 ```  
@@ -389,7 +420,7 @@ CString GetName();
 ### <a name="remarks"></a>Comentarios  
  Los nombres de definición de consulta son nombres únicos definidos por el usuario. Para obtener más información acerca de los nombres de definición de consulta, vea el tema "Nombre de propiedad" en la Ayuda de DAO.  
   
-##  <a name="a-namegetodbctimeouta--cdaoquerydefgetodbctimeout"></a><a name="getodbctimeout"></a>CDaoQueryDef::GetODBCTimeout  
+##  <a name="getodbctimeout"></a>CDaoQueryDef::GetODBCTimeout  
  Llame a esta función miembro para recuperar el límite de tiempo actual antes de que el tiempo de espera de una consulta a un origen de datos ODBC.  
   
 ```  
@@ -405,7 +436,7 @@ short GetODBCTimeout();
 > [!TIP]
 >  Es la manera preferida de trabajar con tablas ODBC adjuntarlos a un Microsoft Jet (. Base de datos de Microsoft Access). Para obtener más información, vea el tema "Acceso a bases de datos externas con DAO" en la Ayuda de DAO.  
   
-##  <a name="a-namegetparametercounta--cdaoquerydefgetparametercount"></a><a name="getparametercount"></a>CDaoQueryDef::GetParameterCount  
+##  <a name="getparametercount"></a>CDaoQueryDef::GetParameterCount  
  Llame a esta función miembro para recuperar el número de parámetros de la consulta guardada.  
   
 ```  
@@ -420,7 +451,7 @@ short GetParameterCount();
   
  Para obtener información relacionada, vea los temas "Objeto de parámetro", "Parámetros de colección" y "declaración de parámetros (SQL)" en la Ayuda de DAO.  
   
-##  <a name="a-namegetparameterinfoa--cdaoquerydefgetparameterinfo"></a><a name="getparameterinfo"></a>CDaoQueryDef::GetParameterInfo  
+##  <a name="getparameterinfo"></a>CDaoQueryDef::GetParameterInfo  
  Llame a esta función miembro para obtener información sobre un parámetro definido en la definición de consulta.  
   
 ```  
@@ -456,7 +487,7 @@ void GetParameterInfo(
   
  Para obtener información relacionada, vea el tema "declaración de parámetros (SQL)" en la Ayuda de DAO.  
   
-##  <a name="a-namegetparamvaluea--cdaoquerydefgetparamvalue"></a><a name="getparamvalue"></a>CDaoQueryDef:: GetParamValue  
+##  <a name="getparamvalue"></a>CDaoQueryDef:: GetParamValue  
  Llame a esta función miembro para recuperar el valor actual del parámetro especificado que se almacenan en la colección de parámetros de la definición de la consulta.  
   
 ```  
@@ -479,7 +510,7 @@ virtual COleVariant GetParamValue(int nIndex);
   
  Para obtener información relacionada, vea el tema "declaración de parámetros (SQL)" en la Ayuda de DAO.  
   
-##  <a name="a-namegetrecordsaffecteda--cdaoquerydefgetrecordsaffected"></a><a name="getrecordsaffected"></a>CDaoQueryDef::GetRecordsAffected  
+##  <a name="getrecordsaffected"></a>CDaoQueryDef::GetRecordsAffected  
  Llame a esta función miembro para determinar el número de registros afectado por la última llamada de [Execute](#execute).  
   
 ```  
@@ -494,7 +525,7 @@ long GetRecordsAffected();
   
  Para obtener información relacionada, vea el tema "Propiedad RecordsAffected" en la Ayuda de DAO.  
   
-##  <a name="a-namegetreturnsrecordsa--cdaoquerydefgetreturnsrecords"></a><a name="getreturnsrecords"></a>CDaoQueryDef::GetReturnsRecords  
+##  <a name="getreturnsrecords"></a>CDaoQueryDef::GetReturnsRecords  
  Llame a esta función miembro para determinar si la definición de consulta se basa en una consulta que devuelve los registros.  
   
 ```  
@@ -509,7 +540,7 @@ BOOL GetReturnsRecords();
   
  Para obtener información relacionada, vea el tema "Propiedad ReturnsRecords" en la Ayuda de DAO.  
   
-##  <a name="a-namegetsqla--cdaoquerydefgetsql"></a><a name="getsql"></a>CDaoQueryDef::GetSQL  
+##  <a name="getsql"></a>CDaoQueryDef::GetSQL  
  Llame a esta función miembro para recuperar la instrucción SQL que define la consulta en la que se basa la definición de consulta.  
   
 ```  
@@ -524,7 +555,7 @@ CString GetSQL();
   
  Para obtener información relacionada, vea los temas "SQL Property", "Comparación de Microsoft Jet base de datos del motor y ANSI SQL" y "Consultar una base de datos con SQL en código" en la Ayuda de DAO.  
   
-##  <a name="a-namegettypea--cdaoquerydefgettype"></a><a name="gettype"></a>CDaoQueryDef::GetType  
+##  <a name="gettype"></a>CDaoQueryDef::GetType  
  Llame a esta función miembro para determinar el tipo de consulta de la definición de consulta.  
   
 ```  
@@ -564,7 +595,7 @@ short GetType();
   
  Para obtener información acerca de las cadenas SQL, consulte [GetSQL](#getsql). Para obtener información acerca de los tipos de consulta, vea [Execute](#execute).  
   
-##  <a name="a-nameisopena--cdaoquerydefisopen"></a><a name="isopen"></a>CDaoQueryDef::IsOpen  
+##  <a name="isopen"></a>CDaoQueryDef::IsOpen  
  Llame a esta función miembro para determinar si la `CDaoQueryDef` objeto está abierto.  
   
 ```  
@@ -577,19 +608,19 @@ BOOL IsOpen() const;
 ### <a name="remarks"></a>Comentarios  
  Debe ser una definición de consulta en este estado antes de utilizarla para llamar a [Execute](#execute) o para crear un [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto. Para poner una definición de consulta en una llamada de estado abierto o [crear](#create) (para una nueva definición de consulta) o [abrir](#open) (para una definición de consulta existente).  
   
-##  <a name="a-namempdatabasea--cdaoquerydefmpdatabase"></a><a name="m_pdatabase"></a>CDaoQueryDef::m_pDatabase  
+##  <a name="m_pdatabase"></a>CDaoQueryDef::m_pDatabase  
  Contiene un puntero a la [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objeto asociado con el objeto de definición de consulta.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este puntero si necesita tener acceso directamente a la base de datos, por ejemplo, para obtener punteros a otros querydef o el conjunto de registros de objetos en colecciones de la base de datos.  
   
-##  <a name="a-namempdaoquerydefa--cdaoquerydefmpdaoquerydef"></a><a name="m_pdaoquerydef"></a>CDaoQueryDef::m_pDAOQueryDef  
+##  <a name="m_pdaoquerydef"></a>CDaoQueryDef::m_pDAOQueryDef  
  Contiene un puntero a la interfaz OLE para el objeto de definición de consulta DAO subyacente.  
   
 ### <a name="remarks"></a>Comentarios  
  Este puntero se proporciona integridad y coherencia con las otras clases. Sin embargo, porque MFC encapsula completamente en su lugar las definiciones de consulta DAO, es probable que la necesite. Si desea usarla, hacerlo con precaución, en particular, no cambie el valor del puntero a menos que sepa lo que está haciendo.  
   
-##  <a name="a-nameopena--cdaoquerydefopen"></a><a name="open"></a>CDaoQueryDef::Open  
+##  <a name="open"></a>CDaoQueryDef::Open  
  Llame a esta función miembro para abrir una definición de consulta guardado previamente en la colección de definiciones de consulta de la base de datos.  
   
 ```  
@@ -603,7 +634,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ### <a name="remarks"></a>Comentarios  
  Una vez abierta la definición de consulta, puede llamar a su [Execute](#execute) función miembro o utilice la definición de consulta para crear una [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto.  
   
-##  <a name="a-namesetconnecta--cdaoquerydefsetconnect"></a><a name="setconnect"></a>CDaoQueryDef::SetConnect  
+##  <a name="setconnect"></a>CDaoQueryDef::SetConnect  
  Llame a esta función miembro para establecer la cadena de conexión del objeto de definición de consulta.  
   
 ```  
@@ -624,7 +655,7 @@ void SetConnect(LPCTSTR lpszConnect);
   
  Para obtener más información acerca de la estructura y los ejemplos de componentes de la cadena de conexión de la cadena de conexión, vea el tema "Propiedad conectarse" en la Ayuda de DAO.  
   
-##  <a name="a-namesetnamea--cdaoquerydefsetname"></a><a name="setname"></a>CDaoQueryDef::SetName  
+##  <a name="setname"></a>CDaoQueryDef::SetName  
  Llame a esta función miembro si desea cambiar el nombre de una definición de consulta no es temporal.  
   
 ```  
@@ -638,7 +669,7 @@ void SetName(LPCTSTR lpszName);
 ### <a name="remarks"></a>Comentarios  
  Los nombres de definición de consulta son nombres únicos y definidos por el usuario. Puede llamar a `SetName` antes de la definición de consulta el objeto se anexa a la colección de definiciones de consulta.  
   
-##  <a name="a-namesetodbctimeouta--cdaoquerydefsetodbctimeout"></a><a name="setodbctimeout"></a>CDaoQueryDef::SetODBCTimeout  
+##  <a name="setodbctimeout"></a>CDaoQueryDef::SetODBCTimeout  
  Llame a esta función miembro para establecer el límite de tiempo antes de que agota el tiempo de espera de una consulta a un origen de datos ODBC.  
   
 ```  
@@ -654,7 +685,7 @@ void SetODBCTimeout(short nODBCTimeout);
   
  El valor predeterminado para los tiempos de espera de consulta es 60 segundos.  
   
-##  <a name="a-namesetparamvaluea--cdaoquerydefsetparamvalue"></a><a name="setparamvalue"></a>CDaoQueryDef:: SetParamValue  
+##  <a name="setparamvalue"></a>CDaoQueryDef:: SetParamValue  
  Llame a esta función miembro para establecer el valor de un parámetro en la definición de consulta en tiempo de ejecución.  
   
 ```  
@@ -683,7 +714,7 @@ virtual void SetParamValue(
   
  Especifique el valor que se establecerá como un `COleVariant` objeto. Para obtener información acerca de cómo establecer el valor deseado y el tipo en su `COleVariant` de objetos, vea la clase [COleVariant](../../mfc/reference/colevariant-class.md).  
   
-##  <a name="a-namesetreturnsrecordsa--cdaoquerydefsetreturnsrecords"></a><a name="setreturnsrecords"></a>CDaoQueryDef::SetReturnsRecords  
+##  <a name="setreturnsrecords"></a>CDaoQueryDef::SetReturnsRecords  
  Llame a esta función miembro como parte del proceso de configuración de una consulta de paso a través de SQL a una base de datos externo.  
   
 ```  
@@ -697,7 +728,7 @@ void SetReturnsRecords(BOOL bReturnsRecords);
 ### <a name="remarks"></a>Comentarios  
  En tal caso, debe crear la definición de consulta y establezca sus propiedades mediante otros `CDaoQueryDef` funciones miembro. Para obtener una descripción de las bases de datos externas, consulte [SetConnect](#setconnect).  
   
-##  <a name="a-namesetsqla--cdaoquerydefsetsql"></a><a name="setsql"></a>CDaoQueryDef::SetSQL  
+##  <a name="setsql"></a>CDaoQueryDef::SetSQL  
  Llame a esta función miembro para establecer la instrucción SQL que ejecuta la definición de consulta.  
   
 ```  

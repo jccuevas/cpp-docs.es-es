@@ -10,8 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSnapInItemImpl
-- ATL.CSnapInItemImpl
-- ATL::CSnapInItemImpl
+- ATLSNAP/ATL::CSnapInItemImpl
+- ATLSNAP/ATL::CSnapInItemImpl::CSnapInItemImpl
+- ATLSNAP/ATL::CSnapInItemImpl::AddMenuItems
+- ATLSNAP/ATL::CSnapInItemImpl::Command
+- ATLSNAP/ATL::CSnapInItemImpl::CreatePropertyPages
+- ATLSNAP/ATL::CSnapInItemImpl::FillData
+- ATLSNAP/ATL::CSnapInItemImpl::GetResultPaneInfo
+- ATLSNAP/ATL::CSnapInItemImpl::GetResultViewType
+- ATLSNAP/ATL::CSnapInItemImpl::GetScopePaneInfo
+- ATLSNAP/ATL::CSnapInItemImpl::Notify
+- ATLSNAP/ATL::CSnapInItemImpl::QueryPagesFor
+- ATLSNAP/ATL::CSnapInItemImpl::SetMenuInsertionFlags
+- ATLSNAP/ATL::CSnapInItemImpl::SetToolbarButtonInfo
+- ATLSNAP/ATL::CSnapInItemImpl::UpdateMenuState
+- ATLSNAP/ATL::CSnapInItemImpl::UpdateToolbarButton
+- ATLSNAP/ATL::CSnapInItemImpl::m_bstrDisplayName
+- ATLSNAP/ATL::CSnapInItemImpl::m_resultDataItem
+- ATLSNAP/ATL::CSnapInItemImpl::m_scopeDataItem
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +125,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlsnap.h  
   
-##  <a name="a-nameaddmenuitemsa--csnapinitemimpladdmenuitems"></a><a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
+##  <a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
  Este método implementa la función de Win32 [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841).  
   
 ```
@@ -145,7 +161,7 @@ AddMenuItems(
   
 - **CCT_UNINITIALIZED** el objeto de datos tiene un tipo no válido.  
   
-##  <a name="a-namecommanda--csnapinitemimplcommand"></a><a name="command"></a>CSnapInItemImpl::Command  
+##  <a name="command"></a>CSnapInItemImpl::Command  
  Este método implementa la función de Win32 [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842).  
   
 ```
@@ -167,7 +183,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
   
 - **CCT_UNINITIALIZED** el objeto de datos tiene un tipo no válido.  
   
-##  <a name="a-namecreatepropertypagesa--csnapinitemimplcreatepropertypages"></a><a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
+##  <a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
  Este método implementa la función de Win32 [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846).  
   
 ```
@@ -199,14 +215,14 @@ CreatePropertyPages(
   
 - **CCT_UNINITIALIZED** el objeto de datos tiene un tipo no válido.  
   
-##  <a name="a-namecsnapinitemimpla--csnapinitemimplcsnapinitemimpl"></a><a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
+##  <a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
  Construye un objeto `CSnapInItemImpl`.  
   
 ```
 CSnapInItemImpl();
 ```  
   
-##  <a name="a-namefilldataa--csnapinitemimplfilldata"></a><a name="filldata"></a>CSnapInItemImpl::FillData  
+##  <a name="filldata"></a>CSnapInItemImpl::FillData  
  Esta función se invoca para recuperar información sobre el elemento.  
   
 ```
@@ -223,7 +239,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 ### <a name="remarks"></a>Comentarios  
  Para implementar correctamente esta función, copiar la información correcta en la secuencia ( `pStream`), según el formato del Portapapeles indicado por `cf`.  
   
-##  <a name="a-namegetresultviewtypea--csnapinitemimplgetresultviewtype"></a><a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
+##  <a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
  Llame a esta función para recuperar el tipo de vista para el panel de resultados del objeto de complemento.  
   
 ```
@@ -243,7 +259,7 @@ GetResultViewType(
   
 - **MMC_VIEW_OPTIONS_NONE** = 0 permite las opciones de vista predeterminado.  
   
-##  <a name="a-namegetscopepaneinfoa--csnapinitemimplgetscopepaneinfo"></a><a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
+##  <a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
  Llame a esta función para recuperar el **SCOPEDATAITEM** estructura del complemento.  
   
 ```
@@ -254,7 +270,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
  *pScopeDataItem*  
  [out] Un puntero a la **SCOPEDATAITEM** estructura de la `CSnapInItemImpl` objeto.  
   
-##  <a name="a-namegetresultpaneinfoa--csnapinitemimplgetresultpaneinfo"></a><a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
+##  <a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
  Llame a esta función para recuperar el **RESULTDATAITEM** estructura del complemento.  
   
 ```
@@ -265,28 +281,28 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
  *pResultDataItem*  
  [out] Un puntero a la **RESULTDATAITEM** estructura de la `CSnapInItemImpl` objeto.  
   
-##  <a name="a-namembstrdisplaynamea--csnapinitemimplmbstrdisplayname"></a><a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
+##  <a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
  Contiene la cadena que se muestra para el elemento del nodo.  
   
 ```
 CComBSTR m_bstrDisplayName;
 ```  
   
-##  <a name="a-namemscopedataitema--csnapinitemimplmscopedataitem"></a><a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
+##  <a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
  El `SCOPEDATAITEM` estructura del objeto de datos del complemento.  
   
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```  
   
-##  <a name="a-namemresultdataitema--csnapinitemimplmresultdataitem"></a><a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
+##  <a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
  El [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165) estructura del objeto de datos del complemento.  
   
 ```
 RESULTDATAITEM m_resultDataItem;
 ```  
   
-##  <a name="a-namenotifya--csnapinitemimplnotify"></a><a name="notify"></a>CSnapInItemImpl::Notify  
+##  <a name="notify"></a>CSnapInItemImpl::Notify  
  Se llama cuando el objeto de complemento se actúa sobre el usuario.  
   
 ```
@@ -354,14 +370,14 @@ STDMETHOD(Notify)(
   
 - **CCT_UNINITIALIZED** el objeto de datos tiene un tipo no válido.  
   
-##  <a name="a-namequerypagesfora--csnapinitemimplquerypagesfor"></a><a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
+##  <a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
  Se llama para ver si el nodo del complemento admite páginas de propiedades.  
   
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```  
   
-##  <a name="a-namesetmenuinsertionflagsa--csnapinitemimplsetmenuinsertionflags"></a><a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
+##  <a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
  Llame a esta función para modificar las marcas de inserción de menú especificadas por `pInsertionAllowed`, para el objeto de complemento.  
   
 ```
@@ -390,7 +406,7 @@ void SetMenuInsertionFlags(
   
  No debe intentar establecer los bits `pInsertionAllowed` que originalmente se borraron. Las versiones futuras de MMC pueden utilizar bits no están definidos por lo que no debería cambiar bits que no están definidos actualmente.  
   
-##  <a name="a-namesettoolbarbuttoninfoa--csnapinitemimplsettoolbarbuttoninfo"></a><a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
+##  <a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
  Llame a esta función para modificar los estilos de botón de barra de herramientas del objeto de complemento, antes de crea la barra de herramientas.  
   
 ```
@@ -432,7 +448,7 @@ void SetToolbarButtonInfo(
   
 - `TBSTYLE_SEP`Crea un separador, proporcionando un pequeño espacio entre los grupos de botones. Un botón que tenga este estilo no recibir entradas del usuario.  
   
-##  <a name="a-nameupdatemenustatea--csnapinitemimplupdatemenustate"></a><a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
+##  <a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
  Llame a esta función para modificar un elemento de menú antes de que se inserte en el menú contextual del objeto de complemento.  
   
 ```
@@ -480,7 +496,7 @@ void UpdateMenuState(
   
 - **MF_CHECKED** y **MF_UNCHECKED**.  
   
-##  <a name="a-nameupdatetoolbarbuttona--csnapinitemimplupdatetoolbarbutton"></a><a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
+##  <a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
  Llame a esta función para modificar un botón de barra de herramientas del objeto de complemento, antes de que se muestre.  
   
 ```

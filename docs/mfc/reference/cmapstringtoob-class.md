@@ -10,6 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMapStringToOb
+- AFXCOLL/CMapStringToOb
+- AFXCOLL/CMapStringToOb::CMapStringToOb
+- AFXCOLL/CMapStringToOb::GetCount
+- AFXCOLL/CMapStringToOb::GetHashTableSize
+- AFXCOLL/CMapStringToOb::GetNextAssoc
+- AFXCOLL/CMapStringToOb::GetSize
+- AFXCOLL/CMapStringToOb::GetStartPosition
+- AFXCOLL/CMapStringToOb::HashKey
+- AFXCOLL/CMapStringToOb::InitHashTable
+- AFXCOLL/CMapStringToOb::IsEmpty
+- AFXCOLL/CMapStringToOb::Lookup
+- AFXCOLL/CMapStringToOb::LookupKey
+- AFXCOLL/CMapStringToOb::RemoveAll
+- AFXCOLL/CMapStringToOb::RemoveKey
+- AFXCOLL/CMapStringToOb::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,7 +118,7 @@ class CMapStringToOb : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxcoll.h  
   
-##  <a name="a-namecmapstringtooba--cmapstringtoobcmapstringtoob"></a><a name="cmapstringtoob"></a>CMapStringToOb::CMapStringToOb  
+##  <a name="cmapstringtoob"></a>CMapStringToOb::CMapStringToOb  
  Construye una cadena vacía `CString`- a - `CObject*` mapa.  
   
 ```  
@@ -133,7 +148,7 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
   
  Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase usada en todos los ejemplos de la colección.  
   
-##  <a name="a-namegetcounta--cmapstringtoobgetcount"></a><a name="getcount"></a>CMapStringToOb::GetCount  
+##  <a name="getcount"></a>CMapStringToOb::GetCount  
  Determina cuántos elementos se encuentran en el mapa.  
   
 ```  
@@ -160,7 +175,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections&#64;](../../mfc/codesnippet/cpp/cmapstringtoob-class_2.cpp)]  
   
-##  <a name="a-namegethashtablesizea--cmapstringtoobgethashtablesize"></a><a name="gethashtablesize"></a>CMapStringToOb::GetHashTableSize  
+##  <a name="gethashtablesize"></a>CMapStringToOb::GetHashTableSize  
  Determina el número actual de elementos de la tabla hash.  
   
 ```  
@@ -182,7 +197,7 @@ UINT GetHashTableSize() const;
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT () de GetHashTableSize const;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**UINT () de GetHashTableSize const;**|  
   
-##  <a name="a-namegetnextassoca--cmapstringtoobgetnextassoc"></a><a name="getnextassoc"></a>CMapStringToOb::GetNextAssoc  
+##  <a name="getnextassoc"></a>CMapStringToOb::GetNextAssoc  
  Recupera el elemento de mapa en *rNextPosition*, a continuación, actualiza *rNextPosition* para hacer referencia al elemento siguiente en el mapa.  
   
 ```  
@@ -239,7 +254,7 @@ void GetNextAssoc(
   
  `Bart : a CAge at $45D4 13`  
   
-##  <a name="a-namegetsizea--cmapstringtoobgetsize"></a><a name="getsize"></a>CMapStringToOb::GetSize  
+##  <a name="getsize"></a>CMapStringToOb::GetSize  
  Devuelve el número de elementos de mapa.  
   
 ```  
@@ -266,7 +281,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections&#67;](../../mfc/codesnippet/cpp/cmapstringtoob-class_5.cpp)]  
   
-##  <a name="a-namegetstartpositiona--cmapstringtoobgetstartposition"></a><a name="getstartposition"></a>CMapStringToOb::GetStartPosition  
+##  <a name="getstartposition"></a>CMapStringToOb::GetStartPosition  
  Inicia una iteración de mapa devolviendo un **posición** valor que se puede pasar a un `GetNextAssoc` llamar.  
   
 ```  
@@ -293,7 +308,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [CMapStringToOb::GetNextAssoc](#getnextassoc).  
   
-##  <a name="a-namehashkeya--cmapstringtoobhashkey"></a><a name="hashkey"></a>CMapStringToOb::HashKey  
+##  <a name="hashkey"></a>CMapStringToOb::HashKey  
  Calcula el valor hash de una clave especificada.  
   
 ```  
@@ -319,7 +334,7 @@ UINT HashKey(LPCTSTR key) const;
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**HashKey UINT (palabra** `key` **) const;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**HashKey UINT (palabra** `key` **) const;**|  
   
-##  <a name="a-nameinithashtablea--cmapstringtoobinithashtable"></a><a name="inithashtable"></a>CMapStringToOb::InitHashTable  
+##  <a name="inithashtable"></a>CMapStringToOb::InitHashTable  
  Inicializa la tabla hash.  
   
 ```  
@@ -349,7 +364,7 @@ void InitHashTable(
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void InitHashTable (UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE);**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void InitHashTable (UINT** `hashSize` **, BOOL** `bAllocNow` **= TRUE);**|  
   
-##  <a name="a-nameisemptya--cmapstringtoobisempty"></a><a name="isempty"></a>CMapStringToOb::IsEmpty  
+##  <a name="isempty"></a>CMapStringToOb::IsEmpty  
  Determina si el mapa está vacío.  
   
 ```  
@@ -374,7 +389,7 @@ BOOL IsEmpty() const;
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL IsEmpty () const;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL IsEmpty () const;**|  
   
-##  <a name="a-namelookupa--cmapstringtooblookup"></a><a name="lookup"></a>CMapStringToOb::Lookup  
+##  <a name="lookup"></a>CMapStringToOb::Lookup  
  Devuelve un `CObject` basados en punteros en un `CString` valor.  
   
 ```  
@@ -412,7 +427,7 @@ BOOL Lookup(
   
  [!code-cpp[NVC_MFCCollections&#68;](../../mfc/codesnippet/cpp/cmapstringtoob-class_6.cpp)]  
   
-##  <a name="a-namelookupkeya--cmapstringtooblookupkey"></a><a name="lookupkey"></a>CMapStringToOb::LookupKey  
+##  <a name="lookupkey"></a>CMapStringToOb::LookupKey  
  Devuelve una referencia a la clave asociada con el valor de clave especificado.  
   
 ```  
@@ -441,7 +456,7 @@ BOOL LookupKey(
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL LookupKey (LPCTSTR** `key` **, LPCTSTR aspecto** `rKey` **) const;**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL LookupKey (LPCTSTR** `key` **, LPCTSTR aspecto** `rKey` **) const;**|  
   
-##  <a name="a-nameoperatorata--cmapstringtooboperator--"></a><a name="operator_at"></a>[] CMapStringToOb::operator  
+##  <a name="operator_at"></a>[] CMapStringToOb::operator  
  Un sustituto adecuado para la `SetAt` función miembro.  
   
 ```  
@@ -480,7 +495,7 @@ CObject*& operator[ ](lpctstr key);
   
  `[Bart] = a CAge at $497E 13`  
   
-##  <a name="a-nameremovealla--cmapstringtoobremoveall"></a><a name="removeall"></a>CMapStringToOb::RemoveAll  
+##  <a name="removeall"></a>CMapStringToOb::RemoveAll  
  Quita todos los elementos de esta asignación y destruye el `CString` objetos de clave.  
   
 ```  
@@ -508,7 +523,7 @@ void RemoveAll();
   
  [!code-cpp[NVC_MFCCollections&#69;](../../mfc/codesnippet/cpp/cmapstringtoob-class_8.cpp)]  
   
-##  <a name="a-nameremovekeya--cmapstringtoobremovekey"></a><a name="removekey"></a>CMapStringToOb::RemoveKey  
+##  <a name="removekey"></a>CMapStringToOb::RemoveKey  
  Busca la entrada de mapa que corresponde a la clave proporcionada; a continuación, si se encuentra la clave, quita la entrada.  
   
 ```  
@@ -551,7 +566,7 @@ BOOL RemoveKey(LPCTSTR key);
   
  `[Bart] = a CAge at $4634 13`  
   
-##  <a name="a-namesetata--cmapstringtoobsetat"></a><a name="setat"></a>CMapStringToOb::SetAt  
+##  <a name="setat"></a>CMapStringToOb::SetAt  
  El medio principal para insertar un elemento en un mapa.  
   
 ```  

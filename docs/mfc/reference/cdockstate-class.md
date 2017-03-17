@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDockState
+- AFXADV/CDockState
+- AFXADV/CDockState::Clear
+- AFXADV/CDockState::GetVersion
+- AFXADV/CDockState::LoadState
+- AFXADV/CDockState::SaveState
+- AFXADV/CDockState::m_arrBarInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +95,7 @@ class CDockState : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxadv.h  
   
-##  <a name="a-namecleara--cdockstateclear"></a><a name="clear"></a>CDockState::Clear  
+##  <a name="clear"></a>CDockState::Clear  
  Llame a esta función para borrar toda la información de acoplamiento almacenada en la `CDockState` objeto.  
   
 ```  
@@ -99,7 +105,7 @@ void Clear();
 ### <a name="remarks"></a>Comentarios  
  Esto incluye no sólo si la barra se acopla o no, pero el tamaño y la posición de la barra y si es visible o no.  
   
-##  <a name="a-namegetversiona--cdockstategetversion"></a><a name="getversion"></a>CDockState::GetVersion  
+##  <a name="getversion"></a>CDockState::GetVersion  
  Llame a esta función para recuperar el número de versión de los datos almacenados en la barra de estado.  
   
 ```  
@@ -112,7 +118,7 @@ DWORD GetVersion();
 ### <a name="remarks"></a>Comentarios  
  Compatibilidad de versiones permite una barra revisada agregar nuevas propiedades persistentes y seguir siendo capaz de detectar y cargar el estado persistente creado por una versión anterior de la barra.  
   
-##  <a name="a-nameloadstatea--cdockstateloadstate"></a><a name="loadstate"></a>CDockState::LoadState  
+##  <a name="loadstate"></a>CDockState::LoadState  
  Llame a esta función para recuperar información de estado desde el registro o. Archivo INI.  
   
 ```  
@@ -126,14 +132,14 @@ void LoadState(LPCTSTR lpszProfileName);
 ### <a name="remarks"></a>Comentarios  
  El nombre del perfil es la sección de la aplicación. INI o el registro que contiene información de estado de las barras. Puede guardar el control de barra de información de estado en el registro o. INI con `SaveState`.  
   
-##  <a name="a-namemarrbarinfoa--cdockstatemarrbarinfo"></a><a name="m_arrbarinfo"></a>CDockState::m_arrBarInfo  
+##  <a name="m_arrbarinfo"></a>CDockState::m_arrBarInfo  
  Un `CPtrArray` objeto que es una matriz de punteros a la información de la barra de control almacenado para cada barra de control que ha guardado la información de estado en la `CDockState` objeto.  
   
 ```  
 CPtrArray m_arrBarInfo;  
 ```  
   
-##  <a name="a-namesavestatea--cdockstatesavestate"></a><a name="savestate"></a>CDockState::SaveState  
+##  <a name="savestate"></a>CDockState::SaveState  
  Llame a esta función para guardar la información de estado en el registro o. Archivo INI.  
   
 ```  

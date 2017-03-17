@@ -9,8 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DResource
 - CD2DResource
+- AFXRENDERTARGET/CD2DResource
+- AFXRENDERTARGET/CD2DResource::CD2DResource
+- AFXRENDERTARGET/CD2DResource::Create
+- AFXRENDERTARGET/CD2DResource::Destroy
+- AFXRENDERTARGET/CD2DResource::IsValid
+- AFXRENDERTARGET/CD2DResource::IsAutoDestroy
+- AFXRENDERTARGET/CD2DResource::ReCreate
+- AFXRENDERTARGET/CD2DResource::m_bIsAutoDestroy
+- AFXRENDERTARGET/CD2DResource::m_pParentTarget
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,14 +96,14 @@ class CD2DResource : public CObject;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dresourcea--cd2dresourcecd2dresource"></a><a name="_dtorcd2dresource"></a>CD2DResource:: ~ CD2DResource  
+##  <a name="_dtorcd2dresource"></a>CD2DResource:: ~ CD2DResource  
  Destructor. Se llama cuando se destruye un objeto de recurso de D2D.  
   
 ```  
 virtual ~CD2DResource();
 ```  
   
-##  <a name="a-namecd2dresourcea--cd2dresourcecd2dresource"></a><a name="cd2dresource"></a>CD2DResource::CD2DResource  
+##  <a name="cd2dresource"></a>CD2DResource::CD2DResource  
  Construye un objeto CD2DResource.  
   
 ```  
@@ -111,7 +119,7 @@ CD2DResource(
  `bAutoDestroy`  
  Indica que se destruirá el objeto propietario (pParentTarget).  
   
-##  <a name="a-namecreatea--cd2dresourcecreate"></a><a name="create"></a>CD2DResource::Create  
+##  <a name="create"></a>CD2DResource::Create  
  Crea un CD2DResource.  
   
 ```  
@@ -125,14 +133,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se ejecuta correctamente, devuelve S_OK. De lo contrario, devuelve un código de error HRESULT.  
   
-##  <a name="a-namedestroya--cd2dresourcedestroy"></a><a name="destroy"></a>CD2DResource::Destroy  
+##  <a name="destroy"></a>CD2DResource::Destroy  
  Destruye un objeto CD2DResource.  
   
 ```  
 virtual void Destroy() = 0;  
 ```  
   
-##  <a name="a-nameisautodestroya--cd2dresourceisautodestroy"></a><a name="isautodestroy"></a>CD2DResource::IsAutoDestroy  
+##  <a name="isautodestroy"></a>CD2DResource::IsAutoDestroy  
  Comprobación automática destruir marca.  
   
 ```  
@@ -142,7 +150,7 @@ BOOL IsAutoDestroy() const;
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el objeto se destruirá por su propietario; de lo contrario, FALSE.  
   
-##  <a name="a-nameisvalida--cd2dresourceisvalid"></a><a name="isvalid"></a>CD2DResource::IsValid  
+##  <a name="isvalid"></a>CD2DResource::IsValid  
  Comprobaciones de validez de los recursos  
   
 ```  
@@ -152,21 +160,21 @@ virtual BOOL IsValid() const = 0;
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el recurso es válido; de lo contrario, FALSE.  
   
-##  <a name="a-namembisautodestroya--cd2dresourcembisautodestroy"></a><a name="m_bisautodestroy"></a>CD2DResource::m_bIsAutoDestroy  
+##  <a name="m_bisautodestroy"></a>CD2DResource::m_bIsAutoDestroy  
  Recurso será destoyed propietario (CRenderTarget)  
   
 ```  
 BOOL m_bIsAutoDestroy;  
 ```  
   
-##  <a name="a-namempparenttargeta--cd2dresourcempparenttarget"></a><a name="m_pparenttarget"></a>CD2DResource::m_pParentTarget  
+##  <a name="m_pparenttarget"></a>CD2DResource::m_pParentTarget  
  Puntero al elemento primario CRenderTarget)  
   
 ```  
 CRenderTarget* m_pParentTarget;  
 ```  
   
-##  <a name="a-namerecreatea--cd2dresourcerecreate"></a><a name="recreate"></a>CD2DResource::ReCreate  
+##  <a name="recreate"></a>CD2DResource::ReCreate  
  Vuelve a crear un CD2DResource.  
   
 ```  

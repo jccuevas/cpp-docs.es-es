@@ -9,11 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IPersistStreamInitImpl
-- ATL::IPersistStreamInitImpl<T>
-- ATL.IPersistStreamInitImpl<T>
 - IPersistStreamInitImpl
-- ATL.IPersistStreamInitImpl
+- ATLCOM/ATL::IPersistStreamInitImpl
+- ATLCOM/ATL::IPersistStreamInitImpl::GetClassID
+- ATLCOM/ATL::IPersistStreamInitImpl::GetSizeMax
+- ATLCOM/ATL::IPersistStreamInitImpl::InitNew
+- ATLCOM/ATL::IPersistStreamInitImpl::IsDirty
+- ATLCOM/ATL::IPersistStreamInitImpl::Load
+- ATLCOM/ATL::IPersistStreamInitImpl::Save
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +92,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="a-namegetclassida--ipersiststreaminitimplgetclassid"></a><a name="getclassid"></a>IPersistStreamInitImpl::GetClassID  
+##  <a name="getclassid"></a>IPersistStreamInitImpl::GetClassID  
  Recupera el CLSID del objeto.  
   
 ```
@@ -99,7 +102,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>Comentarios  
  Consulte [IPersist:: GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetsizemaxa--ipersiststreaminitimplgetsizemax"></a><a name="getsizemax"></a>IPersistStreamInitImpl::GetSizeMax  
+##  <a name="getsizemax"></a>IPersistStreamInitImpl::GetSizeMax  
  Recupera el tamaño de la secuencia necesaria para guardar los datos del objeto.  
   
 ```
@@ -112,7 +115,7 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 ### <a name="remarks"></a>Comentarios  
  Consulte [IPersistStreamInit::GetSizeMax](http://msdn.microsoft.com/library/windows/desktop/ms687287) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameinitnewa--ipersiststreaminitimplinitnew"></a><a name="initnew"></a>IPersistStreamInitImpl::InitNew  
+##  <a name="initnew"></a>IPersistStreamInitImpl::InitNew  
  Inicializa un objeto recién creado.  
   
 ```
@@ -122,7 +125,7 @@ STDMETHOD(InitNew)();
 ### <a name="remarks"></a>Comentarios  
  Consulte [IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameisdirtya--ipersiststreaminitimplisdirty"></a><a name="isdirty"></a>IPersistStreamInitImpl::IsDirty  
+##  <a name="isdirty"></a>IPersistStreamInitImpl::IsDirty  
  Comprueba si los datos del objeto ha cambiado desde que se guardó por última vez.  
   
 ```
@@ -132,7 +135,7 @@ STDMETHOD(IsDirty)();
 ### <a name="remarks"></a>Comentarios  
  Consulte [IPersistStreamInit::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms680092) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameloada--ipersiststreaminitimplload"></a><a name="load"></a>IPersistStreamInitImpl::Load  
+##  <a name="load"></a>IPersistStreamInitImpl::Load  
  Carga las propiedades del objeto de la secuencia especificada.  
   
 ```
@@ -144,7 +147,7 @@ STDMETHOD(Load)(LPSTREAM pStm);
   
  Consulte [IPersistStreamInit:: Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesavea--ipersiststreaminitimplsave"></a><a name="save"></a>IPersistStreamInitImpl::Save  
+##  <a name="save"></a>IPersistStreamInitImpl::Save  
  Guarda las propiedades del objeto en la secuencia especificada.  
   
 ```

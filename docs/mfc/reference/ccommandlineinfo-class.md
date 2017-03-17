@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCommandLineInfo
+- AFXWIN/CCommandLineInfo
+- AFXWIN/CCommandLineInfo::CCommandLineInfo
+- AFXWIN/CCommandLineInfo::ParseParam
+- AFXWIN/CCommandLineInfo::m_bRunAutomated
+- AFXWIN/CCommandLineInfo::m_bRunEmbedded
+- AFXWIN/CCommandLineInfo::m_bShowSplash
+- AFXWIN/CCommandLineInfo::m_nShellCommand
+- AFXWIN/CCommandLineInfo::m_strDriverName
+- AFXWIN/CCommandLineInfo::m_strFileName
+- AFXWIN/CCommandLineInfo::m_strPortName
+- AFXWIN/CCommandLineInfo::m_strPrinterName
+- AFXWIN/CCommandLineInfo::m_strRestartIdentifier
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +120,7 @@ class CCommandLineInfo : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h  
   
-##  <a name="a-nameccommandlineinfoa--ccommandlineinfoccommandlineinfo"></a><a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
+##  <a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
  Este constructor crea un `CCommandLineInfo` objeto con valores predeterminados.  
   
 ```  
@@ -123,7 +135,7 @@ CCommandLineInfo();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView&#54;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
   
-##  <a name="a-namembrunautomateda--ccommandlineinfombrunautomated"></a><a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
+##  <a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
  Indica que el **/automatización** marca no se encontró en la línea de comandos.  
   
 ```  
@@ -133,7 +145,7 @@ BOOL m_bRunAutomated;
 ### <a name="remarks"></a>Comentarios  
  Si **TRUE**, esto significa que se inicie como un servidor de automatización OLE.  
   
-##  <a name="a-namembrunembeddeda--ccommandlineinfombrunembedded"></a><a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
+##  <a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
  Indica que el **/incrustación** marca no se encontró en la línea de comandos.  
   
 ```  
@@ -143,7 +155,7 @@ BOOL m_bRunEmbedded;
 ### <a name="remarks"></a>Comentarios  
  Si **TRUE**, esto significa el inicio de la edición de un elemento OLE incrustado.  
   
-##  <a name="a-namembshowsplasha--ccommandlineinfombshowsplash"></a><a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
+##  <a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
  Indica que se debe mostrar la pantalla de presentación.  
   
 ```  
@@ -153,7 +165,7 @@ BOOL m_bShowSplash;
 ### <a name="remarks"></a>Comentarios  
  Si **TRUE**, esto significa que la pantalla de presentación para esta aplicación debería mostrarse durante el inicio. La implementación predeterminada de [ParseParam](#parseparam) este miembro de datos se establece en **TRUE** si [m_nShellCommand](#m_nshellcommand) es igual a **CCommandLineInfo::FileNew**.  
   
-##  <a name="a-namemnshellcommanda--ccommandlineinfomnshellcommand"></a><a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
+##  <a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
  Indica que el comando de shell para esta instancia de la aplicación.  
   
 ```  
@@ -208,7 +220,7 @@ m_nShellCommand;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView&#55;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]  
   
-##  <a name="a-namemstrdrivernamea--ccommandlineinfomstrdrivername"></a><a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
+##  <a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
  Almacena el valor del tercer parámetro no marca en la línea de comandos.  
   
 ```  
@@ -218,7 +230,7 @@ CString m_strDriverName;
 ### <a name="remarks"></a>Comentarios  
  Normalmente, este parámetro es el nombre del controlador de impresora para un comando de shell para la impresión. La implementación predeterminada de [ParseParam](#parseparam) establece esta datos miembro si la **/pt** marca no se encontró en la línea de comandos.  
   
-##  <a name="a-namemstrfilenamea--ccommandlineinfomstrfilename"></a><a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
+##  <a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
  Almacena el valor del primer parámetro no marca en la línea de comandos.  
   
 ```  
@@ -228,7 +240,7 @@ CString m_strFileName;
 ### <a name="remarks"></a>Comentarios  
  Normalmente, este parámetro es el nombre del archivo que desee abrir.  
   
-##  <a name="a-namemstrportnamea--ccommandlineinfomstrportname"></a><a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
+##  <a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
  Almacena el valor del cuarto parámetro no marca en la línea de comandos.  
   
 ```  
@@ -238,7 +250,7 @@ CString m_strPortName;
 ### <a name="remarks"></a>Comentarios  
  Normalmente, este parámetro es el nombre del puerto para un comando de shell para la impresión. La implementación predeterminada de [ParseParam](#parseparam) establece esta datos miembro si la **/pt** marca no se encontró en la línea de comandos.  
   
-##  <a name="a-namemstrprinternamea--ccommandlineinfomstrprintername"></a><a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
+##  <a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
  Almacena el valor del segundo parámetro no marca en la línea de comandos.  
   
 ```  
@@ -248,7 +260,7 @@ CString m_strPrinterName;
 ### <a name="remarks"></a>Comentarios  
  Normalmente, este parámetro es el nombre de la impresora para un comando de shell para la impresión. La implementación predeterminada de [ParseParam](#parseparam) establece esta datos miembro si la **/pt** marca no se encontró en la línea de comandos.  
   
-##  <a name="a-namemstrrestartidentifiera--ccommandlineinfomstrrestartidentifier"></a><a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
+##  <a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
  El único reinicie identificador en la línea de comandos.  
   
 ```  
@@ -260,7 +272,7 @@ CString m_strRestartIdentifier;
   
  Si el Administrador de reinicio sale de la aplicación y está configurado para reiniciarlo, el Administrador de reinicio ejecuta la aplicación desde la línea de comandos con el identificador de reinicio como un parámetro opcional. Cuando el Administrador de reinicio utiliza el identificador de reinicio, la aplicación puede volver a abrir los documentos abiertos previamente y recuperar los archivos guardados automáticamente.  
   
-##  <a name="a-nameparseparama--ccommandlineinfoparseparam"></a><a name="parseparam"></a>CCommandLineInfo::ParseParam  
+##  <a name="parseparam"></a>CCommandLineInfo::ParseParam  
  El marco de trabajo llama a esta función para analizar/interpretar los parámetros individuales desde la línea de comandos. La segunda versión difiere de la primera sólo en proyectos de Unicode.  
   
 ```  

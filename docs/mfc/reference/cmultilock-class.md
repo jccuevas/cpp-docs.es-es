@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMultiLock
+- AFXMT/CMultiLock
+- AFXMT/CMultiLock::CMultiLock
+- AFXMT/CMultiLock::IsLocked
+- AFXMT/CMultiLock::Lock
+- AFXMT/CMultiLock::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +87,7 @@ class CMultiLock
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxmt.h  
   
-##  <a name="a-namecmultilocka--cmultilockcmultilock"></a><a name="cmultilock"></a>CMultiLock::CMultiLock  
+##  <a name="cmultilock"></a>CMultiLock::CMultiLock  
  Construye un **CMultiLock** objeto.  
   
 ```  
@@ -105,7 +110,7 @@ CMultiLock(
 ### <a name="remarks"></a>Comentarios  
  Esta función se invoca después de crear la matriz de objetos de sincronización al que se espera. Normalmente se llama desde dentro del subproceso que se debe esperar a que uno de los objetos de sincronización esté disponible.  
   
-##  <a name="a-nameislockeda--cmultilockislocked"></a><a name="islocked"></a>CMultiLock::IsLocked  
+##  <a name="islocked"></a>CMultiLock::IsLocked  
  Determina si el objeto especificado es no señalado (no disponible).  
   
 ```  
@@ -119,7 +124,7 @@ BOOL IsLocked(DWORD dwItem);
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el objeto especificado está bloqueado; en caso contrario, 0.  
   
-##  <a name="a-namelocka--cmultilocklock"></a><a name="lock"></a>CMultiLock::Lock  
+##  <a name="lock"></a>CMultiLock::Lock  
  Llame a esta función para obtener acceso a uno o varios de los recursos controlados por los objetos de sincronización proporcionados para la **CMultiLock** constructor.  
   
 ```  
@@ -163,7 +168,7 @@ DWORD Lock(
   
  Si `Lock` no es capaz de devolver inmediatamente, esperará que no supere el número de milisegundos especificado en la *dwTimeOut* parámetro antes de devolver. Si *dwTimeOut* es **infinito**, `Lock` , no se devolverá hasta que se obtiene acceso a un objeto o una condición especificada en `dwWakeMask` se cumplió. De lo contrario, si `Lock` era capaz de adquirir un objeto de sincronización, devolverá correctamente; si no, devolverán un error.  
   
-##  <a name="a-nameunlocka--cmultilockunlock"></a><a name="unlock"></a>CMultiLock::Unlock  
+##  <a name="unlock"></a>CMultiLock::Unlock  
  Libera el objeto de sincronización que pertenecen a `CMultiLock`.  
   
 ```  

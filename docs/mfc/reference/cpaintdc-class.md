@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPaintDC
+- AFXWIN/CPaintDC
+- AFXWIN/CPaintDC::CPaintDC
+- AFXWIN/CPaintDC::m_ps
+- AFXWIN/CPaintDC::m_hWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +91,7 @@ class CPaintDC : public CDC
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h  
   
-##  <a name="a-namecpaintdca--cpaintdccpaintdc"></a><a name="cpaintdc"></a>CPaintDC::CPaintDC  
+##  <a name="cpaintdc"></a>CPaintDC::CPaintDC  
  Construye un `CPaintDC` prepara la ventana de la aplicación para dibujar el objeto y almacena el [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) estructura en el [m_ps](#m_ps) variable miembro.  
   
 ```  
@@ -104,7 +108,7 @@ explicit CPaintDC(CWnd* pWnd);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView&#97;](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  
   
-##  <a name="a-namemhwnda--cpaintdcmhwnd"></a><a name="m_hwnd"></a>CPaintDC::m_hWnd  
+##  <a name="m_hwnd"></a>CPaintDC::m_hWnd  
  El `HWND` a la que se `CPaintDC` se adjunta el objeto.  
   
 ```  
@@ -117,7 +121,7 @@ HWND m_hWnd;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView&#98;](../../mfc/codesnippet/cpp/cpaintdc-class_2.cpp)]  
   
-##  <a name="a-namempsa--cpaintdcmps"></a><a name="m_ps"></a>CPaintDC::m_ps  
+##  <a name="m_ps"></a>CPaintDC::m_ps  
  `m_ps`es una variable de miembro público del tipo [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md).  
   
 ```  

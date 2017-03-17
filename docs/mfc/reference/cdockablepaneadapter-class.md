@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDockablePaneAdapter
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::GetWrappedWnd
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::LoadState
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::SaveState
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::SetWrappedWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +79,7 @@ class CDockablePaneAdapter : public CDockablePane
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxDockablePaneAdapter.h  
   
-##  <a name="a-namegetwrappedwnda--cdockablepaneadaptergetwrappedwnd"></a><a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
+##  <a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
  Devuelve la ventana subyacente para el adaptador de un panel acoplable.  
   
 ```  
@@ -87,7 +92,7 @@ virtual CWnd* GetWrappedWnd() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función para obtener acceso a la ventana ajustada.  
   
-##  <a name="a-nameloadstatea--cdockablepaneadapterloadstate"></a><a name="loadstate"></a>CDockablePaneAdapter::LoadState  
+##  <a name="loadstate"></a>CDockablePaneAdapter::LoadState  
  Carga el estado del panel desde el registro.  
   
 ```  
@@ -111,7 +116,7 @@ virtual BOOL LoadState(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namesavestatea--cdockablepaneadaptersavestate"></a><a name="savestate"></a>CDockablePaneAdapter::SaveState  
+##  <a name="savestate"></a>CDockablePaneAdapter::SaveState  
  Guarda el estado del panel en el registro.  
   
 ```  
@@ -135,7 +140,7 @@ virtual BOOL SaveState(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namesetwrappedwnda--cdockablepaneadaptersetwrappedwnd"></a><a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
+##  <a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
  Establece la ventana subyacente para el adaptador de un panel acoplable.  
   
 ```  

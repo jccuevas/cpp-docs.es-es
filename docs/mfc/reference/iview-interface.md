@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IView
+- No header/IView
+- No header/IView::OnActivateView
+- No header/IView::OnInitialUpdate
+- No header/IView::OnUpdate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +75,7 @@ interface class IView
 ## <a name="requirements"></a>Requisitos  
  Encabezado: afxwinforms.h (definido en el ensamblado atlmfc\lib\mfcmifc80.dll)  
 
-## <a name="a-nameonactivateviewa-iviewonactivateview"></a><a name="onactivateview"></a>IView::OnActivateView  
+## <a name="onactivateview"></a>IView::OnActivateView  
 Llamado por MFC cuando una vista está activada o desactivada.
 ```
 void OnActivateView(bool activate);
@@ -80,13 +84,13 @@ void OnActivateView(bool activate);
 `activate`  
 Indica si la vista se activa o se desactiva.  
 
-## <a name="a-nameoninitialupdatea-iviewoninitialupdate"></a><a name="oninitialupdate"></a>IView:: OnInitialUpdate
+## <a name="oninitialupdate"></a>IView:: OnInitialUpdate
 Lo llama el marco de trabajo después de la vista se adjunta al documento en primer lugar, pero antes de que la vista se muestra inicialmente.
 ```
 void OnInitialUpdate();
 ```
 
-## <a name="a-nameonupdatea-iviewonupdate"></a><a name="onupdate"></a>IView::OnUpdate 
+## <a name="onupdate"></a>IView::OnUpdate 
 Llamado por MFC cuando se ha modificado el documento de la vista.  
 ```
 void OnUpdate();

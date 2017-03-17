@@ -9,8 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxdlgs/CFolderPickerDialog
 - CFolderPickerDialog
+- AFXDLGS/CFolderPickerDialog
+- AFXDLGS/CFolderPickerDialog::CFolderPickerDialog
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +79,7 @@ class CFolderPickerDialog : public CFileDialog;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdlgs.h  
   
-##  <a name="a-namecfolderpickerdialoga--cfolderpickerdialogcfolderpickerdialog"></a><a name="cfolderpickerdialog"></a>CFolderPickerDialog::CFolderPickerDialog  
+##  <a name="cfolderpickerdialog"></a>CFolderPickerDialog::CFolderPickerDialog  
  Constructor.  
   
 ```  
@@ -104,7 +105,7 @@ explicit CFolderPickerDialog(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namedtorcfolderpickerdialoga--cfolderpickerdialogcfolderpickerdialog"></a><a name="_dtorcfolderpickerdialog"></a>CFolderPickerDialog:: ~ CFolderPickerDialog  
+##  <a name="_dtorcfolderpickerdialog"></a>CFolderPickerDialog:: ~ CFolderPickerDialog  
  Destructor.  
   
 ```  

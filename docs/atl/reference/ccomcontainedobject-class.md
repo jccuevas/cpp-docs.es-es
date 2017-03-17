@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComContainedObject
+- ATLCOM/ATL::CComContainedObject
+- ATLCOM/ATL::CComContainedObject::CComContainedObject
+- ATLCOM/ATL::CComContainedObject::AddRef
+- ATLCOM/ATL::CComContainedObject::GetControllingUnknown
+- ATLCOM/ATL::CComContainedObject::QueryInterface
+- ATLCOM/ATL::CComContainedObject::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +93,7 @@ class CComContainedObject : public Base
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomcontainedobjectaddref"></a><a name="addref"></a>CComContainedObject::AddRef  
+##  <a name="addref"></a>CComContainedObject::AddRef  
  Incrementa el recuento de referencias en el objeto propietario.  
   
 ```
@@ -97,7 +103,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Valor devuelto  
  Un valor que puede ser útil para el diagnóstico o de pruebas.  
   
-##  <a name="a-nameccomcontainedobjecta--ccomcontainedobjectccomcontainedobject"></a><a name="ccomcontainedobject"></a>CComContainedObject::CComContainedObject  
+##  <a name="ccomcontainedobject"></a>CComContainedObject::CComContainedObject  
  El constructor.  
   
 ```
@@ -111,7 +117,7 @@ CComContainedObject(void* pv);
 ### <a name="remarks"></a>Comentarios  
  Conjuntos de la `m_pOuterUnknown` puntero miembro (heredan a través de la `Base` clase) a `pv`.  
   
-##  <a name="a-namedtora--ccomcontainedobjectccomcontainedobject"></a><a name="dtor"></a>CComContainedObject:: ~ CComContainedObject  
+##  <a name="dtor"></a>CComContainedObject:: ~ CComContainedObject  
  Destructor.  
   
 ```
@@ -121,7 +127,7 @@ CComContainedObject(void* pv);
 ### <a name="remarks"></a>Comentarios  
  Libera todos los recursos asignados.  
   
-##  <a name="a-namegetcontrollingunknowna--ccomcontainedobjectgetcontrollingunknown"></a><a name="getcontrollingunknown"></a>CComContainedObject::GetControllingUnknown  
+##  <a name="getcontrollingunknown"></a>CComContainedObject::GetControllingUnknown  
  Devuelve el `m_pOuterUnknown` puntero miembro (heredan a través de la *Base* clase) que contiene el objeto propietario **IUnknown**.  
   
 ```
@@ -134,7 +140,7 @@ IUnknown* GetControllingUnknown();
 ### <a name="remarks"></a>Comentarios  
  Este método puede ser virtual si `Base` ha declarado el [DECLARE_GET_CONTROLLING_UNKNOWN](http://msdn.microsoft.com/library/82b0199a-a9d5-4f95-a711-fa1ae18e1f77) (macro).  
   
-##  <a name="a-namequeryinterfacea--ccomcontainedobjectqueryinterface"></a><a name="queryinterface"></a>CComContainedObject::QueryInterface  
+##  <a name="queryinterface"></a>CComContainedObject::QueryInterface  
  Recupera un puntero a la interfaz solicitada en el objeto propietario.  
   
 ```
@@ -156,7 +162,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="return-value"></a>Valor devuelto  
  Un valor `HRESULT` estándar.  
   
-##  <a name="a-namereleasea--ccomcontainedobjectrelease"></a><a name="release"></a>CComContainedObject::Release  
+##  <a name="release"></a>CComContainedObject::Release  
  Disminuye el recuento de referencias en el objeto propietario.  
   
 ```

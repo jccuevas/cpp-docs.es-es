@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleStreamFile
+- AFXOLE/COleStreamFile
+- AFXOLE/COleStreamFile::COleStreamFile
+- AFXOLE/COleStreamFile::Attach
+- AFXOLE/COleStreamFile::CreateMemoryStream
+- AFXOLE/COleStreamFile::CreateStream
+- AFXOLE/COleStreamFile::Detach
+- AFXOLE/COleStreamFile::GetStream
+- AFXOLE/COleStreamFile::OpenStream
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +100,7 @@ class COleStreamFile : public CFile
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxole.h  
   
-##  <a name="a-nameattacha--colestreamfileattach"></a><a name="attach"></a>COleStreamFile::Attach  
+##  <a name="attach"></a>COleStreamFile::Attach  
  Asocia el flujo OLE proporcionado con el `COleStreamFile` objeto.  
   
 ```  
@@ -108,7 +116,7 @@ void Attach(LPSTREAM lpStream);
   
  Para obtener más información, consulte [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecolestreamfilea--colestreamfilecolestreamfile"></a><a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
+##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
  Crea un objeto `COleStreamFile`.  
   
 ```  
@@ -124,7 +132,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
   
  Para obtener más información, consulte [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatememorystreama--colestreamfilecreatememorystream"></a><a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
+##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
  Con seguridad crea una nueva secuencia de memoria compartida global donde un error es una situación normal y esperada.  
   
 ```  
@@ -143,7 +151,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
  Para obtener más información, consulte [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatestreama--colestreamfilecreatestream"></a><a name="createstream"></a>COleStreamFile::CreateStream  
+##  <a name="createstream"></a>COleStreamFile::CreateStream  
  Con seguridad, crea una nueva secuencia en el objeto de almacenamiento proporcionado donde un error es una situación normal y esperada.  
   
 ```  
@@ -175,7 +183,7 @@ BOOL CreateStream(
   
  Para obtener más información, consulte [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedetacha--colestreamfiledetach"></a><a name="detach"></a>COleStreamFile::Detach  
+##  <a name="detach"></a>COleStreamFile::Detach  
  Desasocia la secuencia del objeto sin cerrar la secuencia.  
   
 ```  
@@ -190,7 +198,7 @@ LPSTREAM Detach();
   
  Para obtener más información, consulte [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetstreama--colestreamfilegetstream"></a><a name="getstream"></a>COleStreamFile::GetStream  
+##  <a name="getstream"></a>COleStreamFile::GetStream  
  Llame a esta función para devolver un puntero a la secuencia actual.  
   
 ```  
@@ -200,7 +208,7 @@ IStream* GetStream() const;
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la interfaz de la secuencia actual ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
   
-##  <a name="a-nameopenstreama--colestreamfileopenstream"></a><a name="openstream"></a>COleStreamFile::OpenStream  
+##  <a name="openstream"></a>COleStreamFile::OpenStream  
  Abre una secuencia existente.  
   
 ```  

@@ -10,7 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DGeometry
-- afxrendertarget/CD2DGeometry
+- AFXRENDERTARGET/CD2DGeometry
+- AFXRENDERTARGET/CD2DGeometry::CD2DGeometry
+- AFXRENDERTARGET/CD2DGeometry::Attach
+- AFXRENDERTARGET/CD2DGeometry::CombineWithGeometry
+- AFXRENDERTARGET/CD2DGeometry::CompareWithGeometry
+- AFXRENDERTARGET/CD2DGeometry::ComputeArea
+- AFXRENDERTARGET/CD2DGeometry::ComputeLength
+- AFXRENDERTARGET/CD2DGeometry::ComputePointAtLength
+- AFXRENDERTARGET/CD2DGeometry::Destroy
+- AFXRENDERTARGET/CD2DGeometry::Detach
+- AFXRENDERTARGET/CD2DGeometry::FillContainsPoint
+- AFXRENDERTARGET/CD2DGeometry::Get
+- AFXRENDERTARGET/CD2DGeometry::GetBounds
+- AFXRENDERTARGET/CD2DGeometry::GetWidenedBounds
+- AFXRENDERTARGET/CD2DGeometry::IsValid
+- AFXRENDERTARGET/CD2DGeometry::Outline
+- AFXRENDERTARGET/CD2DGeometry::Simplify
+- AFXRENDERTARGET/CD2DGeometry::StrokeContainsPoint
+- AFXRENDERTARGET/CD2DGeometry::Tessellate
+- AFXRENDERTARGET/CD2DGeometry::Widen
+- AFXRENDERTARGET/CD2DGeometry::m_pGeometry
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,14 +123,14 @@ class CD2DGeometry : public CD2DResource;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dgeometrya--cd2dgeometrycd2dgeometry"></a><a name="_dtorcd2dgeometry"></a>CD2DGeometry:: ~ CD2DGeometry  
+##  <a name="_dtorcd2dgeometry"></a>CD2DGeometry:: ~ CD2DGeometry  
  Destructor. Se llama cuando se destruye un objeto geometry de D2D.  
   
 ```  
 virtual ~CD2DGeometry();
 ```  
   
-##  <a name="a-nameattacha--cd2dgeometryattach"></a><a name="attach"></a>CD2DGeometry::Attach  
+##  <a name="attach"></a>CD2DGeometry::Attach  
  Conexiones existentes de la interfaz de recursos para el objeto  
   
 ```  
@@ -121,7 +141,7 @@ void Attach(ID2D1Geometry* pResource);
  `pResource`  
  Interfaz de recursos existente. No puede ser NULL  
   
-##  <a name="a-namecd2dgeometrya--cd2dgeometrycd2dgeometry"></a><a name="cd2dgeometry"></a>CD2DGeometry::CD2DGeometry  
+##  <a name="cd2dgeometry"></a>CD2DGeometry::CD2DGeometry  
  Construye un objeto CD2DGeometry.  
   
 ```  
@@ -137,7 +157,7 @@ CD2DGeometry(
  `bAutoDestroy`  
  Indica que se destruirá el objeto propietario (pParentTarget).  
   
-##  <a name="a-namecombinewithgeometrya--cd2dgeometrycombinewithgeometry"></a><a name="combinewithgeometry"></a>CD2DGeometry::CombineWithGeometry  
+##  <a name="combinewithgeometry"></a>CD2DGeometry::CombineWithGeometry  
  Combina esta geometría con la geometría especificada y almacena el resultado en un ID2D1SimplifiedGeometrySink.  
   
 ```  
@@ -168,7 +188,7 @@ BOOL CombineWithGeometry(
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE.  
   
-##  <a name="a-namecomparewithgeometrya--cd2dgeometrycomparewithgeometry"></a><a name="comparewithgeometry"></a>CD2DGeometry::CompareWithGeometry  
+##  <a name="comparewithgeometry"></a>CD2DGeometry::CompareWithGeometry  
  Describe la intersección entre esta geometría y la geometría especificada. La comparación se realiza mediante la tolerancia de acoplamiento especificada.  
   
 ```  
@@ -191,7 +211,7 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE.  
   
-##  <a name="a-namecomputeareaa--cd2dgeometrycomputearea"></a><a name="computearea"></a>CD2DGeometry::ComputeArea  
+##  <a name="computearea"></a>CD2DGeometry::ComputeArea  
  Calcula el área de la geometría después de haber sido transformados por la matriz especificada y aplanada mediante la tolerancia especificada.  
   
 ```  
@@ -214,7 +234,7 @@ BOOL ComputeArea(
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE.  
   
-##  <a name="a-namecomputelengtha--cd2dgeometrycomputelength"></a><a name="computelength"></a>CD2DGeometry::ComputeLength  
+##  <a name="computelength"></a>CD2DGeometry::ComputeLength  
  Calcula la longitud de la geometría como si estuviera revertido en una línea de cada segmento.  
   
 ```  
@@ -237,7 +257,7 @@ BOOL ComputeLength(
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE.  
   
-##  <a name="a-namecomputepointatlengtha--cd2dgeometrycomputepointatlength"></a><a name="computepointatlength"></a>CD2DGeometry::ComputePointAtLength  
+##  <a name="computepointatlength"></a>CD2DGeometry::ComputePointAtLength  
  Calcula el vector de punto y tangente a la distancia especificada a lo largo de la geometría después de haber sido transformados por la matriz especificada y aplanada mediante la tolerancia especificada.  
   
 ```  
@@ -268,14 +288,14 @@ BOOL ComputePointAtLength(
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE.  
   
-##  <a name="a-namedestroya--cd2dgeometrydestroy"></a><a name="destroy"></a>CD2DGeometry::Destroy  
+##  <a name="destroy"></a>CD2DGeometry::Destroy  
  Destruye un objeto CD2DGeometry.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dgeometrydetach"></a><a name="detach"></a>CD2DGeometry::Detach  
+##  <a name="detach"></a>CD2DGeometry::Detach  
  Separa la interfaz de recursos desde el objeto  
   
 ```  
@@ -285,7 +305,7 @@ ID2D1Geometry* Detach();
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a interfaz desasociadas recursos.  
   
-##  <a name="a-namefillcontainspointa--cd2dgeometryfillcontainspoint"></a><a name="fillcontainspoint"></a>CD2DGeometry::FillContainsPoint  
+##  <a name="fillcontainspoint"></a>CD2DGeometry::FillContainsPoint  
  Indica si el área que rellena la geometría contiene el punto especificado, dado el acoplamiento tolerancia especificada.  
   
 ```  
@@ -312,7 +332,7 @@ BOOL FillContainsPoint(
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE.  
   
-##  <a name="a-namegeta--cd2dgeometryget"></a><a name="get"></a>CD2DGeometry::Get  
+##  <a name="get"></a>CD2DGeometry::Get  
  Interfaz ID2D1Geometry de devoluciones  
   
 ```  
@@ -322,7 +342,7 @@ ID2D1Geometry* Get();
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a una interfaz ID2D1Geometry o NULL si el objeto no se ha inicializado todavía.  
   
-##  <a name="a-namegetboundsa--cd2dgeometrygetbounds"></a><a name="getbounds"></a>CD2DGeometry::getBounds  
+##  <a name="getbounds"></a>CD2DGeometry::getBounds  
   
 ```   
 BOOL GetBounds(
@@ -336,7 +356,7 @@ CD2DRectF& bounds) const;
   
 ### <a name="return-value"></a>Valor devuelto  
   
-##  <a name="a-namegetwidenedboundsa--cd2dgeometrygetwidenedbounds"></a><a name="getwidenedbounds"></a>CD2DGeometry::GetWidenedBounds  
+##  <a name="getwidenedbounds"></a>CD2DGeometry::GetWidenedBounds  
  Obtiene los límites de la geometría después de que se ha ampliado por el ancho del trazo especificado y el estilo y se transforma por la matriz especificada.  
   
 ```  
@@ -367,7 +387,7 @@ BOOL GetWidenedBounds(
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE.  
   
-##  <a name="a-nameisvalida--cd2dgeometryisvalid"></a><a name="isvalid"></a>CD2DGeometry::IsValid  
+##  <a name="isvalid"></a>CD2DGeometry::IsValid  
  Comprobaciones de validez de los recursos  
   
 ```  
@@ -377,14 +397,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el recurso es válido; de lo contrario, FALSE.  
   
-##  <a name="a-namempgeometrya--cd2dgeometrympgeometry"></a><a name="m_pgeometry"></a>CD2DGeometry::m_pGeometry  
+##  <a name="m_pgeometry"></a>CD2DGeometry::m_pGeometry  
  Puntero a un ID2D1Geometry.  
   
 ```  
 ID2D1Geometry* m_pGeometry;  
 ```  
   
-##  <a name="a-nameoperatorid2d1geometrystara--cd2dgeometryoperator-id2d1geometry"></a><a name="operator_id2d1geometry_star"></a>CD2DGeometry::operator ID2D1Geometry *  
+##  <a name="operator_id2d1geometry_star"></a>CD2DGeometry::operator ID2D1Geometry *  
  Interfaz ID2D1Geometry de devoluciones  
   
 ```  
@@ -394,7 +414,7 @@ operator ID2D1Geometry*();
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a una interfaz ID2D1Geometry o NULL si el objeto no se ha inicializado todavía.  
   
-##  <a name="a-nameoutlinea--cd2dgeometryoutline"></a><a name="outline"></a>CD2DGeometry::Outline  
+##  <a name="outline"></a>CD2DGeometry::Outline  
  Calcula el contorno de geometry y escribe el resultado en un ID2D1SimplifiedGeometrySink.  
   
 ```  
@@ -417,7 +437,7 @@ BOOL Outline(
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE.  
   
-##  <a name="a-namesimplifya--cd2dgeometrysimplify"></a><a name="simplify"></a>CD2DGeometry::Simplify  
+##  <a name="simplify"></a>CD2DGeometry::Simplify  
  Crea una versión simplificada de la geometría que contiene solo líneas y curvas Bézier cúbicas (opcionalmente) y escribe el resultado en un ID2D1SimplifiedGeometrySink.  
   
 ```  
@@ -444,7 +464,7 @@ BOOL Simplify(
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE.  
   
-##  <a name="a-namestrokecontainspointa--cd2dgeometrystrokecontainspoint"></a><a name="strokecontainspoint"></a>CD2DGeometry::StrokeContainsPoint  
+##  <a name="strokecontainspoint"></a>CD2DGeometry::StrokeContainsPoint  
  Determina si el trazo de la geometría contiene el punto especificado, dado el grosor del trazo especificado, el estilo y la transformación.  
   
 ```  
@@ -479,7 +499,7 @@ BOOL StrokeContainsPoint(
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE.  
   
-##  <a name="a-nametessellatea--cd2dgeometrytessellate"></a><a name="tessellate"></a>CD2DGeometry::Tessellate  
+##  <a name="tessellate"></a>CD2DGeometry::Tessellate  
  Crea un conjunto de triángulos hacia la derecha que cubren la geometría después de que se haya transformado mediante la matriz especificada y aplanada mediante la tolerancia especificada.  
   
 ```  
@@ -502,7 +522,7 @@ BOOL Tessellate(
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE.  
   
-##  <a name="a-namewidena--cd2dgeometrywiden"></a><a name="widen"></a>CD2DGeometry::Widen  
+##  <a name="widen"></a>CD2DGeometry::Widen  
  Amplía la geometría con el trazo especificado y escribe el resultado en un ID2D1SimplifiedGeometrySink después de haber sido transformados por la matriz especificada y aplanada mediante la tolerancia especificada.  
   
 ```  

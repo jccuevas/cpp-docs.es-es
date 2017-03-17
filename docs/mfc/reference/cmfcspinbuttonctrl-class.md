@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCSpinButtonCtrl
+- AFXSPINBUTTONCTRL/CMFCSpinButtonCtrl
+- AFXSPINBUTTONCTRL/CMFCSpinButtonCtrl::OnDraw
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +87,7 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxspinbuttonctrl.h  
   
-##  <a name="a-nameondrawa--cmfcspinbuttonctrlondraw"></a><a name="ondraw"></a>CMFCSpinButtonCtrl::OnDraw  
+##  <a name="ondraw"></a>CMFCSpinButtonCtrl::OnDraw  
  Vuelve a dibujar el control de botón de número actual.  
   
 ```  
