@@ -2,9 +2,9 @@
 layout: LandingPage
 title: Acceso a datos en Visual C++
 translationtype: Human Translation
-ms.sourcegitcommit: d4b97ed874b145f9c6d9a9536476243bba0fd1c1
-ms.openlocfilehash: bcec6bba72b48c8fc766c2d74dc31d8e47a239f9
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: f9e63f47a8df69b52a6a12688e84602981d20dae
+ms.openlocfilehash: 807cf772d632f66f74a210985ff611fc31ee594a
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="data-access-in-visual-c"></a>Acceso a datos en Visual C++
@@ -203,6 +203,7 @@ Desde 2011, Microsoft cuenta con ODBC como el estándar de conexión para las ap
                 <div class="card">
                     <div class="cardText">
                         <h3><a href="https://www.microsoft.com/download/details.aspx?id=53339" title="Microsoft® ODBC Driver 13.1 for SQL Server® - Windows Download Page">Controlador ODBC 13.1 para SQL Server</a></h3>
+                        <p>Microsoft ODBC Driver 13.1 for SQL Server es una única biblioteca de vínculos dinámicos (DLL) que incluye compatibilidad con entornos de ejecución de aplicaciones que usen API de código nativo para conectarse a Microsoft SQL Server 2008, SQL Server 2008 R2, SQL Server 2012, SQL Server 2016, Analytics Platform System, Azure SQL Database y Azure SQL Data Warehouse. Puede descargar el controlador aquí.</p>
                     </div>
                 </div>
             </div>
