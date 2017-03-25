@@ -9,7 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::task_completion_event
+- task_completion_event
+- PPLTASKS/concurrency::task_completion_event
+- PPLTASKS/concurrency::task_completion_event::task_completion_event
+- PPLTASKS/concurrency::task_completion_event::set
+- PPLTASKS/concurrency::task_completion_event::set_exception
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 2cd3e7381402cc65f3220010a71c969cda1c7e2d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: b37ecb250c0794370fc586f0463f93023ca47603
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event (Clase)
@@ -64,14 +68,14 @@ class task_completion_event<void>;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[task_completion_event (Constructor)](#ctor)|Construye un objeto `task_completion_event`.|  
+|[task_completion_event](#ctor)|Construye un objeto `task_completion_event`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[establecer (método)](#set)|Sobrecargado. Establece el evento de finalización de la tarea.|  
-|[set_exception (método)](#set_exception)|Sobrecargado. Propaga una excepción a todas las tareas asociadas con este evento.|  
+|[set](#set)|Sobrecargado. Establece el evento de finalización de la tarea.|  
+|[set_exception](#set_exception)|Sobrecargado. Propaga una excepción a todas las tareas asociadas con este evento.|  
   
 ## <a name="remarks"></a>Comentarios  
  Use una tarea creada a partir de un evento de finalización de la tarea cuando su escenario requiere la creación de una tarea que completar, y así tendrá las continuaciones programadas para su ejecución en el futuro. `task_completion_event` debe tener el mismo tipo que la tarea que se crea, así como poder llamar al método set en el evento de finalización de la tarea con un valor de ese tipo, lo que provocará que se complete la tarea asociada y proporcionará ese valor como resultado de sus continuaciones.  
@@ -88,7 +92,7 @@ class task_completion_event<void>;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>conjunto 
+##  <a name="set"></a>conjunto 
 
  Establece el evento de finalización de la tarea.  
   
@@ -108,7 +112,7 @@ bool set() const ;
 ### <a name="remarks"></a>Comentarios  
  En presencia de varios o las llamadas simultáneas a `set`, solo la primera llamada se realizará correctamente y su resultado (si existe) se almacenarán en el evento de finalización de tarea. Los conjuntos restantes se omiten y el método devolverá false. Cuando establece un evento de finalización de la tarea, todas las tareas se crean desde que inmediatamente se completará el evento y sus continuaciones, si los hay, se programará. Tareas de objetos de finalización que tienen un `_ResultType` distinto de `void` pasará el valor de sus continuaciones.  
   
-##  <a name="a-namesetexceptiona-setexception"></a><a name="set_exception"></a>set_exception 
+##  <a name="set_exception"></a>set_exception 
 
  Propaga una excepción a todas las tareas asociadas con este evento.  
   
@@ -126,7 +130,7 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
   
 ### <a name="return-value"></a>Valor devuelto  
   
-##  <a name="a-namectora-taskcompletionevent"></a><a name="ctor"></a>task_completion_event 
+##  <a name="ctor"></a>task_completion_event 
 
  Construye un objeto `task_completion_event`.  
   
@@ -135,5 +139,5 @@ task_completion_event();
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [simultaneidad Namespace](concurrency-namespace.md)
+ [concurrency (espacio de nombres)](concurrency-namespace.md)
 

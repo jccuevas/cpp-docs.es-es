@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::event
+- event
+- CONCRT/concurrency::event
+- CONCRT/concurrency::event::reset
+- CONCRT/concurrency::event::set
+- CONCRT/concurrency::event::wait
+- CONCRT/concurrency::event::wait_for_multiple
+- CONCRT/concurrency::event::timeout_infinite
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: abda6512f391b59cb48c8e96a489714ee117ae68
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f858bfad08ca8d62c42556c54b505908b7122569
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="event-class"></a>event (Clase)
@@ -60,16 +66,16 @@ class event;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[Reset (método)](#reset)|Restablece el evento a un estado no señalado.|  
-|[establecer (método)](#set)|Señala el evento.|  
-|[Wait (método)](#wait)|Espera a que se señale el evento.|  
-|[wait_for_multiple (método)](#wait_for_multiple)|Espera a que se señalen varios eventos.|  
+|[reset](#reset)|Restablece el evento a un estado no señalado.|  
+|[set](#set)|Señala el evento.|  
+|[esperar](#wait)|Espera a que se señale el evento.|  
+|[wait_for_multiple](#wait_for_multiple)|Espera a que se señalen varios eventos.|  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[timeout_infinite (constante)](#timeout_infinite)|Valor que indica que una espera nunca debe agotar el tiempo de espera.|  
+|[timeout_infinite](#timeout_infinite)|Valor que indica que una espera nunca debe agotar el tiempo de espera.|  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [estructuras de datos de sincronización](../../../parallel/concrt/synchronization-data-structures.md).  
@@ -82,7 +88,7 @@ class event;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-namectora-event"></a><a name="ctor"></a>evento 
+##  <a name="ctor"></a>evento 
 
  Construye un nuevo evento.  
   
@@ -92,7 +98,7 @@ _CRTIMP event();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namedtora-event"></a><a name="dtor"></a>~ eventos 
+##  <a name="dtor"></a>~ eventos 
 
  Destruye un evento.  
   
@@ -103,7 +109,7 @@ _CRTIMP event();
 ### <a name="remarks"></a>Comentarios  
  Se espera que no haya ningún subproceso esperando en el evento cuando el destructor se ejecuta. Permitir que el evento se destruya con subprocesos que todavía esperan da como resultado un comportamiento no definido.  
   
-##  <a name="a-namereseta-reset"></a><a name="reset"></a>Restablecer 
+##  <a name="reset"></a>Restablecer 
 
  Restablece el evento a un estado no señalado.  
   
@@ -111,7 +117,7 @@ _CRTIMP event();
 void reset();
 ```  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>conjunto 
+##  <a name="set"></a>conjunto 
 
  Señala el evento.  
   
@@ -122,7 +128,7 @@ void set();
 ### <a name="remarks"></a>Comentarios  
  Señalar el evento puede producir un número arbitrario de contextos que esperan en el evento para que se convierta en ejecutable.  
   
-##  <a name="a-nametimeoutinfinitea-timeoutinfinite"></a><a name="timeout_infinite"></a>timeout_infinite 
+##  <a name="timeout_infinite"></a>timeout_infinite 
 
  Valor que indica que una espera nunca debe agotar el tiempo de espera.  
   
@@ -130,7 +136,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>esperar 
+##  <a name="wait"></a>esperar 
 
  Espera a que se señale el evento.  
   
@@ -148,7 +154,7 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 > [!IMPORTANT]
 >  En una aplicación de la [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)], no llame a `wait` en el subproceso ASTA puesto que esta llamada puede bloquear el subproceso actual y puede producir que la aplicación deje de responder.  
   
-##  <a name="a-namewaitformultiplea-waitformultiple"></a><a name="wait_for_multiple"></a>wait_for_multiple 
+##  <a name="wait_for_multiple"></a>wait_for_multiple 
 
  Espera a que se señalen varios eventos.  
   
@@ -183,5 +189,5 @@ static size_t __cdecl wait_for_multiple(
 >  En una aplicación de la [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)], no llame a `wait_for_multiple` en el subproceso ASTA puesto que esta llamada puede bloquear el subproceso actual y puede producir que la aplicación deje de responder.  
   
 ## <a name="see-also"></a>Vea también  
- [simultaneidad Namespace](concurrency-namespace.md)
+ [concurrency (espacio de nombres)](concurrency-namespace.md)
 

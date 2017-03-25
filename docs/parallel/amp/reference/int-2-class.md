@@ -56,9 +56,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 1fb9eba97f469aa407dfe3287a216ceb8f707faf
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 58eb9db3ee67830d6f69028c6c83be8640450205
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="int2-class"></a>int_2 (Clase)
@@ -88,38 +88,38 @@ class int_2;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|Método int_2::get_x||  
-|Método int_2::get_xy||  
-|Método int_2::get_y||  
-|Método int_2::get_yx||  
-|Método int_2::ref_g||  
-|Método int_2::ref_r||  
-|Método int_2::ref_x||  
-|Método int_2::ref_y||  
-|Método int_2::set_x||  
-|Método int_2::set_xy||  
-|Método int_2::set_y||  
-|Método int_2::set_yx||  
+|int_2:: get_X||  
+|int_2:: get_xy||  
+|int_2:: get_Y||  
+|int_2:: get_yx||  
+|int_2:: ref_g||  
+|int_2:: ref_r||  
+|int_2:: ref_x||  
+|int_2:: ref_y||  
+|int_2:: set_X||  
+|int_2:: set_xy||  
+|int_2:: set_y||  
+|int_2:: set_yx||  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|Operador int_2::operator-||  
-|Operador int_2::operator--||  
-|Operador int_2::operator%=||  
-|Operador int_2::operator&=||  
-|Operador int_2::operator*=||  
-|Operador int_2::operator/=||  
-|Operador int_2::operator^=||  
-|operador int_2:: | = (operador)||  
-|Operador int_2::operator~||  
-|Operador int_2::operator++||  
-|Operador int_2::operator+=||  
-|operador int_2::\<= (operador)||  
-|Operador int_2::operator=||  
-|Operador int_2::operator-=||  
-|operador int_2:: >> = (operador)||  
+|operador int_2::-||  
+|operador int_2::--||  
+|operador int_2:: % =||  
+|operador int_2:: aspecto =||  
+|operador int_2:: * =||  
+|operador int_2:: / =||  
+|operador int_2:: ^ =||  
+|operador int_2:: | =||  
+|operador int_2:: ~||  
+|operador int_2:: ++||  
+|operador int_2:: +=||  
+|operador int_2::\<=||  
+|operador int_2:: =||  
+|operador int_2:: =||  
+|operador int_2:: >> =||  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
@@ -131,14 +131,14 @@ class int_2;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|Miembro de datos int_2::g||  
-|Miembro de datos int_2::gr||  
-|Miembro de datos int_2::r||  
-|Miembro de datos int_2::rg||  
-|Miembro de datos int_2::x||  
-|Miembro de datos int_2::xy||  
-|Miembro de datos int_2::y||  
-|Miembro de datos int_2::yx||  
+|int_2:: g||  
+|int_2:: GR||  
+|int_2:: r||  
+|int_2:: RG||  
+|int_2:: x||  
+|int_2:: XY||  
+|int_2:: y||  
+|int_2:: YX||  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `int_2`  
@@ -148,7 +148,7 @@ class int_2;
   
  **Namespace:** Graphics  
   
-##  <a name="a-namectora-int2"></a><a name="ctor"></a>int_2 
+##  <a name="ctor"></a>int_2 
 
  El constructor predeterminado, inicializa todos los elementos con 0.  
   
@@ -211,12 +211,12 @@ explicit inline int_2(
  `_Other`  
  Objeto utilizado para inicializar.  
   
-##  <a name="a-nameint2sizea-size"></a><a name="int_2__size"></a>tamaño 
+##  <a name="int_2__size"></a>tamaño 
 
 ```  
 static const int size = 2;  
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
 

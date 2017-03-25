@@ -6,27 +6,39 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- CONCRT/concurrency::Agents_EventType
+- CONCRT/concurrency::Concrt_TraceFlags
+- CONCRT/concurrency::CriticalRegionType
+- CONCRT/concurrency::PolicyElementKey
+- CONCRT/concurrency::SchedulerType
+- CONCRT/concurrency::SwitchingProxyState
+- CONCRT/concurrency::WinRTInitializationType
+- CONCRT/concurrency::join_type
+- CONCRT/concurrency::message_status Enumeration
+dev_langs:
+- C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 8f7488ff07c9789e2d5f35056de390a5bc464f56
-ms.openlocfilehash: ff187e827b2dd979466b746eee297235e6a6c0ca
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 7589f0054e9393f938bf69d4e1751202cbc02456
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrency-namespace-enums"></a>enumeraciones del espacio de nombres de simultaneidad
 ||||  
 |-|-|-|  
-|[Agents_EventType (enumeración)](#agents_eventtype)|[ConcRT_EventType (enumeración)](#concrt_eventtype)|[Concrt_TraceFlags (enumeración)](#concrt_traceflags)|  
-|[CriticalRegionType (enumeración)](#criticalregiontype)|[DynamicProgressFeedbackType (enumeración)](#dynamicprogressfeedbacktype)|[PolicyElementKey (enumeración)](#policyelementkey)|  
-|[SchedulerType (enumeración)](#schedulertype)|[SchedulingProtocolType (enumeración)](#schedulingprotocoltype)|[SwitchingProxyState (enumeración)](#switchingproxystate)|  
-|[WinRTInitializationType (enumeración)](#winrtinitializationtype)|[agent_status (enumeración)](#agent_status)|[join_type (enumeración)](#join_type)|  
-|[message_status (enumeración)](#message_status)|[task_group_status (enumeración)](#task_group_status)|  
+|[Agents_EventType](#agents_eventtype)|[ConcRT_EventType](#concrt_eventtype)|[Concrt_TraceFlags](#concrt_traceflags)|  
+|[CriticalRegionType](#criticalregiontype)|[DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)|[PolicyElementKey](#policyelementkey)|  
+|[SchedulerType](#schedulertype)|[SchedulingProtocolType](#schedulingprotocoltype)|[SwitchingProxyState](#switchingproxystate)|  
+|[WinRTInitializationType](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|  
+|[message_status](#message_status)|[task_group_status](#task_group_status)|  
   
-##  <a name="a-nameagentstatusa--agentstatus-enumeration"></a><a name="agent_status"></a>agent_status (enumeración)  
+##  <a name="agent_status"></a>agent_status (enumeración)  
  Los estados válidos para un `agent`.  
   
 ```
@@ -48,7 +60,7 @@ enum agent_status;
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** concrt.h
 
-##  <a name="a-nameagentseventtypea--agentseventtype-enumeration"></a><a name="agents_eventtype"></a>Agents_EventType (enumeración)  
+##  <a name="agents_eventtype"></a>Agents_EventType (enumeración)  
  Los tipos de eventos a los que se puede realiza un seguimiento utilizando la funcionalidad de seguimiento proporcionada por la Biblioteca de agentes.  
   
 ```
@@ -71,7 +83,7 @@ enum Agents_EventType;
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** concrt.h
 
-##  <a name="a-nameconcrteventtypea--concrteventtype-enumeration"></a><a name="concrt_eventtype"></a>ConcRT_EventType (enumeración)  
+##  <a name="concrt_eventtype"></a>ConcRT_EventType (enumeración)  
  Los tipos de eventos a los que se puede realizar un seguimiento utilizando la funcionalidad de seguimiento proporcionada por el runtime de simultaneidad.  
   
 ```
@@ -92,9 +104,9 @@ enum ConcRT_EventType;
 |`CONCRT_EVENT_YIELD`|Un tipo de evento que representa la acción de obtención de un contexto.|  
   
 ### <a name="requirements"></a>Requisitos  
- **Encabezado:** concrt.h
+ **Encabezado:** concrt.h  **Namespace:** simultaneidad
 
-##  <a name="a-nameconcrttraceflagsa--concrttraceflags-enumeration"></a><a name="concrt_traceflags"></a>Concrt_TraceFlags (enumeración)  
+##  <a name="concrt_traceflags"></a>Concrt_TraceFlags (enumeración)  
  Marcas de seguimiento para los tipos de evento  
   
 ```
@@ -115,7 +127,7 @@ enum Concrt_TraceFlags;
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** concrt.h
 
-##  <a name="a-namecriticalregiontypea--criticalregiontype-enumeration"></a><a name="criticalregiontype"></a>CriticalRegionType (enumeración)  
+##  <a name="criticalregiontype"></a>CriticalRegionType (enumeración)  
  El tipo de región crítica dentro del que se encuentra un contexto.  
   
 ```
@@ -132,8 +144,8 @@ enum CriticalRegionType;
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** concrtrm.h 
 
-##  <a name="a-namedynamicprogressfeedbacktypea--dynamicprogressfeedbacktype-enumeration"></a><a name="dynamicprogressfeedbacktype"></a>DynamicProgressFeedbackType (enumeración)  
- La usa la directiva `DynamicProgressFeedback` para describir si los recursos para el programador se volverán a equilibrar según la información estadística recopilada desde el programador, o únicamente se basarán en procesadores virtuales que entran y salen del estado de inactividad a través de llamadas a los métodos `Activate` y `Deactivate` en la interfaz `IVirtualProcessorRoot`. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey (enumeración)](concurrency-namespace-enums.md).  
+##  <a name="dynamicprogressfeedbacktype"></a>DynamicProgressFeedbackType (enumeración)  
+ La usa la directiva `DynamicProgressFeedback` para describir si los recursos para el programador se volverán a equilibrar según la información estadística recopilada desde el programador, o únicamente se basarán en procesadores virtuales que entran y salen del estado de inactividad a través de llamadas a los métodos `Activate` y `Deactivate` en la interfaz `IVirtualProcessorRoot`. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
 enum DynamicProgressFeedbackType;
@@ -144,7 +156,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|  
 |`ProgressFeedbackDisabled`|El programador no recopila información de progreso. Reajuste se hace basado únicamente en el nivel de suscripción del subproceso de hardware subyacente. Para obtener más información sobre niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Este valor está reservado para su uso en tiempo de ejecución.|  
 |`ProgressFeedbackEnabled`|El programador recopila información de progreso y lo pasa al administrador de recursos. El Administrador de recursos usará esta información estadística para equilibrar los recursos en nombre del programador además del nivel de suscripción del subproceso de hardware subyacente. Para obtener más información sobre niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).|  
-##  <a name="a-namejointypea--jointype-enumeration"></a><a name="join_type"></a>join_type (enumeración)  
+##  <a name="join_type"></a>join_type (enumeración)  
  El tipo de un bloque de mensajería `join`.  
   
 ```
@@ -160,7 +172,7 @@ enum join_type;
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** agents.h  
 
-##  <a name="a-namemessagestatusa--messagestatus-enumeration"></a><a name="message_status"></a>message_status (enumeración)  
+##  <a name="message_status"></a>message_status (enumeración)  
  Las respuestas válidas para una oferta de un objeto `message` a un bloque.  
   
 ```
@@ -178,7 +190,7 @@ enum message_status;
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** agents.h  
 
-##  <a name="a-namepolicyelementkeya--policyelementkey-enumeration"></a><a name="policyelementkey"></a>PolicyElementKey (enumeración)  
+##  <a name="policyelementkey"></a>PolicyElementKey (enumeración)  
  Claves de directiva que describen aspectos de comportamiento del programador. Cada elemento de directiva se describe mediante un par clave-valor. Para obtener más información acerca de las directivas del programador y su impacto en los programadores, vea [programador de tareas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
 ```
@@ -190,21 +202,21 @@ enum PolicyElementKey;
 |----------|-----------------|  
 |`ContextPriority`|La prioridad del subproceso de sistema operativo de cada contexto en el programador. Si esta clave se establece en el valor `INHERIT_THREAD_PRIORITY` los contextos en el programador heredarán la prioridad del subproceso que creó el programador.<br /><br /> Valores válidos: cualquiera de los valores válidos para las ventanas `SetThreadPriority` función y el valor especial`INHERIT_THREAD_PRIORITY`<br /><br /> Valor predeterminado:`THREAD_PRIORITY_NORMAL`|  
 |`ContextStackSize`|El tamaño de pila reservado de cada contexto en el programador en kilobytes.<br /><br /> Valores válidos: enteros positivos<br /><br /> Valor predeterminado: `0`, que indica que se pueden utilizar valor predeterminado del proceso para el tamaño de la pila.|  
-|`DynamicProgressFeedback`|Determina si los recursos para el programador se volverán a equilibrar según la información estadística recopilada desde el programador o solo se basarán en el nivel de suscripción de subprocesos de hardware subyacentes. Para obtener más información, consulte [DynamicProgressFeedbackType (enumeración)](#dynamicprogressfeedbacktype).<br /><br /> Valores válidos: un miembro de la `DynamicProgressFeedbackType` (enumeración), ya sea `ProgressFeedbackEnabled` o`ProgressFeedbackDisabled`<br /><br /> Valor predeterminado:`ProgressFeedbackEnabled`|  
+|`DynamicProgressFeedback`|Determina si los recursos para el programador se volverán a equilibrar según la información estadística recopilada desde el programador o solo se basarán en el nivel de suscripción de subprocesos de hardware subyacentes. Para obtener más información, consulte [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype).<br /><br /> Valores válidos: un miembro de la `DynamicProgressFeedbackType` (enumeración), ya sea `ProgressFeedbackEnabled` o`ProgressFeedbackDisabled`<br /><br /> Valor predeterminado:`ProgressFeedbackEnabled`|  
 |`LocalContextCacheSize`|Cuando el `SchedulingProtocol` clave de directiva se establece en el valor `EnhanceScheduleGroupLocality`, especifica el número máximo de contextos ejecutables que pueden almacenarse en caché por colas locales del procesador virtual. Normalmente, estos contextos se ejecutarán en orden de último en el primero en salir (LIFO) en el procesador virtual que provocó que se convierta en ejecutable. Tenga en cuenta que esta clave de directiva no tiene ningún significado cuando la `SchedulingProtocol` clave se establece en el valor `EnhanceForwardProgress`.<br /><br /> Valores válidos: enteros no negativos<br /><br /> Valor predeterminado:`8`|  
 |`MaxConcurrency`|Simultaneidad máximo nivel deseado por el programador. El Administrador de recursos intentará asignar inicialmente este a muchos procesadores virtuales. El valor especial [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica que el nivel de simultaneidad deseado es el mismo que el número de subprocesos de hardware en el equipo. Si el valor especificado para `MinConcurrency` es mayor que el número de subprocesos de hardware en el equipo y `MaxConcurrency` se especifica como `MaxExecutionResources`, el valor de `MaxConcurrency` se genera para que coincida con lo que se establece para `MinConcurrency`.<br /><br /> Valores válidos: enteros positivos y el valor especial`MaxExecutionResources`<br /><br /> Valor predeterminado:`MaxExecutionResources`|  
 |`MaxPolicyElementKey`|La clave del elemento de directiva máxima. No es una clave de elemento válido.|  
 |`MinConcurrency`|El nivel de simultaneidad mínimo que el Administrador de recursos debe proporcionar al programador. El número de procesadores virtuales asignados a un programador nunca pasará por debajo del mínimo. El valor especial [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica que el nivel de simultaneidad mínimo es el mismo que el número de subprocesos de hardware en el equipo. Si el valor especificado para `MaxConcurrency` es menor que el número de subprocesos de hardware en el equipo y `MinConcurrency` se especifica como `MaxExecutionResources`, el valor de `MinConcurrency` se reduce para que coincida con lo que se establece para `MaxConcurrency`.<br /><br /> Valores válidos: enteros no negativos y el valor especial `MaxExecutionResources`. Tenga en cuenta que para las directivas del programador para la construcción de los programadores del Runtime de simultaneidad, el valor `0` no es válido.<br /><br /> Valor predeterminado:`1`|  
-|`SchedulerKind`|El tipo de subprocesos que el programador utilizará para contextos de ejecución subyacentes. Para obtener más información, consulte [SchedulerType (enumeración)](#schedulertype).<br /><br /> Valores válidos: un miembro de la `SchedulerType` enumeración, por ejemplo,`ThreadScheduler`<br /><br /> Valor predeterminado: `ThreadScheduler`. Esto se traduce a subprocesos de Win32 en todos los sistemas operativos.|  
-|`SchedulingProtocol`|Describe qué algoritmo de programación utilizará el programador. Para obtener más información, consulte [SchedulingProtocolType (enumeración)](#schedulingprotocoltype).<br /><br /> Valores válidos: un miembro de la `SchedulingProtocolType` (enumeración), ya sea `EnhanceScheduleGroupLocality` o`EnhanceForwardProgress`<br /><br /> Valor predeterminado:`EnhanceScheduleGroupLocality`|  
+|`SchedulerKind`|El tipo de subprocesos que el programador utilizará para contextos de ejecución subyacentes. Para obtener más información, consulte [SchedulerType](#schedulertype).<br /><br /> Valores válidos: un miembro de la `SchedulerType` enumeración, por ejemplo,`ThreadScheduler`<br /><br /> Valor predeterminado: `ThreadScheduler`. Esto se traduce a subprocesos de Win32 en todos los sistemas operativos.|  
+|`SchedulingProtocol`|Describe qué algoritmo de programación utilizará el programador. Para obtener más información, consulte [SchedulingProtocolType](#schedulingprotocoltype).<br /><br /> Valores válidos: un miembro de la `SchedulingProtocolType` (enumeración), ya sea `EnhanceScheduleGroupLocality` o`EnhanceForwardProgress`<br /><br /> Valor predeterminado:`EnhanceScheduleGroupLocality`|  
 |`TargetOversubscriptionFactor`|Número provisional de procesadores virtuales por subproceso de hardware. El factor de la suscripción excesiva puede aumentarse el Administrador de recursos, si es necesario, para satisfacer `MaxConcurrency` con los subprocesos de hardware en el equipo.<br /><br /> Valores válidos: enteros positivos<br /><br /> Valor predeterminado:`1`|  
 |`WinRTInitialization`||  
   
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** concrt.h  
 
-##  <a name="a-nameschedulertypea--schedulertype-enumeration"></a><a name="schedulertype"></a>SchedulerType (enumeración)  
- Utilizado por la directiva `SchedulerKind` para describir el tipo de subprocesos que el programador debería usar para contextos de ejecución subyacentes. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey (enumeración)](concurrency-namespace-enums.md).  
+##  <a name="schedulertype"></a>SchedulerType (enumeración)  
+ Utilizado por la directiva `SchedulerKind` para describir el tipo de subprocesos que el programador debería usar para contextos de ejecución subyacentes. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
 enum SchedulerType;
@@ -220,8 +232,8 @@ enum SchedulerType;
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** concrt.h  
   
-##  <a name="a-nameschedulingprotocoltypea--schedulingprotocoltype-enumeration"></a><a name="schedulingprotocoltype"></a>SchedulingProtocolType (enumeración)  
- La usa la directiva `SchedulingProtocol` para describir el algoritmo de programación que utilizará el programador. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey (enumeración)](concurrency-namespace-enums.md).  
+##  <a name="schedulingprotocoltype"></a>SchedulingProtocolType (enumeración)  
+ La usa la directiva `SchedulingProtocol` para describir el algoritmo de programación que utilizará el programador. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
 enum SchedulingProtocolType;
@@ -236,7 +248,7 @@ enum SchedulingProtocolType;
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** concrt.h  
  
-##  <a name="a-nameswitchingproxystatea--switchingproxystate-enumeration"></a><a name="switchingproxystate"></a>SwitchingProxyState (enumeración)  
+##  <a name="switchingproxystate"></a>SwitchingProxyState (enumeración)  
  Se usa para denotar el estado en el que se encuentra un proxy del subproceso, cuando se ejecuta un cambio de contexto cooperativo en un proxy del subproceso diferente.  
   
 ```
@@ -255,7 +267,7 @@ enum SwitchingProxyState;
   
  Para obtener más información sobre el uso de este tipo, consulte [IThreadProxy:: SwitchTo](ithreadproxy-structure.md#switchto).  
   
-##  <a name="a-nametaskgroupstatusa--taskgroupstatus-enumeration"></a><a name="task_group_status"></a>task_group_status (enumeración)  
+##  <a name="task_group_status"></a>task_group_status (enumeración)  
  Describe el estado de ejecución de un objeto `task_group` o `structured_task_group`. Numeroso métodos que esperan tareas programadas para que se complete un grupo de tareas, devuelven un valor de este tipo.  
   
 ```
@@ -272,8 +284,8 @@ enum task_group_status;
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** pplinterface.h  
 
-##  <a name="a-namewinrtinitializationtypea--winrtinitializationtype-enumeration"></a><a name="winrtinitializationtype"></a>WinRTInitializationType (enumeración)  
- La utiliza la directiva `WinRTInitialization` para describir si se iniciará y cómo se iniciará Windows en tiempo de ejecución en subprocesos del programador para una aplicación que se ejecuta en sistemas operativos con Windows 8 o una versión posterior. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey (enumeración)](concurrency-namespace-enums.md).  
+##  <a name="winrtinitializationtype"></a>WinRTInitializationType (enumeración)  
+ La utiliza la directiva `WinRTInitialization` para describir si se iniciará y cómo se iniciará Windows en tiempo de ejecución en subprocesos del programador para una aplicación que se ejecuta en sistemas operativos con Windows 8 o una versión posterior. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
 enum WinRTInitializationType;
@@ -289,5 +301,5 @@ enum WinRTInitializationType;
  **Encabezado:** concrt.h  
 
 ## <a name="see-also"></a>Vea también  
- [simultaneidad Namespace](concurrency-namespace.md)
+ [concurrency (espacio de nombres)](concurrency-namespace.md)
 

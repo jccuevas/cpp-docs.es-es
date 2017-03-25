@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::ScheduleGroup
+- ScheduleGroup
+- CONCRT/concurrency::ScheduleGroup
+- CONCRT/concurrency::ScheduleGroup::Id
+- CONCRT/concurrency::ScheduleGroup::Reference
+- CONCRT/concurrency::ScheduleGroup::Release
+- CONCRT/concurrency::ScheduleGroup::ScheduleTask
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 424b2f53f39bce57c85e44f0df54928acdac399a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: dc7a78fd135d56e1243c43672172e433652e34e2
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup (Clase)
@@ -60,10 +65,10 @@ class ScheduleGroup;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[ID (método)](#id)|Devuelve un identificador para el grupo de programación que es único dentro del programador al que pertenece el grupo.|  
-|[Reference (método)](#reference)|Incrementa el contador de referencias del grupo de programación.|  
-|[Release (método)](#release)|Disminuye el contador de referencias del grupo de programación.|  
-|[ScheduleTask (método)](#scheduletask)|Programa una tarea ligera dentro del grupo de programación.|  
+|[Id.](#id)|Devuelve un identificador para el grupo de programación que es único dentro del programador al que pertenece el grupo.|  
+|[Referencia](#reference)|Incrementa el contador de referencias del grupo de programación.|  
+|[Release](#release)|Disminuye el contador de referencias del grupo de programación.|  
+|[ScheduleTask](#scheduletask)|Programa una tarea ligera dentro del grupo de programación.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `ScheduleGroup`  
@@ -73,7 +78,7 @@ class ScheduleGroup;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>Id. 
+##  <a name="id"></a>Id. 
 
  Devuelve un identificador para el grupo de programación que es único dentro del programador al que pertenece el grupo.  
   
@@ -84,7 +89,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>Valor devuelto  
  Un identificador para el grupo de programación que es único dentro del programador al que pertenece el grupo.  
   
-##  <a name="a-nameoperatordeletea-operator-delete"></a><a name="operator_delete"></a>delete (operador) 
+##  <a name="operator_delete"></a>delete (operador) 
 
  Un `ScheduleGroup` objeto se destruye internamente por el tiempo de ejecución cuando se liberan todas las referencias externas a él. No se puede eliminar explícitamente.  
   
@@ -103,7 +108,7 @@ void operator delete(
  `_PObject`  
  Un puntero al objeto que se va a eliminar.  
   
-##  <a name="a-namereferencea-reference"></a><a name="reference"></a>Referencia 
+##  <a name="reference"></a>Referencia 
 
  Incrementa el contador de referencias del grupo de programación.  
   
@@ -117,7 +122,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="remarks"></a>Comentarios  
  Normalmente, esto se utiliza para administrar la duración del grupo de programación para la composición. Cuando el recuento de referencias de un grupo de programación llega a cero, se elimina el grupo de programación en tiempo de ejecución. Un grupo de programación creado mediante el [CurrentScheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) (método), o la [Scheduler:: CreateScheduleGroup](scheduler-class.md#createschedulegroup) método empieza con un recuento de referencias de uno.  
   
-##  <a name="a-namereleasea-release"></a><a name="release"></a>Versión 
+##  <a name="release"></a>Versión 
 
  Disminuye el contador de referencias del grupo de programación.  
   
@@ -133,13 +138,13 @@ virtual unsigned int Release() = 0;
   
  Un grupo de programación está asociado con una instancia del programador determinada. Debe asegurarse de que todas las referencias al grupo de programación se liberan antes de que se liberan todas las referencias al programador, porque pueden provocar en el programador que se va a destruir. Hacer lo contrario da como resultado un comportamiento indefinido.  
   
-##  <a name="a-namedtora-schedulegroup"></a><a name="dtor"></a>~ ScheduleGroup 
+##  <a name="dtor"></a>~ ScheduleGroup 
 
 ```
 virtual ~ScheduleGroup();
 ```  
   
-##  <a name="a-namescheduletaska-scheduletask"></a><a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a>ScheduleTask 
 
  Programa una tarea ligera dentro del grupo de programación.  
   

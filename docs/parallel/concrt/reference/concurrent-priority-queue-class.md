@@ -9,7 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concurrent_priority_queue/concurrency::concurrent_priority_queue
+- concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::clear
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::empty
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::get_allocator
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::push
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::size
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::swap
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::try_pop
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +43,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 59bbd25f78294e1363b8acb49e45f364a9ae026e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 95b52911135513b0b1e4d84509c80ed3262c1765
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue (Clase)
@@ -78,25 +87,25 @@ template <typename T,
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[concurrent_priority_queue (Constructor)](#ctor)|Sobrecargado. Crea una cola de prioridad simultáneas.|  
+|[concurrent_priority_queue](#ctor)|Sobrecargado. Crea una cola de prioridad simultáneas.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[Clear (método)](#clear)|Borra todos los elementos de la prioridad simultánea. Este método no es seguro para la simultaneidad.|  
-|[Empty (método)](#empty)|Comprueba si la cola de prioridad simultánea está vacía en el momento en que se llama a este método. Este método es seguro para simultaneidad.|  
-|[get_allocator (método)](#get_allocator)|Devuelve una copia del asignador usada para construir la cola de prioridad simultáneas. Este método es seguro para simultaneidad.|  
-|[Push (método)](#push)|Sobrecargado. Agrega un elemento a la cola de prioridad simultáneas. Este método es seguro para simultaneidad.|  
-|[tamaño (método)](#size)|Devuelve el número de elementos en la cola de prioridad simultáneas. Este método es seguro para simultaneidad.|  
-|[swap (método)](#swap)|Intercambia el contenido de dos colas de prioridad simultáneas. Este método no es seguro para la simultaneidad.|  
-|[try_pop (método)](#try_pop)|Quita y devuelve el elemento de prioridad más alto de la cola si la cola no está vacía. Este método es seguro para simultaneidad.|  
+|[clear](#clear)|Borra todos los elementos de la prioridad simultánea. Este método no es seguro para la simultaneidad.|  
+|[empty](#empty)|Comprueba si la cola de prioridad simultánea está vacía en el momento en que se llama a este método. Este método es seguro para simultaneidad.|  
+|[get_allocator](#get_allocator)|Devuelve una copia del asignador usada para construir la cola de prioridad simultáneas. Este método es seguro para simultaneidad.|  
+|[push](#push)|Sobrecargado. Agrega un elemento a la cola de prioridad simultáneas. Este método es seguro para simultaneidad.|  
+|[size](#size)|Devuelve el número de elementos en la cola de prioridad simultáneas. Este método es seguro para simultaneidad.|  
+|[swap](#swap)|Intercambia el contenido de dos colas de prioridad simultáneas. Este método no es seguro para la simultaneidad.|  
+|[try_pop](#try_pop)|Quita y devuelve el elemento de prioridad más alto de la cola si la cola no está vacía. Este método es seguro para simultaneidad.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[operador = (operador)](#operator_eq)|Sobrecargado. Asigna el contenido de otro objeto `concurrent_priority_queue` a este. Este método no es seguro para la simultaneidad.|  
+|[operator=](#operator_eq)|Sobrecargado. Asigna el contenido de otro objeto `concurrent_priority_queue` a este. Este método no es seguro para la simultaneidad.|  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener información detallada sobre la `concurrent_priority_queue` de clases, consulte [objetos y contenedores paralelos](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -109,7 +118,7 @@ template <typename T,
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>Borrar 
+##  <a name="clear"></a>Borrar 
 
  Borra todos los elementos de la prioridad simultánea. Este método no es seguro para la simultaneidad.  
   
@@ -120,7 +129,7 @@ void clear();
 ### <a name="remarks"></a>Comentarios  
  `clear`no es seguro para simultaneidad. Debe asegurarse de que ningún otro subproceso invoca métodos en la cola de prioridad simultáneas cuando se llama a este método. `clear`no se libera memoria.  
   
-##  <a name="a-namectora-concurrentpriorityqueue"></a><a name="ctor"></a>concurrent_priority_queue 
+##  <a name="ctor"></a>concurrent_priority_queue 
 
  Crea una cola de prioridad simultáneas.  
   
@@ -184,7 +193,7 @@ concurrent_priority_queue(
   
  Los constructores sexto y séptimo especifican un movimiento de la cola de prioridad `_Src`.  
   
-##  <a name="a-nameemptya-empty"></a><a name="empty"></a>vacía 
+##  <a name="empty"></a>vacía 
 
  Comprueba si la cola de prioridad simultánea está vacía en el momento en que se llama a este método. Este método es seguro para simultaneidad.  
   
@@ -195,7 +204,7 @@ bool empty() const;
 ### <a name="return-value"></a>Valor devuelto  
  `true`Si la cola de prioridad estaba vacía en el momento en que se llama a la función, `false` en caso contrario.  
   
-##  <a name="a-namegetallocatora-getallocator"></a><a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a>get_allocator 
 
  Devuelve una copia del asignador usada para construir la cola de prioridad simultáneas. Este método es seguro para simultaneidad.  
   
@@ -206,7 +215,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Valor devuelto  
  Una copia del asignador usada para construir la `concurrent_priority_queue` objeto.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a>operador = 
 
  Asigna el contenido de otro objeto `concurrent_priority_queue` a este. Este método no es seguro para la simultaneidad.  
   
@@ -223,7 +232,7 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia a este `concurrent_priority_queue` objeto.  
   
-##  <a name="a-namepusha-push"></a><a name="push"></a>inserción 
+##  <a name="push"></a>inserción 
 
  Agrega un elemento a la cola de prioridad simultáneas. Este método es seguro para simultaneidad.  
   
@@ -237,7 +246,7 @@ void push(value_type&& _Elem);
  `_Elem`  
  El elemento que se agregarán a la cola de prioridad simultáneas.  
   
-##  <a name="a-namesizea-size"></a><a name="size"></a>tamaño 
+##  <a name="size"></a>tamaño 
 
  Devuelve el número de elementos en la cola de prioridad simultáneas. Este método es seguro para simultaneidad.  
   
@@ -251,7 +260,7 @@ size_type size() const;
 ### <a name="remarks"></a>Comentarios  
  El tamaño devuelto está garantizado para incluir todos los elementos agregados mediante llamadas a la función `push`. Sin embargo, no pueden reflejar los resultados de operaciones simultáneas pendientes.  
   
-##  <a name="a-nameswapa-swap"></a><a name="swap"></a>intercambio 
+##  <a name="swap"></a>intercambio 
 
  Intercambia el contenido de dos colas de prioridad simultáneas. Este método no es seguro para la simultaneidad.  
   
@@ -263,7 +272,7 @@ void swap(concurrent_priority_queue& _Queue);
  `_Queue`  
  La `concurrent_priority_queue` objeto que se va a intercambiar el contenido.  
   
-##  <a name="a-nametrypopa-trypop"></a><a name="try_pop"></a>try_pop 
+##  <a name="try_pop"></a>try_pop 
 
  Quita y devuelve el elemento de prioridad más alto de la cola si la cola no está vacía. Este método es seguro para simultaneidad.  
   

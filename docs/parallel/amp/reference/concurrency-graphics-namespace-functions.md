@@ -6,23 +6,28 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::fast_math::copy_async
+- amp_graphics/Concurrency::fast_math::copy
+dev_langs:
+- C++
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
 caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1c17becb6bc3fb9b243a65652bf019b7fad1b8cd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a9def518f951e6fbae788b69893cc7205053b411
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Funciones del espacio de nombres Graphics
 |||  
 |-|-|  
-|[Copy (función) (Namespace Graphics)](#copy)|[copy_async (función) (Namespace Graphics)](#copy_async)|  
+|[copy](#copy)|[copy_async](#copy_async)|  
   
-##  <a name="a-namecopya--copy-function-concurrencygraphics-namespace"></a><a name="copy"></a>Copy (función) (Namespace Graphics)  
+##  <a name="copy"></a>Copy (función) (Namespace Graphics)  
  Copia una textura de origen en un búfer de destino, o copia un búfer de origen en un búfer de destino. La forma general de esta función es `copy(src, dest)`.  
   
 ```  
@@ -168,7 +173,7 @@ void copy (
  `last`  
  Un iterador final en el contenedor de origen.  
   
-##  <a name="a-namecopyasynca--copyasync-function-concurrencygraphics-namespace"></a><a name="copy_async"></a>copy_async (función) (Namespace Graphics)  
+##  <a name="copy_async"></a>copy_async (función) (Namespace Graphics)  
  Copia de forma asincrónica una textura de origen en un búfer de destino, o un búfer de origen se copia en un búfer de destino y, a continuación, devuelve un [completion_future](completion-future-class.md) objeto que se puede esperar. Los datos no se pueden copiar cuando el código se está ejecutando en un acelerador. La forma general de esta función es `copy(src, dest)`.  
   
 ```  
@@ -309,7 +314,12 @@ concurrency::completion_future copy_async(_Src_type& _Src,
   
  `last`  
  Un iterador final en el contenedor de origen.  
+
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** amp_graphics.h  
   
+ **Namespace:** Graphics 
+
 ## <a name="see-also"></a>Vea también  
- [Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
 

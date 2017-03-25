@@ -9,7 +9,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::Scheduler
+- Scheduler
+- CONCRT/concurrency::Scheduler
+- CONCRT/concurrency::Scheduler::Scheduler
+- CONCRT/concurrency::Scheduler::Attach
+- CONCRT/concurrency::Scheduler::Create
+- CONCRT/concurrency::Scheduler::CreateScheduleGroup
+- CONCRT/concurrency::Scheduler::GetNumberOfVirtualProcessors
+- CONCRT/concurrency::Scheduler::GetPolicy
+- CONCRT/concurrency::Scheduler::Id
+- CONCRT/concurrency::Scheduler::IsAvailableLocation
+- CONCRT/concurrency::Scheduler::Reference
+- CONCRT/concurrency::Scheduler::RegisterShutdownEvent
+- CONCRT/concurrency::Scheduler::Release
+- CONCRT/concurrency::Scheduler::ResetDefaultSchedulerPolicy
+- CONCRT/concurrency::Scheduler::ScheduleTask
+- CONCRT/concurrency::Scheduler::SetDefaultSchedulerPolicy
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +49,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: ea4de856528305020e8b082da3a55fcd27df3a64
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: cc39a524e9a65aeab0c84fb43f5b38ddd892923e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="scheduler-class"></a>Scheduler (Clase)
@@ -54,26 +69,26 @@ class Scheduler;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Constructor de programador](#ctor)|Un objeto de la `Scheduler` clase solo se puede crear utilizando métodos de generador o implícitamente.|  
+|[Programador](#ctor)|Un objeto de la `Scheduler` clase solo se puede crear utilizando métodos de generador o implícitamente.|  
 |[~ Scheduler (destructor)](#dtor)|Un objeto de la `Scheduler` clase se destruye implícitamente cuando todas las referencias externas al mismo dejan de existir.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[Attach (método)](#attach)|Adjunta al programador al contexto de la llamada. Cuando vuelve este método, el programador administra el contexto de llamada y el programador se convierte en el programador actual.|  
-|[Create (método)](#create)|Crea un nuevo programador cuyo comportamiento se describe en el `_Policy` parámetro, coloca una referencia inicial en el programador y devuelve un puntero a ella.|  
-|[CreateScheduleGroup (método)](#createschedulegroup)|Sobrecargado. Crea un nuevo grupo de programación dentro del programador. La versión que toma el parámetro `_Placement` hace que las tareas dentro del grupo de programación recién creado para estar orientadas a ejecutar en la ubicación especificada por ese parámetro.|  
-|[GetNumberOfVirtualProcessors (método)](#getnumberofvirtualprocessors)|Devuelve el número actual de procesadores virtuales para el programador.|  
-|[GetPolicy (método)](#getpolicy)|Devuelve una copia de la directiva que creó el programador.|  
-|[ID (método)](#id)|Devuelve un identificador único para el programador.|  
-|[Isavailablelocation (método)](#isavailablelocation)|Determina si una determinada ubicación está disponible en el programador.|  
-|[Reference (método)](#reference)|Incrementa el recuento de referencias del programador.|  
-|[RegisterShutdownEvent (método)](#registershutdownevent)|Hace que el controlador de eventos de Windows pasado en el `_Event` parámetro se señalice cuando el planificador se cierra y se destruye. En el momento en que se señala el evento, todo el trabajo que está programado para el programador está completando. Mediante este método, se pueden registrar varios eventos de apagado.|  
-|[Release (método)](#release)|Reduce el recuento de la referencia del programador.|  
-|[ResetDefaultSchedulerPolicy (método)](#resetdefaultschedulerpolicy)|Restablece la directiva del programador predeterminado con el valor predeterminado de tiempo de ejecución. La próxima vez que se crea un programador predeterminado, utilizará la configuración de directiva en tiempo de ejecución predeterminado.|  
-|[ScheduleTask (método)](#scheduletask)|Sobrecargado. Programa una tarea ligera dentro del programador. La tarea ligera se situará en un grupo de programación determinada por el tiempo de ejecución. La versión que toma el parámetro `_Placement` hace que la tarea se inclina hacia la ejecución en la ubicación especificada.|  
-|[SetDefaultSchedulerPolicy (método)](#setdefaultschedulerpolicy)|Permite una directiva definida por el usuario que se utilizará para crear al programador predeterminado. Puede llamar a este método sólo cuando no existe ningún programador predeterminado dentro del proceso. Una vez establecida una directiva predeterminada, permanece en vigor hasta la siguiente llamada válida a la `SetDefaultSchedulerPolicy` o [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) (método).|  
+|[Asociar](#attach)|Adjunta al programador al contexto de la llamada. Cuando vuelve este método, el programador administra el contexto de llamada y el programador se convierte en el programador actual.|  
+|[Crear](#create)|Crea un nuevo programador cuyo comportamiento se describe en el `_Policy` parámetro, coloca una referencia inicial en el programador y devuelve un puntero a ella.|  
+|[CreateScheduleGroup](#createschedulegroup)|Sobrecargado. Crea un nuevo grupo de programación dentro del programador. La versión que toma el parámetro `_Placement` hace que las tareas dentro del grupo de programación recién creado para estar orientadas a ejecutar en la ubicación especificada por ese parámetro.|  
+|[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Devuelve el número actual de procesadores virtuales para el programador.|  
+|[GetPolicy](#getpolicy)|Devuelve una copia de la directiva que creó el programador.|  
+|[Id.](#id)|Devuelve un identificador único para el programador.|  
+|[IsAvailableLocation](#isavailablelocation)|Determina si una determinada ubicación está disponible en el programador.|  
+|[Referencia](#reference)|Incrementa el recuento de referencias del programador.|  
+|[RegisterShutdownEvent](#registershutdownevent)|Hace que el controlador de eventos de Windows pasado en el `_Event` parámetro se señalice cuando el planificador se cierra y se destruye. En el momento en que se señala el evento, todo el trabajo que está programado para el programador está completando. Mediante este método, se pueden registrar varios eventos de apagado.|  
+|[Release](#release)|Reduce el recuento de la referencia del programador.|  
+|[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|Restablece la directiva del programador predeterminado con el valor predeterminado de tiempo de ejecución. La próxima vez que se crea un programador predeterminado, utilizará la configuración de directiva en tiempo de ejecución predeterminado.|  
+|[ScheduleTask](#scheduletask)|Sobrecargado. Programa una tarea ligera dentro del programador. La tarea ligera se situará en un grupo de programación determinada por el tiempo de ejecución. La versión que toma el parámetro `_Placement` hace que la tarea se inclina hacia la ejecución en la ubicación especificada.|  
+|[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|Permite una directiva definida por el usuario que se utilizará para crear al programador predeterminado. Puede llamar a este método sólo cuando no existe ningún programador predeterminado dentro del proceso. Una vez establecida una directiva predeterminada, permanece en vigor hasta la siguiente llamada válida a la `SetDefaultSchedulerPolicy` o [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) (método).|  
   
 ## <a name="remarks"></a>Comentarios  
  El programador del Runtime de simultaneidad usa contextos de ejecución, que se asignan a los contextos de ejecución del sistema operativo, por ejemplo, un subproceso, para ejecutar el trabajo de cola para su aplicación. En cualquier momento, el nivel de simultaneidad de un programador es igual al número de procesador virtual concedido por el Administrador de recursos. Un procesador virtual es una abstracción para un recurso de procesamiento y se asigna a un subproceso del hardware en el sistema subyacente. Solo se puede ejecutar un único contexto del programador en un procesador virtual a una hora determinada.  
@@ -88,7 +103,7 @@ class Scheduler;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-nameattacha-attach"></a><a name="attach"></a>Adjuntar 
+##  <a name="attach"></a>Adjuntar 
 
  Adjunta al programador al contexto de la llamada. Cuando vuelve este método, el programador administra el contexto de llamada y el programador se convierte en el programador actual.  
   
@@ -105,7 +120,7 @@ virtual void Attach() = 0;
   
  Este método producirá una [improper_scheduler_attach](improper-scheduler-attach-class.md) excepción si este programador es el programador actual del contexto de la llamada.  
   
-##  <a name="a-namecreatea-create"></a><a name="create"></a>Crear 
+##  <a name="create"></a>Crear 
 
  Crea un nuevo programador cuyo comportamiento se describe en el `_Policy` parámetro, coloca una referencia inicial en el programador y devuelve un puntero a ella.  
   
@@ -127,7 +142,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
   
  Este método puede producir una variedad de excepciones, incluida la [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) y [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).  
   
-##  <a name="a-namecreateschedulegroupa-createschedulegroup"></a><a name="createschedulegroup"></a>CreateScheduleGroup 
+##  <a name="createschedulegroup"></a>CreateScheduleGroup 
 
  Crea un nuevo grupo de programación dentro del programador. La versión que toma el parámetro `_Placement` hace que las tareas dentro del grupo de programación recién creado para estar orientadas a ejecutar en la ubicación especificada por ese parámetro.  
   
@@ -149,7 +164,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
   
  Tenga en cuenta que si creó a este programador explícitamente, debe liberar todas las referencias, grupos de programación antes de liberar sus referencias en el programador.  
   
-##  <a name="a-namegetnumberofvirtualprocessorsa-getnumberofvirtualprocessors"></a><a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
+##  <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
 
  Devuelve el número actual de procesadores virtuales para el programador.  
   
@@ -160,7 +175,7 @@ virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 ### <a name="return-value"></a>Valor devuelto  
  El número actual de procesadores virtuales para el programador.  
   
-##  <a name="a-namegetpolicya-getpolicy"></a><a name="getpolicy"></a>GetPolicy 
+##  <a name="getpolicy"></a>GetPolicy 
 
  Devuelve una copia de la directiva que creó el programador.  
   
@@ -171,7 +186,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>Valor devuelto  
  Una copia de la directiva que creó el programador.  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>Id. 
+##  <a name="id"></a>Id. 
 
  Devuelve un identificador único para el programador.  
   
@@ -182,7 +197,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>Valor devuelto  
  Un identificador único para el programador.  
   
-##  <a name="a-nameisavailablelocationa-isavailablelocation"></a><a name="isavailablelocation"></a>IsAvailableLocation 
+##  <a name="isavailablelocation"></a>IsAvailableLocation 
 
  Determina si una determinada ubicación está disponible en el programador.  
   
@@ -200,7 +215,7 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 ### <a name="remarks"></a>Comentarios  
  Tenga en cuenta que el valor devuelto es un muestreo instantáneo de si está disponible la ubicación dada. En presencia de varios programadores, administración de recursos dinámicos puede agrega o quita los recursos de programadores en cualquier momento. Esto sucedería, la ubicación dada puede cambiar la disponibilidad.  
   
-##  <a name="a-namereferencea-reference"></a><a name="reference"></a>Referencia 
+##  <a name="reference"></a>Referencia 
 
  Incrementa el recuento de referencias del programador.  
   
@@ -216,7 +231,7 @@ virtual unsigned int Reference() = 0 ;
   
  El método producirá una [improper_scheduler_reference](improper-scheduler-reference-class.md) excepción si el recuento de referencias antes de llamar a la `Reference` método era cero y la llamada se realiza desde un contexto que no es propiedad del programador.  
   
-##  <a name="a-nameregistershutdowneventa-registershutdownevent"></a><a name="registershutdownevent"></a>RegisterShutdownEvent 
+##  <a name="registershutdownevent"></a>RegisterShutdownEvent 
 
  Hace que el controlador de eventos de Windows pasado en el `_Event` parámetro se señalice cuando el planificador se cierra y se destruye. En el momento en que se señala el evento, todo el trabajo que está programado para el programador está completando. Mediante este método, se pueden registrar varios eventos de apagado.  
   
@@ -228,7 +243,7 @@ virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
  `_Event`  
  Identificador de un objeto de evento de Windows que señalará el tiempo de ejecución cuando se cierra y se destruye el programador.  
   
-##  <a name="a-namereleasea-release"></a><a name="release"></a>Versión 
+##  <a name="release"></a>Versión 
 
  Reduce el recuento de la referencia del programador.  
   
@@ -242,7 +257,7 @@ virtual unsigned int Release() = 0;
 ### <a name="remarks"></a>Comentarios  
  Normalmente, esto se utiliza para administrar la duración del programador para la composición. Cuando el recuento de referencias de un programador cae a cero, el programador se cerrará y destruct propio después de todo trabajo en el programador ha completado.  
   
-##  <a name="a-nameresetdefaultschedulerpolicya-resetdefaultschedulerpolicy"></a><a name="resetdefaultschedulerpolicy"></a>ResetDefaultSchedulerPolicy 
+##  <a name="resetdefaultschedulerpolicy"></a>ResetDefaultSchedulerPolicy 
 
  Restablece la directiva del programador predeterminado con el valor predeterminado de tiempo de ejecución. La próxima vez que se crea un programador predeterminado, utilizará la configuración de directiva en tiempo de ejecución predeterminado.  
   
@@ -253,7 +268,7 @@ static void __cdecl ResetDefaultSchedulerPolicy();
 ### <a name="remarks"></a>Comentarios  
  Puede llamar a este método mientras exista un programador predeterminado dentro del proceso. No afectará a la directiva del programador predeterminado existente. Sin embargo, si el programador predeterminado se fuese a cerrar, y un nuevo valor predeterminado se creará en un momento posterior, el nuevo programador usaría la configuración de directiva en tiempo de ejecución predeterminado.  
   
-##  <a name="a-namectora-scheduler"></a><a name="ctor"></a>Programador 
+##  <a name="ctor"></a>Programador 
 
  Un objeto de la `Scheduler` clase solo se puede crear utilizando métodos de generador o implícitamente.  
   
@@ -266,7 +281,7 @@ Scheduler();
   
  También puede crear un programador explícitamente a través del `CurrentScheduler::Create` (método) o `Scheduler::Create` (método).  
   
-##  <a name="a-namedtora-scheduler"></a><a name="dtor"></a>~ Programador 
+##  <a name="dtor"></a>~ Programador 
 
  Un objeto de la `Scheduler` clase se destruye implícitamente cuando todas las referencias externas al mismo dejan de existir.  
   
@@ -274,7 +289,7 @@ Scheduler();
 virtual ~Scheduler();
 ```  
   
-##  <a name="a-namescheduletaska-scheduletask"></a><a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a>ScheduleTask 
 
  Programa una tarea ligera dentro del programador. La tarea ligera se situará en un grupo de programación determinada por el tiempo de ejecución. La versión que toma el parámetro `_Placement` hace que la tarea se inclina hacia la ejecución en la ubicación especificada.  
   
@@ -299,7 +314,7 @@ virtual void ScheduleTask(
  `_Placement`  
  Una referencia a una ubicación donde la tarea ligera se se decanta hacia el hardware ejecutando en.  
   
-##  <a name="a-namesetdefaultschedulerpolicya-setdefaultschedulerpolicy"></a><a name="setdefaultschedulerpolicy"></a>SetDefaultSchedulerPolicy 
+##  <a name="setdefaultschedulerpolicy"></a>SetDefaultSchedulerPolicy 
 
  Permite una directiva definida por el usuario que se utilizará para crear al programador predeterminado. Puede llamar a este método sólo cuando no existe ningún programador predeterminado dentro del proceso. Una vez establecida una directiva predeterminada, permanece en vigor hasta la siguiente llamada válida a la `SetDefaultSchedulerPolicy` o [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) (método).  
   
@@ -317,7 +332,7 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   
  [Scheduler (clase)](scheduler-class.md)   
- [PolicyElementKey (enumeración)](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [Programador de tareas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 
 

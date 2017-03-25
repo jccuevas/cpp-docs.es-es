@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IExecutionContext
+- IExecutionContext
+- CONCRTRM/concurrency::IExecutionContext
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::Dispatch
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetId
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetProxy
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetScheduler
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::SetProxy
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 5ad3f21e55371b904ac8a597a7a66d5c5deb8339
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4c4301d7afe46249d6d67ab2a6ec0a9fc2c7935e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext (Estructura)
@@ -54,11 +60,11 @@ struct IExecutionContext;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[IExecutionContext:: Dispatch (método)](#dispatch)|El método que se llama cuando un proxy del subproceso empieza a ejecutarse un contexto de ejecución determinada. Debe ser la rutina del trabajador principal para su programador.|  
-|[IExecutionContext:: GetId (método)](#getid)|Devuelve un identificador único para el contexto de ejecución.|  
-|[IExecutionContext:: GetProxy (método)](#getproxy)|Devuelve una interfaz para el proxy del subproceso que se está ejecutando en este contexto.|  
-|[IExecutionContext:: GetScheduler (método)](#getscheduler)|Devuelve una interfaz al programador al que pertenece este contexto de ejecución.|  
-|[IExecutionContext:: SetProxy (método)](#setproxy)|Asocia a un proxy del subproceso a este contexto de ejecución. El proxy del subproceso asociado invoca este método justo antes de que inicia la ejecución del contexto `Dispatch` método.|  
+|[IExecutionContext:: Dispatch](#dispatch)|El método que se llama cuando un proxy del subproceso empieza a ejecutarse un contexto de ejecución determinada. Debe ser la rutina del trabajador principal para su programador.|  
+|[IExecutionContext:: GetId](#getid)|Devuelve un identificador único para el contexto de ejecución.|  
+|[IExecutionContext:: GetProxy](#getproxy)|Devuelve una interfaz para el proxy del subproceso que se está ejecutando en este contexto.|  
+|[IExecutionContext:: GetScheduler](#getscheduler)|Devuelve una interfaz al programador al que pertenece este contexto de ejecución.|  
+|[IExecutionContext:: SetProxy](#setproxy)|Asocia a un proxy del subproceso a este contexto de ejecución. El proxy del subproceso asociado invoca este método justo antes de que inicia la ejecución del contexto `Dispatch` método.|  
   
 ## <a name="remarks"></a>Comentarios  
  Si está implementando un programador personalizado que interactúa con el Administrador de recursos del Runtime de simultaneidad, debe implementar la `IExecutionContext` interfaz. Los subprocesos creados por el Administrador de recursos trabajan en nombre de su programador ejecutando el `IExecutionContext::Dispatch` método.  
@@ -71,7 +77,7 @@ struct IExecutionContext;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-namedispatcha--iexecutioncontextdispatch-method"></a><a name="dispatch"></a>IExecutionContext:: Dispatch (método)  
+##  <a name="dispatch"></a>IExecutionContext:: Dispatch (método)  
  El método que se llama cuando un proxy del subproceso empieza a ejecutarse un contexto de ejecución determinada. Debe ser la rutina del trabajador principal para su programador.  
   
 ```
@@ -82,7 +88,7 @@ virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
  `pDispatchState`  
  Un puntero al estado en el que está siendo enviado este contexto de ejecución. Para obtener más información sobre el estado del envío, consulte [DispatchState](dispatchstate-structure.md).  
   
-##  <a name="a-namegetida--iexecutioncontextgetid-method"></a><a name="getid"></a>IExecutionContext:: GetId (método)  
+##  <a name="getid"></a>IExecutionContext:: GetId (método)  
  Devuelve un identificador único para el contexto de ejecución.  
   
 ```
@@ -97,7 +103,7 @@ virtual unsigned int GetId() const = 0;
   
  Un identificador obtenido de un origen diferente podría provocar un comportamiento indefinido.  
   
-##  <a name="a-namegetproxya--iexecutioncontextgetproxy-method"></a><a name="getproxy"></a>IExecutionContext:: GetProxy (método)  
+##  <a name="getproxy"></a>IExecutionContext:: GetProxy (método)  
  Devuelve una interfaz para el proxy del subproceso que se está ejecutando en este contexto.  
   
 ```
@@ -110,7 +116,7 @@ virtual IThreadProxy* GetProxy() = 0;
 ### <a name="remarks"></a>Comentarios  
  Invocará el Administrador de recursos del `SetProxy` método en un contexto de ejecución con un `IThreadProxy` interfaz como un parámetro, antes de escribir el `Dispatch` método en el en el contexto. Se espera que almacene este argumento y lo devuelva en llamadas a `GetProxy()`.  
   
-##  <a name="a-namegetschedulera--iexecutioncontextgetscheduler-method"></a><a name="getscheduler"></a>IExecutionContext:: GetScheduler (método)  
+##  <a name="getscheduler"></a>IExecutionContext:: GetScheduler (método)  
  Devuelve una interfaz al programador al que pertenece este contexto de ejecución.  
   
 ```
@@ -123,7 +129,7 @@ virtual IScheduler* GetScheduler() = 0;
 ### <a name="remarks"></a>Comentarios  
  Es necesario inicializar el contexto de ejecución con válido `IScheduler` interfaz antes de utilizarla como un parámetro a los métodos proporcionados por el Administrador de recursos.  
   
-##  <a name="a-namesetproxya--iexecutioncontextsetproxy-method"></a><a name="setproxy"></a>IExecutionContext:: SetProxy (método)  
+##  <a name="setproxy"></a>IExecutionContext:: SetProxy (método)  
  Asocia a un proxy del subproceso a este contexto de ejecución. El proxy del subproceso asociado invoca este método justo antes de que inicia la ejecución del contexto `Dispatch` método.  
   
 ```

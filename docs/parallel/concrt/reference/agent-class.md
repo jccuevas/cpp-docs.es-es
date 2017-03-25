@@ -9,7 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::agent
+- agent
+- AGENTS/concurrency::agent
+- AGENTS/concurrency::agent::agent
+- AGENTS/concurrency::agent::cancel
+- AGENTS/concurrency::agent::start
+- AGENTS/concurrency::agent::status
+- AGENTS/concurrency::agent::status_port
+- AGENTS/concurrency::agent::wait
+- AGENTS/concurrency::agent::wait_for_all
+- AGENTS/concurrency::agent::wait_for_one
+- AGENTS/concurrency::agent::done
+- AGENTS/concurrency::agent::run
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +46,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 640e1d66a879e8eb73428b50339d6a325cfd7cb2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 1e6e23e742137bffd9035ecf69ecc32d199ca0c5
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="agent-class"></a>agent (Clase)
@@ -55,27 +66,27 @@ class agent;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[agente de Constructor](#ctor)|Sobrecargado. Construye a un agente.|  
+|[agente](#ctor)|Sobrecargado. Construye a un agente.|  
 |[~ agent (destructor)](#dtor)|Destruye al agente.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[Cancel (método)](#cancel)|Mueve un agente desde el `agent_created` o `agent_runnable` Estados la `agent_canceled` estado.|  
-|[Start (método)](#start)|Mueve un agente de la `agent_created` estado del `agent_runnable` de estado y el programa para su ejecución.|  
-|[estado (método)](#status)|Un origen sincrónico de información de estado del agente.|  
-|[status_port (método)](#status_port)|Un origen asincrónico de información de estado del agente.|  
-|[Wait (método)](#wait)|Espera a que un agente completar su tarea.|  
-|[wait_for_all (método)](#wait_for_all)|Espera a que todos los agentes especificados completen sus tareas.|  
-|[wait_for_one (método)](#wait_for_one)|Espera a que cualquiera de los agentes especificados complete su tarea.|  
+|[Cancelar](#cancel)|Mueve un agente desde el `agent_created` o `agent_runnable` Estados la `agent_canceled` estado.|  
+|[start](#start)|Mueve un agente de la `agent_created` estado del `agent_runnable` de estado y el programa para su ejecución.|  
+|[status](#status)|Un origen sincrónico de información de estado del agente.|  
+|[status_port](#status_port)|Un origen asincrónico de información de estado del agente.|  
+|[esperar](#wait)|Espera a que un agente completar su tarea.|  
+|[wait_for_all](#wait_for_all)|Espera a que todos los agentes especificados completen sus tareas.|  
+|[wait_for_one](#wait_for_one)|Espera a que cualquiera de los agentes especificados complete su tarea.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[Done (método)](#done)|Mueve un agente en el `agent_done` estado, que indica que el agente se ha completado.|  
-|[Run (método)](#run)|Representa la tarea principal de un agente. `run`se debe invalidar en una clase derivada y especifica lo que debe hacer el agente después de que se ha iniciado.|  
+|[hecho](#done)|Mueve un agente en el `agent_done` estado, que indica que el agente se ha completado.|  
+|[run](#run)|Representa la tarea principal de un agente. `run`se debe invalidar en una clase derivada y especifica lo que debe hacer el agente después de que se ha iniciado.|  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [agentes asincrónicos](../../../parallel/concrt/asynchronous-agents.md).  
@@ -88,7 +99,7 @@ class agent;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-namectora-agent"></a><a name="ctor"></a>agente 
+##  <a name="ctor"></a>agente 
 
  Construye a un agente.  
   
@@ -110,7 +121,7 @@ agent(ScheduleGroup& _PGroup);
 ### <a name="remarks"></a>Comentarios  
  El runtime usa el programador predeterminado si no se especifica la `_PScheduler` o `_PGroup` parámetros.  
   
-##  <a name="a-namedtora-agent"></a><a name="dtor"></a>~ agent 
+##  <a name="dtor"></a>~ agent 
 
  Destruye al agente.  
   
@@ -121,7 +132,7 @@ virtual ~agent();
 ### <a name="remarks"></a>Comentarios  
  Es un error para destruir un agente que no está en un estado terminal (ya sea `agent_done` o `agent_canceled`). Esto se puede evitar esperando el agente llegue a un estado terminal en el destructor de una clase que hereda de la `agent` clase.  
   
-##  <a name="a-namecancela-cancel"></a><a name="cancel"></a>Cancelar 
+##  <a name="cancel"></a>Cancelar 
 
  Mueve un agente desde el `agent_created` o `agent_runnable` Estados la `agent_canceled` estado.  
   
@@ -132,7 +143,7 @@ bool cancel();
 ### <a name="return-value"></a>Valor devuelto  
  `true`Si el agente se ha cancelado, `false` en caso contrario. Un agente no se puede cancelar si ya ha empezado a ejecutarse o ya se ha completado.  
   
-##  <a name="a-namedonea-done"></a><a name="done"></a>hecho 
+##  <a name="done"></a>hecho 
 
  Mueve un agente en el `agent_done` estado, que indica que el agente se ha completado.  
   
@@ -146,7 +157,7 @@ bool done();
 ### <a name="remarks"></a>Comentarios  
  Este método debe llamarse al final de la `run` ha completado el método, cuando se sabe que la ejecución del agente.  
   
-##  <a name="a-nameruna-run"></a><a name="run"></a>ejecutar 
+##  <a name="run"></a>ejecutar 
 
  Representa la tarea principal de un agente. `run`se debe invalidar en una clase derivada y especifica lo que debe hacer el agente después de que se ha iniciado.  
   
@@ -157,7 +168,7 @@ virtual void run() = 0;
 ### <a name="remarks"></a>Comentarios  
  El estado del agente cambia a `agent_started` correctamente antes de que se invoca este método. Debe invocar el método `done` en el agente con un estado adecuado antes de regresar y no se puede producir ninguna excepción.  
   
-##  <a name="a-namestarta-start"></a><a name="start"></a>Inicio 
+##  <a name="start"></a>Inicio 
 
  Mueve un agente de la `agent_created` estado del `agent_runnable` de estado y el programa para su ejecución.  
   
@@ -168,7 +179,7 @@ bool start();
 ### <a name="return-value"></a>Valor devuelto  
  `true`Si el agente se inicia correctamente, `false` en caso contrario. No se puede iniciar un agente que se ha cancelado.  
   
-##  <a name="a-namestatusa-status"></a><a name="status"></a>estado 
+##  <a name="status"></a>estado 
 
  Un origen sincrónico de información de estado del agente.  
   
@@ -179,7 +190,7 @@ agent_status status();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el estado actual del agente. Tenga en cuenta que este estado devuelto podría cambiar inmediatamente después de ser devuelto.  
   
-##  <a name="a-namestatusporta-statusport"></a><a name="status_port"></a>status_port 
+##  <a name="status_port"></a>status_port 
 
  Un origen asincrónico de información de estado del agente.  
   
@@ -190,7 +201,7 @@ ISource<agent_status>* status_port();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el origen de los mensajes que puede enviar mensajes sobre el estado actual del agente.  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>esperar 
+##  <a name="wait"></a>esperar 
 
  Espera a que un agente completar su tarea.  
   
@@ -215,7 +226,7 @@ static agent_status __cdecl wait(
   
  Si el parámetro `_Timeout` tiene un valor distinto de la constante `COOPERATIVE_TIMEOUT_INFINITE`, la excepción [operation_timed_out](operation-timed-out-class.md) se produce si la cantidad de tiempo especificada expira antes de que el agente haya completado su tarea.  
   
-##  <a name="a-namewaitforalla-waitforall"></a><a name="wait_for_all"></a>wait_for_all 
+##  <a name="wait_for_all"></a>wait_for_all 
 
  Espera a que todos los agentes especificados completen sus tareas.  
   
@@ -245,7 +256,7 @@ static void __cdecl wait_for_all(
   
  Si el parámetro `_Timeout` tiene un valor distinto de la constante `COOPERATIVE_TIMEOUT_INFINITE`, la excepción [operation_timed_out](operation-timed-out-class.md) se produce si la cantidad de tiempo especificada expira antes de que el agente haya completado su tarea.  
   
-##  <a name="a-namewaitforonea-waitforone"></a><a name="wait_for_one"></a>wait_for_one 
+##  <a name="wait_for_one"></a>wait_for_one 
 
  Espera a que cualquiera de los agentes especificados complete su tarea.  
   
@@ -280,5 +291,5 @@ static void __cdecl wait_for_one(
  Si el parámetro `_Timeout` tiene un valor distinto de la constante `COOPERATIVE_TIMEOUT_INFINITE`, la excepción [operation_timed_out](operation-timed-out-class.md) se produce si la cantidad de tiempo especificada expira antes de que el agente haya completado su tarea.  
   
 ## <a name="see-also"></a>Vea también  
- [simultaneidad Namespace](concurrency-namespace.md)
+ [concurrency (espacio de nombres)](concurrency-namespace.md)
 

@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::ISchedulerProxy
+- ISchedulerProxy
+- CONCRTRM/concurrency::ISchedulerProxy
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::BindContext
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::CreateOversubscriber
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::RequestInitialVirtualProcessors
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::Shutdown
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::SubscribeCurrentThread
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::UnbindContext
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: a282e397186ee4ab3eda4f882b9c9fc89ff353f2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 3dd95150022ad94f50b456c84f7dacd2d3cef7c5
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy (Estructura)
@@ -54,12 +61,12 @@ struct ISchedulerProxy;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[ISchedulerProxy:: BindContext (método)](#bindcontext)|Asocia un contexto de ejecución a un proxy del subproceso, si aún no está asociado a uno.|  
-|[ISchedulerProxy:: CreateOversubscriber (método)](#createoversubscriber)|Crea una nueva raíz del procesador virtual en el subproceso de hardware asociado a un recurso de ejecución existente.|  
-|[ISchedulerProxy:: RequestInitialVirtualProcessors (método)](#requestinitialvirtualprocessors)|Solicita una asignación inicial de raíces de procesador virtual. Cada raíz del procesador virtual representa la capacidad para ejecutar un subproceso que puede realizar el trabajo para el programador.|  
-|[ISchedulerProxy:: Shutdown (método)](#shutdown)|Notifica al administrador de recursos que se está cerrando el programador. Esto hará que el Administrador de recursos reclame inmediatamente todos los recursos concedidos al programador.|  
-|[ISchedulerProxy:: SubscribeCurrentThread (método)](#subscribecurrentthread)|El subproceso actual se registra con el Administrador de recursos, asociarla a este programador.|  
-|[ISchedulerProxy:: UnbindContext (método)](#unbindcontext)|Desasocia un proxy del subproceso del contexto de ejecución especificado por el `pContext` parámetro y lo devuelve al grupo libre del generador de proxy de subproceso. Sólo se llama a este método en un contexto de ejecución que se enlazó a través de la [BindContext](#bindcontext) método y aún no se ha iniciado en el que se va a la `pContext` parámetro de un [IThreadProxy:: SwitchTo](ithreadproxy-structure.md#switchto) llamada al método.|  
+|[ISchedulerProxy:: BindContext](#bindcontext)|Asocia un contexto de ejecución a un proxy del subproceso, si aún no está asociado a uno.|  
+|[ISchedulerProxy:: CreateOversubscriber](#createoversubscriber)|Crea una nueva raíz del procesador virtual en el subproceso de hardware asociado a un recurso de ejecución existente.|  
+|[ISchedulerProxy:: RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|Solicita una asignación inicial de raíces de procesador virtual. Cada raíz del procesador virtual representa la capacidad para ejecutar un subproceso que puede realizar el trabajo para el programador.|  
+|[ISchedulerProxy:: Shutdown](#shutdown)|Notifica al administrador de recursos que se está cerrando el programador. Esto hará que el Administrador de recursos reclame inmediatamente todos los recursos concedidos al programador.|  
+|[ISchedulerProxy:: SubscribeCurrentThread](#subscribecurrentthread)|El subproceso actual se registra con el Administrador de recursos, asociarla a este programador.|  
+|[ISchedulerProxy:: UnbindContext](#unbindcontext)|Desasocia un proxy del subproceso del contexto de ejecución especificado por el `pContext` parámetro y lo devuelve al grupo libre del generador de proxy de subproceso. Sólo se llama a este método en un contexto de ejecución que se enlazó a través de la [BindContext](#bindcontext) método y aún no se ha iniciado en el que se va a la `pContext` parámetro de un [IThreadProxy:: SwitchTo](ithreadproxy-structure.md#switchto) llamada al método.|  
   
 ## <a name="remarks"></a>Comentarios  
  El Administrador de recursos pasa una `ISchedulerProxy` interfaz a cada programador que se registra con él mediante el [IResourceManager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler) método.  
@@ -72,7 +79,7 @@ struct ISchedulerProxy;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-namebindcontexta--ischedulerproxybindcontext-method"></a><a name="bindcontext"></a>ISchedulerProxy:: BindContext (método)  
+##  <a name="bindcontext"></a>ISchedulerProxy:: BindContext (método)  
  Asocia un contexto de ejecución a un proxy del subproceso, si aún no está asociado a uno.  
   
 ```
@@ -88,7 +95,7 @@ virtual void BindContext(_Inout_ IExecutionContext* pContext) = 0;
   
  `invalid_argument`se produce si el parámetro `pContext` tiene el valor `NULL`.  
   
-##  <a name="a-namecreateoversubscribera--ischedulerproxycreateoversubscriber-method"></a><a name="createoversubscriber"></a>ISchedulerProxy:: CreateOversubscriber (método)  
+##  <a name="createoversubscriber"></a>ISchedulerProxy:: CreateOversubscriber (método)  
  Crea una nueva raíz del procesador virtual en el subproceso de hardware asociado a un recurso de ejecución existente.  
   
 ```
@@ -107,7 +114,7 @@ virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* 
   
  Incluso puede saturar una raíz del procesador virtual existente, porque la `IVirtualProcessorRoot` interfaz se hereda de la `IExecutionResource` interfaz.  
   
-##  <a name="a-namerequestinitialvirtualprocessorsa--ischedulerproxyrequestinitialvirtualprocessors-method"></a><a name="requestinitialvirtualprocessors"></a>ISchedulerProxy:: RequestInitialVirtualProcessors (método)  
+##  <a name="requestinitialvirtualprocessors"></a>ISchedulerProxy:: RequestInitialVirtualProcessors (método)  
  Solicita una asignación inicial de raíces de procesador virtual. Cada raíz del procesador virtual representa la capacidad para ejecutar un subproceso que puede realizar el trabajo para el programador.  
   
 ```
@@ -126,13 +133,13 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
   
  El Administrador de recursos concede recursos a un programador llamando al método [IScheduler:: AddVirtualProcessors](ischeduler-structure.md#addvirtualprocessors) con una lista de raíces de procesador virtual. El método se invoca como una devolución de llamada en el programador antes de que este método devuelve.  
   
- Si el programador solicita la suscripción para el subproceso actual estableciendo el parámetro `doSubscribeCurrentThread` a `true`, el método devuelve un `IExecutionResource` interfaz. La suscripción se debe finalizar en un momento posterior utilizando la [IExecutionResource:: Remove](iexecutionresource-structure.md#remove) método.  
+ Si el programador solicitado la suscripción para el subproceso actual estableciendo el parámetro `doSubscribeCurrentThread` a `true`, el método devuelve un `IExecutionResource` interfaz. La suscripción se debe finalizar en un momento posterior utilizando la [IExecutionResource:: Remove](iexecutionresource-structure.md#remove) método.  
   
  Al determinar qué subprocesos de hardware están seleccionados, el Administrador de recursos intentará optimizar la afinidad de nodo del procesador. Si la suscripción se solicita para el subproceso actual, es una indicación de que el subproceso actual piensa participar en el trabajo asignado a este programador. En tal caso, las raíces de procesadores virtuales asignados se encuentran en el nodo de procesador que se está ejecutando el subproceso actual, si es posible.  
   
  La acción de suscribir un subproceso aumenta el nivel de suscripción del subproceso de hardware subyacente por uno. El nivel de suscripción se reduce en uno cuando finaliza la suscripción. Para obtener más información sobre niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="a-nameshutdowna--ischedulerproxyshutdown-method"></a><a name="shutdown"></a>ISchedulerProxy:: Shutdown (método)  
+##  <a name="shutdown"></a>ISchedulerProxy:: Shutdown (método)  
  Notifica al administrador de recursos que se está cerrando el programador. Esto hará que el Administrador de recursos reclame inmediatamente todos los recursos concedidos al programador.  
   
 ```
@@ -146,7 +153,7 @@ virtual void Shutdown() = 0;
   
  No es necesario que el programador individualmente devolver todas las raíces de procesador virtual en el Administrador de recursos concede a él a través de llamadas a la `Remove` método porque se devolverá todas las raíces de procesadores virtuales para el Administrador de recursos durante el apagado.  
   
-##  <a name="a-namesubscribecurrentthreada--ischedulerproxysubscribecurrentthread-method"></a><a name="subscribecurrentthread"></a>ISchedulerProxy:: SubscribeCurrentThread (método)  
+##  <a name="subscribecurrentthread"></a>ISchedulerProxy:: SubscribeCurrentThread (método)  
  El subproceso actual se registra con el Administrador de recursos, asociarla a este programador.  
   
 ```
@@ -163,7 +170,7 @@ virtual IExecutionResource* SubscribeCurrentThread() = 0;
   
  La acción de suscribir un subproceso aumenta el nivel de suscripción del subproceso de hardware subyacente por uno. El nivel de suscripción se reduce en uno cuando finaliza la suscripción. Para obtener más información sobre niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="a-nameunbindcontexta--ischedulerproxyunbindcontext-method"></a><a name="unbindcontext"></a>ISchedulerProxy:: UnbindContext (método)  
+##  <a name="unbindcontext"></a>ISchedulerProxy:: UnbindContext (método)  
  Desasocia un proxy del subproceso del contexto de ejecución especificado por el `pContext` parámetro y lo devuelve al grupo libre del generador de proxy de subproceso. Sólo se llama a este método en un contexto de ejecución que se enlazó a través de la [BindContext](#bindcontext) método y aún no se ha iniciado en el que se va a la `pContext` parámetro de un [IThreadProxy:: SwitchTo](ithreadproxy-structure.md#switchto) llamada al método.  
   
 ```

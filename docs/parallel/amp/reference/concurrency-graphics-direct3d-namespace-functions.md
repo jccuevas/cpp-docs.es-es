@@ -6,24 +6,31 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::graphics::direct3d::get_sampler
+- amp_graphics/Concurrency::graphics::direct3d::make_sampler
+- amp_graphics/Concurrency::graphics::direct3d::make_texture
+dev_langs:
+- C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: aa7e91237eaa9ced297e2c5748359c23bb436df8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 63cf872bd5ade28115a0eac92304554f125c8dd5
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Funciones del espacio de nombres Concurrency::Graphics::Direct3D
 ||||  
 |-|-|-|  
-|[get_sampler (función)](#get_sampler)|[get_texture (función)](#get_texture)|[make_sampler (función)](#make_sampler)|  
-|[make_texture (función)](#make_texture)|[msad4 (función)](#msad4)|  
-  
-##  <a name="a-namegetsamplera--getsampler-function"></a><a name="get_sampler"></a>get_sampler (función)  
+|[get_sampler)](#get_sampler)|[get_texture](#get_texture)|[make_sampler)](#make_sampler)|  
+|[make_texture](#make_texture)|[msad4](#msad4)|  
+
+ 
+##  <a name="get_sampler"></a>get_sampler)  
  Obtener la interfaz de estado de muestrario de D3D en el Acelerador determinado ver que representa el objeto de muestra especificado.  
   
 ```  
@@ -42,7 +49,7 @@ IUnknown* get_sampler(
 ### <a name="return-value"></a>Valor devuelto  
  El puntero de interfaz IUnknown corresponde al estado de muestrario de D3D que representa la muestra determinada.  
   
-##  <a name="a-namegettexturea--gettexture-function"></a><a name="get_texture"></a>get_texture (función)  
+##  <a name="get_texture"></a>get_texture  
  Obtiene la interfaz de textura Direct3D subyacente especificado [textura](texture-class.md) objeto.  
   
 ```  
@@ -85,7 +92,7 @@ _Ret_ IUnknown *get_texture(
 ### <a name="return-value"></a>Valor devuelto  
  El puntero de interfaz IUnknown correspondiente a la textura Direct3D subyacente de la textura.  
   
-##  <a name="a-namemakesamplera--makesampler-function"></a><a name="make_sampler"></a>make_sampler (función)  
+##  <a name="make_sampler"></a>make_sampler)  
  Crear una muestra de un puntero de interfaz de estado de muestrario de D3D.  
   
 ```  
@@ -99,7 +106,7 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  Una muestra de representa el estado de muestra proporcionado de D3D.  
   
-##  <a name="a-namemaketexturea--maketexture-function"></a><a name="make_texture"></a>make_texture (función)  
+##  <a name="make_texture"></a>make_texture  
  Crea un [textura](texture-class.md) objeto utilizando los parámetros especificados.  
   
 ```  
@@ -132,7 +139,7 @@ texture<value_type, _Rank> make_texture(
 ### <a name="return-value"></a>Valor devuelto  
  Una textura con la textura de D3D proporcionada.  
   
-##  <a name="a-namemsad4a--msad4-function"></a><a name="msad4"></a>msad4 (función)  
+##  <a name="msad4"></a>msad4  
  Compara un valor de referencia de 4 bytes y un valor de origen de 8 bytes y acumula un vector de 4 sumas. Cada suma corresponde a la suma enmascarada de diferencias absolutas de alineaciones de byte diferentes entre el valor de referencia y el valor de origen.  
   
 ```  
@@ -154,7 +161,12 @@ inline uint4 msad4(
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un vector de 4 sumas. Cada suma corresponde a la suma enmascarada de diferencias absolutas de alineaciones de byte diferentes entre el valor de referencia y el valor de origen.  
+
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** amp_graphics.h  
   
+ **Namespace:** Concurrency::graphics::direct3d 
+
 ## <a name="see-also"></a>Vea también  
- [Namespace Concurrency::Graphics::Direct3D](concurrency-graphics-direct3d-namespace.md)
+ [Concurrency::graphics::direct3d (espacio de nombres)](concurrency-graphics-direct3d-namespace.md)
 

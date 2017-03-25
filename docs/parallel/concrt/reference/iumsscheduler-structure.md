@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSScheduler
+- IUMSScheduler
+- CONCRTRM/concurrency::IUMSScheduler
+- CONCRTRM/concurrency::IUMSScheduler::IUMSScheduler::SetCompletionList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 658c0d0c9ddb9bbe51134f0a7ea0211be9c39815
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 58ca59224b5d9cdeb282562349642736a1b22c74
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler (Estructura)
@@ -54,7 +56,7 @@ struct IUMSScheduler : public IScheduler;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[IUMSScheduler:: SetCompletionList (método)](#setcompletionlist)|Asigna un `IUMSCompletionList` interfaz a un programador de subprocesos UMS.|  
+|[IUMSScheduler:: SetCompletionList](#setcompletionlist)|Asigna un `IUMSCompletionList` interfaz a un programador de subprocesos UMS.|  
   
 ## <a name="remarks"></a>Comentarios  
  Si está implementando un programador personalizado que comunica con el Administrador de recursos, y desea que los subprocesos UMS que se va a pasar a su programador en lugar de subprocesos de Win32 ordinarios, debería proporcionar una implementación de la `IUMSScheduler` interfaz. Además, debe establecer el valor de directiva de la clave de directiva de programador `SchedulerKind` como `UmsThreadDefault`. Si la directiva especifica el subproceso UMS, el `IScheduler` interfaz que se pasa como un parámetro a la [IResourceManager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler) método debe ser un `IUMSScheduler` interfaz.  
@@ -73,7 +75,7 @@ struct IUMSScheduler : public IScheduler;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-namesetcompletionlista--iumsschedulersetcompletionlist-method"></a><a name="setcompletionlist"></a>IUMSScheduler:: SetCompletionList (método)  
+##  <a name="setcompletionlist"></a>IUMSScheduler:: SetCompletionList (método)  
  Asigna un `IUMSCompletionList` interfaz a un programador de subprocesos UMS.  
   
 ```
@@ -89,7 +91,7 @@ virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
   
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   
- [PolicyElementKey (enumeración)](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [IScheduler (estructura)](ischeduler-structure.md)   
  [IUMSCompletionList (estructura)](iumscompletionlist-structure.md)   
  [IResourceManager (estructura)](iresourcemanager-structure.md)

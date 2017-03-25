@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::single_link_registry
+- single_link_registry
+- AGENTS/concurrency::single_link_registry
+- AGENTS/concurrency::single_link_registry::single_link_registry
+- AGENTS/concurrency::single_link_registry::add
+- AGENTS/concurrency::single_link_registry::begin
+- AGENTS/concurrency::single_link_registry::contains
+- AGENTS/concurrency::single_link_registry::count
+- AGENTS/concurrency::single_link_registry::remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 3f4719881fac882611f68b36d410c0611f99ba01
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: fc99e9af586520d60c20302e8b828a188df9efda
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry (Clase)
@@ -59,18 +66,18 @@ class single_link_registry : public network_link_registry<_Block>;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[single_link_registry (Constructor)](#ctor)|Construye un objeto `single_link_registry`.|  
+|[single_link_registry](#ctor)|Construye un objeto `single_link_registry`.|  
 |[~ single_link_registry (destructor)](#dtor)|Destruye el objeto `single_link_registry`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[el método Add](#add)|Agrega un vínculo a la `single_link_registry` objeto. (Invalida [network_link_registry:: Add](network-link-registry-class.md#add).)|  
-|[Begin (método)](#begin)|Devuelve un iterador al primer elemento de la `single_link_registry` objeto. (Invalida [network_link_registry:: BEGIN](network-link-registry-class.md#begin).)|  
-|[Contains (método)](#contains)|Busca la `single_link_registry` objeto para un bloque especificado. (Invalida [network_link_registry:: contains](network-link-registry-class.md#contains).)|  
-|[Count (método)](#count)|Cuenta el número de elementos de la `single_link_registry` objeto. (Invalida [network_link_registry:: Count](network-link-registry-class.md#count).)|  
-|[Remove (método)](#remove)|Quita un vínculo desde el `single_link_registry` objeto. (Invalida [network_link_registry:: Remove](network-link-registry-class.md#remove).)|  
+|[add](#add)|Agrega un vínculo a la `single_link_registry` objeto. (Invalida [network_link_registry:: Add](network-link-registry-class.md#add).)|  
+|[begin](#begin)|Devuelve un iterador al primer elemento de la `single_link_registry` objeto. (Invalida [network_link_registry:: BEGIN](network-link-registry-class.md#begin).)|  
+|[contiene](#contains)|Busca la `single_link_registry` objeto para un bloque especificado. (Invalida [network_link_registry:: contains](network-link-registry-class.md#contains).)|  
+|[count](#count)|Cuenta el número de elementos de la `single_link_registry` objeto. (Invalida [network_link_registry:: Count](network-link-registry-class.md#count).)|  
+|[remove](#remove)|Quita un vínculo desde el `single_link_registry` objeto. (Invalida [network_link_registry:: Remove](network-link-registry-class.md#remove).)|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [network_link_registry](network-link-registry-class.md)  
@@ -82,7 +89,7 @@ class single_link_registry : public network_link_registry<_Block>;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-nameadda-add"></a><a name="add"></a>Agregar 
+##  <a name="add"></a>Agregar 
 
  Agrega un vínculo a la `single_link_registry` objeto.  
   
@@ -97,7 +104,7 @@ virtual void add(_EType _Link);
 ### <a name="remarks"></a>Comentarios  
  El método produce una [invalid_link_target](invalid-link-target-class.md) excepción si ya hay un vínculo en este registro.  
   
-##  <a name="a-namebegina-begin"></a><a name="begin"></a>comenzar 
+##  <a name="begin"></a>comenzar 
 
  Devuelve un iterador al primer elemento de la `single_link_registry` objeto.  
   
@@ -111,7 +118,7 @@ virtual iterator begin();
 ### <a name="remarks"></a>Comentarios  
  El estado final se indica mediante un `NULL` vínculo.  
   
-##  <a name="a-namecontainsa-contains"></a><a name="contains"></a>contiene 
+##  <a name="contains"></a>contiene 
 
  Busca la `single_link_registry` objeto para un bloque especificado.  
   
@@ -126,7 +133,7 @@ virtual bool contains(_EType _Link);
 ### <a name="return-value"></a>Valor devuelto  
  `true`Si no se encuentra el vínculo, `false` en caso contrario.  
   
-##  <a name="a-namecounta-count"></a><a name="count"></a>recuento 
+##  <a name="count"></a>recuento 
 
  Cuenta el número de elementos de la `single_link_registry` objeto.  
   
@@ -137,7 +144,7 @@ virtual size_t count();
 ### <a name="return-value"></a>Valor devuelto  
  El número de elementos de la `single_link_registry` objeto.  
   
-##  <a name="a-nameremovea-remove"></a><a name="remove"></a>quitar 
+##  <a name="remove"></a>quitar 
 
  Quita un vínculo desde el `single_link_registry` objeto.  
   
@@ -152,7 +159,7 @@ virtual bool remove(_EType _Link);
 ### <a name="return-value"></a>Valor devuelto  
  `true`Si el vínculo ha encontrado y eliminado, `false` en caso contrario.  
   
-##  <a name="a-namectora-singlelinkregistry"></a><a name="ctor"></a>single_link_registry 
+##  <a name="ctor"></a>single_link_registry 
 
  Construye un objeto `single_link_registry`.  
   
@@ -160,7 +167,7 @@ virtual bool remove(_EType _Link);
 single_link_registry();
 ```  
   
-##  <a name="a-namedtora-singlelinkregistry"></a><a name="dtor"></a>~ single_link_registry 
+##  <a name="dtor"></a>~ single_link_registry 
 
  Destruye el objeto `single_link_registry`.  
   

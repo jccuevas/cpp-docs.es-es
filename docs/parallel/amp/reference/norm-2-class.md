@@ -56,9 +56,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7ff9cb756ca17633aa90e2f35c6f6f02da6cc884
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f37610aa77cb17fa574444cec43465ffc5ba3498
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="norm2-class"></a>norm_2 (Clase)
@@ -88,31 +88,31 @@ class norm_2;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|Método norm_2::get_x||  
-|Método norm_2::get_xy||  
-|Método norm_2::get_y||  
-|Método norm_2::get_yx||  
-|Método norm_2::ref_g||  
-|Método norm_2::ref_r||  
-|Método norm_2::ref_x||  
-|Método norm_2::ref_y||  
-|Método norm_2::set_x||  
-|Método norm_2::set_xy||  
-|Método norm_2::set_y||  
-|Método norm_2::set_yx||  
+|norm_2:: get_X||  
+|norm_2:: get_xy||  
+|norm_2:: get_Y||  
+|norm_2:: get_yx||  
+|norm_2:: ref_g||  
+|norm_2:: ref_r||  
+|norm_2:: ref_x||  
+|norm_2:: ref_y||  
+|norm_2:: set_X||  
+|norm_2:: set_xy||  
+|norm_2:: set_y||  
+|norm_2:: set_yx||  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|Operador norm_2::operator-||  
-|Operador norm_2::operator--||  
-|Operador norm_2::operator*=||  
-|Operador norm_2::operator/=||  
-|Operador norm_2::operator++||  
-|Operador norm_2::operator+=||  
-|Operador norm_2::operator=||  
-|Operador norm_2::operator-=||  
+|norm_2:: operator-||  
+|norm_2:: operator--||  
+|norm_2:: operator * =||  
+|norm_2:: operator / =||  
+|norm_2:: operator ++||  
+|norm_2:: operator +=||  
+|norm_2:: operator =||  
+|norm_2:: operator =||  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
@@ -124,14 +124,14 @@ class norm_2;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|Miembro de datos norm_2::g||  
-|Miembro de datos norm_2::gr||  
-|Miembro de datos norm_2::r||  
-|Miembro de datos norm_2::rg||  
-|Miembro de datos norm_2::x||  
-|Miembro de datos norm_2::xy||  
-|Miembro de datos norm_2::y||  
-|Miembro de datos norm_2::yx||  
+|norm_2:: g||  
+|norm_2:: GR||  
+|norm_2:: r||  
+|norm_2:: RG||  
+|norm_2:: x||  
+|norm_2:: XY||  
+|norm_2:: y||  
+|norm_2:: YX||  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `norm_2`  
@@ -141,7 +141,7 @@ class norm_2;
   
  **Namespace:** Graphics  
   
-##  <a name="a-namectora-norm2"></a><a name="ctor"></a>norm_2 
+##  <a name="ctor"></a>norm_2 
 
  El constructor predeterminado, inicializa todos los elementos con 0.  
   
@@ -221,12 +221,12 @@ explicit inline norm_2(
  `_Other`  
  Objeto utilizado para inicializar.  
   
-##  <a name="a-namenorm2sizea-size"></a><a name="norm_2__size"></a>tamaño 
+##  <a name="norm_2__size"></a>tamaño 
 
 ```  
 static const int size = 2;  
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
 

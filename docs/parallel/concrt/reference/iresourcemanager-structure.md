@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IResourceManager
+- IResourceManager
+- CONCRTRM/concurrency::IResourceManager
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::OSVersion
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::CreateNodeTopology
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::GetAvailableNodeCount
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::GetFirstNode
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::Reference
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::RegisterScheduler
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: fb523127f60c4e8cd45b2525749b536ad55849b0
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2d054bd632db90708d90fe8d791965b47f713493
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager (Estructura)
@@ -54,18 +62,18 @@ struct IResourceManager;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[IResourceManager:: OSVersion (enumeración)](#osversion)|Un tipo enumerado que representa la versión del sistema operativo.|  
+|[IResourceManager:: OSVersion](#osversion)|Un tipo enumerado que representa la versión del sistema operativo.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[IResourceManager:: CreateNodeTopology (método)](#createnodetopology)|Presente únicamente en depuración compilaciones del runtime, este método es un enlace de pruebas diseñado para facilitar las pruebas del Administrador de recursos en diversas topologías de hardware, sin necesidad de que coinciden con la configuración de hardware real. Con compilaciones del runtime, este método devolverá sin realizar ninguna acción.|  
-|[IResourceManager:: Getavailablenodecount (método)](#getavailablenodecount)|Devuelve el número de nodos disponibles en el Administrador de recursos.|  
-|[IResourceManager:: Getfirstnode (método)](#getfirstnode)|Devuelve el primer nodo en el orden de enumeración definido por el Administrador de recursos.|  
-|[IResourceManager:: Reference (método)](#reference)|Incrementa el recuento de referencias en la instancia del Administrador de recursos.|  
-|[IResourceManager:: RegisterScheduler (método)](#registerscheduler)|Registra a un programador con el Administrador de recursos. Una vez registrado el programador, debería comunicar con el Administrador de recursos mediante el `ISchedulerProxy` interfaz que se devuelve.|  
-|[IResourceManager:: Release (método)](#release)|Disminuye el recuento de referencias en la instancia del Administrador de recursos. El Administrador de recursos se destruye cuando su recuento de referencias llega a `0`.|  
+|[IResourceManager:: CreateNodeTopology](#createnodetopology)|Presente únicamente en depuración compilaciones del runtime, este método es un enlace de pruebas diseñado para facilitar las pruebas del Administrador de recursos en diversas topologías de hardware, sin necesidad de que coinciden con la configuración de hardware real. Con compilaciones del runtime, este método devolverá sin realizar ninguna acción.|  
+|[IResourceManager:: Getavailablenodecount](#getavailablenodecount)|Devuelve el número de nodos disponibles en el Administrador de recursos.|  
+|[IResourceManager:: Getfirstnode](#getfirstnode)|Devuelve el primer nodo en el orden de enumeración definido por el Administrador de recursos.|  
+|[IResourceManager:: Reference](#reference)|Incrementa el recuento de referencias en la instancia del Administrador de recursos.|  
+|[IResourceManager:: RegisterScheduler](#registerscheduler)|Registra a un programador con el Administrador de recursos. Una vez registrado el programador, debería comunicar con el Administrador de recursos mediante el `ISchedulerProxy` interfaz que se devuelve.|  
+|[IResourceManager:: Release](#release)|Disminuye el recuento de referencias en la instancia del Administrador de recursos. El Administrador de recursos se destruye cuando su recuento de referencias llega a `0`.|  
   
 ## <a name="remarks"></a>Comentarios  
  Utilice la [CreateResourceManager](concurrency-namespace-functions.md) función para obtener una interfaz a la instancia singleton del Administrador de recursos. El método incrementa un recuento de referencias en el Administrador de recursos y se debería invocar el [IResourceManager:: Release](#release) método para liberar la referencia cuando haya terminado con el Administrador de recursos. Normalmente, cada programador que se crea invocará este método durante la creación y liberar la referencia al administrador de recursos después de cerrarse.  
@@ -78,7 +86,7 @@ struct IResourceManager;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-namecreatenodetopologya--iresourcemanagercreatenodetopology-method"></a><a name="createnodetopology"></a>IResourceManager:: CreateNodeTopology (método)  
+##  <a name="createnodetopology"></a>IResourceManager:: CreateNodeTopology (método)  
  Presente únicamente en depuración compilaciones del runtime, este método es un enlace de pruebas diseñado para facilitar las pruebas del Administrador de recursos en diversas topologías de hardware, sin necesidad de que coinciden con la configuración de hardware real. Con compilaciones del runtime, este método devolverá sin realizar ninguna acción.  
   
 ```
@@ -107,7 +115,7 @@ virtual void CreateNodeTopology(
   
  [invalid_operation](invalid-operation-class.md) se produce si se llama a este método mientras otros programadores existen en el proceso.  
   
-##  <a name="a-namegetavailablenodecounta--iresourcemanagergetavailablenodecount-method"></a><a name="getavailablenodecount"></a>IResourceManager:: Getavailablenodecount (método)  
+##  <a name="getavailablenodecount"></a>IResourceManager:: Getavailablenodecount (método)  
  Devuelve el número de nodos disponibles en el Administrador de recursos.  
   
 ```
@@ -117,7 +125,7 @@ virtual unsigned int GetAvailableNodeCount() const = 0;
 ### <a name="return-value"></a>Valor devuelto  
  El número de nodos disponibles en el Administrador de recursos.  
   
-##  <a name="a-namegetfirstnodea--iresourcemanagergetfirstnode-method"></a><a name="getfirstnode"></a>IResourceManager:: Getfirstnode (método)  
+##  <a name="getfirstnode"></a>IResourceManager:: Getfirstnode (método)  
  Devuelve el primer nodo en el orden de enumeración definido por el Administrador de recursos.  
   
 ```
@@ -127,14 +135,14 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 ### <a name="return-value"></a>Valor devuelto  
  El primer nodo en el orden de enumeración definido por el Administrador de recursos.  
   
-##  <a name="a-nameiresourcemanagerosversiona--iresourcemanagerosversion-enumeration"></a><a name="iresourcemanager__osversion"></a>IResourceManager:: OSVersion (enumeración)  
+##  <a name="iresourcemanager__osversion"></a>IResourceManager:: OSVersion (enumeración)  
  Un tipo enumerado que representa la versión del sistema operativo.  
   
 ```
 enum OSVersion;
 ```  
   
-##  <a name="a-namereferencea--iresourcemanagerreference-method"></a><a name="reference"></a>IResourceManager:: Reference (método)  
+##  <a name="reference"></a>IResourceManager:: Reference (método)  
  Incrementa el recuento de referencias en la instancia del Administrador de recursos.  
   
 ```
@@ -144,7 +152,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="return-value"></a>Valor devuelto  
  El recuento de referencia resultante.  
   
-##  <a name="a-nameregisterschedulera--iresourcemanagerregisterscheduler-method"></a><a name="registerscheduler"></a>IResourceManager:: RegisterScheduler (método)  
+##  <a name="registerscheduler"></a>IResourceManager:: RegisterScheduler (método)  
  Registra a un programador con el Administrador de recursos. Una vez registrado el programador, debería comunicar con el Administrador de recursos mediante el `ISchedulerProxy` interfaz que se devuelve.  
   
 ```
@@ -168,7 +176,7 @@ virtual ISchedulerProxy *RegisterScheduler(
   
  El método produce una `invalid_argument` excepción si el parámetro `pScheduler` tiene el valor `NULL` o si el parámetro `version` no es una versión válida para la interfaz de comunicación.  
   
-##  <a name="a-namereleasea--iresourcemanagerrelease-method"></a><a name="release"></a>IResourceManager:: Release (método)  
+##  <a name="release"></a>IResourceManager:: Release (método)  
  Disminuye el recuento de referencias en la instancia del Administrador de recursos. El Administrador de recursos se destruye cuando su recuento de referencias llega a `0`.  
   
 ```

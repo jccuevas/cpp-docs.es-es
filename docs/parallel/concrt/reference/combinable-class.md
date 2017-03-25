@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::combinable
+- combinable
+- PPL/concurrency::combinable
+- PPL/concurrency::combinable::combinable
+- PPL/concurrency::combinable::clear
+- PPL/concurrency::combinable::combine
+- PPL/concurrency::combinable::combine_each
+- PPL/concurrency::combinable::local
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 4ed3ce3d441566a0fb301d01123335846d86a8af
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a491f8eef59978808608917531a5237cceacdb21
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="combinable-class"></a>Clase combinable
@@ -59,23 +65,23 @@ class combinable;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[Constructor combinable](#ctor)|Sobrecargado. Construye un nuevo objeto `combinable`.|  
+|[clase combinable](#ctor)|Sobrecargado. Construye un nuevo objeto `combinable`.|  
 |[~ combinable (destructor)](#dtor)|Destruye un objeto `combinable`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[Clear (método)](#clear)|Borra cualquier resultado computacional intermedio de un uso anterior.|  
-|[Combine (método)](#combine)|Calcula un valor final del conjunto de subprocesos locales sin bloqueos llamando al functor de combinación.|  
-|[combine_each (método)](#combine_each)|Calcula un valor final del conjunto de subprocesos locales sin bloqueos llamando al functor de combinación una vez por cálculo de subdirectorio local de subproceso. El objeto de función acumula el resultado final.|  
-|[local (método)](#local)|Sobrecargado. Devuelve una referencia al cálculo de subdirectorio de subprocesos privados.|  
+|[clear](#clear)|Borra cualquier resultado computacional intermedio de un uso anterior.|  
+|[combine](#combine)|Calcula un valor final del conjunto de subprocesos locales sin bloqueos llamando al functor de combinación.|  
+|[combine_each](#combine_each)|Calcula un valor final del conjunto de subprocesos locales sin bloqueos llamando al functor de combinación una vez por cálculo de subdirectorio local de subproceso. El objeto de función acumula el resultado final.|  
+|[local](#local)|Sobrecargado. Devuelve una referencia al cálculo de subdirectorio de subprocesos privados.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[operador = (operador)](#operator_eq)|Asigna a un `combinable` objeto desde otro `combinable` objeto.|  
+|[operator=](#operator_eq)|Asigna a un `combinable` objeto desde otro `combinable` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [objetos y contenedores paralelos](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -88,7 +94,7 @@ class combinable;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>Borrar 
+##  <a name="clear"></a>Borrar 
 
  Borra cualquier resultado computacional intermedio de un uso anterior.  
   
@@ -96,7 +102,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="a-namectora-combinable"></a><a name="ctor"></a>clase combinable 
+##  <a name="ctor"></a>clase combinable 
 
  Construye un nuevo objeto `combinable`.  
   
@@ -126,7 +132,7 @@ combinable(const combinable& _Copy);
   
  El tercer constructor es el constructor de copia.  
   
-##  <a name="a-namedtora-combinable"></a><a name="dtor"></a>~ combinable 
+##  <a name="dtor"></a>~ combinable 
 
  Destruye un objeto `combinable`.  
   
@@ -134,7 +140,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="a-namecombinea-combine"></a><a name="combine"></a>combinar 
+##  <a name="combine"></a>combinar 
 
  Calcula un valor final del conjunto de subprocesos locales sin bloqueos llamando al functor de combinación.  
   
@@ -153,7 +159,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>Valor devuelto  
  El resultado final de combinar todos los subcálculos de subprocesos privados.  
   
-##  <a name="a-namecombineeacha-combineeach"></a><a name="combine_each"></a>combine_each 
+##  <a name="combine_each"></a>combine_each 
 
  Calcula un valor final del conjunto de subprocesos locales sin bloqueos llamando al functor de combinación una vez por cálculo de subdirectorio local de subproceso. El objeto de función acumula el resultado final.  
   
@@ -169,7 +175,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  El functor que se usa para combinar un subcálculo. Su firma es `void (T)` o `void (const T&)`y debe ser asociativa y conmutativa.  
   
-##  <a name="a-namelocala-local"></a><a name="local"></a>local 
+##  <a name="local"></a>local 
 
  Devuelve una referencia al cálculo de subdirectorio de subprocesos privados.  
   
@@ -186,7 +192,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia al cálculo de subdirectorio de subprocesos privados.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a>operador = 
 
  Asigna a un `combinable` objeto desde otro `combinable` objeto.  
   
@@ -202,5 +208,5 @@ combinable& operator= (const combinable& _Copy);
  Una referencia a este `combinable` objeto.  
   
 ## <a name="see-also"></a>Vea también  
- [simultaneidad Namespace](concurrency-namespace.md)
+ [concurrency (espacio de nombres)](concurrency-namespace.md)
 

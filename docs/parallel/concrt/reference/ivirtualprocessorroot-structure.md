@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IVirtualProcessorRoot
+- IVirtualProcessorRoot
+- CONCRTRM/concurrency::IVirtualProcessorRoot
+- CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::Activate
+- CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::Deactivate
+- CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::EnsureAllTasksVisible
+- CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::GetId
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: ca095a249ee0eb9e1393e232ab7957a7060a2002
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2635f1c18dd61127360b8398ad1b0da03f1666d7
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot (Estructura)
@@ -54,10 +59,10 @@ struct IVirtualProcessorRoot : public IExecutionResource;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[IVirtualProcessorRoot:: Activate (método)](#activate)|Hace que el proxy del subproceso asociado a la interfaz de contexto de ejecución `pContext` empiece a ejecutar en esta raíz del procesador virtual.|  
-|[IVirtualProcessorRoot:: Deactivate (método)](#deactivate)|Hace que el proxy del subproceso está ejecutando actualmente en esta raíz del procesador virtual deje de enviar el contexto de ejecución. El proxy del subproceso reanudará la ejecución en una llamada a la `Activate` (método).|  
-|[IVirtualProcessorRoot:: EnsureAllTasksVisible (método)](#ensurealltasksvisible)|Hace que los datos almacenados en la jerarquía de la memoria de procesadores individuales se vuelvan visible a todos los procesadores del sistema. Se asegura de que se ha ejecutado una barrera de memoria completa en todos los procesadores antes de que el método devuelve.|  
-|[IVirtualProcessorRoot:: GetId (método)](#getid)|Devuelve un identificador único para la raíz del procesador virtual.|  
+|[IVirtualProcessorRoot:: Activate](#activate)|Hace que el proxy del subproceso asociado a la interfaz de contexto de ejecución `pContext` empiece a ejecutar en esta raíz del procesador virtual.|  
+|[IVirtualProcessorRoot:: Deactivate](#deactivate)|Hace que el proxy del subproceso está ejecutando actualmente en esta raíz del procesador virtual deje de enviar el contexto de ejecución. El proxy del subproceso reanudará la ejecución en una llamada a la `Activate` (método).|  
+|[IVirtualProcessorRoot:: EnsureAllTasksVisible](#ensurealltasksvisible)|Hace que los datos almacenados en la jerarquía de la memoria de procesadores individuales se vuelvan visible a todos los procesadores del sistema. Se asegura de que se ha ejecutado una barrera de memoria completa en todos los procesadores antes de que el método devuelve.|  
+|[IVirtualProcessorRoot:: GetId](#getid)|Devuelve un identificador único para la raíz del procesador virtual.|  
   
 ## <a name="remarks"></a>Comentarios  
  Cada raíz del procesador virtual tiene un recurso de ejecución asociados. El `IVirtualProcessorRoot` interfaz se hereda de la [IExecutionResource](iexecutionresource-structure.md) interfaz. Varias raíces de procesador virtual pueden corresponder al mismo subproceso de hardware subyacente.  
@@ -74,7 +79,7 @@ struct IVirtualProcessorRoot : public IExecutionResource;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-nameactivatea--ivirtualprocessorrootactivate-method"></a><a name="activate"></a>IVirtualProcessorRoot:: Activate (método)  
+##  <a name="activate"></a>IVirtualProcessorRoot:: Activate (método)  
  Hace que el proxy del subproceso asociado a la interfaz de contexto de ejecución `pContext` empiece a ejecutar en esta raíz del procesador virtual.  
   
 ```
@@ -100,7 +105,7 @@ virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
   
  La acción de activar una raíz del procesador virtual aumenta el nivel de suscripción del subproceso de hardware subyacente por uno. Para obtener más información sobre niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="a-namedeactivatea--ivirtualprocessorrootdeactivate-method"></a><a name="deactivate"></a>IVirtualProcessorRoot:: Deactivate (método)  
+##  <a name="deactivate"></a>IVirtualProcessorRoot:: Deactivate (método)  
  Hace que el proxy del subproceso está ejecutando actualmente en esta raíz del procesador virtual deje de enviar el contexto de ejecución. El proxy del subproceso reanudará la ejecución en una llamada a la `Activate` (método).  
   
 ```
@@ -127,7 +132,7 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
   
  La acción de desactivar una raíz del procesador virtual disminuye el nivel de suscripción del subproceso de hardware subyacente por uno. Para obtener más información sobre niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="a-nameensurealltasksvisiblea--ivirtualprocessorrootensurealltasksvisible-method"></a><a name="ensurealltasksvisible"></a>IVirtualProcessorRoot:: EnsureAllTasksVisible (método)  
+##  <a name="ensurealltasksvisible"></a>IVirtualProcessorRoot:: EnsureAllTasksVisible (método)  
  Hace que los datos almacenados en la jerarquía de la memoria de procesadores individuales se vuelvan visible a todos los procesadores del sistema. Se asegura de que se ha ejecutado una barrera de memoria completa en todos los procesadores antes de que el método devuelve.  
   
 ```
@@ -147,7 +152,7 @@ virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
   
  `invalid_operation`se produce si nunca se ha activado la raíz del procesador virtual, o el argumento `pContext` no representa el contexto de ejecución que fue enviado recientemente por esta raíz del procesador virtual.  
   
-##  <a name="a-namegetida--ivirtualprocessorrootgetid-method"></a><a name="getid"></a>IVirtualProcessorRoot:: GetId (método)  
+##  <a name="getid"></a>IVirtualProcessorRoot:: GetId (método)  
  Devuelve un identificador único para la raíz del procesador virtual.  
   
 ```
@@ -158,5 +163,5 @@ virtual unsigned int GetId() const = 0;
  Un identificador entero.  
   
 ## <a name="see-also"></a>Vea también  
- [simultaneidad Namespace](concurrency-namespace.md)
+ [concurrency (espacio de nombres)](concurrency-namespace.md)
 

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::invalid_multiple_scheduling
+- invalid_multiple_scheduling
+- CONCRT/concurrency::invalid_multiple_scheduling
+- CONCRT/concurrency::invalid_multiple_scheduling::invalid_multiple_scheduling
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 762648e65a7fcbda29daf31412e42bbd0e63f3d6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 82f1046173ba1f2eebfc74e1121b01ba0ed46b04
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling (Clase)
@@ -54,7 +56,7 @@ class invalid_multiple_scheduling : public std::exception;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[invalid_multiple_scheduling (Constructor)](#ctor)|Sobrecargado. Construye un objeto `invalid_multiple_scheduling`.|  
+|[invalid_multiple_scheduling](#ctor)|Sobrecargado. Construye un objeto `invalid_multiple_scheduling`.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `exception`  
@@ -66,7 +68,7 @@ class invalid_multiple_scheduling : public std::exception;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-namectora-invalidmultiplescheduling"></a><a name="ctor"></a>invalid_multiple_scheduling 
+##  <a name="ctor"></a>invalid_multiple_scheduling 
 
  Construye un objeto `invalid_multiple_scheduling`.  
   
@@ -84,8 +86,8 @@ invalid_multiple_scheduling() throw();
  [simultaneidad Namespace](concurrency-namespace.md)   
  [task_handle (clase)](task-handle-class.md)   
  [task_group (clase)](task-group-class.md)   
- [Run (método)](task-group-class.md)   
- [Wait (método)](task-group-class.md)   
- [run_and_wait (método)](task-group-class.md)   
+ [ejecutar](task-group-class.md)   
+ [esperar](task-group-class.md)   
+ [run_and_wait](task-group-class.md)   
  [structured_task_group (clase)](structured-task-group-class.md)
 
