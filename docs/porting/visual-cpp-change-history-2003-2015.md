@@ -949,7 +949,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
      Además, aunque el compilador no ofrece un diagnóstico específico, se considera que el operador en línea nuevo está mal formado.  
   
--   **Llamada a “operator *type*()” (conversión definida por el usuario) en tipos que no son de clase**  
+-   **Llamada a “operator*type*()” (conversión definida por el usuario) en tipos que no son de clase**  
   
      Las versiones anteriores del compilador permitieron que se llamara 'operator *type*()' en tipos que no son de clase mientras que se les ignora en modo silencioso. Este comportamiento anterior creó un riesgo de generación de código incorrecto silencioso, lo que produjo un comportamiento impredecible en tiempo de ejecución. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2228 en su lugar.  
   
@@ -1773,7 +1773,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
--   **Compatibilidad en desuso con código ATL con atributos ** (nivel 1 (/W1), activo de manera predeterminada)  
+-   **Compatibilidad en desuso con código ATL con atributos** (nivel 1 (/W1), activo de manera predeterminada)  
   
      Las versiones anteriores del compilador admitían código ATL con atributos. Como parte de la fase siguiente para quitar la compatibilidad con código ATL con atributos que [comenzó en Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), el código ATL con atributos está en desuso. Ahora, el compilador emite la advertencia del compilador C4467 para ayudarle a identificar este tipo de código en desuso.  
   
