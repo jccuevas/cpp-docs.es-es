@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: fe4946a8d3785c6295cb7537de0a11e06cd7a1cc
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 3dd5d8dd77f2b62a6b0ea52e7d056b3d779cd2f4
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="exception-handling-routines"></a>Rutinas para el control de excepciones
@@ -44,13 +44,13 @@ Utilice las funciones de control de excepciones de C++ para recuperarse de event
   
 ### <a name="exception-handling-functions"></a>Funciones de control de excepciones  
   
-|Función|Uso|Equivalente de .NET Framework|  
-|--------------|---------|-------------------------------|  
-|[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Controla las excepciones Win32 (excepciones estructuradas de C), como excepciones con tipo de C++.|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|Instala su propia rutina de finalización a la que debe llamar `terminate`.|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|Instala su propia función de finalización a la que debe llamar `unexpected`.|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[terminate](../c-runtime-library/reference/terminate-crt.md)|Se llama automáticamente en determinadas circunstancias una vez generada la excepción. La función `terminate` llama a `abort` o a una función que se especifique mediante `set_terminate`.|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[unexpected](../c-runtime-library/reference/unexpected-crt.md)|Llama a `terminate` o a una función que se especifique mediante `set_unexpected`. La función `unexpected` no se usa en la implementación actual del control de excepciones de Microsoft C++.|[Clase System::Exception](https://msdn.microsoft.com/en-us/library/system.exception.aspx)|  
+|Función|Uso|  
+|--------------|---------|  
+|[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Controla las excepciones Win32 (excepciones estructuradas de C), como excepciones con tipo de C++.|  
+|[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|Instala su propia rutina de finalización a la que debe llamar `terminate`.|  
+|[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|Instala su propia función de finalización a la que debe llamar `unexpected`.|  
+|[terminate](../c-runtime-library/reference/terminate-crt.md)|Se llama automáticamente en determinadas circunstancias una vez generada la excepción. La función `terminate` llama a `abort` o a una función que se especifique mediante `set_terminate`.|  
+|[unexpected](../c-runtime-library/reference/unexpected-crt.md)|Llama a `terminate` o a una función que se especifique mediante `set_unexpected`. La función `unexpected` no se usa en la implementación actual del control de excepciones de Microsoft C++.|  
   
 ## <a name="see-also"></a>Vea también  
  [Rutinas en tiempo de ejecución por categoría](../c-runtime-library/run-time-routines-by-category.md)
