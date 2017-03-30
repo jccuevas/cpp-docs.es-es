@@ -35,9 +35,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: bf7b4ccd6309f08098416f4bdb6777b8eafd2e7f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: aa9586bd0abed0b1fa1d24c777eea8c82c5cedc0
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Compilador (nivel 3) de la advertencia C4996
@@ -45,33 +45,35 @@ El compilador encontró una declaración en desuso.
   
  Esta advertencia o este error tiene varios significados posibles.  
   
- `C4996`se produce cuando el compilador encuentra una función o variable que está marcado como [en desuso](../../cpp/deprecated-cpp.md). Varias funciones, funciones miembro, funciones de plantilla y variables globales de las bibliotecas de Visual Studio están marcadas como en desuso. Estas funciones pueden tener un nombre preferido distinto, no ser seguras o tener una variante más segura, o estar en desuso. El mensaje de error puede incluir un reemplazo sugerido para la función o variable global en desuso. Puede desactivar esta advertencia con el [advertencia](../../preprocessor/warning.md) pragma o **/wd4996** opción de línea de comandos. También puede utilizar macros de preprocesador para desactivar determinadas clases de advertencias sobre desuso.  
+ `C4996`se produce cuando el compilador encuentra una función o variable que esté marcada como [en desuso](../../cpp/deprecated-cpp.md). Varias funciones, funciones miembro, funciones de plantilla y variables globales de las bibliotecas de Visual Studio están marcadas como en desuso. Estas funciones pueden tener un nombre preferido distinto, no ser seguras o tener una variante más segura, o estar en desuso. El mensaje de error puede incluir un reemplazo sugerido para la función o variable global en desuso. Puede desactivar esta advertencia con el [advertencia](../../preprocessor/warning.md) pragma o **/wd4996** opción de línea de comandos. También puede utilizar macros de preprocesador para desactivar determinadas clases de advertencias sobre desuso. 
+
+También se emite esta advertencia cuando se intenta acceder a una función, miembro de clase o definición de tipo que tiene C ++ 14 `[[deprecated]]` atributo. Para obtener más información, consulte [atributos estándar de C++](../../cpp/attributes2.md). 
   
- **El nombre POSIX para este elemento está en desuso. En su lugar, utilice el nombre compatible con ISO C y C++:** nombreNuevo**. Consulte la ayuda en línea para obtener información detallada.**  
+ **El nombre POSIX de este elemento está en desuso. En su lugar, utilice el nombre de compatible con ISO C y C++:** new_name**. Consulte la ayuda en línea para obtener información detallada.**  
   
  Algunas funciones POSIX en CRT han cambiado de nombre para que se ajuste a las reglas C99 y C++03 para los nombres de funciones globales definidos por la implementación. En la mayoría de casos, se agregó un carácter de subrayado inicial al nombre de función POSIX para crear un nombre conforme al estándar. El compilador emite una advertencia de desuso para los nombres de funciones originales y sugiere el nombre preferido. Solo los nombres originales están en desuso, no las propias funciones. Para desactivar las advertencias sobre desuso para estas funciones, defina la macro de preprocesador **_CRT_NONSTDC_NO_WARNINGS**. Puede definirla en la línea de comandos si incluye la opción `/D_CRT_NONSTDC_NO_WARNINGS`. Para definir esta macro en Visual Studio, abra el diálogo **Páginas de propiedades** del proyecto. Expanda **Propiedades de configuración**, **C o C++**, **Preprocesador**. En **Definiciones de preprocesador**, agregue `_CRT_NONSTDC_NO_WARNINGS`. Seleccione **Aceptar** para guardar y, luego, vuelva a generar el proyecto. Para definir esta macro solamente en archivos de origen concretos, agregue la línea `#define _CRT_NONSTDC_NO_WARNINGS` antes de cualquier línea que incluya un archivo de encabezado.  
   
- **Esta función o variable no puede ser segura. Considere el uso de** safe_version **en su lugar. Para deshabilitar el desuso, utilice _CRT_SECURE_NO_WARNINGS.  Consulte la ayuda en línea para obtener información detallada.**  
+ **Esta función o variable puede ser no seguro. Considere el uso de** safe_version **en su lugar. Para deshabilitar el desuso, utilice _CRT_SECURE_NO_WARNINGS.  Consulte la ayuda en línea para obtener información detallada.**  
   
- Algunas funciones de biblioteca estándar de C++ y CRT y variables globales han quedado obsoletas en beneficio de funciones nuevas más seguras. El compilador emite una advertencia de desuso para estas funciones y sugiere la función preferida. Para desactivar las advertencias sobre desuso para estas funciones en CRT, defina **_CRT_SECURE_NO_WARNINGS**. Para desactivar las advertencias sobre variables globales en desuso, defina **_CRT_SECURE_NO_WARNINGS_GLOBALS**. Para obtener más información acerca de estas funciones en desuso y variables globales, consulte [características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md) y [bibliotecas seguras: biblioteca estándar de C++](../../standard-library/safe-libraries-cpp-standard-library.md).  
+ Algunas variables globales y funciones de biblioteca estándar de C++ y CRT han quedado obsoletas en favor de funciones nuevas más seguras. El compilador emite una advertencia de desuso para estas funciones y sugiere la función preferida. Para desactivar las advertencias sobre desuso para estas funciones en CRT, defina **_CRT_SECURE_NO_WARNINGS**. Para desactivar las advertencias sobre variables globales en desuso, defina **_CRT_SECURE_NO_WARNINGS_GLOBALS**. Para obtener más información sobre estas globales y funciones en desuso, consulte [características de seguridad en CRT](../../c-runtime-library/security-features-in-the-crt.md) y [bibliotecas seguras: biblioteca estándar de C++](../../standard-library/safe-libraries-cpp-standard-library.md).  
   
- **Llamada de función con parámetros que puede no ser seguro - esta llamada se basa en el llamador para comprobar que los valores pasados son correctos. Para deshabilitar esta advertencia, utilice -D_SCL_SECURE_NO_WARNINGS. Consulte la documentación sobre cómo utilizar los iteradores comprobados de Visual C++.**  
+ **Llamada de función con parámetros que pueden ser seguros: esta llamada se basa en el llamador para comprobar que los valores pasados son correctos. Para deshabilitar esta advertencia, utilice -D_SCL_SECURE_NO_WARNINGS. Consulte la documentación sobre cómo usar iteradores comprobados' de Visual C++.**  
   
  Algunas funciones de plantilla de la biblioteca estándar de C++ no comprueban si los parámetros son correctos. Esta advertencia ayuda a identificar el uso de estas funciones. Para desactivar las advertencias para estas funciones, defina **_SCL_SECURE_NO_WARNINGS**. Para obtener más información, vea [Iteradores comprobados](../../standard-library/checked-iterators.md).  
   
- **Esta función o variable ha sido reemplazada por la nueva funcionalidad de sistema operativo o la biblioteca. Considere el uso de** new_item **en su lugar. Consulte la ayuda en línea para obtener información detallada.**  
+ **Esta función o variable ha sido reemplazada por una funcionalidad más reciente de biblioteca o el sistema operativo. Considere el uso de** new_item **en su lugar. Consulte la ayuda en línea para obtener información detallada.**  
   
  Algunas variables globales y funciones de la biblioteca están en desuso por estar obsoletas. Esa posible que estas funciones y variables se quiten en una versión futura de la biblioteca. El compilador emite una advertencia de desuso para estos elementos y sugiere la alternativa preferida. Para desactivar las advertencias sobre desuso para estos elementos, defina **_CRT_OBSOLETE_NO_WARNINGS**. Para más información, consulte la documentación de la variable o función en desuso.  
   
- **Varios mensajes en el código MFC o ATL**  
+ **Varios mensajes en código MFC o ATL**  
   
  La advertencia `C4996` también puede producirse si se utilizan funciones MFC o ATL que quedaron desusadas por razones de seguridad. Para suprimir estas advertencias, vea [_AFX_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/97dcfd41-1e56-41d5-bf7e-d240b950134b) y [_ATL_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/587d29d8-a75a-44a3-bec8-f724087e5e73).  
   
- **Errores de cálculo de referencias en el código CLR**  
+ **Serialización de errores en el código CLR**  
   
- La advertencia `C4996` puede aparecer también cuando se utiliza la biblioteca de cálculo de referencias. En este caso, C4996 es un error y no una advertencia. Este error se producirá cuando utilice [marshal_as](../../dotnet/marshal-as.md) para convertir entre dos tipos de datos que requieren un [marshal_context Class](../../dotnet/marshal-context-class.md). También recibirá este error cuando la biblioteca de cálculo de referencias no admita una conversión. Para obtener más información acerca de la biblioteca de cálculo de referencias, consulte [información general de referencias en C++](../../dotnet/overview-of-marshaling-in-cpp.md).  
+ La advertencia `C4996` puede aparecer también cuando se utiliza la biblioteca de cálculo de referencias. En este caso, C4996 es un error y no una advertencia. Este error se producirá cuando se usa [serializar_as](../../dotnet/marshal-as.md) para convertir entre dos tipos de datos que requieren un [marshal_context (clase)](../../dotnet/marshal-context-class.md). También recibirá este error cuando la biblioteca de cálculo de referencias no admita una conversión. Para obtener más información acerca de la biblioteca de serialización, vea [información general de serialización en C++](../../dotnet/overview-of-marshaling-in-cpp.md).  
   
- **Ejemplos que generan la advertencia C4996**  
+ **Ejemplos que generan C4996**  
   
  En el primer ejemplo, la advertencia `C4996` se genera para la línea en la que se declara la función y la línea en la que se utiliza la función.  
   
