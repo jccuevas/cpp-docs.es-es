@@ -27,9 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
-ms.openlocfilehash: b110994cab92d2151f63912d2b08af56059b82d7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1683c03c522b0b332ced9e93188c65e996ac633d
+ms.openlocfilehash: ec7ec2a7f5f0393f00efb6d662494e7be2a3f696
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -71,7 +71,7 @@ Una vez copiados los archivos, use el elemento **Directorios de VC++** de las pr
 ## <a name="copy-sources"></a>Copiar orígenes
 Al compilar, los archivos de origen del equipo de desarrollo se copian en el equipo Linux y se compilan allí.  De forma predeterminada, se copian todos los orígenes del proyecto de Visual Studio en las ubicaciones establecidas en la configuración anterior.  Pero también pueden agregarse a la lista orígenes adicionales o se puede desactivar por completo la copia de orígenes, que es el valor predeterminado para un proyecto de archivos Make.
 
-* **Orígenes para copiar** determina qué orígenes se copian en el equipo remoto.  De forma predeterminada, el valor predeterminado de **@(SourcesToCopyRemotely)** es todos los archivos del proyecto.
+* **Orígenes para copiar** determina qué orígenes se copian en el equipo remoto.  De forma predeterminada, **@(SourcesToCopyRemotely)** usa el valor predeterminado de todos los archivos de código fuente en el proyecto, pero no incluye ningún archivo de activos/recursos, como imágenes.
 
 * **Copiar orígenes** puede activarse y desactivarse para habilitar y deshabilitar la copia de archivos de origen en el equipo remoto.
 
