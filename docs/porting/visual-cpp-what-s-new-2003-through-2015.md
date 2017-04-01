@@ -1020,7 +1020,7 @@ En Visual C++ 2015 y versiones posteriores, las mejoras continuas en la conformi
     {   
         auto iter = std::find(v.begin(), v.end(), 5);   
     }   
-    catch(…)   
+    catch(...)   
     {   
         do_something();  // ok   
     }  
@@ -1033,7 +1033,7 @@ En Visual C++ 2015 y versiones posteriores, las mejoras continuas en la conformi
     {   
         auto iter = std::find(v.begin(), v.end(), 5);   
     }   
-    catch(…)   
+    catch(...)   
     {   
         do_something();  // warning C4702: unreachable code  
     }  
