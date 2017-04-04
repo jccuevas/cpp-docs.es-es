@@ -335,19 +335,14 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>Comentarios  
  Especifica los valores de tipo de valor devuelto por la **selección** tipo de enumeración declarado en el `COlePasteSpecialDialog` clase.  
   
- `enum Selection`  
-  
- `{`  
-  
- `pasteLink,`  
-  
- `pasteNormal,`  
-  
- `pasteOther,`  
-  
- `pasteStatic`  
-  
- `};`  
+```  
+enum Selection {
+    pasteLink,
+    pasteNormal,
+    pasteOther,
+    pasteStatic
+    };  
+```  
   
  Siga desccriptions breves de estos valores:  
   

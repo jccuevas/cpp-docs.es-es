@@ -103,7 +103,7 @@ class queue
   
  **Espacio de nombres:** std  
   
-##  <a name="a-namequeuebacka--queueback"></a><a name="queue__back"></a> queue::back  
+##  <a name="queue__back"></a> queue::back  
  Devuelve una referencia al último elemento que se ha agregado más recientemente en la parte trasera de la cola.  
   
 ```  
@@ -146,7 +146,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namequeuecontainertypea--queuecontainertype"></a><a name="queue__container_type"></a> queue::container_type  
+##  <a name="queue__container_type"></a> queue::container_type  
  Un tipo que proporciona el contenedor base que debe adaptarse.  
   
 ```  
@@ -161,7 +161,7 @@ typedef Container container_type;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [queue](#queue__queue) para obtener un ejemplo de cómo declarar y usar `container_type`.  
   
-##  <a name="a-namequeueemptya--queueempty"></a><a name="queue__empty"></a> queue::empty  
+##  <a name="queue__empty"></a> queue::empty  
  Comprueba si una cola está vacía.  
   
 ```  
@@ -205,7 +205,7 @@ The queue q1 is not empty.
 The queue q2 is empty.  
 ```  
   
-##  <a name="a-namequeuefronta--queuefront"></a><a name="queue__front"></a> queue::front  
+##  <a name="queue__front"></a> queue::front  
  Devuelve una referencia al primer elemento en la parte delantera de la cola.  
   
 ```  
@@ -254,7 +254,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namequeuepopa--queuepop"></a><a name="queue__pop"></a> queue::pop  
+##  <a name="queue__pop"></a> queue::pop  
  Quita un elemento de la parte delantera de la cola.  
   
 ```  
@@ -308,7 +308,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.  
 ```  
   
-##  <a name="a-namequeuepusha--queuepush"></a><a name="queue__push"></a> queue::push  
+##  <a name="queue__push"></a> queue::push  
  Agrega un elemento a la parte trasera de la cola.  
   
 ```  
@@ -354,7 +354,7 @@ The queue length is 3.
 The element at the front of the queue is 10.  
 ```  
   
-##  <a name="a-namequeuequeuea--queuequeue"></a><a name="queue__queue"></a> queue::queue  
+##  <a name="queue__queue"></a> queue::queue  
  Construye una cola que está vacía o que es una copia de un objeto contenedor base.  
   
 ```  
@@ -364,7 +364,7 @@ explicit queue(const container_type& right);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` right`  
+ `right`  
  El contenedor **const** del que la cola construida va a ser una copia.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -418,7 +418,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.  
 ```  
   
-##  <a name="a-namequeuesizea--queuesize"></a><a name="queue__size"></a> queue::size  
+##  <a name="queue__size"></a> queue::size  
  Devuelve el número de elementos de la cola.  
   
 ```  
@@ -457,7 +457,7 @@ The queue length is 1.
 The queue length is now 2.  
 ```  
   
-##  <a name="a-namequeuesizetypea--queuesizetype"></a><a name="queue__size_type"></a> queue::size_type  
+##  <a name="queue__size_type"></a> queue::size_type  
  Un tipo entero sin signo que puede representar el número de elementos de una cola.  
   
 ```  
@@ -470,7 +470,7 @@ typedef typename Container::size_type size_type;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [queue::front](#queue__front) para obtener un ejemplo de cómo declarar y usar `size_type`.  
   
-##  <a name="a-namequeuevaluetypea--queuevaluetype"></a><a name="queue__value_type"></a> queue::value_type  
+##  <a name="queue__value_type"></a> queue::value_type  
  Un tipo que representa el tipo de objeto almacenado como elemento en una cola.  
   
 ```  

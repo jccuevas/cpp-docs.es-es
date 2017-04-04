@@ -150,7 +150,7 @@ public:
   
  **Espacio de nombres:** std  
   
-##  <a name="a-namefunctionassigna--functionassign"></a><a name="function__assign"></a>  function::assign  
+##  <a name="function__assign"></a>  function::assign  
  Asigna un objeto al que se puede llamar a este objeto de función.  
   
 ```  
@@ -178,7 +178,7 @@ template <class Fx, class Alloc>
 ### <a name="remarks"></a>Comentarios  
  Las funciones miembro reemplazan al `callable object` mantenido por `*this` por el objeto al que se puede llamar pasado como el `operand`. Ambas asignan almacenamiento con el objeto de asignador `Ax`.  
   
-##  <a name="a-namefunctionfunctiona--functionfunction"></a><a name="function__function"></a>  function::function  
+##  <a name="function__function"></a>  function::function  
  Crea un contenedor que está vacío o almacena un objeto al que se puede llamar de tipo arbitrario con una signatura fija.  
   
 ```  
@@ -201,7 +201,7 @@ template <class Fx, class Alloc>
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` right`  
+ `right`  
  El objeto de función que se va a copiar.  
   
  `Fx`  
@@ -292,7 +292,7 @@ f is non-empty (correct).
 g is empty (correct).  
 ```  
   
-##  <a name="a-namefunctionoperatorunspecifieda--functionoperator-unspecified"></a><a name="function__operator_unspecified"></a>  function::operator unspecified  
+##  <a name="function__operator_unspecified"></a>  function::operator unspecified  
  Comprueba si existe un objeto al que se puede llamar almacenado.  
   
 ```  
@@ -332,7 +332,7 @@ not empty == false
 not empty == true  
 ```  
   
-##  <a name="a-namefunctionoperatora--functionoperator"></a><a name="function__operator__"></a>  function::operator()  
+##  <a name="function__operator__"></a>  function::operator()  
  Llama a un objeto al que se puede llamar.  
   
 ```  
@@ -380,7 +380,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctionoperatoreqa--functionoperator"></a><a name="function__operator_eq"></a>  function::operator=  
+##  <a name="function__operator_eq"></a>  function::operator=  
  Reemplaza el objeto al que se puede llamar almacenado.  
   
 ```  
@@ -459,7 +459,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctionresulttypea--functionresulttype"></a><a name="function__result_type"></a>  function::result_type  
+##  <a name="function__result_type"></a>  function::result_type  
  El tipo de valor devuelto del objeto al que se puede llamar almacenado.  
   
 ```  
@@ -499,7 +499,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctionswapa--functionswap"></a><a name="function__swap"></a>  function::swap  
+##  <a name="function__swap"></a>  function::swap  
  Intercambia dos objetos a los que se puede llamar.  
   
 ```  
@@ -555,7 +555,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctiontargeta--functiontarget"></a><a name="function__target"></a>  function::target  
+##  <a name="function__target"></a>  function::target  
  Comprueba si se puede llamar al objeto al que se puede llamar según lo especificado.  
   
 ```  
@@ -614,7 +614,7 @@ empty == true
 no target == true  
 ```  
   
-##  <a name="a-namefunctiontargettypea--functiontargettype"></a><a name="function__target_type"></a>  function::target_type  
+##  <a name="function__target_type"></a>  function::target_type  
  Obtiene información de tipo en el objeto al que se puede llamar.  
   
 ```  

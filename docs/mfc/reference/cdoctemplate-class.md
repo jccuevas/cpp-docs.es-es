@@ -395,23 +395,17 @@ virtual Confidence MatchDocType(
 ### <a name="return-value"></a>Valor devuelto  
  Un valor de la **confianza** enumeración, que se define como sigue:  
   
- `enum Confidence`  
-  
- `{`  
-  
- `noAttempt,`  
-  
- `maybeAttemptForeign,`  
-  
- `maybeAttemptNative,`  
-  
- `yesAttemptForeign,`  
-  
- `yesAttemptNative,`  
-  
- `yesAlreadyOpen`  
-  
- `};`  
+```  
+enum Confidence  
+    {  
+    noAttempt,
+    maybeAttemptForeign,
+    maybeAttemptNative,
+    yesAttemptForeign,
+    yesAttemptNative,
+    yesAlreadyOpen
+    };  
+```  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función para determinar el tipo de documento que desea utilizar para abrir un archivo. Si la aplicación admite varios tipos de archivo, por ejemplo, puede utilizar esta función para determinar cuál de las plantillas de documento disponibles es adecuado para un archivo determinado mediante una llamada a `MatchDocType` para cada plantilla de y elegir una plantilla de acuerdo con el valor de confianza devuelto.  

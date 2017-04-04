@@ -175,27 +175,19 @@ m_nShellCommand;
 ### <a name="remarks"></a>Comentarios  
  El tipo de este miembro de datos es el siguiente tipo enumerado se define en la `CCommandLineInfo` clase.  
   
- `enum{`  
-  
- `FileNew,`  
-  
- `FileOpen,`  
-  
- `FilePrint,`  
-  
- `FilePrintTo,`  
-  
- `FileDDE,`  
-  
- `AppRegister,`  
-  
- `AppUnregister,`  
-  
- `RestartByRestartManager,`  
-  
- `FileNothing = -1`  
-  
- `};`  
+```  
+enum {  
+    FileNew,
+    FileOpen,
+    FilePrint,
+    FilePrintTo,
+    FileDDE,
+    AppRegister,
+    AppUnregister,
+    RestartByRestartManager,
+    FileNothing = -1  
+    };  
+```  
   
  Para obtener una breve descripción de estos valores, consulte la lista siguiente.  
   

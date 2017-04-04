@@ -275,15 +275,13 @@ ATL_PDATAAVAILABLE m_pFunc;
 ### <a name="remarks"></a>Comentarios  
  La función señalada por `m_pFunc` es un miembro de la clase del objeto y tiene la siguiente sintaxis:  
   
- `void Function_Name(`  
-  
- `CBindStatusCallback<T>* pbsc,`  
-  
- `BYTE* pBytes,`  
-  
- `DWORD dwSize`  
-  
- `);`  
+```  
+void Function_Name(  
+   CBindStatusCallback<T>* pbsc,  
+   BYTE* pBytes,  
+   DWORD dwSize  
+   );  
+```  
   
 ##  <a name="m_pt"></a>CBindStatusCallback::m_pT  
  Un puntero al objeto que solicita la transferencia de datos asincrónica.  
