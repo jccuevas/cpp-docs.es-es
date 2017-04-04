@@ -43,7 +43,7 @@ ms.lasthandoff: 03/07/2017
 ## <a name="c-compiler"></a>Compilador C++
 
 ### <a name="c-conformance-improvements"></a>Mejoras de conformidad de C++
-En esta versión, hemos actualizado el compilador C++ y la biblioteca estándar con compatibilidad mejorada con características de C ++&11; y C ++&14;, así como la compatibilidad preliminar para determinadas características que se esperan que estén en C ++&17; estándar. Para obtener información detallada, vea [Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md).
+En esta versión, hemos actualizado el compilador C++ y la biblioteca estándar con compatibilidad mejorada con características de C ++ 11 y C ++ 14, así como la compatibilidad preliminar para determinadas características que se esperan que estén en C ++ 17 estándar. Para obtener información detallada, vea [Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md).
 
 ### <a name="new-compiler-switches"></a>Nuevos modificadores del compilador  
 
