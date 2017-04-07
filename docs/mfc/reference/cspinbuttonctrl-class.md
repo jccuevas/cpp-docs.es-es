@@ -52,9 +52,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 4cb2a10982ce42f94925b18f1b20ef72f3c3f83a
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 91be67ccbf1fb7fb863aa4072d55bb3f330aa44f
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (clase)
@@ -361,7 +361,7 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nLower`y`nUpper`  
+ `nLower` y `nUpper`  
  Límites superior e inferior del control. Para `SetRange`, ningún límite puede ser mayor que **UD_MAXVAL** o menor que **UD_MINVAL**; Además, no puede superar la diferencia entre los dos límites **UD_MAXVAL**. `SetRange32`impone ninguna restricción sobre los límites; utilizar los enteros.  
   
 ### <a name="remarks"></a>Comentarios  

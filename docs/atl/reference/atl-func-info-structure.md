@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: c18e1c5a41ef910cfe327fdbdd8d8885ef30a092
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 7bc607931c486f3dd7a398b277048db77e9b2f62
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="atlfuncinfo-structure"></a>Estructura de estructuras _ATL_FUNC_INFO
@@ -58,7 +58,7 @@ struct _ATL_FUNC_INFO {
   
 ## <a name="members"></a>Miembros  
  **CC**  
- Convención de llamada. Cuando se usa esta estructura con el [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) (clase), este miembro debe ser **CC_STDCALL**. `CC_CDECL`es la única opción admitida de Windows CE para la `CALLCONV` campo de la `_ATL_FUNC_INFO` estructura. Cualquier otro valor no es compatible, por tanto, su comportamiento sin definir.  
+ Convención de llamada. Cuando se usa esta estructura con la [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) (clase), este miembro debe ser **CC_STDCALL**. `CC_CDECL`es la única opción admitida de Windows CE para la `CALLCONV` campo de la `_ATL_FUNC_INFO` estructura. Cualquier otro valor no es compatible, por tanto, su comportamiento sin definir.  
   
  **vtReturn**  
  El tipo variant de la función de valor devuelto.  
@@ -70,16 +70,16 @@ struct _ATL_FUNC_INFO {
  Una matriz de tipos de variante de los parámetros de función.  
   
 ## <a name="remarks"></a>Comentarios  
- Internamente, ATL utiliza esta estructura que contiene la información obtenida de una biblioteca de tipos. Puede que necesite manipular directamente esta estructura si se proporciona información de tipo para un controlador de eventos que se utiliza con la [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) clase y [macro SINK_ENTRY_INFO](http://msdn.microsoft.com/library/1a0ae260-2c82-4926-a537-db01e5f206a7) (macro).  
+ Internamente, ATL utiliza esta estructura que contiene la información obtenida de una biblioteca de tipos. Puede que necesite manipular directamente esta estructura si se proporciona información de tipo de un controlador de eventos que se usa con la [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) clase y [macro SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) macro.  
   
 ## <a name="example"></a>Ejemplo  
  Dado un método de interfaz dispinterface definido en un IDL:  
   
- [!code-cpp[NVC_ATL_Windowing&#139;](../../atl/codesnippet/cpp/atl-func-info-structure_1.idl)]  
+ [!code-cpp[NVC_ATL_Windowing #139](../../atl/codesnippet/cpp/atl-func-info-structure_1.idl)]  
   
  tendría que definir una `_ATL_FUNC_INFO` estructura:  
   
- [!code-cpp[NVC_ATL_Windowing&#140;](../../atl/codesnippet/cpp/atl-func-info-structure_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing #140](../../atl/codesnippet/cpp/atl-func-info-structure_2.h)]  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
@@ -87,7 +87,7 @@ struct _ATL_FUNC_INFO {
 ## <a name="see-also"></a>Vea también  
  [Estructuras](../../atl/reference/atl-structures.md)   
  [IDispEventSimpleImpl (clase)](../../atl/reference/idispeventsimpleimpl-class.md)   
- [MACRO SINK_ENTRY_INFO](http://msdn.microsoft.com/library/1a0ae260-2c82-4926-a537-db01e5f206a7)
+ [MACRO SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)
 
 
 

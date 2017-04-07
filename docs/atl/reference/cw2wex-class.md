@@ -38,16 +38,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 9382f8404c1469b3f847500f35ab26499b6579bc
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 16b9cb286f71fa01da4b763188ff120f31ad9de7
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cw2wex-class"></a>Clase CW2WEX
-Esta clase es utilizada por las macros de conversión de cadena `CW2TEX` y `CT2WEX`y la definición de tipo `CW2W`.  
+Esta clase se utiliza por las macros de conversión de cadena `CW2TEX` y `CT2WEX`y la definición de tipo `CW2W`.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,7 +58,7 @@ class CW2WEX
   
 #### <a name="parameters"></a>Parámetros  
  `t_nBufferLength`  
- El tamaño del búfer utilizado en el proceso de traducción. La longitud predeterminada es 128 bytes.  
+ El tamaño del búfer usado en el proceso de traducción. La longitud predeterminada es de 128 bytes.  
   
 ## <a name="members"></a>Miembros  
   
@@ -80,16 +80,16 @@ class CW2WEX
 |Nombre|Descripción|  
 |----------|-----------------|  
 |[CW2WEX::m_psz](#m_psz)|El miembro de datos que almacena la cadena de origen.|  
-|[CW2WEX::m_szBuffer](#m_szbuffer)|El búfer estático, utilizado para almacenar la cadena convertida.|  
+|[CW2WEX::m_szBuffer](#m_szbuffer)|El búfer estático, usado para almacenar la cadena convertida.|  
   
 ## <a name="remarks"></a>Comentarios  
- A menos que se requiere funcionalidad adicional, use `CW2TEX`, `CT2WEX`, o `CW2W` en el código.  
+ A menos que sea necesaria una funcionalidad adicional, utilice `CW2TEX`, `CT2WEX`, o `CW2W` en el código.  
   
  Esta clase contiene un búfer estático de tamaño fijo que se utiliza para almacenar el resultado de la conversión. Si el resultado es demasiado grande y no encaja en el búfer estático, la clase asigna memoria por medio de `malloc`, memoria que libera cuando el objeto se sale del ámbito. Esto garantiza que, a diferencia del texto macros de conversión disponibles en versiones anteriores de ATL, esta clase es segura utilizar en bucles y que no desbordamiento de la pila.  
   
- Si la clase intenta asignar memoria en el montón y se produce un error, llame a `AtlThrow` con un argumento de **E_OUTOFMEMORY**.  
+ Si la clase intenta asignar memoria en la pila y se produce un error, llamará a `AtlThrow` con un argumento de **E_OUTOFMEMORY**.  
   
- De forma predeterminada, las macros y clases de conversión de ATL usan la página de códigos ANSI del subproceso actual para la conversión.  
+ De forma predeterminada, las macros y clases de conversión de ATL utilizan la página de códigos ANSI del subproceso actual para la conversión.  
   
  Las macros siguientes se basan en esta clase:  
   
@@ -101,10 +101,10 @@ class CW2WEX
   
 - `CW2W`  
   
- Para obtener una explicación de estas macros de conversión de texto, consulte [Macros de conversión de cadenas de MFC y ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
+ Para obtener una descripción de estas macros de conversión de texto, consulte [Macros de conversión de cadena de MFC y ATL](string-conversion-macros.md).  
   
 ## <a name="example"></a>Ejemplo  
- Consulte [Macros de conversión de cadenas de MFC y ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) para obtener un ejemplo del uso de estas macros de conversión de cadena.  
+ Vea [Macros de conversión de cadena de MFC y ATL](string-conversion-macros.md) para obtener un ejemplo del uso de estas macros de conversión de cadena.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlconv.h  
@@ -145,7 +145,7 @@ LPWSTR m_psz;
 ```  
   
 ##  <a name="m_szbuffer"></a>CW2WEX::m_szBuffer  
- El búfer estático, utilizado para almacenar la cadena convertida.  
+ El búfer estático, usado para almacenar la cadena convertida.  
   
 ```
 wchar_t m_szBuffer[t_nBufferLength];
@@ -167,5 +167,5 @@ operator LPWSTR() const throw();
  [Clase CA2WEX](../../atl/reference/ca2wex-class.md)   
  [Clase CW2AEX](../../atl/reference/cw2aex-class.md)   
  [Clase CW2CWEX](../../atl/reference/cw2cwex-class.md)   
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

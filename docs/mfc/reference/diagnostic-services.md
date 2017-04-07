@@ -49,9 +49,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: e86ca806e5e6f19fa36b3ab33ba7a518da80e86b
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: 0e83114e2e6f062b9cb2164cf71bb25792304de0
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="diagnostic-services"></a>Servicios de diagnóstico
@@ -79,9 +79,11 @@ La biblioteca MFC (Microsoft Foundation Class) ofrece muchos servicios de diagn�
 |-|-|  
 |[ASSERT](#assert)|Imprime un mensaje y, a continuación, se anula el programa si la expresión especificada se evalúa como **FALSE** en la versión de depuración de la biblioteca.|  
 |[ASSERT_KINDOF](#assert_kindof)|Prueba que un objeto es un objeto de la clase especificada o de una clase derivada de la clase especificada.|  
-|[ASSERT_VALID](#assert_valid)|Comprueba la validez interna de un objeto mediante una llamada a su `AssertValid` función miembro; normalmente invalidada desde `CObject`.|  
+|[ASSERT_VALID](#assert_valid)|Comprueba la validez interna de un objeto mediante una llamada a su `AssertValid` función miembro; normalmente invalidada desde `CObject`.|
 |[DEBUG_NEW](#debug_new)|Ofrece un nombre de archivo y un número de línea para todas las asignaciones de objetos en modo de depuración para ayudar a encontrar fugas de memoria.|  
 |[DEBUG_ONLY](#debug_only)|Similar a **ASSERT** pero no prueba el valor de la expresión; útil para el código que se debe ejecutar solo en modo de depuración.|  
+|[Asegúrese de que y ENSURE_VALID](#ensure)|Usar para validar la corrección de datos.|
+|[THIS_FILE](#this_file)|Se expande al nombre del archivo que se está compilando.|
 |[TRACE](#trace)|Proporciona `printf`-como capacidad en la versión de depuración de la biblioteca.|  
 |[COMPROBAR](#verify)|Similar a **ASSERT** pero evalúa la expresión en la versión de lanzamiento de la biblioteca, así como en la versión de depuración.|  
   
@@ -93,7 +95,9 @@ La biblioteca MFC (Microsoft Foundation Class) ofrece muchos servicios de diagn�
 |[afxMemDF](#afxmemdf)|Variable global que controla el comportamiento del asignador de memoria de depuración.|  
 |[AfxCheckError](#afxcheckerror)|Variable global que se utiliza para probar el valor **SCODE** para ver si es un error y, si es así, genera el error correspondiente.|  
 |[AfxCheckMemory](#afxcheckmemory)|Comprueba la integridad de toda la memoria asignada actualmente.|  
-|[AfxDump](#cdumpcontext_in_mfc_)|Si se llama mientras se encuentra en el depurador, vuelca el estado de un objeto durante la depuración.|  
+|[AfxDebugBreak](#afxdebugbreak)|Produce una interrupción en ejecución.|
+|[AfxDump](#cdumpcontext_in_mfc)|Si se llama mientras se encuentra en el depurador, vuelca el estado de un objeto durante la depuración.|  
+|[AfxDump](#afxdump)|Función interna que vuelca el estado de un objeto durante la depuración.|
 |[AfxDumpStack](#afxdumpstack)|Genera una imagen de la pila actual. Esta función siempre está vinculada estáticamente.|  
 |[AfxEnableMemoryLeakDump](#afxenablememoryleakdump)|Habilita el volcado de fuga de memoria.|  
 |[AfxEnableMemoryTracking](#afxenablememorytracking)|Activa y desactiva el seguimiento de la memoria.|  
@@ -108,7 +112,49 @@ La biblioteca MFC (Microsoft Foundation Class) ofrece muchos servicios de diagn�
 |-|-|  
 |[AfxDoForAllClasses](#afxdoforallclasses)|Realiza una función especificada en todos los `CObject`-clases derivadas que admiten la comprobación de tipos en tiempo de ejecución.|  
 |[AfxDoForAllObjects](#afxdoforallobjects)|Realiza una función especificada en todos los `CObject`-objetos asignados con derivados **nueva**.|  
+
+### <a name="mfc-compilation-macros"></a>Macros de compilación de MFC
+|||
+|-|-|
+|[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Suprime las advertencias del compilador para el uso de funciones en desuso de MFC.|  
+
+
+## <a name="afx_secure_no_warnings"></a>_AFX_SECURE_NO_WARNINGS
+Suprime las advertencias del compilador para el uso de funciones en desuso de MFC.  
+   
+### <a name="syntax"></a>Sintaxis   
+```  
+_AFX_SECURE_NO_WARNINGS  
+```     
+### <a name="example"></a>Ejemplo  
+ Este ejemplo de código podría causar una advertencia del compilador si no se definieron _AFX_SECURE_NO_WARNINGS.  
   
+ ```cpp
+// define this before including any afx files in stdafx.h
+#define _AFX_SECURE_NO_WARNINGS
+```
+```cpp
+CRichEditCtrl* pRichEdit = new CRichEditCtrl;
+pRichEdit->Create(WS_CHILD|WS_VISIBLE|WS_BORDER|ES_MULTILINE,
+   CRect(10,10,100,200), pParentWnd, 1);
+char sz[256];
+pRichEdit->GetSelText(sz);
+```
+
+## <a name="afxdebugbreak"></a>AfxDebugBreak
+Llame a esta función para producir una interrupción (en la ubicación de la llamada a `AfxDebugBreak`) en la ejecución de la versión de depuración de la aplicación MFC.  
+
+### <a name="syntax"></a>Sintaxis    
+```
+void AfxDebugBreak( );    
+```  
+   
+### <a name="remarks"></a>Comentarios  
+ `AfxDebugBreak`no tiene ningún efecto en las versiones de lanzamiento de una aplicación MFC y se debería quitar. Esta función sólo debe utilizarse en aplicaciones MFC. Usar la versión de API de Win32, **DebugBreak**, para producir una interrupción en las aplicaciones no están basados en MFC.  
+   
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxver_.h   
+
 ##  <a name="assert"></a>ASSERT
  Se evalúa como su argumento.  
   
@@ -240,6 +286,67 @@ DEBUG_ONLY(expression)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afx.h
 
+ ### <a name="ensure"></a>Asegúrese de que y ENSURE_VALID
+Usar para validar la corrección de datos.  
+   
+### <a name="syntax"></a>Sintaxis    
+```
+ENSURE(  booleanExpression )  
+ENSURE_VALID( booleanExpression  )  
+```
+### <a name="parameters"></a>Parámetros  
+ `booleanExpression`  
+ Especifica una expresión booleana que se va a probar.  
+   
+### <a name="remarks"></a>Comentarios  
+ El propósito de estas macros es mejorar la validación de parámetros. Las macros impiden continuar el proceso de parámetros incorrectos en el código. A diferencia de la **ASSERT** macros, el **Asegúrese** macros producen una excepción además de generar una aserción.  
+  
+ Las macros se comporten de dos maneras, según la configuración del proyecto. La llamada de macros **ASSERT** y, a continuación, inicia una excepción si se produce un error en la aserción. Por lo tanto, en configuraciones de depuración (es decir, donde **_DEBUG** está definido) las macros de producen una aserción y la excepción mientras se encuentra en las configuraciones de versión, las macros producen solo la excepción (**ASSERT** no se evalúa la expresión en configuraciones de versión).  
+  
+ La macro **ENSURE_ARG** actúa como el **Asegúrese** macro.  
+  
+ **ENSURE_VALID** llamadas el `ASSERT_VALID` macro (que tiene un efecto únicamente en las compilaciones de depuración). Además, **ENSURE_VALID** produce una excepción si el puntero es NULL. Se realiza la prueba NULL en configuraciones Debug y Release.  
+  
+ Si cualquiera de estas pruebas se produce un error, se muestra un mensaje de alerta en la misma manera que **ASSERT**. La macro produce una excepción de argumento no válido si es necesario.  
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h  
+   
+### <a name="see-also"></a>Vea también  
+ [Macros y funciones globales](mfc-macros-and-globals.md)   
+ [COMPROBAR](#verify)   
+ [ATLENSURE](#altensure)
+
+## <a name="this_file"></a>THIS_FILE
+Se expande al nombre del archivo que se está compilando.  
+   
+### <a name="syntax"></a>Sintaxis    
+```
+THIS_FILE    
+```  
+   
+### <a name="remarks"></a>Comentarios  
+ La información se usa por la **ASSERT** y **compruebe** macros. Los asistentes de Asistente para aplicaciones y código coloque la macro en los archivos de código fuente que creen.  
+   
+### <a name="example"></a>Ejemplo  
+```cpp
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+// __FILE__ is one of the six predefined ANSI C macros that the 
+// compiler recognizes. 
+```
+   
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h  
+   
+### <a name="see-also"></a>Vea también  
+ [Macros y funciones globales](mfc-macros-and-globals.md)   
+ [ASSERT](#assert)   
+ [COMPROBAR](#verify)
+
+
 ##  <a name="trace"></a>SEGUIMIENTO  
  Envía la cadena especificada al depurador de la aplicación actual.  
   
@@ -286,7 +393,7 @@ VERIFY(booleanExpression)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afx.h
 
-##  <a name="cdumpcontext_in_mfc_"></a>afxDump (CDumpContext en MFC)  
+##  <a name="cdumpcontext_in_mfc"></a>afxDump (CDumpContext en MFC)  
  Proporciona funcionalidad básica volcado de objetos en la aplicación.  
   
 ```   
@@ -305,6 +412,31 @@ CDumpContext  afxDump;
 
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afx.h
+
+
+## <a name="afxdump"></a>AfxDump (interno)
+Función interna que utiliza MFC para volcar el estado de un objeto durante la depuración.  
+
+### <a name="syntax"></a>Sintaxis    
+```
+void AfxDump(const CObject* pOb);   
+```
+### <a name="parameters"></a>Parámetros  
+ `pOb`  
+ Un puntero a un objeto de una clase derivada de `CObject`.  
+   
+### <a name="remarks"></a>Comentarios  
+ **AfxDump** llama a un objeto `Dump` función miembro y envía la información a la ubicación especificada por el `afxDump` variable. **AfxDump** solo está disponible en la versión de depuración de MFC.  
+  
+ El código del programa no debe llamar a **AfxDump**, pero en su lugar, debe llamar a la `Dump` función de miembro del objeto correspondiente.  
+   
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h  
+   
+### <a name="see-also"></a>Vea también  
+ [CObject::Dump](cobject-class.md#dump)   
+
+
 
 ##  <a name="afxmemdf"></a>afxMemDF  
  Esta variable es accesible desde un depurador o el programa y le permite optimizar el diagnóstico de asignación.  
@@ -383,7 +515,7 @@ BOOL  AfxCheckMemory();
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afx.h  
  
-##  <a name="mfc_"></a>AfxDump (MFC)  
+##  <a name="afxdump"></a>AfxDump (MFC)  
  Llame a esta función en el depurador para volcar el estado de un objeto durante la depuración.  
   
 ```   
@@ -398,6 +530,14 @@ void AfxDump(const CObject* pOb);
  **AfxDump** llama a un objeto `Dump` función miembro y envía la información a la ubicación especificada por el `afxDump` variable. **AfxDump** solo está disponible en la versión de depuración de MFC.  
   
  El código del programa no debe llamar a **AfxDump**, pero en su lugar, debe llamar a la `Dump` función de miembro del objeto correspondiente.  
+
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h  
+
+### <a name="see-also"></a>Vea también  
+ [CObject::Dump](cobject-class.md#dump)   
+
+
   
 ##  <a name="afxdumpstack"></a>AfxDumpStack  
  Esta función global puede utilizarse para generar una imagen de la pila actual.  

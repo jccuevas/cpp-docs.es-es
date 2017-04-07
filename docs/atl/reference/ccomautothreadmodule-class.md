@@ -1,5 +1,5 @@
 ---
-title: La clase CComAutoThreadModule | Documentos de Microsoft
+title: CComAutoThreadModule (clase) | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -45,16 +45,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 07aaf6dc7029452fa6822c5f5f1ae09b724ddc8b
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 8e3ad5333d684daff5d8baf462ae805ef8b4b51d
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule (clase)
 A partir de ATL 7.0, `CComAutoThreadModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -65,7 +65,7 @@ class CComAutoThreadModule : public CComModule
   
 #### <a name="parameters"></a>Parámetros  
  `ThreadAllocator`  
- [in] La clase de administración de selección de subproceso. El valor predeterminado es [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
+ [in] La clase de administrar la selección de subproceso. El valor predeterminado es [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
   
 ## <a name="members"></a>Miembros  
   
@@ -88,20 +88,20 @@ class CComAutoThreadModule : public CComModule
 |[dwThreadID](#dwthreadid)|Contiene el identificador del subproceso actual.|  
 |[m_Allocator](#m_allocator)|Administra la selección de subproceso.|  
 |[m_nThreads](#m_nthreads)|Contiene el número de subprocesos en el módulo.|  
-|[m_pApartments](#m_papartments)|Administra los apartamentos del módulo.|  
+|[m_pApartments](#m_papartments)|Administra los contenedores del módulo.|  
   
 ## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
->  Esta clase está obsoleta, que ha reemplazado por la [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) y [CAtlModule](../../atl/reference/catlmodule-class.md) las clases derivadas. La siguiente información es para uso con versiones anteriores de ATL.  
+>  Esta clase está obsoleta, tener ha reemplazado por la [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) y [CAtlModule](../../atl/reference/catlmodule-class.md) las clases derivadas. La siguiente información es para su uso con las versiones anteriores de ATL.  
   
- `CComAutoThreadModule`se deriva de [CComModule](../../atl/reference/ccommodule-class.md) para implementar un servidor COM de subprocesamiento de modelo, agrupadas por subproceso para servicios de Windows y los archivos exe. `CComAutoThreadModule`usa [CComApartment](../../atl/reference/ccomapartment-class.md) para administrar un contenedor para cada subproceso en el módulo.  
+ `CComAutoThreadModule`se deriva de [CComModule](../../atl/reference/ccommodule-class.md) para implementar un servidor COM agrupadas por subproceso, el modelo de apartamento para servicios de Windows y los archivos exe. `CComAutoThreadModule`usa [CComApartment](../../atl/reference/ccomapartment-class.md) para administrar un contenedor para cada subproceso en el módulo.  
   
- Derivar su módulo de `CComAutoThreadModule` cuando desee crear objetos en varios contenedores. También debe incluir el [DECLARE_CLASSFACTORY_AUTO_THREAD](http://msdn.microsoft.com/library/19d7105e-03e8-4412-9f5e-5384c8a5e18f) macro en la definición de clase del objeto para especificar [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) como el generador de clases.  
+ Derivar su módulo de `CComAutoThreadModule` cuando desee crear objetos en varios contenedores. También debe incluir el [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) macro en la definición de clase del objeto para especificar [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) como el generador de clases.  
   
- De forma predeterminada, el Asistente para aplicaciones de COM de ATL (el Asistente para proyectos ATL en Visual Studio. NET) se derivarán el módulo de `CComModule`. Usar `CComAutoThreadModule`, modifique la definición de clase. Por ejemplo:  
+ De forma predeterminada, el Asistente para aplicaciones de COM de ATL (el Asistente para proyectos ATL en Visual Studio. NET) derivará el módulo desde `CComModule`. Para usar `CComAutoThreadModule`, modifique la definición de clase. Por ejemplo:  
   
- [!code-cpp[NVC_ATL_AxHost&#2;](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_AxHost n.º 2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
@@ -133,7 +133,7 @@ HRESULT CreateInstance(
   
 ### <a name="parameters"></a>Parámetros  
  *pfnCreateInstance*  
- [in] Puntero a una función de creación.  
+ [in] Un puntero a una función de creación.  
   
  `riid`  
  [in] El IID de la interfaz solicitada.  
@@ -165,10 +165,10 @@ static int GetDefaultThreads();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El número de subprocesos que se creará en el módulo del archivo EXE.  
+ El número de subprocesos que se creen en el módulo del archivo EXE.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función estática calcula dinámicamente el número máximo de subprocesos para el módulo EXE, en función del número de procesadores. De forma predeterminada, este valor devuelto se pasa a la [Init](#init) método para crear los subprocesos.  
+ Esta función estática calcula dinámicamente el número máximo de subprocesos para el módulo ejecutable, en función del número de procesadores. De forma predeterminada, este valor devuelto se pasa a la [Init](#init) método para crear los subprocesos.  
   
 ##  <a name="init"></a>CComAutoThreadModule::Init  
  A partir de ATL 7.0, `CComAutoThreadModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
@@ -183,19 +183,19 @@ HRESULT Init(
   
 ### <a name="parameters"></a>Parámetros  
  `p`  
- [in] Un puntero a una matriz de entradas de mapa de objeto.  
+ [in] Un puntero a una matriz de entradas de asignación de objeto.  
   
  `h`  
  [in] El `HINSTANCE` pasado a **DLLMain** o `WinMain`.  
   
  `plibid`  
- [in] Puntero a LIBID de la biblioteca de tipos asociado al proyecto.  
+ [in] Un puntero a LIBID de la biblioteca de tipos asociado al proyecto.  
   
  `nThreads`  
  [in] El número de subprocesos que se va a crear. De forma predeterminada, `nThreads` es el valor devuelto por [GetDefaultThreads](#getdefaultthreads).  
   
 ### <a name="remarks"></a>Comentarios  
- Inicializa los miembros de datos y crea el número de subprocesos especificado por `nThreads`.  
+ Inicializa los miembros de datos y se crea el número de subprocesos especificados por `nThreads`.  
   
 ##  <a name="lock"></a>CComAutoThreadModule::Lock  
  A partir de ATL 7.0, `CComAutoThreadModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
@@ -205,10 +205,10 @@ LONG Lock();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor que puede ser útil para el diagnóstico o de pruebas.  
+ Un valor que puede ser útil para el diagnóstico o pruebas.  
   
 ### <a name="remarks"></a>Comentarios  
- Realiza un incremento atómico en el recuento de bloqueos para el módulo y el subproceso actual. `CComAutoThreadModule`el recuento de bloqueos del módulo se utiliza para determinar si los clientes tienen acceso al módulo. El recuento de bloqueos en el subproceso actual se utiliza para fines estadísticos.  
+ Realiza un incremento atómico en el recuento de bloqueos para el módulo y el subproceso actual. `CComAutoThreadModule`utiliza el recuento de bloqueos de módulo para determinar si los clientes pueden obtener acceso el módulo. El recuento de bloqueos en el subproceso actual se utiliza para fines estadísticos.  
   
 ##  <a name="m_allocator"></a>CComAutoThreadModule::m_Allocator  
  A partir de ATL 7.0, `CComAutoThreadModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
@@ -218,7 +218,7 @@ ThreadAllocator  m_Allocator;
 ```     
   
 ### <a name="remarks"></a>Comentarios  
- El objeto de administración de selección de subproceso. De forma predeterminada, el `ThreadAllocator` parámetro de plantilla de clase es [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
+ El objeto de administrar la selección de subproceso. De forma predeterminada, el `ThreadAllocator` parámetro de plantilla de clase es [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
   
 ##  <a name="m_nthreads"></a>CComAutoThreadModule::m_nThreads  
  A partir de ATL 7.0, `CComAutoThreadModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
@@ -238,7 +238,7 @@ CComApartment* m_pApartments;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Apunta a una matriz de [CComApartment](../../atl/reference/ccomapartment-class.md) objetos, cada uno de ellos administra un apartamento en el módulo. El número de elementos de la matriz se basa en el [m_nThreads](#m_nthreads) miembro.  
+ Apunta a una matriz de [CComApartment](../../atl/reference/ccomapartment-class.md) objetos, cada uno de los cuales administra un contenedor en el módulo. El número de elementos de la matriz se basa en el [m_nThreads](#m_nthreads) miembro.  
   
 ##  <a name="unlock"></a>CComAutoThreadModule::Unlock  
  A partir de ATL 7.0, `CComAutoThreadModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
@@ -248,14 +248,14 @@ LONG Unlock();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor que puede ser útil para el diagnóstico o de pruebas.  
+ Un valor que puede ser útil para el diagnóstico o pruebas.  
   
 ### <a name="remarks"></a>Comentarios  
- Realiza un decremento atómica en el recuento de bloqueos para el módulo y el subproceso actual. `CComAutoThreadModule`el recuento de bloqueos del módulo se utiliza para determinar si los clientes tienen acceso al módulo. El recuento de bloqueos en el subproceso actual se utiliza para fines estadísticos.  
+ Realiza un decremento atómico en el recuento de bloqueos para el módulo y el subproceso actual. `CComAutoThreadModule`utiliza el recuento de bloqueos de módulo para determinar si los clientes pueden obtener acceso el módulo. El recuento de bloqueos en el subproceso actual se utiliza para fines estadísticos.  
   
  Cuando el recuento de bloqueos del módulo llega a cero, se puede descargar el módulo.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la clase](../../atl/atl-class-overview.md)   
+ [Información general de clases](../../atl/atl-class-overview.md)   
  [Clases de módulo](../../atl/atl-module-classes.md)
 

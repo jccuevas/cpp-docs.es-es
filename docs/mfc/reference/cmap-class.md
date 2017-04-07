@@ -53,9 +53,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: c567d97c613ad517372b454456535165fadbd3ae
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 24f2c70210db2d0179f3234f18c3fcbd3bf093f2
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cmap-class"></a>Clase CMap
@@ -117,7 +117,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[[] CMap::operator](#operator_at)|Inserta un elemento en la sustitución de operador de asignación \u2012 para `SetAt`.|  
+|[[] CMap::operator](#operator_at)|Inserta un elemento en el mapa: sustitución de operador para `SetAt`.|  
   
 ## <a name="remarks"></a>Comentarios  
  Una vez que ha insertado un par de clave y valor (elemento) en el mapa, puede recuperar eficazmente o eliminar el par con la clave para tener acceso a él. También puede iterar por todos los elementos del mapa.  

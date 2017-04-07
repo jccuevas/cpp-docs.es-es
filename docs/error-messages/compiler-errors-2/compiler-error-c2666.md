@@ -1,34 +1,51 @@
 ---
-title: "Error del compilador C2666 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2666"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2666"
+title: 'C2666: Error de compilador | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2666
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Error del compilador C2666
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0aa7af12e49f152256c2efe7d16d02e1f1c45f68
+ms.lasthandoff: 04/01/2017
 
-'identificador' : sobrecargas número tienen conversiones similares  
+---
+# <a name="compiler-error-c2666"></a>C2666: Error de compilador
+'identificador': número sobrecargas tienen conversiones similares  
   
- Una función u operador sobrecargado es ambiguo.   Las listas de parámetros formales pueden ser demasiado parecidas para que el compilador resuelva la ambigüedad.  Para corregir este error, convierta explícitamente uno o más de los parámetros actuales.  
+ Una función u operador sobrecargado es ambiguo.   Listas de parámetros formales pueden ser demasiado similares para el compilador para resolver la ambigüedad.  Para resolver este error, convierta explícitamente uno o varios de los parámetros reales.  
   
- El código siguiente genera el error C2666:  
+ El ejemplo siguiente genera C2666::  
   
 ```  
 // C2666.cpp  
@@ -44,17 +61,17 @@ int main() {
 }  
 ```  
   
- Este error también puede producirse como resultado del trabajo de conformidad del compilador realizado para Visual Studio .NET 2003:  
+ Este error también puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio .NET 2003:  
   
 -   operadores binarios y conversiones definidas por el usuario a tipos de puntero  
   
--   conversión de calificación no es lo mismo que conversión de identidad  
+-   conversión de calificación no es igual que la conversión de identidad  
   
- Para los operadores binarios \<\>, \<\=, y \>\=, un último parámetro ahora se convierte implícitamente al tipo de operando si el tipo del parámetro define un operador de conversión definida por el usuario para convertir al tipo del operando.  Ahora existe la posibilidad de que se produzcan ambigüedades.  
+ Para los operadores binarios \<, >, \<=, y > = un pasado parámetro ahora se convierte implícitamente al tipo del operando si el tipo del parámetro define un operador de conversión definida por el usuario para convertir al tipo del operando. Ahora hay posible ambigüedad.  
   
- Para que el código sea válido en las versiones Visual Studio .NET 2003 y Visual Studio .NET de Visual C\+\+, llame explícitamente al operador de clase mediante sintaxis de función.  
+ Para el código que es válido en las versiones de Visual Studio .NET de Visual C++ y Visual Studio .NET 2003, llame al operador de clase explícitamente mediante sintaxis de la función.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // C2666b.cpp  
@@ -94,7 +111,7 @@ int main()
     T str1( "ABCD" );  
     const char* str2 = "DEFG";  
   
-    // Error – Ambiguous call to operator<()  
+    // Error - Ambiguous call to operator<()  
     // Trying to convert str1 to char* and then call   
     // operator<( const char*, const char* )?  
     //  OR  
@@ -111,7 +128,7 @@ int main()
 }  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera C2666:  
   
 ```  

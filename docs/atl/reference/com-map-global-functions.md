@@ -32,24 +32,24 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: c37f722267107ad06fb51dc78bd682603161a476
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: d6f23de1a5fd13d61d376acded35f9217d0a898d
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="com-map-global-functions"></a>Funciones globales de mapa COM
+# <a name="com-map-global-functions"></a>Funciones globales de asignación COM
 Estas funciones proporcionan compatibilidad para la asignación COM **IUnknown** implementaciones.  
   
 |||  
 |-|-|  
 |[AtlInternalQueryInterface](#atlinternalqueryinterface)|Delega en el **IUnknown** de un objeto no agregado.|  
-|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Genera un código eficaz para comparar las interfaces con **IUnknown**.|  
+|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Genera un código eficaz para comparar interfaces con **IUnknown**.|  
 
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
 
-##  <a name="a-nameatlinternalqueryinterfacea--atlinternalqueryinterface"></a><a name="atlinternalqueryinterface"></a>AtlInternalQueryInterface  
+##  <a name="atlinternalqueryinterface"></a>AtlInternalQueryInterface  
  Recupera un puntero a la interfaz solicitada.  
   
 ```
@@ -62,27 +62,27 @@ HRESULT AtlInternalQueryInterface(
   
 ### <a name="parameters"></a>Parámetros  
  `pThis`  
- [in] Un puntero al objeto que contiene el mapa COM de las interfaces expuestas a `QueryInterface`.  
+ [in] Un puntero al objeto que contiene el mapa de COM de las interfaces expuestas a `QueryInterface`.  
   
  `pEntries`  
  [in] Una matriz de **_ATL_INTMAP_ENTRY** estructuras que tienen acceso a un mapa de las interfaces disponibles.  
   
  `iid`  
- [in] El GUID de la interfaz solicitada.  
+ [in] El GUID de la interfaz que se solicita.  
   
  `ppvObject`  
  [out] Un puntero al puntero de interfaz especificado en `iid`, o **NULL** si no se encuentra la interfaz.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Uno de los valores estándar HRESULT.  
+ Uno de los valores HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- `AtlInternalQueryInterface` solo administra interfaces de la tabla de asignación COM. Si se agrega el objeto, `AtlInternalQueryInterface` no delegar en el desconocido externo. Puede especificar interfaces en el mapa COM con la macro [COM_INTERFACE_ENTRY](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00) o uno de sus variantes.  
+ `AtlInternalQueryInterface` solo administra interfaces de la tabla de asignación COM. Si el objeto es agregado, `AtlInternalQueryInterface` no delegar en el desconocido externo. Puede especificar interfaces en la tabla de asignación de COM con la macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) o uno de sus variantes.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Windowing&#94;](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing #94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]  
   
-##  <a name="a-nameinlineisequaliunknowna--inlineisequaliunknown"></a><a name="inlineisequaliunknown"></a>InlineIsEqualIUnknown  
+##  <a name="inlineisequaliunknown"></a>InlineIsEqualIUnknown  
  Llame a esta función, en el caso especial de prueba de **IUnknown**.  
   
 ```
@@ -91,7 +91,7 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
   
 ### <a name="parameters"></a>Parámetros  
  *rguid1*  
- [in] El GUID que se compara con **IID_IUnknown**.  
+ [in] El GUID que se comparará con **IID_IUnknown**.  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones](../../atl/reference/atl-functions.md)   

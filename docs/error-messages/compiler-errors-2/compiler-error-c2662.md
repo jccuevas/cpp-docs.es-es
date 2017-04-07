@@ -1,40 +1,56 @@
 ---
-title: "Error del compilador C2662 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2662"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2662"
+title: C2662 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2662
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Error del compilador C2662
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: aa2c22d7fbe8b017617fcad41327feef7f8fd19a
+ms.lasthandoff: 04/04/2017
 
-'función' : no se puede convertir puntero 'this' de 'tipo1' a 'tipo2'  
+---
+# <a name="compiler-error-c2662"></a>C2662 de Error del compilador
+'función': no se puede convertir el puntero 'this' de 'tipo1' a 'tipo2'  
   
- El compilador no pudo convertir el puntero `this` de `type1` en `type2`.  
+ El compilador no pudo convertir el `this` puntero desde `type1` a `type2`.  
   
- Este error puede producirse invocando una función miembro no\-`const` en un objeto `const`.  Posible solución:  
+ Este error puede deberse a invocar no`const` función miembro en un `const` objeto.  Soluciones posibles:  
   
--   Quite `const` de la declaración del objeto.  
+-   Quitar el `const` de la declaración del objeto.  
   
--   Agregue `const` a la función miembro.  
+-   Agregar `const` a la función miembro.  
   
- El código siguiente genera el error C2662:  
+ El ejemplo siguiente genera C2662:  
   
 ```  
 // C2662.cpp  
@@ -50,7 +66,7 @@ int main() {
 }  
 ```  
   
- Al compilar con **\/clr**, no puede llamar a una función de un tipo administrado completo `const` o `volatile`.  No puede declarar una función miembro 'const' de una clase administrada, por lo que no puede llamar a métodos de objetos administrados const.  
+ Cuando se compila con **/CLR**, no se puede llamar a una función en un `const` o `volatile` calificado tipo administrado. No se puede declarar una función miembro const de una clase administrada, por lo que no se puede llamar a métodos en objetos administrados constantes.  
   
 ```  
 // C2662_b.cpp  
@@ -76,7 +92,7 @@ ref struct N {
 };  
 ```  
   
- El código siguiente genera el error C2662:  
+ El ejemplo siguiente genera C2662:  
   
 ```  
 // C2662_c.cpp  

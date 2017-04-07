@@ -1,77 +1,102 @@
 ---
-title: "IDocHostUIHandlerDispatch Interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "IDocHostUIHandlerDispatch"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDocHostUIHandlerDispatch interface"
+title: Interfaz IDocHostUIHandlerDispatch | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- IDocHostUIHandlerDispatch
+- atlbase/ATL::IDocHostUIHandlerDispatch
+dev_langs:
+- C++
+helpviewer_keywords:
+- IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# IDocHostUIHandlerDispatch Interface
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 8232df949d3bdcbaab16af1802d7275a9a8642f3
+ms.openlocfilehash: a8765f5191ea2101dc20985e8112e3e06ccd6da0
+ms.lasthandoff: 03/30/2017
 
-una interfaz a Microsoft HTML que analiza y que genera el motor.  
+---
+# <a name="idochostuihandlerdispatch-interface"></a>Interfaz IDocHostUIHandlerDispatch
+Una interfaz para el análisis de HTML de Microsoft y el motor de representación.  
   
 > [!IMPORTANT]
 >  Esta clase y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+interface IDocHostUIHandlerDispatch : IDispatch
 ```  
   
-interface IDocHostUIHandlerDispatch : IDispatch  
+## <a name="members"></a>Miembros  
   
-```  
-  
-## Members  
-  
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
 > [!NOTE]
->  Los vínculos de la siguiente tabla se a temas de referencia de INet SDK para los miembros de la interfaz de [IDocUIHostHandler](https://msdn.microsoft.com/en-us/library/aa753260.aspx) .  `IDocHostUIHandlerDispatch` tiene la misma funcionalidad que **IDocUIHostHandler**, con la diferencia siendo ese `IDocHostUIHandlerDispatch` es dispinterface mientras **IDocUIHostHandler** es una interfaz personalizada.  
+>  Los vínculos en la tabla siguiente son los temas de referencia de INet SDK para los miembros de la [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx) interfaz. `IDocHostUIHandlerDispatch`tiene la misma funcionalidad que **IDocUIHostHandler**, con la diferencia es que `IDocHostUIHandlerDispatch` es una interfaz dispinterface mientras que **IDocUIHostHandler** es una interfaz personalizada.  
   
 |||  
 |-|-|  
-|[\<caps:sentence id\="tgt7" sentenceid\="bbafd0070a97938421603b1ef8409510" class\="tgtSentence"\>EnableModeless\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753253.aspx)|Denominado de implementación MSHTML de [IOleInPlaceActiveObject:: EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115).  También denominado cuando MSHTML muestra la interfaz de usuario modal.|  
-|[\<caps:sentence id\="tgt10" sentenceid\="2cfbfb70fe0af79263134b694d06311c" class\="tgtSentence"\>FilterDataObject\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753254.aspx)|Llamada al host MSHTML por a permitir que el host reemplace el objeto de datos MSHTML.|  
-|[\<caps:sentence id\="tgt12" sentenceid\="715255e2d7f611c97308a373328e19a0" class\="tgtSentence"\>GetDropTarget\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753255.aspx)|Llamado por MSHTML cuando se usa como destino para permitir que el host proporcione [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)alternativo.|  
-|[\<caps:sentence id\="tgt14" sentenceid\="5a51a8633a0d2036f843073d6f35a4af" class\="tgtSentence"\>GetExternal\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753256.aspx)|Llamado por MSHTML para obtener la interfaz IDispatch host.|  
-|[\<caps:sentence id\="tgt16" sentenceid\="ce27e0c2f7ebb0aaa2f9088818dc8347" class\="tgtSentence"\>GetHostInfo\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753257.aspx)|Recupera las funciones de la interfaz de usuario de host MSHTML.|  
-|[\<caps:sentence id\="tgt18" sentenceid\="693bd2149b17c4586cdc167e13e59f0a" class\="tgtSentence"\>GetOptionKeyPath\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753258.aspx)|Devuelve la clave del Registro en la que almacena MSHTML preferencias del usuario.|  
-|[\<caps:sentence id\="tgt20" sentenceid\="7fce94585b477684cc21a38fe9ee288c" class\="tgtSentence"\>HideUI\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753259.aspx)|Se invoca cuando MSHTML quita los menús y barras de herramientas.|  
-|[\<caps:sentence id\="tgt22" sentenceid\="359e4dcbd80b962decf88ef02d66fe14" class\="tgtSentence"\>OnDocWindowActivate\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753261.aspx)|Denominado de implementación MSHTML de [IOleInPlaceActiveObject:: OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281).|  
-|[\<caps:sentence id\="tgt24" sentenceid\="8e472d7f3f3064d2ee6fdddd83002b86" class\="tgtSentence"\>OnFrameWindowActivate\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753262.aspx)|Denominado de implementación MSHTML de [IOleInPlaceActiveObject:: OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969).|  
-|[\<caps:sentence id\="tgt26" sentenceid\="3fd38deec5e9f4201074e886bfb178a5" class\="tgtSentence"\>ResizeBorder\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753263.aspx)|Denominado de implementación MSHTML de [IOleInPlaceActiveObject:: ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053).|  
-|[\<caps:sentence id\="tgt28" sentenceid\="2f382ba3de5494d18b20ccfa348f795e" class\="tgtSentence"\>ShowContextMenu\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753264.aspx)|Denominado MSHTML para mostrar un menú contextual.|  
-|[\<caps:sentence id\="tgt30" sentenceid\="c6978c4c8ab30ae8380439da613bb63c" class\="tgtSentence"\>ShowUI\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753265.aspx)|Permite al host reemplace menús y barras de herramientas MSHTML.|  
-|[\<caps:sentence id\="tgt32" sentenceid\="97bfd5aead25a2d9870b38da4b6745cd" class\="tgtSentence"\>TranslateAccelerator\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753266.aspx)|Llamado por MSHTML cuando se llama a [IOleInPlaceActiveObject:: TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) o [IOleControlSite:: TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756) .|  
-|[\<caps:sentence id\="tgt34" sentenceid\="55c20a6fb6b05f6059d72b2854a7d7e2" class\="tgtSentence"\>TranslateUrl\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753267.aspx)|Llamado por MSHTML para permitir hospedar una oportunidad de modificar la dirección URL que se va a cargar.|  
-|[\<caps:sentence id\="tgt36" sentenceid\="8fdf7c2c3ebf5fa12ecc909279c951ff" class\="tgtSentence"\>UpdateUI\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753268.aspx)|Notifica al host que el estado de comando ha cambiado.|  
+|[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|Se invoca desde MSHTML implementación de [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115). También se llama cuando MSHTML muestra la interfaz de usuario modal.|  
+|[FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)|Se llama en el host MSHTML para permitir que el host reemplazar el objeto de datos MSHTML.|  
+|[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|Lo llama MSHTML cuando está usándola como un destino para colocar para permitir que el host proporcione una alternativa [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).|  
+|[GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)|Llama a MSHTML para obtener la interfaz del host IDispatch.|  
+|[GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)|Recupera las capacidades de la interfaz de usuario de host MSHTML.|  
+|[GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)|Devuelve la clave del registro bajo la que MSHTML almacena las preferencias del usuario.|  
+|[HideUI](https://msdn.microsoft.com/library/aa753259.aspx)|Se llama cuando MSHTML quita sus menús y barras de herramientas.|  
+|[OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)|Se invoca desde MSHTML implementación de [IOleInPlaceActiveObject:: OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281).|  
+|[OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)|Se invoca desde MSHTML implementación de [IOleInPlaceActiveObject:: Onframewindowactivate](http://msdn.microsoft.com/library/windows/desktop/ms683969).|  
+|[ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)|Se invoca desde MSHTML implementación de [IOleInPlaceActiveObject::](http://msdn.microsoft.com/library/windows/desktop/ms680053).|  
+|[ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)|Llamar desde MSHTML para mostrar un menú contextual.|  
+|[ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)|Permite al host reemplazan a las barras de herramientas y menús MSHTML.|  
+|[TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)|Llama a MSHTML cuando [IOleInPlaceActiveObject:: TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) o [IOleControlSite:: TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756) se llama.|  
+|[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|Llama a MSHTML para ofrecer al host la oportunidad de modificar la dirección URL que va a cargarse.|  
+|[UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx)|Notifica al host que cambió el estado del comando.|  
   
-## Comentarios  
- Un host puede reemplazar los menús, barras de herramientas, y menús contextuales utilizados por Microsoft HTML analizar y generar el motor \(MSHTML\) si implementa esta interfaz.  
+## <a name="remarks"></a>Comentarios  
+ Un host puede reemplazar los menús, barras de herramientas y menús contextuales usados por el análisis de HTML de Microsoft y el motor de representación (MSHTML) mediante la implementación de esta interfaz.  
   
-## Requisitos  
- La definición de esta interfaz está disponible como IDL o C\+\+, como se muestra a continuación.  
+## <a name="requirements"></a>Requisitos  
+ La definición de esta interfaz está disponible como IDL o C++, tal y como se muestra a continuación.  
   
 |Tipo de definición|Archivo|  
-|------------------------|-------------|  
+|---------------------|----------|  
 |IDL|ATLIFace.idl|  
-|C\+\+|ATLIFace.h \(también incluido en ATLBase.h\)|  
+|C++|ATLIFace.h (que también se incluye en ATLBase.h)|  
   
-## Vea también  
- [IDocUIHostHandler](https://msdn.microsoft.com/en-us/library/aa753260.aspx)
+## <a name="see-also"></a>Vea también  
+ [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx)
+
+
+
+
+
+
+
+
+
+

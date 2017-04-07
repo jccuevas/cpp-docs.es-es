@@ -93,9 +93,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 3d2a811f850ca2779066f39fefd8312eb268f603
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 67fa0c6355443bcee478e9cd8d22b50813c0a4b0
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="afx-messages"></a>Mensajes AFX
@@ -108,7 +108,7 @@ Estos mensajes se utilizan en MFC.
 |-|-|-|-|-|  
 |Mensaje|Descripción|[in] `wParam`|`lParam`(Todos los parámetros son [in], a menos que se indique lo contrario).|Valor devuelto|  
 |AFX_WM_ACCGETOBJECT|No usado.|No usado.|No es aplicable.|No es aplicable.|  
-|AFX_WM_ACCGETSTATE|Se usa para admitir la accesibilidad. Enviar este mensaje a `CMFCPopupMenu` o `CMFCRibbonPanelMenu` para recuperar el estado del elemento actual.|Índice del elemento, que puede ser un botón de menú o un separador.|No usado.|El estado del elemento. Es -1 si el índice no es válido, 0 si el botón de menú no tiene ningún atributo especial. En caso contrario, es una combinación de los siguientes indicadores:<br /><br /> TBBS_DISABLED \u2012 elemento está deshabilitado<br /><br /> TBBS_CHECKED \u2012 opción está activada<br /><br /> TBBS_BUTTON \u2012 el elemento es un pulsador estándar<br /><br /> Se presiona el botón de \u2012 TBBS_PRESSED<br /><br /> Estado TBBS_INDETERMINATE \u2012 sin definir<br /><br /> TBBS_SEPARATOR - en lugar de un botón de menú, este formularios de elemento de una separación entre otros elementos de menú|  
+|AFX_WM_ACCGETSTATE|Se usa para admitir la accesibilidad. Enviar este mensaje a `CMFCPopupMenu` o `CMFCRibbonPanelMenu` para recuperar el estado del elemento actual.|Índice del elemento, que puede ser un botón de menú o un separador.|No usado.|El estado del elemento. Es -1 si el índice no es válido, 0 si el botón de menú no tiene ningún atributo especial. En caso contrario, es una combinación de los siguientes indicadores:<br /><br /> TBBS_DISABLED: el elemento está deshabilitado<br /><br /> TBBS_CHECKED: el elemento está activado<br /><br /> TBBS_BUTTON: el elemento es un pulsador estándar<br /><br /> TBBS_PRESSED: se presiona el botón<br /><br /> TBBS_INDETERMINATE: estado indefinido<br /><br /> TBBS_SEPARATOR - en lugar de un botón de menú, este formularios de elemento de una separación entre otros elementos de menú|  
 |AFX_WM_CHANGE_ACTIVE_TAB|El marco de trabajo envía este mensaje para el control de barra de control de tamaño ajustable. Procesar este mensaje para recibir notificaciones de `CMFCTabCtrl` objetos cuando un usuario cambia una pestaña activa.|El índice de una pestaña.|No usado.|Es distinto de cero.|  
 |AFX_WM_CHANGE_CURRENT_FOLDER|El marco de trabajo envía este mensaje para el elemento primario de `CMFCShellListCtrl` cuando el usuario ha cambiado la carpeta actual.|No usado.|No usado.|No usado.|  
 |AFX_WM_CHANGEVISUALMANAGER|El marco de trabajo envía este mensaje a todas las ventanas de marco cuando el usuario cambia el administrador Visual actual. En respuesta a este mensaje, una ventana de marco vuelve a calcular su región y ajusta los otros parámetros según sea necesario. Si tiene que recibir notificaciones acerca de este evento se puede procesar el mensaje AFX_WM_CHANGEVISUALMANAGER en la aplicación. Debe llamar al controlador de clase base (`OnChangeVisualManager`) para asegurarse de que interno de la plataforma de procesamiento de este evento tiene lugar.|No usado.|No usado.|No usado.|  

@@ -131,9 +131,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: ec5969edb26f4dbc2c249f16a8c39498bd01ca44
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 099e027e778090d14dd7dbe24d6732f7eb06b9d9
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cwinapp-class"></a>CWinApp (clase)
@@ -478,7 +478,7 @@ virtual void DoWaitCursor(int nCode);
   
 ### <a name="parameters"></a>Parámetros  
  `nCode`  
- Si este parámetro es 1, aparece un cursor de espera. Si es 0, el cursor de espera se restaura sin incrementar el recuento de referencias. Si-1, se termina el cursor de espera.  
+ Si este parámetro es 1, aparece un cursor de espera. Si es 0, el cursor de espera se restaura sin incrementar el recuento de referencias. Si es-1, se finaliza el cursor de espera.  
   
 ### <a name="remarks"></a>Comentarios  
  El valor predeterminado implementa un cursor de reloj de arena. `DoWaitCursor`mantiene un recuento de referencias. Si es positivo, se muestra el cursor de reloj de arena.  
@@ -1121,15 +1121,12 @@ AFX_HELP_TYPE m_eHelpType;
 ### <a name="remarks"></a>Comentarios  
  El **AFX_HELP_TYPE** enumeración se define como sigue:  
   
- `enum AFX_HELP_TYPE`  
-  
- `{`  
-  
- `afxWinHelp = 0,`  
-  
- `afxHTMLHelp = 1`  
-  
- `};`  
+```  
+enum AFX_HELP_TYPE {  
+    afxWinHelp = 0,
+    afxHTMLHelp = 1
+    };  
+```  
   
 -   Para establecer la Ayuda de la aplicación a la Ayuda de HTML, llame a [SetHelpMode](#sethelpmode) y especifique **afxHTMLHelp**.  
   
@@ -1578,19 +1575,15 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
   
  Los miembros de datos de la `CCommandLineInfo` objeto, identificado por [CCommandLineInfo::m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand), son del tipo enumerado siguiente, que se define dentro de la `CCommandLineInfo` clase.  
   
- `enum {`  
-  
- `FileNew,`  
-  
- `FileOpen,`  
-  
- `FilePrint,`  
-  
- `FilePrintTo,`  
-  
- `FileDDE,`  
-  
- `};`  
+```  
+enum {
+    FileNew,
+    FileOpen,
+    FilePrint,
+    FilePrintTo,
+    FileDDE
+    };  
+```
   
  Para obtener una descripción breve de cada uno de estos valores, consulte `CCommandLineInfo::m_nShellCommand`.  
   

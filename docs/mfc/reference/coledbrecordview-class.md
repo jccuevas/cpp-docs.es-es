@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 8269a71e9528da5c3468b5eb37f5dce3a16b14fd
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6129ad49f58cecb099927fe3d422fe215d143b67
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView (clase)
@@ -76,7 +76,7 @@ class COleDBRecordView : public CFormView
 > [!NOTE]
 >  Si está trabajando con las clases de Data Access Objects (DAO) en lugar de las clases de plantilla de consumidor OLE DB, utilice la clase [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) en su lugar. Para obtener más información, vea el artículo [información general: programación de base de datos](../../data/data-access-programming-mfc-atl.md).  
   
- `COleDBRecordView`realiza un seguimiento de la posición del usuario en el conjunto de filas para que la vista de registros pueda actualizar la interfaz de usuario. Cuando el usuario se desplaza a cualquiera de los extremos del conjunto de filas, la vista de registros deshabilita usuario interfaz objetos \u2012 como elementos de menú o barra de herramientas botones \u2012 para mover más detalladamente en la misma dirección.  
+ `COleDBRecordView`realiza un seguimiento de la posición del usuario en el conjunto de filas para que la vista de registros pueda actualizar la interfaz de usuario. Cuando el usuario se desplaza a cualquiera de los extremos del conjunto de filas, la vista de registros deshabilita objetos de la interfaz de usuario, como botones de barra de herramientas o elementos de menú, para mover más en la misma dirección.  
   
  Para obtener más información acerca de las clases de conjunto de filas, vea el [utilizando OLE DB plantillas de consumidor](../../data/oledb/ole-db-consumer-templates-cpp.md) artículo.  
   
@@ -152,13 +152,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  Uno de los siguientes valores de Id. de comando estándar:  
   
-- `ID_RECORD_FIRST`\u2012 se mueve al primer registro del conjunto de registros.  
+- `ID_RECORD_FIRST`Migre al primer registro del conjunto de registros.  
   
-- `ID_RECORD_LAST`\u2012 mover hasta el último registro en el conjunto de registros.  
+- `ID_RECORD_LAST`Mueva hasta el último registro en el conjunto de registros.  
   
-- `ID_RECORD_NEXT`\u2012 mover hasta el siguiente registro del conjunto de registros.  
+- `ID_RECORD_NEXT`Mueva hasta el siguiente registro del conjunto de registros.  
   
-- `ID_RECORD_PREV`\u2012 mover al registro anterior en el conjunto de registros.  
+- `ID_RECORD_PREV`Migre al registro anterior en el conjunto de registros.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el movimiento se realizó correctamente; en caso contrario es 0 si se denegó la solicitud de movimiento.  

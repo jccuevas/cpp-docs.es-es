@@ -1,5 +1,5 @@
 ---
-title: Clase CSimpleDialog | Documentos de Microsoft
+title: CSimpleDialog (clase) | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: a4c17a1da8d1be00ebff171af09bc6c8eb81ed44
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 2448f2fcd0547e2344dde51392873e3276f2bd09
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog (clase)
@@ -73,9 +73,9 @@ class CSimpleDialog : public CDialogImplBase
 ## <a name="remarks"></a>Comentarios  
  Implementa un cuadro de diálogo modal con funcionalidad básica. `CSimpleDialog`proporciona compatibilidad para controles comunes de Windows. Para crear y mostrar un cuadro de diálogo modal, cree una instancia de esta clase, proporcionando el nombre de una plantilla de recursos existente para el cuadro de diálogo. El objeto de cuadro de diálogo se cierra cuando el usuario hace clic en cualquier control con un valor predefinido (por ejemplo, IDOK o IDCANCEL).  
   
- `CSimpleDialog`le permite crear sólo los cuadros de diálogo modales. `CSimpleDialog`proporciona el procedimiento de cuadro de diálogo, que utiliza el mapa de mensajes predeterminado para dirigir mensajes a los controladores adecuados.  
+ `CSimpleDialog`le permite crear cuadros de diálogo modales solo. `CSimpleDialog`proporciona el procedimiento de cuadro de diálogo, que utiliza el mapa de mensajes predeterminado para dirigir mensajes a los controladores adecuados.  
   
- Consulte [implementa un cuadro de diálogo](../../atl/implementing-a-dialog-box.md) para obtener más información.  
+ Vea [implementa un cuadro de diálogo](../../atl/implementing-a-dialog-box.md) para obtener más información.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `CDialogImplBase`  
@@ -86,7 +86,7 @@ class CSimpleDialog : public CDialogImplBase
  **Encabezado:** atlwin.h  
   
 ##  <a name="domodal"></a>CSimpleDialog::DoModal  
- Invoca un cuadro de diálogo modal y devuelve el resultado de cuadro de diálogo cuando haya terminado.  
+ Invoca un cuadro de diálogo modal y devuelve el resultado de cuadro de diálogo cuando haya finalizado.  
   
 ```
 INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
@@ -99,11 +99,11 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 ### <a name="return-value"></a>Valor devuelto  
  Si se realiza correctamente, el valor devuelto es el identificador de recurso del control que cierra el cuadro de diálogo.  
   
- Si se produce un error en la función, el valor devuelto será –&1;. Para obtener información de errores extendida, realice una llamada a `GetLastError`.  
+ Si se produce un error en la función, el valor devuelto es -1. Para obtener información de errores extendida, realice una llamada a `GetLastError`.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método controla toda la interacción con el usuario mientras el cuadro de diálogo está activo. Esto es lo que hace que el cuadro de diálogo modal; es decir, el usuario no puede interactuar con otras ventanas hasta que se cierre el cuadro de diálogo.  
+ Este método controla toda la interacción con el usuario mientras el cuadro de diálogo está activo. Esto es lo que hace que el cuadro de diálogo modal; es decir, el usuario no puede interactuar con otras ventanas hasta que se cierra el cuadro de diálogo.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

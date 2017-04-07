@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 632167d4f78ef930673450d6d087f32e91b6541f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 1de883341e0a53a1520fa44d99e7907ee1fe10b6
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook (clase)
@@ -68,18 +68,18 @@ class CDebugReportHook
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|(Estático) La función de supervisión personalizada que se enlaza en tiempo de ejecución de C depurar el proceso de creación de informes.|  
-|[CDebugReportHook::RemoveHook](#removehook)|Llamar a este método para dejar de enviar informes de depuración a la canalización con nombre y restaurar el enlace de informe anterior.|  
+|[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|(Estático) La función de supervisión personalizada que se enlaza al proceso de notificación de depuración en tiempo de ejecución C.|  
+|[CDebugReportHook::RemoveHook](#removehook)|Llamar a este método para detener el envío de informes de depuración a la canalización con nombre y restaurar el enlace de informe anterior.|  
 |[CDebugReportHook::SetHook](#sethook)|Llame a este método para empezar a enviar informes de depuración a la canalización con nombre.|  
-|[CDebugReportHook::SetPipeName](#setpipename)|Llame a este método para establecer la máquina y el nombre de la canalización a la que se enviarán informes de depuración.|  
-|[CDebugReportHook::SetTimeout](#settimeout)|Llamar a este método para establecer el tiempo en milisegundos que esperará esta clase para que la canalización con nombre esté disponible.|  
+|[CDebugReportHook::SetPipeName](#setpipename)|Llame a este método para establecer la máquina y el nombre de la canalización a la que se enviarán los informes de depuración.|  
+|[CDebugReportHook::SetTimeout](#settimeout)|Llamar a este método para establecer el tiempo en milisegundos que esta clase esperará a que la canalización con nombre hasta que esté disponible.|  
   
 ## <a name="remarks"></a>Comentarios  
- Cree una instancia de esta clase en compilaciones de depuración de los servicios o aplicaciones para enviar informes de depuración a una canalización con nombre. Los informes de depuración generados mediante una llamada a [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) o el uso de un contenedor de esta función como el [ATLTRACE](http://msdn.microsoft.com/library/c796baa5-e2b9-4814-a27d-d800590b102e) y [ATLASSERT](http://msdn.microsoft.com/library/98e3e0fc-77e2-499b-a6f6-b17a21c6fbd3) macros.  
+ Crear una instancia de esta clase en compilaciones de depuración de los servicios o aplicaciones para enviar informes de depuración a una canalización con nombre. Informes de depuración se generan mediante una llamada a [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) o de un contenedor para esta función como el [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) y [ATLASSERT](debugging-and-error-reporting-macros.md#atlassert) macros.  
   
  Uso de esta clase le permite depurar de forma interactiva los componentes que se ejecutan no interactivo [estaciones de ventana](http://msdn.microsoft.com/library/windows/desktop/ms687096).  
   
- Tenga en cuenta que los informes de depuración se envían mediante el contexto de seguridad subyacente del subproceso. La suplantación está deshabilitada temporalmente para que se pueden ver informes de depuración en situaciones donde la suplantación de usuarios con pocos privilegios está teniendo lugar, como en aplicaciones web.  
+ Tenga en cuenta que se envían informes de depuración utilizando el contexto de seguridad subyacente del subproceso. Suplantación está deshabilitada temporalmente para que puedan ver informes de depuración en situaciones donde la suplantación de usuarios con pocos privilegios está teniendo lugar, como en las aplicaciones web.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlutil.h  
@@ -96,13 +96,13 @@ CDebugReportHook(
   
 ### <a name="parameters"></a>Parámetros  
  `szMachineName`  
- El nombre del equipo al que se debe enviar el resultado de depuración. El valor predeterminado es el equipo local.  
+ El nombre de la máquina a la que se debe enviar el resultado de depuración. El valor predeterminado es el equipo local.  
   
  `szPipeName`  
- El nombre de la canalización con nombre al que se debe enviar el resultado de depuración.  
+ El nombre de la canalización con nombre a la que se debe enviar el resultado de depuración.  
   
  `dwTimeout`  
- El tiempo en milisegundos que esperará esta clase para que la canalización con nombre esté disponible.  
+ El tiempo en milisegundos que esta clase esperará a que la canalización con nombre hasta que esté disponible.  
   
 ##  <a name="dtor"></a>CDebugReportHook:: ~ CDebugReportHook  
  Llamadas [CDebugReportHook::RemoveHook](#removehook).  
@@ -112,7 +112,7 @@ CDebugReportHook(
 ```  
   
 ##  <a name="cdebugreporthookproc"></a>CDebugReportHook::CDebugReportHookProc  
- La función de supervisión personalizada que se enlaza en tiempo de ejecución de C depurar el proceso de creación de informes.  
+ La función de supervisión personalizada que se enlaza al proceso de notificación de depuración en tiempo de ejecución C.  
   
 ```
 static int __cdecl CDebugReportHookProc(
@@ -129,18 +129,18 @@ static int __cdecl CDebugReportHookProc(
  La cadena de mensaje.  
   
  *returnValue*  
- El valor que se debe devolver [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).  
+ El valor que debe devolver [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve FALSE si el enlace encarga el mensaje en cuestión completamente para que se requiera ningún informe. Devuelve TRUE si `_CrtDbgReport` debe notificar el mensaje de la manera normal.  
+ Devuelve FALSE si el enlace encarga el mensaje en cuestión por completo para que se requiera ningún informe. Devuelve TRUE si `_CrtDbgReport` debería notificar el mensaje de la forma habitual.  
   
 ### <a name="remarks"></a>Comentarios  
- La función de informes intenta abrir la canalización con nombre y comunicarse con el proceso en el otro extremo. Si la canalización está ocupada, la función de informes esperará hasta que la canalización está disponible o se agote el tiempo de espera. El tiempo de espera puede establecerse mediante el constructor o una llamada a [CDebugReportHook::SetTimeout](#settimeout).  
+ La función de creación de informes intenta abrir la canalización con nombre y comunicarse con el proceso en el otro extremo. Si la canalización está ocupada, la función de creación de informes esperará hasta que la canalización está disponible o se agota el tiempo de espera. El tiempo de espera se puede establecer en el constructor o una llamada a [CDebugReportHook::SetTimeout](#settimeout).  
   
  El código de esta función se ejecuta en el contexto de seguridad subyacente del subproceso que realiza la llamada, es decir, la suplantación está deshabilitada para la duración de esta función.  
   
 ##  <a name="removehook"></a>CDebugReportHook::RemoveHook  
- Llamar a este método para dejar de enviar informes de depuración a la canalización con nombre y restaurar el enlace de informe anterior.  
+ Llamar a este método para detener el envío de informes de depuración a la canalización con nombre y restaurar el enlace de informe anterior.  
   
 ```
 void RemoveHook() throw();
@@ -157,10 +157,10 @@ void SetHook() throw();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Llamadas [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) enruta a través de informes de depuración [CDebugReportHookProc](#cdebugreporthookproc) a la canalización con nombre. Esta clase realiza un seguimiento de lo enlace de informe anterior para que pueda restaurar cuando [RemoveHook](#removehook) se llama.  
+ Llamadas [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) disponer de informes de depuración que se enrutan a través de [CDebugReportHookProc](#cdebugreporthookproc) a la canalización con nombre. Esta clase realiza un seguimiento del enlace de informe anterior para que pueda restaurar cuando [RemoveHook](#removehook) se llama.  
   
 ##  <a name="setpipename"></a>CDebugReportHook::SetPipeName  
- Llame a este método para establecer la máquina y el nombre de la canalización a la que se enviarán informes de depuración.  
+ Llame a este método para establecer la máquina y el nombre de la canalización a la que se enviarán los informes de depuración.  
   
 ```
 BOOL SetPipeName(
@@ -170,16 +170,16 @@ BOOL SetPipeName(
   
 ### <a name="parameters"></a>Parámetros  
  `szMachineName`  
- El nombre del equipo al que se debe enviar el resultado de depuración.  
+ El nombre de la máquina a la que se debe enviar el resultado de depuración.  
   
  `szPipeName`  
- El nombre de la canalización con nombre al que se debe enviar el resultado de depuración.  
+ El nombre de la canalización con nombre a la que se debe enviar el resultado de depuración.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
 ##  <a name="settimeout"></a>CDebugReportHook::SetTimeout  
- Llamar a este método para establecer el tiempo en milisegundos que esperará esta clase para que la canalización con nombre esté disponible.  
+ Llamar a este método para establecer el tiempo en milisegundos que esta clase esperará a que la canalización con nombre hasta que esté disponible.  
   
 ```
 void SetTimeout(DWORD dwTimeout);
@@ -187,7 +187,7 @@ void SetTimeout(DWORD dwTimeout);
   
 ### <a name="parameters"></a>Parámetros  
  `dwTimeout`  
- El tiempo en milisegundos que esperará esta clase para que la canalización con nombre esté disponible.  
+ El tiempo en milisegundos que esta clase esperará a que la canalización con nombre hasta que esté disponible.  
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../atl/reference/atl-classes.md)
