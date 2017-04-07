@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStringData
+- ATLSIMPSTR/ATL::CStringData
+- ATLSIMPSTR/ATL::AddRef
+- ATLSIMPSTR/ATL::data
+- ATLSIMPSTR/ATL::IsLocked
+- ATLSIMPSTR/ATL::IsShared
+- ATLSIMPSTR/ATL::Lock
+- ATLSIMPSTR/ATL::Release
+- ATLSIMPSTR/ATL::Unlock
+- ATLSIMPSTR/ATL::nAllocLength
+- ATLSIMPSTR/ATL::nDataLength
+- ATLSIMPSTR/ATL::nRefs
+- ATLSIMPSTR/ATL::pStringMgr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +110,7 @@ struct CStringData
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlsimpstr.h  
   
-##  <a name="a-nameaddrefa--cstringdataaddref"></a><a name="addref"></a>CStringData::AddRef  
+##  <a name="addref"></a>CStringData::AddRef  
  Incrementa el recuento de referencias del objeto string.  
   
 ```
@@ -111,7 +123,7 @@ void AddRef() throw();
 > [!NOTE]
 >  No llame a este método en una cadena con un recuento de referencias negativo, ya que un número negativo indica que el búfer de cadena está bloqueado.  
   
-##  <a name="a-namedataa--cstringdatadata"></a><a name="data"></a>CStringData::data  
+##  <a name="data"></a>CStringData::data  
  Devuelve un puntero al búfer de caracteres de un objeto de cadena.  
   
 ```
@@ -127,7 +139,7 @@ void* data() throw();
 > [!NOTE]
 >  Este búfer no está asignado por el `CStringData` objeto pero el Administrador de la cadena cuando sea necesario. Cuando asigna, el búfer se anexa al objeto de datos de cadena.  
   
-##  <a name="a-nameislockeda--cstringdataislocked"></a><a name="islocked"></a>CStringData::IsLocked  
+##  <a name="islocked"></a>CStringData::IsLocked  
  Determina si el búfer de caracteres está bloqueado.  
   
 ```
@@ -140,7 +152,7 @@ bool IsLocked() const throw();
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función para determinar si el búfer de caracteres de un objeto de cadena se encuentra actualmente bloqueado.  
   
-##  <a name="a-nameisshareda--cstringdataisshared"></a><a name="isshared"></a>CStringData::IsShared  
+##  <a name="isshared"></a>CStringData::IsShared  
  Determina si se comparte el búfer de caracteres.  
   
 ```
@@ -153,7 +165,7 @@ bool IsShared() const throw();
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función para determinar si el búfer de caracteres de un objeto de datos de cadena actualmente se comparte entre varios objetos de cadena.  
   
-##  <a name="a-namelocka--cstringdatalock"></a><a name="lock"></a>CStringData::Lock  
+##  <a name="lock"></a>CStringData::Lock  
  Bloquea el búfer de caracteres del objeto de cadena asociado.  
   
 ```
@@ -166,7 +178,7 @@ void Lock() throw();
 > [!NOTE]
 >  Sólo se puede bloquear un búfer de caracteres si el búfer no se comparte entre los objetos de cadena superior.  
   
-##  <a name="a-namenalloclengtha--cstringdatanalloclength"></a><a name="nalloclength"></a>CStringData::nAllocLength  
+##  <a name="nalloclength"></a>CStringData::nAllocLength  
  Longitud del búfer de carácter asignado.  
   
 ```
@@ -176,7 +188,7 @@ int nAllocLength;
 ### <a name="remarks"></a>Comentarios  
  Almacena la longitud del búfer de datos asignado en `XCHAR`s (sin incluir el carácter nulo final).  
   
-##  <a name="a-namendatalengtha--cstringdatandatalength"></a><a name="ndatalength"></a>CStringData::nDataLength  
+##  <a name="ndatalength"></a>CStringData::nDataLength  
  Longitud actual del objeto de cadena.  
   
 ```
@@ -186,7 +198,7 @@ int nDataLength;
 ### <a name="remarks"></a>Comentarios  
  Almacena la longitud de datos actualmente utilizados en `XCHAR`s (sin incluir el carácter nulo final).  
   
-##  <a name="a-namenrefsa--cstringdatanrefs"></a><a name="nrefs"></a>CStringData::nRefs  
+##  <a name="nrefs"></a>CStringData::nRefs  
  Recuento de referencias del objeto de datos de cadena.  
   
 ```
@@ -196,7 +208,7 @@ long nRefs;
 ### <a name="remarks"></a>Comentarios  
  Almacena el recuento de referencias del objeto de datos de cadena. Este número indica el número de objetos de cadena superior que están asociados con el objeto de datos de cadena. Un valor negativo indica que el objeto de datos de cadena está bloqueado actualmente.  
   
-##  <a name="a-namepstringmgra--cstringdatapstringmgr"></a><a name="pstringmgr"></a>CStringData::pStringMgr  
+##  <a name="pstringmgr"></a>CStringData::pStringMgr  
  El Administrador de memoria del objeto de cadena asociado.  
   
 ```
@@ -206,7 +218,7 @@ IAtlStringMgr* pStringMgr;
 ### <a name="remarks"></a>Comentarios  
  Almacena el Administrador de memoria para el objeto de cadena asociado. Para obtener más información sobre cadenas y administradores de memoria, consulte [administración de memoria y CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="a-namereleasea--cstringdatarelease"></a><a name="release"></a>CStringData::Release  
+##  <a name="release"></a>CStringData::Release  
  Disminuye el recuento de referencias del objeto de datos de cadena.  
   
 ```
@@ -220,7 +232,7 @@ void Release() throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities&#104;](../../atl-mfc-shared/codesnippet/cpp/cstringdata-class_1.cpp)]  
   
-##  <a name="a-nameunlocka--cstringdataunlock"></a><a name="unlock"></a>CStringData::Unlock  
+##  <a name="unlock"></a>CStringData::Unlock  
  Desbloquea el búfer de caracteres del objeto de cadena asociado.  
   
 ```

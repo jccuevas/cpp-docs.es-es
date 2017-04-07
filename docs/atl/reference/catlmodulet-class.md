@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlModuleT<T>
-- ATL.CAtlModuleT
-- ATL.CAtlModuleT<T>
-- ATL::CAtlModuleT
 - CAtlModuleT
+- ATLBASE/ATL::CAtlModuleT
+- ATLBASE/ATL::CAtlModuleT::CAtlModuleT
+- ATLBASE/ATL::CAtlModuleT::InitLibId
+- ATLBASE/ATL::CAtlModuleT::RegisterAppId
+- ATLBASE/ATL::CAtlModuleT::RegisterServer
+- ATLBASE/ATL::CAtlModuleT::UnregisterAppId
+- ATLBASE/ATL::CAtlModuleT::UnregisterServer
+- ATLBASE/ATL::CAtlModuleT::UpdateRegistryAppId
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +96,7 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
   
-##  <a name="a-namecatlmoduleta--catlmoduletcatlmodulet"></a><a name="catlmodulet"></a>CAtlModuleT::CAtlModuleT  
+##  <a name="catlmodulet"></a>CAtlModuleT::CAtlModuleT  
  El constructor.  
   
 ```
@@ -102,7 +106,7 @@ CAtlModuleT() throw();
 ### <a name="remarks"></a>Comentarios  
  Llamadas [CAtlModuleT::InitLibId](#initlibid).  
   
-##  <a name="a-nameinitlibida--catlmoduletinitlibid"></a><a name="initlibid"></a>CAtlModuleT::InitLibId  
+##  <a name="initlibid"></a>CAtlModuleT::InitLibId  
  Inicializa al miembro de datos que contiene el GUID del módulo actual.  
   
 ```
@@ -112,7 +116,7 @@ static void InitLibId() throw();
 ### <a name="remarks"></a>Comentarios  
  El constructor llama a [CAtlModuleT::CAtlModuleT](#catlmodulet).  
   
-##  <a name="a-nameregisterappida--catlmoduletregisterappid"></a><a name="registerappid"></a>CAtlModuleT::RegisterAppId  
+##  <a name="registerappid"></a>CAtlModuleT::RegisterAppId  
  Agrega el archivo ejecutable en el registro.  
   
 ```
@@ -122,7 +126,7 @@ HRESULT RegisterAppId() throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
   
-##  <a name="a-nameregisterservera--catlmoduletregisterserver"></a><a name="registerserver"></a>CAtlModuleT::RegisterServer  
+##  <a name="registerserver"></a>CAtlModuleT::RegisterServer  
  Agrega el servicio en el registro.  
   
 ```
@@ -141,7 +145,7 @@ HRESULT RegisterServer(
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
   
-##  <a name="a-nameunregisterappida--catlmoduletunregisterappid"></a><a name="unregisterappid"></a>CAtlModuleT::UnregisterAppId  
+##  <a name="unregisterappid"></a>CAtlModuleT::UnregisterAppId  
  Elimina el archivo EXE del registro.  
   
 ```
@@ -151,7 +155,7 @@ HRESULT UnregisterAppId() throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
   
-##  <a name="a-nameunregisterservera--catlmoduletunregisterserver"></a><a name="unregisterserver"></a>CAtlModuleT::UnregisterServer  
+##  <a name="unregisterserver"></a>CAtlModuleT::UnregisterServer  
  Quita el servicio de registro.  
   
 ```
@@ -170,7 +174,7 @@ HRESULT UnregisterServer(
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
   
-##  <a name="a-nameupdateregistryappida--catlmoduletupdateregistryappid"></a><a name="updateregistryappid"></a>CAtlModuleT::UpdateRegistryAppId  
+##  <a name="updateregistryappid"></a>CAtlModuleT::UpdateRegistryAppId  
  Actualiza la información del archivo EXE en el registro.  
   
 ```

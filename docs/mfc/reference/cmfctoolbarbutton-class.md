@@ -10,6 +10,84 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarButton
+- AFXTOOLBARBUTTON/CMFCToolBarButton
+- AFXTOOLBARBUTTON/CMFCToolBarButton::CMFCToolBarButton
+- AFXTOOLBARBUTTON/CMFCToolBarButton::CanBeDropped
+- AFXTOOLBARBUTTON/CMFCToolBarButton::CanBeStored
+- AFXTOOLBARBUTTON/CMFCToolBarButton::CanBeStretched
+- AFXTOOLBARBUTTON/CMFCToolBarButton::CompareWith
+- AFXTOOLBARBUTTON/CMFCToolBarButton::CopyFrom
+- AFXTOOLBARBUTTON/CMFCToolBarButton::CreateFromOleData
+- AFXTOOLBARBUTTON/CMFCToolBarButton::EnableWindow
+- AFXTOOLBARBUTTON/CMFCToolBarButton::ExportToMenuButton
+- AFXTOOLBARBUTTON/CMFCToolBarButton::GetClipboardFormat
+- AFXTOOLBARBUTTON/CMFCToolBarButton::GetHwnd
+- AFXTOOLBARBUTTON/CMFCToolBarButton::GetImage
+- AFXTOOLBARBUTTON/CMFCToolBarButton::GetInvalidateRect
+- AFXTOOLBARBUTTON/CMFCToolBarButton::GetParentWnd
+- AFXTOOLBARBUTTON/CMFCToolBarButton::GetProtectedCommands
+- AFXTOOLBARBUTTON/CMFCToolBarButton::GetTextSize
+- AFXTOOLBARBUTTON/CMFCToolBarButton::HasFocus
+- AFXTOOLBARBUTTON/CMFCToolBarButton::HaveHotBorder
+- AFXTOOLBARBUTTON/CMFCToolBarButton::IsDrawImage
+- AFXTOOLBARBUTTON/CMFCToolBarButton::IsDrawText
+- AFXTOOLBARBUTTON/CMFCToolBarButton::IsDroppedDown
+- AFXTOOLBARBUTTON/CMFCToolBarButton::IsEditable
+- AFXTOOLBARBUTTON/CMFCToolBarButton::IsExtraSize
+- AFXTOOLBARBUTTON/CMFCToolBarButton::IsFirstInGroup
+- AFXTOOLBARBUTTON/CMFCToolBarButton::IsHidden
+- AFXTOOLBARBUTTON/CMFCToolBarButton::IsHorizontal
+- AFXTOOLBARBUTTON/CMFCToolBarButton::IsLastInGroup
+- AFXTOOLBARBUTTON/CMFCToolBarButton::IsLocked
+- AFXTOOLBARBUTTON/CMFCToolBarButton::IsOwnerOf
+- AFXTOOLBARBUTTON/CMFCToolBarButton::IsVisible
+- AFXTOOLBARBUTTON/CMFCToolBarButton::IsWindowVisible
+- AFXTOOLBARBUTTON/CMFCToolBarButton::NotifyCommand
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnAddToCustomizePage
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnBeforeDrag
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnBeforeDrop
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnCalculateSize
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnCancelMode
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnChangeParentWnd
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnClick
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnClickUp
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnContextHelp
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnCtlColor
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnCustomizeMenu
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnDblClk
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnDraw
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnDrawOnCustomizeList
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnGetCustomToolTipText
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnGlobalFontsChanged
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnMove
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnShow
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnSize
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnToolHitTest
+- AFXTOOLBARBUTTON/CMFCToolBarButton::OnUpdateToolTip
+- AFXTOOLBARBUTTON/CMFCToolBarButton::PrepareDrag
+- AFXTOOLBARBUTTON/CMFCToolBarButton::Rect
+- AFXTOOLBARBUTTON/CMFCToolBarButton::ResetImageToDefault
+- AFXTOOLBARBUTTON/CMFCToolBarButton::SaveBarState
+- AFXTOOLBARBUTTON/CMFCToolBarButton::Serialize
+- AFXTOOLBARBUTTON/CMFCToolBarButton::SetACCData
+- AFXTOOLBARBUTTON/CMFCToolBarButton::SetClipboardFormatName
+- AFXTOOLBARBUTTON/CMFCToolBarButton::SetImage
+- AFXTOOLBARBUTTON/CMFCToolBarButton::SetProtectedCommands
+- AFXTOOLBARBUTTON/CMFCToolBarButton::SetRadio
+- AFXTOOLBARBUTTON/CMFCToolBarButton::SetRect
+- AFXTOOLBARBUTTON/CMFCToolBarButton::SetStyle
+- AFXTOOLBARBUTTON/CMFCToolBarButton::SetVisible
+- AFXTOOLBARBUTTON/CMFCToolBarButton::Show
+- AFXTOOLBARBUTTON/CMFCToolBarButton::m_bImage
+- AFXTOOLBARBUTTON/CMFCToolBarButton::m_bText
+- AFXTOOLBARBUTTON/CMFCToolBarButton::m_bTextBelow
+- AFXTOOLBARBUTTON/CMFCToolBarButton::m_bUserButton
+- AFXTOOLBARBUTTON/CMFCToolBarButton::m_bWholeText
+- AFXTOOLBARBUTTON/CMFCToolBarButton::m_bWrap
+- AFXTOOLBARBUTTON/CMFCToolBarButton::m_bWrapText
+- AFXTOOLBARBUTTON/CMFCToolBarButton::m_nID
+- AFXTOOLBARBUTTON/CMFCToolBarButton::m_nStyle
+- AFXTOOLBARBUTTON/CMFCToolBarButton::m_strText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -169,7 +247,7 @@ class CMFCToolBarButton : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxtoolbarbutton.h  
   
-##  <a name="a-namecanbedroppeda--cmfctoolbarbuttoncanbedropped"></a><a name="canbedropped"></a>CMFCToolBarButton::CanBeDropped  
+##  <a name="canbedropped"></a>CMFCToolBarButton::CanBeDropped  
  Especifica si un usuario puede colocar un botón en un menú o barra de herramientas durante la personalización.  
   
 ```  
@@ -188,7 +266,7 @@ virtual BOOL CanBeDropped(CMFCToolBar* pToolbar);
   
  La implementación predeterminada de este método devuelve `TRUE`. Invalide este método y devolver `FALSE` si desea evitar que el usuario volver a colocar el botón.  
   
-##  <a name="a-namecanbestoreda--cmfctoolbarbuttoncanbestored"></a><a name="canbestored"></a>CMFCToolBarButton::CanBeStored  
+##  <a name="canbestored"></a>CMFCToolBarButton::CanBeStored  
  Determina si el botón se puede almacenar.  
   
 ```  
@@ -203,7 +281,7 @@ virtual BOOL CanBeStored() const;
   
  La implementación predeterminada devuelve `TRUE`. Invalide este método si el botón no se puede almacenar como parte de una operación de arrastrar y colocar. Para obtener más información acerca de las operaciones de arrastrar y colocar, vea [arrastrar y colocar (OLE)](../../mfc/drag-and-drop-ole.md).  
   
-##  <a name="a-namecanbestretcheda--cmfctoolbarbuttoncanbestretched"></a><a name="canbestretched"></a>CMFCToolBarButton::CanBeStretched  
+##  <a name="canbestretched"></a>CMFCToolBarButton::CanBeStretched  
  Especifica si un usuario puede expandir el botón durante la personalización.  
   
 ```  
@@ -220,7 +298,7 @@ virtual BOOL CanBeStretched() const;
   
  Para obtener más información acerca del modo de personalización, consulte [CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode).  
   
-##  <a name="a-namecmfctoolbarbuttona--cmfctoolbarbuttoncmfctoolbarbutton"></a><a name="cmfctoolbarbutton"></a>CMFCToolBarButton::CMFCToolBarButton  
+##  <a name="cmfctoolbarbutton"></a>CMFCToolBarButton::CMFCToolBarButton  
  Construye e inicializa un objeto `CMFCToolBarButton`.  
   
 ```  
@@ -248,7 +326,7 @@ CMFCToolBarButton(
  [in] `bLocked`  
  Un valor booleano que determina si se puede personalizar el botón. Si este parámetro es `TRUE`, no se puede personalizar el botón. De lo contrario, se puede personalizar el botón.  
   
-##  <a name="a-namecomparewitha--cmfctoolbarbuttoncomparewith"></a><a name="comparewith"></a>CMFCToolBarButton::CompareWith  
+##  <a name="comparewith"></a>CMFCToolBarButton::CompareWith  
  Compara esta instancia con los `CMFCToolBarButton` objeto.  
   
 ```  
@@ -265,7 +343,7 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada determina si el identificador de comando del objeto proporcionado es igual que el identificador de comando de esta instancia. Invalide este método si se debe realizar un procesamiento adicional para determinar si dos `CMFCToolBarButton` objetos son iguales.  
   
-##  <a name="a-namecopyfroma--cmfctoolbarbuttoncopyfrom"></a><a name="copyfrom"></a>CMFCToolBarButton::CopyFrom  
+##  <a name="copyfrom"></a>CMFCToolBarButton::CopyFrom  
  Copia las propiedades de otro botón de barra de herramientas a la actual.  
   
 ```  
@@ -279,7 +357,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="remarks"></a>Comentarios  
  Llamar a este método para copiar otro botón de barra de herramientas en este botón de barra de herramientas.  
   
-##  <a name="a-namecreatefromoledataa--cmfctoolbarbuttoncreatefromoledata"></a><a name="createfromoledata"></a>CMFCToolBarButton::CreateFromOleData  
+##  <a name="createfromoledata"></a>CMFCToolBarButton::CreateFromOleData  
  Crea un `CMFCToolBarButton` objeto proporcionado `COleDataObject` objeto.  
   
 ```  
@@ -296,7 +374,7 @@ static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObjec
 ### <a name="remarks"></a>Comentarios  
  Este método se utiliza por el marco de trabajo para realizar la transferencia de datos en varios formatos. Por ejemplo, el `CMFCOutlookBarPane::OnDragOver` método usa este método para realizar operaciones de arrastrar y colocar.  
   
-##  <a name="a-nameenablewindowa--cmfctoolbarbuttonenablewindow"></a><a name="enablewindow"></a>CMFCToolBarButton::EnableWindow  
+##  <a name="enablewindow"></a>CMFCToolBarButton::EnableWindow  
  Habilita o deshabilita la entrada de mouse y de teclado.  
   
 ```  
@@ -310,7 +388,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Comentarios  
  Este método llama a la `EnableWindow` función para habilitar o deshabilitar la entrada. Para obtener más información, consulte [EnableWindow](http://msdn.microsoft.com/library/windows/desktop/ms646291) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameexporttomenubuttona--cmfctoolbarbuttonexporttomenubutton"></a><a name="exporttomenubutton"></a>CMFCToolBarButton::ExportToMenuButton  
+##  <a name="exporttomenubutton"></a>CMFCToolBarButton::ExportToMenuButton  
  Copia el texto del botón de barra de herramientas a un menú.  
   
 ```  
@@ -329,7 +407,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
   
  La implementación predeterminada de este método devuelve `TRUE`. Invalide este método si desea realizar acciones adicionales cuando el marco de trabajo convierte un objeto que se deriva de [CMFCToolbarButton](../../mfc/reference/cmfctoolbarbutton-class.md) a un botón de menú.  
   
-##  <a name="a-namegetclipboardformata--cmfctoolbarbuttongetclipboardformat"></a><a name="getclipboardformat"></a>CMFCToolBarButton::GetClipboardFormat  
+##  <a name="getclipboardformat"></a>CMFCToolBarButton::GetClipboardFormat  
  Recupera el formato del Portapapeles global para la aplicación.  
   
 ```  
@@ -348,7 +426,7 @@ static CLIPFORMAT __stdcall GetClipboardFormat();
   
  Para obtener más información acerca de Portapapeles en MFC, vea [Portapapeles](../../mfc/clipboard.md).  
   
-##  <a name="a-namegethwnda--cmfctoolbarbuttongethwnd"></a><a name="gethwnd"></a>CMFCToolBarButton::GetHwnd  
+##  <a name="gethwnd"></a>CMFCToolBarButton::GetHwnd  
  Recupera el identificador de ventana que está asociado con el botón de barra de herramientas.  
   
 ```  
@@ -361,7 +439,7 @@ virtual HWND GetHwnd();
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de este método devuelve `NULL`. Invalide este método para devolver el identificador de ventana del control específico.  
   
-##  <a name="a-namegetimagea--cmfctoolbarbuttongetimage"></a><a name="getimage"></a>CMFCToolBarButton::GetImage  
+##  <a name="getimage"></a>CMFCToolBarButton::GetImage  
  Recupera el índice de la imagen del botón.  
   
 ```  
@@ -374,7 +452,7 @@ int GetImage() const;
 ### <a name="remarks"></a>Comentarios  
  Si el botón tiene una imagen definida por el usuario (es decir, si `bUserButton` fue `TRUE` en el constructor), el índice devuelto especifica una imagen de la colección de imágenes definido por el usuario (consulte [CMFCToolBar::GetUserImages](../../mfc/reference/cmfctoolbar-class.md#getuserimages)). De lo contrario, el índice especifica una imagen de la colección de imágenes que se cargan desde un archivo de recursos (vea [CMFCToolBar::GetImages](../../mfc/reference/cmfctoolbar-class.md#getimages)). Para obtener más información acerca de los archivos de recursos, consulte [trabajar con archivos de recursos](../../windows/working-with-resource-files.md).  
   
-##  <a name="a-namegetinvalidaterecta--cmfctoolbarbuttongetinvalidaterect"></a><a name="getinvalidaterect"></a>CMFCToolBarButton::GetInvalidateRect  
+##  <a name="getinvalidaterect"></a>CMFCToolBarButton::GetInvalidateRect  
  Recupera la región del área cliente del botón que se debe volver a dibujar.  
   
 ```  
@@ -387,7 +465,7 @@ virtual const CRect GetInvalidateRect() const;
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de este método devuelve el área de cliente. Invalide este método si desea que un área diferente se vuelva a dibujar.  
   
-##  <a name="a-namegetparentwnda--cmfctoolbarbuttongetparentwnd"></a><a name="getparentwnd"></a>CMFCToolBarButton::GetParentWnd  
+##  <a name="getparentwnd"></a>CMFCToolBarButton::GetParentWnd  
  Recupera la ventana principal del botón.  
   
 ```  
@@ -397,7 +475,7 @@ CWnd* GetParentWnd() const;
 ### <a name="return-value"></a>Valor devuelto  
  La ventana principal del botón.  
   
-##  <a name="a-namegetprotectedcommandsa--cmfctoolbarbuttongetprotectedcommands"></a><a name="getprotectedcommands"></a>CMFCToolBarButton::GetProtectedCommands  
+##  <a name="getprotectedcommands"></a>CMFCToolBarButton::GetProtectedCommands  
  Recupera la lista de comandos que el usuario no se puede personalizar.  
   
 ```  
@@ -412,7 +490,7 @@ static const CList<UINT,UINT>& GetProtectedCommands();
   
  Utilice la [CMFCToolBarButton::SetProtectedCommands](#setprotectedcommands) protegido de método para definir la lista de comandos.  
   
-##  <a name="a-namegettextsizea--cmfctoolbarbuttongettextsize"></a><a name="gettextsize"></a>CMFCToolBarButton::GetTextSize  
+##  <a name="gettextsize"></a>CMFCToolBarButton::GetTextSize  
  Recupera el tamaño del texto del botón.  
   
 ```  
@@ -422,7 +500,7 @@ SIZE GetTextSize() const;
 ### <a name="return-value"></a>Valor devuelto  
  Un `SIZE` objeto que contiene el tamaño, en píxeles, del texto del botón.  
   
-##  <a name="a-namehasfocusa--cmfctoolbarbuttonhasfocus"></a><a name="hasfocus"></a>CMFCToolBarButton::HasFocus  
+##  <a name="hasfocus"></a>CMFCToolBarButton::HasFocus  
  Determina si el botón tiene el foco de entrada actual.  
   
 ```  
@@ -435,7 +513,7 @@ virtual BOOL HasFocus() const;
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de este método devuelve cero si el botón tiene el foco de entrada o es una ventana secundario o descendiente de la ventana que tiene el foco de entrada. Puede reemplazar esta función para personalizar este comportamiento.  
   
-##  <a name="a-namehavehotbordera--cmfctoolbarbuttonhavehotborder"></a><a name="havehotborder"></a>CMFCToolBarButton::HaveHotBorder  
+##  <a name="havehotborder"></a>CMFCToolBarButton::HaveHotBorder  
  Determina si un borde del botón se muestra cuando un usuario selecciona el botón.  
   
 ```  
@@ -450,7 +528,7 @@ virtual BOOL HaveHotBorder() const;
   
  La implementación predeterminada devuelve `TRUE`. Puede invalidar este método para personalizar este comportamiento.  
   
-##  <a name="a-nameisdrawimagea--cmfctoolbarbuttonisdrawimage"></a><a name="isdrawimage"></a>CMFCToolBarButton::IsDrawImage  
+##  <a name="isdrawimage"></a>CMFCToolBarButton::IsDrawImage  
  Determina si una imagen se muestra en el botón.  
   
 ```  
@@ -463,7 +541,7 @@ BOOL IsDrawImage() const;
 ### <a name="remarks"></a>Comentarios  
  Este método devuelve `FALSE` si el botón de barra de herramientas no tiene ninguna imagen asociada ( [CMFCToolBarButton::GetImage](#getimage) devuelve -1) o si [CMFCToolBarButton::m_bImage](#m_bimage) está establecido en `FALSE`.  
   
-##  <a name="a-nameisdrawtexta--cmfctoolbarbuttonisdrawtext"></a><a name="isdrawtext"></a>CMFCToolBarButton::IsDrawText  
+##  <a name="isdrawtext"></a>CMFCToolBarButton::IsDrawText  
  Determina si una etiqueta de texto se muestra en el botón.  
   
 ```  
@@ -476,7 +554,7 @@ BOOL IsDrawText() const;
 ### <a name="remarks"></a>Comentarios  
  Este método devuelve `FALSE` si el botón de barra de herramientas no tiene ninguna etiqueta de texto asociado ( [CMFCToolBarButton::m_strText](#m_strtext) está vacía) o [CMFCToolBarButton::m_bText](#m_btext) está establecido en `FALSE`.  
   
-##  <a name="a-nameisdroppeddowna--cmfctoolbarbuttonisdroppeddown"></a><a name="isdroppeddown"></a>CMFCToolBarButton::IsDroppedDown  
+##  <a name="isdroppeddown"></a>CMFCToolBarButton::IsDroppedDown  
  Determina si el botón muestra un submenú.  
   
 ```  
@@ -489,7 +567,7 @@ virtual BOOL IsDroppedDown() const;
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de este método devuelve `FALSE`. Invalide este método para devolver `TRUE` si el control muestra un submenú.  
   
-##  <a name="a-nameiseditablea--cmfctoolbarbuttoniseditable"></a><a name="iseditable"></a>CMFCToolBarButton::IsEditable  
+##  <a name="iseditable"></a>CMFCToolBarButton::IsEditable  
  Determina si se puede personalizar el botón.  
   
 ```  
@@ -506,7 +584,7 @@ virtual BOOL IsEditable() const;
   
  Invalide este método para personalizar su comportamiento.  
   
-##  <a name="a-nameisextrasizea--cmfctoolbarbuttonisextrasize"></a><a name="isextrasize"></a>CMFCToolBarButton::IsExtraSize  
+##  <a name="isextrasize"></a>CMFCToolBarButton::IsExtraSize  
  Determina si se puede mostrar el botón con un borde extendido.  
   
 ```  
@@ -521,7 +599,7 @@ virtual BOOL IsExtraSize() const;
   
  Si el usuario mueve este botón de una barra de herramientas a otro, el marco llama el [CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd) método. El [CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd) método establece el indicador de tamaño adicional a la de la barra de herramientas principal (para obtener más información, consulte [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable)).  
   
-##  <a name="a-nameisfirstingroupa--cmfctoolbarbuttonisfirstingroup"></a><a name="isfirstingroup"></a>CMFCToolBarButton::IsFirstInGroup  
+##  <a name="isfirstingroup"></a>CMFCToolBarButton::IsFirstInGroup  
  Determina si el botón está en la primera posición de su grupo de botones.  
   
 ```  
@@ -536,7 +614,7 @@ virtual BOOL IsFirstInGroup() const;
   
  Llame a la [CMFCToolBarButton::IsLastInGroup](#islastingroup) método para determinar si el botón está en la última posición de su grupo de botones.  
   
-##  <a name="a-nameishiddena--cmfctoolbarbuttonishidden"></a><a name="ishidden"></a>CMFCToolBarButton::IsHidden  
+##  <a name="ishidden"></a>CMFCToolBarButton::IsHidden  
  Determina si el botón está oculto.  
   
 ```  
@@ -553,7 +631,7 @@ BOOL IsHidden() const;
   
  De forma predeterminada, todos los botones de barra de herramientas son visibles. Utilice la [CMFCToolBarButton::Show](#show) método para ocultar o mostrar botones de barra de herramientas.  
   
-##  <a name="a-nameishorizontala--cmfctoolbarbuttonishorizontal"></a><a name="ishorizontal"></a>CMFCToolBarButton::IsHorizontal  
+##  <a name="ishorizontal"></a>CMFCToolBarButton::IsHorizontal  
  Determina si el botón se encuentra en la barra de herramientas horizontal.  
   
 ```  
@@ -568,7 +646,7 @@ BOOL IsHorizontal() const;
   
  Este método devuelve el `m_bHorz` miembro de datos. El valor predeterminado de la `m_bHorz` miembro de datos es `TRUE`; se restablece en cada llamada a la [CMFCToolBarButton::OnDraw](#ondraw) método.  
   
-##  <a name="a-nameislastingroupa--cmfctoolbarbuttonislastingroup"></a><a name="islastingroup"></a>CMFCToolBarButton::IsLastInGroup  
+##  <a name="islastingroup"></a>CMFCToolBarButton::IsLastInGroup  
  Especifica si el botón está en la última posición de su grupo de botones.  
   
 ```  
@@ -583,7 +661,7 @@ virtual BOOL IsLastInGroup() const;
   
  Llame a la [CMFCToolBarButton::IsFirstInGroup](#isfirstingroup) método para determinar si el botón está en la primera posición de su grupo de botones.  
   
-##  <a name="a-nameislockeda--cmfctoolbarbuttonislocked"></a><a name="islocked"></a>CMFCToolBarButton::IsLocked  
+##  <a name="islocked"></a>CMFCToolBarButton::IsLocked  
  Determina si el botón está en una barra de herramientas (no personalizable) bloqueado.  
   
 ```  
@@ -596,7 +674,7 @@ BOOL IsLocked() const;
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a este método para determinar si el usuario puede personalizar el botón de barra de herramientas mediante arrastrar y colocar o editar operaciones. Establecer el atributo bloqueado en la barra de herramientas principal mediante la [CMFCToolBar::LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar) método. El marco de trabajo pasa el valor de este atributo al constructor de cada botón de barra de herramientas ( [CMFCToolbarButton](../../mfc/reference/cmfctoolbarbutton-class.md)) que se inserta en la barra de herramientas primario.  
   
-##  <a name="a-nameisownerofa--cmfctoolbarbuttonisownerof"></a><a name="isownerof"></a>CMFCToolBarButton::IsOwnerOf  
+##  <a name="isownerof"></a>CMFCToolBarButton::IsOwnerOf  
  Determina si el botón es el propietario del identificador de ventana proporcionado.  
   
 ```  
@@ -613,7 +691,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ### <a name="remarks"></a>Comentarios  
  Este método devuelve cero si `hwnd` hace referencia al identificador de ventana directo o es el identificador de ventana que está asociado con el botón secundario. Este método devuelve 0 si `hwnd` es `NULL`.  
   
-##  <a name="a-nameisvisiblea--cmfctoolbarbuttonisvisible"></a><a name="isvisible"></a>CMFCToolBarButton::IsVisible  
+##  <a name="isvisible"></a>CMFCToolBarButton::IsVisible  
  Determina si el botón de barra de herramientas está visible.  
   
 ```  
@@ -626,7 +704,7 @@ BOOL IsVisible() const;
 ### <a name="remarks"></a>Comentarios  
  Puede mostrar u ocultar el botón de barra de herramientas mediante el [CMFCToolBarButton::SetVisible](#setvisible) método. Llame a la [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate) método en la barra de herramientas principal después de llamar a [CMFCToolBarButton::SetVisible](#setvisible) para volver a calcular el diseño de una barra de herramientas principal.  
   
-##  <a name="a-nameiswindowvisiblea--cmfctoolbarbuttoniswindowvisible"></a><a name="iswindowvisible"></a>CMFCToolBarButton::IsWindowVisible  
+##  <a name="iswindowvisible"></a>CMFCToolBarButton::IsWindowVisible  
  Determina si el identificador de ventana subyacente del botón está visible.  
   
 ```  
@@ -639,7 +717,7 @@ virtual BOOL IsWindowVisible();
 ### <a name="remarks"></a>Comentarios  
  Este método devuelve cero si el atributo de estilos del identificador de ventana subyacente contiene la `WS_VISIBLE` estilo. Este método devuelve `FALSE` si el identificador de ventana subyacente del botón es `NULL`.  
   
-##  <a name="a-namembimagea--cmfctoolbarbuttonmbimage"></a><a name="m_bimage"></a>CMFCToolBarButton::m_bImage  
+##  <a name="m_bimage"></a>CMFCToolBarButton::m_bImage  
  Especifica si se muestra una imagen en el botón.  
   
 ```  
@@ -649,7 +727,7 @@ BOOL m_bImage;
 ### <a name="remarks"></a>Comentarios  
  Si este miembro de datos se establece en `TRUE`, el marco de trabajo muestra la imagen que está asociada con el botón de barra de herramientas; en caso contrario, el marco de trabajo no muestra la imagen. Este miembro afecta al valor devuelto de la [CMFCToolBarButton::m_bImage](#m_bimage) método.  
   
-##  <a name="a-namembtexta--cmfctoolbarbuttonmbtext"></a><a name="m_btext"></a>CMFCToolBarButton::m_bText  
+##  <a name="m_btext"></a>CMFCToolBarButton::m_bText  
  Especifica si se muestra una etiqueta de texto en el botón.  
   
 ```  
@@ -659,7 +737,7 @@ BOOL m_bText;
 ### <a name="remarks"></a>Comentarios  
  Si este miembro de datos se establece en `TRUE`, el marco de trabajo muestra la etiqueta de texto del botón de barra de herramientas; en caso contrario, el marco de trabajo no muestra la etiqueta de texto. Este miembro afecta al valor devuelto de la [CMFCToolBarButton::m_bText](#m_btext) método.  
   
-##  <a name="a-namembtextbelowa--cmfctoolbarbuttonmbtextbelow"></a><a name="m_btextbelow"></a>CMFCToolBarButton::m_bTextBelow  
+##  <a name="m_btextbelow"></a>CMFCToolBarButton::m_bTextBelow  
  Especifica si se muestra la etiqueta de texto debajo de la imagen en el botón.  
   
 ```  
@@ -669,7 +747,7 @@ BOOL m_bTextBelow;
 ### <a name="remarks"></a>Comentarios  
  Si se establece esta variable miembro en `TRUE`, el marco de trabajo muestra el texto del botón debajo de la imagen. El valor predeterminado de este miembro es `FALSE`.  
   
-##  <a name="a-namembuserbuttona--cmfctoolbarbuttonmbuserbutton"></a><a name="m_buserbutton"></a>CMFCToolBarButton::m_bUserButton  
+##  <a name="m_buserbutton"></a>CMFCToolBarButton::m_bUserButton  
  Especifica si el botón tiene una imagen definida por el usuario  
   
 ```  
@@ -679,7 +757,7 @@ BOOL m_bUserButton;
 ### <a name="remarks"></a>Comentarios  
  Este miembro de datos se establece en `TRUE` cuando el botón tiene una imagen definida por el usuario asociada a él.  
   
-##  <a name="a-namembwholetexta--cmfctoolbarbuttonmbwholetext"></a><a name="m_bwholetext"></a>CMFCToolBarButton::m_bWholeText  
+##  <a name="m_bwholetext"></a>CMFCToolBarButton::m_bWholeText  
  Especifica si el botón muestra la etiqueta de texto completo, incluso si no se ajusta en el rectángulo delimitador.  
   
 ```  
@@ -689,7 +767,7 @@ BOOL m_bWholeText;
 ### <a name="remarks"></a>Comentarios  
  Si este miembro de datos se establece en `TRUE`, el marco de trabajo muestra la etiqueta de texto completo ampliando el botón. De lo contrario, el marco se trunca y anexa los puntos suspensivos ( **... **) a la etiqueta de texto.  
   
-##  <a name="a-namembwrapa--cmfctoolbarbuttonmbwrap"></a><a name="m_bwrap"></a>CMFCToolBarButton::m_bWrap  
+##  <a name="m_bwrap"></a>CMFCToolBarButton::m_bWrap  
  Especifica si se van a colocar el botón situado junto a un separador de la fila siguiente.  
   
 ```  
@@ -703,7 +781,7 @@ BOOL m_bWrap;
   
  El valor predeterminado de este miembro de datos es `FALSE`.  
   
-##  <a name="a-namembwraptexta--cmfctoolbarbuttonmbwraptext"></a><a name="m_bwraptext"></a>CMFCToolBarButton::m_bWrapText  
+##  <a name="m_bwraptext"></a>CMFCToolBarButton::m_bWrapText  
  Especifica si se habilitan las etiquetas de texto de varias líneas.  
   
 ```  
@@ -715,7 +793,7 @@ AFX_IMPORT_DATA static BOOL m_bWrapText;
   
  El valor predeterminado de este miembro de datos es `FALSE`.  
   
-##  <a name="a-namemnida--cmfctoolbarbuttonmnid"></a><a name="m_nid"></a>CMFCToolBarButton::m_nID  
+##  <a name="m_nid"></a>CMFCToolBarButton::m_nID  
  El identificador de comando del botón.  
   
 ```  
@@ -725,7 +803,7 @@ UINT m_nID;
 ### <a name="remarks"></a>Comentarios  
  Un identificador de comando de -1 indica que el botón es un separador. Todos los separadores de botones tienen la `TBBS_SEPARATOR` estilo. Consulte [CMFCToolBarButton::m_nStyle](#m_nstyle) para obtener más información acerca de los estilos de botón.  
   
-##  <a name="a-namemnstylea--cmfctoolbarbuttonmnstyle"></a><a name="m_nstyle"></a>CMFCToolBarButton::m_nStyle  
+##  <a name="m_nstyle"></a>CMFCToolBarButton::m_nStyle  
  El estilo del botón.  
   
 ```  
@@ -735,7 +813,7 @@ UINT m_nStyle;
 ### <a name="remarks"></a>Comentarios  
  Consulte [estilos de Control de barra de herramientas](../../mfc/reference/toolbar-control-styles.md) la lista de estilos de botón de barra de herramientas disponibles.  
   
-##  <a name="a-namemstrtexta--cmfctoolbarbuttonmstrtext"></a><a name="m_strtext"></a>CMFCToolBarButton::m_strText  
+##  <a name="m_strtext"></a>CMFCToolBarButton::m_strText  
  La etiqueta de texto del botón.  
   
 ```  
@@ -745,7 +823,7 @@ CString m_strText;
 ### <a name="remarks"></a>Comentarios  
  Este miembro de datos contiene la etiqueta de texto del botón. La etiqueta de texto puede estar vacía.  
   
-##  <a name="a-namenotifycommanda--cmfctoolbarbuttonnotifycommand"></a><a name="notifycommand"></a>CMFCToolBarButton::NotifyCommand  
+##  <a name="notifycommand"></a>CMFCToolBarButton::NotifyCommand  
  Especifica si el botón procesa la [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensaje.  
   
 ```  
@@ -764,7 +842,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
   
  De forma predeterminada, este método devuelve `FALSE`. Invalide este método para devolver `TRUE` si desea procesar la `WM_COMMAND` mensaje o `FALSE` para indicar que la barra de herramientas primario debe controlar el mensaje.  
   
-##  <a name="a-nameonaddtocustomizepagea--cmfctoolbarbuttononaddtocustomizepage"></a><a name="onaddtocustomizepage"></a>CMFCToolBarButton::OnAddToCustomizePage  
+##  <a name="onaddtocustomizepage"></a>CMFCToolBarButton::OnAddToCustomizePage  
  Llamado por el marco de trabajo cuando el botón se agrega a un **personalizar** cuadro de diálogo.  
   
 ```  
@@ -774,7 +852,7 @@ virtual void OnAddToCustomizePage();
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de este método no hace nada. Invalide este método si desea realizar alguna acción cuando se agrega el botón a un **personalizar** cuadro de diálogo.  
   
-##  <a name="a-nameonbeforedraga--cmfctoolbarbuttononbeforedrag"></a><a name="onbeforedrag"></a>CMFCToolBarButton::OnBeforeDrag  
+##  <a name="onbeforedrag"></a>CMFCToolBarButton::OnBeforeDrag  
  Especifica si se puede arrastrar el botón.  
   
 ```  
@@ -789,7 +867,7 @@ virtual BOOL OnBeforeDrag() const;
   
  La implementación predeterminada de este método devuelve `TRUE`. Invalide este método para devolver `FALSE` deshabilitar arrastrar del botón.  
   
-##  <a name="a-nameonbeforedropa--cmfctoolbarbuttononbeforedrop"></a><a name="onbeforedrop"></a>CMFCToolBarButton::OnBeforeDrop  
+##  <a name="onbeforedrop"></a>CMFCToolBarButton::OnBeforeDrop  
  Especifica si un usuario puede quitar el botón en la barra de herramientas de destino.  
   
 ```  
@@ -808,7 +886,7 @@ virtual BOOL OnBeforeDrop(CMFCToolBar* pTarget);
   
  La implementación predeterminada de este método devuelve `TRUE`. Invalide este método para devolver `FALSE` para deshabilitar la operación de colocar en el destino especificado.  
   
-##  <a name="a-nameoncalculatesizea--cmfctoolbarbuttononcalculatesize"></a><a name="oncalculatesize"></a>CMFCToolBarButton::OnCalculateSize  
+##  <a name="oncalculatesize"></a>CMFCToolBarButton::OnCalculateSize  
  Llamado por el marco para calcular el tamaño del botón para el contexto de dispositivo especificado y el estado de acoplamiento.  
   
 ```  
@@ -838,7 +916,7 @@ virtual SIZE OnCalculateSize(
   
  Invalide este método si desea proporcionar el tamaño de un botón no estándar (por ejemplo, un botón de cuadro de edición).  
   
-##  <a name="a-nameoncancelmodea--cmfctoolbarbuttononcancelmode"></a><a name="oncancelmode"></a>CMFCToolBarButton::OnCancelMode  
+##  <a name="oncancelmode"></a>CMFCToolBarButton::OnCancelMode  
  Llamado por el marco de trabajo para controlar la [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) mensaje.  
   
 ```  
@@ -848,7 +926,7 @@ virtual void OnCancelMode();
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de este método no hace nada. Invalide este método si desea controlar la [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) mensaje.  
   
-##  <a name="a-nameonchangeparentwnda--cmfctoolbarbuttononchangeparentwnd"></a><a name="onchangeparentwnd"></a>CMFCToolBarButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>CMFCToolBarButton::OnChangeParentWnd  
  Llamado por el marco de trabajo cuando el botón se inserta en una barra de herramientas.  
   
 ```  
@@ -864,7 +942,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
   
  La implementación predeterminada de este método no hace nada.  
   
-##  <a name="a-nameonclicka--cmfctoolbarbuttononclick"></a><a name="onclick"></a>CMFCToolBarButton::OnClick  
+##  <a name="onclick"></a>CMFCToolBarButton::OnClick  
  Lo llama el marco de trabajo cuando el usuario hace clic en el botón del mouse.  
   
 ```  
@@ -888,7 +966,7 @@ virtual BOOL OnClick(
   
  La implementación predeterminada no hace nada y devuelve `FALSE`. Invalide este método para devolver un valor distinto de cero si el botón procesa el mensaje de clic.  
   
-##  <a name="a-nameonclickupa--cmfctoolbarbuttononclickup"></a><a name="onclickup"></a>CMFCToolBarButton::OnClickUp  
+##  <a name="onclickup"></a>CMFCToolBarButton::OnClickUp  
  Lo llama el marco de trabajo cuando el usuario suelta el botón del mouse.  
   
 ```  
@@ -903,7 +981,7 @@ virtual BOOL OnClickUp();
   
  La implementación predeterminada no hace nada y devuelve `FALSE`. Invalide este método para devolver un valor distinto de cero si el botón procesa el mensaje de clic.  
   
-##  <a name="a-nameoncontexthelpa--cmfctoolbarbuttononcontexthelp"></a><a name="oncontexthelp"></a>CMFCToolBarButton::OnContextHelp  
+##  <a name="oncontexthelp"></a>CMFCToolBarButton::OnContextHelp  
  Llamado por el marco cuando la barra de herramientas primario controla un `WM_HELPHITTEST` mensaje.  
   
 ```  
@@ -922,7 +1000,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
   
  Para obtener más información acerca de la `WM_HELPHITTEST` de mensajes, vea [TN028: compatibilidad con la Ayuda contextual](../../mfc/tn028-context-sensitive-help-support.md).  
   
-##  <a name="a-nameonctlcolora--cmfctoolbarbuttononctlcolor"></a><a name="onctlcolor"></a>CMFCToolBarButton::OnCtlColor  
+##  <a name="onctlcolor"></a>CMFCToolBarButton::OnCtlColor  
  Llamado por el marco cuando la barra de herramientas primario controla un `WM_CTLCOLOR` mensaje.  
   
 ```  
@@ -948,7 +1026,7 @@ virtual HBRUSH OnCtlColor(
   
  La implementación predeterminada no hace nada y devuelve `NULL`.  
   
-##  <a name="a-nameoncustomizemenua--cmfctoolbarbuttononcustomizemenu"></a><a name="oncustomizemenu"></a>CMFCToolBarButton::OnCustomizeMenu  
+##  <a name="oncustomizemenu"></a>CMFCToolBarButton::OnCustomizeMenu  
  Permite que el botón modificar el menú proporcionado cuando la aplicación muestra un menú contextual en la barra de herramientas primario.  
   
 ```  
@@ -965,7 +1043,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada no hace nada y devuelve `FALSE`. Invalide este método y devolver un valor distinto de cero si desea modificar el contenido del menú proporcionado.  
   
-##  <a name="a-nameondblclka--cmfctoolbarbuttonondblclk"></a><a name="ondblclk"></a>CMFCToolBarButton::OnDblClk  
+##  <a name="ondblclk"></a>CMFCToolBarButton::OnDblClk  
  Llamado por el marco cuando la barra de herramientas primario controla un [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) mensaje.  
   
 ```  
@@ -981,7 +1059,7 @@ virtual void OnDblClk(CWnd* pWnd);
   
  La implementación predeterminada de este método no hace nada.  
   
-##  <a name="a-nameondrawa--cmfctoolbarbuttonondraw"></a><a name="ondraw"></a>CMFCToolBarButton::OnDraw  
+##  <a name="ondraw"></a>CMFCToolBarButton::OnDraw  
  Llamado por el marco para dibujar el botón con los estilos especificados y las opciones.  
   
 ```  
@@ -1024,7 +1102,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>Comentarios  
  Invalide este método para personalizar el dibujo del botón de barra de herramientas.  
   
-##  <a name="a-nameondrawoncustomizelista--cmfctoolbarbuttonondrawoncustomizelist"></a><a name="ondrawoncustomizelist"></a>CMFCToolBarButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>CMFCToolBarButton::OnDrawOnCustomizeList  
  Llamado por el marco para dibujar el botón en el **comandos** panel de la **personalizar** cuadro de diálogo.  
   
 ```  
@@ -1054,7 +1132,7 @@ virtual int OnDrawOnCustomizeList(
   
  Invalide este método para realizar un dibujo personalizado.  
   
-##  <a name="a-nameongetcustomtooltiptexta--cmfctoolbarbuttonongetcustomtooltiptext"></a><a name="ongetcustomtooltiptext"></a>CMFCToolBarButton::OnGetCustomToolTipText  
+##  <a name="ongetcustomtooltiptext"></a>CMFCToolBarButton::OnGetCustomToolTipText  
  Llamado por el marco de trabajo para recuperar el texto de información sobre herramientas personalizado para el botón.  
   
 ```  
@@ -1073,7 +1151,7 @@ virtual BOOL OnGetCustomToolTipText(CString& strToolTip);
   
  La implementación predeterminada no hace nada y devuelve `FALSE`. Invalide este método y devolver un valor distinto de cero para proporcionar el texto de información sobre herramientas personalizado para el botón de barra de herramientas.  
   
-##  <a name="a-nameonglobalfontschangeda--cmfctoolbarbuttononglobalfontschanged"></a><a name="onglobalfontschanged"></a>CMFCToolBarButton::OnGlobalFontsChanged  
+##  <a name="onglobalfontschanged"></a>CMFCToolBarButton::OnGlobalFontsChanged  
  Llamado por el marco de trabajo cuando ha cambiado la fuente global.  
   
 ```  
@@ -1083,7 +1161,7 @@ virtual void OnGlobalFontsChanged();
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de este método no hace nada. Invalide este método para actualizar la fuente que se utiliza para mostrar el texto del botón.  
   
-##  <a name="a-nameonmovea--cmfctoolbarbuttononmove"></a><a name="onmove"></a>CMFCToolBarButton::OnMove  
+##  <a name="onmove"></a>CMFCToolBarButton::OnMove  
  Lo llama el marco de trabajo cuando se mueve la barra de herramientas principal.  
   
 ```  
@@ -1093,7 +1171,7 @@ virtual void OnMove();
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de este método no hace nada. Invalide este método para cambiar la posición del botón cuando se mueve la barra de herramientas primario.  
   
-##  <a name="a-nameonshowa--cmfctoolbarbuttononshow"></a><a name="onshow"></a>CMFCToolBarButton::OnShow  
+##  <a name="onshow"></a>CMFCToolBarButton::OnShow  
  Llamado por el marco de trabajo cuando se convierte en el botón visible o invisible.  
   
 ```  
@@ -1107,7 +1185,7 @@ virtual void OnShow(BOOL bShow);
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de este método no hace nada. Invalide este método para actualizar la visibilidad del botón.  
   
-##  <a name="a-nameonsizea--cmfctoolbarbuttononsize"></a><a name="onsize"></a>CMFCToolBarButton::OnSize  
+##  <a name="onsize"></a>CMFCToolBarButton::OnSize  
  Llamado por el marco de trabajo cuando la barra de herramientas principal cambia su tamaño o posición y este cambio hace que el botón Cambiar el tamaño.  
   
 ```  
@@ -1121,7 +1199,7 @@ virtual void OnSize(int iSize);
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de este método no hace nada. Invalide este método para cambiar el tamaño del botón cuando cambia el tamaño o la posición de la barra de herramientas primario.  
   
-##  <a name="a-nameontoolhittesta--cmfctoolbarbuttonontoolhittest"></a><a name="ontoolhittest"></a>CMFCToolBarButton::OnToolHitTest  
+##  <a name="ontoolhittest"></a>CMFCToolBarButton::OnToolHitTest  
  Llamado por el marco de trabajo cuando la barra de herramientas primario debe determinar si un punto está en el rectángulo delimitador del botón.  
   
 ```  
@@ -1149,7 +1227,7 @@ virtual BOOL OnToolHitTest(
   
 - [COleIPFrameWndEx::OnMenuButtonToolHitTest](../../mfc/reference/coleipframewndex-class.md#onmenubuttontoolhittest)  
   
-##  <a name="a-nameonupdatetooltipa--cmfctoolbarbuttononupdatetooltip"></a><a name="onupdatetooltip"></a>CMFCToolBarButton::OnUpdateToolTip  
+##  <a name="onupdatetooltip"></a>CMFCToolBarButton::OnUpdateToolTip  
  Llamado por el marco de trabajo cuando la barra de herramientas principal actualiza su texto de información sobre herramientas.  
   
 ```  
@@ -1179,7 +1257,7 @@ virtual BOOL OnUpdateToolTip(
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de este método no hace nada y devuelve `FALSE`. Invalide este método para devolver un valor distinto de cero si se proporciona una cadena de texto de información sobre herramientas.  
   
-##  <a name="a-namepreparedraga--cmfctoolbarbuttonpreparedrag"></a><a name="preparedrag"></a>CMFCToolBarButton::PrepareDrag  
+##  <a name="preparedrag"></a>CMFCToolBarButton::PrepareDrag  
  Llamado por el marco de trabajo cuando el botón está a punto de realizar una operación de arrastrar y colocar.  
   
 ```  
@@ -1200,7 +1278,7 @@ virtual BOOL PrepareDrag(COleDataSource& srcItem);
   
  Para obtener más información acerca de las operaciones de arrastrar y colocar OLE, vea [arrastrar y colocar (OLE)](../../mfc/drag-and-drop-ole.md).  
   
-##  <a name="a-namerecta--cmfctoolbarbuttonrect"></a><a name="rect"></a>CMFCToolBarButton::Rect  
+##  <a name="rect"></a>CMFCToolBarButton::Rect  
  Recupera el rectángulo delimitador del botón.  
   
 ```  
@@ -1210,7 +1288,7 @@ const CRect& Rect() const;
 ### <a name="return-value"></a>Valor devuelto  
  Un `CRect` objeto que contiene el rectángulo delimitador de un botón.  
   
-##  <a name="a-nameresetimagetodefaulta--cmfctoolbarbuttonresetimagetodefault"></a><a name="resetimagetodefault"></a>CMFCToolBarButton::ResetImageToDefault  
+##  <a name="resetimagetodefault"></a>CMFCToolBarButton::ResetImageToDefault  
  Establece el valor predeterminado de la imagen que está asociada con el botón.  
   
 ```  
@@ -1222,7 +1300,7 @@ virtual void ResetImageToDefault();
   
  Este método no hace nada si el botón tiene una imagen definida por el usuario.  
   
-##  <a name="a-namesavebarstatea--cmfctoolbarbuttonsavebarstate"></a><a name="savebarstate"></a>CMFCToolBarButton::SaveBarState  
+##  <a name="savebarstate"></a>CMFCToolBarButton::SaveBarState  
  Guarda el estado del botón de barra de herramientas.  
   
 ```  
@@ -1234,7 +1312,7 @@ virtual void SaveBarState();
   
  La implementación predeterminada de este método no hace nada. Invalide este método para guardar el estado del botón de barra de herramientas en un origen de datos externo.  
   
-##  <a name="a-nameserializea--cmfctoolbarbuttonserialize"></a><a name="serialize"></a>CMFCToolBarButton::Serialize  
+##  <a name="serialize"></a>CMFCToolBarButton::Serialize  
  Lee este objeto desde un archivo o lo escribe en un archivo.  
   
 ```  
@@ -1250,7 +1328,7 @@ virtual void Serialize(CArchive& ar);
   
  Para obtener ejemplos de serialización, vea [serialización: serializar un objeto](../../mfc/serialization-serializing-an-object.md).  
   
-##  <a name="a-namesetaccdataa--cmfctoolbarbuttonsetaccdata"></a><a name="setaccdata"></a>CMFCToolBarButton::SetACCData  
+##  <a name="setaccdata"></a>CMFCToolBarButton::SetACCData  
  Rellena proporcionado `CAccessibilityData` objeto con datos de accesibilidad en el botón de barra de herramientas.  
   
 ```  
@@ -1272,7 +1350,7 @@ virtual BOOL SetACCData(
 ### <a name="remarks"></a>Comentarios  
  Invalide este método para devolver `FALSE` si el botón de barra de herramientas no proporciona datos de accesibilidad.  
   
-##  <a name="a-namesetclipboardformatnamea--cmfctoolbarbuttonsetclipboardformatname"></a><a name="setclipboardformatname"></a>CMFCToolBarButton::SetClipboardFormatName  
+##  <a name="setclipboardformatname"></a>CMFCToolBarButton::SetClipboardFormatName  
  Cambia el nombre del formato de Portapapeles global.  
   
 ```  
@@ -1288,7 +1366,7 @@ static void __stdcall SetClipboardFormatName(LPCTSTR lpszName);
   
  Debe llamar a este método antes que el marco llama [CMFCToolBarButton::GetClipboardFormat](#getclipboardformat).  
   
-##  <a name="a-namesetimagea--cmfctoolbarbuttonsetimage"></a><a name="setimage"></a>CMFCToolBarButton::SetImage  
+##  <a name="setimage"></a>CMFCToolBarButton::SetImage  
  Establece el índice de la imagen del botón.  
   
 ```  
@@ -1304,7 +1382,7 @@ virtual void SetImage(int iImage);
   
  Si `iImage` es menor que cero, este método deshabilita el dibujo de la imagen y habilita el dibujo de la etiqueta de texto del botón.  
   
-##  <a name="a-namesetprotectedcommandsa--cmfctoolbarbuttonsetprotectedcommands"></a><a name="setprotectedcommands"></a>CMFCToolBarButton::SetProtectedCommands  
+##  <a name="setprotectedcommands"></a>CMFCToolBarButton::SetProtectedCommands  
  Establece la lista de comandos que el usuario no se puede personalizar.  
   
 ```  
@@ -1320,7 +1398,7 @@ static void SetProtectedCommands(const CList<UINT,UINT>& lstCmds);
   
  Utilice la [CMFCToolBarButton::GetProtectedCommands](#getprotectedcommands) protegido de método para recuperar la lista de comandos.  
   
-##  <a name="a-namesetradioa--cmfctoolbarbuttonsetradio"></a><a name="setradio"></a>CMFCToolBarButton::SetRadio  
+##  <a name="setradio"></a>CMFCToolBarButton::SetRadio  
  Llamado por el marco de trabajo cuando un botón cambia su estado de activación.  
   
 ```  
@@ -1330,7 +1408,7 @@ virtual void SetRadio();
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de este método no hace nada. Invalide este método para realizar una acción personalizada cuando el botón cambia su estado de activación.  
   
-##  <a name="a-namesetrecta--cmfctoolbarbuttonsetrect"></a><a name="setrect"></a>CMFCToolBarButton::SetRect  
+##  <a name="setrect"></a>CMFCToolBarButton::SetRect  
  Establece el rectángulo delimitador del botón.  
   
 ```  
@@ -1344,7 +1422,7 @@ void SetRect(const CRect rect);
 ### <a name="remarks"></a>Comentarios  
  Este método llama a la [CMFCToolBarButton::OnMove](#onmove) método después de establecer un nuevo rectángulo delimitador.  
   
-##  <a name="a-namesetstylea--cmfctoolbarbuttonsetstyle"></a><a name="setstyle"></a>CMFCToolBarButton::SetStyle  
+##  <a name="setstyle"></a>CMFCToolBarButton::SetStyle  
  Establece el estilo del botón.  
   
 ```  
@@ -1358,7 +1436,7 @@ virtual void SetStyle(UINT nStyle);
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada configura el [CMFCToolBarButton::m_nStyle](#m_nstyle) miembro de datos `nStyle`. Invalide este método si desea realizar un procesamiento adicional para controlar el cambio de estilo. Consulte [estilos de Control de barra de herramientas](toolbar-control-styles.md) para obtener una lista de indicadores de estilo válido.  
   
-##  <a name="a-namesetvisiblea--cmfctoolbarbuttonsetvisible"></a><a name="setvisible"></a>CMFCToolBarButton::SetVisible  
+##  <a name="setvisible"></a>CMFCToolBarButton::SetVisible  
  Especifica si el botón está visible.  
   
 ```  
@@ -1372,7 +1450,7 @@ void SetVisible(BOOL bShow=TRUE);
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función para mostrar u ocultar un botón de barra de herramientas. Llame a la [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate) método después de llamar a este método.  
   
-##  <a name="a-nameshowa--cmfctoolbarbuttonshow"></a><a name="show"></a>CMFCToolBarButton::Show  
+##  <a name="show"></a>CMFCToolBarButton::Show  
  Muestra u oculta el botón.  
   
 ```  

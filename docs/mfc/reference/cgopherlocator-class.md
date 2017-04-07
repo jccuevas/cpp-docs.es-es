@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CGopherLocator
+- AFXINET/CGopherLocator
+- AFXINET/CGopherLocator::CGopherLocator
+- AFXINET/CGopherLocator::GetLocatorType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +93,7 @@ class CGopherLocator : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxinet.h  
   
-##  <a name="a-namecgopherlocatora--cgopherlocatorcgopherlocator"></a><a name="cgopherlocator"></a>CGopherLocator::CGopherLocator  
+##  <a name="cgopherlocator"></a>CGopherLocator::CGopherLocator  
  Esta función miembro se llama para crear una `CGopherLocator` objeto.  
   
 ```  
@@ -104,7 +107,7 @@ CGopherLocator(const CGopherLocator& ref);
 ### <a name="remarks"></a>Comentarios  
  No cree nunca un `CGopherLocator` objeto directamente. En su lugar, llame a [CGopherConnection:: CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator) para crear y devolver un puntero a la `CGopherLocator` objeto.  
   
-##  <a name="a-namegetlocatortypea--cgopherlocatorgetlocatortype"></a><a name="getlocatortype"></a>CGopherLocator::GetLocatorType  
+##  <a name="getlocatortype"></a>CGopherLocator::GetLocatorType  
  Llame a esta función miembro para obtener el tipo de localizador.  
   
 ```  
@@ -148,7 +151,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 |GOPHER_TYPE_ASK|Ask + elemento.|  
 |GOPHER_TYPE_GOPHER_PLUS|Un elemento Gopher +.|  
   
-##  <a name="a-nameoperatorlpctstra--cgopherlocatoroperator-lpctstr"></a><a name="operator_lpctstr"></a>CGopherLocator::operator LPCTSTR  
+##  <a name="operator_lpctstr"></a>CGopherLocator::operator LPCTSTR  
  Este operador de conversión útil proporciona un método eficaz para tener acceso a la cadena de C terminada en null, contenida en una `CGopherLocator` objeto.  
   
 ```  

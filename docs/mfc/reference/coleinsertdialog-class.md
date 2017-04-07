@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleInsertDialog
+- AFXODLGS/COleInsertDialog
+- AFXODLGS/COleInsertDialog::COleInsertDialog
+- AFXODLGS/COleInsertDialog::CreateItem
+- AFXODLGS/COleInsertDialog::DoModal
+- AFXODLGS/COleInsertDialog::GetClassID
+- AFXODLGS/COleInsertDialog::GetDrawAspect
+- AFXODLGS/COleInsertDialog::GetIconicMetafile
+- AFXODLGS/COleInsertDialog::GetPathName
+- AFXODLGS/COleInsertDialog::GetSelectionType
+- AFXODLGS/COleInsertDialog::m_io
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +115,7 @@ class COleInsertDialog : public COleDialog
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxodlgs.h  
   
-##  <a name="a-namecoleinsertdialoga--coleinsertdialogcoleinsertdialog"></a><a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog  
+##  <a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog  
  Esta función sólo crea un `COleInsertDialog` objeto.  
   
 ```  
@@ -138,7 +148,7 @@ COleInsertDialog (
 ### <a name="remarks"></a>Comentarios  
  Para mostrar el cuadro de diálogo, llame a la [DoModal](#domodal) (función).  
   
-##  <a name="a-namecreateitema--coleinsertdialogcreateitem"></a><a name="createitem"></a>COleInsertDialog::CreateItem  
+##  <a name="createitem"></a>COleInsertDialog::CreateItem  
  Llame a esta función para crear un objeto de tipo [COleClientItem](../../mfc/reference/coleclientitem-class.md) sólo si [DoModal](#domodal) devuelve **IDOK**.  
   
 ```  
@@ -155,7 +165,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ### <a name="remarks"></a>Comentarios  
  Debe asignar la `COleClientItem` objeto antes de que se puede llamar a esta función.  
   
-##  <a name="a-namedomodala--coleinsertdialogdomodal"></a><a name="domodal"></a>COleInsertDialog::DoModal  
+##  <a name="domodal"></a>COleInsertDialog::DoModal  
  Llame a esta función para mostrar el cuadro de diálogo Insertar objeto OLE.  
   
 ```  
@@ -191,7 +201,7 @@ INT_PTR
   
  Si `DoModal` devuelve IDOK, puede llamar a otro miembro de funciones para recuperar la configuración o la entrada de información en el cuadro de diálogo por el usuario.  
   
-##  <a name="a-namegetclassida--coleinsertdialoggetclassid"></a><a name="getclassid"></a>COleInsertDialog::GetClassID  
+##  <a name="getclassid"></a>COleInsertDialog::GetClassID  
  Llame a esta función para obtener el **CLSID** asociado con el elemento seleccionado solo si [DoModal](#domodal) devuelve **IDOK** y es el tipo de selección **COleInsertDialog::createNewItem**.  
   
 ```  
@@ -204,7 +214,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [clave CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdrawaspecta--coleinsertdialoggetdrawaspect"></a><a name="getdrawaspect"></a>COleInsertDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>COleInsertDialog::GetDrawAspect  
  Llame a esta función para determinar si el usuario decidió mostrar el elemento seleccionado como un icono.  
   
 ```  
@@ -223,7 +233,7 @@ DVASPECT GetDrawAspect() const;
   
  Para obtener más información sobre los aspectos de dibujo, consulte [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura de datos en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegeticonicmetafilea--coleinsertdialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COleInsertDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>COleInsertDialog::GetIconicMetafile  
  Llame a esta función para obtener un identificador de metarchivo contiene el aspecto de iconos del elemento seleccionado.  
   
 ```  
@@ -233,7 +243,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Valor devuelto  
  El identificador del metarchivo que contiene el aspecto de iconos del elemento seleccionado, si la casilla de verificación Mostrar como icono estaba activa cuando se cerró el cuadro de diálogo seleccionando **Aceptar**; en caso contrario **NULL**.  
   
-##  <a name="a-namegetpathnamea--coleinsertdialoggetpathname"></a><a name="getpathname"></a>COleInsertDialog::GetPathName  
+##  <a name="getpathname"></a>COleInsertDialog::GetPathName  
  Llame a esta función para obtener la ruta completa de la sólo si archivo seleccionado [DoModal](#domodal) devuelve **IDOK** y el tipo de selección no es **COleInsertDialog::createNewItem**.  
   
 ```  
@@ -243,7 +253,7 @@ CString GetPathName() const;
 ### <a name="return-value"></a>Valor devuelto  
  Ruta de acceso completa al archivo seleccionado en el cuadro de diálogo. Si el tipo de selección es `createNewItem`, esta función devuelve un sentido `CString` en modo de lanzamiento o produce una aserción en modo de depuración.  
   
-##  <a name="a-namegetselectiontypea--coleinsertdialoggetselectiontype"></a><a name="getselectiontype"></a>COleInsertDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>COleInsertDialog::GetSelectionType  
  Llame a esta función para obtener el tipo de selección elegido cuando se cierra el cuadro de diálogo Insertar objeto eligiendo **Aceptar**.  
   
 ```  
@@ -256,17 +266,13 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>Comentarios  
  Especifica los valores de tipo de valor devuelto por la **selección** tipo de enumeración declarado en el `COleInsertDialog` clase.  
   
- `enum Selection`  
-  
- `{`  
-  
- `createNewItem,`  
-  
- `insertFromFile,`  
-  
- `linkToFile`  
-  
- `};`  
+```  
+enum Selection {
+    createNewItem,
+    insertFromFile,
+    linkToFile
+    };  
+```  
   
  Siguen breves descripciones de estos valores:  
   
@@ -276,7 +282,7 @@ UINT GetSelectionType() const;
   
 - **COleInsertDialog::linkToFile** se ha seleccionado el botón de radio de la creación de archivo y se selecciona la casilla de verificación vínculo.  
   
-##  <a name="a-namemioa--coleinsertdialogmio"></a><a name="m_io"></a>COleInsertDialog::m_io  
+##  <a name="m_io"></a>COleInsertDialog::m_io  
  Estructura de tipo **OLEUIINSERTOBJECT** utilizado para controlar el comportamiento del cuadro de diálogo Insertar objeto.  
   
 ```  

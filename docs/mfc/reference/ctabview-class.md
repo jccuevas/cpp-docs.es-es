@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTabView
+- AFXTABVIEW/CTabView
+- AFXTABVIEW/CTabView::AddView
+- AFXTABVIEW/CTabView::FindTab
+- AFXTABVIEW/CTabView::GetActiveView
+- AFXTABVIEW/CTabView::GetTabControl
+- AFXTABVIEW/CTabView::RemoveView
+- AFXTABVIEW/CTabView::SetActiveView
+- AFXTABVIEW/CTabView::IsScrollBar
+- AFXTABVIEW/CTabView::OnActivateView
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +92,7 @@ class CTabbedView : public CView
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxTabView.h  
   
-##  <a name="a-nameaddviewa--ctabviewaddview"></a><a name="addview"></a>CTabView::AddView  
+##  <a name="addview"></a>CTabView::AddView  
  Agrega una vista para el control de ficha.  
   
 ```  
@@ -113,7 +122,7 @@ int AddView(
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función para agregar una vista para el control de ficha que se incrusta en un marco.  
   
-##  <a name="a-namefindtaba--ctabviewfindtab"></a><a name="findtab"></a>CTabView::FindTab  
+##  <a name="findtab"></a>CTabView::FindTab  
  Devuelve el índice de la vista especificada en el control de ficha.  
   
 ```  
@@ -130,7 +139,7 @@ int FindTab(HWND hWndView) const;
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función para recuperar el índice de una vista que tiene el identificador especificado.  
   
-##  <a name="a-namegetactiveviewa--ctabviewgetactiveview"></a><a name="getactiveview"></a>CTabView::GetActiveView  
+##  <a name="getactiveview"></a>CTabView::GetActiveView  
  Devuelve un puntero a la vista activa.  
   
 ```  
@@ -142,7 +151,7 @@ CView* GetActiveView() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namegettabcontrola--ctabviewgettabcontrol"></a><a name="gettabcontrol"></a>CTabView::GetTabControl  
+##  <a name="gettabcontrol"></a>CTabView::GetTabControl  
  Devuelve una referencia al control asociado a la vista.  
   
 ```  
@@ -152,7 +161,7 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia al control asociado a la vista.  
   
-##  <a name="a-nameisscrollbara--ctabviewisscrollbar"></a><a name="isscrollbar"></a>CTabView::IsScrollBar  
+##  <a name="isscrollbar"></a>CTabView::IsScrollBar  
  Lo llama el marco de trabajo al crear una vista de ficha para determinar si la vista de ficha tiene una barra de desplazamiento horizontal compartida.  
   
 ```  
@@ -167,7 +176,7 @@ virtual BOOL IsScrollBar() const;
   
  Invalidar el `IsScrollBar` método en un `CTabView`-derivado de la clase y devolver `TRUE` si desea crear una vista que tiene una barra de desplazamiento horizontal compartida.  
   
-##  <a name="a-nameonactivateviewa--ctabviewonactivateview"></a><a name="onactivateview"></a>CTabView::OnActivateView  
+##  <a name="onactivateview"></a>CTabView::OnActivateView  
  Llamado por el marco de trabajo cuando se realiza la vista de la ficha activo o inactivo.  
   
 ```  
@@ -181,7 +190,7 @@ virtual void OnActivateView(CView* view);
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada no hace nada. Invalide este método en un `CTabView`-clase derivada para procesar esta notificación.  
   
-##  <a name="a-nameremoveviewa--ctabviewremoveview"></a><a name="removeview"></a>CTabView::RemoveView  
+##  <a name="removeview"></a>CTabView::RemoveView  
  Quita la vista del control de ficha.  
   
 ```  
@@ -197,7 +206,7 @@ BOOL RemoveView(int iTabNum);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namesetactiveviewa--ctabviewsetactiveview"></a><a name="setactiveview"></a>CTabView::SetActiveView  
+##  <a name="setactiveview"></a>CTabView::SetActiveView  
  Una vista activa.  
   
 ```  

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSCompletionList
+- IUMSCompletionList
+- CONCRTRM/concurrency::IUMSCompletionList
+- CONCRTRM/concurrency::IUMSCompletionList::IUMSCompletionList::GetUnblockNotifications
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 25023c27244669092e0f57fe59bdb190fd2f2afb
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 65655e4e03a7b187e0bbadbd576bc088bb57f7c8
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList (Estructura)
@@ -54,7 +56,7 @@ struct IUMSCompletionList;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[IUMSCompletionList:: GetUnblockNotifications (método)](#getunblocknotifications)|Recupera una cadena de `IUMSUnblockNotification` interfaces que representan los contextos de ejecución cuyo subproceso asociado proxy se han desbloqueado desde la última vez que este método se ha invocado.|  
+|[IUMSCompletionList:: GetUnblockNotifications](#getunblocknotifications)|Recupera una cadena de `IUMSUnblockNotification` interfaces que representan los contextos de ejecución cuyo subproceso asociado proxy se han desbloqueado desde la última vez que este método se ha invocado.|  
   
 ## <a name="remarks"></a>Comentarios  
  Un programador debe ser extraordinariamente cuidadoso sobre qué acciones se realizan después de usar esta interfaz para los elementos de la lista de finalización de la cola. Los elementos se deben colocar en la lista del programador de contextos ejecutables y ser accesible normalmente tan pronto como sea posible. Es muy posible que uno de los elementos quitados se ha concedido la propiedad de un bloqueo arbitrario. El programador no puede hacer llamadas de función arbitraria que se pueden bloquear entre la llamada a elementos de la cola y la colocación de los elementos en una lista que puede obtenerse generalmente desde dentro del programador.  
@@ -67,7 +69,7 @@ struct IUMSCompletionList;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-namegetunblocknotificationsa--iumscompletionlistgetunblocknotifications-method"></a><a name="getunblocknotifications"></a>IUMSCompletionList:: GetUnblockNotifications (método)  
+##  <a name="getunblocknotifications"></a>IUMSCompletionList:: GetUnblockNotifications (método)  
  Recupera una cadena de `IUMSUnblockNotification` interfaces que representan los contextos de ejecución cuyo subproceso asociado proxy se han desbloqueado desde la última vez que este método se ha invocado.  
   
 ```

@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CShellManager
+- AFXSHELLMANAGER/CShellManager
+- AFXSHELLMANAGER/CShellManager::CShellManager
+- AFXSHELLMANAGER/CShellManager::BrowseForFolder
+- AFXSHELLMANAGER/CShellManager::ConcatenateItem
+- AFXSHELLMANAGER/CShellManager::CopyItem
+- AFXSHELLMANAGER/CShellManager::CreateItem
+- AFXSHELLMANAGER/CShellManager::FreeItem
+- AFXSHELLMANAGER/CShellManager::GetItemCount
+- AFXSHELLMANAGER/CShellManager::GetItemSize
+- AFXSHELLMANAGER/CShellManager::GetNextItem
+- AFXSHELLMANAGER/CShellManager::GetParentItem
+- AFXSHELLMANAGER/CShellManager::ItemFromPath
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +96,7 @@ class CShellManager : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxshellmanager.h  
   
-##  <a name="a-namebrowseforfoldera--cshellmanagerbrowseforfolder"></a><a name="browseforfolder"></a>CShellManager::BrowseForFolder  
+##  <a name="browseforfolder"></a>CShellManager::BrowseForFolder  
  Muestra un cuadro de diálogo que permite al usuario seleccionar una carpeta de shell.  
   
 ```  
@@ -127,7 +139,7 @@ BOOL BrowseForFolder(
   
  [!code-cpp[NVC_MFC_Explorer Nº&6;](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]  
   
-##  <a name="a-nameconcatenateitema--cshellmanagerconcatenateitem"></a><a name="concatenateitem"></a>CShellManager::ConcatenateItem  
+##  <a name="concatenateitem"></a>CShellManager::ConcatenateItem  
  Crea una nueva lista que contiene dos PIDL.  
   
 ```  
@@ -149,7 +161,7 @@ LPITEMIDLIST ConcatenateItem(
 ### <a name="remarks"></a>Comentarios  
  Este método crea un nuevo [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) lo suficientemente grande como para contener `pidl1` y `pidl2`. A continuación, copia `pidl1` y `pidl2` a la nueva lista.  
   
-##  <a name="a-namecopyitema--cshellmanagercopyitem"></a><a name="copyitem"></a>CShellManager::CopyItem  
+##  <a name="copyitem"></a>CShellManager::CopyItem  
  Copia una lista de elementos.  
   
 ```  
@@ -166,7 +178,7 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ### <a name="remarks"></a>Comentarios  
  La lista de los elementos recién creado tiene el mismo tamaño que la lista de elementos de origen.  
   
-##  <a name="a-namecreateitema--cshellmanagercreateitem"></a><a name="createitem"></a>CShellManager::CreateItem  
+##  <a name="createitem"></a>CShellManager::CreateItem  
  Crea un nuevo PIDL.  
   
 ```  
@@ -180,7 +192,7 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la lista de elementos creados si es correcto; de lo contrario, `NULL`.  
   
-##  <a name="a-namecshellmanagera--cshellmanagercshellmanager"></a><a name="cshellmanager"></a>CShellManager::CShellManager  
+##  <a name="cshellmanager"></a>CShellManager::CShellManager  
  Construye un objeto `CShellManager`.  
   
 ```  
@@ -190,7 +202,7 @@ CShellManager();
 ### <a name="remarks"></a>Comentarios  
  En la mayoría de los casos, no es necesario crear un `CShellManager` directamente. De forma predeterminada, el marco de trabajo crea uno automáticamente. Para obtener un puntero a la `CShellManager`, llame a [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager). Si crea un `CShellManager` manualmente, se debe inicializar con el método [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager).  
   
-##  <a name="a-namefreeitema--cshellmanagerfreeitem"></a><a name="freeitem"></a>CShellManager::FreeItem  
+##  <a name="freeitem"></a>CShellManager::FreeItem  
  Elimina una lista de elementos.  
   
 ```  
@@ -201,7 +213,7 @@ void FreeItem(LPITEMIDLIST pidl);
  [in] `pidl`  
  Para eliminar una lista de elementos.  
   
-##  <a name="a-namegetitemcounta--cshellmanagergetitemcount"></a><a name="getitemcount"></a>CShellManager::GetItemCount  
+##  <a name="getitemcount"></a>CShellManager::GetItemCount  
  Devuelve el número de elementos en una lista de elementos.  
   
 ```  
@@ -215,7 +227,7 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ### <a name="return-value"></a>Valor devuelto  
  El número de elementos de la lista de elementos.  
   
-##  <a name="a-namegetitemsizea--cshellmanagergetitemsize"></a><a name="getitemsize"></a>CShellManager::GetItemSize  
+##  <a name="getitemsize"></a>CShellManager::GetItemSize  
  Devuelve el tamaño de una lista de elementos.  
   
 ```  
@@ -229,7 +241,7 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ### <a name="return-value"></a>Valor devuelto  
  El tamaño de la lista de elementos.  
   
-##  <a name="a-namegetnextitema--cshellmanagergetnextitem"></a><a name="getnextitem"></a>CShellManager::GetNextItem  
+##  <a name="getnextitem"></a>CShellManager::GetNextItem  
  Recupera el siguiente elemento de un puntero a una lista de identificador de elementos (PIDL).  
   
 ```  
@@ -246,7 +258,7 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ### <a name="remarks"></a>Comentarios  
  Si no hay ninguna más elementos en la lista, este método devuelve `NULL`.  
   
-##  <a name="a-namegetparentitema--cshellmanagergetparentitem"></a><a name="getparentitem"></a>CShellManager::GetParentItem  
+##  <a name="getparentitem"></a>CShellManager::GetParentItem  
  Recupera al elemento primario de un puntero a una lista de identificador de elementos (PIDL).  
   
 ```  
@@ -268,7 +280,7 @@ int GetParentItem(
 ### <a name="remarks"></a>Comentarios  
  El nivel de un PIDL es con respecto al escritorio. El escritorio PIDL se considera que tiene un nivel de 0.  
   
-##  <a name="a-nameitemfrompatha--cshellmanageritemfrompath"></a><a name="itemfrompath"></a>CShellManager::ItemFromPath  
+##  <a name="itemfrompath"></a>CShellManager::ItemFromPath  
  Recupera el puntero a una lista de identificador de elementos (PIDL) desde el elemento identificado por una ruta de acceso de la cadena.  
   
 ```  

@@ -9,9 +9,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CSimpleMap
-- ATL.CSimpleMap
 - CSimpleMap
+- ATLSIMPCOLL/ATL::CSimpleMap
+- ATLSIMPCOLL/ATL::CSimpleMap::_ArrayElementType
+- ATLSIMPCOLL/ATL::CSimpleMap::_ArrayKeyType
+- ATLSIMPCOLL/ATL::CSimpleMap::CSimpleMap
+- ATLSIMPCOLL/ATL::CSimpleMap::Add
+- ATLSIMPCOLL/ATL::CSimpleMap::FindKey
+- ATLSIMPCOLL/ATL::CSimpleMap::FindVal
+- ATLSIMPCOLL/ATL::CSimpleMap::GetKeyAt
+- ATLSIMPCOLL/ATL::CSimpleMap::GetSize
+- ATLSIMPCOLL/ATL::CSimpleMap::GetValueAt
+- ATLSIMPCOLL/ATL::CSimpleMap::Lookup
+- ATLSIMPCOLL/ATL::CSimpleMap::Remove
+- ATLSIMPCOLL/ATL::CSimpleMap::RemoveAll
+- ATLSIMPCOLL/ATL::CSimpleMap::RemoveAt
+- ATLSIMPCOLL/ATL::CSimpleMap::ReverseLookup
+- ATLSIMPCOLL/ATL::CSimpleMap::SetAt
+- ATLSIMPCOLL/ATL::CSimpleMap::SetAtIndex
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +125,7 @@ class CSimpleMap
 ## <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities&#91;](../../atl/codesnippet/cpp/csimplemap-class_1.cpp)]  
   
-##  <a name="a-nameadda--csimplemapadd"></a><a name="add"></a>CSimpleMap::Add  
+##  <a name="add"></a>CSimpleMap::Add  
  Agrega una clave y un valor asociado a la matriz de asignaciones.  
   
 ```
@@ -130,21 +145,21 @@ BOOL Add(const TKey& key, const TVal& val);
 ### <a name="remarks"></a>Comentarios  
  Cada par de clave y valor agregado hace que la asignación de memoria se libera y vuelve a asignar, para garantizar que los datos para cada siempre se almacenan de forma contigua de matriz. Es decir, el segundo elemento clave siempre sigue directamente el primer elemento clave en la memoria y así sucesivamente.  
   
-##  <a name="a-namearrayelementtypea--csimplemaparrayelementtype"></a><a name="_arrayelementtype"></a>CSimpleMap::_ArrayElementType  
+##  <a name="_arrayelementtype"></a>CSimpleMap::_ArrayElementType  
  Definición de tipos para el tipo de clave.  
   
 ```
 typedef TVal _ArrayElementType;
 ```  
   
-##  <a name="a-namearraykeytypea--csimplemaparraykeytype"></a><a name="_arraykeytype"></a>CSimpleMap::_ArrayKeyType  
+##  <a name="_arraykeytype"></a>CSimpleMap::_ArrayKeyType  
  Definición de tipos para el tipo de valor.  
   
 ```
 typedef TKey _ArrayKeyType;
 ```  
   
-##  <a name="a-namecsimplemapa--csimplemapcsimplemap"></a><a name="csimplemap"></a>CSimpleMap::CSimpleMap  
+##  <a name="csimplemap"></a>CSimpleMap::CSimpleMap  
  El constructor.  
   
 ```
@@ -154,7 +169,7 @@ CSimpleMap();
 ### <a name="remarks"></a>Comentarios  
  Inicializa a los miembros de datos.  
   
-##  <a name="a-namedtora--csimplemapcsimplemap"></a><a name="dtor"></a>CSimpleMap:: ~ CSimpleMap  
+##  <a name="dtor"></a>CSimpleMap:: ~ CSimpleMap  
  Destructor.  
   
 ```
@@ -164,7 +179,7 @@ CSimpleMap();
 ### <a name="remarks"></a>Comentarios  
  Libera todos los recursos asignados.  
   
-##  <a name="a-namefindkeya--csimplemapfindkey"></a><a name="findkey"></a>CSimpleMap::FindKey  
+##  <a name="findkey"></a>CSimpleMap::FindKey  
  Busca una clave específica.  
   
 ```
@@ -178,7 +193,7 @@ int FindKey(const TKey& key) const;
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el índice de la clave si se encuentra, de lo contrario, devuelve -1.  
   
-##  <a name="a-namefindvala--csimplemapfindval"></a><a name="findval"></a>CSimpleMap::FindVal  
+##  <a name="findval"></a>CSimpleMap::FindVal  
  Busca un valor específico.  
   
 ```
@@ -192,7 +207,7 @@ int FindVal(const TVal& val) const;
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve que el índice del valor si se encuentra, en caso contrario, devuelve -1.  
   
-##  <a name="a-namegetkeyata--csimplemapgetkeyat"></a><a name="getkeyat"></a>CSimpleMap::GetKeyAt  
+##  <a name="getkeyat"></a>CSimpleMap::GetKeyAt  
  Recupera la clave en el índice especificado.  
   
 ```
@@ -209,7 +224,7 @@ TKey& GetKeyAt(int nIndex) const;
 ### <a name="remarks"></a>Comentarios  
  El índice se pasa `nIndex` debe ser válido para el valor devuelto sea significativo.  
   
-##  <a name="a-namegetsizea--csimplemapgetsize"></a><a name="getsize"></a>CSimpleMap::GetSize  
+##  <a name="getsize"></a>CSimpleMap::GetSize  
  Devuelve el número de entradas de la matriz de asignación.  
   
 ```
@@ -219,7 +234,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el número de entradas (una clave y valor es una entrada) de la matriz de asignación.  
   
-##  <a name="a-namegetvalueata--csimplemapgetvalueat"></a><a name="getvalueat"></a>CSimpleMap::GetValueAt  
+##  <a name="getvalueat"></a>CSimpleMap::GetValueAt  
  Recupera el valor en el índice especificado.  
   
 ```
@@ -236,7 +251,7 @@ TVal& GetValueAt(int nIndex) const;
 ### <a name="remarks"></a>Comentarios  
  El índice se pasa `nIndex` debe ser válido para el valor devuelto sea significativo.  
   
-##  <a name="a-namelookupa--csimplemaplookup"></a><a name="lookup"></a>CSimpleMap::Lookup  
+##  <a name="lookup"></a>CSimpleMap::Lookup  
  Devuelve el valor asociado con la clave especificada.  
   
 ```
@@ -250,7 +265,7 @@ TVal Lookup(const TKey& key) const;
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el valor asociado. Se devuelve si ninguna clave coincidente se encuentra, NULL.  
   
-##  <a name="a-nameremovea--csimplemapremove"></a><a name="remove"></a>CSimpleMap::Remove  
+##  <a name="remove"></a>CSimpleMap::Remove  
  Quita una clave y un valor coincidente.  
   
 ```
@@ -264,7 +279,7 @@ BOOL Remove(const TKey& key);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si la clave y valor coincidente, se ha quitado correctamente, FALSE en caso contrario.  
   
-##  <a name="a-nameremovealla--csimplemapremoveall"></a><a name="removeall"></a>CSimpleMap::RemoveAll  
+##  <a name="removeall"></a>CSimpleMap::RemoveAll  
  Quita todas las claves y valores.  
   
 ```
@@ -274,7 +289,7 @@ void RemoveAll();
 ### <a name="remarks"></a>Comentarios  
  Quita todas las claves y valores del objeto de matriz de asignación.  
   
-##  <a name="a-nameremoveata--csimplemapremoveat"></a><a name="removeat"></a>CSimpleMap::RemoveAt  
+##  <a name="removeat"></a>CSimpleMap::RemoveAt  
  Quita una clave y un valor asociado en el índice especificado.  
   
 ```
@@ -288,7 +303,7 @@ BOOL RemoveAt(int nIndex);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE si el índice especificado es un índice no válido.  
   
-##  <a name="a-namereverselookupa--csimplemapreverselookup"></a><a name="reverselookup"></a>CSimpleMap::ReverseLookup  
+##  <a name="reverselookup"></a>CSimpleMap::ReverseLookup  
  Devuelve la clave asociada con el valor especificado.  
   
 ```
@@ -302,7 +317,7 @@ TKey ReverseLookup(const TVal& val) const;
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la clave asociada. Se devuelve si ninguna clave coincidente se encuentra, NULL.  
   
-##  <a name="a-namesetata--csimplemapsetat"></a><a name="setat"></a>CSimpleMap::SetAt  
+##  <a name="setat"></a>CSimpleMap::SetAt  
  Establece el valor asociado con la clave especificada.  
   
 ```
@@ -319,7 +334,7 @@ BOOL SetAt(const TKey& key, const TVal& val);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se encontró la clave y el valor se cambió correctamente.  
   
-##  <a name="a-namesetatindexa--csimplemapsetatindex"></a><a name="setatindex"></a>CSimpleMap::SetAtIndex  
+##  <a name="setatindex"></a>CSimpleMap::SetAtIndex  
  Establece la clave y valor en un índice especificado.  
   
 ```

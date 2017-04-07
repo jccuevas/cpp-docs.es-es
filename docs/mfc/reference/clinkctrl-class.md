@@ -10,6 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CLinkCtrl
+- AFXCMN/CLinkCtrl
+- AFXCMN/CLinkCtrl::CLinkCtrl
+- AFXCMN/CLinkCtrl::Create
+- AFXCMN/CLinkCtrl::CreateEx
+- AFXCMN/CLinkCtrl::GetIdealHeight
+- AFXCMN/CLinkCtrl::GetIdealSize
+- AFXCMN/CLinkCtrl::GetItem
+- AFXCMN/CLinkCtrl::GetItemID
+- AFXCMN/CLinkCtrl::GetItemState
+- AFXCMN/CLinkCtrl::GetItemUrl
+- AFXCMN/CLinkCtrl::HitTest
+- AFXCMN/CLinkCtrl::SetItem
+- AFXCMN/CLinkCtrl::SetItemID
+- AFXCMN/CLinkCtrl::SetItemState
+- AFXCMN/CLinkCtrl::SetItemUrl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,14 +112,14 @@ class CLinkCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxcmn.h  
   
-##  <a name="a-nameclinkctrla--clinkctrlclinkctrl"></a><a name="clinkctrl"></a>CLinkCtrl::CLinkCtrl  
+##  <a name="clinkctrl"></a>CLinkCtrl::CLinkCtrl  
  Construye un objeto `CLinkCtrl`.  
   
 ```  
 CLinkCtrl();
 ```  
   
-##  <a name="a-namecreatea--clinkctrlcreate"></a><a name="create"></a>CLinkCtrl::Create  
+##  <a name="create"></a>CLinkCtrl::Create  
  Crea un control de vínculo y lo adjunta a un `CLinkCtrl` objeto.  
   
 ```  
@@ -156,7 +171,7 @@ virtual BOOL Create(DWORD dwStyle,
   
  [!code-cpp[1 NVC_MFC_CLinkCtrl_s1](../../mfc/reference/codesnippet/cpp/clinkctrl-class_2.cpp)]  
   
-##  <a name="a-namecreateexa--clinkctrlcreateex"></a><a name="createex"></a>CLinkCtrl::CreateEx  
+##  <a name="createex"></a>CLinkCtrl::CreateEx  
  Crea un control de vínculo con estilos extendidos y lo adjunta a un `CLinkCtrl` objeto.  
   
 ```  
@@ -203,7 +218,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
  La segunda forma de la `CreateEx` método está desusado. Usar la primera forma que especifica el `lpszLinkMarkup` parámetro.  
   
-##  <a name="a-namegetidealheighta--clinkctrlgetidealheight"></a><a name="getidealheight"></a>CLinkCtrl::GetIdealHeight  
+##  <a name="getidealheight"></a>CLinkCtrl::GetIdealHeight  
  Recupera el alto ideal de control de vínculo.  
   
 ```  
@@ -216,7 +231,7 @@ int GetIdealHeight() const;
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro implementa el comportamiento del mensaje de Win32 [LM_GETIDEALHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb760716), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetidealsizea--clinkctrlgetidealsize"></a><a name="getidealsize"></a>CLinkCtrl::GetIdealSize  
+##  <a name="getidealsize"></a>CLinkCtrl::GetIdealSize  
  Calcula el alto preferido del control de vínculo actual, según el ancho del vínculo especificado en el texto del vínculo.  
   
 ```  
@@ -240,7 +255,7 @@ int GetIdealSize(
   
  Este método envía el [LM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760718) mensaje, que se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetitema--clinkctrlgetitem"></a><a name="getitem"></a>CLinkCtrl::GetItem  
+##  <a name="getitem"></a>CLinkCtrl::GetItem  
  Recupera los Estados y los atributos de un elemento de control de vínculo.  
   
 ```  
@@ -257,7 +272,7 @@ BOOL GetItem(PLITEM pItem) const;
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro implementa el comportamiento del mensaje de Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetitemida--clinkctrlgetitemid"></a><a name="getitemid"></a>CLinkCtrl::GetItemID  
+##  <a name="getitemid"></a>CLinkCtrl::GetItemID  
  Recupera el identificador de un elemento de control de vínculo.  
   
 ```  
@@ -293,7 +308,7 @@ BOOL GetItemID(
 ### <a name="remarks"></a>Comentarios  
  Recupera el identificador de un elemento de control de vínculo específico. Para obtener más información, consulte el mensaje de Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetitemstatea--clinkctrlgetitemstate"></a><a name="getitemstate"></a>CLinkCtrl::GetItemState  
+##  <a name="getitemstate"></a>CLinkCtrl::GetItemState  
  Recupera el estado del elemento de control de vínculo.  
   
 ```  
@@ -319,7 +334,7 @@ BOOL GetItemState(
 ### <a name="remarks"></a>Comentarios  
  Recupera el valor del elemento de estado especificado de un elemento de control de vínculo específico. Para obtener más información, consulte el mensaje de Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetitemurla--clinkctrlgetitemurl"></a><a name="getitemurl"></a>CLinkCtrl::GetItemUrl  
+##  <a name="getitemurl"></a>CLinkCtrl::GetItemUrl  
  Recupera la dirección URL representada por el elemento de control de vínculo.  
   
 ```  
@@ -355,7 +370,7 @@ BOOL GetItemUrl(
 ### <a name="remarks"></a>Comentarios  
  Recupera la dirección URL representada por el elemento de control de vínculo especificado. Para obtener más información, consulte el mensaje de Win32 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namehittesta--clinkctrlhittest"></a><a name="hittest"></a>CLinkCtrl::HitTest  
+##  <a name="hittest"></a>CLinkCtrl::HitTest  
  Determina si el usuario hace clic en el vínculo especificado.  
   
 ```  
@@ -372,7 +387,7 @@ BOOL HitTest(PLHITTESTINFO phti) const;
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro implementa el comportamiento del mensaje de Win32 [LM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb760722), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetitema--clinkctrlsetitem"></a><a name="setitem"></a>CLinkCtrl::SetItem  
+##  <a name="setitem"></a>CLinkCtrl::SetItem  
  Establece los Estados y los atributos de un elemento de control de vínculo.  
   
 ```  
@@ -389,7 +404,7 @@ BOOL SetItem(PLITEM pItem);
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro implementa el comportamiento del mensaje de Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetitemida--clinkctrlsetitemid"></a><a name="setitemid"></a>CLinkCtrl::SetItemID  
+##  <a name="setitemid"></a>CLinkCtrl::SetItemID  
  Recupera el identificador de un elemento de control de vínculo.  
   
 ```  
@@ -411,7 +426,7 @@ BOOL SetItemID(
 ### <a name="remarks"></a>Comentarios  
  Establece el identificador de un elemento de control de vínculo específico. Para obtener más información, consulte el mensaje de Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetitemstatea--clinkctrlsetitemstate"></a><a name="setitemstate"></a>CLinkCtrl::SetItemState  
+##  <a name="setitemstate"></a>CLinkCtrl::SetItemState  
  Recupera el estado del elemento de control de vínculo.  
   
 ```  
@@ -437,7 +452,7 @@ BOOL SetItemState(
 ### <a name="remarks"></a>Comentarios  
  Establece el valor del elemento de estado especificado de un elemento de control de vínculo específico. Para obtener más información, consulte el mensaje de Win32 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetitemurla--clinkctrlsetitemurl"></a><a name="setitemurl"></a>CLinkCtrl::SetItemUrl  
+##  <a name="setitemurl"></a>CLinkCtrl::SetItemUrl  
  Establece la dirección URL representada por el elemento de control de vínculo.  
   
 ```  

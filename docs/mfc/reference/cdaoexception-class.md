@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoException
+- AFXDAO/CDaoException
+- AFXDAO/CDaoException::CDaoException
+- AFXDAO/CDaoException::GetErrorCount
+- AFXDAO/CDaoException::GetErrorInfo
+- AFXDAO/CDaoException::m_nAfxDaoError
+- AFXDAO/CDaoException::m_pErrorInfo
+- AFXDAO/CDaoException::m_scode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +107,7 @@ class CDaoException : public CException
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdao.h  
   
-##  <a name="a-namecdaoexceptiona--cdaoexceptioncdaoexception"></a><a name="cdaoexception"></a>CDaoException::CDaoException  
+##  <a name="cdaoexception"></a>CDaoException::CDaoException  
  Construye un objeto `CDaoException`.  
   
 ```  
@@ -128,7 +135,7 @@ CDaoException();
   
  Para obtener más información sobre el control de errores en las clases DAO de MFC, vea el artículo [excepciones: excepciones de base de datos](../../mfc/exceptions-database-exceptions.md).  
   
-##  <a name="a-namegeterrorcounta--cdaoexceptiongeterrorcount"></a><a name="geterrorcount"></a>CDaoException::GetErrorCount  
+##  <a name="geterrorcount"></a>CDaoException::GetErrorCount  
  Llame a esta función miembro para recuperar el número de objetos de error DAO en la colección de errores del motor de base de datos.  
   
 ```  
@@ -144,7 +151,7 @@ short GetErrorCount();
 > [!NOTE]
 >  Normalmente, hay sólo un objeto de error en la colección de errores. Si está trabajando con un origen de datos ODBC, sin embargo, podría haber más de uno.  
   
-##  <a name="a-namegeterrorinfoa--cdaoexceptiongeterrorinfo"></a><a name="geterrorinfo"></a>CDaoException:: GetErrorInfo  
+##  <a name="geterrorinfo"></a>CDaoException:: GetErrorInfo  
  Devuelve información acerca de un objeto de error concreto en la colección de errores.  
   
 ```  
@@ -172,7 +179,7 @@ void GetErrorInfo(int nIndex);
   
  Para obtener información sobre las excepciones de DAO y código de ejemplo, vea el artículo [excepciones: excepciones de base de datos](../../mfc/exceptions-database-exceptions.md).  
   
-##  <a name="a-namemnafxdaoerrora--cdaoexceptionmnafxdaoerror"></a><a name="m_nafxdaoerror"></a>CDaoException::m_nAfxDaoError  
+##  <a name="m_nafxdaoerror"></a>CDaoException::m_nAfxDaoError  
  Contiene un código de error extendido de MFC.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -188,7 +195,7 @@ void GetErrorInfo(int nIndex);
   
 - **AFX_DAO_ERROR_OBJECT_NOT_OPEN** ha intentado abrir un objeto recordset basado en una definición de consulta o un objeto de definición de tabla que no estaba en estado abierto.  
   
-##  <a name="a-namemperrorinfoa--cdaoexceptionmperrorinfo"></a><a name="m_perrorinfo"></a>CDaoException::m_pErrorInfo  
+##  <a name="m_perrorinfo"></a>CDaoException::m_pErrorInfo  
  Contiene un puntero a un `CDaoErrorInfo` estructura que proporciona información sobre el objeto de error DAO que la última vez que recuperó mediante una llamada a [GetErrorInfo](#geterrorinfo).  
   
 ### <a name="remarks"></a>Comentarios  
@@ -204,7 +211,7 @@ void GetErrorInfo(int nIndex);
   
  Para obtener más información acerca de la información contenida en el `CDaoErrorInfo` de objeto, vea el [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) estructura.  
   
-##  <a name="a-namemscodea--cdaoexceptionmscode"></a><a name="m_scode"></a>CDaoException::m_scode  
+##  <a name="m_scode"></a>CDaoException::m_scode  
  Contiene un valor de tipo `SCODE` que describe el error.  
   
 ### <a name="remarks"></a>Comentarios  

@@ -9,9 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComApartment
 - CComApartment
-- ATL.CComApartment
+- ATLBASE/ATL::CComApartment
+- ATLBASE/ATL::CComApartment::CComApartment
+- ATLBASE/ATL::CComApartment::Apartment
+- ATLBASE/ATL::CComApartment::GetLockCount
+- ATLBASE/ATL::CComApartment::Lock
+- ATLBASE/ATL::CComApartment::Unlock
+- ATLBASE/ATL::CComApartment::m_dwThreadID
+- ATLBASE/ATL::CComApartment::m_hThread
+- ATLBASE/ATL::CComApartment::m_nLockCnt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +92,7 @@ class CComApartment
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
   
-##  <a name="a-nameapartmenta--ccomapartmentapartment"></a><a name="apartment"></a>CComApartment::Apartment  
+##  <a name="apartment"></a>CComApartment::Apartment  
  Marca la dirección inicial del subproceso.  
   
 ```
@@ -98,7 +105,7 @@ DWORD Apartment();
 ### <a name="remarks"></a>Comentarios  
  Configura automáticamente durante la [CComAutoThreadModule::Init](../../atl/reference/ccomautothreadmodule-class.md#init).  
   
-##  <a name="a-nameccomapartmenta--ccomapartmentccomapartment"></a><a name="ccomapartment"></a>CComApartment::CComApartment  
+##  <a name="ccomapartment"></a>CComApartment::CComApartment  
  El constructor.  
   
 ```
@@ -108,7 +115,7 @@ CComApartment();
 ### <a name="remarks"></a>Comentarios  
  Inicializa el `CComApartment` miembros de datos [m_nLockCnt](#m_nlockcnt) y [m_hThread](#m_hthread).  
   
-##  <a name="a-namegetlockcounta--ccomapartmentgetlockcount"></a><a name="getlockcount"></a>CComApartment::GetLockCount  
+##  <a name="getlockcount"></a>CComApartment::GetLockCount  
  Devuelve el recuento de bloqueo actual del subproceso.  
   
 ```
@@ -118,7 +125,7 @@ LONG GetLockCount();
 ### <a name="return-value"></a>Valor devuelto  
  El recuento de bloqueos en el subproceso.  
   
-##  <a name="a-namelocka--ccomapartmentlock"></a><a name="lock"></a>CComApartment::Lock  
+##  <a name="lock"></a>CComApartment::Lock  
  Incrementa el recuento de bloqueo del subproceso.  
   
 ```
@@ -133,28 +140,28 @@ LONG Lock();
   
  El recuento de bloqueos en el subproceso se utiliza para fines estadísticos.  
   
-##  <a name="a-namemdwthreadida--ccomapartmentmdwthreadid"></a><a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
+##  <a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
  Contiene el identificador del subproceso.  
   
 ```
 DWORD m_dwThreadID;
 ```  
   
-##  <a name="a-namemhthreada--ccomapartmentmhthread"></a><a name="m_hthread"></a>CComApartment::m_hThread  
+##  <a name="m_hthread"></a>CComApartment::m_hThread  
  Contiene el identificador del subproceso.  
   
 ```
 HANDLE m_hThread;
 ```  
   
-##  <a name="a-namemnlockcnta--ccomapartmentmnlockcnt"></a><a name="m_nlockcnt"></a>CComApartment::m_nLockCnt  
+##  <a name="m_nlockcnt"></a>CComApartment::m_nLockCnt  
  Contiene el recuento de bloqueo actual del subproceso.  
   
 ```
 LONG m_nLockCnt;
 ```  
   
-##  <a name="a-nameunlocka--ccomapartmentunlock"></a><a name="unlock"></a>CComApartment::Unlock  
+##  <a name="unlock"></a>CComApartment::Unlock  
  Reduce el recuento de bloqueo del subproceso.  
   
 ```

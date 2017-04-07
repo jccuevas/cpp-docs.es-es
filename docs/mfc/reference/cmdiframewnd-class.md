@@ -10,6 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMDIFrameWnd
+- AFXWIN/CMDIFrameWnd
+- AFXWIN/CMDIFrameWnd::CMDIFrameWnd
+- AFXWIN/CMDIFrameWnd::CreateClient
+- AFXWIN/CMDIFrameWnd::CreateNewChild
+- AFXWIN/CMDIFrameWnd::GetWindowMenuPopup
+- AFXWIN/CMDIFrameWnd::MDIActivate
+- AFXWIN/CMDIFrameWnd::MDICascade
+- AFXWIN/CMDIFrameWnd::MDIGetActive
+- AFXWIN/CMDIFrameWnd::MDIIconArrange
+- AFXWIN/CMDIFrameWnd::MDIMaximize
+- AFXWIN/CMDIFrameWnd::MDINext
+- AFXWIN/CMDIFrameWnd::MDIPrev
+- AFXWIN/CMDIFrameWnd::MDIRestore
+- AFXWIN/CMDIFrameWnd::MDISetMenu
+- AFXWIN/CMDIFrameWnd::MDITile
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -126,7 +141,7 @@ class CMDIFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h  
   
-##  <a name="a-namecmdiframewnda--cmdiframewndcmdiframewnd"></a><a name="cmdiframewnd"></a>CMDIFrameWnd::CMDIFrameWnd  
+##  <a name="cmdiframewnd"></a>CMDIFrameWnd::CMDIFrameWnd  
  Construye un objeto `CMDIFrameWnd`.  
   
 ```  
@@ -139,7 +154,7 @@ CMDIFrameWnd();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing&#13;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
   
-##  <a name="a-namecreateclienta--cmdiframewndcreateclient"></a><a name="createclient"></a>CMDIFrameWnd::CreateClient  
+##  <a name="createclient"></a>CMDIFrameWnd::CreateClient  
  Crea la ventana de cliente MDI que administra el `CMDIChildWnd` objetos.  
   
 ```  
@@ -164,7 +179,7 @@ virtual BOOL CreateClient(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing&#14;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_2.cpp)]  
   
-##  <a name="a-namecreatenewchilda--cmdiframewndcreatenewchild"></a><a name="createnewchild"></a>CMDIFrameWnd::CreateNewChild  
+##  <a name="createnewchild"></a>CMDIFrameWnd::CreateNewChild  
  Crea una nueva ventana secundaria.  
   
 ```  
@@ -196,7 +211,7 @@ CMDIChildWnd* CreateNewChild(
   
  En este ejemplo es un extracto del artículo de Knowledge Base Q201045, "Cómo: agregar varios tipos de ventana a una aplicación MDI de vista de documento de no." Artículos de Knowledge Base están disponibles en la documentación de Visual Studio de MSDN Library o en [http://support.microsoft.com](http://support.microsoft.com/).  
   
-##  <a name="a-namegetwindowmenupopupa--cmdiframewndgetwindowmenupopup"></a><a name="getwindowmenupopup"></a>CMDIFrameWnd::GetWindowMenuPopup  
+##  <a name="getwindowmenupopup"></a>CMDIFrameWnd::GetWindowMenuPopup  
  Llame a esta función miembro para obtener un identificador para el menú emergente actual con el nombre "Ventana" (el menú emergente con los elementos de menú para la administración de ventanas MDI).  
   
 ```  
@@ -218,7 +233,7 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing Nº&16;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_4.cpp)]  
   
-##  <a name="a-namemdiactivatea--cmdiframewndmdiactivate"></a><a name="mdiactivate"></a>CMDIFrameWnd::MDIActivate  
+##  <a name="mdiactivate"></a>CMDIFrameWnd::MDIActivate  
  Activa una ventana secundaria MDI diferentes.  
   
 ```  
@@ -240,7 +255,7 @@ void MDIActivate(CWnd* pWndActivate);
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup).  
   
-##  <a name="a-namemdicascadea--cmdiframewndmdicascade"></a><a name="mdicascade"></a>CMDIFrameWnd::MDICascade  
+##  <a name="mdicascade"></a>CMDIFrameWnd::MDICascade  
  Organiza todas las ventanas secundarias MDI en un formato en cascada.  
   
 ```  
@@ -258,7 +273,7 @@ void MDICascade(int nType);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing&#17;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_5.cpp)]  
   
-##  <a name="a-namemdigetactivea--cmdiframewndmdigetactive"></a><a name="mdigetactive"></a>CMDIFrameWnd::MDIGetActive  
+##  <a name="mdigetactive"></a>CMDIFrameWnd::MDIGetActive  
  Recupera la actual ventana secundaria MDI activa, junto con una marca que indica si la ventana secundaria se maximiza.  
   
 ```  
@@ -275,7 +290,7 @@ CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize).  
   
-##  <a name="a-namemdiiconarrangea--cmdiframewndmdiiconarrange"></a><a name="mdiiconarrange"></a>CMDIFrameWnd::MDIIconArrange  
+##  <a name="mdiiconarrange"></a>CMDIFrameWnd::MDIIconArrange  
  Organiza todas las ventanas secundarias de documento minimizada.  
   
 ```  
@@ -288,7 +303,7 @@ void MDIIconArrange();
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [CMDIFrameWnd::MDICascade](#mdicascade).  
   
-##  <a name="a-namemdimaximizea--cmdiframewndmdimaximize"></a><a name="mdimaximize"></a>CMDIFrameWnd::MDIMaximize  
+##  <a name="mdimaximize"></a>CMDIFrameWnd::MDIMaximize  
  Maximiza la ventana MDI secundaria especificada.  
   
 ```  
@@ -307,7 +322,7 @@ void MDIMaximize(CWnd* pWnd);
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize).  
   
-##  <a name="a-namemdinexta--cmdiframewndmdinext"></a><a name="mdinext"></a>CMDIFrameWnd::MDINext  
+##  <a name="mdinext"></a>CMDIFrameWnd::MDINext  
  Activa la ventana secundaria inmediatamente detrás de la ventana secundaria activa y coloca la ventana secundaria activa actualmente detrás de todas las demás ventanas secundarias.  
   
 ```  
@@ -320,7 +335,7 @@ void MDINext();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing&#18;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_6.cpp)]  
   
-##  <a name="a-namemdipreva--cmdiframewndmdiprev"></a><a name="mdiprev"></a>CMDIFrameWnd::MDIPrev  
+##  <a name="mdiprev"></a>CMDIFrameWnd::MDIPrev  
  Activa la ventana secundaria anterior y coloca la ventana secundaria activa actualmente inmediatamente detrás de él.  
   
 ```  
@@ -330,7 +345,7 @@ void MDIPrev();
 ### <a name="remarks"></a>Comentarios  
  Si se maximiza la ventana MDI secundaria activa actualmente, la función miembro restaura al secundario actualmente activo y maximiza al secundario recién activado.  
   
-##  <a name="a-namemdirestorea--cmdiframewndmdirestore"></a><a name="mdirestore"></a>CMDIFrameWnd::MDIRestore  
+##  <a name="mdirestore"></a>CMDIFrameWnd::MDIRestore  
  Restaura una ventana secundaria MDI de tamaño maximizado o minimizado.  
   
 ```  
@@ -344,7 +359,7 @@ void MDIRestore(CWnd* pWnd);
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [CMDIChildWnd::MDIRestore](../../mfc/reference/cmdichildwnd-class.md#mdirestore).  
   
-##  <a name="a-namemdisetmenua--cmdiframewndmdisetmenu"></a><a name="mdisetmenu"></a>CMDIFrameWnd::MDISetMenu  
+##  <a name="mdisetmenu"></a>CMDIFrameWnd::MDISetMenu  
  Reemplaza el menú de una ventana de marco MDI, el menú emergente de la ventana o ambos.  
   
 ```  
@@ -377,7 +392,7 @@ CMenu* MDISetMenu(
   
  [!code-cpp[NVC_MFCWindowing&#20;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_8.cpp)]  
   
-##  <a name="a-namemditilea--cmdiframewndmditile"></a><a name="mditile"></a>CMDIFrameWnd::MDITile  
+##  <a name="mditile"></a>CMDIFrameWnd::MDITile  
  Organiza todas las ventanas secundarias en un formato de mosaico.  
   
 ```  

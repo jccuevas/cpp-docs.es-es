@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTypedPtrMap
+- AFXTEMPL/CTypedPtrMap
+- AFXTEMPL/CTypedPtrMap::GetNextAssoc
+- AFXTEMPL/CTypedPtrMap::Lookup
+- AFXTEMPL/CTypedPtrMap::RemoveKey
+- AFXTEMPL/CTypedPtrMap::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CTypedPtrMap : public BASE_CLASS
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxtempl.h  
   
-##  <a name="a-namegetnextassoca--ctypedptrmapgetnextassoc"></a><a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
  Recupera el elemento de mapa en `rNextPosition`, a continuación, actualiza `rNextPosition` para hacer referencia al elemento siguiente en el mapa.  
   
 ```  
@@ -128,7 +133,7 @@ void GetNextAssoc(
   
  Llama a esta función inline `BASE_CLASS` **:: GetNextAssoc**.  
   
-##  <a name="a-namelookupa--ctypedptrmaplookup"></a><a name="lookup"></a>CTypedPtrMap::Lookup  
+##  <a name="lookup"></a>CTypedPtrMap::Lookup  
  `Lookup`utiliza un algoritmo hash para encontrar rápidamente el elemento de mapa con una clave que coincide exactamente.  
   
 ```  
@@ -154,7 +159,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="remarks"></a>Comentarios  
  Llama a esta función inline `BASE_CLASS` **:: búsqueda**.  
   
-##  <a name="a-nameoperatorata--ctypedptrmapoperator--"></a><a name="operator_at"></a>[] CTypedPtrMap::operator  
+##  <a name="operator_at"></a>[] CTypedPtrMap::operator  
  Este operador se puede utilizar sólo en el lado izquierdo de una instrucción de asignación (un valor l).  
   
 ```  
@@ -174,7 +179,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 ### <a name="remarks"></a>Comentarios  
  Si no hay ningún elemento de mapa con la clave especificada, se crea un nuevo elemento. No hay ningún "derecha" (valor r) equivalente a este operador porque es posible que no se puede encontrar una clave en el mapa. Utilice la `Lookup` función de miembro para la recuperación de elemento.  
   
-##  <a name="a-nameremovekeya--ctypedptrmapremovekey"></a><a name="removekey"></a>CTypedPtrMap::RemoveKey  
+##  <a name="removekey"></a>CTypedPtrMap::RemoveKey  
  Llama a esta función miembro `BASE_CLASS` **:: RemoveKey**.  
   
 ```  
@@ -194,7 +199,7 @@ BOOL RemoveKey(KEY key);
 ### <a name="remarks"></a>Comentarios  
  Para obtener comentarios más detallada, consulte [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).  
   
-##  <a name="a-namesetata--ctypedptrmapsetat"></a><a name="setat"></a>CTypedPtrMap::SetAt  
+##  <a name="setat"></a>CTypedPtrMap::SetAt  
  Llama a esta función miembro `BASE_CLASS` **:: SetAt**.  
   
 ```  

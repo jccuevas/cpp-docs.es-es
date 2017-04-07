@@ -27,16 +27,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a769a69a788c2c7ae1fd9854afe89d1feccf9278
-ms.openlocfilehash: bc9ac2892eb9372586f101d706e744e60ebda3ce
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: f9e63f47a8df69b52a6a12688e84602981d20dae
+ms.openlocfilehash: 2d86588df2b20861dff5b940d2f0c7c3afd857fb
+ms.lasthandoff: 03/21/2017
 
 ---
    
 # <a name="c-conformance-improvements-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Mejoras de conformidad de C++ en [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
 ## <a name="new-language-features"></a>Nuevas características de lenguaje  
-Gracias a la compatibilidad de constexpr generalizado y NSDMI con los agregados, el compilador ya tiene la totalidad de las características que se agregaron en el estándar C++14. Tenga en cuenta que al compilador todavía le faltan algunas características de los estándares C++11 y C++98.
+Gracias a la compatibilidad de constexpr generalizado y NSDMI con los agregados, el compilador ya tiene la totalidad de las características que se agregaron en el estándar C++14. Tenga en cuenta que al compilador todavía le faltan algunas características de los estándares C++11 y C++98. Consulte [Visual C++ Language Conformance](visual-cpp-language-conformance.md) (Conformidad del lenguaje Visual C++) para ver una tabla que muestra el estado actual del compilador.
 
 ### <a name="c11"></a>C++11:
 **Compatibilidad con la expresión SFINAE en más bibliotecas** El compilador de Visual C++ sigue mejorando su compatibilidad con la expresión SFINAE, necesaria para la deducción y sustitución de argumentos de plantilla donde las expresiones decltype y constexpr puedan aparecer como parámetros de plantilla. Para más información, vea [Expression SFINAE improvements in Visual Studio 2017 RC](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3) (Mejoras de la expresión SFINAE en Visual Studio 2017 RC). 
@@ -86,7 +86,7 @@ En Visual Studio 2015, el compilador trataba erróneamente la inicialización de
 
 ```cpp  
 // From http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_closed.html#1228
-struct MyList {
+struct MyStore {
        explicit MyStore(int initialCapacity);
 };
 
@@ -274,6 +274,22 @@ static_assert(test1, "PASS1");
 constexpr bool test2 = !IsCallable<int*, int>::value;
 static_assert(test2, "PASS2");
 ```
+### <a name="classes-declared-in-anonymous-namespaces"></a>Clases declaradas en espacios de nombres anónimos
+Según el estándar de C++, una clase que se declara dentro de un espacio de nombres anónimo tiene vinculación interna y, por lo tanto, no se puede exportar. En Visual Studio 2015 y versiones anteriores no se aplicó esta regla. En Visual Studio 2017 se aplica la regla de forma parcial. En el siguiente ejemplo se genera este error en Visual Studio 2017: "error C2201: ' const `anonymous namespace'::S1::`vftable'': debe tener una vinculación externa para exportarlo o importarlo".
+
+```cpp
+namespace
+{
+    struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
+}
+```
+
+### <a name="classes-declared-in-anonymous-namespaces"></a>Clases declaradas en espacios de nombres anónimos
+Según el estándar de C++, una clase que se declara dentro de un espacio de nombres anónimo tiene vinculación interna y, por lo tanto, no se puede exportar. En Visual Studio 2015 y versiones anteriores no se aplicó esta regla. En Visual Studio 2017 se aplica la regla de forma parcial. En el siguiente ejemplo se genera este error en Visual Studio 2017: "error C2201: ' const `anonymous namespace'::S1::`vftable'': debe tener una vinculación externa para exportarlo o importarlo".
+
+```cpp
+struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
+```
 
 ### <a name="default-initializers-for-value-class-members-ccli"></a>Inicializadores predeterminados para miembros de clase de valor (C++/CLI)
 En Visual Studio 2015 y versiones anteriores, el compilador permitía (aunque omitía) un inicializador de miembro predeterminado para un miembro de una clase de valor.  La inicialización predeterminada de una clase de valor siempre inicializa a cero a los miembros; no se permite un constructor predeterminado.  En Visual Studio 2017, los inicializadores de miembro predeterminados generan un error del compilador, tal como se muestra en este ejemplo:
@@ -343,5 +359,5 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 ```
 
 ## <a name="see-also"></a>Vea también  
-[Conformidad del lenguaje Visual C/C++](c-cpp-language-conformance.md)  
+[Conformidad del lenguaje Visual C++](visual-cpp-language-conformance.md)  
 

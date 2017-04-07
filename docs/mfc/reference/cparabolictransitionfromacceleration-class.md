@@ -9,8 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CParabolicTransitionFromAcceleration
 - CParabolicTransitionFromAcceleration
+- AFXANIMATIONCONTROLLER/CParabolicTransitionFromAcceleration
+- AFXANIMATIONCONTROLLER/CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration
+- AFXANIMATIONCONTROLLER/CParabolicTransitionFromAcceleration::Create
+- AFXANIMATIONCONTROLLER/CParabolicTransitionFromAcceleration::m_dblAcceleration
+- AFXANIMATIONCONTROLLER/CParabolicTransitionFromAcceleration::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CParabolicTransitionFromAcceleration::m_dblFinalVelocity
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class CParabolicTransitionFromAcceleration : public CBaseTransition;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxanimationcontroller.h  
   
-##  <a name="a-namecparabolictransitionfromaccelerationa--cparabolictransitionfromaccelerationcparabolictransitionfromacceleration"></a><a name="cparabolictransitionfromacceleration"></a>CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
+##  <a name="cparabolictransitionfromacceleration"></a>CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
  Crea una transición de aceleración parabólica y lo inicializa con los parámetros especificados.  
   
 ```  
@@ -104,7 +109,7 @@ CParabolicTransitionFromAcceleration(
  `dblAcceleration`  
  La aceleración de la animación durante la transición.  
   
-##  <a name="a-namecreatea--cparabolictransitionfromaccelerationcreate"></a><a name="create"></a>CParabolicTransitionFromAcceleration::Create  
+##  <a name="create"></a>CParabolicTransitionFromAcceleration::Create  
  Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado.  
   
 ```  
@@ -120,21 +125,21 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la transición se crea correctamente; de lo contrario, FALSE.  
   
-##  <a name="a-namemdblaccelerationa--cparabolictransitionfromaccelerationmdblacceleration"></a><a name="m_dblacceleration"></a>CParabolicTransitionFromAcceleration::m_dblAcceleration  
+##  <a name="m_dblacceleration"></a>CParabolicTransitionFromAcceleration::m_dblAcceleration  
  La aceleración de la animación durante la transición.  
   
 ```  
 DOUBLE m_dblAcceleration;  
 ```  
   
-##  <a name="a-namemdblfinalvaluea--cparabolictransitionfromaccelerationmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CParabolicTransitionFromAcceleration::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CParabolicTransitionFromAcceleration::m_dblFinalValue  
  El valor de la animación al final de la transición.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemdblfinalvelocitya--cparabolictransitionfromaccelerationmdblfinalvelocity"></a><a name="m_dblfinalvelocity"></a>CParabolicTransitionFromAcceleration::m_dblFinalVelocity  
+##  <a name="m_dblfinalvelocity"></a>CParabolicTransitionFromAcceleration::m_dblFinalVelocity  
  La velocidad de la animación al final de la transición.  
   
 ```  

@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CIPAddressCtrl
+- AFXCMN/CIPAddressCtrl
+- AFXCMN/CIPAddressCtrl::CIPAddressCtrl
+- AFXCMN/CIPAddressCtrl::ClearAddress
+- AFXCMN/CIPAddressCtrl::Create
+- AFXCMN/CIPAddressCtrl::CreateEx
+- AFXCMN/CIPAddressCtrl::GetAddress
+- AFXCMN/CIPAddressCtrl::IsBlank
+- AFXCMN/CIPAddressCtrl::SetAddress
+- AFXCMN/CIPAddressCtrl::SetFieldFocus
+- AFXCMN/CIPAddressCtrl::SetFieldRange
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,14 +103,14 @@ class CIPAddressCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxcmn.h  
   
-##  <a name="a-namecipaddressctrla--cipaddressctrlcipaddressctrl"></a><a name="cipaddressctrl"></a>CIPAddressCtrl::CIPAddressCtrl  
+##  <a name="cipaddressctrl"></a>CIPAddressCtrl::CIPAddressCtrl  
  Crea un objeto `CIPAddressCtrl`.  
   
 ```  
 CIPAddressCtrl();
 ```  
   
-##  <a name="a-nameclearaddressa--cipaddressctrlclearaddress"></a><a name="clearaddress"></a>CIPAddressCtrl::ClearAddress  
+##  <a name="clearaddress"></a>CIPAddressCtrl::ClearAddress  
  Borra el contenido del Control de dirección IP.  
   
 ```  
@@ -110,7 +120,7 @@ void ClearAddress();
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro implementa el comportamiento del mensaje de Win32 [IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatea--cipaddressctrlcreate"></a><a name="create"></a>CIPAddressCtrl::Create  
+##  <a name="create"></a>CIPAddressCtrl::Create  
  Crea un Control de dirección IP y lo adjunta a un `CIPAddressCtrl` objeto.  
   
 ```  
@@ -146,7 +156,7 @@ virtual BOOL Create(
   
  Si desea utilizar los estilos extendidos de windows con el control, llame a [CreateEx](#createex) en lugar de **crear**.  
   
-##  <a name="a-namecreateexa--cipaddressctrlcreateex"></a><a name="createex"></a>CIPAddressCtrl::CreateEx  
+##  <a name="createex"></a>CIPAddressCtrl::CreateEx  
  Llame a esta función para crear un control (una ventana secundaria) y asociarla con el `CIPAddressCtrl` objeto.  
   
 ```  
@@ -180,7 +190,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentarios  
  Utilice `CreateEx` en lugar de [crear](#create) para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_**.  
   
-##  <a name="a-namegetaddressa--cipaddressctrlgetaddress"></a><a name="getaddress"></a>CIPAddressCtrl::GetAddress  
+##  <a name="getaddress"></a>CIPAddressCtrl::GetAddress  
  Recupera los valores de dirección para los cuatro campos en el Control de dirección IP.  
   
 ```  
@@ -222,7 +232,7 @@ int GetAddress(DWORD& dwAddress);
 |2|8 a 15|  
 |3|de 0 a 7|  
   
-##  <a name="a-nameisblanka--cipaddressctrlisblank"></a><a name="isblank"></a>CIPAddressCtrl::IsBlank  
+##  <a name="isblank"></a>CIPAddressCtrl::IsBlank  
  Determina si el Control de dirección IP de todos los campos están vacíos.  
   
 ```  
@@ -235,7 +245,7 @@ BOOL IsBlank() const;
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro implementa el comportamiento del mensaje de Win32 [IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetaddressa--cipaddressctrlsetaddress"></a><a name="setaddress"></a>CIPAddressCtrl::SetAddress  
+##  <a name="setaddress"></a>CIPAddressCtrl::SetAddress  
  Establece los valores de dirección de los cuatro campos en el Control de dirección IP.  
   
 ```  
@@ -274,7 +284,7 @@ void SetAddress(DWORD dwAddress);
 |2|8 a 15|  
 |3|de 0 a 7|  
   
-##  <a name="a-namesetfieldfocusa--cipaddressctrlsetfieldfocus"></a><a name="setfieldfocus"></a>CIPAddressCtrl::SetFieldFocus  
+##  <a name="setfieldfocus"></a>CIPAddressCtrl::SetFieldFocus  
  Establece el foco del teclado en el campo especificado en el Control de dirección IP.  
   
 ```  
@@ -288,7 +298,7 @@ void SetFieldFocus(WORD nField);
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro implementa el comportamiento del mensaje de Win32 [IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetfieldrangea--cipaddressctrlsetfieldrange"></a><a name="setfieldrange"></a>CIPAddressCtrl::SetFieldRange  
+##  <a name="setfieldrange"></a>CIPAddressCtrl::SetFieldRange  
  Establece el intervalo en el campo especificado en el Control de dirección IP.  
   
 ```  

@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAxDialogImpl
-- ATL.CAxDialogImpl
 - CAxDialogImpl
+- ATLWIN/ATL::CAxDialogImpl
+- ATLWIN/ATL::CAxDialogImpl::AdviseSinkMap
+- ATLWIN/ATL::CAxDialogImpl::Create
+- ATLWIN/ATL::CAxDialogImpl::DestroyWindow
+- ATLWIN/ATL::CAxDialogImpl::DoModal
+- ATLWIN/ATL::CAxDialogImpl::EndDialog
+- ATLWIN/ATL::CAxDialogImpl::GetDialogProc
+- ATLWIN/ATL::CAxDialogImpl::GetIDD
+- ATLWIN/ATL::CAxDialogImpl::IsDialogMessage
+- ATLWIN/ATL::CAxDialogImpl::m_bModal
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,7 +122,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
   
-##  <a name="a-nameadvisesinkmapa--caxdialogimpladvisesinkmap"></a><a name="advisesinkmap"></a>CAxDialogImpl:: AdviseSinkMap  
+##  <a name="advisesinkmap"></a>CAxDialogImpl:: AdviseSinkMap  
  Llame a este método para notificar o no notificar todas las entradas de mapa de asignación de eventos de receptor del objeto.  
   
 ```
@@ -128,7 +136,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
   
-##  <a name="a-namecreatea--caxdialogimplcreate"></a><a name="create"></a>CAxDialogImpl::Create  
+##  <a name="create"></a>CAxDialogImpl::Create  
  Llamar a este método para crear un cuadro de diálogo no modal.  
   
 ```
@@ -154,7 +162,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
   
  La invalidación de segundo se proporciona sólo para cuadros de diálogo pueden utilizarse con [CComControl](../../atl/reference/ccomcontrol-class.md).  
   
-##  <a name="a-namedestroywindowa--caxdialogimpldestroywindow"></a><a name="destroywindow"></a>CAxDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>CAxDialogImpl::DestroyWindow  
  Llamar a este método para destruir un cuadro de diálogo no modal.  
   
 ```
@@ -167,7 +175,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>Comentarios  
  No llame a `DestroyWindow` para destruir un cuadro de diálogo modal. Llame a [EndDialog](#enddialog) en su lugar.  
   
-##  <a name="a-namedomodala--caxdialogimpldomodal"></a><a name="domodal"></a>CAxDialogImpl::DoModal  
+##  <a name="domodal"></a>CAxDialogImpl::DoModal  
  Llamar a este método para crear un cuadro de diálogo modal.  
   
 ```
@@ -191,7 +199,7 @@ INT_PTR DoModal(
   
  Para crear un cuadro de diálogo no modal, llame a [crear](#create).  
   
-##  <a name="a-nameenddialoga--caxdialogimplenddialog"></a><a name="enddialog"></a>CAxDialogImpl::EndDialog  
+##  <a name="enddialog"></a>CAxDialogImpl::EndDialog  
  Llamar a este método para destruir un cuadro de diálogo modal.  
   
 ```
@@ -211,7 +219,7 @@ BOOL EndDialog(int nRetCode);
 > [!NOTE]
 >  No llame a `EndDialog` para destruir un cuadro de diálogo no modal. Llame a [DestroyWindow](#destroywindow) en su lugar.  
   
-##  <a name="a-namegetdialogproca--caxdialogimplgetdialogproc"></a><a name="getdialogproc"></a>CAxDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>CAxDialogImpl::GetDialogProc  
  Llamar a este método para obtener un puntero a la `DialogProc` función de devolución de llamada.  
   
 ```
@@ -224,7 +232,7 @@ virtual DLGPROC GetDialogProc();
 ### <a name="remarks"></a>Comentarios  
  El `DialogProc` trata de una función de devolución de llamada definida por la aplicación.  
   
-##  <a name="a-namegetidda--caxdialogimplgetidd"></a><a name="getidd"></a>CAxDialogImpl::GetIDD  
+##  <a name="getidd"></a>CAxDialogImpl::GetIDD  
  Llamar a este método para obtener el identificador de recurso de plantilla de cuadro de diálogo.  
   
 ```
@@ -234,7 +242,7 @@ int GetIDD();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el identificador de recurso de plantilla de cuadro de diálogo.  
   
-##  <a name="a-nameisdialogmessagea--caxdialogimplisdialogmessage"></a><a name="isdialogmessage"></a>CAxDialogImpl::IsDialogMessage  
+##  <a name="isdialogmessage"></a>CAxDialogImpl::IsDialogMessage  
  Llamar a este método para determinar si un mensaje está destinado a este cuadro de diálogo y, si es así, procesar el mensaje.  
   
 ```
@@ -251,7 +259,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="remarks"></a>Comentarios  
  Este método está pensado para ser llamado desde dentro de un bucle de mensajes.  
   
-##  <a name="a-namembmodala--caxdialogimplmbmodal"></a><a name="m_bmodal"></a>CAxDialogImpl::m_bModal  
+##  <a name="m_bmodal"></a>CAxDialogImpl::m_bModal  
  Una variable que existe sólo en modo de depuración se crea y se está establecido en true si el cuadro de diálogo es modal.  
   
 ```

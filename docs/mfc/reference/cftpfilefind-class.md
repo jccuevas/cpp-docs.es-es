@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFtpFileFind
+- AFXINET/CFtpFileFind
+- AFXINET/CFtpFileFind::CFtpFileFind
+- AFXINET/CFtpFileFind::FindFile
+- AFXINET/CFtpFileFind::FindNextFile
+- AFXINET/CFtpFileFind::GetFileURL
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +92,7 @@ class CFtpFileFind : public CFileFind
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxinet.h  
   
-##  <a name="a-namecftpfilefinda--cftpfilefindcftpfilefind"></a><a name="cftpfilefind"></a>CFtpFileFind::CFtpFileFind  
+##  <a name="cftpfilefind"></a>CFtpFileFind::CFtpFileFind  
  Llama a esta función miembro para construir un `CFtpFileFind` objeto.  
   
 ```  
@@ -109,7 +114,7 @@ explicit CFtpFileFind(
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de la información general de la clase anteriormente en este tema.  
   
-##  <a name="a-namefindfilea--cftpfilefindfindfile"></a><a name="findfile"></a>CFtpFileFind:: FindFile  
+##  <a name="findfile"></a>CFtpFileFind:: FindFile  
  Llame a esta función miembro para buscar un archivo FTP.  
   
 ```  
@@ -144,7 +149,7 @@ virtual BOOL FindFile(
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo anterior de este tema.  
   
-##  <a name="a-namefindnextfilea--cftpfilefindfindnextfile"></a><a name="findnextfile"></a>CFtpFileFind:: FindNextFile  
+##  <a name="findnextfile"></a>CFtpFileFind:: FindNextFile  
  Llame a esta función miembro para continuar una búsqueda de archivo comenzada con una llamada a la [FindFile](#findfile) función miembro.  
   
 ```  
@@ -162,7 +167,7 @@ virtual BOOL FindNextFile();
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo anterior de este tema.  
   
-##  <a name="a-namegetfileurla--cftpfilefindgetfileurl"></a><a name="getfileurl"></a>CFtpFileFind::GetFileURL  
+##  <a name="getfileurl"></a>CFtpFileFind::GetFileURL  
  Llame a esta función miembro para obtener la dirección URL del archivo especificado.  
   
 ```  

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMetaFileDC
+- AFXEXT/CMetaFileDC
+- AFXEXT/CMetaFileDC::CMetaFileDC
+- AFXEXT/CMetaFileDC::Close
+- AFXEXT/CMetaFileDC::CloseEnhanced
+- AFXEXT/CMetaFileDC::Create
+- AFXEXT/CMetaFileDC::CreateEnhanced
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +100,7 @@ class CMetaFileDC : public CDC
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxext.h  
   
-##  <a name="a-nameclosea--cmetafiledcclose"></a><a name="close"></a>CMetaFileDC::Close  
+##  <a name="close"></a>CMetaFileDC::Close  
  Cierra el contexto de dispositivo de metarchivo y crea un identificador de metarchivo de Windows que puede usar para reproducir el metarchivo mediante la [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) función miembro.  
   
 ```  
@@ -109,7 +115,7 @@ HMETAFILE Close();
   
  Eliminar el metarchivo tras su uso mediante una llamada a Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) (función).  
   
-##  <a name="a-namecloseenhanceda--cmetafiledccloseenhanced"></a><a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
+##  <a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
  Cierra un contexto de dispositivo de metarchivo mejorado y devuelve un identificador que identifica un metarchivo de formato mejorado.  
   
 ```  
@@ -140,7 +146,7 @@ HENHMETAFILE CloseEnhanced();
   
  Cuando la aplicación ya no necesita el identificador del metarchivo mejorado, debe liberar el identificador mediante una llamada a Win32 **DeleteEnhMetaFile** (función).  
   
-##  <a name="a-namecmetafiledca--cmetafiledccmetafiledc"></a><a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
+##  <a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
  Construir un `CMetaFileDC` objeto en dos pasos.  
   
 ```  
@@ -150,7 +156,7 @@ CMetaFileDC();
 ### <a name="remarks"></a>Comentarios  
  En primer lugar, llame a `CMetaFileDC`, a continuación, llame a **crear**, que crea el contexto de dispositivo de metarchivo de Windows y lo adjunta a la `CMetaFileDC` objeto.  
   
-##  <a name="a-namecreatea--cmetafiledccreate"></a><a name="create"></a>CMetaFileDC::Create  
+##  <a name="create"></a>CMetaFileDC::Create  
  Construir un `CMetaFileDC` objeto en dos pasos.  
   
 ```  
@@ -167,7 +173,7 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 ### <a name="remarks"></a>Comentarios  
  En primer lugar, llame al constructor de `CMetaFileDC`, a continuación, llame a **crear**, que crea el contexto de dispositivo de metarchivo de Windows y lo adjunta a la `CMetaFileDC` objeto.  
   
-##  <a name="a-namecreateenhanceda--cmetafiledccreateenhanced"></a><a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
+##  <a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
  Crea un contexto de dispositivo para un metarchivo de formato mejorado.  
   
 ```  

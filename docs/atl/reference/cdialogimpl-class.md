@@ -10,8 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDialogImpl
-- ATL.CDialogImpl
-- ATL::CDialogImpl
+- ATLWIN/ATL::CDialogImpl
+- ATLWIN/ATL::Create
+- ATLWIN/ATL::DestroyWindow
+- ATLWIN/ATL::DoModal
+- ATLWIN/ATL::EndDialog
+- ATLWIN/ATL::GetDialogProc
+- ATLWIN/ATL::MapDialogRect
+- ATLWIN/ATL::OnFinalMessage
+- ATLWIN/ATL::DialogProc
+- ATLWIN/ATL::StartDialogProc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +123,7 @@ template <class T,
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
   
-##  <a name="a-namecreatea--cdialogimplcreate"></a><a name="create"></a>CDialogImpl::Create  
+##  <a name="create"></a>CDialogImpl::Create  
  Crea un cuadro de diálogo no modal.  
   
 ```  
@@ -145,7 +153,7 @@ HWND Create(
 ### <a name="remarks"></a>Comentarios  
  Este cuadro de diálogo se adjunta automáticamente a la `CDialogImpl` objeto. Para crear un cuadro de diálogo modal, llame a [DoModal](#domodal). El segundo reemplazo anterior sólo se utiliza con [CComControl](../../atl/reference/ccomcontrol-class.md).  
   
-##  <a name="a-namedestroywindowa--cdialogimpldestroywindow"></a><a name="destroywindow"></a>CDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>CDialogImpl::DestroyWindow  
  Destruye un cuadro de diálogo no modal.  
   
 ```  
@@ -161,7 +169,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>Comentarios  
  Devuelve **TRUE** si el cuadro de diálogo se ha destruido correctamente; de lo contrario **FALSE**.  
   
-##  <a name="a-namedialogproca--cdialogimpldialogproc"></a><a name="dialogproc"></a>CDialogImpl::DialogProc  
+##  <a name="dialogproc"></a>CDialogImpl::DialogProc  
  Esta función estática implementa el procedimiento de cuadro de diálogo.  
   
 ```  
@@ -196,7 +204,7 @@ static LRESULT CALLBACK DialogProc(
   
  Puede reemplazar `DialogProc` para proporcionar un mecanismo diferente para el tratamiento de mensajes.  
   
-##  <a name="a-namedomodala--cdialogimpldomodal"></a><a name="domodal"></a>CDialogImpl::DoModal  
+##  <a name="domodal"></a>CDialogImpl::DoModal  
  Crea un cuadro de diálogo modal.  
   
 ```   
@@ -220,7 +228,7 @@ INT_PTR DoModal(
   
  Para crear un cuadro de diálogo no modal, llame a [crear](#create).  
   
-##  <a name="a-nameenddialoga--cdialogimplenddialog"></a><a name="enddialog"></a>CDialogImpl::EndDialog  
+##  <a name="enddialog"></a>CDialogImpl::EndDialog  
  Destruye un cuadro de diálogo modal.  
   
 ```   
@@ -240,7 +248,7 @@ BOOL EndDialog(int nRetCode);
 > [!NOTE]
 >  No llame a `EndDialog` para destruir un cuadro de diálogo no modal. Llame a [API CWindow:: DestroyWindow](../../atl/reference/cwindow-class.md#destroywindow) en su lugar.  
   
-##  <a name="a-namegetdialogproca--cdialogimplgetdialogproc"></a><a name="getdialogproc"></a>CDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>CDialogImpl::GetDialogProc  
  Devuelve `DialogProc`, el procedimiento de cuadro de diálogo actual.  
   
 ```   
@@ -253,7 +261,7 @@ virtual WNDPROC GetDialogProc();
 ### <a name="remarks"></a>Comentarios  
  Invalide este método para reemplazar el procedimiento de cuadro de diálogo por el suyo propio.  
   
-##  <a name="a-namemapdialogrecta--cdialogimplmapdialogrect"></a><a name="mapdialogrect"></a>CDialogImpl::MapDialogRect  
+##  <a name="mapdialogrect"></a>CDialogImpl::MapDialogRect  
  Convierte las unidades de cuadro de diálogo del rectángulo especificado en pantalla (maps) unidades (píxeles).  
   
 ```   
@@ -270,7 +278,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="remarks"></a>Comentarios  
  La función reemplaza las coordenadas de la manera especificada `RECT` estructura con las coordenadas convertidas, lo que permite que la estructura que se usará para crear un cuadro de diálogo o la posición de un control dentro de un cuadro de diálogo.  
   
-##  <a name="a-nameonfinalmessagea--cdialogimplonfinalmessage"></a><a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage  
+##  <a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage  
  Llamado después de recibir el último mensaje (normalmente `WM_NCDESTROY`).  
   
 ```   
@@ -284,7 +292,7 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="remarks"></a>Comentarios  
  Tenga en cuenta que si desea eliminar automáticamente el objeto tras la destrucción de ventana, puede llamar a `delete this;` aquí.  
   
-##  <a name="a-namestartdialogproca--cdialogimplstartdialogproc"></a><a name="startdialogproc"></a>CDialogImpl::StartDialogProc  
+##  <a name="startdialogproc"></a>CDialogImpl::StartDialogProc  
  Se llama sólo una vez, cuando se recibe el primer mensaje, para procesar mensajes enviados al cuadro de diálogo.  
   
 ```   

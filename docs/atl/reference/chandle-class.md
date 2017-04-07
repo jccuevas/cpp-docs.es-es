@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CHandle
-- ATL::CHandle
 - CHandle
+- ATLBASE/ATL::CHandle
+- ATLBASE/ATL::CHandle::CHandle
+- ATLBASE/ATL::CHandle::Attach
+- ATLBASE/ATL::CHandle::Close
+- ATLBASE/ATL::CHandle::Detach
+- ATLBASE/ATL::CHandle::m_h
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +93,7 @@ class CHandle
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
   
-##  <a name="a-nameattacha--chandleattach"></a><a name="attach"></a>CHandle::Attach  
+##  <a name="attach"></a>CHandle::Attach  
  Llamar a este método para asociar la `CHandle` objeto en un identificador existente.  
   
 ```
@@ -103,7 +107,7 @@ void Attach(HANDLE h) throw();
 ### <a name="remarks"></a>Comentarios  
  Asigna la `CHandle` de objeto para el `h` controlar. En las compilaciones depura, se generará una ATLASSERT si `h` es NULL. Se realiza ninguna otra comprobación en cuanto a la validez del identificador.  
   
-##  <a name="a-namechandlea--chandlechandle"></a><a name="chandle"></a>CHandle::CHandle  
+##  <a name="chandle"></a>CHandle::CHandle  
  El constructor.  
   
 ```
@@ -119,7 +123,7 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="remarks"></a>Comentarios  
  Crea un nuevo `CHandle` objeto, utilizando opcionalmente un identificador existente o `CHandle` objeto.  
   
-##  <a name="a-namedtora--chandlechandle"></a><a name="dtor"></a>CHandle:: ~ CHandle  
+##  <a name="dtor"></a>CHandle:: ~ CHandle  
  Destructor.  
   
 ```
@@ -129,7 +133,7 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="remarks"></a>Comentarios  
  Libera el `CHandle` objeto mediante una llamada a [CHandle::Close](#close).  
   
-##  <a name="a-nameclosea--chandleclose"></a><a name="close"></a>CHandle::Close  
+##  <a name="close"></a>CHandle::Close  
  Llamar a este método para cerrar un `CHandle` objeto.  
   
 ```
@@ -139,7 +143,7 @@ void Close() throw();
 ### <a name="remarks"></a>Comentarios  
  Cierra un identificador de objeto abierto. Si el identificador es NULL, que será el caso si **cerrar** ya ha sido llamado, se generará una ATLASSERT en compilaciones de depuración.  
   
-##  <a name="a-namedetacha--chandledetach"></a><a name="detach"></a>CHandle::Detach  
+##  <a name="detach"></a>CHandle::Detach  
  Llamar a este método para separar un identificador de un `CHandle` objeto.  
   
 ```
@@ -152,14 +156,14 @@ HANDLE Detach() throw();
 ### <a name="remarks"></a>Comentarios  
  Libera la propiedad del identificador.  
   
-##  <a name="a-namemha--chandlemh"></a><a name="m_h"></a>CHandle::m_h  
+##  <a name="m_h"></a>CHandle::m_h  
  La variable miembro que almacena el identificador.  
   
 ```
 HANDLE m_h;
 ```  
   
-##  <a name="a-nameoperatoreqa--chandleoperator-"></a><a name="operator_eq"></a>CHandle::operator =  
+##  <a name="operator_eq"></a>CHandle::operator =  
  El operador de asignación.  
   
 ```
@@ -176,7 +180,7 @@ CHandle& operator=(CHandle& h) throw();
 ### <a name="remarks"></a>Comentarios  
  Si el `CHandle` objeto actualmente contiene un identificador, se cerrará. El `CHandle` del objeto que se pasa en tendrá su referencia de identificador establecido en NULL. Esto garantiza que dos `CHandle` objetos nunca contendrán el mismo identificador de activo.  
   
-##  <a name="a-nameoperatorhandlea--chandleoperator-handle"></a><a name="operator_handle"></a>IDENTIFICADOR de CHandle::operator  
+##  <a name="operator_handle"></a>IDENTIFICADOR de CHandle::operator  
  Devuelve el valor del identificador almacenado.  
   
 ```  

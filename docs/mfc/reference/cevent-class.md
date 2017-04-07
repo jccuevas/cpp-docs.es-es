@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CEvent
+- AFXMT/CEvent
+- AFXMT/CEvent::CEvent
+- AFXMT/CEvent::PulseEvent
+- AFXMT/CEvent::ResetEvent
+- AFXMT/CEvent::SetEvent
+- AFXMT/CEvent::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +105,7 @@ class CEvent : public CSyncObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxmt.h  
   
-##  <a name="a-nameceventa--ceventcevent"></a><a name="cevent"></a>CEvent::CEvent  
+##  <a name="cevent"></a>CEvent::CEvent  
  Construye una con o sin nombre `CEvent` objeto.  
   
 ```  
@@ -131,7 +137,7 @@ CEvent(
 > [!IMPORTANT]
 >  Después de crear el `CEvent` objeto, utilice [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) para asegurarse de que la exclusión mutua no existe. Si la exclusión mutua existía inesperadamente, puede indicar un proceso invasor es uso inapropiado y puede prevé utilizar la exclusión mutua de forma malintencionada. En este caso, el procedimiento recomendado de preocupados por la seguridad es cerrar el identificador y continuar como si se produjo un error en la creación del objeto.  
   
-##  <a name="a-namepulseeventa--ceventpulseevent"></a><a name="pulseevent"></a>CEvent::PulseEvent  
+##  <a name="pulseevent"></a>CEvent::PulseEvent  
  Establece el estado del evento en señalado (disponible), libera todos los subprocesos en espera y que no señalado (no disponible) se restablece automáticamente.  
   
 ```  
@@ -148,7 +154,7 @@ BOOL PulseEvent();
   
  `PulseEvent`utiliza Win32 subyacente `PulseEvent` función, que se puede quitar temporalmente desde el estado de espera por una llamada a procedimiento asincrónico de modo kernel. Por lo tanto, `PulseEvent` es confiable y no debe utilizarse en aplicaciones nuevas. Para obtener más información, consulte el [función PulseEvent](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
   
-##  <a name="a-namereseteventa--ceventresetevent"></a><a name="resetevent"></a>CEvent::ResetEvent  
+##  <a name="resetevent"></a>CEvent::ResetEvent  
  Establece el estado del evento en no señalado hasta que establezca explícitamente como señalado por el [SetEvent](#setevent) función miembro.  
   
 ```  
@@ -163,7 +169,7 @@ BOOL ResetEvent();
   
  Esta función miembro no se utiliza por eventos automáticos.  
   
-##  <a name="a-nameseteventa--ceventsetevent"></a><a name="setevent"></a>CEvent::SetEvent  
+##  <a name="setevent"></a>CEvent::SetEvent  
  Establece el estado del evento en señalado, liberar los subprocesos en espera.  
   
 ```  
@@ -176,7 +182,7 @@ BOOL SetEvent();
 ### <a name="remarks"></a>Comentarios  
  Si el evento es manual, el evento permanecerá señalado hasta [ResetEvent](#resetevent) se llama. Más de un subproceso puede liberarse en este caso. Si el evento es automático, el evento permanecerá señalado hasta que se libera un único subproceso. El sistema, a continuación, Establece el estado del evento en no señalado. Si no hay ningún subproceso en espera, el estado permanece señalado hasta que se libere un subproceso.  
   
-##  <a name="a-nameunlocka--ceventunlock"></a><a name="unlock"></a>CEvent::Unlock  
+##  <a name="unlock"></a>CEvent::Unlock  
  Libera el objeto de evento.  
   
 ```  

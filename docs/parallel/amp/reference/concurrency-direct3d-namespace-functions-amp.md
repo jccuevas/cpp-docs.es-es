@@ -6,31 +6,54 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::direct3d::abs
+- amp/Concurrency::direct3d::countbits
+- amp/Concurrency::direct3d::create_accelerator_view
+- amp/Concurrency::direct3d::d3d_access_lock
+- amp/Concurrency::direct3d::d3d_access_unlock
+- amp/Concurrency::direct3d::firstbithigh
+- amp/Concurrency::direct3d::get_buffer
+- amp/Concurrency::direct3d::imax
+- amp/Concurrency::direct3d::is_timeout_disabled
+- amp/Concurrency::direct3d::mad
+- amp/Concurrency::direct3d::noise
+- amp/Concurrency::direct3d::radians
+- amp/Concurrency::direct3d::reversebits
+- amp/Concurrency::direct3d::saturate
+- amp/Concurrency::direct3d::smoothstep
+- amp/Concurrency::direct3d::step
+- amp/Concurrency::direct3d::umin
+dev_langs:
+- C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 46cafc3c6d6f21eaf147ef0edfeca7f2c81d64e6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: ad00006c9ab4f25887cf28ed5b977551c35bda9e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funciones del espacio de nombres de Concurrency::Direct3D (AMP)
 ||||  
 |-|-|-|  
-|[ABS (función)](#abs)|[Clamp (función)](#clamp)|[countbits (función)](#countbits)|
-|[create_accelerator_view (función)](#create_accelerator_view)|||
-|[d3d_access_lock (función)](#d3d_access_lock)|[d3d_access_try_lock (función)](#d3d_access_try_lock)|[d3d_access_unlock (función)](#d3d_access_unlock)|  
-|[firstbithigh (función)](#firstbithigh)|[firstbitlow (función)](#firstbitlow)|[get_buffer (función)](#get_buffer)|  
-|[iMax (función)](#imax)|[imin (función)](#imin)|[is_timeout_disabled (función)](#is_timeout_disabled)|  
-|[MAD (función)](#mad)|[make_array (función)](#make_array)|[noise (función)](#noise)|  
-|[RADIANS (función)](#radians)|[RCP (función)](#rcp)|[reversebits (función)](#reversebits)|  
-|[saturate (función)](#saturate)|[Sign (función)](#sign)|[smoothstep (función)](#smoothstep)|  
-|[Step (función)](#step)|[UMAX (función)](#umax)|[umin (función)](#umin)|  
+|[abs](#abs)|[Clamp](#clamp)|[countbits](#countbits)|
+|[create_accelerator_view](#create_accelerator_view)|||
+|[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
+|[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
+|[iMax](#imax)|[imin)](#imin)|[is_timeout_disabled)](#is_timeout_disabled)|  
+|[MAD](#mad)|[make_array](#make_array)|[ruido](#noise)|  
+|[radianes](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
+|[saturar](#saturate)|[inicio de sesión](#sign)|[smoothstep](#smoothstep)|  
+|[paso](#step)|[UMAX](#umax)|[umin)](#umin)|  
+
+## <a name="requirements"></a>Requisitos
+**Encabezado:** amp.h **Namespace:** simultaneidad
   
-##  <a name="a-nameabsa--abs-function"></a><a name="abs"></a>ABS (función)  
+##  <a name="abs"></a>  abs  
  Devuelve el valor absoluto del argumento  
   
 ```  
@@ -44,8 +67,8 @@ inline int abs(int _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el valor absoluto del argumento.  
   
-##  <a name="a-nameclampa--clamp-function"></a><a name="clamp"></a>Clamp (función)  
- Calcula el valor del primer argumento especificado que se fija en un intervalo definido por el segundo y tercer argumento especificado.  
+##  <a name="clamp"></a>Clamp  
+ Calcula el valor del primer argumento especificado fijado en un intervalo definido por el segundo y tercer argumento especificado.  
   
 ```  
 inline float clamp(
@@ -73,7 +96,7 @@ inline int clamp(
 ### <a name="return-value"></a>Valor devuelto  
  El valor fijado de `_X`.  
   
-##  <a name="a-namecountbitsa--countbits-function"></a><a name="countbits"></a>countbits (función)  
+##  <a name="countbits"></a>countbits  
  Cuenta el número de bits de conjunto de _X  
   
 ```  
@@ -87,7 +110,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el número de bits del conjunto de _X  
 
-## <a name="a-namecreateacceleratorviewa-createacceleratorview-function"></a><a name="create_accelerator_view"></a>create_accelerator_view (función)
+## <a name="create_accelerator_view"></a>create_accelerator_view  
 Crea un [accelerator_view](accelerator-view-class.md) objeto de un puntero a una interfaz de dispositivo Direct3D.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -127,7 +150,7 @@ accelerator_view create_accelerator_view(
  El tiempo de ejecución de C++ AMP proporciona información detallada del error en modo de depuración utilizando la capa de D3D depurar si utiliza el `D3D11_CREATE_DEVICE_DEBUG` marca.  
   
   
-##  <a name="a-named3daccesslocka--d3daccesslock-function"></a><a name="d3d_access_lock"></a>d3d_access_lock (función)  
+##  <a name="d3d_access_lock"></a>d3d_access_lock  
  Adquirir un bloqueo en un accelerator_view con el fin de forma segura las operaciones de D3D en recursos compartidos con el accelerator_view. El accelerator_view y todos los recursos de C++ AMP asociados con este accelerator_view internamente toman este bloqueo al realizar operaciones y se bloqueará mientras otro subproceso mantiene el bloqueo de acceso de D3D. Este bloqueo no es recursiva: es llamar a esta función desde un subproceso que ya tiene el bloqueo de un comportamiento indefinido. Es un comportamiento no definido para realizar operaciones en el accelerator_view o cualquier contenedor de datos asociados con el accelerator_view desde el subproceso que mantiene el bloqueo del acceso de D3D. Consulte también scoped_d3d_access_lock, una clase de estilo RAII para un bloqueo de acceso basado en el ámbito D3D.  
   
 ```  
@@ -138,7 +161,7 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
  `_Av`  
  Accelerator_view bloquear.  
   
-##  <a name="a-named3daccesstrylocka--d3daccesstrylock-function"></a><a name="d3d_access_try_lock"></a>d3d_access_try_lock (función)  
+##  <a name="d3d_access_try_lock"></a>d3d_access_try_lock  
  Intenta adquirir el bloqueo de acceso de D3D en un accelerator_view sin bloqueo.  
   
 ```  
@@ -152,7 +175,7 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 ### <a name="return-value"></a>Valor devuelto  
  True si se adquirió el bloqueo, o falso si mantiene actualmente por otro subproceso.  
   
-##  <a name="a-named3daccessunlocka--d3daccessunlock-function"></a><a name="d3d_access_unlock"></a>d3d_access_unlock (función)  
+##  <a name="d3d_access_unlock"></a>d3d_access_unlock  
  Liberar el bloqueo de acceso de D3D en los accelerator_view determinado. Si el subproceso de llamada no se mantiene el bloqueo en el accelerator_view los resultados son indefinidos.  
   
 ```  
@@ -163,7 +186,7 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
  `_Av`  
  Accelerator_view para el que es liberar el bloqueo.  
   
-##  <a name="a-namefirstbithigha--firstbithigh-function"></a><a name="firstbithigh"></a>firstbithigh (función)  
+##  <a name="firstbithigh"></a>firstbithigh  
  Obtiene la ubicación del primer bit establecido en _X, comenzando con el bit de orden superior y moverse hacia el bit de orden más bajo.  
   
 ```  
@@ -177,7 +200,7 @@ inline int firstbithigh(int _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  La ubicación del primer conjunto de bit  
   
-##  <a name="a-namefirstbitlowa--firstbitlow-function"></a><a name="firstbitlow"></a>firstbitlow (función)  
+##  <a name="firstbitlow"></a>firstbitlow  
  Obtiene la ubicación del primer bit establecido en _X, comenzando con el bit de orden más bajo y trabajar hacia el bit de orden superior.  
   
 ```  
@@ -191,7 +214,7 @@ inline int firstbitlow(int _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la ubicación del primer bit establecido  
   
-##  <a name="a-namegetbuffera--getbuffer-function"></a><a name="get_buffer"></a>get_buffer (función)  
+##  <a name="get_buffer"></a>get_buffer  
  Obtener la interfaz del búfer de Direct3D subyacente de la matriz especificada.  
   
 ```  
@@ -216,7 +239,7 @@ IUnknown *get_buffer(
 ### <a name="return-value"></a>Valor devuelto  
  El puntero de interfaz IUnknown correspondiente al búfer de Direct3D subyacente de la matriz.  
   
-##  <a name="a-nameimaxa--imax-function"></a><a name="imax"></a>iMax (función)  
+##  <a name="imax"></a>iMax  
  Determinar el valor numérico máximo de los argumentos  
   
 ```  
@@ -235,7 +258,7 @@ inline int imax(
 ### <a name="return-value"></a>Valor devuelto  
  Devolver el valor numérico máximo de los argumentos  
   
-##  <a name="a-nameimina--imin-function"></a><a name="imin"></a>imin (función)  
+##  <a name="imin"></a>imin)  
  Determinar el valor numérico mínimo de los argumentos  
   
 ```  
@@ -254,7 +277,7 @@ inline int imin(
 ### <a name="return-value"></a>Valor devuelto  
  Devolver el valor numérico mínimo de los argumentos  
   
-##  <a name="a-nameistimeoutdisableda--istimeoutdisabled-function"></a><a name="is_timeout_disabled"></a>is_timeout_disabled (función)  
+##  <a name="is_timeout_disabled"></a>is_timeout_disabled)  
  Devuelve una marca booleana que indica si el tiempo de espera está deshabilitada para el accelerator_view especificado. Esto corresponde a la marca D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT para crear un dispositivo Direct3D.  
   
 ```  
@@ -268,7 +291,7 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ### <a name="return-value"></a>Valor devuelto  
  Una marca booleana que indica si el tiempo de espera está deshabilitada para el accelerator_view especificado.  
   
-##  <a name="a-namemada--mad-function"></a><a name="mad"></a>MAD (función)  
+##  <a name="mad"></a>MAD  
  Calcula el producto del primer y el segundo argumento especificado, a continuación, agrega el tercer argumento especificado.  
   
 ```  
@@ -309,7 +332,7 @@ inline unsigned int mad(
 ### <a name="return-value"></a>Valor devuelto  
  The result of `_X` * `_Y` + `_Z`.  
   
-##  <a name="a-namemakearraya--makearray-function"></a><a name="make_array"></a>make_array (función)  
+##  <a name="make_array"></a>make_array  
  Cree una matriz de un puntero de interfaz de búfer de Direct3D.  
   
 ```  
@@ -342,7 +365,7 @@ array<value_type, _Rank> make_array(
 ### <a name="return-value"></a>Valor devuelto  
  Una matriz en el que se crea utilizando el búfer proporcionado de Direct3D.  
   
-##  <a name="a-namenoisea--noise-function"></a><a name="noise"></a>noise (función)  
+##  <a name="noise"></a>ruido  
  Genera un valor aleatorio mediante el algoritmo de ruido de Perlin  
   
 ```  
@@ -356,7 +379,7 @@ inline float noise(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el valor de ruido de Perlin el dentro de un intervalo comprendido entre -1 y 1  
   
-##  <a name="a-nameradiansa--radians-function"></a><a name="radians"></a>RADIANS (función)  
+##  <a name="radians"></a>radianes  
  Convierte _X de grados a radianes  
   
 ```  
@@ -370,7 +393,7 @@ inline float radians(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve _X convertido de grados a radianes  
   
-##  <a name="a-namercpa--rcp-function"></a><a name="rcp"></a>RCP (función)  
+##  <a name="rcp"></a>rcp  
  Calcula el inverso del argumento especificado mediante una aproximación rápida.  
   
 ```  
@@ -387,7 +410,7 @@ inline double rcp(double _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  El recíproco de los argumentos especificados.  
   
-##  <a name="a-namereversebitsa--reversebits-function"></a><a name="reversebits"></a>reversebits (función)  
+##  <a name="reversebits"></a>reversebits  
  Invierte el orden de los bits de _X  
   
 ```  
@@ -401,7 +424,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el valor con el orden de bit invertido en _X  
   
-##  <a name="a-namesaturatea--saturate-function"></a><a name="saturate"></a>saturate (función)  
+##  <a name="saturate"></a>saturar  
  Fija _X dentro del intervalo de 0 a 1  
   
 ```  
@@ -415,7 +438,7 @@ inline float saturate(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve _X fijados dentro del intervalo de 0 a 1  
   
-##  <a name="a-namesigna--sign-function"></a><a name="sign"></a>Sign (función)  
+##  <a name="sign"></a>inicio de sesión  
  Determina el signo del argumento especificado.  
   
 ```  
@@ -429,7 +452,7 @@ inline int sign(int _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  El signo del argumento.  
   
-##  <a name="a-namesmoothstepa--smoothstep-function"></a><a name="smoothstep"></a>smoothstep (función)  
+##  <a name="smoothstep"></a>smoothstep  
  Devuelve una interpolación Hermite suave entre 0 y 1, si _X está en el intervalo [_Min, _Max].  
   
 ```  
@@ -452,7 +475,7 @@ inline float smoothstep(
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve 0 si _X es menor que _Min; 1 si _X es mayor que _Max; de lo contrario, un valor entre 0 y 1 si _X está en el intervalo [_Min, _Max]  
   
-##  <a name="a-namestepa--step-function"></a><a name="step"></a>Step (función)  
+##  <a name="step"></a>paso  
  Compara dos valores y devuelve 0 o 1 según cuyo valor es mayor  
   
 ```  
@@ -471,7 +494,7 @@ inline float step(
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve 1 si el _X es mayor o igual que _Y; de lo contrario, 0  
   
-##  <a name="a-nameumaxa--umax-function"></a><a name="umax"></a>UMAX (función)  
+##  <a name="umax"></a>UMAX  
  Determinar el valor numérico máximo de los argumentos  
   
 ```  
@@ -490,7 +513,7 @@ inline unsigned int umax(
 ### <a name="return-value"></a>Valor devuelto  
  Devolver el valor numérico máximo de los argumentos  
   
-##  <a name="a-nameumina--umin-function"></a><a name="umin"></a>umin (función)  
+##  <a name="umin"></a>umin)  
  Determinar el valor numérico mínimo de los argumentos  
   
 ```  
@@ -510,5 +533,5 @@ inline unsigned int umin(
  Devolver el valor numérico mínimo de los argumentos  
   
 ## <a name="see-also"></a>Vea también  
- [Namespace Concurrency::Direct3D](concurrency-direct3d-namespace.md)
+ [Concurrency::direct3d (espacio de nombres)](concurrency-direct3d-namespace.md)
 

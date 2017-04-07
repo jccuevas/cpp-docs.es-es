@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPrintDialog
+- AFXDLGS/CPrintDialog
+- AFXDLGS/CPrintDialog::CPrintDialog
+- AFXDLGS/CPrintDialog::CreatePrinterDC
+- AFXDLGS/CPrintDialog::DoModal
+- AFXDLGS/CPrintDialog::GetCopies
+- AFXDLGS/CPrintDialog::GetDefaults
+- AFXDLGS/CPrintDialog::GetDeviceName
+- AFXDLGS/CPrintDialog::GetDevMode
+- AFXDLGS/CPrintDialog::GetDriverName
+- AFXDLGS/CPrintDialog::GetFromPage
+- AFXDLGS/CPrintDialog::GetPortName
+- AFXDLGS/CPrintDialog::GetPrinterDC
+- AFXDLGS/CPrintDialog::GetToPage
+- AFXDLGS/CPrintDialog::PrintAll
+- AFXDLGS/CPrintDialog::PrintCollate
+- AFXDLGS/CPrintDialog::PrintRange
+- AFXDLGS/CPrintDialog::PrintSelection
+- AFXDLGS/CPrintDialog::m_pd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -132,7 +150,7 @@ class CPrintDialog : public CCommonDialog
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdlgs.h  
   
-##  <a name="a-namecprintdialoga--cprintdialogcprintdialog"></a><a name="cprintdialog"></a>CPrintDialog::CPrintDialog  
+##  <a name="cprintdialog"></a>CPrintDialog::CPrintDialog  
  Crea el objeto de cuadro de diálogo de una impresión de Windows o la instalación de impresión.  
   
 ```  
@@ -160,7 +178,7 @@ CPrintDialog(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView&#174;](../../mfc/codesnippet/cpp/cprintdialog-class_1.cpp)]  
   
-##  <a name="a-namecreateprinterdca--cprintdialogcreateprinterdc"></a><a name="createprinterdc"></a>CPrintDialog::CreatePrinterDC  
+##  <a name="createprinterdc"></a>CPrintDialog::CreatePrinterDC  
  Crea un contexto de dispositivo (DC) de impresora desde la [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) y [DEVNAMES](../../mfc/reference/devnames-structure.md) estructuras.  
   
 ```  
@@ -176,7 +194,7 @@ HDC CreatePrinterDC();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView&#106;](../../mfc/codesnippet/cpp/cprintdialog-class_2.cpp)]  
   
-##  <a name="a-namedomodala--cprintdialogdomodal"></a><a name="domodal"></a>CPrintDialog::DoModal  
+##  <a name="domodal"></a>CPrintDialog::DoModal  
  Muestra el cuadro de diálogo de impresión común de Windows y permite al usuario seleccionar varias opciones de impresión, como el número de copias, el intervalo de páginas, y si se deben intercalar copias.  
   
 ```  
@@ -198,7 +216,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CPrintDialog::CreatePrinterDC](#createprinterdc).  
   
-##  <a name="a-namegetcopiesa--cprintdialoggetcopies"></a><a name="getcopies"></a>CPrintDialog::GetCopies  
+##  <a name="getcopies"></a>CPrintDialog::GetCopies  
  Recupera el número de copias solicitadas.  
   
 ```  
@@ -214,7 +232,7 @@ int GetCopies() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CPrintDialog::PrintCollate](#printcollate).  
   
-##  <a name="a-namegetdefaultsa--cprintdialoggetdefaults"></a><a name="getdefaults"></a>CPrintDialog::GetDefaults  
+##  <a name="getdefaults"></a>CPrintDialog::GetDefaults  
  Recupera los valores predeterminados de dispositivo de la impresora predeterminada sin mostrar un cuadro de diálogo.  
   
 ```  
@@ -236,7 +254,7 @@ BOOL GetDefaults();
   
  [!code-cpp[NVC_MFCDocView&#107;](../../mfc/codesnippet/cpp/cprintdialog-class_3.cpp)]  
   
-##  <a name="a-namegetdevicenamea--cprintdialoggetdevicename"></a><a name="getdevicename"></a>CPrintDialog::GetDeviceName  
+##  <a name="getdevicename"></a>CPrintDialog::GetDeviceName  
  Recupera el nombre del dispositivo de impresora actualmente seleccionada.  
   
 ```  
@@ -254,7 +272,7 @@ CString GetDeviceName() const;
   
  [!code-cpp[NVC_MFCDocView&#108;](../../mfc/codesnippet/cpp/cprintdialog-class_4.cpp)]  
   
-##  <a name="a-namegetdevmodea--cprintdialoggetdevmode"></a><a name="getdevmode"></a>CPrintDialog::GetDevMode  
+##  <a name="getdevmode"></a>CPrintDialog::GetDevMode  
  Recupera el `DEVMODE` estructura.  
   
 ```  
@@ -270,7 +288,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CPrintDialog::PrintCollate](#printcollate).  
   
-##  <a name="a-namegetdrivernamea--cprintdialoggetdrivername"></a><a name="getdrivername"></a>CPrintDialog::GetDriverName  
+##  <a name="getdrivername"></a>CPrintDialog::GetDriverName  
  Recupera el nombre del controlador de impresora seleccionada actualmente.  
   
 ```  
@@ -286,7 +304,7 @@ CString GetDriverName() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CPrintDialog::GetDeviceName](#getdevicename).  
   
-##  <a name="a-namegetfrompagea--cprintdialoggetfrompage"></a><a name="getfrompage"></a>CPrintDialog::GetFromPage  
+##  <a name="getfrompage"></a>CPrintDialog::GetFromPage  
  Recupera la página de inicio del intervalo de impresión.  
   
 ```  
@@ -302,7 +320,7 @@ int GetFromPage() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="a-namegetportnamea--cprintdialoggetportname"></a><a name="getportname"></a>CPrintDialog::GetPortName  
+##  <a name="getportname"></a>CPrintDialog::GetPortName  
  Recupera el nombre del puerto de impresora actualmente seleccionada.  
   
 ```  
@@ -318,7 +336,7 @@ CString GetPortName() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CPrintDialog::GetDeviceName](#getdevicename).  
   
-##  <a name="a-namegetprinterdca--cprintdialoggetprinterdc"></a><a name="getprinterdc"></a>CPrintDialog::GetPrinterDC  
+##  <a name="getprinterdc"></a>CPrintDialog::GetPrinterDC  
  Recupera un identificador para el contexto de dispositivo de impresora.  
   
 ```  
@@ -334,7 +352,7 @@ HDC GetPrinterDC() const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView&#109;](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  
   
-##  <a name="a-namegettopagea--cprintdialoggettopage"></a><a name="gettopage"></a>CPrintDialog::GetToPage  
+##  <a name="gettopage"></a>CPrintDialog::GetToPage  
  Recupera la página final del intervalo de impresión.  
   
 ```  
@@ -350,7 +368,7 @@ int GetToPage() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="a-namempda--cprintdialogmpd"></a><a name="m_pd"></a>CPrintDialog::m_pd  
+##  <a name="m_pd"></a>CPrintDialog::m_pd  
  Una estructura cuyos miembros almacenan las características del objeto de cuadro de diálogo.  
   
 ```  
@@ -365,7 +383,7 @@ PRINTDLG& m_pd;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView&#111;](../../mfc/codesnippet/cpp/cprintdialog-class_6.cpp)]  
   
-##  <a name="a-nameprintalla--cprintdialogprintall"></a><a name="printall"></a>CPrintDialog::PrintAll  
+##  <a name="printall"></a>CPrintDialog::PrintAll  
  Determina si se va a imprimir todas las páginas del documento.  
   
 ```  
@@ -381,7 +399,7 @@ BOOL PrintAll() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="a-nameprintcollatea--cprintdialogprintcollate"></a><a name="printcollate"></a>CPrintDialog::PrintCollate  
+##  <a name="printcollate"></a>CPrintDialog::PrintCollate  
  Determina si se intercalan copias se solicitan.  
   
 ```  
@@ -397,7 +415,7 @@ BOOL PrintCollate() const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView&#110;](../../mfc/codesnippet/cpp/cprintdialog-class_7.cpp)]  
   
-##  <a name="a-nameprintrangea--cprintdialogprintrange"></a><a name="printrange"></a>CPrintDialog::PrintRange  
+##  <a name="printrange"></a>CPrintDialog::PrintRange  
  Determina si se imprime sólo un intervalo de páginas especificado.  
   
 ```  
@@ -413,7 +431,7 @@ BOOL PrintRange() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="a-nameprintselectiona--cprintdialogprintselection"></a><a name="printselection"></a>CPrintDialog::PrintSelection  
+##  <a name="printselection"></a>CPrintDialog::PrintSelection  
  Determina si se imprime sólo los elementos seleccionados actualmente.  
   
 ```  

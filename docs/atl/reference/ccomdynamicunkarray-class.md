@@ -9,9 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComDynamicUnkArray
 - CComDynamicUnkArray
-- ATL::CComDynamicUnkArray
+- ATLCOM/ATL::CComDynamicUnkArray
+- ATLCOM/ATL::CComDynamicUnkArray::CComDynamicUnkArray
+- ATLCOM/ATL::CComDynamicUnkArray::Add
+- ATLCOM/ATL::CComDynamicUnkArray::begin
+- ATLCOM/ATL::CComDynamicUnkArray::clear
+- ATLCOM/ATL::CComDynamicUnkArray::end
+- ATLCOM/ATL::CComDynamicUnkArray::GetAt
+- ATLCOM/ATL::CComDynamicUnkArray::GetCookie
+- ATLCOM/ATL::CComDynamicUnkArray::GetSize
+- ATLCOM/ATL::CComDynamicUnkArray::GetUnknown
+- ATLCOM/ATL::CComDynamicUnkArray::Remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +96,7 @@ class CComDynamicUnkArray
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="a-nameadda--ccomdynamicunkarrayadd"></a><a name="add"></a>CComDynamicUnkArray::Add  
+##  <a name="add"></a>CComDynamicUnkArray::Add  
  Llamar a este método para agregar una **IUnknown** puntero a la matriz.  
   
 ```
@@ -101,7 +110,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la cookie asociada con el puntero recién agregado.  
   
-##  <a name="a-namebegina--ccomdynamicunkarraybegin"></a><a name="begin"></a>CComDynamicUnkArray::begin  
+##  <a name="begin"></a>CComDynamicUnkArray::begin  
  Devuelve un puntero al principio de la colección de **IUnknown** punteros de interfaz.  
   
 ```
@@ -117,14 +126,14 @@ IUnknown**
   
  Antes de utilizar el **IUnknown** interfaz, debe comprobar que no es **NULL**.  
   
-##  <a name="a-namecleara--ccomdynamicunkarrayclear"></a><a name="clear"></a>CComDynamicUnkArray::clear  
+##  <a name="clear"></a>CComDynamicUnkArray::clear  
  Vacía la matriz.  
   
 ```
 void clear();
 ```  
   
-##  <a name="a-nameccomdynamicunkarraya--ccomdynamicunkarrayccomdynamicunkarray"></a><a name="ccomdynamicunkarray"></a>CComDynamicUnkArray::CComDynamicUnkArray  
+##  <a name="ccomdynamicunkarray"></a>CComDynamicUnkArray::CComDynamicUnkArray  
  El constructor.  
   
 ```
@@ -134,7 +143,7 @@ CComDynamicUnkArray();
 ### <a name="remarks"></a>Comentarios  
  Establece el tamaño de la colección en cero e inicializa los valores para **NULL**. El destructor libera la colección, si es necesario.  
   
-##  <a name="a-namedtora--ccomdynamicunkarrayccomdynamicunkarray"></a><a name="dtor"></a>CComDynamicUnkArray:: ~ CComDynamicUnkArray  
+##  <a name="dtor"></a>CComDynamicUnkArray:: ~ CComDynamicUnkArray  
  Destructor.  
   
 ```
@@ -144,7 +153,7 @@ CComDynamicUnkArray();
 ### <a name="remarks"></a>Comentarios  
  Libera los recursos asignados por el constructor de clase.  
   
-##  <a name="a-nameenda--ccomdynamicunkarrayend"></a><a name="end"></a>CComDynamicUnkArray::end  
+##  <a name="end"></a>CComDynamicUnkArray::end  
  Devuelve un puntero a uno más allá de la última **IUnknown** puntero en la colección.  
   
 ```
@@ -155,7 +164,7 @@ IUnknown**
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a un **IUnknown** puntero de interfaz.  
   
-##  <a name="a-namegetata--ccomdynamicunkarraygetat"></a><a name="getat"></a>CComDynamicUnkArray::GetAt  
+##  <a name="getat"></a>CComDynamicUnkArray::GetAt  
  Recupera el elemento en el índice especificado.  
   
 ```
@@ -169,7 +178,7 @@ IUnknown* GetAt(int nIndex);
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a un [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interfaz.  
   
-##  <a name="a-namegetcookiea--ccomdynamicunkarraygetcookie"></a><a name="getcookie"></a>CComDynamicUnkArray::GetCookie  
+##  <a name="getcookie"></a>CComDynamicUnkArray::GetCookie  
  Llamar a este método para obtener la cookie asociada con un determinado **IUnknown** puntero.  
   
 ```
@@ -186,7 +195,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>Comentarios  
  Si hay más de una instancia de la misma **IUnknown** puntero, esta función devuelve la cookie de la primera de ellas.  
   
-##  <a name="a-namegetsizea--ccomdynamicunkarraygetsize"></a><a name="getsize"></a>CComDynamicUnkArray::GetSize  
+##  <a name="getsize"></a>CComDynamicUnkArray::GetSize  
  Devuelve la longitud de una matriz.  
   
 ```
@@ -196,7 +205,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Valor devuelto  
  Longitud de la matriz.  
   
-##  <a name="a-namegetunknowna--ccomdynamicunkarraygetunknown"></a><a name="getunknown"></a>CComDynamicUnkArray::GetUnknown  
+##  <a name="getunknown"></a>CComDynamicUnkArray::GetUnknown  
  Llamar a este método para obtener la **IUnknown** puntero asociado a una cookie determinada.  
   
 ```
@@ -210,7 +219,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el **IUnknown** puntero, o NULL si no se encuentra ninguna cookie de búsqueda de coincidencias.  
   
-##  <a name="a-nameremovea--ccomdynamicunkarrayremove"></a><a name="remove"></a>CComDynamicUnkArray::Remove  
+##  <a name="remove"></a>CComDynamicUnkArray::Remove  
  Llamar a este método para quitar un **IUnknown** puntero de la matriz.  
   
 ```

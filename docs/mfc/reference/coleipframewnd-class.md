@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleIPFrameWnd
+- AFXOLE/COleIPFrameWnd
+- AFXOLE/COleIPFrameWnd::COleIPFrameWnd
+- AFXOLE/COleIPFrameWnd::OnCreateControlBars
+- AFXOLE/COleIPFrameWnd::RepositionFrame
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +89,7 @@ class COleIPFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxole.h  
   
-##  <a name="a-namecoleipframewnda--coleipframewndcoleipframewnd"></a><a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
+##  <a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
  Construye un `COleIPFrameWnd` objeto e inicializa su información de estado de in situ, que se almacena en una estructura de tipo **OLEINPLACEFRAMEINFO**.  
   
 ```  
@@ -95,7 +99,7 @@ COleIPFrameWnd();
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameoncreatecontrolbarsa--coleipframewndoncreatecontrolbars"></a><a name="oncreatecontrolbars"></a>COleIPFrameWnd::OnCreateControlBars  
+##  <a name="oncreatecontrolbars"></a>COleIPFrameWnd::OnCreateControlBars  
  El marco llama el `OnCreateControlBars` funciona cuando se activa un elemento para su edición en contexto.  
   
 ```  
@@ -122,7 +126,7 @@ virtual BOOL OnCreateControlBars(
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada no hace nada. Reemplazar esta función para realizar cualquier procesamiento especial necesario cuando se crean barras de control.  
   
-##  <a name="a-namerepositionframea--coleipframewndrepositionframe"></a><a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame  
+##  <a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame  
  El marco llama el `RepositionFrame` función miembro para diseñar barras de control y cambiar la posición de la ventana de edición en contexto para que todo sea visible.  
   
 ```  

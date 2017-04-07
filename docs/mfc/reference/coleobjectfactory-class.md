@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleObjectFactory
+- AFXDISP/COleObjectFactory
+- AFXDISP/COleObjectFactory::COleObjectFactory
+- AFXDISP/COleObjectFactory::GetClassID
+- AFXDISP/COleObjectFactory::IsLicenseValid
+- AFXDISP/COleObjectFactory::IsRegistered
+- AFXDISP/COleObjectFactory::Register
+- AFXDISP/COleObjectFactory::RegisterAll
+- AFXDISP/COleObjectFactory::Revoke
+- AFXDISP/COleObjectFactory::RevokeAll
+- AFXDISP/COleObjectFactory::UnregisterAll
+- AFXDISP/COleObjectFactory::UpdateRegistry
+- AFXDISP/COleObjectFactory::UpdateRegistryAll
+- AFXDISP/COleObjectFactory::GetLicenseKey
+- AFXDISP/COleObjectFactory::OnCreateObject
+- AFXDISP/COleObjectFactory::VerifyLicenseKey
+- AFXDISP/COleObjectFactory::VerifyUserLicense
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +126,7 @@ class COleObjectFactory : public CCmdTarget
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h  
   
-##  <a name="a-namecoleobjectfactorya--coleobjectfactorycoleobjectfactory"></a><a name="coleobjectfactory"></a>COleObjectFactory::COleObjectFactory  
+##  <a name="coleobjectfactory"></a>COleObjectFactory::COleObjectFactory  
  Construye un `COleObjectFactory` objeto, inicializa como un generador de objetos no registrados y lo agrega a la lista de generadores.  
   
 ```  
@@ -160,7 +176,7 @@ COleObjectFactory(
   
  Para obtener más información, consulte [clave CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetclassida--coleobjectfactorygetclassid"></a><a name="getclassid"></a>COleObjectFactory::GetClassID  
+##  <a name="getclassid"></a>COleObjectFactory::GetClassID  
  Devuelve una referencia al identificador de clase OLE representa este generador.  
   
 ```  
@@ -173,7 +189,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [clave CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetlicensekeya--coleobjectfactorygetlicensekey"></a><a name="getlicensekey"></a>COleObjectFactory::GetLicenseKey  
+##  <a name="getlicensekey"></a>COleObjectFactory::GetLicenseKey  
  Solicita una clave de licencia única del archivo DLL del control y lo almacena en el `BSTR` señala `pbstrKey`.  
   
 ```  
@@ -195,7 +211,7 @@ virtual BOOL GetLicenseKey(
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de esta función devuelve 0 y se almacena nada en la `BSTR`. Si utiliza MFC ActiveX ControlWizard para crear el proyecto, ControlWizard proporciona una invalidación que recupera la clave de licencia del control.  
   
-##  <a name="a-nameislicensevalida--coleobjectfactoryislicensevalid"></a><a name="islicensevalid"></a>COleObjectFactory::IsLicenseValid  
+##  <a name="islicensevalid"></a>COleObjectFactory::IsLicenseValid  
  Determina si la licencia del control es válida.  
   
 ```  
@@ -205,7 +221,7 @@ BOOL IsLicenseValid();
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si realizado correctamente; en caso contrario, false.  
   
-##  <a name="a-nameisregistereda--coleobjectfactoryisregistered"></a><a name="isregistered"></a>COleObjectFactory::IsRegistered  
+##  <a name="isregistered"></a>COleObjectFactory::IsRegistered  
  Devuelve un valor distinto de cero si el generador está registrado con la DLL del sistema OLE.  
   
 ```  
@@ -215,7 +231,7 @@ virtual BOOL IsRegistered() const;
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el generador está registrado; en caso contrario, 0.  
   
-##  <a name="a-nameoncreateobjecta--coleobjectfactoryoncreateobject"></a><a name="oncreateobject"></a>COleObjectFactory::OnCreateObject  
+##  <a name="oncreateobject"></a>COleObjectFactory::OnCreateObject  
  Llamado por el marco para crear un nuevo objeto.  
   
 ```  
@@ -228,7 +244,7 @@ virtual CCmdTarget* OnCreateObject();
 ### <a name="remarks"></a>Comentarios  
  Reemplazar esta función para crear el objeto desde algo distinto de la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) pasada al constructor.  
   
-##  <a name="a-nameregistera--coleobjectfactoryregister"></a><a name="register"></a>COleObjectFactory::Register  
+##  <a name="register"></a>COleObjectFactory::Register  
  Registra este generador de objetos con la DLL del sistema OLE.  
   
 ```  
@@ -241,7 +257,7 @@ virtual BOOL Register();
 ### <a name="remarks"></a>Comentarios  
  Esta función se suele llamar [InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) cuando se inicia la aplicación.  
   
-##  <a name="a-nameregisteralla--coleobjectfactoryregisterall"></a><a name="registerall"></a>COleObjectFactory:: RegisterAll  
+##  <a name="registerall"></a>COleObjectFactory:: RegisterAll  
  Registra todos los generadores de objetos de la aplicación con las DLL del sistema OLE.  
   
 ```  
@@ -254,7 +270,7 @@ static BOOL PASCAL RegisterAll();
 ### <a name="remarks"></a>Comentarios  
  Esta función se suele llamar [InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) cuando se inicia la aplicación.  
   
-##  <a name="a-namerevokea--coleobjectfactoryrevoke"></a><a name="revoke"></a>COleObjectFactory::Revoke  
+##  <a name="revoke"></a>COleObjectFactory::Revoke  
  Revoca el registro del generador de este objeto con la DLL del sistema OLE.  
   
 ```  
@@ -264,7 +280,7 @@ void Revoke();
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a esta función automáticamente antes de que finalice la aplicación. Si es necesario, puede llamarlo desde un reemplazo de [CWinApp:: ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).  
   
-##  <a name="a-namerevokealla--coleobjectfactoryrevokeall"></a><a name="revokeall"></a>COleObjectFactory::RevokeAll  
+##  <a name="revokeall"></a>COleObjectFactory::RevokeAll  
  Revoca todos los registros de las fábricas de objeto de la aplicación con las DLL del sistema OLE.  
   
 ```  
@@ -274,7 +290,7 @@ static void PASCAL RevokeAll();
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a esta función automáticamente antes de que finalice la aplicación. Si es necesario, puede llamarlo desde un reemplazo de [CWinApp:: ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).  
   
-##  <a name="a-nameunregisteralla--coleobjectfactoryunregisterall"></a><a name="unregisterall"></a>COleObjectFactory::UnregisterAll  
+##  <a name="unregisterall"></a>COleObjectFactory::UnregisterAll  
  Anula el registro de todos los generadores de objetos de la aplicación.  
   
 ```  
@@ -284,7 +300,7 @@ static BOOL PASCAL UnregisterAll();
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si es correcto; en caso contrario, FALSE.  
   
-##  <a name="a-nameupdateregistrya--coleobjectfactoryupdateregistry"></a><a name="updateregistry"></a>COleObjectFactory::UpdateRegistry  
+##  <a name="updateregistry"></a>COleObjectFactory::UpdateRegistry  
  Registra todos los generadores de objetos de la aplicación con el registro del sistema OLE.  
   
 ```  
@@ -308,7 +324,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
   
      Si utiliza MFC ActiveX ControlWizard para crear el proyecto, ControlWizard proporciona una invalidación para esta función virtual pura.  
   
-##  <a name="a-nameupdateregistryalla--coleobjectfactoryupdateregistryall"></a><a name="updateregistryall"></a>:: UpdateRegistryAll  
+##  <a name="updateregistryall"></a>:: UpdateRegistryAll  
  Registra todos los generadores de objetos de la aplicación con el registro del sistema OLE.  
   
 ```  
@@ -325,7 +341,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ### <a name="remarks"></a>Comentarios  
  Esta función se suele llamar [InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) cuando se inicia la aplicación.  
   
-##  <a name="a-nameverifylicensekeya--coleobjectfactoryverifylicensekey"></a><a name="verifylicensekey"></a>COleObjectFactory::VerifyLicenseKey  
+##  <a name="verifylicensekey"></a>COleObjectFactory::VerifyLicenseKey  
  Comprueba que el contenedor tiene licencia para utilizar el control OLE.  
   
 ```  
@@ -346,7 +362,7 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
   
  La función [VerifyUserLicense](#verifyuserlicense) comprueba la licencia en tiempo de diseño.  
   
-##  <a name="a-nameverifyuserlicensea--coleobjectfactoryverifyuserlicense"></a><a name="verifyuserlicense"></a>COleObjectFactory::VerifyUserLicense  
+##  <a name="verifyuserlicense"></a>COleObjectFactory::VerifyUserLicense  
  Comprueba la licencia en tiempo de diseño para el control OLE.  
   
 ```  

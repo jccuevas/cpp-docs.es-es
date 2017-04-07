@@ -10,7 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CLinearTransition
-- afxanimationcontroller/CLinearTransition
+- AFXANIMATIONCONTROLLER/CLinearTransition
+- AFXANIMATIONCONTROLLER/CLinearTransition::CLinearTransition
+- AFXANIMATIONCONTROLLER/CLinearTransition::Create
+- AFXANIMATIONCONTROLLER/CLinearTransition::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CLinearTransition::m_duration
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +87,7 @@ class CLinearTransition : public CBaseTransition;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxanimationcontroller.h  
   
-##  <a name="a-nameclineartransitiona--clineartransitionclineartransition"></a><a name="clineartransition"></a>CLinearTransition::CLinearTransition  
+##  <a name="clineartransition"></a>CLinearTransition::CLinearTransition  
  Construye un objeto de transición lineal y la inicializa con el valor final y la duración.  
   
 ```  
@@ -99,7 +103,7 @@ CLinearTransition(
  `dblFinalValue`  
  El valor de la animación al final de la transición.  
   
-##  <a name="a-namecreatea--clineartransitioncreate"></a><a name="create"></a>CLinearTransition::Create  
+##  <a name="create"></a>CLinearTransition::Create  
  Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado.  
   
 ```  
@@ -115,14 +119,14 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la transición se crea correctamente; de lo contrario, FALSE.  
   
-##  <a name="a-namemdblfinalvaluea--clineartransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CLinearTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CLinearTransition::m_dblFinalValue  
  El valor de la animación al final de la transición.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemdurationa--clineartransitionmduration"></a><a name="m_duration"></a>CLinearTransition::m_duration  
+##  <a name="m_duration"></a>CLinearTransition::m_duration  
  La duración de la transición.  
   
 ```  

@@ -36,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ae7869beb76e5e1f0514c3459beab65530e31cba
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c8bbb5b6f634b401889c787977fde866ecd41eaa
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="memory-allocation"></a>Asignación de memoria
@@ -46,36 +46,36 @@ Use estas rutinas para asignar, liberar y reasignar memoria.
   
 ### <a name="memory-allocation-routines"></a>Rutinas de asignación de memoria  
   
-|Rutina|Uso|Equivalente de .NET Framework|  
-|-------------|---------|-------------------------------|  
-|[_alloca](../c-runtime-library/reference/alloca.md), [_malloca](../c-runtime-library/reference/malloca.md)|Asignar memoria de una pila|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[calloc](../c-runtime-library/reference/calloc.md)|Asignar almacenamiento para la matriz, inicializando a 0 cada byte en el bloque asignado|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|Depurar la versión de `calloc`; disponible únicamente en las versiones de depuración de las bibliotecas en tiempo de ejecución|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[operator delete](../c-runtime-library/operator-delete-crt.md)|Liberar un bloque asignado|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[operator delete&#91;&#93;](../c-runtime-library/delete-operator-crt.md)|Liberar un bloque asignado|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_expand](../c-runtime-library/reference/expand.md)|Expandir o reducir un bloque de memoria sin moverlo|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|Depurar la versión de `_expand`; disponible únicamente en las versiones de depuración de las bibliotecas en tiempo de ejecución|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[free](../c-runtime-library/reference/free.md)|Liberar un bloque asignado|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_free_dbg](../c-runtime-library/reference/free-dbg.md)|Depurar la versión de `free`; disponible únicamente en las versiones de depuración de las bibliotecas en tiempo de ejecución|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_freea](../c-runtime-library/reference/freea.md)|Liberar un bloque asignado de la pila|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_get_heap_handle](../c-runtime-library/reference/get-heap-handle.md)|Obtener identificador de Win32 en el montón de CRT.|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_heapadd](../c-runtime-library/heapadd.md)|Agregar memoria al montón|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_heapchk](../c-runtime-library/reference/heapchk.md)|Comprobar la coherencia del montón|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_heapmin](../c-runtime-library/reference/heapmin.md)|Liberar la memoria sin usar del montón|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_heapset](../c-runtime-library/heapset.md)|Rellenar las entradas de montón libres con el valor especificado|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_heapwalk](../c-runtime-library/reference/heapwalk.md)|Devolver información sobre cada entrada en el montón|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[malloc](../c-runtime-library/reference/malloc.md)|Asignar un bloque de memoria del montón|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md)|Depurar la versión de `malloc`; disponible únicamente en las versiones de depuración de las bibliotecas en tiempo de ejecución|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_msize](../c-runtime-library/reference/msize.md)|Devolver el tamaño del bloque asignado|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_msize_dbg](../c-runtime-library/reference/msize-dbg.md)|Depurar la versión de `_msize`; disponible únicamente en las versiones de depuración de las bibliotecas en tiempo de ejecución|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[new](../c-runtime-library/operator-new-crt.md)|Asignar un bloque de memoria del montón|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[new&#91;&#93;](../c-runtime-library/new-operator-crt.md)|Asignar un bloque de memoria del montón|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_query_new_handler](../c-runtime-library/reference/query-new-handler.md)|Devolver la dirección de la nueva rutina de controlador actual, según lo establecido por `_set_new_handler`|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_query_new_mode](../c-runtime-library/reference/query-new-mode.md)|Devolver un entero que indique el nuevo modo de controlador establecido por `_set_new_mode` para `malloc`|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[realloc](../c-runtime-library/reference/realloc.md)|Reasignar un nuevo tamaño al bloque|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_realloc_dbg](../c-runtime-library/reference/realloc-dbg.md)|Depurar la versión de `realloc`; disponible únicamente en las versiones de depuración de las bibliotecas en tiempo de ejecución|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|Habilitar el mecanismo de tratamiento de errores cuando el operador `new` no pueda asignar memoria y habilitar la compilación de bibliotecas de C++ Standard|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
-|[_set_new_mode](../c-runtime-library/reference/set-new-mode.md)|Definir el nuevo modo de controlador para `malloc`|No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|Rutina|Uso|  
+|-------------|---------|  
+|[_alloca](../c-runtime-library/reference/alloca.md), [_malloca](../c-runtime-library/reference/malloca.md)|Asignar memoria de una pila|  
+|[calloc](../c-runtime-library/reference/calloc.md)|Asignar almacenamiento para la matriz, inicializando a 0 cada byte en el bloque asignado|  
+|[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|Depurar la versión de `calloc`; disponible únicamente en las versiones de depuración de las bibliotecas en tiempo de ejecución|  
+|[operator delete](../c-runtime-library/operator-delete-crt.md)|Liberar un bloque asignado|  
+|[operator delete&#91;&#93;](../c-runtime-library/delete-operator-crt.md)|Liberar un bloque asignado|  
+|[_expand](../c-runtime-library/reference/expand.md)|Expandir o reducir un bloque de memoria sin moverlo|  
+|[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|Depurar la versión de `_expand`; disponible únicamente en las versiones de depuración de las bibliotecas en tiempo de ejecución|  
+|[free](../c-runtime-library/reference/free.md)|Liberar un bloque asignado|  
+|[_free_dbg](../c-runtime-library/reference/free-dbg.md)|Depurar la versión de `free`; disponible únicamente en las versiones de depuración de las bibliotecas en tiempo de ejecución|  
+|[_freea](../c-runtime-library/reference/freea.md)|Liberar un bloque asignado de la pila|  
+|[_get_heap_handle](../c-runtime-library/reference/get-heap-handle.md)|Obtener identificador de Win32 en el montón de CRT.|  
+|[_heapadd](../c-runtime-library/heapadd.md)|Agregar memoria al montón|  
+|[_heapchk](../c-runtime-library/reference/heapchk.md)|Comprobar la coherencia del montón|  
+|[_heapmin](../c-runtime-library/reference/heapmin.md)|Liberar la memoria sin usar del montón|  
+|[_heapset](../c-runtime-library/heapset.md)|Rellenar las entradas de montón libres con el valor especificado|  
+|[_heapwalk](../c-runtime-library/reference/heapwalk.md)|Devolver información sobre cada entrada en el montón|  
+|[malloc](../c-runtime-library/reference/malloc.md)|Asignar un bloque de memoria del montón|  
+|[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md)|Depurar la versión de `malloc`; disponible únicamente en las versiones de depuración de las bibliotecas en tiempo de ejecución|  
+|[_msize](../c-runtime-library/reference/msize.md)|Devolver el tamaño del bloque asignado|  
+|[_msize_dbg](../c-runtime-library/reference/msize-dbg.md)|Depurar la versión de `_msize`; disponible únicamente en las versiones de depuración de las bibliotecas en tiempo de ejecución|  
+|[new](../c-runtime-library/operator-new-crt.md)|Asignar un bloque de memoria del montón|  
+|[new&#91;&#93;](../c-runtime-library/new-operator-crt.md)|Asignar un bloque de memoria del montón|  
+|[_query_new_handler](../c-runtime-library/reference/query-new-handler.md)|Devolver la dirección de la nueva rutina de controlador actual, según lo establecido por `_set_new_handler`|  
+|[_query_new_mode](../c-runtime-library/reference/query-new-mode.md)|Devolver un entero que indique el nuevo modo de controlador establecido por `_set_new_mode` para `malloc`|  
+|[realloc](../c-runtime-library/reference/realloc.md)|Reasignar un nuevo tamaño al bloque|  
+|[_realloc_dbg](../c-runtime-library/reference/realloc-dbg.md)|Depurar la versión de `realloc`; disponible únicamente en las versiones de depuración de las bibliotecas en tiempo de ejecución|  
+|[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|Habilitar el mecanismo de tratamiento de errores cuando el operador `new` no pueda asignar memoria y habilitar la compilación de bibliotecas de C++ Standard|  
+|[_set_new_mode](../c-runtime-library/reference/set-new-mode.md)|Definir el nuevo modo de controlador para `malloc`|  
   
 ## <a name="see-also"></a>Vea también  
  [Rutinas en tiempo de ejecución por categoría](../c-runtime-library/run-time-routines-by-category.md)

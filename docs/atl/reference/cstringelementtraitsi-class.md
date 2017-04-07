@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CStringElementTraitsI
 - CStringElementTraitsI
-- ATL.CStringElementTraitsI
+- ATLCOLL/ATL::CStringElementTraitsI
+- ATLCOLL/ATL::CStringElementTraitsI::INARGTYPE
+- ATLCOLL/ATL::CStringElementTraitsI::OUTARGTYPE
+- ATLCOLL/ATL::CStringElementTraitsI::CompareElements
+- ATLCOLL/ATL::CStringElementTraitsI::CompareElementsOrdered
+- ATLCOLL/ATL::CStringElementTraitsI::Hash
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +89,7 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcoll.h  
   
-##  <a name="a-namecompareelementsa--cstringelementtraitsicompareelements"></a><a name="compareelements"></a>CStringElementTraitsI::CompareElements  
+##  <a name="compareelements"></a>CStringElementTraitsI::CompareElements  
  Llame a esta función estática para comparar dos elementos de cadena para la igualdad, omitiendo las diferencias en el caso.  
   
 ```
@@ -105,7 +109,7 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>Comentarios  
  Las comparaciones distinguen entre mayúsculas y minúsculas.  
   
-##  <a name="a-namecompareelementsordereda--cstringelementtraitsicompareelementsordered"></a><a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered  
  Llame a esta función estática para comparar dos elementos de cadena, omitiendo las diferencias en el caso.  
   
 ```
@@ -126,7 +130,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>Comentarios  
  Las comparaciones distinguen entre mayúsculas y minúsculas.  
   
-##  <a name="a-namehasha--cstringelementtraitsihash"></a><a name="hash"></a>CStringElementTraitsI::Hash  
+##  <a name="hash"></a>CStringElementTraitsI::Hash  
  Llame a esta función estática para calcular un valor hash para el elemento de la cadena especificada.  
   
 ```
@@ -140,14 +144,14 @@ static ULONG Hash(INARGTYPE str) throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un valor de hash, que se calcula con el contenido de la cadena.  
   
-##  <a name="a-nameinargtypea--cstringelementtraitsiinargtype"></a><a name="inargtype"></a>CStringElementTraitsI::INARGTYPE  
+##  <a name="inargtype"></a>CStringElementTraitsI::INARGTYPE  
  Tipo de datos que se va a usar para agregar elementos al objeto de la clase de colección.  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cstringelementtraitsioutargtype"></a><a name="outargtype"></a>CStringElementTraitsI::OUTARGTYPE  
+##  <a name="outargtype"></a>CStringElementTraitsI::OUTARGTYPE  
  El tipo de datos que se usará para recuperar los elementos de objeto de la clase de colección.  
   
 ```

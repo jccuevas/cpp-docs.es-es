@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDialogBar
+- AFXEXT/CDialogBar
+- AFXEXT/CDialogBar::CDialogBar
+- AFXEXT/CDialogBar::Create
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,14 +91,14 @@ class CDialogBar : public CControlBar
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxext.h  
   
-##  <a name="a-namecdialogbara--cdialogbarcdialogbar"></a><a name="cdialogbar"></a>CDialogBar::CDialogBar  
+##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
  Construye un objeto `CDialogBar`.  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="a-namecreatea--cdialogbarcreate"></a><a name="create"></a>CDialogBar::Create  
+##  <a name="create"></a>CDialogBar::Create  
  Carga la plantilla de recursos de cuadro de diálogo especificada por `lpszTemplateName` o `nIDTemplate`, crea la ventana de la barra de cuadro de diálogo, Establece el estilo y lo asocia a la `CDialogBar` objeto.  
   
 ```  

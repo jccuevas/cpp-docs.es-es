@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSmartDockingInfo
+- AFXDOCKINGMANAGER/CSmartDockingInfo
+- AFXDOCKINGMANAGER/CSmartDockingInfo::CopyTo
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_bUseThemeColorInShading
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_clrBaseBackground
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_clrToneDest
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_clrToneSrc
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_clrTransparent
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_nCentralGroupOffset
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_sizeTotal
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_uiMarkerBmpResID
+- AFXDOCKINGMANAGER/CSmartDockingInfo::m_uiMarkerLightBmpResID
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -107,7 +118,7 @@ class CSmartDockingInfo : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxDockingManager.h  
   
-##  <a name="a-namecopytoa--csmartdockinginfocopyto"></a><a name="copyto"></a>CSmartDockingInfo::CopyTo  
+##  <a name="copyto"></a>CSmartDockingInfo::CopyTo  
  Copia los parámetros actuales de acoplamiento inteligentes en proporcionado [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) objeto.  
   
 ```  
@@ -118,7 +129,7 @@ void CopyTo(CSmartDockingInfo& params);
  [out] `params`  
  Un objeto del tipo `CSmartDockingInfo` que se rellena con los parámetros actuales de acoplamiento inteligentes.  
   
-##  <a name="a-namembusethemecolorinshadinga--csmartdockinginfombusethemecolorinshading"></a><a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading  
+##  <a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading  
  Especifica si se utiliza el color del tema actual cuando el marco de trabajo muestra los marcadores de acoplamiento inteligente.  
   
 ```  
@@ -130,14 +141,14 @@ BOOL m_bUseThemeColorInShading;
   
  El valor predeterminado es `FALSE`.  
   
-##  <a name="a-namemclrbasebackgrounda--csmartdockinginfomclrbasebackground"></a><a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground  
+##  <a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground  
  Especifica el color de fondo base de los marcadores de acoplamiento inteligente.  
   
 ```  
 COLORREF m_clrBaseBackground;  
 ```  
   
-##  <a name="a-namemclrtonedesta--csmartdockinginfomclrtonedest"></a><a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest  
+##  <a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest  
  Especifica el color que va a reemplazar `m_clrToneSrc` en mapas de bits de marcador de acoplamiento inteligente.  
   
 ```  
@@ -149,7 +160,7 @@ COLORREF m_clrToneDest;
   
  Para cambiar el color de los marcadores personalizados, debe especificar `m_clrToneDest` y `m_clrToneSrc`.  
   
-##  <a name="a-namemclrtonesrca--csmartdockinginfomclrtonesrc"></a><a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc  
+##  <a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc  
  Especifica el color de mapas de bits de marcador acoplamiento inteligente.  
   
 ```  
@@ -161,7 +172,7 @@ COLORREF m_clrToneSrc;
   
  Use `(COLORREF)-1` para dejar un miembro del grupo de acoplamiento inteligente vacía.  
   
-##  <a name="a-namemclrtransparenta--csmartdockinginfomclrtransparent"></a><a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent  
+##  <a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent  
  Especifica el color de mapas de bits de marcador acoplamiento inteligente cuando son transparentes.  
   
 ```  
@@ -171,7 +182,7 @@ COLORREF m_clrTransparent;
 ### <a name="remarks"></a>Comentarios  
  Debe establecer este valor cuando se muestran marcadores personalizados y mapas de bits personalizados en el grupo de acoplamiento.  
   
-##  <a name="a-namemncentralgroupoffseta--csmartdockinginfomncentralgroupoffset"></a><a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset  
+##  <a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset  
  Especifica el desplazamiento entre el grupo de marcadores de acoplamiento inteligente central y los límites del rectángulo del grupo central.  
   
 ```  
@@ -181,7 +192,7 @@ int m_nCentralGroupOffset;
 ### <a name="remarks"></a>Comentarios  
  Especifique este valor si desea cambiar el desplazamiento predeterminado entre marcadores personalizados y los límites del grupo central de marcadores de acoplamiento inteligente. El desplazamiento predeterminado es de 5 píxeles.  
   
-##  <a name="a-namemsizetotala--csmartdockinginfomsizetotal"></a><a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal  
+##  <a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal  
  Especifica el tamaño total de un rectángulo delimitador que rodea todos los marcadores de acoplamiento inteligente en el grupo central.  
   
 ```  
@@ -191,7 +202,7 @@ CSize m_sizeTotal;
 ### <a name="remarks"></a>Comentarios  
  Establecer `m_sizeTotal` al tamaño del rectángulo delimitador del marcador de grupo central. Debe especificar este valor si utiliza mapas de bits personalizados para los marcadores.  
   
-##  <a name="a-namemuimarkerbmpresida--csmartdockinginfomuimarkerbmpresid"></a><a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID  
+##  <a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID  
  Define los identificadores de los mapas de bits que se utilizan para no resaltado personalizados marcadores de acoplamiento inteligente de recursos.  
   
 ```  
@@ -211,7 +222,7 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;`  
   
-##  <a name="a-namemuimarkerlightbmpresida--csmartdockinginfomuimarkerlightbmpresid"></a><a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID  
+##  <a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID  
  Define los identificadores de los mapas de bits que se utilizan para resaltado marcadores personalizados de acoplamiento inteligente de recursos.  
   
 ```  

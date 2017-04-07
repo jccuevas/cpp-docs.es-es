@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IObjectSafetyImpl
+- ATLCTL/ATL::IObjectSafetyImpl
+- ATLCTL/ATL::IObjectSafetyImpl::GetInterfaceSafetyOptions
+- ATLCTL/ATL::IObjectSafetyImpl::SetInterfaceSafetyOptions
+- ATLCTL/ATL::IObjectSafetyImpl::m_dwCurrentSafety
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +100,7 @@ class IObjectSafetyImpl
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlctl.h  
   
-##  <a name="a-namegetinterfacesafetyoptionsa--iobjectsafetyimplgetinterfacesafetyoptions"></a><a name="getinterfacesafetyoptions"></a>IObjectSafetyImpl::GetInterfaceSafetyOptions  
+##  <a name="getinterfacesafetyoptions"></a>IObjectSafetyImpl::GetInterfaceSafetyOptions  
  Recupera las opciones de seguridad admitidas por el objeto, así como las opciones de seguridad establecidas para el objeto.  
   
 ```
@@ -114,14 +118,14 @@ HRESULT GetInterfaceSafetyOptions(
   
  Consulte [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namemdwcurrentsafetya--iobjectsafetyimplmdwcurrentsafety"></a><a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety  
+##  <a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety  
  Almacena el nivel de seguridad actual del objeto.  
   
 ```
 DWORD m_dwCurrentSafety;
 ```  
   
-##  <a name="a-namesetinterfacesafetyoptionsa--iobjectsafetyimplsetinterfacesafetyoptions"></a><a name="setinterfacesafetyoptions"></a>IObjectSafetyImpl::SetInterfaceSafetyOptions  
+##  <a name="setinterfacesafetyoptions"></a>IObjectSafetyImpl::SetInterfaceSafetyOptions  
  Hace que el objeto sea seguro para la inicialización o secuencias de comandos estableciendo el [m_dwCurrentSafety](#m_dwcurrentsafety) miembro en el valor adecuado.  
   
 ```

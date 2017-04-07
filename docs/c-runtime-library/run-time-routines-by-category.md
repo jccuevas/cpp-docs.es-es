@@ -1,37 +1,51 @@
 ---
-title: "Rutinas de tiempo de ejecuci&#243;n por categor&#237;a | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.runtime"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "categorías, funciones en tiempo de ejecución"
-  - "funciones [CRT]"
-  - "funciones [CRT], tiempo de ejecución"
-  - "rutinas, tiempo de ejecución"
+title: "Rutinas de tiempo de ejecución por categoría | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.runtime
+dev_langs:
+- C++
+helpviewer_keywords:
+- routines, run-time
+- functions [CRT], run-time
+- categories, run-time functions
+- functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Rutinas de tiempo de ejecuci&#243;n por categor&#237;a
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2e9fdeff96af536b1e742b6b15f59805ab231608
+ms.lasthandoff: 03/29/2017
 
-Esta sección muestra y describe las rutinas de biblioteca en tiempo de ejecución de Microsoft por categoría.  Para comodidad de referencia, algunas rutinas se enumeran en más de una categoría.  Las rutinas de Multibyte\- carácter y las rutinas de carácter ancho se agrupan con el solo\- byte – homólogos de carácter, donde existen.  
+---
+# <a name="run-time-routines-by-category"></a>Rutinas de tiempo de ejecución por categoría
+En esta sección se enumeran y se describen las rutinas de biblioteca en tiempo de ejecución de Microsoft por categoría. Para mayor comodidad a la hora de consultar las referencias, algunas rutinas se muestran en más de una categoría. Las rutinas de caracteres multibyte y las rutinas de caracteres anchos se agrupan con sus homólogos de caracteres de un solo byte, cuando existen.  
   
- Esta sección también proporciona .NET Framework métodos o clases equivalentes donde está disponible.  
-  
- Las categorías principales de rutinas de biblioteca en tiempo de ejecución de Microsoft son:  
+ Las principales categorías de rutinas de biblioteca en tiempo de ejecución de Microsoft son las siguientes:  
   
 |||  
 |-|-|  
@@ -47,5 +61,5 @@ Esta sección muestra y describe las rutinas de biblioteca en tiempo de ejecuci�
 |[Buscar y ordenar](../c-runtime-library/searching-and-sorting.md)|[Manipulación de cadenas](../c-runtime-library/string-manipulation-crt.md)|  
 |[Llamadas del sistema](../c-runtime-library/system-calls.md)|[Administración del tiempo](../c-runtime-library/time-management.md)|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la biblioteca en tiempo de ejecución de C](../c-runtime-library/c-run-time-library-reference.md)

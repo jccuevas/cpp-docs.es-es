@@ -9,9 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlWinModule
-- ATL.CAtlWinModule
 - CAtlWinModule
+- ATLBASE/ATL::CAtlWinModule
+- ATLBASE/ATL::CAtlWinModule::CAtlWinModule
+- ATLBASE/ATL::CAtlWinModule::AddCreateWndData
+- ATLBASE/ATL::CAtlWinModule::ExtractCreateWndData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +82,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
   
-##  <a name="a-nameaddcreatewnddataa--catlwinmoduleaddcreatewnddata"></a><a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData  
+##  <a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData  
  Este método inicializa y agrega un `_AtlCreateWndData` estructura.  
   
 ```
@@ -97,7 +99,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ### <a name="remarks"></a>Comentarios  
  Este método llama a [AtlWinModuleAddCreateWndData](http://msdn.microsoft.com/library/8463a6ed-07ea-4aad-92ec-ded681601b32) que inicializa un [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) estructura. Esta estructura se almacenará la **esto** puntero, utilizado para obtener la instancia de clase en los procedimientos de ventana.  
   
-##  <a name="a-namecatlwinmodulea--catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
+##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
  El constructor.  
   
 ```
@@ -107,7 +109,7 @@ CAtlWinModule();
 ### <a name="remarks"></a>Comentarios  
  Si se produce un error en la inicialización, un **EXCEPTION_NONCONTINUABLE** se produce la excepción.  
   
-##  <a name="a-namedtora--catlwinmodulecatlwinmodule"></a><a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule  
+##  <a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule  
  Destructor.  
   
 ```
@@ -117,7 +119,7 @@ CAtlWinModule();
 ### <a name="remarks"></a>Comentarios  
  Libera todos los recursos asignados.  
   
-##  <a name="a-nameextractcreatewnddataa--catlwinmoduleextractcreatewnddata"></a><a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData  
+##  <a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData  
  Este método devuelve un puntero a un `_AtlCreateWndData` estructura.  
   
 ```

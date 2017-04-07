@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSUnblockNotification
+- IUMSUnblockNotification
+- CONCRTRM/concurrency::IUMSUnblockNotification
+- CONCRTRM/concurrency::IUMSUnblockNotification::IUMSUnblockNotification::GetContext
+- CONCRTRM/concurrency::IUMSUnblockNotification::IUMSUnblockNotification::GetNextUnblockNotification
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 6fba6c36987107e2e8100c8b296c279592220682
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: ee9c1ada7718b948e5a038852bfa5514127324b1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumsunblocknotification-structure"></a>IUMSUnblockNotification (Estructura)
@@ -54,8 +57,8 @@ struct IUMSUnblockNotification;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[IUMSUnblockNotification:: GetContext (método)](#getcontext)|Devuelve el `IExecutionContext` interfaz para el contexto de ejecución asociado con el proxy del subproceso que se ha desbloqueado. Cuando se devuelve este método y el contexto de ejecución subyacente se ha reprogramado a través de una llamada a la `IThreadProxy::SwitchTo` (método), esta interfaz ya no es válida.|  
-|[IUMSUnblockNotification:: GetNextUnblockNotification (método)](#getnextunblocknotification)|Devuelve el siguiente `IUMSUnblockNotification` interfaz en la cadena devuelta por el método `IUMSCompletionList::GetUnblockNotifications`.|  
+|[IUMSUnblockNotification:: GetContext](#getcontext)|Devuelve el `IExecutionContext` interfaz para el contexto de ejecución asociado con el proxy del subproceso que se ha desbloqueado. Cuando se devuelve este método y el contexto de ejecución subyacente se ha reprogramado a través de una llamada a la `IThreadProxy::SwitchTo` (método), esta interfaz ya no es válida.|  
+|[IUMSUnblockNotification:: GetNextUnblockNotification](#getnextunblocknotification)|Devuelve el siguiente `IUMSUnblockNotification` interfaz en la cadena devuelta por el método `IUMSCompletionList::GetUnblockNotifications`.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `IUMSUnblockNotification`  
@@ -65,7 +68,7 @@ struct IUMSUnblockNotification;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-namegetcontexta--iumsunblocknotificationgetcontext-method"></a><a name="getcontext"></a>IUMSUnblockNotification:: GetContext (método)  
+##  <a name="getcontext"></a>IUMSUnblockNotification:: GetContext (método)  
  Devuelve el `IExecutionContext` interfaz para el contexto de ejecución asociado con el proxy del subproceso que se ha desbloqueado. Cuando se devuelve este método y el contexto de ejecución subyacente se ha reprogramado a través de una llamada a la `IThreadProxy::SwitchTo` (método), esta interfaz ya no es válida.  
   
 ```
@@ -75,7 +78,7 @@ virtual IExecutionContext* GetContext() = 0;
 ### <a name="return-value"></a>Valor devuelto  
  Un `IExecutionContext` interfaz para el contexto de ejecución a un proxy del subproceso que se ha desbloqueado.  
   
-##  <a name="a-namegetnextunblocknotificationa--iumsunblocknotificationgetnextunblocknotification-method"></a><a name="getnextunblocknotification"></a>IUMSUnblockNotification:: GetNextUnblockNotification (método)  
+##  <a name="getnextunblocknotification"></a>IUMSUnblockNotification:: GetNextUnblockNotification (método)  
  Devuelve el siguiente `IUMSUnblockNotification` interfaz en la cadena devuelta por el método `IUMSCompletionList::GetUnblockNotifications`.  
   
 ```

@@ -9,15 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CMFCBaseToolBar::CreateObject
-- ~CMFCBaseToolBar
 - CMFCBaseToolBar
-- CMFCBaseToolBar::CMFCBaseToolBar
-- CMFCBaseToolBar::~CMFCBaseToolBar
-- CMFCBaseToolBar.~CMFCBaseToolBar
-- CreateObject
-- CMFCBaseToolBar.CMFCBaseToolBar
-- CMFCBaseToolBar.CreateObject
+- AFXBASETOOLBAR/CMFCBaseToolBar
+- AFXBASETOOLBAR/CMFCBaseToolBar::GetDockingMode
+- AFXBASETOOLBAR/CMFCBaseToolBar::GetMinSize
+- AFXBASETOOLBAR/CMFCBaseToolBar::OnAfterChangeParent
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +90,7 @@ class CMFCBaseToolBar : public CPane
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxbasetoolbar.h  
   
-##  <a name="a-namegetdockingmodea--cmfcbasetoolbargetdockingmode"></a><a name="getdockingmode"></a>CMFCBaseToolBar::GetDockingMode  
+##  <a name="getdockingmode"></a>CMFCBaseToolBar::GetDockingMode  
  Devuelve el modo de acoplamiento.  
   
 ```  
@@ -104,7 +100,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 ### <a name="return-value"></a>Valor devuelto  
  El modo de acoplamiento.  
   
-##  <a name="a-namegetminsizea--cmfcbasetoolbargetminsize"></a><a name="getminsize"></a>CMFCBaseToolBar::GetMinSize  
+##  <a name="getminsize"></a>CMFCBaseToolBar::GetMinSize  
  Devuelve el tamaño mínimo de una barra de herramientas.  
   
 ```  
@@ -115,7 +111,7 @@ virtual void GetMinSize(CSize& size) const;
  [out] `size`  
  El tamaño mínimo de una barra de herramientas.  
   
-##  <a name="a-nameonafterchangeparenta--cmfcbasetoolbaronafterchangeparent"></a><a name="onafterchangeparent"></a>CMFCBaseToolBar::OnAfterChangeParent  
+##  <a name="onafterchangeparent"></a>CMFCBaseToolBar::OnAfterChangeParent  
  Llamado por el marco después de realizar cambios del panel primario.  
   
 ```  

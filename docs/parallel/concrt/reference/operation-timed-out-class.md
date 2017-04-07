@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::operation_timed_out
+- operation_timed_out
+- CONCRT/concurrency::operation_timed_out
+- CONCRT/concurrency::operation_timed_out::operation_timed_out
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 64fdbfa539218bb24211d12cefb415cfcacd8313
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: ec17c3ae4fa10fd7b24170934c672fb569112f60
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="operationtimedout-class"></a>operation_timed_out (Clase)
@@ -54,7 +56,7 @@ class operation_timed_out : public std::exception;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[operation_timed_out (Constructor)](#ctor)|Sobrecargado. Construye un objeto `operation_timed_out`.|  
+|[operation_timed_out](#ctor)|Sobrecargado. Construye un objeto `operation_timed_out`.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `exception`  
@@ -66,7 +68,7 @@ class operation_timed_out : public std::exception;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-namectora-operationtimedout"></a><a name="ctor"></a>operation_timed_out 
+##  <a name="ctor"></a>operation_timed_out 
 
  Construye un objeto `operation_timed_out`.  
   
@@ -81,5 +83,5 @@ operation_timed_out() throw();
  Mensaje descriptivo del error.  
   
 ## <a name="see-also"></a>Vea también  
- [simultaneidad Namespace](concurrency-namespace.md)
+ [concurrency (espacio de nombres)](concurrency-namespace.md)
 

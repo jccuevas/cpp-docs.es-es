@@ -56,9 +56,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8c4e7cd3040e9d9d6d3c3a5a915118fbc815aebf
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 789c1fc872f478945de6444c07de069b50074a7f
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="unorm2-class"></a>unorm_2 (Clase)
@@ -88,30 +88,30 @@ class unorm_2;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|Método unorm_2::get_x||  
-|Método unorm_2::get_xy||  
-|Método unorm_2::get_y||  
-|Método unorm_2::get_yx||  
-|Método unorm_2::ref_g||  
-|Método unorm_2::ref_r||  
-|Método unorm_2::ref_x||  
-|Método unorm_2::ref_y||  
-|Método unorm_2::set_x||  
-|Método unorm_2::set_xy||  
-|Método unorm_2::set_y||  
-|Método unorm_2::set_yx||  
+|unorm_2:: get_X||  
+|unorm_2:: get_xy||  
+|unorm_2:: get_Y||  
+|unorm_2:: get_yx||  
+|unorm_2:: ref_g||  
+|unorm_2:: ref_r||  
+|unorm_2:: ref_x||  
+|unorm_2:: ref_y||  
+|unorm_2:: set_X||  
+|unorm_2:: set_xy||  
+|unorm_2:: set_y||  
+|unorm_2:: set_yx||  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|Operador unorm_2::operator--||  
-|Operador unorm_2::operator*=||  
-|Operador unorm_2::operator/=||  
-|Operador unorm_2::operator++||  
-|Operador unorm_2::operator+=||  
-|Operador unorm_2::operator=||  
-|Operador unorm_2::operator-=||  
+|unorm_2:: operator--||  
+|unorm_2:: operator * =||  
+|unorm_2:: operator / =||  
+|unorm_2:: operator ++||  
+|unorm_2:: operator +=||  
+|unorm_2:: operator =||  
+|unorm_2:: operator =||  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
@@ -123,14 +123,14 @@ class unorm_2;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|Miembro de datos unorm_2::g||  
-|Miembro de datos unorm_2::gr||  
-|Miembro de datos unorm_2::r||  
-|Miembro de datos unorm_2::rg||  
-|Miembro de datos unorm_2::x||  
-|Miembro de datos unorm_2::xy||  
-|Miembro de datos unorm_2::y||  
-|Miembro de datos unorm_2::yx||  
+|unorm_2:: g||  
+|unorm_2:: GR||  
+|unorm_2:: r||  
+|unorm_2:: RG||  
+|unorm_2:: x||  
+|unorm_2:: XY||  
+|unorm_2:: y||  
+|unorm_2:: YX||  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `unorm_2`  
@@ -140,7 +140,7 @@ class unorm_2;
   
  **Namespace:** Graphics  
   
-##  <a name="a-namectora-unorm2"></a><a name="ctor"></a>unorm_2 
+##  <a name="ctor"></a>unorm_2 
 
  El constructor predeterminado, inicializa todos los elementos con 0.  
   
@@ -214,12 +214,12 @@ explicit inline unorm_2(
  `_Other`  
  Objeto utilizado para inicializar.  
   
-##  <a name="a-nameunorm2sizea-size"></a><a name="unorm_2__size"></a>tamaño 
+##  <a name="unorm_2__size"></a>tamaño 
 
 ```  
 static const int size = 2;  
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
 

@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinFormsControl
+- AFXWINFORMS/CWinFormsControl
+- AFXWINFORMS/CWinFormsControl::CWinFormsControl
+- AFXWINFORMS/CWinFormsControl::CreateManagedControl
+- AFXWINFORMS/CWinFormsControl::GetControl
+- AFXWINFORMS/CWinFormsControl::GetControlHandle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +96,7 @@ class CWinFormsControl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwinforms.h  
   
-##  <a name="a-namecreatemanagedcontrola--cwinformscontrolcreatemanagedcontrol"></a><a name="createmanagedcontrol"></a>CWinFormsControl:: CreateManagedControl  
+##  <a name="createmanagedcontrol"></a>CWinFormsControl:: CreateManagedControl  
  Crea un control de formularios Windows Forms en un contenedor de MFC.  
   
 ```  
@@ -160,7 +165,7 @@ inline BOOL CreateManagedControl(
   
  Consulte [mediante un Control de usuario de Windows Forms en MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) para obtener ejemplos sobre el uso de Windows Forms controla.  
   
-##  <a name="a-namecwinformscontrola--cwinformscontrolcwinformscontrol"></a><a name="cwinformscontrol"></a>CWinFormsControl::CWinFormsControl  
+##  <a name="cwinformscontrol"></a>CWinFormsControl::CWinFormsControl  
  Construye un objeto de contenedor de control de formularios Windows Forms de MFC.  
   
 ```  
@@ -170,7 +175,7 @@ CWinFormsControl();
 ### <a name="remarks"></a>Comentarios  
  El control de formularios Windows Forms se crea una instancia cuando se llama a [CWinFormsControl:: CreateManagedControl](#createmanagedcontrol).  
   
-##  <a name="a-namegetcontrola--cwinformscontrolgetcontrol"></a><a name="getcontrol"></a>CWinFormsControl::GetControl  
+##  <a name="getcontrol"></a>CWinFormsControl::GetControl  
  Recupera un puntero al control de formularios Windows Forms.  
   
 ```  
@@ -183,7 +188,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="example"></a>Ejemplo  
   Consulte [CWinFormsControl:: CreateManagedControl](#createmanagedcontrol).  
   
-##  <a name="a-namegetcontrolhandlea--cwinformscontrolgetcontrolhandle"></a><a name="getcontrolhandle"></a>CWinFormsControl::GetControlHandle  
+##  <a name="getcontrolhandle"></a>CWinFormsControl::GetControlHandle  
  Recupera un identificador para el control de formularios Windows Forms.  
   
 ```  
@@ -196,7 +201,7 @@ inline HWND GetControlHandle() const;
 ### <a name="remarks"></a>Comentarios  
  `GetControlHandle`es un método auxiliar que devuelve el identificador de ventana que se almacenan en las propiedades del control de .NET Framework. El valor del identificador de ventana se copia en [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) durante la llamada a [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).  
   
-##  <a name="a-nameoperator-gta--cwinformscontroloperator--gt"></a><a name="operator_-_gt"></a>CWinFormsControl::operator-&gt;  
+##  <a name="operator_-_gt"></a>CWinFormsControl::operator-&gt;  
  Reemplaza [CWinFormsControl::GetControl](#getcontrol) en expresiones.  
   
 ```  
@@ -208,7 +213,7 @@ inline TManagedControl^  operator->() const;
   
  Para obtener más información sobre Windows Forms, vea [mediante un Control de usuario de Windows Forms en MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="a-nameoperatortmanagedcontrola--cwinformscontroloperator-tmanagedcontrol"></a><a name="operator_tmanagedcontrol"></a>CWinFormsControl::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol"></a>CWinFormsControl::operator TManagedControl ^  
  Convierte un tipo de puntero a un control de formularios Windows Forms.  
   
 ```  

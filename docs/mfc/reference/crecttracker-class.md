@@ -10,6 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRectTracker
+- AFXEXT/CRectTracker
+- AFXEXT/CRectTracker::CRectTracker
+- AFXEXT/CRectTracker::AdjustRect
+- AFXEXT/CRectTracker::Draw
+- AFXEXT/CRectTracker::DrawTrackerRect
+- AFXEXT/CRectTracker::GetHandleMask
+- AFXEXT/CRectTracker::GetTrueRect
+- AFXEXT/CRectTracker::HitTest
+- AFXEXT/CRectTracker::NormalizeHit
+- AFXEXT/CRectTracker::OnChangedRect
+- AFXEXT/CRectTracker::SetCursor
+- AFXEXT/CRectTracker::Track
+- AFXEXT/CRectTracker::TrackRubberBand
+- AFXEXT/CRectTracker::m_nHandleSize
+- AFXEXT/CRectTracker::m_nStyle
+- AFXEXT/CRectTracker::m_rect
+- AFXEXT/CRectTracker::m_sizeMin
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +117,7 @@ class CRectTracker
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxext.h  
   
-##  <a name="a-nameadjustrecta--crecttrackeradjustrect"></a><a name="adjustrect"></a>CRectTracker::AdjustRect  
+##  <a name="adjustrect"></a>CRectTracker::AdjustRect  
  Llamado por el marco de trabajo cuando se cambia el tamaño del rectángulo de seguimiento mediante el uso de un controlador de tamaño.  
   
 ```  
@@ -123,7 +140,7 @@ virtual void AdjustRect(
   
  Características especiales que no son directamente compatibles con `CRectTracker`, como complemento a la cuadrícula o keep--relación de aspecto, puede implementarse por reemplazar esta función.  
   
-##  <a name="a-namecrecttrackera--crecttrackercrecttracker"></a><a name="crecttracker"></a>CRectTracker::CRectTracker  
+##  <a name="crecttracker"></a>CRectTracker::CRectTracker  
  Crea e inicializa un `CRectTracker` objeto.  
   
 ```  
@@ -157,7 +174,7 @@ CRectTracker(
 ### <a name="remarks"></a>Comentarios  
  El constructor predeterminado inicializa los `CRectTracker` objeto con los valores de `lpSrcRect` e inicializa otros tamaños de los valores predeterminados del sistema. Si el objeto se crea sin parámetros, el `m_rect` y `m_nStyle` son sin inicializar miembros de datos.  
   
-##  <a name="a-namedrawa--crecttrackerdraw"></a><a name="draw"></a>CRectTracker::Draw  
+##  <a name="draw"></a>CRectTracker::Draw  
  Llame a esta función para dibujar el rectángulo exterior líneas y región interna.  
   
 ```  
@@ -171,7 +188,7 @@ void Draw(CDC* pDC) const;
 ### <a name="remarks"></a>Comentarios  
  El estilo del rastreador determina cómo se realiza el dibujo. Vea el constructor de `CRectTracker` para obtener más información sobre los estilos disponibles.  
   
-##  <a name="a-namedrawtrackerrecta--crecttrackerdrawtrackerrect"></a><a name="drawtrackerrect"></a>CRectTracker::DrawTrackerRect  
+##  <a name="drawtrackerrect"></a>CRectTracker::DrawTrackerRect  
  Llamado por el marco cuando cambia la posición de la herramienta de seguimiento mientras dentro de la `Track` o `TrackRubberBand` función miembro.  
   
 ```  
@@ -200,7 +217,7 @@ virtual void DrawTrackerRect(
   
  Reemplazar esta función para proporcionar comentarios diferente durante la operación de seguimiento.  
   
-##  <a name="a-namegethandlemaska--crecttrackergethandlemask"></a><a name="gethandlemask"></a>CRectTracker::GetHandleMask  
+##  <a name="gethandlemask"></a>CRectTracker::GetHandleMask  
  El marco de trabajo llama a esta función miembro para recuperar la máscara para controladores de tamaño de un rectángulo.  
   
 ```  
@@ -221,7 +238,7 @@ virtual UINT GetHandleMask() const;
   
  Reemplace esta función miembro para mostrar u ocultar que controladores de tamaño indicado.  
   
-##  <a name="a-namegettruerecta--crecttrackergettruerect"></a><a name="gettruerect"></a>CRectTracker::GetTrueRect  
+##  <a name="gettruerect"></a>CRectTracker::GetTrueRect  
  Llame a esta función para recuperar las coordenadas del rectángulo.  
   
 ```  
@@ -235,7 +252,7 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 ### <a name="remarks"></a>Comentarios  
  Las dimensiones del rectángulo incluyen el alto y ancho de los controladores de tamaño situado en el borde exterior. Al volver, `lpTrueRect` siempre es un rectángulo normalizado en coordenadas de dispositivo.  
   
-##  <a name="a-namehittesta--crecttrackerhittest"></a><a name="hittest"></a>CRectTracker:: HitTest  
+##  <a name="hittest"></a>CRectTracker:: HitTest  
  Llame a esta función para averiguar si el usuario tomó un controlador de tamaño.  
   
 ```  
@@ -269,7 +286,7 @@ int HitTest(CPoint point) const;
   
 - **CRectTracker::hitMiddle** 8  
   
-##  <a name="a-namemnhandlesizea--crecttrackermnhandlesize"></a><a name="m_nhandlesize"></a>CRectTracker::m_nHandleSize  
+##  <a name="m_nhandlesize"></a>CRectTracker::m_nHandleSize  
  El tamaño, en píxeles, de la `CRectTracker` controladores de tamaño.  
   
 ```  
@@ -279,14 +296,14 @@ int m_nHandleSize;
 ### <a name="remarks"></a>Comentarios  
  Se inicializa con el valor predeterminado del sistema.  
   
-##  <a name="a-namemrecta--crecttrackermrect"></a><a name="m_rect"></a>CRectTracker::m_rect  
+##  <a name="m_rect"></a>CRectTracker::m_rect  
  La posición actual del rectángulo en coordenadas de cliente (píxeles).  
   
 ```  
 CRect m_rect;  
 ```  
   
-##  <a name="a-namemsizemina--crecttrackermsizemin"></a><a name="m_sizemin"></a>CRectTracker::m_sizeMin  
+##  <a name="m_sizemin"></a>CRectTracker::m_sizeMin  
  El tamaño mínimo del rectángulo.  
   
 ```  
@@ -296,7 +313,7 @@ CSize m_sizeMin;
 ### <a name="remarks"></a>Comentarios  
  Los valores predeterminados, **cx** y **cy**, se calcula el valor del sistema predeterminado para el ancho del borde. Este miembro de datos se utiliza únicamente por el `AdjustRect` función miembro.  
   
-##  <a name="a-namemnstylea--crecttrackermnstyle"></a><a name="m_nstyle"></a>CRectTracker::m_nStyle  
+##  <a name="m_nstyle"></a>CRectTracker::m_nStyle  
  Estilo actual del rectángulo.  
   
 ```  
@@ -306,7 +323,7 @@ UINT m_nStyle;
 ### <a name="remarks"></a>Comentarios  
  Consulte [CRectTracker::CRectTracker](#crecttracker) para obtener una lista de los estilos posibles.  
   
-##  <a name="a-namenormalizehita--crecttrackernormalizehit"></a><a name="normalizehit"></a>CRectTracker::NormalizeHit  
+##  <a name="normalizehit"></a>CRectTracker::NormalizeHit  
  Llame a esta función para convertir un identificador potencialmente invertido.  
   
 ```  
@@ -323,7 +340,7 @@ int NormalizeHit(int nHandle) const;
 ### <a name="remarks"></a>Comentarios  
  Cuando `CRectTracker::Track` o `CRectTracker::TrackRubberBand` se llama con invertir permitido, es posible que el rectángulo que se invierte en el eje x, el eje y o ambos. Cuando esto sucede, `HitTest` devolverá los identificadores que también se invierten en relación con el rectángulo. Esto es apropiado para la información del cursor dibujo porque los comentarios depende de la posición de la pantalla del rectángulo, no la parte de la estructura de datos del rectángulo que se va a modificar.  
   
-##  <a name="a-nameonchangedrecta--crecttrackeronchangedrect"></a><a name="onchangedrect"></a>CRectTracker::OnChangedRect  
+##  <a name="onchangedrect"></a>CRectTracker::OnChangedRect  
  Llamado por el marco, siempre que el rectángulo rastreador ha cambiado durante una llamada a `Track`.  
   
 ```  
@@ -339,7 +356,7 @@ virtual void OnChangedRect(const CRect& rectOld);
   
  Reemplace esta función si desea realizar cualquier acción después de que ha cambiado el tamaño del rectángulo.  
   
-##  <a name="a-namesetcursora--crecttrackersetcursor"></a><a name="setcursor"></a>CRectTracker:: SetCursor  
+##  <a name="setcursor"></a>CRectTracker:: SetCursor  
  Llame a esta función para cambiar la forma del cursor mientras está sobre el `CRectTracker` región del objeto.  
   
 ```  
@@ -361,7 +378,7 @@ BOOL SetCursor(
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función desde dentro de la función de la ventana que controla la `WM_SETCURSOR` mensaje (normalmente `OnSetCursor`).  
   
-##  <a name="a-nametracka--crecttrackertrack"></a><a name="track"></a>CRectTracker::Track  
+##  <a name="track"></a>CRectTracker::Track  
  Llame a esta función para mostrar la interfaz de usuario para cambiar el tamaño del rectángulo.  
   
 ```  
@@ -395,7 +412,7 @@ BOOL Track(
   
  Si `bAllowInvert` es **TRUE**, se puede invertir el rectángulo de seguimiento en el eje x o el eje y.  
   
-##  <a name="a-nametrackrubberbanda--crecttrackertrackrubberband"></a><a name="trackrubberband"></a>CRectTracker:: TrackRubberBand  
+##  <a name="trackrubberband"></a>CRectTracker:: TrackRubberBand  
  Llame a esta función para realizar la selección de la banda de goma.  
   
 ```  

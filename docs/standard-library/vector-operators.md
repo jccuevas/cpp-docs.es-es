@@ -21,7 +21,7 @@ ms.lasthandoff: 02/24/2017
 |[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
 |[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  Comprueba si el objeto en el lado izquierdo del operador no es igual al objeto del lado derecho.  
   
 ```  
@@ -29,10 +29,10 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  Un objeto de tipo **vector**.  
   
- ` right`  
+ `right`  
  Un objeto de tipo **vector**.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -68,7 +68,7 @@ int main( )
 Vectors not equal.  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="operator_lt_"></a>  operator&lt;  
  Comprueba si el objeto en el lado izquierdo del operador es menor que el objeto del lado derecho.  
   
 ```  
@@ -76,10 +76,10 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  Un objeto de tipo **vector**.  
   
- ` right`  
+ `right`  
  Un objeto de tipo **vector**.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -116,7 +116,7 @@ int main( )
 Vector v1 is less than vector v2.  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="operator_lt__eq"></a>  operator&lt;=  
  Comprueba si el objeto en el lado izquierdo del operador es menor o igual que el objeto del lado derecho.  
   
 ```  
@@ -124,10 +124,10 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  Un objeto de tipo **vector**.  
   
- ` right`  
+ `right`  
  Un objeto de tipo **vector**.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -164,7 +164,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  Comprueba si el objeto en el lado izquierdo del operador es igual al objeto del lado derecho.  
   
 ```  
@@ -172,10 +172,10 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  Un objeto de tipo **vector**.  
   
- ` right`  
+ `right`  
  Un objeto de tipo **vector**.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -211,7 +211,7 @@ int main( )
 Vectors equal.  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="operator_gt_"></a>  operator&gt;  
  Comprueba si el objeto en el lado izquierdo del operador es mayor que el objeto del lado derecho.  
   
 ```  
@@ -219,10 +219,10 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  Un objeto de tipo **vector**.  
   
- ` right`  
+ `right`  
  Un objeto de tipo **vector**.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -260,7 +260,7 @@ int main( )
 Vector v1 is greater than vector v2.  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="operator_gt__eq"></a>  operator&gt;=  
  Comprueba si el objeto en el lado izquierdo del operador es mayor o igual que el objeto del lado derecho.  
   
 ```  
@@ -268,10 +268,10 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  Un objeto de tipo **vector**.  
   
- ` right`  
+ `right`  
  Un objeto de tipo **vector**.  
   
 ### <a name="return-value"></a>Valor devuelto  

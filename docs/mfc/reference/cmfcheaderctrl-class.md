@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCHeaderCtrl
+- AFXHEADERCTRL/CMFCHeaderCtrl
+- AFXHEADERCTRL/CMFCHeaderCtrl::CMFCHeaderCtrl
+- AFXHEADERCTRL/CMFCHeaderCtrl::EnableMultipleSort
+- AFXHEADERCTRL/CMFCHeaderCtrl::GetColumnState
+- AFXHEADERCTRL/CMFCHeaderCtrl::GetSortColumn
+- AFXHEADERCTRL/CMFCHeaderCtrl::IsAscending
+- AFXHEADERCTRL/CMFCHeaderCtrl::IsDialogControl
+- AFXHEADERCTRL/CMFCHeaderCtrl::IsMultipleSort
+- AFXHEADERCTRL/CMFCHeaderCtrl::RemoveSortColumn
+- AFXHEADERCTRL/CMFCHeaderCtrl::SetSortColumn
+- AFXHEADERCTRL/CMFCHeaderCtrl::OnDrawItem
+- AFXHEADERCTRL/CMFCHeaderCtrl::OnDrawSortArrow
+- AFXHEADERCTRL/CMFCHeaderCtrl::OnFillBackground
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +114,7 @@ class CMFCHeaderCtrl : public CHeaderCtrl
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxheaderctrl.h  
   
-##  <a name="a-namecmfcheaderctrla--cmfcheaderctrlcmfcheaderctrl"></a><a name="cmfcheaderctrl"></a>CMFCHeaderCtrl::CMFCHeaderCtrl  
+##  <a name="cmfcheaderctrl"></a>CMFCHeaderCtrl::CMFCHeaderCtrl  
  Construye un objeto `CMFCHeaderCtrl`.  
   
 ```  
@@ -121,7 +134,7 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 |`m_bIsDlgControl`|`FALSE`|  
 |`m_hFont`|`NULL`|  
   
-##  <a name="a-nameenablemultiplesorta--cmfcheaderctrlenablemultiplesort"></a><a name="enablemultiplesort"></a>CMFCHeaderCtrl::EnableMultipleSort  
+##  <a name="enablemultiplesort"></a>CMFCHeaderCtrl::EnableMultipleSort  
  Habilita o deshabilita *ordenación de varias columnas* modo para el control de encabezado actual.  
   
 ```  
@@ -135,7 +148,7 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para habilitar o deshabilitar el modo de ordenación de varias columnas. Dos o más columnas pueden participar en un criterio de ordenación, si el control de encabezado está en modo de ordenación de varias columnas.  
   
-##  <a name="a-namegetcolumnstatea--cmfcheaderctrlgetcolumnstate"></a><a name="getcolumnstate"></a>CMFCHeaderCtrl::GetColumnState  
+##  <a name="getcolumnstate"></a>CMFCHeaderCtrl::GetColumnState  
  Indica si una columna está ordenada o se ordena en orden ascendente o descendente.  
   
 ```  
@@ -157,7 +170,7 @@ int GetColumnState(int iColumn) const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namegetsortcolumna--cmfcheaderctrlgetsortcolumn"></a><a name="getsortcolumn"></a>CMFCHeaderCtrl::GetSortColumn  
+##  <a name="getsortcolumn"></a>CMFCHeaderCtrl::GetSortColumn  
  Recupera el índice de base cero de la primera columna ordenado en el control de encabezado.  
   
 ```  
@@ -170,7 +183,7 @@ int GetSortColumn() const;
 ### <a name="remarks"></a>Comentarios  
  Si el control de encabezado está en *ordenación de varias columnas* modo y se compila la aplicación en modo de depuración, este método valida y aconseja utilizar la [CMFCHeaderCtrl::GetColumnState](#getcolumnstate) método en su lugar. Si el control de encabezado está en modo de ordenación de varias columnas y compilar la aplicación en modo comercial, este método devuelve -1.  
   
-##  <a name="a-nameisascendinga--cmfcheaderctrlisascending"></a><a name="isascending"></a>CMFCHeaderCtrl::IsAscending  
+##  <a name="isascending"></a>CMFCHeaderCtrl::IsAscending  
  Indica si cualquier columna en el control de encabezado se ordena en orden ascendente.  
   
 ```  
@@ -183,7 +196,7 @@ BOOL IsAscending() const;
 ### <a name="remarks"></a>Comentarios  
  El valor que devuelve este método se utiliza para mostrar la flecha de ordenación adecuado en el elemento de control de encabezado. Utilice la [CMFCHeaderCtrl::SetSortColumn](#setsortcolumn) para establecer el criterio de ordenación.  
   
-##  <a name="a-nameisdialogcontrola--cmfcheaderctrlisdialogcontrol"></a><a name="isdialogcontrol"></a>CMFCHeaderCtrl::IsDialogControl  
+##  <a name="isdialogcontrol"></a>CMFCHeaderCtrl::IsDialogControl  
  Indica si la ventana primaria del control de encabezado actual es un cuadro de diálogo.  
   
 ```  
@@ -193,7 +206,7 @@ BOOL IsDialogControl() const;
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE`Si la ventana primaria del control de encabezado actual es un cuadro de diálogo; de lo contrario, `FALSE`.  
   
-##  <a name="a-nameismultiplesorta--cmfcheaderctrlismultiplesort"></a><a name="ismultiplesort"></a>CMFCHeaderCtrl::IsMultipleSort  
+##  <a name="ismultiplesort"></a>CMFCHeaderCtrl::IsMultipleSort  
  Indica si el control de encabezado actual está en *ordenación de varias columnas* modo.  
   
 ```  
@@ -206,7 +219,7 @@ BOOL IsMultipleSort() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice la [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) método para habilitar o deshabilitar el modo de ordenación de varias columnas. Dos o más columnas pueden participar en un criterio de ordenación, si el control de encabezado está en modo de ordenación de varias columnas.  
   
-##  <a name="a-nameondrawitema--cmfcheaderctrlondrawitem"></a><a name="ondrawitem"></a>CMFCHeaderCtrl::OnDrawItem  
+##  <a name="ondrawitem"></a>CMFCHeaderCtrl::OnDrawItem  
  Llamado por el marco para dibujar una columna del control de encabezado.  
   
 ```  
@@ -234,7 +247,7 @@ virtual void OnDrawItem(
  [in] `bIsHighlighted`  
  `TRUE`para dibujar el elemento de estado resaltado; de lo contrario, `FALSE`.  
   
-##  <a name="a-nameondrawsortarrowa--cmfcheaderctrlondrawsortarrow"></a><a name="ondrawsortarrow"></a>CMFCHeaderCtrl::OnDrawSortArrow  
+##  <a name="ondrawsortarrow"></a>CMFCHeaderCtrl::OnDrawSortArrow  
  Llamado por el marco para dibujar la flecha de ordenación.  
   
 ```  
@@ -250,7 +263,7 @@ virtual void OnDrawSortArrow(
  [in] `rectArrow`  
  El rectángulo delimitador de la flecha de ordenación.  
   
-##  <a name="a-nameonfillbackgrounda--cmfcheaderctrlonfillbackground"></a><a name="onfillbackground"></a>CMFCHeaderCtrl::OnFillBackground  
+##  <a name="onfillbackground"></a>CMFCHeaderCtrl::OnFillBackground  
  Llamado por el marco de trabajo para rellenar el fondo de una columna del control de encabezado.  
   
 ```  
@@ -263,7 +276,7 @@ virtual void OnFillBackground(CDC* pDC);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameremovesortcolumna--cmfcheaderctrlremovesortcolumn"></a><a name="removesortcolumn"></a>CMFCHeaderCtrl::RemoveSortColumn  
+##  <a name="removesortcolumn"></a>CMFCHeaderCtrl::RemoveSortColumn  
  Quita la columna especificada de la lista de columnas de ordenación.  
   
 ```  
@@ -274,7 +287,7 @@ void RemoveSortColumn(int iColumn);
  [in] `iColumn`  
  Índice de base cero de la columna que se va a quitar.  
   
-##  <a name="a-namesetsortcolumna--cmfcheaderctrlsetsortcolumn"></a><a name="setsortcolumn"></a>CMFCHeaderCtrl::SetSortColumn  
+##  <a name="setsortcolumn"></a>CMFCHeaderCtrl::SetSortColumn  
  Establece el criterio de ordenación de una columna especificada en un control de encabezado.  
   
 ```  

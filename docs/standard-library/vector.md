@@ -105,10 +105,10 @@ void swap (
  Asignador  
  Parámetro de plantilla para el objeto de asignador almacenado responsable de la asignación y desasignación de memoria.  
   
- ` left`  
+ `left`  
  Primer vector (izquierdo) en una operación de comparación  
   
- ` right`  
+ `right`  
  Segundo vector (derecho) en una operación de comparación.  
   
 ### <a name="operators"></a>Operadores  

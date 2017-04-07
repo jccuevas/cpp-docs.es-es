@@ -9,12 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.IPerPropertyBrowsingImpl
-- IPerPropertyBrowsing
-- ATL::IPerPropertyBrowsingImpl
-- ATL::IPerPropertyBrowsingImpl<T>
 - IPerPropertyBrowsingImpl
-- ATL.IPerPropertyBrowsingImpl<T>
+- ATLCTL/ATL::IPerPropertyBrowsingImpl
+- ATLCTL/ATL::IPerPropertyBrowsingImpl::GetDisplayString
+- ATLCTL/ATL::IPerPropertyBrowsingImpl::GetPredefinedStrings
+- ATLCTL/ATL::IPerPropertyBrowsingImpl::GetPredefinedValue
+- ATLCTL/ATL::IPerPropertyBrowsingImpl::MapPropertyToPage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +92,7 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlctl.h  
   
-##  <a name="a-namegetdisplaystringa--iperpropertybrowsingimplgetdisplaystring"></a><a name="getdisplaystring"></a>IPerPropertyBrowsingImpl::GetDisplayString  
+##  <a name="getdisplaystring"></a>IPerPropertyBrowsingImpl::GetDisplayString  
  Recupera una cadena que describe una propiedad determinada.  
   
 ```
@@ -104,7 +104,7 @@ STDMETHOD(GetDisplayString)(
 ### <a name="remarks"></a>Comentarios  
  Consulte [IPerPropertyBrowsing::GetDisplayString](http://msdn.microsoft.com/library/windows/desktop/ms688734) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetpredefinedstringsa--iperpropertybrowsingimplgetpredefinedstrings"></a><a name="getpredefinedstrings"></a>IPerPropertyBrowsingImpl::GetPredefinedStrings  
+##  <a name="getpredefinedstrings"></a>IPerPropertyBrowsingImpl::GetPredefinedStrings  
  Rellena cada matriz con cero elementos.  
   
 ```
@@ -120,7 +120,7 @@ STDMETHOD(GetPredefinedStrings)(
 ### <a name="remarks"></a>Comentarios  
  Consulte [IPerPropertyBrowsing::](http://msdn.microsoft.com/library/windows/desktop/ms679724) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetpredefinedvaluea--iperpropertybrowsingimplgetpredefinedvalue"></a><a name="getpredefinedvalue"></a>IPerPropertyBrowsingImpl::GetPredefinedValue  
+##  <a name="getpredefinedvalue"></a>IPerPropertyBrowsingImpl::GetPredefinedValue  
  Recupera un **VARIANT** que contiene el valor de una propiedad identificada por un identificador de envío especificado. El identificador de envío está asociado con el nombre de cadena que se recupera de `GetPredefinedStrings`.  
   
 ```
@@ -138,7 +138,7 @@ STDMETHOD(GetPredefinedValue)(
   
  Consulte [IPerPropertyBrowsing::GetPredefinedValue](http://msdn.microsoft.com/library/windows/desktop/ms690401) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namemappropertytopagea--iperpropertybrowsingimplmappropertytopage"></a><a name="mappropertytopage"></a>IPerPropertyBrowsingImpl::MapPropertyToPage  
+##  <a name="mappropertytopage"></a>IPerPropertyBrowsingImpl::MapPropertyToPage  
  Recupera el CLSID de la página de propiedades asociada a la propiedad especificada.  
   
 ```

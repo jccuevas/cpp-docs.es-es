@@ -9,7 +9,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amprt/Concurrency::accelerator_view
+- accelerator_view
+- AMPRT/accelerator_view
+- AMPRT/Concurrency::accelerator_view:accelerator_view
+- AMPRT/Concurrency::accelerator_view:create_marker
+- AMPRT/Concurrency::accelerator_view:flush
+- AMPRT/Concurrency::accelerator_view:get_accelerator
+- AMPRT/Concurrency::accelerator_view:get_is_auto_selection
+- AMPRT/Concurrency::accelerator_view:get_is_debug
+- AMPRT/Concurrency::accelerator_view:get_queuing_mode
+- AMPRT/Concurrency::accelerator_view:get_version
+- AMPRT/Concurrency::accelerator_view:wait
+- AMPRT/Concurrency::accelerator_view:accelerator
+- AMPRT/Concurrency::accelerator_view:is_auto_selection
+- AMPRT/Concurrency::accelerator_view:is_debug
+- AMPRT/Concurrency::accelerator_view:queuing_mode
+- AMPRT/Concurrency::accelerator_view:version
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +49,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 78569f1ff21af3ed05cb908a851f0fe05d5d271a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f5e6fd5689cf034cc260649fa005f7dfe6e9fd69
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="acceleratorview-class"></a>accelerator_view (Clase)
@@ -61,32 +76,32 @@ class accelerator_view;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[create_marker (método)](#create_marker)|Devuelve un futuro para realizar un seguimiento de la finalización de todos los comandos enviados hasta ahora a este `accelerator_view` objeto.|  
-|[Flush (método)](#flush)|Envía todos los comandos pendientes en la cola de la `accelerator_view` objeto en el Acelerador para su ejecución.|  
-|[get_accelerator (método)](#get_accelerator)|Devuelve el objeto `accelerator` para el objeto `accelerator_view`.|  
-|[get_is_auto_selection (método)](#get_is_auto_selection)|Devuelve un valor booleano que indica si el tiempo de ejecución selecciona automáticamente un acelerador adecuado cuando la `accelerator_view` objeto se pasa a un [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
-|[get_is_debug (método)](#get_is_debug)|Devuelve un valor booleano que indica si la `accelerator_view` objeto tiene la capa de depuración habilitada para los informes de error importante.|  
-|[get_queuing_mode (método)](#get_queuing_mode)|Devuelve el modo de cola para el `accelerator_view` objeto.|  
-|[get_version (método)](#get_version)|Devuelve la versión de la `accelerator_view`.|  
-|[Wait (método)](#wait)|Espera a que todos los comandos que se envían a la `accelerator_view` objeto que se va a finalizar.|  
+|[create_marker](#create_marker)|Devuelve un futuro para realizar un seguimiento de la finalización de todos los comandos enviados hasta ahora a este `accelerator_view` objeto.|  
+|[flush](#flush)|Envía todos los comandos pendientes en la cola de la `accelerator_view` objeto en el Acelerador para su ejecución.|  
+|[get_accelerator](#get_accelerator)|Devuelve el objeto `accelerator` para el objeto `accelerator_view`.|  
+|[get_is_auto_selection](#get_is_auto_selection)|Devuelve un valor booleano que indica si el tiempo de ejecución selecciona automáticamente un acelerador adecuado cuando la `accelerator_view` objeto se pasa a un [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
+|[get_is_debug](#get_is_debug)|Devuelve un valor booleano que indica si la `accelerator_view` objeto tiene la capa de depuración habilitada para los informes de error importante.|  
+|[get_queuing_mode](#get_queuing_mode)|Devuelve el modo de cola para el `accelerator_view` objeto.|  
+|[get_version](#get_version)|Devuelve la versión de la `accelerator_view`.|  
+|[esperar](#wait)|Espera a que todos los comandos que se envían a la `accelerator_view` objeto que se va a finalizar.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[operador! = (operador)](#operator_neq)|Compara este `accelerator_view` objeto con otro y devuelve `false` si son iguales; en caso contrario, devuelve `true`.|  
-|[operador = (operador)](#operator_eq)|Copia el contenido del elemento `accelerator_view` objeto en éste.|  
-|[Operator == (operador)](#operator_eq_eq)|Compara este `accelerator_view` objeto con otro y devuelve `true` si son iguales; en caso contrario, devuelve `false`.|  
+|[operator!=](#operator_neq)|Compara este `accelerator_view` objeto con otro y devuelve `false` si son iguales; en caso contrario, devuelve `true`.|  
+|[operator=](#operator_eq)|Copia el contenido del elemento `accelerator_view` objeto en éste.|  
+|[operator==](#operator_eq_eq)|Compara este `accelerator_view` objeto con otro y devuelve `true` si son iguales; en caso contrario, devuelve `false`.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[Acelerador de miembro de datos](#accelerator)|Obtiene el objeto `accelerator` para el objeto `accelerator_view`.|  
-|[Miembro de datos de is_auto_selection](#is_auto_selection)|Obtiene un valor booleano que indica si el tiempo de ejecución selecciona automáticamente un acelerador adecuado cuando la `accelerator_view` objeto se pasa a un [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
-|[is_debug miembro de datos](#is_debug)|Obtiene un valor booleano que indica si la `accelerator_view` objeto tiene la capa de depuración habilitada para los informes de error importante.|  
-|[queuing_mode (miembro de datos)](#queuing_mode)|Obtiene el modo de cola para el `accelerator_view` objeto.|  
-|[Miembro de datos de la versión](#version)|Obtiene la versión del acelerador.|  
+|[Acelerador](#accelerator)|Obtiene el objeto `accelerator` para el objeto `accelerator_view`.|  
+|[is_auto_selection](#is_auto_selection)|Obtiene un valor booleano que indica si el tiempo de ejecución selecciona automáticamente un acelerador adecuado cuando la `accelerator_view` objeto se pasa a un [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
+|[is_debug](#is_debug)|Obtiene un valor booleano que indica si la `accelerator_view` objeto tiene la capa de depuración habilitada para los informes de error importante.|  
+|[queuing_mode](#queuing_mode)|Obtiene el modo de cola para el `accelerator_view` objeto.|  
+|[version](#version)|Obtiene la versión del acelerador.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `accelerator_view`  
@@ -103,7 +118,7 @@ class accelerator_view;
   
  **Espacio de nombres:** Concurrency  
 
-## <a name="a-nameacceleratora-accelerator"></a><a name="accelerator"></a>Acelerador 
+## <a name="accelerator"></a>Acelerador 
 
 Obtiene el objeto de aceleración para el objeto accelerator_view.  
   
@@ -113,7 +128,7 @@ Obtiene el objeto de aceleración para el objeto accelerator_view.
 __declspec(property(get= get_accelerator)) Concurrency::accelerator accelerator;  
 ```  
   
-## <a name="a-namectora-acceleratorview"></a><a name="ctor"></a>accelerator_view 
+## <a name="ctor"></a>accelerator_view 
 
 Inicializa una nueva instancia de la clase accelerator_view copiando una existente `accelerator_view` objeto.  
   
@@ -127,7 +142,7 @@ accelerator_view( const accelerator_view & _Other );
  `_Other`  
  La `accelerator_view` objeto que se va a copiar.  
   
-## <a name="a-nameacceleratorviewcreatemarkera-createmarker"></a><a name="accelerator_view__create_marker"></a>create_marker 
+## <a name="accelerator_view__create_marker"></a>create_marker 
 
 Devuelve un futuro para realizar un seguimiento de la finalización de todos los comandos enviados hasta ahora a este `accelerator_view` objeto.  
   
@@ -140,7 +155,7 @@ concurrency::completion_future create_marker();
 ### <a name="return-value"></a>Valor devuelto  
  Un futuro para realizar el seguimiento de la finalización de todos los comandos enviados hasta ahora a este `accelerator_view` objeto.  
   
-## <a name="a-nameflusha-flush"></a><a name="flush"></a>Vaciar 
+## <a name="flush"></a>Vaciar 
 
 Envía que todos los comandos pendientes en cola para el objeto accelerator_view para el Acelerador para su ejecución.  
   
@@ -153,7 +168,7 @@ void flush();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve `void`.  
 
-## <a name="a-nameacceleratorviewgetacceleratora-getaccelerator"></a><a name="accelerator_view__get_accelerator"></a>get_accelerator 
+## <a name="accelerator_view__get_accelerator"></a>get_accelerator 
 
 Devuelve el objeto de aceleración para el objeto accelerator_view.
 ### <a name="syntax"></a>Sintaxis
@@ -163,7 +178,7 @@ accelerator get_accelerator() const;
 ### <a name="return-value"></a>Valor devuelto
 El objeto de aceleración para el objeto accelerator_view.
 
-## <a name="a-nameacceleratorviewgetisautoselectiona-getisautoselection"></a><a name="accelerator_view__get_is_auto_selection"></a>get_is_auto_selection 
+## <a name="accelerator_view__get_is_auto_selection"></a>get_is_auto_selection 
 
 Devuelve un valor booleano que indica si el tiempo de ejecución selecciona automáticamente un acelerador adecuado cuando se pasa el accelerator_view a una [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).  
   
@@ -176,7 +191,7 @@ bool get_is_auto_selection() const;
 ### <a name="return-value"></a>Valor devuelto  
  `true`Si el tiempo de ejecución selecciona automáticamente un acelerador adecuado; de lo contrario, `false`.  
   
-## <a name="a-nameacceleratorviewgetisdebuga-getisdebug"></a><a name="accelerator_view__get_is_debug"></a>get_is_debug 
+## <a name="accelerator_view__get_is_debug"></a>get_is_debug 
 
 Devuelve un valor booleano que indica si el objeto accelerator_view tiene la capa de depuración habilitada para los informes de error importante.  
   
@@ -189,7 +204,7 @@ bool get_is_debug() const;
 ### <a name="return-value"></a>Valor devuelto  
  Un valor booleano que indica si la `accelerator_view` objeto tiene la capa de depuración habilitada para los informes de error importante.  
 
-## <a name="a-nameacceleratorviewgetqueuingmodea-getqueuingmode"></a><a name="accelerator_view__get_queuing_mode"></a>get_queuing_mode 
+## <a name="accelerator_view__get_queuing_mode"></a>get_queuing_mode 
 
 Devuelve el modo de cola para el objeto accelerator_view.  
   
@@ -202,7 +217,7 @@ queuing_mode get_queuing_mode() const;
 ### <a name="return-value"></a>Valor devuelto  
  El modo de cola para el `accelerator_view` objeto.  
   
-## <a name="a-nameacceleratorviewgetversiona-getversion"></a><a name="accelerator_view__get_version"></a>get_version 
+## <a name="accelerator_view__get_version"></a>get_version 
 
 Devuelve la versión de la accelerator_view.  
   
@@ -215,7 +230,7 @@ unsigned int get_version() const;
 ### <a name="return-value"></a>Valor devuelto  
  La versión de la `accelerator_view`.  
   
-## <a name="a-nameacceleratorviewisautoselectiona-isautoselection"></a><a name="accelerator_view__is_auto_selection"></a>is_auto_selection 
+## <a name="accelerator_view__is_auto_selection"></a>is_auto_selection 
 
 Obtiene un valor booleano que indica si el tiempo de ejecución selecciona automáticamente un acelerador adecuado cuando se pasa el accelerator_view a una [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).  
   
@@ -225,7 +240,7 @@ Obtiene un valor booleano que indica si el tiempo de ejecución selecciona autom
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;  
 ```  
   
-## <a name="a-nameacceleratorviewisdebuga-isdebug"></a><a name="accelerator_view__is_debug"></a>is_debug 
+## <a name="accelerator_view__is_debug"></a>is_debug 
 
 Obtiene un valor booleano que indica si el objeto accelerator_view tiene la capa de depuración habilitada para los informes de error importante.  
   
@@ -235,7 +250,7 @@ Obtiene un valor booleano que indica si el objeto accelerator_view tiene la capa
 __declspec(property(get= get_is_debug)) bool is_debug;  
 ```  
   
-## <a name="a-nameacceleratorviewoperatorneqa-operator"></a><a name="accelerator_view__operator_neq"></a>operador! = 
+## <a name="accelerator_view__operator_neq"></a>operador! = 
 
 Compara este objeto accelerator_view con otro y devuelve `false` si son iguales; en caso contrario, devuelve `true`.  
   
@@ -252,7 +267,7 @@ bool operator!= (    const accelerator_view & _Other ) const;
 ### <a name="return-value"></a>Valor devuelto  
  `false` si los dos objetos son iguales; de lo contrario, `true`.  
   
-## <a name="a-nameacceleratorviewoperatoreqa-operator"></a><a name="accelerator_view__operator_eq"></a>operador = 
+## <a name="accelerator_view__operator_eq"></a>operador = 
 
 Copia el contenido del objeto accelerator_view especificado en éste.  
   
@@ -269,7 +284,7 @@ accelerator_view & operator= (    const accelerator_view & _Other );
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia a la modificación `accelerator_view` objeto.  
   
-## <a name="a-nameacceleratorviewoperatoreqeqa-operator"></a><a name="accelerator_view__operator_eq_eq"></a>operador == 
+## <a name="accelerator_view__operator_eq_eq"></a>operador == 
 
 Compara este objeto accelerator_view con otro y devuelve `true` si son iguales; en caso contrario, devuelve `false`.  
   
@@ -286,7 +301,7 @@ bool operator= = (    const accelerator_view & _Other ) const;
 ### <a name="return-value"></a>Valor devuelto  
  `true` si los dos objetos son iguales; de lo contrario, `false`.  
   
-## <a name="a-nameacceleratorviewqueuingmodea-queuingmode"></a><a name="accelerator_view__queuing_mode"></a>queuing_mode 
+## <a name="accelerator_view__queuing_mode"></a>queuing_mode 
 
 Obtiene el modo de cola para el objeto accelerator_view.  
   
@@ -296,7 +311,7 @@ Obtiene el modo de cola para el objeto accelerator_view.
 __declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mode;  
 ```  
   
-## <a name="a-nameacceleratorviewversiona-version"></a><a name="accelerator_view__version"></a>Versión 
+## <a name="accelerator_view__version"></a>Versión 
 
 Obtiene la versión de la accelerator_view.  
   
@@ -306,7 +321,7 @@ Obtiene la versión de la accelerator_view.
 __declspec(property(get= get_version)) unsigned int version;  
 ```  
   
-## <a name="a-nameacceleratorviewwaita-wait"></a><a name="accelerator_view__wait"></a>esperar 
+## <a name="accelerator_view__wait"></a>esperar 
 
 Espera a que todos los comandos enviados al objeto accelerator_view Finalizar.  
   
@@ -322,7 +337,7 @@ void wait();
 #### <a name="remarks"></a>Comentarios  
  Si el [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) es `immediate`, este método vuelve inmediatamente sin bloquear.  
   
-##  <a name="a-namedtora-acceleratorview"></a><a name="dtor"></a>~ accelerator_view 
+##  <a name="dtor"></a>~ accelerator_view 
 
  Destruye el objeto accelerator_view.  
   
@@ -336,5 +351,5 @@ void wait();
   
  
 ## <a name="see-also"></a>Vea también  
- [Namespace de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Espacio de nombres de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAnimateCtrl
+- AFXCMN/CAnimateCtrl
+- AFXCMN/CAnimateCtrl::CAnimateCtrl
+- AFXCMN/CAnimateCtrl::Close
+- AFXCMN/CAnimateCtrl::Create
+- AFXCMN/CAnimateCtrl::CreateEx
+- AFXCMN/CAnimateCtrl::IsPlaying
+- AFXCMN/CAnimateCtrl::Open
+- AFXCMN/CAnimateCtrl::Play
+- AFXCMN/CAnimateCtrl::Seek
+- AFXCMN/CAnimateCtrl::Stop
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +118,7 @@ class CAnimateCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxcmn.h  
   
-##  <a name="a-namecanimatectrla--canimatectrlcanimatectrl"></a><a name="canimatectrl"></a>CAnimateCtrl::CAnimateCtrl  
+##  <a name="canimatectrl"></a>CAnimateCtrl::CAnimateCtrl  
  Construye un objeto `CAnimateCtrl`.  
   
 ```  
@@ -121,7 +131,7 @@ CAnimateCtrl();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCControlLadenDialog nº&56;](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]  
   
-##  <a name="a-nameclosea--canimatectrlclose"></a><a name="close"></a>CAnimateCtrl::Close  
+##  <a name="close"></a>CAnimateCtrl::Close  
  Cierra el clip AVI que se ha abierto previamente en el control de animación (si existe) y lo quita de la memoria.  
   
 ```  
@@ -134,7 +144,7 @@ BOOL Close();
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="a-namecreatea--canimatectrlcreate"></a><a name="create"></a>CAnimateCtrl::Create  
+##  <a name="create"></a>CAnimateCtrl::Create  
  Crea un control de animación y lo adjunta a un `CAnimateCtrl` objeto.  
   
 ```  
@@ -179,7 +189,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="a-namecreateexa--canimatectrlcreateex"></a><a name="createex"></a>CAnimateCtrl::CreateEx  
+##  <a name="createex"></a>CAnimateCtrl::CreateEx  
  Crea un control (una ventana secundaria) y lo asocia a la `CAnimateCtrl` objeto.  
   
 ```  
@@ -213,7 +223,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentarios  
  Utilice `CreateEx` en lugar de [crear](#create) para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_**.  
   
-##  <a name="a-nameisplayinga--canimatectrlisplaying"></a><a name="isplaying"></a>CAnimateCtrl::IsPlaying  
+##  <a name="isplaying"></a>CAnimateCtrl::IsPlaying  
  Indica si se trata de un clip de Audio y vídeo intercalado (AVI).  
   
 ```  
@@ -226,7 +236,7 @@ BOOL IsPlaying() const;
 ### <a name="remarks"></a>Comentarios  
  Este método envía el [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895) mensaje, que se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameopena--canimatectrlopen"></a><a name="open"></a>CAnimateCtrl::Open  
+##  <a name="open"></a>CAnimateCtrl::Open  
  Llame a esta función para abrir un clip AVI y mostrar su primer fotograma.  
   
 ```  
@@ -258,7 +268,7 @@ BOOL Open(UINT nID);
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="a-nameplaya--canimatectrlplay"></a><a name="play"></a>CAnimateCtrl::Play  
+##  <a name="play"></a>CAnimateCtrl::Play  
  Llame a esta función para reproducir un clip AVI en un control de animación.  
   
 ```  
@@ -287,7 +297,7 @@ BOOL Play(
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="a-nameseeka--canimatectrlseek"></a><a name="seek"></a>CAnimateCtrl::Seek  
+##  <a name="seek"></a>CAnimateCtrl::Seek  
  Llame a esta función para mostrar estáticamente un solo fotograma del clip AVI.  
   
 ```  
@@ -307,7 +317,7 @@ BOOL Seek(UINT nTo);
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="a-namestopa--canimatectrlstop"></a><a name="stop"></a>CAnimateCtrl::Stop  
+##  <a name="stop"></a>CAnimateCtrl::Stop  
  Llame a esta función para detener la reproducción un clip AVI en un control de animación.  
   
 ```  

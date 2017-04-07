@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CWinTraitsOR
-- ATL::CWinTraitsOR
 - CWinTraitsOR
+- ATLWIN/ATL::CWinTraitsOR
+- ATLWIN/ATL::CWinTraitsOR::GetWndExStyle
+- ATLWIN/ATL::CWinTraitsOR::GetWndStyle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +84,7 @@ class CWinTraitsOR
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
   
-##  <a name="a-namegetwndstylea--cwintraitsorgetwndstyle"></a><a name="getwndstyle"></a>CWinTraitsOR::GetWndStyle  
+##  <a name="getwndstyle"></a>CWinTraitsOR::GetWndStyle  
  Llame a esta función para recuperar una combinación (mediante el operador lógico OR) de los estilos estándar de la `CWinTraits` objeto y los estilos predeterminados especificados por `t_dwStyle`.  
   
 ```
@@ -97,7 +98,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 ### <a name="return-value"></a>Valor devuelto  
  Una combinación de estilos que se pasan en `dwStyle` y el valor predeterminado que los especificados por `t_dwStyle`, mediante el operador lógico OR.  
   
-##  <a name="a-namegetwndexstylea--cwintraitsorgetwndexstyle"></a><a name="getwndexstyle"></a>CWinTraitsOR::GetWndExStyle  
+##  <a name="getwndexstyle"></a>CWinTraitsOR::GetWndExStyle  
  Llame a esta función para recuperar una combinación (mediante el operador lógico OR) de los estilos extendidos de la `CWinTraits` objeto y los estilos predeterminados especificados por `t_dwStyle`.  
   
 ```

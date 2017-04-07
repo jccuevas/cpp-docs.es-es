@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFieldExchange
+- AFXDB/CFieldExchange
+- AFXDB/CFieldExchange::IsFieldType
+- AFXDB/CFieldExchange::SetFieldType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +92,7 @@ class CFieldExchange
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdb.h  
   
-##  <a name="a-nameisfieldtypea--cfieldexchangeisfieldtype"></a><a name="isfieldtype"></a>CFieldExchange::IsFieldType  
+##  <a name="isfieldtype"></a>CFieldExchange::IsFieldType  
  Si escribe su propia función RFX, llame a `IsFieldType` al principio de la función para determinar si puede realizar la operación actual en un tipo de miembro de datos campo o parámetro determinado (una **CFieldExchange::outputColumn**, **CFieldExchange::inputParam**, **CFieldExchange::param**, **CFieldExchange::outputParam**, o **CFieldExchange::inoutParam**).  
   
 ```  
@@ -106,7 +109,7 @@ BOOL IsFieldType(UINT* pnField);
 ### <a name="remarks"></a>Comentarios  
  Seguir el modelo de las funciones de RFX existentes.  
   
-##  <a name="a-namesetfieldtypea--cfieldexchangesetfieldtype"></a><a name="setfieldtype"></a>CFieldExchange:: SetFieldType  
+##  <a name="setfieldtype"></a>CFieldExchange:: SetFieldType  
  Necesita una llamada a `SetFieldType` en la clase de conjunto de registros [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) o [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) invalidar.  
   
 ```  

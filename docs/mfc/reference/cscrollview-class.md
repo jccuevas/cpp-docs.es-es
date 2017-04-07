@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CScrollView
+- AFXWIN/CScrollView
+- AFXWIN/CScrollView::CScrollView
+- AFXWIN/CScrollView::CheckScrollBars
+- AFXWIN/CScrollView::FillOutsideRect
+- AFXWIN/CScrollView::GetDeviceScrollPosition
+- AFXWIN/CScrollView::GetDeviceScrollSizes
+- AFXWIN/CScrollView::GetScrollPosition
+- AFXWIN/CScrollView::GetTotalSize
+- AFXWIN/CScrollView::ResizeParentToFit
+- AFXWIN/CScrollView::ScrollToPosition
+- AFXWIN/CScrollView::SetScaleToFitSize
+- AFXWIN/CScrollView::SetScrollSizes
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +134,7 @@ class CScrollView : public CView
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h  
   
-##  <a name="a-namecheckscrollbarsa--cscrollviewcheckscrollbars"></a><a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
+##  <a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
  Llame a esta función miembro para determinar si la vista de desplazamiento tiene barras horizontales y verticales.  
   
 ```  
@@ -138,7 +150,7 @@ void CheckScrollBars(
  *bHasVertBar*  
  Indica que la aplicación tiene una barra de desplazamiento vertical.  
   
-##  <a name="a-namecscrollviewa--cscrollviewcscrollview"></a><a name="cscrollview"></a>CScrollView::CScrollView  
+##  <a name="cscrollview"></a>CScrollView::CScrollView  
  Construye un objeto `CScrollView`.  
   
 ```  
@@ -148,7 +160,7 @@ CScrollView();
 ### <a name="remarks"></a>Comentarios  
  Debe llamar `SetScrollSizes` o `SetScaleToFitSize` antes el desplazamiento es utilizable vista.  
   
-##  <a name="a-namefilloutsiderecta--cscrollviewfilloutsiderect"></a><a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
+##  <a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
  Llame a `FillOutsideRect` para rellenar el área de la vista que aparece fuera del área desplazable.  
   
 ```  
@@ -170,7 +182,7 @@ void FillOutsideRect(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView&#164;](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
-##  <a name="a-namegetdevicescrollpositiona--cscrollviewgetdevicescrollposition"></a><a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
+##  <a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
  Llame a `GetDeviceScrollPosition` cuando necesite las posiciones actuales de horizontales y verticales de los cuadros de desplazamiento en las barras de desplazamiento.  
   
 ```  
@@ -185,7 +197,7 @@ CPoint GetDeviceScrollPosition() const;
   
  `GetDeviceScrollPosition`Devuelve valores en unidades del dispositivo. Si desea que las unidades lógicas, use `GetScrollPosition` en su lugar.  
   
-##  <a name="a-namegetdevicescrollsizesa--cscrollviewgetdevicescrollsizes"></a><a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
+##  <a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
  `GetDeviceScrollSizes`Obtiene los tamaños de página y de línea de la vista desplazable, el tamaño total y el modo de asignación actual.  
   
 ```  
@@ -212,7 +224,7 @@ void GetDeviceScrollSizes(
 ### <a name="remarks"></a>Comentarios  
  Los tamaños se encuentran en unidades del dispositivo. Raramente se llama a esta función miembro.  
   
-##  <a name="a-namegetscrollpositiona--cscrollviewgetscrollposition"></a><a name="getscrollposition"></a>CScrollView::GetScrollPosition  
+##  <a name="getscrollposition"></a>CScrollView::GetScrollPosition  
  Llame a `GetScrollPosition` cuando necesite las posiciones actuales de horizontales y verticales de los cuadros de desplazamiento en las barras de desplazamiento.  
   
 ```  
@@ -227,7 +239,7 @@ CPoint GetScrollPosition() const;
   
  `GetScrollPosition`Devuelve valores de unidades lógicas. Si desea que las unidades de dispositivo, use `GetDeviceScrollPosition` en su lugar.  
   
-##  <a name="a-namegettotalsizea--cscrollviewgettotalsize"></a><a name="gettotalsize"></a>CScrollView::GetTotalSize  
+##  <a name="gettotalsize"></a>CScrollView::GetTotalSize  
  Llame a `GetTotalSize` para recuperar los tamaños horizontales y verticales actuales de la vista de desplazamiento.  
   
 ```  
@@ -237,7 +249,7 @@ CSize GetTotalSize() const;
 ### <a name="return-value"></a>Valor devuelto  
  El tamaño total de la vista de desplazamiento en unidades lógicas. Es el tamaño horizontal de la **cx** miembro de la `CSize` valor devuelto. Es el tamaño vertical de la **cy** miembro.  
   
-##  <a name="a-nameresizeparenttofita--cscrollviewresizeparenttofit"></a><a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
+##  <a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
  Llame a `ResizeParentToFit` para permitir que el tamaño de la vista determinan el tamaño de su ventana de marco.  
   
 ```  
@@ -255,7 +267,7 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
   
  [!code-cpp[NVC_MFCDocView&#165;](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="a-namescrolltopositiona--cscrollviewscrolltoposition"></a><a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
+##  <a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
  Llame a `ScrollToPosition` para desplazarse a un punto determinado en la vista.  
   
 ```  
@@ -269,7 +281,7 @@ void ScrollToPosition(POINT pt);
 ### <a name="remarks"></a>Comentarios  
  Se puede desplazar la vista para que este punto está en la esquina superior izquierda de la ventana. Esta función miembro no debe llamarse si la vista se escala para ajustarse.  
   
-##  <a name="a-namesetscaletofitsizea--cscrollviewsetscaletofitsize"></a><a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
+##  <a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
  Llame a `SetScaleToFitSize` cuando desea escalar el tamaño de la ventanilla para el tamaño actual de la ventana automáticamente.  
   
 ```  
@@ -291,7 +303,7 @@ void SetScaleToFitSize(SIZE sizeTotal);
   
  [!code-cpp[NVC_MFCDocView&#165;](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="a-namesetscrollsizesa--cscrollviewsetscrollsizes"></a><a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
+##  <a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
  Llame a `SetScrollSizes` cuando la vista está a punto de actualizar.  
   
 ```  

@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComSingleThreadModel
 - CComSingleThreadModel
-- ATL::CComSingleThreadModel
+- ATLBASE/ATL::CComSingleThreadModel
+- ATLBASE/ATL::CComSingleThreadModel::AutoCriticalSection
+- ATLBASE/ATL::CComSingleThreadModel::CriticalSection
+- ATLBASE/ATL::CComSingleThreadModel::ThreadModelNoCS
+- ATLBASE/ATL::CComSingleThreadModel::Decrement
+- ATLBASE/ATL::CComSingleThreadModel::Increment
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +91,7 @@ class CComSingleThreadModel
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
   
-##  <a name="a-nameautocriticalsectiona--ccomsinglethreadmodelautocriticalsection"></a><a name="autocriticalsection"></a>CComSingleThreadModel::AutoCriticalSection  
+##  <a name="autocriticalsection"></a>CComSingleThreadModel::AutoCriticalSection  
  Al usar `CComSingleThreadModel`, `typedef` nombre `AutoCriticalSection` hace referencia a clase [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).  
   
 ```
@@ -110,7 +114,7 @@ typedef CComFakeCriticalSection AutoCriticalSection;
 ### <a name="example"></a>Ejemplo  
  Consulte [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).  
   
-##  <a name="a-namecriticalsectiona--ccomsinglethreadmodelcriticalsection"></a><a name="criticalsection"></a>CComSingleThreadModel::CriticalSection  
+##  <a name="criticalsection"></a>CComSingleThreadModel::CriticalSection  
  Al usar `CComSingleThreadModel`, `typedef` nombre `CriticalSection` hace referencia a clase [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).  
   
 ```
@@ -133,7 +137,7 @@ typedef CComFakeCriticalSection CriticalSection;
 ### <a name="example"></a>Ejemplo  
  Consulte [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).  
   
-##  <a name="a-namedecrementa--ccomsinglethreadmodeldecrement"></a><a name="decrement"></a>CComSingleThreadModel::Decrement  
+##  <a name="decrement"></a>CComSingleThreadModel::Decrement  
  Este disminuye función estática el valor de la variable apunta a `p`.  
   
 ```
@@ -147,7 +151,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 ### <a name="return-value"></a>Valor devuelto  
  El resultado de la reducción.  
   
-##  <a name="a-nameincrementa--ccomsinglethreadmodelincrement"></a><a name="increment"></a>CComSingleThreadModel::Increment  
+##  <a name="increment"></a>CComSingleThreadModel::Increment  
  Este disminuye función estática el valor de la variable apunta a `p`.  
   
 ```
@@ -161,7 +165,7 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 ### <a name="return-value"></a>Valor devuelto  
  El resultado del incremento.  
   
-##  <a name="a-namethreadmodelnocsa--ccomsinglethreadmodelthreadmodelnocs"></a><a name="threadmodelnocs"></a>CComSingleThreadModel::ThreadModelNoCS  
+##  <a name="threadmodelnocs"></a>CComSingleThreadModel::ThreadModelNoCS  
  Al usar `CComSingleThreadModel`, `typedef` nombre `ThreadModelNoCS` simplemente hace referencia a `CComSingleThreadModel`.  
   
 ```

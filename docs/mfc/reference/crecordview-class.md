@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRecordView
+- AFXDB/CRecordView
+- AFXDB/CRecordView::CRecordView
+- AFXDB/CRecordView::IsOnFirstRecord
+- AFXDB/CRecordView::IsOnLastRecord
+- AFXDB/CRecordView::OnGetRecordset
+- AFXDB/CRecordView::OnMove
+- AFXDB/CRecordView::OnMove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +115,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdb.h  
   
-##  <a name="a-namecrecordviewa--crecordviewcrecordview"></a><a name="crecordview"></a>CRecordView::CRecordView  
+##  <a name="crecordview"></a>CRecordView::CRecordView  
  Cuando se crea un objeto de un tipo derivado de `CRecordView`, llame a cualquiera de las formas del constructor para inicializar el objeto de vista e identificar el recurso de cuadro de diálogo en el que se basa la vista.  
   
 ```  
@@ -137,7 +144,7 @@ explicit CRecordView(UINT nIDTemplate);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDatabase&#32;](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
   
-##  <a name="a-nameisonfirstrecorda--crecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>CRecordView::IsOnFirstRecord  
  Llame a esta función miembro para determinar si el registro actual es el primer registro en el objeto de conjunto de registros asociado a esta vista de registro.  
   
 ```  
@@ -152,7 +159,7 @@ BOOL IsOnFirstRecord();
   
  Si el usuario se mueve al primer registro, el marco de trabajo deshabilita los objetos de interfaz de usuario que tiene para mover a la primera o en el registro anterior.  
   
-##  <a name="a-nameisonlastrecorda--crecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>CRecordView::IsOnLastRecord  
  Llame a esta función miembro para determinar si el registro actual es el último registro en el objeto de conjunto de registros asociado a esta vista de registro.  
   
 ```  
@@ -168,7 +175,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  El resultado de esta función es confiable, salvo que la vista no puede detectar el final del conjunto de registros hasta que el usuario se desplazó péguela. El usuario debe pasar más allá del último registro antes de la vista de registros puede indicar que deben deshabilitar los objetos de la interfaz de usuario para desplazarse al siguiente o al último registro. Si el usuario se mueve más allá del último registro y, a continuación, desplaza al último registro (o anterior), la vista de registros puede realizar un seguimiento de la posición del usuario en el conjunto de registros y deshabilitar correctamente los objetos de la interfaz de usuario. `IsOnLastRecord`También es poco confiable después de una llamada a la función de implementación **OnRecordLast**, que controla el `ID_RECORD_LAST` comando, o `CRecordset::MoveLast`.  
   
-##  <a name="a-nameongetrecordseta--crecordviewongetrecordset"></a><a name="ongetrecordset"></a>CRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>CRecordView::OnGetRecordset  
  Devuelve un puntero a la `CRecordset`-derivadas objeto asociado a la vista de registros.  
   
 ```  
@@ -183,7 +190,7 @@ virtual CRecordset* OnGetRecordset() = 0;
   
  Para obtener más información y ejemplos, vea el artículo [vistas de registros: utilizar una vista de registros](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="a-nameonmovea--crecordviewonmove"></a><a name="onmove"></a>CRecordView::OnMove  
+##  <a name="onmove"></a>CRecordView::OnMove  
  Llame a esta función miembro para moverse a un registro diferente del conjunto de registros y mostrar sus campos en los controles de la vista de registros.  
   
 ```  

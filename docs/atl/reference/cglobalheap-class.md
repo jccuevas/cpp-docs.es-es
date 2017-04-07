@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CGlobalHeap
-- ATL::CGlobalHeap
 - CGlobalHeap
+- ATLMEM/ATL::CGlobalHeap
+- ATLMEM/ATL::CGlobalHeap::Allocate
+- ATLMEM/ATL::CGlobalHeap::Free
+- ATLMEM/ATL::CGlobalHeap::GetSize
+- ATLMEM/ATL::CGlobalHeap::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +84,7 @@ class CGlobalHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlmem.h  
   
-##  <a name="a-nameallocatea--cglobalheapallocate"></a><a name="allocate"></a>CGlobalHeap::Allocate  
+##  <a name="allocate"></a>CGlobalHeap::Allocate  
  Llame a este método para asignar un bloque de memoria.  
   
 ```
@@ -100,7 +103,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implementa mediante [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) con un parámetro de marca de **GMEM_FIXED**.  
   
-##  <a name="a-namefreea--cglobalheapfree"></a><a name="free"></a>CGlobalHeap::Free  
+##  <a name="free"></a>CGlobalHeap::Free  
  Llame a este método para liberar un bloque de memoria asignada por el Administrador de memoria.  
   
 ```
@@ -114,7 +117,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Comentarios  
  Implementa mediante [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579).  
   
-##  <a name="a-namegetsizea--cglobalheapgetsize"></a><a name="getsize"></a>CGlobalHeap::GetSize  
+##  <a name="getsize"></a>CGlobalHeap::GetSize  
  Llame a este método para obtener el tamaño de un bloque de memoria asignado por el Administrador de memoria asignado.  
   
 ```
@@ -131,7 +134,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Comentarios  
  Implementa mediante [GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593).  
   
-##  <a name="a-namereallocatea--cglobalheapreallocate"></a><a name="reallocate"></a>CGlobalHeap::Reallocate  
+##  <a name="reallocate"></a>CGlobalHeap::Reallocate  
  Llame a este método para reasignar la memoria asignada por este administrador de memoria.  
   
 ```

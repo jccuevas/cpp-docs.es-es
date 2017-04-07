@@ -9,9 +9,27 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlArray
-- ATL.CAtlArray
 - CAtlArray
+- ATLCOLL/ATL::CAtlArray
+- ATLCOLL/ATL::Add
+- ATLCOLL/ATL::Append
+- ATLCOLL/ATL::AssertValid
+- ATLCOLL/ATL::CAtlArray
+- ATLCOLL/ATL::Copy
+- ATLCOLL/ATL::FreeExtra
+- ATLCOLL/ATL::GetAt
+- ATLCOLL/ATL::GetCount
+- ATLCOLL/ATL::GetData
+- ATLCOLL/ATL::InsertArrayAt
+- ATLCOLL/ATL::InsertAt
+- ATLCOLL/ATL::IsEmpty
+- ATLCOLL/ATL::RemoveAll
+- ATLCOLL/ATL::RemoveAt
+- ATLCOLL/ATL::SetAt
+- ATLCOLL/ATL::SetAtGrow
+- ATLCOLL/ATL::SetCount
+- ATLCOLL/ATL::INARGTYPE
+- ATLCOLL/ATL::OUTARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +127,7 @@ class CAtlArray
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcoll.h  
   
-##  <a name="a-nameadda--catlarrayadd"></a><a name="add"></a>CAtlArray::Add  
+##  <a name="add"></a>CAtlArray::Add  
  Llame a este método para agregar un elemento al objeto array.  
   
 ```
@@ -130,7 +148,7 @@ size_t Add();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[1 NVC_ATL_Utilities](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]  
   
-##  <a name="a-nameappenda--catlarrayappend"></a><a name="append"></a>CAtlArray::Append  
+##  <a name="append"></a>CAtlArray::Append  
  Llame a este método para agregar el contenido de una matriz al final de la otra.  
   
 ```
@@ -154,7 +172,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities&#2;](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]  
   
-##  <a name="a-nameassertvalida--catlarrayassertvalid"></a><a name="assertvalid"></a>CAtlArray::AssertValid  
+##  <a name="assertvalid"></a>CAtlArray::AssertValid  
  Llamar a este método para confirmar que el objeto de matriz es válido.  
   
 ```
@@ -167,7 +185,7 @@ void AssertValid() const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities&3;](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]  
   
-##  <a name="a-namecatlarraya--catlarraycatlarray"></a><a name="catlarray"></a>CAtlArray::CAtlArray  
+##  <a name="catlarray"></a>CAtlArray::CAtlArray  
  El constructor.  
   
 ```
@@ -180,7 +198,7 @@ CAtlArray() throw();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities Nº&4;](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]  
   
-##  <a name="a-namedtora--catlarraycatlarray"></a><a name="dtor"></a>CAtlArray:: ~ CAtlArray  
+##  <a name="dtor"></a>CAtlArray:: ~ CAtlArray  
  Destructor.  
   
 ```
@@ -190,7 +208,7 @@ CAtlArray() throw();
 ### <a name="remarks"></a>Comentarios  
  Libera los recursos utilizados por el objeto de matriz.  
   
-##  <a name="a-namecopya--catlarraycopy"></a><a name="copy"></a>CAtlArray::Copy  
+##  <a name="copy"></a>CAtlArray::Copy  
  Llame a este método para copiar los elementos de una matriz a otra.  
   
 ```
@@ -214,7 +232,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities&#5;](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]  
   
-##  <a name="a-namefreeextraa--catlarrayfreeextra"></a><a name="freeextra"></a>CAtlArray::FreeExtra  
+##  <a name="freeextra"></a>CAtlArray::FreeExtra  
  Llame a este método para quitar los elementos vacíos de la matriz.  
   
 ```
@@ -226,7 +244,7 @@ void FreeExtra() throw();
   
  En compilaciones de depuración, se generará una ATLASSERT si el objeto CAtlArray no es válido o si la matriz es mayor que su tamaño máximo.  
   
-##  <a name="a-namegetata--catlarraygetat"></a><a name="getat"></a>CAtlArray::GetAt  
+##  <a name="getat"></a>CAtlArray::GetAt  
  Llamada a que este método recupera un único elemento del objeto de matriz.  
   
 ```
@@ -247,7 +265,7 @@ E& GetAt(size_t iElement) throw();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities Nº&6;](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]  
   
-##  <a name="a-namegetcounta--catlarraygetcount"></a><a name="getcount"></a>CAtlArray::GetCount  
+##  <a name="getcount"></a>CAtlArray::GetCount  
  Llame a este método para devolver el número de elementos almacenados en la matriz.  
   
 ```
@@ -263,7 +281,7 @@ size_t GetCount() const throw();
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [CAtlArray::GetAt](#getat).  
   
-##  <a name="a-namegetdataa--catlarraygetdata"></a><a name="getdata"></a>CAtlArray::GetData  
+##  <a name="getdata"></a>CAtlArray::GetData  
  Llame a este método para devolver un puntero al primer elemento de la matriz.  
   
 ```
@@ -277,14 +295,14 @@ const E* GetData() const throw();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities&#7;](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]  
   
-##  <a name="a-nameinargtypea--catlarrayinargtype"></a><a name="inargtype"></a>CAtlArray::INARGTYPE  
+##  <a name="inargtype"></a>CAtlArray::INARGTYPE  
  El tipo de datos que se usará para agregar elementos a la matriz.  
   
 ```
 typedef ETraits::INARGTYPE INARGTYPE;
 ```  
   
-##  <a name="a-nameinsertarrayata--catlarrayinsertarrayat"></a><a name="insertarrayat"></a>CAtlArray::InsertArrayAt  
+##  <a name="insertarrayat"></a>CAtlArray::InsertArrayAt  
  Llamar a este método para insertar una matriz a otra.  
   
 ```
@@ -309,7 +327,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities Nº&8;](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]  
   
-##  <a name="a-nameinsertata--catlarrayinsertat"></a><a name="insertat"></a>CAtlArray::InsertAt  
+##  <a name="insertat"></a>CAtlArray::InsertAt  
  Llamar a este método para insertar un nuevo elemento (o varias copias de un elemento) en el objeto de matriz.  
   
 ```
@@ -334,7 +352,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities&#9;](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]  
   
-##  <a name="a-nameisemptya--catlarrayisempty"></a><a name="isempty"></a>CAtlArray::IsEmpty  
+##  <a name="isempty"></a>CAtlArray::IsEmpty  
  Llamar a este método para comprobar si la matriz está vacía.  
   
 ```
@@ -350,7 +368,7 @@ bool IsEmpty() const throw();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities&#10;](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]  
   
-##  <a name="a-nameoperatorata--catlarrayoperator-"></a><a name="operator_at"></a>[] CAtlArray::operator  
+##  <a name="operator_at"></a>[] CAtlArray::operator  
  Llame a este operador para devolver una referencia a un elemento de la matriz.  
   
 ```
@@ -370,14 +388,14 @@ const E& operator[](size_t ielement) const throw();
   
  En compilaciones de depuración, se generará una ATLASSERT si `iElement` supera el número total de elementos de la matriz. En las compilaciones comerciales, un parámetro incorrecto puede provocar resultados imprevisibles.  
   
-##  <a name="a-nameoutargtypea--catlarrayoutargtype"></a><a name="outargtype"></a>CAtlArray::OUTARGTYPE  
+##  <a name="outargtype"></a>CAtlArray::OUTARGTYPE  
  El tipo de datos que se usará para recuperar los elementos de la matriz.  
   
 ```
 typedef ETraits::OUTARGTYPE OUTARGTYPE;
 ```  
   
-##  <a name="a-nameremovealla--catlarrayremoveall"></a><a name="removeall"></a>CAtlArray::RemoveAll  
+##  <a name="removeall"></a>CAtlArray::RemoveAll  
  Llame a este método para quitar todos los elementos del objeto de matriz.  
   
 ```
@@ -392,7 +410,7 @@ void RemoveAll() throw();
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [CAtlArray::IsEmpty](#isempty).  
   
-##  <a name="a-nameremoveata--catlarrayremoveat"></a><a name="removeat"></a>CAtlArray::RemoveAt  
+##  <a name="removeat"></a>CAtlArray::RemoveAt  
  Llame a este método para quitar uno o más elementos de la matriz.  
   
 ```
@@ -414,7 +432,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities&#11;](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]  
   
-##  <a name="a-namesetata--catlarraysetat"></a><a name="setat"></a>CAtlArray::SetAt  
+##  <a name="setat"></a>CAtlArray::SetAt  
  Llamar a este método para establecer el valor de un elemento en el objeto de matriz.  
   
 ```
@@ -434,7 +452,7 @@ void SetAt(size_t iElement, INARGTYPE element);
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [CAtlArray::GetAt](#getat).  
   
-##  <a name="a-namesetcounta--catlarraysetcount"></a><a name="setcount"></a>CAtlArray::SetCount  
+##  <a name="setcount"></a>CAtlArray::SetCount  
  Llamar a este método para establecer el tamaño del objeto de matriz.  
   
 ```
@@ -459,7 +477,7 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [CAtlArray::GetData](#getdata).  
   
-##  <a name="a-namesetatgrowa--catlarraysetatgrow"></a><a name="setatgrow"></a>CAtlArray::SetAtGrow  
+##  <a name="setatgrow"></a>CAtlArray::SetAtGrow  
  Llamar a este método para establecer el valor de un elemento en el objeto de matriz, expandir la matriz según sea necesario.  
   
 ```

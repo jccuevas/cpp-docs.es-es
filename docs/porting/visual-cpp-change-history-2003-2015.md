@@ -33,8 +33,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 7ff37399842c7c8d41f8b7d15660c73b8a11f19f
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historial de cambios en Visual C++ 2003-2015
@@ -58,9 +59,9 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
 4.  [Cambios importantes en el Runtime de simultaneidad](#BK_ConcRT)  
   
-## <a name="a-namevc2015a-visual-c-2015-conformance-changes"></a><a name="VC_2015"></a> Cambios de conformidad de Visual C++ 2015  
+## <a name="VC_2015"></a> Cambios de conformidad de Visual C++ 2015  
   
-###  <a name="a-namebkcrta-c-runtime-library-crt"></a><a name="BK_CRT"></a> Biblioteca en tiempo de ejecución de C (CRT)  
+###  <a name="BK_CRT"></a> Biblioteca en tiempo de ejecución de C (CRT)  
   
 #### <a name="general-changes"></a>Cambios generales  
   
@@ -180,7 +181,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
 -   **Precisión de %A y %a** La precisión predeterminada de los especificadores de formato %A y %a era de 6 en versiones anteriores de la biblioteca. La precisión predeterminada es ahora de 13, de conformidad con el estándar de C.  
   
-     Se trata de un cambio de comportamiento en tiempo de ejecución en la salida de cualquier función que usa una cadena de formato con %A o %a. En el comportamiento anterior, la salida que usaba el especificador %A podía ser “1.1A2B3Cp+111”. Ahora, la salida para el mismo valor es “1.1A2B3C4D5E6F7p+111”. Para obtener el comportamiento anterior, puede especificar la precisión, por ejemplo, %.6A. Consulte [Especificación de precisión](../c-runtime-library/precision-specification.md).  
+     Se trata de un cambio de comportamiento en tiempo de ejecución en la salida de cualquier función que usa una cadena de formato con %A o %a. En el comportamiento anterior, la salida que usaba el especificador %A podía ser “1.1A2B3Cp+111”. Ahora, la salida para el mismo valor es “1.1A2B3C4D5E6F7p+111”. Para obtener el comportamiento anterior, puede especificar la precisión, por ejemplo, %.6A. Consulte [Especificación de precisión](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).  
   
 -   **Especificador %F** Ahora se admite el especificador de formato/conversión %F. Es funcionalmente equivalente al especificador de formato %f, salvo que el formato de los valores infinitos y NaN es con letras mayúsculas.  
   
@@ -252,7 +253,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
 -   **CLOCKS_PER_SEC** La macro CLOCKS_PER_SEC ahora se expande a un entero de tipo clock_t, tal como exige el lenguaje C.  
   
-####  <a name="a-namebkstla-c-standard-library"></a><a name="BK_STL"></a> Biblioteca estándar de C++  
+####  <a name="BK_STL"></a> Biblioteca estándar de C++  
  Para habilitar nuevas optimizaciones y comprobaciones de depuración, la implementación de Visual Studio de la Biblioteca estándar de C++ interrumpe deliberadamente la compatibilidad binaria de una versión a la siguiente. Por consiguiente, cuando se utiliza la Biblioteca estándar de C++, los archivos de objetos y las bibliotecas estáticas que se han compilado con versiones diferentes no se pueden combinar en un binario (EXE o DLL), y los objetos de la Biblioteca estándar de C++ no se pueden pasar entre los archivos binarios que se han compilado con versiones diferentes. Una combinación de este estilo emite errores del vinculador sobre discordancias _MSC_VER. (_MSC_VER es la macro que contiene la versión principal del compilador, por ejemplo, 1800 para Visual Studio 2013). Esta comprobación no detecta la combinación de archivos DLL ni detecta combinaciones que impliquen Visual C++ 2008 o versiones anteriores.  
   
 -   **Archivos de inclusión de la biblioteca estándar de C++** Se han realizado algunos cambios en la estructura include de los encabezados de la biblioteca estándar de C++. Los encabezados de la biblioteca estándar de C++ pueden incluirse entre sí de maneras no especificadas. En general, debe escribir el código para que incluya todos los encabezados necesarios según el estándar de C++ y que no se base en las inclusiones mutuas entre encabezados de bibliotecas estándar de C++. Con esto se logra que el código sea portable entre versiones y plataformas. Al menos dos de los cambios en [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] afectan al código de usuario. En primer lugar, \<string> ya no incluye \<iterator>. En segundo lugar, ahora \<tuple> declara std::array sin incluir todas las \<array>. Esto puede dañar el código a través de la siguiente combinación de construcciones de código: el código tiene una variable denominada “array” y tiene una directiva using “using namespace std;” y se incluye un encabezado de biblioteca estándar de C++ (por ejemplo, \<functional>) que incluye \<tuple>, que ahora declara std::array.  
@@ -315,13 +316,13 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
 -   **Directivas launch::any y launch::sync** The nonstandard Directivas launch::any y launch::sync were removed. En su lugar, para launch::any, use launch:async &#124; launch:deferred. Para launch::sync, use launch::deferred. Consulte [Launch (enumeración)](../standard-library/future-enums.md#launch_enumeration).  
   
-####  <a name="a-namebkmfca-mfc-and-atl"></a><a name="BK_MFC"></a> MFC y ATL  
+####  <a name="BK_MFC"></a> MFC y ATL  
   
 -   Debido a su gran tamaño,**Microsoft Foundation Classes (MFC)** ya no se incluye en la instalación “típica” de Visual Studio. Para instalar MFC, elija la opción de instalación personalizada en el programa de instalación de Visual Studio 2015. Si ya tiene instalado Visual Studio 2015 y desea instalar MFC, vuelva a ejecutar el programa de instalación de Visual Studio, elija la opción de instalación personalizada y elija Microsoft Foundation Classes. Puede volver a ejecutar el programa de instalación de Visual Studio desde el Panel de control, Programas y características, o desde el medio de instalación.  
   
      El paquete redistribuible de Visual C++ todavía incluye esta biblioteca.  
   
-####  <a name="a-namebkconcrta-concurrency-runtime"></a><a name="BK_ConcRT"></a> Runtime de simultaneidad  
+####  <a name="BK_ConcRT"></a> Runtime de simultaneidad  
   
 -   **Macro Yield de Windows.h en conflicto con concurrency::Context::Yield** El Runtime de simultaneidad usaba anteriormente #undef para anular las definiciones de la macro Yield a fin de evitar conflictos entre la macro Yield definida en Windows.h h y la función concurrency::Context::Yield. Se ha quitado #undef y se ha agregado una nueva llamada de API equivalente que no crea un conflicto: [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution). Para evitar conflictos con Yield, puede actualizar el código para llamar a la función YieldExecution o incluya el nombre de la función Yield entre paréntesis en los sitios de llamada, como en el ejemplo siguiente:  
   
@@ -346,7 +347,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
 -   [Mejoras de conformidad en Update 3](#VS_Update3)  
   
-###  <a name="a-namevsrtma-conformance-improvements-in-visual-c-2015"></a><a name="VS_RTM"></a> Mejoras de conformidad en Visual C++ 2015  
+###  <a name="VS_RTM"></a> Mejoras de conformidad en Visual C++ 2015  
   
 -   /Zc:forScope- (opción)  
   
@@ -861,7 +862,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
      Tanto en [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] como en [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)], el compilador genera un constructor de copias para una clase si esa clase tiene un constructor de movimiento definido por el usuario, pero ningún constructor de copias definido por el usuario. En Dev14, este constructor de copias generado implícitamente también se marca como "= delete".  
   
-###  <a name="a-namevsupdate1a-conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> Mejoras de conformidad en Update 1  
+###  <a name="VS_Update1"></a> Mejoras de conformidad en Update 1  
   
 -   **Clases base virtuales privadas y herencia indirecta**  
   
@@ -948,7 +949,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
      Además, aunque el compilador no ofrece un diagnóstico específico, se considera que el operador en línea nuevo está mal formado.  
   
--   **Llamada a “operator *type*()” (conversión definida por el usuario) en tipos que no son de clase**  
+-   **Llamada a “operator*type*()” (conversión definida por el usuario) en tipos que no son de clase**  
   
      Las versiones anteriores del compilador permitieron que se llamara 'operator *type*()' en tipos que no son de clase mientras que se les ignora en modo silencioso. Este comportamiento anterior creó un riesgo de generación de código incorrecto silencioso, lo que produjo un comportamiento impredecible en tiempo de ejecución. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2228 en su lugar.  
   
@@ -1387,11 +1388,10 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
     {  
         auto iter = std::find(v.begin(), v.end(), 5);  
     }  
-    catch (…)  
+    catch (...)  
     {  
         do_something();   // ok  
     }  
-  
     ```  
   
      Ejemplo (después)  
@@ -1401,14 +1401,13 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
     {  
         auto iter = std::find(v.begin(), v.end(), 5);  
     }  
-    catch (…)  
+    catch (...)  
     {  
         do_something();   // warning C4702: unreachable code  
     }  
-  
     ```  
   
-###  <a name="a-namevsupdate2a-conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> Mejoras de conformidad en Update 2  
+###  <a name="VS_Update2"></a> Mejoras de conformidad en Update 2  
   
 -   **Puede que se generen errores y advertencias adicionales como resultado de la compatibilidad parcial con la expresión SFINAE**  
   
@@ -1693,7 +1692,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
      Corregir el código escrito de este modo puede requerir el traslado de las definiciones de operador fuera de un archivo de encabezado y al archivo de origen correspondiente.  
   
-###  <a name="a-namevsupdate3a-conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> Mejoras de conformidad en Update 3  
+###  <a name="VS_Update3"></a> Mejoras de conformidad en Update 3  
   
 -   **std::is_convertable ahora detecta la asignación automática** (biblioteca estándar)  
   
@@ -1772,7 +1771,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
--   **Compatibilidad en desuso con código ATL con atributos ** (nivel 1 (/W1), activo de manera predeterminada)  
+-   **Compatibilidad en desuso con código ATL con atributos** (nivel 1 (/W1), activo de manera predeterminada)  
   
      Las versiones anteriores del compilador admitían código ATL con atributos. Como parte de la fase siguiente para quitar la compatibilidad con código ATL con atributos que [comenzó en Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), el código ATL con atributos está en desuso. Ahora, el compilador emite la advertencia del compilador C4467 para ayudarle a identificar este tipo de código en desuso.  
   
@@ -2793,8 +2792,3 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
 ## <a name="see-also"></a>Vea también  
 [Novedades de Visual C++ en Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

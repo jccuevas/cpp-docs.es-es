@@ -6,65 +6,65 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- concrt/concurrency::operator!=
+- concrt/concurrency:[operator&amp;&amp
+- concrt/concurrency:[operator&amp;&amp
+dev_langs:
+- C++
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 7fc7b500d882bb4e023904a147a7736996b5c5de
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 322c95da1774cb0b1d621a46c74125f435ebfbc4
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrency-namespace-operators"></a>espacio de nombres de simultaneidad operadores
 ||||  
 |-|-|-|  
-|[operador! = (operador)](#operator_neq)|[operador&amp; &amp; (operador)](#operator_amp_amp)|[operador&gt; (operador)](#operator_gt)|  
-|[operador&gt;= (operador)](#operator_gt_eq)|[operador&lt; (operador)](#operator_lt)|[operador&lt;= (operador)](#operator_lt_eq)|  
-|[Operator == (operador)](#operator_eq_eq)|[operator|| Operator](#operator_lor)|  
+|[operator!=](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[operator&gt;](#operator_gt)|  
+|[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|  
+|[operator==](#operator_eq_eq)|[operator||](#operator_lor)|  
   
-##  <a name="a-nameoperatorlora--operator124124-operator"></a><a name="operator_lor"></a>operador || (Operador)  
+##  <a name="operator_lor"></a>operador || (Operador)  
  Crea una tarea que se completará correctamente cuando una de las tareas proporcionadas como argumentos se complete correctamente.  
   
 ```  
-template<
-    typename _ReturnType  
->  
-task<_ReturnType>   operator||(
-    const task<_ReturnType>& _Lhs,  
-    const task<_ReturnType>& _Rhs);
+template<typename ReturnType>  
+task<ReturnType> operator||(
+    const task<ReturnType>& lhs,  
+    const task<ReturnType>& rhs);
 
  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>   operator||(
-    const task<std::vector<_ReturnType>>& _Lhs,  
-    const task<_ReturnType>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>> operator||(
+    const task<std::vector<ReturnType>>& lhs,  
+    const task<ReturnType>& rhs);
 
  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>   operator||(
-    const task<_ReturnType>& _Lhs,  
-    const task<std::vector<_ReturnType>>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>> operator||(
+    const task<ReturnType>& lhs,  
+    const task<std::vector<ReturnType>>& rhs);
 
  
-inline task<void>   operator||(
-    const task<void>& _Lhs,  
-    const task<void>& _Rhs);
+inline task<void> operator||(
+    const task<void>& lhs,  
+    const task<void>& rhs);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_ReturnType`  
+ `ReturnType`  
  Tipo de la tarea devuelta.  
   
- `_Lhs`  
+ `lhs`  
  Primera tarea que debe combinarse en la tarea resultante.  
   
- `_Rhs`  
+ `rhs`  
  Segunda tarea que se va a combinar en la tarea resultante.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -73,55 +73,47 @@ inline task<void>   operator||(
 ### <a name="remarks"></a>Comentarios  
  Si las tareas se cancelan o excepciones, se completará la tarea devuelta en el estado cancelado, y una de las excepciones, si se encuentra alguno, se producirá cuando se llama a `get()` o `wait()` en esa tarea.  
   
-##  <a name="a-nameoperatorampampa--operatorampamp-operator"></a><a name="operator_amp_amp"></a>operador&amp; &amp; (operador)  
+##  <a name="operator_amp_amp"></a>operador&amp; &amp; (operador)  
  Crea una tarea que se completará correctamente cuando las tareas proporcionadas como argumentos se completen correctamente.  
   
 ```  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>    operator&&(
-    const task<_ReturnType>& _Lhs,  
-    const task<_ReturnType>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>>  operator&&(
+    const task<ReturnType>& lhs,  
+    const task<ReturnType>& rhs);
 
  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>    operator&&(
-    const task<std::vector<_ReturnType>>& _Lhs,  
-    const task<_ReturnType>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>>  operator&&(
+    const task<std::vector<ReturnType>>& lhs,  
+    const task<ReturnType>& rhs);
 
  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>    operator&&(
-    const task<_ReturnType>& _Lhs,  
-    const task<std::vector<_ReturnType>>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>>  operator&&(
+    const task<ReturnType>& lhs,  
+    const task<std::vector<ReturnType>>& rhs);
 
  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>    operator&&(
-    const task<std::vector<_ReturnType>>& _Lhs,  
-    const task<std::vector<_ReturnType>>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>>  operator&&(
+    const task<std::vector<ReturnType>>& lhs,  
+    const task<std::vector<ReturnType>>& rhs);
 
  
-inline task<void>    operator&&(
-    const task<void>& _Lhs,  
-    const task<void>& _Rhs);
+inline task<void>  operator&&(
+    const task<void>& lhs,  
+    const task<void>& rhs);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `_ReturnType`  
+ `ReturnType`  
  Tipo de la tarea devuelta.  
   
- `_Lhs`  
+ `lhs`  
  Primera tarea que debe combinarse en la tarea resultante.  
   
- `_Rhs`  
+ `rhs`  
  Segunda tarea que se va a combinar en la tarea resultante.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -130,15 +122,11 @@ inline task<void>    operator&&(
 ### <a name="remarks"></a>Comentarios  
  Si una de las tareas se cancela o inicia una excepción, la tarea devuelta finalizará prematuramente con el estado cancelado y se generará una excepción (si se encuentra una) al llamar a `get()` o `wait()` en dicha tarea.  
   
-##  <a name="a-nameoperatoreqeqa--operator-operator"></a><a name="operator_eq_eq"></a>Operator == (operador)  
+##  <a name="operator_eq_eq"></a>Operator == (operador)  
  Comprueba si el objeto `concurrent_vector` en el lado izquierdo del operador es igual al objeto `concurrent_vector` del lado derecho.  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator== (
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -168,15 +156,11 @@ inline bool operator== (
   
  Este método no es seguro para simultaneidad con respecto a otros métodos que podrían modificar cualquiera de los vectores simultáneos `_A` o `_B`.  
   
-##  <a name="a-nameoperatorneqa--operator-operator"></a><a name="operator_neq"></a>operador! = (operador)  
+##  <a name="operator_neq"></a>operador! = (operador)  
  Comprueba si el objeto `concurrent_vector` en el lado izquierdo del operador no es igual al objeto `concurrent_vector` del lado derecho.  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator!= (
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -206,15 +190,11 @@ inline bool operator!= (
   
  Este método no es seguro para simultaneidad con respecto a otros métodos que podrían modificar cualquiera de los vectores simultáneos `_A` o `_B`.  
   
-##  <a name="a-nameoperatorlta--operatorlt-operator"></a><a name="operator_lt"></a>operador&lt; (operador)  
+##  <a name="operator_lt"></a>operador&lt; (operador)  
  Comprueba si el objeto `concurrent_vector` en el lado izquierdo del operador es menor que el objeto `concurrent_vector` del lado derecho.  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator<(
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -244,15 +224,11 @@ inline bool operator<(
   
  Este método no es seguro para simultaneidad con respecto a otros métodos que podrían modificar cualquiera de los vectores simultáneos `_A` o `_B`.  
   
-##  <a name="a-nameoperatorlteqa--operatorlt-operator"></a><a name="operator_lt_eq"></a>operador&lt;= (operador)  
+##  <a name="operator_lt_eq"></a>operador&lt;= (operador)  
  Comprueba si el objeto `concurrent_vector` en el lado izquierdo del operador es menor o igual que el objeto `concurrent_vector` del lado derecho.  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator<= (
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -282,15 +258,11 @@ inline bool operator<= (
   
  Este método no es seguro para simultaneidad con respecto a otros métodos que podrían modificar cualquiera de los vectores simultáneos `_A` o `_B`.  
   
-##  <a name="a-nameoperatorgta--operatorgt-operator"></a><a name="operator_gt"></a>operador&gt; (operador)  
+##  <a name="operator_gt"></a>operador&gt; (operador)  
  Comprueba si el objeto `concurrent_vector` en el lado izquierdo del operador es mayor que el objeto `concurrent_vector` del lado derecho.  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator>(
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -320,15 +292,11 @@ inline bool operator>(
   
  Este método no es seguro para simultaneidad con respecto a otros métodos que podrían modificar cualquiera de los vectores simultáneos `_A` o `_B`.  
   
-##  <a name="a-nameoperatorgteqa--operatorgt-operator"></a><a name="operator_gt_eq"></a>operador&gt;= (operador)  
+##  <a name="operator_gt_eq"></a>operador&gt;= (operador)  
  Comprueba si el objeto `concurrent_vector` en el lado izquierdo del operador es mayor o igual que el objeto `concurrent_vector` del lado derecho.  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator>= (
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -359,5 +327,5 @@ inline bool operator>= (
  Este método no es seguro para simultaneidad con respecto a otros métodos que podrían modificar cualquiera de los vectores simultáneos `_A` o `_B`.  
   
 ## <a name="see-also"></a>Vea también  
- [simultaneidad Namespace](concurrency-namespace.md)
+ [concurrency (espacio de nombres)](concurrency-namespace.md)
 

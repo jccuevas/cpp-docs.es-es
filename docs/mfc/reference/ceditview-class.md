@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CEditView
+- AFXEXT/CEditView
+- AFXEXT/CEditView::CEditView
+- AFXEXT/CEditView::FindText
+- AFXEXT/CEditView::GetBufferLength
+- AFXEXT/CEditView::GetEditCtrl
+- AFXEXT/CEditView::GetPrinterFont
+- AFXEXT/CEditView::GetSelectedText
+- AFXEXT/CEditView::LockBuffer
+- AFXEXT/CEditView::PrintInsideRect
+- AFXEXT/CEditView::SerializeRaw
+- AFXEXT/CEditView::SetPrinterFont
+- AFXEXT/CEditView::SetTabStops
+- AFXEXT/CEditView::UnlockBuffer
+- AFXEXT/CEditView::OnFindNext
+- AFXEXT/CEditView::OnReplaceAll
+- AFXEXT/CEditView::OnReplaceSel
+- AFXEXT/CEditView::OnTextNotFound
+- AFXEXT/CEditView::dwStyleDefault
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -138,7 +156,7 @@ class CEditView : public CCtrlView
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxext.h  
   
-##  <a name="a-nameceditviewa--ceditviewceditview"></a><a name="ceditview"></a>CEditView::CEditView  
+##  <a name="ceditview"></a>CEditView::CEditView  
  Construye un objeto de tipo `CEditView`.  
   
 ```  
@@ -148,7 +166,7 @@ CEditView();
 ### <a name="remarks"></a>Comentarios  
  Después de crear el objeto, se debe llamar a la [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) función antes de que se utiliza el control de edición. Si deriva una clase de `CEditView` y agregarlo a la plantilla mediante `CWinApp::AddDocTemplate`, el marco de trabajo llama a este constructor de ambos y **crear** (función).  
   
-##  <a name="a-namedwstyledefaulta--ceditviewdwstyledefault"></a><a name="dwstyledefault"></a>CEditView::dwStyleDefault  
+##  <a name="dwstyledefault"></a>CEditView::dwStyleDefault  
  Contiene el estilo predeterminado de la `CEditView` objeto.  
   
 ```  
@@ -158,7 +176,7 @@ static const DWORD dwStyleDefault;
 ### <a name="remarks"></a>Comentarios  
  Pase este miembro estático como el `dwStyle` parámetro de la **crear** función para obtener el estilo predeterminado para el `CEditView` objeto.  
   
-##  <a name="a-namefindtexta--ceditviewfindtext"></a><a name="findtext"></a>CEditView::FindText  
+##  <a name="findtext"></a>CEditView::FindText  
  Llame a la `FindText` (función) para buscar el `CEditView` búfer de texto del objeto.  
   
 ```  
@@ -186,7 +204,7 @@ BOOL FindText(
   
  Normalmente no es necesario llamar a la `FindText` funcionar a menos que se invalide `OnFindNext`, que llama `FindText`.  
   
-##  <a name="a-namegetbufferlengtha--ceditviewgetbufferlength"></a><a name="getbufferlength"></a>CEditView::GetBufferLength  
+##  <a name="getbufferlength"></a>CEditView::GetBufferLength  
  Llame a esta función miembro para obtener el número de caracteres actualmente en el búfer del control de edición, no incluido el terminador null.  
   
 ```  
@@ -196,7 +214,7 @@ UINT GetBufferLength() const;
 ### <a name="return-value"></a>Valor devuelto  
  La longitud de la cadena en el búfer.  
   
-##  <a name="a-namegeteditctrla--ceditviewgeteditctrl"></a><a name="geteditctrl"></a>CEditView::GetEditCtrl  
+##  <a name="geteditctrl"></a>CEditView::GetEditCtrl  
  Llame a `GetEditCtrl` para obtener una referencia al control de edición utilizado por la vista de edición.  
   
 ```  
@@ -215,7 +233,7 @@ CEdit& GetEditCtrl() const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView&#66;](../../mfc/codesnippet/cpp/ceditview-class_2.cpp)]  
   
-##  <a name="a-namegetprinterfonta--ceditviewgetprinterfont"></a><a name="getprinterfont"></a>CEditView::GetPrinterFont  
+##  <a name="getprinterfont"></a>CEditView::GetPrinterFont  
  Llame a `GetPrinterFont` para obtener un puntero a un [CFont](../../mfc/reference/cfont-class.md) objeto que describe la fuente actual de la impresora.  
   
 ```  
@@ -230,7 +248,7 @@ CFont* GetPrinterFont() const;
   
  Utilice esta función para determinar la fuente de impresora actual. Si no es la fuente de la impresora deseada, use [CEditView::SetPrinterFont](#setprinterfont) para cambiarlo.  
   
-##  <a name="a-namegetselectedtexta--ceditviewgetselectedtext"></a><a name="getselectedtext"></a>CEditView::GetSelectedText  
+##  <a name="getselectedtext"></a>CEditView::GetSelectedText  
  Llame a `GetSelectedText` para copiar el texto seleccionado en un `CString` objeto hasta el final de la selección o el carácter que precede el primer carácter de retorno de carro de la selección.  
   
 ```  
@@ -241,7 +259,7 @@ void GetSelectedText(CString& strResult) const;
  `strResult`  
  Una referencia a la `CString` objeto que va a recibir el texto seleccionado.  
   
-##  <a name="a-namelockbuffera--ceditviewlockbuffer"></a><a name="lockbuffer"></a>CEditView::LockBuffer  
+##  <a name="lockbuffer"></a>CEditView::LockBuffer  
  Llame a esta función miembro para obtener un puntero al búfer. No se debe modificar el búfer.  
   
 ```  
@@ -251,7 +269,7 @@ LPCTSTR LockBuffer() const;
 ### <a name="return-value"></a>Valor devuelto  
  Puntero al búfer del control de edición.  
   
-##  <a name="a-nameonfindnexta--ceditviewonfindnext"></a><a name="onfindnext"></a>CEditView::OnFindNext  
+##  <a name="onfindnext"></a>CEditView::OnFindNext  
  Busca el texto en el búfer para el texto especificado por `lpszFind`, en la dirección especificada por `bNext`, con mayúsculas y minúsculas especificada por `bCase`.  
   
 ```  
@@ -276,7 +294,7 @@ virtual void OnFindNext(
   
  Invalidar `OnFindNext` para cambiar la forma en que un `CEditView`-objeto derivado busca texto. `CEditView`llamadas `OnFindNext` cuando el usuario elige el botón Buscar siguiente en el cuadro de diálogo Buscar.  
   
-##  <a name="a-nameonreplacealla--ceditviewonreplaceall"></a><a name="onreplaceall"></a>CEditView::OnReplaceAll  
+##  <a name="onreplaceall"></a>CEditView::OnReplaceAll  
  `CEditView`llamadas `OnReplaceAll` cuando el usuario selecciona el botón Reemplazar todo en el cuadro de diálogo Reemplazar estándar.  
   
 ```  
@@ -303,7 +321,7 @@ virtual void OnReplaceAll(
   
  Invalidar `OnReplaceAll` para cambiar la forma en que un `CEditView`-objeto derivado reemplaza el texto.  
   
-##  <a name="a-nameonreplacesela--ceditviewonreplacesel"></a><a name="onreplacesel"></a>CEditView::OnReplaceSel  
+##  <a name="onreplacesel"></a>CEditView::OnReplaceSel  
  `CEditView`llamadas `OnReplaceSel` cuando el usuario selecciona el botón Reemplazar en el cuadro de diálogo Reemplazar estándar.  
   
 ```  
@@ -332,7 +350,7 @@ virtual void OnReplaceSel(
   
  Invalidar `OnReplaceSel` para cambiar la forma en que un `CEditView`-objeto derivado reemplaza el texto seleccionado.  
   
-##  <a name="a-nameontextnotfounda--ceditviewontextnotfound"></a><a name="ontextnotfound"></a>CEditView::OnTextNotFound  
+##  <a name="ontextnotfound"></a>CEditView::OnTextNotFound  
  Reemplazar esta función para cambiar la implementación predeterminada, que llama a la función de Windows **MessageBeep**.  
   
 ```  
@@ -343,7 +361,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
  `lpszFind`  
  El texto que se encuentra.  
   
-##  <a name="a-nameprintinsiderecta--ceditviewprintinsiderect"></a><a name="printinsiderect"></a>CEditView::PrintInsideRect  
+##  <a name="printinsiderect"></a>CEditView::PrintInsideRect  
  Llame a `PrintInsideRect` para imprimir texto en el rectángulo especificado por *rectLayout*.  
   
 ```  
@@ -375,7 +393,7 @@ UINT PrintInsideRect(
   
  El **rect.bottom** elemento de la *rectLayout* objeto se cambia para que las dimensiones del rectángulo definen la parte del rectángulo original que está ocupada por el texto.  
   
-##  <a name="a-nameserializerawa--ceditviewserializeraw"></a><a name="serializeraw"></a>CEditView:: SerializeRaw  
+##  <a name="serializeraw"></a>CEditView:: SerializeRaw  
  Llame a `SerializeRaw` tener un `CArchive` objeto leer o escribir el texto en la `CEditView` objeto en un archivo de texto.  
   
 ```  
@@ -389,7 +407,7 @@ void SerializeRaw(CArchive& ar);
 ### <a name="remarks"></a>Comentarios  
  `SerializeRaw`difiere de `CEditView`de implementación interna de `Serialize` en que se lee y escribe sólo el texto sin anteriores de datos de la descripción del objeto.  
   
-##  <a name="a-namesetprinterfonta--ceditviewsetprinterfont"></a><a name="setprinterfont"></a>CEditView::SetPrinterFont  
+##  <a name="setprinterfont"></a>CEditView::SetPrinterFont  
  Llame a `SetPrinterFont` para establecer la fuente de la impresora para la fuente especificada por `pFont`.  
   
 ```  
@@ -403,7 +421,7 @@ void SetPrinterFont(CFont* pFont);
 ### <a name="remarks"></a>Comentarios  
  Si desea que la vista siempre usar una fuente concreta para la impresión, incluya una llamada a `SetPrinterFont` en la clase `OnPreparePrinting` (función). Esta función virtual se llama antes de imprimir, por lo que el cambio de fuente tiene lugar antes de imprime el contenido de la vista.  
   
-##  <a name="a-namesettabstopsa--ceditviewsettabstops"></a><a name="settabstops"></a>CEditView::SetTabStops  
+##  <a name="settabstops"></a>CEditView::SetTabStops  
  Llame a esta función para establecer las tabulaciones que se utiliza para mostrar y la impresión.  
   
 ```  
@@ -424,7 +442,7 @@ void SetTabStops(int nTabStops);
   
  [!code-cpp[NVC_MFCDocView&#67;](../../mfc/codesnippet/cpp/ceditview-class_3.cpp)]  
   
-##  <a name="a-nameunlockbuffera--ceditviewunlockbuffer"></a><a name="unlockbuffer"></a>CEditView::UnlockBuffer  
+##  <a name="unlockbuffer"></a>CEditView::UnlockBuffer  
  Llame a esta función miembro para desbloquear el búfer.  
   
 ```  

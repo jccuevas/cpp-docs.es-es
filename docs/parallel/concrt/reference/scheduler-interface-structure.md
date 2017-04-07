@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- pplinterface/concurrency::scheduler_interface
+- scheduler_interface
+- PPLINTERFACE/concurrency::scheduler_interface
+- PPLINTERFACE/concurrency::scheduler_interface::scheduler_interface::schedule
 dev_langs:
 - C++
 ms.assetid: 4de61c78-a2c6-4698-bd47-964baf7fa287
@@ -32,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 1b05a0f6954e501d3b0362cb7c68794422ee97fd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a56c36ae0cb4cf7111137351dbd71cc53d73b42a
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulerinterface-structure"></a>scheduler_interface (Estructura)
@@ -52,7 +54,7 @@ struct __declspec(novtable) scheduler_interface;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[scheduler_interface:: Schedule (método)](#schedule)||  
+|[scheduler_interface:: Schedule](#schedule)||  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `scheduler_interface`  
@@ -62,7 +64,7 @@ struct __declspec(novtable) scheduler_interface;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-nameschedulea--schedulerinterfaceschedule-method"></a><a name="schedule"></a>scheduler_interface:: Schedule (método)  
+##  <a name="schedule"></a>scheduler_interface:: Schedule (método)  
   
 ```
 virtual void schedule(
@@ -71,5 +73,5 @@ virtual void schedule(
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [simultaneidad Namespace](concurrency-namespace.md)
+ [concurrency (espacio de nombres)](concurrency-namespace.md)
 

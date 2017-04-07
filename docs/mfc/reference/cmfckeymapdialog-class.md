@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCKeyMapDialog
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::CMFCKeyMapDialog
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::DoModal
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::FormatItem
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::GetCommandKeys
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::OnInsertItem
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::OnPrintHeader
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::OnPrintItem
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::OnSetColumns
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::PrintKeyMap
+- AFXKEYMAPDIALOG/CMFCKeyMapDialog::SetColumnsWidth
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +107,7 @@ class CMFCKeyMapDialog : public CDialogEx
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxkeymapdialog.h  
   
-##  <a name="a-namecmfckeymapdialoga--cmfckeymapdialogcmfckeymapdialog"></a><a name="cmfckeymapdialog"></a>CMFCKeyMapDialog::CMFCKeyMapDialog  
+##  <a name="cmfckeymapdialog"></a>CMFCKeyMapDialog::CMFCKeyMapDialog  
  Construye un objeto `CMFCKeyMapDialog`.  
   
 ```  
@@ -119,7 +130,7 @@ CMFCKeyMapDialog(
   
  [!code-cpp[21 NVC_MFC_VisualStudioDemo](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]  
   
-##  <a name="a-namedomodala--cmfckeymapdialogdomodal"></a><a name="domodal"></a>CMFCKeyMapDialog::DoModal  
+##  <a name="domodal"></a>CMFCKeyMapDialog::DoModal  
  Muestra un cuadro de diálogo de asignación de teclado.  
   
 ```  
@@ -132,7 +143,7 @@ virtual INT_PTR DoModal();
 ### <a name="remarks"></a>Comentarios  
  El cuadro de diálogo de asignación de teclado permite seleccionar y asignar teclas de aceleración a distintas categorías de comandos. Además, puede copiar las teclas de aceleración seleccionada y su descripción en el Portapapeles.  
   
-##  <a name="a-nameformatitema--cmfckeymapdialogformatitem"></a><a name="formatitem"></a>CMFCKeyMapDialog::FormatItem  
+##  <a name="formatitem"></a>CMFCKeyMapDialog::FormatItem  
  Llamado por el marco de trabajo para generar una cadena que describe una asignación de claves. De forma predeterminada, la cadena contiene el nombre de comando, utiliza las teclas de método abreviado y la descripción de la clave de acceso directo.  
   
 ```  
@@ -148,7 +159,7 @@ virtual CString FormatItem(int nItem) const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namegetcommandkeysa--cmfckeymapdialoggetcommandkeys"></a><a name="getcommandkeys"></a>CMFCKeyMapDialog::GetCommandKeys  
+##  <a name="getcommandkeys"></a>CMFCKeyMapDialog::GetCommandKeys  
  Recupera un valor de cadena. La cadena contiene una lista de teclas de método abreviado asociadas a un comando especificado.  
   
 ```  
@@ -164,7 +175,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameoninsertitema--cmfckeymapdialogoninsertitem"></a><a name="oninsertitem"></a>CMFCKeyMapDialog::OnInsertItem  
+##  <a name="oninsertitem"></a>CMFCKeyMapDialog::OnInsertItem  
  Llamado por el marco antes de inserta un nuevo elemento en un control de lista interna que admite el control de asignación de teclado.  
   
 ```  
@@ -182,7 +193,7 @@ virtual void OnInsertItem(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameonprintheadera--cmfckeymapdialogonprintheader"></a><a name="onprintheader"></a>CMFCKeyMapDialog::OnPrintHeader  
+##  <a name="onprintheader"></a>CMFCKeyMapDialog::OnPrintHeader  
  Llamado por el marco de trabajo para imprimir el encabezado para la asignación de teclado en una página nueva.  
   
 ```  
@@ -208,7 +219,7 @@ virtual int OnPrintHeader(
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo utiliza este método para imprimir la asignación de teclado. De forma predeterminada, este método imprime el número de página, el nombre de aplicación y el título del cuadro de diálogo.  
   
-##  <a name="a-nameonprintitema--cmfckeymapdialogonprintitem"></a><a name="onprintitem"></a>CMFCKeyMapDialog::OnPrintItem  
+##  <a name="onprintitem"></a>CMFCKeyMapDialog::OnPrintItem  
  Llamado por el marco de trabajo para imprimir un elemento de asignación de teclado.  
   
 ```  
@@ -242,7 +253,7 @@ virtual int OnPrintItem(
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a este método para imprimir un elemento de cuadro de diálogo de mapa de claves. De forma predeterminada, este método imprime el nombre de comando del artículo, teclas de método abreviado y descripción del comando.  
   
-##  <a name="a-nameonsetcolumnsa--cmfckeymapdialogonsetcolumns"></a><a name="onsetcolumns"></a>CMFCKeyMapDialog::OnSetColumns  
+##  <a name="onsetcolumns"></a>CMFCKeyMapDialog::OnSetColumns  
  Llamado por el marco para establecer los títulos de las columnas en el control de lista interna que admite el control de asignación de teclado.  
   
 ```  
@@ -252,7 +263,7 @@ virtual void OnSetColumns();
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, este método obtiene los títulos de las columnas de tres recursos. El título de columna de comando es de IDS_AFXBARRES_COMMAND, el título de la columna de clave es de IDS_AFXBARRES_KEYS y el título de columna de descripción es de IDS_AFXBARRES_DESCRIPTION.  
   
-##  <a name="a-nameprintkeymapa--cmfckeymapdialogprintkeymap"></a><a name="printkeymap"></a>CMFCKeyMapDialog::PrintKeyMap  
+##  <a name="printkeymap"></a>CMFCKeyMapDialog::PrintKeyMap  
  Llamado por el marco cuando un usuario hace clic en el **imprimir** botón.  
   
 ```  
@@ -262,7 +273,7 @@ virtual void PrintKeyMap();
 ### <a name="remarks"></a>Comentarios  
  El `PrintKeyMap` método imprime el mapa de claves. Inicia un nuevo trabajo de impresión y luego llama repetidamente el [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) y [CMFCKeyMapDialog::OnPrintItem](#onprintitem) métodos hasta que se imprimen todas las asignaciones de clave.  
   
-##  <a name="a-namesetcolumnswidtha--cmfckeymapdialogsetcolumnswidth"></a><a name="setcolumnswidth"></a>CMFCKeyMapDialog::SetColumnsWidth  
+##  <a name="setcolumnswidth"></a>CMFCKeyMapDialog::SetColumnsWidth  
  Llamado por el marco para establecer el ancho de las columnas en el control de lista interna que admite el control de asignación de teclado.  
   
 ```  

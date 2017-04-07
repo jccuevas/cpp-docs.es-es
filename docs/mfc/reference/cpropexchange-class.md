@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPropExchange
+- AFXCTL/CPropExchange
+- AFXCTL/CPropExchange::ExchangeBlobProp
+- AFXCTL/CPropExchange::ExchangeFontProp
+- AFXCTL/CPropExchange::ExchangePersistentProp
+- AFXCTL/CPropExchange::ExchangeProp
+- AFXCTL/CPropExchange::ExchangeVersion
+- AFXCTL/CPropExchange::GetVersion
+- AFXCTL/CPropExchange::IsAsynchronous
+- AFXCTL/CPropExchange::IsLoading
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +95,7 @@ class AFX_NOVTABLE CPropExchange
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxctl.h  
   
-##  <a name="a-nameexchangeblobpropa--cpropexchangeexchangeblobprop"></a><a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
+##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
  Serializa una propiedad que almacena datos de objeto binario grande (BLOB).  
   
 ```  
@@ -114,7 +123,7 @@ virtual BOOL ExchangeBlobProp(
   
  Las funciones **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, y **CPropsetPropExchange::ExchangeBlobProp** reemplazar esta función virtual pura.  
   
-##  <a name="a-nameexchangefontpropa--cpropexchangeexchangefontprop"></a><a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
+##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
  Cambia una propiedad de fuente entre un medio de almacenamiento y el control.  
   
 ```  
@@ -146,7 +155,7 @@ virtual BOOL ExchangeFontProp(
   
  Las funciones **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, y **CPropsetPropExchange::ExchangeFontProp** reemplazar esta función virtual pura.  
   
-##  <a name="a-nameexchangepersistentpropa--cpropexchangeexchangepersistentprop"></a><a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
+##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
  Intercambia una propiedad entre el control y un archivo.  
   
 ```  
@@ -178,7 +187,7 @@ virtual BOOL ExchangePersistentProp(
   
  Las funciones **CArchivePropExchange::ExchangePersistentProp**, **CResetPropExchange::ExchangePersistentProp**, y **CPropsetPropExchange::ExchangePersistentProp** reemplazar esta función virtual pura.  
   
-##  <a name="a-nameexchangepropa--cpropexchangeexchangeprop"></a><a name="exchangeprop"></a>CPropExchange::ExchangeProp  
+##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp  
  Cambia una propiedad de un medio de almacenamiento y el control.  
   
 ```  
@@ -220,7 +229,7 @@ virtual BOOL ExchangeProp(
   
  Las funciones **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, y **CPropsetPropExchange::ExchangeProp** reemplazar esta función virtual pura.  
   
-##  <a name="a-nameexchangeversiona--cpropexchangeexchangeversion"></a><a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
+##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
  Llamado por el marco de trabajo para controlar la persistencia de un número de versión.  
   
 ```  
@@ -243,7 +252,7 @@ virtual BOOL ExchangeVersion(
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si la función se realiza correctamente; en caso contrario, es 0.  
   
-##  <a name="a-namegetversiona--cpropexchangegetversion"></a><a name="getversion"></a>CPropExchange:: GetVersion  
+##  <a name="getversion"></a>CPropExchange:: GetVersion  
  Llame a esta función para recuperar el número de versión del control.  
   
 ```  
@@ -253,7 +262,7 @@ DWORD GetVersion();
 ### <a name="return-value"></a>Valor devuelto  
  El número de versión del control.  
   
-##  <a name="a-nameisasynchronousa--cpropexchangeisasynchronous"></a><a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
+##  <a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
  Determina si los intercambios de propiedad se realizan asincrónicamente.  
   
 ```  
@@ -263,7 +272,7 @@ BOOL IsAsynchronous();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si son propiedades de forma asincrónica, intercambia lo contrario, FALSE.  
   
-##  <a name="a-nameisloadinga--cpropexchangeisloading"></a><a name="isloading"></a>CPropExchange::IsLoading  
+##  <a name="isloading"></a>CPropExchange::IsLoading  
  Llame a esta función para determinar si se están propiedades cargadas en el control o guardado de él.  
   
 ```  

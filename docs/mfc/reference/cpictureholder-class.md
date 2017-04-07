@@ -9,8 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- Picture
 - CPictureHolder
+- AFXCTL/CPictureHolder
+- AFXCTL/CPictureHolder::CPictureHolder
+- AFXCTL/CPictureHolder::CreateEmpty
+- AFXCTL/CPictureHolder::CreateFromBitmap
+- AFXCTL/CPictureHolder::CreateFromIcon
+- AFXCTL/CPictureHolder::CreateFromMetafile
+- AFXCTL/CPictureHolder::GetDisplayString
+- AFXCTL/CPictureHolder::GetPictureDispatch
+- AFXCTL/CPictureHolder::GetType
+- AFXCTL/CPictureHolder::Render
+- AFXCTL/CPictureHolder::SetPictureDispatch
+- AFXCTL/CPictureHolder::m_pPict
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,14 +104,14 @@ class CPictureHolder
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxctl.h  
   
-##  <a name="a-namecpictureholdera--cpictureholdercpictureholder"></a><a name="cpictureholder"></a>CPictureHolder::CPictureHolder  
+##  <a name="cpictureholder"></a>CPictureHolder::CPictureHolder  
  Construye un objeto `CPictureHolder`.  
   
 ```  
 CPictureHolder();
 ```  
   
-##  <a name="a-namecreateemptya--cpictureholdercreateempty"></a><a name="createempty"></a>CPictureHolder::CreateEmpty  
+##  <a name="createempty"></a>CPictureHolder::CreateEmpty  
  Crea una cadena vacía `CPictureHolder` objeto y se conecta a un `IPicture` interfaz.  
   
 ```  
@@ -110,7 +121,7 @@ BOOL CreateEmpty();
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el objeto se creó correctamente; en caso contrario, 0.  
   
-##  <a name="a-namecreatefrombitmapa--cpictureholdercreatefrombitmap"></a><a name="createfrombitmap"></a>CPictureHolder::CreateFromBitmap  
+##  <a name="createfrombitmap"></a>CPictureHolder::CreateFromBitmap  
  Un mapa de bits se utiliza para inicializar el objeto de imagen en un `CPictureHolder`.  
   
 ```  
@@ -155,7 +166,7 @@ BOOL CreateFromBitmap(
 ### <a name="remarks"></a>Comentarios  
  Si `bTransferOwnership` es **TRUE**, el llamador no debe usar el mapa de bits o devuelve el objeto de la paleta de ninguna manera después de esta llamada. Si `bTransferOwnership` es **FALSE**, el llamador es responsable de garantizar que los objetos de mapa de bits y una paleta siguen siendo válidos durante la vigencia del objeto de imagen.  
   
-##  <a name="a-namecreatefromicona--cpictureholdercreatefromicon"></a><a name="createfromicon"></a>CPictureHolder::CreateFromIcon  
+##  <a name="createfromicon"></a>CPictureHolder::CreateFromIcon  
  Un icono que se utiliza para inicializar el objeto de imagen en un `CPictureHolder`.  
   
 ```  
@@ -184,7 +195,7 @@ BOOL CreateFromIcon(
 ### <a name="remarks"></a>Comentarios  
  Si `bTransferOwnership` es **TRUE**, el llamador no debe usar el objeto de icono de ninguna manera después de que esta llamada. Si `bTransferOwnership` es **FALSE**, el llamador es responsable de garantizar que el objeto de icono sigue siendo válido mientras dure el objeto de imagen.  
   
-##  <a name="a-namecreatefrommetafilea--cpictureholdercreatefrommetafile"></a><a name="createfrommetafile"></a>CPictureHolder::CreateFromMetafile  
+##  <a name="createfrommetafile"></a>CPictureHolder::CreateFromMetafile  
  Un metarchivo se utiliza para inicializar el objeto de imagen en un `CPictureHolder`.  
   
 ```  
@@ -214,7 +225,7 @@ BOOL CreateFromMetafile(
 ### <a name="remarks"></a>Comentarios  
  Si `bTransferOwnership` es **TRUE**, el llamador no debe usar el objeto metarchivo de ninguna manera después de que esta llamada. Si `bTransferOwnership` es **FALSE**, el llamador es responsable de garantizar que el objeto de metarchivo sigue siendo válido mientras dure el objeto de imagen.  
   
-##  <a name="a-namegetdisplaystringa--cpictureholdergetdisplaystring"></a><a name="getdisplaystring"></a>CPictureHolder::GetDisplayString  
+##  <a name="getdisplaystring"></a>CPictureHolder::GetDisplayString  
  Recupera la cadena que se muestra en el Explorador de propiedades de un contenedor.  
   
 ```  
@@ -228,7 +239,7 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si la cadena se recupera correctamente; en caso contrario, 0.  
   
-##  <a name="a-namegetpicturedispatcha--cpictureholdergetpicturedispatch"></a><a name="getpicturedispatch"></a>CPictureHolder::GetPictureDispatch  
+##  <a name="getpicturedispatch"></a>CPictureHolder::GetPictureDispatch  
  Esta función devuelve un puntero a la `CPictureHolder` del objeto `IPictureDisp` interfaz.  
   
 ```  
@@ -241,7 +252,7 @@ LPPICTUREDISP GetPictureDispatch();
 ### <a name="remarks"></a>Comentarios  
  El llamador debe llamar a **versión** en este puntero cuando haya terminado con él.  
   
-##  <a name="a-namegettypea--cpictureholdergettype"></a><a name="gettype"></a>CPictureHolder::GetType  
+##  <a name="gettype"></a>CPictureHolder::GetType  
  Indica si la imagen es un mapa de bits, metarchivo o icono.  
   
 ```  
@@ -259,14 +270,14 @@ short GetType();
 |**PICTYPE_METAFILE**|La imagen es un metarchivo.|  
 |**PICTYPE_ICON**|Imagen es un icono.|  
   
-##  <a name="a-namemppicta--cpictureholdermppict"></a><a name="m_ppict"></a>CPictureHolder::m_pPict  
+##  <a name="m_ppict"></a>CPictureHolder::m_pPict  
  Un puntero a la `CPictureHolder` del objeto `IPicture` interfaz.  
   
 ```  
 LPPICTURE m_pPict;  
 ```  
   
-##  <a name="a-namerendera--cpictureholderrender"></a><a name="render"></a>CPictureHolder:: Render  
+##  <a name="render"></a>CPictureHolder:: Render  
  Representa la imagen en el rectángulo que se hace referencia a `rcRender`.  
   
 ```  
@@ -286,7 +297,7 @@ void Render(
  *rcWBounds*  
  Un rectángulo que representa el rectángulo delimitador del objeto de representar la imagen. Para un control, este rectángulo es el `rcBounds` parámetro pasado a una invalidación de [COleControl:: OnDraw](../../mfc/reference/colecontrol-class.md#ondraw).  
   
-##  <a name="a-namesetpicturedispatcha--cpictureholdersetpicturedispatch"></a><a name="setpicturedispatch"></a>CPictureHolder::SetPictureDispatch  
+##  <a name="setpicturedispatch"></a>CPictureHolder::SetPictureDispatch  
  Se conecta la `CPictureHolder` objeto un `IPictureDisp` interfaz.  
   
 ```  

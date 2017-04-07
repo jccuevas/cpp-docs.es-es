@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWndButton
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWndButton
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWndButton::IsCaptionButton
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWndButton::IsCloseButton
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +104,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdesktopalertwnd.h  
   
-##  <a name="a-nameiscaptionbuttona--cmfcdesktopalertwndbuttoniscaptionbutton"></a><a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton  
+##  <a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton  
  Determina si el botón se muestra en el área de título del cuadro de diálogo de alerta.  
   
 ```  
@@ -111,7 +114,7 @@ BOOL IsCaptionButton() const;
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si el botón se muestra en el área de título del cuadro de diálogo de alerta; de lo contrario, 0.  
   
-##  <a name="a-nameisclosebuttona--cmfcdesktopalertwndbuttonisclosebutton"></a><a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton  
+##  <a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton  
  Determina si el botón cierra el cuadro de diálogo de alerta.  
   
 ```  

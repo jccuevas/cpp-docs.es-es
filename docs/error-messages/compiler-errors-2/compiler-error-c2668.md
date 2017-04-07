@@ -1,41 +1,57 @@
 ---
-title: "Error del compilador C2668 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2668"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2668"
+title: Compilador Error C2668 | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/28/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2668
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Error del compilador C2668
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: 6bb1dc7c1dbf26a4ff8ec25a46fe7128e0fb6aa8
+ms.lasthandoff: 03/29/2017
 
-'función' : llamada ambigua a una función sobrecargada  
+---
+# <a name="compiler-error-c2668"></a>C2668 de Error del compilador
+'función': llamada ambigua a una función sobrecargada  
   
- La llamada de función sobrecargada especificada no se pudo resolver.  Puede resultar conveniente convertir explícitamente uno o varios de los parámetros reales.  
+ No se pudo resolver la llamada de función sobrecargada especificada. Puede convertir explícitamente uno o varios de los parámetros reales.  
   
- También se obtiene este error mediante el uso de plantillas.  Si en alguna clase hay una función miembro normal y una función miembro basada en plantilla con la misma firma, tiene prioridad esta última.  La implementación actual de Visual C\+\+ tiene esta limitación.  
+ También puede obtener este error mediante el uso de la plantilla. Si, en la misma clase, tiene una función miembro normal y una función de miembro con plantilla con la misma firma, uno con plantilla debe aparecer en primer lugar. Se trata de una limitación de la implementación actual de Visual C++.  
   
  Vea el artículo de Knowledge Base Q240869 para obtener más información sobre la ordenación parcial de plantillas de función.  
   
- En caso de que esté compilando un proyecto ATL que contenga un objeto COM compatible con `ISupportErrorInfo`, vea el artículo de Knowledge Base Q243298.  
+ Si está creando un proyecto ATL que contiene un objeto COM compatible con `ISupportErrorInfo`, vea el artículo de Knowledge Base Q243298.  
   
-## Ejemplo  
- El código siguiente genera el error C2668:  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C2668:  
   
 ```  
 // C2668.cpp  
@@ -53,8 +69,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- Otra forma de corregir este error es mediante una [declaración using](../../cpp/using-declaration.md):  
+## <a name="example"></a>Ejemplo  
+ Otra manera de resolver este error es con un [mediante declaración](../../cpp/using-declaration.md):  
   
 ```  
 // C2668b.cpp  
@@ -95,10 +111,10 @@ class MyTestCase : public AppTestCase {
 };  
 ```  
   
-## Ejemplo  
- Este error también puede producirse como resultado del trabajo de conformidad del compilador realizado para Visual Studio .NET 2003: la conversión de constante 0 es ambigua.  
+## <a name="example"></a>Ejemplo  
+ Este error también puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio .NET 2003: conversión ambigua en la conversión de constante 0.  
   
- La conversión mediante la constante 0 es ambigua, ya que int requiere conversiones a long y void\*.  Para corregir este error, convierta 0 al tipo exacto del parámetro de la función para la que se está utilizando, de forma que no sea necesario realizar ninguna conversión \(este código será válido en la versiones Visual Studio .NET 2003 y Visual Studio .NET de Visual C\+\+\).  
+ La conversión mediante la constante 0 es ambigua debido a que int requiere conversiones a long y void *. Para resolver este error, convierta 0 al tipo exacto del parámetro de función para que se va a usarlo para que sea necesario ninguna conversión que se realicen (este código será válido en las versiones de Visual Studio .NET 2003 y Visual Studio .NET de Visual C++).  
   
 ```  
 // C2668c.cpp  
@@ -118,8 +134,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- Este error puede producirse porque, ahora, CRT incorpora formas de tipo float y double de todas las funciones matemáticas.  
+## <a name="example"></a>Ejemplo  
+ Este error puede producirse porque CRT tiene ahora formas float y double de todas las funciones matemáticas.  
   
 ```  
 // C2668d.cpp  
@@ -132,8 +148,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- Este error puede producirse porque la función pow\(int, int\) se haya quitado de math.h en CRT.  
+## <a name="example"></a>Ejemplo  
+ Este error puede producirse porque la función pow (int, int) se ha quitado de math.h en CRT.  
   
 ```  
 // C2668e.cpp  
@@ -142,4 +158,26 @@ int main() {
    pow(9,9);   // C2668  
    pow((double)9,9);   // OK  
 }  
+```
+
+## <a name="example"></a>Ejemplo  
+Este código se ejecuta correctamente en Visual Studio 2015, pero se produce un error en Visual Studio de 2017 y versiones posteriores con C2668. En Visual Studio 2015, el compilador trataba erróneamente la inicialización de lista de copia como si fuera inicialización de copia regular; solo consideraba la conversión de constructores para la resolución de sobrecarga. 
+
+```
+C++
+struct A {
+    explicit A(int) {}
+};
+
+struct B {
+    B(int) {}
+};
+
+void f(const A&) {}
+void f(const B&) {}
+
+int main()
+{
+    f({ 1 }); // error C2668: 'f': ambiguous call to overloaded function
+}
 ```

@@ -10,7 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAtlTransactionManager
-- atltransactionmanager/ATL::CAtlTransactionManager
+- ATLTRANSACTIONMANAGER/ATL::CAtlTransactionManager
+- ATLTRANSACTIONMANAGER/ATL::CAtlTransactionManager
+- ATLTRANSACTIONMANAGER/ATL::Close
+- ATLTRANSACTIONMANAGER/ATL::Commit
+- ATLTRANSACTIONMANAGER/ATL::Create
+- ATLTRANSACTIONMANAGER/ATL::CreateFile
+- ATLTRANSACTIONMANAGER/ATL::DeleteFile
+- ATLTRANSACTIONMANAGER/ATL::FindFirstFile
+- ATLTRANSACTIONMANAGER/ATL::GetFileAttributes
+- ATLTRANSACTIONMANAGER/ATL::GetFileAttributesEx
+- ATLTRANSACTIONMANAGER/ATL::GetHandle
+- ATLTRANSACTIONMANAGER/ATL::IsFallback
+- ATLTRANSACTIONMANAGER/ATL::MoveFile
+- ATLTRANSACTIONMANAGER/ATL::RegCreateKeyEx
+- ATLTRANSACTIONMANAGER/ATL::RegDeleteKey
+- ATLTRANSACTIONMANAGER/ATL::RegOpenKeyEx
+- ATLTRANSACTIONMANAGER/ATL::Rollback
+- ATLTRANSACTIONMANAGER/ATL::SetFileAttributes
+- ATLTRANSACTIONMANAGER/ATL::m_bFallback
+- ATLTRANSACTIONMANAGER/ATL::m_hTransaction
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +116,7 @@ class CAtlTransactionManager;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atltransactionmanager.h  
   
-##  <a name="a-namedtora--catltransactionmanager"></a><a name="dtor"></a>~ CAtlTransactionManager  
+##  <a name="dtor"></a>~ CAtlTransactionManager  
  Destructor de CAtlTransactionManager.  
   
 ```
@@ -107,7 +126,7 @@ virtual ~CAtlTransactionManager();
 ### <a name="remarks"></a>Comentarios  
  En el procesamiento normal, la transacción está confirmada y cerrar automáticamente. Si se llama al destructor durante un desenredo de la excepción, la transacción se revierte y se cierra.  
   
-##  <a name="a-namecatltransactionmanagera--catltransactionmanager"></a><a name="catltransactionmanager"></a>CAtlTransactionManager  
+##  <a name="catltransactionmanager"></a>CAtlTransactionManager  
  Constructor CAtlTransactionManager.  
   
 ```
@@ -123,7 +142,7 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameclosea--close"></a><a name="close"></a>Cerrar  
+##  <a name="close"></a>Cerrar  
  Cierra el identificador de transacción.  
   
 ```
@@ -136,7 +155,7 @@ inline BOOL Close();
 ### <a name="remarks"></a>Comentarios  
  Este contenedor llama a la `CloseHandle` (función). El método se llama automáticamente en el destructor.  
   
-##  <a name="a-namecommita--commit"></a><a name="commit"></a>Confirmación  
+##  <a name="commit"></a>Confirmación  
  Solicitudes que se confirma la transacción.  
   
 ```
@@ -149,7 +168,7 @@ inline BOOL Commit();
 ### <a name="remarks"></a>Comentarios  
  Este contenedor llama a la `CommitTransaction` (función). El método se llama automáticamente en el destructor.  
   
-##  <a name="a-namecreatea--create"></a><a name="create"></a>Crear  
+##  <a name="create"></a>Crear  
  Crea el identificador de transacción.  
   
 ```
@@ -162,7 +181,7 @@ inline BOOL Create();
 ### <a name="remarks"></a>Comentarios  
  Este contenedor llama a la `CreateTransaction` (función). Consulte  
   
-##  <a name="a-namecreatefilea--createfile"></a><a name="createfile"></a>CreateFile  
+##  <a name="createfile"></a>CreateFile  
  Crea o abre un archivo, una secuencia de archivo o un directorio como una operación de transacción.  
   
 ```
@@ -204,7 +223,7 @@ inline HANDLE CreateFile(
 ### <a name="remarks"></a>Comentarios  
  Este contenedor llama a la `CreateFileTransacted` (función).  
   
-##  <a name="a-namedeletefilea--deletefile"></a><a name="deletefile"></a>DeleteFile  
+##  <a name="deletefile"></a>DeleteFile  
  Elimina un archivo existente como una operación de transacción.  
   
 ```
@@ -218,7 +237,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 ### <a name="remarks"></a>Comentarios  
  Este contenedor llama a la `DeleteFileTransacted` (función).  
   
-##  <a name="a-namefindfirstfilea--findfirstfile"></a><a name="findfirstfile"></a>FindFirstFile  
+##  <a name="findfirstfile"></a>FindFirstFile  
  Busca un directorio de un archivo o un subdirectorio como una operación de transacción.  
   
 ```
@@ -240,7 +259,7 @@ inline HANDLE FindFirstFile(
 ### <a name="remarks"></a>Comentarios  
  Este contenedor llama a la `FindFirstFileTransacted` (función).  
   
-##  <a name="a-namegetfileattributesa--getfileattributes"></a><a name="getfileattributes"></a>GetFileAttributes  
+##  <a name="getfileattributes"></a>GetFileAttributes  
  Recupera los atributos del sistema de archivos para un archivo o directorio especificado como una operación de transacción.  
   
 ```
@@ -254,7 +273,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 ### <a name="remarks"></a>Comentarios  
  Este contenedor llama a la `GetFileAttributesTransacted` (función).  
   
-##  <a name="a-namegetfileattributesexa--getfileattributesex"></a><a name="getfileattributesex"></a>GetFileAttributesEx  
+##  <a name="getfileattributesex"></a>GetFileAttributesEx  
  Recupera los atributos del sistema de archivos para un archivo o directorio especificado como una operación de transacción.  
   
 ```
@@ -277,7 +296,7 @@ inline BOOL GetFileAttributesEx(
 ### <a name="remarks"></a>Comentarios  
  Este contenedor llama a la `GetFileAttributesTransacted` (función).  
   
-##  <a name="a-namegethandlea--gethandle"></a><a name="gethandle"></a>GetHandle  
+##  <a name="gethandle"></a>GetHandle  
  Devuelve el identificador de transacción.  
   
 ```
@@ -289,7 +308,7 @@ HANDLE GetHandle() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameisfallbacka--isfallback"></a><a name="isfallback"></a>IsFallback  
+##  <a name="isfallback"></a>IsFallback  
  Determina si están habilitadas las llamadas de reserva.  
   
 ```
@@ -301,7 +320,7 @@ BOOL IsFallback() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namembfallbacka--mbfallback"></a><a name="m_bfallback"></a>m_bFallback  
+##  <a name="m_bfallback"></a>m_bFallback  
  `TRUE`Si se admite la reserva; `FALSE` en caso contrario.  
   
 ```
@@ -310,7 +329,7 @@ BOOL m_bFallback;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namemhtransactiona--mhtransaction"></a><a name="m_htransaction"></a>m_hTransaction  
+##  <a name="m_htransaction"></a>m_hTransaction  
  El identificador de la transacción.  
   
 ```
@@ -319,7 +338,7 @@ HANDLE m_hTransaction;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namemovefilea--movefile"></a><a name="movefile"></a>MoveFile  
+##  <a name="movefile"></a>MoveFile  
  Mueve un archivo existente o un directorio, incluidos a sus elementos secundarios, como una operación de transacción.  
   
 ```
@@ -336,7 +355,7 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ### <a name="remarks"></a>Comentarios  
  Este contenedor llama a la `MoveFileTransacted` (función).  
   
-##  <a name="a-nameregcreatekeyexa--regcreatekeyex"></a><a name="regcreatekeyex"></a>RegCreateKeyEx  
+##  <a name="regcreatekeyex"></a>RegCreateKeyEx  
  Crea la clave del registro especificada y lo asocia con una transacción. Si la clave ya existe, la función lo abre.  
   
 ```
@@ -386,7 +405,7 @@ inline LSTATUS RegCreateKeyEx(
 ### <a name="remarks"></a>Comentarios  
  Este contenedor llama a la `RegCreateKeyTransacted` (función).  
   
-##  <a name="a-nameregdeletekeya--regdeletekey"></a><a name="regdeletekey"></a>RegDeleteKey  
+##  <a name="regdeletekey"></a>RegDeleteKey  
  Elimina una subclave y sus valores de la vista específica de la plataforma especificada del registro como una operación de transacción.  
   
 ```
@@ -406,7 +425,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 ### <a name="remarks"></a>Comentarios  
  Este contenedor llama a la `RegDeleteKeyTransacted` (función).  
   
-##  <a name="a-nameregopenkeyexa--regopenkeyex"></a><a name="regopenkeyex"></a>Error en RegOpenKeyEx  
+##  <a name="regopenkeyex"></a>Error en RegOpenKeyEx  
  Abre la clave del registro especificada y lo asocia con una transacción.  
   
 ```
@@ -440,7 +459,7 @@ inline LSTATUS RegOpenKeyEx(
 ### <a name="remarks"></a>Comentarios  
  Este contenedor llama a la `RegOpenKeyTransacted` (función).  
   
-##  <a name="a-namerollbacka--rollback"></a><a name="rollback"></a>Reversión  
+##  <a name="rollback"></a>Reversión  
  Solicitudes que se revierte la transacción.  
   
 ```
@@ -453,7 +472,7 @@ inline BOOL Rollback();
 ### <a name="remarks"></a>Comentarios  
  Este contenedor llama a la `RollbackTransaction` (función).  
   
-##  <a name="a-namesetfileattributesa--setfileattributes"></a><a name="setfileattributes"></a>SetFileAttributes  
+##  <a name="setfileattributes"></a>SetFileAttributes  
  Establece los atributos de un archivo o directorio como una operación de transacción.  
   
 ```

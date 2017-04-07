@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IExecutionResource
+- IExecutionResource
+- CONCRTRM/concurrency::IExecutionResource
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::CurrentSubscriptionLevel
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetExecutionResourceId
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetNodeId
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::Remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 530fd40409a08be6ae13ad604deb5b85989b2964
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: fa3c65780ac9e001e6f6b8a015dc7f70df47181f
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource (Estructura)
@@ -54,10 +59,10 @@ struct IExecutionResource;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[IExecutionResource:: CurrentSubscriptionLevel (método)](#currentsubscriptionlevel)|Devuelve el número de procesador virtual activada raíces y suscribe subprocesos externos actualmente asociados con el subproceso de hardware subyacente que representa este recurso de ejecución.|  
-|[IExecutionResource:: GetExecutionResourceId (método)](#getexecutionresourceid)|Devuelve un identificador único para el subproceso del hardware que representa este recurso de ejecución.|  
-|[IExecutionResource:: GetNodeId (método)](#getnodeid)|Devuelve un identificador único para el nodo del procesador que pertenece este recurso de ejecución.|  
-|[IExecutionResource:: Remove (método)](#remove)|Devuelve este recurso de ejecución al administrador de recursos.|  
+|[IExecutionResource:: CurrentSubscriptionLevel](#currentsubscriptionlevel)|Devuelve el número de procesador virtual activada raíces y suscribe subprocesos externos actualmente asociados con el subproceso de hardware subyacente que representa este recurso de ejecución.|  
+|[IExecutionResource:: GetExecutionResourceId](#getexecutionresourceid)|Devuelve un identificador único para el subproceso del hardware que representa este recurso de ejecución.|  
+|[IExecutionResource:: GetNodeId](#getnodeid)|Devuelve un identificador único para el nodo del procesador que pertenece este recurso de ejecución.|  
+|[IExecutionResource:: Remove](#remove)|Devuelve este recurso de ejecución al administrador de recursos.|  
   
 ## <a name="remarks"></a>Comentarios  
  Recursos de ejecución pueden ser independientes o asociados a raíces del procesador virtual. Se crea un recurso de ejecución independiente cuando un subproceso de la aplicación crea una suscripción del subproceso. Los métodos [ISchedulerProxy:: SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) y [ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) crean suscripciones del subproceso y devuelven una `IExecutionResource` interfaz que representa la suscripción. Crear una suscripción del subproceso es una manera de informar al administrador de recursos que un subproceso determinado participará en el trabajo en cola a un programador, junto con las raíces de procesador virtual asigna el Administrador de recursos para el programador. El Administrador de recursos usa la información para evitar suscripciones excesivas de subprocesos de hardware siempre que sea posible.  
@@ -70,7 +75,7 @@ struct IExecutionResource;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-namecurrentsubscriptionlevela--iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a>IExecutionResource:: CurrentSubscriptionLevel (método)  
+##  <a name="currentsubscriptionlevel"></a>IExecutionResource:: CurrentSubscriptionLevel (método)  
  Devuelve el número de procesador virtual activada raíces y suscribe subprocesos externos actualmente asociados con el subproceso de hardware subyacente que representa este recurso de ejecución.  
   
 ```
@@ -89,7 +94,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
   
  El Administrador de recursos usa la información de nivel de suscripción como una de las maneras en que se va a determinar cuándo mover recursos entre los programadores.  
   
-##  <a name="a-namegetexecutionresourceida--iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a>IExecutionResource:: GetExecutionResourceId (método)  
+##  <a name="getexecutionresourceid"></a>IExecutionResource:: GetExecutionResourceId (método)  
  Devuelve un identificador único para el subproceso del hardware que representa este recurso de ejecución.  
   
 ```
@@ -102,7 +107,7 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 ### <a name="remarks"></a>Comentarios  
  Cada subproceso del hardware tiene asignado un identificador único por el Runtime de simultaneidad. Si varios recursos de ejecución están asociado hardware subproceso, todos tendrán el mismo identificador de recursos de ejecución.  
   
-##  <a name="a-namegetnodeida--iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a>IExecutionResource:: GetNodeId (método)  
+##  <a name="getnodeid"></a>IExecutionResource:: GetNodeId (método)  
  Devuelve un identificador único para el nodo del procesador que pertenece este recurso de ejecución.  
   
 ```
@@ -117,7 +122,7 @@ virtual unsigned int GetNodeId() const = 0;
   
  Se puede obtener el recuento de nodos de la función [GetProcessorNodeCount](concurrency-namespace-functions.md).  
   
-##  <a name="a-nameremovea--iexecutionresourceremove-method"></a><a name="remove"></a>IExecutionResource:: Remove (método)  
+##  <a name="remove"></a>IExecutionResource:: Remove (método)  
  Devuelve este recurso de ejecución al administrador de recursos.  
   
 ```

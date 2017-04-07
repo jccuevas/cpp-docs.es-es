@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleMessageFilter
+- AFXOLE/COleMessageFilter
+- AFXOLE/COleMessageFilter::COleMessageFilter
+- AFXOLE/COleMessageFilter::BeginBusyState
+- AFXOLE/COleMessageFilter::EnableBusyDialog
+- AFXOLE/COleMessageFilter::EnableNotRespondingDialog
+- AFXOLE/COleMessageFilter::EndBusyState
+- AFXOLE/COleMessageFilter::OnMessagePending
+- AFXOLE/COleMessageFilter::Register
+- AFXOLE/COleMessageFilter::Revoke
+- AFXOLE/COleMessageFilter::SetBusyReply
+- AFXOLE/COleMessageFilter::SetMessagePendingDelay
+- AFXOLE/COleMessageFilter::SetRetryReply
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +110,7 @@ class COleMessageFilter : public CCmdTarget
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxole.h  
   
-##  <a name="a-namebeginbusystatea--colemessagefilterbeginbusystate"></a><a name="beginbusystate"></a>COleMessageFilter::BeginBusyState  
+##  <a name="beginbusystate"></a>COleMessageFilter::BeginBusyState  
  Llame a esta función para comenzar a un estado de ocupado.  
   
 ```  
@@ -112,14 +124,14 @@ virtual void BeginBusyState();
   
  De forma predeterminada, el marco de trabajo entra en el estado ocupado durante el procesamiento en inactividad, que se realiza mediante [CWinApp:: OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Mientras la aplicación está controlando **ON_COMMANDUPDATEUI** notificaciones, las llamadas entrantes se tratan más adelante, una vez completado el procesamiento en inactividad.  
   
-##  <a name="a-namecolemessagefiltera--colemessagefiltercolemessagefilter"></a><a name="colemessagefilter"></a>COleMessageFilter::COleMessageFilter  
+##  <a name="colemessagefilter"></a>COleMessageFilter::COleMessageFilter  
  Crea un objeto `COleMessageFilter`.  
   
 ```  
 COleMessageFilter();
 ```  
   
-##  <a name="a-nameenablebusydialoga--colemessagefilterenablebusydialog"></a><a name="enablebusydialog"></a>COleMessageFilter::EnableBusyDialog  
+##  <a name="enablebusydialog"></a>COleMessageFilter::EnableBusyDialog  
  Habilita y deshabilita el cuadro de diálogo ocupado, que se muestra cuando caduca el retraso de espera de mensaje (consulte [SetRetryReply](#setretryreply)) durante una llamada OLE.  
   
 ```  
@@ -130,7 +142,7 @@ void EnableBusyDialog(BOOL bEnableBusy = TRUE);
  *bEnableBusy*  
  Especifica si el cuadro de diálogo "ocupado" está habilitado o deshabilitado.  
   
-##  <a name="a-nameenablenotrespondingdialoga--colemessagefilterenablenotrespondingdialog"></a><a name="enablenotrespondingdialog"></a>COleMessageFilter::EnableNotRespondingDialog  
+##  <a name="enablenotrespondingdialog"></a>COleMessageFilter::EnableNotRespondingDialog  
  Habilita y deshabilita el cuadro de diálogo "no responde", que se muestra si está pendiente un mensaje del teclado o del mouse durante una OLE ha agotado llamada y la llamada.  
   
 ```  
@@ -141,7 +153,7 @@ void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
  *bEnableNotResponding*  
  Especifica si el cuadro de diálogo "no responde" está habilitado o deshabilitado.  
   
-##  <a name="a-nameendbusystatea--colemessagefilterendbusystate"></a><a name="endbusystate"></a>COleMessageFilter::EndBusyState  
+##  <a name="endbusystate"></a>COleMessageFilter::EndBusyState  
  Llame a esta función para finalizar un estado de ocupado.  
   
 ```  
@@ -155,7 +167,7 @@ virtual void EndBusyState();
   
  De forma predeterminada, el marco de trabajo entra en el estado ocupado durante el procesamiento en inactividad, que se realiza mediante [CWinApp:: OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Mientras la aplicación está controlando `ON_UPDATE_COMMAND_UI` notificaciones, las llamadas entrantes se administran después de completar el procesamiento en inactividad.  
   
-##  <a name="a-nameonmessagependinga--colemessagefilteronmessagepending"></a><a name="onmessagepending"></a>COleMessageFilter::OnMessagePending  
+##  <a name="onmessagepending"></a>COleMessageFilter::OnMessagePending  
  Lo llama el marco de trabajo para procesar los mensajes mientras una llamada OLE está en curso.  
   
 ```  
@@ -174,7 +186,7 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
   
  Debe registrar el filtro de mensajes por medio de una llamada a [registrar](#register) antes de que pueda activarse.  
   
-##  <a name="a-nameregistera--colemessagefilterregister"></a><a name="register"></a>COleMessageFilter::Register  
+##  <a name="register"></a>COleMessageFilter::Register  
  Registra el filtro de mensajes con las DLL del sistema OLE.  
   
 ```  
@@ -189,7 +201,7 @@ BOOL Register();
   
  Filtro de mensaje predeterminado del marco de trabajo automáticamente se registrado durante la inicialización y revocado en la finalización.  
   
-##  <a name="a-namerevokea--colemessagefilterrevoke"></a><a name="revoke"></a>COleMessageFilter::Revoke  
+##  <a name="revoke"></a>COleMessageFilter::Revoke  
  Revoca un registro anterior realizado una llamada a [registrar](#register).  
   
 ```  
@@ -201,7 +213,7 @@ void Revoke();
   
  El filtro de mensajes predeterminado, que se crean y registran automáticamente por el marco de trabajo, automáticamente se ha revocado.  
   
-##  <a name="a-namesetbusyreplya--colemessagefiltersetbusyreply"></a><a name="setbusyreply"></a>COleMessageFilter::SetBusyReply  
+##  <a name="setbusyreply"></a>COleMessageFilter::SetBusyReply  
  Esta función establece "ocupado reply" la aplicación.  
   
 ```  
@@ -225,7 +237,7 @@ void SetBusyReply(SERVERCALL nBusyReply);
   
  De forma predeterminada, es la respuesta ocupada **SERVERCALL_RETRYLATER**. Esta respuesta hace que la aplicación que realiza la llamada reintentar la llamada tan pronto como sea posible.  
   
-##  <a name="a-namesetmessagependingdelaya--colemessagefiltersetmessagependingdelay"></a><a name="setmessagependingdelay"></a>COleMessageFilter::SetMessagePendingDelay  
+##  <a name="setmessagependingdelay"></a>COleMessageFilter::SetMessagePendingDelay  
  Determina cuánto tiempo la aplicación que realiza la llamada espera una respuesta de la aplicación llamada antes de realizar otra acción.  
   
 ```  
@@ -239,7 +251,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ### <a name="remarks"></a>Comentarios  
  Esta función funciona junto con [SetRetryReply](#setretryreply).  
   
-##  <a name="a-namesetretryreplya--colemessagefiltersetretryreply"></a><a name="setretryreply"></a>COleMessageFilter::SetRetryReply  
+##  <a name="setretryreply"></a>COleMessageFilter::SetRetryReply  
  Determina la acción de la aplicación que realiza la llamada cuando recibe una respuesta ocupada desde una aplicación de llamada.  
   
 ```  

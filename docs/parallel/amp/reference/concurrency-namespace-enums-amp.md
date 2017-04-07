@@ -6,6 +6,11 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::access_type
+- amp/Concurrency::queuing_mode
+dev_langs:
+- C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
 caps.latest.revision: 8
 author: mikeblome
@@ -22,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[access_type (enumeración)](#access_type)|[queuing_mode (enumeración)](#queuing_mode)|  
   
-##  <a name="a-nameaccesstypea--accesstype-enumeration"></a><a name="access_type"></a>access_type (enumeración)  
+##  <a name="access_type"></a>access_type (enumeración)  
  Tipo de enumeración se usa para denotar los distintos tipos de acceso a datos.  
   
 ```  
@@ -39,7 +44,7 @@ enum access_type;
 |`access_type_write`|Compartir. La asignación es accesible en el acelerador y es de lectura y escritura en la CPU.|  
 
   
-##  <a name="a-namequeuingmodea--queuingmode-enumeration"></a><a name="queuing_mode"></a>queuing_mode (enumeración)  
+##  <a name="queuing_mode"></a>queuing_mode (enumeración)  
  Especifica los modos de la puesta en cola que se admiten en el acelerador.  
   
 ```  

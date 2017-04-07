@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency::direct3d_abort
+- runtime_exception
+- AMPRT/runtime_exception
+- AMPRT/Concurrency::runtime_exception
+- AMPRT/Concurrency::runtime_exception::get_error_code
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +38,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 1a2655ed4c8783dd5f7a3b8af2a7d6a9db88f43e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 399d2531c06285012df12d703b4cda6e18469c38
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="runtimeexception-class"></a>runtime_exception (Clase)
@@ -62,14 +65,14 @@ class runtime_exception : public std::exception;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[get_error_code (método)](#runtime_exception__get_error_code)|Devuelve el código de error que provocó la excepción.|  
+|[get_error_code](#runtime_exception__get_error_code)|Devuelve el código de error que provocó la excepción.|  
 
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[operador = (operador)](#operator_eq)|Copia el contenido del elemento `runtime_exception` objeto en éste.|  
+|[operator=](#operator_eq)|Copia el contenido del elemento `runtime_exception` objeto en éste.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `exception`  
@@ -81,7 +84,7 @@ class runtime_exception : public std::exception;
   
  **Espacio de nombres:** Concurrency  
 
-## <a name="a-nameruntimeexceptionctora--runtimeexception-constructor"></a><a name="runtime_exception__ctor"></a>runtime_exception (Constructor)  
+## <a name="runtime_exception__ctor"></a>runtime_exception (Constructor)  
 Inicializa una nueva instancia de la clase.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -111,7 +114,7 @@ runtime_exception(
 ### <a name="return-value"></a>Valor devuelto  
  Objeto `runtime_exception`.  
 
-## <a name="a-namedtora--runtimeexception-destructor"></a><a name="dtor"></a>~ runtime_exception (destructor)  
+## <a name="dtor"></a>~ runtime_exception (destructor)  
 Destruye el objeto.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -120,7 +123,7 @@ Destruye el objeto.
 virtual ~runtime_exception() throw();  
 ```  
   
-## <a name="a-nameruntimeexceptiongeterrorcodea--geterrorcode"></a><a name="runtime_exception__get_error_code"></a>get_error_code   
+## <a name="runtime_exception__get_error_code"></a>get_error_code   
 Devuelve el código de error que provocó la excepción.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -132,7 +135,7 @@ HRESULT get_error_code() const throw();
 ### <a name="return-value"></a>Valor devuelto  
  El valor HRESULT de error que provocó la excepción.  
   
-## <a name="a-nameruntimeexceptionoperatoreqa--operator"></a><a name="runtime_exception__operator_eq"></a>  operator=   
+## <a name="runtime_exception__operator_eq"></a>  operator=   
   Copia el contenido del elemento `runtime_exception` objeto en éste.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -151,5 +154,5 @@ runtime_exception & operator= (    const runtime_exception & _Other ) throw();
 
   
 ## <a name="see-also"></a>Vea también  
- [Namespace de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Espacio de nombres de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

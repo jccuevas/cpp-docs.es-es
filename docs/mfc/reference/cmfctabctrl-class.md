@@ -10,6 +10,56 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCTabCtrl
+- AFXTABCTRL/CMFCTabCtrl
+- AFXTABCTRL/CMFCTabCtrl::ActivateMDITab
+- AFXTABCTRL/CMFCTabCtrl::AllowDestroyEmptyTabbedPane
+- AFXTABCTRL/CMFCTabCtrl::AutoSizeWindow
+- AFXTABCTRL/CMFCTabCtrl::CalcRectEdit
+- AFXTABCTRL/CMFCTabCtrl::Create
+- AFXTABCTRL/CMFCTabCtrl::EnableActiveTabCloseButton
+- AFXTABCTRL/CMFCTabCtrl::EnableInPlaceEdit
+- AFXTABCTRL/CMFCTabCtrl::EnableTabDocumentsMenu
+- AFXTABCTRL/CMFCTabCtrl::EnsureVisible
+- AFXTABCTRL/CMFCTabCtrl::GetDocumentIcon
+- AFXTABCTRL/CMFCTabCtrl::GetFirstVisibleTabNum
+- AFXTABCTRL/CMFCTabCtrl::GetResizeMode
+- AFXTABCTRL/CMFCTabCtrl::GetScrollBar
+- AFXTABCTRL/CMFCTabCtrl::GetTabArea
+- AFXTABCTRL/CMFCTabCtrl::GetTabMaxWidth
+- AFXTABCTRL/CMFCTabCtrl::GetTabsHeight
+- AFXTABCTRL/CMFCTabCtrl::GetTabsRect
+- AFXTABCTRL/CMFCTabCtrl::GetWndArea
+- AFXTABCTRL/CMFCTabCtrl::HideActiveWindowHorzScrollBar
+- AFXTABCTRL/CMFCTabCtrl::HideInactiveWindow
+- AFXTABCTRL/CMFCTabCtrl::HideNoTabs
+- AFXTABCTRL/CMFCTabCtrl::HideSingleTab
+- AFXTABCTRL/CMFCTabCtrl::IsActiveInMDITabGroup
+- AFXTABCTRL/CMFCTabCtrl::IsActiveTabBoldFont
+- AFXTABCTRL/CMFCTabCtrl::IsActiveTabCloseButton
+- AFXTABCTRL/CMFCTabCtrl::IsDrawFrame
+- AFXTABCTRL/CMFCTabCtrl::IsFlatFrame
+- AFXTABCTRL/CMFCTabCtrl::IsFlatTab
+- AFXTABCTRL/CMFCTabCtrl::IsLeftRightRounded
+- AFXTABCTRL/CMFCTabCtrl::IsMDITabGroup
+- AFXTABCTRL/CMFCTabCtrl::IsOneNoteStyle
+- AFXTABCTRL/CMFCTabCtrl::IsSharedScroll
+- AFXTABCTRL/CMFCTabCtrl::IsTabDocumentsMenu
+- AFXTABCTRL/CMFCTabCtrl::IsVS2005Style
+- AFXTABCTRL/CMFCTabCtrl::ModifyTabStyle
+- AFXTABCTRL/CMFCTabCtrl::OnDragEnter
+- AFXTABCTRL/CMFCTabCtrl::OnDragOver
+- AFXTABCTRL/CMFCTabCtrl::OnShowTabDocumentsMenu
+- AFXTABCTRL/CMFCTabCtrl::SetActiveInMDITabGroup
+- AFXTABCTRL/CMFCTabCtrl::SetActiveTab
+- AFXTABCTRL/CMFCTabCtrl::SetActiveTabBoldFont
+- AFXTABCTRL/CMFCTabCtrl::SetDrawFrame
+- AFXTABCTRL/CMFCTabCtrl::SetFlatFrame
+- AFXTABCTRL/CMFCTabCtrl::SetImageList
+- AFXTABCTRL/CMFCTabCtrl::SetResizeMode
+- AFXTABCTRL/CMFCTabCtrl::SetTabMaxWidth
+- AFXTABCTRL/CMFCTabCtrl::StopResize
+- AFXTABCTRL/CMFCTabCtrl::SynchronizeScrollBar
+- AFXTABCTRL/CMFCTabCtrl::m_bEnableActivate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -182,7 +232,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxtabctrl.h  
   
-##  <a name="a-nameactivatemditaba--cmfctabctrlactivatemditab"></a><a name="activatemditab"></a>CMFCTabCtrl::ActivateMDITab  
+##  <a name="activatemditab"></a>CMFCTabCtrl::ActivateMDITab  
  Muestra la ficha especificada del control de ficha actual y establece el foco en esa pestaña.  
   
 ```  
@@ -193,7 +243,7 @@ void ActivateMDITab(int nTab = -1);
  [in] `nTab`  
  Índice de base cero de una ficha para mostrar, o -1 para especificar la ficha activa.  
   
-##  <a name="a-nameallowdestroyemptytabbedpanea--cmfctabctrlallowdestroyemptytabbedpane"></a><a name="allowdestroyemptytabbedpane"></a>CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
+##  <a name="allowdestroyemptytabbedpane"></a>CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -205,7 +255,7 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameautosizewindowa--cmfctabctrlautosizewindow"></a><a name="autosizewindow"></a>CMFCTabCtrl::AutoSizeWindow  
+##  <a name="autosizewindow"></a>CMFCTabCtrl::AutoSizeWindow  
  Especifica si el marco es cambiar el tamaño del área cliente de todas las ventanas de control de ficha cuando un elemento de la interfaz de usuario de los cambios de control de ficha.  
   
 ```  
@@ -218,7 +268,7 @@ void AutoSizeWindow(BOOL bAutoSize = TRUE);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namecreatea--cmfctabctrlcreate"></a><a name="create"></a>CMFCTabCtrl::Create  
+##  <a name="create"></a>CMFCTabCtrl::Create  
  Crea el control de pestaña y lo adjunta a la `CMFCTabCtrl` objeto.  
   
 ```  
@@ -279,7 +329,7 @@ BOOL Create(
  [!code-cpp[1 NVC_MFC_StateCollection](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
 [!code-cpp[NVC_MFC_StateCollection&#2;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]  
   
-##  <a name="a-namecalcrectedita--cmfctabctrlcalcrectedit"></a><a name="calcrectedit"></a>CMFCTabCtrl::CalcRectEdit  
+##  <a name="calcrectedit"></a>CMFCTabCtrl::CalcRectEdit  
  Desinfla el tamaño del área de ficha especificado.  
   
 ```  
@@ -293,7 +343,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ### <a name="remarks"></a>Comentarios  
  Este método se llama cuando se cambia la etiqueta de una pestaña. Este método desinfla los lados izquierdo y derecho del rectángulo especificado por la mitad del alto actual de pestaña y desinfla arriba y abajo en una unidad.  
   
-##  <a name="a-nameenableactivetabclosebuttona--cmfctabctrlenableactivetabclosebutton"></a><a name="enableactivetabclosebutton"></a>CMFCTabCtrl::EnableActiveTabCloseButton  
+##  <a name="enableactivetabclosebutton"></a>CMFCTabCtrl::EnableActiveTabCloseButton  
  Muestra u oculta el botón Cerrar ( **X**) en la ficha activa.  
   
 ```  
@@ -304,7 +354,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
  [in] `bEnable`  
  `TRUE`para mostrar el botón de cierre de la ficha activa; `FALSE` para mostrar el botón Cerrar en la esquina superior derecha del área de ficha. El valor predeterminado es `TRUE`.  
   
-##  <a name="a-nameenableinplaceedita--cmfctabctrlenableinplaceedit"></a><a name="enableinplaceedit"></a>CMFCTabCtrl::EnableInPlaceEdit  
+##  <a name="enableinplaceedit"></a>CMFCTabCtrl::EnableInPlaceEdit  
  Habilita o deshabilita las etiquetas de la ficha editable.  
   
 ```  
@@ -317,7 +367,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameenabletabdocumentsmenua--cmfctabctrlenabletabdocumentsmenu"></a><a name="enabletabdocumentsmenu"></a>CMFCTabCtrl::EnableTabDocumentsMenu  
+##  <a name="enabletabdocumentsmenu"></a>CMFCTabCtrl::EnableTabDocumentsMenu  
  Alterna entre la interfaz de usuario que utiliza dos botones para desplazarse por las fichas de la ventana y una interfaz que muestra un menú emergente de ventanas con fichas.  
   
 ```  
@@ -331,7 +381,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ### <a name="remarks"></a>Comentarios  
  Cuando el usuario hace clic en una etiqueta de ficha, el marco de trabajo muestra la ventana con fichas correspondiente. Si está visible la etiqueta de ficha, se abre la ventana con pestañas sin cambiar su posición. Si el usuario selecciona un documento en el menú emergente y la correspondiente ventana con fichas está fuera de pantalla, la ventana con fichas se convierte en la primera ficha.  
   
-##  <a name="a-nameensurevisiblea--cmfctabctrlensurevisible"></a><a name="ensurevisible"></a>CMFCTabCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>CMFCTabCtrl::EnsureVisible  
  Garantiza que una ficha está visible.  
   
 ```  
@@ -348,7 +398,7 @@ virtual BOOL EnsureVisible(int iTab);
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para garantizar que la ficha especificada es visible. Si es necesario, se desplazará el control de ficha.  
   
-##  <a name="a-namegetdocumenticona--cmfctabctrlgetdocumenticon"></a><a name="getdocumenticon"></a>CMFCTabCtrl::GetDocumentIcon  
+##  <a name="getdocumenticon"></a>CMFCTabCtrl::GetDocumentIcon  
  Recupera la imagen que está asociada a una ficha en un menú emergente de ventanas con fichas.  
   
 ```  
@@ -362,7 +412,7 @@ static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 ### <a name="return-value"></a>Valor devuelto  
  El identificador de una imagen de mapa de bits.  
   
-##  <a name="a-namegetfirstvisibletabnuma--cmfctabctrlgetfirstvisibletabnum"></a><a name="getfirstvisibletabnum"></a>CMFCTabCtrl::GetFirstVisibleTabNum  
+##  <a name="getfirstvisibletabnum"></a>CMFCTabCtrl::GetFirstVisibleTabNum  
  Recupera el índice de la primera ficha que esté visible en el control de ficha actual.  
   
 ```  
@@ -375,7 +425,7 @@ virtual int GetFirstVisibleTabNum() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice este método sólo cuando el control de ficha se muestra en el estilo de Microsoft OneNote. Utilice la [CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle) método para determinar el estilo.  
   
-##  <a name="a-namegetresizemodea--cmfctabctrlgetresizemode"></a><a name="getresizemode"></a>CMFCTabCtrl::GetResizeMode  
+##  <a name="getresizemode"></a>CMFCTabCtrl::GetResizeMode  
  Recupera un valor que especifica cómo se puede cambiar el tamaño de control de ficha actual.  
   
 ```  
@@ -385,7 +435,7 @@ ResizeMode GetResizeMode() const;
 ### <a name="return-value"></a>Valor devuelto  
  Uno de los `CMFCTabCtrl::ResizeMode` valores de enumeración que especifica cómo se puede cambiar el tamaño de control de ficha. Para obtener una lista de valores posibles, vea la sección Comentarios de la [CMFCTabCtrl::SetResizeMode](#setresizemode) método.  
   
-##  <a name="a-namegetscrollbara--cmfctabctrlgetscrollbar"></a><a name="getscrollbar"></a>CMFCTabCtrl::GetScrollBar  
+##  <a name="getscrollbar"></a>CMFCTabCtrl::GetScrollBar  
  Recupera un puntero al objeto de barra de desplazamiento que está asociado con el control de ficha.  
   
 ```  
@@ -398,7 +448,7 @@ CScrollBar* GetScrollBar();
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para tener acceso a la barra de desplazamiento incrustado del control de ficha. Se crea un objeto de barra de desplazamiento sólo cuando el control de ficha tiene la `STYLE_FLAT_SHARED_HORZ_SCROLL` estilo.  
   
-##  <a name="a-namegettabareaa--cmfctabctrlgettabarea"></a><a name="gettabarea"></a>CMFCTabCtrl::GetTabArea  
+##  <a name="gettabarea"></a>CMFCTabCtrl::GetTabArea  
  Recupera el rectángulo delimitador del área de etiqueta de ficha en la parte superior o inferior del control de ficha.  
   
 ```  
@@ -417,7 +467,7 @@ void GetTabArea(
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para determinar el tamaño y posición del área de ficha en la ventana con fichas.  
   
-##  <a name="a-namegettabmaxwidtha--cmfctabctrlgettabmaxwidth"></a><a name="gettabmaxwidth"></a>CMFCTabCtrl::GetTabMaxWidth  
+##  <a name="gettabmaxwidth"></a>CMFCTabCtrl::GetTabMaxWidth  
  Recupera el ancho máximo de una pestaña.  
   
 ```  
@@ -430,7 +480,7 @@ int GetTabMaxWidth() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice la [CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth) para establecer el ancho máximo de ficha.  
   
-##  <a name="a-namegettabsheighta--cmfctabctrlgettabsheight"></a><a name="gettabsheight"></a>CMFCTabCtrl::GetTabsHeight  
+##  <a name="gettabsheight"></a>CMFCTabCtrl::GetTabsHeight  
  Recupera el alto del área de ficha del control de ficha actual.  
   
 ```  
@@ -440,7 +490,7 @@ virtual int GetTabsHeight() const;
 ### <a name="return-value"></a>Valor devuelto  
  El alto del área de ficha si cualquier ficha está visible, o cero si no existe la ficha está visible.  
   
-##  <a name="a-namegettabsrecta--cmfctabctrlgettabsrect"></a><a name="gettabsrect"></a>CMFCTabCtrl::GetTabsRect  
+##  <a name="gettabsrect"></a>CMFCTabCtrl::GetTabsRect  
  Recupera el rectángulo que delimita el área de fichas del control de ficha actual.  
   
 ```  
@@ -451,7 +501,7 @@ virtual void GetTabsRect(CRect& rect) const;
  [out] `rect`  
  Cuando este método finaliza, el `rect` parámetro contiene un rectángulo que delimita el área de fichas.  
   
-##  <a name="a-namegetwndareaa--cmfctabctrlgetwndarea"></a><a name="getwndarea"></a>CMFCTabCtrl::GetWndArea  
+##  <a name="getwndarea"></a>CMFCTabCtrl::GetWndArea  
  Recupera los límites del área cliente del control de ficha actual.  
   
 ```  
@@ -464,7 +514,7 @@ void GetWndArea(CRect& rect) const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namehideactivewindowhorzscrollbara--cmfctabctrlhideactivewindowhorzscrollbar"></a><a name="hideactivewindowhorzscrollbar"></a>CMFCTabCtrl::HideActiveWindowHorzScrollBar  
+##  <a name="hideactivewindowhorzscrollbar"></a>CMFCTabCtrl::HideActiveWindowHorzScrollBar  
  Oculta la barra de desplazamiento horizontal, si existe alguno, en la ventana activa.  
   
 ```  
@@ -474,7 +524,7 @@ void HideActiveWindowHorzScrollBar();
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para evitar que el control de ficha parpadea cuando el usuario cambia entre las páginas de control de ficha.  
   
-##  <a name="a-namehideinactivewindowa--cmfctabctrlhideinactivewindow"></a><a name="hideinactivewindow"></a>CMFCTabCtrl::HideInactiveWindow  
+##  <a name="hideinactivewindow"></a>CMFCTabCtrl::HideInactiveWindow  
  Especifica si el marco de trabajo muestra ventanas de control de ficha inactiva.  
   
 ```  
@@ -487,7 +537,7 @@ void HideInactiveWindow(BOOL bHide = TRUE);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namehidenotabsa--cmfctabctrlhidenotabs"></a><a name="hidenotabs"></a>CMFCTabCtrl::HideNoTabs  
+##  <a name="hidenotabs"></a>CMFCTabCtrl::HideNoTabs  
  Habilita o deshabilita el dibujo del área de ficha si no hay ningún fichas visibles.  
   
 ```  
@@ -500,7 +550,7 @@ void HideNoTabs(BOOL bHide=TRUE);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namehidesingletaba--cmfctabctrlhidesingletab"></a><a name="hidesingletab"></a>CMFCTabCtrl::HideSingleTab  
+##  <a name="hidesingletab"></a>CMFCTabCtrl::HideSingleTab  
  Habilita o deshabilita el dibujo de ficha si hay una sola ventana con fichas.  
   
 ```  
@@ -513,7 +563,7 @@ virtual void HideSingleTab(BOOL bHide=TRUE);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameisactiveinmditabgroupa--cmfctabctrlisactiveinmditabgroup"></a><a name="isactiveinmditabgroup"></a>CMFCTabCtrl::IsActiveInMDITabGroup  
+##  <a name="isactiveinmditabgroup"></a>CMFCTabCtrl::IsActiveInMDITabGroup  
  Indica si la ficha actual de un control de ficha es la pestaña activa en un grupo de pestañas de interfaz de múltiples documentos.  
   
 ```  
@@ -526,7 +576,7 @@ BOOL IsActiveInMDITabGroup() const;
 ### <a name="remarks"></a>Comentarios  
  Puede organizar varias ventanas de documento en ambos grupos de pestañas verticales u horizontales y mover fácilmente los documentos de grupo de una pestaña a otra.  
   
-##  <a name="a-nameisactivetabboldfonta--cmfctabctrlisactivetabboldfont"></a><a name="isactivetabboldfont"></a>CMFCTabCtrl::IsActiveTabBoldFont  
+##  <a name="isactivetabboldfont"></a>CMFCTabCtrl::IsActiveTabBoldFont  
  Indica si el texto de la ficha activa se muestra con una fuente en negrita.  
   
 ```  
@@ -539,7 +589,7 @@ BOOL IsActiveTabBoldFont() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice la [CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont) método para cambiar la fuente de la ficha activa.  
   
-##  <a name="a-nameisactivetabclosebuttona--cmfctabctrlisactivetabclosebutton"></a><a name="isactivetabclosebutton"></a>CMFCTabCtrl::IsActiveTabCloseButton  
+##  <a name="isactivetabclosebutton"></a>CMFCTabCtrl::IsActiveTabCloseButton  
  Indica si el botón Cerrar ( **X**) se muestra en una pestaña activa o en la esquina superior derecha del área de ficha.  
   
 ```  
@@ -551,7 +601,7 @@ virtual BOOL IsActiveTabCloseButton() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameisdrawframea--cmfctabctrlisdrawframe"></a><a name="isdrawframe"></a>CMFCTabCtrl::IsDrawFrame  
+##  <a name="isdrawframe"></a>CMFCTabCtrl::IsDrawFrame  
  Indica si la ventana con fichas dibuja un rectángulo de marco alrededor de paneles incrustados.  
   
 ```  
@@ -564,7 +614,7 @@ BOOL IsDrawFrame() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice la [CMFCTabCtrl::SetDrawFrame](#setdrawframe) método para habilitar o deshabilitar dibujar un rectángulo de marco.  
   
-##  <a name="a-nameisflatframea--cmfctabctrlisflatframe"></a><a name="isflatframe"></a>CMFCTabCtrl::IsFlatFrame  
+##  <a name="isflatframe"></a>CMFCTabCtrl::IsFlatFrame  
  Indica si el marco que rodea el área de la pestaña es plana o en 3D.  
   
 ```  
@@ -577,7 +627,7 @@ BOOL IsFlatFrame() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice la [CMFCTabCtrl::SetFlatFrame](#setflatframe) método para cambiar la forma en que el marco se dibuja.  
   
-##  <a name="a-nameisflattaba--cmfctabctrlisflattab"></a><a name="isflattab"></a>CMFCTabCtrl::IsFlatTab  
+##  <a name="isflattab"></a>CMFCTabCtrl::IsFlatTab  
  Indica si la apariencia de las fichas del control de ficha actual es plana o no.  
   
 ```  
@@ -587,7 +637,7 @@ virtual BOOL IsFlatTab() const;
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE`Si la apariencia de las fichas del control de ficha actual es plana; de lo contrario, `FALSE`.  
   
-##  <a name="a-nameisleftrightroundeda--cmfctabctrlisleftrightrounded"></a><a name="isleftrightrounded"></a>CMFCTabCtrl::IsLeftRightRounded  
+##  <a name="isleftrightrounded"></a>CMFCTabCtrl::IsLeftRightRounded  
  Indica si se redondea la apariencia de la izquierda y derecha de una ficha en el control de ficha actual.  
   
 ```  
@@ -597,7 +647,7 @@ virtual BOOL IsLeftRightRounded() const;
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE`Si se redondea los lados de cada ficha; de lo contrario, `FALSE`.  
   
-##  <a name="a-nameismditabgroupa--cmfctabctrlismditabgroup"></a><a name="ismditabgroup"></a>CMFCTabCtrl::IsMDITabGroup  
+##  <a name="ismditabgroup"></a>CMFCTabCtrl::IsMDITabGroup  
  Indica si el control de ficha actual se encuentra en el área de cliente de una ventana de interfaz de múltiples documentos.  
   
 ```  
@@ -607,7 +657,7 @@ virtual BOOL IsMDITabGroup() const;
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE`Si el control de ficha actual está en una ventana de área de cliente MDI; de lo contrario, `FALSE`.  
   
-##  <a name="a-nameisonenotestylea--cmfctabctrlisonenotestyle"></a><a name="isonenotestyle"></a>CMFCTabCtrl::IsOneNoteStyle  
+##  <a name="isonenotestyle"></a>CMFCTabCtrl::IsOneNoteStyle  
  Indica si el control de ficha actual se muestra en el estilo de Microsoft OneNote.  
   
 ```  
@@ -617,7 +667,7 @@ virtual BOOL IsOneNoteStyle() const;
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE`Si el control de ficha se muestra en el estilo de Microsoft OneNote; de lo contrario, `FALSE`.  
   
-##  <a name="a-nameissharedscrolla--cmfctabctrlissharedscroll"></a><a name="issharedscroll"></a>CMFCTabCtrl::IsSharedScroll  
+##  <a name="issharedscroll"></a>CMFCTabCtrl::IsSharedScroll  
  Indica si el control de ficha actual tiene una barra de desplazamiento que se puede desplazar sus fichas como un grupo.  
   
 ```  
@@ -630,7 +680,7 @@ BOOL IsSharedScroll() const;
 ### <a name="remarks"></a>Comentarios  
  Este método devuelve `TRUE` si la `style` parámetro de la [CMFCTabCtrl::Create](#create) método es STYLE_FLAT_SHARED_HORZ_SCROLL.  
   
-##  <a name="a-nameistabdocumentsmenua--cmfctabctrlistabdocumentsmenu"></a><a name="istabdocumentsmenu"></a>CMFCTabCtrl::IsTabDocumentsMenu  
+##  <a name="istabdocumentsmenu"></a>CMFCTabCtrl::IsTabDocumentsMenu  
  Indica si el control de pestaña muestra los botones de desplazamiento o un botón que muestra un menú de ventanas con fichas.  
   
 ```  
@@ -643,7 +693,7 @@ BOOL IsTabDocumentsMenu() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice la [CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu) ventanas de fichas de método para especificar el método de desplazamiento.  
   
-##  <a name="a-nameisvs2005stylea--cmfctabctrlisvs2005style"></a><a name="isvs2005style"></a>CMFCTabCtrl::IsVS2005Style  
+##  <a name="isvs2005style"></a>CMFCTabCtrl::IsVS2005Style  
  Indica si las pestañas se dibujan utilizando el estilo de Visual Studio 2005.  
   
 ```  
@@ -656,7 +706,7 @@ virtual BOOL IsVS2005Style() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice la `style` parámetro de la [CMFCTabCtrl::Create](#create) método para especificar cómo se dibujan las fichas.  
   
-##  <a name="a-namembenableactivatea--cmfctabctrlmbenableactivate"></a><a name="m_benableactivate"></a>CMFCTabCtrl::m_bEnableActivate  
+##  <a name="m_benableactivate"></a>CMFCTabCtrl::m_bEnableActivate  
  Evita que la vista activa pierde el foco cuando se inserta una nueva pestaña y se habilitado.  
   
 ```  
@@ -666,7 +716,7 @@ static BOOL m_bEnableActivate;
 ### <a name="remarks"></a>Comentarios  
  El enfoque normalmente es realizado por una nueva ventana con fichas cuando se insertan y se activa la ficha. Establecer el `CMFCTabCtrl::m_bEnableActivate` la variable miembro que `FALSE` para conservar el enfoque original. El valor predeterminado es `TRUE`.  
   
-##  <a name="a-namemodifytabstylea--cmfctabctrlmodifytabstyle"></a><a name="modifytabstyle"></a>CMFCTabCtrl::ModifyTabStyle  
+##  <a name="modifytabstyle"></a>CMFCTabCtrl::ModifyTabStyle  
  Especifica la apariencia de fichas del control de ficha actual.  
   
 ```  
@@ -694,7 +744,7 @@ BOOL ModifyTabStyle(Style style);
 |STYLE_FLAT|Muestra las fichas bidimensionales que han inclinado lados izquierdo y derecho.|  
 |STYLE_FLAT_SHARED_HORZ_SCROLL|Muestra las fichas bidimensionales. Si hay más fichas que se pueden mostrar al mismo tiempo, el marco de trabajo muestra flechas de desplazamiento al final del área de ficha.|  
   
-##  <a name="a-nameondragentera--cmfctabctrlondragenter"></a><a name="ondragenter"></a>CMFCTabCtrl::OnDragEnter  
+##  <a name="ondragenter"></a>CMFCTabCtrl::OnDragEnter  
  Lo llama el marco de trabajo durante una operación de arrastrar y colocar cuando el cursor entra por primera vez la ventana del control de ficha actual.  
   
 ```  
@@ -722,7 +772,7 @@ virtual DROPEFFECT OnDragEnter(
   
  De forma predeterminada, este método se llama sólo `CMFCTabCtrl::OnDragOver`, que siempre devuelve `DROPEFFECT_NONE`.  
   
-##  <a name="a-nameondragovera--cmfctabctrlondragover"></a><a name="ondragover"></a>CMFCTabCtrl::OnDragOver  
+##  <a name="ondragover"></a>CMFCTabCtrl::OnDragOver  
  Lo llama el marco de trabajo durante una operación de arrastre cuando se mueve el mouse sobre la ventana de destino.  
   
 ```  
@@ -748,7 +798,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="remarks"></a>Comentarios  
  Invalide este método con su implementación personalizada. Para obtener más información, consulte el [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover) método.  
   
-##  <a name="a-nameonshowtabdocumentsmenua--cmfctabctrlonshowtabdocumentsmenu"></a><a name="onshowtabdocumentsmenu"></a>CMFCTabCtrl::OnShowTabDocumentsMenu  
+##  <a name="onshowtabdocumentsmenu"></a>CMFCTabCtrl::OnShowTabDocumentsMenu  
  Muestra un menú emergente de ventanas con fichas, espera hasta que el usuario selecciona una ficha y hace que la ficha seleccionada sea la ficha activa.  
   
 ```  
@@ -761,7 +811,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namesetactiveinmditabgroupa--cmfctabctrlsetactiveinmditabgroup"></a><a name="setactiveinmditabgroup"></a>CMFCTabCtrl::SetActiveInMDITabGroup  
+##  <a name="setactiveinmditabgroup"></a>CMFCTabCtrl::SetActiveInMDITabGroup  
  La ficha actual de un control de ficha se establece como la pestaña activa en un grupo de pestañas de interfaz de múltiples documentos.  
   
 ```  
@@ -775,7 +825,7 @@ void SetActiveInMDITabGroup(BOOL bActive);
 ### <a name="remarks"></a>Comentarios  
  Puede organizar varias ventanas de documento en ambos grupos de pestañas verticales u horizontales y mover fácilmente los documentos de grupo de una pestaña a otra.  
   
-##  <a name="a-namesetactivetaba--cmfctabctrlsetactivetab"></a><a name="setactivetab"></a>CMFCTabCtrl::SetActiveTab  
+##  <a name="setactivetab"></a>CMFCTabCtrl::SetActiveTab  
  Activa una pestaña.  
   
 ```  
@@ -794,7 +844,7 @@ virtual BOOL SetActiveTab(int iTab);
   
  El `SetActiveTab` método se llama de forma automática el [CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar) método para impedir que la pantalla parpadee.  
   
-##  <a name="a-namesetactivetabboldfonta--cmfctabctrlsetactivetabboldfont"></a><a name="setactivetabboldfont"></a>CMFCTabCtrl::SetActiveTabBoldFont  
+##  <a name="setactivetabboldfont"></a>CMFCTabCtrl::SetActiveTabBoldFont  
  Habilita o deshabilita el uso de una fuente en negrita en fichas activas.  
   
 ```  
@@ -807,7 +857,7 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namesetdrawframea--cmfctabctrlsetdrawframe"></a><a name="setdrawframe"></a>CMFCTabCtrl::SetDrawFrame  
+##  <a name="setdrawframe"></a>CMFCTabCtrl::SetDrawFrame  
  Especifica si se dibuja un rectángulo de marco alrededor de una barra incrustada.  
   
 ```  
@@ -820,7 +870,7 @@ void SetDrawFrame(BOOL bDraw=TRUE);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namesetflatframea--cmfctabctrlsetflatframe"></a><a name="setflatframe"></a>CMFCTabCtrl::SetFlatFrame  
+##  <a name="setflatframe"></a>CMFCTabCtrl::SetFlatFrame  
  Especifica si se debe dibujar una plana o en un marco 3D alrededor del área de ficha.  
   
 ```  
@@ -838,7 +888,7 @@ void SetFlatFrame(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namesetimagelista--cmfctabctrlsetimagelist"></a><a name="setimagelist"></a>CMFCTabCtrl::SetImageList  
+##  <a name="setimagelist"></a>CMFCTabCtrl::SetImageList  
  Especifica una lista de imágenes.  
   
 ```  
@@ -871,7 +921,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
   
  Utilice la [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) método heredado por el control de ficha para especificar el índice de la imagen para mostrar.  
   
-##  <a name="a-namesetresizemodea--cmfctabctrlsetresizemode"></a><a name="setresizemode"></a>CMFCTabCtrl::SetResizeMode  
+##  <a name="setresizemode"></a>CMFCTabCtrl::SetResizeMode  
  Especifica cómo se puede cambiar el tamaño de control de ficha actual y, a continuación, vuelve a mostrar el control.  
   
 ```  
@@ -891,7 +941,7 @@ void SetResizeMode(ResizeMode resizeMode);
 |RESIZE_VERT|El control de ficha se puede cambiar de tamaño verticalmente pero no horizontalmente.|  
 |RESIZE_HORIZ|El control de ficha se puede cambiar de tamaño horizontalmente pero no verticalmente.|  
   
-##  <a name="a-namesettabmaxwidtha--cmfctabctrlsettabmaxwidth"></a><a name="settabmaxwidth"></a>CMFCTabCtrl::SetTabMaxWidth  
+##  <a name="settabmaxwidth"></a>CMFCTabCtrl::SetTabMaxWidth  
  Especifica el ancho máximo de ficha en una ventana con fichas.  
   
 ```  
@@ -905,7 +955,7 @@ void SetTabMaxWidth(int nTabMaxWidth);
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para limitar el ancho de cada ficha en una ventana con fichas. Este método es útil si las fichas tienen etiquetas muy largas. El [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) constructor de clase inicializa el ancho máximo de pestaña a 0, lo que significa que el ancho no está limitado.  
   
-##  <a name="a-namestopresizea--cmfctabctrlstopresize"></a><a name="stopresize"></a>CMFCTabCtrl::StopResize  
+##  <a name="stopresize"></a>CMFCTabCtrl::StopResize  
  Finaliza la operación de cambio de tamaño actual en el control de ficha.  
   
 ```  
@@ -916,7 +966,7 @@ void StopResize(BOOL bCancel);
  [in] `bCancel`  
  `TRUE`para abandonar la operación de cambio de tamaño actual; `FALSE` para completar actual cambiar el tamaño de operación. En cualquier caso, el marco de trabajo deja de dibujar el rectángulo de tamaño.  
   
-##  <a name="a-namesynchronizescrollbara--cmfctabctrlsynchronizescrollbar"></a><a name="synchronizescrollbar"></a>CMFCTabCtrl::SynchronizeScrollBar  
+##  <a name="synchronizescrollbar"></a>CMFCTabCtrl::SynchronizeScrollBar  
  Dibuja una barra de desplazamiento horizontal de un control de ficha que muestra las fichas plana.  
   
 ```  

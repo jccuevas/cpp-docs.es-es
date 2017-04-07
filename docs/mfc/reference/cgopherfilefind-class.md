@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CGopherFileFind
+- AFXINET/CGopherFileFind
+- AFXINET/CGopherFileFind::CGopherFileFind
+- AFXINET/CGopherFileFind::FindFile
+- AFXINET/CGopherFileFind::FindNextFile
+- AFXINET/CGopherFileFind::GetCreationTime
+- AFXINET/CGopherFileFind::GetLastAccessTime
+- AFXINET/CGopherFileFind::GetLastWriteTime
+- AFXINET/CGopherFileFind::GetLength
+- AFXINET/CGopherFileFind::GetLocator
+- AFXINET/CGopherFileFind::GetScreenName
+- AFXINET/CGopherFileFind::IsDots
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +117,7 @@ class CGopherFileFind : public CFileFind
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxinet.h  
   
-##  <a name="a-namecgopherfilefinda--cgopherfilefindcgopherfilefind"></a><a name="cgopherfilefind"></a>CGopherFileFind::CGopherFileFind  
+##  <a name="cgopherfilefind"></a>CGopherFileFind::CGopherFileFind  
  Llama a esta función miembro para construir un `CGopherFileFind` objeto.  
   
 ```  
@@ -125,7 +136,7 @@ explicit CGopherFileFind(
 ### <a name="remarks"></a>Comentarios  
  El valor predeterminado de `dwContext` enviados por MFC para la `CGopherFileFind` objeto desde el [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto que creó el `CGopherFileFind` objeto. Cuando se construye un `CGopherFileFind` de objeto, puede invalidar el valor predeterminado para establecer el identificador de contexto en un valor de su elección. El identificador de contexto se devuelve a [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para proporcionar el estado en el objeto con el que se identifica. Consulte el artículo [primeros pasos de Internet: WinInet](../../mfc/wininet-basics.md) para obtener más información sobre el identificador de contexto.  
   
-##  <a name="a-namefindfilea--cgopherfilefindfindfile"></a><a name="findfile"></a>CGopherFileFind:: FindFile  
+##  <a name="findfile"></a>CGopherFileFind:: FindFile  
  Llame a esta función miembro para buscar un archivo gopher.  
   
 ```  
@@ -164,7 +175,7 @@ virtual BOOL FindFile(
 ### <a name="remarks"></a>Comentarios  
  Después de llamar a **FindFile** para recuperar el primer objeto gopher, puede llamar a [FindNextFile](#findnextfile) para recuperar archivos gopher subsiguientes.  
   
-##  <a name="a-namefindnextfilea--cgopherfilefindfindnextfile"></a><a name="findnextfile"></a>CGopherFileFind:: FindNextFile  
+##  <a name="findnextfile"></a>CGopherFileFind:: FindNextFile  
  Llame a esta función miembro para continuar una búsqueda de archivo comenzada con una llamada a [CGopherFileFind:: FindFile](#findfile).  
   
 ```  
@@ -174,7 +185,7 @@ virtual BOOL FindNextFile();
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si no hay más archivos; cero si el archivo se encuentra es la última en el directorio o si se produjo un error. Para obtener información de error extendida, llame a la función de Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Si el archivo se encuentra es el último archivo en el directorio, o si no hay coincidencia de archivos pueden encontrarse el `GetLastError` función devuelve ERROR_NO_MORE_FILES.  
   
-##  <a name="a-namegetcreationtimea--cgopherfilefindgetcreationtime"></a><a name="getcreationtime"></a>CGopherFileFind::GetCreationTime  
+##  <a name="getcreationtime"></a>CGopherFileFind::GetCreationTime  
  Obtiene la hora de creación para el archivo actual.  
   
 ```  
@@ -198,7 +209,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 > [!NOTE]
 >  No todos los sistemas de archivos usan la misma semántica para implementar la marca de tiempo devuelta por esta función. Esta función puede devolver el mismo valor devuelto por otras funciones de marca de tiempo si el sistema de archivos o servidor subyacente no admite mantener el atributo de tiempo. Consulte la [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) estructura para obtener información sobre formatos de hora. En algunos sistemas operativos, la hora devuelta está en el momento en zona local en el equipo se está ubicado el archivo. Consulte Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API para obtener más información.  
   
-##  <a name="a-namegetlastaccesstimea--cgopherfilefindgetlastaccesstime"></a><a name="getlastaccesstime"></a>CGopherFileFind::GetLastAccessTime  
+##  <a name="getlastaccesstime"></a>CGopherFileFind::GetLastAccessTime  
  Obtiene la hora de que último acceso al archivo especificado.  
   
 ```  
@@ -222,7 +233,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 > [!NOTE]
 >  No todos los sistemas de archivos usan la misma semántica para implementar la marca de tiempo devuelta por esta función. Esta función puede devolver el mismo valor devuelto por otras funciones de marca de tiempo si el sistema de archivos o servidor subyacente no admite mantener el atributo de tiempo. Consulte la [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) estructura para obtener información sobre formatos de hora. En algunos sistemas operativos, la hora devuelta está en el momento en zona local en el equipo se está ubicado el archivo. Consulte Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API para obtener más información.  
   
-##  <a name="a-namegetlastwritetimea--cgopherfilefindgetlastwritetime"></a><a name="getlastwritetime"></a>CGopherFileFind::GetLastWriteTime  
+##  <a name="getlastwritetime"></a>CGopherFileFind::GetLastWriteTime  
  Obtiene la última vez que se modificó el archivo.  
   
 ```  
@@ -246,7 +257,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 > [!NOTE]
 >  No todos los sistemas de archivos usan la misma semántica para implementar la marca de tiempo devuelta por esta función. Esta función puede devolver el mismo valor devuelto por otras funciones de marca de tiempo si el sistema de archivos o servidor subyacente no admite mantener el atributo de tiempo. Consulte la [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) estructura para obtener información sobre formatos de hora. En algunos sistemas operativos, la hora devuelta está en el momento en zona local en el equipo se está ubicado el archivo. Consulte Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API para obtener más información.  
   
-##  <a name="a-namegetlengtha--cgopherfilefindgetlength"></a><a name="getlength"></a>CGopherFileFind::GetLength  
+##  <a name="getlength"></a>CGopherFileFind::GetLength  
  Llame a esta función miembro para obtener la longitud, en bytes, del archivo encontrado.  
   
 ```  
@@ -265,7 +276,7 @@ virtual ULONGLONG GetLength() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) (implementación de la clase base).  
   
-##  <a name="a-namegetlocatora--cgopherfilefindgetlocator"></a><a name="getlocator"></a>CGopherFileFind:: GetLocator  
+##  <a name="getlocator"></a>CGopherFileFind:: GetLocator  
  Llame a esta función miembro para obtener la [objeto CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objeto que [FindFile](#findfile) utiliza para buscar el archivo gopher.  
   
 ```  
@@ -275,7 +286,7 @@ CGopherLocator GetLocator() const;
 ### <a name="return-value"></a>Valor devuelto  
  Objeto `CGopherLocator`.  
   
-##  <a name="a-namegetscreennamea--cgopherfilefindgetscreenname"></a><a name="getscreenname"></a>CGopherFileFind::GetScreenName  
+##  <a name="getscreenname"></a>CGopherFileFind::GetScreenName  
  Llame a esta función miembro para obtener el nombre de la pantalla de gopher.  
   
 ```  
@@ -285,7 +296,7 @@ CString GetScreenName() const;
 ### <a name="return-value"></a>Valor devuelto  
  El nombre de la pantalla de gopher.  
   
-##  <a name="a-nameisdotsa--cgopherfilefindisdots"></a><a name="isdots"></a>CGopherFileFind::IsDots  
+##  <a name="isdots"></a>CGopherFileFind::IsDots  
  Pruebas de los marcadores de directorio principal y el directorio actuales al recorrer en iteración los archivos.  
   
 ```  

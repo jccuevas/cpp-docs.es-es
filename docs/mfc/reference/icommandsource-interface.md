@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - ICommandSource
+- AFXWINFORMS/ICommandSource
+- AFXWINFORMS/ICommandSource::AddCommandHandler
+- AFXWINFORMS/ICommandSource::AddCommandRangeHandler
+- AFXWINFORMS/ICommandSource::AddCommandRangeUIHandler
+- AFXWINFORMS/ICommandSource::AddCommandUIHandler
+- AFXWINFORMS/ICommandSource::PostCommand
+- AFXWINFORMS/ICommandSource::RemoveCommandHandler
+- AFXWINFORMS/ICommandSource::RemoveCommandRangeHandler
+- AFXWINFORMS/ICommandSource::RemoveCommandRangeUIHandler
+- AFXWINFORMS/ICommandSource::RemoveCommandUIHandler
+- AFXWINFORMS/ICommandSource::SendCommand
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +86,7 @@ interface class ICommandSource
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwinforms.h (definido en el ensamblado atlmfc\lib\mfcmifc80.dll)  
   
-## <a name="a-nameaddcommandhandlera--icommandsourceaddcommandhandler"></a><a name="addcommandhandler"></a>ICommandSource::AddCommandHandler
+## <a name="addcommandhandler"></a>ICommandSource::AddCommandHandler
 Agrega un controlador de comandos a un objeto de origen de comando.
 ```
 void AddCommandHandler(
@@ -93,7 +104,7 @@ Un identificador para el método de controlador de comandos.
 Este método agrega la cmdHandler del controlador de comando para el objeto de origen de comando y el controlador asigna a cmdID.
 Consulte [Cómo: agregar el enrutamiento de comandos para el Control Windows Forms](https://msdn.microsoft.com/library/y33d8624.aspx) para obtener un ejemplo de cómo usar AddCommandHandler.
 
-## <a name="a-nameaddcommandrangehandlera-icommandsourceaddcommandrangehandler"></a><a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler
+## <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler
 
 Agrega un grupo de controladores de comandos a un objeto de origen de comando.
 ```
@@ -112,7 +123,7 @@ Un identificador para el método de controlador de mensajes a los que se asignan
 ### <a name="remarks"></a>Comentarios
 Este método asigna un intervalo contiguo de identificadores de comando a un controlador de mensaje y lo agrega al objeto de origen de comando. Se utiliza para administrar un grupo de botones relacionados con un método.
 
-## <a name="a-nameaddcommandrangeuihandlera-icommandsourceaddcommandrangeuihandler"></a><a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler
+## <a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler
 Agrega un grupo de controladores de mensajes de comandos de interfaz de usuario a un objeto de origen de comando.
 ```
 void AddCommandRangeUIHandler(
@@ -131,7 +142,7 @@ Un identificador para el método de controlador de mensajes a los que se asignan
 ### <a name="remarks"></a>Comentarios
 Este método asigna un intervalo contiguo de identificadores de comando a un controlador de mensajes de comandos de interfaz de usuario único y lo agrega al objeto de origen de comando. Se utiliza para administrar un grupo de botones relacionados con un método.
 
-## <a name="a-nameaddcommanduihandlera-icommandsourceaddcommanduihandler"></a><a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler
+## <a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler
 Agrega un controlador de mensajes de comandos de interfaz de usuario a un objeto de origen de comando.
 ```
 void AddCommandUIHandler(
@@ -147,7 +158,7 @@ Un identificador para el método de controlador de mensaje de comando de usuario
 ### <a name="remarks"></a>Comentarios
 Este método agrega el cmdHandler de controlador de mensaje de comando de usuario interfaz al objeto de origen de comando y el controlador asigna a cmdID.
 
-## <a name="a-namepostcommanda-icommandsourcepostcommand"></a><a name="postcommand"></a>ICommandSource::PostCommand
+## <a name="postcommand"></a>ICommandSource::PostCommand
 Envía un mensaje sin tener que esperar a que se procese.
 ```
 void PostCommand(unsigned int command);
@@ -159,7 +170,7 @@ El identificador de comando del mensaje se registre.
 Este método de forma asincrónica envía el mensaje asignado al identificador especificado por el comando. Llama a CWnd::PostMessage para colocar el mensaje en cola de mensajes de la ventana y, a continuación, se devuelve sin esperar a la ventana correspondiente procesar el mensaje.
 
 
-## <a name="a-nameremovecommandhandlera-icommandsourceremovecommandhandler"></a><a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler
+## <a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler
 Quita un controlador de comandos de un objeto de origen de comando.
 ```
 void RemoveCommandHandler(unsigned int cmdID);
@@ -171,7 +182,7 @@ Identificador del comando.
 Este método quita el controlador de comandos que se asignan a cmdID desde el objeto de origen de comando.
 
 
-## <a name="a-nameremovecommandrangecommandhandlera-icommandsourceremovecommandrangehandler"></a><a name="removecommandrangecommandhandler"></a>ICommandSource::RemoveCommandRangeHandler 
+## <a name="removecommandrangecommandhandler"></a>ICommandSource::RemoveCommandRangeHandler 
 Quita un grupo de controladores de comandos de un objeto de origen de comando.
 ```
 void RemoveCommandRangeUIHandler(
@@ -186,7 +197,7 @@ El índice final del intervalo de Id. de comando.
 ### <a name="remarks"></a>Comentarios
 Este método quita un grupo de controladores de mensajes, asignado al comando identificadores especificado por cmdIDMin y cmdIDMax, desde el objeto de origen de comando.
 
-## <a name="a-nameremovecommandrangeuihandlera-icommandsourceremovecommandrangeuihandler"></a><a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler 
+## <a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler 
 Quita un grupo de controladores de mensajes de comandos de interfaz de usuario de un objeto de origen de comando.
 ```
 void RemoveCommandRangeUIHandler(
@@ -201,7 +212,7 @@ El índice final del intervalo de Id. de comando.
 ### <a name="remarks"></a>Comentarios
 Este método quita un grupo de controladores de mensajes de comando de interfaz usuario, asignado al comando identificadores especificado por cmdIDMin y cmdIDMax, desde el objeto de origen de comando.
 
-## <a name="a-nameremovecommanduihandlera-icommandsourceremovecommanduihandler"></a><a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler 
+## <a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler 
 Quita un controlador de mensajes de comandos de interfaz de usuario de un objeto de origen de comando.
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
@@ -212,7 +223,7 @@ Identificador del comando.
 ### <a name="remarks"></a>Comentarios
 Este método quita el controlador de mensajes de comando de interfaz de usuario asignado al cmdID desde el objeto de origen de comando.
 
-## <a name="a-namesendcommanda-icommandsourcesendcommand"></a><a name="sendcommand"></a>ICommandSource::SendCommand 
+## <a name="sendcommand"></a>ICommandSource::SendCommand 
 Envía un mensaje y espera a que se procese antes de devolver.
 ```
 void SendCommand(unsigned int command);

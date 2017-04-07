@@ -10,6 +10,79 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::CMFCPropertyGridCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::accSelect
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::AddProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::AlwaysShowUserToolTip
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::CloseColorPopup
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::Create
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::DeleteProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::DrawControlBarColors
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::EnableDescriptionArea
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::EnableHeaderCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::EnsureVisible
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::ExpandAll
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::FindItemByData
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accChildCount
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accFocus
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accHelp
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accHelpTopic
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accKeyboardShortcut
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accSelection
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetBkColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetBoldFont
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetCurSel
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetCustomColors
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetDescriptionHeight
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetDescriptionRows
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetHeaderCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetHeaderHeight
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetLeftColumnWidth
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetListRect
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetPropertyColumnWidth
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetPropertyCount
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetRowHeight
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetScrollBarCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetTextColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::HitTest
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::InitHeader
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsAlphabeticMode
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsDescriptionArea
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsGroupNameFullWidth
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsHeaderCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsMarkModifiedProperties
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsShowDragContext
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsVSDotNetLook
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::MarkModifiedProperties
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::RemoveAll
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::ResetOriginalValues
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetAlphabeticMode
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetBoolLabels
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetCurSel
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetCustomColors
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetDescriptionRows
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetGroupNameFullWidth
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetListDelimiter
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetShowDragContext
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetVSDotNetLook
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::UpdateColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::AdjustLayout
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::CompareProps
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::EditItem
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::EndEditItem
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::Init
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnChangeSelection
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnClickButton
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnDrawBorder
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnDrawDescription
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnDrawList
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnDrawProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnPropertyChanged
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnSelectCombo
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::ValidateItemData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -204,7 +277,7 @@ class CMFCPropertyGridCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxpropertygridctrl.h  
   
-##  <a name="a-nameaccselecta--cmfcpropertygridctrlaccselect"></a><a name="accselect"></a>CMFCPropertyGridCtrl::accSelect  
+##  <a name="accselect"></a>CMFCPropertyGridCtrl::accSelect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -221,7 +294,7 @@ virtual HRESULT accSelect(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameaddpropertya--cmfcpropertygridctrladdproperty"></a><a name="addproperty"></a>CMFCPropertyGridCtrl::AddProperty  
+##  <a name="addproperty"></a>CMFCPropertyGridCtrl::AddProperty  
  Agrega una nueva propiedad a un control de cuadrícula de propiedades.  
   
 ```  
@@ -247,7 +320,7 @@ int AddProperty(
 ### <a name="remarks"></a>Comentarios  
  Este método agrega un puntero a la propiedad especificada al final de la lista de propiedades en el control de cuadrícula de propiedad. No destruir las propiedades o permitirles que salen del ámbito antes de destruir el control de cuadrícula. Cuando haya terminado con el control de cuadrícula de propiedades, llame a [CMFCPropertyGridCtrl::RemoveAll](#removeall) para eliminar todas las propiedades agregadas. El método AddProperty produce un error si la propiedad especificada ya se ha agregado a la lista.  
   
-##  <a name="a-nameadjustlayouta--cmfcpropertygridctrladjustlayout"></a><a name="adjustlayout"></a>CMFCPropertyGridCtrl::AdjustLayout  
+##  <a name="adjustlayout"></a>CMFCPropertyGridCtrl::AdjustLayout  
  Vuelve a dibujar el control de cuadrícula de propiedades y sus propiedades.  
   
 ```  
@@ -257,7 +330,7 @@ virtual void AdjustLayout();
 ### <a name="remarks"></a>Comentarios  
  Este método vuelve a calcular cómo dibujar el control de cuadrícula de propiedad completa y sus propiedades, incluidas imágenes, fuentes y controles.  
   
-##  <a name="a-namealwaysshowusertooltipa--cmfcpropertygridctrlalwaysshowusertooltip"></a><a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip  
+##  <a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -269,7 +342,7 @@ void AlwaysShowUserToolTip(BOOL bShow = TRUE);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameclosecolorpopupa--cmfcpropertygridctrlclosecolorpopup"></a><a name="closecolorpopup"></a>CMFCPropertyGridCtrl::CloseColorPopup  
+##  <a name="closecolorpopup"></a>CMFCPropertyGridCtrl::CloseColorPopup  
  Cierra el cuadro de diálogo de selección de color.  
   
 ```  
@@ -279,7 +352,7 @@ virtual void CloseColorPopup();
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información sobre el cuadro de diálogo de selección de color, consulte [CMFCPropertyGridColorProperty clase](../../mfc/reference/cmfcpropertygridcolorproperty-class.md).  
   
-##  <a name="a-namecmfcpropertygridctrla--cmfcpropertygridctrlcmfcpropertygridctrl"></a><a name="cmfcpropertygridctrl"></a>CMFCPropertyGridCtrl::CMFCPropertyGridCtrl  
+##  <a name="cmfcpropertygridctrl"></a>CMFCPropertyGridCtrl::CMFCPropertyGridCtrl  
  Construye un objeto `CMFCPropertyGridCtrl`.  
   
 ```  
@@ -290,7 +363,7 @@ CMFCPropertyGridCtrl();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namecomparepropsa--cmfcpropertygridctrlcompareprops"></a><a name="compareprops"></a>CMFCPropertyGridCtrl::CompareProps  
+##  <a name="compareprops"></a>CMFCPropertyGridCtrl::CompareProps  
  Llamado por el control de cuadrícula de propiedad para ordenar las propiedades.  
   
 ```  
@@ -317,7 +390,7 @@ virtual int CompareProps(
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, este método utiliza el [CString::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) método para comparar los `CMFCPropertyGridProperty::m_strName` miembros de los parámetros especificados.  
   
-##  <a name="a-namecreatea--cmfcpropertygridctrlcreate"></a><a name="create"></a>CMFCPropertyGridCtrl::Create  
+##  <a name="create"></a>CMFCPropertyGridCtrl::Create  
  Crea un control de cuadrícula de propiedad y lo adjunta al objeto de control de cuadrícula de propiedad.  
   
 ```  
@@ -352,7 +425,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFC_NewControls&#15;](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]  
   
-##  <a name="a-namedeletepropertya--cmfcpropertygridctrldeleteproperty"></a><a name="deleteproperty"></a>CMFCPropertyGridCtrl::DeleteProperty  
+##  <a name="deleteproperty"></a>CMFCPropertyGridCtrl::DeleteProperty  
  Elimina la propiedad especificada desde el control de cuadrícula de propiedades.  
   
 ```  
@@ -378,7 +451,7 @@ BOOL DeleteProperty(
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para eliminar una propiedad y los elementos secundarios, desde el control de cuadrícula de propiedades.  
   
-##  <a name="a-namedrawcontrolbarcolorsa--cmfcpropertygridctrldrawcontrolbarcolors"></a><a name="drawcontrolbarcolors"></a>CMFCPropertyGridCtrl::DrawControlBarColors  
+##  <a name="drawcontrolbarcolors"></a>CMFCPropertyGridCtrl::DrawControlBarColors  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -389,7 +462,7 @@ BOOL DrawControlBarColors() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameedititema--cmfcpropertygridctrledititem"></a><a name="edititem"></a>CMFCPropertyGridCtrl::EditItem  
+##  <a name="edititem"></a>CMFCPropertyGridCtrl::EditItem  
  Lo llama el marco de trabajo cuando el usuario comienza a modificar una propiedad.  
   
 ```  
@@ -410,7 +483,7 @@ virtual BOOL EditItem(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameenabledescriptionareaa--cmfcpropertygridctrlenabledescriptionarea"></a><a name="enabledescriptionarea"></a>CMFCPropertyGridCtrl::EnableDescriptionArea  
+##  <a name="enabledescriptionarea"></a>CMFCPropertyGridCtrl::EnableDescriptionArea  
  Habilita o deshabilita el área de descripción que se muestra debajo de la lista de propiedades en el control de cuadrícula de propiedad.  
   
 ```  
@@ -424,7 +497,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 ### <a name="remarks"></a>Comentarios  
  El área de descripción se muestra en la parte inferior del control de cuadrícula de propiedad. De forma predeterminada, el área de descripción está deshabilitado y no es visible.  
   
-##  <a name="a-nameenableheaderctrla--cmfcpropertygridctrlenableheaderctrl"></a><a name="enableheaderctrl"></a>CMFCPropertyGridCtrl::EnableHeaderCtrl  
+##  <a name="enableheaderctrl"></a>CMFCPropertyGridCtrl::EnableHeaderCtrl  
  Habilita o deshabilita el control de encabezado en la parte superior del control de cuadrícula de propiedad.  
   
 ```  
@@ -444,7 +517,7 @@ void EnableHeaderCtrl(
  [in] `lpszRightColumn`  
  El título de la columna derecha del control de encabezado. El valor predeterminado es **valor**.  
   
-##  <a name="a-nameendedititema--cmfcpropertygridctrlendedititem"></a><a name="endedititem"></a>CMFCPropertyGridCtrl::EndEditItem  
+##  <a name="endedititem"></a>CMFCPropertyGridCtrl::EndEditItem  
  Lo llama el marco de trabajo cuando el usuario termina de modificar una propiedad.  
   
 ```  
@@ -460,7 +533,7 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameensurevisiblea--cmfcpropertygridctrlensurevisible"></a><a name="ensurevisible"></a>CMFCPropertyGridCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>CMFCPropertyGridCtrl::EnsureVisible  
  Se desplaza a un control de cuadrícula de propiedades y expande los elementos de propiedad hasta que la propiedad especificada está visible.  
   
 ```  
@@ -478,7 +551,7 @@ void EnsureVisible(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameexpandalla--cmfcpropertygridctrlexpandall"></a><a name="expandall"></a>CMFCPropertyGridCtrl::ExpandAll  
+##  <a name="expandall"></a>CMFCPropertyGridCtrl::ExpandAll  
  Expande o contrae todos los nodos de control de cuadrícula de propiedad.  
   
 ```  
@@ -491,7 +564,7 @@ void ExpandAll(BOOL bExpand=TRUE);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namefinditembydataa--cmfcpropertygridctrlfinditembydata"></a><a name="finditembydata"></a>CMFCPropertyGridCtrl::FindItemByData  
+##  <a name="finditembydata"></a>CMFCPropertyGridCtrl::FindItemByData  
  Recupera la propiedad asociada definida por el usuario `DWORD` valor.  
   
 ```  
@@ -513,7 +586,7 @@ CMFCPropertyGridProperty* FindItemByData(
 ### <a name="remarks"></a>Comentarios  
  Utilice la [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) constructor o [CMFCPropertyGridProperty::SetData](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata) para asociar una `DWORD` con una propiedad.  
   
-##  <a name="a-namegetaccchildcounta--cmfcpropertygridctrlgetaccchildcount"></a><a name="get_accchildcount"></a>CMFCPropertyGridCtrl::get_accChildCount  
+##  <a name="get_accchildcount"></a>CMFCPropertyGridCtrl::get_accChildCount  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -527,7 +600,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namegetaccfocusa--cmfcpropertygridctrlgetaccfocus"></a><a name="get_accfocus"></a>CMFCPropertyGridCtrl::get_accFocus  
+##  <a name="get_accfocus"></a>CMFCPropertyGridCtrl::get_accFocus  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -541,7 +614,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namegetacchelpa--cmfcpropertygridctrlgetacchelp"></a><a name="get_acchelp"></a>CMFCPropertyGridCtrl::get_accHelp  
+##  <a name="get_acchelp"></a>CMFCPropertyGridCtrl::get_accHelp  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -558,7 +631,7 @@ virtual HRESULT get_accHelp(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namegetacchelptopica--cmfcpropertygridctrlgetacchelptopic"></a><a name="get_acchelptopic"></a>CMFCPropertyGridCtrl::get_accHelpTopic  
+##  <a name="get_acchelptopic"></a>CMFCPropertyGridCtrl::get_accHelpTopic  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -577,7 +650,7 @@ virtual HRESULT get_accHelpTopic(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namegetacckeyboardshortcuta--cmfcpropertygridctrlgetacckeyboardshortcut"></a><a name="get_acckeyboardshortcut"></a>CMFCPropertyGridCtrl::get_accKeyboardShortcut  
+##  <a name="get_acckeyboardshortcut"></a>CMFCPropertyGridCtrl::get_accKeyboardShortcut  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -594,7 +667,7 @@ virtual HRESULT get_accKeyboardShortcut(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namegetaccselectiona--cmfcpropertygridctrlgetaccselection"></a><a name="get_accselection"></a>CMFCPropertyGridCtrl::get_accSelection  
+##  <a name="get_accselection"></a>CMFCPropertyGridCtrl::get_accSelection  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -608,7 +681,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namegetbkcolora--cmfcpropertygridctrlgetbkcolor"></a><a name="getbkcolor"></a>CMFCPropertyGridCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>CMFCPropertyGridCtrl::GetBkColor  
  Recupera el color de fondo del control de cuadrícula de propiedad actual.  
   
 ```  
@@ -621,7 +694,7 @@ COLORREF GetBkColor() const;
 ### <a name="remarks"></a>Comentarios  
  Este método recupera el color que el marco de trabajo que se usa para dibujar el fondo del control de cuadrícula de propiedad actual. El [CMFCPropertyGridCtrl::GetTextColor](#gettextcolor) método recupera el color de primer plano.  
   
-##  <a name="a-namegetboldfonta--cmfcpropertygridctrlgetboldfont"></a><a name="getboldfont"></a>CMFCPropertyGridCtrl::GetBoldFont  
+##  <a name="getboldfont"></a>CMFCPropertyGridCtrl::GetBoldFont  
  Recupera la fuente de Windows que se utiliza para dibujar texto en el control de cuadrícula de propiedad actual en estilo negrita.  
   
 ```  
@@ -631,7 +704,7 @@ CFont& GetBoldFont();
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia a un [CFont](../../mfc/reference/cfont-class.md) objeto que describe las características de una fuente en negrita.  
   
-##  <a name="a-namegetcursela--cmfcpropertygridctrlgetcursel"></a><a name="getcursel"></a>CMFCPropertyGridCtrl::GetCurSel  
+##  <a name="getcursel"></a>CMFCPropertyGridCtrl::GetCurSel  
  Recupera la propiedad seleccionada actualmente.  
   
 ```  
@@ -643,7 +716,7 @@ CMFCPropertyGridProperty* GetCurSel() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namegetcustomcolorsa--cmfcpropertygridctrlgetcustomcolors"></a><a name="getcustomcolors"></a>CMFCPropertyGridCtrl::GetCustomColors  
+##  <a name="getcustomcolors"></a>CMFCPropertyGridCtrl::GetCustomColors  
  Recupera los colores personalizados que están definidos actualmente para los elementos de control de cuadrícula de propiedad.  
   
 ```  
@@ -682,7 +755,7 @@ void GetCustomColors(
 ### <a name="remarks"></a>Comentarios  
  Utilice la [CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors) método definir colores personalizados.  
   
-##  <a name="a-namegetdescriptionheighta--cmfcpropertygridctrlgetdescriptionheight"></a><a name="getdescriptionheight"></a>CMFCPropertyGridCtrl::GetDescriptionHeight  
+##  <a name="getdescriptionheight"></a>CMFCPropertyGridCtrl::GetDescriptionHeight  
  Recupera el alto del área de descripción, que se encuentra en la parte inferior del control de cuadrícula de propiedad.  
   
 ```  
@@ -697,7 +770,7 @@ int GetDescriptionHeight() const;
   
  Utilice la [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) método para mostrar u ocultar el área de descripción. Utilice la [CMFCPropertyGridCtrl::IsDescriptionArea](#isdescriptionarea) método para determinar si el área de descripción se mostrará u ocultará.  
   
-##  <a name="a-namegetdescriptionrowsa--cmfcpropertygridctrlgetdescriptionrows"></a><a name="getdescriptionrows"></a>CMFCPropertyGridCtrl::GetDescriptionRows  
+##  <a name="getdescriptionrows"></a>CMFCPropertyGridCtrl::GetDescriptionRows  
  Recupera el número de filas en el área de descripción del control de cuadrícula de propiedad actual.  
   
 ```  
@@ -710,7 +783,7 @@ int GetDescriptionRows() const;
 ### <a name="remarks"></a>Comentarios  
  El [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) constructor inicializa el área de descripción en 3 filas.  
   
-##  <a name="a-namegetheaderctrla--cmfcpropertygridctrlgetheaderctrl"></a><a name="getheaderctrl"></a>CMFCPropertyGridCtrl::GetHeaderCtrl  
+##  <a name="getheaderctrl"></a>CMFCPropertyGridCtrl::GetHeaderCtrl  
  Recupera el interno [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) que utiliza el marco de trabajo para mostrar el control de cuadrícula de propiedad actuales del objeto.  
   
 ```  
@@ -720,7 +793,7 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ### <a name="return-value"></a>Valor devuelto  
  Referencia a un objeto `CMFCHeaderCtrl`.  
   
-##  <a name="a-namegetheaderheighta--cmfcpropertygridctrlgetheaderheight"></a><a name="getheaderheight"></a>CMFCPropertyGridCtrl::GetHeaderHeight  
+##  <a name="getheaderheight"></a>CMFCPropertyGridCtrl::GetHeaderHeight  
  Recupera el alto del encabezado de un control de cuadrícula de propiedades.  
   
 ```  
@@ -732,7 +805,7 @@ int GetHeaderHeight() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namegetleftcolumnwidtha--cmfcpropertygridctrlgetleftcolumnwidth"></a><a name="getleftcolumnwidth"></a>CMFCPropertyGridCtrl::GetLeftColumnWidth  
+##  <a name="getleftcolumnwidth"></a>CMFCPropertyGridCtrl::GetLeftColumnWidth  
  Recupera el ancho de la columna izquierda del control de cuadrícula propiedad actual, que contiene el nombre de cada propiedad.  
   
 ```  
@@ -745,7 +818,7 @@ int GetLeftColumnWidth() const;
 ### <a name="remarks"></a>Comentarios  
  La columna derecha de un control de cuadrícula de propiedad contiene el valor de cada propiedad.  
   
-##  <a name="a-namegetlistrecta--cmfcpropertygridctrlgetlistrect"></a><a name="getlistrect"></a>CMFCPropertyGridCtrl::GetListRect  
+##  <a name="getlistrect"></a>CMFCPropertyGridCtrl::GetListRect  
  Recupera el rectángulo delimitador del control de cuadrícula de propiedad.  
   
 ```  
@@ -757,7 +830,7 @@ CRect GetListRect() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namegetpropertya--cmfcpropertygridctrlgetproperty"></a><a name="getproperty"></a>CMFCPropertyGridCtrl::GetProperty  
+##  <a name="getproperty"></a>CMFCPropertyGridCtrl::GetProperty  
  Recupera un puntero al objeto de propiedad que corresponde al índice especificado de un elemento en un control de cuadrícula de propiedades.  
   
 ```  
@@ -775,7 +848,7 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namegetpropertycolumnwidtha--cmfcpropertygridctrlgetpropertycolumnwidth"></a><a name="getpropertycolumnwidth"></a>CMFCPropertyGridCtrl::GetPropertyColumnWidth  
+##  <a name="getpropertycolumnwidth"></a>CMFCPropertyGridCtrl::GetPropertyColumnWidth  
  Recupera el ancho actual de la columna que contiene los valores de propiedad.  
   
 ```  
@@ -788,7 +861,7 @@ int GetPropertyColumnWidth() const;
 ### <a name="remarks"></a>Comentarios  
  La columna a la derecha en el control de cuadrícula de propiedades contiene los valores de propiedad. Un cliente puede utilizar el cuadro de división del control de cuadrícula de propiedad para cambiar el ancho de la columna de valores.  
   
-##  <a name="a-namegetpropertycounta--cmfcpropertygridctrlgetpropertycount"></a><a name="getpropertycount"></a>CMFCPropertyGridCtrl::GetPropertyCount  
+##  <a name="getpropertycount"></a>CMFCPropertyGridCtrl::GetPropertyCount  
  Recupera el número de propiedades de un control de cuadrícula de propiedades.  
   
 ```  
@@ -800,7 +873,7 @@ int GetPropertyCount() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namegetrowheighta--cmfcpropertygridctrlgetrowheight"></a><a name="getrowheight"></a>CMFCPropertyGridCtrl::GetRowHeight  
+##  <a name="getrowheight"></a>CMFCPropertyGridCtrl::GetRowHeight  
  Recupera el alto de una fila en el control de cuadrícula de propiedades.  
   
 ```  
@@ -813,7 +886,7 @@ int GetRowHeight() const;
 ### <a name="remarks"></a>Comentarios  
  El alto de una fila es igual a la altura de la fuente actual más de 4 píxeles.  
   
-##  <a name="a-namegetscrollbarctrla--cmfcpropertygridctrlgetscrollbarctrl"></a><a name="getscrollbarctrl"></a>CMFCPropertyGridCtrl::GetScrollBarCtrl  
+##  <a name="getscrollbarctrl"></a>CMFCPropertyGridCtrl::GetScrollBarCtrl  
  Recupera un puntero a la barra de desplazamiento en el control de cuadrícula de propiedad.  
   
 ```  
@@ -830,7 +903,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para obtener acceso directo a la barra de desplazamiento vertical.  
   
-##  <a name="a-namegettextcolora--cmfcpropertygridctrlgettextcolor"></a><a name="gettextcolor"></a>CMFCPropertyGridCtrl::GetTextColor  
+##  <a name="gettextcolor"></a>CMFCPropertyGridCtrl::GetTextColor  
  Recupera el color que se utiliza para dibujar el texto de los elementos de propiedad en el control de cuadrícula de propiedad actual.  
   
 ```  
@@ -843,7 +916,7 @@ COLORREF GetTextColor() const;
 ### <a name="remarks"></a>Comentarios  
  Este método recupera el color que el marco de trabajo que se usa para dibujar el primer plano del control de cuadrícula de propiedad actual. El [CMFCPropertyGridCtrl::GetBkColor](#getbkcolor) método recupera el color de fondo.  
   
-##  <a name="a-namehittesta--cmfcpropertygridctrlhittest"></a><a name="hittest"></a>CMFCPropertyGridCtrl::HitTest  
+##  <a name="hittest"></a>CMFCPropertyGridCtrl::HitTest  
  Recupera un puntero al objeto de propiedad que corresponde a un elemento de control de cuadrícula de propiedades, si es un punto especificado en el elemento. Este método también indica el área en el control de cuadrícula de propiedad que contiene el punto.  
   
 ```  
@@ -880,7 +953,7 @@ CMFCPropertyGridProperty* HitTest(
 |`ClickArea::ClickValue`|Valor de propiedad.|  
 |`CMFCPropertyGridProperty::ClickDescription`|Área de descripción de control de cuadrícula de propiedades.|  
   
-##  <a name="a-nameinita--cmfcpropertygridctrlinit"></a><a name="init"></a>CMFCPropertyGridCtrl::Init  
+##  <a name="init"></a>CMFCPropertyGridCtrl::Init  
  Llamado por el marco para inicializar un control de cuadrícula de propiedades.  
   
 ```  
@@ -889,14 +962,14 @@ virtual void Init();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameinitheadera--cmfcpropertygridctrlinitheader"></a><a name="initheader"></a>CMFCPropertyGridCtrl::InitHeader  
+##  <a name="initheader"></a>CMFCPropertyGridCtrl::InitHeader  
  Inicializa el interno [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) que utiliza el marco de trabajo para mostrar el control de cuadrícula de propiedad actuales del objeto.  
   
 ```  
 virtual void InitHeader();
 ```  
   
-##  <a name="a-nameisalphabeticmodea--cmfcpropertygridctrlisalphabeticmode"></a><a name="isalphabeticmode"></a>CMFCPropertyGridCtrl::IsAlphabeticMode  
+##  <a name="isalphabeticmode"></a>CMFCPropertyGridCtrl::IsAlphabeticMode  
  Indica si un control de cuadrícula de propiedades está en modo alfabético.  
   
 ```  
@@ -911,7 +984,7 @@ BOOL IsAlphabeticMode() const;
   
  Utilice la [CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode) método para habilitar o deshabilitar el modo de carácter alfabético.  
   
-##  <a name="a-nameisalwaysshowusertooltipa--cmfcpropertygridctrlisalwaysshowusertooltip"></a><a name="isalwaysshowusertooltip"></a>CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip  
+##  <a name="isalwaysshowusertooltip"></a>CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -922,7 +995,7 @@ BOOL IsAlwaysShowUserToolTip() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameisdescriptionareaa--cmfcpropertygridctrlisdescriptionarea"></a><a name="isdescriptionarea"></a>CMFCPropertyGridCtrl::IsDescriptionArea  
+##  <a name="isdescriptionarea"></a>CMFCPropertyGridCtrl::IsDescriptionArea  
  Indica si se muestra el área de descripción del control de cuadrícula de propiedad.  
   
 ```  
@@ -935,7 +1008,7 @@ BOOL IsDescriptionArea() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice la [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) método para ocultar o mostrar el área de descripción.  
   
-##  <a name="a-nameisgroupnamefullwidtha--cmfcpropertygridctrlisgroupnamefullwidth"></a><a name="isgroupnamefullwidth"></a>CMFCPropertyGridCtrl::IsGroupNameFullWidth  
+##  <a name="isgroupnamefullwidth"></a>CMFCPropertyGridCtrl::IsGroupNameFullWidth  
  Indica si cada nombre de grupo se muestra en el ancho del control de cuadrícula de propiedad actual.  
   
 ```  
@@ -948,7 +1021,7 @@ BOOL IsGroupNameFullWidth() const;
 ### <a name="remarks"></a>Comentarios  
  Un *grupo* es una colección de propiedades relacionadas en un control de cuadrícula de propiedades. Si el control se muestre de forma jerárquica, el *nombre del grupo de* se muestra como título de una categoría de la fila superior del grupo.  
   
-##  <a name="a-nameisheaderctrla--cmfcpropertygridctrlisheaderctrl"></a><a name="isheaderctrl"></a>CMFCPropertyGridCtrl::IsHeaderCtrl  
+##  <a name="isheaderctrl"></a>CMFCPropertyGridCtrl::IsHeaderCtrl  
  Indica si se muestra el control de encabezado.  
   
 ```  
@@ -961,7 +1034,7 @@ BOOL IsHeaderCtrl() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice la [CMFCPropertyGridCtrl::EnableHeaderCtrl](#enableheaderctrl) método para ocultar o mostrar el control de encabezado.  
   
-##  <a name="a-nameismarkmodifiedpropertiesa--cmfcpropertygridctrlismarkmodifiedproperties"></a><a name="ismarkmodifiedproperties"></a>CMFCPropertyGridCtrl::IsMarkModifiedProperties  
+##  <a name="ismarkmodifiedproperties"></a>CMFCPropertyGridCtrl::IsMarkModifiedProperties  
  Indica cómo el control de cuadrícula de propiedades muestra las propiedades modificadas.  
   
 ```  
@@ -973,7 +1046,7 @@ BOOL IsMarkModifiedProperties() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameisshowdragcontexta--cmfcpropertygridctrlisshowdragcontext"></a><a name="isshowdragcontext"></a>CMFCPropertyGridCtrl::IsShowDragContext  
+##  <a name="isshowdragcontext"></a>CMFCPropertyGridCtrl::IsShowDragContext  
  Indica si el marco de trabajo se vuelve a dibujar las columnas de nombre y valor del control de cuadrícula de propiedad actual cuando un usuario cambia el tamaño de las columnas.  
   
 ```  
@@ -986,7 +1059,7 @@ BOOL IsShowDragContext() const;
 ### <a name="remarks"></a>Comentarios  
  El usuario puede cambiar el tamaño de las columnas de nombre y valor de un control de cuadrícula de propiedades arrastrando la barra de división entre las columnas. Si se muestra el contexto de arrastre, las columnas de nombre y valor se cambia el tamaño mientras el usuario arrastra la barra de división. En caso contrario, se mueve la barra de división, pero las columnas no se vuelven a dibujar hasta que se complete la operación de arrastre.  
   
-##  <a name="a-nameisvsdotnetlooka--cmfcpropertygridctrlisvsdotnetlook"></a><a name="isvsdotnetlook"></a>CMFCPropertyGridCtrl::IsVSDotNetLook  
+##  <a name="isvsdotnetlook"></a>CMFCPropertyGridCtrl::IsVSDotNetLook  
  Indica si la apariencia del control de cuadrícula de propiedad es en el estilo de Visual Studio. NET.  
   
 ```  
@@ -999,7 +1072,7 @@ BOOL IsVSDotNetLook() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice la [CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook) para establecer el control de cuadrícula de propiedad al estilo de Visual Studio. NET.  
   
-##  <a name="a-namemarkmodifiedpropertiesa--cmfcpropertygridctrlmarkmodifiedproperties"></a><a name="markmodifiedproperties"></a>CMFCPropertyGridCtrl::MarkModifiedProperties  
+##  <a name="markmodifiedproperties"></a>CMFCPropertyGridCtrl::MarkModifiedProperties  
  Especifica cómo mostrar las propiedades modificadas.  
   
 ```  
@@ -1017,7 +1090,7 @@ void MarkModifiedProperties(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameonchangeselectiona--cmfcpropertygridctrlonchangeselection"></a><a name="onchangeselection"></a>CMFCPropertyGridCtrl::OnChangeSelection  
+##  <a name="onchangeselection"></a>CMFCPropertyGridCtrl::OnChangeSelection  
  Llamado por el marco de trabajo cuando se cambia la selección actual.  
   
 ```  
@@ -1036,7 +1109,7 @@ virtual void OnChangeSelection(
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de este método no hace nada.  
   
-##  <a name="a-nameonclickbuttona--cmfcpropertygridctrlonclickbutton"></a><a name="onclickbutton"></a>CMFCPropertyGridCtrl::OnClickButton  
+##  <a name="onclickbutton"></a>CMFCPropertyGridCtrl::OnClickButton  
  Lo llama el marco de trabajo cuando se hace clic en un botón de la propiedad.  
   
 ```  
@@ -1050,7 +1123,7 @@ virtual void OnClickButton(CPoint point);
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, este método actualiza el valor de propiedad actual.  
   
-##  <a name="a-nameondrawbordera--cmfcpropertygridctrlondrawborder"></a><a name="ondrawborder"></a>CMFCPropertyGridCtrl::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCPropertyGridCtrl::OnDrawBorder  
  Llamado por el marco para dibujar un borde alrededor de un control de cuadrícula de propiedad.  
   
 ```  
@@ -1063,7 +1136,7 @@ virtual void OnDrawBorder(CDC* pDC);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameondrawdescriptiona--cmfcpropertygridctrlondrawdescription"></a><a name="ondrawdescription"></a>CMFCPropertyGridCtrl::OnDrawDescription  
+##  <a name="ondrawdescription"></a>CMFCPropertyGridCtrl::OnDrawDescription  
  Llamado por el marco para dibujar el área de descripción y mostrar el texto de descripción.  
   
 ```  
@@ -1082,7 +1155,7 @@ virtual void OnDrawDescription(
 ### <a name="remarks"></a>Comentarios  
  Utilice la [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) método para mostrar el área de descripción.  
   
-##  <a name="a-nameondrawlista--cmfcpropertygridctrlondrawlist"></a><a name="ondrawlist"></a>CMFCPropertyGridCtrl::OnDrawList  
+##  <a name="ondrawlist"></a>CMFCPropertyGridCtrl::OnDrawList  
  Llamado por el marco de trabajo para mostrar la lista de propiedades en el control de cuadrícula de propiedades.  
   
 ```  
@@ -1095,7 +1168,7 @@ virtual void OnDrawList(CDC* pDC);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameondrawpropertya--cmfcpropertygridctrlondrawproperty"></a><a name="ondrawproperty"></a>CMFCPropertyGridCtrl::OnDrawProperty  
+##  <a name="ondrawproperty"></a>CMFCPropertyGridCtrl::OnDrawProperty  
  Llamado por el marco de trabajo para mostrar una propiedad.  
   
 ```  
@@ -1116,7 +1189,7 @@ virtual int OnDrawProperty(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameonpropertychangeda--cmfcpropertygridctrlonpropertychanged"></a><a name="onpropertychanged"></a>CMFCPropertyGridCtrl::OnPropertyChanged  
+##  <a name="onpropertychanged"></a>CMFCPropertyGridCtrl::OnPropertyChanged  
  Llamado por el marco de trabajo cuando se cambia el valor de una propiedad.  
   
 ```  
@@ -1130,7 +1203,7 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, este método envía el [AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md) mensaje al propietario del control de cuadrícula de propiedad.  
   
-##  <a name="a-nameonselectcomboa--cmfcpropertygridctrlonselectcombo"></a><a name="onselectcombo"></a>CMFCPropertyGridCtrl::OnSelectCombo  
+##  <a name="onselectcombo"></a>CMFCPropertyGridCtrl::OnSelectCombo  
  Lo llama el marco de trabajo cuando se selecciona una propiedad que contiene un control de cuadro combinado.  
   
 ```  
@@ -1139,7 +1212,7 @@ void OnSelectCombo();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameremovealla--cmfcpropertygridctrlremoveall"></a><a name="removeall"></a>CMFCPropertyGridCtrl::RemoveAll  
+##  <a name="removeall"></a>CMFCPropertyGridCtrl::RemoveAll  
  Quita todos los objetos de propiedad de un control de cuadrícula de propiedades.  
   
 ```  
@@ -1148,7 +1221,7 @@ void RemoveAll();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameresetoriginalvaluesa--cmfcpropertygridctrlresetoriginalvalues"></a><a name="resetoriginalvalues"></a>CMFCPropertyGridCtrl::ResetOriginalValues  
+##  <a name="resetoriginalvalues"></a>CMFCPropertyGridCtrl::ResetOriginalValues  
  Restaura los valores originales de todas las propiedades.  
   
 ```  
@@ -1161,7 +1234,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namesetalphabeticmodea--cmfcpropertygridctrlsetalphabeticmode"></a><a name="setalphabeticmode"></a>CMFCPropertyGridCtrl::SetAlphabeticMode  
+##  <a name="setalphabeticmode"></a>CMFCPropertyGridCtrl::SetAlphabeticMode  
  Establece o restablece el modo de carácter alfabético.  
   
 ```  
@@ -1175,7 +1248,7 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 ### <a name="remarks"></a>Comentarios  
  Cuando el control de cuadrícula de propiedad está en modo alfabético, el control ordena todas las propiedades que contiene su nombre de propiedad.  
   
-##  <a name="a-namesetboollabelsa--cmfcpropertygridctrlsetboollabels"></a><a name="setboollabels"></a>CMFCPropertyGridCtrl::SetBoolLabels  
+##  <a name="setboollabels"></a>CMFCPropertyGridCtrl::SetBoolLabels  
  Especifica el texto de las etiquetas de tipo Boolean.  
   
 ```  
@@ -1193,7 +1266,7 @@ void SetBoolLabels(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namesetcursela--cmfcpropertygridctrlsetcursel"></a><a name="setcursel"></a>CMFCPropertyGridCtrl::SetCurSel  
+##  <a name="setcursel"></a>CMFCPropertyGridCtrl::SetCurSel  
  Selecciona una propiedad de un control de cuadrícula de propiedades.  
   
 ```  
@@ -1212,7 +1285,7 @@ void SetCurSel(
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para cancelar la selección del elemento actual en el control de cuadrícula de propiedad y, a continuación, seleccione el elemento que corresponde a la propiedad especificada.  
   
-##  <a name="a-namesetcustomcolorsa--cmfcpropertygridctrlsetcustomcolors"></a><a name="setcustomcolors"></a>CMFCPropertyGridCtrl::SetCustomColors  
+##  <a name="setcustomcolors"></a>CMFCPropertyGridCtrl::SetCustomColors  
  Especifica los colores personalizados para distintos elementos del control de cuadrícula de propiedad.  
   
 ```  
@@ -1253,7 +1326,7 @@ void SetCustomColors(
   
  Para personalizar la apariencia de una propiedad concreta, derive una clase de la [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) de clase y, a continuación, reemplace el [CMFCPropertyGridProperty::OnDrawName](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname), [CMFCPropertyGridProperty::OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [CMFCPropertyGridProperty::OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox), y [CMFCPropertyGridProperty::OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) métodos.  
   
-##  <a name="a-namesetdescriptionrowsa--cmfcpropertygridctrlsetdescriptionrows"></a><a name="setdescriptionrows"></a>CMFCPropertyGridCtrl::SetDescriptionRows  
+##  <a name="setdescriptionrows"></a>CMFCPropertyGridCtrl::SetDescriptionRows  
  Especifica el número de filas que se muestran en la sección de descripción del control de cuadrícula de propiedad actual.  
   
 ```  
@@ -1264,7 +1337,7 @@ void SetDescriptionRows(int nDescRows);
  [in] `nDescRows`  
  El número de filas que se muestran en la descripción de propiedad.  
   
-##  <a name="a-namesetgroupnamefullwidtha--cmfcpropertygridctrlsetgroupnamefullwidth"></a><a name="setgroupnamefullwidth"></a>CMFCPropertyGridCtrl::SetGroupNameFullWidth  
+##  <a name="setgroupnamefullwidth"></a>CMFCPropertyGridCtrl::SetGroupNameFullWidth  
  Especifica si se muestra el ancho completo del nombre de categoría de un grupo de propiedades en el control de cuadrícula de propiedad actual.  
   
 ```  
@@ -1285,7 +1358,7 @@ void SetGroupNameFullWidth(
   
  Los términos *nombre del grupo de* y *nombre de categoría* se usan indistintamente en este método. Se muestra el nombre de categoría en una fila que se dirige a un conjunto de valores y propiedades relacionadas. Este método especifica si el ancho de la columna de nombre de propiedad también especifica el ancho del nombre de la categoría mostrada.  
   
-##  <a name="a-namesetlistdelimitera--cmfcpropertygridctrlsetlistdelimiter"></a><a name="setlistdelimiter"></a>CMFCPropertyGridCtrl::SetListDelimiter  
+##  <a name="setlistdelimiter"></a>CMFCPropertyGridCtrl::SetListDelimiter  
  Define un carácter que se utiliza como un delimitador en una lista de valores de propiedad.  
   
 ```  
@@ -1301,7 +1374,7 @@ void SetListDelimiter(TCHAR c);
   
  De forma predeterminada, el [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) constructor establece el carácter delimitador para coma (',').  
   
-##  <a name="a-namesetshowdragcontexta--cmfcpropertygridctrlsetshowdragcontext"></a><a name="setshowdragcontext"></a>CMFCPropertyGridCtrl::SetShowDragContext  
+##  <a name="setshowdragcontext"></a>CMFCPropertyGridCtrl::SetShowDragContext  
  Especifica si el marco de trabajo se vuelve a dibujar las columnas de nombre y valor del control de cuadrícula de propiedad actual cuando un usuario cambia el tamaño de las columnas.  
   
 ```  
@@ -1315,7 +1388,7 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ### <a name="remarks"></a>Comentarios  
  El usuario puede cambiar el tamaño de las columnas de nombre y valor de un control de cuadrícula de propiedades arrastrando la barra de división entre las columnas. Si se muestra el contexto de arrastre, las columnas de nombre y valor se cambia el tamaño mientras el usuario arrastra la barra de división. En caso contrario, se mueve la barra de división, pero las columnas no se vuelven a dibujar hasta que se complete la operación de arrastre.  
   
-##  <a name="a-namesetvsdotnetlooka--cmfcpropertygridctrlsetvsdotnetlook"></a><a name="setvsdotnetlook"></a>CMFCPropertyGridCtrl::SetVSDotNetLook  
+##  <a name="setvsdotnetlook"></a>CMFCPropertyGridCtrl::SetVSDotNetLook  
  Establece la apariencia del control de cuadrícula de propiedad en el estilo que se utiliza en Visual Studio. NET.  
   
 ```  
@@ -1328,7 +1401,7 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameupdatecolora--cmfcpropertygridctrlupdatecolor"></a><a name="updatecolor"></a>CMFCPropertyGridCtrl::UpdateColor  
+##  <a name="updatecolor"></a>CMFCPropertyGridCtrl::UpdateColor  
  Establece el valor de color de la propiedad de color seleccionado.  
   
 ```  
@@ -1342,7 +1415,7 @@ virtual void UpdateColor(COLORREF color);
 ### <a name="remarks"></a>Comentarios  
  Este método valida en modo de depuración, si la propiedad del control de cuadrícula de propiedad seleccionada actualmente no es una propiedad de color.  
   
-##  <a name="a-namevalidateitemdataa--cmfcpropertygridctrlvalidateitemdata"></a><a name="validateitemdata"></a>CMFCPropertyGridCtrl::ValidateItemData  
+##  <a name="validateitemdata"></a>CMFCPropertyGridCtrl::ValidateItemData  
  Llamado por el marco para validar los datos de propiedad.  
   
 ```  

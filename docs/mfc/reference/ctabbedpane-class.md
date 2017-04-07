@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTabbedPane
+- AFXTABBEDPANE/CTabbedPane
+- AFXTABBEDPANE/CTabbedPane::DetachPane
+- AFXTABBEDPANE/CTabbedPane::EnableTabAutoColor
+- AFXTABBEDPANE/CTabbedPane::FloatTab
+- AFXTABBEDPANE/CTabbedPane::GetTabArea
+- AFXTABBEDPANE/CTabbedPane::GetTabWnd
+- AFXTABBEDPANE/CTabbedPane::HasAutoHideMode
+- AFXTABBEDPANE/CTabbedPane::IsTabLocationBottom
+- AFXTABBEDPANE/CTabbedPane::ResetTabs
+- AFXTABBEDPANE/CTabbedPane::SetTabAutoColors
+- AFXTABBEDPANE/CTabbedPane::m_bTabsAlwaysTop
+- AFXTABBEDPANE/CTabbedPane::m_pTabWndRTC
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -159,7 +171,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxTabbedPane.h  
   
-##  <a name="a-namedetachpanea--ctabbedpanedetachpane"></a><a name="detachpane"></a>CTabbedPane::DetachPane  
+##  <a name="detachpane"></a>CTabbedPane::DetachPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -176,7 +188,7 @@ virtual BOOL DetachPane(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameenabletabautocolora--ctabbedpaneenabletabautocolor"></a><a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor  
+##  <a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor  
  Habilita o deshabilita el coloreado automático de pestañas.  
   
 ```  
@@ -194,7 +206,7 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
   
  De forma predeterminada, esta opción está deshabilitada.  
   
-##  <a name="a-namefloattaba--ctabbedpanefloattab"></a><a name="floattab"></a>CTabbedPane::FloatTab  
+##  <a name="floattab"></a>CTabbedPane::FloatTab  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -215,7 +227,7 @@ virtual BOOL FloatTab(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namegettabareaa--ctabbedpanegettabarea"></a><a name="gettabarea"></a>CTabbedPane::GetTabArea  
+##  <a name="gettabarea"></a>CTabbedPane::GetTabArea  
  Devuelve el tamaño y posición del área de ficha en la ventana con fichas.  
   
 ```  
@@ -236,7 +248,7 @@ virtual void GetTabArea(
   
  Invalide este método en un `CTabbedPane`-clase derivada para cambiar este comportamiento.  
   
-##  <a name="a-namegettabwnda--ctabbedpanegettabwnd"></a><a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
+##  <a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -247,7 +259,7 @@ CMFCTabCtrl* GetTabWnd() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namehasautohidemodea--ctabbedpanehasautohidemode"></a><a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
+##  <a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -258,7 +270,7 @@ virtual BOOL HasAutoHideMode() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameistablocationbottoma--ctabbedpaneistablocationbottom"></a><a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom  
+##  <a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom  
  Determina si las pestañas se sitúan en la parte inferior de la ventana.  
   
 ```  
@@ -270,7 +282,7 @@ virtual BOOL IsTabLocationBottom() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namembtabsalwaystopa--ctabbedpanembtabsalwaystop"></a><a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop  
+##  <a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop  
  La ubicación predeterminada de las pestañas en la aplicación.  
   
 ```  
@@ -284,7 +296,7 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
   
  El valor predeterminado es `FALSE`.  
   
-##  <a name="a-namemptabwndrtca--ctabbedpanemptabwndrtc"></a><a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC  
+##  <a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC  
  Información de clase en tiempo de ejecución para un derivado de `CMFCTabCtrl` personalizado.  
   
 ```  
@@ -294,7 +306,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 ### <a name="remarks"></a>Comentarios  
  Establecer esta variable de miembro estático en un puntero a la información de clase en tiempo de ejecución de un `CMFCTabCtrl`-objeto derivado si se utiliza una ventana con fichas personalizada dentro de un panel con fichas.  
   
-##  <a name="a-nameresettabsa--ctabbedpaneresettabs"></a><a name="resettabs"></a>CTabbedPane::ResetTabs  
+##  <a name="resettabs"></a>CTabbedPane::ResetTabs  
  Restablece todos los paneles con pestañas al estado predeterminado.  
   
 ```  
@@ -304,7 +316,7 @@ static void ResetTabs();
 ### <a name="remarks"></a>Comentarios  
  Llamar a este método para revertir todos los paneles con fichas a su estado predeterminado. Cuando se llama, este método restablece el tamaño del borde y el estado de color automático de todas las fichas.  
   
-##  <a name="a-namesettabautocolorsa--ctabbedpanesettabautocolors"></a><a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors  
+##  <a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors  
  Establece una lista de colores personalizados que se usan cuando está habilitada la característica de color automático.  
   
 ```  

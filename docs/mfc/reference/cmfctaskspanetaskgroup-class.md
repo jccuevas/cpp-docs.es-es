@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCTasksPaneTaskGroup
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::SetACCData
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_bIsBottom
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_bIsCollapsed
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_bIsSpecial
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_lstTasks
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_rect
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_rectGroup
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_strName
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +110,7 @@ class CMFCTasksPaneTaskGroup : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxTasksPane.h  
   
-##  <a name="a-namecmfctaskspanetaskgroupa--cmfctaskspanetaskgroupcmfctaskspanetaskgroup"></a><a name="cmfctaskspanetaskgroup"></a>CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
+##  <a name="cmfctaskspanetaskgroup"></a>CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
  Construye un objeto `CMFCTasksPaneTaskGroup`.  
   
 ```  
@@ -134,7 +144,7 @@ CMFCTasksPaneTaskGroup(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namembisbottoma--cmfctaskspanetaskgroupmbisbottom"></a><a name="m_bisbottom"></a>CMFCTasksPaneTaskGroup::m_bIsBottom  
+##  <a name="m_bisbottom"></a>CMFCTasksPaneTaskGroup::m_bIsBottom  
  Determina si el grupo de tareas está alineado en la parte inferior del control del panel de tareas.  
   
 ```  
@@ -144,7 +154,7 @@ BOOL m_bIsBottom;
 ### <a name="remarks"></a>Comentarios  
  Sólo un grupo se puede alinear a la parte inferior del control del panel de tareas. Este grupo de tareas debe agregarse en último lugar. Para obtener más información, consulte [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
-##  <a name="a-namembiscollapseda--cmfctaskspanetaskgroupmbiscollapsed"></a><a name="m_biscollapsed"></a>CMFCTasksPaneTaskGroup::m_bIsCollapsed  
+##  <a name="m_biscollapsed"></a>CMFCTasksPaneTaskGroup::m_bIsCollapsed  
  Determina si se contrae el grupo de tareas.  
   
 ```  
@@ -154,7 +164,7 @@ BOOL m_bIsCollapsed;
 ### <a name="remarks"></a>Comentarios  
  Puede habilitar o deshabilitar la capacidad de contraer grupos en el panel de tareas mediante una llamada a [CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).  
   
-##  <a name="a-namembisspeciala--cmfctaskspanetaskgroupmbisspecial"></a><a name="m_bisspecial"></a>CMFCTasksPaneTaskGroup::m_bIsSpecial  
+##  <a name="m_bisspecial"></a>CMFCTasksPaneTaskGroup::m_bIsSpecial  
  Determina si el grupo de tareas es *especial* y si el título de un grupo de tareas especiales debe ser identificado mediante un color diferente.  
   
 ```  
@@ -164,7 +174,7 @@ BOOL m_bIsSpecial;
 ### <a name="remarks"></a>Comentarios  
  Si la aplicación está utilizando el tema visual de Windows XP y `m_bIsSpecial` es `FALSE`, el marco llama `DrawThemeBackground` con el `EBP_NORMALGROUPBACKGROUND` marca. Si `m_bIsSpecial` es `TRUE`, el marco llama `DrawThemeBackground` con el `EBP_SPECIALGROUPBACKGROUND` marca.  
   
-##  <a name="a-namemlsttasksa--cmfctaskspanetaskgroupmlsttasks"></a><a name="m_lsttasks"></a>CMFCTasksPaneTaskGroup::m_lstTasks  
+##  <a name="m_lsttasks"></a>CMFCTasksPaneTaskGroup::m_lstTasks  
  Contiene la lista interna de tareas.  
   
 ```  
@@ -174,7 +184,7 @@ CObList m_lstTasks;
 ### <a name="remarks"></a>Comentarios  
  Para rellenar esta lista, llame a [CMFCTasksPane::AddTask](../../mfc/reference/cmfctaskspane-class.md#addtask).  
   
-##  <a name="a-namemrecta--cmfctaskspanetaskgroupmrect"></a><a name="m_rect"></a>CMFCTasksPaneTaskGroup::m_rect  
+##  <a name="m_rect"></a>CMFCTasksPaneTaskGroup::m_rect  
  Especifica el rectángulo delimitador del título de grupo.  
   
 ```  
@@ -184,7 +194,7 @@ CRect m_rect;
 ### <a name="remarks"></a>Comentarios  
  Este valor se calcula automáticamente por el marco de trabajo.  
   
-##  <a name="a-namemrectgroupa--cmfctaskspanetaskgroupmrectgroup"></a><a name="m_rectgroup"></a>CMFCTasksPaneTaskGroup::m_rectGroup  
+##  <a name="m_rectgroup"></a>CMFCTasksPaneTaskGroup::m_rectGroup  
  Especifica el rectángulo delimitador del grupo.  
   
 ```  
@@ -194,7 +204,7 @@ CRect m_rectGroup;
 ### <a name="remarks"></a>Comentarios  
  Este valor se calcula automáticamente el marco de trabajo.  
   
-##  <a name="a-namemstrnamea--cmfctaskspanetaskgroupmstrname"></a><a name="m_strname"></a>CMFCTasksPaneTaskGroup::m_strName  
+##  <a name="m_strname"></a>CMFCTasksPaneTaskGroup::m_strName  
  Especifica el nombre del grupo.  
   
 ```  
@@ -204,7 +214,7 @@ CString m_strName;
 ### <a name="remarks"></a>Comentarios  
  Si este valor está vacío, no se muestra el título del grupo y no se puede contraer el grupo.  
   
-##  <a name="a-namesetaccdataa--cmfctaskspanetaskgroupsetaccdata"></a><a name="setaccdata"></a>CMFCTasksPaneTaskGroup::SetACCData  
+##  <a name="setaccdata"></a>CMFCTasksPaneTaskGroup::SetACCData  
  Determina los datos de accesibilidad para el grupo de tareas actual.  
   
 ```  

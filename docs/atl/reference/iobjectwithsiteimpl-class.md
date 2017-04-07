@@ -9,11 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IObjectWithSiteImpl
-- ATL.IObjectWithSiteImpl<T>
 - IObjectWithSiteImpl
-- ATL.IObjectWithSiteImpl
-- ATL::IObjectWithSiteImpl<T>
+- ATLCOM/ATL::IObjectWithSiteImpl
+- ATLCOM/ATL::IObjectWithSiteImpl::GetSite
+- ATLCOM/ATL::IObjectWithSiteImpl::SetChildSite
+- ATLCOM/ATL::IObjectWithSiteImpl::SetSite
+- ATLCOM/ATL::IObjectWithSiteImpl::m_spUnkSite
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +90,7 @@ template <class T>
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="a-namegetsitea--iobjectwithsiteimplgetsite"></a><a name="getsite"></a>IObjectWithSiteImpl::GetSite  
+##  <a name="getsite"></a>IObjectWithSiteImpl::GetSite  
  Consulta el sitio para un puntero a la interfaz identificada por `riid`.  
   
 ```
@@ -103,7 +104,7 @@ STDMETHOD(GetSite)(
   
  Consulte [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namemspunksitea--iobjectwithsiteimplmspunksite"></a><a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
+##  <a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
  Administra el sitio **IUnknown** puntero.  
   
 ```
@@ -113,7 +114,7 @@ CComPtr<IUnknown> m_spUnkSite;
 ### <a name="remarks"></a>Comentarios  
  `m_spUnkSite`Recibe inicialmente este puntero mediante una llamada a [SetSite](#setsite).  
   
-##  <a name="a-namesetchildsitea--iobjectwithsiteimplsetchildsite"></a><a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
+##  <a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
  Proporciona el objeto con el sitio **IUnknown** puntero.  
   
 ```
@@ -127,7 +128,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve `S_OK`.  
   
-##  <a name="a-namesetsitea--iobjectwithsiteimplsetsite"></a><a name="setsite"></a>IObjectWithSiteImpl::SetSite  
+##  <a name="setsite"></a>IObjectWithSiteImpl::SetSite  
  Proporciona el objeto con el sitio **IUnknown** puntero.  
   
 ```

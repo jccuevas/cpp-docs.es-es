@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontSizeComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::GetTwipSize
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::RebuildFontSizes
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::SetTwipSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,14 +93,14 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxtoolbarfontcombobox.h  
   
-##  <a name="a-namecmfctoolbarfontsizecomboboxa--cmfctoolbarfontsizecomboboxcmfctoolbarfontsizecombobox"></a><a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
+##  <a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
  Construye un objeto `CMFCToolBarFontSizeComboBox`.  
   
 ```  
 CMFCToolBarFontSizeComboBox();
 ```  
   
-##  <a name="a-namegettwipsizea--cmfctoolbarfontsizecomboboxgettwipsize"></a><a name="gettwipsize"></a>CMFCToolBarFontSizeComboBox::GetTwipSize  
+##  <a name="gettwipsize"></a>CMFCToolBarFontSizeComboBox::GetTwipSize  
  Recupera el tamaño de fuente, en twips, desde el cuadro de texto de un cuadro combinado de tamaño de fuente.  
   
 ```  
@@ -105,7 +110,7 @@ int GetTwipSize() const;
 ### <a name="return-value"></a>Valor devuelto  
  Si el valor devuelto es positivo, es el tamaño de fuente en twips. Es -1 si el cuadro de texto del cuadro combinado está vacío. Es -2 si se produce un error.  
   
-##  <a name="a-namerebuildfontsizesa--cmfctoolbarfontsizecomboboxrebuildfontsizes"></a><a name="rebuildfontsizes"></a>CMFCToolBarFontSizeComboBox::RebuildFontSizes  
+##  <a name="rebuildfontsizes"></a>CMFCToolBarFontSizeComboBox::RebuildFontSizes  
  Rellena un cuadro combinado de tamaño de fuente con todos los tamaños válidos de la fuente dada.  
   
 ```  
@@ -119,7 +124,7 @@ void RebuildFontSizes(const CString& strFontName);
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función cuando desee sincronizar entre la selección en un cuadro combinado de fuente y un cuadro combinado de tamaño de fuente, como un [CMFCToolBarFontComboBox clase](../../mfc/reference/cmfctoolbarfontcombobox-class.md).  
   
-##  <a name="a-namesettwipsizea--cmfctoolbarfontsizecomboboxsettwipsize"></a><a name="settwipsize"></a>CMFCToolBarFontSizeComboBox::SetTwipSize  
+##  <a name="settwipsize"></a>CMFCToolBarFontSizeComboBox::SetTwipSize  
  Redondea especificado (en twips) para el tamaño más cercano en puntos y, a continuación, Establece el tamaño seleccionado en el cuadro combinado para ese valor.  
   
 ```  

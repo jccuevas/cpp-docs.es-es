@@ -9,13 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CMFCPropertyGridToolTipCtrl::PreTranslateMessage
-- ~CMFCPropertyGridToolTipCtrl
-- PreTranslateMessage
-- CMFCPropertyGridToolTipCtrl.~CMFCPropertyGridToolTipCtrl
 - CMFCPropertyGridToolTipCtrl
-- CMFCPropertyGridToolTipCtrl.PreTranslateMessage
-- CMFCPropertyGridToolTipCtrl::~CMFCPropertyGridToolTipCtrl
+- AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl
+- AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl
+- AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::Create
+- AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::Deactivate
+- AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::GetLastRect
+- AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::Hide
+- AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::SetTextMargin
+- AFXPROPERTYGRIDTOOLTIPCTRL/CMFCPropertyGridToolTipCtrl::Track
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,14 +104,14 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxpropertygridtooltipctrl.h  
   
-##  <a name="a-namecmfcpropertygridtooltipctrla--cmfcpropertygridtooltipctrlcmfcpropertygridtooltipctrl"></a><a name="cmfcpropertygridtooltipctrl"></a>CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
+##  <a name="cmfcpropertygridtooltipctrl"></a>CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
  Construye un objeto `CMFCPropertyGridToolTipCtrl`.  
   
 ```  
 CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl();
 ```  
   
-##  <a name="a-namecreatea--cmfcpropertygridtooltipctrlcreate"></a><a name="create"></a>CMFCPropertyGridToolTipCtrl::Create  
+##  <a name="create"></a>CMFCPropertyGridToolTipCtrl::Create  
  Crea una ventana para el control de información sobre herramientas.  
   
 ```  
@@ -123,7 +125,7 @@ BOOL Create(CWnd* pWndParent);
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la ventana se creó correctamente; de lo contrario, FALSE.  
   
-##  <a name="a-namedeactivatea--cmfcpropertygridtooltipctrldeactivate"></a><a name="deactivate"></a>CMFCPropertyGridToolTipCtrl::Deactivate  
+##  <a name="deactivate"></a>CMFCPropertyGridToolTipCtrl::Deactivate  
  Desactiva y oculta el control de información sobre herramientas.  
   
 ```  
@@ -133,7 +135,7 @@ void Deactivate();
 ### <a name="remarks"></a>Comentarios  
  Este método establece la última posición y texto a los valores vacíos, para que las futuras llamadas a [CMFCPropertyGridToolTipCtrl::Track](#track) mostrar la información sobre herramientas.  
   
-##  <a name="a-namegetlastrecta--cmfcpropertygridtooltipctrlgetlastrect"></a><a name="getlastrect"></a>CMFCPropertyGridToolTipCtrl::GetLastRect  
+##  <a name="getlastrect"></a>CMFCPropertyGridToolTipCtrl::GetLastRect  
  Devuelve las coordenadas de la última posición del control de información sobre herramientas.  
   
 ```  
@@ -144,14 +146,14 @@ void GetLastRect(CRect& rect) const;
  [out] `rect`  
  Contiene la última posición del control de información sobre herramientas.  
   
-##  <a name="a-namehidea--cmfcpropertygridtooltipctrlhide"></a><a name="hide"></a>CMFCPropertyGridToolTipCtrl::Hide  
+##  <a name="hide"></a>CMFCPropertyGridToolTipCtrl::Hide  
  Oculta el control de información sobre herramientas.  
   
 ```  
 void Hide();
 ```  
   
-##  <a name="a-namesettextmargina--cmfcpropertygridtooltipctrlsettextmargin"></a><a name="settextmargin"></a>CMFCPropertyGridToolTipCtrl::SetTextMargin  
+##  <a name="settextmargin"></a>CMFCPropertyGridToolTipCtrl::SetTextMargin  
  Establece el espaciado entre el texto y el borde de la ventana de información sobre herramientas.  
   
 ```  
@@ -162,7 +164,7 @@ void SetTextMargin(int nTextMargin);
  [in] `nTextMargin`  
  Especifica el espaciado entre el texto de información sobre herramientas del control y el borde de la ventana de información sobre herramientas. El valor predeterminado es 10 píxeles.  
   
-##  <a name="a-nametracka--cmfcpropertygridtooltipctrltrack"></a><a name="track"></a>CMFCPropertyGridToolTipCtrl::Track  
+##  <a name="track"></a>CMFCPropertyGridToolTipCtrl::Track  
  Muestra el control de información sobre herramientas.  
   
 ```  

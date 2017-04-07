@@ -10,8 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IEnumOnSTLImpl
-- ATL.IEnumOnSTLImpl
-- ATL::IEnumOnSTLImpl
+- ATLCOM/ATL::IEnumOnSTLImpl
+- ATLCOM/ATL::IEnumOnSTLImpl::Clone
+- ATLCOM/ATL::IEnumOnSTLImpl::Init
+- ATLCOM/ATL::IEnumOnSTLImpl::Next
+- ATLCOM/ATL::IEnumOnSTLImpl::Reset
+- ATLCOM/ATL::IEnumOnSTLImpl::Skip
+- ATLCOM/ATL::IEnumOnSTLImpl::m_iter
+- ATLCOM/ATL::IEnumOnSTLImpl::m_pcollection
+- ATLCOM/ATL::IEnumOnSTLImpl::m_spUnk
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +113,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="a-nameinita--ienumonstlimplinit"></a><a name="init"></a>IEnumOnSTLImpl::Init  
+##  <a name="init"></a>IEnumOnSTLImpl::Init  
  Inicializa el enumerador.  
   
 ```
@@ -130,7 +137,7 @@ HRESULT Init(
   
  Debe llamar a este método antes de pasar un puntero a la interfaz de enumerador a los clientes.  
   
-##  <a name="a-nameclonea--ienumonstlimplclone"></a><a name="clone"></a>IEnumOnSTLImpl::Clone  
+##  <a name="clone"></a>IEnumOnSTLImpl::Clone  
  Este método proporciona la implementación de la [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) método mediante la creación de un objeto de tipo `CComEnumOnSTL`, inicializar con la misma colección e iterador utilizado por el objeto actual y devuelve la interfaz en el objeto recién creado.  
   
 ```
@@ -144,7 +151,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="return-value"></a>Valor devuelto  
  Un valor `HRESULT` estándar.  
   
-##  <a name="a-namemspunka--ienumonstlimplmspunk"></a><a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk  
+##  <a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk  
  El **IUnknown** puntero del objeto proporciona la colección.  
   
 ```
@@ -154,7 +161,7 @@ CComPtr<IUnknown> m_spUnk;
 ### <a name="remarks"></a>Comentarios  
  Este puntero inteligente mantiene una referencia en el objeto pasado a [IEnumOnSTLImpl::Init](#init), asegurándose de que permanece activo durante la vigencia del enumerador.  
   
-##  <a name="a-namempcollectiona--ienumonstlimplmpcollection"></a><a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection  
+##  <a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection  
  Este miembro apunta a la colección que proporciona los datos de la implantación de la interfaz de enumerador.  
   
 ```
@@ -164,14 +171,14 @@ CollType* m_pcollection;
 ### <a name="remarks"></a>Comentarios  
  Este miembro se inicializa mediante una llamada a [IEnumOnSTLImpl::Init](#init).  
   
-##  <a name="a-namemitera--ienumonstlimplmiter"></a><a name="m_iter"></a>IEnumOnSTLImpl::m_iter  
+##  <a name="m_iter"></a>IEnumOnSTLImpl::m_iter  
  Este miembro contiene el iterador que se utiliza para marcar la posición actual dentro de la colección y desplazarse a elementos posteriores.  
   
 ```
 CollType::iterator m_iter;
 ```  
   
-##  <a name="a-namenexta--ienumonstlimplnext"></a><a name="next"></a>IEnumOnSTLImpl::Next  
+##  <a name="next"></a>IEnumOnSTLImpl::Next  
  Este método proporciona la implementación de la [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) método.  
   
 ```
@@ -194,7 +201,7 @@ STDMETHOD(Next)(
 ### <a name="return-value"></a>Valor devuelto  
  Un valor `HRESULT` estándar.  
   
-##  <a name="a-namereseta--ienumonstlimplreset"></a><a name="reset"></a>IEnumOnSTLImpl::Reset  
+##  <a name="reset"></a>IEnumOnSTLImpl::Reset  
  Este método proporciona la implementación de la [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) método.  
   
 ```
@@ -204,7 +211,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>Valor devuelto  
  Un valor `HRESULT` estándar.  
   
-##  <a name="a-nameskipa--ienumonstlimplskip"></a><a name="skip"></a>IEnumOnSTLImpl::Skip  
+##  <a name="skip"></a>IEnumOnSTLImpl::Skip  
  Este método proporciona la implementación de la [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) método.  
   
 ```

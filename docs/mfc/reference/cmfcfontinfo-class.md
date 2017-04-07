@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCFontInfo
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::GetFullName
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_nCharSet
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_nPitchAndFamily
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_nType
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_strName
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_strScript
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +91,7 @@ class CMFCFontInfo : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxtoolbarfontcombobox.h  
   
-##  <a name="a-namecmfcfontinfoa--cmfcfontinfocmfcfontinfo"></a><a name="cmfcfontinfo"></a>CMFCFontInfo::CMFCFontInfo  
+##  <a name="cmfcfontinfo"></a>CMFCFontInfo::CMFCFontInfo  
  Construye un objeto `CMFCFontInfo`.  
   
 ```  
@@ -122,7 +129,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="remarks"></a>Comentarios  
  Esta documentación utiliza los términos *juego de caracteres* y *secuencia de comandos* indistintamente. Un *secuencia de comandos*, que también es conocido como un sistema de escritura, es un conjunto de caracteres y las reglas para escribir los caracteres en uno o más idiomas. El conjunto de caracteres incluye el alfabeto y la puntuación que se usa en el script. Por ejemplo, alfabeto latino se utiliza para inglés se habla en Estados Unidos y su alfabeto incluye los caracteres de la A la Z. El `lfCharSet` miembro de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura especifica un juego de caracteres. Por ejemplo, el valor `ANSI_CHARSET` especifica la [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] juego de caracteres, que incluye el alfabeto del alfabeto latino.  
   
-##  <a name="a-namegetfullnamea--cmfcfontinfogetfullname"></a><a name="getfullname"></a>CMFCFontInfo::GetFullName  
+##  <a name="getfullname"></a>CMFCFontInfo::GetFullName  
  Recupera los nombres concatenados de una fuente y el carácter conjunto (script).  
   
 ```  
@@ -135,7 +142,7 @@ CString GetFullName() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para obtener el nombre completo de la fuente. Por ejemplo, si el nombre de la fuente es `Arial` y la secuencia de comandos de la fuente es `Cyrillic`, este método devuelve "Arial (cirílico)".  
   
-##  <a name="a-namemncharseta--cmfcfontinfomncharset"></a><a name="m_ncharset"></a>CMFCFontInfo::m_nCharSet  
+##  <a name="m_ncharset"></a>CMFCFontInfo::m_nCharSet  
  Un valor que especifica el juego de caracteres (alfabeto) asociado a la fuente.  
   
 ```  
@@ -145,7 +152,7 @@ const BYTE m_nCharSet;
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte el `nCharSet` parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
-##  <a name="a-namemnpitchandfamilya--cmfcfontinfomnpitchandfamily"></a><a name="m_npitchandfamily"></a>CMFCFontInfo::m_nPitchAndFamily  
+##  <a name="m_npitchandfamily"></a>CMFCFontInfo::m_nPitchAndFamily  
  Un valor que especifica el tono (tamaño) y la familia (por ejemplo, serif, sans-serif y monospace) de la fuente.  
   
 ```  
@@ -155,7 +162,7 @@ const BYTE m_nPitchAndFamily;
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte el `nPitchAndFamily` parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
-##  <a name="a-namemntypea--cmfcfontinfomntype"></a><a name="m_ntype"></a>CMFCFontInfo::m_nType  
+##  <a name="m_ntype"></a>CMFCFontInfo::m_nType  
  Un valor que especifica el tipo de la fuente.  
   
 ```  
@@ -165,7 +172,7 @@ const int m_nType;
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte el `nType` parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
-##  <a name="a-namemstrnamea--cmfcfontinfomstrname"></a><a name="m_strname"></a>CMFCFontInfo::m_strName  
+##  <a name="m_strname"></a>CMFCFontInfo::m_strName  
  El nombre de la fuente: por ejemplo, **Arial**.  
   
 ```  
@@ -175,7 +182,7 @@ const CString m_strName;
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte el `lpszName` parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
-##  <a name="a-namemstrscripta--cmfcfontinfomstrscript"></a><a name="m_strscript"></a>CMFCFontInfo::m_strScript  
+##  <a name="m_strscript"></a>CMFCFontInfo::m_strScript  
  El nombre de un juego de caracteres (alfabeto) asociado a la fuente.  
   
 ```  

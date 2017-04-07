@@ -9,9 +9,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CThreadPool
-- ATL::CThreadPool
 - CThreadPool
+- ATLUTIL/ATL::CThreadPool
+- ATLUTIL/ATL::CThreadPool::CThreadPool
+- ATLUTIL/ATL::CThreadPool::AddRef
+- ATLUTIL/ATL::CThreadPool::GetNumThreads
+- ATLUTIL/ATL::CThreadPool::GetQueueHandle
+- ATLUTIL/ATL::CThreadPool::GetSize
+- ATLUTIL/ATL::CThreadPool::GetTimeout
+- ATLUTIL/ATL::CThreadPool::Initialize
+- ATLUTIL/ATL::CThreadPool::QueryInterface
+- ATLUTIL/ATL::CThreadPool::QueueRequest
+- ATLUTIL/ATL::CThreadPool::Release
+- ATLUTIL/ATL::CThreadPool::SetSize
+- ATLUTIL/ATL::CThreadPool::SetTimeout
+- ATLUTIL/ATL::CThreadPool::Shutdown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +117,7 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlutil.h  
   
-##  <a name="a-nameaddrefa--cthreadpooladdref"></a><a name="addref"></a>CThreadPool::AddRef  
+##  <a name="addref"></a>CThreadPool::AddRef  
  Implementación de `IUnknown::AddRef`.  
   
 ```
@@ -118,7 +130,7 @@ ULONG STDMETHODCALLTYPE AddRef() throw();
 ### <a name="remarks"></a>Comentarios  
  Esta clase no implementa control de duración con el recuento de referencias.  
   
-##  <a name="a-namecthreadpoola--cthreadpoolcthreadpool"></a><a name="cthreadpool"></a>CThreadPool::CThreadPool  
+##  <a name="cthreadpool"></a>CThreadPool::CThreadPool  
  El constructor para el grupo de subprocesos.  
   
 ```
@@ -128,7 +140,7 @@ CThreadPool() throw();
 ### <a name="remarks"></a>Comentarios  
  Inicializa el valor de tiempo de espera para [ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT](http://msdn.microsoft.com/library/c1e660a7-d490-42af-bbe1-ded76e80cc10).  
   
-##  <a name="a-namedtora--cthreadpoolcthreadpool"></a><a name="dtor"></a>CThreadPool:: ~ CThreadPool  
+##  <a name="dtor"></a>CThreadPool:: ~ CThreadPool  
  El destructor para el grupo de subprocesos.  
   
 ```
@@ -138,7 +150,7 @@ CThreadPool() throw();
 ### <a name="remarks"></a>Comentarios  
  Llamadas [CThreadPool::Shutdown](#shutdown).  
   
-##  <a name="a-namegetnumthreadsa--cthreadpoolgetnumthreads"></a><a name="getnumthreads"></a>CThreadPool::GetNumThreads  
+##  <a name="getnumthreads"></a>CThreadPool::GetNumThreads  
  Llame a este método para obtener el número de subprocesos en el grupo.  
   
 ```
@@ -148,7 +160,7 @@ int GetNumThreads() throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el número de subprocesos en el grupo.  
   
-##  <a name="a-namegetqueuehandlea--cthreadpoolgetqueuehandle"></a><a name="getqueuehandle"></a>CThreadPool::GetQueueHandle  
+##  <a name="getqueuehandle"></a>CThreadPool::GetQueueHandle  
  Llame a este método para obtener el identificador del puerto de finalización de E/S utilizado para poner en cola los elementos de trabajo.  
   
 ```
@@ -158,7 +170,7 @@ HANDLE GetQueueHandle() throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el identificador de la cola o NULL si no se ha inicializado el grupo de subprocesos.  
   
-##  <a name="a-namegetsizea--cthreadpoolgetsize"></a><a name="getsize"></a>CThreadPool:: GetSize  
+##  <a name="getsize"></a>CThreadPool:: GetSize  
  Llame a este método para obtener el número de subprocesos en el grupo.  
   
 ```
@@ -172,7 +184,7 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
   
-##  <a name="a-namegettimeouta--cthreadpoolgettimeout"></a><a name="gettimeout"></a>CThreadPool::GetTimeout  
+##  <a name="gettimeout"></a>CThreadPool::GetTimeout  
  Llame a este método para obtener el tiempo máximo en milisegundos que se va a esperar un subproceso cerrar el grupo de subprocesos.  
   
 ```
@@ -189,7 +201,7 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 ### <a name="remarks"></a>Comentarios  
  Se utiliza este valor de tiempo de espera [CThreadPool::Shutdown](#shutdown) si no se proporciona ningún otro valor para ese método.  
   
-##  <a name="a-nameinitializea--cthreadpoolinitialize"></a><a name="initialize"></a>CThreadPool::Initialize  
+##  <a name="initialize"></a>CThreadPool::Initialize  
  Llame a este método para inicializar el grupo de subprocesos.  
   
 ```
@@ -220,7 +232,7 @@ HRESULT Initialize(
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
   
-##  <a name="a-namequeryinterfacea--cthreadpoolqueryinterface"></a><a name="queryinterface"></a>CThreadPool::QueryInterface  
+##  <a name="queryinterface"></a>CThreadPool::QueryInterface  
  Implementación de **IUnknown:: QueryInterface**.  
   
 ```
@@ -230,7 +242,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(REFIID riid, void** ppv) throw();
 ### <a name="remarks"></a>Comentarios  
  Objetos de esta clase se pueden consultar correctamente para la **IUnknown** y [interfaz IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md) interfaces.  
   
-##  <a name="a-namequeuerequesta--cthreadpoolqueuerequest"></a><a name="queuerequest"></a>CThreadPool::QueueRequest  
+##  <a name="queuerequest"></a>CThreadPool::QueueRequest  
  Llamar a este método para poner en cola un elemento de trabajo para ser controladas por un subproceso del grupo.  
   
 ```
@@ -247,7 +259,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 ### <a name="remarks"></a>Comentarios  
  Este método agrega un elemento de trabajo a la cola. Los subprocesos en el grupo elegir elementos de la cola en el orden en que se reciben.  
   
-##  <a name="a-namereleasea--cthreadpoolrelease"></a><a name="release"></a>CThreadPool::Release  
+##  <a name="release"></a>CThreadPool::Release  
  Implementación de `IUnknown::Release`.  
   
 ```
@@ -260,7 +272,7 @@ ULONG STDMETHODCALLTYPE Release() throw();
 ### <a name="remarks"></a>Comentarios  
  Esta clase no implementa control de duración con el recuento de referencias.  
   
-##  <a name="a-namesetsizea--cthreadpoolsetsize"></a><a name="setsize"></a>CThreadPool:: SetSize  
+##  <a name="setsize"></a>CThreadPool:: SetSize  
  Llame a este método para establecer el número de subprocesos en el grupo.  
   
 ```
@@ -281,7 +293,7 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 ### <a name="remarks"></a>Comentarios  
  Si el número de subprocesos especificado es menor que el número de subprocesos actualmente en el grupo, el objeto coloca un mensaje de cierre en la cola para ser recogidas por un subproceso en espera. Cuando un subproceso en espera extrae el mensaje de la cola, notifica el grupo de subprocesos y sale del procedimiento de subproceso. Este proceso se repite hasta que el número de subprocesos en el grupo alcanza el número especificado o hasta que ningún subproceso ha terminado dentro del período especificado por [GetTimeout](#gettimeout)/ [SetTimeout](#settimeout). En esta situación el método devolverá un HRESULT correspondiente a **WAIT_TIMEOUT** y se cancela el mensaje de cierre pendiente.  
   
-##  <a name="a-namesettimeouta--cthreadpoolsettimeout"></a><a name="settimeout"></a>CThreadPool::SetTimeout  
+##  <a name="settimeout"></a>CThreadPool::SetTimeout  
  Llame a este método para establecer el tiempo máximo en milisegundos que se va a esperar un subproceso cerrar el grupo de subprocesos.  
   
 ```
@@ -300,7 +312,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
   
  Tenga en cuenta que `dwMaxWait` es el tiempo que esperará el grupo de un solo subproceso apagar. El tiempo máximo que puede adoptar para quitar varios subprocesos del grupo podría ser ligeramente menor `dwMaxWait` multiplicado por el número de subprocesos.  
   
-##  <a name="a-nameshutdowna--cthreadpoolshutdown"></a><a name="shutdown"></a>CThreadPool::Shutdown  
+##  <a name="shutdown"></a>CThreadPool::Shutdown  
  Llamar a este método para cerrar el grupo de subprocesos.  
   
 ```

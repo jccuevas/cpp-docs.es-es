@@ -9,11 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComObjectStack
-- ATL.CComObjectStack
-- ATL::CComObjectStack<Base>
-- ATL.CComObjectStack<Base>
 - CComObjectStack
+- ATLCOM/ATL::CComObjectStack
+- ATLCOM/ATL::CComObjectStack::CComObjectStack
+- ATLCOM/ATL::CComObjectStack::AddRef
+- ATLCOM/ATL::CComObjectStack::QueryInterface
+- ATLCOM/ATL::CComObjectStack::Release
+- ATLCOM/ATL::CComObjectStack::m_hResFinalConstruct
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +100,7 @@ class CComObjectStack
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomobjectstackaddref"></a><a name="addref"></a>CComObjectStack::AddRef  
+##  <a name="addref"></a>CComObjectStack::AddRef  
  Devuelve cero.  
   
 ```
@@ -111,7 +113,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="remarks"></a>Comentarios  
  En modo de depuración, se llama `_ASSERTE`.  
   
-##  <a name="a-nameccomobjectstacka--ccomobjectstackccomobjectstack"></a><a name="ccomobjectstack"></a>CComObjectStack::CComObjectStack  
+##  <a name="ccomobjectstack"></a>CComObjectStack::CComObjectStack  
  El constructor.  
   
 ```
@@ -121,7 +123,7 @@ CComObjectStack(void* = NULL);
 ### <a name="remarks"></a>Comentarios  
  Llamadas `FinalConstruct` y, a continuación, se establece [m_hResFinalConstruct](#m_hresfinalconstruct) a la `HRESULT` devuelto por `FinalConstruct`. Si no se ha derivado la clase base de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), debe proporcionar su propio `FinalConstruct` método. El destructor llama a `FinalRelease`.  
   
-##  <a name="a-namedtora--ccomobjectstackccomobjectstack"></a><a name="dtor"></a>CComObjectStack:: ~ CComObjectStack  
+##  <a name="dtor"></a>CComObjectStack:: ~ CComObjectStack  
  Destructor.  
   
 ```
@@ -131,14 +133,14 @@ CComObjectStack();
 ### <a name="remarks"></a>Comentarios  
  Libera todos los recursos asignados y llamadas [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
-##  <a name="a-namemhresfinalconstructa--ccomobjectstackmhresfinalconstruct"></a><a name="m_hresfinalconstruct"></a>CComObjectStack::m_hResFinalConstruct  
+##  <a name="m_hresfinalconstruct"></a>CComObjectStack::m_hResFinalConstruct  
  Contiene el `HRESULT` devuelve la llamada `FinalConstruct` durante la construcción de la `CComObjectStack` objeto.  
   
 ```
 HRESULT    m_hResFinalConstruct;
 ```  
   
-##  <a name="a-namequeryinterfacea--ccomobjectstackqueryinterface"></a><a name="queryinterface"></a>CComObjectStack::QueryInterface  
+##  <a name="queryinterface"></a>CComObjectStack::QueryInterface  
  Devuelve **E_NOINTERFACE**.  
   
 ```
@@ -152,7 +154,7 @@ HRESULT    QueryInterface(REFIID, void**)
 ### <a name="remarks"></a>Comentarios  
  En modo de depuración, se llama `_ASSERTE`.  
   
-##  <a name="a-namereleasea--ccomobjectstackrelease"></a><a name="release"></a>CComObjectStack::Release  
+##  <a name="release"></a>CComObjectStack::Release  
  Devuelve cero.  
   
 ```

@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleBusyDialog
+- AFXODLGS/COleBusyDialog
+- AFXODLGS/COleBusyDialog::COleBusyDialog
+- AFXODLGS/COleBusyDialog::DoModal
+- AFXODLGS/COleBusyDialog::GetSelectionType
+- AFXODLGS/COleBusyDialog::m_bz
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +104,7 @@ class COleBusyDialog : public COleDialog
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxodlgs.h  
   
-##  <a name="a-namecolebusydialoga--colebusydialogcolebusydialog"></a><a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
+##  <a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
  Esta función sólo se crea un `COleBusyDialog` objeto.  
   
 ```  
@@ -134,7 +139,7 @@ explicit COleBusyDialog(
   
  Para obtener más información, consulte el [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) estructura en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedomodala--colebusydialogdomodal"></a><a name="domodal"></a>COleBusyDialog::DoModal  
+##  <a name="domodal"></a>COleBusyDialog::DoModal  
  Llame a esta función para mostrar el cuadro de diálogo OLE servidor ocupado o servidor no responde.  
   
 ```  
@@ -155,7 +160,7 @@ virtual INT_PTR DoModal();
   
  Si `DoModal` devuelve **IDOK**, puede llamar a otro miembro de funciones para recuperar la configuración o la información que se introduce el usuario en el cuadro de diálogo.  
   
-##  <a name="a-namegetselectiontypea--colebusydialoggetselectiontype"></a><a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
  Llame a esta función para obtener el tipo de selección elegido por el usuario en el cuadro de diálogo servidor ocupado.  
   
 ```  
@@ -168,17 +173,13 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>Comentarios  
  Especifica los valores de tipo de valor devuelto por la **selección** tipo de enumeración declarado en el `COleBusyDialog` clase.  
   
- `enum Selection`  
-  
- `{`  
-  
- `switchTo,`  
-  
- `retry,`  
-  
- `callUnblocked`  
-  
- `};`  
+```  
+enum Selection {
+    switchTo,
+    retry,
+    callUnblocked
+    };
+```  
   
  Siguen breves descripciones de estos valores:  
   
@@ -188,7 +189,7 @@ UINT GetSelectionType() const;
   
 - **COleBusyDialog::callUnblocked** llamada para activar el servidor ya está desbloqueado.  
   
-##  <a name="a-namembza--colebusydialogmbz"></a><a name="m_bz"></a>COleBusyDialog::m_bz  
+##  <a name="m_bz"></a>COleBusyDialog::m_bz  
  Estructura de tipo **OLEUIBUSY** utilizado para controlar el comportamiento del cuadro de diálogo servidor ocupado.  
   
 ```  

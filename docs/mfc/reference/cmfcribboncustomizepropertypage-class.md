@@ -9,16 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- GetThisClass
-- CMFCRibbonCustomizePropertyPage::CreateObject
 - CMFCRibbonCustomizePropertyPage
-- CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage
-- CMFCRibbonCustomizePropertyPage.GetThisClass
-- CMFCRibbonCustomizePropertyPage.CreateObject
-- ~CMFCRibbonCustomizePropertyPage
-- CreateObject
-- CMFCRibbonCustomizePropertyPage.~CMFCRibbonCustomizePropertyPage
-- CMFCRibbonCustomizePropertyPage::GetThisClass
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage::AddCustomCategory
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage::OnOK
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -107,7 +102,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxribboncustomizedialog.h  
   
-##  <a name="a-nameaddcustomcategorya--cmfcribboncustomizepropertypageaddcustomcategory"></a><a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory  
+##  <a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory  
  Agrega una categoría personalizada a la **comandos** cuadro combinado.  
   
 ```  
@@ -127,7 +122,7 @@ void AddCustomCategory(
 ### <a name="remarks"></a>Comentarios  
  Este método agrega una categoría denominada `lpszName` a la **comandos** cuadro combinado. Cuando el usuario selecciona la categoría, los comandos especifican en `lstIDS` aparecen en la lista de comandos.  
   
-##  <a name="a-namecmfcribboncustomizepropertypagea--cmfcribboncustomizepropertypagecmfcribboncustomizepropertypage"></a><a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
+##  <a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  Construye un objeto `CMFCRibbonCustomizePropertyPage`.  
   
 ```  
@@ -138,7 +133,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
  [in] `pRibbonBar`  
  Un puntero a un control de la cinta de opciones para que las opciones para personalizar.  
   
-##  <a name="a-nameonoka--cmfcribboncustomizepropertypageonok"></a><a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK  
+##  <a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK  
  Calleld por el sistema cuando un usuario hace clic en **Aceptar** en el **personalizar** cuadro de diálogo.  
   
 ```  

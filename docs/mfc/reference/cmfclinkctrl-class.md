@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCLinkCtrl
+- AFXLINKCTRL/CMFCLinkCtrl
+- AFXLINKCTRL/CMFCLinkCtrl::SetURL
+- AFXLINKCTRL/CMFCLinkCtrl::SetURLPrefix
+- AFXLINKCTRL/CMFCLinkCtrl::SizeToContent
+- AFXLINKCTRL/CMFCLinkCtrl::OnDrawFocusRect
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +94,7 @@ class CMFCLinkCtrl : public CMFCButton
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxlinkctrl.h  
   
-##  <a name="a-nameondrawfocusrecta--cmfclinkctrlondrawfocusrect"></a><a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect  
  Llamado por el marco de trabajo antes de que se dibuja el rectángulo de foco del botón.  
   
 ```  
@@ -108,7 +113,7 @@ virtual void OnDrawFocusRect(
 ### <a name="remarks"></a>Comentarios  
  Invalide este método si desea utilizar su propio código para dibujar el rectángulo de foco del botón.  
   
-##  <a name="a-nameseturla--cmfclinkctrlseturl"></a><a name="seturl"></a>CMFCLinkCtrl::SetURL  
+##  <a name="seturl"></a>CMFCLinkCtrl::SetURL  
  Muestra una dirección URL especificada como el texto del botón.  
   
 ```  
@@ -121,7 +126,7 @@ void SetURL(LPCTSTR lpszURL);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameseturlprefixa--cmfclinkctrlseturlprefix"></a><a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix  
+##  <a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix  
  Establece el protocolo implícito (por ejemplo, "http:") de la dirección URL.  
   
 ```  
@@ -135,7 +140,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para establecer el prefijo de dirección URL. El prefijo no aparece en la cara del botón, pero puede utilizar para buscar de destino la dirección de URL.  
   
-##  <a name="a-namesizetocontenta--cmfclinkctrlsizetocontent"></a><a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent  
+##  <a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent  
  Cambia el tamaño del botón para que contenga el texto del botón o el mapa de bits.  
   
 ```  

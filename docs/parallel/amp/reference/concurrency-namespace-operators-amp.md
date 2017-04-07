@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: 
+dev_langs:
+- C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
 caps.latest.revision: 9
 author: mikeblome
@@ -24,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|  
 |[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==   
+##  <a name="operator_eq_eq"></a>  operator==   
  Determina si los argumentos especificados son iguales.  
   
 ```  
@@ -50,7 +53,7 @@ bool operator== (
 ### <a name="return-value"></a>Valor devuelto  
  `true`Si las tuplas son iguales; de lo contrario, `false`.  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=   
+##  <a name="operator_neq"></a>  operator!=   
  Determina si los argumentos especificados no son iguales.  
   
 ```  
@@ -76,7 +79,7 @@ bool operator!= (
 ### <a name="return-value"></a>Valor devuelto  
  `true`Si las tuplas no son iguales; de lo contrario, `false`.  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a>  operator+   
+##  <a name="operator_add"></a>  operator+   
 
  Calcula la suma de todos los componentes de los argumentos especificados.  
   
@@ -121,7 +124,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="return-value"></a>Valor devuelto  
  La suma de todos los argumentos especificados.  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>  operator-   
+##  <a name="operator-"></a>  operator-   
 
  Calcula la diferencia de todos los componentes entre los argumentos especificados.  
   
@@ -166,7 +169,7 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="return-value"></a>Valor devuelto  
  La diferencia entre los argumentos especificados de todos.  
   
-##  <a name="a-nameoperatorstara--operator"></a><a name="operator_star"></a>  operator*   
+##  <a name="operator_star"></a>  operator*   
 
  Calcula el producto de todos los componentes de los argumentos especificados.  
   
@@ -203,7 +206,7 @@ _Tuple_type<_Rank>   operator*(
  El producto de todos los argumentos especificados.  
   
 
-##  <a name="a-nameoperatordiva--operator"></a><a name="operator_div"></a>  operator/   
+##  <a name="operator_div"></a>  operator/   
  Calcula el cociente de todos los componentes de los argumentos especificados.  
   
 ```  
@@ -238,7 +241,7 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="return-value"></a>Valor devuelto  
  El cociente de todos de los argumentos especificados.  
   
-##  <a name="a-nameoperatormoda--operator"></a><a name="operator_mod"></a>  operator%   
+##  <a name="operator_mod"></a>  operator%   
 
  Calcula el módulo del primer argumento especificado dividido por el segundo argumento especificado.  
   

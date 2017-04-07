@@ -24,6 +24,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novedades de Visual C++ de 2003 a 2015
@@ -44,7 +45,7 @@ En Visual C++ 2015 y versiones posteriores, las mejoras continuas en la conformi
   
 -   [Mejoras de conformidad en Update 3](#VS_Update3)  
   
-##  <a name="a-namevsrtma-conformance-improvements-in-visual-c-2015"></a><a name="VS_RTM"></a> Mejoras de conformidad en Visual C++ 2015  
+##  <a name="VS_RTM"></a> Mejoras de conformidad en Visual C++ 2015  
   
 -   /Zc:forScope- (opción)  
   
@@ -527,7 +528,7 @@ En Visual C++ 2015 y versiones posteriores, las mejoras continuas en la conformi
   
      Tanto en [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] como en [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)], el compilador genera un constructor de copias para una clase si esa clase tiene un constructor de movimiento definido por el usuario, pero ningún constructor de copias definido por el usuario. En Dev14, este constructor de copias generado implícitamente también se marca como "= delete".  
   
-##  <a name="a-namevsupdate1a-conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> Mejoras de conformidad en Update 1  
+##  <a name="VS_Update1"></a> Mejoras de conformidad en Update 1  
   
 -   **Clases base virtuales privadas y herencia indirecta**  
   
@@ -605,7 +606,7 @@ En Visual C++ 2015 y versiones posteriores, las mejoras continuas en la conformi
   
      Además, aunque el compilador no ofrece un diagnóstico específico, se considera que el operador en línea nuevo está mal formado.  
   
--   **Llamada a “operator *type*()” (conversión definida por el usuario) en tipos que no son de clase**  
+-   **Llamada a “operator*type*()” (conversión definida por el usuario) en tipos que no son de clase**  
   
      Las versiones anteriores del compilador permitieron que se llamara 'operator *type*()' en tipos que no son de clase mientras que se les ignora en modo silencioso. Este comportamiento anterior creó un riesgo de generación de código incorrecto silencioso, lo que produjo un comportamiento impredecible en tiempo de ejecución. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2228 en su lugar.  
   
@@ -1019,7 +1020,7 @@ En Visual C++ 2015 y versiones posteriores, las mejoras continuas en la conformi
     {   
         auto iter = std::find(v.begin(), v.end(), 5);   
     }   
-    catch(…)   
+    catch(...)   
     {   
         do_something();  // ok   
     }  
@@ -1032,13 +1033,13 @@ En Visual C++ 2015 y versiones posteriores, las mejoras continuas en la conformi
     {   
         auto iter = std::find(v.begin(), v.end(), 5);   
     }   
-    catch(…)   
+    catch(...)   
     {   
         do_something();  // warning C4702: unreachable code  
     }  
     ```  
   
-##  <a name="a-namevsupdate2a-conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> Mejoras de conformidad en Update 2  
+##  <a name="VS_Update2"></a> Mejoras de conformidad en Update 2  
   
 -   **Puede que se generen errores y advertencias adicionales como resultado de la compatibilidad parcial con la expresión SFINAE**  
   
@@ -1303,7 +1304,7 @@ En Visual C++ 2015 y versiones posteriores, las mejoras continuas en la conformi
   
      Corregir el código escrito de este modo puede requerir el traslado de las definiciones de operador fuera de un archivo de encabezado y al archivo de origen correspondiente.  
   
-##  <a name="a-namevsupdate3a-conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> Mejoras de conformidad en Update 3  
+##  <a name="VS_Update3"></a> Mejoras de conformidad en Update 3  
   
 -   **std::is_convertable ahora detecta la asignación automática** (biblioteca estándar)  
   
@@ -1379,7 +1380,7 @@ En Visual C++ 2015 y versiones posteriores, las mejoras continuas en la conformi
     }  
     ```  
   
--   **Compatibilidad en desuso con código ATL con atributos ** (nivel 1 (/W1), activo de manera predeterminada)  
+-   **Compatibilidad en desuso con código ATL con atributos** (nivel 1 (/W1), activo de manera predeterminada)  
   
      Las versiones anteriores del compilador admitían código ATL con atributos. Como parte de la fase siguiente para quitar la compatibilidad con código ATL con atributos que [comenzó en Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), el código ATL con atributos está en desuso. Ahora, el compilador emite la advertencia del compilador C4467 para ayudarle a identificar este tipo de código en desuso.  
   
@@ -1542,8 +1543,3 @@ En Visual C++ 2015 y versiones posteriores, las mejoras continuas en la conformi
     cl /c /Wall /Ycc.h -I.. X.cpp  
     cl /c /Wall /Yuc.h -I.. Z.cpp  
     ```
-
-
-<!--HONumber=Feb17_HO4-->
-
-

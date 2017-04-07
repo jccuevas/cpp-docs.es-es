@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHtmlEditCtrl
+- AFXHTML/CHtmlEditCtrl
+- AFXHTML/CHtmlEditCtrl::CHtmlEditCtrl
+- AFXHTML/CHtmlEditCtrl::Create
+- AFXHTML/CHtmlEditCtrl::GetDHtmlDocument
+- AFXHTML/CHtmlEditCtrl::GetStartDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,14 +87,14 @@ class CHtmlEditCtrl: public CWnd,
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxhtml.h  
   
-##  <a name="a-namechtmleditctrla--chtmleditctrlchtmleditctrl"></a><a name="chtmleditctrl"></a>CHtmlEditCtrl::CHtmlEditCtrl  
+##  <a name="chtmleditctrl"></a>CHtmlEditCtrl::CHtmlEditCtrl  
  Construye un objeto `CHtmlEditCtrl`.  
   
 ```  
 CHtmlEditCtrl();
 ```  
   
-##  <a name="a-namecreatea--chtmleditctrlcreate"></a><a name="create"></a>CHtmlEditCtrl::Create  
+##  <a name="create"></a>CHtmlEditCtrl::Create  
  Crea un control WebBrowser ActiveX y lo adjunta a la `CHtmlEditCtrl` objeto. WebBrowser ActiveX control navega automáticamente a un documento predeterminado y, a continuación, se coloca en modo de edición por esta función.  
   
 ```  
@@ -124,7 +129,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve **TRUE** correctamente, **FALSE** en caso de error.  
   
-##  <a name="a-namegetdhtmldocumenta--chtmleditctrlgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtmlEditCtrl::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>CHtmlEditCtrl::GetDHtmlDocument  
  Recupera el [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfaz en el documento cargado actualmente en el control WebBrowser independiente  
   
 ```  
@@ -135,7 +140,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  `ppDocument`  
  La interfaz de documento.  
   
-##  <a name="a-namegetstartdocumenta--chtmleditctrlgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditCtrl::GetStartDocument  
+##  <a name="getstartdocument"></a>CHtmlEditCtrl::GetStartDocument  
  Recupera la dirección URL a un documento predeterminado para cargar en el control WebBrowser independiente.  
   
 ```  

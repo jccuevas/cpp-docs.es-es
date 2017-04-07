@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBitmapButton
+- AFXEXT/CBitmapButton
+- AFXEXT/CBitmapButton::CBitmapButton
+- AFXEXT/CBitmapButton::AutoLoad
+- AFXEXT/CBitmapButton::LoadBitmaps
+- AFXEXT/CBitmapButton::SizeToContent
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -128,7 +133,7 @@ class CBitmapButton : public CButton
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxext.h  
   
-##  <a name="a-nameautoloada--cbitmapbuttonautoload"></a><a name="autoload"></a>CBitmapButton:: Autoload  
+##  <a name="autoload"></a>CBitmapButton:: Autoload  
  Asocia un botón en un cuadro de diálogo con un objeto de la `CBitmapButton` (clase), carga el bitmap(s) por nombre y cambia el tamaño del botón para ajustar el mapa de bits.  
   
 ```  
@@ -153,7 +158,7 @@ BOOL AutoLoad(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCControlLadenDialog&#75;](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
-##  <a name="a-namecbitmapbuttona--cbitmapbuttoncbitmapbutton"></a><a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
+##  <a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
  Crea un objeto `CBitmapButton`.  
   
 ```  
@@ -166,7 +171,7 @@ CBitmapButton();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCControlLadenDialog&#57;](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
-##  <a name="a-nameloadbitmapsa--cbitmapbuttonloadbitmaps"></a><a name="loadbitmaps"></a>CBitmapButton:: LoadBitmaps  
+##  <a name="loadbitmaps"></a>CBitmapButton:: LoadBitmaps  
  Utilice esta función cuando desee cargar imágenes de mapa de bits que se identifican por sus nombres de recursos o los números de identificación, o cuando no se puede utilizar la `AutoLoad` de funcionar porque, por ejemplo, va a crear un botón de mapa de bits que no forma parte de un cuadro de diálogo.  
   
 ```  
@@ -215,7 +220,7 @@ BOOL LoadBitmaps(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCControlLadenDialog&#58;](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
-##  <a name="a-namesizetocontenta--cbitmapbuttonsizetocontent"></a><a name="sizetocontent"></a>CBitmapButton::SizeToContent  
+##  <a name="sizetocontent"></a>CBitmapButton::SizeToContent  
  Llame a esta función para cambiar el tamaño de un botón de mapa de bits para el tamaño del mapa de bits.  
   
 ```  

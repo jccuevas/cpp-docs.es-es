@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleCmdUI
+- AFXDOCOBJ/COleCmdUI
+- AFXDOCOBJ/COleCmdUI::COleCmdUI
+- AFXDOCOBJ/COleCmdUI::Enable
+- AFXDOCOBJ/COleCmdUI::SetCheck
+- AFXDOCOBJ/COleCmdUI::SetText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class COleCmdUI : public CCmdUI
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdocobj.h  
   
-##  <a name="a-namecolecmduia--colecmduicolecmdui"></a><a name="colecmdui"></a>COleCmdUI::COleCmdUI  
+##  <a name="colecmdui"></a>COleCmdUI::COleCmdUI  
  Construye un `COleCmdUI` objeto asociado a un comando de la interfaz de usuario concreta.  
   
 ```  
@@ -107,7 +112,7 @@ COleCmdUI(
 ### <a name="remarks"></a>Comentarios  
  La `COleCmdUI` objeto proporciona una interfaz de programación para actualizar objetos de interfaz de usuario de DocObject como elementos de menú o botones de barra de control. Los objetos de interfaz de usuario se pueden habilitados, deshabilitados, activados o desactivados a través de la `COleCmdUI` objeto.  
   
-##  <a name="a-nameenablea--colecmduienable"></a><a name="enable"></a>COleCmdUI::Enable  
+##  <a name="enable"></a>COleCmdUI::Enable  
  Llame a esta función para establecer el indicador de comando de la `COleCmdUI` objeto **OLECOMDF_ENABLED**, que indica la interfaz con el comando está disponible y habilitada, o para borrar el indicador de comando.  
   
 ```  
@@ -118,7 +123,7 @@ virtual void Enable(BOOL bOn);
  `bOn`  
  Indica si el comando asociado con el `COleCmdUI` objeto debe estar habilitado o deshabilitado. NonZero habilita el comando; 0 deshabilita el comando.  
   
-##  <a name="a-namesetchecka--colecmduisetcheck"></a><a name="setcheck"></a>COleCmdUI::SetCheck  
+##  <a name="setcheck"></a>COleCmdUI::SetCheck  
  Llame a esta función para establecer el estado de un botón de alternancia o desactivar comando.  
   
 ```  
@@ -135,7 +140,7 @@ virtual void SetCheck(int nCheck);
 |**2**|Establece el comando para indeterminado; no se puede determinar el estado porque el atributo de este comando está en y fuera de los Estados de la selección correspondiente.|  
 |cualquier otro valor|Establece el comando en off.|  
   
-##  <a name="a-namesettexta--colecmduisettext"></a><a name="settext"></a>COleCmdUI::SetText  
+##  <a name="settext"></a>COleCmdUI::SetText  
  Llame a esta función para devolver una cadena de texto de nombre o el estado de un comando.  
   
 ```  

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::context_unblock_unbalanced
+- context_unblock_unbalanced
+- CONCRT/concurrency::context_unblock_unbalanced
+- CONCRT/concurrency::context_unblock_unbalanced::context_unblock_unbalanced
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7341ff5d10b7f7752c49f18ea9b810824e347b1c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 21c26658e347fa35209677e15ddcb48bbe8d1235
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced (Clase)
@@ -54,7 +56,7 @@ class context_unblock_unbalanced : public std::exception;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[context_unblock_unbalanced (Constructor)](#ctor)|Sobrecargado. Construye un objeto `context_unblock_unbalanced`.|  
+|[context_unblock_unbalanced](#ctor)|Sobrecargado. Construye un objeto `context_unblock_unbalanced`.|  
   
 ## <a name="remarks"></a>Comentarios  
  Las llamadas a la `Block` y `Unblock` métodos de un `Context` objeto siempre se debe emparejar correctamente. El Runtime de simultaneidad permite las operaciones que se realicen en cualquier orden. Por ejemplo, una llamada a `Block` puede ir seguida de una llamada a `Unblock`, o viceversa. Esta excepción se produce si, por ejemplo, dos llamadas a la `Unblock` método realizados en una fila en un `Context` objeto que no estaba bloqueado.  
@@ -69,7 +71,7 @@ class context_unblock_unbalanced : public std::exception;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-namectora-contextunblockunbalanced"></a><a name="ctor"></a>context_unblock_unbalanced 
+##  <a name="ctor"></a>context_unblock_unbalanced 
 
  Construye un objeto `context_unblock_unbalanced`.  
   
@@ -85,5 +87,5 @@ context_unblock_unbalanced() throw();
  Mensaje descriptivo del error.  
   
 ## <a name="see-also"></a>Vea también  
- [simultaneidad Namespace](concurrency-namespace.md)
+ [concurrency (espacio de nombres)](concurrency-namespace.md)
 

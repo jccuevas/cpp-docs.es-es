@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocObjectServer
+- AFXDOCOB/CDocObjectServer
+- AFXDOCOB/CDocObjectServer::CDocObjectServer
+- AFXDOCOB/CDocObjectServer::ActivateDocObject
+- AFXDOCOB/CDocObjectServer::OnActivateView
+- AFXDOCOB/CDocObjectServer::OnApplyViewState
+- AFXDOCOB/CDocObjectServer::OnSaveViewState
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +104,7 @@ class CDocObjectServer : public CCmdTarget
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdocob.h  
   
-##  <a name="a-nameactivatedocobjecta--cdocobjectserveractivatedocobject"></a><a name="activatedocobject"></a>CDocObjectServer::ActivateDocObject  
+##  <a name="activatedocobject"></a>CDocObjectServer::ActivateDocObject  
  Llame a esta función para activar el servidor de objetos de documento (pero no mostrar).  
   
 ```  
@@ -110,7 +116,7 @@ void ActivateDocObject();
   
  Juntos, `ActivateDocObject` y `OnActivateView` activar y mostrar la vista DocObject. Activación de DocObject difiere de otros tipos de activación en contexto OLE. Activación de DocObject hace que no aparezcan bordes de trama en contexto y elementos gráficos de objeto (por ejemplo, controladores de tamaño), omite las funciones de extensión de objeto y dibuja las barras de desplazamiento dentro del rectángulo de la vista en lugar de dibujar a ellos fuera del rectángulo (como en la activación en contexto normal).  
   
-##  <a name="a-namecdocobjectservera--cdocobjectservercdocobjectserver"></a><a name="cdocobjectserver"></a>CDocObjectServer::CDocObjectServer  
+##  <a name="cdocobjectserver"></a>CDocObjectServer::CDocObjectServer  
  Construye e inicializa un objeto `CDocObjectServer`.  
   
 ```  
@@ -129,7 +135,7 @@ explicit CDocObjectServer(
 ### <a name="remarks"></a>Comentarios  
  Cuando DocObject está activa, el cliente de sitio OLE (interfaz) ( `IOleDocumentSite`) es lo que permite que el servidor DocObject para comunicarse con su cliente (el contenedor). Cuando se activa un servidor DocObject, primero comprueba que el contenedor implementa el `IOleDocumentSite` interfaz. Si es así, [COleServerDoc::GetDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver) se llama para ver si el contenedor admite DocObjects. De forma predeterminada, `GetDocObjectServer` devuelve **NULL**. Debe invalidar `COleServerDoc::GetDocObjectServer` para crear un nuevo `CDocObjectServer` objeto o un objeto derivado de los suyos propios con punteros a la `COleServerDoc` contenedor y su `IOleDocumentSite` interfaz como argumentos del constructor.  
   
-##  <a name="a-nameonactivateviewa--cdocobjectserveronactivateview"></a><a name="onactivateview"></a>CDocObjectServer::OnActivateView  
+##  <a name="onactivateview"></a>CDocObjectServer::OnActivateView  
  Llame a esta función para mostrar la vista DocObject.  
   
 ```  
@@ -142,7 +148,7 @@ virtual HRESULT OnActivateView();
 ### <a name="remarks"></a>Comentarios  
  Esta función crea una ventana de marco en contexto, dibuja las barras de desplazamiento dentro de la vista, configura los menús el servidor comparte con su contenedor, agrega controles de marco, Establece el objeto activo, y finalmente muestra la ventana de marco en contexto y establece el foco.  
   
-##  <a name="a-nameonapplyviewstatea--cdocobjectserveronapplyviewstate"></a><a name="onapplyviewstate"></a>CDocObjectServer::OnApplyViewState  
+##  <a name="onapplyviewstate"></a>CDocObjectServer::OnApplyViewState  
  Reemplazar esta función para restaurar el estado de la vista DocObject.  
   
 ```  
@@ -158,7 +164,7 @@ virtual void OnApplyViewState(CArchive& ar);
   
  Puede usar `OnSaveViewState` para almacenar información persistente específica al estado de la vista. Si reemplaza `OnSaveViewState` para almacenar información, desea invalidar `OnApplyViewState` para leer esa información y aplicarlo a la vista cuando recién se activa.  
   
-##  <a name="a-nameonsaveviewstatea--cdocobjectserveronsaveviewstate"></a><a name="onsaveviewstate"></a>CDocObjectServer::OnSaveViewState  
+##  <a name="onsaveviewstate"></a>CDocObjectServer::OnSaveViewState  
  Reemplazar esta función para guardar información de estado adicionales sobre la vista DocObject.  
   
 ```  

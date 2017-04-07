@@ -9,11 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComPtrBase
-- ATL::CComPtrBase<T>
-- ATL.CComPtrBase<T>
-- ATL::CComPtrBase
 - CComPtrBase
+- ATLCOMCLI/ATL::CComPtrBase
+- ATLCOMCLI/ATL::CComPtrBase::Advise
+- ATLCOMCLI/ATL::CComPtrBase::Attach
+- ATLCOMCLI/ATL::CComPtrBase::CoCreateInstance
+- ATLCOMCLI/ATL::CComPtrBase::CopyTo
+- ATLCOMCLI/ATL::CComPtrBase::Detach
+- ATLCOMCLI/ATL::CComPtrBase::IsEqualObject
+- ATLCOMCLI/ATL::CComPtrBase::QueryInterface
+- ATLCOMCLI/ATL::CComPtrBase::Release
+- ATLCOMCLI/ATL::CComPtrBase::SetSite
+- ATLCOMCLI/ATL::CComPtrBase::p
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,7 +110,7 @@ class CComPtrBase
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcomcli.h  
   
-##  <a name="a-nameadvisea--ccomptrbaseadvise"></a><a name="advise"></a>¡CComPtrBase:: Advise  
+##  <a name="advise"></a>¡CComPtrBase:: Advise  
  Llamar a este método para crear una conexión entre el `CComPtrBase`del punto de conexión y el receptor de un cliente.  
   
 ```
@@ -129,7 +136,7 @@ HRESULT Advise(
 ### <a name="remarks"></a>Comentarios  
  Consulte [AtlAdvise](http://msdn.microsoft.com/library/625a2f03-6b7f-4761-be5d-d2871d1d3254) para obtener más información.  
   
-##  <a name="a-nameattacha--ccomptrbaseattach"></a><a name="attach"></a>CComPtrBase::Attach  
+##  <a name="attach"></a>CComPtrBase::Attach  
  Llamar a este método para tomar posesión de un puntero existente.  
   
 ```
@@ -143,7 +150,7 @@ void Attach(T* p2) throw();
 ### <a name="remarks"></a>Comentarios  
  **Adjuntar** llamadas [CComPtrBase::Release](#release) en existente [CComPtrBase::p](#p) variable miembro y, a continuación, asigna `p2` a `CComPtrBase::p`. Cuando un `CComPtrBase` objeto toma posesión de un puntero, llama automáticamente a `Release` en el puntero que se eliminará el puntero y los datos asignados si el recuento de referencias en el objeto que se va a 0.  
   
-##  <a name="a-namedtora--ccomptrbaseccomptrbase"></a><a name="dtor"></a>CComPtrBase:: ~ CComPtrBase  
+##  <a name="dtor"></a>CComPtrBase:: ~ CComPtrBase  
  Destructor.  
   
 ```
@@ -153,7 +160,7 @@ void Attach(T* p2) throw();
 ### <a name="remarks"></a>Comentarios  
  Libera la interfaz señalada por `CComPtrBase`.  
   
-##  <a name="a-namecocreateinstancea--ccomptrbasecocreateinstance"></a><a name="cocreateinstance"></a>CComPtrBase:: CoCreateInstance  
+##  <a name="cocreateinstance"></a>CComPtrBase:: CoCreateInstance  
  Llamar a este método para crear un objeto de la clase asociada con un Id. de clase especificado o el Id. de programa  
   
 ```
@@ -189,7 +196,7 @@ HRESULT CoCreateInstance(
   
  En compilaciones de depuración, se producirá un error de aserción si [CComPtrBase::p](#p) no es igual a NULL.  
   
-##  <a name="a-namecopytoa--ccomptrbasecopyto"></a><a name="copyto"></a>CComPtrBase::CopyTo  
+##  <a name="copyto"></a>CComPtrBase::CopyTo  
  Llamar a este método para copiar el `CComPtrBase` puntero a otra variable de puntero.  
   
 ```
@@ -208,7 +215,7 @@ HRESULT CopyTo(T** ppT) throw();
   
  Un error HRESULT que se devolverá si *ppT* es igual a NULL. En compilaciones de depuración, se producirá un error de aserción si *ppT* es igual a NULL.  
   
-##  <a name="a-namedetacha--ccomptrbasedetach"></a><a name="detach"></a>CComPtrBase::Detach  
+##  <a name="detach"></a>CComPtrBase::Detach  
  Llamar a este método para liberar la propiedad de un puntero.  
   
 ```
@@ -221,7 +228,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>Comentarios  
  Libera la posesión de un puntero, se establece la [CComPtrBase::p](#p) variable de miembro de datos en NULL y devuelve una copia del puntero.  
   
-##  <a name="a-nameisequalobjecta--ccomptrbaseisequalobject"></a><a name="isequalobject"></a>CComPtrBase::IsEqualObject  
+##  <a name="isequalobject"></a>CComPtrBase::IsEqualObject  
  Llamar a este método para comprobar si especificado **IUnknown** señala al mismo objeto asociado a la `CComPtrBase` objeto.  
   
 ```
@@ -235,7 +242,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve true si los objetos son idénticos.  
   
-##  <a name="a-nameoperatornota--ccomptrbaseoperator-"></a><a name="operator_not"></a>¡CComPtrBase::operator!  
+##  <a name="operator_not"></a>¡CComPtrBase::operator!  
  El operador NOT.  
   
 ```
@@ -245,7 +252,7 @@ bool operator!() const throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve true si el `CComHeapPtr` puntero es igual a NULL, false en caso contrario.  
   
-##  <a name="a-nameoperatorampa--ccomptrbaseoperator-amp"></a><a name="operator_amp"></a>CComPtrBase::operator&amp;  
+##  <a name="operator_amp"></a>CComPtrBase::operator&amp;  
  El aspecto de operador.  
   
 ```
@@ -255,7 +262,7 @@ T** operator&() throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la dirección del objeto indicado por la `CComPtrBase` objeto.  
   
-##  <a name="a-nameoperatorstara--ccomptrbaseoperator-"></a><a name="operator_star"></a>CComPtrBase::operator *  
+##  <a name="operator_star"></a>CComPtrBase::operator *  
  El * (operador).  
   
 ```
@@ -267,7 +274,7 @@ T& operator*() const throw();
   
  Si las versiones de depuración, se producirá un error de aserción si [CComPtrBase::p](#p) no es igual a NULL.  
   
-##  <a name="a-nameoperatoreqeqa--ccomptrbaseoperator-"></a><a name="operator_eq_eq"></a>CComPtrBase::operator ==  
+##  <a name="operator_eq_eq"></a>CComPtrBase::operator ==  
  El operador de igualdad.  
   
 ```
@@ -281,7 +288,7 @@ bool operator== (T* pT) const throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve true si `CComPtrBase` y *pT* indican el mismo objeto, false en caso contrario.  
   
-##  <a name="a-nameoperatorptra--ccomptrbaseoperator--gt"></a><a name="operator_ptr"></a>CComPtrBase::operator-&gt;  
+##  <a name="operator_ptr"></a>CComPtrBase::operator-&gt;  
 
  El operador de puntero a miembro.  
   
@@ -295,7 +302,7 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 ### <a name="remarks"></a>Comentarios  
  Utilice este operador para llamar a un método en una clase que apunta la `CComPtrBase` objeto. En compilaciones de depuración, se producirá un error de aserción si el `CComPtrBase` miembro de datos señala a NULL.  
   
-##  <a name="a-nameoperatorlta--ccomptrbaseoperator-lt"></a><a name="operator_lt"></a>CComPtrBase::operator&lt;  
+##  <a name="operator_lt"></a>CComPtrBase::operator&lt;  
  El menor-que el operador.  
   
 ```
@@ -309,7 +316,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve true si el puntero administrado por el objeto actual es menor que el puntero a la que se está comparando.  
   
-##  <a name="a-nameoperatortstara--ccomptrbaseoperator-t"></a><a name="operator_t_star"></a>CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>CComPtrBase::operator T *  
  El operador de conversión.  
   
 ```  
@@ -319,7 +326,7 @@ operator T*() const throw();
 ### <a name="remarks"></a>Comentarios  
  Devuelve un puntero al tipo de datos de objeto definido en la plantilla de clase.  
   
-##  <a name="a-namepa--ccomptrbasep"></a><a name="p"></a>CComPtrBase::p  
+##  <a name="p"></a>CComPtrBase::p  
  La variable de miembro de datos de puntero.  
   
 ```
@@ -329,7 +336,7 @@ T* p;
 ### <a name="remarks"></a>Comentarios  
  Esta variable miembro contiene la información de puntero.  
   
-##  <a name="a-namequeryinterfacea--ccomptrbasequeryinterface"></a><a name="queryinterface"></a>CComPtrBase::QueryInterface  
+##  <a name="queryinterface"></a>CComPtrBase::QueryInterface  
  Llame a este método para devolver un puntero a una interfaz especificada.  
   
 ```
@@ -352,7 +359,7 @@ template <class Q> HRESULT QueryInterface(Q
   
  En compilaciones de depuración, se producirá un error de aserción si *pp* no es igual a NULL.  
   
-##  <a name="a-namereleasea--ccomptrbaserelease"></a><a name="release"></a>CComPtrBase::Release  
+##  <a name="release"></a>CComPtrBase::Release  
  Llame a este método para liberar la interfaz.  
   
 ```
@@ -362,7 +369,7 @@ void Release() throw();
 ### <a name="remarks"></a>Comentarios  
  La interfaz se libera, y [CComPtrBase::p](#p) se establece en NULL.  
   
-##  <a name="a-namesetsitea--ccomptrbasesetsite"></a><a name="setsite"></a>CComPtrBase::SetSite  
+##  <a name="setsite"></a>CComPtrBase::SetSite  
  Llamar a este método para establecer el sitio de la `CComPtrBase` objeto a la **IUnknown** del objeto primario.  
   
 ```

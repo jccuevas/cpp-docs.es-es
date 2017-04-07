@@ -10,6 +10,35 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBaseTabbedPane
+- AFXBASETABBEDPANE/CBaseTabbedPane
+- AFXBASETABBEDPANE/CBaseTabbedPane::AddTab
+- AFXBASETABBEDPANE/CBaseTabbedPane::AllowDestroyEmptyTabbedPane
+- AFXBASETABBEDPANE/CBaseTabbedPane::ApplyRestoredTabInfo
+- AFXBASETABBEDPANE/CBaseTabbedPane::CanFloat
+- AFXBASETABBEDPANE/CBaseTabbedPane::CanSetCaptionTextToTabName
+- AFXBASETABBEDPANE/CBaseTabbedPane::ConvertToTabbedDocument
+- AFXBASETABBEDPANE/CBaseTabbedPane::DetachPane
+- AFXBASETABBEDPANE/CBaseTabbedPane::EnableSetCaptionTextToTabName
+- AFXBASETABBEDPANE/CBaseTabbedPane::FillDefaultTabsOrderArray
+- AFXBASETABBEDPANE/CBaseTabbedPane::FindBarByTabNumber
+- AFXBASETABBEDPANE/CBaseTabbedPane::FindPaneByID
+- AFXBASETABBEDPANE/CBaseTabbedPane::FloatTab
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetDefaultTabsOrder
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetFirstVisibleTab
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetMinSize
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetPaneIcon
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetPaneList
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetTabArea
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetTabsNum
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetUnderlyingWindow
+- AFXBASETABBEDPANE/CBaseTabbedPane::GetVisibleTabsNum
+- AFXBASETABBEDPANE/CBaseTabbedPane::HasAutoHideMode
+- AFXBASETABBEDPANE/CBaseTabbedPane::IsHideSingleTab
+- AFXBASETABBEDPANE/CBaseTabbedPane::RecalcLayout
+- AFXBASETABBEDPANE/CBaseTabbedPane::RemovePane
+- AFXBASETABBEDPANE/CBaseTabbedPane::SetAutoDestroy
+- AFXBASETABBEDPANE/CBaseTabbedPane::SetAutoHideMode
+- AFXBASETABBEDPANE/CBaseTabbedPane::ShowTab
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +151,7 @@ class CBaseTabbedPane : public CDockablePane
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxBaseTabbedPane.h  
   
-##  <a name="a-nameaddtaba--cbasetabbedpaneaddtab"></a><a name="addtab"></a>CBaseTabbedPane::AddTab  
+##  <a name="addtab"></a>CBaseTabbedPane::AddTab  
  Agrega una nueva pestaña a un panel con fichas.  
   
 ```  
@@ -152,7 +181,7 @@ virtual BOOL AddTab(
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para agregar un panel como una nueva pestaña en un panel con fichas. Si `pNewBar` apunta a un objeto de tipo `CBaseTabbedPane`, se copian todas sus fichas en el panel con fichas y, a continuación, `pNewBar` se destruye. Por lo tanto, `pNewBar` se convierte en un puntero no válido y no debe usarse.  
   
-##  <a name="a-nameallowdestroyemptytabbedpanea--cbasetabbedpaneallowdestroyemptytabbedpane"></a><a name="allowdestroyemptytabbedpane"></a>CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
+##  <a name="allowdestroyemptytabbedpane"></a>CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
  Especifica si se puede destruir un panel con fichas vacío.  
   
 ```  
@@ -165,7 +194,7 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 ### <a name="remarks"></a>Comentarios  
  Si no se permite que un panel con fichas vacío se destruye, el marco de trabajo oculta el panel en su lugar.  
   
-##  <a name="a-nameapplyrestoredtabinfoa--cbasetabbedpaneapplyrestoredtabinfo"></a><a name="applyrestoredtabinfo"></a>CBaseTabbedPane::ApplyRestoredTabInfo  
+##  <a name="applyrestoredtabinfo"></a>CBaseTabbedPane::ApplyRestoredTabInfo  
  Carga la configuración de la ficha del registro y los aplica a un panel con fichas.  
   
 ```  
@@ -179,7 +208,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a este método cuando se vuelva a cargar la información de estado de acoplamiento del registro. El método obtiene información sobre el orden de tabulación y los nombres de ficha de un panel con fichas.  
   
-##  <a name="a-namecanfloata--cbasetabbedpanecanfloat"></a><a name="canfloat"></a>CBaseTabbedPane::CanFloat  
+##  <a name="canfloat"></a>CBaseTabbedPane::CanFloat  
  Especifica si puede flotar el panel con fichas.  
   
 ```  
@@ -189,7 +218,7 @@ virtual BOOL CanFloat() const;
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE`Si el panel puede flotar; de lo contrario, `FALSE`.  
   
-##  <a name="a-namecansetcaptiontexttotabnamea--cbasetabbedpanecansetcaptiontexttotabname"></a><a name="cansetcaptiontexttotabname"></a>CBaseTabbedPane::CanSetCaptionTextToTabName  
+##  <a name="cansetcaptiontexttotabname"></a>CBaseTabbedPane::CanSetCaptionTextToTabName  
  Determina si el título para el panel con fichas debe mostrar el mismo texto como la ficha activa.  
   
 ```  
@@ -202,7 +231,7 @@ virtual BOOL CanSetCaptionTextToTabName() const;
 ### <a name="remarks"></a>Comentarios  
  El método se utiliza para determinar si el texto muestra en los duplicados de título del panel con fichas la etiqueta de la ficha activa. Puede habilitar o deshabilitar esta funcionalidad mediante una llamada a [CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname).  
   
-##  <a name="a-nameconverttotabbeddocumenta--cbasetabbedpaneconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CBaseTabbedPane::ConvertToTabbedDocument  
+##  <a name="converttotabbeddocument"></a>CBaseTabbedPane::ConvertToTabbedDocument  
  Convierte uno o más paneles acoplables en documentos con fichas de MDI.  
   
 ```  
@@ -213,7 +242,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
  [in] `bActiveTabOnly`  
  Al convertir un panel con fichas, especifique `TRUE` para convertir sólo la pestaña activa. Especificar `FALSE` para convertir todas las fichas en el panel.  
   
-##  <a name="a-namedetachpanea--cbasetabbedpanedetachpane"></a><a name="detachpane"></a>CBaseTabbedPane::DetachPane  
+##  <a name="detachpane"></a>CBaseTabbedPane::DetachPane  
  Desasocia un panel desde el panel con fichas.  
   
 ```  
@@ -235,7 +264,7 @@ virtual BOOL DetachPane(
 ### <a name="remarks"></a>Comentarios  
  El marco de flota el panel separado si es posible. Para obtener más información, consulte [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).  
   
-##  <a name="a-nameenablesetcaptiontexttotabnamea--cbasetabbedpaneenablesetcaptiontexttotabname"></a><a name="enablesetcaptiontexttotabname"></a>CBaseTabbedPane::EnableSetCaptionTextToTabName  
+##  <a name="enablesetcaptiontexttotabname"></a>CBaseTabbedPane::EnableSetCaptionTextToTabName  
  Habilita o deshabilita la capacidad del panel con fichas para sincronizar el texto de título con el texto de etiqueta en la ficha activa.  
   
 ```  
@@ -246,7 +275,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
  [in] `bEnable`  
  `TRUE`para sincronizar el título del panel con fichas con el título de la pestaña activa; de lo contrario, `FALSE`.  
   
-##  <a name="a-namefilldefaulttabsorderarraya--cbasetabbedpanefilldefaulttabsorderarray"></a><a name="filldefaulttabsorderarray"></a>CBaseTabbedPane::FillDefaultTabsOrderArray  
+##  <a name="filldefaulttabsorderarray"></a>CBaseTabbedPane::FillDefaultTabsOrderArray  
  Restaura el orden de tabulación interno a un estado predeterminado.  
   
 ```  
@@ -256,7 +285,7 @@ void FillDefaultTabsOrderArray();
 ### <a name="remarks"></a>Comentarios  
  Este método se llama cuando el marco de trabajo restaura una barra de Outlook en un estado inicial.  
   
-##  <a name="a-namefindpanebyida--cbasetabbedpanefindpanebyid"></a><a name="findpanebyid"></a>CBaseTabbedPane::FindPaneByID  
+##  <a name="findpanebyid"></a>CBaseTabbedPane::FindPaneByID  
  Devuelve un panel identificado por el identificador del panel.  
   
 ```  
@@ -273,7 +302,7 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 ### <a name="remarks"></a>Comentarios  
  Este método compara todas las fichas en el panel y devuelve el marcado con el identificador especificado por el `uBarID` parámetro.  
   
-##  <a name="a-namefindbarbytabnumbera--cbasetabbedpanefindbarbytabnumber"></a><a name="findbarbytabnumber"></a>CBaseTabbedPane::FindBarByTabNumber  
+##  <a name="findbarbytabnumber"></a>CBaseTabbedPane::FindBarByTabNumber  
  Devuelve un panel que se encuentra en una ficha.  
   
 ```  
@@ -295,7 +324,7 @@ virtual CWnd* FindBarByTabNumber(
 ### <a name="remarks"></a>Comentarios  
  Llamar a este método para recuperar el panel que se encuentran en la ficha especificada por el `nTabNum` parámetro.  
   
-##  <a name="a-namefloattaba--cbasetabbedpanefloattab"></a><a name="floattab"></a>CBaseTabbedPane::FloatTab  
+##  <a name="floattab"></a>CBaseTabbedPane::FloatTab  
  Convierte un panel en flotante, pero solo si el panel se encuentra actualmente en una pestaña desmontable.  
   
 ```  
@@ -327,7 +356,7 @@ virtual BOOL FloatTab(
   
  Si desea desasociar un panel mediante programación, especifique `DM_SHOW` para el `dockMethod` parámetro. Si desea que el panel en la misma posición que flota previamente flotante, especifique `DM_DBL_CLICK` como el `dockMethod` parámetro.  
   
-##  <a name="a-namegetdefaulttabsordera--cbasetabbedpanegetdefaulttabsorder"></a><a name="getdefaulttabsorder"></a>CBaseTabbedPane::GetDefaultTabsOrder  
+##  <a name="getdefaulttabsorder"></a>CBaseTabbedPane::GetDefaultTabsOrder  
  Devuelve el orden predeterminado de las fichas en el panel.  
   
 ```  
@@ -340,7 +369,7 @@ const CArray<int,int>& GetDefaultTabsOrder();
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a este método cuando una barra de Outlook se restablece a un estado inicial.  
   
-##  <a name="a-namegetfirstvisibletaba--cbasetabbedpanegetfirstvisibletab"></a><a name="getfirstvisibletab"></a>CBaseTabbedPane::GetFirstVisibleTab  
+##  <a name="getfirstvisibletab"></a>CBaseTabbedPane::GetFirstVisibleTab  
  Recupera un puntero a la primera ficha mostrada.  
   
 ```  
@@ -354,7 +383,7 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ### <a name="return-value"></a>Valor devuelto  
  Si se realiza correctamente, un puntero a la primera ficha mostrada; de lo contrario, `NULL`.  
   
-##  <a name="a-namegetminsizea--cbasetabbedpanegetminsize"></a><a name="getminsize"></a>CBaseTabbedPane::GetMinSize  
+##  <a name="getminsize"></a>CBaseTabbedPane::GetMinSize  
  Recupera el mínimo tamaño permitido para el panel.  
   
 ```  
@@ -368,7 +397,7 @@ virtual void GetMinSize(CSize& size) const;
 ### <a name="remarks"></a>Comentarios  
  Si está activo el tratamiento coherente de tamaño mínimo del panel ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` se rellena con el mínimo tamaño permitido para la ficha activa. De lo contrario, `size` se rellena con el valor devuelto de [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
   
-##  <a name="a-namegetpaneicona--cbasetabbedpanegetpaneicon"></a><a name="getpaneicon"></a>CBaseTabbedPane::GetPaneIcon  
+##  <a name="getpaneicon"></a>CBaseTabbedPane::GetPaneIcon  
  Recupera el mínimo tamaño permitido para el panel.  
   
 ```  
@@ -382,7 +411,7 @@ virtual void GetMinSize(CSize& size) const;
 ### <a name="remarks"></a>Comentarios  
  Si está activo el tratamiento coherente de tamaño mínimo del panel ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` se rellena con el mínimo tamaño permitido para la ficha activa. De lo contrario, `size` se rellena con el valor devuelto de [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
   
-##  <a name="a-namegetpanelista--cbasetabbedpanegetpanelist"></a><a name="getpanelist"></a>CBaseTabbedPane::GetPaneList  
+##  <a name="getpanelist"></a>CBaseTabbedPane::GetPaneList  
  Devuelve una lista de los paneles que están contenidos en el panel con fichas.  
   
 ```  
@@ -398,7 +427,7 @@ virtual void GetPaneList(
  [in] `pRTCFilter`  
  Si no es `NULL`, la lista devuelta contiene sólo los paneles de la clase en tiempo de ejecución.  
   
-##  <a name="a-namegettabareaa--cbasetabbedpanegettabarea"></a><a name="gettabarea"></a>CBaseTabbedPane::GetTabArea  
+##  <a name="gettabarea"></a>CBaseTabbedPane::GetTabArea  
  Devuelve los rectángulos delimitadores para las áreas de pestaña superior e inferior.  
   
 ```  
@@ -417,7 +446,7 @@ virtual void GetTabArea(
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para determinar los rectángulos delimitadores, en coordenadas de pantalla para las áreas de pestaña superior e inferior.  
   
-##  <a name="a-namegettabsnuma--cbasetabbedpanegettabsnum"></a><a name="gettabsnum"></a>CBaseTabbedPane::GetTabsNum  
+##  <a name="gettabsnum"></a>CBaseTabbedPane::GetTabsNum  
  Devuelve el número de fichas en una ventana de ficha.  
   
 ```  
@@ -427,7 +456,7 @@ virtual int GetTabsNum() const;
 ### <a name="return-value"></a>Valor devuelto  
  El número de fichas en el panel con fichas.  
   
-##  <a name="a-namegetunderlyingwindowa--cbasetabbedpanegetunderlyingwindow"></a><a name="getunderlyingwindow"></a>CBaseTabbedPane::GetUnderlyingWindow  
+##  <a name="getunderlyingwindow"></a>CBaseTabbedPane::GetUnderlyingWindow  
  Obtiene la ventana de pestaña (ajustado) subyacente.  
   
 ```  
@@ -437,7 +466,7 @@ virtual CMFCBaseTabCtrl* GetUnderlyingWindow();
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a la ventana de la ficha subyacente.  
   
-##  <a name="a-namegetvisibletabsnuma--cbasetabbedpanegetvisibletabsnum"></a><a name="getvisibletabsnum"></a>CBaseTabbedPane::GetVisibleTabsNum  
+##  <a name="getvisibletabsnum"></a>CBaseTabbedPane::GetVisibleTabsNum  
  Devuelve el número de fichas visibles.  
   
 ```  
@@ -450,7 +479,7 @@ virtual int GetVisibleTabsNum() const;
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para determinar el número de fichas visibles en el panel con fichas.  
   
-##  <a name="a-namehasautohidemodea--cbasetabbedpanehasautohidemode"></a><a name="hasautohidemode"></a>CBaseTabbedPane::HasAutoHideMode  
+##  <a name="hasautohidemode"></a>CBaseTabbedPane::HasAutoHideMode  
  Determina si el panel con pestañas se puede cambiar a modo de ocultación automática.  
   
 ```  
@@ -463,7 +492,7 @@ virtual BOOL HasAutoHideMode() const;
 ### <a name="remarks"></a>Comentarios  
  Si el modo de ocultación automática está deshabilitado, ningún botón de pin se muestra en el título del panel con fichas.  
   
-##  <a name="a-nameishidesingletaba--cbasetabbedpaneishidesingletab"></a><a name="ishidesingletab"></a>CBaseTabbedPane::IsHideSingleTab  
+##  <a name="ishidesingletab"></a>CBaseTabbedPane::IsHideSingleTab  
  Determina si se oculta el panel con fichas si sólo se muestra una ficha.  
   
 ```  
@@ -476,7 +505,7 @@ virtual BOOL IsHideSingleTab() const;
 ### <a name="remarks"></a>Comentarios  
  Si el panel no se muestra porque está abierta sólo una ficha, puede llamar a este método para determinar si el panel con fichas funciona correctamente.  
   
-##  <a name="a-nameremovepanea--cbasetabbedpaneremovepane"></a><a name="removepane"></a>CBaseTabbedPane::RemovePane  
+##  <a name="removepane"></a>CBaseTabbedPane::RemovePane  
  Quita un panel del panel con fichas.  
   
 ```  
@@ -493,7 +522,7 @@ virtual BOOL RemovePane(CWnd* pBar);
 ### <a name="remarks"></a>Comentarios  
  Llamar a este método para quitar el panel especificado por el `pBar` parámetro desde el panel con fichas.  
   
-##  <a name="a-namesetautodestroya--cbasetabbedpanesetautodestroy"></a><a name="setautodestroy"></a>CBaseTabbedPane::SetAutoDestroy  
+##  <a name="setautodestroy"></a>CBaseTabbedPane::SetAutoDestroy  
  Determina si la barra de controles de fichas se destruirán automáticamente.  
   
 ```  
@@ -507,7 +536,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ### <a name="remarks"></a>Comentarios  
  Establecer el modo auto-destruir `TRUE` si crea dinámicamente un panel con fichas y si no se controla su duración. Si destruir automáticamente el modo es `TRUE`, el panel con fichas se destruirán automáticamente por el marco de trabajo.  
   
-##  <a name="a-nameshowtaba--cbasetabbedpaneshowtab"></a><a name="showtab"></a>CBaseTabbedPane::ShowTab  
+##  <a name="showtab"></a>CBaseTabbedPane::ShowTab  
  Muestra u oculta una pestaña.  
   
 ```  
@@ -537,7 +566,7 @@ virtual BOOL ShowTab(
 ### <a name="remarks"></a>Comentarios  
  Cuando se llama a este método, un panel se muestra o se oculta, dependiendo del valor de la `bShow` parámetro. Si oculta una ficha y es la última ficha visible en la ventana ficha subyacente, se oculta el panel con fichas. Si aparece una ficha cuando anteriormente no había ninguna ficha visible, se muestra el panel con fichas.  
   
-##  <a name="a-namerecalclayouta--cbasetabbedpanerecalclayout"></a><a name="recalclayout"></a>CBaseTabbedPane::RecalcLayout  
+##  <a name="recalclayout"></a>CBaseTabbedPane::RecalcLayout  
  Vuelve a calcular la información de diseño para el panel.  
   
 ```  
@@ -549,7 +578,7 @@ virtual void RecalcLayout();
   
  Si el panel está acoplado, este método no hace nada.  
   
-##  <a name="a-namesetautohidemodea--cbasetabbedpanesetautohidemode"></a><a name="setautohidemode"></a>CBaseTabbedPane::SetAutoHideMode  
+##  <a name="setautohidemode"></a>CBaseTabbedPane::SetAutoHideMode  
  Establece el modo de ocultación automática para separables paneles en el panel con fichas.  
   
 ```  

@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridColorProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::EnableAutomaticButton
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::EnableOtherButton
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::GetColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::SetColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::SetColumnsNumber
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::SetOriginalValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +105,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxpropertygridctrl.h  
   
-##  <a name="a-namecmfcpropertygridcolorpropertya--cmfcpropertygridcolorpropertycmfcpropertygridcolorproperty"></a><a name="cmfcpropertygridcolorproperty"></a>CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
+##  <a name="cmfcpropertygridcolorproperty"></a>CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
  Construye un objeto `CMFCPropertyGridColorProperty`.  
   
 ```  
@@ -125,7 +133,7 @@ CMFCPropertyGridColorProperty(
  [in] `dwData`  
  Datos específicos de la aplicación, como un entero o un puntero a otros datos que está asociados a la propiedad. El valor predeterminado es 0.  
   
-##  <a name="a-nameenableautomaticbuttona--cmfcpropertygridcolorpropertyenableautomaticbutton"></a><a name="enableautomaticbutton"></a>CMFCPropertyGridColorProperty::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>CMFCPropertyGridColorProperty::EnableAutomaticButton  
  Habilita la *automática* botón en el cuadro de diálogo de selección de color. (El botón automática estándar se llama **automática**.)  
   
 ```  
@@ -147,7 +155,7 @@ void EnableAutomaticButton(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameenableotherbuttona--cmfcpropertygridcolorpropertyenableotherbutton"></a><a name="enableotherbutton"></a>CMFCPropertyGridColorProperty::EnableOtherButton  
+##  <a name="enableotherbutton"></a>CMFCPropertyGridColorProperty::EnableOtherButton  
  Habilita la *otros* botón en el cuadro de diálogo de selección de color. (El estándar con la etiqueta de otro botón **más colores... **.)  
   
 ```  
@@ -169,7 +177,7 @@ void EnableOtherButton(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namegetcolora--cmfcpropertygridcolorpropertygetcolor"></a><a name="getcolor"></a>CMFCPropertyGridColorProperty::GetColor  
+##  <a name="getcolor"></a>CMFCPropertyGridColorProperty::GetColor  
  Obtiene el color actual de la propiedad.  
   
 ```  
@@ -181,7 +189,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namesetcolora--cmfcpropertygridcolorpropertysetcolor"></a><a name="setcolor"></a>CMFCPropertyGridColorProperty::SetColor  
+##  <a name="setcolor"></a>CMFCPropertyGridColorProperty::SetColor  
  Establece un nuevo color para la propiedad.  
   
 ```  
@@ -194,7 +202,7 @@ void SetColor(COLORREF color);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namesetcolumnsnumbera--cmfcpropertygridcolorpropertysetcolumnsnumber"></a><a name="setcolumnsnumber"></a>CMFCPropertyGridColorProperty::SetColumnsNumber  
+##  <a name="setcolumnsnumber"></a>CMFCPropertyGridColorProperty::SetColumnsNumber  
  Especifica el número de columnas de la cuadrícula de propiedades de color actual.  
   
 ```  
@@ -208,7 +216,7 @@ void SetColumnsNumber(int nColumnsNumber);
 ### <a name="remarks"></a>Comentarios  
  Este método establece el valor de la `m_nColumnsNumber` protegido el miembro de datos.  
   
-##  <a name="a-namesetoriginalvaluea--cmfcpropertygridcolorpropertysetoriginalvalue"></a><a name="setoriginalvalue"></a>CMFCPropertyGridColorProperty::SetOriginalValue  
+##  <a name="setoriginalvalue"></a>CMFCPropertyGridColorProperty::SetOriginalValue  
  Establece el valor original de una propiedad editable.  
   
 ```  

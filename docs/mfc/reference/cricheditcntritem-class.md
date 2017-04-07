@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRichEditCntrItem
+- AFXRICH/CRichEditCntrItem
+- AFXRICH/CRichEditCntrItem::CRichEditCntrItem
+- AFXRICH/CRichEditCntrItem::SyncToRichEditObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +91,7 @@ class CRichEditCntrItem : public COleClientItem
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxrich.h  
   
-##  <a name="a-namecricheditcntritema--cricheditcntritemcricheditcntritem"></a><a name="cricheditcntritem"></a>CRichEditCntrItem::CRichEditCntrItem  
+##  <a name="cricheditcntritem"></a>CRichEditCntrItem::CRichEditCntrItem  
  Llame a esta función para crear un `CRichEditCntrItem` de objetos y agregar al documento contenedor.  
   
 ```  
@@ -109,7 +112,7 @@ CRichEditCntrItem(
   
  Para obtener más información, consulte el [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) estructura en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesynctoricheditobjecta--cricheditcntritemsynctoricheditobject"></a><a name="synctoricheditobject"></a>CRichEditCntrItem::SyncToRichEditObject  
+##  <a name="synctoricheditobject"></a>CRichEditCntrItem::SyncToRichEditObject  
  Llame a esta función para sincronizar el aspecto del dispositivo, [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318), de este **CRichEditCntrltem** al especificado por *reo*.  
   
 ```  

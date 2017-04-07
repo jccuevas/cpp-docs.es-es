@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDropTarget
+- AFXOLE/COleDropTarget
+- AFXOLE/COleDropTarget::COleDropTarget
+- AFXOLE/COleDropTarget::OnDragEnter
+- AFXOLE/COleDropTarget::OnDragLeave
+- AFXOLE/COleDropTarget::OnDragOver
+- AFXOLE/COleDropTarget::OnDragScroll
+- AFXOLE/COleDropTarget::OnDrop
+- AFXOLE/COleDropTarget::OnDropEx
+- AFXOLE/COleDropTarget::Register
+- AFXOLE/COleDropTarget::Revoke
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +99,7 @@ class COleDropTarget : public CCmdTarget
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxole.h  
   
-##  <a name="a-namecoledroptargeta--coledroptargetcoledroptarget"></a><a name="coledroptarget"></a>COleDropTarget::COleDropTarget  
+##  <a name="coledroptarget"></a>COleDropTarget::COleDropTarget  
  Construye un objeto de la clase `COleDropTarget`.  
   
 ```  
@@ -99,7 +109,7 @@ COleDropTarget();
 ### <a name="remarks"></a>Comentarios  
  Llame a [registrar](#register) para asociar a una ventana de este objeto.  
   
-##  <a name="a-nameondragentera--coledroptargetondragenter"></a><a name="ondragenter"></a>COleDropTarget::OnDragEnter  
+##  <a name="ondragenter"></a>COleDropTarget::OnDragEnter  
  Llamado por el marco cuando primero se arrastra el cursor en la ventana.  
   
 ```  
@@ -141,7 +151,7 @@ virtual DROPEFFECT OnDragEnter(
   
  Para obtener más información, consulte [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameondragleavea--coledroptargetondragleave"></a><a name="ondragleave"></a>COleDropTarget::OnDragLeave  
+##  <a name="ondragleave"></a>COleDropTarget::OnDragLeave  
  Lo llama el marco de trabajo cuando el cursor sale de la ventana mientras una operación de arrastre está en vigor.  
   
 ```  
@@ -157,7 +167,7 @@ virtual void OnDragLeave(CWnd* pWnd);
   
  Para obtener más información, consulte [IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameondragovera--coledroptargetondragover"></a><a name="ondragover"></a>COleDropTarget::OnDragOver  
+##  <a name="ondragover"></a>COleDropTarget::OnDragOver  
  Lo llama el marco de trabajo cuando se arrastra el cursor sobre la ventana.  
   
 ```  
@@ -202,7 +212,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[21 NVC_MFCOleContainer](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
-##  <a name="a-nameondragscrolla--coledroptargetondragscroll"></a><a name="ondragscroll"></a>COleDropTarget::OnDragScroll  
+##  <a name="ondragscroll"></a>COleDropTarget::OnDragScroll  
  Llamado por el marco antes de llamar a [OnDragEnter](#ondragenter) o [OnDragOver](#ondragover) para determinar si `point` está en la región desplazable.  
   
 ```  
@@ -238,7 +248,7 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="remarks"></a>Comentarios  
  Reemplace esta función cuando desea proporcionar un comportamiento especial para este evento. La implementación predeterminada de esta función llama [CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll), que devuelve `DROPEFFECT_NONE` y se desplaza la ventana cuando se arrastra el cursor en la región de desplazamiento predeterminado dentro del borde de la ventana.  
   
-##  <a name="a-nameondropa--coledroptargetondrop"></a><a name="ondrop"></a>COleDropTarget::OnDrop  
+##  <a name="ondrop"></a>COleDropTarget::OnDrop  
  Llamado por el marco de trabajo cuando tiene lugar una operación de colocar.  
   
 ```  
@@ -278,7 +288,7 @@ virtual BOOL OnDrop(
   
  Para obtener más información, consulte [IDropTarget:: DROP](http://msdn.microsoft.com/library/windows/desktop/ms687242) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameondropexa--coledroptargetondropex"></a><a name="ondropex"></a>COleDropTarget::OnDropEx  
+##  <a name="ondropex"></a>COleDropTarget::OnDropEx  
  Llamado por el marco de trabajo cuando tiene lugar una operación de colocar.  
   
 ```  
@@ -328,7 +338,7 @@ virtual DROPEFFECT OnDropEx(
   
  Para obtener más información, consulte [IDropTarget:: DROP](http://msdn.microsoft.com/library/windows/desktop/ms687242) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameregistera--coledroptargetregister"></a><a name="register"></a>COleDropTarget::Register  
+##  <a name="register"></a>COleDropTarget::Register  
  Llame a esta función para registrar la ventana con las DLL de OLE como un destino de colocación válido.  
   
 ```  
@@ -347,7 +357,7 @@ BOOL Register(CWnd* pWnd);
   
  Para obtener más información, consulte [RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namerevokea--coledroptargetrevoke"></a><a name="revoke"></a>COleDropTarget::Revoke  
+##  <a name="revoke"></a>COleDropTarget::Revoke  
  Llame a esta función antes de destruir cualquier ventana que se ha registrado como un destino de colocación mediante una llamada a [registrar](#register) para quitar de la lista de destinos de colocación.  
   
 ```  

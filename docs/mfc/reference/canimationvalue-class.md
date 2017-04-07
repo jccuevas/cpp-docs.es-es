@@ -9,8 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationValue
 - CAnimationValue
+- AFXANIMATIONCONTROLLER/CAnimationValue
+- AFXANIMATIONCONTROLLER/CAnimationValue::CAnimationValue
+- AFXANIMATIONCONTROLLER/CAnimationValue::AddTransition
+- AFXANIMATIONCONTROLLER/CAnimationValue::GetValue
+- AFXANIMATIONCONTROLLER/CAnimationValue::GetVariable
+- AFXANIMATIONCONTROLLER/CAnimationValue::SetDefaultValue
+- AFXANIMATIONCONTROLLER/CAnimationValue::GetAnimationVariableList
+- AFXANIMATIONCONTROLLER/CAnimationValue::m_value
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +106,7 @@ class CAnimationValue : public CAnimationBaseObject;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxanimationcontroller.h  
   
-##  <a name="a-nameaddtransitiona--canimationvalueaddtransition"></a><a name="addtransition"></a>CAnimationValue::AddTransition  
+##  <a name="addtransition"></a>CAnimationValue::AddTransition  
  Agrega una transición que se aplicará a un valor.  
   
 ```  
@@ -113,7 +120,7 @@ void AddTransition(CBaseTransition* pTransition);
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función para agregar una transición a una lista interna de transiciones que se aplicará a una variable de animación. Al agregar transiciones, no se aplican inmediatamente y almacenados en una lista interna. Las transiciones se aplican (agregado a un guión gráfico para un determinado valor) cuando se llama a CAnimationController::AnimateGroup.  
   
-##  <a name="a-namecanimationvaluea--canimationvaluecanimationvalue"></a><a name="canimationvalue"></a>CAnimationValue::CAnimationValue  
+##  <a name="canimationvalue"></a>CAnimationValue::CAnimationValue  
  Construye un objeto CAnimationValue.  
   
 ```  
@@ -143,7 +150,7 @@ CAnimationValue(
 ### <a name="remarks"></a>Comentarios  
  Construye el objeto CAnimationValue con propiedades predeterminadas: valor predeterminado, Id. de grupo y el Id. de objeto se establecen en 0.  
   
-##  <a name="a-namegetanimationvariablelista--canimationvaluegetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationValue::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>CAnimationValue::GetAnimationVariableList  
  Coloca la variable de animación encapsulado en una lista.  
   
 ```  
@@ -156,7 +163,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  Cuando la función devuelve, contiene un puntero a CAnimationVariable que representa el valor animado.  
   
-##  <a name="a-namegetvaluea--canimationvaluegetvalue"></a><a name="getvalue"></a>CAnimationValue::GetValue  
+##  <a name="getvalue"></a>CAnimationValue::GetValue  
  Recupera el valor actual.  
   
 ```  
@@ -177,7 +184,7 @@ BOOL GetValue(INT32& nValue);
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función para recuperar el valor actual. Esta implementación llama al objeto COM encapsulado y, si se produce un error en la llamada, este método devuelve el valor predeterminado que se configuró anteriormente en el constructor o con SetDefaultValue.  
   
-##  <a name="a-namegetvariablea--canimationvaluegetvariable"></a><a name="getvariable"></a>CAnimationValue::GetVariable  
+##  <a name="getvariable"></a>CAnimationValue::GetVariable  
  Proporciona acceso a la variable de animación encapsulado.  
   
 ```  
@@ -190,14 +197,14 @@ CAnimationVariable& GetVariable();
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para tener acceso a la variable de animación encapsulado. Desde CAnimationVariable obtener acceso al objeto subyacente de IUIAnimationVariable, cuyo puntero puede ser NULL si no se ha creado la animación.  
   
-##  <a name="a-namemvaluea--canimationvaluemvalue"></a><a name="m_value"></a>CAnimationValue::m_value  
+##  <a name="m_value"></a>CAnimationValue::m_value  
  La variable de animación encapsulado que representa el valor de la animación.  
   
 ```  
 CAnimationVariable m_value;  
 ```  
   
-##  <a name="a-nameoperatordoublea--canimationvalueoperator-double"></a><a name="operator_double"></a>CAnimationValue::operator doble  
+##  <a name="operator_double"></a>CAnimationValue::operator doble  
  Proporciona la conversión entre CAnimationValue y DOUBLE.  
   
 ```  
@@ -210,7 +217,7 @@ operator DOUBLE();
 ### <a name="remarks"></a>Comentarios  
  Proporciona la conversión entre CAnimationValue y DOUBLE. Internamente, este método llama GetValue y no comprueba si hay errores. Si se produce un error en GetValue, el valor devuelto contendrá un valor predeterminado establecido previamente en el constructor o con SetDefaultValue.  
   
-##  <a name="a-nameoperatorint32a--canimationvalueoperator-int32"></a><a name="operator_int32"></a>INT32 CAnimationValue::operator  
+##  <a name="operator_int32"></a>INT32 CAnimationValue::operator  
  Proporciona la conversión entre CAnimationValue y INT32.  
   
 ```  
@@ -223,7 +230,7 @@ operator INT32();
 ### <a name="remarks"></a>Comentarios  
  Proporciona la conversión entre CAnimationValue y INT32. Internamente, este método llama GetValue y no comprueba si hay errores. Si se produce un error en GetValue, el valor devuelto contendrá un valor predeterminado establecido previamente en el constructor o con SetDefaultValue.  
   
-##  <a name="a-nameoperatoreqa--canimationvalueoperator"></a><a name="operator_eq"></a>CAnimationValue::operator =  
+##  <a name="operator_eq"></a>CAnimationValue::operator =  
  Asigna un valor doble a CAnimationValue.  
   
 ```  
@@ -241,7 +248,7 @@ void operator=(INT32 nVal);
 ### <a name="remarks"></a>Comentarios  
  Asigna un valor doble a CAnimationValue. Este valor se establece como un valor predeterminado para la variable de animación encapsulado. Si está suscrito a este objeto de animación a eventos (ValueChanged o IntegerValueChanged), debe volver a habilitar estos eventos.  
   
-##  <a name="a-namesetdefaultvaluea--canimationvaluesetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationValue::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>CAnimationValue::SetDefaultValue  
  Establece el valor predeterminado.  
   
 ```  

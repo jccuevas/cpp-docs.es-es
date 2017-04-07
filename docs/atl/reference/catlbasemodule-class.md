@@ -9,9 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlBaseModule
-- ATL.CAtlBaseModule
 - CAtlBaseModule
+- ATLCORE/ATL::CAtlBaseModule
+- ATLCORE/ATL::CAtlBaseModule::CAtlBaseModule
+- ATLCORE/ATL::CAtlBaseModule::AddResourceInstance
+- ATLCORE/ATL::CAtlBaseModule::GetHInstanceAt
+- ATLCORE/ATL::CAtlBaseModule::GetModuleInstance
+- ATLCORE/ATL::CAtlBaseModule::GetResourceInstance
+- ATLCORE/ATL::CAtlBaseModule::RemoveResourceInstance
+- ATLCORE/ATL::CAtlBaseModule::SetResourceInstance
+- ATLCORE/ATL::CAtlBaseModule::m_bInitFailed
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +95,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcore.h  
   
-##  <a name="a-nameaddresourceinstancea--catlbasemoduleaddresourceinstance"></a><a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance  
+##  <a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance  
  Agrega una instancia del recurso a la lista de identificadores almacenados.  
   
 ```
@@ -102,7 +109,7 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve true si el recurso correctamente se agregó, false en caso contrario.  
   
-##  <a name="a-namecatlbasemodulea--catlbasemodulecatlbasemodule"></a><a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule  
+##  <a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule  
  El constructor.  
   
 ```
@@ -112,7 +119,7 @@ CAtlBaseModule() throw();
 ### <a name="remarks"></a>Comentarios  
  Crea la clase `CAtlBaseModule`.  
   
-##  <a name="a-namegethinstanceata--catlbasemodulegethinstanceat"></a><a name="gethinstanceat"></a>CAtlBaseModule::GetHInstanceAt  
+##  <a name="gethinstanceat"></a>CAtlBaseModule::GetHInstanceAt  
  Devuelve un identificador para una instancia del recurso especificado.  
   
 ```
@@ -126,7 +133,7 @@ HINSTANCE GetHInstanceAt(int i) throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el identificador para la instancia de recurso, o NULL si no existe ninguna instancia de recurso correspondiente.  
   
-##  <a name="a-namegetmoduleinstancea--catlbasemodulegetmoduleinstance"></a><a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance  
+##  <a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance  
  Devuelve la instancia de módulo desde un `CAtlBaseModule` objeto.  
   
 ```
@@ -136,7 +143,7 @@ HINSTANCE GetModuleInstance() throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la instancia del módulo.  
   
-##  <a name="a-namegetresourceinstancea--catlbasemodulegetresourceinstance"></a><a name="getresourceinstance"></a>CAtlBaseModule::GetResourceInstance  
+##  <a name="getresourceinstance"></a>CAtlBaseModule::GetResourceInstance  
  Devuelve la instancia del recurso.  
   
 ```
@@ -146,7 +153,7 @@ HINSTANCE GetResourceInstance() throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la instancia del recurso.  
   
-##  <a name="a-namembinitfaileda--catlbasemodulembinitfailed"></a><a name="m_binitfailed"></a>CAtlBaseModule::m_bInitFailed  
+##  <a name="m_binitfailed"></a>CAtlBaseModule::m_bInitFailed  
  Una variable que indica si ha fallado la inicialización del módulo.  
   
 ```
@@ -156,7 +163,7 @@ static bool m_bInitFailed;
 ### <a name="remarks"></a>Comentarios  
  True si el módulo inicializa, false si no se pudo inicializar.  
   
-##  <a name="a-nameremoveresourceinstancea--catlbasemoduleremoveresourceinstance"></a><a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance  
+##  <a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance  
  Quita una instancia de recurso de la lista de identificadores almacenados.  
   
 ```
@@ -170,7 +177,7 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve true si se ha quitado correctamente el recurso.  
   
-##  <a name="a-namesetresourceinstancea--catlbasemodulesetresourceinstance"></a><a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance  
+##  <a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance  
  Establece la instancia de recurso de un `CAtlBaseModule` objeto.  
   
 ```

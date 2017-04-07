@@ -10,7 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPreviewCtrlImpl
-- afxwin/CMFCPreviewCtrlImpl
+- AFXWIN/CMFCPreviewCtrlImpl
+- AFXWIN/CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
+- AFXWIN/CMFCPreviewCtrlImpl::Create
+- AFXWIN/CMFCPreviewCtrlImpl::Destroy
+- AFXWIN/CMFCPreviewCtrlImpl::Focus
+- AFXWIN/CMFCPreviewCtrlImpl::GetDocument
+- AFXWIN/CMFCPreviewCtrlImpl::Redraw
+- AFXWIN/CMFCPreviewCtrlImpl::SetDocument
+- AFXWIN/CMFCPreviewCtrlImpl::SetHost
+- AFXWIN/CMFCPreviewCtrlImpl::SetPreviewVisuals
+- AFXWIN/CMFCPreviewCtrlImpl::SetRect
+- AFXWIN/CMFCPreviewCtrlImpl::DoPaint
+- AFXWIN/CMFCPreviewCtrlImpl::m_clrBackColor
+- AFXWIN/CMFCPreviewCtrlImpl::m_clrTextColor
+- AFXWIN/CMFCPreviewCtrlImpl::m_font
+- AFXWIN/CMFCPreviewCtrlImpl::m_pDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,13 +114,13 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
  [CMFCPreviewCtrlImpl](../../mfc/reference/cmfcpreviewctrlimpl-class.md)
 
-## <a name="a-namecmfcpreviewctrlimpla-cmfcpreviewctrlimplcmfcpreviewctrlimpl"></a><a name="cmfcpreviewctrlimpl"></a>CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
+## <a name="cmfcpreviewctrlimpl"></a>CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
 Construye un objeto de control de vista previa.
 
 ### <a name="syntax"></a>Sintaxis
 CMFCPreviewCtrlImpl();  
 
-## <a name="a-namecreatea-cmfcpreviewctrlimplcreate"></a><a name="create"></a>CMFCPreviewCtrlImpl::Create
+## <a name="create"></a>CMFCPreviewCtrlImpl::Create
 Sobrecargado. Llama a un controlador de vista previa enriquecida para crear la ventana de Windows.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -135,7 +150,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE`Si la creación se realizó correctamente; de lo contrario, `FALSE`.  
   
-## <a name="a-namedestroya-cmfcpreviewctrlimpldestroy"></a><a name="destroy"></a>CMFCPreviewCtrlImpl::Destroy
+## <a name="destroy"></a>CMFCPreviewCtrlImpl::Destroy
 Llama a un controlador de vista previa avanzada cuando es necesario destruir este control.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -144,7 +159,7 @@ Llama a un controlador de vista previa avanzada cuando es necesario destruir est
 virtual void Destroy();  
 ```  
   
-## <a name="a-namedopainta-cmfcpreviewctrlimpldopaint"></a><a name="dopaint"></a>CMFCPreviewCtrlImpl::DoPaint  
+## <a name="dopaint"></a>CMFCPreviewCtrlImpl::DoPaint  
 Llamado por el marco para representar la vista previa.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -160,7 +175,7 @@ virtual void DoPaint(
  Puntero a un contexto de dispositivo para dibujar.  
 
 
-## <a name="a-namefocusa-cmfcpreviewctrlimplfocus"></a><a name="focus"></a>CMFCPreviewCtrlImpl::Focus  
+## <a name="focus"></a>CMFCPreviewCtrlImpl::Focus  
 Establece el foco a este control de entrada.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -168,7 +183,7 @@ Establece el foco a este control de entrada.
 ```  
 virtual void Focus();  
 ```  
-## <a name="a-namegetdocumenta-cmfcpreviewctrlimplgetdocument"></a><a name="getdocument"></a>CMFCPreviewCtrlImpl::GetDocument
+## <a name="getdocument"></a>CMFCPreviewCtrlImpl::GetDocument
 Devuelve un documento conectado a este control de vista previa.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -180,7 +195,7 @@ ATL::IDocument* GetDocument();
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a un documento, cuyo contenido se muestra una vista previa en el control.
 
-## <a name="a-namemclrbackcolora-cmfcpreviewctrlimplmclrbackcolor"></a><a name="m_clrbackcolor"></a>CMFCPreviewCtrlImpl::m_clrBackColor  
+## <a name="m_clrbackcolor"></a>CMFCPreviewCtrlImpl::m_clrBackColor  
 Color de fondo de la ventana de vista previa.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -189,7 +204,7 @@ Color de fondo de la ventana de vista previa.
 COLORREF m_clrBackColor;  
 ```  
 
-## <a name="a-namemclrtextcolora-cmfcpreviewctrlimplmclrtextcolor"></a><a name="m_clrtextcolor"></a>CMFCPreviewCtrlImpl::m_clrTextColor
+## <a name="m_clrtextcolor"></a>CMFCPreviewCtrlImpl::m_clrTextColor
 Color del texto de la ventana de vista previa.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -197,14 +212,14 @@ Color del texto de la ventana de vista previa.
 ```  
 COLORREF m_clrTextColor;  
 ```  
-## <a name="a-namemfonta-cmfcpreviewctrlimplmfont--font-used-to-display-text-in-the-preview-window"></a><a name="m_font"></a>CMFCPreviewCtrlImpl::m_font fuente utilizada para mostrar texto en la ventana de vista previa.  
+## <a name="m_font"></a>CMFCPreviewCtrlImpl::m_font fuente utilizada para mostrar texto en la ventana de vista previa.  
   
 ### <a name="syntax"></a>Sintaxis  
   
 ```  
 CFont m_font;  
 ```  
-## <a name="a-namempdocumenta-cmfcpreviewctrlimplmpdocument"></a><a name="m_pdocument"></a>CMFCPreviewCtrlImpl::m_pDocument  
+## <a name="m_pdocument"></a>CMFCPreviewCtrlImpl::m_pDocument  
 Puntero a un documento cuyo contenido se muestra una vista previa en el control.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -213,7 +228,7 @@ Puntero a un documento cuyo contenido se muestra una vista previa en el control.
 ATL::IDocument* m_pDocument;  
 ```  
 
-## <a name="a-nameredrawa-cmfcpreviewctrlimplredraw"></a><a name="redraw"></a>CMFCPreviewCtrlImpl::Redraw  
+## <a name="redraw"></a>CMFCPreviewCtrlImpl::Redraw  
 Indica que este control vuelva a dibujar.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -221,7 +236,7 @@ Indica que este control vuelva a dibujar.
 ```  
 virtual void Redraw();  
 ```  
-## <a name="a-namesetdocumenta-cmfcpreviewctrlimplsetdocument"></a><a name="setdocument"></a>CMFCPreviewCtrlImpl::SetDocument 
+## <a name="setdocument"></a>CMFCPreviewCtrlImpl::SetDocument 
 Llamado por el controlador de vista previa para crear una relación entre la implementación de documento y el control de vista previa.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -236,7 +251,7 @@ void SetDocument(
  `pDocument`  
  Puntero a la implementación del documento.  
 
-## <a name="a-namesethosta-cmfcpreviewctrlimplsethost"></a><a name="sethost"></a>CMFCPreviewCtrlImpl::SetHost  
+## <a name="sethost"></a>CMFCPreviewCtrlImpl::SetHost  
 Establece a un nuevo elemento primario para este control.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -251,7 +266,7 @@ virtual void SetHost(
  `hWndParent`  
  Identificador de la nueva ventana primaria.  
 
-## <a name="a-namesetpreviewvisualsa-cmfcpreviewctrlimplsetpreviewvisuals"></a><a name="setpreviewvisuals"></a>CMFCPreviewCtrlImpl::SetPreviewVisuals  
+## <a name="setpreviewvisuals"></a>CMFCPreviewCtrlImpl::SetPreviewVisuals  
 Llama a un controlador de vista previa avanzada cuando es necesario establecer los elementos visuales de vista previa enriquecida contenido.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -274,7 +289,7 @@ virtual void SetPreviewVisuals(
  `plf`  
  Fuente utilizada para mostrar texto en la ventana de vista previa. 
 
-##  <a name="a-namesetrecta-cmfcpreviewctrlimplsetrect"></a><a name="setrect"></a>CMFCPreviewCtrlImpl::SetRect  
+##  <a name="setrect"></a>CMFCPreviewCtrlImpl::SetRect  
 Establece un nuevo rectángulo delimitador para este control.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -296,7 +311,7 @@ virtual void SetRect(
 ### <a name="remarks"></a>Comentarios  
  Normalmente, un nuevo rectángulo delimitador se establece cuando se cambia el tamaño del control host.  
 
-## <a name="a-namedtora-cmfcpreviewctrlimplcmfcpreviewctrlimpl"></a><a name="dtor"></a>CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
+## <a name="dtor"></a>CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
 Destruye un objeto de control de vista previa.  
   
 ### <a name="syntax"></a>Sintaxis  

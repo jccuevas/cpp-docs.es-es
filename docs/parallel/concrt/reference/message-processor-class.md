@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::message_processor
+- message_processor
+- AGENTS/concurrency::message_processor
+- AGENTS/concurrency::message_processor::async_send
+- AGENTS/concurrency::message_processor::sync_send
+- AGENTS/concurrency::message_processor::wait
+- AGENTS/concurrency::message_processor::process_incoming_message
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 98f1c1072916c4cf3670e40ce0c6ddd1a17f1b63
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: dff934584179cc58d884be65fdb96cb6c646a4ac
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="messageprocessor-class"></a>message_processor (Clase)
@@ -65,15 +70,15 @@ class message_processor;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[async_send (método)](#async_send)|Cuando se invalida en una clase derivada, coloca mensajes en el bloque de forma asincrónica.|  
-|[sync_send (método)](#sync_send)|Cuando se invalida en una clase derivada, coloca mensajes en el bloque de forma sincrónica.|  
-|[Wait (método)](#wait)|Cuando se invalida en una clase derivada, espera a completar todas las operaciones asincrónicas.|  
+|[async_send](#async_send)|Cuando se invalida en una clase derivada, coloca mensajes en el bloque de forma asincrónica.|  
+|[sync_send](#sync_send)|Cuando se invalida en una clase derivada, coloca mensajes en el bloque de forma sincrónica.|  
+|[esperar](#wait)|Cuando se invalida en una clase derivada, espera a completar todas las operaciones asincrónicas.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[process_incoming_message (método)](#process_incoming_message)|Cuando se invalida en una clase derivada, realiza el procesamiento de enrutamiento de mensajes en el bloque. Se llama una vez cada vez que se agrega un nuevo mensaje y se encuentra la cola esté vacío.|  
+|[process_incoming_message](#process_incoming_message)|Cuando se invalida en una clase derivada, realiza el procesamiento de enrutamiento de mensajes en el bloque. Se llama una vez cada vez que se agrega un nuevo mensaje y se encuentra la cola esté vacío.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `message_processor`  
@@ -83,7 +88,7 @@ class message_processor;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="a-nameasyncsenda-asyncsend"></a><a name="async_send"></a>async_send 
+##  <a name="async_send"></a>async_send 
 
  Cuando se invalida en una clase derivada, coloca mensajes en el bloque de forma asincrónica.  
   
@@ -98,7 +103,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Comentarios  
  Las implementaciones del procesador deberían invalidar este método.  
   
-##  <a name="a-nameprocessincomingmessagea-processincomingmessage"></a><a name="process_incoming_message"></a>process_incoming_message 
+##  <a name="process_incoming_message"></a>process_incoming_message 
 
  Cuando se invalida en una clase derivada, realiza el procesamiento de enrutamiento de mensajes en el bloque. Se llama una vez cada vez que se agrega un nuevo mensaje y se encuentra la cola esté vacío.  
   
@@ -109,7 +114,7 @@ virtual void process_incoming_message() = 0;
 ### <a name="remarks"></a>Comentarios  
  Las implementaciones de bloque de mensajes deben invalidar este método.  
   
-##  <a name="a-namesyncsenda-syncsend"></a><a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a>sync_send 
 
  Cuando se invalida en una clase derivada, coloca mensajes en el bloque de forma sincrónica.  
   
@@ -124,7 +129,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Comentarios  
  Las implementaciones del procesador deberían invalidar este método.  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>esperar 
+##  <a name="wait"></a>esperar 
 
  Cuando se invalida en una clase derivada, espera a completar todas las operaciones asincrónicas.  
   

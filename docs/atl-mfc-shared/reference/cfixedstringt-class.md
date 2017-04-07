@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFixedStringT
+- CSTRINGT/ATL::CFixedStringT
+- CSTRINGT/ATL::CFixedStringT::CFixedStringT
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +96,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** cstringt.h  
   
-##  <a name="a-namecfixedstringta--cfixedstringtcfixedstringt"></a><a name="cfixedstringt"></a>CFixedStringT::CFixedStringT  
+##  <a name="cfixedstringt"></a>CFixedStringT::CFixedStringT  
  Construye un objeto `CFixedStringT`.  
   
 ```
@@ -120,7 +122,7 @@ explicit CFixedStringT(const unsigned char* psz);
 ### <a name="remarks"></a>Comentarios  
  Dado que los constructores copian los datos de entrada en el nuevo almacenamiento asignado, debe tener en cuenta que la memoria pueden producir excepciones. Tenga en cuenta que algunos de estos constructores actúan como funciones de conversión.  
   
-##  <a name="a-nameoperatoreqa--cfixedstringtoperator-"></a><a name="operator__eq"></a>CFixedStringT::operator =  
+##  <a name="operator__eq"></a>CFixedStringT::operator =  
  Reinicializa existente `CFixedStringT` objeto con datos nuevos.  
   
 ```

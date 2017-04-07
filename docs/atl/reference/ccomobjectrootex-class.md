@@ -9,11 +9,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComObjectRootEx
-- ATL::CComObjectRootEx<ThreadModel>
 - CComObjectRootEx
-- ATL::CComObjectRootEx
-- ATL.CComObjectRootEx<ThreadModel>
+- ATLCOM/ATL::CComObjectRootEx
+- ATLCOM/ATL::CComObjectRootEx
+- ATLCOM/ATL::InternalAddRef
+- ATLCOM/ATL::InternalRelease
+- ATLCOM/ATL::Lock
+- ATLCOM/ATL::Unlock
+- ATLCOM/ATL::FinalConstruct
+- ATLCOM/ATL::FinalRelease
+- ATLCOM/ATL::OuterAddRef
+- ATLCOM/ATL::OuterQueryInterface
+- ATLCOM/ATL::OuterRelease
+- ATLCOM/ATL::InternalQueryInterface
+- ATLCOM/ATL::ObjectMain
+- ATLCOM/ATL::m_dwRef
+- ATLCOM/ATL::m_pOuterUnknown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -112,14 +123,14 @@ class CComObjectRootEx : public CComObjectRootBase
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="a-nameccomobjectrootexa--ccomobjectrootexccomobjectrootex"></a><a name="ccomobjectrootex"></a>CComObjectRootEx::CComObjectRootEx  
+##  <a name="ccomobjectrootex"></a>CComObjectRootEx::CComObjectRootEx  
  El constructor inicializa el recuento de referencias en 0.  
   
 ```
 CComObjectRootEx();
 ```  
   
-##  <a name="a-namefinalconstructa--ccomobjectrootexfinalconstruct"></a><a name="finalconstruct"></a>CComObjectRootEx::FinalConstruct  
+##  <a name="finalconstruct"></a>CComObjectRootEx::FinalConstruct  
  Puede invalidar este método en una clase derivada para realizar cualquier inicialización necesaria para el objeto.  
   
 ```
@@ -159,7 +170,7 @@ HRESULT FinalConstruct();
   
 -   Invalidar `FinalRelease` para liberar el **IUnknown** puntero.  
   
-##  <a name="a-namefinalreleasea--ccomobjectrootexfinalrelease"></a><a name="finalrelease"></a>CComObjectRootEx::FinalRelease  
+##  <a name="finalrelease"></a>CComObjectRootEx::FinalRelease  
  Puede invalidar este método en una clase derivada para realizar cualquier limpieza necesaria para el objeto.  
   
 ```
@@ -171,7 +182,7 @@ void FinalRelease();
   
  Realizar la limpieza en `FinalRelease` es preferible a agregar código al destructor de la clase, ya que el objeto se haya construido totalmente todavía en el momento en que `FinalRelease` se llama. Esto le permite tener acceso a los métodos proporcionados por la clase más derivada. Esto es especialmente importante para la liberación de los objetos agregados antes de la eliminación.  
   
-##  <a name="a-nameinternaladdrefa--ccomobjectrootexinternaladdref"></a><a name="internaladdref"></a>CComObjectRootEx::InternalAddRef  
+##  <a name="internaladdref"></a>CComObjectRootEx::InternalAddRef  
  El recuento de referencias de un objeto no agregado se incrementa en 1.  
   
 ```
@@ -184,7 +195,7 @@ ULONG InternalAddRef();
 ### <a name="remarks"></a>Comentarios  
  Si el modelo de subprocesos es multiproceso, **InterlockedIncrement** se utiliza para impedir que varios subprocesos cambien el recuento de referencias al mismo tiempo.  
   
-##  <a name="a-nameinternalqueryinterfacea--ccomobjectrootexinternalqueryinterface"></a><a name="internalqueryinterface"></a>CComObjectRootEx:: InternalQueryInterface  
+##  <a name="internalqueryinterface"></a>CComObjectRootEx:: InternalQueryInterface  
  Recupera un puntero a la interfaz solicitada.  
   
 ```
@@ -214,7 +225,7 @@ static HRESULT InternalQueryInterface(
 ### <a name="remarks"></a>Comentarios  
  `InternalQueryInterface` solo administra interfaces de la tabla de asignación COM. Si se agrega el objeto, `InternalQueryInterface` no delegar en el desconocido externo. Puede especificar interfaces en el mapa COM con la macro [COM_INTERFACE_ENTRY](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00) o uno de sus variantes.  
   
-##  <a name="a-nameinternalreleasea--ccomobjectrootexinternalrelease"></a><a name="internalrelease"></a>CComObjectRootEx::InternalRelease  
+##  <a name="internalrelease"></a>CComObjectRootEx::InternalRelease  
  Disminuye el contador de referencias de un objeto no agregado por 1.  
   
 ```
@@ -227,7 +238,7 @@ ULONG InternalRelease();
 ### <a name="remarks"></a>Comentarios  
  Si el modelo de subprocesos es multiproceso, **InterlockedDecrement** se utiliza para impedir que varios subprocesos cambien el recuento de referencias al mismo tiempo.  
   
-##  <a name="a-namelocka--ccomobjectrootexlock"></a><a name="lock"></a>CComObjectRootEx::Lock  
+##  <a name="lock"></a>CComObjectRootEx::Lock  
  Si el modelo de subprocesos es multiproceso, este método llama a la función API de Win32 [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), que espera hasta que el subproceso puede tomar posesión del objeto de sección crítica obtenido a través de un miembro de datos privado.  
   
 ```
@@ -239,7 +250,7 @@ void Lock();
   
  Si el modelo de subprocesos es de subproceso único, este método no hace nada.  
   
-##  <a name="a-namemdwrefa--ccomobjectrootexmdwref"></a><a name="m_dwref"></a>CComObjectRootEx::m_dwRef  
+##  <a name="m_dwref"></a>CComObjectRootEx::m_dwRef  
  Parte de una unión que tiene acceso a cuatro bytes de memoria.  
   
 ```
@@ -261,7 +272,7 @@ long m_dwRef;
   
  Si no se agrega el objeto, el recuento de referencias accediendo `AddRef` y **versión** se almacena en `m_dwRef`. Si se agrega el objeto, el puntero para el desconocido externo se almacena en [m_pOuterUnknown](#m_pouterunknown).  
   
-##  <a name="a-namempouterunknowna--ccomobjectrootexmpouterunknown"></a><a name="m_pouterunknown"></a>CComObjectRootEx::m_pOuterUnknown  
+##  <a name="m_pouterunknown"></a>CComObjectRootEx::m_pOuterUnknown  
  Parte de una unión que tiene acceso a cuatro bytes de memoria.  
   
 ```
@@ -284,7 +295,7 @@ IUnknown*
   
  Si se agrega el objeto, el puntero para el desconocido externo se almacena en `m_pOuterUnknown`. Si no se agrega el objeto, el recuento de referencias accediendo `AddRef` y **versión** se almacena en [m_dwRef](#m_dwref).  
   
-##  <a name="a-nameobjectmaina--ccomobjectrootexobjectmain"></a><a name="objectmain"></a>CComObjectRootEx::ObjectMain  
+##  <a name="objectmain"></a>CComObjectRootEx::ObjectMain  
  Para cada clase que se muestra en el [mapa de objetos](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f), esta función se llama una vez cuando se inicializa el módulo, y de nuevo cuando se finaliza.  
   
 ```
@@ -303,7 +314,7 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_COM Nº&41;](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
-##  <a name="a-nameouteraddrefa--ccomobjectrootexouteraddref"></a><a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
+##  <a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
  Incrementa el recuento de referencias del objeto desconocido externo de una agregación.  
   
 ```
@@ -313,7 +324,7 @@ ULONG OuterAddRef();
 ### <a name="return-value"></a>Valor devuelto  
  Un valor que puede ser útil para los diagnósticos y pruebas.  
   
-##  <a name="a-nameouterqueryinterfacea--ccomobjectrootexouterqueryinterface"></a><a name="outerqueryinterface"></a>CComObjectRootEx::OuterQueryInterface  
+##  <a name="outerqueryinterface"></a>CComObjectRootEx::OuterQueryInterface  
  Recupera un puntero indirecto a la interfaz solicitada.  
   
 ```
@@ -330,7 +341,7 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>Valor devuelto  
  Uno de los estándar `HRESULT` valores.  
   
-##  <a name="a-nameouterreleasea--ccomobjectrootexouterrelease"></a><a name="outerrelease"></a>CComObjectRootEx::OuterRelease  
+##  <a name="outerrelease"></a>CComObjectRootEx::OuterRelease  
  Disminuye el recuento de referencias del objeto desconocido externo de una agregación.  
   
 ```
@@ -340,7 +351,7 @@ ULONG OuterRelease();
 ### <a name="return-value"></a>Valor devuelto  
  En versiones no depuradas, siempre devuelve 0. En compilaciones de depuración, devuelve un valor que puede ser útil para el diagnóstico o de pruebas.  
   
-##  <a name="a-nameunlocka--ccomobjectrootexunlock"></a><a name="unlock"></a>CComObjectRootEx::Unlock  
+##  <a name="unlock"></a>CComObjectRootEx::Unlock  
  Si el modelo de subprocesos es multiproceso, este método llama a la función API de Win32 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), qué versiones de la propiedad del objeto de sección crítica obtenido a través de un miembro de datos privado.  
   
 ```

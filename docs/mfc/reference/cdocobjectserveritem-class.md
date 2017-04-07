@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocObjectServerItem
+- AFXDOCOB/CDocObjectServerItem
+- AFXDOCOB/CDocObjectServerItem::CDocObjectServerItem
+- AFXDOCOB/CDocObjectServerItem::GetDocument
+- AFXDOCOB/CDocObjectServerItem::OnHide
+- AFXDOCOB/CDocObjectServerItem::OnShow
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CDocObjectServerItem : public COleServerItem
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdocob.h  
   
-##  <a name="a-namecdocobjectserveritema--cdocobjectserveritemcdocobjectserveritem"></a><a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem  
+##  <a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem  
  Construye un objeto `CDocObjectServerItem`.  
   
 ```  
@@ -109,7 +114,7 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
  `bAutoDelete`  
  Indica si el objeto se puede eliminar cuando se suelta un vínculo a él. Establezca el argumento en **FALSE** si la `CDocObjectServerItem` objeto es una parte integral de los datos del documento. Establézcalo en **TRUE** si el objeto es una estructura secundaria utilizada para identificar un intervalo en los datos del documento que se pueden eliminar mediante el marco de trabajo.  
   
-##  <a name="a-namegetdocumenta--cdocobjectserveritemgetdocument"></a><a name="getdocument"></a>CDocObjectServerItem::GetDocument  
+##  <a name="getdocument"></a>CDocObjectServerItem::GetDocument  
  Recupera un puntero al documento que contiene el elemento.  
   
 ```  
@@ -122,7 +127,7 @@ COleServerDoc* GetDocument() const;
 ### <a name="remarks"></a>Comentarios  
  Esto permite el acceso al documento del servidor que se pasa como argumento a la [CDocObjectServerItem](#cdocobjectserveritem) constructor.  
   
-##  <a name="a-nameonhidea--cdocobjectserveritemonhide"></a><a name="onhide"></a>CDocObjectServerItem::OnHide  
+##  <a name="onhide"></a>CDocObjectServerItem::OnHide  
  Llamado por el marco para ocultar el elemento.  
   
 ```  
@@ -132,7 +137,7 @@ virtual void OnHide();
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada produce una excepción si el elemento es un objeto DocObject. No se puede ocultar un elemento de DocObject activo porque toma la vista entera. Debe desactivar el elemento DocObject para que desaparezca. Si el elemento no es un objeto DocObject, la implementación predeterminada llama [COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide).  
   
-##  <a name="a-nameonshowa--cdocobjectserveritemonshow"></a><a name="onshow"></a>CDocObjectServerItem::OnShow  
+##  <a name="onshow"></a>CDocObjectServerItem::OnShow  
  Llamado por el marco para indicar a la aplicación de servidor para hacer el DocObject elemento en el contexto activo.  
   
 ```  

@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCCaptionButton
+- AFXCAPTIONBUTTON/CMFCCaptionButton
+- AFXCAPTIONBUTTON/CMFCCaptionButton::CMFCCaptionButton
+- AFXCAPTIONBUTTON/CMFCCaptionButton::GetHit
+- AFXCAPTIONBUTTON/CMFCCaptionButton::GetIconID
+- AFXCAPTIONBUTTON/CMFCCaptionButton::GetRect
+- AFXCAPTIONBUTTON/CMFCCaptionButton::GetSize
+- AFXCAPTIONBUTTON/CMFCCaptionButton::IsMiniFrameButton
+- AFXCAPTIONBUTTON/CMFCCaptionButton::Move
+- AFXCAPTIONBUTTON/CMFCCaptionButton::OnDraw
+- AFXCAPTIONBUTTON/CMFCCaptionButton::SetMiniFrameButton
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +101,7 @@ class CMFCCaptionButton : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxcaptionbutton.h  
   
-##  <a name="a-namecmfccaptionbuttona--cmfccaptionbuttoncmfccaptionbutton"></a><a name="cmfccaptionbutton"></a>CMFCCaptionButton::CMFCCaptionButton  
+##  <a name="cmfccaptionbutton"></a>CMFCCaptionButton::CMFCCaptionButton  
  Construye un objeto `CMFCCaptionButton`.  
   
 ```  
@@ -127,7 +137,7 @@ CMFCCaptionButton(
   
  Los botones de título están alineados a la izquierda o derecha.  
   
-##  <a name="a-namegethita--cmfccaptionbuttongethit"></a><a name="gethit"></a>CMFCCaptionButton::GetHit  
+##  <a name="gethit"></a>CMFCCaptionButton::GetHit  
  Devuelve el comando representado por el botón.  
   
 ```  
@@ -149,7 +159,7 @@ UINT GetHit() const;
 |`AFX_HTMENU`|Botón de menú de flecha.|  
 |`HTNOWHERE`|El valor predeterminado; no representa ningún comando.|  
   
-##  <a name="a-namegeticonida--cmfccaptionbuttongeticonid"></a><a name="geticonid"></a>CMFCCaptionButton::GetIconID  
+##  <a name="geticonid"></a>CMFCCaptionButton::GetIconID  
  Devuelve el identificador de imagen asociado al botón.  
   
 ```  
@@ -171,7 +181,7 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ### <a name="remarks"></a>Comentarios  
  Los parámetros especifican identificadores de imagen para minimizar o maximizar los botones de título.  
   
-##  <a name="a-namegetrecta--cmfccaptionbuttongetrect"></a><a name="getrect"></a>CMFCCaptionButton::GetRect  
+##  <a name="getrect"></a>CMFCCaptionButton::GetRect  
  Devuelve el rectángulo ocupado por el botón.  
   
 ```  
@@ -184,7 +194,7 @@ virtual CRect GetRect() const;
 ### <a name="remarks"></a>Comentarios  
  Si no ve el botón, el tamaño devuelto es 0.  
   
-##  <a name="a-namegetsizea--cmfccaptionbuttongetsize"></a><a name="getsize"></a>CMFCCaptionButton::GetSize  
+##  <a name="getsize"></a>CMFCCaptionButton::GetSize  
  Devuelve el ancho y alto del botón.  
   
 ```  
@@ -197,7 +207,7 @@ static CSize GetSize();
 ### <a name="remarks"></a>Comentarios  
  El tamaño devuelto incluye el borde y margen de botón.  
   
-##  <a name="a-nameisminiframebuttona--cmfccaptionbuttonisminiframebutton"></a><a name="isminiframebutton"></a>CMFCCaptionButton::IsMiniFrameButton  
+##  <a name="isminiframebutton"></a>CMFCCaptionButton::IsMiniFrameButton  
  Indica si el alto de la barra de título se establece en tamaño mini.  
   
 ```  
@@ -209,7 +219,7 @@ BOOL IsMiniFrameButton() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-namemovea--cmfccaptionbuttonmove"></a><a name="move"></a>CMFCCaptionButton::Move  
+##  <a name="move"></a>CMFCCaptionButton::Move  
  Establece la ubicación del botón draw y estado de mostrar la ventana.  
   
 ```  
@@ -225,7 +235,7 @@ void Move(
  [in] `bHide`  
  Si desea mostrar el botón.  
   
-##  <a name="a-nameondrawa--cmfccaptionbuttonondraw"></a><a name="ondraw"></a>CMFCCaptionButton::OnDraw  
+##  <a name="ondraw"></a>CMFCCaptionButton::OnDraw  
  Dibuja el botón de título.  
   
 ```  
@@ -256,7 +266,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>Comentarios  
  El `bMaximized` parámetro se utiliza cuando el botón es un maximizar o minimizar de botón.  
   
-##  <a name="a-namesetminiframebuttona--cmfccaptionbuttonsetminiframebutton"></a><a name="setminiframebutton"></a>CMFCCaptionButton::SetMiniFrameButton  
+##  <a name="setminiframebutton"></a>CMFCCaptionButton::SetMiniFrameButton  
  Establece el tamaño de la barra de título mini.  
   
 ```  

@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComAutoThreadModule
+- ATLBASE/ATL::CComAutoThreadModule
+- ATLBASE/ATL::CreateInstance
+- ATLBASE/ATL::GetDefaultThreads
+- ATLBASE/ATL::Init
+- ATLBASE/ATL::Lock
+- ATLBASE/ATL::Unlock
+- ATLBASE/ATL::dwThreadID
+- ATLBASE/ATL::m_Allocator
+- ATLBASE/ATL::m_nThreads
+- ATLBASE/ATL::m_pApartments
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -111,7 +121,7 @@ class CComAutoThreadModule : public CComModule
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
   
-##  <a name="a-namecreateinstancea--ccomautothreadmodulecreateinstance"></a><a name="createinstance"></a>CComAutoThreadModule::CreateInstance  
+##  <a name="createinstance"></a>CComAutoThreadModule::CreateInstance  
  A partir de ATL 7.0, `CComAutoThreadModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
   
 ```
@@ -137,7 +147,7 @@ HRESULT CreateInstance(
 ### <a name="remarks"></a>Comentarios  
  Selecciona un subproceso y, a continuación, crea un objeto en el contenedor asociado.  
   
-##  <a name="a-namedwthreadida--ccomautothreadmoduledwthreadid"></a><a name="dwthreadid"></a>CComAutoThreadModule::dwThreadID  
+##  <a name="dwthreadid"></a>CComAutoThreadModule::dwThreadID  
  A partir de ATL 7.0, `CComAutoThreadModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
   
 ```
@@ -147,7 +157,7 @@ DWORD dwThreadID;
 ### <a name="remarks"></a>Comentarios  
  Contiene el identificador del subproceso actual.  
   
-##  <a name="a-namegetdefaultthreadsa--ccomautothreadmodulegetdefaultthreads"></a><a name="getdefaultthreads"></a>CComAutoThreadModule::GetDefaultThreads  
+##  <a name="getdefaultthreads"></a>CComAutoThreadModule::GetDefaultThreads  
  A partir de ATL 7.0, `CComAutoThreadModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
   
 ```
@@ -160,7 +170,7 @@ static int GetDefaultThreads();
 ### <a name="remarks"></a>Comentarios  
  Esta función estática calcula dinámicamente el número máximo de subprocesos para el módulo EXE, en función del número de procesadores. De forma predeterminada, este valor devuelto se pasa a la [Init](#init) método para crear los subprocesos.  
   
-##  <a name="a-nameinita--ccomautothreadmoduleinit"></a><a name="init"></a>CComAutoThreadModule::Init  
+##  <a name="init"></a>CComAutoThreadModule::Init  
  A partir de ATL 7.0, `CComAutoThreadModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
   
 ```
@@ -187,7 +197,7 @@ HRESULT Init(
 ### <a name="remarks"></a>Comentarios  
  Inicializa los miembros de datos y crea el número de subprocesos especificado por `nThreads`.  
   
-##  <a name="a-namelocka--ccomautothreadmodulelock"></a><a name="lock"></a>CComAutoThreadModule::Lock  
+##  <a name="lock"></a>CComAutoThreadModule::Lock  
  A partir de ATL 7.0, `CComAutoThreadModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
   
 ```
@@ -200,7 +210,7 @@ LONG Lock();
 ### <a name="remarks"></a>Comentarios  
  Realiza un incremento atómico en el recuento de bloqueos para el módulo y el subproceso actual. `CComAutoThreadModule`el recuento de bloqueos del módulo se utiliza para determinar si los clientes tienen acceso al módulo. El recuento de bloqueos en el subproceso actual se utiliza para fines estadísticos.  
   
-##  <a name="a-namemallocatora--ccomautothreadmodulemallocator"></a><a name="m_allocator"></a>CComAutoThreadModule::m_Allocator  
+##  <a name="m_allocator"></a>CComAutoThreadModule::m_Allocator  
  A partir de ATL 7.0, `CComAutoThreadModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
   
 ```
@@ -210,7 +220,7 @@ ThreadAllocator  m_Allocator;
 ### <a name="remarks"></a>Comentarios  
  El objeto de administración de selección de subproceso. De forma predeterminada, el `ThreadAllocator` parámetro de plantilla de clase es [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
   
-##  <a name="a-namemnthreadsa--ccomautothreadmodulemnthreads"></a><a name="m_nthreads"></a>CComAutoThreadModule::m_nThreads  
+##  <a name="m_nthreads"></a>CComAutoThreadModule::m_nThreads  
  A partir de ATL 7.0, `CComAutoThreadModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
   
 ```
@@ -220,7 +230,7 @@ int m_nThreads;
 ### <a name="remarks"></a>Comentarios  
  Contiene el número de subprocesos en el módulo del archivo EXE. Cuando [Init](#init) se llama, `m_nThreads` está establecido en el `nThreads` el valor del parámetro. Asociado de subprocesamiento cada estado administrado por un [CComApartment](../../atl/reference/ccomapartment-class.md) objeto.  
   
-##  <a name="a-namempapartmentsa--ccomautothreadmodulempapartments"></a><a name="m_papartments"></a>CComAutoThreadModule::m_pApartments  
+##  <a name="m_papartments"></a>CComAutoThreadModule::m_pApartments  
  A partir de ATL 7.0, `CComAutoThreadModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
   
 ```
@@ -230,7 +240,7 @@ CComApartment* m_pApartments;
 ### <a name="remarks"></a>Comentarios  
  Apunta a una matriz de [CComApartment](../../atl/reference/ccomapartment-class.md) objetos, cada uno de ellos administra un apartamento en el módulo. El número de elementos de la matriz se basa en el [m_nThreads](#m_nthreads) miembro.  
   
-##  <a name="a-nameunlocka--ccomautothreadmoduleunlock"></a><a name="unlock"></a>CComAutoThreadModule::Unlock  
+##  <a name="unlock"></a>CComAutoThreadModule::Unlock  
  A partir de ATL 7.0, `CComAutoThreadModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
   
 ```

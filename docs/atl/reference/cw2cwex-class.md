@@ -10,10 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CW2CWEX
-- ATL::CW2CWEX
-- ATL.CW2CWEX
-- ATL.CW2CWEX<t_nBufferLength>
-- ATL::CW2CWEX<t_nBufferLength>
+- ATLCONV/ATL::CW2CWEX
+- ATLCONV/ATL::CW2CWEX::CW2CWEX
+- ATLCONV/ATL::CW2CWEX::m_psz
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +103,7 @@ class CW2CWEX
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlconv.h  
   
-##  <a name="a-namecw2cwexa--cw2cwexcw2cwex"></a><a name="cw2cwex"></a>CW2CWEX::CW2CWEX  
+##  <a name="cw2cwex"></a>CW2CWEX::CW2CWEX  
  El constructor.  
   
 ```
@@ -122,7 +121,7 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>Comentarios  
  Asigna el búfer que se utiliza en el proceso de traducción.  
   
-##  <a name="a-namedtora--cw2cwexcw2cwex"></a><a name="dtor"></a>CW2CWEX:: ~ CW2CWEX  
+##  <a name="dtor"></a>CW2CWEX:: ~ CW2CWEX  
  Destructor.  
   
 ```
@@ -132,14 +131,14 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>Comentarios  
  Libera el búfer asignado.  
   
-##  <a name="a-namempsza--cw2cwexmpsz"></a><a name="m_psz"></a>CW2CWEX::m_psz  
+##  <a name="m_psz"></a>CW2CWEX::m_psz  
  El miembro de datos que almacena la cadena de origen.  
   
 ```
 LPCWSTR m_psz;
 ```  
   
-##  <a name="a-nameoperatorlpcwstra--cw2cwexoperator-lpcwstr"></a><a name="operator_lpcwstr"></a>CW2CWEX::operator LPCWSTR  
+##  <a name="operator_lpcwstr"></a>CW2CWEX::operator LPCWSTR  
  Operador de conversión.  
   
 ```  

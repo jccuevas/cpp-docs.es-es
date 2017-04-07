@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::CMFCToolBarFontComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::GetFontDesc
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::SetFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +98,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxtoolbarfontcombobox.h  
   
-##  <a name="a-namecmfctoolbarfontcomboboxa--cmfctoolbarfontcomboboxcmfctoolbarfontcombobox"></a><a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
+##  <a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
  Construye un [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) objeto.  
   
 ```  
@@ -158,7 +162,7 @@ CMFCToolBarFontComboBox();
   
  [!code-cpp[NVC_MFC_WordPad&#7;](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
   
-##  <a name="a-namegetfontdesca--cmfctoolbarfontcomboboxgetfontdesc"></a><a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
+##  <a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
  Devuelve un puntero a la `CMFCFontInfo` objeto para un índice especificado en el cuadro combinado.  
   
 ```  
@@ -172,7 +176,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a un `CMFCFontInfo` objeto. Si `iIndex` no especifica un índice de elemento válido, el valor devuelto es `NULL`.  
   
-##  <a name="a-namemnfontheighta--cmfctoolbarfontcomboboxmnfontheight"></a><a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
+##  <a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
  Especifica el alto, en píxeles, de caracteres en el cuadro combinado de fuente si el cuadro combinado tiene propietario estilo de dibujo.  
   
 ```  
@@ -182,7 +186,7 @@ static int m_nFontHeight
 ### <a name="remarks"></a>Comentarios  
  Si el `m_nFontHeight` variable es 0, el alto se calcula automáticamente según la fuente predeterminada del cuadro combinado. El alto incluye el ascenso de caracteres a partir de la línea de base y el descenso de caracteres debajo de la línea de base.  
   
-##  <a name="a-namesetfonta--cmfctoolbarfontcomboboxsetfont"></a><a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
+##  <a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
  Selecciona que la fuente en el cuadro combinado de fuente según el nombre de la fuente y el carácter había establecido que se especifica en los parámetros.  
   
 ```  

@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CPrimitiveElementTraits<T>
 - CPrimitiveElementTraits
-- ATL.CPrimitiveElementTraits
-- ATL::CPrimitiveElementTraits<T>
-- ATL::CPrimitiveElementTraits
+- ATLCOLL/ATL::CPrimitiveElementTraits
+- ATLCOLL/ATL::CPrimitiveElementTraits::INARGTYPE
+- ATLCOLL/ATL::CPrimitiveElementTraits::OUTARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,14 +84,14 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcoll.h  
   
-##  <a name="a-nameinargtypea--cprimitiveelementtraitsinargtype"></a><a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE  
  Tipo de datos que se va a usar para agregar elementos al objeto de la clase de colección.  
   
 ```
 typedef T INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cprimitiveelementtraitsoutargtype"></a><a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE  
  El tipo de datos que se usará para recuperar los elementos de objeto de la clase de colección.  
   
 ```

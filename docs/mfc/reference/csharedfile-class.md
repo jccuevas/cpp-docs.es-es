@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSharedFile
+- AFXADV/CSharedFile
+- AFXADV/CSharedFile::CSharedFile
+- AFXADV/CSharedFile::Detach
+- AFXADV/CSharedFile::SetHandle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +94,7 @@ class CSharedFile : public CMemFile
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxadv.h  
   
-##  <a name="a-namecsharedfilea--csharedfilecsharedfile"></a><a name="csharedfile"></a>CSharedFile::CSharedFile  
+##  <a name="csharedfile"></a>CSharedFile::CSharedFile  
  Construye un `CSharedFile` de objeto y le asigna memoria.  
   
 ```  
@@ -106,7 +110,7 @@ CSharedFile(
  `nGrowBytes`  
  El incremento de la asignación de memoria en bytes.  
   
-##  <a name="a-namedetacha--csharedfiledetach"></a><a name="detach"></a>CSharedFile::Detach  
+##  <a name="detach"></a>CSharedFile::Detach  
  Llame a esta función para cerrar el archivo de memoria y desconectar desde el bloque de memoria.  
   
 ```  
@@ -119,7 +123,7 @@ HGLOBAL Detach();
 ### <a name="remarks"></a>Comentarios  
  Puede volver a abrirlo llamando a [SetHandle](#sethandle), utilizando el identificador devuelto por **separar**.  
   
-##  <a name="a-namesethandlea--csharedfilesethandle"></a><a name="sethandle"></a>CSharedFile::SetHandle  
+##  <a name="sethandle"></a>CSharedFile::SetHandle  
  Llame a esta función para adjuntar un bloque de memoria global para la `CSharedFile` objeto.  
   
 ```  

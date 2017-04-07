@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IConnectionPointContainerImpl
-- ATL.IConnectionPointContainerImpl
-- ATL.IConnectionPointContainerImpl<T>
 - IConnectionPointContainerImpl
-- ATL::IConnectionPointContainerImpl<T>
+- ATLCOM/ATL::IConnectionPointContainerImpl
+- ATLCOM/ATL::IConnectionPointContainerImpl::EnumConnectionPoints
+- ATLCOM/ATL::IConnectionPointContainerImpl::FindConnectionPoint
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +85,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="a-nameenumconnectionpointsa--iconnectionpointcontainerimplenumconnectionpoints"></a><a name="enumconnectionpoints"></a>IConnectionPointContainerImpl::EnumConnectionPoints  
+##  <a name="enumconnectionpoints"></a>IConnectionPointContainerImpl::EnumConnectionPoints  
  Crea un enumerador para recorrer en iteración los puntos de conexión admitidos en el objeto conectable.  
   
 ```
@@ -96,7 +95,7 @@ STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
 ### <a name="remarks"></a>Comentarios  
  Consulte [IConnectionPointContainer:: EnumConnectionPoints](http://msdn.microsoft.com/library/windows/desktop/ms682460) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namefindconnectionpointa--iconnectionpointcontainerimplfindconnectionpoint"></a><a name="findconnectionpoint"></a>IConnectionPointContainerImpl::FindConnectionPoint  
+##  <a name="findconnectionpoint"></a>IConnectionPointContainerImpl::FindConnectionPoint  
  Recupera un puntero de interfaz al punto de conexión que admite el IID especificado.  
   
 ```
