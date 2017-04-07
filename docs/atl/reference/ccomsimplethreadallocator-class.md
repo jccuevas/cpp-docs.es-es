@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 377e7f2fa6d8377d46e98b52e9c8f075b10956a8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 04946d07bea39eb739c31a3254355d3527d2e9c3
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ccomsimplethreadallocator-class"></a>Clase CComSimpleThreadAllocator
@@ -68,7 +68,7 @@ class CComSimpleThreadAllocator
  **Encabezado:** atlbase.h  
   
 ##  <a name="getthread"></a>CComSimpleThreadAllocator::GetThread  
- Selecciona un subproceso especificando el siguiente subproceso en la secuencia.  
+ Selecciona un subproceso especificando el siguiente subproceso de la secuencia.  
   
 ```
 int GetThread(CComApartment* /* pApt */, int nThreads);
@@ -76,13 +76,13 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
   
 ### <a name="parameters"></a>Parámetros  
  `pApt`  
- No se utiliza en la implementación predeterminada ATL.  
+ No se utiliza en la implementación predeterminada de ATL.  
   
  `nThreads`  
  El número máximo de subprocesos en el módulo del archivo EXE.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un entero entre cero y ( `nThreads` – 1). Identifica uno de los subprocesos en el módulo del archivo EXE.  
+ Un entero comprendido entre cero y ( `nThreads` - 1). Identifica uno de los subprocesos en el módulo del archivo EXE.  
   
 ### <a name="remarks"></a>Comentarios  
  Puede invalidar `GetThread` para proporcionar un método diferente de la selección o para hacer uso de la `pApt` parámetro.  
@@ -91,5 +91,5 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
   
 ## <a name="see-also"></a>Vea también  
  [Clase CComApartment](../../atl/reference/ccomapartment-class.md)   
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 
