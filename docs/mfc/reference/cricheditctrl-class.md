@@ -110,9 +110,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 9e79a6728471acd08052d87b97645407d1f7cc47
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 262b2b8548f203a210b1aabbe149fe25cf6ad655
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl (clase)
@@ -514,7 +514,7 @@ long FindText(
  Puntero a la [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) estructurar dando a los parámetros de la búsqueda y devolver el intervalo donde se encontró la coincidencia.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Posición de carácter de base cero de la siguiente coincidencia; – 1 si no hay nada más coincidencias.  
+ Posición de carácter de base cero de la siguiente coincidencia; -1 si no hay nada más coincidencias.  
   
 ### <a name="remarks"></a>Comentarios  
  Puede buscar uno hacia arriba o hacia abajo al establecer los parámetros de intervalo apropiado el [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) estructura dentro de la **FINDTEXTEX** estructura.  
@@ -712,7 +712,7 @@ int GetLine(
  La línea copiada no contiene un carácter nulo de terminación.  
   
 > [!NOTE]
->  Debido a la primera palabra del búfer que almacena el número de caracteres que se va a copiar, asegúrese de que su búfer tiene al menos 4 bytes de longitud.  
+>  Debido a la primera palabra del búfer que almacena el número de caracteres que se va a copiar, asegúrese de que el búfer es al menos de 4 bytes de longitud.  
   
  Para obtener más información, consulte [EM_GETLINE](http://msdn.microsoft.com/library/windows/desktop/bb761584) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
@@ -869,7 +869,7 @@ void GetSel(
   
 - **Función miembro GetSel (** `nStartChar` **,** `nEndChar` **)** este formulario devuelve los límites de los parámetros `nStartChar` y `nEndChar`.  
   
- La selección incluye todos los elementos, si el principio ( **cpMin** o `nStartChar`) es 0 y el extremo ( **cpMax** o `nEndChar`) es – 1.  
+ La selección incluye todos los elementos, si el principio ( **cpMin** o `nStartChar`) es 0 y el extremo ( **cpMax** o `nEndChar`) es - 1.  
   
  Para obtener más información, consulte [EM_EXGETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788001) mensaje y [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) estructura en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
@@ -1109,10 +1109,10 @@ long LineFromChar(long nIndex) const;
   
 ### <a name="parameters"></a>Parámetros  
  `nIndex`  
- Contiene el valor de índice de base cero para el carácter que desee en el texto del control de edición, o -1. Si `nIndex` es – 1, especifica la línea actual, es decir, la línea que contiene el símbolo de intercalación.  
+ Contiene el valor de índice de base cero para el carácter que desee en el texto del control de edición, o -1. Si `nIndex` es -1, especifica la línea actual, es decir, la línea que contiene el símbolo de intercalación.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El número de línea de base cero de la línea que contiene el índice de carácter especificado por `nIndex`. Si `nIndex` es – 1, se devuelve el número de la línea que contiene el primer carácter de la selección. Si no hay ninguna selección, se devuelve el número de línea actual.  
+ El número de línea de base cero de la línea que contiene el índice de carácter especificado por `nIndex`. Si `nIndex` es -1, se devuelve el número de la línea que contiene el primer carácter de la selección. Si no hay ninguna selección, se devuelve el número de línea actual.  
   
 ### <a name="remarks"></a>Comentarios  
  Un índice de carácter es el número de caracteres desde el principio del control rich edit. Recuento de caracteres, de un elemento OLE se cuenta como un único carácter.  
@@ -1131,10 +1131,10 @@ int LineIndex(int nLine = -1) const;
   
 ### <a name="parameters"></a>Parámetros  
  `nLine`  
- Contiene el valor de índice de la línea deseada en el texto del control de edición, o -1. Si `nLine` es – 1, especifica la línea actual, es decir, la línea que contiene el símbolo de intercalación.  
+ Contiene el valor de índice de la línea deseada en el texto del control de edición, o -1. Si `nLine` es -1, especifica la línea actual, es decir, la línea que contiene el símbolo de intercalación.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El índice de carácter de la línea especificada en `nLine` o – 1 si el número de línea especificado es mayor, a continuación, el número de líneas en el control de edición.  
+ El índice de carácter de la línea especificada en `nLine` o -1 si el número de línea especificado es mayor, a continuación, el número de líneas en el control de edición.  
   
 ### <a name="remarks"></a>Comentarios  
  El índice de carácter es el número de caracteres desde el principio del control rich edit a la línea especificada.  
@@ -1153,7 +1153,7 @@ int LineLength(int nLine = -1) const;
   
 ### <a name="parameters"></a>Parámetros  
  `nLine`  
- Especifica el índice de carácter de un carácter en la línea cuya longitud se va a recuperar. Si este parámetro es – 1, se devuelve la longitud de la línea actual (la línea que contiene el símbolo de intercalación), sin incluir la longitud de cualquier texto dentro de la línea seleccionado. Cuando `LineLength` se llama para un control de edición de línea única, este parámetro se ignora.  
+ Especifica el índice de carácter de un carácter en la línea cuya longitud se va a recuperar. Si este parámetro es -1, se devuelve la longitud de la línea actual (la línea que contiene el símbolo de intercalación), sin incluir la longitud de cualquier texto dentro de la línea seleccionado. Cuando `LineLength` se llama para un control de edición de línea única, este parámetro se ignora.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Cuando `LineLength` se llama para un control de edición de varias líneas, el valor devuelto es la longitud (en bytes) de la línea especificada por `nLine`. Cuando `LineLength` se llama para un control de edición de línea única, el valor devuelto es la longitud (en bytes) del texto en el control de edición.  
@@ -1566,7 +1566,7 @@ void SetRect(LPCRECT lpRect);
  [CRect](../../atl-mfc-shared/reference/crect-class.md) o un puntero a un [RECT](../../mfc/reference/rect-structure1.md) que indica los nuevos límites del rectángulo de formato.  
   
 ### <a name="remarks"></a>Comentarios  
- El rectángulo de formato es el rectángulo de limitación para el texto. El rectángulo de limitación es independiente del tamaño de la ventana del control rich Edit. Cuando esto `CRichEditCtrl` objeto se crea por primera vez, el rectángulo de formato es el mismo tamaño que el área de cliente de la ventana. Use `SetRect` para que el rectángulo formato mayor o menor que la ventana de edición enriquecida.  
+ El rectángulo de formato es el rectángulo de limitación para el texto. El rectángulo de limitación es independiente del tamaño de la ventana del control rich Edit.. Cuando esto `CRichEditCtrl` objeto se crea por primera vez, el rectángulo de formato es el mismo tamaño que el área de cliente de la ventana. Use `SetRect` para que el rectángulo formato mayor o menor que la ventana de edición enriquecida.  
   
  Para obtener más información, consulte [EM_SETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761657) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
@@ -1603,7 +1603,7 @@ void SetSel(CHARRANGE& cr);
   
  El símbolo de intercalación se coloca al final de la selección indicada por el mayor número de inicio ( **cpMin** o `nStartChar`) y al final ( **cpMax** o `nEndChar`) índices. Esta función desplaza el contenido de la `CRichEditCtrl` para que el símbolo de intercalación está visible.  
   
- Para seleccionar todo el texto de esta `CRichEditCtrl` objeto, llame a `SetSel` con un índice de inicio de 0 y un índice final de – 1.  
+ Para seleccionar todo el texto de esta `CRichEditCtrl` objeto, llame a `SetSel` con un índice de inicio de 0 y un índice final de - 1.  
   
  Para obtener más información, consulte [EM_EXSETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788007) mensaje y [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) estructura en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
