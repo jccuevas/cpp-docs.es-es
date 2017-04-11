@@ -42,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 66b5e6cbfaadd4b57d301de74fc2e0b815956952
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 4a82f66f0b6f6535de8e9707c2d68b94b7eb69c5
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdbexception-class"></a>Clase CDBException
@@ -98,7 +98,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_CONNECT_FAIL** no se pudo conectar al origen de datos. Se pasa un **NULL** `CDatabase` tomando como puntero a su constructor de conjunto de registros y el intento siguiente para crear una conexión `GetDefaultConnect` error.  
   
-- **AFX_SQL_ERROR_DATA_TRUNCATED** solicita más datos de los que ha proporcionado para el almacenamiento de información. Para obtener información acerca de cómo aumentar el almacenamiento de datos proporcionado para `CString` o `CByteArray` tipos de datos, vea el `nMaxLength` argumento para [RFX_Text](http://msdn.microsoft.com/library/de3c7581-d26c-40cb-81f3-c492ef4809f6) y [RFX_Binary](http://msdn.microsoft.com/library/908ff945-3ad0-43a1-9932-cdcdc8b14915) en "Macros y funciones globales".  
+- **AFX_SQL_ERROR_DATA_TRUNCATED** solicita más datos de los que ha proporcionado para el almacenamiento de información. Para obtener información acerca de cómo aumentar el almacenamiento de datos proporcionado para `CString` o `CByteArray` tipos de datos, vea el `nMaxLength` argumento para [RFX_Text](record-field-exchange-functions.md#rfx_text) y [RFX_Binary](record-field-exchange-functions.md#rfx_binary) en "Macros y funciones globales".  
   
 - **AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED** una llamada a `CRecordset::Open` solicitar un conjunto de registros dinámicos no se pudo. Conjuntos de registros dinámicos no admiten el controlador.  
   

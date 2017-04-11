@@ -45,9 +45,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: d411b9da8618eaac57045a1db05251517422976a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f0b85aa0a297b5961240f10fcb9854a0d3001948
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cobject-class"></a>CObject (clase)
@@ -76,35 +76,35 @@ class AFX_NOVTABLE CObject
 |[CObject::GetRuntimeClass](#getruntimeclass)|Devuelve el `CRuntimeClass` estructura correspondiente a la clase de este objeto.|  
 |[CObject:: IsKindOf](#iskindof)|Comprueba la relación de este objeto para una clase determinada.|  
 |[CObject::IsSerializable](#isserializable)|Comprueba si este objeto se puede serializar.|  
-|[CObject:: Serialize](#serialize)|Carga o almacena un objeto desde y hacia un archivo.|  
+|[CObject:: Serialize](#serialize)|Carga o almacena un objeto del usuario o para un archivo.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[Eliminar CObject::operator](#operator_delete)|Especial **eliminar** operador.|  
-|[CObject::operator nueva](#operator_new)|Especial **nuevo** operador.|  
+|[Eliminación de CObject::operator](#operator_delete)|Especial **eliminar** operador.|  
+|[CObject::operator nueva](#operator_new)|Especial **nueva** operador.|  
   
 ## <a name="remarks"></a>Comentarios  
- Actúa como la raíz no sólo para las clases de biblioteca como `CFile` y `CObList`, sino también para las clases que se escribe. `CObject`proporciona servicios básicos, incluidos  
+ Que actúa como la raíz no solo para las clases de biblioteca como `CFile` y `CObList`, sino también para las clases que se escribe. `CObject`Proporciona los servicios básicos, incluidos  
   
 -   Compatibilidad con la serialización  
   
--   Información de clases en tiempo de ejecución  
+-   Información de clase en tiempo de ejecución  
   
 -   Resultados de diagnóstico de objeto  
   
 -   Compatibilidad con las clases de colección  
   
- Tenga en cuenta que `CObject` no admite herencia múltiple. Las clases derivadas sólo pueden tener una `CObject` clase base y que `CObject` debe estar situada en la jerarquía. Sin embargo, es admisible, estructuras y no- `CObject`-clases derivadas en bifurcaciones derecho de herencia múltiple.  
+ Tenga en cuenta que `CObject` no se admite la herencia múltiple. Las clases derivadas pueden tener solo una `CObject` clase base y que `CObject` debe estar situado en la jerarquía. Sin embargo, está permitido, tienen estructuras y no- `CObject`-clases derivadas en bifurcaciones de herencia múltiple derecho.  
   
- Obtendrá las ventajas principales de `CObject` si utiliza algunas de las macros opcionales en la implementación de la clase y las declaraciones de derivación.  
+ Se dará cuenta de las ventajas principales de `CObject` si utiliza algunas de las macros opcionales de la implementación de la clase y las declaraciones de derivación.  
   
- Las macros de primer nivel, [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic) y [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic), permitir el acceso en tiempo de ejecución para el nombre de clase y su posición en la jerarquía. Esto, a su vez, permite volcar diagnóstico significativos.  
+ Las macros de primer nivel, [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic) y [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic), permitir el acceso de tiempo de ejecución para el nombre de clase y su posición en la jerarquía. Esto, a su vez, permite volcar diagnóstico significativos.  
   
- Las macros de segundo nivel, [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) y [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial), incluir toda la funcionalidad de las macros de primer nivel, y permiten un objeto "serialización" hacia y desde un "archivo".  
+ Las macros de segundo nivel, [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) y [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial), incluir toda la funcionalidad de las macros de primer nivel y permiten que un objeto "serializará" hacia y desde un "archivo".  
   
- Para obtener información sobre cómo derivar clases de C++ y Microsoft Foundation classes en general y usar `CObject`, consulte [utilizando CObject](../../mfc/using-cobject.md) y [serialización](../../mfc/serialization-in-mfc.md).  
+ Para obtener información sobre cómo derivar clases de C++ y Microsoft Foundation classes en general y usar `CObject`, consulte [usar CObject](../../mfc/using-cobject.md) y [serialización](../../mfc/serialization-in-mfc.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `CObject`  
@@ -120,23 +120,23 @@ virtual void AssertValid() const;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- `AssertValid`realiza una comprobación de validez en este objeto de comprobar su estado interno. En la versión de depuración de la biblioteca de `AssertValid` puede imponer y, por tanto, termina el programa con un mensaje que indica el número de línea y el nombre de archivo donde la aserción.  
+ `AssertValid`realiza una comprobación de validez de este objeto y comprueba su estado interno. En la versión de depuración de la biblioteca de `AssertValid` puede declara una aserción y, por tanto, finalizar el programa con un mensaje que indica el número de línea y el nombre de archivo donde la aserción.  
   
- Al escribir su propia clase, debe reemplazar el `AssertValid` función para proporcionar servicios de diagnóstico para usted y otros usuarios de la clase. Invalidado `AssertValid` normalmente llama el `AssertValid` función de su clase base antes de comprobar los miembros de datos únicos de la clase derivada.  
+ Al escribir su propia clase, debe invalidar el `AssertValid` función para proporcionar servicios de diagnóstico para usted mismo y a otros usuarios de la clase. Reemplazados `AssertValid` llama normalmente el `AssertValid` función de su clase base antes de proteger los miembros de datos únicos para la clase derivada.  
   
- Porque `AssertValid` es una **const** función, no se permite cambiar el estado del objeto durante la prueba. Su propia clase derivada `AssertValid` funciones no debería producir excepciones, pero en su lugar debe imponer si detectan los datos de objeto no válido.  
+ Dado que `AssertValid` es un **const** función, no se permite cambiar el estado del objeto durante la prueba. Su propia clase derivada `AssertValid` funciones no deben producir excepciones, pero en su lugar debe imponer si detectan los datos de objeto no válido.  
   
- La definición de "validez" depende de la clase del objeto. Como regla general, la función debe realizar una "comprobación superficial". Es decir, si un objeto contiene punteros a otros objetos, debe comprobar para ver si los punteros no son nulos, pero no debería realizar pruebas de validez sobre los objetos que hace referencia a los punteros.  
+ La definición de "validez" depende de la clase del objeto. Como regla general, la función debe realizar una "comprobación superficial". Es decir, si un objeto contiene punteros a otros objetos, debe comprobar para ver si los punteros no son nulos, pero no debería realizar pruebas en los objetos que hace referencia a los punteros de validez.  
   
 ### <a name="example"></a>Ejemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase que se usa en todos los `CObject` ejemplos.  
+ Vea [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase usada en todos los `CObject` ejemplos.  
   
- [!code-cpp[NVC_MFCCObjectSample&#7;](../../mfc/codesnippet/cpp/cobject-class_1.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample #7](../../mfc/codesnippet/cpp/cobject-class_1.cpp)]  
   
  Para obtener otro ejemplo, vea [AfxDoForAllObjects](diagnostic-services.md#afxdoforallobjects).  
   
 ##  <a name="cobject"></a>CObject::CObject  
- Estas funciones son la norma `CObject` constructores.  
+ Estas funciones son el estándar `CObject` constructores.  
   
 ```  
 CObject();  
@@ -148,19 +148,19 @@ CObject(const CObject& objectSrc);
  Una referencia a otro`CObject`  
   
 ### <a name="remarks"></a>Comentarios  
- La versión predeterminada es invocada automáticamente por el constructor de la clase derivada.  
+ El constructor de la clase derivada llama automáticamente a la versión predeterminada.  
   
- Si la clase es serializable (incorpora el `IMPLEMENT_SERIAL` macro), entonces debe tener un constructor predeterminado (un constructor sin argumentos) en la declaración de clase. Si no necesita un constructor predeterminado, declarar a privado o protegido constructor "vacío". Para obtener más información, consulte [CObject utilizando](../../mfc/using-cobject.md).  
+ Si la clase es serializable (que incorpora el `IMPLEMENT_SERIAL` macro), debe tener un constructor predeterminado (un constructor sin argumentos) en la declaración de clase. Si no tiene un constructor predeterminado, declare privado o protegido constructor "vacío". Para obtener más información, consulte [CObject utilizando](../../mfc/using-cobject.md).  
   
- El constructor de copias de clase de estándar C++ de forma predeterminada, realiza una copia miembro a miembro. La presencia de privado `CObject` constructor de copias garantiza un mensaje de error de compilador si el constructor de copias de la clase es necesaria, pero no está disponible. Por lo tanto, debe proporcionar un constructor de copia si la clase necesita esta capacidad.  
+ El constructor de copia estándar de C++ predeterminado clase hace una copia miembro a miembro. La presencia de privado `CObject` constructor de copias garantiza un mensaje de error del compilador si el constructor de copias de la clase es necesaria, pero no está disponible. Por lo tanto, debe proporcionar un constructor de copias si su clase necesita esta capacidad.  
   
 ### <a name="example"></a>Ejemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase utilizada en el `CObject` ejemplos.  
+ Vea [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase usada en el `CObject` ejemplos.  
   
- [!code-cpp[NVC_MFCCObjectSample Nº&8;](../../mfc/codesnippet/cpp/cobject-class_2.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample #8](../../mfc/codesnippet/cpp/cobject-class_2.cpp)]  
   
 ##  <a name="dump"></a>CObject::Dump  
- Vuelca el contenido del objeto para una [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objeto.  
+ Vuelca el contenido del objeto para un [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objeto.  
   
 ```  
 virtual void Dump(CDumpContext& dc) const;  
@@ -171,23 +171,23 @@ virtual void Dump(CDumpContext& dc) const;
  El contexto de volcado de diagnóstico para volcar, normalmente `afxDump`.  
   
 ### <a name="remarks"></a>Comentarios  
- Al escribir su propia clase, debe reemplazar el `Dump` función para proporcionar servicios de diagnóstico para usted y otros usuarios de la clase. Invalidado `Dump` normalmente llama el `Dump` función de su clase base antes de imprimir los miembros de datos únicos de la clase derivada. `CObject::Dump`Imprime el nombre de clase si la clase utiliza el `IMPLEMENT_DYNAMIC` o `IMPLEMENT_SERIAL` (macro).  
+ Al escribir su propia clase, debe invalidar el `Dump` función para proporcionar servicios de diagnóstico para usted mismo y a otros usuarios de la clase. Reemplazados `Dump` llama normalmente el `Dump` función de su clase base antes de imprimir los miembros de datos únicos para la clase derivada. `CObject::Dump`Imprime el nombre de clase si la clase utiliza el `IMPLEMENT_DYNAMIC` o `IMPLEMENT_SERIAL` macro.  
   
 > [!NOTE]
 >  Su `Dump` función debe imprimir un carácter de nueva línea al final de su salida.  
   
  `Dump`llamadas tienen sentido sólo en la versión de depuración de la biblioteca Microsoft Foundation Class. Debe poner entre corchetes llamadas, las declaraciones de función y las implementaciones de funciones con **#ifdef _DEBUG** /  `#endif` instrucciones de compilación condicional.  
   
- Puesto que `Dump` es una **const** función, no se permite cambiar el estado del objeto durante el volcado de memoria.  
+ Puesto que `Dump` es un **const** función, no se permite cambiar el estado del objeto durante el volcado de memoria.  
   
- El [inserción CDumpContext (<)> </)> ](../../mfc/reference/cdumpcontext-class.md#operator_lt_lt) llamadas `Dump` cuando un `CObject` se inserta el puntero.  
+ El [CDumpContext inserción (<)> </)> ](../../mfc/reference/cdumpcontext-class.md#operator_lt_lt) llamadas `Dump` cuando un `CObject` se inserta el puntero.  
   
- `Dump`permite volcar sólo "acíclico" de objetos. Por ejemplo, se puede volcar una lista de objetos, pero si uno de los objetos es la propia lista, finalmente se desborde la pila.  
+ `Dump`permite solo "acíclico" volcado de objetos. Por ejemplo, se puede volcar una lista de objetos, pero si uno de los objetos es la propia lista, finalmente se desborde la pila.  
   
 ### <a name="example"></a>Ejemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase que se usa en todos los `CObject` ejemplos.  
+ Vea [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase usada en todos los `CObject` ejemplos.  
   
- [!code-cpp[NVC_MFCCObjectSample&#9;](../../mfc/codesnippet/cpp/cobject-class_3.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample n.º 9](../../mfc/codesnippet/cpp/cobject-class_3.cpp)]  
   
 ##  <a name="getruntimeclass"></a>CObject::GetRuntimeClass  
  Devuelve el `CRuntimeClass` estructura correspondiente a la clase de este objeto.  
@@ -206,20 +206,20 @@ virtual CRuntimeClass* GetRuntimeClass() const;
   
 - **int m_nObjectSize** el tamaño del objeto, en bytes. Si el objeto tiene miembros de datos que señalan a la memoria asignada, no se incluye el tamaño de la memoria.  
   
-- **UINT m_wSchema** el número de esquema (– 1 para las clases de objetos no serializables). Consulte la [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro para obtener una descripción del número de esquema.  
+- **UINT m_wSchema** el número de esquema (-1 para las clases de objetos no serializables). Consulte la [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro para obtener una descripción del número de esquema.  
   
-- **CObject\* (PASCAL\* m_pfnCreateObject) ()** un puntero de función en el constructor predeterminado que crea un objeto de la clase (válido sólo si la clase admite la creación dinámica; en caso contrario, devuelve **NULL**).  
+- **CObject\* (PASCAL\* m_pfnCreateObject) ()** un puntero a función al constructor predeterminado que crea un objeto de la clase (válido únicamente si la clase admite la creación dinámica; en caso contrario, devuelve **NULL**).  
   
 - **CRuntimeClass\* (PASCAL\* m_pfn_GetBaseClass) ()** si la aplicación se vincula dinámicamente a la versión AFXDLL de MFC, un puntero a una función que devuelve el `CRuntimeClass` estructura de la clase base.  
   
 - **CRuntimeClass\* m_pBaseClass** si la aplicación está vinculada estáticamente a MFC, un puntero a la `CRuntimeClass` estructura de la clase base.  
   
- Esta función requiere el uso de la [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic), [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate), o [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro en la implementación de la clase. De lo contrario, obtendrá resultados incorrectos.  
+ Esta función requiere el uso de la [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic), [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate), o [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro en la implementación de la clase. En caso contrario, obtendrá resultados incorrectos.  
   
 ### <a name="example"></a>Ejemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase que se usa en todos los `CObject` ejemplos.  
+ Vea [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase usada en todos los `CObject` ejemplos.  
   
- [!code-cpp[NVC_MFCCObjectSample&#10;](../../mfc/codesnippet/cpp/cobject-class_4.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample #10](../../mfc/codesnippet/cpp/cobject-class_4.cpp)]  
   
 ##  <a name="iskindof"></a>CObject:: IsKindOf  
  Comprueba la relación de este objeto para una clase determinada.  
@@ -233,17 +233,17 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
  Un puntero a un [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) estructura asociada con su `CObject`-clase derivada.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si el objeto que corresponde a la clase; en caso contrario, 0.  
+ Es distinto de cero si el objeto se corresponde con la clase; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función prueba `pClass` si (1) es un objeto de la clase especificada o (2) es un objeto de una clase derivada de la clase especificada. Esta función sólo funciona para las clases que se declara con la [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic), [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate), o [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) macro.  
+ Esta función comprueba `pClass` para ver si (1) es un objeto de la clase especificada o (2) no es un objeto de una clase derivada de la clase especificada. Esta función solo funciona para las clases que se declara con el [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic), [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate), o [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) macro.  
   
- No utilice esta función ampliamente porque se frustra la característica de polimorfismo de C++. Utilice las funciones virtuales.  
+ No utilice esta función ampliamente porque se frustra la característica de polimorfismo de C++. Utilice las funciones virtuales en su lugar.  
   
 ### <a name="example"></a>Ejemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase que se usa en todos los `CObject` ejemplos.  
+ Vea [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase usada en todos los `CObject` ejemplos.  
   
- [!code-cpp[NVC_MFCCObjectSample&#11;](../../mfc/codesnippet/cpp/cobject-class_5.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample Nº 11](../../mfc/codesnippet/cpp/cobject-class_5.cpp)]  
   
 ##  <a name="isserializable"></a>CObject::IsSerializable  
  Comprueba si este objeto es apto para la serialización.  
@@ -253,20 +253,20 @@ BOOL IsSerializable() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si este objeto se puede serializar; en caso contrario, 0.  
+ Es distinto de cero si se puede serializar este objeto; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Para que una clase sea serializable, su declaración debe contener el [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) (macro) y la implementación deben contener la [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro.  
+ Para que una clase que sean serializables, su declaración debe contener el [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) macro y la implementación deben contener la [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro.  
   
 > [!NOTE]
->  No reemplaza esta función.  
+>  No se invalidan esta función.  
   
 ### <a name="example"></a>Ejemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase que se usa en todos los `CObject` ejemplos.  
+ Vea [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase usada en todos los `CObject` ejemplos.  
   
- [!code-cpp[NVC_MFCCObjectSample&#12;](../../mfc/codesnippet/cpp/cobject-class_6.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample #12](../../mfc/codesnippet/cpp/cobject-class_6.cpp)]  
   
-##  <a name="operator_delete"></a>Eliminar CObject::operator  
+##  <a name="operator_delete"></a>Eliminación de CObject::operator  
  Para la versión de lanzamiento de la biblioteca de operador **eliminar** libera la memoria asignada por el operador **nueva**.  
   
 ```  
@@ -287,23 +287,23 @@ void PASCAL operator delete(
 ### <a name="remarks"></a>Comentarios  
  En la versión de depuración, operador **eliminar** participa en un esquema de asignación de supervisión diseñado para detectar pérdidas de memoria.  
   
- Si utiliza la línea de código  
+ Si usa la línea de código  
   
- [!code-cpp[NVC_MFCCObjectSample&#14;](../../mfc/codesnippet/cpp/cobject-class_7.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample #14](../../mfc/codesnippet/cpp/cobject-class_7.cpp)]  
   
- antes de cualquiera de sus implementaciones en una. CPP Archivo, a continuación, la tercera versión de **eliminar** van a utilizar, almacenar el nombre de archivo y número de línea en el bloque asignado para los informes más adelante. No tiene que preocuparse de suministrar los parámetros adicionales. una macro se encarga de eso por usted.  
+ antes de cualquiera de sus implementaciones en una. CPP Archivo, a continuación, la tercera versión de **eliminar** se usará, almacenar el nombre de archivo y número de línea en el bloque asignado para la creación posterior de informes. No tiene que preocuparse sobre cómo proporcionar los parámetros adicionales; una macro se encarga de para usted.  
   
- Incluso si no utiliza `DEBUG_NEW` en modo de depuración, sigue apareciendo la detección de pérdidas, pero sin los informes de número de línea del archivo de código fuente se ha descrito anteriormente.  
+ Aunque no use `DEBUG_NEW` en modo de depuración, se sigue obteniendo la detección de pérdidas, pero sin los informes de número de línea del archivo de código fuente se ha descrito anteriormente.  
   
- Si invalida operadores **nueva** y **eliminar**, pierda esta capacidad de diagnóstico.  
+ Si se anulan los operadores de **nueva** y **eliminar**, pierda esta capacidad de diagnóstico.  
   
 ### <a name="example"></a>Ejemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase utilizada en el `CObject` ejemplos.  
+ Vea [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase usada en el `CObject` ejemplos.  
   
- [!code-cpp[NVC_MFCCObjectSample&#15;](../../mfc/codesnippet/cpp/cobject-class_8.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample #15](../../mfc/codesnippet/cpp/cobject-class_8.cpp)]  
   
 ##  <a name="operator_new"></a>CObject::operator nueva  
- Para la versión de lanzamiento de la biblioteca de operador **nueva** realiza una asignación de memoria óptima de forma similar a `malloc`.  
+ Para la versión de lanzamiento de la biblioteca de operador **nueva** realiza una asignación óptima de memoria de una manera similar a `malloc`.  
   
 ```  
 void* PASCAL operator new(size_t nSize);  
@@ -317,23 +317,23 @@ void* PASCAL operator new(
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- En la versión de depuración, operador **nuevo** participa en un esquema de asignación de supervisión diseñado para detectar pérdidas de memoria.  
+ En la versión de depuración, operador **nueva** participa en un esquema de asignación de supervisión diseñado para detectar pérdidas de memoria.  
   
- Si utiliza la línea de código  
+ Si usa la línea de código  
   
- [!code-cpp[NVC_MFCCObjectSample&#14;](../../mfc/codesnippet/cpp/cobject-class_7.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample #14](../../mfc/codesnippet/cpp/cobject-class_7.cpp)]  
   
- antes de cualquiera de sus implementaciones en una. CPP Archivo, a continuación, la segunda versión de **nuevo** van a utilizar, almacenar el nombre de archivo y número de línea en el bloque asignado para los informes más adelante. No tiene que preocuparse de suministrar los parámetros adicionales. una macro se encarga de eso por usted.  
+ antes de cualquiera de sus implementaciones en una. CPP Archivo, a continuación, la segunda versión de **nueva** se usará, almacenar el nombre de archivo y número de línea en el bloque asignado para la creación posterior de informes. No tiene que preocuparse sobre cómo proporcionar los parámetros adicionales; una macro se encarga de para usted.  
   
- Incluso si no utiliza `DEBUG_NEW` en modo de depuración, sigue apareciendo la detección de pérdidas, pero sin los informes de número de línea del archivo de código fuente se ha descrito anteriormente.  
+ Aunque no use `DEBUG_NEW` en modo de depuración, se sigue obteniendo la detección de pérdidas, pero sin los informes de número de línea del archivo de código fuente se ha descrito anteriormente.  
   
 > [!NOTE]
 >  Si invalida este operador, también debe invalidar **eliminar**. No utilice la biblioteca estándar de **_new_handler** (función).  
   
 ### <a name="example"></a>Ejemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase utilizada en el `CObject` ejemplos.  
+ Vea [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase usada en el `CObject` ejemplos.  
   
- [!code-cpp[NVC_MFCCObjectSample Nº&16;](../../mfc/codesnippet/cpp/cobject-class_9.h)]  
+ [!code-cpp[NVC_MFCCObjectSample Nº 16](../../mfc/codesnippet/cpp/cobject-class_9.h)]  
   
 ##  <a name="serialize"></a>CObject:: Serialize  
  Lee o escribe este objeto de o en un archivo.  
@@ -347,23 +347,23 @@ virtual void Serialize(CArchive& ar);
  Un `CArchive` objeto que se va a serializar a o desde.  
   
 ### <a name="remarks"></a>Comentarios  
- Debe invalidar `Serialize` para cada clase que se va a serializar. Invalidado `Serialize` debe llamar primero a la `Serialize` función de su clase base.  
+ Debe invalidar `Serialize` para cada clase que se va a serializar. Reemplazados `Serialize` debe llamar primero a la `Serialize` función de su clase base.  
   
- También debe utilizar el [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) macro en la declaración de clase y se debe utilizar el [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro en la implementación.  
+ También debe utilizar el [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) debe utilizar la macro en la declaración de clase así como el [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro en la implementación.  
   
- Utilice [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) o [CArchive::IsStoring](../../mfc/reference/carchive-class.md#isstoring) para determinar si el archivo se carga y almacenamiento.  
+ Use [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) o [CArchive::IsStoring](../../mfc/reference/carchive-class.md#isstoring) para determinar si el archivo se carga o almacenamiento.  
   
- `Serialize`llama a [CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject) y [CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject). Estas funciones están asociadas a la `CArchive` operador de inserción ( ** < \< **) y el operador de extracción ( ** >> **).  
+ `Serialize`llama a [CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject) y [CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject). Estas funciones están asociadas a la `CArchive` operador de inserción ( **< \<**) y el operador de extracción ( **>>**).  
   
  Para obtener ejemplos de serialización, vea el artículo [serialización: serializar un objeto](../../mfc/serialization-serializing-an-object.md).  
   
 ### <a name="example"></a>Ejemplo  
- Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase que se usa en todos los `CObject` ejemplos.  
+ Vea [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para obtener una lista de los `CAge` clase usada en todos los `CObject` ejemplos.  
   
- [!code-cpp[NVC_MFCCObjectSample&#13;](../../mfc/codesnippet/cpp/cobject-class_10.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample #13](../../mfc/codesnippet/cpp/cobject-class_10.cpp)]  
   
 ## <a name="see-also"></a>Vea también  
- [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)
+ [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
 
 
 

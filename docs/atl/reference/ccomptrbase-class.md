@@ -45,13 +45,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 28207e483b0bf56b9e3e98f487d174b8ae47e9e7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 65541d9e6f15bcc56811fa6a5d9d168737131108
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ccomptrbase-class"></a>Clase CComPtrBase
-Esta clase proporciona una base para usar las rutinas de memoria basado en COM de clases de punteros inteligentes.  
+Esta clase proporciona una base para las clases de puntero inteligente con rutinas de memoria basada en COM.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -78,13 +78,13 @@ class CComPtrBase
 |----------|-----------------|  
 |[¡CComPtrBase:: Advise](#advise)|Llamar a este método para crear una conexión entre el `CComPtrBase`del punto de conexión y el receptor de un cliente.|  
 |[CComPtrBase::Attach](#attach)|Llamar a este método para tomar posesión de un puntero existente.|  
-|[CComPtrBase:: CoCreateInstance](#cocreateinstance)|Llamar a este método para crear un objeto de la clase asociada con un Id. de clase especificado o el Id. de programa|  
+|[CComPtrBase:: CoCreateInstance](#cocreateinstance)|Llamar a este método para crear un objeto de la clase asociada con un Id. de clase o el identificador de programa especificados|  
 |[CComPtrBase::CopyTo](#copyto)|Llamar a este método para copiar el `CComPtrBase` puntero a otra variable de puntero.|  
 |[CComPtrBase::Detach](#detach)|Llamar a este método para liberar la propiedad de un puntero.|  
-|[CComPtrBase::IsEqualObject](#isequalobject)|Llamar a este método para comprobar si especificado **IUnknown** señala al mismo objeto asociado a la `CComPtrBase` objeto.|  
+|[CComPtrBase::IsEqualObject](#isequalobject)|Llamar a este método para comprobar si especificado **IUnknown** apunta al mismo objeto asociado a la `CComPtrBase` objeto.|  
 |[CComPtrBase::QueryInterface](#queryinterface)|Llame a este método para devolver un puntero a una interfaz especificada.|  
-|[CComPtrBase::Release](#release)|Llame a este método para liberar la interfaz.|  
-|[CComPtrBase::SetSite](#setsite)|Llamar a este método para establecer el sitio de la `CComPtrBase` objeto a la **IUnknown** del objeto primario.|  
+|[CComPtrBase::Release](#release)|Llamar a este método para liberar la interfaz.|  
+|[CComPtrBase::SetSite](#setsite)|Llamar a este método para establecer el sitio de la `CComPtrBase` el objeto a la **IUnknown** del objeto primario.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -92,11 +92,11 @@ class CComPtrBase
 |----------|-----------------|  
 |[CComPtrBase::operator T *](#operator_t_star)|El operador de conversión.|  
 |[¡CComPtrBase::operator!](#operator_not)|El operador NOT.|  
-|[CComPtrBase::operator aspecto](#operator_amp)|El aspecto de operador.|  
-|[CComPtrBase::operator *](#operator_star)|El * (operador).|  
-|[CComPtrBase::operator](#ccomptrbase__operator lt)|El menor-que el operador.|  
+|[CComPtrBase::operator siguiente](#operator_amp)|El siguiente operador.|  
+|[CComPtrBase::operator *](#operator_star)|El * operador.|  
+|[CComPtrBase::operator](#ccomptrbase__operator lt)|La menor-que el operador.|  
 |[CComPtrBase::operator ==](#operator_eq_eq)|El operador de igualdad.|  
-|[CComPtrBase::operator->](#operator_ptr)|El operador de miembros de puntero.|  
+|[CComPtrBase::operator->](#operator_ptr)|El operador de puntero a miembros.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
@@ -105,7 +105,7 @@ class CComPtrBase
 |[CComPtrBase::p](#p)|La variable de miembro de datos de puntero.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase proporciona la base para otros punteros inteligentes que utilizan rutinas de administración de memoria COM, como [CComQIPtr](../../atl/reference/ccomqiptr-class.md) y [CComPtr](../../atl/reference/ccomptr-class.md). Agregar sus propios operadores y constructores de las clases derivadas, pero se basan en los métodos proporcionados por `CComPtrBase`.  
+ Esta clase proporciona la base para otros punteros inteligentes que utilizan rutinas de administración de memoria COM, como [CComQIPtr](../../atl/reference/ccomqiptr-class.md) y [CComPtr](../../atl/reference/ccomptr-class.md). Las clases derivadas agregar sus propios constructores y operadores, pero se basan en los métodos proporcionados por `CComPtrBase`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcomcli.h  
@@ -122,19 +122,19 @@ HRESULT Advise(
   
 ### <a name="parameters"></a>Parámetros  
  *pUnk*  
- Un puntero al cliente **IUnknown**.  
+ Un puntero para el cliente **IUnknown**.  
   
  `iid`  
  El GUID del punto de conexión. Normalmente, esto es igual que la interfaz de salida administrada por el punto de conexión.  
   
  `pdw`  
- Puntero a la cookie que identifica de forma única la conexión.  
+ Un puntero a la cookie que identifica de forma única la conexión.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [AtlAdvise](http://msdn.microsoft.com/library/625a2f03-6b7f-4761-be5d-d2871d1d3254) para obtener más información.  
+ Vea [AtlAdvise](connection-point-global-functions.md#atladvise) para obtener más información.  
   
 ##  <a name="attach"></a>CComPtrBase::Attach  
  Llamar a este método para tomar posesión de un puntero existente.  
@@ -145,10 +145,10 @@ void Attach(T* p2) throw();
   
 ### <a name="parameters"></a>Parámetros  
  `p2`  
- La `CComPtrBase` objeto tomará posesión de este puntero.  
+ La `CComPtrBase` objeto tomará posesión de this (puntero).  
   
 ### <a name="remarks"></a>Comentarios  
- **Adjuntar** llamadas [CComPtrBase::Release](#release) en existente [CComPtrBase::p](#p) variable miembro y, a continuación, asigna `p2` a `CComPtrBase::p`. Cuando un `CComPtrBase` objeto toma posesión de un puntero, llama automáticamente a `Release` en el puntero que se eliminará el puntero y los datos asignados si el recuento de referencias en el objeto que se va a 0.  
+ **Adjuntar** llamadas [CComPtrBase::Release](#release) en existente [CComPtrBase::p](#p) variable miembro y, a continuación, asigna `p2` a `CComPtrBase::p`. Cuando un `CComPtrBase` objeto toma posesión de un puntero, llamará automáticamente `Release` en el puntero que eliminará el puntero y los datos asignados si el recuento de referencias en el objeto llega a 0.  
   
 ##  <a name="dtor"></a>CComPtrBase:: ~ CComPtrBase  
  Destructor.  
@@ -158,10 +158,10 @@ void Attach(T* p2) throw();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Libera la interfaz señalada por `CComPtrBase`.  
+ Libera la interfaz que señala `CComPtrBase`.  
   
 ##  <a name="cocreateinstance"></a>CComPtrBase:: CoCreateInstance  
- Llamar a este método para crear un objeto de la clase asociada con un Id. de clase especificado o el Id. de programa  
+ Llamar a este método para crear un objeto de la clase asociada con un Id. de clase o el identificador de programa especificados  
   
 ```
 HRESULT CoCreateInstance(  
@@ -180,21 +180,21 @@ HRESULT CoCreateInstance(
  Puntero a un ProgID, que se utiliza para recuperar el CLSID.  
   
  `pUnkOuter`  
- Si **NULL**, indica que el objeto no se está creando como parte de un agregado. Si no es **NULL**, es un puntero al objeto agregado **IUnknown** interfaz (el control **IUnknown**).  
+ Si **NULL**, indica que el objeto no se van a crear como parte de un agregado. Si no es **NULL**, es un puntero para el objeto agregado **IUnknown** interfaz (el control **IUnknown**).  
   
  `dwClsContext`  
  Contexto en el que se ejecutará el código que administra el objeto recién creado.  
   
  `rclsid`  
- CLSID asociado con los datos y el código que se utilizará para crear el objeto.  
+ Identificador CLSID asociado con los datos y el código que se usará para crear el objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
- En caso de error, devuelve S_OK éxito, o REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING o E_NOINTERFACE. Consulte [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) y [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) para obtener una descripción de estos errores.  
+ En caso de error, devuelve S_OK en correcto, o REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING o E_NOINTERFACE. Vea [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) y [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) para obtener una descripción de estos errores.  
   
 ### <a name="remarks"></a>Comentarios  
  Si se llama a la primera forma del método, [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) se usa para recuperar el CLSID. Ambas formas, a continuación, llame a [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
- En compilaciones de depuración, se producirá un error de aserción si [CComPtrBase::p](#p) no es igual a NULL.  
+ En las compilaciones de depuración, se producirá un error de aserción si [CComPtrBase::p](#p) no es igual a NULL.  
   
 ##  <a name="copyto"></a>CComPtrBase::CopyTo  
  Llamar a este método para copiar el `CComPtrBase` puntero a otra variable de puntero.  
@@ -208,12 +208,12 @@ HRESULT CopyTo(T** ppT) throw();
  Dirección de la variable que recibirá el `CComPtrBase` puntero.  
   
 ### <a name="return-value"></a>Valor devuelto  
- En caso de éxito, E_POINTER en caso de error, devuelve S_OK.  
+ Devuelve S_OK si se ejecuta correctamente, E_POINTER en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
  Copia la `CComPtrBase` puntero a *ppT*. El recuento de referencias el [CComPtrBase::p](#p) se incrementa una variable miembro.  
   
- Un error HRESULT que se devolverá si *ppT* es igual a NULL. En compilaciones de depuración, se producirá un error de aserción si *ppT* es igual a NULL.  
+ Un error HRESULT que se devolverá si *ppT* es igual a NULL. En las compilaciones de depuración, se producirá un error de aserción si *ppT* es igual a NULL.  
   
 ##  <a name="detach"></a>CComPtrBase::Detach  
  Llamar a este método para liberar la propiedad de un puntero.  
@@ -226,10 +226,10 @@ T* Detach() throw();
  Devuelve una copia del puntero.  
   
 ### <a name="remarks"></a>Comentarios  
- Libera la posesión de un puntero, se establece la [CComPtrBase::p](#p) variable de miembro de datos en NULL y devuelve una copia del puntero.  
+ Libera la propiedad de un puntero, Establece la [CComPtrBase::p](#p) variable de miembro de datos con valores NULL y devuelve una copia del puntero.  
   
 ##  <a name="isequalobject"></a>CComPtrBase::IsEqualObject  
- Llamar a este método para comprobar si especificado **IUnknown** señala al mismo objeto asociado a la `CComPtrBase` objeto.  
+ Llamar a este método para comprobar si especificado **IUnknown** apunta al mismo objeto asociado a la `CComPtrBase` objeto.  
   
 ```
 bool IsEqualObject(IUnknown* pOther) throw();
@@ -237,10 +237,10 @@ bool IsEqualObject(IUnknown* pOther) throw();
   
 ### <a name="parameters"></a>Parámetros  
  `pOther`  
- El **IUnknown \* ** para comparar.  
+ El **IUnknown \*** para comparar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve true si los objetos son idénticos.  
+ Devuelve true si los objetos son idénticos, y false en caso contrario.  
   
 ##  <a name="operator_not"></a>¡CComPtrBase::operator!  
  El operador NOT.  
@@ -253,26 +253,26 @@ bool operator!() const throw();
  Devuelve true si el `CComHeapPtr` puntero es igual a NULL, false en caso contrario.  
   
 ##  <a name="operator_amp"></a>CComPtrBase::operator&amp;  
- El aspecto de operador.  
+ El siguiente operador.  
   
 ```
 T** operator&() throw();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve la dirección del objeto indicado por la `CComPtrBase` objeto.  
+ Devuelve la dirección del objeto que señala el `CComPtrBase` objeto.  
   
 ##  <a name="operator_star"></a>CComPtrBase::operator *  
- El * (operador).  
+ El * operador.  
   
 ```
 T& operator*() const throw();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve el valor de [CComPtrBase::p](#p); es decir, un puntero al objeto al que hace referencia la `CComPtrBase` objeto.  
+ Devuelve el valor de [CComPtrBase::p](#p); es decir, un puntero al objeto al que hace referencia el `CComPtrBase` objeto.  
   
- Si las versiones de depuración, se producirá un error de aserción si [CComPtrBase::p](#p) no es igual a NULL.  
+ Si las compilaciones de depuración, se producirá un error de aserción si [CComPtrBase::p](#p) no es igual a NULL.  
   
 ##  <a name="operator_eq_eq"></a>CComPtrBase::operator ==  
  El operador de igualdad.  
@@ -286,7 +286,7 @@ bool operator== (T* pT) const throw();
  Un puntero a un objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve true si `CComPtrBase` y *pT* indican el mismo objeto, false en caso contrario.  
+ Devuelve true si `CComPtrBase` y *pT* apuntan al mismo objeto, false en caso contrario.  
   
 ##  <a name="operator_ptr"></a>CComPtrBase::operator-&gt;  
 
@@ -300,10 +300,10 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
  Devuelve el valor de la [CComPtrBase::p](#p) variable de miembro de datos.  
   
 ### <a name="remarks"></a>Comentarios  
- Utilice este operador para llamar a un método en una clase que apunta la `CComPtrBase` objeto. En compilaciones de depuración, se producirá un error de aserción si el `CComPtrBase` miembro de datos señala a NULL.  
+ Utilice este operador para llamar a un método en una clase que señala el `CComPtrBase` objeto. En compilaciones de depuración, se producirá un error de aserción si el `CComPtrBase` miembro de datos señala a NULL.  
   
 ##  <a name="operator_lt"></a>CComPtrBase::operator&lt;  
- El menor-que el operador.  
+ La menor-que el operador.  
   
 ```
 bool operator<(T* pT) const throw();
@@ -334,7 +334,7 @@ T* p;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Esta variable miembro contiene la información de puntero.  
+ Esta variable miembro contiene la información del puntero.  
   
 ##  <a name="queryinterface"></a>CComPtrBase::QueryInterface  
  Llame a este método para devolver un puntero a una interfaz especificada.  
@@ -352,25 +352,25 @@ template <class Q> HRESULT QueryInterface(Q
  Dirección de la variable de salida que recibe el puntero de interfaz solicitada.  
   
 ### <a name="return-value"></a>Valor devuelto  
- En caso de error, devuelve S_OK éxito o E_NOINTERFACE.  
+ En caso de error, devuelve S_OK resultado correcto o E_NOINTERFACE.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método llama a [IUnknown:: QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521).  
   
- En compilaciones de depuración, se producirá un error de aserción si *pp* no es igual a NULL.  
+ En las compilaciones de depuración, se producirá un error de aserción si *pp* no es igual a NULL.  
   
 ##  <a name="release"></a>CComPtrBase::Release  
- Llame a este método para liberar la interfaz.  
+ Llamar a este método para liberar la interfaz.  
   
 ```
 void Release() throw();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- La interfaz se libera, y [CComPtrBase::p](#p) se establece en NULL.  
+ Se lanza la interfaz, y [CComPtrBase::p](#p) se establece en NULL.  
   
 ##  <a name="setsite"></a>CComPtrBase::SetSite  
- Llamar a este método para establecer el sitio de la `CComPtrBase` objeto a la **IUnknown** del objeto primario.  
+ Llamar a este método para establecer el sitio de la `CComPtrBase` el objeto a la **IUnknown** del objeto primario.  
   
 ```
 HRESULT SetSite(IUnknown* punkParent) throw();
@@ -381,11 +381,11 @@ HRESULT SetSite(IUnknown* punkParent) throw();
  Un puntero a la **IUnknown** interfaz del elemento primario.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método llama a [AtlSetChildSite](http://msdn.microsoft.com/library/2a8ece19-6bfd-4e89-9d1d-e5a78f95e2df).  
+ Este método llama a [AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite).  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

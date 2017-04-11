@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 6b933b5388fccc2dc0e31d035aa7eb56de3b1866
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 02381d00226f40c5c84b2d957dfee6881742febb
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="catlcommodule-class"></a>Clase CAtlComModule
@@ -73,9 +73,9 @@ class CAtlComModule : public _ATL_COM_MODULE
 |[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|Llame a este método para anular el registro de una biblioteca de tipos.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CAtlComModule`implementa un módulo de servidor COM, lo que permite a los componentes del módulo de acceso a un cliente.  
+ `CAtlComModule`implementa un módulo de servidor COM, lo que permite un cliente tener acceso a los componentes del módulo.  
   
- Esta clase reemplaza la obsoleta [CComModule](../../atl/reference/ccommodule-class.md) clase utilizada en versiones anteriores de ATL. Consulte [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
+ Esta clase reemplaza el atributo obsolete [CComModule](../../atl/reference/ccommodule-class.md) clase usada en versiones anteriores de ATL. Vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)  
@@ -114,16 +114,16 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
   
 ### <a name="parameters"></a>Parámetros  
  `bRegTypeLib`  
- Es TRUE si la biblioteca de tipos se registrará. El valor predeterminado es FALSE.  
+ TRUE si la biblioteca de tipos se registrará. El valor predeterminado es FALSE.  
   
  `pCLSID`  
- Señala al CLSID del objeto que se va a registrar. Si es NULL (valor predeterminado), todos los objetos del mapa de objetos que se registra.  
+ Señala al CLSID del objeto que se va a registrar. Si se registrará NULL (valor predeterminado), todos los objetos del mapa de objetos.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Llama a la función global [AtlComModuleRegisterServer](http://msdn.microsoft.com/library/d11a0c91-0c56-4b1b-a5f5-1287970f798b).  
+ Llama a la función global [AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver).  
   
 ##  <a name="registertypelib"></a>CAtlComModule::RegisterTypeLib  
  Llamar a este método para registrar una biblioteca de tipos.  
@@ -138,10 +138,10 @@ HRESULT RegisterTypeLib();
  Cadena con el formato "\\\N", donde N es el índice de entero del recurso de biblioteca de tipos.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Agrega información sobre una biblioteca de tipos para el registro del sistema. Si la instancia del módulo que contiene varias bibliotecas de tipos, utilice la primera versión de este método para especificar que se debe utilizar la biblioteca de tipos.  
+ Agrega información sobre una biblioteca de tipos para el registro del sistema. Si la instancia del módulo que contiene varias bibliotecas de tipos, utilice la primera versión de este método para especificar qué biblioteca de tipos se debe usar.  
   
 ##  <a name="unregisterserver"></a>CAtlComModule::UnregisterServer  
  Llame a este método para anular el registro de cada objeto del mapa de objetos.  
@@ -154,16 +154,16 @@ HRESULT UnregisterServer(
   
 ### <a name="parameters"></a>Parámetros  
  `bRegTypeLib`  
- Es TRUE si se va a anular la biblioteca de tipos. El valor predeterminado es FALSE.  
+ TRUE si la biblioteca de tipos se puede anular el registro. El valor predeterminado es FALSE.  
   
  `pCLSID`  
- Señala el CLSID del objeto que se va a anular. Si es NULL (valor predeterminado), todos los objetos del mapa de objetos no se registra.  
+ Señala el CLSID del objeto que se puede anular el registro. Si es NULL (valor predeterminado), todos los objetos del mapa de objetos se cancelará.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Llama a la función global [AtlComModuleUnregisterServer](http://msdn.microsoft.com/library/c4ef3da4-def7-4aaf-b005-573a02e389d5).  
+ Llama a la función global [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).  
   
 ##  <a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib  
  Llame a este método para anular el registro de una biblioteca de tipos.  
@@ -178,12 +178,12 @@ HRESULT UnRegisterTypeLib();
  Cadena con el formato "\\\N", donde N es el índice de entero del recurso de biblioteca de tipos.  
   
 ### <a name="remarks"></a>Comentarios  
- Quita la información acerca de una biblioteca de tipos del registro del sistema. Si la instancia del módulo que contiene varias bibliotecas de tipos, utilice la primera versión de este método para especificar que se debe utilizar la biblioteca de tipos.  
+ Quita la información acerca de una biblioteca de tipos desde el registro del sistema. Si la instancia del módulo que contiene varias bibliotecas de tipos, utilice la primera versión de este método para especificar qué biblioteca de tipos se debe usar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
 ## <a name="see-also"></a>Vea también  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

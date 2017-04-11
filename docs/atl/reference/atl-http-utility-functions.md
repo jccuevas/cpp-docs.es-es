@@ -1,5 +1,5 @@
 ---
-title: Funciones de utilidad de ATL HTTP | Documentos de Microsoft
+title: Funciones de la utilidad de ATL HTTP | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,14 +11,14 @@ caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 translationtype: Machine Translation
-ms.sourcegitcommit: 9ab4b38b2ba14aca2240d12fff966d36750a3229
-ms.openlocfilehash: dd8b3a279148e2a5b72d96724c329e49cd5d3e5f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 0f55ad2529ac32647d72336b426e0790f5617561
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="atl-http-utility-functions"></a>Funciones de utilidad de HTTP de ATL
 
-Estas funciones permiten la manipulación de direcciones URL.
+Estas funciones admiten la manipulación de direcciones URL.
 
 |||  
 |-|-|  
@@ -34,7 +34,7 @@ Estas funciones permiten la manipulación de direcciones URL.
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlutil.h  
 
-## <a name="a-nameatlcanonicalizeurla-atlcanonicalizeurl"></a><a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
 Llame a esta función para canonizar una dirección URL, que incluye la conversión de espacios y caracteres no seguros en secuencias de escape.  
   
 ```    
@@ -47,19 +47,27 @@ inline BOOL AtlCanonicalizeUrl(
   
 ### <a name="parameters"></a>Parámetros  
  `szUrl`  
- La dirección URL para dar formato canónico.  
+ La dirección URL que puede dar formato canónico.  
   
  `szCanonicalized`  
  Búfer asignado por el autor de llamada para recibir la dirección URL con formato canónico.  
   
  `pdwMaxLength`  
- Puntero a una variable que contiene la longitud en caracteres de `szCanonicalized`. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer sin incluir el carácter nulo de terminación. Si se produce un error en la función, la variable recibe la longitud en bytes del búfer, incluido el espacio para el carácter null de terminación.  
+ Puntero a una variable que contiene la longitud en caracteres de `szCanonicalized`. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer sin incluir el carácter nulo de terminación. Si se produce un error en la función, la variable recibe la longitud requerida en bytes del búfer, incluido el espacio para el carácter nulo de terminación.  
   
  `dwFlags`  
- Indicadores que controlan el comportamiento de esta función. Consulte [ATL_URL marcas](http://msdn.microsoft.com/library/76e8cc5c-4e17-4eb1-ac29-a94d5256c4a7).  
+ Indicadores ATL_URL que controlan el comportamiento de esta función. 
+
+- `ATL_URL_BROWSER_MODE`No se codifican o descodifican caracteres después de "#" o "?" y no quita los espacios en blanco finales después de "?". Si no se especifica este valor, se codifica la dirección URL completa y se quita el espacio en blanco final.
+- `ATL_URL_DECODE`Convierte todas las secuencias XX % a caracteres, incluidas las secuencias de escape, antes de que se analiza la dirección URL.
+- `ATL_URL_ENCODE_PERCENT`Codifica los signos de porcentaje encontrados. De forma predeterminada, no se codifican los signos de porcentaje.
+- `ATL_URL_ENCODE_SPACES_ONLY`Codifica solo espacios.
+- `ATL_URL_ESCAPE`Convierte todas las secuencias de escape (% XX) en sus caracteres correspondientes.
+- `ATL_URL_NO_ENCODE`No convierte los caracteres no seguros en secuencias de escape.
+- `ATL_URL_NO_META`No se quitan las secuencias de metadatos (como "."y"..") de la dirección URL. 
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve **TRUE** correctamente, **FALSE** en caso de error.  
+ Devuelve **TRUE** se ejecuta correctamente, **FALSE** en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
  Se comporta como la versión actual de [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342) , pero no requiere WinInet o Internet Explorer para instalarse.  
@@ -67,7 +75,7 @@ inline BOOL AtlCanonicalizeUrl(
 ### <a name="see-also"></a>Vea también  
  [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
 
- ## <a name="a-nameatlcombineurla-atlcombineurl"></a><a name="atlcombineurl"></a>AtlCombineUrl
+ ## <a name="atlcombineurl"></a>AtlCombineUrl
  Llame a esta función para combinar una dirección URL base y una dirección URL relativa en una única dirección URL canónica.  
   
 ```    
@@ -90,18 +98,18 @@ inline BOOL AtlCombineUrl(
  Búfer asignado por el autor de llamada para recibir la dirección URL con formato canónico.  
   
  `pdwMaxLength`  
- Puntero a una variable que contiene la longitud en caracteres de `szBuffer`. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer sin incluir el carácter nulo de terminación. Si se produce un error en la función, la variable recibe la longitud en bytes del búfer, incluido el espacio para el carácter null de terminación.  
+ Puntero a una variable que contiene la longitud en caracteres de `szBuffer`. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer sin incluir el carácter nulo de terminación. Si se produce un error en la función, la variable recibe la longitud requerida en bytes del búfer, incluido el espacio para el carácter nulo de terminación.  
   
  `dwFlags`  
- Indicadores que controlan el comportamiento de esta función. Consulte [ATL_URL marcas](http://msdn.microsoft.com/library/76e8cc5c-4e17-4eb1-ac29-a94d5256c4a7).  
+ Indicadores que controlan el comportamiento de esta función. Vea [ATL_URL marcas](http://msdn.microsoft.com/library/76e8cc5c-4e17-4eb1-ac29-a94d5256c4a7).  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve **TRUE** correctamente, **FALSE** en caso de error.  
+ Devuelve **TRUE** se ejecuta correctamente, **FALSE** en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
  Se comporta como la versión actual de [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) , pero no requiere WinInet o Internet Explorer para instalarse.  
   
-## <a name="a-nameatlescapeurla-atlescapeurl"></a><a name="atlescapeurl"></a>AtlEscapeUrl
+## <a name="atlescapeurl"></a>AtlEscapeUrl
  Llame a esta función para convertir todos los caracteres no seguros en secuencias de escape.  
   
 ```    
@@ -128,16 +136,16 @@ inline BOOL AtlEscapeUrl(
  Búfer asignado por el autor de la llamada a la que se escribirá la URL convertida.  
   
  `pdwStrLen`  
- Puntero a una variable DWORD. Si la función se realiza correctamente, `pdwStrLen` recibe el número de caracteres escritos en el búfer, sin incluir el carácter nulo de terminación. Si se produce un error en la función, la variable recibe la longitud en bytes del búfer, incluido el espacio para el carácter null de terminación. Al usar la versión de caracteres anchos de este método, `pdwStrLen` recibe el número de caracteres necesarios, no el número de bytes.  
+ Puntero a una variable DWORD. Si la función se realiza correctamente, `pdwStrLen` recibe el número de caracteres escritos en el búfer, sin incluir el carácter nulo de terminación. Si se produce un error en la función, la variable recibe la longitud requerida en bytes del búfer, incluido el espacio para el carácter nulo de terminación. Cuando se usa la versión de caracteres anchos de este método, `pdwStrLen` recibe el número de caracteres necesarios, no el número de bytes.  
   
  `dwMaxLength`  
- El tamaño del búfer de `lpszStringOut`.  
+ El tamaño del búfer `lpszStringOut`.  
   
  `dwFlags`  
- Indicadores que controlan el comportamiento de esta función. Consulte [ATL_URL marcas](http://msdn.microsoft.com/library/76e8cc5c-4e17-4eb1-ac29-a94d5256c4a7).  
+ Indicadores ATL_URL que controlan el comportamiento de esta función. Vea [ATLCanonicalizeUrl](#atlcanonicalizeurl) para los valores posibles.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve **TRUE** correctamente, **FALSE** en caso de error.  
+ Devuelve **TRUE** se ejecuta correctamente, **FALSE** en caso de error.  
   
 ## <a name="atlgetdefaulturlport"></a> 
  Llame a esta función para obtener el número de puerto predeterminado asociado a un protocolo de Internet o un esquema específicos.  
@@ -153,7 +161,7 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ### <a name="return-value"></a>Valor devuelto  
  El [ATL_URL_PORT](atl-typedefs.md#atl_url_port) asociado con el esquema especificado o ATL_URL_INVALID_PORT_NUMBER si no se reconoce el esquema.  
 
-## <a name="a-nameatlisunsafeurlchara-atlisunsafeurlchar"></a><a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
  Llame a esta función para comprobar si un carácter es seguro para usarlo en una dirección URL.  
   
 ```  
@@ -162,15 +170,15 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
   
 ### <a name="parameters"></a>Parámetros  
  `chIn`  
- Carácter que se va a realizar una comprobación de seguridad.  
+ El carácter que se va a realizar una comprobación de seguridad.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve **TRUE** si el carácter de entrada no es seguro, **FALSE** en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
- Caracteres que no deben utilizarse en las direcciones URL se pueden probar utilizando esta función y convertirse utilizando [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
+ Caracteres que no deben usarse en las direcciones URL se pueda comprobar mediante esta función y para convertir mediante [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
-## <a name="a-nameatlunescapeurla-atlunescapeurl"></a><a name="atlunescapeurl"></a>AtlUnescapeUrl
+## <a name="atlunescapeurl"></a>AtlUnescapeUrl
  Llame a esta función para convertir de nuevo los caracteres de escape en sus valores originales.  
   
 ```    
@@ -195,18 +203,18 @@ inline BOOL AtlUnescapeUrl(
  Búfer asignado por el autor de la llamada a la que se escribirá la URL convertida.  
   
  `pdwStrLen`  
- Puntero a una variable DWORD. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer sin incluir el carácter nulo de terminación. Si se produce un error en la función, la variable recibe la longitud en bytes del búfer, incluido el espacio para el carácter null de terminación.  
+ Puntero a una variable DWORD. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer sin incluir el carácter nulo de terminación. Si se produce un error en la función, la variable recibe la longitud requerida en bytes del búfer, incluido el espacio para el carácter nulo de terminación.  
   
  `dwMaxLength`  
- El tamaño del búfer de `lpszStringOut`.  
+ El tamaño del búfer `lpszStringOut`.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve **TRUE** correctamente, **FALSE** en caso de error.  
+ Devuelve **TRUE** se ejecuta correctamente, **FALSE** en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
  Invierte el proceso de conversión aplicado [AtlEscapeUrl](#atlescapeurl).  
   
-## <a name="a-namergbtohtmla-rgbtohtml"></a><a name="rgbtohtml"></a>RGBToHtml
+## <a name="rgbtohtml"></a>RGBToHtml
 Convierte un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor para el texto HTLM correspondiente a ese valor de color.  
   
 ```  
@@ -227,12 +235,12 @@ bool inline RGBToHtml(
  El tamaño en bytes del búfer (incluido el espacio para el terminador nulo).  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve **TRUE** correctamente, **FALSE** en caso de error.  
+ Devuelve **TRUE** se ejecuta correctamente, **FALSE** en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
  Un valor de color HTML es un signo de almohadilla seguido por un valor de 6 dígitos hexadecimal con 2 dígitos para cada uno de los componentes rojos, verde y azules del color (por ejemplo, es blanco #FFFFFF).  
   
-## <a name="a-namesystemtimetohttpdatea-systemtimetohttpdate"></a><a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
 Llame a esta función para convertir una hora del sistema en una cadena con un formato adecuado para usarla en encabezados HTTP.  
   
 ```  
@@ -243,13 +251,13 @@ inline void SystemTimeToHttpDate(
   
 ### <a name="parameters"></a>Parámetros  
  `st`  
- La hora del sistema se obtendrán como una cadena de formato HTTP.  
+ La hora del sistema a obtenerse como una cadena de formato HTTP.  
   
  *strTime*  
- Una referencia a una variable de cadena para recibir HTTP de fecha y hora como se define en RFC 2616 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) y RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt)).  
+ Una referencia a una variable de cadena que recibirá el HTTP fecha y hora como se define en RFC 2616 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) y RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt)).  
   
 ## <a name="see-also"></a>Vea también  
  [Conceptos](../../atl/active-template-library-atl-concepts.md)   
- [Componentes de escritorio de COM de ATL](../../atl/atl-com-desktop-components.md)   
+ [Componentes de escritorio COM de ATL](../../atl/atl-com-desktop-components.md)   
 
 

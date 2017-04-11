@@ -1,94 +1,94 @@
 ---
-title: "SOCKADDR_IN (Estructura) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SOCKADDR_IN"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SOCKADDR_IN (estructura)"
+title: SOCKADDR_IN (estructura) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SOCKADDR_IN
+dev_langs:
+- C++
+helpviewer_keywords:
+- SOCKADDR_IN structure
 ms.assetid: e8cd7c34-78bd-4e28-a990-eb3ca070b7a6
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# SOCKADDR_IN (Estructura)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: a1283740c0abb0538e5912efa11500c46b45bb9f
+ms.lasthandoff: 04/04/2017
 
-En la familia de direcciones de Internet, la estructura de `SOCKADDR_IN` utiliza Windows Sockets para especificar una dirección local o remota del extremo al conectar un socket.  
+---
+# <a name="sockaddrin-structure"></a>SOCKADDR_IN (Estructura)
+En la familia de direcciones de Internet, el `SOCKADDR_IN` estructura se usa Windows Sockets para especificar una dirección de extremo local o remoto que se va a conectar un socket.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      struct sockaddr_in{  
-   short sin_family;  
-   unsigned short sin_port;  
-   struct in_addr sin_addr;  
-   char sin_zero[8];  
+struct sockaddr_in{  
+    short sin_family;  
+    unsigned short sin_port;  
+struct in_addr sin_addr;  
+    char sin_zero[8];  
 };  
 ```  
   
-#### Parámetros  
- *sin\_family*  
- Familia de direcciones \(debe ser **AF\_INET**\).  
+#### <a name="parameters"></a>Parámetros  
+ *sin_family*  
+ Familia de direcciones (debe ser **AF_INET**).  
   
- *sin\_port*  
- Puerto IP.  
+ *sin_port*  
+ Puerto de IP.  
   
- *sin\_addr*  
+ *sin_addr*  
  Dirección IP.  
   
- *sin\_zero*  
- Relleno para crear estructura del mismo tamaño que `SOCKADDR`.  
+ *Sin_Zero*  
+ Relleno para igualar el tamaño como de la estructura `SOCKADDR`.  
   
-## Comentarios  
- Este es el formulario de la estructura concreta `SOCKADDR` de la familia de direcciones de Internet y se puede convertir en `SOCKADDR`.  
+## <a name="remarks"></a>Comentarios  
+ Esta es la forma de la `SOCKADDR` estructura específicas de la familia de direcciones de Internet y se puede convertir en `SOCKADDR`.  
   
- El componente de la dirección IP de esta estructura es de tipo **IN\_ADDR**.  La estructura **IN\_ADDR** se define en el archivo de encabezado WINSOCK.H de Windows Sockets como sigue:  
+ El componente de dirección IP de esta estructura es de tipo **dir_in**. El **dir_in** estructura se define en el archivo de encabezado de Windows Sockets WINSOCK. H como sigue:  
   
- `struct   in_addr {`  
+```  
+struct in_addr {
+    union {
+        struct {  
+            unsigned char s_b1, s_b2, s_b3, s_b4;  
+        } S_un_b;  
+        struct {  
+            unsigned short s_w1, s_w2;
+        } S_un_w;
+        unsigned long S_addr;
+    } S_un;  
+};  
+```  
   
- `union   {`  
-  
- `struct{`  
-  
- `unsigned  char   s_b1,`  
-  
- `s_b2,`  
-  
- `s_b3,`  
-  
- `s_b4;`  
-  
- `}  S_un_b;`  
-  
- `struct  {`  
-  
- `unsigned  short  s_w1,`  
-  
- `s_w2;`  
-  
- `}  S_un_w;`  
-  
- `unsigned long  S_addr;`  
-  
- `} S_un;`  
-  
- `};`  
-  
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** winsock2.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [SOCKADDR \(Estructura\)](../../mfc/reference/sockaddr-structure.md)
+ [SOCKADDR (estructura)](../../mfc/reference/sockaddr-structure.md)
+

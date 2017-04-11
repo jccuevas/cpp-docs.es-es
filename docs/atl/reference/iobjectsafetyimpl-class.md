@@ -41,13 +41,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: cff5995555cd069855f9d7becb9eb8367e80c920
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: cdcc008797e94988fb42fd6239603fa300a84233
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="iobjectsafetyimpl-class"></a>Clase IObjectSafetyImpl
-Esta clase proporciona una implementación predeterminada de la `IObjectSafety` interfaz para permitir que un cliente recuperar y establecer los niveles de seguridad de un objeto.  
+Esta clase proporciona una implementación predeterminada de la `IObjectSafety` interfaz para permitir que un cliente recuperar y establecer niveles de seguridad de un objeto.  
   
 > [!IMPORTANT]
 >  Esta clase y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
@@ -68,7 +68,7 @@ class IObjectSafetyImpl
   
 - **INTERFACESAFE_FOR_UNTRUSTED_CALLER** la interfaz identificada por la [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) parámetro `riid` deben estar seguros para scripting.  
   
-- **INTERFACESAFE_FOR_UNTRUSTED_DATA** la interfaz identificada por la `SetInterfaceSafetyOptions` parámetro `riid` deben estar seguros para datos no es de confianza durante la inicialización.  
+- **INTERFACESAFE_FOR_UNTRUSTED_DATA** la interfaz identificada por la `SetInterfaceSafetyOptions` parámetro `riid` deben estar seguro de datos no es de confianza durante la inicialización.  
   
 ## <a name="members"></a>Miembros  
   
@@ -76,8 +76,8 @@ class IObjectSafetyImpl
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|Recupera las opciones de seguridad admitidas por el objeto, así como las opciones de seguridad establecidas para el objeto.|  
-|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|Hace que el objeto seguros para la inicialización o secuencias de comandos.|  
+|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|Recupera las opciones de seguridad admitidas por el objeto, así como las opciones de seguridad establecidas actualmente para el objeto.|  
+|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|Hace que el objeto seguras para inicialización o secuencias de comandos.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
@@ -86,11 +86,11 @@ class IObjectSafetyImpl
 |[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Almacena el nivel de seguridad actual del objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- Clase `IObjectSafetyImpl` proporciona una implementación predeterminada de `IObjectSafety`. El `IObjectSafety` interfaz permite que un cliente recuperar y establecer los niveles de seguridad de un objeto. Por ejemplo, puede llamar un explorador web **IObjectSafety::SetInterfaceSafetyOptions** para hacer que un control seguro para la inicialización o seguros para scripting.  
+ Clase `IObjectSafetyImpl` proporciona una implementación predeterminada de `IObjectSafety`. El `IObjectSafety` interfaz permite que un cliente recuperar y establecer niveles de seguridad de un objeto. Por ejemplo, puede llamar un explorador web **IObjectSafety::SetInterfaceSafetyOptions** para hacer que un control seguro para la inicialización o seguros para scripting.  
   
- Tenga en cuenta que el uso de la [IMPLEMENTED_CATEGORY](http://msdn.microsoft.com/library/d898ef34-5684-4709-beb9-7114ddd96674) macro con el **CATID_SafeForScripting** y **CATID_SafeForInitializing** categorías de componentes proporciona una manera alternativa de especificar que un componente es seguro.  
+ Tenga en cuenta que cuando se utiliza el [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) macro con el **CATID_SafeForScripting** y **CATID_SafeForInitializing** categorías del componente proporciona una manera alternativa de especificar si un componente está protegido.  
   
- **Artículos relacionados con** [Tutorial ATL](../../atl/active-template-library-atl-tutorial.md), [crear un proyecto ATL](../../atl/reference/creating-an-atl-project.md)  
+ **Artículos relacionados** [Tutorial ATL](../../atl/active-template-library-atl-tutorial.md), [crear un proyecto ATL](../../atl/reference/creating-an-atl-project.md)  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `IObjectSafety`  
@@ -101,7 +101,7 @@ class IObjectSafetyImpl
  **Encabezado:** atlctl.h  
   
 ##  <a name="getinterfacesafetyoptions"></a>IObjectSafetyImpl::GetInterfaceSafetyOptions  
- Recupera las opciones de seguridad admitidas por el objeto, así como las opciones de seguridad establecidas para el objeto.  
+ Recupera las opciones de seguridad admitidas por el objeto, así como las opciones de seguridad establecidas actualmente para el objeto.  
   
 ```
 HRESULT GetInterfaceSafetyOptions(  
@@ -114,9 +114,9 @@ HRESULT GetInterfaceSafetyOptions(
  La implementación devuelve los valores adecuados para cualquier interfaz admitida por la implementación del objeto de **IUnknown:: QueryInterface**.  
   
 > [!IMPORTANT]
->  Cualquier objeto que admita `IObjectSafety` es responsable de su propia seguridad y de cualquier objeto que delega. El programador debe tomar en cuenta las cuestiones que se deriven de la ejecución de código en el contexto del usuario, scripting entre sitios y realizar la comprobación de la zona adecuado.  
+>  Cualquier objeto que admita `IObjectSafety` es responsable de su propia seguridad y el de cualquier objeto que delega. El programador debe tomar en cuenta las cuestiones que se deriven de la ejecución de código en el contexto del usuario, scripting entre sitios y realizar la comprobación de la zona adecuado.  
   
- Consulte [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vea [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety  
  Almacena el nivel de seguridad actual del objeto.  
@@ -126,7 +126,7 @@ DWORD m_dwCurrentSafety;
 ```  
   
 ##  <a name="setinterfacesafetyoptions"></a>IObjectSafetyImpl::SetInterfaceSafetyOptions  
- Hace que el objeto sea seguro para la inicialización o secuencias de comandos estableciendo el [m_dwCurrentSafety](#m_dwcurrentsafety) miembro en el valor adecuado.  
+ Hace que el objeto seguras para inicialización o secuencias de comandos estableciendo el [m_dwCurrentSafety](#m_dwcurrentsafety) miembro en el valor adecuado.  
   
 ```
 HRESULT SetInterfaceSafetyOptions(  
@@ -139,11 +139,11 @@ HRESULT SetInterfaceSafetyOptions(
  La implementación devuelve **E_NOINTERFACE** para cualquier interfaz no admitido la implementación del objeto de **IUnknown:: QueryInterface**.  
   
 > [!IMPORTANT]
->  Cualquier objeto que admita `IObjectSafety` es responsable de su propia seguridad y de cualquier objeto que delega. El programador debe tomar en cuenta las cuestiones que se deriven de la ejecución de código en el contexto del usuario, scripting entre sitios y realizar la comprobación de la zona adecuado.  
+>  Cualquier objeto que admita `IObjectSafety` es responsable de su propia seguridad y el de cualquier objeto que delega. El programador debe tomar en cuenta las cuestiones que se deriven de la ejecución de código en el contexto del usuario, scripting entre sitios y realizar la comprobación de la zona adecuado.  
   
- Consulte [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vea [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ## <a name="see-also"></a>Vea también  
  [Interfaz IObjectSafety](https://msdn.microsoft.com/library/aa768224.aspx)   
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

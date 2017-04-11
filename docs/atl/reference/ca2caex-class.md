@@ -37,16 +37,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: f104a62144e7fd8ac802c27dfe940a7f96d0e79a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 9185bc18981898d699aa3f3eeb490c76bf5138fb
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ca2caex-class"></a>Clase CA2CAEX
-Esta clase es utilizada por las macros de conversión de cadena `CA2CTEX` y `CT2CAEX`y la definición de tipo **CA2CA**.  
+Esta clase se utiliza con macros de conversión de cadena `CA2CTEX` y `CT2CAEX`y la definición de tipo **CA2CA**.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -57,7 +57,7 @@ class CA2CAEX
   
 #### <a name="parameters"></a>Parámetros  
  `t_nBufferLength`  
- El tamaño del búfer utilizado en el proceso de traducción. La longitud predeterminada es 128 bytes.  
+ El tamaño del búfer usado en el proceso de traducción. La longitud predeterminada es de 128 bytes.  
   
 ## <a name="members"></a>Miembros  
   
@@ -81,7 +81,7 @@ class CA2CAEX
 |[CA2CAEX::m_psz](#m_psz)|El miembro de datos que almacena la cadena de origen.|  
   
 ## <a name="remarks"></a>Comentarios  
- A menos que se requiere funcionalidad adicional, use `CA2CTEX`, `CT2CAEX`, o **CA2CA** en su propio código.  
+ A menos que sea necesaria una funcionalidad adicional, utilice `CA2CTEX`, `CT2CAEX`, o **CA2CA** en su propio código.  
   
  Esta clase es segura utilizar en bucles y no desbordarán la pila. Las macros y clases de conversión de ATL utilizarán de forma predeterminada la página de código ANSI del subproceso actual para la conversión.  
   
@@ -95,10 +95,10 @@ class CA2CAEX
   
 - **CA2CA**  
   
- Para obtener una explicación de estas macros de conversión de texto, consulte [Macros de conversión de cadenas de MFC y ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
+ Para obtener una descripción de estas macros de conversión de texto, consulte [Macros de conversión de cadena de MFC y ATL](string-conversion-macros.md).  
   
 ## <a name="example"></a>Ejemplo  
- Consulte [Macros de conversión de cadenas de MFC y ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) para obtener un ejemplo del uso de estas macros de conversión de cadena.  
+ Vea [Macros de conversión de cadena de MFC y ATL](string-conversion-macros.md) para obtener un ejemplo del uso de estas macros de conversión de cadena.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlconv.h  
@@ -116,7 +116,7 @@ CA2CAEX(LPCSTR psz) throw(...);
  La cadena de texto que se va a convertir.  
   
  `nCodePage`  
- No utilizado en esta clase.  
+ No se utiliza en esta clase.  
   
 ### <a name="remarks"></a>Comentarios  
  Crea el búfer necesario para la traducción.  
@@ -154,5 +154,5 @@ operator LPCSTR() const throw();
  [Clase CW2AEX](../../atl/reference/cw2aex-class.md)   
  [Clase CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Clase CW2WEX](../../atl/reference/cw2wex-class.md)   
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

@@ -443,9 +443,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 77be7b572bd5fa6d90d52d14a40706f251176a2b
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 8888bd1296b5397daf288fa81f00a8783d9cde46
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cwnd-class"></a>CWnd (clase)
@@ -2424,7 +2424,7 @@ BOOL ExecuteDlgInit(LPVOID lpResource);
  **TRUE** si un recurso de cuadro de diálogo es ejecutar; de lo contrario **FALSE**.  
   
 ### <a name="remarks"></a>Comentarios  
- `ExecuteDlgInit`va a usar recursos enlazados al módulo de ejecución o recursos de otros orígenes. Para lograr esto, `ExecuteDlgInit` encuentra un identificador de recurso mediante una llamada a `AfxFindResourceHandle`. Si la aplicación MFC no utiliza el archivo DLL compartido (MFCx0 [U] [D]. DLL), **AfxFindResourceHandle** llamadas [AfxGetResourceHandle](http://msdn.microsoft.com/library/d0eff6c4-f566-471a-96b7-a5a70a751a92), que devuelve el identificador de recursos actual para el archivo ejecutable. Si la aplicación MFC que utiliza MFCx0 [U] [D]. DLL, `AfxFindResourceHandle` recorre el **CDynLinkLibrary** compartida de la lista de objetos y controlen de buscando el recurso correcto de archivos DLL de extensión.  
+ `ExecuteDlgInit`va a usar recursos enlazados al módulo de ejecución o recursos de otros orígenes. Para lograr esto, `ExecuteDlgInit` encuentra un identificador de recurso mediante una llamada a `AfxFindResourceHandle`. Si la aplicación MFC no utiliza el archivo DLL compartido (MFCx0 [U] [D]. DLL), **AfxFindResourceHandle** llamadas [AfxGetResourceHandle](application-information-and-management.md#afxgetresourcehandle), que devuelve el identificador de recursos actual para el archivo ejecutable. Si la aplicación MFC que utiliza MFCx0 [U] [D]. DLL, `AfxFindResourceHandle` recorre el **CDynLinkLibrary** compartida de la lista de objetos y controlen de buscando el recurso correcto de archivos DLL de extensión.  
   
 ##  <a name="filtertooltipmessage"></a>CWnd:: FilterToolTipMessage  
  Lo llama el marco de trabajo para mostrar mensajes de información sobre herramientas.  
@@ -2508,7 +2508,7 @@ BOOL FlashWindow(BOOL bInvert);
   
 ### <a name="parameters"></a>Parámetros  
  `bInvert`  
- Especifica si el `CWnd` consiste en ser parpadea o se vuelve a su estado original. El `CWnd` se vacían de un estado al otro if `bInvert` es **TRUE**. Si `bInvert` es **FALSE**, la ventana se devuelve a su estado original (activo o inactivo).  
+ Especifica si la `CWnd` es que se vacían o vuelve a su estado original. El `CWnd` se vacían de un estado al otro if `bInvert` es **TRUE**. Si `bInvert` es **FALSE**, la ventana se devuelve a su estado original (activo o inactivo).  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la ventana estaba activa antes de llamar a la `FlashWindow` función miembro; de lo contrario devuelve 0.  
@@ -3266,7 +3266,7 @@ UINT GetDlgItemInt(
 ### <a name="return-value"></a>Valor devuelto  
  Especifica el valor traducido del texto de los elementos de cuadro de diálogo. Dado que 0 es un valor devuelto válido, `lpTrans` debe utilizar para detectar errores. Si se desea un valor devuelto con signo, convertirla a una `int` tipo.  
   
- La función devuelve 0 si el número traducido es mayor que INT_MAX (para los números con signo) o UINT_MAX (para sin signo).  
+ La función devuelve 0 si el número traducido es mayor que INT_MAX (para los números con signo) o UINT_MAX (de sin signo).  
   
  Cuando se producen errores, como encontrar caracteres no numéricos y si se supera el máximo anterior, `GetDlgItemInt` copia 0 en la ubicación señalada por `lpTrans`. Si no hay ningún error, `lpTrans` recibe un valor distinto de cero. Si `lpTrans` es **NULL**, `GetDlgItemInt` no advierte sobre errores.  
   
@@ -4750,7 +4750,7 @@ BOOL ModifyStyle(
 ### <a name="remarks"></a>Comentarios  
  Se pueden combinar estilos para agregarse o quitarse mediante el uso de la operación OR bit a bit (|) (operador). Vea los temas [estilos de ventana](http://msdn.microsoft.com/library/windows/desktop/ms632600) y [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] para obtener información acerca de los estilos de ventana disponibles.  
   
- Si `nFlags` es distinto de cero, `ModifyStyle` llama a la función de API de Windows [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) y vuelve a dibujar la ventana mediante la combinación `nFlags` con las marcas de valores preestablecidas cuatro siguientes:  
+ Si `nFlags` es distinto de cero, `ModifyStyle` llama a la función de API de Windows [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) y vuelve a dibujar la ventana mediante la combinación `nFlags` con las marcas de valores preestablecidas de cuatro siguientes:  
   
 - `SWP_NOSIZE`Conserva el tamaño actual.  
   
@@ -4794,7 +4794,7 @@ BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Comentarios  
  Se pueden combinar estilos para agregarse o quitarse mediante el uso de la operación OR bit a bit (|) (operador). Vea los temas [estilos de ventana extendidos](../../mfc/reference/extended-window-styles.md) en este libro y [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] para obtener información sobre la disponibilidad de los estilos extendidos  
   
- Si `nFlags` es distinto de cero, `ModifyStyleEx` llama a la función de API de Windows [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) y vuelve a dibujar la ventana mediante la combinación `nFlags` con las marcas de valores preestablecidas cuatro siguientes:  
+ Si `nFlags` es distinto de cero, `ModifyStyleEx` llama a la función de API de Windows [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) y vuelve a dibujar la ventana mediante la combinación `nFlags` con las marcas de valores preestablecidas de cuatro siguientes:  
   
 - `SWP_NOSIZE`Conserva el tamaño actual.  
   
@@ -4840,7 +4840,7 @@ void MoveWindow(
  Especifica el nuevo alto de la `CWnd`.  
   
  `bRepaint`  
- Especifica si `CWnd` es necesario volver a dibujar. Si **TRUE**, `CWnd` recibe un [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) el mensaje en su [OnPaint](#onpaint) como de costumbre, el controlador de mensajes. Si este parámetro es **FALSE**, sin volver a pintar de ningún tipo se produce. Esto se aplica al área de cliente, el área no cliente (incluido el título y barras de desplazamiento) y a cualquier parte de la ventana primaria identificada como resultado de `CWnd`de mover. Si este parámetro es **FALSE**, explícitamente debe invalidar o volver a dibujar todas las partes de la aplicación `CWnd` y la ventana primaria que debe volver a dibujar.  
+ Especifica si `CWnd` es necesario volver a dibujar. Si **TRUE**, `CWnd` recibe un [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) el mensaje en su [OnPaint](#onpaint) como de costumbre, el controlador de mensajes. Si este parámetro es **FALSE**, sin volver a pintar de ningún tipo se produce. Esto se aplica al área de cliente, el área no cliente (incluido el título y barras de desplazamiento) y a cualquier parte de la ventana primaria identificada como resultado de `CWnd`de mover. Si este parámetro es **FALSE**, la aplicación debe invalidar o volver a dibujar todas las partes del explícitamente `CWnd` y la ventana primaria que debe volver a dibujar.  
   
  `lpRect`  
  El [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [estructura RECT](../../mfc/reference/rect-structure1.md) que especifica el nuevo tamaño y posición.  
@@ -5152,7 +5152,7 @@ afx_msg int OnCharToItem(
  Especifica la posición del símbolo de intercalación actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El marco de trabajo llama a esta función miembro para especificar la acción que realiza la aplicación en respuesta a la llamada. Un valor devuelto de – 2 indica que la aplicación controla todos los aspectos de seleccionar el elemento y no desea que ninguna otra acción en el cuadro de lista. Un valor devuelto de – 1 indica que el cuadro de lista debe realizar la acción predeterminada en respuesta a la pulsación de tecla. Un valor devuelto de 0 o mayor especifica el índice de base cero de un elemento en el cuadro de lista y se indica que el cuadro de lista debe realizar la acción predeterminada para la pulsación de tecla en el elemento especificado.  
+ El marco de trabajo llama a esta función miembro para especificar la acción que realiza la aplicación en respuesta a la llamada. Un valor devuelto de -2 indica que la aplicación controla todos los aspectos de seleccionar el elemento y no desea que ninguna otra acción en el cuadro de lista. Un valor devuelto de -1 indica que el cuadro de lista debe realizar la acción predeterminada en respuesta a la pulsación de tecla. Un valor devuelto de 0 o mayor especifica el índice de base cero de un elemento en el cuadro de lista y se indica que el cuadro de lista debe realizar la acción predeterminada para la pulsación de tecla en el elemento especificado.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -5306,7 +5306,7 @@ afx_msg int OnCompareItem(
   
 |Valor|Significado|  
 |-----------|-------------|  
-|–1|Elemento 1 se ordena antes que el elemento 2.|  
+|-1|Elemento 1 se ordena antes que el elemento 2.|  
 |0|Elemento 1 y el elemento 2 ordenan de la misma.|  
 |1|Elemento 1 se ordena después del elemento 2.|  
   
@@ -5397,7 +5397,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
  Apunta a un [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) estructura que contiene información sobre la `CWnd` del objeto que se está creando.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `OnCreate`debe devolver 0 para continuar con la creación de la `CWnd` objeto. Si la aplicación devuelve – 1, se destruirá la ventana.  
+ `OnCreate`debe devolver 0 para continuar con la creación de la `CWnd` objeto. Si la aplicación devuelve -1, se destruirá la ventana.  
   
 ### <a name="remarks"></a>Comentarios  
  La `CWnd` objeto recibe esta llamada después de crea la ventana, pero antes de que sea visible. `OnCreate`se llama antes de la **crear** o `CreateEx` función miembro devuelve.  
@@ -5483,10 +5483,10 @@ afx_msg void OnDeadChar(
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|0–7|Examinar código (valor de OEM dependiente). Byte bajo de la palabra de orden superior.|  
+|0-7|Examinar código (valor de OEM dependiente). Byte bajo de la palabra de orden superior.|  
 |8|Clave extendido, como una tecla de función o una tecla del teclado numérico (1 si es una clave extendida; en caso contrario 0).|  
-|9–10|No usado.|  
-|11–12|Utilizada internamente por Windows.|  
+|9-10|No usado.|  
+|11-12|Utilizada internamente por Windows.|  
 |13|Código del contexto (1 si está presionada la tecla ALT mientras se presiona la tecla; en caso contrario 0).|  
 |14|Estado anterior clave (1 si la clave está inactivo antes de la llamada, 0 si la clave es hacia arriba).|  
 |15|Realizar la transición de estado (1 si se ha publicado la clave, 0 si se presiona la tecla).|  
@@ -5807,7 +5807,7 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
   
  La implementación predeterminada borra el fondo mediante el pincel del fondo de clase de ventana especificado por el **hbrBackground** miembro de la estructura de clase de ventana.  
   
- Si el **hbrBackground** miembro es **NULL**, la versión reemplazada de `OnEraseBkgnd` debe borrar el color de fondo. La versión también debe alinearse el origen del pincel deseado con el `CWnd` coordenadas llamando primera [UnrealizeObject](http://msdn.microsoft.com/library/windows/desktop/dd145164) para el pincel y, a continuación, seleccionando el pincel.  
+ Si el **hbrBackground** miembro es **NULL**, la versión reemplazada de `OnEraseBkgnd` debe borrar el color de fondo. La versión también debe alinearse el origen del pincel previsto con el `CWnd` coordenadas llamando primera [UnrealizeObject](http://msdn.microsoft.com/library/windows/desktop/dd145164) para el pincel y, a continuación, seleccionando el pincel.  
   
  Un invalidado `OnEraseBkgnd` debe devolver es distinto de cero en respuesta a `WM_ERASEBKGND` si se procesa el mensaje y se borra el fondo; esto indica que es necesario borrar ninguna otra. Si devuelve 0, la ventana permanecerá marcada como la necesidad de borrar. (Normalmente, esto significa que la **fErase** miembro de la `PAINTSTRUCT` estructura será **TRUE**.)  
   
@@ -6236,10 +6236,10 @@ afx_msg void OnKeyDown(
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|0–7|Examinar código (valor de OEM dependiente).|  
+|0-7|Examinar código (valor de OEM dependiente).|  
 |8|Clave extendido, como una tecla de función o una clave en el teclado numérico (1 si es una clave extendida).|  
-|9–10|No usado.|  
-|11–12|Utilizada internamente por Windows.|  
+|9-10|No usado.|  
+|11-12|Utilizada internamente por Windows.|  
 |13|Código del contexto (1 si está presionada la tecla ALT mientras se presiona la tecla; en caso contrario 0).|  
 |14|Estado anterior clave (1 si la clave está inactivo antes de la llamada, 0 si la clave es hacia arriba).|  
 |15|Realizar la transición de estado (1 si se ha publicado la clave, 0 si se presiona la tecla).|  
@@ -6278,10 +6278,10 @@ afx_msg void OnKeyUp(
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|0–7|Examinar código (valor de OEM dependiente). Byte bajo de la palabra de orden superior.|  
+|0-7|Examinar código (valor de OEM dependiente). Byte bajo de la palabra de orden superior.|  
 |8|Clave extendido, como una tecla de función o una tecla del teclado numérico (1 si es una clave extendida; en caso contrario 0).|  
-|9–10|No usado.|  
-|11–12|Utilizada internamente por Windows.|  
+|9-10|No usado.|  
+|11-12|Utilizada internamente por Windows.|  
 |13|Código del contexto (1 si está presionada la tecla ALT mientras se presiona la tecla; en caso contrario 0).|  
 |14|Estado anterior clave (1 si la clave está inactivo antes de la llamada, 0 si la clave es hacia arriba).|  
 |15|Realizar la transición de estado (1 si se ha publicado la clave, 0 si se presiona la tecla).|  
@@ -8281,10 +8281,10 @@ afx_msg void OnSysDeadChar(
   
 |Valor|Significado|  
 |-----------|-------------|  
-|0–7|Examinar código (valor de OEM dependiente). Byte bajo de la palabra de orden superior.|  
+|0-7|Examinar código (valor de OEM dependiente). Byte bajo de la palabra de orden superior.|  
 |8|Clave extendido, como una tecla de función o una tecla del teclado numérico (1 si es una clave extendida; en caso contrario 0).|  
-|9–10|No usado.|  
-|11–12|Utilizada internamente por Windows.|  
+|9-10|No usado.|  
+|11-12|Utilizada internamente por Windows.|  
 |13|Código del contexto (1 si está presionada la tecla ALT mientras se presiona la tecla; en caso contrario 0).|  
 |14|Estado anterior clave (1 si la clave está inactivo antes de la llamada, 0 si la clave es hacia arriba).|  
 |15|Realizar la transición de estado (1 si se ha publicado la clave, 0 si se presiona la tecla).|  
@@ -8317,10 +8317,10 @@ afx_msg void OnSysKeyDown(
   
 |Valor|Significado|  
 |-----------|-------------|  
-|0–7|Examinar código (valor de OEM dependiente). Byte bajo de la palabra de orden superior.|  
+|0-7|Examinar código (valor de OEM dependiente). Byte bajo de la palabra de orden superior.|  
 |8|Clave extendido, como una tecla de función o una tecla del teclado numérico (1 si es una clave extendida; en caso contrario 0).|  
-|9–10|No usado.|  
-|11–12|Utilizada internamente por Windows.|  
+|9-10|No usado.|  
+|11-12|Utilizada internamente por Windows.|  
 |13|Código del contexto (1 si está presionada la tecla ALT mientras se presiona la tecla, 0 en caso contrario).|  
 |14|Estado anterior clave (1 si la clave está inactivo antes de que el mensaje se envía, 0 si la clave es hacia arriba).|  
 |15|Realizar la transición de estado (1 si se ha publicado la clave, 0 si se presiona la tecla).|  
@@ -8361,10 +8361,10 @@ afx_msg void OnSysKeyUp(
   
 |Valor|Significado|  
 |-----------|-------------|  
-|0–7|Examinar código (valor de OEM dependiente). Byte bajo de la palabra de orden superior.|  
+|0-7|Examinar código (valor de OEM dependiente). Byte bajo de la palabra de orden superior.|  
 |8|Clave extendido, como una tecla de función o una tecla del teclado numérico (1 si es una clave extendida; en caso contrario 0).|  
-|9–10|No usado.|  
-|11–12|Utilizada internamente por Windows.|  
+|9-10|No usado.|  
+|11-12|Utilizada internamente por Windows.|  
 |13|Código del contexto (1 si está presionada la tecla ALT mientras se presiona la tecla, 0 en caso contrario).|  
 |14|Estado anterior clave (1 si la clave está inactivo antes de que el mensaje se envía, 0 si la clave es hacia arriba).|  
 |15|Realizar la transición de estado (1 si se ha publicado la clave, 0 si se presiona la tecla).|  
@@ -8660,7 +8660,7 @@ afx_msg int OnVKeyToItem(
  Especifica la posición del símbolo de intercalación actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Especifica la acción que realiza la aplicación en respuesta al mensaje. Un valor devuelto de – 2 indica que la aplicación controla todos los aspectos de seleccionar el elemento y no requiere ninguna acción adicional por el cuadro de lista. Un valor devuelto de – 1 indica que el cuadro de lista debe realizar la acción predeterminada en respuesta a la pulsación de tecla. Un valor devuelto de 0 o mayor especifica el índice de base cero de un elemento en el cuadro de lista y se indica que el cuadro de lista debe realizar la acción predeterminada para la pulsación de tecla en el elemento especificado.  
+ Especifica la acción que realiza la aplicación en respuesta al mensaje. Un valor devuelto de -2 indica que la aplicación controla todos los aspectos de seleccionar el elemento y no requiere ninguna acción adicional por el cuadro de lista. Un valor devuelto de -1 indica que el cuadro de lista debe realizar la acción predeterminada en respuesta a la pulsación de tecla. Un valor devuelto de 0 o mayor especifica el índice de base cero de un elemento en el cuadro de lista y se indica que el cuadro de lista debe realizar la acción predeterminada para la pulsación de tecla en el elemento especificado.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro se llama el marco de trabajo solo para los cuadros de lista que tengan la [LBS_HASSTRINGS](../../mfc/reference/list-box-styles.md) estilo.  
@@ -9394,7 +9394,7 @@ void RepositionBars(UINT nIDFirst,
   
 - **CWnd::reposQuery** no se realiza el diseño de las barras de control; en su lugar `lpRectParam` se inicializa con el tamaño del área de cliente, como si realmente ha tenido realiza el diseño.  
   
-- **CWnd::reposExtra** agrega los valores de `lpRectParam` al área de cliente de `nIDLast` y también realiza el diseño *.*  
+- **CWnd::reposExtra** agrega los valores de `lpRectParam` al área de cliente de `nIDLast` y también realiza el diseño.  
   
  `lpRectParam`  
  Apunta a un [estructura RECT](../../mfc/reference/rect-structure1.md); el uso de los cuales depende del valor de `nFlag`.  
@@ -10536,7 +10536,7 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
  El marco de trabajo llama automáticamente a `UpdateData` con `bSaveAndValidate` establecido en **FALSE** cuando se crea un cuadro de diálogo modal en la implementación predeterminada de [CDialog:: OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog). La llamada se produce antes de que el cuadro de diálogo está visible. La implementación predeterminada de [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) llama a esta función miembro con `bSaveAndValidate` establecido en **TRUE** para recuperar los datos y si se realiza correctamente, se cerrará el cuadro de diálogo. (Si se hace clic en el botón Cancelar en el cuadro de diálogo, el cuadro de diálogo se cierra sin los datos recuperados).  
   
 ##  <a name="updatedialogcontrols"></a>CWnd::UpdateDialogControls  
- Llame a esta función miembro para actualizar el estado del cuadro de diálogo botones y otros controles en un cuadro de diálogo o ventana que usa el [ON_UPDATE_COMMAND_UI](http://msdn.microsoft.com/library/c4de3c21-2d2e-4b89-a4ce-d0c0e2d9edc4) mecanismo de devolución de llamada.  
+ Llame a esta función miembro para actualizar el estado del cuadro de diálogo botones y otros controles en un cuadro de diálogo o ventana que usa el [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) mecanismo de devolución de llamada.  
   
 ```  
 void UpdateDialogControls(
@@ -10546,7 +10546,7 @@ void UpdateDialogControls(
   
 ### <a name="parameters"></a>Parámetros  
  `pTarget`  
- Apunta a la ventana de marco principal de la aplicación y se utiliza para enrutar mensajes de actualización *.*  
+ Apunta a la ventana de marco principal de la aplicación y se utiliza para enrutar mensajes de actualización.  
   
  `bDisableIfNoHndler`  
  Marca que indica si un control que no tiene ningún controlador de actualización debe mostrarse automáticamente como deshabilitado.  

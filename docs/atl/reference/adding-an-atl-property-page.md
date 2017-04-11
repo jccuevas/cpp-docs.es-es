@@ -34,32 +34,32 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 7b6a6220a33890d99e6fb2bd81ce832b38720c50
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 72a8644d81857b722fd50a7e852d215bb25a2fb2
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="adding-an-atl-property-page"></a>Agregar una página de propiedades ATL
-Para agregar una página de propiedades de Active Template Library (ATL) a su proyecto, el proyecto debe haber creado como una aplicación ATL o como una aplicación MFC con compatibilidad ATL. Puede usar el [Asistente para proyectos ATL](../../atl/reference/atl-project-wizard.md) para crear una aplicación ATL o [agregar un objeto ATL a una aplicación MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar la compatibilidad con ATL para una aplicación MFC.  
+Para agregar una página de propiedades de Active Template Library (ATL) al proyecto, la debe ha creado como una aplicación ATL o como una aplicación MFC que sea compatible con ATL. Puede usar el [Asistente para proyectos ATL](../../atl/reference/atl-project-wizard.md) para crear una aplicación ATL o [agregar un objeto ATL a una aplicación MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar la compatibilidad con ATL para una aplicación MFC.  
   
- Si va a agregar una página de propiedades para un control, el control debe admitir la [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) interfaz. De forma predeterminada, esta interfaz está en la lista de derivación del control de clase cuando se [crear un control ATL](../../atl/reference/adding-an-atl-control.md) utilizando la [Asistente para controles ATL](../../atl/reference/atl-control-wizard.md).  
+ Si va a agregar una página de propiedades para un control, el control debe admitir la [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) interfaz. De forma predeterminada, esta interfaz está en la lista de derivación del control de clase cuando se [crear un control ATL](../../atl/reference/adding-an-atl-control.md) mediante la [Asistente para controles ATL](../../atl/reference/atl-control-wizard.md).  
   
 > [!NOTE]
->  Si no tiene una clase de control [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) en su lista de derivación, debe agregarlo manualmente.  
+>  Si no dispone de la clase del control [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) en su lista de derivación, debe agregarse manualmente.  
   
 ### <a name="to-add-an-atl-property-page-to-your-project"></a>Para agregar una página de propiedades ATL al proyecto  
   
-1.  En el **el Explorador de soluciones** o [la vista de clases](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga clic en el nombre del proyecto al que desea agregar la página de propiedades ATL.  
+1.  En la vista **el Explorador de soluciones** o [vista de clases](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga clic en el nombre del proyecto al que desea agregar la página de propiedades ATL.  
   
 2.  En el menú contextual, haga clic en **agregar** y, a continuación, haga clic en **Agregar clase**.  
   
 3.  En el [Agregar clase](../../ide/add-class-dialog-box.md) cuadro de diálogo, en el panel Plantillas, haga clic en **página de propiedades ATL** y, a continuación, haga clic en **abiertos** para mostrar la [Asistente para páginas de propiedades ATL](../../atl/reference/atl-property-page-wizard.md).  
   
- Una vez creada una página de propiedades para un control, debe proporcionar el [PROP_PAGE](http://msdn.microsoft.com/library/2155973e-b96c-4385-bf85-5d6112c969b8) entrada en el mapa de propiedades para el control.  
+ Una vez que cree una página de propiedades para un control, debe proporcionar el [PROP_PAGE](property-map-macros.md#prop_page) entrada en la asignación de propiedad para el control.  
   
 ## <a name="see-also"></a>Vea también  
  [Páginas de propiedades](../../atl/atl-com-property-pages.md)   
- [Fundamentos de los objetos ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
+ [Aspectos básicos de los objetos ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
  [Ejemplo: Implementar una página de propiedades](../../atl/example-implementing-a-property-page.md)
 
 

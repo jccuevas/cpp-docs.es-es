@@ -37,16 +37,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: fcc5671fc136b061bf3e8109999ac91d302d3d3b
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 88728e6fccc4aea6e8a1f0bbb2811ed299dd4ad9
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ccomclassfactoryautothread-class"></a>Clase CComClassFactoryAutoThread
-Esta clase implementa la [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interfaz y permite que los objetos que se creen en varios contenedores.  
+Esta clase implementa la [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) de interfaz y permite a los objetos que se creen en varios contenedores.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -68,9 +68,9 @@ class CComClassFactoryAutoThread
 ## <a name="remarks"></a>Comentarios  
  `CComClassFactoryAutoThread`es similar a [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), pero permite que los objetos que se creen en varios contenedores. Para sacar partido de esta compatibilidad, derive su módulo EXE de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
- Objetos ATL normalmente adquieren un generador de clases derivando de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Esta clase incluye la macro [DECLARE_CLASSFACTORY](http://msdn.microsoft.com/library/51a6b925-07c0-4d3a-9174-0b8c808975e4), que declara [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) como el generador de clases de forma predeterminada. Usar `CComClassFactoryAutoThread`, especifique el [DECLARE_CLASSFACTORY_AUTO_THREAD](http://msdn.microsoft.com/library/19d7105e-03e8-4412-9f5e-5384c8a5e18f) macro en la definición de clase del objeto. Por ejemplo:  
+ Objetos ATL normalmente adquieren un generador de clases derivando de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Esta clase incluye la macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), que declara [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) como el generador de clases de forma predeterminada. Usar `CComClassFactoryAutoThread`, especifique el [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) macro en la definición de clase del objeto. Por ejemplo:  
   
- [!code-cpp[NVC_ATL_COM&#9;](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM N.º 9](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `CComObjectRootBase`  
@@ -96,7 +96,7 @@ STDMETHODIMP CreateInstance(
   
 ### <a name="parameters"></a>Parámetros  
  `pUnkOuter`  
- [in] Si el objeto se crea como parte de un agregado, a continuación, `pUnkOuter` debe ser el desconocido externo. De lo contrario, `pUnkOuter` debe ser **NULL**.  
+ [in] Si el objeto se crea como parte de un agregado, a continuación, `pUnkOuter` debe ser el desconocido externo. En caso contrario, `pUnkOuter` debe ser **NULL**.  
   
  `riid`  
  [in] El IID de la interfaz solicitada. Si `pUnkOuter` no es **NULL**, `riid` debe ser **IID_IUnknown**.  
@@ -108,7 +108,7 @@ STDMETHODIMP CreateInstance(
  Un valor `HRESULT` estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- Si el módulo se deriva de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` selecciona primero un subproceso para crear el objeto en el contenedor asociado.  
+ Si el módulo se deriva de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` primero selecciona un subproceso para crear el objeto en el contenedor asociado.  
   
 ##  <a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
  Aumenta y disminuye el módulo recuento de bloqueos mediante una llamada a **_Module::Lock** y **_Module::Unlock**, respectivamente.  
@@ -119,15 +119,15 @@ STDMETHODIMP LockServer(BOOL fLock);
   
 ### <a name="parameters"></a>Parámetros  
  `fLock`  
- [in] Si **TRUE**, el recuento de bloqueos se incrementa; en caso contrario, disminuye el recuento de bloqueos.  
+ [in] Si **TRUE**, el recuento de bloqueos se incrementó; en caso contrario, disminuye el recuento de bloqueos.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor `HRESULT` estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- Al usar `CComClassFactoryAutoThread`, **_Module** suele hacer referencia a la instancia global de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+ Cuando se usa `CComClassFactoryAutoThread`, **_Module** suele hacer referencia a la instancia global de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
- Llamar a `LockServer` permite a un cliente retener un generador de clases para que se pueden crear rápidamente varios objetos.  
+ Al llamar a `LockServer` permite a un cliente almacenar en un generador de clases para que se pueden crear rápidamente varios objetos.  
   
 ## <a name="see-also"></a>Vea también  
  [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
@@ -135,5 +135,5 @@ STDMETHODIMP LockServer(BOOL fLock);
  [Clase CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)   
  [CComObjectRootEx (clase)](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

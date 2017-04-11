@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 69a59fe23b3ca787dee86b1bbdc6775a44903f91
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 1742929a31e244e853b426324894e5c8666ebf99
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="iserviceproviderimpl-class"></a>Clase IServiceProviderImpl
@@ -69,9 +69,9 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
  **IServiceProviderImpl** especifica un método: [QueryService](#queryservice), que crea o tiene acceso al servicio especificado y devuelve un puntero de interfaz a la interfaz especificada para el servicio.  
   
- `IServiceProviderImpl`utiliza un mapa de servicio a partir de [BEGIN_SERVICE_MAP](http://msdn.microsoft.com/library/3c6ae156-8776-4588-8227-2d234daec236) y terminando con [END_SERVICE_MAP](http://msdn.microsoft.com/library/9a35d02a-014c-413a-bb0b-bcca11ab45a6).  
+ `IServiceProviderImpl`utiliza un mapa de servicio, a partir de [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) y terminando con [END_SERVICE_MAP](service-map-macros.md#end_service_map).  
   
- El mapa de servicio contiene dos entradas: [SERVICE_ENTRY](http://msdn.microsoft.com/library/e65ff9cc-15e8-41cf-b686-f99eb6686ca9), lo que indica un identificador de servicio especificado (SID) admitido por el objeto y [SERVICE_ENTRY_CHAIN](http://msdn.microsoft.com/library/09be4ce4-3ccd-4ff2-a95e-a9d5275354c1), que llama `QueryService` cadena a otro objeto.  
+ El mapa de servicio contiene dos entradas: [SERVICE_ENTRY](service-map-macros.md#service_entry), lo que indica un identificador de servicio especificado (SID) admitido por el objeto, y [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), que llama `QueryService` encadenar a otro objeto.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `IServiceProvider`  
@@ -106,11 +106,11 @@ STDMETHOD(QueryService)(
   
 |Valor devuelto|Significado|  
 |------------------|-------------|  
-|S_OK|El servicio se creó o se recuperó correctamente.|  
+|S_OK|El servicio se creó correctamente o se recuperan.|  
 |E_INVALIDARG|Uno o varios argumentos no son válidos.|  
 |E_OUTOFMEMORY|Memoria es insuficiente para crear el servicio.|  
 |E_UNEXPECTED|Se ha producido un error desconocido.|  
-|E_NOINTERFACE|La interfaz solicitada no es parte de este servicio o el servicio es desconocido.|  
+|E_NOINTERFACE|La interfaz solicitada no forma parte de este servicio o si el servicio se desconoce.|  
   
 ### <a name="remarks"></a>Comentarios  
  `QueryService`Devuelve un puntero indirecto a la interfaz solicitada en el servicio especificado. El llamador es responsable de liberar el puntero this cuando ya no sea necesario.  
@@ -119,14 +119,14 @@ STDMETHOD(QueryService)(
   
  El objeto que implementa la interfaz también puede implementar interfaces que forman parte de otros servicios. Considere el siguiente caso:  
   
--   Algunas de estas interfaces pueden ser opcionales. No todas las interfaces definidas en la descripción del servicio están necesariamente presentes en cada implementación del servicio o en cada objeto devuelto.  
+-   Algunas de estas interfaces pueden ser opcionales. No todas las interfaces definidas en la descripción del servicio están necesariamente presentes en todas las implementaciones del servicio o en todos los objetos devueltos.  
   
--   A diferencia de las llamadas a `QueryInterface`, pasando un identificador de servicio diferentes no significa necesariamente que se devuelve un objeto de modelo de objetos componentes (COM) diferente.  
+-   A diferencia de las llamadas a `QueryInterface`, pasar un identificador de servicio diferente no significa necesariamente que se devuelve un objeto de modelo de objetos componentes (COM) diferente.  
   
 -   El objeto devuelto podría tener interfaces adicionales que no forman parte de la definición del servicio.  
   
- Dos servicios diferentes, como SID_SMyService y SID_SYourService, pueden ambos especifican el uso de la misma interfaz, aunque la implementación de la interfaz podría no tienen nada en común entre los dos servicios. Esto funciona porque una llamada a `QueryService` (SID_SMyService, IID_IDispatch) puede devolver un objeto diferente `QueryService` (SID_SYourService, IID_IDispatch). No se supone la identidad de objeto cuando se especifica un identificador de servicio diferente.  
+ Dos servicios diferentes, como SID_SMyService y SID_SYourService, pueden ambos especifican el uso de la misma interfaz, aunque podría tener la implementación de la interfaz nada en común entre los dos servicios. Esto funciona porque una llamada a `QueryService` (SID_SMyService, IID_IDispatch) puede devolver un objeto diferente que `QueryService` (SID_SYourService, IID_IDispatch). No se supone la identidad de objeto cuando se especifica un identificador de servicio diferente.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

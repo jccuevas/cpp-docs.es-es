@@ -40,13 +40,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 247828a6de3a5820d75623ee438810b563f04519
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4bacc84c4e267ffca14290186750ae1d3bdf899f
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tilebarrier-class"></a>tile_barrier (Clase)
-Sincroniza la ejecución de subprocesos que se ejecutan en el grupo de subprocesos (mosaico) mediante el uso de `wait` métodos. Sólo el tiempo de ejecución puede crear instancias de esta clase.  
+Sincroniza la ejecución de subprocesos que se ejecutan en el grupo de subprocesos (el mosaico) mediante el uso de `wait` métodos. Solo el tiempo de ejecución puede crear instancias de esta clase.  
   
 ### <a name="syntax"></a>Sintaxis 
   
@@ -60,16 +60,16 @@ class tile_barrier;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[tile_barrier (Constructor)](#ctor)|Inicializa una nueva instancia de la clase `tile_barrier`.|  
+|[tile_barrier Constructor](#ctor)|Inicializa una nueva instancia de la clase `tile_barrier`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[esperar](#wait)|Indica a todos los subprocesos en el grupo de subprocesos (mosaico) para detener la ejecución hasta que han terminado todos los subprocesos del mosaico de espera.|  
-|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Bloquea la ejecución de todos los subprocesos de un mosaico hasta que se hayan completado todos los accesos de memoria y todos los subprocesos del mosaico ha llegado esta llamada.|  
+|[espera](#wait)|Indica a todos los subprocesos en el grupo de subprocesos (mosaico) para detener la ejecución hasta que todos los subprocesos del mosaico finaliza la espera.|  
+|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Bloquea la ejecución de todos los subprocesos en el icono y que todos los subprocesos de un mosaico hasta que se hayan completado todos los accesos de memoria ha alcanzado esta llamada.|  
 |[wait_with_global_memory_fence](#wait_with_global_memory_fence)|Bloquea la ejecución de todos los subprocesos de un mosaico hasta que se hayan completado todos los accesos de memoria global y todos los subprocesos del mosaico han alcanzado esta llamada.|  
-|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|Bloquea la ejecución de todos los subprocesos de un mosaico hasta que todos los `tile_static` accesos a memoria se ha completado y todos los subprocesos del mosaico han alcanzado esta llamada.|  
+|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|Bloquea la ejecución de todos los subprocesos de un mosaico hasta que todos los `tile_static` accesos a memoria que se ha completado y todos los subprocesos del mosaico han alcanzado esta llamada.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `tile_barrier`  
@@ -79,8 +79,8 @@ class tile_barrier;
   
  **Espacio de nombres:** Concurrency  
 
-## <a name="tile_barrier__ctor"></a>tile_barrier (Constructor)  
- Inicializa una nueva instancia de la clase copiando una existente.  
+## <a name="tile_barrier__ctor"></a>tile_barrier Constructor  
+ Inicializa una nueva instancia de la clase copiando uno ya existente.  
   
 ### <a name="syntax"></a>Sintaxis 
   
@@ -93,8 +93,8 @@ tile_barrier(
  `_Other`  
  La `tile_barrier` objeto que se va a copiar.  
 
-## <a name="wait"></a>esperar 
-Indica a todos los subprocesos en el grupo de subprocesos (mosaico) para detener la ejecución hasta que han terminado todos los subprocesos del mosaico de espera.  
+## <a name="wait"></a>espera 
+Indica a todos los subprocesos en el grupo de subprocesos (mosaico) para detener la ejecución hasta que todos los subprocesos del mosaico finaliza la espera.  
   
 ### <a name="syntax"></a>Sintaxis 
   
@@ -103,7 +103,7 @@ void wait() const restrict(amp);
 ```    
 
 ## <a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence   
-Bloquea la ejecución de todos los subprocesos de un mosaico hasta que todos los subprocesos de un mosaico hayan alcanzado esta llamada. Esto garantiza que todos los accesos de memoria son visibles para otros subprocesos del mosaico de subprocesos y se han ejecutado en el orden del programa.  
+Bloquea la ejecución de todos los subprocesos de un mosaico hasta que todos los subprocesos de un mosaico han alcanzado esta llamada. Esto garantiza que todos los accesos de memoria son visibles para otros subprocesos en el icono de subproceso y se han ejecutado en el orden del programa.  
   
 ### <a name="syntax"></a>Sintaxis 
   
@@ -113,7 +113,7 @@ void wait_with_all_memory_fence() const restrict(amp);
   
 
 ## <a name="wait_with_global_memory_fence"></a>wait_with_global_memory_fence   
-Bloquea la ejecución de todos los subprocesos de un mosaico hasta que todos los subprocesos de un mosaico hayan alcanzado esta llamada. Esto garantiza que todos los accesos de memoria global están visibles para otros subprocesos del mosaico de subprocesos y se han ejecutado en el orden del programa.  
+Bloquea la ejecución de todos los subprocesos de un mosaico hasta que todos los subprocesos de un mosaico han alcanzado esta llamada. Esto garantiza que todos los accesos de memoria global están visibles para otros subprocesos en el icono de subproceso y se han ejecutado en el orden del programa.  
   
 ### <a name="syntax"></a>Sintaxis 
   
@@ -122,7 +122,7 @@ void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
 ## <a name="wait_with_tile_static_memory_fence"></a>wait_with_tile_static_memory_fence   
-Bloquea la ejecución de todos los subprocesos de un mosaico hasta que todos los subprocesos de un mosaico hayan alcanzado esta llamada. Esto garantiza que `tile_static`memoria accesos son visibles para otros subprocesos del mosaico de subprocesos y se han ejecutado en el orden del programa.  
+Bloquea la ejecución de todos los subprocesos de un mosaico hasta que todos los subprocesos de un mosaico han alcanzado esta llamada. Esto garantiza que `tile_static` memoria accesos están visibles para otros subprocesos en el icono de subproceso y se han ejecutado en el orden del programa.  
   
 ### <a name="syntax"></a>Sintaxis 
   

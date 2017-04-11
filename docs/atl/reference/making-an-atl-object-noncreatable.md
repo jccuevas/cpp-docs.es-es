@@ -1,5 +1,5 @@
 ---
-title: Realizar un objeto ATL, no se pueden crear | Documentos de Microsoft
+title: Hacer que un objeto ATL no se pueden crear | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,19 +35,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: b812c2d4bfeb0663d62051c05829f25dc7139faf
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 9ee276d86478bb4a7b6c9839378183bfd49533d6
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="making-an-atl-object-noncreatable"></a>Realizar una no se pueden crear objetos ATL
+# <a name="making-an-atl-object-noncreatable"></a>Hacer que una no se pueden crear objetos ATL
 Puede cambiar los atributos de un objeto COM basado en ATL para que un cliente no puede crear directamente el objeto. En este caso, el objeto se devuelve a través de una llamada al método en otro objeto en lugar de crear directamente.  
   
 ### <a name="to-make-an-object-noncreatable"></a>Para crear un objeto  
   
-1.  Quitar el [OBJECT_ENTRY_AUTO](http://msdn.microsoft.com/library/5a0f4fa5-0905-43d2-b337-e22f979c9e4c) para el objeto. Si desea que el objeto sea noncreatable pero pueda registrar el control, reemplace OBJECT_ENTRY_AUTO con [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](http://msdn.microsoft.com/library/abdc093c-6502-42de-8419-b7ebf45299d1).  
+1.  Quitar el [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) para el objeto. Si desea que el objeto sea noncreatable pero el control se registre, reemplace OBJECT_ENTRY_AUTO con [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto).  
   
-2.  Agregue el [noncreatable](../../windows/noncreatable.md) a la coclase en el archivo .idl del atributo. Por ejemplo:  
+2.  Agregar el [noncreatable](../../windows/noncreatable.md) atribuir a la coclase en el archivo IDL. Por ejemplo:  
   
  ```  
  [  
@@ -65,7 +65,7 @@ Puede cambiar los atributos de un objeto COM basado en ATL para que un cliente n
  [Tipos de proyecto de Visual C++](../../ide/visual-cpp-project-types.md)   
  [Crear proyectos de escritorio con asistentes para aplicaciones](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Programar con ATL y el código de tiempo de ejecución de C](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [Fundamentos de los objetos ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
- [Configuraciones predeterminadas de proyecto ATL](../../atl/reference/default-atl-project-configurations.md)
+ [Aspectos básicos de los objetos ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
+ [Configuraciones de proyecto ATL predeterminadas](../../atl/reference/default-atl-project-configurations.md)
 
 

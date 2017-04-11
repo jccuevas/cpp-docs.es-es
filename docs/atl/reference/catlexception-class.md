@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 30c9235f16581c86ab5612522909dc366b1ce17e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 471ba42f25a4e237db03f2516288a7b33a0efd63
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="catlexception-class"></a>Clase CAtlException
@@ -69,10 +69,10 @@ class CAtlException
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[CAtlException::m_hr](#m_hr)|La variable de tipo HRESULT creado por el objeto y se utiliza para almacenar la condición de error.|  
+|[CAtlException::m_hr](#m_hr)|La variable de tipo HRESULT creado por el objeto y se usa para almacenar la condición de error.|  
   
 ## <a name="remarks"></a>Comentarios  
- Un `CAtlException` objeto representa una condición de excepción relacionada con una operación de ATL. La `CAtlException` clase incluye un miembro de datos públicos que almacena el código de estado que indica el motivo de la excepción y un operador de conversión que permite tratar la excepción como si fuese un HRESULT.  
+ Un `CAtlException` objeto representa una condición de excepción relacionada con una operación de ATL. La `CAtlException` clase incluye un miembro de datos públicos que almacena el código de estado que indica el motivo de la excepción y un operador de conversión que permite tratar la excepción como si fuera un valor HRESULT.  
   
  En general, llamará `AtlThrow` en lugar de crear un `CAtlException` objeto directamente.  
   
@@ -106,9 +106,9 @@ HRESULT m_hr;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El miembro de datos que almacena la condición de error. El constructor establece el valor HRESULT [CAtlException::CAtlException](#catlexception).  
+ El miembro de datos que almacena la condición de error. El valor HRESULT se establece mediante el constructor, [CAtlException::CAtlException](#catlexception).  
   
 ## <a name="see-also"></a>Vea también  
- [AtlThrow](http://msdn.microsoft.com/library/2bd111da-8170-488d-914a-c9bf6b6765f7)   
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)   
+ [Información general de clases](../../atl/atl-class-overview.md)
 

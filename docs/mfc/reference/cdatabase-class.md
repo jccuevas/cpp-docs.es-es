@@ -62,9 +62,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: afcf1f37dbf0f55dc26c7258d130043bffc8c1a8
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e7b151d83f4229586ad8787a326e332abb9fc79d
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cdatabase-class"></a>CDatabase (clase)
@@ -88,7 +88,7 @@ class CDatabase : public CObject
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[CDatabase::BeginTrans](#begintrans)|Inicia un \u2012 "transacciones" en una serie de llamadas reversibles para la `AddNew`, **editar**, **eliminar**, y **actualización** funciones miembro de clase `CRecordset` \u2012 en el origen de datos conectado. El origen de datos debe admitir transacciones para **BeginTrans** surta efecto.|  
+|[CDatabase::BeginTrans](#begintrans)|Inicia una transacción de"", una serie de llamadas reversibles para la `AddNew`, **editar**, **eliminar**, y **actualización** funciones miembro de clase `CRecordset` : en el origen de datos conectado. El origen de datos debe admitir transacciones para **BeginTrans** surta efecto.|  
 |[CDatabase::BindParameters](#bindparameters)|Le permite enlazar parámetros antes de llamar a `CDatabase::ExecuteSQL`.|  
 |[CDatabase::Cancel](#cancel)|Cancela una operación asincrónica o en un proceso de un segundo subproceso.|  
 |[CDatabase::CanTransact](#cantransact)|Devuelve un valor distinto de cero si el origen de datos admite transacciones.|  
@@ -398,7 +398,7 @@ BOOL IsOpen() const;
  Distinto de cero si la `CDatabase` objeto actualmente está conectado; en caso contrario, 0.  
   
 ##  <a name="m_hdbc"></a>CDatabase:: M_hdbc  
- Contiene un identificador público de un ODBC datos origen conexión \u2012 un "identificador de conexión".  
+ Contiene un identificador público de una conexión de origen de datos ODBC, un "identificador de conexión".  
   
 ### <a name="remarks"></a>Comentarios  
  Normalmente, no tendrá que es necesario tener acceso directamente a esta variable miembro. En su lugar, el marco de trabajo asigna el identificador cuando se llama a `OpenEx` o **abiertos**. El marco de trabajo desasigna el identificador cuando se llama a la **eliminar** operador en la `CDatabase` objeto. Tenga en cuenta que la **cerrar** función miembro desasignar el identificador.  
@@ -445,7 +445,7 @@ virtual BOOL Open(
   
 ### <a name="parameters"></a>Parámetros  
  `lpszDSN`  
- Especifica un datos origen nombre \u2012 registrado un nombre con ODBC mediante el programa Administrador de ODBC. Si se especifica un valor DSN en `lpszConnect` (con el formato "DSN =\<origen de datos >"), no debe especificarse en `lpszDSN`. En este caso, `lpszDSN` debe ser **NULL**. En caso contrario, puede pasar **NULL** si desea presentar al usuario un cuadro de diálogo origen de datos en el que el usuario puede seleccionar un origen de datos. Para obtener más información, vea la sección Comentarios.  
+ Especifica un nombre de origen de datos: un nombre registrado con ODBC mediante el programa Administrador de ODBC. Si se especifica un valor DSN en `lpszConnect` (con el formato "DSN =\<origen de datos >"), no debe especificarse en `lpszDSN`. En este caso, `lpszDSN` debe ser **NULL**. En caso contrario, puede pasar **NULL** si desea presentar al usuario un cuadro de diálogo origen de datos en el que el usuario puede seleccionar un origen de datos. Para obtener más información, vea la sección Comentarios.  
   
  `bExclusive`  
  No se admite en esta versión de la biblioteca de clases. Actualmente, una aserción produce un error si este parámetro es **TRUE**. El origen de datos se abre siempre como compartido (no exclusivo).  
@@ -543,7 +543,7 @@ BOOL Rollback();
   Vea el artículo [transacción: realizar una transacción en un conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
 ##  <a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
- Llamar a este miembro función \u2012 antes de llamar a `OpenEx` o **abiertos** \u2012 para anular el número predeterminado de segundos que se permiten antes de un intento de datos origen se agota.  
+ Llame a esta función miembro, antes de llamar a `OpenEx` o **abiertos** : para anular el número predeterminado de segundos que se permiten antes de un intento de datos origen se agota.  
   
 ```  
 void SetLoginTimeout(DWORD dwSeconds);

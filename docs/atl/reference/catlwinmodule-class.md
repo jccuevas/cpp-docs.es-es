@@ -38,16 +38,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 6db3ae9e610605524683e984f2aba602b1daf0d4
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: f2d5e28f39159b097c4e00e11518295b2872a84b
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="catlwinmodule-class"></a>Clase CAtlWinModule
 Esta clase proporciona compatibilidad para los componentes de la ventana ATL.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -91,13 +91,13 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
   
 ### <a name="parameters"></a>Parámetros  
  `pData`  
- Puntero a la `_AtlCreateWndData` estructura se inicialicen y se agregará al módulo actual.  
+ Puntero a la `_AtlCreateWndData` estructura que se inicializará y agregará al módulo actual.  
   
  `pObject`  
  Puntero a un objeto **esto** puntero.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método llama a [AtlWinModuleAddCreateWndData](http://msdn.microsoft.com/library/8463a6ed-07ea-4aad-92ec-ded681601b32) que inicializa un [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) estructura. Esta estructura se almacenará la **esto** puntero, utilizado para obtener la instancia de clase en los procedimientos de ventana.  
+ Este método llama a [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) que inicializa un [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) estructura. Esta estructura se almacenará la **esto** puntero, que se usa para obtener la instancia de clase en los procedimientos de ventana.  
   
 ##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
  El constructor.  
@@ -131,6 +131,6 @@ void* ExtractCreateWndData();
   
 ## <a name="see-also"></a>Vea también  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)   
- [Información general de la clase](../../atl/atl-class-overview.md)   
+ [Información general de clases](../../atl/atl-class-overview.md)   
  [Clases de módulo](../../atl/atl-module-classes.md)
 

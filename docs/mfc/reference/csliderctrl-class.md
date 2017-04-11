@@ -72,9 +72,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 0d024c7d6670ff3b7a94b9657151e7bf1958d5f1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 745dc253ac0837ffc62f47db2038e6302b83b558
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl (clase)
@@ -102,22 +102,22 @@ class CSliderCtrl : public CWnd
 |[CSliderCtrl::ClearTics](#cleartics)|Quita las marcas de graduación actual de un control deslizante.|  
 |[CSliderCtrl::Create](#create)|Crea un control deslizante y lo adjunta a un `CSliderCtrl` objeto.|  
 |[CSliderCtrl::CreateEx](#createex)|Crea un control deslizante con los estilos extendidos de Windows especificados y lo adjunta a un `CSliderCtrl` objeto.|  
-|[CSliderCtrl::GetBuddy](#getbuddy)|Recupera el identificador de ventana deslizante control relacionada en una ubicación determinada.|  
+|[CSliderCtrl::GetBuddy](#getbuddy)|Recupera el identificador de ventana deslizante control relacionada en una ubicación especificada.|  
 |[CSliderCtrl::GetChannelRect](#getchannelrect)|Recupera el tamaño del canal del control deslizante.|  
 |[CSliderCtrl::GetLineSize](#getlinesize)|Recupera el tamaño de la línea de un control deslizante.|  
 |[CSliderCtrl::GetNumTics](#getnumtics)|Recupera el número de marcas de graduación en un control deslizante.|  
 |[CSliderCtrl::GetPageSize](#getpagesize)|Recupera el tamaño de página de un control deslizante.|  
 |[CSliderCtrl::GetPos](#getpos)|Recupera la posición actual del control deslizante.|  
-|[CSliderCtrl::GetRange](#getrange)|Recupera las posiciones mínima y máxima para un control deslizante.|  
+|[CSliderCtrl::GetRange](#getrange)|Recupera las posiciones mínimas y máxima para un control deslizante.|  
 |[CSliderCtrl::GetRangeMax](#getrangemax)|Recupera la posición máxima para un control deslizante.|  
 |[CSliderCtrl::GetRangeMin](#getrangemin)|Recupera la posición mínima para un control deslizante.|  
 |[CSliderCtrl::GetSelection](#getselection)|Recupera el intervalo de la selección actual.|  
 |[CSliderCtrl::GetThumbLength](#getthumblength)|Recupera la longitud del control deslizante en el control de barra de seguimiento actual.|  
-|[CSliderCtrl::GetThumbRect](#getthumbrect)|Recupera el tamaño de thumb del control deslizante.|  
-|[CSliderCtrl::GetTic](#gettic)|Recupera la posición de la marca de graduación especificados.|  
-|[CSliderCtrl::GetTicArray](#getticarray)|Recupera la matriz de posiciones de marca de graduación de un control deslizante.|  
+|[CSliderCtrl::GetThumbRect](#getthumbrect)|Recupera el tamaño de la posición del control deslizante.|  
+|[CSliderCtrl::GetTic](#gettic)|Recupera la posición de la marca de graduación especificado.|  
+|[CSliderCtrl::GetTicArray](#getticarray)|Recupera la matriz de posiciones de marca de graduación para un control deslizante.|  
 |[CSliderCtrl::GetTicPos](#getticpos)|Recupera la posición de la marca de graduación especificado, en coordenadas de cliente.|  
-|[CSliderCtrl::GetToolTips](#gettooltips)|Recupera el identificador del control de información sobre herramientas asignado para el control deslizante, si existe.|  
+|[CSliderCtrl::GetToolTips](#gettooltips)|Recupera el identificador del control de información sobre herramientas asignado para el control deslizante, si lo hay.|  
 |[CSliderCtrl::SetBuddy](#setbuddy)|Asigna una ventana como la ventana relacionada para un control deslizante.|  
 |[CSliderCtrl::SetLineSize](#setlinesize)|Establece el tamaño de la línea de un control deslizante.|  
 |[CSliderCtrl::SetPageSize](#setpagesize)|Establece el tamaño de página de un control deslizante.|  
@@ -125,25 +125,25 @@ class CSliderCtrl : public CWnd
 |[CSliderCtrl::SetRange](#setrange)|Establece las posiciones mínimas y máxima para un control deslizante.|  
 |[CSliderCtrl::SetRangeMax](#setrangemax)|Establece la posición máxima para un control deslizante.|  
 |[CSliderCtrl::SetRangeMin](#setrangemin)|Establece la posición mínima para un control deslizante.|  
-|[CSliderCtrl::SetSelection](#setselection)|Establece el intervalo de la selección actual.|  
+|[CSliderCtrl::SetSelection](#setselection)|Establece la duración de la selección actual.|  
 |[CSliderCtrl::SetThumbLength](#setthumblength)|Establece la longitud del control deslizante en el control de barra de seguimiento actual.|  
-|[CSliderCtrl::SetTic](#settic)|Establece la posición de la marca de graduación especificados.|  
-|[CSliderCtrl::SetTicFreq](#setticfreq)|Establece la frecuencia de graduación marcas por incremento del control deslizante.|  
-|[CSliderCtrl::SetTipSide](#settipside)|Posiciones de un control de información sobre herramientas usa un control trackbar.|  
+|[CSliderCtrl::SetTic](#settic)|Establece la posición de la marca de graduación especificado.|  
+|[CSliderCtrl::SetTicFreq](#setticfreq)|Establece la frecuencia de TIC marcas por incremento del control deslizante.|  
+|[CSliderCtrl::SetTipSide](#settipside)|Posiciones un control de información sobre herramientas utilizado por un control de barra de seguimiento.|  
 |[CSliderCtrl::SetToolTips](#settooltips)|Asigna un control de información sobre herramientas para un control deslizante.|  
   
 ## <a name="remarks"></a>Comentarios  
  Un "control deslizante" (también conocido como una barra de seguimiento) es una ventana que contiene un control deslizante y las marcas de graduación opcionales. Cuando el usuario mueve el control deslizante, con el mouse o las teclas de dirección, el control envía mensajes de notificación para indicar el cambio.  
   
- Controles deslizantes son útiles cuando desea que el usuario seleccione un valor discreto o un conjunto de valores consecutivos en un intervalo. Por ejemplo, podría utilizar un control deslizante para permitir al usuario establecer la velocidad de repetición del teclado moviendo el control deslizante hasta una marca de graduación determinado.  
+ Controles deslizantes son útiles cuando desea que el usuario seleccione un valor discreto o un conjunto de valores consecutivos en un intervalo. Por ejemplo, podría usar un control deslizante para permitir al usuario establecer la velocidad de repetición del teclado moviendo el control deslizante hasta una marca de graduación determinado.  
   
- Este control (y por tanto la `CSliderCtrl` clase) está disponible sólo para los programas que se ejecutan en Windows 95 ó 98 y Windows NT versión 3.51 y posteriores.  
+ Este control (y, por tanto, la `CSliderCtrl` clase) está disponible solo para programas que se ejecutan en Windows 95 ó 98 y Windows NT versión 3.51 y posteriores.  
   
- El control deslizante se mueve en incrementos que se especifican al crearlo. Por ejemplo, si especifica que el control deslizante debe tener un intervalo de cinco, el deslizador sólo puede ocupar seis posiciones: una posición en el lado izquierdo del control deslizante y una posición para cada incremento en el intervalo. Normalmente, cada una de estas posiciones se identifica mediante una marca de graduación.  
+ El control deslizante se mueve en incrementos que especifican al crearlo. Por ejemplo, si se especifica que el control deslizante debe tener un intervalo de cinco, el control deslizante solo puede ocupar seis posiciones: una posición en el lado izquierdo del control deslizante y una posición para cada incremento en el intervalo. Normalmente, cada una de estas posiciones se identifica mediante una marca de graduación.  
   
- Crear un control deslizante mediante el constructor y el **crear** función miembro de `CSliderCtrl`. Una vez haya creado un control deslizante, puede usar funciones de miembro en `CSliderCtrl` cambiar muchas de sus propiedades. Cambios que pueden realizar incluyen configurar las posiciones mínima y máxima para el control deslizante, dibujar marcas de paso, establecer un intervalo de selección y cambiar de posición.  
+ Crear un control deslizante mediante el constructor y el **crear** función miembro de `CSliderCtrl`. Una vez haya creado un control deslizante, puede usar funciones de miembro en `CSliderCtrl` para cambiar muchos de sus propiedades. Cambios que puede realizar incluyen establecer las posiciones mínimas y máxima para el control deslizante, dibujar las marcas de graduación, establecer un intervalo de selección y volver a colocar el control deslizante.  
   
- Para obtener más información sobre el uso de `CSliderCtrl`, consulte [controles](../../mfc/controls-mfc.md) y [CSliderCtrl utilizando](../../mfc/using-csliderctrl.md).  
+ Para obtener más información sobre el uso de `CSliderCtrl`, consulte [controles](../../mfc/controls-mfc.md) y [usar CSliderCtrl](../../mfc/using-csliderctrl.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -166,7 +166,7 @@ void ClearSel(BOOL bRedraw = FALSE);
   
 ### <a name="parameters"></a>Parámetros  
  `bRedraw`  
- Volver a dibujar la marca. Si este parámetro es **TRUE**, se vuelve a dibujar el control deslizante después de borra la selección; de lo contrario, el control deslizante no vuelve a dibujarse.  
+ Volver a dibujar la marca. Si este parámetro es **TRUE**, se vuelve a dibujarse el control deslizante una vez borrada la selección; en caso contrario, el control deslizante no vuelve a dibujarse.  
   
 ##  <a name="cleartics"></a>CSliderCtrl::ClearTics  
  Quita las marcas de graduación actual de un control deslizante.  
@@ -177,7 +177,7 @@ void ClearTics(BOOL bRedraw = FALSE);
   
 ### <a name="parameters"></a>Parámetros  
  `bRedraw`  
- Volver a dibujar la marca. Si este parámetro es **TRUE**, se vuelve a dibujar el control deslizante una vez borradas las marcas de graduación; de lo contrario, el control deslizante no vuelve a dibujarse.  
+ Volver a dibujar la marca. Si este parámetro es **TRUE**, se vuelve a dibujarse el control deslizante después de que se desactivan las marcas de graduación; en caso contrario, el control deslizante no vuelve a dibujarse.  
   
 ##  <a name="create"></a>CSliderCtrl::Create  
  Crea un control deslizante y lo adjunta a un `CSliderCtrl` objeto.  
@@ -192,26 +192,26 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parámetros  
  `dwStyle`  
- Especifica el estilo del control deslizante. Aplicar cualquier combinación de [estilos de control deslizante](http://msdn.microsoft.com/library/windows/desktop/bb760147), descrita en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)], para el control.  
+ Especifica el estilo del control deslizante. Aplicar cualquier combinación de [estilos de control deslizante](http://msdn.microsoft.com/library/windows/desktop/bb760147), que se describen en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)], para el control.  
   
  `rect`  
  Especifica el tamaño y la posición del control deslizante. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.  
   
  `pParentWnd`  
- Especifica la ventana primaria del control deslizante, normalmente un `CDialog`. No debe ser **NULL**.  
+ Especifica la ventana del elemento primario del control deslizante, normalmente un `CDialog`. No debe ser **NULL**.  
   
  `nID`  
  Especifica el identificador. del control deslizante  
   
 ### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si la inicialización es correcta; en caso contrario, 0.  
+ Es distinto de cero si la inicialización se realizó correctamente; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Construya un `CSliderCtrl` en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a **crear**, que crea el control deslizante y lo adjunta a la `CSliderCtrl` objeto.  
+ Crear un `CSliderCtrl` en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a **crear**, que crea el control deslizante y lo adjunta a la `CSliderCtrl` objeto.  
   
- Dependiendo de los valores establecidos para `dwStyle`, el control deslizante puede tener una orientación vertical u horizontal. Puede tener las marcas de graduación en cualquier lado, ambos o ninguno. También puede utilizarse para especificar un intervalo de valores consecutivos.  
+ Dependiendo de los valores establecidos para `dwStyle`, el control deslizante puede tener una orientación vertical u horizontal. Puede tener las marcas de graduación en cualquier lado, ambos o ninguno. También se puede utilizar para especificar un intervalo de valores consecutivos.  
   
- Para aplicar estilos de ventana extendidos para el control deslizante, llame a [CreateEx](#createex) en lugar de **crear**.  
+ Para aplicar estilos de ventana extendidos para el control deslizante, llame al [CreateEx](#createex) en lugar de **crear**.  
   
 ##  <a name="createex"></a>CSliderCtrl::CreateEx  
  Crea un control (una ventana secundaria) y lo asocia a la `CSliderCtrl` objeto.  
@@ -227,16 +227,16 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parámetros  
  `dwExStyle`  
- Especifica el estilo extendido del control que se va a crear. Para obtener una lista de los estilos extendidos de Windows, consulte el `dwExStyle` parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el `dwExStyle` parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `dwStyle`  
- Especifica el estilo del control deslizante. Aplicar cualquier combinación de [estilos de control deslizante](http://msdn.microsoft.com/library/windows/desktop/bb760147), descrita en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)], para el control.  
+ Especifica el estilo del control deslizante. Aplicar cualquier combinación de [estilos de control deslizante](http://msdn.microsoft.com/library/windows/desktop/bb760147), que se describen en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)], para el control.  
   
  `rect`  
- Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y la posición de la ventana que se creará, en coordenadas de cliente `pParentWnd`.  
+ Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y la posición de la ventana que se creará, en coordenadas de cliente de `pParentWnd`.  
   
  `pParentWnd`  
- Puntero a la ventana que es principal el control.  
+ Un puntero a la ventana que es primario del control.  
   
  `nID`  
  Identificador de ventana secundaria. del control  
@@ -245,7 +245,7 @@ virtual BOOL CreateEx(
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Utilice `CreateEx` en lugar de [crear](#create) para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_**.  
+ Use `CreateEx` en lugar de [crear](#create) para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_**.  
   
 ##  <a name="csliderctrl"></a>CSliderCtrl::CSliderCtrl  
  Construye un objeto `CSliderCtrl`.  
@@ -255,7 +255,7 @@ CSliderCtrl();
 ```  
   
 ##  <a name="getbuddy"></a>CSliderCtrl::GetBuddy  
- Recupera el identificador de ventana deslizante control relacionada en una ubicación determinada.  
+ Recupera el identificador de ventana deslizante control relacionada en una ubicación especificada.  
   
 ```  
 CWnd* GetBuddy(BOOL fLocation = TRUE) const;  
@@ -263,20 +263,20 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
   
 ### <a name="parameters"></a>Parámetros  
  `fLocation`  
- Un valor booleano que indica cuál de los dos identificadores de ventana amigo para recuperar. Puede presentar uno de los siguientes valores:  
+ Un valor booleano que indica cuál de los dos identificadores de ventana conocido para recuperar. Puede presentar uno de los siguientes valores:  
   
-- **TRUE** recupera el identificador para el amigo a la izquierda del control deslizante. Si utiliza el control deslizante del `TBS_VERT` estilo, el mensaje recuperará el amigo encima del control deslizante.  
+- **TRUE** recupera el identificador para el contacto a la izquierda del control deslizante. Si usa el control deslizante de la `TBS_VERT` estilo, el mensaje recuperará el amigo encima del control deslizante.  
   
-- **FALSE** recupera el identificador para el amigo a la derecha del control deslizante. Si utiliza el control deslizante del `TBS_VERT` estilo, el mensaje recuperará el amigo debajo del control deslizante.  
+- **FALSE** recupera el identificador para el contacto a la derecha del control deslizante. Si usa el control deslizante de la `TBS_VERT` estilo, el mensaje recuperará el amigo debajo del control deslizante.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana relacionada en la ubicación especificada por `fLocation`, o **NULL** si no existe ninguna ventana amigo en esa ubicación.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función miembro implementa el comportamiento del mensaje de Win32 [TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Para obtener una descripción de los estilos de control deslizante, consulte [estilos del Control Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Esta función miembro implementa el comportamiento del mensaje de Win32 [TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178), tal y como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Para obtener una descripción de los estilos de control deslizante, consulte [estilos del Control Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="getchannelrect"></a>CSliderCtrl::GetChannelRect  
- Recupera el tamaño y la posición del rectángulo delimitador para el canal de un control deslizante.  
+ Recupera el tamaño y la posición del rectángulo delimitador para el canal del control deslizante.  
   
 ```  
 void GetChannelRect(LPRECT lprc) const;  
@@ -284,10 +284,10 @@ void GetChannelRect(LPRECT lprc) const;
   
 ### <a name="parameters"></a>Parámetros  
  `lprc`  
- Un puntero a un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que contiene el tamaño y posición del canal del rectángulo delimitador de cuando se devuelve la función.  
+ Un puntero a un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que contiene el tamaño y la posición del canal del rectángulo delimitador cuando la función devuelve.  
   
 ### <a name="remarks"></a>Comentarios  
- El canal es el área en la que se mueve el control deslizante y que contiene el resaltado cuando se selecciona un intervalo.  
+ El canal es el área que se mueve el control deslizante y que contiene el elemento resaltado cuando se selecciona un intervalo.  
   
 ##  <a name="getlinesize"></a>CSliderCtrl::GetLineSize  
  Recupera el tamaño de la línea para un control deslizante.  
@@ -300,7 +300,7 @@ int GetLineSize() const;
  El tamaño de una línea para el control deslizante.  
   
 ### <a name="remarks"></a>Comentarios  
- El tamaño de la línea afecta a cuánto el control deslizante se mueve de la **TB_LINEUP** y **TB_LINEDOWN** notificaciones. La configuración predeterminada para el tamaño de línea es 1.  
+ El tamaño de la línea afecta a la cantidad el control deslizante se mueve para la **TB_LINEUP** y **TB_LINEDOWN** notificaciones. La configuración predeterminada para el tamaño de línea es 1.  
   
 ##  <a name="getnumtics"></a>CSliderCtrl::GetNumTics  
  Recupera el número de marcas de graduación en un control deslizante.  
@@ -323,7 +323,7 @@ int GetPageSize() const;
  El tamaño de una página para el control deslizante.  
   
 ### <a name="remarks"></a>Comentarios  
- El tamaño de página afecta a cuánto el control deslizante se mueve de la **TB_PAGEUP** y **TB_PAGEDOWN** notificaciones.  
+ El tamaño de página afecta a la cantidad el control deslizante se mueve para la **TB_PAGEUP** y **TB_PAGEDOWN** notificaciones.  
   
 ##  <a name="getpos"></a>CSliderCtrl::GetPos  
  Recupera la posición actual del control deslizante en un control deslizante.  
@@ -346,7 +346,7 @@ void GetRange(
   
 ### <a name="parameters"></a>Parámetros  
  `nMin`  
- Referencia a un entero que recibe la posición mínima.  
+ Referencia a un entero que recibe la posición de mínimo.  
   
  `nMax`  
  Referencia a un entero que recibe la posición máxima.  
@@ -404,7 +404,7 @@ int GetThumbLength() const;
  Este método envía el [TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201) mensaje, que se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="getthumbrect"></a>CSliderCtrl::GetThumbRect  
- Recupera el tamaño y la posición del rectángulo delimitador para el control deslizante en un control deslizante.  
+ Recupera el tamaño y la posición del rectángulo delimitador para el control deslizante (USB) en un control deslizante.  
   
 ```  
 void GetThumbRect(LPRECT lprc) const;  
@@ -412,7 +412,7 @@ void GetThumbRect(LPRECT lprc) const;
   
 ### <a name="parameters"></a>Parámetros  
  `lprc`  
- Un puntero a un `CRect` objeto que contiene el rectángulo delimitador para el control deslizante cuando se devuelve la función.  
+ Un puntero a un `CRect` objeto que contiene el rectángulo delimitador para el control deslizante cuando la función devuelve.  
   
 ##  <a name="gettic"></a>CSliderCtrl::GetTic  
  Recupera la posición de una marca de graduación en un control deslizante.  
@@ -426,7 +426,7 @@ int GetTic(int nTic) const;
  Índice basado en cero que identifica una marca de graduación.  
   
 ### <a name="return-value"></a>Valor devuelto  
- La posición de la marca de graduación especificado o – 1 si `nTic` no especifica un índice válido.  
+ La posición de la marca de graduación especificado o - 1 si `nTic` no especifica un índice válido.  
   
 ##  <a name="getticarray"></a>CSliderCtrl::GetTicArray  
  Recupera la dirección de la matriz que contiene las posiciones de las marcas de graduación para un control deslizante.  
@@ -450,20 +450,20 @@ int GetTicPos(int nTic) const;
  Índice basado en cero que identifica una marca de graduación.  
   
 ### <a name="return-value"></a>Valor devuelto  
- La posición física, en coordenadas de cliente, de la marca de graduación especificado o – 1 si `nTic` no especifica un índice válido.  
+ La posición física, en coordenadas de cliente, de la marca de graduación especificado o - 1 si `nTic` no especifica un índice válido.  
   
 ##  <a name="gettooltips"></a>CSliderCtrl::GetToolTips  
- Recupera el identificador del control de información sobre herramientas asignado para el control deslizante, si existe.  
+ Recupera el identificador del control de información sobre herramientas asignado para el control deslizante, si lo hay.  
   
 ```  
 CToolTipCtrl* GetToolTips() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a un [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objeto, o **NULL** si la información sobre herramientas no está en uso. Si no utiliza el control deslizante de la **TBS_TOOLTIPS** estilo, el valor devuelto es **NULL**.  
+ Un puntero a un [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objeto, o **NULL** si la información sobre herramientas no está en uso. Si el control deslizante no usa el **TBS_TOOLTIPS** estilo, el valor devuelto es **NULL**.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función miembro implementa el comportamiento del mensaje de Win32 [TBM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760209), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Tenga en cuenta que esta función miembro devuelve un `CToolTipCtrl` objeto en lugar de un identificador de un control.  
+ Esta función miembro implementa el comportamiento del mensaje de Win32 [TBM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760209), tal y como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Tenga en cuenta que esta función miembro devuelve un `CToolTipCtrl` objeto en lugar de un identificador de un control.  
   
  Para obtener una descripción de los estilos de control deslizante, consulte [estilos del Control Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
@@ -483,15 +483,15 @@ CWnd* SetBuddy(
  `fLocation`  
  Valor que especifica la ubicación en la que se va a mostrar la ventana relacionada. Este valor puede ser uno de los siguientes:  
   
-- **TRUE** el amigo aparecerán a la izquierda de la barra de seguimiento si el control trackbar utiliza el `TBS_HORZ` estilo. Si la barra de seguimiento usa el `TBS_VERT` de estilo, el amigo aparece encima del control trackbar.  
+- **TRUE** el amigo aparecerán a la izquierda de la barra de seguimiento si el control trackbar utiliza el `TBS_HORZ` estilo. Si la barra de seguimiento utiliza la `TBS_VERT` de estilo, el amigo aparece encima del control trackbar.  
   
-- **FALSE** el amigo aparecerán a la derecha de la barra de seguimiento si el control trackbar utiliza el `TBS_HORZ` estilo. Si la barra de seguimiento usa el `TBS_VERT` de estilo, el amigo aparece debajo del control trackbar.  
+- **FALSE** el amigo aparecerán a la derecha de la barra de seguimiento si el control de barra de seguimiento utiliza la `TBS_HORZ` estilo. Si la barra de seguimiento utiliza la `TBS_VERT` de estilo, el amigo aparece debajo del control trackbar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto asignada previamente para el control deslizante en esa ubicación.  
+ Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que se asignó previamente para el control deslizante en esa ubicación.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función miembro implementa el comportamiento del mensaje de Win32 [TBM_SETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760213), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Tenga en cuenta que esta función miembro utiliza punteros a `CWnd` objetos, en lugar de identificadores de ventana para su valor devuelto y el parámetro.  
+ Esta función miembro implementa el comportamiento del mensaje de Win32 [TBM_SETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760213), tal y como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Tenga en cuenta que esta función miembro utiliza punteros a `CWnd` objetos, en lugar de identificadores de ventana para su valor devuelto y el parámetro.  
   
  Para obtener una descripción de los estilos de control deslizante, consulte [estilos del Control Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
@@ -510,7 +510,7 @@ int SetLineSize(int nSize);
  El tamaño de la línea anterior.  
   
 ### <a name="remarks"></a>Comentarios  
- El tamaño de la línea afecta a cuánto el control deslizante se mueve de la **TB_LINEUP** y **TB_LINEDOWN** notificaciones.  
+ El tamaño de la línea afecta a la cantidad el control deslizante se mueve para la **TB_LINEUP** y **TB_LINEDOWN** notificaciones.  
   
 ##  <a name="setpagesize"></a>CSliderCtrl::SetPageSize  
  Establece el tamaño de la página de un control deslizante.  
@@ -527,7 +527,7 @@ int SetPageSize(int nSize);
  El tamaño de página anterior.  
   
 ### <a name="remarks"></a>Comentarios  
- El tamaño de página afecta a cuánto el control deslizante se mueve de la **TB_PAGEUP** y **TB_PAGEDOWN** notificaciones.  
+ El tamaño de página afecta a la cantidad el control deslizante se mueve para la **TB_PAGEUP** y **TB_PAGEDOWN** notificaciones.  
   
 ##  <a name="setpos"></a>CSliderCtrl::SetPos  
  Establece la posición actual del control deslizante en un control deslizante.  
@@ -541,7 +541,7 @@ void SetPos(int nPos);
  Especifica la nueva posición del control deslizante.  
   
 ##  <a name="setrange"></a>CSliderCtrl::SetRange  
- Establece el intervalo (posiciones mínima y máxima) para el control deslizante en un control deslizante.  
+ Establece la duración (posiciones mínima y máxima) para el control deslizante en un control deslizante.  
   
 ```  
 void SetRange(
@@ -552,13 +552,13 @@ void SetRange(
   
 ### <a name="parameters"></a>Parámetros  
  `nMin`  
- Posición mínima para el control deslizante.  
+ Posición mínimo para el control deslizante.  
   
  `nMax`  
  Posición máxima para el control deslizante.  
   
  `bRedraw`  
- El indicador de actualización. Si este parámetro es **TRUE**, se vuelve a dibujar el control deslizante después de establece el intervalo; de lo contrario, el control deslizante no vuelve a dibujarse.  
+ La marca de renegociación. Si este parámetro es **TRUE**, se vuelve a dibujarse el control deslizante después de establece el intervalo; en caso contrario, el control deslizante no vuelve a dibujarse.  
   
 ##  <a name="setrangemax"></a>CSliderCtrl::SetRangeMax  
  Establece la duración máxima para el control deslizante en un control deslizante.  
@@ -574,10 +574,10 @@ void SetRangeMax(
  Posición máxima para el control deslizante.  
   
  `bRedraw`  
- El indicador de actualización. Si este parámetro es **TRUE**, se vuelve a dibujar el control deslizante después de establece el intervalo; de lo contrario, el control deslizante no vuelve a dibujarse.  
+ La marca de renegociación. Si este parámetro es **TRUE**, se vuelve a dibujarse el control deslizante después de establece el intervalo; en caso contrario, el control deslizante no vuelve a dibujarse.  
   
 ##  <a name="setrangemin"></a>CSliderCtrl::SetRangeMin  
- Establece el intervalo mínimo para el control deslizante en un control deslizante.  
+ Establece la duración mínima para el control deslizante en un control deslizante.  
   
 ```  
 void SetRangeMin(
@@ -587,10 +587,10 @@ void SetRangeMin(
   
 ### <a name="parameters"></a>Parámetros  
  `nMin`  
- Posición mínima para el control deslizante.  
+ Posición mínimo para el control deslizante.  
   
  `bRedraw`  
- El indicador de actualización. Si este parámetro es **TRUE**, se vuelve a dibujar el control deslizante después de establece el intervalo; de lo contrario, el control deslizante no vuelve a dibujarse.  
+ La marca de renegociación. Si este parámetro es **TRUE**, se vuelve a dibujarse el control deslizante después de establece el intervalo; en caso contrario, el control deslizante no vuelve a dibujarse.  
   
 ##  <a name="setselection"></a>CSliderCtrl::SetSelection  
  Establece las posiciones inicial y finales de la selección actual en un control deslizante.  
@@ -627,14 +627,14 @@ void SetThumbLength(int nLength);
  Este método envía el [TBM_SETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760234) mensaje, que se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ### <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se define la variable `m_sliderCtrl`, que se utiliza para tener acceso al control de barra de seguimiento actual. El ejemplo también define una variable, `thumbLength`, que se utiliza para almacenar la longitud predeterminada del componente de control de posición del control trackbar. Estas variables se utilizan en el ejemplo siguiente.  
+ En el ejemplo de código siguiente se define la variable `m_sliderCtrl`, que se usa para tener acceso al control de barra de seguimiento actual. El ejemplo también define una variable, `thumbLength`, que se utiliza para almacenar la longitud predeterminada del componente de posición del control trackbar. Estas variables se utilizan en el ejemplo siguiente.  
   
- [!code-cpp[1 NVC_MFC_CSliderCtrl_s1](../../mfc/reference/codesnippet/cpp/csliderctrl-class_1.h)]  
+ [!code-cpp[NVC_MFC_CSliderCtrl_s1 n.º 1](../../mfc/reference/codesnippet/cpp/csliderctrl-class_1.h)]  
   
 ### <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se establece el componente de control de posición del control trackbar hasta dos veces su longitud predeterminada.  
+ En el ejemplo de código siguiente se establece el componente de posición del control trackbar hasta dos veces su longitud predeterminada.  
   
- [!code-cpp[NVC_MFC_CSliderCtrl_s&#1;2](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_CSliderCtrl_s1 n.º 2](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]  
   
 ##  <a name="settic"></a>CSliderCtrl::SetTic  
  Establece la posición de una marca de graduación en un control deslizante.  
@@ -648,7 +648,7 @@ BOOL SetTic(int nTic);
  Posición de la marca de graduación. Este parámetro debe especificar un valor positivo.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si se establece la marca de graduación; en caso contrario, 0.  
+ Es distinto de cero si se establece la marca de graduación; en caso contrario es 0.  
   
 ##  <a name="setticfreq"></a>CSliderCtrl::SetTicFreq  
  Establece la frecuencia con que marca las marcas se muestran en un control deslizante.  
@@ -662,12 +662,12 @@ void SetTicFreq(int nFreq);
  Frecuencia de las marcas de graduación.  
   
 ### <a name="remarks"></a>Comentarios  
- Por ejemplo, si la frecuencia se establece en 2, se muestra una marca de paso para cada incremento del otro intervalo del control deslizante. El valor predeterminado para la frecuencia es 1 (es decir, cada incremento en el intervalo está asociado con una marca de graduación).  
+ Por ejemplo, si la frecuencia se establece en 2, se muestra una marca de graduación para cada incremento otro intervalo del control deslizante. La configuración predeterminada para la frecuencia es 1 (es decir, cada incremento en el intervalo está asociado con una marca de graduación).  
   
  Debe crear el control con el `TBS_AUTOTICKS` estilo que se va a usar esta función. Para obtener más información, consulte [CSliderCtrl::Create](#create).  
   
 ##  <a name="settipside"></a>CSliderCtrl::SetTipSide  
- Posiciones de un control de información sobre herramientas usa un control trackbar.  
+ Posiciones un control de información sobre herramientas utilizado por un control de barra de seguimiento.  
   
 ```  
 int SetTipSide(int nLocation);
@@ -675,13 +675,13 @@ int SetTipSide(int nLocation);
   
 ### <a name="parameters"></a>Parámetros  
  `nLocation`  
- Valor que representa la ubicación en la que se va a mostrar el control de información sobre herramientas. Para obtener una lista de valores posibles, vea el mensaje de Win32 [TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Valor que representa la ubicación en la que se va a mostrar el control de información sobre herramientas. Para obtener una lista de valores posibles, vea el mensaje de Win32 [TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240), tal y como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor que representa la ubicación de información sobre herramientas del control anterior. El valor devuelto es igual a uno de los valores posibles para `nLocation`.  
+ Un valor que representa la ubicación anterior del control de información sobre herramientas. El valor devuelto es igual a uno de los valores posibles para `nLocation`.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función miembro implementa el comportamiento del mensaje de Win32 **TBM_SETTIPSIDE**, como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Control deslizante controles que usan el **TBS_TOOLTIPS** mostrar información sobre herramientas de estilo. Para obtener una descripción de los estilos de control deslizante, consulte [estilos del Control Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) en el [!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+ Esta función miembro implementa el comportamiento del mensaje de Win32 **TBM_SETTIPSIDE**, tal y como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Control deslizante controles que usan el **TBS_TOOLTIPS** aplicar estilo a mostrar información sobre herramientas. Para obtener una descripción de los estilos de control deslizante, consulte [estilos del Control Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) en el [!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
 ##  <a name="settooltips"></a>CSliderCtrl::SetToolTips  
  Asigna un control de información sobre herramientas para un control deslizante.  
@@ -692,14 +692,14 @@ void SetToolTips(CToolTipCtrl* pWndTip);
   
 ### <a name="parameters"></a>Parámetros  
  `pWndTip`  
- Un puntero a un [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objeto que contiene la información sobre herramientas para utilizar con el control deslizante.  
+ Un puntero a un [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objeto que contiene la información sobre herramientas para usar con el control deslizante.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función miembro implementa el comportamiento del mensaje de Win32 [TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Cuando se crea un control deslizante con el **TBS_TOOLTIPS** estilo, crea un control de información sobre herramientas predeterminada que aparece junto al control deslizante, que muestra la posición del control deslizante. Para obtener una descripción de los estilos de control deslizante, consulte [estilos del Control Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) en el [!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+ Esta función miembro implementa el comportamiento del mensaje de Win32 [TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242), tal y como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Cuando se crea un control deslizante con el **TBS_TOOLTIPS** estilo, crea un control de información sobre herramientas predeterminada que aparece junto al control deslizante, mostrar la posición actual del control deslizante. Para obtener una descripción de los estilos de control deslizante, consulte [estilos del Control Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) en el [!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
 ## <a name="see-also"></a>Vea también  
  [CMNCTRL2 de ejemplo MFC](../../visual-cpp-samples.md)   
  [CWnd (clase)](../../mfc/reference/cwnd-class.md)   
- [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [CProgressCtrl (clase)](../../mfc/reference/cprogressctrl-class.md)
 
