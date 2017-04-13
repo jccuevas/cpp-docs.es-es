@@ -1,49 +1,66 @@
 ---
-title: "Error del compilador C2084 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2084"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2084"
+title: C2084 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2084
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2084
 ms.assetid: 990b107f-3721-4851-ae8b-4b69a8c149ed
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C2084
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 653dc7a4a5d330efc89942fbe4ddd07bff81f770
+ms.lasthandoff: 04/12/2017
 
-la función 'función' ya tiene un cuerpo  
+---
+# <a name="compiler-error-c2084"></a>C2084 de Error del compilador
+función '*función*' ya tiene un cuerpo  
   
- La función en cuestión ya se encuentra definida.  
+ La función ya se ha definido.  
   
- En versiones anteriores de Visual C\+\+:  
+ En las versiones de Visual C++ antes de Visual Studio 2002,  
   
--   El compilador aceptaba varias especializaciones de plantilla que se resolvían con el mismo tipo real, aunque las definiciones adicionales nunca estuvieran disponibles.  Ahora, el compilador detecta estas definiciones múltiples.  
+-   El compilador aceptaba varias especializaciones de plantilla que se resuelven en el mismo tipo real, aunque las definiciones adicionales nunca estaría disponibles. Ahora, el compilador detecta estas definiciones múltiples.  
   
--   \_\_int32 e int se trataban como tipos separados.  Ahora, el compilador trata \_\_int32 como sinónimo de int.  Esto significa que el compilador detectará varias definiciones si se sobrecarga una función en \_\_int32 e int y generará un error.  
+-   `__int32`y `int` se trataban como tipos distintos. El compilador trata ahora `__int32` como sinónimo de `int`. Esto significa que el compilador detecta varias definiciones si una función está sobrecargada en ambos `__int32` y `int` y produce un error.  
   
- El código siguiente genera el error C2084:  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C2084:  
   
-```  
+```cpp  
 // C2084.cpp  
 void Func(int);  
 void Func(int) {}   // define function  
 void Func(int) {}   // C2084 second definition  
 ```  
   
- Posible solución:  
+Para corregir este error, quite la definición de duplicados:  
   
 ```  
 // C2084b.cpp  

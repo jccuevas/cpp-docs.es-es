@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 59d41497bafd9782c0849a03e0354e338b7f8467
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 6d58bdd55887962bac4644df0ab93f8f5dfe9835
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="dhtml-event-maps"></a>DHTML (Mapas de eventos)
@@ -89,7 +89,7 @@ Las macros siguientes pueden utilizarse para controlar eventos DHTML.
 |[END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline)|Marca el final de la asignación de eventos DHTML. |
   
 ## <a name="url-event-map-macros"></a>Macros de mapa de eventos de dirección URL  
- Las siguientes macros pueden usarse para controlar los eventos DHTML en [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-las clases derivadas.  
+ Las macros siguientes pueden usarse para controlar los eventos DHTML en [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-las clases derivadas.  
   
 |||  
 |-|-|  
@@ -140,7 +140,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
 ### <a name="remarks"></a>Comentarios  
  Agregue un mapa de eventos DHTML a la clase para proporcionar información a **CDHtmlDialog** que se puede utilizar para enrutar los eventos desencadenados por los elementos HTML o controles ActiveX en una página web a las funciones de controlador en su clase.  
   
- Lugar la `BEGIN_DHTML_EVENT_MAP` seguido de macro en el archivo de definición (. h) de la clase `DHTML_EVENT` macros para los eventos de la clase es controlar (por ejemplo, `DHTML_EVENT_ONMOUSEOVER` para los eventos de mouseover). Use la [END_DHTML_EVENT_MAP_INLINE](http://msdn.microsoft.com/library/0cfec092-20ee-49f3-bc38-56d6a5572db2) macro para marcar el final de la asignación de eventos. Estas macros implementan la función siguiente:  
+ Lugar la `BEGIN_DHTML_EVENT_MAP` seguido de macro en el archivo de definición (. h) de la clase `DHTML_EVENT` macros para los eventos de la clase es controlar (por ejemplo, `DHTML_EVENT_ONMOUSEOVER` para los eventos de mouseover). Use la [END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline) macro para marcar el final de la asignación de eventos. Estas macros implementan la función siguiente:  
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   
@@ -881,7 +881,7 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
  El nombre de la clase que contiene el mapa de eventos. Esta clase debe derivar directa o indirectamente de [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). El mapa de eventos DHTML incrustado debe estar dentro de un [mapa de eventos DHTML y la dirección URL](#begin_dhtml_url_event_map)).  
   
  *Nombredemapa*  
- Especifica la página de cuyos eventos se asignan a este. Esto coincide con *Nombredemapa* en el [URL_EVENT_ENTRY](#url_event_entry) macro definir realmente el recurso de dirección URL o HTML.  
+ Especifica la página de cuyos eventos se asignan a esto. Esto coincide con *Nombredemapa* en el [URL_EVENT_ENTRY](#url_event_entry) macro definir realmente el recurso de dirección URL o HTML.  
   
 ### <a name="remarks"></a>Comentarios  
  Dado que un cuadro de diálogo DHTML varias páginas consta de varias páginas HTML, cada uno de los cuales puede provocar eventos DHTML, mapas de eventos incrustados se usan para asignar eventos a controladores de forma por página.  

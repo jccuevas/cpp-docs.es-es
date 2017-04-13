@@ -1,5 +1,5 @@
 ---
-title: Error grave C1083 | Documentos de Microsoft
+title: Error irrecuperable C1083 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 6cc89e4278c03f0dc24c4358cf6a53ec25f3b327
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: bbc5e1f78ca1ea15e65fdd76b7ecd2ea0e195b00
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="fatal-error-c1083"></a>Error irrecuperable C1083
@@ -68,13 +68,13 @@ No se puede abrir el archivo tipodearchivo: 'archivo': mensaje
   
  `#include <stdio.h>`  
   
- el compilador sigue una ruta de acceso de búsqueda definida por el entorno de compilación, el **/I** opción del compilador, el **/X** opción del compilador y la **incluir** variable de entorno. Para obtener más información, incluidos detalles concretos sobre el orden de búsqueda que se utiliza para buscar un archivo, consulte [#include (directiva) (C/C ++)](../../preprocessor/hash-include-directive-c-cpp.md) y [#import Directive](../../preprocessor/hash-import-directive-cpp.md).  
+ el compilador sigue una ruta de acceso de búsqueda definida por el entorno de compilación, el **/I** opción del compilador, el **/X** opción del compilador y la **INCLUDE** variable de entorno. Para obtener más información, incluidos detalles concretos sobre el orden de búsqueda usado para buscar un archivo, consulte [#include (directiva) (C/C ++)](../../preprocessor/hash-include-directive-c-cpp.md) y [#import (directiva)](../../preprocessor/hash-import-directive-cpp.md).  
   
- Incluso cuando los archivos de encabezado se muestran en **el Explorador de soluciones** como parte de un proyecto, los archivos solo se encuentran por el compilador cuando se conocen por un `include` o `import` directiva y están ubicados en una ruta de acceso de búsqueda de directorio. Los diferentes tipos de compilaciones podrían usar distintas rutas de búsqueda. El **/X** opción del compilador puede utilizarse para excluir directorios de la ruta de búsqueda de archivos de inclusión. Esto permite que distintas compilaciones puedan usar diferentes archivos de inclusión que tienen el mismo nombre, pero se mantienen en directorios distintos. Ésta es una alternativa a la compilación condicional utilizando los comandos de preprocesador. Para obtener más información acerca de la **/X** opción del compilador, vea [/X (Ignore Standard Include Paths)](../../build/reference/x-ignore-standard-include-paths.md).  
+ Incluso si los archivos de encabezado se indican en **el Explorador de soluciones** como parte de un proyecto, los archivos solo se encuentran por el compilador cuando se conocen por un `include` o `import` directiva y están ubicados en una ruta de acceso de búsqueda de directorio. Los diferentes tipos de compilaciones podrían usar distintas rutas de búsqueda. El **/X** opción del compilador puede utilizarse para excluir directorios de la ruta de búsqueda de archivos de inclusión. Esto permite que distintas compilaciones puedan usar diferentes archivos de inclusión que tienen el mismo nombre, pero se mantienen en directorios distintos. Ésta es una alternativa a la compilación condicional utilizando los comandos de preprocesador. Para obtener más información sobre la **/X** opción del compilador, vea [/X (omitir estándar incluyen rutas de acceso)](../../build/reference/x-ignore-standard-include-paths.md).  
   
- Cuando el compilador se invoca en la línea de comandos, suelen usarse las variables de entorno para especificar rutas de búsqueda. Si la ruta de búsqueda descrita por la **incluir** variable de entorno no está configurada correctamente, se genera un error C1083. Para obtener más información acerca de cómo usar variables de entorno, consulte [Cómo: utilizar Variables de entorno en una compilación](http://msdn.microsoft.com/Library/7f9e4469-8865-4b59-aab3-3ff26bd36e77).  
+ Cuando el compilador se invoca en la línea de comandos, suelen usarse las variables de entorno para especificar rutas de búsqueda. Si la ruta de acceso de búsqueda descrita por la **INCLUDE** variable de entorno no está configurada correctamente, se genera un error C1083. Para obtener más información sobre cómo usar las variables de entorno, consulte [Cómo: utilizar Variables de entorno en una compilación](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).  
   
- Para corregir este problema, corrija la ruta que el compilador utiliza para buscar el archivo incluido o importado. Un nuevo proyecto utiliza las rutas de búsqueda predeterminadas. Es posible que tenga que modificar la ruta de acceso que se va a agregar un directorio para el proyecto. Si está compilando en la línea de comandos, establezca la **incluir** variable de entorno o el **/I** opción del compilador para especificar la ruta de acceso del archivo. Para establecer la ruta de acceso del directorio de inclusión en Visual Studio, abra el proyecto **páginas de propiedades** diálogo cuadro, expanda **propiedades de configuración** y **directorios de VC ++**y, a continuación, editar la **directorios de inclusión** valor. Para obtener más información acerca de los directorios por usuario y por proyecto búsquedas del compilador en Visual Studio, consulte [página de propiedades directorios de VC ++](../../ide/vcpp-directories-property-page.md). Para obtener más información acerca de la **/I** opción del compilador, vea [/I (directorios de inclusión adicionales)](../../build/reference/i-additional-include-directories.md).  
+ Para corregir este problema, corrija la ruta que el compilador utiliza para buscar el archivo incluido o importado. Un nuevo proyecto utiliza las rutas de búsqueda predeterminadas. Es posible que tenga que modificar la ruta de acceso que se va a agregar un directorio para el proyecto. Si realiza la compilación en la línea de comandos, establezca la **INCLUDE** variable de entorno o el **/I** opción del compilador para especificar la ruta de acceso del archivo. Para establecer la ruta de acceso del directorio de inclusión en Visual Studio, abra el proyecto **páginas de propiedades** cuadro de diálogo, expanda **propiedades de configuración** y **directorios de VC ++**y, a continuación, edite la **directorios de inclusión** valor. Para obtener más información acerca de los directorios de CAL por usuario y por proyecto realiza la búsqueda del compilador en Visual Studio, vea [página de propiedades de directorios de VC ++](../../ide/vcpp-directories-property-page.md). Para obtener más información sobre la **/I** opción del compilador, vea [/I (directorios de inclusión adicionales)](../../build/reference/i-additional-include-directories.md).  
   
  **Se incluye una versión incorrecta de un nombre de archivo**  
   
@@ -88,7 +88,7 @@ No se puede abrir el archivo tipodearchivo: 'archivo': mensaje
   
 -   El archivo usa código administrado, pero la opción del compilador **/CLR** no se ha especificado. Para obtener más información, consulte [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
--   El archivo compilado mediante otro **/ analyze** configuración opción del compilador que se usa para precompilar los encabezados. (Cuando los encabezados de un proyecto se precompilan, todos deben usar la misma **/ analyze** configuración.) Para obtener más información, consulte [/analize (Análisis de código)](../../build/reference/analyze-code-analysis.md).  
+-   El archivo se compila utilizando otro **/ analyze** valor de la opción de compilador que se usa para precompilar los encabezados. (Cuando los encabezados para un proyecto se precompilan, todos deben usar la misma **/ analyze** configuración.) Para obtener más información, consulte [/analize (Análisis de código)](../../build/reference/analyze-code-analysis.md).  
   
 -   El archivo, el directorio o el disco es de solo lectura.  
   
@@ -105,7 +105,7 @@ No se puede abrir el archivo tipodearchivo: 'archivo': mensaje
 #include "stdio.h"   // OK  
 ```  
   
- Para obtener información sobre cómo crear proyectos de C o C++ en el IDE o en la línea de comandos e información acerca de cómo establecer variables de entorno, consulte [compilar programas de C o C++](../../build/building-c-cpp-programs.md).
+ Para obtener información sobre cómo compilar proyectos de C o C++ en el IDE o en la línea de comandos e información acerca de cómo establecer variables de entorno, consulte [compilar programas de C o C++](../../build/building-c-cpp-programs.md).
  
  ## <a name="see-also"></a>Vea también
  [Propiedades de MSBuild](/visualstudio/msbuild/msbuild-properties)
