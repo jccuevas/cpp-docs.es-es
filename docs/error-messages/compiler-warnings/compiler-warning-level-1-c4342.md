@@ -34,25 +34,25 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4755edcc99a9b8fca00972611bbd633a68eb8ec7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: c4a2afbc3ced186b0db63b22b3cc5c2b27204c71
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-warning-level-1-c4342"></a>Advertencia del compilador (nivel 1) C4342
-cambio en el comportamiento: se llamó a 'función', pero en versiones anteriores se llamaba a un operador de miembro  
+cambio de comportamiento: '*función*' llama, pero en versiones anteriores se llamaba a un operador de miembro  
   
- En versiones anteriores de Visual C++, se llama a un miembro, pero este comportamiento se ha modificado y el compilador busca a la mejor coincidencia en el ámbito de espacio de nombres.  
+ En versiones de Visual C++ antes de Visual Studio 2002, se llama a un miembro, pero este comportamiento se ha cambiado y ahora el compilador busca a la mejor coincidencia en el ámbito de espacio de nombres.  
   
- Si se encontró un operador de miembro, el compilador no consideraría previamente ningún espacio de nombres operadores de ámbito. Si hay una coincidencia mejor en el ámbito de espacio de nombres, el compilador actual lo llamará correctamente, mientras que los compiladores anteriores no lo considerarían.  
+ Si se encontró un operador de miembro, el compilador no consideraría previamente ningún espacio de nombres operadores de ámbito. Si hay una coincidencia mejor en el ámbito de espacio de nombres, el compilador actual llama correctamente a él, mientras que los compiladores anteriores no lo considerarían.  
   
- Esta advertencia se debería deshabilitar después trasladado correctamente el código a la versión actual.  El compilador puede proporcionar falsos positivos, generando esta advertencia para código donde no hay ningún cambio de comportamiento.  
+ Esta advertencia se debe deshabilitar después correctamente trasladar el código a la versión actual.  El compilador puede proporcionar falsos positivos, generando esta advertencia para el código que no haya ningún cambio de comportamiento.  
   
  De forma predeterminada, esta advertencia está desactivada. Para obtener más información, consulte [advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
  El ejemplo siguiente genera C4342:  
   
-```  
+```cpp  
 // C4342.cpp  
 // compile with: /EHsc /W1  
 #include <fstream>  

@@ -49,9 +49,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 0e83114e2e6f062b9cb2164cf71bb25792304de0
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: ceaf02cbe0eedec6e8bd4980d87c025d6aa23615
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="diagnostic-services"></a>Servicios de diagnóstico
@@ -231,7 +231,7 @@ ASSERT_VALID(pObject)
 ### <a name="remarks"></a>Comentarios  
  `ASSERT_VALID`llamadas a la `AssertValid` función de miembro del objeto pasado como argumento.  
   
- En la versión de lanzamiento de MFC, `ASSERT_VALID` no hace nada. En la versión de depuración, valida el puntero, se realiza una comprobación contra **NULL**y llama a propia del objeto `AssertValid` funciones miembro. Si cualquiera de estas pruebas se produce un error, se muestra un mensaje de alerta en la misma manera que [ASSERT](#assert).  
+ En la versión de lanzamiento de MFC, `ASSERT_VALID` no hace nada. En la versión de depuración, valida el puntero, se realiza una comprobación contra **NULL**y llama a la propia `AssertValid` funciones miembro. Si cualquiera de estas pruebas se produce un error, se muestra un mensaje de alerta en la misma manera que [ASSERT](#assert).  
   
 > [!NOTE]
 >  Esta función está disponible sólo en la versión de depuración de MFC.  
@@ -325,7 +325,7 @@ THIS_FILE
 ```  
    
 ### <a name="remarks"></a>Comentarios  
- La información se usa por la **ASSERT** y **compruebe** macros. Los asistentes de Asistente para aplicaciones y código coloque la macro en los archivos de código fuente que creen.  
+ La información se usa por la **ASSERT** y **compruebe** macros. Los asistentes de Asistente para aplicaciones y código de colocar la macro en los archivos de código fuente que creen.  
    
 ### <a name="example"></a>Ejemplo  
 ```cpp
@@ -356,7 +356,7 @@ TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [ATLTRACE2](http://msdn.microsoft.com/library/467ff555-e7a5-4f94-bdd9-50ee27ab9986) para obtener una descripción de **seguimiento**. **SEGUIMIENTO** y `ATLTRACE2` tienen el mismo comportamiento.  
+ Vea [ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2) para obtener una descripción de **seguimiento**. **SEGUIMIENTO** y `ATLTRACE2` tienen el mismo comportamiento.  
   
  En la versión de depuración de MFC, esta macro envía la cadena especificada al depurador de la aplicación actual. En una versión de lanzamiento, esta macro se compila a nada (código no se genera en absoluto).  
   

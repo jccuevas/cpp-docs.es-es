@@ -1,37 +1,58 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4077 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C4077"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4077"
+title: Compilador advertencia (nivel 1) C4077 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C4077
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4077
 ms.assetid: c2d28805-b33f-41ad-afba-33b3f788c649
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Advertencia del compilador (nivel 1) C4077
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 000301a51098faff00210f323f522e35280418b8
+ms.lasthandoff: 04/12/2017
 
-opción check\_stack desconocida  
+---
+# <a name="compiler-warning-level-1-c4077"></a>Advertencia del compilador (nivel 1) C4077
+opción check_stack desconocida  
   
- El formato antiguo de la pragma **check\_stack** se usa con un argumento desconocido. El argumento debe ser `+`, `-`, `(on)`, `(off)` o estar vacío.  
+ El formato antiguo de la pragma **check_stack** se usa con un argumento desconocido. El argumento debe ser `+`, `-`, `(on)`, `(off)`o estar vacío.  
   
  El compilador omite la pragma y deja la comprobación de la pila sin cambios.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
-// C4077.cpp // compile with: /W1 /LD #pragma check_stack yes // C4077 #pragma check_stack +    // Correct old form #pragma check_stack (on) // Correct new form  
+// C4077.cpp  
+// compile with: /W1 /LD  
+#pragma check_stack yes // C4077  
+#pragma check_stack +    // Correct old form  
+#pragma check_stack (on) // Correct new form  
 ```
