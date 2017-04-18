@@ -34,13 +34,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: f2699316266e9cc061fa898c4176e36ae8323b33
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 4bc0dafbc4d09f5c53ff502876da2e250d537882
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE (Estructura)
-El `AFX_EXTENSION_MODULE` se usa durante la inicialización de DLL de extensión MFC para mantener el estado del módulo del archivo DLL de extensión.  
+El `AFX_EXTENSION_MODULE` se utiliza durante la inicialización de DLL de extensión MFC para almacenar el estado del módulo de archivo DLL de extensión.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -66,32 +66,32 @@ struct AFX_EXTENSION_MODULE
  Especifica el identificador del módulo de recursos personalizados de DLL.  
   
  *pFirstSharedClass*  
- Puntero a información (el `CRuntimeClass` estructura) acerca de la clase en tiempo de ejecución de la primera del módulo DLL. Se utiliza para proporcionar el inicio de la lista de clases en tiempo de ejecución.  
+ Un puntero a la información (el `CRuntimeClass` estructura) acerca de la clase en tiempo de ejecución de la primera del módulo de archivo DLL. Se usa para proporcionar el inicio de la lista de clases en tiempo de ejecución.  
   
  *pFirstSharedFactory*  
- Un puntero al primer generador de objetos del módulo DLL (un `COleObjectFactory` objeto). Se utiliza para proporcionar el inicio de la lista del generador de clases.  
+ Un puntero al primer generador de objetos del módulo DLL (un `COleObjectFactory` objeto). Se usa para proporcionar el inicio de la lista del generador de clases.  
   
 ## <a name="remarks"></a>Comentarios  
  Extensión de MFC DLL necesario hacer dos cosas en sus `DllMain` función:  
   
--   Llame a [AfxInitExtensionModule](http://msdn.microsoft.com/library/15f0c820-ff34-4da6-8077-79afbbb8dac1) y compruebe el valor devuelto.  
+-   Llame a [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule) y compruebe el valor devuelto.  
   
 -   Crear un **CDynLinkLibrary** si va a exportar el archivo DLL del objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objetos o tiene sus propios recursos personalizados.  
   
- El `AFX_EXTENSION_MODULE` estructura se usa para mantener una copia de la extensión de estado de módulo DLL, incluida una copia de los objetos de clase en tiempo de ejecución que se hayan inicializado la DLL de extensión como parte de la construcción del objeto estático normal ejecutada antes de `DllMain` especificada. Por ejemplo:  
+ El `AFX_EXTENSION_MODULE` estructura se utiliza para almacenar una copia de la extensión de estado de módulo DLL, incluida una copia de los objetos de clase en tiempo de ejecución que se ha inicializado por el archivo DLL de extensión como parte de la construcción del objeto estático normal ejecutada antes de `DllMain` se escribe. Por ejemplo:  
   
- [!code-cpp[NVC_MFC_DLL&#2;](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
+ [!code-cpp[NVC_MFC_DLL N.º 2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
   
  La información de módulo almacenada en el `AFX_EXTENSION_MODULE` estructura puede copiarse en el **CDynLinkLibrary** objeto. Por ejemplo:  
   
- [!code-cpp[NVC_MFC_DLL&#5;](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
+ [!code-cpp[NVC_MFC_DLL Nº 5](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afx.h  
   
 ## <a name="see-also"></a>Vea también  
  [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [AfxInitExtensionModule](http://msdn.microsoft.com/library/15f0c820-ff34-4da6-8077-79afbbb8dac1)   
- [AfxTermExtensionModule](http://msdn.microsoft.com/library/b64de402-f1e3-4c26-9823-08c07876aaaa)
+ [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule)   
+ [AfxTermExtensionModule](extension-dll-macros.md#afxtermextensionmodule)
 
 

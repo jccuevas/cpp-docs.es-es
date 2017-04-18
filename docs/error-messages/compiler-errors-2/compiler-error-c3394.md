@@ -1,36 +1,62 @@
 ---
-title: "Error del compilador C3394 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C3394"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3394"
+title: Error del compilador C3394 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C3394
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3394
 ms.assetid: 4e025d79-27ba-43c8-b0d9-839ecef98126
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Error del compilador C3394
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 1b7edcf8c8e084c64721d76dee12ef7eede47dc4
+ms.lasthandoff: 04/12/2017
 
+---
+# <a name="compiler-error-c3394"></a>Error del compilador C3394
 error de sintaxis en la cláusula de restricciones: el 'identifier' encontrado esperaba un tipo  
   
- Había una restricción mal formada.  Para obtener más información, consulta [Restricciones de parámetros de tipo genérico \(C\+\+\/CLI\)](../Topic/Constraints%20on%20Generic%20Type%20Parameters%20\(C++-CLI\).md).  
+ Había una restricción mal formada.  Para obtener más información, consulte [restricciones en parámetros de tipo genérico (C++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera la advertencia C3394:  
   
 ```  
-// C3394.cpp // compile with: /clr /c ref class MyClass {}; ref class R { generic<typename T> where T : static   // C3394 // try the following line instead // where T : MyClass void f() {} };  
+// C3394.cpp  
+// compile with: /clr /c  
+ref class MyClass {};  
+ref class R {  
+   generic<typename T>  
+   where T : static   // C3394  
+   // try the following line instead  
+   // where T : MyClass  
+   void f() {}  
+};  
 ```

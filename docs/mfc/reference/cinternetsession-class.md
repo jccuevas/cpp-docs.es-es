@@ -49,9 +49,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 0d9ff419c0275d9ab426b4e60102918794aa5221
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 1bc8f21cd68741a4b0560ea3e1cb678be50dcf89
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="cinternetsession-class"></a>CInternetSession (clase)
@@ -171,7 +171,7 @@ CInternetSession(
 ### <a name="remarks"></a>Comentarios  
  **CInternetSession** es la primera función de Internet por una aplicación. Inicializa las estructuras internas de datos y lo prepara para futuras llamadas de la aplicación.  
   
- Si no hay conexión a Internet puede abrirse, `CInternetSession` produce una [AfxThrowInternetException](http://msdn.microsoft.com/library/c9645b10-9541-48b2-8b0c-94ca33fed3cb).  
+ Si no hay conexión a Internet puede abrirse, `CInternetSession` produce una [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).  

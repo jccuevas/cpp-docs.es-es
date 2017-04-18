@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: c11d9a2d56f17d814873d36868b8fb6cf3deac43
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 2ac30fa747b13c469846c51e9826242fdf54f8c1
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="run-time-object-model-services"></a>Servicios del modelo de objetos en tiempo de ejecución
@@ -46,7 +46,7 @@ Las clases de [CObject](../../mfc/reference/cobject-class.md) y [CRuntimeClass](
   
  La serialización es el proceso de escritura o lectura del contenido de un objeto a o desde un archivo. Puede utilizar la serialización para almacenar el contenido de un objeto incluso después de que salga de la aplicación. A continuación, se puede leer el objeto desde el archivo cuando se reinicie la aplicación. Se dice que estos objetos de datos "persistentes."  
   
- Creación de objetos dinámicos le permite crear un objeto de una clase especificada en tiempo de ejecución. Por ejemplo, documento, vista y objetos de marco deben admitir la creación dinámica porque el marco de trabajo necesita crear de forma dinámica.  
+ Creación de objetos dinámicos le permite crear un objeto de una clase especificada en tiempo de ejecución. Por ejemplo, documento, vista y marco objetos deben admitir la creación dinámica porque el marco de trabajo necesita crear de forma dinámica.  
   
  En la tabla siguiente se enumera las macros MFC que admiten la creación dinámica, la serialización y la información de clase en tiempo de ejecución.  
   
@@ -173,7 +173,7 @@ DECLARE_DYNCREATE(class_name)
  El nombre real de la clase.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo usa esta capacidad para crear nuevos objetos de forma dinámica. Por ejemplo, la nueva vista creada cuando se abre un nuevo documento. Documento, vista y las clases del marco deben admitir la creación dinámica porque el marco de trabajo necesita crear de forma dinámica.  
+ El marco de trabajo usa esta capacidad para crear nuevos objetos de forma dinámica. Por ejemplo, la nueva vista creada cuando se abre un nuevo documento. Clases de documentos, vista y marco deben admitir la creación dinámica porque el marco de trabajo necesita crear de forma dinámica.  
   
  Agregar el `DECLARE_DYNCREATE` macro en el módulo .h para la clase, a continuación, incluya ese módulo en todos los módulos de .cpp que necesitan tener acceso a objetos de esta clase.  
   
@@ -355,7 +355,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 ### <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
->  Si usa `IMPLEMENT_OLECREATE_FLAGS`, puede especificar qué modelo de subprocesos que sea compatible con el objeto mediante el uso de la `nFlags` parámetro. Si desea admitir solo el modelo solo-Threading, use `IMPLEMENT_OLECREATE`.  
+>  Si usa `IMPLEMENT_OLECREATE_FLAGS`, puede especificar qué modelo de subprocesos que sea compatible con el objeto utilizando el `nFlags` parámetro. Si desea admitir solo el modelo solo-Threading, use `IMPLEMENT_OLECREATE`.  
   
  External name es el identificador que se expone a otras aplicaciones. Aplicaciones cliente utilizar el nombre externo para solicitar un objeto de esta clase desde un servidor de automatización.  
   
@@ -478,7 +478,7 @@ DECLARE_OLECREATE(class_name)
  **Encabezado**: afxdisp.h  
 
 ##  <a name="implement_olecreate"></a>IMPLEMENT_OLECREATE  
- Cualquier esta macro o [IMPLEMENT_OLECREATE_FLAGS](http://msdn.microsoft.com/library/d1589f6a-5a69-4742-b07c-4c621cfd040d) deben aparecer en el archivo de implementación para cualquier clase que utiliza `DECLARE_OLECREATE`.  
+ Cualquier esta macro o [IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags) deben aparecer en el archivo de implementación para cualquier clase que utiliza `DECLARE_OLECREATE`.  
   
 ```
 IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)  
@@ -497,7 +497,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 ### <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
->  Si usa `IMPLEMENT_OLECREATE`, de forma predeterminada, se admite solo el modelo de subprocesamiento único. Si usa `IMPLEMENT_OLECREATE_FLAGS`, puede especificar qué modelo de subprocesos que sea compatible con el objeto mediante el uso de la `nFlags` parámetro.  
+>  Si usa `IMPLEMENT_OLECREATE`, de forma predeterminada, se admite solo el modelo de subprocesamiento único. Si usa `IMPLEMENT_OLECREATE_FLAGS`, puede especificar qué modelo de subprocesos que sea compatible con el objeto utilizando el `nFlags` parámetro.  
   
  External name es el identificador que se expone a otras aplicaciones. Aplicaciones cliente utilizar el nombre externo para solicitar un objeto de esta clase desde un servidor de automatización.  
   

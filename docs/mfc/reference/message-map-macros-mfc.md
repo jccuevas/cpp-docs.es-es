@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 73def19ecc0577d35054a7384d57c88fd2760499
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: ca7c5b1e5042ab134ad72a80986435448f5bec20
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="message-map-macros-mfc"></a>Macros de mapa de mensajes (MFC)
@@ -55,6 +55,7 @@ Para admitir los mapas de mensajes, MFC proporciona las macros siguientes:
 |-|-|  
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|Declara que se utilizará un mapa de mensajes en una clase para asignar mensajes a funciones (debe usarse en la declaración de clase).|  
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|Comienza la definición de un mapa de mensajes (debe usarse en la implementación de la clase).|  
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|Comienza la definición de un mapa de mensajes en un tipo de clase que contiene un argumento de plantilla único. |
 |[END_MESSAGE_MAP](#end_message_map)|Termina la definición de un mapa de mensajes (debe usarse en la implementación de la clase).|  
   
 ### <a name="message-mapping-macros"></a>Macros de asignación de mensajes  
@@ -81,34 +82,6 @@ Para admitir los mapas de mensajes, MFC proporciona las macros siguientes:
   
  Para obtener más información sobre los mapas de mensajes, la declaración de mapa de mensajes y demarcación macros y las macros de asignación de mensajes, vea [mapas de mensajes](../../mfc/reference/message-maps-mfc.md) y [control de mensajes y los temas de asignación](../../mfc/message-handling-and-mapping.md). Para obtener más información acerca de los intervalos de mapa de mensajes, vea [controladores para intervalos de mapa de mensajes de](../../mfc/handlers-for-message-map-ranges.md).  
 
-## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
- Declara que la clase define un mapa de mensajes. Cada `CCmdTarget`-clase derivada en el programa debe proporcionar un mapa de mensajes para controlar los mensajes.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```    
-DECLARE_MESSAGE_MAP( )  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- Use la `DECLARE_MESSAGE_MAP` macro al final de la declaración de clase. A continuación, en el archivo .cpp que define las funciones de miembro para la clase, use la `BEGIN_MESSAGE_MAP` (macro), las entradas de macro para cada una de las funciones de controlador de mensajes y el `END_MESSAGE_MAP` macro.  
-  
-> [!NOTE]
->  Si declara los miembros después de `DECLARE_MESSAGE_MAP`, debe especificar un nuevo tipo de acceso (**público**, `private`, o `protected`) para ellos.  
-  
- Para obtener más información sobre el mensaje se asigna y `DECLARE_MESSAGE_MAP` macro, consulte [control de mensajes y los temas de asignación](../../mfc/message-handling-and-mapping.md).  
-  
-### <a name="example"></a>Ejemplo  
-```cpp  
-class CMainFrame : public CMDIFrameWnd
-{
-   DECLARE_MESSAGE_MAP()
-
-   // Remainder of class declaration omitted.
-``` 
-  
-### <a name="requirements"></a>Requisitos  
- **Encabezado:** afxwin.h  
 
 ## <a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
 Comienza la definición de la asignación de mensaje.  
@@ -140,6 +113,61 @@ END_MESSAGE_MAP()
   
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h 
+
+##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+Comienza la definición de un mapa de mensajes en un tipo de clase que contiene un argumento de plantilla único.  
+   
+### <a name="syntax"></a>Sintaxis  
+  ```
+BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )  
+```
+### <a name="parameters"></a>Parámetros  
+ `theClass`  
+ Especifica el nombre de la clase cuyo mensaje asignar todo esto es.    
+ `type_name`  
+ El nombre del parámetro de plantilla especificado para la clase.    
+ `baseClass`  
+ Especifica el nombre de la clase base de `theClass`.  
+   
+### <a name="remarks"></a>Comentarios  
+ Esta macro equivale a la [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map) macro; sin embargo, esta macro está destinada a las clases que contienen un argumento de plantilla único.  
+  
+ En la sección de implementación de método de la clase, inicie el mapa de mensajes con el **BEGIN_TEMPLATE_MESSAGE_MAP** macro; a continuación, agregue entradas de macro para cada uno de los métodos de controlador de mensajes como lo haría con un mapa de mensajes estándar. Al igual que con la **BEGIN_MESSAGE_MAP** macro, complete el mapa de mensajes de la plantilla con el [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) macro.  
+  
+ Para obtener más información sobre la implementación de mapas de mensajes para las clases de plantilla, consulte [Cómo: crear un mapa de mensajes para una clase de plantilla](../how-to-create-a-message-map-for-a-template-class.md).  
+   
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxwin.h  
+ 
+## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
+ Declara que la clase define un mapa de mensajes. Cada `CCmdTarget`-clase derivada en el programa debe proporcionar un mapa de mensajes para controlar los mensajes.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```    
+DECLARE_MESSAGE_MAP( )  
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Use la `DECLARE_MESSAGE_MAP` macro al final de la declaración de clase. A continuación, en el archivo .cpp que define las funciones de miembro para la clase, use la `BEGIN_MESSAGE_MAP` (macro), las entradas de macro para cada una de las funciones de controlador de mensajes y el `END_MESSAGE_MAP` macro.  
+  
+> [!NOTE]
+>  Si declara los miembros después de `DECLARE_MESSAGE_MAP`, debe especificar un nuevo tipo de acceso (**público**, `private`, o `protected`) para ellos.  
+  
+ Para obtener más información sobre el mensaje se asigna y `DECLARE_MESSAGE_MAP` macro, consulte [control de mensajes y los temas de asignación](../../mfc/message-handling-and-mapping.md).  
+  
+### <a name="example"></a>Ejemplo  
+```cpp  
+class CMainFrame : public CMDIFrameWnd
+{
+   DECLARE_MESSAGE_MAP()
+
+   // Remainder of class declaration omitted.
+``` 
+  
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxwin.h  
+
 
 ## <a name="end_message_map"></a>END_MESSAGE_MAP
 Termina la definición de la asignación de mensaje.  
@@ -285,7 +313,7 @@ ON_MESSAGE( message, memberFxn )
  Debe haber exactamente uno `ON_MESSAGE` instrucción de macro en el mapa de mensajes para cada mensaje definido por el usuario que se debe asignar a una función de controlador de mensajes.  
   
 > [!NOTE]
->  Además de los mensajes definidos por el usuario, `ON_MESSAGE` controla los mensajes de Windows menos comunes. Para obtener más información, vea el artículo de Knowledge Base [99848: INFO: Use ON_MESSAGE() Macro a los mensajes de menos común de mapa](http://go.microsoft.com/fwlink/?linkId=192022).  
+>  Además de los mensajes definidos por el usuario, `ON_MESSAGE` controla los mensajes de Windows menos comunes. Para obtener más información, vea el artículo de Knowledge Base [99848: INFO: Use ON_MESSAGE() Macro mapa menos común mensajes](http://go.microsoft.com/fwlink/?linkId=192022).  
   
  Para obtener más información y ejemplos, vea [control de mensajes y los temas de asignación](../../mfc/message-handling-and-mapping.md) y [controladores definidos por el usuario](user-defined-handlers.md)  
   
@@ -336,7 +364,7 @@ ON_OLECMD( pguid, olecmdid, id )
 ### <a name="remarks"></a>Comentarios  
  `IOleCommandTarget`permite que un contenedor recibir comandos que se originan en la interfaz de usuario del DocObject y permite al contenedor enviar los mismos comandos (como nuevo, abrir, guardar como e imprimir en el menú archivo; y copiar, pegar, deshacer, y así sucesivamente en el menú Editar) a DocObject.  
   
- `IOleCommandTarget`es más sencillo que del automatización OLE `IDispatch`. `IOleCommandTarget`se basa completamente en un conjunto estándar de comandos que no suelen tener argumentos, y no está implicada ninguna información de tipo (seguridad de tipos se reduce para argumentos del comando). Si es necesario enviar comandos con argumentos, use [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).  
+ `IOleCommandTarget`es más sencillo que del automatización OLE `IDispatch`. `IOleCommandTarget`se basa completamente en un conjunto estándar de comandos que no suelen tener argumentos, y no hay información de tipo implicada (seguridad de tipos se reduce para argumentos del comando). Si es necesario enviar comandos con argumentos, use [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).  
   
  El `IOleCommandTarget` comandos de menú estándar se han implementado por MFC en las macros siguientes:  
   

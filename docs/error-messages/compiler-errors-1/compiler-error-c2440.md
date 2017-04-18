@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: d2855f44e05e095f8e1e5cf992eacaafcbe8464d
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 0789875fee672856dbc0eff429d2363a43963940
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-error-c2440"></a>Error del compilador C2440
@@ -260,10 +260,12 @@ This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in
 ## <a name="example"></a>Ejemplo  
 ### <a name="copy-list-initialization"></a>Inicialización de lista de copia
 
-Visual Studio 2017 y versiones posterior correctamente generar errores de compilador relacionados con la creación de objetos mediante listas de inicializadores que no se detectan en Visual Studio 2015 y podrían provocar el bloqueo o un comportamiento en tiempo de ejecución indefinido. Conforme a N4594 13.3.1.7p1, en la inicialización de lista de copia el compilador debe tener en cuenta un constructor explícito para la resolución de sobrecarga, pero debe generar un error si se elige realmente esa sobrecarga.
-Los dos ejemplos siguientes se compilan en Visual Studio 2015, pero no en Visual Studio 2017.
+Visual Studio 2017 y versiones posterior correctamente generar errores de compilador relacionados con la creación de objetos mediante listas de inicializadores que no se detectan en Visual Studio 2015 y podrían provocar el bloqueo o un comportamiento en tiempo de ejecución indefinido. En C ++ 17-lista de inicialización de copia, el compilador es necesario tener en cuenta un constructor explícito para la resolución de sobrecarga, pero debe generar un error si se elige esa sobrecarga.
 
-```
+En el ejemplo siguiente se compila en Visual Studio 2015, pero no en Visual Studio de 2017.
+
+```cpp  
+// C2440j.cpp  
 struct A
 {
     explicit A(int) {} 
@@ -272,25 +274,33 @@ struct A
 
 int main()
 {
-    A a1 = { 1 }; // error C3445: copy-list-initialization of 'A' cannot use an explicit constructor
-    const A& a2 = { 1 }; // error C2440: 'initializing': cannot convert from 'int' to 'const A &'
-
+    const A& a2 = { 1 }; // error C2440: 'initializing': cannot 
+                         // convert from 'int' to 'const A &'
 }
-```
+```  
+  
+Para corregir el error, use la inicialización directa:  
+  
+```cpp  
+// C2440k.cpp  
+struct A
+{
+    explicit A(int) {} 
+    A(double) {}
+};
 
-Para corregir el error, use la inicialización directa:
-
-```
-A a1{ 1 };
-const A& a2{ 1 };
-```
+int main()
+{
+    const A& a2{ 1 };
+}  
+```  
 
 ## <a name="example"></a>Ejemplo
 ### <a name="cv-qualifiers-in-class-construction"></a>Calificadores cv en la construcción de clases
 
 En Visual Studio 2015, el compilador a veces omite incorrectamente al calificador cv al generar un objeto de clase mediante una llamada al constructor. Esto puede causar un bloqueo o un comportamiento inesperado en tiempo de ejecución. En el ejemplo siguiente se compila en Visual Studio 2015, pero genera un error del compilador en Visual Studio de 2017 y versiones posteriores:
 
-```
+```cpp
 struct S 
 {
     S(int);
