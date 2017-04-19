@@ -9,10 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::error_category
 - system_error/std::error_category
 - error_category
-- std.error_category
+- system_error/std::error_category::value_type
+- system_error/std::error_category::default_error_condition
+- system_error/std::error_category::equivalent
+- system_error/std::error_category::message
+- system_error/std::error_category::name
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class error_category;
   
  **Espacio de nombres:** std  
   
-##  <a name="a-nameerrorcategorydefaulterrorconditiona--errorcategorydefaulterrorcondition"></a><a name="error_category__default_error_condition"></a>  error_category::default_error_condition  
+##  <a name="error_category__default_error_condition"></a>  error_category::default_error_condition  
  Almacena el valor del código de error para un objeto de condición de error.  
   
 ```
@@ -100,7 +103,7 @@ virtual error_condition default_error_condition(int _Errval) const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameerrorcategoryequivalenta--errorcategoryequivalent"></a><a name="error_category__equivalent"></a>  error_category::equivalent  
+##  <a name="error_category__equivalent"></a>  error_category::equivalent  
  Devuelve un valor que especifica si los objetos de error son equivalentes.  
   
 ```
@@ -127,7 +130,7 @@ virtual bool equivalent(const error_code& _Code,
   
  La segunda función miembro devuelve `*this == _Code.category() && _Code.value() == _Errval`.  
   
-##  <a name="a-nameerrorcategorymessagea--errorcategorymessage"></a><a name="error_category__message"></a>  error_category::message  
+##  <a name="error_category__message"></a>  error_category::message  
  Devuelve el nombre del código de error especificado.  
   
 ```
@@ -145,7 +148,7 @@ virtual string message(error_code::value_type val) const = 0;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameerrorcategorynamea--errorcategoryname"></a><a name="error_category__name"></a>  error_category::name  
+##  <a name="error_category__name"></a>  error_category::name  
  Devuelve el nombre de la categoría.  
   
 ```
@@ -157,7 +160,7 @@ virtual const char *name() const = 0;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="a-nameerrorcategoryoperatoreqeqa--errorcategoryoperator"></a><a name="error_category__operator_eq_eq"></a>  error_category::operator==  
+##  <a name="error_category__operator_eq_eq"></a>  error_category::operator==  
  Comprueba la igualdad entre objetos `error_category`.  
   
 ```
@@ -176,7 +179,7 @@ bool operator==(const error_category& right) const;
 ### <a name="remarks"></a>Comentarios  
  Este operador miembro devuelve `this == &right`.  
   
-##  <a name="a-nameerrorcategoryoperatorneqa--errorcategoryoperator"></a><a name="error_category__operator_neq"></a>  error_category::operator!=  
+##  <a name="error_category__operator_neq"></a>  error_category::operator!=  
  Comprueba la desigualdad entre objetos `error_category`.  
   
 ```
@@ -195,7 +198,7 @@ bool operator!=(const error_category& right) const;
 ### <a name="remarks"></a>Comentarios  
  El operador miembro devuelve `(!*this == right)`.  
   
-##  <a name="a-nameerrorcategoryoperatorlta--errorcategoryoperatorlt"></a><a name="error_category__operator_lt_"></a>  error_category::operator&lt;  
+##  <a name="error_category__operator_lt_"></a>  error_category::operator&lt;  
  Comprueba si el objeto [error_category](../standard-library/error-category-class.md) es menor que el objeto `error_category` pasado para la comparación.  
   
 ```
@@ -214,7 +217,7 @@ bool operator<(const error_category& right) const;
 ### <a name="remarks"></a>Comentarios  
  El operador miembro devuelve `this < &right`.  
   
-##  <a name="a-nameerrorcategoryvaluetypea--errorcategoryvaluetype"></a><a name="error_category__value_type"></a>  error_category::value_type  
+##  <a name="error_category__value_type"></a>  error_category::value_type  
  Tipo que representa el valor del código de error almacenado.  
   
 ```

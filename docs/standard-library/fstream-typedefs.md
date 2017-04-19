@@ -6,6 +6,15 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- fstream/std::filebuf
+- fstream/std::fstream
+- fstream/std::ifstream
+- fstream/std::ofstream
+- fstream/std::wfilebuf
+- fstream/std::wfstream
+- fstream/std::wifstream
+- fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
 caps.latest.revision: 11
 manager: ghogen
@@ -22,7 +31,7 @@ ms.lasthandoff: 02/24/2017
 |[ofstream](#ofstream)|[wfilebuf](#wfilebuf)|[wfstream](#wfstream)|  
 |[wifstream](#wifstream)|[wofstream](#wofstream)|  
   
-##  <a name="a-namefilebufa--filebuf"></a><a name="filebuf"></a>  filebuf  
+##  <a name="filebuf"></a>  filebuf  
  Un tipo `basic_filebuf` especializado en parámetros de plantilla `char`.  
   
 ```
@@ -32,7 +41,7 @@ typedef basic_filebuf<char, char_traits<char>> filebuf;
 ### <a name="remarks"></a>Comentarios  
  Tipo sinónimo de la clase de plantilla [basic_filebuf](../standard-library/basic-filebuf-class.md), especializada en elementos del tipo `char` con rasgos de caracteres predeterminados.  
   
-##  <a name="a-namefstreama--fstream"></a><a name="fstream"></a>  fstream  
+##  <a name="fstream"></a>  fstream  
  Un tipo `basic_fstream` especializado en parámetros de plantilla `char`.  
   
 ```
@@ -42,7 +51,7 @@ typedef basic_fstream<char, char_traits<char>> fstream;
 ### <a name="remarks"></a>Comentarios  
  Tipo sinónimo de la clase de plantilla [basic_fstream](../standard-library/basic-fstream-class.md), especializada en elementos del tipo `char` con rasgos de caracteres predeterminados.  
   
-##  <a name="a-nameifstreama--ifstream"></a><a name="ifstream"></a>  ifstream  
+##  <a name="ifstream"></a>  ifstream  
  Define una secuencia que se utilizará para leer datos de caracteres de byte único en serie desde un archivo. `ifstream`es un typedef que especializa la clase de plantilla `basic_ifstream` para `char`.  
   
  También está `wifstream`, un typedef que especializa `basic_ifstream` para leer caracteres de doble ancho `wchar_t`. Para obtener más información, vea [wifstream](../standard-library/fstream-typedefs.md#wifstream).  
@@ -70,7 +79,7 @@ typedef basic_ifstream<char, char_traits<char>> ifstream;
   
  `}`  
   
-##  <a name="a-nameofstreama--ofstream"></a><a name="ofstream"></a>  ofstream  
+##  <a name="ofstream"></a>  ofstream  
  Un tipo `basic_ofstream` especializado en parámetros de plantilla `char`.  
   
 ```
@@ -80,7 +89,7 @@ typedef basic_ofstream<char, char_traits<char>> ofstream;
 ### <a name="remarks"></a>Comentarios  
  Tipo sinónimo de la clase de plantilla [basic_ofstream](../standard-library/basic-ofstream-class.md), especializada en elementos del tipo `char` con rasgos de caracteres predeterminados.  
   
-##  <a name="a-namewfstreama--wfstream"></a><a name="wfstream"></a>  wfstream  
+##  <a name="wfstream"></a>  wfstream  
  Un tipo `basic_fstream` especializado en parámetros de plantilla `wchar_t`.  
   
 ```
@@ -90,7 +99,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 ### <a name="remarks"></a>Comentarios  
  Tipo sinónimo de la clase de plantilla [basic_fstream](../standard-library/basic-fstream-class.md), especializada en elementos del tipo `wchar_t` con rasgos de caracteres predeterminados.  
   
-##  <a name="a-namewifstreama--wifstream"></a><a name="wifstream"></a>  wifstream  
+##  <a name="wifstream"></a>  wifstream  
  Un tipo `basic_ifstream` especializado en parámetros de plantilla `wchar_t`.  
   
 ```
@@ -100,7 +109,7 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 ### <a name="remarks"></a>Comentarios  
  Tipo sinónimo de la clase de plantilla [basic_ifstream](../standard-library/basic-ifstream-class.md), especializada en elementos del tipo `wchar_t` con rasgos de caracteres predeterminados.  
   
-##  <a name="a-namewofstreama--wofstream"></a><a name="wofstream"></a>  wofstream  
+##  <a name="wofstream"></a>  wofstream  
  Un tipo `basic_ofstream` especializado en parámetros de plantilla `wchar_t`.  
   
 ```
@@ -110,7 +119,7 @@ typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 ### <a name="remarks"></a>Comentarios  
  Tipo sinónimo de la clase de plantilla [basic_ofstream](../standard-library/basic-ofstream-class.md), especializada en elementos del tipo `wchar_t` con rasgos de caracteres predeterminados.  
   
-##  <a name="a-namewfilebufa--wfilebuf"></a><a name="wfilebuf"></a>  wfilebuf  
+##  <a name="wfilebuf"></a>  wfilebuf  
  Un tipo `basic_filebuf` especializado en parámetros de plantilla `wchar_t`.  
   
 ```

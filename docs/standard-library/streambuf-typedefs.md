@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- streambuf/std::streambuf
+- streambuf/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
 caps.latest.revision: 11
 manager: ghogen
@@ -20,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[streambuf](#streambuf)|[wstreambuf](#wstreambuf)|  
   
-##  <a name="a-namestreambufa--streambuf"></a><a name="streambuf"></a>  streambuf  
+##  <a name="streambuf"></a>  streambuf  
  Una especialización de `basic_streambuf` que usa `char` como los parámetros de plantilla.  
   
 ```
@@ -30,7 +33,7 @@ typedef basic_streambuf<char, char_traits<char>> streambuf;
 ### <a name="remarks"></a>Comentarios  
  El tipo es un sinónimo de la clase de plantilla [basic_streambuf](../standard-library/basic-streambuf-class.md), especializada en elementos del tipo `char` con rasgos de caracteres predeterminados.  
   
-##  <a name="a-namewstreambufa--wstreambuf"></a><a name="wstreambuf"></a>  wstreambuf  
+##  <a name="wstreambuf"></a>  wstreambuf  
  Una especialización de `basic_streambuf` que usa `wchar_t` como los parámetros de plantilla.  
   
 ```

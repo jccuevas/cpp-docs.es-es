@@ -11,32 +11,26 @@ ms.topic: article
 f1_keywords:
 - copy_options
 - filesystem::copy_options
-- std::filesystem::copy_options
 - filesystem/std::filesystem::copy_options
 - experimental::filesystem::copy_options
-- std::experimental::filesystem::copy_options
 - filesystem/std::experimental::filesystem::copy_options
 - directory_options
 - filesystem::directory_options
-- std::filesystem::directory_options
 - filesystem/std::filesystem::directory_options
 - experimental::filesystem::directory_options
-- std::experimental::filesystem::directory_options
 - filesystem/std::experimental::filesystem::directory_options
 - file_type
 - filesystem::file_type
-- std::filesystem::file_type
 - filesystem/std::filesystem::file_type
 - experimental::filesystem::file_type
-- std::experimental::filesystem::file_type
 - filesystem/std::experimental::filesystem::file_type
 - perms
 - filesystem::perms
-- std::filesystem::perms
 - filesystem/std::filesystem::perms
 - experimental::filesystem::perms
-- std::experimental::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
+dev_langs:
+- C++
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
 caps.latest.revision: 3
 author: corob-msft
@@ -56,7 +50,7 @@ En este tema, se documentan las enumeraciones del encabezado del sistema de arch
   
  **Espacio de nombres:** std::experimental::filesystem  
 
-##  <a name="a-namefilesystemcopyoptionsa--copyoptions"></a><a name="filesystem__copy_options"></a>  copy_options
+##  <a name="filesystem__copy_options"></a>  copy_options
 Una enumeración de valores de máscara de bits que se usa con las funciones [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) y [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) para especificar el comportamiento.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -91,7 +85,7 @@ enum class copy_options {
 |`create_hard_links`|Establezca vínculos físicos en lugar de copiar archivos.|  
   
 
-##  <a name="a-namefilesystemdirectoryoptionsa-directoryoptions"></a><a name="filesystem__directory_options"></a> directory_options
+##  <a name="filesystem__directory_options"></a> directory_options
 Especifica si se deben seguir los vínculos simbólicos a directorios o bien si se deben ignorar.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -109,7 +103,7 @@ enum class directory_options {
 |`none`|Comportamiento predeterminado: omitir vínculos simbólicos a directorios. Permiso denegado es un error.|  
 |`follow_directory_symlink`|se tratan los vínculos simbólicos a directorios como directorios reales.|  
   
-##  <a name="a-namefilesystemfiletypea--filetype"></a><a name="filesystem__file_type"></a>  file_type
+##  <a name="filesystem__file_type"></a>  file_type
 Enumeración de tipos de archivo. Los valores admitidos son normales y el directorio, not_found y desconocido.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -143,7 +137,7 @@ enum class file_type {
 |`socket`|7|Representa un socket en sistemas basados en UNIX. (No se admite).|  
 |`unknown`|8|Representa un archivo cuyo estado no se puede determinar.|  
   
-##  <a name="a-namefilesystempermsa--perms"></a><a name="filesystem__perms"></a>  perms
+##  <a name="filesystem__perms"></a>  perms
 Marcas para los permisos de archivo. Los valores admitidos son básicamente “readonly” y all. Para los archivos de solo lectura, no se establece ningún bit *_write. En caso contrario, se establece el bit `all` (0x0777).  
   
 ### <a name="syntax"></a>Sintaxis  

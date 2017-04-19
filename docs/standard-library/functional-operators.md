@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::operator!=
 - functional/std::operator!=
-- std::operator==
 - functional/std::operator==
 dev_langs:
 - C++
@@ -33,7 +31,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[operator!=](#operator_neq)|[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  Comprueba si el objeto al que se puede llamar está vacío.  
   
 ```  
@@ -90,7 +88,7 @@ empty == true
 empty == false  
 ```  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  Comprueba si el objeto al que se puede llamar no está vacío.  
   
 ```  

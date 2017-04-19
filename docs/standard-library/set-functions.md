@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- set/std::swap (map)
+- set/std::swap (multiset)
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
 caps.latest.revision: 7
 manager: ghogen
@@ -20,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[swap (mapa)](#swap)|[swap (conjunto mútiple)](#swap_multiset)|  
   
-##  <a name="a-nameswapa--swap--map"></a><a name="swap"></a>  swap  (mapa)
+##  <a name="swap"></a>  swap  (mapa)
  Intercambia los elementos de dos conjuntos.  
   
 ```
@@ -45,7 +48,7 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de código para la clase miembro [set::swap](../standard-library/set-class.md#set__swap) para obtener un ejemplo del uso de la versión de plantilla de `swap`.  
   
-##  <a name="a-nameswapmultiseta--swap--multiset"></a><a name="swap_multiset"></a>  swap  (conjunto mútiple)
+##  <a name="swap_multiset"></a>  swap  (conjunto mútiple)
  Intercambia los elementos de dos conjuntos mútiples.  
   
 ```
