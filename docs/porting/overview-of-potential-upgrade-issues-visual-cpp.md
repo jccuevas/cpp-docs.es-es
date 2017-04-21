@@ -12,8 +12,9 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Human Translation
-ms.sourcegitcommit: fb1f9f25be6d32f15324c8d3a7bd5069ca869a35
-ms.openlocfilehash: 6951129578e28251cef8eb54abb4ef790eb7f944
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 24ae58e6d8948572248a1595c59714bdf2c6f3f5
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Información general sobre posibles problemas de actualización (Visual C++)
@@ -47,7 +48,7 @@ A lo largo de los años, el compilador de Visual C++ ha experimentado numerosos 
   
 2.  Si no puede (o no quiere) recompilar la biblioteca estática, puede intentar vincular con legacy_stdio_definitions.lib. Si satisface las dependencias en tiempo de vínculo de la biblioteca estática, puede que le interese probar exhaustivamente la biblioteca estática como se usa en el binario, para asegurarse de que no se ve afectada negativamente por alguno de los [cambios de comportamiento que se realizaron en CRT universal](visual-cpp-change-history-2003-2015.md#BK_CRT).  
   
-3.  Si legacy_stdio_definitions.lib no cumple las dependencias de la biblioteca estática o si la biblioteca no funciona con CRT universal debido a los cambios de comportamiento mencionados anteriormente, recomendamos encapsular la biblioteca estática en un archivo DLL que se vincule con la versión correcta del tiempo de ejecución de Microsoft C. Por ejemplo, si la biblioteca estática se compiló con Visual C++ 2013, probablemente quiera compilar esta DLL con Visual C++ 2013 y también las bibliotecas de Visual C++ 2013. Al compilar la biblioteca en una DLL, encapsula el detalle de implementación que es su dependencia en una versión determinada del tiempo de ejecución de Microsoft C. (Tenga en cuenta que deberá procurar que no se produzca una "pérdida" por parte de la interfaz DLL de los detalles del tiempo de ejecución de C que usa, por ejemplo, al devolver un archivo* a través del límite de DLL o al devolver un puntero asignado por malloc y esperar a que el autor de la llamada lo libere).  
+3.  Si legacy_stdio_definitions.lib no cumple las dependencias de la biblioteca estática o si la biblioteca no funciona con CRT universal debido a los cambios de comportamiento mencionados anteriormente, recomendamos encapsular la biblioteca estática en un archivo DLL que se vincule con la versión correcta del tiempo de ejecución de Microsoft C. Por ejemplo, si la biblioteca estática se compiló con Visual C++ 2013, probablemente quiera compilar esta DLL con Visual C++ 2013 y también las bibliotecas de Visual C++ 2013. Al compilar la biblioteca en una DLL, encapsula el detalle de implementación que es su dependencia en una versión determinada del tiempo de ejecución de Microsoft C. (Tenga en cuenta que deberá procurar que no se produzca una pérdida por parte de la interfaz DLL de los detalles del tiempo de ejecución de C que usa, por ejemplo, al devolver un archivo* a través del límite de DLL o al devolver un puntero asignado por malloc y esperar a que el autor de la llamada lo libere).  
   
  El uso de varios CRT en un mismo proceso no es en sí mismo problemático (de hecho, la mayoría de los procesos acaban cargando varias DLL de CRT; por ejemplo, los componentes del sistema operativo Windows dependen de msvcrt.dll y CLR depende de su propio CRT privado). Los problemas se producen cuando se mezcla el estado de diferentes CRT. Por ejemplo, no debe asignar memoria mediante msvcr110.dll!malloc e intentar desasignarla mediante msvcr120.dll!free, y no debe intentar abrir un archivo con msvcr110!fopen e intentar leer desde ese archivo mediante msvcr120!fread. Mientras no mezcle el estado de diferentes CRT, no hay problema en que se carguen varios CRT en un mismo proceso.  
   
@@ -66,13 +67,13 @@ A lo largo de los años, el compilador de Visual C++ ha experimentado numerosos 
 ### <a name="lnk2019-unresolved-external"></a>LNK2019: externo sin resolver  
  En el caso de los símbolos sin resolver, es posible que tenga que corregir la configuración del proyecto.  
   
--   •   Si el archivo de código fuente se encuentra en una ubicación no predeterminada, ¿ha agregado la ruta de acceso a los directorios de inclusión del proyecto?  
+-   Si el archivo de código fuente se encuentra en una ubicación no predeterminada, ¿ha agregado la ruta de acceso a los directorios de inclusión del proyecto?  
   
--   •   Si el externo está definido en un archivo .lib, ¿ha especificado la ruta de acceso de lib en las propiedades del proyecto y se encuentra realmente allí la versión correcta del archivo .lib?  
+-   Si el externo está definido en un archivo .lib, ¿ha especificado la ruta de acceso de lib en las propiedades del proyecto y se encuentra realmente allí la versión correcta del archivo .lib?  
   
--   •   ¿Está intentando vincular a un archivo .lib compilado con una versión diferente de Visual Studio? Si es así, consulte la sección anterior sobre las dependencias de biblioteca y de conjunto de herramientas.  
+-   ¿Está intentando vincular un archivo .lib compilado con una versión diferente de Visual Studio? Si es así, consulte la sección anterior sobre las dependencias de biblioteca y de conjunto de herramientas.  
   
--   •   ¿Coinciden realmente los tipos de los argumentos en el sitio de llamada con una sobrecarga existente de la función? Compruebe que los tipos subyacentes de las definiciones de tipo de la firma de la función y del código que llama a la función son los esperados.  
+-   ¿Coinciden realmente los tipos de los argumentos en el sitio de llamada con una sobrecarga existente de la función? Compruebe que los tipos subyacentes de las definiciones de tipo de la firma de la función y del código que llama a la función son los esperados.  
   
  Para solucionar errores de símbolo sin resolver, puede probar a usar dumpbin.exe para examinar los símbolos definidos en un archivo binario. Pruebe la siguiente línea de comandos para ver los símbolos definidos en una biblioteca:  
   
@@ -114,9 +115,9 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
   
  Si el error es C2371 y está implicado un tipo stdint, probablemente significa que el tipo está definido en un encabezado, ya sea en el código o en un archivo lib de terceros.  Al actualizar, debe eliminar todas las definiciones personalizadas de tipos \<stdint.h>, pero primero compare las definiciones personalizadas con las definiciones estándar actuales para asegurarse de que no incorpora nuevos problemas.  
   
- Puede presionar F12 ("Ir a definición") para ver dónde está definido el tipo en cuestión.  
+ Puede pulsar F12 **Ir a definición** para ver dónde está definido el tipo en cuestión.  
   
- La opción del compilador [/showIncludes](../build/reference/showincludes-list-include-files.md) puede resultar útil en este caso. En el cuadro de diálogo Páginas de propiedades del proyecto, abra la página **C/C++**, **Avanzadas** y establezca **Mostrar inclusiones** en "Sí". Después, recompile el proyecto y consulte la lista de inclusiones en la ventana de salida.  Se aplica sangría a cada encabezado bajo el encabezado que lo incluye.  
+ La opción del compilador [/showIncludes](../build/reference/showincludes-list-include-files.md) puede resultar útil en este caso. En el cuadro de diálogo Páginas de propiedades del proyecto, abra la página **C/C++**, **Avanzadas** y establezca **Mostrar inclusiones** en **Sí**. Después, recompile el proyecto y consulte la lista de inclusiones en la ventana de salida.  Se aplica sangría a cada encabezado bajo el encabezado que lo incluye.  
   
 ## <a name="errors-involving-crt-functions"></a>Errores relacionados con funciones de CRT  
  A lo largo de los años, se han realizado muchos cambios en el tiempo de ejecución de C. Se han agregado muchas versiones seguras de funciones y algunas se han quitado. Además, como se describe anteriormente en este artículo, la implementación de CRT por parte de Microsoft se ha refactorizado en Visual Studio 2015 en nuevos binarios y archivos .lib asociados.  
@@ -167,9 +168,4 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 ## <a name="see-also"></a>Vea también  
  [Actualizar proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)
  [Mejoras de conformidad de C++ en Visual Studio 2017](../cpp-conformance-improvements-2017.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

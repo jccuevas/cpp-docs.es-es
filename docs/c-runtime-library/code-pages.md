@@ -1,55 +1,71 @@
 ---
-title: "P&#225;ginas de c&#243;digos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.international"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ANSI [C++], páginas de códigos"
-  - "juegos de caracteres [C++], páginas de códigos"
-  - "páginas de códigos [C++], tipos de"
-  - "páginas de códigos de configuración regional [C++]"
-  - "localización [C++], páginas de códigos"
-  - "páginas de códigos multibyte [C++]"
-  - "página de códigos predeterminada del sistema"
+title: "Páginas de códigos | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.international
+dev_langs:
+- C++
+helpviewer_keywords:
+- character sets [C++], code pages
+- ANSI [C++], code pages
+- system-default code page
+- multibyte code pages [C++]
+- localization [C++], code pages
+- code pages [C++], types of
+- locale code pages [C++]
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# P&#225;ginas de c&#243;digos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: dc4480e79931f1ad3c1dc81b9687e82fcb2697a7
+ms.lasthandoff: 04/01/2017
 
-`code page` es un juego de caracteres, que puede incluir números, signos de puntuación, y otros glifos.  Los lenguajes diferentes y configuraciones regionales pueden utilizar páginas de códigos distintas.  Por ejemplo, la página de códigos ANSI 1252 se utiliza para el inglés y la mayoría de idiomas europeos; La página de códigos OEM 932 se utiliza para los caracteres Kanji del japonés.  
+---
+# <a name="code-pages"></a>Páginas de códigos
+`code page` es un juego de caracteres, que puede incluir números, signos de puntuación y otros glifos. Idiomas y configuraciones regionales distintas pueden usar páginas de códigos distintas. Por ejemplo, la página de códigos ANSI 1252 se usa para el inglés y para la mayoría de idiomas europeos, mientras que la página de códigos OEM 932 se usa para los caracteres Kanji del japonés.  
   
- Una página de códigos se puede representar en una tabla como una asignación de caracteres a los valores de solo\- byte o valores multibyte.  Muchas páginas de códigos comparten el juego de caracteres ASCII de caracteres en el intervalo de 0x00 a 0x7F.  
+ Una página de códigos puede representarse en una tabla como una asignación de caracteres para valores multibyte o de un solo byte. Muchas páginas de códigos comparten el juego de caracteres ASCII para los caracteres que están en el intervalo de 0x00 a 0x7F.  
   
- La biblioteca en tiempo de ejecución de Microsoft utiliza los siguientes tipos de páginas de códigos:  
+ La biblioteca en tiempo de ejecución de Microsoft usa los siguientes tipos de páginas de códigos:  
   
--   Página de códigos ANSI del Sistema\- predeterminado.  De forma predeterminada, al iniciar el sistema en tiempo de ejecución establece automáticamente la página de códigos multibyte a la página de códigos ANSI del sistema\- predeterminado, que se obtiene del sistema operativo.  La llamada:  
+-   Página de códigos ANSI predeterminada del sistema. De manera predeterminada, al iniciar el sistema en tiempo de ejecución se establece automáticamente la página de códigos multibyte en la página de códigos ANSI predeterminada del sistema, que se obtiene del sistema operativo. La llamada:  
   
     ```  
     setlocale ( LC_ALL, "" );  
     ```  
   
-     también establece la configuración regional en la página de códigos ANSI del sistema\- predeterminado.  
+     también establece la configuración regional a la página de códigos ANSI predeterminada del sistema.  
   
--   Página de códigos de la configuración regional.  El comportamiento de varias rutinas de servicio depende de la configuración regional actual, que incluye la página de códigos de la configuración regional. \(Para obtener más información, vea [Rutinas Configuración regional\-dependientes](../c-runtime-library/locale.md).\) De forma predeterminada, todas las rutinas configuración regional\- dependientes en la biblioteca en tiempo de ejecución de Microsoft utilizan la página de códigos que corresponde a “C” la configuración regional.  En tiempo de ejecución puede cambiar o ver la página de códigos de la configuración regional en uso con una llamada a [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).  
+-   Página de códigos de configuración regional. El comportamiento de un número de rutinas en tiempo de ejecución depende de la configuración regional actual, que incluye la página de códigos de esta. (Para obtener más información, vea [Locale-Dependent Routines](../c-runtime-library/locale.md) [Rutinas dependientes de la configuración regional]). De manera predeterminada, todas las rutinas dependientes de la configuración regional en la biblioteca en tiempo de ejecución de Microsoft usan la página de códigos que corresponde a la configuración regional "C". En tiempo de ejecución, puede cambiar o consultar la página de códigos de la configuración regional en uso con una llamada a [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).  
   
--   Página de códigos de Multibyte.  El comportamiento la mayoría de las rutinas de multibyte\- carácter en la biblioteca en tiempo de ejecución depende de paginación actual de código multibyte.  De forma predeterminada, estas rutinas utilizan la página de códigos ANSI del sistema\- predeterminado.  En tiempo de ejecución puede ver y cambiar la página de códigos multibyte con [\_getmbcp](../c-runtime-library/reference/getmbcp.md) y [\_setmbcp](../c-runtime-library/reference/setmbcp.md), respectivamente.  
+-   Página de códigos multibyte. El comportamiento de la mayoría de las rutinas de caracteres multibyte en la biblioteca en tiempo de ejecución depende de la configuración de la página de códigos multibyte actual. De manera predeterminada, estas rutinas usan la página de códigos ANSI predeterminada del sistema. En tiempo de ejecución, puede cambiar o consultar la página de códigos multibyte con [_getmbcp](../c-runtime-library/reference/getmbcp.md) y [_setmbcp](../c-runtime-library/reference/setmbcp.md), respectivamente.  
   
--   La configuración regional “c” es definida por ANSI que corresponda a la configuración regional en la que los programas de c se han ejecutado tradicionalmente.  La página de códigos de la configuración regional “c” \(página de códigos “c”\) corresponde al juego de caracteres ASCII.  Por ejemplo, en la configuración regional “c”, `islower` devuelve true para los valores 0x61 – 0x7A únicamente.  En otra configuración regional, `islower` puede devolver true para estas junto con otros valores, definidos por esa configuración regional.  
+-   La configuración regional "C" se define mediante ANSI para que coincida con la configuración regional en la que se han ejecutado tradicionalmente los programas de C. La página de códigos para la configuración regional "C" (página de códigos "C") corresponde al juego de caracteres ASCII. Por ejemplo, en la configuración regional "C", `islower` devuelve True solo para los valores de 0x61 a 0x7A. En otra configuración regional, `islower` puede devolver True para estos así como para otros valores, como se define mediante esa configuración regional.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Internacionalización](../c-runtime-library/internationalization.md)   
- [Rutinas de tiempo de ejecución por categoría](../c-runtime-library/run-time-routines-by-category.md)
+ [Rutinas en tiempo de ejecución por categoría](../c-runtime-library/run-time-routines-by-category.md)

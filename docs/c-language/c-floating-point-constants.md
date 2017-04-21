@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c4c0e4de99d0d700f04f235a4bd5f7afd83937fb
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 904069e809876beefbc05c7dc0ddb83bee8e5c94
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-floating-point-constants"></a>Constantes de punto flotante de C
@@ -59,7 +59,7 @@ Una "constante de punto flotante" es un número decimal que representa un númer
  &nbsp;&nbsp; **E**  *sign*<sub>opt</sub> *digit-sequence*  
   
  *sign* : one of  
- &nbsp;&nbsp; **+ –**  
+ &nbsp;&nbsp; **+ -**  
   
  *digit-sequence*:  
  &nbsp;&nbsp; *digit*  
@@ -80,7 +80,7 @@ Una "constante de punto flotante" es un número decimal que representa un númer
 25E-4     /* =  0.0025 */  
 ```  
   
- Las constantes de punto flotante son positivas a menos que vayan precedidas de un signo menos (**–**). En este caso, el signo menos se trata como un operador unario de negación aritmética. Las constantes de punto flotante tienen el tipo `float`, `double` o `long double`.  
+ Las constantes de punto flotante son positivas a menos que vayan precedidas de un signo menos (**-**). En este caso, el signo menos se trata como un operador unario de negación aritmética. Las constantes de punto flotante tienen el tipo `float`, `double` o `long double`.  
   
  Una constante de punto flotante sin un sufijo **f**, **F**, **l** o **L** tiene el tipo `double`. Si el sufijo es la letra **f** o **F**, la constante tiene el tipo `float`. Si el sufijo es la letra **l** o **L**, tiene el tipo `long double`. Por ejemplo:  
   

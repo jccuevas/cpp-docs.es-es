@@ -27,9 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: d3ac5f5e54334e42ad48304d26a4f32b1b598459
-ms.openlocfilehash: dbed9eaf443d7392373d1eeba81bc0095c5bd1b4
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 71ae904790532cde7ffe559648ccd13a59b88051
+ms.lasthandoff: 04/01/2017
 
 ---
 
@@ -66,7 +66,7 @@ Esta versión ofrece varias mejoras en la optimización, la generación de códi
 - Control de versiones: el valor de la macro de preprocesador integrada _MSC_VER se está actualizando de forma continua en cada actualización del conjunto de herramientas de Visual C++. Para obtener más información, vea [Visual C++ Compiler Version](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/) (Versión del compilador de Visual C++).
 - Nuevo diseño del conjunto de herramientas: el compilador y las herramientas de compilación relacionadas tienen una nueva ubicación y estructura de directorios en la máquina de desarrollo. El nuevo diseño permite instalaciones en paralelo de varias versiones del compilador. Para más información, vea [Compiler Tools Layout in Visual Studio "15"](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/) (Diseño de las herramientas del compilador en Visual Studio "15").
 - Diagnóstico mejorado: en la ventana de salida ahora se muestra la columna en la que se produce un error. Para más información, vea [C++ improvisamente diagnostics improvements in VS "15" Preview 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/) (Mejoras del diagnóstico del compilador C++ en VS "15" Preview 5).
-- Se quitó la palabra clave experimental "yield" (disponible en el modificador /await) cuando se usan las corrutinas. En su lugar, se debe actualizar el código para que use la palabra clave "co_yield”. Para más información, consulte el blog del equipo de Visual C++. 
+- Se quitó la palabra clave experimental "yield" (disponible en el modificador /await) cuando se usan las corrutinas. En su lugar, se debe actualizar el código para que use la palabra clave "co_yield". Para más información, consulte el blog del equipo de Visual C++. 
 
 ## <a name="c-libraries"></a>Bibliotecas de C++
 
@@ -115,7 +115,7 @@ Se ha actualizado CppRestSDK (una API web multiplataforma para C++) a la versió
 ### <a name="intellisense"></a>Intellisense  
 * Ahora se está usando el nuevo motor de base de datos basado en SQLite de forma predeterminada. Esto acelerará las operaciones de base de datos como Definiciones de ir y Buscar todas las referencias y mejorará significativamente el tiempo de análisis de la solución inicial. La configuración se ha movido a Herramientas > Opciones > Editor de texto > C o C++ > Opciones avanzadas (se encontraba anteriormente en... C/C++ > Experimental).
 
-* Se ha mejorado el rendimiento de IntelliSense en proyectos y archivos que no utilizan encabezados precompilados; se creará un encabezado precompilado automático para los encabezados en el archivo actual.
+* Se ha mejorado el rendimiento de IntelliSense en proyectos y archivos que no usan encabezados precompilados; se creará un encabezado precompilado automático para los encabezados en el archivo actual.
 
 * Se ha agregado el filtro de errores y la ayuda para errores de IntelliSense en la lista de errores. Ahora se puede filtrar al hacer clic en la columna de errores. Además, al hacer clic en los errores específicos o al presionar F1, se iniciará una búsqueda en línea del mensaje de error.
 
@@ -148,7 +148,7 @@ Visual Studio 2017 incluye la característica "Abrir carpeta", que permite codif
   -    Launch.json para personalizar la experiencia de depuración.
 
 ### <a name="cmake-support-via-open-folder"></a>Compatibilidad con CMake mediante Abrir carpeta
-Visual Studio 2017 incluye compatibilidad con el uso de proyectos CMake sin convertirlos en archivos de proyecto de MSBuild (.vcxproj). Para más información, consulte [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/) (Compatibilidad con CMake en Visual Studio) y [CMake support in Visual Studio 2017 – what’s new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/) (Compatibilidad con CMake en Visual Studio 2017: Novedades de la actualización RC.2). Si abre proyectos CMake con "Abrir carpeta", el entorno se configurará automáticamente para la edición, la compilación y la depuración de C++.
+Visual Studio 2017 incluye compatibilidad con el uso de proyectos CMake sin convertirlos en archivos de proyecto de MSBuild (.vcxproj). Para obtener más información, vea [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/) (Compatibilidad con CMake en Visual Studio) y [CMake support in Visual Studio 2017 – what’s new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/) (Compatibilidad con CMake en Visual Studio 2017: Novedades de la actualización RC.2). Si abre proyectos CMake con "Abrir carpeta", el entorno se configurará automáticamente para la edición, la compilación y la depuración de C++.
 
 * IntelliSense de C++ trabajará sin la necesidad de crear un archivo CppProperties.json en la carpeta raíz. Además, agregamos un nuevo menú desplegable que le permite a los usuarios cambiar fácilmente entre las configuraciones que proporcionan los archivos CMake y CppProperties.json.
 

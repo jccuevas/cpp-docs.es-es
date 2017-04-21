@@ -43,9 +43,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 7a9d13924a14b51ed78256825dee6d9a59475c51
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 93dafafddd271eb7e068a0e822be6dd8535fc721
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="scanf-type-field-characters"></a>scanf (Caracteres de campo de tipo)
@@ -65,11 +65,11 @@ La siguiente información se aplica a cualquiera de la familia de funciones `sca
 |`p`|Dirección de puntero en dígitos hexadecimales. El número máximo de caracteres leídos depende del tamaño del puntero (32 o 64 bits), que depende de la arquitectura de la máquina. "0x" o "0X" se aceptan como prefijos.|Puntero a `void*`.|No.|  
 |`u`|Entero decimal sin signo.|Puntero a `unsigned``int`.|No.|  
 |`x`|Entero hexadecimal.|Puntero a `int`.|No.|  
-|`e`, `E`, `f`, `F`, `g`, `G`|Valor de punto flotante que consta de un signo opcional (+ o -), una serie de uno o varios dígitos decimales que contiene el separador decimal y un exponente opcional (“e” o “E”) seguido por un valor entero con signo opcional.|Puntero a `float`.|No.|  
+|`e`, `E`, `f`, `F`, `g`, `G`|Valor de punto flotante que consta de un signo opcional (+ o -), una serie de uno o varios dígitos decimales que contiene el separador decimal y un exponente opcional ("e" o "E") seguido por un valor entero con signo opcional.|Puntero a `float`.|No.|  
 |`a`, `A`|Valor de punto flotante que consta de una serie de uno o varios dígitos hexadecimales que contiene un punto decimal opcional y un exponente ("p" o "P") seguido por un valor decimal.|Puntero a `float`.|No.|  
 |`n`|No lee ninguna entrada de secuencia o búfer.|Puntero a `int`, dentro del cual se almacena el número de caracteres correctamente leídos de la secuencia o búfer hasta ese punto en la llamada actual a funciones `scanf` o `wscanf` .|No.|  
 |`s`|Cadena, hasta el primer carácter de espacio en blanco (espacio, tabulación o nueva línea). Para leer cadenas no delimitadas por caracteres de espacio, use un conjunto de corchetes (`[ ]`), tal y como se describe en [scanf (Especificación de ancho)](../c-runtime-library/scanf-width-specification.md).|Cuando se usa con funciones `scanf` , especifica un carácter de un solo byte; cuando se usa con funciones `wscanf` , especifica una matriz de caracteres anchos. En cualquiera de los casos, la matriz de caracteres debe ser lo suficientemente grande como para que quepa el campo de entrada más el carácter nulo de terminación, que se anexa automáticamente.|Requerido. El tamaño incluye espacio para un terminador nulo.|  
-|`S`|Cadena de caracteres tamaño opuesto, hasta el primer carácter de espacio en blanco (espacio, tabulación o nueva línea). Para leer cadenas no delimitadas por caracteres de espacio, use un conjunto de corchetes (`[ ]`), tal y como se describe en [scanf (Especificación de ancho)](../c-runtime-library/scanf-width-specification.md).|Cuando se usa con funciones `scanf` , especifica una matriz de caracteres anchos; cuando se usa con funciones `wscanf` , especifica una matriz de caracteres de un solo byte. En cualquiera de los casos, la matriz de caracteres debe ser lo suficientemente grande como para que quepa el campo de entrada más el carácter nulo de terminación, que se anexa automáticamente.|Requerido. El tamaño incluye espacio para un terminador nulo.|  
+|`S`|Cadena de caracteres tamaño opuesto, hasta el primer carácter de espacio en blanco (espacio, tabulación o nueva línea). Para leer cadenas no delimitadas por caracteres de espacio, use un conjunto de corchetes (`[ ]`), tal y como se describe en [scanf (Especificación de ancho)](../c-runtime-library/scanf-width-specification.md).|Cuando se usa con funciones `scanf`, especifica una matriz de caracteres anchos; cuando se usa con funciones `wscanf`, especifica una matriz de caracteres de un solo byte. En cualquiera de los casos, la matriz de caracteres debe ser lo suficientemente grande como para que quepa el campo de entrada más el carácter nulo de terminación, que se anexa automáticamente.|Requerido. El tamaño incluye espacio para un terminador nulo.|  
   
   
  Los argumentos de tamaño, si son necesarios, deben pasarse a la lista de parámetros inmediatamente después del argumento al que se aplican. Por ejemplo, el código siguiente:  

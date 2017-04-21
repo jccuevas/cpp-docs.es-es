@@ -49,9 +49,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 985fde9eacbdb8e0953aa576c45dfa0a9e173d95
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c57231375c662134fb1f9bd0252fd3b70f051ba2
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxis de especificación de formato: funciones printf y wprintf
@@ -96,14 +96,14 @@ Los tipos de enteros como `short`, `int`, `long`, `long long` y sus variantes `u
 |**u**|Integer|Entero decimal sin signo.|  
 |**x**|Integer|Entero hexadecimal sin signo; usa “abcdef”.|  
 |**X**|Integer|Entero hexadecimal sin signo; usa “ABCDEF”.|  
-|**e**|Punto flotante|Valor con signo que tiene el formato [–]*d.dddd*__e±__*dd*[*d*], donde *d* es un dígito decimal, *dddd* es uno o varios dígitos decimales en función de la precisión especificada, o seis de forma predeterminada, y *dd*[*d*] son dos o tres dígitos decimales en función del [formato de salida](../c-runtime-library/set-output-format.md) y el tamaño del exponente.|  
+|**e**|Punto flotante|Valor con signo que tiene el formato [-]*d.dddd*__e±__*dd*[*d*], donde *d* es un dígito decimal, *dddd* es uno o varios dígitos decimales en función de la precisión especificada, o seis de manera predeterminada, y *dd*[*d*] son dos o tres dígitos decimales en función del [formato de salida](../c-runtime-library/set-output-format.md) y el tamaño del exponente.|  
 |**E**|Punto flotante|Es idéntico al formato de **e** salvo que el exponente se introduce mediante **E** en lugar de **e**.|  
-|**f**|Punto flotante|Valor con signo que tiene el formato [–]*dddd*__.__*dddd*, donde *dddd* es uno o varios dígitos decimales. El número de dígitos que hay delante del separador decimal depende de la magnitud del número y el número de dígitos que hay detrás del separador decimal depende de la precisión solicitada, seis de forma predeterminada.|  
+|**f**|Punto flotante|Valor con signo que tiene el formato [-]*dddd*__.__*dddd*, donde *dddd* es uno o varios dígitos decimales. El número de dígitos que hay delante del separador decimal depende de la magnitud del número y el número de dígitos que hay detrás del separador decimal depende de la precisión solicitada, seis de forma predeterminada.|  
 |**F**|Punto flotante|Idéntico al formato **f** salvo que la salida infinito y nan se ponen en mayúsculas.|  
-|**g**|Punto flotante|Los valores con signo se muestran en formato **f** o **e**, lo que sea más conciso para el valor y la precisión especificados. El formato **e** solo se usa cuando el exponente del valor es menor que –4 o mayor o igual que el argumento *precisión*. Los ceros a la derecha se truncan y el separador decimal tan solo aparece si va seguido de uno o más dígitos.|  
+|**g**|Punto flotante|Los valores con signo se muestran en formato **f** o **e**, lo que sea más conciso para el valor y la precisión especificados. El formato **e** solo se usa cuando el exponente del valor es menor que -4 o mayor o igual que el argumento *precision*. Los ceros a la derecha se truncan y el separador decimal tan solo aparece si va seguido de uno o más dígitos.|  
 |**G**|Punto flotante|Es idéntico al formato de **g**, salvo que el exponente se introduce mediante **E** en lugar de **e** (cuando corresponda).|  
-|**a**|Punto flotante|Valor de punto flotante de precisión doble hexadecimal con signo que tiene el formato [−]0x*h.hhhh*__p±__*dd*, donde *h.hhhh* corresponde a los dígitos hexadecimales (con letras minúsculas) de la mantisa y *dd* al exponente, con uno o varios dígitos. La precisión especifica el número de dígitos que se muestran después del punto.|  
-|**A**|Punto flotante|Valor de punto flotante de precisión doble hexadecimal con signo que tiene el formato [−]0X*h.hhhh*__P±__*dd*, donde *h.hhhh* corresponde a los dígitos hexadecimales (con letras mayúsculas) de la mantisa y *dd* al exponente, con uno o varios dígitos. La precisión especifica el número de dígitos que se muestran después del punto.|  
+|**a**|Punto flotante|Valor de punto flotante de precisión doble hexadecimal con signo que tiene el formato [-]0x*h.hhhh*__p±__*dd*, donde *h.hhhh* corresponde a los dígitos hexadecimales (con letras minúsculas) de la mantisa y *dd* al exponente, con uno o varios dígitos. La precisión especifica el número de dígitos que se muestran después del punto.|  
+|**A**|Punto flotante|Valor de punto flotante de precisión doble hexadecimal con signo que tiene el formato [-]0X*h.hhhh*__P±__*dd*, donde *h.hhhh* corresponde a los dígitos hexadecimales (con letras mayúsculas) de la mantisa y *dd* al exponente, con uno o varios dígitos. La precisión especifica el número de dígitos que se muestran después del punto.|  
 |**n**|Puntero para entero|Número de caracteres que se han escrito correctamente en el flujo o búfer. Este valor se almacena en el entero cuya dirección se indica como argumento. El tamaño del entero apuntado se puede controlar mediante un prefijo de especificación del tamaño de argumento. El especificador **n** está deshabilitado de forma predeterminada; para información, consulte la nota de seguridad importante.|  
 |**p**|Tipo de puntero|Muestra el argumento como una dirección de dígitos hexadecimales.|  
 |**s**|Cadena|Cuando se usa con funciones `printf`, especifica una cadena de caracteres de byte único o multibyte; cuando se usa con funciones `wprintf`, especifica una cadena de carácter ancho. Los caracteres se muestran hasta el primer carácter nulo o hasta que se alcanza el valor de *precisión*.|  
@@ -126,7 +126,7 @@ Antes de Visual Studio 2015, CRT utilizaba un formato diferente no estándar par
 |Valor|Resultado|  
 |-----------|------------|  
 |+ infinito|`1.#INF` *dígitos aleatorios*|  
-|– infinito|`–1.#INF` *dígitos aleatorios*|  
+|- infinity|`-1.#INF` *dígitos aleatorios*|  
 |Indefinido (igual que un valor NaN simple)|*dígitos* `.#IND` *dígitos aleatorios*|  
 |NaN|*dígitos* `.#NAN` *dígitos aleatorios*|  
   
@@ -149,7 +149,7 @@ El primer campo opcional en una especificación de conversión contiene *directi
 |Marcar|Significado|Default|  
 |----------|-------------|-------------|  
 |**-**|Alinear a la izquierda el resultado dentro del ancho de campo dado.|Alinear a la derecha.|  
-|**+**|Usar un signo (+ o –) como prefijo del valor de salida si es de un tipo con signo.|El signo solo aparece para valores con signo negativo (–).|  
+|**+**|Usar un signo (+ o -) como prefijo del valor de salida si es de un tipo con signo.|El signo solo aparece para valores con signo negativo (-).|  
 |**0**|Si *ancho* tiene el prefijo **0**, se agregan ceros iniciales hasta que se alcanza el ancho mínimo. Si aparecen tanto **0** como **-**, **0** se omite. Si **0** se especifica para un formato de entero (**i**, **u**, **x**, **X**, **o**, **d**) y también existe una especificación de precisión (por ejemplo, `%04.d`), **0** se omite. Si **0** se especifica para la el formato de punto flotante **a** o **A**, se anteponen ceros iniciales a la mantisa, después de `0x` o el prefijo `0X`.|Ningún relleno.|  
 |**blank** (' ')|Utilice un espacio en blanco como prefijo del valor de salida si tiene signo y es positivo. El espacio en blanco se omite si aparecen las marcas blank y +.|No aparecen espacios en blanco.|  
 |**#**|Cuando se usa con el formato **o**, **x** o **X**, la marca **#** utiliza 0, 0x o 0X, respectivamente, para utilizar como prefijo cualquier valor de salida distinto de cero.|No aparecen espacios en blanco.|  

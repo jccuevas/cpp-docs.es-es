@@ -1,104 +1,120 @@
 ---
-title: "Funciones de conversi&#243;n de valores de cadena en valores num&#233;ricos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr80.dll"
-  - "msvcr110.dll"
-  - "msvcr120.dll"
-  - "msvcr100.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr90.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tcstoui64"
-  - "_tcstoi64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "analizar, cadenas numéricas"
-  - "conversión de cadenas, a valores numéricos"
+title: "Funciones de conversión de valores de cadena en valores numéricos | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr80.dll
+- msvcr110.dll
+- msvcr120.dll
+- msvcr100.dll
+- msvcr110_clr0400.dll
+- msvcr90.dll
+apitype: DLLExport
+f1_keywords:
+- _tcstoui64
+- _tcstoi64
+dev_langs:
+- C++
+helpviewer_keywords:
+- parsing, numeric strings
+- string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Funciones de conversi&#243;n de valores de cadena en valores num&#233;ricos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f3e38062baccecbe3b3cf5bbc9e059c1f1acae56
+ms.lasthandoff: 04/01/2017
 
--   [strtod, \_strtod\_l, wcstod, \_wcstod\_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)  
+---
+# <a name="string-to-numeric-value-functions"></a>Funciones de conversión de valores de cadena en valores numéricos
+-   [strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)  
   
--   [strtol, wcstol, \_strtol\_l, \_wcstol\_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)  
+-   [strtol, wcstol, _strtol_l, _wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)  
   
--   [strtoul, \_strtoul\_l, wcstoul, \_wcstoul\_l](../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)  
+-   [strtoul, _strtoul_l, wcstoul, _wcstoul_l](../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)  
   
--   [\_strtoi64, \_wcstoi64, \_strtoi64\_l, \_wcstoi64\_l](../c-runtime-library/reference/strtoi64-wcstoi64-strtoi64-l-wcstoi64-l.md)  
+-   [_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l](../c-runtime-library/reference/strtoi64-wcstoi64-strtoi64-l-wcstoi64-l.md)  
   
--   [\_strtoui64, \_wcstoui64, \_strtoui64\_l, \_wcstoui64\_l](../c-runtime-library/reference/strtoui64-wcstoui64-strtoui64-l-wcstoui64-l.md)  
+-   [_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l](../c-runtime-library/reference/strtoui64-wcstoui64-strtoui64-l-wcstoui64-l.md)  
   
-## Comentarios  
- Cada función de la familia de **strtod** convierte una cadena terminada en null a un valor numérico.  Las funciones disponibles se muestran en la tabla siguiente.  
+## <a name="remarks"></a>Comentarios  
+ Cada función de la familia **strtod** convierte una cadena terminada en NULL en un valor numérico. Las funciones disponibles se enumeran en la tabla siguiente.  
   
 |Función|Descripción|  
-|-------------|-----------------|  
-|`strtod`|Cadena de convierte el valor de doble precisión de punto flotante|  
-|`strtol`|Cadena convert el entero largo|  
-|`strtoul`|Cadena convert el entero unsigned long|  
-|`_strtoi64`|Cadena de convertir en un entero de 64 bits de `__int64`|  
-|`_strtoui64`|Cadena de convertir en un entero de 64 bits sin signo de `__int64`|  
+|--------------|-----------------|  
+|`strtod`|Convertir una cadena en un valor de punto flotante de precisión doble|  
+|`strtol`|Convertir una cadena en un entero largo|  
+|`strtoul`|Convertir una cadena en un entero largo sin signo|  
+|`_strtoi64`|Convertir una cadena en un entero `__int64` de 64 bits|  
+|`_strtoui64`|Convertir una cadena en un entero `__int64` sin signo de 64 bits|  
   
- `wcstod`, `wcstol`, `wcstoul`, y `_wcstoi64` son versiones de caracteres anchos de `strtod`, de `strtol`, de `strtoul`, y de `_strtoi64`, respectivamente.  El argumento de cadena a cada una de estas funciones de carácter ancho es una cadena de caracteres; cada función se comporta idénticamente a su equivalente de solo\-byte\- carácter de otra manera.  
+ `wcstod`, `wcstol`, `wcstoul` y `_wcstoi64` son versiones con caracteres anchos de `strtod`, `strtol`, `strtoul` y `_strtoi64`, respectivamente. El argumento de cadena para cada una de estas funciones de caracteres anchos es una cadena de caracteres anchos; en caso contrario, cada función se comporta de manera idéntica a su equivalente de caracteres de un solo byte.  
   
- La función de `strtod` toma dos argumentos: el primero es la cadena de entrada, y la segunda un puntero al carácter que finaliza el proceso de conversión.  `strtol`, `strtoul`, **\_strtoi64** y **\_strtoui64** tienen un tercer argumento como base de número el uso en el proceso de conversión.  
+ La función `strtod` toma dos argumentos: el primero es la cadena de entrada y el segundo un puntero al carácter que finaliza el proceso de conversión. `strtol`, `strtoul`, **_strtoi64** y **_strtoui64** toman un tercer argumento como la base numérica que se va a usar en el proceso de conversión.  
   
- La cadena de entrada es una secuencia de caracteres que se pueden interpretar como valor numérico del tipo especificado.  Cada función finaliza la lectura de la cadena del primer carácter que no puede reconocer como parte de un número.  Este puede ser el carácter null final.  Para `strtol`, `strtoul`, `_strtoi64`, y `_strtoui64`, este carácter de terminación también puede ser el primer carácter numérico es mayor o igual que la base de número usuario\- proporcionada.  
+ La cadena de entrada es una secuencia de caracteres que se puede interpretar como un valor numérico del tipo especificado. Cada función deja de leer la cadena en el primer carácter que no reconoce como parte de un número. Este puede ser el carácter nulo de terminación. Para `strtol`, `strtoul`, `_strtoi64` y `_strtoui64`, este carácter de terminación también puede ser el primer carácter numérico superior o igual que la base numérica proporcionada por el usuario.  
   
- Si el puntero usuario\- proporcionado un carácter de la FIN\-de\- conversión no se establece en **nulo** en tiempo de llamada, un puntero al carácter que se detuvo el análisis se almacenará allí en su lugar.  Si ninguna conversión se puede realizar \(no se encontraron dígitos válidos o base no válida se especificó\), el valor del puntero de la cadena se almacena en esa dirección.  
+ Si el puntero proporcionado por el usuario a un carácter de final de conversión no se establece en **NULL** en el momento de la llamada, se almacenará un puntero al carácter que ha detenido el análisis en su lugar. Si no se puede realizar ninguna conversión (no se encontraron dígitos válidos o se ha especificado una base no válida), el valor del puntero de cadena se almacena en esa dirección.  
   
- `strtod` cuenta con una cadena con el formato siguiente:  
+ `strtod` espera una cadena con el formato siguiente:  
   
- \[*espacio en blanco*\] \[*sign*\] \[`digits`\] \[**.**`digits`\] \[{**x** &#124; **D** &#124; **e** &#124; **E**} \[*sign*\]`digits`\]  
+ [*whitespace*] [*sign*] [`digits`] [**.**`digits`] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*sign*]`digits`]  
   
- *Un espacio en blanco* puede ser el espacio o caracteres de tabulación, se omiten que; *el signo* es más \(**\+**\) o menos \(**–**\); y `digits` es uno o más dígitos decimales.  Si no aparece ningún dígito antes del carácter de base, debe aparecer al menos uno después del carácter de base.  Los dígitos decimales pueden ir seguidos por un exponente, formada por una letra preliminar \(**x**, **L**, **h**, o **E**\) y un entero opcionalmente firmado.  Si no aparece una parte del exponente ni un carácter de base, se supondrá que el carácter de base sigue el último dígito de la cadena.  El primer carácter que no se ajusta a este formato detiene el análisis.  
+ Un *whitespace* puede constar de caracteres de espacio o de tabulación, que se omiten; *sign* es más (**+**) o menos (**-**); y `digits` se refiere a uno o varios dígitos decimales. Si no aparece ningún dígito antes del carácter de base, debe aparecer al menos uno después del carácter de base. Los dígitos decimales pueden ir seguidos de un exponente, que consta de una letra inicial (**d**, **D**, **e** o **E**) y un entero con signo optativo. Si no aparece ni una parte exponencial ni un carácter de base, se supone que un carácter de base sigue al último dígito de la cadena. El primer carácter que no se ajusta a este formato detiene el análisis.  
   
- `strtol`, `strtoul`, `_strtoi64`, y las funciones de `_strtoui64` esperan una cadena con el formato siguiente:  
+ Las funciones `strtol`, `strtoul`, `_strtoi64` y `_strtoui64` esperan una cadena con el formato siguiente:  
   
- \[*espacio en blanco*\] \[{**\+** &#124; **–**}\] \[**0** \[{ **x** &#124; **X** }\]\] \[`digits`\]  
+ [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [`digits`]  
   
- Si el argumento base está entre 2 y 36, se utiliza como base del número.  Si es 0, los caracteres iniciales que hace referencia el puntero de la FIN\-de\- conversión se utilizan para determinar la base.  Si el primer carácter es 0 y el segundo carácter no es “x” o “X”, la cadena se interpreta como entero octal; si no, se interpreta como un número decimal.  Si el primer carácter es 0 y el segundo carácter es 'x' o 'X', la cadena se interpreta como entero hexadecimal.  Si el primer carácter está entre 1 y 9, la cadena se interpreta como entero decimal.  Las letras” a la “z” \(o “A” a la “z "\) se asignan los valores 10 a 35; sólo las letras cuyo asignaban valores son menos que *la base* se permiten.  `strtoul` y `_strtoui64` permiten especificar más \(**\+**\) o menos prefijo de signo \(de**–**\); un signo menos principal indica que el valor devuelto se negado.  
+ Si el argumento base está entre 2 y 36, se usa como base del número. Si es 0, los caracteres iniciales a los que se hace referencia mediante el puntero de la conversión final se usan para determinar la base. Si el primer carácter es 0 y el segundo carácter no es "x" ni "X", la cadena se interpreta como un entero octal; de otro modo, se interpreta como un número decimal. Si el primer carácter es 0 y el segundo carácter es 'x' o 'X', la cadena se interpreta como entero hexadecimal. Si el primer carácter está entre 1 y 9, la cadena se interpreta como entero decimal. A las letras de la "a" a la "z" (o de la "A" a la "Z") se les asignan los valores del 10 al 35. Solo se admiten las letras cuyos valores asignados son menores que *base*. `strtoul` y `_strtoui64` permiten un prefijo de signo más (**+**) o menos (**-**); un signo menos inicial indica que el valor devuelto es negativo.  
   
- El valor de salida se ve afectado por el valor de la categoría `LC_NUMERIC` de la configuración regional; vea [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información.  Las versiones de estas funciones sin el sufijo **\_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **\_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa.  
+ El valor de salida se ve afectado por el valor de la categoría `LC_NUMERIC` de la configuración regional; vea [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa.  
   
- Cuando funciona el valor devuelto por estos provocaría un desbordamiento o un subdesbordamiento, o cuando la conversión no son valores de posible caso, especial cambian como se muestra a continuación:  
+ Cuando el valor devuelto por estas funciones provocaría un desbordamiento o subdesbordamiento, o cuando la conversión no es posible, se devuelven valores Case como se muestra a continuación:  
   
-|Función|Condition|Valor devuelto|  
-|-------------|---------------|--------------------|  
-|`strtod`|Desbordamiento|\+\/\- `HUGE_VAL`|  
-|`strtod`|Subdesbordamiento o ninguna conversión|0|  
-|`strtol`|\+ Desbordamiento|**LONG\_MAX**|  
-|`strtol`|\- Desbordamiento|**LONG\_MIN**|  
-|`strtol`|Subdesbordamiento o ninguna conversión|0|  
-|`_strtoi64`|\+ Desbordamiento|**\_I64\_MAX**|  
-|`_strtoi64`|\- Desbordamiento|**\_I64\_MIN**|  
-|`_strtoi64`|Ninguna conversión|0|  
-|`_strtoui64`|Desbordamiento|**\_UI64\_MAX**|  
-|`_strtoui64`|Ninguna conversión|0|  
+|Función|Condición|Valor devuelto|  
+|--------------|---------------|--------------------|  
+|`strtod`|Desbordamiento|+/- `HUGE_VAL`|  
+|`strtod`|Subdesbordamiento o sin conversión|0|  
+|`strtol`|+ Desbordamiento|**LONG_MAX**|  
+|`strtol`|- Desbordamiento|**LONG_MIN**|  
+|`strtol`|Subdesbordamiento o sin conversión|0|  
+|`_strtoi64`|+ Desbordamiento|**_I64_MAX**|  
+|`_strtoi64`|- Desbordamiento|**_I64_MIN**|  
+|`_strtoi64`|Sin conversión|0|  
+|`_strtoui64`|Desbordamiento|**_UI64_MAX**|  
+|`_strtoui64`|Sin conversión|0|  
   
- **\_I64\_MAX**, \_**I64\_MIN**, y **\_UI64\_MAX** se definen en LIMITS.H.  
+ **_I64_MAX**, _**I64_MIN** y **_UI64_MAX** se definen en LIMITS.H.  
   
- `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64`, y `_wcstoui64` son versiones de caracteres anchos de `strtod`, de `strtol`, de `strtoul`, de `_strtoi64`, y de `_strtoui64`, respectivamente; el puntero a un argumento de la FIN\-de\- conversión a cada una de estas funciones de carácter ancho es una cadena de caracteres.  Si no, cada una de estas funciones de carácter ancho se comporta idénticamente a su equivalente de solo\-byte\- carácter.  
+ `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64` y `_wcstoui64` son versiones de caracteres anchos de `strtod`, `strtol`, `strtoul`, `_strtoi64` y `_strtoui64`, respectivamente; el puntero a un argumento del final de conversión para cada una de estas funciones de caracteres anchos es una cadena de caracteres anchos. En caso contrario, cada una de estas funciones de caracteres anchos se comporta de manera idéntica a su equivalente de caracteres de un solo byte.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conversión de datos](../c-runtime-library/data-conversion.md)   
  [Configuración regional](../c-runtime-library/locale.md)   
  [Interpretación de secuencias de caracteres de varios bytes](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [Compatibilidad con el punto flotante](../c-runtime-library/floating-point-support.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)
+ [atof, _atof_l, _wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)
