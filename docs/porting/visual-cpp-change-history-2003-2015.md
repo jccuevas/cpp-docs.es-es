@@ -33,12 +33,18 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 7ff37399842c7c8d41f8b7d15660c73b8a11f19f
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
+ms.openlocfilehash: 4e419ebbdd1a5fcc178436f2ec6151a3d02c1a21
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historial de cambios en Visual C++ 2003-2015
+En este artículo, se describen todos los cambios importantes de Visual Studio 2015 desde Visual Studio 2003 y, en este artículo, los términos “nuevo comportamiento” o “ahora” hacen referencia a Visual Studio 2015 y versiones posteriores. Los términos “comportamiento anterior” y “antes” hacen referencia a Visual Studio 2013 y versiones anteriores. 
+ 
+ Para obtener más información sobre Visual Studio 2017, consulte [What's new for Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) (Novedades de Visual C++ en Visual Studio 2017) y [Conformance Improvements in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md) (Mejoras de conformidad de Visual C++ en Visual Studio 2017). 
+ > [!NOTE]
+ > No existen cambios principales binarios entre Visual Studio 2015 y Visual Studio 2017.
+
 Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden producir errores de compilación o en tiempo de ejecución en código previamente compilado que se ejecutaba correctamente. Los cambios en la nueva versión que producen tales problemas se conocen como *cambios importantes*y normalmente son necesarios debido a las modificaciones en el estándar del lenguaje C++, las firmas de función o la disposición de los objetos en la memoria.  
   
  Para evitar errores en tiempo de ejecución que son difíciles de detectar y diagnosticar, recomendamos que nunca vincule estáticamente los binarios compilados con versiones diferentes del compilador. Además, cuando actualice un proyecto EXE o DLL, asegúrese de actualizar las bibliotecas a las que está vinculado. Si usa tipos CRT (Runtime de C) o de la biblioteca estándar de C++, no los pase entre los binarios (incluidos los archivos DLL) que se han compilado con versiones diferentes del compilador. Para obtener más información, consulte [Errores potenciales que pasan los objetos de CRT entre los límites de DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
@@ -47,9 +53,6 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
  Además, las mejoras continuas en la conformidad del compilador a veces pueden cambiar cómo entiende el compilador el código fuente existente. Cuando esto sucede, pueden producirse errores nuevos o diferentes durante la compilación o puede haber incluso diferencias de comportamiento en el código previamente compilado que parecía ejecutarse correctamente. Aunque estos no son cambios importantes como los descritos en este documento, es posible que se necesiten cambios en el código fuente para resolver estos problemas.  
   
- En este artículo, se describen todos los cambios importantes de Visual Studio 2015 desde Visual Studio 2003 y, en este artículo, los términos “nuevo comportamiento” o “ahora” hacen referencia a Visual Studio 2015 y versiones posteriores. Los términos “comportamiento anterior” y “antes” hacen referencia a Visual Studio 2013 y versiones anteriores. 
- 
- Para obtener más información sobre Visual Studio 2017, consulte [What's new for Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) (Novedades de Visual C++ en Visual Studio 2017) y [Conformance Improvements in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md) (Mejoras de conformidad de Visual C++ en Visual Studio 2017).
   
 1.  [Cambios importantes en la biblioteca en tiempo de ejecución de C (CRT)](#BK_CRT)  
   
@@ -578,7 +581,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
      Se ha realizado un cambio en el operador delete a fin de adaptarlo al estándar de C++14. Detalles del cambio de los estándares se pueden encontrar en la página de [desasignación de ajuste de tamaño de C++](http://isocpp.org/files/papers/n3778.html). Los cambios agregan un formulario del operador delete global que toma un parámetro de tamaño. La novedad es que si antes usaba un operador delete con la misma firma (para que se correspondiese con un operador placement new), ahora recibirá un error del compilador (C2956, que se produce en el punto donde se usa placement new, ya que es la posición en el código en la que el compilador intenta identificar un operador delete coincidente adecuado).  
   
-     La función `void operator delete(void *, size_t)` era un operador placement delete correspondiente a la función placement new "void \* operator new(size_t, size_t)" en C++11. Con la desasignación con tamaño de C ++&14;, esta función de eliminación es ahora una *función de desasignación habitual* (operador delete global). Según el estándar, si el uso de placement new busca una función de eliminación correspondiente y encuentra una función de desasignación habitual, el programa tiene un formato incorrecto.  
+     La función `void operator delete(void *, size_t)` era un operador placement delete correspondiente a la función placement new "void \* operator new(size_t, size_t)" en C++11. Con la desasignación con tamaño de C ++ 14, esta función de eliminación es ahora una *función de desasignación habitual* (operador delete global). Según el estándar, si el uso de placement new busca una función de eliminación correspondiente y encuentra una función de desasignación habitual, el programa tiene un formato incorrecto.  
   
      Supongamos, por ejemplo, que el código define tanto placement new como placement delete:  
   
@@ -949,7 +952,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
      Además, aunque el compilador no ofrece un diagnóstico específico, se considera que el operador en línea nuevo está mal formado.  
   
--   **Llamada a “operator*type*()” (conversión definida por el usuario) en tipos que no son de clase**  
+-   **Llamada a "operator *type*()" (conversión definida por el usuario) en tipos que no son de clase**  
   
      Las versiones anteriores del compilador permitieron que se llamara 'operator *type*()' en tipos que no son de clase mientras que se les ignora en modo silencioso. Este comportamiento anterior creó un riesgo de generación de código incorrecto silencioso, lo que produjo un comportamiento impredecible en tiempo de ejecución. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2228 en su lugar.  
   
