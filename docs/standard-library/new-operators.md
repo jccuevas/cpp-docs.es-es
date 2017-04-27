@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- new/std::operator delete
+- new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 caps.latest.revision: 8
 manager: ghogen
@@ -21,7 +24,7 @@ ms.lasthandoff: 02/24/2017
 |[operator delete](#operator_delete)|[operator delete[]](#operator_delete_arr)|[operator new](#operator_new)|  
 |[operator new[]](#operator_new_arr)|  
   
-##  <a name="a-nameoperatordeletea--operator-delete"></a><a name="operator_delete"></a> operator delete  
+##  <a name="operator_delete"></a> operator delete  
  Función a la que llama una expresión delete para cancelar la asignación de almacenamiento para objetos individuales.  
   
 ```
@@ -50,7 +53,7 @@ void operator delete(void* ptr,
 ### <a name="example"></a>Ejemplo  
   Vea [operator new](../standard-library/new-operators.md#operator_new) para obtener un ejemplo que usa `operator delete`.  
   
-##  <a name="a-nameoperatordeletearra--operator-delete"></a><a name="operator_delete_arr"></a> operator delete[]  
+##  <a name="operator_delete_arr"></a> operator delete[]  
  Función a la que llama una expresión delete para cancelar la asignación de almacenamiento para una matriz de objetos.  
   
 ```
@@ -77,7 +80,7 @@ void operator delete[](void* ptr,
 ### <a name="example"></a>Ejemplo  
   Vea [operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr) para obtener ejemplos del uso de `operator delete[]`.  
   
-##  <a name="a-nameoperatornewa--operator-new"></a><a name="operator_new"></a> operator new  
+##  <a name="operator_new"></a> operator new  
  La función a la que llama una expresión new para asignar el almacenamiento a objetos individuales.  
   
 ```
@@ -172,7 +175,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatornewarra--operator-new"></a><a name="operator_new_arr"></a> operator new[]  
+##  <a name="operator_new_arr"></a> operator new[]  
  La función de asignación a la que llama una expresión new para asignar el almacenamiento para una matriz de objetos.  
   
 ```

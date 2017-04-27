@@ -6,6 +6,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- iomanip/std::get_money
+- iomanip/std::get_time
+- iomanip/std::put_money
+- iomanip/std::put_time
+- iomanip/std::quoted
+- iomanip/std::resetiosflags
+- iomanip/std::setbase
+- iomanip/std::setfill
+- iomanip/std::setiosflags
+- iomanip/std::setprecision
+- iomanip/std::setw
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
 caps.latest.revision: 10
 manager: ghogen
@@ -23,7 +35,7 @@ ms.lasthandoff: 02/24/2017
 |[setbase](#setbase)|[setfill](#setfill)|[setiosflags](#setiosflags)|  
 |[setprecision](#setprecision)|[setw](#setw)|  
   
-##  <a name="a-nameiomanipgetmoneya--getmoney"></a><a name="iomanip_get_money"></a>  get_money  
+##  <a name="iomanip_get_money"></a>  get_money  
  Extrae un valor monetario de un flujo con el formato deseado y devuelve el valor en un parámetro.  
   
 ```  
@@ -43,7 +55,7 @@ T7 get_money(Money& _Amount, bool _Intl);
   
  `Money` debe ser de tipo `long double` o una instancia de `basic_string` con los mismos parámetros de elemento y rasgos que `str`.  
   
-##  <a name="a-nameiomanipgettimea--gettime"></a><a name="iomanip_get_time"></a>  get_time  
+##  <a name="iomanip_get_time"></a>  get_time  
  Extrae un valor de tiempo de un flujo con el formato deseado. Devuelve el valor en un parámetro como una estructura de tiempo.  
   
 ```  
@@ -61,7 +73,7 @@ T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 ### <a name="remarks"></a>Comentarios  
  El manipulador devuelve un objeto que, cuando se extrae del flujo `str`, se comporta como una `formatted input function` que llama a la función miembro `get` para la faceta de configuración regional `time_get` asociada a `str`, con `tptr` para indicar la estructura de tiempo y `fmt` para indicar el comienzo de una cadena de formato terminada en null. Si es correcto, la llamada almacena en la estructura de tiempo los valores asociados a todos los campos de tiempo extraídos. Después, el manipulador devuelve `str`.  
   
-##  <a name="a-nameiomanipputmoneya--putmoney"></a><a name="iomanip_put_money"></a>  put_money  
+##  <a name="iomanip_put_money"></a>  put_money  
  Inserta un importe monetario con el formato deseado en un flujo.  
   
 ```  
@@ -84,7 +96,7 @@ T8 put_money(const Money& _Amount, bool _Intl);
   
  `Money` debe ser de tipo `long double` o una instancia de `basic_string` con los mismos parámetros de elemento y rasgos que `str`.  
   
-##  <a name="a-nameiomanipputtimea--puttime"></a><a name="iomanip_put_time"></a>  put_time  
+##  <a name="iomanip_put_time"></a>  put_time  
  Escribe un valor de tiempo de una estructura de tiempo en un flujo con el formato especificado.  
   
 ```  
@@ -102,7 +114,7 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 ### <a name="remarks"></a>Comentarios  
  El manipulador devuelve un objeto que, cuando se inserta en el flujo `str`, se comporta como una `formatted output function`. La función de salida llama a la función miembro `put` para la faceta de configuración regional `time_put` asociada a `str`. La función de salida usa `_Tptr` para indicar la estructura de tiempo y `_Fmt` para indicar el comienzo de una cadena de formato terminada en null. Si es correcto, la llamada inserta texto literal de la cadena de formato y valores convertidos de la estructura de tiempo. Después, el manipulador devuelve `str`.  
   
-##  <a name="a-namequoteda--quoted"></a><a name="quoted"></a>  quoted  
+##  <a name="quoted"></a>  quoted  
  **(Nuevo en C++14)** Manipulador de iostream que permite realizar un práctico recorrido de ida y vuelta de cadenas dentro y fuera de flujos mediante los operadores >> y <<.  
   
 ```  
@@ -265,7 +277,7 @@ Press Enter to exit
   
 ```  
   
-##  <a name="a-nameresetiosflagsa--resetiosflags"></a><a name="resetiosflags"></a>  resetiosflags  
+##  <a name="resetiosflags"></a>  resetiosflags  
  Borra las marcas especificadas.  
   
 ```  
@@ -282,7 +294,7 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 ### <a name="example"></a>Ejemplo  
   Vea [setw](../standard-library/iomanip-functions.md#setw) para obtener un ejemplo que usa `resetiosflags`.  
   
-##  <a name="a-namesetbasea--setbase"></a><a name="setbase"></a>  setbase  
+##  <a name="setbase"></a>  setbase  
  Establece la base de los enteros.  
   
 ```  
@@ -307,7 +319,7 @@ T3 setbase(int _Base);
 ### <a name="example"></a>Ejemplo  
   Vea [setw](../standard-library/iomanip-functions.md#setw) para obtener un ejemplo que usa `setbase`.  
   
-##  <a name="a-namesetfilla--setfill"></a><a name="setfill"></a>  setfill  
+##  <a name="setfill"></a>  setfill  
  Establece el carácter que se usará para rellenar los espacios en una presentación justificada a la derecha.  
   
 ```  
@@ -325,7 +337,7 @@ T4 setfill(Elem Ch);
 ### <a name="example"></a>Ejemplo  
   Vea [setw](../standard-library/iomanip-functions.md#setw) para obtener un ejemplo que usa `setfill`.  
   
-##  <a name="a-namesetiosflagsa--setiosflags"></a><a name="setiosflags"></a>  setiosflags  
+##  <a name="setiosflags"></a>  setiosflags  
  Establece las marcas especificadas.  
   
 ```  
@@ -342,7 +354,7 @@ T2 setiosflags(ios_base::fmtflags Mask);
 ### <a name="example"></a>Ejemplo  
   Vea [setw](../standard-library/iomanip-functions.md#setw) para obtener un ejemplo que usa `setiosflags`.  
   
-##  <a name="a-namesetprecisiona--setprecision"></a><a name="setprecision"></a>  setprecision  
+##  <a name="setprecision"></a>  setprecision  
  Establece la precisión de los valores de punto flotante.  
   
 ```  
@@ -359,7 +371,7 @@ T5 setprecision(streamsize Prec);
 ### <a name="example"></a>Ejemplo  
   Vea [setw](../standard-library/iomanip-functions.md#setw) para obtener un ejemplo que usa `setprecision`.  
   
-##  <a name="a-namesetwa--setw"></a><a name="setw"></a>  setw  
+##  <a name="setw"></a>  setw  
  Especifica el ancho del campo de presentación para el siguiente elemento del flujo.  
   
 ```  

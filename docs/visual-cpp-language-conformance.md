@@ -30,15 +30,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
-ms.openlocfilehash: a13be4d4d32ab0f0bc3cc7b5972e90c4493d06ff
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
+ms.openlocfilehash: 8e21a77e42a90571c73ff0f207f5d799ff722bd3
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-language-conformance"></a>Conformidad del lenguaje Visual C++ 
 En este tema se resume la conformidad con los estándares del lenguaje ISO C++03, C++11, C++14 y el borrador C++17 de las características del compilador y de las características de la biblioteca estándar (STL) para Visual C++ en Visual Studio 2017 y versiones anteriores. El nombre de cada una de las características del compilador y de la STL enlaza al documento de propuesta del estándar ISO C++ que describe la característica, si hubiera alguno disponible en el momento de la publicación. La columna Compatible muestra la versión de Visual Studio en la que aparece por primera vez la compatibilidad de la característica.  
   
 Para obtener detalles sobre las mejoras de conformidad y otros cambios en Visual Studio 2017, consulte [Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md) y [Novedades de Visual C++ en Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md). Para conocer los cambios de conformidad en versiones anteriores, consulte [Historial de cambios en Visual C++ 2003-2015](porting/visual-cpp-change-history-2003-2015.md) y [Novedades de Visual C++ de 2003 a 2015](porting/visual-cpp-what-s-new-2003-through-2015.md). Para mantenerse al tanto de las noticias actuales del equipo de C++, visite el [blog del equipo de Visual C++](http://blogs.msdn.microsoft.com/vcblog/).  
+
+ > [!NOTE]
+ > No existen cambios principales binarios entre Visual Studio 2015 y Visual Studio 2017.
   
 ## <a name="compiler-features"></a>Características del compilador  
   
@@ -199,7 +202,7 @@ Para obtener detalles sobre las mejoras de conformidad y otros cambios en Visual
 |&nbsp;&nbsp;P0518R1 Copia de elementos Trivially Copy Constructible en algoritmos paralelos|N/D|
 |&nbsp;&nbsp;P0523R1 Relajación de requisitos de complejidad de algoritmos paralelos (general)|N/D|
 |&nbsp;&nbsp;P0574R1 Relajación de requisitos de complejidad de algoritmos paralelos (específico)|N/D|
-|&nbsp;&nbsp;P0623R0 Correcciones de algoritmos de C ++&17; paralelos|N/D|
+|&nbsp;&nbsp;P0623R0 Correcciones de algoritmos de C ++ 17 paralelos|N/D|
 |__Características de la biblioteca estándar de C++14__|__Compatible__|
 |&nbsp;&nbsp;[N3462 result_of compatible con SFINAE](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3462.html)|VS 2015.2|
 |&nbsp;&nbsp;[N3302 constexpr para \<complex>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3302.html)|VS 2015|

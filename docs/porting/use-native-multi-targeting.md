@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8953e3bd81158ce183e1abb5dfa969164c1f9ced
-ms.openlocfilehash: 1088f17c1d758589fba146f82b2544ae17090a22
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ba1dd940e6dfe9bb749de1473850a245fa8073a9
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Usar compatibilidad nativa con múltiples versiones para compilar proyectos antiguos en Visual Studio  
@@ -54,7 +54,7 @@ También puede compilar para proyectos de Visual Studio 2008, pero no se pueden 
   
 Las versiones más recientes de Visual Studio admiten la compatibilidad nativa con múltiples versiones y los recorridos de ida y vuelta de proyectos. La compatibilidad nativa con múltiples versiones es la capacidad del IDE más reciente de compilar mediante conjuntos de herramientas instalados por versiones anteriores de Visual Studio. El recorrido de ida y vuelta es la capacidad del IDE más reciente de cargar proyectos creados con una versión anterior del IDE sin realizar cambios en el proyecto. Si instala la versión más reciente de Visual Studio en paralelo con la versión existente, puede usar la nueva versión del IDE con el compilador y las herramientas de la versión existente para compilar los proyectos. Otros miembros del equipo pueden seguir usando los proyectos en la versión anterior de Visual Studio.  
   
-Al usar un conjunto de herramientas anterior, puede aprovechar muchas de las características más recientes del IDE, pero no los avances más recientes en el compilador de C++, las bibliotecas ni las herramientas de compilación. Por ejemplo, no podrá usar las nuevas mejoras de conformidad de lenguaje, las nuevas características de depuración y análisis de código ni aprovechar el rendimiento de compilación más rápido del conjunto de herramientas más reciente. También hay algunas características del IDE que no son compatibles con conjuntos de herramientas anteriores. Por ejemplo, puede faltar información de tipos en el generador de perfiles de memoria y la operación de refactorización "Convertir en literales de cadena sin formato" genera código compatible con C ++11 que no se compilará al usar Visual Studio 2012 o conjuntos de herramientas anteriores.
+Al usar un conjunto de herramientas anterior, puede aprovechar muchas de las características más recientes del IDE, pero no los avances más recientes en el compilador de C++, las bibliotecas ni las herramientas de compilación. Por ejemplo, no podrá usar las nuevas mejoras de conformidad de lenguaje, las nuevas características de depuración y análisis de código ni aprovechar el rendimiento de compilación más rápido del conjunto de herramientas más reciente. También hay algunas características del IDE que no son compatibles con conjuntos de herramientas anteriores. Por ejemplo, puede faltar información de tipos en el generador de perfiles de memoria y la operación de refactorización **Convertir en literales de cadena sin formato** genera código compatible con C ++11 que no se compilará al usar Visual Studio 2012 o conjuntos de herramientas anteriores.
 
 ## <a name="how-to-use-native-multi-targeting-in-visual-studio"></a>Cómo usar la compatibilidad nativa con múltiples versiones en Visual Studio
 Una vez que haya instalado Visual Studio en paralelo con la versión anterior, abra el proyecto existente en la nueva versión de Visual Studio. Cuando se cargue el proyecto, Visual Studio le preguntará si quiere actualizarlo para usar el compilador de C++ y las bibliotecas más recientes. Dado que quiere que el proyecto conserve el compilador y las bibliotecas anteriores, elija el botón **Cancelar**.  

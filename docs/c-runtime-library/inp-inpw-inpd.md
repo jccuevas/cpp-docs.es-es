@@ -58,9 +58,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: b0dabfdf6540a09a08f7b7a3dec05fd5aa9d07fa
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ec0c11cf43080389363fc682aad9511a958e6edd
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
@@ -94,7 +94,7 @@ unsigned long _inpd(
  Las funciones devuelven el byte, la palabra o la palabra doble leída en `port`. No se devuelve ningún error.  
   
 ## <a name="remarks"></a>Comentarios  
- Las funciones `_inp`, `_inpw`y `_inpd` leen un byte, una palabra y una palabra doble, respectivamente, del puerto de conexión especificado. El valor de entrada puede ser cualquier entero corto sin signo del intervalo comprendido entre 0 y 65.535.  
+ Las funciones `_inp`, `_inpw`y `_inpd` leen un byte, una palabra y una palabra doble, respectivamente, del puerto de conexión especificado. El valor de entrada puede ser cualquier entero corto sin signo del intervalo comprendido entre 0 y 65 535.  
   
  Dado que estas funciones leen directamente desde un puerto de E/S, no se pueden usar en código de usuario en Windows NT, Windows 2000, Windows XP y Windows Server 2003.  
   

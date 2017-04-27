@@ -12,9 +12,9 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 translationtype: Human Translation
-ms.sourcegitcommit: 258c7a941239d686ed0fddf18b8139996327f262
-ms.openlocfilehash: ede29a7fb28ef9ecb9bfecafed21ff3bbc87736e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 65776206add29c817f78573379bed959a008f6e6
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Actualizar código a CRT universal
@@ -42,7 +42,7 @@ Dado que UCRT ahora es un componente del sistema operativo Microsoft Windows, se
   
 UCRT se puede usar en cualquier versión de Windows compatible con Visual Studio 2015 o Visual Studio 2017. Se puede redistribuir mediante un paquete vcredist para versiones compatibles de Windows que no sean Windows 10. Los paquetes vcredist incluyen los componentes de UCRT y los instalan automáticamente en los sistemas operativos Windows que no los tienen instalados de forma predeterminada. Para obtener más información, consulte [Redistribuir archivos de Visual C++](../ide/redistributing-visual-cpp-files.md).  
   
-Se admite la implementación local de aplicación de UCRT, aunque no se recomienda por motivos de rendimiento y seguridad. Los archivos DLL para la implementación local de aplicación se incluyen como parte del SDK de Windows, en el subdirectorio "redist". Los archivos DLL necesarios incluyen ucrtbase.dll y un conjunto de archivos DLL "reenviador APISet" denominado api-ms-win-_subset_.dll. El conjunto de archivos DLL necesario en cada sistema operativo varía, por lo que se recomienda incluir todos los archivos DLL cuando se use la implementación local de aplicación. Para obtener detalles adicionales y advertencias sobre la implementación local de aplicación, vea [Implementación en Visual C++](../ide/deployment-in-visual-cpp.md).  
+Se admite la implementación local de aplicación de UCRT, aunque no se recomienda por motivos de rendimiento y seguridad. Los archivos DLL para la implementación local de aplicación se incluyen como parte del SDK de Windows, en el subdirectorio **redist**. Los archivos DLL necesarios incluyen ucrtbase.dll y un conjunto de archivos DLL **reenviador APISet** denominado api-ms-win-_subset_.dll. El conjunto de archivos DLL necesario en cada sistema operativo varía, por lo que se recomienda incluir todos los archivos DLL cuando se use la implementación local de aplicación. Para obtener detalles adicionales y advertencias sobre la implementación local de aplicación, vea [Implementación en Visual C++](../ide/deployment-in-visual-cpp.md).  
   
 ## <a name="changes-to-the-universal-crt-functions-and-macros"></a>Cambios en las funciones y macros de CRT universal  
 En UCRT se han agregado o actualizado muchas funciones para mejorar la conformidad con ISO C99 y para resolver problemas de calidad y seguridad del código. En algunos casos, esto ha exigido cambios importantes en la biblioteca. Si el código se compilaba correctamente al usar una versión anterior de CRT pero se rompe al compilar con UCRT, debe cambiar el código para aprovechar estas actualizaciones y características. Para obtener una lista detallada de los cambios y actualizaciones importantes en CRT realizados en CRT universal, vea la sección [Biblioteca de C en tiempo de ejecución (CRT)](visual-cpp-change-history-2003-2015.md#BK_CRT) del historial de cambios de Visual C++. Incluye una lista de encabezados afectados y funciones que puede usar para identificar los cambios necesarios en el código.  

@@ -6,6 +6,12 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- utility/std::exchange
+- utility/std::forward
+- utility/std::make_pair
+- utility/std::move
+- utility/std::swap
 ms.assetid: b1df38cd-3a59-4098-9c81-83342eb719a4
 caps.latest.revision: 7
 manager: ghogen
@@ -21,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[exchange](#exchange)|[forward](#forward)|[get (función) &lt;utility&gt;](#get)|  
 |[make_pair](#make_pair)|[move](#move)|[swap](#swap)|  
   
-##  <a name="a-nameexchangea--exchange"></a><a name="exchange"></a>  exchange  
+##  <a name="exchange"></a>  exchange  
  **(C++14)** Asigna un nuevo valor a un objeto y devuelve su valor anterior.  
   
 ```cpp  
@@ -70,7 +76,7 @@ The new value of c1 after exchange is: 2
 */  
 ```  
   
-##  <a name="a-nameforwarda--forward"></a><a name="forward"></a>  forward  
+##  <a name="forward"></a>  forward  
  Convierte condicionalmente su argumento a una referencia de valor R si el argumento es un valor R o una referencia de valor R. Esto restaura el valor R de un argumento a la función de reenvío para permitir el reenvío directo.  
   
 ```
@@ -98,7 +104,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
   
  Restaurar el valor R del valor original de un argumento para realizar la resolución de sobrecargas se denomina *reenvío directo*. El reenvío directo permite que una función de plantilla acepte un argumento de cualquier tipo de referencia y restaure su valor R cuando sea necesario para la correcta resolución de sobrecargas. Mediante el reenvío directo, se puede conservar la semántica de movimiento para los valores R y evitar tener que proporcionar sobrecargas para las funciones que solo varían por el tipo de referencia de sus argumentos.  
   
-##  <a name="a-namegeta--get"></a><a name="get"></a>  get  
+##  <a name="get"></a>  get  
  Obtiene un elemento de un objeto `pair` , por posición de índice o por tipo.  
   
 ```
@@ -193,7 +199,7 @@ int main()
 }
 ```  
   
-##  <a name="a-namemakepaira--makepair"></a><a name="make_pair"></a>  make_pair  
+##  <a name="make_pair"></a>  make_pair  
  Una función de plantilla que se usa para construir objetos de tipo `pair`, donde los tipos de componente se eligen automáticamente basándose en los tipos de datos que se pasan como parámetros.  
   
 ```
@@ -238,7 +244,7 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 ### <a name="example"></a>Ejemplo  
   Para obtener un ejemplo sobre cómo usar la función auxiliar `make_pair` para declarar e inicializar un par, vea [pair (Estructura)](../standard-library/pair-structure.md).  
   
-##  <a name="a-namemovea--move"></a><a name="move"></a>  move  
+##  <a name="move"></a>  move  
  Convierte incondicionalmente su argumento en una referencia rvalue y de este modo indica que se puede mover si su tipo tiene habilitado el movimiento.  
   
 ```
@@ -263,7 +269,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
   
  Si el valor pasado en `Arg` es lvalue (es decir, tiene nombre o se puede tomar su dirección), se invalida cuando se produce el movimiento. No haga referencia al valor pasado en `Arg` por su nombre o dirección una vez que se haya movido.  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  Intercambia los elementos de dos objetos [pair (Estructura)](../standard-library/pair-structure.md).  
   
 ```
