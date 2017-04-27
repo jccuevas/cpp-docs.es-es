@@ -1,32 +1,48 @@
 ---
-title: "Error del compilador C2797 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2797"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2797"
+title: Error del compilador C2797 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2797
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Error del compilador C2797
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 5eea0aae37627015f8723835e4e3e1cb0c6d2e94
+ms.lasthandoff: 04/24/2017
 
-No se ha implementado la inicialización de la lista dentro de la lista de inicializadores de miembro o el inicializador del miembro de datos no estáticos.  
+---
+# <a name="compiler-error-c2797"></a>Error del compilador C2797
+(Obsoleto) No se implementa la inicialización de la lista dentro de la lista de inicializadores de miembro o un inicializador de miembro de datos no estáticos.  
   
- El compilador de C\+\+ en Visual Studio no implementa la inicialización de la lista dentro de una lista de inicializadores de miembro ni dentro de un inicializador del miembro de datos no estáticos.  Antes de Visual Studio 2013 Update 3, esto se convertía de manera automática en una llamada de función, lo que podía hacer que se generase código incorrecto.  Visual Studio 2013 Update 3 lo notifica como un error.  
+ Esta advertencia es obsoleta en Visual Studio 2015. En Visual Studio 2013 y versiones anteriores, el compilador de Visual C++ no implementa la inicialización de la lista dentro de una lista de inicializadores de miembro o un inicializador de miembro de datos no estáticos. Antes de Visual Studio 2013 Update 3, esto se convertía de manera automática en una llamada de función, lo que podía hacer que se generase código incorrecto. Visual Studio 2013 Update 3 lo notifica como un error.  
   
  En este ejemplo se genera C2797:  
   
@@ -56,7 +72,7 @@ struct S2 {
   
 ```  
   
- Para corregir este problema, puede utilizar la construcción explícita de listas internas.  Por ejemplo:  
+ Para corregir este problema, puede utilizar la construcción explícita de listas internas. Por ejemplo:  
   
 ```  
 #include <vector>  
@@ -82,4 +98,4 @@ struct S {
   
 ```  
   
- \(El compilador de Visual Studio 2013 lo hace implícitamente en versiones anteriores a Visual Studio 2013 Update 3.\)
+ (El compilador de Visual Studio 2013 lo hace implícitamente en versiones anteriores a Visual Studio 2013 Update 3.)

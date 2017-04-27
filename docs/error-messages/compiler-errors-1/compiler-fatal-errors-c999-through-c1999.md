@@ -88,6 +88,86 @@ f1_keywords:
 - C1901
 - C1903
 - C1904
+helpviewer_keywords:
+- C1012
+- C1013
+- C1014
+- C1016
+- C1018
+- C1019
+- C1020
+- C1021
+- C1022
+- C1023
+- C1034
+- C1035
+- C1036
+- C1037
+- C1038
+- C1041
+- C1045
+- C1047
+- C1048
+- C1049
+- C1053
+- C1063
+- C1068
+- C1069
+- C1070
+- C1074
+- C1077
+- C1082
+- C1086
+- C1087
+- C1088
+- C1089
+- C1090
+- C1091
+- C1098
+- C1099
+- C1100
+- C1101
+- C1102
+- C1103
+- C1104
+- C1105
+- C1108
+- C1109
+- C1110
+- C1111
+- C1112
+- C1114
+- C1190
+- C1193
+- C1195
+- C1196
+- C1201
+- C1202
+- C1205
+- C1206
+- C1207
+- C1208
+- C1209
+- C1210
+- C1211
+- C1300
+- C1301
+- C1302
+- C1306
+- C1310
+- C1312
+- C1352
+- C1353
+- C1383
+- C1384
+- C1451
+- C1505
+- C1508
+- C1510
+- C1852
+- C1901
+- C1903
+- C1904
 dev_langs:
 - C++
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
@@ -111,13 +191,18 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: e8d1696e325ac6a005636aa1d874d30b9c296e91
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 7cd9b98172f30248c40d2b0b8410b19f4a0cafec
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Errores graves del compilador: de C999 a C1999
 Los artículos de esta parte de la documentación contienen información sobre una subsección de los errores del compilador de Visual C++. Puede tener acceso a información aquí o bien, en la ventana de **salida** de Visual Studio, puede seleccionar un número de error y elegir después la tecla F1.  
+  
+> [!NOTE]
+>  No todos [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] error está documentado en MSDN. En muchos casos, el mensaje de diagnóstico proporciona toda la información que está disponible. Si cree que un mensaje de error necesita una explicación adicional, puede enviarnos su opinión. Puede utilizar el formulario de comentarios de esta página, o vaya a la barra de menús de Visual Studio y elija **ayuda**, **notificar un error**, o puede enviar un informe de sugerencia o un error en [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+  
+ Puede encontrar ayuda adicional sobre errores y advertencias en los foros públicos de MSDN. El [lenguaje Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) es foro para preguntas y debate sobre el [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxis del lenguaje y compilador. El [General de Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) es foro para preguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que no se debaten en otros foros. También puede encontrar ayuda sobre los errores y advertencias en [desbordamiento de la pila](http://stackoverflow.com/).  
   
 |Error|Mensaje|  
 |-----------|-------------|  
@@ -130,7 +215,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error irrecuperable C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|no se reconoce el indicador '*cadena*'en'*opción*'|  
 |[Error irrecuperable C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|no se ha especificado un archivo de entrada|  
 |[Error irrecuperable C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|límite del compilador: las macros están demasiado anidadas|  
-|[Error irrecuperable C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|final de archivo inesperado al buscar la directiva de encabezado precompilado. ¿Compruebe si olvidó agregar ' #include *archivo*>' a su origen?|  
+|[Error irrecuperable C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|final de archivo inesperado al buscar la directiva de encabezado precompilado. ¿Compruebe si olvidó agregar ' #include <*archivo*>' a su origen?|  
 |Error irrecuperable C1012|paréntesis desemparejados: falta '*caracteres*"|  
 |Error irrecuperable C1013|límite del compilador: hay demasiados paréntesis abiertos|  
 |Error irrecuperable C1014|Hay demasiados archivos de inclusión: profundidad = *número*|  
