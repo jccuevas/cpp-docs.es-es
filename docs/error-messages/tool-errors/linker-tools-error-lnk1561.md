@@ -1,40 +1,60 @@
 ---
-title: "Error de las herramientas del vinculador LNK1561 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1561"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1561"
+title: Las herramientas del vinculador LNK1561 Error | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- LNK1561
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK1561
 ms.assetid: cb0b709b-7c9c-4496-8a4e-9e1e4aefe447
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error de las herramientas del vinculador LNK1561
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: fbc63a58cd4e276aa2a3f77baeea07d1912eda98
+ms.lasthandoff: 04/24/2017
 
+---
+# <a name="linker-tools-error-lnk1561"></a>Error de las herramientas del vinculador LNK1561
 se debe definir el punto de entrada  
   
- El vinculador no encontró un punto de entrada.  Puede que se haya previsto vincular como una DLL, en cuyo caso debería vincularse mediante la opción [\/DLL](../../build/reference/dll-build-a-dll.md).  También puede que se haya olvidado especificar el nombre del punto de entrada; vincule con la opción [\/ENTRY](../../build/reference/entry-entry-point-symbol.md).  
+El vinculador no encontró un punto de entrada. Este error puede tener varias causas:  
+-   Es podrán que no haya incluido el archivo que define el punto de entrada en la lista de archivos que se va a vincular. Compruebe que el archivo que contiene la función de punto de entrada está vinculado a la aplicación.  
+-   Puede que haya definido el punto de entrada mediante la firma de función incorrecto; Por ejemplo, se puede ha mal escrito o usa el caso incorrecto para el nombre de función o especifica el tipo de valor devuelto o los tipos de parámetro incorrectamente. De forma predeterminada, el vinculador busca una `main` o `wmain` (función) para una aplicación de consola, una `WinMain` o `wWinMain` (función) para una aplicación de Windows, o `DllMain` para un archivo DLL que requiera una inicialización.  
+-   No puede haber especificado la [/DLL](../../build/reference/dll-build-a-dll.md) opción al crear un archivo DLL.  
+-   Puede haber especificado el nombre de la función de punto de entrada incorrecto cuando usa el [/Entry](../../build/reference/entry-entry-point-symbol.md) opción del vinculador.  
+-   Si usas el [LIB](../../build/reference/lib-reference.md) herramienta para generar un archivo DLL, puede haber un archivo .def especificado. Si es así, quite el archivo .def de la compilación.    
   
- En caso contrario, debería incluirse en el código una función main, wmain, WinMain, o wMain.  
+Al compilar una aplicación, el vinculador busca una *punto de entrada*, llama a la función para iniciar el código. Se trata de la función que se llama una vez cargada la aplicación y se inicializa el tiempo de ejecución. Debe proporcionar una función de punto de entrada para una aplicación o no se puede ejecutar la aplicación. Un punto de entrada es opcional para un archivo DLL. De forma predeterminada, el vinculador busca una función de punto de entrada que tiene uno de los nombres específicos y firmas, como `int main(int, char**)`. Puede especificar otro nombre de función como la entrada punto mediante la opción de vinculador/ENTRY.  
   
- Si se utiliza [LIB](../../build/reference/lib-reference.md) y se intenta compilar un archivo .dll, una posible causa de este error es haber proporcionado un archivo .def.  Si es así, quite el archivo .def de la compilación.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera el error LNK1561:  
   
- El código siguiente genera el error LNK1561:  
-  
-```  
+```cpp  
 // LNK1561.cpp  
 // LNK1561 expected  
 int i;  
