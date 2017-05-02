@@ -33,7 +33,7 @@ Devuelve un identificador al objeto representado por el objeto Agile actual.
 ## Valor devuelto  
  Un identificador al objeto representado por el objeto Agile actual.  
   
- El tipo del valor devuelto es realmente un tipo interno no revelado. Una manera cómoda de contener el valor devuelto es asignarlo a una variable que se declara con la palabra clave de deducción de tipos [auto](../Topic/auto%20\(C++\).md). Por ejemplo: `auto x = myAgileTvariable->Get();`.  
+ El tipo del valor devuelto es realmente un tipo interno no revelado. Una manera cómoda de contener el valor devuelto es asignarlo a una variable que se declara con la palabra clave de deducción de tipos [auto](~/cpp/auto-cpp.md). Por ejemplo: `auto x = myAgileTvariable->Get();`.  
   
 ## Requisitos  
  **Cliente mínimo admitido:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

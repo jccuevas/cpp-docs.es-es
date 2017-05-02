@@ -93,7 +93,7 @@ VectorView(
  Un valor que se utiliza para inicializar cada elemento en el objeto VectorView actual.  
   
  `v`  
- Un objeto [Lvalues y rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) a [::std::vector](../Topic/vector%20Class%201.md) que se usa para inicializar el objeto VectorView actual.  
+ Un objeto [Lvalues y rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md) a [::std::vector](../Topic/vector%20Class%201.md) que se usa para inicializar el objeto VectorView actual.  
   
  `ptr`  
  Puntero a un objeto `std::vector` que se usa para inicializar el objeto VectorView actual.  
@@ -105,10 +105,10 @@ VectorView(
  Un objeto [std::array](../Topic/vector%20Class%201.md) que se usa para inicializar el objeto VectorView actual.  
   
  `first`  
- El primer elemento de una secuencia de objetos que se utilizan para inicializar el objeto VectorView actual. El tipo de `first` se pasa mediante *reenvío directo*. Para obtener más información, consulta [Declarador de referencia a un valor R: &&](../Topic/Rvalue%20Reference%20Declarator:%20&&.md).  
+ El primer elemento de una secuencia de objetos que se utilizan para inicializar el objeto VectorView actual. El tipo de `first` se pasa mediante *reenvío directo*. Para obtener más información, consulta [Declarador de referencia a un valor R: &&](~/cpp/rvalue-reference-declarator-amp-amp.md).  
   
  `last`  
- El último elemento de una secuencia de objetos que se utilizan para inicializar el objeto VectorView actual. El tipo de `last` se pasa mediante *reenvío directo*. Para obtener más información, consulta [Declarador de referencia a un valor R: &&](../Topic/Rvalue%20Reference%20Declarator:%20&&.md).  
+ El último elemento de una secuencia de objetos que se utilizan para inicializar el objeto VectorView actual. El tipo de `last` se pasa mediante *reenvío directo*. Para obtener más información, consulta [Declarador de referencia a un valor R: &&](~/cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ## Requisitos  
  **Encabezado:** collection.h  

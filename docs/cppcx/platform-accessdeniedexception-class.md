@@ -32,7 +32,7 @@ public ref class AccessDeniedException : COMException,    IException,    IPrinta
 ```  
   
 ## Comentarios  
- Si obtienes esta excepción, asegúrate de que has solicitado la capacidad adecuada y de que has realizado las declaraciones necesarias en el manifiesto del paquete de tu aplicación. Para obtener más información, consulta [Configurar un paquete de la aplicación de Windows 8.1 con el diseñador de manifiestos](../Topic/Configure%20a%20Windows%208.1%20app%20package%20by%20using%20the%20manifest%20designer.md) y la clase [COMException](../cppcx/platform-comexception-class.md).  
+ Si obtienes esta excepción, asegúrate de que has solicitado la capacidad adecuada y de que has realizado las declaraciones necesarias en el manifiesto del paquete de tu aplicación. Para obtener más información, consulta [Configurar un paquete de la aplicación de Windows 8.1 con el diseñador de manifiestos](http://msdn.microsoft.com/library/24c58b7f-9c6d-41c3-b385-c1e8497d5b2d) y la clase [COMException](../cppcx/platform-comexception-class.md).  
   
 ## Requisitos  
  **Cliente mínimo admitido:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

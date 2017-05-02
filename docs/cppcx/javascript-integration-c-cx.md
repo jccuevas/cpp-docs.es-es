@@ -16,7 +16,7 @@ manager: "ghogen"
 caps.handback.revision: 7
 ---
 # Integraci&#243;n de JavaScript (C++/CX)
-Vea [Crear componentes de Windows en tiempo de ejecución en](../Topic/Creating%20Windows%20Runtime%20Components.md).  
+Vea [Crear componentes de Windows en tiempo de ejecución en](http://msdn.microsoft.com/library/9a6b8f0a-7d5e-40a0-a9c5-a59b4908e133).  
   
 ## Vea también  
  [Interoperar con otros lenguajes](../cppcx/interoperating-with-other-languages-c-cx.md)

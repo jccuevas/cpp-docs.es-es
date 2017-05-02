@@ -22,7 +22,7 @@ manager: "ghogen"
 caps.handback.revision: 7
 ---
 # Platform::Type (Clase)
-Contiene información en tiempo de ejecución sobre un tipo, en concreto, un nombre de cadena y un typecode. Se obtiene llamando al [método Object::GetType](../cppcx/object-gettype-method.md) en cualquier objeto o utilizando el operador [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md) en un nombre de struct o clase.  
+Contiene información en tiempo de ejecución sobre un tipo, en concreto, un nombre de cadena y un typecode. Se obtiene llamando al [método Object::GetType](../cppcx/object-gettype-method.md) en cualquier objeto o utilizando el operador [typeid](http://msdn.microsoft.com/library/e9706cae-e7c4-4d6d-b474-646d73df3e70) en un nombre de struct o clase.  
   
 ## Sintaxis  
   

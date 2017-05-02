@@ -33,7 +33,7 @@ const throw();
 ## Valor devuelto  
  Identificador al objeto representado por el objeto Agile actual.  
   
- Este operador devuelve realmente un tipo interno no revelado. Una manera cómoda de contener el valor devuelto es asignarlo a una variable que se declara con la palabra clave de deducción de tipos [auto](../Topic/auto%20\(C++\).md).  
+ Este operador devuelve realmente un tipo interno no revelado. Una manera cómoda de contener el valor devuelto es asignarlo a una variable que se declara con la palabra clave de deducción de tipos [auto](~/cpp/auto-cpp.md).  
   
 ## Requisitos  
  **Cliente mínimo admitido:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
