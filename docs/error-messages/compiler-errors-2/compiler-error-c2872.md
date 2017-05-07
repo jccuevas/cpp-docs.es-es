@@ -1,5 +1,5 @@
 ---
-title: Error de compilador Error C2872 | Documentos de Microsoft
+title: Error del compilador C2872 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,25 +34,26 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: d53dbd9429ba3c1a525b85a3ef9f2e70152ddfa2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c81fc315c4bb893b96876b7b67b42806a3246583
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2872"></a>Error del compilador C2872
-'símbolo': símbolo ambiguo  
+'*símbolo*': símbolo ambiguo  
   
-El compilador no puede determinar qué símbolo hace referencia a.  
+El compilador no puede determinar los símbolos que se hace referencia a. Más de un símbolo con el nombre especificado está en el ámbito. Vea las notas que siguen el mensaje de error para las ubicaciones de archivo y las declaraciones el compilador encontró para el símbolo ambiguo. Para corregir este problema, puede calificar por completo el símbolo ambiguo mediante el uso de su espacio de nombres, por ejemplo, `std::byte` o `::byte`. También puede usar un [alias de espacio de nombres](../../cpp/namespaces-cpp.md#namespace_aliases) para conceder a un espacio de nombres incluye un nombre corto adecuado para su uso al eliminar la ambigüedad de símbolos en el código fuente.  
   
-Puede producirse el error C2872 si incluye un archivo de encabezado un [directiva using](../../cpp/namespaces-cpp.md#using_directives)y se incluye un archivo de encabezado siguiente y contiene un tipo que también está en el espacio de nombres especificado en el `using` directiva. Especifique un `using` directiva sólo después de que todos los archivos de encabezado se especifican con `#include`.  
+El error C2872 puede producirse si un archivo de encabezado incluye un [using (directiva)](../../cpp/namespaces-cpp.md#using_directives), y se incluye un archivo de encabezado posteriores que contiene un tipo que también está en el espacio de nombres especificado en el `using` directiva. Especifique un `using` directiva sólo después de que todos los archivos de encabezado se especifican con `#include`.  
   
- Para obtener más información sobre el error C2872, vea los artículos de Knowledge Base [PRB: compilador errores cuando utiliza #import con XML en Visual C++ .NET](http://support.microsoft.com/kb/316317) y ["error C2872 Error: 'Plataforma': símbolo ambiguo" mensaje de error al usar el espacio de nombres Windows::Foundation::Metadata en Visual Studio 2013](https://support.microsoft.com/kb/2890859).  
+ Para obtener más información sobre el error C2872, vea los artículos de Knowledge Base [PRB: compilador errores cuando usas #import con XML en Visual C++ .NET](http://support.microsoft.com/kb/316317) y ["error C2872 de Error: 'Plataforma': símbolo ambiguo" mensaje de error cuando se usa el espacio de nombres Windows::Foundation::Metadata en Visual Studio 2013](https://support.microsoft.com/kb/2890859).  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera el error C2872:  
+ El ejemplo siguiente genera el error C2872, ya que se realiza una referencia ambigua a una variable denominada `i`; dos variables con el mismo nombre que se encuentran dentro del ámbito:  
   
 ```cpp  
 // C2872.cpp  
+// compile with: cl /EHsc C2872.cpp  
 namespace A {  
    int i;  
 }  
@@ -60,8 +61,10 @@ namespace A {
 using namespace A;  
 int i;  
 int main() {  
-   ::i++;   // ok  
-   A::i++;   // ok  
-   i++;   // C2872 ::i or A::i?  
+   ::i++;   // ok, uses i from global namespace  
+   A::i++;   // ok, uses i from namespace A  
+   i++;   // C2872 ambiguous: ::i or A::i? 
+   // To fix this issue, use the fully qualified name
+   // for the intended variable. 
 }  
 ```

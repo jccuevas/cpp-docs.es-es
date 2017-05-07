@@ -28,7 +28,6 @@ f1_keywords:
 - C2265
 - C2269
 - C2278
-- C2280
 - C2281
 - C2282
 - C2288
@@ -54,7 +53,6 @@ helpviewer_keywords:
 - C2265
 - C2269
 - C2278
-- C2280
 - C2281
 - C2282
 - C2288
@@ -82,9 +80,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 8e3f009def24f09cbc8b373a81ea63ed6bd922ed
-ms.lasthandoff: 04/24/2017
+ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
+ms.openlocfilehash: f47a6fe23a8a0bf18f9c5c4399162d836667cab6
+ms.lasthandoff: 04/28/2017
 
 ---
 # <a name="compiler-errors-c2200-through-c2299"></a>C2200 de errores del compilador a C2299
@@ -177,7 +175,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2277](compiler-error-c2277.md)|'*función*': no se puede adquirir la dirección de esta función miembro|  
 |C2278 de Error del compilador|Obsoleto.|  
 |[Error del compilador C2279](compiler-error-c2279.md)|la especificación de la excepción no puede aparecer en una declaración de tipo typedef|  
-|C2280 de Error del compilador|'*clase*::*función*': intentando hacer referencia a una función eliminada|  
+|[C2280 de Error del compilador](compiler-error-c2280.md)|'*clase*::*función*': intentando hacer referencia a una función eliminada|  
 |C2281 de Error del compilador|'*clase*::*función*': solo se puede eliminar una función en la primera declaración|  
 |C2282 de Error del compilador|'*function1*'no puede invalidar'*function2*'|  
 |[Error del compilador C2283](compiler-error-c2283.md)|'*identificador*': el especificador puro o invalidación abstracto no se permite en la clase o estructura sin nombre.|  
