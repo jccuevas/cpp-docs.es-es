@@ -75,10 +75,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 8346982360dbc6ecfaae296e48da9464b91190b4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 0727a9bab67872237ffe6f747bd0be3f538eb01d
+ms.contentlocale: es-es
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
@@ -93,7 +94,7 @@ Define las clases y las clases de plantilla que se van a usar para crear tipos q
 ## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
->  En el código que se compila con **/CLR**, este encabezado está bloqueado.  
+>  En el código compilado mediante **/CLR**, este encabezado está bloqueado.  
   
  Una operación atómica tiene dos propiedades clave que ayudan a usar varios subprocesos para manipular correctamente un objeto sin emplear bloqueos de exclusión mutua.  
   
@@ -191,35 +192,35 @@ Define las clases y las clases de plantilla que se van a usar para crear tipos q
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[atomic_compare_exchange_strong (Función)](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_function)|Realiza una operación *atómica de comparación e intercambio*.|  
-|[atomic_compare_exchange_strong_explicit (Función)](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit_function)|Realiza una operación *atómica de comparación e intercambio*.|  
-|[atomic_compare_exchange_weak (Función)](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_function)|Realiza una operación *atómica débil de comparación e intercambio*.|  
-|[atomic_compare_exchange_weak_explicit (Función)](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit_function)|Realiza una operación *atómica débil de comparación e intercambio*.|  
-|[atomic_exchange (Función)](../standard-library/atomic-functions.md#atomic_exchange_function)|Reemplaza un valor almacenado.|  
-|[atomic_exchange_explicit (Función)](../standard-library/atomic-functions.md#atomic_exchange_explicit_function)|Reemplaza un valor almacenado.|  
-|[atomic_fetch_add (Función)](../standard-library/atomic-functions.md#atomic_fetch_add_function)|Agrega un valor especificado a un valor almacenado existente.|  
-|[atomic_fetch_add_explicit (Función)](../standard-library/atomic-functions.md#atomic_fetch_add_explicit_function)|Agrega un valor especificado a un valor almacenado existente.|  
-|[atomic_fetch_and (Función)](../standard-library/atomic-functions.md#atomic_fetch_and_function)|Realiza una operación `and` bit a bit sobre un valor especificado y un valor almacenado existente.|  
-|[atomic_fetch_and_explicit (Función)](../standard-library/atomic-functions.md#atomic_fetch_and_explicit_function)|Realiza una operación `and` bit a bit sobre un valor especificado y un valor almacenado existente.|  
-|[atomic_fetch_or (Función)](../standard-library/atomic-functions.md#atomic_fetch_or_function)|Realiza una operación `or` bit a bit sobre un valor especificado y un valor almacenado existente.|  
-|[atomic_fetch_or_explicit (Función)](../standard-library/atomic-functions.md#atomic_fetch_or_explicit_function)|Realiza una operación `or` bit a bit sobre un valor especificado y un valor almacenado existente.|  
-|[atomic_fetch_sub (Función)](../standard-library/atomic-functions.md#atomic_fetch_sub_function)|Resta un valor especificado de un valor almacenado existente.|  
-|[atomic_fetch_sub_explicit (Función)](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit_function)|Resta un valor especificado de un valor almacenado existente.|  
-|[atomic_fetch_xor (Función)](../standard-library/atomic-functions.md#atomic_fetch_xor_function)|Realiza una operación `exclusive or` bit a bit sobre un valor especificado y un valor almacenado existente.|  
-|[atomic_fetch_xor_explicit (Función)](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit_function)|Realiza una operación `exclusive or` bit a bit sobre un valor especificado y un valor almacenado existente.|  
-|[atomic_flag_clear (Función)](../standard-library/atomic-functions.md#atomic_flag_clear_function)|Establece la marca de un objeto `atomic_flag` en `false`.|  
-|[atomic_flag_clear_explicit (Función)](../standard-library/atomic-functions.md#atomic_flag_clear_explicit_function)|Establece la marca de un objeto `atomic_flag` en `false`.|  
-|[atomic_flag_test_and_set (Función)](../standard-library/atomic-functions.md#atomic_flag_test_and_set_function)|Establece la marca de un objeto `atomic_flag` en `true`.|  
-|[atomic_flag_test_and_set_explicit (Función)](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit_function)|Establece la marca de un objeto `atomic_flag` en `true`.|  
-|[atomic_init (Función)](../standard-library/atomic-functions.md#atomic_init_function)|Establece el valor almacenado en un objeto `atomic`.|  
-|[atomic_is_lock_free (Función)](../standard-library/atomic-functions.md#atomic_is_lock_free_function)|Especifica si las operaciones atómicas sobre un objeto especificado no tienen bloqueos.|  
-|[atomic_load (Función)](../standard-library/atomic-functions.md#atomic_load_function)|Recupera de forma atómica un valor.|  
-|[atomic_load_explicit (Función)](../standard-library/atomic-functions.md#atomic_load_explicit_function)|Recupera de forma atómica un valor.|  
-|[atomic_signal_fence (Función)](../standard-library/atomic-functions.md#atomic_signal_fence_function)|Actúa como una *barrera* que establece requisitos de ordenación de memoria entre barreras de un subproceso que llama cuyos controladores de señal se ejecutan en el mismo subproceso.|  
-|[atomic_store (Función)](../standard-library/atomic-functions.md#atomic_store_function)|Almacena de forma atómica un valor.|  
-|[atomic_store_explicit (Función)](../standard-library/atomic-functions.md#atomic_store_explicit_function)|Almacena de forma atómica un valor.|  
-|[atomic_thread_fence (Función)](../standard-library/atomic-functions.md#atomic_thread_fence_function)|Actúa como una *barrera* que establece requisitos de ordenación de memoria con respecto a otras barreras.|  
-|[kill_dependency (Función)](../standard-library/atomic-functions.md#kill_dependency_function)|Rompe una posible cadena de dependencia.|  
+|[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Realiza una operación *atómica de comparación e intercambio*.|  
+|[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Realiza una operación *atómica de comparación e intercambio*.|  
+|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|Realiza una operación *atómica débil de comparación e intercambio*.|  
+|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|Realiza una operación *atómica débil de comparación e intercambio*.|  
+|[atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange)|Reemplaza un valor almacenado.|  
+|[atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit)|Reemplaza un valor almacenado.|  
+|[atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add)|Agrega un valor especificado a un valor almacenado existente.|  
+|[atomic_fetch_add_explicit](../standard-library/atomic-functions.md#atomic_fetch_add_explicit)|Agrega un valor especificado a un valor almacenado existente.|  
+|[atomic_fetch_and](../standard-library/atomic-functions.md#atomic_fetch_and)|Realiza una operación `and` bit a bit sobre un valor especificado y un valor almacenado existente.|  
+|[atomic_fetch_and_explicit](../standard-library/atomic-functions.md#atomic_fetch_and_explicit)|Realiza una operación `and` bit a bit sobre un valor especificado y un valor almacenado existente.|  
+|[atomic_fetch_or](../standard-library/atomic-functions.md#atomic_fetch_or)|Realiza una operación `or` bit a bit sobre un valor especificado y un valor almacenado existente.|  
+|[atomic_fetch_or_explicit](../standard-library/atomic-functions.md#atomic_fetch_or_explicit)|Realiza una operación `or` bit a bit sobre un valor especificado y un valor almacenado existente.|  
+|[atomic_fetch_sub](../standard-library/atomic-functions.md#atomic_fetch_sub)|Resta un valor especificado de un valor almacenado existente.|  
+|[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Resta un valor especificado de un valor almacenado existente.|  
+|[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Realiza una operación `exclusive or` bit a bit sobre un valor especificado y un valor almacenado existente.|  
+|[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Realiza una operación `exclusive or` bit a bit sobre un valor especificado y un valor almacenado existente.|  
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Establece la marca de un objeto `atomic_flag` en `false`.|  
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Establece la marca de un objeto `atomic_flag` en `false`.|  
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Establece la marca de un objeto `atomic_flag` en `true`.|  
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Establece la marca de un objeto `atomic_flag` en `true`.|  
+|[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Establece el valor almacenado en un objeto `atomic`.|  
+|[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Especifica si las operaciones atómicas sobre un objeto especificado no tienen bloqueos.|  
+|[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Recupera de forma atómica un valor.|  
+|[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|Recupera de forma atómica un valor.|  
+|[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|Actúa como una *barrera* que establece requisitos de ordenación de memoria entre barreras de un subproceso que llama cuyos controladores de señal se ejecutan en el mismo subproceso.|  
+|[atomic_store](../standard-library/atomic-functions.md#atomic_store)|Almacena de forma atómica un valor.|  
+|[atomic_store_explicit](../standard-library/atomic-functions.md#atomic_store_explicit)|Almacena de forma atómica un valor.|  
+|[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|Actúa como una *barrera* que establece requisitos de ordenación de memoria con respecto a otras barreras.|  
+|[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|Rompe una posible cadena de dependencia.|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   

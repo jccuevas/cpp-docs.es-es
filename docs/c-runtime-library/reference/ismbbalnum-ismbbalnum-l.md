@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 079830cff49d8efabe9bf0cf531cafa35e42c3ff
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: baff5ee4871e6cfca7a5a9a1951a0d39f62bc4e7
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="ismbbalnum-ismbbalnuml"></a>_ismbbalnum, _ismbbalnum_l
@@ -89,7 +90,7 @@ int _ismbbalnum_l(
 isalnum || _ismbbkalnum  
 ```  
   
- es distinto de cero para `c` o 0 si no lo es.  
+ es distinto de cero para `c`o 0 si no lo es.  
   
  La versión de esta función con el sufijo `_l` es idéntica, salvo que usa la configuración regional pasada en lugar de la configuración regional de su comportamiento dependiente de la configuración regional.  
   
@@ -104,9 +105,6 @@ isalnum || _ismbbkalnum
   
 ## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de bytes](../../c-runtime-library/byte-classification.md)   

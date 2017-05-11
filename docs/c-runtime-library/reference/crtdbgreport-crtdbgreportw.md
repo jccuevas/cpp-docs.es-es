@@ -56,10 +56,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6bfbae9b083563f0f9a6b0c30e02fb79f413d52d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f197e4f6341508f05e566f45566f26a18be43bed
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
@@ -106,9 +107,9 @@ int _CrtDbgReportW(
  Argumentos de sustitución opcionales utilizados por `format`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Para todos los destinos de informe, `_CrtDbgReport` y `_CrtDbgReportW` devuelven –1 si se produce un error, y 0 si no se producen errores. En cambio, cuando el destino del informe es una ventana de mensajes de depuración y el usuario hace clic en el botón **Reintentar**, estas funciones devuelven 1. Si el usuario hace clic en el botón **Anular** de la ventana de mensajes de depuración, estas funciones se anulan inmediatamente y no devuelven ningún valor.  
+ Para todos los destinos de informe, `_CrtDbgReport` y `_CrtDbgReportW` devuelven -1 si se produce un error y 0 si no se encuentran errores. En cambio, cuando el destino del informe es una ventana de mensajes de depuración y el usuario hace clic en el botón **Reintentar**, estas funciones devuelven 1. Si el usuario hace clic en el botón **Anular** de la ventana de mensajes de depuración, estas funciones se anulan inmediatamente y no devuelven ningún valor.  
   
- Las macros de depuración [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) llaman a `_CrtDbgReport` para generar los informes de depuración. Las versiones de caracteres anchos de estas macros, así como [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW``n` y `_RPTFW``n`, usan `_CrtDbgReportW` para generar los informes de depuración. Si `_CrtDbgReport` o `_CrtDbgReportW` devuelven 1, estas macros inician el depurador, siempre que esté habilitada la depuración Just-in-time (JIT).  
+ Las macros de depuración [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) llaman a `_CrtDbgReport` para generar los informes de depuración. Las versiones de caracteres anchos de estas macros, así como [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW n` y `_RPTFW n`, usan `_CrtDbgReportW` para generar los informes de depuración. Si `_CrtDbgReport` o `_CrtDbgReportW` devuelven 1, estas macros inician el depurador, siempre que esté habilitada la depuración Just-in-time (JIT).  
   
 ## <a name="remarks"></a>Comentarios  
  `_CrtDbgReport` y `_CrtDbgReportW` pueden enviar el informe de depuración a tres destinos distintos: un archivo de informe de depuración, un monitor de depuración (el depurador [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]) o una ventana de mensajes de depuración. Se usan dos funciones de configuración, [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) y [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md), para especificar los destinos de cada tipo de informe. Estas funciones permiten controlar por separado los destinos de los informes de cada tipo de informe. Por ejemplo, se puede especificar que un parámetro `reportType` de `_CRT_WARN` se envíe solo al monitor de depuración, y que el parámetro `reportType` de `_CRT_ASSERT` se envíe a una ventana de mensajes de depuración y a un archivo de informe definido por el usuario.  
@@ -122,7 +123,7 @@ int _CrtDbgReportW(
 |Modo de informe|Archivo de informe|Comportamiento de `_CrtDbgReport` y `_CrtDbgReportW`|  
 |-----------------|-----------------|------------------------------------------------|  
 |`_CRTDBG_MODE_DEBUG`|No es aplicable|Escribe el mensaje mediante la API [OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) de Windows.|  
-|`_CRTDBG_MODE_WNDW`|No es aplicable|Llama a la API [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) de Windows para crear el cuadro de mensaje en el que se mostrará el mensaje junto con los botones **Anular**, **Reintentar** y **Omitir**. Si un usuario hace clic en **Anular`_CrtDbgReport`, ** o `_CrtDbgReport` se anulan automáticamente. Si un usuario hace clic en **Reintentar**, devuelve 1. Si un usuario hace clic en **Omitir**, la ejecución continúa y `_CrtDbgReport` y `_CrtDbgReportW` devuelven 0. Observe que si se hace clic en **Omitir** cuando existe una condición de error, se suele producir un "comportamiento indefinido".|  
+|`_CRTDBG_MODE_WNDW`|No es aplicable|Llama a la API [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) de Windows para crear el cuadro de mensaje en el que se mostrará el mensaje junto con los botones **Anular**, **Reintentar** y **Omitir**. Si un usuario hace clic en **Anular`_CrtDbgReport`,**  o `_CrtDbgReport` se anulan automáticamente. Si un usuario hace clic en **Reintentar**, devuelve 1. Si un usuario hace clic en **Omitir**, la ejecución continúa y `_CrtDbgReport` y `_CrtDbgReportW` devuelven 0. Observe que si se hace clic en **Omitir** cuando existe una condición de error, se suele producir un "comportamiento indefinido".|  
 |`_CRTDBG_MODE_FILE`|`__HFILE`|Escribe el mensaje en el `HANDLE` suministrado por el usuario, mediante la API [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747.aspx) de Windows, y no comprueba la validez del identificador de archivo. La aplicación se ocupa de abrir el archivo de informe y pasar un identificador de archivo válido.|  
 |`_CRTDBG_MODE_FILE`|`_CRTDBG_FILE_STDERR`|Escribe el mensaje en `stderr`.|  
 |`_CRTDBG_MODE_FILE`|`_CRTDBG_FILE_STDOUT`|Escribe el mensaje en `stdout`.|  
@@ -157,16 +158,6 @@ int main(int argc, char *argv[]) {
 ```  
   
  Consulte [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167) para obtener un ejemplo de cómo cambiar la función de informes.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
-  
--   [System::Diagnostics::Debug::Write](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.write.aspx)  
-  
--   [System::Diagnostics::Debug::Writeline](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx)  
-  
--   [System::Diagnostics::Debug::WriteIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeif.aspx)  
-  
--   [System::Diagnostics::Debug::WriteLineIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writelineif.aspx)  
   
 ## <a name="see-also"></a>Vea también  
  [Rutinas de depuración](../../c-runtime-library/debug-routines.md)   

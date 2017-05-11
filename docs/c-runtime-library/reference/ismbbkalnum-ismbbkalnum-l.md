@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c5cfa13a8ee46df3344145fb8fe790746d8b63de
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 0c3e3333fd5cfc0445a4ee95a2cd16f8913b25e1
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
@@ -84,7 +85,7 @@ int _ismbbkalnum_l(
  Configuración regional que se va a usar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `_ismbbkalnum` devuelve un valor distinto de cero si el entero `c` es un signo de texto no ASCII distinto de los signos de puntuación; de lo contrario devuelve 0. `_ismbbkalnum` usa la configuración regional actual para la información sobre caracteres dependientes de la configuración regional. `_ismbbkalnum_l` es idéntico a `_ismbbkalnum`, salvo por que utiliza la configuración regional como parámetro. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ `_ismbbkalnum` devuelve un valor distinto de cero si el entero `c` es un signo de texto no ASCII distinto de los signos de puntuación; de lo contrario devuelve 0. `_ismbbkalnum` usa la configuración regional actual para la información sobre caracteres dependientes de la configuración regional. `_ismbbkalnum_l` es idéntico a `_ismbbkalnum` , salvo por que utiliza la configuración regional como parámetro. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -94,9 +95,6 @@ int _ismbbkalnum_l(
 |`_ismbbkalnum_l`|\<mbctype.h>|  
   
  Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de bytes](../../c-runtime-library/byte-classification.md)   

@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 5d460e3f135015a3eb29f4f3a27a5f4cba615179
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 8deaefffa7afe676a7c8634c4c6c40e784aed982
+ms.contentlocale: es-es
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
@@ -147,7 +148,7 @@ Define las funciones de plantilla contenedor de la biblioteca estándar de C++ q
 |[set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)|Agrupa todos los elementos que pertenecen a uno, pero no a ambos, de los intervalos de origen ordenados en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.|  
 |[set_union](../standard-library/algorithm-functions.md#set_union)|Agrupa todos los elementos que pertenecen al menos a uno de los dos intervalos de origen ordenados en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.|  
 |[sort](../standard-library/algorithm-functions.md#sort)|Organiza los elementos de un intervalo especificado en un orden no descendente o de acuerdo con un criterio de ordenación especificado por un predicado binario.|  
-|[shuffle](../standard-library/algorithm-functions.md#std__shuffle)|Ordena aleatoriamente (reordena) elementos de un rango determinado usando un generador de números aleatorios.|  
+|[shuffle](../standard-library/algorithm-functions.md#shuffle)|Ordena aleatoriamente (reordena) elementos de un rango determinado usando un generador de números aleatorios.|  
 |[sort_heap](../standard-library/algorithm-functions.md#sort_heap)|Convierte un montón en un intervalo ordenado.|  
 |[stable_partition](../standard-library/algorithm-functions.md#stable_partition)|Clasifica los elementos de un intervalo en dos conjuntos disjuntos, donde los elementos que satisfacen un predicado unario preceden a los que no lo satisfacen, conservando el orden relativo de los elementos equivalentes.|  
 |[stable_sort](../standard-library/algorithm-functions.md#stable_sort)|Organiza los elementos de un intervalo especificado en un orden no descendente o de acuerdo con un criterio de ordenación especificado por un predicado binario y conserva el orden relativo de los elementos equivalentes.|  

@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 0acae30ecbe670c87179f4cc2f5a2b8066ef3a4c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 28fc5cf88c6a50b5fcd9950b68d7c6ef3529ccee
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; (Clase)
@@ -156,9 +157,9 @@ protected:
   
 -   La función miembro estática protegida **classic_table**( devuelve la tabla de máscara ctype adecuada a la configuración regional de "C".  
   
--   No hay ninguna función miembro virtual protegida [do_is](../standard-library/ctype-class.md#ctype__do_is), [do_scan_is](../standard-library/ctype-class.md#ctype__do_scan_is) o [do_scan_not](../standard-library/ctype-class.md#ctype__do_scan_not). Las funciones miembro públicas correspondientes realizan las operaciones equivalentes ellas mismas.  
+-   No hay ninguna función miembro virtual protegida [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is) o [do_scan_not](../standard-library/ctype-class.md#do_scan_not). Las funciones miembro públicas correspondientes realizan las operaciones equivalentes ellas mismas.  
   
- Las funciones miembro [do_narrow](../standard-library/ctype-class.md#ctype__do_narrow) y [do_widen](../standard-library/ctype-class.md#ctype__do_widen) copian elementos sin modificaciones.  
+ Las funciones miembro [do_narrow](../standard-library/ctype-class.md#do_narrow) y [do_widen](../standard-library/ctype-class.md#do_widen) copian elementos sin modificaciones.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** \<locale>  

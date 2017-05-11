@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 316e062f4953874ce014f8288e86094209760faf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: df96a24b04473099daaca29472f90c9770181e82
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
@@ -78,9 +79,9 @@ void _CrtDoForAllClientObjects(
 ## <a name="remarks"></a>Comentarios  
  La función `_CrtDoForAllClientObjects` busca en la lista vinculada del montón bloques de memoria con el tipo `_CLIENT_BLOCK` y llama a la función proporcionada por la aplicación cuando se encuentra un bloque de este tipo. El bloque encontrado y el parámetro `context` se pasan como argumentos a la función proporcionada por la aplicación. Durante la depuración, una aplicación puede realizar el seguimiento de un grupo específico de asignaciones llamando explícitamente a las funciones del montón de depuración para asignar memoria y especificando que se asigne a los bloques el tipo de bloque `_CLIENT_BLOCK` . A continuación, se puede realizar el seguimiento y la notificación de estos bloques por separado durante la detección de pérdidas y la creación de informes sobre el estado de la memoria.  
   
- Si el campo de bits `_CRTDBG_ALLOC_MEM_DF` de la marca [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) no está activado, `_CrtDoForAllClientObjects` vuelve inmediatamente. Cuando no se define [_DEBUG](../../c-runtime-library/debug.md), las llamadas a `_CrtDoForAllClientObjects` se quitan durante el preprocesamiento.  
+ Si el campo de bits `_CRTDBG_ALLOC_MEM_DF` de la marca [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) no está activado, el resultado de `_CrtDoForAllClientObjects` se devuelve inmediatamente. Si no se define [_DEBUG](../../c-runtime-library/debug.md) , las llamadas a `_CrtDoForAllClientObjects` se quitan durante el preprocesamiento.  
   
- Para obtener más información sobre el tipo `_CLIENT_BLOCK` y cómo lo pueden usar otras funciones de depuración, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Para más información sobre el tipo `_CLIENT_BLOCK` y cómo lo pueden usar otras funciones de depuración, vea [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
  Si `pfn` es `NULL`, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) se establecen en `EINVAL` y la función vuelve.  
   
@@ -93,9 +94,6 @@ void _CrtDoForAllClientObjects(
  Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
  **Bibliotecas:** solo versiones de depuración de las bibliotecas en tiempo de ejecución de C universales.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Rutinas de depuración](../../c-runtime-library/debug-routines.md)   

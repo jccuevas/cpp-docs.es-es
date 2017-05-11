@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: b5a0a5af02dffea95471a41b9c7bc9726e6beab5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 90a0b43841616414d38d8a24a99c90b2e2c7f689
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
@@ -92,7 +93,7 @@ void * _aligned_realloc_dbg(
  Es un error reasignar memoria y cambiar la alineación del bloque.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `_aligned_realloc_dbg` es una versión de depuración de la función [_aligned_realloc](../../c-runtime-library/reference/aligned-realloc.md). Si no se define [_DEBUG](../../c-runtime-library/debug.md), cada llamada a `_aligned_realloc_dbg` se reduce a una llamada a _`aligned_realloc`. \_`aligned_realloc` y `_aligned_realloc_dbg` reasignan un bloque de memoria del montón base, pero `_aligned_realloc_dbg` admite varias características de depuración: búferes situados a cada lado de la parte del usuario del bloque para comprobar si hay pérdidas, un parámetro de tipo de bloque para realizar el seguimiento de tipos de asignación concretos, así como información sobre `filename`/`linenumber` para determinar el origen de las solicitudes de asignación.  
+ La función `_aligned_realloc_dbg` es una versión de depuración de la función [_aligned_realloc](../../c-runtime-library/reference/aligned-realloc.md). Si no se define [_DEBUG](../../c-runtime-library/debug.md), cada llamada a `_aligned_realloc_dbg` se reduce a una llamada a `_aligned_realloc`. `_aligned_realloc` y `_aligned_realloc_dbg` reasignan un bloque de memoria del montón base, pero `_aligned_realloc_dbg` admite varias características de depuración: búferes situados a cada lado de la parte del usuario del bloque en el que se va a comprobar si hay pérdidas, un parámetro de tipo de bloque para realizar el seguimiento de tipos de asignación concretos, e información sobre `filename`/`linenumber` para determinar el origen de las solicitudes de asignación.  
   
  `_aligned_realloc_dbg` reasigna el bloque de memoria especificado con un poco más de espacio que el `newSize` solicitado. `newSize` podría ser mayor o menor que el tamaño del bloque de memoria asignado originalmente. El administrador del montón de depuración usa el espacio adicional para vincular los bloques de memoria de depuración, y para proporcionar a la aplicación información de encabezado de depuración y sobrescribir los búferes. La reasignación podría hacer que el bloque de memoria original se ponga en una ubicación distinta del montón y cambiar el tamaño del bloque de memoria. Si se mueve el bloque de memoria, el contenido del bloque original se sobrescribe.  
   
@@ -112,9 +113,6 @@ void * _aligned_realloc_dbg(
   
 ## <a name="libraries"></a>Bibliotecas  
  Solo versiones de depuración de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Rutinas de depuración](../../c-runtime-library/debug-routines.md)

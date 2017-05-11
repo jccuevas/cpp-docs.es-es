@@ -75,10 +75,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: aa913890892aefc0ff74cbc8f7c66a8f4375e796
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 23ae0c873ef956499c46800abebba62cb656557b
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
@@ -137,7 +138,7 @@ int _ismbcl2_l(
 |`_ismbcl2`|JIS de nivel 2: 0x989F<=`c`<=0xEAA4.|  
 |`_ismbcl2_l`|JIS de nivel 2: 0x989F<=`c`<=0xEAA4.|  
   
- Las funciones comprueban que el valor de `c` especificado coincide con las condiciones de prueba descritas arriba, pero no comprueben que `c` es un carácter multibyte válido. Si el byte inferior está en los intervalos 0x00 – 0x3F, 0x7F, o 0xFD – 0xFF, estas funciones devuelven un valor distinto de cero, lo que indica que el carácter cumple la condición de prueba. Use [_ismbbtrail](../../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) para comprobar si el carácter multibyte está definido.  
+ Las funciones comprueban que el valor de `c` especificado coincide con las condiciones de prueba descritas arriba, pero no comprueben que `c` es un carácter multibyte válido. Si el byte inferior está en los intervalos 0x00 - 0x3F, 0x7F, o 0xFD - 0xFF, estas funciones devuelven un valor distinto de cero, lo que indica que el carácter cumple la condición de prueba. Use [_ismbbtrail](../../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) para comprobar si el carácter multibyte está definido.  
   
  **Información específica de la página de códigos de fin 932**  
   
@@ -153,9 +154,6 @@ int _ismbcl2_l(
 |`_ismbcl2_l`|\<mbstring.h>|  
   
  Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de caracteres](../../c-runtime-library/character-classification.md)   

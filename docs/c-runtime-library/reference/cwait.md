@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9f58035cc3e3159dc8bb54860e3c8e7454f35b51
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8d5cfdb53b5aab8e6b0404b84de87ba24ee57597
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cwait"></a>_cwait
@@ -82,7 +83,7 @@ intptr_t _cwait(
  NULL: las aplicaciones el sistema operativo Windows lo omiten; en el caso de otras aplicaciones: código de acción que se va a realizar en `procHandle`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Cuando el proceso especificado finaliza correctamente, devuelve el identificador del proceso especificado y establece `termstat` en el código de resultado devuelto por el proceso especificado. De lo contrario, devuelve –1 y establece `errno` como se indica a continuación.  
+ Cuando el proceso especificado finaliza correctamente, devuelve el identificador del proceso especificado y establece `termstat` en el código de resultado devuelto por el proceso especificado. En caso contrario, devuelve -1 y establece `errno` como se indica a continuación.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -110,13 +111,12 @@ intptr_t _cwait(
   
 ## <a name="example"></a>Ejemplo  
   
-```  
-  
-      // crt_cwait.c  
+```C  
+// crt_cwait.c  
 // compile with: /c  
 // This program launches several processes and waits  
 // for a specified process to finish.  
-//  
+  
 #define _CRT_RAND_S  
   
 #include <windows.h>  
@@ -142,13 +142,13 @@ int main( int argc, char *argv[] )
    srand( (unsigned)time( NULL ) );    // Seed randomizer  
   
    // If no arguments, this is the calling process  
-   if( argc == 1 )  
+   if ( argc == 1 )  
    {  
       // Spawn processes in numeric order  
-      for( c = 0; c < 4; c++ ){  
+      for ( c = 0; c < 4; c++ ) {  
          _flushall();  
          process[c].nPid = _spawnl( _P_NOWAIT, argv[0], argv[0],   
-                             process[c].name, NULL );  
+                                    process[c].name, NULL );  
       }  
   
       // Wait for randomly specified process, and respond when done   
@@ -176,9 +176,6 @@ Hi, Dad. It's Beth.
 Hi, Dad. It's Carl.  
 Hi, Dad. It's Dave.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- [System::Diagnostics::Process::WaitForExit](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.waitforexit.aspx)  
   
 ## <a name="see-also"></a>Vea también  
  [Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)   

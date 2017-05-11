@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 187561adb3c524e12a851e0537859f0be942be17
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 08d76a2e7fb30ffcef7e8fb8b96b5bf42a1454c6
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
@@ -91,9 +92,9 @@ int _ismbblead_l(
  Devuelve un valor distinto de cero si el `c` entero es el primer byte de un carácter multibyte.  
   
 ## <a name="remarks"></a>Comentarios  
- Los caracteres multibyte constan de un byte inicial seguido de un byte final. Los bytes iniciales se distinguen por encontrarse en un rango concreto de un juego de caracteres determinado. Por ejemplo, en la página de códigos 932 solo, los bytes iniciales van de 0x81 a 0x9F y de 0xE0 a 0xFC.  
+ Los caracteres multibyte constan de un byte inicial seguido de un byte final. Los bytes iniciales se distinguen por encontrarse en un rango concreto de un juego de caracteres determinado. Por ejemplo, en código página 932 solo, los bytes iniciales van de 0 x 81-0x9F y 0xE0 - 0xFC.  
   
- `_ismbblead` usa la configuración regional actual para el comportamiento que dependa de la configuración regional. `_ismbblead_l` es exactamente igual, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ `_ismbblead` usa la configuración regional actual para el comportamiento que dependa de la configuración regional. `_ismbblead_l` es exactamente igual, salvo que usa la configuración regional que se pasa. Para obtener más información, consulta [Locale](../../c-runtime-library/locale.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
@@ -110,10 +111,7 @@ int _ismbblead_l(
   
  \* Para las constantes de manifiesto de las condiciones de prueba.  
   
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de bytes](../../c-runtime-library/byte-classification.md)   

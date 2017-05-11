@@ -9,10 +9,33 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.basic_ios
 - ios/std::basic_ios
 - basic_ios
-- std::basic_ios
+- ios/std::basic_ios::char_type
+- ios/std::basic_ios::int_type
+- ios/std::basic_ios::off_type
+- ios/std::basic_ios::pos_type
+- ios/std::basic_ios::traits_type
+- ios/std::basic_ios::bad
+- ios/std::basic_ios::clear
+- ios/std::basic_ios::copyfmt
+- ios/std::basic_ios::eof
+- ios/std::basic_ios::exceptions
+- ios/std::basic_ios::fail
+- ios/std::basic_ios::fill
+- ios/std::basic_ios::good
+- ios/std::basic_ios::imbue
+- ios/std::basic_ios::init
+- ios/std::basic_ios::move
+- ios/std::basic_ios::narrow
+- ios/std::basic_ios::rdbuf
+- ios/std::basic_ios::rdstate
+- ios/std::basic_ios::set_rdbuf
+- ios/std::basic_ios::setstate
+- ios/std::basic_ios::swap
+- ios/std::basic_ios::tie
+- ios/std::basic_ios::widen
+- ios/std::basic_ios::explicit operator bool
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6987d9c75785ebb716324395e0ce295d4155e55f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: df32e4cf1cfddd4e5634880ba6bffc63ddcd90af
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="basicios-class"></a>basic_ios (Clase)
@@ -77,56 +101,56 @@ class basic_ios : public ios_base
   
 |||  
 |-|-|  
-|[basic_ios](#basic_ios__basic_ios)|Construye la clase `basic_ios`.|  
+|[basic_ios](#basic_ios)|Construye la clase `basic_ios`.|  
   
 ### <a name="typedefs"></a>Definiciones de tipo  
   
 |||  
 |-|-|  
-|[char_type](#basic_ios__char_type)|Sinónimo del parámetro de plantilla `Elem`.|  
-|[int_type](#basic_ios__int_type)|Sinónimo de `Traits::int_type`.|  
-|[off_type](#basic_ios__off_type)|Sinónimo de `Traits::off_type`.|  
-|[pos_type](#basic_ios__pos_type)|Sinónimo de `Traits::pos_type`.|  
-|[traits_type](#basic_ios__traits_type)|Sinónimo del parámetro de plantilla `Traits`.|  
+|[char_type](#char_type)|Sinónimo del parámetro de plantilla `Elem`.|  
+|[int_type](#int_type)|Sinónimo de `Traits::int_type`.|  
+|[off_type](#off_type)|Sinónimo de `Traits::off_type`.|  
+|[pos_type](#pos_type)|Sinónimo de `Traits::pos_type`.|  
+|[traits_type](#traits_type)|Sinónimo del parámetro de plantilla `Traits`.|  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |||  
 |-|-|  
-|[bad](#basic_ios__bad)|Indica una pérdida de integridad del búfer de secuencia.|  
-|[clear](#basic_ios__clear)|Borra todas las marcas de error.|  
-|[copyfmt](#basic_ios__copyfmt)|Copia las marcas de una secuencia a otra.|  
-|[eof](#basic_ios__eof)|Indica si se ha alcanzado el extremo de una secuencia.|  
-|[exceptions](#basic_ios__exceptions)|Indica qué excepciones iniciará la secuencia.|  
-|[fail](#basic_ios__fail)|Indica un error al extraer un campo válido de una secuencia.|  
-|[fill](#basic_ios__fill)|Especifica o devuelve el carácter que se usará si el texto no tiene el mismo ancho que la secuencia.|  
-|[good](#basic_ios__good)|Indica que la secuencia está en buen estado.|  
-|[imbue](#basic_ios__imbue)|Cambia la configuración regional.|  
-|[init](#basic_ios__init)|Llamada por constructores `basic_ios`.|  
-|[move](#basic_ios__move)|Mueve todos los valores, excepto el puntero al búfer de secuencia, desde el parámetro hasta el objeto actual.|  
-|[narrow](#basic_ios__narrow)|Busca el carácter equivalente a un determinado `char_type`.|  
-|[rdbuf](#basic_ios__rdbuf)|Redirige la secuencia al búfer especificado.|  
-|[rdstate](#basic_ios__rdstate)|Lee el estado de bits de las marcas.|  
-|[set_rdbuf](#basic_ios__set_rdbuf)|Asigna un búfer de secuencia para que sea el búfer de lectura de este objeto de secuencia.|  
-|[setstate](#basic_ios__setstate)|Establece marcas adicionales.|  
-|[swap](#basic_ios__swap)|Cambia los valores de este objeto `basic_ios` por los de otro objeto `basic_ios`. No se intercambian los punteros a los búferes de secuencia.|  
-|[tie](#basic_ios__tie)|Se asegura de que una secuencia se procese antes que otra.|  
-|[widen](#basic_ios__widen)|Busca el `char_type` equivalente a un determinado carácter.|  
+|[bad](#bad)|Indica una pérdida de integridad del búfer de secuencia.|  
+|[clear](#clear)|Borra todas las marcas de error.|  
+|[copyfmt](#copyfmt)|Copia las marcas de una secuencia a otra.|  
+|[eof](#eof)|Indica si se ha alcanzado el extremo de una secuencia.|  
+|[exceptions](#exceptions)|Indica qué excepciones iniciará la secuencia.|  
+|[fail](#fail)|Indica un error al extraer un campo válido de una secuencia.|  
+|[fill](#fill)|Especifica o devuelve el carácter que se usará si el texto no tiene el mismo ancho que la secuencia.|  
+|[good](#good)|Indica que la secuencia está en buen estado.|  
+|[imbue](#imbue)|Cambia la configuración regional.|  
+|[init](#init)|Llamada por constructores `basic_ios`.|  
+|[move](#move)|Mueve todos los valores, excepto el puntero al búfer de secuencia, desde el parámetro hasta el objeto actual.|  
+|[narrow](#narrow)|Busca el carácter equivalente a un determinado `char_type`.|  
+|[rdbuf](#rdbuf)|Redirige la secuencia al búfer especificado.|  
+|[rdstate](#rdstate)|Lee el estado de bits de las marcas.|  
+|[set_rdbuf](#set_rdbuf)|Asigna un búfer de secuencia para que sea el búfer de lectura de este objeto de secuencia.|  
+|[setstate](#setstate)|Establece marcas adicionales.|  
+|[swap](#swap)|Cambia los valores de este objeto `basic_ios` por los de otro objeto `basic_ios`. No se intercambian los punteros a los búferes de secuencia.|  
+|[tie](#tie)|Se asegura de que una secuencia se procese antes que otra.|  
+|[widen](#widen)|Busca el `char_type` equivalente a un determinado carácter.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[explicit operator bool](#basic_ios__operator_bool)|Permite el uso de un objeto `basic_ios` como un `bool`. La conversión automática de tipo está deshabilitada para evitar efectos secundarios típicos no deseados.|  
-|[operator void *](#basic_ios__operator_void_star)|Indica si la secuencia sigue siendo aceptable.|  
-|[operator!](#basic_ios__operator_not)|Indica si la secuencia no es inaceptable.|  
+|[explicit operator bool](#op_bool)|Permite el uso de un objeto `basic_ios` como un `bool`. La conversión automática de tipo está deshabilitada para evitar efectos secundarios típicos no deseados.|  
+|[operator void *](#op_void_star)|Indica si la secuencia sigue siendo aceptable.|  
+|[operator!](#op_not)|Indica si la secuencia no es inaceptable.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** \<ios>  
   
  **Espacio de nombres:** std  
   
-##  <a name="a-namebasiciosbada--basiciosbad"></a><a name="basic_ios__bad"></a>  basic_ios::bad  
+##  <a name="bad"></a>  basic_ios::bad  
  Indica una pérdida de integridad del búfer de flujo.  
   
 ```  
@@ -136,7 +160,7 @@ bool bad() const;
 ### <a name="return-value"></a>Valor devuelto  
  `true` si `rdstate & badbit` es distinto de cero; en caso contrario, `false`.  
   
- Para más información sobre `badbit`, vea [ios_base::iostate](../standard-library/ios-base-class.md#ios_base__iostate).  
+ Para más información sobre `badbit`, vea [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -158,7 +182,7 @@ int main( void )
   
 ```  
   
-##  <a name="a-namebasiciosbasiciosa--basiciosbasicios"></a><a name="basic_ios__basic_ios"></a>  basic_ios::basic_ios  
+##  <a name="basic_ios"></a>  basic_ios::basic_ios  
  Construye la clase basic_ios.  
   
 ```   
@@ -171,16 +195,16 @@ basic_ios();
  Búfer estándar para almacenar elementos de entrada o salida.  
   
 ### <a name="remarks"></a>Comentarios  
- El primer constructor inicializa sus objetos miembro al llamar a [init](#basic_ios__init)(_ *Sb*). El segundo constructor (protegido) deja sus objetos miembro sin inicializar. Una llamada posterior a **init** debe inicializar el objeto para que se pueda destruir con seguridad.  
+ El primer constructor inicializa sus objetos miembro al llamar a [init](#init)(_ *Sb*). El segundo constructor (protegido) deja sus objetos miembro sin inicializar. Una llamada posterior a **init** debe inicializar el objeto para que se pueda destruir con seguridad.  
   
-##  <a name="a-namebasicioschartypea--basicioschartype"></a><a name="basic_ios__char_type"></a>  basic_ios::char_type  
+##  <a name="char_type"></a>  basic_ios::char_type  
  Sinónimo del parámetro de plantilla **Elem**.  
   
 ```   
 typedef Elem char_type;  
 ```  
   
-##  <a name="a-namebasicioscleara--basiciosclear"></a><a name="basic_ios__clear"></a>  basic_ios::clear  
+##  <a name="clear"></a>  basic_ios::clear  
  Borra todas las marcas de error.  
   
 ```   
@@ -196,18 +220,18 @@ void clear(io_state state);
  Especifica si la excepción debe volver a generarse. El valor predeterminado es `false` (no volver a generar la excepción).  
   
 ### <a name="remarks"></a>Comentarios  
- Las marcas son **goodbit**, **failbit**, **eofbit** y **badbit**. Prueba de estas marcas con [good](#basic_ios__good), [bad](#basic_ios__bad), [eof](#basic_ios__eof) y [fail](#basic_ios__fail)  
+ Las marcas son **goodbit**, **failbit**, **eofbit** y **badbit**. Prueba de estas marcas con [good](#good), [bad](#bad), [eof](#eof) y [fail](#fail)  
   
  La función miembro reemplaza la información de estado de la secuencia almacenada por:  
   
- `state` &#124; `(`[rdbuf](#basic_ios__rdbuf) != 0 **goodbit** : **badbit**)  
+ `state` &#124; `(`[rdbuf](#rdbuf) != 0 **goodbit** : **badbit**)  
   
- Si `state`**&**[exceptions](#basic_ios__exceptions) es distinto de cero, inicia un objeto de clase [failure](../standard-library/ios-base-class.md#ios_base__failure).  
+ Si `state`**&**[exceptions](#exceptions) es distinto de cero, inicia un objeto de clase [failure](../standard-library/ios-base-class.md#failure).  
   
 ### <a name="example"></a>Ejemplo  
-  Vea [rdstate](#basic_ios__rdstate) y [getline](../standard-library/string-functions.md#getline) para obtener ejemplos de uso de **clear**.  
+  Vea [rdstate](#rdstate) y [getline](../standard-library/string-functions.md#getline) para obtener ejemplos de uso de **clear**.  
   
-##  <a name="a-namebasicioscopyfmta--basicioscopyfmt"></a><a name="basic_ios__copyfmt"></a>  basic_ios::copyfmt  
+##  <a name="copyfmt"></a>  basic_ios::copyfmt  
  Copia las marcas de una secuencia a otra.  
   
 ```   
@@ -216,14 +240,14 @@ const basic_ios<Elem, Traits>& right);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` right`  
+ `right`  
  Flujo cuyas marcas se quieren copiar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Objeto **this** del flujo en el que se están copiando las marcas.  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro notifica la devolución de llamada eventÂ erase_event. Luego copia de ` right` en **\*this** el carácter de relleno, el puntero de valor equivalente y la información de formato. Antes de modificar la máscara de excepción, notifica el evento de devolución de llamada copyfmt_event. Si, una vez que la copia está completa, **state &**[exceptions](#basic_ios__exceptions) es distinto de cero, la función llama realmente a [clear](#basic_ios__clear) con el argumento [rdstate](#basic_ios__rdstate). Devuelve **\*this**.  
+ La función miembro informa sobre el evento de devolución de llamada **borrar\_eventos**. Luego copia de `right` en **\*this** el carácter de relleno, el puntero de valor equivalente y la información de formato. Antes de modificar la máscara de la excepción, informa sobre el evento de devolución de llamada **copyfmt_event**. Si, una vez que la copia está completa, **state &**[exceptions](#exceptions) es distinto de cero, la función llama realmente a [clear](#clear) con el argumento [rdstate](#rdstate). Devuelve **\*this**.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -247,7 +271,7 @@ int main( )
   
 ```  
   
-##  <a name="a-namebasicioseofa--basicioseof"></a><a name="basic_ios__eof"></a>  basic_ios::eof  
+##  <a name="eof"></a>  basic_ios::eof  
  Indica si se ha alcanzado el extremo de una secuencia.  
   
 ```  
@@ -258,7 +282,7 @@ bool eof() const;
  `true` si se ha alcanzado el fin del flujo; de lo contrario, `false`.  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro devuelve `true` si [rdstate](#basic_ios__rdstate) `& eofbit` es distinto de cero. Para más información sobre `eofbit`, vea [ios_base::iostate](../standard-library/ios-base-class.md#ios_base__iostate).  
+ La función miembro devuelve `true` si [rdstate](#rdstate) `& eofbit` es distinto de cero. Para más información sobre `eofbit`, vea [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -283,7 +307,7 @@ int main( int argc, char* argv[] )
   
 ```  
   
-##  <a name="a-namebasiciosexceptionsa--basiciosexceptions"></a><a name="basic_ios__exceptions"></a>  basic_ios::exceptions  
+##  <a name="exceptions"></a>  basic_ios::exceptions  
  Indica qué excepciones iniciará la secuencia.  
   
 ```   
@@ -300,7 +324,7 @@ void exceptions(io_state Newexcept);
  Marcas especificadas actualmente para iniciar una excepción para el flujo.  
   
 ### <a name="remarks"></a>Comentarios  
- La primera función miembro devuelve la máscara de excepción almacenada. La segunda función miembro almacena *_Except* en la máscara de excepción y devuelve su anterior valor almacenado. Tenga en cuenta que, al almacenar una nueva máscara de excepción, se puede iniciar una excepción como la llamada a [clear](#basic_ios__clear)([rdstate](#basic_ios__rdstate)).  
+ La primera función miembro devuelve la máscara de excepción almacenada. La segunda función miembro almacena *_Except* en la máscara de excepción y devuelve su anterior valor almacenado. Tenga en cuenta que, al almacenar una nueva máscara de excepción, se puede iniciar una excepción como la llamada a [clear](#clear)([rdstate](#rdstate)).  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -340,7 +364,7 @@ Exception class: class std::ios_base::failure
 Exception description: ios_base::eofbit set   
 ```  
   
-##  <a name="a-namebasiciosfaila--basiciosfail"></a><a name="basic_ios__fail"></a>  basic_ios::fail  
+##  <a name="fail"></a>  basic_ios::fail  
  Indica un error al extraer un campo válido de una secuencia.  
   
 ```  
@@ -348,9 +372,9 @@ bool fail() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true` si [rdstate](#basic_ios__rdstate) `& (badbit|failbit)` es distinto de cero; en caso contrario, `false`.  
+ `true` si [rdstate](#rdstate) `& (badbit|failbit)` es distinto de cero; en caso contrario, `false`.  
   
- Para más información sobre `failbit`, vea [ios_base::iostate](../standard-library/ios-base-class.md#ios_base__iostate).  
+ Para más información sobre `failbit`, vea [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -369,7 +393,7 @@ int main( void )
   
 ```  
   
-##  <a name="a-namebasiciosfilla--basiciosfill"></a><a name="basic_ios__fill"></a>  basic_ios::fill  
+##  <a name="fill"></a>  basic_ios::fill  
  Especifica o devuelve el carácter que se usará si el texto no tiene el mismo ancho que la secuencia.  
   
 ```   
@@ -414,7 +438,7 @@ xxxxa
 x   
 ```  
   
-##  <a name="a-namebasiciosgooda--basiciosgood"></a><a name="basic_ios__good"></a>  basic_ios::good  
+##  <a name="good"></a>  basic_ios::good  
  Indica que la secuencia está en buen estado.  
   
 ```  
@@ -422,14 +446,14 @@ bool good() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true` si [rdstate](#basic_ios__rdstate) `== goodbit` (sin marcas de estado establecidas); de lo contrario, `false`.  
+ `true` si [rdstate](#rdstate) `== goodbit` (sin marcas de estado establecidas); de lo contrario, `false`.  
   
- Para más información sobre `goodbit`, vea [ios_base::iostate](../standard-library/ios-base-class.md#ios_base__iostate).  
+ Para más información sobre `goodbit`, vea [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
   
 ### <a name="example"></a>Ejemplo  
-  Vea [basic_ios::bad](#basic_ios__bad) para obtener un ejemplo de uso de `good`.  
+  Vea [basic_ios::bad](#bad) para obtener un ejemplo de uso de `good`.  
   
-##  <a name="a-namebasiciosimbuea--basiciosimbue"></a><a name="basic_ios__imbue"></a>  basic_ios::imbue  
+##  <a name="imbue"></a>  basic_ios::imbue  
  Cambia la configuración regional.  
   
 ```   
@@ -444,11 +468,11 @@ locale imbue(const locale& Loc);
  Configuración regional anterior.  
   
 ### <a name="remarks"></a>Comentarios  
- Si [rdbuf](#basic_ios__rdbuf) no es un puntero nulo, la función miembro llama a  
+ Si [rdbuf](#rdbuf) no es un puntero nulo, la función miembro llama a  
   
- `rdbuf`-> [pubimbue](../standard-library/basic-streambuf-class.md#basic_streambuf__pubimbue)(_ *Loc*)  
+ `rdbuf`-> [pubimbue](../standard-library/basic-streambuf-class.md#pubimbue)(_ *Loc*)  
   
- En cualquier caso, devuelve [ios_base::imbue](../standard-library/ios-base-class.md#ios_base__imbue)(_ *Loc*).  
+ En cualquier caso, devuelve [ios_base::imbue](../standard-library/ios-base-class.md#imbue)(_ *Loc*).  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -469,7 +493,7 @@ int main( )
   
 ```  
   
-##  <a name="a-namebasiciosinita--basiciosinit"></a><a name="basic_ios__init"></a>  basic_ios::init  
+##  <a name="init"></a>  basic_ios::init  
  Lo llaman los constructores basic_ios.  
   
 ```  
@@ -487,34 +511,34 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 ### <a name="remarks"></a>Comentarios  
  La función miembro almacena valores en todos los objetos miembro, de modo que:  
   
-- [rdbuf](#basic_ios__rdbuf) devuelve *_Sb*.  
+- [rdbuf](#rdbuf) devuelve *_Sb*.  
   
-- [tie](#basic_ios__tie) devuelve un puntero nulo.  
+- [tie](#tie) devuelve un puntero nulo.  
   
-- [rdstate](#basic_ios__rdstate) devuelve [goodbit](../standard-library/ios-base-class.md#ios_base__iostate) si `_Sb` es distinto de cero; en caso contrario, devuelve [badbit](../standard-library/ios-base-class.md#ios_base__iostate).  
+- [rdstate](#rdstate) devuelve [goodbit](../standard-library/ios-base-class.md#iostate) si `_Sb` es distinto de cero; en caso contrario, devuelve [badbit](../standard-library/ios-base-class.md#iostate).  
   
-- [exceptions](#basic_ios__exceptions) devuelve **goodbit**.  
+- [exceptions](#exceptions) devuelve **goodbit**.  
   
-- [flags](../standard-library/ios-base-class.md#ios_base__flags) devuelve [skipws](../standard-library/ios-base-class.md#ios_base__fmtflags) &#124; [dec](../standard-library/ios-base-class.md#ios_base__fmtflags).  
+- [flags](../standard-library/ios-base-class.md#flags) devuelve [skipws](../standard-library/ios-base-class.md#fmtflags) &#124; [dec](../standard-library/ios-base-class.md#fmtflags).  
   
-- [width](../standard-library/ios-base-class.md#ios_base__width) devuelve 0.  
+- [width](../standard-library/ios-base-class.md#width) devuelve 0.  
   
-- [precision](../standard-library/ios-base-class.md#ios_base__precision) devuelve 6.  
+- [precision](../standard-library/ios-base-class.md#precision) devuelve 6.  
   
-- [fill](#basic_ios__fill) devuelve el carácter de espacio.  
+- [fill](#fill) devuelve el carácter de espacio.  
   
-- [getloc](../standard-library/ios-base-class.md#ios_base__getloc) devuelve `locale::classic`.  
+- [getloc](../standard-library/ios-base-class.md#getloc) devuelve `locale::classic`.  
   
-- [iword](../standard-library/ios-base-class.md#ios_base__iword) devuelve cero y [pword](../standard-library/ios-base-class.md#ios_base__pword) devuelve un puntero nulo para todos los valores de argumento.  
+- [iword](../standard-library/ios-base-class.md#iword) devuelve cero y [pword](../standard-library/ios-base-class.md#pword) devuelve un puntero nulo para todos los valores de argumento.  
   
-##  <a name="a-namebasiciosinttypea--basiciosinttype"></a><a name="basic_ios__int_type"></a>  basic_ios::int_type  
+##  <a name="int_type"></a>  basic_ios::int_type  
  Sinónimo de **traits_type::int_type**.  
   
 ```  
 typedef typename traits_type::int_type int_type;  
 ```  
   
-##  <a name="a-namebasiciosmovea--basiciosmove"></a><a name="basic_ios__move"></a>  basic_ios::move  
+##  <a name="move"></a>  basic_ios::move  
  Mueve todos los valores, excepto el puntero al búfer de secuencia, desde el parámetro hasta el objeto actual.  
   
 ```   
@@ -526,13 +550,12 @@ void move(basic_ios&& right);
  Objeto `ios_base` cuyos valores se van a mover.  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro protegida mueve todos los valores almacenados en ` right` a `*this`, excepto el `stream buffer pointer` almacenado, que no cambia en ` right` y se establece en un puntero nulo en `*this`. El `tie pointer` almacenado está establecido en un puntero nulo en ` right`.  
+ La función miembro protegida mueve todos los valores almacenados en `right` a `*this`, excepto el `stream buffer pointer` almacenado, que no cambia en `right` y se establece en un puntero nulo en `*this`. El `tie pointer` almacenado está establecido en un puntero nulo en `right`.  
   
-##  <a name="a-namebasiciosnarrowa--basiciosnarrow"></a><a name="basic_ios__narrow"></a>  basic_ios::narrow  
+##  <a name="narrow"></a>  basic_ios::narrow  
  Busca el carácter equivalente a un determinado `char_type`.  
   
 ```  
- 
 char narrow(char_type Char, char Default = '\0') const;
 ```  
   
@@ -547,7 +570,7 @@ char narrow(char_type Char, char Default = '\0') const;
  `char` equivalente a un determinado `char_type`.  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro devuelve [use_facet](../standard-library/basic-filebuf-class.md#basic_filebuf__open)**<**Â **ctype**\< **E**> >([getloc](../standard-library/ios-base-class.md#ios_base__getloc)( ) ). `narrow`( `Char`, `Default`).  
+ La función miembro devuelve [use_facet](../standard-library/basic-filebuf-class.md#open)\<ctype\<E >> ( [getloc](../standard-library/ios-base-class.md#getloc)()).`narrow` ( `Char`, `Default`).  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -568,17 +591,16 @@ int main( )
   y[0] = wcout.narrow( x[0] );  
   cout << y[0] << endl;  
 }  
-  
 ```  
   
-##  <a name="a-namebasiciosofftypea--basiciosofftype"></a><a name="basic_ios__off_type"></a>  basic_ios::off_type  
+##  <a name="off_type"></a>  basic_ios::off_type  
  Sinónimo de **traits_type::off_type**.  
   
 ```  
 typedef typename traits_type::off_type off_type;  
 ```  
   
-##  <a name="a-namebasiciosoperatorvoidstara--basiciosoperator-void-"></a><a name="basic_ios__operator_void_star"></a>  basic_ios::operator void *  
+##  <a name="op_void_star"></a>  basic_ios::operator void *  
  Indica si la secuencia sigue siendo aceptable.  
   
 ```  
@@ -586,7 +608,7 @@ typedef typename traits_type::off_type off_type;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El operador devuelve un puntero nulo solo si [fail](#basic_ios__fail).  
+ El operador devuelve un puntero nulo solo si [fail](#fail).  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -607,7 +629,7 @@ int main( )
 1  
 ```  
   
-##  <a name="a-namebasiciosoperatornota--basiciosoperator"></a><a name="basic_ios__operator_not"></a>  basic_ios::operator!  
+##  <a name="op_not"></a>  basic_ios::operator!  
  Indica si la secuencia no es inaceptable.  
   
 ```   
@@ -615,7 +637,7 @@ bool operator!() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve [fail](#basic_ios__fail).  
+ Devuelve [fail](#fail).  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -636,7 +658,7 @@ int main( )
 0  
 ```  
   
-##  <a name="a-namebasiciosoperatorboola--basiciosoperator-bool"></a><a name="basic_ios__operator_bool"></a>  basic_ios::operator bool  
+##  <a name="op_bool"></a>  basic_ios::operator bool  
  Permite el uso de un objeto `basic_ios` como un `bool`. La conversión automática de tipo está deshabilitada para evitar efectos secundarios típicos no deseados.  
   
 ```  
@@ -646,14 +668,14 @@ explicit operator bool() const;
 ### <a name="remarks"></a>Comentarios  
  El operador devuelve un valor que puede convertirse en `false` solo si `fail``()`. El tipo devuelto puede convertirse solo a `bool`, no a `void *` ni a cualquier otro tipo escalar conocido.  
   
-##  <a name="a-namebasiciospostypea--basiciospostype"></a><a name="basic_ios__pos_type"></a>  basic_ios::pos_type  
+##  <a name="pos_type"></a>  basic_ios::pos_type  
  Sinónimo de **traits_type::pos_type**.  
   
 ```  
 typedef typename traits_type::pos_type pos_type;  
 ```  
   
-##  <a name="a-namebasiciosrdbufa--basiciosrdbuf"></a><a name="basic_ios__rdbuf"></a>  basic_ios::rdbuf  
+##  <a name="rdbuf"></a>  basic_ios::rdbuf  
  Redirige la secuencia al búfer especificado.  
   
 ```   
@@ -696,7 +718,7 @@ int main( )
 test2  
 ```  
   
-##  <a name="a-namebasiciosrdstatea--basiciosrdstate"></a><a name="basic_ios__rdstate"></a>  basic_ios::rdstate  
+##  <a name="rdstate"></a>  basic_ios::rdstate  
  Lee el estado de bits de las marcas.  
   
 ```  
@@ -746,7 +768,7 @@ int main( )
 1   
 ```  
   
-##  <a name="a-namebasiciossetstatea--basiciossetstate"></a><a name="basic_ios__setstate"></a>  basic_ios::setstate  
+##  <a name="setstate"></a>  basic_ios::setstate  
  Establece marcas adicionales.  
   
 ```   
@@ -758,7 +780,7 @@ void setstate(iostate _State);
  Marcas adicionales que se van a establecer.  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro llama realmente a [clear](#basic_ios__clear)(_ *State* &#124; [rdstate](#basic_ios__rdstate)).  
+ La función miembro llama realmente a [clear](#clear)(_ *State* &#124; [rdstate](#rdstate)).  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -794,7 +816,7 @@ int main( )
 1   
 ```  
   
-##  <a name="a-namebasiciossetrdbufa--basiciossetrdbuf"></a><a name="basic_ios__set_rdbuf"></a>  basic_ios::set_rdbuf  
+##  <a name="set_rdbuf"></a>  basic_ios::set_rdbuf  
  Asigna un búfer de secuencia para que sea el búfer de lectura de este objeto de secuencia.  
   
 ```   
@@ -803,13 +825,13 @@ basic_streambuf<Elem, Tr>* strbuf)
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` strbuf`  
+ `strbuf`  
  Búfer de flujo que se va a convertir en el búfer de lectura.  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro protegida almacena ` strbuf` en `stream buffer pointer`. No llama a `clear`.  
+ La función miembro protegida almacena `strbuf` en `stream buffer pointer`. No llama a `clear`.  
   
-##  <a name="a-namebasiciostiea--basiciostie"></a><a name="basic_ios__tie"></a>  basic_ios::tie  
+##  <a name="tie"></a>  basic_ios::tie  
  Se asegura de que una secuencia se procese antes que otra.  
   
 ```  
@@ -820,11 +842,11 @@ basic_ostream<Elem, Traits>* str);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` str`  
+ `str`  
  Flujo.  
   
 ### <a name="return-value"></a>Valor devuelto  
- La primera función miembro devuelve el puntero de valor equivalente almacenado. La segunda función miembro almacena ` str` en el puntero de valor equivalente y devuelve su anterior valor almacenado.  
+ La primera función miembro devuelve el puntero de valor equivalente almacenado. La segunda función miembro almacena `str` en el puntero de valor equivalente y devuelve su anterior valor almacenado.  
   
 ### <a name="remarks"></a>Comentarios  
  `tie` provoca la sincronización de dos flujos, de modo que las operaciones de un flujo se producen una vez finalizadas las operaciones del otro.  
@@ -848,14 +870,14 @@ int main( )
   
 ```  
   
-##  <a name="a-namebasiciostraitstypea--basiciostraitstype"></a><a name="basic_ios__traits_type"></a>  basic_ios::traits_type  
+##  <a name="traits_type"></a>  basic_ios::traits_type  
  Sinónimo del parámetro de plantilla **Traits**.  
   
 ```   
 typedef Traits traits_type;  
 ```  
   
-##  <a name="a-namebasicioswidena--basicioswiden"></a><a name="basic_ios__widen"></a>  basic_ios::widen  
+##  <a name="widen"></a>  basic_ios::widen  
  Busca el `char_type` equivalente a un determinado `char`.  
   
 ```   
@@ -870,7 +892,7 @@ char_type widen(char Char) const;
  Busca el `char_type` equivalente a un determinado `char`.  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro devuelve [use_facet](../standard-library/basic-filebuf-class.md#basic_filebuf__open)< **ctype**\< **E**> >([getloc](../standard-library/ios-base-class.md#ios_base__getloc)). `widen`( `Char`).  
+ La función miembro devuelve [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **E**> >([getloc](../standard-library/ios-base-class.md#getloc)). `widen`( `Char`).  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -893,7 +915,7 @@ int main( )
   
 ```  
   
-##  <a name="a-namebasiciosswapa--basiciosswap"></a><a name="basic_ios__swap"></a>  basic_ios::swap  
+##  <a name="swap"></a>  basic_ios::swap  
  Cambia los valores de este objeto `basic_ios` por los de otro objeto `basic_ios`. Pero no se intercambian los punteros a los búferes de flujo.  
   
 ```   
@@ -905,7 +927,7 @@ void swap(basic_ios&& right);
  Objeto `basic_ios` que se usa para intercambiar valores.  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro protegida intercambia todos los valores almacenados en ` right` con `*this`, excepto el `stream buffer pointer` almacenado.  
+ La función miembro protegida intercambia todos los valores almacenados en `right` con `*this`, excepto el `stream buffer pointer` almacenado.  
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

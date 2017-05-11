@@ -1,47 +1,64 @@
 ---
-title: "atexit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "atexit"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "atexit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atexit (función)"
-  - "procesar, al salir"
+title: atexit | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- atexit
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- atexit
+dev_langs:
+- C++
+helpviewer_keywords:
+- processing, at exit
+- atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# atexit
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 6d0d85ffc7f3ed71a26a947dd66c710e76388e96
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
-Procesa la función especificada en la salida.  
+---
+# <a name="atexit"></a>atexit
+Procesa la función especificada a la salida.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int atexit(  
@@ -49,28 +66,28 @@ int atexit(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `func`  
- Función que se va a llamar.  
+ Función a la que se llama.  
   
-## Valor devuelto  
- `atexit` devuelve 0 si es correcto, o un valor distinto de cero si se produce un error.  
+## <a name="return-value"></a>Valor devuelto  
+ `atexit` devuelve 0 si se ejecuta correctamente, o un valor distinto de cero si se produce un error.  
   
-## Comentarios  
- La función de `atexit` se pasa la dirección de una función \(`func`\) que se llamará cuando el programa termina normalmente.  Las llamadas sucesivas a `atexit` crean un registro de las funciones pasado\- en las que se ejecutan en, primer \- out orden de \(LIFO\).  Las funciones pasadas a `atexit` no pueden tomar parámetros.  `atexit` y `_onexit` utilizan el montón para contener el registro de funciones.  Así, el número de funciones que pueden ser registradas está limitado por la memoria del montón.  
+## <a name="remarks"></a>Comentarios  
+ A la función `atexit` se pasa la dirección de una función (`func`) que se llamará cuando el programa finalice con normalidad. Las llamadas sucesivas a `atexit` crean un registro de las funciones que se ejecutan por orden de último en entrar, primero en salir (LIFO). Las funciones que se pasan a `atexit` no pueden tomar parámetros. `atexit` y `_onexit` usan el montón para almacenar el registro de funciones. Por lo tanto, el número de funciones que se pueden registrar no tiene más límite que la memoria del montón.  
   
- El código de la función de `atexit` no debe contener ninguna dependencia en ningún DLL que han podido descargar ya cuando se llama a la función de `atexit` .  
+ El código de la función `atexit` no debe contener ninguna dependencia de ningún archivo DLL que pueda haberse descargado ya cuando se llama a la función `atexit`.  
   
- Para generar una aplicación de ANSI\- bajo, utilice la función de `atexit` del estándar ANSI \(en lugar de la función similar de `_onexit` \).  
+ Para generar una aplicación compatible con ANSI, use la función estándar ANSI `atexit` (y no la función similar `_onexit`).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`atexit`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`atexit`|\<stdlib.h>|  
   
-## Ejemplo  
- Este programa inserta cuatro funciones en la pila de funciones que se ejecutarán cuando se llama a `atexit` .  Cuando se ejecutan a resultados de programa, estos programas del último en entrar, primero en salir base.  
+## <a name="example"></a>Ejemplo  
+ Este programa inserta cuatro funciones en la pila de funciones que se ejecuta al llamar a `atexit`. Cuando el programa termina, estos programas se ejecutan por último en entrar, primero en salir.  
   
 ```  
 // crt_atexit.c  
@@ -109,13 +126,13 @@ void fn4()
 }  
 ```  
   
-  **Esto se ejecuta primero.**  
-**Esto se ejecuta después.**   
-## Equivalente en .NET Framework  
- [System::Diagnostics::Process::Exited](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.exited.aspx)  
+```Output  
+This is executed first.  
+This is executed next.  
+```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
- [exit, \_Exit, \_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [\_onexit, \_onexit\_m](../../c-runtime-library/reference/onexit-onexit-m.md)
+ [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)
