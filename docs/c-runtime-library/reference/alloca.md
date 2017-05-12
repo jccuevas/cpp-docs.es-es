@@ -50,14 +50,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c7bf8e09b7af4153bae3bfa0f80c002149ff3ee9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5875a26dc5758674665fba2fde5b51c2ff53420e
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="alloca"></a>_alloca
-Asigna memoria en la pila. Esta función está desusada porque hay una versión más segura; consulte [_malloca](../../c-runtime-library/reference/malloca.md).  
+Asigna memoria en la pila. Esta función está desusada porque hay una versión más segura; vea [_malloca](../../c-runtime-library/reference/malloca.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -77,7 +78,7 @@ void *_alloca(
  Si no se puede asignar el espacio, se genera una excepción de desbordamiento de pila. La excepción de desbordamiento de pila no es una excepción de C++, sino que es una excepción estructurada. En lugar de usar el control de excepciones de C++, debe usar el [control de excepciones estructuradas](../../cpp/structured-exception-handling-c-cpp.md) (SEH).  
   
 ## <a name="remarks"></a>Comentarios  
- `_alloca`asigna `size` bytes de la pila del programa. El espacio asignado se libera automáticamente cuando se sale de la función de llamada (no cuando la asignación simplemente queda fuera del ámbito). Por lo tanto, no pase el valor de puntero devuelto por `_alloca` como argumento de [libre](../../c-runtime-library/reference/free.md).  
+ `_alloca`asigna `size` bytes a partir de la pila del programa. El espacio asignado se libera automáticamente cuando finaliza la función que realiza la llamada (no cuando la asignación simplemente queda fuera del ámbito). Por lo tanto, no pase el valor de puntero devuelto por `_alloca` como argumento a [libre](../../c-runtime-library/reference/free.md).  
   
  Existen restricciones para llamar explícitamente a `_alloca` en un controlador de excepciones. Las rutinas del controlador de excepciones que se ejecutan en procesadores de clase x86 funcionan en su propio marco de memoria: llevan a cabo sus tareas en el espacio de memoria que no se basa en la ubicación actual del puntero de pila de la función de inclusión. Las implementaciones más habituales incluyen el control de excepciones estructuradas (SEH) de Windows NT y las expresiones de la cláusula catch de C++. Por consiguiente, si se llama explícitamente a `_alloca` en cualquiera de los siguientes escenarios, se produce un error del programa durante la devolución de la rutina del controlador de excepciones a la que se llama:  
   
@@ -92,7 +93,7 @@ void *_alloca(
 > [!IMPORTANT]
 >  En Windows XP, si se llama a `_alloca` dentro de un bloque try/catch, debe llamar a [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md) en el bloque catch.  
   
- Además de las restricciones anteriores, cuando se usa el[/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) opción, `_alloca` no se puede utilizar en `__except` bloques. Para obtener más información, vea [Restricciones de /clr](../../build/reference/clr-restrictions.md).  
+ Además de las restricciones anteriores, cuando se usa el[/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) opción, `_alloca` no se puede usar en `__except` bloques. Para obtener más información, consulta [/clr Restrictions](../../build/reference/clr-restrictions.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -157,9 +158,6 @@ int main()
 ```Output  
 Allocated 1000 bytes of stack at 0x0012FB50  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Asignación de memoria](../../c-runtime-library/memory-allocation.md)   

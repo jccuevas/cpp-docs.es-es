@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 01fb7ae608b710fca96b073e7b3ea0dcf07dbc53
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0e3e8a35d2b33417e952155313307aa55f181eb4
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
@@ -94,7 +95,7 @@ void * _aligned_offset_realloc_dbg(
  `_aligned_offset_realloc_dbg` devuelve un puntero void al bloque de memoria reasignado (y, probablemente, trasladado). El valor devuelto es `NULL` si el tamaño es cero y el argumento de búfer no es `NULL`, o si no hay memoria suficiente para expandir el bloque al tamaño en cuestión. En el primer caso, se libera el bloque original. En el segundo, el bloque original permanece inalterado. El valor devuelto apunta a un espacio de almacenamiento confirmado como correctamente alineado para almacenar cualquier tipo de objeto. Para obtener un puntero a un tipo distinto a void, use una conversión de tipo en el valor devuelto.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `_aligned_offset_realloc_dbg` es una versión de depuración de la función [_aligned_offset_realloc](../../c-runtime-library/reference/aligned-offset-realloc.md). Si no se define [_DEBUG](../../c-runtime-library/debug.md), cada llamada a `_aligned_offset_realloc_dbg` se reduce a una llamada a _`aligned_offset_realloc`. \_`aligned_offset_realloc` y `_aligned_offset_realloc_dbg` reasignan un bloque de memoria del montón base, pero `_aligned_offset_realloc_dbg` admite varias características de depuración: búferes situados a cada lado de la parte del usuario del bloque para comprobar si hay pérdidas, un parámetro de tipo de bloque para realizar el seguimiento de tipos de asignación concretos, así como información sobre `filename`/`linenumber` para determinar el origen de las solicitudes de asignación.  
+ La función `_aligned_offset_realloc_dbg` es una versión de depuración de la función [_aligned_offset_realloc](../../c-runtime-library/reference/aligned-offset-realloc.md). Si no se define [_DEBUG](../../c-runtime-library/debug.md), cada llamada a `_aligned_offset_realloc_dbg` se reduce a una llamada a `_aligned_offset_realloc`. `_aligned_offset_realloc` y `_aligned_offset_realloc_dbg` reasignan un bloque de memoria del montón base, pero `_aligned_offset_realloc_dbg` admite varias características de depuración: búferes situados a cada lado de la parte del usuario del bloque en el que se va a comprobar si hay pérdidas, un parámetro de tipo de bloque para realizar el seguimiento de tipos de asignación concretos, e información sobre `filename`/`linenumber` para determinar el origen de las solicitudes de asignación.  
   
  Al igual que [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md), `_aligned_offset_realloc_dbg` permite alinear una estructura en un desplazamiento dentro de la estructura.  
   
@@ -114,9 +115,6 @@ void * _aligned_offset_realloc_dbg(
   
 ## <a name="libraries"></a>Bibliotecas  
  Solo versiones de depuración de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Rutinas de depuración](../../c-runtime-library/debug-routines.md)

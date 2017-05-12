@@ -1,59 +1,76 @@
 ---
-title: "atoll, _atoll_l, _wtoll, _wtoll_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wtoll"
-  - "_atoll_l"
-  - "_wtoll_l"
-  - "atoll"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tstoll_l"
-  - "_wtoll"
-  - "_atoll_l"
-  - "_ttoll"
-  - "_tstoll"
-  - "_wtoll_l"
-  - "atoll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_atoll_l (función)"
-  - "_wtoll (función)"
-  - "_wtoll_l (función)"
-  - "atoll (función)"
+title: atoll, _atoll_l, _wtoll, _wtoll_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wtoll
+- _atoll_l
+- _wtoll_l
+- atoll
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tstoll_l
+- _wtoll
+- _atoll_l
+- _ttoll
+- _tstoll
+- _wtoll_l
+- atoll
+dev_langs:
+- C++
+helpviewer_keywords:
+- atoll function
+- _wtoll_l function
+- _wtoll function
+- _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# atoll, _atoll_l, _wtoll, _wtoll_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e707c06f06015a684e968367f61e7e763ff87a6d
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="atoll-atolll-wtoll-wtolll"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 Convierte una cadena en un entero `long long`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 long long atoll(  
@@ -72,54 +89,54 @@ long long _wtoll_l(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `str`  
  Cadena que se va a convertir.  
   
  `locale`  
  Configuración regional que se va a usar.  
   
-## Valor devuelto  
- Cada función devuelve el valor `long long` que se produce al interpretar los caracteres de entrada como un número.  El valor devuelto para `atoll` es 0 si la entrada no se puede convertir en un valor de ese tipo.  
+## <a name="return-value"></a>Valor devuelto  
+ Cada función devuelve el valor `long long` que se genera al interpretar los caracteres de entrada como un número. El valor devuelto es 0 para `atoll` si la entrada no se puede convertir en un valor de ese tipo.  
   
- Para el desbordamiento con valores enteros positivos grandes, `atoll` devuelve `LLONG_MAX` y para el desbordamiento con valores enteros negativos grandes, devuelve `LLONG_MIN`.  
+ En caso de desbordamiento con valores enteros positivos grandes, `atoll` devuelve `LLONG_MAX`; en caso de desbordamiento con valores enteros negativos grandes, devuelve `LLONG_MIN`.  
   
- En todos los casos fuera de intervalo, `errno` se establece en `ERANGE`.  Si el parámetro que se pasa es `NULL`, se invocará el controlador de parámetro no válido, tal como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven 0.  
+ En todos los casos de valores fuera del intervalo, `errno` se establece en `ERANGE`. Si el parámetro que se pasa es `NULL`, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven 0.  
   
-## Comentarios  
- Estas funciones convierten una cadena de caracteres a un valor entero `long long`.  
+## <a name="remarks"></a>Comentarios  
+ Estas funciones convierten una cadena de caracteres en un valor entero `long long`.  
   
- La cadena de entrada es una secuencia de caracteres que se pueden interpretar como valor numérico del tipo especificado.  La función deja de leer la cadena de entrada en el primer carácter que no reconoce como parte de un número.  Este carácter podría ser el carácter null \(“\\ 0 " o L' \\ 0 '\) que finaliza la cadena.  
+ La cadena de entrada es una secuencia de caracteres que se puede interpretar como un valor numérico del tipo especificado. La función deja de leer la cadena de entrada en el primer carácter que no reconoce como parte de un número. Es posible que este carácter sea el carácter nulo ("\0" o L"\0") que finaliza la cadena.  
   
- El argumento `str` para `atoll` tiene el siguiente formulario:  
+ El argumento `str` para `atoll` tiene el formato siguiente:  
   
 ```  
 [whitespace] [sign] [digits]  
 ```  
   
- Un `whitespace` consta de caracteres de espacio o tabulación que se omiten, el `sign` puede ser más \(\+\) o menos \(–\) y `digits` son uno o varios dígitos.  
+ Un `whitespace` consta de caracteres de espacio o tabulación, que se omiten; `sign` sea más (+) o menos (-); y `digits` es uno o más dígitos.  
   
- `_wtoll` es idéntico a `atoll`, con la diferencia de que toma una cadena de caracteres anchos como parámetro.  
+ `_wtoll` es idéntica a `atoll`, salvo en que toma una cadena de caracteres anchos como parámetro.  
   
- Las versiones de estas funciones que tienen el sufijo `_l` son idénticas a las versiones que no la tienen, salvo que ellas utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual.  Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ Las versiones de estas funciones que tienen el sufijo `_l` son idénticas a las versiones que no lo tienen, salvo en que usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, consulte [Configuración regional](../../c-runtime-library/locale.md).  
   
-### Asignaciones de rutina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
-|Rutina Tchar.h|\_UNICODE y \_MBCS no definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tstoll`|`atoll`|`atoll`|`_wtoll`|  
 |`_tstoll_l`|`_atoll_l`|`_atoll_l`|`_wtoll_l`|  
 |`_ttoll`|`_atoll`|`_atoll`|`_wtoll`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutinas|Encabezado necesario|  
-|-------------|--------------------------|  
-|`atoll`, `_atoll_l`|\<stdlib.h\>|  
-|`_wtoll`, `_wtoll_l`|\<stdlib.h\> o \<wchar.h\>|  
+|--------------|---------------------|  
+|`atoll`, `_atoll_l`|\<stdlib.h>|  
+|`_wtoll`, `_wtoll_l`|\<stdlib.h> o \<wchar.h>|  
   
-## Ejemplo  
- Este programa muestra cómo utilizar las funciones `atoll` para convertir números almacenados como cadenas en valores numéricos.  
+## <a name="example"></a>Ejemplo  
+ Este programa muestra cómo se pueden usar las funciones `atoll` para convertir números almacenados como cadenas en valores numéricos.  
   
 ```  
 // crt_atoll.c  
@@ -160,22 +177,20 @@ int main(void)
 }  
 ```  
   
-  **Función: atoll\("  \-27182818284 "\) \= \-27182818284**  
-**Función: atoll\("314127.64"\) \= 314127**  
-**Función: atoll\("3336402735171707160320"\) \= 9223372036854775807**  
-**Se produjo una condición de desbordamiento.**   
-## Equivalente en .NET Framework  
+```Output  
+Function: atoll("  -27182818284 ") = -27182818284  
+Function: atoll("314127.64") = 314127  
+Function: atoll("3336402735171707160320") = 9223372036854775807  
+Overflow condition occurred.  
   
--   [System::Convert::ToInt64](https://msdn.microsoft.com/en-us/library/system.convert.toint64.aspx)  
+```  
   
--   [System::Convert::ToUInt64](https://msdn.microsoft.com/en-us/library/system.convert.touint64.aspx)  
-  
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conversión de datos](../../c-runtime-library/data-conversion.md)   
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
  [Configuración regional](../../c-runtime-library/locale.md)   
- [\_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)   
- [\_gcvt](../../c-runtime-library/reference/gcvt.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [\_atodbl, \_atodbl\_l, \_atoldbl, \_atoldbl\_l, \_atoflt, \_atoflt\_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)

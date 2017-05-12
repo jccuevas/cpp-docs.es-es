@@ -1,5 +1,5 @@
 ---
-title: C2830 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2830 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: c7547d0df457e9f96676b99fdf4f7808945e206c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1cbaa14c04aac55a09f646bfbe669a475e527add
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="compiler-error-c2830"></a>Error del compilador C2830
+# <a name="compiler-error-c2830"></a>{1&gt;Error del compilador C2830&lt;1}
 solo pueden tener valores predeterminados los parámetros de ubicación para 'operator new'  
   
-Los parámetros formales estándares para [operador new](../../standard-library/new-operators.md#operator_new) no pueden tener valores predeterminados. Sólo los parámetros de ubicación definidos por el usuario pueden especificar valores predeterminados.
+Los parámetros formales estándar para [new (operador)](../../standard-library/new-operators.md#op_new) no pueden tener valores predeterminados. Solo los parámetros de selección de ubicación definida por el usuario pueden especificar los valores predeterminados.
 

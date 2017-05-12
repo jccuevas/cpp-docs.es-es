@@ -8,253 +8,171 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - algorithm/std::adjacent_find
-- std::adjacent_find
 - adjacent_find
 - algorithm/std::all_of
-- std::all_of
 - all_of
 - algorithm/std::any_of
-- std::any_of
 - any_of
 - algorithm/std::binary_search
-- std::binary_search
 - binary_search
 - algorithm/std::copy
-- std::copy
 - copy
 - algorithm/std::copy_backward
-- std::copy_backward
 - copy_backward
 - algorithm/std::copy_if
-- std::copy_if
 - copy_if
 - algorithm/std::copy_n
-- std::copy_n
 - copy_n
 - algorithm/std::equal
-- std::equal
 - equal
 - algorithm/std::equal_range
-- std::equal_range
 - equal_range
 - algorithm/std::fill
-- std::fill
 - fill
 - algorithm/std::fill_n
-- std::fill_n
 - fill_n
 - algorithm/std::find
-- std::find
 - find
 - algorithm/std::find_end
-- std::find_end
 - find_end
 - algorithm/std::find_first_of
-- std::find_first_of
 - find_first_of
 - algorithm/std::find_if
-- std::find_if
 - find_if
 - algorithm/std::find_if_not
-- std::find_if_not
 - find_if_not
 - algorithm/std::for_each
-- std::for_each
 - for_each
 - algorithm/std::generate
-- std::generate
 - generate
 - algorithm/std::generate_n
-- std::generate_n
 - generate_n
 - algorithm/std::includes
-- std::includes
 - includes
 - algorithm/std::inplace_merge
-- std::inplace_merge
 - inplace_merge
 - algorithm/std::is_heap
-- std::is_heap
 - is_heap
 - algorithm/std::is_heap_until
-- std::is_heap_until
 - is_heap_until
 - algorithm/std::is_partitioned
-- std::is_partitioned
 - is_partitioned
 - algorithm/std::is_permutation
-- std::is_permutation
 - is_permutation
 - algorithm/std::is_sorted
-- std::is_sorted
 - is_sorted
 - algorithm/std::is_sorted_until
-- std::is_sorted_until
 - is_sorted_until
 - algorithm/std::iter_swap
-- std::iter_swap
 - iter_swap
 - algorithm/std::lexicographical_compare
-- std::lexicographical_compare
 - lexicographical_compare
 - algorithm/std::lower_bound
-- std::lower_bound
 - lower_bound
 - algorithm/std::make_heap
-- std::make_heap
 - make_heap
 - algorithm/std::max
-- std::max
 - max
 - algorithm/std::max_element
-- std::max_element
 - max_element
 - algorithm/std::merge
-- std::merge
 - merge
 - algorithm/std::min
-- std::min
 - min
 - algorithm/std::minmax
-- std::minmax
 - minmax
 - algorithm/std::minmax_element
-- std::minmax_element
 - minmax_element
 - algorithm/std::min_element
-- std::min_element
 - min_element
 - algorithm/std::mismatch
-- std::mismatch
 - mismatch
 - algorithm/std::move
-- std::move
 - move
 - algorithm/std::move_backward
-- std::move_backward
 - move_backward
 - algorithm/std::next_permutation
-- std::next_permutation
 - next_permutation
 - algorithm/std::none_of
-- std::none_of
 - none_of
 - algorithm/std::nth_element
-- std::nth_element
 - nth_element
 - algorithm/std::partial_sort
-- std::partial_sort
 - partial_sort
 - algorithm/std::partial_sort_copy
-- std::partial_sort_copy
 - partial_sort_copy
 - algorithm/std::partition
-- std::partition
 - partition
 - algorithm/std::partition_point
-- std::partition_point
 - partition_point
 - algorithm/std::pop_heap
-- std::pop_heap
 - pop_heap
 - algorithm/std::prev_permutation
-- std::prev_permutation
 - prev_permutation
 - algorithm/std::push_heap
-- std::push_heap
 - push_heap
 - algorithm/std::random_shuffle
-- std::random_shuffle
 - random_shuffle
 - algorithm/std::remove
-- std::remove
 - remove
 - algorithm/std::remove_copy
-- std::remove_copy
 - remove_copy
 - algorithm/std::remove_copy_if
-- std::remove_copy_if
 - remove_copy_if
 - algorithm/std::remove_if
-- std::remove_if
 - remove_if
 - algorithm/std::replace
-- std::replace
 - replace
 - algorithm/std::replace_copy
-- std::replace_copy
 - replace_copy
 - algorithm/std::replace_copy_if
-- std::replace_copy_if
 - replace_copy_if
 - algorithm/std::replace_if
-- std::replace_if
 - replace_if
 - algorithm/std::reverse
-- std::reverse
 - reverse
 - algorithm/std::reverse_copy
-- std::reverse_copy
 - reverse_copy
 - algorithm/std::rotate
-- std::rotate
 - rotate
 - algorithm/std::rotate_copy
-- std::rotate_copy
 - rotate_copy
 - algorithm/std::search
-- std::search
 - search
 - algorithm/std::search_n
-- std::search_n
 - search_n
 - algorithm/std::set_difference
-- std::set_difference
 - set_difference
 - algorithm/std::set_intersection
-- std::set_intersection
 - set_intersection
 - algorithm/std::set_symmetric_difference
-- std::set_symmetric_difference
 - set_symmetric_difference
 - algorithm/std::set_union
-- std::set_union
 - set_union
 - algorithm/std::shuffle
-- std::shuffle
 - shuffle
 - algorithm/std::sort
-- std::sort
 - sort
 - algorithm/std::sort_heap
-- std::sort_heap
 - sort_heap
 - algorithm/std::stable_partition
-- std::stable_partition
 - stable_partition
 - algorithm/std::stable_sort
-- std::stable_sort
 - stable_sort
 - algorithm/std::swap_ranges
-- std::swap_ranges
 - swap_ranges
 - algorithm/std::transform
-- std::transform
 - transform
 - algorithm/std::unique
-- std::unique
 - unique
 - algorithm/std::unique_copy
-- std::unique_copy
 - unique_copy
 - algorithm/std::upper_bound
-- std::upper_bound
 - upper_bound
 - xutility/std::copy
 - xutility/std::copy_backward
 - xutility/std::copy_n
 - xutility/std::count
-- std::count
 - count
 - xutility/std::equal
 - xutility/std::fill
@@ -266,15 +184,21 @@ f1_keywords:
 - xutility/std::move_backward
 - xutility/std::reverse
 - xutility/std::rotate
+- algorithm/std::count_if
+- algorithm/std::partition_copy
+- algorithm/std::swap
+dev_langs:
+- C++
 ms.assetid: c10b0c65-410c-4c83-abf8-8b7f61bba8d0
 caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 9916f5be3319b430104201387d6ab5b9b476e1c8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 6b3c288921fd86c4c02a8e2ffa09a060fe5fd3a1
+ms.contentlocale: es-es
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltalgorithmgt-functions"></a>Funciones &lt;algorithm&gt;
@@ -306,11 +230,11 @@ ms.lasthandoff: 02/24/2017
 |[search_n](#search_n)|[set_difference](#set_difference)|[set_intersection](#set_intersection)|  
 |[set_symmetric_difference](#set_symmetric_difference)|[set_union](#set_union)|[sort](#sort)|  
 |[sort_heap](#sort_heap)|[stable_partition](#stable_partition)|[stable_sort](#stable_sort)|  
-|[std::shuffle](#std__shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|  
+|[shuffle](#shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|  
 |[transform](#transform)|[unique](#unique)|[unique_copy](#unique_copy)|  
 |[upper_bound](#upper_bound)|  
   
-##  <a name="a-nameadjacentfinda--adjacentfind"></a><a name="adjacent_find"></a>  adjacent_find  
+##  <a name="adjacent_find"></a>  adjacent_find  
  Busca dos elementos adyacentes que son iguales o cumplen una condición especificada.  
   
 ```  
@@ -406,7 +330,7 @@ There are two adjacent elements where the second is twice the first.
  They have values of 10 & 20.  
 ```  
   
-##  <a name="a-nameallofa--allof"></a><a name="all_of"></a>  all_of  
+##  <a name="all_of"></a>  all_of  
  Devuelve `true` cuando una condición está presente en todos los elementos del intervalo especificado.  
   
 ```  
@@ -433,7 +357,7 @@ template<class InputIterator, class Predicate>
 ### <a name="remarks"></a>Comentarios  
  La función de plantilla devuelve `true` solo si, para cada `N` del intervalo `[0,Last - first)`, el predicado `comp(*(_First + N))` es `true`.  
   
-##  <a name="a-nameanyofa--anyof"></a><a name="any_of"></a>  any_of  
+##  <a name="any_of"></a>  any_of  
  Devuelve `true` cuando una condición está presente al menos una vez en el intervalo especificado de elementos.  
   
 ```  
@@ -460,9 +384,9 @@ template<class InputIterator, class UnaryPredicate>
 ### <a name="remarks"></a>Comentarios  
  La función de plantilla devuelve `true` solo si, para cada `N` del intervalo  
   
- `[0,` `last` `-` `first` `)`, el predicado `comp``(*(` `first` `+ N))` es True.  
+ `[0, last - first)`, el predicado `comp(*(first + N))` es true.  
   
-##  <a name="a-namebinarysearcha--binarysearch"></a><a name="binary_search"></a>  binary_search  
+##  <a name="binary_search"></a>  binary_search  
  Comprueba si hay un elemento en un intervalo ordenado que sea igual a un valor especificado o equivalente a este del modo especificado por un predicado binario.  
   
 ```  
@@ -506,7 +430,7 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
   
  Los tipos de valor de los iteradores hacia delante tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes.  
   
- La complejidad del algoritmo es logarítmica para los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcional a (`last` – `first`).  
+ La complejidad del algoritmo es logarítmica los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcionales al ( `last`  -  `first`).  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -590,7 +514,7 @@ int main( )
 }   
 ```  
   
-##  <a name="a-namecopya--copy"></a><a name="copy"></a>  copy  
+##  <a name="copy"></a>  copy  
  Asigna los valores de elementos de un intervalo de origen a un intervalo de destino, recorriendo en iteración la secuencia de origen de elementos y asignándoles nuevas posiciones en una dirección hacia delante.  
   
 ```  
@@ -612,7 +536,7 @@ template<class InputIterator, class OutputIterator>
  Iterador de salida que direcciona la posición del primer elemento del intervalo de destino.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Iterador de salida que dirige a la posición situada una posición después del último elemento del intervalo de destino, es decir, el iterador dirige a `result` + (`last` – `first`).  
+ Un iterador de salida que direcciona la posición que es un elemento más allá del último elemento del intervalo de destino, es decir, el iterador direcciona `result` + ( `last`  -   `first` ).  
   
 ### <a name="remarks"></a>Comentarios  
  El intervalo de origen debe ser válido y debe haber suficiente espacio en el destino para contener todos los elementos que se van a copiar.  
@@ -679,7 +603,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )  
 ```  
   
-##  <a name="a-namecopybackwarda--copybackward"></a><a name="copy_backward"></a>  copy_backward  
+##  <a name="copy_backward"></a>  copy_backward  
  Asigna los valores de elementos de un intervalo de origen a un intervalo de destino, recorriendo en iteración la secuencia de origen de elementos y asignándoles nuevas posiciones en una dirección hacia atrás.  
   
 ```  
@@ -701,7 +625,7 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
  Iterador bidireccional que direcciona la posición de un elemento más allá del último elemento del intervalo de destino.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Iterador de salida que dirige a la posición situada una posición después del último elemento del intervalo de destino, es decir, el iterador dirige a `destEnd` – (`last` – `first`).  
+ Un iterador de salida que direcciona la posición que es un elemento más allá del último elemento del intervalo de destino, es decir, el iterador direcciona `destEnd` -( `last`  -   `first` ).  
   
 ### <a name="remarks"></a>Comentarios  
  El intervalo de origen debe ser válido y debe haber suficiente espacio en el destino para contener todos los elementos que se van a copiar.  
@@ -765,7 +689,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namecopyifa--copyif"></a><a name="copy_if"></a>  copy_if  
+##  <a name="copy_if"></a>  copy_if  
  En un intervalo de elementos, copia aquellos que son `true` para la condición especificada.  
   
 ```  
@@ -800,7 +724,7 @@ template<class InputIterator, class OutputIterator, class BinaryPredicate>
   
  una vez por cada `N` del intervalo `[0, last - first)`, con los valores de `N` incrementados de forma estricta empezando por el valor inferior. Si `dest` y `first` designan regiones de almacenamiento, `dest` no debe estar en el intervalo `[` `first``,` `last``)`.  
   
-##  <a name="a-namecopyna--copyn"></a><a name="copy_n"></a>  copy_n  
+##  <a name="copy_n"></a>  copy_n  
  Copia un número especificado de elementos.  
   
 ```  
@@ -825,9 +749,9 @@ template<class InputIterator, class Size, class OutputIterator>
  Devuelve un iterador de salida de la ubicación a la que se copiaron los elementos. Es el mismo que el valor devuelto del tercer parámetro, `dest`.  
   
 ### <a name="remarks"></a>Comentarios  
- La función de plantilla evalúa `*(dest + N) = *(first + N))` una vez por cada `N` del intervalo `[0,` `count``)`, con los valores de `N` incrementados de forma estricta empezando por el valor inferior. Después, devuelve `dest` `+ N`. Si `dest` y `first` designan regiones de almacenamiento, `dest` no debe estar en el intervalo `[``first``,` `Last``)`.  
+ La función de plantilla evalúa `*(dest + N) = *(first + N))` una vez por cada `N` en el intervalo `[0, count)`, para aumentar de forma estricta los valores de `N` a partir del valor más bajo. Después, devuelve `dest + N`. Si `dest` y `first` designan regiones de almacenamiento, `dest` no debe estar en el intervalo `[first, last)`.  
   
-##  <a name="a-namecounta--count"></a><a name="count"></a>  count  
+##  <a name="count"></a>  count  
  Devuelve el número de elementos de un intervalo cuyos valores coinciden con un valor especificado.  
   
 ```  
@@ -893,7 +817,7 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.  
 ```  
   
-##  <a name="a-namecountifa--countif"></a><a name="count_if"></a>  count_if  
+##  <a name="count_if"></a>  count_if  
  Devuelve el número de elementos de un intervalo cuyos valores satisfacen una condición especificada.  
   
 ```  
@@ -963,12 +887,12 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.  
 ```  
   
-##  <a name="a-nameequala--equal"></a><a name="equal"></a>  equal  
+##  <a name="equal"></a>  equal  
  Compara dos intervalos elemento a elemento para ver si son iguales o equivalentes según lo especificado por un predicado binario.  
   
  Use `std::equal` al comparar elementos de diferentes tipos de contenedor (por ejemplo, `vector` y `list`) o al comparar diferentes tipos de elemento, o cuando sea necesario comparar subintervalos de contenedores. Por otra parte, al comparar elementos de igual tipo en el mismo tipo de contenedor, use `operator==` no miembro que se proporciona para cada contenedor.  
   
- Use las sobrecargas de dos intervalos en código C ++&14; porque las sobrecargas que toman un único iterador para el segundo intervalo no detectan las diferencias si el segundo intervalo es más largo que el primero y esto provoca un comportamiento indefinido si el segundo intervalo es más corto que el primero.  
+ Use las sobrecargas de dos intervalos en código C ++ 14 porque las sobrecargas que toman un único iterador para el segundo intervalo no detectan las diferencias si el segundo intervalo es más largo que el primero y esto provoca un comportamiento indefinido si el segundo intervalo es más corto que el primero.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -1060,7 +984,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameequalrangea--equalrange"></a><a name="equal_range"></a>  equal_range  
+##  <a name="equal_range"></a>  equal_range  
  En un intervalo ordenado, busca el subintervalo en el que todos los elementos son equivalentes a un valor determinado.  
   
 ```  
@@ -1103,7 +1027,7 @@ pair<ForwardIterator, ForwardIterator> equal_range(
   
  Los elementos del subintervalo posiblemente vacío definido por el par de iteradores devueltos por `equal_range` serán equivalentes a `val` en el sentido definido por el predicado empleado.  
   
- La complejidad del algoritmo es logarítmica para los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcional a (`last` – `first`).  
+ La complejidad del algoritmo es logarítmica los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcionales al ( `last`  -  `first`).  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -1223,7 +1147,7 @@ int main()
   
 ```  
   
-##  <a name="a-namefilla--fill"></a><a name="fill"></a>  fill  
+##  <a name="fill"></a>  fill  
  Asigna el mismo valor nuevo a cada elemento de un intervalo especificado.  
   
 ```  
@@ -1288,7 +1212,7 @@ Vector v1 = ( 0 5 10 15 20 25 30 35 40 45 )
 Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )  
 ```  
   
-##  <a name="a-namefillna--filln"></a><a name="fill_n"></a>  fill_n  
+##  <a name="fill_n"></a>  fill_n  
  Asigna un nuevo valor a un número especificado de elementos de un intervalo a partir de un elemento determinado.  
   
 ```  
@@ -1364,7 +1288,7 @@ int main()
   
 ```  
   
-##  <a name="a-namefinda--find"></a><a name="find"></a>  find  
+##  <a name="find"></a>  find  
  Busca la posición de la primera aparición de un elemento en un intervalo que tiene un valor especificado.  
   
 ```  
@@ -1393,7 +1317,7 @@ InputIterator find(
   
  Para obtener un ejemplo de código con `find()`, vea [find_if](../standard-library/algorithm-functions.md#find_if).  
   
-##  <a name="a-namefindenda--findend"></a><a name="find_end"></a>  find_end  
+##  <a name="find_end"></a>  find_end  
  Busca en un intervalo la última subsecuencia que es idéntica a una secuencia especificada o que es equivalente según lo especificado por un predicado binario.  
   
 ```  
@@ -1533,7 +1457,7 @@ There is a sequence of elements in v1 that are equivalent to those
  in v2 under the binary predicate twice and that begins at position 8.  
 ```  
   
-##  <a name="a-namefindfirstofa--findfirstof"></a><a name="find_first_of"></a>  find_first_of  
+##  <a name="find_first_of"></a>  find_first_of  
  Busca la primera aparición de cualquiera de varios valores dentro de un intervalo de destino o la primera aparición de cualquiera de varios elementos que son equivalentes según lo especificado por un predicado binario en un conjunto especificado de los elementos.  
   
 ```  
@@ -1676,7 +1600,7 @@ There is a sequence of elements in v1 that are equivalent
  and the first one begins at position 2.  
 ```  
   
-##  <a name="a-namefindifa--findif"></a><a name="find_if"></a>  find_if  
+##  <a name="find_if"></a>  find_if  
  Busca la posición de la primera aparición de un elemento en un intervalo que cumple una condición especificada.  
   
 ```  
@@ -1789,7 +1713,7 @@ int main()
   
 ```  
   
-##  <a name="a-namefindifnota--findifnot"></a><a name="find_if_not"></a>  find_if_not  
+##  <a name="find_if_not"></a>  find_if_not  
  Devuelve el primer elemento del intervalo indicado que no satisface una condición.  
   
 ```  
@@ -1818,7 +1742,7 @@ InputIterator find_if_not(
   
  Para obtener un ejemplo de código que se adapta fácilmente a `find_if_not()`, vea [find_if](../standard-library/algorithm-functions.md#find_if).  
   
-##  <a name="a-nameforeacha--foreach"></a><a name="for_each"></a>  for_each  
+##  <a name="for_each"></a>  for_each  
  Aplica un objeto de función especificado a cada elemento en un orden hacia delante dentro de un intervalo y devuelve el objeto de función.  
   
 ```  
@@ -1847,7 +1771,7 @@ Function for_each(
   
  El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- La complejidad es lineal con, a lo sumo, (`last` – `first`) comparaciones.  
+ La complejidad es lineal con, a lo sumo ( `last`  -   `first`) las comparaciones.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -1962,7 +1886,7 @@ The average of the elements of v1 is:
  Average ( v1mod2 ) = 10.  
 ```  
   
-##  <a name="a-namegeneratea--generate"></a><a name="generate"></a>  generate  
+##  <a name="generate"></a>  generate  
  Asigna los valores generados por un objeto de función a cada elemento de un intervalo.  
   
 ```  
@@ -1988,7 +1912,7 @@ void generate(
   
  El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- La complejidad es lineal, siendo necesarias exactamente (`last` – `first`) llamadas al generador.  
+ La complejidad es lineal con exactamente ( `last`  -   `first`) las llamadas a la que se requiere un generador.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -2033,7 +1957,7 @@ Vector v1 is ( 41 18467 6334 26500 19169 ).
 Deque deq1 is ( 15724 11478 29358 26962 24464 ).  
 ```  
   
-##  <a name="a-namegeneratena--generaten"></a><a name="generate_n"></a>  generate_n  
+##  <a name="generate_n"></a>  generate_n  
  Asigna los valores generados por un objeto de función a un número especificado de elementos de un intervalo y vuelve a la posición situada una más allá del último valor asignado.  
   
 ```  
@@ -2105,7 +2029,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameincludesa--includes"></a><a name="includes"></a>  includes  
+##  <a name="includes"></a>  includes  
  Prueba si un intervalo ordenado contiene todos los elementos incluidos en un segundo intervalo ordenado, donde el criterio de ordenación o equivalencia entre los elementos se pueden especificar mediante un predicado binario.  
   
 ```  
@@ -2155,7 +2079,7 @@ bool includes(
   
  Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro). Esto produce una ordenación entre los elementos no equivalentes. Más concretamente, el algoritmo comprueba si todos los elementos del primer intervalo ordenado de un predicado binario especificado tienen una ordenación equivalente a los del segundo intervalo ordenado.  
   
- La complejidad del algoritmo es lineal con, a lo sumo, 2 \* ((*last1 – first1*) – (* last2 – first2*)) – 1 comparaciones para intervalos de origen no vacíos.  
+ La complejidad del algoritmo es lineal con al menos 2 \* (( *last1 - first1*)-(* last2 - first2 *)) - 1 comparaciones para intervalos de origen no vacíos.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -2306,7 +2230,7 @@ At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is  not contained under mod_lesser in vector v3a.  
 ```  
   
-##  <a name="a-nameinplacemergea--inplacemerge"></a><a name="inplace_merge"></a>  inplace_merge  
+##  <a name="inplace_merge"></a>  inplace_merge  
  Combina los elementos de dos intervalos ordenados consecutivos en un único intervalo ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
@@ -2342,7 +2266,7 @@ void inplace_merge(
   
  Los intervalos consecutivos ordenados deben estar organizados como condición previa a la aplicación del algoritmo `inplace_merge` según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados. La operación es estable, ya que se conserva el orden relativo de los elementos de cada intervalo. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo en el intervalo combinado.  
   
- La complejidad depende de la memoria disponible, ya que el algoritmo asigna memoria a un búfer temporal. Si hay suficiente memoria disponible, el mejor escenario es lineal con (* last – first*) – 1 comparaciones; si no hay memoria auxiliar disponible, el peor escenario es *N* log *(N)*, donde *N* = (* last – first*).  
+ La complejidad depende de la memoria disponible, ya que el algoritmo asigna memoria a un búfer temporal. Si hay suficiente memoria disponible, el mejor de los casos es lineal con (* apellido - nombre*) - 1 comparaciones; si no hay memoria auxiliar está disponible, el peor de los casos es *N* registro *(N)*, donde *N* = (* apellido - nombre*).  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -2455,7 +2379,7 @@ Merged inplace with binary predicate mod_lesser specified,
  vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )  
 ```  
   
-##  <a name="a-nameisheapa--isheap"></a><a name="is_heap"></a>  is_heap  
+##  <a name="is_heap"></a>  is_heap  
  Devuelve `true` si los elementos del intervalo especificado forman un montón.  
   
 ```  
@@ -2479,7 +2403,7 @@ bool is_heap(
  Iterador de acceso aleatorio que indica el final de un intervalo.  
   
  `comp`  
- Condición que se va a probar para ordenar los elementos. Un predicado binario toma un único argumento y devuelve `true` o `false`.  
+ Condición que se va a probar para ordenar los elementos. Un predicado binario toma un solo argumento y devuelve `true` o `false`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve `true` si los elementos del intervalo especificado forman un montón y `false` si no lo hacen.  
@@ -2491,7 +2415,7 @@ bool is_heap(
   
  `is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`.  
   
-##  <a name="a-nameisheapuntila--isheapuntil"></a><a name="is_heap_until"></a>  is_heap_until  
+##  <a name="is_heap_until"></a>  is_heap_until  
  Devuelve un iterador situado en el primer elemento del intervalo [`begin`, `end`) que no satisface la condición de ordenación de montón, o `end` si el intervalo forma un montón.  
   
 ```  
@@ -2525,7 +2449,7 @@ RandomAccessIterator is_heap_until(
   
  La segunda función de plantilla se comporta igual que la primera, salvo que usa el predicado `compare` en lugar de `std::less<>` como condición de ordenación de montón.  
   
-##  <a name="a-nameispartitioneda--ispartitioned"></a><a name="is_partitioned"></a>  is_partitioned  
+##  <a name="is_partitioned"></a>  is_partitioned  
  Devuelve `true` si todos los elementos del intervalo especificado que prueban si una condición es `true` aparecen antes que cualquier elemento que prueba si es `false`.  
   
 ```  
@@ -2552,8 +2476,8 @@ bool is_partitioned(
 ### <a name="remarks"></a>Comentarios  
  La función de plantilla devuelve `true` solo si todos los elementos de `[` `first``,` `last``)` han sido divididos en particiones por `comp`; es decir, todos los elementos `X` de `[` `first``,` `last``)` para los que `comp``(X)` es True se producen antes que todos los elementos `Y` para los que `comp``(Y)` es `false`.  
   
-##  <a name="a-nameispermutationa--ispermutation"></a><a name="is_permutation"></a>  is_permutation  
- Devuelve true si ambos intervalos contienen los mismos elementos, independientemente de si los elementos están en el mismo orden. Use las sobrecargas de dos intervalos en código C ++&14; porque las sobrecargas que toman un único iterador para el segundo intervalo no detectan las diferencias si el segundo intervalo es más largo que el primero y esto provoca un comportamiento indefinido si el segundo intervalo es más corto que el primero.  
+##  <a name="is_permutation"></a>  is_permutation  
+ Devuelve true si ambos intervalos contienen los mismos elementos, independientemente de si los elementos están en el mismo orden. Use las sobrecargas de dos intervalos en código C ++ 14 porque las sobrecargas que toman un único iterador para el segundo intervalo no detectan las diferencias si el segundo intervalo es más largo que el primero y esto provoca un comportamiento indefinido si el segundo intervalo es más corto que el primero.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -2668,7 +2592,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameissorteda--issorted"></a><a name="is_sorted"></a>  is_sorted  
+##  <a name="is_sorted"></a>  is_sorted  
  Devuelve `true` si los elementos del intervalo especificado están ordenados.  
   
 ```  
@@ -2699,7 +2623,7 @@ bool is_sorted(
   
  La segunda función de plantilla devuelve `is_sorted_until``(` `first``,` `last``,` `comp``) ==` `last`. La función de predicado `comp` realiza la comparación de orden.  
   
-##  <a name="a-nameissorteduntila--issorteduntil"></a><a name="is_sorted_until"></a>  is_sorted_until  
+##  <a name="is_sorted_until"></a>  is_sorted_until  
  Devuelve un `ForwardIterator` que se establece en el último elemento que está en el criterio de ordenación de un intervalo especificado.  
   
  La segunda versión permite proporcionar una función `BinaryPredicate` que devuelve `true` cuando dos elementos determinados están en el criterio de ordenación, y `false` en caso contrario.  
@@ -2736,7 +2660,7 @@ template<class ForwardIterator, class BinaryPredicate>
   
  La segunda función de plantilla se comporta igual, salvo que sustituye `operator<(X, Y)` por `comp``(X, Y)`.  
   
-##  <a name="a-nameiterswapa--iterswap"></a><a name="iter_swap"></a>  iter_swap  
+##  <a name="iter_swap"></a>  iter_swap  
  Intercambia dos valores a los que se hace referencia mediante un par de iteradores especificados.  
   
 ```  
@@ -2890,7 +2814,7 @@ After exchanging first elements,
  & deque deq2 is: deq2 = ( 0 5 ).  
 ```  
   
-##  <a name="a-namelexicographicalcomparea--lexicographicalcompare"></a><a name="lexicographical_compare"></a>  lexicographical_compare  
+##  <a name="lexicographical_compare"></a>  lexicographical_compare  
  Compara dos secuencias elemento a elemento para determinar cuál es menor de los dos.  
   
 ```  
@@ -3034,7 +2958,7 @@ Vector v1 is lexicographically_less than L1.
 Vector v1 is not lexicographically_less than v2 under twice.  
 ```  
   
-##  <a name="a-namelowerbounda--lowerbound"></a><a name="lower_bound"></a>  lower_bound  
+##  <a name="lower_bound"></a>  lower_bound  
  Busca la posición del primer elemento en un intervalo ordenado que tiene un valor mayor o equivalente a un valor especificado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
@@ -3078,7 +3002,7 @@ ForwardIterator lower_bound(
   
  Los tipos de valor de los iteradores hacia delante tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes.  
   
- La complejidad del algoritmo es logarítmica para los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcional a (`last – first`).  
+ La complejidad del algoritmo es logarítmica para los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcional a (`last - first`).  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -3171,7 +3095,7 @@ int main( )
   
 ```  
   
-##  <a name="a-namemakeheapa--makeheap"></a><a name="make_heap"></a>  make_heap  
+##  <a name="make_heap"></a>  make_heap  
  Convierte elementos de un intervalo especificado en un montón en el que el primer elemento es el mayor y para el que se puede especificar un criterio de ordenación con un predicado binario.  
   
 ```  
@@ -3207,7 +3131,7 @@ void make_heap(
   
  Los montones son una forma ideal de implementar colas de prioridad y se usan en la implementación del adaptador de contenedor de la biblioteca estándar de C++ [priority_queue (Clase)](../standard-library/priority-queue-class.md).  
   
- La complejidad es lineal, lo que requiere 3 \* (* last – first*) comparaciones.  
+ La complejidad es lineal, que requieren 3 \* (* apellido - nombre *) las comparaciones.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -3251,7 +3175,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namemaxa--max"></a><a name="max"></a>  max  
+##  <a name="max"></a>  max  
  Compara dos objetos y devuelve el mayor de los dos, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
@@ -3464,7 +3388,7 @@ Vector v4 = max (v1,v2) is ( 0 1 2 ).
 Vector v5 = max (v1,v3) is ( 0 2 4 ).  
 ```  
   
-##  <a name="a-namemaxelementa--maxelement"></a><a name="max_element"></a>  max_element  
+##  <a name="max_element"></a>  max_element  
  Busca la primera aparición del elemento mayor en un intervalo especificado donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
@@ -3492,7 +3416,7 @@ ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryP
 ### <a name="remarks"></a>Comentarios  
  El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de cada secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- La complejidad es lineal: se necesitan (`last` – `first`) – 1 comparaciones para un intervalo no vacío.  
+ La complejidad es lineal: ( `last`  -   `first`) - 1 comparaciones son necesarias para un intervalo no vacío.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -3594,7 +3518,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namemergea--merge"></a><a name="merge"></a>  merge  
+##  <a name="merge"></a>  merge  
  Combina todos los elementos de dos intervalos de origen ordenados en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
@@ -3650,7 +3574,7 @@ OutputIterator merge(
   
  Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro). Esto produce una ordenación entre los elementos no equivalentes. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo intervalo de origen en el intervalo de destino.  
   
- La complejidad del algoritmo es lineal con, a lo sumo, (* last1 – first1*) – (* last2 – first2*) – 1 comparaciones.  
+ La complejidad del algoritmo es lineal con sumo (* last1 - first1*)-(* last2 - first2*) - 1 comparaciones.  
   
  La [clase list ](../standard-library/list-class.md) proporciona una función miembro "merge" para combinar los elementos de dos listas.  
   
@@ -3764,7 +3688,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namemina--min"></a><a name="min"></a>  min  
+##  <a name="min"></a>  min  
  Compara dos objetos y devuelve el menor de los dos, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
@@ -3975,7 +3899,7 @@ Vector v4 = min ( v1,v2 ) is ( 0 1 2 ).
 Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).  
 ```  
   
-##  <a name="a-nameminelementa--minelement"></a><a name="min_element"></a>  min_element  
+##  <a name="min_element"></a>  min_element  
  Busca la primera aparición del menor elemento en un intervalo especificado donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
@@ -4003,7 +3927,7 @@ ForwardIterator min_element(ForwardIterator first, ForwardIterator last, BinaryP
 ### <a name="remarks"></a>Comentarios  
  El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de cada secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- La complejidad es lineal: se necesitan (`last` – `first`) – 1 comparaciones para un intervalo no vacío.  
+ La complejidad es lineal: ( `last`  -  `first`) - 1 comparaciones son necesarias para un intervalo no vacío.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -4115,7 +4039,7 @@ The smallest element in v1 under the mod_lesser
  binary predicate is: 0  
 ```  
   
-##  <a name="a-nameminmaxelementa--minmaxelement"></a><a name="minmax_element"></a>  minmax_element  
+##  <a name="minmax_element"></a>  minmax_element  
  Realiza el trabajo efectuado por `min_element` y `max_element` en una llamada.  
   
 ```  
@@ -4162,7 +4086,7 @@ template<class ForwardIterator, class BinaryPredicate>
   
  Si la secuencia no está vacía, la función realiza a lo sumo `3 * (``last` `-` `first` `- 1) / 2` comparaciones.  
   
-##  <a name="a-nameminmaxa--minmax"></a><a name="minmax"></a>  minmax  
+##  <a name="minmax"></a>  minmax  
  Compara dos parámetros de entrada y los devuelve como un par, de menor a mayor.  
   
 ```  
@@ -4212,10 +4136,10 @@ template<class Type, class BinaryPredicate>
   
  La función realiza exactamente una comparación.  
   
-##  <a name="a-namemismatcha--mismatch"></a><a name="mismatch"></a>  mismatch  
+##  <a name="mismatch"></a>  mismatch  
  Compara dos intervalos elemento a elemento y localiza la primera posición en la que se produce una diferencia.  
   
- Use las sobrecargas de dos intervalos en código C ++&14; porque las sobrecargas que toman un único iterador para el segundo intervalo no detectan las diferencias si el segundo intervalo es más largo que el primero y esto provoca un comportamiento indefinido si el segundo intervalo es más corto que el primero.  
+ Use las sobrecargas de dos intervalos en código C ++ 14 porque las sobrecargas que toman un único iterador para el segundo intervalo no detectan las diferencias si el segundo intervalo es más largo que el primero y esto provoca un comportamiento indefinido si el segundo intervalo es más corto que el primero.  
   
 ```  
  template<class InputIterator1, class InputIterator2> pair<InputIterator1, InputIterator2>>   
@@ -4372,7 +4296,7 @@ Press a key
   
 ```  
   
-##  <a name="a-namealgmovea--ltalggt-move"></a><a name="alg_move"></a>  &lt;alg&gt; move  
+##  <a name="alg_move"></a>  &lt;alg&gt; move  
  Mueve los elementos asociados a un intervalo especificado.  
   
 ```  
@@ -4395,9 +4319,9 @@ template<class InputIterator, class OutputIterator>
  Iterador de salida que contendrá los elementos movidos.  
   
 ### <a name="remarks"></a>Comentarios  
- La función de plantilla evalúa `*(``dest` `+ N) =` move `(*(` `first` `+ N)))` una vez por cada `N` del intervalo `[0,` `last` `-` `first``)`, con los valores de `N` incrementados de forma estricta empezando por el valor inferior. Después, devuelve `dest` `+ N`. Si `dest` y `first` designan regiones de almacenamiento, `dest` no debe estar en el intervalo `[` `first``,` `last``)`.  
+ La función de plantilla evalúa `*(dest + N) = move(*(first + N))` una vez por cada `N` en el intervalo `[0, last - first)`, para aumentar de forma estricta los valores de `N` a partir del valor más bajo. Después, devuelve `dest + N`. Si `dest` y `first` designan regiones de almacenamiento, `dest` no debe estar en el intervalo `[first, last)`.  
   
-##  <a name="a-namemovebackwarda--movebackward"></a><a name="move_backward"></a>  move_backward  
+##  <a name="move_backward"></a>  move_backward  
  Mover los elementos de un iterador a otro. El movimiento comienza con el último elemento de un intervalo especificado y termina con el primer elemento de ese intervalo.  
   
 ```  
@@ -4420,11 +4344,11 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
  Iterador bidireccional que direcciona la posición de un elemento más allá del último elemento del intervalo de destino.  
   
 ### <a name="remarks"></a>Comentarios  
- La función de plantilla evalúa `*(``destEnd` `- N - 1) =` `move``(*(``last` `- N - 1)))` una vez por cada `N` del intervalo `[0,` `last` `-` `first``)`, con los valores de `N` incrementados de forma estricta empezando por el valor inferior. Después, devuelve `destEnd` `- (``last` `-` `first``)`. Si `destEnd` y `first` designan regiones de almacenamiento, `destEnd` no debe estar en el intervalo `[` `first``,` `last``)`.  
+ La función de plantilla evalúa `*(destEnd - N - 1) = move(*(last - N - 1))` una vez por cada `N` en el intervalo `[0, last - first)`, para aumentar de forma estricta los valores de `N` a partir del valor más bajo. Después, devuelve `destEnd - (last - first)`. Si `destEnd` y `first` designan regiones de almacenamiento, `destEnd` no debe estar en el intervalo `[first, last)`.  
   
  `move` y `move_backward` son funcionalmente equivalentes a utilizar `copy` y `copy_backward` con un iterador de movimiento.  
   
-##  <a name="a-namenextpermutationa--nextpermutation"></a><a name="next_permutation"></a>  next_permutation  
+##  <a name="next_permutation"></a>  next_permutation  
  Reorganiza los elementos de un intervalo de modo que la ordenación original se reemplaza con la mayor permutación lexicográficamente siguiente si existe, donde el sentido de siguiente se puede especificar con un predicado binario.  
   
 ```  
@@ -4454,7 +4378,7 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
   
  El predicado binario predeterminado es menor que y los elementos del intervalo deben ser comparables con menor que para asegurarse de que la permutación siguiente esté bien definida.  
   
- La complejidad es lineal con, a lo sumo, (* last – first*)/2 intercambios.  
+ La complejidad es lineal con, a lo sumo (* apellido - nombre *) / 2 intercambia.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -4595,7 +4519,7 @@ After another next_permutation of vector v1,
  v1 =   ( -3 -2 -1 1 0 2 3 ).  
 ```  
   
-##  <a name="a-namenthelementa--nthelement"></a><a name="nth_element"></a>  nth_element  
+##  <a name="nth_element"></a>  nth_element  
  Divide un intervalo de elementos, situando correctamente el elemento *enésimo* de la secuencia en el intervalo de modo que todos los elementos que hay delante sean menores o iguales que él y todos los que lo siguen en la secuencia sean mayores o iguales que él.  
   
 ```  
@@ -4627,7 +4551,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
   
  Los elementos son equivalentes, pero no necesariamente iguales, si ninguno es menor que el otro.  
   
- El promedio de una complejidad de orden es lineal con respecto a * last – first*.  
+ El promedio de una complejidad de la ordenación es lineal con respecto a * apellido - nombre *.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -4695,7 +4619,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namenoneofa--noneof"></a><a name="none_of"></a>  none_of  
+##  <a name="none_of"></a>  none_of  
  Devuelve `true` cuando una condición nunca está presente entre los elementos del intervalo especificado.  
   
 ```  
@@ -4717,9 +4641,9 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
  Devuelve `true` si no se detecta la condición al menos una vez en el intervalo indicado, y `false` si la condición sí se detecta.  
   
 ### <a name="remarks"></a>Comentarios  
- La función de plantilla devuelve `true` solo si, para cada `N` del intervalo `[0,` `last` `-` `first``)`, el predicado `comp``(*(` `first` `+ N))` siempre es `false`.  
+ Devuelve la función de plantilla `true` únicamente si para algunos `N` en el intervalo `[0, last - first)`, el predicado `comp(*(first + N))` siempre es `false`.  
   
-##  <a name="a-namepartialsorta--partialsort"></a><a name="partial_sort"></a>  partial_sort  
+##  <a name="partial_sort"></a>  partial_sort  
  Organiza un número especificado de los elementos menores de un intervalo en un orden no descendente, o de acuerdo con un criterio de ordenación especificado por un predicado binario.  
   
 ```  
@@ -4831,7 +4755,7 @@ Partially resorted (UDgreater) vector:
  v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )  
 ```  
   
-##  <a name="a-namepartialsortcopya--partialsortcopy"></a><a name="partial_sort_copy"></a>  partial_sort_copy  
+##  <a name="partial_sort_copy"></a>  partial_sort_copy  
  Copia los elementos de un intervalo de origen a un intervalo de destino donde los elementos de origen están ordenados por menor que u otro predicado binario especificado.  
   
 ```  
@@ -4952,7 +4876,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namepartitiona--partition"></a><a name="partition"></a>  partition  
+##  <a name="partition"></a>  partition  
  Clasifica los elementos de un intervalo en dos conjuntos disjuntos, donde los elementos que satisfacen un predicado unario preceden a los que no lo satisfacen.  
   
 ```  
@@ -4982,7 +4906,7 @@ template<class BidirectionalIterator, class Predicate>
   
  Los elementos *a* y *b* son equivalentes, pero no necesariamente iguales, si *Pr* (*a*, *b*) es falso y *Pr* (*b*, *a*) también, donde *Pr* es el predicado especificado por el parámetro. El algoritmo **partition** no es estable ni garantiza la conservación de la ordenación relativa de los elementos equivalentes. El algoritmo **stable_ partition** conserva esta ordenación original.  
   
- La complejidad es lineal: hay (`last` – `first`) aplicaciones de `comp` y como máximo (`last` – `first`)/2 intercambios.  
+ La complejidad es lineal: hay ( `last`  -   `first`) las aplicaciones de `comp` y a lo sumo ( `last`  -   `first`) / 2 intercambia.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -5023,7 +4947,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namepartitioncopya--partitioncopy"></a><a name="partition_copy"></a>  partition_copy  
+##  <a name="partition_copy"></a>  partition_copy  
  Copia a un destino los elementos para los que una condición es `true` y a otro destino diferente los elementos para los que la condición es `false`. Los elementos deben proceder de un intervalo especificado.  
   
 ```  
@@ -5055,9 +4979,9 @@ template<class InputIterator, class OutputIterator1, class OutputIterator2, clas
  Condición que se va a comprobar. La proporciona y la define un objeto de función de predicado definido por el usuario. Un predicado toma un único argumento y devuelve `true` o `false`.  
   
 ### <a name="remarks"></a>Comentarios  
- La función de plantilla copia cada elemento `X` de `[` `first``,` `last``)` en `*``dest1``++` si `_Pred``(X)` es True, o en `*``dest2``++ if not`. Devuelve `pair<OutputIterator1, OutputIterator2>(``dest1``,` `dest2``)`.  
+ La función de plantilla copia cada elemento `X` en `[first,last)` a `*dest1++` si `_Pred(X)` es true, o a `*dest2++` si no es así. Devuelve `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.  
   
-##  <a name="a-namepartitionpointa--partitionpoint"></a><a name="partition_point"></a>  partition_point  
+##  <a name="partition_point"></a>  partition_point  
  Devuelve el primer elemento del intervalo especificado que no satisface la condición. Los elementos se ordenan de forma que aquellos que satisfacen la condición están antes que los que no lo hacen.  
   
 ```  
@@ -5083,9 +5007,9 @@ template<class ForwardIterator, class Predicate>
  Devuelve un `ForwardIterator` que hace referencia al primer elemento que no cumple la condición comprobada por `comp`, o `last` si no encuentra ninguno.  
   
 ### <a name="remarks"></a>Comentarios  
- La función de plantilla encuentra el primer iterador `it` de `[` `first``,``last``)` para el que `comp(*it)` es `false`. La secuencia debe ordenarse por `comp`.  
+ La función de plantilla no encuentra el primer iterador `it` en `[first, last)` que `comp(*it)` es `false`. La secuencia debe ordenarse por `comp`.  
   
-##  <a name="a-namepopheapa--popheap"></a><a name="pop_heap"></a>  pop_heap  
+##  <a name="pop_heap"></a>  pop_heap  
  Quita el elemento mayor del principio de un montón hasta la penúltima posición del intervalo y después forma un nuevo montón con los elementos restantes.  
   
 ```  
@@ -5122,7 +5046,7 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
   
  El intervalo que excluye al elemento recién agregado al final debe ser un montón.  
   
- La complejidad es logarítmica, y necesita, a lo sumo, (* last – first*) comparaciones.  
+ La complejidad es logarítmica, a lo sumo necesidad de registro (* apellido - nombre *) las comparaciones.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -5186,7 +5110,7 @@ int main( )  {
 }  
 ```  
   
-##  <a name="a-nameprevpermutationa--prevpermutation"></a><a name="prev_permutation"></a>  prev_permutation  
+##  <a name="prev_permutation"></a>  prev_permutation  
  Reorganiza los elementos de un intervalo de modo que la ordenación original se sustituya por la mayor permutación lexicográficamente anterior, si existe, donde el sentido de anterior se puede especificar con un predicado binario.  
   
 ```  
@@ -5221,7 +5145,7 @@ template<class BidirectionalIterator, class BinaryPredicate>
   
  El predicado binario predeterminado es menor que y los elementos del intervalo deben ser comparables con menor que para asegurarse de que la permutación anterior esté bien definida.  
   
- La complejidad es lineal con, a lo sumo, (`last` – `first`)/2 intercambios.  
+ La complejidad es lineal, como máximo ( `last`  -   `first`) / 2 intercambia.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -5357,7 +5281,7 @@ After another prev_permutation of vector v1,
  v1 =   ( -3 -2 0 2 -1 1 3 ).  
 ```  
   
-##  <a name="a-namepushheapa--pushheap"></a><a name="push_heap"></a>  push_heap  
+##  <a name="push_heap"></a>  push_heap  
  Agrega un elemento que está al final de un intervalo a un montón existente que se compone de los elementos anteriores del intervalo.  
   
 ```  
@@ -5394,7 +5318,7 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
   
  El intervalo que excluye al elemento recién agregado al final debe ser un montón.  
   
- La complejidad es logarítmica, y necesita, a lo sumo, (* last – first*) comparaciones.  
+ La complejidad es logarítmica, que requiere a lo sumo registro ( *apellido - nombre*) las comparaciones.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -5463,10 +5387,10 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namerandomshufflea--randomshuffle"></a><a name="random_shuffle"></a>  random_shuffle  
- La función std::random_shuffle() está en desuso. Se ha reemplazado por [std::shuffle()](../standard-library/algorithm-functions.md#std__shuffle). Para ver un código de ejemplo y más información, vea [\<random>](../standard-library/random.md) y la entrada de Stackoverflow sobre [los motivos por los que los métodos de std::random_shuffle están en desuso en C++14](http://go.microsoft.com/fwlink/?LinkId=397954).  
+##  <a name="random_shuffle"></a>  random_shuffle  
+ La función std::random_shuffle() está en desuso, reemplazado por [std:: shuffle](../standard-library/algorithm-functions.md#shuffle). Para obtener un ejemplo de código y obtener más información, vea [ \<aleatorio >](../standard-library/random.md) y la entrada de Stackoverflow sobre [¿por qué son los métodos de std:: random_shuffle está en desuso en C ++ 14?](http://go.microsoft.com/fwlink/?LinkId=397954).  
   
-##  <a name="a-nameremovea--remove"></a><a name="remove"></a>  remove  
+##  <a name="remove"></a>  remove  
  Elimina un valor especificado de un intervalo determinado sin alterar el orden de los elementos restantes y devolver el final de un nuevo intervalo libre del valor especificado.  
   
 ```  
@@ -5495,7 +5419,7 @@ template<class ForwardIterator, class Type>
   
  El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.  
   
- La complejidad es lineal, hay (`last` – `first`) comparaciones para igualdad.  
+ La complejidad es lineal; hay ( `last`  -   `first`) comparaciones para igualdad.  
   
  La [clase list](../standard-library/list-class.md) tiene una versión de función miembro más eficaz de **remove**, que también vuelve a vincular los punteros.  
   
@@ -5545,7 +5469,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-nameremovecopya--removecopy"></a><a name="remove_copy"></a>  remove_copy  
+##  <a name="remove_copy"></a>  remove_copy  
  Copia elementos de un intervalo de origen a un intervalo de destino, excepto que los elementos de un valor especificado no se copian, sin alterar el orden de los elementos restantes y devolver el final de un nuevo intervalo de destino.  
   
 ```  
@@ -5579,7 +5503,7 @@ template<class InputIterator, class OutputIterator, class Type>
   
  El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.  
   
- La complejidad es lineal; hay (`last` – `first`) comparaciones para igualdad y, a lo sumo, (`last` – `first`) asignaciones.  
+ La complejidad es lineal; hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -5624,7 +5548,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-nameremovecopyifa--removecopyif"></a><a name="remove_copy_if"></a>  remove_copy_if  
+##  <a name="remove_copy_if"></a>  remove_copy_if  
  Copia elementos de un intervalo de origen a un intervalo de destino, excepto que los elementos que satisfacen un predicado no se copian, sin alterar el orden de los elementos restantes y devolver el final de un nuevo intervalo de destino.  
   
 ```  
@@ -5658,7 +5582,7 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
   
  El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.  
   
- La complejidad es lineal; hay (`last` – `first`) comparaciones para igualdad y, a lo sumo, (`last` – `first`) asignaciones.  
+ La complejidad es lineal: hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones.  
   
  Para más información sobre el comportamiento de estas funciones, vea [Iteradores activados](../standard-library/checked-iterators.md).  
   
@@ -5712,7 +5636,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-nameremoveifa--removeif"></a><a name="remove_if"></a>  remove_if  
+##  <a name="remove_if"></a>  remove_if  
  Elimina los elementos que cumplen un predicado de un intervalo determinado sin alterar el orden de los elementos restantes y devolver el final de un nuevo intervalo libre del valor especificado.  
   
 ```  
@@ -5741,7 +5665,7 @@ template<class ForwardIterator, class Predicate>
   
  El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.  
   
- La complejidad es lineal, hay (`last` – `first`) comparaciones para igualdad.  
+ La complejidad es lineal: hay ( `last`  -   `first`) comparaciones para igualdad.  
   
  List tiene una versión de función miembro más eficaz de remove, que vuelve a vincular los punteros.  
   
@@ -5795,7 +5719,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplacea--replace"></a><a name="replace"></a>  replace  
+##  <a name="replace"></a>  replace  
  Examina cada elemento de un intervalo y lo reemplaza si coincide con un valor especificado.  
   
 ```  
@@ -5823,7 +5747,7 @@ void replace(ForwardIterator first, ForwardIterator last, const Type& _OldVal, c
   
  El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.  
   
- La complejidad es lineal, hay (`last` – `first`) comparaciones para igualdad y, a lo sumo, (`last` – `first`) asignaciones de nuevos valores.  
+ La complejidad es lineal; hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones de nuevos valores.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -5863,7 +5787,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplacecopya--replacecopy"></a><a name="replace_copy"></a>  replace_copy  
+##  <a name="replace_copy"></a>  replace_copy  
  Examina cada elemento de un intervalo de origen y lo reemplaza si coincide con un valor especificado y copia el resultado a un nuevo intervalo de destino.  
   
 ```  
@@ -5903,7 +5827,7 @@ int main( ) {
   
  El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.  
   
- La complejidad es lineal, hay (`last` – `first`) comparaciones para igualdad y, a lo sumo, (`last` – `first`) asignaciones de nuevos valores.  
+ La complejidad es lineal: hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones de nuevos valores.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -5962,7 +5886,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplacecopyifa--replacecopyif"></a><a name="replace_copy_if"></a>  replace_copy_if  
+##  <a name="replace_copy_if"></a>  replace_copy_if  
  Examina cada elemento de un intervalo de origen y lo reemplaza si satisface un predicado especificado y copia el resultado a un nuevo intervalo de destino.  
   
 ```  
@@ -6002,7 +5926,7 @@ OutputIterator replace_copy_if(
   
  El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.  
   
- La complejidad es lineal, hay (`last` – `first`) comparaciones para igualdad y, a lo sumo, (`last` – `first`) asignaciones de nuevos valores.  
+ La complejidad es lineal; hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones de nuevos valores.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -6068,7 +5992,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplaceifa--replaceif"></a><a name="replace_if"></a>  replace_if  
+##  <a name="replace_if"></a>  replace_if  
  Examina cada elemento de un intervalo y lo reemplaza si satisface un predicado especificado.  
   
 ```  
@@ -6099,7 +6023,7 @@ void replace_if(ForwardIterator first, ForwardIterator last, Predicate pred, con
   
  El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.  
   
- La complejidad es lineal, hay (`last` – `first`) comparaciones para igualdad y, a lo sumo, (`last` – `first`) asignaciones de nuevos valores.  
+ La complejidad es lineal: hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones de nuevos valores.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -6145,7 +6069,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereversea--reverse"></a><a name="reverse"></a>  reverse  
+##  <a name="reverse"></a>  reverse  
  Invierte el orden de los elementos dentro de un intervalo.  
   
 ```  
@@ -6206,7 +6130,7 @@ The modified vector v1 with values reversed is:
  ( 9 8 7 6 5 4 3 2 1 0 ).  
 ```  
   
-##  <a name="a-namereversecopya--reversecopy"></a><a name="reverse_copy"></a>  reverse_copy  
+##  <a name="reverse_copy"></a>  reverse_copy  
  Invierte el orden de los elementos dentro de un intervalo de origen mientras los copia a un intervalo de destino  
   
 ```  
@@ -6274,7 +6198,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namerotatea--rotate"></a><a name="rotate"></a>  rotate  
+##  <a name="rotate"></a>  rotate  
  Intercambia los elementos de dos intervalos adyacentes.  
   
 ```  
@@ -6296,7 +6220,7 @@ template<class ForwardIterator>
 ### <a name="remarks"></a>Comentarios  
  Los intervalos a los que se hace referencia deben ser válidos; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- La complejidad es lineal con, a lo sumo, (`last` – `first`) intercambios.  
+ La complejidad es lineal con, a lo sumo ( `last`  -   `first`) intercambia.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -6373,7 +6297,7 @@ After the rotation of a single deque element to the back,
  d1 is   ( 0 1 2 3 4 5 ).  
 ```  
   
-##  <a name="a-namerotatecopya--rotatecopy"></a><a name="rotate_copy"></a>  rotate_copy  
+##  <a name="rotate_copy"></a>  rotate_copy  
  Intercambia los elementos de dos intervalos adyacentes dentro de un intervalo de origen y copia el resultado a un intervalo de destino.  
   
 ```  
@@ -6405,7 +6329,7 @@ OutputIterator rotate_copy(
 ### <a name="remarks"></a>Comentarios  
  Los intervalos a los que se hace referencia deben ser válidos; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- La complejidad es lineal con, a lo sumo, (`last` – `first`) intercambios.  
+ La complejidad es lineal con, a lo sumo ( `last`  -   `first`) intercambia.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -6466,7 +6390,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namesearcha--search"></a><a name="search"></a>  search  
+##  <a name="search"></a>  search  
  Busca la primera aparición de una secuencia dentro de un intervalo de destino cuyos elementos son iguales que los de una secuencia determinada de elementos o cuyos elementos son equivalentes según lo especificado por un predicado binario a los elementos de la secuencia especificada.  
   
 ```  
@@ -6611,7 +6535,7 @@ There is a sequence of elements in v1 that are equivalent
  and the first one begins at position 2.  
 ```  
   
-##  <a name="a-namesearchna--searchn"></a><a name="search_n"></a>  search_n  
+##  <a name="search_n"></a>  search_n  
  Busca la primera subsecuencia de un intervalo en la que un número especificado de elementos tienen un valor determinado o una relación con ese valor según lo especificado por un predicado binario.  
   
 ```  
@@ -6741,7 +6665,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
  predicate one_half in v1 and the first one begins at position 15.  
 ```  
   
-##  <a name="a-namesetdifferencea--setdifference"></a><a name="set_difference"></a>  set_difference  
+##  <a name="set_difference"></a>  set_difference  
  Agrupa todos los elementos que pertenecen a un intervalo de origen ordenado, pero no a un segundo intervalo de origen ordenado, en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
@@ -6797,7 +6721,7 @@ OutputIterator set_difference(
   
  Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro). Esto produce una ordenación entre los elementos no equivalentes. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo intervalo de origen en el intervalo de destino. Si los intervalos de origen contienen duplicados de un elemento, de forma que hay más en el primer intervalo de origen que en el segundo, el intervalo de destino contendrá el número por el que las apariciones de esos elementos en el primer intervalo de origen supera a las apariciones de esos elementos en el segundo intervalo de origen.  
   
- La complejidad del algoritmo es lineal con, a lo sumo, 2 \* ((*last1 – first1*) – (*last2 – first2*)) – 1 comparaciones para intervalos de origen no vacíos.  
+ La complejidad del algoritmo es lineal con al menos 2 \* (( *last1 - first1*)-( *last2 - first2*)) - 1 comparaciones para intervalos de origen no vacíos.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -6918,7 +6842,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namesetintersectiona--setintersection"></a><a name="set_intersection"></a>  set_intersection  
+##  <a name="set_intersection"></a>  set_intersection  
  Agrupa todos los elementos que pertenecen a ambos intervalos de origen ordenados en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
@@ -6974,7 +6898,7 @@ OutputIterator set_intersection(
   
  Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo intervalo de origen en el intervalo de destino. Si los intervalos de origen contienen duplicados de un elemento, el intervalo de destino contendrá el número máximo de los elementos que aparecen en ambos intervalos de origen.  
   
- La complejidad del algoritmo es lineal con, a lo sumo, 2 \* ((*last1 – first1*) + (*last2 – first2*)) – 1 comparaciones para intervalos de origen no vacíos.  
+ La complejidad del algoritmo es lineal con al menos 2 \* (( *last1 - first1*) + ( *last2 - first2*)) - 1 comparaciones para intervalos de origen no vacíos.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -7089,7 +7013,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namesetsymmetricdifferencea--setsymmetricdifference"></a><a name="set_symmetric_difference"></a>  set_symmetric_difference  
+##  <a name="set_symmetric_difference"></a>  set_symmetric_difference  
  Agrupa todos los elementos que pertenecen a uno, pero no a ambos, de los intervalos de origen ordenados en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
@@ -7145,7 +7069,7 @@ OutputIterator set_symmetric_difference(
   
  Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo intervalo de origen en el intervalo de destino. Si los intervalos de origen contienen duplicados de un elemento, el intervalo de destino contendrá el valor absoluto del número por el que las apariciones de esos elementos en uno de los intervalos de origen supera a las apariciones de esos elementos en el segundo intervalo de origen.  
   
- La complejidad del algoritmo es lineal con, a lo sumo, 2 \* ((*last1 – first1*) – (*last2 – first2*)) – 1 comparaciones para intervalos de origen no vacíos.  
+ La complejidad del algoritmo es lineal con al menos 2 \* ((*last1 - first1*)-(*last2 - first2*)) - 1 comparaciones para intervalos de origen no vacíos.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -7266,7 +7190,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namesetuniona--setunion"></a><a name="set_union"></a>  set_union  
+##  <a name="set_union"></a>  set_union  
  Agrupa todos los elementos que pertenecen al menos a uno de los dos intervalos de origen ordenados en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
@@ -7321,7 +7245,7 @@ OutputIterator set_union(
   
  Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro). Esto produce una ordenación entre los elementos no equivalentes. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo intervalo de origen en el intervalo de destino. Si los intervalos de origen contienen duplicados de un elemento, el intervalo de destino contendrá el número máximo de los elementos que aparecen en ambos intervalos de origen.  
   
- La complejidad del algoritmo es lineal con, a lo sumo, 2 \* ((*last1 – first1*) – (*last2 – first2*)) – 1 comparaciones.  
+ La complejidad del algoritmo es lineal con al menos 2 \* (( *last1 - first1*)-( *last2 - first2*)) - 1 comparaciones.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -7442,7 +7366,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namestdshufflea--stdshuffle"></a><a name="std__shuffle"></a>  std::shuffle  
+##  <a name="shuffle"></a>  std::shuffle  
  Ordena (reorganiza) elementos para un intervalo determinado utilizando un generador de números aleatorio.  
   
 ```  
@@ -7465,7 +7389,7 @@ void shuffle(RandomAccessIterator first,
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información y un ejemplo de código que emplea `shuffle()`, vea [\<random>](../standard-library/random.md).  
   
-##  <a name="a-namesorta--sort"></a><a name="sort"></a>  sort  
+##  <a name="sort"></a>  sort  
  Organiza los elementos de un intervalo especificado en un orden no descendente o de acuerdo con un criterio de ordenación especificado por un predicado binario.  
   
 ```  
@@ -7497,7 +7421,7 @@ template<class RandomAccessIterator, class Predicate>
   
  Los elementos son equivalentes, pero no necesariamente iguales, si ninguno es menor que el otro. El algoritmo `sort` no es estable ni garantiza la conservación de la ordenación relativa de los elementos equivalentes. El algoritmo `stable_sort` conserva esta ordenación original.  
   
- El promedio de una complejidad de orden es *O*(*N* log *N*), donde *N* =  *last – first*.  
+ El promedio de una complejidad de la ordenación es *O*( *N* registro *N*), donde *N* =  *apellido - nombre*.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -7567,7 +7491,7 @@ Resorted (greater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )  
 ```  
   
-##  <a name="a-namesortheapa--sortheap"></a><a name="sort_heap"></a>  sort_heap  
+##  <a name="sort_heap"></a>  sort_heap  
  Convierte un montón en un intervalo ordenado.  
   
 ```  
@@ -7608,7 +7532,7 @@ template<class RandomAccessIterator, class Predicate>
   
  El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- La complejidad es, a lo sumo, *N* log *N*, donde *N* = (*last – first*).  
+ La complejidad es a lo sumo *N* registro *N*, donde *N* = ( *apellido - nombre*).  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -7660,7 +7584,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namestablepartitiona--stablepartition"></a><a name="stable_partition"></a>  stable_partition  
+##  <a name="stable_partition"></a>  stable_partition  
  Clasifica los elementos de un intervalo en dos conjuntos disjuntos, donde los elementos que satisfacen un predicado unario preceden a los que no lo satisfacen, conservando el orden relativo de los elementos equivalentes.  
   
 ```  
@@ -7735,7 +7659,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namestablesorta--stablesort"></a><a name="stable_sort"></a>  stable_sort  
+##  <a name="stable_sort"></a>  stable_sort  
  Organiza los elementos de un intervalo especificado en un orden no descendente o de acuerdo con un criterio de ordenación especificado por un predicado binario y conserva el orden relativo de los elementos equivalentes.  
   
 ```  
@@ -7765,7 +7689,7 @@ void stable_sort(
   
  Los elementos son equivalentes, pero no necesariamente iguales, si ninguno es menor que el otro. El algoritmo **sort** es estable y garantiza la conservación de la ordenación relativa de los elementos equivalentes.  
   
- La complejidad en tiempo de ejecución de `stable_sort` depende de la cantidad de memoria disponible, pero en el mejor caso (con suficiente memoria) es *O*(*N* log *N*) y *O*( *N* (log *N*)2) en el peor, donde *N* =  *last – First*. Normalmente, el algoritmo **sort** es considerablemente más rápido que `stable_sort`.  
+ La complejidad del tiempo de ejecución de `stable_sort` depende de la cantidad de memoria disponible, pero es el mejor de los casos (tiene suficiente memoria) *O*( *N* registro *N*) y es el peor de los casos *O*( *N* (registro *N* ) 2), donde *N* =  *apellido - nombre.* Normalmente, el algoritmo **sort** es considerablemente más rápido que `stable_sort`.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -7834,7 +7758,7 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )  
 ```  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  El primer reemplazo intercambia los valores de dos objetos. El segundo reemplazo intercambia los valores entre dos matrices de objetos.  
   
 ```  
@@ -7915,7 +7839,7 @@ Vector v1 is ( 5 5 5 5 5 ).
 Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).  
 ```  
   
-##  <a name="a-nameswaprangesa--swapranges"></a><a name="swap_ranges"></a>  swap_ranges  
+##  <a name="swap_ranges"></a>  swap_ranges  
  Intercambia los elementos de un intervalo con los elementos de otro intervalo del mismo tamaño.  
   
 ```  
@@ -7943,7 +7867,7 @@ ForwardIterator2 swap_ranges(
 ### <a name="remarks"></a>Comentarios  
  Los intervalos a los que se hace referencia deben ser válidos; todos los punteros deben poder desreferenciarse y, dentro de cada secuencia, se debe poder acceder a la última posición desde la primera mediante incrementos. El segundo intervalo tiene que ser tan grande como el primero.  
   
- La complejidad es lineal con, a lo sumo, `last1` – `first1` intercambios. Si se intercambian elementos de contenedores del mismo tipo, se debería usar la función miembro `swap` de ese contenedor, porque esta normalmente tiene complejidad constante.  
+ La complejidad es lineal con `last1`  -   `first1` intercambios realiza. Si se intercambian elementos de contenedores del mismo tipo, se debería usar la función miembro `swap` de ese contenedor, porque esta normalmente tiene complejidad constante.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -8006,7 +7930,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).  
 ```  
   
-##  <a name="a-nametransforma--transform"></a><a name="transform"></a>  transform  
+##  <a name="transform"></a>  transform  
  Aplica un objeto de función especificado a cada elemento de un intervalo de origen o a un par de elementos de dos intervalos de origen y copia los valores devueltos del objeto de función a un intervalo de destino.  
   
 ```  
@@ -8049,9 +7973,9 @@ OutputIterator transform(
 ### <a name="remarks"></a>Comentarios  
  Los intervalos a los que se hace referencia deben ser válidos; todos los punteros deben poder desreferenciarse y, dentro de cada secuencia, se debe poder acceder a la última posición desde la primera mediante incrementos. El intervalo de destino debe ser lo suficientemente grande como para contener el intervalo de origen transformado.  
   
- Si `result` se establece en igual a `first1` en la primera versión del algoritmo *, * los intervalos de origen y de destino serán iguales y la secuencia se modificará en el sitio. Pero es posible que `result` no se dirija a una posición dentro del intervalo [`first1` +1, `last1`).  
+ Si `result` está establecida en `first1` en la primera versión del algoritmo, a continuación, los intervalos de origen y de destino será el mismo y la secuencia que se va a modificar en su lugar. Pero la `result` no se puede resolver una posición dentro del intervalo [`first1` + 1, `last1`).  
   
- La complejidad es lineal con, a lo sumo, (`last1` – `first1`) comparaciones.  
+ La complejidad es lineal con, a lo sumo (`last1` -  `first1`) las comparaciones.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -8140,7 +8064,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
  v3 = ( 320 180 80 20 0 20 80 ).  
 ```  
   
-##  <a name="a-nameuniquea--unique"></a><a name="unique"></a>  unique  
+##  <a name="unique"></a>  unique  
  Quita los elementos duplicados adyacentes entre sí en un intervalo especificado.  
   
 ```  
@@ -8177,7 +8101,7 @@ template<class ForwardIterator, class Predicate>
   
  El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos. El algoritmo **unique** no modifica el número de elementos de la secuencia y los elementos más allá del final de la secuencia modificada se pueden desreferenciar pero no especificar.  
   
- La complejidad es lineal, lo que requiere (`last` – `first`) – 1 comparaciones.  
+ La complejidad es lineal, que requieren ( `last`  -   `first`) - 1 comparaciones.  
   
  List proporciona una función miembro "unique" más eficaz que puede funcionar mejor.  
   
@@ -8270,7 +8194,7 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).  
 ```  
   
-##  <a name="a-nameuniquecopya--uniquecopy"></a><a name="unique_copy"></a>  unique_copy  
+##  <a name="unique_copy"></a>  unique_copy  
  Copia los elementos de un intervalo de origen a un intervalo de destino salvo los elementos duplicados que son adyacentes entre sí.  
   
 ```  
@@ -8310,7 +8234,7 @@ OutputIterator unique_copy( InputIterator first,
   
  Los intervalos a los que se hace referencia deben ser válidos: todos los punteros deben poder desreferenciarse y, dentro de una secuencia, se debe poder tener acceso a la última posición desde la primera con incrementos.  
   
- La complejidad es lineal, lo que requiere (`last` – `first`) comparaciones.  
+ La complejidad es lineal, que requieren ( `last`  -   `first`) las comparaciones.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -8384,7 +8308,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-nameupperbounda--upperbound"></a><a name="upper_bound"></a>  upper_bound  
+##  <a name="upper_bound"></a>  upper_bound  
  Busca la posición del primer elemento de un intervalo ordenado que tiene un valor mayor que un valor especificado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  

@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 40a42d694d6f0101573cb9b29e5a7571c4863bb0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3522cd33098484194fec8158b26577b9e01dfe62
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
@@ -71,7 +72,7 @@ void _aligned_free_dbg(
  Puntero al bloque de memoria que se devolvió a las funciones `_aligned_malloc` o `_aligned_offset_malloc`.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `_aligned_free_dbg` es una versión de depuración de la función [_aligned_free](../../c-runtime-library/reference/aligned-free.md). Si no se define [_DEBUG](../../c-runtime-library/debug.md), cada llamada a `_aligned_free_dbg` se reduce a una llamada a _`aligned_free`. \_`aligned_free` y `_aligned_free_dbg` liberan un bloque de memoria del montón base, pero `_aligned_free_dbg` incluye una característica de depuración: la posibilidad de mantener los bloques liberados en la lista vinculada del montón para simular condiciones de memoria insuficiente.  
+ La función `_aligned_free_dbg` es una versión de depuración de la función [_aligned_free](../../c-runtime-library/reference/aligned-free.md). Si no se define [_DEBUG](../../c-runtime-library/debug.md), cada llamada a `_aligned_free_dbg` se reduce a una llamada a `_aligned_free`. Ambos `_aligned_free` y `_aligned_free_dbg` liberar un bloque de memoria del montón base, pero `_aligned_free_dbg` admite una característica de depuración: bloquea la posibilidad de mantener liberados en la lista del montón vinculada para simular condiciones de memoria insuficiente.  
   
  `_aligned_free_dbg` realiza una comprobación de validez en todos los archivos especificados y las ubicaciones de bloques antes de realizar la operación de liberación. No se espera que la aplicación proporcione esta información. Cuando se libera un bloque de memoria, el administrador del montón de depuración comprueba automáticamente la integridad de los búferes situados a cada lado de la parte del usuario y emite un informe de error en caso de sobrescritura. Si se establece el campo de bits `_CRTDBG_DELAY_FREE_MEM_DF` de la marca [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md), el bloque liberado se rellena con el valor 0xDD, se asigna el tipo de bloque `_FREE_BLOCK` y se mantiene en la lista vinculada de bloques de memoria del montón.  
   
@@ -86,9 +87,6 @@ void _aligned_free_dbg(
 |`_aligned_free_dbg`|\<crtdbg.h>|  
   
  Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Rutinas de depuración](../../c-runtime-library/debug-routines.md)

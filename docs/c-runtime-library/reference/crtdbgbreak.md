@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 105b86a3c06c17bd9d24ff6cedb213abf06dadcd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: fd68d614e0c676d63bc8b5227eab95c3eae76258
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="crtdbgbreak"></a>_CrtDbgBreak
@@ -71,9 +72,6 @@ void _CrtDbgBreak( void );
  La función `_CrtDbgBreak` establece un punto de interrupción de depuración en la línea de código específica donde reside la función. Esta función solo se usa en modo de depuración y depende de que `_DEBUG` se haya definido anteriormente.  
   
  Para obtener más información sobre cómo usar otras funciones con capacidad de enlace en tiempo de ejecución y cómo escribir funciones de enlace definidas por el cliente, consulte [Escribir sus propias funciones de enlace de depuración](/visualstudio/debugger/debug-hook-function-writing).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, consulte [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="requirements"></a>Requisitos  
   

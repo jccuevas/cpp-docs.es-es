@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 828ca38d754d40729f8d09cb22526fb872605024
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 99ab02233eed70ab92e1aabcf567d9cfc244c101
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph, _ismbbgraph_l
@@ -90,7 +91,7 @@ int _ismbbgraph_l (
 ( _PUNCT | _UPPER | _LOWER | _DIGIT ) || _ismbbkprint  
 ```  
   
- es distinto de cero para `c` o 0 si no lo es. `_ismbbgraph` usa la configuración regional actual para cualquier comportamiento que dependa de la configuración regional. `_ismbbgraph_l` es exactamente igual, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ es distinto de cero para `c`o 0 si no lo es. `_ismbbgraph` usa la configuración regional actual para cualquier comportamiento que dependa de la configuración regional. `_ismbbgraph_l` es exactamente igual, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -103,9 +104,6 @@ int _ismbbgraph_l (
   
 ## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de bytes](../../c-runtime-library/byte-classification.md)   

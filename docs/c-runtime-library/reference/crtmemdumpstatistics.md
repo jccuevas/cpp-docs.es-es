@@ -49,10 +49,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3d5065e62248a89de8dbe0ae38f354e0ead40ba6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 524c875f5cf25eb41d09e0f5dc99c32efcae8661
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="crtmemdumpstatistics"></a>_CrtMemDumpStatistics
@@ -71,9 +72,9 @@ void _CrtMemDumpStatistics(
  Puntero al estado del montón que se va a volcar.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `_CrtMemDumpStatistics` vuelca la información del encabezado de depuración de un estado del montón especificado en un formato legible para el usuario. La aplicación puede usar las estadísticas del volcado para realizar el seguimiento de las asignaciones y detectar problemas de memoria. El estado de la memoria puede contener un estado de montón concreto o la diferencia entre dos estados. Cuando no se define [_DEBUG](../../c-runtime-library/debug.md), las llamadas a `_CrtMemDumpStatistics` se quitan durante el preprocesamiento.  
+ La función `_CrtMemDumpStatistics` vuelca la información del encabezado de depuración de un estado del montón especificado en un formato legible para el usuario. La aplicación puede usar las estadísticas del volcado para realizar el seguimiento de las asignaciones y detectar problemas de memoria. El estado de la memoria puede contener un estado de montón concreto o la diferencia entre dos estados. Cuando no se define [_DEBUG](../../c-runtime-library/debug.md) , las llamadas a `_CrtMemDumpStatistics` se quitan durante el preprocesamiento.  
   
- El parámetro `state` debe ser un puntero a una estructura `_CrtMemState` que [_CrtMemCheckpoint](../../c-runtime-library/reference/crtmemcheckpoint.md) ha rellenado o que [_CrtMemDifference](../../c-runtime-library/reference/crtmemdifference.md) ha devuelto antes de que se llame a `_CrtMemDumpStatistics`. Si `state` es `NULL`, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `errno` se establece en `EINVAL` y no se realiza ninguna acción. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ La función `state` debe ser un puntero a una estructura de `_CrtMemState` que ha sido rellenada por [_CrtMemCheckpoint](../../c-runtime-library/reference/crtmemcheckpoint.md) o devuelta por [_CrtMemDifference](../../c-runtime-library/reference/crtmemdifference.md) antes de llamar a `_CrtMemDumpStatistics` . Si `state` es `NULL`, se invoca el controlador de parámetros no válidos, como se describe en [Parameter Validation](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `errno` se establece en `EINVAL` y no se realiza ninguna acción. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
  Para obtener más información sobre las funciones de estado del montón y la estructura `_CrtMemState`, consulte [Funciones que indican el estado del montón](/visualstudio/debugger/crt-debug-heap-details). Para obtener más información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
@@ -86,9 +87,6 @@ void _CrtMemDumpStatistics(
  Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
  **Bibliotecas:** solo versiones de depuración de [Características de la biblioteca CRT](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- <xref:System.Diagnostics.PerformanceCounter?displayProperty=fullName>  
   
 ## <a name="see-also"></a>Vea también  
  [Rutinas de depuración](../../c-runtime-library/debug-routines.md)
