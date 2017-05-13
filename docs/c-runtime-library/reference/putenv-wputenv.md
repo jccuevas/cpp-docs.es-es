@@ -61,10 +61,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9fc67bbf6c900a79825fe62b6882c4459c348d61
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d91f7b780c8f17fbe1e12a195b6a7cf2eaad3d2f
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
@@ -89,7 +90,7 @@ int _wputenv(
  Definición de cadena de entorno.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve 0 si se ejecuta correctamente o – 1 si se produce un error.  
+ Devuelve 0 si es correcto o -1 si se produce un error.  
   
 ## <a name="remarks"></a>Comentarios  
  La función `_putenv` agrega nuevas variables de entorno o modifica los valores de las existentes. Las variables de entorno definen el entorno en el que se ejecuta un proceso (por ejemplo, la ruta de búsqueda predeterminada para vincular bibliotecas a un programa). `_wputenv` es una versión con caracteres anchos de `_putenv`; el argumento `envstring` para `_wputenv` es una cadena de caracteres anchos.  
@@ -106,7 +107,7 @@ int _wputenv(
   
  No cambie una entrada de entorno directamente: en lugar de ello, use `_putenv` o `_wputenv` para cambiarla. Especialmente, la liberación directa de elementos de la matriz global `_environ[]` podría dar lugar a que se obtenga acceso a memoria no válida.  
   
- `getenv` y `_putenv` usan la variable global `_environ` para obtener acceso a la tabla de entorno. `_wgetenv` y `_wputenv` usan `_wenviron`. `_putenv` y `_wputenv` podrían cambiar el valor de `_environ` y `_wenviron`, e invalidar así el argumento `_envp` para `main` y el argumento `wenvp` para `wmain`. Por ello, es más seguro usar `_environ` o `_wenviron` para obtener acceso a la información del entorno. Para obtener más información sobre la relación de `_putenv` y `_wputenv` con las variables globales, vea [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).  
+ `getenv` y `_putenv` usan la variable global `_environ` para obtener acceso a la tabla de entorno. `_wgetenv` y `_wputenv` usan `_wenviron`. `_putenv`y `_wputenv` podrían cambiar el valor de `_environ` y `_wenviron`, e invalidar así el `_envp` argumento pasado a `main` y `_wenvp` argumento pasado a `wmain`. Por ello, es más seguro usar `_environ` o `_wenviron` para obtener acceso a la información del entorno. Para obtener más información sobre la relación de `_putenv` y `_wputenv` con las variables globales, vea [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).  
   
 > [!NOTE]
 >  Los grupos de funciones de `_putenv` y `_getenv` no son seguros para subprocesos. `_getenv` podría devolver un puntero de cadena mientras `_putenv` modifica la cadena, y se generarían errores aleatorios. Asegúrese de que las llamadas a estas funciones están sincronizadas.  
@@ -122,9 +123,6 @@ int _wputenv(
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de cómo usar `_putenv`, vea [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)   

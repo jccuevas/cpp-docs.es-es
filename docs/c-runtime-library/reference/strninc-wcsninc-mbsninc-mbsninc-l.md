@@ -69,10 +69,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a019117da70bc81bcf2ffd79c750f8862bc50c0b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8390fc524393f221f32dd3a4b10080c88055a227
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
@@ -125,7 +126,7 @@ unsigned char *_mbsninc(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsninc`|`_strninc`|`_mbsninc`|`_wcsninc`|  
   
- `_strninc` y `_wcsninc` son versiones de cadena de carácter de un solo byte y de cadena de caracteres anchos de `_mbsninc`. `_wcsninc` y `_strninc` se proporcionan solo para esta asignación y no deben usarse de otra manera. Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).  
+ `_strninc`y `_wcsninc` son versiones de cadena de caracteres anchos de y de cadena de caracteres de byte único `_mbsninc`. `_wcsninc` y `_strninc` se proporcionan solo para esta asignación y no deben usarse de otra manera. Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).  
   
  `_mbsninc_l` es exactamente igual, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
   
@@ -138,10 +139,7 @@ unsigned char *_mbsninc(
 |`_strninc`|\<tchar.h>|  
 |`_wcsninc`|\<tchar.h>|  
   
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)   

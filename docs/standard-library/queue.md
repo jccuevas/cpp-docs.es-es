@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 2e3bdbd8bfe0b288d9f6dec5251ffeff2e3c5f81
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8c2f3d928d305baa4fce49eb55ee8c6a65cd794b
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
@@ -55,12 +56,12 @@ Define las clases de plantilla priority_queue y queue, así como varias plantill
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/queue-operators.md#operator_neq)|Comprueba si el objeto queue en el lado izquierdo del operador no es igual al objeto queue del lado derecho.|  
-|[operator<](../standard-library/queue-operators.md#operator_lt_)|Comprueba si el objeto queue en el lado izquierdo del operador es inferior al objeto queue del lado derecho.|  
-|[operator\<=](../standard-library/queue-operators.md#operator_lt__eq)|Comprueba si el objeto queue en el lado izquierdo del operador es inferior a o igual que el objeto queue del lado derecho.|  
-|[operator==](../standard-library/queue-operators.md#operator_eq_eq)|Comprueba si el objeto queue en el lado izquierdo del operador es igual al objeto queue del lado derecho.|  
-|[operator>](../standard-library/queue-operators.md#operator_gt_)|Comprueba si el objeto queue en el lado izquierdo del operador es mayor que el objeto queue del lado derecho.|  
-|[operator>=](../standard-library/queue-operators.md#operator_gt__eq)|Comprueba si el objeto queue en el lado izquierdo del operador es mayor que o igual al objeto queue del lado derecho.|  
+|[operator!=](../standard-library/queue-operators.md#op_neq)|Comprueba si el objeto queue en el lado izquierdo del operador no es igual al objeto queue del lado derecho.|  
+|[operator<](../standard-library/queue-operators.md#op_lt)|Comprueba si el objeto queue en el lado izquierdo del operador es inferior al objeto queue del lado derecho.|  
+|[operator\<=](../standard-library/queue-operators.md#op_gt_eq)|Comprueba si el objeto queue en el lado izquierdo del operador es inferior a o igual que el objeto queue del lado derecho.|  
+|[operator==](../standard-library/queue-operators.md#op_eq_eq)|Comprueba si el objeto queue en el lado izquierdo del operador es igual al objeto queue del lado derecho.|  
+|[operator>](../standard-library/queue-operators.md#op_gt)|Comprueba si el objeto queue en el lado izquierdo del operador es mayor que el objeto queue del lado derecho.|  
+|[operator>=](../standard-library/queue-operators.md#op_gt_eq)|Comprueba si el objeto queue en el lado izquierdo del operador es mayor que o igual al objeto queue del lado derecho.|  
   
 ### <a name="classes"></a>Clases  
   

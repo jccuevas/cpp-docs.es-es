@@ -10,12 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - reference_wrapper
-- std::reference_wrapper
 - functional/std::reference_wrapper
 - type_traits/std::reference_wrapper
 - xrefwrap/std::reference_wrapper
 - type_traits/std::reference_wrapper::get
 - type_traits/std::reference_wrapper::operator()
+- functional/std::reference_wrapper::result_type
+- functional/std::reference_wrapper::type
+- functional/std::reference_wrapper::get
+- functional/std::reference_wrapper::operator()
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -40,10 +43,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f0e7b22e4fbd6f54d390adfe70f7bfb99e4bc5df
-ms.openlocfilehash: 1b6968f2300e5214575cc5385c136d6f27bab10a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 57485779c1813a0537829a940047d688907a82a7
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper (Clase)
@@ -76,39 +80,39 @@ Un `reference_wrapper<Ty>` es un contenedor que se puede asignar de copia o que 
   
 El tipo `Ty` debe ser un tipo de objeto o un tipo de función, o una aserción estática produce un error en tiempo de compilación.  
   
-Las funciones auxiliares [std::ref](functional-functions.md#ref_function) y [std::cref](functional-functions.md#cref_function) pueden usarse para crear objetos `reference_wrapper`.  
+Las funciones auxiliares [std::ref](functional-functions.md#ref) y [std::cref](functional-functions.md#cref) pueden usarse para crear objetos `reference_wrapper`.  
   
 ### <a name="constructors"></a>Constructores  
   
 |||  
 |-|-|  
-|[reference_wrapper::reference_wrapper](#reference_wrapper)|Construye un objeto `reference_wrapper`.|  
+|[reference_wrapper](#reference_wrapper)|Construye un objeto `reference_wrapper`.|  
   
 ### <a name="typedefs"></a>Definiciones de tipo  
   
 |||  
 |-|-|  
-|[reference_wrapper::result_type](#result_type)|Tipo de resultado débil de la referencia ajustada.|  
-|[reference_wrapper::type](#type)|Tipo de la referencia ajustada.|  
+|[result_type](#result_type)|Tipo de resultado débil de la referencia ajustada.|  
+|[tipo de](#type)|Tipo de la referencia ajustada.|  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |||  
 |-|-|  
-|[reference_wrapper::get](#get)|Obtiene la referencia ajustada.|  
+|[get](#get)|Obtiene la referencia ajustada.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[reference_wrapper::operator Ty&amp;](#operator_ty_amp_)|Obtiene un puntero a la referencia ajustada.|  
-|[reference_wrapper::operator()](#operator_call)|Llama a la referencia ajustada.|  
+|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Obtiene un puntero a la referencia ajustada.|  
+|[reference_wrapper::operator()](#op_call)|Llama a la referencia ajustada.|  
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** \<functional>  
   
  **Espacio de nombres:** std  
   
-##  <a name="a-namegeta--referencewrapperget"></a><a name="get"></a> reference_wrapper::get  
+##  <a name="get"></a> reference_wrapper::get  
  Obtiene la referencia ajustada.  
   
 ```  
@@ -145,7 +149,7 @@ rwi = 1
 i = -1  
 ```  
   
-##  <a name="a-nameoperatortyampa--referencewrapperoperator-tyamp"></a><a name="operator_ty_amp_"></a> reference_wrapper::operator Ty&amp;  
+##  <a name="op_ty_amp"></a> reference_wrapper::operator Ty&amp;  
  Obtiene la referencia ajustada.  
   
 ```  
@@ -179,7 +183,7 @@ i = 1
 (int)rwi = 1  
 ```  
   
-##  <a name="a-nameoperatorcalla--referencewrapperoperator"></a><a name="operator_call"></a> reference_wrapper::operator()  
+##  <a name="op_call"></a> reference_wrapper::operator()  
  Llama a la referencia ajustada.  
   
 ```  
@@ -222,7 +226,7 @@ int main() {
 rwi(3) = -3  
 ```  
   
-##  <a name="a-namereferencewrappera--referencewrapperreferencewrapper"></a><a name="reference_wrapper"></a> reference_wrapper::reference_wrapper  
+##  <a name="reference_wrapper"></a> reference_wrapper::reference_wrapper  
  Construye un objeto `reference_wrapper`.  
   
 ```  
@@ -270,7 +274,7 @@ rwi = 1
 i = -1  
 ```  
   
-##  <a name="a-nameresulttypea--referencewrapperresulttype"></a><a name="result_type"></a> reference_wrapper::result_type  
+##  <a name="result_type"></a> reference_wrapper::result_type  
  Tipo de resultado débil de la referencia ajustada.  
   
 ```  
@@ -307,7 +311,7 @@ int main() {
 val = -3  
 ```  
   
-##  <a name="a-nametypea--referencewrappertype"></a><a name="type"></a> reference_wrapper::type  
+##  <a name="type"></a> reference_wrapper::type  
  Tipo de la referencia ajustada.  
   
 ```  
@@ -348,7 +352,7 @@ rwi = 1
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [cref (Función)](../standard-library/functional-functions.md#cref_function)   
- [ref (Función)](../standard-library/functional-functions.md#ref_function)
+ [cref](../standard-library/functional-functions.md#cref)   
+ [ref](../standard-library/functional-functions.md#ref)
 
 

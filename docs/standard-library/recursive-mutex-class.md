@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - mutex/std::recursive_mutex
+- mutex/std::recursive_mutex::recursive_mutex
+- mutex/std::recursive_mutex::lock
+- mutex/std::recursive_mutex::try_lock
+- mutex/std::recursive_mutex::unlock
 dev_langs:
 - C++
 ms.assetid: eb5ffd1b-7e78-4559-8391-bb220ead42fc
@@ -31,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c82c8302be5d3e01de90adda2049a022100b8443
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0e5fccf4d1c1019d8922ae0676d7f5fe8e8dfd2a
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="recursivemutex-class"></a>recursive_mutex (Clase)
@@ -52,23 +57,23 @@ class recursive_mutex;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[recursive_mutex (Constructor)](#recursive_mutex__recursive_mutex_constructor)|Construye un objeto `recursive_mutex`.|  
-|[~recursive_mutex (Destructor)](#recursive_mutex___dtorrecursive_mutex_destructor)|Libera todos los recursos usados por el objeto `recursive_mutex`.|  
+|[recursive_mutex](#recursive_mutex)|Construye un objeto `recursive_mutex`.|  
+|[~recursive_mutex (Destructor)](#dtorrecursive_mutex_destructor)|Libera todos los recursos usados por el objeto `recursive_mutex`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[lock](#recursive_mutex__lock_method)|Bloquea el subproceso de llamada hasta que este obtiene la propiedad de la exclusión mutua.|  
-|[try_lock](#recursive_mutex__try_lock_method)|Intenta obtener la propiedad de la exclusión mutua sin bloquearla.|  
-|[unlock](#recursive_mutex__unlock_method)|Libera la propiedad de la exclusión mutua.|  
+|[lock](#lock)|Bloquea el subproceso de llamada hasta que este obtiene la propiedad de la exclusión mutua.|  
+|[try_lock](#try_lock)|Intenta obtener la propiedad de la exclusión mutua sin bloquearla.|  
+|[unlock](#unlock)|Libera la propiedad de la exclusión mutua.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** mutex  
+ **Encabezado:** \<mutex >  
   
  **Espacio de nombres:** std  
   
-##  <a name="a-namerecursivemutexlockmethoda--lock"></a><a name="recursive_mutex__lock_method"></a> lock  
+##  <a name="lock"></a> lock  
  Bloquea el subproceso que realiza la llamada hasta que este obtiene la propiedad `mutex`.  
   
 ```cpp  
@@ -78,14 +83,14 @@ void lock();
 ### <a name="remarks"></a>Comentarios  
  Si el subproceso que realiza la llamada ya posee `mutex`, el método se devuelve inmediatamente, y el bloqueo anterior permanece vigente.  
   
-##  <a name="a-namerecursivemutexrecursivemutexconstructora--recursivemutex"></a><a name="recursive_mutex__recursive_mutex_constructor"></a> recursive_mutex  
+##  <a name="recursive_mutex"></a> recursive_mutex  
  Crea un objeto `recursive_mutex` que no está bloqueado.  
   
 ```cpp  
 recursive_mutex();
 ```  
   
-##  <a name="a-namerecursivemutexdtorrecursivemutexdestructora--recursivemutex"></a><a name="recursive_mutex___dtorrecursive_mutex_destructor"></a> ~recursive_mutex  
+##  <a name="dtorrecursive_mutex_destructor"></a> ~recursive_mutex  
  Libera todos los recursos usados por el objeto.  
   
 ```cpp  
@@ -95,7 +100,7 @@ recursive_mutex();
 ### <a name="remarks"></a>Comentarios  
  Si el objeto está bloqueado cuando se ejecuta el destructor, el comportamiento es indefinido.  
   
-##  <a name="a-namerecursivemutextrylockmethoda--trylock"></a><a name="recursive_mutex__try_lock_method"></a> try_lock  
+##  <a name="try_lock"></a> try_lock  
  Intenta obtener la propiedad de `mutex` sin bloquearlo.  
   
 ```cpp  
@@ -108,7 +113,7 @@ bool try_lock() noexcept;
 ### <a name="remarks"></a>Comentarios  
  Si el subproceso que realiza la llamada ya posee `mutex`, la función devuelve `true` inmediatamente, y el bloqueo anterior permanece vigente.  
   
-##  <a name="a-namerecursivemutexunlockmethoda--unlock"></a><a name="recursive_mutex__unlock_method"></a> unlock  
+##  <a name="unlock"></a> unlock  
  Libera la propiedad de la exclusión mutua.  
   
 ```cpp  
@@ -116,7 +121,7 @@ void unlock();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Este método libera la propiedad de `mutex` solo después de que se llame tantas veces como se ha llamado a [lock](#recursive_mutex__lock_method) y [try_lock](#recursive_mutex__try_lock_method) correctamente en el objeto `recursive_mutex`.  
+ Este método libera la propiedad de `mutex` solo después de que se llame tantas veces como se ha llamado a [lock](#lock) y [try_lock](#try_lock) correctamente en el objeto `recursive_mutex`.  
   
  Si el subproceso que realiza la llamada no posee `mutex`, el comportamiento es indefinido.  
   
