@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: dcac506c06aac3c29ba2251af4281a713eec7491
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e4c3cbb6d11758ff15909c6062b7430f6679f6de
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
@@ -126,22 +127,22 @@ Define funciones de la biblioteca estándar de C++ que ayudan a construir *objet
   
 |||  
 |-|-|  
-|[bind](../standard-library/functional-functions.md#bind_function)|Enlaza argumentos a un objeto al que se puede llamar.|  
-|[bind1st](../standard-library/functional-functions.md#bind1st_function)|Función de plantilla auxiliar que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el primer argumento de la función binaria a un valor especificado.|  
-|[bind2nd](../standard-library/functional-functions.md#bind2nd_function)|Función de plantilla auxiliar que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el segundo argumento de la función binaria a un valor especificado.|  
-|[bit_and](../standard-library/functional-functions.md#bit_and_function)|Devuelve el AND lógico bit a bit (operador binario&) de los dos parámetros.|  
-|[bit_not](../standard-library/functional-functions.md#bit_not_function)|Devuelve el complemento lógico bit a bit (operador~) del parámetro.|  
-|[bit_or](../standard-library/functional-functions.md#bit_or_function)|Devuelve el OR lógico bit a bit (operador &#124;) de los dos parámetros.|  
-|[bit_xor](../standard-library/functional-functions.md#bit_xor_function)|Devuelve el XOR lógico bit a bit (operador ^) de los dos parámetros.|  
-|[cref](../standard-library/functional-functions.md#cref_function)|Construye un `reference_wrapper` const a partir de un argumento.|  
-|[mem_fn](../standard-library/functional-functions.md#mem_fn_function)|Genera un contenedor de llamadas simple.|  
-|[mem_fun](../standard-library/functional-functions.md#mem_fun_function)|Funciones de plantilla auxiliar utilizadas para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de puntero.|  
-|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref_function)|Función de plantilla auxiliar utilizada para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de referencia.|  
-|[not1](../standard-library/functional-functions.md#not1_function)|Devuelve el complemento de un predicado unario.|  
-|[not2](../standard-library/functional-functions.md#not2_function)|Devuelve el complemento de un predicado binario.|  
-|[ptr_fun](../standard-library/functional-functions.md#ptr_fun_function)|Función de plantilla auxiliar utilizada para convertir punteros a funciones unarias y binarias, respectivamente, en funciones unarias y binarias adaptables.|  
-|[ref](../standard-library/functional-functions.md#ref_function)|Construye un `reference_wrapper` a partir de un argumento.|  
-|[swap](../standard-library/functional-functions.md#swap_function)|Intercambia dos objetos `function`.|  
+|[bind](../standard-library/functional-functions.md#bind)|Enlaza argumentos a un objeto al que se puede llamar.|  
+|[bind1st](../standard-library/functional-functions.md#bind1st)|Función de plantilla auxiliar que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el primer argumento de la función binaria a un valor especificado.|  
+|[bind2nd](../standard-library/functional-functions.md#bind2nd)|Función de plantilla auxiliar que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el segundo argumento de la función binaria a un valor especificado.|  
+|[bit_and](../standard-library/functional-functions.md#bit_and)|Devuelve el AND lógico bit a bit (operador binario&) de los dos parámetros.|  
+|[bit_not](../standard-library/functional-functions.md#bit_not)|Devuelve el complemento lógico bit a bit (operador~) del parámetro.|  
+|[bit_or](../standard-library/functional-functions.md#bit_or)|Devuelve el OR lógico bit a bit (operador &#124;) de los dos parámetros.|  
+|[bit_xor](../standard-library/functional-functions.md#bit_xor)|Devuelve el XOR lógico bit a bit (operador ^) de los dos parámetros.|  
+|[cref](../standard-library/functional-functions.md#cref)|Construye un `reference_wrapper` const a partir de un argumento.|  
+|[mem_fn](../standard-library/functional-functions.md#mem_fn)|Genera un contenedor de llamadas simple.|  
+|[mem_fun](../standard-library/functional-functions.md#mem_fun)|Funciones de plantilla auxiliar utilizadas para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de puntero.|  
+|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Función de plantilla auxiliar utilizada para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de referencia.|  
+|[not1](../standard-library/functional-functions.md#not1)|Devuelve el complemento de un predicado unario.|  
+|[not2](../standard-library/functional-functions.md#not2)|Devuelve el complemento de un predicado binario.|  
+|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|Función de plantilla auxiliar utilizada para convertir punteros a funciones unarias y binarias, respectivamente, en funciones unarias y binarias adaptables.|  
+|[ref](../standard-library/functional-functions.md#ref)|Construye un `reference_wrapper` a partir de un argumento.|  
+|[swap](../standard-library/functional-functions.md#swap)|Intercambia dos objetos `function`.|  
   
 ### <a name="structs"></a>Estructuras  
   
@@ -175,8 +176,8 @@ Define funciones de la biblioteca estándar de C++ que ayudan a construir *objet
   
 |||  
 |-|-|  
-|[operator==](../standard-library/functional-operators.md#operator_eq_eq)|No permite la comparación de igualdad de objetos a los que se puede llamar.|  
-|[operator!=](../standard-library/functional-operators.md#operator_neq)|No permite la comparación de desigualdad de objetos a los que se puede llamar.|  
+|[operator==](../standard-library/functional-operators.md#op_eq_eq)|No permite la comparación de igualdad de objetos a los que se puede llamar.|  
+|[operator!=](../standard-library/functional-operators.md#op_neq)|No permite la comparación de desigualdad de objetos a los que se puede llamar.|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   

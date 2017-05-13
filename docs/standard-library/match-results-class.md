@@ -34,10 +34,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 14e87ce57d9637e7e0bce5e4a6c8ec6cbffa524a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 25f0926af84b1f9075489d48fda3fc52a5998c6a
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="matchresults-class"></a>match_results (Clase)
@@ -96,7 +97,7 @@ class match_results {
   
  **Espacio de nombres:** std  
   
-##  <a name="match_results__allocator_type"></a>  match_results::allocator_type  
+##  <a name="allocator_type"></a>  match_results::allocator_type  
  El tipo de un asignador para administrar el almacenamiento.  
   
 ```  
@@ -215,7 +216,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__begin"></a>  match_results::begin  
+##  <a name="begin"></a>  match_results::begin  
  Indica el principio de la secuencia de subcoincidencia.  
   
 ```  
@@ -334,7 +335,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__char_type"></a>  match_results::char_type  
+##  <a name="char_type"></a>  match_results::char_type  
  El tipo de un elemento.  
   
 ```  
@@ -453,7 +454,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__const_iterator"></a>  match_results::const_iterator  
+##  <a name="const_iterator"></a>  match_results::const_iterator  
  El tipo de iterador constante para subcoincidencias.  
   
 ```  
@@ -572,7 +573,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__const_reference"></a>  match_results::const_reference  
+##  <a name="const_reference"></a>  match_results::const_reference  
  Tipo de una referencia const a un elemento.  
   
 ```  
@@ -691,7 +692,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__difference_type"></a>  match_results::difference_type  
+##  <a name="difference_type"></a>  match_results::difference_type  
  El tipo de diferencia de un iterador.  
   
 ```  
@@ -810,7 +811,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__empty"></a>  match_results::empty  
+##  <a name="empty"></a>  match_results::empty  
  Comprueba que no haya subcoincidencias.  
   
 ```  
@@ -929,7 +930,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__end"></a>  match_results::end  
+##  <a name="end"></a>  match_results::end  
  Designa el final de la secuencia de subcoincidencia.  
   
 ```  
@@ -1048,7 +1049,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__format"></a>  match_results::format  
+##  <a name="format"></a>  match_results::format  
  Subcoincidencias de formato.  
   
 ```  
@@ -1187,7 +1188,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__get_allocator"></a>  match_results::get_allocator  
+##  <a name="get_allocator"></a>  match_results::get_allocator  
  Devuelve el asignador almacenado.  
   
 ```  
@@ -1306,7 +1307,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__iterator"></a>  match_results::iterator  
+##  <a name="iterator"></a>  match_results::iterator  
  El tipo de iterador para subcoincidencias.  
   
 ```  
@@ -1425,7 +1426,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__length"></a>  match_results::length  
+##  <a name="length"></a>  match_results::length  
  Devuelve la longitud de una subcoincidencia.  
   
 ```  
@@ -1548,7 +1549,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__match_results"></a>  match_results::match_results  
+##  <a name="match_results"></a>  match_results::match_results  
  Construye el objeto.  
   
 ```  
@@ -1676,7 +1677,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__max_size"></a>  match_results::max_size  
+##  <a name="max_size"></a>  match_results::max_size  
  Obtiene el número máximo de subcoincidencias.  
   
 ```  
@@ -1795,7 +1796,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__operator_eq"></a>  match_results::operator=  
+##  <a name="op_eq"></a>  match_results::operator=  
  Copiar un objeto match_results.  
   
 ```  
@@ -1918,7 +1919,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__operator_at"></a>  match_results::operator[]  
+##  <a name="op_at"></a>  match_results::operator[]  
  Permite acceder a un subobjeto.  
   
 ```  
@@ -2041,7 +2042,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__position"></a>  match_results::position  
+##  <a name="position"></a>  match_results::position  
  Permite obtener el desplazamiento inicial de un subgrupo.  
   
 ```  
@@ -2164,7 +2165,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__prefix"></a>  match_results::prefix  
+##  <a name="prefix"></a>  match_results::prefix  
  Obtiene la secuencia antes de la primera subcoincidencia.  
   
 ```  
@@ -2283,7 +2284,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__reference"></a>  match_results::reference  
+##  <a name="reference"></a>  match_results::reference  
  El tipo de una referencia a un elemento.  
   
 ```  
@@ -2402,7 +2403,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__size"></a>  match_results::size  
+##  <a name="size"></a>  match_results::size  
  Número de recuentos de subcoincidencias.  
   
 ```  
@@ -2521,7 +2522,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__size_type"></a>  match_results::size_type  
+##  <a name="size_type"></a>  match_results::size_type  
  El tipo de recuento de subcoincidencias.  
   
 ```  
@@ -2640,7 +2641,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__str"></a>  match_results::str  
+##  <a name="str"></a>  match_results::str  
  Devuelve una subcoincidencia.  
   
 ```  
@@ -2763,7 +2764,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__string_type"></a>  match_results::string_type  
+##  <a name="string_type"></a>  match_results::string_type  
  El tipo de una cadena.  
   
 ```  
@@ -2882,7 +2883,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__suffix"></a>  match_results::suffix  
+##  <a name="suffix"></a>  match_results::suffix  
  Obtiene la secuencia después de la última subcoincidencia.  
   
 ```  
@@ -3001,7 +3002,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__swap"></a>  match_results::swap  
+##  <a name="swap"></a>  match_results::swap  
  Intercambia dos objetos match_results.  
   
 ```  
@@ -3124,7 +3125,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__value_type"></a>  match_results::value_type  
+##  <a name="value_type"></a>  match_results::value_type  
  El tipo de una subcoincidencia.  
   
 ```  

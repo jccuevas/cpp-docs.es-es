@@ -1,55 +1,72 @@
 ---
-title: "_lseek, _lseeki64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_lseeki64"
-  - "_lseek"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_lseeki64"
-  - "_lseek"
-  - "lseeki64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_lseek (función)"
-  - "_lseeki64 (función)"
-  - "punteros a archivos [C++], mover"
-  - "lseek (función)"
-  - "lseeki64 (función)"
-  - "buscar punteros a archivos"
+title: _lseek, _lseeki64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _lseeki64
+- _lseek
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _lseeki64
+- _lseek
+- lseeki64
+dev_langs:
+- C++
+helpviewer_keywords:
+- lseek function
+- _lseek function
+- _lseeki64 function
+- lseeki64 function
+- file pointers [C++], moving
+- seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _lseek, _lseeki64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e8e40f4995f17314d70990a84c23c676d31a45d5
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
-Mueve un puntero de archivo en la ubicación especificada.  
+---
+# <a name="lseek-lseeki64"></a>_lseek, _lseeki64
+Mueve un puntero de archivo a la ubicación especificada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -65,48 +82,48 @@ __int64 _lseeki64(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `fd`  
  Descriptor de archivo que hace referencia a un archivo abierto.  
   
  *offset*  
- Número de bytes *de origen*.  
+ Número de bytes de *origin*.  
   
- *origen*  
+ *origin*  
  Posición inicial.  
   
-## Valor devuelto  
- `_lseek` devuelve la diferencia, en bytes, de la nueva posición desde el principio del archivo.  `_lseeki64` devuelve el desplazamiento en un entero de 64 bits.  La función devuelve – 1L para indicar un error.  Si se pasa un parámetro no válido, como un archivo dañado descriptor, o el valor del *origen* es no válidos o la posición especificada por *el desplazamiento* es anterior al principio del archivo, el controlador no válido de parámetro se invoca, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, este `errno` establecido funciones a `EBADF` y retorno \-1L.  En los dispositivos incapaces de búsqueda \(como terminales y impresoras\), el valor devuelto es indefinido.  
+## <a name="return-value"></a>Valor devuelto  
+ `_lseek` devuelve el desplazamiento (en bytes) de la nueva posición desde el principio del archivo. `_lseeki64` devuelve el desplazamiento de un entero de 64 bits. La función devuelve-1 L para indicar un error. Si se pasa un parámetro no válido (como un descriptor de archivo incorrecto), el valor de *origin* no es válido o la posición especificada por *offset* se encuentra antes del inicio del archivo, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EBADF`y devuelven -1L. En los dispositivos que no pueden realizar búsquedas (como los terminales y las impresoras), el valor devuelto es indefinido.  
   
- Para obtener más información sobre estos y otros códigos error, vea [\_doserrno, errno, \_sys\_errlist y \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Para obtener más información sobre estos y otros códigos error, vea [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentarios  
- La función de `_lseek` mueve el puntero de archivo asociado a `fd` a una nueva ubicación que está a bytes *de desplazamiento* *de origen*.  La operación siguiente en el archivo en la nueva ubicación.  El argumento *de origen* debe ser una de las siguientes constantes, que se definen en Stdio.h.  
+## <a name="remarks"></a>Comentarios  
+ La función `_lseek` mueve el puntero de archivo asociado con `fd` a una ubicación nueva que se encuentra a *offset* bytes de distancia de *origin*. Se produce la siguiente operación en el archivo en la nueva ubicación. El argumento *origin* debe ser una de las siguientes constantes, que se definen en Stdio.h.  
   
  `SEEK_SET`  
- Principio del archivo.  
+ Inicio del archivo.  
   
  `SEEK_CUR`  
  Posición actual del puntero de archivo.  
   
  `SEEK_END`  
- Final de archivo.  
+ Final del archivo.  
   
- Puede utilizar `_lseek` para colocar el puntero de nuevo en cualquier parte de un archivo o más allá del final del archivo.  
+ Puede usar `_lseek` para volver a colocar el puntero en cualquier lugar de un archivo o más allá del final del archivo.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`_lseek`|\<io.h\>|  
-|`_lseeki64`|\<io.h\>|  
+|-------------|---------------------|  
+|`_lseek`|\<io.h>|  
+|`_lseeki64`|\<io.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Bibliotecas  
+## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_lseek.c  
@@ -158,7 +175,7 @@ int main( void )
 }  
 ```  
   
-## Entrada: crt\_lseek.c\_input  
+## <a name="input-crtlseekcinput"></a>Entrada: crt_lseek.c_input  
   
 ```  
 Line one.  
@@ -168,7 +185,7 @@ Line four.
 Line five.  
 ```  
   
-## Resultados  
+## <a name="output"></a>Salida  
   
 ```  
 Position for beginning of file seek = 0  
@@ -176,7 +193,7 @@ Position for current position seek = 10
 Position for end of file seek = 57  
 ```  
   
-## Vea también  
- [E\/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)   
- [fseek, \_fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
- [\_tell, \_telli64](../../c-runtime-library/reference/tell-telli64.md)
+## <a name="see-also"></a>Vea también  
+ [E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)   
+ [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
+ [_tell, _telli64](../../c-runtime-library/reference/tell-telli64.md)

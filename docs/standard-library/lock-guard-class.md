@@ -1,59 +1,110 @@
 ---
-title: "lock_guard (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "mutex/std::lock_guard"
-dev_langs: 
-  - "C++"
+title: Clase lock_guard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- mutex/std::lock_guard
+- mutex/std::lock_guard::lock_guard
+dev_langs:
+- C++
 ms.assetid: 57121f0d-9c50-481c-b971-54e64df864e0
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# lock_guard (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 047c7ab9db009bceafe47bb0ae53b876adad81b5
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
-Representa una plantilla que se pueden crear instancias para crear un objeto cuyo destructor unblock `mutex`.  
+---
+# <a name="lockguard-class"></a>lock_guard (Clase)
+Representa una plantilla de la que se pueden crear instancias para crear un objeto cuyo destructor desbloquea una `mutex`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+template <class Mutex>
+class lock_guard;
 ```  
-template<class Mutex>  
-class lock_guard;  
-```  
   
-## Comentarios  
- El argumento `Mutex` de plantilla debe llamar a *un tipo mutex*.  
+## <a name="remarks"></a>Comentarios  
+ El argumento de plantilla `Mutex` debe nombrar un *tipo de exclusión mutua*.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Typedefs públicas  
+### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|`lock_guard::mutex_type`|Sinónimo del argumento `Mutex`de la plantilla.|  
+|`lock_guard::mutex_type`|Sinónimo del argumento de plantilla `Mutex`.|  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[lock\_guard::lock\_guard \(Constructor\)](../Topic/lock_guard::lock_guard%20Constructor.md)|Construye un objeto `lock_guard`.|  
-|[lock\_guard::~lock\_guard \(Destructor\)](../Topic/lock_guard::~lock_guard%20Destructor.md)|Desbloquea `mutex` que se pasó al constructor.|  
+|[lock_guard](#lock_guard)|Construye un objeto `lock_guard`.|  
+|[Destructor lock_guard::~lock_guard](#dtorlock_guard_destructor)|Desbloquea el objeto `mutex` que se pasó al constructor.|  
   
-## Requisitos  
- **Encabezado:** mutex  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<mutex >  
   
  **Espacio de nombres:** std  
   
-## Vea también  
+##  <a name="lock_guard"></a>  Constructor lock_guard::lock_guard  
+ Construye un objeto `lock_guard`.  
+  
+```cpp  
+explicit lock_guard(mutex_type& Mtx);
+
+lock_guard(mutex_type& Mtx, adopt_lock_t);
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `Mtx`  
+ Objeto de *tipo de exclusión mutua*.  
+  
+### <a name="remarks"></a>Comentarios  
+ El primer constructor crea un objeto de tipo `lock_guard` y bloquea `Mtx`. Si `Mtx` no es una exclusión mutua recursiva, debe estar desbloqueado cuando se llama a este constructor.  
+  
+ El segundo constructor no bloquea `Mtx`. `Mtx` debe estar bloqueado cuando se llama a este constructor. El constructor no inicia excepciones.  
+  
+##  <a name="dtorlock_guard_destructor"></a>  Destructor lock_guard::~lock_guard  
+ Desbloquea el objeto `mutex` que se pasó al constructor.  
+  
+```
+~lock_guard() noexcept;
+```  
+  
+### <a name="remarks"></a>Comentarios  
+ Si `mutex` no existe cuando se ejecuta el destructor, el comportamiento es indefinido.  
+  
+## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
- [\<mutex\>](../standard-library/mutex.md)
+ [\<mutex>](../standard-library/mutex.md)
+
+
+
+

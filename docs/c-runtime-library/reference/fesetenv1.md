@@ -1,5 +1,5 @@
 ---
-title: fesetenv1 | Microsoft Docs
+title: fesetenv | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40e20a2c6a3f3c22b9206ce078146b44bb841f68
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 96453fb182aa3c14bec8a296899cfcd15d39222c
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="fesetenv"></a>fesetenv
@@ -65,15 +66,14 @@ Establece el entorno actual de punto flotante.
 int fesetenv(  
    const fenv_t *penv  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
  `penv`  
- Puntero a un objeto `fenv_t` que contiene un entorno de punto flotante que se establece con una llamada a [fegetenv](http://msdn.microsoft.com/Library/61df848d-6ba8-4c6e-be35-216436fe7736) o [feholdexcept](http://msdn.microsoft.com/Library/c286ace3-ec39-482a-be8b-f998d31003d9). También puede especificar el entorno de punto flotante de inicio predeterminado mediante la macro FE_DFL_ENV.  
+ Puntero a un objeto `fenv_t` que contiene un entorno de punto flotante que se establece con una llamada a [fegetenv](fegetenv1.md) o [feholdexcept](feholdexcept2.md). También puede especificar el entorno de punto flotante de inicio predeterminado mediante la macro FE_DFL_ENV.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve 0 si el entorno se ha establecido correctamente.        De lo contrario, devuelve un valor distinto de cero.  
+ Devuelve 0 si el entorno se ha establecido correctamente. De lo contrario, devuelve un valor distinto de cero.  
   
 ## <a name="remarks"></a>Comentarios  
  La función `fesetenv` establece el entorno actual de punto flotante a partir del valor almacenado en el objeto `fenv_t` al que apunta `penv`. El entorno de punto flotante consiste en el conjunto de marcas de estado y modos de control que afectan a los cálculos de punto flotante. Incluye el modo de redondeo y las marcas de estado de las excepciones de punto flotante.  Si `penv` no es FE_DFL_ENV o no apunta a un objeto `fenv_t` válido, el comportamiento posterior es indefinido.  

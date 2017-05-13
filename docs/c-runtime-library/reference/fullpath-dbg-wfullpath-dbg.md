@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 13dea0e3f4fdaef74d4806373376d5c84904ce8f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6af4d6ba5df2305b5181e47cf0a0557650aa0406
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
@@ -109,7 +110,7 @@ wchar_t *_wfullpath_dbg(
  Cada función devuelve un puntero al búfer que contiene el nombre de ruta de acceso absoluta (`absPath`). Si se produce un error, por ejemplo, el valor que se pasa en `relPath` incluye una letra de unidad que no es válida o no se puede encontrar, o si la longitud del nombre de ruta de acceso absoluta creado (`absPath`) es mayor que `maxLength`, la función devuelve `NULL`.  
   
 ## <a name="remarks"></a>Comentarios  
- Las funciones `_fullpath_dbg` y `_wfullpath_dbg` son idénticas a `_fullpath` y `_wfullpath`, salvo que, si se define **_**`DEBUG`, estas funciones usan la versión de depuración de `malloc`, `_malloc_dbg`, para asignar memoria si se pasa NULL como primer parámetro. Para obtener más información sobre las características de depuración de `_malloc_dbg`, consulte [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
+ El `_fullpath_dbg` y `_wfullpath_dbg` funciones son idénticas a `_fullpath` y `_wfullpath` salvo que, cuando `_DEBUG` está definido, estas funciones usan la versión de depuración `malloc`, `_malloc_dbg`, para asignar memoria si se pasa NULL como el primer parámetro. Para obtener más información sobre las características de depuración de `_malloc_dbg`, consulte [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
  En la mayoría de los casos, no es necesario llamar a estas funciones explícitamente en la mayoría. En lugar de ello, se puede definir la marca `_CRTDBG_MAP_ALLOC`. Si se define `_CRTDBG_MAP_ALLOC`, las llamadas a `_fullpath` y `_wfullpath` se reasignan a `_fullpath_dbg` y `_wfullpath_dbg`, respectivamente, con el parámetro `blockType` establecido en `_NORMAL_BLOCK`. Por consiguiente, no necesario llamar a estas funciones explícitamente a menos que se desee marcar los bloques del montón como `_CLIENT_BLOCK`. Para obtener más información, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details).  
   
@@ -127,9 +128,6 @@ wchar_t *_wfullpath_dbg(
 |`_wfullpath_dbg`|\<crtdbg.h>|  
   
  Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- <xref:System.IO.File.Create%2A>  
   
 ## <a name="see-also"></a>Vea también  
  [Control de archivos](../../c-runtime-library/file-handling.md)   

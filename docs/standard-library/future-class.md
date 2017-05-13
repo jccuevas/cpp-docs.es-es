@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - future/std::future
+- future/std::future::future
+- future/std::future::get
+- future/std::future::share
+- future/std::future::valid
+- future/std::future::wait
+- future/std::future::wait_for
+- future/std::future::wait_until
 dev_langs:
 - C++
 ms.assetid: 495e82c3-5341-4e37-87dd-b40107fbdfb6
@@ -32,10 +39,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6de4fecd3f5f65ac48cbb49f2ed4f874f4283487
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2a062caf9b28a48f2195f96b3a22f95a15c7149e
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="future-class"></a>future (Clase)
@@ -57,31 +65,31 @@ class future;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[future::future (Constructor)](#future__future_constructor)|Construye un objeto `future`.|  
+|[future](#future)|Construye un objeto `future`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[future::get](#future__get_method)|Recupera el resultado almacenado en el estado asincrónico asociado.|  
-|[future::share](#future__share_method)|Convierte el objeto en un `shared_future`.|  
-|[future::valid](#future__valid_method)|Especifica si el objeto no está vacío.|  
-|[future::wait](#future__wait_method)|Bloquea el subproceso actual hasta que el estado asincrónico asociado esté listo.|  
-|[future::wait_for](#future__wait_for_method)|Se bloquea hasta que el estado asincrónico asociado está listo, o bien hasta que el tiempo especificado haya transcurrido.|  
-|[future::wait_until](#future__wait_until_method)|Se bloquea hasta que el estado asincrónico asociado está listo o hasta un punto determinado en el tiempo.|  
+|[get](#get)|Recupera el resultado almacenado en el estado asincrónico asociado.|  
+|[Compartir](#share)|Convierte el objeto en un `shared_future`.|  
+|[válido](#valid)|Especifica si el objeto no está vacío.|  
+|[espera](#wait)|Bloquea el subproceso actual hasta que el estado asincrónico asociado esté listo.|  
+|[wait_for](#wait_for)|Se bloquea hasta que el estado asincrónico asociado está listo, o bien hasta que el tiempo especificado haya transcurrido.|  
+|[wait_until](#wait_until)|Se bloquea hasta que el estado asincrónico asociado está listo o hasta un punto determinado en el tiempo.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[future::operator=](#future__operator_eq)|Transfiere el estado asincrónico asociado de un objeto especificado.|  
+|[future::operator=](#op_eq)|Transfiere el estado asincrónico asociado de un objeto especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** future  
+ **Encabezado:** \<futura >  
   
  **Espacio de nombres:** std  
   
-##  <a name="a-namefuturefutureconstructora--futurefuture-constructor"></a><a name="future__future_constructor"></a>  future::future (Constructor)  
+##  <a name="future"></a>  future::future (Constructor)  
  Construye un objeto `future`.  
   
 ```
@@ -98,7 +106,7 @@ future(future&& Other) noexcept;
   
  El segundo constructor crea un objeto `future` y transfiere el estado asincrónico asociado de `Other`. `Other` ya no tiene un estado asincrónico asociado.  
   
-##  <a name="a-namefuturegetmethoda--futureget"></a><a name="future__get_method"></a>  future::get  
+##  <a name="get"></a>  future::get  
  Recupera el resultado almacenado en el estado asincrónico asociado.  
   
 ```
@@ -117,7 +125,7 @@ Ty get();
   
  En otras especializaciones, el método mueve su valor devuelto del valor almacenado. Por tanto, llame a este método solo una vez.  
   
-##  <a name="a-namefutureoperatoreqa--futureoperator"></a><a name="future__operator_eq"></a>  future::operator=  
+##  <a name="op_eq"></a>  future::operator=  
  Transfiere un estado asincrónico asociado de un objeto especificado.  
   
 ```
@@ -134,7 +142,7 @@ future& operator=(future&& Right) noexcept;
 ### <a name="remarks"></a>Comentarios  
  Después de la transferencia, `Right` ya no tiene un estado asincrónico asociado.  
   
-##  <a name="a-namefuturesharemethoda--futureshare"></a><a name="future__share_method"></a>  future::share  
+##  <a name="share"></a>  future::share  
  Convierte el objeto en un objeto [shared_future](../standard-library/shared-future-class.md).  
   
 ```
@@ -144,7 +152,7 @@ shared_future<Ty> share();
 ### <a name="return-value"></a>Valor devuelto  
  `shared_future(move(*this))`  
   
-##  <a name="a-namefuturevalidmethoda--futurevalid"></a><a name="future__valid_method"></a>  future::valid  
+##  <a name="valid"></a>  future::valid  
  Especifica si el objeto tiene un estado asincrónico asociado.  
   
 ```
@@ -154,7 +162,7 @@ bool valid() noexcept;
 ### <a name="return-value"></a>Valor devuelto  
  Es `true` si el objeto tiene un estado asincrónico asociado; de lo contrario, es `false`.  
   
-##  <a name="a-namefuturewaitmethoda--futurewait"></a><a name="future__wait_method"></a>  future::wait  
+##  <a name="wait"></a>  future::wait  
  Bloquea el subproceso actual hasta que el estado asincrónico asociado esté *listo*.  
   
 ```cpp  
@@ -164,7 +172,7 @@ void wait() const;
 ### <a name="remarks"></a>Comentarios  
  Un estado asincrónico asociado está *listo* únicamente si su proveedor asincrónico ha almacenado un valor devuelto o una excepción.  
   
-##  <a name="a-namefuturewaitformethoda--futurewaitfor"></a><a name="future__wait_for_method"></a>  future::wait_for  
+##  <a name="wait_for"></a>  future::wait_for  
  Bloquea el subproceso actual hasta que el estado asincrónico asociado esté *listo* o hasta que haya transcurrido un tiempo especificado.  
   
 ```
@@ -177,12 +185,12 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
  Un objeto [chrono::duration](../standard-library/duration-class.md) que especifica un intervalo de tiempo máximo que el subproceso bloquea.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un [future_status](../standard-library/future-enums.md#future_status_enumeration) que indica el motivo que se va a devolver.  
+ Un [future_status](../standard-library/future-enums.md#future_status) que indica el motivo que se va a devolver.  
   
 ### <a name="remarks"></a>Comentarios  
  Un estado asincrónico asociado está listo solo si su proveedor asincrónico ha almacenado un valor devuelto o ha almacenado una excepción.  
   
-##  <a name="a-namefuturewaituntilmethoda--futurewaituntil"></a><a name="future__wait_until_method"></a>  future::wait_until  
+##  <a name="wait_until"></a>  future::wait_until  
  Bloquea el subproceso actual hasta que el estado asincrónico asociado esté *listo* o hasta después de un punto de tiempo especificado.  
   
 ```cpp  
@@ -195,7 +203,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
  Un objeto [chrono::time_point](../standard-library/time-point-class.md) que especifica un tiempo después del cual se puede desbloquear el subproceso.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un [future_status](../standard-library/future-enums.md#future_status_enumeration) que indica el motivo que se va a devolver.  
+ Un [future_status](../standard-library/future-enums.md#future_status) que indica el motivo que se va a devolver.  
   
 ### <a name="remarks"></a>Comentarios  
  Un estado asincrónico asociado está *listo* únicamente si su proveedor asincrónico ha almacenado un valor devuelto o una excepción.  

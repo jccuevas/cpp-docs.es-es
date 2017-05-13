@@ -1,62 +1,80 @@
 ---
-title: "Struct steady_clock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "chrono/std::chrono::steady_clock"
-dev_langs: 
-  - "C++"
+title: steady_clock (Struct) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- chrono/std::chrono::steady_clock
+dev_langs:
+- C++
 ms.assetid: 970d12ec-fc80-4391-a2f7-b57b2aec668d
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Struct steady_clock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 332008ed313eeae7f04f39165424a9280c2aed8c
+ms.contentlocale: es-es
+ms.lasthandoff: 04/19/2017
 
+---
+# <a name="steadyclock-struct"></a>Struct steady_clock
 Representa un reloj `steady`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 struct steady_clock;  
 ```  
   
-## Comentarios  
- En Windows, steady\_clock ajusta la función QueryPerformanceCounter.  
+## <a name="remarks"></a>Comentarios  
+ En Windows, steady_clock ajusta la función QueryPerformanceCounter.  
   
  Un reloj es *monotónico* si el valor devuelto por la primera llamada a `now()` siempre es menor o igual que el valor devuelto por una llamada posterior a `now()`.  
   
  Un reloj es *constante* si es *monotónico* y si el tiempo entre los ciclos de reloj es constante.  
   
- High\_resolution\_clock es un elemento typdef para steady\_clock.  
+ High_resolution_clock es un elemento typdef para steady_clock.  
   
-## Funciones públicas  
+## <a name="public-functions"></a>Funciones públicas  
   
 |Función|Descripción|  
-|-------------|-----------------|  
-|now|Devuelve la hora actual como un valor time\_point.|  
+|--------------|-----------------|  
+|now|Devuelve la hora actual como un valor time_point.|  
   
-## Constantes públicas  
+## <a name="public-constants"></a>Constantes públicas  
   
 |Nombre|Descripción|  
-|------------|-----------------|  
-|`system_clock::is_steady`|Contiene `true`.  `steady_clock` es *constante*.|  
+|----------|-----------------|  
+|`system_clock::is_steady`|Contiene `true`. `steady_clock` es *constante*.|  
   
-## Requisitos  
- **Encabezado:** chrono  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<chrono >  
   
  **Espacio de nombres:** std::chrono  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
- [\<chrono\>](../standard-library/chrono.md)   
- [system\_clock \(Estructura\)](../standard-library/system-clock-structure.md)
+ [\<chrono>](../standard-library/chrono.md)   
+ [system_clock (Estructura)](../standard-library/system-clock-structure.md)
+

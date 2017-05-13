@@ -1,53 +1,70 @@
 ---
-title: "ftell, _ftelli64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ftelli64"
-  - "ftell"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftelli64"
-  - "ftell"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftelli64 (función)"
-  - "punteros a archivos [C++]"
-  - "punteros a archivos [C++], obtener posición actual"
-  - "ftell (función)"
-  - "ftelli64 (función)"
+title: ftell, _ftelli64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ftelli64
+- ftell
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ftelli64
+- ftell
+dev_langs:
+- C++
+helpviewer_keywords:
+- ftell function
+- ftelli64 function
+- _ftelli64 function
+- file pointers [C++], getting current position
+- file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# ftell, _ftelli64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 220b34e5bba7a4a6716d6ef18d6621b58d36ecc3
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
+---
+# <a name="ftell-ftelli64"></a>ftell, _ftelli64
 Obtiene la posición actual de un puntero de archivo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 long ftell(   
@@ -58,34 +75,34 @@ __int64 _ftelli64(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `stream`  
- Estructura de `FILE` de destino.  
+ Estructura `FILE` de destino.  
   
-## Valor devuelto  
- `ftell` y `_ftelli64` devuelven la posición del archivo actual.  El valor devuelto por `ftell` y `_ftelli64` puede no reflejar el desplazamiento de bytes físico para las secuencias abierto en modo de texto, porque el modo de texto produce la traducción de retorno\- avance de línea de carro.  Utilice `ftell` con `fseek`o`_ftelli64`con`_fseeki64` para volver a las ubicaciones del archivo correctamente.  Por error, `ftell`y`_ftelli64` se invoca el controlador no válido de parámetro, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, estas funciones devuelven – 1L y `errno` determinado a una de dos constantes, definido en ERRNO.H.  La constante de `EBADF` significa que el argumento de `stream` no es un valor válido del puntero de archivo ni que hace referencia a un archivo abierto.  `EINVAL` significa que un argumento no válido de `stream` pasado a la función.  En los dispositivos incapaces de búsqueda \(como terminales y impresoras\), o cuando `stream` no hace referencia a un archivo abierto, el valor devuelto es indefinido.  
+## <a name="return-value"></a>Valor devuelto  
+ `ftell` y `_ftelli64` devuelven la posición de archivo actual. El valor devuelto por `ftell` y `_ftelli64` pueden no reflejar el desplazamiento de bytes físico para las secuencias que se abre en modo de texto, porque el modo de texto hace que la traducción de avance de línea de retorno de carro. Use `ftell` con `fseek` o `_ftelli64` con `_fseeki64` para volver a ubicaciones de archivos correctamente. En caso de error, `ftell` y `_ftelli64` invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven-1 L y establecen `errno` a uno de dos constantes, definidas en ERRNO. H. La constante `EBADF` indica que el argumento `stream` no es un valor de puntero de archivo válido o no hace referencia a un archivo abierto. `EINVAL` indica que se ha pasado un argumento `stream` no válido a la función. En dispositivos que no pueden realizar búsquedas (como terminales e impresoras) o cuando `stream` no hace referencia a un archivo abierto, el valor devuelto es indefinido.  
   
- Vea [\_doserrno, errno, \_sys\_errlist y \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.  
+ Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.  
   
-## Comentarios  
- Las funciones de `ftell` yde `_ftelli64`recuperan la posición actual del puntero de archivo \(si existe\) asociado a *`stream`.* La posición se expresa como un desplazamiento en relación con el principio de la secuencia.  
+## <a name="remarks"></a>Comentarios  
+ El `ftell` y `_ftelli64` funciones recuperan la posición actual del puntero de archivo (si existe) asociada a `stream`. La posición se expresa como un desplazamiento en relación con el principio del flujo.  
   
- Observe que si se abre para anexar datos, la posición del archivo actual está determinada por la operación de E\/S última, no por donde escribir siguiente aparecería.  Por ejemplo, si un archivo se abre para un anexar y la última operación fuera una lectura, la posición del archivo es el punto donde la operación de lectura siguiente comenzaría, no donde escribir siguiente comenzaría. \(Si se abre para anexar, la posición del archivo se mueve al final de archivo antes de cualquier operación de escritura\). Si ninguna operación de E\/S todavía ha producido en un archivo abierto para anexar, la posición del archivo es el principio del archivo.  
+ Tenga en cuenta que cuando un archivo se abre para anexar datos, la posición de archivo actual se determina con la última operación de E/S, no en función de dónde se produciría la siguiente escritura. Por ejemplo, si un archivo se abre para anexar y la última operación fue de lectura, la posición de archivo es el punto donde empezaría la siguiente operación de lectura, no donde empezaría la siguiente escritura. (Cuando se abre un archivo para anexar, la posición de archivo se mueve al final del archivo antes de cualquier operación de escritura). Si todavía no se ha producido ninguna operación de E/S en un archivo abierto para anexar, la posición de archivo se sitúa al principio del archivo.  
   
- En modo de texto, CTRL\+Z se interpretan como un final de archivo de entrada.  En archivos abierto para lectura\/escritura, `fopen` y toda la comprobación para de rutinas relacionada un CTRL\+Z al final del archivo y quítelo si es posible.  Se hace esto porque utilizar la combinación de `ftell` y `fseek` o `_ftelli64` y `_fseeki64`, para desplazarse en un archivo que finaliza con un CTRL\+Z puede hacer `ftell` o `_ftelli64` para comportarse incorrectamente cerca del final del archivo.  
+ En modo de texto, CTRL+Z se interpreta como un carácter de final de archivo en la entrada. En archivos abiertos para lectura/escritura, `fopen` y todas las rutinas relacionadas buscan un CTRL+Z al final del archivo y, si es posible, lo eliminan. Se hace así porque el uso de `ftell` y `fseek` o `_ftelli64` y `_fseeki64` para desplazarse por un archivo que finaliza con un CTRL+Z puede hacer que `ftell` o `_ftelli64` se comporten de forma incorrecta cerca del final del archivo.  
   
- Esta función bloquea el subproceso de llamada durante la ejecución y por consiguiente seguro para subprocesos.  Para consultar una versión que no realiza el bloqueo, vea `_ftell_nolock`.  
+ Esta función bloquea el subproceso de llamada durante la ejecución y por lo tanto es segura para subprocesos. Para obtener una versión que no sea de bloqueo, vea `_ftell_nolock`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Función|Encabezado necesario|Encabezados opcionales|  
-|-------------|--------------------------|----------------------------|  
-|`ftell`|\<stdio.h\>|\<errno.h\>|  
-|`_ftelli64`|\<stdio.h\>|\<errno.h\>|  
+|--------------|---------------------|----------------------|  
+|`ftell`|\<stdio.h>|\<errno.h>|  
+|`_ftelli64`|\<stdio.h>|\<errno.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_ftell.c  
@@ -115,13 +132,13 @@ int main( void )
 }  
 ```  
   
-  **Colocar después de intentar leer 100 bytes: 100**   
-## Equivalente en .NET Framework  
- [System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)  
+```Output  
+Position after trying to read 100 bytes: 100  
+```  
   
-## Vea también  
- [E\/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+## <a name="see-also"></a>Vea también  
+ [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [fgetpos](../../c-runtime-library/reference/fgetpos.md)   
- [fseek, \_fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
- [\_lseek, \_lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)
+ [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
+ [_lseek, _lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)

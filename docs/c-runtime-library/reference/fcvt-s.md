@@ -1,51 +1,68 @@
 ---
-title: "_fcvt_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fcvt_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fcvt_s"
-  - "_fcvt_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fcvt_s (función)"
-  - "convertir punto flotante, a cadenas"
-  - "fcvt_s (función)"
-  - "funciones de punto flotante, convertir número a cadena"
+title: _fcvt_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fcvt_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fcvt_s
+- _fcvt_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- fcvt_s function
+- converting floating point, to strings
+- floating-point functions, converting number to string
+- _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# _fcvt_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9c282757ae79367cdc2ee72b3f3ce8d0e50983fa
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
-Convierte un número en punto flotante en una cadena.  Ésta es una versión de [\_fcvt](../../c-runtime-library/reference/fcvt.md) con mejoras de seguridad como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="fcvts"></a>_fcvt_s
+Convierte un número de punto flotante en una cadena. Se trata de una versión de [_fcvt](../../c-runtime-library/reference/fcvt.md) con mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 errno_t _fcvt_s(   
@@ -66,67 +83,67 @@ errno_t _fcvt_s(
 ); // C++ only  
 ```  
   
-#### Parámetros  
- \[out\] `buffer`  
- El búfer proporcionado que contendrá el resultado de la conversión.  
+#### <a name="parameters"></a>Parámetros  
+ [out] `buffer`  
+ Búfer proporcionado que contendrá el resultado de la conversión.  
   
- \[in\] `sizeInBytes`  
- El tamaño del búfer en bytes.  
+ [in] `sizeInBytes`  
+ Tamaño del búfer en bytes.  
   
- \[in\] `value`  
+ [in] `value`  
  Número que se va a convertir.  
   
- \[in\] `count`  
- Número de dígitos situados a continuación del signo decimal.  
+ [in] `count`  
+ Número de dígitos después del separador decimal.  
   
- \[out\] `dec`  
- Puntero a la posición de separador decimal almacenada.  
+ [out] `dec`  
+ Puntero a la posición del separador decimal almacenada.  
   
- \[out\] `sign`  
- Puntero al marcador almacenado de signo.  
+ [out] `sign`  
+ Puntero al indicador de signo almacenado.  
   
-## Valor devuelto  
- Cero si correctamente.  El valor devuelto es un código de error si hay un error.  Los códigos de error se definen en Errno.h.  Para obtener una lista de estos errores, vea [errno, \_doserrno, \_sys\_errlist y \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+## <a name="return-value"></a>Valor devuelto  
+ Cero si es correcto. Si se produce un error, el valor devuelto es un código de error. Los códigos de error se definen en Errno.h. Para obtener una lista de estos errores, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- En el caso de un parámetro no válido, como se muestra en la tabla siguiente, esta función invoca el controlador no válido de parámetro, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve `EINVAL`.  
+ En el caso de un parámetro no válido, como se muestra en la siguiente tabla, esta función invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve `EINVAL`.  
   
-### Condiciones de error  
+### <a name="error-conditions"></a>Condiciones de error  
   
-|`buffer`|`sizeInBytes`|predeterminado|count|diciembre|sign|Devolución|Valor de `buffer`|  
-|--------------|-------------------|--------------------|-----------|---------------|----------|----------------|-----------------------|  
-|`NULL`|any|any|any|any|any|`EINVAL`|No modificado.|  
-|No `NULL` \(señala memoria válido\)|\<\=0|any|any|any|any|`EINVAL`|No modificado.|  
-|any|any|any|any|`NULL`|any|`EINVAL`|No modificado.|  
-|any|any|any|any|any|`NULL`|`EINVAL`|No modificado.|  
+|`buffer`|`sizeInBytes`|valor|count|dec|sign|Valor devuelto|Valor de `buffer`|  
+|--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|  
+|`NULL`|cualquiera|cualquiera|cualquiera|cualquiera|cualquiera|`EINVAL`|No modificado.|  
+|No `NULL` (apunta a la memoria válida)|<=0|any|cualquiera|cualquiera|cualquiera|`EINVAL`|No se ha modificado.|  
+|any|cualquiera|cualquiera|cualquiera|`NULL`|cualquiera|`EINVAL`|No se ha modificado.|  
+|any|cualquiera|cualquiera|cualquiera|cualquiera|`NULL`|`EINVAL`|No se ha modificado.|  
   
  **Problemas de seguridad**  
   
- `_fcvt_s` podría generar una infracción de acceso si `buffer` no señala memoria válida y no es `NULL`.  
+ Puede que `_fcvt_s` genere una infracción de acceso si `buffer` no apunta a una memoria válida y no es `NULL`.  
   
-## Comentarios  
- La función de `_fcvt_s` convierte un número en punto flotante a una cadena de caracteres terminada en null.  El parámetro de `value` es el número de punto flotante que se va a convertir.  `_fcvt_s` almacena los dígitos de `value` como cadena y anexa un carácter null \(“\\0”\).  El parámetro de `count` especifica el número de dígitos que se almacenarán después del separador decimal.  Exceso de dígitos se redondean a to los lugares de `count` .  Si hay menos que los dígitos de `count` de precisión, la cadena se rellena con ceros.  
+## <a name="remarks"></a>Comentarios  
+ La función `_fcvt_s` convierte un número de punto flotante en una cadena de caracteres finalizada en null. El parámetro `value` es el número de punto flotante que se va a convertir. `_fcvt_s` almacena los dígitos de `value` como cadena y anexa un carácter nulo ("\0"). El parámetro `count` especifica el número de dígitos que se almacenarán después del separador decimal. Los dígitos en exceso se redondean a `count` decimales. Si hay menos de `count` dígitos de precisión, la cadena se rellena con ceros.  
   
- Sólo dígitos se almacenan en la cadena.  La posición del separador decimal y el signo de `value` se pueden obtener de `dec` y de `sign` después de la llamada.  Los puntos del parámetro de `dec` a un valor entero; este valor entero proporciona la posición del separador decimal en cuanto al principio de la cadena.  Un valor entero cero o negativo indica que el separador decimal se encuentra a la izquierda del primer dígito.  Los puntos de `sign` de parámetros a un entero que indica el signo de `value`.  El entero se establece en 0 si `value` es positivo y se establece en un número distinto de cero si `value` es negativo.  
+ Solo se almacenan dígitos en la cadena. La posición del separador decimal y el signo de `value` pueden obtenerse de `dec` y `sign` después de la llamada. El parámetro `dec` apunta a un valor entero; este valor entero proporciona la posición del separador decimal con respecto al principio de la cadena. Un valor entero de cero o negativo indica que el separador decimal se encuentra a la izquierda del primer dígito. El parámetro `sign` apunta a un entero que indica el signo de `value`. El entero se establece en 0 si `value` es positivo y se establece en un número distinto de cero si `value` es negativo.  
   
  Un búfer de longitud `_CVTBUFSIZE` es suficiente para cualquier valor de punto flotante.  
   
- La diferencia entre `_ecvt_s` y `_fcvt_s` está en la del parámetro de `count` .  `_ecvt_s` interpreta `count` como el número total de dígitos en la cadena de salida, y `_fcvt_s` interpreta la c`ount` como el número de dígitos después del separador decimal.  
+ La diferencia entre `_ecvt_s` y `_fcvt_s` radica en la interpretación del parámetro `count`. `_ecvt_s`interpreta `count` como el número total de dígitos en la cadena de salida, y `_fcvt_s` interpreta `count` como el número de dígitos después del separador decimal.  
   
- En C\+\+, mediante esta función es simplificado por una sobrecarga de plantilla; la sobrecarga puede deducir longitud de búfer automáticamente, lo que elimina la necesidad de especificar un argumento size.  Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulte [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
   
- La versión de depuración de esta función primero rellena el búfer con 0xFD.  Para deshabilitar este comportamiento, use [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ La versión de depuración de esta función rellena primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Función|Encabezado necesario|Encabezado opcional|  
-|-------------|--------------------------|-------------------------|  
-|`_fcvt_s`|\<stdlib.h\>|\<errno.h\>|  
+|--------------|---------------------|---------------------|  
+|`_fcvt_s`|\<stdlib.h>|\<errno.h>|  
   
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
- **Bibliotecas:** Todas las versiones de [Características de la biblioteca CRT](../../c-runtime-library/crt-library-features.md).  
+ **Bibliotecas:** todas las versiones de las [características de la biblioteca de CRT](../../c-runtime-library/crt-library-features.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // fcvt_s.c  
@@ -155,14 +172,14 @@ int main()
 }  
 ```  
   
-  **Valor convertido: 120000**   
-## Equivalente en .NET Framework  
- <xref:System.Convert.ToString%2A>  
+```Output  
+Converted value: 120000  
+```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conversión de datos](../../c-runtime-library/data-conversion.md)   
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_ecvt\_s](../../c-runtime-library/reference/ecvt-s.md)   
- [\_gcvt\_s](../../c-runtime-library/reference/gcvt-s.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)   
+ [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)

@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d203033a5cb07ca4e6888cca7cbf4bba1b1da9da
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 07948b7fc08bbc41e2e899e190842be98746aeab
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
@@ -125,7 +126,7 @@ unsigned char *_mbstok(
 > [!IMPORTANT]
 >  Estas funciones representan una posible amenaza por un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).  
   
- En la primera llamada a `strtok`, la función omite los delimitadores iniciales y devuelve un puntero al primer token de `strToken`, y finaliza el token con un carácter nulo. Del resto de `strToken` se pueden extraer más tokens mediante una serie de llamadas a `strtok`. Cada llamada a `strtok` modifica `strToken` insertando un carácter nulo después del `token` devuelto por esa llamada. Para leer el token siguiente de `strToken`, llame a `strtok` con un valor `NULL` para el argumento de `strToken`. El argumento `NULL` de `strToken` hace que `strtok` busque el token siguiente en el `strToken` modificado. El argumento `strDelimit` acepta cualquier valor de una llamada a la siguiente, por lo que el juego de delimitadores puede variar.  
+ En la primera llamada a `strtok`, la función omite los delimitadores iniciales y devuelve un puntero al primer token de `strToken`, y finaliza el token con un carácter nulo. Del resto de `strToken` se pueden extraer más tokens mediante una serie de llamadas a `strtok`. Cada llamada a `strtok` modifica `strToken` insertando un carácter nulo después de la `token` devuelto por la llamada. Para leer el token siguiente de `strToken`, llame a `strtok` con un valor `NULL` para el argumento de `strToken`. El argumento `NULL` de `strToken` hace que `strtok` busque el token siguiente en el `strToken` modificado. El argumento `strDelimit` acepta cualquier valor de una llamada a la siguiente, por lo que el juego de delimitadores puede variar.  
   
  El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en su lugar. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
   
@@ -194,9 +195,6 @@ Tokens:
  more  
  tokens  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)   

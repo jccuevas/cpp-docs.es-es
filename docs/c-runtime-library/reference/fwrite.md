@@ -1,54 +1,76 @@
 ---
-title: "fwrite | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fwrite"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fwrite"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fwrite (función)"
-  - "secuencias, escribir datos en"
+title: fwrite | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fwrite
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fwrite
+dev_langs:
+- C++
+helpviewer_keywords:
+- streams, writing data to
+- fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# fwrite
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5f99375d93ab5ae54a34d72f23cd86672a79c318
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="fwrite"></a>fwrite
 Escribe datos en un flujo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-size_t fwrite(    const void *buffer,    size_t size,    size_t count,    FILE *stream  );  
+size_t fwrite(  
+   const void *buffer,  
+   size_t size,  
+   size_t count,  
+   FILE *stream   
+);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `buffer`  
  Puntero a los datos que se van a escribir.  
   
@@ -61,33 +83,30 @@ size_t fwrite(    const void *buffer,    size_t size,    size_t count,    FILE *
  `stream`  
  Puntero a la estructura `FILE`.  
   
-## Valor devuelto  
- `fwrite` devuelve el número de elementos completos escritos realmente, que puede ser menor que `count` si se produce un error.  De igual modo, si se produce un error, no se podrá conocer el indicador de posición de archivo.  Si `stream` o `buffer` es un puntero nulo, o si un número impar de bytes que se debe escribir se especifica en modo Unicode, esta función invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, esta función establece `errno` en `EINVAL` y devuelve 0.  
+## <a name="return-value"></a>Valor devuelto  
+ `fwrite` devuelve el número de elementos completos escritos realmente, que puede ser menor que `count` si se produce un error. De igual modo, si se produce un error, no se podrá conocer el indicador de posición de archivo. Si `stream` o `buffer` es un puntero nulo, o si un número impar de bytes que se debe escribir se especifica en modo Unicode, la función invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece `errno` en `EINVAL` y devuelve 0.  
   
-## Comentarios  
- La función `fwrite` escribe un máximo de `count` elementos \(con una longitud de `size` cada uno\) desde el `buffer` al `stream` de salida.  El puntero de archivo asociado a `stream` \(si lo hay\) se incrementa según el número de bytes escritos realmente.  Si el `stream` se abre en modo de texto, cada salto de línea se reemplazará por un par de retorno de carro\-avance de línea.  Este reemplazo no tiene efecto alguno en el valor devuelto.  
+## <a name="remarks"></a>Comentarios  
+ La función `fwrite` escribe un máximo de `count` elementos (con una longitud de `size` cada uno) desde el `buffer` al `stream` de salida. El puntero de archivo asociado a `stream` (si lo hay) se incrementa según el número de bytes escritos realmente. Si `stream` se abre en modo de texto, cada salto de línea se reemplaza por un retorno de carro y avance de línea par. Este reemplazo no tiene efecto alguno en el valor devuelto.  
   
- Cuando `stream` se abre en un modo de conversión Unicode \(por ejemplo, si `stream` se abre llamando a `fopen` y usando un parámetro de modo que incluye `ccs=UNICODE`, `ccs=UTF-16LE` o `ccs=UTF-8`, o si el modo se cambia a un modo de conversión Unicode mediante `_setmode` y un parámetro de modo que incluye `_O_WTEXT`, `_O_U16TEXT` o `_O_U8TEXT`\), el `buffer` se interpretará como un puntero a una matriz de `wchar_t` que contiene datos UTF\-16.  Si se intenta escribir un número impar de bytes en este modo, se producirá un error de validación de parámetros.  
+ Cuando `stream` se abre en un modo de conversión Unicode (por ejemplo, si `stream` se abre llamando a `fopen` y usando un parámetro de modo que incluye `ccs=UNICODE`, `ccs=UTF-16LE` o `ccs=UTF-8`, o si el modo se cambia a un modo de conversión Unicode mediante `_setmode` y un parámetro de modo que incluye `_O_WTEXT`, `_O_U16TEXT` o `_O_U8TEXT`), el `buffer` se interpretará como un puntero a una matriz de `wchar_t` que contiene datos UTF-16. Si se intenta escribir un número impar de bytes en este modo, se producirá un error de validación de parámetros.  
   
- Como esta función bloquea el subproceso de llamada, es segura para los subprocesos.  Para consultar una versión que no realiza el bloqueo, vea `_fwrite_nolock`.  
+ Como esta función bloquea el subproceso de llamada, es segura para los subprocesos. Para obtener una versión que no sea de bloqueo, vea `_fwrite_nolock`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Función|Encabezado necesario|  
-|-------------|--------------------------|  
-|`fwrite`|\<stdio.h\>|  
+|--------------|---------------------|  
+|`fwrite`|\<stdio.h>|  
   
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Consulte el ejemplo de [fread](../../c-runtime-library/reference/fread.md).  
   
-## Equivalente en .NET Framework  
- [System::IO::FileStream::Write](https://msdn.microsoft.com/en-us/library/system.io.filestream.write.aspx)  
-  
-## Vea también  
- [E\/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [\_setmode](../../c-runtime-library/reference/setmode.md)   
+## <a name="see-also"></a>Vea también  
+ [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
+ [_setmode](../../c-runtime-library/reference/setmode.md)   
  [fread](../../c-runtime-library/reference/fread.md)   
- [\_fwrite\_nolock](../../c-runtime-library/reference/fwrite-nolock.md)   
- [\_write](../../c-runtime-library/reference/write.md)
+ [_fwrite_nolock](../../c-runtime-library/reference/fwrite-nolock.md)   
+ [_write](../../c-runtime-library/reference/write.md)

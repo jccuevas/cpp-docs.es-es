@@ -1,47 +1,65 @@
 ---
-title: "_fread_nolock_s2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fread_nolock_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fread_nolock_s"
-  - "stdio/_fread_nolock_s"
-dev_langs: 
-  - "C++"
+title: _fread_nolock_s2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fread_nolock_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fread_nolock_s
+- stdio/_fread_nolock_s
+dev_langs:
+- C++
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
 caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# _fread_nolock_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f7f6dff1902777d5c795ac5cb29e1bcfdf3b0eb5
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
-Lee datos desde una secuencia, sin bloquear otros subprocesos. Esta versión de [fread\_nolock](../../c-runtime-library/reference/fread-nolock.md) tiene mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="freadnolocks"></a>_fread_nolock_s
+Lee datos desde una secuencia, sin bloquear otros subprocesos. Esta versión de [fread_nolock](../../c-runtime-library/reference/fread-nolock.md) incluye mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 size_t _fread_nolock_s(   
@@ -53,7 +71,7 @@ size_t _fread_nolock_s(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `buffer`  
  Ubicación de almacenamiento de los datos.  
   
@@ -69,24 +87,21 @@ size_t _fread_nolock_s(
  `stream`  
  Puntero a la estructura `FILE`.  
   
-## Valor devuelto  
- Vea [fread\_s](../../c-runtime-library/reference/fread-s.md).  
+## <a name="return-value"></a>Valor devuelto  
+ Consulte [fread_s](../../c-runtime-library/reference/fread-s.md).  
   
-## Comentarios  
- Esta función es una versión que no es de bloqueo de `fread_s`. Es idéntica a `fread_s`, salvo que no está protegidas contra interferencias de otros subprocesos. Puede ser más rápidas porque no incurre en la sobrecarga de bloquear otros subprocesos. Use esta función solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.  
+## <a name="remarks"></a>Comentarios  
+ Esta función es una versión que no es de bloqueo de `fread_s`. Es idéntica a `fread_s` , salvo que no está protegidas contra interferencias de otros subprocesos. Puede ser más rápidas porque no incurre en la sobrecarga de bloquear otros subprocesos. Use esta función solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Función|Encabezado necesario|  
-|-------------|--------------------------|  
-|`_fread_nolock_s`|C: \<stdio.h\>; C\+\+: \<cstdio\> or \<stdio.h\>|  
+|--------------|---------------------|  
+|`_fread_nolock_s`|C: \<stdio.h>; C++: \<cstdio> o \<stdio.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Equivalente en .NET Framework  
- [System::IO::FileStream::Read](https://msdn.microsoft.com/en-us/library/system.io.filestream.read.aspx)  
-  
-## Vea también  
- [E\/S de secuencia](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Vea también  
+ [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
  [fwrite](../../c-runtime-library/reference/fwrite.md)   
- [\_read](../../c-runtime-library/reference/read.md)
+ [_read](../../c-runtime-library/reference/read.md)
