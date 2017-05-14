@@ -34,18 +34,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: fd99248bdfca428b01921e80eb902d482c0e95be
-ms.lasthandoff: 04/12/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 60e5fb2346c92b3005e7cbfe1663d43cc0a12cdc
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-error-c2316"></a>Error del compilador C2316
-'excepción': no se puede detectar porque no se puede obtener acceso al destructor o al constructor de copias  
+
+> '*excepción*': no se puede detectar porque es inaccesible al destructor o al constructor de copias  
   
- Se detectó una excepción por valor o por referencia, pero no se ha podido obtener acceso al constructor de copias o al operador de asignación.  
+Se detectó una excepción por valor o por referencia, pero no se ha podido obtener acceso al constructor de copias o al operador de asignación.  
   
- El compilador de la versión anterior aceptaba este código, pero ahora el código produce un error.  
+Este código se aceptaba en versiones de Visual C++ antes de Visual Studio 2003, pero ahora produce un error.  
+  
+Los cambios de conformidad en Visual Studio 2015 realizan este error se aplica a las instrucciones catch incorrecta de excepciones de MFC derivadas de `CException`. Dado que `CException` tiene un constructor de copias privado heredados, la clase y sus derivados son no se puede copiar y no se pueden pasar por valor, lo que también significa que no se puede detectar por valor. Instrucciones que detecta las excepciones de MFC valor que previamente se llevó a las excepciones no detectadas en tiempo de ejecución de captura, pero ahora el compilador identifica correctamente esta situación y los informes de error advertencia C2316. Para corregir este problema, se recomienda que usar las macros MFC TRY/CATCH en lugar de escriben sus propios controladores de excepciones, pero si no es adecuado para el código, detectar excepciones de MFC por referencia en su lugar.   
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera la advertencia C2316:  

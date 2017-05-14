@@ -33,50 +33,118 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: bf93f364b3dc7156a62eb1c474177eb7b85c7827
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 40097ea2b5c5519a5b883aad09788cf2f802ea36
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="linker-tools-error-lnk2005"></a>Error de las herramientas del vinculador LNK2005
-símbolo ya definido en objeto  
+*símbolo* ya definido en objeto  
   
-El `symbol` proporcionado, que se muestra en su forma representativa, se definió varias veces.  
+El símbolo *símbolo* se definió más de una vez.   
   
-Para más información, consulte los artículos de Knowledge Base:  
+Este error se sigue por error irrecuperable [LNK1169](../../error-messages/tool-errors/linker-tools-error-lnk1169.md).  
   
--   [Se produce un error de LNK2005 cuando la biblioteca CRT y bibliotecas MFC se vinculan en el orden incorrecto en Visual C++](https://support.microsoft.com/kb/148652)  
+### <a name="possible-causes-and-solutions"></a>Posibles causas y soluciones  
   
--   [CORRECCIÓN: Global Delete sobrecargado operador causas LNK2005](https://support.microsoft.com/kb/140440)  
+Por lo general, este error significa que han interrumpido la *regla de una definición*, lo que permite una única definición para cualquier plantilla utilizada, la función, el tipo o el objeto en un archivo de objeto determinado y solo una definición en el archivo ejecutable completo para los objetos visibles externamente o funciones.  
   
--   [Recibe errores LNK2005 cuando se compila un proyecto ejecutable (.exe) de ATL de Visual C++](https://support.microsoft.com/kb/184235).  
+Estos son algunas causas comunes de este error.  
   
-Este error se sigue el error irrecuperable [LNK1169](../../error-messages/tool-errors/linker-tools-error-lnk1169.md).  
+-   Este error puede producirse cuando un archivo de encabezado define una variable. Por ejemplo, si incluye este archivo de encabezado en más de un archivo de origen en el proyecto, se producirá un error:  
   
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:  
-  
-1.  Mezcla de bibliotecas estáticas y dinámicas cuando también se utiliza [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-2.  El símbolo es una función empaquetada (creada al compilar con [/Gy](../../build/reference/gy-enable-function-level-linking.md)) y se incluyó en más de un archivo, pero se cambió entre las compilaciones. Recompilar todos los archivos que incluyen `symbol`.  
-  
-3.  El símbolo está definido de manera distinta en dos objetos miembros de diferentes bibliotecas, y se utilizaron los dos objetos miembros.  
-  
-4.  Hay un valor absoluto definido dos veces, con un valor distinto en cada definición.  
-  
-5.  Un archivo de encabezado declaró y definió una variable. Entre las posibles soluciones están:  
-  
-    -   Declare la variable en. h: `extern BOOL MyBool;` y, a continuación, asignarle en un archivo .c o. cpp: `BOOL MyBool = FALSE;`.  
-  
-    -   Declarar la variable [estático](../../cpp/storage-classes-cpp.md#static).  
-  
-    -   Declarar la variable [selectany](../../cpp/selectany.md).  
-  
-6.  Si usa uuid.lib combinado con otros archivos .lib que definen GUID (por ejemplo, oledb.lib y adsiid.lib). Por ejemplo:  
-  
+    ```h  
+    // LNK2005_global.h  
+    int global_int;  // LNK2005
     ```  
+  
+    Entre las posibles soluciones están:  
+  
+    -   Declare la variable `extern` en el archivo de encabezado: `extern int global_int;`, a continuación, define y, opcionalmente, inicializarlo en uno y solo un archivo de código fuente: `int global_int = 17;`. Esta variable es ahora un global que puede usar en cualquier archivo de origen declarándola `extern`, por ejemplo, incluyendo el archivo de encabezado. Se recomienda esta solución para las variables que deben ser globales, pero práctica de ingeniería de software minimiza las variables globales.  
+    
+    -   Declare la variable [estático](../../cpp/storage-classes-cpp.md#static): `static int static_int = 17;`. Esto limita el ámbito de la definición de archivo de objeto actual y permite que varios archivos objeto tener su propia copia de la variable. No se recomienda que definir las variables estáticas en archivos de encabezado debido a la posible confusión con las variables globales. Se prefieren mover las definiciones de variables estáticas en los archivos de origen que las utilizan.  
+  
+    -   Declare la variable [selectany](../../cpp/selectany.md): `__declspec(selectany) int global_int = 17;`. Esto indica al vinculador para seleccionar una definición para su uso por todas las referencias externas y descartar el resto. Esta solución a veces es útil al combinar las bibliotecas de importación. En caso contrario, no se recomienda, como una manera de evitar errores del vinculador.  
+  
+-   Este error puede producirse cuando un archivo de encabezado define una función que no es `inline`. Si incluye este archivo de encabezado en más de un archivo de código fuente, obtendrá varias definiciones de la función en el archivo ejecutable.  
+    
+    ```h  
+    // LNK2005_func.h  
+    int sample_function(int k) { return 42 * (k % 167); }  // LNK2005
+    ```  
+  
+    Entre las posibles soluciones están:  
+  
+    -   Agregar el `inline` palabra clave a la función: 
+
+        ```h  
+        // LNK2005_func_inline.h  
+        inline int sample_function(int k) { return 42 * (k % 167); }  
+        ```  
+  
+    -   Quite el cuerpo de la función del archivo de encabezado y deje sólo la declaración, a continuación, implemente la función en uno y solo un archivo de código fuente:  
+  
+        ```h  
+        // LNK2005_func_decl.h  
+        int sample_function(int);  
+        ```  
+  
+        ```cpp  
+        // LNK2005_func_impl.cpp  
+        int sample_function(int k) { return 42 * (k % 167); }  
+        ```  
+-   Este error también puede producirse si define las funciones de miembro fuera de la declaración de clase en un archivo de encabezado:  
+  
+    ```h  
+    // LNK2005_member_outside.h  
+    class Sample {
+    public:
+        int sample_function(int);  
+    };
+    int Sample::sample_function(int k) { return 42 * (k % 167); }  // LNK2005
+    ```  
+  
+    Para corregir este problema, mueva las definiciones de función miembro dentro de la clase. Las funciones miembro definidas dentro de una declaración de clase se alinean implícitamente.  
+  
+    ```h  
+    // LNK2005_member_inline.h  
+    class Sample {
+    public:
+        int sample_function(int k) { return 42 * (k % 167); }  
+    };
+    ```  
+  
+-   Este error puede producirse si crea un vínculo más de una versión de la biblioteca estándar o CRT. Por ejemplo, si se intenta vincular tanto la versión comercial y bibliotecas de depuración de CRT o las versiones estáticas y dinámicas de una biblioteca o dos versiones diferentes de una biblioteca estándar a su archivo ejecutable, este puede aparecer el error muchas veces. Para corregir este problema, quite todo menos una copia de cada biblioteca de comando de link. No se recomienda mezclar comercial y depurar las bibliotecas o distintas versiones de una biblioteca, en el mismo archivo ejecutable.  
+  
+    Para indicar al vinculador que utilice bibliotecas distintas de los valores predeterminados, en la línea de comandos, especifique las bibliotecas para usar y usar el [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) opción para deshabilitar las bibliotecas predeterminadas. En el IDE, agregue referencias al proyecto para especificar las bibliotecas para usar y, a continuación, abra el **páginas de propiedades** cuadro de diálogo para el proyecto y en el **vinculador**, **entrada** página de propiedades, establecer **omitir todas las bibliotecas predeterminadas**, o **omitir determinadas bibliotecas predeterminado** propiedades para deshabilitar las bibliotecas predeterminadas.   
+  
+-   Este error puede producirse si usa las bibliotecas estáticas y dinámicas de mezcla cuando se usa el [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) opción. Por ejemplo, este error puede producirse si compila un archivo DLL para usarlo en su archivo ejecutable que se vincula en CRT estático. Para corregir este problema, use sólo bibliotecas estáticas o bibliotecas de dinámicos para todo el ejecutable y para cualquier biblioteca de que compilación para usar en el archivo ejecutable.  
+  
+-   Este error puede producirse si el símbolo es una función empaquetada (creada al compilar con [/Gy](../../build/reference/gy-enable-function-level-linking.md)) y se incluyó en más de un archivo, pero se ha cambiado entre las compilaciones. Para corregir este problema, vuelva a compilar todos los archivos que incluyen la función empaquetada.  
+  
+-   Este error puede producirse si el símbolo está definido de manera diferente en dos objetos miembro de diferentes bibliotecas, y se usan dos objetos miembros. Una manera de solucionar este problema cuando las bibliotecas se vinculan estáticamente es usar el objeto de miembro de sólo una biblioteca e incluir dicha biblioteca en primer lugar en la línea de comandos del vinculador. Para utilizar los símbolos, debe crear un método para distinguirlos. Por ejemplo, si puede crear las bibliotecas de código fuente, puede encapsular cada biblioteca en un espacio de nombres único. Como alternativa, puede crear una nueva biblioteca de contenedor que utiliza nombres únicos para incluir referencias a una de las bibliotecas originales, la nueva biblioteca de vínculos a la biblioteca original y después vincular el ejecutable a la nueva biblioteca en lugar de la biblioteca original.  
+  
+-   Este error puede producirse si un `extern const` variable se define dos veces y tiene un valor diferente en cada definición. Para corregir este problema, definir la constante sólo una vez, o usar espacios de nombres o `enum class` definiciones para distinguir las constantes.  
+  
+-   Este error puede producirse si usa uuid.lib en combinación con otros archivos .lib que definen GUID (por ejemplo, oledb.lib y adsiid.lib). Por ejemplo:  
+  
+    ```Output  
     oledb.lib(oledb_i.obj) : error LNK2005: _IID_ITransactionObject  
     already defined in uuid.lib(go7.obj)  
     ```  
   
-     Para corregirlo, agregue [/Force: Multiple](../../build/reference/force-force-file-output.md) a las opciones de línea de comandos del vinculador y compruebe que uuid.lib es la primera biblioteca de referencia.
+     Para corregir este problema, agregue [/Force: Multiple](../../build/reference/force-force-file-output.md) a las opciones de línea de comandos del vinculador y asegúrese de que uuid.lib es la primera biblioteca al que hace referencia.
+  
+## <a name="additional-information"></a>Información adicional  
+  
+Si está utilizando una versión anterior del conjunto de herramientas, vea estos artículos de Knowledge Base para obtener más información acerca de las causas concretas de este error:  
+  
+-   [Se produce un error de LNK2005 cuando la biblioteca CRT y las bibliotecas MFC se vinculan en el orden equivocado en Visual C++](https://support.microsoft.com/kb/148652)  
+  
+-   [CORRECCIÓN: Delete sobrecargado Global operador causas LNK2005](https://support.microsoft.com/kb/140440)  
+  
+-   [Recibe errores LNK2005 cuando se compila un proyecto de archivo ejecutable (.exe) de ATL de Visual C++](https://support.microsoft.com/kb/184235).  
+  
+

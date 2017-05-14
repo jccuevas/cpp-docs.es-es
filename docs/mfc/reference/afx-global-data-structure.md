@@ -35,13 +35,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 1427efddf9271d273e94c4f62d6d104e7f1c2b48
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c490b3d744aa691331500f491444435dfe583d13
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
-# <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA (Estructura)
+# <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA (estructura)
 La estructura `AFX_GLOBAL_DATA` contiene los campos y métodos que se utilizan para administrar el marco o personalizar el aspecto y el comportamiento de la aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -103,7 +104,7 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="data-members"></a>Miembros de datos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|Indica si el sistema operativo actual admite la combinación alfa.|  
 |[AFX_GLOBAL_DATA::bIsWindows7](#biswindows7)|Indica si la aplicación se está ejecutando en el sistema operativo Windows 7 o posterior.|  
@@ -278,13 +279,13 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
  `TRUE`Para habilitar la compatibilidad de accesibilidad; `FALSE` para deshabilitar la compatibilidad de accesibilidad. El valor predeterminado es `TRUE`.  
   
 ### <a name="remarks"></a>Comentarios  
- Active Accessibility es una tecnología basada en COM que mejora el funcionamiento de los programas y el trabajo del sistema operativo de Windows junto con los productos de tecnología. Proporciona métodos confiables para exponer información sobre los elementos de la interfaz de usuario. Sin embargo, ahora está disponible un nuevo modelo de accesibilidad denominado automatización de interfaz de usuario de Microsoft. Para obtener una comparación de las dos tecnologías, consulte [UI Automation y Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321).  
+ Active Accessibility es una tecnología basada en COM que mejora el funcionamiento de los programas y el trabajo del sistema operativo de Windows junto con los productos de tecnología. Proporciona métodos confiables para exponer información sobre los elementos de la interfaz de usuario. Sin embargo, ahora está disponible un nuevo modelo de accesibilidad denominado automatización de interfaz de usuario de Microsoft. Para obtener una comparación de las dos tecnologías, consulte [UI Automation y Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).  
   
  Use la [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) método para determinar si está habilitada la compatibilidad con Microsoft Active Accessibility.  
   
  
 ### <a name="see-also"></a>Vea también  
- [UI Automation y Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)   
+ [UI Automation y Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)   
  [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
 ## <a name="excludetag"></a>AFX_GLOBAL_DATA::ExcludeTag
@@ -486,7 +487,7 @@ BOOL IsAccessibilitySupport() const;
   
 
 ### <a name="see-also"></a>Vea también  
- [UI Automation y Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)
+ [UI Automation y Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
 
 ## <a name="isd2dinitialized"></a>AFX_GLOBAL_DATA::IsD2DInitialized
  Determina si se ha inicializado el D2D  

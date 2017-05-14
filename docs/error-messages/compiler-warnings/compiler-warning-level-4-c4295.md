@@ -33,21 +33,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8afa9526c2a16c6a4062fd17480bd1d04bf51911
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: b831b8e7b838ef25679d49a132c66d4b378fdcd7
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-warning-level-4-c4295"></a>Advertencia del compilador (nivel 4) C4295
-**'**   
- ***matriz* ': matriz es demasiado pequeña para incluir un carácter nulo**  
+  
+> '*matriz*': matriz es demasiado pequeña para incluir un carácter nulo de terminación  
   
  Se inicializó una matriz, pero el último carácter de la matriz no es null; obtener acceso a la matriz puede producir resultados inesperados.  
   
- El ejemplo siguiente genera C4295:  
+## <a name="example"></a>Ejemplo  
   
-```  
+ El ejemplo siguiente genera C4295. Para corregir este problema, podría declarar el tamaño de la matriz más grande para contener una terminación null desde el inicializador.  
+  
+```C  
 // C4295.c  
 // compile with: /W4  
   

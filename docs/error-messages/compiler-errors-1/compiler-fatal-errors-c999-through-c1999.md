@@ -190,10 +190,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 7cd9b98172f30248c40d2b0b8410b19f4a0cafec
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 42bd88a29dbefe48c59742ab8fc982355262f66e
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Errores graves del compilador: de C999 a C1999
@@ -219,7 +220,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |Error irrecuperable C1012|paréntesis desemparejados: falta '*caracteres*"|  
 |Error irrecuperable C1013|límite del compilador: hay demasiados paréntesis abiertos|  
 |Error irrecuperable C1014|Hay demasiados archivos de inclusión: profundidad = *número*|  
-|Error irrecuperable C1016|#ifdef / #ifndef esperaba un identificador|  
+|Error irrecuperable C1016|#ifdef/#ifndef esperaba un identificador|  
 |[Error irrecuperable C1017](../../error-messages/compiler-errors-1/fatal-error-c1017.md)|expresión constante de tipo entero no válida|  
 |Error irrecuperable C1018|#elif inesperada|  
 |Error irrecuperable C1019|#else inesperada|  
@@ -241,6 +242,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |Error irrecuperable C1048|opción desconocida '*cadena*'en'*opción*'|  
 |Error irrecuperable C1049|argumento numérico no válido '*valor*'|  
 |[Error irrecuperable C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|archivo de base de datos de programa, '*archivo*', tiene un formato obsoleto; elimínelo y vuelva a compilar|  
+|[Error irrecuperable C1052](fatal-error-c1052.md)|archivo de base de datos de programa, '*filename*', se genera mediante el vinculador con/debug: Fastlink; compilador no puede actualizar estos archivos PDB; elimínela o use /Fd para especificar otro nombre de archivo PDB|  
 |Error irrecuperable C1053|'*función*': función es demasiado larga|  
 |[Error irrecuperable C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|límite del compilador: los inicializadores están demasiado anidados|  
 |[Error irrecuperable C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|límite del compilador: no hay claves|  
@@ -290,16 +292,16 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |Error irrecuperable C1110|hay demasiadas definiciones template/generic anidadas|  
 |Error irrecuperable C1111|hay demasiados parámetros template/generic|  
 |Error irrecuperable C1112|límite del compilador: `'number`' demasiados argumentos de macro, solo *número* permitido|  
-|[Error irrecuperable C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#Error en '*archivo*'|  
+|[Error irrecuperable C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using error en '*archivo*'|  
 |Error irrecuperable C1114|'*archivo*': WinRT no admite #using de un ensamblado administrado|  
 |[Error irrecuperable C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|al llamar a GetProcAddress no se pudo para '*función*'|  
 |[Error irrecuperable C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|no se pudo llamar a CryptoAPI|  
 |[Error irrecuperable C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|la asignación automática supera *tamaño*|  
 |[Error irrecuperable C1128](../../error-messages/compiler-errors-1/fatal-error-c1128.md)|el número de secciones superó el límite de formato de archivo de objeto: compile con /bigobj|  
-|[Error irrecuperable C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#Error: *mensaje*|  
+|[Error irrecuperable C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#error: *mensaje*|  
 |Error irrecuperable C1190|un código de destino administrado requiere una opción '/clr'|  
 |[Error irrecuperable C1191](../../error-messages/compiler-errors-1/fatal-error-c1191.md)|'*archivo*' únicamente puede importarse en el ámbito global|  
-|[Error irrecuperable C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#Error en '*archivo*'|  
+|[Error irrecuperable C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#using error en '*archivo*'|  
 |Error irrecuperable C1193|un error esperado en *archivo*(*línea*) no se ha alcanzado|  
 |Error irrecuperable C1195|el uso de /Yu y /Yc en la misma línea de comandos no es compatible con la opción /clr|  
 |Error irrecuperable C1196|'*identificador*': identificador encontrado en la biblioteca de tipos '*typelib*' no es un identificador de C++ válido|  

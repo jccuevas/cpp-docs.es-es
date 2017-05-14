@@ -17,7 +17,6 @@ f1_keywords:
 - C2131
 - C2136
 - C2176
-- C2178
 - C2187
 - C2189
 helpviewer_keywords:
@@ -29,7 +28,6 @@ helpviewer_keywords:
 - C2131
 - C2136
 - C2176
-- C2178
 - C2187
 - C2189
 dev_langs:
@@ -53,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 3716dbf66c2cf1c35c26df6dfd95fb1c0946e68d
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c724fd7907f7ec3f0ce8f096faf88d4ec66ae970
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>Error del compiladors C2100 through C2199
@@ -99,7 +98,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |C2127 de Error del compilador|'*identificador*': la inicialización no válida de entidad 'constexpr' con una expresión no constante|  
 |[Error del compilador C2128](compiler-error-c2128.md)|'*función*': alloc_text/same_seg solo es aplicable a funciones con vinculación C|  
 |[Error del compilador C2129](compiler-error-c2129.md)|función estática '*identificador*' declarada pero no definida|  
-|[Error del compilador C2130](compiler-error-c2130.md)|#línea esperaba una cadena que contiene el nombre de archivo, se encontró '*token*'|  
+|[Error del compilador C2130](compiler-error-c2130.md)|#line esperaba una cadena que contiene el nombre de archivo, se encontró '*token*'|  
 |C2131 de Error del compilador|la expresión no se evaluó como una constante|  
 |[Error del compilador C2132](compiler-error-c2132.md)|error de sintaxis: identificador inesperado|  
 |[Error del compilador C2133](compiler-error-c2133.md)|'*identificador*': tamaño desconocido|  
@@ -147,7 +146,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2175](compiler-error-c2175.md)|'*configuración regional*': configuración regional no válido|  
 |C2176 de Error del compilador|no puede aparecer una instrucción "return" en el controlador de un bloque "try" de función asociado a un constructor|  
 |[Error del compilador C2177](compiler-error-c2177.md)|constante demasiado grande|  
-|C2178 de Error del compilador|'*identificador*'no se pueden declarar con'*especificador*' especificador|  
+|[C2178 de Error del compilador](compiler-error-c2178.md)|'*identificador*'no se pueden declarar con'*especificador*' especificador|  
 |[Error del compilador C2179](compiler-error-c2179.md)|'*tipo*': un argumento de atributo no puede utilizar parámetros de tipo|  
 |[Error del compilador C2180](compiler-error-c2180.md)|expresión de control es de tipo '*tipo*'|  
 |[Error del compilador C2181](compiler-error-c2181.md)|'else' no válido sin el correspondiente 'if'|  
@@ -168,4 +167,4 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2196](compiler-error-c2196.md)|valor de Case '*valor*' ya en uso|  
 |[Error del compilador C2197](compiler-error-c2197.md)|'*función*': hay demasiados argumentos para la llamada|  
 |[Error del compilador C2198](compiler-error-c2198.md)|'*función*': hay suficientes argumentos para la llamada|  
-|[Error del compilador C2199](compiler-error-c2199.md)|¿error de sintaxis: se encontró '*identificador* (' en el ámbito global (era una declaración prevista)?|  
+|[Error del compilador C2199](compiler-error-c2199.md)|¿error de sintaxis: se encontró '*identificador* (' en el ámbito global (era una declaración previsto)?|  

@@ -71,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: c9537755f2147d0ded67ecd887414f317952418d
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 4f5e485611b1a8f38375c9a95a959ddf48e3663c
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="cstringt-class"></a>CStringT (clase)
@@ -105,19 +106,19 @@ public CSimpleStringT<BaseType,
  `StringTraits`  
  Determina si la clase string necesita compatibilidad con bibliotecas de tiempo de ejecución de C (CRT) y donde se encuentran los recursos de cadena. Puede ser uno de los siguientes:  
   
-- **StrTraitATL<> </>** | `char` | **TCHAR, ChTraitsCRT<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      La clase requiere compatibilidad con CRT y busca las cadenas de recursos en el módulo especificado por `m_hInstResource` (un miembro de clase de módulo de la aplicación).  
   
-- **StrTraitATL<> </>** | `char` | **TCHAR, ChTraitsOS<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      La clase no requiere compatibilidad con CRT y las búsquedas de cadenas de recursos en el módulo especificado por `m_hInstResource` (un miembro de clase de módulo de la aplicación).  
   
-- **StrTraitMFC<> </>** | `char` | **TCHAR, ChTraitsCRT<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      La clase requiere compatibilidad con CRT y las búsquedas de cadenas de recursos mediante el algoritmo de búsqueda MFC estándar.  
   
-- **StrTraitMFC<> </>** | `char` | **TCHAR, ChTraitsOS<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      La clase no requiere compatibilidad con CRT y las búsquedas de cadenas de recursos mediante el algoritmo de búsqueda MFC estándar.  
   
@@ -167,7 +168,7 @@ public CSimpleStringT<BaseType,
 |[CStringT::Tokenize](#tokenize)|Extrae especifica tokens en una cadena de destino.|  
 |[CStringT::Trim](#trim)|Quita todos los caracteres de espacio en blanco iniciales y finales de la cadena.|  
 |[CStringT::TrimLeft](#trimleft)|Quita los caracteres de espacio en blanco de la cadena.|  
-|[CStringT::TrimRight](#trimright)|Quita los caracteres de espacio en blanco de la cadena de finales.|  
+|[CStringT::TrimRight](#trimright)|Quita los caracteres de espacio en blanco de la cadena finales.|  
   
 ### <a name="operators"></a>Operadores  
   
@@ -201,7 +202,7 @@ public CSimpleStringT<BaseType,
  `CString`, `CStringA`, y `CStringW` se exportan desde la DLL de MFC (MFC90. DLL), nunca en archivos DLL de usuario. Esto se hace para evitar `CStringT` desde que se definió varias veces.  
   
 > [!NOTE]
->  Si encontró errores del vinculador al exportar una `CString`-clase derivada de una extensión MFC DLL en Visual C++ .NET 2002 y se les aplique la solución como se describe en el artículo de Knowledge Base, "Vinculación errores When You Import CString-Derived Classes" (Q309801), debe quitar el código de dicha solución, ya que esto se ha solucionado en Visual C++ .NET 2003. Encontrará artículos de Knowledge Base en el CD-ROM de MSDN Library o en [http://support.microsoft.com/support](http://support.microsoft.com/support).  
+>  Si encontró errores del vinculador al exportar una `CString`-clase derivada de una extensión MFC DLL en Visual C++ .NET 2002 y se les aplique la solución como se describe en el artículo de Knowledge Base, "Vinculación errores When You Import CString-Derived Classes" (Q309801), debe quitar el código de dicha solución, ya que esto se ha solucionado en Visual C++ .NET 2003. Encontrará artículos de Knowledge Base en [http://support.microsoft.com/support](http://support.microsoft.com/support).  
   
  Los tipos de cadena siguientes están disponibles en las aplicaciones basadas en MFC:  
   
@@ -335,7 +336,7 @@ int Collate(PCXSTR psz) const throw();
  La otra cadena utilizada para la comparación.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Cero si las cadenas son idénticas, < 0="" if="" this=""> `CStringT` objeto es menor que `psz`, o 0 > si este `CStringT` objeto es mayor que `psz`.  
+ Cero si las cadenas son idénticas, < 0 si este `CStringT` objeto es menor que `psz`, o 0 > Si este `CStringT` objeto es mayor que `psz`.  
   
 ### <a name="remarks"></a>Comentarios  
  La función de texto genérico `_tcscoll`, que se define en TCHAR. H, se asigna a una `strcoll`, `wcscoll`, o `_mbscoll`, según el juego de caracteres que se define en tiempo de compilación. Cada función realiza una comparación entre mayúsculas y minúsculas de las cadenas según la página de códigos actualmente en uso. Para obtener más información, consulte [strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).  
@@ -352,7 +353,7 @@ int CollateNoCase(PCXSTR psz) const throw();
  La otra cadena utilizada para la comparación.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Cero si las cadenas son idénticas (mayúsculas de minúsculas), < 0="" if="" this=""> `CStringT` objeto es menor que `psz` (mayúsculas de minúsculas), o > 0 si esto `CStringT` objeto es mayor que `psz` (mayúsculas de minúsculas).  
+ Cero si las cadenas son idénticos (mayúsculas y minúsculas y pasa por alto), < 0 si este `CStringT` objeto es menor que `psz` (mayúsculas de minúsculas), o > 0 si esto `CStringT` objeto es mayor que `psz` (mayúsculas de minúsculas).  
   
 ### <a name="remarks"></a>Comentarios  
  La función de texto genérico `_tcscoll`, que se define en TCHAR. H, se asigna a una `stricoll`, `wcsicoll`, o `_mbsicoll`, según el juego de caracteres que se define en tiempo de compilación. Cada función realiza una comparación entre mayúsculas y minúsculas de las cadenas, según la página de códigos actualmente en uso. Para obtener más información, consulte [strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).  
@@ -372,7 +373,7 @@ int Compare(PCXSTR psz) const;
  La otra cadena utilizada para la comparación.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Cero si las cadenas son idénticas, < 0="" if="" this=""> `CStringT` objeto es menor que `psz`, o 0 > si este `CStringT` objeto es mayor que `psz`.  
+ Cero si las cadenas son idénticas, < 0 si este `CStringT` objeto es menor que `psz`, o 0 > Si este `CStringT` objeto es mayor que `psz`.  
   
 ### <a name="remarks"></a>Comentarios  
  La función de texto genérico `_tcscmp`, que se define en TCHAR. H, se asigna a una `strcmp`, `wcscmp`, o `_mbscmp`, según el juego de caracteres que se define en tiempo de compilación. Cada función realiza una comparación entre mayúsculas y minúsculas de las cadenas y no se ve afectada por la configuración regional. Para obtener más información, consulte [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md).  
@@ -396,7 +397,7 @@ int CompareNoCase(PCXSTR psz) const throw();
  La otra cadena utilizada para la comparación.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Cero si las cadenas son idénticas (mayúsculas de minúsculas), <0 if="" this=""></0> `CStringT` objeto es menor que `psz` (mayúsculas de minúsculas), o > 0 si esto `CStringT` objeto es mayor que `psz` (mayúsculas de minúsculas).  
+ Cero si las cadenas son idénticas (mayúsculas de minúsculas), < 0 si esto `CStringT` objeto es menor que `psz` (mayúsculas de minúsculas), o > 0 si esto `CStringT` objeto es mayor que `psz` (mayúsculas de minúsculas).  
   
 ### <a name="remarks"></a>Comentarios  
  La función de texto genérico `_tcsicmp`, que se define en TCHAR. H, se asigna a una `_stricmp`, `_wcsicmp` o `_mbsicmp`, según el juego de caracteres que se define en tiempo de compilación. Cada función realiza una comparación entre mayúsculas y minúsculas de las cadenas. La comparación depende de la `LC_CTYPE` aspecto de la configuración regional, pero no `LC_COLLATE`. Para obtener más información, consulte [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md).  
@@ -553,7 +554,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
  Destruye el objeto `CStringT`.  
   
 ##  <a name="delete"></a>CStringT::Delete  
- Elimina un carácter o caracteres de una cadena que comienza con el carácter en el índice especificado.  
+ Elimina un carácter o caracteres de una cadena a partir de los caracteres en el índice especificado.  
   
 ```  
 int Delete(int iIndex, int nCount = 1);
