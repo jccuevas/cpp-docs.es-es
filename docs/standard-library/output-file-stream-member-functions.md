@@ -12,6 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - output streams, member functions
+f1_keywords: []
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
 author: corob-msft
@@ -31,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 62d10faef9b1958f0ad5cee7b8ff2b4e491c617a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: baa226c95d396232ea8ac545c839352c5df4c22f
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="output-file-stream-member-functions"></a>Funciones de miembro de flujo de archivos de salida
@@ -43,7 +45,7 @@ Las funciones miembro de flujo de salida tienen tres tipos: las que son equivale
 ## <a name="the-open-function-for-output-streams"></a>La función Open para flujos de salida  
  Para usar un flujo de archivos de salida ([ofstream](../standard-library/basic-ofstream-class.md)), debe asociar esa secuencia con un archivo de disco específico en el constructor o con la función **open**. Si usa la función **open**, puede volver a usar el mismo objeto de secuencia con una serie de archivos. En cualquier caso, los argumentos que describen el archivo son los mismos.  
   
- Cuando abre el archivo asociado con un flujo de salida, generalmente especifica una marca **open_mode**. Puede combinar estas marcas, que se definen como enumeradores en la clase `ios`, con el operador OR bit a bit ( &#124; ). Vea [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode) para obtener una lista de los enumeradores.  
+ Cuando abre el archivo asociado con un flujo de salida, generalmente especifica una marca **open_mode**. Puede combinar estas marcas, que se definen como enumeradores en la clase `ios`, con el operador OR bit a bit ( &#124; ). Vea [ios_base::openmode](../standard-library/ios-base-class.md#openmode) para obtener una lista de los enumeradores.  
   
  Tres situaciones comunes de flujo de salida tienen en cuenta las opciones de modo:  
   
@@ -81,7 +83,7 @@ ofile.open("FILE1",
 // FILE2 closed  // When ofile goes out of scope it is destroyed.  
 ```  
   
-## <a name="the-put-function"></a>La función Put  
+## <a name="the-put"></a>La ubicación
  La función **put** escribe un carácter en el flujo de salida. Las dos instrucciones siguientes son las mismas de manera predeterminada, pero la segunda se ve afectada por los argumentos de formato de la secuencia:  
   
 ```  
@@ -91,7 +93,7 @@ cout.put('A');
 cout <<'A'; // Format arguments 'width' and 'fill' apply   
 ```  
   
-## <a name="the-write-function"></a>La función Write  
+## <a name="the-write"></a>La operación de escritura
  La función **write** escribe un bloque de memoria en un flujo de archivos de salida. El argumento de longitud especifica el número de bytes escritos. Este ejemplo crea un flujo de archivos de salida y escribe el valor binario de la estructura `Date` en este:  
   
 ```  
@@ -123,7 +125,7 @@ int main( )
   
  El destructor de flujo de salida cierra automáticamente un archivo de secuencia solo si el constructor o la función miembro **open** ha abierto el archivo. Si pasa al constructor un descriptor de archivo para un archivo que ya está abierto o usa la función miembro **attach**, debe cerrar el archivo explícitamente.  
   
-##  <a name="a-namevclrferrorprocessingfunctionsanchor10a-error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a> Funciones de procesamiento de errores  
+##  <a name="vclrferrorprocessingfunctionsanchor10"></a> Funciones de procesamiento de errores  
  Use estas funciones miembro para probar errores al escribir en una secuencia:  
   
 |Función|Valor devuelto|  

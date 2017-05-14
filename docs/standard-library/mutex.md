@@ -31,17 +31,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 7e6aaf9ae1817da4a532b00fe0bf54afc5e9cd17
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 241d1ad9b3313337b874d5e9a6d39f86f2c71838
+ms.contentlocale: es-es
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 Incluya el encabezado estándar \<mutex> para definir las clases `mutex`, `recursive_mutex`, `timed_mutex` y `recursive_timed_mutex`; las plantillas `lock_guard` y `unique_lock`; y tipos y funciones auxiliares que definen regiones de código de exclusión mutua.  
   
 > [!WARNING]
->  Los tipos de sincronización de la biblioteca estándar de C++ en Visual Studio 2015 se basan en los primitivos de sincronización de Windows y ya no usan ConcRT (salvo cuando la plataforma de destino es Windows XP). Los tipos definidos en \<mutex> no deben usarse con ninguna función o tipo ConcRT.  
+>  A partir de Visual Studio 2015, los tipos de sincronización de la biblioteca estándar de C++ se basan en los primitivos de sincronización de Windows y ya no utilizan ConcRT (salvo cuando la plataforma de destino es Windows XP). Los tipos definidos en \<mutex> no deben usarse con ninguna función o tipo ConcRT.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,7 +53,7 @@ Incluya el encabezado estándar \<mutex> para definir las clases `mutex`, `recur
 ## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
->  En el código que se compila con **/CLR**, este encabezado está bloqueado.  
+>  En el código compilado mediante **/CLR**, este encabezado está bloqueado.  
   
  Las clases `mutex` y `recursive_mutex` son *tipos de exclusión mutua*. Un tipo de exclusión mutua tiene un constructor predeterminado y un destructor que no inicia excepciones. Estos objetos tienen métodos que proporcionan exclusión mutua cuando varios subprocesos intentan bloquear el mismo objeto. En concreto, un tipo de exclusión mutua contiene los métodos `lock`, `try_lock` y `unlock`:  
   
@@ -87,8 +88,8 @@ Incluya el encabezado estándar \<mutex> para definir las clases `mutex`, `recur
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[call_once (Función)](../standard-library/mutex-functions.md#call_once_function)|Proporciona un mecanismo para llamar exactamente una vez durante la ejecución a un objeto especificado que se puede llamar.|  
-|[lock (Función)](../standard-library/mutex-functions.md#lock_function)|Intenta bloquear todos los argumentos sin interbloqueo.|  
+|[call_once](../standard-library/mutex-functions.md#call_once)|Proporciona un mecanismo para llamar exactamente una vez durante la ejecución a un objeto especificado que se puede llamar.|  
+|[lock](../standard-library/mutex-functions.md#lock)|Intenta bloquear todos los argumentos sin interbloqueo.|  
   
 ### <a name="structs"></a>Structs  
   
@@ -103,9 +104,9 @@ Incluya el encabezado estándar \<mutex> para definir las clases `mutex`, `recur
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[adopt_lock (Variable)](../standard-library/mutex-functions.md#adopt_lock_variable)|Representa un objeto que se puede pasar a los constructores para `lock_guard` y `unique_lock` para indicar que el objeto de exclusión mutua que también se pasa al constructor está bloqueado.|  
-|[defer_lock (Variable)](../standard-library/mutex-functions.md#defer_lock_variable)|Representa un objeto que se puede pasar al constructor de `unique_lock` para indicar que el constructor no debería bloquear el objeto de exclusión mutua que también se pasa a él.|  
-|[try_to_lock (Variable)](../standard-library/mutex-functions.md#try_to_lock_variable)|Representa un objeto que se puede pasar al constructor de `unique_lock` para indicar que el constructor debería intentar desbloquear la `mutex` que también se pasa a él sin bloquearla.|  
+|[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Representa un objeto que se puede pasar a los constructores para `lock_guard` y `unique_lock` para indicar que el objeto de exclusión mutua que también se pasa al constructor está bloqueado.|  
+|[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Representa un objeto que se puede pasar al constructor de `unique_lock` para indicar que el constructor no debería bloquear el objeto de exclusión mutua que también se pasa a él.|  
+|[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|Representa un objeto que se puede pasar al constructor de `unique_lock` para indicar que el constructor debería intentar desbloquear la `mutex` que también se pasa a él sin bloquearla.|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)

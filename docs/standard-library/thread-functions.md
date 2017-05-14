@@ -6,22 +6,29 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- thread/std::get_id
+- thread/std::sleep_for
+- thread/std::sleep_until
+- thread/std::swap
+- thread/std::yield
 ms.assetid: bb1aa1ef-fe3f-4e2c-8b6e-e22dbf2f5a19
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: de302b9a2d971b2a39d4ce775799f27dd7244a5c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 3c603ac75955c057cfba009494a9a430fd987a69
+ms.contentlocale: es-es
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltthreadgt-functions"></a>Funciones de &lt;thread&gt;
 ||||  
 |-|-|-|  
-|[get_id](#get_id_function)|[sleep_for](#sleep_for_function)|[sleep_until](#sleep_until_function)|  
-|[swap](#swap_function)|[yield](#yield_function)|  
+|[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|  
+|[swap](#swap)|[yield](#yield)|  
   
-##  <a name="a-namegetidfunctiona--getid"></a><a name="get_id_function"></a>  get_id  
+##  <a name="get_id"></a>  get_id  
  Identifica de forma única el subproceso de ejecución actual.  
   
 ```  
@@ -31,7 +38,7 @@ thread::id this_thread::get_id() noexcept;
 ### <a name="return-value"></a>Valor devuelto  
  Un objeto de tipo [thread::id](../standard-library/thread-class.md) que identifica de forma única el subproceso de ejecución actual.  
   
-##  <a name="a-namesleepforfunctiona--sleepfor"></a><a name="sleep_for_function"></a>  sleep_for  
+##  <a name="sleep_for"></a>  sleep_for  
  Bloquea el subproceso de llamada.  
   
 ```  
@@ -47,7 +54,7 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 ### <a name="remarks"></a>Comentarios  
  La función bloquea el subproceso de llamada al menos durante el tiempo especificado por `Rel_time`. Esta función no produce ninguna excepción.  
   
-##  <a name="a-namesleepuntilfunctiona--sleepuntil"></a><a name="sleep_until_function"></a>  sleep_until  
+##  <a name="sleep_until"></a>  sleep_until  
  Bloquea el subproceso de llamada al menos hasta la hora especificada.  
   
 ```  
@@ -64,7 +71,7 @@ void sleep_until(const xtime *Abs_time);
 ### <a name="remarks"></a>Comentarios  
  Esta función no produce ninguna excepción.  
   
-##  <a name="a-nameswapfunctiona--swap"></a><a name="swap_function"></a>  swap  
+##  <a name="swap"></a>  swap  
  Intercambia los estados de dos objetos `thread`.  
   
 ```  
@@ -81,7 +88,7 @@ void swap(thread& Left, thread& Right) noexcept;
 ### <a name="remarks"></a>Comentarios  
  La función llama a `Left.swap(Right)`.  
   
-##  <a name="a-nameyieldfunctiona--yield"></a><a name="yield_function"></a>  yield  
+##  <a name="yield"></a>  yield  
  Indica al sistema operativo que ejecute otros subprocesos, incluso si el subproceso actual seguiría ejecutándose en condiciones normales.  
   
 ```  

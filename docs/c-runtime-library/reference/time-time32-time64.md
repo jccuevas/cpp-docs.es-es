@@ -60,10 +60,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 377ebdd79e201a2b7a017eb3ce34c6ced0062702
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: bb000bddd8f376587aa7614d135f39e09771ccb7
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="time-time32-time64"></a>time, _time32, _time64
@@ -93,7 +94,7 @@ __time64_t _time64(
 ## <a name="remarks"></a>Comentarios  
  La función `time` devuelve el número de segundos transcurridos desde la medianoche (00:00:00) del 1 de enero de 1970, hora universal coordinada (UTC), según el reloj del sistema. El valor devuelto se almacena en la ubicación que proporciona `timer`. Este parámetro puede ser `NULL`, en cuyo caso no se almacena el valor devuelto.  
   
- De manera predeterminada, `time` es un contenedor para `_time64` y `time_t` equivalente a `__time64_t`. Si necesita forzar el compilador para interpretar `time_t` como el antiguo `time_t` de 32 bits, puede definir `_USE_32BIT_TIME_T`. Esto, sin embargo, no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038; no se permite el uso de esta macro en plataformas de 64 bits.  
+ De manera predeterminada,`time` es un contenedor para `_time64` y `time_t` equivalente a `__time64_t`. Si necesita forzar el compilador para interpretar `time_t` como el antiguo `time_t`de 32 bits, puede definir `_USE_32BIT_TIME_T`. Esto, sin embargo, no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038; no se permite el uso de esta macro en plataformas de 64 bits.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -254,9 +255,6 @@ Christmas            Sat Dec 25 12:00:00 1993
   
 Today is Friday, day 25 of April in the year 2003.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Administración del tiempo](../../c-runtime-library/time-management.md)   

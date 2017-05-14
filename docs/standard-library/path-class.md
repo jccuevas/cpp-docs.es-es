@@ -31,10 +31,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: b6f1fb2eacdc12857978d03ccbd98ee5da3047e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: d1739ef33378358a9d195b79c1ba7ace7bf54acf
+ms.contentlocale: es-es
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="path-class"></a>path (Clase)
@@ -612,7 +613,7 @@ wstring wstring() const;
  Convierte la secuencia almacenada en mypath a la codificación preferida de sistema host para una secuencia wchar_t y la devuelve almacenada en un objeto de tipo wstring.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** filesystem  
+ **Encabezado:** \<filesystem >  
   
  **Espacio de nombres:** std::experimental::filesystem
   

@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 657c03ebed8e077e3a6c2eac96eae264f4a19998
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2b41d207d82e48430159812391afecb49d8b00b5
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
@@ -100,9 +101,6 @@ typedef void ( *terminate_function )( );
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [terminate](../../c-runtime-library/reference/terminate-crt.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Rutinas para el control de excepciones](../../c-runtime-library/exception-handling-routines.md)   

@@ -1,32 +1,59 @@
 ---
-title: "numpunct (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xlocnum/std::numpunct"
-  - "std::numpunct"
-  - "numpunct"
-  - "std.numpunct"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "numpunct (clase)"
+title: numpunct (Clase) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xlocnum/std::numpunct
+- numpunct
+- locale/std::numpunct::char_type
+- locale/std::numpunct::string_type
+- locale/std::numpunct::decimal_point
+- locale/std::numpunct::do_decimal_point
+- locale/std::numpunct::do_falsename
+- locale/std::numpunct::do_grouping
+- locale/std::numpunct::do_thousands_sep
+- locale/std::numpunct::do_truename
+- locale/std::numpunct::falsename
+- locale/std::numpunct::grouping
+- locale/std::numpunct::thousands_sep
+- locale/std::numpunct::truename
+dev_langs:
+- C++
+helpviewer_keywords:
+- numpunct class
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# numpunct (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 56dbd3ed6e655ec5f431d383864f949925baaf5c
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
+---
+# <a name="numpunct-class"></a>numpunct (Clase)
 Clase de plantilla que describe un objeto que puede actuar como faceta de la configuración regional para describir las secuencias de tipo `CharType` usadas para representar información sobre el formato y la puntuación de expresiones numéricas y booleanas.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -41,42 +68,42 @@ class numpunct : public locale::facet;
  Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.  
   
 ## <a name="remarks"></a>Comentarios  
- Como ocurre con cualquier faceta de configuración regional, el identificador de objeto estático tiene un valor almacenado inicial de cero. El primer intento para tener acceso a su valor almacenado almacena un valor positivo único en **id.**  
+ Como ocurre con cualquier faceta de configuración regional, el identificador de objeto estático tiene un valor almacenado inicial de cero. El primer intento de acceso a su valor almacenado almacena un valor positivo único en **id.**  
   
 ### <a name="constructors"></a>Constructores  
   
 |||  
 |-|-|  
-|[numpunct](#numpunct__numpunct)|Constructor para los objetos de tipo `numpunct`.|  
+|[numpunct](#numpunct)|Constructor para los objetos de tipo `numpunct`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Definiciones de tipo  
   
 |||  
 |-|-|  
-|[char_type](#numpunct__char_type)|Tipo que se usa para describir un carácter empleado por una configuración regional.|  
-|[STRING_TYPE](#numpunct__string_type)|Tipo que describe una cadena que contiene caracteres de tipo `CharType`.|  
+|[char_type](#char_type)|Tipo que se usa para describir un carácter empleado por una configuración regional.|  
+|[string_type](#string_type)|Tipo que describe una cadena que contiene caracteres de tipo `CharType`.|  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |||  
 |-|-|  
-|[decimal_point](#numpunct__decimal_point)|Devuelve un elemento específico de la configuración regional que se va a usar como separador decimal.|  
-|[do_decimal_point](#numpunct__do_decimal_point)|Función miembro virtual protegida a la que se llama para devolver un elemento específico de la configuración regional que se va a usar como separador decimal.|  
-|[do_falsename](#numpunct__do_falsename)|Función miembro virtual protegida a la que se llama para devolver una cadena que se va a usar como representación de texto del valor `false`.|  
-|[do_grouping](#numpunct__do_grouping)|Función miembro virtual protegida a la que se llama para devolver una regla específica de la configuración regional con el fin de determinar cómo se agrupan los dígitos a la izquierda de cualquier separador decimal.|  
-|[do_thousands_sep](#numpunct__do_thousands_sep)|Función miembro virtual protegida a la que se llama para devolver un elemento específico de la configuración regional que se va a usar como separador de miles.|  
-|[do_truename](#numpunct__do_truename)|Función miembro virtual protegida a la que se llama para devolver una cadena que se va a usar como representación de texto del valor `true`.|  
-|[falsename](#numpunct__falsename)|Devuelve una cadena que se va a usar como representación de texto del valor `false`.|  
-|[agrupación](#numpunct__grouping)|Devuelve una regla específica de la configuración regional para determinar cómo se agrupan los dígitos a la izquierda del separador decimal.|  
-|[thousands_sep](#numpunct__thousands_sep)|Devuelve un elemento específico de la configuración regional que se va a usar como separador de miles.|  
-|[truename](#numpunct__truename)|Devuelve una cadena que se va a usar como representación de texto del valor `true`.|  
+|[decimal_point](#decimal_point)|Devuelve un elemento específico de la configuración regional que se va a usar como separador decimal.|  
+|[do_decimal_point](#do_decimal_point)|Función miembro virtual protegida a la que se llama para devolver un elemento específico de la configuración regional que se va a usar como separador decimal.|  
+|[do_falsename](#do_falsename)|Función miembro virtual protegida a la que se llama para devolver una cadena que se va a usar como representación de texto del valor `false`.|  
+|[do_grouping](#do_grouping)|Función miembro virtual protegida a la que se llama para devolver una regla específica de la configuración regional con el fin de determinar cómo se agrupan los dígitos a la izquierda de cualquier separador decimal.|  
+|[do_thousands_sep](#do_thousands_sep)|Función miembro virtual protegida a la que se llama para devolver un elemento específico de la configuración regional que se va a usar como separador de miles.|  
+|[do_truename](#do_truename)|Función miembro virtual protegida a la que se llama para devolver una cadena que se va a usar como representación de texto del valor `true`.|  
+|[falsename](#falsename)|Devuelve una cadena que se va a usar como representación de texto del valor `false`.|  
+|[grouping](#grouping)|Devuelve una regla específica de la configuración regional para determinar cómo se agrupan los dígitos a la izquierda del separador decimal.|  
+|[thousands_sep](#thousands_sep)|Devuelve un elemento específico de la configuración regional que se va a usar como separador de miles.|  
+|[truename](#truename)|Devuelve una cadena que se va a usar como representación de texto del valor `true`.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** \< configuración regional>  
+ **Encabezado:** \<locale>  
   
  **Espacio de nombres:** std  
   
-##  <a name="a-namenumpunctchartypea-numpunctchartype"></a><a name="numpunct__char_type"></a>  numpunct:: char_type  
+##  <a name="char_type"></a> numpunct::char_type  
  Tipo que se usa para describir un carácter empleado por una configuración regional.  
   
 ```  
@@ -84,9 +111,9 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El tipo es un sinónimo del parámetro de plantilla **CharType.**  
+ El tipo es un sinónimo del parámetro de plantilla **CharType**.  
   
-##  <a name="a-namenumpunctdecimalpointa-numpunctdecimalpoint"></a><a name="numpunct__decimal_point"></a>  numpunct:: decimal_point  
+##  <a name="decimal_point"></a> numpunct::decimal_point  
  Devuelve un elemento específico de la configuración regional que se va a usar como separador decimal.  
   
 ```  
@@ -94,14 +121,14 @@ CharType decimal_point() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un elemento de configuración regional a usar como separador decimal.  
+ Un elemento específico de la configuración regional que se va a usar como separador decimal.  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro devuelve [do_decimal_point](#numpunct__do_decimal_point).  
+ La función miembro devuelve [do_decimal_point](#do_decimal_point).  
   
 ### <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // numpunct_decimal_point.cpp  
 // compile with: /EHsc  
 #include <locale>  
@@ -126,7 +153,7 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .  
 ```  
   
-##  <a name="a-namenumpunctdodecimalpointa-numpunctdodecimalpoint"></a><a name="numpunct__do_decimal_point"></a>  numpunct:: do_decimal_point  
+##  <a name="do_decimal_point"></a> numpunct::do_decimal_point  
  Función miembro virtual protegida a la que se llama para devolver un elemento específico de la configuración regional que se va a usar como separador decimal.  
   
 ```  
@@ -134,28 +161,28 @@ virtual CharType do_decimal_point() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un elemento de configuración regional a usar como separador decimal.  
+ Un elemento específico de la configuración regional que se va a usar como separador decimal.  
   
 ### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [decimal_point](#numpunct__decimal_point), donde se llama a la función miembro virtual `decimal_point`.  
+  Vea el ejemplo de [decimal_point](#decimal_point), donde `decimal_point` llama a la función miembro virtual.  
   
-##  <a name="a-namenumpunctdofalsenamea-numpunctdofalsename"></a><a name="numpunct__do_falsename"></a>  numpunct:: do_falsename  
- La función miembro virtual protegida devuelve una secuencia que se utilizará como una representación de texto del valor **false**.  
+##  <a name="do_falsename"></a> numpunct::do_falsename  
+ La función miembro virtual protegida devuelve una secuencia que se va a usar como una representación de texto del valor **false**.  
   
 ```  
 virtual string_type do_falsename() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una cadena que contiene una secuencia que se utilizará como una representación de texto del valor **false**.  
+ Una cadena que contiene una secuencia que se va a usar como una representación de texto del valor **false**.  
   
 ### <a name="remarks"></a>Comentarios  
  La función miembro devuelve la cadena "false" para representar el valor **false** en todas las configuraciones regionales.  
   
 ### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [falsename](#numpunct__falsename), donde se llama a la función miembro virtual `falsename`.  
+  Vea el ejemplo de [falsename](#falsename), donde `falsename` llama a la función miembro virtual.  
   
-##  <a name="a-namenumpunctdogroupinga-numpunctdogrouping"></a><a name="numpunct__do_grouping"></a>  numpunct:: do_grouping  
+##  <a name="do_grouping"></a> numpunct::do_grouping  
  Función miembro virtual protegida a la que se llama para devolver una regla específica de la configuración regional con el fin de determinar cómo se agrupan los dígitos a la izquierda de cualquier separador decimal.  
   
 ```  
@@ -163,15 +190,15 @@ virtual string do_grouping() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una regla específica de la configuración regional para determinar cómo se agrupan los dígitos a la izquierda del separador decimal.  
+ Una regla específica de la configuración regional para determinar cómo se agrupan los dígitos a la izquierda de cualquier separador decimal.  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro virtual protegida devuelve una regla específica de la configuración regional para determinar cómo se agrupan los dígitos a la izquierda de cualquier separador decimal. La codificación es el mismo que para **lconv::grouping**.  
+ La función miembro virtual protegida devuelve una regla específica de la configuración regional para determinar cómo se agrupan los dígitos a la izquierda de cualquier separador decimal. La codificación es la misma que para **lconv::grouping**.  
   
 ### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [agrupación](#numpunct__grouping), donde se llama a la función miembro virtual **agrupación**.  
+  Vea el ejemplo de [grouping](#grouping), donde **grouping** llama a la función miembro virtual.  
   
-##  <a name="a-namenumpunctdothousandssepa-numpunctdothousandssep"></a><a name="numpunct__do_thousands_sep"></a>  numpunct:: do_thousands_sep  
+##  <a name="do_thousands_sep"></a> numpunct::do_thousands_sep  
  Función miembro virtual protegida a la que se llama para devolver un elemento específico de la configuración regional que se va a usar como separador de miles.  
   
 ```  
@@ -182,44 +209,44 @@ virtual CharType do_thousands_sep() const;
  Devuelve un elemento específico de la configuración regional que se va a usar como separador de miles.  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro virtual protegida devuelve un elemento específico de la configuración regional de tipo **CharType** a utilizar como separador de grupos a la izquierda del separador decimal.  
+ La función miembro virtual protegida devuelve un elemento específico de la configuración regional de tipo **CharType** que se va a usar como un separador de grupo a la izquierda de cualquier separador decimal.  
   
 ### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [thousands_sep](#numpunct__thousands_sep), donde se llama a la función miembro virtual `thousands_sep`.  
+  Vea el ejemplo de [thousands_sep](#thousands_sep), donde `thousands_sep` llama a la función miembro virtual.  
   
-##  <a name="a-namenumpunctdotruenamea-numpunctdotruename"></a><a name="numpunct__do_truename"></a>  numpunct:: do_truename  
- Una función miembro virtual que se llama para devolver una cadena que se utiliza como una representación de texto del valor protegida **true**.  
+##  <a name="do_truename"></a> numpunct::do_truename  
+ Una función miembro virtual protegida a la que se llama para devolver una cadena que se va a usar como una representación de texto del valor **true**.  
   
 ```  
 virtual string_type do_truename() const;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Una cadena que se utiliza como una representación de texto del valor **true**.  
+ Una cadena que se va a usar como una representación de texto del valor **true**.  
   
  Todas las configuraciones regionales devuelven una cadena "true" para representar el valor **true**.  
   
 ### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [truename](#numpunct__truename), donde se llama a la función miembro virtual `truename`.  
+  Vea el ejemplo de [truename](#truename), donde `truename` llama a la función miembro virtual.  
   
-##  <a name="a-namenumpunctfalsenamea-numpunctfalsename"></a><a name="numpunct__falsename"></a>  numpunct:: falsename  
- Devuelve una cadena que se utiliza como una representación de texto del valor **false**.  
+##  <a name="falsename"></a> numpunct::falsename  
+ Devuelve una cadena que se va a usar como una representación de texto del valor **false**.  
   
 ```  
 string_type falsename() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una cadena que contiene una secuencia de **CharType**para utilizar como una representación de texto del valor **false**.  
+ Una cadena que contiene una secuencia de **CharType**s que se va a usar como una representación de texto del valor **false**.  
   
 ### <a name="remarks"></a>Comentarios  
  La función miembro devuelve la cadena "false" para representar el valor **false** en todas las configuraciones regionales.  
   
- La función miembro devuelve [do_falsename](#numpunct__do_falsename).  
+ La función miembro devuelve [do_falsename](#do_falsename).  
   
 ### <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // numpunct_falsename.cpp  
 // compile with: /EHsc  
 #include <locale>  
@@ -248,7 +275,7 @@ French_France.1252 truename true
 French_France.1252 falsename false  
 ```  
   
-##  <a name="a-namenumpunctgroupinga-numpunctgrouping"></a><a name="numpunct__grouping"></a>  numpunct:: Grouping  
+##  <a name="grouping"></a> numpunct::grouping  
  Devuelve una regla específica de la configuración regional para determinar cómo se agrupan los dígitos a la izquierda del separador decimal.  
   
 ```  
@@ -256,14 +283,14 @@ string grouping() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una regla específica de la configuración regional para determinar cómo se agrupan los dígitos a la izquierda del separador decimal.  
+ Una regla específica de la configuración regional para determinar cómo se agrupan los dígitos a la izquierda de cualquier separador decimal.  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro devuelve [do_grouping](#numpunct__do_grouping).  
+ La función miembro devuelve [do_grouping](#do_grouping).  
   
 ### <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // numpunct_grouping.cpp  
 // compile with: /EHsc  
 #include <locale>  
@@ -291,7 +318,7 @@ German_Germany.1252 international grouping:
  the 0th group to the left of the radix character is of size 3  
 ```  
   
-##  <a name="a-namenumpunctnumpuncta-numpunctnumpunct"></a><a name="numpunct__numpunct"></a>  numpunct:: numpunct  
+##  <a name="numpunct"></a> numpunct::numpunct  
  Constructor para los objetos de tipo `numpunct`.  
   
 ```  
@@ -300,22 +327,22 @@ explicit numpunct(size_t _Refs = 0);
   
 ### <a name="parameters"></a>Parámetros  
  `_Refs`  
- Valor entero que se utiliza para especificar el tipo de administración de memoria para el objeto.  
+ Valor entero que se usa para especificar el tipo de administración de memoria del objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- Los valores posibles de la `_Refs` parámetro y su importancia son:  
+ Los valores posibles del parámetro `_Refs` y su importancia son:  
   
--   0: la duración del objeto administra las configuraciones regionales que lo contienen.  
+-   0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.  
   
--   1: se debe administrar manualmente la duración del objeto.  
+-   1: la vigencia del objeto se debe administrar de manera manual.  
   
--   \> 0: no se definen estos valores.  
+-   \>1: no se definen estos valores.  
   
- No hay ejemplos directos son posibles, porque está protegido el destructor.  
+ No es posible mostrar ejemplos directos, porque el destructor está protegido.  
   
- El constructor inicializa su objeto base con **locale::**[faceta](../standard-library/locale-class.md#facet_class)( `_Refs`).  
+ El constructor inicializa su objeto base con **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
-##  <a name="a-namenumpunctstringtypea-numpunctstringtype"></a><a name="numpunct__string_type"></a>  numpunct:: STRING_TYPE  
+##  <a name="string_type"></a> numpunct::string_type  
  Un tipo que describe una cadena que contiene caracteres de tipo **CharType**.  
   
 ```  
@@ -325,7 +352,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 ### <a name="remarks"></a>Comentarios  
  El tipo describe una especialización de clase de plantilla [basic_string](../standard-library/basic-string-class.md) cuyos objetos pueden almacenar copias de las secuencias de puntuación.  
   
-##  <a name="a-namenumpunctthousandssepa-numpunctthousandssep"></a><a name="numpunct__thousands_sep"></a>  numpunct:: thousands_sep  
+##  <a name="thousands_sep"></a> numpunct::thousands_sep  
  Devuelve un elemento específico de la configuración regional que se va a usar como separador de miles.  
   
 ```  
@@ -333,14 +360,14 @@ CharType thousands_sep() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un elemento de configuración regional que se usará como miles separador.  
+ Un elemento específico de la configuración regional que se va a usar como separador de miles.  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro devuelve [do_thousands_sep](#numpunct__do_thousands_sep).  
+ La función miembro devuelve [do_thousands_sep](#do_thousands_sep).  
   
 ### <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // numpunct_thou_sep.cpp  
 // compile with: /EHsc  
 #include <locale>  
@@ -365,24 +392,24 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .  
 ```  
   
-##  <a name="a-namenumpuncttruenamea-numpuncttruename"></a><a name="numpunct__truename"></a>  numpunct:: truename  
- Devuelve una cadena que se utiliza como una representación de texto del valor **true**.  
+##  <a name="truename"></a> numpunct::truename  
+ Devuelve una cadena que se va a usar como representación de texto del valor **true**.  
   
 ```  
 string_type falsename() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una cadena que se utiliza como una representación de texto del valor **true**.  
+ Una cadena que se va a usar como una representación de texto del valor **true**.  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro devuelve [do_truename](#numpunct__do_truename).  
+ La función miembro devuelve [do_truename](#do_truename).  
   
  Todas las configuraciones regionales devuelven una cadena "true" para representar el valor **true**.  
   
 ### <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // numpunct_truename.cpp  
 // compile with: /EHsc  
 #include <locale>  
@@ -412,7 +439,8 @@ French_France.1252 falsename false
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [\< configuración regional>](../standard-library/locale.md)   
- [Facet (clase)](../standard-library/locale-class.md#facet_class)   
+ [\<locale>](../standard-library/locale.md)   
+ [facet (Clase)](../standard-library/locale-class.md#facet_class)   
  [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 

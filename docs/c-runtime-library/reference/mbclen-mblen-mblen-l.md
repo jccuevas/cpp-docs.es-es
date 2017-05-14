@@ -63,10 +63,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c0a3a001234439314f682984b01496aff960b366
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f8e2a1bf9282298d3d41183c0d335e49e89f1b42
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
@@ -106,7 +107,7 @@ int _mblen_l(
  Configuración regional que se va a usar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `_mbclen` devuelve 1 o 2, en función de que el carácter multibyte `c` tenga una longitud de 1 o 2 bytes. `_mbclen` no devuelve ningún error. Si `mbstr` no es `NULL`, `mblen` devuelve la longitud, en bytes, del carácter multibyte. Si `mbstr` es `NULL` o señala al carácter nulo de caracteres anchos, `mblen` devuelve 0. Si el objeto al que señala `mbstr` no forma un carácter multibyte válido en los primeros `count` caracteres, `mblen` devuelve –1.  
+ `_mbclen` devuelve 1 o 2, en función de que el carácter multibyte `c` tenga una longitud de 1 o 2 bytes. `_mbclen` no devuelve ningún error. Si `mbstr` no es `NULL`, `mblen` devuelve la longitud, en bytes, del carácter multibyte. Si `mbstr` es `NULL` o señala al carácter nulo de caracteres anchos, `mblen` devuelve 0. Si el objeto que `mbstr` puntos que no forman un carácter multibyte válido en los primeros `count` caracteres, `mblen` devuelve -1.  
   
 ## <a name="remarks"></a>Comentarios  
  La función `_mbclen` devuelve la longitud, en bytes, del carácter multibyte `c`. Si `c` no señala al byte inicial de un carácter multibyte determinado por una llamada implícita a `_ismbblead`, el resultado de `_mbclen` es imprevisible.  
@@ -171,9 +172,6 @@ Convert wide character to multibyte character:
 Length in bytes of multibyte character 61: 1  
 Length in bytes of NULL multibyte character 0: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de caracteres](../../c-runtime-library/character-classification.md)   
