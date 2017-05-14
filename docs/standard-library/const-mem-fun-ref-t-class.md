@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::const_mem_fun_ref_t
 - const_mem_fun_ref_t
-- std.const_mem_fun_ref_t
 - xfunctional/std::const_mem_fun_ref_t
 dev_langs:
 - C++
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: cb5fd219cb69b7cd6edd2d5eb5b9abd0ab819369
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: f156aeb90b3569aa1fd65f06b520f294f0869541
+ms.contentlocale: es-es
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="constmemfunreft-class"></a>const_mem_fun_ref_t (Clase)
@@ -71,7 +70,7 @@ class const_mem_fun_ref_t
  La clase de plantilla almacena una copia de `Pm`, que debe ser un puntero a una función miembro de clase **Type**, en un objeto miembro privado. Define su función miembro `operator()` para que devuelva ( **left**.\* `Pm`)() **const**.  
   
 ## <a name="example"></a>Ejemplo  
- Normalmente, no se usa el constructor de `const_mem_fun_ref_t` directamente; la función auxiliar `mem_fun_ref` se usa para adaptar funciones miembro. Vea [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref_function) para obtener un ejemplo de cómo usar adaptadores de funciones miembro.  
+ Normalmente, no se usa el constructor de `const_mem_fun_ref_t` directamente; la función auxiliar `mem_fun_ref` se usa para adaptar funciones miembro. Vea [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref) para obtener un ejemplo de cómo usar adaptadores de funciones miembro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** \<functional>  

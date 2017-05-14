@@ -1,53 +1,70 @@
 ---
-title: "_chdrive | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_chdrive"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "chdrive"
-  - "_chdrive"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_chdrive (función)"
-  - "chdrive (función)"
-  - "unidades, cambiar"
+title: _chdrive | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _chdrive
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- chdrive
+- _chdrive
+dev_langs:
+- C++
+helpviewer_keywords:
+- drives, changing
+- _chdrive function
+- chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _chdrive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 946f5bee25b093d024eecc030527be39ad1a0162
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
+---
+# <a name="chdrive"></a>_chdrive
 Cambia la unidad de trabajo actual.  
   
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución.  Para obtener más información, vea [Funciones de CRT no admitidas con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int _chdrive(   
@@ -55,40 +72,37 @@ int _chdrive(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `drive`  
- Entero de 1 a 26 que especifica la unidad de trabajo actual \(1\=A, 2\=B, etc.\).  
+ Entero de 1 a 26 que especifica la unidad de trabajo actual (1=A, 2=B, etc.).  
   
-## Valor devuelto  
- Cero \(0\) si la unidad de trabajo actual se ha cambiado correctamente; de lo contrario, \-1.  
+## <a name="return-value"></a>Valor devuelto  
+ Cero (0) si la unidad de trabajo actual se ha cambiado correctamente; de lo contrario, -1.  
   
-## Comentarios  
- Si `drive` no está en el intervalo comprendido entre 1 y 26, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, la función **\_chdrive** devuelve \-1, `errno` se establece en `EACCES` y `_doserrno` se establece en `ERROR_INVALID_DRIVE`.  
+## <a name="remarks"></a>Comentarios  
+ Si `drive` no está comprendido en el rango de 1 a 26, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función **_chdrive** devuelve -1, `errno` se establece en `EACCES` y `_doserrno`, en `ERROR_INVALID_DRIVE`.  
   
- La función **\_chdrive** no es segura para subprocesos porque depende de la función **SetCurrentDirectory**, que a su vez no es segura para subprocesos.  Para usar **\_chdrive** de forma segura en una aplicación multiproceso, debe proporcionar su propia sincronización de subprocesos.  Para obtener más información, vaya a [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=150542) y busque **SetCurrentDirectory**.  
+ La función **_chdrive** no es segura para subprocesos porque depende de la función **SetCurrentDirectory**, que a su vez no es segura para subprocesos. Para usar **_chdrive** de forma segura en una aplicación multiproceso, debe proporcionar su propia sincronización de subprocesos. Para obtener más información, vaya a [Catálogo de referencia y API de Microsoft](http://go.microsoft.com/fwlink/?LinkID=150542) y busque **SetCurrentDirectory**.  
   
- La función **\_chdrive** solo cambia la unidad de trabajo actual; **\_chdir** cambia el directorio de trabajo actual.  
+ La función **_chdrive** solo cambia la unidad de trabajo actual; **_chdir** cambia el directorio de trabajo actual.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|**\_chdrive**|\<direct.h\>|  
+|-------------|---------------------|  
+|**_chdrive**|\<direct.h>|  
   
- Para obtener más información, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Ejemplo  
- Consulte el ejemplo de [\_getdrive](../../c-runtime-library/reference/getdrive.md).  
+## <a name="example"></a>Ejemplo  
+ Consulte el ejemplo de [_getdrive](../../c-runtime-library/reference/getdrive.md).  
   
-## Equivalente en .NET Framework  
- [System::Environment::CurrentDirectory](https://msdn.microsoft.com/en-us/library/system.environment.currentdirectory.aspx)  
-  
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Control de directorio](../../c-runtime-library/directory-control.md)   
- [\_chdir, \_wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
- [\_fullpath, \_wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [\_getcwd, \_wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
- [\_getdrive](../../c-runtime-library/reference/getdrive.md)   
- [\_mkdir, \_wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
- [\_rmdir, \_wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)   
- [system, \_wsystem](../../c-runtime-library/reference/system-wsystem.md)
+ [_chdir, _wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
+ [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
+ [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
+ [_getdrive](../../c-runtime-library/reference/getdrive.md)   
+ [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
+ [_rmdir, _wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)   
+ [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

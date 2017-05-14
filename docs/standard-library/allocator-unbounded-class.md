@@ -1,57 +1,76 @@
 ---
-title: "allocator_unbounded (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdext::allocators::allocator_unbounded"
-  - "allocator_unbounded"
-  - "allocators/stdext::allocator_unbounded"
-  - "allocators::allocator_unbounded"
-  - "allocators/stdext::allocators::allocator_unbounded"
-  - "allocators.allocator_unbounded"
-  - "stdext.allocators.allocator_unbounded"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "allocator_unbounded (clase)"
+title: allocator_unbounded (Clase) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- stdext::allocators::allocator_unbounded
+- allocator_unbounded
+- allocators/stdext::allocator_unbounded
+- allocators::allocator_unbounded
+- allocators/stdext::allocators::allocator_unbounded
+dev_langs:
+- C++
+helpviewer_keywords:
+- allocator_unbounded class
 ms.assetid: facbaea1-b320-4d99-96da-039b2642f352
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# allocator_unbounded (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: e12afb0991da1930ce9b07eb923a74719266fb95
+ms.contentlocale: es-es
+ms.lasthandoff: 04/19/2017
 
-Describe un objeto que administra la asignación de almacenamiento y liberar para los objetos de `Type` escribe utilizando la memoria caché de [cache\_freelist](../standard-library/cache-freelist-class.md) escrito con una longitud administrada por [max\_unbounded](../standard-library/max-unbounded-class.md).  
+---
+# <a name="allocatorunbounded-class"></a>allocator_unbounded (Clase)
+Describe un objeto que administra la asignación de almacenamiento y la liberación de objetos de tipo `Type` mediante una memoria caché de tipo [cache_freelist](../standard-library/cache-freelist-class.md) con una longitud administrada por [max_unbounded](../standard-library/max-unbounded-class.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
-```  
+```
 template <class Type>  
-    class allocator_unbounded;  
+class allocator_unbounded;
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|`Type`|El tipo de elementos asignado por el asignador.|  
+|`Type`|Tipo de elementos que asigna el asignador.|  
   
-## Comentarios  
- La macro de [ALLOCATOR\_DECL](../Topic/ALLOCATOR_DECL%20\(%3Callocators%3E\).md) pasa esta clase como parámetro de `name` en la instrucción siguiente: `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_unbounded), SYNC_DEFAULT, allocator_unbounded);`  
+## <a name="remarks"></a>Comentarios  
+ La macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) pasa esta clase como el parámetro `name` de la instrucción siguiente: `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_unbounded), SYNC_DEFAULT, allocator_unbounded);`  
   
-## Requisitos  
- asignadores \<de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<allocators>  
   
  **Espacio de nombres:** stdext  
   
-## Vea también  
- [\<allocators\>](../standard-library/allocators-header.md)
+## <a name="see-also"></a>Vea también  
+ [\<allocators>](../standard-library/allocators-header.md)
+
+
+
+

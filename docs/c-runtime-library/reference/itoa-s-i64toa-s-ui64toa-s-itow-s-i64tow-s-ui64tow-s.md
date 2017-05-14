@@ -1,84 +1,101 @@
 ---
-title: "_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ui64tow_s"
-  - "_itoa_s"
-  - "_itow_s"
-  - "_ui64toa_s"
-  - "_i64tow_s"
-  - "_i64toa_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "i64tot_s"
-  - "itow_s"
-  - "_ui64tow_s"
-  - "_itow_s"
-  - "ui64tot_s"
-  - "_ui64toa_s"
-  - "itoa_s"
-  - "_i64tow_s"
-  - "_i64tot_s"
-  - "_itot_s"
-  - "_i64toa_s"
-  - "_itoa_s"
-  - "ui64toa_s"
-  - "i64toa_s"
-  - "_ui64tot_s"
-  - "i64tow_s"
-  - "itot_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_i64toa_s (función)"
-  - "_i64tot_s (función)"
-  - "_i64tow_s (función)"
-  - "_itoa_s (función)"
-  - "_itot_s (función)"
-  - "_itow_s (función)"
-  - "_ui64toa_s (función)"
-  - "_ui64tot_s (función)"
-  - "_ui64tow_s (función)"
-  - "convertir enteros"
-  - "convertir números, a cadenas"
-  - "i64toa_s (función)"
-  - "i64tow_s (función)"
-  - "enteros, convertir"
-  - "itoa_s (función)"
-  - "itow_s (función)"
-  - "ui64toa_s (función)"
+title: _itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ui64tow_s
+- _itoa_s
+- _itow_s
+- _ui64toa_s
+- _i64tow_s
+- _i64toa_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- i64tot_s
+- itow_s
+- _ui64tow_s
+- _itow_s
+- ui64tot_s
+- _ui64toa_s
+- itoa_s
+- _i64tow_s
+- _i64tot_s
+- _itot_s
+- _i64toa_s
+- _itoa_s
+- ui64toa_s
+- i64toa_s
+- _ui64tot_s
+- i64tow_s
+- itot_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ui64toa_s function
+- _itow_s function
+- _i64tow_s function
+- _itot_s function
+- converting integers
+- itow_s function
+- i64toa_s function
+- _ui64tow_s function
+- integers, converting
+- _i64tot_s function
+- itoa_s function
+- _itoa_s function
+- ui64toa_s function
+- i64tow_s function
+- converting numbers, to strings
+- _ui64tot_s function
+- _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
 caps.latest.revision: 28
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# _itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7e163c78f3a6b011c8670ad71277fb6770935066
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
-Convierte un entero en cadena.  Estas versiones de [\_itoa, \_i64toa, \_ui64toa, \_itow, \_i64tow, \_ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md) tienen mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="itoas-i64toas-ui64toas-itows-i64tows-ui64tows"></a>_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s
+Convierte un entero en cadena. Estas son versiones de [_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 errno_t _itoa_s(  
@@ -131,64 +148,64 @@ errno_t _itow_s(
 ); // C++ only  
 ```  
   
-#### Parámetros  
- \[in\] `value`  
+#### <a name="parameters"></a>Parámetros  
+ [in] `value`  
  Número que se va a convertir.  
   
- \[out\] `buffer`  
- Relleno con el resultado de la conversión.  
+ [out] `buffer`  
+ Se rellena con el resultado de la conversión.  
   
- \[in\] `sizeInCharacters`  
- Tamaño del búfer en caracteres o caracteres anchos de solo\- byte.  
+ [in] `sizeInCharacters`  
+ Tamaño del búfer en caracteres de un solo byte o en caracteres anchos.  
   
- \[in\] `radix`  
+ [in] `radix`  
  Base de `value`; debe estar comprendido entre 2 y 36.  
   
-## Valor devuelto  
- Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error.  Si se aplican las condiciones de cualquiera de las siguientes, la función invoca un controlador no válido de parámetro, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  
+## <a name="return-value"></a>Valor devuelto  
+ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error. Si se cumple alguna de las siguientes condiciones, la función invoca un controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  
   
-### Condiciones de error  
+### <a name="error-conditions"></a>Condiciones de error  
   
-|predeterminado|buffer|sizeInCharacters|base|Devolución|  
-|--------------------|------------|----------------------|----------|----------------|  
-|any|`NULL`|any|any|`EINVAL`|  
-|any|any|\<\=0|any|`EINVAL`|  
-|any|any|\<\= longitud de la cadena de resultado necesaria|any|`EINVAL`|  
-|any|any|any|`radix` \< 2 o `radix` \> 36|`EINVAL`|  
+|value|buffer|sizeInCharacters|radix|Valor devuelto|  
+|-----------|------------|----------------------|-----------|------------|  
+|cualquiera|`NULL`|cualquiera|cualquiera|`EINVAL`|  
+|cualquiera|any|<=0|any|`EINVAL`|  
+|cualquiera|any|<= longitud de la cadena de resultados necesaria|cualquiera|`EINVAL`|  
+|cualquiera|cualquiera|any|`radix` < 2 o `radix` > 36|`EINVAL`|  
   
  **Problemas de seguridad**  
   
- Estas funciones pueden generar una infracción de acceso si `buffer` no señala memoria válida y no es `NULL`, o si la longitud del búfer no es de tiempo suficiente para contener la cadena de resultado.  
+ Estas funciones pueden generar una infracción de acceso si `buffer` no apunta a la memoria válida y no es `NULL`, o bien si la longitud del búfer no es suficientemente larga para albergar la cadena del resultado.  
   
-## Comentarios  
- Salvo los parámetros y el valor devuelto, las funciones de `_itoa_s` tienen el mismo comportamiento que corresponder versiones menos seguro.  
+## <a name="remarks"></a>Comentarios  
+ Salvo por los parámetros y el valor devuelto, las funciones `_itoa_s` tienen el mismo comportamiento que las versiones menos seguras correspondientes.  
   
- En C\+\+, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer \(lo que elimina la necesidad de especificar un argumento de tamaño\) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes.  Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
   
- Las versiones de depuración de estas funciones rellenan primero el búfer con 0xFD.  Para deshabilitar este comportamiento, use [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ Las versiones de depuración de estas funciones rellenan primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-### Asignaciones de rutina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
-|Rutina Tchar.h|\_UNICODE y \_MBCS no definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_itot_s`|`_itoa_s`|`_itoa_s`|`_itow_s`|  
 |`_i64tot_s`|`_i64toa_s`|`_i64toa_s`|`_i64tow_s`|  
 |`_ui64tot_s`|`_ui64toa_s`|`_ui64toa_s`|`_ui64tow_s`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`_itoa_s`|\<stdlib.h\>|  
-|`_i64toa_s`|\<stdlib.h\>|  
-|`_ui64toa_s`|\<stdlib.h\>|  
-|`_itow_s`|\<stdlib.h\> o \<wchar.h\>|  
-|`_i64tow_s`|\<stdlib.h\> o \<wchar.h\>|  
-|`_ui64tow_s`|\<stdlib.h\> o \<wchar.h\>|  
+|-------------|---------------------|  
+|`_itoa_s`|\<stdlib.h>|  
+|`_i64toa_s`|\<stdlib.h>|  
+|`_ui64toa_s`|\<stdlib.h>|  
+|`_itow_s`|\<stdlib.h> o \<wchar.h>|  
+|`_i64tow_s`|\<stdlib.h> o \<wchar.h>|  
+|`_ui64tow_s`|\<stdlib.h> o \<wchar.h>|  
   
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_itoa_s.c  
@@ -219,7 +236,7 @@ int main( void )
 }  
 ```  
   
-## Resultados  
+## <a name="output"></a>Salida  
   
 ```  
 base 10: -1 (2 chars)  
@@ -253,10 +270,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)  
 ```  
   
-## Equivalente en .NET Framework  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
-  
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conversión de datos](../../c-runtime-library/data-conversion.md)   
- [\_ltoa, \_ltow](../../c-runtime-library/reference/ltoa-ltow.md)   
- [\_ultoa, \_ultow](../../c-runtime-library/reference/ultoa-ultow.md)
+ [_ltoa, _ltow](../../c-runtime-library/reference/ltoa-ltow.md)   
+ [_ultoa, _ultow](../../c-runtime-library/reference/ultoa-ultow.md)

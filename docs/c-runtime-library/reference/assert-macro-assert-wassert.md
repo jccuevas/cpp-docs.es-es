@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ad3410852975757c34220e2de19f696ba3b7c718
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 97bdb002953c07aba3bf7951a6f94a058c977f9d
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="assert-macro-assert-wassert"></a>assert (macro), _assert, _wassert
@@ -106,7 +107,7 @@ void _wassert(
   
  Cuando la aplicación se vincula con una versión de depuración de las bibliotecas en tiempo de ejecución, `assert` crea un cuadro de mensaje con tres botones: **Anular**, **Reintentar**e **Ignorar**. Si el usuario hace clic en **Anular**, el programa se anula inmediatamente. Si el usuario hace clic en **Reintentar**, se llama el depurador y el usuario puede depurar el programa si está habilitada la depuración just-in-time (JIT). Si el usuario hace clic en **Ignorar**, `assert` continúa con su ejecución normal: creando el cuadro de mensaje con el botón **Aceptar** . Observe que si se hace clic en **Ignorar** cuando existe una condición de error, se puede producir un comportamiento indefinido.  
   
- Para obtener más información sobre la depuración de CRT, consulte [Técnicas de depuración de CRT](/visualstudio/debugger/crt-debugging-techniques).  
+ Para más información sobre la depuración, vea [Técnicas de depuración de CRT](/visualstudio/debugger/crt-debugging-techniques).  
   
  Las funciones `_assert` y `_wassert` son funciones de CRT internas. Ayudan a minimizar el código necesario en sus archivos de objeto para admitir aserciones. No se recomienda llamar a estas funciones directamente.  
   
@@ -169,9 +170,6 @@ A problem caused the program to stop working correctly. Windows will close the p
 ```  
   
  Si hay un depurador instalado, elija el botón **Depurar** para iniciar el depurador o **Cerrar programa** , para salir.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- [System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)  
   
 ## <a name="see-also"></a>Vea también  
  [Control de errores](../../c-runtime-library/error-handling-crt.md)   

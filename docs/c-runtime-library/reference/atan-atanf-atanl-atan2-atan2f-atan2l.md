@@ -1,64 +1,81 @@
 ---
-title: "atan, atanf, atanl, atan2, atan2f, atan2l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "atan2f"
-  - "atan2l"
-  - "atan2"
-  - "atanf"
-  - "atan"
-  - "atanl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "atan"
-  - "atan2l"
-  - "atan2"
-  - "atanl"
-  - "atanf"
-  - "atan2f"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arctangent (función)"
-  - "atan (función)"
-  - "atan2 (función)"
-  - "atan2f (función)"
-  - "atan2l (función)"
-  - "atanf (función)"
-  - "atanl (función)"
-  - "funciones trigonométricas"
+title: atan, atanf, atanl, atan2, atan2f, atan2l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- atan2f
+- atan2l
+- atan2
+- atanf
+- atan
+- atanl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- atan
+- atan2l
+- atan2
+- atanl
+- atanf
+- atan2f
+dev_langs:
+- C++
+helpviewer_keywords:
+- atan function
+- atanf function
+- atanl function
+- atan2 function
+- atan2l function
+- arctangent function
+- trigonometric functions
+- atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# atan, atanf, atanl, atan2, atan2f, atan2l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 53291ede13fdd83a531052743ae22ef8bb146b0f
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
-Calcula el arco tangente de `x` \(`atan`, `atanf` y `atanl`\), o el arco tangente de `y`\/`x` \(`atan2`, `atan2f` y `atan2l`\).  
+---
+# <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
+Calcula el arco tangente de `x` (`atan`, `atanf` y `atanl`) o el arco tangente de `y`/`x` (`atan2`, `atan2f` y `atan2l`).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 double atan(   
@@ -98,33 +115,33 @@ long double atan2l(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `x`, `y`  
  Cualquier número.  
   
-## Valor devuelto  
- `atan` devuelve el arco tangente de `x` en el intervalo comprendido entre –π\/2 y π\/2 radianes.  `atan2` devuelve el arco tangente de `y/x` en el intervalo comprendido entre –π y π radianes.  Si `x` es 0, `atan` devuelve 0.  Si los dos parámetros de `atan2` son 0, la función devuelve 0.  Todos los resultados están en radianes.  
+## <a name="return-value"></a>Valor devuelto  
+ `atan`Devuelve el arco tangente de `x` en el intervalo de - π/2 a π/2 radianes. `atan2`Devuelve el arco tangente de `y/x` en el intervalo - π y π radianes. Si `x` es 0, `atan` devuelve 0. Si los dos parámetros de `atan2` son 0, la función devuelve 0. Todos los resultados están en radianes.  
   
  `atan2` utiliza los signos de los dos parámetros para determinar el cuadrante del valor devuelto.  
   
 |Entrada|Excepción SEH|Excepción de Matherr|  
-|-------------|-------------------|--------------------------|  
-|± `QNAN`,`IND`|ninguno|`_DOMAIN`|  
+|-----------|-------------------|-----------------------|  
+|± `QNAN`,`IND`|ninguna|`_DOMAIN`|  
   
-## Comentarios  
- La función `atan` calcula el arco tangente \(función tangente inversa\) de `x`.  `atan2` calcula el arco tangente de `y`\/`x` \(si `x` es igual a 0, `atan2` devuelve π\/2 si `y` es positivo, devuelve \- π\/2 si `y` es negativo, y devuelve 0 si `y` es 0\).  
+## <a name="remarks"></a>Comentarios  
+ La función `atan` calcula el arco tangente (función tangente inversa) de `x`. `atan2` calcula el arco tangente de `y`/`x` (si `x` es igual a 0, `atan2` devuelve π/2 si `y` es positivo, devuelve - π/2, si `y` es negativo, y devuelve 0 si `y` es 0).  
   
- `atan` tiene una implementación que usa las Extensiones SIMD de transmisión por secuencias 2 \(SSE2\).  Para obtener información y las restricciones sobre el uso de la implementación de SSE2, vea [\_set\_SSE2\_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
+ `atan` tiene una implementación que usa las Extensiones SIMD de transmisión por secuencias 2 (SSE2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
   
- Dado que C\+\+ admite sobrecargas, puede llamar a sobrecargas de `atan` y `atan2`.  En un programa de C, `atan` y `atan2` siempre toman y devuelven valores double.  
+ Dado que C++ admite sobrecargas, puede llamar a sobrecargas de `atan` y `atan2`. En un programa de C, `atan` y `atan2` siempre toman y devuelven valores double.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`atan`, `atan2`, `atanf`, `atan2f`, `atanl`, `atan2l`|\<math.h\>|  
+|-------------|---------------------|  
+|`atan`, `atan2`, `atanf`, `atan2f`, `atanl`, `atan2l`|\<math.h>|  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_atan.c  
@@ -150,21 +167,18 @@ int main( int ac, char* av[] )
 }  
 ```  
   
-  **Arco tangente de 5,000000: 1,373401**  
-**Arco tangente de 0,500000 \/ 5,000000: 0,099669**   
-## Equivalente en .NET Framework  
+```Output  
+Arctangent of 5.000000: 1.373401  
+Arctangent of 0.500000 / 5.000000: 0.099669  
+```  
   
--   [System::Math::Atan](https://msdn.microsoft.com/en-us/library/system.math.atan.aspx)  
-  
--   [System::Math::Atan2](https://msdn.microsoft.com/en-us/library/system.math.atan2.aspx)  
-  
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
  [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [\_matherr](../../c-runtime-library/reference/matherr.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)   
  [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
  [tan, tanf, tanl, tanh, tanhf, tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
- [\_CIatan](../../c-runtime-library/ciatan.md)   
- [\_CIatan2](../../c-runtime-library/ciatan2.md)
+ [_CIatan](../../c-runtime-library/ciatan.md)   
+ [_CIatan2](../../c-runtime-library/ciatan2.md)

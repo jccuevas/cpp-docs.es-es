@@ -65,10 +65,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: a6a25c035a55ca247f0d81f5c206207463672881
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 25dfd357f0b3385f1e9bdcc4249ad3cf4399e0b6
+ms.contentlocale: es-es
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
@@ -148,7 +149,7 @@ _controlfp(_DN_FLUSH, _MCW_DN);
 > [!NOTE]
 >  `__control87_2` no se admite en las arquitecturas ARM ni [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]. Si usa `__control87_2` y compila el programa para las arquitecturas de ARM o de [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], el compilador genera un error.  
   
- Estas funciones se omiten cuando usa [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) al compilarse porque common language runtime (CLR) solo admite la precisión de punto flotante predeterminada.  
+ Estas funciones se omiten cuando usa [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) al compilarse porque common language runtime (CLR) solo es compatible con la precisión de punto flotante predeterminada.  
   
  **Valores hexadecimales**  
   
@@ -172,14 +173,12 @@ _controlfp(_DN_FLUSH, _MCW_DN);
   
 ## <a name="example"></a>Ejemplo  
   
-```  
-  
-      // crt_cntrl87.c  
+```C  
+// crt_cntrl87.c  
 // processor: x86  
 // This program uses __control87_2 to output the x87 control   
 // word, set the precision to 24 bits, and reset the status to   
 // the default.  
-//  
   
 #include <stdio.h>  
 #include <float.h>  
@@ -210,9 +209,7 @@ int main( void )
 }  
 ```  
   
-## <a name="output"></a>Salida  
-  
-```  
+```Output  
 Original: 0x0001  
 0.1 * 0.1 = 1.000000000000000e-002  
 24-bit:   0x0001  
@@ -220,9 +217,6 @@ Original: 0x0001
 Default:  0x0001  
 0.1 * 0.1 = 1.000000000000000e-002  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   

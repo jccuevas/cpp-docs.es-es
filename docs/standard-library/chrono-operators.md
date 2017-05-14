@@ -11,19 +11,20 @@ f1_keywords:
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
 caps.latest.revision: 8
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c2ea4241ef1db4989caf8cdc6a16044d9c9381f6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a58daf9d43392ffa89872ab0a76e680b63dbb977
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltchronogt-operators"></a>Operadores de &lt;chrono&gt;
 ||||  
 |-|-|-|  
-|[operator modulo](#operator_modulo)|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|  
-|[operator&gt;=](#operator_gt__eq)|[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|  
-|[operator*](#operator_star)|[operator+](#operator_add)|[operator-](#operator-)|  
-|[operator/](#operator_)|[operator==](#operator_eq_eq)|  
+|[operator modulo](#op_modulo)|[operator!=](#op_neq)|[operator&gt;](#op_gt)|  
+|[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|  
+|[operator*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|  
+|[operator/](#op_div)|[operator==](#op_eq_eq)|  
   
 ##  <a name="operator-"></a>  operator-  
  Operador para la resta o la negación de objetos [duration](../standard-library/duration-class.md) y [time_point](../standard-library/time-point-class.md).  
@@ -69,7 +70,7 @@ constexpr typename common_type<Duration1, Duration2>::type
   
  La tercera función devuelve un objeto `duration` que representa el intervalo de tiempo entre `Left` y `Right`.  
   
-##  <a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  Operador de desigualdad para objetos [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md).  
   
 ```  
@@ -95,8 +96,8 @@ constexpr bool operator!=(
 ### <a name="return-value"></a>Valor devuelto  
  Cada función devuelve `!(Left == Right)`.  
   
-##  <a name="operator_star"></a>  operator*  
- Operador de multiplicación para objetos [duration](../standard-library/chrono-operators.md#operator_star).  
+##  <a name="op_star"></a>  operator*  
+ Operador de multiplicación para objetos [duration](../standard-library/chrono-operators.md#op_star).  
   
 ```  
 template <class Rep1, class Period1, class Rep2>  
@@ -128,8 +129,8 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
   
  A menos que `is_convertible<Rep1, common_type<Rep1, Rep2>>`*sea True*, la segunda función no participa en la resolución de sobrecarga. Para obtener más información, vea [<type_traits>](../standard-library/type-traits.md).  
   
-##  <a name="operator_"></a>  operator/  
- Operador de división para objetos [duration](../standard-library/chrono-operators.md#operator_star).  
+##  <a name="op_div"></a>  operator/  
+ Operador de división para objetos [duration](../standard-library/chrono-operators.md#op_star).  
   
 ```  
 template <class Rep1, class Period1, class Rep2>  
@@ -166,7 +167,7 @@ constexpr typename common_type<Rep1, Rep2>::type
   
  A menos que `is_convertible<Rep2, common_type<Rep1, Rep2>>`*sea True*, y `Rep2` no sea una creación de instancia de `duration`, el primer operador no participa en la resolución de sobrecarga. Para obtener más información, vea [<type_traits>](../standard-library/type-traits.md).  
   
-##  <a name="operator_add"></a>  operator+  
+##  <a name="op_add"></a>  operator+  
  Suma los objetos [duration](../standard-library/duration-class.md) y [time_point](../standard-library/time-point-class.md).  
   
 ```  
@@ -209,7 +210,7 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
   
  Las funciones segunda y tercera devuelven un objeto `time_point` que representa un punto en el tiempo que está desplazado, según el intervalo `Dur`, con respecto al punto en el tiempo `Time`.  
   
-##  <a name="operator_lt_"></a>  operator&lt;  
+##  <a name="op_lt"></a>  operator&lt;  
  Determina si un objeto [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md) es menor que otro objeto `duration` o `time_point`.  
   
 ```  
@@ -237,7 +238,7 @@ constexpr bool operator<(
   
  La segunda función devuelve `true` si `Left` precede a `Right`. De lo contrario, la función devuelve `false`.  
   
-##  <a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  Determina si un objeto [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md) es menor o igual que otro objeto `duration` o `time_point`.  
   
 ```  
@@ -262,7 +263,7 @@ constexpr bool operator<=(
 ### <a name="return-value"></a>Valor devuelto  
  Cada función devuelve `!(Right < Left)`.  
   
-##  <a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  Determina si dos objetos `duration` representan intervalos de tiempo de la misma longitud o si dos objetos `time_point` representan el mismo punto en el tiempo.  
   
 ```  
@@ -289,7 +290,7 @@ constexpr bool operator==(
   
  La segunda función devuelve `true` si `Left` y `Right` representan el mismo punto en el tiempo. De lo contrario, la función devuelve `false`.  
   
-##  <a name="operator_gt_"></a>  operator&gt;  
+##  <a name="op_gt"></a>  operator&gt;  
  Determina si un objeto [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md) es mayor que otro objeto `duration` o `time_point`.  
   
 ```  
@@ -314,7 +315,7 @@ constexpr bool operator>(
 ### <a name="return-value"></a>Valor devuelto  
  Cada función devuelve `Right < Left`.  
   
-##  <a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  Determina si un objeto [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md) es mayor o igual que otro objeto `duration` o `time_point`.  
   
 ```  
@@ -339,7 +340,7 @@ constexpr bool operator>=(
 ### <a name="return-value"></a>Valor devuelto  
  Cada función devuelve `!(Left < Right)`.  
   
-##  <a name="operator_modulo"></a>  operator modulo  
+##  <a name="op_modulo"></a>  operator modulo  
  Operador para operaciones de módulo en objetos [duration](../standard-library/duration-class.md).  
   
 ```  

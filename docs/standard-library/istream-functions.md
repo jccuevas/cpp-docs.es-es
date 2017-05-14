@@ -14,10 +14,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: aa35f177bcb986e141d0e46e48dc007a96f94498
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3fe398e0424ff6fc24eff9b084759aa10c46e98a
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltistreamgt-functions"></a>Funciones &lt;istream&gt;
@@ -62,12 +63,12 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
  La secuencia.  
   
 ### <a name="remarks"></a>Comentarios  
- El manipulador extrae y descarta todos los elementos `ch` para los que [use_facet](../standard-library/basic-filebuf-class.md#basic_filebuf__open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#ios_base__getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) sea true.  
+ El manipulador extrae y descarta todos los elementos `ch` para los que [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) sea true.  
   
- La función llama a [setstate](../standard-library/basic-ios-class.md#basic_ios__setstate)( **eofbit**) si encuentra el final del archivo al extraer elementos. Devuelve `_Istr`.  
+ La función llama a [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) si encuentra el final del archivo al extraer elementos. Devuelve `_Istr`.  
   
 ### <a name="example"></a>Ejemplo  
-  Vea [operator>>](../standard-library/istream-operators.md#operator_gt__gt_) para obtener un ejemplo que usa `ws`.  
+  Vea [operator>>](../standard-library/istream-operators.md#op_gt_gt) para obtener un ejemplo que usa `ws`.  
   
 ## <a name="see-also"></a>Vea también  
  [\<istream>](../standard-library/istream.md)

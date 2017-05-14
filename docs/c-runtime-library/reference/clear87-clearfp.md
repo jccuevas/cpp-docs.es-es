@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 7c7659bb52594678538ea2701174c070ace41d70
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 4d7a7b05896bac9e1b3f4ac29ee24a6ad7d61a82
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="clear87-clearfp"></a>_clear87, _clearfp
@@ -80,7 +81,7 @@ unsigned int _clearfp( void );
   
  `_clearfp` es una versión portátil e independiente de la plataforma de la rutina `_clear87`. Es idéntica a `_clear87` en plataformas Intel (x86) y también es compatible con las plataformas x64 y ARM. Para asegurarse de que el código de punto flotante se puede llevar a x64 y a ARM, use `_clearfp`. Si solo va a usar plataformas x86, puede usar `_clear87` o `_clearfp`.  
   
- Estas funciones están desusadas cuando se compila con [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) porque common language runtime sólo admite la precisión de punto flotante predeterminada.  
+ Estas funciones están en desuso cuando se compila con [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) porque common language runtime solo admite la precisión de punto flotante predeterminada.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -129,9 +130,6 @@ Status: 0000 - clear
 Status: 0003 - inexact, underflow  
 Status: 80000 - denormal  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   

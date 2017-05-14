@@ -18,10 +18,11 @@ dev_langs:
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: 43cbdb4fe2baeab24508161ae0ce9785f5a8cbab
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c85e1930bc8bfe492368fd40fe488156cf9a3ed1
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltarraygt-operators"></a>Operadores de &lt;array&gt;
@@ -29,10 +30,10 @@ El encabezado \<array> incluye estas funciones no miembro `array` de plantilla d
   
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  Comparación de matriz, no igual.  
   
 ```  
@@ -102,7 +103,7 @@ false
 true  
 ```  
   
-##  <a name="operator_lt_"></a>  operator&lt;  
+##  <a name="op_lt"></a>  operator&lt;  
  Comparación de matriz, menor que.  
   
 ```  
@@ -173,7 +174,7 @@ false
 true  
 ```  
   
-##  <a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  Comparación de matriz, menor o igual que.  
   
 ```  
@@ -244,7 +245,7 @@ true
 false  
 ```  
   
-##  <a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  Comparación de matriz, igual.  
   
 ```  
@@ -315,7 +316,7 @@ true
 false  
 ```  
   
-##  <a name="operator_gt_"></a>  operator&gt;  
+##  <a name="op_gt"></a>  operator&gt;  
  Comparación de matriz, mayor que.  
   
 ```  
@@ -386,7 +387,7 @@ false
 true  
 ```  
   
-##  <a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  Comparación de matriz, mayor o igual que.  
   
 ```  
