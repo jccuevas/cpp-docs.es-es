@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: a7fcb706317f7185d260daab15ae14f478176768
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ae857750efe2d1f80e703e0c44f9646f7bfd3733
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
@@ -59,12 +60,12 @@ Define las clases de plantilla de contenedor [unordered_multiset](../standard-li
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/unordered-set-operators.md#operator_neq)|Comprueba si el objeto unordered_multiset del lado izquierdo del operador no es igual que el objeto unordered_multiset del lado derecho.|  
-|[operator==](../standard-library/unordered-set-operators.md#operator_eq_eq)|Comprueba si el objeto unordered_multiset del lado izquierdo del operador es igual que el objeto unordered_multiset del lado derecho.|  
-|[swap (Función)](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Intercambia dos conjuntos múltiples.|  
-|[operator!=](../standard-library/unordered-set-operators.md#operator_neq)|Comprueba si el objeto unordered_set del lado izquierdo del operador no es igual que el objeto unordered_set del lado derecho.|  
-|[operator==](../standard-library/unordered-set-operators.md#operator_eq_eq)|Comprueba si el objeto unordered_set del lado izquierdo del operador es igual que el objeto unordered_set del lado derecho.|  
-|[swap (Función)](../standard-library/unordered-set-functions.md#swap)|Intercambia dos conjuntos.|  
+|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Comprueba si el objeto unordered_multiset del lado izquierdo del operador no es igual que el objeto unordered_multiset del lado derecho.|  
+|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Comprueba si el objeto unordered_multiset del lado izquierdo del operador es igual que el objeto unordered_multiset del lado derecho.|  
+|[swap](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Intercambia dos conjuntos múltiples.|  
+|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Comprueba si el objeto unordered_set del lado izquierdo del operador no es igual que el objeto unordered_set del lado derecho.|  
+|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Comprueba si el objeto unordered_set del lado izquierdo del operador es igual que el objeto unordered_set del lado derecho.|  
+|[swap](../standard-library/unordered-set-functions.md#swap)|Intercambia dos conjuntos.|  
   
 ## <a name="see-also"></a>Vea también  
  [unordered_map (Clase)](../standard-library/unordered-map-class.md)   

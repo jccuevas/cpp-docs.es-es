@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7947bb8de34b5e80321ddacf03e4606a53b5dc90
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 1ad2bb0cd27d24d7051f782b4ed72a1014fb5ec6
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="setmaxstdio"></a>_setmaxstdio
@@ -74,7 +75,7 @@ int _setmaxstdio(
  Nuevo máximo para el número de archivos abiertos simultáneamente en el nivel de `stdio`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve `newmax` si se realiza correctamente; en caso contrario, devuelve –1.  
+ Devuelve `newmax` si se realiza correctamente; en caso contrario de -1.  
   
  Si `newmax` es menor que `_IOB_ENTRIES` o mayor que el número máximo de controladores disponibles en el sistema operativo, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve -1 y establece `errno` en `EINVAL`.  
   
@@ -100,9 +101,6 @@ int _setmaxstdio(
   
 ## <a name="example"></a>Ejemplo  
  Vea [_getmaxstdio](../../c-runtime-library/reference/getmaxstdio.md) para obtener un ejemplo del uso de `_setmaxstdio`.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [E/S de secuencia](../../c-runtime-library/stream-i-o.md)

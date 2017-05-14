@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 484ecd12490eab00c02fb4184edcaa55f346c3a8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 436e581907e3b651716e819a9c82a24eed2e4b8e
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
@@ -109,7 +110,7 @@ size_t _mbstowcs_l(
 >  Asegúrese de que `wcstr` y `mbstr` no se superponen, y de que `count` refleja correctamente el número de caracteres multibyte a convertir.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `mbstowcs` convierte un máximo de `count` caracteres multibyte señalados por `mbstr` en una cadena de caracteres anchos correspondientes que están determinados por la configuración regional actual. Almacena la cadena de caracteres anchos resultante en la dirección representada por `wcstr`*.* El resultado es similar a una serie de llamadas a `mbtowc`. Si `mbstowcs` encuentra el carácter nulo de un solo byte ('\0') cuando se produzca `count` (o antes), convierte el carácter nulo en un carácter nulo de caracteres anchos (L '\0') y se detiene. Por tanto, la cadena de caracteres anchos de `wcstr` termina en nulo solo si se encuentra un carácter nulo durante la conversión. Si las secuencias señaladas por `wcstr` y `mbstr` se superponen, el comportamiento no está definido.  
+ La función `mbstowcs` convierte un máximo de `count` caracteres multibyte señalados por `mbstr` en una cadena de caracteres anchos correspondientes que están determinados por la configuración regional actual. Almacena la cadena de caracteres anchos resultante en la dirección representada por `wcstr`. El resultado es similar a una serie de llamadas a `mbtowc`. Si `mbstowcs` encuentra el carácter nulo de un solo byte ('\0') cuando se produzca `count` (o antes), convierte el carácter nulo en un carácter nulo de caracteres anchos (L '\0') y se detiene. Por tanto, la cadena de caracteres anchos de `wcstr` termina en nulo solo si se encuentra un carácter nulo durante la conversión. Si las secuencias señaladas por `wcstr` y `mbstr` se superponen, el comportamiento no está definido.  
   
  Si el `wcstr` argumento es `NULL`, `mbstowcs` devuelve el número de caracteres anchos que se generarían en la conversión, sin incluir ningún terminador nulo. La cadena de origen debe terminar en nulo para que se devuelva el valor correcto. Si necesita que la cadena de caracteres anchos resultante termine en nulo, agregue uno al valor devuelto.  
   
@@ -222,9 +223,6 @@ Convert back to wide-character string:
   Characters converted: 2  
   Hex value of first 2 wide characters: 0x3042 0x3043  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Conversión de datos](../../c-runtime-library/data-conversion.md)   

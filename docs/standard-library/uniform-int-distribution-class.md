@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - uniform_int_distribution
-- std::uniform_int_distribution
 - random/std::uniform_int_distribution
-- std::uniform_int_distribution::reset
 - random/std::uniform_int_distribution::reset
-- std::uniform_int_distribution::a
 - random/std::uniform_int_distribution::a
-- std::uniform_int_distribution::b
 - random/std::uniform_int_distribution::b
-- std::uniform_int_distribution::param
 - random/std::uniform_int_distribution::param
-- std::uniform_int_distribution::min
 - random/std::uniform_int_distribution::min
-- std::uniform_int_distribution::max
 - random/std::uniform_int_distribution::max
-- std::uniform_int_distribution::operator()
 - random/std::uniform_int_distribution::operator()
-- std::uniform_int_distribution::param_type
 - random/std::uniform_int_distribution::param_type
-- std::uniform_int_distribution::param_type::a
 - random/std::uniform_int_distribution::param_type::a
-- std::uniform_int_distribution::param_type::b
 - random/std::uniform_int_distribution::param_type::b
-- std::uniform_int_distribution::param_type::operator==
 - random/std::uniform_int_distribution::param_type::operator==
-- std::uniform_int_distribution::param_type::operator!=
 - random/std::uniform_int_distribution::param_type::operator!=
+- random/std::uniform_int_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 56ce46ec6b19a0ac5068193d5e1d3dfb0c9b4ee9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0555c6562ee987eab9eebc2e9e178a31cdf684e9
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution (Clase)
@@ -107,8 +96,8 @@ La clase de plantilla describe una distribución inclusiva-inclusiva que produce
   
 ||||  
 |-|-|-|  
-|[uniform_int_distribution::uniform_int_distribution](#uniform_int_distribution__uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|  
-|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[uniform_int_distribution::param_type](#uniform_int_distribution__param_type)|  
+|[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|  
+|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|  
   
 El miembro de propiedad `a()` devuelve el límite mínimo de la distribución almacenado actualmente, mientras que `b()` devuelve el límite máximo almacenado actualmente. En esta clase de distribución, estos valores máximo y mínimo son los mismos que los que devuelven las funciones de propiedad comunes `min()` y `max()`.  
   
@@ -205,7 +194,7 @@ Distribution for 200 samples:
   
  **Espacio de nombres:** std  
   
-##  <a name="a-nameuniformintdistributionuniformintdistributiona--uniformintdistributionuniformintdistribution"></a><a name="uniform_int_distribution__uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution  
+##  <a name="uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution  
 Construye la distribución.  
   
 ```  
@@ -231,7 +220,7 @@ El primer constructor crea un objeto cuyo valor `a` almacenado contiene el valor
   
 El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.  
   
-##  <a name="a-nameuniformintdistributionparamtypea--uniformintdistributionparamtype"></a><a name="uniform_int_distribution__param_type"></a>  uniform_int_distribution::param_type  
+##  <a name="param_type"></a>  uniform_int_distribution::param_type  
  Almacena los parámetros de la distribución.  
 ```cpp  
 struct param_type {  

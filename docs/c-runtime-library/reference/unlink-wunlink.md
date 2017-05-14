@@ -1,58 +1,75 @@
 ---
-title: "_unlink, _wunlink | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_unlink"
-  - "_wunlink"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tunlink"
-  - "_unlink"
-  - "wunlink"
-  - "_wunlink"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tunlink (función)"
-  - "_unlink (función)"
-  - "_wunlink (función)"
-  - "archivos [C++], eliminar"
-  - "archivos [C++], quitar"
-  - "tunlink (función)"
-  - "unlink (función)"
-  - "wunlink (función)"
+title: _unlink, _wunlink | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _unlink
+- _wunlink
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tunlink
+- _unlink
+- wunlink
+- _wunlink
+dev_langs:
+- C++
+helpviewer_keywords:
+- files [C++], deleting
+- _wunlink function
+- wunlink function
+- unlink function
+- _unlink function
+- tunlink function
+- files [C++], removing
+- _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _unlink, _wunlink
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 64e215e42433ac7d69e8005f1e44f9ae8184bec0
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
-Eliminar un archivo.  
+---
+# <a name="unlink-wunlink"></a>_unlink, _wunlink
+Elimina un archivo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int _unlink(  
@@ -63,35 +80,35 @@ int _wunlink(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `filename`  
  Nombre del archivo que se va a quitar.  
   
-## Valor devuelto  
- Cada una de estas funciones devuelve 0 si correctamente.  Si no, la función devuelve – 1 y establece `errno` a `EACCES`, que significa que la ruta especifica un archivo de sólo lectura, o a `ENOENT`, lo que significa que el archivo o la ruta no se encuentra o la ruta de acceso especificada un directorio.  
+## <a name="return-value"></a>Valor devuelto  
+ Cada una de estas funciones devuelve 0 si se realiza correctamente. En caso contrario, la función devuelve -1 y establece `errno` a `EACCES`, lo que significa que la ruta de acceso especifica un archivo de sólo lectura, o a `ENOENT`, lo que significa que el archivo o la ruta de acceso no se encuentra o la ruta de acceso especifica un directorio.  
   
- Vea [\_doserrno, errno, \_sys\_errlist y \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.  
+ Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.  
   
-## Comentarios  
- La función de `_unlink` elimina el archivo especificado por `filename`.  `_wunlink` es una versión con caracteres anchos de `_unlink`; el argumento `filename` para `_wunlink` es una cadena de caracteres anchos.  Por lo demás, estas funciones se comportan exactamente igual.  
+## <a name="remarks"></a>Comentarios  
+ La función `_unlink` elimina el archivo especificado por `filename`. `_wunlink` es una versión con caracteres anchos de `_unlink`; el argumento `filename` para `_wunlink` es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.  
   
-### Asignaciones de rutina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
-|Rutina TCHAR.H|\_UNICODE y \_MBCS no definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tunlink`|`_unlink`|`_unlink`|`_wunlink`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`_unlink`|\<io.h y\> stdio.h \<\>|  
-|`_wunlink`|\<io.h o\> wchar.h \<\>|  
+|-------------|---------------------|  
+|`_unlink`|\<io.h> y \<stdio.h>|  
+|`_wunlink`|\<io.h> o \<wchar.h>|  
   
  Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
-## Ejemplo de código  
- Este programa utiliza el \_unlink para eliminar CRT\_UNLINK.TXT.  
+## <a name="code-example"></a>Ejemplo de código  
+ Este programa usa _unlink para eliminar CRT_UNLINK.TXT.  
   
 ```  
 // crt_unlink.c  
@@ -107,22 +124,19 @@ int main( void )
 }  
 ```  
   
-### Entrada: crt\_unlink.txt  
+### <a name="input-crtunlinktxt"></a>Entrada: crt_unlink.txt  
   
 ```  
 This file will be deleted.  
 ```  
   
-### Resultados del ejemplo  
+### <a name="sample-output"></a>Resultados del ejemplo  
   
 ```  
 Deleted 'CRT_UNLINK.TXT'  
 ```  
   
-## Equivalente en .NET Framework  
- [System::IO::File::Delete](https://msdn.microsoft.com/en-us/library/system.io.file.delete.aspx)  
-  
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Control de archivos](../../c-runtime-library/file-handling.md)   
- [\_close](../../c-runtime-library/reference/close.md)   
- [remove, \_wremove](../../c-runtime-library/reference/remove-wremove.md)
+ [_close](../../c-runtime-library/reference/close.md)   
+ [remove, _wremove](../../c-runtime-library/reference/remove-wremove.md)

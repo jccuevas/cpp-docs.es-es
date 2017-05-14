@@ -1,57 +1,74 @@
 ---
-title: "mktime, _mktime32, _mktime64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mktime32"
-  - "mktime"
-  - "_mktime64"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mktime"
-  - "_mktime64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mktime32 (función)"
-  - "_mktime64 (función)"
-  - "convertir horas"
-  - "mktime (función)"
-  - "mktime32 (función)"
-  - "mktime64 (función)"
-  - "funciones de tiempo"
-  - "hora, convertir"
+title: mktime, _mktime32, _mktime64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mktime32
+- mktime
+- _mktime64
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mktime
+- _mktime64
+dev_langs:
+- C++
+helpviewer_keywords:
+- _mktime32 function
+- mktime function
+- time functions
+- mktime64 function
+- converting times
+- mktime32 function
+- _mktime64 function
+- time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# mktime, _mktime32, _mktime64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ced40f391f4a4085531d624acc45094e06e1f0a8
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
 Convierte la hora local en un valor de calendario.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 time_t mktime(  
@@ -65,50 +82,50 @@ __time64_t _mktime64(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *timeptr*  
- Puntero a estructura de hora; vea [asctime](../../c-runtime-library/reference/asctime-wasctime.md).  
+ Puntero a la estructura de hora; vea [asctime](../../c-runtime-library/reference/asctime-wasctime.md).  
   
-## Valor devuelto  
- `_mktime32` devuelve la hora de calendario especificada codificada como valor de tipo [time\_t](../../c-runtime-library/standard-types.md). Si *timeptr* hace referencia a una fecha anterior a la medianoche del 1 de enero de 1970, o si la hora de calendario no se puede representar, `_mktime32` devuelve –1 convertido en el tipo `time_t`. Al utilizar `_mktime32` y si *timeptr* hace referencia a una fecha posterior a las 23:59:59 del 18 de enero de 2038, hora Universal coordinada \(UTC\), devolverá – 1 convertido al tipo `time_t`.  
+## <a name="return-value"></a>Valor devuelto  
+ `_mktime32` devuelve la hora de calendario especificada codificada como valor de tipo [time_t](../../c-runtime-library/standard-types.md). Si *timeptr* hace referencia a una fecha anterior a la medianoche del 1 de enero de 1970, o si no se puede representar la hora de calendario, `_mktime32` devuelve -1 convertir al tipo `time_t`. Cuando se usa `_mktime32` y si *timeptr* hace referencia a una fecha posterior a las 23:59:59 del 18 de enero de 2038, hora Universal coordinada (UTC), devolverá -1 convertir al tipo `time_t`.  
   
- `_mktime64` devolverá –1 convertido en el tipo `__time64_t` si *timeptr* hace referencia a una fecha posterior a las 23:59:59 del 31 de diciembre de 3000, UTC.  
+ `_mktime64`se devolverá -1 convertir al tipo `__time64_t` si *timeptr* hace referencia a una fecha posterior a 23:59:59 del 31 de diciembre de 3000, UTC.  
   
-## Comentarios  
- Las funciones `mktime`, `_mktime32` y `_mktime64` convierten la estructura de tiempo proporcionada \(posiblemente incompleta\) a la que señala *timeptr* en una estructura totalmente definida con valores normalizados y, después, la convierte en un valor de tiempo de calendario de `time_t`. El tiempo convertido tiene la misma codificación que los valores devueltos por la función [time](../../c-runtime-library/reference/time-time32-time64.md). Los valores originales de los componentes `tm_wday` y `tm_yday` de la estructura *timeptr* se omiten, y los valores originales de los demás componentes no se limitan a los intervalos normales.  
+## <a name="remarks"></a>Comentarios  
+ Las funciones `mktime`, `_mktime32` y `_mktime64` convierten la estructura de tiempo proporcionada (posiblemente incompleta) a la que señala *timeptr* en una estructura totalmente definida con valores normalizados y, después, la convierte en un valor de tiempo de calendario de `time_t`. El tiempo convertido tiene la misma codificación que los valores devueltos por la función [time](../../c-runtime-library/reference/time-time32-time64.md). Se omiten los valores originales de los componentes `tm_wday` y `tm_yday` de la estructura *timeptr* y los valores originales de los demás componentes no se limitan a los intervalos normales.  
   
  `mktime` es una función insertada equivalente a `_mktime64`, a menos que `_USE_32BIT_TIME_T` esté definido, en cuyo caso equivale a `_mktime32`.  
   
- Después de un ajuste a UTC, `_mktime32` controla las fechas desde la medianoche del 1 de enero de 1970 a las 23:59:59 del 18 de enero de 2038, hora UTC.`_mktime64` controla las fechas desde la medianoche del 1 de enero de 1970 a las 23:59:59 del 31 de diciembre de 3000. Este ajuste puede hacer que estas funciones devuelvan \-1 \(convertido en `time_t`, `__time32_t` o `__time64_t`\), aunque la fecha especificada esté dentro del intervalo. Por ejemplo, si se encuentra en El Cairo, Egipto, que va dos horas por delante de UTC, primero se restarán dos horas de la fecha que especifique en *timeptr*, lo que puede poner la fecha fuera del intervalo.  
+ Después de un ajuste a la hora UTC, `_mktime32` controla las fechas desde la medianoche del 1 de enero de 1970 hasta las 23:59:59 del 18 de enero de 2038, hora UTC. `_mktime64` controla las fechas desde la medianoche del 1 de enero de 1970 a las 23:59:59 del 31 de diciembre de 3000. Este ajuste puede hacer que estas funciones devuelvan -1 (convertido en `time_t`, `__time32_t` o `__time64_t`), aunque la fecha especificada esté dentro del intervalo. Por ejemplo, si se encuentra en El Cairo (Egipto), que va dos horas por delante de UTC, primero se restarán dos horas de la fecha que especifique en *timeptr*, lo que puede poner la fecha fuera del intervalo.  
   
  Estas funciones se pueden usar para validar y rellenar una estructura de tm. Si se ejecutan correctamente, estas funciones establecen los valores de `tm_wday` y `tm_yday` como corresponda, y establecen los demás componentes de forma que representen la hora de calendario especificada, pero con los valores dentro de los intervalos normales. El valor final de `tm_mday` no se establece hasta que se determinen `tm_mon` y `tm_year`. Al especificar una estructura de hora de `tm`, establezca el campo `tm_isdst` en:  
   
--   Cero \(0\) para indicar que está vigente la hora estándar.  
+-   Cero (0) para indicar que está vigente la hora estándar.  
   
 -   Un valor mayor que 0 para indicar que está vigente el horario de verano.  
   
 -   Un valor menor que cero para que el código de la biblioteca en tiempo de ejecución de C calcule si está vigente la hora estándar o el horario de verano.  
   
- La biblioteca en tiempo de ejecución de C determinará el comportamiento del horario de verano partiendo de la variable de entorno [ZH](../../c-runtime-library/reference/tzset.md). Si `TZ` no está establecida, la llamada API Win32 [GetTimeZoneInformation](http://msdn.microsoft.com/library/windows/desktop/ms724421.aspx) se usa para obtener la información del horario de verano desde el sistema operativo. Si se produce un error, la biblioteca supone que se usan las reglas de Estados Unidos para implementar el cálculo del horario de verano.`tm_isdst` es un campo obligatorio. Si no se establece, su valor es indefinido y el valor devuelto de estas funciones es imprevisible. Si *timeptr* señala a una estructura de `tm` devuelta por una llamada anterior a `asctime`, `gmtime` o `localtime` \(o las variantes de estas funciones\), el campo `tm_isdst` contiene el valor correcto.  
+ La biblioteca en tiempo de ejecución de C determinará el comportamiento del horario de verano partiendo de la variable de entorno [TZ](../../c-runtime-library/reference/tzset.md). Si `TZ` no está establecido, se usa la llamada a [GetTimeZoneInformation](http://msdn.microsoft.com/library/windows/desktop/ms724421.aspx) de la API de Win32 para obtener la información del horario de verano del sistema operativo. Si se produce un error, la biblioteca supone que se usan las reglas de Estados Unidos para implementar el cálculo del horario de verano. `tm_isdst` es un campo obligatorio. Si no se establece, su valor es indefinido y el valor devuelto de estas funciones es imprevisible. Si *timeptr* señala a una estructura `tm` devuelta por una llamada anterior a `asctime`, `gmtime` o `localtime` (o a las variantes de estas funciones), el campo `tm_isdst` contiene el valor correcto.  
   
- Observe que `gmtime` y `localtime` \(y `_gmtime32`, `_gmtime64`, `_localtime32` y `_localtime64`\) usan un único búfer por subproceso para la conversión. Si proporciona este búfer a `mktime`, `_mktime32` o `_mktime64`, se destruye el contenido anterior.  
+ Observe que `gmtime` y `localtime` (y `_gmtime32`, `_gmtime64`, `_localtime32` y `_localtime64`) usan un único búfer por subproceso para la conversión. Si proporciona este búfer a `mktime`, `_mktime32` o `_mktime64`, se destruye el contenido anterior.  
   
- Estas funciones validan su parámetro. Si *timeptr* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven \-1 y establecen `errno` en `EINVAL`.  
+ Estas funciones validan su parámetro. Si *timeptr* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y establecen `errno` en `EINVAL`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`mktime`|\<time.h\>|  
-|`_mktime32`|\<time.h\>|  
-|`_mktime64`|\<time.h\>|  
+|-------------|---------------------|  
+|`mktime`|\<time.h>|  
+|`_mktime32`|\<time.h>|  
+|`_mktime64`|\<time.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Bibliotecas  
+## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_mktime.c  
@@ -141,7 +158,7 @@ int main( void )
 }  
 ```  
   
-## Resultados del ejemplo  
+## <a name="sample-output"></a>Resultados del ejemplo  
   
 ```  
 Current time is Fri Apr 25 13:34:07 2003  
@@ -149,13 +166,10 @@ Current time is Fri Apr 25 13:34:07 2003
 In 20 days the time will be Thu May 15 13:34:07 2003  
 ```  
   
-## Equivalente en .NET Framework  
- <xref:System.DateTimeOffset.%23ctor%2A>  
-  
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administración del tiempo](../../c-runtime-library/time-management.md)   
- [asctime, \_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [gmtime, \_gmtime32, \_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [localtime, \_localtime32, \_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [\_mkgmtime, \_mkgmtime32, \_mkgmtime64](../../c-runtime-library/reference/mkgmtime-mkgmtime32-mkgmtime64.md)   
- [time, \_time32, \_time64](../../c-runtime-library/reference/time-time32-time64.md)
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [_mkgmtime, _mkgmtime32, _mkgmtime64](../../c-runtime-library/reference/mkgmtime-mkgmtime32-mkgmtime64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

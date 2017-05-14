@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: ca10c4b759f9dafbfe4ffd3d6ac4a4b8c0d5b1dc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4704adafeefcb9acff9bdb41428075f34439cc39
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
@@ -66,13 +67,13 @@ Define una clase, un operador y varias plantillas que sirven de ayuda para asign
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|Informa a la recolección de elementos no utilizados de que la dirección indicada es para el almacenamiento asignado y es accesible.|  
 |[default_delete](../standard-library/memory-functions.md#default_delete)|Elimina objetos asignados a `operator new`. Apto para el uso con `unique_ptr`.|  
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|Conversión dinámica en `shared_ptr`.|  
-|[get_deleter](../standard-library/memory-functions.md#get_deleter_function)|Obtiene el delimitador de `shared_ptr`.|  
+|[get_deleter](../standard-library/memory-functions.md#get_deleter)|Obtiene el delimitador de `shared_ptr`.|  
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|Devuelve el tipo de seguridad del puntero asumido por cualquier recolector de elementos no utilizados.|  
 |[get_temporary_buffer](../standard-library/memory-functions.md#get_temporary_buffer)|Asigna almacenamiento temporal para una secuencia de elementos que no supere un número especificado de elementos.|  
 |[make_shared](../standard-library/memory-functions.md#make_shared)|Crea y devuelve un `shared_ptr` que señala al objeto asignado construido sin argumentos o con algún argumento mediante el asignador predeterminado.|  
 |[make_unique](../standard-library/memory-functions.md#make_unique)|Crea y devuelve un elemento [unique_ptr](../standard-library/unique-ptr-class.md) que señala al objeto asignado construido desde cero o con algún argumento.|  
 |[owner_less](../standard-library/memory-functions.md#owner_less)|Permite realizar comparaciones mixtas basadas en la propiedad de punteros compartidos y parciales.|  
-|[pointer_safety](../standard-library/memory-enums.md#pointer_safety_enumeration)|Una enumeración de todos los valores devueltos posibles para `get_pointer_safety`.|  
+|[pointer_safety](../standard-library/memory-enums.md#pointer_safety)|Una enumeración de todos los valores devueltos posibles para `get_pointer_safety`.|  
 |[return_temporary_buffer](../standard-library/memory-functions.md#return_temporary_buffer)|Desasigna la memoria temporal que se asignó mediante la función de plantilla `get_temporary_buffer`.|  
 |[static_pointer_cast](../standard-library/memory-functions.md#static_pointer_cast)|Conversión estática en `shared_ptr`.|  
 |[swap](../standard-library/memory-functions.md#swap)|Intercambia dos objetos `shared_ptr` o `weak_ptr`.|  
@@ -87,13 +88,13 @@ Define una clase, un operador y varias plantillas que sirven de ayuda para asign
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/memory-operators.md#operator_neq)|Comprueba la desigualdad entre los objetos de asignador de una clase especificada.|  
-|[operator==](../standard-library/memory-operators.md#operator_eq_eq)|Comprueba la igualdad entre los objetos de asignador de una clase especificada.|  
-|[operator>=](../standard-library/memory-operators.md#operator_gt__eq)|Comprueba si un objeto de asignador es mayor o igual que un segundo objeto de asignador de una clase especificada.|  
-|[operator<](../standard-library/memory-operators.md#operator_lt_)|Comprueba si un objeto es menor que un segundo objeto de una clase especificada.|  
-|[operator\<=](../standard-library/memory-operators.md#operator_lt__eq)|Comprueba si un objeto es menor o igual que un segundo objeto de una clase especificada.|  
-|[operator>](../standard-library/memory-operators.md#operator_gt_)|Comprueba si un objeto es mayor que un segundo objeto de una clase especificada.|  
-|[operator<<](../standard-library/memory-operators.md#operator_lt__lt_)|`shared_ptr` inserter.|  
+|[operator!=](../standard-library/memory-operators.md#op_neq)|Comprueba la desigualdad entre los objetos de asignador de una clase especificada.|  
+|[operator==](../standard-library/memory-operators.md#op_eq_eq)|Comprueba la igualdad entre los objetos de asignador de una clase especificada.|  
+|[operator>=](../standard-library/memory-operators.md#op_gt_eq)|Comprueba si un objeto de asignador es mayor o igual que un segundo objeto de asignador de una clase especificada.|  
+|[operator<](../standard-library/memory-operators.md#op_lt)|Comprueba si un objeto es menor que un segundo objeto de una clase especificada.|  
+|[operator\<=](../standard-library/memory-operators.md#op_gt_eq)|Comprueba si un objeto es menor o igual que un segundo objeto de una clase especificada.|  
+|[operator>](../standard-library/memory-operators.md#op_gt)|Comprueba si un objeto es mayor que un segundo objeto de una clase especificada.|  
+|[operator<<](../standard-library/memory-operators.md#op_lt_lt)|`shared_ptr` inserter.|  
   
 ### <a name="classes"></a>Clases  
   

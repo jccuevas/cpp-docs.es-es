@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9a16b7d6152ce3070eb8e4ea7552ab83200c0910
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 835450387dea050b45dac2e44a12c7df5d5d7023
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
@@ -89,7 +90,7 @@ wint_t _ungetwc_nolock(
  Puntero a la estructura `FILE` .  
   
 ## <a name="return-value"></a>Valor devuelto  
- Si la operación se realiza correctamente, cada una de estas funciones devuelve el argumento de carácter `c`*.* Si `c` no se puede volver a insertar o si no se ha leído ningún carácter, el flujo de entrada no cambia y `_ungetc_nolock` devuelve `EOF`; `_ungetwc_nolock` devuelve `WEOF`. Si `stream` es `NULL`, se devuelve `EOF` o `WEOF` y `errno` se estable en `EINVAL`.  
+ Si es correcto, cada una de estas funciones devuelve el argumento de carácter `c`. Si `c` no se puede volver a insertar o si no se ha leído ningún carácter, el flujo de entrada no cambia y `_ungetc_nolock` devuelve `EOF`; `_ungetwc_nolock` devuelve `WEOF`. Si `stream` es `NULL`, se devuelve `EOF` o `WEOF` y `errno` se estable en `EINVAL`.  
   
  Para más información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -109,10 +110,7 @@ wint_t _ungetwc_nolock(
 |`_ungetc_nolock`|\<stdio.h>|  
 |`_ungetwc_nolock`|\<stdio.h> o \<wchar.h>|  
   
- Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="see-also"></a>Vea también  
  [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   

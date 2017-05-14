@@ -85,10 +85,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7d8823bfe5650634d3fb079d2910e98409622ec6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 80836179c63da2f62384abd07fe2a4970d9bce55
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
@@ -131,7 +132,7 @@ int _wutime64(
  Puntero a los valores de hora almacenados.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Si se ha cambiado la hora de modificación de archivo, cada una de estas funciones devuelve 0. Un valor devuelto de –1 indica un error. Si se pasa un parámetro no válido, se invoca al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y `errno` se establece en uno de los siguientes valores:  
+ Si se ha cambiado la hora de modificación de archivo, cada una de estas funciones devuelve 0. Un valor devuelto de -1 indica un error. Si se pasa un parámetro no válido, se invoca al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y `errno` se establece en uno de los siguientes valores:  
   
  `EACCES`  
  La ruta de acceso especifica un directorio o un archivo de solo lectura  
@@ -253,9 +254,6 @@ File time modified
                1 File(s)            935 bytes  
                0 Dir(s)  20,742,955,008 bytes free  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Administración del tiempo](../../c-runtime-library/time-management.md)   

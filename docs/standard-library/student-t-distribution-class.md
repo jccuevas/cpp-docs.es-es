@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - student_t_distribution
-- std::student_t_distribution
 - random/std::student_t_distribution
 - random/std::student_t_distribution::result_type
 - random/std::student_t_distribution::reset
@@ -19,6 +18,7 @@ f1_keywords:
 - random/std::student_t_distribution::param
 - random/std::student_t_distribution::min
 - random/std::student_t_distribution::max
+- random/std::student_t_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -42,10 +42,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 61781e74ed9cc5424255b8697800000f8de5eb30
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4075f8852f90ea49f5c9c01f7d82b51766792d7b
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution (Clase)
@@ -88,8 +89,8 @@ public:
   
 ||||  
 |-|-|-|  
-|[student_t_distribution::student_t_distribution](#student_t_distribution__student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|  
-|`student_t_distribution::operator()`||[student_t_distribution::param_type](#student_t_distribution__param_type)|  
+|[student_t_distribution](#student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|  
+|`student_t_distribution::operator()`||[param_type](#param_type)|  
   
  La función de propiedad `n()` devuelve el valor del parámetro de distribución almacenado `n`.  
   
@@ -177,7 +178,7 @@ Distribution for 10 samples:
   
  **Espacio de nombres:** std  
   
-##  <a name="a-namestudenttdistributionstudenttdistributiona--studenttdistributionstudenttdistribution"></a><a name="student_t_distribution__student_t_distribution"></a>  student_t_distribution::student_t_distribution  
+##  <a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution  
  Construye la distribución.  
   
 ```  
@@ -199,7 +200,7 @@ explicit student_t_distribution(const param_type& parm);
   
  El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.  
   
-##  <a name="a-namestudenttdistributionparamtypea--studenttdistributionparamtype"></a><a name="student_t_distribution__param_type"></a>  student_t_distribution::param_type  
+##  <a name="param_type"></a>  student_t_distribution::param_type  
  Almacena todos los parámetros de la distribución.  
 ```cpp    
 struct param_type {  
