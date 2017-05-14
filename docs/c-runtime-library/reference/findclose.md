@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 75a2b674f392b19bb37f26c977e8b79de7e715bb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: fcd76f8daec9c90374989a82f4b4b2f85b4cb5c7
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="findclose"></a>_findclose
@@ -72,7 +73,7 @@ int _findclose(
  Identificador de búsqueda devuelto por una llamada anterior a `_findfirst`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Si la operación se realiza correctamente, `_findclose` devuelve 0. De lo contrario, devuelve –1 y establece `errno` en `ENOENT`, que indica que no se pudieron encontrar más archivos coincidentes.  
+ Si la operación se realiza correctamente, `_findclose` devuelve 0. En caso contrario, devuelve -1 y establece `errno` a `ENOENT`, que indica que la búsqueda de coincidencias no más archivos se encontró.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -81,9 +82,6 @@ int _findclose(
 |`_findclose`|\<io.h>|  
   
  Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Llamadas del sistema](../../c-runtime-library/system-calls.md)   

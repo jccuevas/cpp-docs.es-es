@@ -66,10 +66,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: a42b5d8811e108b727671921322423d186d73afd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 69a19aaa457ffc52c431a9ca1c3597a475a10994
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
@@ -100,7 +101,7 @@ void _statusfp2(unsigned int *px86, unsigned int *pSSE2)
   
  Se recomienda `_statusfp2` para los chips (como Pentium IV) que tienen procesadores de punto flotante de x87 y de SSE2. En el caso de `_statusfp2`, las direcciones se rellenan usando la palabra de estado de punto flotante para el procesador de punto flotante de x87 o de SSE2. En el caso de chips que admite procesadores de punto flotante de x87 y SSE2, EM_AMBIGUOUS se establece en 1 si se usa `_statusfp` o `_controlfp`, y la acción es ambigua porque podría referirse a la palabra de estado de punto flotante de x87 o SSE2. La función `_statusfp2` solo se admite en plataformas x86.  
   
- Estas funciones no son útiles para [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) porque common language runtime (CLR) solo admite la precisión de punto flotante predeterminada.  
+ Estas funciones no son útiles para [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) porque common language runtime (CLR) solo es compatible con la precisión de punto flotante predeterminada.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -155,9 +156,6 @@ Status = 0x00000000 - clear
 Status = 0x00000003 - inexact, underflow  
 Status = 0x00080003 - inexact, underflow, denormal  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   

@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 78c12c22f85eb9ba50b1ea5a92f6f3bb171e01a0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 48718acb6ad8773f876251962fd4b643993c27e8
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
@@ -110,7 +111,7 @@ long double erfcl(
   
  ![Función de error de x](../../c-runtime-library/reference/media/crt_erf_formula.PNG "CRT_erf_formula")  
   
- La función de error de Gauss complementaria se define como 1 – erf(x). Las funciones `erf` devuelven un valor dentro del intervalo comprendido entre -1,0 y 1,0. No se devuelve ningún error. Las funciones `erfc` devuelven un valor dentro del intervalo comprendido entre 0 y 2. Si `x` es demasiado grande para `erfc`, la variable `errno` se establece en `ERANGE`.  
+ La función error de Gauss complementaria se define como 1 - ERF. Las funciones `erf` devuelven un valor dentro del intervalo comprendido entre -1,0 y 1,0. No se devuelve ningún error. Las funciones `erfc` devuelven un valor dentro del intervalo comprendido entre 0 y 2. Si `x` es demasiado grande para `erfc`, la variable `errno` se establece en `ERANGE`.  
   
  Como C++ permite las sobrecargas, puede llamar a las sobrecargas de `erf` y `erfc`, que toman y devuelven los tipos `float` y `long double`. En un programa de C, `erf` y `erfc` siempre toman y devuelven `double`.  
   
@@ -120,10 +121,7 @@ long double erfcl(
 |--------------|---------------------|  
 |`erf`, `erff`, `erfl`, `erfc`, `erfcf`, `erfcl`|\<math.h>|  
   
- Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)

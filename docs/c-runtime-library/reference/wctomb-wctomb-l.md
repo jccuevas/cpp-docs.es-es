@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3d95aae18858582f732459e136c998c15d70189e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 3d199cba90dd2440a7a467c95d32e2a5a75f8cbf
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
@@ -86,7 +87,7 @@ int _wctomb_l(
  Carácter ancho.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Si `wctomb` convierte el carácter ancho en un carácter multibyte, devuelve el número de bytes (que nunca es mayor que `MB_CUR_MAX`) en el carácter ancho. Si `wchar` es el carácter nulo ancho (L'\0'), `wctomb` devuelve 1. Si el puntero de destino `mbchar` es NULL, `wctomb` devuelve 0. Si la conversión no es posible en la configuración regional actual, `wctomb` devuelve -1 y `errno` se establece en `EILSEQ`.  
+ Si `wctomb` convierte el carácter ancho en un carácter multibyte, devuelve el número de bytes (que nunca es mayor que `MB_CUR_MAX`) en el carácter ancho. Si `wchar` es el carácter nulo ancho (L'\0'), `wctomb` devuelve 1. Si el puntero de destino `mbchar` es NULL, `wctomb` devuelve 0. Si la conversión no es posible en la configuración regional actual, `wctomb` devuelve -1 y `errno` está establecido en `EILSEQ`.  
   
 ## <a name="remarks"></a>Comentarios  
  La función `wctomb` convierte su argumento `wchar` en el carácter multibyte correspondiente y almacena el resultado en `mbchar`. Puede llamar a la función desde cualquier ubicación de cualquier programa. `wctomb` usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; `_wctomb_l` es igual que `wctomb`, salvo que en su lugar usa la configuración regional pasada. Para más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
@@ -129,9 +130,6 @@ Convert a wide character:
    Characters converted: 1  
    Multibyte character: a  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Conversión de datos](../../c-runtime-library/data-conversion.md)   

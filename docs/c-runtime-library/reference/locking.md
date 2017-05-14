@@ -1,51 +1,68 @@
 ---
-title: "_locking | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_locking"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_locking"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_locking (función)"
-  - "bytes [C++], bloquear archivo"
-  - "archivos [C++], bloquear"
-  - "archivos [C++], bloquear bytes"
-  - "locking (función)"
+title: _locking | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _locking
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _locking
+dev_langs:
+- C++
+helpviewer_keywords:
+- locking function
+- bytes [C++], locking file
+- files [C++], locking bytes
+- files [C++], locking
+- _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# _locking
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7789a1634f5ee87d54d6b9f2aadbc720819f31ef
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
-Bloqueos ni desbloquea bytes de un archivo.  
+---
+# <a name="locking"></a>_locking
+Bloquea o desbloquea los bytes de un archivo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -56,67 +73,67 @@ Bloqueos ni desbloquea bytes de un archivo.
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `fd`  
- Descriptor de archivo.  
+ Descriptor del archivo.  
   
  *mode*  
- Acción de bloqueo para realizar.  
+ Acción de bloqueo que se va a realizar.  
   
  *nbytes*  
- Número de bytes a bloquear.  
+ Número de bytes que se van a bloquear.  
   
-## Valor devuelto  
- `_locking` devuelve 0 si correctamente.  Un valor devuelto de – 1 indica el error, en este caso [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) se establece en uno de los valores siguientes.  
+## <a name="return-value"></a>Valor devuelto  
+ `_locking` devuelve 0 si es correcto. Un valor devuelto de -1 indica un error, en cuyo caso [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) se establece en uno de los siguientes valores.  
   
  `EACCES`  
- Infracción de bloqueo \(el archivo bloqueado ya o desbloqueó\).  
+ Infracción de bloqueo (archivo ya bloqueado o desbloqueado).  
   
  `EBADF`  
  Descriptor de archivo no válido.  
   
  `EDEADLOCK`  
- Infracción de bloqueo.  Cambia cuando se especifica el indicador de `_LK_LOCK` o de `_LK_RLCK` y el archivo no se puede bloquear después de 10 intentos.  
+ Infracción de bloqueo. Se devuelve cuando se especifica la marca `_LK_LOCK` o `_LK_RLCK` y el archivo no se puede bloquear después de 10 intentos.  
   
  `EINVAL`  
- Un argumento no válido se asigna a `_locking`.  
+ Se pasó un argumento no válido a `_locking`.  
   
- Si el error se debe a un parámetro incorrecto, como descriptor de archivo no válido, el controlador no válido de parámetro se invoca, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  
+ Si el error se debe a un parámetro incorrecto, como un descriptor de archivo no válido, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  
   
-## Comentarios  
- La función de `_locking` bloqueos ni desbloquea los bytes *de los nbytes* del archivo especificado por `fd`.  Bloquear bytes en un archivo impide el acceso a esos bytes por otros procesos.  Todo el bloqueo o el desbloquear comienza en la posición actual del puntero de archivo y continúa para bytes siguientes *de los nbytes* .  Es posible bloquear bytes más allá del final del archivo.  
+## <a name="remarks"></a>Comentarios  
+ La función `_locking` bloquea o desbloquea *nbytes* bytes del archivo especificado por `fd`. El bloqueo de bytes en un archivo impide que otros procesos obtengan acceso a dichos bytes. Todos los bloqueos o desbloqueos comienzan en la posición actual del puntero de archivo y continúan durante los próximos *nbytes* bytes. Se pueden bloquear bytes después del final del archivo.  
   
- *el modo* debe ser una de las constantes de manifiesto siguientes, que se definen en Locking.h.  
+ *mode* debe ser una de las siguientes constantes de manifiesto, que se definen en Locking.h.  
   
  `_LK_LOCK`  
- Bloquea los bytes especificados.  Si los bytes no puede bloquear, el programa inmediatamente intentarlo después de 1 segundo.  Si, después de 10 intentos, los bytes no puede bloquear, la constante devuelve un error.  
+ Bloquea los bytes especificados. Si no se pueden bloquear los bytes, el programa lo vuelve a intentar inmediatamente después de 1 segundo. Si después de 10 intentos no se pueden bloquear los bytes, la constante devuelve un error.  
   
  `_LK_NBLCK`  
- Bloquea los bytes especificados.  Si los bytes no puede bloquear, la constante devuelve un error.  
+ Bloquea los bytes especificados. Si no se pueden bloquear los bytes, la constante devuelve un error.  
   
  `_LK_NBRLCK`  
- Igual que `_LK_NBLCK`.  
+ Igual a `_LK_NBLCK`.  
   
  `_LK_RLCK`  
- Igual que `_LK_LOCK`.  
+ Igual a `_LK_LOCK`.  
   
  `_LK_UNLCK`  
- Desbloquea los bytes especificados, que deberían haberse bloqueados previamente.  
+ Desbloquea los bytes especificados, que deben haberse bloqueado anteriormente.  
   
- Varias regiones de un archivo que no se superponen pueden ser bloqueadas.  Una región que es desbloqueada debe haberse bloqueado previamente.  `_locking` no combina regiones adyacentes; si dos regiones bloqueadas adyacentes, cada región se debe desbloquear por separado.  Las regiones se deben bloquear sólo brevemente y deben estar desbloqueado antes de cerrar un archivo o de salir del programa.  
+ Se pueden bloquear varias regiones de un archivo que no se superponen. Para desbloquear una región, primero debe haberse bloqueado. `_locking` no combina regiones adyacentes; si dos regiones bloqueadas son adyacentes, cada una de ellas debe desbloquearse por separado. Las regiones deberían bloquearse solo brevemente y deberían desbloquearse antes de cerrar un archivo o de salir del programa.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|Encabezado opcional|  
-|------------|--------------------------|-------------------------|  
-|`_locking`|\<io.h y\> sistema \<\/locking.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_locking`|\<io.h> y \<sys/locking.h>|\<errno.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Bibliotecas  
+## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_locking.c  
@@ -167,13 +184,13 @@ int main( void )
 }  
 ```  
   
-## Entrada: crt\_locking.txt  
+## <a name="input-crtlockingtxt"></a>Entrada: crt_locking.txt  
   
 ```  
 The first thirty bytes of this file will be locked.  
 ```  
   
-## Resultados del ejemplo  
+## <a name="sample-output"></a>Resultados del ejemplo  
   
 ```  
 No one can change these bytes while I'm reading them  
@@ -181,10 +198,7 @@ No one can change these bytes while I'm reading them
 Now I'm done. Do what you will with them  
 ```  
   
-## Equivalente en .NET Framework  
- [System::IO::FileStream::Lock](https://msdn.microsoft.com/en-us/library/system.io.filestream.lock.aspx)  
-  
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Control de archivos](../../c-runtime-library/file-handling.md)   
- [\_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

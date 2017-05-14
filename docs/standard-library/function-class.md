@@ -10,8 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - function
-- std::function
 - functional/std::function
+- functional/std::function::result_type
+- functional/std::function::assign
+- functional/std::function::swap
+- functional/std::function::target
+- functional/std::function::target_type
+- functional/std::function::operator unspecified
+- functional/std::function::operator()
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: adc625fe0acd085f2433d5436c535c9ae9fd2455
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0c79b2b4d1ac2e9df7f38708ff232d70392cce15
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="function-class"></a>function (Clase)
@@ -120,37 +127,37 @@ public:
   
 |||  
 |-|-|  
-|[function::function](#function__function)|Crea un contenedor que está vacío o almacena un objeto al que se puede llamar de tipo arbitrario con una signatura fija.|  
+|[function](#function)|Crea un contenedor que está vacío o almacena un objeto al que se puede llamar de tipo arbitrario con una signatura fija.|  
   
 ### <a name="typedefs"></a>Definiciones de tipo  
   
 |||  
 |-|-|  
-|[function::result_type](#function__result_type)|El tipo de valor devuelto del objeto al que se puede llamar almacenado.|  
+|[result_type](#result_type)|El tipo de valor devuelto del objeto al que se puede llamar almacenado.|  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |||  
 |-|-|  
-|[function::assign](#function__assign)|Asigna un objeto al que se puede llamar a este objeto de función.|  
-|[function::swap](#function__swap)|Intercambia dos objetos a los que se puede llamar.|  
-|[function::target](#function__target)|Comprueba si se puede llamar al objeto al que se puede llamar según lo especificado.|  
-|[function::target_type](#function__target_type)|Obtiene información de tipo en el objeto al que se puede llamar.|  
+|[assign](#assign)|Asigna un objeto al que se puede llamar a este objeto de función.|  
+|[swap](#swap)|Intercambia dos objetos a los que se puede llamar.|  
+|[destino](#target)|Comprueba si se puede llamar al objeto al que se puede llamar según lo especificado.|  
+|[target_type](#target_type)|Obtiene información de tipo en el objeto al que se puede llamar.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[function::operator unspecified](#function__operator_unspecified)|Comprueba si existe un objeto al que se puede llamar almacenado.|  
-|[function::operator()](#function__operator__)|Llama a un objeto al que se puede llamar.|  
-|[function::operator=](#function__operator_eq)|Reemplaza el objeto al que se puede llamar almacenado.|  
+|[function::operator unspecified](#op_unspecified)|Comprueba si existe un objeto al que se puede llamar almacenado.|  
+|[function::operator()](#op_call)|Llama a un objeto al que se puede llamar.|  
+|[function::operator=](#op_eq)|Reemplaza el objeto al que se puede llamar almacenado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** \<functional>  
   
  **Espacio de nombres:** std  
   
-##  <a name="function__assign"></a>  function::assign  
+##  <a name="assign"></a>  function::assign  
  Asigna un objeto al que se puede llamar a este objeto de función.  
   
 ```  
@@ -178,7 +185,7 @@ template <class Fx, class Alloc>
 ### <a name="remarks"></a>Comentarios  
  Las funciones miembro reemplazan al `callable object` mantenido por `*this` por el objeto al que se puede llamar pasado como el `operand`. Ambas asignan almacenamiento con el objeto de asignador `Ax`.  
   
-##  <a name="function__function"></a>  function::function  
+##  <a name="function"></a>  function::function  
  Crea un contenedor que está vacío o almacena un objeto al que se puede llamar de tipo arbitrario con una signatura fija.  
   
 ```  
@@ -292,7 +299,7 @@ f is non-empty (correct).
 g is empty (correct).  
 ```  
   
-##  <a name="function__operator_unspecified"></a>  function::operator unspecified  
+##  <a name="op_unspecified"></a>  function::operator unspecified  
  Comprueba si existe un objeto al que se puede llamar almacenado.  
   
 ```  
@@ -332,7 +339,7 @@ not empty == false
 not empty == true  
 ```  
   
-##  <a name="function__operator__"></a>  function::operator()  
+##  <a name="op_call"></a>  function::operator()  
  Llama a un objeto al que se puede llamar.  
   
 ```  
@@ -380,7 +387,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__operator_eq"></a>  function::operator=  
+##  <a name="op_eq"></a>  function::operator=  
  Reemplaza el objeto al que se puede llamar almacenado.  
   
 ```  
@@ -459,7 +466,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__result_type"></a>  function::result_type  
+##  <a name="result_type"></a>  function::result_type  
  El tipo de valor devuelto del objeto al que se puede llamar almacenado.  
   
 ```  
@@ -499,7 +506,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__swap"></a>  function::swap  
+##  <a name="swap"></a>  function::swap  
  Intercambia dos objetos a los que se puede llamar.  
   
 ```  
@@ -555,7 +562,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__target"></a>  function::target  
+##  <a name="target"></a>  function::target  
  Comprueba si se puede llamar al objeto al que se puede llamar según lo especificado.  
   
 ```  
@@ -614,7 +621,7 @@ empty == true
 no target == true  
 ```  
   
-##  <a name="function__target_type"></a>  function::target_type  
+##  <a name="target_type"></a>  function::target_type  
  Obtiene información de tipo en el objeto al que se puede llamar.  
   
 ```  
@@ -659,6 +666,6 @@ type == void
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [mem_fn (Función)](../standard-library/functional-functions.md#mem_fn_function)   
+ [mem_fn)](../standard-library/functional-functions.md#mem_fn)   
  [reference_wrapper (Clase)](../standard-library/reference-wrapper-class.md)
 

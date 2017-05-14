@@ -76,10 +76,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b84c039c715c8c7a45a84a37c1a1fd34db988403
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4bf1e3ad35fb03891f9c861255919752d0403d70
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
@@ -122,7 +123,7 @@ int _fstat64i32(
  Puntero a la estructura en que se van a almacenar los resultados.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve 0 si se obtiene la información de estado de archivo. Un valor devuelto de –1 indica un error. Si el descriptor de archivo no es válido o `buffer` es `NULL`, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `errno` se establece en `EBADF` en caso de un descriptor de archivo no válido o en `EINVAL` si `buffer` es `NULL`.  
+ Devuelve 0 si se obtiene la información de estado de archivo. Un valor devuelto de -1 indica un error. Si el descriptor de archivo no es válido o `buffer` es `NULL`, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `errno` se establece en `EBADF` en caso de un descriptor de archivo no válido o en `EINVAL` si `buffer` es `NULL`.  
   
 ## <a name="remarks"></a>Comentarios  
  La función `_fstat` obtiene información sobre el archivo abierto asociado a `fd` y la almacena en la estructura a la que apunta `buffer`. La estructura `_stat`, que se define en SYS\Stat.h, contiene los siguientes campos.  
@@ -159,7 +160,7 @@ int _fstat64i32(
   
  Las variaciones de estas funciones admiten tipos de tiempo de 32 o 64 bits y longitudes de archivos de 32 o 64 bits. El primer sufijo numérico (`32` o `64`) indica el tamaño del tipo de tiempo usado; el segundo sufijo es `i32` o `i64`, lo que indica si el tamaño del archivo se representa como un entero de 32 o 64 bits.  
   
- `_fstat` equivale a `_fstat64i32` y `struct``_stat` contiene una hora de 64 bits. Esto es así a menos que se defina `_USE_32BIT_TIME_T` , en cuyo caso el comportamiento anterior está en vigor; `_fstat` usa un tiempo de 32 bits y `struct``_stat` contiene un tiempo de 32 bits. Lo mismo ocurre para `_fstati64`.  
+ `_fstat` equivale a `_fstat64i32` y `struct _stat` contiene una hora de 64 bits. Esto es así a menos que se defina `_USE_32BIT_TIME_T` , en cuyo caso el comportamiento anterior está en vigor; `_fstat` usa un tiempo de 32 bits y `struct _stat` contiene un tiempo de 32 bits. Lo mismo ocurre para `_fstati64`.  
   
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>Tipo de tiempo y variaciones de tipo de longitud de archivo de _stat  
   
@@ -251,9 +252,6 @@ int main( void )
 File size     : 16  
 Time modified : Wed May 07 15:25:11 2003  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Control de archivos](../../c-runtime-library/file-handling.md)   

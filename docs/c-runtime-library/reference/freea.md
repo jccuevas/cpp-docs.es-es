@@ -51,10 +51,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b8310730b9b1c700402cc8d6d35eea3abc893dfe
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: bd53960a97cc6647008b683e354df664941428e9
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="freea"></a>_freea
@@ -78,7 +79,7 @@ void _freea(
 ## <a name="remarks"></a>Comentarios  
  La función `_freea` desasigna un bloque de memoria (`memblock`) que se había asignado previamente mediante una llamada a [_malloca](../../c-runtime-library/reference/malloca.md). `_freea` comprueba si la memoria se ha asignado en el montón o en la pila. Si se ha asignado en la pila, `_freea` no hace nada. Si se ha asignado en el montón, el número de bytes liberados es equivalente al número de bytes solicitado al asignar el bloque. Si `memblock` es `NULL`, el puntero se omite y `_freea` se devuelve inmediatamente. Puede que el intento de liberación de un puntero no válido (un puntero a un bloque de memoria que no se ha asignado con `_malloca`) afecte a las solicitudes de asignación posteriores y provoque errores.  
   
- _`freea` llama internamente a `free` si detecta que la memoria está asignada en el montón. Si la memoria está en el montón o en la pila lo determina un marcador que se coloca en la memoria en la dirección inmediatamente anterior a la memoria asignada.  
+ `_freea`llamadas `free` internamente si detecta que la memoria está asignada en el montón. Si la memoria está en el montón o en la pila lo determina un marcador que se coloca en la memoria en la dirección inmediatamente anterior a la memoria asignada.  
   
  Si se produce un error al liberar memoria, en `errno` se muestra información sobre la naturaleza del error proporcionada por el sistema operativo. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -98,9 +99,6 @@ void _freea(
   
 ## <a name="example"></a>Ejemplo  
  Consulte el ejemplo de [_malloca](../../c-runtime-library/reference/malloca.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Asignación de memoria](../../c-runtime-library/memory-allocation.md)   

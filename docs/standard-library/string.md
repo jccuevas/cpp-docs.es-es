@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: f352a9efb06dc0267abcf1d4174c48dcbaae78a2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6cc4af94f5eae06cde244da58c4aa03e561821a7
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
@@ -73,15 +74,15 @@ Define la clase de plantilla de contenedores `basic_string` y diversas plantilla
   
 |||  
 |-|-|  
-|[operator+](../standard-library/string-operators.md#operator_add)|Concatena dos objetos de cadena.|  
-|[operator!=](../standard-library/string-operators.md#operator_neq)|Comprueba si el objeto de cadena del lado izquierdo del operador no es igual que el objeto de cadena del lado derecho.|  
-|[operator==](../standard-library/string-operators.md#operator_eq_eq)|Comprueba si el objeto de cadena del lado izquierdo del operador es igual que el objeto de cadena del lado derecho.|  
-|[operator<](../standard-library/string-operators.md#operator_lt_)|Comprueba si el objeto de cadena del lado izquierdo del operador es menor que el objeto de cadena del lado derecho.|  
-|[operator<=](../standard-library/string-operators.md#operator_lt__eq)|Comprueba si el objeto de cadena del lado izquierdo del operador es menor o igual que el objeto de cadena del lado derecho.|  
-|[operator<\<](../standard-library/string-operators.md#operator_lt__lt_)|Función de plantilla que inserta una cadena en la secuencia de salida.|  
-|[operator>](../standard-library/string-operators.md#operator_gt_)|Comprueba si el objeto de cadena del lado izquierdo del operador es mayor que el objeto de cadena del lado derecho.|  
-|[operator>=](../standard-library/string-operators.md#operator_gt__eq)|Comprueba si el objeto de cadena del lado izquierdo del operador es mayor o igual que el objeto de cadena del lado derecho.|  
-|[operator>>](../standard-library/string-operators.md#operator_gt__gt_)|Función de plantilla que extrae una cadena de la secuencia de entrada.|  
+|[operator+](../standard-library/string-operators.md#op_add)|Concatena dos objetos de cadena.|  
+|[operator!=](../standard-library/string-operators.md#op_neq)|Comprueba si el objeto de cadena del lado izquierdo del operador no es igual que el objeto de cadena del lado derecho.|  
+|[operator==](../standard-library/string-operators.md#op_eq_eq)|Comprueba si el objeto de cadena del lado izquierdo del operador es igual que el objeto de cadena del lado derecho.|  
+|[operator<](../standard-library/string-operators.md#op_lt)|Comprueba si el objeto de cadena del lado izquierdo del operador es menor que el objeto de cadena del lado derecho.|  
+|[operator<=](../standard-library/string-operators.md#op_lt_eq)|Comprueba si el objeto de cadena del lado izquierdo del operador es menor o igual que el objeto de cadena del lado derecho.|  
+|[operator<\<](../standard-library/string-operators.md#op_lt_lt)|Función de plantilla que inserta una cadena en la secuencia de salida.|  
+|[operator>](../standard-library/string-operators.md#op_gt)|Comprueba si el objeto de cadena del lado izquierdo del operador es mayor que el objeto de cadena del lado derecho.|  
+|[operator>=](../standard-library/string-operators.md#op_gt_eq)|Comprueba si el objeto de cadena del lado izquierdo del operador es mayor o igual que el objeto de cadena del lado derecho.|  
+|[operator>>](../standard-library/string-operators.md#op_gt_gt)|Función de plantilla que extrae una cadena de la secuencia de entrada.|  
   
 ### <a name="specialized-template-functions"></a>Funciones de plantilla especializadas  
   
@@ -102,7 +103,7 @@ Define la clase de plantilla de contenedores `basic_string` y diversas plantilla
   
 |||  
 |-|-|  
-|[Función de plantilla getline](../standard-library/string-functions.md#getline)|Extraiga las cadenas de la secuencia de entrada línea por línea.|  
+|[Plantilla getLine](../standard-library/string-functions.md#getline)|Extraiga las cadenas de la secuencia de entrada línea por línea.|  
   
 ### <a name="classes"></a>Clases  
   

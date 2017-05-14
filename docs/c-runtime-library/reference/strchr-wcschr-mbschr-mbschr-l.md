@@ -1,69 +1,86 @@
 ---
-title: "strchr, wcschr, _mbschr, _mbschr_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "strchr"
-  - "wcschr"
-  - "_mbschr_l"
-  - "_mbschr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntdll.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftcschr"
-  - "strchr"
-  - "wcschr"
-  - "_tcschr"
-  - "_mbschr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftcschr (función)"
-  - "_mbschr (función)"
-  - "_mbschr_l (función)"
-  - "_tcschr (función)"
-  - "caracteres [C++], buscar en cadenas"
-  - "ftcschr (función)"
-  - "mbschr (función)"
-  - "mbschr_l (función)"
-  - "strchr (función)"
-  - "cadenas [C++], buscar"
-  - "tcschr (función)"
-  - "wcschr (función)"
+title: strchr, wcschr, _mbschr, _mbschr_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- strchr
+- wcschr
+- _mbschr_l
+- _mbschr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ftcschr
+- strchr
+- wcschr
+- _tcschr
+- _mbschr
+dev_langs:
+- C++
+helpviewer_keywords:
+- strings [C++], searching
+- mbschr function
+- _ftcschr function
+- _mbschr function
+- characters [C++], finding in strings
+- _mbschr_l function
+- ftcschr function
+- wcschr function
+- strchr function
+- _tcschr function
+- tcschr function
+- mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
 caps.latest.revision: 31
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 31
----
-# strchr, wcschr, _mbschr, _mbschr_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 471339844a38aed1f84e13649e49714c45ec8178
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
-Busca un carácter en una cadena con la configuración regional actual o una categoría especificada de conversión de estado LC\_CTYPE.  
+---
+# <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr, wcschr, _mbschr, _mbschr_l
+Busca un carácter en una cadena con la configuración regional actual o una categoría especificada de conversión de estado LC_CTYPE.  
   
 > [!IMPORTANT]
->  `_mbschr` y `_mbschr_l` no se pueden usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución.  Para obtener más información, vea [Funciones de CRT no admitidas con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbschr` y `_mbschr_l` no se pueden usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 char *strchr(  
@@ -119,7 +136,7 @@ const unsigned char *_mbschr_l(
 ); // C++ only  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `str`  
  Cadena de origen terminada en NULL.  
   
@@ -129,36 +146,36 @@ const unsigned char *_mbschr_l(
  `locale`  
  Configuración regional que se va a usar.  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  Cada una de estas funciones devuelve un puntero a la primera aparición de `c` en `str`, o `NULL` si `c` no se encuentra.  
   
-## Comentarios  
- La función `strchr` encuentra la primera aparición de `c` en `str`, o devuelve `NULL` si `c` no se encuentra.  En la búsqueda se incluye el carácter nulo de terminación.  
+## <a name="remarks"></a>Comentarios  
+ La función `strchr` encuentra la primera aparición de `c` en `str`, o devuelve `NULL` si `c` no se encuentra. En la búsqueda se incluye el carácter nulo de terminación.  
   
- `wcschr`, `_mbschr` y `_mbschr_l` son versiones de caracteres anchos y multibyte de `strchr`.  Los argumentos y el valor devuelto de `wcschr` son cadenas de caracteres anchos; los de `_mbschr` son cadenas de caracteres multibyte.  `_mbschr` reconoce secuencias de caracteres multibyte.  Además, si la cadena es un puntero nulo, `_mbschr` invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, `_mbschr` devuelve `NULL` y establece `errno` en `EINVAL`.  `strchr` y `wcschr` no validan sus parámetros.  Estas tres funciones se comportan exactamente igual.  
+ `wcschr`, `_mbschr` y `_mbschr_l` son versiones de caracteres anchos y multibyte de `strchr`. Los argumentos y el valor devuelto de `wcschr` son cadenas de caracteres anchos; los de `_mbschr` son cadenas de caracteres multibyte. `_mbschr` reconoce secuencias de caracteres multibyte. Además, si la cadena es un puntero nulo, `_mbschr` invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `_mbschr` devuelve `NULL` y establece `errno` en `EINVAL`. `strchr` y `wcschr` no validan sus parámetros. Estas tres funciones se comportan exactamente igual.  
   
- El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional. Para obtener más información, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en su lugar.  Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional. Para obtener más información, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en su lugar. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
   
- En C, estas funciones toman un puntero `const` como primer argumento.  En C\+\+, hay disponibles dos sobrecargas.  La sobrecarga que toma un puntero a `const` devuelve un puntero a `const`; la versión que contiene un puntero a un valor que no es `const` devuelve un puntero a un valor que no es `const`.  La macro \_CONST\_CORRECT\_OVERLOADS se define si están disponibles tanto las versiones `const` como no `const` de estas funciones.  Si necesita un comportamiento que no sea `const` para ambas sobrecargas de C\+\+, defina el símbolo \_CONST\_RETURN.  
+ En C, estas funciones toman un puntero `const` como primer argumento. En C++, hay disponibles dos sobrecargas. La sobrecarga que toma un puntero a `const` devuelve un puntero a `const`; la versión que contiene un puntero a un valor que no es `const` devuelve un puntero a un valor que no es `const`. La macro _CONST_CORRECT_OVERLOADS se define si están disponibles tanto las versiones `const` como no `const` de estas funciones. Si necesita un comportamiento que no sea `const` para ambas sobrecargas de C++, defina el símbolo _CONST_RETURN.  
   
-### Asignaciones de rutina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
-|Rutina TCHAR.H|\_UNICODE y \_MBCS no definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcschr`|`strchr`|`_mbschr`|`wcschr`|  
-|**\_n\/a**|**no disponible**|`_mbschr_l`|**no disponible**|  
+|**_n/a**|**N/D**|`_mbschr_l`|**N/D**|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`strchr`|\<string.h\>|  
-|`wcschr`|\<string.h\> o \<wchar.h\>|  
-|`_mbschr`, `_mbschr_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strchr`|\<string.h>|  
+|`wcschr`|\<string.h> o \<wchar.h>|  
+|`_mbschr`, `_mbschr_l`|\<mbstring.h>|  
   
  Para obtener más información sobre la compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_strchr.c  
@@ -204,25 +221,26 @@ int main( void )
 }  
 ```  
   
-  **Cadena que se va a buscar:**  
- **The quick brown dog jumps over the lazy fox**  
- **1         2         3         4         5**  
- **12345678901234567890123456789012345678901234567890**  
-**Search char:   r**  
-**Result:   first r found at position 12**  
-**Result:   last r found at position 30**   
-## Equivalente en .NET Framework  
- [System::String::IndexOf](https://msdn.microsoft.com/en-us/library/system.string.indexof.aspx)  
+```Output  
+String to be searched:  
+      The quick brown dog jumps over the lazy fox  
+               1         2         3         4         5  
+      12345678901234567890123456789012345678901234567890  
   
-## Vea también  
+Search char:   r  
+Result:   first r found at position 12  
+Result:   last r found at position 30  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)   
  [Configuración regional](../../c-runtime-library/locale.md)   
  [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn, wcscspn, \_mbscspn, \_mbscspn\_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
- [strncat, \_strncat\_l, wcsncat, \_wcsncat\_l, \_mbsncat, \_mbsncat\_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy, \_strncpy\_l, wcsncpy, \_wcsncpy\_l, \_mbsncpy, \_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strpbrk, wcspbrk, \_mbspbrk, \_mbspbrk\_l](../../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)   
- [strrchr, wcsrchr, \_mbsrchr, \_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strstr, wcsstr, \_mbsstr, \_mbsstr\_l](../../c-runtime-library/reference/strstr-wcsstr-mbsstr-mbsstr-l.md)
+ [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l](../../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [strstr, wcsstr, _mbsstr, _mbsstr_l](../../c-runtime-library/reference/strstr-wcsstr-mbsstr-mbsstr-l.md)

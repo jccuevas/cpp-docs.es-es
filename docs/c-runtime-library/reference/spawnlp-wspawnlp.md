@@ -1,59 +1,76 @@
 ---
-title: "_spawnlp, _wspawnlp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wspawnlp"
-  - "_spawnlp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-process-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wspawnlp"
-  - "wspawnlp"
-  - "_spawnlp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "wspawnlp (función)"
-  - "_spawnlp (función)"
-  - "procesos, crear"
-  - "procesos, ejecutar nuevos"
-  - "_wspawnlp (función)"
-  - "creación de proceso"
-  - "spawnlp (función)"
+title: _spawnlp, _wspawnlp | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wspawnlp
+- _spawnlp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-process-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wspawnlp
+- wspawnlp
+- _spawnlp
+dev_langs:
+- C++
+helpviewer_keywords:
+- wspawnlp function
+- _spawnlp function
+- processes, creating
+- processes, executing new
+- _wspawnlp function
+- process creation
+- spawnlp function
 ms.assetid: 74fc6e7a-4f24-4103-9387-7177875875e6
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _spawnlp, _wspawnlp
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 66172824d106860b6fa4408f85cba4a10bce696e
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="spawnlp-wspawnlp"></a>_spawnlp, _wspawnlp
 Crea y ejecuta un nuevo proceso.  
   
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para más información, vea [Funciones de CRT no admitidas con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 intptr_t _spawnlp(  
@@ -74,7 +91,7 @@ intptr_t _wspawnlp(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `mode`  
  Modo de ejecución para el proceso de llamada.  
   
@@ -84,14 +101,14 @@ intptr_t _wspawnlp(
  `arg0, arg1, ... argn`  
  Lista de punteros a argumentos. El argumento `arg0` suele ser un puntero a `cmdname`. Los argumentos `arg1` a `argn` son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. Después de `argn`, debe haber un puntero `NULL` para marcar el final de la lista de argumentos.  
   
-## Valor devuelto  
- El valor devuelto de un `_spawnlp`  o `_wspawnlp`  sincrónico \(`_P_WAIT`  especificado para `mode`\) es el estado de salida del nuevo proceso. El valor devuelto de un `_spawnlp` o `_wspawnlp` asincrónico \(`_P_NOWAIT` o `_P_NOWAITO` especificado para `mode`\) es el identificador de proceso. El estado de salida es 0 si el proceso finalizó normalmente. Puede establecer el estado de salida en un valor distinto de cero si el proceso generado llama específicamente a la rutina `exit` con un argumento distinto de cero. Si el nuevo proceso no estableció explícitamente un estado de salida positivo, un estado de salida positivo indica un resultado anormal con una anulación o una interrupción. Un valor devuelto de –1 indica un error \(el nuevo proceso no se ha iniciado\). En este caso, `errno` se establece en uno de los valores siguientes.  
+## <a name="return-value"></a>Valor devuelto  
+ El valor devuelto de un `_spawnlp` o `_wspawnlp` sincrónico (`_P_WAIT` especificado para `mode`) es el estado de salida del nuevo proceso. El valor devuelto de un `_spawnlp` o `_wspawnlp` asincrónico (`_P_NOWAIT` o `_P_NOWAITO` especificado para `mode`) es el identificador de proceso. El estado de salida es 0 si el proceso finalizó normalmente. Puede establecer el estado de salida en un valor distinto de cero si el proceso generado llama específicamente a la rutina `exit` con un argumento distinto de cero. Si el nuevo proceso no estableció explícitamente un estado de salida positivo, un estado de salida positivo indica un resultado anormal con una anulación o una interrupción. Un valor devuelto de -1 indica un error (el nuevo proceso no se inicia). En este caso, `errno` se establece en uno de los valores siguientes.  
   
  `E2BIG`  
  La lista de argumentos supera los 1024 bytes.  
   
  `EINVAL`  
- El argumento `mode` no es válido.  
+El argumento `mode` no es válido.  
   
  `ENOENT`  
  El archivo o la ruta de acceso no se encuentra.  
@@ -102,40 +119,34 @@ intptr_t _wspawnlp(
  `ENOMEM`  
  Memoria insuficiente para ejecutar el nuevo proceso.  
   
- Para obtener más información sobre estos y otros códigos de retorno, vea [\_doserrno, errno, \_sys\_errlist y \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Cada una de estas funciones crea y ejecuta un proceso nuevo, pasando cada argumento de la línea de comandos como parámetro independiente y usando la variable de entorno `PATH` para buscar el archivo que se va a ejecutar.  
   
- Estas funciones validan sus parámetros. Si `cmdname` o `arg0` es una cadena vacía o puntero nulo, estas funciones generan una excepción de parámetro no válido, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven \-1. No se genera ningún proceso nuevo.  
+ Estas funciones validan sus parámetros. Si `cmdname` o `arg0` es una cadena vacía o puntero nulo, estas funciones generan una excepción de parámetro no válido, como se describe en [Parameter Validation](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL`y devuelven -1. No se genera ningún proceso nuevo.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`_spawnlp`|\<process.h\>|  
-|`_wspawnlp`|\<stdio.h\> o \<wchar.h\>|  
+|-------------|---------------------|  
+|`_spawnlp`|\<process.h>|  
+|`_wspawnlp`|\<stdio.h> o \<wchar.h>|  
   
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Ejemplo  
- Vea el ejemplo de [Funciones \_spawn y \_wspawn](../../c-runtime-library/spawn-wspawn-functions.md).  
+## <a name="example"></a>Ejemplo  
+ Vea el ejemplo de [Funciones _spawn y _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).  
   
-## Equivalente en .NET Framework  
-  
--   [Clase System::Diagnostics::Process](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)  
-  
--   [Clase System::Diagnostics::ProcessStartInfo](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)  
-  
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)   
- [\_spawn, \_wspawn \(Funciones\)](../../c-runtime-library/spawn-wspawn-functions.md)   
+ [_spawn, _wspawn (Funciones)](../../c-runtime-library/spawn-wspawn-functions.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
  [atexit](../../c-runtime-library/reference/atexit.md)   
- [\_exec, \_wexec \(Funciones\)](../../c-runtime-library/exec-wexec-functions.md)   
- [exit, \_Exit, \_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [\_flushall](../../c-runtime-library/reference/flushall.md)   
- [\_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [\_onexit, \_onexit\_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
- [\_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
- [system, \_wsystem](../../c-runtime-library/reference/system-wsystem.md)
+ [_exec, _wexec (Funciones)](../../c-runtime-library/exec-wexec-functions.md)   
+ [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [_flushall](../../c-runtime-library/reference/flushall.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+ [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
+ [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

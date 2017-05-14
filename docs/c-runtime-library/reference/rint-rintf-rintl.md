@@ -1,82 +1,105 @@
 ---
-title: "rint, rintf, rintl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "rintf"
-  - "rintl"
-  - "rint"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "rintf"
-  - "rintl"
-  - "rint"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rintf (función)"
-  - "rint (función)"
-  - "rintl (función)"
+title: rint, rintf, rintl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- rintf
+- rintl
+- rint
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- rintf
+- rintl
+- rint
+dev_langs:
+- C++
+helpviewer_keywords:
+- rintf function
+- rint function
+- rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# rint, rintf, rintl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 1b4d0544e2a5656451d67d8fa206df5eb86a4919
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
+---
+# <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 Redondea un valor de punto flotante al entero más cercano en el formato de punto flotante.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-double rint( double x ); float rint( float x );  // C++ only long double rint( long double x );  // C++ only float rintf( float x );  long double rintl( long double x );    
+double rint( double x );  
+float rint( float x );  // C++ only  
+long double rint( long double x );  // C++ only  
+float rintf( float x );   
+long double rintl( long double x );  
+  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `x`  
  Valor de punto flotante que se va a redondear.  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  Las funciones `rint` devuelven un valor de punto flotante que representa el entero más cercano a `x`. Los valores a medio camino se redondean en función de la configuración actual del modo de redondeo de puntos flotantes, al igual que las funciones `nearbyint`. Al contrario de lo que sucede con las funciones `nearbyint`, las funciones `rint` pueden generar la excepción de punto flotante `FE_INEXACT` si el valor del resultado es distinto del argumento. No se devuelve ningún error.  
   
 |Entrada|Excepción SEH|Excepción de `_matherr`|  
-|-------------|-------------------|-----------------------------|  
+|-----------|-------------------|--------------------------|  
 |± ∞, QNAN, IND|ninguna|ninguna|  
-|Desnormalizados|EXCEPTION\_FLT\_UNDERFLOW|ninguna|  
+|Desnormalizados|EXCEPTION_FLT_UNDERFLOW|ninguna|  
   
-## Comentarios  
- Puesto que C\+\+ permite las sobrecargas, es posible llamar a las sobrecargas de `rint` que toman y devuelven los valores `float` y `long double`. En un programa C, `rint` siempre y devuelve `double`.  
+## <a name="remarks"></a>Comentarios  
+ Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `rint` que toman y devuelven los valores `float` y `long double`. En un programa C, `rint` siempre y devuelve `double`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Función|Encabezado C|Encabezado C\+\+|  
-|-------------|------------------|----------------------|  
-|`rint`, `rintf`, `rintl`|\<math.h\>|\<cmath\>|  
+|Función|Encabezado C|Encabezado C++|  
+|--------------|--------------|------------------|  
+|`rint`, `rintf`, `rintl`|\<math.h>|\<cmath>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_rint.c  
@@ -103,21 +126,21 @@ int main( void )
 }  
 ```  
   
-  **rint\(2,499999\) es 2**  
-**rint\(\-2.499999\) es \-2**  
-**rintf\(2,800000\) es 3**  
-**rintf\(\-2.800000\) es \-3**  
-**rintl\(2,500000\) es 3**  
-**rintl\(\-2.500000\) es \-3**   
-## Equivalente en .NET Framework  
- [System::Math::Round](https://msdn.microsoft.com/en-us/library/system.math.round.aspx)  
+```Output  
+rint(2.499999) is 2  
+rint(-2.499999) is -2  
+rintf(2.800000) is 3  
+rintf(-2.800000) is -3  
+rintl(2.500000) is 3  
+rintl(-2.500000) is -3  
+```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
  [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
  [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
  [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   
- [lrint, lrintf, lrintl, llrint, llrintf, llrintl](http://msdn.microsoft.com/es-es/312fd869-a9c0-4107-bb23-ab8299d04385)   
+ [lrint, lrintf, lrintl, llrint, llrintf, llrintl](http://msdn.microsoft.com/en-us/312fd869-a9c0-4107-bb23-ab8299d04385)   
  [lround, lroundf, lroundl, llround, llroundf, llroundl](../../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)   
- [nearbyint, nearbyintf, nearbyintl](http://msdn.microsoft.com/es-es/15111e73-331d-41d1-81b7-3e10df894848)   
+ [nearbyint, nearbyintf, nearbyintl](http://msdn.microsoft.com/en-us/15111e73-331d-41d1-81b7-3e10df894848)   
  [rint](../../c-runtime-library/reference/rint-rintf-rintl.md)

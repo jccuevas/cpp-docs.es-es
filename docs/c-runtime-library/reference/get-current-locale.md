@@ -1,77 +1,91 @@
 ---
-title: "_get_current_locale | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_get_current_locale"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-locale-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "get_current_locale"
-  - "__get_current_locale"
-  - "_get_current_locale"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__get_current_locale (función)"
-  - "_get_current_locale (función)"
-  - "get_current_locale (función)"
-  - "configuraciones regionales, obtener información sobre"
+title: _get_current_locale | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _get_current_locale
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-locale-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- get_current_locale
+- __get_current_locale
+- _get_current_locale
+dev_langs:
+- C++
+helpviewer_keywords:
+- get_current_locale function
+- _get_current_locale function
+- locales, getting information on
+- __get_current_locale function
 ms.assetid: 572217f2-a37a-4105-a293-a250b4fabd99
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# _get_current_locale
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e2f14ad541750967d63a50c13ec82a9ed57fce05
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
+---
+# <a name="getcurrentlocale"></a>_get_current_locale
 Obtiene un objeto de configuración regional que representa la configuración regional actual.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 _locale_t _get_current_locale(void);  
 ```  
   
-## Valor devuelto  
- Un objeto de configuración regional que representa la configuración regional actual.  
+## <a name="return-value"></a>Valor devuelto  
+ Objeto de configuración regional que representa la configuración regional actual.  
   
-## Comentarios  
- La funciónde `_get_current_locale`obtiene la configuración regional actualmente establecida en el subproceso y devuelve un objeto de configuración regional que representa esa configuración regional.  
+## <a name="remarks"></a>Comentarios  
+ El `_get_current_locale` función obtiene establecidos actualmente la configuración regional del subproceso y devuelve un objeto de configuración regional que representa esa configuración regional.  
   
- El nombre anterior de esta función, `__get_current_locale` \(con dos subrayado principales\) está desusado.  
+ El nombre anterior de esta función, `__get_current_locale` (con dos caracteres de subrayado iniciales), ha quedado en desuso.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`_get_current_locale`|\<locale.h\>|  
+|-------------|---------------------|  
+|`_get_current_locale`|\<locale.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Equivalente en .NET Framework  
- No hay equivalente.  
-  
-## Vea también  
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [\_create\_locale, \_wcreate\_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
- [\_free\_locale](../../c-runtime-library/reference/free-locale.md)
+## <a name="see-also"></a>Vea también  
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [_create_locale, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
+ [_free_locale](../../c-runtime-library/reference/free-locale.md)

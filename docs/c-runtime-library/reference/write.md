@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d035a6b0941e7fa916e9306e5ef4f420d4e066d5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9e6e654e043a71cbb6eb75c53077b14400b82d72
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="write"></a>_write
@@ -79,11 +80,11 @@ int _write(
  Número de bytes.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Si es correcto, `_write` devuelve el número de bytes escrito realmente. Si el espacio real que queda en el disco es inferior al tamaño del búfer que la función trata de escribir en el disco, se produce un error en `_write` y no se vuelca ningún contenido del búfer en el disco. Un valor devuelto de –1 indica un error. Si se pasan parámetros no válidos, esta función invoca al controlador de parámetros no válidos, como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y `errno` se establece en uno de tres valores: `EBADF`, que indica que el descriptor de archivo no es válido o que el archivo no está abierto para escritura; `ENOSPC`, que pone de manifiesto que no hay espacio suficiente en el dispositivo para realizar la operación; o `EINVAL`, que señala que `buffer` es un puntero nulo o que se ha pasado un `count` impar de bytes para su escritura en un archivo en modo Unicode.  
+ Si es correcto, `_write` devuelve el número de bytes escrito realmente. Si el espacio real que queda en el disco es inferior al tamaño del búfer que la función trata de escribir en el disco, se produce un error en `_write` y no se vuelca ningún contenido del búfer en el disco. Un valor devuelto de -1 indica un error. Si se pasan parámetros no válidos, esta función invoca al controlador de parámetros no válidos, como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y `errno` se establece en uno de tres valores: `EBADF`, que indica que el descriptor de archivo no es válido o que el archivo no está abierto para escritura; `ENOSPC`, que pone de manifiesto que no hay espacio suficiente en el dispositivo para realizar la operación; o `EINVAL`, que señala que `buffer` es un puntero nulo o que se ha pasado un `count` impar de bytes para su escritura en un archivo en modo Unicode.  
   
- Para más información sobre estos y otros códigos devueltos, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Para obtener más información sobre estos y otros códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Si el archivo se abre en modo de texto, cada carácter de salto de línea se reemplazará por un par de retorno de carro-avance de línea en la salida. Este reemplazo no tiene efecto alguno en el valor devuelto.  
+ Si el archivo se abre en modo de texto, se reemplaza cada carácter de avance de línea con un retorno de carro - par de avance de línea en la salida. Este reemplazo no tiene efecto alguno en el valor devuelto.  
   
  Cuando el archivo se abre en un modo de conversión Unicode (por ejemplo, si `fd` se abre con `_open` o `_sopen` y un parámetro de modo que incluye `_O_WTEXT`, `_O_U16TEXT` o `_O_U8TEXT`; si se abre mediante `fopen` y un parámetro de modo que incluye `ccs=UNICODE`, `ccs=UTF-16LE` o `ccs=UTF-8`; o si el modo se cambia a un modo de conversión Unicode mediante `_setmode`), `buffer` se interpreta como un puntero a una matriz de `wchar_t` que contiene datos **UTF-16**. Si se intenta escribir un número impar de bytes en este modo, se producirá un error de validación de parámetros.  
   

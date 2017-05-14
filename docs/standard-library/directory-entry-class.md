@@ -45,10 +45,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 2b28a11cc3b1c27029e7ac0ced52c9b898163b66
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0bd6b73c99eccffc7661cc4b43f97ab46890c5ee
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="directoryentry-class"></a>directory_entry (Clase)
@@ -61,7 +62,7 @@ class directory_entry;
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- La clase almacena un objeto de tipo [path](../standard-library/path-class.md). La `path` almacenada puede ser una instancia de la [path (Clase)](../standard-library/path-class.md) o de un tipo que se deriva de `path`. También almacena dos valores [file_type](../standard-library/filesystem-enumerations.md#filesystem__file_type): uno que representa lo que se conoce sobre el estado del nombre de archivo almacenado y otra que representa lo que se conoce sobre el estado del vínculo simbólico del nombre de archivo.  
+ La clase almacena un objeto de tipo [path](../standard-library/path-class.md). La `path` almacenada puede ser una instancia de la [path (Clase)](../standard-library/path-class.md) o de un tipo que se deriva de `path`. También almacena dos valores [file_type](../standard-library/filesystem-enumerations.md#file_type): uno que representa lo que se conoce sobre el estado del nombre de archivo almacenado y otra que representa lo que se conoce sobre el estado del vínculo simbólico del nombre de archivo.  
   
  Para obtener más información y ejemplos de código, vea [Exploración del sistema de archivos (C++)](../standard-library/file-system-navigation.md).  
   

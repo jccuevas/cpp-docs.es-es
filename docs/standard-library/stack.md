@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 02ce6e15184a7ef6acb07218564c9e1d5a7dcddd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a769d1f945c6a79c0941a505e3291ae0f5529bbd
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
@@ -56,12 +57,12 @@ Define la pila de la clase de plantilla y dos plantillas auxiliares.
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/stack-operators.md#operator_neq)|Comprueba si el objeto de pila del lado izquierdo del operador no es igual que el objeto de pila del lado derecho.|  
-|[operator<](../standard-library/stack-operators.md#operator_eq_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es menor que el objeto de pila del lado derecho.|  
-|[operator\<=](../standard-library/stack-operators.md#operator_lt_)|Comprueba si el objeto de pila del lado izquierdo del operador es menor o igual que el objeto de pila del lado derecho.|  
-|[operator==](../standard-library/stack-operators.md#operator_lt__eq)|Comprueba si el objeto de pila del lado izquierdo del operador es igual que el objeto de pila del lado derecho.|  
-|[operator>](../standard-library/stack-operators.md#operator_gt_)|Comprueba si el objeto de pila del lado izquierdo del operador es mayor que el objeto de pila del lado derecho.|  
-|[operator>=](../standard-library/stack-operators.md#operator_gt__eq)|Comprueba si el objeto de pila del lado izquierdo del operador es mayor o igual que el objeto de pila del lado derecho.|  
+|[operator!=](../standard-library/stack-operators.md#op_neq)|Comprueba si el objeto de pila del lado izquierdo del operador no es igual que el objeto de pila del lado derecho.|  
+|[operator<](../standard-library/stack-operators.md#op_lt)|Comprueba si el objeto de pila del lado izquierdo del operador es menor que el objeto de pila del lado derecho.|  
+|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es menor o igual que el objeto de pila del lado derecho.|  
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es igual que el objeto de pila del lado derecho.|  
+|[operator>](../standard-library/stack-operators.md#op_gt)|Comprueba si el objeto de pila del lado izquierdo del operador es mayor que el objeto de pila del lado derecho.|  
+|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es mayor o igual que el objeto de pila del lado derecho.|  
   
 ### <a name="classes"></a>Clases  
   

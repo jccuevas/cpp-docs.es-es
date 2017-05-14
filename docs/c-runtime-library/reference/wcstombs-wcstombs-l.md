@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dead533ee11db7c40faa7d3611b30c6a6159ee50
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 200337a53155b27b76a944d025c8fb013c29c4e6
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
@@ -108,7 +109,7 @@ size_t _wcstombs_l(
  Configuración regional que se va a usar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Si `wcstombs` convierte correctamente la cadena multibyte, devuelve el número de bytes escritos en la cadena de salida multibyte, sin incluir el carácter final `NULL` (si lo hubiera). Si el argumento `mbstr` es `NULL`, `wcstombs` devuelve el tamaño necesario en bytes de la cadena de destino. Si `wcstombs` encuentra un carácter ancho que no pueda convertir en un carácter multibyte, devuelve –1 convertido en tipo `size_t` y establece `errno` en `EILSEQ`.  
+ Si `wcstombs` convierte correctamente la cadena multibyte, devuelve el número de bytes escritos en la cadena de salida multibyte, sin incluir el carácter final `NULL` (si lo hubiera). Si el argumento `mbstr` es `NULL`, `wcstombs` devuelve el tamaño necesario en bytes de la cadena de destino. Si `wcstombs` encuentra un carácter ancho que no se puede convertir en un carácter multibyte, devuelve -1 que se convierte al tipo `size_t` y establece `errno` a `EILSEQ`.  
   
 ## <a name="remarks"></a>Comentarios  
  La función `wcstombs` convierte la cadena de caracteres anchos a la que apunta `wcstr` en los caracteres multibyte correspondientes y almacena los resultados en la matriz `mbstr`. El parámetro `count` indica el número máximo de bytes que se pueden almacenar en la cadena de salida multibyte (es decir, el tamaño de `mbstr`). En general, no se conoce el número de bytes que se necesitarán al convertir una cadena de caracteres anchos. Algunos caracteres anchos necesitarán un solo byte de la cadena de salida; otros necesitarán dos. Si hay dos bytes en la cadena de salida multibyte por cada carácter ancho de la cadena de entrada (incluido el carácter ancho `NULL`), el resultado cabe seguro.  
@@ -117,7 +118,7 @@ size_t _wcstombs_l(
   
  Si el argumento `mbstr` es `NULL`, `wcstombs` devuelve el tamaño necesario en bytes de la cadena de destino.  
   
- `wcstombs` valida sus parámetros. Si `wcstr` es `NULL`, o si `count` es mayor que `INT_MAX`, esta función invoca al controlador de parámetros no válidos, como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve -1.  
+ `wcstombs` valida sus parámetros. Si `wcstr` es `NULL`, o si `count` es mayor que `INT_MAX`, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve -1.  
   
  `wcstombs` usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; `_wcstombs_l` es igual, salvo que en su lugar usa la configuración regional pasada. Para más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
   
@@ -172,9 +173,6 @@ Convert wide-character string:
    Characters converted: 13  
     Multibyte character: Hello, world.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Conversión de datos](../../c-runtime-library/data-conversion.md)   

@@ -1,61 +1,78 @@
 ---
-title: "_getc_nolock, _getwc_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_getc_nolock"
-  - "_getwc_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "getc_nolock"
-  - "_gettc_nolock"
-  - "_getc_nolock"
-  - "getwc_nolock"
-  - "gettc_nolock"
-  - "_getwc_nolock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_getc_nolock (función)"
-  - "_gettc_nolock (función)"
-  - "_getwc_nolock (función)"
-  - "caracteres, leer"
-  - "getc_nolock (función)"
-  - "gettc_nolock (función)"
-  - "getwc_nolock (función)"
-  - "leer caracteres de secuencias"
-  - "secuencias, leer caracteres de"
+title: _getc_nolock, _getwc_nolock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _getc_nolock
+- _getwc_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- getc_nolock
+- _gettc_nolock
+- _getc_nolock
+- getwc_nolock
+- gettc_nolock
+- _getwc_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- characters, reading
+- _getc_nolock function
+- _getwc_nolock function
+- getwc_nolock function
+- streams, reading characters from
+- reading characters from streams
+- getc_nolock function
+- gettc_nolock function
+- _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _getc_nolock, _getwc_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 89144f6750dcb7b264f9783b2454826be45e036c
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
+---
+# <a name="getcnolock-getwcnolock"></a>_getc_nolock, _getwc_nolock
 Lee un carácter de una secuencia.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int _getc_nolock(   
@@ -66,32 +83,32 @@ wint_t _getwc_nolock(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `stream`  
  Flujo de entrada.  
   
-## Valor devuelto  
- Vea [getc, getwc](../../c-runtime-library/reference/getc-getwc.md).  
+## <a name="return-value"></a>Valor devuelto  
+ Consulte [getc, getwc](../../c-runtime-library/reference/getc-getwc.md).  
   
-## Comentarios  
- Estas funciones son idénticas a `getc` y a `getwc` salvo que no bloquean el subproceso de llamada.  Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos.  Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.  
+## <a name="remarks"></a>Comentarios  
+ Estas funciones son idénticas a `getc` y `getwc`, salvo que no bloquean el subproceso de llamada. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.  
   
-### Asignaciones de rutina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
-|Rutina Tchar.h|\_UNICODE y \_MBCS no definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_gettc_nolock`|`getc_nolock`|`getc_nolock`|`getwc_nolock`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`getc_nolock`|\<stdio.h\>|  
-|`getwc_nolock`|\<stdio.h\> o \<wchar.h\>|  
+|-------------|---------------------|  
+|`getc_nolock`|\<stdio.h>|  
+|`getwc_nolock`|\<stdio.h> o \<wchar.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_getc_nolock.c  
@@ -127,28 +144,22 @@ int main()
 }  
 ```  
   
-## Entrada: crt\_getc\_nolock.txt  
+## <a name="input-crtgetcnolocktxt"></a>Entrada: crt_getc_nolock.txt  
   
 ```  
 Line the first.  
 Line the second.  
 ```  
   
-### Resultados  
+### <a name="output"></a>Salida  
   
 ```  
 Input was: Line the first.  
 ```  
   
-## Equivalente en .NET Framework  
-  
--   [System::IO::StreamReader::Read](https://msdn.microsoft.com/en-us/library/system.io.streamreader.read.aspx)  
-  
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
-  
-## Vea también  
- [E\/S de secuencia](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Vea también  
+ [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
  [fgetc, fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
- [\_getch, \_getwch](../../c-runtime-library/reference/getch-getwch.md)   
+ [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)   
  [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)   
  [ungetc, ungetwc](../../c-runtime-library/reference/ungetc-ungetwc.md)

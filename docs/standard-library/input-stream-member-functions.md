@@ -13,6 +13,7 @@ dev_langs:
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
+f1_keywords: []
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
 caps.latest.revision: 7
 author: corob-msft
@@ -32,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d270a9790f33fe5258108663f9618f0da1ed5b37
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 04820d66b272d284940971d1661b4c41f116aa2f
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="input-stream-member-functions"></a>Funciones de miembro de flujo de entrada
@@ -43,20 +45,20 @@ Las funciones miembro de flujo de entrada se usan para la entrada de disco. Entr
   
 - [La función open para flujos de entrada](#vclrftheopenfunctionforinputstreamsanchor11)  
   
-- [La función get](#vclrfthegetfunctionanchor12)  
+- [Get](#vclrfthegetfunctionanchor12)  
   
-- [La función getline](#vclrfthegetlinefunctionanchor13)  
+- [El getline](#vclrfthegetlinefunctionanchor13)  
   
-- [La función read](#vclrfthereadfunctionanchor14)  
+- [La operación de lectura](#vclrfthereadfunctionanchor14)  
   
 - [Las funciones seekg y tellg](#vclrftheseekgandtellgfunctionsanchor7)  
   
 - [La función close para flujos de entrada](#vclrftheclosefunctionforinputstreamsanchor15)  
   
-##  <a name="a-namevclrftheopenfunctionforinputstreamsanchor11a-the-open-function-for-input-streams"></a><a name="vclrftheopenfunctionforinputstreamsanchor11"></a> La función open para flujos de entrada  
+##  <a name="vclrftheopenfunctionforinputstreamsanchor11"></a> La función open para flujos de entrada  
  Si usa un flujo de archivos de entrada (ifstream), debe asociar ese flujo con un archivo de disco específico. Puede hacerlo en el constructor, o bien puede usar la función **open**. En cualquier caso, los argumentos son los mismos.  
   
- Normalmente se especifica una marca [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode) al abrir el archivo asociado a un flujo de entrada (el modo predeterminado es **ios::in**). Para obtener una lista de las marcas **open_mode**, vea [La función open](#vclrftheopenfunctionforinputstreamsanchor11). Las marcas se pueden combinar con el operador OR bit a bit (&#124;).  
+ Normalmente se especifica una marca [ios_base::openmode](../standard-library/ios-base-class.md#openmode) al abrir el archivo asociado a un flujo de entrada (el modo predeterminado es **ios::in**). Para obtener una lista de los **open_mode** marcas, consulte [abrir](#vclrftheopenfunctionforinputstreamsanchor11). Las marcas se pueden combinar con el operador OR bit a bit (&#124;).  
   
  Para leer un archivo, use la función miembro **fail** para determinar si existe:  
   
@@ -67,7 +69,7 @@ if (ifile.fail())
 // The file does not exist ...  
 ```  
   
-##  <a name="a-namevclrfthegetfunctionanchor12a-the-get-function"></a><a name="vclrfthegetfunctionanchor12"></a> La función get  
+##  <a name="vclrfthegetfunctionanchor12"></a>Get
  La función miembro **get** sin formato funciona como el operador **>>**, con dos excepciones. En primer lugar, la función **get** incluye caracteres de espacio en blanco, mientras que el extractor excluye el espacio en blanco cuando está establecida la marca **skipws** (valor predeterminado). En segundo lugar, es menos probable que la función **get** provoque el vaciado de un flujo de salida vinculado (por ejemplo, `cout`).  
   
  Una variación de la función **get** especifica una dirección de búfer y el número máximo de caracteres que se van a leer. Esto es útil para limitar el número de caracteres que se envían a una variable específica, como se muestra en este ejemplo:  
@@ -101,7 +103,7 @@ int main()
 1234  
 ```  
   
-##  <a name="a-namevclrfthegetlinefunctionanchor13a-the-getline-function"></a><a name="vclrfthegetlinefunctionanchor13"></a> La función getline  
+##  <a name="vclrfthegetlinefunctionanchor13"></a>El getline
  La función miembro **getline** es similar a la función **get**. Ambas funciones permiten un tercer argumento que especifica el carácter de terminación de la entrada. El valor predeterminado es el carácter de nueva línea. Ambas funciones reservan un carácter para el carácter de terminación necesario, pero **get** deja el carácter de terminación del flujo y **getline** quita el carácter de terminación.  
   
  En el ejemplo siguiente se especifica un carácter de terminación para el flujo de entrada:  
@@ -127,7 +129,7 @@ int main( )
 test  
 ```  
   
-##  <a name="a-namevclrfthereadfunctionanchor14a-the-read-function"></a><a name="vclrfthereadfunctionanchor14"></a> La función read  
+##  <a name="vclrfthereadfunctionanchor14"></a>La operación de lectura
  La función miembro **read** lee los bytes de un archivo en un área de memoria especificada. El argumento de longitud determina el número de bytes leídos. Si no se incluye ese argumento, la lectura se detiene cuando se llega al final del archivo o, en el caso de un archivo en modo de texto, cuando se lee un carácter `EOF` incrustado.  
   
  En este ejemplo se lee un registro binario de un archivo de nóminas en una estructura:  
@@ -158,7 +160,7 @@ int main()
   
  El programa da por supuesto que los registros de datos tienen exactamente el mismo formato especificado por la estructura, sin caracteres de terminación de retorno de carro o avance de línea.  
   
-##  <a name="a-namevclrftheseekgandtellgfunctionsanchor7a-the-seekg-and-tellg-functions"></a><a name="vclrftheseekgandtellgfunctionsanchor7"></a> Las funciones seekg y tellg  
+##  <a name="vclrftheseekgandtellgfunctionsanchor7"></a> Las funciones seekg y tellg  
  Los flujos de archivos de entrada conservan un puntero interno a la posición del archivo en la que se van a leer los datos a continuación. Este puntero se establece con la función `seekg`, como se muestra aquí:  
   
 ```  
@@ -212,7 +214,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namevclrftheclosefunctionforinputstreamsanchor15a-the-close-function-for-input-streams"></a><a name="vclrftheclosefunctionforinputstreamsanchor15"></a> La función close para flujos de entrada  
+##  <a name="vclrftheclosefunctionforinputstreamsanchor15"></a> La función close para flujos de entrada  
  La función miembro **close** cierra el archivo de disco asociado a un flujo de archivos de entrada y libera el identificador de archivo del sistema operativo. El destructor [ifstream](../standard-library/basic-ifstream-class.md) cierra el archivo automáticamente, pero puede usar la función **close** si necesita abrir otro archivo para el mismo objeto de flujo.  
   
 ## <a name="see-also"></a>Vea también  

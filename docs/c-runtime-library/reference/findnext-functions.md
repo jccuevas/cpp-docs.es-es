@@ -120,10 +120,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e1a79f5859d35b324b4469918bf1107da32f651c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 58132a9c16f23d7885432b05a459cc348c0bf915
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
@@ -190,7 +191,7 @@ int _wfindnext64i32(
  Búfer de información de archivo.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Si la operación se realiza correctamente, devuelve 0. De lo contrario, devuelve –1 y establece `errno` en un valor que indica la naturaleza del error. En la siguiente tabla se muestran los posibles códigos de error.  
+ Si la operación se realiza correctamente, devuelve 0. En caso contrario, devuelve -1 y establece `errno` en un valor que indica la naturaleza del error. En la siguiente tabla se muestran los posibles códigos de error.  
   
  `EINVAL`  
  Parámetro no válido: `fileinfo` era `NULL`. O bien, el sistema operativo ha devuelto un error inesperado.  
@@ -257,9 +258,6 @@ int _wfindnext64i32(
   
 ## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Llamadas del sistema](../../c-runtime-library/system-calls.md)   
