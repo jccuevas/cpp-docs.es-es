@@ -1,66 +1,83 @@
 ---
-title: "_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_vsprintf_p"
-  - "_vswprintf_p"
-  - "_vsprintf_p_l"
-  - "_vswprintf_p_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vsprintf_p"
-  - "_vswprintf_p"
-  - "_vstprintf_p"
-  - "vswprintf_p"
-  - "_vsprintf_p"
-  - "vstprintf_p"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_vsprintf_p (función)"
-  - "_vsprintf_p_l (función)"
-  - "_vstprintf_p (función)"
-  - "_vstprintf_p_l (función)"
-  - "_vswprintf_p (función)"
-  - "_vswprintf_p_l (función)"
-  - "texto con formato [C++]"
-  - "vsprintf_p (función)"
-  - "vsprintf_p_l (función)"
-  - "vstprintf_p (función)"
-  - "vstprintf_p_l (función)"
-  - "vswprintf_p (función)"
-  - "vswprintf_p_l (función)"
+title: _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _vsprintf_p
+- _vswprintf_p
+- _vsprintf_p_l
+- _vswprintf_p_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vsprintf_p
+- _vswprintf_p
+- _vstprintf_p
+- vswprintf_p
+- _vsprintf_p
+- vstprintf_p
+dev_langs:
+- C++
+helpviewer_keywords:
+- vstprintf_p_l function
+- _vsprintf_p_l function
+- _vstprintf_p function
+- vsprintf_p_l function
+- _vswprintf_p function
+- vswprintf_p function
+- vsprintf_p function
+- vswprintf_p_l function
+- _vswprintf_p_l function
+- vstprintf_p function
+- formatted text [C++]
+- _vsprintf_p function
+- _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2a0503bc20cb5d176374b910c7798511535864f5
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
-Escribir con formato salida mediante un puntero a una lista de argumentos, con la capacidad de especificar el orden en el que se utilizan los argumentos.  
+---
+# <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
+Escribe un resultado con formato mediante un puntero a una lista de argumentos, con la posibilidad de especificar el orden en que se usan los argumentos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int _vsprintf_p(  
@@ -91,7 +108,7 @@ int _vswprintf_p_l(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `buffer`  
  Ubicación de almacenamiento del resultado.  
   
@@ -99,7 +116,7 @@ int _vswprintf_p_l(
  Tamaño de `buffer` en caracteres.  
   
  `count`  
- Número máximo de caracteres a almacenar, en la versión de UNICODE de esta función.  
+ Número máximo de caracteres que se van a almacenar en la versión UNICODE de esta función.  
   
  `format`  
  Especificación de formato.  
@@ -110,37 +127,37 @@ int _vswprintf_p_l(
  `locale`  
  Configuración regional que se va a usar.  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  `_vsprintf_p` y `_vswprintf_p` devuelven el número de caracteres escritos, sin incluir el carácter de terminación nulo, o un valor negativo si se produce un error de salida.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, aplica formato a los datos determinados y los escribe en la memoria a la que señala `buffer`.  
   
- Estas funciones son diferentes de `vsprintf_s` y de `vswprintf_s` sólo en que admiten parámetros posicionales.  Para obtener más información, vea [printf\_p \(Parámetros de posición\)](../../c-runtime-library/printf-p-positional-parameters.md).  
+ Estas funciones se diferencian de `vsprintf_s` y `vswprintf_s` únicamente en que admiten parámetros de posición. Para más información, vea [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).  
   
  Las versiones de estas funciones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.  
   
- Si los parámetros de `buffer` o de `format` son punteros nulos, si el número es cero, o si la cadena de formato contiene caracteres de formato no válidos, se invoca el controlador no válido de parámetro, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, las funciones devuelven \-1 y establecen `errno` en `EINVAL`.  
+ Si los parámetros `buffer` o `format` son punteros NULL, si el recuento es cero o si la cadena de formato contiene caracteres de formato no válidos, se invoca al controlador de parámetros no válidos, como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y establecen `errno` en `EINVAL`.  
   
-### Asignaciones de rutina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
-|Rutina TCHAR.H|\_UNICODE y \_MBCS no definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vstprintf_p`|`_vsprintf_p`|`_vsprintf_p`|`_vswprintf_p`|  
 |`_vstprintf_p_l`|`_vsprintf_p_l`|`_vsprintf_p_l`|`_vswprintf_p_l`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|Encabezados opcionales|  
-|------------|--------------------------|----------------------------|  
-|`_vsprintf_p`, `_vsprintf_p_l`|\<stdio.h\> y \<stdarg.h\>|\<varargs.h\>\*|  
-|`_vswprintf_p`, `_vswprintf_p_l`|\<stdio.h\> o \<wchar.h\>, y \<stdarg.h\>|\<varargs.h\>\*|  
+|-------------|---------------------|----------------------|  
+|`_vsprintf_p`, `_vsprintf_p_l`|\<stdio.h> y \<stdarg.h>|\<varargs.h>*|  
+|`_vswprintf_p`, `_vswprintf_p_l`|\<stdio.h> o \<wchar.h> y \<stdarg.h>|\<varargs.h>*|  
   
  \* Necesario para la compatibilidad con UNIX V.  
   
  Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt__vsprintf_p.c  
@@ -171,6 +188,7 @@ void example( char * format, ... )
         puts( buffer );  
         free( buffer );  
     }  
+    va_end( args );
 }  
   
 int main( void )  
@@ -183,16 +201,16 @@ int main( void )
 }  
 ```  
   
-  **123 \< 456**  
-**This is a string**   
-## Equivalente en .NET Framework  
- [System::String::Format](https://msdn.microsoft.com/en-us/library/system.string.format.aspx)  
+```Output  
+123 < 456  
+This is a string  
+```  
   
-## Vea también  
- [E\/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [vprintf \(Funciones\)](../../c-runtime-library/vprintf-functions.md)   
+## <a name="see-also"></a>Vea también  
+ [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
+ [vprintf (Funciones)](../../c-runtime-library/vprintf-functions.md)   
  [Sintaxis de especificación de formato: Funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [va\_arg, va\_copy, va\_end, va\_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

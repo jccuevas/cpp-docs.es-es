@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: e90ee470e3cf990240f3c586c23fe8fd3d487f3d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ce86a87e5f22b27c5b1d7eeeeb4edcbcac8e15c7
+ms.contentlocale: es-es
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="1-object"></a>_1 (Objeto)
@@ -54,7 +55,7 @@ namespace placeholders {
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Los objetos `_1, _2, ... _M` son marcadores de posición que designan el argumento primero, segundo, ..., Mth, respectivamente, en una llamada de función a un objeto devuelto por la [función bind](../standard-library/functional-functions.md#bind_function). `_N` se usa para especificar dónde se debe insertar el argumento Nth cuando se evalúa la expresión de enlace.  
+ Los objetos `_1, _2, ... _M` son marcadores de posición que designa el primer, segundo,..., argumento de mes, respectivamente, en una llamada de función en el objeto devuelto por [enlazar](../standard-library/functional-functions.md#bind). `_N` se usa para especificar dónde se debe insertar el argumento Nth cuando se evalúa la expresión de enlace.  
   
  En esta implementación, el valor de `M` es 20.  
   
@@ -116,6 +117,6 @@ int main()
  **Espacio de nombres:** std  
   
 ## <a name="see-also"></a>Vea también  
- [bind Function (bind (Función))](../standard-library/functional-functions.md#bind_function)   
+ [enlazar](../standard-library/functional-functions.md#bind)   
  [is_placeholder (Clase)](../standard-library/is-placeholder-class.md)
 

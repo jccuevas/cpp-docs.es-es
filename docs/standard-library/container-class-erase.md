@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 0a28e1ff0def707926a67e1fea77f40e9927c0c4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: aeb81554bdc50db44e9e8d4ee66369149eceb875
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="container-classerase"></a>Clase de contenedor::erase
@@ -56,7 +57,7 @@ iterator erase(
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- La primera función miembro quita el elemento de la secuencia controlada a la que apunta _*Where***.** La segunda función miembro quita los elementos de la secuencia controlada en el intervalo [` first`, ` last`). Ambas devuelven un iterador que designa el primer elemento que permanece más allá de los elementos quitados, o [end](../standard-library/container-class-end.md) si no existe ese elemento.  
+ La primera función miembro quita el elemento de la secuencia controlada señalada por *_Where*. La segunda función miembro quita los elementos de la secuencia controlada en el intervalo [`first`, `last`). Ambas devuelven un iterador que designa el primer elemento que permanece más allá de los elementos quitados, o [end](../standard-library/container-class-end.md) si no existe ese elemento.  
   
  Las funciones miembro producen una excepción solo si una operación de copia produce una excepción.  
   

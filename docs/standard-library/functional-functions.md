@@ -9,41 +9,41 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::bind
 - functional/std::bind
-- std::bind1st
 - functional/std::bind1st
-- std::bind2nd
 - functional/std::bind2nd
-- std::bit_and
 - functional/std::bit_and
-- std::bit_not
 - functional/std::bit_not
-- std::bit_or
 - functional/std::bit_or
-- std::bit_xor
 - functional/std::bit_xor
-- std::cref
 - functional/std::cref
 - type_traits/std::cref
-- std::mem_fn
 - functional/std::mem_fn
-- std::mem_fun
 - functional/std::mem_fun
-- std::mem_fun_ref
 - functional/std::mem_fun_ref
-- std::not1
 - functional/std::not1
-- std::not2
 - functional/std::not2
-- std::ptr_fun
 - functional/std::ptr_fun
-- std::ref
 - functional/std::ref
 - type_traits/std::ref
-- std::swap
 - functional/std::swap
 - type_traits/std::swap
+- functional/std::bind
+- functional/std::bind1st
+- functional/std::bind2nd
+- functional/std::bit_and
+- functional/std::bit_not
+- functional/std::bit_or
+- functional/std::bit_xor
+- functional/std::cref
+- functional/std::mem_fn
+- functional/std::mem_fun
+- functional/std::mem_fun_ref
+- functional/std::not1
+- functional/std::not2
+- functional/std::ptr_fun
+- functional/std::ref
+- functional/std::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -53,23 +53,24 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 9437109e3e03f2b8bfb39bf2b4ca75e520b59c80
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 16d93ad5a46dccbc53fa67a08e2f8432b18f14b5
+ms.contentlocale: es-es
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; (Funciones)
 ||||  
 |-|-|-|  
-|[bind](#bind_function)|[bind1st](#bind1st_function)|[bind2nd](#bind2nd_function)|  
-|[bit_and](#bit_and_function)|[bit_not](#bit_not_function)|[bit_or](#bit_or_function)|  
-|[bit_xor](#bit_xor_function)|[cref](#cref_function)|[mem_fn](#mem_fn_function)|  
-|[mem_fun](#mem_fun_function)|[mem_fun_ref](#mem_fun_ref_function)|[not1](#not1_function)|  
-|[not2](#not2_function)|[ptr_fun](#ptr_fun_function)|[ref](#ref_function)|  
-|[swap](#swap_function)|  
+|[bind](#bind)|[bind1st](#bind1st)|[bind2nd](#bind2nd)|  
+|[bit_and](#bit_and)|[bit_not](#bit_not)|[bit_or](#bit_or)|  
+|[bit_xor](#bit_xor)|[cref](#cref)|[mem_fn](#mem_fn)|  
+|[mem_fun](#mem_fun)|[mem_fun_ref](#mem_fun_ref)|[not1](#not1)|  
+|[not2](#not2)|[ptr_fun](#ptr_fun)|[ref](#ref)|  
+|[swap](#swap)|  
   
-##  <a name="a-namebindfunctiona--bind"></a><a name="bind_function"></a>  bind  
+##  <a name="bind"></a>  bind  
  Enlaza argumentos a un objeto al que se puede llamar.  
   
 ```  
@@ -96,7 +97,7 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 ### <a name="remarks"></a>Comentarios  
  Los tipos `Fty, T1, T2, ..., TN` tienen que poder construirse mediante copia y `INVOKE(fn, t1, ..., tN)` debe ser una expresión válida para algunos valores `w1, w2, ..., wN`.  
   
- La primera función de plantilla devuelve un contenedor de llamadas de reenvío `g` con un tipo de resultado débil. El efecto de `g(u1, u2, ..., uM)` es `INVOKE(f, v1, v2, ..., vN,` [result_of](../standard-library/result-of-class.md)`<Fty` `cv` `(V1, V2, ..., VN)>::type)`, donde `cv` son los calificadores cv de `g` y los valores y tipos de los argumentos enlazados `v1, v2, ..., vN` están determinados como se indica a continuación. Úselo para enlazar los argumentos con un objeto al que se puede llamar para crear un objeto al que se puede llamar con una lista de argumentos adaptada.  
+ La primera función de plantilla devuelve un contenedor de llamadas de reenvío `g` con un tipo de resultado débil. El efecto de `g(u1, u2, ..., uM)` es `INVOKE(f, v1, v2, ..., vN, ` [result_of ()](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, donde `cv` es los calificadores cv de `g` y los valores y tipos de los argumentos enlazados `v1, v2, ..., vN` se determina como se indica a continuación. Úselo para enlazar los argumentos con un objeto al que se puede llamar para crear un objeto al que se puede llamar con una lista de argumentos adaptada.  
   
  La segunda función de plantilla devuelve un contenedor de llamadas de reenvío `g` con un tipo anidado `result_type` que es un sinónimo de `Ret`. El efecto de `g(u1, u2, ..., uM)` es `INVOKE(f, v1, v2, ..., vN, Ret)`, donde `cv` son los calificadores cv de `g` y los valores y tipos de los argumentos enlazados `v1, v2, ..., vN` están determinados como se indica a continuación. Úselo para enlazar los argumentos con un objeto al que se puede llamar para crear un objeto al que se puede llamar con una lista de argumentos adaptada y con un tipo de valor devuelto especificado.  
   
@@ -168,7 +169,7 @@ int main()
 3^2 == 9  
 ```  
   
-##  <a name="a-namebind1stfunctiona--bind1st"></a><a name="bind1st_function"></a>  bind1st  
+##  <a name="bind1st"></a>  bind1st  
  Función de plantilla auxiliar que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el primer argumento de la función binaria a un valor especificado.  
   
 ```  
@@ -180,11 +181,11 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
  `func`  
  El objeto de función binaria que se va a convertir en un objeto de función unaria.  
   
- ` left`  
+ `left`  
  El valor al que se enlazará el primer argumento del objeto de función binaria.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El objeto de función unaria resultante de enlazar el primer argumento del objeto de función binaria con el valor ` left.`  
+ El objeto de función unaria que es el resultado de enlazar el primer argumento de objeto de función binaria en el valor `left`.  
   
 ### <a name="remarks"></a>Comentarios  
  Los enlazadores de función son un tipo de adaptador de función y, ya que devuelven objetos de función, se pueden usar en determinados tipos de composición de funciones para crear expresiones más complicadas y eficaces.  
@@ -258,7 +259,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.  
 ```  
   
-##  <a name="a-namebind2ndfunctiona--bind2nd"></a><a name="bind2nd_function"></a>  bind2nd  
+##  <a name="bind2nd"></a>  bind2nd  
  Función de plantilla auxiliar que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el segundo argumento de la función binaria a un valor especificado.  
   
 ```  
@@ -270,11 +271,11 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
  `func`  
  El objeto de función binaria que se va a convertir en un objeto de función unaria.  
   
- ` right`  
+ `right`  
  El valor al que se enlazará el segundo argumento del objeto de función binaria.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El objeto de función unaria resultante de enlazar el segundo argumento del objeto de función binaria con el valor ` right.`  
+ El objeto de función unaria que es el resultado de enlazar el segundo argumento de objeto de función binaria en el valor `right`.  
   
 ### <a name="remarks"></a>Comentarios  
  Los enlazadores de función son un tipo de adaptador de función y, ya que devuelven objetos de función, se pueden usar en determinados tipos de composición de funciones para crear expresiones más complicadas y eficaces.  
@@ -348,7 +349,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.  
 ```  
   
-##  <a name="a-namebitandfunctiona--bitand"></a><a name="bit_and_function"></a>  bit_and  
+##  <a name="bit_and"></a>  bit_and  
  Objeto de función predefinido que realiza la operación AND bit a bit (`operator&` binario) sobre sus argumentos.  
   
 ```  
@@ -370,14 +371,14 @@ struct bit_and<void>
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `Type`, ` T`, ` U`  
+ `Type`, `T`, `U`  
  Cualquier tipo que admite un `operator&` que toma operandos de los tipos especificados o deducidos.  
   
  `Left`  
- Operando izquierdo de la operación AND bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido ` T`.  
+ Operando izquierdo de la operación AND bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.  
   
  `Right`  
- Operando derecho de la operación AND bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido ` U`.  
+ Operando derecho de la operación AND bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Resultado de `Left``&``Right`. La plantilla especializada realiza el reenvío directo del resultado, que tiene el tipo devuelto por `operator&`.  
@@ -385,7 +386,7 @@ struct bit_and<void>
 ### <a name="remarks"></a>Comentarios  
  El functor de `bit_and` está limitado a tipos enteros para los tipos de datos básicos, o a tipos definidos por el usuario que implementan el `operator&` binario.  
   
-##  <a name="a-namebitnotfunctiona--bitnot"></a><a name="bit_not_function"></a>  bit_not  
+##  <a name="bit_not"></a>  bit_not  
  Objeto de función predefinido que realiza la operación de complemento bit a bit (NOT) (`operator~`unario) sobre su argumento.  
   
 ```  
@@ -417,7 +418,7 @@ struct bit_not<void>
 ### <a name="remarks"></a>Comentarios  
  El functor de `bit_not` está limitado a tipos enteros para los tipos de datos básicos, o a tipos definidos por el usuario que implementan el `operator~` binario.  
   
-##  <a name="a-namebitorfunctiona--bitor"></a><a name="bit_or_function"></a>  bit_or  
+##  <a name="bit_or"></a>  bit_or  
  Objeto de función predefinido que realiza la operación OR bit a bit (`operator|`) sobre sus argumentos.  
   
 ```  
@@ -439,14 +440,14 @@ struct bit_or<void>
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `Type`, ` T`, ` U`  
+ `Type`, `T`, `U`  
  Cualquier tipo que admite un `operator|` que toma operandos de los tipos especificados o deducidos.  
   
  `Left`  
- Operando izquierdo de la operación OR bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido ` T`.  
+ Operando izquierdo de la operación OR bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.  
   
  `Right`  
- Operando derecho de la operación OR bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido ` U`.  
+ Operando derecho de la operación OR bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Resultado de `Left``|``Right`. La plantilla especializada realiza el reenvío directo del resultado, que tiene el tipo devuelto por `operator|`.  
@@ -454,7 +455,7 @@ struct bit_or<void>
 ### <a name="remarks"></a>Comentarios  
  El functor de `bit_or` está limitado a tipos enteros para los tipos de datos básicos, o a tipos definidos por el usuario que implementan el `operator|`.  
   
-##  <a name="a-namebitxorfunctiona--bitxor"></a><a name="bit_xor_function"></a>  bit_xor  
+##  <a name="bit_xor"></a>  bit_xor  
  Objeto de función predefinido que realiza la operación XOR bit a bit (`operator^` binario) sobre sus argumentos.  
   
 ```  
@@ -476,14 +477,14 @@ struct bit_xor<void>
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `Type`, ` T`, ` U`  
+ `Type`, `T`, `U`  
  Cualquier tipo que admite un `operator^` que toma operandos de los tipos especificados o deducidos.  
   
  `Left`  
- Operando izquierdo de la operación XOR bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido ` T`.  
+ Operando izquierdo de la operación XOR bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.  
   
  `Right`  
- Operando derecho de la operación XOR bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido ` U`.  
+ Operando derecho de la operación XOR bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Resultado de `Left``^``Right`. La plantilla especializada realiza el reenvío directo del resultado, que tiene el tipo devuelto por `operator^`.  
@@ -491,7 +492,7 @@ struct bit_xor<void>
 ### <a name="remarks"></a>Comentarios  
  El functor de `bit_xor` está limitado a tipos enteros para los tipos de datos básicos, o a tipos definidos por el usuario que implementan el `operator^` binario.  
   
-##  <a name="a-namecreffunctiona--cref"></a><a name="cref_function"></a>  cref  
+##  <a name="cref"></a>  cref  
  Construye un `reference_wrapper` const a partir de un argumento.  
   
 ```  
@@ -545,7 +546,7 @@ cref(i) = 1
 cref(neg)(i) = -1  
 ```  
   
-##  <a name="a-namememfnfunctiona--memfn"></a><a name="mem_fn_function"></a>  mem_fn  
+##  <a name="mem_fn"></a>  mem_fn  
  Genera un contenedor de llamadas simple.  
   
 ```  
@@ -606,7 +607,7 @@ int main()
 3*2 == 6  
 ```  
   
-##  <a name="a-namememfunfunctiona--memfun"></a><a name="mem_fun_function"></a>  mem_fun  
+##  <a name="mem_fun"></a>  mem_fun  
  Funciones de plantilla auxiliar utilizadas para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de puntero.  
   
 ```  
@@ -690,7 +691,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namememfunreffunctiona--memfunref"></a><a name="mem_fun_ref_function"></a>  mem_fun_ref  
+##  <a name="mem_fun_ref"></a>  mem_fun_ref  
  Las funciones de plantilla auxiliares usadas para crear adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de referencia.  
   
 ```  
@@ -792,7 +793,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13   
 ```  
   
-##  <a name="a-namenot1functiona--not1"></a><a name="not1_function"></a>  not1  
+##  <a name="not1"></a>  not1  
  Devuelve el complemento de un predicado unario.  
   
 ```  
@@ -801,7 +802,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` pred`  
+ `pred`  
  Predicado unario que se va a negar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -860,7 +861,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.  
 ```  
   
-##  <a name="a-namenot2functiona--not2"></a><a name="not2_function"></a>  not2  
+##  <a name="not2"></a>  not2  
  Devuelve el complemento de un predicado binario.  
   
 ```  
@@ -932,7 +933,7 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )  
 ```  
   
-##  <a name="a-nameptrfunfunctiona--ptrfun"></a><a name="ptr_fun_function"></a>  ptr_fun  
+##  <a name="ptr_fun"></a>  ptr_fun  
  Funciones de plantilla auxiliares usadas para convertir punteros de funciones unarias y binarias, respectivamente, en funciones unarias y binarias adaptables.  
   
 ```  
@@ -958,7 +959,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]  
   
-##  <a name="a-namereffunctiona--ref"></a><a name="ref_function"></a>  ref  
+##  <a name="ref"></a>  ref  
  Construye un `reference_wrapper` a partir de un argumento.  
   
 ```  
@@ -1047,7 +1048,7 @@ tiger lion cougar
 tiger cougar  
 ```  
   
-##  <a name="a-nameswapfunctiona--swap"></a><a name="swap_function"></a>  swap  
+##  <a name="swap"></a>  swap  
  Intercambia dos objetos `function`.  
   
 ```  

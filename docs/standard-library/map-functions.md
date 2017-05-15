@@ -6,13 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- map/std::swap (map)
+- map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
 caps.latest.revision: 6
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: d322b318ac4206c5bc27b81299190d129548ef9f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a72fb2cd6a34cc7946503593657aa0c3a5dc894e
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltmapgt-functions"></a>Funciones de &lt;map&gt;
@@ -20,7 +24,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[swap (mapa)](#swap)|[swap (mapa múltiple)](#swap_multimap)|  
   
-##  <a name="a-nameswapmultimapa--swap--map"></a><a name="swap_multimap"></a>  swap  (mapa)
+##  <a name="swap_multimap"></a>  swap  (mapa)
  Intercambia los elementos de dos mapas.  
   
 ```  
@@ -31,19 +35,19 @@ void swap(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` right`  
- Mapa que proporciona los elementos que se van a intercambiar o mapa cuyos elementos se van a intercambiar con los del mapa ` left`.  
+ `right`  
+ Mapa que proporciona los elementos que se van a intercambiar o mapa cuyos elementos se van a intercambiar con los del mapa `left`.  
   
- ` left`  
- Mapa cuyos elementos se van a intercambiar con los del mapa ` right`.  
+ `left`  
+ Mapa cuyos elementos se van a intercambiar con los del mapa `right`.  
   
 ### <a name="remarks"></a>Comentarios  
- La función de plantilla es un algoritmo especializado en la clase contenedora de mapa para ejecutar la función miembro ` left.`[swap](../standard-library/map-class.md#map__swap)*( right*). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla **template** \< **class T**> **void swap**( **T&**, **T&**), en la clase de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.  
+ La función de plantilla es un algoritmo especializado en el mapa de la clase de contenedor para ejecutar la función miembro `left`.[ swap](../standard-library/map-class.md#swap)( `right`). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla **template** \< **class T**> **void swap**( **T&**, **T&**), en la clase de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.  
   
 ### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de código para la función miembro [map::swap](../standard-library/map-class.md#map__swap) para obtener un ejemplo del uso de la versión de la plantilla de `swap`.  
+  Vea el ejemplo de código para la función miembro [map::swap](../standard-library/map-class.md#swap) para obtener un ejemplo del uso de la versión de la plantilla de `swap`.  
   
-##  <a name="a-nameswapa--swap--multimap"></a><a name="swap"></a>  swap  (mapa múltiple)
+##  <a name="swap"></a>  swap  (mapa múltiple)
  Intercambia los elementos de dos mapas múltiples.  
   
 ```  
@@ -54,17 +58,17 @@ void swap(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` right`  
- Mapa múltiple que proporciona los elementos que se van a intercambiar o el mapa múltiple cuyos elementos se van a intercambiar con los del mapa múltiple ` left`.  
+ `right`  
+ Mapa múltiple que proporciona los elementos que se van a intercambiar o el mapa múltiple cuyos elementos se van a intercambiar con los del mapa múltiple `left`.  
   
- ` left`  
- Mapa múltiple cuyos elementos se van a intercambiar con los del mapa múltiple ` right`.  
+ `left`  
+ Mapa múltiple cuyos elementos se van a intercambiar con los del mapa múltiple `right`.  
   
 ### <a name="remarks"></a>Comentarios  
- La función de plantilla es un algoritmo especializado de la clase contenedora de mapa para ejecutar en la clase contenedora de mapa múltiple para ejecutar la función miembro ` left.`[swap](../standard-library/multimap-class.md#multimap__swap) ( ` right`). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla **template** \< **class T**> **void swap**( **T&**, **T&**), en la clase de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.  
+ La función de plantilla es un algoritmo especializado en el mapa de la clase de contenedor para ejecutar en la asignación múltiple de clase de contenedor para ejecutar la función miembro `left`.[ swap](../standard-library/multimap-class.md#swap) ( `right`). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla **template** \< **class T**> **void swap**( **T&**, **T&**), en la clase de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.  
   
 ### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de código para la función miembro [multimap::swap](../standard-library/multimap-class.md#multimap__swap) para obtener un ejemplo del uso de la versión de la plantilla de `swap`.  
+  Vea el ejemplo de código para la función miembro [multimap::swap](../standard-library/multimap-class.md#swap) para obtener un ejemplo del uso de la versión de la plantilla de `swap`.  
   
 ## <a name="see-also"></a>Vea también  
  [\<map>](../standard-library/map.md)

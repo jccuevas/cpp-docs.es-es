@@ -33,17 +33,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 8159bf4e5ebde026fe0d92b7d9d3c73ce1a7b7b9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: ac4dc70360682aff3a28eabeed0e4f05e4c509a8
+ms.contentlocale: es-es
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="regular-expressions-c"></a>Expresiones regulares (C++)
-En este tema se describe la gramática de varios motores de expresiones regulares.  
+La biblioteca estándar de C++ admite varios gramáticas de expresiones regulares. Este tema tratan las variaciones de gramática disponibles mediante expresiones regulares.  
   
-##  <a name="a-nameregexgrammara-regular-expression-grammar"></a><a name="regexgrammar"></a> Gramática de expresiones regulares  
+##  <a name="regexgrammar"></a> Gramática de expresiones regulares  
+La gramática de expresiones regulares para usar por especificado por el uso de uno de los `std::regex_constants::syntax_option_type` valores de enumeración. Estos gramáticas de expresiones regulares se definen en std::regex_constants:
+
+-   `ECMAScript`: Es más cercano a la gramática de usar JavaScript y los lenguajes. NET.
+-   `basic`: Las expresiones regulares básicas de POSIX o BRE.
+-   `extended`: El POSIX extender las expresiones regulares o ERE.
+-   `awk`: Es `extended`, pero tiene más caracteres de escape para los caracteres no imprimibles.
+-   `grep`: Es `basic`, pero también permite la nueva línea ('\n') caracteres separar alternancias.
+-   `egrep`: Se trata de `extended`, sino que también permite caracteres de nueva línea separar alternatios.
+
+De forma predeterminada, si no se especifica ninguna gramática, `ECMAScript` se da por hecho. Se puede especificar sólo una gramática.  
   
+Además de la gramática, se pueden aplicar varias marcas:  
+-   `icase`: Omitir mayúsculas y minúsculas al comparar.  
+-   `nosubs`: Omitir coincidencias marcados (es decir, expresiones entre paréntesis); No hay sustituciones se almacenan.  
+-   `optimize`: Asegúrese de coincidencia con mayor rapidez, a costa de mayor tiempo de construcción.  
+-   `collate`: Se usa secuencias de intercalación de la configuración regional y (por ejemplo, los intervalos de la forma "[a-z]").  
+  
+Cero o más indicadores se pueden combinar con la gramática para especificar el comportamiento del motor de expresiones regulares. Si solo se especifican marcas, `ECMAScript` se supone que la gramática.
+
 ### <a name="element"></a>Elemento  
  Un elemento puede ser algo de lo siguiente:  
   
@@ -67,7 +86,7 @@ En este tema se describe la gramática de varios motores de expresiones regulare
   
 -   Un *delimitador*. El delimitador “^” coincide con el inicio de la secuencia de destino; el delimitador “$” coincide con el final de la secuencia de destino.  
   
- Un *grupo de capturas* con la forma "( *subexpresión* )" o "\\( *subexpresión* \\)" en `BRE` y `grep`, que coincide con la secuencia de caracteres de la secuencia de destino que coincide con el patrón entre los delimitadores.  
+ Un *grupo de capturas* con la forma "( *subexpresión* )" o "\\( *subexpresión* \\)" en `basic` y `grep`, que coincide con la secuencia de caracteres de la secuencia de destino que coincide con el patrón entre los delimitadores.  
   
 -   Un *carácter de escape de identidad* con la forma "\\`k`", que coincide con el carácter `k` en la secuencia de destino.  
   
@@ -83,7 +102,7 @@ En este tema se describe la gramática de varios motores de expresiones regulare
   
 -   “(a)” coincide con la secuencia de destino “a” y asocia el grupo de captura 1 con la subsecuencia “a”, pero no coincide con las secuencias de destino “B”, “b” o “c”.  
   
- En `ECMAScript`, `BRE` y `grep`, un elemento también puede ser una *referencia inversa* con la forma "\\`dd`", donde `dd` representa un valor N decimal que coincide con una secuencia de caracteres de la secuencia de destino, que es igual que la secuencia de caracteres que coincide con el eNésimo *grupo de capturas*. Por ejemplo, “(a) \1” coincide con la secuencia de destino “aa” porque el primer grupo de captura (y único) coincide con la secuencia inicial “a” y, después, el \1 coincide con la secuencia final “a”.  
+ En `ECMAScript`, `basic` y `grep`, un elemento también puede ser una *referencia inversa* con la forma "\\`dd`", donde `dd` representa un valor N decimal que coincide con una secuencia de caracteres de la secuencia de destino, que es igual que la secuencia de caracteres que coincide con el eNésimo *grupo de capturas*. Por ejemplo, “(a) \1” coincide con la secuencia de destino “aa” porque el primer grupo de captura (y único) coincide con la secuencia inicial “a” y, después, el \1 coincide con la secuencia final “a”.  
   
  En `ECMAScript`, un elemento también puede ser una de las siguientes cosas:  
   
@@ -126,13 +145,13 @@ En este tema se describe la gramática de varios motores de expresiones regulare
 -   Una *secuencia de escape octal* con la forma "\\`ooo`". Coincide con un carácter en la secuencia de destino cuya representación es el valor representado por uno, dos o tres de los dígitos octales `ooo`.  
   
 ### <a name="repetition"></a>Repetición  
- Cualquier elemento que no sea una *aserción positiva*, una *aserción negativa* o un *delimitador* puede ir seguido de un recuento de repetición. La forma más general de recuento de repetición adopta la forma "{`min`,`max`}" o "\\{`min`,`max`\\}" en `BRE` y `grep`. Un elemento al que sigue esta forma de recuento de repetición coincide al menos con las sucesivas repeticiones de `min` y no más que las sucesivas repeticiones de `max` de una secuencia que coincide con el elemento. Por ejemplo, “a {2,3}” coincide con las secuencias de destino “aa” y “aaa”, pero no con las secuencias de destino “a” ni “aaaa”.  
+ Cualquier elemento que no sea una *aserción positiva*, una *aserción negativa* o un *delimitador* puede ir seguido de un recuento de repetición. La forma más general de recuento de repetición adopta la forma "{`min`,`max`}" o "\\{`min`,`max`\\}" en `basic` y `grep`. Un elemento al que sigue esta forma de recuento de repetición coincide al menos con las sucesivas repeticiones de `min` y no más que las sucesivas repeticiones de `max` de una secuencia que coincide con el elemento. Por ejemplo, “a {2,3}” coincide con las secuencias de destino “aa” y “aaa”, pero no con las secuencias de destino “a” ni “aaaa”.  
   
  Un recuento de repetición también puede adoptar una de las siguientes formas:  
   
--   "{`min`}" o "\\{`min`\\}" en `BRE` y `grep`. Equivalente a "{`min`,`min`}".  
+-   "{`min`}" o "\\{`min`\\}" en `basic` y `grep`. Equivalente a "{`min`,`min`}".  
   
--   "{`min`,}" o "\\{`min`,\\}" en `BRE` y `grep`. Equivalente a “{`min`,unbounded}”.  
+-   "{`min`,}" o "\\{`min`,\\}" en `basic` y `grep`. Equivalente a “{`min`,unbounded}”.  
   
 -   "*". Equivalente a "{0,unbounded}”.  
   
@@ -144,7 +163,7 @@ En este tema se describe la gramática de varios motores de expresiones regulare
   
 -   “a*” coincide con "" de las secuencias de destino "", “a”, “aa” y así sucesivamente.  
   
- En todas las gramáticas excepto `BRE` y `grep`, un recuento de repetición también puede adoptar una de las siguientes formas:  
+ En todas las gramáticas excepto `basic` y `grep`, un recuento de repetición también puede adoptar una de las siguientes formas:  
   
 -   "". Equivalente a "{0,1}".  
   
@@ -162,19 +181,19 @@ En este tema se describe la gramática de varios motores de expresiones regulare
  Los elementos de expresión regular, con o sin *recuentos de repetición*, se pueden concatenar para formar expresiones regulares más largas. La expresión resultante coincide con una secuencia de destino que es una concatenación de las secuencias que coinciden con los elementos individuales. Por ejemplo, "a{2,3}b" coincide con las secuencias de destino “aab” y “aaab”, pero no coincide con las secuencias de destino “ab” ni “aaaab”.  
   
 ### <a name="alternation"></a>Alternancia  
- En todas las gramáticas de expresiones regulares con excepción de `BRE` y `grep`, una expresión regular concatenada puede ir seguida del carácter "&#124;" y otra expresión regular concatenada. Cualquier cantidad de expresiones regulares concatenadas se pueden combinar de esta manera. La expresión resultante coincide con cualquier secuencia de destino que coincida con una o más de las expresiones regulares concatenadas.  
+ En todas las gramáticas de expresiones regulares con excepción de `basic` y `grep`, una expresión regular concatenada puede ir seguida del carácter "&#124;" y otra expresión regular concatenada. Cualquier cantidad de expresiones regulares concatenadas se pueden combinar de esta manera. La expresión resultante coincide con cualquier secuencia de destino que coincida con una o más de las expresiones regulares concatenadas.  
   
  Cuando más de una de las expresiones regulares concatenadas coincide con la secuencia de destino, `ECMAScript` elige como la coincidencia la primera de las expresiones regulares concatenadas que coincide con la secuencia (*primera coincidencia*); el resto de las gramáticas de expresiones regulares eligen la que alcanza la *coincidencia más larga*. Por ejemplo, "ab&#124;cd" coincide con las secuencias de destino "ab" y "cb", pero no coincide con las secuencias de destino "abd" ni "acd".  
   
  En `grep` y `egrep`, un carácter de nueva línea (“\n ") se puede utilizar para separar alternancias.  
   
 ### <a name="subexpression"></a>Subexpression  
- En `BRE` y `grep`, una subexpresión es una concatenación. En el resto de las gramáticas de expresiones regulares, una subexpresión es una alternancia.  
+ En `basic` y `grep`, una subexpresión es una concatenación. En el resto de las gramáticas de expresiones regulares, una subexpresión es una alternancia.  
   
-##  <a name="a-namegrammarsummarya-grammar-summary"></a><a name="grammarsummary"></a> Resumen de la gramática  
+##  <a name="grammarsummary"></a> Resumen de la gramática  
  En la siguiente tabla se resumen las características que están disponibles en las diferentes gramáticas de expresiones regulares:  
   
-|Elemento|BRE|ERE|ECMA|grep|egrep|awk|  
+|Elemento|básicos|extendidos|ECMAScript|grep|egrep|awk|  
 |-------------|---------|---------|----------|----------|-----------|---------|  
 |alternancia usando "&#124;"||+|+||+|+|  
 |alternancia usando '\n'||||+|+||  
@@ -203,13 +222,13 @@ En este tema se describe la gramática de varios motores de expresiones regulare
 |carácter comodín|+|+|+|+|+|+|  
 |aserción de límite de palabra|||+||||  
   
-##  <a name="a-namesemanticdetailsa-semantic-details"></a><a name="semanticdetails"></a> Detalles semánticos  
+##  <a name="semanticdetails"></a> Detalles semánticos  
   
 ### <a name="anchor"></a>Delimitador  
  Un delimitador coincide con una posición de la cadena de destino, no con un carácter. Un carácter “^” coincide con el principio de la cadena de destino y “$” coincide con el final de la cadena de destino.  
   
 ### <a name="back-reference"></a>Referencia inversa  
- Una referencia inversa es una barra diagonal inversa seguida de un valor decimal N. Coincide con el contenido del eNésimo *grupo de capturas*. El valor de N no debe ser mayor que el número de grupos de captura que preceden a la referencia inversa. En `BRE` y `grep`, el valor de N lo determina el dígito decimal que sigue a la barra diagonal inversa. En `ECMAScript`, el valor de N viene determinado por todos los dígitos decimales que siguen inmediatamente a la barra diagonal inversa. Por consiguiente, en `BRE` y `grep`, el valor de N nunca es mayor que 9, aunque la expresión regular tenga más de nueve grupos de captura. En `ECMAScript`, el valor de N es unbounded.  
+ Una referencia inversa es una barra diagonal inversa seguida de un valor decimal N. Coincide con el contenido del eNésimo *grupo de capturas*. El valor de N no debe ser mayor que el número de grupos de captura que preceden a la referencia inversa. En `basic` y `grep`, el valor de N lo determina el dígito decimal que sigue a la barra diagonal inversa. En `ECMAScript`, el valor de N viene determinado por todos los dígitos decimales que siguen inmediatamente a la barra diagonal inversa. Por consiguiente, en `basic` y `grep`, el valor de N nunca es mayor que 9, aunque la expresión regular tenga más de nueve grupos de captura. En `ECMAScript`, el valor de N es unbounded.  
   
  Ejemplos:  
   
@@ -217,7 +236,7 @@ En este tema se describe la gramática de varios motores de expresiones regulare
   
 -   "(a)\2" no es válido.  
   
--   “(b (((((((((a))))))))))\10” tiene significados diferentes en `BRE` y en `ECMAScript`. En `BRE` la referencia inversa es "\1". La referencia inversa coincide con el contenido del primer grupo de captura (es decir, el que comienza con “(b” y finaliza con el cierre ")” y va antes de la referencia inversa), y el “0 " final coincide con el carácter ordinario “0". En `ECMAScript`, la referencia inversa es "\10". Coincide con el décimo grupo de captura, es decir, el más profundo.  
+-   “(b (((((((((a))))))))))\10” tiene significados diferentes en `basic` y en `ECMAScript`. En `basic` la referencia inversa es "\1". La referencia inversa coincide con el contenido del primer grupo de captura (es decir, el que comienza con “(b” y finaliza con el cierre ")” y va antes de la referencia inversa), y el “0 " final coincide con el carácter ordinario “0". En `ECMAScript`, la referencia inversa es "\10". Coincide con el décimo grupo de captura, es decir, el más profundo.  
   
 ### <a name="bracket-expression"></a>Expresión entre corchetes  
  Una expresión entre corchetes define un conjunto de caracteres y los *elementos de intercalación*. Cuando la expresión entre corchetes comienza con el carácter “^”, se produce la coincidencia correctamente si ningún elemento del conjunto coincide con el carácter actual en la secuencia de destino. Si no, se produce la coincidencia si alguno de los elementos del conjunto coincide con el carácter actual en la secuencia de destino.  
@@ -318,9 +337,9 @@ En este tema se describe la gramática de varios motores de expresiones regulare
   
 |Gramática|Caracteres de escape de identidad permitidos|  
 |-------------|----------------------------------------|  
-|`BRE`, `grep`|{ "(", ")", "{", "}", ".", "[", "\\", "*", "^", "$" }|  
-|`ERE`, `egre`|{ "(", ")", "{", ".", "[", "\\", "*", "^", "$", "+", "", "&#124;" }|  
-|`awk`|`ERE` plus { '"', '/' }|  
+|`basic`, `grep`|{ "(", ")", "{", "}", ".", "[", "\\", "*", "^", "$" }|  
+|`extended`, `egrep`|{ "(", ")", "{", ".", "[", "\\", "*", "^", "$", "+", "", "&#124;" }|  
+|`awk`|`extended` plus { '"', '/' }|  
 |`ECMAScript`|Todos los caracteres excepto los que pueden formar parte de un identificador. Por lo general, esto incluye letras, dígitos, “$”, “_” y secuencias de escape Unicode. Para obtener más información, vea la Especificación del lenguaje ECMAScript.|  
   
 ### <a name="individual-character"></a>Carácter individual  
@@ -374,11 +393,11 @@ En este tema se describe la gramática de varios motores de expresiones regulare
   
 -   ^  $  \  .  *  +    (  )  [  ]  {  }  &#124;  
   
- En `BRE` y `grep`, los caracteres siguientes tienen significados especiales:  
+ En `basic` y `grep`, los caracteres siguientes tienen significados especiales:  
   
 -   .   [   \  
   
- También en `BRE` y `grep`, los caracteres siguientes tienen significados especiales cuando se utilizan en un contexto determinado:  
+ También en `basic` y `grep`, los caracteres siguientes tienen significados especiales cuando se utilizan en un contexto determinado:  
   
 -   El carácter “*” tiene un significado especial en todos los casos excepto cuando es el primero de una expresión regular o el primero que sigue a un carácter “^ inicial” en una expresión regular, o cuando es el primero de un grupo de captura o el primero que sigue a un carácter “^ inicial” en un grupo de captura.  
   
@@ -386,11 +405,11 @@ En este tema se describe la gramática de varios motores de expresiones regulare
   
 -   “$” tiene un significado especial cuando es el último carácter de una expresión regular.  
   
- En `ERE` y `egrep` y `awk`, los caracteres siguientes tienen significados especiales:  
+ En `extended` y `egrep` y `awk`, los caracteres siguientes tienen significados especiales:  
   
 -   .   [   \   (   *   +      {   &#124;  
   
- También en `ERE` y `egrep` y `awk`, los caracteres siguientes tienen significados especiales cuando se utilizan en un contexto determinado:  
+ También en `extended` y `egrep` y `awk`, los caracteres siguientes tienen significados especiales cuando se utilizan en un contexto determinado:  
   
 -   ")” tiene un significado especial cuando coincide con un carácter “(” precedente.  
   
@@ -431,7 +450,7 @@ En este tema se describe la gramática de varios motores de expresiones regulare
 ### <a name="word-boundary-assert"></a>Aserción de límite de palabra  
  Una aserción de límite de palabra coincide cuando la posición actual en la cadena de destino está inmediatamente después de un *límite de palabra*.  
   
-##  <a name="a-namematchingandsearchinga-matching-and-searching"></a><a name="matchingandsearching"></a> Coincidencias y búsquedas  
+##  <a name="matchingandsearching"></a> Coincidencias y búsquedas  
  Para que una expresión regular coincida con una secuencia de destino, la expresión regular completa debe coincidir con la secuencia de destino completa. Por ejemplo, la expresión regular “bcd” coincide con la secuencia de destino “bcd” pero no coincide con la secuencia de destino “abcd” ni “bcde”.  
   
  Para que una búsqueda de expresiones regulares dé resultado, debe haber una subsecuencia en alguna parte de la secuencia de destino que coincida con la expresión regular. La búsqueda encuentra, normalmente, la subsecuencia coincidente situada más a la izquierda.  
@@ -446,7 +465,7 @@ En este tema se describe la gramática de varios motores de expresiones regulare
   
  Una coincidencia parcial da resultado si la coincidencia llega al final de la secuencia de destino sin dar error, incluso si no alcanza el final de la expresión regular. Por consiguiente, después de que una coincidencia parcial dé resultado, anexar los caracteres a la secuencia de destino puede causar que una coincidencia parcial posterior dé error. Sin embargo, después de que una coincidencia parcial dé error, anexar los caracteres a la secuencia de destino no puede causar que una coincidencia parcial posterior dé resultado correcto. Por ejemplo, con una coincidencia parcial, “ab” coincide con la secuencia de destino “a” pero no con “ac”.  
   
-##  <a name="a-nameformatflagsa-format-flags"></a><a name="formatflags"></a> Marcas de formato  
+##  <a name="formatflags"></a> Marcas de formato  
   
 |Reglas de formato de ECMAScript|Reglas de formato usadas|Texto de sustitución|  
 |-----------------------------|----------------------|----------------------|  
@@ -455,9 +474,9 @@ En este tema se describe la gramática de varios motores de expresiones regulare
 ||"\\&"|"&"|  
 |“$`” (signo de dólar seguido de comilla simple de apertura)||La secuencia de caracteres que precede a la subsecuencia que coincide con la expresión regular (`[match.prefix().first, match.prefix().second)`)|  
 |"$'" (signo de dólar seguido de comilla simple de cierre)||La secuencia de caracteres que sigue a la subsecuencia que coincide con la expresión regular (`[match.suffix().first, match.suffix().second)`)|  
-|"$n"|"\n"|La secuencia de caracteres que coincide con el grupo de captura en la posición `n`, donde `n` es un número entre 0 y 9 (`[match[n].first, match[n].second)`|  
+|"$n"|"\n"|La secuencia de caracteres que coincide con el grupo de captura en la posición `n`, donde `n` es un número comprendido entre 0 y 9 (`[match[n].first, match[n].second)`)|  
 ||"\\\n"|"\n"|  
-|"$nn"||La secuencia de caracteres que coincide con el grupo de captura en la posición `nn`, donde `nn` es un número entre 10 y 99 (`[match[nn].first, match[nn].second)`|  
+|"$nn"||La secuencia de caracteres que coincide con el grupo de captura en la posición `nn`, donde `nn` es un número comprendido entre 10 y 99 (`[match[nn].first, match[nn].second)`)|  
   
 ## <a name="see-also"></a>Vea también  
  [Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)

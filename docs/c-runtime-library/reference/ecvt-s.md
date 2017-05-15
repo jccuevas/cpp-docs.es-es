@@ -1,51 +1,68 @@
 ---
-title: "_ecvt_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ecvt_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "ecvt_s"
-  - "_ecvt_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ecvt_s (función)"
-  - "convertir números double"
-  - "ecvt_s (función)"
-  - "números, convertir"
+title: _ecvt_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ecvt_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- ecvt_s
+- _ecvt_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ecvt_s function
+- ecvt_s function
+- numbers, converting
+- converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# _ecvt_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 81bcb9fe1306f5affa49672269890d6f5888a3ac
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
-Convierte un número de `double` en una cadena.  Ésta es una versión de [\_ecvt](../../c-runtime-library/reference/ecvt.md) con mejoras de seguridad como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="ecvts"></a>_ecvt_s
+Convierte un número `double` en una cadena. Se trata de una versión de [_ecvt](../../c-runtime-library/reference/ecvt.md) con mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 errno_t _ecvt_s(   
@@ -66,65 +83,65 @@ errno_t _ecvt_s(
 ); // C++ only  
 ```  
   
-#### Parámetros  
- \[out\] `_Buffer`  
+#### <a name="parameters"></a>Parámetros  
+ [out] `_Buffer`  
  Relleno con el puntero a la cadena de dígitos, el resultado de la conversión.  
   
- \[in\] `_SizeInBytes`  
+ [in] `_SizeInBytes`  
  Tamaño del búfer en bytes.  
   
- \[in\] `_Value`  
+ [in] `_Value`  
  Número que se va a convertir.  
   
- \[in\] `_Count`  
+ [in] `_Count`  
  Número de dígitos almacenados.  
   
- \[out\] `_Dec`  
- Posición de separador decimal almacenada.  
+ [out] `_Dec`  
+ Posición del separador decimal almacenada.  
   
- \[out\] `_Sign`  
- Signo de número convertido.  
+ [out] `_Sign`  
+ Signo del número que se convierte.  
   
-## Valor devuelto  
- Cero si correctamente.  El valor devuelto es un código de error si hay un error.  Los códigos de error se definen en Errno.h.  Para obtener más información, vea [errno, \_doserrno, \_sys\_errlist y \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+## <a name="return-value"></a>Valor devuelto  
+ Cero si es correcto. Si se produce un error, el valor devuelto es un código de error. Los códigos de error se definen en Errno.h. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- En el caso de un parámetro no válido, como se muestra en la tabla siguiente, esta función invoca el controlador no válido de parámetro, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve `EINVAL`.  
+ En el caso de un parámetro no válido, como se muestra en la siguiente tabla, esta función invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve `EINVAL`.  
   
-### Condiciones de error  
+### <a name="error-conditions"></a>Condiciones de error  
   
-|`_Buffer`|`_SizeInBytes`|\_Value|\_Count|\_Dec|\_Sign|Valor devuelto|Valor de `buffer`|  
-|---------------|--------------------|-------------|-------------|-----------|------------|--------------------|-----------------------|  
-|`NULL`|any|any|any|any|any|`EINVAL`|No modificado.|  
-|No `NULL` \(señala memoria válido\)|\<\=0|any|any|any|any|`EINVAL`|No modificado.|  
-|any|any|any|any|`NULL`|any|`EINVAL`|No modificado.|  
-|any|any|any|any|any|`NULL`|`EINVAL`|No modificado.|  
+|`_Buffer`|`_SizeInBytes`|_Value|_Count|_Dec|_Sign|Valor devuelto|Valor de `buffer`|  
+|---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|  
+|`NULL`|cualquiera|cualquiera|cualquiera|cualquiera|cualquiera|`EINVAL`|No modificado.|  
+|No `NULL` (apunta a la memoria válida)|<=0|any|cualquiera|cualquiera|cualquiera|`EINVAL`|No se ha modificado.|  
+|any|cualquiera|cualquiera|cualquiera|`NULL`|cualquiera|`EINVAL`|No se ha modificado.|  
+|any|cualquiera|cualquiera|cualquiera|cualquiera|`NULL`|`EINVAL`|No se ha modificado.|  
   
  **Problemas de seguridad**  
   
- `_ecvt_s` podría generar una infracción de acceso si `buffer` no señala memoria válida y no es `NULL`.  
+ Puede que `_ecvt_s` genere una infracción de acceso si `buffer` no apunta a una memoria válida y no es `NULL`.  
   
-## Comentarios  
- La función de `_ecvt_s` convierte un número en punto flotante a una cadena de caracteres.  El parámetro de `_Value` es el número de punto flotante que se va a convertir.  Esta función almacena hasta `count` dígitos de `_Value` como cadena y anexa un carácter null \(“\\0”\).  Si el número de dígitos en `_Value` supera `_Count`, se redondea el dígito de orden inferior.  Si hay menos que los dígitos de `count` , la cadena se rellena con ceros.  
+## <a name="remarks"></a>Comentarios  
+ La función `_ecvt_s` convierte un número de punto flotante en una cadena de caracteres. El parámetro `_Value` es el número de punto flotante que se va a convertir. Esta función almacena hasta `count` dígitos de `_Value` como cadena y anexa un carácter nulo ("\0"). Si el número de dígitos de `_Value` supera `_Count`, se redondea el dígito de orden inferior. Si hay menos de `count` dígitos, la cadena se rellena con ceros.  
   
- Sólo dígitos se almacenan en la cadena.  La posición del separador decimal y el signo de `_Value` se pueden obtener de `_Dec` y de `_Sign` después de la llamada.  Los puntos del parámetro de `_Dec` a un valor entero que indica la posición del separador decimal con respecto al principio de la cadena.  Un 0 o un valor entero negativo indica que el separador decimal se encuentra a la izquierda del primer dígito.  Los puntos del parámetro de `_Sign` a un entero que indica el signo de número convertido.  Si el valor entero es 0, el número es positivo.  Si no, el número es negativo.  
+ Solo se almacenan dígitos en la cadena. La posición del separador decimal y el signo de `_Value` pueden obtenerse de `_Dec` y `_Sign` después de la llamada. El parámetro `_Dec` apunta a un valor entero que proporciona la posición del separador decimal con respecto al principio de la cadena. Un valor entero de 0 o negativo indica que el separador decimal se encuentra a la izquierda del primer dígito. El parámetro `_Sign` apunta a un entero que indica el signo del número que se convierte. Si el valor entero es 0, el número es positivo. De lo contrario, el número es negativo.  
   
  Un búfer de longitud `_CVTBUFSIZE` es suficiente para cualquier valor de punto flotante.  
   
- La diferencia entre `_ecvt_s` y `_fcvt_s` está en la del parámetro de `_Count` .  `_ecvt_s` interpreta `_Count` como el número total de dígitos en la cadena de salida, mientras que `_fcvt_s` interpreta `_Count` como el número de dígitos después del separador decimal.  
+ La diferencia entre `_ecvt_s` y `_fcvt_s` radica en la interpretación del parámetro `_Count`. `_ecvt_s` interpreta `_Count` como el número total de dígitos en la cadena de salida, mientras que `_fcvt_s` interpreta `_Count` como el número de dígitos después del separador decimal.  
   
- En C\+\+, mediante esta función es simplificado por una sobrecarga de plantilla; la sobrecarga puede deducir longitud de búfer automáticamente, lo que elimina la necesidad de especificar un argumento size.  Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulte [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
   
- La versión de depuración de esta función primero rellena el búfer con 0xFD.  Para deshabilitar este comportamiento, use [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ La versión de depuración de esta función rellena primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Función|Encabezado necesario|Encabezado opcional|  
-|-------------|--------------------------|-------------------------|  
-|`_ecvt_s`|\<stdlib.h\>|\<errno.h\>|  
+|--------------|---------------------|---------------------|  
+|`_ecvt_s`|\<stdlib.h>|\<errno.h>|  
   
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // ecvt_s.c  
@@ -153,14 +170,14 @@ int main( )
 }  
 ```  
   
-  **Valor convertido: 12000**   
-## Equivalente en .NET Framework  
- <xref:System.Convert.ToString%2A>  
+```Output  
+Converted value: 12000  
+```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conversión de datos](../../c-runtime-library/data-conversion.md)   
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [\_fcvt\_s](../../c-runtime-library/reference/fcvt-s.md)   
- [\_gcvt\_s](../../c-runtime-library/reference/gcvt-s.md)
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)   
+ [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)

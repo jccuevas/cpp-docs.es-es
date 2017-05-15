@@ -1,57 +1,98 @@
 ---
-title: "sync_per_container (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdext.sync_per_container"
-  - "sync_per_container"
-  - "stdext::sync_per_container"
-  - "allocators/stdext::sync_per_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sync_per_container (clase)"
+title: sync_per_container (Clase) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sync_per_container
+- stdext::sync_per_container
+- allocators/stdext::sync_per_container
+- allocators/stdext::sync_per_container::equals
+dev_langs:
+- C++
+helpviewer_keywords:
+- sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# sync_per_container (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 80e119d2d7ee913b691bffe6f9943a28599dc1e5
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
-Describe [filtro de sincronización](../standard-library/allocators-header.md) que proporciona un objeto de caché independiente para cada objeto de asignador.  
+---
+# <a name="syncpercontainer-class"></a>sync_per_container (Clase)
+Describe un [filtro de sincronización](../standard-library/allocators-header.md) que proporciona un objeto de caché independiente para cada objeto de asignador.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
+```
+template <class Cache>  
+class sync_per_container
+ : public Cache
 ```  
-template <class Cache> class sync_per_container  
-    : public Cache  
-```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|`Cache`|El tipo de caché asociado al filtro de sincronización.  Puede ser [cache\_chunklist](../standard-library/cache-chunklist-class.md), [cache\_freelist](../standard-library/cache-freelist-class.md), o [cache\_suballoc](../standard-library/cache-suballoc-class.md).|  
+|`Cache`|El tipo de caché asociado al filtro de sincronización. Puede ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
   
-### Funciones miembro  
+### <a name="member-functions"></a>Funciones miembro  
   
 |||  
 |-|-|  
-|[equals](../Topic/sync_per_container::equals.md)|Compara dos memorias caché de igualdad.|  
+|[equals](#equals)|Compara dos cachés para determinar si son iguales.|  
   
-## Requisitos  
- asignadores \<de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<allocators>  
   
  **Espacio de nombres:** stdext  
   
-## Vea también  
- [\<allocators\>](../standard-library/allocators-header.md)
+##  <a name="equals"></a>  sync_per_container::equals  
+ Compara dos cachés para determinar si son iguales.  
+  
+```
+bool equals(const sync_per_container<Cache>& Other) const;
+```  
+  
+### <a name="parameters"></a>Parámetros  
+  
+|Parámetro|Descripción|  
+|---------------|-----------------|  
+|`Cache`|El objeto de caché del filtro de sincronización.|  
+|`Other`|El objeto de caché para comparar la igualdad.|  
+  
+### <a name="return-value"></a>Valor devuelto  
+ La función miembro siempre devuelve `false`.  
+  
+### <a name="remarks"></a>Comentarios  
+  
+## <a name="see-also"></a>Vea también  
+ [\<allocators>](../standard-library/allocators-header.md)
+
+
+
+

@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: ad237fd3f28e7adfd380e6c2adf0510bfcf5248d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e804f35db459c7fe50bb36fa8eeaf795d04cc621
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
@@ -76,10 +77,10 @@ Define varios tipos y funciones que controlan la asignación y liberación de al
   
 |||  
 |-|-|  
-|[operator delete](../standard-library/new-operators.md#operator_delete)|Función a la que llama una expresión delete para cancelar la asignación de almacenamiento para objetos individuales.|  
-|[operator delete&#91;&#93;](../standard-library/new-operators.md#operator_delete_arr)|Función a la que llama una expresión delete para cancelar la asignación de almacenamiento para una matriz de objetos.|  
-|[operator new](../standard-library/new-operators.md#operator_new)|Función a la que llama una expresión new para asignar el almacenamiento para objetos individuales.|  
-|[operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr)|Función a la que llama una expresión new para asignar el almacenamiento para una matriz de objetos.|  
+|[operator delete](../standard-library/new-operators.md#op_delete)|Función a la que llama una expresión delete para cancelar la asignación de almacenamiento para objetos individuales.|  
+|[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|Función a la que llama una expresión delete para cancelar la asignación de almacenamiento para una matriz de objetos.|  
+|[operator new](../standard-library/new-operators.md#op_new)|Función a la que llama una expresión new para asignar el almacenamiento para objetos individuales.|  
+|[operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|Función a la que llama una expresión new para asignar el almacenamiento para una matriz de objetos.|  
   
 ### <a name="classes"></a>Clases  
   

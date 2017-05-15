@@ -12,18 +12,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 72389624e776a2e8334490c37a5ca628e033ffaa
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 097b3ec2a7b097eb2137e1fd5fe59eabc0da537f
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltostreamgt-operators"></a>Operadores &lt;ostream&gt;
 ||  
 |-|  
-|[operator&lt;&lt;](#operator_lt__lt_)|  
+|[operator&lt;&lt;](#op_lt_lt)|  
   
-##  <a name="operator_lt__lt_"></a> operator&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  Escribe varios tipos en la secuencia.  
   
 ```
@@ -106,7 +107,7 @@ basic_ostream <_Elem, _Tr>& operator<<(
  La secuencia.  
   
 ### <a name="remarks"></a>Comentarios  
- La clase `basic_ostream` también define varios operadores de inserción. Para obtener más información, vea [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt_).  
+ La clase `basic_ostream` también define varios operadores de inserción. Para obtener más información, vea [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).  
   
  La función de plantilla  
   
@@ -117,7 +118,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- determina la longitud N = `traits_type::`[length](../standard-library/char-traits-struct.md#char_traits__length)( `str`) de la secuencia que comienza por `str`, e inserta la secuencia. Si N < `_Ostr.`[width](../standard-library/ios-base-class.md#ios_base__width), entonces la función también inserta una repetición de `_Ostr.``width` - N caracteres de relleno. La repetición precede la secuencia si ( `_Ostr`. [flags](../standard-library/ios-base-class.md#ios_base__flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). De otro modo, la repetición sigue la secuencia. La función devuelve `_Ostr`.  
+ determina la longitud N = `traits_type::`[length](../standard-library/char-traits-struct.md#length)( `str`) de la secuencia que comienza por `str`, e inserta la secuencia. Si N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), entonces la función también inserta una repetición de `_Ostr.``width` - N caracteres de relleno. La repetición precede la secuencia si ( `_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). De otro modo, la repetición sigue la secuencia. La función devuelve `_Ostr`.  
   
  La función de plantilla  
   
@@ -148,14 +149,18 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- excepto que cada elemento `_Ch` de la secuencia que comienza por `str` se convierte en un objeto de tipo `Elem` llamando a `_Ostr.`[put](../standard-library/basic-ostream-class.md#basic_ostream__put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#basic_ios__widen)( `_Ch`)).  
+ excepto que cada elemento `_Ch` de la secuencia que comienza por `str` se convierte en un objeto de tipo `Elem` llamando a `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)( `_Ch`)).  
   
  La función de plantilla  
   
-``cpp template <class _Elem, class _Tr> basic_ostream<Elem, _Tr>& operator<<( basic_ostream<Elem, _Tr>& _Ostr, char _Ch);
+```cpp
+template <class _Elem, class _Tr>
+basic_ostream<Elem, _Tr>& operator<<(
+    basic_ostream<Elem, _Tr>& _Ostr,
+    char _Ch);
 ```  
   
- behaves the same as  
+ se comporta igual que  
   
 ```cpp  
 template <class _Elem, class _Tr>

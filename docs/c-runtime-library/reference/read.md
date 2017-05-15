@@ -1,52 +1,69 @@
 ---
-title: "_read | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_read"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_read"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_read (función)"
-  - "datos [C++], leer"
-  - "datos [CRT]"
-  - "archivos [C++], leer"
-  - "read (función)"
-  - "leer datos [C++]"
+title: _read | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _read
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _read
+dev_langs:
+- C++
+helpviewer_keywords:
+- data [CRT]
+- _read function
+- read function
+- data [C++], reading
+- reading data [C++]
+- files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _read
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6387edb05977f90fe9fb2419a1eccb47ac0b7b43
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
-Lee datos de un archivo.  
+---
+# <a name="read"></a>_read
+Lee datos desde un archivo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -57,7 +74,7 @@ Lee datos de un archivo.
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `fd`  
  Descriptor de archivo que hace referencia al archivo abierto.  
   
@@ -65,34 +82,34 @@ Lee datos de un archivo.
  Ubicación de almacenamiento de los datos.  
   
  *count*  
- Número de bytes máximo.  
+ Número máximo de bytes.  
   
-## Valor devuelto  
- \_**read** devuelve el número de bytes leídos, que puede ser menor que *cuenta* si hay menos que los bytes que quedan en el archivo o si el archivo se abre en modo de texto, en cuyo caso cada par de fuentes de la retorno\- línea de carro \(CR\-LF\) se reemplaza por un único carácter de avance de línea.  Sólo el único carácter de avance de línea se cuenta en el valor devuelto.  El reemplazo no afecta al puntero de archivo.  
+## <a name="return-value"></a>Valor devuelto  
+ _**leer** devuelve el número de bytes leídos, que puede ser menor que *recuento* si hay menos de *recuento* bytes restante en el archivo o si el archivo se abre en modo de texto, en cuyo caso cada línea de retorno de carro fuente par (CR-LF) se reemplaza con un carácter de avance de línea única. Solo se cuenta el carácter de avance de línea en el valor devuelto. El reemplazo no afecta al puntero de archivo.  
   
- Si la función intenta leer al final del archivo, devuelve 0.  Si `fd` no es válido, el archivo no está abierto para lectura, o el archivo está bloqueado, el controlador no válido de parámetro se invoca, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, la función devuelve – 1 y establece `errno` a `EBADF`.  
+ Si la función intenta leer al final del archivo, devuelve 0. Si `fd` no es válido, el archivo no se abre para su lectura o está bloqueado, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y establece `errno` en `EBADF`.  
   
- Si *el búfer* es **nulo**, se invoca el controlador no válido del parámetro.  Si la ejecución puede continuar, la función devuelve \-1 y `errno` se establece en `EINVAL`.  
+ Si *buffer* es **NULL**, se invoca al controlador de parámetros no válidos. Si la ejecución puede continuar, la función devuelve -1 y `errno` se establece en `EINVAL`.  
   
- Para obtener más información sobre estos y otros códigos de retorno, vea [\_doserrno, errno, \_sys\_errlist, y \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Para más información sobre este y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Comentarios  
- La función de `_read` lee un número máximo de bytes del *recuento* en *el búfer* de archivo asociado a `fd`.  La operación de lectura comienza en la posición actual del puntero de archivo asociado al archivo especificado.  Después de la operación de lectura, los puntos de ese puntero al carácter no leídos siguiente.  
+## <a name="remarks"></a>Comentarios  
+ La función `_read` lee un máximo de *count* bytes en *buffer* desde el archivo asociado a `fd`. La operación de lectura se inicia en la posición actual del puntero de archivo asociado al archivo en cuestión. Después de la operación de lectura, el puntero de archivo señala al siguiente carácter no leído.  
   
- Si el archivo se abre en modo de texto, lectura finaliza cuando `_read` encuentra un carácter de CTRL\+Z, que se trata como un mensaje de fin de archivo.  Uso [\_lseek](../../c-runtime-library/reference/lseek-lseeki64.md) de borrar la marca de fin de archivo.  
+ Si el archivo se abrió en modo de texto, la lectura finaliza cuando `_read` encuentra un carácter CTRL+Z, que se trata como un indicador de fin de archivo. Use [_lseek](../../c-runtime-library/reference/lseek-lseeki64.md) para borrar el indicador de fin de archivo.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`_read`|\<io.h\>|  
+|-------------|---------------------|  
+|`_read`|\<io.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Bibliotecas  
+## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_read.c  
@@ -132,22 +149,22 @@ int main( void )
 }  
 ```  
   
-## Entrada: crt\_read.txt  
+## <a name="input-crtreadtxt"></a>Entrada: crt_read.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-## Resultados  
+## <a name="output"></a>Salida  
   
 ```  
 Read 19 bytes from file  
 ```  
   
-## Vea también  
- [E\/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)   
- [\_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+## <a name="see-also"></a>Vea también  
+ [E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [fread](../../c-runtime-library/reference/fread.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [\_write](../../c-runtime-library/reference/write.md)
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_write](../../c-runtime-library/reference/write.md)

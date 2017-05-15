@@ -69,10 +69,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0943a0b30643a6dff3d47508f9a514e3e0d441ff
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f7bf32d7fa725e1f012b2a793a8091674e1c2e9f
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
@@ -115,7 +116,7 @@ unsigned char *_mbsspnp_l(
  Configuración regional que se va a usar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `_strspnp`, `_wcsspnp` y `_mbsspnp` devuelven un puntero al primer carácter de `str` que no pertenezca al conjunto de caracteres de `charset`*.* Cada una de estas funciones devuelve `NULL` si `str` consta únicamente de caracteres de `charset`*.* Para cada una de estas rutinas, no hay ningún valor devuelto reservado para indicar un error.  
+ `_strspnp`, `_wcsspnp`, y `_mbsspnp` devuelven un puntero al primer carácter de `str` que no pertenece al conjunto de caracteres en `charset`. Cada una de estas funciones devuelve `NULL` si `str` constar únicamente de caracteres de `charset`. Para cada una de estas rutinas, no hay ningún valor devuelto reservado para indicar un error.  
   
 ## <a name="remarks"></a>Comentarios  
  La función `_mbsspnp` devuelve un puntero al carácter multibyte que es el primer carácter de `str` que no pertenece al conjunto de caracteres de `charset`. `_mbsspnp` reconoce las secuencias de caracteres multibyte de acuerdo con la [página de códigos multibyte](../../c-runtime-library/code-pages.md) actualmente en uso. En la búsqueda no se incluyen los caracteres nulos de finalización.  
@@ -163,9 +164,6 @@ int main( void ) {
 ```  
 abbage  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)   

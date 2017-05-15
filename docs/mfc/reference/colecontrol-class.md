@@ -203,10 +203,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 1f6eeb9802636ebf78f7e5d0b20a188e08a903a6
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 7f98ac382549509874bd570307a05ccea5ed657a
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="colecontrol-class"></a>COleControl (clase)
@@ -1475,7 +1476,7 @@ CDC* GetDC(
  Puntero al contexto de dispositivo de presentación para el contenedor `CWnd` área de cliente si realiza correctamente; en caso contrario, el valor devuelto es **NULL**. El contexto de dispositivo de presentación se puede utilizar en las funciones GDI subsiguientes para dibujar en el área de cliente de la ventana del contenedor.  
   
 ### <a name="remarks"></a>Comentarios  
- El [ReleaseDC](#releasedc) función miembro debe llamarse para liberar el contexto después de dibujo. Al llamar a `GetDC`, los objetos pasan el rectángulo que va a dibujar en sus propios en coordenadas de cliente. `GetDC`traduce en coordenadas del área de cliente de contenedor. El objeto no debe solicitar un rectángulo de dibujo deseado mayor que su propio rectángulo de área de cliente, el tamaño de los cuales se puede recuperar con [GetClientRect](#getclientrect). Esto impide que accidentalmente dibujo donde no se supone que objetos.  
+ El [ReleaseDC](#releasedc) función miembro debe llamarse para liberar el contexto después de dibujo. Al llamar a `GetDC`, los objetos pasan el rectángulo que va a dibujar en sus propios en coordenadas de cliente. `GetDC`traduce en coordenadas del área de cliente de contenedor. El objeto no debe solicitar un rectángulo de dibujo deseado mayor que su propio rectángulo de área de cliente, el tamaño de los cuales se puede recuperar con [GetClientRect](#getclientrect). Esto impide que accidentalmente dibujo donde no se debe a objetos.  
   
 ##  <a name="getenabled"></a>COleControl::GetEnabled  
  Implementa la función Get de existencias del control en la propiedad Enabled.  
@@ -1832,7 +1833,7 @@ BOOL IsInvokeAllowed(DISPID dispid);
  Es distinto de cero si se ha inicializado el control; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Implementación del marco de trabajo de **IDispatch:: Invoke** llamadas **IsInvokeAllowed** para determinar si una función determinada (identificada por `dispid`) se pueden invocar. El comportamiento predeterminado para un control OLE consiste en permitir que los métodos de automatización que se debe invocar solo si se ha inicializado el control; Sin embargo, **IsInvokeAllowed** es una función virtual y pueden invalidar si es necesario (por ejemplo, cuando el control se se usa como un servidor de automatización). Para obtener más información, vea el artículo de Knowledge Base Q166472, "Cómo: usar un Control OLE como un servidor de automatización." Artículos de Knowledge Base están disponibles en la documentación de Visual Studio de MSDN Library o en [http://support.microsoft.com](http://support.microsoft.com/).  
+ Implementación del marco de trabajo de **IDispatch:: Invoke** llamadas **IsInvokeAllowed** para determinar si una función determinada (identificada por `dispid`) se pueden invocar. El comportamiento predeterminado para un control OLE consiste en permitir que los métodos de automatización que se debe invocar solo si se ha inicializado el control; Sin embargo, **IsInvokeAllowed** es una función virtual y pueden invalidar si es necesario (por ejemplo, cuando el control se se usa como un servidor de automatización). Para obtener más información, vea el artículo de Knowledge Base Q166472, "Cómo: usar un Control OLE como un servidor de automatización." Artículos de Knowledge Base están disponibles en [http://support.microsoft.com](http://support.microsoft.com/).  
   
 ##  <a name="ismodified"></a>COleControl::IsModified  
  Determina si se ha modificado el estado del control.  
@@ -2104,7 +2105,7 @@ virtual void OnEnabledChanged();
  Si desea que la notificación después de esta propiedad, cambia, reemplace esta función. La implementación predeterminada llama [InvalidateControl](#invalidatecontrol).  
   
 ##  <a name="onenumverbs"></a>COleControl::OnEnumVerbs  
- Lo llama el marco de trabajo cuando el contenedor llama el **IOleObject:: EnumVerbs** función miembro.  
+ Lo llama el marco cuando el contenedor llama el **IOleObject:: EnumVerbs** función miembro.  
   
 ```  
 virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
@@ -2745,7 +2746,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>Comentarios  
  El formato especificado es una establecidas anteriormente en el objeto de control mediante la [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) o [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) funciones miembro para representación retrasada. La implementación predeterminada de esta función llama `OnRenderFileData` o `OnRenderGlobalData`, respectivamente, si el medio de almacenamiento proporcionado es un archivo o la memoria. Si el formato solicitado es `CF_METAFILEPICT` o la propiedad persistent formato, la implementación predeterminada representa los datos apropiados y devuelve un valor distinto de cero. En caso contrario, devuelve 0 y no hace nada.  
   
- Si *lpStgMedium-> tymed* es **TYMED_NULL**, **STGMEDIUM** debe ser asignado y rellenado según lo especificado por *lpFormatEtc-> tymed*. Si no **TYMED_NULL**, **STGMEDIUM** debe rellenarse en lugar de con los datos.  
+ Si *lpStgMedium -> tymed* es **TYMED_NULL**, **STGMEDIUM** debe ser asignado y rellenado según lo especificado por *lpFormatEtc -> tymed*. Si no **TYMED_NULL**, **STGMEDIUM** debe rellenarse en lugar de con los datos.  
   
  Reemplace esta función para proporcionar los datos en el formato solicitado y medio. Dependiendo de los datos, puede que desee invalidar una de las otras versiones de esta función en su lugar. Si los datos son pequeños y un tamaño fijo, invalidar `OnRenderGlobalData`. Si los datos en un archivo, o es de tamaño variable, invalidar `OnRenderFileData`.  
   
@@ -3231,7 +3232,7 @@ void SerializeExtent(CArchive& ar);
  [!code-cpp[NVC_MFCAxCtl #8](../../mfc/reference/codesnippet/cpp/colecontrol-class_9.cpp)]  
   
 ##  <a name="serializestockprops"></a>COleControl::SerializeStockProps  
- Serializa o inicializa el estado de la `COleControl` propiedades estándar: apariencia, color de fondo, estilo de borde, título, habilitado, fuente, color de primer plano y texto.  
+ Serializa o inicializa el estado de la `COleControl` propiedades estándar: apariencia, color de fondo, BorderStyle, título, Enabled, fuente, color de primer plano y texto.  
   
 ```  
 void SerializeStockProps(CArchive& ar);

@@ -1,58 +1,76 @@
 ---
-title: "_futime, _futime32, _futime64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_futime64"
-  - "_futime32"
-  - "_futime"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "futime"
-  - "_futime"
-  - "futime64"
-  - "_futime64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_futime (función)"
-  - "futime32 (función)"
-  - "futime64 (función)"
-  - "hora de modificación de archivo [C++]"
-  - "_futime64 (función)"
-  - "futime (función)"
-  - "_futime32 (función)"
+title: _futime, _futime32, _futime64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _futime64
+- _futime32
+- _futime
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- futime
+- _futime
+- futime64
+- _futime64
+dev_langs:
+- C++
+helpviewer_keywords:
+- _futime function
+- futime32 function
+- futime64 function
+- file modification time [C++]
+- _futime64 function
+- futime function
+- _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _futime, _futime32, _futime64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: fe4ae59495ecea19dc14424bd4787db5decfac18
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
-Establece el tiempo de modificación en un archivo abierto.  
+---
+# <a name="futime-futime32-futime64"></a>_futime, _futime32, _futime64
+Define la hora de modificación de un archivo abierto.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int _futime(   
@@ -69,32 +87,32 @@ int _futime64(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `fd`  
- Descriptor de archivo al archivo abierto.  
+ Descriptor de archivo para el archivo abierto.  
   
  `filetime`  
- Puntero a la estructura que contiene la nueva fecha de modificación.  
+ Puntero a una estructura que contiene la nueva fecha de modificación.  
   
-## Valor devuelto  
- Return 0 si correctamente.  Si se produce un error, se invoca el controlador no válido de parámetro, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, la función devuelve – 1 y `errno` se establece en `EBADF`, indicando descriptor de archivo no válido, o a `EINVAL`, que indica un parámetro no válido.  
+## <a name="return-value"></a>Valor devuelto  
+ Si la operación se realiza correctamente, devuelve 0. Si se produce un error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y `errno` está establecido en `EBADF`, que indica un descriptor de archivo no válido o `EINVAL`, que indica un parámetro no válido.  
   
-## Comentarios  
- La rutina de `_futime` establece la fecha de modificación y tiempo de acceso en el archivo abierto asociado a *`fd`.* `_futime` es idéntico a [\_utime](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md), excepto en que el argumento es descriptor de archivo de un archivo abierto, en lugar del nombre de un archivo o una ruta de acceso a un archivo.  La estructura de `_utimbuf` contiene los campos por la nueva fecha y hora de acceso de modificación.  Ambos campos deben contener valores válidos.  `_utimbuf32` y `_utimbuf64` son idénticos a `_utimbuf` a excepción de los tipos de 32 bits y 64 bits del tiempo, respectivamente.  `_futime` y `_utimbuf` utilizan un tipo de 64 bits del tiempo y `_futime` es idéntico en comportamiento a `_futime64`.  Si necesita forzar el comportamiento antiguo, defina `_USE_32BIT_TIME_T`.  Ello hace `_futime` para ser idéntico en comportamiento a `_futime32` y hace que la estructura de `_utimbuf` para utilizar el tipo de 32 bits del tiempo, lo que equivale a `__utimbuf32`.  
+## <a name="remarks"></a>Comentarios  
+ El `_futime` rutina establece la fecha de modificación y la hora de acceso en el archivo abierto asociado con `fd`. `_futime` es idéntica a [_utime](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md), salvo que su argumento es el descriptor de archivo de un archivo abierto, en lugar del nombre de un archivo o una ruta de acceso a un archivo. La estructura `_utimbuf` contiene campos para la nueva fecha de modificación y hora de acceso. Ambos campos deben contener valores válidos. `_utimbuf32` y `_utimbuf64` son idénticas a `_utimbuf`, salvo por el uso de los tipos de tiempo de 32 bits y 64 bits, respectivamente. `_futime` y `_utimbuf` usan un tipo de tiempo de 64 bits y `_futime` tiene un comportamiento idéntico a `_futime64`. Para forzar el comportamiento anterior, defina `_USE_32BIT_TIME_T`. Al hacerlo, hace que `_futime` tenga un comportamiento idéntico a `_futime32` y que la estructura `_utimbuf` use el tipo de tiempo de 32 bits, lo que la hace equivalente a `__utimbuf32`.  
   
- `_futime64`, que utiliza la estructura de `__utimbuf64` , puede leer y modificar las fechas del archivo con 23:59: 59, el 31 de diciembre, 3000, hora UTC; mientras que falla una llamada a `_futime32` si la fecha del archivo es posterior que 19:14: 7 de enero de 18, 2038, La hora UTC.  La medianoche, el 1 de enero de 1970, es el límite inferior del intervalo de fechas para estas funciones.  
+ `_futime64`, que usa la estructura `__utimbuf64`, puede leer y modificar fechas de archivos hasta las 23:59:59 del 31 de diciembre de 3000, hora UTC; mientras que una llamada a `_futime32` no se realiza si la fecha del archivo es posterior a las 23:59:59 del 18 de enero de 2038, hora UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para estas funciones.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Función|Encabezado necesario|Encabezado opcional|  
-|-------------|--------------------------|-------------------------|  
-|`_futime`|\<sistema\/utime.h\>|\<errno.h\>|  
-|`_futime32`|\<sistema\/utime.h\>|\<errno.h\>|  
-|`_futime64`|\<sistema\/utime.h\>|\<errno.h\>|  
+|--------------|---------------------|---------------------|  
+|`_futime`|\<sys/utime.h>|\<errno.h>|  
+|`_futime32`|\<sys/utime.h>|\<errno.h>|  
+|`_futime64`|\<sys/utime.h>|\<errno.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_futime.c  
@@ -130,13 +148,13 @@ int main( void )
 }  
 ```  
   
-## Entrada: crt\_futime.c\_input  
+## <a name="input-crtfutimecinput"></a>Entrada: crt_futime.c_input  
   
 ```  
 Arbitrary file contents.  
 ```  
   
-### Resultados del ejemplo  
+### <a name="sample-output"></a>Resultados del ejemplo  
   
 ```  
 Volume in drive Z has no label.  
@@ -158,13 +176,5 @@ Volume in drive Z has no label.
 File time modified  
 ```  
   
-## Equivalente en .NET Framework  
-  
--   [System::IO::File::SetLastAccessTime](https://msdn.microsoft.com/en-us/library/system.io.file.setlastaccesstime.aspx)  
-  
--   [System::IO::File::SetLastWriteTime](https://msdn.microsoft.com/en-us/library/system.io.file.setlastwritetime.aspx)  
-  
--   [System::IO::File::SetCreationTime](https://msdn.microsoft.com/en-us/library/system.io.file.setcreationtime.aspx)  
-  
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administración del tiempo](../../c-runtime-library/time-management.md)

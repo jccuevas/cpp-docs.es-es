@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 23b9a848acb3e1dcd5003fb9369de2c1daf55ce9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 16d166f205f026977673e39bd539b377496bdc0c
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
@@ -327,9 +328,6 @@ int main ( )
 Stack overflow!  
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [_alloca](../../c-runtime-library/reference/alloca.md)

@@ -42,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 81467a48b08fab628da94b217c2925010f3118fe
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 57f6d4a94348e8565a8c8e21b248335d9d9c651d
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="stack-class"></a>stack (Clase)
@@ -66,7 +67,7 @@ class stack
  Tipo del contenedor subyacente que se usa para implementar la pila. El valor predeterminado es la clase `deque`*\<Type>*.  
   
 ## <a name="remarks"></a>Comentarios  
- Los elementos de la clase **Type** estipulada en el primer parámetro de plantilla de un objeto de pila son sinónimos de [value_type](#stack__value_type) y deben coincidir con el tipo de elemento de la clase contenedora subyacente **Container** estipulada por el segundo parámetro de plantilla. El **Type** debe ser asignable, para que sea posible copiar objetos de ese tipo y asignar valores a variables de ese tipo.  
+ Los elementos de la clase **Type** estipulada en el primer parámetro de plantilla de un objeto de pila son sinónimos de [value_type](#value_type) y deben coincidir con el tipo de elemento de la clase contenedora subyacente **Container** estipulada por el segundo parámetro de plantilla. El **Type** debe ser asignable, para que sea posible copiar objetos de ese tipo y asignar valores a variables de ese tipo.  
   
  Entre las clases contenedoras subyacentes adecuadas para la pila se incluyen [deque](../standard-library/deque-class.md), [list](../standard-library/list-class.md) y [vector](../standard-library/vector-class.md), o cualquier otro contenedor de secuencias que admita las operaciones **back**, `push_back` y `pop_back`. La clase de contenedor subyacente se encapsula dentro del adaptador de contenedor, que solo expone el conjunto limitado de las funciones miembro de contenedor de secuencias como una interfaz pública.  
   
@@ -82,32 +83,32 @@ class stack
   
 |||  
 |-|-|  
-|[stack](#stack__stack)|Construye una `stack` que está vacía o que es una copia de un objeto contenedor base.|  
+|[stack](#stack)|Construye una `stack` que está vacía o que es una copia de un objeto contenedor base.|  
   
 ### <a name="typedefs"></a>Definiciones de tipo  
   
 |||  
 |-|-|  
-|[container_type](#stack__container_type)|Tipo que proporciona el contenedor base que debe adaptarse mediante una `stack`.|  
-|[size_type](#stack__size_type)|Tipo entero sin signo que puede representar el número de elementos de un `stack`.|  
-|[value_type](#stack__value_type)|Tipo que representa el tipo de objeto almacenado como elemento en una `stack`.|  
+|[container_type](#container_type)|Tipo que proporciona el contenedor base que debe adaptarse mediante una `stack`.|  
+|[size_type](#size_type)|Tipo entero sin signo que puede representar el número de elementos de un `stack`.|  
+|[value_type](#value_type)|Tipo que representa el tipo de objeto almacenado como elemento en una `stack`.|  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |||  
 |-|-|  
-|[empty](#stack__empty)|Comprueba si la `stack` está vacía.|  
-|[pop](#stack__pop)|Quita el elemento de la parte superior de la `stack`.|  
-|[push](#stack__push)|Agrega un elemento a la parte superior de la `stack`.|  
-|[size](#stack__size)|Devuelve el número de elementos de `stack`.|  
-|[top](#stack__top)|Devuelve una referencia a un elemento en la parte superior de la `stack`.|  
+|[empty](#empty)|Comprueba si la `stack` está vacía.|  
+|[pop](#pop)|Quita el elemento de la parte superior de la `stack`.|  
+|[push](#push)|Agrega un elemento a la parte superior de la `stack`.|  
+|[size](#size)|Devuelve el número de elementos de `stack`.|  
+|[top](#top)|Devuelve una referencia a un elemento en la parte superior de la `stack`.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** \<stack>  
   
  **Espacio de nombres:** std  
   
-##  <a name="stack__container_type"></a>  stack::container_type  
+##  <a name="container_type"></a>  stack::container_type  
  Un tipo que proporciona el contenedor base que debe adaptarse.  
   
 ```  
@@ -120,9 +121,9 @@ typedef Container container_type;
  Para más información sobre `Container`, vea la sección Comentarios del tema [stack (Clase)](../standard-library/stack-class.md).  
   
 ### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [stack::stack](#stack__stack) para obtener un ejemplo de cómo declarar y usar `container_type`.  
+  Vea el ejemplo de [stack::stack](#stack) para obtener un ejemplo de cómo declarar y usar `container_type`.  
   
-##  <a name="stack__empty"></a>  stack::empty  
+##  <a name="empty"></a>  stack::empty  
  Comprueba si una pila está vacía.  
   
 ```  
@@ -165,7 +166,7 @@ The stack s1 is not empty.
 The stack s2 is empty.  
 ```  
   
-##  <a name="stack__pop"></a>  stack::pop  
+##  <a name="pop"></a>  stack::pop  
  Quita el elemento de la parte superior de la pila.  
   
 ```  
@@ -219,7 +220,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.  
 ```  
   
-##  <a name="stack__push"></a>  stack::push  
+##  <a name="push"></a>  stack::push  
  Agrega un elemento al extremo superior de la pila.  
   
 ```  
@@ -265,7 +266,7 @@ The stack length is 3.
 The element at the top of the stack is 30.  
 ```  
   
-##  <a name="stack__size"></a>  stack::size  
+##  <a name="size"></a>  stack::size  
  Devuelve el número de elementos de la pila.  
   
 ```  
@@ -304,7 +305,7 @@ The stack length is 1.
 The stack length is now 2.  
 ```  
   
-##  <a name="stack__size_type"></a>  stack::size_type  
+##  <a name="size_type"></a>  stack::size_type  
  Un tipo entero sin signo que puede representar el número de elementos de una pila.  
   
 ```  
@@ -315,9 +316,9 @@ typedef typename Container::size_type size_type;
  El tipo es un sinónimo de `size_type` del contenedor base adaptado por la pila.  
   
 ### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [size](#stack__size) para obtener un ejemplo de cómo declarar y usar `size_type`.  
+  Vea el ejemplo de [size](#size) para obtener un ejemplo de cómo declarar y usar `size_type`.  
   
-##  <a name="stack__stack"></a>  stack::stack  
+##  <a name="stack"></a>  stack::stack  
  Construye una pila que está vacía o que es una copia de una clase contenedora base.  
   
 ```  
@@ -369,7 +370,7 @@ int main( )
 The element at the top of stack vsi2 is 1.  
 ```  
   
-##  <a name="stack__top"></a>  stack::top  
+##  <a name="top"></a>  stack::top  
  Devuelve una referencia a un elemento en la parte superior de la pila.  
   
 ```  
@@ -417,7 +418,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.  
 ```  
   
-##  <a name="stack__value_type"></a>  stack::value_type  
+##  <a name="value_type"></a>  stack::value_type  
  Un tipo que representa el tipo de objeto almacenado como elemento en una pila.  
   
 ```  

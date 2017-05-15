@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 0fbce9639718ca7316494b1f573a817d8ab0e6f1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0ebd79ed048bad988ca8a31f0f2f8d5427b84675
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1, expm1f, expm1l
@@ -88,7 +89,7 @@ long double expm1l(
  Valor exponencial del punto flotante.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Las funciones `expm1` devuelven un valor de punto flotante que representa a e<sup>x</sup> – 1, si se realiza correctamente. En caso de desbordamiento, `expm1` devuelve `HUGE_VAL`, `expm1f` devuelve `HUGE_VALF`, `expm1l` devuelve `HUGE_VALL` y `errno` se establece en `ERANGE`. Para obtener más información sobre los códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ El `expm1` funciones devuelven un valor de punto flotante que representa e<sup>x</sup> - 1, si se realiza correctamente. En caso de desbordamiento, `expm1` devuelve `HUGE_VAL`, `expm1f` devuelve `HUGE_VALF`, `expm1l` devuelve `HUGE_VALL` y `errno` se establece en `ERANGE`. Para obtener más información sobre los códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Comentarios  
  Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `expm1` que toman y devuelven los valores `float` y `long double`. En un programa C, `expm1` siempre y devuelve `double`.  
@@ -99,10 +100,7 @@ long double expm1l(
 |-------------|---------------------|  
 |`expm1`, `expm1f`, `expm1l`|\<math.h>|  
   
- Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   

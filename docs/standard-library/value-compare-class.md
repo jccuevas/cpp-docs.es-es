@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: c82ae35feadcf1f28af47d3f055e854f7bcf6a34
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 646d30d5e85c985896ee0380cac9c1630cb2ffbf
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="valuecompare-class"></a>value_compare (Clase)
@@ -70,7 +71,7 @@ protected:
  En Visual C++ .NET 2003, los miembros de los archivos de encabezado [<hash_map>](../standard-library/hash-map.md) y [<hash_set>](../standard-library/hash-set.md) ya no están en el espacio de nombres std, sino que se han movido al espacio de nombres stdext. Vea [stdext (Espacio de nombres)](../standard-library/stdext-namespace.md) para obtener más información.  
   
 ## <a name="example"></a>Ejemplo  
- Vea el ejemplo de [hash_map::value_comp](../standard-library/hash-map-class.md#hash_map__value_comp) para obtener un ejemplo de cómo declarar y usar value_compare.  
+ Vea el ejemplo de [hash_map::value_comp](../standard-library/hash-map-class.md#value_comp) para obtener un ejemplo de cómo declarar y usar value_compare.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** \<hash_map>  

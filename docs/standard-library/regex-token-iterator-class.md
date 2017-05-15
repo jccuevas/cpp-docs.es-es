@@ -46,10 +46,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 55da414f0a743fab278cb47441efe04e82ac3279
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 38a34e2957b3fb4cf2713d61ac3633691b04b03c
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator (Clase)
@@ -114,7 +115,7 @@ private:
   
  **Espacio de nombres:** std  
   
-##  <a name="regex_token_iterator__difference_type"></a>  regex_token_iterator::difference_type  
+##  <a name="difference_type"></a>  regex_token_iterator::difference_type  
  El tipo de diferencia de un iterador.  
   
 ```  
@@ -220,7 +221,7 @@ match == aa
 match == z  
 ```  
   
-##  <a name="regex_token_iterator__iterator_category"></a>  regex_token_iterator::iterator_category  
+##  <a name="iterator_category"></a>  regex_token_iterator::iterator_category  
  Tipo de la categoría del iterador.  
   
 ```  
@@ -330,7 +331,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__operator_neq"></a>  regex_token_iterator::operator!=  
+##  <a name="op_neq"></a>  regex_token_iterator::operator!=  
  Compara iteradores para buscar desigualdad.  
   
 ```  
@@ -444,7 +445,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__operator_star"></a>  regex_token_iterator::operator*  
+##  <a name="op_star"></a>  regex_token_iterator::operator*  
  Tiene acceso a la subcoincidencia designada.  
   
 ```  
@@ -554,7 +555,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__operator_add_add"></a>  regex_token_iterator::operator++  
+##  <a name="op_add_add"></a>  regex_token_iterator::operator++  
  Incrementa el iterador almacenado.  
   
 ```  
@@ -668,7 +669,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__operator_eq_eq"></a>  regex_token_iterator::operator==  
+##  <a name="op_eq_eq"></a>  regex_token_iterator::operator==  
  Compara iteradores para buscar igualdad.  
   
 ```  
@@ -782,7 +783,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__operator-_gt_"></a>  regex_token_iterator::operator-&gt;  
+##  <a name="regex_token_iterator__operator-_gt"></a>  regex_token_iterator::operator-&gt;  
  Tiene acceso a la subcoincidencia designada.  
   
 ```  
@@ -892,7 +893,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__pointer"></a>  regex_token_iterator::pointer  
+##  <a name="pointer"></a>  regex_token_iterator::pointer  
  El tipo de un puntero a una coincidencia.  
   
 ```  
@@ -1002,7 +1003,7 @@ match == z
 ### <a name="remarks"></a>Comentarios  
  El tipo es un sinónimo de `sub_match<BidIt>*`, donde `BidIt` es el parámetro de plantilla.  
   
-##  <a name="regex_token_iterator__reference"></a>  regex_token_iterator::reference  
+##  <a name="reference"></a>  regex_token_iterator::reference  
  El tipo de una referencia a una subcoincidencia.  
   
 ```  
@@ -1112,7 +1113,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__regex_token_iterator"></a>  regex_token_iterator::regex_token_iterator  
+##  <a name="regex_token_iterator"></a>  regex_token_iterator::regex_token_iterator  
  Construye el iterador.  
   
 ```  
@@ -1254,7 +1255,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__regex_type"></a>  regex_token_iterator::regex_type  
+##  <a name="regex_type"></a>  regex_token_iterator::regex_type  
  El tipo de expresión regular que debe coincidir.  
   
 ```  
@@ -1364,7 +1365,7 @@ match == z
   
 ```  
   
-##  <a name="regex_token_iterator__value_type"></a>  regex_token_iterator::value_type  
+##  <a name="value_type"></a>  regex_token_iterator::value_type  
  El tipo de una subcoincidencia.  
   
 ```  

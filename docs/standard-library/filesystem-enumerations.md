@@ -36,10 +36,11 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: d9f3bbe8cddea347e1663d8963c4496bcf8d7319
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 23d69fc4ac64b4364c736ee6bb596d8dcfcce54a
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; (Enumeraciones)
@@ -50,7 +51,7 @@ En este tema, se documentan las enumeraciones del encabezado del sistema de arch
   
  **Espacio de nombres:** std::experimental::filesystem  
 
-##  <a name="filesystem__copy_options"></a>  copy_options
+##  <a name="copy_options"></a>  copy_options
 Una enumeración de valores de máscara de bits que se usa con las funciones [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) y [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) para especificar el comportamiento.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -85,7 +86,7 @@ enum class copy_options {
 |`create_hard_links`|Establezca vínculos físicos en lugar de copiar archivos.|  
   
 
-##  <a name="filesystem__directory_options"></a> directory_options
+##  <a name="directory_options"></a> directory_options
 Especifica si se deben seguir los vínculos simbólicos a directorios o bien si se deben ignorar.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -103,7 +104,7 @@ enum class directory_options {
 |`none`|Comportamiento predeterminado: omitir vínculos simbólicos a directorios. Permiso denegado es un error.|  
 |`follow_directory_symlink`|se tratan los vínculos simbólicos a directorios como directorios reales.|  
   
-##  <a name="filesystem__file_type"></a>  file_type
+##  <a name="file_type"></a>  file_type
 Enumeración de tipos de archivo. Los valores admitidos son normales y el directorio, not_found y desconocido.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -137,7 +138,7 @@ enum class file_type {
 |`socket`|7|Representa un socket en sistemas basados en UNIX. (No se admite).|  
 |`unknown`|8|Representa un archivo cuyo estado no se puede determinar.|  
   
-##  <a name="filesystem__perms"></a>  perms
+##  <a name="perms"></a>  perms
 Marcas para los permisos de archivo. Los valores admitidos son básicamente “readonly” y all. Para los archivos de solo lectura, no se establece ningún bit *_write. En caso contrario, se establece el bit `all` (0x0777).  
   
 ### <a name="syntax"></a>Sintaxis  

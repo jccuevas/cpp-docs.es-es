@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 565c3deaa98b4a01d02e5e63767de2beecd5a1bf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3458390f8e6dcaee229346c66d569a5486ae74c4
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
@@ -60,19 +61,19 @@ Define la clase de plantilla de contenedores `array` y varias plantillas auxilia
   
 |||  
 |-|-|  
-|[operator==](../standard-library/array-operators.md#operator_eq_eq)|comparación de matriz, igual|  
-|[operator!=](../standard-library/array-operators.md#operator_neq)|comparación de matriz, no igual|  
-|[operator\<](../standard-library/array-operators.md#operator_lt_)|comparación de matriz, menor que|  
-|[operator>=](../standard-library/array-operators.md#operator_gt__eq)|comparación de matriz, mayor o igual que|  
-|[operator>](../standard-library/array-operators.md#operator_gt_)|comparación de matriz, mayor que|  
-|[operator<=](../standard-library/array-operators.md#operator_lt__eq)|comparación de matriz, menor o igual que|  
+|[operator==](../standard-library/array-operators.md#op_eq_eq)|comparación de matriz, igual|  
+|[operator!=](../standard-library/array-operators.md#op_neq)|comparación de matriz, no igual|  
+|[operator\<](../standard-library/array-operators.md#op_lt)|comparación de matriz, menor que|  
+|[operator>=](../standard-library/array-operators.md#op_gt_eq)|comparación de matriz, mayor o igual que|  
+|[operator>](../standard-library/array-operators.md#op_gt)|comparación de matriz, mayor que|  
+|[operator<=](../standard-library/array-operators.md#op_lt_eq)|comparación de matriz, menor o igual que|  
   
 ### <a name="functions"></a>Funciones  
   
 |||  
 |-|-|  
-|[get](../standard-library/array-functions.md#get_function)|Obtiene el elemento de matriz especificado.|  
-|[swap](../standard-library/array-functions.md#swap_function)|Intercambia el contenido de una matriz con el contenido de otra.|  
+|[get](../standard-library/array-functions.md#get)|Obtiene el elemento de matriz especificado.|  
+|[swap](../standard-library/array-functions.md#swap)|Intercambia el contenido de una matriz con el contenido de otra.|  
   
 ## <a name="see-also"></a>Vea también  
  [\<tuple>](../standard-library/tuple.md)   

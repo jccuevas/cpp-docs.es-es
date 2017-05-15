@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- xfunctional/std::pointer_to_unary_function
-- pointer_to_unary_function
-- std.pointer_to_unary_function
-- std::pointer_to_unary_function
+- xfunctional/std::pointer_to_unary
+- pointer_to_unary
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -37,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: f9e9b21833eb3d8c46d9bdf817a29350a77c22d4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 2089886ff915ce9176c883c9dc552f2a45b5c576
+ms.contentlocale: es-es
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="pointertounaryfunction-class"></a>pointer_to_unary_function (Clase)
@@ -73,7 +72,7 @@ public:
  Un puntero de función unaria es un objeto de función y puede pasarse a cualquier algoritmo de la biblioteca estándar de C++ que esté esperando una función unaria como un parámetro, pero no es adaptable. Para usarlo como un adaptador, por ejemplo al enlazar un valor a este o usándolo con un negador, debe proporcionarse con los tipos anidados **argument_type** y **result_type** que hacen posible dicha adaptación. La conversión mediante `pointer_to_unary_function` permite a los adaptadores de función que funcionen con punteros de función binaria.  
   
 ## <a name="example"></a>Ejemplo  
- El constructor de `pointer_to_unary_function` no suele usarse directamente. Vea la función auxiliar [ptr_fun](../standard-library/functional-functions.md#ptr_fun_function) para obtener un ejemplo de cómo declarar y usar el predicador del adaptador de `pointer_to_unary_function`.  
+ El constructor de `pointer_to_unary_function` no suele usarse directamente. Vea la función auxiliar [ptr_fun](../standard-library/functional-functions.md#ptr_fun) para obtener un ejemplo de cómo declarar y usar el predicador del adaptador de `pointer_to_unary_function`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** \<functional>  

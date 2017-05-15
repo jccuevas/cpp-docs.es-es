@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - chrono/std::chrono::duration
+- chrono/std::chrono::duration::duration
+- chrono/std::chrono::duration::count
+- chrono/std::chrono::duration::max
+- chrono/std::chrono::duration::min
+- chrono/std::chrono::duration::zero
 dev_langs:
 - C++
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
@@ -31,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 843e4954b3a5b20d504dd5c8bf582dc56d4cbcbd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f3376d8c03608fde5a2a614bf0a3058fd8692800
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="duration-class"></a>duration (Clase)
@@ -67,37 +73,37 @@ class duration <duration<Rep, Period1>, Period2>;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[duration::duration (Constructor)](#duration__duration_constructor)|Construye un objeto `duration`.|  
+|[duración](#duration)|Construye un objeto `duration`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[duration::count](#duration__count_method)|Devuelve el número de pasos del reloj del intervalo de tiempo.|  
-|[duration::max](#duration__max_method)|Estático. Devuelve el valor máximo permitido del parámetro de plantilla `Ref`.|  
-|[duration::min](#duration__min_method)|Estático. Devuelve el valor mínimo permitido del parámetro de plantilla `Ref`.|  
-|[duration::zero](#duration__zero_method)|Estático. En efecto, devuelve `Rep`(0).|  
+|[count](#count)|Devuelve el número de pasos del reloj del intervalo de tiempo.|  
+|[max](#max)|Estático. Devuelve el valor máximo permitido del parámetro de plantilla `Ref`.|  
+|[min](#min)|Estático. Devuelve el valor mínimo permitido del parámetro de plantilla `Ref`.|  
+|[cero](#zero)|Estático. En efecto, devuelve `Rep`(0).|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[duration::operator-](#duration__operator-)|Devuelve una copia del objeto `duration` junto con un recuento de pasos negado.|  
-|[duration::operator--](#duration__operator--)|Disminuye el recuento de pasos almacenado.|  
-|[duration::operator=](#duration__operator_eq)|Reduce el módulo del recuento de pasos almacenado en un valor especificado.|  
-|[duration::operator*=](#duration__operator_star_eq)|Multiplica el recuento de pasos almacenado por un valor especificado.|  
-|[duration::operator/=](#duration__operator__eq)|Divide el recuento de pasos almacenado por el recuento de pasos de un objeto `duration` especificado.|  
-|[duration::operator+](#duration__operator_add)|Devuelve `*this`.|  
-|[duration::operator++](#duration__operator_add_add)|Incrementa el recuento de pasos almacenado.|  
-|[duration::operator+=](#duration__operator_add_eq)|Suma el recuento de pasos de un objeto `duration` especificado al recuento de pasos almacenado.|  
-|[duration::operator-=](#duration__operator-_eq)|Resta el recuento de pasos de un objeto `duration` especificado del recuento de pasos almacenado.|  
+|[duration::operator-](#operator-)|Devuelve una copia del objeto `duration` junto con un recuento de pasos negado.|  
+|[duration::operator--](#operator--)|Disminuye el recuento de pasos almacenado.|  
+|[duration::operator=](#op_eq)|Reduce el módulo del recuento de pasos almacenado en un valor especificado.|  
+|[duration::operator*=](#op_star_eq)|Multiplica el recuento de pasos almacenado por un valor especificado.|  
+|[duration::operator/=](#op_div_eq)|Divide el recuento de pasos almacenado por el recuento de pasos de un objeto `duration` especificado.|  
+|[duration::operator+](#op_add)|Devuelve `*this`.|  
+|[duration::operator++](#op_add_add)|Incrementa el recuento de pasos almacenado.|  
+|[duration::operator+=](#op_add_eq)|Suma el recuento de pasos de un objeto `duration` especificado al recuento de pasos almacenado.|  
+|[duration::operator-=](#operator-_eq)|Resta el recuento de pasos de un objeto `duration` especificado del recuento de pasos almacenado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** chrono  
+ **Encabezado:** \<chrono >  
   
  **Espacio de nombres:** std::chrono  
   
-##  <a name="a-namedurationcountmethoda--durationcount"></a><a name="duration__count_method"></a>  duration::count  
+##  <a name="count"></a>  duration::count  
  Recupera el número de ciclos del reloj del intervalo de tiempo.  
   
 ```  
@@ -107,7 +113,7 @@ constexpr Rep count() const;
 ### <a name="return-value"></a>Valor devuelto  
  Número de ciclos del reloj del intervalo de tiempo.  
   
-##  <a name="a-namedurationdurationconstructora--durationduration-constructor"></a><a name="duration__duration_constructor"></a>  duration::duration (Constructor)  
+##  <a name="duration"></a>  duration::duration (Constructor)  
  Construye un objeto `duration`.  
   
 ```  
@@ -147,7 +153,7 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
   
  A menos que no se induzca ningún desbordamiento en la conversión y `treat_as_floating_point<rep>`*sea True* o ambos `ratio_divide<Period2, period>::den` sean iguales a 1 y `treat_as_floating_point<Rep2>`*sea False*, el tercer constructor no participa en la resolución de sobrecarga. Para obtener más información, vea [<type_traits>](../standard-library/type-traits.md).  
   
-##  <a name="a-namedurationmaxmethoda--durationmax"></a><a name="duration__max_method"></a>  duration::max  
+##  <a name="max"></a>  duration::max  
  Método estático que devuelve el límite superior para los valores de tipo de parámetro de plantilla `Ref`.  
   
 ```  
@@ -157,7 +163,7 @@ static constexpr duration max();
 ### <a name="return-value"></a>Valor devuelto  
  En efecto, devuelve `duration(duration_values<rep>::max())`.  
   
-##  <a name="a-namedurationminmethoda--durationmin"></a><a name="duration__min_method"></a>  duration::min  
+##  <a name="min"></a>  duration::min  
  Método estático que devuelve el límite inferior para los valores de tipo de parámetro de plantilla `Ref`.  
   
 ```  
@@ -167,14 +173,14 @@ static constexpr duration min();
 ### <a name="return-value"></a>Valor devuelto  
  En efecto, devuelve `duration(duration_values<rep>::min())`.  
   
-##  <a name="a-namedurationoperator-a--durationoperator-"></a><a name="duration__operator-"></a>  duration::operator-  
+##  <a name="duration__operator-"></a>  duration::operator-  
  Devuelve una copia del objeto `duration` junto con un recuento de pasos negado.  
   
 ```  
 constexpr duration operator-() const;
 ```  
   
-##  <a name="a-namedurationoperator--a--durationoperator--"></a><a name="duration__operator--"></a>  duration::operator--  
+##  <a name="duration__operator--"></a>  duration::operator--  
  Disminuye el recuento de pasos almacenado.  
   
 ```  
@@ -188,7 +194,7 @@ duration operator--(int);
   
  El segundo método devuelve una copia de `*this` que se ha creado antes del decremento.  
   
-##  <a name="a-namedurationoperatoreqa--durationoperator"></a><a name="duration__operator_eq"></a>  duration::operator=  
+##  <a name="op_eq"></a>  duration::operator=  
  Reduce el módulo del recuento de pasos almacenado en un valor especificado.  
   
 ```  
@@ -204,7 +210,7 @@ duration& operator%=(const duration& Div);
 ### <a name="return-value"></a>Valor devuelto  
  Objeto `duration` después de realizarse la operación de módulo.  
   
-##  <a name="a-namedurationoperatorstareqa--durationoperator"></a><a name="duration__operator_star_eq"></a>  duration::operator*=  
+##  <a name="op_star_eq"></a>  duration::operator*=  
  Multiplica el recuento de pasos almacenado por un valor especificado.  
   
 ```  
@@ -218,7 +224,7 @@ duration& operator*=(const rep& Mult);
 ### <a name="return-value"></a>Valor devuelto  
  Objeto `duration` después del cual se realiza la multiplicación.  
   
-##  <a name="a-namedurationoperatoreqa--durationoperator"></a><a name="duration__operator__eq"></a>  duration::operator/=  
+##  <a name="op_div_eq"></a>  duration::operator/=  
  Divide el recuento de pasos almacenado por un valor especificado.  
   
 ```  
@@ -232,14 +238,14 @@ duration& operator/=(const rep& Div);
 ### <a name="return-value"></a>Valor devuelto  
  Objeto `duration` después del cual se realiza la división.  
   
-##  <a name="a-namedurationoperatoradda--durationoperator"></a><a name="duration__operator_add"></a>  duration::operator+  
+##  <a name="op_add"></a>  duration::operator+  
  Devuelve `*this`.  
   
 ```  
 constexpr duration operator+() const;
 ```  
   
-##  <a name="a-namedurationoperatoraddadda--durationoperator"></a><a name="duration__operator_add_add"></a>  duration::operator++  
+##  <a name="op_add_add"></a>  duration::operator++  
  Incrementa el recuento de pasos almacenado.  
   
 ```  
@@ -253,7 +259,7 @@ duration operator++(int);
   
  El segundo método devuelve una copia de `*this` que se hizo antes del incremento.  
   
-##  <a name="a-namedurationoperatoraddeqa--durationoperator"></a><a name="duration__operator_add_eq"></a>  duration::operator+=  
+##  <a name="op_add_eq"></a>  duration::operator+=  
  Suma el recuento de pasos de un objeto `duration` especificado al recuento de pasos almacenado.  
   
 ```  
@@ -267,7 +273,7 @@ duration& operator+=(const duration& Dur);
 ### <a name="return-value"></a>Valor devuelto  
  Objeto `duration` después del cual se realiza la suma.  
   
-##  <a name="a-namedurationoperator-eqa--durationoperator-"></a><a name="duration__operator-_eq"></a>  duration::operator-=  
+##  <a name="duration__operator-_eq"></a>  duration::operator-=  
  Resta el recuento de pasos de un objeto `duration` especificado del recuento de pasos almacenado.  
   
 ```  
@@ -281,14 +287,14 @@ duration& operator-=(const duration& Dur);
 ### <a name="return-value"></a>Valor devuelto  
  Objeto `duration` después del cual se realiza la resta.  
   
-##  <a name="a-namedurationzeromethoda--durationzero"></a><a name="duration__zero_method"></a>  duration::zero  
+##  <a name="zero"></a>  duration::zero  
  Devuelve `duration(duration_values<rep>::zero())`.  
   
 ```  
 static constexpr duration zero();
 ```  
   
-##  <a name="a-namedurationoperatormodeqa--durationoperator-mod"></a><a name="duration__operator_mod_eq"></a>  duration::operator mod=  
+##  <a name="op_mod_eq"></a>  duration::operator mod=  
  Reduce el módulo del recuento de pasos almacenado en Div o Div.count().  
   
 ```  

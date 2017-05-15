@@ -39,7 +39,6 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4463
 - C4464
 - C4472
 - C4480
@@ -101,7 +100,6 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4463
 - C4464
 - C4472
 - C4480
@@ -144,10 +142,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: 123fea75676708aa557a4b4bb5aced1712ca86e4
-ms.lasthandoff: 04/28/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: ed1f641e226f85aefcebf5ecf127c1345dc0b1b2
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 de advertencias del compilador a través de C4599
@@ -197,7 +196,7 @@ Puede encontrar ayuda adicional sobre errores y advertencias en los foros públi
 |[Advertencia del compilador (nivel 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|'*derived_class*': disposición de los objetos en/vd2 cambiará debido a la base virtual '*clase_base*'|  
 |[Advertencia del compilador (nivel 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|dinámica\_Convertir base virtual '*clase_base*'to'*derived_class*' en el constructor o destructor podría no con objetos construidos parcialmente|  
 |[Advertencia del compilador (nivel 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|dinámica\_Convertir base virtual '*clase_base*'to'*derived_class*' podría producirse un error en algunos contextos|  
-|C4438 de advertencia del compilador|'*función*': no se puede llamar de forma segura / await: clrcompat modo. Si '*función*' llamadas a CLR puede causar daños principal de CLR|  
+|C4438 de advertencia del compilador|'*función*': no se puede llamar de forma segura / await: modo de clrcompat. Si '*función*' llamadas a CLR puede causar daños principal de CLR|  
 |[Advertencia del compilador C4439](../../error-messages/compiler-warnings/compiler-warning-c4439.md)|'*función*': definición de función con un tipo administrado en la firma debe tener una convención de llamada __clrcall|  
 |[Advertencia del compilador (nivel 1) C4440](../../error-messages/compiler-warnings/compiler-warning-level-1-c4440.md)|la nueva definición de convención de llamada '*convención_de_llamada1*'to'*calling_convenction2*' omite|  
 |[Advertencia del compilador (nivel 1) C4441](../../error-messages/compiler-warnings/compiler-warning-level-1-c4441.md)|convención de llamada de '*convención_de_llamada1*' omiten; '*calling_convention2*' utilizado en su lugar|  
@@ -209,20 +208,20 @@ Puede encontrar ayuda adicional sobre errores y advertencias en los foros públi
 |Advertencia del compilador (nivel 1) C4447|firma 'main' encontrado sin modelo de subprocesos. Considere el uso de ' int main (Platform:: Array\<Platform:: String ^ > ^ args)'.|  
 |C4448 de advertencia del compilador|'*tipo*1' no tiene una interfaz predeterminada que se especifica en los metadatos. Preparación: '*type2*', que puede producir un error en tiempo de ejecución.|  
 |C4449 de advertencia del compilador|'*tipo*' un tipo no sellado debe marcarse como '[WebHostHidden]'|  
-|C4450 de advertencia del compilador|'*type1*'debe marcarse como '[WebHostHidden]' porque deriva de'*tipo2*'|  
+|C4450 de advertencia del compilador|'*type1*'debe marcarse como '[WebHostHidden]' porque deriva de'*type2*'|  
 |Advertencia del compilador (nivel 4) C4451|'classname1::member': uso de la clase ref 'classname2::member' dentro de este contexto puede dar lugar a cálculo de referencias no válida de objeto entre los contextos|  
 |Advertencia del compilador (nivel 1) C4452|'*identificador*': no puede ser tipo público en el ámbito global. Debe estar en un espacio de nombres es un elemento secundario del nombre del archivo de .winmd de salida.|  
 |Advertencia del compilador (nivel 1) C4453|'*tipo*': un tipo de '[WebHostHidden]' no debe utilizarse en la superficie publicada de un tipo público que no es '[WebHostHidden]'|  
 |Advertencia del compilador (nivel 1) C4454|'*función*' está sobrecargado por algo más que el número de parámetros de entrada sin tener [DefaultOverload] especificado. Seleccionar '*declaración*' como sobrecarga predeterminada|  
 |Advertencia del compilador (nivel 1) C4455|' operador *operador*': los identificadores de sufijo literal que no comienzan con un carácter de subrayado están reservados|  
-|Advertencia del compilador (nivel 3) C4456|declaración de '*identificador*' oculta la declaración local|  
-|Advertencia del compilador (nivel 3) C4457|declaración de '*identificador*' oculta el parámetro de función|  
-|Advertencia del compilador (nivel 3) C4458|declaración de '*identificador*' oculta el miembro de clase|  
-|Advertencia del compilador (nivel 3) C4459|declaración de '*identificador*' oculta la declaración global|  
+|[Advertencia del compilador (nivel 4) C4456](compiler-warning-level-4-c4456.md)|declaración de '*identificador*' oculta la declaración local|  
+|[Advertencia del compilador (nivel 4) C4457](compiler-warning-level-4-c4457.md)|declaración de '*identificador*' oculta el parámetro de función|  
+|[Advertencia del compilador (nivel 4) C4458](compiler-warning-level-4-c4458.md)|declaración de '*identificador*' oculta el miembro de clase|  
+|[Advertencia del compilador (nivel 4) C4459](compiler-warning-level-4-c4459.md)|declaración de '*identificador*' oculta la declaración global|  
 |[Advertencia del compilador (nivel 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT &#124; administrado ' operador '*operador*', tiene un parámetro pasado por referencia. ' WinRT &#124; administrado ' operador '*operador*'tiene una semántica diferente del operador de C++'*cpp_operator*', ¿deseaba pasar por valor?|  
 |[Advertencia del compilador (nivel 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*': esta clase tiene un finalizador '! *finalizador*' pero no un destructor ' ~*destructor*'|  
 |[Advertencia del compilador (nivel 1) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*tipo*': no se puede determinar el GUID del tipo. El programa puede dar un error en tiempo de ejecución.|  
-|Advertencia C4463 del compilador|desbordamiento; asignar '*valor*'para el campo de bits que solo puede contener valores de'*min_value*'to'*max_value*'|  
+|[Advertencia del compilador (nivel 4) C4463](compiler-warning-level-4-c4463.md)|desbordamiento; asignar '*valor*'para el campo de bits que solo puede contener valores de'*min_value*'to'*max_value*'|  
 |Advertencia C4464 de compilador|ruta de acceso de inclusión relativa contiene '..'|  
 |[Advertencia del compilador (nivel 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|pragmas de control de punto flotante omitidas en /clr|  
 |[Advertencia del compilador (nivel 4) C4471](compiler-warning-level-4-c4471.md)|'*enumeración*': una declaración adelantada de una enumeración sin ámbito debe tener un tipo subyacente (se presupone int)|  
@@ -271,7 +270,7 @@ Puede encontrar ayuda adicional sobre errores y advertencias en los foros públi
 |[Advertencia del compilador (nivel 4) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)|'*typename*': nombre de tipo supera el límite de metadatos de '*character_limit*' caracteres|  
 |[Advertencia del compilador (nivel 1) C4537](../../error-messages/compiler-warnings/compiler-warning-level-1-c4537.md)|'*objeto*': '.' aplicado al tipo no definido por el usuario|  
 |[Advertencia del compilador (nivel 3) C4538](../../error-messages/compiler-warnings/compiler-warning-level-3-c4538.md)|'*tipo*': no se admiten los calificadores const/volatile en este tipo|  
-|[Advertencia del compilador (nivel 1) C4540](../../error-messages/compiler-warnings/compiler-warning-level-1-c4540.md)|dynamic_cast se ha utilizado para convertir a base inaccesible o ambigua; se producirá un error de prueba en tiempo de ejecución ('*type1*'to'*tipo2*')|  
+|[Advertencia del compilador (nivel 1) C4540](../../error-messages/compiler-warnings/compiler-warning-level-1-c4540.md)|dynamic_cast se ha utilizado para convertir a base inaccesible o ambigua; se producirá un error de prueba en tiempo de ejecución ('*type1*'to'*type2*')|  
 |[Advertencia del compilador (nivel 1) C4541](../../error-messages/compiler-warnings/compiler-warning-level-1-c4541.md)|'*identificador*'utilizado en el tipo polimórfico'*tipo*' con/GR-; puede dar como resultado un comportamiento impredecible|  
 |Advertencia del compilador (nivel 1) C4542|Omitiendo la generación del archivo de texto insertado combinado, no se puede escribir *filetype* archivo: '*problema*': *mensaje*|  
 |[Advertencia del compilador (nivel 3) C4543](../../error-messages/compiler-warnings/compiler-warning-level-3-c4543.md)|Insertar texto suprimido por el atributo ' ninguna\_injected_text'|  

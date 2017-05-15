@@ -33,10 +33,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: a817bc264a762d6043b80a68d966a9e8420c72b5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 89cbb528d14117feac1f04863f0f4082969f22d9
+ms.contentlocale: es-es
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
@@ -64,7 +65,7 @@ Define instalaciones para generar números aleatorios, lo que permite crear núm
 ### <a name="quick-tips"></a>Sugerencias  
  Aquí incluimos algunas sugerencias que conviene recordar al usar `<random>`:  
   
--   En la mayoría de los casos, los URNG generan bits sin formato a los que las distribuciones deben dar forma. (Una excepción significativa a este respecto es [std::shuffle()](../standard-library/algorithm-functions.md#std__shuffle), ya que usa un URNG directamente).  
+-   En la mayoría de los casos, los URNG generan bits sin formato a los que las distribuciones deben dar forma. (Una excepción significativa a este respecto es [std::shuffle()](../standard-library/algorithm-functions.md#shuffle), ya que usa un URNG directamente).  
   
 -   No se puede llamar a una única creación de instancias de un URNG o distribución simultáneamente de forma segura, ya que la ejecución de un URNG o distribución es una operación de modificación. Para obtener más información, vea [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md).  
   
@@ -74,7 +75,7 @@ Define instalaciones para generar números aleatorios, lo que permite crear núm
   
  Son muchas las opciones que se pueden elegir en el encabezado `<random>`, y todas ellas son preferibles a la función de tiempo de ejecución C obsoleta `rand()`. Para obtener más información sobre los aspectos negativos de `rand()` y ver cómo `<random>` los aborda, vea [este vídeo](http://go.microsoft.com/fwlink/LinkId=397615).  
   
-##  <a name="a-namecodea-examples"></a><a name="code"></a> Ejemplos  
+##  <a name="code"></a> Ejemplos  
  En el ejemplo de código siguiente, se muestra cómo generar algunos números aleatorios (en este caso, cinco) con un generador creado con valores de inicialización no deterministas.  
   
 ```cpp  
@@ -228,9 +229,9 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
 En este código se muestran dos aleatorizaciones distintas (la aleatorización de un vector de enteros y la selección aleatoria de una matriz de datos indexados) con una función de plantilla de prueba. En la primera llamada a la función de prueba usa el URNG no reiterativo, no propagable, no determinista y criptográficamente seguro `random_device`. En la segunda serie de pruebas se usa `mersenne_twister_engine` como URNG con un valor de inicialización constante de 32 bits, lo que significa que los resultados son reiterativos. En la tercera serie de pruebas se propaga `mersenne_twister_engine` con un resultado no determinista de 32 bits de `random_device`. En la cuarta serie de pruebas esto se expande por medio de una [secuencia de propagación](../standard-library/seed-seq-class.md) rellena con resultados de `random_device`, con lo que se consigue eficazmente una aleatoriedad no determinista de más de 32 bits (aunque sigue sin ser criptográficamente seguro). Siga leyendo para obtener más información.  
   
-##  <a name="a-namelistinga-categorized-listing"></a><a name="listing"></a> Lista por categorías  
+##  <a name="listing"></a> Lista por categorías  
   
-###  <a name="a-nameurngsa-uniform-random-number-generators"></a><a name="urngs"></a> Generadores de números aleatorios uniformes  
+###  <a name="urngs"></a> Generadores de números aleatorios uniformes  
  A menudo, los URNG se describen según los siguientes aspectos:  
   
 1. **Longitud del período**: número de iteraciones necesarias para repetir la secuencia de números generada. Cuanto más largo, mejor.  
@@ -241,13 +242,13 @@ En este código se muestran dos aleatorizaciones distintas (la aleatorización d
   
  En las siguientes secciones se enumeran los generadores de números aleatorios que se proporcionan en el encabezado `<random>`.  
   
-####  <a name="a-namerda-non-deterministic-generator"></a><a name="rd"></a> Generador no determinista  
+####  <a name="rd"></a> Generador no determinista  
   
 |||  
 |-|-|  
 |[random_device (Clase)](../standard-library/random-device-class.md)|Genera una secuencia aleatoria criptográficamente segura y no determinista mediante un dispositivo externo. Se suele usar para propagar un motor. Bajo rendimiento y calidad extremadamente alta. Para obtener más información, vea [Comentarios](#comments).|  
   
-####  <a name="a-nametypedefsa-engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a> Definiciones de tipo de motor con parámetros predefinidos  
+####  <a name="typedefs"></a> Definiciones de tipo de motor con parámetros predefinidos  
  Para crear instancias de motores y adaptadores de motores. Para obtener más información, vea [Motores y distribuciones](#engdist).  
   
 - `default_random_engine` El motor predeterminado.   
@@ -280,7 +281,7 @@ En este código se muestran dos aleatorizaciones distintas (la aleatorización d
 - `ranlux48_base` Usado como base para `ranlux48`.   
  `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
-####  <a name="a-nameenga-engine-templates"></a><a name="eng"></a> Plantillas de motor  
+####  <a name="eng"></a> Plantillas de motor  
  Las plantillas de motor se usan como URNG independientes o como motores base que se pasan a los [adaptadores de motor](#engadapt). Por lo general, se suelen crear instancias de ellas con una [definición de tipo de motor predefinida](#typedefs) y pasarse a una [distribución](#distributions). Para obtener más información, vea la sección [Motores y distribuciones](#engdist).  
   
 |||  
@@ -289,7 +290,7 @@ En este código se muestran dos aleatorizaciones distintas (la aleatorización d
 |[mersenne_twister_engine (Clase)](../standard-library/mersenne-twister-engine-class.md)|Genera una secuencia aleatoria mediante un algoritmo Mersenne Twister. La más compleja y de mayor calidad, salvo en el caso de la clase random_device. Rendimiento muy rápido.|  
 |[subtract_with_carry_engine (Clase)](../standard-library/subtract-with-carry-engine-class.md)|Genera una secuencia aleatoria mediante un algoritmo de resta llevando. Constituye una mejora con respecto a `linear_congruential_engine`, si bien la calidad y rendimiento son muy inferiores a `mersenne_twister_engine`.|  
   
-####  <a name="a-nameengadapta-engine-adaptor-templates"></a><a name="engadapt"></a> Plantillas de adaptador de motor  
+####  <a name="engadapt"></a> Plantillas de adaptador de motor  
  Los adaptadores de motor son plantillas que adaptan otros motores (base). Por lo general, se suelen crear instancias de ellas con una [definición de tipo de motor predefinida](#typedefs) y pasarse a una [distribución](#distributions). Para obtener más información, vea la sección [Motores y distribuciones](#engdist).  
   
 |||  
@@ -300,7 +301,7 @@ En este código se muestran dos aleatorizaciones distintas (la aleatorización d
   
  [[Plantillas de motor](#eng)]  
   
-###  <a name="a-namedistributionsa-random-number-distributions"></a><a name="distributions"></a> Distribuciones de números aleatorios  
+###  <a name="distributions"></a> Distribuciones de números aleatorios  
  En las siguientes secciones se enumeran las distribuciones que se proporcionan en el encabezado `<random>`. Las distribuciones son un mecanismo de procesamiento posterior que suelen usar una salida de URNG como entrada y distribuir esa salida mediante una función de densidad de probabilidad estadística definida. Para obtener más información, vea la sección [Motores y distribuciones](#engdist).  
   
 #### <a name="uniform-distributions"></a>Distribuciones uniformes  
@@ -330,7 +331,7 @@ En este código se muestran dos aleatorizaciones distintas (la aleatorización d
 |-|-|  
 |[cauchy_distribution (Clase)](../standard-library/cauchy-distribution-class.md)|Genera una distribución de Cauchy de valores reales (punto flotante).|  
 |[chi_squared_distribution (Clase)](../standard-library/chi-squared-distribution-class.md)|Genera una distribución chi-cuadrado de valores reales (punto flotante).|  
-|[fisher_f_distribution (Clase)](../standard-library/fisher-f-distribution-class.md)|Genera una distribución F (también llamada “distribución F de Snedecor” o “distribución de Fisher-Snedecor”) de valores reales (punto flotante).|  
+|[fisher_f_distribution (Clase)](../standard-library/fisher-f-distribution-class.md)|Genera una distribución F (también conocida como distribución de F de Snedecor o la distribución de Fisher-Snedecor) de valores reales (punto flotante).|  
 |[lognormal_distribution (Clase)](../standard-library/lognormal-distribution-class.md)|Genera una distribución log-normal de valores reales (punto flotante).|  
 |[normal_distribution (Clase)](../standard-library/normal-distribution-class.md)|Genera una distribución normal (Gaussiana) de valores reales (punto flotante).|  
 |[student_t_distribution (Clase)](../standard-library/student-t-distribution-class.md)|Genera una distribución *t* de Student de valores reales (punto flotante).|  
@@ -376,7 +377,7 @@ En este código se muestran dos aleatorizaciones distintas (la aleatorización d
 |`operator<<`|Escribe información de estado en un flujo.|  
 |`operator>>`|Extrae información de estado de un flujo.|  
   
-##  <a name="a-nameengdista-engines-and-distributions"></a><a name="engdist"></a> Motores y distribuciones  
+##  <a name="engdist"></a> Motores y distribuciones  
  Consulte las siguientes secciones para obtener información sobre cada una de las categorías de clase de plantilla definidas en `<random>`. Estas dos categorías de clase de plantilla toman un tipo como argumento y usan nombres compartidos de parámetros de plantilla para describir las propiedades del tipo que son posibles como tipo de argumento real, como se indica a continuación:  
   
 - `IntType` indica `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long` o `unsigned long long`.  
@@ -459,7 +460,7 @@ En este código se muestran dos aleatorizaciones distintas (la aleatorización d
   
  Para más información, vea los subtemas de referencia cuyos vínculos aparecen recogidos anteriormente en este artículo.  
   
-##  <a name="a-namecommentsa-remarks"></a><a name="comments"></a> Comentarios  
+##  <a name="comments"></a> Comentarios  
  Visual Studio dispone de dos URNG de extrema utilidad: `mt19937` y `random_device`, comparados en la siguiente tabla:  
   
 |URNG|Rápido|Seguro criptográficamente|Propagable|Determinista|  

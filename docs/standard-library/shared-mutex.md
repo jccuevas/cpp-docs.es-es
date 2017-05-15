@@ -72,10 +72,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 17978f1c6f934783236df5a36464ab44f8254903
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: e864aca13c5ae83b3806a95026a05f8f408e9071
+ms.contentlocale: es-es
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltsharedmutexgt"></a>&lt;shared_mutex&gt;
@@ -91,7 +92,7 @@ El encabezado <shared_mutex> proporciona primitivas de sincronización para la p
   
 |Funciones|Descripción|  
 |---------------|-----------------|  
-|[swap (Función)](../standard-library/shared-mutex.md#function_swap)|Intercambia el contenido de los objetos de exclusión mutua compartida al que hacen referencia los parámetros de función.|  
+|[swap](../standard-library/shared-mutex.md#function_swap)|Intercambia el contenido de los objetos de exclusión mutua compartida al que hacen referencia los parámetros de función.|  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -128,11 +129,11 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
  La clase de plantilla `shared_lock` extiende el soporte para el bloqueo temporizado y transfiere la propiedad a una exclusión mutua compartida. La propiedad de la exclusión mutua puede obtenerse en el momento de la construcción o después, y se puede transferir a otro objeto `shared_lock`. Los objetos de tipo `shared_lock` se pueden mover pero no copiar.  
   
 > [!WARNING]
->  Los tipos de sincronización de la biblioteca estándar de C++ en Visual Studio 2015 se basan en los primitivos de sincronización de Windows y ya no usan ConcRT (salvo cuando la plataforma de destino es Windows XP). Los tipos definidos en <shared_mutex> no deben usarse con ninguna función o tipo ConcRT.  
+>  A partir de Visual Studio 2015, los tipos de sincronización de la biblioteca estándar de C++ se basan en los primitivos de sincronización de Windows y ya no utilizan ConcRT (salvo cuando la plataforma de destino es Windows XP). Los tipos definidos en <shared_mutex> no deben usarse con ninguna función o tipo ConcRT.  
   
 ## <a name="classes"></a>Clases  
   
-###  <a name="a-nameclasssharedmutexa-sharedmutex-class"></a><a name="class_shared_mutex"></a> shared_mutex (Clase)  
+###  <a name="class_shared_mutex"></a> shared_mutex (Clase)  
  La clase `shared_mutex` implementa una exclusión mutua no recursiva con la semántica de propiedad compartida.  
   
 ```cpp  
@@ -158,7 +159,7 @@ class shared_mutex {
    };  
 ```
 
-###  <a name="a-nameclasssharedtimedmutexa-sharedtimedmutex-class"></a><a name="class_shared_timed_mutex"></a> shared_timed_mutex (Clase)  
+###  <a name="class_shared_timed_mutex"></a> shared_timed_mutex (Clase)  
  La clase `shared_timed_mutex` implementa una exclusión mutua no recursiva con la semántica de propiedad compartida que cumpla los requisitos de un tipo de exclusión mutua temporizada.  
   
 ```cpp  
@@ -189,7 +190,7 @@ class shared_timed_mutex {
    };  
 ```
 
-###  <a name="a-nameclasssharedlocka-sharedlock-class"></a><a name="class_shared_lock"></a> shared_lock (Clase)  
+###  <a name="class_shared_lock"></a> shared_lock (Clase)  
  La clase de plantilla `shared_lock` controla la propiedad compartida de un objeto de exclusión mutua compartida dentro de un ámbito. El parámetro de plantilla debe ser un tipo de exclusión mutua compartida.  
 
 ```cpp  
@@ -236,7 +237,7 @@ class shared_lock {
 
 ## <a name="functions"></a>Funciones  
   
-###  <a name="a-namefunctionswapa-swap-function"></a><a name="function_swap"></a> swap (función)  
+###  <a name="function_swap"></a>swap
  Intercambia los objetos `shared_lock`.  
   
 ```cpp  

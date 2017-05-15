@@ -53,10 +53,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2e96f911e6784744eb539f6ce2b1961102d9869d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 314f57a38cdabb4257624550f6686075a5b61697
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
@@ -75,7 +76,7 @@ intptr_t _get_osfhandle(
  Descriptor del archivo existente.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Identificador de archivo del sistema operativo si `fd` es válida. De lo contrario, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve `INVALID_HANDLE_VALUE` (–1) y establece `errno` en `EBADF`, que indica un identificador de archivo no valido.  
+ Identificador de archivo del sistema operativo si `fd` es válida. De lo contrario, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve `INVALID_HANDLE_VALUE` (-1) y establece `errno` a `EBADF`, que indica un identificador de archivo no válido.  
   
 ## <a name="remarks"></a>Comentarios  
  Para cerrar un archivo abierto con `_get_osfhandle`, llame a `_close`. El identificador subyacente también se cierra mediante una llamada a `_close`, por lo que no es necesario llamar a la función `CloseHandle` de Win32 en el identificador original.  
@@ -87,9 +88,6 @@ intptr_t _get_osfhandle(
 |`_get_osfhandle`|\<io.h>|  
   
  Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Control de archivos](../../c-runtime-library/file-handling.md)   

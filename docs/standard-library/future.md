@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 4c83adc4b7365518275d5d54ac927012abc29657
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: e2ebbb8eb6e6f250376b0ef2b43dae261a642d69
+ms.contentlocale: es-es
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
@@ -52,7 +53,7 @@ Incluya el encabezado estándar \<future> para definir clases de plantilla y pla
 ## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
->  En el código que se compila con **/CLR**, este encabezado está bloqueado.  
+>  En el código compilado mediante **/CLR**, este encabezado está bloqueado.  
   
  Un *proveedor asincrónico* almacena el resultado de una llamada de función. Se usa un *objeto de devolución asincrónico* para recuperar el resultado de una llamada de función. Un *estado asincrónico asociado* proporciona la comunicación entre un proveedor asincrónico y uno o varios objetos de devolución asincrónicos.  
   
@@ -91,19 +92,19 @@ Incluya el encabezado estándar \<future> para definir clases de plantilla y pla
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[async (Función)](../standard-library/future-functions.md#async_function)|Representa un proveedor asincrónico.|  
-|[future_category (Función)](../standard-library/future-functions.md#future_category_function)|Devuelve una referencia al objeto `error_category` que caracteriza los errores asociados a objetos `future`.|  
-|[make_error_code (Función)](../standard-library/future-functions.md#make_error_code_function)|Crea un elemento `error_code` que tiene el objeto `error_category` que caracteriza los errores de `future`.|  
-|[make_error_condition (Función)](../standard-library/future-functions.md#make_error_condition_function)|Crea un elemento `error_condition` que tiene el objeto `error_category` que caracteriza los errores de `future`.|  
-|[swap (Función)](../standard-library/future-functions.md#swap_function)|Intercambia el estado asincrónico asociado de un objeto `promise` con el de otro.|  
+|[async](../standard-library/future-functions.md#async)|Representa un proveedor asincrónico.|  
+|[future_category](../standard-library/future-functions.md#future_category)|Devuelve una referencia al objeto `error_category` que caracteriza los errores asociados a objetos `future`.|  
+|[make_error_code](../standard-library/future-functions.md#make_error_code)|Crea un elemento `error_code` que tiene el objeto `error_category` que caracteriza los errores de `future`.|  
+|[make_error_condition](../standard-library/future-functions.md#make_error_condition)|Crea un elemento `error_condition` que tiene el objeto `error_category` que caracteriza los errores de `future`.|  
+|[swap](../standard-library/future-functions.md#swap)|Intercambia el estado asincrónico asociado de un objeto `promise` con el de otro.|  
   
 ### <a name="enumerations"></a>Enumeraciones  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[future_errc (Enumeración)](../standard-library/future-enums.md#future_errc_enumeration)|Proporciona nombres simbólicos para los errores notificados por la clase `future_error`.|  
-|[future_status (Enumeración)](../standard-library/future-enums.md#future_status_enumeration)|Proporciona nombres simbólicos para los motivos que una función que ha agotado el tiempo de espera puede devolver.|  
-|[launch (Enumeración)](../standard-library/future-enums.md#launch_enumeration)|Representa un tipo de máscara de bits que describe los posibles modos para la función de plantilla `async`.|  
+|[future_errc](../standard-library/future-enums.md#future_errc)|Proporciona nombres simbólicos para los errores notificados por la clase `future_error`.|  
+|[future_status](../standard-library/future-enums.md#future_status)|Proporciona nombres simbólicos para los motivos que una función que ha agotado el tiempo de espera puede devolver.|  
+|[iniciar](../standard-library/future-enums.md#launch)|Representa un tipo de máscara de bits que describe los posibles modos para la función de plantilla `async`.|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)

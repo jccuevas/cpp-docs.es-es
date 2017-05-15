@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 069a7dd22950e7ae9826ff2cf8c542025f14facd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 57a578f8accf7244d71c0d8791a6e898ead7d242
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="setnewmode"></a>_set_new_mode
@@ -73,7 +74,7 @@ int _set_new_mode(
  Nuevo modo de controlador para `malloc`; el valor válido es 0 o 1.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve el modo de controlador anterior establecido para `malloc`. Un valor devuelto de 1 indica que, en caso de error al asignar memoria, `malloc` llamó previamente a la rutina del nuevo controlador, mientras que un valor devuelto de 0 indica lo contrario. Si el argumento `newhandlermode` no es igual a 0 o 1, devuelve –1.  
+ Devuelve el modo de controlador anterior establecido para `malloc`. Un valor devuelto de 1 indica que, en caso de error al asignar memoria, `malloc` llamó previamente a la rutina del nuevo controlador, mientras que un valor devuelto de 0 indica lo contrario. Si el `newhandlermode` argumento no es igual a 0 o 1, devuelve -1.  
   
 ## <a name="remarks"></a>Comentarios  
  La función `_set_new_mode` de C++ establece el nuevo modo de controlador para [malloc](../../c-runtime-library/reference/malloc.md). El nuevo modo de controlador indica si, en caso de error, `malloc` va a llamar a la rutina del nuevo controlador, según lo establecido por [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md). De forma predeterminada, `malloc` no llama a la rutina del nuevo controlador en caso de error al asignar memoria. Puede invalidar este comportamiento predeterminado para que, cuando `malloc` no pueda asignar memoria, `malloc` llame a la rutina del nuevo controlador de la misma forma que hace el operador `new` cuando se produce un error por la misma razón. Para obtener más información, vea los operadores [new](../../cpp/new-operator-cpp.md) y [delete](../../cpp/delete-operator-cpp.md) en *Referencia de lenguaje C++*. Para invalidar el valor predeterminado, llame a:  
@@ -92,10 +93,7 @@ _set_new_mode(1)
 |-------------|---------------------|  
 |`_set_new_mode`|\<new.h>|  
   
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
 ## <a name="see-also"></a>Vea también  
  [Asignación de memoria](../../c-runtime-library/memory-allocation.md)   

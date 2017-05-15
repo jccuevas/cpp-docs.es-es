@@ -6,20 +6,22 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
 caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4c2a2f8c2c2b55e3c14db9e44a4b05041c0ecfc9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f73a5e24fd3864a46ac0c50bbdb18a1089a4a05e
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltistreamgt-operators"></a>Operadores de &lt;istream&gt;
  
-##  <a name="a-nameoperatorgtgta--operatorgtgt"></a><a name="operator_gt__gt_"></a>  operator&gt;&gt;  
+##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
  Extrae caracteres y cadenas del flujo.  
   
 ```  
@@ -66,17 +68,17 @@ basic_istream<Elem, Tr>& operator>>(
  `Istr`  
  Flujo.  
   
- ` str`  
+ `str`  
  Una cadena.  
   
- ` val`  
+ `val`  
  Un tipo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Flujo.  
   
 ### <a name="remarks"></a>Comentarios  
- La clase `basic_istream` también define varios operadores de extracción. Para obtener más información, vea [basic_istream::operator>>](../standard-library/basic-istream-class.md#basic_istream__operator_gt__gt_).  
+ La clase `basic_istream` también define varios operadores de extracción. Para obtener más información, vea [basic_istream::operator>>](../standard-library/basic-istream-class.md#op_gt_gt).  
   
  La función de plantilla:  
   
@@ -86,9 +88,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```  
   
- extrae hasta *N* - 1 elementos y los almacena en la matriz empezando por _ *Str*. Si `Istr`. [width](../standard-library/ios-base-class.md#ios_base__width) es mayor que cero, *N* es `Istr`. **width**. En caso contrario, es el tamaño de la matriz más grande de **Elem** que se puede declarar. La función siempre almacena el valor **Elem()** después de los elementos extraídos que haya almacenado. La extracción se detiene anticipadamente al final del archivo, en un carácter con el valor **Elem**(0) (que no se extrae) o en cualquier elemento (que no se extrae) que [ws](../standard-library/istream-functions.md#ws) descartaría. Si la función no extrae ningún elemento, llama a `Istr`. [setstate](../standard-library/basic-ios-class.md#basic_ios__setstate)(**failbit**). En cualquier caso, llama a `Istr`. **width**(0) y devuelve `Istr`.  
+ extrae hasta *N* - 1 elementos y los almacena en la matriz empezando por _ *Str*. Si `Istr`. [width](../standard-library/ios-base-class.md#width) es mayor que cero, *N* es `Istr`. **width**. En caso contrario, es el tamaño de la matriz más grande de **Elem** que se puede declarar. La función siempre almacena el valor **Elem()** después de los elementos extraídos que haya almacenado. La extracción se detiene anticipadamente al final del archivo, en un carácter con el valor **Elem**(0) (que no se extrae) o en cualquier elemento (que no se extrae) que [ws](../standard-library/istream-functions.md#ws) descartaría. Si la función no extrae ningún elemento, llama a `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). En cualquier caso, llama a `Istr`. **width**(0) y devuelve `Istr`.  
   
- **Nota de seguridad** La cadena terminada en null que se extrae del flujo de entrada no debe superar el tamaño del búfer de destino ` str`. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).  
+ **Nota de seguridad** La cadena terminada en null que se extrae del flujo de entrada no debe superar el tamaño del búfer de destino `str`. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).  
   
  La función de plantilla:  
   
@@ -98,7 +100,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```  
   
- extrae un elemento, si es posible, y lo almacena en `Ch`. En caso contrario, llama a **is**. [setstate](../standard-library/basic-ios-class.md#basic_ios__setstate)(**failbit**). En cualquier caso, devuelve `Istr`.  
+ extrae un elemento, si es posible, y lo almacena en `Ch`. En caso contrario, llama a **is**. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). En cualquier caso, devuelve `Istr`.  
   
  La función de plantilla:  
   
@@ -108,7 +110,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char* str);
 ```  
   
- devuelve `Istr` >> ( `char`**\***) ` str`.  
+ devuelve `Istr` >> ( `char`**\***) `str`.  
   
  La función de plantilla:  
   
@@ -128,7 +130,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, unsigned char* str);
 ```  
   
- devuelve `Istr` >> ( **char \***) ` str`.  
+ devuelve `Istr` >> ( **char \***) `str`.  
   
  La función de plantilla:  
   
@@ -149,7 +151,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```  
   
- devuelve `Istr` `>>` ` val` (y convierte `rvalue reference` en `Istr` en `lvalue` durante el proceso).  
+ devuelve `Istr` `>>` `val` (y convierte `rvalue reference` en `Istr` en `lvalue` durante el proceso).  
   
 ### <a name="example"></a>Ejemplo  
   

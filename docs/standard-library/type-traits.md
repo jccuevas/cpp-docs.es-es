@@ -34,10 +34,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 76f96a1e0b88e7b43a2d4efa55cc57e84efdb3b5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ec13a255f456254f89ca84488d12fbf5ce0440b4
+ms.contentlocale: es-es
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
@@ -52,7 +53,7 @@ Define las plantillas que proporcionan constantes en tiempo de compilación que 
 ## <a name="remarks"></a>Comentarios  
  Las clases y plantillas de `<type_traits>` se usan para admitir la inferencia, clasificación y transformación de tipos en tiempo de compilación para detectar errores relacionados con tipos y que facilitan la optimización de código genérico. Estas clases y plantillas incluyen rasgos de tipo unario que describen una propiedad de un tipo, rasgos de tipo binario que describen la relación entre los tipos y rasgos de transformación que modifican una propiedad de un tipo.  
   
- Para admitir rasgos de tipo, se define una clase auxiliar, `integral_constant`. Tiene especializaciones de plantilla `true_type` y `false_type` que forman las clases base para los predicados de tipo. Un *predicado de tipo* es una plantilla que toma uno o más argumentos de tipo. Cuando un predicado de tipo *es true*, se deriva públicamente (ya sea de forma directa o indirecta) de [true_type](../standard-library/type-traits-typedefs.md#true_type_typedef). Cuando un predicado de tipo *es false*, se deriva públicamente (ya sea de forma directa o indirecta) de [false_type](../standard-library/type-traits-typedefs.md#false_type_typedef).  
+ Para admitir rasgos de tipo, se define una clase auxiliar, `integral_constant`. Tiene especializaciones de plantilla `true_type` y `false_type` que forman las clases base para los predicados de tipo. Un *predicado de tipo* es una plantilla que toma uno o más argumentos de tipo. Cuando un predicado de tipo *es true*, se deriva públicamente (ya sea de forma directa o indirecta) de [true_type](../standard-library/type-traits-typedefs.md#true_type). Cuando un predicado de tipo *es false*, se deriva públicamente (ya sea de forma directa o indirecta) de [false_type](../standard-library/type-traits-typedefs.md#false_type).  
   
  Un *modificador de tipo* o *rasgo de transformación* es una plantilla que toma uno o más argumentos de plantilla y tiene un miembro `type`, que es un sinónimo del tipo modificado.  
   
@@ -79,8 +80,8 @@ using add_const_t = typename add_const<T>::type;
 |||  
 |-|-|  
 |[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|Crea una constante entera a partir de un tipo y un valor.|  
-|[true_type](../standard-library/type-traits-typedefs.md#true_type_typedef)|Contiene la constante integral con valor true.|  
-|[false_type](../standard-library/type-traits-typedefs.md#false_type_typedef)|Contiene la constante integral con valor false.|  
+|[true_type](../standard-library/type-traits-typedefs.md#true_type)|Contiene la constante integral con valor true.|  
+|[false_type](../standard-library/type-traits-typedefs.md#false_type)|Contiene la constante integral con valor false.|  
   
  Categorías de tipo principal  
   

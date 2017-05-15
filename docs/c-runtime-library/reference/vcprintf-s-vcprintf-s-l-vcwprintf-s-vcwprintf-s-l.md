@@ -1,72 +1,89 @@
 ---
-title: "_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_vcprintf_s"
-  - "_vcprintf_s_l"
-  - "_vcwprintf_s"
-  - "_vcwprintf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vcprintf_s"
-  - "vcwprintf_s_l"
-  - "_vcwprintf_s"
-  - "_vcwprintf_s_l"
-  - "_vcprintf_s_l"
-  - "_vtcprintf_s"
-  - "vcwprintf_s"
-  - "vcprintf_s_l"
-  - "_vcprintf_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_vcprintf_s (función)"
-  - "_vcprintf_s_l (función)"
-  - "_vcwprintf_s (función)"
-  - "_vcwprintf_s_l (función)"
-  - "_vtcprintf_s (función)"
-  - "_vtcprintf_s_l (función)"
-  - "texto con formato [C++]"
-  - "vcprintf_s (función)"
-  - "vcprintf_s_l (función)"
-  - "vcwprintf_s (función)"
-  - "vcwprintf_s_l (función)"
-  - "vtcprintf_s (función)"
-  - "vtcprintf_s_l (función)"
+title: _vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _vcprintf_s
+- _vcprintf_s_l
+- _vcwprintf_s
+- _vcwprintf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vcprintf_s
+- vcwprintf_s_l
+- _vcwprintf_s
+- _vcwprintf_s_l
+- _vcprintf_s_l
+- _vtcprintf_s
+- vcwprintf_s
+- vcprintf_s_l
+- _vcprintf_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _vtcprintf_s_l function
+- _vcwprintf_s_l function
+- _vtcprintf_s function
+- vtcprintf_s_l function
+- vcprintf_s_l function
+- _vcprintf_s function
+- _vcwprintf_s function
+- vcwprintf_s_l function
+- vcwprintf_s function
+- vcprintf_s function
+- _vcprintf_s_l function
+- vtcprintf_s function
+- formatted text [C++]
 ms.assetid: 5a46d45a-30db-45df-9850-455cbdac5636
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 0f42cbf4c10d1567c829f6e47821120e43623f2f
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
-Escribe salida con formato en la consola mediante un puntero a una lista de argumentos.  Estas versiones de [\_vcprintf, \_vcprintf\_l, \_vcwprintf, \_vcwprintf\_l](../../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) tienen mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
+Escribe salida con formato en la consola mediante un puntero a una lista de argumentos. Estas versiones de [_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l](../../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) tienen mejoras de seguridad, como se explica en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución.  Para obtener más información, vea [Funciones de CRT no admitidas con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int _vcprintf(  
@@ -89,7 +106,7 @@ int _vcwprintf_s_l(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `format`  
  Especificación de formato.  
   
@@ -101,38 +118,38 @@ int _vcwprintf_s_l(
   
  Para obtener más información, vea [Sintaxis de especificación de formato: Funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  Número de caracteres escrito o un valor negativo si se produce un error en la salida.  
   
- Como las versiones menos seguras de estas funciones, si `format` es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Además, a diferencia de las versiones menos seguras de estas funciones, si `format` no especifica un formato válido, se genera una excepción de parámetro no válido.  Si la ejecución puede continuar, estas funciones devuelven un código de error y establecen `errno` en ese código de error.  El código de error predeterminado es `EINVAL` si no hay ningún valor más concreto.  
+ Al igual que las versiones menos seguras de estas funciones, si `format` es un puntero nulo, se invoca al controlador de parámetros no válidos, como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Además, a diferencia de las versiones menos seguras de estas funciones, si `format` no especifica un formato válido, se genera una excepción de parámetro no válido. Si la ejecución puede continuar, estas funciones devuelven un código de error y establecen `errno` en ese código de error. El código de error predeterminado es `EINVAL` si no hay ningún valor más concreto.  
   
-## Comentarios  
- Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, aplica formato a los datos determinados y los escribe en la consola.  `_vcwprintf_s` es la versión con caracteres anchos de `_vcprintf_s`.  Toma una cadena de caracteres anchos como argumento.  
+## <a name="remarks"></a>Comentarios  
+ Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, aplica formato a los datos determinados y los escribe en la consola. `_vcwprintf_s` es la versión con caracteres anchos de `_vcprintf_s`. Toma una cadena de caracteres anchos como argumento.  
   
  Las versiones de estas funciones con el sufijo `_l` son idénticas salvo que usan el parámetro de configuración regional que se pasa en lugar de la configuración regional del subproceso actual.  
   
 > [!IMPORTANT]
->  Asegúrese de que `format` no es una cadena definida por el usuario.  Para obtener más información, vea [Evitar saturaciones del búfer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Asegúrese de que `format` no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).  
   
-### Asignaciones de rutina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
-|Rutina TCHAR.H|\_UNICODE y \_MBCS no definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vtcprintf_s`|`_vcprintf_s`|`_vcprintf_s`|`_vcwprintf_s`|  
 |`_vtcprintf_s_l`|`_vcprintf_s_l`|`_vcprintf_s_l`|`_vcwprintf_s_l`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|Encabezados opcionales|  
-|------------|--------------------------|----------------------------|  
-|`_vcprintf_s`, `_vcprintf_s_l`|\<conio.h\> y \<stdarg.h\>|\<varargs.h\>\*|  
-|`_vcwprintf_s`, `_vcwprintf_s_l`|\<conio.h\> o \<wchar.h\>, y \<stdarg.h\>|\<varargs.h\>\*|  
+|-------------|---------------------|----------------------|  
+|`_vcprintf_s`, `_vcprintf_s_l`|\<conio.h> y \<stdarg.h>|\<varargs.h>*|  
+|`_vcwprintf_s`, `_vcwprintf_s_l`|\<conio.h> or \<wchar.h> y \<stdarg.h>|\<varargs.h>*|  
   
  \* Necesario para la compatibilidad con UNIX V.  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_vcprintf_s.cpp  
@@ -144,7 +161,9 @@ int eprintf_s(const char* format, ...)
 {  
   va_list args;  
   va_start(args, format);  
-  return _vcprintf_s(format, args);  
+  int result = _vcprintf_s(format, args);  
+  va_end(args);  
+  return result;
 }  
   
 int main()  
@@ -156,16 +175,16 @@ int main()
 }  
 ```  
   
-  **\(10,23\): Error C2111: \<texto de error\>**  
- **\(Relacionado con el símbolo '\<símbolo\>' definido en la línea 5\).**   
-## Equivalente en .NET Framework  
- [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
+```Output  
+(10,23): Error C2111 : <some error text>  
+  (Related to symbol '<symbol>' defined on line 5).  
+```  
   
-## Vea también  
- [E\/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [vprintf \(Funciones\)](../../c-runtime-library/vprintf-functions.md)   
- [\_cprintf, \_cprintf\_l, \_cwprintf, \_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [va\_arg, va\_copy, va\_end, va\_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+## <a name="see-also"></a>Vea también  
+ [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
+ [vprintf (Funciones)](../../c-runtime-library/vprintf-functions.md)   
+ [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

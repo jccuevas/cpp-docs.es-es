@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bde781215787a1d39a58c69b344eb8d41f7b3c52
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e068c6711630976a2d8b3baea01010bc5e34ed6e
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
@@ -120,28 +121,28 @@ errno_t _localtime64_s(
  Los campos del tipo de estructura [tm](../../c-runtime-library/standard-types.md) almacenan los valores siguientes, cada uno de los cuales es un `int`.  
   
  `tm_sec`  
- Segundos después del minuto (0 – 59).  
+ Segundos después del minuto (0 - 59).  
   
  `tm_min`  
- Minutos después de la hora (0 – 59).  
+ Minutos después de la hora (0 - 59).  
   
  `tm_hour`  
- Horas después de la medianoche (0 – 23).  
+ Horas después de la medianoche (0 - 23).  
   
  `tm_mday`  
- Día del mes (1 – 31).  
+ Día del mes (1-31).  
   
  `tm_mon`  
- Mes (0 – 11; Enero = 0).  
+ Mes (0 - 11; Enero = 0).  
   
  `tm_year`  
  Año (año actual menos 1900).  
   
  `tm_wday`  
- Día de la semana (0 – 6; Domingo = 0).  
+ Día de la semana (0 - 6; El domingo = 0).  
   
  `tm_yday`  
- Día del año (0 – 365; 1 de enero = 0).  
+ Día del año (0 - 365; El 1 de enero = 0).  
   
  `tm_isdst`  
  Valor positivo si el horario de verano está en vigor; 0 si el horario de verano no está en vigor; valor negativo si se desconoce el estado del horario de verano. Si se establece la variable de entorno `TZ`, la biblioteca en tiempo de ejecución de C usa las reglas correspondientes a los Estados Unidos para implementar el cálculo del horario de verano (DST).  
@@ -211,9 +212,6 @@ int main( void )
 ```  
 Fri Apr 25 01:19:27 PM  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- [System::DateTime::ToLocalTime](https://msdn.microsoft.com/en-us/library/system.datetime.tolocaltime.aspx)  
   
 ## <a name="see-also"></a>Vea también  
  [Administración del tiempo](../../c-runtime-library/time-management.md)   

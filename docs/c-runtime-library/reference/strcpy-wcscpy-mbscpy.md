@@ -1,66 +1,83 @@
 ---
-title: "strcpy, wcscpy, _mbscpy | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "strcpy"
-  - "wcscpy"
-  - "_mbscpy"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbscpy"
-  - "_ftcscpy"
-  - "wcscpy"
-  - "_tcscpy"
-  - "strcpy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftcscpy (función)"
-  - "_mbscpy (función)"
-  - "_tcscpy (función)"
-  - "copiar cadenas"
-  - "ftcscpy (función)"
-  - "mbscpy (función)"
-  - "strcpy (función)"
-  - "cadenas [C++], copiar"
-  - "tcscpy (función)"
-  - "wcscpy (función)"
+title: strcpy, wcscpy, _mbscpy | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- strcpy
+- wcscpy
+- _mbscpy
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbscpy
+- _ftcscpy
+- wcscpy
+- _tcscpy
+- strcpy
+dev_langs:
+- C++
+helpviewer_keywords:
+- strcpy function
+- tcscpy function
+- ftcscpy function
+- mbscpy function
+- wcscpy function
+- copying strings
+- strings [C++], copying
+- _tcscpy function
+- _ftcscpy function
+- _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
 caps.latest.revision: 31
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 31
----
-# strcpy, wcscpy, _mbscpy
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 940983d8bb5795d44a78f9049c351941db41afb7
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
-Copia una cadena.  Hay disponibles versiones más seguras de estas funciones; vea [strcpy\_s, wcscpy\_s, \_mbscpy\_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md).  
+---
+# <a name="strcpy-wcscpy-mbscpy"></a>strcpy, wcscpy, _mbscpy
+Copia una cadena. Hay disponibles versiones más seguras de estas funciones; vea [strcpy_s, wcscpy_s, _mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md).  
   
 > [!IMPORTANT]
->  `_mbscpy` no se puede usar en aplicaciones que se ejecutan en [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Para más información, vea [Funciones de CRT no admitidas con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbscpy` no se puede usar en aplicaciones que se ejecutan en [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 char *strcpy(  
@@ -92,43 +109,43 @@ unsigned char *_mbscpy(
 ); // C++ only  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `strDestination`  
  Cadena de destino.  
   
  `strSource`  
  Cadena de origen terminada en NULL.  
   
-## Valor devuelto  
- Cada una de estas funciones devuelve la cadena de destino.  No se reserva ningún valor devuelto para indicar un error.  
+## <a name="return-value"></a>Valor devuelto  
+ Cada una de estas funciones devuelve la cadena de destino. No se reserva ningún valor devuelto para indicar un error.  
   
-## Comentarios  
- La función `strcpy` copia `strSource`, incluido el carácter nulo de terminación, en la ubicación especificada por `strDestination`.  El comportamiento de `strcpy` no se define si las cadenas de origen y de destino se superponen.  
+## <a name="remarks"></a>Comentarios  
+ La función `strcpy` copia `strSource`, incluido el carácter nulo de terminación, en la ubicación especificada por `strDestination`. El comportamiento de `strcpy` no se define si las cadenas de origen y de destino se superponen.  
   
 > [!IMPORTANT]
->  Dado que `strcpy` no comprueba si hay espacio suficiente en `strDestination` antes de copiar `strSource`, podría dar lugar a saturaciones del búfer.  Por tanto, es recomendable usar la propiedad [strcpy\_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) en su lugar.  
+>  Dado que `strcpy` no comprueba si hay espacio suficiente en `strDestination` antes de copiar `strSource`, podría dar lugar a saturaciones del búfer. Por tanto, es recomendable usar la propiedad [strcpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) en su lugar.  
   
- `wcscpy` y `_mbscpy` son, respectivamente, versiones de caracteres anchos y multibyte de `strcpy`.  Los argumentos y el valor devuelto de `wcscpy` son cadenas de caracteres anchos; los de `_mbscpy` son cadenas de caracteres multibyte.  Estas tres funciones se comportan exactamente igual.  
+ `wcscpy` y `_mbscpy` son, respectivamente, versiones de caracteres anchos y multibyte de `strcpy`. Los argumentos y el valor devuelto de `wcscpy` son cadenas de caracteres anchos; los de `_mbscpy` son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.  
   
- En C\+\+, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones.  Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulte [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
   
-### Asignaciones de rutina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
-|Rutina TCHAR.H|\_UNICODE y \_MBCS no definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcscpy`|`strcpy`|`_mbscpy`|`wcscpy`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`strcpy`|\<string.h\>|  
-|`wcscpy`|\<string.h\> o \<wchar.h\>|  
-|`_mbscpy`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strcpy`|\<string.h>|  
+|`wcscpy`|\<string.h> o \<wchar.h>|  
+|`_mbscpy`|\<mbstring.h>|  
   
  Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_strcpy.c  
@@ -159,17 +176,17 @@ int main( void )
 }  
 ```  
   
-  **String \= Hello world from strcpy and strcat\!**   
-## Equivalente en .NET Framework  
- [System::String::Copy](https://msdn.microsoft.com/en-us/library/system.string.copy.aspx)  
+```Output  
+String = Hello world from strcpy and strcat!  
+```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)   
- [strcat, wcscat, \_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, \_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strncat, \_strncat\_l, wcsncat, \_wcsncat\_l, \_mbsncat, \_mbsncat\_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy, \_strncpy\_l, wcsncpy, \_wcsncpy\_l, \_mbsncpy, \_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, \_mbsrchr, \_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn, wcsspn, \_mbsspn, \_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+ [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
+ [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

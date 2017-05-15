@@ -1,52 +1,69 @@
 ---
-title: "_commit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_commit"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_commit"
-  - "commit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_commit (función)"
-  - "commit (función)"
-  - "confirmar archivos en disco"
-  - "archivos [C++], vaciar"
-  - "vaciar archivos en disco"
+title: _commit | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _commit
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _commit
+- commit
+dev_langs:
+- C++
+helpviewer_keywords:
+- files [C++], flushing
+- flushing files to disk
+- commit function
+- _commit function
+- committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _commit
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 40d0fdf7d64dca941c952921d1c3107baa910a74
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
-Vacía un archivo directamente en el disco.  
+---
+# <a name="commit"></a>_commit
+Vacía el contenido de un archivo directamente en el disco.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int _commit(   
@@ -54,29 +71,29 @@ int _commit(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `fd`  
  Descriptor de archivo que hace referencia al archivo abierto.  
   
-## Valor devuelto  
- `_commit` devuelve 0 si el archivo se vaciado correctamente en el disco.  Un valor devuelto de – 1 indica un error.  
+## <a name="return-value"></a>Valor devuelto  
+ `_commit` devuelve 0 si el archivo se ha vaciado correctamente en el disco. Un valor devuelto de -1 indica un error.  
   
-## Comentarios  
- La función de `_commit` fuerza el sistema operativo para escribir el archivo asociado a `fd` en el disco.  Esta llamada se garantiza que el archivo especificado está vaciado inmediatamente, no en la decisión del sistema operativo.  
+## <a name="remarks"></a>Comentarios  
+ La función `_commit` fuerza el sistema operativo a escribir el archivo asociado a `fd` en el disco. Esta llamada se asegura de que el archivo especificado se vacíe inmediatamente, no a discreción del sistema operativo.  
   
- Si `fd` es descriptor de archivo no válido, se invoca el controlador no válido de parámetro, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, la función devuelve \-1 y `errno` se establece en `EBADF`.  
+ Si `fd` es un descriptor de archivo no válido, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y `errno` se establece en `EBADF`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|Encabezados opcionales|  
-|------------|--------------------------|----------------------------|  
-|`_commit`|\<io.h\>|\<errno.h\>|  
+|-------------|---------------------|----------------------|  
+|`_commit`|\<io.h>|\<errno.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Vea también  
- [E\/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)   
- [\_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [\_read](../../c-runtime-library/reference/read.md)   
- [\_write](../../c-runtime-library/reference/write.md)
+## <a name="see-also"></a>Vea también  
+ [E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_read](../../c-runtime-library/reference/read.md)   
+ [_write](../../c-runtime-library/reference/write.md)

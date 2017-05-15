@@ -1,101 +1,61 @@
 ---
-title: "indirect_array (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.indirect_array"
-  - "valarray/std::indirect_array"
-  - "std::indirect_array"
-  - "indirect_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "indirect_array (clase)"
+title: Clase indirect_array | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- valarray/std::indirect_array
+- indirect_array
+dev_langs:
+- C++
+helpviewer_keywords:
+- indirect_array class
 ms.assetid: 10e1eaea-ba5a-405c-a25e-7bdd3eee7fc7
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# indirect_array (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7a5b105b9c812d81dfbbe5905bb593bba1b98ef8
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
-Una clase de plantilla interna, auxiliar que admite los objetos que son subconjuntos de valarrays proporcionando operaciones entre matrices de subconjunto definido especificando un subconjunto de índices de un elemento primario valarray.  
+---
+# <a name="indirectarray-class"></a>indirect_array (Clase)
+Clase de plantilla auxiliar e interna que admite objetos que son subconjuntos de valarrays proporcionando operaciones entre matrices de subconjuntos definidas especificando un subconjunto de índices de una valarray principal.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
-```  
-template<class Type>  
-   class indirect_array {  
-public:  
-   typedef Type value_type;  
-   void operator=(  
-      const valarray<Type>& x  
-   ) const;  
   
-   void operator=(  
-      const Type& x  
-   ) const;  
   
-   void operator*=(  
-      const valarray<Type>& x  
-   ) const;  
+## <a name="remarks"></a>Comentarios  
+ La clase describe un objeto que almacena una referencia a un objeto **va** de la clase [valarray](../standard-library/valarray-class.md)**\<Type>**, junto con un objeto **xa** de la clase **valarray<size_t>**, que describe la secuencia de los elementos que se pueden seleccionar desde el objeto **valarray\<Type>**.  
   
-   void operator/=(  
-      const valarray<Type>& x  
-   ) const;  
+ Para construir un objeto **indirect_array\<Type>**, se escribe únicamente una expresión de formato **va[xa]**. Las funciones miembro de la clase indirect_array se comportarán como las signaturas de función correspondientes definidas para **valarray\<Type>**, excepto en que solo la secuencia de elementos seleccionados se ve afectada.  
   
-   void operator%=(  
-      const valarray<Type>& x  
-   ) const;  
+ La secuencia está formada por elementos **xa.**[size](../standard-library/valarray-class.md#size), donde el elemento `I` se convierte en el índice **xa**[ `I`] dentro de **va**.  
   
-   void operator+=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator-=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator^=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator&=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator|=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator<<=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator>>=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-// The rest is private or implementation defined  
-}  
-```  
-  
-## Comentarios  
- La clase describe un objeto que almacena una referencia a un objeto **VA** de la clase [valarray](../standard-library/valarray-class.md)**\<Tipo\>**, junto con un objeto **xa** de la clase **valarray\<size\_t\>**, que describe la secuencia de elementos para seleccionar del objeto de **valarray\<Type\>** .  
-  
- Se crea un objeto de **indirect\_array\<Type\>** sólo escribiendo una expresión de formulario **va\[xa\]**.  Las funciones miembro de clases indirect\_array se comportan como las firmas correspondientes de la función definidas para **valarray\<Type\>**, excepto que sólo la secuencia de elementos seleccionados se verá afectada.  
-  
- La secuencia se compone de elementos de **xa.**[tamaño](../Topic/valarray::size.md) , donde el elemento `I` se convierte en el índice **xa**\[`I`\] dentro de **VA**.  
-  
-## Ejemplo:  
+## <a name="example"></a>Ejemplo:  
   
 ```  
 // indirect_array.cpp  
@@ -134,17 +94,19 @@ int main( )
 }  
 ```  
   
-### Resultados  
+### <a name="output"></a>Salida  
   
 ```  
-The initial operand valarray is:  ( 0 -1 2 -1 4 -1 6 -1 8 -1 ).  
-The modified operand valarray is:  ( 0 -1 10 -1 10 -1 10 -1 8 -1 ).  
+The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).  
+The modified operand valarray is:  (0 -1 10 -1 10 -1 10 -1 8 -1).  
 ```  
   
-## Requisitos  
- **Encabezado:** \<valarray\>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<valarray>  
   
  **Espacio de nombres:** std  
   
-## Vea también  
- [Seguridad para subprocesos en la biblioteca estándar de C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Vea también  
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

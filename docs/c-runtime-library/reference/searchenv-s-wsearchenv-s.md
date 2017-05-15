@@ -63,10 +63,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c70908d3c884eed962560e0a5284c66c3c234a7e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3b7b1d4165edb3a7e34cda665de195759784eedc
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
@@ -115,7 +116,7 @@ errno_t _wsearchenv_s(
  Búfer en el que se va a almacenar la ruta de acceso completa.  
   
  [in] `numberOfElements`  
- Tamaño del búfer `pathname`.  
+ Tamaño de la `pathname` búfer.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error.  
@@ -193,9 +194,6 @@ int main( void )
 Path for CL.EXE:  
 C:\Program Files\Microsoft Visual Studio 2010\VC\BIN\CL.EXE  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Control de directorio](../../c-runtime-library/directory-control.md)   

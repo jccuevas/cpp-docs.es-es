@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ade761d8fa3e37d4e190a05db5b93cd9e5f63cca
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8a8f70dd525a798bd2492270ef95e5e75c5aa36b
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="scalb"></a>_scalb
@@ -77,9 +78,9 @@ double _scalb(
  Exponente de entero largo.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve un valor exponencial si es correcto. En caso de desbordamiento, y según cuál sea el signo de `x`, `_scalb` devuelve +/– `HUGE_VAL`; la variable `errno` se establece en `ERANGE`.  
+ Devuelve un valor exponencial si es correcto. Si se produce desbordamiento (según cuál sea el signo de `x`), `_scalb` devuelve `HUGE_VAL`; el `errno` variable se establece en `ERANGE`.  
   
- Para más información sobre este y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Para obtener más información sobre este y otros códigos de retorno, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Comentarios  
  La función `_scalb` calcula el valor de `x *` 2exp.  
@@ -90,10 +91,7 @@ double _scalb(
 |-------------|---------------------|  
 |`_scalb`|\<float.h>|  
   
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
 ## <a name="see-also"></a>Vea también  
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   

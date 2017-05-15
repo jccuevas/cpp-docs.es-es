@@ -1,72 +1,89 @@
 ---
-title: "rand | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "rand"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "rand"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generación de números pseudoaleatorios"
-  - "números, generación de pseudoaleatorios"
-  - "números, pseudoaleatorios"
-  - "números pseudoaleatorios"
-  - "rand (función)"
-  - "números aleatorios, generar"
+title: rand | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- rand
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- rand
+dev_langs:
+- C++
+helpviewer_keywords:
+- generating pseudorandom numbers
+- random numbers, generating
+- numbers, pseudorandom
+- rand function
+- pseudorandom numbers
+- numbers, generating pseudorandom
 ms.assetid: 75d9df25-7aaf-4a88-b940-2775559634e8
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# rand
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 9916935661c23b34f4f8f12f7e382c32ab3854b1
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
-Genera un número pseudoaleatorio.  Una versión más segura de esta función está disponible, vea [rand\_s](../../c-runtime-library/reference/rand-s.md).  
+---
+# <a name="rand"></a>rand
+Genera un número pseudoaleatorio. Hay disponible una versión más segura de esta función; vea [rand_s](../../c-runtime-library/reference/rand-s.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int rand( void );  
 ```  
   
-## Valor devuelto  
- `rand` devuelve un número pseudoaleatorio, como se ha descrito anteriormente.  No se devuelve ningún error.  
+## <a name="return-value"></a>Valor devuelto  
+ `rand` devuelve un número pseudoaleatorio, como se describe arriba. No se devuelve ningún error.  
   
-## Comentarios  
- La función de `rand` devuelve un entero pseudoaleatorio en el intervalo de 0 a `RAND_MAX` \(32767\).  Utilice la función de [srand](../../c-runtime-library/reference/srand.md) como origen para el generador de pseudoaleatorio\- número antes de llamar a `rand`.  
+## <a name="remarks"></a>Comentarios  
+ La función `rand` devuelve un entero pseudoaleatorio comprendido entre 0 y `RAND_MAX` (32767). Use la función [srand](../../c-runtime-library/reference/srand.md) para inicializar el generador de números pseudoaleatorios antes de llamar a `rand`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`rand`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`rand`|\<stdlib.h>|  
   
  Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_rand.c  
@@ -112,30 +129,31 @@ int main( void )
 }  
 ```  
   
-  **22036**  
- **18330**  
- **11651**  
- **27464**  
- **18093**  
- **3284**  
- **11785**  
- **14686**  
- **11447**  
- **11285**  
- **74**  
- **48**  
- **27**  
- **65**  
- **96**  
- **64**  
- **\-5**  
- **\-42**  
- **\-55**  
- **66**   
-## Equivalente en .NET Framework  
- [System::Random Class](https://msdn.microsoft.com/en-us/library/system.random.aspx)  
+```Output  
+22036  
+18330  
+11651  
+27464  
+18093  
+ 3284  
+11785  
+14686  
+11447  
+11285  
   
-## Vea también  
+   74  
+   48  
+   27  
+   65  
+   96  
+   64  
+   -5  
+  -42  
+  -55  
+   66  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
  [srand](../../c-runtime-library/reference/srand.md)   
- [rand\_s](../../c-runtime-library/reference/rand-s.md)
+ [rand_s](../../c-runtime-library/reference/rand-s.md)

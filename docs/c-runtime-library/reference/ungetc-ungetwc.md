@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9f33416614f18a5a1cd7a61ccf4acfb9276de8e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3bab0bd81a8a17fd32c244bab0dd30658564d257
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
@@ -85,12 +86,12 @@ wint_t ungetwc(
  Puntero a la estructura `FILE` .  
   
 ## <a name="return-value"></a>Valor devuelto  
- Si la operación se realiza correctamente, cada una de estas funciones devuelve el argumento de carácter `c`*.* Si `c` no se puede volver a insertar o si no se ha leído ningún carácter, el flujo de entrada no cambia y `ungetc` devuelve `EOF`; `ungetwc` devuelve `WEOF`. Si `stream` es `NULL`, se invoca al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, se devuelve `EOF` o `WEOF` y `errno` se establece en `EINVAL`.  
+ Si es correcto, cada una de estas funciones devuelve el argumento de carácter `c`. Si `c` no se puede volver a insertar o si no se ha leído ningún carácter, el flujo de entrada no cambia y `ungetc` devuelve `EOF`; `ungetwc` devuelve `WEOF`. Si `stream` es `NULL`, se invoca al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, se devuelve `EOF` o `WEOF` y `errno` se establece en `EINVAL`.  
   
  Para más información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Comentarios  
- La función `ungetc` vuelve a insertar el carácter `c` en `stream` y borra el indicador de fin de archivo. El flujo debe estar abierto para lectura. Una operación de lectura siguiente en `stream` empieza con `c`*.* Los intentos de insertar `EOF` en el flujo mediante `ungetc` se omiten.  
+ La función `ungetc` vuelve a insertar el carácter `c` en `stream` y borra el indicador de fin de archivo. El flujo debe estar abierto para lectura. Siguiente operación de lectura en `stream` comienza con `c`. Los intentos de insertar `EOF` en el flujo mediante `ungetc` se omiten.  
   
  Los caracteres que `ungetc` pone en el flujo se podrían borrar si se llama a `fflush`, `fseek`, `fsetpos` o `rewind` antes de que se lea el carácter del flujo. El indicador de posición de archivo tendrá el valor que tenía antes de que se volvieran a insertar los caracteres. El almacenamiento externo correspondiente al flujo no cambia. Si una llamada de `ungetc` en un flujo de texto se realiza correctamente, el indicador de posición del archivo está sin especificar hasta que se leen o se descarten todos los caracteres que se han vuelto a insertar. En cada llamada correcta de `ungetc` en un flujo binario se reduce el indicador de posición de archivo. Si el valor era 0 antes de una llamada, el valor queda sin definir después de la llamada.  
   
@@ -148,9 +149,6 @@ int main( void )
       521aNumber = 521  
 Next character in stream = 'a'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   

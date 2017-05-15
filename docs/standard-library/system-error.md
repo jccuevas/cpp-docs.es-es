@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: ad53550cce165587057910e3cd4c77427fb1cd55
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8f3441306b21ca1111cf2fd2d377a1b233e7ad86
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
@@ -75,15 +76,15 @@ Incluya el encabezado `<system_error>` para definir la clase de excepción `syst
   
 |||  
 |-|-|  
-|[operator==](../standard-library/system-error-operators.md#operator_eq_eq)|Comprueba si el objeto en el lado izquierdo del operador es igual al objeto del lado derecho.|  
-|[operator!=](../standard-library/system-error-operators.md#operator_neq)|Comprueba si el objeto en el lado izquierdo del operador no es igual al objeto del lado derecho.|  
-|[operator<](../standard-library/system-error-operators.md#operator_lt_)|Prueba si un objeto es menor que el objeto pasado para la comparación.|  
+|[operator==](../standard-library/system-error-operators.md#op_eq_eq)|Comprueba si el objeto en el lado izquierdo del operador es igual al objeto del lado derecho.|  
+|[operator!=](../standard-library/system-error-operators.md#op_neq)|Comprueba si el objeto en el lado izquierdo del operador no es igual al objeto del lado derecho.|  
+|[operator<](../standard-library/system-error-operators.md#op_lt)|Prueba si un objeto es menor que el objeto pasado para la comparación.|  
   
 ### <a name="enumerations"></a>Enumeraciones  
   
 |||  
 |-|-|  
-|[errc](../standard-library/system-error-enums.md#errc_enumeration)|Proporciona nombres simbólicos para todas las macros de código de error definidas por Posix en `<errno.h>`.|  
+|[errc](../standard-library/system-error-enums.md#errc)|Proporciona nombres simbólicos para todas las macros de código de error definidas por Posix en `<errno.h>`.|  
   
 ### <a name="classes-and-structs"></a>Clases y structs  
   

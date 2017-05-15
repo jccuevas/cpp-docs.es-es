@@ -1,50 +1,68 @@
 ---
-title: "_open_osfhandle | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_open_osfhandle"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_open_osfhandle"
-  - "open_osfhandle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "open_osfhandle (función)"
-  - "identificadores de archivo [C++], asociar"
-  - "_open_osfhandle (función)"
+title: _open_osfhandle | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _open_osfhandle
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _open_osfhandle
+- open_osfhandle
+dev_langs:
+- C++
+helpviewer_keywords:
+- open_osfhandle function
+- file handles [C++], associating
+- _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# _open_osfhandle
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0a201fa08f48198069df26c5c61944c99db73edf
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
-Asocia descriptor de archivo del tiempo de ejecución de C. un identificador de archivo del sistema operativo de existente.  
+---
+# <a name="openosfhandle"></a>_open_osfhandle
+Asocia un descriptor de archivo en tiempo de ejecución de C al identificador de archivo del sistema operativo existente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -54,48 +72,45 @@ Asocia descriptor de archivo del tiempo de ejecución de C. un identificador de 
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `osfhandle`  
  Identificador de archivo del sistema operativo.  
   
  `flags`  
  Tipos de operaciones permitidas.  
   
-## Valor devuelto  
- Si es correcto, `_open_osfhandle` devuelve descriptor de archivo del tiempo de ejecución de C.  De lo contrario, devuelve – 1.  
+## <a name="return-value"></a>Valor devuelto  
+ Si se realiza correctamente, `_open_osfhandle` devuelve un descriptor de archivo en tiempo de ejecución de C. En caso contrario, devuelve -1.  
   
-## Comentarios  
- La función de `_open_osfhandle` asigna descriptor de archivo del tiempo de ejecución de C. y lo asocia al identificador de archivo del sistema operativo especificado por `osfhandle`.  El argumento de `flags` es una expresión de tipo entero formada de uno o más de las constantes de manifiesto definidas en Fcntl.h.  Cuando dos o más constantes de manifiesto se utilizan para formar el argumento de `flags` , las constantes se combinan con bit a bit\- OR el operador \(  **&#124;** \).  
+## <a name="remarks"></a>Comentarios  
+ La función `_open_osfhandle` asigna un descriptor de archivo en tiempo de ejecución de C y lo asocia al identificador de archivo del sistema operativo especificado por `osfhandle`. El argumento `flags` es una expresión de entero formada por una o varias de las constantes del manifiesto, definidas en Fcntl.h. Cuando se usan dos o más constantes del manifiesto para formar el argumento `flags`, estas constantes se combinan con el operador bit a bit OR (**&#124;**).  
   
- Fcntl.h define las constantes de manifiesto siguientes.  
+ Fcntl.h define las siguientes constantes de manifiesto.  
   
- **\_O\_APPEND**  
- Posiciones un puntero de archivo al final del archivo antes de cada operación de escritura.  
+ **_O_APPEND**  
+ Coloca un puntero de archivo al final del archivo antes de cada operación de escritura.  
   
- **\_O\_RDONLY**  
- Abra el archivo para leer solo.  
+ **_O_RDONLY**  
+ Abre el archivo únicamente para leerlo.  
   
- **\_O\_TEXT**  
- Abra el archivo en modo de texto \(traducido\).  
+ **_O_TEXT**  
+ Abre el archivo en modo de texto (traducido).  
   
- **\_O\_WTEXT**  
- Abra el archivo en el modo de Unicode \(UTF\-16 traducido\).  
+ **_O_WTEXT**  
+ Abre el archivo en modo Unicode (UTF-16 traducido).  
   
- Para cerrar un archivo abierto con `_open_osfhandle`, llama a `_close`.  El identificador subyacente también es cerrado por una llamada a `_close`, por lo que no es necesario llamar a la función `CloseHandle` Win32 en el identificador original.  
+ Para cerrar un archivo abierto con `_open_osfhandle`, llame a `_close`. El identificador subyacente también se cierra mediante una llamada a `_close`, por lo que no es necesario llamar a la función `CloseHandle` de Win32 en el identificador original.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`_open_osfhandle`|\<io.h\>|  
+|-------------|---------------------|  
+|`_open_osfhandle`|\<io.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Bibliotecas  
+## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
   
-## Equivalente en .NET Framework  
- [System::IO::FileStream::Handle](https://msdn.microsoft.com/en-us/library/system.io.filestream.handle.aspx)  
-  
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Control de archivos](../../c-runtime-library/file-handling.md)

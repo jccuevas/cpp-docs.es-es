@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 6468f372324cb6f62b5b09524cfbf5386b1502c6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: b9ea6370bb55c57fb3713c41acb9281e928496c2
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator (Clase)
@@ -63,29 +64,29 @@ class front_insert_iterator;
   
 |||  
 |-|-|  
-|[front_insert_iterator](#front_insert_iterator__front_insert_iterator)|Crea un iterador que puede insertar elementos en el inicio de un objeto contenedor especificado.|  
+|[front_insert_iterator](#front_insert_iterator)|Crea un iterador que puede insertar elementos en el inicio de un objeto contenedor especificado.|  
   
 ### <a name="typedefs"></a>Definiciones de tipo  
   
 |||  
 |-|-|  
-|[container_type](#front_insert_iterator__container_type)|Tipo que representa el contenedor en el que se va a hacer una inserción inicial.|  
-|[reference](#front_insert_iterator__reference)|Tipo que proporciona una referencia a un elemento de una secuencia controlada por el contenedor asociado.|  
+|[container_type](#container_type)|Tipo que representa el contenedor en el que se va a hacer una inserción inicial.|  
+|[reference](#reference)|Tipo que proporciona una referencia a un elemento de una secuencia controlada por el contenedor asociado.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[operator*](#front_insert_iterator__operator_star)|Operador de desreferencia usado para implementar la expresión del iterador de salida * `i` = `x` para una inserción inicial.|  
-|[operator++](#front_insert_iterator__operator_add_add)|Incrementa el `front_insert_iterator` a la siguiente ubicación en la que puede almacenarse un valor.|  
-|[operator=](#front_insert_iterator__operator_eq)|Operador de asignación usado para implementar la expresión del iterador de salida * `i` = `x` para una inserción inicial.|  
+|[operator*](#op_star)|Operador de desreferencia usado para implementar la expresión del iterador de salida * `i` = `x` para una inserción inicial.|  
+|[operator++](#op_add_add)|Incrementa el `front_insert_iterator` a la siguiente ubicación en la que puede almacenarse un valor.|  
+|[operator=](#op_eq)|Operador de asignación usado para implementar la expresión del iterador de salida * `i` = `x` para una inserción inicial.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** \<iterator>  
   
  **Espacio de nombres:** std  
   
-##  <a name="front_insert_iterator__container_type"></a>  front_insert_iterator::container_type  
+##  <a name="container_type"></a>  front_insert_iterator::container_type  
  Tipo que representa el contenedor en el que se va a hacer una inserción inicial.  
   
 ```  
@@ -125,7 +126,7 @@ The list L2 is: ( 40 10 20 ).
 *\  
 ```  
   
-##  <a name="front_insert_iterator__front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator  
+##  <a name="front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator  
  Crea un iterador que puede insertar elementos en el inicio de un objeto contenedor especificado.  
   
 ```  
@@ -185,7 +186,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="front_insert_iterator__operator_star"></a>  front_insert_iterator::operator*  
+##  <a name="op_star"></a>  front_insert_iterator::operator*  
  Desreferencia el iterador de inserción que devuelve el elemento al que se dirige.  
   
 ```  
@@ -243,7 +244,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="front_insert_iterator__operator_add_add"></a>  front_insert_iterator::operator++  
+##  <a name="op_add_add"></a>  front_insert_iterator::operator++  
  Incrementa el `back_insert_iterator` a la siguiente ubicación en la que puede almacenarse un valor.  
   
 ```  
@@ -291,7 +292,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="front_insert_iterator__operator_eq"></a>  front_insert_iterator::operator=  
+##  <a name="op_eq"></a>  front_insert_iterator::operator=  
  Anexa (inserta) un valor en el principio del contenedor.  
   
 ```  
@@ -349,7 +350,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="front_insert_iterator__reference"></a>  front_insert_iterator::reference  
+##  <a name="reference"></a>  front_insert_iterator::reference  
  Tipo que proporciona una referencia a un elemento de una secuencia controlada por el contenedor asociado.  
   
 ```  

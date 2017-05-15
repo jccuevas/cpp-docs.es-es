@@ -35,10 +35,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 54bfdd8a1f095478282af39354a6e9a91ba32891
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: b5568eb951738b1c0c53321d7430c84db6bac9ec
+ms.contentlocale: es-es
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="tupleelement-class"></a>tuple_element (Clase)
@@ -108,7 +109,7 @@ La especialización de la clase de plantilla para matrices proporciona una inter
   
 Las especializaciones de plantilla para tipos `pair` tienen una definición de tipo de miembro único, `type`, que es un sinónimo del tipo del elemento en la posición especificada en el par, con cualquier calificador const o volatile conservado. La definición de tipo `tuple_element_t` es un alias adecuado para `tuple_element<N, pair<T1, T2>>::type`.  
   
-Use la [función get de &lt;utility&gt;](../standard-library/utility-functions.md#get) para devolver el elemento en una posición especificada o (en C++14 / Visual Studio 2015) de un tipo especificado. 
+Use la [get (función) &lt;utilidad&gt; ](../standard-library/utility-functions.md#get) para devolver el elemento en una posición especificada o de un tipo especificado. 
   
 ## <a name="example"></a>Ejemplo  
   

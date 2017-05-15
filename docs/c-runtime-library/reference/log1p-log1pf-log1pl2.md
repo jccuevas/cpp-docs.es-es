@@ -1,55 +1,72 @@
 ---
-title: "log1p, log1pf, log1pl2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "log1p"
-  - "log1pf"
-  - "log1pl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "log1p"
-  - "log1pf"
-  - "log1pl"
-  - "math/log1p"
-  - "math/log1pf"
-  - "math/log1pl"
-helpviewer_keywords: 
-  - "log1p (función)"
-  - "log1pf (función)"
-  - "log1pl (función)"
+title: log1p, log1pf, log1pl2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- log1p
+- log1pf
+- log1pl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- log1p
+- log1pf
+- log1pl
+- math/log1p
+- math/log1pf
+- math/log1pl
+helpviewer_keywords:
+- log1p function
+- log1pf function
+- log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# log1p, log1pf, log1pl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 99525c8b711d0774fa2b3132505a2cdbb21d5569
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 Calcula el logaritmo natural de 1 más el valor especificado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 double log1p(  
@@ -74,44 +91,44 @@ long double log1pl(
   
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `x`  
  El argumento de punto flotante.  
   
-## Valor devuelto  
- Si se realiza correctamente, devuelve el logaritmo natural \(base e\) de \(`x`\+ 1\).  
+## <a name="return-value"></a>Valor devuelto  
+ Si se realiza correctamente, devuelve el logaritmo natural (base e) de (`x`+ 1).  
   
- De lo contrario, puede devolver uno de los siguientes valores:  
+ De lo contrario, es posible que devuelva uno de los siguientes valores:  
   
 |Entrada|Resultado|Excepción SEH|errno|  
-|-------------|---------------|-------------------|-----------|  
-|\+ inf|\+ inf|||  
-|Desnormalizados|Igual que la entrada|SUBDESBORDAMIENTO||  
+|-----------|------------|-------------------|-----------|  
+|+inf|+inf|||  
+|Desnormalizados|Igual que la entrada|UNDERFLOW||  
 |±0|Igual que la entrada|||  
-|\-1|\-inf|DIVBYZERO|ERANGE|  
-|\< \-1|NaN|INVALID|EDOM|  
-|\-inf|NaN|INVALID|EDOM|  
+|-1|-inf|DIVBYZERO|ERANGE|  
+|< -1|nan|INVALID|EDOM|  
+|-inf|nan|INVALID|EDOM|  
 |±SNaN|Igual que la entrada|INVALID||  
 |±QNaN, indefinido|Igual que la entrada|||  
   
- El `errno` el valor ERANGE si `x` \= \-1. El `errno` el valor EDOM si `x` \< −1.  
+ El valor `errno` se establece en ERANGE si `x` = -1. El `errno` valor se establece en EDOM si `x` < -1.  
   
-## Comentarios  
- El `log1p` funciones pueden ser más precisas que el uso de registro \(`x`\+ 1\) cuando x es cercanos a 0.  
+## <a name="remarks"></a>Comentarios  
+ Las funciones `log1p` podrían ser más precisas que si se usa el logaritmo (`x`+ 1) cuando x es próximo a 0.  
   
- Como C\+\+ permite las sobrecargas, puede llamar a las sobrecargas de `log1p` que toman y devuelven los tipos float y double de tiempo. En un programa de C, `log1p` siempre toma y devuelve un tipo double.  
+ Como C++ permite las sobrecargas, puede llamar a las sobrecargas de `log1p` que toman y devuelven los tipos float y long double. En un programa de C, `log1p` siempre toma y devuelve un tipo double.  
   
- Si `x` es un número natural, esta función devuelve el logaritmo de factorial \(`x`\-1\).  
+ Si `x` es un número natural, esta función devuelve el logaritmo del factorial de (`x`-1).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Función|Encabezado C|Encabezado C\+\+|  
-|-------------|------------------|----------------------|  
-|`log1p`, `log1pf`,  `log1pl`|\<math.h\>|\<cmath\>|  
+|Función|Encabezado C|Encabezado C++|  
+|--------------|--------------|------------------|  
+|`log1p`,                `log1pf`,  `log1pl`|\<math.h>|\<cmath>|  
   
- Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [LOG2, log2f, log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)   
+ [log2, log2f, log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)   
  [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)

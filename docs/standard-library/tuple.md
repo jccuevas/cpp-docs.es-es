@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 7771de57070961751e16294bc966e08843baef4c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 212b2b5af678bd39b4ecc7d6622c71db20db5a26
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
@@ -60,20 +61,20 @@ Define una `tuple` de plantilla cuyas instancias contienen objetos de tipos dife
   
 |||  
 |-|-|  
-|[operator==](../standard-library/tuple-operators.md#operator_eq_eq)|Comparación de objetos `tuple`, igualdad|  
-|[operator!=](../standard-library/tuple-operators.md#operator_neq)|Comparación de objetos `tuple`, desigualdad|  
-|[operator<](../standard-library/tuple-operators.md#operator_lt_)|Comparación de objetos `tuple`, menor que|  
-|[operator<=](../standard-library/tuple-operators.md#operator_lt__eq)|Comparación de objetos `tuple`, menor o igual que|  
-|[operator>](../standard-library/tuple-operators.md#operator_gt_)|Comparación de objetos `tuple`, mayor que|  
-|[operator>=](../standard-library/tuple-operators.md#operator_gt__eq)|Comparación de objetos `tuple`, mayor o igual que|  
+|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|Comparación de objetos `tuple`, igualdad|  
+|[operator!=](../standard-library/tuple-operators.md#op_neq)|Comparación de objetos `tuple`, desigualdad|  
+|[operator<](../standard-library/tuple-operators.md#op_lt)|Comparación de objetos `tuple`, menor que|  
+|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|Comparación de objetos `tuple`, menor o igual que|  
+|[operator>](../standard-library/tuple-operators.md#op_gt)|Comparación de objetos `tuple`, mayor que|  
+|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|Comparación de objetos `tuple`, mayor o igual que|  
   
 ### <a name="functions"></a>Funciones  
   
 |||  
 |-|-|  
-|[get](../standard-library/tuple-functions.md#get_function)|Obtiene un elemento de un objeto `tuple`.|  
-|[make_tuple](../standard-library/tuple-functions.md#make_tuple_function)|Crea una `tuple` a partir de valores de elemento.|  
-|[tie](../standard-library/tuple-functions.md#tie_function)|Crea una `tuple` a partir de referencias de elemento.|  
+|[get](../standard-library/tuple-functions.md#get)|Obtiene un elemento de un objeto `tuple`.|  
+|[make_tuple](../standard-library/tuple-functions.md#make_tuple)|Crea una `tuple` a partir de valores de elemento.|  
+|[tie](../standard-library/tuple-functions.md#tie)|Crea una `tuple` a partir de referencias de elemento.|  
   
 ## <a name="see-also"></a>Vea también  
  [\<array>](../standard-library/array.md)

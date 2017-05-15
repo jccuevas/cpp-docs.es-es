@@ -53,10 +53,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0e45008d3f55c11cfa7da2aa4db9ca1277a6f77f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 23bcf7a96dfbfa7719b20f2a035ddcbc93c835ee
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="pipe"></a>_pipe
@@ -68,11 +69,10 @@ Crear una canalización de lectura y escritura.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      int _pipe(  
-int *pfds,  
-unsigned int psize,  
-int textmode   
+int _pipe(  
+   int *pfds,  
+   unsigned int psize,  
+   int textmode   
 );  
 ```  
   
@@ -87,7 +87,7 @@ int textmode
  Modo de archivo.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Si la operación se realiza correctamente, devuelve 0. Devuelve –1 para indicar un error. Si se produce un error, `errno` se establece en uno de estos valores:  
+ Si la operación se realiza correctamente, devuelve 0. Devuelve -1 para indicar un error. Si se produce un error, `errno` se establece en uno de estos valores:  
   
 -   `EMFILE`, que indica que no hay más descriptores de archivo disponibles.  
   
@@ -131,9 +131,8 @@ int textmode
   
 ## <a name="example-1"></a>Ejemplo 1  
   
-```  
-  
-      // crt_pipe.c  
+```C  
+// crt_pipe.c  
 /* This program uses the _pipe function to pass streams of  
  * text to spawned processes.  
  */  
@@ -216,9 +215,7 @@ int main( int argc, char *argv[] )
 }  
 ```  
   
-## <a name="sample-output"></a>Resultados del ejemplo  
-  
-```  
+```Output  
 Son, what is the square root of 1000?  
 Son, what is the square root of 2000?  
 Son, what iDad, the square root of 1000 is 31.62.  
@@ -240,7 +237,7 @@ Dad, the square root of 8000 is 89.44.
 ## <a name="example-2"></a>Ejemplo 2  
  Se trata de una aplicación de filtro básica. Genera el crt_pipe_beeper de la aplicación después de crear una canalización que dirige al filtro el stdout de la aplicación generado. El filtro quita caracteres ASCII 7 (beep).  
   
-```  
+```C  
 // crt_pipe_beeper.c  
   
 #include <stdio.h>  
@@ -259,7 +256,7 @@ int main()
   
  La aplicación de filtro es:  
   
-```  
+```C  
 // crt_pipe_BeepFilter.C  
 // arguments: crt_pipe_beeper.exe  
   
@@ -352,9 +349,7 @@ int main(int argc, char** argv)
 }  
 ```  
   
-## <a name="output"></a>Salida  
-  
-```  
+```Output  
 This is speaker beep number 1...  
 This is speaker beep number 2...  
 This is speaker beep number 3...  
@@ -366,9 +361,6 @@ This is speaker beep number 8...
 This is speaker beep number 9...  
 This is speaker beep number 10...  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)   

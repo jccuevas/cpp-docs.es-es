@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d52530de55147945f12f664d882ce0cda18f8e17
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 669b7d41234c21c3fb4e9a1a28f6b8d1a33c036b
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tzset"></a>_tzset
@@ -71,7 +72,7 @@ void _tzset( void );
 ## <a name="remarks"></a>Comentarios  
  La función `_tzset` usa la configuración actual de la variable de entorno `TZ` para asignar valores a tres variables globales: `_daylight`, `_timezone`y `_tzname`. Las funciones [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) y [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) usan estas variables para ajustar la hora universal coordinada (UTC) a la hora local. La función `time` las usa para calcular la hora UTC a partir de la hora del sistema. Use la sintaxis siguiente para establecer la variable de entorno `TZ` :  
   
- `set` `TZ`=`tzn`[+ &#124; –]`hh`[`:``mm`[`:``ss`] ][`dzn`]  
+ `set` `TZ`=`tzn`[+ &#124; -]`hh`[`:``mm`[`:``ss`] ][`dzn`]  
   
  `tzn`  
  Nombre de la zona horaria de tres letras, por ejemplo PST. Debe especificar el desplazamiento correcto de la hora local a la hora UTC.  
@@ -99,7 +100,7 @@ set TZ=GST-1GDT
   
  Este comando utiliza GST para indicar la hora estándar de Alemania, supone que la hora UTC va una hora por detrás de Alemania (es decir, que Alemania va una hora por delante de UTC), y supone que en Alemania se aplica el horario de verano.  
   
- Si no se establece el valor de `TZ` , _`tzset` intenta usar la información de zona horaria especificada por el sistema operativo. En el sistema operativo Windows, esta información se especifica en la aplicación de fecha y hora del Panel de control. Si `_tzset` no puede obtener esta información, usa PST8PDT de forma predeterminada, que indica la zona horaria del Pacífico.  
+ Si el `TZ` valor no está establecido, `_tzset` intenta utilizar la información de zona horaria especificada por el sistema operativo. En el sistema operativo Windows, esta información se especifica en la aplicación de fecha y hora del Panel de control. Si `_tzset` no puede obtener esta información, usa PST8PDT de forma predeterminada, que indica la zona horaria del Pacífico.  
   
  En función del valor de la variable de entorno `TZ` , se asignan los valores siguientes a las variables globales `_daylight`, `_timezone`y `_tzname` cuando se llama a `_tzset` :  
   
@@ -107,8 +108,8 @@ set TZ=GST-1GDT
 |---------------------|-----------------|-------------------|  
 |`_daylight`|Valor distinto de cero si se especifica una zona de horario de verano en la configuración de `TZ` ; de lo contrario, 0.|1|  
 |`_timezone`|Diferencia en segundos entre las hora local y la hora UTC.|28800 (28800 segundos equivalen a 8 horas)|  
-|`_tzname`[0]|Valor de cadena del nombre de la zona horaria de la variable de entorno `TZ`; está vacío si `TZ` no se ha establecido.|PST|  
-|`_tzname`[1]|Valor de cadena de la zona de horario de verano; está vacío si la zona de horario de verano se omite de la variable de entorno `TZ`.|PDT|  
+|`_tzname`[0]|Valor de cadena del nombre de la zona horaria de la variable de entorno `TZ` ; está vacío si `TZ` no se ha establecido.|PST|  
+|`_tzname`[1]|Valor de cadena de la zona de horario de verano; está vacío si la zona de horario de verano se omite de la variable de entorno `TZ` .|PDT|  
   
  Los valores predeterminados de la tabla anterior para `_daylight` y la matriz de `_tzname` corresponden a “PST8PDT”. Si la zona de DST se omite en la variable de entorno `TZ` , el valor de `_daylight` es 0 y las funciones `_ftime`, `gmtime`y `localtime` devuelven 0 para sus marcas de DST.  
   
@@ -154,9 +155,6 @@ _daylight = 1
 _timezone = 28800  
 _tzname[0] = Pacific Standard Time  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Administración del tiempo](../../c-runtime-library/time-management.md)   

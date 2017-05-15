@@ -84,10 +84,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f7cba068af7ec6f14970d174d2b3e9b4121d7c40
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9a0a0e0f9b020b635b6de27a1ae111378152291b
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
@@ -157,7 +158,7 @@ size_t _mbstrnlen_l(
   
  Cada una de estas funciones devuelve el número de caracteres en `str`, sin incluir el carácter null de terminación. Con todo, `strnlen` y `strnlen_s` interpretan la cadena como una cadena de caracteres de un solo byte, de modo que el valor devuelto siempre es igual al número de bytes, incluso si la cadena contiene caracteres multibyte. `wcsnlen` y `wcsnlen_s` son las versiones con caracteres anchos de `strnlen` y `strnlen_s` respectivamente; los argumentos de `wcsnlen` y `wcsnlen_s` son cadenas de caracteres anchos y, como tal, el recuento de caracteres se muestra en unidades de caracteres anchos. De lo contrario, `wcsnlen` y `strnlen` se comportan de forma idéntica, al igual que `strnlen_s` y `wcsnlen_s`.  
   
- `strnlen`, `wcsnlen,` y `_mbsnlen` no validan sus parámetros. Si `str` es `NULL`, se produce una infracción de acceso.  
+ `strnlen`, `wcsnlen`, y `_mbsnlen` no validan sus parámetros. Si `str` es `NULL`, se produce una infracción de acceso.  
   
  `strnlen_s` y `wcsnlen_s` validan sus parámetros. Si `str` es `NULL`, las funciones devuelven 0.  
   
@@ -188,9 +189,8 @@ size_t _mbstrnlen_l(
   
 ## <a name="example"></a>Ejemplo  
   
-```  
-  
-      // crt_strnlen.c  
+```C  
+// crt_strnlen.c  
   
 #include <string.h>  
   
@@ -224,9 +224,6 @@ than the maximum size specified, the maximum size is
 returned rather than the actual size of the string.  
  Length: 100   
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- [System::String::Length](https://msdn.microsoft.com/en-us/library/system.string.length.aspx)  
   
 ## <a name="see-also"></a>Vea también  
  [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)   

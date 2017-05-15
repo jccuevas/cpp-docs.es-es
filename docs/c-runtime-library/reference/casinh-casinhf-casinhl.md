@@ -1,57 +1,74 @@
 ---
-title: "casinh, casinhf, casinhl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "casinh"
-  - "casinhl"
-  - "casinhf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "casinh"
-  - "casinhf"
-  - "casinhl"
-  - "complex/casinh"
-  - "complex/casinhf"
-  - "complex/casinhl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "casinh (función)"
-  - "casinhf (función)"
-  - "casinhl (función)"
+title: casinh, casinhf, casinhl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- casinh
+- casinhl
+- casinhf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- casinh
+- casinhf
+- casinhl
+- complex/casinh
+- complex/casinhf
+- complex/casinhl
+dev_langs:
+- C++
+helpviewer_keywords:
+- casinh function
+- casinhf function
+- casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# casinh, casinhf, casinhl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 1620eb200723fe4b2cd6553e7ba50405b026d53c
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
-Recupera el seno hiperbólico inverso de un número complejo, con cortes de bifurcación fuera del intervalo \[−i, \+\] en el eje imaginario.  
+---
+# <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
+Recupera el seno hiperbólico inverso de un número complejo, con cortes de bifurcación fuera del intervalo [-i, +] en el eje imaginario.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 _Dcomplex casinh(   
@@ -71,25 +88,25 @@ _Lcomplex casinhl(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `z`  
  Número complejo que representa un ángulo en radianes.  
   
-## Valor devuelto  
- El seno hiperbólico inverso de `z`, en radianes. El resultado es independiente del eje real y en el intervalo \[−iπ\/2 \+ 2\/iπ\] en el eje imaginario.  
+## <a name="return-value"></a>Valor devuelto  
+ Seno hiperbólico inverso de `z` en radianes. El resultado no está enlazado a lo largo del eje real y en el intervalo [-iπ/2 + 2/iπ] en el eje imaginario.  
   
-## Comentarios  
- Puesto que C\+\+ permite las sobrecargas, es posible llamar a las sobrecargas de `casinh` que toman y devuelven los valores `_Fcomplex` y `_Lcomplex`. En un programa de C, `casinh` siempre toma y devuelve un `_Dcomplex` valor.  
+## <a name="remarks"></a>Comentarios  
+ Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `casinh` que toman y devuelven los valores `_Fcomplex` y `_Lcomplex`. En un programa de C, `casinh` siempre toma y devuelve un valor `_Dcomplex` .  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Rutina|Encabezado C|Encabezado C\+\+|  
-|------------|------------------|----------------------|  
-|`casinh`, `casinhf`, `casinhl`|\<complex.h\>|\< ccomplex \>|  
+|Rutina|Encabezado C|Encabezado C++|  
+|-------------|--------------|------------------|  
+|`casinh`,               `casinhf`, `casinhl`|\<complex.h>|\<ccomplex>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
@@ -98,7 +115,7 @@ _Lcomplex casinhl(
  [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
  [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
  [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [Ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
+ [ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
  [csin, csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
  [casin, casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
  [ccos, ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   

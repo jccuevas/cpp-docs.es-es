@@ -1,47 +1,64 @@
 ---
-title: "mbrlen | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "mbrlen"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbrlen"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mbrlen (función)"
+title: mbrlen | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- mbrlen
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbrlen
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# mbrlen
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: a89b6d426d20d9af3f93bec1ec004ab5d7c70fe0
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="mbrlen"></a>mbrlen
 Determine el número de bytes que se necesitan para completar un carácter multibyte en la configuración regional actual, con capacidad de reinicio en medio de un carácter multibyte.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 size_t mbrlen(  
@@ -51,7 +68,7 @@ size_t mbrlen(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `str`  
  Puntero al siguiente byte que se va a inspeccionar en una cadena de caracteres multibyte.  
   
@@ -61,47 +78,47 @@ size_t mbrlen(
  `mbstate`  
  Puntero al estado de desplazamiento actual del byte inicial de `str`.  
   
-## Valor devuelto  
- Uno de los siguientes valores: , , , , .  
+## <a name="return-value"></a>Valor devuelto  
+ Uno de los siguientes valores:  
   
  0  
  Los siguientes `count` o menos bytes completan el carácter multibyte que representa el carácter nulo ancho.  
   
  1 a `count`, ambos inclusive  
- Los próximos `count` o menos bytes completan un carácter multibyte válido.  El valor devuelto es el número de bytes que completan el carácter multibyte.  
+ Los próximos `count` o menos bytes completan un carácter multibyte válido. El valor devuelto es el número de bytes que completan el carácter multibyte.  
   
- \(size\_t\)\(\-2\)  
+ (size_t)(-2)  
  Los próximos `count` bytes contribuyen a un carácter multibyte incompleto pero potencialmente válido y los `count` bytes se han procesado.  
   
- \(size\_t\)\(\-1\)  
- Se produjo un error de codificación.  Los siguientes `count` o menos bytes no contribuyen a un carácter multibyte completo y válido.  En este caso, `errno` se establece a EILSEQ y el estado de la conversión en `mbstate` no está especificado.  
+ (size_t)(-1)  
+ Se produjo un error de codificación. Los siguientes `count` o menos bytes no contribuyen a un carácter multibyte completo y válido. En este caso, `errno` se establece a EILSEQ y el estado de la conversión en `mbstate` no está especificado.  
   
-## Comentarios  
- La función `mbrlen` inspecciona a lo sumo `count` bytes a partir del byte señalado por `str` para determinar el número de bytes que son necesarios para completar el siguiente carácter multibyte, incluidas las secuencias de desplazamiento.  Es equivalente a la llamada `mbrtowc(NULL, str, count, &mbstate)`, donde `mbstate` es cualquier objeto `mbstate_t` proporcionado por el usuario, o un objeto interno estático proporcionadas por la biblioteca.  
+## <a name="remarks"></a>Comentarios  
+ La función `mbrlen` inspecciona a lo sumo `count` bytes a partir del byte señalado por `str` para determinar el número de bytes que son necesarios para completar el siguiente carácter multibyte, incluidas las secuencias de desplazamiento. Es equivalente a la llamada `mbrtowc(NULL, str, count, &mbstate)`, donde `mbstate` es cualquier objeto `mbstate_t` proporcionado por el usuario, o un objeto interno estático proporcionadas por la biblioteca.  
   
- La función `mbrlen` guarda y usa el estado de desplazamiento de un carácter multibyte incompleto en el parámetro `mbstate`.  Esto da a `mbrlen` la capacidad de reiniciar en medio de un carácter multibyte si es necesario, examinando a lo sumo `count` bytes.  Si `mbstate` es un puntero nulo, `mbrlen` usa un objeto `mbstate_t` estático interno para almacenar el estado de desplazamiento.  Dado que el objeto `mbstate_t` interno no es seguro para subprocesos, se recomienda asignar y pasar siempre su propio valor para `mbstate`.  
+ La función `mbrlen` guarda y usa el estado de desplazamiento de un carácter multibyte incompleto en el parámetro `mbstate`. Esto da a `mbrlen` la capacidad de reiniciar en medio de un carácter multibyte si es necesario, examinando a lo sumo `count` bytes. Si `mbstate` es un puntero nulo, `mbrlen` usa un objeto `mbstate_t` estático interno para almacenar el estado de desplazamiento. Dado que el objeto `mbstate_t` interno no es seguro para subprocesos, se recomienda asignar y pasar siempre su propio valor para `mbstate`.  
   
- La función `mbrlen` difiere de [\_mbclen, mblen, \_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md) en que se puede reiniciar.  El estado de desplazamiento se almacena en `mbstate` para las llamadas posteriores a la misma o a otras funciones reiniciables.  Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables.  Por ejemplo, una aplicación debe utilizar `wcsrlen` en lugar de `wcslen` si se utiliza una llamada subsiguiente a `wcsrtombs` en lugar de a `wcstombs.`  
+ La función `mbrlen` difiere de [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md) en que se puede reiniciar. El estado de desplazamiento se almacena en `mbstate` para las llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables.  Por ejemplo, una aplicación debe utilizar `wcsrlen` en lugar de `wcslen` si se utiliza una llamada subsiguiente a `wcsrtombs` en lugar de a `wcstombs.`  
   
-### Asignaciones de rutina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
-|Rutina TCHAR.H|\_UNICODE y \_MBCS no definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |No aplicable|No aplicable|`mbrlen`|No aplicable|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`mbrlen`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`mbrlen`|\<wchar.h>|  
   
  Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Este ejemplo muestra cómo la interpretación de caracteres multibyte depende de la página de códigos actual, y demuestra la capacidad de reanudación de `mbrlen`.  
   
-```  
- // crt_mbrlen.c  
+```C  
+// crt_mbrlen.c  
 // Compile by using: cl crt_mbrlen.c  
 #include <stdlib.h>  
 #include <stdio.h>  
@@ -147,13 +164,18 @@ int main( void )
 }  
 ```  
   
-  **Code page: 0**  
-**é╨éτé¬é╚: Shift\-jis hiragana.  Character count: 29**  
-**Code page: 932**  
-**????: Shift\-jis hiragana.  Character count: 25**    
-## Equivalente en .NET Framework  
- [System::String::Length](https://msdn.microsoft.com/en-us/library/system.string.length.aspx)  
+```Output  
   
-## Vea también  
+Code page: 0  
+é╨éτé¬é╚: Shift-jis hiragana.  
+Character count: 29  
+  
+Code page: 932  
+????: Shift-jis hiragana.  
+Character count: 25  
+  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)   
  [Configuración regional](../../c-runtime-library/locale.md)

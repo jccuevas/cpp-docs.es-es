@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 022dd9188a043ccb5a17a3e9040e0c8969acf7ba
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 4345539f7ecd836280bed94c4bb2b125dfa08107
+ms.contentlocale: es-es
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="controlfps"></a>_controlfp_s
@@ -99,7 +100,7 @@ errno_t _controlfp_s(
   
  La diferencia entre `_control87` y `_controlfp_s` es cómo tratan los valores `DENORMAL`. En el caso de las plataformas Intel (x86), [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] y ARM, `_control87` puede establecer y borrar la máscara de la excepción de operando desnormalizado. `_controlfp_s` no modifica la máscara de la excepción de operando desnormalizado. En este ejemplo se muestra la diferencia:  
   
-```  
+```C  
 _control87( _EM_INVALID, _MCW_EM );   
 // DENORMAL is unmasked by this call.  
 unsigned int current_word = 0;  
@@ -111,7 +112,7 @@ _controlfp_s( &current_word, _EM_INVALID, _MCW_EM );
   
  Las plataformas derivadas de Intel (x86) admiten los valores de entrada y salida desnormalizados en el hardware. El comportamiento de x86 consiste en conservar los valores desnormalizados. La plataforma ARM y las plataformas de [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] compatibles con SSE2 permiten que los operandos y resultados desnormalizados se vacíen, es decir, que se conviertan en cero. Las funciones `_controlfp_s`, `_controlfp` y `_control87` proporcionan una máscara para cambiar este comportamiento. En el siguiente ejemplo se muestra la forma de usar esta máscara:  
   
-```  
+```C  
 unsigned int current_word = 0;  
 _controlfp_s(&current_word, _DN_SAVE, _MCW_DN);     
 // Denormal values preserved on ARM platforms and on x64 processors with  
@@ -127,9 +128,9 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
   
  Si la máscara no se establece correctamente, esta función genera una excepción de parámetro no válido, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve `EINVAL` y establece `errno` en `EINVAL`.  
   
- Esta función se omite cuando usa [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) al compilarse porque common language runtime (CLR) solo admite la precisión de punto flotante predeterminada.  
+ Esta función se omite cuando usa [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) al compilarse porque common language runtime (CLR) solo es compatible con la precisión de punto flotante predeterminada.  
   
- **Valores hexadecimales**  
+### <a name="mask-constants-and-values"></a>Constantes de máscara y valores  
   
  En el caso de la máscara `_MCW_EM`, si se borra se establece la excepción, con lo que se permite la excepción de hardware. Si se establece la máscara, se oculta la excepción. Si se produce una constante `_EM_UNDERFLOW` o `_EM_OVERFLOW`, no se genera ninguna excepción de hardware hasta que se ejecute la instrucción de punto flotante siguiente. Para generar una excepción de hardware inmediatamente después de `_EM_UNDERFLOW` o `_EM_OVERFLOW`, llame a la instrucción FWAIT MASM.  
   
@@ -151,14 +152,12 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
   
 ## <a name="example"></a>Ejemplo  
   
-```  
-  
-      // crt_contrlfp_s.c  
+```C  
+// crt_contrlfp_s.c  
 // processor: x86  
 // This program uses _controlfp_s to output the FP control   
 // word, set the precision to 24 bits, and reset the status to   
 // the default.  
-//  
   
 #include <stdio.h>  
 #include <float.h>  
@@ -193,9 +192,7 @@ int main( void )
 }  
 ```  
   
-## <a name="output"></a>Salida  
-  
-```  
+```Output  
 Original: 0x9001f  
 0.1 * 0.1 = 1.000000000000000e-002  
 24-bit:   0xa001f  
@@ -203,9 +200,6 @@ Original: 0x9001f
 Default:  0x9001f  
 0.1 * 0.1 = 1.000000000000000e-002  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   

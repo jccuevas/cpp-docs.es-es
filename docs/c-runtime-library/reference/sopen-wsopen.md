@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c8b8418394c4ebcc5ff13d97e2b7b28929982c79
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: aac10cebd0f967944403837283e9008b0b1047fc
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="sopen-wsopen"></a>_sopen, _wsopen
@@ -231,9 +232,6 @@ Las marcas  `_O_CREAT` y `_O_EXCL` se han especificado, pero `filename` ya exist
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [_locking](../../c-runtime-library/reference/locking.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)   

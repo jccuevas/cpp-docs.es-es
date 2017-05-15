@@ -10,28 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - discrete_distribution
-- std::discrete_distribution
 - random/std::discrete_distribution
-- std::discrete_distribution::reset
 - random/std::discrete_distribution::reset
-- std::discrete_distribution::probabilities
 - random/std::discrete_distribution::probabilities
-- std::discrete_distribution::param
 - random/std::discrete_distribution::param
-- std::discrete_distribution::min
 - random/std::discrete_distribution::min
-- std::discrete_distribution::max
 - random/std::discrete_distribution::max
-- std::discrete_distribution::operator()
 - random/std::discrete_distribution::operator()
-- std::discrete_distribution::param_type
 - random/std::discrete_distribution::param_type
-- std::discrete_distribution::param_type::probabilities
 - random/std::discrete_distribution::param_type::probabilities
-- std::discrete_distribution::param_type::operator==
 - random/std::discrete_distribution::param_type::operator==
-- std::discrete_distribution::param_type::operator!=
 - random/std::discrete_distribution::param_type::operator!=
+- random/std::discrete_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -55,10 +45,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: f29f4e98cf23f30383327713973f861b56ae0ce0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 270dd20a29333c64526c103c3eabe847c1c6e3c9
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution (Clase)
@@ -110,8 +101,8 @@ public:
   
 |||  
 |-|-|  
-|[discrete_distribution::discrete_distribution](#discrete_distribution__discrete_distribution)|`discrete_distribution::param`|  
-|`discrete_distribution::operator()`|[discrete_distribution::param_type](#discrete_distribution__param_type)|  
+|[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|  
+|`discrete_distribution::operator()`|[param_type](#param_type)|  
   
  La función de propiedad `vector<double> probabilities()` devuelve las probabilidades individuales de cada entero generado.  
   
@@ -201,7 +192,7 @@ Distribution for 100 samples:
   
  **Espacio de nombres:** std  
   
-##  <a name="a-namediscretedistributiondiscretedistributiona--discretedistributiondiscretedistribution"></a><a name="discrete_distribution__discrete_distribution"></a>  discrete_distribution::discrete_distribution  
+##  <a name="discrete_distribution"></a>  discrete_distribution::discrete_distribution  
  Construye la distribución.  
   
 ```  
@@ -257,11 +248,11 @@ El constructor de lista de inicializadores que tiene un parámetro *weightlist* 
   
 El constructor que tiene parámetros *count*, *low*, *high* y *weightfunc* crea un objeto de distribución que se inicializa según estas reglas:  
 -  Si *count* < 1, **n** = 1 y, como tal, equivale al constructor predeterminado, que siempre genera cero.  
--  Si *count* > 0, **n** = *count*. Si **d** = (*high* - *low*) / **n** es mayor que cero, con **d** subintervalos uniformes, cada peso se asigna de la siguiente forma: `weight[k] = weightfunc(x)`, donde **x** = *low* + **k** * **d** + **d** / 2, para **k** = 0, ..., **n** - 1.  
+-  Si *count* > 0, **n** = *count*. Provided **d** = (*high* - *low*) / **n** is greater than zero, using **d** uniform subranges, each weight is assigned as follows: `weight[k] = weightfunc(x)`, where **x** = *low* + **k** * **d** + **d** / 2, for **k** = 0, ..., **n** - 1.  
   
 El constructor que tiene un parámetro `param_type` *parm* crea un objeto de distribución mediante *parm* como la estructura de parámetros almacenada.  
   
-##  <a name="a-namediscretedistributionparamtypea--discretedistributionparamtype"></a><a name="discrete_distribution__param_type"></a>  discrete_distribution::param_type  
+##  <a name="param_type"></a>  discrete_distribution::param_type  
  Almacena todos los parámetros de la distribución.  
   
 ```  

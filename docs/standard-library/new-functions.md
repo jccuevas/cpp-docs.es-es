@@ -12,10 +12,11 @@ f1_keywords:
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: e32c8f5892764d2efc955bbf2d7930e0c8d3f3f0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 53a31f533ee777dbbcc486283034094481ab0c31
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltnewgt-functions"></a>Funciones &lt;new&gt;
@@ -34,7 +35,7 @@ extern const std::nothrow_t nothrow;
  El objeto se usa como un argumento de función para que coincida con el tipo de parámetro [std::nothrow_t](../standard-library/nothrow-t-structure.md).  
   
 ### <a name="example"></a>Ejemplo  
-  Vea [operator new](../standard-library/new-operators.md#operator_new) y [operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr) para obtener ejemplos de cómo se usa `std::nothrow_t` como un parámetro de función.  
+  Vea [operator new](../standard-library/new-operators.md#op_new) y [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) para obtener ejemplos de cómo se usa `std::nothrow_t` como un parámetro de función.  
   
 ##  <a name="set_new_handler"></a> set_new_handler  
  Instala una función de usuario que se va a llamar cuando `operator new` no pueda asignar memoria.  
@@ -51,7 +52,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
  0 en la primera llamada y el valor `new_handler` anterior en las llamadas posteriores.  
   
 ### <a name="remarks"></a>Comentarios  
- La función almacena `Pnew` en un puntero del [controlador nuevo](../standard-library/new-typedefs.md#new_handler) estático que mantiene y, después, devuelve el valor almacenado previamente en el puntero. El controlador nuevo se usa mediante [operator new](../standard-library/new-operators.md#operator_new)( **size_t**).  
+ La función almacena `Pnew` en un puntero del [controlador nuevo](../standard-library/new-typedefs.md#new_handler) estático que mantiene y, después, devuelve el valor almacenado previamente en el puntero. El controlador nuevo se usa mediante [operator new](../standard-library/new-operators.md#op_new)( **size_t**).  
   
 ### <a name="example"></a>Ejemplo  
   

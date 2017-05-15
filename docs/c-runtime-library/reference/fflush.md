@@ -1,49 +1,66 @@
 ---
-title: "fflush | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fflush"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fflush"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fflush (función)"
-  - "vaciar"
-  - "secuencias, vaciar"
+title: fflush | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fflush
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fflush
+dev_langs:
+- C++
+helpviewer_keywords:
+- streams, flushing
+- flushing
+- fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# fflush
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f2a11a29ba0eec3c66cf23f72e8fe0e7106d5a5c
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
+---
+# <a name="fflush"></a>fflush
 Vacía una secuencia.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int fflush(   
@@ -51,34 +68,36 @@ int fflush(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `stream`  
- Puntero a la estructura `FILE`.  
+ Puntero a la estructura `FILE` .  
   
-## Valor devuelto  
- `fflush` devuelve 0 si el búfer se vaciado correctamente.  El valor 0 también se devuelve en casos en los que la secuencia especificada no tiene ningún búfer o está abierto para lectura únicamente.  Un valor devuelto de `EOF` indica un error.  
+## <a name="return-value"></a>Valor devuelto  
+ `fflush` devuelve 0 si el búfer se ha vaciado correctamente. También se devuelve el valor 0 en los casos en que la secuencia especificada no tiene ningún búfer o solo se abre para lectura. Un valor devuelto de `EOF` indica un error.  
   
 > [!NOTE]
->  Si `fflush` devuelve `EOF`, los datos podrían haber perdido debido a un error de escritura.  Al configurar un controlador de error crítico, resulta más seguro activar el almacenamiento en búfer desactivado con la función de `setvbuf` o utilizar las rutinas de E\/S de bajo nivel como `_open`, `_close`, y `_write` en lugar de E\/S de secuencia funciona.  
+>  Si `fflush` devuelve `EOF`, es posible que se hayan perdido datos debido a un error de escritura. Al configurar un controlador de errores críticos, resulta más seguro desactivar el almacenamiento en búfer con la función `setvbuf` o usar rutinas de E/S de bajo nivel, como `_open`, `_close` y `_write`, en lugar de las funciones de E/S de secuencia.  
   
-## Comentarios  
- La función de `fflush` vacía una secuencia.  Si el archivo asociado a `stream` está abierto para la salida, `fflush` escribe en ese archivo el contenido del búfer asociado a la secuencia.  Si la secuencia está abierto para la entrada, `fflush` borra el contenido del búfer.  `fflush` anula el efecto de cualquier llamada anterior a `ungetc` con `stream`.  Además, `fflush(NULL)` vacía todas las secuencias abierto para la salida.  La secuencia permanece abierto después de la llamada.  `fflush` no tiene ningún efecto en una secuencia inseparada.  
+## <a name="remarks"></a>Comentarios  
+ La función `fflush` vacía la secuencia `stream`. Si la secuencia se ha abierto en modo de escritura, o se ha abierto en modo de actualización y la última operación ha sido una operación de escritura, el contenido del búfer de la secuencia se escribe en el archivo o dispositivo subyacentes y el búfer se descarta. Si la secuencia se ha abierto en modo de lectura, o no tiene ningún búfer, la llamada a `fflush` no tiene ningún efecto y no se conserva ningún búfer. Una llamada a `fflush` anula el efecto de cualquier llamada anterior a `ungetc` en la secuencia. La secuencia sigue abierta después de la llamada.  
   
- Los búferes son mantenidas normalmente por el sistema operativo, que determina el tiempo óptima de escribir los datos automáticamente en disco: cuando el búfer está lleno, cuando se cierra una secuencia, o cuando un programa finaliza normalmente sin cerrar la secuencia.  La característica de confirmación\-a\- disco de la biblioteca en tiempo de ejecución permite asegurarse que los datos crítico se escribe directamente en el disco y no a los búferes del sistema operativo.  Sin volver a escribir un programa existente, puede habilitar esta característica vincular los archivos objeto program con COMMODE.OBJ.  En el archivo ejecutable resultante, las llamadas a `_flushall` escriben el contenido de todos los búferes en el disco.  Sólo `_flushall` y `fflush` afectados por COMMODE.OBJ.  
+ Si `stream` es `NULL`, el comportamiento es igual al de una llamada a `fflush` en cada secuencia abierta. Se vacían todas las secuencias abiertas en modo de escritura y en modo de actualización en las que la última operación ha sido de escritura. La llamada no tiene ningún efecto en otras secuencias.  
   
- Para obtener información sobre cómo controlar la característica de confirmación en disco, vea [E\/S de flujos](../../c-runtime-library/stream-i-o.md), [fopen](../../c-runtime-library/reference/fopen-wfopen.md) y [\_fdopen](../../c-runtime-library/reference/fdopen-wfdopen.md).  
+ Normalmente, el sistema operativo mantiene los búferes y determina el momento óptimo para escribir los datos automáticamente en el disco: cuando el búfer está lleno, cuando se cierra una secuencia o cuando un programa finaliza con normalidad sin cerrar la secuencia. La característica de confirmación en disco de la biblioteca en tiempo de ejecución permite asegurarse de que los datos críticos se escriben directamente en el disco y no en los búferes del sistema operativo. Sin tener que volver a escribir un programa existente, puede habilitar esta característica vinculando los archivos objeto del programa a COMMODE.OBJ. En el archivo ejecutable resultante, las llamadas a `_flushall` escriben el contenido de todos los búferes en el disco. COMMODE.OBJ solo afecta a `_flushall` y `fflush`.  
   
- Esta función bloquea el subproceso de la llamada y por consiguiente seguro para subprocesos.  Para consultar una versión que no realiza el bloqueo, vea `_fflush_nolock`.  
+ Para obtener información sobre cómo controlar la característica de confirmación en disco, consulte [E/S de secuencia](../../c-runtime-library/stream-i-o.md), [fopen](../../c-runtime-library/reference/fopen-wfopen.md) y [_fdopen](../../c-runtime-library/reference/fdopen-wfdopen.md).  
   
-## Requisitos  
+ Esta función bloquea el subproceso de llamada y por lo tanto es segura para subprocesos. Para consultar una versión que no realiza el bloqueo, vea `_fflush_nolock`.  
+  
+## <a name="requirements"></a>Requisitos  
   
 |Función|Encabezado necesario|  
-|-------------|--------------------------|  
-|`fflush`|\<stdio.h\>|  
+|--------------|---------------------|  
+|`fflush`|\<stdio.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_fflush.c  
@@ -107,18 +126,27 @@ int main( void )
 }  
 ```  
   
-  **`Esto es una prueba Este es el testThis`  `es una prueba Esto es un testEnter`a la frase de cuatro palabras con scanf: Esto es una prueba**  
-**Este objeto .**  
-**es**  
-**a**  
-**prueba**  
-**Escriba la misma frase con obtiene: Esto es una prueba**  
-**Esto es una prueba**   
-## Equivalente en .NET Framework  
- [System::IO::FileStream::Flush](https://msdn.microsoft.com/en-us/library/2bw4h516.aspx)  
+```Output  
   
-## Vea también  
- [E\/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [fclose, \_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [\_flushall](../../c-runtime-library/reference/flushall.md)   
+      This is a test  
+This is a test  
+  
+```  
+  
+```Output  
+  
+      This is a test  
+This is a testEnter a sentence of four words with scanf: This is a test  
+This  
+is  
+a  
+test  
+Enter the same sentence with gets: This is a test  
+This is a test  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
+ [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
+ [_flushall](../../c-runtime-library/reference/flushall.md)   
  [setvbuf](../../c-runtime-library/reference/setvbuf.md)

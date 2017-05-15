@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 33826176b57dbc26c023e0556993ade7dc3e9cfd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0a6163775f7e8592a48a8011e8d72eea008dd5c7
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="pclose"></a>_pclose
@@ -77,7 +78,7 @@ FILE *stream
  Valor devuelto de la llamada anterior a `_popen`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve el estado de salida del procesador de comandos que cierra el flujo o –&1; si se produce un error. El formato del valor devuelto es el mismo que el de `_cwait`, excepto que se intercambian los bytes de orden inferior y de orden superior. Si el flujo es **NULL**, `_pclose` establece `errno` en `EINVAL` y devuelve -1.  
+ Devuelve el estado de salida de la terminación procesador de comandos, o -1 si se produce un error. El formato del valor devuelto es el mismo que el de `_cwait`, excepto que se intercambian los bytes de orden inferior y de orden superior. Si el flujo es **NULL**, `_pclose` establece `errno` en `EINVAL` y devuelve -1.  
   
  Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -94,9 +95,6 @@ FILE *stream
   
 ## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)   

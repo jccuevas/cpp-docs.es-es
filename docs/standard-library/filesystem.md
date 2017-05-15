@@ -36,10 +36,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 25cfc0cc7c9f22a495b409e6e08d133b0f29ff8e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4cb454ca6ea92ede5c4cf83c1072e22e60577811
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
@@ -141,10 +142,10 @@ using namespace std::experimental::filesystem::v1;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[copy_options (Enumeración)](../standard-library/filesystem-enumerations.md#filesystem__copy_options)|Enumeración que se usa con [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) y determina el comportamiento si ya existe un archivo de destino.|  
-|[directory_options (Enumeración)](../standard-library/filesystem-enumerations.md#filesystem__directory_options)|Enumeración que especifica las opciones de los iteradores de directorio.|  
-|[file_type (Enumeración)](../standard-library/filesystem-enumerations.md#filesystem__file_type)|Enumeración de tipos de archivo.|  
-|[perms (Enumeración)](../standard-library/filesystem-enumerations.md#filesystem__perms)|Un tipo de máscara de bits que se usa para transmitir los permisos y las opciones de permisos.|  
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se utiliza con [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) y determina el comportamiento si ya existe un archivo de destino.|  
+|[directory_options)](../standard-library/filesystem-enumerations.md#directory_options)|Enumeración que especifica las opciones de los iteradores de directorio.|  
+|[file_type](../standard-library/filesystem-enumerations.md#file_type)|Enumeración de tipos de archivo.|  
+|[en permisos](../standard-library/filesystem-enumerations.md#perms)|Un tipo de máscara de bits que se usa para transmitir los permisos y las opciones de permisos.|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)

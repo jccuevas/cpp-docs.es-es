@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d888b6d16e0a71168e0615d89bbd1d03c51afad8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e834b5be6b7d31d1f1516799462d57330bf4ceb2
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="effects-of-buffering"></a>Efectos del almacenamiento en búfer
@@ -65,7 +66,7 @@ int main( )
 cout <<"Please wait..." <<flush;  
 ```  
   
- En este paso se vacía el búfer, lo que garantiza que el mensaje se imprima antes de la espera. También se puede usar el manipulador `endl` , que vacía el búfer y genera un salto de línea de retorno de carro o se puede usar el objeto `cin` . Este objeto (junto con los objetos `cerr` o `clog` ) suele estar vinculado al objeto `cout` . Por tanto, cualquier uso de `cin` (o de los objetos `cerr` o `clog` ) vacía el objeto `cout` .  
+ En este paso se vacía el búfer, lo que garantiza que el mensaje se imprima antes de la espera. También puede usar el `endl` manipulador, que vacía el búfer y se genera un retorno de carro/salto de línea, o puede usar el `cin` objeto. Este objeto (junto con los objetos `cerr` o `clog` ) suele estar vinculado al objeto `cout` . Por tanto, cualquier uso de `cin` (o de los objetos `cerr` o `clog` ) vacía el objeto `cout` .  
   
 ## <a name="see-also"></a>Vea también  
  [Flujos de salida](../standard-library/output-streams.md)

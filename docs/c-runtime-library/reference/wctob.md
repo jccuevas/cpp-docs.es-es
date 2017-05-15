@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6c72cc32c5bd48bc6b7fc9c9187797f056ec7712
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8eee02245359e71f32944f1a1f5c7180223553e3
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="wctob"></a>wctob
@@ -72,7 +73,7 @@ int wctob(
  Valor que se va a traducir.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Si `wctob` convierte correctamente un carácter ancho, devuelve su representación de carácter multibyte únicamente si el carácter multibyte tiene una longitud exacta de un byte. Si `wctob` encuentra un carácter ancho que no pueda convertir en un carácter multibyte o este no tiene una longitud exacta de un byte, devuelve -1.  
+ Si `wctob` convierte correctamente un carácter ancho, devuelve su representación de carácter multibyte únicamente si el carácter multibyte tiene una longitud exacta de un byte. Si `wctob` encuentra un carácter ancho que no se puede convertir en un carácter multibyte o el carácter multibyte no es exactamente un byte largo, devuelve -1.  
   
 ## <a name="remarks"></a>Comentarios  
  La función `wctob` convierte un carácter ancho incluido en `wchar` en el carácter multibyte correspondiente pasado por el valor devuelto `int` si el carácter multibyte tiene una longitud exacta de un byte.  
@@ -120,9 +121,6 @@ int main( void )
 ```Output  
 Determined the corresponding multibyte character to be "A".  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Conversión de datos](../../c-runtime-library/data-conversion.md)   

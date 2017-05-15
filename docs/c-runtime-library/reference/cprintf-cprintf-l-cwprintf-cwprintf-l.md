@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d761621d23ab97d951199e7790e71f224394f92c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c96743fc777a53f2fe849d5f88f3fd7299054d02
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
@@ -88,22 +89,18 @@ Da formato e imprime en la consola. Existen versiones más seguras; consulte [_c
   
 ```  
 int _cprintf(   
-   const char * format [,   
-   argument] ...   
+   const char * format [, argument_list]  
 );  
-int _cprintf_l(   
+int _cprintf_l(  
    const char * format,  
-   locale_t locale [,  
-   argument] …   
+   locale_t locale [, argument_list]  
 );  
 int _cwprintf(  
-   const wchar * format [,   
-   argument] …  
+   const wchar * format [, argument_list]  
 );  
 int _cwprintf_l(  
    const wchar * format,  
-   locale_t locale [,   
-   argument] …  
+   locale_t locale [, argument_list]  
 );  
 ```  
   
@@ -111,8 +108,8 @@ int _cwprintf_l(
  `format`  
  Cadena de control de formato.  
   
- `argument`  
- Parámetros opcionales.  
+ `argument_list`  
+ Parámetros opcionales para la cadena de formato.  
   
  `locale`  
  Configuración regional que se va a usar.  
@@ -121,9 +118,9 @@ int _cwprintf_l(
  Número de caracteres que se van a imprimir.  
   
 ## <a name="remarks"></a>Comentarios  
- Estas funciones dan formato a una serie de caracteres y valores directamente en la consola, y la imprimen, mediante la función `_putch` (`_putwch` en el caso de `_cwprintf`) para generar caracteres. Cada `argument` (si existe) se convierte y sale según la especificación de formato correspondiente de `format`. El formato tiene las mismas forma y función que el parámetro `format` de la función [printf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). A diferencia de las funciones `fprintf`, `printf` y `sprintf`, ni `_cprintf` ni `_cwprintf` convierten los caracteres de salto de línea en combinaciones retorno de carro-salto de línea (CR-LF) en sus resultados.  
+ Estas funciones dan formato a una serie de caracteres y valores directamente en la consola, usando la función `_putch` (`_putwch` en el caso de `_cwprintf`) para generar los caracteres. Cada argumento de `argument_list` (si existe) se convierte y sale según la especificación de formato correspondiente de `format`. El `format` argumento utiliza la [formato de sintaxis de especificación de funciones de printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). A diferencia de la `fprintf`, `printf`, y `sprintf` funciones, ni `_cprintf` ni `_cwprintf` convierten los caracteres de avance de línea en combinaciones retorno de línea (CR-LF) en sus resultados.  
   
- Una diferencia importante es que `_cwprintf` muestra caracteres Unicode cuando se usa en Windows NT. A diferencia de `_cprintf`, `_cwprintf` usa la configuración regional actual de la consola.  
+ Una diferencia importante es que `_cwprintf` muestra caracteres Unicode cuando se usan en las ventanas. A diferencia de `_cprintf`, `_cwprintf` usa la configuración regional actual de la consola.  
   
  Las versiones de estas funciones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional actual.  
   
@@ -175,9 +172,6 @@ int main( void )
 ```Output  
 -16  001d  62511  A Test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [E/S de consola y de puerto](../../c-runtime-library/console-and-port-i-o.md)   

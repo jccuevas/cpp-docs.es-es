@@ -14,10 +14,11 @@ f1_keywords:
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ba8cd6e49f490718beb8fdc216781d8950aedbfb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: d9bc4c7f814c44d91ec1cff881107fdc92949368
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstringgt-typedefs"></a>Definiciones de tipo de &lt;string&gt;
@@ -44,7 +45,7 @@ string str("");
 basic_string<char> str("");
 ```  
   
- Para obtener una lista de los constructores de cadena, vea [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string__basic_string).  
+ Para obtener una lista de los constructores de cadena, vea [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
   
 ##  <a name="u16string"></a>  u16string  
  Un tipo que describe una especialización de la clase de plantilla [basic_string](../standard-library/basic-string-class.md) con elementos del tipo `char16_t`.  
@@ -56,7 +57,7 @@ typedef basic_string<char16_t, char_traits<char16_t>, allocator<char16_t>> u16st
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener una lista de los constructores de cadena, vea [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string__basic_string).  
+ Para obtener una lista de los constructores de cadena, vea [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
   
 ##  <a name="u32string"></a>  u32string  
  Un tipo que describe una especialización de la clase de plantilla [basic_string](../standard-library/basic-string-class.md) con elementos del tipo `char32_t`.  
@@ -68,7 +69,7 @@ typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32st
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener una lista de los constructores de cadena, vea [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string__basic_string).  
+ Para obtener una lista de los constructores de cadena, vea [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
   
 ##  <a name="wstring"></a>  wstring  
  Un tipo que describe una especialización de la clase de plantilla [basic_string](../standard-library/basic-string-class.md) con elementos del tipo `wchar_t`.  
@@ -88,7 +89,7 @@ wstring wstr(L"");
 basic_string<wchar_t> wstr(L"");
 ```  
   
- Para obtener una lista de los constructores de cadena, vea [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string__basic_string).  
+ Para obtener una lista de los constructores de cadena, vea [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
   
 > [!NOTE]
 >  El tamaño de `wchar_t` está definido por la implementación. Si el tamaño del código depende de `wchar_t`, compruebe la implementación de la plataforma (por ejemplo, con `sizeof(wchar_t)`). Si necesita un tipo de carácter de cadena con una anchura garantizada de modo que se mantenga igual en todas las plataformas, use [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) o [u32string](../standard-library/string-typedefs.md#u32string).  

@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b6b5f2f059084e1f5dd66d75b5f5af5f2ade2473
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 1e56ba6f238c62a220966701e7b1ced1dd2ec4ea
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp, _wmktemp
@@ -104,7 +105,7 @@ wchar_t *_wmktemp(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tmktemp`|`_mktemp`|`_mktemp`|`_wmktemp`|  
   
- El argumento `template` tiene el formato `base`XXXXXX, donde `base` es la parte del nuevo nombre de archivo que usted proporciona y cada X es un marcador de posición de un carácter proporcionado por `_mktemp`. Cada marcador de posición de `template` debe ser una X mayúscula. `_mktemp` conserva `base` y reemplaza la primera X final por un carácter alfabético. `_mktemp` reemplaza las siguientes X finales por un valor de cinco dígitos. Este valor es un número único que identifica el proceso al que se llama o, en programas multiproceso, el subproceso al que se llama.  
+ El `template` argumento tiene la forma `base` *XXXXXX*, donde `base` es la parte del nombre de archivo nuevo que suministre y cada X es un marcador de posición de un carácter proporcionado por `_mktemp`. Cada marcador de posición de `template` debe ser una X mayúscula. `_mktemp` conserva `base` y reemplaza la primera X final por un carácter alfabético. `_mktemp` reemplaza las siguientes X finales por un valor de cinco dígitos. Este valor es un número único que identifica el proceso al que se llama o, en programas multiproceso, el subproceso al que se llama.  
   
  Cada llamada correcta a `_mktemp` modifica `template`. En cada llamada posterior realizada desde el mismo proceso o subproceso con el mismo argumento `template`, `_mktemp` busca nombres de archivo que coincidan con los nombres devueltos por `_mktemp` en las llamadas anteriores. Si no existe ningún archivo para un nombre concreto, `_mktemp` devuelve dicho nombre. Si existen archivos de todos los nombres devueltos previamente, `_mktemp` crea un nombre nuevo sustituyendo el carácter alfabético que emplea en el nombre devuelto anteriormente por la siguiente letra minúscula disponible (en orden, de la «a» a la «z»). Por ejemplo, si `base` es:  
   
@@ -230,9 +231,6 @@ Unique filename is fnz03912
 Problem creating the template.  
 Out of unique filenames.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Control de archivos](../../c-runtime-library/file-handling.md)   

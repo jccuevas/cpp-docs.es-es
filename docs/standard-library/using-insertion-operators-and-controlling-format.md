@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: bfab56fe6847015adff4013d075893e982d5d2f4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 96d388b7ddfdf561e016b4e74ffeb9ca072c7cb2
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Usar operadores de inserción y controlar el formato
@@ -50,7 +51,7 @@ En este tema se muestra cómo controlar el formato y cómo crear operadores de i
   
 - [Base](#vclrfradixanchor6)  
   
-##  <a name="a-namevclrfoutputwidthanchor3a-output-width"></a><a name="vclrfoutputwidthanchor3"></a> Ancho de salida  
+##  <a name="vclrfoutputwidthanchor3"></a> Ancho de salida  
  Para alinear la salida, especifique el ancho de salida para cada elemento colocando el manipulador `setw` del flujo o llamando a la función miembro **width**. En este ejemplo se alinean a la derecha los valores de una columna de, como mínimo, 10 caracteres de ancho.  
   
 ```  
@@ -134,7 +135,7 @@ Jimmy     35.36
   
  Ni `setw` ni **width** truncan valores. Si la salida con formato supera el ancho, se imprime el valor completo, sujeto a la configuración de precisión del flujo. Tanto `setw` como **width** afectan únicamente al campo siguiente. El ancho de campo revierte a su comportamiento predeterminado (el ancho necesario) después de que se haya impreso un campo, pero las opciones de formato de flujo seguirán vigentes hasta que se modifiquen.  
   
-##  <a name="a-namevclrfalignmentanchor4a-alignment"></a><a name="vclrfalignmentanchor4"></a> Alineación  
+##  <a name="vclrfalignmentanchor4"></a> Alineación  
  Los flujos de salida tienen de forma predeterminada el texto alineado a la derecha. Para alinear a la izquierda los nombres del ejemplo anterior y alinear a la derecha los números, reemplace el bucle **for** como sigue:  
   
 ```  
@@ -156,7 +157,7 @@ Stan     4358.24
   
  La marca de alinear a la izquierda se establece usando el manipulador [setiosflags](../standard-library/iomanip-functions.md#setiosflags) con el enumerador `left`. Este enumerador se define en la clase [ios](../standard-library/basic-ios-class.md), de manera que su referencia debe incluir el prefijo **ios::**. El manipulador [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) desactiva la marca de alinear a la izquierda. A diferencia de **width** y `setw`, el efecto de `setiosflags` y `resetiosflags` es permanente.  
   
-##  <a name="a-namevclrfprecisionanchor5a-precision"></a><a name="vclrfprecisionanchor5"></a> Precisión  
+##  <a name="vclrfprecisionanchor5"></a> Precisión  
  El valor predeterminado de precisión de punto flotante es seis. Por ejemplo, el número 3466.9768 se imprime como 3466.98. Para cambiar el modo de impresión de este valor, use el manipulador [setprecision](../standard-library/iomanip-functions.md#setprecision). El manipulador tiene dos marcas: [fixed](../standard-library/ios-functions.md#fixed) y [scientific](../standard-library/ios-functions.md#scientific). Si se establece [fixed](../standard-library/ios-functions.md#fixed), el número se imprime como 3466,976800. Si se establece **scientific**, se imprime como 3,4669773 + 003.  
   
  Para mostrar los números de punto flotante que se muestran en [Alineación](#vclrfalignmentanchor4) con un dígito significativo, reemplace el bucle **for** como sigue:  
@@ -208,7 +209,7 @@ Stan    4.4e+003
   
  De nuevo, el programa imprime un dígito después del punto decimal. Si se establece **ios::fixed** o **ios::scientific**, el valor de precisión determina el número de dígitos después del punto decimal. Si no se establece ninguna de estas marcas, el valor de precisión determina el número total de dígitos significativos. El manipulador `resetiosflags` borra estas marcas.  
   
-##  <a name="a-namevclrfradixanchor6a-radix"></a><a name="vclrfradixanchor6"></a> Base  
+##  <a name="vclrfradixanchor6"></a> Base  
  Los manipuladores **dec**, **oct** y **hex** establecen la base predeterminada para entrada y salida. Por ejemplo, si inserta el manipulador **hex** en el flujo de salida, el objeto traduce correctamente la representación interna de datos de números enteros a un formato de salida hexadecimal. Los números se muestran con dígitos de la letra a a la f en minúsculas si la marca [uppercase](../standard-library/ios-functions.md#uppercase) es evidente (valor predeterminado). De lo contrario, se muestran en mayúsculas. La base predeterminada es **dec** (decimal).  
   
 ## <a name="quoted-strings-c14"></a>Cadena entrecomillada (C++14)  
@@ -227,9 +228,9 @@ std::cout <<inserted;     //  This is a sentence.
 std::cout <<extracted;   //   This  
 ```  
   
- Este comportamiento se puede solucionar manualmente, pero hacer que el recorrido de ida y vuelta de la cadena sea más fácil, C ++&14; agrega el manipulador de flujo `std::quoted` en `<iomanip>`. Tras la inserción, `quoted()` rodea la cadena con un delimitador (comilla doble ' " ' de forma predeterminada) y tras la extracción manipula el flujo para extraer todos los caracteres hasta que se encuentra el delimitador final. Las comillas incrustadas se escapan con un carácter de escape ("\\\\" de forma predeterminada).  
+ Este comportamiento se puede solucionar manualmente, pero hacer que el recorrido de ida y vuelta de la cadena sea más fácil, C ++ 14 agrega el manipulador de flujo `std::quoted` en `<iomanip>`. Tras la inserción, `quoted()` rodea la cadena con un delimitador (comilla doble ' " ' de forma predeterminada) y tras la extracción manipula el flujo para extraer todos los caracteres hasta que se encuentra el delimitador final. Las comillas incrustadas se escapan con un carácter de escape ("\\\\" de forma predeterminada).  
   
- Los delimitadores están presentes solo en el objeto de flujo, no están presentes en la cadena extraída, pero están presentes en la cadena devuelta por [basic_stringstream::str](../standard-library/basic-stringstream-class.md#basic_stringstream__str)().  
+ Los delimitadores están presentes solo en el objeto de flujo, no están presentes en la cadena extraída, pero están presentes en la cadena devuelta por [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str)().  
   
  El comportamiento del espacio en blanco de las operaciones de inserción y extracción es independiente de cómo se representa una cadena en el código, de forma que el operador entrecomillado será útil al margen de si la cadena de entrada es un literal de cadena sin formato o una cadena normal. La cadena de entrada, con independencia de su formato, puede tener comillas, saltos de línea, tabulaciones , etc., insertados y todos ellos se conservarán con el manipulador quoted().  
   

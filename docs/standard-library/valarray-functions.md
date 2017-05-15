@@ -6,13 +6,32 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- valarray/std::abs
+- valarray/std::acos
+- valarray/std::asin
+- valarray/std::atan
+- valarray/std::atan2
+- valarray/std::cos
+- valarray/std::cosh
+- valarray/std::exp
+- valarray/std::log
+- valarray/std::log10
+- valarray/std::pow
+- valarray/std::sin
+- valarray/std::sinh
+- valarray/std::sqrt
+- valarray/std::swap
+- valarray/std::tan
+- valarray/std::tanh
 ms.assetid: 109778fc-440e-4239-b23e-bafda2b165c2
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5f3a65a4c4ea8c1c4bd6c5b689863b34e7d41da3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: c5d52ee25c8afaa531413859a57f97e014d568e8
+ms.contentlocale: es-es
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltvalarraygt-functions"></a>Funciones de &lt;valarray&gt;
@@ -25,7 +44,7 @@ ms.lasthandoff: 02/24/2017
 |[sinh](#sinh)|[sqrt](#sqrt)|[swap](#swap)|  
 |[tan](#tan)|[tanh](#tanh)|  
   
-##  <a name="a-nameabsa--abs"></a><a name="abs"></a>  abs  
+##  <a name="abs"></a>  abs  
  Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al valor absoluto de los elementos de la valarray de entrada.  
   
 ```  
@@ -34,7 +53,7 @@ valarray<Type> abs(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  La valarray de entrada sobre cuyos elementos va a operar la función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -77,7 +96,7 @@ The initial valarray is: 0 -1 -2 -3 4 5 6 7 8 .
 The absolute value of the initial valarray is: 0 1 2 3 4 5 6 7 8 .  
 ```  
   
-##  <a name="a-nameacosa--acos"></a><a name="acos"></a>  acos  
+##  <a name="acos"></a>  acos  
  Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al arcocoseno de los elementos de la valarray de entrada.  
   
 ```  
@@ -86,7 +105,7 @@ valarray<Type> acos(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  La valarray de entrada sobre cuyos elementos va a operar la función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -146,7 +165,7 @@ The arccosine of the initial valarray is:
          0  radians, which is            0  degrees  
 ```  
   
-##  <a name="a-nameasina--asin"></a><a name="asin"></a>  asin  
+##  <a name="asin"></a>  asin  
  Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al arcoseno de los elementos de la valarray de entrada.  
   
 ```  
@@ -155,7 +174,7 @@ valarray<Type> asin(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  La valarray de entrada sobre cuyos elementos va a operar la función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -164,7 +183,7 @@ valarray<Type> asin(const valarray<Type>& left);
 ### <a name="remarks"></a>Comentarios  
  Las unidades de los elementos devueltos están en radianes.  
   
- El valor devuelto es un valor principal entre +pi/2 y -pi/2 que es coherente con el valor de seno de entrada.  
+ El valor devuelto es una entidad de seguridad valor entre + proporcionados por el valoran de pi/2 y - pi/2, que es coherente con el seno.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -215,7 +234,7 @@ The arcsine of the initial valarray is:
     1.5708  radians, which is           90  degrees  
 ```  
   
-##  <a name="a-nameatana--atan"></a><a name="atan"></a>  atan  
+##  <a name="atan"></a>  atan  
  Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al principal valor del arcotangente de los elementos de la valarray de entrada.  
   
 ```  
@@ -224,7 +243,7 @@ valarray<Type> atan(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  La valarray de entrada sobre cuyos elementos va a operar la función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -233,7 +252,7 @@ valarray<Type> atan(const valarray<Type>& left);
 ### <a name="remarks"></a>Comentarios  
  Las unidades de los elementos devueltos están en radianes.  
   
- El valor devuelto es un valor principal entre +pi/2 y -pi/2 que es coherente con el valor de tangente de entrada.  
+ El valor devuelto es una entidad de seguridad valor entre + proporcionados por el valoran de pi/2 y - pi/2, que es coherente con la tangente.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -287,7 +306,7 @@ The arcsine of the initial valarray is:
     1.5608  radians, which is      89.4271  degrees  
 ```  
   
-##  <a name="a-nameatan2a--atan2"></a><a name="atan2"></a>  atan2  
+##  <a name="atan2"></a>  atan2  
  Devuelve una valarray cuyos elementos son iguales al arcotangente de los componentes cartesianos especificados por una combinación de constantes y elementos de valarrays.  
   
 ```  
@@ -302,27 +321,27 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  El tipo de datos numérico constante o la valarray de entrada cuyos elementos proporcionan los valores para la coordenada Y del argumento de arcotangente.  
   
- ` right`  
+ `right`  
  El tipo de datos numérico constante o la valarray de entrada cuyos elementos proporcionan los valores para la coordenada X del argumento de arcotangente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una valarray cuyos elementos `I` son iguales que la arcotangente de:  
   
-- ` left` [ *I* ] / *_Righ*t [ *I* ] para la primera función de plantilla.  
+- `left` [ *I* ] / *_Righ*t [ *I* ] para la primera función de plantilla.  
   
-- ` left` [ *I* ] / ` right` para la segunda función de plantilla.  
+- `left` [ *I* ] / `right` para la segunda función de plantilla.  
   
-- ` left` / ` right` [ *I* ] para la tercera función de plantilla.  
+- `left` / `right` [ *I* ] para la tercera función de plantilla.  
   
 ### <a name="remarks"></a>Comentarios  
  Las unidades de los elementos devueltos están en radianes.  
   
- Esta función conserva la información acerca de los signos de los componentes en el argumento que pierde la función tangente estándar, y este conocimiento del cuadrante permite que el valor devuelto se asigne a un único ángulo entre +pi y -pi.  
+ Esta función conserva la información acerca de los signos de los componentes en el argumento que se pueden perder por la función estándar de tangente y este conocimiento del cuadrante permite el valor devuelto se asigna un único ángulo entre + pi y - pi.  
   
- Si ` left` y ` right` tienen un número diferente de elementos, el resultado es indefinido.  
+ Si `left` y `right` tienen un número diferente de elementos, el resultado es indefinido.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -377,7 +396,7 @@ The atan2 ( y / x ) of the initial valarrays is:
  -0.785398  radians, which is          -45degrees  
 ```  
   
-##  <a name="a-namecosa--cos"></a><a name="cos"></a>  cos  
+##  <a name="cos"></a>  cos  
  Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al coseno de los elementos de la valarray de entrada.  
   
 ```  
@@ -386,7 +405,7 @@ valarray<Type> cos(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  La valarray de entrada sobre cuyos elementos va a operar la función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -451,7 +470,7 @@ The cosine of the initial valarray is:
 -1  
 ```  
   
-##  <a name="a-namecosha--cosh"></a><a name="cosh"></a>  cosh  
+##  <a name="cosh"></a>  cosh  
  Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al coseno hiperbólico de los elementos de la valarray de entrada.  
   
 ```  
@@ -460,7 +479,7 @@ valarray<Type> cosh(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  La valarray de entrada sobre cuyos elementos va a operar la función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -530,7 +549,7 @@ The hyperbolic cosine of the initial valarray is:
 11.592  
 ```  
   
-##  <a name="a-nameexpa--exp"></a><a name="exp"></a>  exp  
+##  <a name="exp"></a>  exp  
  Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al exponencial natural de los elementos de la valarray de entrada.  
   
 ```  
@@ -539,7 +558,7 @@ valarray<Type> exp(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  La valarray de entrada sobre cuyos elementos va a operar la función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -590,7 +609,7 @@ The natural exponential of the initial valarray is:
 22026.5  
 ```  
   
-##  <a name="a-nameloga--log"></a><a name="log"></a>  log  
+##  <a name="log"></a>  log  
  Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al logaritmo natural de los elementos de la valarray de entrada.  
   
 ```  
@@ -599,7 +618,7 @@ valarray<Type> log(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  La valarray de entrada sobre cuyos elementos va a operar la función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -650,7 +669,7 @@ The natural logarithm of the initial valarray is:
 4.38203  
 ```  
   
-##  <a name="a-namelog10a--log10"></a><a name="log10"></a>  log10  
+##  <a name="log10"></a>  log10  
  Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al logaritmo común o de base 10 de los elementos de la valarray de entrada.  
   
 ```  
@@ -659,7 +678,7 @@ valarray<Type> log10(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  La valarray de entrada sobre cuyos elementos va a operar la función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -712,7 +731,7 @@ The common logarithm of the initial valarray is:
 2  
 ```  
   
-##  <a name="a-namepowa--pow"></a><a name="pow"></a>  pow  
+##  <a name="pow"></a>  pow  
  Opera en los elementos de constantes y valarrays de entrada, devolviendo una valarray cuyos elementos son iguales a una base especificada mediante los elementos de una valarray de entrada o constante elevada a un exponente especificado por los elementos de una valarray de entrada o una constante.  
   
 ```  
@@ -736,23 +755,23 @@ pow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  La valarray de entrada cuyos elementos proporcionan la base para cada elemento que va a ser un exponente.  
   
- ` right`  
+ `right`  
  La valarray de entrada cuyos elementos proporcionan la potencia para cada elemento que va a ser un exponente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una valarray cuyos elementos `I` son iguales a:  
   
-- ` left` [ *I* ] elevado a la potencia ` right` [ *I* ] para la primera función de plantilla.  
+- `left` [ *I* ] elevado a la potencia `right` [ *I* ] para la primera función de plantilla.  
   
-- ` left` [ *I* ] elevado a la potencia ` right` para la segunda función de plantilla.  
+- `left` [ *I* ] elevado a la potencia `right` para la segunda función de plantilla.  
   
-- ` left` elevado a la potencia ` right` [ *I* ] para la tercera función de plantilla.  
+- `left` elevado a la potencia `right` [ *I* ] para la tercera función de plantilla.  
   
 ### <a name="remarks"></a>Comentarios  
- Si ` left` y ` right` tienen un número diferente de elementos, el resultado es indefinido.  
+ Si `left` y `right` tienen un número diferente de elementos, el resultado es indefinido.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -805,7 +824,7 @@ n = 4   gives 256
 n = 5   gives 1024  
 ```  
   
-##  <a name="a-namesina--sin"></a><a name="sin"></a>  sin  
+##  <a name="sin"></a>  sin  
  Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al seno de los elementos de la valarray de entrada.  
   
 ```  
@@ -814,7 +833,7 @@ valarray<Type> sin(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  La valarray de entrada sobre cuyos elementos va a operar la función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -879,7 +898,7 @@ The sine of the initial valarray is:
 -2.06823e-013  
 ```  
   
-##  <a name="a-namesinha--sinh"></a><a name="sinh"></a>  sinh  
+##  <a name="sinh"></a>  sinh  
  Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al seno hiperbólico de los elementos de la valarray de entrada.  
   
 ```  
@@ -888,7 +907,7 @@ valarray<Type> sinh(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  La valarray de entrada sobre cuyos elementos va a operar la función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -897,7 +916,7 @@ valarray<Type> sinh(const valarray<Type>& left);
 ### <a name="remarks"></a>Comentarios  
  Identidades que definen el seno hiperbólico en términos de la función exponencial:  
   
- sinh ( *z* ) = ( exp ( *z* ) – exp ( - *z* ) ) / 2  
+ sinh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / 2  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -958,7 +977,7 @@ The hyperbolic sine of the initial valarray is:
 11.5487  
 ```  
   
-##  <a name="a-namesqrta--sqrt"></a><a name="sqrt"></a>  sqrt  
+##  <a name="sqrt"></a>  sqrt  
  Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales a la raíz cuadrada de los elementos de la valarray de entrada.  
   
 ```  
@@ -967,7 +986,7 @@ valarray<Type> sqrt(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  La valarray de entrada sobre cuyos elementos va a operar la función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1009,7 +1028,7 @@ The initial valarray is: ( 0 1 4 9 16 ).
 The square root of the initial valarray is: ( 0 1 2 3 4 ).  
 ```  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  Intercambia los elementos de dos valarray.  
   
 ```  
@@ -1023,13 +1042,13 @@ void swap(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|` left`|Objeto de tipo `valarray`.|  
-|` right`|Objeto de tipo `valarray`.|  
+|`left`|Objeto de tipo `valarray`.|  
+|`right`|Objeto de tipo `valarray`.|  
   
 ### <a name="remarks"></a>Comentarios  
  La función de plantilla ejecuta ` left.swap( right)`.  
   
-##  <a name="a-nametana--tan"></a><a name="tan"></a>  tan  
+##  <a name="tan"></a>  tan  
  Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales a la tangente de los elementos de la valarray de entrada.  
   
 ```  
@@ -1038,7 +1057,7 @@ valarray<Type> tan(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  La valarray de entrada sobre cuyos elementos va a operar la función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1103,7 +1122,7 @@ The tangent of the initial valarray is:
 -9.6701e+012  
 ```  
   
-##  <a name="a-nametanha--tanh"></a><a name="tanh"></a>  tanh  
+##  <a name="tanh"></a>  tanh  
  Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales a la tangente hiperbólica de los elementos de la valarray de entrada.  
   
 ```  
@@ -1112,7 +1131,7 @@ valarray<Type> tanh(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- ` left`  
+ `left`  
  La valarray de entrada sobre cuyos elementos va a operar la función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1121,7 +1140,7 @@ valarray<Type> tanh(const valarray<Type>& left);
 ### <a name="remarks"></a>Comentarios  
  Identidades que definen la tangente hiperbólica en términos de la función exponencial:  
   
- tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = ( exp ( *z* ) – exp ( - *z* ) ) / ( exp ( *z* ) + exp ( - *z* ) )  
+ tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / ( exp ( *z* ) + exp ( - *z* ) )  
   
 ### <a name="example"></a>Ejemplo  
   

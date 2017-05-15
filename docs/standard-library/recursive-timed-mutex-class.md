@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - mutex/std::recursive_timed_mutex
+- mutex/std::recursive_timed_mutex::recursive_timed_mutex
+- mutex/std::recursive_timed_mutex::lock
+- mutex/std::recursive_timed_mutex::try_lock
+- mutex/std::recursive_timed_mutex::try_lock_for
+- mutex/std::recursive_timed_mutex::try_lock_until
+- mutex/std::recursive_timed_mutex::unlock
 dev_langs:
 - C++
 ms.assetid: 59cc2d5c-ed80-45f3-a0a8-05652a8ead7e
@@ -31,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a28e9521455f0380f412fc2aa81aecd713f9535a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 898661756cd21f362dc9d83dee6dab9b0c16fb8f
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex (Clase)
@@ -52,25 +59,25 @@ class recursive_timed_mutex;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[recursive_timed_mutex (Constructor)](#recursive_timed_mutex__recursive_timed_mutex_constructor)|Crea un objeto `recursive_timed_mutex` que no está bloqueado.|  
-|[~recursive_timed_mutex (Destructor)](#recursive_timed_mutex___dtorrecursive_timed_mutex_destructor)|Libera todos los recursos usados por el objeto `recursive_timed_mutex`.|  
+|[recursive_timed_mutex](#recursive_timed_mutex)|Crea un objeto `recursive_timed_mutex` que no está bloqueado.|  
+|[~recursive_timed_mutex (Destructor)](#dtorrecursive_timed_mutex_destructor)|Libera todos los recursos usados por el objeto `recursive_timed_mutex`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[lock](#recursive_timed_mutex__lock_method)|Bloquea el subproceso que realiza la llamada hasta que este obtiene la propiedad `mutex`.|  
-|[try_lock](#recursive_timed_mutex__try_lock_method)|Intenta obtener la propiedad de `mutex` sin bloquearlo.|  
-|[try_lock_for](#recursive_timed_mutex__try_lock_for_method)|Intenta obtener la propiedad de `mutex` para un intervalo de tiempo especificado.|  
-|[try_lock_until](#recursive_timed_mutex__try_lock_until_method)|Intenta obtener la propiedad de `mutex` hasta una hora especificada.|  
-|[unlock](#recursive_timed_mutex__unlock_method)|Libera la propiedad de `mutex`.|  
+|[lock](#lock)|Bloquea el subproceso que realiza la llamada hasta que este obtiene la propiedad `mutex`.|  
+|[try_lock](#try_lock)|Intenta obtener la propiedad de `mutex` sin bloquearlo.|  
+|[try_lock_for](#try_lock_for)|Intenta obtener la propiedad de `mutex` para un intervalo de tiempo especificado.|  
+|[try_lock_until](#try_lock_until)|Intenta obtener la propiedad de `mutex` hasta una hora especificada.|  
+|[unlock](#unlock)|Libera la propiedad de `mutex`.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** mutex  
+ **Encabezado:** \<mutex >  
   
  **Espacio de nombres:** std  
   
-##  <a name="a-namerecursivetimedmutexlockmethoda--lock"></a><a name="recursive_timed_mutex__lock_method"></a> lock  
+##  <a name="lock"></a> lock  
  Bloquea el subproceso que realiza la llamada hasta que este obtiene la propiedad `mutex`.  
   
 ```cpp  
@@ -80,14 +87,14 @@ void lock();
 ### <a name="remarks"></a>Comentarios  
  Si el subproceso que realiza la llamada ya posee `mutex`, el método se devuelve inmediatamente, y el bloqueo anterior permanece vigente.  
   
-##  <a name="a-namerecursivetimedmutexrecursivetimedmutexconstructora--recursivetimedmutex-constructor"></a><a name="recursive_timed_mutex__recursive_timed_mutex_constructor"></a> recursive_timed_mutex (Constructor)  
+##  <a name="recursive_timed_mutex"></a> recursive_timed_mutex (Constructor)  
  Crea un objeto `recursive_timed_mutex` que no está bloqueado.  
   
 ```cpp  
 recursive_timed_mutex();
 ```  
   
-##  <a name="a-namerecursivetimedmutexdtorrecursivetimedmutexdestructora--recursivetimedmutex-destructor"></a><a name="recursive_timed_mutex___dtorrecursive_timed_mutex_destructor"></a> ~recursive_timed_mutex (Destructor)  
+##  <a name="dtorrecursive_timed_mutex_destructor"></a> ~recursive_timed_mutex (Destructor)  
  Libera todos los recursos usados por el objeto `recursive_timed_mutex`.  
   
 ```cpp  
@@ -97,7 +104,7 @@ recursive_timed_mutex();
 ### <a name="remarks"></a>Comentarios  
  Si el objeto está bloqueado cuando se ejecuta el destructor, el comportamiento es indefinido.  
   
-##  <a name="a-namerecursivetimedmutextrylockmethoda--trylock"></a><a name="recursive_timed_mutex__try_lock_method"></a> try_lock  
+##  <a name="try_lock"></a> try_lock  
  Intenta obtener la propiedad de `mutex` sin bloquearlo.  
   
 ```cpp  
@@ -110,7 +117,7 @@ bool try_lock() noexcept;
 ### <a name="remarks"></a>Comentarios  
  Si el subproceso que realiza la llamada ya posee `mutex`, la función devuelve `true` inmediatamente, y el bloqueo anterior permanece vigente.  
   
-##  <a name="a-namerecursivetimedmutextrylockformethoda--trylockfor"></a><a name="recursive_timed_mutex__try_lock_for_method"></a> try_lock_for  
+##  <a name="try_lock_for"></a> try_lock_for  
  Intenta obtener la propiedad de `mutex` sin bloquearlo.  
   
 ```cpp  
@@ -128,7 +135,7 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 ### <a name="remarks"></a>Comentarios  
  Si el subproceso que realiza la llamada ya posee `mutex`, el método devuelve `true` inmediatamente, y el bloqueo anterior permanece vigente.  
   
-##  <a name="a-namerecursivetimedmutextrylockuntilmethoda--trylockuntil"></a><a name="recursive_timed_mutex__try_lock_until_method"></a> try_lock_until  
+##  <a name="try_lock_until"></a> try_lock_until  
  Intenta obtener la propiedad de `mutex` sin bloquearlo.  
   
 ```cpp  
@@ -148,7 +155,7 @@ bool try_lock_until(const xtime* Abs_time);
 ### <a name="remarks"></a>Comentarios  
  Si el subproceso que realiza la llamada ya posee `mutex`, el método devuelve `true` inmediatamente, y el bloqueo anterior permanece vigente.  
   
-##  <a name="a-namerecursivetimedmutexunlockmethoda--unlock"></a><a name="recursive_timed_mutex__unlock_method"></a> unlock  
+##  <a name="unlock"></a> unlock  
  Libera la propiedad de `mutex`.  
   
 ```cpp  
@@ -156,7 +163,7 @@ void unlock();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Este método libera la propiedad de `mutex` solo después de que se llame tantas veces como se ha llamado a [lock](#recursive_timed_mutex__lock_method), [try_lock](#recursive_timed_mutex__try_lock_method), [try_lock_for](#recursive_timed_mutex__try_lock_for_method) y [try_lock_until](#recursive_timed_mutex__try_lock_until_method) correctamente en el objeto `recursive_timed_mutex`.  
+ Este método libera la propiedad de `mutex` solo después de que se llame tantas veces como se ha llamado a [lock](#lock), [try_lock](#try_lock), [try_lock_for](#try_lock_for) y [try_lock_until](#try_lock_until) correctamente en el objeto `recursive_timed_mutex`.  
   
  Si el subproceso que realiza la llamada no posee `mutex`, el comportamiento es indefinido.  
   

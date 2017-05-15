@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3836d13d9f050ebdd7ed7502e11bbde2da76992a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 50f17486f72a272d45c45fc3f0c6b25a7b4b6c56
+ms.contentlocale: es-es
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint, iswprint, _isprint_l, _iswprint_l
@@ -96,7 +97,7 @@ int _iswprint_l(
  Configuración regional que se va a usar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Cada una de estas rutinas devuelve un valor distinto de cero si `c` es una representación concreta de un carácter imprimible. `isprint` devuelve un valor distinto de cero si `c` es un carácter imprimible, incluido el carácter de espacio (0x20 – 0x7E). `iswprint` devuelve un valor distinto de cero si `c` es un carácter ancho imprimible, incluido el carácter ancho de espacio. Cada una de estas rutinas devuelve 0 si `c` no cumple la condición de prueba.  
+ Cada una de estas rutinas devuelve un valor distinto de cero si `c` es una representación concreta de un carácter imprimible. `isprint`Devuelve un valor distinto de cero si `c` es un carácter imprimible: Esto incluye el carácter de espacio (0 x 20 - 0x7E). `iswprint` devuelve un valor distinto de cero si `c` es un carácter ancho imprimible, incluido el carácter ancho de espacio. Cada una de estas rutinas devuelve 0 si `c` no cumple la condición de prueba.  
   
  El resultado de la condición de prueba para estas funciones depende del valor de la categoría `LC_CTYPE` de la configuración regional; para obtener más información, vea [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual del comportamiento dependiente de la configuración regional; las versiones que tienen el sufijo `_l` son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
   
@@ -118,9 +119,6 @@ int _iswprint_l(
 |`_iswprint_l`|\<ctype.h> o \<wchar.h>|  
   
  Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de caracteres](../../c-runtime-library/character-classification.md)   

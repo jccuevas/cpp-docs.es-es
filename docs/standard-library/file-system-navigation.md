@@ -30,14 +30,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: f376ad55945cf9f23579406ae73866f93c17008b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1a3e7e0cc81bae89b0560c1aebb989e4d140e059
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="file-system-navigation"></a>Exploración del sistema de archivos
-El encabezado \<filesystem> implementa la especificación técnica del sistema de archivos de C++ ISO/IEC TS 18822:2015 (borrador final: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) y tiene tipos y funciones que le permiten escribir código independiente de la plataforma para navegar por el sistema de archivos. Al ser multiplataforma, contiene algunas API que no son relevantes para los sistemas Windows. Por ejemplo, esto significa que `is_fifo(const path&)` siempre devuelve `false` en Windows. El encabezado se basa en un borrador de especificaciones técnicas que no se ha votado para incluirse en el estándar C++17 antes de la publicación de Visual Studio 2015 RTM. Sus miembros se encuentran en el espacio de nombres `std::experimental::filesystem`, insertado a partir de `std::experimental::filesystem::v1`.  
+El encabezado \<filesystem> implementa la especificación técnica del sistema de archivos de C++ ISO/IEC TS 18822:2015 (borrador final: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) y tiene tipos y funciones que le permiten escribir código independiente de la plataforma para navegar por el sistema de archivos. Al ser multiplataforma, contiene algunas API que no son relevantes para los sistemas Windows. Por ejemplo, esto significa que `is_fifo(const path&)` siempre devuelve `false` en Windows.   
   
 ## <a name="overview"></a>Información general  
 Use las API \<filesystem> para las siguientes tareas:  
@@ -175,7 +176,7 @@ C:\Documents\2014\ < D:\Documents\2013\Reports\: true
 Para ejecutar este código, péguelo en el ejemplo anterior completo antes de `main` y quite la marca de comentario de la línea que lo llama en main.  
   
 ### <a name="converting-between-path-and-string-types"></a>Convertir entre tipos de ruta de acceso y de cadena  
-Un objeto `path` se puede convertir implícitamente a `std::wstring` o `std::string`. Esto significa que puede pasar una ruta de acceso a funciones como [wofstream::open](../standard-library/basic-ofstream-class.md#basic_ofstream__open), tal como se muestra en este ejemplo:  
+Un objeto `path` se puede convertir implícitamente a `std::wstring` o `std::string`. Esto significa que puede pasar una ruta de acceso a funciones como [wofstream::open](../standard-library/basic-ofstream-class.md#open), tal como se muestra en este ejemplo:  
   
 ```cpp  
 // filesystem_path_conversion.cpp  

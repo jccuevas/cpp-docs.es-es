@@ -1,61 +1,78 @@
 ---
-title: "_ftime_s, _ftime32_s, _ftime64_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ftime_s"
-  - "_ftime64_s"
-  - "_ftime32_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftime_s"
-  - "_ftime64_s"
-  - "ftime_s"
-  - "_ftime32_s"
-  - "ftime32_s"
-  - "ftime64_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ftime32_s (función)"
-  - "ftime_s (función)"
-  - "_ftime64_s (función)"
-  - "hora actual"
-  - "ftime64_s (función)"
-  - "hora, obtener actual"
-  - "_ftime_s (función)"
-  - "_ftime32_s (función)"
+title: _ftime_s, _ftime32_s, _ftime64_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ftime_s
+- _ftime64_s
+- _ftime32_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ftime_s
+- _ftime64_s
+- ftime_s
+- _ftime32_s
+- ftime32_s
+- ftime64_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- ftime32_s function
+- ftime_s function
+- _ftime64_s function
+- current time
+- ftime64_s function
+- time, getting current
+- _ftime_s function
+- _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _ftime_s, _ftime32_s, _ftime64_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 20611bb1f40ae900ad2653395da6a0d8279252db
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
-Obtiene la hora actual. Estas son versiones de [\_ftime, \_ftime32, \_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s, _ftime32_s, _ftime64_s
+Obtiene la hora actual. Se trata de versiones de [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) con mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 errno_t _ftime_s(   
@@ -69,48 +86,48 @@ errno_t _ftime64_s(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `timeptr`  
- Puntero a un `_timeb,``__timeb32`, o `__timeb64` estructura.  
+ Puntero a un `_timeb`, `__timeb32`, o `__timeb64` estructura.  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error. Si `timeptr` es `NULL`, el valor devuelto es `EINVAL`.  
   
-## Comentarios  
- El `_ftime_s` función obtiene la hora local actual y lo almacena en la estructura que señala `timeptr`*.* El `_timeb,``__timeb32`,y`__timeb64` estructuras se definen en SYS\\Timeb.h. Contienen cuatro campos, que se enumeran en la tabla siguiente.  
+## <a name="remarks"></a>Comentarios  
+ El `_ftime_s` función obtiene la hora local actual y la almacena en la estructura que señala `timeptr`. El `_timeb`, `__timeb32`, y `__timeb64` estructuras se definen en SYS\Timeb.h. Contienen cuatro campos, que se enumeran en la tabla siguiente.  
   
  `dstflag`  
- Distinto de cero si el horario de verano está en vigor para la zona horaria local. \(Consulte [\_tzset](../../c-runtime-library/reference/tzset.md) para obtener una explicación de cómo se determina el horario de verano.\)  
+ Distinto de cero si el horario de verano está en vigor para la zona horaria local. (Consulte [_tzset](../../c-runtime-library/reference/tzset.md) para obtener una explicación de cómo se determina el horario de verano).  
   
  `millitm`  
  Fracción de segundo en milisegundos.  
   
  `time`  
- Tiempo en segundos transcurridos desde la medianoche \(00: 00:00\) del 1 de enero de 1970, hora universal coordinada \(UTC\).  
+ La hora en segundos desde la medianoche (00:00:00) del 1 de enero de 1970, hora universal coordinada (UTC).  
   
  `timezone`  
- Diferencia en minutos, westward, mover entre la hora UTC y la hora local. El valor de `timezone` se establece el valor de la variable global `_timezone` \(consulte `_tzset`\).  
+ Diferencia en minutos, que se desplaza hacia el oeste, entre la hora UTC y la hora local. El valor de `timezone` se establece a partir del valor de la variable global `_timezone` (vea `_tzset`).  
   
- `_ftime64_s`, que utiliza el `__timeb64` estructura, permite expresar de hasta 23:59:59, hasta el 31 de diciembre de 3000, UTC; las fechas de creación del archivo, mientras que `_ftime32_s` solo representa fechas hasta las 23:59:59 del 18 de enero de 2038, hora UTC. La noche del 1 de enero de 1970, es el límite inferior del intervalo de fechas para todas estas funciones.  
+ `_ftime64_s`, que usa la estructura `__timeb64`, permite expresar fechas de creación de archivo hasta las 23:59:59 del 31 de diciembre de 3000, hora UTC; mientras que `_ftime32_s` solo representa fechas hasta las 23:59:59 del 18 de enero de 2038, hora UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para todas estas funciones.  
   
- `_ftime_s` es equivalente a `_ftime64_s` y `_timeb` contiene una hora de 64 bits. Esto es cierto a menos que \_`USE_32BIT_TIME_T` definido, en cuyo caso el comportamiento anterior está en vigor; \_`ftime_s` usa un tiempo de 32 bits y `_timeb` contiene una hora de 32 bits.  
+ `_ftime_s` equivale a `_ftime64_s` y `_timeb` contiene una hora de 64 bits. Esto es así a menos que se defina `_USE_32BIT_TIME_T`, en cuyo caso el comportamiento anterior está en vigor; `_ftime_s` usa un tiempo de 32 bits y `_timeb` contiene un tiempo de 32 bits.  
   
- `_ftime_s` valida sus parámetros. Si pasa un puntero nulo como `timeptr`, la función invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece `errno` a `EINVAL`.  
+ `_ftime_s` valida sus parámetros. Si se pasa un puntero nulo como `timeptr`, esta función invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece `errno` en `EINVAL`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Función|Encabezado necesario|  
-|-------------|--------------------------|  
-|`_ftime_s`|\< sys\/types.h \> y \< sys\/timeb.h \>|  
-|`_ftime32_s`|\< sys\/types.h \> y \< sys\/timeb.h \>|  
-|`_ftime64_s`|\< sys\/types.h \> y \< sys\/timeb.h \>|  
+|--------------|---------------------|  
+|`_ftime_s`|\<sys/types.h> y \<sys/timeb.h>|  
+|`_ftime32_s`|\<sys/types.h> y \<sys/timeb.h>|  
+|`_ftime64_s`|\<sys/types.h> y \<sys/timeb.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Bibliotecas  
+## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_ftime64_s.c  
@@ -156,16 +173,17 @@ int main( void )
 ```  
   
 ```Output  
-Segundos transcurridos desde la medianoche del 1 de enero de 1970 (UTC): 1051553334 milisegundos: 230 minutos entre la hora UTC y la hora local: (1 significa horario de verano está en vigor) de la marca de horario de 480 verano: 1 la hora es 11:08:54.230 lunes 28 de abril de 2003  
+Seconds since midnight, January 1, 1970 (UTC): 1051553334  
+Milliseconds: 230  
+Minutes between UTC and local time: 480  
+Daylight savings time flag (1 means Daylight time is in effect): 1  
+The time is Mon Apr 28 11:08:54.230 2003  
 ```  
   
-## Equivalente en .NET Framework  
- [System::DateTime::Now](https://msdn.microsoft.com/en-us/library/system.datetime.now.aspx)  
-  
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Administración del tiempo](../../c-runtime-library/time-management.md)   
- [asctime, \_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [ctime, \_ctime32, \_ctime64, \_wctime, \_wctime32, \_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [gmtime, \_gmtime32, \_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [localtime, \_localtime32, \_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [time, \_time32, \_time64](../../c-runtime-library/reference/time-time32-time64.md)
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

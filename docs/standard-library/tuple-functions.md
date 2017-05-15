@@ -10,22 +10,28 @@ f1_keywords:
 - tuple/std::get
 - tuple/std::make_tuple
 - tuple/std::tie
+- tuple/std::get
+- tuple/std::make_tuple
+- tuple/std::tie
+dev_langs:
+- C++
 ms.assetid: bc6be38f-5258-4c14-b81b-63caa335fd44
 caps.latest.revision: 13
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 4726f9457aa20889362f1058abedd0ac521c775c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: acf980e3bcd491eb08dee0c87ee1762dc25b417b
+ms.contentlocale: es-es
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="lttuplegt-functions"></a>Funciones de &lt;tuple&gt;
 ||||  
 |-|-|-|  
-|[get (Función)](#get_function)|[make_tuple (Función)](#make_tuple_function)|[tie (Función)](#tie_function)|  
+|[get](#get)|[make_tuple](#make_tuple)|[tie](#tie)|  
   
-##  <a name="a-namegetfunctiona--get-function"></a><a name="get_function"></a>  get (Función)  
- Obtiene un elemento de un objeto `tuple` , por índice o (en C ++&14;) por tipo.  
+##  <a name="get"></a>  get
+ Obtiene un elemento de un objeto `tuple` , por índice o (en C ++ 14) por tipo.  
   
 ```  
 // by index:
@@ -102,7 +108,7 @@ int main() {
 0 1.42 Call me Tuple  
 ```  
   
-##  <a name="a-namemaketuplefunctiona--maketuple-function"></a><a name="make_tuple_function"></a>  make_tuple (Función)  
+##  <a name="make_tuple"></a>make_tuple)
  Crea una `tuple` a partir de valores de elemento.  
   
 ```  
@@ -159,7 +165,7 @@ int main() {
  4 5 6 7  
 ```  
   
-##  <a name="a-nametiefunctiona--tie-function"></a><a name="tie_function"></a>  tie (Función)  
+##  <a name="tie"></a>Lazo
  Crea una `tuple` a partir de referencias de elemento.  
   
 ```  

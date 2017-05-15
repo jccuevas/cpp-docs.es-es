@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::pointer_to_binary_function
-- xfunctional/std::pointer_to_binary_function
-- pointer_to_binary_function
-- std.pointer_to_binary_function
+- xfunctional/std::pointer_to_binary
+- pointer_to_binary
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -37,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 9a806934810286e22fdea70c2af982de10f48ee5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: a510056f33bce7720896e56c7ea7798729dd831a
+ms.contentlocale: es-es
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function (Clase)
@@ -77,7 +76,7 @@ public:
  Un puntero de función binaria es un objeto de función y puede pasarse a cualquier algoritmo de la biblioteca estándar de C++ que esté esperando una función binaria como un parámetro, pero no es adaptable. Para usarlo como un adaptador, por ejemplo al enlazar un valor a este o usándolo con un negador, debe proporcionarse con los tipos anidados **first_argument_type**, **second_argument_type** y **result_type** que hacen posible dicha adaptación. La conversión mediante `pointer_to_binary_function` permite a los adaptadores de función que funcionen con punteros de función binaria.  
   
 ## <a name="example"></a>Ejemplo  
- El constructor de `pointer_to_binary_function` no suele usarse directamente. Vea la función auxiliar [ptr_fun](../standard-library/functional-functions.md#ptr_fun_function) para obtener un ejemplo de cómo declarar y usar el predicador del adaptador de `pointer_to_binary_function`.  
+ El constructor de `pointer_to_binary_function` no suele usarse directamente. Vea la función auxiliar [ptr_fun](../standard-library/functional-functions.md#ptr_fun) para obtener un ejemplo de cómo declarar y usar el predicador del adaptador de `pointer_to_binary_function`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** \<functional>  

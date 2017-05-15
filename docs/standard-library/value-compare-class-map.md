@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 200e62472c8c6002cdc45181ad019a1d78ca7977
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c46338445598ef77e6b8a4c1c261962fe9e7ff0f
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="valuecompare-class-ltmapgt"></a>value_compare (Clase) (&lt;asignación&gt;)
@@ -64,7 +65,7 @@ protected:
  Para conjuntos y conjuntos múltiples, que son simples contenedores donde los valores de clave son idénticos a los valores de elemento, `value_compare` es equivalente a `key_compare`. No lo es para asignaciones y asignaciones múltiples, dado que el valor de los elementos de tipo `pair` no es idéntico al valor de clave del elemento.  
   
 ## <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [value_comp](../standard-library/map-class.md#map__value_comp) para obtener un ejemplo de cómo declarar y usar `value_compare`.  
+  Vea el ejemplo de [value_comp](../standard-library/map-class.md#value_comp) para obtener un ejemplo de cómo declarar y usar `value_compare`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** \<map>  

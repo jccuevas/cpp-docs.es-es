@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 088bf359fefd09bf4ea71ffceacd9139fbdbfba2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 535ce75fb600b919b5e255bc580a93e448e81d59
+ms.contentlocale: es-es
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; (Clase)
@@ -63,40 +64,40 @@ class vector<bool, Allocator>
   
 |||  
 |-|-|  
-|[const_pointer](#vector_lt_bool_gt___const_pointer)|Una definición de tipo a un `const_iterator` que puede servir como puntero constante para un elemento booleano de `vector<bool>`.|  
-|[const_reference](#vector_lt_bool_gt___const_reference)|Una definición de tipo para `bool`. Después de la inicialización, no respeta actualizaciones al valor original.|  
-|[pointer](#vector_lt_bool_gt___pointer)|Una definición de tipo para `iterator` que puede servir como puntero a un elemento booleano de `vector<bool>`.|  
+|[const_pointer](#const_pointer)|Una definición de tipo a un `const_iterator` que puede servir como puntero constante para un elemento booleano de `vector<bool>`.|  
+|[const_reference](#const_reference)|Una definición de tipo para `bool`. Después de la inicialización, no respeta actualizaciones al valor original.|  
+|[pointer](#pointer)|Una definición de tipo para `iterator` que puede servir como puntero a un elemento booleano de `vector<bool>`.|  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |||  
 |-|-|  
-|[flip](#vector_lt_bool_gt___flip)|Invierte todos los bits de `vector<bool>`.|  
-|[swap](#vector_lt_bool_gt___swap)|Intercambia los elementos de dos `vector<bool>`.|  
-|[operator&#91;&#93;](#vector_lt_bool_gt___operator_at)|Devuelve una referencia simulada al elemento `vector<bool>` en una posición especificada.|  
-|`at`|Funciona igual que la función no especializada [vector](../standard-library/vector-class.md)::at, pero usa la clase de proxy [vector\<bool>::reference](#vector_lt_bool_gt___reference_class). Vea también [operator&#91;&#93;](#vector_lt_bool_gt___operator_at).|  
-|`front`|Funciona igual que la función no especializada [vector](../standard-library/vector-class.md)::front, pero usa la clase de proxy [vector\<bool>::reference](#vector_lt_bool_gt___reference_class). Vea también [operator&#91;&#93;](#vector_lt_bool_gt___operator_at).|  
-|`back`|Funciona igual que la función no especializada [vector](../standard-library/vector-class.md)::back, pero usa la clase de proxy [vector\<bool>::reference](#vector_lt_bool_gt___reference_class). Vea también [operator&#91;&#93;](#vector_lt_bool_gt___operator_at).|  
+|[flip](#flip)|Invierte todos los bits de `vector<bool>`.|  
+|[swap](#swap)|Intercambia los elementos de dos `vector<bool>`.|  
+|[operator&#91;&#93;](#op_at)|Devuelve una referencia simulada al elemento `vector<bool>` en una posición especificada.|  
+|`at`|Funciona igual que la función no especializada [vector](../standard-library/vector-class.md)::at, pero usa la clase de proxy [vector\<bool>::reference](#reference_class). Vea también [operator&#91;&#93;](#op_at).|  
+|`front`|Funciona igual que la función no especializada [vector](../standard-library/vector-class.md)::front, pero usa la clase de proxy [vector\<bool>::reference](#reference_class). Vea también [operator&#91;&#93;](#op_at).|  
+|`back`|Funciona igual que la función no especializada [vector](../standard-library/vector-class.md)::back, pero usa la clase de proxy [vector\<bool>::reference](#reference_class). Vea también [operator&#91;&#93;](#op_at).|  
   
 ### <a name="proxy-class"></a>Clase proxy  
   
 |||  
 |-|-|  
-|[Clase de referencia vector\<bool>](#vector_lt_bool_gt___reference_class)|Una clase que actúa como proxy para simular el comportamiento de `bool&` y cuyos objetos pueden proporcionar referencias a elementos (bits únicos) dentro de un objeto `vector<bool>`.|  
+|[Clase de referencia vector\<bool>](#reference_class)|Una clase que actúa como proxy para simular el comportamiento de `bool&` y cuyos objetos pueden proporcionar referencias a elementos (bits únicos) dentro de un objeto `vector<bool>`.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado**: \<vector>  
   
  **Espacio de nombres:** std  
   
-##  <a name="vector_lt_bool_gt___const_pointer"></a>  vector\<bool>::const_pointer  
+##  <a name="const_pointer"></a>  vector\<bool>::const_pointer  
  Tipo que describe un objeto que puede actuar como puntero constante a un elemento booleano de la secuencia que contiene el objeto `vector<bool>`.  
   
 ```  
 typedef const_iterator const_pointer;  
 ```  
   
-##  <a name="vector_lt_bool_gt___const_reference"></a>  vector\<bool>::const_reference  
+##  <a name="const_reference"></a>  vector\<bool>::const_reference  
  Tipo que describe un objeto que puede actuar como referencia constante a un elemento booleano de la secuencia que contiene el objeto `vector<bool>`.  
   
 ```  
@@ -104,9 +105,9 @@ typedef bool const_reference;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Para más información y ejemplos de código, vea [vector&lt;bool&gt;::reference::operator=](#vector_lt_bool_gt___reference_operator_eq).  
+ Para más información y ejemplos de código, vea [vector&lt;bool&gt;::reference::operator=](#reference_operator_eq).  
   
-##  <a name="vector_lt_bool_gt___flip"></a>  vector\<bool>::flip  
+##  <a name="flip"></a>  vector\<bool>::flip  
  Invierte todos los bits de `vector<bool>`.  
   
 ```  
@@ -144,7 +145,7 @@ int main()
   
 ```  
   
-##  <a name="vector_lt_bool_gt___operator_at"></a>  vector\<bool>::operator[]  
+##  <a name="op_at"></a>  vector\<bool>::operator[]  
  Devuelve una referencia simulada al elemento `vector<bool>` en una posición especificada.  
   
 ```  
@@ -161,7 +162,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 |`Pos`|Posición del elemento `vector<bool>`.|  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un objeto [vector\<bool>::reference](#vector_lt_bool_gt___reference_class) o [vector\<bool>::const_reference](#vector_lt_bool_gt___const_reference) que contiene el valor del elemento indizado.  
+ Un objeto [vector\<bool>::reference](#reference_class) o [vector\<bool>::const_reference](#const_reference) que contiene el valor del elemento indizado.  
   
  Si la posición especificada es mayor o igual que el tamaño del contenedor, el resultado es sin definir.  
   
@@ -198,18 +199,18 @@ int main()
 }  
 ```  
   
-##  <a name="vector_lt_bool_gt___pointer"></a>  vector\<bool>::pointer  
+##  <a name="pointer"></a>  vector\<bool>::pointer  
  Un tipo que describe un objeto que puede actuar como puntero a un elemento booleano de la secuencia contenida en el objeto `vector<bool>`.  
   
 ```  
 typedef iterator pointer;  
 ```  
   
-##  <a name="vector_lt_bool_gt___reference_class"></a>  vector\<bool>::reference Class  
+##  <a name="reference_class"></a>  vector\<bool>::reference Class  
  La clase `vector<bool>::reference` es una clase de proxy proporcionada por [vector\<bool> (Clase)](../standard-library/vector-bool-class.md) para simular `bool&`.  
   
 ### <a name="remarks"></a>Comentarios  
- Se requiere una referencia simulada porque C++ no permite de forma nativa referencias directas a bits. `vector<bool>` solo utiliza un bit por elemento, al que se puede hacer referencia mediante esta clase proxy. Sin embargo, la simulación de referencia no se completa porque algunas asignaciones no son válidas. Por ejemplo, dado que no se puede tomar la dirección del objeto `vector<bool>::reference`, el siguiente código, que usa [vector\<bool>::operator&#91;&#93;](#vector_lt_bool_gt___operator_at), no es correcto:  
+ Se requiere una referencia simulada porque C++ no permite de forma nativa referencias directas a bits. `vector<bool>` solo utiliza un bit por elemento, al que se puede hacer referencia mediante esta clase proxy. Sin embargo, la simulación de referencia no se completa porque algunas asignaciones no son válidas. Por ejemplo, dado que no se puede tomar la dirección del objeto `vector<bool>::reference`, el siguiente código, que usa [vector\<bool>::operator&#91;&#93;](#op_at), no es correcto:  
   
 ```cpp  
 vector<bool> vb;  
@@ -218,7 +219,7 @@ bool* pb = &vb[1]; // conversion error - do not use
 bool& refb = vb[1];   // conversion error - do not use  
 ```  
   
-###  <a name="vector_lt_bool_gt___reference_flip"></a>  vector\<bool>::reference::flip  
+###  <a name="reference_flip"></a>  vector\<bool>::reference::flip  
  Invierte el valor booleano de un elemento de referencia [vector\<bool>](../standard-library/vector-bool-class.md).  
   
 ```  
@@ -264,7 +265,7 @@ The vector with first element flipped is:
     false false false true true  
 ```  
   
-###  <a name="vector_lt_bool_gt___reference_operator_bool"></a>  vector\<bool>::reference::operator bool  
+###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool  
  Proporciona una conversión implícita de `vector<bool>::reference` en `bool`.  
   
 ```  
@@ -277,7 +278,7 @@ operator bool() const;
 #### <a name="remarks"></a>Comentarios  
  Este operador no puede modificar el objeto `vector<bool>`.  
   
-###  <a name="vector_lt_bool_gt___reference_operator_eq"></a>  vector\<bool>::reference::operator=  
+###  <a name="reference_operator_eq"></a>  vector\<bool>::reference::operator=  
  Asigna un valor booleano a un bit o asigna el valor contenido en un elemento al que se hace referencia a un bit.  
   
 ```  
@@ -363,8 +364,8 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false  
 ```  
   
-##  <a name="vector_lt_bool_gt___swap"></a>  vector\<bool>::swap  
- Función miembro estática que intercambia dos elementos de vectores booleanos ( `vector<bool>`) mediante la clase de proxy [vector\<bool>::reference](#vector_lt_bool_gt___reference_class).  
+##  <a name="swap"></a>  vector\<bool>::swap  
+ Función miembro estática que intercambia dos elementos de vectores booleanos ( `vector<bool>`) mediante la clase de proxy [vector\<bool>::reference](#reference_class).  
   
 ```  
 static void swap(

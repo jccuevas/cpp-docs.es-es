@@ -65,10 +65,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 60a870b9c0beff704511ab788d621b0f9697ed5d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 514e00148ec34a14a7b229d5b7e226d8be66636d
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbcjistojms-mbcjistojmsl-mbcjmstojis-mbcjmstojisl"></a>_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
@@ -107,15 +108,15 @@ unsigned int _mbcjmstojis_l(
  En la configuración regional japonesa, estas funciones devuelven un carácter convertidos, o 0 si la conversión no es posible. En una configuración regional no japonesa, estas funciones devuelven el carácter que se pasa.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `_mbcjistojms` convierte un carácter de JIS en un carácter de Microsoft Kanji (Shift JIS). El carácter se convierte solo si los bytes inicial y final están en el intervalo 0x21 – 0x7E. Si el byte inicial o final está fuera de este intervalo, `errno` se establece en `EILSEQ`. Para obtener más información sobre este y otros códigos de error, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ La función `_mbcjistojms` convierte un carácter de JIS en un carácter de Microsoft Kanji (Shift JIS). El carácter se convierte solo si los bytes inicial y final están en el intervalo 0 x 21 - 0x7E. Si el byte inicial o final está fuera de este intervalo, `errno` se establece en `EILSEQ`. Para obtener más información sobre este y otros códigos de error, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- La función `_mbcjmstojis` convierte un carácter de Shift JIS en un carácter de JIS. El carácter se convierte solo si el byte inicial está en el intervalo 0x81 – 0x9F o 0xE0 – 0xFC, y el byte final está en el intervalo 0x40 – 0x7E o 0x80 – 0xFC. Observe que algunos puntos de código de ese intervalo no tienen un carácter asignado, por lo que no pueden convertirse.  
+ El `_mbcjmstojis` función convierte un carácter Shift JIS en un carácter JIS. El carácter se convierte solo si el byte inicial está en el intervalo 0 x 81-0x9F o 0xE0 - 0xFC y el byte final está en el intervalo 0 x 40-0x7E o 0 x 80 - 0xFC. Observe que algunos puntos de código de ese intervalo no tienen un carácter asignado, por lo que no pueden convertirse.  
   
  El valor de `c` debe ser un valor de 16 bits cuyos 8 bits superiores representen el byte inicial del carácter que se va a convertir y cuyos 8 bits inferiores representen el byte final.  
   
- El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en su lugar. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
- En versiones anteriores, `_mbcjistojms` y `_mbcjmstojis` se denominaban `jistojms` y `jmstojis`, respectivamente. En su lugar, se deben usar `_mbcjistojms`,`_mbcjistojms_l`,`_mbcjmstojis` y `_mbcjmstojis_l`.  
+ En versiones anteriores, `_mbcjistojms` y `_mbcjmstojis` llamó `jistojms` y `jmstojis`, respectivamente. `_mbcjistojms`, `_mbcjistojms_l`, `_mbcjmstojis` y `_mbcjmstojis_l` debe usarse en su lugar.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -127,9 +128,6 @@ unsigned int _mbcjmstojis_l(
 |`_mbcjmstojis_l`|\<mbstring.h>|  
   
  Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Conversión de datos](../../c-runtime-library/data-conversion.md)   

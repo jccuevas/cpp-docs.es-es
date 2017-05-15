@@ -1,50 +1,67 @@
 ---
-title: "qsort_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "qsort_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "qsort_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrices [C++], ordenar"
-  - "qsort_s (función)"
-  - "algoritmo de ordenación rápida"
-  - "ordenar matrices"
+title: qsort_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- qsort_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- qsort_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [C++], sorting
+- quick-sort algorithm
+- qsort_s function
+- sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# qsort_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e4ba4fcb5acc8c914cf240e5b858a945bd55cc86
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
-Realiza una ordenación rápida.  Una versión de [qsort](../../c-runtime-library/reference/qsort.md) con mejoras de seguridad como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="qsorts"></a>qsort_s
+Realiza una ordenación rápida. Versión de [qsort](../../c-runtime-library/reference/qsort.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void qsort_s(  
@@ -56,64 +73,64 @@ void qsort_s(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `base`  
  Inicio de la matriz de destino.  
   
  `num`  
- Tamaño de la matriz de elementos.  
+ Tamaño de la matriz en elementos.  
   
  `width`  
  Tamaño del elemento en bytes.  
   
  `compare`  
- Función de comparación.  El primer argumento es el puntero de `context` .  El segundo argumento es un puntero a `key` para la búsqueda.  El tercer argumento es un puntero al elemento de matriz que se va a comparar con `key`.  
+ Función de comparación. El primer argumento es el puntero de `context` . El segundo argumento es un puntero a la `key` de la búsqueda. El tercer argumento es un puntero al elemento de matriz que va a comparar con `key`.  
   
  `context`  
- Un puntero a un contexto, que puede ser cualquier objeto al que `compare` rutinario necesite obtener acceso.  
+ Puntero a un contexto, que puede ser cualquier objeto al que la rutina `compare` deba obtener acceso.  
   
-## Comentarios  
- La función de `qsort_s` implementa un algoritmo de la rápido\- ordenación para ordenar una matriz de elementos de `num` , cada uno de los bytes de `width` .  El argumento `base` es un puntero a la base de la matriz que se ordenen.  `qsort_s` sobrescribe esta matriz con los elementos ordenados.  El argumento `compare` es un puntero a una rutina usuario\- proporcionada que compara dos elementos de matriz y devuelve un valor que especifica la relación.  `qsort_s` llama a la rutina de `compare` una o más veces durante la ordenación, pasando punteros a dos elementos de la matriz en cada llamada:  
+## <a name="remarks"></a>Comentarios  
+ La función `qsort_s` implementa un algoritmo de ordenación rápida para ordenar una matriz de `num` elementos, cada uno de `width` bytes. El argumento `base` es un puntero a la base de la matriz que se va a ordenar. `qsort_s` sobrescribe esta matriz con los elementos ordenados. El argumento `compare` es un puntero a una rutina proporcionada por el usuario que compara dos elementos de la matriz y devuelve un valor que especifica su relación. `qsort_s` llama a la rutina `compare` una o varias veces durante la ordenación y pasa los punteros a dos elementos de la matriz en cada llamada:  
   
 ```  
 compare( context, (void *) & elem1, (void *) & elem2 );  
 ```  
   
- La rutina debe comparar los elementos y después devolver uno de los siguientes valores:  
+ La rutina debe comparar los elementos y luego devolver uno de los siguientes valores:  
   
 |Valor devuelto|Descripción|  
-|--------------------|-----------------|  
-|\< 0|`elem1` es menor que `elem2`|  
-|0|equivalente de`elem1` a `elem2`|  
-|\> 0|`elem1` es mayor que `elem2`|  
+|------------------|-----------------|  
+|< 0|`elem1` es menor que `elem2`|  
+|0|`elem1` equivalente a `elem2`|  
+|> 0|`elem1` es mayor que `elem2`|  
   
- La matriz se ordena en sentido petición, definido por la función de comparación.  Para ordenar una matriz en orden descendente, invierta el sentido de “mayor que” y “menor que” en la función de comparación.  
+ La matriz se clasifica en orden ascendente, de acuerdo con la función de comparación. Para clasificar una matriz en orden decreciente, invierta el sentido de "mayor que" y "menor que" en la función de comparación.  
   
- Si los parámetros no válidos se pasan a la función, se invoca el controlador no válido de parámetro, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, la función devuelve y `errno` se establece en `EINVAL`.  Para obtener más información, vea [errno, \_doserrno, \_sys\_errlist y \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Si se pasan parámetros no válidos a la función, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, se devuelve la función y `errno` se establece en `EINVAL`. Para obtener más información, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-### Condiciones de error  
+### <a name="error-conditions"></a>Condiciones de error  
   
-|clave|base|compare|num|width|errno|  
-|-----------|----------|-------------|---------|-----------|-----------|  
-|`NULL`|any|any|any|any|`EINVAL`|  
-|any|`NULL`|any|\!\= 0|any|`EINVAL`|  
-|any|any|any|any|\<\= 0|`EINVAL`|  
-|any|any|`NULL`|any|any|`EINVAL`|  
+|key|base|compare|num|ancho|errno|  
+|---------|----------|-------------|---------|-----------|-----------|  
+|`NULL`|cualquiera|cualquiera|cualquiera|cualquiera|`EINVAL`|  
+|cualquiera|`NULL`|cualquiera|!= 0|cualquiera|`EINVAL`|  
+|cualquiera|cualquiera|cualquiera|any|<= 0|`EINVAL`|  
+|cualquiera|cualquiera|`NULL`|cualquiera|cualquiera|`EINVAL`|  
   
- `qsort_s` tiene el mismo comportamiento que `qsort` pero tiene el parámetro de `context` y establece `errno`.  Pasando un parámetro de `context` , las funciones de comparación pueden utilizar un puntero de objeto a la funcionalidad del objeto de acceso u otra información no accesible a través de un puntero de elemento.  La adición del parámetro de `context` crea `qsort_s`más seguro porque `context` se puede utilizar para evitar los errores de reentrada proporcionados mediante variables estáticas para incluir información compartida a disposición de la función de `compare` .  
+ `qsort_s` tiene el mismo comportamiento que `qsort`, pero tiene el parámetro `context` y establece `errno`. Si se pasa un parámetro `context`, las funciones de comparación pueden usar un puntero de objeto para obtener acceso a la funcionalidad del objeto o a otra información que no es accesible a través de un puntero de elemento. La adición de la `context` parámetro hace `qsort_s` más segura porque `context` puede utilizarse para evitar errores de reentrada provocados por el uso de variables estáticas para disponer de información compartida para el `compare` la función.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`qsort_s`|\<stdlib.h y\> search.h \<\>|  
+|-------------|---------------------|  
+|`qsort_s`|\<stdlib.h> y \<search.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
- **Bibliotecas:** Todas las versiones de [Características de la biblioteca CRT](../../c-runtime-library/crt-library-features.md).  
+ **Bibliotecas:** todas las versiones de las [características de la biblioteca de CRT](../../c-runtime-library/crt-library-features.md).  
   
-## Ejemplo  
- El siguiente ejemplo se muestra cómo utilizar el parámetro de `context` en función de `qsort_s`.  El parámetro de `context` facilita realizar ordenaciones segura para subprocesos.  En lugar de utilizar las variables estáticas que se deben sincronizar para garantizar la seguridad para subprocesos, pase otro parámetro de `context` en cada ordenada.  En este ejemplo, un objeto de la configuración regional se utiliza como parámetro de `context` .  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar el `context` parámetro en el `qsort_s` la función. El parámetro `context` facilita la ejecución de ordenaciones seguras para los subprocesos. En lugar de usar variables estáticas que deben estar sincronizadas para garantizar la seguridad de los subprocesos, pase otro parámetro `context` en cada ordenación. En este ejemplo, se usa un objeto de configuración regional como parámetro `context`.  
   
 ```  
 // crt_qsort_s.cpp  
@@ -254,7 +271,7 @@ int main( )
 }  
 ```  
   
-## Resultados del ejemplo  
+## <a name="sample-output"></a>Resultados del ejemplo  
   
 ```  
 Unsorted input:  
@@ -267,11 +284,8 @@ España Español espantado
 table tablet tableux  
 ```  
   
-## Equivalente en .NET Framework  
- <xref:System.Collections.ArrayList.Sort%2A>  
-  
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Buscar y ordenar](../../c-runtime-library/searching-and-sorting.md)   
- [bsearch\_s](../../c-runtime-library/reference/bsearch-s.md)   
- [\_lsearch\_s](../../c-runtime-library/reference/lsearch-s.md)   
+ [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
+ [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)   
  [qsort](../../c-runtime-library/reference/qsort.md)

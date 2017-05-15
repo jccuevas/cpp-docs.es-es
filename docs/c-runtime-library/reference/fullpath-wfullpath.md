@@ -1,56 +1,73 @@
 ---
-title: "_fullpath, _wfullpath | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fullpath"
-  - "_wfullpath"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wfullpath"
-  - "fullpath"
-  - "_wfullpath"
-  - "_fullpath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fullpath (función)"
-  - "_wfullpath (función)"
-  - "rutas de acceso absolutas"
-  - "fullpath (función)"
-  - "rutas de acceso de archivo relativas"
-  - "wfullpath (función)"
+title: _fullpath, _wfullpath | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fullpath
+- _wfullpath
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wfullpath
+- fullpath
+- _wfullpath
+- _fullpath
+dev_langs:
+- C++
+helpviewer_keywords:
+- _wfullpath function
+- relative file paths
+- absolute paths
+- wfullpath function
+- _fullpath function
+- fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _fullpath, _wfullpath
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7641c3cdc2a437d2c65f964ca6b1220992d11bca
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
-Crea un valor absoluto o un nombre de ruta de acceso completa para el nombre de ruta de acceso relativa especificado.  
+---
+# <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
+Crea un nombre de ruta de acceso absoluta o completa para el nombre de ruta de acceso relativa especificado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 char *_fullpath(   
@@ -65,58 +82,58 @@ wchar_t *_wfullpath(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `absPath`  
- Puntero a un búfer que contiene el valor absoluto o la ruta de acceso completa, o NULL.  
+ Puntero a un búfer que contiene el nombre de ruta de acceso absoluta o completa, o bien NULL.  
   
  `relPath`  
- Nombre de la ruta de acceso relativa.  
+ Nombre de ruta de acceso relativa.  
   
  `maxLength`  
- Longitud máxima del búfer del nombre de ruta de acceso absoluta \(`absPath`\).  Esta longitud está en bytes para `_fullpath` pero en caracteres anchos \(`wchar_t`\) para `_wfullpath`.  
+ Longitud máxima del búfer de nombre de ruta de acceso absoluta (`absPath`). Esta longitud se muestra en bytes para `_fullpath` y en caracteres anchos (`wchar_t`) para `_wfullpath`.  
   
-## Valor devuelto  
- Cada una de estas funciones devuelve un puntero a un búfer que contiene el nombre de ruta de acceso absoluta \(`absPath`\).  Si hay un error \(por ejemplo, si el último valor de `relPath` incluye una letra de unidad no válida o no puede encontrar, o si la longitud del nombre de ruta de acceso absoluta creado \(`absPath`\) es mayor que `maxLength`\), la función devuelve `NULL`.  
+## <a name="return-value"></a>Valor devuelto  
+ Cada una de estas funciones devuelve un puntero a un búfer que contiene el nombre de ruta de acceso absoluta (`absPath`). Si se produce un error, por ejemplo, el valor que se pasa en `relPath` incluye una letra de unidad que no es válida o no se puede encontrar, o si la longitud del nombre de ruta de acceso absoluta creado (`absPath`) es mayor que `maxLength`, la función devuelve `NULL`.  
   
-## Comentarios  
- La función de `_fullpath` expanda el nombre de ruta de acceso relativa en `relPath` al completo o ruta de acceso absoluta y almacena este nombre en *`absPath`.* Si `absPath` es NULL, `malloc` se utiliza para asignar un búfer de la longitud suficiente para contener el nombre de ruta.  Es responsabilidad del llamador liberar este búfer.  Un nombre de ruta de acceso relativa especifica una ruta a otra ubicación de la ubicación actual \(como el directorio de trabajo actual: “."\).  Un nombre de ruta de acceso absoluta es la extensión de un nombre de ruta de acceso relativa que indica la ruta completa necesaria para lograr la ubicación deseada de la raíz del sistema de archivos.  A diferencia de `_makepath`, `_fullpath` se puede utilizar para obtener el nombre de ruta de acceso absoluta para las rutas de acceso relativas \(`relPath`\) que incluyen “. \/” o “. \/” en su nombre.  
+## <a name="remarks"></a>Comentarios  
+ El `_fullpath` función expande el nombre de ruta de acceso relativa en `relPath` a su ruta de acceso completa o absoluta y almacena este nombre en `absPath`. Si `absPath` es NULL, se usa `malloc` para asignar un búfer de longitud suficiente para contener el nombre de ruta de acceso. Es responsabilidad del autor de llamada liberar este búfer. Un nombre de ruta de acceso relativa especifica una ruta de acceso a otra ubicación desde la ubicación actual (como el directorio de trabajo actual: "."). Un nombre de ruta de acceso absoluta es la expansión de un nombre de ruta de acceso relativa que indica toda la ruta de acceso necesaria para llegar a la ubicación que se quiere desde la raíz del sistema de archivos. A diferencia de `_makepath`, `_fullpath` puede usarse para obtener el nombre de ruta de acceso absoluta para rutas de acceso relativas (`relPath`) que incluyen "./" o "../" en sus nombres.  
   
- Por ejemplo, para utilizar las rutinas de c, la aplicación debe incluir los archivos de encabezado que contienen las declaraciones de las rutinas.  Cada instrucción include del archivo de encabezado hace referencia a la ubicación del archivo de forma relativa \(del directorio de trabajo de la aplicación\):  
+ Por ejemplo, para usar rutinas en tiempo de ejecución de C, la aplicación debe incluir los archivos de encabezado que contienen las declaraciones de las rutinas. Cada archivo de encabezado incluye una instrucción que hace referencia a la ubicación del archivo de forma relativa (desde el directorio de trabajo de la aplicación):  
   
 ```  
 #include <stdlib.h>  
 ```  
   
- cuando la ruta de acceso absoluta \(ubicación real del sistema de archivos\) del archivo puede ser:  
+ cuando la ruta de acceso absoluta (ubicación real del sistema de archivos) del archivo podría ser:  
   
 ```  
 \\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h  
 ```  
   
- `_fullpath` controla automáticamente argumentos de cadena de multibyte\- carácter según corresponda, reconociendo secuencias de multibyte\- carácter según la página de códigos multibyte actualmente en uso.  `_wfullpath` es una versión con caracteres anchos de `_fullpath`; los argumentos de cadena para `_wfullpath` son cadenas de caracteres.  `_wfullpath` y `_fullpath` se comportan exactamente igual excepto que `_wfullpath` no controla las cadenas de multibyte\- carácter.  
+ `_fullpath` controla automáticamente argumentos de cadenas de caracteres multibyte según corresponda, reconociendo secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. `_wfullpath` es una versión con caracteres anchos de `_fullpath`; los argumentos de cadena para `_wfullpath` son cadenas de caracteres anchos. `_wfullpath` y `_fullpath` se comportan de manera idéntica, salvo que `_wfullpath` no controla cadenas de caracteres multibyte.  
   
- Si se definen `_DEBUG` y `_CRTDBG_MAP_ALLOC` ambos, las llamadas a `_fullpath` y `_wfullpath` son reemplazados por llamadas a `_fullpath_dbg` y a `_wfullpath_dbg` para permitir la depuración asignaciones de memoria.  Para obtener más información, vea [\_fullpath\_dbg, \_wfullpath\_dbg](../../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md).  
+ Si `_DEBUG` y `_CRTDBG_MAP_ALLOC` se definen, las llamadas a `_fullpath` y `_wfullpath` se reemplazan por llamadas a `_fullpath_dbg` y `_wfullpath_dbg` para admitir asignaciones de memoria de depuración. Para obtener más información, consulte [_fullpath_dbg, _wfullpath_dbg](../../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md).  
   
- Esta función invoca el controlador no válido de parámetro, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md), si `maxlen` es menor o igual que 0.  Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve `NULL`.  
+ Esta función invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md), si `maxlen` es menor o igual que 0. Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve `NULL`.  
   
-### Asignaciones de rutina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
-|Rutina Tchar.h|\_UNICODE y \_MBCS no definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tfullpath`|`_fullpath`|`_fullpath`|`_wfullpath`|  
   
- Si el búfer de `absPath` es `NULL`, `_fullpath` llama [malloc](../../c-runtime-library/reference/malloc.md) para asignar un búfer y omite el argumento de `maxLength` .  Es responsabilidad del llamador desasignar este búfer \(mediante [libre](../../c-runtime-library/reference/free.md)\) según corresponda.  Si el argumento de `relPath` especifica una unidad de disco, el directorio actual de esta unidad se combina con la ruta.  
+ Si el búfer `absPath` es `NULL`, `_fullpath` llama a [malloc](../../c-runtime-library/reference/malloc.md) para asignar un búfer y omite el argumento `maxLength`. Es responsabilidad del autor de la llamada desasignar este búfer (mediante [free](../../c-runtime-library/reference/free.md)) según corresponda. Si el argumento `relPath` especifica una unidad de disco, el directorio actual de esta unidad se combina con la ruta de acceso.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Función|Encabezado necesario|  
-|-------------|--------------------------|  
-|`_fullpath`|\<stdlib.h\>|  
-|`_wfullpath`|\<stdlib.h\> o \<wchar.h\>|  
+|--------------|---------------------|  
+|`_fullpath`|\<stdlib.h>|  
+|`_wfullpath`|\<stdlib.h> o \<wchar.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_fullpath.c  
@@ -145,15 +162,15 @@ int main( void )
 }  
 ```  
   
-  **La ruta de acceso completa es: C:\\Documents y Settings\\user\\My Documents\\test**  
-**La ruta de acceso completa es: C:\\test**  
-**La ruta de acceso completa es: C:\\Documents y Settings\\user\\test**   
-## Equivalente en .NET Framework  
- [System::IO::File::Create](https://msdn.microsoft.com/en-us/library/system.io.file.create.aspx)  
+```Output  
+Full path is: C:\Documents and Settings\user\My Documents\test  
+Full path is: C:\test  
+Full path is: C:\Documents and Settings\user\test  
+```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Control de archivos](../../c-runtime-library/file-handling.md)   
- [\_getcwd, \_wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
- [\_getdcwd, \_wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   
- [\_makepath, \_wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
- [\_splitpath, \_wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)
+ [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
+ [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   
+ [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
+ [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)

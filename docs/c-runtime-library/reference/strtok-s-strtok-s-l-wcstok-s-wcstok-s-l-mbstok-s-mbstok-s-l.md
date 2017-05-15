@@ -74,10 +74,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bd731aed33b3c05a55b9a6dc2a365f68a5d343dc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4313f785ba5197c3659e74384b7d6ecda8e8c7be
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
@@ -152,7 +153,7 @@ _locale_tlocale
  Si `strToken` es `NULL` pero el contexto es un puntero a un puntero de contexto válido, no se produce error.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `strtok_s` busca el siguiente token en `strToken`. El juego de caracteres de `strDelimit` especifica los delimitadores posibles del token que se van a buscar en `strToken` en la llamada actual. `wcstok_s` y `_mbstok_s` son versiones de caracteres anchos y versiones de caracteres multibyte de `strtok_s`. Los argumentos y valores devueltos de `wcstok_s` y `_wcstok_s_l` son cadenas de caracteres anchos; los de `_mbstok_s` y `_mbstok_s_l` son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.  
+ La función `strtok_s` busca el siguiente token en `strToken`. El juego de caracteres de `strDelimit` especifica los delimitadores posibles del token que se van a buscar en `strToken` en la llamada actual. `wcstok_s` y `_mbstok_s` son versiones de caracteres anchos y multibyte de `strtok_s`. Los argumentos y valores devueltos de `wcstok_s` y `_wcstok_s_l` son cadenas de caracteres anchos; los de `_mbstok_s` y `_mbstok_s_l` son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.  
   
  Esta función valida sus parámetros. Si se produce una condición de error, como se describe en la tabla de condiciones de error, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven `NULL`.  
   
@@ -175,8 +176,8 @@ _locale_tlocale
 |-------------|---------------------|  
 |`strtok_s`|\<string.h>|  
 |`_strtok_s_l`|\<string.h>|  
-|`wcstok_s,`<br /><br /> `_wcstok_s_l`|\<string.h> o \<wchar.h>|  
-|`_mbstok_s,`<br /><br /> `_mbstok_s_l`|\<mbstring.h>|  
+|`wcstok_s`,<br /><br /> `_wcstok_s_l`|\<string.h> o \<wchar.h>|  
+|`_mbstok_s`,<br /><br /> `_mbstok_s_l`|\<mbstring.h>|  
   
  Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
@@ -246,9 +247,6 @@ Tokens:
         time.  
  tokens  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)   

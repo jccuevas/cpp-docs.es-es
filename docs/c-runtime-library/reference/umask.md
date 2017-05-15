@@ -1,52 +1,69 @@
 ---
-title: "_umask | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_umask"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_umask"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_umask (función)"
-  - "permisos de archivo [C++]"
-  - "archivos [C++], configuración de permisos para"
-  - "máscaras"
-  - "máscaras, file-permission-setting"
-  - "umask (función)"
+title: _umask | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _umask
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _umask
+dev_langs:
+- C++
+helpviewer_keywords:
+- masks, file-permission-setting
+- _umask function
+- masks
+- umask function
+- file permissions [C++]
+- files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _umask
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f2ad9c75caa5f3816ab4791dc4e67cb7937bfad4
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
-Establece la máscara predeterminada de los permisos de archivo.  Una versión más segura de esta función está disponible; vea [\_umask\_s](../../c-runtime-library/reference/umask-s.md).  
+---
+# <a name="umask"></a>_umask
+Establece la máscara de permisos de archivo predeterminados. Hay disponible una versión más segura de esta función; vea [_umask_s](../../c-runtime-library/reference/umask-s.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int _umask(  
@@ -54,20 +71,20 @@ int _umask(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `pmode`  
- Valor de permisos predeterminado.  
+ Configuración de permisos predeterminada.  
   
-## Valor devuelto  
- `_umask` devuelve el valor anterior de `pmode`.  No se devuelve ningún error.  
+## <a name="return-value"></a>Valor devuelto  
+ `_umask` devuelve el valor anterior de `pmode`. No se devuelve ningún error.  
   
-## Comentarios  
- La función de `_umask` establece la máscara de archivo del proceso actual el modo especificado por *`pmode`.* La máscara de archivo modifica la configuración de permisos nuevos archivos creados por `_creat`, `_open`, o `_sopen`.  Si un bit de la máscara es 1, el bit correspondiente en el valor solicitado de permiso del archivo se establece en 0 \(denegado\).  Si un bit de la máscara es 0, el bit correspondiente permanece sin cambios.  La configuración de permisos para un nuevo archivo no se establece hasta que se cierra el archivo por primera vez.  
+## <a name="remarks"></a>Comentarios  
+ El `_umask` función establece la máscara de permisos de archivo del proceso actual en el modo especificado por `pmode`. La máscara de permisos de archivo modifica la configuración de permisos de los nuevos archivos creados por `_creat`, `_open` o `_sopen`. Si un bit de la máscara es 1, el bit correspondiente del valor de permiso solicitado del archivo se establece en 0 (no permitido). Si un bit de la máscara es 0, el bit correspondiente se deja sin modificar. La configuración de permisos de un nuevo archivo no se establece hasta que se cierra el archivo por primera vez.  
   
- La expresión de entero `pmode` contiene una o ambas de las constantes de manifiesto siguientes, definidos en SYS\\STAT.H:  
+ La expresión de entero `pmode` contiene una o las dos constantes del manifiesto siguientes, definidas en SYS\STAT.H:  
   
  `_S_IWRITE`  
- Escribir permitida.  
+ Escritura permitida.  
   
  `_S_IREAD`  
  Lectura permitida.  
@@ -75,22 +92,22 @@ int _umask(
  `_S_IREAD | _S_IWRITE`  
  Lectura y escritura permitidas.  
   
- Cuando se dan ambas constantes, se combinan con bit a bit\- OR el operador \(          `|`  \).  Si el argumento de `pmode` es `_S_IREAD`, la lectura no se permite \(el archivo es de sólo escritura\).  Si el argumento de `pmode` es `_S_IWRITE`, escribir no se permite \(el archivo es de sólo lectura\).  Por ejemplo, si el bit de escritura se establece en la máscara, cualquier nuevo archivo será de sólo lectura.  Observe que con MS\-DOS y los sistemas operativos Windows, todos los archivos son legibles; no es posible asignar el permiso de solo escritura.  Por consiguiente, establecer la lectura mordida con `_umask` no tiene ningún efecto en los modos de archivo.  
+ Cuando se proporcionan ambas constantes, se unen mediante el operador OR bit a bit (`|`). Si el argumento `pmode` es `_S_IREAD`, no se permite la lectura (el archivo es de solo escritura). Si el argumento `pmode` es `_S_IWRITE`, no se permite la escritura (el archivo es de solo lectura). Por ejemplo, si el bit de escritura está establecido en la máscara, los nuevos archivos serán de solo lectura. Tenga en cuenta que en los sistemas operativos MS-DOS y Windows, todos los archivos se pueden leer; no se puede conceder permiso de solo escritura. Por tanto, el establecimiento del bit de lectura con `_umask` no tiene ningún efecto sobre los modos del archivo.  
   
- Si `pmode` no es una combinación de una de las constantes de manifiesto ni escribir un conjunto alternas de constantes, la función omitirá los.  
+ Si `pmode` no es una combinación de una de las constantes del manifiesto o incorpora un conjunto alternativo de constantes, la función simplemente las omitirá.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`_umask`|\<io.h, sistema\>\<\/stat.h, sistema\/\>types.h \<\>|  
+|-------------|---------------------|  
+|`_umask`|\<io.h>, \<sys/stat.h>, \<sys/types.h>|  
   
  Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
-## Bibliotecas  
+## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_umask.c  
@@ -115,14 +132,14 @@ int main( void )
 }  
 ```  
   
-  **Oldmask \= 0x0000**   
-## Equivalente en .NET Framework  
- [System::IO::File::SetAttributes](https://msdn.microsoft.com/en-us/library/system.io.file.setattributes.aspx)  
+```Output  
+Oldmask = 0x0000  
+```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Control de archivos](../../c-runtime-library/file-handling.md)   
- [E\/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)   
- [\_chmod, \_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
- [\_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_mkdir, \_wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+ [E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)   
+ [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: d06d072dd62eed102c3073cd1cd7a0c112e674bb
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 9ae60a13db0f975aca84c74caed43327e5bd1267
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="cdialog-class"></a>CDialog (clase)
@@ -269,7 +270,7 @@ virtual BOOL CreateIndirect(
   
  Use la `CWnd::DestroyWindow` función para destruir un cuadro de diálogo creado por el `CreateIndirect` (función).  
   
- Cuadros de diálogo que contienen controles ActiveX requieren información adicional proporcionada en un **DLGINIT** recursos. Para obtener más información, vea el artículo de Knowledge Base Q231591, "Cómo: usar una plantilla de cuadro de diálogo para crear un cuadro de diálogo MFC con un ActiveX Control." Artículos de Knowledge Base están disponibles en la documentación de Visual Studio de MSDN Library o en [http://support.microsoft.com](http://support.microsoft.com/).  
+ Cuadros de diálogo que contienen controles ActiveX requieren información adicional proporcionada en un **DLGINIT** recursos. Para obtener más información, vea el artículo de Knowledge Base Q231591, "Cómo: usar una plantilla de cuadro de diálogo para crear un cuadro de diálogo MFC con un ActiveX Control." Artículos de Knowledge Base están disponibles en [http://support.microsoft.com](http://support.microsoft.com/).  
   
 ##  <a name="domodal"></a>CDialog::DoModal  
  Llame a esta función miembro para invocar el cuadro de diálogo modal y devolver el resultado de cuadro de diálogo cuando haya finalizado.  
@@ -379,7 +380,7 @@ BOOL InitModalIndirect(
 ### <a name="remarks"></a>Comentarios  
  Para crear un cuadro de diálogo modal indirectamente, asignar un bloque de memoria global y rellenarlo con la plantilla de cuadro de diálogo. A continuación, llamar a vacío `CDialog` constructor para construir el objeto de cuadro de diálogo. A continuación, llame a `InitModalIndirect` para almacenar el identificador de la plantilla de cuadro de diálogo en memoria. Se crea y se muestra el cuadro de diálogo de Windows más adelante, cuando el [DoModal](#domodal) se llama la función miembro.  
   
- Cuadros de diálogo que contienen controles ActiveX requieren información adicional proporcionada en un **DLGINIT** recursos. Para obtener más información, vea el artículo de Knowledge Base Q231591, "Cómo: usar una plantilla de cuadro de diálogo para crear un cuadro de diálogo MFC con un ActiveX Control." Artículos de Knowledge Base están disponibles en la documentación de Visual Studio de MSDN Library o en [http://support.microsoft.com](http://support.microsoft.com/).  
+ Cuadros de diálogo que contienen controles ActiveX requieren información adicional proporcionada en un **DLGINIT** recursos. Para obtener más información, vea el artículo de Knowledge Base Q231591, "Cómo: usar una plantilla de cuadro de diálogo para crear un cuadro de diálogo MFC con un ActiveX Control." Artículos de Knowledge Base están disponibles en [http://support.microsoft.com](http://support.microsoft.com/).  
   
 ##  <a name="mapdialogrect"></a>CDialog::MapDialogRect  
  La llamada para convertir las unidades de cuadro de diálogo de un rectángulo en unidades de pantalla.  
