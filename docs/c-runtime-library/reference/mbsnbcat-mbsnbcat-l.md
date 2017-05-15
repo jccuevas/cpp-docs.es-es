@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 412e739b9a336cf98dcf08cba9a477625613cbfc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ad5d71827a69eaf46f5aef05e2c880e4e4eef71f
+ms.contentlocale: es-es
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
@@ -117,7 +118,7 @@ unsigned char *_mbsnbcat_l(
  `_mbsnbcat` devuelve un puntero a la cadena de destino. No se reserva ningún valor devuelto para indicar un error.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `_mbsnbcat` anexa, como máximo, los primeros `count` bytes de `src` a `dest`. Si el byte que precede inmediatamente al carácter nulo en `dest` es un byte inicial, byte inicial de `src` sobrescribe este byte inicial. De lo contrario, el byte inicial de `src` sobrescribe el carácter nulo de terminación de `dest`. Si hay un byte null en `src` antes de que se anexen `count` bytes, _`mbsnbcat` anexa todos los bytes de `src`, hasta el carácter nulo. Si `count` es mayor que la longitud de `src`, se usa la longitud de `src` en lugar de `count`. La cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.  
+ La función `_mbsnbcat` anexa, como máximo, los primeros `count` bytes de `src` a `dest`. Si el byte que precede inmediatamente al carácter nulo en `dest` es un byte inicial, byte inicial de `src` sobrescribe este byte inicial. De lo contrario, el byte inicial de `src` sobrescribe el carácter nulo de terminación de `dest`. Si hay un byte nulo en `src` antes de que se anexen `count` bytes, `_mbsnbcat` anexa todos los bytes de `src`, hasta el carácter nulo. Si `count` es mayor que la longitud de `src`, se usa la longitud de `src` en lugar de `count`. La cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.  
   
  El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. La versión `_mbsnbcat` de esta función usa la configuración regional actual de su comportamiento dependiente de la configuración regional; la versión `_mbsnbcat_l` es idéntica, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
   
@@ -142,9 +143,6 @@ unsigned char *_mbsnbcat_l(
 |`_mbsnbcat_l`|\<mbstring.h>|  
   
  Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework  
- No es aplicable. Para llamar a la función estándar de C, use `PInvoke`. Para obtener más información, vea [Ejemplos de invocación de plataforma](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Vea también  
  [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)   
