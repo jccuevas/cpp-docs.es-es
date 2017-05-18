@@ -26,15 +26,16 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 9b35cb78e482ad9441939f1d7eae5d214d13ab4f
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ee7e4f3e09f5b1512182d17fda9033a45ad4aa5b
+ms.openlocfilehash: c4bfe76d3b57962fe10df1d55f6ec5b58f70a38a
+ms.contentlocale: es-es
+ms.lasthandoff: 05/09/2017
 
 ---
    
 # <a name="c-conformance-improvements-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Mejoras de conformidad de C++ en [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
-
+Para conocer las mejoras de la versión de actualización 15.3, consulte las [correcciones de errores en la versión de actualización 15.3 de Visual Studio](#update_153).
 ## <a name="new-language-features"></a>Nuevas características de lenguaje  
 Gracias a la compatibilidad de constexpr generalizado y NSDMI con los agregados, el compilador ya tiene la totalidad de las características que se agregaron en el estándar C++14. Tenga en cuenta que al compilador todavía le faltan algunas características de los estándares C++11 y C++98. Consulte [Visual C++ Language Conformance](visual-cpp-language-conformance.md) (Conformidad del lenguaje Visual C++) para ver una tabla que muestra el estado actual del compilador.
 
@@ -278,16 +279,6 @@ static_assert(test2, "PASS2");
 Según el estándar de C++, una clase que se declara dentro de un espacio de nombres anónimo tiene vinculación interna y, por lo tanto, no se puede exportar. En Visual Studio 2015 y versiones anteriores no se aplicó esta regla. En Visual Studio 2017 se aplica la regla de forma parcial. En el siguiente ejemplo se genera este error en Visual Studio 2017: "error C2201: ' const `anonymous namespace'::S1::`vftable'': debe tener una vinculación externa para exportarlo o importarlo".
 
 ```cpp
-namespace
-{
-    struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
-}
-```
-
-### <a name="classes-declared-in-anonymous-namespaces"></a>Clases declaradas en espacios de nombres anónimos
-Según el estándar de C++, una clase que se declara dentro de un espacio de nombres anónimo tiene vinculación interna y, por lo tanto, no se puede exportar. En Visual Studio 2015 y versiones anteriores no se aplicó esta regla. En Visual Studio 2017 se aplica la regla de forma parcial. En el siguiente ejemplo se genera este error en Visual Studio 2017: "error C2201: ' const `anonymous namespace'::S1::`vftable'': debe tener una vinculación externa para exportarlo o importarlo".
-
-```cpp
 struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
 ```
 
@@ -357,6 +348,241 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
        r2->Value;
 }
 ```
+
+## <a name="update_153"></a> Versión de actualización 15.3 de Visual Studio 2017
+### <a name="calls-to-deleted-member-templates"></a>Llamadas a plantillas de miembro eliminado
+En versiones anteriores de Visual Studio, había ocasiones en que el compilador no podía emitir un error en las llamadas con un formato incorrecto a una plantilla de miembro eliminado, lo que podía provocar bloqueos en tiempo de ejecución. El código siguiente produce ahora el error C2280, "'int S<int>:: f<int>(void)': se está intentando hacer referencia a una función eliminada":
+```cpp
+template<typename T> 
+struct S { 
+template<typename U> static int f() = delete; 
+}; 
+ 
+void g() 
+{ 
+decltype(S<int>::f<int>()) i; // this should fail 
+}
+```
+Para corregir el error, declare i como `int`.
+
+### <a name="pre-condition-checks-for-type-traits"></a>Comprobaciones de condición previa para type traits
+La versión de actualización 15.3 de Visual Studio 2017 mejora las comprobaciones de condición previa para type-traits a fin de seguir el estándar de manera más estricta. Una de estas comprobaciones es para asignable. El código siguiente produce el error C2139 en la versión de actualización 15.3:
+
+```cpp
+struct S; 
+enum E; 
+ 
+static_assert(!__is_assignable(S, S), "fail"); // this is allowed in VS2017 RTM, but should fail 
+static_assert(__is_convertible_to(E, E), "fail"); // this is allowed in VS2017 RTM, but should fail
+```
+
+### <a name="new-compiler-warning-and-runtime-checks-on-native-to-managed-marshaling"></a>Nuevas advertencias de compilador y comprobaciones en tiempo de ejecución en la serialización nativa a administrada
+Para llamar de funciones administradas a funciones nativas se requiere la serialización. El CLR realiza la serialización, pero no comprende la semántica de C++. Si se pasa un objeto nativo por valor, CLR llama al constructor de copia del objeto o usa BitBlt, lo que puede provocar un comportamiento indefinido en tiempo de ejecución. 
+ 
+Ahora, el compilador emite una advertencia si puede saber en tiempo de compilación que se pasa un objeto nativo con el constructor de copia eliminada entre límites nativos y administrados por valor. En aquellos casos en los que el compilador no lo sepa en tiempo de compilación, se inyectará una comprobación en tiempo de ejecución para que el programa llame a std::terminate inmediatamente cuando se produzca una serialización con un formato incorrecto. En la versión de actualización 15.3, el siguiente código produce C4606 "A": el paso de un argumento por valor entre los límites nativo y administrado requiere un constructor de copia válido. De lo contrario, el comportamiento en tiempo de ejecución es indefinido.
+```cpp
+class A 
+{ 
+public: 
+A() : p_(new int) {} 
+~A() { delete p_; } 
+ 
+A(A const &) = delete; 
+A(A &&rhs) { 
+p_ = rhs.p_; 
+} 
+ 
+private: 
+int *p_; 
+}; 
+ 
+#pragma unmanaged 
+ 
+void f(A a) 
+{ 
+} 
+ 
+#pragma managed 
+ 
+int main() 
+{ 
+    f(A()); // This call from managed to native requires marshalling. The CLR doesn't understand C++ and uses BitBlt, which will result in a double-free later. 
+}
+```
+Para corregir el error, quite la directiva `#pragma managed` para marcar el llamador como nativo y evitar la serialización. 
+
+### <a name="experimental-api-warning-for-winrt"></a>Advertencia de API experimental para WinRT
+Las API de WinRT que se publican para experimentación y comentarios se decorarán con `Windows.Foundation.Metadata.ExperimentalAttribute`. En la versión de actualización 15.3, el compilador producirá la advertencia C4698 cuando encuentra el atributo. Algunas API de versiones anteriores del SDK de Windows se han decorado con el atributo, y las llamadas a estas API comenzarán a desencadenar esta advertencia del compilador. Los SDK más recientes de Windows tendrán quitado el atributo de todos los tipos enviados, pero si usa un SDK antiguo, deberá suprimir estas advertencias en todas las llamadas a tipos enviados.
+El código siguiente produce la advertencia C4698: "'Windows::Storage::IApplicationDataStatics2::GetForUserAsync' solo se usa con fines de evaluación y está sujeto a cambio o eliminación en futuras actualizaciones":
+```cpp
+Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
+```
+
+Para deshabilitar la advertencia, agregue #pragma:
+
+```cpp
+#pragma warning(push) 
+#pragma warning(disable:4698) 
+ 
+Windows::Storage::IApplicationDataStatics2::GetForUserAsync() 
+ 
+#pragma warning(pop)
+```
+### <a name="out-of-line-definition-of-a-template-member-function"></a>Definición fuera de línea de una función de miembro de plantilla 
+La versión de actualización 15.3 produce un error cuando encuentra una definición fuera de línea de una función de miembro de plantilla que no se ha declarado en la clase. El código siguiente produce ahora el error C2039: "f": no es miembro de "S":
+
+```cpp
+struct S {}; 
+ 
+template <typename T> 
+void S::f(T t) {}
+```
+
+Para corregir el error, agregue una declaración a la clase:
+
+```cpp
+struct S { 
+    template <typename T> 
+    void f(T t); 
+}; 
+template <typename T> 
+void S::f(T t) {}
+```
+
+### <a name="attempting-to-take-the-address-of-this-pointer"></a>Intento de tomar la dirección del puntero "this"
+En C++ "this" es un prvalue de puntero de tipo a X. No puede tomar la dirección de "this" ni enlazarlo a una referencia lvalue. En versiones anteriores de Visual Studio, el compilador le permitiría eludir esta restricción mediante la realización de una conversión. En la versión de actualización 15.3, el compilador produce el error C2664.
+
+### <a name="conversion-to-an-inaccessible-base-class"></a>Conversión a una clase base inaccesible
+La versión de actualización 15.3 produce un error cuando intenta convertir un tipo a una clase base que es inaccesible. El compilador produce ahora el  
+error C2243: "conversión de tipo": la conversión de "D *" a "B *" existe, pero no es accesible. El código siguiente es incorrecto y podría provocar un bloqueo en tiempo de ejecución. El compilador produce ahora el error C2243 cuando encuentra código como este:
+
+```cpp
+#include <memory> 
+ 
+class B { }; 
+class D : B { }; // should be public B { }; 
+ 
+void f() 
+{ 
+   std::unique_ptr<B>(new D()); 
+}
+```
+### <a name="default-arguments-are-not-allowed-on-out-of-line-definitions-of-member-functions"></a>No se permiten argumentos predeterminados en definiciones fuera de línea de funciones miembro
+No se permiten argumentos predeterminados en definiciones fuera de línea de funciones miembro de clases de plantilla.  El compilador emite una advertencia en /permissive y un error en /permissive- En versiones anteriores de Visual Studio, el siguiente código de formato incorrecto podía ocasionar un bloqueo en tiempo de ejecución. La versión de actualización 15.3 produce la advertencia C5034: "A<T>::f": una definición fuera de línea de un miembro de una plantilla de clase no puede tener argumentos predeterminados:
+```cpp
+ 
+template <typename T> 
+struct A { 
+    T f(T t, bool b = false); 
+}; 
+ 
+template <typename T> 
+T A<T>::f(T t, bool b = false) 
+{ 
+... 
+}
+```
+Para corregir el error, quite el argumento predeterminado "= false". 
+
+### <a name="use-of-offsetof-with-compound-member-designator"></a>Uso de offsetof con el designador de miembro compuesta
+En la versión de actualización 15.3, el uso de offsetof(T, m) donde m es un "designador de miembro compuesto" dará lugar a una advertencia al compilar con la opción /Wall. El código siguiente es incorrecto y podría provocar un bloqueo en tiempo de ejecución. La versión de actualización 15.3 produce la "advertencia C4841: extensión no estándar utilizada: designador de miembro compuesto en offseto":
+
+```cpp
+  
+struct A { 
+int arr[10]; 
+}; 
+ 
+// warning C4841: non-standard extension used: compound member designator in offsetof 
+constexpr auto off = offsetof(A, arr[2]);
+```
+Para corregir el código, deshabilite la advertencia con una pragma o cambie el código para que no se use offsetof: 
+
+```cpp
+#pragma warning(push) 
+#pragma warning(disable: 4841) 
+constexpr auto off = offsetof(A, arr[2]); 
+#pragma warning(pop) 
+```
+
+### <a name="using-offsetof-with-static-data-member-or-member-function"></a>Uso de offsetof con un miembro de datos estático o una función miembro
+En la versión de actualización 15.3, el uso de offsetof(T, m) donde m hace referencia a un miembro de datos estático o a una función miembro, dará error. El siguiente código genera el "error C4597: comportamiento indefinido: offsetof aplicado a la función de miembro "foo'" y "error C4597: comportamiento indefinido: offsetof aplicado al miembro de datos estático "bar"":
+```cpp
+ 
+#include <cstddef> 
+ 
+struct A { 
+int foo() { return 10; } 
+static constexpr int bar = 0; 
+}; 
+ 
+constexpr auto off = offsetof(A, foo); 
+Constexpr auto off2 = offsetof(A, bar);
+```
+ 
+Este código no tiene un formato correcto y podría ocasionar un bloqueo en tiempo de ejecución. Para corregir el error, cambie el código para que deje de invocar un comportamiento indefinido. Se trata de código no portable que no admite el estándar de C++.
+
+### <a name="new-warning-on-declspec-attributes"></a>Nueva advertencia en los atributos declspec
+En la versión de actualización 15.3, el compilador ya no ignora los atributos si se aplica __declspec(…) antes de la especificación de vinculación de "C" externa. Anteriormente, el compilador ignoraría el atributo, lo que podría tener implicaciones para el tiempo de ejecución. Cuando la opción `/Wall /WX` está configurada, el siguiente código produce la "advertencia C4768: los atributos __declspec anteriores a la especificación de la vinculación se ignoran":
+
+```cpp
+ 
+__declspec(noinline) extern "C" HRESULT __stdcall
+```
+
+Para corregir la advertencia, coloque primero la "C" externa:
+
+```cpp
+extern "C" __declspec(noinline) HRESULT __stdcall
+```
+
+### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype y llamadas a destructores eliminados
+En versiones anteriores de Visual Studio, el compilador no detectaba cuándo se produce una llamada a un destructor eliminado en el contexto de la expresión asociada a "decltype". En la versión de actualización 15.3, el siguiente código produce el error C2280: "A<T>::~A(void)": se está intentando hacer referencia a una función eliminada":
+
+```cpp
+template<typename T> 
+struct A 
+{ 
+   ~A() = delete; 
+}; 
+ 
+template<typename T> 
+auto f() -> A<T>; 
+ 
+template<typename T> 
+auto g(T) -> decltype((f<T>())); 
+ 
+void h() 
+{ 
+   g(42); 
+}
+```
+### <a name="unitialized-const-variables"></a>Variables const no inicializadas
+La versión Visual Studio 2017 RTW tenía una regresión en la que el compilador de C++ no emitía un diagnóstico si no se inicializaba una variable "const". Esta regresión se ha corregido en Visual Studio 2017 Update 1. El siguiente código produce ahora la "advertencia C4132: "Valor": se debe inicializar el objeto const:
+
+```cpp
+const int Value;
+```
+Para corregir el error, asigne un valor a `Value`.
+
+### <a name="empty-declarations"></a>Declaraciones vacías
+La versión de actualización 15.3 de Visual Studio 2017 ahora advierte sobre declaraciones vacías para todos los tipos, no solo los integrados. El código siguiente produce ahora una advertencia C4091 de nivel 2 para las cuatro declaraciones:
+
+```cpp
+struct A {};
+template <typename> struct B {};
+enum C { c1, c2, c3 };
+ 
+int;    // warning C4091 : '' : ignored on left of 'int' when no variable is declared
+A;      // warning C4091 : '' : ignored on left of 'main::A' when no variable is declared
+B<int>; // warning C4091 : '' : ignored on left of 'B<int>' when no variable is declared
+C;      // warning C4091 : '' : ignored on left of 'C' when no variable is declared
+```
+
+Para quitar las advertencias, simplemente conviértalas en comentario o quite las declaraciones vacías.  En casos donde el objeto sin nombre no tenga que tener un efecto secundario (como RAII), se le debe proporcionar un nombre.
+ 
+La advertencia se excluye en /Wv:18 y está activada de forma predeterminada en el nivel de advertencia W2.
+
 
 ## <a name="see-also"></a>Vea también  
 [Conformidad del lenguaje Visual C++](visual-cpp-language-conformance.md)  

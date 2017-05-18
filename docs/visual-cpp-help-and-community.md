@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: 4d67a376c8a000b48984f8a290b0d042c33a0f7c
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: f09027c947478aa07cbefe13114edde8932c4a2d
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="visual-c-help-and-community"></a>Ayuda y comunidad de Visual C++
@@ -52,7 +54,7 @@ Aquí se explica dónde obtener información sobre cómo escribir código de C++
 |[Centro para desarrolladores de Windows](http://go.microsoft.com/fwlink/p/?LinkId=256534)|Contiene información sobre cómo utilizar C++ y otros lenguajes para desarrollar aplicaciones para [!INCLUDE[win8](build/reference/includes/win8_md.md)]. Forma parte del Centro de desarrollo de Windows; el contenido de C++ está bajo el nodo Documentos > Referencia del lenguaje.|  
   
 ### <a name="online-and-offline-documentation"></a>Documentación en línea y sin conexión  
- Se puede ver en línea el contenido de MSDN Library y del Centro de desarrollo de Windows. Este contenido se actualiza a menudo.  
+ Puede ver el contenido en línea de Microsoft para desarrolladores. Este contenido se actualiza con regularidad. 
   
  También se puede descargar y ver el contenido localmente en el Visor de Ayuda sin conexión. La documentación sin conexión está organizada por libros de contenido relacionado, que también se actualizan periódicamente. Puede descargar los libros que le interesen a medida que estén disponibles. Para obtener más información, vea [Visor de Ayuda de Microsoft](/visualstudio/ide/microsoft-help-viewer).  
   
@@ -64,8 +66,3 @@ Aquí se explica dónde obtener información sobre cómo escribir código de C++
 |[Channel 9](http://go.microsoft.com/fwlink/p/?LinkId=251694)|Contiene vídeos de conferencias y entrevistas. Utilice el cuadro de búsqueda de la página principal de Channel 9 para buscar contenido de C++.|  
 |[Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=256535)|Contiene artículos y noticias sobre Visual Studio y herramientas de desarrollo relacionadas.|  
 |[Foros de MSDN](http://go.microsoft.com/fwlink/p/?LinkId=256538)|Foros oficiales de Microsoft donde puede enviar preguntas y obtener respuestas de Microsoft y de expertos de la comunidad. Utilice el cuadro de búsqueda de la página principal de foros para encontrar los foros relacionados específicamente con C++.|
-
-
-<!--HONumber=Feb17_HO4-->
-
-
