@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: fbbed22766f9029456f15c4a554ae91322e6a275
+ms.contentlocale: es-es
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ Estas macros definen entradas y mapas de propiedades.
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
    
-##  <a name="a-namebeginpropmapa--beginpropmap"></a><a name="begin_prop_map"></a>BEGIN_PROP_MAP  
+##  <a name="begin_prop_map"></a>BEGIN_PROP_MAP  
  Marca el comienzo de la asignación de propiedad del objeto.  
   
 ```
@@ -73,7 +74,7 @@ BEGIN_PROP_MAP(theClass)
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Windowing&#103;](../../atl/codesnippet/cpp/property-map-macros_1.h)]  
   
-##  <a name="a-namepropdataentrya--propdataentry"></a><a name="prop_data_entry"></a>PROP_DATA_ENTRY  
+##  <a name="prop_data_entry"></a>PROP_DATA_ENTRY  
  Indica la medida o dimensiones de un control ActiveX.  
   
 ```
@@ -102,7 +103,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
   
  [!code-cpp[NVC_ATL_Windowing&#132;](../../atl/codesnippet/cpp/property-map-macros_3.h)]  
   
-##  <a name="a-namepropentrytypea--propentrytype"></a><a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
+##  <a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
  Use esta macro para escribir una descripción, la propiedad DISPID y la propiedad página de propiedades CLSID en la asignación de propiedad del objeto.  
   
 ```
@@ -130,7 +131,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [BEGIN_PROP_MAP](#begin_prop_map).  
   
-##  <a name="a-namepropentrytypeexa--propentrytypeex"></a><a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX  
+##  <a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX  
  Similar a [PROP_ENTRY_TYPE](#prop_entry_type), pero permite especificar un IID determinado si su objeto admite varias interfaces duales.  
   
 ```
@@ -163,7 +164,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
   
  [!code-cpp[NVC_ATL_Windowing&#133;](../../atl/codesnippet/cpp/property-map-macros_4.h)]  
   
-##  <a name="a-nameproppagea--proppage"></a><a name="prop_page"></a>PROP_PAGE  
+##  <a name="prop_page"></a>PROP_PAGE  
  Use esta macro para especificar una página de propiedades CLSID en la asignación de propiedad del objeto.  
   
 ```
@@ -185,7 +186,7 @@ PROP_PAGE(clsid)
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Windowing&#134;](../../atl/codesnippet/cpp/property-map-macros_5.h)]  
   
-##  <a name="a-nameendpropmapa--endpropmap"></a><a name="end_prop_map"></a>END_PROP_MAP  
+##  <a name="end_prop_map"></a>END_PROP_MAP  
  Marca el final de la asignación de propiedad del objeto.  
   
 ```

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
 ms.openlocfilehash: dc71a6958a352ebf1c46406114c32d77b7fb8887
+ms.contentlocale: es-es
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -45,7 +46,7 @@ La biblioteca estándar proporciona contenedores con seguridad de tipos para alm
   
  Los contenedores se pueden dividir en tres categorías: contenedores de secuencias, contenedores asociativos y adaptadores de contenedor.  
   
-##  <a name="a-namesequencecontainersa-sequence-containers"></a><a name="sequence_containers"></a> Contenedores de secuencias  
+##  <a name="sequence_containers"></a> Contenedores de secuencias  
  Los contenedores de secuencias mantienen el orden de los elementos insertados que especifique.  
   
  Un contenedor de `vector` se comporta como una matriz, pero puede crecer automáticamente según sea necesario. Su acceso es aleatorio y se almacena de forma contigua, y su longitud es muy flexible. Por estas y otras razones, `vector` es el contenedor preferido de secuencias para la mayoría de las aplicaciones. Si no sabe con seguridad qué tipo de contenedor de secuencias debe utilizar, empiece usando un vector. Para más información, vea [vector (Clase)](../standard-library/vector-class.md).  

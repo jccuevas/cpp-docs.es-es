@@ -5,7 +5,7 @@ ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
@@ -26,9 +26,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
 ms.openlocfilehash: e0a92f82413702c639af4a2cd4c4cc62abcce2b2
+ms.contentlocale: es-es
 ms.lasthandoff: 02/24/2017
 
 ---

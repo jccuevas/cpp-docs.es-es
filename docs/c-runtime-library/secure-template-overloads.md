@@ -1,101 +1,122 @@
 ---
-title: "Sobrecargas de plantilla seguras | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES"
-  - "_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES"
-  - "_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES"
-  - "_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES"
-  - "_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT"
-  - "sobrecargas de plantilla seguras"
+title: Sobrecargas de plantillas seguras | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
+- _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES
+- _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
+dev_langs:
+- C++
+helpviewer_keywords:
+- _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
+- _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES
+- _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
+- secure template overloads
 ms.assetid: 562741d0-39c0-485e-8529-73d740f29f8f
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Sobrecargas de plantilla seguras
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 507270783542ca0f76632c180b23330653b0018f
+ms.contentlocale: es-es
+ms.lasthandoff: 04/24/2017
 
-Muchas funciones CRT han quedado obsoletas en favor de nuevas, seguridad\- mejoradas versiones \(por ejemplo, `strcpy_s` es el reemplazo más seguro para `strcpy`\).  CRT proporciona sobrecargas de plantilla para facilitar la transición a las variantes más seguros.  
+---
+# <a name="secure-template-overloads"></a>Sobrecargas de plantilla seguras
+Microsoft ha dejado de usar muchas funciones de la biblioteca en tiempo de ejecución (CRT) en favor de versiones con seguridad mejorada. Por ejemplo, `strcpy_s` es la sustitución más segura para `strcpy`. Las funciones en desuso son orígenes comunes de errores de seguridad, ya que no impiden operaciones que pueden sobrescribir la memoria. De forma predeterminada, el compilador genera una advertencia de desuso cuando se usa una de estas funciones. La biblioteca CRT proporciona sobrecargas de plantilla de C++ para estas funciones con el fin de facilitar la transición a variantes más seguras.  
   
- Por ejemplo, este código genera una advertencia porque está desusada `strcpy` :  
+Por ejemplo, este fragmento de código genera una advertencia porque `strcpy` está en desuso:  
   
- `char szBuf[10];`  
+```cpp  
+char szBuf[10];  
+strcpy(szBuf, "test"); // warning: deprecated  
+```
   
- `strcpy(szBuf, "test"); // warning: deprecated`  
+La advertencia de desuso está ahí para indicarle que su código puede no ser seguro. Si ha comprobado que el código no puede sobrescribir la memoria, dispone de varias opciones. Para suprimir la advertencia, puede omitir la advertencia, puede definir el símbolo `_CRT_SECURE_NO_WARNINGS` antes de incluir las instrucciones "include" para los encabezados de CRT o puede actualizar el código para usar `strcpy_s`:  
   
- Puede omitir la advertencia.  Definir el símbolo `_CRT_SECURE_NO_WARNINGS` para suprimir la advertencia, o para actualizar el código para utilizar `strcpy_s`:  
+```cpp  
+char szBuf[10];  
+strcpy_s(szBuf, 10, "test"); // security-enhanced _s function  
+```
   
- `char szBuf[10];`  
+Las sobrecargas de plantilla proporcionan opciones adicionales. Si define `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` como 1, se permiten sobrecargas de plantillas de funciones CRT estándar que llaman automáticamente a variantes más seguras. Si `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` es 1, no es necesario ningún cambio en el código. En segundo plano, la llamada a `strcpy` se cambia a una llamada a `strcpy_s` con el argumento de tamaño suministrado automáticamente.  
   
- `strcpy_s(szBuf, 10, "test"); // security-enhanced _s function`  
+```cpp  
+#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1  
   
- Las sobrecargas de plantilla proporcionan opciones adicionales.  Definir `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` a sobrecargas de 1 plantilla de CRT estándar funciona de que los variantes más seguros automáticamente.  Si `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` es 1, no hay cambios en el código necesarios.  En segundo plano, la llamada a `strcpy` se cambiará a una llamada a `strcpy_s` con el argumento de tamaño proporcionado automáticamente.  
+// ...  
   
- `#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1`  
+char szBuf[10];  
+strcpy(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")  
+```  
   
- `...`  
-  
- `char szBuf[10];`  
-  
- `strcpy(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")`  
-  
- `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` no afecta a las funciones que toman un recuento, como `strncpy`.  Para habilitar las sobrecargas de plantilla para las funciones de recuento, defina `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` en 1.  Antes de ello, sin embargo, asegúrese de que el código pasa el recuento de caracteres, no el tamaño del búfer \(un error común\).  También, código que explícitamente escribe un terminador nulo al final del búfer después de la llamada de función es innecesaria si el tipo Variant seguro.  Si necesita comportamiento de truncamiento, vea [\_TRUNCATE](../c-runtime-library/truncate.md).  
+La macro `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` no afecta a las funciones que toman un recuento, como `strncpy`. Para habilitar las sobrecargas de plantilla para las funciones de recuento, defina `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` como 1. Antes de hacerlo, sin embargo, asegúrese de que el código pasa el número de caracteres, no el tamaño del búfer (un error común). Además, el código que escribe explícitamente un terminador nulo al final del búfer después de la llamada a la función no es necesario si se llama a la variante segura. Si necesita comportamiento de truncamiento, consulte [_TRUNCATE](../c-runtime-library/truncate.md).  
   
 > [!NOTE]
->  `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` macro requiere que `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` también está definido como 1.  Si se define `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` mientras 1 y `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` se define como 0, la aplicación no realizará ninguna sobrecargas de la plantilla.  
+>  La macro `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` requiere que `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` también se defina como 1. Si `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` se define como 1 y `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` se define como 0, la aplicación no realizará ninguna sobrecarga de plantilla.  
   
- La definición de `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` a 1 habilita las sobrecargas de la plantilla de variantes seguros \(nombres que terminen en “\_s”\).  En este caso, si `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` es 1, entonces un pequeño cambio debe crear el código original:  
+Cuando se define `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` como 1, se permiten sobrecargas de plantilla de las variantes seguras (nombres que terminan en "_s"). En este caso, si `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` es 1, se debe realizar entonces un pequeño cambio en el código original:  
   
- `#define _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES 1`  
+```cpp  
+#define _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES 1  
   
- `...`  
+// ...  
   
- `char szBuf[10];`  
+char szBuf[10];  
+strcpy_s(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")  
+```  
   
- `strcpy_s(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")`  
+ Solo es necesario cambiar el nombre de la función (agregando "_s"); la sobrecarga de plantilla se ocupa de proporciona el argumento de tamaño.  
   
- Sólo el nombre de la función debe cambiarse \(agrega “\_s”\); la sobrecarga de la plantilla tomará el cuidado para proporcionar el argumento size.  
+ De forma predeterminada, `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` y `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` se definen como 0 (deshabilitado) y `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` se define como 1 (habilitado).  
   
- De forma predeterminada, se definen `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` y `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` como 0 \(deshabilitado\) y `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` se define como 1 \(habilitado\).  
+ Tenga en cuenta que estas sobrecargas de plantilla solo funcionan con matrices estáticas. Los búferes asignados de forma dinámica requieren cambios adicionales en el código fuente. Examinando de nuevo los ejemplos anteriores:  
   
- Observe que estas sobrecargas de plantilla solo funcionan para matrices estáticas.  Los búferes dinámicamente asignados requieren cambios adicionales de código fuente.  Visitar de los ejemplos anteriores:  
+```cpp  
+#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1  
   
- `#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1`  
+// ...  
   
- `...`  
-  
- `char *szBuf = (char*)malloc(10);`  
-  
- `strcpy(szBuf, "test"); // still deprecated; have to change to`  
-  
- `// strcpy_s(szBuf, 10, "test");`  
+char *szBuf = (char*)malloc(10);  
+strcpy(szBuf, "test"); // still deprecated; you have to change it to  
+                       // strcpy_s(szBuf, 10, "test");  
+```  
   
  Y esto:  
   
- `#define _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES 1`  
+```cpp  
+#define _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES 1  
   
- `...`  
+// ...  
   
- `char *szBuf = (char*)malloc(10);`  
+char *szBuf = (char*)malloc(10);  
+strcpy_s(szBuf, "test"); // doesn't compile; you have to change it to  
+                         // strcpy_s(szBuf, 10, "test");  
+```  
   
- `strcpy_s(szBuf, "test"); // doesn't compile; have to change to`  
-  
- `// strcpy_s(szBuf, 10, "test");`  
-  
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Características de seguridad de CRT](../c-runtime-library/security-features-in-the-crt.md)   
  [Características de la biblioteca CRT](../c-runtime-library/crt-library-features.md)

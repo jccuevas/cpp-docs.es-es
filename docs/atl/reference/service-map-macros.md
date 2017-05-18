@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: eea45a3315237c77eff0231d485111cefb8557cc
+ms.contentlocale: es-es
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -48,7 +49,7 @@ Estas macros definen entradas y mapas de servicio.
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
    
-##  <a name="a-namebeginservicemapa--beginservicemap"></a><a name="begin_service_map"></a>BEGIN_SERVICE_MAP  
+##  <a name="begin_service_map"></a>BEGIN_SERVICE_MAP  
  Marca el comienzo de la asignación de servicio.  
   
 ```
@@ -69,7 +70,7 @@ BEGIN_SERVICE_MAP(theClass)
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_COM&#57;](../../atl/codesnippet/cpp/service-map-macros_1.h)]  
   
-##  <a name="a-nameendservicemapa--endservicemap"></a><a name="end_service_map"></a>END_SERVICE_MAP  
+##  <a name="end_service_map"></a>END_SERVICE_MAP  
  Marca el final de la asignación de servicio.  
   
 ```
@@ -79,7 +80,7 @@ END_SERVICE_MAP()
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="a-nameserviceentrya--serviceentry"></a><a name="service_entry"></a>SERVICE_ENTRY  
+##  <a name="service_entry"></a>SERVICE_ENTRY  
  Indica que el objeto admite el identificador de servicio especificado por *SID*.  
   
 ```
@@ -93,7 +94,7 @@ SERVICE_ENTRY( SID )
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="a-nameserviceentrychaina--serviceentrychain"></a><a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN  
+##  <a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN  
  Indica a [método IServiceProviderImpl:: QueryService](#queryservice) cadena para el objeto especificado por `punk`.  
   
 ```
@@ -107,7 +108,7 @@ SERVICE_ENTRY_CHAIN( punk )
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="a-namequeryservicea--iserviceproviderimplqueryservice"></a><a name="queryservice"></a>Método IServiceProviderImpl:: QueryService  
+##  <a name="queryservice"></a>Método IServiceProviderImpl:: QueryService  
  Crea o tiene acceso al servicio especificado y devuelve un puntero de interfaz a la interfaz especificada para el servicio.  
   
 ```

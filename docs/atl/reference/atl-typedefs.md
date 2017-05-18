@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
 dev_langs:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 347e7bf7cd9173fb2815f44fc052ec23ab4055a6
 ms.openlocfilehash: aa57212b602538e4e8d2854c6075562e72472796
+ms.contentlocale: es-es
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -61,7 +62,7 @@ Active Template Library incluye las siguientes definiciones de tipo.
 |[LPCURL](#lpcurl)|Un puntero a una constante [CUrl](../../atl/reference/curl-class.md) objeto.|  
 |[LPURL](#lpurl)|Un puntero a un [CUrl](../../atl/reference/curl-class.md) objeto.|  
   
-##  <a name="a-nameatlbasemodulea--atlbasemodule"></a><a name="_atl_base_module"></a>_ATL_BASE_MODULE  
+##  <a name="_atl_base_module"></a>_ATL_BASE_MODULE  
  Se define como un typedef basado en _ATL_BASE_MODULE70.  
   
 ```   
@@ -73,7 +74,7 @@ typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
   
  La estructura _ATL_BASE_MODULE se derivan de las clases que forman parte de las clases de módulo ATL 7.0.  Para obtener más información sobre las clases de módulo ATL, consulte [clases de módulos COM](../../atl/com-modules-classes.md).  
   
-##  <a name="a-nameatlcommodulea--atlcommodule"></a><a name="_atl_com_module"></a>_ATL_COM_MODULE  
+##  <a name="_atl_com_module"></a>_ATL_COM_MODULE  
  Se define como un typedef basado en _ATL_COM_MODULE70.  
   
 ```   
@@ -83,7 +84,7 @@ typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 ### <a name="remarks"></a>Comentarios  
  ATL (proyectos) que utilice funciones COM utilizan. Basado en [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md).  
   
-##  <a name="a-nameatlmodulea--atlmodule"></a><a name="_atl_module"></a>_ATL_MODULE  
+##  <a name="_atl_module"></a>_ATL_MODULE  
  Se define como un typedef basado en _ATL_MODULE70.  
   
 ```   
@@ -93,7 +94,7 @@ typedef ATL::_ATL_MODULE70 _ATL_MODULE;
 ### <a name="remarks"></a>Comentarios  
  Basado en [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md).  
   
-##  <a name="a-nameatlwinmodulea--atlwinmodule"></a><a name="_atl_win_module"></a>_ATL_WIN_MODULE  
+##  <a name="_atl_win_module"></a>_ATL_WIN_MODULE  
  Se define como un typedef basado en _ATL_WIN_MODULE70.  
   
 ```   
@@ -104,20 +105,20 @@ typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 ### <a name="remarks"></a>Comentarios  
  Utilizado por los proyectos ATL que usan características de la ventana. Basado en [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md).  
   
-##  <a name="a-nameatlurlporta--atlurlport"></a><a name="atl_url_port"></a>ATL_URL_PORT 
+##  <a name="atl_url_port"></a>ATL_URL_PORT 
   El tipo utilizado por [CUrl](curl-class.md) para especificar un número de puerto.
 ```  
 typedef WORD ATL_URL_PORT;
 ```  
 
-##  <a name="a-nameccomdispatchdrivera--ccomdispatchdriver"></a><a name="ccomdispatchdriver"></a>CComDispatchDriver  
+##  <a name="ccomdispatchdriver"></a>CComDispatchDriver  
  Esta clase administra los punteros de interfaz COM.  
   
 ```   
 typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;   
 ```  
   
-##  <a name="a-nameccomglobalsthreadmodela--ccomglobalsthreadmodel"></a><a name="ccomglobalsthreadmodel"></a>CComGlobalsThreadModel  
+##  <a name="ccomglobalsthreadmodel"></a>CComGlobalsThreadModel  
  El subproceso apropiado llama a métodos del modelo, independientemente de que se utiliza el modelo de subprocesos.  
   
 ```   
@@ -151,7 +152,7 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
   
  Use `CComObjectThreadModel` dentro de una clase de objeto único. Use `CComGlobalsThreadModel` en un objeto que están disponible globalmente para el programa, o cuando desee proteger los recursos de módulo en varios subprocesos.  
   
-##  <a name="a-nameccomobjectthreadmodela--ccomobjectthreadmodel"></a><a name="ccomobjectthreadmodel"></a>CComObjectThreadModel  
+##  <a name="ccomobjectthreadmodel"></a>CComObjectThreadModel  
  El subproceso apropiado llama a métodos del modelo, independientemente de que se utiliza el modelo de subprocesos.  
   
 ```   
@@ -185,7 +186,7 @@ typedef CComMultiThreadModel CComObjectThreadModel;
   
  Use `CComObjectThreadModel` dentro de una clase de objeto único. Use `CComGlobalsThreadModel` en un objeto que está disponible globalmente para el programa o cuando desea proteger los recursos de módulo en varios subprocesos.  
   
-##  <a name="a-nameccontainedwindowa--ccontainedwindow"></a><a name="ccontainedwindow"></a>CContainedWindow  
+##  <a name="ccontainedwindow"></a>CContainedWindow  
  Esta clase es una especialización de **CContainedWindowT.**  
   
 ```   
@@ -195,28 +196,28 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 ### <a name="remarks"></a>Comentarios  
  `CContainedWindow`es una especialización de [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md). Si desea cambiar la clase base o rasgos, use `CContainedWindowT` directamente.  
   
-##  <a name="a-namecpatha--cpath"></a><a name="cpath"></a>CPath  
+##  <a name="cpath"></a>CPath  
  Una especialización de [CPathT](../../atl/reference/cpatht-class.md) con `CString`.  
   
 ```   
 typedef CPathT<CString> CPath;   
 ```  
   
-##  <a name="a-namecpathaa--cpatha"></a><a name="cpatha"></a>CPathA  
+##  <a name="cpatha"></a>CPathA  
  Una especialización de [CPathT](../../atl/reference/cpatht-class.md) con `CStringA`.  
   
 ```   
 typedef CPathT<CStringA> CPathA;   
 ```  
   
-##  <a name="a-namecpathwa--cpathw"></a><a name="cpathw"></a>CPathW  
+##  <a name="cpathw"></a>CPathW  
  Una especialización de [CPathT](../../atl/reference/cpatht-class.md) con `CStringW`.  
   
 ```   
 typedef ATL::CPathT<CStringW> CPathW;   
 ```  
   
-##  <a name="a-namecsimplevalarraya--csimplevalarray"></a><a name="csimplevalarray"></a>CSimpleValArray  
+##  <a name="csimplevalarray"></a>CSimpleValArray  
  Representa una matriz para almacenar tipos simples.  
   
 ```   
@@ -226,14 +227,14 @@ typedef ATL::CPathT<CStringW> CPathW;
 ### <a name="remarks"></a>Comentarios  
  `CSimpleValArray`se proporciona para crear y administrar matrices que contienen tipos de datos simples. Es un simple #define de [CSimpleArray](../../atl/reference/csimplearray-class.md).  
   
-##  <a name="a-namelpcurla--lpcurl"></a><a name="lpcurl"></a>LPCURL  
+##  <a name="lpcurl"></a>LPCURL  
  Un puntero a una constante [CUrl](../../atl/reference/curl-class.md) objeto.  
   
 ```   
 typedef const CUrl* LPCURL;   
 ```  
 
-##  <a name="a-namedefaultthreadtraitsa--defaultthreadtraits"></a><a name="defaultthreadtraits"></a>DefaultThreadTraits
+##  <a name="defaultthreadtraits"></a>DefaultThreadTraits
 La clase de rasgos de subprocesos de forma predeterminada.
 
 ### <a name="syntax"></a>Sintaxis
@@ -248,7 +249,7 @@ La clase de rasgos de subprocesos de forma predeterminada.
 ## <a name="remarks"></a>Comentarios
 Si el proyecto actual utiliza CRT multiproceso, DefaultThreadTraits se define como CRTThreadTraits. De lo contrario, se utiliza Win32ThreadTraits.
   
-##  <a name="a-namelpurla--lpurl"></a><a name="lpurl"></a>LPURL  
+##  <a name="lpurl"></a>LPURL  
  Un puntero a un [CUrl](../../atl/reference/curl-class.md) objeto.  
   
 ```   

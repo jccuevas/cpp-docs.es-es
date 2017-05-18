@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
-ms.openlocfilehash: 4e419ebbdd1a5fcc178436f2ec6151a3d02c1a21
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ef479e2818cb9226830cc34f3fe9f8e59202e89
+ms.openlocfilehash: bb69ad913af2fd4777c5b4e64bde0758beb73822
+ms.contentlocale: es-es
+ms.lasthandoff: 04/28/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historial de cambios en Visual C++ 2003-2015
@@ -317,7 +318,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
     |has_trivial_move_assign|is_trivially_move_assignable|  
     |has_trivial_destructor|is_trivially_destructible|  
   
--   **Directivas launch::any y launch::sync** The nonstandard Directivas launch::any y launch::sync were removed. En su lugar, para launch::any, use launch:async &#124; launch:deferred. Para launch::sync, use launch::deferred. Consulte [Launch (enumeración)](../standard-library/future-enums.md#launch_enumeration).  
+-   **Directivas launch::any y launch::sync** The nonstandard Directivas launch::any y launch::sync were removed. En su lugar, para launch::any, use launch:async &#124; launch:deferred. Para launch::sync, use launch::deferred. Consulte [Launch (enumeración)](../standard-library/future-enums.md#launch).  
   
 ####  <a name="BK_MFC"></a> MFC y ATL  
   
@@ -864,6 +865,752 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
 -   **Constructores de copias**  
   
      Tanto en [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] como en [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)], el compilador genera un constructor de copias para una clase si esa clase tiene un constructor de movimiento definido por el usuario, pero ningún constructor de copias definido por el usuario. En Dev14, este constructor de copias generado implícitamente también se marca como "= delete".  
+
+<!--From here to VS_Update1 added 04/21/2017-->
+
+-   **main declarado como "C" externo requiere un tipo de valor devuelto.**  
+
+El código siguiente genera ahora C4430. 
+```cpp
+extern "C" __cdecl main(){} // C4430
+```
+Para corregir el error, agregue el tipo de valor devuelto:
+```cpp
+extern "C" int __cdecl main(){} // OK
+```
+
+ -   **typename no se permite en un inicializador de miembro**  
+
+El código siguiente genera ahora C2059.
+ ```cpp
+template<typename T>
+struct S1 : public T::type
+{
+    S1() : typename T::type() // C2059
+    {
+    }
+};
+
+struct S2 {
+    typedef S2 type;
+};
+
+S1<S2> s;
+```
+Para corregir el error, quite `typename` del inicializador:
+```cpp
+S1() : T::type() // OK
+...
+```
+
+-   **La clase de almacenamiento en especializaciones explícitas se omite.** 
+
+En el siguiente código, se omite el especificador de clase de almacenamiento estático. 
+```cpp
+template <typename T>
+void myfunc(T h)
+{
+}
+
+template<>
+static void myfunc(double h) // static is ignored
+{
+}
+
+```
+
+-   **Una constante usada en un elemento static_assert dentro de un aplantilla de clase siempre dará error.**  
+
+El código siguiente provoca que static_assert siempre genere error:
+```cpp
+template <size_t some_value>
+struct S1
+{
+    static_assert(false, "default not valid"); // always invoked
+
+};
+
+//other partial specializations here
+```
+
+Para solucionar este problema, ajuste el valor en un struct:
+```cpp
+template <size_t some_value>
+struct constant_false {
+    static const bool value = false;
+};
+
+template <size_t some_value>
+struct S1
+{
+    static_assert(constant_false<some_value>::value, "default not valid");
+};
+
+//other partial specializations here
+```
+
+-   **Reglas aplicadas para declaraciones adelantadas. (Solo se aplica a C.)**  
+
+El código siguiente produce ahora C2065:
+```cpp
+struct token_s;
+typedef int BOOL;
+typedef int INT;
+
+
+
+typedef int(*PFNTERM)(PTOKEN, BOOL, INT); // C2065: 'PTOKEN' : undeclared identifier
+```
+
+Para corregir el problema, agregue las declaraciones adelantadas adecuadas:
+
+```cpp
+struct token_s;
+typedef int BOOL;
+typedef int INT;
+
+// forward declarations:
+typedef struct token_s TOKEN; 
+typedef TOKEN *PTOKEN;
+
+typedef int(*PFNTERM)(PTOKEN, BOOL, INT);
+```
+
+-   **Cumplimiento más coherente de tipos de puntero de función**  
+
+El código siguiente produce ahora C2197:
+
+```cpp
+typedef int(*F1)(int);
+typedef int(*F2)(int, int);
+
+void func(F1 f, int v1, int v2)
+{
+    f(v1, v2); // C2197
+}
+```
+
+-   **Llamadas ambiguas a funciones sobrecarfadas**  
+
+El código siguiente produce ahora C266: 'N::bind': llamada ambigua a una función sobrecargada
+```cpp 
+template<typename R, typename T, typename T1, typename A1>
+void bind(R(T::*)(T1), A1&&);
+
+namespace N
+{
+    template <typename T, typename R, typename ... Tx>
+    void bind(R(T::*)(Tx...), T* ptr);
+}
+
+using namespace N;
+
+class Manager
+{
+public:
+    void func(bool initializing);
+
+    void mf()
+    {
+        bind(&Manager::func, this); //C2668
+    }
+};
+```
+
+Para corregir el error, puede calificar completamente la llamada para enlazar: N::bind(...). Sin embargo, si este cambio se manifiesta mediante un identificador sin declarar (C2065), puede ser adecuado corregirlo con una declaración "using" en su lugar.
+
+Este patrón se produce con frecuencia con ComPtr y otros tipos en el espacio de nombres Microsoft::WRL.
+
+-   **Corrija la dirección incorrecta de**  
+
+El código siguiente produce ahora C2440:  "=": no se puede convertir de "type *" a "type". Para corregir el error, cambie &(type) por (type) y (&f()) por (f()).
+ 
+```cpp
+\\ C
+typedef void (*type)(void);
+ 
+void f(int i, type p);
+void g(int);
+void h(void)
+{
+    f(0, &(type)g);
+}
+ 
+\\ C++
+typedef void(*type)(void);
+ 
+type f();
+ 
+void g(type);
+ 
+void h()
+{
+    g(&f());
+}
+
+```
+
+-   **El literal de cadena es una matriz constante**  
+
+El código siguiente produce ahora C2664: "void f(void *)": el argumento 1 no se puede convertir de "const char (*)[2]" a "void *".
+```cpp
+void f(void *);
+ 
+void h(void)
+{
+    f(&__FUNCTION__); 
+    void *p = &"";
+}
+```
+
+Para corregir el error, cambie el tipo de parámetro de función a "const void *", o bien cambie el cuerpo de h para que tenga este aspecto:
+
+```cpp
+void h(void)
+{
+    char name[] = __FUNCTION__;
+    f( name); 
+    void *p = &"";
+}
+
+```
+
+-   **Cadenas UDL C++11**  
+
+El código siguiente produce ahora el error C3688: sufijo literal no válido "L"; no se encontró el operador literal o la plantilla de operador literal ""L'.
+
+
+```cpp
+#define MACRO
+
+#define STRCAT(x, y) x\#\#y
+
+int main(){
+
+    auto *val1 = L"string"MACRO;
+    auto *val2 = L"hello "L"world";
+
+    std::cout << STRCAT(L"hi ", L"there");
+}
+```
+Para corregir el error, cambie el código por esto:
+
+```cpp
+#define MACRO
+
+// Remove ##. Strings are automatically
+// concatenated so they are not needed
+#define STRCAT(x, y) x y
+
+int main(){
+    //Add space after closing quote
+    auto *val1 = L"string" MACRO;
+    auto *val2 = L"hello " L"world";
+
+    std::cout << STRCAT(L"hi ", L"there");
+}
+
+```
+En el ejemplo anterior, `MACRO` ya no se analiza como dos tokens (una cadena seguida de una macro).  Ahora se analiza como un UDL de token único.  Lo mismo se aplica a L""L"", que se analizó anteriormente como L"" y L"", y que ahora se analiza como L""L y "".
+
+Las reglas de concatenación de cadenas también se formularon con el estándar, lo que significa que L"a" "b" es equivalente a L"ab". En las ediciones anteriores de Visual Studio no se aceptaba la concatenación de cadenas con un ancho de carácter diferente.
+
+
+-   **Carácter vacío quitado de C++11**  
+
+El código siguiente produce ahora el error C2137: constante de carácter vacío
+
+```cpp
+bool check(wchar_t c){
+    return c == L''; //implicit null character
+}
+```
+
+Para corregir el error, cambie el código por esto:
+
+```cpp
+bool check(wchar_t c){
+    return c == L'\0';
+}
+```
+
+-   **El valor no puede capturar excepciones de MFC porque no se pueden copiar**  
+
+El siguiente código en una aplicación de MFC produce ahora el error C2316: 'D': no se puede capturar porque el destructor o el constructor de copia son inaccesibles o se han eliminado.
+
+```cpp
+struct B {
+public:
+    B();
+private:
+    B(const B &);
+};
+
+struct D : public B {
+};
+
+int main()
+{
+    try
+    {
+    }
+    catch (D) // C2316
+    {
+    }
+}
+
+```
+Para corregir el código, puede cambiar el bloque catch a "catch (const D &)" pero la mejor solución suele ser usar las macros TRY/CATCH de MFC.
+
+-   **alignof es ahora una palabra clave**  
+
+El siguiente código produce ahora el error C2332: "clase": falta nombre de etiqueta. Para corregir el código, debe cambiar el nombre de la clase o, si la clase realiza el mismo trabajo que alignof, simplemente sustituya la clase por la nueva palabra clave.
+```cpp
+class alignof{}
+```
+
+-   **constexpr ahora es una palabra clave**  
+
+El código siguiente produce ahora el error C2059: error de sintaxis: ')'. Para corregir el código, debe cambiar el nombre de las funciones o las variables que se llamen "constexpr". 
+```cpp
+int constexpr() {return 1;}
+```
+
+-   **Los tipos que se pueden mover no pueden ser const**  
+
+Cuando una función devuelve un tipo destinado a moverse, su tipo de valor devuelto no debe ser const.
+
+-   **Constructores de copia eliminados**  
+
+El código siguiente genera ahora el error C2280 'S::S(S &&)': se está intentando hacer referencia a una función eliminada:
+
+```cpp
+struct S{
+    S(int, int);
+    S(const S&) = delete;
+    S(S&&) = delete;
+};
+
+S s2 = S(2, 3); //C2280
+```
+Para corregir el error, use la inicialización directa para S2:
+```cpp
+struct S{
+    S(int, int);
+    S(const S&) = delete;
+    S(S&&) = delete;
+};
+
+S s2 = {2,3}; //OK
+```
+
+-   **Conversión a puntero de función solo generada cuando no hay captura lambda**  
+
+El código siguiente produce el error C2664 en Visual Studio 2015. 
+
+```cpp
+void func(int(*)(int)) {}
+
+int main() {
+
+    func([=](int val) { return val; });
+}
+```
+Para corregir el error, quite `=` de la lista de captura.
+
+-   **Llamadas ambiguas que afectan a operadores de conversión**  
+
+El código siguiente produce ahora el error C2440: "conversión de tipo": no se puede convertir de "S2" a "S1":
+
+```cpp 
+struct S1 {
+    S1(int);
+};
+
+struct S2 {
+    operator S1();
+    operator int();
+};
+
+void f(S2 s2)
+{
+
+    (S1)s2;
+
+}
+```
+Para corregir el error, debe llamar explícitamente al operador de conversión:
+
+```cpp
+void f(S2 s2)
+{
+    //Explicitly call the conversion operator
+    s2.operator S1();
+    // Or
+    S1((int)s2);
+}
+
+```
+
+El código siguiente produce ahora el error C2593: "operador =" es ambiguo:
+
+```cpp
+struct S1 {};
+
+struct S2 {
+    operator S1&();
+    operator S1() const;
+};
+
+void f(S1 *p, S2 s)
+{
+    *p = s;
+}
+```
+Para corregir el error, debe llamar explícitamente al operador de conversión:
+```cpp
+void f(S1 *p, S2 s)
+{
+       *p = s.operator S1&();
+}
+```
+
+-   **Corregir inicialización de copia no válida en inicialización de miembro no estático (NSDMI)**  
+
+El código siguiente genera ahora el error C2664: "S1::S1(S1 &&)": no se puede convertir el argumento 1 de "bool" a "const S1 &":
+```cpp
+struct S1 {
+    explicit S1(bool);
+};
+
+struct S2 {
+    S1 s2 = true; // error
+};
+```
+Para corregir el error, use la inicialización directa:
+```cpp
+struct S2 {
+S1 s1{true}; // OK
+};
+```
+
+-   **Acceso a constructores dentro de instrucciones decltype**  
+
+El código siguiente genera ahora el error C2248: "S::S": no se puede acceder al miembro privado declarado en la clase "S":
+```cpp
+class S {
+    S();
+public:
+    int i;
+};
+
+class S2 {
+    auto f() -> decltype(S().i);
+};
+```
+Para corregir el error, agregue una declaración friend para S2 en S:
+```cpp
+class S {
+    S();
+    friend class S2; // Make S2 a friend
+public:
+    int i;
+};
+```
+
+-   **El constructor predeterminado de lambda se ha eliminado implícitamente**  
+
+El código siguiente produce ahora el error C3497: no puede construir una instancia de una expresión lambda:
+```cpp
+void func(){
+    auto lambda = [](){};    
+ 
+    decltype(lambda) other;
+}
+```
+Para corregir el error, elimine la necesidad de llamar al constructor predeterminado. Si la expresión lambda no captura nada, se puede convertir en un puntero de función.
+
+-   **Expresiones lambda con un operador de asignación eliminado**  
+
+El código siguiente produce ahora el error C2280:
+
+```cpp
+#include <memory>
+#include <type_traits>
+
+template <typename T, typename D>
+std::unique_ptr<T, typename std::remove_reference<D &&>::type> wrap_unique(T *p, D &&d);
+
+void f(int i)
+{
+    auto encodedMsg = wrap_unique<unsigned char>(nullptr, [i](unsigned char *p) {
+    });
+    encodedMsg = std::move(encodedMsg);
+}
+```
+Para corregir el error, reemplace la expresión lambda por una clase functor o elimine la necesidad de usar el operador de asignación.
+
+-   **Se está intentando mover un objeto con constructor de copia eliminado**  
+
+El código siguiente produce ahora el error C2280: "'moveable::moveable(const moveable &)":  se está intentando hacer referencia a una función eliminada
+```cpp
+struct moveable {
+
+    moveable() = default;
+    moveable(moveable&&) = default;
+    moveable(const moveable&) = delete;
+};
+
+struct S {
+    S(moveable && m) :
+        m_m(m)//copy constructor deleted
+    {}
+    moveable m_m;
+};
+
+```
+Para corregir el error, use en su lugar std::move:
+```cpp
+S(moveable && m) :
+    m_m(std::move(m))
+```
+-   **La clase local no puede hacer referencia a otra clase local definida posteriormente en la misma función**  
+
+El código siguiente produce ahora el error C2079: "s" usa struct "main::S2" sin definir.
+```cpp
+int main()
+{
+    struct S2;
+    struct S1 {
+        void f() {
+            S2 s;
+        }
+    };
+    struct S2 {};
+}
+```
+Para corregir el error, mueva arriba la definición de S2:
+```cpp
+int main()
+{
+    struct S2 { //moved up
+    };
+ 
+struct S1 {
+    void f() {
+        S2 s;
+        }
+    };
+}
+```
+
+-   **No se puede llamar a un ctor base protegido en el cuerpo de ctor derivado.**  
+
+El código siguiente produce ahora el error C2248: "S1::S1": no se puede acceder al miembro protegido declarado en la clase "S1"
+```cpp
+struct S1 {
+protected:
+    S1();
+};
+
+struct S2 : public S1 {
+    S2() {
+        S1();
+    }
+};
+```
+Para corregir el error, en S2, quite la llamada a S1() desde el constructor y, si es necesario, colóquela en otra función.
+
+-   **{} impide la conversión a puntero**  
+
+El código siguiente produce ahora el error C2439 "S::p": no se pudo inicializar el miembro    
+```cpp
+struct S {
+    S() : p({ 0 }) {}
+    void *p;
+};
+```
+Para corregir el error, quite las llaves de alrededor de 0, o bien use en su lugar `nullptr`, como se muestra en este ejemplo:
+```cpp
+struct S {
+    S() : p(nullptr) {}
+    void *p;
+};
+```
+
+-   **Definición incorrecta de macro y uso con paréntesis**  
+
+El código siguiente produce ahora el error C2008: ";": no se esperaba en la definición de macro
+```cpp
+#define A; //cause of error
+
+struct S {
+    A(); // error
+};
+```
+Para corregir el problema, cambie la línea superior a `#define A();`.
+
+El código siguiente produce el error C2059: error de sintaxis: ")"
+```cpp
+
+//notice the space after 'A'
+#define A () ;
+
+struct S {
+    A();
+};
+```
+Para corregir el código, quite el espacio entre A y ().
+
+El código siguiente genera el error C2091: la función devuelve una función:
+
+```cpp
+
+#define DECLARE void f()
+
+struct S {
+    DECLARE();
+};
+```
+Para corregir el error, quite los paréntesis después DECLARE en S: `DECLARE;`.
+
+El código siguiente produce el error C2062: tipo "int" inesperado
+
+```cpp
+#define A (int)
+
+struct S {
+    A a;
+};
+```
+Para corregir el problema, defina A de la siguiente manera:
+```cpp
+#define A int
+```
+
+-   **Paréntesis adicionales en las declaraciones**  
+
+El código siguiente produce el error C2062: tipo "int" inesperado
+```cpp
+
+struct S {
+    int i;
+    (int)j;
+};
+```
+Para corregir el error, quite los paréntesis de `j`. Si los paréntesis son necesarios por motivos de claridad, use entonces typedef.
+
+-   **Constructores generados por el compilador y __declspec(novtable)**  
+
+En Visual Studio 2015, existe una mayor probabilidad de que los constructores generados por el compilador insertados de clases abstractas con clases base virtuales puedan exponer el uso inadecuado de __declspec(novtable) cuando se emplea en combinación con __declspec(dllimporlador t).
+
+-   **auto requiere una sola expresión en direct-list-initialization** El código siguiente produce ahora el error C3518: "testPositions": en un contexto de inicialización de lista directa, el tipo para "auto" solo se puede deducir a partir de una sola expresión de inicializador
+
+```cpp
+auto testPositions{
+    std::tuple<int, int>{13, 33},
+    std::tuple<int, int>{-23, -48},
+    std::tuple<int, int>{38, -12},
+    std::tuple<int, int>{-21, 17}
+};
+```
+Para corregir el error, una posibilidad es inicializar testPositions de la manera siguiente:
+
+```cpp
+std::tuple<int, int> testPositions[]{
+    std::tuple<int, int>{13, 33},
+    std::tuple<int, int>{-23, -48},
+    std::tuple<int, int>{38, -12},
+    std::tuple<int, int>{-21, 17}
+};
+```
+
+-   **Comprobación de tipos frente a punteros a tipos de is_convertible**  
+
+El código siguiente provoca ahora que la aserción estática produzca error. 
+
+```cpp
+struct B1 {
+private:
+    B1(const B1 &);
+};
+struct B2 : public B1 {};
+struct D : public B2 {};
+
+static_assert(std::is_convertible<D, B2>::value, "fail");
+```
+Para corregir el error cambie static_assert para que compare los punteros a D y B2:
+
+```cpp
+static_assert(std::is_convertible<D*, B2*>::value, "fail");
+```
+
+-   **las declaraciones declspec(novtable) deben ser coherentes**  
+
+Las declaraciones declspec deben ser coherentes en todas las bibliotecas. El siguiente código producirá ahora una infracción de regla ahora producirá una infracción de una regla de definición (ODR):
+
+```cpp
+
+//a.cpp
+class __declspec(dllexport)
+    A {
+public:
+    A();
+    A(const A&);
+    virtual ~A();
+private:
+    int i;
+};
+
+A::A() {}
+A::~A() {}
+A::A(const A&) {}
+
+//b.cpp
+// compile with cl.exe /nologo /LD /EHsc /Osx b.cpp
+#pragma comment(lib, "A")
+class __declspec(dllimport) A
+{
+public: A();
+         A(const A&);
+         virtual ~A();
+private:
+    int i;
+};
+
+struct __declspec(novtable) __declspec(dllexport) B
+    : virtual public A {
+    virtual void f() = 0;
+};
+
+//c.cpp
+#pragma comment(lib, "A")
+#pragma comment(lib, "B")
+class __declspec(dllimport) A
+{
+public:
+    A();
+    A(const A&);
+    virtual ~A();
+private:
+    int i;
+};
+struct  /* __declspec(novtable) */ __declspec(dllimport) B // Error. B needs to be novtable here also.
+    : virtual public A
+{
+    virtual void f() = 0;
+};
+
+struct C : virtual B
+{
+    virtual void f();
+};
+
+void C::f() {}
+C c;
+```
+
+
   
 ###  <a name="VS_Update1"></a> Mejoras de conformidad en Update 1  
   
@@ -1774,7 +2521,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
--   **Compatibilidad en desuso con código ATL con atributos** (nivel 1 (/W1), activo de manera predeterminada)  
+-   **Compatibilidad en desuso con código ATL con atributos**  (nivel 1 (/W1), activo de manera predeterminada)  
   
      Las versiones anteriores del compilador admitían código ATL con atributos. Como parte de la fase siguiente para quitar la compatibilidad con código ATL con atributos que [comenzó en Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), el código ATL con atributos está en desuso. Ahora, el compilador emite la advertencia del compilador C4467 para ayudarle a identificar este tipo de código en desuso.  
   
@@ -2795,3 +3542,4 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
 ## <a name="see-also"></a>Vea también  
 [Novedades de Visual C++ en Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)
+

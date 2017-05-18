@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 7e8c664bd6632f480ba53b9dedea914bbc8e4dd7
+ms.contentlocale: es-es
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -44,7 +45,7 @@ Si solo usa el objeto `cin`, no es necesario que cree un flujo de entrada. Debe 
   
 - [Constructores de flujo de cadenas de entrada](#vclrfinputstringstreamconstructorsanchor9)  
   
-##  <a name="a-namevclrfinputfilestreamconstructorsanchor8a-input-file-stream-constructors"></a><a name="vclrfinputfilestreamconstructorsanchor8"></a> Constructores de flujo de archivos de entrada  
+##  <a name="vclrfinputfilestreamconstructorsanchor8"></a> Constructores de flujo de archivos de entrada  
  Hay dos formas de crear un flujo de archivo de entrada:  
   
 -   Use el constructor de argumento `void` y después llame a la función miembro `open`:  
@@ -64,7 +65,7 @@ Si solo usa el objeto `cin`, no es necesario que cree un flujo de entrada. Debe 
     ifstream myFile("filename");
 ```  
   
-##  <a name="a-namevclrfinputstringstreamconstructorsanchor9a-input-string-stream-constructors"></a><a name="vclrfinputstringstreamconstructorsanchor9"></a> Constructores de flujo de cadenas de entrada  
+##  <a name="vclrfinputstringstreamconstructorsanchor9"></a> Constructores de flujo de cadenas de entrada  
  Los constructores de flujo de cadenas de entrada requieren la dirección del almacenamiento asignado e inicializado previamente:  
   
 ```  

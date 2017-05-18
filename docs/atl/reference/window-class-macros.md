@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 8cdedc5cfac9d49df812ae6fcfcc548201b1edb5
 ms.openlocfilehash: f32926b6efd4ffb9c0541c0574a479c13dac01df
+ms.contentlocale: es-es
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -48,7 +49,7 @@ Estas macros definen utilidades de la clase de ventana.
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
    
-##  <a name="a-namedeclarewndclassa--declarewndclass"></a><a name="declare_wnd_class"></a>DECLARE_WND_CLASS  
+##  <a name="declare_wnd_class"></a>DECLARE_WND_CLASS  
  Permite especificar el nombre de una nueva clase de ventana. Coloque esta macro en la clase de control de un control ActiveX ATL.  
   
 ```
@@ -81,7 +82,7 @@ DECLARE_WND_CLASS( WndClassName )
   
  Para obtener más información acerca de cómo utilizar ventanas en ATL, vea el artículo [clases de ventana de ATL](../../atl/atl-window-classes.md).  
 
-##  <a name="a-namedeclarewndclass2a--declarewndclass2"></a><a name="declare_wnd_class2"></a>DECLARE_WND_CLASS2  
+##  <a name="declare_wnd_class2"></a>DECLARE_WND_CLASS2  
  (2017 de visual Studio) Similar a DECLARE_WND_CLASS, pero con un parámetro adicional que evita un error de nombre dependientes cuando se compila con la /permissive-option.
   
 ```
@@ -99,7 +100,7 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 Si usa el /permissive-option, DECLARE_WND_CLASS provocará un error de compilación porque contiene un nombre dependiente. DECLARE_WND_CLASS2 requiere un nombre explícito a la clase que se utiliza en esta macro y el no provoca el error en la /permissive-flag.
 De lo contrario, es idéntica a esta macro [DECLARE_WND_CLASS](#declare_wnd_class).
    
-##  <a name="a-namedeclarewndsuperclassa--declarewndsuperclass"></a><a name="declare_wnd_superclass"></a>DECLARE_WND_SUPERCLASS  
+##  <a name="declare_wnd_superclass"></a>DECLARE_WND_SUPERCLASS  
  Permite especificar los parámetros de una clase. Coloque esta macro en la clase de control de un control ActiveX ATL.  
   
 ```
@@ -127,7 +128,7 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
   
  Para obtener más información acerca de cómo utilizar ventanas en ATL, vea el artículo [clases de ventana de ATL](../../atl/atl-window-classes.md).  
   
-##  <a name="a-namedeclarewndclassexa--declarewndclassex"></a><a name="declare_wnd_class_ex"></a>DECLARE_WND_CLASS_EX  
+##  <a name="declare_wnd_class_ex"></a>DECLARE_WND_CLASS_EX  
  Permite especificar el nombre de una clase de ventana existente en el que se basará la nueva clase de ventana. Coloque esta macro en la clase de control de un control ActiveX ATL.  
   
 ```

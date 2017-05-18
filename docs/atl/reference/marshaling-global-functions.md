@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
 ms.openlocfilehash: dd4b8d50ec69974b7b2af29438b1657e1ce592b4
+ms.contentlocale: es-es
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -47,7 +48,7 @@ Estas funciones proporcionan compatibilidad para el cálculo de referencias y co
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Crea un nuevo objeto de secuencia y calcula las referencias del puntero de interfaz especificado.|  
 |[AtlUnmarshalPtr](#atlunmarshalptr)|Convierte datos de cálculo de referencias de la secuencia en un puntero de interfaz.|  
   
-##  <a name="a-nameatlfreemarshalstreama--atlfreemarshalstream"></a><a name="atlfreemarshalstream"></a>AtlFreeMarshalStream  
+##  <a name="atlfreemarshalstream"></a>AtlFreeMarshalStream  
  Libera los datos de serializar del flujo; a continuación, libera el puntero del flujo.  
 
 ```
@@ -61,7 +62,7 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [AtlMarshalPtrInProc](#atlmarshalptrinproc).  
   
-##  <a name="a-nameatlmarshalptrinproca--atlmarshalptrinproc"></a><a name="atlmarshalptrinproc"></a>AtlMarshalPtrInProc  
+##  <a name="atlmarshalptrinproc"></a>AtlMarshalPtrInProc  
  Crea un nuevo objeto de flujo, escribe el CLSID del proxy en el flujo y calcula las referencias del puntero de interfaz especificado escribiendo los datos necesarios para inicializar el proxy en el flujo.  
   
 ```
@@ -94,7 +95,7 @@ HRESULT AtlMarshalPtrInProc(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_COM Nº&50;](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]  
   
-##  <a name="a-nameatlunmarshalptra--atlunmarshalptr"></a><a name="atlunmarshalptr"></a>AtlUnmarshalPtr  
+##  <a name="atlunmarshalptr"></a>AtlUnmarshalPtr  
  Convierte los datos de serialización del flujo en un puntero de interfaz que puede usarse en el cliente.  
    
 ```

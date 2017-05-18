@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -35,9 +35,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 48e5d1fe207089733caa5ed9e8ca30c2de21f95f
+ms.contentlocale: es-es
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -58,7 +59,7 @@ Automatización OLE proporciona maneras de llamar a métodos y tener acceso a pr
 |[DISP_PROPERTY_PARAM](#disp_property_param)|Define una propiedad de automatización OLE que toma parámetros y nombres de las funciones Get y Set.|  
 |[DISP_DEFVALUE](#disp_defvalue)|Convierte el valor predeterminado de un objeto de una propiedad existente.|  
   
-##  <a name="a-namedeclaredispatchmapa--declaredispatchmap"></a><a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
+##  <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
  Si un `CCmdTarget`-clase derivada en el programa es compatible con la automatización OLE, que la clase debe proporcionar un mapa de envíos para exponer sus métodos y propiedades.  
   
 ```   
@@ -79,7 +80,7 @@ DECLARE_DISPATCH_MAP()
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h  
 
-##  <a name="a-namebegindispatchmapa--begindispatchmap"></a><a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
+##  <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
  Declara la definición de su mapa de envíos.  
   
 ```  
@@ -99,7 +100,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h  
 
-##  <a name="a-nameenddispatchmapa--enddispatchmap"></a><a name="end_dispatch_map"></a>END_DISPATCH_MAP  
+##  <a name="end_dispatch_map"></a>END_DISPATCH_MAP  
  Termina la definición de su mapa de envíos.  
   
 ```   
@@ -112,7 +113,7 @@ END_DISPATCH_MAP()
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h  
 
-##  <a name="a-namedispfunctiona--dispfunction"></a><a name="disp_function"></a>DISP_FUNCTION  
+##  <a name="disp_function"></a>DISP_FUNCTION  
  Define una función de automatización OLE en un mapa de envíos.  
   
 ```   
@@ -198,7 +199,7 @@ DISP_FUNCTION(
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h 
 
-##  <a name="a-namedisppropertya--dispproperty"></a><a name="disp_property"></a>DISP_PROPERTY  
+##  <a name="disp_property"></a>DISP_PROPERTY  
  Define una propiedad de automatización OLE en un mapa de envíos.  
   
 ```   
@@ -245,7 +246,7 @@ DISP_PROPERTY(
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h 
 
-##  <a name="a-namedisppropertyexa--disppropertyex"></a><a name="disp_property_ex"></a>DISP_PROPERTY_EX  
+##  <a name="disp_property_ex"></a>DISP_PROPERTY_EX  
  Define una propiedad de automatización OLE y el nombre de las funciones utilizadas para obtener y establecer el valor de propiedad en un mapa de envíos.  
   
 ```   
@@ -281,7 +282,7 @@ DISP_PROPERTY_EX(
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h 
 
-##  <a name="a-namedisppropertynotifya--disppropertynotify"></a><a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
+##  <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
  Define una propiedad de automatización OLE con notificaciones en un mapa de envíos.  
   
 ```   
@@ -332,7 +333,7 @@ DISP_PROPERTY_NOTIFY(
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h 
 
-##  <a name="a-namedisppropertyparama--disppropertyparam"></a><a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
+##  <a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
  Define una propiedad que se accede con independiente **obtener** y `Set` funciones miembro.  
   
 ```   
@@ -387,7 +388,7 @@ DISP_PROPERTY_PARAM(
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h 
 
-##  <a name="a-namedispdefvaluea--dispdefvalue"></a><a name="disp_defvalue"></a>DISP_DEFVALUE  
+##  <a name="disp_defvalue"></a>DISP_DEFVALUE  
  Convierte el valor predeterminado de un objeto de una propiedad existente.  
   
 ```   
