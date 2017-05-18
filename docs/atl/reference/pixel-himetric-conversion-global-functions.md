@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: efb7e7da896aea4e377225f4c1e2c9948e635705
+ms.contentlocale: es-es
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -46,7 +47,7 @@ Estas funciones proporcionan compatibilidad para la conversión entre píxeles y
 |[AtlHiMetricToPixel](#atlhimetrictopixel)|Unidades HIMETRIC (cada unidad es de 0,01 milímetros) se convierte en píxeles.|  
 |[AtlPixelToHiMetric](#atlpixeltohimetric)|Convierte los píxeles en unidades HIMETRIC (cada unidad es de 0,01 milímetros).|  
   
-##  <a name="a-nameatlhimetrictopixela--atlhimetrictopixel"></a><a name="atlhimetrictopixel"></a>AtlHiMetricToPixel  
+##  <a name="atlhimetrictopixel"></a>AtlHiMetricToPixel  
  Convierte un tamaño de objeto en unidades HIMETRIC (cada unidad es de 0,01 milímetros) a un tamaño en píxeles del dispositivo de pantalla.  
   
  
@@ -69,7 +70,7 @@ extern void AtlHiMetricToPixel(
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
   
-##  <a name="a-nameatlpixeltohimetrica--atlpixeltohimetric"></a><a name="atlpixeltohimetric"></a>AtlPixelToHiMetric  
+##  <a name="atlpixeltohimetric"></a>AtlPixelToHiMetric  
  Convierte un tamaño de objeto especificado en píxeles en el dispositivo de pantalla en un tamaño especificado en unidades HIMETRIC (cada unidad es de 0,01 milímetros).  
   
 ```

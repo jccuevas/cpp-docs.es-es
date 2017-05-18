@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -29,9 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
 ms.openlocfilehash: 4ea001f8f60a771e46a99960c14201cf6afabc99
+ms.contentlocale: es-es
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Cómo: utilizar código C++ existente en una aplicación universal de la plataforma Windows
@@ -74,7 +76,7 @@ El resto de este tema trata sobre cómo migrar bibliotecas de C++ (archivos DLL 
   
 3.  [Convertir una biblioteca de C++ en un componente de Windows Runtime](#BK_WinRTComponent)  
   
-##  <a name="a-namebkwin32dlla-using-a-win32-dll-in-a-universal-windows-platform-app"></a><a name="BK_Win32DLL"></a> Usar un archivo DLL de Win32 en una aplicación de la Plataforma universal de Windows  
+##  <a name="BK_Win32DLL"></a> Usar un archivo DLL de Win32 en una aplicación de la Plataforma universal de Windows  
  Para mayor seguridad y confiabilidad, las aplicaciones universales de Windows se ejecutan en un entorno en tiempo de ejecución restringido, de modo que no puede usar cualquier archivo DLL nativo tal como lo haría en una aplicación de escritorio clásico de Windows. Si tiene código fuente para un archivo DLL, puede migrar el código para que se ejecute en la plataforma universal de Windows. Empiece por cambiar algunos metadatos del archivo de proyecto y la configuración del proyecto para identificar el proyecto como un proyecto de UWP. Debe compilar el código de la biblioteca con la opción/ZW, lo que habilita C++/CX. No se permiten ciertas llamadas a API en las aplicaciones de UWP debido a los controles más estrictos de ese entorno. Vea [Win32 y COM para aplicaciones de Windows Runtime y aplicaciones para Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
   
  El siguiente procedimiento se aplica en el caso de que tenga una DLL nativa que expone funciones mediante __declspec (dllexport).  
@@ -209,7 +211,7 @@ El resto de este tema trata sobre cómo migrar bibliotecas de C++ (archivos DLL 
   
     ```  
   
-##  <a name="a-namebkstaticliba-using-a-native-c-static-library-in-a-uwp-app"></a><a name="BK_StaticLib"></a> Usar una biblioteca estática nativa de C++ en una aplicación para UWP  
+##  <a name="BK_StaticLib"></a> Usar una biblioteca estática nativa de C++ en una aplicación para UWP  
  Puede utilizar una biblioteca estática de C++ nativa en un proyecto UWP, pero se deben tener en cuenta algunas restricciones y limitaciones. Empiece por leer este [tema](https://msdn.microsoft.com/library/hh771041.aspx) sobre las bibliotecas estáticas en C++/CX. Puede acceder al código nativo de la biblioteca estática desde su aplicación de UWP, pero no se recomienda crear tipos de referencia pública en ese tipo de biblioteca estática. Si compila una biblioteca estática con la opción /ZW, el bibliotecario (en realidad, el enlazador camuflado) advierte:  
   
 ```  
@@ -230,7 +232,7 @@ LNK4264: archiving object file compiled with /ZW into a static library; note tha
   
      No agregue una referencia en el nodo **Referencias** del **Explorador de soluciones**. Este mecanismo solo funciona con los componentes de Windows Runtime.  
   
-##  <a name="a-namebkwinrtcomponenta-porting-a-c-library-to-a-windows-runtime-component"></a><a name="BK_WinRTComponent"></a> Convertir una biblioteca de C++ en un componente de Windows Runtime  
+##  <a name="BK_WinRTComponent"></a> Convertir una biblioteca de C++ en un componente de Windows Runtime  
  Si desea utilizar las API nativas en una biblioteca estática desde una aplicación de UWP y tiene el código fuente de la biblioteca nativa, puede trasladar el código a un componente de Windows en tiempo de ejecución. Ya no será una biblioteca estática, será un archivo DLL. Puede utilizarlo en cualquier aplicación de C++ de UWP, pero a diferencia de las bibliotecas estáticas, puede agregar tipos de referencia y otras construcciones de C++/CX que están disponibles para los clientes en cualquier código de aplicación de UWP, independientemente del lenguaje. Por lo tanto, puede acceder a estos tipos de C#, Visual Basic o JavaScript.  El procedimiento básico consiste en crear un proyecto de componente de Windows en tiempo de ejecución, copiar el código de la biblioteca estática en él y solucionar los errores que surgen al mover el código de una compilación estándar de C++ a una compilación /ZW.  
   
 #### <a name="to-port-a-c-library-to-a-windows-runtime-component"></a>Trasladar una biblioteca de C++ a un componente de Windows en tiempo de ejecución  
@@ -257,8 +259,3 @@ LNK4264: archiving object file compiled with /ZW into a static library; note tha
   
 ## <a name="see-also"></a>Vea también  
  [Migrar a la Plataforma universal de Windows](../porting/porting-to-the-universal-windows-platform-cpp.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 4c4777496ce609d7c2fa20da726f211264095b6e
+ms.contentlocale: es-es
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -74,7 +75,7 @@ Cada vez que un control desea notificar a su contenedor que se ha producido algu
 |[ON_OLEVERB](#on_oleverb)|Indica un verbo personalizado que se controla mediante el control OLE.|  
 |[ON_STDOLEVERB](#on_stdoleverb)|Reemplaza una asignación de verbo estándar del control OLE.|  
   
-##  <a name="a-namedeclareeventmapa--declareeventmap"></a><a name="declare_event_map"></a>DECLARE_EVENT_MAP  
+##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP  
  Cada `COleControl`-clase derivada en el programa puede proporcionar un mapa de eventos para especificar los eventos que desencadenará el control.  
   
 ```   
@@ -89,7 +90,7 @@ DECLARE_EVENT_MAP()
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxctl.h  
   
-##  <a name="a-namebegineventmapa--begineventmap"></a><a name="begin_event_map"></a>BEGIN_EVENT_MAP  
+##  <a name="begin_event_map"></a>BEGIN_EVENT_MAP  
  Inicia la definición de la asignación de eventos.  
   
 ```   
@@ -111,7 +112,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxctl.h  
   
-##  <a name="a-nameendeventmapa--endeventmap"></a><a name="end_event_map"></a>END_EVENT_MAP  
+##  <a name="end_event_map"></a>END_EVENT_MAP  
  Utilice la `END_EVENT_MAP` macro para terminar la definición de la asignación de eventos.  
   
 ```   
@@ -121,7 +122,7 @@ END_EVENT_MAP()
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxctl.h  
   
-##  <a name="a-nameeventcustoma--eventcustom"></a><a name="event_custom"></a>EVENT_CUSTOM  
+##  <a name="event_custom"></a>EVENT_CUSTOM  
  Define una entrada de mapa de eventos para un evento personalizado.  
   
 ```   
@@ -183,7 +184,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxctl.h  
   
-##  <a name="a-nameeventcustomida--eventcustomid"></a><a name="event_custom_id"></a>EVENT_CUSTOM_ID  
+##  <a name="event_custom_id"></a>EVENT_CUSTOM_ID  
  Define un función para un evento personalizado que pertenecen a la especificada por el identificador de envío que desencadenó el evento `dispid`.  
   
 ```   
@@ -220,7 +221,7 @@ EVENT_CUSTOM_ID(
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxctl.h  
   
-##  <a name="a-nameonoleverba--onoleverb"></a><a name="on_oleverb"></a>ON_OLEVERB  
+##  <a name="on_oleverb"></a>ON_OLEVERB  
  Esta macro define una entrada de mapa de mensajes que se asigna a un verbo personalizado a una función miembro específico del control.  
   
 ```   
@@ -249,7 +250,7 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxole.h  
   
-##  <a name="a-nameonstdoleverba--onstdoleverb"></a><a name="on_stdoleverb"></a>ON_STDOLEVERB  
+##  <a name="on_stdoleverb"></a>ON_STDOLEVERB  
  Usar esta macro para invalidar el comportamiento predeterminado de un verbo estándar.  
   
 ```   

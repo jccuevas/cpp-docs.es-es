@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 89aa66d3a1e85183baaba21f001b60e080895f7f
+ms.contentlocale: es-es
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -50,7 +51,7 @@ Las macros siguientes se pueden usar para asignar comandos de edición de DHTML 
 |[DHTMLEDITING_CMD_ENTRY_TYPE](#dhtmlediting_cmd_entry_type)|Asigna un identificador de comando a un comando de edición de HTML y el elemento de la interfaz de usuario.|  
 |[DHTMLEDITING_CMD_ENTRY_FUNC_TYPE](#dhtmlediting_cmd_entry_func_type)|Asigna un identificador de comando a una comando, el controlador de mensajes y el elemento de la interfaz de usuario de edición de HTML.|  
   
-##  <a name="a-namedeclaredhtmleditingcmdmapa--declaredhtmleditingcmdmap"></a><a name="declare_dhtmlediting_cmdmap"></a>DECLARE_DHTMLEDITING_CMDMAP  
+##  <a name="declare_dhtmlediting_cmdmap"></a>DECLARE_DHTMLEDITING_CMDMAP  
  Declara un mapa de comando de edición de DHTML en una clase.  
   
 ```  
@@ -72,7 +73,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxhtml.h  
   
-##  <a name="a-namebegindhtmleditingcmdmapa--begindhtmleditingcmdmap"></a><a name="begin_dhtmlediting_cmdmap"></a>BEGIN_DHTMLEDITING_CMDMAP  
+##  <a name="begin_dhtmlediting_cmdmap"></a>BEGIN_DHTMLEDITING_CMDMAP  
  Inicia la definición de un mapa de comando de edición de DHTML dentro de una clase.  
   
 ```  
@@ -91,7 +92,7 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxhtml.h  
   
-##  <a name="a-nameenddhtmleditingcmdmapa--enddhtmleditingcmdmap"></a><a name="end_dhtmlediting_cmdmap"></a>END_DHTMLEDITING_CMDMAP  
+##  <a name="end_dhtmlediting_cmdmap"></a>END_DHTMLEDITING_CMDMAP  
  Marca el final de una asignación de comandos de edición de DHTML.  
   
 ```  
@@ -107,7 +108,7 @@ END_DHTMLEDITING_CMDMAP()
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxhtml.h  
   
-##  <a name="a-namedhtmleditingcmdentrya--dhtmleditingcmdentry"></a><a name="dhtmlediting_cmd_entry"></a>DHTMLEDITING_CMD_ENTRY  
+##  <a name="dhtmlediting_cmd_entry"></a>DHTMLEDITING_CMD_ENTRY  
  Asigna un identificador de comando a un comando de edición HTML.  
   
 ```  
@@ -127,7 +128,7 @@ DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxhtml.h  
   
-##  <a name="a-namedhtmleditingcmdentryfunca--dhtmleditingcmdentryfunc"></a><a name="dhtmlediting_cmd_entry_func"></a>DHTMLEDITING_CMD_ENTRY_FUNC  
+##  <a name="dhtmlediting_cmd_entry_func"></a>DHTMLEDITING_CMD_ENTRY_FUNC  
  Asigna un identificador de comando a un comando de edición de HTML y el controlador de mensajes.  
   
 ```  
@@ -150,7 +151,7 @@ DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxhtml.h  
   
-##  <a name="a-namedhtmleditingcmdentrytypea--dhtmleditingcmdentrytype"></a><a name="dhtmlediting_cmd_entry_type"></a>DHTMLEDITING_CMD_ENTRY_TYPE  
+##  <a name="dhtmlediting_cmd_entry_type"></a>DHTMLEDITING_CMD_ENTRY_TYPE  
  Asigna un identificador de comando a un comando de edición de HTML y el elemento de la interfaz de usuario.  
   
 ```  
@@ -173,7 +174,7 @@ DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxhtml.h  
   
-##  <a name="a-namedhtmleditingcmdentryfunctypea--dhtmleditingcmdentryfunctype"></a><a name="dhtmlediting_cmd_entry_func_type"></a>DHTMLEDITING_CMD_ENTRY_FUNC_TYPE  
+##  <a name="dhtmlediting_cmd_entry_func_type"></a>DHTMLEDITING_CMD_ENTRY_FUNC_TYPE  
  Asigna un identificador de comando a una comando, el controlador de mensajes y el elemento de la interfaz de usuario de edición de HTML.  
   
 ```  

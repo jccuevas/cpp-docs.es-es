@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 13823feb06e7fecb2e81a01f3c88e3664de01d30
+ms.contentlocale: es-es
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ Estas macros proporcionan compatibilidad para extensiones de complemento.
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlsnap.h 
    
-##  <a name="a-namebeginextensionsnapinnodeinfomapa--beginextensionsnapinnodeinfomap"></a><a name="begin_extension_snapin_nodeinfo_map"></a>BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP  
+##  <a name="begin_extension_snapin_nodeinfo_map"></a>BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP  
  Marca el comienzo de la asignación de clase de datos de extensión de complemento.  
   
 ```
@@ -69,7 +70,7 @@ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Windowing&#105;](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]  
   
-##  <a name="a-namebeginsnapintoolbaridmapa--beginsnapintoolbaridmap"></a><a name="begin_snapintoolbarid_map"></a>BEGIN_SNAPINTOOLBARID_MAP  
+##  <a name="begin_snapintoolbarid_map"></a>BEGIN_SNAPINTOOLBARID_MAP  
  Declara el comienzo de la asignación de Id. de barra de herramientas para el objeto de complemento.  
   
 ```
@@ -83,7 +84,7 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Windowing&#106;](../../atl/codesnippet/cpp/snap-in-object-macros_2.h)]  
   
-##  <a name="a-nameendextensionsnapinnodeinfomapa--endextensionsnapinnodeinfomap"></a><a name="end_extension_snapin_nodeinfo_map"></a>END_EXTENSION_SNAPIN_NODEINFO_MAP  
+##  <a name="end_extension_snapin_nodeinfo_map"></a>END_EXTENSION_SNAPIN_NODEINFO_MAP  
  Marca el final de la asignación de clase de datos de extensión de complemento.  
   
 ```
@@ -96,7 +97,7 @@ END_EXTENSION_SNAPIN_NODEINFO_MAP()
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).  
   
-##  <a name="a-nameendsnapintoolbaridmapa--endsnapintoolbaridmap"></a><a name="end_snapintoolbarid_map"></a>END_SNAPINTOOLBARID_MAP  
+##  <a name="end_snapintoolbarid_map"></a>END_SNAPINTOOLBARID_MAP  
  Declara el final de la asignación de Id. de barra de herramientas para el objeto de complemento.  
   
 ```
@@ -110,7 +111,7 @@ END_SNAPINTOOLBARID_MAP( _class )
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).  
   
-##  <a name="a-nameextensionsnapindataclassa--extensionsnapindataclass"></a><a name="extension_snapin_dataclass"></a>EXTENSION_SNAPIN_DATACLASS  
+##  <a name="extension_snapin_dataclass"></a>EXTENSION_SNAPIN_DATACLASS  
  Agrega un miembro de datos a la clase de datos de extensión de complemento para una **ISnapInItemImpl**-clase derivada.  
   
 ```
@@ -127,7 +128,7 @@ EXTENSION_SNAPIN_DATACLASS(dataClass )
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Windowing&#105;](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]  
   
-##  <a name="a-nameextensionsnapinnodeinfoentrya--extensionsnapinnodeinfoentry"></a><a name="extension_snapin_nodeinfo_entry"></a>EXTENSION_SNAPIN_NODEINFO_ENTRY  
+##  <a name="extension_snapin_nodeinfo_entry"></a>EXTENSION_SNAPIN_NODEINFO_ENTRY  
  Agrega una clase de datos de extensión de complemento a la asignación de clase de datos de extensión de complemento.  
   
 ```
@@ -144,7 +145,7 @@ EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).  
   
-##  <a name="a-namesnapinmenuida--snapinmenuid"></a><a name="snapinmenuid"></a>SNAPINMENUID  
+##  <a name="snapinmenuid"></a>SNAPINMENUID  
  Utilice esta macro para declarar el recurso de menú de contexto del objeto de complemento.  
   
 ```
@@ -155,7 +156,7 @@ SNAPINMENUID( id )
  `id`  
  [in] Identifica el menú contextual del objeto de complemento.  
   
-##  <a name="a-namesnapintoolbaridentrya--snapintoolbaridentry"></a><a name="snapintoolbarid_entry"></a>SNAPINTOOLBARID_ENTRY  
+##  <a name="snapintoolbarid_entry"></a>SNAPINTOOLBARID_ENTRY  
  Use esta macro para especificar un identificador de la barra de herramientas en la asignación de Id. de barra de herramientas del complemento del objeto.  
   
 ```

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,9 +37,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
 ms.openlocfilehash: f1ae094e7085017f03daab3f73323da13ab1be39
+ms.contentlocale: es-es
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -55,7 +56,7 @@ Macros de conversión de tipo proporcionan una manera de convertir un puntero a 
 |[DYNAMIC_DOWNCAST](#dynamic_downcast)|Convierte un puntero a un puntero a un objeto de clase al comprobar si la conversión es válida.|  
 |[STATIC_DOWNCAST](#static_downcast)|Convierte un puntero a un objeto de una clase a un puntero de un tipo relacionado. En una compilación de depuración hace un **ASSERT** si el objeto no es un "tipo de" el tipo de destino.|  
   
-##  <a name="a-namedynamicdowncasta--dynamicdowncast"></a><a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
+##  <a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
  Proporciona una forma práctica para convertir un puntero a un puntero a un objeto de clase al comprobar si la conversión es válida.  
   
 ```   
@@ -74,7 +75,7 @@ DYNAMIC_DOWNCAST(class, pointer)
   
  Si el objeto al que hace referencia el puntero es un "tipo de" la clase identificada, la macro devuelve el puntero adecuado. Si no es una conversión válidas, la macro devuelve **NULL**.  
   
-##  <a name="a-namestaticdowncasta--staticdowncast"></a><a name="static_downcast"></a>STATIC_DOWNCAST  
+##  <a name="static_downcast"></a>STATIC_DOWNCAST  
  Conversiones *pobject* a un puntero a un *class_name* objeto.  
   
 ```   

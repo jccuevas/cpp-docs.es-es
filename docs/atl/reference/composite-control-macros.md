@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 8cdedc5cfac9d49df812ae6fcfcc548201b1edb5
 ms.openlocfilehash: 9fb8a907c8052c9816d6b87247e903a63f34a5be
+ms.contentlocale: es-es
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -53,7 +54,7 @@ Estas macros definen entradas y mapas de receptor de eventos.
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
 
-##  <a name="a-namebeginsinkmapa--beginsinkmap"></a><a name="begin_sink_map"></a>BEGIN_SINK_MAP  
+##  <a name="begin_sink_map"></a>BEGIN_SINK_MAP  
  Declara el comienzo de la asignación de receptor de eventos para el control compuesto.  
   
 ```
@@ -70,7 +71,7 @@ BEGIN_SINK_MAP(_class)
 ### <a name="remarks"></a>Comentarios  
  Implementación de ATL CE de ActiveX eventos receptores solo admite valores devueltos de tipo HRESULT o void desde los métodos de controlador de eventos; no se admite ningún otro tipo de valor devuelto y su comportamiento es indefinido.  
   
-##  <a name="a-nameendsinkmapa--endsinkmap"></a><a name="end_sink_map"></a>END_SINK_MAP  
+##  <a name="end_sink_map"></a>END_SINK_MAP  
  Declara el final de la asignación de receptor de eventos para el control compuesto.  
   
 ```
@@ -83,7 +84,7 @@ END_SINK_MAP()
 ### <a name="remarks"></a>Comentarios  
  Implementación de ATL CE de ActiveX eventos receptores solo admite valores devueltos de tipo HRESULT o void desde los métodos de controlador de eventos; no se admite ningún otro tipo de valor devuelto y su comportamiento es indefinido.  
   
-##  <a name="a-namesinkentrya--sinkentry"></a><a name="sink_entry"></a>SINK_ENTRY  
+##  <a name="sink_entry"></a>SINK_ENTRY  
  Declara la función de controlador ( `fn`) para el evento especificado ( `dispid`), del control identificado por `id`.  
   
 ```
@@ -106,7 +107,7 @@ SINK_ENTRY( id, dispid, fn )
 ### <a name="remarks"></a>Comentarios  
  Implementación de ATL CE de ActiveX eventos receptores solo admite valores devueltos de tipo HRESULT o void desde los métodos de controlador de eventos; no se admite ningún otro tipo de valor devuelto y su comportamiento es indefinido.  
   
-##  <a name="a-namesinkentryexa--sinkentryex-and-sinkentryexp"></a><a name="sink_entry_ex"></a>SINK_ENTRY_EX y SINK_ENTRY_EX_P
+##  <a name="sink_entry_ex"></a>SINK_ENTRY_EX y SINK_ENTRY_EX_P
  Declara la función de controlador ( `fn`) para el evento especificado ( `dispid`), la interfaz de envío ( *iid)*, para el control identificado por `id`.  
   
 ```
@@ -136,7 +137,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 ### <a name="remarks"></a>Comentarios  
  Implementación de ATL CE de ActiveX eventos receptores solo admite valores devueltos de tipo HRESULT o void desde los métodos de controlador de eventos; no se admite ningún otro tipo de valor devuelto y su comportamiento es indefinido.  
   
-##  <a name="a-namesinkentryinfoa--sinkentryinfo-and-sinkentryinfop"></a><a name="sink_entry_info"></a>Macro SINK_ENTRY_INFO y SINK_ENTRY_INFO_P  
+##  <a name="sink_entry_info"></a>Macro SINK_ENTRY_INFO y SINK_ENTRY_INFO_P  
  Utilice la `SINK_ENTRY_INFO` macro dentro de un mapa de receptores de eventos para proporcionar la información necesaria para [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) enrutar eventos a la función de controlador correspondiente.  
   
 ```

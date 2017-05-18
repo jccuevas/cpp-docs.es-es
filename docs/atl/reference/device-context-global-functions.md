@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 8c71781519b965717acbcefab6fe6a183686caef
+ms.contentlocale: es-es
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -42,7 +43,7 @@ Esta función crea un contexto de dispositivo para un dispositivo dado.
 |-|-|  
 |[AtlCreateTargetDC](#atlcreatetargetdc)|Crea un contexto de dispositivo.|  
   
-##  <a name="a-nameatlcreatetargetdca--atlcreatetargetdc"></a><a name="atlcreatetargetdc"></a>AtlCreateTargetDC  
+##  <a name="atlcreatetargetdc"></a>AtlCreateTargetDC  
  Crea un contexto de dispositivo para el dispositivo especificado en el [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) estructura.  
   
 ```
