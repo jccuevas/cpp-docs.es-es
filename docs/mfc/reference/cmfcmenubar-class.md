@@ -93,6 +93,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcmenubar-class"></a>Clase CMFCMenuBar
 Una barra de menús que implementa el acoplamiento.  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -212,7 +213,7 @@ virtual BOOL AllowChangeTextLabels() const;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="allowshowonpanemenu"></a>CMFCMenuBar::AllowShowOnPaneMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL AllowShowOnPaneMenu() const;  
@@ -223,7 +224,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="calcfixedlayout"></a>CMFCMenuBar::CalcFixedLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -240,7 +241,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="calclayout"></a>CMFCMenuBar::CalcLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize CalcLayout(
@@ -257,7 +258,7 @@ virtual CSize CalcLayout(
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="calcmaxbuttonheight"></a>CMFCMenuBar::CalcMaxButtonHeight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int CalcMaxButtonHeight();
@@ -268,7 +269,7 @@ virtual int CalcMaxButtonHeight();
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="canbeclosed"></a>CMFCMenuBar::CanBeClosed  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CanBeClosed() const;  
@@ -279,7 +280,7 @@ virtual BOOL CanBeClosed() const;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="canberestored"></a>CMFCMenuBar::CanBeRestored  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CanBeRestored() const;  
@@ -425,7 +426,7 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
  El algoritmo que utiliza este método es complejo y puede reducir el rendimiento de su aplicación en sistemas más lentos.  
   
 ##  <a name="getavailableexpandsize"></a>CMFCMenuBar::GetAvailableExpandSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetAvailableExpandSize() const;  
@@ -436,7 +437,7 @@ virtual int GetAvailableExpandSize() const;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="getcolumnwidth"></a>CMFCMenuBar::GetColumnWidth  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetColumnWidth() const;  
@@ -473,7 +474,7 @@ UINT GetDefaultMenuResId() const;
  El marco de trabajo carga el menú predeterminado para la `CMFCMenuBar` objeto del archivo de recursos.  
   
 ##  <a name="getfloatpopupdirection"></a>CMFCMenuBar::GetFloatPopupDirection  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
@@ -487,7 +488,7 @@ int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="getforcedownarrows"></a>CMFCMenuBar::GetForceDownArrows  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL GetForceDownArrows();
@@ -549,7 +550,7 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
  Un puntero a la `CMFCToolBarButton` objeto que coincide con el índice especificado por `iItem`. `NULL`Si el índice no es válido.  
   
 ##  <a name="getrowheight"></a>CMFCMenuBar::GetRowHeight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetRowHeight() const;  
@@ -560,7 +561,7 @@ virtual int GetRowHeight() const;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="getsystembutton"></a>CMFCMenuBar::GetSystemButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCToolBarMenuButtonsButton* GetSystemButton(
@@ -577,7 +578,7 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="getsystembuttonscount"></a>CMFCMenuBar::GetSystemButtonsCount  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetSystemButtonsCount() const;  
@@ -588,7 +589,7 @@ int GetSystemButtonsCount() const;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="getsystemmenu"></a>CMFCMenuBar::GetSystemMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCToolBarSystemMenuButton* GetSystemMenu() const;  
@@ -613,7 +614,7 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
  De forma predeterminada, el marco de trabajo no resalta los elementos de menú no está disponible cuando el usuario coloca el puntero del mouse sobre ellos.  
   
 ##  <a name="isbuttonextrasizeavailable"></a>CMFCMenuBar::IsButtonExtraSizeAvailable  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsButtonExtraSizeAvailable() const;  
@@ -725,7 +726,7 @@ virtual BOOL LoadState(
  En la mayoría de los casos la aplicación no llama a `LoadState`. El marco de trabajo llama a este método cuando se inicializa el área de trabajo.  
   
 ##  <a name="onchangehot"></a>CMFCMenuBar::OnChangeHot  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnChangeHot(int iHot);
@@ -751,7 +752,7 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
  La implementación predeterminada de esta función no hace nada. Reemplazar esta función para ejecutar código personalizado después de que el marco de trabajo carga un recurso de menú desde el archivo de recursos.  
   
 ##  <a name="onsendcommand"></a>CMFCMenuBar::OnSendCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
@@ -782,7 +783,7 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
  La implementación predeterminada de este método cambia el texto del botón en el texto que proporciona el usuario.  
   
 ##  <a name="ontoolhittest"></a>CMFCMenuBar::OnToolHitTest  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual INT_PTR OnToolHitTest(
@@ -799,7 +800,7 @@ virtual INT_PTR OnToolHitTest(
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="pretranslatemessage"></a>CMFCMenuBar::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -872,7 +873,7 @@ void SetDefaultMenuResId(UINT uiResId);
  Utilice la [CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid) método para recuperar el menú predeterminado sin restaurarlo.  
   
 ##  <a name="setforcedownarrows"></a>CMFCMenuBar::SetForceDownArrows  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetForceDownArrows(BOOL bValue);

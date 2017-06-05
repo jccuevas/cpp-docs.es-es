@@ -54,6 +54,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="ctabbedpane-class"></a>Clase CTabbedPane
 Implementa la funcionalidad de un panel con pestañas separables.  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -173,7 +175,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
  **Encabezado:** afxTabbedPane.h  
   
 ##  <a name="detachpane"></a>CTabbedPane::DetachPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DetachPane(
@@ -208,7 +210,7 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
  De forma predeterminada, esta opción está deshabilitada.  
   
 ##  <a name="floattab"></a>CTabbedPane::FloatTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL FloatTab(
@@ -250,7 +252,7 @@ virtual void GetTabArea(
  Invalide este método en un `CTabbedPane`-clase derivada para cambiar este comportamiento.  
   
 ##  <a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCTabCtrl* GetTabWnd() const;  
@@ -261,7 +263,7 @@ CMFCTabCtrl* GetTabWnd() const;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HasAutoHideMode() const;  
