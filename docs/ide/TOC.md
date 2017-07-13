@@ -1,221 +1,305 @@
 # [IDE y herramientas para desarrollo de Visual C++](ide-and-tools-for-visual-cpp-development.md)
+
 # [Escribir y refactorizar código (C++)](writing-and-refactoring-code-cpp.md)
+
 ## [Cambiar firma](refactoring/change-signature.md)
+
 ## [Convertir en literal de cadena sin formato](refactoring/convert-to-raw-string-literal.md)
+
 ## [Crear declaración o definición](refactoring/create-declaration-definition.md)
+
 ## [Extraer función](refactoring/extract-function.md)
+
 ## [Implementar virtuales puras](refactoring/implement-pure-virtuals.md)
+
 ## [Mover definición de función](refactoring/move-definition-location.md)
+
 ## [Cambiar nombre](refactoring/rename.md)
+
 # [Herramientas y características de Visual C++ en las ediciones de Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md)
+
 # [Creación y administración de proyectos de Visual C++](creating-and-managing-visual-cpp-projects.md)
+
 ## [Tipos de proyecto de Visual C++](visual-cpp-project-types.md)
+
 ## [Usar las plantillas Agregar nuevo elemento de Visual C++](using-visual-cpp-add-new-item-templates.md)
+
 ## [Tipos de archivos creados para proyectos de Visual C++](file-types-created-for-visual-cpp-projects.md)
+
 ### [Archivos de proyecto y solución](project-and-solution-files.md)
+
 ### [Archivos de encabezado precompilados](precompiled-header-files.md)
+
 ### [Archivos de recursos (C++)](resource-files-cpp.md)
+
 ### [Archivos creados para proyectos de CLR](files-created-for-clr-projects.md)
+
 ### [Archivos de encabezado y código fuente de controles o programas ATL](atl-program-or-control-source-and-header-files.md)
+
 ### [Archivos de encabezado y código fuente de controles o programas MFC](mfc-program-or-control-source-and-header-files.md)
+
 ### [Archivos de ayuda (Ayuda HTML)](help-files-html-help.md)
+
 ### [Archivos de ayuda (WinHelp)](help-files-winhelp.md)
+
 ### [Archivos de indicaciones](hint-files.md)
+
 ### [Archivos XML de página de propiedades](property-page-xml-files.md)
+
 ### [Estructura de archivo .vcxproj y .props](vcxproj-file-structure.md)
+
 ## [Crear proyectos de escritorio con asistentes para aplicaciones](creating-desktop-projects-by-using-application-wizards.md)
+
 ### [Compatibilidad del asistente con otros idiomas](wizard-support-for-other-languages.md)
-### [Crear un asistente personalizado](creating-a-custom-wizard.md)
-#### [Asistente personalizado](custom-wizard.md)
-##### [Configuración de la aplicación, Asistente personalizado](application-settings-custom-wizard.md)
-### [Diseñar un asistente](designing-a-wizard.md)
-#### [Pasos para diseñar un asistente](steps-to-designing-a-wizard.md)
-##### [Examinar el proyecto básico de asistente](examining-the-basic-wizard-project.md)
-##### [Examinar los aspectos prácticos de un asistente](examining-the-mechanics-of-a-wizard.md)
-##### [Personalizar un asistente](customizing-your-wizard.md)
-##### [Traducir un asistente a varios idiomas](localizing-a-wizard-to-multiple-languages.md)
-##### [Proporcionar ayuda contextual](providing-context-sensitive-help.md)
-#### [Archivos creados para un asistente](files-created-for-your-wizard.md)
-##### [Archivo .vsz (Control del proyecto)](dot-vsz-file-project-control.md)
-###### [Parámetros personalizados en el archivo .vsz del asistente](custom-parameters-in-the-wizard-dot-vsz-file.md)
-##### [HTML (archivos)](html-files.md)
-##### [Archivos de plantilla](template-files.md)
-###### [Archivo Templates.inf](templates-inf-file.md)
-###### [Directivas de plantilla](template-directives.md)
-##### [Archivo JScript](jscript-file.md)
-###### [Personalizar los asistentes de C++ con funciones comunes de JScript](customizing-cpp-wizards-with-common-jscript-functions.md)
-####### [Funciones de JScript para los asistentes de C++](jscript-functions-for-cpp-wizards.md)
-######## [AddATLSupportToProject](addatlsupporttoproject.md)
-######## [AddCoclassFromFile](addcoclassfromfile.md)
-######## [AddCommonConfig](addcommonconfig.md)
-######## [AddFilesToProject](addfilestoproject.md)
-######## [AddInterfaceFromFile](addinterfacefromfile.md)
-######## [CanAddATLClass](canaddatlclass.md)
-######## [CanAddClass](canaddclass.md)
-######## [CanAddMFCClass](canaddmfcclass.md)
-######## [CanAddNonAttributed](canaddnonattributed.md)
-######## [CanUseFileName](canusefilename.md)
-######## [ConvertProjectToAttributed](convertprojecttoattributed.md)
-######## [CreateInfFile](createinffile.md)
-######## [CreateProject](createproject.md)
-######## [CreateSafeName](createsafename.md)
-######## [DeleteFile](deletefile.md)
-######## [DoesIncludeExist](doesincludeexist.md)
-######## [GetCodeForDllCanUnloadNow](getcodefordllcanunloadnow.md)
-######## [GetCodeForDllGetClassObject](getcodefordllgetclassobject.md)
-######## [GetCodeForDllRegisterServer](getcodefordllregisterserver.md)
-######## [GetCodeForDllUnregisterServer](getcodefordllunregisterserver.md)
-######## [GetCodeForExitInstance](getcodeforexitinstance.md)
-######## [GetCodeForInitInstance](getcodeforinitinstance.md)
-######## [GetExportPragmas](getexportpragmas.md)
-######## [GetInterfaceClasses](getinterfaceclasses.md)
-######## [GetInterfaceType](getinterfacetype.md)
-######## [GetMaxID](getmaxid.md)
-######## [GetMemberfunction](getmemberfunction.md)
-######## [GetProjectFile](getprojectfile.md)
-######## [GetProjectPath](getprojectpath.md)
-######## [GetRuntimeErrorDesc](getruntimeerrordesc.md)
-######## [GetUniqueFileName](getuniquefilename.md)
-######## [IncludeCodeElementDeclaration](includecodeelementdeclaration.md)
-######## [InsertIntoFunction](insertintofunction.md)
-######## [IsATLProject](isatlproject.md)
-######## [IsAttributedProject](isattributedproject.md)
-######## [IsMFCProject](ismfcproject.md)
-######## [LineBeginsWith](linebeginswith.md)
-######## [OffsetToLineNumber](offsettolinenumber.md)
-######## [OnWizFinish](onwizfinish.md)
-######## [RenderAddTemplate](renderaddtemplate.md)
-######## [SetCommonPchSettings](setcommonpchsettings.md)
-######## [SetErrorInfo](seterrorinfo.md)
-######## [SetFilters](setfilters.md)
-######## [SetMergeProxySymbol](setmergeproxysymbol.md)
-######## [SetNoPchSettings](setnopchsettings.md)
-#### [Controlar errores de los asistentes](handling-errors-in-wizards.md)
-##### [Control de errores en los archivos HTML del asistente](error-handling-in-wizard-html-files.md)
-##### [Control de errores en los archivos JScript del asistente](error-handling-in-wizard-jscript-files.md)
+
 ### [Crear un proyecto de archivos MAKE](creating-a-makefile-project.md)
+
 #### [Asistente para proyectos de archivos MAKE](makefile-project-wizard.md)
+
 ##### [Configuración de la aplicación, Asistente para proyectos de archivos MAKE](application-settings-makefile-project-wizard.md)
+
 #### [Cómo: Habilitar IntelliSense para proyectos de archivos MAKE](how-to-enable-intellisense-for-makefile-projects.md)
+
 ### [Cómo: Crear un proyecto de C++ a partir del código existente](how-to-create-a-cpp-project-from-existing-code.md)
+
 #### [Especificar la ubicación del proyecto y los archivos de código fuente, Asistente para crear nuevo proyecto de archivos de código fuente existentes](specify-project-location-and-source-files.md)
+
 #### [Especificar configuración de proyecto, Asistente para crear nuevo proyecto de archivos de código fuente existentes](specify-project-settings-create-new-project-from-existing-code-files-wizard.md)
+
 #### [Especificar los valores de configuración de Debug, Asistente para crear nuevo proyecto de archivos de código fuente existentes](specify-debug-configuration-settings.md)
+
 #### [Especificar los valores de configuración de Release, Asistente para crear nuevo proyecto de archivos de código fuente existentes](specify-release-configuration.md)
+
 ## [Trabajar con configuraciones de proyecto](working-with-project-properties.md)
+
 ### [Páginas de propiedades (Visual C++)](property-pages-visual-cpp.md)
+
 #### [Página de propiedades General (Proyecto)](general-property-page-project.md)
+
 #### [Página de propiedades General (Archivo)](general-property-page-file.md)
+
 #### [Directorios de VC++ (Página de propiedades)](vcpp-directories-property-page.md)
+
 #### [Páginas de propiedades Línea de comandos](command-line-property-pages.md)
+
 #### [Página de propiedades NMake](nmake-property-page.md)
+
 #### [Páginas de propiedades Vinculador](linker-property-pages.md)
+
 #### [Páginas de propiedades de la herramienta Manifiesto](manifest-tool-property-pages.md)
+
 ##### [General, Herramienta Manifiesto, Propiedades de configuración, Páginas de propiedades de <Projectname> (Cuadro de diálogo)](general-manifest-tool-configuration-properties.md)
+
 ##### [Entrada y salida, Herramienta Manifiesto, Propiedades de configuración, Páginas de propiedades de <Projectname> (Cuadro de diálogo)](input-and-output-manifest-tool.md)
+
 ##### [COM aislado, Herramienta Manifiesto, Propiedades de configuración, Páginas de propiedades de <Projectname> (Cuadro de diálogo)](isolated-com-manifest-tool.md)
+
 ##### [Avanzadas, Herramienta Manifiesto, Propiedades de configuración, Páginas de propiedades de <Projectname> (Cuadro de diálogo)](advanced-manifest-tool.md)
+
 #### [Páginas de propiedades Recursos](resources-property-pages.md)
+
 #### [Página de propiedades Recursos administrados](managed-resources-property-page.md)
+
 #### [Páginas de propiedades MIDL](midl-property-pages.md)
+
 ##### [Páginas de propiedades MIDL: General](midl-property-pages-general.md)
+
 ##### [Páginas de propiedades MIDL: Resultados](midl-property-pages-output.md)
+
 ##### [Páginas de propiedades MIDL: Avanzadas](midl-property-pages-advanced.md)
+
 #### [Página de propiedades Referencias Web](web-references-property-page.md)
+
 #### [Herramienta Generador de datos XML (Página de propiedades)](xml-data-generator-tool-property-page.md)
+
 #### [Herramienta Generador de documentos XML (Páginas de propiedades)](xml-document-generator-tool-property-pages.md)
+
 #### [Paso de compilación personalizada (Página de propiedades): General](custom-build-step-property-page-general.md)
+
 #### [Páginas de propiedades HLSL](hlsl-property-pages.md)
+
 ##### [Páginas de propiedades HLSL: General](hlsl-property-pages-general.md)
+
 ##### [Páginas de propiedades HLSL: Avanzadas](hlsl-property-pages-advanced.md)
+
 ##### [Páginas de propiedades HLSL: Archivos de salida](hlsl-property-pages-output-files.md)
+
 ## [Agregar referencias en proyectos de Visual C++](adding-references-in-visual-cpp-projects.md)
+
 ## [Cómo: Organizar archivos de resultados de proyectos para la compilación](how-to-organize-project-output-files-for-builds.md)
+
 # [Implementar aplicaciones de escritorio nativas (Visual C++)](deploying-native-desktop-applications-visual-cpp.md)
+
 ## [Implementación en Visual C++](deployment-in-visual-cpp.md)
+
 ## [Conceptos de implementación](deployment-concepts.md)
+
 ## [Descripción de las dependencias de una aplicación de Visual C++](understanding-the-dependencies-of-a-visual-cpp-application.md)
+
 ## [Determinar qué archivos DLL se redistribuirán](determining-which-dlls-to-redistribute.md)
+
 ## [Elegir un método de implementación](choosing-a-deployment-method.md)
+
 ## [Redistribuir archivos de Visual C++](redistributing-visual-cpp-files.md)
+
 ### [Redistribuir componentes mediante módulos de combinación](redistributing-components-by-using-merge-modules.md)
+
 ### [Redistribuir controles ActiveX de Visual C++](redistributing-visual-cpp-activex-controls.md)
+
 ### [Redistribuir archivos de compatibilidad con bases de datos](redistributing-database-support-files.md)
+
 ### [Redistribuir la biblioteca MFC](redistributing-the-mfc-library.md)
+
 ### [Redistribuir una aplicación ATL](redistributing-an-atl-application.md)
+
 ## [Ejemplos de implementación](deployment-examples.md)
+
 ### [Tutorial: Implementar una aplicación de Visual C++ mediante un proyecto de instalación](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)
+
 ### [Tutorial: Implementar una aplicación de Visual C++ en una carpeta local de la aplicación](walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)
+
 ### [Tutorial: Implementar una aplicación de Visual C++ mediante el paquete redistribuible de Visual C++](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)
+
 ### [Preparar un equipo de pruebas para ejecutar un archivo ejecutable de depuración](preparing-a-test-machine-to-run-a-debug-executable.md)
+
 ## [Redistribuir aplicaciones cliente web](redistributing-web-client-applications.md)
+
 ## [Implementación de ClickOnce para aplicaciones de Visual C++](clickonce-deployment-for-visual-cpp-applications.md)
+
 ## [Ejecutar una aplicación /clr de C++ en una versión en tiempo de ejecución](running-a-cpp-clr-application-on-a-previous-runtime-version.md)
+
 # [Agregar funciones con los Asistentes para código (C++)](adding-functionality-with-code-wizards-cpp.md)
+
 ## [Agregar una clase (Visual C++)](adding-a-class-visual-cpp.md)
+
 ### [Agregar clase (Cuadro de diálogo)](add-class-dialog-box.md)
+
 ## [Agregar una clase desde un control ActiveX (Visual C++)](adding-a-class-from-an-activex-control-visual-cpp.md)
+
 ### [Asistente para agregar clases a partir de un control ActiveX](add-class-from-activex-control-wizard.md)
+
 ## [Agregar una clase genérica de C++](adding-a-generic-cpp-class.md)
+
 ### [Asistente de clases genéricas de C++](generic-cpp-class-wizard.md)
+
 ## [Agregar una función miembro (Visual C++)](adding-a-member-function-visual-cpp.md)
+
 ### [Asistente para agregar funciones miembro](add-member-function-wizard.md)
+
 ## [Agregar una variable miembro (Visual C++)](adding-a-member-variable-visual-cpp.md)
+
 ### [Asistente para agregar variables miembro](add-member-variable-wizard.md)
+
 ### [Tipos de controles de cuadro de diálogo y tipos de variable](dialog-box-controls-and-variable-types.md)
+
 ## [Agregar un método (Visual C++)](adding-a-method-visual-cpp.md)
+
 ### [Asistente para agregar métodos](add-method-wizard.md)
+
 ### [Atributos IDL, Asistente para agregar métodos](idl-attributes-add-method-wizard.md)
+
 ## [Agregar una propiedad (Visual C++)](adding-a-property-visual-cpp.md)
+
 ### [Nombres, Asistente para agregar propiedades](names-add-property-wizard.md)
+
 ### [Atributos IDL, Asistente para agregar propiedades](idl-attributes-add-property-wizard.md)
+
 ### [Propiedades estándar](stock-properties.md)
+
 ## [Agregar un evento (Visual C++)](adding-an-event-visual-cpp.md)
+
 ### [Asistente para agregar eventos](add-event-wizard.md)
+
 ## [Agregar un controlador de eventos (Visual C++)](adding-an-event-handler-visual-cpp.md)
+
 ### [Asistente para controladores de eventos](event-handler-wizard.md)
+
 ## [Crear una interfaz COM (Visual C++)](creating-a-com-interface-visual-cpp.md)
+
 ### [Editar una interfaz COM](editing-a-com-interface.md)
+
 ## [Implementar un punto de conexión (Visual C++)](implementing-a-connection-point-visual-cpp.md)
+
 ### [Asistente para implementar puntos de conexión](implement-connection-point-wizard.md)
+
 ## [Implementar una interfaz (Visual C++)](implementing-an-interface-visual-cpp.md)
+
 ### [Asistente para implementar interfaces](implement-interface-wizard.md)
+
 ## [Navegar por la estructura de clases (Visual C++)](navigating-the-class-structure-visual-cpp.md)
+
 ## [Reemplazar una función virtual (Visual C++)](overriding-a-virtual-function-visual-cpp.md)
+
 # [Documentación XML (Visual C++)](xml-documentation-visual-cpp.md)
+
 ## [Etiquetas recomendadas para comentarios de documentación (Visual C++)](recommended-tags-for-documentation-comments-visual-cpp.md)
+
 ### [<c> (Visual C++)](c-visual-cpp.md)
+
 ### [<code> (Visual C++)](code-visual-cpp.md)
 ### [<example> (Visual C++)](example-visual-cpp.md)
+
 ### [<exception> (Visual C++)](exception-visual-cpp.md)
+
 ### [<include> (Visual C++)](include-visual-cpp.md)
+
 ### [<list> (Visual C++)](list-visual-cpp.md)
+
 ### [<para> (Visual C++)](para-visual-cpp.md)
+
 ### [<param> (Visual C++)](param-visual-cpp.md)
+
 ### [<paramref> (Visual C++)](paramref-visual-cpp.md)
+
 ### [<permission> (Visual C++)](permission-visual-cpp.md)
+
 ### [<remarks> (Visual C++)](remarks-visual-cpp.md)
+
 ### [<returns> (Visual C++)](returns-visual-cpp.md)
+
 ### [<see> (Visual C++)](see-visual-cpp.md)
+
 ### [<seealso> (Visual C++)](seealso-visual-cpp.md)
+
 ### [<summary> (Visual C++)](summary-visual-cpp.md)
+
 ### [<value> (Visual C++)](value-visual-cpp.md)
+
 ## [Procesamiento de archivos .Xml](dot-xml-file-processing.md)
+
 ## [Delimitadores para etiquetas de documentación en Visual C++](delimiters-for-visual-cpp-documentation-tags.md)
+
 ## [XDCMake (Referencia)](xdcmake-reference.md)
+
 # [Compilar proyectos de C++ en Visual Studio](building-cpp-projects-in-visual-studio.md)
+
 ## [Descripción de los pasos de compilación personalizada y los eventos de compilación](understanding-custom-build-steps-and-build-events.md)
+
 ### [Especificar las herramientas de compilación personalizadas](specifying-custom-build-tools.md)
+
 ### [Especificar eventos de compilación](specifying-build-events.md)
+
 ### [Solucionar problemas de personalizaciones de compilación](troubleshooting-build-customizations.md)
+
 ### [Dar formato a la presentación de un paso de compilación personalizada o un evento de compilación](formatting-the-output-of-a-custom-build-step-or-build-event.md)
+
 ## [Macros comunes para propiedades y comandos de compilación](common-macros-for-build-commands-and-properties.md)
+
 ## [Compilar proyectos externos](building-external-projects.md)
+
 ## [Archivos de proyecto](project-files.md)
+
 ## [Tutorial: Compilar un programa de C++ orientado a CLR en Visual Studio](walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)
+
 # [Usar el IDE de Visual Studio para desarrollo de escritorio de C++](using-the-visual-studio-ide-for-cpp-desktop-development.md)
+
 ## [Tutorial: Trabajar con proyectos y soluciones (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)
+
 ## [Tutorial: Compilar un proyecto (C++)](walkthrough-building-a-project-cpp.md)
+
 ## [Tutorial: Probar un proyecto (C++)](walkthrough-testing-a-project-cpp.md)
+
 ## [Tutorial: Depurar un proyecto (C++)](walkthrough-debugging-a-project-cpp.md)
+
 ## [Tutorial: Implementar el programa (C++)](walkthrough-deploying-your-program-cpp.md)
+
