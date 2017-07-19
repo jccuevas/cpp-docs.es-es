@@ -33,10 +33,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 8630a5c0b97b85e0dc75e8b470974bb7d223a511
-ms.openlocfilehash: 1d85010b6068d52d8522875a3c47561ad777d345
+ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
+ms.openlocfilehash: d2707321719e5ff6afa84203fd79d975bb696960
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/30/2017
 
 ---
 
@@ -45,17 +45,8 @@ ms.lasthandoff: 02/24/2017
 Cuando actualice un proyecto a la versión actual de Visual C++, también debe actualizar las bibliotecas que usa el proyecto para que así la biblioteca y el proyecto estén compilados con la misma versión y tipo de compilador. (Para obtener más información, vea [Información general sobre posibles problemas de actualización](overview-of-potential-upgrade-issues-visual-cpp.md)). 
 
 ## <a name="introducing-vcpkg"></a>Introducción a Vcpkg
-Antes, el proceso de buscar y actualizar bibliotecas de terceros era a veces una tarea de considerable dificultad. Para facilitar la adquisición y la recompilación de bibliotecas de código abierto de terceros de C++, el equipo de Visual C++ ha creado una herramienta de línea de comandos denominada **Herramienta de empaquetado de VC++** o **Vcpkg**. Vcpkg tiene un catálogo que permite la búsqueda de muchas bibliotecas populares de código abierto de C++. Puede instalar cualquier biblioteca del catálogo directamente desde la línea de comandos de Vcpkg. Cuando se instala una biblioteca, Vcpkg crea un árbol de directorios en la máquina y agrega el archivo .h, el archivo .lib y los binarios en esta carpeta. Puede usar esta carpeta en la línea de comandos de la compilación, o bien integrarla en Visual Studio 2015 o versiones posteriores mediante el comando de instalación de integración de Vcpkg. Después de integrar una ubicación de biblioteca, Visual Studio puede buscarla y agregarla a cualquier proyecto que cree. Para usar una biblioteca, basta con que la incluya y Visual Studio agregará automáticamente la ruta de acceso .lib a la configuración del proyecto y copiará la dll en la carpeta de la solución.
+Antes, el proceso de buscar y actualizar bibliotecas de terceros era a veces una tarea de considerable dificultad. Para facilitar la adquisición y la recompilación de bibliotecas de código abierto de terceros de C++, el equipo de Visual C++ ha creado una herramienta de línea de comandos denominada **Herramienta de empaquetado de VC++** o **Vcpkg**. Vcpkg tiene un catálogo que permite la búsqueda de muchas bibliotecas populares de código abierto de C++. Puede instalar cualquier biblioteca del catálogo directamente desde la línea de comandos de Vcpkg. Cuando se instala una biblioteca, Vcpkg crea un árbol de directorios en la máquina y agrega el archivo .h, el archivo .lib y los binarios en esta carpeta. Puede usar esta carpeta en la línea de comandos de la compilación, o bien integrarla en Visual Studio 2015 o versiones posteriores mediante el comando de instalación de integración de Vcpkg. Después de integrar una ubicación de biblioteca, Visual Studio puede buscarla y agregarla a cualquier proyecto que cree. Para usar una biblioteca, basta con que la incluya y Visual Studio agregará automáticamente la ruta de acceso .lib a la configuración del proyecto y copiará la dll en la carpeta de la solución. Para más información, vea [Vcpkg: Administrador de paquetes de C++ para Windows](../vcpkg.md).
 
-## <a name="acquisition-and-usage"></a>Adquisición y uso
-
-Puede descargar Vcpkg desde [Vcpkg](https://github.com/Microsoft/vcpkg/)[repositorio de GitHub de Vcpkg].
-
- - Para buscar una biblioteca en el catálogo: vcpkg search <LibName>
- - Para adquirir una biblioteca (por ejemplo, Boost): vcpkg install boost
- - Para enumerar las bibliotecas que están instaladas actualmente: vcpkg list
-
-En la entrada de blog [Vcpkg: a tool to acquire and build C++ open source libraries on Windows](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) (Vcpkg: una herramienta para adquirir y compilar bibliotecas de código abierto de C++ en Windows) se explica el funcionamiento de Vcpkg y se proporciona una lista de bibliotecas compatibles. La lista se actualiza cada semana.
 
 ## <a name="reporting-issues"></a>Notificar problemas
 Si su biblioteca no está presente en el catálogo de Vcpkg, puede abrir una incidencia en el [repositorio de GitHub](https://github.com/Microsoft/vcpkg/issues) para que la comunidad y el equipo de Visual C++ puedan verlo y crear el archivo de migración para esta biblioteca.
