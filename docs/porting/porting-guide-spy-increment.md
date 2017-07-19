@@ -30,17 +30,17 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: b118e825ef61d826049a1452ee4275951c0ca440
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="porting-guide-spy"></a>Guía de migración: Spy++
 Este caso práctico de migración está diseñado para que se haga una idea de cómo es un proyecto de migración típico, los tipos de problemas con que puede encontrarse y algunas sugerencias y trucos generales para resolver problemas de migración. No pretende ser una guía definitiva de migración, ya que la experiencia de migración de un proyecto depende en gran medida de los detalles del código.  
   
 ## <a name="spy"></a>Spy++  
- Spy++ es una herramienta muy utilizada de diagnóstico de GUI para el escritorio de Windows y que proporciona todo tipo de información sobre los elementos de la interfaz de usuario del escritorio de Windows. Muestra la jerarquía completa de las ventanas y proporciona acceso a los metadatos de cada ventana y control. Esta práctica aplicación lleva muchos años incluyéndose con Visual Studio. Encontramos una antigua versión suya que se compiló por última vez en Visual C++ 6.0 y la migramos a [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]. La experiencia de Visual Studio 2017 debería ser casi idéntica.
+ Spy++ es una herramienta muy utilizada de diagnóstico de GUI para el escritorio de Windows y que proporciona todo tipo de información sobre los elementos de la interfaz de usuario del escritorio de Windows. Muestra la jerarquía completa de las ventanas y proporciona acceso a los metadatos de cada ventana y control. Esta práctica aplicación lleva muchos años incluyéndose con Visual Studio. Encontramos una versión antigua que se compiló por última vez en Visual C++ 6.0 y la migramos a Visual Studio 2015. La experiencia de Visual Studio 2017 debería ser casi idéntica.
   
  Consideramos que este es un caso típico de migración de aplicaciones de escritorio de Windows que utilizan MFC y la API Win32, especialmente para proyectos antiguos que no se han actualizado con cada versión de Visual C++ desde Visual C++ 6.0.  
   
@@ -84,7 +84,7 @@ warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not m
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h(40): fatal error C1189: #error:  MFC does not support WINVER less than 0x0501.  Please change the definition of WINVER in your project properties or precompiled header.  
 ```  
   
- Microsoft ya no ofrece soporte para Windows XP, así que, aunque en [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] se puede seleccionar el destino, debería ir retirando progresivamente el soporte para esta versión en sus aplicaciones y animar a los usuarios a adoptar nuevas versiones de Windows.  
+ Microsoft ya no ofrece soporte técnico para Windows XP, así que, aunque en Visual Studio 2015 se puede seleccionar el destino, debería ir retirando progresivamente el soporte técnico para esta versión en sus aplicaciones y animar a los usuarios a adoptar nuevas versiones de Windows.  
   
  Para deshacerse del error, defina WINVER. Para ello, establezca el valor de **Propiedades del proyecto** en la versión más antigua de Windows que quiera seleccionar como destino actualmente. Vea [aquí](http://msdn.microsoft.com/library/windows/desktop/aa383745.aspx) una tabla de valores para varias versiones de Windows.  
   
