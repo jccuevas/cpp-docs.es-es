@@ -21,10 +21,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: 7995451c0c89fbef55bd96291978775f89932f3b
+ms.contentlocale: es-es
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novedades de Visual C++ de 2003 a 2015
@@ -272,7 +273,7 @@ En Visual C++ 2015 y versiones posteriores, las mejoras continuas en la conformi
   
      Se ha realizado un cambio en el operador delete a fin de adaptarlo al estándar de C++14. Detalles del cambio de los estándares se pueden encontrar en la página de [desasignación de ajuste de tamaño de C++](http://isocpp.org/files/papers/n3778.html). Los cambios agregan un formulario del operador delete global que toma un parámetro de tamaño. La novedad es que si antes usaba un operador delete con la misma firma (para que se correspondiese con un operador placement new), ahora recibirá un error del compilador (C2956, que se produce en el punto donde se usa placement new, ya que es la posición en el código en la que el compilador intenta identificar un operador delete coincidente adecuado).  
   
-     La función `void operator delete(void *, size_t)` era un operador placement delete correspondiente a la función placement new "void \* operator new(size_t, size_t)" en C++11. Con la desasignación con tamaño de C ++&14;, esta función de eliminación es ahora una *función de desasignación habitual* (operador delete global). Según el estándar, si el uso de placement new busca una función de eliminación correspondiente y encuentra una función de desasignación habitual, el programa tiene un formato incorrecto.  
+     La función `void operator delete(void *, size_t)` era un operador placement delete correspondiente a la función placement new "void \* operator new(size_t, size_t)" en C++11. Con la desasignación con tamaño de C ++ 14, esta función de eliminación es ahora una *función de desasignación habitual* (operador delete global). Según el estándar, si el uso de placement new busca una función de eliminación correspondiente y encuentra una función de desasignación habitual, el programa tiene un formato incorrecto.  
   
      Supongamos, por ejemplo, que el código define tanto placement new como placement delete:  
   
@@ -526,7 +527,7 @@ En Visual C++ 2015 y versiones posteriores, las mejoras continuas en la conformi
   
 -   **Constructores de copias**  
   
-     Tanto en [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] como en [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)], el compilador genera un constructor de copias para una clase si esa clase tiene un constructor de movimiento definido por el usuario, pero ningún constructor de copias definido por el usuario. En Dev14, este constructor de copias generado implícitamente también se marca como "= delete".  
+     Tanto en [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] como en Visual Studio 2015, el compilador genera un constructor de copias para una clase si esa clase tiene un constructor de movimiento definido por el usuario, pero ningún constructor de copias definido por el usuario. En Dev14, este constructor de copias generado implícitamente también se marca como "= delete".  
   
 ##  <a name="VS_Update1"></a> Mejoras de conformidad en Update 1  
   
@@ -606,7 +607,7 @@ En Visual C++ 2015 y versiones posteriores, las mejoras continuas en la conformi
   
      Además, aunque el compilador no ofrece un diagnóstico específico, se considera que el operador en línea nuevo está mal formado.  
   
--   **Llamada a “operator*type*()” (conversión definida por el usuario) en tipos que no son de clase**  
+-   **Llamada a "operator *type*()" (conversión definida por el usuario) en tipos que no son de clase**  
   
      Las versiones anteriores del compilador permitieron que se llamara 'operator *type*()' en tipos que no son de clase mientras que se les ignora en modo silencioso. Este comportamiento anterior creó un riesgo de generación de código incorrecto silencioso, lo que produjo un comportamiento impredecible en tiempo de ejecución. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2228 en su lugar.  
   
@@ -1380,7 +1381,7 @@ En Visual C++ 2015 y versiones posteriores, las mejoras continuas en la conformi
     }  
     ```  
   
--   **Compatibilidad en desuso con código ATL con atributos** (nivel 1 (/W1), activo de manera predeterminada)  
+-   **Compatibilidad en desuso con código ATL con atributos**  (nivel 1 (/W1), activo de manera predeterminada)  
   
      Las versiones anteriores del compilador admitían código ATL con atributos. Como parte de la fase siguiente para quitar la compatibilidad con código ATL con atributos que [comenzó en Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), el código ATL con atributos está en desuso. Ahora, el compilador emite la advertencia del compilador C4467 para ayudarle a identificar este tipo de código en desuso.  
   
@@ -1388,7 +1389,7 @@ En Visual C++ 2015 y versiones posteriores, las mejoras continuas en la conformi
     warning C4467: Usage of ATL attributes is deprecated  
     ```  
   
-     Si quiere seguir usando código ATL con atributos hasta que se quite la compatibilidad del compilador, puede deshabilitar esta advertencia. Para ello, pase los argumentos de la línea de comandos `/Wv:18` o `/wd:4467` al compilador o agregue `#pragma warning(disable:4467)` en el código fuente.  
+     Si quiere seguir usando código ATL con atributos hasta que se quite la compatibilidad del compilador, puede deshabilitar esta advertencia. Para ello, pase los argumentos de la línea de comandos `/Wv:18` o `/wd4467` al compilador o agregue `#pragma warning(disable:4467)` en el código fuente.  
   
      Ejemplo 1 (antes)  
   

@@ -32,19 +32,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 7c75629d56e6d8e5291b7d1f7cca9995ab9a50da
-ms.openlocfilehash: d8515fc613f95ae5d6395e33b49482488bcc488d
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: 524be35ec1e1db511b7fd4c2ab2b87d83c54325c
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introducción a Visual C++ para los usuarios de UNIX
-Este tema proporciona información a los usuarios de UNIX que no estén familiarizados con [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] y deseen ser más productivos con [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)].  
+En este tema se proporciona información a los usuarios de UNIX que no estén familiarizados con Visual C++ y quieran ser más productivos con él.  
   
 ## <a name="getting-started-on-the-command-line"></a>Introducción a la línea de comandos  
- Puede utilizar [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] desde la línea de comandos de manera similar a como utilizaría un entorno de línea de comandos de UNIX. Debe realizar la compilación desde el símbolo del sistema con el compilador de línea de comandos de C y C++ (CL. (EXE) y las herramientas, incluyendo NMAKE. EXE, la versión de Microsoft de la utilidad de creación de UNIX.  
+ Puede usar Visual C++ desde la línea de comandos de manera similar a como usaría un entorno de línea de comandos de UNIX. Debe realizar la compilación desde el símbolo del sistema con el compilador de línea de comandos de C y C++ (CL. (EXE) y las herramientas, incluyendo NMAKE. EXE, la versión de Microsoft de la utilidad de creación de UNIX.  
   
- En UNIX los comandos se instalan en una carpeta común, como/usr/bin. En [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] las herramientas de línea de comandos se instalan en el directorio de instalación en VC\bin (en una instalación típica en Archivos de programa\Microsoft Visual Studio 8\VC\bin). Para utilizar las herramientas de línea de comandos, ejecute vsvars32.bat, que se encuentra en el directorio de instalación en Common7\Tools. Esto agrega el directorio bin a la ruta de acceso y establece otras rutas de acceso necesarias para compilar programas de Visual C++ desde la línea de comandos. Para más información, vea [Compilar en la línea de comandos](../build/building-on-the-command-line.md) y [Tutorial: Compilar un programa nativo de C++ en la línea de comandos](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
+ En UNIX los comandos se instalan en una carpeta común, como/usr/bin. En Visual C++, las herramientas de línea de comandos se instalan en el directorio de instalación VC\bin (en una instalación típica en Archivos de programa\Microsoft Visual Studio 8\VC\bin). Para utilizar las herramientas de línea de comandos, ejecute vsvars32.bat, que se encuentra en el directorio de instalación en Common7\Tools. Esto agrega el directorio bin a la ruta de acceso y establece otras rutas de acceso necesarias para compilar programas de Visual C++ desde la línea de comandos. Para más información, vea [Compilar en la línea de comandos](../build/building-on-the-command-line.md) y [Tutorial: Compilar un programa nativo de C++ en la línea de comandos](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
   
 > [!NOTE]
 >  Si abre un símbolo del sistema con el **Símbolo de la línea de comandos de Visual Studio** desde el menú **Inicio**, se ejecuta vsvars32.bat.  
@@ -60,10 +60,10 @@ Este tema proporciona información a los usuarios de UNIX que no estén familiar
  Una aplicación que consta de varias bibliotecas y ejecutables, cada uno compilado probablemente con un conjunto diferente de opciones del compilador o incluso en un lenguaje diferente, que se almacenan en varios proyectos que forman parte de una sola *solución*. Una solución es una abstracción para que un contenedor agrupe varios proyectos juntos. La información sobre soluciones se almacena en un archivo de soluciones con la extensión .sln. Para más información, vea [Soluciones y proyectos en Visual Studio](/visualstudio/ide/solutions-and-projects-in-visual-studio) y [Utilizar el IDE de Visual Studio para desarrollo de escritorio de C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
 ## <a name="importing-your-existing-code"></a>Importar el código existente  
- Puede usar [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] para usar código existente que esté configurado para compilar con o sin un archivo Make y colocarlo en un proyecto [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Para más información, vea **Asistente para crear nuevo proyecto de archivos de código fuente existentes**. Para más información, vea [Cómo: Crear un proyecto de C++ a partir del código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
+ Puede usar Visual C++ con el propósito de usar código existente que esté configurado para compilar con o sin un archivo Make y colocarlo en un proyecto [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Para más información, vea **Asistente para crear nuevo proyecto de archivos de código fuente existentes**. Para más información, vea [Cómo: Crear un proyecto de C++ a partir del código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   
 ## <a name="creating-a-new-project"></a>Crear un proyecto nuevo  
- Puede crear nuevos proyectos en el entorno de desarrollo. [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] proporciona numerosas plantillas que proporcionan código estándar para diversos proyectos comunes. Puede usar los asistentes para aplicaciones para generar proyectos con esquemas de código para distintos tipos de aplicaciones.  
+ Puede crear nuevos proyectos en el entorno de desarrollo. Visual C ++ proporciona numerosas plantillas que ofrecen código estándar para diversos proyectos comunes. Puede usar los asistentes para aplicaciones para generar proyectos con esquemas de código para distintos tipos de aplicaciones.  
   
  Puede comenzar con un proyecto vacío mediante el **Asistente para aplicaciones de consola (Win32)**. Active la casilla **Proyecto vacío**. A partir de este momento podrá agregar archivos nuevos y existentes al proyecto.  
   
@@ -83,4 +83,4 @@ Este tema proporciona información a los usuarios de UNIX que no estén familiar
  Para más información, vea [Trasladar de UNIX a Win32](../porting/porting-from-unix-to-win32.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Paseo guiado por Visual C++](http://msdn.microsoft.com/en-us/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)
+ [Compilación de programas de C/C++](../build/building-c-cpp-programs.md)
