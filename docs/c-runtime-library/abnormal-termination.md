@@ -1,60 +1,78 @@
 ---
-title: "_abnormal_termination | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_abnormal_termination"
-apilocation: 
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr90.dll"
-  - "msvcr120.dll"
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr100.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_abnormal_termination"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_abnormal_termination"
+title: _abnormal_termination | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _abnormal_termination
+apilocation:
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr90.dll
+- msvcr120.dll
+- msvcrt.dll
+- msvcr80.dll
+- msvcr100.dll
+apitype: DLLExport
+f1_keywords:
+- _abnormal_termination
+dev_langs:
+- C++
+helpviewer_keywords:
+- _abnormal_termination
 ms.assetid: 952970a4-9586-4c3d-807a-db729448c91c
 caps.latest.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 2
----
-# _abnormal_termination
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: d826dd3c0293393a960657f45ac4b68370d7030c
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
-Indica si el bloque de `__finally` de [instrucción try \- final](../cpp/try-finally-statement.md) se incorpora mientras el sistema ejecuta una lista de controladores de terminación.  
+---
+# <a name="abnormaltermination"></a>_abnormal_termination
+Indica si el bloque `__finally` de una [instrucción try-finally](../cpp/try-finally-statement.md) se especifica mientras el sistema ejecuta una lista interna de controladores de terminación.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 int   _abnormal_termination(  
    );  
 ```  
   
-## Valor devuelto  
- `true` si el sistema *está desenredando* la pila; si no, `false`.  
+## <a name="return-value"></a>Valor devuelto  
+ `true` si el sistema *desenreda* la pila; en caso contrario, `false`.  
   
-## Comentarios  
- Esto es una función interna utilizada para administrar excepciones el desenredo, y no está diseñada para denominada de código de usuario.  
+## <a name="remarks"></a>Comentarios  
+ Se trata de una función interna que se usa para administrar las excepciones de desenredado y no está pensada para que se llame desde el código de usuario.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|\_abnormal\_termination|excpt.h|  
+|-------------|---------------------|  
+|_abnormal_termination|excpt.h|  
   
-## Vea también  
- [try\-finally \(Instrucción\)](../cpp/try-finally-statement.md)
+## <a name="see-also"></a>Vea también  
+ [try-finally (Instrucción)](../cpp/try-finally-statement.md)
