@@ -1,34 +1,52 @@
 ---
-title: "Ejemplo de programa de texto gen&#233;rico | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_TCHAR (tipo)"
-  - "asignaciones, tipos de datos TCHAR.H"
-  - "ejemplo de texto genérico [CRT]"
-  - "TCHAR (tipo)"
-  - "tipos de datos TCHAR.H, asignar"
+title: "Ejemplo de programa de texto genérico | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TCHAR type
+- mappings, TCHAR.H data types
+- generic-text example [CRT]
+- TCHAR type
+- TCHAR.H data types, mapping
 ms.assetid: a03de0db-8118-4bd9-a03f-640e8dfc5ed3
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Ejemplo de programa de texto gen&#233;rico
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 0cdc18215fe80c4165ffa03a5d789af0ebc95b40
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="a-sample-generic-text-program"></a>Ejemplo de programa de texto genérico
 **Específicos de Microsoft**  
   
- El siguiente programa, GENTEXT.C, proporciona una ilustración más detallada de las asignaciones de genérico\- texto definidas en TCHAR.H:  
+ El siguiente programa, GENTEXT.C, ofrece una ilustración más detallada del uso de las asignaciones de texto genérico definidas en TCHAR.H:  
   
 ```  
 // GENTEXT.C  
@@ -69,7 +87,7 @@ int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
   
 ```  
   
- Si se ha definido `_MBCS` , mapas de GENTEXT.C el siguiente programa de MBCS:  
+ Si se ha definido `_MBCS`, GENTEXT.C se asigna al programa MBCS siguiente:  
   
 ```  
 // crt_mbcsgtxt.c  
@@ -107,7 +125,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 }  
 ```  
   
- Si se ha definido `_UNICODE` , mapas de GENTEXT.C a la versión siguiente de Unicode del programa.  Para obtener más información sobre cómo utilizar `wmain` en programas de Unicode como reemplazo de `main`, vea [Utilizar wmain](../c-language/using-wmain.md) de *referencia del lenguaje C*.  
+ Si se ha definido `_UNICODE`, GENTEXT.C se asigna a la siguiente versión Unicode del programa. Para obtener más información sobre el uso de `wmain` en programas Unicode como sustituto de `main`, consulte [Usar wmain](../c-language/using-wmain.md) en *Referencia del lenguaje C*.  
   
 ```  
 // crt_unicgtxt.c  
@@ -145,7 +163,7 @@ int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
 }  
 ```  
   
- Si no se han definido `_MBCS` ni `_UNICODE` , mapas de GENTEXT.C el código ASCII del solo\- byte, como sigue:  
+ Si no se han definido `_MBCS` ni `_UNICODE`, GENTEXT.C se asigna al código ASCII de byte único, como sigue:  
   
 ```  
 // crt_sbcsgtxt.c  
@@ -184,7 +202,7 @@ int __cdecl main(int argc, char **argv, char **envp)
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Asignaciones de texto genérico](../c-runtime-library/generic-text-mappings.md)   
  [Asignaciones de tipos de datos](../c-runtime-library/data-type-mappings.md)   
  [Asignaciones de constantes y de variables globales](../c-runtime-library/constant-and-global-variable-mappings.md)   
