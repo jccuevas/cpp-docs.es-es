@@ -1,41 +1,58 @@
 ---
-title: "Asignaciones de rutinas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.mappings"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tWinMain"
-  - "asignaciones de texto genérico"
-  - "tipos de datos de TCHAR.H, lista de asignaciones de rutinas"
+title: Asignaciones de rutinas | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.mappings
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tWinMain
+- TCHAR.H data types, list of routine mappings
+- generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Asignaciones de rutinas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 1b716aacca01e72f917fe4b4083c79d39546b6c4
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
-Las asignaciones de rutinas de texto genérico se definen en TCHAR.H.  `_tccpy` y `_tclen` se asignan a funciones del modelo de MBCS. Se asignan a macros o funciones insertadas en los modelos de SBCS y Unicode por razones de integridad.  Para obtener información sobre una rutina de texto genérico, vea el tema de Ayuda sobre la rutina correspondiente de `SBCS`, `_MBCS` o `_UNICODE`.  
+---
+# <a name="routine-mappings"></a>Asignaciones de rutinas
+Las asignaciones de rutinas de texto genérico se definen en TCHAR.H. `_tccpy` y `_tclen` se asignan a funciones del modelo de MBCS. Se asignan a macros o funciones insertadas en los modelos de SBCS y Unicode por razones de integridad. Para obtener información sobre una rutina de texto genérico, vea el tema de Ayuda sobre la rutina correspondiente de `SBCS`, `_MBCS` o `_UNICODE`.  
   
- En esta documentación no se ofrece información más específica sobre cada una de las rutinas que se mencionan en la columna izquierda de la siguiente tabla.  Sin embargo, es muy fácil buscar la información sobre una rutina correspondiente de `SBCS`, `_MBCS` o `_UNICODE`.  Use el comando de **Búsqueda** del menú **Ayuda** para buscar cualquiera de las rutinas de texto genérico que figuran a continuación.  
+ En esta documentación no se ofrece información más específica sobre cada una de las rutinas que se mencionan en la columna izquierda de la siguiente tabla. Sin embargo, es muy fácil buscar la información sobre una rutina correspondiente de `SBCS`, `_MBCS` o `_UNICODE`. Use el comando de **Búsqueda** del menú **Ayuda** para buscar cualquiera de las rutinas de texto genérico que figuran a continuación.  
   
- Para obtener más información, vea [Asignaciones de texto genérico en TCHAR.H](../Topic/Generic-Text%20Mappings%20in%20Tchar.h.md).  
+ Para obtener más información, consulte [Asignaciones de texto genérico en TCHAR.H](../text/generic-text-mappings-in-tchar-h.md).  
   
-### Asignaciones de rutina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
-|Nombre de la rutina de texto genérico|SBCS \(\_UNICODE & MBCS sin definir\)|\_MBCS definido|\_UNICODE definido|  
-|-------------------------------------------|-------------------------------------------|---------------------|------------------------|  
+|Nombre de la rutina de texto genérico|SBCS (_UNICODE & MBCS sin definir)|_MBCS definido|_UNICODE definido|  
+|--------------------------------|-------------------------------------------|--------------------|-----------------------|  
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|  
 |`_cgetts_s`|`_cgets_s`|`_cgets_s`|`_cgetws_s`|  
 |`_cputts`|`_cputs`|`_cputs`|`_cputws`|  
@@ -271,7 +288,7 @@ Las asignaciones de rutinas de texto genérico se definen en TCHAR.H.  `_tccpy` 
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|  
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Asignaciones de texto genérico](../c-runtime-library/generic-text-mappings.md)   
  [Asignaciones de tipos de datos](../c-runtime-library/data-type-mappings.md)   
  [Asignaciones de constantes y de variables globales](../c-runtime-library/constant-and-global-variable-mappings.md)   
