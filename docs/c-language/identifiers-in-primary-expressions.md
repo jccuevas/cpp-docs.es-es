@@ -1,32 +1,49 @@
 ---
-title: "Identificadores en expresiones primarias | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "identificadores, designar objetos"
+title: Identificadores en expresiones primarias | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- identifiers, designating objects
 ms.assetid: d4602fe6-e7e6-40cc-9823-3b1ebf5d3d38
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Identificadores en expresiones primarias
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 90fa27300457a2318b57fd16ab78688c771651c7
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
-Los identificadores pueden ser de tipo entero, **float**, `enum`, `struct`, **union**, matriz, puntero o función.  Un identificador es una expresión primaria siempre que se haya declarado como designación de un objeto \(en cuyo caso es un valor L\) o como una función \(en cuyo caso es un designador de función\).  Vea [Expresiones de valor L y de valor R](../c-language/l-value-and-r-value-expressions.md) para ver una definición de valor L.  
+---
+# <a name="identifiers-in-primary-expressions"></a>Identificadores en expresiones primarias
+Los identificadores pueden ser de tipo entero, **float**, `enum`, `struct`, **union**, matriz, puntero o función. Un identificador es una expresión primaria siempre que se haya declarado como designación de un objeto (en cuyo caso es un valor L) o como una función (en cuyo caso es un designador de función). Vea [Expresiones de valor L y de valor R](../c-language/l-value-and-r-value-expressions.md) para ver una definición de valor L.  
   
  El valor de puntero representado por un identificador de matriz no es una variable, por lo que un identificador de matriz no puede formar el operando izquierdo de una operación de asignación y, por lo tanto, no es un valor L modificable.  
   
- Un identificador declarado como una función representa un puntero cuyo valor es la dirección de la función.  El puntero se dirige a una función que devuelve un valor de un tipo especificado.  Así, los identificadores de función tampoco pueden ser valores L en operaciones de asignación.  Para obtener más información, vea [Identificadores](../c-language/c-identifiers.md).  
+ Un identificador declarado como una función representa un puntero cuyo valor es la dirección de la función. El puntero se dirige a una función que devuelve un valor de un tipo especificado. Así, los identificadores de función tampoco pueden ser valores L en operaciones de asignación. Para obtener más información, vea [Identificadores](../c-language/c-identifiers.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Expresiones primarias de C](../c-language/c-primary-expressions.md)

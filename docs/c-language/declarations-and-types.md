@@ -1,43 +1,60 @@
 ---
-title: "Declaraciones y tipos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipos de datos [C]"
-  - "declaraciones [C++], C"
-  - "declaraciones [C++], tipos"
-  - "tipos [C]"
+title: Declaraciones y tipos | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- data types [C]
+- types [C]
+- declarations [C++], C
+- declarations [C++], types
 ms.assetid: 432a2286-cf42-42ce-8baf-c908ffb57ca8
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Declaraciones y tipos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 366ddba0f24b9b33b2244e965534ad81d1e82492
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
-En esta sección se describe la declaración e inicialización de variables, funciones y tipos.  El lenguaje C incluye un conjunto estándar de tipos de datos básicos.  También puede agregar sus propios tipos de datos, denominados “tipos derivados”, declarando tipos nuevos basados en los ya definidos.  Se tratan los temas siguientes:  
+---
+# <a name="declarations-and-types"></a>Declaraciones y tipos
+En esta sección se describe la declaración e inicialización de variables, funciones y tipos. El lenguaje C incluye un conjunto estándar de tipos de datos básicos. También puede agregar sus propios tipos de datos, denominados “tipos derivados”, declarando tipos nuevos basados en los ya definidos. Se tratan los temas siguientes:  
   
--   [Información general de declaraciones](../c-language/overview-of-declarations.md)  
+-   [Información general sobre las declaraciones](../c-language/overview-of-declarations.md)  
   
 -   [Clases de almacenamiento](../c-language/c-storage-classes.md)  
   
--   [Especificadores de tipo](../c-language/c-type-specifiers.md)  
+-   [Especificadores de tipos](../c-language/c-type-specifiers.md)  
   
--   [Calificadores de tipo](../c-language/type-qualifiers.md)  
+-   [Calificadores de tipos](../c-language/type-qualifiers.md)  
   
--   [Declaradores y declaraciones de variable](../c-language/declarators-and-variable-declarations.md)  
+-   [Declaradores y declaraciones de variables](../c-language/declarators-and-variable-declarations.md)  
   
--   [Interpretación de los declaradores más complejos](../c-language/interpreting-more-complex-declarators.md)  
+-   [Interpretar declaradores más complejos](../c-language/interpreting-more-complex-declarators.md)  
   
 -   [Inicialización](../c-language/initialization.md)  
   
@@ -45,9 +62,9 @@ En esta sección se describe la declaración e inicialización de variables, fun
   
 -   [Tipos incompletos](../c-language/incomplete-types.md)  
   
--   [Declaraciones de typedef](../c-language/typedef-declarations.md)  
+-   [Declaraciones typedef](../c-language/typedef-declarations.md)  
   
--   [Atributos extendidos de clase de almacenamiento](../c-language/c-extended-storage-class-attributes.md)  
+-   [Atributos de clase de almacenamiento extendidos](../c-language/c-extended-storage-class-attributes.md)  
   
-## Vea también  
- [Referencia de lenguaje C](../c-language/c-language-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia del lenguaje C](../c-language/c-language-reference.md)

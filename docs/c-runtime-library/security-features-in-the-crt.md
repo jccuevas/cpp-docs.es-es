@@ -1,99 +1,116 @@
 ---
-title: "Caracter&#237;sticas de seguridad de CRT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_CRT_SECURE_NO_DEPRECATE"
-  - "_CRT_NONSTDC_NO_WARNINGS"
-  - "_CRT_SECURE_NO_WARNINGS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CRT_NONSTDC_NO_DEPRECATE"
-  - "_CRT_NONSTDC_NO_WARNINGS"
-  - "_CRT_SECURE_NO_DEPRECATE"
-  - "_CRT_SECURE_NO_WARNINGS"
-  - "desbordamientos del búfer"
-  - "búferes [C++], desbordamientos del búfer"
-  - "CRT, mejoras de seguridad"
-  - "CRT_NONSTDC_NO_DEPRECATE"
-  - "CRT_NONSTDC_NO_WARNINGS"
-  - "CRT_SECURE_NO_DEPRECATE"
-  - "CRT_SECURE_NO_WARNINGS"
-  - "advertencias sobre desuso (relacionadas con la seguridad)"
-  - "advertencias sobre desuso (relacionadas con la seguridad), deshabilitar"
-  - "parámetros [C++], validación"
-  - "seguridad [CRT]"
-  - "advertencias sobre desuso relacionadas con la seguridad [C++]"
-  - "CRT con seguridad mejorada"
+title: "Características de seguridad de CRT | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _CRT_SECURE_NO_DEPRECATE
+- _CRT_NONSTDC_NO_WARNINGS
+- _CRT_SECURE_NO_WARNINGS
+dev_langs:
+- C++
+helpviewer_keywords:
+- security deprecation warnings [C++]
+- CRT_NONSTDC_NO_DEPRECATE
+- buffers [C++], buffer overruns
+- deprecation warnings (security-related), disabling
+- _CRT_NONSTDC_NO_WARNINGS
+- security [CRT]
+- _CRT_SECURE_NO_WARNINGS
+- _CRT_NONSTDC_NO_DEPRECATE
+- _CRT_SECURE_NO_DEPRECATE
+- security-enhanced CRT
+- CRT_SECURE_NO_WARNINGS
+- CRT_SECURE_NO_DEPRECATE
+- deprecation warnings (security-related)
+- buffer overruns
+- CRT_NONSTDC_NO_WARNINGS
+- CRT, security enhancements
+- parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# Caracter&#237;sticas de seguridad de CRT
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: c197434fceff8920cd501a64131c3e0816c9594d
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
-Muchas las funciones CRT tienen más recientes, más seguras versiones.  Si existe una función segura, se marca la más antigua, menos segura versión como desusada y la nueva versión tiene el sufijo de `_s` \(“seguras”\).  
+---
+# <a name="security-features-in-the-crt"></a>Características de seguridad de CRT
+Muchas funciones anteriores de CRT tienen versiones nuevas y más seguras. Si existe una función segura, la versión anterior y menos segura está marcada como desusada y la nueva versión presenta el sufijo `_s` ("segura").  
   
- En este contexto, “desusada” sólo significa que el uso de una función no está recomendado; no indica que la función se programa para eliminarse CRT.  
+ En este contexto, "en desuso" simplemente significa que no se recomienda el uso de una función; no indica que esté programada la retirada de la función de CRT.  
   
- Las funciones seguras no evita o corregir errores de seguridad; en lugar, detecte errores cuando se producen.  Realizan comprobaciones para adicionales condiciones de error y, en el caso de un error, se invoca un controlador de errores \(vea [Validación de parámetros](../c-runtime-library/parameter-validation.md)\).  
+ Las funciones seguras no evitan ni corrigen errores de seguridad, sino que los detectan cuando ocurren. Realizan comprobaciones adicionales de condiciones de error y, en caso de que se detecte algún error, invocan a un controlador de errores (vea [Validación de errores](../c-runtime-library/parameter-validation.md)).  
   
- Por ejemplo, la función de `strcpy` no tiene ninguna manera de saber si la cadena que está copiando es demasiado grande para el búfer de destino.  Sin embargo, su homólogo seguro, `strcpy_s`, toma el tamaño de búfer como parámetro, lo que puede determinar si una saturación del búfer se produce.  Si utiliza `strcpy_s` para copiar once caracteres en un búfer de diez\- carácter, que es un error en la parte; `strcpy_s` no puede corregir el error, pero puede detectar el error e informar al controlador no válido del parámetro.  
+ Por ejemplo, la función `strcpy` no tiene ninguna manera de indicar si la cadena que se está copiando es demasiado grande para su búfer de destino. Sin embargo, su equivalente seguro, `strcpy_s`, adopta el tamaño del búfer como un parámetro, lo que le permite determinar si se producirá una saturación del búfer. Si usa `strcpy_s` para copiar once caracteres en un búfer de diez caracteres, se trata de un error por parte del usuario; `strcpy_s` no puede corregir este error, pero puede detectarlo e informar para que se invoque al controlador de parámetros no válidos.  
   
-## Eliminación de advertencias de desaprobación  
- Hay varias maneras de eliminar las advertencias de la aparición de las más antiguas, menos seguras.  La más simple es simplemente definir `_CRT_SECURE_NO_WARNINGS` o utilizar la directiva pragma de [warning](../preprocessor/warning.md) .  Cualquiera deshabilitará advertencias de desuso, pero por supuesto problemas de seguridad que todavía se produjeron advertencias existen.  Es mucho mejor dejar advertencias de desaprobación habilitadas y aprovechar las nuevas características de seguridad de CRT.  
+## <a name="eliminating-deprecation-warnings"></a>Eliminación de advertencias sobre desuso  
+ Hay varias maneras de eliminar las advertencias sobre desuso de las funciones más antiguas y menos seguras. La más sencilla consiste simplemente en definir `_CRT_SECURE_NO_WARNINGS` o en usar el pragma [warning](../preprocessor/warning.md). De esta forma, se deshabilitan las advertencias sobre desuso, pero persistirán los errores de seguridad que ocasionaron las advertencias. Es mucho más conveniente dejar habilitadas las advertencias sobre desuso y beneficiarse de las nuevas características de seguridad de CRT.  
   
- En C\+\+, la manera más fácil de hacerlo es utilizar [Sobrecargas de plantilla seguras](../c-runtime-library/secure-template-overloads.md), que en muchos casos eliminarán advertencias de desaprobación reemplazando llamadas a funciones obsoletas con llamadas a las nuevas versiones seguras de esas funciones.  Por ejemplo, considere esta llamada desusada a `strcpy`:  
+ En C++, la manera más fácil de hacerlo es usar las [sobrecargas de plantillas seguras](../c-runtime-library/secure-template-overloads.md), que en muchos casos eliminarán las advertencias sobre desuso reemplazando las llamadas a funciones en desuso por llamadas a las nuevas versiones seguras de estas funciones. Por ejemplo, considere esta llamada en desuso a `strcpy`:  
   
 ```  
 char szBuf[10];   
 strcpy(szBuf, "test"); // warning: deprecated   
 ```  
   
- La definición de `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` como 1 elimina la advertencia cambiando la llamada de `strcpy` a `strcpy_s`, que evita las saturaciones del búfer.  Para obtener más información, vea [Sobrecargas de plantilla seguras](../c-runtime-library/secure-template-overloads.md).  
+ Al definir `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` como 1, se elimina la advertencia cambiando la llamada a `strcpy` por `strcpy_s`, lo que evita las saturaciones del búfer. Para obtener más información, consulta [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md).  
   
- Para las funciones obsoletas sin sobrecargas de plantilla de seguridad, debe considerar definitivamente actualizar manualmente el código para utilizar las versiones seguras.  
+ En el caso de estas funciones en desuso sin sobrecargas de plantillas seguras, debe considerar en última instancia actualizar manualmente el código para usar las versiones seguras.  
   
- Otro origen de las advertencias de desuso, relacionada con la seguridad, son las funciones de POSIX.  Reemplace los nombres de función de POSIX con sus equivalentes estándar \(por ejemplo, cambie [acceso](../c-runtime-library/reference/access-crt.md) a [\_access](../c-runtime-library/reference/access-waccess.md)\), o deshabilitar las advertencias POSIX\- relacionadas de desuso definiendo `_CRT_NONSTDC_NO_WARNINGS`.  Para obtener más información, vea [Deprecated CRT Functions](http://msdn.microsoft.com/es-es/7e259932-c6c8-4c1a-9637-639e591681a5).  
+ Otro origen de las advertencias sobre desuso, no relacionadas con la seguridad, son las funciones POSIX. Reemplace los nombres de funciones POSIX por sus equivalentes estándar (por ejemplo, cambie [access](../c-runtime-library/reference/access-crt.md) por [_access](../c-runtime-library/reference/access-waccess.md)), o bien deshabilite las advertencias sobre desuso relacionadas con POSIX mediante la definición de `_CRT_NONSTDC_NO_WARNINGS`. Para más información, vea [Deprecated CRT Functions](http://msdn.microsoft.com/en-us/7e259932-c6c8-4c1a-9637-639e591681a5) (Funciones de CRT en desuso).  
   
-## Características de seguridad adicionales  
- Algunas de las características de seguridad incluyen:  
+## <a name="additional-security-features"></a>Características de seguridad adicionales  
+ Entre las características de seguridad, se incluyen las siguientes:  
   
--   `Parameter Validation`.  Los parámetros pasados a funciones CRT se validan, en aseguran funciones y en muchas versiones preexistentes desde funciones.  Esta entre las validaciones:  
+-   `Parameter Validation`. Se validan los parámetros transferidos a las funciones de CRT, tanto en las funciones seguras como en muchas versiones preexistentes de las funciones. Estas validaciones incluyen:  
   
-    -   Comprobar el valores de `NULL` pasados a las funciones.  
+    -   Comprobar los valores `NULL` transferidos a las funciones.  
   
-    -   Comprobar los valores enumerados para la validez.  
+    -   Comprobar la validez de los valores enumerados.  
   
-    -   El comprobar que los valores enteros están en intervalos válidos.  
+    -   Comprobar si los valores de enteros se encuentran en intervalos válidos.  
   
--   Para obtener más información, vea [Validación de parámetros](../c-runtime-library/parameter-validation.md).  
+-   Para más información, consulte [Validación de parámetros](../c-runtime-library/parameter-validation.md).  
   
--   Un controlador para parámetros no válidos también es accesible para el desarrollador.  Cuando un encontrar un parámetro no válido, en lugar de la aserción y de salir de la aplicación, CRT proporciona una manera de comprobar estos problemas con [\_set\_invalid\_parameter\_handler, \_set\_thread\_local\_invalid\_parameter\_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) funcionan.  
+-   El desarrollador también puede acceder a un controlar de parámetros no válidos. Al detectar un parámetro no válido, en lugar de validar la aplicación y cerrarla, CRT ofrece una forma de comprobar estos problemas con la función [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).  
   
--   `Sized Buffers`.  Las funciones seguras requieren que el tamaño de búfer se dedica a cualquier función que escribe en un búfer.  Las versiones seguras validan que el búfer es bastante grande antes de escribir, ayudar a evitar los errores de saturación del búfer peligrosas que pueden permitir que el código malintencionado se ejecute.  Estas funciones devuelven un tipo de `errno` de código de error y se invoca normalmente el controlador no válido de parámetro si el tamaño del búfer es demasiado pequeño.  Funciona que lea de los búferes de entrada, como `gets`, tiene versiones seguras que exigen especificar un tamaño máximo.  
+-   `Sized Buffers`. Las funciones seguras requieren que el tamaño del búfer se transfiera a cualquier función que escribe en un búfer. Las versiones seguras validan que el búfer es suficientemente grande antes de escribir en él, de tal forma que se evitan así errores peligrosos de saturación del búfer que podrían permitir la ejecución de código malintencionado. Estas funciones suelen devolver un tipo `errno` de código de error e invocar al controlador de parámetros no válidos si el tamaño del búfer es demasiado pequeño. Las funciones que leen de los búferes de entrada, como `gets`, tienen versiones seguras que requieren que se especifique un tamaño máximo.  
   
--   `Null termination`.  Algunas funciones que permiten cadenas potencialmente no termina tienen versiones seguras que se garantiza que las cadenas son correctamente nulas finalizadas.  
+-   `Null termination`. Algunas funciones que dejaron cadenas potencialmente no terminadas tienen versiones seguras que garantizan que las cadenas terminan correctamente en null.  
   
--   `Enhanced error reporting`.  Códigos de error de vuelta de las funciones seguras con más información de error disponible con funciones la preexistente.  Las funciones seguras y muchas de las funciones existentes `errno` ahora establecido y devuelven a menudo un código de `errno` tipo también, para proporcionar un mejor informes de errores.  
+-   `Enhanced error reporting`. Las funciones seguras devuelven códigos de error con más información sobre el error de la que estaba disponible con las funciones preexistentes. Las funciones seguras y muchas de las funciones preexistentes ahora establecen `errno` y también suelen devolver un tipo de código `errno`, a fin de ofrecer más información sobre los errores.  
   
--   `Filesystem security`.  Acceso a archivos seguro admiten de API de E\/S segura del archivo en el caso predeterminado.  
+-   `Filesystem security`. Las API de E/S de archivo seguras admiten el acceso seguro a los archivos de forma predeterminada.  
   
--   `Windows security`.  API de proceso seguro aplica directivas de seguridad y permite que las ACL se especifiquen.  
+-   `Windows security`. Las API de proceso seguras aplican directivas de seguridad y permiten especificar ACL.  
   
--   `Format string syntax checking`.  Las cadenas no válidas se detectan, por ejemplo, con los caracteres de campo incorrectos de tipo en las cadenas de formato de `printf` .  
+-   `Format string syntax checking`. Se detectan cadenas no válidas, por ejemplo, con el uso de caracteres de campo de tipo incorrecto en las cadenas de formato `printf`.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Validación de parámetros](../c-runtime-library/parameter-validation.md)   
- [Sobrecargas de plantilla seguras](../c-runtime-library/secure-template-overloads.md)   
+ [Sobrecargas de plantillas seguras](../c-runtime-library/secure-template-overloads.md)   
  [Características de la biblioteca CRT](../c-runtime-library/crt-library-features.md)

@@ -1,48 +1,65 @@
 ---
-title: "E/S de archivo en modo texto y en modo binario | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.io"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "acceso binario"
-  - "acceso binario, E/S de archivo en modo binario"
-  - "archivos [C++], funciones de apertura"
-  - "funciones [CRT], acceso a archivos"
-  - "E/S [CRT], binaria"
-  - "E/S [CRT], archivos de texto"
-  - "E/S [CRT], modos de traducción"
-  - "archivos de texto, E/S"
-  - "modos de traducción (E/S de archivo)"
-  - "traslación, modos"
+title: E/S de archivo en modo texto y en modo binario | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.io
+dev_langs:
+- C++
+helpviewer_keywords:
+- files [C++], open functions
+- I/O [CRT], text files
+- functions [CRT], file access
+- binary access, binary mode file I/O
+- translation, modes
+- I/O [CRT], binary
+- text files, I/O
+- I/O [CRT], translation modes
+- translation modes (file I/O)
+- binary access
 ms.assetid: 3196e321-8b87-4609-b302-cd6f3c516051
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# E/S de archivo en modo texto y en modo binario
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: a788242344c7cb3b89765e7476fdd23dbf68982d
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
-Operaciones de E\/S de archivos tienen lugar en uno de los dos modos de traducción, texto o binario, dependiendo del modo en que se abrirá el archivo.  Los archivos de datos se procesan normalmente en modo de texto.  Para controlar el archivo de modalidad de traducción, se puede:  
+---
+# <a name="text-and-binary-mode-file-io"></a>E/S de archivo en modo texto y en modo binario
+Las operaciones de E/S de archivo tienen lugar en uno de los dos modos de conversión, es decir, texto o binario, según el modo en que se abre el archivo. Los archivos de datos normalmente se procesan en modo de texto. Para controlar el modo de conversión de archivos, se puede:  
   
--   Mantenga la configuración predeterminada actual y especificar el modo alternativo sólo cuando se abren los archivos seleccionados.  
+-   Conservar la configuración predeterminada actual y especificar el modo alternativo solo al abrir los archivos seleccionados.  
   
--   Utilice la función [\_set\_fmode](../c-runtime-library/reference/set-fmode.md) para cambiar al modo predeterminado de nuevo los archivos abiertos.  Utilice [\_get\_fmode](../c-runtime-library/reference/get-fmode.md) para buscar el modo predeterminado actual.  La configuración predeterminada inicial es el modo de texto \(`_O_TEXT`\).  
+-   Usar la función [_set_fmode](../c-runtime-library/reference/set-fmode.md) para cambiar el modo predeterminado para los archivos que se han abierto recientemente. Usar [_get_fmode](../c-runtime-library/reference/get-fmode.md) para encontrar el modo predeterminado actual. La configuración predeterminada inicial es el modo de texto (`_O_TEXT`).  
   
--   Cambie el de modalidad de traducción predeterminado estableciendo directamente la variable global [\_fmode](../c-runtime-library/fmode.md) en el programa.  La función `_set_fmode` establece el valor de esta variable, pero también puede establecerse directamente.  
+-   Cambiar el modo de conversión predeterminado mediante la configuración de la variable global [_fmode](../c-runtime-library/fmode.md) en el programa. La función `_set_fmode` establece el valor de esta variable, pero también puede establecerse directamente.  
   
- Cuando se llama a una función de archivo \(el archivo Abrir como [\_open](../c-runtime-library/reference/open-wopen.md), [fopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen\_s](../c-runtime-library/reference/fopen-s-wfopen-s.md), [freopen](../c-runtime-library/reference/freopen-wfreopen.md), [freopen\_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md), [\_fsopen](../c-runtime-library/reference/fsopen-wfsopen.md) o [\_sopen\_s](../c-runtime-library/reference/sopen-s-wsopen-s.md), puede reemplazar el valor predeterminado actual de `_fmode` especificando el argumento adecuado a la función [\_set\_fmode](../c-runtime-library/reference/set-fmode.md).  `stdin`, `stdout`, y secuencias de `stderr` abra siempre en modo de texto de forma predeterminada; también puede invalidar este valor predeterminado al abrir cualquiera de estos archivos.  El uso [\_setmode](../c-runtime-library/reference/setmode.md) de cambiar el de modalidad de traducción mediante descriptor de archivo después de archivo está abierto.  
+ Cuando se llama a una función file-open como [_open](../c-runtime-library/reference/open-wopen.md), [fopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md), [freopen](../c-runtime-library/reference/freopen-wfreopen.md), [freopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md), [_fsopen](../c-runtime-library/reference/fsopen-wfsopen.md) o [_sopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md), puede invalidar el valor predeterminado actual de `_fmode` especificando el argumento correspondiente para la función [_set_fmode](../c-runtime-library/reference/set-fmode.md). Las secuencias `stdin`, `stdout` y `stderr` siempre se abren en modo de texto de forma predeterminada; también puede invalidar este comportamiento predeterminado al abrir cualquiera de estos archivos. Use [_setmode](../c-runtime-library/reference/setmode.md) para cambiar el modo de conversión con el descriptor de archivo después de que el archivo está abierto.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Entrada y salida](../c-runtime-library/input-and-output.md)   
- [Rutinas de tiempo de ejecución por categoría](../c-runtime-library/run-time-routines-by-category.md)
+ [Rutinas en tiempo de ejecución por categoría](../c-runtime-library/run-time-routines-by-category.md)

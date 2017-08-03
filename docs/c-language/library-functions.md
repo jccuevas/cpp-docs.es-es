@@ -1,26 +1,43 @@
 ---
-title: "Funciones de la biblioteca | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Funciones de la biblioteca | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 90c096ab-31df-479e-91d8-289900dc0bff
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Funciones de la biblioteca
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 1c57ba02eb88b5097945e1e6c0e7560dc61d0d25
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
--   [Macro NULL](../c-language/null-macro.md)  
+---
+# <a name="library-functions"></a>Funciones de la biblioteca
+-   [NULL (Macro)](../c-language/null-macro.md)  
   
 -   [Diagnóstico impreso por la función assert](../c-language/diagnostic-printed-by-the-assert-function.md)  
   
@@ -40,9 +57,9 @@ caps.handback.revision: 9
   
 -   [Líneas en blanco](../c-language/blank-lines.md)  
   
--   [Caracteres null](../c-language/null-characters.md)  
+-   [Caracteres NULL](../c-language/null-characters.md)  
   
--   [Posición de archivo en modo Append](../c-language/file-position-in-append-mode.md)  
+-   [Posición de archivo en modo Anexar](../c-language/file-position-in-append-mode.md)  
   
 -   [Truncamiento de archivos de texto](../c-language/truncation-of-text-files.md)  
   
@@ -56,9 +73,9 @@ caps.handback.revision: 9
   
 -   [Eliminación de archivos abiertos](../c-language/deleting-open-files.md)  
   
--   [Cambio de nombre por uno que ya existe](../c-language/renaming-with-a-name-that-exists.md)  
+-   [Cambiar el nombre por uno que ya existe](../c-language/renaming-with-a-name-that-exists.md)  
   
--   [Lectura de valores de puntero](../c-language/reading-pointer-values.md)  
+-   [Leer valores de puntero](../c-language/reading-pointer-values.md)  
   
 -   [Intervalos de lectura](../c-language/reading-ranges.md)  
   
@@ -82,5 +99,5 @@ caps.handback.revision: 9
   
 -   [La función clock](../c-language/clock-function-c.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Comportamiento definido por la implementación](../c-language/implementation-defined-behavior.md)

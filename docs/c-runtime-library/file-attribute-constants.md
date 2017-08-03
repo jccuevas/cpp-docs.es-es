@@ -1,80 +1,97 @@
 ---
-title: "Constantes de atributo de archivo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A_HIDDEN"
-  - "_A_NORMAL"
-  - "_A_SUBDIR"
-  - "_A_RDONLY"
-  - "A_NORMAL"
-  - "A_SUBDIR"
-  - "_A_SYSTEM"
-  - "c.constants.file"
-  - "_A_HIDDEN"
-  - "A_RDONLY"
-  - "_A_ARCH"
-  - "A_ARCH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_A_ARCH (constante)"
-  - "_A_HIDDEN (constante)"
-  - "_A_NORMAL (constante)"
-  - "_A_RDONLY (constante)"
-  - "_A_SUBDIR (constante)"
-  - "_A_SYSTEM (constante)"
-  - "constantes [C++], atributos de archivo"
-  - "constantes de atributo de archivo [C++]"
-  - "archivos [C++], constantes de atributo de archivo"
+title: Constantes de atributo de archivo | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- A_HIDDEN
+- _A_NORMAL
+- _A_SUBDIR
+- _A_RDONLY
+- A_NORMAL
+- A_SUBDIR
+- _A_SYSTEM
+- c.constants.file
+- _A_HIDDEN
+- A_RDONLY
+- _A_ARCH
+- A_ARCH
+dev_langs:
+- C++
+helpviewer_keywords:
+- constants [C++], file attributes
+- file attribute constants [C++]
+- _A_SYSTEM constant
+- files [C++], file attribute constants
+- _A_SUBDIR constant
+- _A_ARCH constant
+- _A_NORMAL constant
+- _A_HIDDEN constant
+- _A_RDONLY constant
 ms.assetid: 8dc8ccb9-99f5-446b-876c-7ebecc2f764f
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Constantes de atributo de archivo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 66c0f112230098288c32058415490dd0b578f357
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
-## Sintaxis  
+---
+# <a name="file-attribute-constants"></a>Constantes de atributo de archivo
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 #include <io.h>  
 ```  
   
-## Comentarios  
- Estas constantes especifican los atributos actuales del archivo o el directorio especificado por la función.  
+## <a name="remarks"></a>Comentarios  
+ Estas constantes especifican los atributos actuales del archivo o directorio especificado por la función.  
   
  Los atributos se representan mediante las constantes de manifiesto siguientes:  
   
  `_A_ARCH`  
- Archivo.  Conjunto siempre que esté cambiado, y borrado por el comando AUXILIAR.  Value: 0x20  
+ Archivo. Establecer siempre que el comando BACKUP cambie y desactive el archivo. Valor: 0x20  
   
  `_A_HIDDEN`  
- Archivo oculto.  Visto no normalmente al comando de DIR, a menos que se utilice la opción \/AH.  Devuelve información sobre los archivos normales junto con los archivos con este atributo.  Value: 0x02  
+ Archivo oculto. Generalmente no se ve con el comando DIR, a menos que use la opción /AH. Devuelve información sobre los archivos normales y los que tienen este atributo. Valor: 0x02  
   
  `_A_NORMAL`  
- Normal.  El archivo se puede leer o escribir sin en la restricción.  Value: 0x00  
+ Normal. Se puede leer el archivo o escribir en él sin ninguna restricción. Valor: 0x00  
   
  `_A_RDONLY`  
- Sólo lectura.  El archivo no se puede abrir para escribir, y un archivo con el mismo nombre no se puede crear.  Value: 0x01  
+ Sólo lectura. No se puede abrir el archivo para escritura ni se puede crear un archivo con el mismo nombre. Valor: 0x01  
   
  `_A_SUBDIR`  
- Subdirectorio.  Value: 0x10  
+ Subdirectorio. Valor: 0x10  
   
  `_A_SYSTEM`  
- Archivo de sistema.  Visto no normalmente al comando de DIR, a menos que se utilice la opción \/AS.  Value: 0x04  
+ Archivo de sistema. Generalmente no se ve con el comando DIR, a menos que use la opción /AS. Valor: 0x04  
   
- Las varias constantes pueden combinarse con OR el operador \(&#124;\).  
+ Varias constantes pueden combinarse con el operador OR (&#124;).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Funciones de búsqueda de nombre de archivo](../c-runtime-library/filename-search-functions.md)   
  [Constantes globales](../c-runtime-library/global-constants.md)
