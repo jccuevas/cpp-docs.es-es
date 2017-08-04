@@ -1,39 +1,56 @@
 ---
-title: "Expresiones y asignaciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "asignar valores en C"
-  - "operadores de asignación, asignar valores en expresiones"
-  - "instrucciones de asignación, valores en expresiones"
-  - "expresiones [C]"
-  - "expresiones [C], asignar valores"
-  - "operadores [C], asignar valores"
-  - "Visual C, asignaciones"
-  - "Visual C, expresiones"
+title: Expresiones y asignaciones | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- assignment statements, values in expressions
+- expressions [C]
+- expressions [C], assigning values
+- Visual C, expressions
+- assignment operators, assigning values in expressions
+- operators [C], assigning values
+- assigning values in C
+- Visual C, assignments
 ms.assetid: 9c72919f-0768-4b47-85ca-afdfec6847f4
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Expresiones y asignaciones
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: b0a4089a7f6b3a3dba79eec364a1f9b399c96fbf
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
-En esta sección se describe cómo se forman expresiones y se asignan valores en el lenguaje C.  Las constantes, los identificadores, las cadenas y las llamadas de función son operandos que se manipulan en expresiones.  El lenguaje C tiene todos los operadores habituales del lenguaje.  En esta sección se describen dichos operadores así como los operadores que son únicos en C o Microsoft C.  Entre los temas que se analizan se incluyen los siguientes:  
+---
+# <a name="expressions-and-assignments"></a>Expresiones y asignaciones
+En esta sección se describe cómo se forman expresiones y se asignan valores en el lenguaje C. Las constantes, los identificadores, las cadenas y las llamadas de función son operandos que se manipulan en expresiones. El lenguaje C tiene todos los operadores habituales del lenguaje. En esta sección se describen dichos operadores así como los operadores que son únicos en C o Microsoft C. Entre los temas tratados se incluyen:  
   
--   [Expresiones de valor L y de valor R](../c-language/l-value-and-r-value-expressions.md)  
+-   [Expresiones de valor L y valor R](../c-language/l-value-and-r-value-expressions.md)  
   
--   [Expresiones de constante](../c-language/c-constant-expressions.md)  
+-   [Expresiones constantes](../c-language/c-constant-expressions.md)  
   
 -   [Efectos secundarios](../c-language/side-effects.md)  
   
@@ -41,11 +58,11 @@ En esta sección se describe cómo se forman expresiones y se asignan valores en
   
 -   [Operadores](../c-language/c-operators.md)  
   
--   [Prioridad de operadores](../c-language/precedence-and-order-of-evaluation.md)  
+-   [Precedencia de operadores](../c-language/precedence-and-order-of-evaluation.md)  
   
--   [Conversiones de tipo](../c-language/type-conversions-c.md)  
+-   [Conversiones de tipos](../c-language/type-conversions-c.md)  
   
 -   [Conversiones de tipos](../c-language/type-cast-conversions.md)  
   
-## Vea también  
- [Referencia de lenguaje C](../c-language/c-language-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia del lenguaje C](../c-language/c-language-reference.md)

@@ -1,32 +1,49 @@
 ---
-title: "Inicializaci&#243;n de CRT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRT (inicialización) [C++]"
+title: "Inicialización de CRT | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Inicializaci&#243;n de CRT
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: a4542c86e571a338a08479feedbbb27347776137
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
-Este tema describe cómo inicializa CRT estados globales en código nativo.  
+---
+# <a name="crt-initialization"></a>Inicialización de CRT
+En este tema se describe cómo el CRT inicializa estados globales en código nativo.  
   
- De forma predeterminada, el vinculador incluye la biblioteca CRT, que proporciona su propio código de inicio.  Este código de inicio inicializa la biblioteca CRT, llama a inicializadores globales, y después los llama usuario\- proporcionado a la función de `main` para aplicaciones de consola.  
+ De forma predeterminada, el vinculador incluye la biblioteca de CRT, que proporciona su propio código de inicio. Este código de inicio inicializa la biblioteca de CRT, llama a los inicializadores globales y, después, llama a la función `main` proporcionada por el usuario para las aplicaciones de consola.  
   
-## Inicializar un objeto global  
+## <a name="initializing-a-global-object"></a>Inicialización de un objeto global  
  Observe el código siguiente:  
   
 ```  
@@ -43,13 +60,13 @@ int main()
 }  
 ```  
   
- Según el estándar de C\/C\+\+, `func()` debe llamar antes de que se ejecute `main()` .  ¿Pero que se denomina?  
+ Según el estándar de C o C++, se debe llamar a `func()` antes de ejecutar `main()`. Pero, ¿quién llama?  
   
- Una manera de determinar esto es establecer un punto de interrupción en `func()`, depurar la aplicación, y examinar la pila.  Esto es posible porque el código fuente de CRT se incluye con Visual Studio.  
+ Una forma de determinar esta cuestión consiste en establecer un punto de interrupción en `func()`, depurar la aplicación y examinar la pila. Esto es posible porque el código fuente de CRT se incluye en Visual Studio.  
   
- Cuando examine las funciones de la pila, descubrirá que CRT está recorriendo mediante una lista de los punteros a función y llama a cada cuando los encuentra.  Estas funciones son similares a `func()` o los constructores de las instancias de clase.  
+ Al examinar las funciones en la pila, observará que CRT está en bucle a través de una lista de punteros a función y una llamada a cada una de ellos a medida que los encuentra. Estas funciones son similares a `func()` o constructores de instancias de clase.  
   
- CRT obtiene la lista de punteros a función del compilador de Visual C\+\+.  Cuando el compilador consulta un inicializador global, genera un inicializador dinámico en la sección de `.CRT$XCU` \(donde es el nombre de sección `CRT` y `XCU` es el nombre de grupo\).  Para obtener una lista de los inicializadores dinámicos ejecute el comando **dumpbin \/all main.obj**, y después busque en la sección de `.CRT$XCU` \(cuando se compila main.cpp como archivo de c\+\+., no archivo c\+\+.\).  Será similar al siguiente:  
+ La biblioteca de CRT obtiene la lista de punteros de función del compilador de Visual C++. Cuando el compilador encuentra un inicializador global, genera un inicializador dinámico en la sección `.CRT$XCU` (donde `CRT` es el nombre de sección y `XCU` es el nombre de grupo). Para obtener una lista de estos inicializadores dinámicos, ejecute el comando **dumpbin /all main.obj** y, después, busque la sección `.CRT$XCU` (cuando main.cpp se compila como un archivo de C++, y no como un archivo de C). La operación debe ser similar a la siguiente:  
   
 ```  
 SECTION HEADER #6  
@@ -83,11 +100,11 @@ RELOCATIONS #6
   
 -   `__xc_z` en `.CRT$XCZ`  
   
- Ambos grupos no tienen ninguna otra símbolos definida excepto `__xc_a` y `__xc_z`.  
+ Los dos grupos no tienen ningún otro símbolo definido, excepto `__xc_a` y `__xc_z`.  
   
- Ahora, cuando el vinculador lee a varios grupos de `.CRT` , los combina en una sección y los ordena alfabéticamente.  Esto significa que los inicializadores globales definido por el usuario \(que el compilador de Visual C\+\+ coloca en `.CRT$XCU`\) procederán siempre después de `.CRT$XCA` y antes de `.CRT$XCZ`.  
+ Ahora, cuando el vinculador lee varios grupos `.CRT`, los combina en una sección y los ordena alfabéticamente. Esto significa que los inicializadores globales definidos por el usuario (que el compilador de Visual C++ coloca en `.CRT$XCU`) siempre irán después de `.CRT$XCA` y antes de `.CRT$XCZ`.  
   
- La sección se parecerá a la siguiente:  
+ La sección será similar a la siguiente:  
   
 ```  
 .CRT$XCA  
@@ -99,7 +116,7 @@ RELOCATIONS #6
             __xc_z  
 ```  
   
- Así, la biblioteca CRT utiliza `__xc_a` y `__xc_z` para determinar el inicio y el final de los inicializadores globales muestra debido a la manera en que se muestran en memoria después de que la imagen se carga.  
+ Por lo tanto, la biblioteca de CRT utiliza `__xc_a` y `__xc_z` para determinar el inicio y el final de la lista de inicializadores globales, debido a la forma en que están colocados en memoria después de cargar la imagen.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Características de la biblioteca CRT](../c-runtime-library/crt-library-features.md)

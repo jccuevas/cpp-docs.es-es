@@ -1,34 +1,51 @@
 ---
-title: "Resumen de duraci&#243;n y visibilidad | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "duración, y visibilidad"
-  - "visibilidad, identificadores"
+title: "Resumen de duración y visibilidad | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- lifetime, and visibility
+- visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Resumen de duraci&#243;n y visibilidad
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 05bf4ad0f6c0e14ed8a93a661e71ebced5172511
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
-En la tabla siguiente se muestra un resumen de características de duración y de visibilidad para la mayoría de los identificadores.  Las tres primeras columnas proporcionan los atributos que definen duración y visibilidad.  Un identificador con los atributos especificados por las tres primeras columnas tiene la duración y la visibilidad que se muestran en la cuarta y quinta columnas.  Sin embargo, la tabla no cubre todos los casos posibles.  Consulte [Clases de almacenamiento](../c-language/c-storage-classes.md) para obtener más información.  
+---
+# <a name="summary-of-lifetime-and-visibility"></a>Resumen de duración y visibilidad
+En la tabla siguiente se muestra un resumen de características de duración y de visibilidad para la mayoría de los identificadores. Las tres primeras columnas proporcionan los atributos que definen duración y visibilidad. Un identificador con los atributos especificados por las tres primeras columnas tiene la duración y la visibilidad que se muestran en la cuarta y quinta columnas. Sin embargo, la tabla no cubre todos los casos posibles. Consulte [Clases de almacenamiento](../c-language/c-storage-classes.md) para obtener más información.  
   
-### Resumen de duración y visibilidad  
+### <a name="summary-of-lifetime-and-visibility"></a>Resumen de duración y visibilidad  
   
-|Atributos:<br /><br /> Nivel|Elemento|Clase de almacenamiento<br /><br /> Especificador|Resultado:<br /><br /> Período de duración|Visibilidad|  
-|--------------------------|--------------|-----------------------------------------------|----------------------------------------|-----------------|  
+|Atributos:<br /><br /> Nivel|Elemento|Clase de almacenamiento<br /><br /> Especificador|Resultado: <br /><br /> Período de duración|Visibilidad|  
+|---------------------------|----------|----------------------------------|--------------------------|----------------|  
 |Ámbito de archivo|Definición de variable|**static**|Global|Resto del archivo de código fuente en el que aparece|  
 ||Declaración de variables|`extern`|Global|Resto del archivo de código fuente en el que aparece|  
 ||Prototipo o definición de función|**static**|Global|Archivo de código fuente único|  
@@ -37,12 +54,12 @@ En la tabla siguiente se muestra un resumen de características de duración y d
 ||Definición de variable|**static**|Global|Bloque|  
 ||Definición de variable|**auto** o **register**|Local|Bloque|  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
+### <a name="description"></a>Descripción  
  En el ejemplo siguiente se ilustran los bloques, el anidamiento y la visibilidad de las variables:  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // Lifetime_and_Visibility.c  
@@ -70,8 +87,8 @@ int main()  // main function defined at external level
 }   
 ```  
   
-### Comentarios  
- En este ejemplo, hay cuatro niveles de visibilidad: el nivel externo y tres niveles bloqueados.  Los valores se imprimen en pantalla según se indica en los comentarios que siguen a cada instrucción.  
+### <a name="comments"></a>Comentarios  
+ En este ejemplo, hay cuatro niveles de visibilidad: el nivel externo y tres niveles bloqueados. Los valores se imprimen en pantalla según se indica en los comentarios que siguen a cada instrucción.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Duración, ámbito, visibilidad y vinculación](../c-language/lifetime-scope-visibility-and-linkage.md)

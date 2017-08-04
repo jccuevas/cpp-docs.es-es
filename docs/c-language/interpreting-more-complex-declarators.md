@@ -1,35 +1,52 @@
 ---
-title: "Interpretar declaradores m&#225;s complejos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "declaradores complejos"
-  - "interpretar declaradores complejos"
+title: "Interpretar declaradores más complejos | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex declarators
+- interpreting complex declarators
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Interpretar declaradores m&#225;s complejos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: c5bd11f2056bae9588a28c443d2b5c3d287c672d
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
-Puede incluir cualquier declarador entre paréntesis para especificar una interpretación determinada de un “declarador complejo”. Un declarador complejo es un identificador calificado por más de un modificador de función, puntero o matriz.  Puede aplicar varias combinaciones de modificadores de función, puntero y matriz a un único identificador.  En general, `typedef` puede utilizarse para simplificar declaraciones.  Vea [Declaraciones de typedef](../c-language/typedef-declarations.md).  
+---
+# <a name="interpreting-more-complex-declarators"></a>Interpretar declaradores más complejos
+Puede incluir cualquier declarador entre paréntesis para especificar una interpretación determinada de un “declarador complejo”. Un declarador complejo es un identificador calificado por más de un modificador de función, puntero o matriz. Puede aplicar varias combinaciones de modificadores de función, puntero y matriz a un único identificador. En general, `typedef` puede utilizarse para simplificar declaraciones. Vea [Declaraciones typedef](../c-language/typedef-declarations.md).  
   
- En la interpretación de declaradores complejos, los corchetes y los paréntesis \(es decir, los modificadores a la derecha del identificador\) tienen prioridad sobre los asteriscos \(es decir, los modificadores a la izquierda del identificador\).  Los corchetes y los paréntesis tienen la misma precedencia y se asocian de izquierda a derecha.  Una vez que el declarador se ha interpretado totalmente, se aplica el especificador de tipo al último paso.  Mediante el uso de paréntesis, puede reemplazar el orden de asociación predeterminado y forzar una interpretación determinada.  Nunca utilice paréntesis, no obstante, alrededor de un nombre de identificador solo.  Se podría interpretar como una lista de parámetros.  
+ En la interpretación de declaradores complejos, los corchetes y los paréntesis (es decir, los modificadores a la derecha del identificador) tienen prioridad sobre los asteriscos (es decir, los modificadores a la izquierda del identificador). Los corchetes y los paréntesis tienen la misma precedencia y se asocian de izquierda a derecha. Una vez que el declarador se ha interpretado totalmente, se aplica el especificador de tipo al último paso. Mediante el uso de paréntesis, puede reemplazar el orden de asociación predeterminado y forzar una interpretación determinada. Nunca utilice paréntesis, no obstante, alrededor de un nombre de identificador solo. Se podría interpretar como una lista de parámetros.  
   
  Una manera sencilla de interpretar declaradores complejos es leerlos “desde dentro hacia fuera” siguiendo estos cuatro pasos:  
   
-1.  Comience por el identificador y busque corchetes o paréntesis directamente a la derecha \(si los hay\).  
+1.  Comience por el identificador y busque corchetes o paréntesis directamente a la derecha (si los hay).  
   
 2.  Interprete estos corchetes o paréntesis y, a continuación, busque asteriscos a la izquierda.  
   
@@ -59,14 +76,14 @@ Puede incluir cualquier declarador entre paréntesis para especificar una interp
   
 7.  valores `char`.  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  En los ejemplos siguientes se muestran otras declaraciones complejas y se muestra cómo pueden afectar los paréntesis al significado de una declaración.  
   
 ```  
 int *var[5]; /* Array of pointers to int values */  
 ```  
   
- El modificador de matriz tiene mayor prioridad que el modificador de puntero, así que `var` se declara como una matriz.  El modificador de puntero se aplica al tipo de los elementos de la matriz; por consiguiente, los elementos de la matriz son punteros a valores `int`.  
+ El modificador de matriz tiene mayor prioridad que el modificador de puntero, así que `var` se declara como una matriz. El modificador de puntero se aplica al tipo de los elementos de la matriz; por consiguiente, los elementos de la matriz son punteros a valores `int`.  
   
 ```  
 int (*var)[5]; /* Pointer to array of int values */  
@@ -78,13 +95,13 @@ int (*var)[5]; /* Pointer to array of int values */
 long *var( long, long ); /* Function returning pointer to long */  
 ```  
   
- Los modificadores de función también tienen mayor prioridad que los modificadores de puntero, por lo que esta declaración para `var` declara `var` como una función que devuelve un puntero a un valor **long**.  La función se declara para que tome dos valores **long** como argumentos.  
+ Los modificadores de función también tienen mayor prioridad que los modificadores de puntero, por lo que esta declaración para `var` declara `var` como una función que devuelve un puntero a un valor **long**. La función se declara para que tome dos valores **long** como argumentos.  
   
 ```  
 long (*var)( long, long ); /* Pointer to function returning long */  
 ```  
   
- Este ejemplo es similar al anterior.  Los paréntesis dan al modificador de puntero mayor prioridad que al modificador de función y `var` se declara como puntero a una función que devuelve un valor **long**.  Una vez más la función toma dos argumentos **long**.  
+ Este ejemplo es similar al anterior. Los paréntesis dan al modificador de puntero mayor prioridad que al modificador de función y `var` se declara como puntero a una función que devuelve un valor **long**. Una vez más la función toma dos argumentos **long**.  
   
 ```  
 struct both       /* Array of pointers to functions */  
@@ -94,7 +111,7 @@ struct both       /* Array of pointers to functions */
 } ( *var[5] )( struct both, struct both );  
 ```  
   
- Los elementos de una matriz no pueden ser funciones, pero esta declaración muestra cómo declarar una matriz de punteros a funciones en su lugar.  En este ejemplo, `var` se declara como una matriz de cinco punteros a funciones que devuelven estructuras con dos miembros.  Los argumentos para funciones se declaran como dos estructuras con el mismo tipo de estructura, `both`.  Observe que los paréntesis que rodean a `*var[5]` son obligatorios.  Sin ellos, la declaración es un intento no válido de declarar una matriz de funciones, como se muestra a continuación:  
+ Los elementos de una matriz no pueden ser funciones, pero esta declaración muestra cómo declarar una matriz de punteros a funciones en su lugar. En este ejemplo, `var` se declara como una matriz de cinco punteros a funciones que devuelven estructuras con dos miembros. Los argumentos para funciones se declaran como dos estructuras con el mismo tipo de estructura, `both`. Observe que los paréntesis que rodean a `*var[5]` son obligatorios. Sin ellos, la declaración es un intento no válido de declarar una matriz de funciones, como se muestra a continuación:  
   
 ```  
 /* ILLEGAL */  
@@ -107,7 +124,7 @@ struct both *var[5](struct both, struct both);
 unsigned int *(* const *name[5][10] ) ( void );  
 ```  
   
- La matriz `name` tiene 50 elementos organizados en una matriz multidimensional.  Los elementos son punteros a un puntero que es una constante.  Este puntero constante apunta a una función que no tiene ningún parámetro y devuelve un puntero a un tipo sin signo.  
+ La matriz `name` tiene 50 elementos organizados en una matriz multidimensional. Los elementos son punteros a un puntero que es una constante. Este puntero constante apunta a una función que no tiene ningún parámetro y devuelve un puntero a un tipo sin signo.  
   
  El ejemplo siguiente es una función que devuelve un puntero a una matriz de tres valores **double**.  
   
@@ -115,7 +132,7 @@ unsigned int *(* const *name[5][10] ) ( void );
 double ( *var( double (*)[3] ) )[3];  
 ```  
   
- En esta declaración, una función devuelve un puntero a una matriz, dado que las funciones que devuelven matrices no son válidas.  Aquí, `var` se declara como una función que devuelve un puntero a una matriz de tres valores **double**.  La función `var` toma un argumento.  El argumento, como el valor devuelto, es un puntero a una matriz de tres valores **double**.  El tipo de argumento lo da un elemento *abstract\-declarator* complejo.  Los paréntesis alrededor del asterisco en el tipo de argumento son obligatorios; sin ellos, el tipo de argumento sería una matriz de tres punteros a valores **double**.  Para obtener una descripción y ejemplos de declaradores abstractos, vea [Declaradores abstractos](../c-language/c-abstract-declarators.md).  
+ En esta declaración, una función devuelve un puntero a una matriz, dado que las funciones que devuelven matrices no son válidas. Aquí, `var` se declara como una función que devuelve un puntero a una matriz de tres valores **double**. La función `var` toma un argumento. El argumento, como el valor devuelto, es un puntero a una matriz de tres valores **double**. El tipo de argumento lo da un elemento *abstract-declarator* complejo. Los paréntesis alrededor del asterisco en el tipo de argumento son obligatorios; sin ellos, el tipo de argumento sería una matriz de tres punteros a valores **double**. Para obtener una descripción y ejemplos de declaradores abstractos, vea [Declaradores abstractos](../c-language/c-abstract-declarators.md).  
   
 ```  
 union sign         /* Array of arrays of pointers */  
@@ -125,14 +142,14 @@ union sign         /* Array of arrays of pointers */
 } **var[5][5];  
 ```  
   
- Como se muestra en el ejemplo anterior, un puntero puede señalar a otro puntero y una matriz puede contener matrices como elementos.  Aquí, `var` es una matriz de cinco elementos.  Cada elemento es una matriz de cinco elementos de punteros a punteros a uniones con dos miembros.  
+ Como se muestra en el ejemplo anterior, un puntero puede señalar a otro puntero y una matriz puede contener matrices como elementos. Aquí, `var` es una matriz de cinco elementos. Cada elemento es una matriz de cinco elementos de punteros a punteros a uniones con dos miembros.  
   
 ```  
 union sign *(*var[5])[5]; /* Array of pointers to arrays  
                              of pointers to unions        */  
 ```  
   
- En este ejemplo se muestra cómo la posición de los paréntesis cambia el significado de la declaración.  En este ejemplo, `var` es una matriz de cinco elementos de punteros a matrices de cinco elementos de punteros a uniones.  Para obtener ejemplos de cómo usar `typedef` para evitar declaraciones complejas, vea [Declaraciones de typedef](../c-language/typedef-declarations.md).  
+ En este ejemplo se muestra cómo la posición de los paréntesis cambia el significado de la declaración. En este ejemplo, `var` es una matriz de cinco elementos de punteros a matrices de cinco elementos de punteros a uniones. Para obtener ejemplos de cómo usar `typedef` para evitar declaraciones complejas, vea [Declaraciones typedef](../c-language/typedef-declarations.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Declaraciones y tipos](../c-language/declarations-and-types.md)

@@ -1,32 +1,49 @@
 ---
-title: "NULL (CRT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "null"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NULL"
-  - "punteros null"
-  - "NULL, valor de puntero null"
+title: NULL (CRT) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- null
+dev_langs:
+- C++
+helpviewer_keywords:
+- NULL
+- null pointers
+- NULL, null pointer value
 ms.assetid: f9aac2a0-4f79-423f-8738-a76dccc0b1c3
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# NULL (CRT)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 5660d810b7936deb77a724a37558d638489965c8
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
-**nulo** es el valor de puntero utilizado con muchas operaciones de puntero y funciona.  Equivale a 0.  **nulo** se define en los archivos de encabezado siguientes: CRTDBG.H, LOCALE.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H, TCHAR.H, TIME.H y WCHAR.H.  
+---
+# <a name="null-crt"></a>NULL (CRT)
+**NULL** es el valor de puntero null utilizado con muchas operaciones de puntero y funciones. Equivale a 0. **NULL** se define en los siguientes archivos de encabezado: CRTDBG.H, LOCALE.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H, TCHAR.H, TIME.H y WCHAR.H.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Constantes globales](../c-runtime-library/global-constants.md)

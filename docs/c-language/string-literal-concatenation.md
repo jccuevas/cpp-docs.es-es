@@ -1,29 +1,46 @@
 ---
-title: "Concatenaci&#243;n de literales de cadena | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "concatenar cadenas"
-  - "cadenas [C++], concatenar"
+title: "Concatenación de literales de cadena | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- concatenating strings
+- strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Concatenaci&#243;n de literales de cadena
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: de466bd1bf5f0c8f8c1918f276e375f3da3bb215
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
-Para formar literales de cadena que ocupen más de una línea, puede concatenar las dos cadenas.  Para ello, inserte una barra diagonal inversa y presione la tecla ENTRAR.  La barra diagonal inversa hace que el compilador omita el siguiente carácter de nueva línea.  Por ejemplo, el literal de cadena  
+---
+# <a name="string-literal-concatenation"></a>Concatenación de literales de cadena
+Para formar literales de cadena que ocupen más de una línea, puede concatenar las dos cadenas. Para ello, inserte una barra diagonal inversa y presione la tecla ENTRAR. La barra diagonal inversa hace que el compilador omita el siguiente carácter de nueva línea. Por ejemplo, el literal de cadena  
   
 ```  
 "Long strings can be bro\  
@@ -38,26 +55,26 @@ ken into two or more pieces."
   
  Puede usar la concatenación de cadenas en cualquier lugar en el que antes utilizaba una barra diagonal inversa seguida de un carácter de nueva línea para escribir cadenas de más de una línea.  
   
- Para forzar una nueva línea dentro de un literal de cadena, escriba la secuencia de escape de nueva línea \(**\\n**\) en el punto de la cadena donde desee que se corte la línea, de la manera siguiente:  
+ Para forzar una nueva línea dentro de un literal de cadena, escriba la secuencia de escape de nueva línea (**\n**) en el punto de la cadena donde desee que se corte la línea, de la manera siguiente:  
   
 ```  
 "Enter a number between 1 and 100\nOr press Return"  
 ```  
   
- Como las cadenas pueden empezar en cualquier columna del código fuente y las cadenas largas pueden continuar en cualquier columna de una línea siguiente, puede colocar las cadenas para mejorar la legibilidad del código fuente.  En cualquier caso, la representación en pantalla cuando se muestra no se ve afectada.  Por ejemplo:  
+ Como las cadenas pueden empezar en cualquier columna del código fuente y las cadenas largas pueden continuar en cualquier columna de una línea siguiente, puede colocar las cadenas para mejorar la legibilidad del código fuente. En cualquier caso, la representación en pantalla cuando se muestra no se ve afectada. Por ejemplo:  
   
 ```  
 printf_s ( "This is the first half of the string, "  
            "this is the second half ") ;  
 ```  
   
- Siempre y cuando cada parte de la cadena esté incluida entre comillas dobles, las partes se concatenan y se muestran como una sola cadena.  Esta concatenación se produce de acuerdo con la secuencia de eventos durante la compilación especificada por las [fases de traducción](../preprocessor/phases-of-translation.md).  
+ Siempre y cuando cada parte de la cadena esté incluida entre comillas dobles, las partes se concatenan y se muestran como una sola cadena. Esta concatenación se produce de acuerdo con la secuencia de eventos durante la compilación especificada por las [fases de conversión](../preprocessor/phases-of-translation.md).  
   
 ```  
 "This is the first half of the string, this is the second half"  
 ```  
   
- Un puntero de cadena, inicializado como dos literales de cadena distintos separados solo por un espacio en blanco, se almacenan como una sola cadena \(los punteros se explican en [Declaraciones de puntero](../c-language/pointer-declarations.md)\).  Cuando la referencia es correcta, como en el ejemplo siguiente, el resultado es idéntico al del ejemplo anterior:  
+ Un puntero de cadena, inicializado como dos literales de cadena distintos separados solo por un espacio en blanco, se almacenan como una sola cadena (los punteros se explican en [Declaraciones de puntero](../c-language/pointer-declarations.md)). Cuando la referencia es correcta, como en el ejemplo siguiente, el resultado es idéntico al del ejemplo anterior:  
   
 ```  
 char *string = "This is the first half of the string, "  
@@ -66,7 +83,7 @@ char *string = "This is the first half of the string, "
 printf_s( "%s" , string ) ;  
 ```  
   
- En la fase de traducción 6, las secuencias de caracteres multibyte especificadas por cualquier secuencia de literales de cadena adyacentes o literales de cadena ancha adyacentes se concatenan en una sola secuencia de caracteres multibyte.  Por tanto, no diseñe programas para permitir la modificación de literales de cadena durante la ejecución.  El estándar ANSI C especifica que el resultado de modificar una cadena es indefinido.  
+ En la fase de traducción 6, las secuencias de caracteres multibyte especificadas por cualquier secuencia de literales de cadena adyacentes o literales de cadena ancha adyacentes se concatenan en una sola secuencia de caracteres multibyte. Por tanto, no diseñe programas para permitir la modificación de literales de cadena durante la ejecución. El estándar ANSI C especifica que el resultado de modificar una cadena es indefinido.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Literales de cadena de C](../c-language/c-string-literals.md)

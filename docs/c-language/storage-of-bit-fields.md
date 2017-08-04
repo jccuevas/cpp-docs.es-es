@@ -1,28 +1,45 @@
 ---
-title: "Almacenamiento de campos de bits | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Almacenamiento de campos de bits | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 4816a241-1580-4d1c-82ed-13d359733959
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Almacenamiento de campos de bits
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: b0e25945ff20adcccce060363601cfc1a1a1f6fd
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="storage-of-bit-fields"></a>Almacenamiento de campos de bits
 **ANSI 3.5.2.1** El orden de asignación de campos de bits en un entero  
   
- Los campos de bits se asignan dentro de un entero del bit menos significativo al bit más significativo.  En el código siguiente  
+ Los campos de bits se asignan dentro de un entero del bit menos significativo al bit más significativo. En el código siguiente  
   
 ```  
 struct mybitfields  
@@ -49,5 +66,5 @@ cccccccb bbbbaaaa
   
  Puesto que los procesadores 80x86 almacenan el byte bajo de los valores enteros antes que el byte alto, el entero 0x01F2 anterior se almacenaría en la memoria física como 0xF2 seguido de 0x01.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Estructuras, uniones, enumeraciones y campos de bits](../c-language/structures-unions-enumerations-and-bit-fields.md)

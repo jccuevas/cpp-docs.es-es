@@ -47,10 +47,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 57de8d43336f8fd5c82da17f42cf6f8292600148
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 232da2506389337f6b37412161492c103db5b971
 ms.contentlocale: es-es
-ms.lasthandoff: 03/07/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="crt-library-features"></a>Características de la biblioteca CRT
@@ -59,7 +59,7 @@ En este tema se describen los distintos archivos .lib que forman las bibliotecas
 ## <a name="c-run-time-libraries-crt"></a>Bibliotecas en tiempo de ejecución de C (CRT)  
  La biblioteca de tiempo de ejecución de C (CRT) es la parte de la biblioteca estándar de C++ que incorpora la biblioteca del estándar ISO C99. Las bibliotecas de Visual C++ que implementan el CRT admiten el desarrollo de código nativo, así como código mixto (nativo y administrado) y código administrado puro para el desarrollo de .NET. Todas las versiones de CRT admiten el desarrollo multiproceso. La mayoría de las bibliotecas admite la vinculación estática, para vincular la biblioteca directamente en el código, o la vinculación dinámica para permitir que el código use archivos DLL comunes.  
   
- A partir de Visual Studio 2015, el CRT se ha refactorizado en nuevos binarios. CRT Universal (UCRT) contiene las funciones y variables globales exportadas por la biblioteca CRT del estándar C99. El UCRT ahora es un componente de Windows y se incluye en Windows 10. La biblioteca estática, la biblioteca de importación de DLL y los archivos de encabezado para el UCRT ahora se encuentran en el SDK de Windows 10. Cuando se instala Visual C++, el programa de instalación de Visual Studio instala el subconjunto del SDK de Windows 10 necesario para usar el UCRT. Se puede usar el UCRT en cualquier versión de Windows compatible con Visual Studio 2015 y versiones posteriores. También se puede redistribuir mediante vcredist para las versiones compatibles de Windows que no sean Windows 10. Para obtener más información, consulte [Redistribuir archivos de Visual C++](../ide/redistributing-visual-cpp-files.md).  
+ A partir de Visual Studio 2015, el CRT se ha refactorizado en nuevos binarios. CRT Universal (UCRT) contiene las funciones y variables globales exportadas por la biblioteca CRT del estándar C99. El UCRT ahora es un componente de Windows y se incluye en Windows 10. La biblioteca estática, la biblioteca de importación de DLL y los archivos de encabezado para el UCRT ahora se encuentran en el SDK de Windows 10. Cuando se instala Visual C++, el programa de instalación de Visual Studio instala el subconjunto del SDK de Windows 10 necesario para usar el UCRT. Se puede usar el UCRT en cualquier versión de Windows compatible con Visual Studio 2015 y versiones posteriores. También se puede redistribuir mediante vcredist para las versiones compatibles de Windows que no sean Windows 10. Para obtener más información, vea [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).  
   
  En la tabla siguiente se muestran las bibliotecas que implementan el UCRT.  
   
@@ -87,7 +87,7 @@ En este tema se describen los distintos archivos .lib que forman las bibliotecas
   
 |Biblioteca|Características|Opción|Directivas de preprocesador|  
 |-------------|---------------------|------------|-----------------------------|  
-|libcmt.lib|Vincula estáticamente el inicio de CRT nativo en el código.|**/MT**|_MT|  
+|LIBCMT.lib|Vincula estáticamente el inicio de CRT nativo en el código.|**/MT**|_MT|  
 |libcmtd.lib|Vincula estáticamente la versión de depuración del inicio de CRT nativo. No redistribuible.|**/MTd**|_DEBUG, _MT|  
 |msvcrt.lib|Biblioteca estática para el inicio de CRT nativo para su uso con UCRT y vcruntime de DLL.|**/MD**|_MT, _DLL|  
 |msvcrtd.lib|Biblioteca estática para la versión de depuración de inicio de CRT nativo para su uso con UCRT y vcruntime de DLL. No redistribuible.|**/MDd**|_DEBUG, _MT, _DLL|  
@@ -108,7 +108,7 @@ En este tema se describen los distintos archivos .lib que forman las bibliotecas
   
  Para obtener más información sobre cómo usar CRT con **/clr**, consulte [Ensamblados mixtos (nativos y administrados)](../dotnet/mixed-native-and-managed-assemblies.md); para **/clr:pure**, consulte [Código puro y comprobable (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   
- Para compilar una versión de depuración de la aplicación, debe estar definida la marca [_DEBUG](../c-runtime-library/debug.md) y la aplicación se debe vincular a una versión de depuración de una de estas bibliotecas. Para obtener más información sobre cómo usar las versiones de depuración de los archivos de biblioteca, consulte [Técnicas de depuración de CRT](/visualstudio/debugger/crt-debugging-techniques).  
+ Para compilar una versión de depuración de la aplicación, debe estar definida la marca [_DEBUG](../c-runtime-library/debug.md) y la aplicación se debe vincular a una versión de depuración de una de estas bibliotecas. Para obtener más información sobre cómo usar las versiones de depuración de los archivos de biblioteca, vea [Técnicas de depuración de CRT](/visualstudio/debugger/crt-debugging-techniques).  
   
  Esta versión de CRT no es totalmente compatible con el estándar C99. En concreto, no se admiten el encabezado \<tgmath.h> ni las macros pragma CX_LIMITED_RANGE/FP_CONTRACT. Determinados elementos como el significado de los especificadores de parámetros en las funciones estándar de E/S usan interpretaciones heredadas de forma predeterminada. Se pueden usar opciones de conformidad del compilador /Zc y se pueden especificar las opciones del enlazador para controlar algunos aspectos de cumplimiento de la biblioteca.  
   
@@ -116,19 +116,19 @@ En este tema se describen los distintos archivos .lib que forman las bibliotecas
   
 |Biblioteca estándar de C++|Características|Opción|Directivas de preprocesador|  
 |----------------------------|---------------------|------------|-----------------------------|  
-|LIBCPMT.LIB|Vínculo multiproceso, estático|**/MT**|_MT|  
+|LIBCPMT.lib|Vínculo multiproceso, estático|**/MT**|_MT|  
 |MSVCPRT.LIB|Vínculo multiproceso, dinámico (biblioteca de importación para MSVCP\<versión>.dll)|**/MD**|_MT, _DLL|  
 |LIBCPMTD.LIB|Vínculo multiproceso, estático|**/MTd**|_DEBUG, _MT|  
 |MSVCPRTD.LIB|Vínculo multiproceso, dinámico (biblioteca de importación para MSVCP\<versión>.D.DLL)|**/MDd**|_DEBUG, _MT, _DLL|  
   
- Cuando compile una versión de lanzamiento del proyecto, una de las bibliotecas en tiempo de ejecución básicas de C (LIBCMT.LIB, MSVCMRT.LIB, MSVCRT.LIB) se vinculará de forma predeterminada, según la opción de compilador que elija (multiproceso, DLL, /clr). Si incluye uno de los [Archivos de encabezado de la biblioteca estándar de C++](../standard-library/cpp-standard-library-header-files.md) en el código, [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] vinculará automáticamente una biblioteca estándar de C++ en tiempo de compilación. Por ejemplo:  
+ Cuando compile una versión de lanzamiento del proyecto, una de las bibliotecas en tiempo de ejecución básicas de C (LIBCMT.LIB, MSVCMRT.LIB, MSVCRT.LIB) se vinculará de forma predeterminada, según la opción de compilador que elija (multiproceso, DLL, /clr). Si incluye uno de los [Archivos de encabezado de la biblioteca estándar de C++](../standard-library/cpp-standard-library-header-files.md) en el código, Visual C++ vinculará automáticamente una biblioteca estándar de C++ en tiempo de compilación. Por ejemplo:  
   
 ```  
 #include <ios>   
 ```  
   
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>¿Qué problemas existen si una aplicación usa más de una versión de CRT?  
- Si tiene más de un archivo DLL o EXE, puede tener varios CRT, independientemente de que use distintas versiones de [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]. Por ejemplo, la vinculación estática de CRT a varios archivos DLL puede presentar el mismo problema. Se ha indicado a los desarrolladores que tienen este problema con CRT estáticos que compilen con **/MD** para usar el archivo DLL de CRT. Si los archivos DLL pasan recursos de CRT a través del límite de DLL, se producirán problemas de CRT dispares y habrá que volver a compilar el proyecto con Visual C++.  
+ Si tiene más de un archivo DLL o EXE, puede tener varios CRT, independientemente de que use distintas versiones de Visual C++. Por ejemplo, la vinculación estática de CRT a varios archivos DLL puede presentar el mismo problema. Se ha indicado a los desarrolladores que tienen este problema con CRT estáticos que compilen con **/MD** para usar el archivo DLL de CRT. Si los archivos DLL pasan recursos de CRT a través del límite de DLL, se producirán problemas de CRT dispares y habrá que volver a compilar el proyecto con Visual C++.  
   
  Si el programa usa más de una versión de CRT, es necesario prestar atención al pasar ciertos objetos de CRT (por ejemplo identificadores de archivo, configuraciones regionales y variables de entorno) a través de los límites de los archivos DLL. Para obtener más información sobre los posibles problemas y cómo resolverlos, consulte [Errores potenciales que pasan los objetos de CRT entre los límites de DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
   

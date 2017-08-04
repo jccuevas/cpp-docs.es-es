@@ -1,74 +1,91 @@
 ---
-title: "Inicializar tipos escalares | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clase de almacenamiento automática"
-  - "clase de almacenamiento automática, inicializar tipos escalares"
-  - "inicialización, tipos escalares"
-  - "inicializar tipos escalares"
-  - "inicializar variables, tipos escalares"
-  - "variables de registro"
-  - "tipos escalares"
-  - "variables estáticas, inicializar"
-  - "tipos [C], inicializar"
+title: Inicializar tipos escalares | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing scalar types
+- register variables
+- initialization, scalar types
+- initializing variables, scalar types
+- scalar types
+- static variables, initializing
+- automatic storage class, initializing scalar types
+- automatic storage class
+- types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Inicializar tipos escalares
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 002fa1703b924cfa805e3f580bba95aa8bb08782
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
-Al inicializar tipos escalares, el valor de *assignment\-expression* se asigna a la variable.  Se aplican las reglas de conversión de la asignación. \(Vea [Conversiones de tipos](../c-language/type-conversions-c.md) para obtener información sobre las reglas de conversión\).  
+---
+# <a name="initializing-scalar-types"></a>Inicializar tipos escalares
+Al inicializar tipos escalares, el valor de *assignment-expression* se asigna a la variable. Se aplican las reglas de conversión de la asignación. (Vea [Conversiones de tipos](../c-language/type-conversions-c.md) para obtener información sobre las reglas de conversión).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
  `declaration`:  
- *declaration\-specifiers init\-declarator\-list*  opt               **;**  
+ *declaration-specifiers init-declarator-list* opt**;**  
   
- *declaration\-specifiers*:  
- *storage\-class\-specifier declaration\-specifiers*  opt  
+ *declaration-specifiers*:  
+ *storage-class-specifier declaration-specifiers* opt  
   
- *type\-specifier declaration\-specifiers*  opt  
+ *type-specifier declaration-specifiers* opt  
   
- *type\-qualifier declaration\-specifiers*  opt  
+ *type-qualifier declaration-specifiers* opt  
   
- *init\-declarator\-list*:  
- *init\-declarator*  
+ *init-declarator-list*:  
+ *init-declarator*  
   
- *init\-declarator\-list*  **,**  *init\-declarator*  
+ *init-declarator-list*  **,**  *init-declarator*  
   
- *init\-declarator*:  
+ *init-declarator*:  
  *declarator*  
   
- *declarator*  **\=**  *initializer* \/\* Para la inicialización de valores escalares \*\/  
+ *declarator*  **=**  *initializer* /* Para la inicialización de valores escalares \*/  
   
  *initializer*:  
- *assignment\-expression*  
+ *assignment-expression*  
   
  Puede inicializar variables de cualquier tipo, siempre que observe las reglas siguientes:  
   
--   Las variables declaradas en el nivel de ámbito de archivo se pueden inicializar.  Si no inicializa explícitamente una variable en el nivel externo, se inicializa en 0 de forma predeterminada.  
+-   Las variables declaradas en el nivel de ámbito de archivo se pueden inicializar. Si no inicializa explícitamente una variable en el nivel externo, se inicializa en 0 de forma predeterminada.  
   
--   Una expresión constante se puede utilizar para inicializar una variable global declarada con el *storage\-class\-specifier* **static**.  Las variables declaradas como **static** se inicializan cuando comienza la ejecución del programa.  Si no inicializa explícitamente una variable global **static**, se inicializa en 0 de forma predeterminada y se asigna un puntero null a cada miembro que tenga el tipo de puntero.  
+-   Una expresión constante se puede utilizar para inicializar una variable global declarada con el especificador **storage-class-specifier** *static*. Las variables declaradas como **static** se inicializan cuando comienza la ejecución del programa. Si no inicializa explícitamente una variable global **static**, se inicializa en 0 de forma predeterminada y se asigna un puntero null a cada miembro que tenga el tipo de puntero.  
   
--   Las variables declaradas con el especificador de clase de almacenamiento **auto** o **register** se inicializan cada vez que el control en tiempo de ejecución pasa al bloque donde se declaran.  Si omite un inicializador en la declaración de una variable **auto** o **register**, el valor inicial de la variable es indefinido.  Para los valores auto y register, el inicializador no se limita a una constante; puede ser cualquier expresión que contenga valores definidos previamente, incluidas llamadas de función.  
+-   Las variables declaradas con el especificador de clase de almacenamiento **auto** o **register** se inicializan cada vez que el control en tiempo de ejecución pasa al bloque donde se declaran. Si omite un inicializador en la declaración de una variable **auto** o **register**, el valor inicial de la variable es indefinido. Para los valores auto y register, el inicializador no se limita a una constante; puede ser cualquier expresión que contenga valores definidos previamente, incluidas llamadas de función.  
   
--   Los valores iniciales de las declaraciones de variables externas y de todas las variables **static**, tanto sin son externas como internas, deben ser expresiones constantes. \(Para obtener más información, vea [Expresiones constantes](../c-language/c-constant-expressions.md)\). Como la dirección de cualquier variable definida externamente o variable estática es constante, se puede utilizar para inicializar una variable de puntero **static** declarada internamente.  Sin embargo, la dirección de una variable **auto** no puede utilizarse como inicializador estático porque puede ser diferente en cada ejecución del bloque.  Puede utilizar valores constantes o variables para inicializar las variables **auto** y **register**.  
+-   Los valores iniciales de las declaraciones de variables externas y de todas las variables **static**, tanto sin son externas como internas, deben ser expresiones constantes. (Para obtener más información, vea [Expresiones constantes](../c-language/c-constant-expressions.md)). Como la dirección de cualquier variable definida externamente o variable estática es constante, se puede utilizar para inicializar una variable de puntero **static** declarada internamente. Sin embargo, la dirección de una variable **auto** no puede utilizarse como inicializador estático porque puede ser diferente en cada ejecución del bloque. Puede utilizar valores constantes o variables para inicializar las variables **auto** y **register**.  
   
 -   Si la declaración de un identificador tiene ámbito de bloque y el identificador tiene vinculación externa, la declaración no puede tener una inicialización.  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  En los siguientes ejemplos se muestran inicializaciones:  
   
 ```  
@@ -99,7 +116,7 @@ int *b = &x;
 int *const a = &z;  
 ```  
   
- El puntero `a` se inicializa con la dirección de una variable denominada `z`.  Sin embargo, como se especifica como una variable **const**, la variable `a` solo puede inicializarse, nunca modificarse.  Siempre apunta a la misma ubicación.  
+ El puntero `a` se inicializa con la dirección de una variable denominada `z`. Sin embargo, como se especifica como una variable **const**, la variable `a` solo puede inicializarse, nunca modificarse. Siempre apunta a la misma ubicación.  
   
 ```  
 int GLOBAL ;  
@@ -113,7 +130,7 @@ int function( void )
 }  
 ```  
   
- La variable global `GLOBAL` se declara en el nivel externo, por lo que tiene duración global.  La variable local `LOCAL` tiene una clase de almacenamiento **auto** y solo tiene una dirección durante la ejecución de la función en la que se declara.  Por consiguiente, el intento de inicializar la variable de puntero `lp` **static** con la dirección de `LOCAL` no se permite.  La variable de puntero `gp` **static** se puede inicializar en la dirección de `GLOBAL` porque esa dirección siempre es la misma.  De igual forma, `*rp` se puede inicializar porque `rp` es una variable local y no puede tener un inicializador que no sea constante.  Cada vez que se entra en el bloque, `LOCAL` tiene una nueva dirección, que se asigna a `rp`.  
+ La variable global `GLOBAL` se declara en el nivel externo, por lo que tiene duración global. La variable local `LOCAL` tiene una clase de almacenamiento **auto** y solo tiene una dirección durante la ejecución de la función en la que se declara. Por consiguiente, el intento de inicializar la variable de puntero **static** `lp` con la dirección de `LOCAL` no se permite. La variable de puntero **static** `gp` se puede inicializar en la dirección de `GLOBAL` porque esa dirección siempre es la misma. De igual forma, `*rp` se puede inicializar porque `rp` es una variable local y no puede tener un inicializador que no sea constante. Cada vez que se entra en el bloque, `LOCAL` tiene una nueva dirección, que se asigna a `rp`.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Inicialización](../c-language/initialization.md)

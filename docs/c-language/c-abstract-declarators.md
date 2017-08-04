@@ -1,31 +1,48 @@
 ---
-title: "Declaraciones abstractas de C | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "declaraciones abstractas"
-  - "declaradores, abstractas"
+title: Declaraciones abstractas de C | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, abstract
+- abstract declarations
 ms.assetid: 6a556ad7-0555-421a-aa02-294d77cda8b5
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Declaraciones abstractas de C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: cc4c700142f8dd533d98eca6ffb01fa18006a111
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
-Un declarador abstracto es un declarador sin identificador, que consta de uno o más modificadores de puntero, matriz o función.  El modificador de puntero \(**\***\) precede siempre al identificador en un declarador; los modificadores de matriz \(**\[ \]**\) y los modificadores de función \( **\( \)** \) van detrás del identificador.  Teniendo esto en cuenta, puede determinar dónde aparecería el identificador en un declarador abstracto e interpretar el declarador en consecuencia.  Vea [Interpretación de declaradores más complejos](../c-language/interpreting-more-complex-declarators.md) para obtener información adicional y ejemplos de declaradores complejos.  Normalmente, puede usarse `typedef` para simplificar los declaradores.  Vea [Declaraciones de typedef](../c-language/typedef-declarations.md).  
+---
+# <a name="c-abstract-declarators"></a>Declaraciones abstractas de C
+Un declarador abstracto es un declarador sin identificador, que consta de uno o más modificadores de puntero, matriz o función. El modificador de puntero (**\***) precede siempre al identificador en un declarador; los modificadores de matriz (**[ ]**) y los modificadores de función ( **( )** ) van detrás del identificador. Teniendo esto en cuenta, puede determinar dónde aparecería el identificador en un declarador abstracto e interpretar el declarador en consecuencia. Vea [Interpretación de declaradores más complejos](../c-language/interpreting-more-complex-declarators.md) para obtener información adicional y ejemplos de declaradores complejos. Normalmente, puede usarse `typedef` para simplificar los declaradores. Vea [Declaraciones typedef](../c-language/typedef-declarations.md).  
   
- Los declaradores abstractos pueden ser complejos.  Los paréntesis en un declarador abstracto complejo especifican una interpretación concreta, del mismo modo que en los declaradores complejos de las declaraciones.  
+ Los declaradores abstractos pueden ser complejos. Los paréntesis en un declarador abstracto complejo especifican una interpretación concreta, del mismo modo que en los declaradores complejos de las declaraciones.  
   
  En estos ejemplos se muestran declaradores abstractos:  
   
@@ -52,7 +69,7 @@ int (*const []) ( unsigned int, ... )
 ```  
   
 > [!NOTE]
->  El declarador abstracto que consta de un conjunto de paréntesis vacíos, **\( \)**, no se permite porque es ambiguo.  No se puede determinar si el identificador implícito va dentro de los paréntesis \(en cuyo caso será un tipo sin modificar\) o delante de los paréntesis \(en cuyo caso será un tipo de función\).  
+>  El declarador abstracto que consta de un conjunto de paréntesis vacíos, **( )**, no se permite porque es ambiguo. No se puede determinar si el identificador implícito va dentro de los paréntesis (en cuyo caso será un tipo sin modificar) o delante de los paréntesis (en cuyo caso será un tipo de función).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Declaradores y declaraciones de variables](../c-language/declarators-and-variable-declarations.md)

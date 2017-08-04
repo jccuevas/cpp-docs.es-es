@@ -1,48 +1,65 @@
 ---
-title: "Declaraciones typedef | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "declaraciones, typedef"
-  - "declaraciones typedef"
-  - "tipos [C], declaraciones"
+title: Declaraciones typedef | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarations, typedef
+- typedef declarations
+- types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Declaraciones typedef
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: b830afd21fafa487c006c1a6035ffdce0bc8dd7c
+ms.contentlocale: es-es
+ms.lasthandoff: 05/18/2017
 
-Una declaración typedef es una declaración con typedef como clase de almacenamiento.  El declarador se convierte en un nuevo tipo.  Puede utilizar declaraciones typedef para construir nombres más cortos o más significativos para tipos ya definidos por C o para tipos que haya declarado.  Los nombres de typedef permiten encapsular detalles de la implementación que pueden cambiar.  
+---
+# <a name="typedef-declarations"></a>Declaraciones typedef
+Una declaración typedef es una declaración con typedef como clase de almacenamiento. El declarador se convierte en un nuevo tipo. Puede utilizar declaraciones typedef para construir nombres más cortos o más significativos para tipos ya definidos por C o para tipos que haya declarado. Los nombres de typedef permiten encapsular detalles de la implementación que pueden cambiar.  
   
  Una declaración typedef se interpreta igual que una declaración de variable o de función, pero el identificador, en lugar de suponer el tipo especificado por la declaración, se convierte en un sinónimo del tipo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
  `declaration`:  
- *declaration\-specifiers init\-declarator\-list*  opt **;**  
+ *declaration-specifiers init-declarator-list* opt**;**  
   
- *declaration\-specifiers*:  
- *storage\-class\-specifier declaration\-specifiers*  opt  
+ *declaration-specifiers*:  
+ *storage-class-specifier declaration-specifiers* opt  
   
- *type\-specifier declaration\-specifiers*  opt  
+ *type-specifier declaration-specifiers* opt  
   
- *type\-qualifier declaration\-specifiers*  opt  
+ *type-qualifier declaration-specifiers* opt  
   
- *storage\-class\-specifier*:  
+ *storage-class-specifier*:  
  `typedef`  
   
- *type\-specifier*:  
+ *type-specifier*:  
  **void**  
   
  **char**  
@@ -61,18 +78,18 @@ Una declaración typedef es una declaración con typedef como clase de almacenam
   
  **unsigned**  
   
- *struct\-or\-union\-specifier*  
+ *struct-or-union-specifier*  
   
- *enum\-specifier*  
+ *enum-specifier*  
   
- *typedef\-name*  
+ *typedef-name*  
   
- *typedef\-name*:  
+ *typedef-name*:  
  *identifier*  
   
- Observe que una declaración typedef no crea tipos.  Crea los sinónimos de tipos existentes o nombres para tipos que se podrían especificar de otras maneras.  Cuando se usa un nombre typedef como especificador de tipo, puede combinarse con determinados especificadores de tipo, pero no con otros.  Los modificadores aceptables son **const** y `volatile`.  
+ Observe que una declaración typedef no crea tipos. Crea los sinónimos de tipos existentes o nombres para tipos que se podrían especificar de otras maneras. Cuando se usa un nombre typedef como especificador de tipo, puede combinarse con determinados especificadores de tipo, pero no con otros. Los modificadores aceptables son **const** y `volatile`.  
   
- Los nombres de typedef comparten el espacio de nombres con identificadores normales \(vea [Espacios de nombres](../c-language/name-spaces.md) para obtener más información\).  Por tanto, un programa puede tener un nombre de typedef y un identificador de ámbito local con el mismo nombre.  Por ejemplo:  
+ Los nombres de typedef comparten el espacio de nombres con identificadores normales (vea [Espacios de nombres](../c-language/name-spaces.md) para obtener más información). Por tanto, un programa puede tener un nombre de typedef y un identificador de ámbito local con el mismo nombre. Por ejemplo:  
   
 ```  
 typedef char FlagType;  
@@ -87,7 +104,7 @@ int myproc( int )
 }  
 ```  
   
- Al declarar un identificador de ámbito local con el mismo nombre que un typedef, o al declarar un miembro de una estructura o una unión en el mismo ámbito o en un ámbito interno, se debe indicar el especificador de tipo.  Este ejemplo muestra esta restricción:  
+ Al declarar un identificador de ámbito local con el mismo nombre que un typedef, o al declarar un miembro de una estructura o una unión en el mismo ámbito o en un ámbito interno, se debe indicar el especificador de tipo. Este ejemplo muestra esta restricción:  
   
 ```  
 typedef char FlagType;  
@@ -106,15 +123,15 @@ const int FlagType;  /* Type specifier required */
 const FlagType;      /* Incomplete specification */  
 ```  
   
- porque se considera que `FlagType` forma parte del tipo, no un identificador que se va a volver a declarar.  Esta declaración se considera no válida como  
+ porque se considera que `FlagType` forma parte del tipo, no un identificador que se va a volver a declarar. Esta declaración se considera no válida como  
   
 ```  
 int;  /* Illegal declaration */  
 ```  
   
- Es posible declarar cualquier tipo con typedef, incluidos los tipos de puntero, función y matriz.  Se puede declarar un nombre de typedef para un puntero a un tipo de estructura o de unión antes de definir el tipo de estructura o de unión, siempre y cuando la definición tenga la misma visibilidad que la declaración.  
+ Es posible declarar cualquier tipo con typedef, incluidos los tipos de puntero, función y matriz. Se puede declarar un nombre de typedef para un puntero a un tipo de estructura o de unión antes de definir el tipo de estructura o de unión, siempre y cuando la definición tenga la misma visibilidad que la declaración.  
   
- Los nombres typedef se pueden usar para mejorar la legibilidad del código.  Las tres siguientes declaraciones de `signal` especifican exactamente el mismo tipo, la primera sin hacer uso de ningún nombre typedef.  
+ Los nombres typedef se pueden usar para mejorar la legibilidad del código. Las tres siguientes declaraciones de `signal` especifican exactamente el mismo tipo, la primera sin hacer uso de ningún nombre typedef.  
   
 ```  
 typedef void fv( int ), (*pfv)( int );  /* typedef declarations */  
@@ -124,14 +141,14 @@ fv *signal( int, fv * );   /* Uses typedef type */
 pfv signal( int, pfv );    /* Uses typedef type */  
 ```  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  En los ejemplos siguientes se muestran declaraciones typedef:  
   
 ```  
 typedef int WHOLE; /* Declares WHOLE to be a synonym for int */  
 ```  
   
- Observe que `WHOLE` se podría usar ahora en una declaración de variable tal como `WHOLE i;` o `const WHOLE i;`.  Sin embargo, la declaración `long WHOLE i;` no sería válida.  
+ Observe que `WHOLE` se podría usar ahora en una declaración de variable tal como `WHOLE i;` o `const WHOLE i;`. Sin embargo, la declaración `long WHOLE i;` no sería válida.  
   
 ```  
 typedef struct club   
@@ -141,7 +158,7 @@ typedef struct club
 } GROUP;  
 ```  
   
- Esta instrucción declara `GROUP` como un tipo de estructura con tres miembros.  Dado que también se especifica una etiqueta de estructura, `club`, tanto el nombre typedef \(`GROUP`\) como la etiqueta de estructura se pueden usar en declaraciones.  Se debe usar la palabra clave struct con la etiqueta y no se puede usar la palabra clave struct con el nombre typedef.  
+ Esta instrucción declara `GROUP` como un tipo de estructura con tres miembros. Dado que también se especifica una etiqueta de estructura, `club`, tanto el nombre typedef (`GROUP`) como la etiqueta de estructura se pueden usar en declaraciones. Se debe usar la palabra clave struct con la etiqueta y no se puede usar la palabra clave struct con el nombre typedef.  
   
 ```  
 typedef GROUP *PG; /* Uses the previous typedef name   
@@ -154,7 +171,7 @@ typedef GROUP *PG; /* Uses the previous typedef name
 typedef void DRAWF( int, int );  
 ```  
   
- Este ejemplo proporciona el tipo `DRAWF` para una función que no devuelve ningún valor y que acepta dos argumentos int.  Esto significa, por ejemplo, que la declaración  
+ Este ejemplo proporciona el tipo `DRAWF` para una función que no devuelve ningún valor y que acepta dos argumentos int. Esto significa, por ejemplo, que la declaración  
   
 ```  
 DRAWF box;   
@@ -166,5 +183,7 @@ DRAWF box;
 void box( int, int );  
 ```  
   
-## Vea también  
- [\(NOTINBUILD\)typedef Specifier](http://msdn.microsoft.com/es-es/cc96cf26-ba93-4179-951e-695d1f5fdcf1)
+## <a name="see-also"></a>Vea también  
+
+
+
