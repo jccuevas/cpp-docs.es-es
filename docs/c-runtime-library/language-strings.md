@@ -33,15 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: dfbd15b0da6e09b825a1562f006416e975603ab5
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 51f99c8990015c6a9f3d50c31a370df5e3e22dbf
 ms.contentlocale: es-es
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="language-strings"></a>Language Strings
-Las funciones `setlocale` y `_create_locale` pueden usar los idiomas compatibles con la API NLS de Windows en sistemas operativos que no usan la página de códigos Unicode. Para obtener una lista de idiomas compatibles con la versión del sistema operativo, vea la [Referencia de la API de compatibilidad con el idioma nacional (NLS)](http://msdn.microsoft.com/goglobal/bb896001.aspx). La cadena de idioma puede ser cualquiera de los valores de las columnas **Idioma** y **Abreviatura de nombre de idioma** de la lista de idiomas admitidos. La implementación de la biblioteca en tiempo de ejecución de C también admite estas cadenas de idioma:  
+Las funciones `setlocale` y `_create_locale` pueden usar los idiomas compatibles con la API NLS de Windows en sistemas operativos que no usan la página de códigos Unicode. Para obtener una lista de idiomas compatibles con la versión del sistema operativo, vea la [Referencia de la API de compatibilidad con el idioma nacional (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). La cadena de idioma puede ser cualquiera de los valores de las columnas **Idioma** y **Abreviatura de nombre de idioma** de la lista de idiomas admitidos. Para información adicional sobre compatibilidad de idioma por versión de sistema operativo, consulte [Apéndice A: Comportamiento del producto](http://msdn.microsoft.com/goglobal/bb896001.aspx) en [MS-LCID]: Referencia de identificador de configuración regional (LCID) de Windows.   
+  
+La implementación de la biblioteca en tiempo de ejecución de C también admite estas cadenas de idioma:  
   
 |Cadena de idioma|Nombre de configuración regional equivalente|  
 |---------------------|----------------------------|  
