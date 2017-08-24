@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: 482b404293cc1eea9879b09de52fb277cc1bd2a0
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 5c910e117ea484b6b181b0d81de84cdc22a53fc1
 ms.contentlocale: es-es
-ms.lasthandoff: 06/01/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historial de cambios en Visual C++ 2003-2015
@@ -69,7 +69,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
 #### <a name="general-changes"></a>Cambios generales  
   
--   **Binarios refactorizados** La biblioteca CRT se ha refactorizado en dos binarios distintos: un CRT universal (ucrtbase), que contiene la mayor parte de la funcionalidad estándar, y una biblioteca de VC Runtime (vcruntime140), que contiene la funcionalidad relacionada con el compilador como el control de excepciones y funciones intrínsecas. Si usa la configuración predeterminada del proyecto, entonces este cambio no le afecta ya que el vinculador usará automáticamente las nuevas bibliotecas predeterminadas. Si ha configurado la propiedad del **Vinculador** del proyecto **Omitir todas las bibliotecas predeterminadas** en **Sí** o si usa la opción del vinculador /NODEFAULTLIB en la línea de comandos, debe actualizar la lista de bibliotecas (en la propiedad **Dependencias adicionales** ) para incluir las nuevas bibliotecas refactorizadas. Reemplace la biblioteca CRT anterior (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) por las bibliotecas refactorizadas equivalentes. Para cada una de las dos bibliotecas refactorizadas hay versiones estáticas (.lib) y versiones dinámicas (.dll), así como versiones de lanzamiento (sin sufijo) y versiones de depuración (con el sufijo “d”). Las versiones dinámicas tienen una biblioteca de importación con la que se establece el vínculo. Las dos bibliotecas refactorizadas son CRT universal, concretamente ucrtbase.dll o .lib, ucrtbased.dll o .lib y la biblioteca de VC Runtime, libvcruntime.lib, libvcruntime.dll, libvcruntimed.lib y libvcruntimed.dll. Consulte [Características de la biblioteca CRT](../c-runtime-library/crt-library-features.md).  
+-   **Binarios refactorizados** La biblioteca CRT se ha refactorizado en dos binarios distintos: un CRT universal (ucrtbase), que contiene la mayor parte de la funcionalidad estándar, y una biblioteca de VC Runtime (vcruntime), que contiene la funcionalidad relacionada con el compilador como el control de excepciones y funciones intrínsecas. Si usa la configuración predeterminada del proyecto, entonces este cambio no le afecta ya que el vinculador usará automáticamente las nuevas bibliotecas predeterminadas. Si ha configurado la propiedad del **Vinculador** del proyecto **Omitir todas las bibliotecas predeterminadas** en **Sí** o si usa la opción del vinculador /NODEFAULTLIB en la línea de comandos, debe actualizar la lista de bibliotecas (en la propiedad **Dependencias adicionales** ) para incluir las nuevas bibliotecas refactorizadas. Reemplace la biblioteca CRT anterior (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) por las bibliotecas refactorizadas equivalentes. Para cada una de las dos bibliotecas refactorizadas hay versiones estáticas (.lib) y versiones dinámicas (.dll), así como versiones de lanzamiento (sin sufijo) y versiones de depuración (con el sufijo “d”). Las versiones dinámicas tienen una biblioteca de importación con la que se establece el vínculo. Las dos bibliotecas refactorizadas son CRT universal, concretamente ucrtbase.dll o .lib, ucrtbased.dll o .lib y la biblioteca de VC Runtime, libvcruntime.lib, vcruntime*versión*.dll, libvcruntimed.lib, and vcruntimed*versión*.dll. La *versión* en Visual Studio 2015 y Visual Studio 2017 es 140. Consulte [Características de la biblioteca CRT](../c-runtime-library/crt-library-features.md).  
   
 #### <a name="localeh"></a>\<locale.h>  
   
@@ -1423,7 +1423,7 @@ Para corregir el error, en S2, quite la llamada a S1() desde el constructor y, s
 
 -   **{} impide la conversión a puntero**  
 
-El código siguiente produce ahora el error C2439 "S::p": no se pudo inicializar el miembro    
+El código siguiente produce ahora el error C2439 "S::p": no se pudo inicializar el miembro   
 ```cpp
 struct S {
     S() : p({ 0 }) {}

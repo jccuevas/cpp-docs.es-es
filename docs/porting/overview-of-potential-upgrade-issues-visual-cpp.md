@@ -11,10 +11,11 @@ caps.latest.revision: 5
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 24ae58e6d8948572248a1595c59714bdf2c6f3f5
-ms.lasthandoff: 04/01/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 8d1d9d769d4cb7df5c34b42f6c104ef3c2e959bd
+ms.openlocfilehash: 8edf2d66cefca86fe51a64c9a15f83e9de040f63
+ms.contentlocale: es-es
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Información general sobre posibles problemas de actualización (Visual C++)
@@ -30,7 +31,7 @@ A lo largo de los años, el compilador de Visual C++ ha experimentado numerosos 
 ### <a name="toolset"></a>Conjunto de herramientas  
  Los formatos de archivo obj y lib están bien definidos y cambian con poca frecuencia. A veces se realizan adiciones a estos formatos de archivo, pero no suelen afectar a la capacidad de los conjuntos de herramientas más recientes de consumir los archivos objeto y las bibliotecas que los conjuntos de herramientas anteriores producen. La única gran excepción es si se compila con /GL (Generación de código en tiempo de vínculo / Optimización de todo el programa). Si compila con /GL, el archivo objeto resultante solo se puede vincular mediante el mismo conjunto de herramientas que se ha usado para crearlo. Por lo tanto, si produce un archivo objeto con /GL y mediante el compilador de Visual Studio 2017 (v141), debe vincularlo con el enlazador de Visual Studio 2017 (v141). Esto se debe a que las estructuras de datos internas de los objetos /GL no son estables en las versiones principales del conjunto de herramientas y los conjuntos de herramientas más recientes no entienden los formatos de datos más antiguos.  
   
- C++ no tiene una interfaz binaria de aplicaciones (ABI) estable. Visual C++ mantiene una ABI estable para todas las versiones secundarias de una versión. Por ejemplo, Visual Studio 2017 y todas sus actualizaciones son compatibles a nivel binario. Pero la ABI no es necesariamente compatible en las versiones principales de Visual C++ (excepto 2015 y 2017, que _son_ compatibles a nivel binario). Es decir, podemos hacer cambios importantes en el diseño de tipo de C++, la decoración de nombres, el control de excepciones y otros elementos de la ABI de C++. Por lo tanto, si dispone de un archivo objeto que tiene símbolos externos con vinculación de C++, ese archivo objeto podría no vincular correctamente con archivos objeto generados mediante una versión principal diferente del conjunto de herramientas de Visual C++. Tenga en cuenta que, en este caso, cuando decimos que podría no funcionar, nos referimos a muchos resultados posibles: el vínculo puede producir un error (por ejemplo, si la decoración de nombres ha cambiado), el vínculo podría ser correcto pero las cosas podrían no funcionar en tiempo de ejecución (por ejemplo, si el diseño de tipo ha cambiado) o, en muchos casos, es posible que las cosas funcionen y nada salga mal. Además, tenga en cuenta que, aunque la ABI de C++ no es estable, la ABI de C y el subconjunto de la ABI de C++ requeridos para COM son estables.  
+ C++ no tiene una interfaz binaria de aplicaciones (ABI) estable. Visual C++ mantiene una ABI estable para todas las versiones secundarias de una versión. Por ejemplo, Visual Studio 2017 y todas sus actualizaciones son compatibles a nivel binario. Pero la ABI no es necesariamente compatible en las versiones principales de Visual C++ (excepto 2015 y 2017, que _son_ compatibles a nivel binario). Es decir, podemos hacer cambios importantes en el diseño de tipo de C++, la decoración de nombres, el control de excepciones y otros elementos de la ABI de C++. Por lo tanto, si dispone de un archivo objeto que tiene símbolos externos con vinculación de C++, ese archivo objeto podría no vincular correctamente con archivos objeto generados mediante una versión principal diferente del conjunto de herramientas de Visual C++. Tenga en cuenta que, en este caso, cuando decimos que "podría no funcionar", nos referimos a muchos resultados posibles: el vínculo puede producir un error (por ejemplo, si la decoración de nombres ha cambiado), el vínculo podría ser correcto pero las cosas podrían no funcionar en tiempo de ejecución (por ejemplo, si el diseño de tipo ha cambiado) o, en muchos casos, es posible que las cosas funcionen y nada salga mal. Además, tenga en cuenta que, aunque la ABI de C++ no es estable, la ABI de C y el subconjunto de la ABI de C++ requeridos para COM son estables.  
   
 ### <a name="libraries"></a>Bibliotecas  
 
@@ -166,6 +167,5 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
  Para obtener más información, vea [Migrar de MBCS a Unicode](porting-guide-spy-increment.md#porting_to_unicode). Para obtener información general sobre MBCS frente a Unicode, vea [Texto y cadenas en Visual C++](../text/text-and-strings-in-visual-cpp.md) e [Internacionalización](../c-runtime-library/internationalization.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Actualizar proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)
- [Mejoras de conformidad de C++ en Visual Studio 2017](../cpp-conformance-improvements-2017.md)
+ [Actualizar proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md) [Mejoras de conformidad de C++ en Visual Studio 2017](../cpp-conformance-improvements-2017.md)
 
