@@ -1,40 +1,57 @@
 ---
-title: "Configurar programas para procesadores ARM (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Configure Visual C++ for ARM processors | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 3d95f221-656a-480d-9651-9ad263895747
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Configurar programas para procesadores ARM (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: e021610f381e1987af600de575509c658ae81ff7
+ms.contentlocale: es-es
+ms.lasthandoff: 08/30/2017
 
-Esta sección de la documentación contiene información sobre cómo usar las herramientas de compilación de Visual C\+\+ en hardware de ARM.  
+---
+# <a name="configure-visual-c-for-arm-processors"></a>Configure Visual C++ for ARM processors
+
+This section of the documentation contains information about how to use the Visual C++ build tools to target ARM hardware.  
   
-## En esta sección  
- [Información general de las convenciones ABI de ARM](../build/overview-of-arm-abi-conventions.md)  
- Describe la aplicación binaria de aplicaciones que Windows en ARM utiliza para el uso de registros, las convenciones de llamada y el control de excepciones.  
+## <a name="in-this-section"></a>In This Section  
+
+[Overview of ARM ABI Conventions](../build/overview-of-arm-abi-conventions.md)  
+Describes the application binary interface used by Windows on ARM for register usage, calling conventions and exception handling.  
   
- [Problemas comunes de migración de ARM en Visual C\+\+](../build/common-visual-cpp-arm-migration-issues.md)  
- Describe elementos de código C\+\+ que normalmente se suponen como portables entre arquitecturas, pero que generan resultados distintos para ARM y para x86 y x64.  
+[Common Visual C++ ARM Migration Issues](../build/common-visual-cpp-arm-migration-issues.md)  
+Describes C++ code elements that are commonly assumed to be portable across architectures, but which produce different results for ARM than for x86 and x64.  
   
- [Control de excepciones de ARM](../build/arm-exception-handling.md)  
- Describe el esquema de codificación para el desenredado de la pila durante el control de excepciones estructurado en Windows en ARM.  
+[ARM Exception Handling](../build/arm-exception-handling.md)  
+Describes the encoding scheme for stack unwinding during structured exception handling in Windows on ARM.  
   
-## Secciones relacionadas  
+## <a name="related-sections"></a>Related Sections  
   
-|Título|Descripción|  
-|------------|-----------------|  
-|[Intrínsecos ARM](../intrinsics/arm-intrinsics.md)|Describe las funciones intrínsecas del compilador para procesadores que usan la arquitectura de ARM.|
+[ARM Intrinsics](../intrinsics/arm-intrinsics.md)  
+Describes compiler intrinsics for processors that use the ARM architecture.
