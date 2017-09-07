@@ -1,126 +1,146 @@
 ---
-title: "IDE y herramientas para desarrollo de Visual C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Visual C++, herramientas de desarrollo"
+title: IDE and Tools for Visual C++ Development | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Visual C++, development tools
 ms.assetid: 56eabafb-1956-4f0f-bec5-29b887763559
 caps.latest.revision: 17
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# IDE y herramientas para desarrollo de Visual C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 2b997d987b2ace6cb22faf8026a66a32ce1a80c2
+ms.contentlocale: es-es
+ms.lasthandoff: 08/30/2017
 
-Como parte del Entorno de desarrollo integrado (IDE) de Visual Studio, Visual C++ tiene muchas ventanas y herramientas en común con otros lenguajes. Muchas de ellas, como el **Explorador de soluciones**, el Editor de código o el Depurador, están documentadas en MSDN Library en [Visual Studio IDE](../Topic/Visual%20Studio%20IDE.md). A menudo, una herramienta o una ventana compartida tiene un conjunto de características ligeramente diferentes para C++ que para los lenguajes .NET o Javascript. Algunas ventanas o herramientas solo están disponibles en Visual Studio Pro o Visual Studio Enterprise. Este tema presenta el IDE de Visual Studio desde la perspectiva de Visual C++ y proporciona vínculos a otros temas relacionados con Visual C++.  
+---
+# <a name="ide-and-tools-for-visual-c-development"></a>IDE and Tools for Visual C++ Development
+As part of the Visual Studio Integrated Development Environment (IDE), Visual C++ shares many windows and tools in common with other languages. Many of those, including **Solution Explorer**, the Code Editor, and the Debugger, are documented under [Visual Studio IDE](/visualstudio/ide/visual-studio-ide). Often, a shared tool or window has a slightly different set of features for C++ than for the .NET languages or Javascript. Some windows or tools are only available in Visual Studio Pro or Visual Studio Enterprise.   
   
- Además de las herramientas compartidas en el IDE de Visual Studio, Visual C++ dispone de varias herramientas específicas para desarrollar código nativo. Esas herramientas también se indican en este artículo. Para obtener una lista de las herramientas disponibles en cada edición de Visual Studio, consulte [Visual C++ Tools and Templates in Visual Studio Editions](../ide/visual-cpp-tools-and-templates-in-visual-studio-editions.md).  
+ In addition to shared tools in the Visual Studio IDE, Visual C++ has several tools specifically for native code development. These tools are also listed in this article. For a list of which tools are available in each edition of Visual Studio, see [Visual C++ Tools and Features in Visual Studio Editions](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md).  
+## <a name="creating-a-solution-and-projects"></a>Creating a solution and project(s)  
+
+A "project" is basically a set of source code files and resources such as images or data files that are built into an executable file. Visual Studio 2017 can support any build system or custom build tools that you wish to use, with full support for Intellisense, browsing and debugging:
+ - MSBuild is the "native" build system for Visual Studio and is often the best choice for UWP apps or legacy Windows desktop applications that use MFC or ATL. For more information about MSBuild-based C++ projects, see [Creating and managing MSBuild-based projects](creating-and-managing-visual-cpp-projects.md).
+ - CMake is a cross-platform build system that is integrated into the Visual Studio IDE when you install the Desktop C++ workload. For more information, see [CMake projects in Visual C++](cmake-tools-for-visual-cpp.md).
+ - Any other C++ build system, including a loose collection of files, is supported via the Open Folder feature. You create simple JSON files to invoke your build program and configure debugging sessions. For more information, see [Bring your C++ code to Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2017/04/14/bring-your-cpp-code-to-visual-studio/).
+ 
+ 
+ **Project templates (MSBuild)**  
   
-## <a name="creating-a-solution-and-projects"></a>Crear una solución y uno o varios proyectos  
- En todas las ediciones de Visual C++, el código fuente y los archivos relacionados de un archivo ejecutable (como .exe, .dll o .lib) se organizan en un proyecto. Un proyecto tiene un archivo de proyecto en formato XML (.vcxproj) que especifica todos los archivos y los recursos necesarios para compilar el programa, así como otras opciones de configuración, como la plataforma de destino (x86, x64 o ARM) y si está creando una versión de lanzamiento o una versión de depuración del programa. Un proyecto (o muchos proyectos) se incluyen dentro de una *Solución*: por ejemplo, una solución podría contener varios proyectos de archivos DLL para Win32 y una única aplicación de consola Win32 que utilice dichos archivos DLL. Al compilar el proyecto, el motor de MSBuild consume el archivo de proyecto y genera el archivo ejecutable o cualquier otro resultado personalizado que se haya especificado.  
+ Visual C++ comes with several templates for MSBuild-based projects; these templates contain starter code and the settings needed for a variety of basic program types. Typically you start by choosing **File &#124; New Project** to create a project from a project template, then add new source code files to that project, or start coding in the files provided. For information specific to C++ projects and project wizards, see [Creating and Managing Visual C++ Projects](../ide/creating-and-managing-visual-cpp-projects.md).  
   
- **Plantillas de proyecto**  
+ **Application wizards (MSBuild)**  
   
- Visual C++ incluye varias plantillas de proyecto, que contienen código de inicio y la configuración necesaria para diversos tipos de programas básicos. Normalmente se empieza por elegir **archivo &#124; Nuevo proyecto** para crear un proyecto desde una plantilla de proyecto, a continuación, agregar nuevos archivos de código fuente para ese proyecto, o empezar a codificar en los archivos proporcionados. Para obtener información específica de proyectos de C++ y los asistentes para proyectos, consulte [Creating and Managing Visual C++ Projects](../ide/creating-and-managing-visual-cpp-projects.md).  
+ Visual C++ provides wizards for some MSBuild project types when you choose **File &#124; New Project**. A wizard guides you step-by-step through the process of creating a new project. This is useful for project types that have many options and settings. For more information, see [Creating Desktop Projects By Using Application Wizards](../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
- **Asistentes para aplicaciones**  
+## <a name="creating-user-interfaces-with-designers-msbuild"></a>Creating user interfaces with designers (MSBuild) 
+ If your program has a user interface, one of the first tasks is to populate it with controls such as buttons, list boxes and so on. Visual Studio includes a visual design surface and a toolbox for each flavor of C++ application. No matter which type of app you are creating, the basic idea is the same: you drag a control from the toolbox window and drop it onto the design surface at the desired location. In the background, Visual Studio generates the resources and code required to make it all work. Then you write the code to populate the controls with data or customize their appearance and behavior.
   
- Visual C++ proporciona asistentes para algunos tipos de proyecto. Un asistente le guía paso a paso durante el proceso de creación de un nuevo proyecto. Esto es útil para los tipos de proyectos que tienen muchas opciones y configuración. Para obtener más información, vea [Creating Desktop Projects By Using Application Wizards](../ide/creating-desktop-projects-by-using-application-wizards.md).  
+ For more information about designing a user interface for a Universal Windows Platform app, see  [Design and UI](https://developer.microsoft.com/en-us/windows/design).  
   
-## <a name="creating-user-interfaces-with-designers"></a>Crear interfaces de usuario con diseñadores  
- Si el programa tiene interfaz de usuario, una de las primeras tareas que se deben realizar consiste en rellenar la interfaz de controles, como botones, cuadros de lista, etc. Visual Studio incluye una superficie de diseño visual y un cuadro de herramientas para cada tipo de aplicación de C++. Independientemente del tipo de aplicación que quiera crear, la idea básica es siempre la misma: arrastrar un control desde la ventana del cuadro de herramientas y colocarlo en el lugar que se desee de la superficie de diseño. Visual Studio genera en segundo plano los recursos y el código necesario para que todo funcione.  
+ For more information about creating a user interface for an MFC application, see [MFC Desktop Applications](../mfc/mfc-desktop-applications.md). For information about Win32 Windows programs, see [Windows Desktop Applications](../windows/windows-desktop-applications-cpp.md).  
   
- Para obtener más información sobre cómo diseñar una interfaz de usuario para una aplicación de plataforma Universal de Windows, consulte  [Diseño y la interfaz de Usuario](https://developer.microsoft.com/en-us/windows/design).  
+ For information about Windows Forms applications with C++/CLI, see [Creating a Windows Forms Application By Using the .NET Framework (C++)](http://msdn.microsoft.com/en-us/8e007885-6c8b-4fb2-a41d-91febd114a9b).  
   
- Para más información sobre cómo crear una interfaz de usuario para una aplicación de MFC, consulte [MFC Desktop Applications](../mfc/mfc-desktop-applications.md). Para obtener información acerca de los programas de Windows de Win32, vea [aplicaciones de escritorio de Windows](../windows/windows-desktop-applications-cpp.md).  
+## <a name="writing-and-editing-code"></a>Writing and editing code  
+ **Semantic colorization**  
   
- Para ver información sobre las aplicaciones de Windows Forms con C++/CLI, consulte [Crear una aplicación de Windows Forms mediante .NET Framework (C++)](http://msdn.microsoft.com/es-es/8e007885-6c8b-4fb2-a41d-91febd114a9b).  
+ After you create a project, all the project files are displayed in the **Solution Explorer** window. When you click on a .h or .cpp file in **Solution Explorer**, the file opens up in the code editor. The code editor is a specialized word processor for C++ source code. It color-codes language keywords, method and variable names, and other elements of your code to make the code more readable and easier to understand.  
   
-## <a name="writing-and-editing-code"></a>Escribir y editar código  
- **Coloración semántico**  
+ **Intellisense**  
   
- Después de crear un proyecto, todos los archivos del proyecto se muestran en la ventana Explorador de soluciones. Al hacer clic en un archivo .h o .cpp en el Explorador de soluciones, se abre el archivo en el editor de código. El editor de código es un procesador de textos especializado para código fuente en C++. Este editor codifica mediante colores las palabras clave, los nombres de los métodos y las variables del lenguaje, así como otros elementos del código para que el código sea más fácil de leer y entender.  
+ The code editor also supports several features that together are known as Intellisense. You can hover over a method and see some basic documentation for it. After you type a class variable name and a . or ->, a list of instance members of that class appears. If you type a class name and then a ::, a list of static members appears. When you start typing a class or method name, the code editor will offer suggestions to complete the statement. For more information, see [Using IntelliSense](/visualstudio/ide/using-intellisense).  
   
- **IntelliSense**  
+ **Code snippets**  
   
- El editor de código también admite varias características que, juntas, se conocen como Intellisense. Puede mantener el mouse sobre un método y ver su documentación básica. Después de escribir el nombre de una variable de clase y un . o ->, aparecerá una lista de miembros de instancia de esa clase. Si escribe el nombre de una clase y, luego, un ::, se mostrará una lista de miembros estáticos. Cuando empieza a escribir un nombre de clase o método, el editor de código le ofrece sugerencias para completar la instrucción. Para obtener más información, vea [Using IntelliSense](../Topic/Using%20IntelliSense.md).  
+ You can use Intellisense code snippets to generate commonly-used or complicated code constructs with a shortcut keystroke. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
   
- **Fragmentos de código**  
+## <a name="navigating-code"></a>Navigating code  
+ The **View** menu provides access to many windows and tools for navigating around in your code files. For detailed information about these windows, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Puede usar fragmentos de código de IntelliSense para generar construcciones de código muy utilizadas o complicadas con solo pulsar un método abreviado. Para obtener más información, vea [Code Snippets](../Topic/Code%20Snippets.md).  
+ **Solution Explorer**  
   
-## <a name="navigating-code"></a>Navegar por el código  
- El menú VISTA proporciona acceso a muchas ventanas y herramientas que le permiten navegar por los archivos de código. Para obtener información detallada sobre estas ventanas, consulte [Viewing the Structure of Code](../Topic/Viewing%20the%20Structure%20of%20Code.md).  
+ In all editions of Visual Studio, use the Solution Explorer pane to navigate between the files in a project. Expand a .h or .cpp file icon to view the classes in the file. Expand a class to see its members. Double-click on a member to navigate to its definition or implementation in the file.  
   
- **Explorador de soluciones**  
+ **Class View and Code Definition Window**  
   
- En todas las ediciones de Visual Studio, use el panel del Explorador de soluciones para navegar por los archivos de un proyecto. Expanda un icono de archivo .h o .cpp para ver las clases que hay en el archivo. Expanda una clase para ver sus miembros. Haga doble clic en un miembro para ir hasta su definición o implementación en el archivo.  
+ Use the **Class View** pane to see the namespaces and classes across all the files, including partial classes. You can expand each namespace or class to see its members and double-click on the member to navigate to that location in the source file. If you open the Code Definition Window, you can view the definition or implementation of the type when you choose it in Class View.  
   
- **Vista de clases y la ventana Definición de código**  
+ **Object Browser**  
   
- Utilice el panel Vista de clases para ver los espacios de nombres y las clases de todos los archivos, incluidas las clases parciales. Puede expandir cada espacio de nombres o clase para ver sus miembros y hacer doble clic en el miembro para ir hasta ese lugar del archivo de origen. Si abre la ventana Definición de código, puede ver la definición o implementación del tipo al elegirlo en la Vista de clases.  
+ Use **Object Browser** to explore type information in Windows Runtime components (.winmd files), .NET assemblies and COM type libraries. It is not used with Win32 DLLs.  
   
- **Examinador de objetos**  
+ **Go To Definition/Declaration**  
   
- Utilice el Examinador de objetos para examinar la información de tipo en los componentes en tiempo de ejecución de Windows (archivos .winmd), los ensamblados .NET y las bibliotecas de tipo COM. No se utiliza con archivos DLL de Win32.  
+ Press F12 on any API name or member variable to go to its definition. If the definition is in a .winmd file (for a [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] app) then you will be shown the type info in the Object Browser. You can also choose **Go To Definition** or **Go To Declaration** by right-clicking on the variable or type name and choosing the option from the context menu.  
   
- **Ir a definición o declaración**  
+ **Find All References**  
   
- Presione F12 en cualquier variable de miembro o nombre de API para ir a su definición. Si la definición se encuentra en un archivo .winmd (para una aplicación [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] ), se muestra la información de tipo en el Examinador de objetos. También puede Ir a definición o Ir a declaración haciendo clic con el botón derecho en el nombre de variable o de tipo y eligiendo la opción correspondiente en el menú contextual.  
+ In a source code file, right-click with the mouse cursor over the name of a type or method or variable, and choose **Find all References** to return a list of every location in the file, project or solution where the type is used. **Find All References** is intelligent and only returns instances of the same identical variable, even if other variables at different scope have the same name.  
   
- **Buscar todas las referencias**  
+ **Architecture Explorer and Dependency Graphs (Ultimate)**  
   
- En un archivo de código fuente, haga clic con el botón derecho con el cursor del mouse sobre el nombre de un tipo, método o variable y elija Buscar todas las referencias para obtener una lista de todas las ubicaciones del archivo, proyecto o solución donde se usa el tipo. Buscar todas las referencias funciona de forma inteligente y solo devuelve las instancias de la misma variable, aunque otras variables de otro ámbito tengan el mismo nombre.  
+ Use **Architecture Explorer** to view relationships between various elements in your code. For more information, see [Find code with Architecture Explorer](http://msdn.microsoft.com/en-us/b1707926-ef73-47f9-92cd-e00d0fac7e76). Use dependency graphs to view dependency relationships. For more information, see [How to: Generate Dependency Graphs for C and C++ Code](http://msdn.microsoft.com/en-us/3bd5cf9f-62f6-41d0-9f35-d4b2637cba3c).  
   
- **Explorador de arquitectura y gráficos de dependencia (Ultimate)**  
+## <a name="adding-and-editing-resources--msbuild"></a>Adding and Editing Resources  (MSBuild)
+ The term "resource" in the context of a Visual Studio desktop project includes things such as dialog boxes, icons, localizable strings, spash screens, database connection strings, or any arbitrary data that you want to include in the executable file.  
   
- Use el Explorador de arquitectura para ver las relaciones entre varios elementos de su código. Para obtener más información, consulte [Buscar código con el Explorador de arquitectura](http://msdn.microsoft.com/es-es/b1707926-ef73-47f9-92cd-e00d0fac7e76). Use gráficos de dependencias para ver las relaciones de dependencia. Para obtener más información, vea [How to: Generate Dependency Graphs for C and C++ Code](http://msdn.microsoft.com/es-es/3bd5cf9f-62f6-41d0-9f35-d4b2637cba3c).  
+ For more information on adding and editing resources in native desktop C++ projects, see [Working with Resource Files](../windows/working-with-resource-files.md).  
   
-## <a name="adding-and-editing-resources"></a>Agregar y editar recursos  
- El término “recurso” en el contexto de un proyecto de escritorio de Visual Studio incluye elementos como cuadros de diálogo, iconos, cadenas localizables, pantallas de presentación, cadenas de conexión de base de datos o cualquier dato arbitrario que desee incluir en el archivo ejecutable.  
+## <a name="building-compiling-and-linking"></a>Building (compiling and linking)  
+ Press **Ctrl + Shift + B** to compile and link a project. To create executable code, Visual Studio uses [MSBuild](/visualstudio/msbuild/msbuild1) or CMake or whatever build environment you set up via **Open Folder**. For MSBuild projects, you set general build options under **Tools &#124; Options &#124; Projects and Solutions** and you can set properties for specific projects under **Project &#124; Properties**. Build errors and warnings are reported in the Error List (**Ctrl +\\, E**). Non-MSBuild projects are configured with JSON files that you create in Solution Explorer. Whatever build system you use, the Output Window (**Alt + 2**) shows information about the build process. For more information about MSBuild configurations, see  [Working with Project Properties](../ide/working-with-project-properties.md) and [Building C++ Projects in Visual Studio](../ide/building-cpp-projects-in-visual-studio.md).  
   
- Para obtener más información sobre cómo agregar y editar recursos en proyectos nativos de C++ de escritorio, consulte [Working with Resource Files](../mfc/working-with-resource-files.md).  
+ You can also use the Visual C++ compiler (cl.exe) and many other build-related standalone tools such as NMAKE and LIB directly from the command line. For more information, see [Build C/C++ code on the command line](../build/building-on-the-command-line.md) and [C/C++ Building Reference](../build/reference/c-cpp-building-reference.md).  
   
-## <a name="building-compiling-and-linking"></a>Compilación (compilar y vincular)  
- Presione **Ctrl + Mayús + B** para compilar y vincular un proyecto. Visual Studio usa [MSBuild](MSBuild1.md) para crear código ejecutable. Puede establecer opciones de compilación general bajo **Herramientas &#124; Opciones &#124; Proyectos y soluciones** y puede establecer las propiedades de proyectos específicos en **proyecto &#124; Propiedades**. Errores de compilación y advertencias se muestran en la lista de errores (**Ctrl +\\, E**). A veces se muestra información adicional en la Ventana de salida (**Alt + 2**). Para obtener más información, consulte  [trabajar con propiedades de proyecto](../ide/working-with-project-properties.md) y [Generar proyectos de C++ en Visual Studio](../ide/building-cpp-projects-in-visual-studio.md).  
+## <a name="testing"></a>Testing  
+ Visual Studio includes a unit test framework for both native C++ and C++/CLI. For more information, see [Verifying Code by Using Unit Tests](/visualstudio/test/unit-test-your-code) and [Writing Unit tests for C/C++ with the Microsoft Unit Testing Framework for C++](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)  
   
- También puede usar el compilador de Visual C++ (cl.exe) y muchas otras herramientas independientes relacionadas con la compilación, como NMAKE y LIB, directamente desde la línea de comandos. Para obtener más información, vea [Building on the Command Line](../build/building-on-the-command-line.md) y [C/C++ Building Reference](../build/reference/c-cpp-building-reference.md).  
+## <a name="debugging"></a>Debugging  
+ You can debug your program by pressing **F5** when your project configuration is set to Debug. While debugging you can set breakpoints by pressing **F9**, step through code by pressing **F10**, view the values of specified variables or registers, and even in some cases make changes in code and continue debugging without re-compiling. For more information, see [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
   
-## <a name="testing"></a>Pruebas  
- Visual Studio incluye un marco de pruebas unitarias para código C++/CLI y C++ nativo. Para más información, consulte [Comprobar código utilizyo pruebas unitarias](../Topic/Unit%20Test%20Your%20Code.md) y [Escribir pruebas unitarias para C/C++ con el Framework de pruebas unitarias de Microsoft para C++](../Topic/Writing%20Unit%20tests%20for%20C-C++%20with%20the%20Microsoft%20Unit%20Testing%20Framework%20for%20C++.md).  
+## <a name="deploying-completed-applications"></a>Deploying completed applications  
+ You deploy a [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] to customers through the Windows Store through the **PROJECT &#124; Store** menu option. Deployment of the CRT is handled automatically behind the scenes. For more information, see [Selling Apps](http://go.microsoft.com/fwlink/p/?LinkId=262280).  
   
-## <a name="debugging"></a>Depuración  
- Puede depurar el programa presionando F5 cuando la configuración del proyecto esté establecida como Depurar. Durante la depuración puede establecer puntos de interrupción presionando F9, recorrer el código presionando F10, ver los valores de registros o variables especificados e, incluso, en algunos casos, realizar cambios en el código y continuar la depuración sin tener que volver a compilar. Para obtener más información, vea [Debugging in Visual Studio](../Topic/Debugging%20in%20Visual%20Studio.md).  
+ When you deploy a native C++ desktop application to another computer, you must install the application itself and any library files that the application depends on. There are three ways to deploy the Visual C++ runtime with an application: central deployment, local deployment, or static linking. For more information, see [Deploying Desktop Applications](../ide/deploying-native-desktop-applications-visual-cpp.md).  
   
-## <a name="deploying-completed-applications"></a>Implementar aplicaciones completadas  
- Implementar un [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] los clientes a través de la tienda de Windows a través de la **PROYECTO &#124; Almacén de** opción de menú. La implementación de CRT se controla automáticamente en segundo plano. Para obtener más información, consulte [Llevar las aplicaciones al mercado](http://go.microsoft.com/fwlink/p/?LinkId=262280).  
-  
- Al implementar una aplicación de escritorio de C++ nativo en otro equipo, debe instalar tanto la aplicación como todos los archivos de biblioteca de los que dependa la aplicación. Hay tres maneras de implementar el runtime de Visual C++ con una aplicación: implementación central, implementación local o vinculación estática. Para obtener más información, consulte [implementación de aplicaciones de escritorio](../ide/deploying-native-desktop-applications-visual-cpp.md).  
-  
- Para obtener más información acerca de la implementación C + + / programa CLI, consulte [Deployment Guide for Developers](../Topic/.NET%20Framework%20Deployment%20Guide%20for%20Developers.md),  
-  
-## <a name="other-tools"></a>Otras herramientas  
-  
-## <a name="related-articles"></a>Artículos relacionados  
+ For more information about deploying a C++/CLI program, see [Deployment Guide for Developers](/dotnet/framework/deployment/deployment-guide-for-developers),  
+
+## <a name="related-articles"></a>Related Articles  
   
 |||  
 |-|-|  
-|[Herramientas de Visual C++ y plantillas en las ediciones de Visual Studio](../ide/visual-cpp-tools-and-templates-in-visual-studio-editions.md)|Muestra qué características están disponibles en las diferentes ediciones de Visual Studio.|  
-|[Paseo guiado por Visual C++](http://msdn.microsoft.com/es-es/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)|Proporciona información general sobre el entorno de desarrollo de Visual Studio y los tipos de aplicaciones de C++ que se pueden crear.|  
-|[Crear y administrar proyectos de Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)|Proporciona información general sobre los proyectos de C++ de Visual Studio y vínculos a otros artículos que explican cómo crearlos y administrarlos.|  
-|[Compilar programas de C o C++](../build/building-c-cpp-programs.md)|Describe cómo compilar proyectos de C++.|  
-|[Implementar aplicaciones de escritorio](../ide/deploying-native-desktop-applications-visual-cpp.md)|Proporciona información general sobre la implementación de aplicaciones de C++ y vínculos a otros artículos que describen de forma detallada la implementación.|  
-|[Trasladar y actualizar programas](http://msdn.microsoft.com/es-es/c36c44b3-5a9b-4bb4-9b7a-469aa770ed00)|Vínculos a artículos que describen cómo abrir aplicaciones de C++ que se crearon en versiones anteriores de Visual Studio y, también, cómo abrir aplicaciones que se crearon con herramientas distintas a Visual Studio.|  
+|[Visual C++ Tools and Features in Visual Studio Editions](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)|Shows which features are available in the various editions of Visual Studio.|  
+|[Creating and managing MSBuild-based projects](../ide/creating-and-managing-visual-cpp-projects.md)|Provides an overview of C++ MSBuild-based projects in Visual Studio and links to other articles that explain how to create and manage them.|  
+|[CMake projects in Visual C++](cmake-tools-for-visual-cpp.md).|Describes how to build CMake or other non-MSBuild projects in Visual C++.|
+|[Building C/C++ Programs](../build/building-c-cpp-programs.md)|Describes how to build C++ projects.|  
+|[Deploying Desktop Applications](../ide/deploying-native-desktop-applications-visual-cpp.md)|Provides an overview of deployment for C++ apps and links to other articles that describe deployment in detail.|  
+|[Visual C++ Porting and Upgrading Guide](../porting/visual-cpp-porting-and-upgrading-guide.md)|Detailed information about how to upgrade C++ applications that were created in earlier versions of Visual Studio, and also how to migrate applications that were created by using tools other than Visual Studio.|  
 |||  
-|[Visual C++](../top/visual-cpp-in-visual-studio-2015.md)|Describe las principales características de Visual C++ en Visual Studio y vínculos al resto de la documentación sobre Visual C++.|
+|[Visual C++](../top/visual-cpp-in-visual-studio.md)|Describes key features of Visual C++ in Visual Studio and links to the rest of the Visual C++ documentation.|
+

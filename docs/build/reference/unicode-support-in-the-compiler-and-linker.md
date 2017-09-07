@@ -1,58 +1,75 @@
 ---
-title: "Compatibilidad con Unicode en el compilador y el vinculador | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.UseUnicodeResponseFiles"
-  - "VC.Project.VCLibrarianTool.UseUnicodeResponseFiles"
-  - "VC.Project.VCCLCompilerTool.UseUnicodeResponseFiles"
-  - "VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unicode, Visual C++"
+title: Unicode Support in the Compiler and Linker | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.UseUnicodeResponseFiles
+- VC.Project.VCLibrarianTool.UseUnicodeResponseFiles
+- VC.Project.VCCLCompilerTool.UseUnicodeResponseFiles
+- VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
+dev_langs:
+- C++
+helpviewer_keywords:
+- Unicode, Visual C++
 ms.assetid: acc1d322-56b9-4696-a30e-2af891a4e288
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Compatibilidad con Unicode en el compilador y el vinculador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 650d8fd430ff0825f0e2fb08d279c509dc62c5a6
+ms.contentlocale: es-es
+ms.lasthandoff: 08/30/2017
 
-En este tema, se describe la compatibilidad de Unicode en las herramientas de compilación de Visual C\+\+.  
+---
+# <a name="unicode-support-in-the-compiler-and-linker"></a>Unicode Support in the Compiler and Linker
+This topic describes Unicode support in the Visual C++ build tools.  
   
- Nombres de archivo  
- Los nombres de archivo especificados en la línea de comandos o en directivas de compilador \(como \#include\) ahora pueden contener caracteres Unicode.  
+ Filenames  
+ Filenames specified on the command line or in compiler directives (such as #include) may now contain Unicode characters.  
   
- Archivos de código fuente  
- Ahora se admiten caracteres Unicode en identificadores, macros, literales de cadena y de carácter, y en comentarios.  También se admiten nombres de carácter universales.  
+ Source code files  
+ Unicode characters are now supported in identifiers, macros, string and character literals, and in comments.  Universal character names are also now supported.  
   
- Se puede utilizar Unicode en un archivo de código fuente con las codificaciones siguientes:  
+ Unicode can be input into a source code file in the following encodings:  
   
--   UTF\-16 little endian con o sin marca de orden de bytes \(BOM\)  
+-   UTF-16 little endian with or without byte order mark (BOM)  
   
--   UTF\-16 big endian con o sin BOM  
+-   UTF-16 big endian with or without BOM  
   
--   UTF\-8 con BOM  
+-   UTF-8 with BOM  
   
- Resultados  
- Durante la compilación, el compilador genera diagnósticos en la consola en UTF\-16.  Los caracteres que se pueden mostrar en la consola dependen de las propiedades de ventana de la consola.  Los resultados del compilador redirigidos a un archivo están en la página de códigos ANSI actual de la consola.  
+ Output  
+ During compilation, compiler outputs diagnostics to the console in UTF-16.  The characters that can be displayed at your console depend on the console window properties.  Compiler output redirected to a file is in the current ANSI console codepage.  
   
- Archivos de respuesta del vinculador y archivos .DEF  
- Los archivos de respuesta y los archivos DEF o pueden ser UTF\-16 con marca de orden de bytes o ANSI.  Previamente, sólo se admitía ANSI.  
+ Linker response files and .DEF files  
+ Response files and DEF files can be either UTF-16 with a Byte Order Mark or ANSI.  Previously only ANSI was supported.  
   
- Volcados de memoria .asm y .cod  
- Los volcados de memoria .asm y .cod están en ANSI de manera predeterminada, por compatibilidad con MASM.  Use \/FAu para generar UTF\-8.  Tenga en cuenta que, si especifica \/FAs, la fuente entremezclada se imprimirá directamente y podrá aparecer confusa, por ejemplo, si el código fuente es UTF\-8 y no se ha especificado \/FAsu.  
+ .asm and .cod dumps  
+ .asm and .cod dumps are in ANSI by default for compatibility with MASM.  Use /FAu to output UTF-8.  Note that if you specify /FAs, the intermingled source will just be directly printed and may look garbled, for example if source code is UTF-8 and you didn't specify /FAsu.  
   
- Puede habilitar nombres de archivo Unicode en el entorno de desarrollo \(vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md)\). Para ello, seleccione la herramienta apropiada y elija la propiedad **Habilitar Archivos de respuesta Unicode**, que está habilitada de forma predeterminada.  Una razón para cambiar esta opción predeterminada es si se modifica el entorno de desarrollo para utilizar un compilador que no es compatible con Unicode.  
+ You can enable Unicode file names in the development environment (see  [Working with Project Properties](../../ide/working-with-project-properties.md)) by selecting the appropriate tool and by selecting the **Enable Unicode Response Files** property, which is enabled by default. One reason you might change this default is if you modify your development environment to use a compiler that does not have Unicode support.  
   
-## Vea también  
- [Compilar en la línea de comandos](../../build/building-on-the-command-line.md)
+## <a name="see-also"></a>See Also  
+ [Build C/C++ code on the command line](../../build/building-on-the-command-line.md)

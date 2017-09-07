@@ -1,69 +1,70 @@
 ---
-title: "C&#243;mo: Habilitar un conjunto de herramientas de Visual C++ de 64 bits en la l&#237;nea de comandos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilador de 64 bits [C++], uso de la línea de comandos"
-  - "compilador de 64 bits [C++], conjunto de herramientas habilitado en la línea de comandos"
-  - "línea de comandos [C++], compilador de 64 bits"
-  - "IPF"
-  - "IPF, compilador de línea de comandos"
-  - "Itanium [C++]"
-  - "Itanium [C++], compilador de línea de comandos"
-  - "x64 [C++]"
-  - "x64 [C++], compilador de línea de comandos"
+title: 'How to: Enable a 64-Bit Visual C++ Toolset on the Command Line | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- x64 [C++]
+- 64-bit compiler [C++], command line usage
+- 64-bit compiler [C++], toolset enabling at command line
+- command line [C++], 64-bit compiler
+- Itanium [C++], command-line compiler
+- IPF
+- Itanium [C++]
+- IPF, command-line compiler
+- x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
 caps.latest.revision: 30
-caps.handback.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C&#243;mo: Habilitar un conjunto de herramientas de Visual C++ de 64 bits en la l&#237;nea de comandos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 88cd06c4ca6ac57fdb677cfc56fd8972983df4c1
+ms.contentlocale: es-es
+ms.lasthandoff: 08/30/2017
 
-Visual C\+\+ incluye compiladores que puede utilizar para crear aplicaciones que se ejecutan en un sistema operativo Windows de 32 bits, 64 bits o basado en ARM.  
+---
+# <a name="how-to-enable-a-64-bit-x64-hosted-visual-c-toolset-on-the-command-line"></a>How to: Enable a 64-Bit, x64 hosted Visual C++ toolset on the command line
+
+Visual C++ includes compilers, linkers, and other tools that you can use to create platform-specific versions of your apps that can run on 32-bit, 64-bit, or ARM-based Windows operating systems. Other optional Visual Studio workloads let you use C++ tools to target other platforms, such as iOS, Android, and Linux. The default build architecture uses 32-bit, x86-hosted tools to build 32-bit, x86-native Windows code. However, you probably have a 64-bit computer. You can take advantage of the processor and memory space available to 64-bit code by using the 64-bit, x64-hosted toolset when you build code for x86, x64, or ARM processors.
   
 > [!NOTE]
->  Para obtener información sobre las herramientas específicas que se incluyen con cada edición de Visual C\+\+, vea [Herramientas y plantillas de Visual C\+\+ en las versiones de Visual Studio](../ide/visual-cpp-tools-and-templates-in-visual-studio-editions.md).  
+>  For information about the specific tools that are included with each Visual C++ edition, see [Visual C++ Tools and Features in Visual Studio Editions](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md).  
 >   
->  Para más información sobre cómo usar el IDE de Visual Studio para crear aplicaciones de 64 bits, vea [Cómo: Configurar proyectos de Visual C\+\+ en plataformas de 64 bits de destino](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).  
+>  For information about how to use the Visual Studio IDE to create 64-bit applications, see [How to: Configure Visual C++ Projects to Target 64-Bit, x64 Platforms](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).  
   
- [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] incluye compiladores de 32 bits, hospedados en x86, nativos y cruzados para destinos x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] y ARM.  Cuando se instala [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] en un sistema operativo Windows de 64 bits, los compiladores nativos y cruzados 32 bits, hospedados en x86, así como los compiladores nativos y cruzados de 64 bits, hospedados en [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], se instalan para cada destino \(x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] y ARM\).  Los compiladores de 32 bits y 64 bits para cada destino generan código idéntico, pero los de 64 bits admiten más memoria para los símbolos de encabezado precompilados y las opciones de Optimización de todo el programa \([\/GL](../build/reference/gl-whole-program-optimization.md), [\/LTCG](../build/reference/ltcg-link-time-code-generation.md)\).  Si se ejecuta con límites de memoria cuando usa un compilador de 32 bits, pruebe el compilador de 64 bits.  
+When you install a C++ workload in the Visual Studio installer, it always installs 32-bit, x86-hosted, native and cross compiler tools to build x86 and x64 code. If you include the Universal Windows Platform workload, it also installs x86-hosted cross compiler tools to build ARM code. If you install these workloads on a 64-bit, x64 processor, you also get 64-bit native and cross compiler tools to build x86, x64, and ARM code. The 32-bit and 64-bit tools generate identical code, but the 64-bit tools support more memory for precompiled header symbols and the Whole Program Optimization ([/GL](../build/reference/gl-whole-program-optimization.md) and [/LTCG](../build/reference/ltcg-link-time-code-generation.md)) options. If you run into memory limits when you use the 32-bit tools, try the 64-bit tools.  
+
+## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>Use a 64-bit hosted developer command prompt shortcut
   
- Cuando Visual Studio está instalado en un sistema operativo Windows de 64 bits, hay disponibles más métodos abreviados del símbolo de sistema para algunos de los compiladores nativos de [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] y compiladores cruzados x86 de 64 bits.  Para tener acceso a estos símbolos del sistema en Windows 8, en la pantalla **Inicio**, abra **Todas las aplicaciones**.  En la versión instalada de **[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]**, abra **Visual Studio Tools** y elija uno de los símbolos del sistema, ya sea nativo de la herramienta o entre herramientas.  En versiones anteriores de Windows, elija **Inicio**, expanda **Todos los programas**, **[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]**, **Visual Studio Tools** y, a continuación, elija un símbolo del sistema.  
+When Visual Studio is installed on a 64-bit Windows operating system, additional developer command prompt shortcuts for the 64-bit, x64-hosted native and cross compilers are available. To access these command prompts on Windows 10, on the **Start** menu, open the folder for your version of Visual Studio, for example **Visual Studio 2017**, and then choose one of the x64 native or cross-tool developer command prompts. To access these command prompts on Windows 8, on the **Start** screen, open **All apps**. Under the heading for the installed version of Visual Studio, open the **Visual Studio** folder (in older versions of Visual Studio, it may be named **Visual Studio Tools**). On earlier versions of Windows, choose **Start**, expand **All Programs**, the folder for your version of **Visual Studio** (and on older versions of Visual Studio, **Visual Studio Tools**). For more information, see [Developer command prompt shortcuts](../build/building-on-the-command-line.md#developer_command_prompt_shortcuts).  
   
-## vcvarsall.bat  
- Cualquiera de los compiladores se puede usar en la línea de comandos ejecutando el archivo de comandos vcvarsall.bat para configurar la ruta de acceso y las variables de entorno que habilitan el conjunto de herramientas del compilador.  Dado que no existen métodos abreviados del símbolo de sistema que habiliten un conjunto de herramientas de 64 bits que tenga como destino plataformas x86 o de ARM, utilice en su lugar vcvarsall.bat en una ventana de símbolo del sistema para que se use el conjunto de herramientas de 64 bits.  Para obtener más información, vea [Establecer la ruta de acceso y las variables de entorno para compilar desde la línea de comandos](../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
+## <a name="use-vcvarsallbat-to-set-a-64-bit-hosted-build-architecture"></a>Use Vcvarsall.bat to set a 64-bit hosted build architecture
   
- Con los siguientes pasos se explica cómo configurar un símbolo del sistema para usar el conjunto de herramientas nativo de 64 bits que tenga como destino plataformas x86, x64 y ARM.  
+Any of the native or cross compiler tools build configurations can be used on the command line by running the vcvarsall.bat command file. This command file configures the path and environment variables that enable a particular build architecture in an existing command prompt window. For specific instructions, see [Developer command files and locations](../build/building-on-the-command-line.md#developer_command_files) .  
   
-#### Para ejecutar vcvarsall.bat para usar un conjunto de herramientas de 64 bits  
-  
-1.  En el símbolo del sistema, cambie al directorio de instalación [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] \(la ubicación dependerá del sistema y de la instalación de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], si bien una habitual suele ser C:\\Archivos de programa \(x86\)\\Microsoft Visual Studio *versión*\\VC\\\). Escriba lo siguiente, por ejemplo:  
-  
-     cd "\\Archivos de programa \(x86\)\\Microsoft Visual Studio 12.0\\VC"  
-  
-2.  Para configurar esta ventana de símbolo del sistema para compilaciones de línea de comandos de 64 bits que tienen que como destino plataformas x64, escriba lo siguiente en el símbolo del sistema:  
-  
-     `vcvarsall amd64`  
-  
-3.  Para configurar esta ventana de símbolo del sistema para compilaciones de línea de comandos de 64 bits que tienen que como destino plataformas x86, escriba lo siguiente en el símbolo del sistema:  
-  
-     `vcvarsall amd64_x86`  
-  
-4.  Para configurar esta ventana de símbolo del sistema para compilaciones de línea de comandos de 64 bits que tienen que como destino plataformas ARM, escriba lo siguiente en el símbolo del sistema:  
-  
-     `vcvarsall amd64_arm`  
-  
-## Vea también  
- [Configurar programas de 64 bits](../build/configuring-programs-for-64-bit-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+
+[Configure Visual C++ for 64-bit, x64 targets](../build/configuring-programs-for-64-bit-visual-cpp.md)

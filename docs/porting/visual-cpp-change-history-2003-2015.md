@@ -1,7 +1,7 @@
 ---
-title: Historial de cambios en Visual C++ 2003-2015 | Microsoft Docs
+title: Visual C++ change history 2003 - 2015 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 08/30/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -32,141 +32,141 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: 482b404293cc1eea9879b09de52fb277cc1bd2a0
+ms.translationtype: HT
+ms.sourcegitcommit: 42abd4adfe10b032849bfec391874cd249793c32
+ms.openlocfilehash: f77417b92138854d71740494680e9bb72c38f789
 ms.contentlocale: es-es
-ms.lasthandoff: 06/01/2017
+ms.lasthandoff: 08/31/2017
 
 ---
-# <a name="visual-c-change-history-2003---2015"></a>Historial de cambios en Visual C++ 2003-2015
-En este artículo, se describen todos los cambios importantes de Visual Studio 2015 desde Visual Studio 2003 y, en este artículo, los términos “nuevo comportamiento” o “ahora” hacen referencia a Visual Studio 2015 y versiones posteriores. Los términos “comportamiento anterior” y “antes” hacen referencia a Visual Studio 2013 y versiones anteriores. 
+# <a name="visual-c-change-history-2003---2015"></a>Visual C++ change history 2003 - 2015
+This article describes all the breaking changes from Visual Studio 2015 going back to Visual Studio 2003, and in this article the terms "new behavior" or "now" refer to Visual Studio 2015 and later. The terms "old behavior" and "before" refer to Visual Studio 2013 and earlier releases. 
  
- Para obtener más información sobre Visual Studio 2017, consulte [What's new for Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) (Novedades de Visual C++ en Visual Studio 2017) y [Conformance Improvements in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md) (Mejoras de conformidad de Visual C++ en Visual Studio 2017). 
+ For information about Visual Studio 2017, see [What's new for Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) and [Conformance Improvements in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md). 
  > [!NOTE]
- > No existen cambios principales binarios entre Visual Studio 2015 y Visual Studio 2017.
+ > There are no binary breaking changes between Visual Studio 2015 and Visual Studio 2017.
 
-Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden producir errores de compilación o en tiempo de ejecución en código previamente compilado que se ejecutaba correctamente. Los cambios en la nueva versión que producen tales problemas se conocen como *cambios importantes*y normalmente son necesarios debido a las modificaciones en el estándar del lenguaje C++, las firmas de función o la disposición de los objetos en la memoria.  
+When you upgrade to a new version of the Visual C++ compiler, you might encounter compilation and/or runtime errors in code that previously compiled and ran correctly. Changes in the new version that cause such problems are known as *breaking changes*, and typically they're required by modifications in the C++ language standard, function signatures, or the layout of objects in memory.  
   
- Para evitar errores en tiempo de ejecución que son difíciles de detectar y diagnosticar, recomendamos que nunca vincule estáticamente los binarios compilados con versiones diferentes del compilador. Además, cuando actualice un proyecto EXE o DLL, asegúrese de actualizar las bibliotecas a las que está vinculado. Si usa tipos CRT (Runtime de C) o de la biblioteca estándar de C++, no los pase entre los binarios (incluidos los archivos DLL) que se han compilado con versiones diferentes del compilador. Para obtener más información, consulte [Errores potenciales que pasan los objetos de CRT entre los límites de DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
+ To avoid run-time errors that are difficult to detect and diagnose, we recommend that you never statically link to binaries that were compiled by using different versions of the compiler. Also, when you upgrade an EXE or DLL project, make sure to upgrade the libraries that it links to. If you're using CRT (C Runtime) or C++ Standard Library (C++ Standard Library) types, don't pass them between binaries (including DLLs) that were compiled by using different versions of the compiler. For more information, see [Potential Errors Passing CRT Objects Across DLL Boundaries](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
   
- También se recomienda que nunca escriba código que dependa de una disposición determinada de un objeto que no sea una interfaz COM o un objeto POD. Si escribe código de esta manera, debe asegurarse de que funciona después de la actualización. Para obtener más información, consulte [Portabilidad en los límites de ABI (C++ moderno)](../cpp/portability-at-abi-boundaries-modern-cpp.md).  
+ We further recommend that you never write code that depends on a particular layout for an object that is not a COM interface or a POD object. If you do write such code, then you must ensure that it works after you upgrade. For more information, see [Portability At ABI Boundaries](../cpp/portability-at-abi-boundaries-modern-cpp.md).  
   
- Además, las mejoras continuas en la conformidad del compilador a veces pueden cambiar cómo entiende el compilador el código fuente existente. Cuando esto sucede, pueden producirse errores nuevos o diferentes durante la compilación o puede haber incluso diferencias de comportamiento en el código previamente compilado que parecía ejecutarse correctamente. Aunque estos no son cambios importantes como los descritos en este documento, es posible que se necesiten cambios en el código fuente para resolver estos problemas.  
+ Additionally, ongoing improvements to compiler conformance can sometimes change how the compiler understands your existing source code. When this happens, you might encounter new or different errors during your build, or even behavioral differences in code that previously built and seemed to run correctly. Although these are not breaking changes like the ones discussed in this document, source code changes might be needed to resolve these issues.  
   
   
-1.  [Cambios importantes en la biblioteca en tiempo de ejecución de C (CRT)](#BK_CRT)  
+1.  [C Runtime (CRT) Library Breaking Changes](#BK_CRT)  
   
-2.  [Cambios importantes de C++ estándar y la biblioteca estándar de C++](#BK_STL)  
+2.  [Standard C++ and C++ Standard Library Breaking Changes](#BK_STL)  
   
-3.  [Cambios importantes en MFC y ATL](#BK_MFC)  
+3.  [MFC and ATL Breaking Changes](#BK_MFC)  
   
-4.  [Cambios importantes en el Runtime de simultaneidad](#BK_ConcRT)  
+4.  [Concurrency Runtime Breaking Changes](#BK_ConcRT)  
   
-## <a name="VC_2015"></a> Cambios de conformidad de Visual C++ 2015  
+## <a name="VC_2015"></a> Visual C++ 2015 Conformance Changes  
   
-###  <a name="BK_CRT"></a> Biblioteca en tiempo de ejecución de C (CRT)  
+###  <a name="BK_CRT"></a> C Runtime Library (CRT)  
   
-#### <a name="general-changes"></a>Cambios generales  
+#### <a name="general-changes"></a>General Changes  
   
--   **Binarios refactorizados** La biblioteca CRT se ha refactorizado en dos binarios distintos: un CRT universal (ucrtbase), que contiene la mayor parte de la funcionalidad estándar, y una biblioteca de VC Runtime (vcruntime140), que contiene la funcionalidad relacionada con el compilador como el control de excepciones y funciones intrínsecas. Si usa la configuración predeterminada del proyecto, entonces este cambio no le afecta ya que el vinculador usará automáticamente las nuevas bibliotecas predeterminadas. Si ha configurado la propiedad del **Vinculador** del proyecto **Omitir todas las bibliotecas predeterminadas** en **Sí** o si usa la opción del vinculador /NODEFAULTLIB en la línea de comandos, debe actualizar la lista de bibliotecas (en la propiedad **Dependencias adicionales** ) para incluir las nuevas bibliotecas refactorizadas. Reemplace la biblioteca CRT anterior (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) por las bibliotecas refactorizadas equivalentes. Para cada una de las dos bibliotecas refactorizadas hay versiones estáticas (.lib) y versiones dinámicas (.dll), así como versiones de lanzamiento (sin sufijo) y versiones de depuración (con el sufijo “d”). Las versiones dinámicas tienen una biblioteca de importación con la que se establece el vínculo. Las dos bibliotecas refactorizadas son CRT universal, concretamente ucrtbase.dll o .lib, ucrtbased.dll o .lib y la biblioteca de VC Runtime, libvcruntime.lib, libvcruntime.dll, libvcruntimed.lib y libvcruntimed.dll. Consulte [Características de la biblioteca CRT](../c-runtime-library/crt-library-features.md).  
+-   **Refactored binaries** The CRT Library  has been refactored into a two different binaries, a Universal CRT (ucrtbase), which contains most of the standard functionality, and a VC Runtime Library (vcruntime), which contains the compiler-related functionality, such as exception handling, and intrinsics. If you are using the default project settings, then this change does not impact you since the linker will use the new default libraries automatically. If you have set the project's **Linker** property **Ignore All Default Libraries** to **Yes** or you are using the /NODEFAULTLIB linker option on the command line, then you must update your list of libraries (in the **Additional Dependencies** property) to include the new, refactored libraries. Replace the old CRT library (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) with the equivalent refactored libraries. For each of the two refactored libraries, there are static (.lib) and dynamic (.dll) versions, and release (with no suffix) and debug versions (with the "d" suffix). The dynamic versions have an import library that you link with. The two refactored libraries are Universal CRT, specifically ucrtbase.dll or .lib, ucrtbased.dll or .lib, and the VC runtime library, libvcruntime.lib, vcruntime*version*.dll, libvcruntimed.lib, and vcruntimed*version*.dll. The *version* in both Visual Studio 2015 and Visual Studio 2017 is 140. See [CRT Library Features](../c-runtime-library/crt-library-features.md).  
   
 #### <a name="localeh"></a>\<locale.h>  
   
--   **localeconv** La función [localeconv](../c-runtime-library/reference/localeconv.md) declarada en locale.h ahora funciona correctamente cuando la [configuración regional previa al subproceso](../parallel/multithreading-and-locales.md) está habilitada. En versiones anteriores de la biblioteca, esta función devolvía los datos de lconv de la configuración regional global, no de la configuración regional del subproceso.  
+-   **localeconv** The [localeconv](../c-runtime-library/reference/localeconv.md) function declared in locale.h now works correctly when [per-thread locale](../parallel/multithreading-and-locales.md) is enabled. In previous versions of the library, this function would return the lconv data for the global locale, not the thread's locale.  
   
-     Si usa la configuración regional por subproceso, compruebe la utilización de localeconv para ver si el código asume que los datos de lconv devueltos corresponden a la configuración regional global y modifíquelo debidamente.  
+     If you use per thread locale, you should check your use of localeconv to see if your code assumes that the lconv data returned is for the global locale and modify it appropriately.  
   
 #### <a name="mathh"></a>\<math.h>  
   
--   **Sobrecargas de C++ de funciones de la biblioteca matemática** En versiones anteriores, \<math.h> definía algunas de las sobrecargas de C++ para las funciones de la biblioteca matemática, pero no todas. \<cmath> definía las sobrecargas restantes por lo que, para obtener todas las sobrecargas, era necesario incluir el encabezado \<cmath>. Esto causaba problemas con la resolución de sobrecargas de función en el código que solo incluía \<math.h>. Ahora, todas las sobrecargas de C++ se han quitado de \<math.h> y solo están presentes en \<cmath>.  
+-   **C++ overloads of math library functions** In previous versions, \<math.h> defined some, but not all, of the C++ overloads for the math library functions. \<cmath> defined the remaining overloads, so to get all of the overloads, one needed to include the \<cmath> header. This led to problems with function overload resolution in code that only included \<math.h>. Now, all C++ overloads have been removed from \<math.h> and are now present only in \<cmath>.  
   
-     Para resolver errores, incluya <cmath> para obtener las declaraciones de las funciones que se han quitado de \<math.h>. En la tabla siguiente se muestran las funciones que se han movido.  
+     To resolve errors, include <cmath> to get the declarations of the functions that were removed from \<math.h>. The following table lists the functions that were moved.  
   
-     Funciones movidas:  
+     Functions that were moved:  
   
-    1.  double abs(double) y float abs(float)  
+    1.  double abs(double) and float abs(float)  
   
     2.  double pow(double, int), float pow(float, float), float pow(float, int), long double pow(long double, long double), long double pow(long double, int)  
   
-    3.  float y versiones long double de funciones de punto flotante acos, acosh, asin, asinh, atan, atanh, atan2, cbrt, ceil, copysign, cos, cosh, erf, erfc, exp, exp2, expm1, fabs, fdim, floor, fma, fmax, fmin, fmod, frexp, hypot, ilogb, ldexp, lgamma, llrint, llround, log, log10, log1p, log2, lrint, lround, modf, nearbyint, nextafter, nexttoward, remainder, remquo, rint, round, scalbln, scalbn, sin, sinh, sqrt, tan, tanh, tgamma, trunc  
+    3.  float and long double versions of floating point functions acos, acosh, asin, asinh, atan, atanh, atan2, cbrt, ceil, copysign, cos, cosh, erf, erfc, exp, exp2, expm1, fabs, fdim, floor, fma, fmax, fmin, fmod, frexp, hypot, ilogb, ldexp, lgamma, llrint, llround, log, log10, log1p, log2, lrint, lround, modf, nearbyint, nextafter, nexttoward, remainder, remquo, rint, round, scalbln, scalbn, sin, sinh, sqrt, tan, tanh, tgamma, trunc  
   
-     Si tiene código que use abs con un tipo de punto flotante que solo incluya el encabezado math.h, las versiones de punto flotante ya no estarán disponibles, por lo que la llamada, incluso con un argumento de punto flotante, se resuelve ahora como abs(int). Esto produce el error:  
+     If you have code that uses abs with a floating point type that only includes the math.h header, the floating point versions will no longer be available, so the call, even with a floating point argument, now resolves to abs(int). This produces the error:  
   
     ```Output  
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data  
     ```  
   
-     La solución para esta advertencia es reemplazar la llamada a abs por una versión de punto flotante de abs, como fabs para un argumento de tipo double o fabsf para un argumento de tipo float, o incluir el encabezado cmath y seguir usando abs.  
+     The fix for this warning is to replace the call to abs with a floating point version of abs, such as fabs for a double argument or fabsf for a float argument, or include the cmath header and continue to use abs.  
   
--   **Conformidad de punto flotante** Se han introducido muchos cambios en la biblioteca matemática para mejorar la conformidad con las especificaciones IEEE-754 y el anexo F de C11 con respecto a entradas de casos especiales como infinitos y valores NaN. Por ejemplo, las entradas de valores NaN simples, que a menudo se trataban como errores en las versiones anteriores de la biblioteca, ya no se consideran como tales. Consulte el [estándar IEEE 754](http://grouper.ieee.org/groups/754) y el anexo F del [estándar C11](http://www.iso-9899.info/wiki/The_Standard).  
+-   **Floating point conformance** Many changes to the math library have been made to improve conformance to the IEEE-754 and C11 Annex F specifications with respect to special case inputs such as NaNs and infinities. For example, quiet NaN inputs, which were often treated as errors in previous versions of the library, are no longer treated as errors. See [IEEE 754 Standard](http://grouper.ieee.org/groups/754) and Annex F of the [C11 Standard](http://www.iso-9899.info/wiki/The_Standard).  
   
-     Estos cambios no provocarán errores en tiempo de compilación, pero pueden hacer que los programas se comporten de manera diferente y más correcta según el estándar.  
+     These changes won't cause compile-time errors, but might cause programs to behave differently and more correctly according to the standard.  
   
--   **FLT_ROUNDS** En Visual Studio 2013, la macro FLT_ROUNDS se expandía a una expresión constante, lo cual era incorrecto porque el modo de redondeo es configurable en tiempo de ejecución, por ejemplo, al llamar a fesetround. La macro FLT_ROUNDS ahora es dinámica y refleja correctamente el modo de redondeo actual.  
+-   **FLT_ROUNDS** In Visual Studio 2013, the FLT_ROUNDS macro expanded to a constant expression, which was incorrect because the rounding mode is configurable at runtime, for example, by calling fesetround. The FLT_ROUNDS macro is now dynamic and correctly reflects the current rounding mode.  
   
-#### <a name="new-and-newh"></a>\<new> y \<new.h>  
+#### <a name="new-and-newh"></a>\<new> and \<new.h>  
   
--   **new y delete** In previous versions of the library, the implementation-defined operator new y delete functions were exported from the runtime library DLL (for example, msvcr120.dll). Ahora, estas funciones de operador siempre se vinculan estáticamente en los archivos binarios, incluso cuando se usan las DLL de la biblioteca en tiempo de ejecución.  
+-   **new and delete** In previous versions of the library, the implementation-defined operator new and delete functions were exported from the runtime library DLL (for example, msvcr120.dll). These operator functions are now always statically linked into your binaries, even when using the runtime library DLLs.  
   
-     Esto no supone un cambio importante del código nativo o mixto (/clr); en cambio, para código compilado como [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), puede provocar que este no se compile. Si compila código como /clr:pure, quizá deba agregar #include \<new> o #include \<new.h> para evitar los errores de compilación debidos a este cambio. Tenga en cuenta que /clr:pure ha quedado en desuso en Visual Studio 2015 y es posible que desaparezca en futuras versiones.  
+     This is not a breaking change for native or mixed code (/clr), however for code compiled as [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), this might cause your code to fail to compile. If you compile code as /clr:pure, you may need to add #include \<new> or #include \<new.h> to work around build errors due to this change. Note that /clr:pure is deprecated in Visual Studio 2015 and might be removed in future releases.  
   
 #### <a name="processh"></a>\<process.h>  
   
--   **_beginthread y _beginthreadex** Las funciones [_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) y [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) ahora contienen una referencia al módulo en que se define el procedimiento de subproceso para la duración del subproceso. Esto ayuda a garantizar que los módulos no se descargan hasta que un subproceso se ejecuta hasta su finalización.  
+-   **_beginthread and _beginthreadex** The [_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) and [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) functions now hold a reference to the module in which the thread procedure is defined for the duration of the thread. This helps to ensure that modules are not unloaded until a thread has run to completion.  
   
 #### <a name="stdargh"></a>\<stdarg.h>  
   
--   **va_start y tipos de referencia** Cuando se compila código C++, [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) ahora valida en tiempo de compilación que el argumento que se le pasa no es de tipo de referencia. Los argumentos de tipo de referencia están prohibidos por el estándar de C++.  
+-   **va_start and reference types** When compiling C++ code, [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) now validates at compile-time that the argument passed to it is not of reference type. Reference-type arguments are prohibited by the C++ Standard.  
   
-#### <a name="stdioh-and-conioh"></a>\<stdio.h> y \<conio.h>  
+#### <a name="stdioh-and-conioh"></a>\<stdio.h> and \<conio.h>  
   
--   **Las familias de funciones printf y scanf se definen ahora insertadas.** Las definiciones de todas las funciones printf y scanf se han insertado en \<stdio.h>, \<conio.h> y otros encabezados de CRT. Se trata de una novedad importante que lleva a un error del vinculador (LNK2019, símbolo externo sin resolver) en todos los programas que declaran localmente estas funciones sin incluir los encabezados de CRT apropiados. Si es posible, actualice el código para incluir los encabezados de CRT (es decir, agregue #include \<stdio.h>) y las funciones insertadas. Si prefiere no modificar el código para incluir estos archivos de encabezado, una solución alternativa es agregar una biblioteca adicional a su entrada de enlazador, legacy_stdio_definitions.lib.  
+-   **The printf and scanf family of functions are now defined inline.** The definitions of all of the printf and scanf functions have been moved inline into \<stdio.h>, \<conio.h>, and other CRT headers. This is a breaking change that leads to a linker error (LNK2019, unresolved external symbol) for any programs that declared these functions locally without including the appropriate CRT headers. If possible, you should update the code to include the CRT headers (that is, add #include \<stdio.h>) and the inline functions, but if you do not want to modify your code to include these header files, an alternative solution is to add an additional library to your linker input, legacy_stdio_definitions.lib.  
   
-     Para agregar esta biblioteca a la entrada de vinculador en el IDE, abra el menú contextual del nodo de proyecto y elija **Propiedades**. A continuación, en el cuadro de diálogo **Propiedades del proyecto** , seleccione **Vinculador**, y edite **Entrada del vinculador** para agregar legacy_stdio_definitions.lib a la lista separada por signos de punto y coma.  
+     To add this library to your linker input in the IDE, open the context menu for the project node, choose **Properties**, then in the **Project Properties** dialog box, choose **Linker**, and edit the **Linker Input** to add legacy_stdio_definitions.lib to the semi-colon-separated list.  
   
-     Si el proyecto está vinculado a las bibliotecas estáticas que se compilaron con una versión de Visual C++ anterior a 2015, el vinculador podría informar de un símbolo externo sin resolver. Estos errores pueden hacer referencia a las definiciones de stdio internas de _iob, _iob_func o a importaciones relacionadas para determinadas funciones de stdio en formato _imp\_*. Microsoft le recomienda que, cuando actualice un proyecto, recompile todas las bibliotecas estáticas con la versión más reciente del compilador y las bibliotecas de C++. Si la biblioteca es una biblioteca de terceros para la que el origen no está disponible, solicite al autor un binario actualizado o encapsule su uso de la biblioteca en un archivo DLL independiente que luego compile con la versión anterior del compilador y las bibliotecas de Visual C++.  
+     If your project links with static libraries that were compiled with a release of Visual C++ earlier than 2015, the linker might report an unresolved external symbol. These errors might reference internal stdio definitions for _iob, _iob_func, or related imports for certain stdio functions in the form of _imp\_*. Microsoft recommends that you recompile all static libraries with the latest version of the Visual C++ compiler and libraries when you upgrade a project. If the library is a third-party library for which source is not available, you should either request an updated binary from the third party or encapsulate your usage of that library into a separate DLL that you compile with the older version of the Visual C++ compiler and libraries.  
   
     > [!WARNING]
-    >  Si se vincula con el SDK de Windows 8.1 o con versiones anteriores, es posible encontrar estos errores de símbolo externo sin resolver. En ese caso, debe resolver el error agregando legacy_stdio_definitions.lib a la entrada de vinculador tal como se describió anteriormente.  
+    >  If you are linking with Windows SDK 8.1 or earlier, you might encounter these unresolved external symbol errors. In that case, you should resolve the error by adding legacy_stdio_definitions.lib to the linker input as described previously.  
   
-     Para solucionar errores de símbolo sin resolver, puede probar a usar [dumpbin.exe](../build/reference/dumpbin-reference.md) para examinar los símbolos definidos en un archivo binario. Pruebe la siguiente línea de comandos para ver los símbolos definidos en una biblioteca.  
+     To troubleshoot unresolved symbol errors, you can try using [dumpbin.exe](../build/reference/dumpbin-reference.md) to examine the symbols defined in a binary. Try the following command line to view symbols defined in a library.  
   
     ```cpp  
     dumpbin.exe /LINKERMEMBER somelibrary.lib  
     ```  
   
--   **gets y _getws** Las funciones [gets](../c-runtime-library/gets-getws.md) y [_getws](../c-runtime-library/gets-getws.md) se han quitado. La función gets se quitó de la biblioteca estándar de C en C11 porque su uso no es seguro. La función _getws era una extensión de Microsoft que equivalía a gets, pero para cadenas de caracteres anchos. Como alternativa a estas funciones, puede usar [fgets](../c-runtime-library/reference/fgets-fgetws.md), [fgetws](../c-runtime-library/reference/fgets-fgetws.md), [gets_s](../c-runtime-library/reference/gets-s-getws-s.md) y [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md).  
+-   **gets and _getws** The [gets](../c-runtime-library/gets-getws.md) and [_getws](../c-runtime-library/gets-getws.md) functions have been removed. The gets function was removed from the C Standard Library in C11 because it cannot be used securely. The _getws function was a Microsoft extension that was equivalent to gets but for wide strings. As alternatives to these functions, consider use of [fgets](../c-runtime-library/reference/fgets-fgetws.md), [fgetws](../c-runtime-library/reference/fgets-fgetws.md), [gets_s](../c-runtime-library/reference/gets-s-getws-s.md), and [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md).  
   
--   **_cgets y _cgetws** Las funciones [_cgets](../c-runtime-library/cgets-cgetws.md) y [_cgetws](../c-runtime-library/cgets-cgetws.md) se han quitado. Como alternativa a estas funciones, puede usar [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) y [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
+-   **_cgets and _cgetws** The [_cgets](../c-runtime-library/cgets-cgetws.md) and [_cgetws](../c-runtime-library/cgets-cgetws.md) functions have been removed. As alternatives to these functions, consider use of [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) and [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
   
--   **Formato de Infinity y NaN** En versiones anteriores, los valores infinitos y NaN adoptaban el formato mediante un conjunto de cadenas centinela específicas de Visual C++.  
+-   **Infinity and NaN Formatting** In previous versions, infinities and NaNs would be formatted using a set of Visual C++-specific sentinel strings.  
   
-    -   Infinito: 1.#INF  
+    -   Infinity: 1.#INF  
   
-    -   NaN simple: 1. #QNAN  
+    -   Quiet NaN: 1.#QNAN  
   
-    -   NaN de señalización: 1.#SNAN  
+    -   Signaling NaN: 1.#SNAN  
   
-    -   NaN indefinido: 1.#IND  
+    -   Indefinite NaN: 1.#IND  
   
-     Cualquiera de estas cadenas podía prefijarse con un signo y tener un formato ligeramente diferente según el ancho de campo y la precisión (a veces con efectos inusuales, p. ej., printf("%.2f\n", INFINITY) imprimía 1.#J porque #INF se "redondeaba" a una precisión de dos dígitos). C99 introdujo nuevos requisitos en el formato de los valores infinitos y NaN. La implementación de Visual C++ ahora cumple estos requisitos. Las nuevas cadenas son las siguientes:  
+     Any of these may have been prefixed by a sign and may have been formatted slightly differently depending on field width and precision (sometimes with unusual effects, e.g. printf("%.2f\n", INFINITY) would print 1.#J because the #INF would be "rounded" to a precision of 2 digits). C99 introduced new requirements on how infinities and NaNs are to be formatted. The Visual C++ implementation now conforms to these requirements. The new strings are as follows:  
   
-    -   Infinito: inf  
+    -   Infinity: inf  
   
-    -   NaN simple: nan  
+    -   Quiet NaN: nan  
   
-    -   NaN de señalización: nan(snan)  
+    -   Signaling NaN: nan(snan)  
   
-    -   NaN indefinido: nan(ind)  
+    -   Indefinite NaN:nan(ind)  
   
-     Cualquiera de ellas puede ir precedida por un signo. Si se usa un especificador de formato en mayúscula (%F en lugar de %f), las cadenas se imprimen en mayúscula (INF en lugar de inf), según sea necesario.  
+     Any of these may be prefixed by a sign. If a capital format specifier is used (%F instead of %f) then the strings are printed in capital letters (INF instead of inf), as is required.  
   
-     Las funciones [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) se han modificado para analizar estas nuevas cadenas de manera que harán un recorrido de ida y vuelta a través de printf y scanf.  
+     The [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) functions have been modified to parse these new strings, so these strings will round-trip through printf and scanf.  
   
--   **Formato y análisis de punto flotante** Se han introducido nuevos algoritmos de análisis y formato de punto flotante para mejorar la corrección. Este cambio afecta a las familias de funciones [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) y [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md), además de a otras funciones como [strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).  
+-   **Floating point formatting and parsing** New floating point formatting and parsing algorithms have been introduced to improve correctness. This change affects the [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) and [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) families of functions, as well as functions like [strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).  
   
-     Los algoritmos de formato anteriores generaban únicamente un número limitado de dígitos y rellenaban con cero el resto de posiciones decimales. Esto suele bastar para generar cadenas que hagan un recorrido de ida y vuelta hasta al valor de punto flotante original, pero no si se desea que el valor sea exacto (o la representación decimal más cercana al mismo). Los nuevos algoritmos de formato generan tantos dígitos como sea necesario para representar el valor (o para rellenar la precisión especificada). Como ejemplo de la mejora, considere los resultados cuando se imprime una gran potencia de dos:  
+     The old formatting algorithms would generate only a limited number of digits, then would fill the remaining decimal places with zero. This is usually good enough to generate strings that will round-trip back to the original floating point value, but it's not great if you want the exact value (or the closest decimal representation thereof). The new formatting algorithms generate as many digits as are required to represent the value (or to fill the specified precision). As an example of the improvement; consider the results when printing a large power of two:  
   
     ```cpp  
     printf("%.0f\n", pow(2.0, 80))  
@@ -177,126 +177,126 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
         Old:  1208925819614629200000000    New:  1208925819614629174706176  
     ```  
   
-     Los algoritmos de análisis antiguos solo tenían en cuenta un máximo de 17 dígitos significativos de la cadena de entrada y descartaban el resto de los dígitos. Esto es suficiente para generar una aproximación muy precisa del valor representado por la cadena y el resultado suele acercarse mucho al resultado redondeado correctamente. La nueva implementación tiene en cuenta todos los dígitos presentes y genera el resultado redondeado correctamente para todas las entradas (hasta 768 dígitos de longitud). Además, estas funciones ahora respetan el modo de redondeo (que se puede controlar a través de fesetround).  Este es un cambio de comportamiento potencialmente importante porque estas funciones pueden generar resultados diferentes. Los nuevos resultados siempre son más correctos que los resultados anteriores.  
+     The old parsing algorithms would consider only up to 17 significant digits from the input string and would discard the rest of the digits. This is sufficient to generate a very close approximation of the value represented by the string, and the result is usually very close to the correctly rounded result. The new implementation considers all present digits and produces the correctly rounded result for all inputs (up to 768 digits in length). In addition, these functions now respect the rounding mode (controllable via fesetround).  This is a potentially breaking behavior change because these functions might output different results. The new results are always more correct than the old results.  
   
--   **Análisis de punto flotante de hexadecimal e infinity/NaN** Los algoritmos de análisis de punto flotante ahora analizan cadenas hexadecimales de punto flotante (como las generadas por los especificadores de formato de printf %a y %A) y todas las cadenas infinity y NaN generadas por las funciones de printf, como se describió anteriormente.  
+-   **Hexadecimal and infinity/NaN floating point parsing** The floating point parsing algorithms will now parse hexadecimal floating point strings (such as those generated by the %a and %A printf format specifiers) and all infinity and NaN strings that are generated by the printf functions, as described above.  
   
--   **Relleno de ceros a la izquierda de %A y %a** Los especificadores de formato %a y %A dan formato a un número de punto flotante como mantisa hexadecimal y exponente binario. En versiones anteriores, las funciones de printf rellenaban con ceros las cadenas de manera incorrecta. Por ejemplo, printf("%07.0a\n", 1.0) imprimía 00x1p+0, cuando debería imprimir 0x01p+0. Esto se ha solucionado.  
+-   **%A and %a zero padding** The %a and %A format specifiers format a floating point number as a hexadecimal mantissa and binary exponent. In previous versions, the printf functions would incorrectly zero-pad strings. For example, printf("%07.0a\n", 1.0) would print 00x1p+0, where it should print 0x01p+0. This has been fixed.  
   
--   **Precisión de %A y %a** La precisión predeterminada de los especificadores de formato %A y %a era de 6 en versiones anteriores de la biblioteca. La precisión predeterminada es ahora de 13, de conformidad con el estándar de C.  
+-   **%A and %a precision** The default precision of the %A and %a format specifiers was 6 in previous versions of the library. The default precision is now 13 for conformance with the C Standard.  
   
-     Se trata de un cambio de comportamiento en tiempo de ejecución en la salida de cualquier función que usa una cadena de formato con %A o %a. En el comportamiento anterior, la salida que usaba el especificador %A podía ser “1.1A2B3Cp+111”. Ahora, la salida para el mismo valor es “1.1A2B3C4D5E6F7p+111”. Para obtener el comportamiento anterior, puede especificar la precisión, por ejemplo, %.6A. Consulte [Especificación de precisión](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).  
+     This is a runtime behavior change in the output of any function that uses a format string with %A or %a. In the old behavior, the output using the %A specifier might be "1.1A2B3Cp+111". Now the output for the same value is "1.1A2B3C4D5E6F7p+111". To get the old behavior, you can specify the precision, for example, %.6A. See [Precision Specification](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).  
   
--   **Especificador %F** Ahora se admite el especificador de formato/conversión %F. Es funcionalmente equivalente al especificador de formato %f, salvo que el formato de los valores infinitos y NaN es con letras mayúsculas.  
+-   **%F specifier** The %F format/conversion specifier is now supported. It is functionally equivalent to the %f format specifier, except that infinities and NaNs are formatted using capital letters.  
   
-     En versiones anteriores, la implementación solía analizar F y N como modificadores de longitud. Este comportamiento se remontaba a la época de los espacios de direcciones segmentados: estos modificadores de longitud se usaban para indicar punteros far y near, respectivamente, como en %Fp o %Ns. Este comportamiento se ha eliminado. Si se encuentra %F, ahora se trata como el especificador de formato %F; si se encuentra %N, ahora se trata como un parámetro no válido.  
+     In previous versions, the implementation used to parse F and N as length modifiers. This behavior dated back to the age of segmented address spaces: these length modifiers were used to indicate far and near pointers, respectively, as in %Fp or %Ns. This behavior has been removed. If %F is encountered, it is now treated as the %F format specifier; if %N is encountered, it is now treated as an invalid parameter.  
   
--   **Formato de exponente** Los especificadores de formato %e y %E dan formato a un número de punto flotante como mantisa decimal y exponente. En algunos casos, los especificadores de formato %g y %G también dan este formato a los números. En versiones anteriores, CRT generaba siempre las cadenas con exponentes de tres dígitos. Por ejemplo, printf("%e\n", 1.0) imprimía 1.000000e+000. Ese comportamiento era incorrecto: C exige que si el exponente solo se puede representar mediante uno o dos dígitos, entonces solo se imprimirán dos dígitos.  
+-   **Exponent formatting** The %e and %E format specifiers format a floating point number as a decimal mantissa and exponent. The %g and %G format specifiers also format numbers in this form in some cases. In previous versions, the CRT would always generate strings with three-digit exponents. For example, printf("%e\n", 1.0) would print 1.000000e+000. This was incorrect: C requires that if the exponent is representable using only one or two digits, then only two digits are to be printed.  
   
-     En Visual Studio 2005 se agregó un modificador de conformidad global: [_set_output_format](../c-runtime-library/set-output-format.md). Un programa podía llamar a esta función con el argumento _TWO_DIGIT_EXPONENT, para habilitar la impresión de exponentes conforme a los estándares. El comportamiento predeterminado se ha cambiado al modo de impresión de exponentes conforme a los estándares.  
+     In Visual Studio 2005 a global conformance switch was added: [_set_output_format](../c-runtime-library/set-output-format.md). A program could call this function with the argument _TWO_DIGIT_EXPONENT, to enable conforming exponent printing. The default behavior has been changed to the standards-conforming exponent printing mode.  
   
--   **Validación de cadenas de formato** En versiones anteriores, las funciones printf y scanf aceptaban en modo silencioso muchas cadenas de formato no válido, a veces con efectos inesperados. Por ejemplo, %hlhlhld se trataba como %d. Ahora, todas las cadenas de formato no válido se tratan como parámetros no válidos.  
+-   **Format string validation** In previous versions, the printf and scanf functions would silently accept many invalid format strings, sometimes with unusual effects. For example, %hlhlhld would be treated as %d. All invalid format strings are now treated as invalid parameters.  
   
--   **Validación de cadenas de modo fopen**  
+-   **fopen mode string validation**  
   
-     En versiones anteriores, la familia de funciones fopen aceptaba en modo silencioso algunas cadenas de modo no válido (por ejemplo, r+b+). Ahora, las cadenas de modo no válido se consideran como parámetros no válidos.  
+     In previous versions, the fopen family of functions silently accepted some invalid mode strings (e.g. r+b+). Invalid mode strings are now detected and treated as invalid parameters.  
   
--   **Modo _O_U8TEXT**  
+-   **_O_U8TEXT mode**  
   
-     La función [_setmode](../c-runtime-library/reference/setmode.md) ahora informa correctamente del modo de flujos abiertos en modo _O_U8TEXT. En versiones anteriores de la biblioteca, informaba de que dichos flujos se abrían en _O_WTEXT.  
+     The [_setmode](../c-runtime-library/reference/setmode.md) function now correctly reports the mode for streams opened in_O_U8TEXT mode. In previous versions of the library, it would report such streams as being opened in _O_WTEXT.  
   
-     Se trata de una novedad importante si su código interpreta el modo _O_WTEXT para los flujos en que la codificación es UTF-8. Si su aplicación no es compatible con UTF_8, considere la posibilidad de agregar compatibilidad con esta codificación cada vez más común.  
+     This is a breaking change if your code interprets the _O_WTEXT mode for streams where the encoding is UTF-8. If your application doesn't support UTF_8, consider adding support for this increasingly common encoding.  
   
--   **snprintf y vsnprintf** Las funciones [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) y [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) están ahora implementadas. A menudo, el código anterior proporcionaba versiones de macro de definiciones de estas funciones porque la biblioteca CRT no las implementaba, pero ya no son necesarias en las versiones más recientes. Si [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) o [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) se definen como una macro antes de incluir \<stdio.h>, la compilación produce un error que indica dónde estaba definida la macro.  
+-   **snprintf and vsnprintf** The [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) and [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) functions are now implemented. Older code often provided definitions macro versions of these functions because they were not implemented by the CRT library, but these are no longer needed in newer versions. If [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) or [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) is defined as a macro before including \<stdio.h>, compilation now fails with an error that indicates where the macro was defined.  
   
-     Normalmente, la solución a este problema consiste en eliminar todas las declaraciones de snprintf o vsnprintf en el código de usuario.  
+     Normally, the fix to this problem is to delete any declarations of snprintf or vsnprintf in user code.  
   
--   **tmpnam genera nombres de archivo utilizables** En versiones anteriores, las funciones tmpnam y tmpnam_s generaban nombres de archivo en la raíz de la unidad (por ejemplo, \sd3c.). Estas funciones generan ahora rutas de nombre de archivo utilizables en un directorio temporal.  
+-   **tmpnam Generates Usable File Names** In previous versions, the tmpnam and tmpnam_s functions generated file names in the root of the drive (such as \sd3c.). These functions now generate usable file name paths in a temporary directory.  
   
--   **Encapsulación FILE** En versiones anteriores, el tipo FILE estaba totalmente definido en \<stdio.h>, por lo que el código de usuario podía obtener acceso a FILE y modificar sus elementos internos. La biblioteca stdio se ha cambiado para ocultar los detalles de implementación. Como parte de esto, FILE tal como se define en \<stdio.h> es ahora un tipo opaco y sus miembros son inaccesibles desde fuera de la propia biblioteca CRT.  
+-   **FILE Encapsulation** In previous versions, the FILE type was completely defined in \<stdio.h>, so it was possible for user code to reach into a FILE and modify its internals. The stdio library has been changed to hide implementation details. As part of this, FILE as defined in \<stdio.h> is now an opaque type and its members are inaccessible from outside of the CRT itself.  
   
--   **_outp e _inp** Las funciones [_outp](../c-runtime-library/outp-outpw-outpd.md), [_outpw](../c-runtime-library/outp-outpw-outpd.md), [_outpd](../c-runtime-library/outp-outpw-outpd.md), [_inp](../c-runtime-library/inp-inpw-inpd.md), [_inpw](../c-runtime-library/inp-inpw-inpd.md) e [_inpd](../c-runtime-library/inp-inpw-inpd.md) se han quitado.  
+-   **_outp and _inp** The functions [_outp](../c-runtime-library/outp-outpw-outpd.md), [_outpw](../c-runtime-library/outp-outpw-outpd.md), [_outpd](../c-runtime-library/outp-outpw-outpd.md), [_inp](../c-runtime-library/inp-inpw-inpd.md), [_inpw](../c-runtime-library/inp-inpw-inpd.md), and [_inpd](../c-runtime-library/inp-inpw-inpd.md) have been removed.  
   
-#### <a name="stdlibh-malloch-and-sysstath"></a>\<stdlib.h>, \<malloc.h> y \<sys/stat.h>  
+#### <a name="stdlibh-malloch-and-sysstath"></a>\<stdlib.h>, \<malloc.h>, and \<sys/stat.h>  
   
--   **strtof y wcstof** The strtof y wcstof functions failed to set errno to ERANGE when the value was not representable as a float. Esto se ha solucionado. (Observe que este error era específico de estas dos funciones; las funciones strtod, wcstod, strtold y wcstold no se veían afectadas). Se trata de una novedad importante en tiempo de ejecución.  
+-   **strtof and wcstof** The strtof and wcstof functions failed to set errno to ERANGE when the value was not representable as a float. This has been fixed. (Note that this error was specific to these two functions; the strtod, wcstod, strtold, and wcstold functions were unaffected.) This is a runtime breaking change.  
   
--   **Funciones de asignación alineadas** En versiones anteriores, las funciones de asignación alineadas (_aligned_malloc, _aligned_offset_malloc, etc.) aceptaban de modo silencioso las solicitudes para un bloque de alineación 0. La alineación solicitada debe ser una potencia de dos, y cero no lo es. Esto se ha corregido. Ahora, una alineación solicitada de 0 se trata como un parámetro no válido. Se trata de una novedad importante en tiempo de ejecución.  
+-   **Aligned allocation functions** In previous versions, the aligned allocation functions (_aligned_malloc, _aligned_offset_malloc, etc.) would silently accept requests for a block with an alignment of 0. The requested alignment must be a power of two, which zero is not. This has been fixed, and a requested alignment of 0 is now treated as an invalid parameter. This is a runtime breaking change.  
   
--   **Funciones de montón** Las funciones _heapadd, _heapset y _heapused se han quitado. Estas funciones dejaron de ser funcionales cuando el CRT se actualizó para usar el montón de Windows.  
+-   **Heap functions** The _heapadd, _heapset, and _heapused functions have been removed. These functions have been nonfunctional since the CRT was updated to use the Windows heap.  
   
--   **smallheap** La opción de vínculo smallheap se ha quitado. Consulte [Opciones de vínculo](../c-runtime-library/link-options.md).  
+-   **smallheap** The smalheap link option has been removed. See [Link Options](../c-runtime-library/link-options.md).  
   
 #### <a name="stringh"></a>\<string.h>  
   
--   **wcstok** La firma de la función wcstok se cambió para que coincida con los requisitos del estándar de C. En versiones anteriores de la biblioteca, la firma de esta función era:  
+-   **wcstok** The signature of the wcstok function has been changed to match what is required by the C Standard. In previous versions of the library, the signature of this function was:  
   
     ```cpp  
     wchar_t* wcstok(wchar_t*, wchar_t const*)  
     ```  
   
-     Usaba un contexto interno por subproceso para realizar un seguimiento del estado a través de las llamadas, como se hace para strtok. La función ahora tiene la firma wchar_t* wcstok(wchar_t\*, wchar_t const\*, wchar_t\*\*) y requiere que el llamador pase el contexto como un tercer argumento a la función.  
+     It used an internal, per-thread context to track state across calls, as is done for strtok. The function now has the signature wchar_t* wcstok(wchar_t\*, wchar_t const\*, wchar_t\*\*), and requires the caller to pass the context as a third argument to the function.  
   
-     Se ha agregado una nueva función _wcstok con la firma anterior para facilitar la portabilidad. Al compilar código de C++, también hay una sobrecarga en línea del wcstok que tiene la firma anterior. Esta sobrecarga se declara en desuso. En el código de C, puede definir _CRT_NON_CONFORMING_WCSTOK para que _wcstok se use en lugar de wcstok.  
+     A new _wcstok function has been added with the old signature to ease porting. When compiling C++ code, there is also an inline overload of wcstok that has the old signature. This overload is declared as deprecated. In C code, you may define_CRT_NON_CONFORMING_WCSTOK to cause _wcstok to be used in place of wcstok.  
   
 #### <a name="timeh"></a>\<time.h>  
   
--   **clock** En versiones anteriores, la función [clock](../c-runtime-library/reference/clock.md) se implementaba mediante la API de Windows [GetSystemTimeAsFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724397.aspx). Con esta implementación, la función clock era sensible a la hora del sistema y no era necesariamente monotónica. La función clock se ha implementado de nuevo en términos de [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) y ahora es monotónica.  
+-   **clock** In previous versions, the [clock](../c-runtime-library/reference/clock.md) function was implemented using the Windows API [GetSystemTimeAsFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724397.aspx). With this implementation, the clock function was sensitive to the system time, and was thus not necessarily monotonic. The clock function has been reimplemented in terms of [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) and is now monotonic.  
   
--   **fstat y _utime** En versiones anteriores, las funciones [_stat](../c-runtime-library/reference/stat-functions.md), [fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md) y [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) controlaban el horario de verano de manera incorrecta. Antes de Visual Studio 2013, todas estas funciones ajustaban incorrectamente las horas del horario estándar como si estuvieran en el horario de verano.  
+-   **fstat and _utime** In previous versions, the [_stat](../c-runtime-library/reference/stat-functions.md), [fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md), and [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) functions handle daylight savings time incorrectly. Prior to Visual Studio 2013, all of these functions incorrectly adjusted standard time times as if they were in daylight time.  
   
-     En Visual Studio 2013, el problema se solucionó en la familia de funciones _stat, pero no se corrigieron los problemas similares en las familias de funciones fstat y _utime. Esto provoca problemas debido a la incoherencia entre las funciones. Las familias de funciones fstat y _utime ya se han corregido, por lo que todas estas funciones controlan ahora el horario de verano de manera correcta y coherente.  
+     In Visual Studio 2013, the problem was fixed in the _stat family of functions, but the similar problems in the fstat and _utime families of functions were not fixed. This led to problems due to the inconsistency between the functions. The fstat and _utime families of functions have now been fixed, so all of these functions now handle daylight savings time correctly and consistently.  
   
--   **asctime** En versiones anteriores, la función [asctime](../c-runtime-library/reference/asctime-wasctime.md) rellenaba los días de un dígito con un cero inicial, por ejemplo: Vie Jun 06 08:00:00 2014. La especificación requiere que estos días se rellenen con un espacio inicial, por ejemplo: vie jun  6 08:00:00 2014. Esto se ha solucionado.  
+-   **asctime** In previous versions, the [asctime](../c-runtime-library/reference/asctime-wasctime.md) function would pad single-digit days with a leading zero, for example: Fri Jun 06 08:00:00 2014. The specification requires that such days be padded with a leading space, e.g. Fri Jun  6 08:00:00 2014. This has been fixed.  
   
--   **strftime y wcsftime** The strftime y wcsftime functions now support the %C, %D, %e, %F, %g, %G, %h, %n, %r, %R, %t, %T, %u, and %V format specifiers. Además, los modificadores E y O se analizan, pero se ignoran.  
+-   **strftime and wcsftime** The strftime and wcsftime functions now support the %C, %D, %e, %F, %g, %G, %h, %n, %r, %R, %t, %T, %u, and %V format specifiers. Additionally, the E and O modifiers are parsed but ignored.  
   
-     El especificador de formato %c se especifica como la producción de una “representación de fecha y hora adecuada” para la configuración regional actual. En la configuración regional de C, esta representación debe ser la misma que %a %b %e %T %Y. Se trata de la misma forma producida por asctime. En versiones anteriores, el especificador de formato %c representaba incorrectamente las horas con un formato MM/DD/YY HH:MM:SS. Esto se ha solucionado.  
+     The %c format specifier is specified as producing an "appropriate date and time representation" for the current locale. In the C locale, this representation is required to be the same as %a %b %e %T %Y. This is the same form as is produced by asctime. In previous versions, the %c format specifier incorrectly formatted times using a MM/DD/YY HH:MM:SS representation. This has been fixed.  
   
--   **timespec y TIME_UTC** Ahora, el encabezado \<time.h> define el tipo timespec y la función timespec_get a partir del estándar de C11. Además, ahora está definida la macro TIME_UTC para su uso con la función timespec_get. Se trata de una novedad importante para el código que tiene una definición que está en conflicto con alguna de estas funciones.  
+-   **timespec and TIME_UTC** The \<time.h> header now defines the timespec type and the timespec_get function from the C11 Standard. In addition, the TIME_UTC macro, for use with the timespec_get function, is now defined. This is a breaking change for code that has a conflicting definition for any of these.  
   
--   **CLOCKS_PER_SEC** La macro CLOCKS_PER_SEC ahora se expande a un entero de tipo clock_t, tal como exige el lenguaje C.  
+-   **CLOCKS_PER_SEC** The CLOCKS_PER_SEC macro now expands to an integer of type clock_t, as required by the C language.  
   
-####  <a name="BK_STL"></a> Biblioteca estándar de C++  
- Para habilitar nuevas optimizaciones y comprobaciones de depuración, la implementación de Visual Studio de la Biblioteca estándar de C++ interrumpe deliberadamente la compatibilidad binaria de una versión a la siguiente. Por consiguiente, cuando se utiliza la Biblioteca estándar de C++, los archivos de objetos y las bibliotecas estáticas que se han compilado con versiones diferentes no se pueden combinar en un binario (EXE o DLL), y los objetos de la Biblioteca estándar de C++ no se pueden pasar entre los archivos binarios que se han compilado con versiones diferentes. Una combinación de este estilo emite errores del vinculador sobre discordancias _MSC_VER. (_MSC_VER es la macro que contiene la versión principal del compilador, por ejemplo, 1800 para Visual Studio 2013). Esta comprobación no detecta la combinación de archivos DLL ni detecta combinaciones que impliquen Visual C++ 2008 o versiones anteriores.  
+####  <a name="BK_STL"></a> C++ Standard Library  
+ To enable new optimizations and debugging checks, the Visual Studio implementation of the C++ Standard Library intentionally breaks binary compatibility from one version to the next. Therefore, when the C++ Standard Library is used, object files and static libraries that are compiled by using different versions can't be mixed in one binary (EXE or DLL), and C++ Standard Library objects can't be passed between binaries that are compiled by using different versions. Such mixing emits linker errors about _MSC_VER mismatches. (_MSC_VER is the macro that contains the compiler's major version—for example, 1800 for Visual Studio 2013.) This check cannot detect DLL mixing, and cannot detect mixing that involves Visual C++ 2008 or earlier.  
   
--   **Archivos de inclusión de la biblioteca estándar de C++** Se han realizado algunos cambios en la estructura include de los encabezados de la biblioteca estándar de C++. Los encabezados de la biblioteca estándar de C++ pueden incluirse entre sí de maneras no especificadas. En general, debe escribir el código para que incluya todos los encabezados necesarios según el estándar de C++ y que no se base en las inclusiones mutuas entre encabezados de bibliotecas estándar de C++. Con esto se logra que el código sea portable entre versiones y plataformas. Al menos dos de los cambios de encabezado en Visual Studio 2015 afectan al código de usuario. En primer lugar, \<string> ya no incluye \<iterator>. En segundo lugar, ahora \<tuple> declara std::array sin incluir todas las \<array>. Esto puede dañar el código a través de la siguiente combinación de construcciones de código: el código tiene una variable denominada “array” y tiene una directiva using “using namespace std;” y se incluye un encabezado de biblioteca estándar de C++ (por ejemplo, \<functional>) que incluye \<tuple>, que ahora declara std::array.  
+-   **C++ Standard Library include files** Some changes have been made to the include structure in the C++ Standard Library headers. C++ Standard Library headers are allowed to include each other in unspecified ways. In general, you should write your code so that it carefully includes all of the headers that it needs according to the C++ standard and doesn't rely on which C++ Standard Library headers include which other C++ Standard Library headers. This makes code portable across versions and platforms. At least two header changes in Visual Studio 2015 affect user code. First, \<string> no longer includes \<iterator>. Second, \<tuple> now declares std::array without including all of \<array>, which can break code through the following combination of code constructs: your code has a variable named "array", and you have a using-directive "using namespace std;", and you include a C++ Standard Library header (such as \<functional>) that includes \<tuple>, which now declares std::array.  
   
--   **steady_clock** La implementación de \<chrono> de [steady_clock](../standard-library/steady-clock-struct.md) ha cambiado para cumplir los requisitos del estándar de C++ en cuanto a estabilidad y monotonía. steady_clock ahora se basa en [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) , y high_resolution_clock ahora es una typedef para steady_clock. Como resultado, en Visual C++ steady_clock::time_point es ahora un typedef para chrono::time_point <steady_clock>; sin embargo, esto no es necesariamente así en otras implementaciones.  
+-   **steady_clock** The \<chrono> implementation of [steady_clock](../standard-library/steady-clock-struct.md) has changed to meet the C++ Standard requirements for steadiness and monotonicity. steady_clock is now based on [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) and high_resolution_clock is now a typedef for steady_clock. As a result, in Visual C++ steady_clock::time_point is now a typedef for chrono::time_point<steady_clock>; however, this is not necessarily the case for other implementations.  
   
--   **asignadores y const** Ahora es necesario que las comparaciones de igualdad y desigualdad de asignadores acepten argumentos const en ambos lados.  Si sus asignadores definen estos operadores del modo siguiente:  
+-   **allocators and const** We now require allocator equality/inequality comparisons to accept const arguments on both sides.  If your allocators define these operators as follows:  
   
     ```cpp  
     bool operator==(const MyAlloc& other)  
     ```  
   
-     Debe actualizar estos elementos para declararlos como miembros const.  
+     You should update these to declare them as const members.  
   
     ```cpp  
     bool operator==(const MyAlloc& other) const  
     ```  
   
--   **elementos const** El estándar de C++ siempre ha prohibido contenedores de elementos const (como vector\<const T> o set\<const T>). En Visual C++ 2013 y versiones anteriores sí se aceptaban dichos contenedores. En la versión actual, estos contenedores no se compilan.  
+-   **const elements** The C++ standard has always forbidden containers of const elements (such as vector\<const T> or set\<const T>). Visual C++ 2013 and earlier accepted such containers. In the current version, such containers fail to compile.  
   
--   **std::allocator::deallocate** En Visual C++ 2013 y versiones anteriores, std::allocator::deallocate(p, n) ignoraba el argumento pasado para n.  El estándar de C++ siempre ha requerido que n sea igual que el valor pasado como primer argumento a la invocación de allocate que devuelve p. Sin embargo, en la versión actual, se inspecciona el valor de n. El código que pasa argumentos para n que difieren de lo que el estándar requiere puede bloquearse en tiempo de ejecución.  
+-   **std::allocator::deallocate** In Visual C++ 2013 and earlier, std::allocator::deallocate(p, n) ignored the argument passed in for n.  The C++ standard has always required that n be equal to the value passed as the first argument to the invocation of allocate which returned p. However, in the current version, the value of n is inspected. Code that passes arguments for n that differ from what the standard requires might crash at runtime.  
   
--   **hash_map y hash_set** Los archivos de encabezado no estándar hash_map y hash_set han quedado en desuso en Visual Studio 2015 y se eliminarán en una versión futura. En su lugar, use unordered_map y unordered_set.  
+-   **hash_map and hash_set** The non-standard header files hash_map and hash_set are deprecated in Visual Studio 2015 and will be removed in a future release. Use unordered_map and unordered_set instead.  
   
--   **comparadores y operator()** Los contenedores asociativos (la familia \<map>) ahora exigen que sus comparadores tengan operadores de llamada de función invocables por constructores. Este código de declaración de clase de comparador ahora no se puede compilar:  
+-   **comparators and operator()** Associative containers (the \<map> family) now require their comparators to have const-callable function call operators. The following code in a comparator class declaration now fails to compile:  
   
     ```cpp  
     bool operator()(const X& a, const X& b)  
     ```  
   
-     Para resolver este error, cambie la declaración de función a:  
+     To resolve this error, change the function declaration to:  
   
     ```cpp  
     bool operator()(const X& a, const X& b) const  
     ```  
   
--   **rasgos de tipos** The old names for rasgos de tipos from an earlier version of the C++ draft standard have been removed. Se cambiaron en C++11 y se han actualizado a los valores de C++11 en Visual Studio 2015. En la tabla siguiente se muestran los nombres anteriores y los nuevos.  
+-   **type traits** The old names for type traits from an earlier version of the C++ draft standard have been removed. These were changed in C++11 and have been updated to the C++11 values in Visual Studio 2015. The following table shows the old and new names.  
   
-    |Nombre anterior|Nuevo nombre|  
+    |Old name|New name|  
     |--------------|--------------|  
     |add_reference|add_lvalue_reference|  
     |has_default_constructor|is_default_constructible|  
@@ -318,50 +318,50 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
     |has_trivial_move_assign|is_trivially_move_assignable|  
     |has_trivial_destructor|is_trivially_destructible|  
   
--   **Directivas launch::any y launch::sync** The nonstandard Directivas launch::any y launch::sync were removed. En su lugar, para launch::any, use launch:async &#124; launch:deferred. Para launch::sync, use launch::deferred. Consulte [Launch (enumeración)](../standard-library/future-enums.md#launch).  
+-   **launch::any and launch::sync policies** The nonstandard launch::any and launch::sync policies were removed. Instead, for launch::any, use launch:async &#124; launch:deferred. For launch::sync, use launch::deferred. See [launch Enumeration](../standard-library/future-enums.md#launch).  
   
-####  <a name="BK_MFC"></a> MFC y ATL  
+####  <a name="BK_MFC"></a> MFC and ATL  
   
--   Debido a su gran tamaño,**Microsoft Foundation Classes (MFC)** ya no se incluye en la instalación “típica” de Visual Studio. Para instalar MFC, elija la opción de instalación personalizada en el programa de instalación de Visual Studio 2015. Si ya tiene instalado Visual Studio 2015 y desea instalar MFC, vuelva a ejecutar el programa de instalación de Visual Studio, elija la opción de instalación personalizada y elija Microsoft Foundation Classes. Puede volver a ejecutar el programa de instalación de Visual Studio desde el Panel de control, Programas y características, o desde el medio de instalación.  
+-   **Microsoft Foundation Classes (MFC)** is no longer included in a "Typical" install of Visual Studio because of its large size. To install MFC, choose the Custom install option in Visual Studio 2015 setup. If you already have Visual Studio 2015 installed, you can install MFC by re-running Visual Studio setup, choosing the Custom install option, and choosing Microsoft Foundation Classes. You can re-run Visual Studio setup from the Control Panel, Programs and Features, or from the installation media.  
   
-     El paquete redistribuible de Visual C++ todavía incluye esta biblioteca.  
+     The Visual C++ Redistributable Package still includes this library.  
   
-####  <a name="BK_ConcRT"></a> Runtime de simultaneidad  
+####  <a name="BK_ConcRT"></a> Concurrency Runtime  
   
--   **Macro Yield de Windows.h en conflicto con concurrency::Context::Yield** El Runtime de simultaneidad usaba anteriormente #undef para anular las definiciones de la macro Yield a fin de evitar conflictos entre la macro Yield definida en Windows.h h y la función concurrency::Context::Yield. Se ha quitado #undef y se ha agregado una nueva llamada de API equivalente que no crea un conflicto: [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution). Para evitar conflictos con Yield, puede actualizar el código para llamar a la función YieldExecution o incluya el nombre de la función Yield entre paréntesis en los sitios de llamada, como en el ejemplo siguiente:  
+-   **Yield macro from Windows.h conflicting with concurrency::Context::Yield** The Concurrency Runtime previously used #undef to undefine the Yield macro to avoid conflicts between the Yield macro defined in Windows.h h and the concurrency::Context::Yield function. This #undef has been removed and a new non-conflicting equivalent API call [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution) has been added. To work around conflicts with Yield, you can either update your code to call the YieldExecution function instead, or surround the Yield function name with parentheses at call sites, as in the following example:  
   
     ```cpp  
     (concurrency::Context::Yield)();  
     ```  
   
-## <a name="compiler-conformance-improvements-in-visual-c-2015"></a>Mejoras de conformidad de compilador en Visual C++ 2015  
- Al actualizar código desde versiones anteriores, es posible que se produzcan también errores de compilador debidos a mejoras de conformidad realizadas en Visual C++ 2015. Estas mejoras no anulan la compatibilidad binaria de versiones anteriores de Visual C++, pero se pueden producir errores de compilador donde antes no se emitían. Para obtener más información, consulte [Visual C++ What's New 2003 through 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md) (Novedades de Visual C++ desde 2003 hasta 2015).  
+## <a name="compiler-conformance-improvements-in-visual-c-2015"></a>Compiler Conformance Improvements in Visual C++ 2015  
+ When upgrading code from previous versions, you might also encounter compiler errors that are due to conformance improvements made in Visual C++ 2015. These improvements do not break binary compatibility from earlier versions of Visual C++, but they can produce compiler errors where none were emitted before. For more information, see [Visual C++ What's New 2003 through 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).  
   
- En Visual C++ 2015, las mejoras continuas en la conformidad del compilador a veces pueden cambiar cómo entiende el compilador el código fuente existente. Cuando esto sucede, pueden producirse errores nuevos o diferentes durante la compilación o puede haber incluso diferencias de comportamiento en el código previamente compilado que parecía ejecutarse correctamente.  
+ In Visual C++ 2015, ongoing improvements to compiler conformance can sometimes change how the compiler understands your existing source code. When this happens, you might encounter new or different errors during your build, or even behavioral differences in code that previously built and seemed to run correctly.  
   
- Afortunadamente, estas diferencias tienen poco o ningún efecto en la mayoría del código fuente y cuando se necesitan código fuente u otros cambios para resolver estas diferencias, las correcciones suelen ser pequeñas y sencillas. Hemos incluido muchos ejemplos de código fuente previamente aceptable que es posible que deba cambiarse *(antes)* y las revisiones para corregirlos *(después)*.  
+ Fortunately, these differences  have little or no impact on most of your source code and when source code or other changes are needed to address these differences,  fixes are usually small and straight-forward. We've included many examples of previously-acceptable source code that might need to be changed *(before)* and the fixes to correct them *(after)*.  
   
- Aunque estas diferencias pueden afectar a su código fuente u otros artefactos de compilación, no afectan a la compatibilidad binaria entre actualizaciones de versiones de Visual C++. Un tipo de cambio más drástico, el *cambio importante*, puede afectar a la compatibilidad binaria, pero este tipo de alteraciones de compatibilidad binaria solo se producen entre las versiones principales de Visual C++. Por ejemplo, entre Visual C++ 2013 y Visual C++ 2015. Para obtener información sobre los cambios importantes que se han producido entre Visual C++ 2013 y Visual C++ 2015, consulte [Cambios de conformidad de Visual C++ 2015](#VC_2015).  
+ Although these differences can affect your source code or other build artifacts, they don't affect binary compatibility between updates to Visual C++ versions. A more-severe kind of change, the  *breaking change* can affect binary compatibility, but these kinds of binary compatibility breaks only occur between major versions of Visual C++. For example, between Visual C++ 2013 and Visual C++ 2015. For information on the breaking changes that occurred between Visual C++ 2013 and Visual C++ 2015, see [Visual C++ 2015 Conformance Changes](#VC_2015).  
   
--   [Mejoras de conformidad en Visual C++ 2015](#VS_RTM)  
+-   [Conformance Improvements in Visual C++ 2015](#VS_RTM)  
   
--   [Mejoras de conformidad en Update 1](#VS_Update1)  
+-   [Conformance Improvements in Update 1](#VS_Update1)  
   
--   [Mejoras de conformidad en Update 2](#VS_Update2)  
+-   [Conformance Improvements in Update 2](#VS_Update2)  
   
--   [Mejoras de conformidad en Update 3](#VS_Update3)  
+-   [Conformance Improvements in Update 3](#VS_Update3)  
   
-###  <a name="VS_RTM"></a> Mejoras de conformidad en Visual C++ 2015  
+###  <a name="VS_RTM"></a> Conformance Improvements in Visual C++ 2015  
   
--   /Zc:forScope- (opción)  
+-   /Zc:forScope- option  
   
-     La opción de compilador **/Zc:forScope-** está desusada y se quitará en una próxima versión.  
+     The compiler option **/Zc:forScope-** is deprecated and will be removed in a future release.  
   
     ```cpp  
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release  
     ```  
   
-     Esta opción solía usarse para que el código no estándar que usa las variables de bucle se pudiese usar después del punto donde, según el estándar, debería quedar fuera del ámbito. Solo era necesario al compilar con la opción /Za, ya que sin /Za, siempre se permite usar una variable de bucle for tras el final del bucle. Si no le interesa el cumplimiento de los estándares (por ejemplo, si su código no está destinado a otros compiladores), puede desactivar la opción /Za (o establecer la propiedad Deshabilitar extensiones de lenguaje en No). Si le interesa escribir código portable y compatible con los estándares, debe volver a escribir el código de modo que se ajuste a la norma. Para ello, mueva la declaración de dichas variables a un punto fuera del bucle.  
+     The option was usually used in order to allow nonstandard code that uses loop variables after the point where, according to the standard, they should have gone out of scope. It was only necessary when you are compiling with the /Za option, since without /Za, using a for loop variable after the end of the loop is always allowed. If you don't care about standards conformance (for example, if your code isn't meant to portable to other compilers), you could turn off the /Za option (or set the Disable Language Extensions property to No). If you do care about writing portable, standards-compliant code, you should rewrite your code so that it conforms to the standard by moving the declaration of such variables to a point outside the loop.  
   
     ```cpp  
     // C2065 expected  
@@ -374,17 +374,17 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
--   **Opción del compilador /Zg**  
+-   **/Zg compiler option**  
   
-     La opción de compilador /Zg (generar prototipos de función) ya no está disponible. Esta opción del compilador quedó en desuso anteriormente.  
+     The /Zg compiler option (Generate Function Prototypes) is no longer available. This compiler option was previously deprecated.  
   
--   Ya no se pueden ejecutar pruebas unitarias con C++/CLI desde la línea de comandos con mstest.exe. En su lugar, use vstest.console.exe. Consulte [Opciones de la línea de comandos para VSTest.Console.exe](/devops-test-docs/test/vstest-console-exe-command-line-options).  
+-   You can no longer run unit tests with C++/CLI from the command-line with mstest.exe. Instead, use vstest.console.exe. See [VSTest.Console.exe command-line options](/devops-test-docs/test/vstest-console-exe-command-line-options).  
   
--   **Palabra clave mutable**  
+-   **mutable keyword**  
   
-     El especificador de clase de almacenamiento `mutable` ya no se permite en lugares donde anteriormente se compilaba sin errores. Ahora, el compilador produce el error C2071 (clase de almacenamiento no válida). Según el estándar, el especificador mutable solo puede aplicarse a los nombres de miembros de datos de clase; no puede aplicarse a los nombres declarados como const o static y tampoco para hacer referencia a los miembros.  
+     The `mutable` storage class specifier is no longer allowed in places where previously it compiled without error. Now, the compiler gives error C2071 (illegal storage class). According to the standard, the mutable specifier can be applied only to names of class data members, and cannot be applied to names declared const or static, and cannot be applied to reference members.  
   
-     Por ejemplo, considere el siguiente código:  
+     For example, consider the following code:  
   
     ```cpp  
     struct S   
@@ -394,17 +394,17 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
-     Las versiones anteriores del compilador de Visual C++ aceptaban esto, pero ahora el compilador produce el siguiente error:  
+     Previous versions of the Visual C++ compiler accepted this, but now the compiler gives the following error:  
   
     ```Output  
     error C2071: 'S::r': illegal storage class  
     ```  
   
-     Para corregir el error, basta con quitar la palabra clave mutable redundante.  
+     To fix the error, simply remove the redundant mutable keyword.  
   
--   **char_16_t y char32_t**  
+-   **char_16_t and char32_t**  
   
-     Ya no puede usar `char16_t` o `char32_t` como alias en una definición de tipo (typedef), ya que estos tipos ahora se consideran integrados. Antes era habitual que los usuarios y los creadores de bibliotecas definiesen char16_t y char32_t como alias de uint16_t y uint32_t, respectivamente.  
+     You can no longer use `char16_t` or `char32_t` as aliases in a typedef, because these types are now treated as built-in. It was common for users and library authors to define char16_t and char32_t as aliases of uint16_t and uint32_t, respectively.  
   
     ```cpp  
     #include <cstdint>  
@@ -422,11 +422,11 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
-     Para actualizar el código, quite las declaraciones typedef y cambie el nombre de todos los identificadores que estén en conflicto con estos nombres.  
+     To update your code, remove the typedef declarations and rename any other identifiers that collide with these names.  
   
--   **Parámetros de plantilla sin tipo**  
+-   **Non-type template parameters**  
   
-     Hay determinado código que implica parámetros de plantilla sin tipo en el que ahora se comprueba la compatibilidad de tipos cuando se proporcionan argumentos de plantilla explícitos. Por ejemplo, el código siguiente se compilaba sin errores en las versiones anteriores de Visual C++.  
+     Certain code that involves non-type template parameters is now correctly checked for type compatibility when you provide explicit template arguments. For example, the following code compiled without error in previous versions of Visual C++.  
   
     ```cpp  
     struct S1  
@@ -448,27 +448,27 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
-     El compilador actual produce correctamente un error, porque el tipo de parámetro de plantilla no coincide con el argumento de plantilla (el parámetro es un puntero a miembro const, pero la función f no es const):  
+     The current compiler correctly gives an error, because the template parameter type doesn't match the template argument (the parameter is a pointer to a const member, but the function f is non-const):  
   
     ```Output  
     error C2893: Failed to specialize function template 'void S2::f(void)'note: With the following template arguments:note: 'C=S1'note: 'Function=S1::f'  
     ```  
   
-     Para solucionar este error en el código, asegúrese de que el tipo del argumento de la plantilla que está usando coincide con el tipo declarado del parámetro de plantilla.  
+     To address this error in your code, make sure that the type of the template argument you use matches the declared type of the template parameter.  
   
 -   **__declspec(align)**  
   
-     El compilador ya no acepta `__declspec(align)` en las funciones. Esto siempre se ignoraba, pero ahora produce un error del compilador.  
+     The compiler no longer accepts `__declspec(align)` on functions. This was always ignored, but now it produces a compiler error.  
   
     ```cpp  
     error C3323: 'alignas' and '__declspec(align)' are not allowed on function declarations  
     ```  
   
-     Para solucionar este problema, quite `__declspec(align)` de la declaración de función. Puesto que no tenía ningún efecto, el hecho de quitarlo no cambia nada.  
+     To fix this problem, remove `__declspec(align)` from the function declaration. Since it had no effect, removing it does not change anything.  
   
--   **Control de excepciones**  
+-   **Exception handling**  
   
-     Hay un par de cambios en el control de excepciones. En primer lugar, los objetos de excepción deben poderse copiar o mover. El código siguiente se compilaba en [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], pero no en [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
+     There are a couple of changes to exception handling. First, exception objects have to be either copyable or movable. The following code compiled in [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], but does not compile in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
   
     ```cpp  
     struct S  
@@ -486,7 +486,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
-     El problema es que el constructor de copias es privado, por lo que el objeto no se puede copiar como cuando se controla una excepción de la manera habitual. Lo mismo sucede cuando el constructor de copias se declara `explicit`.  
+     The problem is that the copy constructor is private, so the object cannot be copied as happens in the normal course of handling an exception. The same applies when the copy constructor is declared `explicit`.  
   
     ```cpp  
     struct S  
@@ -502,9 +502,9 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
-     Para actualizar el código, asegúrese de que el constructor de copias correspondiente al objeto de excepción es público y no esté marcado como `explicit`.  
+     To update your code, make sure that the copy constructor for your exception object is public and not marked `explicit`.  
   
-     Para detectar una excepción por valor, también es necesario que el objeto de excepción se pueda copiar. El código siguiente se compilaba en [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], pero no en [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
+     Catching an exception by value also requires the exception object to be copyable. The following code compiled in [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], but does not compile in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
   
     ```cpp  
     struct B  
@@ -529,7 +529,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
-     Para solucionar este problema, cambie el tipo de parámetro de `catch` a una referencia.  
+     You can fix this issue by changing the parameter type for the `catch` to a reference.  
   
     ```cpp  
     catch (D& d)  
@@ -538,9 +538,9 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
--   **Literales de cadena seguidos de macros**  
+-   **String literals followed by macros**  
   
-     El compilador ahora admite literales definidos por el usuario. En consecuencia, los literales de cadena seguidos de macros sin ningún espacio en blanco intermedio se interpretan como literales definidos por el usuario, lo que puede dar lugar a errores o resultados inesperados. Por ejemplo, en los compiladores anteriores el código siguiente se compilaba perfectamente:  
+     The compiler now supports user defined literals. As a consequence, string literals followed by macros without any intervening whitespace are interpreted as user-defined literals, which might produce errors or unexpected results. For example, in previous compilers the following code compiled successfully:  
   
     ```cpp  
     #define _x "there"  
@@ -555,36 +555,36 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
-     El compilador interpretaba esto como un literal de cadena “hello” seguido de una macro, expandida en “there” y, a continuación, los dos literales de cadena se concatenaban en uno solo. En [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], el compilador interpreta esto como un literal definido por el usuario, pero dado que no hay ningún literal coincidente _x definido por el usuario, produce un error.  
+     The compiler interpreted this as a string literal "hello" followed by a macro, which is expanded "there", and then the two string literals were concatenated into one. In [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], the compiler interprets this as a user-defined literal, but since there is no matching user-defined literal _x defined, it gives an error.  
   
     ```Output  
     error C3688: invalid literal suffix '_x'; literal operator or literal operator template 'operator ""_x' not found  
     note: Did you forget a space between the string literal and the prefix of the following string literal?  
     ```  
   
-     Para solucionar este problema, agregue un espacio entre el literal de cadena y la macro.  
+     To fix this problem, add a space between the string literal and the macro.  
   
--   **Literales de cadena adyacentes**  
+-   **Adjacent string literals**  
   
-     Como en el caso anterior, en versiones anteriores de Visual C++ y debido a los cambios relacionados con el análisis de cadenas, los literales de cadena adyacentes (ya fueran literales de cadena de caracteres anchos o estrechos) sin ningún espacio en blanco se interpretaban como una sola cadena concatenada. En [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], ahora debe agregarse un espacio en blanco entre las dos cadenas. Por ejemplo, el código siguiente debe modificarse:  
+     Similarly to the previous, due to related changes in string parsing, adjacent string literals (either wide or narrow character string literals) without any whitespace were interpreted as a single concatenated string in previous releases of Visaul C++. In [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], you must now add whitespace between the two strings. For example, the following code must be changed:  
   
     ```cpp  
     char * str = "abc""def";  
     ```  
   
-     Simplemente agregue un espacio entre las dos cadenas.  
+     Simply add a space in between the two strings.  
   
     ```cpp  
     char * str = "abc" "def";  
     ```  
   
--   **Placement new y delete**  
+-   **Placement new and delete**  
   
-     Se ha realizado un cambio en el operador delete a fin de adaptarlo al estándar de C++14. Detalles del cambio de los estándares se pueden encontrar en la página de [desasignación de ajuste de tamaño de C++](http://isocpp.org/files/papers/n3778.html). Los cambios agregan un formulario del operador delete global que toma un parámetro de tamaño. La novedad es que si antes usaba un operador delete con la misma firma (para que se correspondiese con un operador placement new), ahora recibirá un error del compilador (C2956, que se produce en el punto donde se usa placement new, ya que es la posición en el código en la que el compilador intenta identificar un operador delete coincidente adecuado).  
+     A change has been made to the delete operator in order to bring it into conformance with C++14 standard. Details of the standards change can be found at [C++ Sized Deallocation](http://isocpp.org/files/papers/n3778.html). The changes add a form of the global delete operator that takes a size parameter. The breaking change is that if you were previously using an operator delete with the same signature (to correspond with a placement new operator), you will receive a compiler error (C2956, which occurs at the point where the placement new is used, since that's the position in code where the compiler tries to identify an appropriate matching delete operator).  
   
-     La función `void operator delete(void *, size_t)` era un operador placement delete correspondiente a la función placement new "void \* operator new(size_t, size_t)" en C++11. Con la desasignación con tamaño de C ++ 14, esta función de eliminación es ahora una *función de desasignación habitual* (operador delete global). Según el estándar, si el uso de placement new busca una función de eliminación correspondiente y encuentra una función de desasignación habitual, el programa tiene un formato incorrecto.  
+     The function `void operator delete(void *, size_t)` was a placement delete operator corresponding to the placement new function "void \* operator new(size_t, size_t)" in C++11. With C++14 sized deallocation, this delete function is now a *usual deallocation function* (global delete operator). The standard requires that if the use of a placement new looks up a corresponding delete function and finds a usual deallocation function, the program is ill-formed.  
   
-     Supongamos, por ejemplo, que el código define tanto placement new como placement delete:  
+     For example, suppose your code defines both a placement new and a placement delete:  
   
     ```cpp  
     void * operator new(std::size_t, std::size_t);  
@@ -592,22 +592,22 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
-     El problema se produce debido a la coincidencia de las firmas de función entre un operador placement delete definido y el nuevo operador global delete con tamaño. Analice si puede usar un tipo que no sea size_t para los operadores placement new y delete.  Tenga en cuenta que el tipo de la definición de tipo size_t depende del compilador; es una definición de tipo para int sin signo en Visual C++. Una buena solución es que use un tipo enumerado como el siguiente:  
+     The problem occurs because of the match in function signatures between a placement delete operator you've defined, and the new global sized delete operator. Consider whether you can use a different type other than size_t for any placement new and delete operators.  Note that the type of the size_t typedef is compiler-dependent; it is a typedef for unsigned int in Visual C++. A good solution is to use an enumerated type such as this:  
   
     ```cpp  
     enum class my_type : size_t {};  
   
     ```  
   
-     A continuación, cambie la definición de placement new y delete para usar este tipo como el segundo argumento en lugar de size_t. También es necesario que actualice las llamadas a placement new para pasar el nuevo tipo (por ejemplo, con `static_cast<my_type>` para convertir el valor entero) y que actualice la definición de new y delete para realizar la conversión al tipo entero. No es necesario utilizar una enumeración para este fin; un tipo de clase con un miembro size_t también funcionaría.  
+     Then, change your definition of placement new and delete to use this type as the second argument instead of size_t. You’ll also need to update the calls to placement new to pass the new type (for example, by using `static_cast<my_type>` to convert from the integer value) and update the definition of new and delete to cast back to the integer type. You don’t need to use an enum for this; a class type with a size_t member would also work.  
   
-     Una solución alternativa es que pueda eliminar por completo placement new. Si el código usa placement new para implementar un bloque de memoria donde el argumento placement sea el tamaño del objeto que se va a asignar o eliminar, entonces podría usarse la característica de desasignación con tamaño para reemplazar su propio código de bloque de memoria personalizado, y así deshacerse de las funciones placement y usar simplemente su propio operador delete de dos argumentos en lugar de las funciones placement.  
+     An alternative solution is that you might be able to eliminate the placement new altogether. If your code uses placement new to implement a memory pool where the placement argument is the size of the object being allocated or deleted, then sized deallocation feature might be suitable to replace your own custom memory pool code, and you can get rid of the placement functions and just use your own two-argument delete operator instead of the placement functions.  
   
-     Si no quiere actualizar su código de forma inmediata, puede recuperar el comportamiento anterior mediante la opción de compilador /Zc:sizedDealloc-. Si usa esta opción, las funciones delete de dos argumentos no existen y no se provocará un conflicto con el operador placement delete.  
+     If you don't want to update your code immediately, you can revert to the old behavior by using the compiler option /Zc:sizedDealloc-. If you use this option, the two-argument delete functions don’t exist and won't cause a conflict with your placement delete operator.  
   
--   **Miembros de datos de uniones**  
+-   **Union data members**  
   
-     Los miembros de datos de uniones ya no pueden tener tipos de referencia. El código siguiente se compilaba sin problemas en [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], pero produce un error en [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)].  
+     Data members of unions can no longer have reference types. The following code compiled successfully in [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], but produces an error in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)].  
   
     ```cpp  
     union U1   
@@ -625,7 +625,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
-     El código anterior produce los errores siguientes:  
+     The preceding code produces the following errors:  
   
     ```Output  
   
@@ -634,9 +634,9 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
-     Para solucionar este problema, cambie los tipos de referencia a un puntero o a un valor. Para poder cambiar el tipo a un puntero, hay que hacer cambios en el código que usa el campo union. Si se cambia el código a un valor, también cambian los datos almacenados en la unión, lo que afecta a otros campos, ya que los campos de tipos union comparten la misma memoria. En función del tamaño del valor, también podrá cambiar el tamaño de la unión.  
+     To address this issue, change reference types either to a pointer or a value. Changing the type to a pointer requires changes in the code that uses the union field. Changing the code to a value would change the data stored in the union, which affects other fields since fields in union types share the same memory. Depending on the size of the value, it might also change the size of the union.  
   
--   Ahora, las uniones anónimas se ajustan mejor al estándar. Las versiones anteriores del compilador generaban un constructor y destructor explícitos para uniones anónimas. Estos se eliminan en [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)].  
+-   Anonymous unions are now more conformant to the standard. Previous versions of the compiler generated an explicit constructor and destructor for anonymous unions. These are deleted in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)].  
   
     ```cpp  
     struct S   
@@ -654,7 +654,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
-     El código anterior genera el error siguiente en [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
+     The preceding code generates the following error in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
   
     ```cpp  
     error C2280: '<unnamed-type-u>::<unnamed-type-u>(void)': attempting to reference a deleted function  
@@ -662,7 +662,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
-     Para resolver este problema, proporcione sus propias definiciones del constructor o del destructor.  
+     To resolve this issue, provide your own definitions of the constructor and/or destructor.  
   
     ```cpp  
     struct S   
@@ -681,9 +681,9 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
--   **Uniones con estructuras anónimas**  
+-   **Unions with anonymous structs**  
   
-     Para cumplir con el estándar, el comportamiento de runtime ha cambiado para los miembros de estructuras anónimas en uniones. El constructor de miembros de estructura anónima de una unión ya no se llama implícitamente cuando se crea este tipo de unión. Además, el destructor de miembros de estructura anónima de una unión ya no se llama implícitamente cuando la unión sale del ámbito. Analice el siguiente código, en el que una unión U contiene una estructura anónima que a su vez contiene a un miembro que es una estructura con nombre S que tiene un destructor.  
+     In order to conform with the standard, the runtime behavior has changed for members of anonymous structures in unions. The constructor for anonymous structure members in a union is no longer implicitly called when such a union is created. Also, the destructor for anonymous structure members in a union is no longer implicitly called when the union goes out of scope. Consider the following code, in which a union U contains an anonymous structure that contains a member which is a named structure S that has a destructor.  
   
     ```cpp  
     #include <stdio.h>  
@@ -719,13 +719,13 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
-     En [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], se llama al constructor de S cuando se crea la unión, y se llama al destructor de S cuando se limpia la pila de la función f. Sin embargo, en [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], no se llama al constructor ni al destructor. El compilador emite una advertencia sobre este cambio de comportamiento.  
+     In [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], the constructor for S is called when the union is created, and the destructor for S is called when the stack for function f is cleaned up. But in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], the constructor and destructor are not called. The compiler gives a warning about this behavior change.  
   
     ```Output  
     warning C4587: 'U::s': behavior change: constructor is no longer implicitly calledwarning C4588: 'U::s': behavior change: destructor is no longer implicitly called  
     ```  
   
-     Para restaurar el comportamiento original, asigne un nombre a la estructura anónima. El comportamiento en tiempo de ejecución de las estructuras no anónima es el mismo, independientemente de la versión del compilador.  
+     To restore the original behavior, give the anonymous structure a name. The runtime behavior of non-anonymous structures is the same, regardless of the compiler version.  
   
     ```cpp  
     #include <stdio.h>  
@@ -762,7 +762,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
-     Por otro lado, intente mover el código del constructor y el destructor a funciones nuevas y agregue llamadas a estas funciones desde el constructor y el destructor de la unión.  
+     Alternatively, try moving the constructor and destructor code into new functions, and add calls to these functions from the constructor and destructor for the union.  
   
     ```cpp  
     #include <stdio.h>  
@@ -799,11 +799,11 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
--   **Resolución de plantilla**  
+-   **Template resolution**  
   
-     Se han hecho cambios en la resolución de nombres de plantillas. En C++, al pensar en candidatos para la resolución de un nombre, puede darse el caso de que uno o más de los nombres considerados como coincidencias posibles produzcan una creación de instancias de plantilla no válida. Normalmente, estas instancias no válidas no provocan errores del compilador; este principio se conoce como SFINAE (Substitution Failure Is Not An Error).  
+     Changes have been made to name resolution for templates. In C++, when considering candidates for the resolution of a name, it can be the case that one or more names under consideration as potential matches produces an invalid template instantiation. These invalid instantiations do not normally cause compiler errors, a principle which is known as SFINAE (Substitution Failure Is Not An Error).  
   
-     Ahora, si SFINAE requiere que el compilador cree una instancia de la especialización de una plantilla de clase, los errores que se producen durante este proceso son errores del compilador. En versiones anteriores, el compilador omitiría esos errores. Por ejemplo, considere el siguiente código:  
+     Now, if SFINAE requires the compiler to instantiate the specialization of a class template, then any errors that occur during this process are compiler errors. In previous versions, the compiler would ignore such errors. For example, consider the following code:  
   
     ```cpp  
     #include <type_traits>  
@@ -843,7 +843,7 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
-     Si usa el compilador actual, obtendrá el siguiente error:  
+     If you compile with the current compiler, you get the following error:  
   
     ```Output  
   
@@ -858,30 +858,30 @@ Cuando se actualiza a una nueva versión del compilador de Visual C++, se pueden
   
     ```  
   
-     Esto se debe a que el punto de la primera invocación de is_base_of de la clase 'D' aún no se ha definido.  
+     This is because at the point of the first invocation of the is_base_of the class 'D' has not yet been defined.  
   
-     En este caso, la solución es no usar los rasgos de tipos (type traits) mientras no se defina la clase. Si mueve las definiciones de B y D al principio del archivo de código, el error se soluciona. Si las definiciones están en archivos de encabezado, compruebe el orden de las instrucciones include para los archivos de encabezado a fin de asegurarse de que las definiciones de clase se compilan antes de que se usen las plantillas problemáticas.  
+     In this case, the fix is not to use such type traits until the class has been defined. If you move the definitions of B and D to the beginning of the code file, the error is resolved. If the definitions are in header files, check the order of the include statements for the header files to make sure that any class definitions are compiled before the problematic templates are used.  
   
--   **Constructores de copias**  
+-   **Copy constructors**  
   
-     Tanto en [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] como en Visual Studio 2015, el compilador genera un constructor de copias para una clase si esa clase tiene un constructor de movimiento definido por el usuario, pero ningún constructor de copias definido por el usuario. En Dev14, este constructor de copias generado implícitamente también se marca como "= delete".  
+     In both [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] and Visual Studio 2015, the compiler generates a copy constructor for a class if that class has a user-defined move constructor but no user-defined copy constructor. In Dev14, this implicitly generated copy constructor is also marked "= delete".  
 
 <!--From here to VS_Update1 added 04/21/2017-->
 
--   **main declarado como "C" externo requiere un tipo de valor devuelto.**  
+-   **main declared as extern "C" now requires a return type.**  
 
-El código siguiente genera ahora C4430. 
+The following code now produces C4430. 
 ```cpp
 extern "C" __cdecl main(){} // C4430
 ```
-Para corregir el error, agregue el tipo de valor devuelto:
+To fix the error, add the return type:
 ```cpp
 extern "C" int __cdecl main(){} // OK
 ```
 
- -   **typename no se permite en un inicializador de miembro**  
+ -   **typename is not allowed in a member initializer**  
 
-El código siguiente genera ahora C2059.
+The following code now produces C2059:
  ```cpp
 template<typename T>
 struct S1 : public T::type
@@ -897,15 +897,15 @@ struct S2 {
 
 S1<S2> s;
 ```
-Para corregir el error, quite `typename` del inicializador:
+To fix the error, remove `typename` from the initializer:
 ```cpp
 S1() : T::type() // OK
 ...
 ```
 
--   **La clase de almacenamiento en especializaciones explícitas se omite.** 
+-   **The storage class on explicit specializations is ignored.** 
 
-En el siguiente código, se omite el especificador de clase de almacenamiento estático. 
+In the following code, the static storage class specifier is ignored 
 ```cpp
 template <typename T>
 void myfunc(T h)
@@ -919,9 +919,9 @@ static void myfunc(double h) // static is ignored
 
 ```
 
--   **Una constante usada en un elemento static_assert dentro de un aplantilla de clase siempre dará error.**  
+-   **A constant used in a static_assert inside a class template will always fail.**  
 
-El código siguiente provoca que static_assert siempre genere error:
+The following code causes the static_assert to always fail:
 ```cpp
 template <size_t some_value>
 struct S1
@@ -933,7 +933,7 @@ struct S1
 //other partial specializations here
 ```
 
-Para solucionar este problema, ajuste el valor en un struct:
+To work around this, wrap the value in a struct:
 ```cpp
 template <size_t some_value>
 struct constant_false {
@@ -949,9 +949,9 @@ struct S1
 //other partial specializations here
 ```
 
--   **Reglas aplicadas para declaraciones adelantadas. (Solo se aplica a C.)**  
+-   **Rules enforced for forward declarations. (Applies only to C.)**  
 
-El código siguiente produce ahora C2065:
+The following code now produces C2065:
 ```cpp
 struct token_s;
 typedef int BOOL;
@@ -962,7 +962,7 @@ typedef int INT;
 typedef int(*PFNTERM)(PTOKEN, BOOL, INT); // C2065: 'PTOKEN' : undeclared identifier
 ```
 
-Para corregir el problema, agregue las declaraciones adelantadas adecuadas:
+To fix the problem add the proper forward declarations:
 
 ```cpp
 struct token_s;
@@ -976,9 +976,9 @@ typedef TOKEN *PTOKEN;
 typedef int(*PFNTERM)(PTOKEN, BOOL, INT);
 ```
 
--   **Cumplimiento más coherente de tipos de puntero de función**  
+-   **More consistent enforcement of function pointer types**  
 
-El código siguiente produce ahora C2197:
+The following code now produces C2197:
 
 ```cpp
 typedef int(*F1)(int);
@@ -990,9 +990,9 @@ void func(F1 f, int v1, int v2)
 }
 ```
 
--   **Llamadas ambiguas a funciones sobrecarfadas**  
+-   **Ambiguous calls to overloaded functions**  
 
-El código siguiente produce ahora C266: 'N::bind': llamada ambigua a una función sobrecargada
+The following code now produces C266: 'N::bind': ambiguous call to overloaded function
 ```cpp 
 template<typename R, typename T, typename T1, typename A1>
 void bind(R(T::*)(T1), A1&&);
@@ -1017,13 +1017,13 @@ public:
 };
 ```
 
-Para corregir el error, puede calificar completamente la llamada para enlazar: N::bind(...). Sin embargo, si este cambio se manifiesta mediante un identificador sin declarar (C2065), puede ser adecuado corregirlo con una declaración "using" en su lugar.
+To fix the error, you can fully qualify the call to bind: N::bind(...). However, if this change is manifest through an undeclared identifier (C2065), then it may be appropriate to fix this with a 'using' declaration instead.
 
-Este patrón se produce con frecuencia con ComPtr y otros tipos en el espacio de nombres Microsoft::WRL.
+This pattern happens frequently with ComPtr and other types in the Microsoft::WRL namespace.
 
--   **Corrija la dirección incorrecta de**  
+-   **Fix incorrect address of**  
 
-El código siguiente produce ahora C2440:  "=": no se puede convertir de "type *" a "type". Para corregir el error, cambie &(type) por (type) y (&f()) por (f()).
+The following code now produces C2440:  '=': cannot convert from 'type *' to 'type'. To fix the error, change &(type) to (type) and (&f()) to (f()).
  
 ```cpp
 \\ C
@@ -1050,9 +1050,9 @@ void h()
 
 ```
 
--   **El literal de cadena es una matriz constante**  
+-   **String literal is a constant array**  
 
-El código siguiente produce ahora C2664: "void f(void *)": el argumento 1 no se puede convertir de "const char (*)[2]" a "void *".
+The following code now produces C2664: 'void f(void *)': cannot convert argument 1 from 'const char (*)[2]' to 'void *'
 ```cpp
 void f(void *);
  
@@ -1063,7 +1063,7 @@ void h(void)
 }
 ```
 
-Para corregir el error, cambie el tipo de parámetro de función a "const void *", o bien cambie el cuerpo de h para que tenga este aspecto:
+To fix the error, change the function parameter type to 'const void*', or else change the body of h to look like this:
 
 ```cpp
 void h(void)
@@ -1075,9 +1075,9 @@ void h(void)
 
 ```
 
--   **Cadenas UDL C++11**  
+-   **C++11 UDL strings**  
 
-El código siguiente produce ahora el error C3688: sufijo literal no válido "L"; no se encontró el operador literal o la plantilla de operador literal ""L'.
+The following code now produces error C3688: invalid literal suffix 'L'; literal operator or literal operator template 'operator ""L' not found
 
 
 ```cpp
@@ -1093,7 +1093,7 @@ int main(){
     std::cout << STRCAT(L"hi ", L"there");
 }
 ```
-Para corregir el error, cambie el código por esto:
+To fix the error, change the code to this:
 
 ```cpp
 #define MACRO
@@ -1111,14 +1111,14 @@ int main(){
 }
 
 ```
-En el ejemplo anterior, `MACRO` ya no se analiza como dos tokens (una cadena seguida de una macro).  Ahora se analiza como un UDL de token único.  Lo mismo se aplica a L""L"", que se analizó anteriormente como L"" y L"", y que ahora se analiza como L""L y "".
+In the example above, `MACRO` is no longer parsed as two tokens (a string followed by a macro).  Now it is parsed as a single token UDL.  The same applies to L""L"", which was parsed previously as L"" and L"", and is now parsed as L""L and "".
 
-Las reglas de concatenación de cadenas también se formularon con el estándar, lo que significa que L"a" "b" es equivalente a L"ab". En las ediciones anteriores de Visual Studio no se aceptaba la concatenación de cadenas con un ancho de carácter diferente.
+String concatenation rules were also brought into compliance with the standard, which means L"a" "b" is equivalent to L"ab". Previous editions of Visual Studio did not accept concatenation of strings with different character width.
 
 
--   **Carácter vacío quitado de C++11**  
+-   **C++11 empty character removed**  
 
-El código siguiente produce ahora el error C2137: constante de carácter vacío
+The following code now produces error C2137: empty character constant
 
 ```cpp
 bool check(wchar_t c){
@@ -1126,7 +1126,7 @@ bool check(wchar_t c){
 }
 ```
 
-Para corregir el error, cambie el código por esto:
+To fix the error, change the code to this:
 
 ```cpp
 bool check(wchar_t c){
@@ -1134,9 +1134,9 @@ bool check(wchar_t c){
 }
 ```
 
--   **El valor no puede capturar excepciones de MFC porque no se pueden copiar**  
+-   **MFC exceptions can't be caught by value because they are not copyable**  
 
-El siguiente código en una aplicación de MFC produce ahora el error C2316: 'D': no se puede capturar porque el destructor o el constructor de copia son inaccesibles o se han eliminado.
+The following code in an MFC application now causes error C2316: 'D': cannot be caught as the destructor and/or copy constructor are inaccessible or deleted
 
 ```cpp
 struct B {
@@ -1160,29 +1160,29 @@ int main()
 }
 
 ```
-Para corregir el código, puede cambiar el bloque catch a "catch (const D &)" pero la mejor solución suele ser usar las macros TRY/CATCH de MFC.
+To fix the code, you can change the catch block to `catch (const D &)' but the better solution is usually to use the MFC TRY/CATCH macros.
 
--   **alignof es ahora una palabra clave**  
+-   **alignof is now a keyword**  
 
-El siguiente código produce ahora el error C2332: "clase": falta nombre de etiqueta. Para corregir el código, debe cambiar el nombre de la clase o, si la clase realiza el mismo trabajo que alignof, simplemente sustituya la clase por la nueva palabra clave.
+The following code now produces error C2332: 'class': missing tag name. To fix the code you must rename the class or, if the class is performing the same work as alignof, just replace the class with the new keyword.
 ```cpp
 class alignof{}
 ```
 
--   **constexpr ahora es una palabra clave**  
+-   **constexpr is now a keyword**  
 
-El código siguiente produce ahora el error C2059: error de sintaxis: ')'. Para corregir el código, debe cambiar el nombre de las funciones o las variables que se llamen "constexpr". 
+The following code now produces error C2059: syntax error: ')'. To fix the code, you must rename any function or variable names that are called "constexpr". 
 ```cpp
 int constexpr() {return 1;}
 ```
 
--   **Los tipos que se pueden mover no pueden ser const**  
+-   **Movable types cannot be const**  
 
-Cuando una función devuelve un tipo destinado a moverse, su tipo de valor devuelto no debe ser const.
+When a function returns a type that is intended to be moved, its return type should not be const.
 
--   **Constructores de copia eliminados**  
+-   **Deleted copy constructors**  
 
-El código siguiente genera ahora el error C2280 'S::S(S &&)': se está intentando hacer referencia a una función eliminada:
+The following code now produces C2280 'S::S(S &&)': attempting to reference a deleted function:
 
 ```cpp
 struct S{
@@ -1193,7 +1193,7 @@ struct S{
 
 S s2 = S(2, 3); //C2280
 ```
-Para corregir el error, use la inicialización directa para S2:
+To fix the error, use direct initialization for S2:
 ```cpp
 struct S{
     S(int, int);
@@ -1204,9 +1204,9 @@ struct S{
 S s2 = {2,3}; //OK
 ```
 
--   **Conversión a puntero de función solo generada cuando no hay captura lambda**  
+-   **Conversion to function pointer only generated when no lambda capture**  
 
-El código siguiente produce el error C2664 en Visual Studio 2015. 
+The following code produces C2664 in Visual Studio 2015. 
 
 ```cpp
 void func(int(*)(int)) {}
@@ -1216,11 +1216,11 @@ int main() {
     func([=](int val) { return val; });
 }
 ```
-Para corregir el error, quite `=` de la lista de captura.
+To fix the error, remove the `=` from the capture list.
 
--   **Llamadas ambiguas que afectan a operadores de conversión**  
+-   **Ambiguous calls involving conversion operators**  
 
-El código siguiente produce ahora el error C2440: "conversión de tipo": no se puede convertir de "S2" a "S1":
+The following code now produces error C2440: 'type cast': cannot convert from 'S2' to 'S1':
 
 ```cpp 
 struct S1 {
@@ -1239,7 +1239,7 @@ void f(S2 s2)
 
 }
 ```
-Para corregir el error, debe llamar explícitamente al operador de conversión:
+To fix the error, explicitly call the conversion operator:
 
 ```cpp
 void f(S2 s2)
@@ -1252,7 +1252,7 @@ void f(S2 s2)
 
 ```
 
-El código siguiente produce ahora el error C2593: "operador =" es ambiguo:
+The following code now produces error C2593: 'operator =' is ambiguous:
 
 ```cpp
 struct S1 {};
@@ -1267,7 +1267,7 @@ void f(S1 *p, S2 s)
     *p = s;
 }
 ```
-Para corregir el error, debe llamar explícitamente al operador de conversión:
+To fix the error, explicitly call the conversion operator:
 ```cpp
 void f(S1 *p, S2 s)
 {
@@ -1275,9 +1275,9 @@ void f(S1 *p, S2 s)
 }
 ```
 
--   **Corregir inicialización de copia no válida en inicialización de miembro no estático (NSDMI)**  
+-   **Fix invalid copy initialization in non-static data member initialization (NSDMI)**  
 
-El código siguiente genera ahora el error C2664: "S1::S1(S1 &&)": no se puede convertir el argumento 1 de "bool" a "const S1 &":
+The following code now produces error C2664: 'S1::S1(S1 &&)': cannot convert argument 1 from 'bool' to 'const S1 &':
 ```cpp
 struct S1 {
     explicit S1(bool);
@@ -1287,16 +1287,16 @@ struct S2 {
     S1 s2 = true; // error
 };
 ```
-Para corregir el error, use la inicialización directa:
+To fix the error, use direct initialization:
 ```cpp
 struct S2 {
 S1 s1{true}; // OK
 };
 ```
 
--   **Acceso a constructores dentro de instrucciones decltype**  
+-   **Accessing constructors inside decltype statements**  
 
-El código siguiente genera ahora el error C2248: "S::S": no se puede acceder al miembro privado declarado en la clase "S":
+The following code now produces C2248: 'S::S': cannot access private member declared in class 'S':
 ```cpp
 class S {
     S();
@@ -1308,7 +1308,7 @@ class S2 {
     auto f() -> decltype(S().i);
 };
 ```
-Para corregir el error, agregue una declaración friend para S2 en S:
+To fix the error, add a friend declaration for S2 in S:
 ```cpp
 class S {
     S();
@@ -1318,9 +1318,9 @@ public:
 };
 ```
 
--   **El constructor predeterminado de lambda se ha eliminado implícitamente**  
+-   **Default ctor of lambda is implicitly deleted**  
 
-El código siguiente produce ahora el error C3497: no puede construir una instancia de una expresión lambda:
+The following code now produces error C3497: you cannot construct an instance of a lambda:
 ```cpp
 void func(){
     auto lambda = [](){};    
@@ -1328,11 +1328,11 @@ void func(){
     decltype(lambda) other;
 }
 ```
-Para corregir el error, elimine la necesidad de llamar al constructor predeterminado. Si la expresión lambda no captura nada, se puede convertir en un puntero de función.
+To fix the error, remove the need for the default constructor to be called. If the lambda does not capture anything then it can be cast to a function pointer.
 
--   **Expresiones lambda con un operador de asignación eliminado**  
+-   **Lambdas with a deleted assignment operator**  
 
-El código siguiente produce ahora el error C2280:
+The following code now produces error C2280:
 
 ```cpp
 #include <memory>
@@ -1348,11 +1348,11 @@ void f(int i)
     encodedMsg = std::move(encodedMsg);
 }
 ```
-Para corregir el error, reemplace la expresión lambda por una clase functor o elimine la necesidad de usar el operador de asignación.
+To fix the error, replace the lambda with a functor class or remove the need to use the assignment operator.
 
--   **Se está intentando mover un objeto con constructor de copia eliminado**  
+-   **Attempting to move an object with deleted copy constructor**  
 
-El código siguiente produce ahora el error C2280: "'moveable::moveable(const moveable &)":  se está intentando hacer referencia a una función eliminada
+The following code now produces  error C2280: 'moveable::moveable(const moveable &)': attempting to reference a deleted function
 ```cpp
 struct moveable {
 
@@ -1369,14 +1369,14 @@ struct S {
 };
 
 ```
-Para corregir el error, use en su lugar std::move:
+To fix the error, use std::move instead:
 ```cpp
 S(moveable && m) :
     m_m(std::move(m))
 ```
--   **La clase local no puede hacer referencia a otra clase local definida posteriormente en la misma función**  
+-   **Local class can't reference other local class defined later in the same function**  
 
-El código siguiente produce ahora el error C2079: "s" usa struct "main::S2" sin definir.
+The following code now produces error C2079: 's' uses undefined struct 'main::S2'
 ```cpp
 int main()
 {
@@ -1389,7 +1389,7 @@ int main()
     struct S2 {};
 }
 ```
-Para corregir el error, mueva arriba la definición de S2:
+To fix the error, move up the definition of S2:
 ```cpp
 int main()
 {
@@ -1404,9 +1404,9 @@ struct S1 {
 }
 ```
 
--   **No se puede llamar a un ctor base protegido en el cuerpo de ctor derivado.**  
+-   **Cannot call a protected base ctor in the body of derived ctor.**  
 
-El código siguiente produce ahora el error C2248: "S1::S1": no se puede acceder al miembro protegido declarado en la clase "S1"
+The following code now produces error C2248: 'S1::S1': cannot access protected member declared in class 'S1'
 ```cpp
 struct S1 {
 protected:
@@ -1419,18 +1419,18 @@ struct S2 : public S1 {
     }
 };
 ```
-Para corregir el error, en S2, quite la llamada a S1() desde el constructor y, si es necesario, colóquela en otra función.
+To fix the error, in S2 remove the call to S1() from the constructor and if necessary put it in another function.
 
--   **{} impide la conversión a puntero**  
+-   **{} prevents conversion to pointer**  
 
-El código siguiente produce ahora el error C2439 "S::p": no se pudo inicializar el miembro    
+The following code now produces C2439 'S::p': member could not be initialized   
 ```cpp
 struct S {
     S() : p({ 0 }) {}
     void *p;
 };
 ```
-Para corregir el error, quite las llaves de alrededor de 0, o bien use en su lugar `nullptr`, como se muestra en este ejemplo:
+To fix the error, remove the braces from around the 0 or else use `nullptr` instead, as shown in this example:
 ```cpp
 struct S {
     S() : p(nullptr) {}
@@ -1438,9 +1438,9 @@ struct S {
 };
 ```
 
--   **Definición incorrecta de macro y uso con paréntesis**  
+-   **Incorrect macro definition and usage with parentheses**  
 
-El código siguiente produce ahora el error C2008: ";": no se esperaba en la definición de macro
+The following example now produces error C2008: ';': unexpected in macro definition
 ```cpp
 #define A; //cause of error
 
@@ -1448,9 +1448,9 @@ struct S {
     A(); // error
 };
 ```
-Para corregir el problema, cambie la línea superior a `#define A();`.
+To fix the problem change the top line to `#define A();`
 
-El código siguiente produce el error C2059: error de sintaxis: ")"
+The following code produces error C2059: syntax error: ')'
 ```cpp
 
 //notice the space after 'A'
@@ -1460,9 +1460,9 @@ struct S {
     A();
 };
 ```
-Para corregir el código, quite el espacio entre A y ().
+To fix the code remove the space between A and ().
 
-El código siguiente genera el error C2091: la función devuelve una función:
+The following code produces error C2091: function returns function:
 
 ```cpp
 
@@ -1472,9 +1472,9 @@ struct S {
     DECLARE();
 };
 ```
-Para corregir el error, quite los paréntesis después DECLARE en S: `DECLARE;`.
+To fix the error, remove the parentheses after DECLARE in S: `DECLARE;`.
 
-El código siguiente produce el error C2062: tipo "int" inesperado
+The following code produces error C2062: type 'int' unexpected
 
 ```cpp
 #define A (int)
@@ -1483,14 +1483,14 @@ struct S {
     A a;
 };
 ```
-Para corregir el problema, defina A de la siguiente manera:
+To fix the problem, define A like this:
 ```cpp
 #define A int
 ```
 
--   **Paréntesis adicionales en las declaraciones**  
+-   **Extra parens in declarations**  
 
-El código siguiente produce el error C2062: tipo "int" inesperado
+The following code produces error C2062: type 'int' unexpected
 ```cpp
 
 struct S {
@@ -1498,13 +1498,13 @@ struct S {
     (int)j;
 };
 ```
-Para corregir el error, quite los paréntesis de `j`. Si los paréntesis son necesarios por motivos de claridad, use entonces typedef.
+To fix the error, remove the parens from `j`. If the parens are needed for clarity, then use a typedef.
 
--   **Constructores generados por el compilador y __declspec(novtable)**  
+-   **Compiler-generated constructors and __declspec(novtable)**  
 
-En Visual Studio 2015, existe una mayor probabilidad de que los constructores generados por el compilador insertados de clases abstractas con clases base virtuales puedan exponer el uso inadecuado de __declspec(novtable) cuando se emplea en combinación con __declspec(dllimporlador t).
+In Visual Studio 2015, there is an increased likelihood that inline compiler-generated constructors of abstract classes with virtual base classes may expose improper usage of __declspec(novtable) when used in combination with __declspec(dllimport).
 
--   **auto requiere una sola expresión en direct-list-initialization** El código siguiente produce ahora el error C3518: "testPositions": en un contexto de inicialización de lista directa, el tipo para "auto" solo se puede deducir a partir de una sola expresión de inicializador
+-   **auto requires single expression in direct-list-initialization** The following code now produces error C3518: 'testPositions': in a direct-list-initialization context the type for 'auto' can only be deduced from a single initializer expression
 
 ```cpp
 auto testPositions{
@@ -1514,7 +1514,7 @@ auto testPositions{
     std::tuple<int, int>{-21, 17}
 };
 ```
-Para corregir el error, una posibilidad es inicializar testPositions de la manera siguiente:
+To fix the error, one possibility is to initialize testPositions as follows:
 
 ```cpp
 std::tuple<int, int> testPositions[]{
@@ -1525,9 +1525,9 @@ std::tuple<int, int> testPositions[]{
 };
 ```
 
--   **Comprobación de tipos frente a punteros a tipos de is_convertible**  
+-   **Checking types vs. pointers to types for is_convertible**  
 
-El código siguiente provoca ahora que la aserción estática produzca error. 
+The following code now causes the static assertion to fail. 
 
 ```cpp
 struct B1 {
@@ -1539,15 +1539,15 @@ struct D : public B2 {};
 
 static_assert(std::is_convertible<D, B2>::value, "fail");
 ```
-Para corregir el error cambie static_assert para que compare los punteros a D y B2:
+To fix the error, change the static_assert so that it compares pointers to D and B2:
 
 ```cpp
 static_assert(std::is_convertible<D*, B2*>::value, "fail");
 ```
 
--   **las declaraciones declspec(novtable) deben ser coherentes**  
+-   **declspec(novtable) declarations must be consistent**  
 
-Las declaraciones declspec deben ser coherentes en todas las bibliotecas. El siguiente código producirá ahora una infracción de regla ahora producirá una infracción de una regla de definición (ODR):
+declspec declarations must be consistent across all libraries. The following code will now produce a one-definition rule (ODR) violation:
 
 ```cpp
 
@@ -1612,11 +1612,11 @@ C c;
 
 
   
-###  <a name="VS_Update1"></a> Mejoras de conformidad en Update 1  
+###  <a name="VS_Update1"></a> Conformance Improvements in Update 1  
   
--   **Clases base virtuales privadas y herencia indirecta**  
+-   **Private virtual base classes and indirect inheritance**  
   
-     Las versiones anteriores del compilador permiten una clase derivada para llamar a funciones de miembro de sus clases base *derivadas indirectamente*`private virtual` . Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2280 como resultado.  
+     Previous versions of the compiler allowed a derived class to call member functions of its *indirectly-derived*`private virtual` base classes. This old behavior was incorrect and does not conform to the C++ standard. The compiler no longer accepts code written in this way and issues compiler error C2280 as a result.  
   
     ```Output  
   
@@ -1624,7 +1624,7 @@ C c;
   
     ```  
   
-     Ejemplo (antes)  
+     Example (before)  
   
     ```cpp  
     class base  
@@ -1643,7 +1643,7 @@ C c;
   
     ```  
   
-     Ejemplo (después)  
+     Example (after)  
   
     ```cpp  
     class base;  // as above  
@@ -1658,7 +1658,7 @@ C c;
   
     ```  
   
-     O bien  
+     -or -  
   
     ```cpp  
     class base;  // as above  
@@ -1673,9 +1673,9 @@ C c;
   
     ```  
   
--   **Operador new y operador delete sobrecargados**  
+-   **Overloaded operator new and operator delete**  
   
-     Las versiones anteriores del compilador permitieron que `operator new` no miembro y `operator delete` no miembro se declarasen estático y que se declararan en espacios de nombres distintos del espacio de nombres global.  Este comportamiento anterior crea un riesgo de que el programa no llame a la implementación del operador `new` o `delete` que el programador diseñó, generando un comportamiento en tiempo de ejecución incorrecto silencioso. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2323 en su lugar.  
+     Previous versions of the compiler allowed non-member `operator new` and non-member `operator delete` to be declared static, and to be declared in namespaces other than the global namespace.  This old behavior created a risk that the program would not call the `new` or `delete` operator implementation that the programmer intended, resulting in silent bad runtime behavior. The compiler no longer accepts code written in this way and issues compiler error C2323 instead.  
   
     ```Output  
   
@@ -1683,25 +1683,25 @@ C c;
   
     ```  
   
-     Ejemplo (antes)  
+     Example (before)  
   
     ```cpp  
     static inline void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // error C2323  
   
     ```  
   
-     Ejemplo (después)  
+     Example (after)  
   
     ```cpp  
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'  
   
     ```  
   
-     Además, aunque el compilador no ofrece un diagnóstico específico, se considera que el operador en línea nuevo está mal formado.  
+     Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.  
   
--   **Llamada a "operator *type*()" (conversión definida por el usuario) en tipos que no son de clase**  
+-   **Calling 'operator *type*()' (user-defined conversion) on non-class types**  
   
-     Las versiones anteriores del compilador permitieron que se llamara 'operator *type*()' en tipos que no son de clase mientras que se les ignora en modo silencioso. Este comportamiento anterior creó un riesgo de generación de código incorrecto silencioso, lo que produjo un comportamiento impredecible en tiempo de ejecución. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2228 en su lugar.  
+     Previous versions of the compiler allowed 'operator *type*()' to be called on non-class types while silently ignoring it. This old behavior created a risk of silent bad code generation, resulting in unpredictable runtime behavior. The compiler no longer accepts code written in this way and issues compiler error C2228 instead.  
   
     ```Output  
   
@@ -1709,7 +1709,7 @@ C c;
   
     ```  
   
-     Ejemplo (antes)  
+     Example (before)  
   
     ```cpp  
     typedef int index_t;  
@@ -1721,7 +1721,7 @@ C c;
   
     ```  
   
-     Ejemplo (después)  
+     Example (after)  
   
     ```cpp  
     typedef int index_t;  
@@ -1733,15 +1733,15 @@ C c;
   
     ```  
   
--   **Typename redundante en los especificadores de tipos elaborados**  
+-   **Redundant typename in elaborated type specifiers**  
   
-     Las versiones anteriores del compilador permitieron `typename` en especificadores de tipo elaborados; el código escrito de este modo es incorrecto semánticamente. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C3406 en su lugar.  
+     Previous versions of the compiler allowed `typename` in an elaborated type specifiers; code written in this way is semantically incorrect. The compiler no longer accepts code written in this way and issues compiler error C3406 instead.  
   
     ```Output  
     error C3406: 'typename' cannot be used in an elaborated type specifier  
     ```  
   
-     Ejemplo (antes)  
+     Example (before)  
   
     ```cpp  
     template <typename class T>  
@@ -1749,7 +1749,7 @@ C c;
   
     ```  
   
-     Ejemplo (después)  
+     Example (after)  
   
     ```cpp  
     template <class T>  // alternatively, could be 'template <typename T>'; 'typename' is not elaborating a type specifier in this case  
@@ -1757,11 +1757,11 @@ C c;
   
     ```  
   
--   **Deducción de tipos de matrices de una lista de inicializadores**  
+-   **Type deduction of arrays from an initializer list**  
   
-     Las versiones anteriores del compilador no admitían la deducción de tipos de matrices de una lista de inicializadores. El compilador admite ahora esta forma de deducción de tipos y, como resultado, las llamadas a las plantillas de función mediante listas de inicializadores podrían ser ahora ambiguas o se podría elegir una sobrecarga diferente de la de versiones anteriores del compilador. Para resolver estos problemas, el programa debe especificar ahora explícitamente la sobrecarga que el programador tiene como objetivo.  
+     Previous versions of the compiler did not support type deduction of arrays from an initializer list. The compiler now supports this form of type deduction and, as a result, calls to function templates using initializer lists might now be ambiguous or a different overload might be chosen than in previous versions of the compiler. To resolve these issues, the program must now explicitly specify the overload that the programmer intended.  
   
-     Cuando este comportamiento nuevo haga que la resolución de sobrecarga considere que un candidato adicional sea igual de bueno que el candidato histórico, la llamada pasará a ser ambigua y el compilador emitirá el error del compilador C2668 como resultado.  
+     When this new behavior causes overload resolution to consider an additional candidate that is equally as good as the historic candidate, the call becomes ambiguous and the compiler issues compiler error C2668 as a result.  
   
     ```Output  
   
@@ -1769,7 +1769,7 @@ C c;
   
     ```  
   
-     Ejemplo 1: llamada ambigua a una función sobrecargada (antes)  
+     Example 1: Ambiguous call to overloaded function (before)  
   
     ```cpp  
     // In previous versions of the compiler, code written in this way would unambiguously call f(int, Args...)  
@@ -1787,7 +1787,7 @@ C c;
   
     ```  
   
-     Ejemplo 1: llamada ambigua a una función sobrecargada (después)  
+     Example 1: ambiguous call to overloaded function (after)  
   
     ```cpp  
     template < typename... Args>  
@@ -1804,9 +1804,9 @@ C c;
   
     ```  
   
-     Cuando este comportamiento nuevo provoque que la resolución de sobrecarga considere que un candidato adicional es una coincidencia mejor que el candidato histórico, la llamada resuelve sin ambigüedades al nuevo candidato, provocando un cambio en el comportamiento del programa que probablemente sea diferente de lo que el programador pensaba.  
+     When this new behavior causes overload resolution to consider an additional candidate that is a better match than the historic candidate, the call resolves unambiguously to the new candidate, causing a change in program behavior that is probably different than the programmer intended.  
   
-     Ejemplo 2: cambio en la resolución de sobrecarga (antes)  
+     Example 2: change in overload resolution (before)  
   
     ```cpp  
     // In previous versions of the compiler, code written in this way would unambiguously call f(S, Args...)  
@@ -1830,7 +1830,7 @@ C c;
   
     ```  
   
-     Ejemplo 2: cambio en la resolución de sobrecarga (después)  
+     Example 2: change in overload resolution (after)  
   
     ```cpp  
     struct S;  // as before  
@@ -1849,9 +1849,9 @@ C c;
   
     ```  
   
--   **Restauración de las advertencias de la instrucción switch**  
+-   **Restoration of switch statement warnings**  
   
-     Una versión anterior del compilador quitó advertencias existentes anteriormente relacionadas con instrucciones `switch` ; estas advertencias se han restaurado ahora. El compilador emite ahora las advertencias restauradas y se emiten ahora advertencias relacionadas con los casos específicos (incluido el caso predeterminado) en la línea que contiene el caso que genera el error, en lugar de en la última línea de la instrucción switch. Como resultado de emitir ahora esas advertencias en líneas diferentes a como se hacía en el pasado, ya no se podrán suprimir según lo previsto las advertencias suprimidas anteriormente mediante `#pragma warning(disable:####)` . Para suprimir estas advertencias según lo previsto, es posible que sea necesario mover la directiva `#pragma warning(disable:####)` a una línea por encima del primer caso que genera potencialmente el error. Las siguientes son las advertencias restauradas.  
+     A Previous version of the compiler removed previously-existing warnings related to `switch` statements; these warnings have now been restored. The compiler now issues the restored warnings, and warnings related to specific cases (including the default case) are now issued on the line containing the offending case, rather than on the last line of the switch statement. As a result of now issuing those warnings on different lines than in the past, warnings previously suppressed by using `#pragma warning(disable:####)` may no longer be suppressed as intended. To suppress these warnings as intended, it might be necessary to move the `#pragma warning(disable:####)` directive to a line above the first potentially-offending case. The following are the restored warnings.  
   
     ```Output  
     warning C4060: switch statement contains no 'case' or 'default' labels  
@@ -1895,7 +1895,7 @@ C c;
     Warning C4809: switch statement has redundant 'default' label; all possible 'case' labels are given  
     ```  
   
-     Ejemplo de C4063: (antes)  
+     Example of C4063 (before)  
   
     ```cpp  
     class settings  
@@ -1929,7 +1929,7 @@ C c;
   
     ```  
   
-     Ejemplo de C4063: (después)  
+     Example of C4063 (after)  
   
     ```cpp  
     class settings { ... };  // as above  
@@ -1955,41 +1955,41 @@ C c;
   
     ```  
   
-     En su documentación se ofrecen ejemplos de las otras advertencias restauradas.  
+     Examples of the other restored warnings are provided in their documentation.  
   
--   **#include: uso del especificador de principal-directorio'..' en pathname** (solo afecta a /WX /Wall)  
+-   **#include: use of parent-directory specifier '..' in pathname** (only affects /Wall /WX)  
   
-     Las versiones anteriores del compilador no detectaron el uso del especificador de principal-directorio '..' en el nombre de la ruta de acceso de las directivas  `#include` . El código escrito de este modo normalmente está pensado para incluir encabezados que existen fuera del proyecto usando incorrectamente rutas de acceso relativas del proyecto. Este comportamiento antiguo crea un riesgo de que el programa se pueda compilar incluyendo un archivo de origen diferente del que pensaba el programador, o que esas rutas de acceso relativas no son portables a otros entornos de compilación. Ahora el compilador detecta y notifica al programador del código escrito de esta manera y emite una advertencia C4464 de compilador opcional, si se habilita.  
+     Previous versions of the compiler did not detect the use of the parent-directory specifier '..' in the pathname of  `#include` directives. Code written in this way is usually intended to include headers that exist outside of the project by incorrectly using project-relative paths. This old behavior created a risk that the program could be compiled by including a different source file than the programmer intended, or that these relative paths would not be portable to other build environments. The compiler now detects and notifies the programmer of code written in this way and issues an optional compiler warning C4464, if enabled.  
   
     ```Output  
     warning C4464: relative include path contains '..'  
     ```  
   
-     Ejemplo (antes)  
+     Example (before)  
   
     ```cpp  
     #include "..\headers\C4426.h"  // emits warning C4464  
   
     ```  
   
-     Ejemplo (después)  
+     Example (after)  
   
     ```cpp  
     #include "C4426.h"  // add absolute path to 'headers\' to your project's include directories  
   
     ```  
   
-     Además, aunque el compilador no ofrece un diagnóstico específico, se recomienda no usar el especificador de directorio principal “..” para especificar los directorios de inclusión del proyecto.  
+     Additionally, although the compiler does not give a specific diagnostic, we also recommend that the parent-directory specifier ".." should note be used to specify your project's include directories.  
   
--   **optimize() #pragma se extiende más allá del final del archivo de encabezado** (solo afecta a /WX /Wall)  
+-   **#pragma optimize() extends past end of header file** (only affects /Wall /WX)  
   
-     Las versiones anteriores del compilador no detectaban cambios en la configuración de la marca de optimización que eluden un archivo de encabezado incluido dentro de una unidad de traducción. Ahora el compilador detecta y notifica al programador del código escrito de esta manera y emite una advertencia C4426 de compilador opcional en la ubicación de `#include`que genera el problema, si se habilita. Esta advertencia solo se emite si el cambio entra en conflicto con las marcas de optimización establecidas por los argumentos de la línea de comandos para el compilador.  
+     Previous versions of the compiler did not detect changes to  optimization flag settings that escape a header file included within a translation unit. The compiler now detects and notifies the programmer of code written in this way and issues an optional compiler warning C4426 at the location of the offending `#include`, if enabled. This warning is only issued if the changes conflict with the optimization flags set by command-line arguments to the compiler.  
   
     ```Output  
     warning C4426: optimization flags changed after including header, may be due to #pragma optimize()  
     ```  
   
-     Ejemplo (antes)  
+     Example (before)  
   
     ```cpp  
     // C4426.h  
@@ -2002,7 +2002,7 @@ C c;
   
     ```  
   
-     Ejemplo (después)  
+     Example (after)  
   
     ```cpp  
     // C4426.h  
@@ -2016,15 +2016,15 @@ C c;
   
     ```  
   
--   **Mismatched #pragma warning(push)** y **#pragma warning(pop)** (solo afecta a /WX /Wall)  
+-   **Mismatched #pragma warning(push)** and **#pragma warning(pop)** (only affects /Wall /WX)  
   
-     Las versiones anteriores del compilador no detectaban que los cambios de estado `#pragma warning(push)` se emparejaban con cambios de estado `#pragma warning(pop)` en un archivo de código fuente diferente, lo que rara vez es lo previsto. Este comportamiento antiguo creaba un riesgo de que el programa se compilara con un conjunto de advertencias habilitadas diferentes de lo que el programador había pensado, lo cual puede provocar un comportamiento en tiempo de ejecución incorrecto silencioso. Ahora el compilador detecta el código escrito de esta manera, lo notifica al programador y emite una advertencia del compilador opcional C5031 en la ubicación de `#pragma warning(pop)` coincidente, si se habilita. Esta advertencia incluye una nota que hace referencia a la ubicación de #pragma warning(push) correspondiente.  
+     Previous versions of the compiler did not detect `#pragma warning(push)` state changes being paired with `#pragma warning(pop)` state changes in a different source file, which is rarely intended. This old behavior created a risk that the program would be compiled with a different set of warnings enabled than the programmer intended, possibly resulting in silent bad runtime behavior. The compiler now detects and notifies the programmer of code written in this way and issues an optional compiler warning C5031 at the location of the matching `#pragma warning(pop)`, if enabled. This warning includes a note referencing the location of the corresponding #pragma warning(push).  
   
     ```Output  
     warning C5031: #pragma warning(pop): likely mismatch, popping warning state pushed in different file  
     ```  
   
-     Ejemplo (antes)  
+     Example (before)  
   
     ```cpp  
     // C5031_part1.h  
@@ -2047,7 +2047,7 @@ C c;
   
     ```  
   
-     Ejemplo (después)  
+     Example (after)  
   
     ```cpp  
     // C5031_part1.h  
@@ -2072,17 +2072,17 @@ C c;
   
     ```  
   
-     Aunque es poco frecuente, a veces el código escrito de este modo es intencionado. El código escrito de este modo es sensible a los cambios en el orden de `#include`. Cuando sea posible, se recomienda que los archivos de código fuente administren el estado de advertencia de forma independiente.  
+     Though uncommon, code written in this way is sometimes intentional. Code written in this way is sensitive to changes in `#include` order; when possible, we recommend that source code files manage warning state in a self-contained way.  
   
--   **#pragma warning(push) sin coincidencia** (solo afecta a /Wall /WX)  
+-   **Unmatched #pragma warning(push)** (only affects /Wall /WX)  
   
-     Las versiones anteriores del compilador no detectaron cambios de estado `#pragma warning(push)` sin coincidencia al final de una unidad de traducción. Ahora el compilador detecta y notifica al programador del código escrito de esta manera y emite una advertencia C5032 de compilador opcional en la ubicación de #pragma warning(push) no coincidente, si se habilita. Esta advertencia solo se emite si no hay ningún error de compilación en la unidad de traducción.  
+     Previous versions of the compiler did not detect unmatched `#pragma warning(push)` state changes at the end of a translation unit. The compiler now detects and notifies the programmer of code written in this way and issues an optional compiler warning C5032 at the location of the unmatched #pragma warning(push), if enabled. This warning is only issued if there are no compilation errors in the translation unit.  
   
     ```Output  
     warning C5032: detected #pragma warning(push) with no corresponding #pragma warning(pop)  
     ```  
   
-     Ejemplo (antes)  
+     Example (before)  
   
     ```cpp  
     // C5032.h  
@@ -2098,7 +2098,7 @@ C c;
   
     ```  
   
-     Ejemplo (después)  
+     Example (after)  
   
     ```cpp  
     // C5032.h  
@@ -2115,23 +2115,23 @@ C c;
   
     ```  
   
--   **Se pueden emitir advertencias adicionales como resultado del seguimiento del estado de advertencia #pragma mejorado**  
+-   **Additional warnings might be issued as a result of improved #pragma warning state tracking**  
   
-     Las versiones anteriores del compilador no realizaron un seguimiento de los cambios de estados de advertencia #pragma lo suficientemente bueno como para emitir todas las advertencias que se pretendían. Este comportamiento provocó un riesgo de que se suprimirían algunas advertencias de manera eficaz en circunstancias diferentes de las que tenía previstas el programador. El compilador realiza ahora el seguimiento del estado de advertencia #pragma con mayor eficacia, especialmente en relación con los cambios de estado de advertencia #pragma dentro de las plantillas, y opcionalmente emite nuevas advertencias C5031 y C5032 que están pensadas para ayudar al programador a localizar usos imprevistos de `#pragma warning(push)` y `#pragma warning(pop)`.  
+     Previous versions of the compiler tracked #pragma warning state changes insufficiently well to issue all intended warnings. This behavior created a risk that certain warnings would be effectively suppressed in circumstances different than the programmer intended. The compiler now tracks #pragma warning state more robustly -- especially related to #pragma warning state changes inside of templates -- and optionally issues new warnings C5031 and C5032 which are intended to help the programmer locate unintended uses of `#pragma warning(push)` and `#pragma warning(pop)`.  
   
-     Como resultado del seguimiento del cambio de estado de advertencia de #pragma mejorado, es posible emitir ahora las advertencias anteriormente suprimidas de manera incorrecta o las advertencias relacionadas con problemas que anteriormente tenían un mal diagnóstico.  
+     As a result of improved #pragma warning state change tracking, warnings formerly incorrectly suppressed or warnings related to issues formerly misdiagnosed might now be issued.  
   
--   **Mejora de la identificación del código inaccesible**  
+-   **Improved identification of unreachable code**  
   
-     Los cambios en la biblioteca estándar de C++ y la mejora en la capacidad para llamadas a funciones insertadas respecto a versiones anteriores del compilador pueden permitirle a este demostrar que determinado código ahora es inaccesible. Este nuevo comportamiento puede producir nuevas instancias de advertencia C4720 emitidas con mayor frecuencia.  
+     C++ Standard Library changes and improved ability to inline function calls over previous versions of the compiler might allow the compiler to prove that certain code is now unreachable. This new behavior can result in new and more-frequently issued instances of warning C4720.  
   
     ```Output  
     warning C4720: unreachable code  
     ```  
   
-     En muchos casos, esta advertencia solo se puede emitir al compilar con las optimizaciones habilitadas, puesto que las optimizaciones pueden insertar más llamadas a funciones, eliminar código redundante o hacer posible de otra manera que se determine cierto código que no sea accesible. Hemos observado que las instancias nuevas de la advertencia C4720 han aparecido con frecuencia en bloques try/catch, especialmente en relación con el uso de [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True).  
+     In many cases, this warning might only be issued when compiling with optimizations enabled, since optimizations may inline more function calls, eliminate redundant code, or otherwise make it possible to determine that certain code is unreachable. We have observed that new instances of warning C4720 have frequently occurred in try/catch blocks, especially in relation to use of [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True).  
   
-     Ejemplo (antes)  
+     Example (before)  
   
     ```cpp  
     try  
@@ -2144,7 +2144,7 @@ C c;
     }  
     ```  
   
-     Ejemplo (después)  
+     Example (after)  
   
     ```cpp  
     try  
@@ -2157,20 +2157,20 @@ C c;
     }  
     ```  
   
-###  <a name="VS_Update2"></a> Mejoras de conformidad en Update 2  
+###  <a name="VS_Update2"></a> Conformance Improvements in Update 2  
   
--   **Puede que se generen errores y advertencias adicionales como resultado de la compatibilidad parcial con la expresión SFINAE**  
+-   **Additional warnings and errors might be issued as a result of partial support for expression SFINAE**  
   
-     Las versiones anteriores del compilador no analizaban determinados tipos de expresiones dentro de especificadores `decltype` debido a la falta de compatibilidad con la expresión SFINAE. Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. Ahora, el compilador analiza estas expresiones y tiene compatibilidad parcial para la expresión SFINAE gracias a las mejoras de cumplimiento continuas. Como resultado, ahora, el compilador genera advertencias y errores detectados en las expresiones que las versiones anteriores del compilador no analizaban.  
+     Previous versions of the compiler did not parse certain kinds of expressions inside `decltype` specifiers due to lack of  support for expression SFINAE. This old behavior was incorrect and does not conform to the C++ standard. The compiler now parses these expressions and has partial support for expression SFINAE due to  ongoing conformance improvements. As a result, the compiler now issues warnings and errors found in  expressions that previous versions of the compiler did not parse.  
   
-     Cuando este comportamiento nuevo analiza una expresión `decltype` que incluye un tipo que aún no se ha declarado, el compilador genera el error del compilador C2039 como resultado.  
+     When this new behavior parses a `decltype` expression that includes a type that has not yet been declared, the compiler issues compiler error C2039 as a result.  
   
     ```Output  
   
     error C2039: 'type': is not a member of '`global namespace''  
     ```  
   
-     Ejemplo 1: uso de un tipo no declarado (antes)  
+     Example 1:  use of an undeclared type (before)  
   
     ```cpp  
     struct s1  
@@ -2184,7 +2184,7 @@ C c;
   
     ```  
   
-     Ejemplo 1 (después)  
+     Example 1 (after)  
   
     ```cpp  
     struct s1  
@@ -2200,7 +2200,7 @@ C c;
   
     ```  
   
-     Cuando este comportamiento nuevo analiza una expresión `decltype` en la que falta el uso necesario de la palabra clave `typename` para especificar que un nombre dependiente es un tipo, el compilador emite la advertencia del compilador C4346, junto con el error del compilador C2923.  
+     When this new behavior parses a `decltype` expression that is missing a necessary use of the `typename` keyword to specify that a dependent name is a type, the compiler issues  compiler warning C4346 together with compiler error C2923.  
   
     ```Output  
   
@@ -2213,7 +2213,7 @@ C c;
     error C2923: 's1': 'S2<T>::Type' is not a valid template type argument for parameter 'T'  
     ```  
   
-     Ejemplo 2: un nombre dependiente no es un tipo (antes)  
+     Example 2: dependent name is not a type (before)  
   
     ```cpp  
     template < typename T>  
@@ -2239,7 +2239,7 @@ C c;
   
     ```  
   
-     Ejemplo 2 (después)  
+     Example 2 (after)  
   
     ```cpp  
     template < typename T> struct s1 { ... };  // as above  
@@ -2256,9 +2256,9 @@ C c;
   
     ```  
   
--   **Las variables de miembro `volatile` impiden los operadores de asignación y constructores definidos implícitamente**  
+-   `volatile` **member variables prevent implicitly defined constructors and assignment operators**  
   
-     Las versiones anteriores del compilador permitían que se generaran automáticamente constructores para copiar o mover predeterminados y operadores de asignación para copiar o mover predeterminados para una clase con variables de miembro `volatile`. Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. Ahora, el compilador considera que una clase que tiene variables de miembro volátiles tiene operadores de asignación y construcción no triviales, lo que impide que se generen implementaciones predeterminadas de estos operadores automáticamente.  Cuando esta clase es miembro de una unión (o una unión anónima dentro de una clase), los constructores para copiar o mover y los operadores de asignación de copiar o mover de la unión (o la clase que contiene la unión anónima) se definirán implícitamente como eliminados. Intentar crear o copiar la unión (o la clase que contiene la unión anónima) sin definirlas explícitamente es un error y, en tal caso, el compilador genera el error de compilador C2280 como resultado.  
+     Previous versions of the compiler allowed a class that has `volatile` member variables to have default copy/move constructors and default copy/move assignment operators automatically generated. This old behavior was incorrect and does not conform to the C++ standard. The compiler now considers a class that has volatile member variables to have non-trivial construction and assignment operators which prevents default implementations of these operators from being automatically generated.  When such a class is a member of a union (or an anonymous union inside of a class), the copy/move constructors and copy/move assignment operators of the union (or the class containing the unonymous union) will be implicitly defined as deleted. Attempting to construct or copy the union (or class containing the anonymous union) without explicitly defining them is an error and the compiler  issues compiler error C2280 as a result.  
   
     ```Output  
   
@@ -2266,7 +2266,7 @@ C c;
   
     ```  
   
-     Ejemplo (antes)  
+     Example (before)  
   
     ```cpp  
     struct A  
@@ -2290,7 +2290,7 @@ C c;
     B b2(b1);  // error C2280  
     ```  
   
-     Ejemplo (después)  
+     Example (after)  
   
     ```cpp  
     struct A  
@@ -2314,15 +2314,15 @@ C c;
     B b2(b1);  // error C2280  
     ```  
   
--   **Las funciones miembro estáticas no admiten calificadores cv.**  
+-   **Static member functions do not support cv-qualifiers.**  
   
-     Las versiones anteriores de Visual C++ 2015 permitían que las funciones miembro estáticas tuvieran calificadores cv. Este comportamiento se debe a una regresión en Visual C++ 2015 y Visual C++ 2015 Update 1; Visual C++ 2013 y las versiones anteriores de Visual C++ rechazan el código escrito de este modo. El comportamiento de Visual C++ 2015 y Visual C++ 2015 Update 1 es incorrecto y no cumple el estándar de C++.  Visual Studio 2015 Update 2 rechaza el código escrito de este modo y genera el error de compilador C2511 en su lugar.  
+     Previous versions of Visual C++ 2015 allowed static member functions to have cv-qualifiers. This behavior is due to a regression in Visual C++ 2015 and Visual C++ 2015 Update 1; Visual C++ 2013 and previous versions of Visual C++ reject code written in this way. The behavior of Visual C++ 2015 and Visual C++ 2015 Update 1 is incorrect and does not conform to the C++ standard.  Visual Studio 2015 Update 2 rejects code written in this way and issues compiler error C2511 instead.  
   
     ```Output  
     error C2511: 'void A::func(void) const': overloaded member function not found in 'A'  
     ```  
   
-     Ejemplo (antes)  
+     Example (before)  
   
     ```cpp  
     struct A  
@@ -2334,7 +2334,7 @@ C c;
   
     ```  
   
-     Ejemplo (después)  
+     Example(after)  
   
     ```cpp  
     struct A  
@@ -2346,9 +2346,9 @@ C c;
   
     ```  
   
--   **No se permite la declaración adelantada de la enumeración en el código de WinRT** (solo afecta a /ZW)  
+-   **Forward declaration of enum is not allowed in WinRT code** (affects /ZW only)  
   
-     El código compilado para Windows Runtime (WinRT) no permite que los tipos `enum` se declaren por adelantado, del mismo modo que cuando el código C++ administrado se compila para .NET Framework mediante el modificador de compilador /clr. Este comportamiento garantiza que siempre se conozca el tamaño de una enumeración y que se pueda proyectar correctamente al sistema de tipos de WinRT. El compilador rechaza el código escrito de este modo y genera los errores de compilador C2599 y C3197.  
+     Code compiled for the Windows Runtime (WinRT) doesn't allow `enum` types to be forward declared, similarly to when managed C++ code is compiled for the .Net Framework using the /clr compiler switch. This behavior is ensures that the size of an enumeration is always known and can be correctly projected to the WinRT type system. The compiler rejects code written in this way and  issues compiler error C2599 together with compiler error C3197.  
   
     ```Output  
   
@@ -2362,7 +2362,7 @@ C c;
   
     ```  
   
-     Ejemplo (antes)  
+     Example (before)  
   
     ```cpp  
     namespace A {  
@@ -2387,7 +2387,7 @@ C c;
   
     ```  
   
-     Ejemplo (después)  
+     Example (after)  
   
     ```cpp  
               // forward declaration of CustomEnum removed  
@@ -2410,9 +2410,9 @@ C c;
   
     ```  
   
--   **El operador no miembro sobrecargado new y el operador delete no se pueden declarar como inline** (nivel 1 (/W1), activo de manera predeterminada)  
+-   **Overloaded non-member operator new and operator delete may not be declared inline** (Level 1 (/W1) on-by-default)  
   
-     Las versiones anteriores del compilador no generan ninguna advertencia cuando las funciones de operador no miembro new y de operador delete se declaraban como inline. El código escrito de este modo tiene un formato incorrecto (no se requiere ningún diagnóstico) y puede provocar problemas de memoria derivados de operadores new y delete no coincidentes (especialmente si se usan junto con una desasignación dimensionada) que puede resultar difícil de diagnosticar.   Ahora, el compilador emite la advertencia C4595 para ayudarle a identificar el código escrito de este modo.  
+     Previous versions of the compiler do not issue a warning when non-member operator new and operator delete functions are declared inline. Code written in this way is ill-formed (no diagnostic required) and can cause memory issues  resulting from mismatched new and delete operators (especially when used together with sized deallocation) that can be difficult to diagnose.   The compiler now issues compiler warning C4595 to help identify code written in this way.  
   
     ```Output  
   
@@ -2420,7 +2420,7 @@ C c;
   
     ```  
   
-     Ejemplo (antes)  
+     Example (before)  
   
     ```cpp  
               inline void* operator new(size_t sz)  // warning C4595  
@@ -2430,7 +2430,7 @@ C c;
   
     ```  
   
-     Ejemplo (después)  
+     Example (after)  
   
     ```cpp  
               void* operator new(size_t sz)  // removed inline  
@@ -2440,17 +2440,17 @@ C c;
   
     ```  
   
-     Corregir el código escrito de este modo puede requerir el traslado de las definiciones de operador fuera de un archivo de encabezado y al archivo de origen correspondiente.  
+     Fixing code that's written in this way might require that the operator definitions be moved out of a header file and into a corresponding source file.  
   
-###  <a name="VS_Update3"></a> Mejoras de conformidad en Update 3  
+###  <a name="VS_Update3"></a> Conformance Improvements in Update 3  
   
--   **std::is_convertable ahora detecta la asignación automática** (biblioteca estándar)  
+-   **std::is_convertable now detects self-assignment**  (standard library)  
   
-     Las versiones anteriores del rasgo de tipo `std::is_convertable` no detectaban correctamente la asignación automática de un tipo de clase cuando el constructor de copias se había eliminado o era privado. Ahora, `std::is_convertable<>::value` está establecido de forma correcta en `false` cuando se aplica a un tipo de clase con un constructor de copias eliminado o privado.  
+     Previous versions of the `std::is_convertable` type-trait did not correctly detect self-assignment of a class type when its copy constructor is deleted or private. Now, `std::is_convertable<>::value` is correctly set to `false` when applied to a class type with a deleted or private copy constructor.  
   
-     No hay ningún diagnóstico del compilador asociado con este cambio.  
+     There is no compiler diagnostic associated with this change.  
   
-     Ejemplo  
+     Example  
   
     ```cpp  
     #include <type_traits>  
@@ -2470,18 +2470,18 @@ C c;
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");  
     ```  
   
-     En versiones anteriores de Visual C++, las aserciones estáticas de la parte inferior de este ejemplo se aceptaban porque `std::is_convertable<>::value` estaba establecido de forma incorrecta en `true`. Ahora, `std::is_convertable<>::value` se ha establecido de forma correcta en `false`, lo que hace que se produzcan errores en las aserciones estáticas.  
+     In previous versions of Visual C++, the static assertions at the bottom of this example pass because `std::is_convertable<>::value` was incorrectly set to `true`. Now, `std::is_convertable<>::value` is correctly set to `false`, causing the static assertions to fail.  
   
--   **Los constructores de copias y movimiento triviales establecidos como valor predeterminado o eliminados respetan los especificadores de acceso**  
+-   **Defaulted or deleted trivial copy and move constructors respect access specifiers**  
   
-     Las versiones anteriores del compilador no comprobaban el especificador de acceso de los constructores de copias y movimiento triviales establecidos como valor predeterminado o eliminados antes de permitir llamarlos. Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. En algunos casos, este comportamiento anterior ha creado un riesgo de generación de código no válido silencioso, lo que ha producido un comportamiento impredecible en tiempo de ejecución. Ahora, el compilador comprueba el especificador de acceso de los constructores de copias y movimiento triviales establecidos como valor predeterminado o eliminados para determinar si se pueden llamar y, en caso contrario, emite como resultado una advertencia del compilador C2248.  
+     Previous versions of the compiler did not check the access specifier of defaulted or deleted trivial copy and move constructors before allowing them to be called. This old behavior was incorrect and does not conform to the C++ standard. In some cases, this old  behavior created a risk of silent bad code generation, resulting in unpredictable runtime behavior. The compiler now checks the access specifier  of defaulted or deleted trivial copy and move constructors to determine whether it can be called, and if not, issues compiler warning C2248 as a result.  
   
     ```Output  
   
     error C2248: 'S::S' cannot access private member declared in class 'S'  
     ```  
   
-     Ejemplo (antes)  
+     Example (before)  
   
     ```cpp  
     class S {  
@@ -2501,7 +2501,7 @@ C c;
   
     ```  
   
-     Ejemplo (después)  
+     Example (after)  
   
     ```cpp  
     class S {  
@@ -2521,17 +2521,17 @@ C c;
   
     ```  
   
--   **Compatibilidad en desuso con código ATL con atributos**  (nivel 1 (/W1), activo de manera predeterminada)  
+-   **Deprecation of attributed ATL code support** (Level 1 (/W1) on-by-default)  
   
-     Las versiones anteriores del compilador admitían código ATL con atributos. Como parte de la fase siguiente para quitar la compatibilidad con código ATL con atributos que [comenzó en Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), el código ATL con atributos está en desuso. Ahora, el compilador emite la advertencia del compilador C4467 para ayudarle a identificar este tipo de código en desuso.  
+     Previous versions of the compiler supported attributed ATL code. As the next phase of removing support for attributed ATL code that [began in Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), attributed ATL code has been deprecated. The compiler now issues compiler warning C4467 to help identify this kind of deprecated code.  
   
     ```Output  
     warning C4467: Usage of ATL attributes is deprecated  
     ```  
   
-     Si quiere seguir usando código ATL con atributos hasta que se quite la compatibilidad del compilador, puede deshabilitar esta advertencia. Para ello, pase los argumentos de la línea de comandos `/Wv:18` o `/wd:4467` al compilador o agregue `#pragma warning(disable:4467)` en el código fuente.  
+     If you want to continue using attributed ATL code until support is removed from the compiler, you can disable this warning by passing the `/Wv:18` or `/wd:4467` command line arguments to the compiler, or by adding  `#pragma warning(disable:4467)` in your source code.  
   
-     Ejemplo 1 (antes)  
+     Example 1 (before)  
   
     ```cpp  
               [uuid("594382D9-44B0-461A-8DE3-E06A3E73C5EB")]  
@@ -2539,16 +2539,16 @@ C c;
   
     ```  
   
-     Ejemplo 1 (después)  
+     Example 1 (after)  
   
     ```cpp  
     __declspec(uuid("594382D9-44B0-461A-8DE3-E06A3E73C5EB")) A {};  
   
     ```  
   
-     A veces, necesitará o querrá crear un archivo IDL para evitar el uso de atributos ATL en desuso, como se muestra en el ejemplo de código siguiente  
+     Sometimes you might need or want to create an IDL file to avoid the use deprecated ATL attributes, as in the example code below  
   
-     Ejemplo 2 (antes)  
+     Example 2 (before)  
   
     ```cpp  
     [emitidl];  
@@ -2568,11 +2568,11 @@ C c;
   
     ```  
   
-     Primero, cree el archivo *.idl. Puede usar el archivo vc140.idl generado para obtener un archivo \*.idl que contenga las interfaces y las anotaciones.  
+     First, create the *.idl file; the vc140.idl generated file can be used to obtain an \*.idl file containing the interfaces and annotations.  
   
-     Después, agregue un paso MIDL a la compilación para asegurarse de que se generan las definiciones de interfaz de C++.  
+     Next, add a MIDL step to your build to make sure that the C++ interface definitions are generated.  
   
-     Ejemplo 2 de IDL (después)  
+     Example 2 IDL (after)  
   
     ```cpp  
     import "docobj.idl";  
@@ -2603,9 +2603,9 @@ C c;
   
     ```  
   
-     Luego, use ATL directamente en el archivo de implementación, como se muestra en el ejemplo de código siguiente.  
+     Then, use ATL directly in the implementation file, as in the example code below.  
   
-     Ejemplo 2 de implementación (después)  
+     Example 2  Implementation (after)  
   
     ```cpp  
     #include <idl.header.h>  
@@ -2623,9 +2623,9 @@ C c;
   
     ```  
   
--   **Archivos de encabezado precompilado (PCH) y directivas #include no coincidentes** (solo afecta a /Wall /WX)  
+-   **Precompiled header (PCH) files and mismatched #include directives** (only affects /Wall /WX)  
   
-     Las versiones anteriores del compilador aceptaban directivas `#include` no coincidentes en archivos de código fuente entre compilaciones `-Yc` y `-Yu` cuando se usaban archivos de encabezado precompilado (PCH). El compilador ya no admite código escrito de este modo.   Ahora, el compilador emite la advertencia del compilador CC4598 para ayudar a identificar las directivas `#include` no coincidentes cuando se usan archivos PCH.  
+     Previous versions of the compiler accepted mismatched `#include` directives in source files between `-Yc` and `-Yu` compilations when using precompiled header (PCH)  files. Code written in this way is no longer accepted by the compiler.   The compiler now issues compiler warning CC4598 to help identify mismatched `#include` directives when using PCH files.  
   
     ```Output  
   
@@ -2633,7 +2633,7 @@ C c;
   
     ```  
   
-     Ejemplo (antes):  
+     Example (before):  
   
      X.cpp (-Ycc.h)  
   
@@ -2653,7 +2653,7 @@ C c;
   
     ```  
   
-     Ejemplo (después)  
+     Example (after)  
   
      X.cpp (-Ycc.h)  
   
@@ -2673,9 +2673,9 @@ C c;
   
     ```  
   
--   **Archivos de encabezado precompilado (PCH) y directorios de inclusión no coincidentes** (solo afecta a /Wall /WX)  
+-   **Precompiled header (PCH) files and mismatched include directories** (only affects /Wall /WX)  
   
-     Las versiones anteriores del compilador aceptaban argumentos de la línea de comandos de directorios de inclusión no coincidentes (`-I`) en el compilador entre compilaciones `-Yc` y `-Yu` cuando se usaban archivos de encabezado precompilado (PCH). El compilador ya no admite código escrito de este modo.   Ahora, el compilador emite la advertencia del compilador CC4599 para ayudar a identificar los argumentos de la línea de comandos de directorios de inclusión no coincidentes (`-I`) cuando se usan archivos PCH.  
+     Previous versions of the compiler accepted mismatched include directory (`-I`) command line arguments to the compiler between `-Yc` and `-Yu` compilations when using precompiled header (PCH)  files. Code written in this way is no longer accepted by the compiler.   The compiler now issues compiler warning CC4599 to help identify mismatched include directory (`-I`) command line arguments when using PCH files.  
   
     ```Output  
   
@@ -2683,7 +2683,7 @@ C c;
   
     ```  
   
-     Ejemplo (antes)  
+     Example (before)  
   
     ```ms-dos  
   
@@ -2692,7 +2692,7 @@ C c;
   
     ```  
   
-     Ejemplo (después)  
+     Example (after)  
   
     ```ms-dos  
   
@@ -2701,11 +2701,11 @@ C c;
   
     ```  
   
-## <a name="visual-c-2013-conformance-changes"></a>Cambios de conformidad de Visual C++ 2013  
+## <a name="visual-c-2013-conformance-changes"></a>Visual C++ 2013 Conformance Changes  
   
-### <a name="compiler"></a>Compilador  
+### <a name="compiler"></a>Compiler  
   
--   La palabra clave final genera ahora un error de símbolo sin resolver donde previamente se habría compilado:  
+-   The final keyword now generates an unresolved symbol error where it would have compiled previously:  
   
     ```cpp  
     struct S1 {  
@@ -2723,9 +2723,9 @@ C c;
   
     ```  
   
-     En versiones anteriores, el error no se producía porque la llamada era virtual, aunque el programa sufriría un bloqueo en tiempo de ejecución. Ahora, se produce un error del vinculador porque se sabe que se trata de la clase final. En este ejemplo, para corregir el error, tendría que establecer vínculos con el objeto que contiene la definición de S2::f.  
+     In earlier versions, an error wasn't issued because the call was a virtual call; nevertheless, the program would crash at runtime. Now, a linker error is issued because the class is known to be final. In this example, to fix the error, you would link against the obj that contains the definition of S2::f.  
   
--   Si usa funciones friend en espacios de nombres, debe volver a declarar la función friend antes de hacer referencia a ella o se producirá un error, ya que ahora el compilador se ajusta al estándar ISO C++. Por ejemplo, este código ya no se compila:  
+-   When you use friend functions in namespaces, you must re-declare the friend function before you refer to it or you will get an error because the compiler now conforms to the ISO C++ Standard. For example, this no longer compiles:  
   
     ```cpp  
     namespace NS {  
@@ -2741,7 +2741,7 @@ C c;
   
     ```  
   
-     Para corregir este código, declare la función friend:  
+     To correct this code, declare the friend function:  
   
     ```cpp  
     namespace NS {  
@@ -2758,7 +2758,7 @@ C c;
   
     ```  
   
--   El estándar de C++ no permite la especialización explícita de una clase. Aunque Visual C++ lo permite en determinadas ocasiones, en casos como el del ejemplo siguiente, ahora se genera un error porque el compilador no considera que la segunda función sea una especialización de la primera.  
+-   The C++ Standard does not allow explicit specialization in a class. Although Visual C++ allows it in some cases, in cases such as the following example, an error is now generated because the compiler doesn't consider the second function to be a specialization of the first one.  
   
     ```cpp  
     template < int N>  
@@ -2772,14 +2772,14 @@ C c;
   
     ```  
   
-     Para corregir este código, modifique la segunda función:  
+     To correct this code, modify the second function:  
   
     ```cpp  
     template <> void f(char& val);  
   
     ```  
   
--   En el ejemplo siguiente, Visual C++ ya no intenta eliminar la ambigüedad de las dos funciones y ahora notifica un error:  
+-   Visual C++ no longer tries to disambiguate the two functions in the following example, and now emits an error:  
   
     ```cpp  
     template< typename T> void Func(T* t = nullptr);  
@@ -2791,7 +2791,7 @@ C c;
   
     ```  
   
-     Para corregir este código, clarifique la llamada:  
+     To correct this code, clarify the call:  
   
     ```cpp  
     template< typename T> void Func(T* t = nullptr);  
@@ -2803,7 +2803,7 @@ C c;
   
     ```  
   
--   Antes de que el compilador siguiera el estándar ISO C++11, el siguiente código se habría compilado y habría provocado que x se resolviera en el tipo int:  
+-   Before the compiler was made compliant with ISO C++11, the following code would have compiled and caused x to resolve to type int:  
   
     ```cpp  
     auto x = {0};  
@@ -2811,7 +2811,7 @@ C c;
   
     ```  
   
-     Ahora, este código resuelve x en un tipo de std::initializer_list\<int> y produce un error en la siguiente línea que intenta asignar x al tipo inst. (No hay ninguna conversión predeterminada). Para corregir este código, use int para reemplazar auto:  
+     This code now resolves x to a type of std::initializer_list\<int> and causes an error on the next line that tries to assign x to type int. (There is no conversion by default.) To correct this code, use int to replace auto:  
   
     ```cpp  
     int x = {0};  
@@ -2819,7 +2819,7 @@ C c;
   
     ```  
   
--   Ya no se permite la inicialización de agregado cuando el tipo del valor derecho no coincide con el tipo del valor izquierdo que se está inicializando, y se produce un error porque el estándar ISO C++11 requiere que funcione la inicialización uniforme sin conversiones de restricción. Anteriormente, si había una conversión de restricción disponible, se emitía una [advertencia del compilador (nivel 4) C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) en lugar de un error.  
+-   Aggregate initialization is no longer allowed when the type of the right-hand value does not match the type of the left-hand value that's being initialized, and an error is issued because the ISO C++11 Standard requires uniform initialization to work without narrowing conversions. Previously, if a narrowing conversion was available, a [Compiler Warning (level 4) C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) warning would have been issued instead of an error.  
   
     ```cpp  
     int i = 0;  
@@ -2827,7 +2827,7 @@ C c;
   
     ```  
   
-     Para corregir este código, agregue una conversión de restricción explícita:  
+     To correct this code, add an explicit narrowing conversion:  
   
     ```cpp  
     int i = 0;  
@@ -2835,14 +2835,14 @@ C c;
   
     ```  
   
--   La inicialización siguiente ya no se permite:  
+-   The following initialization is no longer allowed:  
   
     ```cpp  
     void *p = {{0}};  
   
     ```  
   
-     Para corregir este código, use cualquiera de estas formas:  
+     To correct this code, use either of these forms:  
   
     ```cpp  
     void *p = 0;  
@@ -2851,7 +2851,7 @@ C c;
   
     ```  
   
--   La búsqueda de nombres ha cambiado. El código siguiente se resuelve de forma diferente en Visual C++ en Visual Studio 2012 y Visual C++ en Visual Studio 2013:  
+-   Name lookup has changed. The following code is resolved differently in Visual C++ in Visual Studio 2012 and Visual C++ in Visual Studio 2013:  
   
     ```cpp  
     enum class E1 { a };  
@@ -2865,9 +2865,9 @@ C c;
   
     ```  
   
-     En Visual C++ en Visual Studio 2012, E1 en la expresión E1::b se resuelve en ::E1 en el ámbito global. En Visual C++ en Visual Studio 2013, E1 en la expresión E1::b se resuelve en la definición typedef E2 en main() y tiene el tipo ::E2.  
+     In Visual C++ in Visual Studio 2012, the E1 in expression E1::b resolved to ::E1 in the global scope. In Visual C++ in Visual Studio 2013, E1 in expression E1::b resolves to the typedef E2 definition in main() and has type ::E2.  
   
--   La disposición de los objetos ha cambiado. En x64, la disposición de los objetos de una clase puede cambiar con respecto a versiones anteriores. Si tiene una función virtual pero no tiene una clase base que tenga una función virtual, el modelo de objetos del compilador inserta un puntero a una tabla de función virtual después de la disposición de los miembros de datos. Esto significa que la disposición tal vez no sea óptima en todos los casos. En versiones anteriores, se ha intentado mejorar la disposición con una optimización de x64, pero como no ha funcionado correctamente en situaciones de código complejas, se ha eliminado en Visual C++ en Visual Studio 2013. Por ejemplo, considere este código:  
+-   Object layout has changed. On x64, the object layout of a class may change from previous releases. If it has a virtual function but it doesn’t have a base class that has a virtual function, the object model of the compiler inserts a pointer to a virtual function table after the data member layout. This means the layout may not be optimal in all cases. In previous releases, an optimization for x64 would try to improve the layout for you, but because it failed to work correctly in complex code situations, it was removed in Visual C++ in Visual Studio 2013. For example, consider this code:  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2881,7 +2881,7 @@ C c;
   
     ```  
   
--   En Visual C++ en Visual Studio 2013, el resultado de sizeof(S2) en x64 es 48, pero en versiones anteriores, se evalúa como 32. Para que se evalúe como 32 en Visual C++ en Visual Studio 2013 para x64, agregue una clase base ficticia que tenga una función virtual:  
+-   In Visual C++ in Visual Studio 2013, the result of sizeof(S2) on x64 is 48, but in previous releases, it evaluates to 32. To make this evaluate to 32 in Visual C++ in Visual Studio 2013 for x64, add a dummy base class that has a virtual function:  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2898,7 +2898,7 @@ C c;
   
     ```  
   
-     Para buscar ubicaciones en el código que en una versión anterior se habrían intentado optimizar, use un compilador de esa versión junto con la opción del compilador /W3 y active la advertencia 4370. Por ejemplo:  
+     To find places in your code that an earlier release would have tried to optimize, use a compiler from that release together with the /W3 compiler option and turn on Warning 4370. For example:  
   
     ```cpp  
     #pragma warning(default:4370)  
@@ -2914,9 +2914,9 @@ C c;
   
     ```  
   
-     En los compiladores de Visual C++ antes de Visual C++ en Visual Studio 2013, este código genera este mensaje: advertencia C4370: “S2”: el diseño de clase cambió desde una versión anterior del compilador debido a una mejora del empaquetado  
+     On Visual C++ compilers before Visual C++ in Visual Studio 2013, this code outputs this message: warning C4370: 'S2' : layout of class has changed from a previous version of the compiler due to better packing  
   
-     El compilador de x86 tiene el mismo problema de disposición en todas las versiones de Visual C++. Por ejemplo, si este código se compila para x86:  
+     The x86 compiler has the same sub-optimal layout issue in all versions of Visual C++. For example, if this code is compiled for x86:  
   
     ```cpp  
     struct S {  
@@ -2927,7 +2927,7 @@ C c;
   
     ```  
   
-     El resultado de sizeof(S) es 24. Sin embargo, se puede reducir a 16 si se emplea la solución alternativa mencionada para x64:  
+     The result of sizeof(S) is 24. However, this can be reduced to 16 if you use the workaround just mentioned for x64:  
   
     ```cpp  
     struct dummy {  
@@ -2942,34 +2942,34 @@ C c;
   
     ```  
   
-### <a name="standard-library"></a>biblioteca estándar  
- Visual C++ en Visual Studio 2013 detecta las discordancias en _ITERATOR_DEBUG_LEVEL, que se implementó en Visual C++ 2010, y las discordancias de RuntimeLibrary. Estas se producen cuando se mezclan las opciones del compilador /MT (versión estática), MTd (depuración estática), /MD (versión dinámica) y /MDd (depuración dinámica).  
+### <a name="standard-library"></a>Standard Library  
+ Visual C++ in Visual Studio 2013 detects mismatches in _ITERATOR_DEBUG_LEVEL, which was implemented in Visual C++ 2010, and RuntimeLibrary mismatches. These occur when compiler options /MT (static release), /MTd (static debug), /MD (dynamic release), and /MDd (dynamic debug) are mixed.  
   
--   Si el código usa las plantillas de alias simuladas de la versión anterior, tiene que cambiarlo. Por ejemplo, en lugar de allocator_traits\<A>::rebind_alloc\<U>::other, ahora tiene que decir allocator_traits\<A>::rebind_alloc\<U>. Aunque ratio_add\<R1, R2>::type ya no es necesario y ahora se recomienda ratio_add\<R1, R2>, el primero seguirá compilándose porque ratio\<N, D> es necesario para tener una definición de tipos “type” para una ratio reducida, que será el mismo tipo si ya se ha reducido.  
+-   If your code acknowledges the previous release's simulated alias templates, you have to change it. For example, instead of allocator_traits\<A>::rebind_alloc\<U>::other, now you have to say allocator_traits\<A>::rebind_alloc\<U>. Although ratio_add\<R1, R2>::type is no longer necessary and we now recommend that you say ratio_add\<R1, R2>, the former will still compile because ratio\<N, D> is required to have a "type" typedef for a reduced ratio, which will be the same type if it's already reduced.  
   
--   Debe usar #include \<algorithm> al llamar a std::min() o std::max().  
+-   You must use #include \<algorithm> when you call std::min() or std::max().  
   
--   Si el código existente usa las enumeraciones con ámbito simuladas de la versión anterior (enumeraciones sin ámbito tradicionales incluidas en espacios de nombres), tendrá que cambiarlo. Por ejemplo, si hacía referencia al tipo std::future_status::future_status, ahora tiene que decir std::future_status. En cambio, la mayor parte del código no se ve afectada; por ejemplo, std::future_status::ready todavía se compila.  
+-   If your existing code uses the previous release’s simulated scoped enums—traditional unscoped enums wrapped in namespaces—you have to change it. For example, if you referred to the type std::future_status::future_status, now you have to say std::future_status. However, most code is unaffected—for example, std::future_status::ready still compiles.  
   
--   El operador explícito bool() es más estricto que el operador unspecified-bool-type(). El operador explícito bool() permite conversiones explícitas a bool (por ejemplo, con shared_ptr\<X>sp, tanto static_cast\<bool>(sp) como bool b(sp) son válidas) y “conversiones contextuales” de pruebas booleanas a bool (por ejemplo, if (sp), !sp, sp && whatever). En cambio, el operador explícito bool() impide conversiones implícitas a bool, de modo que no se puede decir bool b = sp. Además, con un tipo devuelto bool, no se puede decir return sp.  
+-   explicit operator bool() is stricter than operator unspecified-bool-type(). explicit operator bool() permits explicit conversions to bool—for example, given shared_ptr\<X> sp, both static_cast\<bool>(sp) and bool b(sp) are valid—and Boolean-testable "contextual conversions" to bool—for example, if (sp), !sp, sp && whatever. However, explicit operator bool() forbids implicit conversions to bool, so you can't say bool b = sp; and given a bool return type, you can't say return sp.  
   
--   Ahora que se han implementado plantillas variádicas reales, _VARIADIC_MAX y las macros relacionadas no tienen ningún efecto. Si aún se mantiene la definición de _VARIADIC_MAX, sencillamente se omite. Si utilizó nuestra maquinaria de macros diseñada para admitir plantillas variádicas simuladas de cualquier otra forma, tendrá que cambiar el código.  
+-   Now that real variadic templates are implemented, _VARIADIC_MAX and related macros have no effect. If you're still defining _VARIADIC_MAX, it is just ignored. If you acknowledged our macro machinery intended to support simulated variadic templates in any other way, you have to change your code.  
   
--   Además de las palabras clave normales, los encabezados de biblioteca estándar de C++ prohíben ahora el uso de macros en las palabras clave contextuales “override” y “final”.  
+-   In addition to ordinary keywords, C++ Standard Library headers now forbid the macro-izing of the context-sensitive keywords "override" and "final".  
   
--   reference_wrapper/ref()/cref() ahora no permite el enlace a objetos temporales.  
+-   reference_wrapper/ref()/cref() now forbid binding to temporary objects.  
   
--   \<random> ahora aplica estrictamente sus condiciones previas de tiempo de compilación.  
+-   \<random> now strictly enforces its compile-time preconditions.  
   
--   Varios rasgos de tipo de biblioteca estándar de C++ tienen la condición previa "T debe ser un tipo completo". Aunque el compilador aplique ahora esto de forma más estricta, no puede aplicarlo en todas las situaciones. (Dado que las infracciones de las condiciones previas de biblioteca estándar de C++ desencadenan un comportamiento no definido, la biblioteca de plantillas estándar no garantiza su cumplimiento).  
+-   Various C++ Standard Library type traits have the precondition "T shall be a complete type". Although the compiler now enforces this more strictly, it may not enforce it in all situations. (Because C++ Standard Library precondition violations trigger undefined behavior, the Standard doesn't guarantee enforcement.)  
   
--   La biblioteca estándar de C++ no admite /clr:oldSyntax.  
+-   The C++ Standard Library does not support /clr:oldSyntax.  
   
--   La especificación de C++11 para common_type<> tenía consecuencias inesperadas y no deseadas; en concreto, hacía que common_type\<int, int>::type devolviera int&&. Por tanto, Visual C++ implementa la resolución propuesta para el problema 2141 del grupo de trabajo de biblioteca, que hace que common_type\<int, int="">::type devuelva int.  
+-   The C++11 specification for common_type<> had unexpected and undesired consequences; in particular, it makes common_type\<int, int>::type return int&&. Therefore, Visual C++ implements the Proposed Resolution for Library Working Group issue 2141, which makes common_type\<int, int="">::type return int.  
   
-     Un efecto secundario de este cambio es que ya no funciona el caso de identidad (common_type\<T> no siempre devuelve un tipo T). Este comportamiento se ajusta a la resolución propuesta, pero interrumpe cualquier código que dependiera del comportamiento anterior.  
+     As a side-effect of this change, the identity case no longer works (common_type\<T> does not always result in type T). This complies with the Proposed Resolution, but it breaks any code that relied on the previous behavior.  
   
-     Si necesita un tipo de rasgo de identidad, no use el elemento std::identity no estándar que se define en <type_traits> porque no funcionará para \<void>. En su lugar, implemente un rasgo de tipo de identidad propio que se ajuste a sus necesidades. Por ejemplo:  
+     If you require an identity type trait, don't use the non-standard std::identity that's defined in <type_traits>                 because it won't work for \<void>                 . Instead, implement your own identity type trait to suit your needs. Here's an example:  
   
     ```cpp  
     template < typename T> struct Identity {  
@@ -2978,49 +2978,49 @@ C c;
   
     ```  
   
-### <a name="mfc-and-atl"></a>MFC y ATL  
+### <a name="mfc-and-atl"></a>MFC and ATL  
   
--   La biblioteca MFC MBCS ya no se incluye en Visual Studio debido a la popularidad de Unicode y a que el uso de MBCS se ha reducido significativamente. Este cambio también hace que MFC se adapte más al propio Windows SDK, ya que muchos de los nuevos controles y mensajes son solo Unicode. En cambio, si necesita seguir usando la biblioteca MFC MBCS, puede descargarla del Centro de descarga de MSDN. El paquete redistribuible de Visual C++ todavía incluye esta biblioteca.  
+-  **Visual Studio 2013 only**: MFC MBCS Library is not included in Visual Studio because Unicode is so popular and use of MBCS is significantly reduced. This change also keeps MFC more closely aligned with the Windows SDK itself, because many of the new controls and messages are Unicode-only. However, if you must continue to use the MFC MBCS library, you can download it from the MSDN Download Center at [Multibyte MFC Library for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770). The Visual C++ Redistributable Package still includes this library.  (Note: The MBCS DLL is included in Visual C++ setup components in Visual Studio 2015 and later).
   
--   Se ha modificado la accesibilidad de la barra de herramientas de MFC.  En lugar de una arquitectura de una capa, ahora hay una arquitectura jerárquica. Todavía puede usar el comportamiento antiguo al llamar a CRibbonBar::EnableSingleLevelAccessibilityMode().  
+-   Accessibility for the MFC ribbon is changed.  Instead of a one-level architecture, there is now a hierarchical architecture. You can still use the old behavior by calling CRibbonBar::EnableSingleLevelAccessibilityMode().  
   
--   Se ha quitado el método CDatabase::Getconnect. Para mejorar la seguridad, ahora la cadena de conexión solo se almacena cifrada y se descifra solo si es necesario; no puede devolverse como texto sin formato.  La cadena puede obtenerse al usar el método CDatabase::Dump.  
+-   CDatabase::GetConnect method is removed. To improve security, the connection string is now stored encrypted and is decrypted only as needed; it cannot be returned as plain text.  The string can be obtained by using the CDatabase::Dump method.  
   
--   La signatura de CWnd::OnPowerBroadcast se ha modificado. La signatura de este controlador de mensajes se ha modificado para tomar LPARAM como segundo parámetro.  
+-   Signature of CWnd::OnPowerBroadcast is changed. The signature of this message handler is changed to take an LPARAM as the second parameter.  
   
--   Las signaturas se han modificado para alojar controladores de mensajes. Las listas de parámetros de las funciones siguientes se han modificado para utilizar los controladores de mensajes ON_WM_* que se han agregado:  
+-   Signatures are changed to accommodate message handlers. The parameter lists of the following functions have been changed to use newly added ON_WM_* message handlers:  
   
-    -   CWnd::OnDisplayChange ha cambiado a (UINT, int, int) en lugar de (WPARAM, LPARAM) para que la nueva macro ON_WM_DISPLAYCHANGE pueda usarse en el mapa de mensajes.  
+    -   CWnd::OnDisplayChange changed to (UINT, int, int) instead of (WPARAM, LPARAM) so that the new ON_WM_DISPLAYCHANGE macro can be used in the message map.  
   
-    -   CFrameWnd::OnDDEInitiate ha cambiado a (CWnd*, UINT, UNIT) en lugar de (WPARAM, LPARAM) para que la nueva macro ON_WM_DDE_INITIATE pueda usarse en el mapa de mensajes.  
+    -   CFrameWnd::OnDDEInitiate changed to (CWnd*, UINT, UNIT) instead of (WPARAM, LPARAM) so that the new ON_WM_DDE_INITIATE macro can be used in the message map.  
   
-    -   CFrameWnd::OnDDEExecute ha cambiado a (CWnd*, HANDLE) en lugar de (WPARAM, LPARAM) para que la nueva macro ON_WM_DDE_EXECUTE pueda usarse en el mapa de mensajes.  
+    -   CFrameWnd::OnDDEExecute changed to (CWnd*, HANDLE) instead of (WPARAM, LPARAM) so that the new ON_WM_DDE_EXECUTE macro can be used in the message map.  
   
-    -   CFrameWnd::OnDDETerminate ha cambiado a (CWnd*) como parámetro en lugar de (WPARAM, LPARAM) para que la nueva macro ON_WM_DDE_TERMINATE pueda usarse en el mapa de mensajes.  
+    -   CFrameWnd::OnDDETerminate changed to (CWnd*) as the parameter instead of (WPARAM, LPARAM) so that the new ON_WM_DDE_TERMINATE macro can be used in the message map.  
   
-    -   CMFCMaskedEdit::OnCut ha cambiado a sin parámetros en lugar de (WPARAM, LPARAM) para que la nueva macro ON_WM_CUT pueda usarse en el mapa de mensajes.  
+    -   CMFCMaskedEdit::OnCut changed to no parameters instead of (WPARAM, LPARAM) so that the new ON_WM_CUT macro can be used in the message map.  
   
-    -   CMFCMaskedEdit::OnClear ha cambiado a sin parámetros en lugar de (WPARAM, LPARAM) para que la nueva macro ON_WM_CLEAR pueda usarse en el mapa de mensajes.  
+    -   CMFCMaskedEdit::OnClear changed to no parameters instead of (WPARAM, LPARAM) so that the new ON_WM_CLEAR macro can be used in the message map.  
   
-    -   CMFCMaskedEdit::OnPaste ha cambiado a sin parámetros en lugar de (WPARAM, LPARAM) para que la nueva macro ON_WM_PASTE pueda usarse en el mapa de mensajes.  
+    -   CMFCMaskedEdit::OnPaste changed to no parameters instead of (WPARAM, LPARAM) so that the new ON_WM_PASTE macro can be used in the message map.  
   
--   Se han quitado los \#ifdefs de los archivos de encabezado de MFC. Se han quitado varios #ifdefs de los archivos de encabezado de MFC relacionados con las versiones de Windows no compatibles (WINVER &lt; 0x0501).  
+-   \#ifdefs in the MFC header files are removed. Numerous #ifdefs in the MFC header files related to unsupported versions of Windows (WINVER &lt; 0x0501) are removed.  
   
--   Se ha quitado ATL DLL (atl120.dll). ATL ahora se proporciona en forma de encabezados y como biblioteca estática (atls.lib).  
+-   ATL DLL (atl120.dll) is removed. ATL is now provided as headers and a static library (atls.lib).  
   
--   Se ha quitado atlsd.lib, atlsn.lib y atlsnd.lib. Atls.lib ya no tiene código ni dependencias de juego de caracteres específicos para la depuración y el lanzamiento. Como funciona igual para Unicode y ANSI y para depuración y lanzamiento, solo se necesita una versión de la biblioteca.  
+-   Atlsd.lib, atlsn.lib, and atlsnd.lib are removed. Atls.lib no longer has character-set dependencies or code that's specific for debug/release. Because it works the same for Unicode/ANSI and debug/release, only one version of the library is required.  
   
--   Se ha quitado la herramienta de seguimiento ATL/MFC junto con ATL DLL y se ha simplificado el mecanismo de seguimiento. Ahora, el constructor CTraceCategory toma un parámetro (el nombre de categoría) y las macros TRACE llaman a las funciones de creación de informes de depuración de CRT.  
+-   ATL/MFC Trace tool is removed together with the ATL DLL, and the tracing mechanism is simplified. The CTraceCategory constructor now takes one parameter (the category name), and the TRACE macros call the CRT debug reporting functions.  
   
-## <a name="visual-c-2012-breaking-changes"></a>Cambios importantes en Visual C++ 2012  
+## <a name="visual-c-2012-breaking-changes"></a>Visual C++ 2012 Breaking Changes  
   
-### <a name="compiler"></a>Compilador  
+### <a name="compiler"></a>Compiler  
   
--   La opción del compilador /Yl ha cambiado. De manera predeterminada, el compilador usa esta opción, que puede conducir a errores LNK2011 en determinadas condiciones. Para obtener más información, consulte [/Yl (Insertar referencia PCH para biblioteca de depuración)](../build/reference/yl-inject-pch-reference-for-debug-library.md).  
+-   The /Yl compiler option has changed. By default, the compiler uses this option, which can lead to LNK2011 errors under certain conditions. For more information, see [/Yl (Inject PCH Reference for Debug Library)](../build/reference/yl-inject-pch-reference-for-debug-library.md).  
   
--   En el código que se compila con /clr, la palabra clave de clase de enumeración define una enumeración de C++11, no una enumeración de Common Language Runtime (CLR). Para definir una enumeración de CLR, debe ser explícito sobre su accesibilidad.  
+-   In code that's compiled by using /clr, the enum class keyword defines a C++11 enum, not a common language runtime (CLR) enum. To define a CLR enum, you must be explicit about its accessibility.  
   
--   Use la palabra clave template para eliminar la ambigüedad explícitamente de un nombre dependiente (compatibilidad con estándar de lenguaje C++). En el ejemplo siguiente, la palabra clave template resaltada es obligatoria para resolver la ambigüedad. Para obtener más información, consulte [Resolución de nombres para tipos dependientes](../cpp/name-resolution-for-dependent-types.md).  
+-   Use the template keyword to explicitly disambiguate a dependent name (C++ Language Standard compliance). In the following example, the highlighted template keyword is mandatory to resolve the ambiguity. For more information, see [Name Resolution for Dependent Types](../cpp/name-resolution-for-dependent-types.md).  
   
     ```cpp  
     template < typename X = "", typename = "" AY = "">  
@@ -3028,7 +3028,7 @@ C c;
   
     ```  
   
--   Ya no se permite una expresión constante de tipo flotante como argumento de plantilla, como se muestra en el ejemplo siguiente.  
+-   Constant expression of type float is no longer allowed as a template argument, as shown in the following example.  
   
     ```cpp  
     template<float n=3.14>  
@@ -3036,104 +3036,96 @@ C c;
   
     ```  
   
--   El código que se compila con la opción de línea de comandos /GS y que tiene una vulnerabilidad con error por un paso puede provocar que el proceso termine en tiempo de ejecución, tal como se muestra en el siguiente ejemplo de pseudocódigo.  
+-   Code that's compiled by using the /GS command-line option and that has an off-by-one vulnerability may lead to process termination at                 runtime, as shown in the following pseudocode example.  
   
     ```cpp  
     char buf[MAX]; int cch; ManipulateString(buf, &cch); // ... buf[cch] = '\0'; // if cch >= MAX, process will terminate  
     ```  
   
--   La arquitectura predeterminada para compilaciones x86 se cambia a SSE2; por tanto, el compilador puede emitir instrucciones SSE y usará los registros XMM para realizar cálculos de punto flotante. Si quiere revertir al comportamiento anterior, use la marca de compilador /arch:IA32 para especificar la arquitectura como IA32.  
+-   The default architecture for x86 builds is changed to SSE2; therefore, the compiler may emit SSE instructions, and will use the XMM                 registers to perform floating-point calculations. If you want to revert to previous behavior, then use the /arch:IA32 compiler flag to specify the                 architecture as IA32.  
   
--   El compilador puede emitir las advertencias [del compilador (nivel 4) C4703](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md) y C4701 donde anteriormente no lo hacía. El compilador aplica comprobaciones más fuertes para el uso de variables locales sin inicializar de tipo de puntero.  
+-   The compiler may issue warnings [Compiler Warning (level 4) C4703](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md) and C4701 where previously it did not. The compiler applies stronger checks for use of                 uninitialized local variables of pointer type.  
   
--   Cuando se especifica la nueva marca de enlazador /HIGHENTROPYVA, normalmente, Windows 8 hace que las asignaciones de memoria devuelvan una dirección de 64 bits.                 (Antes de Windows 8, estas asignaciones devolvían más a menudo direcciones de menos de 2 GB).  Esto puede exponer errores de truncamiento de puntero en el código existente. De manera predeterminada, este modificador está activado.  Para deshabilitar este comportamiento, especifique /HIGHENTROPYVA:NO.  
+-   When the new linker flag /HIGHENTROPYVA is specified, Windows 8 typically causes memory allocations to return a 64-bit address.                 (Prior to Windows 8, such allocations more often returned addresses that were less than 2 GB.)  This may expose pointer truncation bugs in existing code. By default, this switch is on.  To disable this behavior, specify /HIGHENTROPYVA:NO.  
   
--   El compilador administrado (Visual Basic o C#) también es compatible con /HIGHENTROPYVA para las compilaciones administradas.  En cambio, en este caso, el modificador /HIGHENTROPYVA está desactivado de manera predeterminada.  
+-   The managed compiler (Visual Basic/C#) also supports /HIGHENTROPYVA for managed builds.  However, in this case,                 the /HIGHENTROPYVAswitch is off by default.  
   
 ### <a name="ide"></a>IDE  
   
--   Aunque se recomienda que no cree aplicaciones de Windows Forms en C++/CLI, el mantenimiento de aplicaciones de interfaz de usuario de C++/CLI es compatible. Si tiene que crear una aplicación de Windows Forms o cualquier otra aplicación de interfaz de usuario .NET, use C# o Visual Basic. Use C++/CLI solo con fines de interoperabilidad.  
+-   Although we recommend that you do not create Windows Forms applications in C++/CLI, maintenance of existing C++/CLI UI applications is supported. If you have to create a Windows Forms application, or any other .NET UI application, use C# or Visual Basic. Use C++/CLI for interoperability purposes only.  
   
-### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>Biblioteca de modelos de procesamiento paralelo y biblioteca de Runtime de simultaneidad  
- La enumeración SchedulerType de UmsThreadDefault está en desuso. La especificación de UmsThreadDefault genera una advertencia en desuso y se asigna internamente a ThreadScheduler.  
+### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>Parallel Patterns Library and Concurrency Runtime Library  
+ The SchedulerType enumeration of UmsThreadDefault is deprecated. Specification of UmsThreadDefault produces a deprecated warning, and internally maps back to the ThreadScheduler.  
   
-### <a name="standard-library"></a>biblioteca estándar  
+### <a name="standard-library"></a>Standard Library  
   
--   Después de un cambio importante entre C++98/03 y estándares C++11, con argumentos de plantilla explícitos para llamar a make_pair() [como inmake_pair\<int, int>(x, y)], normalmente no se compila en Visual C++ en Visual Studio 2012. La solución consiste en llamar siempre a make_pair() sin argumentos de plantilla explícitos, como en make_pair(x, y). Proporcionar argumentos de plantilla explícitos acaba con el propósito de la función. Si necesita un control preciso sobre el tipo resultante, use pair en lugar de make_pair, como en pair\<short, short>(int1, int2).  
+-   Following a breaking change between the C++98/03 and C++11 standards, using explicit template arguments to call make_pair()—as inmake_pair\<int, int>(x, y)—typically does not compile in Visual C++ in Visual Studio 2012. The solution is to always call make_pair()without explicit template arguments—as in make_pair(x, y). Providing explicit template arguments defeats the purpose of the function. If you require precise control over the resulting type, use pair instead of make_pair—as in pair\<short, short>(int1, int2).  
   
--   Otro cambio importante entre C++98/03 y estándares C++11: si A es implícitamente convertible a B y B es implícitamente convertible a C, pero A no es implícitamente convertible a C, C++98/03 y Visual C++2010 permitían que pair\<A, X> se convirtiera (implícita o explícitamente) en pair\<C, X>. (El otro tipo, X, no es de interés aquí y no es específico al tipo primero en el par). Puesto que C++11 y Visual C++ en Visual Studio 2012 detectan que A no es implícitamente convertible a C, eliminan la conversión de par de la resolución de sobrecarga. Se trata de un cambio positivo para muchos escenarios. Por ejemplo, sobrecargar las func(const pair\<int, int>&) y func(const pair\<string, string>&) y llamar a func() con pair\<const char *, const char \*> compilará con este cambio. En cambio, este cambio interrumpe el código que dependía de conversiones de par agresivas. Normalmente, este código se puede solucionar al realizar una parte de la conversión de forma explícita; por ejemplo, al pasar make_pair(static_cast\<B>(a), x) a una función que espere pair\<C, X>.  
+-   Another breaking change between the C++98/03 and C++11 standards: When A is implicitly convertible to B and B is implicitly convertible to C, but A is not implicitly convertible to C, C++98/03 and Visual C++ 2010 permitted pair\<A, X> to be converted (implicitly or explicitly) to pair\<C, X>. (The other type, X, is not of interest here, and this is not specific to the first type in the pair.) Because C++11 and Visual C++ in Visual Studio 2012 detect that A is not implicitly convertible to C, they remove the pair conversion from overload resolution. This is a positive change for many scenarios. For example, overloading func(const pair\<int, int>&) and func(const pair\<string, string>&), and calling func() with pair\<const char *, const char \*> will compile with this change. However, this change breaks code that relied on aggressive pair conversions. Such code can typically be fixed by performing one part of the conversion explicitly—for example, by passing make_pair(static_cast\<B>(a), x) to a function that expects pair\<C, X>.  
   
--   Visual C++ 2010 simulaba plantillas variádicas, por ejemplo, make_shared\<T>(arg1, arg2, argN), hasta un límite de 10 argumentos, al eliminar sobrecargas y especializaciones con maquinaria de preprocesador. En Visual C++ en Visual Studio 2012, este límite se reduce a 5 argumentos para mejorar los tiempos de compilación y el consumo de memoria del compilador para la mayoría de los usuarios. En cambio, puede establecer el límite anterior al definir de forma explícita _VARIADIC_MAX como 10, en todo el proyecto.  
+-   Visual C++ 2010 simulated variadic templates—for example, make_shared\<T>(arg1, arg2, argN)—up to a limit of 10 arguments, by stamping out overloads and specializations with preprocessor machinery. In Visual C++ in Visual Studio 2012, this limit is reduced to 5 arguments to improve compile times and compiler memory consumption for the majority of users. However, you can set the previous limit by explicitly defining _VARIADIC_MAX as 10, project-wide.  
   
--   C++11 17.6.4.3.1 [macro.names]/2 prohíbe palabras clave de uso de macros cuando se incluyen encabezados de la biblioteca estándar de C++. Los encabezados emiten ahora errores del compilador si detectan palabras clave de uso de macros. (Al definir _ALLOW_KEYWORD_MACROS, se permite compilar este código, pero se desaconseja encarecidamente este uso). Como excepción, el uso de la macro new se permite de manera predeterminada, porque los encabezados se defienden de manera integral al usar #pragma push_macro("new")/#undef new/#pragma pop_macro("new"). Al definir _ENFORCE_BAN_OF_MACRO_NEW, se hace exactamente lo que implica su nombre.  
+-   C++11 17.6.4.3.1 [macro.names]/2 forbids macro-izing keywords when C++ Standard Library headers are included. The headers now emit compiler errors if they detect macro-ized keywords. (Defining _ALLOW_KEYWORD_MACROS allows such code to compile, but we strongly discourage that usage.) As an exception, macro-ized new is permitted by default, because the headers comprehensively defend themselves by using #pragma push_macro("new")/#undef new/#pragma pop_macro("new"). Defining _ENFORCE_BAN_OF_MACRO_NEW does exactly what its name implies.  
   
--   Para implementar varias optimizaciones y comprobaciones de depuración, la implementación de la biblioteca estándar de C++ interrumpe deliberadamente la compatibilidad binaria entre versiones de Visual Studio (2005, 2008, 2010, 2012). Cuando se usa la biblioteca estándar de C++, esto impide que se combinen archivos objeto y bibliotecas estáticas que se han compilado con versiones diferentes en un binario (EXE o DLL), e impide que se pasen objetos de la biblioteca estándar de C++ entre los archivos binarios que se han compilado con versiones diferentes. La combinación de archivos objeto y bibliotecas estáticas (usar la biblioteca estándar de C++ que se ha compilado mediante Visual C++ 2010 con los que se han compilado mediante Visual C++ en Visual Studio 2012) emite errores de enlazador sobre _MSC_VER, donde _MSC_VER es la macro que contiene la versión principal del compilador (1700 para Visual C++ en Visual Studio 2012). Esta comprobación no detecta la combinación de archivos DLL ni detecta combinaciones que impliquen Visual C++ 2008 o versiones anteriores.  
+-   To implement various optimizations and debugging checks, the C++ Standard Library implementation intentionally breaks binary compatibility among versions of Visual Studio (2005, 2008, 2010, 2012). When the C++ Standard Library is used, this forbids the mixing of object files and static libraries that are compiled by using different versions into one binary (EXE or DLL), and forbids the passing of C++ Standard Library objects between binaries that are compiled by using different versions. The mixing of object files and static libraries (using the C++ Standard Library that were compiled by using Visual C++ 2010 with those that were compiled by using Visual C++ in Visual Studio 2012 emits linker errors about _MSC_VER mismatch, where _MSC_VER is the macro that contains the compiler's major version (1700 for Visual C++ in Visual Studio 2012). This check cannot detect DLL mixing, and cannot detect mixing that involves Visual C++ 2008 or earlier.  
   
--   Además de detectar discordancias de _ITERATOR_DEBUG_LEVEL, que se ha implementado en Visual C++ 2010, Visual C++ en Visual Studio 2012 detecta discordancias de la biblioteca en tiempo de ejecución. Estas se producen cuando se mezclan las opciones del compilador /MT (versión estática), MTd (depuración estática), /MD (versión dinámica) y /MDd (depuración dinámica).  
+-   In addition to detecting _ITERATOR_DEBUG_LEVEL mismatches, which was implemented in Visual C++ 2010, Visual C++ in Visual Studio 2012 detects Runtime Library mismatches. These occur when the compiler options /MT (static release), /MTd (static debug), /MD (dynamic release), and /MDd (dynamic debug) are mixed.  
   
--   operator\<(), operator>(), operator\<=() y operator>=() estaban anteriormente disponibles para las familias de std::unordered_map andstdext::hash_map de contenedores, aunque sus implementaciones no eran realmente útiles. Se han quitado estos operadores no estándares en Visual C++ en Visual Studio 2012. Además, la implementación de operator==() y operator!=() para la familia de thestd::unordered_map se ha ampliado para abarcar la familia stdext::hash_map. (Se recomienda evitar el uso de la familia thestdext::hash_map en el nuevo código).  
+-   operator\<(), operator>(), operator\<=(), and operator>=() were previously available for the std::unordered_map andstdext::hash_map families of containers, although their implementations were not actually useful. These non-standard operators have been removed in Visual C++ in Visual Studio 2012. Additionally, the implementation of operator==() and operator!=() for thestd::unordered_map family has been extended to cover the stdext::hash_map family. (We recommend that you avoid the use of thestdext::hash_map family in new code.)  
   
--   C++11 22.4.1.4 [locale.codecvt] especifica que codecvt::length() y codecvt::do_length() deben tomar parámetros modificables de stateT&, pero Visual C++ 2010 ha tomado const stateT&. Visual C++ en Visual Studio 2012 toma stateT& como obligatoria por el estándar. Esta diferencia es importante para cualquier usuario que esté intentando reemplazar la función virtual do_length().  
+-   C++11 22.4.1.4 [locale.codecvt] specifies that codecvt::length() and codecvt::do_length() should take modifiable stateT&parameters, but Visual C++ 2010 took const stateT&. Visual C++ in Visual Studio 2012 takes stateT& as mandated by the standard. This difference is significant for anyone who is attempting to override the virtual function do_length().  
   
 ### <a name="crt"></a>CRT  
   
--   El montón en tiempo de ejecución de C (CRT), que se usa para new y malloc(), ya no es privado. CRT ahora usa el montón del proceso. Esto significa que el montón no se destruye cuando se descarga un archivo DLL, por lo que los archivos DLL vinculados de forma estática a CRT deben asegurar que la memoria asignada por el código del archivo DLL se limpia antes de que se cargue.  
+-   The C Runtime (CRT) heap, which is used for new and malloc(), is no longer private. The CRT now uses the process heap. This means that the heap is not destroyed when a DLL is unloaded, so DLLs that link statically to the CRT must ensure memory that's allocated by the DLL code is cleaned up before it’s unloaded.  
   
--   La función iscsymf() se valida con valores negativos.  
+-   The iscsymf() function asserts with negative values.  
   
--   La estructura threadlocaleinfostruct ha cambiado para adaptarse a los cambios en las funciones de configuración regional.  
+-   The threadlocaleinfostruct struct has changed to accommodate the changes to locale functions.  
   
--   Se han quitado de intrin.h las funciones de CRT que tienen intrínsecos correspondientes como memxxx(), strxxx(). Si incluye intrin.h solo para estas funciones, ahora debe incluir los encabezados de CRT correspondientes.  
+-   CRT functions that have corresponding intrinsics such as memxxx(), strxxx() are removed from intrin.h. If you included intrin.h only for these functions, you must now include the corresponding CRT headers.  
   
-### <a name="mfc-and-atl"></a>MFC y ATL  
+### <a name="mfc-and-atl"></a>MFC and ATL  
   
--   Se ha eliminado la compatibilidad de Fusion (afxcomctl32.h); por tanto, se han quitado todos los métodos que se definen en afxcomctl32.h. Se han eliminado los archivos de encabezado afxcomctl32.inl y afxcomctl32.h.  
+-   Removed Fusion support (afxcomctl32.h); therefore, all methods that are defined in afxcomctl32.h have been removed. Header files afxcomctl32.h and afxcomctl32.inl have been deleted.  
   
--   Se ha cambiado el nombre de CDockablePane::RemoveFromDefaultPaneDividier a CDockablePane::RemoveFromDefaultPaneDivider.  
+-   Changed the name of CDockablePane::RemoveFromDefaultPaneDividier to CDockablePane::RemoveFromDefaultPaneDivider.  
   
--   Se ha cambiado la firma de CFileDialog::SetDefExt para usar LPCTSTR; por tanto, se ven afectadas las compilaciones de Unicode.  
+-   Changed the signature of CFileDialog::SetDefExt to use LPCTSTR; therefore, Unicode builds are affected.  
   
--   Se han quitado categorías de seguimiento de ATL obsoletas.  
+-   Removed obsolete ATL tracing categories.  
   
--   Se ha cambiado la firma de CBasePane::MoveWindow para tomar un const CRect.  
+-   Changed the signature of CBasePane::MoveWindow to take a const CRect.  
   
--   Se ha cambiado la firma de CMFCEditBrowseCtrl::EnableBrowseButton.  
+-   Changed the signature of CMFCEditBrowseCtrl::EnableBrowseButton.  
   
--   Se ha quitado m_fntTabs y m_fntTabsBold de CMFCBaseTabCtrl.  
+-   Removed m_fntTabs and m_fntTabsBold from CMFCBaseTabCtrl.  
   
--   Se ha agregado un parámetro a los constructores CMFCRibbonStatusBarPane. (Es un parámetro predeterminado y por tanto no requiere cambios en el código fuente).  
+-   Added a parameter to the CMFCRibbonStatusBarPane constructors. (It is a default parameter, and so it is not source-breaking.)  
   
--   Se ha agregado un parámetro al constructor CMFCRibbonCommandsListBox. (Es un parámetro predeterminado y por tanto no requiere cambios en el código fuente).  
+-   Added a parameter to the CMFCRibbonCommandsListBox constructor. (It is a default parameter, and so it is not source-breaking.)  
   
--   Se ha quitado la API AFXTrackMouse (y procesadores de temporizador relacionados). Use la API de Win32 TrackMouseEvent en su lugar.  
+-   Removed the AFXTrackMouse API (and related timer proc). Use the Win32 TrackMouseEvent API instead.  
   
--   Se ha agregado un parámetro al constructor CFolderPickerDialog. (Es un parámetro predeterminado y por tanto no requiere cambios en el código fuente).  
+-   Added a parameter to the CFolderPickerDialog constructor. (It is a default parameter, and so it is not source-breaking.)  
   
--   Se ha cambiado el tamaño de la estructura CFileStatus: el miembro m_attribute ha cambiado de BYTE a DWORD (para que coincida con el valor que ha devuelto fromGetFileAttributes).  
+-   CFileStatus structure size changed: The m_attribute member changed from BYTE to DWORD (to match the value that's returned fromGetFileAttributes).  
   
--   CRichEditCtrl y CRichEditView usan MSFTEDIT_CLASS (control RichEdit 4.1) en lugar de RICHEDIT_CLASS (control RichEdit 3.0) en las compilaciones de Unicode.  
+-   CRichEditCtrl and CRichEditView use MSFTEDIT_CLASS (RichEdit 4.1 control) instead of RICHEDIT_CLASS (RichEdit 3.0 control) in Unicode builds.  
   
--   Se ha quitado AFX_GLOBAL_DATA::IsWindowsThemingDrawParentBackground porque siempre es TRUE en Windows Vista, Windows 7 y Windows 8.  
+-   Removed AFX_GLOBAL_DATA::IsWindowsThemingDrawParentBackground because it is always TRUE on Windows Vista, Windows 7, and Windows 8.  
   
--   Se ha quitado AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable porque siempre es TRUE en Windows Vista, Windows 7 y Windows 8.  
+-   Removed AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable because it is always TRUE on Windows Vista, Windows 7, and Windows 8.  
   
--   Se ha quitado AFX_GLOBAL_DATA::DwmExtendFrameIntoClientArea. Llame a la API de Windows directamente en Windows Vista, Windows 7 y Windows 8.  
+-   Removed AFX_GLOBAL_DATA::DwmExtendFrameIntoClientArea. Call Windows API directly on Windows Vista, Windows 7, and Windows 8.  
   
--   Se ha quitado AFX_GLOBAL_DATA::DwmDefWindowProc. Llame a la API de Windows directamente en Windows Vista, Windows 7 y Windows 8.  
+-   Removed AFX_GLOBAL_DATA::DwmDefWindowProc. Call Windows API directly on Windows Vista, Windows 7, and Windows 8.  
   
--   Se ha cambiado el nombre de AFX_GLOBAL_DATA::DwmIsCompositionEnabled a IsDwmCompositionEnabled para eliminar el conflicto de nombres.  
+-   Renamed AFX_GLOBAL_DATA::DwmIsCompositionEnabled to IsDwmCompositionEnabled to eliminate name collision.  
   
--   Se han cambiado los identificadores de varios temporizadores internos de MFC y se han movido las definiciones a afxres.h (AFX_TIMER_ID_ *).  
+-   Changed identifiers for a number of MFC internal timers and moved the definitions to afxres.h (AFX_TIMER_ID_*).  
   
--   Se ha cambiado la firma del método OnExitSizeMove para que coincida con la macro ON_WM_EXITSIZEMOVE:  
-  
-    -   CFrameWndEx  
-  
-    -   CMDIFrameWndEx  
-  
-    -   CPaneFrameWnd  
-  
--   Se han cambiado el nombre y la firma de OnDWMCompositionChanged para que coincidan con la macro ON_WM_DWMCOMPOSITIONCHANGED:  
+-   Changed the signature of OnExitSizeMove method to agree with the ON_WM_EXITSIZEMOVE macro:  
   
     -   CFrameWndEx  
   
@@ -3141,7 +3133,15 @@ C c;
   
     -   CPaneFrameWnd  
   
--   Se ha cambiado la firma del método OnMouseLeave para que coincida con la macro ON_WM_MOUSELEAVE:  
+-   Changed the name and signature of OnDWMCompositionChanged to agree with the ON_WM_DWMCOMPOSITIONCHANGED macro:  
+  
+    -   CFrameWndEx  
+  
+    -   CMDIFrameWndEx  
+  
+    -   CPaneFrameWnd  
+  
+-   Changed the signature of OnMouseLeave method to agree with the ON_WM_MOUSELEAVE macro:  
   
     -   CMFCCaptionBar  
   
@@ -3167,21 +3167,21 @@ C c;
   
     -   CMFCAutoHideBar  
   
--   Se ha cambiado la firma de OnPowerBroadcast para que coincida con la macro ON_WM_POWERBROADCAST:  
+-   Changed the signature of OnPowerBroadcast to agree with the ON_WM_POWERBROADCAST macro:  
   
     -   CFrameWndEx  
   
     -   CMDIFrameWndEx  
   
--   Se ha cambiado la firma de OnStyleChanged para que coincida con la macro ON_WM_STYLECHANGED:  
+-   Changed the signature of OnStyleChanged to agree with the ON_WM_STYLECHANGED macro:  
   
     -   CMFCListCtrl  
   
     -   CMFCStatusBar  
   
--   Se ha cambiado el nombre del método interno FontFamalyProcFonts a FontFamilyProcFonts.  
+-   Renamed the internal method FontFamalyProcFonts to FontFamilyProcFonts.  
   
--   Se han quitado varios objetos de CString estáticos globales para eliminar las pérdidas de memoria en algunas situaciones (reemplazado por #defines), y las siguientes variables de miembro de clase:  
+-   Removed numerous global static CString objects to eliminate memory leaks in some situations (replaced with #defines), and the following class member variables:  
   
     -   CKeyBoardManager::m_strDelimiter  
   
@@ -3203,13 +3203,13 @@ C c;
   
     -   CMFCPropertyGridProperty::m_strFormat  
   
--   Se ha cambiado la firma de CKeyboardManager::ShowAllAccelerators y se ha quitado el parámetro de delimitador del acelerador.  
+-   Changed the signature of CKeyboardManager::ShowAllAccelerators and removed the accelerator delimiter parameter.  
   
--   Se ha agregado CPropertyPage::GetParentSheet y en la clase CPropertyPage, llámelo en lugar de GetParent para obtener la ventana de hoja principal correcta, que puede ser el elemento primario o una ventana principal de CPropertyPage. Es posible que tenga que cambiar el código para llamar a GetParentSheet en lugar de GetParent.  
+-   Added CPropertyPage::GetParentSheet, and in the CPropertyPage class, call it instead of GetParent to get the correct parent sheet window, which may be the parent or a grandparent window to CPropertyPage. You might have to change your code to call GetParentSheet instead ofGetParent.  
   
--   Se ha corregido #pragma warning(push) desequilibrado en ATLBASE.H, lo que ha provocado que las advertencias se deshabiliten de forma incorrecta. Esas advertencias están habilitadas correctamente después de que ATLBASE.H se haya analizado.  
+-   Fixed unbalanced #pragma warning(push) in ATLBASE.H, which caused warnings to be disabled incorrectly. Those warnings are now enabled correctly after ATLBASE.H has been parsed.  
   
--   Se han movido métodos relacionados con D2D de AFX_GLOBAL_DATA a _AFX_D2D_STATE:  
+-   Moved D2D-related methods from AFX_GLOBAL_DATA to _AFX_D2D_STATE:  
   
     -   GetDirectD2dFactory  
   
@@ -3225,113 +3225,113 @@ C c;
   
     -   D2D1MakeRotateMatrix  
   
-    -   En lugar de llamar, por ejemplo, a afxGlobalData.IsD2DInitialized, llame a AfxGetD2DState->IsD2DInitialized.  
+    -   Instead of calling, for example, afxGlobalData.IsD2DInitialized, call AfxGetD2DState->IsD2DInitialized.  
   
--   Se han quitado archivos de ATL*.CPP obsoletos de la carpeta \atlmfc\include\.  
+-   Removed obsolete ATL*.CPP files from the \atlmfc\include\ folder.  
   
--   Se ha movido la inicialización afxGlobalData a petición en lugar de en tiempo de inicialización de CRT para satisfacer los requisitos de DLLMain.  
+-   Moved afxGlobalData initialization to on-demand instead of at CRT initialization time, to satisfy DLLMain requirements.  
   
--   Se ha agregado el método RemoveButtonByIndex a la clase CMFCOutlookBarPane.  
+-   Added the RemoveButtonByIndex method to the CMFCOutlookBarPane class.  
   
--   Se ha corregido CMFCCmdUsageCount::IsFreqeuntlyUsedCmd por IsFrequentlyUsedCmd.  
+-   Corrected CMFCCmdUsageCount::IsFreqeuntlyUsedCmd to IsFrequentlyUsedCmd.  
   
--   Se han corregido varias instancias de RestoreOriginalstate por RestoreOriginalState (CMFCToolBar, CMFCMenuBar, CMFCOutlookBarPane).  
+-   Corrected several instances of RestoreOriginalstate to RestoreOriginalState (CMFCToolBar, CMFCMenuBar, CMFCOutlookBarPane).  
   
--   Se han quitado los métodos no usados de CDockablePane: SetCaptionStyle, IsDrawCaption, IsHideDisabledButtons, GetRecentSiblingPaneInfo y CanAdjustLayout.  
+-   Removed unused methods from CDockablePane: SetCaptionStyle, IsDrawCaption, IsHideDisabledButtons, GetRecentSiblingPaneInfo, andCanAdjustLayout.  
   
--   Se han quitado las variables de miembro estático de m_bCaptionText CDockablePane y m_bHideDisabledButtons.  
+-   Removed CDockablePane static member variables m_bCaptionText and m_bHideDisabledButtons.  
   
--   Se ha agregado un método de invalidación de DeleteString a CMFCFontComboBox.  
+-   Added an override DeleteString method to CMFCFontComboBox.  
   
--   Se han quitado los métodos no usados de CPane: GetMinLength e IsLastPaneOnLastRow.  
+-   Removed unused methods from CPane: GetMinLength and IsLastPaneOnLastRow.  
   
--   Se ha cambiado el nombre de CPane::GetDockSiteRow(CDockingPanesRow *) a CPane::SetDockSiteRow.  
+-   Renamed CPane::GetDockSiteRow(CDockingPanesRow *) to CPane::SetDockSiteRow.  
   
-## <a name="visual-c-2010-breaking-changes"></a>Cambios importantes en Visual C++ 2010  
+## <a name="visual-c-2010-breaking-changes"></a>Visual C++ 2010 Breaking Changes  
   
-### <a name="compiler"></a>Compilador  
+### <a name="compiler"></a>Compiler  
   
--   La palabra clave auto tiene un nuevo significado predeterminado. Dado que el uso del significado antiguo es poco frecuente, la mayoría de las aplicaciones no se verán afectadas por este cambio.  
+-   The auto keyword has a new default meaning. Because use of the old meaning is rare, most applications will not be affected by this change.  
   
--   Se introduce la nueva palabra clave static_assert, lo que provocará un conflicto de nombres si ya existe un identificador con ese nombre en el código.  
+-   The new static_assert keyword is introduced, which will cause a name conflict if there is already an identifier by that name in your code.  
   
--   La compatibilidad con la nueva notación lambda excluye la compatibilidad para codificar un GUID sin comillas en un atributo IDL uuid.  
+-   Support for the new lambda notation excludes support for coding an unquoted GUID in an IDL uuid attribute.  
   
--   .NET Framework 4 introduce el concepto de excepciones de estado dañado, que son excepciones que dejan un proceso en un estado dañado e irrecuperable. De manera predeterminada, no se detecta una excepción de estado dañado, incluso con la opción del compilador /EHa que detecta todas las demás excepciones.                 Para detectar de forma explícita una excepción de estado dañado, use instrucciones de __try -\__except. O bien, aplique el atributo [HandledProcessCorruptedStateExceptions] para habilitar una función para detectar excepciones de estado dañado.  Este cambio afecta principalmente a los programadores de sistemas que podrían tener que detectar una excepción de estado dañado. Las ocho excepciones son STATUS_ACCESS_VIOLATION, STATUS_STACK_OVERFLOW, EXCEPTION_ACCESS_VIOLATION, EXCEPTION_IN_PAGE_ERROR, EXCEPTION_INVALID_DISPOSITION, EXCEPTION_NONCONTINUABLE_EXCEPTION, EXCEPTION_PRIV_INSTRUCTION, STATUS_UNWIND_CONSOLIDATE.                 Para obtener más información sobre estas excepciones, consulte la macro [GetExceptionCode](https://msdn.microsoft.com/en-us/library/windows/desktop/ms679356.aspx).  
+-   The .NET Framework 4 introduces the concept of corrupted state exceptions, which are exceptions that leave a process in an unrecoverable                 corrupted state. By default, you cannot catch a corrupted state exception, even with the /EHa compiler option that catches all other exceptions.                 To explicitly catch a corrupted state exception, use __try-\__except statements. Or, apply the [HandledProcessCorruptedStateExceptions]attribute                 to enable a function to catch corrupted state exceptions.  This change affects primarily system programmers who might have to catch a corrupted                 state exception. The eight exceptions are STATUS_ACCESS_VIOLATION, STATUS_STACK_OVERFLOW, EXCEPTION_ILLEGAL_INSTRUCTION,                 EXCEPTION_IN_PAGE_ERROR, EXCEPTION_INVALID_DISPOSITION, EXCEPTION_NONCONTINUABLE_EXCEPTION, EXCEPTION_PRIV_INSTRUCTION, STATUS_UNWIND_CONSOLIDATE.                 For more information about these exceptions, see the [GetExceptionCode](https://msdn.microsoft.com/en-us/library/windows/desktop/ms679356.aspx) macro.  
   
--   La opción del compilador /GS revisada protege frente a saturaciones del búfer de forma más exhaustiva que en versiones anteriores. Esta versión podría insertar comprobaciones de seguridad adicionales en la pila que podría disminuir el rendimiento. Use la nueva palabra clave __declspec(safebuffers) para indicar al compilador que no inserte comprobaciones de seguridad para una función determinada.  
+-   The revised /GS compiler option guards against buffer overruns more comprehensively than in earlier versions. This version might insert additional security checks in the stack that might decrease performance. Use the new __declspec(safebuffers) keyword to instruct the compiler to not insert security checks for a particular function.  
   
--   Si compila con las opciones del compilador /GL (Whole Program Optimization) y /clr (compilación de Common Language Runtime), se omite la opción /GL. Este cambio se ha realizado porque la combinación de opciones del compilador resultaba poco ventajosa. Como resultado de este cambio, se mejora el rendimiento de la compilación.  
+-   If you compile with both the /GL (Whole Program Optimization) and /clr (Common Language Runtime Compilation) compiler options, the /GLoption is ignored. This change was made because the combination of compiler options provided little benefit. As a result of this change, the performance of the build is improved.  
   
--   De manera predeterminada, la compatibilidad con trígrafos está deshabilitada en Visual C++ 2010. Use la opción del compilador /Zc:trigraphs para habilitar la compatibilidad con trígrafos. Un trígrafo se compone de dos signos de interrogación consecutivos ("??") seguidos de un tercer carácter único. El compilador reemplaza un trígrafo por un carácter de puntuación correspondiente. Por ejemplo, el compilador reemplaza el trígrafo "? ?=" por el carácter "#". Use trígrafos en archivos de código fuente C que usen un juego de caracteres que no contenga representaciones gráficas adecuadas para algunos caracteres de puntuación.  
+-   By default, support for trigraphs is disabled in Visual C++ 2010 . Use the /Zc:trigraphs compiler option to enable trigraphs support. A trigraph consists of two consecutive question marks ("??") followed by a unique third character. The compiler replaces a trigraph with a corresponding punctuation character. For example, the compiler replaces the "??=" trigraph with the '#' character. Use trigraphs in C source files that use a character set that does not contain convenient graphic representations for some punctuation characters.  
   
--   El enlazador ya no admite la optimización para Windows 98. La opción /OPT (optimizaciones) produce un error en tiempo de compilación si especifica /OPT:WIN98 u /OPT:NOWIN98.  
+-   The linker no longer supports optimizing for Windows 98. The /OPT (Optimizations) option produces a compile time error if you specify/OPT:WIN98 or /OPT:NOWIN98.  
   
--   Las opciones predeterminadas del compilador que se especifican mediante las propiedades de sistema de compilación RuntimeLibrary y DebugInformationFormat han cambiado. De manera predeterminada, estas propiedades de compilación se especifican en proyectos creados con las versiones de Visual C++ de 7.0 a 10.0. Si migra un proyecto creado por Visual C++ 6.0, considere la posibilidad de especificar un valor para estas propiedades.  
+-   The default compiler options that are specified by the RuntimeLibrary and DebugInformationFormat build system properties have been changed. By default, these build properties are specified in projects that are created by Visual C++ releases 7.0 through 10.0. If you migrate a project that was created by Visual C++ 6.0, consider whether to specify a value for these properties.  
   
--   En Visual C++ 2010, RuntimeLibrary = MultiThreaded (/ MD) y DebugInformationFormat = ProgramDatabase (/Zi). En Visual C++ 9.0,RuntimeLibrary = MultiThreaded (/MT) y DebugInformationFormat = Disabled.  
+-   In Visual C++ 2010, RuntimeLibrary = MultiThreaded (/MD) and DebugInformationFormat = ProgramDatabase (/Zi). In Visual C++ 9.0,RuntimeLibrary = MultiThreaded (/MT) and DebugInformationFormat = Disabled.  
   
 ### <a name="clr"></a>CLR  
   
--   Los compiladores de Microsoft C# y Visual Basic ahora pueden generar un ensamblado de interoperabilidad no primario (no-PIA). Un ensamblado no-PIA puede usar los tipos COM sin la implementación del ensamblado de interoperabilidad primario (PIA) correspondiente. Al usar ensamblados no-PIA generados por Visual C# o Visual Basic, debe hacer referencia el ensamblado PIA en el comando de compilación antes de hacer referencia a cualquier ensamblado no-PIA que use la biblioteca.  
+-   The Microsoft C# and Visual Basic compilers can now produce a no primary interop assembly (no-PIA). A no-PIA assembly can use COM types without the deployment of the relevant primary interop assembly (PIA). When consuming no-PIA assemblies produced by Visual C# or Visual Basic, you must reference the PIA assembly on the compile command before you reference any no-PIA assembly that uses the library.  
   
-### <a name="visual-c-projects-and-msbuild"></a>Proyectos de Visual C++ y MSBuild  
+### <a name="visual-c-projects-and-msbuild"></a>Visual C++ Projects and MSBuild  
   
--   Los proyectos de Visual C++ se basan ahora en la herramienta MSBuild. Por tanto, los archivos de proyecto usan un nuevo formato de archivo XML y un sufijo de archivo .vcxproj. Visual C++ 2010 convierte de forma automática los archivos de proyecto de versiones anteriores de Visual Studio al nuevo formato de archivo. Un proyecto existente se ve afectado si depende de la herramienta de compilación anterior, VCBUILD.exe, o del sufijo de archivo de proyecto .vcproj.  
+-   Visual C++ projects are now based on the MSBuild tool. Consequently, project files use a new XML file format and a .vcxproj file suffix. Visual C++ 2010 automatically converts project files from earlier versions of Visual Studio to the new file format. An existing project is affected if it depends on the previous build tool, VCBUILD.exe, or project file suffix, .vcproj.  
   
--   En versiones anteriores, Visual C++ admitía la evaluación en tiempo de ejecución de hojas de propiedades. Por ejemplo, una hoja de propiedades primaria podría importar una hoja de propiedades secundaria y el elemento primario podría usar una variable definida en el elemento secundario para definir otras variables. La evaluación en tiempo de ejecución ha habilitado al elemento primario para que use la variable secundaria incluso antes de importar la hoja de propiedades secundarias. En Visual C++ 2010, una variable de hoja de proyecto no se puede usar antes de definirse porque MSBuild solo admite la evaluación temprana.  
+-   In earlier releases, Visual C++ supported the late evaluation of property sheets. For example, a parent property sheet could import a child property sheet, and the parent could use a variable defined in the child to define other variables. Late evaluation enabled the parent to use the child variable even before the child property sheet was imported. In Visual C++ 2010, a project sheet variable cannot be used before it is defined because MSBuild supports only early evaluation.  
   
 ### <a name="ide"></a>IDE  
   
--   El cuadro de diálogo de finalización de aplicación ya no finaliza una aplicación. En versiones anteriores, cuando la función abort() o terminate() cierra la versión comercial de una aplicación, la biblioteca en tiempo de ejecución de C mostraba un mensaje de finalización de aplicación en un cuadro de diálogo o ventana de consola. Este mensaje decía, en parte: “Esta aplicación solicitó la finalización del tiempo de ejecución de modo no habitual. Póngase en contacto con el equipo de asistencia técnica de la aplicación para obtener más información”.                 El mensaje de finalización de aplicación era redundante porque Windows mostraba posteriormente el controlador de finalización actual, que normalmente era el cuadro de diálogo del informe de errores de Windows (Dr. Watson) o el depurador de Visual Studio. A partir de Visual Studio 2010, la biblioteca en tiempo de ejecución de C no muestra el mensaje. Además, el tiempo de ejecución impide que la aplicación finalice antes de iniciar un depurador. Se trata de un cambio importante solo si depende del comportamiento anterior del mensaje de finalización de la aplicación.  
+-   The application termination dialog box no longer ends an application. In previous releases, when the abort() or terminate() function closed the                 retail build of an application, the C Run-Time Library displayed an application termination message in a console window or dialog box. The message said in part, "This                 application has requested the Runtime to terminate it in an unusual way. Please contact the application's support team for more information."                 The application termination message was redundant because Windows subsequently displayed the current termination handler, which was usually the Windows Error Reporting                 (Dr. Watson) dialog box or the Visual Studio debugger. Starting in Visual Studio 2010, the C Run-Time Library does not display the message. Furthermore, the runtime                 prevents the application from ending before a debugger starts. This is a breaking change only if you depend on the previous behavior of the application termination                 message.  
   
--   Específicamente para Visual Studio 2010, IntelliSense no funciona para código o atributos de C++/CLI, Buscar todas las referencias no funciona para las variables locales y el modelo de código no recupera nombres de tipo de ensamblados importados ni resuelve tipos para sus nombres completos.  
+-   Specifically for Visual Studio 2010, IntelliSense does not work for C++/CLI code or attributes, Find All References does not work for local                 variables, and Code Model does not retrieve type names from imported assemblies or resolve types to their fully qualified names.  
   
-### <a name="libraries"></a>Bibliotecas  
+### <a name="libraries"></a>Libraries  
   
--   La clase SafeInt se incluye en Visual C++ y ya no es una descarga independiente. Se trata de un cambio importante solo si ha desarrollado una clase también denominada "SafeInt".  
+-   The SafeInt class is included in Visual C++ and is no longer in a separate download. This is a breaking change only if you have developed a class that is also named "SafeInt".  
   
--   El modelo de implementación de bibliotecas ya no usa manifiestos para encontrar una versión concreta de una biblioteca de vínculos dinámicos. En su lugar, el nombre de cada biblioteca de vínculos dinámicos contiene su número de versión y tiene que usar ese nombre para buscar la biblioteca.  
+-   The libraries deployment model no longer uses manifests to find a particular version of a dynamic link library. Instead, the name of each dynamic link library contains its version number, and you use that name to locate the library.  
   
--   En versiones anteriores de Visual Studio, podía volver a compilar las bibliotecas en tiempo de ejecución. Visual C++ 2010 ya no admite la compilación de sus propias copias de los archivos de la biblioteca en tiempo de ejecución de C.  
+-   In previous versions of Visual Studio, you could rebuild the run time libraries. Visual C++ 2010 no longer supports building your own copies of the C run time library files.  
   
-### <a name="standard-library"></a>biblioteca estándar  
+### <a name="standard-library"></a>Standard Library  
   
--   El encabezado \<iterator> ya no lo incluyen de forma automática muchos otros archivos de encabezado. En su lugar, incluya ese encabezado de forma explícita si necesita compatibilidad con los iteradores independientes definidos en el encabezado .vcproj.interator> "Un proyecto existente se ve afectado si depende de la herramienta de compilación anterior, VCBUILD.exe, o del sufijo de archivo de proyecto .vcproj".  
+-   The \<iterator>                 header is no longer included automatically by many other header files. Instead, include that header explicitly if you require support                 for the standalone iterators defined in the An existing project is affected if it depends on the previous build tool, VCBUILD.exe, or project file suffix,                  .vcproj.interator> header.  
   
--   En el encabezado \<algorithm>, se han quitado las funciones checked_ * y unchecked_\*. Y, en el encabezado \<iterator>>, se ha quitado la clase checked_iterator y se ha agregado la clase unchecked_array_iterator.  
+-   In the \<algorithm>                 header, the checked_* and unchecked_\* functions are removed. And in the \<iterator>> header, the                  checked_iteratorclass is removed, and the unchecked_array_iterator class has been added.  
   
--   Se ha quitado el constructor CComPtr::CComPtr(int). Este constructor permitía que un objeto CComPtr se construyera a partir de la macro NULL, pero no era necesario y permitía construcciones sin sentido de enteros distintos de cero.  
+-   The CComPtr::CComPtr(int) constructor is removed. That constructor allowed a CComPtr object to be constructed from the NULL macro, but was unnecessary and allowed nonsensical constructions from non-zero integers.  
   
-     Aún se puede construir un CComPtr de NULL, que se define como 0, pero se producirá un error si se construye a partir de un entero distinto de 0 literal. Use nullptr en su lugar.  
+     A CComPtr can still be constructed from NULL, which is defined as 0, but will fail if constructed from an integer other than literal 0. use nullptr instead.  
   
--   Se han quitado las siguientes funciones de miembro: ctype::_Do_narrow_s, ctype::_Do_widen_s, ctype::_narrow_s, ctype::_widen_s. Si una aplicación usa una de estas funciones miembro, debe reemplazarla con la versión no segura correspondiente: ctype::do_narrow,ctype::do_widen, ctype::narrow, ctype::widen.  
+-   The following ctype member functions were removed: ctype::_Do_narrow_s, ctype::_Do_widen_s, ctype::_narrow_s, ctype::_widen_s. If an application uses one of these member functions, you must replace it with the corresponding non-secure version: ctype::do_narrow,ctype::do_widen, ctype::narrow, ctype::widen.  
   
-### <a name="crt-mfc-and-atl-libraries"></a>Bibliotecas ATL, MFC y CRT  
+### <a name="crt-mfc-and-atl-libraries"></a>CRT, MFC, and ATL Libraries  
   
--   Se ha quitado la compatibilidad para que los usuarios compilen las bibliotecas CRT, MFC y ATL. Por ejemplo, no se proporciona un archivo nmake adecuado.                 En cambio, los usuarios aún tienen acceso al código fuente de estas bibliotecas. Probablemente se publicará un documento que describe las opciones de MSBuild que usa Microsoft para compilar estas bibliotecas en un blog del equipo de Visual C++.  
+-   Support has been removed for users to build the CRT, MFC, and ATL libraries. For example, an appropriate nmake file is not provided.                 However, users still have access to the source code for these libraries. And a document that describes the MSBuild options that Microsoft uses to build these                 libraries will probably be posted in a Visual C++ Team Blog.  
   
--   Se ha quitado la compatibilidad de MFC con IA64. En cambio, aún se proporciona compatibilidad con CRT y ATL en IA64.  
+-   MFC support for IA64 has been removed. However, support for the CRT and ATL on IA64 is still provided.  
   
--   Los ordinales ya no se vuelven a usar en archivos de definición de módulos (.def) de MFC. Este cambio significa que los ordinales no serán distintos entre las versiones secundarias y se mejorará la compatibilidad binaria de los service packs y versiones de ingeniería de corrección rápida.  
+-   Ordinals are no longer reused in MFC module-definition (.def) files. This change means ordinals will not be different between minor versions, and binary compatibility for service packs and quick fix engineering releases will be improved.  
   
--   Se ha agregado una nueva función virtual a la clase CDocTemplate. Esta nueva función virtual es [CDocTemplate (clase)](../mfc/reference/cdoctemplate-class.md). La versión anterior de OpenDocumentFile tenía dos parámetros. La nueva versión tiene tres parámetros. Para admitir al administrador de reinicio, cualquier clase derivada de CDocTemplate debe implementar la versión que tiene tres parámetros. El nuevo parámetro es bAddToMRU.  
+-   A new virtual function was added to the CDocTemplate class. This new virtual function is [CDocTemplate Class](../mfc/reference/cdoctemplate-class.md). The previous version of OpenDocumentFile had two parameters. The new version has three parameters. To support the restart manager, any class derived from CDocTemplate must implement the version that has three parameters. The new parameter is bAddToMRU.  
   
-### <a name="macros-and-environment-variables"></a>Variables de entorno y macros  
+### <a name="macros-and-environment-variables"></a>Macros and Environment Variables  
   
--   Ya no se admite la variable de entorno __MSVCRT_HEAP_SELECT. Se ha quitado esta variable de entorno y no hay ningún reemplazo.  
+-   The environment variable __MSVCRT_HEAP_SELECT is no longer supported. This environment variable is removed and there is no replacement.  
   
-### <a name="microsoft-macro-assembler-reference"></a>Referencia de Microsoft Macro Assembler  
+### <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler Reference  
   
--   Se han quitado varias directivas del compilador de referencia de Microsoft Macro Assembler. Las directivas que se han quitado son .186, .286, .286P, .287,.8086, .8087, y .NO87.  
+-   Several directives were removed from the Microsoft Macro Assembler Reference compiler. The removed directives are .186, .286, .286P, .287,.8086, .8087, and .NO87.  
   
-## <a name="visual-c-2008-breaking-changes"></a>Cambios importantes en Visual C++ 2008  
+## <a name="visual-c-2008-breaking-changes"></a>Visual C++ 2008 Breaking Changes  
   
-### <a name="compiler"></a>Compilador  
+### <a name="compiler"></a>Compiler  
   
--   Ya no se admiten las plataformas Windows 95, Windows 98, Windows Millennium Edition y Windows NT. Estos sistemas operativos se han quitado de la lista de plataformas de destino.  
+-   The Windows 95, Windows 98, Windows ME, and Windows NT platforms are no longer supported. These operating systems have been removed from the list of targeted platforms.  
   
--   El compilador ya no admite varios atributos que estaban directamente asociados con el servidor ATL. Ya no se admiten los siguientes atributos:  
+-   The compiler no longer supports multiple attributes that were directly associated with ATL Server. The following attributes are no longer supported:  
   
     -   perf_counter  
   
@@ -3349,21 +3349,21 @@ C c;
   
     -   tag_name  
   
-### <a name="visual-c-projects"></a>Proyectos de Visual C++  
+### <a name="visual-c-projects"></a>Visual C++ Projects  
   
--   Al actualizar proyectos desde versiones anteriores de Visual Studio, es posible que tenga que modificar las macros WINVER y _WIN32_WINNT para que sean mayores o iguales a 0x0500.  
+-   When upgrading projects from previous versions of Visual Studio, you might have to modify the WINVER and _WIN32_WINNT macros so that they are greater than or equal to 0x0500.  
   
--   A partir de Visual Studio 2008, el Asistente para nuevos proyectos no tiene una opción para crear un proyecto de C++ SQL Server. Los proyectos de SQL Server creados con una versión anterior de Visual Studio seguirán compilándose y funcionarán correctamente.  
+-   Beginning with Visual Studio 2008, the new project wizard does not have an option to create a C++ SQL Server project. SQL Server projects created by using an earlier version of Visual Studio will still compile and work correctly.  
   
--   Se ha quitado el archivo de encabezado de la API de Windows Winable.h. Incluya Winuser.h en su lugar.  
+-   The Windows API header file Winable.h has been removed. Include Winuser.h instead.  
   
--   Se ha quitado la biblioteca de la API de Windows Rpcndr.lib. Vincule con rpcrt4.lib en su lugar.  
+-   The Windows API library Rpcndr.lib has been removed. Link with rpcrt4.lib instead.  
   
 ### <a name="crt"></a>CRT  
   
--   Se ha quitado la compatibilidad con Windows 95, Windows 98, Windows Millennium Edition y Windows NT 4.0.  
+-   Support for Windows 95, Windows 98, Windows Millennium Edition, and Windows NT 4.0 has been removed.  
   
--   Se han quitado las siguientes variables globales:  
+-   The following global variables have been removed:  
   
     -   _osplatform  
   
@@ -3375,7 +3375,7 @@ C c;
   
     -   _winver  
   
--   Se han quitado las siguientes funciones. Use las funciones de API de Windows GetVersion o GetVersionEx en su lugar:  
+-   The following functions have been removed. Use the Windows API functions GetVersion or GetVersionEx instead:  
   
     -   _get_osplatform  
   
@@ -3387,88 +3387,88 @@ C c;
   
     -   _get_winver  
   
--   Se ha cambiado la sintaxis de anotaciones de SAL. Para obtener más información, consulte [Anotaciones de SAL](../c-runtime-library/sal-annotations.md).  
+-   The syntax for SAL Annotations has changed. For more information, see [SAL Annotations](../c-runtime-library/sal-annotations.md).  
   
--   El filtro IEEE ahora admite el conjunto de instrucciones de SSE 4.1. Para obtener más información, consulte [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md)_fpieee_flt.  
+-   The IEEE filter now supports the SSE 4.1 instruction set. For more information, see [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md)_fpieee_flt.  
   
--   Las bibliotecas en tiempo de ejecución de C que se suministran con Visual Studio ya no dependen del archivo DLL de sistema msvcrt.dll.  
+-   The C Run-Time Libraries that ship with Visual Studio are no longer dependent on the system DLL msvcrt.dll.  
   
-### <a name="standard-library"></a>biblioteca estándar  
+### <a name="standard-library"></a>Standard Library  
   
--   Se ha quitado la compatibilidad con Windows 95, Windows 98, Windows Millennium Edition y Windows NT 4.0.  
+-   Support for Windows 95, Windows 98, Windows Millennium Edition, and Windows NT 4.0 has been removed.  
   
--   Al compilar en modo de depuración con _HAS_ITERATOR_DEBUGGING definido (reemplazado por [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) después de Visual Studio 2010), una aplicación impondrá ahora cuando un iterador intente incrementar o disminuir más allá de los límites del contenedor subyacente.  
+-   When compiling in debug mode with _HAS_ITERATOR_DEBUGGING defined (superseded by [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) after Visual Studio 2010), an application will now assert when an iterator attempts to increment or decrement past the bounds of the underlying container.  
   
--   La variable miembro c de la clase Stack está declarada como protegida. Anteriormente, esta variable miembro estaba declarada como pública.  
+-   The member variable c of the stack Class is now declared protected. Previously, this member variable was declared public.  
   
--   El comportamiento de money_get::do_get ha cambiado. Anteriormente, al analizar un importe monetario con más dígitos de fracción a los que llamaba frac_digits, do_get los consumía todos. Ahora, do_get detiene el análisis después de consumir caracteres de frac_digits.  
+-   The behavior of money_get::do_get has changed. Previously, when parsing a monetary amount with more fraction digits than are called for by frac_digits, do_get used to consume them all. Now, do_get stops parsing after consuming at most frac_digits characters.  
   
 ### <a name="atl"></a>ATL  
   
--   No se puede compilar ATL sin una dependencia en CRT. En versiones anteriores de Visual Studio, podía usar #define ATL_MIN_CRT para hacer que un proyecto de ATL dependa mínimamente de CRT. En Visual C++ 2008, todos los proyectos de ATL dependen mínimamente de CRT, independientemente de si se ha definido ATL_MIN_CRT.  
+-   ATL cannot be built without a dependency on CRT. In earlier versions of Visual Studio, you could use #define ATL_MIN_CRT to make an ATL project minimally dependent on CRT. In Visual C++ 2008, all ATL projects are minimally dependent on CRT regardless of whether ATL_MIN_CRT is defined.  
   
--   La base de código del servidor ATL se ha publicado como un proyecto de origen compartido en CodePlex y no se instala como parte de Visual Studio. Se han mantenido las clases de codificación y descodificación de datos de atlenc.h y las clases y funciones de utilidad de atlutil.h y atlpath.h y ahora forman parte de la biblioteca ATL. Varios archivos asociados con el servidor ATL ya no forman parte de Visual Studio.  
+-   The ATL Server codebase has been released as a shared source project on CodePlex and is not installed as part of Visual Studio. Data encoding and decoding classes from atlenc.h and utility functions and classes from atlutil.h and atlpath.h have been kept and are now part of the ATL library. Several files associated with ATL Server are no longer part of Visual Studio.  
   
--   Algunas funciones ya no están incluidas en el archivo DLL. Todavía se encuentran en la biblioteca de importación. Esto no afectará al código que usa las funciones de forma estática. Afectará solo al código que usa estas funciones de forma dinámica.  
+-   Some functions are no longer included in the DLL. They are still located in the import library. This will not affect code that uses the functions statically. It will affect only the code that uses these functions dynamically.  
   
--   Las macros PROP_ENTRY y PROP_ENTRY_EX están en desuso y se han reemplazado por las macros PROP_ENTRY_TYPE y PROP_ENTRY_TYPE_EX por motivos de seguridad.  
+-   The macros PROP_ENTRY and PROP_ENTRY_EX have been deprecated and replaced with the macros PROP_ENTRY_TYPE andPROP_ENTRY_TYPE_EX for security reasons.  
   
-### <a name="atlmfc-shared-classes"></a>Clases compartidas de ATL y MFC  
+### <a name="atlmfc-shared-classes"></a>ATL/MFC Shared Classes  
   
--   No se puede compilar ATL sin una dependencia en CRT. En versiones anteriores de Visual Studio, podía usar #define ATL_MIN_CRT para hacer que un proyecto de ATL dependa mínimamente de CRT. En Visual C++ 2008, todos los proyectos de ATL dependen mínimamente de CRT, independientemente de si se ha definido ATL_MIN_CRT.  
+-   ATL cannot be built without a dependency on CRT. In earlier versions of Visual Studio, you could use #define ATL_MIN_CRT to make an ATL project minimally dependent on CRT. In Visual C++ 2008, all ATL projects are minimally dependent on CRT regardless of whether ATL_MIN_CRT is defined.  
   
--   La base de código del servidor ATL se ha publicado como un proyecto de origen compartido en CodePlex y no se instala como parte de Visual Studio. Se han mantenido las clases de codificación y descodificación de datos de atlenc.h y las clases y funciones de utilidad de atlutil.h y atlpath.h y ahora forman parte de la biblioteca ATL. Varios archivos asociados con el servidor ATL ya no forman parte de Visual Studio.  
+-   The ATL Server codebase has been released as a shared source project on CodePlex and is not installed as part of Visual Studio. Data encoding and decoding classes from atlenc.h and utility functions and classes from atlutil.h and atlpath.h have been kept and are now part of the ATL library. Several files associated with ATL Server are no longer part of Visual Studio.  
   
--   Algunas funciones ya no están incluidas en el archivo DLL. Todavía se encuentran en la biblioteca de importación. Esto no afectará al código que usa las funciones de forma estática. Afectará solo al código que usa estas funciones de forma dinámica.  
+-   Some functions are no longer included in the DLL. They are still located in the import library. This will not affect code that uses the functions statically. It will affect only the code that uses these functions dynamically.  
   
 ### <a name="mfc"></a>MFC  
   
--   Clase CTime: la clase CTime acepta ahora fechas a partir del 1/1/1900 de la era común en lugar de 1/1/1970 de la era común.              
--   Orden de tabulación de controles en cuadros de diálogo de MFC: el orden de tabulación correcto de varios controles en un cuadro de diálogo de MFC se ve afectado si se inserta un control ActiveX de MFC en el orden de tabulación. Este cambio corrige el problema.  
+-   CTime Class: The CTime class now accepts dates starting from 1/1/1900 C.E. instead of 1/1/1970 C.E.              
+-   Tab order of controls in MFC dialogs: The correct tab order of multiple controls in an MFC dialog is disturbed if an MFC ActiveX control is inserted in the tab order. This change corrects that problem.  
   
-     Por ejemplo, cree una aplicación de cuadro de diálogo de MFC que tenga un control ActiveX y varios controles de edición. Coloque el control ActiveX en el medio de la orden de tabulación de los controles de edición. Inicie la aplicación, haga clic en un control de edición cuyo orden de tabulación esté después del control ActiveX y pulse TAB. Antes de realizar este cambio, el foco pasaba al control de edición siguiendo el control ActiveX en lugar del control de edición siguiente en el orden de tabulación.  
+     For example, create an MFC dialog application that has an ActiveX control and several edit controls. Position the ActiveX control in the middle of the tab order of the edit controls. Start the application, click an edit control whose tab order is after the ActiveX control, then tab. Prior to this change, the focus went to the edit control following the ActiveX control instead of the next edit control in the tab order.  
   
--   Clase CFileDialog: las plantillas personalizadas para la clase CFileDialog no se pueden migrar a Windows Vista de forma automática. Aún se pueden usar, pero no tendrán la funcionalidad adicional o el aspecto de los cuadros de diálogo de estilo de Windows Vista.  
+-   CFileDialog Class:   Custom templates for the CFileDialog class cannot be automatically ported to Windows Vista. They are still usable, but will not have the additional functionality or looks of Windows Vista style dialogs.  
   
--   Clase CWnd y clase CFrameWnd: se ha quitado el método CWnd::GetMenuBarInfo.  
+-   CWnd Class and CFrameWnd Class:    The CWnd::GetMenuBarInfo method was removed.  
   
-     El método CFrameWnd::GetMenuBarInfo es ahora un método no virtual. Para obtener más información, consulte la función GetMenuBarInfo en el SDK de Windows.  
+     The CFrameWnd::GetMenuBarInfo method is now a non-virtual method. For more information, see GetMenuBarInfo Functionin the Windows SDK.  
   
--   Compatibilidad con ISAPI de MFC: MFC ya no admite la compilación de aplicaciones con la interfaz de programación de aplicaciones para servidores de Internet (ISAPI). Si quiere compilar una aplicación de ISAPI, llame directamente a las extensiones de ISAPI.  
+-   MFC ISAPI support:  MFC no longer supports building applications with the Internet Server Application Programming Interface (ISAPI). If you want to build an ISAPI application, call the ISAPI extensions directly.  
   
--   API de ANSI en desuso: las versiones ANSI de varios métodos de MFC están en desuso. Use las versiones Unicode de esos métodos en sus aplicaciones futuras. Para obtener más información, consulte Requisitos de compilación para los controles comunes de Windows Vista.  
+-   Deprecated ANSI APIs:    The ANSI versions of several MFC methods are deprecated. Use the Unicode versions of those methods in your future applications. For more information, see Build Requirements for Windows Vista Common Controls.  
   
-## <a name="visual-c-2005-breaking-changes"></a>Cambios importantes en Visual C++ 2005  
+## <a name="visual-c-2005-breaking-changes"></a>Visual C++ 2005 Breaking Changes  
   
 ### <a name="crt"></a>CRT  
   
--   Algunas funciones han quedado desusadas. Consulte las funciones de CRT en desuso.  
+-   Many functions have been deprecated. See Deprecated CRT Functions.  
   
--   Ahora, muchas funciones validan sus parámetros y detienen la ejecución si hay parámetros no válidos. Esto puede interrumpir el código que pasa parámetros no válidos y se basa en la función al omitirlos o simplemente al devolver un código de error. Consulte la validación de parámetros.  
+-   Many functions now validate their parameters, halting execution if given invalid parameters. This may break code that passes invalid parameters and relies on the function ignoring them or just returning an error code. See Parameter Validation.  
   
--   El valor de descriptor de archivo -2 ahora se usa para indicar que stdout y stderr no están disponibles para la salida, por ejemplo, en una aplicación Windows que no tiene ninguna ventana de consola. El valor anterior que se usaba era -1. Para obtener más información, consulte [_fileno](../c-runtime-library/reference/fileno.md).  
+-   The file descriptor value -2 is now used to indicate that stdout and stderr are not available for output, as for example in a Windows application that has no console window. The previous value used was -1. For more information, see [_fileno](../c-runtime-library/reference/fileno.md).  
   
--   Se han quitado las bibliotecas de CRT de un solo subproceso libc.lib y libcd.lib. Use las bibliotecas de CRT multiproceso. Ya no se admite la marca de compilador /ML. Se han agregado versiones de no bloqueo de algunas funciones en casos en que es importante la diferencia de rendimiento entre el código multiproceso y el código de un solo subproceso.  
+-   The single-threaded CRT libraries, libc.lib and libcd.lib, have been removed. Use the multi-threaded CRT libraries. The /ML compiler flag is no longer supported. Non-locking versions of some functions have been added in cases where the performance difference between the multithreaded code and the single-threaded code is potentially significant.  
   
--   Se ha quitado la sobrecarga de pow, double pow(int, int), para cumplir mejor con el estándar.  
+-   The overload of pow, double pow(int, int), was removed to better conform with the standard.  
   
--   El especificador de formato %n ya no se admite de manera predeterminada en ninguna de las familias de funciones printf porque es inherentemente inseguro. El comportamiento predeterminado si se encuentra %n es invocar al controlador de parámetros no válidos. Para habilitar la compatibilidad de %n, use _set_printf_count_output (también see_get_printf_count_output).  
+-   The %n format specifier is no longer supported by default in any of the printf family of functions because it is inherently insecure. The default behavior if %n is encountered is to invoke the invalid parameter handler. To enable %n support, use _set_printf_count_output (also see_get_printf_count_output).  
   
--   sprintf ahora imprime el signo negativo de un cero firmado.  
+-   sprintf now prints the negative sign of a signed zero.  
   
--   swprintf ha cambiado para cumplir con el estándar; ahora requiere un parámetro de tamaño. La forma de swprintf sin un parámetro de tamaño está desusada.  
+-   swprintf has been changed to conform with the Standard; it now requires a size parameter. The form of swprintf without a size parameter has been deprecated.  
   
--   Se ha quitado _set_security_error_handler. Quite todas las llamadas a esa función; el controlador predeterminado es una forma mucho más segura de tratar los errores de seguridad.  
+-   _set_security_error_handler has been removed. Remove any calls to that function; the default handler is a much safer way of dealing with security errors.  
   
--   time_t ahora es un valor de 64 bits (a menos que se defina _USE_32BIT_TIME_T).  
+-   time_t is now a 64-bit value (unless _USE_32BIT_TIME_T is defined).  
   
--   Las funciones _spawn, _wspawn ahora no modifican errno correctamente, tal y como especifica el estándar de C.  
+-   The _spawn, _wspawn Functions now leave errno untouched on success, as specified by the C Standard.  
   
--   RTC usa ahora caracteres anchos de manera predeterminada.  
+-   RTC now uses wide characters by default.  
   
--   Las funciones de compatibilidad de control de punto flotante han quedado en desuso para aplicaciones compiladas con /CLR o/CLR:PURE. Las funciones afectadas son _clear87, _clearfp, _control87, _controlfp, _fpreset, _status87, _statusfp. Puede deshabilitar la advertencia de desuso al definir _CRT_MANAGED_FP_NO_DEPRECATE, pero el uso de estas funciones en código administrado es imprevisible y no se admite.  
+-   Floating-point control word support functions have been deprecated for applications compiled with /CLR or /CLR:PURE. The affected functions are _clear87, _clearfp, _control87, _controlfp, _fpreset, _status87, _statusfp. You can disable the deprecation warning by defining _CRT_MANAGED_FP_NO_DEPRECATE, but the use of these functions in managed code is unpredictable and unsupported.  
   
--   Algunas funciones devuelven ahora punteros const. El comportamiento anterior no const puede reanudarse al definir _CONST_RETURN. Las funciones afectadas son  
+-   Some functions now return const pointers. The old, non-const behavior can be reinstated by defining _CONST_RETURN. The affected functions are  
   
     1.  memchr, wmemchr  
   
@@ -3480,66 +3480,66 @@ C c;
   
     5.  strstr, wcsstr, _mbsstr, _mbsstr_l  
   
--   Al vincular con Setargv.obj o Wsetargv.obj, ya no es posible suprimir la expansión de un carácter comodín en la línea de comandos al escribirlo entre comillas dobles. Para obtener más información, consulte [Expandir argumentos de caracteres comodín](../c-language/expanding-wildcard-arguments.md).  
+-   When linking with Setargv.obj or Wsetargv.obj, it is no longer possible to suppress the expansion of a wildcard character on the command line by enclosing it in double quotes. For more information, see [Expanding Wildcard Arguments](../c-language/expanding-wildcard-arguments.md).  
   
-### <a name="standard-library-2005"></a>Biblioteca estándar (2005)  
+### <a name="standard-library-2005"></a>Standard Library (2005)  
   
--   La clase de excepción (ubicada en el encabezado \<exception>) se ha movido al espacio de nombres std. En versiones anteriores, esta clase estaba en el espacio de nombres global. Para resolver cualquier error que indique que no se encuentra la clase de excepción, agregue la siguiente instrucción using al código: using namespace std;  
+-   The exception class (located in the \<exception> header) has been moved to the std namespace. In previous versions, this class was in the global namespace. To resolve any errors indicating that the exception class cannot be found, add the following using statement to your code:                 using namespace std;  
   
--   Al llamar a valarray::resize(), el contenido de valarray se perderá y se reemplazará por los valores predeterminados. El método resize() está pensado para reinicializar valarray en lugar de hacer que crezca de manera dinámica como un vector.  
+-   When calling valarray::resize(), the contents of the valarray will be lost and will be replaced by default values. The resize() method is intended to reinitialize the valarray rather than grow it dynamically like a vector.  
   
--   Iteradores de depuración: las aplicaciones compiladas con una versión de depuración de la biblioteca en tiempo de ejecución de C y que usan iteradores de forma incorrecta pueden empezar a ver aserciones en tiempo de ejecución. Para deshabilitar estas aserciones, debe definir _HAS_ITERATOR_DEBUGGING (reemplazado por [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) a partir de Visual Studio 2010) en 0. Para obtener más información, consulte [Compatibilidad de los iteradores de depuración](../standard-library/debug-iterator-support.md)  
+-   Debug Iterators: Applications built with a debug version of the C-Runtime Library and which use iterators incorrectly might begin to see asserts at runtime. To disable these asserts, you must define _HAS_ITERATOR_DEBUGGING (superseded by [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) after Visual Studio 2010) to 0. For more information, see [Debug Iterator Support](../standard-library/debug-iterator-support.md)  
   
-## <a name="visual-c-net-2003-breaking-changes"></a>Cambios importantes en Visual C++ .NET 2003  
+## <a name="visual-c-net-2003-breaking-changes"></a>Visual C++ .NET 2003 Breaking Changes  
   
-### <a name="compiler"></a>Compilador  
+### <a name="compiler"></a>Compiler  
   
--   Ahora se requieren paréntesis de cierre para la directiva de preprocesador definida (C2004).  
+-   Closing parentheses now required for the defined preprocessor directive (C2004).  
   
--   Las especializaciones explícitas ya no buscan parámetros de plantilla desde la plantilla principal ([error del compilador C2146](../error-messages/compiler-errors-1/compiler-error-c2146.md)).  
+-   Explicit specializations no longer find template parameters from primary template ([Compiler Error C2146](../error-messages/compiler-errors-1/compiler-error-c2146.md)).  
   
--   Un miembro protegido (n) solo puede obtenerse a través de una función miembro de una clase (B) que hereda de la clase (A) de la que (n) es miembro ([error del compilador C2247](../error-messages/compiler-errors-1/compiler-error-c2247.md)).  
+-   A protected member (n) can only be accessed through a member function of a class (B) that inherits from the class (A) of which it (n) is a member ([Compiler Error C2247](../error-messages/compiler-errors-1/compiler-error-c2247.md)).  
   
--   Las comprobaciones de accesibilidad mejoradas en el compilador detectan ahora clases base inaccesibles ([error del compilador C2248](../error-messages/compiler-errors-1/compiler-error-c2248.md)).  
+-   Improved accessibility checks in compiler now detect inaccessible base classes ([Compiler Error C2248](../error-messages/compiler-errors-1/compiler-error-c2248.md)).  
   
--   No se puede detectar una excepción si el destructor o constructor de copia es inaccesible (C2316).  
+-   An exception cannot be caught if the destructor and/or copy constructor is inaccessible (C2316).  
   
--   Ya no se admiten los argumentos predeterminados de punteros a funciones ([error de compilador C2383](../error-messages/compiler-errors-1/compiler-error-c2383.md)).  
+-   Default arguments on pointers to functions no longer allowed ([Compiler Error C2383](../error-messages/compiler-errors-1/compiler-error-c2383.md)).  
   
--   No se puede inicializar un miembro de datos estático mediante una clase derivada ([error del compilador C2477](../error-messages/compiler-errors-1/compiler-error-c2477.md)).  
+-   A static data member cannot be initialized via derived class ([Compiler Error C2477](../error-messages/compiler-errors-1/compiler-error-c2477.md)).  
   
--   La inicialización de una definición de tipo no está permitida por el estándar y genera ahora un error del compilador ([error del compilador C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)).  
+-   The initialization of a typedef is not allowed by the standard and now generates a compiler error ([Compiler Error C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)).  
   
--   Ahora, bool es un tipo adecuado ([error del compilador C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)).  
+-   bool is now a proper type ([Compiler Error C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)).  
   
--   Una UDC puede crear ahora ambigüedad con operadores sobrecargados ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md)).  
+-   A UDC can now create ambiguity with overloaded operators ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md)).  
   
--   Ahora hay más expresiones que se consideran constantes válidas de puntero nulo ([error del compilador C2668](../error-messages/compiler-errors-2/compiler-error-c2668.md)).  
+-   More expressions are now considered valid null pointer constants ([Compiler Error C2668](../error-messages/compiler-errors-2/compiler-error-c2668.md)).  
   
--   template<> se requiere ahora en lugares en que el compilador previamente la implicaría ([error del compilador C2768](../error-messages/compiler-errors-2/compiler-error-c2768.md)).  
+-   template<> is now required in places where the compiler would previously imply it ([Compiler Error C2768](../error-messages/compiler-errors-2/compiler-error-c2768.md)).  
   
--   La especialización explícita de una función miembro fuera de la clase no es válida si la función ya se ha especializado explícitamente a través de una especialización de la clase de plantilla ([error del compilador C2910](../error-messages/compiler-errors-2/compiler-error-c2910.md)).  
+-   The expilicit specialization of a member function ourside the class is not valid if the function has already been explicitly specialized via a template class specialization ([Compiler Error C2910](../error-messages/compiler-errors-2/compiler-error-c2910.md)).  
   
--   Ya no se admiten parámetros de plantilla sin tipo de punto flotante ([error del compilador C2993](../error-messages/compiler-errors-2/compiler-error-c2993.md)).  
+-   Floating point non-type template parameters are no longer allowed ([Compiler Error C2993](../error-messages/compiler-errors-2/compiler-error-c2993.md)).  
   
--   No se admiten las plantillas de clase como argumentos de tipo de plantilla (C3206).  
+-   Class templates are not allowed as template type arguments (C3206).  
   
--   Ya no se introducen los nombres de función friend en el espacio de nombres contenedor ([error del compilador C3767](../error-messages/compiler-errors-2/compiler-error-c3767.md)).  
+-   Friend function names are no longer introduced into containing namespace ([Compiler Error C3767](../error-messages/compiler-errors-2/compiler-error-c3767.md)).  
   
--   El compilador ya no aceptará comas adicionales en una macro (C4002).  
+-   The compiler will no longer accept extra commas in a macro (C4002).  
   
--   Un objeto de tipo POD construido con un inicializador del formulario () será inicializado de forma predeterminada (C4345).  
+-   An object of POD type constructed with an initializer of the form () will be default-initialized (C4345).  
   
--   TypeName es necesario ahora si un nombre dependiente tiene que tratarse como un tipo ([advertencia del compilador (nivel 1) C4346](../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)).  
+-   typename is now required if a dependent name is to be treated as a type ([Compiler Warning (level 1) C4346](../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)).  
   
--   Ya no se consideran especializaciones de plantilla las funciones que se consideraban así incorrectamente (C4347).  
+-   Functions that were incorrectly considered template specializations are no longer considered so (C4347).  
   
--   No se pueden inicializar miembros de datos estáticos mediante una clase derivada (C4356).  
+-   Static data members cannot be initialized via derived class (C4356).  
   
--   Una especialización de plantilla de clase debe definirse antes de que se haya usado en un tipo devuelto ([advertencia del compilador (nivel 3) C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)).  
+-   A class template specialization needs to be defined before it was used in a return type ([Compiler Warning (level 3) C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)).  
   
--   Ahora, el compilador genera código inalcanzable (C4702).  
+-   The compiler now reports unreachable code (C4702).  
   
-## <a name="see-also"></a>Vea también  
-[Novedades de Visual C++ en Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+[What's New for Visual C++ in Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)
 

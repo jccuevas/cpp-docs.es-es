@@ -1,39 +1,55 @@
 ---
-title: "Espacios de nombres (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "namespace_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "global (espacio de nombres)"
-  - "espacios de nombres [C++]"
-  - "espacios de nombres [C++], C++"
-  - "espacios de nombres [C++], globales"
-  - "Visual C++, espacios de nombres"
+title: Namespaces (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 08/30/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- namespace_CPP
+dev_langs:
+- C++
+helpviewer_keywords:
+- namespaces [C++], C++
+- namespaces [C++]
+- namespaces [C++], global
+- global namespace
+- Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Espacios de nombres (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 42abd4adfe10b032849bfec391874cd249793c32
+ms.openlocfilehash: deb5926f15e4efad4378a9930f1e353e9af58516
+ms.contentlocale: es-es
+ms.lasthandoff: 08/31/2017
 
-Un espacio de nombres es una región declarativa que proporciona un ámbito a los identificadores \(nombres de tipos, funciones, variables, etc.\) de su interior.  Los espacios de nombres se utilizan para organizar el código en grupos lógicos y para evitar conflictos de nombres que pueden producirse, especialmente cuando la base de código incluye varias bibliotecas.  Todos los identificadores del ámbito del espacio de nombres son visibles entre sí sin calificación.  Los identificadores que están fuera del espacio de nombres pueden tener acceso a los miembros si usan el nombre completo de cada identificador \(por ejemplo `std::vector<std::string> vec;`\), o bien mediante una [using \(declaración\)](../cpp/using-declaration.md) para un identificador único \(`using std::string`\) o una [using \(directiva\)](../misc/using-directive-cpp.md) para todos los identificadores del espacio de nombres \(`using namespace std;`\).  El código de los archivos de encabezado debe utilizar siempre el nombre completo del espacio de nombres.  
+---
+# <a name="namespaces-c"></a>Namespaces (C++)
+A namespace is a declarative region that provides a scope to the identifiers (the names of types, functions, variables, etc) inside it. Namespaces are used to organize code into logical groups and to prevent name collisions that can occur especially when your code base includes multiple libraries. All identifiers at namespace scope are visible to one another without qualification. Identifiers outside the namespace can access the members by using the fully qualified name for each identifier, for example `std::vector<std::string> vec;`, or else by a [using Declaration](../cpp/using-declaration.md) for a single identifier (`using std::string`), or a [using Directive](../cpp/namespaces-cpp.md#using_directives) for all the identifiers in the namespace (`using namespace std;`). Code in header files should always use the fully qualified namespace name.  
   
- En el ejemplo siguiente se muestra una declaración de espacio de nombres y tres formas de que el código que está fuera del espacio de nombres obtenga acceso a sus miembros.  
+ The following example shows a namespace declaration and three ways that code outside the namespace can accesses their members.  
   
-```  
+```cpp  
 namespace ContosoData  
 {      
     class ObjectManager   
@@ -45,45 +61,46 @@ namespace ContosoData
 }  
 ```  
   
- Use el nombre completo:  
+ Use the fully qualified name:  
   
-```  
+```cpp  
 ContosoData::ObjectManager mgr;  
 mgr.DoSomething();  
 ContosoData::Func(mgr);  
 ```  
   
- Use una declaración using para poner un identificador en el ámbito:  
+ Use a using declaration to bring one identifier into scope:  
   
-```  
-using WidgetsUnlimited::ObjectManager;  
+```cpp  
+using ContosoData::ObjectManager;  
 ObjectManager mgr;  
 mgr.DoSomething();  
   
 ```  
   
- Use una directiva using para poner todo el espacio de nombres en el ámbito:  
+ Use a using directive to bring everything in the namespace into scope:  
   
-```  
-using namespace WidgetsUnlimited;  
+```cpp  
+using namespace ContosoData;
+  
 ObjectManager mgr;  
 mgr.DoSomething();  
 Func(mgr);  
   
 ```  
   
-## Directivas using  
- La directiva `using` permite utilizar todos los nombres de un **espacio de nombres** sin usar *namespace\-name* como calificador explícito.  Utilice una directiva using en una implementación de archivos \(por ejemplo,  \*.cpp\) si está utilizando varios identificadores diferentes en un espacio de nombres. Si solo está utilizando uno o dos identificadores, considere la posibilidad de utilizar una declaración using para poner solo esos identificadores en el ámbito, y no todos los identificadores del espacio de nombres.  Si una variable local tiene el mismo nombre que una variable de espacio de nombres, se oculta la variable de espacio de nombres.  Es un error tener una variable de espacio de nombres con el mismo nombre que una variable global.  
+## <a id="using_directives"></a> using directives  
+ The `using` directive allows all the names in a **namespace** to be used without the *namespace-name* as an explicit qualifier. Use a using directive in an implementation file (i.e. *.cpp) if you are using several different identifiers in a namespace; if you are just using one or two identifiers, then consider a using declaration to only bring those identifiers into scope and not all the identifiers in the namespace. If a local variable has the same name as a namespace variable, the namespace variable is hidden. It is an error to have a namespace variable with the same name as a global variable.  
   
 > [!NOTE]
->  Una directiva using puede colocarse en la parte superior del archivo .cpp \(en el ámbito del archivo\), o dentro de una definición de clase o función.  
+>  A using directive can be placed at the top of a .cpp file (at file scope), or inside a class or function definition.  
 >   
->  En general, evite colocar directivas using en un archivo de encabezado \(\*. h\) porque cualquier archivo que incluya ese encabezado pondrá todo en el espacio de nombres en el ámbito, lo que puede ocasionar problemas de ocultación de nombres y colisión de nombres que son muy difíciles de depurar.  Utilice siempre nombres completos en los archivos de encabezado.  Si esos nombres acaban siendo demasiado largos, puede utilizar un alias de espacio de nombres para acortarlos.  \(Vea a continuación\).  
+>  In general, avoid putting using directives in header files (*.h) because any file that includes that header will bring everything in the namespace into scope, which can cause name hiding and name collision problems that are very difficult to debug. Always use fully qualified names in a header file. If those names get too long, you can use a namespace alias to shorten them. (See below.)  
   
-## Declarar espacios de nombres y miembros de espacio de nombres  
- Normalmente, los espacios de nombres se declaran en un archivo de encabezado.  Si las implementaciones de sus funciones están en un archivo independiente, complete los nombres de función, como en este ejemplo.  
+## <a name="declaring-namespaces-and-namespace-members"></a>Declaring namespaces and namespace members  
+ Typically, you declare a namespace in a header file. If your function implementations are in a separate file, then qualify the function names, as in this example.  
   
-```  
+```cpp  
 //contosoData.h   
 #pragma once  
 namespace ContosoDataServer  
@@ -94,26 +111,26 @@ namespace ContosoDataServer
 }  
 ```  
   
- Las implementaciones de funciones en contosodata.cpp deben utilizar el nombre completo, incluso si coloca una directiva using en la parte superior del archivo:  
+ Function implementations in contosodata.cpp should use the fully qualified name, even if you place a `using` directive at the top of the file:  
   
-```  
+```cpp  
 #include "contosodata.h"  
 using namespace ContosoDataServer;   
   
-void ContosoDataServer::Foo()  
+void ContosoDataServer::Foo() // use fully-qualified name here  
 {  
-   //no qualification because using directive above  
+   // no qualification needed for Bar()  
    Bar();   
 }  
   
 int ContosoDataServer::Bar(){return 0;}  
 ```  
   
- Se puede declarar un espacio de nombres en varios bloques de un solo archivo y en varios archivos.  El compilador une las partes durante el preprocesamiento y el espacio de nombres resultante contiene todos los miembros declarados en todas las partes.  Un ejemplo de esto es el espacio de nombres std, que se declara en cada uno de los archivos de encabezado de la biblioteca estándar.  
+ A namespace can be declared in multiple blocks in a single file, and in multiple files. The compiler joins the parts together during preprocessing and the resulting namespace contains all the members declared in all the parts. An example of this is the std namespace which is declared in each of the header files in the standard library.  
   
- Los miembros de un espacio de nombres con nombre pueden definirse fuera del espacio de nombres en el que se declaran por [calificación explícita](../misc/explicit-qualification.md) del nombre que se define.  Sin embargo, la definición debe aparecer después del punto de la declaración de un espacio de nombres que incluye el espacio de nombres de la declaración.  Por ejemplo:  
+ Members of a named namespace can be defined outside the namespace in which they are declared by explicit qualification of the name being defined. However, the definition must appear after the point of declaration in a namespace that encloses the declaration's namespace. For example:  
   
-```  
+```cpp  
 // defining_namespace_members.cpp  
 // C2039 expected  
 namespace V {  
@@ -129,18 +146,18 @@ namespace V {
 }  
 ```  
   
- Este error puede producirse cuando los miembros del espacio de nombres se declaran en varios archivos de encabezado y estos encabezados no se han incluido en el orden correcto.  
+ This error can occur when namespace members are declared across multiple header files, and you have not included those headers in the correct order.  
   
-## El espacio de nombres global  
- Si un identificador no se declara en un espacio de nombres explícito, forma parte del espacio de nombres global implícito.  En general, intente evitar las declaraciones en el ámbito global siempre que pueda, salvo con la [función main](../c-language/main-function-and-program-execution.md) de punto de entrada, que necesita estar en el espacio de nombres global.  Para calificar explícitamente un identificador global, utilice el operador de resolución de ámbito sin nombre, como en `::SomeFunction(x);`.  Así, el identificador se diferenciará de cualquier elemento que tenga el mismo nombre en otro espacio de nombres, y también facilitará que otras personas entiendan el código.  
+## <a name="the-global-namespace"></a>The global namespace  
+ If an identifier is not declared in an explicit namespace, it is part of the implicit global namespace. In general, try to avoid making declarations at global scope when possible, except for the entry point [main Function](../c-language/main-function-and-program-execution.md), which is required to be in the global namespace. To explicitly qualify a global identifier, use the scope resolution operator with no name, as in `::SomeFunction(x);`. This will differentiate the identifier from anything with the same name in any other namespace, and it will also help to make your code easier for others to understand.  
   
-## El espacio de nombres std  
- Todas las funciones y tipos de la biblioteca estándar de C\+\+ se declaran en el espacio de nombres std o en espacios de nombres anidados dentro de std.  
+## <a name="the-std-namespace"></a>The std namespace  
+ All C++ standard library types and functions are declared in the `std` namespace or namespaces nested inside `std`.  
   
-## Espacios de nombres anidados  
- Los espacios de nombres pueden estar anidados.  Un espacio de nombres anidado normal tiene acceso incompleto a los miembros de su elemento primario, pero los miembros primarios no tienen acceso incompleto al espacio de nombres anidado \(a menos que se declare como alineado\), como se muestra en el ejemplo siguiente:  
+## <a name="nested-namespaces"></a>Nested namespaces  
+ Namespaces may be nested. An ordinary nested namespace has unqualified access to its parent’s members, but the parent members do not have unqualified access to the nested namespace (unless it is declared as inline), as shown in the following example:  
   
-```  
+```cpp  
 namespace ContosoDataServer  
 {  
     void Foo();   
@@ -157,12 +174,12 @@ namespace ContosoDataServer
 }  
 ```  
   
- Los espacios de nombres anidados normales pueden utilizarse para encapsular los detalles de implementación internos que no forman parte de la interfaz pública del espacio de nombres primario.  
+ Ordinary nested namespaces can be used to encapsulate internal implementation details that are not part of the public interface of the parent namespace.  
   
-## Espacios de nombres alineados \(C\+\+ 11\)  
- A diferencia de un espacio de nombres anidado normal, los miembros de un espacio de nombres alineado se tratan como miembros del espacio de nombres primario.  Esta característica permite la búsqueda dependiente de argumentos en funciones sobrecargadas para trabajar con funciones que tienen sobrecargas en un elemento primario y un espacio de nombres anidado alineado.  También permite declarar una especialización en un espacio de nombres primario para una plantilla que se declara en el espacio de nombres alineado.  En el ejemplo siguiente se muestra cómo el código externo enlaza de forma predeterminada con el espacio de nombres alineado:  
+## <a name="inline-namespaces-c-11"></a>Inline namespaces (C++ 11)  
+ In contrast to an ordinary nested namespace, members of an inline namespace are treated as members of the parent namespace. This characteristic enables argument dependent lookup on overloaded functions to work on functions that have overloads in a parent and a nested inline namespace. It also enables you to declare a specialization in a parent namespace for a template that is declared in the inline namespace. The following example shows how external code binds to the inline namespace by default:  
   
-```  
+```cpp  
 //Header.h  
 #include <string>  
   
@@ -194,9 +211,9 @@ int main()
 }  
 ```  
   
- El siguiente ejemplo muestra cómo se puede declarar una especialización en un elemento primario de una plantilla que se declara en un espacio de nombres alineado:  
+ The following example shows how you can declare a specialization in a parent of a template that is declared in an inline namespace:  
   
-```  
+```cpp  
 namespace Parent  
 {  
     inline namespace new_ns  
@@ -213,13 +230,13 @@ namespace Parent
   
 ```  
   
- Puede usar espacios de nombres alineados como mecanismo de control de versiones para administrar los cambios en la interfaz pública de una biblioteca.  Por ejemplo, puede crear un espacio de nombres primario único y encapsular cada versión de la interfaz en su propio espacio de nombres anidado dentro del elemento primario.  El espacio de nombres que contiene la versión más reciente o preferida se califica como alineado y, por tanto, se expone como si fuera un miembro directo del espacio de nombres primario.  El código del cliente que invoca la clase Parent::Class se enlazará automáticamente al nuevo código.  Los clientes que prefieren usar la versión anterior siguen teniendo acceso a ella mediante la ruta de acceso completa al espacio de nombres anidado que contiene ese código.  
+ You can use inline namespaces as a versioning mechanism to manage changes to the public interface of a library. For example, you can create a single parent namespace, and encapsulate each version of the interface in its own namespace nested inside the parent. The namespace that holds the most recent or preferred version is qualified as inline, and is therefore exposed as if it were a direct member of the parent namespace. Client code that invokes the Parent::Class will automatically bind to the new code. Clients that prefer to use the older version can still access it by using the fully qualified path to the nested namespace that has that code.  
   
- La palabra clave inline se debe aplicar a la primera declaración del espacio de nombres en una unidad de compilación.  
+ The inline keyword must be applied to the first declaration of the namespace in a compilation unit.  
   
- El ejemplo siguiente muestra dos versiones de una interfaz, cada una en un espacio de nombres anidado.  El espacio de nombres `v_20` tiene algunas modificaciones en la interfaz `v_10` y se marca como alineado.  El código de cliente que utiliza la nueva biblioteca y llama a `Contoso::Funcs::Add` invocará la versión v\_20.  El código que intente llamar a `Contoso::Funcs::Divide` obtendrá ahora un error de tiempo de compilación.  Si realmente necesita esa función, puede obtener acceso a la versión `v_10` llamando explícitamente a `Contoso::v_10::Funcs::Divide`.  
+ The following example shows two versions of an interface, each in a nested namespace. The `v_20` namespace has some modification from the `v_10` interface and is marked as inline. Client code that uses the new library and calls `Contoso::Funcs::Add` will invoke the v_20 version. Code that attempts to call `Contoso::Funcs::Divide` will now get a compile time error. If they really need that function, they can still access the `v_10` version by explicitly calling `Contoso::v_10::Funcs::Divide`.  
   
-```  
+```cpp  
 namespace Contoso  
 {  
     namespace v_10  
@@ -254,29 +271,28 @@ namespace Contoso
   
 ```  
   
-## Alias de espacios de nombres  
- Los nombres de los espacios de nombres deben ser únicos, lo que significa que a menudo no pueden ser demasiado cortos.  Si la longitud de un nombre hace que el código sea difícil de leer, o resulta tedioso escribirlo en un archivo de encabezado donde no se pueden utilizar directivas using, puede hacer un alias del espacio de nombres que actúe como una abreviatura del nombre real.  Por ejemplo:  
+## <a id="namespace_aliases"></a> Namespace aliases  
+ Namespace names need to be unique, which means that often they should not be too short. If the length of a name makes code difficult to read, or is tedious to type in a header file where using directives can’t be used, then you can make a namespace alias which serves as an abbreviation for the actual name. For example:  
   
-```  
+```cpp  
 namespace a_very_long_namespace_name { class Foo {}; }  
 namespace AVLNN = a_very_long_namespace_name;  
 void Bar(AVLNN::Foo foo){ }  
   
 ```  
   
-## espacios de nombres anónimos o sin nombre  
- Puede crear un espacio de nombres explícito, pero sin asignarle un nombre:  
+## <a name="anonymous-or-unnamed-namespaces"></a>anonymous or unnamed namespaces  
+ You can create an explicit namespace but not give it a name:  
   
-```  
+```cpp  
 namespace  
 {  
     int MyFunc(){}  
 }  
 ```  
   
- Esto se denomina espacio de nombres sin nombre o anónimo, y resulta útil cuando desea que las declaraciones de variable no sean visibles para el código de otros archivos \(es decir,  para darles vinculación interna\) sin tener que crear un espacio de nombres.  Todo el código del mismo archivo puede ver los identificadores en un espacio de nombres sin nombre, pero los identificadores, junto con el espacio de nombres, no son visibles fuera de ese archivo, o más concretamente fuera de la unidad de traducción.  
+ This is called an unnamed or anonymous namespace and it is useful when you want to make variable declarations invisible to code in other files (i.e. give them internal linkage) without having to create a named namespace. All code in the same file can see the identifiers in an unnamed namespace but the identifiers, along with the namespace itself, are not visible outside that file—or more precisely outside the translation unit.  
   
-## Comentarios  
-  
-## Vea también  
- [Declaraciones](../misc/declarations.md)
+## <a name="see-also"></a>See Also  
+ [Declarations and Definitions](declarations-and-definitions-cpp.md)
+

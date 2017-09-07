@@ -1,62 +1,77 @@
 ---
-title: "Compilar programas de C/C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vcbuilding"
-  - "buildingaprogramVC"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilaciones [C++]"
-  - "compilaciones [C++], opciones"
-  - "proyectos [C++], compilar"
-  - "proyectos de Visual C++, compilar"
-  - "Visual C++, opciones de compilación"
+title: Building C/C++ Programs | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vcbuilding
+- buildingaprogramVC
+dev_langs:
+- C++
+helpviewer_keywords:
+- builds [C++]
+- Visual C++ projects, building
+- projects [C++], building
+- builds [C++], options
+- Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Compilar programas de C/C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 05e5b8707d968707f12c1a9b19c511adaa99ddd2
+ms.contentlocale: es-es
+ms.lasthandoff: 08/30/2017
 
-Los proyectos de Visual C\+\+ se pueden compilar en Visual Studio o en la línea de comandos.  El IDE de Visual Studio usa [MSBuild](../build/msbuild-visual-cpp.md) para compilar proyectos y soluciones.  En la línea de comandos, puede usar el compilador \(cl.exe\) y el vinculador \(link.exe\) de C\/C\+\+ para compilar proyectos sencillos.  Para compilar proyectos más complejos en la línea de comandos, puede usar MSBuild o [NMAKE](../build/nmake-reference.md).  Para ver una descripción general del uso de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] para compilar proyectos y soluciones, consulte [Compilar aplicaciones en Visual Studio](../Topic/Compiling%20and%20Building%20in%20Visual%20Studio.md).  
+---
+# <a name="building-cc-programs"></a>Building C/C++ Programs
+
+You can build Visual C++ projects either in Visual Studio or on the command line. The Visual Studio IDE uses [MSBuild](../build/msbuild-visual-cpp.md) to build projects and solutions. On the command line, you can use the C/C++ compiler (cl.exe) and linker (link.exe) to build simple projects. To build more complex projects on the command line, you can use MSBuild or [NMAKE](../build/nmake-reference.md). For an overview about how to use [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] to build projects and solutions, see [Compiling and Building](/visualstudio/ide/compiling-and-building-in-visual-studio).  
   
-## En esta sección  
- [Compilar proyectos de C\+\+ en Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)  
- Se aborda el uso del IDE de Visual Studio para compilar proyectos de C\/C\+\+.  
+## <a name="in-this-section"></a>In This Section  
+
+[Building C++ Projects in Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)  
+Discusses how to use the Visual Studio IDE to build your C/C++ project.  
   
- [Compilar en la línea de comandos](../build/building-on-the-command-line.md)  
- Se aborda el uso del compilador de línea de comandos y las herramientas de compilación de C\/C\+\+ que se incluyen en Visual Studio.  
+[Build C/C++ code on the command line](../build/building-on-the-command-line.md)  
+Discusses how to use the C/C++ command-line compiler and build tools that are included in Visual Studio.  
   
- [Compilar aplicaciones aisladas y ensamblados simultáneos de C\/C\+\+](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
- Se describe el modelo de implementación de aplicaciones de escritorio de Windows según los conceptos de aplicaciones aisladas y ensamblados en paralelo.  
+[Building C/C++ Isolated Applications and Side-by-side Assemblies](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
+Describes the deployment model for Windows Desktop applications, based on the idea of isolated applications and side-by-side assemblies.  
   
- [Referencia de compilación de C\/C\+\+](../build/reference/c-cpp-building-reference.md)  
- Contiene vínculos a artículos de referencia sobre cómo compilar programas en C\+\+, sobre las opciones de compilador y vinculador, y sobre otras herramientas de compilación.  
+[C/C++ Building Reference](../build/reference/c-cpp-building-reference.md)  
+Provides links to reference articles about program building in C++, compiler and linker options, and various build tools.  
   
- [Configurar programas de 64 bits](../build/configuring-programs-for-64-bit-visual-cpp.md)  
- Se explica cómo configurar Visual Studio y la línea de comandos para usar el conjunto de herramientas de 64 bits y cómo tener como destino arquitecturas de 64 bits. Asimismo, se abordan los problemas de migración más comunes cuando el código se traslada a arquitecturas de 64 bits.  
+[Configure Visual C++ for 64-bit, x64 targets](../build/configuring-programs-for-64-bit-visual-cpp.md)  
+Describes how to configure both Visual Studio and the command line to use the 64-bit toolset and how to target 64-bit architectures, and discusses common migration issues when code is moved to 64-bit architectures.  
   
- [Configurar programas para procesadores ARM](../build/configuring-programs-for-arm-processors-visual-cpp.md)  
- Se describen las convenciones que usan los procesadores de ARM y se abordan los problemas de migración más comunes cuando el código se traslada a arquitecturas de ARM.  
+[Configure Visual C++ for ARM processors](../build/configuring-programs-for-arm-processors-visual-cpp.md)  
+Describes the conventions used by ARM processors, and discusses common migration issues when code is moved to ARM architectures.  
   
- [Configurar 11 programas de C\+\+ para Windows XP](../build/configuring-programs-for-windows-xp.md)  
- Se describe cómo configurar el conjunto de herramientas de la plataforma para tener como destino el desarrollo en Windows XP.  
+[Configuring Programs for Windows XP](../build/configuring-programs-for-windows-xp.md)  
+Describes how to set the Platform Toolset to target Windows XP development.  
   
-## Secciones relacionadas  
- [NIB: Samples Included in Visual C\+\+](http://msdn.microsoft.com/es-es/c9ec56b3-2bbd-49b4-8a4c-9ed4b78b7a84)  
- Contiene vínculos a códigos de ejemplo que ilustran las características de Visual C\+\+, así como las bibliotecas y tecnologías admitidas.  
-  
- [Compilar aplicaciones en Visual Studio](../Topic/Compiling%20and%20Building%20in%20Visual%20Studio.md)  
- Describe las herramientas y el sistema de compilación de Visual Studio.
+## <a name="related-sections"></a>Related Sections  
+ [Compiling and Building](/visualstudio/ide/compiling-and-building-in-visual-studio)  
+ Describes the Visual Studio build system and tools.

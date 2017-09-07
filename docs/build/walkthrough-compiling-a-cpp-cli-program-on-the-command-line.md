@@ -1,52 +1,68 @@
 ---
-title: "Tutorial: Compilar un programa de C++/CLI en la l&#237;nea de comandos | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'Walkthrough: Compiling a C++/CLI Program on the Command Line | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
 caps.latest.revision: 11
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Tutorial: Compilar un programa de C++/CLI en la l&#237;nea de comandos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 44d67c8e7f83ca5433436cf6b851e3f066a930ad
+ms.contentlocale: es-es
+ms.lasthandoff: 08/30/2017
 
-Puede crear programas de Visual C\+\+ destinados a Common Language Runtime \(CLR\) que usen .NET Framework y compilarlos en la línea de comandos.  Visual C\+\+ admite el lenguaje de programación C\+\+\/CLI, con tipos y operadores adicionales para tener como destino el modelo de programación .NET.  Para ver una introducción al lenguaje C\+\+\/CLI, consulte [Puro C\+\+: hola, C\+\+\/CLI](http://msdn.microsoft.com/magazine/cc163681.aspx).  Para obtener información general, consulte [Programación de .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).  
+---
+# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Walkthrough: Compiling a C++/CLI Program on the Command Line
+You can create Visual C++ programs that target the Common Language Runtime (CLR) and use the .NET Framework, and build them on the command line. Visual C++ supports the C++/CLI programming language, which has additional types and operators to target the .NET programming model. For an introduction to the C++/CLI language, see [Pure C++: Hello, C++/CLI](http://msdn.microsoft.com/magazine/cc163681.aspx). For general information, see [.NET Programming with C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).  
   
- En este tutorial, utilizará un editor de texto para crear un programa básico de C\+\+\/CLI y, luego, lo compilará en la línea de comandos.  \(Puede usar su propio programa de C\+\+\/CLI en lugar de escribir el que se muestra, o usar un código de ejemplo de C\+\+\/CLI de otro artículo de ayuda.  Esta técnica es útil para compilar y probar módulos pequeños que no contienen ningún elemento de IU\).  
+ In this walkthrough, you use a text editor to create a basic C++/CLI program, and then compile it on the command line. (You can use your own C++/CLI program instead of typing the one that's shown, or you can use a C++/CLI code sample from another help article. This technique is useful for building and testing small modules that contain no UI elements.)  
   
 > [!NOTE]
->  También puede usar el IDE de Visual Studio para compilar programas de C\+\+\/CLI.  Para obtener más información, vea [Tutorial: Compilar un programa de C\+\+ orientado a CLR en Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md).  
+>  You can also use the Visual Studio IDE to compile C++/CLI programs. For more information, see [Walkthrough: Compiling a C++ Program that Targets the CLR in Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md).  
   
-## Requisitos previos  
- Debe entender los principios del lenguaje C\+\+.  
+## <a name="prerequisites"></a>Prerequisites  
+ You must understand the fundamentals of the C++ language.  
   
-## Compilación de un programa de C\+\+\/CLI  
- En los pasos siguientes, se muestra cómo compilar una aplicación de consola de C\+\+\/CLI que utiliza clases de .NET Framework.  
+## <a name="compiling-a-ccli-program"></a>Compiling a C++/CLI Program  
+ The following steps show how to compile a C++/CLI console application that uses .NET Framework classes.  
   
- Para habilitar la compilación de C\+\+\/CLI, debe usar la opción del compilador [\/clr](../build/reference/clr-common-language-runtime-compilation.md).  El compilador de Visual C\+\+ genera un archivo .exe que contiene código MSIL \(o código nativo y MSIL combinado\) y que vincula a las bibliotecas .NET Framework necesarias.  
+ To enable compilation for C++/CLI, you must use the [/clr](../build/reference/clr-common-language-runtime-compilation.md) compiler option. The Visual C++ compiler generates an .exe file that contains MSIL code—or mixed MSIL and native code—and links to the required .NET Framework libraries.  
   
-#### Para compilar una aplicación de C\+\+\/CLI en la línea de comandos  
+#### <a name="to-compile-a-ccli-application-on-the-command-line"></a>To compile a C++/CLI application on the command line  
   
-1.  Abra una ventana de **Símbolo del sistema para desarrolladores**.  \(En la ventana **Inicio**, abra **Aplicaciones**.  Abra la carpeta **Visual Studio Tools** de su versión de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] y, luego, elija el acceso directo **Símbolo del sistema para desarrolladores**\). Para obtener más información sobre cómo abrir una ventana de símbolo del sistema, consulte [Establecer la ruta de acceso y las variables de entorno para compilar desde la línea de comandos](../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
+1.  Open a **Developer Command Prompt** window. For specific instructions, see [To open a developer command prompt window](../build/building-on-the-command-line.md#developer_command_prompt).  
   
-     Puede que se requieran credenciales de administrador para compilar el código correctamente,en función del sistema operativo y de la configuración del equipo.  Para ejecutar la ventana del símbolo del sistema como administrador, abra el menú contextual de **Símbolo del sistema para desarrolladores** y, luego, elija **Ejecutar como administrador**.  
+     Administrator credentials may be required to successfully compile the code, depending on the computer's operating system and configuration. To run the command prompt window as an administrator, right-click to open the shortcut menu for the command prompt and then choose **More**, **Run as administrator**.  
   
-2.  En el símbolo del sistema, escriba **notepad basicclr.cpp**.  
+2.  At the command prompt, enter **notepad basicclr.cpp**.  
   
-     Elija **Sí** cuando se le pida que cree un archivo.  
+     Choose **Yes** when you are prompted to create a file.  
   
-3.  En el Bloc de notas, escriba estas líneas:  
+3.  In Notepad, enter these lines:  
   
     ```  
     int main()  
@@ -55,20 +71,21 @@ Puede crear programas de Visual C\+\+ destinados a Common Language Runtime \(CLR
     }  
     ```  
   
-4.  En la barra de menús, elija **Archivo**, **Guardar**.  
+4.  On the menu bar, choose **File**, **Save**.  
   
-     Ha creado un archivo de código fuente de Visual C\+\+ que utiliza una clase .NET Framework \(<xref:System.Console>\) en el espacio de nombres <xref:System>.  
+     You have created a Visual C++ source file that uses a .NET Framework class (<xref:System.Console>) in the <xref:System> namespace.  
   
-5.  En el símbolo del sistema, escriba **cl \/clr basicclr.cpp**.  El compilador cl.exe compila el código fuente en un archivo .obj que contiene código MSIL y, después, ejecuta el enlazador para generar un programa ejecutable llamado basicclr.exe.  
+5.  At the command prompt, enter **cl /clr basicclr.cpp**. The cl.exe compiler compiles the source code into an .obj file that contains MSIL, and then runs the linker to generate an executable program named basicclr.exe.  
   
-6.  Para ejecutar el programa basicclr.exe, en el símbolo del sistema, escriba **basicclr**.  
+6.  To run the basicclr.exe program, at the command prompt, enter **basicclr**.  
   
-     El programa mostrará este texto y se cerrará:  
+     The program displays this text and exits:  
   
-  **Lo que ve es un programa de C\+\+\/CLI.**  
+    ```Output  
+    This is a C++/CLI program.  
+    ```  
   
-## Vea también  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/es-es/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [Referencia de lenguaje C\+\+](../cpp/cpp-language-reference.md)   
- [Compilar programas de C\/C\+\+](../build/building-c-cpp-programs.md)   
- [Opciones del compilador](../build/reference/compiler-options.md)
+## <a name="see-also"></a>See Also  
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [Building C/C++ Programs](../build/building-c-cpp-programs.md)   
+ [Compiler Options](../build/reference/compiler-options.md)

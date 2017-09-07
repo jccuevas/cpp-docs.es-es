@@ -1,40 +1,58 @@
 ---
-title: "Compilar un programa escrito en C/C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe (compilador)"
-  - "cl.exe (compilador), establecer opciones"
+title: Compiling a C/C++ Program | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- cl.exe compiler
+- cl.exe compiler, setting options
 ms.assetid: f3eef5ab-d0be-4fb2-90f9-927e6ed58736
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Compilar un programa escrito en C/C++
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: d651e7094e3e419392fb7df706c5c0e29af3a365
+ms.contentlocale: es-es
+ms.lasthandoff: 08/30/2017
 
-Para obtener información sobre la utilización del compilador, vea las secciones siguientes:  
+---
+# <a name="compiling-a-cc-program"></a>Compiling a C/C++ Program
+
+For information on using the compiler, see the following sections:  
   
--   [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)  
+-   [Setting Compiler Options](../../build/reference/setting-compiler-options.md)  
   
--   [Opciones del compilador](../../build/reference/compiler-options.md)  
+-   [Compiler Options](../../build/reference/compiler-options.md)  
   
--   [Crear archivos de encabezado precompilados](../../build/reference/creating-precompiled-header-files.md)  
+-   [Creating Precompiled Header Files](../../build/reference/creating-precompiled-header-files.md)  
   
--   [Compatibilidad con Unicode en el compilador y el vinculador](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
+-   [Unicode Support in the Compiler and Linker](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
+
+For information on choosing the compiler host and target architecture, see [Configure Visual C++ for 64-bit, x64 targets](../../build/configuring-programs-for-64-bit-visual-cpp.md).  
   
- Para obtener más información, vea [Configurar programas de 64 bits](../../build/configuring-programs-for-64-bit-visual-cpp.md).  
-  
-## Vea también  
- [Referencia de compilación de C\/C\+\+](../../build/reference/c-cpp-building-reference.md)
+## <a name="see-also"></a>See Also  
+
+[C/C++ Building Reference](../../build/reference/c-cpp-building-reference.md)

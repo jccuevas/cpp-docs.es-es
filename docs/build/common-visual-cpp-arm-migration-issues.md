@@ -1,111 +1,134 @@
 ---
-title: "Problemas comunes de migraci&#243;n de ARM en Visual C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Common Visual C++ ARM Migration Issues | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Problemas comunes de migraci&#243;n de ARM en Visual C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 81eb7a76198fa6a306df8a5dc786475cf9186f92
+ms.contentlocale: es-es
+ms.lasthandoff: 08/30/2017
 
-El mismo código fuente de Visual C\+\+ podría generar resultados diferentes en la arquitectura de ARM que en x86 o arquitecturas x64.  
+---
+# <a name="common-visual-c-arm-migration-issues"></a>Common Visual C++ ARM Migration Issues
+
+The same Visual C++ source code might produce different results on the ARM architecture than it does on x86 or x64 architectures.  
   
-## Orígenes de los problemas de migración  
- Muchos problemas que pueden surgir al migrar código x86 o arquitecturas x64 a la arquitectura de ARM se relacionan con las construcciones de código fuente que pueden invocar un comportamiento no definido, implementación\- definido, o sin especificar.  
+## <a name="sources-of-migration-issues"></a>Sources of migration issues  
+
+Many issues that you might encounter when you migrate code from the x86 or x64 architectures to the ARM architecture are related to source-code constructs that might invoke undefined, implementation-defined, or unspecified behavior.  
   
- Un comportamiento no definido  
- Comportamiento del estándar de C\+\+ no define y, que es provocado por una operación que no tenga razonable resultado\- para el ejemplo, la conversión de un valor flotante en un entero sin signo, o moverse un valor por varias posiciones que es negativo o supera el número de bits del tipo se promueve.  
+*Undefined Behavior*  
+Behavior that the C++ standard does not define, and that's caused by an operation that has no reasonable result—for example, converting a floating-point value to an unsigned integer, or shifting a value by a number of positions that is negative or exceeds the number of bits in its promoted type.  
   
- Comportamiento Implementación\-definido  
- Comportamiento del estándar de C\+\+ requiere el proveedor de compilador defina y el documento.  Un programa puede confiar en comportamiento implementación\- definido, aunque el hacerlo no sea portable.  Los ejemplos de comportamiento implementación\- definido incluyen los tamaños de tipos integrados y sus requisitos de alineación.  Un ejemplo de una operación que podría afectar al comportamiento implementación\- definido está teniendo acceso a la lista de argumentos de variable.  
+*Implementation-defined Behavior*  
+Behavior that the C++ standard requires the compiler vendor to define and document. A program can safely rely on implementation-defined behavior, even though doing so might not be portable. Examples of implementation-defined behavior include the sizes of built-in data types and their alignment requirements. An example of an operation that might be affected by implementation-defined behavior is accessing the variable arguments list.  
   
- Comportamiento sin especificar  
- Comportamiento de que el estándar de C\+\+ sale deliberadamente no determinista.  Aunque el comportamiento se considere no determinista, las invocaciones desde el comportamiento sin especificar vienen determinadas por la implementación del compilador.  Sin embargo, no hay ningún requisito para que un proveedor del compilador predetermine el resultado o garantiza un comportamiento coherente entre llamadas comparables, y no hay ningún requisito de la documentación.  Un ejemplo de un comportamiento no especificado es el orden en el que sub\-expresión\- que incluyen los argumentos de una función llamada\- se evalúan.  
+*Unspecified Behavior*  
+Behavior that the C++ standard leaves intentionally non-deterministic. Although the behavior is considered non-deterministic, particular invocations of unspecified behavior are determined by the compiler implementation. However, there is no requirement for a compiler vendor to predetermine the result or guarantee consistent behavior between comparable invocations, and there is no requirement for documentation. An example of unspecified behavior is the order in which sub-expressions—which include arguments to a function call—are evaluated.  
   
- Otros problemas de migración se puede atribuir a las diferencias de hardware entre la ARM y x86 o arquitecturas x64 que interactúan con el estándar de C\+\+ de manera diferente.  Por ejemplo, el modelo de memoria seguros x86 y arquitectura x64 da `volatile`\- variables calificadas algunas propiedades adicionales que se han utilizado para facilitar algunas clases de comunicación de inter\- subproceso en el pasado.  Pero el modelo de memoria débil de la arquitectura de ARM no admite este uso, ni el estándar de C\+\+ lo requiere.  
+Other migration issues can be attributed to hardware differences between ARM and x86 or x64 architectures that interact with the C++ standard differently. For example, the strong memory model of the x86 and x64 architecture gives `volatile`-qualified variables some additional properties that have been used to facilitate certain kinds of inter-thread communication in the past. But the ARM architecture's weak memory model doesn't support this use, nor does the C++ standard require it.  
   
 > [!IMPORTANT]
->  Aunque `volatile` gane algunas propiedades que se pueden utilizar para implementar formularios limitados de comunicación de inter\- subproceso en x86 y x64, estas propiedades adicionales no son suficientes para implementar la comunicación de inter\- subproceso en general.  El estándar de C\+\+ recomienda esta comunicación se implementa mediante primitivas de sincronización apropiados en su lugar.  
+>  Although `volatile` gains some properties that can be used to implement limited forms of inter-thread communication on x86 and x64, these additional properties are not sufficient to implement inter-thread communication in general. The C++ standard recommends that such communication be implemented by using appropriate synchronization primitives instead.  
   
- Porque las distintas plataformas pueden expresar estas clases de comportamiento de manera diferente, trasladar el software entre plataformas puede ser difícil y error\- susceptible si depende del comportamiento de una plataforma específica.  Aunque muchas de estas clases de comportamiento se puede observar y pueden aparecer estables, confianza en ellas por lo menos no portátil y, cuando se trata de un comportamiento indefinido o sin especificar, también es un error.  Aunque el comportamiento que se cita en este documento no se debe confiar en, y podría cambiar en los compiladores futuros o implementaciones de CPU.  
+Because different platforms might express these kinds of behavior differently, porting software between platforms can be difficult and bug-prone if it depends on the behavior of a specific platform. Although many of these kinds of behavior can be observed and might appear stable, relying on them is at least non-portable, and in the cases of undefined or unspecified behavior, is also an error. Even the behavior that's cited in this document should not be relied on, and could change in future compilers or CPU implementations.  
   
-## Problemas de migración de ejemplo  
- El resto de este documento se describe cómo el comportamiento diferente de estos elementos del lenguaje C\+\+ puede producir resultados diferentes en distintas plataformas.  
+## <a name="example-migration-issues"></a>Example migration issues  
+
+The rest of this document describes how the different behavior of these C++ language elements can produce different results on different platforms.  
   
-### Conversión de Flotante\- punto en un entero sin signo  
- En la arquitectura de ARM, la conversión de un valor de punto flotante a un entero de 32 bits satura el valor más próximo que integer puede representar si el valor de punto flotante está fuera del intervalo que integer puede representar.  En arquitecturas x86 y x64, los ajustes de la conversión a si el entero es sin signo, o se establecen en \-2147483648 si se firma integer.  Ninguna de estas arquitecturas admiten directamente la conversión de valores de punto flotante a tipos enteros menores; en su lugar, las conversiones se realizan a 32 bits, y los resultados se truncan a un tamaño menor.  
+### <a name="conversion-of-floating-point-to-unsigned-integer"></a>Conversion of Floating-point to Unsigned Integer  
+
+On the ARM architecture, conversion of a floating-point value to a 32-bit integer saturates to the nearest value that the integer can represent if the floating-point value is outside the range that the integer can represent. On the x86 and x64 architectures, the conversion wraps around if the integer is unsigned, or is set to -2147483648 if the integer is signed. None of these architectures directly support the conversion of floating-point values to smaller integer types; instead, the conversions are performed to 32 bits, and the results are truncated to a smaller size.  
   
- Para la arquitectura de ARM, la combinación de saturación y de truncamiento significa que la conversión a tipos sin signo correctamente satura tipos sin signo más pequeños cuando satura un entero de 32 bits, pero genera un resultado truncado por valores que sean mayores que el tipo más pequeño puede representar pero demasiado pequeño para saturar el entero de 32 bits completo.  La conversión también satura correctamente para los enteros con signo de 32 bits, pero el truncamiento de enteros saturados, firmado da lugar a \-1 por valores positivo\- saturados y 0 por valores negativo\- saturados.  La conversión en un entero menor genera un resultado truncado que sea imprevisible.  
+For the ARM architecture, the combination of saturation and truncation means that conversion to unsigned types correctly saturates smaller unsigned types when it saturates a 32-bit integer, but produces a truncated result for values that are larger than the smaller type can represent but too small to saturate the full 32-bit integer. Conversion also saturates correctly for 32-bit signed integers, but truncation of saturated, signed integers results in -1 for positively-saturated values and 0 for negatively-saturated values. Conversion to a smaller signed integer produces a truncated result that's unpredictable.  
   
- Para arquitecturas x86 y x64, la combinación de comportamiento envuelto para las conversiones de entero sin signo y evaluación explícita para las conversiones de tipo entero con signo de desbordamiento, así como el truncamiento, crea los resultados para la mayoría de los cambios imprevistos si son demasiado grandes.  
+For the x86 and x64 architectures, the combination of wrap-around behavior for unsigned integer conversions and explicit valuation for signed integer conversions on overflow, together with truncation, make the results for most shifts unpredictable if they are too large.  
   
- Estas plataformas también difieren en cómo se controlan la conversión NaN \(No\-uno\- número\) a los tipos enteros.  En la ARM, NaN convierte a 0x00000000; en x86 y x64, convierte a 0x80000000.  
+These platforms also differ in how they handle conversion of NaN (Not-a-Number) to integer types. On ARM, NaN converts to 0x00000000; on x86 and x64, it converts to 0x80000000.  
   
- La conversión flotante podría ser de confianza sólo en si sabe que el valor se encuentra dentro del intervalo del tipo entero que se va a convertir.  
+Floating-point conversion can only be relied on if you know that the value is within the range of the integer type that it's being converted to.  
   
-### Comportamiento del operador de cambio \(\<\< \>\>\)  
- En la arquitectura de ARM, un valor se puede desplazarse a la izquierda o hasta que 255 bits antes de que el modelo comienza a repetir.  En x86 y arquitecturas x64, repite el modelo en cada múltiplo de 32 a menos que el origen del modelo es una variable de 64 bits; en ese caso, el modelo se repite en cada múltiplo de 64 en x64, y cada múltiplo de 256 en x86, donde se usan una implementación de software.  Por ejemplo, para una variable de 32 bits que tiene un valor de 1 cambió a la izquierda por 32 posiciones, en la ARM el resultado es 0, en x86 el resultado es 1, y en x64 el resultado también es 1.  Sin embargo, si el origen del valor es una variable de 64 bits, el resultado en las tres plataformas es 4294967296, y el valor “no se ajustará alrededor” hasta que haya movido 64 posiciones respecto a x64, o 256 posiciones respecto a la ARM y en x86.  
+### <a name="shift-operator---behavior"></a>Shift Operator (<\< >>) Behavior  
+
+On the ARM architecture, a value can be shifted left or right up to 255 bits before the pattern begins to repeat. On x86 and x64 architectures, the pattern is repeated at every multiple of 32 unless the source of the pattern is a 64-bit variable; in that case, the pattern repeats at every multiple of 64 on x64, and every multiple of 256 on x86, where a software implementation is employed. For example, for a 32-bit variable that has a value of 1 shifted left by 32 positions, on ARM the result is 0, on x86 the result is 1, and on x64 the result is also 1. However, if the source of the value is a 64-bit variable, then the result on all three platforms is 4294967296, and the value doesn't "wrap around" until it's shifted 64 positions on x64, or 256 positions on ARM and x86.  
   
- Puesto que el resultado de una operación de cambio que supera el número de bits del tipo de origen es indefinido, el compilador no se requiere tener un comportamiento coherente en todas las situaciones.  Por ejemplo, si ambos operandos de un cambio se conocen en tiempo de compilación, el compilador puede optimizar el programa mediante una rutina interna al calcula previamente el resultado del desplazamiento y después de sustituir el resultado en lugar de la operación de cambio.  Si la cantidad de cambio es demasiado grande, o negativo, el resultado de la rutina interna podría ser diferente del resultado de la misma expresión de cambio que ejecutar por CPU.  
+Because the result of a shift operation that exceeds the number of bits in the source type is undefined, the compiler is not required to have consistent behavior in all situations. For example, if both operands of a shift are known at compile time, the compiler may optimize the program by using an internal routine to precompute the result of the shift and then substituting the result in place of the shift operation. If the shift amount is too large, or negative, the result of the internal routine might be different than the result of the same shift expression as executed by the CPU.  
   
-### Comportamiento variable de los argumentos \(varargs\)  
- En la arquitectura de ARM, los parámetros de la lista de argumentos de variable que se pasan en la pila se bajo la alineación.  Por ejemplo, un parámetro 64 bits se alinea en un límite de 64 bits.  En x86 y x64, los argumentos que se pasan a la pila no están sujetos a la alineación y no se empaquetan estrechamente.  Esta diferencia puede producir una función variadic como `printf` las direcciones de memoria de lectura que se previstas como relleno en la ARM si no coincide el diseño previsto de la lista de argumentos de variable exactamente, aunque se funciona para un subconjunto de algunos valores en arquitecturas x86 o x64.  Considere este ejemplo:  
+### <a name="variable-arguments-varargs-behavior"></a>Variable Arguments (varargs) Behavior  
+
+On the ARM architecture, parameters from the variable arguments list that are passed on the stack are subject to alignment. For example, a 64-bit parameter is aligned on a 64-bit boundary. On x86 and x64, arguments that are passed on the stack are not subject to alignment and pack tightly. This difference can cause a variadic function like `printf` to read memory addresses that were intended as padding on ARM if the expected layout of the variable arguments list is not matched exactly, even though it might work for a subset of some values on the x86 or x64 architectures. Consider this example:  
   
-```  
+```C  
 // notice that a 64-bit integer is passed to the function, but '%d' is used to read it.  
 // on x86 and x64 this may work for small values because %d will “parse” the low-32 bits of the argument.  
 // on ARM the calling convention will align the 64-bit value and the code will print a random value  
-printf("%d\n", 1LL);  
-  
+printf("%d\n", 1LL);     
 ```  
   
- En este caso, el error se puede corregir asegurándose de que la especificación correcta de formato se utiliza para ver que la alineación del argumento.  Este código es correcto:  
+In this case, the bug can be fixed by making sure that the correct format specification is used so that that the alignment of the argument is considered. This code is correct:  
   
-```  
+```C  
 // CORRECT: use %I64d for 64-bit integers  
 printf("%I64d\n", 1LL);  
-  
 ```  
   
-### Orden de evaluación del argumento  
- Porque la ARM, x86, y procesadores x64 es tan diferentes, pueden aparecer diferentes requisitos a las implementaciones del compilador, y también distintas ocasiones para las optimizaciones.  Debido a esto, así como otros factores guste de la convención de llamada y de optimización, un compilador podría evaluar argumentos de función en un orden diferente en arquitecturas diferentes o cuando se cambian los otros factores.  Esto puede provocar un comportamiento de una aplicación que se base en un orden concreto de evaluación de cambiar inesperado.  
+### <a name="argument-evaluation-order"></a>Argument evaluation order  
+
+Because ARM, x86, and x64 processors are so different, they can present different requirements to compiler implementations, and also different opportunities for optimizations. Because of this, together with other factors like calling-convention and optimization settings, a compiler might evaluate function arguments in a different order on different architectures or when the other factors are changed. This can cause the behavior of an app that relies on a specific evaluation order to change unexpectedly.  
   
- Esta clase de error puede aparecer cuando los argumentos de una función tienen efectos secundarios que impacten otros argumentos a la función de llamada.  Esta clase de dependencia normalmente es fácil de evitar, pero puede ser obscurecida a veces por las dependencias que son difíciles de discernir, o por la sobrecarga de operadores.  Considere este ejemplo de código:  
+This kind of error can occur when arguments to a function have side effects that impact other arguments to the function in the same call. Usually this kind of dependency is easy to avoid, but it can sometimes be obscured by dependencies that are difficult to discern, or by operator overloading. Consider this code example:  
   
-```  
+```cpp  
 handle memory_handle;  
   
 memory_handle->acquire(*p);  
-  
 ```  
   
- Se produce bien definido, pero si `->` y `*` son operadores sobrecargados, este código se traduce algo similar a este:  
+This appears well-defined, but if `->` and `*` are overloaded operators, then this code is translated to something that resembles this:  
   
-```  
+```cpp  
 Handle::acquire(operator->(memory_handle), operator*(p));  
 ```  
   
- Y si hay una dependencia entre `operator->(memory_handle)` y `operator*(p)`, el código podría basarse en un orden concreto de evaluación, aunque el código original parece que no hay ninguna dependencia posible.  
+And if there's a dependency between `operator->(memory_handle)` and `operator*(p)`, the code might rely on a specific evaluation order, even though the original code looks like there is no possible dependency.  
   
-### comportamiento predeterminado volatile de la palabra clave  
- El compilador de Microsoft C\+\+ admite dos diferentes interpretaciones de calificador de almacén volátil que puede especificar mediante el compilador.  El modificador **\/volatile:ms** selecciona Microsoft extendidas semántica volátil que garantiza el orden seguro, como ha recibido el caso tradicional para x86 y x64 en el compilador de Microsoft debido al modelo de memoria seguros en las arquitecturas.  El modificador **\/volatile:iso** selecciona la semántica volatile estándar estricta de C\+\+ que no garantiza el orden segura.  
+### <a name="volatile-keyword-default-behavior"></a>volatile Keyword Default Behavior  
+
+The Microsoft C++ compiler supports two different interpretations of the `volatile` storage qualifier that you can specify by using compiler switches. The **/volatile:ms** switch selects the Microsoft extended volatile semantics that guarantee strong ordering, as has been the traditional case for x86 and x64 on the Microsoft compiler because of the strong memory model on those architectures. The **/volatile:iso** switch selects the strict C++ standard volatile semantics that don't guarantee strong ordering.  
   
- En la arquitectura de ARM, el valor predeterminado es **\/volatile:iso** porque los procesadores de ARM tienen un modelo de memoria débil petición, y porque tenía que el software de ARM no tiene una herencia de confianza en la semántica extendida de **\/volatile:ms** y no hace normalmente interfaz con el software que lo hace.  Sin embargo, sigue siendo a veces adecuado o incluso necesarios para compilar un programa de armamento para utilizar semántica extendida.  Por ejemplo, puede ser demasiado costosos al puerto al programa usar la semántica de ISO C\+\+, o el software del controlador podría observar la semántica tradicional para funcionar correctamente.  En estos casos, puede utilizar el modificador **\/volatile:ms**; sin embargo, para volver a crear la semántica volatile tradicional en destinos de ARM, debe insertar barreras de memoria alrededor de cada lectura o escritura de una variable de `volatile` para aplicar el orden seguros, que puede tener un impacto negativo en el rendimiento.  
+On the ARM architecture, the default is **/volatile:iso** because ARM processors have a weakly ordered memory model, and because ARM software doesn’t have a legacy of relying on the extended semantics of **/volatile:ms** and doesn't usually have to interface with software that does. However, it's still sometimes convenient or even required to compile an ARM program to use the extended semantics. For example, it may be too costly to port a program to use the ISO C++ semantics, or driver software might have to adhere to the traditional semantics to function correctly. In these cases, you can use the **/volatile:ms** switch; however, to recreate the traditional volatile semantics on ARM targets, the compiler must insert memory barriers around each read or write of a `volatile` variable to enforce strong ordering, which can have a negative impact on performance.  
   
- En arquitecturas x86 y x64, el valor predeterminado es **\/volatile:ms** porque gran parte del software que se ha creado para estas arquitecturas mediante el compilador de Microsoft C\+\+ se basa en ellas.  Al compilar x86 y programas x64, especifique el modificador **\/volatile:iso** para ayudar a evitar confianza innecesaria en la semántica volatile tradicional, y a promover portabilidad.  
+On the x86 and x64 architectures, the default is **/volatile:ms** because much of the software that has already been created for these architectures by using the Microsoft C++ compiler relies on them. When you compile x86 and x64 programs, you can specify the **/volatile:iso** switch to help avoid unnecessary reliance on the traditional volatile semantics, and to promote portability.  
   
-## Vea también  
- [Configurar programas para procesadores ARM](../build/configuring-programs-for-arm-processors-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+
+[Configure Visual C++ for ARM processors](../build/configuring-programs-for-arm-processors-visual-cpp.md)

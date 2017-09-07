@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dfe2d5cb2180585879bba9f912253f71f7aa3805
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: eaa816f145dc46ca45ea761ab52f9c3bb7d9e343
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="c-run-time-library-reference"></a>Referencia de la biblioteca en tiempo de ejecución de C
@@ -76,8 +76,8 @@ La biblioteca en tiempo de ejecución de Microsoft proporciona las rutinas para 
  [Comprobar errores en tiempo de ejecución](../c-runtime-library/run-time-error-checking.md)  
  Proporciona vínculos a las funciones que admiten las comprobaciones de errores en tiempo de ejecución.  
   
- [Comportamiento de la biblioteca en tiempo de ejecución](../build/run-time-library-behavior.md)  
- Describe el punto de entrada en el archivo DLL de CRT.  
+ [Archivos DLL y comportamiento de la biblioteca en tiempo de ejecución de Visual C++](../build/run-time-library-behavior.md)  
+ Describe el punto de entrada y el código de inicio que se usan para un DLL.  
   
  [Bibliotecas de Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
  Proporciona vínculos a las diversas bibliotecas suministradas con Visual C++, incluidas las bibliotecas de ATL, MFC, las plantillas OLE DB, la biblioteca en tiempo de ejecución de C y la biblioteca estándar de C++.  
