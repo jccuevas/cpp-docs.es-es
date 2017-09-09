@@ -1,83 +1,100 @@
 ---
-title: "Variables de entorno de CL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe (compilador), variables de entorno"
-  - "variables de entorno, compilador CL"
-  - "INCLUDE (variable de entorno)"
-  - "LIBPATH (variable de entorno)"
+title: CL Environment Variables | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cl
+dev_langs:
+- C++
+helpviewer_keywords:
+- INCLUDE environment variable
+- cl.exe compiler, environment variables
+- LIBPATH environment variable
+- environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Variables de entorno de CL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 0286098cb87ecfea244269a8e5756829759b82f7
+ms.openlocfilehash: 0a70eb5486b80be0451be89549b51c7335cd03fb
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
 
-La herramienta CL usa las siguientes variables de entorno:  
+---
+# <a name="cl-environment-variables"></a>CL Environment Variables
+The CL tool uses the following environment variables:  
   
--   CL y \_CL\_, si se definen.  La herramienta CL antepone las opciones y los argumentos definidos en la variable de entorno de CL a los argumentos de la línea de comandos, y anexa las opciones y los argumentos definidos en \_CL\_ antes del procesamiento.  
+-   CL and _CL\_, if defined. The CL tool prepends the options and arguments defined in the CL environment variable to the command line arguments, and appends the options and arguments defined in _CL\_, before processing.  
   
--   INCLUDE, que debe señalar al subdirectorio \\include de la instalación de Visual C\+\+.  
+-   INCLUDE, which must point to the \include subdirectory of your Visual C++ installation.  
   
--   LIBPATH, que especifica los directorios en los que se van a buscar archivos de metadatos a los que se hace referencia con [\#using](../../preprocessor/hash-using-directive-cpp.md).  Para obtener más información sobre LIBPATH, vea `#using`.  
+-   LIBPATH, which specifies directories to search for metadata files referenced with [#using](../../preprocessor/hash-using-directive-cpp.md). See `#using` for more information on LIBPATH.  
   
- Puede establecer la variable de entorno de CL o \_CL\_ usando la sintaxis siguiente:  
+ You can set the CL or _CL\_ environment variable using the following syntax:  
   
 ```  
 SET CL=[ [option] ... [file] ...] [/link link-opt ...]  
 SET _CL_=[ [option] ... [file] ...] [/link link-opt ...]  
 ```  
   
- Para obtener más información sobre los argumentos de las variables de entorno de CL y \_CL\_, consulte [Sintaxis de línea de comandos del compilador](../../build/reference/compiler-command-line-syntax.md).  
+ For details on the arguments to the CL and _CL\_ environment variables, see [Compiler Command-Line Syntax](../../build/reference/compiler-command-line-syntax.md).  
   
- Puede usar estas variables de entorno para definir los archivos y las opciones que usa con más frecuencia, y puede usar la línea de comandos para definir archivos y opciones específicos para fines específicos.  Las variables de entorno de CL y \_CL\_ están limitadas a 1024 caracteres \(el límite de entrada de la línea de comandos\).  
+ You can use these environment variables to define the files and options you use most often and use the command line to define specific files and options for specific purposes. The CL and _CL\_ environment variables are limited to 1024 characters (the command-line input limit).  
   
- No puede usar la opción \/D para definir un símbolo que use un signo igual \(\=\).  Puede sustituir el signo de número \(\#\) por un signo igual.  De este modo, puede usar las variables de entorno de CL o \_CL\_ para definir constantes de preprocesador con valores explícitos, como `/DDEBUG #1` para definir `DEBUG=1`.  
+ You cannot use the /D option to define a symbol that uses an equal sign (=). You can substitute the number sign (#) for an equal sign. In this way, you can use the CL or _CL_environment variables to define preprocessor constants with explicit values—for example, `/DDEBUG#1` to define `DEBUG=1`.  
   
- Para obtener información relacionada, vea [Establecer variables de entorno](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
+ For related information, see [Set Environment Variables](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
   
-## Ejemplos  
- A continuación se muestra un ejemplo de cómo establecer la variable de entorno de CL:  
+## <a name="examples"></a>Examples  
+ The following is an example of setting the CL environment variable:  
   
 ```  
 SET CL=/Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ  
 ```  
   
- Cuando se establece esta variable de entorno, si escribe `CL INPUT.C` en la línea de comandos, este es el comando eficaz:  
+ When this environment variable is set, if you enter `CL INPUT.C` at the command line, this is the effective command:  
   
 ```  
 CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ INPUT.C  
 ```  
   
- En el ejemplo siguiente, un comando de CL sin formato compila los archivos de código fuente FILE1.c y FILE2.c y, a continuación, vincula los archivos objeto FILE1.obj, FILE2.obj y FILE3.obj:  
+ The following example causes a plain CL command to compile the source files FILE1.c and FILE2.c, and then link the object files FILE1.obj, FILE2.obj, and FILE3.obj:  
   
 ```  
 SET CL=FILE1.C FILE2.C  
 SET _CL_=FILE3.OBJ  
 CL  
-  
 ```  
   
- Esto tiene el mismo efecto que la línea de comandos siguiente:  
+ This has the same effect as the following command line:  
   
 ```  
 CL FILE1.C FILE2.C FILE3.OBJ  
 ```  
   
-## Vea también  
- [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)   
- [Opciones del compilador](../../build/reference/compiler-options.md)
+## <a name="see-also"></a>See Also  
+ [Setting Compiler Options](../../build/reference/setting-compiler-options.md)   
+ [Compiler Options](../../build/reference/compiler-options.md)
+

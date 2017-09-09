@@ -1,5 +1,5 @@
 ---
-title: CRichEditCtrl (clase) | Documentos de Microsoft
+title: CRichEditCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -109,126 +109,126 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 262b2b8548f203a210b1aabbe149fe25cf6ad655
+ms.translationtype: MT
+ms.sourcegitcommit: 0286098cb87ecfea244269a8e5756829759b82f7
+ms.openlocfilehash: 41ac94d20cf50cff78fd52deeb24e38067374bfe
 ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="cricheditctrl-class"></a>CRichEditCtrl (clase)
-Proporciona la funcionalidad del control Rich Edit.  
+# <a name="cricheditctrl-class"></a>CRichEditCtrl Class
+Provides the functionality of the rich edit control.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CRichEditCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRichEditCtrl::CRichEditCtrl](#cricheditctrl)|Construye un objeto `CRichEditCtrl`.|  
+|[CRichEditCtrl::CRichEditCtrl](#cricheditctrl)|Constructs a `CRichEditCtrl` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRichEditCtrl::CanPaste](#canpaste)|Determina si se puede pegar el contenido del Portapapeles en el control de edición enriquecida.|  
-|[CRichEditCtrl::CanRedo](#canredo)|Determina si hay acciones en cola de puesta al día del control.|  
-|[CRichEditCtrl::CanUndo](#canundo)|Determina si se puede deshacer una operación de edición.|  
-|[CRichEditCtrl::CharFromPos](#charfrompos)|Recupera información sobre el carácter más cercano al punto especificado en el área de cliente de un control de edición.|  
-|[CRichEditCtrl::Clear](#clear)|Borra la selección actual.|  
-|[CRichEditCtrl::Copy](#copy)|Copia la selección actual en el Portapapeles.|  
-|[CRichEditCtrl::Create](#create)|Crea el control de edición enriquecida de Windows y lo asocia a este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::CreateEx](#createex)|Crea el control de edición enriquecida de Windows con los valores especificados Windows estilos extendidos y lo asocia a este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::Cut](#cut)|Corta la selección actual en el Portapapeles.|  
-|[CRichEditCtrl::DisplayBand](#displayband)|Muestra una parte del contenido de este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::EmptyUndoBuffer](#emptyundobuffer)|Restablece la marca de deshacer de este (borra) `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::FindText](#findtext)|Busca texto dentro de este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::FindWordBreak](#findwordbreak)|Busca la siguiente sección de word antes o después de la posición de carácter especificada y recupera información sobre el carácter que ocupa esa posición.|  
-|[CRichEditCtrl::FormatRange](#formatrange)|Da formato a un intervalo de texto para el dispositivo de salida de destino.|  
-|[CRichEditCtrl::GetCharPos](#getcharpos)|Determina la ubicación de un carácter determinado dentro de este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::GetDefaultCharFormat](#getdefaultcharformat)|Recupera el carácter predeterminado actual formato atributos en este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::GetEventMask](#geteventmask)|Recupera la máscara de eventos para este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::GetFirstVisibleLine](#getfirstvisibleline)|Determina la línea superior visible en esta `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::GetIRichEditOle](#getiricheditole)|Recupera un puntero a la `IRichEditOle` para datos completos de este control de edición de la interfaz.|  
-|[CRichEditCtrl::GetLimitText](#getlimittext)|Obtiene el límite en la cantidad de texto que un usuario puede escribir en esta `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::GetLine](#getline)|Recupera una línea de texto de este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::GetLineCount](#getlinecount)|Recupera el número de líneas en este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::GetModify](#getmodify)|Determina si el contenido de este `CRichEditCtrl` objeto han cambiado desde la última vez que guardó.|  
-|[CRichEditCtrl::GetOptions](#getoptions)|Recupera las opciones de control de edición enriquecida.|  
-|[CRichEditCtrl::GetParaFormat](#getparaformat)|Recupera el formato de los atributos de la selección actual en este párrafo `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::GetPunctuation](#getpunctuation)|Recupera los caracteres de puntuación actual para el control de edición enriquecida. Este mensaje sólo está disponible en versiones de idiomas asiáticos del sistema operativo.|  
-|[CRichEditCtrl::GetRect](#getrect)|Recupera el rectángulo de formato para este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::GetRedoName](#getredoname)|Recupera el tipo de la siguiente acción, si existe alguno, en el control de la cola de puesta al día.|  
-|[CRichEditCtrl::GetSel](#getsel)|Obtiene iniciales y finales de las posiciones de la selección actual en este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::GetSelectionCharFormat](#getselectioncharformat)|Recupera el carácter de formato de los atributos de la selección actual en este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::GetSelectionType](#getselectiontype)|Recupera el tipo de contenido de la selección actual en este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::GetSelText](#getseltext)|Obtiene el texto de la selección actual en este `CRichEditCtrl` objeto|  
-|[CRichEditCtrl::GetTextLength](#gettextlength)|Recupera la longitud del texto, en caracteres, en este `CRichEditCtrl` objeto. No incluye el carácter nulo de terminación.|  
-|[CRichEditCtrl::GetTextLengthEx](#gettextlengthex)|Recupera el número de caracteres o bytes en la vista de edición enriquecida. Acepta una lista de indicadores para determinar el método para determinar la longitud del texto en un control rich edit|  
-|[CRichEditCtrl::GetTextMode](#gettextmode)|Recupera el nivel actual de deshacer y de modo de texto de un control rich edit.|  
-|[CRichEditCtrl::GetTextRange](#gettextrange)|Recupera el intervalo de texto especificado.|  
-|[CRichEditCtrl::GetUndoName](#getundoname)|Recupera el tipo de la siguiente acción de deshacer, si lo hay.|  
-|[CRichEditCtrl::GetWordWrapMode](#getwordwrapmode)|Recupera el ajuste de línea actual y las opciones de separación de palabras para el control rich edit. Este mensaje sólo está disponible en versiones de idiomas asiáticos del sistema operativo.|  
-|[CRichEditCtrl::HideSelection](#hideselection)|Muestra u oculta la selección actual.|  
-|[CRichEditCtrl::LimitText](#limittext)|Limita la cantidad de texto que un usuario puede escribir en el `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::LineFromChar](#linefromchar)|Determina qué línea contiene el carácter especificado.|  
-|[CRichEditCtrl::LineIndex](#lineindex)|Recupera el índice de carácter de una línea determinada en este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::LineLength](#linelength)|Recupera la longitud de una línea determinada en este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::LineScroll](#linescroll)|Desplaza el texto en este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::Paste](#paste)|Inserta el contenido del Portapapeles en este control de edición enriquecida.|  
-|[CRichEditCtrl::PasteSpecial](#pastespecial)|Inserta el contenido del Portapapeles en este control rich edit en el formato de datos especificado.|  
-|[CRichEditCtrl::PosFromChar](#posfromchar)|Recupera las coordenadas del área cliente de un carácter especificado en un control de edición.|  
-|[CRichEditCtrl::Redo](#redo)|Rehace la acción siguiente en la cola de puesta al día del control.|  
-|[CRichEditCtrl::ReplaceSel](#replacesel)|Reemplaza la selección actual en este `CRichEditCtrl` objeto con el texto especificado.|  
-|[CRichEditCtrl::RequestResize](#requestresize)|Esto fuerza `CRichEditCtrl` objeto para enviar notificaciones de cambio de tamaño de solicitud.|  
-|[CRichEditCtrl::SetAutoURLDetect](#setautourldetect)|Indica si la detección de dirección URL automática está activa en un control rich edit.|  
-|[CRichEditCtrl::SetBackgroundColor](#setbackgroundcolor)|Establece el color de fondo en este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::SetDefaultCharFormat](#setdefaultcharformat)|Establece el carácter predeterminado actual formato atributos en este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::SetEventMask](#seteventmask)|Establece la máscara de eventos para este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::SetModify](#setmodify)|Establece o borra la marca de modificación para esta `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::SetOLECallback](#setolecallback)|Establece la `IRichEditOleCallback` objeto COM para este control de edición enriquecida.|  
-|[CRichEditCtrl::SetOptions](#setoptions)|Establece las opciones para este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::SetParaFormat](#setparaformat)|Establece el formato de los atributos de la selección actual en este párrafo `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::SetPunctuation](#setpunctuation)|Establece los caracteres de puntuación para un control rich edit. Este mensaje sólo está disponible en versiones de idiomas asiáticos del sistema operativo.|  
-|[CRichEditCtrl::SetReadOnly](#setreadonly)|Establece la opción de solo lectura para este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::SetRect](#setrect)|Establece el rectángulo de formato para este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::SetSel](#setsel)|Establece la selección de esta `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::SetSelectionCharFormat](#setselectioncharformat)|Establece el carácter de formato de los atributos de la selección actual en este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::SetTargetDevice](#settargetdevice)|Establece el dispositivo de salida de destino para este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::SetTextMode](#settextmode)|Establece el nivel de deshacer o de modo de texto de un control rich edit. El mensaje se produce un error si el control contiene texto.|  
-|[CRichEditCtrl::SetUndoLimit](#setundolimit)|Establece el número máximo de acciones que se pueden almacenar en la cola de deshacer.|  
-|[CRichEditCtrl::SetWordCharFormat](#setwordcharformat)|Establece el carácter de formato de los atributos de la palabra actual en este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::SetWordWrapMode](#setwordwrapmode)|Establece las opciones de ajuste automático de línea y separación de palabras de los datos completos de control de edición. Este mensaje sólo está disponible en versiones de idiomas asiáticos del sistema operativo.|  
-|[CRichEditCtrl::StopGroupTyping](#stopgrouptyping)|Detiene el control de recopilación adicional escribiendo acciones en la acción de deshacer actual. El control almacena la siguiente acción de escritura, si hay alguno, en una acción nueva en la cola de deshacer.|  
-|[CRichEditCtrl::StreamIn](#streamin)|Inserta un texto de un flujo de entrada en este `CRichEditCtrl` objeto.|  
-|[CRichEditCtrl::StreamOut](#streamout)|Almacena el texto de este `CRichEditCtrl` objeto en un flujo de salida.|  
-|[CRichEditCtrl::Undo](#undo)|Invierte la última operación de edición.|  
+|[CRichEditCtrl::CanPaste](#canpaste)|Determines if the contents of the Clipboard can be pasted into this rich edit control.|  
+|[CRichEditCtrl::CanRedo](#canredo)|Determines whether there are any actions in the control's redo queue.|  
+|[CRichEditCtrl::CanUndo](#canundo)|Determines if an editing operation can be undone.|  
+|[CRichEditCtrl::CharFromPos](#charfrompos)|Retrieves information about the character closest to a specified point in the client area of an edit control.|  
+|[CRichEditCtrl::Clear](#clear)|Clears the current selection.|  
+|[CRichEditCtrl::Copy](#copy)|Copies the current selection to the Clipboard.|  
+|[CRichEditCtrl::Create](#create)|Creates the Windows rich edit control and associates it with this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::CreateEx](#createex)|Creates the Windows rich edit control with the specified extended Windows styles and associates it with this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::Cut](#cut)|Cuts the current selection to the Clipboard.|  
+|[CRichEditCtrl::DisplayBand](#displayband)|Displays a portion of the contents of this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::EmptyUndoBuffer](#emptyundobuffer)|Resets (clears) the undo flag of this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::FindText](#findtext)|Locates text within this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::FindWordBreak](#findwordbreak)|Finds the next word break before or after the specified character position, or retrieves information about the character at that position.|  
+|[CRichEditCtrl::FormatRange](#formatrange)|Formats a range of text for the target output device.|  
+|[CRichEditCtrl::GetCharPos](#getcharpos)|Determines the location of a given character within this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetDefaultCharFormat](#getdefaultcharformat)|Retrieves the current default character formatting attributes in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetEventMask](#geteventmask)|Retrieves the event mask for this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetFirstVisibleLine](#getfirstvisibleline)|Determines the topmost visible line in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetIRichEditOle](#getiricheditole)|Retrieves a pointer to the `IRichEditOle` interface for this rich edit control.|  
+|[CRichEditCtrl::GetLimitText](#getlimittext)|Gets the limit on the amount of text a user can enter into this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetLine](#getline)|Retrieves a line of text from this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetLineCount](#getlinecount)|Retrieves the number of lines in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetModify](#getmodify)|Determines if the contents of this `CRichEditCtrl` object have changed since the last save.|  
+|[CRichEditCtrl::GetOptions](#getoptions)|Retrieves the rich edit control options.|  
+|[CRichEditCtrl::GetParaFormat](#getparaformat)|Retrieves the paragraph formatting attributes in the current selection in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetPunctuation](#getpunctuation)|Retrieves the current punctuation characters for the rich edit control. This message is available only in Asian-language versions of the operating system.|  
+|[CRichEditCtrl::GetRect](#getrect)|Retrieves the formatting rectangle for this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetRedoName](#getredoname)|Retrieves the type of the next action, if any, in the control's redo queue.|  
+|[CRichEditCtrl::GetSel](#getsel)|Gets the starting and ending positions of the current selection in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetSelectionCharFormat](#getselectioncharformat)|Retrieves the character formatting attributes in the current selection in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetSelectionType](#getselectiontype)|Retrieves the type of contents in the current selection in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::GetSelText](#getseltext)|Gets the text of the current selection in this `CRichEditCtrl` object|  
+|[CRichEditCtrl::GetTextLength](#gettextlength)|Retrieves the length of the text, in characters, in this `CRichEditCtrl` object. Does not include the terminating null character.|  
+|[CRichEditCtrl::GetTextLengthEx](#gettextlengthex)|Retrieves the number of characters or bytes in the rich edit view. Accepts a list of flags to indicate the method of determining length of the text in a rich edit control|  
+|[CRichEditCtrl::GetTextMode](#gettextmode)|Retrieves the current text mode and undo level of a rich edit control.|  
+|[CRichEditCtrl::GetTextRange](#gettextrange)|Retrieves the specified range of text.|  
+|[CRichEditCtrl::GetUndoName](#getundoname)|Retrieves the type of the next undo action, if any.|  
+|[CRichEditCtrl::GetWordWrapMode](#getwordwrapmode)|Retrieves the current word wrapping and word breaking options for the rich edit control. This message is available only in Asian-language versions of the operating system.|  
+|[CRichEditCtrl::HideSelection](#hideselection)|Shows or hides the current selection.|  
+|[CRichEditCtrl::LimitText](#limittext)|Limits the amount of text a user can enter into the `CRichEditCtrl` object.|  
+|[CRichEditCtrl::LineFromChar](#linefromchar)|Determines which line contains the given character.|  
+|[CRichEditCtrl::LineIndex](#lineindex)|Retrieves the character index of a given line in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::LineLength](#linelength)|Retrieves the length of a given line in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::LineScroll](#linescroll)|Scrolls the text in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::Paste](#paste)|Inserts the contents of the Clipboard into this rich edit control.|  
+|[CRichEditCtrl::PasteSpecial](#pastespecial)|Inserts the contents of the Clipboard into this rich edit control in the specified data format.|  
+|[CRichEditCtrl::PosFromChar](#posfromchar)|Retrieves the client area coordinates of a specified character in an edit control.|  
+|[CRichEditCtrl::Redo](#redo)|Redoes the next action in the control's redo queue.|  
+|[CRichEditCtrl::ReplaceSel](#replacesel)|Replaces the current selection in this `CRichEditCtrl` object with specified text.|  
+|[CRichEditCtrl::RequestResize](#requestresize)|Forces this `CRichEditCtrl` object to send request resize notifications.|  
+|[CRichEditCtrl::SetAutoURLDetect](#setautourldetect)|Indicates if the auto URL detection is active in a rich edit control.|  
+|[CRichEditCtrl::SetBackgroundColor](#setbackgroundcolor)|Sets the background color in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetDefaultCharFormat](#setdefaultcharformat)|Sets the current default character formatting attributes in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetEventMask](#seteventmask)|Sets the event mask for this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetModify](#setmodify)|Sets or clears the modification flag for this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetOLECallback](#setolecallback)|Sets the `IRichEditOleCallback` COM object for this rich edit control.|  
+|[CRichEditCtrl::SetOptions](#setoptions)|Sets the options for this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetParaFormat](#setparaformat)|Sets the paragraph formatting attributes in the current selection in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetPunctuation](#setpunctuation)|Sets the punctuation characters for a rich edit control. This message is available only in Asian-language versions of the operating system.|  
+|[CRichEditCtrl::SetReadOnly](#setreadonly)|Sets the read-only option for this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetRect](#setrect)|Sets the formatting rectangle for this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetSel](#setsel)|Sets the selection in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetSelectionCharFormat](#setselectioncharformat)|Sets the character formatting attributes in the current selection in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetTargetDevice](#settargetdevice)|Sets the target output device for this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetTextMode](#settextmode)|Sets the text mode or undo level of a rich edit control. The message fails if the control contains text.|  
+|[CRichEditCtrl::SetUndoLimit](#setundolimit)|Sets the maximum number of actions that can stored in the undo queue.|  
+|[CRichEditCtrl::SetWordCharFormat](#setwordcharformat)|Sets the character formatting attributes in the current word in this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::SetWordWrapMode](#setwordwrapmode)|Sets the word-wrapping and word-breaking options for the rich edit control. This message is available only in Asian-language versions of the operating system.|  
+|[CRichEditCtrl::StopGroupTyping](#stopgrouptyping)|Stops the control from collecting additional typing actions into the current undo action. The control stores the next typing action, if any, into a new action in the undo queue.|  
+|[CRichEditCtrl::StreamIn](#streamin)|Inserts text from an input stream into this `CRichEditCtrl` object.|  
+|[CRichEditCtrl::StreamOut](#streamout)|Stores text from this `CRichEditCtrl` object into an output stream.|  
+|[CRichEditCtrl::Undo](#undo)|Reverses the last editing operation.|  
   
-## <a name="remarks"></a>Comentarios  
- Un "control rich edit" es una ventana en la que el usuario puede escribir y editar texto. El texto se puede asignar caracteres y el formato de párrafo y puede incluir objetos OLE incrustados. Los controles Rich edit proporcionan una interfaz de programación para dar formato al texto. Sin embargo, una aplicación debe implementar los componentes de interfaz de usuario necesarios para realizar operaciones de formato disponibles para el usuario.  
+## <a name="remarks"></a>Remarks  
+ A "rich edit control" is a window in which the user can enter and edit text. The text can be assigned character and paragraph formatting, and can include embedded OLE objects. Rich edit controls provide a programming interface for formatting text. However, an application must implement any user interface components necessary to make formatting operations available to the user.  
   
- Este control común de Windows (y, por tanto, la `CRichEditCtrl` clase) está disponible solo para programas que se ejecutan en versiones de Windows 95 ó 98 y Windows NT 3.51 y versiones posteriores. El `CRichEditCtrl` clase es compatible con las versiones 2.0 y 3.0 de la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] control rich edit.  
+ This Windows Common control (and therefore the `CRichEditCtrl` class) is available only to programs running under Windows 95/98 and Windows NT versions 3.51 and later. The `CRichEditCtrl` class supports versions 2.0 and 3.0 of the Windows SDK rich edit control.  
   
 > [!CAUTION]
->  Si está utilizando un control rich edit en un cuadro de diálogo (sin tener en cuenta si la aplicación es SDI, MDI o basada en cuadros de diálogo), debe llamar a [AfxInitRichEdit](application-information-and-management.md#afxinitrichedit) una vez antes el cuadro de diálogo se muestra el cuadro. Un lugar típico para llamar a esta función está en el programa `InitInstance` función miembro. No es necesario para que se llame para cada hora de que mostrar el cuadro de diálogo, sólo la primera vez. No es necesario llamar a `AfxInitRichEdit` si está trabajando con `CRichEditView`.  
+>  If you are using a rich edit control in a dialog box (regardless whether your application is SDI, MDI, or dialog-based), you must call [AfxInitRichEdit](application-information-and-management.md#afxinitrichedit) once before the dialog box is displayed. A typical place to call this function is in your program's `InitInstance` member function. You do not need to call it for each time you display the dialog box, only the first time. You do not have to call `AfxInitRichEdit` if you are working with `CRichEditView`.  
   
- Para obtener más información sobre el uso de `CRichEditCtrl`, consulte:  
+ For more information on using `CRichEditCtrl`, see:  
   
-- [Controles](../../mfc/controls-mfc.md)  
+- [Controls](../../mfc/controls-mfc.md)  
   
-- [Uso de CRichEditCtrl](../../mfc/using-cricheditctrl.md)  
+- [Using CRichEditCtrl](../../mfc/using-cricheditctrl.md)  
   
--   El artículo de Knowledge Base Q259949: INFO: SetCaretPos() es no es apropiado con CEdit o controles CRichEditCtrl  
+-   Knowledge Base article Q259949 : INFO: SetCaretPos() Is Not Appropriate with CEdit or CRichEditCtrl Controls  
   
- Para obtener un ejemplo del uso de un control rich edit en una aplicación MFC, vea el [WORDPAD](../../visual-cpp-samples.md) aplicación de ejemplo.  
+ For an example of using a rich edit control in an MFC application, see the [WORDPAD](../../visual-cpp-samples.md) sample application.  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -237,113 +237,113 @@ class CRichEditCtrl : public CWnd
   
  `CRichEditCtrl`  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="canpaste"></a>CRichEditCtrl::CanPaste  
- Determina si el control rich edit puede pegar el formato de Portapapeles especificado.  
+##  <a name="canpaste"></a>  CRichEditCtrl::CanPaste  
+ Determines if the rich edit control can paste the specified Clipboard format.  
   
 ```  
 BOOL CanPaste(UINT nFormat = 0) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nFormat`  
- El formato de datos del Portapapeles en la consulta. Este parámetro puede ser uno de los formatos de Portapapeles predefinidos o el valor devuelto por [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049).  
+ The Clipboard data format to query. This parameter can be one of the predefined Clipboard formats or the value returned by [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049).  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si el formato del Portapapeles se puede pegar; en caso contrario es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the Clipboard format can be pasted; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Si `nFormat` es 0, `CanPaste` intentará cualquier formato actualmente en el Portapapeles.  
+### <a name="remarks"></a>Remarks  
+ If `nFormat` is 0, `CanPaste` will try any format currently on the Clipboard.  
   
- Para obtener más información, consulte [EM_CANPASTE](http://msdn.microsoft.com/library/windows/desktop/bb787993) mensaje y [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funcionando en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_CANPASTE](http://msdn.microsoft.com/library/windows/desktop/bb787993) message and [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl n.º 1](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#1](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_1.cpp)]  
   
-##  <a name="canredo"></a>CRichEditCtrl::CanRedo  
- Determina si la cola de puesta al día contiene todas las acciones.  
+##  <a name="canredo"></a>  CRichEditCtrl::CanRedo  
+ Determines if the redo queue contains any actions.  
   
 ```  
 BOOL CanRedo() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la cola de puesta al día contiene acciones, de lo contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the redo queue contains actions, otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Para conocer el nombre de la operación en la cola de rehacer, llame a [CRichEditCtrl::GetRedoName](#getredoname). Para rehacer la última operación de deshacer, llame a [rehacer](#redo).  
+### <a name="remarks"></a>Remarks  
+ To discover the name of the operation in the redo queue, call [CRichEditCtrl::GetRedoName](#getredoname). To redo the most recent Undo operation, call [Redo](#redo).  
   
- Para obtener más información, consulte [EM_CANREDO](http://msdn.microsoft.com/library/windows/desktop/bb787995) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_CANREDO](http://msdn.microsoft.com/library/windows/desktop/bb787995) in the Windows SDK.  
   
-##  <a name="canundo"></a>CRichEditCtrl::CanUndo  
- Determina si se puede deshacer la última operación de edición.  
+##  <a name="canundo"></a>  CRichEditCtrl::CanUndo  
+ Determines if the last editing operation can be undone.  
   
 ```  
 BOOL CanUndo() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la última operación de edición se puedan deshacer mediante una llamada a la [deshacer](#undo) función miembro; 0 si no se puede deshacer.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the last edit operation can be undone by a call to the [Undo](#undo) member function; 0 if it cannot be undone.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [EM_CANUNDO](http://msdn.microsoft.com/library/windows/desktop/bb775468) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ For more information, see [EM_CANUNDO](http://msdn.microsoft.com/library/windows/desktop/bb775468) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl n.º 2](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#2](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_2.cpp)]  
   
-##  <a name="charfrompos"></a>CRichEditCtrl::CharFromPos  
- Recupera información sobre el carácter que ocupa el punto especificado por el parámetro `pt`.  
+##  <a name="charfrompos"></a>  CRichEditCtrl::CharFromPos  
+ Retrieves information about the character at the point specified by the parameter `pt`.  
   
 ```  
 int CharFromPos(CPoint pt) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pt`  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas del punto especificado.  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object containing the coordinates of the specified point.  
   
-### <a name="return-value"></a>Valor devuelto  
- El índice de carácter de base cero del carácter más cercano al punto especificado. Si el punto especificado está más allá del último carácter en el control, el valor devuelto indica el último carácter en el control.  
+### <a name="return-value"></a>Return Value  
+ The zero-based character index of the character nearest the specified point. If the specified point is beyond the last character in the control, the return value indicates the last character in the control.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función miembro funciona con un control rich edit. Para obtener la información de un control de edición, llame a [CEdit::CharFromPos](../../mfc/reference/cedit-class.md#charfrompos).  
+### <a name="remarks"></a>Remarks  
+ This member function works with a rich edit control. To get the information for an edit control, call [CEdit::CharFromPos](../../mfc/reference/cedit-class.md#charfrompos).  
   
- Para obtener más información, consulte [EM_CHARFROMPOS](http://msdn.microsoft.com/library/windows/desktop/bb761566) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_CHARFROMPOS](http://msdn.microsoft.com/library/windows/desktop/bb761566) in the Windows SDK.  
   
-##  <a name="clear"></a>CRichEditCtrl::Clear  
- Elimina (borra) la selección actual (si existe) de los datos completos de control de edición.  
+##  <a name="clear"></a>  CRichEditCtrl::Clear  
+ Deletes (clears) the current selection (if any) in the rich edit control.  
   
 ```  
 void Clear();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- La eliminación realizada por **desactive** puedan deshacer mediante una llamada a la [deshacer](#undo) función miembro.  
+### <a name="remarks"></a>Remarks  
+ The deletion performed by **Clear** can be undone by calling the [Undo](#undo) member function.  
   
- Para eliminar la selección actual y coloca el contenido eliminado en el Portapapeles, llame a la [cortar](#cut) función miembro.  
+ To delete the current selection and place the deleted contents onto the Clipboard, call the [Cut](#cut) member function.  
   
- Para obtener más información, consulte [WM_CLEAR](http://msdn.microsoft.com/library/windows/desktop/ms649020) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [WM_CLEAR](http://msdn.microsoft.com/library/windows/desktop/ms649020) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl 3](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#3](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_3.cpp)]  
   
-##  <a name="copy"></a>CRichEditCtrl::Copy  
- Copia la selección actual (si existe) en el control rich edit en el Portapapeles.  
+##  <a name="copy"></a>  CRichEditCtrl::Copy  
+ Copies the current selection (if any) in the rich edit control to the Clipboard.  
   
 ```  
 void Copy();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [WM_COPY](http://msdn.microsoft.com/library/windows/desktop/ms649022) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ For more information, see [WM_COPY](http://msdn.microsoft.com/library/windows/desktop/ms649022) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #4](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#4](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_4.cpp)]  
   
-##  <a name="create"></a>CRichEditCtrl::Create  
- Crea el control de edición enriquecida de Windows y lo asocia a este `CRichEditCtrl` objeto.  
+##  <a name="create"></a>  CRichEditCtrl::Create  
+ Creates the Windows rich edit control and associates it with this `CRichEditCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -353,50 +353,50 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Especifica el estilo del control de edición. Aplicar una combinación de los estilos de ventana que aparece en el **comentarios** sección más adelante, y [estilos de control de edición](http://msdn.microsoft.com/library/windows/desktop/bb775464), que se describen en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies the edit control's style. Apply a combination of the window styles listed in the **Remarks** section below, and [edit control styles](http://msdn.microsoft.com/library/windows/desktop/bb775464), described in the Windows SDK.  
   
  `rect`  
- Especifica el tamaño y la posición del control de edición. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [RECT](../../mfc/reference/rect-structure1.md) estructura.  
+ Specifies the edit control's size and position. Can be a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or [RECT](../../mfc/reference/rect-structure1.md) structure.  
   
  `pParentWnd`  
- Especifica la ventana primaria del control de edición (a menudo un [CDialog](../../mfc/reference/cdialog-class.md)). No debe ser **NULL**.  
+ Specifies the edit control's parent window (often a [CDialog](../../mfc/reference/cdialog-class.md)). It must not be **NULL**.  
   
  `nID`  
- Especifica el identificador. del control de edición  
+ Specifies the edit control's ID.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la inicialización se realiza correctamente; en caso contrario, es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if initialization is successful; otherwise, 0.  
   
-### <a name="remarks"></a>Comentarios  
- Crear un `CRichEditCtrl` objeto en dos pasos. En primer lugar, llame a la [CRichEditCtrl](#cricheditctrl) constructor, a continuación, llame a **crear**, que crea el control de edición de Windows y lo adjunta a la `CRichEditCtrl` objeto.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CRichEditCtrl` object in two steps. First, call the [CRichEditCtrl](#cricheditctrl) constructor, then call **Create**, which creates the Windows edit control and attaches it to the `CRichEditCtrl` object.  
   
- Cuando se crea un control rich edit con esta función, primero debe cargar la biblioteca de controles comunes necesarios. Para cargar la biblioteca, llame a la función global [AfxInitRichEdit](application-information-and-management.md#afxinitrichedit), que a su vez inicializa la biblioteca de controles comunes. Debe llamar a `AfxInitRichEdit` solo una vez en el proceso.  
+ When you create a rich edit control with this function, first you must load the necessary common controls library. To load the libary, call the global function [AfxInitRichEdit](application-information-and-management.md#afxinitrichedit), which in turn initializes the common controls library. You need to call `AfxInitRichEdit` only once in your process.  
   
- Cuando **crear** se ejecuta, Windows envía la [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), y [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) mensajes para el control de edición.  
+ When **Create** executes, Windows sends the [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), and [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) messages to the edit control.  
   
- Estos mensajes se controlan de manera predeterminada el [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), y [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) funciones miembro de la `CWnd` clase base. Para extender el control de mensajes de forma predeterminada, derive una clase de `CRichEditCtrl`, agregue un mapa de mensajes a la nueva clase y reemplazan las funciones de miembro anterior de controlador de mensajes. Invalidar `OnCreate`, por ejemplo, para realizar la inicialización necesaria para la nueva clase.  
+ These messages are handled by default by the [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), and [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) member functions in the `CWnd` base class. To extend the default message handling, derive a class from `CRichEditCtrl`, add a message map to the new class, and override the above message-handler member functions. Override `OnCreate`, for example, to perform needed initialization for the new class.  
   
- Aplique el siguiente [estilos de ventana](../../mfc/reference/window-styles.md) a un control de edición.  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to an edit control.  
   
-- **WS_CHILD** siempre.  
+- **WS_CHILD** Always.  
   
-- **WS_VISIBLE** normalmente.  
+- **WS_VISIBLE** Usually.  
   
-- **WS_DISABLED** rara vez.  
+- **WS_DISABLED** Rarely.  
   
-- **WS_GROUP** a controles de grupo.  
+- **WS_GROUP** To group controls.  
   
-- **WS_TABSTOP** debe incluir el control de edición en el orden de tabulación.  
+- **WS_TABSTOP** To include edit control in the tabbing order.  
   
- Para obtener más información sobre los estilos de ventana, consulte [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information about window styles, see [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl Nº 5](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#5](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_5.cpp)]  
   
-##  <a name="createex"></a>CRichEditCtrl::CreateEx  
- Crea un control (una ventana secundaria) y lo asocia a la `CRichEditCtrl` objeto.  
+##  <a name="createex"></a>  CRichEditCtrl::CreateEx  
+ Creates a control (a child window) and associates it with the `CRichEditCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -407,99 +407,99 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el `dwExStyle` parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- Especifica el estilo del control de edición. Aplicar una combinación de los estilos de ventana que aparece en el **comentarios** sección de [crear](#create) y [estilos de control de edición](http://msdn.microsoft.com/library/windows/desktop/bb775464), que se describen en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies the edit control's style. Apply a combination of the window styles listed in the **Remarks** section of [Create](#create) and [edit control styles](http://msdn.microsoft.com/library/windows/desktop/bb775464), described in the Windows SDK.  
   
  `rect`  
- Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y la posición de la ventana que se creará, en coordenadas de cliente de `pParentWnd`.  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- Un puntero a la ventana que es primario del control.  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- Identificador de ventana secundaria. del control  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>Valor devuelto  
- Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Use `CreateEx` en lugar de **crear** para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_**.  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of **Create** to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="cricheditctrl"></a>CRichEditCtrl::CRichEditCtrl  
- Construye un objeto `CRichEditCtrl`.  
+##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl  
+ Constructs a `CRichEditCtrl` object.  
   
 ```  
 CRichEditCtrl();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Use [crear](#create) para construir las ventanas de control rich edit.  
+### <a name="remarks"></a>Remarks  
+ Use [Create](#create) to construct the Windows rich edit control.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #6](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#6](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_6.cpp)]  
   
-##  <a name="cut"></a>CRichEditCtrl::Cut  
- Eliminar (cortes) la selección actual (si existe) de los datos completos de control de edición y copia el texto eliminado en el Portapapeles.  
+##  <a name="cut"></a>  CRichEditCtrl::Cut  
+ Delete (cuts) the current selection (if any) in the rich edit control and copies the deleted text to the Clipboard.  
   
 ```  
 void Cut();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- La eliminación realizada por **cortar** puedan deshacer mediante una llamada a la [deshacer](#undo) función miembro.  
+### <a name="remarks"></a>Remarks  
+ The deletion performed by **Cut** can be undone by calling the [Undo](#undo) member function.  
   
- Para eliminar la selección actual sin colocar el texto eliminado en el Portapapeles, llame a la [desactive](#clear) función miembro.  
+ To delete the current selection without placing the deleted text into the Clipboard, call the [Clear](#clear) member function.  
   
- Para obtener más información, consulte [WM_CUT](http://msdn.microsoft.com/library/windows/desktop/ms649023) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [WM_CUT](http://msdn.microsoft.com/library/windows/desktop/ms649023) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #7](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#7](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_7.cpp)]  
   
-##  <a name="displayband"></a>CRichEditCtrl::DisplayBand  
- Muestra una parte del contenido del control rich edit (texto y elementos OLE), como ya se ha dado formato mediante [FormatRange](#formatrange).  
+##  <a name="displayband"></a>  CRichEditCtrl::DisplayBand  
+ Displays a portion of the contents of the rich edit control (text and OLE items), as previously formatted by [FormatRange](#formatrange).  
   
 ```  
 BOOL DisplayBand(LPRECT pDisplayRect);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pDisplayRect`  
- Puntero a un [RECT](../../mfc/reference/rect-structure1.md) o [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica el área del dispositivo para mostrar el texto.  
+ Pointer to a [RECT](../../mfc/reference/rect-structure1.md) or [CRect](../../atl-mfc-shared/reference/crect-class.md) object specifying the area of the device to display the text.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la presentación del texto con formato se realiza correctamente, en caso contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the display of the formatted text succeeds, otherwise, 0.  
   
-### <a name="remarks"></a>Comentarios  
- El texto y los elementos OLE se recortan al área especificado por el puntero `pDisplayRect`.  
+### <a name="remarks"></a>Remarks  
+ The text and OLE items are clipped to the area specified by the pointer `pDisplayRect`.  
   
- Para obtener más información, consulte [EM_DISPLAYBAND](http://msdn.microsoft.com/library/windows/desktop/bb787997) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_DISPLAYBAND](http://msdn.microsoft.com/library/windows/desktop/bb787997) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [CRichEditCtrl::FormatRange](#formatrange).  
+### <a name="example"></a>Example  
+  See the example for [CRichEditCtrl::FormatRange](#formatrange).  
   
-##  <a name="emptyundobuffer"></a>CRichEditCtrl::EmptyUndoBuffer  
- (Clear) restablece el indicador de deshacer del control de edición enriquecida.  
+##  <a name="emptyundobuffer"></a>  CRichEditCtrl::EmptyUndoBuffer  
+ Resets (clear) the undo flag of this rich edit control.  
   
 ```  
 void EmptyUndoBuffer();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Ahora, el control podrá deshacer la última operación de edición. La marca de deshacer se establece cada vez que se puede deshacer una operación en el control de edición enriquecida.  
+### <a name="remarks"></a>Remarks  
+ The control will now be unable to undo the last editing operation. The undo flag is set whenever an operation within the rich edit control can be undone.  
   
- La marca de deshacer se borra automáticamente cada vez que se llama a la [CWnd](../../mfc/reference/cwnd-class.md) función miembro [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext).  
+ The undo flag is automatically cleared whenever you call the [CWnd](../../mfc/reference/cwnd-class.md) member function [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext).  
   
- Para obtener más información, consulte [EM_EMPTYUNDOBUFFER](http://msdn.microsoft.com/library/windows/desktop/bb761568) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_EMPTYUNDOBUFFER](http://msdn.microsoft.com/library/windows/desktop/bb761568) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #8](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#8](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_8.cpp)]  
   
-##  <a name="findtext"></a>CRichEditCtrl::FindText  
- Busca texto en el control de edición enriquecida.  
+##  <a name="findtext"></a>  CRichEditCtrl::FindText  
+ Finds text within the rich edit control.  
   
 ```  
 long FindText(
@@ -507,26 +507,26 @@ long FindText(
     FINDTEXTEX* pFindText) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `dwFlags`  
- Para obtener una lista de valores posibles, consulte `wParam` en [EM_FINDTEXTEXT](http://msdn.microsoft.com/library/windows/desktop/bb788011) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For a list of possible values, see `wParam` in [EM_FINDTEXTEXT](http://msdn.microsoft.com/library/windows/desktop/bb788011) in the Windows SDK.  
   
  *pFindText*  
- Puntero a la [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) estructurar dando a los parámetros de la búsqueda y devolver el intervalo donde se encontró la coincidencia.  
+ Pointer to the [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) structure giving the parameters for the search and returning the range where the match was found.  
   
-### <a name="return-value"></a>Valor devuelto  
- Posición de carácter de base cero de la siguiente coincidencia; -1 si no hay nada más coincidencias.  
+### <a name="return-value"></a>Return Value  
+ Zero-based character position of the next match; - 1 if there are no more matches.  
   
-### <a name="remarks"></a>Comentarios  
- Puede buscar uno hacia arriba o hacia abajo al establecer los parámetros de intervalo apropiado el [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) estructura dentro de la **FINDTEXTEX** estructura.  
+### <a name="remarks"></a>Remarks  
+ You can search either up or down by setting the proper range parameters in the [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure within the **FINDTEXTEX** structure.  
   
- Para obtener más información, consulte [EM_FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb788011) mensaje y [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) estructura en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb788011) message and [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) structure in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl n.º 9](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#9](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_9.cpp)]  
   
-##  <a name="findwordbreak"></a>CRichEditCtrl::FindWordBreak  
- Busca la siguiente sección de word antes o después de la posición especificada por `nStart`.  
+##  <a name="findwordbreak"></a>  CRichEditCtrl::FindWordBreak  
+ Finds the next word break before or after the position specified by `nStart`.  
   
 ```  
 DWORD FindWordBreak(
@@ -534,21 +534,21 @@ DWORD FindWordBreak(
     DWORD nStart) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nCode`  
- Indica la acción que se realizará. Para obtener una lista de valores posibles, vea la descripción para el parámetro `code` en **EM_FINDWORDBREAK** en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Indicates the action to take. For a list of possible values, see the description for the parameter `code` in **EM_FINDWORDBREAK** in the Windows SDK.  
   
  `nStart`  
- La posición de carácter de base cero desde el que se va a iniciar.  
+ The zero-based character position from which to start.  
   
-### <a name="return-value"></a>Valor devuelto  
- Basándose en el parámetro `nCode`. Para obtener más información, consulte [EM_FINDWORDBREAK](http://msdn.microsoft.com/library/windows/desktop/bb788018) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ Based on the parameter `nCode`. For more information, see [EM_FINDWORDBREAK](http://msdn.microsoft.com/library/windows/desktop/bb788018) in the Windows SDK.  
   
-### <a name="remarks"></a>Comentarios  
- Puede utilizar esta función miembro para recuperar información sobre un carácter en una posición determinada.  
+### <a name="remarks"></a>Remarks  
+ You can use this member function to retrieve information about a character at a given position.  
   
-##  <a name="formatrange"></a>CRichEditCtrl::FormatRange  
- Da formato a un intervalo de texto en un control rich edit para un dispositivo específico.  
+##  <a name="formatrange"></a>  CRichEditCtrl::FormatRange  
+ Formats a range of text in a rich edit control for a specific device.  
   
 ```  
 long FormatRange(
@@ -556,134 +556,134 @@ long FormatRange(
     BOOL bDisplay = TRUE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
- *PFR*  
- Puntero a la [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911) estructura que contiene información sobre el dispositivo de salida. **NULL** indica que se puede liberar información almacenada en caché en el control de edición enriquecida.  
+### <a name="parameters"></a>Parameters  
+ *pfr*  
+ Pointer to the [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911) structure which contains information about the output device. **NULL** indicates that cached information within the rich edit control can be freed.  
   
  *bDisplay*  
- Indica si se debe representar el texto. Si **FALSE**, simplemente se mide el texto.  
+ Indicates if the text should be rendered. If **FALSE**, the text is just measured.  
   
-### <a name="return-value"></a>Valor devuelto  
- El índice del último carácter que se ajusta a la región más uno.  
+### <a name="return-value"></a>Return Value  
+ The index of the last character that fits in the region plus one.  
   
-### <a name="remarks"></a>Comentarios  
- Normalmente, esta llamada es seguida por una llamada a [DisplayBand](#displayband).  
+### <a name="remarks"></a>Remarks  
+ Typically, this call is followed by a call to [DisplayBand](#displayband).  
   
- Para obtener más información, consulte [EM_FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb788020) mensaje y [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911) estructura en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb788020) message and [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911) structure in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #10](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#10](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_10.cpp)]  
   
-##  <a name="getcharpos"></a>CRichEditCtrl::GetCharPos  
- Obtiene la posición (esquina superior izquierda) de un carácter determinado dentro de este `CRichEditCtrl` objeto.  
+##  <a name="getcharpos"></a>  CRichEditCtrl::GetCharPos  
+ Gets the position (top-left corner) of a given character within this `CRichEditCtrl` object.  
   
 ```  
 CPoint GetCharPos(long lChar) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lChar`  
- Índice de base cero del carácter.  
+ Zero-based index of the character.  
   
-### <a name="return-value"></a>Valor devuelto  
- La ubicación de la esquina superior izquierda del carácter especificado por `lChar`.  
+### <a name="return-value"></a>Return Value  
+ The location of the top-left corner of the character specified by `lChar`.  
   
-### <a name="remarks"></a>Comentarios  
- Se especifica el carácter dando a su valor de índice de base cero. Si `lChar` es mayor que el índice del último carácter en esta `CRichEditCtrl` de objeto, el valor devuelto especifica las coordenadas de la posición de carácter inmediatamente después del último carácter en esta `CRichEditCtrl` objeto.  
+### <a name="remarks"></a>Remarks  
+ The character is specified by giving its zero-based index value. If `lChar` is greater than the index of the last character in this `CRichEditCtrl` object, the return value specifies the coordinates of the character position just past the last character in this `CRichEditCtrl` object.  
   
- Para obtener más información, consulte [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) in the Windows SDK.  
   
-##  <a name="getdefaultcharformat"></a>CRichEditCtrl::GetDefaultCharFormat  
- Obtiene el carácter predeterminado formato atributos de este `CRichEditCtrl` objeto.  
+##  <a name="getdefaultcharformat"></a>  CRichEditCtrl::GetDefaultCharFormat  
+ Gets the default character formatting attributes of this `CRichEditCtrl` object.  
   
 ```  
 DWORD GetDefaultCharFormat(CHARFORMAT& cf) const;  DWORD GetDefaultCharFormat(CHARFORMAT2& cf) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `cf`  
- En la primera versión, un puntero a un **CHARFORMAT** estructura que contiene los atributos de formato de carácter predeterminado.  
+ In the first version, a pointer to a **CHARFORMAT** structure holding the default character formatting attributes.  
   
- En la segunda versión, un puntero a un **CHARFORMAT2** estructura, que es una extensión de Rich Edit 2.0 para la **CHARFORMAT** estructura, que contiene atributos de formato de carácter predeterminado.  
+ In the second version, a pointer to a **CHARFORMAT2** structure, which is a Rich Edit 2.0 extension to the **CHARFORMAT** structure, holding the default character formatting attributes.  
   
-### <a name="return-value"></a>Valor devuelto  
- El **dwMask** miembro de datos de `cf`. Se especifica atributos de formato de carácter predeterminado.  
+### <a name="return-value"></a>Return Value  
+ The **dwMask** data member of `cf`. It specified the default character formatting attributes.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte el **EM_GETCHARFORMAT** mensaje y la **CHARFORMAT** y **CHARFORMAT2** las estructuras de los [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ For more information, see the **EM_GETCHARFORMAT** message and the **CHARFORMAT** and **CHARFORMAT2** structures in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [SetDefaultCharFormat](#setdefaultcharformat).  
+### <a name="example"></a>Example  
+  See the example for [SetDefaultCharFormat](#setdefaultcharformat).  
   
-##  <a name="geteventmask"></a>CRichEditCtrl::GetEventMask  
- Obtiene la máscara de eventos para este `CRichEditCtrl` objeto.  
+##  <a name="geteventmask"></a>  CRichEditCtrl::GetEventMask  
+ Gets the event mask for this `CRichEditCtrl` object.  
   
 ```  
 long GetEventMask() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- La máscara de eventos para este `CRichEditCtrl` objeto.  
+### <a name="return-value"></a>Return Value  
+ The event mask for this `CRichEditCtrl` object.  
   
-### <a name="remarks"></a>Comentarios  
- La máscara de eventos especifica qué mensajes de notificación de la `CRichEditCtrl` objeto envía a su ventana primaria.  
+### <a name="remarks"></a>Remarks  
+ The event mask specifies which notification messages the `CRichEditCtrl` object sends to its parent window.  
   
- Para obtener más información, consulte [EM_GETEVENTMASK](http://msdn.microsoft.com/library/windows/desktop/bb788032) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_GETEVENTMASK](http://msdn.microsoft.com/library/windows/desktop/bb788032) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [CRichEditCtrl::SetEventMask](#seteventmask).  
+### <a name="example"></a>Example  
+  See the example for [CRichEditCtrl::SetEventMask](#seteventmask).  
   
-##  <a name="getfirstvisibleline"></a>CRichEditCtrl::GetFirstVisibleLine  
- Determina la línea superior visible en esta `CRichEditCtrl` objeto.  
+##  <a name="getfirstvisibleline"></a>  CRichEditCtrl::GetFirstVisibleLine  
+ Determines the topmost visible line in this `CRichEditCtrl` object.  
   
 ```  
 int GetFirstVisibleLine() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Índice de base cero de la línea superior visible en esta `CRichEditCtrl` objeto.  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the uppermost visible line in this `CRichEditCtrl` object.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [EM_GETFIRSTVISIBLELINE](http://msdn.microsoft.com/library/windows/desktop/bb761574) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ For more information, see [EM_GETFIRSTVISIBLELINE](http://msdn.microsoft.com/library/windows/desktop/bb761574) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl Nº 11](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#11](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_11.cpp)]  
   
-##  <a name="getiricheditole"></a>CRichEditCtrl::GetIRichEditOle  
- Tiene acceso a la **IRichEditOle** interfaz para este `CRichEditCtrl` objeto.  
+##  <a name="getiricheditole"></a>  CRichEditCtrl::GetIRichEditOle  
+ Accesses the **IRichEditOle** interface for this `CRichEditCtrl` object.  
   
 ```  
 IRichEditOle* GetIRichEditOle() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Puntero a la [IRichEditOle](http://msdn.microsoft.com/library/windows/desktop/bb774306) interfaz que puede utilizarse para tener acceso a esta `CRichEditCtrl` funcionalidad OLE del objeto; **NULL** si la interfaz no es accesible.  
+### <a name="return-value"></a>Return Value  
+ Pointer to the [IRichEditOle](http://msdn.microsoft.com/library/windows/desktop/bb774306) interface that can be used to access this `CRichEditCtrl` object's OLE functionality; **NULL** if the interface is not accessible.  
   
-### <a name="remarks"></a>Comentarios  
- Utilice esta interfaz para tener acceso a esta `CRichEditCtrl` la funcionalidad del objeto OLE.  
+### <a name="remarks"></a>Remarks  
+ Use this interface to access this `CRichEditCtrl` object's OLE functionality.  
   
- Para obtener más información, consulte [EM_GETOLEINTERFACE](http://msdn.microsoft.com/library/windows/desktop/bb788041) mensaje y [IRichEditOle](http://msdn.microsoft.com/library/windows/desktop/bb774306) de la interfaz en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_GETOLEINTERFACE](http://msdn.microsoft.com/library/windows/desktop/bb788041) message and [IRichEditOle](http://msdn.microsoft.com/library/windows/desktop/bb774306) interface in the Windows SDK.  
   
-##  <a name="getlimittext"></a>CRichEditCtrl::GetLimitText  
- Obtiene el límite de texto para este `CRichEditCtrl` objeto.  
+##  <a name="getlimittext"></a>  CRichEditCtrl::GetLimitText  
+ Gets the text limit for this `CRichEditCtrl` object.  
   
 ```  
 long GetLimitText() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- El límite texto actual, en bytes, de este `CRichEditCtrl` objeto.  
+### <a name="return-value"></a>Return Value  
+ The current text limit, in bytes, for this `CRichEditCtrl` object.  
   
-### <a name="remarks"></a>Comentarios  
- El límite de texto es la cantidad máxima de texto, en bytes, puede aceptar el control de edición enriquecida.  
+### <a name="remarks"></a>Remarks  
+ The text limit is the maximum amount of text, in bytes, the rich edit control can accept.  
   
- Para obtener más información, consulte [EM_GETLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761582) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_GETLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761582) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #12](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#12](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_12.cpp)]  
   
-##  <a name="getline"></a>CRichEditCtrl::GetLine  
- Recupera una línea de texto de este `CRichEditCtrl` objeto.  
+##  <a name="getline"></a>  CRichEditCtrl::GetLine  
+ Retrieves a line of text from this `CRichEditCtrl` object.  
   
 ```  
 int GetLine(
@@ -696,100 +696,100 @@ int GetLine(
     int nMaxLength) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Índice de base cero de la línea para recuperar.  
+ Zero-based index of the line to retrieve.  
   
  `lpszBuffer`  
- Señala al búfer que recibe el texto. La primera palabra del búfer debe especificar el número máximo de bytes que se pueden copiar en el búfer.  
+ Points to the buffer to receive the text. The first word of the buffer must specify the maximum number of bytes that can be copied into the buffer.  
   
  `nMaxLength`  
- Número máximo de caracteres que se pueda copiar en `lpszBuffer`. La segunda forma de `GetLine` coloca este valor en la primera palabra del búfer especificado por `lpszBuffer`.  
+ Maximum number of characters that can be copied into `lpszBuffer`. The second form of `GetLine` places this value into the first word of the buffer specified by `lpszBuffer`.  
   
-### <a name="return-value"></a>Valor devuelto  
- El número de caracteres que se copian en `lpszBuffer`.  
+### <a name="return-value"></a>Return Value  
+ The number of characters copied into `lpszBuffer`.  
   
-### <a name="remarks"></a>Comentarios  
- La línea copiada no contiene un carácter nulo de terminación.  
+### <a name="remarks"></a>Remarks  
+ The copied line does not contain a terminating null character.  
   
 > [!NOTE]
->  Debido a la primera palabra del búfer que almacena el número de caracteres que se va a copiar, asegúrese de que el búfer es al menos de 4 bytes de longitud.  
+>  Because the first word of the buffer stores the number of characters to be copied, make sure that your buffer is at least 4 bytes long.  
   
- Para obtener más información, consulte [EM_GETLINE](http://msdn.microsoft.com/library/windows/desktop/bb761584) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_GETLINE](http://msdn.microsoft.com/library/windows/desktop/bb761584) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [GetLineCount](#getlinecount).  
+### <a name="example"></a>Example  
+  See the example for [GetLineCount](#getlinecount).  
   
-##  <a name="getlinecount"></a>CRichEditCtrl::GetLineCount  
- Recupera el número de líneas en el `CRichEditCtrl` objeto.  
+##  <a name="getlinecount"></a>  CRichEditCtrl::GetLineCount  
+ Retrieves the number of lines in the `CRichEditCtrl` object.  
   
 ```  
 int GetLineCount() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- El número de líneas en este `CRichEditCtrl` objeto.  
+### <a name="return-value"></a>Return Value  
+ The number of lines in this `CRichEditCtrl` object.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [EM_GETLINECOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761586) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ For more information, see [EM_GETLINECOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761586) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #13](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#13](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_13.cpp)]  
   
-##  <a name="getmodify"></a>CRichEditCtrl::GetModify  
- Determina si el contenido de este `CRichEditCtrl` se ha modificado el objeto.  
+##  <a name="getmodify"></a>  CRichEditCtrl::GetModify  
+ Determines if the contents of this `CRichEditCtrl` object have been modified.  
   
 ```  
 BOOL GetModify() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si el texto de esta `CRichEditCtrl` se ha modificado el objeto; en caso contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the text in this `CRichEditCtrl` object has been modified; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Windows mantiene un marcador interno que indica si se ha cambiado el contenido del control rich edit. Esta marca se borra cuando el control de edición se crea por primera vez y también puede eliminarse mediante una llamada a la [SetModify](#setmodify) función miembro.  
+### <a name="remarks"></a>Remarks  
+ Windows maintains an internal flag indicating whether the contents of the rich edit control have been changed. This flag is cleared when the edit control is first created and can also be cleared by calling the [SetModify](#setmodify) member function.  
   
- Para obtener más información, consulte [EM_GETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761592) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_GETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761592) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #14](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#14](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_14.cpp)]  
   
-##  <a name="getoptions"></a>CRichEditCtrl::GetOptions  
- Recupera las opciones establecidas actualmente para el control de edición enriquecida.  
+##  <a name="getoptions"></a>  CRichEditCtrl::GetOptions  
+ Retrieves the options currently set for the rich edit control.  
   
 ```  
 UINT GetOptions() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Una combinación de los valores de indicador de opción actual. Para obtener una lista de estos valores, consulte el *fOptions* parámetro en el [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254) de mensajes, como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ A combination of the current option flag values. For a list of these values, see the *fOptions* parameter in the [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254) message, as described in the Windows SDK.  
   
-##  <a name="getparaformat"></a>CRichEditCtrl::GetParaFormat  
- Obtiene el párrafo formato atributos de la selección actual.  
+##  <a name="getparaformat"></a>  CRichEditCtrl::GetParaFormat  
+ Gets the paragraph formatting attributes of the current selection.  
   
 ```  
 DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pf`  
- En la primera versión, un puntero a un [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) estructura para contener los atributos de la selección actual de formato de párrafo.  
+ In the first version, a pointer to a [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) structure to hold the paragraph formatting attributes of the current selection.  
   
- En la segunda versión, un puntero a un [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) estructura, que es una extensión de Rich Edit 2.0 para la **PARAFORMAT** estructura, que contiene atributos de formato de carácter predeterminado.  
+ In the second version, a pointer to a [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) structure, which is a Rich Edit 2.0 extension to the **PARAFORMAT** structure, holding the default character formatting attributes.  
   
-### <a name="return-value"></a>Valor devuelto  
- El **dwMask** miembro de datos de `pf`. Especifica los atributos que son coherentes a lo largo de la selección actual de formato de párrafo.  
+### <a name="return-value"></a>Return Value  
+ The **dwMask** data member of `pf`. It specifies the paragraph formatting attributes that are consistent throughout the current selection.  
   
-### <a name="remarks"></a>Comentarios  
- Si se selecciona más de un párrafo, `pf` recibe los atributos del primer párrafo seleccionado. El valor devuelto especifica qué atributos son coherentes en toda la selección.  
+### <a name="remarks"></a>Remarks  
+ If more than one paragraph is selected, `pf` receives the attributes of the first selected paragraph. The return value specifies which attributes are consistent throughout the selection.  
   
- Para obtener más información, consulte el [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182) mensaje y la **PARAFORMAT** y **PARAFORMAT2** las estructuras de los [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182) message and the **PARAFORMAT** and **PARAFORMAT2** structures in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [CRichEditCtrl::SetParaFormat](#setparaformat).  
+### <a name="example"></a>Example  
+  See the example for [CRichEditCtrl::SetParaFormat](#setparaformat).  
   
-##  <a name="getpunctuation"></a>CRichEditCtrl::GetPunctuation  
- Obtiene los caracteres de puntuación actual en un control rich edit.  
+##  <a name="getpunctuation"></a>  CRichEditCtrl::GetPunctuation  
+ Gets the current punctuation characters in a rich edit control.  
   
 ```  
 BOOL GetPunctuation(
@@ -797,53 +797,53 @@ BOOL GetPunctuation(
     PUNCTUATION* lpPunc) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `fType`  
- El indicador de tipo de puntuación, como se describe en el `fType` parámetro de [EM_GETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774184) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ The punctuation type flag, as described in the `fType` parameter of [EM_GETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774184) in the Windows SDK.  
   
  `lpPunc`  
- Un puntero a un [puntuación](http://msdn.microsoft.com/library/windows/desktop/bb787944) estructura, como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ A pointer to a [PUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb787944) structure, as described in the Windows SDK.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la operación se realizó correctamente, 0 en caso contrario.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded, otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función miembro está disponible con las versiones de idiomas asiáticos del sistema operativo.  
+### <a name="remarks"></a>Remarks  
+ This member function is available with only the Asian-language versions of the operating system.  
   
-##  <a name="getrect"></a>CRichEditCtrl::GetRect  
- Recupera el rectángulo de formato para este `CRichEditCtrl` objeto.  
+##  <a name="getrect"></a>  CRichEditCtrl::GetRect  
+ Retrieves the formatting rectangle for this `CRichEditCtrl` object.  
   
 ```  
 void GetRect(LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- [CRect](../../atl-mfc-shared/reference/crect-class.md) o un puntero a un [RECT](../../mfc/reference/rect-structure1.md) para recibir el rectángulo de este formato `CRichEditCtrl` objeto.  
+ [CRect](../../atl-mfc-shared/reference/crect-class.md) or pointer to a [RECT](../../mfc/reference/rect-structure1.md) to receive the formatting rectangle of this `CRichEditCtrl` object.  
   
-### <a name="remarks"></a>Comentarios  
- El rectángulo de formato es el rectángulo delimitador para el texto. Este valor es independiente del tamaño de la `CRichEditCtrl` objeto.  
+### <a name="remarks"></a>Remarks  
+ The formatting rectangle is the bounding rectangle for the text. This value is independent of the size of the `CRichEditCtrl` object.  
   
- Para obtener más información, consulte [EM_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761596) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761596) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [LimitText](#limittext).  
+### <a name="example"></a>Example  
+  See the example for [LimitText](#limittext).  
   
-##  <a name="getredoname"></a>CRichEditCtrl::GetRedoName  
- Recupera el tipo de la siguiente acción disponible en la cola de puesta al día, si lo hay.  
+##  <a name="getredoname"></a>  CRichEditCtrl::GetRedoName  
+ Retrieves the type of the next available action in the redo queue, if any.  
   
 ```  
 UNDONAMEID GetRedoName() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Si se realiza correctamente, `GetRedoName` devuelve el [UNDONAMEID](http://msdn.microsoft.com/library/windows/desktop/bb774365) tipo de enumeración que indica el tipo de la acción siguiente en la cola de puesta al día del control. Si la cola de puesta al día está vacía, o si la acción de rehacer de la cola es de un tipo desconocido, `GetRedoName` devuelve 0.  
+### <a name="return-value"></a>Return Value  
+ If successful, `GetRedoName` returns the [UNDONAMEID](http://msdn.microsoft.com/library/windows/desktop/bb774365) enumeration type indicating the type of the next action in the control's redo queue. If the redo queue is empty, or if the redo action in the queue is of an unknown type, `GetRedoName` returns 0.  
   
-### <a name="remarks"></a>Comentarios  
- Los tipos de acciones que se pueden deshacer o rehacer incluyen escribiendo, SUPR, arrastrar y colocar, cortar y pegar las operaciones. Esta información puede ser útil para las aplicaciones que proporcionan una interfaz de usuario extendida para las operaciones de deshacer y rehacer, como un cuadro de lista desplegable de acciones redoable.  
+### <a name="remarks"></a>Remarks  
+ The types of actions that can be undone or redone include typing, delete, drag-drop, cut, and paste operations. This information can be useful for applications that provide an extended user interface for Undo and Redo operations, such as a drop-down list box of redoable actions.  
   
-##  <a name="getsel"></a>CRichEditCtrl::GetSel  
- Recupera los límites de la selección actual en este `CRichEditCtrl` objeto.  
+##  <a name="getsel"></a>  CRichEditCtrl::GetSel  
+ Retrieves the bounds of the current selection in this `CRichEditCtrl` object.  
   
 ```  
 void GetSel(CHARRANGE& cr) const;  
@@ -853,124 +853,124 @@ void GetSel(
     long& nEndChar) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `cr`  
- Referencia a un [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) estructura para recibir los límites de la selección actual.  
+ Reference to a [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure to receive the bounds of the current selection.  
   
  `nStartChar`  
- Índice de base cero del primer carácter de la selección actual.  
+ Zero-based index of the first character in the current selection.  
   
  `nEndChar`  
- Índice de base cero del último carácter en la selección actual.  
+ Zero-based index of the last character in the current selection.  
   
-### <a name="remarks"></a>Comentarios  
- Las dos formas de esta función proporcionan métodos alternativos para obtener los límites de la selección. Siguen breves descripciones de estas formas:  
+### <a name="remarks"></a>Remarks  
+ The two forms of this function provide alternate ways to get the bounds for the selection. Brief descriptions of these forms follow:  
   
-- **Función miembro GetSel (** `cr` **)** este formulario usa el **CHARRANGE** estructura con su **cpMin** y **cpMax** miembros para devolver los límites.  
+- **GetSel(** `cr` **)** This form uses the **CHARRANGE** structure with its **cpMin** and **cpMax** members to return the bounds.  
   
-- **Función miembro GetSel (** `nStartChar` **,** `nEndChar` **)** este formulario devuelve los límites de los parámetros `nStartChar` y `nEndChar`.  
+- **GetSel(** `nStartChar` **,** `nEndChar` **)** This form returns the bounds in the parameters `nStartChar` and `nEndChar`.  
   
- La selección incluye todos los elementos, si el principio ( **cpMin** o `nStartChar`) es 0 y el extremo ( **cpMax** o `nEndChar`) es - 1.  
+ The selection includes everything if the beginning ( **cpMin** or `nStartChar`) is 0 and the end ( **cpMax** or `nEndChar`) is - 1.  
   
- Para obtener más información, consulte [EM_EXGETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788001) mensaje y [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) estructura en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_EXGETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788001) message and [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #15](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_15.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#15](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_15.cpp)]  
   
-##  <a name="getselectioncharformat"></a>CRichEditCtrl::GetSelectionCharFormat  
- Obtiene el carácter de formato de atributos de la selección actual.  
+##  <a name="getselectioncharformat"></a>  CRichEditCtrl::GetSelectionCharFormat  
+ Gets the character formatting attributes of the current selection.  
   
 ```  
 DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharFormat(CHARFORMAT2& cf) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `cf`  
- En la primera versión, un puntero a un [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) estructura para recibir el formato de atributos de la selección actual de caracteres.  
+ In the first version, a pointer to a [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) structure to receive the character formatting attributes of the current selection.  
   
- En la segunda versión, un puntero a un [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) estructura, que es una extensión de Rich Edit 2.0 para la **CHARFORMAT** estructura para recibir el formato de atributos de la selección actual de caracteres.  
+ In the second version, a pointer to a [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) structure, which is a Rich Edit 2.0 extension to the **CHARFORMAT** structure to receive the character formatting attributes of the current selection.  
   
-### <a name="return-value"></a>Valor devuelto  
- El **dwMask** miembro de datos de `cf`. Especifica el formato de los atributos que son coherentes a lo largo de la selección actual de caracteres.  
+### <a name="return-value"></a>Return Value  
+ The **dwMask** data member of `cf`. It specifies the character formatting attributes that are consistent throughout the current selection.  
   
-### <a name="remarks"></a>Comentarios  
- El `cf` parámetro recibe los atributos del primer carácter de la selección actual. El valor devuelto especifica qué atributos son coherentes en toda la selección.  
+### <a name="remarks"></a>Remarks  
+ The `cf` parameter receives the attributes of the first character in the current selection. The return value specifies which attributes are consistent throughout the selection.  
   
- Para obtener más información, consulte el [EM_GETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb788026) mensaje y la **CHARFORMAT** y **CHARFORMAT2** las estructuras de los [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [EM_GETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb788026) message and the **CHARFORMAT** and **CHARFORMAT2** structures in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [SetSelectionCharFormat](#setselectioncharformat).  
+### <a name="example"></a>Example  
+  See the example for [SetSelectionCharFormat](#setselectioncharformat).  
   
-##  <a name="getselectiontype"></a>CRichEditCtrl::GetSelectionType  
- Determina el tipo de selección de esta `CRichEditCtrl` objeto.  
+##  <a name="getselectiontype"></a>  CRichEditCtrl::GetSelectionType  
+ Determines the selection type in this `CRichEditCtrl` object.  
   
 ```  
 WORD GetSelectionType() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Marcas que indica el contenido de la selección actual. Una combinación de los siguientes indicadores:  
+### <a name="return-value"></a>Return Value  
+ Flags indicating the contents of the current selection. A combination of the following flags:  
   
-- `SEL_EMPTY`Indica que no hay ninguna selección actual.  
+- `SEL_EMPTY` Indicates that there is no current selection.  
   
-- `SEL_TEXT`Indica que la selección actual contiene texto.  
+- `SEL_TEXT` Indicates that the current selection contains text.  
   
-- `SEL_OBJECT`Indica que la selección actual contiene al menos un elemento OLE.  
+- `SEL_OBJECT` Indicates that the current selection contains at least one OLE item.  
   
-- `SEL_MULTICHAR`Indica que la selección actual contiene más de un carácter de texto.  
+- `SEL_MULTICHAR` Indicates that the current selection contains more than one character of text.  
   
-- `SEL_MULTIOBJECT`Indica que la selección actual contiene más de un objeto OLE.  
+- `SEL_MULTIOBJECT` Indicates that the current selection contains more than one OLE object.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [EM_SELECTIONTYPE](http://msdn.microsoft.com/library/windows/desktop/bb774223) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ For more information, see [EM_SELECTIONTYPE](http://msdn.microsoft.com/library/windows/desktop/bb774223) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl Nº 16](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_16.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#16](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_16.cpp)]  
   
-##  <a name="getseltext"></a>CRichEditCtrl::GetSelText  
- Recupera el texto de la selección actual en este `CRichEditCtrl` objeto.  
+##  <a name="getseltext"></a>  CRichEditCtrl::GetSelText  
+ Retrieves the text from the current selection in this `CRichEditCtrl` object.  
   
 ```  
 long GetSelText(LPSTR lpBuf) const;  CString GetSelText() const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- Puntero al búfer que recibe el texto de la selección actual.  
+ Pointer to the buffer to receive the text in the current selection.  
   
-### <a name="return-value"></a>Valor devuelto  
- Depende de la forma:  
+### <a name="return-value"></a>Return Value  
+ Depends on the form:  
   
-- **Función miembro GetSelText (** `lpBuf` **)** el número de caracteres que se copian en `lpBuf`, sin incluir la terminación null.  
+- **GetSelText(** `lpBuf` **)** The number of characters copied into `lpBuf`, not including the null termination.  
   
-- **() De la función miembro GetSelText** la cadena que contiene la selección actual.  
+- **GetSelText( )** The string containing the current selection.  
   
-### <a name="remarks"></a>Comentarios  
- Si usa la primera forma, **función miembro GetSelText (** `lpBuf` **)**, debe asegurarse de que el búfer es lo suficientemente grande como para el texto que se va a recibir. Llame a [función miembro GetSel](#getsel) para determinar el número de caracteres de la selección actual.  
+### <a name="remarks"></a>Remarks  
+ If you use the first form, **GetSelText(** `lpBuf` **)**, you must ensure that the buffer is large enough for the text it will receive. Call [GetSel](#getsel) to determine the number of characters in the current selection.  
   
- Para obtener más información, consulte [EM_GETSELTEXT](http://msdn.microsoft.com/library/windows/desktop/bb774190) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_GETSELTEXT](http://msdn.microsoft.com/library/windows/desktop/bb774190) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [CRichEditCtrl::GetSelectionType](#getselectiontype).  
+### <a name="example"></a>Example  
+  See the example for [CRichEditCtrl::GetSelectionType](#getselectiontype).  
   
-##  <a name="gettextlength"></a>CRichEditCtrl::GetTextLength  
- Recupera la longitud del texto, en caracteres, en este `CRichEditCtrl` objeto, sin incluir el carácter nulo de terminación.  
+##  <a name="gettextlength"></a>  CRichEditCtrl::GetTextLength  
+ Retrieves the length of the text, in characters, in this `CRichEditCtrl` object, not including the terminating null character.  
   
 ```  
 long GetTextLength() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- La longitud del texto en este `CRichEditCtrl` objeto.  
+### <a name="return-value"></a>Return Value  
+ The length of the text in this `CRichEditCtrl` object.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [WM_GETTEXTLENGTH](http://msdn.microsoft.com/library/windows/desktop/ms632628) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ For more information, see [WM_GETTEXTLENGTH](http://msdn.microsoft.com/library/windows/desktop/ms632628) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #17](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_17.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#17](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_17.cpp)]  
   
-##  <a name="gettextlengthex"></a>CRichEditCtrl::GetTextLengthEx  
- Calcula la longitud del texto en el control de edición enriquecida.  
+##  <a name="gettextlengthex"></a>  CRichEditCtrl::GetTextLengthEx  
+ Calculates the length of the text in the rich edit control.  
   
 ```  
 long GetTextLengthEx(
@@ -978,31 +978,31 @@ long GetTextLengthEx(
     UINT uCodePage = -1) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `dwFlags`  
- Valor que especifica el método que se utiliza para determinar la longitud del texto. Este miembro puede ser uno o varios de los valores enumeran en el miembro flags de [GETTEXTLENGTHEX](http://msdn.microsoft.com/library/windows/desktop/bb787915) se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Value specifying the method to be used in determining the text length. This member can be one or more of the values listed in the flags member of [GETTEXTLENGTHEX](http://msdn.microsoft.com/library/windows/desktop/bb787915) described in the Windows SDK.  
   
  `uCodePage`  
- Página de códigos para la traducción (CP_ACP para página de códigos ANSI, 1200 para Unicode).  
+ Code page for translation (CP_ACP for ANSI Code Page, 1200 for Unicode).  
   
-### <a name="return-value"></a>Valor devuelto  
- El número de caracteres o bytes en el control de edición. Si se establecen marcas incompatibles `dwFlags`, esta función miembro devuelve `E_INVALIDARG`.  
+### <a name="return-value"></a>Return Value  
+ The number of characters or bytes in the edit control. If incompatible flags were set in `dwFlags`, this member function returns `E_INVALIDARG`.  
   
-### <a name="remarks"></a>Comentarios  
- `GetTextLengthEx`proporciona otras formas de determinar la longitud del texto. Admite la funcionalidad de Rich Edit 2.0. Vea [acerca de los controles Rich Edit](http://msdn.microsoft.com/library/windows/desktop/bb787873) en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]para obtener más información.  
+### <a name="remarks"></a>Remarks  
+ `GetTextLengthEx` provides additional ways of determining the length of the text. It supports the Rich Edit 2.0 functionality. See [About Rich Edit Controls](http://msdn.microsoft.com/library/windows/desktop/bb787873) in the Windows SDKfor more information.  
   
-##  <a name="gettextmode"></a>CRichEditCtrl::GetTextMode  
- Recupera el nivel actual de deshacer y de modo de texto de un control rich edit.  
+##  <a name="gettextmode"></a>  CRichEditCtrl::GetTextMode  
+ Retrieves the current text mode and undo level of a rich edit control.  
   
 ```  
 UINT GetTextMode() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Un conjunto de marcadores de bits de la [TEXTMODE](http://msdn.microsoft.com/library/windows/desktop/bb774364) tipo de enumeración, como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Los marcadores indican el modo de texto actual y deshacer el nivel del control.  
+### <a name="return-value"></a>Return Value  
+ A set of bit flags from the [TEXTMODE](http://msdn.microsoft.com/library/windows/desktop/bb774364) enumeration type, as described in the Windows SDK. The flags indicate the current text mode and undo level of the control.  
   
-##  <a name="gettextrange"></a>CRichEditCtrl::GetTextRange  
- Obtiene el intervalo de caracteres especificado.  
+##  <a name="gettextrange"></a>  CRichEditCtrl::GetTextRange  
+ Gets the specified range of characters.  
   
 ```  
 int GetTextRange(
@@ -1011,52 +1011,52 @@ int GetTextRange(
     CString& refString) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nFirst`  
- El índice de posición de carácter inmediatamente antes del primer carácter en el intervalo.  
+ The character position index immediately preceding the first character in the range.  
   
  `nLast`  
- Posición del carácter inmediatamente después del último carácter en el intervalo.  
+ The character position immediately following the last character in the range.  
   
  `refString`  
- Una referencia a un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto que va a recibir el texto.  
+ A reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object that will receive the text.  
   
-### <a name="return-value"></a>Valor devuelto  
- El número de caracteres que se copian, sin incluir el carácter nulo de terminación.  
+### <a name="return-value"></a>Return Value  
+ The number of characters copied, not including the terminating null character.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [EM_GETTEXTRANGE](http://msdn.microsoft.com/library/windows/desktop/bb774199) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ For more information, see [EM_GETTEXTRANGE](http://msdn.microsoft.com/library/windows/desktop/bb774199) in the Windows SDK.  
   
- `GetTextRange`admite la funcionalidad de Rich Edit 2.0. Vea [acerca de los controles Rich Edit](http://msdn.microsoft.com/library/windows/desktop/bb787873) en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]para obtener más información.  
+ `GetTextRange` supports the Rich Edit 2.0 functionality. See [About Rich Edit Controls](http://msdn.microsoft.com/library/windows/desktop/bb787873) in the Windows SDKfor more information.  
   
-##  <a name="getundoname"></a>CRichEditCtrl::GetUndoName  
- Recupera el tipo de la siguiente acción disponible en la cola de deshacer, si lo hay.  
+##  <a name="getundoname"></a>  CRichEditCtrl::GetUndoName  
+ Retrieves the type of the next available action in the undo queue, if any.  
   
 ```  
 UNDONAMEID GetUndoName() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Si está en la cola de deshacer del control, una acción de deshacer `GetUndoName` devuelve el [UNDONAMEID](http://msdn.microsoft.com/library/windows/desktop/bb774365) tipo de enumeración que indica el tipo de la acción siguiente en la cola. Si la cola de deshacer está vacía, o si la acción de deshacer de la cola es de un tipo desconocido, `GetUndoName` devuelve 0.  
+### <a name="return-value"></a>Return Value  
+ If an undo action is in the control's undo queue, `GetUndoName` returns the [UNDONAMEID](http://msdn.microsoft.com/library/windows/desktop/bb774365) enumeration type indicating the type of the next action in the queue. If the undo queue is empty, or if the undo action in the queue is of an unknown type, `GetUndoName` returns 0.  
   
-### <a name="remarks"></a>Comentarios  
- Los tipos de acciones que se pueden deshacer o rehacer incluyen escribiendo, SUPR, arrastrar y colocar, cortar y pegar las operaciones. Esta información puede ser útil para las aplicaciones que proporcionan una interfaz de usuario extendida para las operaciones de deshacer y rehacer, como un cuadro de lista desplegable de acciones que se pueden deshacer.  
+### <a name="remarks"></a>Remarks  
+ The types of actions that can be undone or redone include typing, delete, drag-drop, cut, and paste operations. This information can be useful for applications that provide an extended user interface for Undo and Redo operations, such as a drop-down list box of actions that can be undone.  
   
-##  <a name="getwordwrapmode"></a>CRichEditCtrl::GetWordWrapMode  
- Recupera el ajuste de línea actual y las opciones de separación de palabras para el control rich edit.  
+##  <a name="getwordwrapmode"></a>  CRichEditCtrl::GetWordWrapMode  
+ Retrieves the current word wrapping and word breaking options for the rich edit control.  
   
 ```  
 UINT GetWordWrapMode() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- El ajuste de línea actual y opciones de separación de palabras. Estas opciones se describen en [EM_SETWORDWRAPMODE](http://msdn.microsoft.com/library/windows/desktop/bb774294) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ The current word wrapping and word breaking options. These options are described in [EM_SETWORDWRAPMODE](http://msdn.microsoft.com/library/windows/desktop/bb774294) in the Windows SDK.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función miembro está disponible únicamente para las versiones de idiomas asiáticos del sistema operativo.  
+### <a name="remarks"></a>Remarks  
+ This member function is available only for Asian-language versions of the operating system.  
   
-##  <a name="hideselection"></a>CRichEditCtrl::HideSelection  
- Cambia la visibilidad de la selección.  
+##  <a name="hideselection"></a>  CRichEditCtrl::HideSelection  
+ Changes the visibility of the selection.  
   
 ```  
 void HideSelection(
@@ -1064,111 +1064,111 @@ void HideSelection(
     BOOL bPerm);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `bHide`  
- Indica si la selección se debe mostrar u ocultar, **TRUE** para ocultar la selección.  
+ Indicates if the selection should be shown or hidden, **TRUE** to hide the selection.  
   
  `bPerm`  
- Indica si este cambio de visibilidad para la selección debe ser permanente.  
+ Indicates if this change in visibility for the selection should be permanent.  
   
-### <a name="remarks"></a>Comentarios  
- Cuando `bPerm` es **TRUE**, cambia la `ECO_NOHIDESEL` opción para este `CRichEditCtrl` objeto. Para obtener una breve descripción de esta opción, consulte [SetOptions](#setoptions). Puede usar esta función para establecer todas las opciones para este `CRichEditCtrl` objeto.  
+### <a name="remarks"></a>Remarks  
+ When `bPerm` is **TRUE**, it changes the `ECO_NOHIDESEL` option for this `CRichEditCtrl` object. For a brief description of this option, see [SetOptions](#setoptions). You can use this function to set all the options for this `CRichEditCtrl` object.  
   
- Para obtener más información, consulte [EM_HIDESELECTION](http://msdn.microsoft.com/library/windows/desktop/bb774210) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_HIDESELECTION](http://msdn.microsoft.com/library/windows/desktop/bb774210) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #18](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_18.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#18](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_18.cpp)]  
   
-##  <a name="limittext"></a>CRichEditCtrl::LimitText  
- Limita la longitud del texto que el usuario puede escribir en un control de edición.  
+##  <a name="limittext"></a>  CRichEditCtrl::LimitText  
+ Limits the length of the text that the user can enter into an edit control.  
   
 ```  
 void LimitText(long nChars = 0);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nChars`  
- Especifica la longitud (en bytes) del texto que el usuario puede escribir. Si este parámetro es 0 (el valor predeterminado), se establece la longitud del texto a 64K bytes.  
+ Specifies the length (in bytes) of the text that the user can enter. If this parameter is 0 (the default value), the text length is set to 64K bytes.  
   
-### <a name="remarks"></a>Comentarios  
- Cambiar el límite del texto restringe sólo el texto que el usuario puede escribir. No tiene ningún efecto en cualquier texto ya en el control de edición, ni afecta a la longitud del texto que se copian en el control de edición por la [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) función miembro en `CWnd`. Si una aplicación usa el `SetWindowText` función colocar más texto en un control de edición que se especifica en la llamada a `LimitText`, el usuario puede eliminar alguna parte del texto en el control de edición. Sin embargo, el límite de texto impedirá que el usuario reemplazando el texto existente con texto nuevo, a menos que eliminar la selección actual hace que el texto quede por debajo del límite de texto.  
+### <a name="remarks"></a>Remarks  
+ Changing the text limit restricts only the text the user can enter. It has no effect on any text already in the edit control, nor does it affect the length of the text copied to the edit control by the [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) member function in `CWnd`. If an application uses the `SetWindowText` function to place more text into an edit control than is specified in the call to `LimitText`, the user can delete any of the text within the edit control. However, the text limit will prevent the user from replacing the existing text with new text, unless deleting the current selection causes the text to fall below the text limit.  
   
 > [!NOTE]
->  Para el límite de texto, cada elemento OLE se considera como un único carácter.  
+>  For the text limit, each OLE item counts as a single character.  
   
- Para obtener más información, consulte [EM_EXLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb788003) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_EXLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb788003) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #19](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_19.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#19](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_19.cpp)]  
   
-##  <a name="linefromchar"></a>CRichEditCtrl::LineFromChar  
- Recupera el número de línea de la línea que contiene el índice de carácter especificado.  
+##  <a name="linefromchar"></a>  CRichEditCtrl::LineFromChar  
+ Retrieves the line number of the line that contains the specified character index.  
   
 ```  
 long LineFromChar(long nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Contiene el valor de índice de base cero para el carácter que desee en el texto del control de edición, o -1. Si `nIndex` es -1, especifica la línea actual, es decir, la línea que contiene el símbolo de intercalación.  
+ Contains the zero-based index value for the desired character in the text of the edit control, or contains -1. If `nIndex` is -1, it specifies the current line, that is, the line that contains the caret.  
   
-### <a name="return-value"></a>Valor devuelto  
- El número de línea de base cero de la línea que contiene el índice de carácter especificado por `nIndex`. Si `nIndex` es -1, se devuelve el número de la línea que contiene el primer carácter de la selección. Si no hay ninguna selección, se devuelve el número de línea actual.  
+### <a name="return-value"></a>Return Value  
+ The zero-based line number of the line containing the character index specified by `nIndex`. If `nIndex` is -1, the number of the line that contains the first character of the selection is returned. If there is no selection, the current line number is returned.  
   
-### <a name="remarks"></a>Comentarios  
- Un índice de carácter es el número de caracteres desde el principio del control rich edit. Recuento de caracteres, de un elemento OLE se cuenta como un único carácter.  
+### <a name="remarks"></a>Remarks  
+ A character index is the number of characters from the beginning of the rich edit control. For character counting, an OLE item is counted as a single character.  
   
- Para obtener más información, consulte [EM_EXLINEFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb788005) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_EXLINEFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb788005) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl Nº 20](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_20.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#20](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_20.cpp)]  
   
-##  <a name="lineindex"></a>CRichEditCtrl::LineIndex  
- Recupera el índice de carácter de una línea dentro de este `CRichEditCtrl` objeto.  
+##  <a name="lineindex"></a>  CRichEditCtrl::LineIndex  
+ Retrieves the character index of a line within this `CRichEditCtrl` object.  
   
 ```  
 int LineIndex(int nLine = -1) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nLine`  
- Contiene el valor de índice de la línea deseada en el texto del control de edición, o -1. Si `nLine` es -1, especifica la línea actual, es decir, la línea que contiene el símbolo de intercalación.  
+ Contains the index value for the desired line in the text of the edit control, or contains -1. If `nLine` is -1, it specifies the current line, that is, the line that contains the caret.  
   
-### <a name="return-value"></a>Valor devuelto  
- El índice de carácter de la línea especificada en `nLine` o -1 si el número de línea especificado es mayor, a continuación, el número de líneas en el control de edición.  
+### <a name="return-value"></a>Return Value  
+ The character index of the line specified in `nLine` or -1 if the specified line number is greater then the number of lines in the edit control.  
   
-### <a name="remarks"></a>Comentarios  
- El índice de carácter es el número de caracteres desde el principio del control rich edit a la línea especificada.  
+### <a name="remarks"></a>Remarks  
+ The character index is the number of characters from the beginning of the rich edit control to the specified line.  
   
- Para obtener más información, consulte [EM_LINEINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761611) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_LINEINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761611) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #21](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_21.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#21](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_21.cpp)]  
   
-##  <a name="linelength"></a>CRichEditCtrl::LineLength  
- Recupera la longitud de una línea en un control rich edit.  
+##  <a name="linelength"></a>  CRichEditCtrl::LineLength  
+ Retrieves the length of a line in a rich edit control.  
   
 ```  
 int LineLength(int nLine = -1) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nLine`  
- Especifica el índice de carácter de un carácter en la línea cuya longitud se va a recuperar. Si este parámetro es -1, se devuelve la longitud de la línea actual (la línea que contiene el símbolo de intercalación), sin incluir la longitud de cualquier texto dentro de la línea seleccionado. Cuando `LineLength` se llama para un control de edición de línea única, este parámetro se ignora.  
+ Specifies the character index of a character in the line whose length is to be retrieved. If this parameter is -1, the length of the current line (the line that contains the caret) is returned, not including the length of any selected text within the line. When `LineLength` is called for a single-line edit control, this parameter is ignored.  
   
-### <a name="return-value"></a>Valor devuelto  
- Cuando `LineLength` se llama para un control de edición de varias líneas, el valor devuelto es la longitud (en bytes) de la línea especificada por `nLine`. Cuando `LineLength` se llama para un control de edición de línea única, el valor devuelto es la longitud (en bytes) del texto en el control de edición.  
+### <a name="return-value"></a>Return Value  
+ When `LineLength` is called for a multiple-line edit control, the return value is the length (in bytes) of the line specified by `nLine`. When `LineLength` is called for a single-line edit control, the return value is the length (in bytes) of the text in the edit control.  
   
-### <a name="remarks"></a>Comentarios  
- Use la [LineIndex](#lineindex) para recuperar un índice de carácter para un número de línea dentro de esta función miembro `CRichEditCtrl` objeto.  
+### <a name="remarks"></a>Remarks  
+ Use the [LineIndex](#lineindex) member function to retrieve a character index for a given line number within this `CRichEditCtrl` object.  
   
- Para obtener más información, consulte [EM_LINELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb761613) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_LINELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb761613) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [LineIndex](#lineindex).  
+### <a name="example"></a>Example  
+  See the example for [LineIndex](#lineindex).  
   
-##  <a name="linescroll"></a>CRichEditCtrl::LineScroll  
- Desplaza el texto de un control de edición de varias líneas.  
+##  <a name="linescroll"></a>  CRichEditCtrl::LineScroll  
+ Scrolls the text of a multiple-line edit control.  
   
 ```  
 void LineScroll(
@@ -1176,40 +1176,40 @@ void LineScroll(
     int nChars = 0);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nLines`  
- Especifica el número de líneas de desplazamiento vertical.  
+ Specifies the number of lines to scroll vertically.  
   
  `nChars`  
- Especifica el número de posiciones de caracteres a desplazarse horizontalmente. Este valor se omite si el control rich edit tenga el **ES_RIGHT** o **ES_CENTER** estilo. [Estilos de edición](../../mfc/reference/edit-styles.md) se especifican en [crear](#create).  
+ Specifies the number of character positions to scroll horizontally. This value is ignored if the rich edit control has either the **ES_RIGHT** or **ES_CENTER** style. [Edit styles](../../mfc/reference/styles-used-by-mfc.md#edit-styles) are specified in [Create](#create).  
   
-### <a name="remarks"></a>Comentarios  
- El control de edición no se desplaza verticalmente más allá de la última línea de texto en el control de edición. Si la línea actual más el número de líneas especificado por `nLines` supera el número total de líneas en el control de edición, el valor se ajusta para que la última línea del control de edición se desplaza a la parte superior de la ventana de control de edición.  
+### <a name="remarks"></a>Remarks  
+ The edit control does not scroll vertically past the last line of text in the edit control. If the current line plus the number of lines specified by `nLines` exceeds the total number of lines in the edit control, the value is adjusted so that the last line of the edit control is scrolled to the top of the edit-control window.  
   
- `LineScroll`puede utilizarse para desplazarse horizontalmente más allá del último carácter de cualquiera de las líneas.  
+ `LineScroll` can be used to scroll horizontally past the last character of any line.  
   
- Para obtener más información, consulte [EM_LINESCROLL](http://msdn.microsoft.com/library/windows/desktop/bb761615) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_LINESCROLL](http://msdn.microsoft.com/library/windows/desktop/bb761615) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [GetFirstVisibleLine](#getfirstvisibleline).  
+### <a name="example"></a>Example  
+  See the example for [GetFirstVisibleLine](#getfirstvisibleline).  
   
-##  <a name="paste"></a>CRichEditCtrl::Paste  
- Inserta los datos desde el Portapapeles en el `CRichEditCtrl` en el punto de inserción, la ubicación del símbolo de intercalación.  
+##  <a name="paste"></a>  CRichEditCtrl::Paste  
+ Inserts the data from the Clipboard into the `CRichEditCtrl` at the insertion point, the location of the caret.  
   
 ```  
 void Paste();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Se insertan datos solo si el Portapapeles contiene datos en un formato reconocido.  
+### <a name="remarks"></a>Remarks  
+ Data is inserted only if the Clipboard contains data in a recognized format.  
   
- Para obtener más información, consulte [WM_PASTE](http://msdn.microsoft.com/library/windows/desktop/ms649028) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [WM_PASTE](http://msdn.microsoft.com/library/windows/desktop/ms649028) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #22](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_22.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#22](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_22.cpp)]  
   
-##  <a name="pastespecial"></a>CRichEditCtrl::PasteSpecial  
- Pega los datos en un formato de Portapapeles específico en esta `CRichEditCtrl` objeto.  
+##  <a name="pastespecial"></a>  CRichEditCtrl::PasteSpecial  
+ Pastes data in a specific Clipboard format into this `CRichEditCtrl` object.  
   
 ```  
 void PasteSpecial(
@@ -1218,56 +1218,56 @@ void PasteSpecial(
     HMETAFILE hMF = 0);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  *nClipFormat*  
- Formato de Portapapeles para pegar en esta `CRichEditCtrl` objeto.  
+ Clipboard format to paste into this `CRichEditCtrl` object.  
   
  *dvAspect*  
- Aspecto de dispositivo para los datos que se van a recuperar desde el Portapapeles.  
+ Device aspect for the data to be retrieved from the Clipboard.  
   
  *hMF*  
- Identificador del metarchivo que contiene el icono vista del objeto que se pueden pegar.  
+ Handle to the metafile containing the iconic view of the object to be pasted.  
   
-### <a name="remarks"></a>Comentarios  
- El material nuevo se inserta en el punto de inserción, la ubicación del símbolo de intercalación.  
+### <a name="remarks"></a>Remarks  
+ The new material is inserted at the insertion point, the location of the caret.  
   
- Para obtener más información, consulte [EM_PASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/bb774214) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_PASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/bb774214) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #23](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_23.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#23](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_23.cpp)]  
   
-##  <a name="posfromchar"></a>CRichEditCtrl::PosFromChar  
- Recupera las coordenadas del área cliente de un carácter especificado en un control de edición.  
+##  <a name="posfromchar"></a>  CRichEditCtrl::PosFromChar  
+ Retrieves the client area coordinates of a specified character in an edit control.  
   
 ```  
 CPoint PosFromChar(UINT nChar) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nChar`  
- Índice de base cero del carácter.  
+ The zero-based index of the character.  
   
-### <a name="return-value"></a>Valor devuelto  
- La posición del carácter, (x, y). Para un control de edición de línea única, la coordenada y siempre es cero.  
+### <a name="return-value"></a>Return Value  
+ The position of the character, (x, y). For a single-line edit control, the y-coordinate is always zero.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ For more information, see [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) in the Windows SDK.  
   
-##  <a name="redo"></a>CRichEditCtrl::Redo  
- Rehace la acción siguiente en la cola de puesta al día del control.  
+##  <a name="redo"></a>  CRichEditCtrl::Redo  
+ Redoes the next action in the control's redo queue.  
   
 ```  
 BOOL Redo();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si se realiza correctamente; en caso contrario, es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [EM_REDO](http://msdn.microsoft.com/library/windows/desktop/bb774218) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ For more information, see [EM_REDO](http://msdn.microsoft.com/library/windows/desktop/bb774218) in the Windows SDK.  
   
-##  <a name="replacesel"></a>CRichEditCtrl::ReplaceSel  
- Reemplaza la selección actual en este `CRichEditCtrl` objeto con el texto especificado.  
+##  <a name="replacesel"></a>  CRichEditCtrl::ReplaceSel  
+ Replaces the current selection in this `CRichEditCtrl` object with the specified text.  
   
 ```  
 void ReplaceSel(
@@ -1275,59 +1275,59 @@ void ReplaceSel(
     BOOL bCanUndo = FALSE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpszNewText`  
- Puntero a una cadena terminada en null que contiene el texto de reemplazo.  
+ Pointer to a null-terminated string containing the replacement text.  
   
  `bCanUndo`  
- Para especificar que se puede deshacer esta función, establezca el valor de este parámetro para **TRUE**. El valor predeterminado es **FALSE**.  
+ To specify that this function can be undone, set the value of this parameter to **TRUE**. The default value is **FALSE**.  
   
-### <a name="remarks"></a>Comentarios  
- Para reemplazar todo el texto de esta `CRichEditCtrl` objeto, utilice [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext).  
+### <a name="remarks"></a>Remarks  
+ To replace all the text in this `CRichEditCtrl` object, use [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext).  
   
- Si no hay ninguna selección actual, se inserta el texto de reemplazo en el punto de inserción, es decir, la ubicación actual del símbolo de intercalación.  
+ If there is no current selection, the replacement text is inserted at the insertion point, that is, the current caret location.  
   
- Esta función formateará el texto insertado con el formato de los caracteres existentes. Cuando se reemplaza el intervalo de texto completo (mediante una llamada a `SetSel`(0, -1) antes de llamar a `ReplaceSel`), hay un carácter de fin de párrafo que conserva el formato del párrafo anterior, que se hereda en el texto recién insertado.  
+ This function will format the inserted text with the existing character formatting. When replacing the entire range of text (by calling `SetSel`(0,-1) before calling `ReplaceSel`), there is an end of paragraph character that retains the previous paragraph's formatting, which in inherited by the newly inserted text.  
   
- Para obtener más información, consulte [EM_REPLACESEL](http://msdn.microsoft.com/library/windows/desktop/bb761633) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_REPLACESEL](http://msdn.microsoft.com/library/windows/desktop/bb761633) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [LineIndex](#lineindex).  
+### <a name="example"></a>Example  
+  See the example for [LineIndex](#lineindex).  
   
-##  <a name="requestresize"></a>CRichEditCtrl::RequestResize  
- Esto fuerza `CRichEditCtrl` objeto que se va a enviar **EN_REQUESTRESIZE** mensajes de notificación a su ventana primaria.  
+##  <a name="requestresize"></a>  CRichEditCtrl::RequestResize  
+ Forces this `CRichEditCtrl` object to send **EN_REQUESTRESIZE** notification messages to its parent window.  
   
 ```  
 void RequestResize();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Esta función es útil durante la [CWnd::OnSize](../../mfc/reference/cwnd-class.md#onsize) de procesamiento para un sin límite `CRichEditCtrl` objeto.  
+### <a name="remarks"></a>Remarks  
+ This function is useful during [CWnd::OnSize](../../mfc/reference/cwnd-class.md#onsize) processing for a bottomless `CRichEditCtrl` object.  
   
- Para obtener más información, consulte el [EM_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb774220) mensaje y la **controles Rich Edit sin límite** sección de [acerca de los controles Rich Edit](http://msdn.microsoft.com/library/windows/desktop/bb787873) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [EM_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb774220) message and the **Bottomless Rich Edit Controls** section of [About Rich Edit Controls](http://msdn.microsoft.com/library/windows/desktop/bb787873) in the Windows SDK.  
   
-##  <a name="setautourldetect"></a>CRichEditCtrl::SetAutoURLDetect  
- Establece el control rich edit para detectar automáticamente una dirección URL.  
+##  <a name="setautourldetect"></a>  CRichEditCtrl::SetAutoURLDetect  
+ Sets the rich edit control to automatically detect a URL.  
   
 ```  
 BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `bEnable`  
- Especifica si el control se establece para detectar automáticamente una dirección URL. Si **TRUE**, está habilitada. Si **FALSE**, está deshabilitado.  
+ Specifies whether the control is set to automatically detect a URL. If **TRUE**, it is enabled. If **FALSE**, it is disabled.  
   
-### <a name="return-value"></a>Valor devuelto  
- Cero si es correcta, en caso contrario, es distinto de cero. Por ejemplo, el mensaje puede producir debido a memoria insuficiente.  
+### <a name="return-value"></a>Return Value  
+ Zero if successful, otherwise nonzero. For example, the message may fail due to insufficient memory.  
   
-### <a name="remarks"></a>Comentarios  
- Si está habilitada, el control rich edit examinará el texto para determinar si coincide con un formato de dirección URL estándar. Para obtener una lista de estos formatos de dirección URL, vea [EM_AUTOURLDETECT](http://msdn.microsoft.com/library/windows/desktop/bb787991) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ If enabled, the rich edit control will scan the text to determine if it matches a standard URL format. For a list of these URL formats, see [EM_AUTOURLDETECT](http://msdn.microsoft.com/library/windows/desktop/bb787991) in the Windows SDK.  
   
 > [!NOTE]
->  No establezca `SetAutoURLDetect` a **TRUE** si usa el control de edición la **CFE_LINK** efecto para el texto que no sea de direcciones URL. `SetAutoURLDetect`habilita este efecto para las direcciones URL y deshabilita para el resto del texto. Vea [EN_LINK](http://msdn.microsoft.com/library/windows/desktop/bb787970) para obtener más información sobre la **CFE_LINK** efecto.  
+>  Do not set `SetAutoURLDetect` to **TRUE** if your edit control uses the **CFE_LINK** effect for text other than URLs. `SetAutoURLDetect` enables this effect for URLs and disables it for all other text. See [EN_LINK](http://msdn.microsoft.com/library/windows/desktop/bb787970) for more information about the **CFE_LINK** effect.  
   
-##  <a name="setbackgroundcolor"></a>CRichEditCtrl::SetBackgroundColor  
- Establece el color de fondo para este `CRichEditCtrl` objeto.  
+##  <a name="setbackgroundcolor"></a>  CRichEditCtrl::SetBackgroundColor  
+ Sets the background color for this `CRichEditCtrl` object.  
   
 ```  
 COLORREF SetBackgroundColor(
@@ -1335,111 +1335,111 @@ COLORREF SetBackgroundColor(
     COLORREF cr);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `bSysColor`  
- Indica si se debe establecer el color de fondo para el valor del sistema. Si este valor es **TRUE**, `cr` se omite.  
+ Indicates if the background color should be set to the system value. If this value is **TRUE**, `cr` is ignored.  
   
  `cr`  
- El color de fondo solicitado. Sólo se usa si `bSysColor` es **FALSE**.  
+ The requested background color. Used only if `bSysColor` is **FALSE**.  
   
-### <a name="return-value"></a>Valor devuelto  
- El color de fondo anterior de este `CRichEditCtrl` objeto.  
+### <a name="return-value"></a>Return Value  
+ The previous background color for this `CRichEditCtrl` object.  
   
-### <a name="remarks"></a>Comentarios  
- El color de fondo puede establecerse en el valor del sistema o a un determinado [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor.  
+### <a name="remarks"></a>Remarks  
+ The background color can be set to the system value or to a specified [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value.  
   
- Para obtener más información, consulte [EM_SETBKGNDCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774228) mensaje y [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) estructura en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_SETBKGNDCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774228) message and [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) structure in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #24](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_24.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#24](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_24.cpp)]  
   
-##  <a name="setdefaultcharformat"></a>CRichEditCtrl::SetDefaultCharFormat  
- Establece los atributos de texto nuevo en este formato de caracteres `CRichEditCtrl` objeto.  
+##  <a name="setdefaultcharformat"></a>  CRichEditCtrl::SetDefaultCharFormat  
+ Sets the character formatting attributes for new text in this `CRichEditCtrl` object.  
   
 ```  
 BOOL SetDefaultCharFormat(CHARFORMAT& cf);  
 BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `cf`  
- En la primera versión, un puntero a un [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) estructura que contiene los atributos de formato de carácter predeterminado nuevo.  
+ In the first version, a pointer to a [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) structure containing the new default character formatting attributes.  
   
- En la segunda versión, un puntero a un [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) estructura, que es una extensión de Rich Edit 2.0 para la **CHARFORMAT** estructura, que contiene atributos de formato de carácter predeterminado.  
+ In the second version, a pointer to a [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) structure, which is a Rich Edit 2.0 extension to the **CHARFORMAT** structure, containing the default character formatting attributes.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si se realiza correctamente; en caso contrario, es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>Comentarios  
- Solo los atributos especificados por el **dwMask** miembro de `cf` se cambian por esta función.  
+### <a name="remarks"></a>Remarks  
+ Only the attributes specified by the **dwMask** member of `cf` are changed by this function.  
   
- Para obtener más información, consulte el [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) mensaje y la **CHARFORMAT** y **CHARFORMAT2** las estructuras de los [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) message and the **CHARFORMAT** and **CHARFORMAT2** structures in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #25](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_25.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#25](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_25.cpp)]  
   
-##  <a name="seteventmask"></a>CRichEditCtrl::SetEventMask  
- Establece la máscara de eventos para este `CRichEditCtrl` objeto.  
+##  <a name="seteventmask"></a>  CRichEditCtrl::SetEventMask  
+ Sets the event mask for this `CRichEditCtrl` object.  
   
 ```  
 DWORD SetEventMask(DWORD dwEventMask);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  *dwEventMask*  
- La nueva máscara de eventos para este `CRichEditCtrl` objeto.  
+ The new event mask for this `CRichEditCtrl` object.  
   
-### <a name="return-value"></a>Valor devuelto  
- La máscara de eventos anterior.  
+### <a name="return-value"></a>Return Value  
+ The previous event mask.  
   
-### <a name="remarks"></a>Comentarios  
- La máscara de eventos especifica qué mensajes de notificación de la `CRichEditCtrl` objeto envía a su ventana primaria.  
+### <a name="remarks"></a>Remarks  
+ The event mask specifies which notification messages the `CRichEditCtrl` object sends to its parent window.  
   
- Para obtener más información, consulte [EM_SETEVENTMASK](http://msdn.microsoft.com/library/windows/desktop/bb774238) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_SETEVENTMASK](http://msdn.microsoft.com/library/windows/desktop/bb774238) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[26 de # NVC_MFC_CRichEditCtrl](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_26.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#26](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_26.cpp)]  
   
-##  <a name="setmodify"></a>CRichEditCtrl::SetModify  
- Establece o borra la marca de modificado para un control de edición.  
+##  <a name="setmodify"></a>  CRichEditCtrl::SetModify  
+ Sets or clears the modified flag for an edit control.  
   
 ```  
 void SetModify(BOOL bModified = TRUE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `bModified`  
- Un valor de **TRUE** indica que se ha modificado el texto y un valor de **FALSE** indica no se modifica. De forma predeterminada, se establece la marca modificada.  
+ A value of **TRUE** indicates that the text has been modified, and a value of **FALSE** indicates it is unmodified. By default, the modified flag is set.  
   
-### <a name="remarks"></a>Comentarios  
- La marca modificada se indica como si no se ha modificado el texto en el control de edición. Se establece automáticamente cuando el usuario cambia el texto. Su valor se puede recuperar con el [GetModify](#getmodify) función miembro.  
+### <a name="remarks"></a>Remarks  
+ The modified flag indicates whether or not the text within the edit control has been modified. It is automatically set whenever the user changes the text. Its value can be retrieved with the [GetModify](#getmodify) member function.  
   
- Para obtener más información, consulte [EM_SETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761651) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_SETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761651) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [GetModify](#getmodify).  
+### <a name="example"></a>Example  
+  See the example for [GetModify](#getmodify).  
   
-##  <a name="setolecallback"></a>CRichEditCtrl::SetOLECallback  
- Esto da `CRichEditCtrl` objeto un **IRichEditOleCallback** objeto que se va a usar para acceder a información y recursos relacionados con OLE.  
+##  <a name="setolecallback"></a>  CRichEditCtrl::SetOLECallback  
+ Gives this `CRichEditCtrl` object an **IRichEditOleCallback** object to use to access OLE-related resources and information.  
   
 ```  
 BOOL SetOLECallback(IRichEditOleCallback* pCallback);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pCallback`  
- Puntero a un [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) objeto que este `CRichEditCtrl` objeto utilizará para obtener información y recursos relacionados con OLE.  
+ Pointer to an [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) object that this `CRichEditCtrl` object will use to get OLE-related resources and information.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si se realiza correctamente; en caso contrario, es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>Comentarios  
- Esto `CRichEditCtrl` objeto llamará [IUnknown:: AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) para incrementar el recuento de uso para el objeto COM especificado por `pCallback`.  
+### <a name="remarks"></a>Remarks  
+ This `CRichEditCtrl` object will call [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) to increment the usage count for the COM object specified by `pCallback`.  
   
- Para obtener más información, consulte [EM_SETOLECALLBACK](http://msdn.microsoft.com/library/windows/desktop/bb774252) mensaje y [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) de la interfaz en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_SETOLECALLBACK](http://msdn.microsoft.com/library/windows/desktop/bb774252) message and [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) interface in the Windows SDK.  
   
-##  <a name="setoptions"></a>CRichEditCtrl::SetOptions  
- Establece las opciones para este `CRichEditCtrl` objeto.  
+##  <a name="setoptions"></a>  CRichEditCtrl::SetOptions  
+ Sets the options for this `CRichEditCtrl` object.  
   
 ```  
 void SetOptions(
@@ -1447,72 +1447,72 @@ void SetOptions(
     DWORD dwFlags);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  *wOp*  
- Indica el tipo de operación. Uno de los siguientes valores:  
+ Indicates the type of operation. One of the following values:  
   
-- `ECOOP_SET`Establezca las opciones en la que se especifica por `dwFlags`.  
+- `ECOOP_SET` Set the options to those specified by `dwFlags`.  
   
-- `ECOOP_OR`Combinar las opciones actuales con las especificadas por `dwFlags`.  
+- `ECOOP_OR` Combine the current options with those specified by `dwFlags`.  
   
-- `ECOOP_AND`Conservar sólo las opciones actuales que también se especifican mediante `dwFlags`.  
+- `ECOOP_AND` Retain only those current options that are also specified by `dwFlags`.  
   
-- `ECOOP_XOR`Conservar sólo las opciones actuales que están *no* especificado por `dwFlags`.  
+- `ECOOP_XOR` Logically exclusive OR the current options with those specified by `dwFlags`.  
   
  `dwFlags`  
- Opciones de edición enriquecidas. Los valores de indicador se muestran en la sección Comentarios.  
+ Rich edit options. The flag values are listed in the Remarks section.  
   
-### <a name="remarks"></a>Comentarios  
- Las opciones pueden ser una combinación de los siguientes valores:  
+### <a name="remarks"></a>Remarks  
+ The options can be a combination of the following values:  
   
-- `ECO_AUTOWORDSELECTION`Haga doble clic en la selección automática de palabras en.  
+- `ECO_AUTOWORDSELECTION` Automatic word selection on double-click.  
   
-- `ECO_AUTOVSCROLL`Desplaza el texto automáticamente a la derecha 10 caracteres cuando el usuario escribe un carácter al final de la línea. Cuando el usuario presiona la tecla ENTRAR, el control desplaza todo el texto a la posición cero.  
+- `ECO_AUTOVSCROLL` Automatically scrolls text to the right by 10 characters when the user types a character at the end of the line. When the user presses the ENTER key, the control scrolls all text back to position zero.  
   
-- `ECO_AUTOHSCROLL`Se desplaza automáticamente el texto hacia arriba una página cuando el usuario presiona la tecla ENTRAR en la última línea.  
+- `ECO_AUTOHSCROLL` Automatically scrolls text up one page when the user presses the ENTER key on the last line.  
   
-- `ECO_NOHIDESEL`Niega el comportamiento predeterminado para un control de edición. El comportamiento predeterminado oculta la selección cuando el control pierde el foco de entrada y la selección muestra cuando el control recibe el foco de entrada. Si especifica `ECO_NOHIDESEL`, se invierte el texto seleccionado, incluso si el control no tiene el foco.  
+- `ECO_NOHIDESEL` Negates the default behavior for an edit control. The default behavior hides the selection when the control loses the input focus and shows the selection when the control receives the input focus. If you specify `ECO_NOHIDESEL`, the selected text is inverted, even if the control does not have the focus.  
   
-- `ECO_READONLY`Evita que el usuario escriba o edite texto en el control de edición.  
+- `ECO_READONLY` Prevents the user from typing or editing text in the edit control.  
   
-- `ECO_WANTRETURN`Especifica que se insertó un retorno de carro cuando el usuario presiona la tecla ENTRAR al escribir texto en un control rich Edit. de varias líneas en un cuadro de diálogo. Si no especifica este estilo, al presionar la tecla ENTRAR envía un comando a la ventana primaria del control rich edit, que imita al hacer clic en el botón predeterminado de la ventana primaria (por ejemplo, el botón Aceptar en un cuadro de diálogo). Este estilo no tiene ningún efecto en una sola línea control de edición.  
+- `ECO_WANTRETURN` Specifies that a carriage return be inserted when the user presses the ENTER key while entering text into a multiple-line rich edit control in a dialog box. If you do not specify this style, pressing the ENTER key sends a command to the rich edit control's parent window, which mimics clicking the parent window's default button (for example, the OK button in a dialog box). This style has no effect on a single-line edit control.  
   
-- `ECO_SAVESEL`Conserva la selección cuando el control pierde el foco. De forma predeterminada, todo el contenido del control se selecciona cuando vuelve a obtener el foco.  
+- `ECO_SAVESEL` Preserves the selection when the control loses the focus. By default, the entire contents of the control are selected when it regains the focus.  
   
-- `ECO_VERTICAL`Dibuja el texto y los objetos en una dirección vertical. Está disponible para idiomas asiáticos únicamente.  
+- `ECO_VERTICAL` Draws text and objects in a vertical direction. Available for Asian languages only.  
   
- Para obtener más información, consulte [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #27](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_27.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#27](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_27.cpp)]  
   
-##  <a name="setparaformat"></a>CRichEditCtrl::SetParaFormat  
- Establece lo atributos de la selección actual en este formato de párrafo `CRichEditCtrl` objeto.  
+##  <a name="setparaformat"></a>  CRichEditCtrl::SetParaFormat  
+ Sets the paragraph formatting attributes for the current selection in this `CRichEditCtrl` object.  
   
 ```  
 BOOL SetParaFormat(PARAFORMAT& pf);  
 BOOL SetParaFormat(PARAFORMAT2& pf);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pf`  
- En la primera versión, un puntero a un [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) atributos de formato de párrafo de la estructura que contiene el nuevo valor predeterminado.  
+ In the first version, a pointer to a [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) structure containing the new default paragraph formatting attributes.  
   
- En la segunda versión, un puntero a un [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) estructura, que es una extensión de Rich Edit 2.0 para la **PARAFORMAT** estructura, que contiene atributos de formato de carácter predeterminado.  
+ In the second version, a pointer to a [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) structure, which is a Rich Edit 2.0 extension to the **PARAFORMAT** structure, holding the default character formatting attributes.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si se realiza correctamente; en caso contrario, es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>Comentarios  
- Solo los atributos especificados por el **dwMask** miembro de `pf` se cambian por esta función.  
+### <a name="remarks"></a>Remarks  
+ Only the attributes specified by the **dwMask** member of `pf` are changed by this function.  
   
- Para obtener más información, consulte el [EM_SETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774276) mensaje y la **PARAFORMAT** y **PARAFORMAT2** las estructuras de los [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [EM_SETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774276) message and the **PARAFORMAT** and **PARAFORMAT2** structures in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #28](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_28.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#28](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_28.cpp)]  
   
-##  <a name="setpunctuation"></a>CRichEditCtrl::SetPunctuation  
- Establece los signos de puntuación en un control rich edit.  
+##  <a name="setpunctuation"></a>  CRichEditCtrl::SetPunctuation  
+ Sets the punctuation in a rich edit control.  
   
 ```  
 BOOL SetPunctuation(
@@ -1520,62 +1520,62 @@ BOOL SetPunctuation(
     PUNCTUATION* lpPunc);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `fType`  
- El indicador de puntuación. Para obtener una lista de valores posibles, vea el `fType` parámetro [EM_SETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774278) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ The punctuation flag. For a list of possible values, see the `fType` parameter for [EM_SETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774278) in the Windows SDK.  
   
  `lpPunc`  
- Un puntero a un [puntuación](http://msdn.microsoft.com/library/windows/desktop/bb787944) estructura, como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ A pointer to a [PUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb787944) structure, as described in the Windows SDK.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si se realiza correctamente, en caso contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful, otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función miembro está disponible para solo las versiones de idiomas asiáticos del sistema operativo.  
+### <a name="remarks"></a>Remarks  
+ This member function is available for only Asian-language versions of the operating system.  
   
-##  <a name="setreadonly"></a>CRichEditCtrl::SetReadOnly  
- Cambios de la `ECO_READONLY` opción para este `CRichEditCtrl` objeto.  
+##  <a name="setreadonly"></a>  CRichEditCtrl::SetReadOnly  
+ Changes the `ECO_READONLY` option for this `CRichEditCtrl` object.  
   
 ```  
 BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `bReadOnly`  
- Indica si este `CRichEditCtrl` objeto debe ser de solo lectura.  
+ Indicates if this `CRichEditCtrl` object should be read only.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si se realiza correctamente; en caso contrario, es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener una breve descripción de esta opción, consulte [SetOptions](#setoptions). Puede usar esta función para establecer todas las opciones para este `CRichEditCtrl` objeto.  
+### <a name="remarks"></a>Remarks  
+ For a brief description of this option, see [SetOptions](#setoptions). You can use this function to set all the options for this `CRichEditCtrl` object.  
   
- Para obtener más información, consulte [EM_SETREADONLY](http://msdn.microsoft.com/library/windows/desktop/bb761655) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_SETREADONLY](http://msdn.microsoft.com/library/windows/desktop/bb761655) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #29](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_29.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#29](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_29.cpp)]  
   
-##  <a name="setrect"></a>CRichEditCtrl::SetRect  
- Establece el rectángulo de formato para este `CRichEditCtrl` objeto.  
+##  <a name="setrect"></a>  CRichEditCtrl::SetRect  
+ Sets the formatting rectangle for this `CRichEditCtrl` object.  
   
 ```  
 void SetRect(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- [CRect](../../atl-mfc-shared/reference/crect-class.md) o un puntero a un [RECT](../../mfc/reference/rect-structure1.md) que indica los nuevos límites del rectángulo de formato.  
+ [CRect](../../atl-mfc-shared/reference/crect-class.md) or pointer to a [RECT](../../mfc/reference/rect-structure1.md) that indicates the new bounds for the formatting rectangle.  
   
-### <a name="remarks"></a>Comentarios  
- El rectángulo de formato es el rectángulo de limitación para el texto. El rectángulo de limitación es independiente del tamaño de la ventana del control rich Edit.. Cuando esto `CRichEditCtrl` objeto se crea por primera vez, el rectángulo de formato es el mismo tamaño que el área de cliente de la ventana. Use `SetRect` para que el rectángulo formato mayor o menor que la ventana de edición enriquecida.  
+### <a name="remarks"></a>Remarks  
+ The formatting rectangle is the limiting rectangle for the text. The limiting rectangle is independent of the size of the rich edit control window. When this `CRichEditCtrl` object is first created, the formatting rectangle is the same size as the client area of the window. Use `SetRect` to make the formatting rectangle larger or smaller than the rich edit window.  
   
- Para obtener más información, consulte [EM_SETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761657) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_SETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761657) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #30](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_30.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#30](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_30.cpp)]  
   
-##  <a name="setsel"></a>CRichEditCtrl::SetSel  
- Establece la selección dentro de este `CRichEditCtrl` objeto.  
+##  <a name="setsel"></a>  CRichEditCtrl::SetSel  
+ Sets the selection within this `CRichEditCtrl` object.  
   
 ```  
 void SetSel(
@@ -1585,59 +1585,59 @@ void SetSel(
 void SetSel(CHARRANGE& cr);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nStartChar`  
- Índice de base cero del primer carácter de la selección.  
+ Zero-based index of the first character for the selection.  
   
  `nEndChar`  
- Índice de base cero del último carácter de la selección.  
+ Zero-based index of the last character for the selection.  
   
  `cr`  
- [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) estructura que contiene los límites de la selección actual.  
+ [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure which holds the bounds of the current selection.  
   
-### <a name="remarks"></a>Comentarios  
- Las dos formas de esta función proporcionan métodos alternativos para establecer los límites de la selección. Siguen breves descripciones de estas formas:  
+### <a name="remarks"></a>Remarks  
+ The two forms of this function provide alternate ways to set the bounds for the selection. Brief descriptions of these forms follow:  
   
-- **Función miembro SetSel (** `cr` **)** este formulario usa el **CHARRANGE** estructura con su **cpMin** y **cpMax** miembros para establecer los límites.  
+- **SetSel(** `cr` **)** This form uses the **CHARRANGE** structure with its **cpMin** and **cpMax** members to set the bounds.  
   
-- **Función miembro SetSel (** `nStartChar` **,** `nEndChar` **)** este formulario use los parámetros `nStartChar` y `nEndChar` para establecer los límites.  
+- **SetSel(** `nStartChar` **,** `nEndChar` **)** This form use the parameters `nStartChar` and `nEndChar` to set the bounds.  
   
- El símbolo de intercalación se coloca al final de la selección indicada por el mayor número de inicio ( **cpMin** o `nStartChar`) y al final ( **cpMax** o `nEndChar`) índices. Esta función desplaza el contenido de la `CRichEditCtrl` para que el símbolo de intercalación está visible.  
+ The caret is placed at the end of the selection indicated by the greater of the start ( **cpMin** or `nStartChar`) and end ( **cpMax** or `nEndChar`) indices. This function scrolls the contents of the `CRichEditCtrl` so that the caret is visible.  
   
- Para seleccionar todo el texto de esta `CRichEditCtrl` objeto, llame a `SetSel` con un índice de inicio de 0 y un índice final de - 1.  
+ To select all the text in this `CRichEditCtrl` object, call `SetSel` with a start index of 0 and an end index of - 1.  
   
- Para obtener más información, consulte [EM_EXSETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788007) mensaje y [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) estructura en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_EXSETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788007) message and [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [función miembro GetSel](#getsel).  
+### <a name="example"></a>Example  
+  See the example for [GetSel](#getsel).  
   
-##  <a name="setselectioncharformat"></a>CRichEditCtrl::SetSelectionCharFormat  
- Establece el carácter de atributos de texto de la selección actual en este formato `CRichEditCtrl` objeto.  
+##  <a name="setselectioncharformat"></a>  CRichEditCtrl::SetSelectionCharFormat  
+ Sets the character formatting attributes for the text in the current selection in this `CRichEditCtrl` object.  
   
 ```  
 BOOL SetSelectionCharFormat(CHARFORMAT& cf);  
 BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `cf`  
- En la primera versión, un puntero a un [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) estructura que contiene el nuevo formato de carácter de atributos de la selección actual.  
+ In the first version, a pointer to a [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) structure containing the new character formatting attributes for the current selection.  
   
- En la segunda versión, un puntero a un [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) estructura, que es una extensión de Rich Edit 2.0 para la **CHARFORMAT** estructura, que contiene el carácter de nueva atributos para la selección actual de formato.  
+ In the second version, a pointer to a [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) structure, which is a Rich Edit 2.0 extension to the **CHARFORMAT** structure, containing the new character formatting attributes for the current selection.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si se realiza correctamente; en caso contrario, es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>Comentarios  
- Solo los atributos especificados por el **dwMask** miembro de `cf` se cambian por esta función.  
+### <a name="remarks"></a>Remarks  
+ Only the attributes specified by the **dwMask** member of `cf` are changed by this function.  
   
- Para obtener más información, consulte el [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) y **CHARFORMAT** y **CHARFORMAT2** las estructuras de los [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) and the **CHARFORMAT** and **CHARFORMAT2** structures in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #31](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_31.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#31](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_31.cpp)]  
   
-##  <a name="settargetdevice"></a>CRichEditCtrl::SetTargetDevice  
- Establece el ancho de línea y de dispositivo de destino utilizado para WYSIWYG (lo que ve es lo que se obtiene) el formato de este `CRichEditCtrl` objeto.  
+##  <a name="settargetdevice"></a>  CRichEditCtrl::SetTargetDevice  
+ Sets the target device and line width used for WYSIWYG (what you see is what you get) formatting in this `CRichEditCtrl` object.  
   
 ```  
 BOOL SetTargetDevice(
@@ -1650,119 +1650,119 @@ BOOL SetTargetDevice(
     long lLineWidth);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `hDC`  
- Identificador del contexto de dispositivo para el nuevo dispositivo de destino.  
+ Handle to the device context for the new target device.  
   
  *lLineWidth*  
- Ancho de línea que se utilizará para dar formato.  
+ Line width to use for formatting.  
   
  `dc`  
- [CDC](../../mfc/reference/cdc-class.md) para el nuevo dispositivo de destino.  
+ [CDC](../../mfc/reference/cdc-class.md) for the new target device.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si se realiza correctamente; en caso contrario, es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>Comentarios  
- Si esta función se realiza correctamente, el control rich edit posee el dispositivo el contexto se pasa como parámetro. En ese caso, la función que realiza la llamada debe destruir el contexto de dispositivo.  
+### <a name="remarks"></a>Remarks  
+ If this function is successful, the rich edit control owns the device context passed as a parameter. In that case, the calling function should not destroy the device context.  
   
- Para obtener más información, consulte [EM_SETTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/bb774282) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_SETTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/bb774282) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #32](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_32.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#32](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_32.cpp)]  
   
-##  <a name="settextmode"></a>CRichEditCtrl::SetTextMode  
- Establece el nivel de modo o deshacer y rehacer de texto de un control rich edit.  
+##  <a name="settextmode"></a>  CRichEditCtrl::SetTextMode  
+ Sets the text mode or undo and redo level for a rich edit control.  
   
 ```  
 BOOL SetTextMode(UINT fMode);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  *fMode*  
- Especifica los nuevos valores para modo y deshacer nivel parámetros de texto del control. Para obtener una lista de los valores posibles, vea el parámetro mode para [EM_SETTEXTMODE](http://msdn.microsoft.com/library/windows/desktop/bb774286) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies the new settings for the control's text mode and undo level parameters. For a list of the possible values, see the mode parameter for [EM_SETTEXTMODE](http://msdn.microsoft.com/library/windows/desktop/bb774286) in the Windows SDK.  
   
-### <a name="return-value"></a>Valor devuelto  
- Cero si es correcta, en caso contrario, es distinto de cero.  
+### <a name="return-value"></a>Return Value  
+ Zero if successful, otherwise nonzero.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener una descripción de los modos de texto, consulte **EM_SETTEXTMODE** en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ For a description of the text modes, see **EM_SETTEXTMODE** in the Windows SDK.  
   
- Esta función miembro produce un error si el control contiene texto. Para asegurarse de que el control está vacío, envíe un [WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644) mensaje con una cadena vacía.  
+ This member function fails if the control contains text. To make sure the control is empty, send a [WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644) message with an empty string.  
   
-##  <a name="setundolimit"></a>CRichEditCtrl::SetUndoLimit  
- Establece el número máximo de acciones que se pueden almacenar en la cola de deshacer.  
+##  <a name="setundolimit"></a>  CRichEditCtrl::SetUndoLimit  
+ Sets the maximum number of actions that can stored in the undo queue.  
   
 ```  
 UINT SetUndoLimit(UINT nLimit);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  *nLimit*  
- Especifica el número máximo de acciones que se pueden almacenar en la cola de deshacer. Se establece en cero para deshabilitar la reversión.  
+ Specifies the maximum number of actions that can be stored in the undo queue. Set to zero to disable Undo.  
   
-### <a name="return-value"></a>Valor devuelto  
- El nuevo número máximo de acciones de deshacer para los datos completos de control de edición.  
+### <a name="return-value"></a>Return Value  
+ The new maximum number of undo actions for the rich edit control.  
   
-### <a name="remarks"></a>Comentarios  
- De forma predeterminada, el número máximo de acciones en la cola de deshacer es 100. Si se aumenta este número, debe haber suficiente memoria disponible para alojar al número nuevo. Para mejorar el rendimiento, establecer el límite en el menor valor posible.  
+### <a name="remarks"></a>Remarks  
+ By default, the maximum number of actions in the undo queue is 100. If you increase this number, there must be enough available memory to accommodate the new number. For better performance, set the limit to the smallest possible value.  
   
-##  <a name="setwordcharformat"></a>CRichEditCtrl::SetWordCharFormat  
- Establece los atributos de la palabra seleccionada actualmente en este formato de caracteres `CRichEditCtrl` objeto.  
+##  <a name="setwordcharformat"></a>  CRichEditCtrl::SetWordCharFormat  
+ Sets the character formatting attributes for the currently selected word in this `CRichEditCtrl` object.  
   
 ```  
 BOOL SetWordCharFormat(CHARFORMAT& cf);  
 BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `cf`  
- En la primera versión, un puntero a un [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) los atributos de estructura que contiene el nuevo formato de caracteres de la palabra seleccionada actualmente.  
+ In the first version, a pointer to a [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) structure containing the new character formatting attributes for the currently selected word.  
   
- En la segunda versión, un puntero a un [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) estructura, que es una extensión de Rich Edit 2.0 para la **CHARFORMAT** estructura, que contiene el carácter de nueva formato atributos para la palabra seleccionada actualmente.  
+ In the second version, a pointer to a [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) structure, which is a Rich Edit 2.0 extension to the **CHARFORMAT** structure, containing the new character formatting attributes for the currently selected word.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si se realiza correctamente; en caso contrario, es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>Comentarios  
- Solo los atributos especificados por el **dwMask** miembro de `cf` se cambian por esta función.  
+### <a name="remarks"></a>Remarks  
+ Only the attributes specified by the **dwMask** member of `cf` are changed by this function.  
   
- Para obtener más información, consulte el [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) mensaje y la **CHARFORMAT** y **CHARFORMAT2** las estructuras de los [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) message and the **CHARFORMAT** and **CHARFORMAT2** structures in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl Nº 33](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_33.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#33](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_33.cpp)]  
   
-##  <a name="setwordwrapmode"></a>CRichEditCtrl::SetWordWrapMode  
- Establece las opciones de ajuste automático de línea y separación de palabras de los datos completos de control de edición.  
+##  <a name="setwordwrapmode"></a>  CRichEditCtrl::SetWordWrapMode  
+ Sets the word-wrapping and word-breaking options for the rich edit control.  
   
 ```  
 UINT SetWordWrapMode(UINT uFlags) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `uFlags`  
- Opciones que se va a establecer para el ajuste de línea y separación de palabras. Para obtener una lista de opciones posibles, consulte [EM_SETWORDWRAPMODE](http://msdn.microsoft.com/library/windows/desktop/bb774294) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ The options to set for word wrapping and word breaking. For a list of possible options, see [EM_SETWORDWRAPMODE](http://msdn.microsoft.com/library/windows/desktop/bb774294) in the Windows SDK.  
   
-### <a name="return-value"></a>Valor devuelto  
- El ajuste automático de línea actual y la separación de palabras opciones.  
+### <a name="return-value"></a>Return Value  
+ The current word-wrapping and word-breaking options.  
   
-### <a name="remarks"></a>Comentarios  
- Este mensaje sólo está disponible en versiones de idiomas asiáticos del sistema operativo.  
+### <a name="remarks"></a>Remarks  
+ This message is available only in Asian-language versions of the operating system.  
   
-##  <a name="stopgrouptyping"></a>CRichEditCtrl::StopGroupTyping  
- Detiene el control de recopilación adicional escribiendo acciones en la acción de deshacer actual.  
+##  <a name="stopgrouptyping"></a>  CRichEditCtrl::StopGroupTyping  
+ Stops the control from collecting additional typing actions into the current undo action.  
   
 ```  
 void StopGroupTyping();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- El control almacena la siguiente acción de escritura, si hay alguno, en una acción nueva en la cola de deshacer.  
+### <a name="remarks"></a>Remarks  
+ The control stores the next typing action, if any, into a new action in the undo queue.  
   
- Para obtener más información, consulte [EM_STOPGROUPTYPING](http://msdn.microsoft.com/library/windows/desktop/bb774300) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_STOPGROUPTYPING](http://msdn.microsoft.com/library/windows/desktop/bb774300) in the Windows SDK.  
   
-##  <a name="streamin"></a>CRichEditCtrl::StreamIn  
- Reemplaza el texto en este `CRichEditCtrl` objeto con el texto del flujo de entrada especificado.  
+##  <a name="streamin"></a>  CRichEditCtrl::StreamIn  
+ Replaces text in this `CRichEditCtrl` object with text from the specified input stream.  
   
 ```  
 long StreamIn(
@@ -1770,36 +1770,36 @@ long StreamIn(
     EDITSTREAM& es);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nFormat`  
- Marcadores que especifican los formatos de datos de entrada. Vea la sección Comentarios para obtener más información.  
+ Flags specifying the input data formats. See the Remarks section for more information.  
   
  `es`  
- [Estructura EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) estructura que especifica el flujo de entrada. Vea la sección Comentarios para obtener más información.  
+ [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) structure specifying the input stream. See the Remarks section for more information.  
   
-### <a name="return-value"></a>Valor devuelto  
- Número de caracteres leídos del flujo de entrada.  
+### <a name="return-value"></a>Return Value  
+ Number of characters read from the input stream.  
   
-### <a name="remarks"></a>Comentarios  
- El valor de `nFormat` debe ser uno de los siguientes:  
+### <a name="remarks"></a>Remarks  
+ The value of `nFormat` must be one of the following:  
   
-- `SF_TEXT`Indica texto sólo de lectura.  
+- `SF_TEXT` Indicates reading text only.  
   
-- `SF_RTF`Indica texto de lectura y el formato.  
+- `SF_RTF` Indicates reading text and formatting.  
   
- Cualquiera de estos valores se pueden combinar con `SFF_SELECTION`. Si `SFF_SELECTION` se especifica, `StreamIn` reemplaza la selección actual con el contenido de la secuencia de entrada. Si no se especifica, `StreamIn` reemplaza todo el contenido de este `CRichEditCtrl` objeto.  
+ Either of these values can be combined with `SFF_SELECTION`. If `SFF_SELECTION` is specified, `StreamIn` replaces the current selection with the contents of the input stream. If it is not specified, `StreamIn` replaces the entire contents of this `CRichEditCtrl` object.  
   
- En el **estructura EDITSTREAM** parámetro `es`, especificar una función de devolución de llamada que llena un búfer de texto. Esta función de devolución de llamada se invoca varias veces, hasta que se agote el flujo de entrada.  
+ In the **EDITSTREAM** parameter `es`, you specify a callback function that fills a buffer with text. This callback function is called repeatedly, until the input stream is exhausted.  
   
- Para obtener más información, consulte [EM_STREAMIN](http://msdn.microsoft.com/library/windows/desktop/bb774302) mensaje y [estructura EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) estructura en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_STREAMIN](http://msdn.microsoft.com/library/windows/desktop/bb774302) message and [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) structure in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #34](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_34.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#34](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_34.cpp)]  
   
- [!code-cpp[NVC_MFC_CRichEditCtrl #35](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_35.cpp)]  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#35](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_35.cpp)]  
   
-##  <a name="streamout"></a>CRichEditCtrl::StreamOut  
- Escribe el contenido de este `CRichEditCtrl` objeto en el flujo de salida especificado.  
+##  <a name="streamout"></a>  CRichEditCtrl::StreamOut  
+ Writes out the contents of this `CRichEditCtrl` object to the specified output stream.  
   
 ```  
 long StreamOut(
@@ -1807,60 +1807,60 @@ long StreamOut(
     EDITSTREAM& es);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nFormat`  
- Marcadores que especifican los formatos de datos de salida. Vea la sección Comentarios para obtener más información.  
+ Flags specifying the output data formats. See the Remarks section for more information.  
   
  `es`  
- [Estructura EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) estructura que especifica el flujo de salida. Vea la sección Comentarios para obtener más información.  
+ [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) structure specifying the output stream. See the Remarks section for more information.  
   
-### <a name="return-value"></a>Valor devuelto  
- Número de caracteres escritos en el flujo de salida.  
+### <a name="return-value"></a>Return Value  
+ Number of characters written to the output stream.  
   
-### <a name="remarks"></a>Comentarios  
- El valor de `nFormat` debe ser uno de los siguientes:  
+### <a name="remarks"></a>Remarks  
+ The value of `nFormat` must be one of the following:  
   
-- `SF_TEXT`Indica que sólo el texto escrito.  
+- `SF_TEXT` Indicates writing text only.  
   
-- `SF_RTF`Indica el formato y escribir texto.  
+- `SF_RTF` Indicates writing text and formatting.  
   
-- `SF_RTFNOOBJS`Indica texto de escritura y el formato, reemplazando los elementos OLE con espacios.  
+- `SF_RTFNOOBJS` Indicates writing text and formatting, replacing OLE items with spaces.  
   
-- `SF_TEXTIZED`Indica texto de escritura y el formato, por representaciones de texto de elementos OLE.  
+- `SF_TEXTIZED` Indicates writing text and formatting, with textual representations of OLE items.  
   
- Ninguno de estos valores pueden combinarse con `SFF_SELECTION`. Si `SFF_SELECTION` se especifica, `StreamOut` escribe la selección actual en el flujo de salida. Si no se especifica, `StreamOut` escribe todo el contenido de este `CRichEditCtrl` objeto.  
+ Any of these values can be combined with `SFF_SELECTION`. If `SFF_SELECTION` is specified, `StreamOut` writes out the current selection into the output stream. If it is not specified, `StreamOut` writes out the entire contents of this `CRichEditCtrl` object.  
   
- En el **estructura EDITSTREAM** parámetro `es`, especificar una función de devolución de llamada que llena un búfer de texto. Esta función de devolución de llamada se invoca varias veces, hasta que se agote el flujo de salida.  
+ In the **EDITSTREAM** parameter `es`, you specify a callback function which fills a buffer with text. This callback function is called repeatedly, until the output stream is exhausted.  
   
- Para obtener más información, consulte [EM_STREAMOUT](http://msdn.microsoft.com/library/windows/desktop/bb774304) mensaje y [estructura EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) estructura en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_STREAMOUT](http://msdn.microsoft.com/library/windows/desktop/bb774304) message and [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) structure in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CRichEditCtrl #36](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_36.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#36](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_36.cpp)]  
   
- [!code-cpp[NVC_MFC_CRichEditCtrl #37](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_37.cpp)]  
+ [!code-cpp[NVC_MFC_CRichEditCtrl#37](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_37.cpp)]  
   
-##  <a name="undo"></a>CRichEditCtrl::Undo  
- Deshace la última operación en el control de edición enriquecida.  
+##  <a name="undo"></a>  CRichEditCtrl::Undo  
+ Undoes the last operation in the rich edit control.  
   
 ```  
 BOOL Undo();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la operación de deshacer se realiza correctamente; en caso contrario, es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the undo operation is successful; otherwise, 0.  
   
-### <a name="remarks"></a>Comentarios  
- También se puede deshacer una operación de deshacer. Por ejemplo, puede restaurar el texto eliminado con la primera llamada a **deshacer**. Como no hay ninguna operación de edición que intervengan, puede quitar el texto nuevo con una segunda llamada a **deshacer**.  
+### <a name="remarks"></a>Remarks  
+ An undo operation can also be undone. For example, you can restore deleted text with the first call to **Undo**. As long as there is no intervening edit operation, you can remove the text again with a second call to **Undo**.  
   
- Para obtener más información, consulte [EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [CanUndo](#canundo).  
+### <a name="example"></a>Example  
+  See the example for [CanUndo](#canundo).  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo MFC WORDPAD](../../visual-cpp-samples.md)   
- [CWnd (clase)](../../mfc/reference/cwnd-class.md)   
- [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
- [Clase CEdit](../../mfc/reference/cedit-class.md)   
- [CRichEditView (clase)](../../mfc/reference/cricheditview-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample WORDPAD](../../visual-cpp-samples.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CEdit Class](../../mfc/reference/cedit-class.md)   
+ [CRichEditView Class](../../mfc/reference/cricheditview-class.md)
 
