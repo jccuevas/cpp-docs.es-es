@@ -1,5 +1,5 @@
 ---
-title: Funciones &lt;regex&gt; | Microsoft Docs
+title: '&lt;regex&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -7,11 +7,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- regex_match
 - regex/std::regex_match
-- regex_replace
 - regex/std::regex_replace
-- regex_search
 - regex/std::regex_search
 - regex/std::swap
 - regex/std::swap
@@ -20,21 +17,27 @@ dev_langs:
 ms.assetid: 91a8314b-6f7c-4e33-b7d6-d8583dd75585
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 0b803ecc31331cdfed9b178ca2e919606482aa33
+helpviewer_keywords:
+- std::regex_match [C++]
+- std::regex_replace [C++]
+- std::regex_search [C++]
+- std::swap [C++]
+- std::swap [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cfac3b7d414af28d81aca98d0e2dd28f1357447a
 ms.contentlocale: es-es
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltregexgt-functions"></a>Funciones &lt;regex&gt;
+# <a name="ltregexgt-functions"></a>&lt;regex&gt; functions
 ||||  
 |-|-|-|  
 |[regex_match](#regex_match)|[regex_replace](#regex_replace)|[regex_search](#regex_search)|  
 |[swap](#swap)|  
   
-##  <a name="regex_match"></a>regex_match
- Comprueba si una expresión regular coincide con toda la cadena de destino.  
+##  <a name="regex_match"></a>  regex_match
+ Tests whether a regular expression matches the entire target string.  
   
 ```  
  
@@ -90,57 +93,57 @@ bool regex_match(
     match_flag_type flags = match_default);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- El tipo de iterador para subcoincidencias. Para casos comunes, este de string::const_iterator, wstring::const_iterator, const char* o const wchar_t\*.  
+ The iterator type for submatches. For common cases this one of string::const_iterator, wstring::const_iterator, const char* or const wchar_t\*.  
   
  `Alloc`  
- La clase de asignador de resultados de coincidencia.  
+ The match results allocator class.  
   
  `Elem`  
- Tipo de los elementos que debe coincidir. Para casos comunes, este es string, wstring, char* o wchar_t\*.  
+ The type of elements to match. For common cases this is string, wstring, char* or wchar_t\*.  
   
  `RXtraits`  
- Clase Traits para los elementos.  
+ Traits class for elements.  
   
  `Alloc2`  
- La clase de asignador de expresión regular.  
+ The regular expression allocator class.  
   
  `IOtraits`  
- La clase de características de cadena.  
+ The string traits class.  
   
  `IOalloc`  
- La clase de asignador de cadena.  
+ The string allocator class.  
   
  `flags`  
- Marcadores para coincidencias.  
+ Flags for matches.  
   
  `first`  
- Principio de la secuencia que debe coincidir.  
+ Beginning of sequence to match.  
   
  `last`  
- Final de la secuencia que debe coincidir.  
+ End of sequence to match.  
   
  `match`  
- Los resultados de la coincidencia. Corresponde al tipo Elem: [smatch](../standard-library/regex-typedefs.md#smatch) para string, [wsmatch](../standard-library/regex-typedefs.md#wsmatch) para wstring, [cmatch](../standard-library/regex-typedefs.md#cmatch) para char* o [wcmatch](../standard-library/regex-typedefs.md#wcmatch) para wchar_t\*.  
+ The match results. Corresponds to Elem type: [smatch](../standard-library/regex-typedefs.md#smatch) for string, [wsmatch](../standard-library/regex-typedefs.md#wsmatch) for wstring, [cmatch](../standard-library/regex-typedefs.md#cmatch) for char* or [wcmatch](../standard-library/regex-typedefs.md#wcmatch) for wchar_t\*.  
   
  `ptr`  
- Puntero al inicio de la secuencia que debe coincidir. Si ptr es char*, utilice cmatch y regex. Si ptr es wchar_t\*, use wcmatch y wregex.  
+ Pointer to beginning of sequence to match. If ptr is char*, then use cmatch and regex. If ptr is wchar_t\* then use wcmatch and wregex.  
   
  `re`  
- La expresión regular que debe coincidir. Tipo `regex` para string y char* o `wregex` para wstring y wchar_t\*.  
+ The regular expression to match. Type `regex` for string and char*, or `wregex` for wstring and wchar_t\*.  
   
  `str`  
- Cadena que debe coincidir. Corresponde al tipo Elem.  
+ String to match. Corresponds to the type of Elem.  
   
-### <a name="remarks"></a>Comentarios  
- Todas las funciones de plantilla devuelven true solo si toda la secuencia de operandos `str` coincide exactamente con el argumento de expresión regular `re`. Use [regex_search](../standard-library/regex-functions.md#regex_search) para hacer coincidir una subcadena con una secuencia de destino y regex_iterator para encontrar coincidencias múltiples. Las funciones que toman un objeto `match_results` establecen que sus miembros reflejen si la coincidencia ha tenido lugar y, de ser así, qué han capturado los varios grupos de captura de la expresión regular.  
+### <a name="remarks"></a>Remarks  
+ Each template function returns true only if the entire operand sequence `str` exactly matches the regular expression argument `re`. Use [regex_search](../standard-library/regex-functions.md#regex_search) to match a substring within a target sequence and regex_iterator to find multiple matches. The functions that take a `match_results` object set its members to reflect whether the match succeeded and if so what the various capture groups in the regular expression captured.  
   
- Las funciones que toman un objeto `match_results` establecen que sus miembros reflejen si la coincidencia ha tenido lugar y, de ser así, qué han capturado los varios grupos de captura de la expresión regular.  
+ The functions that take a `match_results` object set its members to reflect whether the match succeeded and if so what the various capture groups in the regular expression captured.  
   
  **(1):**  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include "stdafx.h"  
@@ -193,8 +196,8 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ```  
   
-##  <a name="regex_replace"></a>regex_replace
- Reemplaza las expresiones regulares que coincidan.  
+##  <a name="regex_replace"></a>  regex_replace
+ Replaces matched regular expressions.  
   
 ```  
 template <class OutIt, class BidIt, class RXtraits, class Alloc, class Elem>  
@@ -214,49 +217,49 @@ basic_string<Elem> regex_replace(
     match_flag_type flags = match_default);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `OutIt`  
- El tipo de iterador para reemplazos.  
+ The iterator type for replacements.  
   
  `BidIt`  
- El tipo de iterador para subcoincidencias.  
+ The iterator type for submatches.  
   
  `RXtraits`  
- Clase Traits para los elementos.  
+ Traits class for elements.  
   
  `Alloc`  
- La clase de asignador de expresión regular.  
+ The regular expression allocator class.  
   
  `Elem`  
- Tipo de los elementos que debe coincidir.  
+ The type of elements to match.  
   
  `flags`  
- Marcadores para coincidencias.  
+ Flags for matches.  
   
  `first`  
- Principio de la secuencia que debe coincidir.  
+ Beginning of sequence to match.  
   
  `fmt`  
- El formato para reemplazos.  
+ The format for replacements.  
   
  `last`  
- Final de la secuencia que debe coincidir.  
+ End of sequence to match.  
   
  `out`  
- El tipo de iterador de salida.  
+ The output iterator.  
   
  `re`  
- La expresión regular que debe coincidir.  
+ The regular expression to match.  
   
  `str`  
- Cadena que debe coincidir.  
+ String to match.  
   
-### <a name="remarks"></a>Comentarios  
- La primera función construye un objeto de [regex_iterator (Clase)](../standard-library/regex-iterator-class.md) `iter(first, last, re, flags)` y lo usa para dividir su intervalo de entrada `[first, last)` en una serie de subsecuencias `T0M0T1M1...TN-1MN-1TN`, donde `Mn` es la coincidencia `nth` que ha detectado el iterador. Si no se detecta ninguna coincidencia, `T0` es el intervalo de entrada completo y `N` es cero. Si `(flags & format_first_only) != 0` solo se usa la primera coincidencia, `T1` es todo el texto de entrada que sigue a la coincidencia y `N` es 1. Para cada `i` del intervalo `[0, N)`, si `(flags & format_no_copy) == 0` copia el texto en el intervalo `Ti` al iterador `out`. Después, llama a `m.format(out, fmt, flags)`, donde `m` es el objeto `match_results` que ha devuelto el objeto de iterador `iter` para la subsecuencia `Mi`. Por último, si `(flags & format_no_copy) == 0` copia el texto en el intervalo `TN` al iterador `out`. La función devuelve `out`.  
+### <a name="remarks"></a>Remarks  
+ The first function constructs a [regex_iterator Class](../standard-library/regex-iterator-class.md) object `iter(first, last, re, flags)` and uses it to split its input range `[first, last)` into a series of subsequences `T0M0T1M1...TN-1MN-1TN`, where `Mn` is the `nth` match detected by the iterator. If no matches are found, `T0` is the entire input range and `N` is zero. If `(flags & format_first_only) != 0` only the first match is used, `T1` is all of the input text that follows the match, and `N` is 1. For each `i` in the range `[0, N)`, if `(flags & format_no_copy) == 0` it copies the text in the range `Ti` to the iterator `out`. It then calls `m.format(out, fmt, flags)`, where `m` is the `match_results` object returned by the iterator object `iter` for the subsequence `Mi`. Finally, if `(flags & format_no_copy) == 0` it copies the text in the range `TN` to the iterator `out`. The function returns `out`.  
   
- La segunda función construye una variable local `result` de tipo `basic_string<charT>` y llama a `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`. Devuelve `result`.  
+ The second function constructs a local variable `result` of type `basic_string<charT>` and calls `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`. It returns `result`.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_replace.cpp   
@@ -299,8 +302,8 @@ replacement == AdAeAf
 replacement == Adaeaf  
 ```  
   
-##  <a name="regex_search"></a>regex_search
- Busca una coincidencia con la expresión regular.  
+##  <a name="regex_search"></a>  regex_search
+ Searches for a regular expression match.  
   
 ```  
 template <class BidIt, class Alloc, class Elem, class RXtraits, class Alloc2>  
@@ -345,53 +348,53 @@ bool regex_search(
     match_flag_type flags = match_default);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- El tipo de iterador para subcoincidencias.  
+ The iterator type for submatches.  
   
  `Alloc`  
- La clase de asignador de resultados de coincidencia.  
+ The match results allocator class.  
   
  `Elem`  
- Tipo de los elementos que debe coincidir.  
+ The type of elements to match.  
   
  `RXtraits`  
- Clase Traits para los elementos.  
+ Traits class for elements.  
   
  `Alloc2`  
- La clase de asignador de expresión regular.  
+ The regular expression allocator class.  
   
  `IOtraits`  
- La clase de características de cadena.  
+ The string traits class.  
   
  `IOalloc`  
- La clase de asignador de cadena.  
+ The string allocator class.  
   
  `flags`  
- Marcadores para coincidencias.  
+ Flags for matches.  
   
  `first`  
- Principio de la secuencia que debe coincidir.  
+ Beginning of sequence to match.  
   
  `last`  
- Final de la secuencia que debe coincidir.  
+ End of sequence to match.  
   
  `match`  
- Los resultados de la coincidencia.  
+ The match results.  
   
  `ptr`  
- Puntero al inicio de la secuencia que debe coincidir.  
+ Pointer to beginning of sequence to match.  
   
  `re`  
- La expresión regular que debe coincidir.  
+ The regular expression to match.  
   
  `str`  
- Cadena que debe coincidir.  
+ String to match.  
   
-### <a name="remarks"></a>Comentarios  
- Cada función de plantilla devuelve True solo si se realiza correctamente una búsqueda para su argumento de expresión regular `re` en su secuencia de operandos. Las funciones que toman un objeto `match_results` establecen que sus miembros reflejen si la búsqueda se ha realizado correctamente y, de ser así, que han capturado los diversos grupos de captura de la expresión regular.  
+### <a name="remarks"></a>Remarks  
+ Each template function returns true only if a search for its regular expression argument `re` in its operand sequence succeeds. The functions that take a `match_results` object set its members to reflect whether the search succeeded and if so what the various capture groups in the regular expression captured.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_search.cpp   
@@ -449,7 +452,7 @@ search(string, "abc") == true
 ```  
   
 ##  <a name="swap"></a>  swap
- Intercambia dos objetos basic_regex o match_results.  
+ Swaps two basic_regex or match_results objects.  
   
 ```  
 template <class Elem, class RXtraits>  
@@ -463,17 +466,17 @@ void swap(
     match_results<BidIt, Alloc>& right) throw();
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `Elem`  
- Tipo de los elementos que debe coincidir.  
+ The type of elements to match.  
   
  `RXtraits`  
- Clase Traits para los elementos.  
+ Traits class for elements.  
   
-### <a name="remarks"></a>Comentarios  
- Las funciones de plantilla intercambian el contenido de sus argumentos respectivos en tiempo constante y no producen excepciones.  
+### <a name="remarks"></a>Remarks  
+ The template functions swap the contents of their respective arguments in constant time and do not throw exceptions.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__swap.cpp   
@@ -509,14 +512,14 @@ length == 3
 string == aaa  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
 [\<regex>](../standard-library/regex.md)  
-[regex_constants (Clase)](../standard-library/regex-constants-class.md)  
-[regex_error (Clase)](../standard-library/regex-error-class.md)  
-[regex_iterator (Clase)](../standard-library/regex-iterator-class.md)  
-[Operadores de \<regex>](../standard-library/regex-operators.md)  
-[regex_token_iterator (Clase)](../standard-library/regex-token-iterator-class.md)  
-[regex_traits (Clase)](../standard-library/regex-traits-class.md)  
-[Definiciones de tipo \<regex>](../standard-library/regex-typedefs.md)  
+[regex_constants Class](../standard-library/regex-constants-class.md)  
+[regex_error Class](../standard-library/regex-error-class.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
+[\<regex> operators](../standard-library/regex-operators.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
+[regex_traits Class](../standard-library/regex-traits-class.md)  
+[\<regex> typedefs](../standard-library/regex-typedefs.md)  
 
 

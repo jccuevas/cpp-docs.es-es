@@ -1,5 +1,5 @@
 ---
-title: Clase is_member_pointer | Microsoft Docs
+title: is_member_pointer Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_member_pointer
 - type_traits/std::is_member_pointer
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 3f6040bd57b98bb79c2e041a8f6f1ce39b90f7eb
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8f0f45b05e550bf0a44e915871f3d6b7453520df
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ismemberpointer-class"></a>is_member_pointer (Clase)
-Comprueba si el tipo es un puntero a un miembro.  
+# <a name="ismemberpointer-class"></a>is_member_pointer Class
+Tests if type is a pointer to member.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_member_pointer;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Tipo que se va a consultar.  
+ The type to query.  
   
-## <a name="remarks"></a>Comentarios  
- Una instancia del predicado de tipo es true si el tipo `Ty` es un puntero a una función miembro o un puntero a un objeto miembro, o bien un formulario `cv-qualified` de uno de ellos. En caso contrario, es false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a pointer to member function or a pointer to member object, or a `cv-qualified` form of one of them, otherwise it holds false.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_member_pointer.cpp   
@@ -103,14 +102,14 @@ is_member_pointer<int trivial::*> == true
 is_member_pointer<int (functional::*)()> == true  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espacio de nombres:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Clase is_member_function_pointer](../standard-library/is-member-function-pointer-class.md)   
- [Clase is_member_object_pointer](../standard-library/is-member-object-pointer-class.md)   
- [Clase is_pointer](../standard-library/is-pointer-class.md)
+ [is_member_function_pointer Class](../standard-library/is-member-function-pointer-class.md)   
+ [is_member_object_pointer Class](../standard-library/is-member-object-pointer-class.md)   
+ [is_pointer Class](../standard-library/is-pointer-class.md)
 

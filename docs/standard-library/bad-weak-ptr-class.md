@@ -1,5 +1,5 @@
 ---
-title: bad_weak_ptr (Clase) | Microsoft Docs
+title: bad_weak_ptr Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- bad_weak_ptr
 - memory/std::bad_weak_ptr
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: b6d5102096f4d7ff27ceaf08abb7aa318273c6af
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ea321c5fe61ef2e2bbec82e3bcbe366bbe619da2
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="badweakptr-class"></a>bad_weak_ptr (Clase)
-Informa de una excepción weak_ptr errónea.  
+# <a name="badweakptr-class"></a>bad_weak_ptr Class
+Reports bad weak_ptr exception.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class bad_weak_ptr : public std::exception 
@@ -56,10 +55,10 @@ public:
  };  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- La clase describe una excepción que se puede iniciar desde el constructor [shared_ptr (Clase)](../standard-library/shared-ptr-class.md) que toma un argumento de tipo [weak_ptr (Clase)](../standard-library/weak-ptr-class.md). La función miembro `what` devuelve `"bad_weak_ptr"`.  
+## <a name="remarks"></a>Remarks  
+ The class describes an exception that can be thrown from the [shared_ptr Class](../standard-library/shared-ptr-class.md) constructor that takes an argument of type [weak_ptr Class](../standard-library/weak-ptr-class.md). The member function `what` returns `"bad_weak_ptr"`.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__bad_weak_ptr.cpp   
@@ -97,11 +96,11 @@ int main()
 bad weak pointer  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<memory>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
   
- **Espacio de nombres:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vea también  
- [weak_ptr (Clase)](../standard-library/weak-ptr-class.md)
+## <a name="see-also"></a>See Also  
+ [weak_ptr Class](../standard-library/weak-ptr-class.md)
 

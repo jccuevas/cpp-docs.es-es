@@ -1,5 +1,5 @@
 ---
-title: Clase is_constructible | Microsoft Docs
+title: is_constructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_constructible
 - type_traits/std::is_constructible
 dev_langs:
 - C++
@@ -35,38 +34,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6c4a5d8e24f22a79a4bf442ab690f1b1dbdca580
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ff196d901e749bcd1a2b2813de409237bcbda672
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isconstructible-class"></a>clase is_constructible
-Comprueba si un tipo se puede construir cuando se usan los tipos de argumento especificados.  
+# <a name="isconstructible-class"></a>is_constructible Class
+Tests whether a type is constructible when the specified argument types are used.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T, class... Args>  
 struct is_constructible;
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Tipo que se va a consultar.  
+ The type to query.  
   
  `Args`  
- Tipos de argumento que deben coincidir en un constructor de `T`.  
+ The argument types to match in a constructor of `T`.  
   
-## <a name="remarks"></a>Comentarios  
- Una instancia del predicado de tipo es true si el tipo `T` se puede construir mediante los tipos de argumento de `Args`. En caso contrario, es false. El tipo `T` se puede construir si la definición de variable `T t(std::declval<Args>()...);` tiene el formato correcto. Tanto `T` como todos los tipos de `Args` deben ser tipos completos, `void` o matrices de límite desconocido.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `T` is constructible by using the argument types in `Args`, otherwise it holds false. Type `T` is constructible if the variable definition `T t(std::declval<Args>()...);` is well-formed. Both `T` and all the types in `Args` must be complete types, `void`, or arrays of unknown bound.  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espacio de nombres:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<numeric>
-- std.<numeric>
-- <numeric>
+- std::<numeric>", "<numeric>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,40 +33,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 1af103aee129eee8176d6c34754521f7c2381da7
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 26ea2c13bc6cfdc9124d968c97913f0aa80bf6d5
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltnumericgt"></a>&lt;numeric&gt;
-Define las funciones de plantilla contenedor que realizan algoritmos para el procesamiento numérico.  
+Defines container template functions that perform algorithms for numerical processing.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <numeric>  
 ```  
   
-## <a name="remarks"></a>Comentarios  
-Los algoritmos numéricos se parecen a los algoritmos de la biblioteca estándar de C++ en [\<algorithm>](algorithm.md), y pueden funcionar en una variedad de estructuras de datos. Entre ellas se incluyen clases contenedoras de biblioteca estándar, por ejemplo [vector](../standard-library/vector-class.md) y [list](../standard-library/list-class.md), y estructuras de datos y matrices de elementos definidas por el programa que cumplen los requisitos de un algoritmo determinado. Para lograr este nivel de generalidad, los algoritmos acceden a los elementos de un contenedor y los recorren indirectamente mediante iteradores. Los algoritmos procesan los intervalos de iteradores que se suelen especificar por sus posiciones inicial o final. Los intervalos a los que se hace referencia deben ser válidos en el sentido de que todos los punteros de los intervalos se deben poder desreferenciar y, dentro de las secuencias de cada intervalo, se debe poder llegar a la última posición desde la primera mediante incrementos.  
+## <a name="remarks"></a>Remarks  
+The numeric algorithms resemble the C++ Standard Library algorithms in [\<algorithm>](algorithm.md), and can operate on a variety of data structures. These include standard library container classes—for example, [vector](../standard-library/vector-class.md) and [list](../standard-library/list-class.md), and program-defined data structures and arrays of elements that satisfy the requirements of a particular algorithm. The algorithms achieve this level of generality by accessing and traversing the elements of a container indirectly through iterators. The algorithms process iterator ranges that are typically specified by their beginning or ending positions. The ranges referred to must be valid in the sense that all pointers in the ranges must be dereferenceable and within the sequences of each range, and the last position must be reachable from the first by means of incrementation.  
   
- Los algoritmos extienden las acciones que admiten las operaciones y las funciones miembro de cada uno de los contenedores de la biblioteca estándar de C++ y permiten la interacción con diferentes tipos de objetos contenedores al mismo tiempo.  
+ The algorithms extend the actions that are supported by the operations and member functions of each of the C++ Standard Library containers and enable interaction with different types of container objects at the same time.  
   
-### <a name="functions"></a>Funciones  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[accumulate](../standard-library/numeric-functions.md#accumulate)|Calcula la suma de todos los elementos de un intervalo especificado, incluido algún valor inicial, mediante el cálculo de sumas parciales sucesivas, o calcula el resultado de los resultados parciales sucesivos obtenidos mediante el uso de una operación binaria determinada en lugar de la operación de suma.|  
-|[adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)|Calcula las diferencias sucesivas entre cada elemento y su predecesor en un intervalo de entrada y pone los resultados en un intervalo de destino, o calcula el resultado de un procedimiento generalizado donde la operación de diferencia se reemplaza por otra operación binaria especificada.|  
-|[inner_product](../standard-library/numeric-functions.md#inner_product)|Calcula la suma del producto de elementos de dos intervalos y la agrega a un valor inicial especificado, o calcula el resultado de un procedimiento general donde las operaciones de suma y de producto se reemplazan con otras operaciones binarias especificadas.|  
-|[iota](../standard-library/numeric-functions.md#iota)|Almacena un valor inicial, empezando por el primer elemento y rellenando con incrementos sucesivos del valor (`value++`) en cada uno de los elementos del intervalo `[first, last)`.|  
-|[partial_sum](../standard-library/numeric-functions.md#partial_sum)|Calcula una serie de sumas en un intervalo de entrada desde el primer elemento hasta el elemento *i*-ésimo y almacena el resultado de cada suma en el elemento *i*-ésimo de un intervalo de destino, o calcula el resultado de un procedimiento generalizado donde la operación de suma se reemplaza por otra operación binaria especificada.|  
+|[accumulate](../standard-library/numeric-functions.md#accumulate)|Computes the sum of all elements in a specified range—including some initial value—by computing successive partial sums, or computes the result of successive partial results that are obtained by using a specified binary operation instead of the sum operation.|  
+|[adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)|Computes the successive differences between each element and its predecessor in an input range and outputs the results to a destination range, or computes the result of a generalized procedure where the difference operation is replaced by another specified binary operation.|  
+|[inner_product](../standard-library/numeric-functions.md#inner_product)|Computes the sum of the element-wise product of two ranges and adds it to a specified initial value, or computes the result of a generalized procedure where the sum and product operations are replaced by other specified binary operations.|  
+|[iota](../standard-library/numeric-functions.md#iota)|Stores a starting value, beginning with the first element and filling with successive increments of the value (`value++`) in each of the elements in the interval `[first, last)`.|  
+|[partial_sum](../standard-library/numeric-functions.md#partial_sum)|Computes a series of sums in an input range from the first element through the *i*th element and stores the result of each sum in the *i*th element of a destination range, or computes the result of a generalized procedure where the sum operation is replaced by another specified binary operation.|  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
- [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

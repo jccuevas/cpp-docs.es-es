@@ -1,5 +1,5 @@
 ---
-title: remove_cv (Clase) | Microsoft Docs
+title: remove_cv Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- remove_cv
 - type_traits/std::remove_cv
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: e8e219b296e352fb5ad2f6e470126bfd2b773355
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 89ce7d66adfa283c711db1563fe5e72b7ba150a8
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="removecv-class"></a>remove_cv (Clase)
-Crea un tipo no cons/volatile a partir de un tipo.  
+# <a name="removecv-class"></a>remove_cv Class
+Makes non const/volatile type from type.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -55,14 +54,14 @@ template <class T>
 using remove_cv_t = typename remove_cv<T>::type;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Tipo que se va a modificar.  
+ The type to modify.  
   
-## <a name="remarks"></a>Comentarios  
- Una instancia de `remove_cv<T>` contiene un tipo modificado que es `T1` cuando `T` tiene la forma `const T1`, `volatile T1` o `const volatile T1`; de lo contrario, es `T`.  
+## <a name="remarks"></a>Remarks  
+ An instance of `remove_cv<T>` holds a modified-type that is `T1` when `T` is of the form `const T1`, `volatile T1`, or `const volatile T1`, otherwise `T`.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -84,13 +83,13 @@ int main()
 remove_cv_t<const volatile int> == int  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espacio de nombres:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [remove_const (Clase)](../standard-library/remove-const-class.md)   
- [remove_volatile (Clase)](../standard-library/remove-volatile-class.md)
+ [remove_const Class](../standard-library/remove-const-class.md)   
+ [remove_volatile Class](../standard-library/remove-volatile-class.md)
 

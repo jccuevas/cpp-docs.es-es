@@ -1,29 +1,33 @@
 ---
-title: '&lt;scoped_allocator&gt; (operadores) | Microsoft Docs'
+title: '&lt;scoped_allocator&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- scoped_allocator/std::operator!=
+- scoped_allocator/std::operator==
+dev_langs:
+- C++
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: d4602aa94b41a278edaff72f4e7bce6a6ea53407
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: af5874764e574a8c7f9b4812448914859e376b2b
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltscopedallocatorgt-operators"></a>&lt;scoped_allocator&gt; (operadores)
+# <a name="ltscopedallocatorgt-operators"></a>&lt;scoped_allocator&gt; operators
 |||  
 |-|-|  
 |[operator!=](#op_neq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- Comprueba si dos objetos `scoped_allocator_adaptor` no son iguales.  
+ Tests two `scoped_allocator_adaptor` objects for inequality.  
   
 ```cpp  
 template <class Outer, class... Inner>  
@@ -32,18 +36,18 @@ bool operator!=(
     const scoped_allocator_adaptor<Outer, Inner...>& right) noexcept;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Objeto `scoped_allocator_adaptor` izquierdo.  
+ The left `scoped_allocator_adaptor` object.  
   
  `right`  
- Objeto `scoped_allocator_adaptor` derecho.  
+ The right `scoped_allocator_adaptor` object.  
   
-### <a name="return-value"></a>Valor devuelto  
+### <a name="return-value"></a>Return Value  
  `!(left == right)`  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Comprueba si dos objetos `scoped_allocator_adaptor` son iguales.  
+ Tests two `scoped_allocator_adaptor` objects for equality.  
   
 ```cpp  
 template <class Outer, class... Inner>  
@@ -52,17 +56,17 @@ bool operator==(
     const scoped_allocator_adaptor<Outer, Inner...>& right) noexcept;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Objeto `scoped_allocator_adaptor` izquierdo.  
+ The left `scoped_allocator_adaptor` object.  
   
  `right`  
- Objeto `scoped_allocator_adaptor` derecho.  
+ The right `scoped_allocator_adaptor` object.  
   
-### <a name="return-value"></a>Valor devuelto  
+### <a name="return-value"></a>Return Value  
  `left.outer_allocator() == right.outer_allocator() && left.inner_allocator() == right.inner_allocator()`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [<scoped_allocator>](../standard-library/scoped-allocator.md)
 
 

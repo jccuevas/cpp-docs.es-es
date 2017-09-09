@@ -1,15 +1,14 @@
 ---
-title: greater_equal (Struct) | Microsoft Docs
+title: greater_equal Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- greater_equal
 - xfunctional/std::greater_equal
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 56fd730319f7523915fcdbb71d9cd97c98fda5b0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: fe09161461c53bd174bc9f21e82c14fc7ea3d910
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="greaterequal-struct"></a>greater_equal (Struct)
-Predicado binario que realiza la operación mayor o igual que (`operator>=`) sobre sus argumentos.  
+# <a name="greaterequal-struct"></a>greater_equal Struct
+A binary predicate that performs the greater-than-or-equal-to operation ( `operator>=`) on its arguments.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -64,23 +64,23 @@ struct greater_equal<void>
  };
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- Cualquier tipo que admite un `operator>=` que toma operandos de los tipos especificados o deducidos.  
+ Any type that supports an `operator>=` that takes operands of the specified or inferred types.  
   
  `Left`  
- Operando izquierdo de la operación mayor o igual que. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.  
+ The left operand of the greater-than-or-equal-to operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- Operando derecho de la operación mayor o igual que. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.  
+ The right operand of the greater-than-or-equal-to operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>Valor devuelto  
- Resultado de `Left``>=``Right`. La plantilla especializada realiza el reenvío directo del resultado, que tiene el tipo devuelto por `operator>=`.  
+## <a name="return-value"></a>Return Value  
+ The result of `Left >= Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator>=`.  
   
-## <a name="remarks"></a>Comentarios  
- El predicado binario `greater_equal`< `Type`> proporciona una ordenación débil estricta de un conjunto de valores de elementos de tipo `Type` en clases de equivalencia, si y solo si este tipo satisface los requisitos matemáticos estándar para que se pueda ordenar de esa forma. Las especializaciones para cualquier tipo de puntero producen una ordenación total de los elementos, en la que todos los elementos de valores distintos están ordenados unos con respecto a otros.  
+## <a name="remarks"></a>Remarks  
+ The binary predicate `greater_equal`< `Type`> provides a strict weak ordering of a set of element values of type `Type` into equivalence classes, if and only if this type satisfies the standard mathematical requirements for being so ordered. The specializations for any pointer type yield a total ordering of elements, in that all elements of distinct values are ordered with respect to each other.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_greater_equal.cpp  
@@ -128,7 +128,7 @@ int main( )
 }  
 ```  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Output  
   
 ```
 Original vector v1 = (6262 6262 41 18467 6334 26500 19169)
@@ -136,13 +136,13 @@ Sorted vector v1 = (41 6262 6262 6334 18467 19169 26500)
 Resorted vector v1 = (26500 19169 18467 6334 6262 6262 41)
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **Espacio de nombres:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- iomanip/std::<iomanip>
-- std::<iomanip>
-- <iomanip>
-- std.<iomanip>
+- iomanip/std::<iomanip>", "std::<iomanip>", "<iomanip>", "std.<iomanip>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,47 +33,47 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 753e2a5bab18a3643456504bda2ab84df530754e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ab8205775eddc79fcf8e644e1a903eaf794d005e
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
-Incluya el encabezado estándar `iostreams` `<iomanip>` para definir varios manipuladores que toman cada uno de ellos un solo argumento.  
+Include the `iostreams` standard header `<iomanip>` to define several manipulators that each take a single argument.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <iomanip>  
   
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Cada uno de estos manipuladores devuelve un tipo sin especificar, denominado de **T1** a **T10**, que sobrecarga `basic_istream`\<**Elem**, **Tr**>`::`[operator>>](../standard-library/istream-operators.md#op_gt_gt) y `basic_ostream`\<**Elem**, **Tr**>`::`[operator<<](../standard-library/ostream-operators.md#op_lt_lt).  
+## <a name="remarks"></a>Remarks  
+ Each of these manipulators returns an unspecified type, called **T1** through **T10**, that overloads both `basic_istream`\<**Elem**, **Tr**>`::`[operator>>](../standard-library/istream-operators.md#op_gt_gt) and `basic_ostream`\<**Elem**, **Tr**>`::`[operator<<](../standard-library/ostream-operators.md#op_lt_lt).  
   
-### <a name="manipulators"></a>Manipuladores  
+### <a name="manipulators"></a>Manipulators  
   
 |||  
 |-|-|  
-|[get_money](../standard-library/iomanip-functions.md#iomanip_get_money)|Obtiene un importe monetario, opcionalmente en formato internacional.|  
-|[get_time](../standard-library/iomanip-functions.md#iomanip_get_time)|Obtiene una hora en una estructura de hora con un formato especificado.|  
-|[put_money](../standard-library/iomanip-functions.md#iomanip_put_money)|Proporciona un importe monetario, opcionalmente en formato internacional.|  
-|[put_time](../standard-library/iomanip-functions.md#iomanip_put_time)|Proporciona una hora en una estructura de hora y una cadena de formato que se va a usar.|  
-|[quoted](../standard-library/iomanip-functions.md#quoted)|Permite realizar un práctico recorrido de ida y vuelta de cadenas con operadores de inserción y extracción.|  
-|[resetiosflags](../standard-library/iomanip-functions.md#resetiosflags)|Borra las marcas especificadas.|  
-|[setbase](../standard-library/iomanip-functions.md#setbase)|Establece la base de los enteros.|  
-|[setfill](../standard-library/iomanip-functions.md#setfill)|Establece el carácter que se usará para rellenar los espacios en una presentación justificada a la derecha.|  
-|[setiosflags](../standard-library/iomanip-functions.md#setiosflags)|Establece las marcas especificadas.|  
-|[setprecision](../standard-library/iomanip-functions.md#setprecision)|Establece la precisión de los valores de punto flotante.|  
-|[setw](../standard-library/iomanip-functions.md#setw)|Especifica el ancho del campo de presentación.|  
+|[get_money](../standard-library/iomanip-functions.md#iomanip_get_money)|Obtains a monetary amount, optionally in international format.|  
+|[get_time](../standard-library/iomanip-functions.md#iomanip_get_time)|Obtains a time in a time structure by using a specified format.|  
+|[put_money](../standard-library/iomanip-functions.md#iomanip_put_money)|Provides a monetary amount, optionally in international format.|  
+|[put_time](../standard-library/iomanip-functions.md#iomanip_put_time)|Provides a time in a time structure and a format string to use.|  
+|[quoted](../standard-library/iomanip-functions.md#quoted)|Enables convenient round-tripping of strings with insertion and extraction operators.|  
+|[resetiosflags](../standard-library/iomanip-functions.md#resetiosflags)|Clears the specified flags.|  
+|[setbase](../standard-library/iomanip-functions.md#setbase)|Set base for integers.|  
+|[setfill](../standard-library/iomanip-functions.md#setfill)|Sets the character that will be used to fill spaces in a right-justified display.|  
+|[setiosflags](../standard-library/iomanip-functions.md#setiosflags)|Sets the specified flags.|  
+|[setprecision](../standard-library/iomanip-functions.md#setprecision)|Sets the precision for floating-point values.|  
+|[setw](../standard-library/iomanip-functions.md#setw)|Specifies the width of the display field.|  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
- [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Programación con iostream](../standard-library/iostream-programming.md)   
- [Convenciones de iostreams](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 
 

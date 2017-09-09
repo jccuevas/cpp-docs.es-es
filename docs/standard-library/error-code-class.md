@@ -1,5 +1,5 @@
 ---
-title: error_code (Clase) | Microsoft Docs
+title: error_code Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- error_code
 - system_error/std::error_code
 - system_error/std::error_code::value_type
 - system_error/std::error_code::assign
@@ -21,7 +20,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- error_code class
+- std::error_code
+- std::error_code::value_type
+- std::error_code::assign
+- std::error_code::category
+- std::error_code::clear
+- std::error_code::default_error_condition
+- std::error_code::message
+- 
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
 caps.latest.revision: 17
 author: corob-msft
@@ -41,113 +47,113 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 82c70317383fe096c56b0d5b79bab24175d2872a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 142139958fc244f896fc6fa9e66871392ed2fbc6
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="errorcode-class"></a>error_code (Clase)
-Representa los errores de sistema de bajo nivel que son específicos de la implementación.  
+# <a name="errorcode-class"></a>error_code Class
+Represents low-level system errors that are implementation-specific.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```
 class error_code;
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Un objeto de tipo de clase `error_code` almacena un valor de código de error y un puntero a un objeto que representa una [category](../standard-library/error-category-class.md) de códigos de error que describen errores de sistema de bajo nivel notificados.  
+## <a name="remarks"></a>Remarks  
+ An object of type `error_code` class stores an error code value and a pointer to an object that represents a [category](../standard-library/error-category-class.md) of error codes that describe reported low-level system errors.  
   
-### <a name="constructors"></a>Constructores  
-  
-|||  
-|-|-|  
-|[error_code](#error_code)|Construye un objeto de tipo `error_code`.|  
-  
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[value_type](#value_type)|Tipo que representa el valor del código de error almacenado.|  
+|[error_code](#error_code)|Constructs an object of type `error_code`.|  
   
-### <a name="member-functions"></a>Funciones miembro  
-  
-|||  
-|-|-|  
-|[assign](#assign)|Asigna una categoría y un valor de código de error a un código de error.|  
-|[category](#category)|Devuelve la categoría del error.|  
-|[clear](#clear)|Borra la categoría y el valor del código de error.|  
-|[default_error_condition](#default_error_condition)|Devuelve la condición de error predeterminada.|  
-|[message](#message)|Devuelve el nombre del código de error.|  
-  
-### <a name="operators"></a>Operadores  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[operator==](#op_eq_eq)|Comprueba la igualdad entre objetos `error_code`.|  
-|[operator!=](#op_neq)|Comprueba la desigualdad entre objetos `error_code`.|  
-|[operator<](#op_lt)|Comprueba si el objeto `error_code` es menor que el objeto `error_code` pasado para la comparación.|  
-|[operator=](#op_eq)|Asigna un nuevo valor de enumeración al objeto `error_code`.|  
-|[operator bool](#op_bool)|Convierte una variable de tipo `error_code`.|  
+|[value_type](#value_type)|A type that represents the stored error code value.|  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<system_error>  
+### <a name="member-functions"></a>Member Functions  
   
- **Espacio de nombres:** std  
+|||  
+|-|-|  
+|[assign](#assign)|Assigns an error code value and category to an error code.|  
+|[category](#category)|Returns the error category.|  
+|[clear](#clear)|Clears the error code value and category.|  
+|[default_error_condition](#default_error_condition)|Returns the default error condition.|  
+|[message](#message)|Returns the name of the error code.|  
+  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[operator==](#op_eq_eq)|Tests for equality between `error_code` objects.|  
+|[operator!=](#op_neq)|Tests for inequality between `error_code` objects.|  
+|[operator<](#op_lt)|Tests if the `error_code` object is less than the `error_code` object passed in for comparison.|  
+|[operator=](#op_eq)|Assigns a new enumeration value to the `error_code` object.|  
+|[operator bool](#op_bool)|Casts a variable of type `error_code`.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<system_error>  
+  
+ **Namespace:** std  
   
 ##  <a name="assign"></a>  error_code::assign  
- Asigna una categoría y un valor de código de error a un código de error.  
+ Assigns an error code value and category to an error code.  
   
 ```
 void assign(value_type val, const error_category& _Cat);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`val`|El valor del código de error que se almacenará en la `error_code`.|  
-|`_Cat`|La categoría del error que se almacenará en el `error_code`.|  
+|`val`|The error code value to store in the `error_code`.|  
+|`_Cat`|The error category to store in the `error_code`.|  
   
-### <a name="remarks"></a>Comentarios  
- La función miembro almacena `val` como el valor del código de error y un puntero a `_Cat`.  
+### <a name="remarks"></a>Remarks  
+ The member function stores `val` as the error code value and a pointer to `_Cat`.  
   
 ##  <a name="category"></a>  error_code::category  
- Devuelve la categoría del error.  
+ Returns the error category.  
   
 ```
 const error_category& category() const;
 ```  
   
-### <a name="remarks"></a>Comentarios  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="clear"></a>  error_code::clear  
- Borra la categoría y el valor del código de error.  
+ Clears the error code value and category.  
   
 ```
 clear();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- La función miembro almacena un valor de código de error cero y un puntero al objeto [generic_category](../standard-library/system-error-functions.md#generic_category).  
+### <a name="remarks"></a>Remarks  
+ The member function stores a zero error code value and a pointer to the [generic_category](../standard-library/system-error-functions.md#generic_category) object.  
   
 ##  <a name="default_error_condition"></a>  error_code::default_error_condition  
- Devuelve la condición de error predeterminada.  
+ Returns the default error condition.  
   
 ```
 error_condition default_error_condition() const;
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- La [error_condition](../standard-library/error-condition-class.md) especificada por [default_error_condition](../standard-library/error-category-class.md#default_error_condition).  
+### <a name="return-value"></a>Return Value  
+ The [error_condition](../standard-library/error-condition-class.md) specified by [default_error_condition](../standard-library/error-category-class.md#default_error_condition).  
   
-### <a name="remarks"></a>Comentarios  
- Esta función miembro devuelve `category().default_error_condition(value())`.  
+### <a name="remarks"></a>Remarks  
+ This member function returns `category().default_error_condition(value())`.  
   
 ##  <a name="error_code"></a>  error_code::error_code  
- Construye un objeto de tipo `error_code`.  
+ Constructs an object of type `error_code`.  
   
 ```
 error_code();
@@ -160,93 +166,93 @@ error_code(_Enum _Errcode,
     error_code>::type* = 0);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`val`|El valor del código de error que se almacenará en la `error_code`.|  
-|`_Cat`|La categoría del error que se almacenará en la `error_code`.|  
-|`_Errcode`|El valor de enumeración que se va a almacenar en la `error_code`.|  
+|`val`|The error code value to store in the `error_code`.|  
+|`_Cat`|The error category to store in the `error_code`.|  
+|`_Errcode`|The enumeration value to store in the `error_code`.|  
   
-### <a name="remarks"></a>Comentarios  
- El primer constructor almacena un valor de código de error cero y un puntero a la [generic_category](../standard-library/system-error-functions.md#generic_category).  
+### <a name="remarks"></a>Remarks  
+ The first constructor stores a zero error code value and a pointer to the [generic_category](../standard-library/system-error-functions.md#generic_category).  
   
- El segundo constructor almacena `val` como el valor de código de error y un puntero a la [error_category](http://msdn.microsoft.com/en-us/6fe57a15-63a1-4e79-8af4-6738e43e19c8).  
+ The second constructor stores `val` as the error code value and a pointer to [error_category](http://msdn.microsoft.com/en-us/6fe57a15-63a1-4e79-8af4-6738e43e19c8).  
   
- El tercer constructor almacena `(value_type)_Errcode` como el valor de código de error y un puntero a la [generic_category](../standard-library/system-error-functions.md#generic_category).  
+ The third constructor stores `(value_type)_Errcode` as the error code value and a pointer to the [generic_category](../standard-library/system-error-functions.md#generic_category).  
   
 ##  <a name="message"></a>  error_code::message  
- Devuelve el nombre del código de error.  
+ Returns the name of the error code.  
   
 ```
 string message() const;
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Una `string` que representa el nombre del código de error.  
+### <a name="return-value"></a>Return Value  
+ A `string` representing the name of the error code.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función miembro devuelve `category().message(value())`.  
+### <a name="remarks"></a>Remarks  
+ This member function returns `category().message(value())`.  
   
 ##  <a name="op_eq_eq"></a>  error_code::operator==  
- Comprueba la igualdad entre objetos `error_code`.  
+ Tests for equality between `error_code` objects.  
   
 ```
 bool operator==(const error_code& right) const;
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|El objeto cuya igualdad se va a comprobar.|  
+|`right`|The object to be tested for equality.|  
   
-### <a name="return-value"></a>Valor devuelto  
- **True** si los objetos son iguales; **False** si no lo son.  
+### <a name="return-value"></a>Return Value  
+ **true** if the objects are equal; **false** if objects are not equal.  
   
-### <a name="remarks"></a>Comentarios  
- El operador miembro devuelve `category() == right.category() && value == right.value()`.  
+### <a name="remarks"></a>Remarks  
+ The member operator returns `category() == right.category() && value == right.value()`.  
   
 ##  <a name="op_neq"></a>  error_code::operator!=  
- Comprueba la desigualdad entre objetos `error_code`.  
+ Tests for inequality between `error_code` objects.  
   
 ```
 bool operator!=(const error_code& right) const;
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|El objeto cuya desigualdad se va a comprobar.|  
+|`right`|The object to be tested for inequality.|  
   
-### <a name="return-value"></a>Valor devuelto  
- **True** si el objeto `error_code` no es igual que el objeto `error_code` pasado en `right`. De lo contrario, **False**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the `error_code` object is not equal to the `error_code` object passed in `right`; otherwise **false**.  
   
-### <a name="remarks"></a>Comentarios  
- El operador miembro devuelve `!(*this == right)`.  
+### <a name="remarks"></a>Remarks  
+ The member operator returns `!(*this == right)`.  
   
 ##  <a name="op_lt"></a>  error_code::operator&lt;  
- Comprueba si el objeto [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) es menor que el objeto `error_code` pasado para la comparación.  
+ Tests if the [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) object is less than the `error_code` object passed in for comparison.  
   
 ```
 bool operator<(const error_code& right) const;
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|El objeto error_code que se va a comparar.|  
+|`right`|The error_code object to be compared.|  
   
-### <a name="return-value"></a>Valor devuelto  
- **True** si el objeto `error_code` es menor que el objeto `error_code` pasado para la comparación; en caso contrario, **False**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the `error_code` object is less than the `error_code` object passed in for comparison; Otherwise, **false**.  
   
-### <a name="remarks"></a>Comentarios  
- El operador miembro devuelve `category() < right.category() || category() == right.category() && value < right.value()`.  
+### <a name="remarks"></a>Remarks  
+ The member operator returns `category() < right.category() || category() == right.category() && value < right.value()`.  
   
 ##  <a name="op_eq"></a>  error_code::operator=  
- Asigna un nuevo valor de enumeración al objeto [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31).  
+ Assigns a new enumeration value to the [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) object.  
   
 ```
 template <class _Enum>
@@ -255,55 +261,55 @@ typename enable_if<is_error_code_enum<_Enum>::value,
  operator=(_Enum _Errcode);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Errcode`|El valor de enumeración que se asignará al objeto `error_code`.|  
+|`_Errcode`|The enumeration value to assign to the `error_code` object.|  
   
-### <a name="return-value"></a>Valor devuelto  
- Referencia al objeto `error_code` al que la función miembro está asignando el nuevo valor de enumeración.  
+### <a name="return-value"></a>Return Value  
+ A reference to the `error_code` object that is being assigned the new enumeration value by the member function.  
   
-### <a name="remarks"></a>Comentarios  
- El operador miembro almacena `(value_type)_Errcode` como el valor de código de error y un puntero a la [generic_category](../standard-library/system-error-functions.md#generic_category). Devuelve `*this`.  
+### <a name="remarks"></a>Remarks  
+ The member operator stores `(value_type)_Errcode` as the error code value and a pointer to the [generic_category](../standard-library/system-error-functions.md#generic_category). It returns `*this`.  
   
 ##  <a name="op_bool"></a>  error_code::operator bool  
- Convierte una variable de tipo `error_code`.  
+ Casts a variable of type `error_code`.  
   
 ```
 explicit operator bool() const;
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Valor booleano del objeto `error_code`.  
+### <a name="return-value"></a>Return Value  
+ The Boolean value of the `error_code` object.  
   
-### <a name="remarks"></a>Comentarios  
- El operador devuelve un valor que se puede convertir en `true` solo si [value](#value) no es igual a cero. El tipo devuelto puede convertirse solo a `bool`, no a `void *` ni a cualquier otro tipo escalar conocido.  
+### <a name="remarks"></a>Remarks  
+ The operator returns a value convertible to `true` only if [value](#value) is not equal to zero. The return type is convertible only to `bool`, not to `void *` or other known scalar types.  
   
 ##  <a name="value"></a>  error_code::value  
- Devuelve el valor del código de error almacenado.  
+ Returns the stored error code value.  
   
 ```
 value_type value() const;
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- El valor del código de error almacenado de tipo [value_type](#value_type).  
+### <a name="return-value"></a>Return Value  
+ The stored error code value of type [value_type](#value_type).  
   
-### <a name="remarks"></a>Comentarios  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="value_type"></a>  error_code::value_type  
- Tipo que representa el valor del código de error almacenado.  
+ A type that represents the stored error code value.  
   
 ```
 typedef int value_type;
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Esta definición de tipo es un sinónimo de `int`.  
+### <a name="remarks"></a>Remarks  
+ This type definition is a synonym for `int`.  
   
-## <a name="see-also"></a>Vea también  
- [error_category (Clase)](../standard-library/error-category-class.md)   
+## <a name="see-also"></a>See Also  
+ [error_category Class](../standard-library/error-category-class.md)   
  [<system_error>](../standard-library/system-error.md)
 
 

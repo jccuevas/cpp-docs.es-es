@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- codecvt
-- std::<codecvt>
-- std.<codecvt>
-- <codecvt>
+- codecvt", "std::<codecvt>", "<codecvt>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,74 +33,74 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
-ms.openlocfilehash: 75f527ca1e0742a1958076b49446b257793c69a5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ebfd3f17d03d7cdb83a5ac8d25e6a1fda472cebb
 ms.contentlocale: es-es
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
-Define varias clases de plantilla que describen objetos en función de la clase de plantilla [codecvt](../standard-library/codecvt-class.md). Los objetos pueden actuar como [facetas de configuración regional](../standard-library/locale-class.md#facet_class) que controlan las conversiones entre una secuencia de valores de tipo `Elem` y una secuencia de valores de tipo `char`.  
+Defines several template classes that describe objects based on template class [codecvt](../standard-library/codecvt-class.md). These objects can serve as [locale facets](../standard-library/locale-class.md#facet_class) that control conversions between a sequence of values of type `Elem` and a sequence of values of type `char`.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <codecvt>  
   
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Las facetas de configuración regional declaradas en este encabezado convierten entre varias codificaciones de caracteres. Para los caracteres anchos (almacenados en el programa en enteros de tamaño fijo):  
+## <a name="remarks"></a>Remarks  
+ The locale facets declared in this header convert between several character encodings. For wide characters (stored within the program in fixed-size integers):  
   
--   UCS-4 es la codificación Unicode (ISO 10646) dentro del programa  
+-   UCS-4 is Unicode (ISO 10646) encoded within the program  
   
--   UCS-4 es la codificación Unicode (ISO 10646) dentro del programa como un entero de 32 bits.  
+-   UCS-4 is Unicode (ISO 10646) encoded within the program as a 32-bit integer.  
   
--   UCS-2 es la codificación Unicode dentro del programa  
+-   UCS-2 is Unicode encoded within the program  
   
--   UCS-2 es la codificación Unicode dentro del programa como un entero de 16 bits.  
+-   UCS-2 is Unicode encoded within the program as a 16-bit integer.  
   
--   UCS-16 es la codificación Unicode dentro del programa como uno  
+-   UTF-16 is Unicode encoded within the program as either one  
   
--   UCS-16 es la codificación Unicode dentro del programa como uno o dos enteros de 16 bits. (Tenga en cuenta que esto no cumple todos los requisitos de una codificación de caracteres anchos válida para el estándar de C o C++; no obstante, se usa ampliamente como tal).  
+-   UTF-16 is Unicode encoded within the program as either one or two 16-bit integers. (Note that this does not meet all the requirements of a valid wide-character encoding for Standard C or Standard C++. Nevertheless it is widely used as such.)  
   
- Para los flujos de bytes (almacenados en un archivo, transmitidos como una secuencia de bytes o almacenados en el programa en una matriz de `char`):  
+ For byte streams (stored in a file, transmitted as a byte sequence, or stored within the program in an array of `char`):  
   
--   UTF-8 es la codificación Unicode  
+-   UTF-8 is Unicode encoded  
   
--   UTF-8 es la codificación Unicode en un flujo de bytes como uno o varios bytes de ocho bits con un orden de bytes deterministas.  
+-   UTF-8 is Unicode encoded within a byte stream as one or more eight-bit bytes with a deterministic byte order.  
   
--   UTF-16LE es la codificación Unicode  
+-   UTF-16LE is Unicode encoded  
   
--   UTF-16LE es la codificación Unicode en un flujo de bytes como UTF-16 con cada entero de 16 bits presentado como dos bytes de ocho bits, el byte menos significativo en primer lugar.  
+-   UTF-16LE is Unicode encoded within a byte stream as UTF-16 with each 16-bit integer presented as two eight-bit bytes, less significant byte first.  
   
--   UTF-16BE es la codificación Unicode  
+-   UTF-16BE is Unicode encoded  
   
--   UTF-16BE es la codificación Unicode en un flujo de bytes como UTF-16 con cada entero de 16 bits presentado como dos bytes de ocho bits, el byte más significativo en primer lugar.  
+-   UTF-16BE is Unicode encoded within a byte stream as UTF-16 with each 16-bit integer presented as two eight-bit bytes, more significant byte first.  
   
-### <a name="enumerations"></a>Enumeraciones  
-  
-|||  
-|-|-|  
-|[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode)|Especifica la información de configuración de las facetas de configuración regional.|  
-  
-### <a name="classes"></a>Clases  
+### <a name="enumerations"></a>Enumerations  
   
 |||  
 |-|-|  
-|[codecvt_utf8](codecvt-utf8-class.md)|Representa una faceta de configuración regional que convierte entre caracteres anchos codificados como UCS-2 o UCS-4 y un flujo de bytes codificados como UTF-8.|  
-|[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Representa una faceta de configuración regional que convierte entre caracteres anchos codificados como UTF-16 y un flujo de bytes codificados como UTF-8.|  
-|[codecvt_utf16](codecvt-utf16-class.md)|Representa una faceta de configuración regional que convierte entre caracteres anchos codificados como UCS-2 o UCS-4 y un flujo de bytes codificados como UTF-16LE o UTF-16BE.|  
+|[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode)|Specifies configuration information for locale facets.|  
+  
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[codecvt_utf8](codecvt-utf8-class.md)|Represents a locale facet that converts between wide characters encoded as UCS-2 or UCS-4, and a byte stream encoded as UTF-8.|  
+|[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Represents a locale facet that converts between wide characters encoded as UTF-16 and a byte stream encoded as UTF-8.|  
+|[codecvt_utf16](codecvt-utf16-class.md)|Represents a locale facet that converts between wide characters encoded as UCS-2 or UCS-4 and a byte stream encoded as UTF-16LE or UTF-16BE.|  
 
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<codecvt >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<codecvt>  
   
- **Espacio de nombres:** std  
+ **Namespace:** stdt  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

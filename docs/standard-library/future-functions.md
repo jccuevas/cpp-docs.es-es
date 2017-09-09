@@ -1,5 +1,5 @@
 ---
-title: '&lt;future&gt; (Funciones) | Microsoft Docs'
+title: '&lt;future&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,21 +15,27 @@ f1_keywords:
 ms.assetid: 1e3acc1e-736a-42dc-ade2-b2fe69aa96bc
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: c542e696e0e5ddef350d40b45fe16f4c3a77882d
+helpviewer_keywords:
+- std::async [C++]
+- std::future_category [C++]
+- std::make_error_code [C++]
+- std::make_error_condition [C++]
+- std::swap [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 96c09f6b90a0c531a7dcc916512247d0fa4084b2
 ms.contentlocale: es-es
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltfuturegt-functions"></a>&lt;future&gt; (Funciones)
+# <a name="ltfuturegt-functions"></a>&lt;future&gt; functions
 ||||  
 |-|-|-|  
 |[async](#async)|[future_category](#future_category)|[make_error_code](#make_error_code)|  
 |[make_error_condition](#make_error_condition)|[swap](#swap)|  
   
 ##  <a name="async"></a>  async  
- Representa un *proveedor asincrónico*.  
+ Represents an *asynchronous provider*.  
   
 ```
 template <class Fn, class... ArgTypes>
@@ -41,75 +47,75 @@ future<typename result_of<Fn(ArgTypes...)>::type>
     async(launch policy, Fn&& fn, ArgTypes&&... args);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `policy`  
- Valor [launch](../standard-library/future-enums.md#launch).  
+ A [launch](../standard-library/future-enums.md#launch) value.  
   
-### <a name="remarks"></a>Comentarios  
- Definiciones de las abreviaturas:  
+### <a name="remarks"></a>Remarks  
+ Definitions of abbreviations:  
   
 |||  
 |-|-|  
-|*dfn*|Resultado de llamar a `decay_copy(forward<Fn>(fn))`.|  
-|*dargs*|Resultado de las llamadas `decay_copy(forward<ArgsTypes>(args...))`.|  
-|*Ty*|El tipo `result_of<Fn(ArgTypes...)>::type`.|  
+|*dfn*|The result of calling `decay_copy(forward<Fn>(fn))`.|  
+|*dargs*|The results of the calls `decay_copy(forward<ArgsTypes>(args...))`.|  
+|*Ty*|The type `result_of<Fn(ArgTypes...)>::type`.|  
   
- La primera función de plantilla devuelve `async(launch::any, fn, args...)`.  
+ The first template function returns `async(launch::any, fn, args...)`.  
   
- La segunda función devuelve un objeto `future<Ty>` cuyo *estado asincrónico asociado* contiene un resultado junto con los valores de *dfn* y *dargs* y un objeto de subproceso para administrar un subproceso de ejecución independiente.  
+ The second function returns a `future<Ty>` object whose *associated asynchronous state* holds a result together with the values of *dfn* and *dargs* and a thread object to manage a separate thread of execution.  
   
- A menos que `decay<Fn>::type` sea un tipo distinto de launch, la segunda función no participa en la resolución de sobrecarga.  
+ Unless `decay<Fn>::type` is a type other than launch, the second function does not participate in overload resolution.  
   
- Si `policy` es `launch::any`, la función puede elegir `launch::async` o `launch::deferred`. En esta implementación, la función utiliza `launch::async`.  
+ If `policy` is `launch::any`, the function might choose `launch::async` or `launch::deferred`. In this implementation, the function uses `launch::async`.  
   
- Si `policy` es `launch::async`, la función crea un subproceso que evalúa `INVOKE(dfn, dargs..., Ty)`. La función vuelve después de crear el subproceso sin esperar los resultados. Si el sistema no puede iniciar un nuevo subproceso, la función produce un [system_error](../standard-library/system-error-class.md) que tiene un código de error de `resource_unavailable_try_again`.  
+ If `policy` is `launch::async`, the function creates a thread that evaluates `INVOKE(dfn, dargs..., Ty)`. The function returns after it creates the thread without waiting for results. If the system can't start a new thread, the function throws a [system_error](../standard-library/system-error-class.md) that has an error code of `resource_unavailable_try_again`.  
   
- Si `policy` es `launch::deferred`, la función marca su estado asincrónico asociado como que contiene una *función aplazada* y vuelve. La primera llamada a cualquier función no cronometrada que espera hasta que el estado asincrónico asociado esté listo llama a la función aplazada evaluando `INVOKE(dfn, dargs..., Ty)`.  
+ If `policy` is `launch::deferred`, the function marks its associated asynchronous state as holding a *deferred function* and returns. The first call to any non-timed function that waits for the associated asynchronous state to be ready in effect calls the deferred function by evaluating `INVOKE(dfn, dargs..., Ty)`.  
   
- En todos los casos, el estado asincrónico asociado del objeto `future` no se establece en *listo* hasta que la evaluación de `INVOKE(dfn, dargs..., Ty)` no se completa, ya sea iniciando una excepción o volviendo normalmente. El resultado del estado asincrónico asociado es una excepción si se produjo alguna, o cualquier valor devuelto por la evaluación.  
+ In all cases, the associated asynchronous state of the `future` object is not set to *ready* until the evaluation of `INVOKE(dfn, dargs..., Ty)` completes, either by throwing an exception or by returning normally. The result of the associated asynchronous state is an exception if one was thrown, or any value that's returned by the evaluation.  
   
 > [!NOTE]
->  Para un `future` (o el último [shared_future](../standard-library/shared-future-class.md)) adjunto a una tarea iniciada con `std::async`, el destructor se bloquea si la tarea no se ha completado; es decir, se bloquea si este subproceso aún no ha llamado a `.get()` o `.wait()` y la tarea todavía se está ejecutando. Si un `future` obtenido de `std::async` se desplaza fuera del ámbito local, otro código que lo utilice debe saber que su destructor se puede bloquear para que el estado compartido se convierta en listo.  
+>  For a `future`—or the last [shared_future](../standard-library/shared-future-class.md)—that's attached to a task started with `std::async`, the destructor blocks if the task has not completed; that is, it blocks if this thread did not yet call `.get()` or `.wait()` and the task is still running. If a `future` obtained from `std::async` is moved outside the local scope, other code that uses it must be aware that its destructor may block for the shared state to become ready.  
   
- La pseudofunción `INVOKE` se define en [\<functional>](../standard-library/functional.md).  
+ The pseudo-function `INVOKE` is defined in [\<functional>](../standard-library/functional.md).  
   
 ##  <a name="future_category"></a>  future_category  
- Devuelve una referencia al objeto [error_category](../standard-library/error-category-class.md) que caracteriza los errores asociados a objetos `future`.  
+ Returns a reference to the [error_category](../standard-library/error-category-class.md) object that characterizes errors that are associated with `future` objects.  
   
 ```
 const error_category& future_category() noexcept;
 ```  
   
 ##  <a name="make_error_code"></a>  make_error_code  
- Crea un [error_code](../standard-library/error-code-class.md) junto con el objeto [error_category](../standard-library/error-category-class.md) que caracteriza los errores de [future](../standard-library/future-class.md).  
+ Creates an [error_code](../standard-library/error-code-class.md) together with the [error_category](../standard-library/error-category-class.md) object that characterizes [future](../standard-library/future-class.md) errors.  
   
 ```
 inline error_code make_error_code(future_errc Errno) noexcept;
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `Errno`  
- Valor [future_errc](../standard-library/future-enums.md#future_errc) que identifica el error notificado.  
+ A [future_errc](../standard-library/future-enums.md#future_errc) value that identifies the reported error.  
   
-### <a name="return-value"></a>Valor devuelto  
+### <a name="return-value"></a>Return Value  
  `error_code(static_cast<int>(Errno), future_category());`  
   
 ##  <a name="make_error_condition"></a>  make_error_condition  
- Crea una [error_condition](../standard-library/error-condition-class.md) junto con el objeto [error_category](../standard-library/error-category-class.md) que caracteriza los errores de [future](../standard-library/future-class.md).  
+ Creates an [error_condition](../standard-library/error-condition-class.md) together with the [error_category](../standard-library/error-category-class.md) object that characterizes [future](../standard-library/future-class.md) errors.  
   
 ```
 inline error_condition make_error_condition(future_errc Errno) noexcept;
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `Errno`  
- Valor [future_errc](../standard-library/future-enums.md#future_errc) que identifica el error notificado.  
+ A [future_errc](../standard-library/future-enums.md#future_errc) value that identifies the reported error.  
   
-### <a name="return-value"></a>Valor devuelto  
+### <a name="return-value"></a>Return Value  
  `error_condition(static_cast<int>(Errno), future_category());`  
   
 ##  <a name="swap"></a>  swap  
- Intercambia el *estado asincrónico asociado* de un objeto `promise` con el de otro.  
+ Exchanges the *associated asynchronous state* of one `promise` object with that of another.  
   
 ```
 template <class Ty>
@@ -119,14 +125,14 @@ template <class Ty, class... ArgTypes>
 void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& Right) noexcept;
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `Left`  
- Objeto `promise` izquierdo.  
+ The left `promise` object.  
   
  `Right`  
- Objeto `promise` derecho.  
+ The right `promise` object.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [\<future>](../standard-library/future.md)
 
 

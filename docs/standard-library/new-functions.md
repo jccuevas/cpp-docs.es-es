@@ -1,5 +1,5 @@
 ---
-title: Funciones &lt;new&gt; | Microsoft Docs
+title: '&lt;new&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,49 +12,49 @@ f1_keywords:
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 53a31f533ee777dbbcc486283034094481ab0c31
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0f796dc89314f9f6ac6da5c54f9afd16604fd1f6
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltnewgt-functions"></a>Funciones &lt;new&gt;
+# <a name="ltnewgt-functions"></a>&lt;new&gt; functions
 |||  
 |-|-|  
 |[nothrow](#nothrow)|[set_new_handler](#set_new_handler)|  
   
-##  <a name="nothrow"></a> nothrow  
- Proporciona un objeto que se usará como argumento para las versiones `nothrow` de **new** y **delete**.  
+##  <a name="nothrow"></a>  nothrow  
+ Provides an object to be used as an argument for the `nothrow` versions of **new** and **delete**.  
   
 ```  
 extern const std::nothrow_t nothrow;  
 ```  
   
-### <a name="remarks"></a>Comentarios  
- El objeto se usa como un argumento de función para que coincida con el tipo de parámetro [std::nothrow_t](../standard-library/nothrow-t-structure.md).  
+### <a name="remarks"></a>Remarks  
+ The object is used as a function argument to match the parameter type [std::nothrow_t](../standard-library/nothrow-t-structure.md).  
   
-### <a name="example"></a>Ejemplo  
-  Vea [operator new](../standard-library/new-operators.md#op_new) y [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) para obtener ejemplos de cómo se usa `std::nothrow_t` como un parámetro de función.  
+### <a name="example"></a>Example  
+  See [operator new](../standard-library/new-operators.md#op_new) and [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) for examples of how `std::nothrow_t` is used as a function parameter.  
   
-##  <a name="set_new_handler"></a> set_new_handler  
- Instala una función de usuario que se va a llamar cuando `operator new` no pueda asignar memoria.  
+##  <a name="set_new_handler"></a>  set_new_handler  
+ Installs a user function that is to be called when `operator new` fails in its attempt to allocate memory.  
   
 ```  
 new_handler set_new_handler(new_handler Pnew) throw();
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `Pnew`  
- El objeto new_handler que se va a instalar.  
+ The new_handler to be installed.  
   
-### <a name="return-value"></a>Valor devuelto  
- 0 en la primera llamada y el valor `new_handler` anterior en las llamadas posteriores.  
+### <a name="return-value"></a>Return Value  
+ 0 on the first call and the previous `new_handler` on subsequent calls.  
   
-### <a name="remarks"></a>Comentarios  
- La función almacena `Pnew` en un puntero del [controlador nuevo](../standard-library/new-typedefs.md#new_handler) estático que mantiene y, después, devuelve el valor almacenado previamente en el puntero. El controlador nuevo se usa mediante [operator new](../standard-library/new-operators.md#op_new)( **size_t**).  
+### <a name="remarks"></a>Remarks  
+ The function stores `Pnew` in a static [new handler](../standard-library/new-typedefs.md#new_handler) pointer that it maintains, then returns the value previously stored in the pointer. The new handler is used by [operator new](../standard-library/new-operators.md#op_new)( **size_t**).  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // new_set_new_handler.cpp  
@@ -117,7 +117,7 @@ The new_handler is called:
 bad allocation  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [\<new>](../standard-library/new.md)
 
 

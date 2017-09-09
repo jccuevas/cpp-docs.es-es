@@ -1,5 +1,5 @@
 ---
-title: Clase is_void | Microsoft Docs
+title: is_void Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_void
 - type_traits/std::is_void
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: ef54da10135a017fc93e7a313d00154586d8e8ec
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cbddba9ff34d9ff4220b40b679c6e8faa05fdd4b
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isvoid-class"></a>is_void (Clase)
-Comprueba si el tipo es void.  
+# <a name="isvoid-class"></a>is_void Class
+Tests whether the type is void.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
 struct is_void;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Tipo que se va a consultar.  
+ The type to query.  
   
-## <a name="remarks"></a>Comentarios  
- Una instancia del predicado de tipo es true si el tipo `T` es `void` o un formulario de tipo cv-qualified (const, volatile, const volatile) de `void`. En caso contrario, es false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `T` is `void` or a cv-qualified form of `void`, otherwise it holds false.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_void.cpp   
@@ -92,12 +91,12 @@ is_void<void()> == false
 is_void<void> == true  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espacio de nombres:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 
