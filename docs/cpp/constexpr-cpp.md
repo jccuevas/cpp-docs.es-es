@@ -1,65 +1,90 @@
 ---
-title: "constexpr (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "constexpr"
-  - "constexpr_cpp"
-dev_langs: 
-  - "C++"
+title: constexpr (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- constexpr
+- constexpr_cpp
+dev_langs:
+- C++
 ms.assetid: c6458ccb-51c6-4a16-aa61-f69e6f4e04f7
 caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# constexpr (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 28ca16343632b720a990c2753d9f70158081e974
+ms.contentlocale: es-es
+ms.lasthandoff: 09/11/2017
 
-La palabra clave `constexpr` se introdujo en C\+\+11 y se mejoró en C\+\+14.  Significa *expresión constante*.  Al igual que `const`, se puede aplicar a variables para que se genere un error del compilador si cualquier código intenta modificar el valor.  A diferencia de `const`, `constexpr` también se puede aplicar a los constructores de clase y funciones.  `constexpr` indica que el valor, o el valor devuelto, es una constante y, si es posible, se calculará en tiempo de compilación.  Un valor entero `constexpr` se puede utilizar donde se requiera un entero const, como es el caso de las declaraciones de matrices y los argumentos de plantillas.  Y si un valor se puede calcular en tiempo de compilación en lugar de en tiempo de ejecución, puede ayudar a su programa a ejecutarse más rápidamente y a utilizar menos memoria.  
+---
+# <a name="constexpr-c"></a>constexpr (C++)
+The keyword `constexpr` was introduced in C++11 and improved in C++14. It means *constant expression*. Like `const`, it can be applied to variables so that a compiler error will be raised if any code attempts to modify the value. Unlike `const`, `constexpr` can also be applied to functions and class constructors. `constexpr` indicates that the value, or return value, is constant and, if possible, will be computed at compile time.  A `constexpr` integral value can be used wherever a const integer is required, such as in template arguments and array declarations. And when a value can be computed at compile time instead of run time, it can help your program run faster and use less memory.  
   
-## Sintaxis  
+## <a name="syntax"></a>Syntax  
   
-```vb  
-  
-constexpr  literal-type  identifier = constant-expression;  
-constexpr  literal-type  identifier { constant-expression };  
-constexpr literal-type identifier(params );  
+```cpp  
+constexpr  literal-type  identifier = constant-expression;
+constexpr  literal-type  identifier { constant-expression };
+constexpr literal-type identifier(params );
 constexpr ctor (params);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parameters  
  `params`  
- Uno o varios parámetros que deben ser un tipo literal \(como se muestra a continuación\) y que debe ser en sí mismo una expresión constante.  
+ One or more parameters which must be a literal type (as listed below) and must itself be a constant expression.  
   
-## Valor devuelto  
- Una función o variable constexpr debe devolver uno de los tipos literales, como se muestra a continuación.  
+## <a name="return-value"></a>Return Value  
+ A constexpr variable or function must return one of the literal types, as listed below.  
   
-## Tipos literales  
- Para limitar la complejidad del cálculo de constantes en tiempo de compilación, así como su posible impacto en el tiempo de compilación, el estándar de C\+\+14 requiere que los tipos implicados en expresiones constantes estén restringidos a tipos literales.  Un tipo literal es aquel cuyo diseño se puede determinar en tiempo de compilación.  Estos son los tipos literales:  
+## <a name="literal-types"></a>Literal types  
+ To limit the complexity of computing compile time constants, and their potential impacts of compilation time, the C++14 standard requires that the types involved in constant expressions be restricted to literal types. A literal type is one whose layout can be determined at compile time. The following are the literal types:  
   
 1.  void  
   
-2.  tipos escalares  
+2.  scalar types  
   
-3.  referencias  
+3.  references  
   
-4.  Matrices de void, tipos escalares o referencias.  
+4.  Arrays of void, scalar types or references  
   
-5.  Una clase que tiene un destructor trivial y uno o varios constructores constexpr que no son constructores de movimiento ni de copias.  Además, todos sus miembros de datos no estáticos y sus clases base deben ser tipos literales y no volátiles.  
+5.  A class that has a trivial destructor, and one or more constexpr constructors that are not move or copy constructors. Additionally, all its non-static data members and base classes must be literal types and not volatile.  
   
-## Variables constexpr  
- La principal diferencia entre las variables const y constexpr reside en que la inicialización de una variable const puede aplazarse hasta el tiempo de ejecución, mientras que una variable constexpr debe inicializarse en tiempo de compilación.  Todas las variables constexpr son const.  
+## <a name="constexpr-variables"></a>constexpr variables  
+ The primary difference between const and constexpr variables is that the initialization of a const variable can be deferred until run time whereas a constexpr variable must be initialized at compile time.  All constexpr variables are const.  
+
+-  A variable can be declared with `constexpr`, if it has a literal type and is initialized. If the initialization is performed by a constructor, the constructor must be declared as `constexpr`.  
   
-```  
+-   A reference may be declared as constexpr if the object that it references has been initialized by a constant expression and any implicit conversions that are invoked during initialization are also constant expressions.  
+  
+-   All declarations of a `constexpr` variable or function must have the `constexpr` specifier.  
+  
+ 
+  
+ 
+  
+```cpp  
 constexpr float x = 42.0;  
 constexpr float y{108};  
 constexpr float z = exp(5, 3);  
@@ -68,10 +93,39 @@ int j = 0;
 constexpr int k = j + 1; //Error! j not a constant expression  
 ```  
   
-## Funciones constexpr  
- Una función `constexpr` es aquella cuyo valor devuelto se puede calcular durante la compilación cuando el código usado lo requiere.  Una función `constexpr` debe aceptar y devolver únicamente tipos literales.  Cuando sus argumentos son valores `constexpr` y el código usado requiere el valor devuelto en tiempo de compilación, como por ejemplo para inicializar una variable `constexpr` o proporcionar un argumento de plantilla sin tipo, produce una constante en tiempo de compilación.  Cuando se llama con argumentos que no sean `constexpr` o cuando su valor no se requiere en tiempo de compilación, genera un valor en tiempo de ejecución como una función normal.  \(Este doble comportamiento le evita tener que escribir versiones `constexpr` y que no sean `constexpr` de la misma función\).  
+## <a name="constexpr-functions"></a>constexpr functions  
+ A `constexpr` function is one whose return value can be computed at compile when consuming code requires it.  When its arguments are `constexpr` values, and consuming code requires the return value at compile time, for example to initialize a `constexpr` variable or provide a non-type template argument, it produces a compile-time constant. When called with non-`constexpr` arguments, or when its value is not required at compile-time, it produces a value at run time like a regular function.  (This dual behavior saves you from having to write `constexpr` and non-`constexpr` versions of the same function.)  
+ 
+ A `constexpr` function or constructor is implicitly `inline`. 
+ 
+ The following rules apply to constexpr functions:
+
+- A `constexpr` function must accept and return only literal types. 
+
+- A `constexpr` function can be recursive. 
+
+- It cannot be [virtual](../cpp/virtual-cpp.md). A a constructor cannot be defined as constexpr if the enclosing class has any virtual base classes.
+
+- The body can be defined as `= default` or `= delete`. 
+
+- The body can contain no `goto` statements or try blocks. 
+
+- An explicit specialization of a non-constexpr template can be declared as `constexpr`:  
   
-```  
+- An explicit specialization of a `constexpr` template does not have to also be `constexpr`: 
+
+
+<!--conformance note-->
+The following rules apply to constexpr functions in Visual Studio 2017 and later: 
+
+- It may contain if and switch statements, and all looping statements including for, range-based for, while, and do-while
+    
+- It may contain local variable declarations, but the variable must be initialized, must be a literal type, and cannot be static or thread-local. The locally-declared variable is not required to be const and may mutate.
+
+- A constexpr non-static member function is not required to be implicitly const.
+
+  
+```cpp  
 constexpr float exp(float x, int n)  
 {  
     return n == 0 ? 1 :  
@@ -81,27 +135,11 @@ constexpr float exp(float x, int n)
 ```  
   
 > [!TIP]
->  Nota: En el depurador de Visual Studio, puede indicar si una función `constexpr` se evalúa en tiempo de compilación colocando un punto de interrupción en su interior.  Si se alcanza el punto de interrupción, significa que se llamó a la función en tiempo de ejecución.  En caso contrario, significa que se llamó a la función en tiempo de compilación.  
+>  Note: In the Visual Studio debugger, you can tell whether a `constexpr` function is being evaluated at compile time by putting a breakpoint inside it. If the breakpoint is hit, the function was called at run-time.  If not, then the function was called at compile time.  
   
-## Reglas generales de constexpr  
- Para que una función, una variable, un constructor o un miembro de datos estáticos sea definido como `constexpr`, debe cumplir ciertos requisitos:  
-  
--   Una función `constexpr` puede ser recursiva.  No puede ser [virtual](../cpp/virtual-cpp.md) y su tipo devuelto y sus tipos de parámetros deben ser tipos literales.  El cuerpo se puede definir como `= default` o `= delete`.  En caso contrario, debe seguir estas reglas: no contener instrucciones `goto`, bloques try, variables no inicializadas ni definiciones de variables que no sean tipos literales, ni que sean estáticas o locales de subproceso.  Además, un constructor no se puede definir como constexpr si la clase envolvente tiene alguna clase base virtual.  
-  
--   Una variable se puede declarar con `constexpr` si tiene un tipo literal y está inicializada.  Si el constructor realiza la inicialización, este debe declararse como `constexpr`.  
-  
--   Una referencia puede declararse como constexpr si el objeto al que hace referencia se ha inicializado mediante una expresión constante y todas las conversiones implícitas que se invoquen durante la inicialización son también expresiones constantes.  
-  
--   Todas las declaraciones de una función o variable `constexpr` deben tener el especificador `constexpr`.  
-  
--   Una especialización explícita de una plantilla que no sea constexpr no se puede declarar como `constexpr`:  
-  
--   Una especialización explícita de una plantilla `constexpr` no tiene que ser también `constexpr`:  
-  
--   Un constructor o una función `constexpr` es implícitamente `inline`.  
-  
-## Ejemplo  
- En el siguiente ejemplo se muestran funciones, un tipo definido por usuario y variables `constexpr`.  Tenga en cuenta que en la última instrucción en main\(\), la función miembro `constexpr` GetValue\(\) es una llamada en tiempo de ejecución porque no es necesario conocer el valor en tiempo de compilación.  
+ 
+## <a name="example"></a>Example  
+ The following example shows `constexpr` variables, functions and a user-defined type. Note that in the last statement in main(), the `constexpr` member function GetValue() is a run-time call because the value is not required to be known at compile time.  
   
 ```  
 #include <iostream>  
@@ -171,9 +209,9 @@ int main()
   
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requirements  
  Visual Studio 2015  
   
-## Vea también  
- [Declaraciones y definiciones](../cpp/declarations-and-definitions-cpp.md)   
- [const](../cpp/constexpr-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Declarations and Definitions](../cpp/declarations-and-definitions-cpp.md)   
+ [const](../cpp/const-cpp.md)

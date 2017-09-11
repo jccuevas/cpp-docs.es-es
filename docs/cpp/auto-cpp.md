@@ -1,29 +1,45 @@
 ---
-title: "auto (C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: auto (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
 caps.latest.revision: 18
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# auto (C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: c3d761378e4265305905fab17768144aef403b29
+ms.contentlocale: es-es
+ms.lasthandoff: 09/11/2017
 
-Deduce el tipo de una variable declarada a partir de su expresión de inicialización.  
+---
+# <a name="auto-c"></a>auto (C++)
+Deduces the type of a declared variable from its initialization expression.  
   
-## Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 auto declarator initializer;  
@@ -33,104 +49,128 @@ auto declarator initializer;
 [](auto param1, auto param2) {};  
 ```  
   
-## Comentarios  
- La palabra clave `auto` indica al compilador que utilice la expresión de inicialización de una variable declarada o el parámetro de expresión lambda para deducir su tipo.  
+## <a name="remarks"></a>Remarks  
+ The `auto` keyword directs the compiler to use the initialization expression of a declared variable, or lambda expression parameter, to deduce its type.  
   
- Se recomienda utilizar la palabra clave `auto` para la mayoría de las situaciones, a menos que desee realmente una conversión, porque proporciona estas ventajas:  
+ We recommend that you use the `auto` keyword for most situations—unless you really want a conversion—because it provides these benefits:  
   
--   **Solidez**: si el tipo de la expresión cambia \(esto incluye cuando se cambia un tipo de valor devuelto de función\), funciona.  
+-   **Robustness:** If the expression’s type is changed—this includes when a function return type is changed—it just works.  
   
--   **Rendimiento**: se garantiza que no hay ninguna conversión.  
+-   **Performance:** You’re guaranteed that there will be no conversion.  
   
--   **Facilidad de uso**: no es necesario preocuparse de las dificultades y los errores tipográficos al escribir los nombres de los tipos.  
+-   **Usability:** You don't have to worry about type name spelling difficulties and typos.  
   
--   **Eficacia**: la codificación puede ser más eficaz.  
+-   **Efficiency:** Your coding can be more efficient.  
   
- Casos de conversión en los que puede que no desee utilizar `auto`:  
+ Conversion cases in which you might not want to use `auto`:  
   
--   Cuando se desea un tipo específico y es la única alternativa.  
+-   When you want a specific type and nothing else will do.  
   
--   Tipo auxiliar de plantilla de expresión \(por ejemplo, `(valarray+valarray)` y listas de inicializadores\), aunque raramente elegiría escribir `auto x = { 1 };` y esperaría obtener realmente un tipo `int`.  
+-   Expression template helper types—for example, `(valarray+valarray)`.  
   
- Para utilizar la palabra clave `auto`, úsela en lugar de un tipo para declarar una variable, y especifique una expresión de inicialización.  Además, puede modificar la palabra clave `auto` mediante especificadores y declaradores como `const`, `volatile`, puntero \(`*`\), referencia \(`&`\) y referencia a un valor R `(&&`\).  El compilador evalúa la expresión de inicialización y emplea esa información para deducir el tipo de la variable.  
+ To use the `auto` keyword, use it instead of a type to declare a variable, and specify an initialization expression. In addition, you can modify the `auto` keyword by using specifiers and declarators such as `const`, `volatile`, pointer (`*`), reference (`&`), and rvalue reference `(&&`). The compiler evaluates the initialization expression and then uses that information to deduce the type of the variable.  
   
- La expresión de inicialización puede ser una asignación \(sintaxis de signo igual\), una inicialización directa \(sintaxis de estilo de función\), una expresión de [operador new](../Topic/operator%20new%20\(%3Cnew%3E\).md) o el parámetro *for\-range\-declaration* de una instrucción [Instrucción for basada en intervalo \(C\+\+\)](../cpp/range-based-for-statement-cpp.md).  Para obtener más información, vea [Inicializadores](../cpp/initializers.md) y los ejemplos de código más adelante en este documento.  
+ The initialization expression can be an assignment (equal-sign syntax), a direct initialization (function-style syntax), an [operator new](new-operator-cpp.md) expression, or the initialization expression can be the *for-range-declaration* parameter in a [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md) statement. For more information, see [Initializers](../cpp/initializers.md) and the code examples later in this document.  
   
- La palabra clave `auto` es un marcador de posición para un tipo, pero no es en sí misma un tipo.  Por tanto, la palabra clave `auto` no se puede utilizar en conversiones o en operadores como [sizeof](../cpp/sizeof-operator.md) y [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md).  
+ The `auto` keyword is a placeholder for a type, but it is not itself a type. Therefore, the `auto` keyword cannot be used in casts or operators such as [sizeof](../cpp/sizeof-operator.md) and [typeid](../windows/typeid-cpp-component-extensions.md).  
   
-## Utilidad  
- La palabra clave `auto` es una manera sencilla de declarar una variable que tiene un tipo complejo.  Por ejemplo, se puede utilizar `auto` para declarar una variable en la que la expresión de inicialización implica plantillas, punteros a funciones o punteros a miembros.  
+## <a name="usefulness"></a>Usefulness  
+ The `auto` keyword is a simple way to declare a variable that has a complicated type. For example, you can use `auto` to declare a variable where the initialization expression involves templates, pointers to functions, or pointers to members.  
   
- También se puede utilizar `auto` para declarar e inicializar una variable en una expresión lambda.  No puede declarar el tipo de la variable porque solo el compilador conoce el tipo de una expresión lambda.  Para más información, vea [Ejemplos de expresiones lambda](../cpp/examples-of-lambda-expressions.md).  
+ You can also use `auto` to declare and initialize a variable to a lambda expression. You can't declare the type of the variable yourself because the type of a lambda expression is known only to the compiler. For more information, see [Examples of Lambda Expressions](../cpp/examples-of-lambda-expressions.md).  
   
-## Tipos de valor devuelto finales  
- Se puede utilizar `auto`, junto con el especificador de tipo `decltype`, como ayuda para escribir bibliotecas de plantillas.  Use `auto` y `decltype` para declarar una función de plantilla cuyo tipo de valor devuelto depende de los tipos de sus argumentos de plantilla.  O bien, utilice `auto` y `decltype` para declarar una función de plantilla que contiene una llamada a otra función y, a continuación, devuelve el tipo de valor devuelto de esa otra función.  Para más información, vea [decltype](../cpp/decltype-cpp.md).  
+## <a name="trailing-return-types"></a>Trailing Return Types  
+ You can use `auto`, together with the `decltype` type specifier, to help write template libraries. Use `auto` and `decltype` to declare a template function whose return type depends on the types of its template arguments. Or, use `auto` and `decltype` to declare a template function that wraps a call to another function, and then returns whatever is the return type of that other function. For more information, see [decltype](../cpp/decltype-cpp.md).  
   
-## Referencias y calificadores cv  
- Tenga en cuenta que cuando se utiliza `auto` se quitan las referencias, los calificadores const y los calificadores volatile.  Considere el ejemplo siguiente:  
+## <a name="references-and-cv-qualifiers"></a>References and cv-qualifiers  
+ Note that using `auto` drops references, const qualifiers, and volatile qualifiers. Consider the following example:  
   
 ```cpp  
-// cl.exe /analyze /EHsc /W4  
-#include <iostream>  
+// cl.exe /analyze /EHsc /W4  
+#include <iostream>  
   
-using namespace std;  
+using namespace std;  
   
-int main( )  
+int main( )  
 {  
-    int count = 10;  
-    int& countRef = count;  
-    auto myAuto = countRef;  
+    int count = 10;  
+    int& countRef = count;  
+    auto myAuto = countRef;  
   
-    countRef = 11;  
-    cout << count << " ";  
+    countRef = 11;  
+    cout << count << " ";  
   
-    myAuto = 12;  
-    cout << count << endl;  
+    myAuto = 12;  
+    cout << count << endl;  
 }  
   
 ```  
   
- Puede creer que myAuto es una referencia int, pero no lo es.  Es simplemente un tipo int, por lo que la salida es `11 11`, no `11 12` como sería si `auto` no hubiera quitado la referencia.  
+ In the previous example, myAuto is an int, not an int reference, so the output is `11 11`, not `11 12` as would be the case if the reference qualifier had not been dropped by `auto`.  
   
-## Restricciones y mensajes de error  
- En la tabla siguiente se enumeran las restricciones de uso de la palabra clave `auto` y el mensaje de error de diagnóstico correspondiente que el compilador emite.  
-  
-|Número de error|Descripción|  
-|---------------------|-----------------|  
-|[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|La palabra clave `auto` no se puede combinar con ningún otro especificador de tipo.|  
-|[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Un símbolo que se declara con la palabra clave `auto` debe tener un inicializador.|  
-|[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|Utilizó incorrectamente la palabra clave `auto` para declarar un tipo.  Por ejemplo, declaró un tipo de valor devuelto de método o una matriz.|  
-|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md), [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|Un argumento de parámetro o plantilla no se puede declarar con la palabra clave `auto`.|  
-|[C3534](../Topic/Compiler%20Error%20C3534.md)|Un símbolo que se declara con la palabra clave `auto` en una expresión `new` debe tener un inicializador.  Para más información, vea [operator new](../Topic/operator%20new%20\(%3Cnew%3E\).md).|  
-|[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|Un parámetro de método o plantilla no se puede declarar con la palabra clave `auto`.|  
-|[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|No se puede usar un símbolo antes de inicializarlo.  En la práctica, esto significa que una variable no se puede usar para inicializarse a sí misma.|  
-|[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|No se puede convertir en un tipo que se declara con la palabra clave `auto`.|  
-|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Todos los símbolos de una lista de declaradores que se declara con la palabra clave `auto` deben resolverse en el mismo tipo.  Para más información, vea [Declaraciones](../misc/declarations.md).|  
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|Los operadores [sizeof](../cpp/sizeof-operator.md) y [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md) no se pueden aplicar a un símbolo que se declara con la palabra clave `auto`.|  
-  
-## Ejemplos  
- Estos fragmentos de código muestran algunas de las formas de las que se puede usar la palabra clave `auto`.  
-  
- Las declaraciones siguientes son equivalentes.  En la primera instrucción, se declara la variable `j` para que sea de tipo `int`.  En la segunda instrucción, se deduce que la variable `k` es de tipo `int` porque la expresión de inicialización \(0\) es un entero.  
+## <a name="type-deduction-with-braced-initializers-c14"></a>Type deduction with braced initializers (C++14)  
+ The following code exmample shows how to intialize an auto variable using braces. Note the difference between B and C and between A and E.  
   
 ```cpp  
+#include <initializer_list>  
   
+int main()  
+{  
+    // std::initializer_list<int>  
+    auto A = { 1, 2 };  
+  
+    // std::initializer_list<int>  
+    auto B = { 3 };  
+  
+    // int  
+    auto C{ 4 };  
+  
+    // C3535: cannot deduce type for 'auto' from initializer list'  
+    auto D = { 5, 6.7 };  
+  
+    // C3518 in a direct-list-initialization context the type for 'auto'  
+    // can only be deduced from a single initializer expression  
+    auto E{ 8, 9 };  
+  
+    return 0;  
+}  
+```  
+  
+## <a name="restrictions-and-error-messages"></a>Restrictions and Error Messages  
+ The following table lists the restrictions on the use of the `auto` keyword, and the corresponding diagnostic error message that the compiler emits.  
+  
+|Error number|Description|  
+|------------------|-----------------|  
+|[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|The `auto` keyword cannot be combined with any other type-specifier.|  
+|[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|A symbol that is declared with the `auto` keyword must have an initializer.|  
+|[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|You incorrectly used the `auto` keyword to declare a type. For example, you declared a method return type or an array.|  
+|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md), [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|A parameter or template argument cannot be declared with the `auto` keyword.|  
+|[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|A method or template parameter cannot be declared with the `auto` keyword.|  
+|[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|A symbol cannot be used before it is initialized. In practice, this means that a variable cannot be used to initialize itself.|  
+|[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|You cannot cast to a type that is declared with the `auto` keyword.|  
+|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|All the symbols in a declarator list that is declared with the `auto` keyword must resolve to the same type. For more information, see [Declarations and Definitions](declarations-and-definitions-cpp.md).|  
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|The [sizeof](../cpp/sizeof-operator.md) and [typeid](../windows/typeid-cpp-component-extensions.md) operators cannot be applied to a symbol that is declared with the `auto` keyword.|  
+  
+## <a name="examples"></a>Examples  
+ These code fragments illustrate some of the ways in which the `auto` keyword can be used.  
+  
+ The following declarations are equivalent. In the first statement, variable `j` is declared to be type `int`. In the second statement, variable `k` is deduced to be type `int` because the initialization expression (0) is an integer.  
+  
+```cpp  
 int j = 0;  // Variable j is explicitly type int.  
 auto k = 0; // Variable k is implicitly type int because 0 is an integer.  
 ```  
   
- Las declaraciones siguientes son equivalentes, pero la segunda declaración es más sencilla que la primera.  Una de las razones de más peso para utilizar la palabra clave `auto` es su sencillez.  
+ The following declarations are equivalent, but the second declaration is simpler than the first. One of the most compelling reasons to use the `auto` keyword is simplicity.  
   
 ```cpp  
-  
 map<int,list<string>>::iterator i = m.begin();   
 auto i = m.begin();   
 ```  
   
- En el fragmento de código siguiente se declara el tipo de las variables `iter` y `elem` cuando se inician los bucles `for` y `for` de intervalo.  
+ The following code fragment declares the type of variables `iter` and `elem` when the `for` and range `for` loops start.  
   
 ```cpp  
-  
 // cl /EHsc /nologo /W4  
 #include <deque>  
 using namespace std;  
@@ -154,39 +194,34 @@ int main()
     for (const auto& elem : dqDoubleData) // observes elements IN-PLACE  
     { /* ... */ }  
 }  
-  
 ```  
   
- En el fragmento de código siguiente se utiliza el operador `new` y la declaración de puntero para declarar punteros.  
+ The following code fragment uses the `new` operator and pointer declaration to declare pointers.  
   
 ```cpp  
-  
 double x = 12.34;  
 auto *y = new auto(x), **z = new auto(&x);  
 ```  
   
- En el fragmento de código siguiente se declaran varios símbolos en cada instrucción de declaración.  Observe que todos los símbolos de cada instrucción se resuelven en el mismo tipo.  
+ The next code fragment declares multiple symbols in each declaration statement. Notice that all of the symbols in each statement resolve to the same type.  
   
 ```cpp  
-  
 auto x = 1, *y = &x, **z = &y; // Resolves to int.  
 auto a(2.01), *b (&a);         // Resolves to double.  
 auto c = 'a', *d(&c);          // Resolves to char.  
 auto m = 1, &n = m;            // Resolves to int.  
 ```  
   
- En este fragmento de código se utiliza el operador condicional \(`?:`\) para declarar la variable `x` como un entero que tiene un valor de 200:  
+ This code fragment uses the conditional operator (`?:`) to declare variable `x` as an integer that has a value of 200:  
   
 ```cpp  
-  
 int v1 = 100, v2 = 200;  
 auto x = v1 > v2 ? v1 : v2;  
 ```  
   
- En el fragmento de código siguiente se inicializa la `x` en el tipo `int`, la variable `y` en una referencia al tipo `const` `int` y la variable `fp` en un puntero a una función que devuelve el tipo `int`.  
+ The following code fragment initializes variable `x` to type `int`, variable `y` to a reference to type `const int`, and variable `fp` to a pointer to a function that returns type `int`.  
   
 ```cpp  
-  
 int f(int x) { return x; }  
 int main()  
 {  
@@ -197,18 +232,16 @@ int main()
     auto fp = p;  
     //...  
 }  
-  
 ```  
   
-## Vea también  
- [auto \(Palabra clave\)](../cpp/auto-keyword.md)   
- [\(NOTINBUILD\)Storage\-Class Specifiers](http://msdn.microsoft.com/es-es/10b3d22d-cb40-450b-994b-08cf9a211b6c)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)   
- [\/Zc:auto \(Deducir tipo de variable\)](../build/reference/zc-auto-deduce-variable-type.md)   
- [sizeof \(Operador\)](../cpp/sizeof-operator.md)   
- [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md)   
- [operator new](../Topic/operator%20new%20\(%3Cnew%3E\).md)   
- [Declaraciones](../misc/declarations.md)   
- [Ejemplos de expresiones lambda](../cpp/examples-of-lambda-expressions.md)   
- [Inicializadores](../cpp/initializers.md)   
+## <a name="see-also"></a>See Also  
+ [auto Keyword](../cpp/auto-keyword.md)   
+ [Keywords](../cpp/keywords-cpp.md)   
+ [/Zc:auto (Deduce Variable Type)](../build/reference/zc-auto-deduce-variable-type.md)   
+ [sizeof Operator](../cpp/sizeof-operator.md)   
+ [typeid](../windows/typeid-cpp-component-extensions.md)   
+ [operator new](new-operator-cpp.md)   
+ [Declarations and Definitions](declarations-and-definitions-cpp.md)   
+ [Examples of Lambda Expressions](../cpp/examples-of-lambda-expressions.md)   
+ [Initializers](../cpp/initializers.md)   
  [decltype](../cpp/decltype-cpp.md)

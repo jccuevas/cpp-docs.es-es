@@ -1,83 +1,96 @@
 ---
-title: "Definiciones y declaraciones (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Definitions and Declarations (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 56b809c0-e602-4f18-9ca5-cd7a8fbaaf30
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Definiciones y declaraciones (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: c3a12ae0497aa1897e94c04cffe88e4f53afa488
+ms.contentlocale: es-es
+ms.lasthandoff: 09/11/2017
 
-## Específicos de Microsoft  
- La interfaz DLL hace referencia a todos los elementos \(funciones y datos\) que se sabe que se van a exportar mediante algún programa del sistema, es decir, todos los elementos declarados como **dllimport** o `dllexport`.  Todas las declaraciones incluidas en la interfaz DLL deben especificar el atributo **dllimport** o `dllexport`.  Sin embargo, la definición debe especificar el atributo `dllexport`.  Por ejemplo, la definición de función siguiente genera un error del compilador:  
-  
-```  
-__declspec( dllimport ) int func() {   // Error; dllimport  
-                                    // prohibited on definition.  
+---
+# <a name="definitions-and-declarations-c"></a>Definitions and Declarations (C++)
+## <a name="microsoft-specific"></a>Microsoft Specific
+ The DLL interface refers to all items (functions and data) that are known to be exported by some program in the system; that is, all items that are declared as `dllimport` or `dllexport`. All declarations included in the DLL interface must specify either the `dllimport` or `dllexport` attribute. However, the definition must specify only the `dllexport` attribute. For example, the following function definition generates a compiler error:
+
+```
+__declspec( dllimport ) int func() {   // Error; dllimport
+                                       // prohibited on definition.
    return 1;  
-}  
-```  
-  
- Este código también genera un error:  
-  
-```  
-#define DllImport   __declspec( dllimport )  
-  
-__declspec( dllimport ) int i = 10;  // Error; this is a  
-                                     // definition.  
-```  
-  
- Sin embargo, esta es la sintaxis correcta:  
-  
-```  
-__declspec( dllexport ) int i = 10;     // Okay--export definition  
-```  
-  
- El uso de `dllexport` implica una definición, mientras que **dllimport** implica una declaración.  Debe utilizar la palabra clave `extern` con `dllexport` para forzar una declaración; en caso contrario, se asume una definición.  Por tanto, los siguientes ejemplos son correctos:  
-  
-```  
-#define DllImport   __declspec( dllimport )  
-#define DllExport   __declspec( dllexport )  
-  
-extern DllImport int k; // These are both correct and imply a  
-DllImport int j;        // declaration.  
-```  
-  
- Los ejemplos siguientes aclaran los anteriores:  
-  
-```  
-static __declspec( dllimport ) int l; // Error; not declared extern.  
-  
-void func() {  
-    static __declspec( dllimport ) int s;  // Error; not declared  
-                                           // extern.  
-    __declspec( dllimport ) int m;         // Okay; this is a   
-                                           // declaration.  
-    __declspec( dllexport ) int n;         // Error; implies external  
-                                           // definition in local scope.  
-    extern __declspec( dllimport ) int i;  // Okay; this is a  
-                                           // declaration.  
-    extern __declspec( dllexport ) int k;  // Okay; extern implies  
-                                           // declaration.  
-    __declspec( dllexport ) int x = 5;     // Error; implies external  
-                                           // definition in local scope.  
-}  
-```  
-  
-## FIN de Específicos de Microsoft  
-  
-## Vea también  
+}
+```
+
+ This code also generates an error:
+
+```
+__declspec( dllimport ) int i = 10;  // Error; this is a definition.
+```
+
+ However, this is correct syntax:
+
+```
+__declspec( dllexport ) int i = 10;  // Okay--export definition
+```
+
+ The use of `dllexport` implies a definition, while `dllimport` implies a declaration. You must use the `extern` keyword with `dllexport` to force a declaration; otherwise, a definition is implied. Thus, the following examples are correct:
+
+```
+#define DllImport   __declspec( dllimport )
+#define DllExport   __declspec( dllexport )
+
+extern DllImport int k; // These are both correct and imply a
+DllImport int j;        // declaration.
+```
+
+ The following examples clarify the preceding:
+
+```
+static __declspec( dllimport ) int l; // Error; not declared extern.
+
+void func() {
+    static __declspec( dllimport ) int s;  // Error; not declared
+                                           // extern.
+    __declspec( dllimport ) int m;         // Okay; this is a
+                                           // declaration.
+    __declspec( dllexport ) int n;         // Error; implies external
+                                           // definition in local scope.
+    extern __declspec( dllimport ) int i;  // Okay; this is a
+                                           // declaration.
+    extern __declspec( dllexport ) int k;  // Okay; extern implies
+                                           // declaration.
+    __declspec( dllexport ) int x = 5;     // Error; implies external
+                                           // definition in local scope.
+}
+```
+
+**END Microsoft Specific**
+
+## <a name="see-also"></a>See Also
  [dllexport, dllimport](../cpp/dllexport-dllimport.md)

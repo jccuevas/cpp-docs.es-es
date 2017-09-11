@@ -1,41 +1,56 @@
 ---
-title: "Pimpl para encapsulaci&#243;n en tiempo de compilaci&#243;n (C++ moderno) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Pimpl For Compile-Time Encapsulation (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Pimpl para encapsulaci&#243;n en tiempo de compilaci&#243;n (C++ moderno)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 0982df3552bd97cbaecf754afd6d442749745412
+ms.contentlocale: es-es
+ms.lasthandoff: 09/11/2017
 
-*La modismo de pimpl* es una técnica moderna de C\+\+ para ocultar la implementación, para minimizar el acoplamiento, y de separar interfaces.  Pimpl es corto para “puntero a la implementación.” Puede estar familiarizado con el concepto pero conocerlo ya por otros nombres como la modismo de Firewall Cat o del compilador de Cheshire.  
+---
+# <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl For Compile-Time Encapsulation (Modern C++)
+The *pimpl idiom* is a modern C++ technique to hide implementation, to minimize coupling, and to separate interfaces. Pimpl is short for "pointer to implementation." You may already be familiar with the concept but know it by other names like Cheshire Cat or Compiler Firewall idiom.  
   
-## ¿Por qué pimpl de uso?  
- Aquí es cómo la modismo de pimpl puede mejorar el ciclo de vida de desarrollo de software:  
+## <a name="why-use-pimpl"></a>Why use pimpl?  
+ Here's how the pimpl idiom can improve the software development lifecycle:  
   
--   Minimización de las dependencias de compilación.  
+-   Minimization of compilation dependencies.  
   
--   Separación de interfaz y de implementación.  
+-   Separation of interface and implementation.  
   
--   Portabilidad.  
+-   Portability.  
   
-## Encabezado de Pimpl  
+## <a name="pimpl-header"></a>Pimpl header  
   
 ```cpp  
-  
 // my_class.h  
 class my_class {  
    //  ... all public and protected stuff goes here ...  
@@ -45,13 +60,12 @@ private:
   
 ```  
   
- El idioma de pimpl evita recompilar las cascadas y diseños precisos del objeto.  Es apropiado para \(transitivo\) los tipos populares.  
+ The pimpl idiom avoids rebuild cascades and brittle object layouts. It's well suited for (transitively) popular types.  
   
-## Implementación de Pimpl  
- Defina la clase de `impl` en el archivo .cpp.  
+## <a name="pimpl-implementation"></a>Pimpl implementation  
+ Define the `impl` class in the .cpp file.  
   
 ```cpp  
-  
 // my_class.cpp  
 class my_class::impl {  // defined privately here  
   // ... all private data and functions: all of these  
@@ -63,10 +77,10 @@ my_class::my_class(): pimpl( new impl )
 }  
 ```  
   
-## Procedimientos recomendados  
- Considere si agregar compatibilidad para la especialización de intercambio no que produce.  
+## <a name="best-practices"></a>Best practices  
+ Consider whether to add support for non-throwing swap specialization.  
   
-## Vea también  
- [Aquí está otra vez C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Referencia de lenguaje C\+\+](../cpp/cpp-language-reference.md)   
- [Biblioteca estándar de C\+\+](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)
