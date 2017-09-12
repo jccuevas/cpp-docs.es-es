@@ -1,71 +1,89 @@
 ---
-title: "Registro | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inicializar servidores"
-  - "instalar servidores"
-  - "aplicaciones de servidor OLE, registrar servidores"
-  - "OLE, registro"
-  - "registro de bases de datos"
-  - "Registro, elemento de base de datos OLE"
-  - "servidores, inicializar"
-  - "servidores, instalar"
+title: Registration | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- servers [MFC], initializing
+- initializing servers [MFC]
+- OLE, registration
+- installing servers [MFC]
+- registry [MFC], OLE item database
+- registration databases [MFC]
+- servers [MFC], installing
+- OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Registro
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c55b9971a5a796daddb7bc6dd05da0116828cd52
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Cuando un usuario desea insertar un elemento OLE en una aplicación, OLE muestra una lista de tipos de objeto para elegir.  OLE obtiene esta lista de base de datos de registro del sistema, que contiene la información proporcionada por todas las aplicaciones de servidor.  Cuando un servidor está registrado, las entradas que coloca en la base de datos de registro del sistema \(el registro\) describe cada tipo de objeto que proporciona, las extensiones de archivo, y la ruta de acceso a sí mismo, entre otra información.  
+---
+# <a name="registration"></a>Registration
+When a user wants to insert an OLE item into an application, OLE presents a list of object types to choose from. OLE gets this list from the system registration database, which contains information provided by all server applications. When a server registers itself, the entries it puts into the system registration database (the Registry) describe each type of object it supplies, file extensions, and the path to itself, among other information.  
   
- El marco y bibliotecas de vínculos dinámicos VIEJAS \(DLL\) de sistema utilizan este registro para determinar qué tipos de elementos de OLE están disponibles en el sistema.  Los archivos DLL de OLE system también utilizan este registro para determinar cómo iniciar una aplicación de servidor cuando se activa un objeto vinculado o incrustado.  
+ The framework and the OLE system dynamic-link libraries (DLL) use this registry to determine what types of OLE items are available on the system. The OLE system DLLs also use this registry to determine how to launch a server application when a linked or embedded object is activated.  
   
- En este artículo se describe lo que necesita cada aplicación de servidor hacer cuando se instala y se ejecuta cada vez.  
+ This article describes what each server application needs to do when it is installed and each time it is executed.  
   
- Para obtener información detallada sobre la base de datos de registro del sistema y el formato de los archivos .reg utilizados para actualizarlo, vea *referencia\) del Programador*.  
+ For detailed information about the system registration database and the format of the .reg files used to update it, see the *OLE Programmer's Reference*.  
   
-##  <a name="_core_server_installation"></a> Instalación de Servidor  
- Al instalar primero la aplicación de servidor, debe registrar todos los tipos de elementos de OLE que admite.  También puede tener el servidor actualiza la base de datos de registro del sistema cada vez que se ejecuta como una aplicación independiente.  Esto mantiene la base de datos de registro actualizada si se mueve el archivo ejecutable del servidor.  
-  
-> [!NOTE]
->  Las aplicaciones MFC generadas por el asistente para aplicaciones automáticamente se registran cuando se ejecutan como aplicaciones independientes.  
-  
- Si desea registrar la aplicación durante la instalación, use el programa de RegEdit.exe. \(En Windows 95, Windows 98, y Windows Me, RegEdit está en el directorio de Windows.  En Windows NT y Windows 2000, RegEdit está en el directorio de Windows System32.\) Si incluye un programa de instalación con la aplicación, tiene el “RegEdit ejecuta el programa de instalación \/S *appname.reg*”. \(Relativo a La \/S indica la operación silenciosa, es decir, no muestra el cuadro de diálogo que señala la finalización correcta del comando.\) Si no, indique al usuario para ejecutar RegEdit manualmente.  
+##  <a name="_core_server_installation"></a> Server Installation  
+ When you first install your server application, it should register all the types of OLE items that it supports. You can also have the server update the system registration database every time it executes as a stand-alone application. This keeps the registration database up-to-date if the server's executable file is moved.  
   
 > [!NOTE]
->  El archivo .reg creado por el asistente para aplicaciones no incluye la ruta de acceso completa para el ejecutable.  El programa de instalación debe modificar el archivo .reg para incluir la ruta de acceso completa al archivo ejecutable o modificar la variable de entorno PATH para incluir el directorio de instalación.  
+>  MFC applications generated by the application wizard automatically register themselves when they are run as stand-alone applications.  
   
- RegEdit combina el contenido del archivo de texto .reg en la base de datos de registro.  Para comprobar la base de datos o repararla, utilice el editor del Registro.  Tenga cuidado de no eliminar las entradas básicos de OLE. \(En Windows 95, Windows 98, y Windows Me, el editor del Registro es RegEdit.exe.  En Windows NT y Windows 2000, es RegEdit32.exe.\)  
+ If you want to register your application during installation, use the RegEdit.exe program. (In Windows 95, Windows 98, and Windows ME, RegEdit is in the Windows directory. In Windows NT and Windows 2000, RegEdit is in the Windows System32 directory.) If you include a setup program with your application, have the setup program run "RegEdit /S *appname*.reg". (The /S flag indicates silent operation, that is, it does not display the dialog box reporting successful completion of the command.) Otherwise, instruct the user to run RegEdit manually.  
   
-##  <a name="_core_server_initialization"></a> Inicialización del Servidor  
- Cuando crea una aplicación de servidor con el asistente para aplicaciones, el asistente completa todas las tareas de inicialización automáticamente.  Esta sección describe lo que debe hacer si escribe una aplicación de servidor manualmente.  
+> [!NOTE]
+>  The .reg file created by the application wizard does not include the complete path for the executable. Your installation program must either modify the .reg file to include the complete path to the executable or modify the PATH environment variable to include the installation directory.  
   
- Cuando una aplicación de servidor es iniciada por una aplicación contenedora, los archivos DLL del sistema OLE agregan la opción “\/Embedding” a la línea de comandos del servidor.  Un comportamiento de servidor difiere en función de si se inició por un contenedor, lo que lo primero aplicación debe hacer cuando comienza la ejecución se comprueba la “\/Embedding” o “\- opción de incrustación” en la línea de comandos.  Si existe este modificador, cargue un conjunto diferente de recursos que muestran el servidor como permanece activo en contexto o inicien totalmente.  Para obtener más información, vea [Menús y recursos: Adiciones de Servidor](../mfc/menus-and-resources-server-additions.md).  
+ RegEdit merges the contents of the .reg text file into the registration database. To verify the database or to repair it, use the registry editor. Take care to avoid deleting essential OLE entries. (In Windows 95, Windows 98, and Windows ME, the registry editor is RegEdit.exe. In Windows NT and Windows 2000, it is RegEdit32.exe.)  
   
- La aplicación de servidor debe llamar a la función de `CWinApp::RunEmbedded` para analizar la línea de comandos.  Si devuelve un valor distinto de cero, la aplicación no debe mostrar la ventana porque se ha ejecutado de aplicación contenedora, no como una aplicación independiente.  Esta función actualiza la entrada de servidor en la base de datos de registro del sistema y llama a la función miembro de `RegisterAll` para usted, realizando el registro de la instancia.  
+##  <a name="_core_server_initialization"></a> Server Initialization  
+ When you create a server application with the application wizard, the wizard completes all initialization tasks for you automatically. This section describes what you must do if you write a server application manually.  
   
- Cuando la aplicación de servidor está iniciando, debe asegurarse de que puede realizar el registro de la instancia.  El registro de la instancia informa a los archivos DLL del sistema OLE que el servidor está activo y listo para recibir solicitudes de contenedores.  No agrega una entrada a la base de datos de registro.  Realice el registro de la instancia del servidor llamando a la función miembro de `ConnectTemplate` definida por `COleTemplateServer`.  Esto conecta el objeto de `CDocTemplate` al objeto de `COleTemplateServer` .  
+ When a server application is launched by a container application, the OLE system DLLs add the "/Embedding" option to the server's command line. A server application's behavior differs depending on whether it was launched by a container, so the first thing an application should do when it begins execution is check for the "/Embedding" or "-Embedding" option on the command line. If this switch exists, load a different set of resources that show the server as being either in-place active or fully open. For more information, see [Menus and Resources: Server Additions](../mfc/menus-and-resources-server-additions.md).  
   
- La función de `ConnectTemplate` toma tres parámetros: **CLSID**de servidor, un puntero al objeto de `CDocTemplate` , y una marca que indica si el servidor admite varias instancias.  Un miniserver debe poder admitir varias instancias, es decir, debe ser posible que varias instancias de servidor se ejecutan simultáneamente, uno para cada contenedor.  Por consiguiente, paso **VERDADERO** para este marcador al iniciar un miniserver.  
+ Your server application should also call its `CWinApp::RunEmbedded` function to parse the command line. If it returns a nonzero value, the application should not show its window because it has been run from a container application, not as a stand-alone application. This function updates the server's entry in the system registration database and calls the `RegisterAll` member function for you, performing instance registration.  
   
- Si está escribiendo un miniserver, por definición se iniciará siempre por un contenedor.  Aún debe analizar la línea de comandos para comprobar la opción “\/Embedding”.  La ausencia de esta opción de la línea de comandos significa que el usuario ha intentado iniciar el miniserver como aplicación independiente.  Si ocurre esto, registre el servidor con la base de datos de registro del sistema y envíe un cuadro de mensaje que informa al usuario para iniciar el miniserver de aplicación contenedora.  
+ When your server application is starting, you must ensure that it can perform instance registration. Instance registration informs the OLE system DLLs that the server is active and ready to receive requests from containers. It does not add an entry to the registration database. Perform instance registration of the server by calling the `ConnectTemplate` member function defined by `COleTemplateServer`. This connects the `CDocTemplate` object to the `COleTemplateServer` object.  
   
-## Vea también  
+ The `ConnectTemplate` function takes three parameters: the server's **CLSID**, a pointer to the `CDocTemplate` object, and a flag indicating whether the server supports multiple instances. A miniserver must be able to support multiple instances, that is, it must be possible for multiple instances of the server to run simultaneously, one for each container. Consequently, pass **TRUE** for this flag when launching a miniserver.  
+  
+ If you are writing a miniserver, by definition it will always be launched by a container. You should still parse the command line to check for the "/Embedding" option. The absence of this option on the command line means that the user has tried to launch the miniserver as a stand-alone application. If this occurs, register the server with the system registration database and then display a message box informing the user to launch the miniserver from a container application.  
+  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
- [Servidores](../mfc/servers.md)   
- [CWinApp::RunAutomated](../Topic/CWinApp::RunAutomated.md)   
- [CWinApp::RunEmbedded](../Topic/CWinApp::RunEmbedded.md)   
+ [Servers](../mfc/servers.md)   
+ [CWinApp::RunAutomated](../mfc/reference/cwinapp-class.md#runautomated)   
+ [CWinApp::RunEmbedded](../mfc/reference/cwinapp-class.md#runembedded)   
  [COleTemplateServer Class](../mfc/reference/coletemplateserver-class.md)
+

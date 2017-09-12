@@ -1,39 +1,58 @@
 ---
-title: "Administrar la vista actual | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vista actual en una ventana de marco"
-  - "desactivar vistas"
-  - "ventanas de marco, vista actual"
-  - "OnActivateView (método)"
-  - "vistas, activar"
-  - "vistas, y OnActivateView (método)"
-  - "vistas, actuales"
-  - "vistas, desactivar"
+title: Managing the Current View | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- views [MFC], and OnActivateView method [MFC]
+- views [MFC], deactivating
+- views [MFC], activating
+- frame windows [MFC], current view
+- OnActivateView method [MFC]
+- views [MFC], current
+- deactivating views [MFC]
+- current view in frame window [MFC]
 ms.assetid: 0a1cc22d-d646-4536-9ad2-3cb6d7092e4a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Administrar la vista actual
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fbdd5ed9ba0935fd224f2b62796ea005593b77b9
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Como parte de la implementación predeterminada de las ventanas de marco, una ventana de marco realiza un seguimiento de la vista activa de a actualmente.  Si la ventana de marco contiene más de una vista, como por ejemplo en una ventana divisora, la vista actual es la vista más reciente en uso.  La vista activa es independiente de la ventana activa de Windows o el foco actual.  
+---
+# <a name="managing-the-current-view"></a>Managing the Current View
+As part of the default implementation of frame windows, a frame window keeps track of a currently active view. If the frame window contains more than one view, as for example in a splitter window, the current view is the most recent view in use. The active view is independent of the active window in Windows or the current input focus.  
   
- Cuando la vista activa, el marco notifica la vista actual llamando a la función miembro de [OnActivateView](../Topic/CView::OnActivateView.md) .  Puede indicar si la vista se está activada o desactivada examina el parámetro de `OnActivateView``bActivate` .  De forma predeterminada, `OnActivateView` establece el foco en la vista actual en la activación.  Puede reemplazar `OnActivateView` para realizar cualquier procesamiento especial cuando se desactiva o se reactivará la vista.  Por ejemplo, puede que desee proporcionar indicaciones visuales especiales para distinguir la vista activa de otra, vistas inactivas.  
+ When the active view changes, the framework notifies the current view by calling its [OnActivateView](../mfc/reference/cview-class.md#onactivateview) member function. You can tell whether the view is being activated or deactivated by examining `OnActivateView`'s `bActivate` parameter. By default, `OnActivateView` sets the focus to the current view on activation. You can override `OnActivateView` to perform any special processing when the view is deactivated or reactivated. For example, you might want to provide special visual cues to distinguish the active view from other, inactive views.  
   
- Una ventana de marco transmite a comandos su vista actual \(de activo\), como se describe en [Enrutamiento de comandos](../mfc/command-routing.md), como parte de enrutamiento estándar del comando.  
+ A frame window forwards commands to its current (active) view, as described in [Command Routing](../mfc/command-routing.md), as part of the standard command routing.  
   
-## Vea también  
- [Usar ventanas de marco](../mfc/using-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

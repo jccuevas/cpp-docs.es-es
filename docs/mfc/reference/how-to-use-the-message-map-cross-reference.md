@@ -1,40 +1,59 @@
 ---
-title: "C&#243;mo: Usar la referencia cruzada del mapa de mensajes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.messages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ventanas [C++], mapas de mensajes"
+title: 'How to: Use the Message-Map Cross-Reference | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.messages
+dev_langs:
+- C++
+helpviewer_keywords:
+- windows [MFC], message maps
 ms.assetid: 2e863d23-9e58-45ba-b5e4-a8ceefccd0c8
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# C&#243;mo: Usar la referencia cruzada del mapa de mensajes
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b25095aab5f565df033945a9523d21fd14ae567c
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En las entradas etiquetadas \<memberFxn\>, escriba por la función miembro de una clase derivada de [CWnd](../../mfc/reference/cwnd-class.md) .  Asigne a función cualquier nombre que desee.  Otras funciones, por ejemplo `OnActivate`, es funciones miembro de clases `CWnd`.  Si se invoca, se pasa el mensaje a la función de `DefWindowProc` Windows.  Para procesar los mensajes de notificación de Windows, reemplace la función correspondiente de `CWnd` en la clase derivada.  La función debe llamar a la función invalidada en la clase base para que la clase base y Windows responder al mensaje.  
+---
+# <a name="how-to-use-the-message-map-cross-reference"></a>How to: Use the Message-Map Cross-Reference
+In entries labeled \<memberFxn>, write your own member function for a derived [CWnd](../../mfc/reference/cwnd-class.md) class. Give your function any name you like. Other functions, such as `OnActivate`, are member functions of class `CWnd`. If called, they pass the message to the `DefWindowProc` Windows function. To process Windows notification messages, override the corresponding `CWnd` function in your derived class. Your function should call the overridden function in your base class to let the base class and Windows respond to the message.  
   
- En todos los casos, el prototipo de función en `CWnd`\- el encabezado de la clase derivada, y el código el mensaje asignan entrada como se muestra.  
+ In all cases, put the function prototype in the `CWnd`-derived class header, and code the message map entry as shown.  
   
- Se utilizan los términos siguientes:  
+ The following terms are used:  
   
-|Término|Definición|  
-|-------------|----------------|  
-|id|Cualquier identificador de elemento de menú definido por el usuario \(mensajes de**WM\_COMMAND** \) o identificador del control \(mensajes de notificación de ventana secundaria\).|  
-|“mensaje” y “wNotifyCode”|Identificadores de mensaje de Windows definido en WINDOWS.H.|  
-|nMessageVariable|Nombre de una variable que contiene el valor devuelto de la función de **RegisterWindowMessage** Windows.|  
+|Term|Definition|  
+|----------|----------------|  
+|id|Any user-defined menu item ID (**WM_COMMAND** messages) or control ID (child window notification messages).|  
+|"message" and "wNotifyCode"|Windows message IDs as defined in WINDOWS.H.|  
+|nMessageVariable|Name of a variable that contains the return value from the **RegisterWindowMessage** Windows function.|  
   
-## Vea también  
- [Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Message Maps](../../mfc/reference/message-maps-mfc.md)
+
+

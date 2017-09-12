@@ -1,39 +1,58 @@
 ---
-title: "Secuencia de destrucci&#243;n de ventanas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objetos CWnd, secuencia de destrucción"
-  - "destruir ventanas"
-  - "destrucción, ventanas"
-  - "secuencia [C++]"
-  - "secuencia [C++], destrucción de ventana"
-  - "ventanas [C++], destruir"
+title: Window Destruction Sequence | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- destruction, windows
+- destroying windows
+- sequence [MFC], window destruction
+- CWnd objects [MFC], destruction sequence
+- sequence [MFC]
+- windows [MFC], destroying
 ms.assetid: 2d819196-6240-415f-a308-db43745e616c
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Secuencia de destrucci&#243;n de ventanas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d8829a095c2372b030a8111d1145467f4f346927
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En el marco de trabajo de MFC, cuando el usuario cierra la ventana de marco, el controlador predeterminado de [OnClose](../Topic/CWnd::OnClose.md) de la ventana llama [DestroyWindow](../Topic/CWnd::DestroyWindow.md).  La función del último miembro denominada cuando se destruye la ventana de Windows es [OnNcDestroy](../Topic/CWnd::OnNcDestroy.md), que hace algún limpieza, llama a la función miembro de [valor predeterminado](../Topic/CWnd::Default.md) para realizar la limpieza de Windows, y llama a la función virtual [PostNcDestroy](../Topic/CWnd::PostNcDestroy.md)miembro.  La implementación de [CFrameWnd](../mfc/reference/cframewnd-class.md) de `PostNcDestroy` elimina el objeto de la ventana de C\+\+.  
+---
+# <a name="window-destruction-sequence"></a>Window Destruction Sequence
+In the MFC framework, when the user closes the frame window, the window's default [OnClose](../mfc/reference/cwnd-class.md#onclose) handler calls [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow). The last member function called when the Windows window is destroyed is [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy), which does some cleanup, calls the [Default](../mfc/reference/cwnd-class.md#default) member function to perform Windows cleanup, and lastly calls the virtual member function [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy). The [CFrameWnd](../mfc/reference/cframewnd-class.md) implementation of `PostNcDestroy` deletes the C++ window object.  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Asignando y desasignando memoria de la ventana](../mfc/allocating-and-deallocating-window-memory.md)  
+-   [Allocating and deallocating window memory](../mfc/allocating-and-deallocating-window-memory.md)  
   
--   [Desasociar un CWnd del HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
+-   [Detaching a CWnd from its HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
   
-## Vea también  
- [Destruir objetos Window](../mfc/destroying-window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Destroying Window Objects](../mfc/destroying-window-objects.md)
+
+

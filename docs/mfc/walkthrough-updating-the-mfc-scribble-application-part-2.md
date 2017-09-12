@@ -1,339 +1,350 @@
 ---
-title: "Tutorial: Actualizar la aplicaci&#243;n Scribble de MFC (Parte 2) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tutoriales [C++]"
+title: 'Walkthrough: Updating the MFC Scribble Application (Part 2) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
 caps.latest.revision: 36
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 32
----
-# Tutorial: Actualizar la aplicaci&#243;n Scribble de MFC (Parte 2)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 68a0cd9d36d869db9945b3921c7837b3d1410535
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-[Parte 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) de este tutorial ha mostrado cómo agregar una cinta de opciones de Office Fluent a la aplicación clásica scribble.  Esta parte muestra cómo agregar paneles y controles de la cinta de opciones que los usuarios pueden utilizar en lugar de menús y comandos.  
+---
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Walkthrough: Updating the MFC Scribble Application (Part 2)
+[Part 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) of this walkthrough showed how to add an Office Fluent Ribbon to the classic Scribble application. This part shows how to add ribbon panels and controls that users can use instead of menus and commands.  
   
-## Requisitos previos  
- [Ejemplos de Visual C\+\+](../top/visual-cpp-samples.md)  
+## <a name="prerequisites"></a>Prerequisites  
+ [Visual C++ Samples](../visual-cpp-samples.md)  
   
-##  <a name="top"></a> Secciones  
- Esta parte del tutorial tiene las secciones siguientes:  
+##  <a name="top"></a> Sections  
+ This part of the walkthrough has the following sections:  
   
--   [Paneles de Nuevo a la cinta de opciones](#addNewPanel)  
+- [Adding New Panels to the Ribbon](#addnewpanel)  
   
--   [Agregar un panel de Ayuda a la cinta de opciones](#addHelpPanel)  
+- [Adding a Help Panel to the Ribbon](#addhelppanel)  
   
--   [Agregar un panel de lápiz a la cinta de opciones](#addPenPanel)  
+- [Adding a Pen Panel to the Ribbon](#addpenpanel)  
   
--   [Agregar un botón de color para la cinta de opciones](#addColorButton)  
+- [Adding a Color Button to the Ribbon](#addcolorbutton)  
   
--   [Agregar un miembro de color para la clase document](#addColorMember)  
+- [Adding a Color Member to the Document Class](#addcolormember)  
   
--   [Lápices que inicializan y guardar preferencias](#initPenSave)  
+- [Initializing Pens and Saving Preferences](#initpensave)  
   
-##  <a name="addNewPanel"></a> Paneles de Nuevo a la cinta de opciones  
- Estos pasos se muestra cómo agregar un panel de **Visualización** que contiene dos casillas que controlan la visibilidad de la barra de herramientas y de la barra de estado, y también un panel de **Ventana** que contiene un botón de expansión verticalmente orientado a objetos que controla la creación y la organización de ventanas de \(MDI\) de interfaz de múltiples documentos.  
+##  <a name="addnewpanel"></a> Adding New Panels to the Ribbon  
+ These steps show how to add a **View** panel that contains two check boxes that control the visibility of the toolbar and the status bar, and also a **Window** panel that contains a vertically oriented split button that controls the creation and arrangement of multiple-document interface (MDI) windows.  
   
-#### Para agregar un panel de la vista y el panel de la ventana a la barra de la cinta de opciones  
+#### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>To add a View panel and Window panel to the ribbon bar  
   
-1.  Cree un panel denominado `Visualización`, que tiene dos casillas que alternen la barra de estado y la barra de herramientas.  
+1.  Create a panel named `View`, which has two check boxes that toggle the status bar and toolbar.  
   
-    1.  De **Cuadro de herramientas**, arrastre **Panel** a la categoría de **Domicilio** .  A continuación arrastre dos **Casillas** al panel.  
+    1.  From the **Toolbox**, drag a **Panel** to the **Home** category. Then drag two **Check Boxes** to the panel.  
   
-    2.  Haga clic en el panel para modificar sus propiedades.  Cambio **caption** a `Visualización`.  
+    2.  Click the panel to modify its properties. Change **Caption** to `View`.  
   
-    3.  Haga clic en la primera casilla para modificar sus propiedades.  Cambie **Id** a `ID_VIEW_TOOLBAR` y **caption** a `Toolbar`.  
+    3.  Click the first check box to modify its properties. Change **ID** to `ID_VIEW_TOOLBAR` and **Caption** to `Toolbar`.  
   
-    4.  Haga clic en la segunda casilla para modificar sus propiedades.  Cambie **Id** a `ID_VIEW_STATUS_BAR` y **caption** a `Barra de estado`.  
+    4.  Click the second check box to modify its properties. Change **ID** to `ID_VIEW_STATUS_BAR` and **Caption** to `Status Bar`.  
   
-2.  Cree un panel denominado `Ventana` que tenga un botón de expansión.  Cuando un usuario hace clic en el botón de expansión, se muestra un menú contextual tres comandos que ya están definidos en la aplicación scribble.  
+2.  Create a panel named `Window` that has a split button. When a user clicks the split button, a shortcut menu displays three commands that are already defined in the Scribble application.  
   
-    1.  De **Cuadro de herramientas**, arrastre **Panel** a la categoría de **Domicilio** .  A continuación **Button** arrastre al panel.  
+    1.  From the **Toolbox**, drag a **Panel** to the **Home** category. Then drag a **Button** to the panel.  
   
-    2.  Haga clic en el panel para modificar sus propiedades.  Cambio **caption** a `Ventana`.  
+    2.  Click the panel to modify its properties. Change **Caption** to `Window`.  
   
-    3.  Haga clic en el botón.  Cambie **caption** a `Ventanas`, **Teclas** a `v`, **Índice grande de la imagen** a `1`, y **Modo dividido** a `False`.  Haga clic en los puntos suspensivos \(**...**\) junto a **Elementos de menú** para abrir el cuadro de diálogo **Editor de elementos** .  
+    3.  Click the button. Change **Caption** to `Windows`, **Keys** to `w`, **Large Image Index** to `1`, and **Split Mode** to `False`. Then click the ellipsis (**...**) next to **Menu Items** to open the **Items Editor** dialog box.  
   
-    4.  Haga clic en **Add** tres veces para agregar tres botones.  
+    4.  Click **Add** three times to add three buttons.  
   
-    5.  Haga clic en el primer botón y después cambie **caption** a `Nueva ventana`, y **Id** a `ID_WINDOW_NEW`.  
+    5.  Click the first button and then change **Caption** to `New Window`, and **ID** to `ID_WINDOW_NEW`.  
   
-    6.  Haga clic en el segundo botón y después cambie **caption** a `Cascada`, y **Id** a `ID_WINDOW_CASCADE`.  
+    6.  Click the second button and then change **Caption** to `Cascade`, and **ID** to `ID_WINDOW_CASCADE`.  
   
-    7.  Haga clic en el tercer botón y después cambie **caption** a `Mosaico`, y **Id** a `ID_WINDOW_TILE_HORZ`.  
+    7.  Click the third button and then change **Caption** to `Tile`, and **ID** to `ID_WINDOW_TILE_HORZ`.  
   
-3.  Guarde los cambios y, a continuación, compile y ejecute la aplicación.  Los paneles de **Visualización** y de **Ventana** deben mostrarse.  Haga clic en los botones para confirmar que funcionan correctamente.  
+3.  Save the changes, and then build and run the application. The **View** and **Window** panels should be displayed. Click the buttons to confirm that they function correctly.  
   
- \[[Secciones](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="addHelpPanel"></a> Agregar un panel de Ayuda a la cinta de opciones  
- Ahora, puede asignar dos elementos de menú definidos en la aplicación scribble a los botones de la cinta que se denominan **Temas de Ayuda** y **Sobre scribble**.  Los botones se agregan a un nuevo panel denominado **Ay&uda**.  
+##  <a name="addhelppanel"></a> Adding a Help Panel to the Ribbon  
+ Now, you can assign two menu items that are defined in the Scribble application to ribbon buttons that are named **Help Topics** and **About Scribble**. The buttons are added to a new panel named **Help**.  
   
-#### Para agregar un panel de Ayuda  
+#### <a name="to-add-a-help-panel"></a>To add a Help panel  
   
-1.  De **Cuadro de herramientas**, arrastre **Panel** a la categoría de **Domicilio** .  A continuación arrastre dos **Botones** al panel.  
+1.  From the **Toolbox**, drag a **Panel** to the **Home** category. Then drag two **Buttons** to the panel.  
   
-2.  Haga clic en el panel para modificar sus propiedades.  Cambio **caption** a `Ay&uda`.  
+2.  Click the panel to modify its properties. Change **Caption** to `Help`.  
   
-3.  Haga clic en el primer botón.  Cambio **caption** a `Temas de Ayuda`, y **Id** a `ID_HELP_FINDER`.  
+3.  Click the first button. Change **Caption** to `Help Topics`, and **ID** to `ID_HELP_FINDER`.  
   
-4.  Haga clic en el segundo botón.  Cambio **caption** a `Sobre scribble…`, y **Id** a `ID_APP_ABOUT`.  
+4.  Click the second button. Change **Caption** to `About Scribble...`, and **ID** to `ID_APP_ABOUT`.  
   
-5.  Guarde los cambios y, a continuación, compile y ejecute la aplicación.  Un panel de **Ay&uda** que contiene dos botones de cinta debe mostrar.  
+5.  Save the changes, and then build and run the application. A **Help** panel that contains two ribbon buttons should be displayed.  
   
     > [!IMPORTANT]
-    >  Al hacer clic en el botón de **Temas de Ayuda** , la aplicación scribble abra HTML comprimido \(.chm\) *your\_project\_name*denominado archivo de ayuda .chm.  Por consiguiente, si el proyecto no se denomina scribble, debe cambiar el nombre del archivo de ayuda en el nombre del proyecto.  
+    >  When you click the **Help Topics** button, the Scribble application opens a compressed HTML (.chm) help file named *your_project_name*.chm. Consequently, if your project is not named Scribble, you must rename the help file to your project name.  
   
- \[[Secciones](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="addPenPanel"></a> Agregar un panel de lápiz a la cinta de opciones  
- Ahora, agregue un panel a los botones de la pantalla que controlan el grosor y el color del lápiz.  Este panel contiene una casilla que alterna los lápices entre gruesos y precisión.  Su funcionalidad se parece al del elemento de menú de **Línea gruesa** en la aplicación scribble.  
+##  <a name="addpenpanel"></a> Adding a Pen Panel to the Ribbon  
+ Now, add a panel to display buttons that control the thickness and the color of the pen. This panel contains a check box that toggles between thick and thin pens. Its functionality resembles that of the **Thick Line** menu item in the Scribble application.  
   
- La aplicación original scribble permite al usuario seleccionar el ancho del lápiz de un cuadro de diálogo que aparece cuando el usuario hace clic en **Ancho del lápiz** en el menú.  Dado que la barra de la cinta de opciones tenga espacio suficiente para los nuevos controles, puede reemplazar el cuadro de diálogo mediante dos cuadros combinados de la cinta de opciones.  Un cuadro combinado contiene el ancho del lápiz preciso y el otro cuadro combinado contiene el ancho del lápiz general.  
+ The original Scribble application lets the user select pen widths from a dialog box that appears when the user clicks **Pen Widths** on the menu. Because the ribbon bar has ample room for new controls, you can replace the dialog box by using two combo boxes on the ribbon. One combo box adjusts the width of the thin pen and the other combo box adjusts the width of the thick pen.  
   
-#### Para agregar un panel y los cuadros combinados de lápiz a la cinta de opciones  
+#### <a name="to-add-a-pen-panel-and-combo-boxes-to-the-ribbon"></a>To add a Pen panel and combo boxes to the ribbon  
   
-1.  De **Cuadro de herramientas**, arrastre **Panel** a la categoría de **Domicilio** .  A continuación arrastre **Casilla** y dos **Cuadros combinados** al panel.  
+1.  From the **Toolbox**, drag a **Panel** to the **Home** category. Then drag a **Check Box** and two **Combo Boxes** to the panel.  
   
-2.  Haga clic en el panel para modificar sus propiedades.  Cambio **caption** a `Lápiz`.  
+2.  Click the panel to modify its properties. Change **Caption** to `Pen`.  
   
-3.  Haga clic en la casilla.  Cambio **caption** a `Uso densamente`, y **Id** a `ID_PEN_THICK_OR_THIN`.  
+3.  Click the check box. Change **Caption** to `Use Thick`, and **ID** to `ID_PEN_THICK_OR_THIN`.  
   
-4.  Haga clic en el primer cuadro combinado.  Cambio **caption** a `Delgada el lápiz`, a **Id** a `ID_PEN_THIN_WIDTH`, a **Texto** a `2`, a **Tipo** a `Drop List`, y a **datos** a `1; 2; 3; 4; 5; 6; 7; 8; 9;`.  
+4.  Click the first combo box. Change **Caption** to `Thin Pen`, **ID** to `ID_PEN_THIN_WIDTH`, **Text** to `2`, **Type** to `Drop List`, and **Data** to `1;2;3;4;5;6;7;8;9;`.  
   
-5.  Haga clic en el segundo cuadro combinado.  Cambio **caption** a `Lápiz generales`, a **Id** a `ID_PEN_THICK_WIDTH`, a **Texto** a `5`, a **Tipo** a `Drop List`, y a **datos** a `5; 6; 7; 8; 9; 10; 11; 12; 13; 14; 15; 16; 17; 18; 19; 20;`.  
+5.  Click the second combo box. Change **Caption** to `Thick Pen`, **ID** to `ID_PEN_THICK_WIDTH`, **Text** to `5`, **Type** to `Drop List`, and **Data** to `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`.  
   
-6.  Los nuevos cuadros combinados no corresponden a los elementos de menú existente.  Por consiguiente, debe crear un elemento de menú para cada opción de lápiz.  
+6.  The new combo boxes do not correspond to any existing menu items. Therefore, you must create a menu item for every pen option.  
   
-    1.  En la ventana de **vista de recursos** , abra el recurso de menú de IDR\_SCRIBBTYPE.  
+    1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  Haga clic en **Lápiz** para abrir el menú de**es** de p.  Haga clic en **Escriba aquí** y escriba `Thi&lápiz n`.  
+    2.  Click **Pen** to open the p**en** menu. Then click **Type Here** and type `Thi&n Pen`.  
   
-    3.  Haga clic con el botón secundario en el texto que acaba de escribir para abrir la ventana de **Propiedades** , y cambie la propiedad ID en `ID_PEN_THIN_WIDTH`.  
+    3.  Right-click the text that you just typed to open the **Properties** window, and then change the ID property to `ID_PEN_THIN_WIDTH`.  
   
-    4.  También debe crear un controlador para cada elemento de menú del lápiz.  Haga clic con el botón secundario en el elemento de menú de **Thi&lápiz n** recién creada y haga clic en **Agregar controlador de eventos**.  Se muestra **Asistente para controladores de eventos** .  
+    4.  You must also create an event handler for every pen menu item. Right-click the **Thi&n Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
-    5.  En el cuadro de **Lista de clase** en el asistente, seleccione **CScribbleDoc** y haga clic en **Agregar y editar**.  Esto crea un controlador de eventos denominado `CScribbleDoc::OnPenThinWidth`.  
+    5.  In the **Class list** box in the wizard, select **CScribbleDoc** and then click **Add and Edit**. This creates an event handler named `CScribbleDoc::OnPenThinWidth`.  
   
-    6.  Agregue el código siguiente a `CScribbleDoc::OnPenThinWidth`.  
+    6.  Add the following code to `CScribbleDoc::OnPenThinWidth`.  
   
-        ```  
-        // Get a pointer to the ribbon bar  
-        CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();  
-        ASSERT_VALID(pRibbon);  
-        // Get a pointer to the Thin Width combo box  
-        CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST(  
-           CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THIN_WIDTH));  
-        //Get the selected value  
-        int nCurSel = pThinComboBox->GetCurSel();  
-        if (nCurSel >= 0)  
-        {  
-           m_nThinWidth = atoi(pThinComboBox->GetItem(nCurSel));  
-        }  
-        // Create a new pen using the selected width  
-        ReplacePen();    
-        ```  
+ ``` *// Get a pointer to the ribbon bar CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar(); ASSERT_VALID(pRibbon); *// Get a pointer to the Thin Width combo box CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST( CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THIN_WIDTH)); *//Get the selected value  
+    int nCurSel = pThinComboBox->GetCurSel(); if (nCurSel>= 0)  
+{  
+m_nThinWidth = atoi(pThinComboBox->GetItem(nCurSel));
+
+ } *// Create a new pen using the selected width  
+    ReplacePen();
+
+ ```  
   
-7.  A continuación, cree un elemento de menú y controladores de eventos para el lápiz general.  
+7.  Next, create a menu item and event handlers for the thick pen.  
   
-    1.  En la ventana de **vista de recursos** , abra el recurso de menú de IDR\_SCRIBBTYPE.  
+    1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  Haga clic en **Lápiz** para abrir el menú del lápiz.  Haga clic en **Escriba aquí** y escriba `Thic&lápiz de k`.  
+    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type `Thic&k Pen`.  
   
-    3.  Haga clic con el botón secundario en el texto que acaba de escribir para mostrar la ventana de **Propiedades** .  Cambie la propiedad ID en `ID_PEN_THICK_WIDTH`.  
+    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to `ID_PEN_THICK_WIDTH`.  
   
-    4.  Haga clic con el botón secundario en el elemento de menú de **Lápiz generales** recién creada y haga clic en **Agregar controlador de eventos**.  Se muestra **Asistente para controladores de eventos** .  
+    4.  Right-click the **Thick Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
-    5.  En el cuadro de **Lista de clase** del asistente, seleccione **CScribbleDoc** y haga clic en **Agregar y editar**.  Esto crea un controlador de eventos denominado `CScribbleDoc::OnPenThickWidth`.  
+    5.  In the **Class list** box of the wizard, select **CScribbleDoc** and then click **Add and Edit**. This creates an event handler named `CScribbleDoc::OnPenThickWidth`.  
   
-    6.  Agregue el código siguiente a `CScribbleDoc::OnPenThickWidth`.  
+    6.  Add the following code to `CScribbleDoc::OnPenThickWidth`.  
   
-        ```  
-        // Get a pointer to the ribbon bar  
-        CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx *) AfxGetMainWnd())->GetRibbonBar();  
-        ASSERT_VALID(pRibbon);  
-        CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST(  
-           CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THICK_WIDTH));  
-        // Get the selected value  
-        int nCurSel = pThickComboBox->GetCurSel();  
-        if (nCurSel >= 0)  
-        {  
-           m_nThickWidth = atoi(pThickComboBox->GetItem(nCurSel));  
-        }  
-        // Create a new pen using the selected width  
-        ReplacePen();  
-        ```  
+ ``` *// Get a pointer to the ribbon bar  
+    CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx *) AfxGetMainWnd())->GetRibbonBar();
+ASSERT_VALID(pRibbon);
+
+ CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST(
+    CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THICK_WIDTH));
+*// Get the selected value  
+    int nCurSel = pThickComboBox->GetCurSel();
+if (nCurSel>= 0)  
+ {  
+    m_nThickWidth = atoi(pThickComboBox->GetItem(nCurSel));
+
+ } *// Create a new pen using the selected width  
+    ReplacePen();
+
+ ```  
   
-8.  Guarde los cambios y, a continuación, compile y ejecute la aplicación.  Los nuevos botones y cuadros combinados deben mostrarse.  Intente usar diferentes anchos del pincel a garabatear.  
+8.  Save the changes, and then build and run the application. New buttons and combo boxes should be displayed. Try using different pen widths to scribble.  
   
- \[[Secciones](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="addColorButton"></a> Agregar un botón de color al panel del lápiz  
- A continuación, agregue un objeto de [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) que permite al usuario garabatear de color.  
+##  <a name="addcolorbutton"></a> Adding a Color Button to the Pen Panel  
+ Next, add a [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) object that lets the user scribble in color.  
   
-#### Para agregar un botón de color al panel del lápiz  
+#### <a name="to-add-a-color-button-to-the-pen-panel"></a>To add a color button to the Pen panel  
   
-1.  Antes de agregar el botón de color, cree un elemento de menú para él.  En la ventana de **vista de recursos** , abra el recurso de menú de IDR\_SCRIBBTYPE.  Haga clic en el elemento de menú de **Lápiz** para abrir el menú del lápiz.  Haga clic en **Escriba aquí** y escriba `&Color`.  Haga clic con el botón secundario en el texto que acaba de escribir para mostrar la ventana de **Propiedades** .  Cambie el identificador a `ID_PEN_COLOR`.  
+1.  Before you add the color button, create a menu item for it. In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource. Click the **Pen** menu item to open the pen menu. Then click **Type Here** and type `&Color`. Right-click the text that you just typed to display the **Properties** window. Change the ID to `ID_PEN_COLOR`.  
   
-2.  Ahora agregue el botón de color.  De **Cuadro de herramientas**, arrastre **Botón Color** al panel de **Lápiz** .  
+2.  Now add the color button. From the **Toolbox**, drag a **Color Button** to the **Pen** panel.  
   
-3.  Haga clic en el botón de color.  Cambie **caption** a `Color`, **Id** a `ID_PEN_COLOR`, **SimpleBusque** a `VERDADERO`, **Índice grande de la imagen** a `1`, y **Modo dividido** a `False`.  
+3.  Click the color button. Change **Caption** to `Color`, **ID** to `ID_PEN_COLOR`, **SimpleLook** to `True`, **Large Image Index** to `1`, and **Split Mode** to `False`.  
   
-4.  Guarde los cambios y, a continuación, compile y ejecute la aplicación.  El nuevo botón de color se debería mostrar en el panel de **Lápiz** .  Sin embargo, no puede utilizar porque todavía no tiene un controlador de eventos.  Los pasos siguientes se muestra cómo agregar un controlador de eventos para el botón de color.  
+4.  Save the changes, and then build and run the application. The new color button should be displayed on the **Pen** panel. However, it cannot be used because it does not yet have an event handler. The next steps show how to add an event handler for the color button.  
   
- \[[Secciones](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="addColorMember"></a> Agregar un miembro de color para la clase document  
- Dado que la aplicación original scribble no tiene lápices color, debe escribir una implementación para ellos.  Para almacenar el color del lápiz del documento, agregue un nuevo miembro a la clase document, `CscribbleDoc.`  
+##  <a name="addcolormember"></a> Adding a Color Member to the Document Class  
+ Because the original Scribble application does not have color pens, you must write an implementation for them. To store the pen color of the document, add a new member to the document class, `CscribbleDoc.`  
   
-#### Para agregar un miembro de color para la clase document  
+#### <a name="to-add-a-color-member-to-the-document-class"></a>To add a color member to the document class  
   
-1.  En scribdoc.h, en la clase de `CScribbleDoc` , busque la sección de `// Attributes` .  Agregue las siguientes líneas de código después de la definición de miembros de datos de `m_nThickWidth` .  
+1.  In scribdoc.h, in the `CScribbleDoc` class, find the `// Attributes` section. Add the following lines of code after the definition of the `m_nThickWidth` data member.  
   
-    ```  
-    // Current pen color  
-    COLORREF   m_penColor;  
-    ```  
+ ``` *// Current pen color  
+    COLORREF m_penColor;  
+ ```  
   
-2.  Cada documento contiene una lista de alimenta que el usuario ha dibujado.  Cada trazo se define como un objeto de `CStroke` .  La clase de `CStroke` no incluye información sobre el color del lápiz.  Por consiguiente, debe modificar la clase.  En scribdoc.h, en la clase de `CStroke` , agregue las siguientes líneas de código después de la definición de miembros de datos de `m_nPenWidth` .  
+2.  Every document contains a list of stokes that the user has already drawn. Every stroke is defined by a `CStroke` object. The `CStroke` class does not include information about pen color. Therefore, you must modify the class. In scribdoc.h, in the `CStroke` class, add the following lines of code after the definition of the `m_nPenWidth` data member.  
   
-    ```  
-    // Pen color for the stroke  
-    COLORREF   m_penColor;  
-    ```  
+ ``` *// Pen color for the stroke  
+    COLORREF m_penColor;  
+ ```  
   
-3.  En scribdoc.h, agregue un nuevo constructor de `CStroke` cuyos parámetros especifican un ancho y color.  Agregue la siguiente línea de código después de la instrucción de `CStroke(UINT nPenWidth);` .  
+3.  In scribdoc.h, add a new `CStroke` constructor whose parameters specify a width and color. Add the following line of code after the `CStroke(UINT nPenWidth);` statement.  
   
-    ```  
-    CStroke(UINT nPenWidth, COLORREF penColor);  
-    ```  
+ ```  
+    CStroke(UINT nPenWidth, COLORREF penColor);
+
+ ```  
   
-4.  En scribdoc.cpp, agregue la implementación del nuevo constructor de `CStroke` .  Agregue el código siguiente después de la implementación de constructor de `CStroke::CStroke(UINT nPenWidth)` .  
+4.  In scribdoc.cpp, add the implementation of the new `CStroke` constructor. Add the following code after the implementation of the `CStroke::CStroke(UINT nPenWidth)` constructor.  
   
-    ```  
-    // Constructor that uses the document's current width and color  
+ ``` *// Constructor that uses the document's current width and color  
     CStroke::CStroke(UINT nPenWidth, COLORREF penColor)  
-    {  
-       m_nPenWidth = nPenWidth;  
-       m_penColor = penColor;  
-       m_rectBounding.SetRectEmpty();  
-    }  
-    ```  
+ {  
+    m_nPenWidth = nPenWidth;  
+    m_penColor = penColor;  
+    m_rectBounding.SetRectEmpty();
+
+ }  
+ ```  
   
-5.  Cambie la segunda línea del método de `CStroke::DrawStroke` como sigue.  
+5.  Change the second line of the `CStroke::DrawStroke` method as follows.  
   
-    ```  
+ ```  
     if (!penStroke.CreatePen(PS_SOLID, m_nPenWidth, m_penColor))  
-    ```  
+ ```  
   
-6.  Establezca el color del lápiz predeterminado para la clase del documento.  En scribdoc.cpp, agregue las líneas siguientes a `CScribbleDoc::InitDocument`, después de la instrucción de `m_nThickWidth = 5;` .  
+6.  Set the default pen color for the document class. In scribdoc.cpp, add the following lines to `CScribbleDoc::InitDocument`, after the `m_nThickWidth = 5;` statement.  
   
-    ```  
-    // default pen color is black  
-    m_penColor = RGB(0,0,0);   
-    ```  
+ ``` *// default pen color is black  
+    m_penColor = RGB(0,
+    0,
+    0);
+
+ ```  
   
-7.  En scribdoc.cpp, cambie la primera línea del método de `CScribbleDoc::NewStroke` al siguiente.  
+7.  In scribdoc.cpp, change the first line of the `CScribbleDoc::NewStroke` method to the following.  
   
-    ```  
-    CStroke* pStrokeItem = new CStroke(m_nPenWidth, m_penColor);  
-    ```  
+ ```  
+    CStroke* pStrokeItem = new CStroke(m_nPenWidth, m_penColor);
+
+ ```  
   
-8.  Cambie la última línea del método de `CScribbleDoc::ReplacePen` al siguiente.  
+8.  Change the last line of the `CScribbleDoc::ReplacePen` method to the following.  
   
-    ```  
-    m_penCur.CreatePen(PS_SOLID, m_nPenWidth, m_penColor);  
-    ```  
+ ```  
+    m_penCur.CreatePen(PS_SOLID,
+    m_nPenWidth,
+    m_penColor);
+
+ ```  
   
-9. Agregó al miembro de `m_penColor` en un paso anterior.  Ahora, cree un controlador de eventos para el botón de color que establezca el miembro.  
+9. You added the `m_penColor` member in a previous step. Now, create an event handler for the color button that sets the member.  
   
-    1.  En la ventana de **vista de recursos** , abra el recurso de menú de IDR\_SCRIBBTYPE.  
+    1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  Haga clic con el botón secundario en el elemento de menú y haga clic en **Agregar controlador de eventos...**de **Color** .  **Asistente para controladores de eventos** Aparece.  
+    2.  Right-click the **Color** menu item and click **Add Event Handler**. The **Event Handler Wizard** appears.  
   
-    3.  En el cuadro de **Lista de clase** en el asistente, seleccione **CScribbleDoc** y haga clic en el botón de **Agregar y editar** .  Esto crea el código auxiliar del controlador de eventos `CScribbleDoc::OnPenColor` .  
+    3.  In the **Class list** box in the wizard, select **CScribbleDoc** and then click the **Add and Edit** button. This creates the `CScribbleDoc::OnPenColor` event handler stub.  
   
-10. Reemplace el código auxiliar para el controlador de eventos `CScribbleDoc::OnPenColor` con el código siguiente.  
+10. Replace the stub for the `CScribbleDoc::OnPenColor` event handler with the following code.  
   
-    ```  
+ ```  
     void CScribbleDoc::OnPenColor()  
-    {  
-    // Change pen color to reflect color button's current selection  
-    CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();  
-    ASSERT_VALID(pRibbon);  
-    CMFCRibbonColorButton* pColorBtn = DYNAMIC_DOWNCAST(  
-       CMFCRibbonColorButton, pRibbon->FindByID(ID_PEN_COLOR));  
-    m_penColor = pColorBtn->GetColor();  
-    // Create new pen using the selected color  
-    ReplacePen();  
-    }  
-    ```  
+ { *// Change pen color to reflect color button's current selection  
+    CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();
+ASSERT_VALID(pRibbon);
+
+ CMFCRibbonColorButton* pColorBtn = DYNAMIC_DOWNCAST(
+    CMFCRibbonColorButton, pRibbon->FindByID(ID_PEN_COLOR));
+
+    m_penColor = pColorBtn->GetColor();
+*// Create new pen using the selected color  
+    ReplacePen();
+
+ }  
+ ```  
   
-11. Guarde los cambios y, a continuación, compile y ejecute la aplicación.  Debe poder presionar el botón de color y cambiar el color del lápiz.  
+11. Save the changes and then build and run the application. You should be able to press the color button and change the pen's color.  
   
- \[[Secciones](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="initPenSave"></a> Lápices que inicializan y guardar preferencias  
- A continuación, inicializa el color y el ancho de los lápices.  Finalmente, guardado y carga un gráfico de color de un archivo.  
+##  <a name="initpensave"></a> Initializing Pens and Saving Preferences  
+ Next, initialize the color and width of the pens. Finally, save and load a color drawing from a file.  
   
-#### Para inicializar los controles de la barra de la cinta de opciones  
+#### <a name="to-initialize-controls-on-the-ribbon-bar"></a>To initialize controls on the ribbon bar  
   
-1.  Inicializa los lápices en la barra de la cinta de opciones.  
+1.  Initialize the pens on the ribbon bar.  
   
-     Agregue el código siguiente a scribdoc.cpp, en el método de `CScribbleDoc::InitDocument` , después de la instrucción de `m_sizeDoc = CSize(200,200)` .  
+     Add the following code to scribdoc.cpp, in the `CScribbleDoc::InitDocument` method, after the `m_sizeDoc = CSize(200,200)` statement.  
   
-    ```  
-    // Reset the ribbon UI to its initial values  
-    CMFCRibbonBar* pRibbon =   
-       ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();  
-    ASSERT_VALID(pRibbon);  
-    CMFCRibbonColorButton* pColorBtn = DYNAMIC_DOWNCAST(  
-       CMFCRibbonColorButton,   
-       pRibbon->FindByID(ID_PEN_COLOR));  
-    // Set ColorButton to black  
-    pColorBtn->SetColor(RGB(0,0,0));    
-    CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST(  
-       CMFCRibbonComboBox,   
-       pRibbon->FindByID(ID_PEN_THIN_WIDTH));  
-    // Set Thin pen combobox to 2  
-    pThinComboBox->SelectItem(1);   
-    CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST(  
-       CMFCRibbonComboBox,   
-       pRibbon->FindByID(ID_PEN_THICK_WIDTH));  
-    // Set Thick pen combobox to 5  
-    pThickComboBox->SelectItem(0);  
-    ```  
+ ``` *// Reset the ribbon UI to its initial values CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar(); ASSERT_VALID(pRibbon);
+
+ CMFCRibbonColorButton* pColorBtn = DYNAMIC_DOWNCAST( CMFCRibbonColorButton, pRibbon->FindByID(ID_PEN_COLOR)); *// Set ColorButton to black  
+    pColorBtn->SetColor(RGB(0, 0, 0));
+
+ CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST( CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THIN_WIDTH)); *// Set Thin pen combobox to 2  
+    pThinComboBox->SelectItem(1);
+
+ CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST( CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THICK_WIDTH)); *// Set Thick pen combobox to 5  
+    pThickComboBox->SelectItem(0);
+
+ ```  
   
-2.  Guardar un gráfico de color en un archivo.  Agregue la instrucción siguiente a scribdoc.cpp, en el método de `CStroke::Serialize` , después de la instrucción de `ar << (WORD)m_nPenWidth;` .  
+2.  Save a color drawing to a file. Add the following statement to scribdoc.cpp, in the `CStroke::Serialize` method, after the `ar << (WORD)m_nPenWidth;` statement.  
   
-    ```  
-    ar << (COLORREF)m_penColor;  
-    ```  
+ ```  
+    ar <<(COLORREF)m_penColor;  
+ ```  
   
-3.  Finalmente, cargue un gráfico de color de un archivo.  Agregue la siguiente línea de código, en el método de `CStroke::Serialize` , después de la instrucción de `m_nPenWidth = w;` .  
+3.  Finally, load a color drawing from a file. Add the following line of code, in the `CStroke::Serialize` method, after the `m_nPenWidth = w;` statement.  
   
-    ```  
-    ar >> m_penColor;  
-    ```  
+ ```  
+    ar>> m_penColor;  
+ ```  
   
-4.  Ahora scribble de color y guarde el gráfico en un archivo.  
+4.  Now scribble in color and save your drawing to a file.  
   
- \[[Secciones](#top)\]  
+ [[Sections](#top)]  
   
-## Conclusión  
- Se ha actualizado la aplicación scribble de MFC.  Utilice este tutorial como guía al modificar las aplicaciones existentes.  
+## Conclusion  
+ You have updated the MFC Scribble application. Use this walkthrough as a guide when you modify your existing applications.  
   
-## Vea también  
- [Tutoriales](../mfc/walkthroughs-mfc.md)   
- [Tutorial: Actualizar la aplicación Scribble de MFC \(Parte 1\)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+## See Also  
+ [Walkthroughs](../mfc/walkthroughs-mfc.md)   
+ [Walkthrough: Updating the MFC Scribble Application (Part 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+
+

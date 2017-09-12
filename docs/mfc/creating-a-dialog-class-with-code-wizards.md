@@ -1,50 +1,69 @@
 ---
-title: "Crear una clase de di&#225;logo con los Asistentes para c&#243;digo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "asistentes para código"
-  - "cuadros de diálogo, crear"
-  - "clases de cuadro de diálogo, crear"
-  - "cuadros de diálogo de MFC, crear"
+title: Creating a Dialog Class with Code Wizards | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog boxes [MFC], creating
+- MFC dialog boxes, creating
+- code wizards
+- dialog classes [MFC], creating
 ms.assetid: a7157b9d-f1a8-4381-a4cf-180cd2c7f1b2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Crear una clase de di&#225;logo con los Asistentes para c&#243;digo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eebbf99c5379bac838071c36258b48e73ed99247
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La tabla siguiente muestra tareas diálogo\- relacionadas que los asistentes para código administra.  
+---
+# <a name="creating-a-dialog-class-with-code-wizards"></a>Creating a Dialog Class with Code Wizards
+The following table lists dialog-related tasks that Code Wizards help you manage.  
   
-### Tareas Diálogo\-relacionadas  
+### <a name="dialog-related-tasks"></a>Dialog-Related Tasks  
   
-|Tarea|Aplique a. . .|  
-|-----------|--------------------|  
-|[Cree una nueva clase CDialog\-derivada](../mfc/creating-your-dialog-class.md) para administrar el cuadro de diálogo.|Cada cuadro de diálogo.|  
-|[Mensajes de Windows de mapa](../mfc/handling-windows-messages-in-your-dialog-box.md) a la clase de diálogo.|Cada mensaje que desea administrado.|  
-|Declare las variables miembro de clase para representar los controles en el cuadro de diálogo.|Cada control que produce un texto o valor numérico desea tener acceso al programa.|  
-|Especifique [cómo se van intercambiado](../mfc/dialog-data-exchange-and-validation.md) entre los controles y las variables miembro.|Cada control que desea obtener acceso al programa.|  
-|Especifique [reglas de validación](../mfc/dialog-data-exchange-and-validation.md) para variables miembro.|Cada control que produce un texto o valor numérico, si lo desea.|  
+|Task|Apply to . . .|  
+|----------|--------------------|  
+|[Create a new CDialog-derived class](../mfc/creating-your-dialog-class.md) to manage your dialog box.|Each dialog box.|  
+|[Map Windows messages](../mfc/handling-windows-messages-in-your-dialog-box.md) to your dialog class.|Each message you want handled.|  
+|Declare class member variables to represent the controls in the dialog box.|Each control that yields a text or numeric value you want to access from your program.|  
+|Specify [how data is to be exchanged](../mfc/dialog-data-exchange-and-validation.md) between the controls and the member variables.|Each control you want to access from your program.|  
+|Specify [validation rules](../mfc/dialog-data-exchange-and-validation.md) for the member variables.|Each control that yields a text or numeric value, if desired.|  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Crear la clase de diálogo](../mfc/creating-your-dialog-class.md)  
+-   [Creating your dialog class](../mfc/creating-your-dialog-class.md)  
   
--   [Controlar mensajes de Windows en el cuadro de diálogo](../mfc/handling-windows-messages-in-your-dialog-box.md)  
+-   [Handling Windows messages in your dialog box](../mfc/handling-windows-messages-in-your-dialog-box.md)  
   
--   [Diálogo de intercambio y validación](../mfc/dialog-data-exchange-and-validation.md)  
+-   [Dialog data exchange and validation](../mfc/dialog-data-exchange-and-validation.md)  
   
-## Vea también  
- [Cuadros de diálogo](../mfc/dialog-boxes.md)   
- [Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

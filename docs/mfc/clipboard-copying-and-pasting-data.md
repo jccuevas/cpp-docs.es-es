@@ -1,79 +1,98 @@
 ---
-title: "Portapapeles: Copiar y pegar datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Portapapeles, copiar datos"
-  - "Portapapeles, pegar"
+title: 'Clipboard: Copying and Pasting Data | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Clipboard, copying data to
+- Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Portapapeles: Copiar y pegar datos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19305f919f7276b17ac24c5e2907a8a84b23e13e
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Este tema describe el trabajo mínimo necesario implementar copiar y pegar desde el portapapeles en la aplicación OLE.  Se recomienda leer los temas de [Objetos de datos y orígenes de datos \(OLE\)](../mfc/data-objects-and-data-sources-ole.md) antes de continuar.  
+---
+# <a name="clipboard-copying-and-pasting-data"></a>Clipboard: Copying and Pasting Data
+This topic describes the minimum work necessary to implement copying to and pasting from the Clipboard in your OLE application. It is recommended that you read the [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md) topics before proceeding.  
   
- Antes de implementar copiar o pegar, primero debe proporcionar funciones para controlar la copia, las opciones corta, y pegue en el menú Edición.  
+ Before you can implement either copying or pasting, you must first provide functions to handle the Copy, Cut, and Paste options on the Edit menu.  
   
-##  <a name="_core_copying_or_cutting_data"></a> Copiar o datos reduciendo  
+##  <a name="_core_copying_or_cutting_data"></a> Copying or Cutting Data  
   
-#### Para copiar datos en el portapapeles  
+#### <a name="to-copy-data-to-the-clipboard"></a>To copy data to the Clipboard  
   
-1.  Determine si los datos se copiará es datos nativos o es un elemento incrustado o vinculado.  
+1.  Determine whether the data to be copied is native data or is an embedded or linked item.  
   
-    -   Si se inserta o se vincula los datos, obtenga un puntero al objeto de `COleClientItem` se ha seleccionado que.  
+    -   If the data is embedded or linked, obtain a pointer to the `COleClientItem` object that has been selected.  
   
-    -   Si los datos son nativo y la aplicación es un servidor, cree un nuevo objeto derivado de `COleServerItem` que contiene los datos seleccionados.  Si no, cree un objeto de `COleDataSource` para los datos.  
+    -   If the data is native and the application is a server, create a new object derived from `COleServerItem` containing the selected data. Otherwise, create a `COleDataSource` object for the data.  
   
-2.  Llame a la función miembro de `CopyToClipboard` del elemento seleccionado.  
+2.  Call the selected item's `CopyToClipboard` member function.  
   
-3.  Si el usuario eligió una operación de cortar en lugar de una operación de copia, elimine los datos seleccionados de la aplicación.  
+3.  If the user chose a Cut operation instead of a Copy operation, delete the selected data from your application.  
   
- Para ver un ejemplo de esta secuencia, vea **OnEditCut** y **OnEditCopy** funciona en los programas de ejemplo de OLE [OCLIENT](../top/visual-cpp-samples.md) y [HIERSVR](../top/visual-cpp-samples.md)MFC.  Observe que estos ejemplos mantienen un puntero a los datos seleccionados actualmente, por lo que el paso 1 ya se ha completado.  
+ To see an example of this sequence, see the **OnEditCut** and **OnEditCopy** functions in the MFC OLE sample programs [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md). Note that these samples maintain a pointer to the currently selected data, so step 1 is already complete.  
   
-##  <a name="_core_pasting_data"></a> Datos de pegar  
- Pegar datos es más complicado que copiándolo porque necesita elegir el formato para utilizar en pegar los datos en la aplicación.  
+##  <a name="_core_pasting_data"></a> Pasting Data  
+ Pasting data is more complicated than copying it because you need to choose the format to use in pasting the data into your application.  
   
-#### Para pegar datos del portapapeles  
+#### <a name="to-paste-data-from-the-clipboard"></a>To paste data from the Clipboard  
   
-1.  En la clase de vista, implementar **OnEditPaste** para controlar los usuarios que elija la opción de pegar el menú Edición.  
+1.  In your view class, implement **OnEditPaste** to handle users choosing the Paste option from the Edit menu.  
   
-2.  En función de **OnEditPaste** , cree un objeto de `COleDataObject` y llame a su función miembro de `AttachClipboard` para vincular este objeto a los datos en el portapapeles.  
+2.  In the **OnEditPaste** function, create a `COleDataObject` object and call its `AttachClipboard` member function to link this object to the data on the Clipboard.  
   
-3.  Llame a `COleDataObject::IsDataAvailable` para comprobar si un formato determinado está disponible.  
+3.  Call `COleDataObject::IsDataAvailable` to check whether a particular format is available.  
   
-     Como alternativa, puede utilizar `COleDataObject::BeginEnumFormats` para buscar otros formatos hasta encontrar uno adecuado más a la aplicación.  
+     Alternately, you can use `COleDataObject::BeginEnumFormats` to look for other formats until you find one most suited to your application.  
   
-4.  Realice pegar de formato.  
+4.  Perform the paste of the format.  
   
- Para obtener un ejemplo de cómo funciona esto, vea la de las funciones miembro de **OnEditPaste** en las clases de vista definidas en los programas de ejemplo de OLE [OCLIENT](../top/visual-cpp-samples.md) y [HIERSVR](../top/visual-cpp-samples.md)MFC.  
+ For an example of how this works, see the implementation of the **OnEditPaste** member functions in the view classes defined in the MFC OLE sample programs [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md).  
   
 > [!TIP]
->  La ventaja principal de separar la operación de pegar en su propia función es que el mismo código de pegar puede utilizar cuando se colocan los datos en la aplicación durante una operación de arrastrar y colocar.  Como en OCLIENT e HIERSVR, la función de `OnDrop` también puede llamar **DoPasteItem**, reutilizar el código escrito a las operaciones de pegar de implementan.  
+>  The main benefit of separating the paste operation into its own function is that the same paste code can be used when data is dropped in your application during a drag-and-drop operation. As in OCLIENT and HIERSVR, your `OnDrop` function can also call **DoPasteItem**, reusing the code written to implement Paste operations.  
   
- Para controlar la opción de Pegado especial en el menú Edición, vea el tema [Cuadros de diálogo de OLE](../mfc/dialog-boxes-in-ole.md).  
+ To handle the Paste Special option on the Edit menu, see the topic [Dialog Boxes in OLE](../mfc/dialog-boxes-in-ole.md).  
   
-### ¿Sobre qué desea obtener más información?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Agregar otros formatos](../mfc/clipboard-adding-other-formats.md)  
+-   [Adding other formats](../mfc/clipboard-adding-other-formats.md)  
   
--   [Objetos de datos de OLE y orígenes de datos y transferencia de datos uniforme](../mfc/data-objects-and-data-sources-ole.md)  
+-   [OLE data objects and data sources and uniform data transfer](../mfc/data-objects-and-data-sources-ole.md)  
   
--   [Arrastrar y colocar de OLE](../mfc/drag-and-drop-ole.md)  
+-   [OLE drag and drop](../mfc/drag-and-drop-ole.md)  
   
 -   [OLE](../mfc/ole-background.md)  
   
-## Vea también  
- [Portapapeles: Usar el mecanismo del Portapapeles de OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard: Using the OLE Clipboard Mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+

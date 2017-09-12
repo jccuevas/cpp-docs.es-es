@@ -1,81 +1,100 @@
 ---
-title: "Clases de aplicaci&#243;n y de compatibilidad con subprocesos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.support"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objetos de aplicación [C++], subproceso que admite clases"
-  - "clases de aplicación y de compatibilidad [C++]"
-  - "bloquear clases"
-  - "clases de sincronización, multithreading"
-  - "subproceso que admite clases [C++]"
-  - "subprocesamiento [MFC]"
+title: Application and Thread Support Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.support
+dev_langs:
+- C++
+helpviewer_keywords:
+- application objects [MFC], thread support classes
+- lock classes [MFC]
+- thread support classes [MFC]
+- threading [MFC]
+- synchronization classes [MFC], multithreading
+- application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Clases de aplicaci&#243;n y de compatibilidad con subprocesos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 78d1c48f6b07999a1736bb443d1b1e31b2454cac
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Cada aplicación tiene solo un objeto application; este objeto coordina otros objetos del programa en ejecución y se deriva de `CWinApp`.  
+---
+# <a name="application-and-thread-support-classes"></a>Application and Thread Support Classes
+Each application has one and only one application object; this object coordinates other objects in the running program and is derived from `CWinApp`.  
   
- La biblioteca de \(MFC\) de la clase de la base de Microsoft admite varios subprocesos de ejecución dentro de una aplicación.  Todas las aplicaciones deben tener al menos un subproceso; el subproceso utilizado por el objeto de `CWinApp` es este subproceso primario.  
+ The Microsoft Foundation Class (MFC) Library supports multiple threads of execution within an application. All applications must have at least one thread; the thread used by your `CWinApp` object is this primary thread.  
   
- `CWinThread` encapsula una parte de las capacidades de subprocesamiento del sistema operativo.  Para crear mediante varios subprocesos más fácil, MFC también proporciona clases de objeto de sincronización para proporcionar la interfaz de c\+\+. para los objetos de sincronización de Win32.  
+ `CWinThread` encapsulates a portion of the operating system's threading capabilities. To make using multiple threads easier, MFC also provides synchronization object classes to provide a C++ interface to Win32 synchronization objects.  
   
-## Clases de aplicación y subprocesos  
+## <a name="application-and-thread-classes"></a>Application and Thread Classes  
  [CWinApp](../mfc/reference/cwinapp-class.md)  
- Encapsula el código para inicializar, ejecutar, y para finalizar la aplicación.  Se derivará el objeto application de esta clase.  
+ Encapsulates the code to initialize, run, and terminate the application. You will derive your application object from this class.  
   
  [CWinThread](../mfc/reference/cwinthread-class.md)  
- La clase base para todos los subprocesos.  Utilice directamente, o derivando una clase de `CWinThread` si el subproceso realiza funciones de la interfaz de usuario.  `CWinApp` se deriva de `CWinThread`.  
+ The base class for all threads. Use directly, or derive a class from `CWinThread` if your thread performs user-interface functions. `CWinApp` is derived from `CWinThread`.  
   
-## Clases de objeto de sincronización  
+## <a name="synchronization-object-classes"></a>Synchronization Object Classes  
  [CSyncObject](../mfc/reference/csyncobject-class.md)  
- Clase base de las clases de objeto de sincronización.  
+ Base class of the synchronization object classes.  
   
  [CCriticalSection](../mfc/reference/ccriticalsection-class.md)  
- Una clase de sincronización que permite que sólo un subproceso en un solo proceso tiene acceso a un objeto.  
+ A synchronization class that allows only one thread within a single process to access an object.  
   
  [CSemaphore](../mfc/reference/csemaphore-class.md)  
- Una clase de sincronización que permite entre uno y un número máximo especificado de accesos simultáneos a un objeto.  
+ A synchronization class that allows between one and a specified maximum number of simultaneous accesses to an object.  
   
  [CMutex](../mfc/reference/cmutex-class.md)  
- Una clase de sincronización que permite que sólo un subproceso dentro de cualquier número de procesos tengan acceso a un objeto.  
+ A synchronization class that allows only one thread within any number of processes to access an object.  
   
  [CEvent](../mfc/reference/cevent-class.md)  
- Una clase de sincronización que notifica a una aplicación cuando se ha producido un evento.  
+ A synchronization class that notifies an application when an event has occurred.  
   
  [CSingleLock](../mfc/reference/csinglelock-class.md)  
- Se utiliza en funciones miembro de clases seguras para subprocesos para bloquear en un objeto de sincronización.  
+ Used in member functions of thread-safe classes to lock on one synchronization object.  
   
  [CMultiLock](../mfc/reference/cmultilock-class.md)  
- Se utiliza en funciones miembro de clases seguras para subprocesos para bloquear en uno o más objetos de sincronización de una matriz de objetos de sincronización.  
+ Used in member functions of thread-safe classes to lock on one or more synchronization objects from an array of synchronization objects.  
   
-## Clases relacionadas  
+## <a name="related-classes"></a>Related Classes  
  [CCommandLineInfo](../mfc/reference/ccommandlineinfo-class.md)  
- Analiza la línea de comandos con la que el programa se inició.  
+ Parses the command line with which your program was started.  
   
  [CWaitCursor](../mfc/reference/cwaitcursor-class.md)  
- Coloca una espera el cursor en la pantalla.  Utilizado durante operaciones largas.  
+ Puts a wait cursor on the screen. Used during lengthy operations.  
   
  [CDockState](../mfc/reference/cdockstate-class.md)  
- Controla el almacenamiento permanente de los datos de estado de vinculación de las barras de control.  
+ Handles persistent storage of docking state data for control bars.  
   
  [CRecentFileList](../mfc/reference/crecentfilelist-class.md)  
- Mantiene la lista de archivos usados recientemente utilizada de \(MRU\).  
+ Maintains the most recently used (MRU) file list.  
   
-## Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

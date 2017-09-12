@@ -1,60 +1,78 @@
 ---
-title: "Marco (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "API [C++], encapsulación por Win32 MFC"
-  - "marco de trabajo de la aplicación [C++], acerca del marco de trabajo de la aplicación MFC"
-  - "API Win32 encapsulada"
-  - "encapsulación [C++]"
-  - "encapsulación [C++], API Win32"
-  - "MFC [C++], marco de trabajo de la aplicación"
-  - "Win32 [C++], encapsulación API por MFC"
-  - "API de Windows [C++], encapsulación por MFC"
-  - "clases contenedoras, explicadas"
+title: Framework (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- encapsulation [MFC], Win32 API
+- MFC, application framework
+- wrapper classes [MFC], explained
+- Win32 [MFC], API encapsulation by MFC
+- application framework [MFC], about MFC application framework
+- APIs [MFC], encapsulation by MFC Win32
+- encapsulation [MFC]
+- Windows API [MFC], encapsulation by MFC
+- encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Marco (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1a4c0add4e7bb64ffd3aac08500bc05cd9aad502
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-El trabajo con el marco de la biblioteca de \(MFC\) de la clase de la Microsoft foundation class se basa en gran medida en algunas clases importantes y varias herramientas de Visual C\+\+.  Algunas clases encapsulan a una gran parte de la interfaz de programación \(API\) de aplicaciones de Win32.  Otras clases encapsulan los conceptos de la aplicación como documentos, vistas, y la propia aplicación.  Quedan otros encapsulan la funcionalidad de las características de OLE y acceso a datos de ODBC y DAO.  
+---
+# <a name="framework-mfc"></a>Framework (MFC)
+Your work with the Microsoft Foundation Class (MFC) Library framework is based largely on a few major classes and several Visual C++ tools. Some classes encapsulate a large portion of the Win32 application programming interface (API). Other classes encapsulate application concepts such as documents, views, and the application itself. Still others encapsulate OLE features and ODBC and DAO data-access functionality.  
   
- Por ejemplo, el concepto de Win32 de ventana se encapsula en la clase MFC `CWnd`.  Es decir, el c\+\+. `CWnd` denominado clase encapsula o “ajusta” el identificador de `HWND` que representa una ventana de Windows.  Igualmente, la clase `CDialog` encapsula los cuadros de diálogo de Win32.  
+ For example, Win32's concept of window is encapsulated by MFC class `CWnd`. That is, a C++ class called `CWnd` encapsulates or "wraps" the `HWND` handle that represents a Windows window. Likewise, class `CDialog` encapsulates Win32 dialog boxes.  
   
- La encapsulación significa que la clase `CWnd`de C\+\+, por ejemplo, contiene una variable miembro de `HWND`con tipo, y las funciones miembro de clases encapsulan llamadas a funciones de Win32 que toman `HWND` como parámetro.  Las funciones miembro de clase normalmente tienen el mismo nombre que la función de Win32 que encapsula.  
+ Encapsulation means that the C++ class `CWnd`, for example, contains a member variable of type `HWND`, and the class's member functions encapsulate calls to Win32 functions that take an `HWND` as a parameter. The class member functions typically have the same name as the Win32 function they encapsulate.  
   
-## En esta sección  
- [SDI y MDI](../mfc/sdi-and-mdi.md)  
+## <a name="in-this-section"></a>In This Section  
+ [SDI and MDI](../mfc/sdi-and-mdi.md)  
   
- [Documentos, vistas, y el marco](../mfc/documents-views-and-the-framework.md)  
+ [Documents, Views, and the Framework](../mfc/documents-views-and-the-framework.md)  
   
- [Asistentes y editores de recursos](../mfc/wizards-and-the-resource-editors.md)  
+ [Wizards and Resource Editors](../mfc/wizards-and-the-resource-editors.md)  
   
-## En secciones relacionadas  
- [La compilación en el marco](../mfc/building-on-the-framework.md)  
+## <a name="in-related-sections"></a>In Related Sections  
+ [Building on the Framework](../mfc/building-on-the-framework.md)  
   
- [Cómo el marco de trabajo llama al código se](../mfc/how-the-framework-calls-your-code.md)  
+ [How the Framework Calls Your Code](../mfc/how-the-framework-calls-your-code.md)  
   
- [CWinApp: La clase de aplicación](../mfc/cwinapp-the-application-class.md)  
+ [CWinApp: The Application Class](../mfc/cwinapp-the-application-class.md)  
   
- [Plantillas de documento y el proceso de Creación de documentos y vistas](../mfc/document-templates-and-the-document-view-creation-process.md)  
+ [Document Templates and the Document/View Creation Process](../mfc/document-templates-and-the-document-view-creation-process.md)  
   
- [Control de mensajes y asignación](../mfc/message-handling-and-mapping.md)  
+ [Message Handling and Mapping](../mfc/message-handling-and-mapping.md)  
   
- [Objetos de la ventana](../mfc/window-objects.md)  
+ [Window Objects](../mfc/window-objects.md)  
   
-## Vea también  
- [Usar las clases para escribir aplicaciones para Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+

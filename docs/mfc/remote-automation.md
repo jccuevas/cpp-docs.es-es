@@ -1,64 +1,82 @@
 ---
-title: "Automatizaci&#243;n remota | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controlador de automatización"
-  - "objetos de automatización"
-  - "objetos de automatización, crear"
-  - "COM, automatización remota"
-  - "DCOM, automatización remota"
-  - "MFC COM, automatización remota"
-  - "MFC, compatibilidad con COM"
-  - "automatización remota"
+title: Remote Automation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC COM, Remote Automation
+- Automation objects [MFC]
+- DCOM [MFC], Remote Automation
+- Automation objects [MFC], creating
+- Remote Automation [MFC]
+- MFC, COM support
+- Automation controller [MFC]
+- COM, Remote Automation [MFC]
 ms.assetid: 363f87fb-08fa-4458-b089-b46365a6d4f2
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Automatizaci&#243;n remota
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 44f579ff2b10d4e8e4e655110a4ec9835b192fd8
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="remote-automation"></a>Remote Automation
 > [!NOTE]
->  Se recomienda que los desarrolladores de Visual C\+\+ .NET utilizan DCOM en lugar de automatización remota para las nuevas aplicaciones.  Visual C\+\+ .NET no admite Windows 95.  Los casos en los que debería admitir automatización remota se describen en [¿Dónde automatización remota cabe en?](../mfc/where-does-remote-automation-fit-in-q.md).  
+>  It is recommended that Visual C++ .NET developers use DCOM rather than Remote Automation for new applications. Visual C++ .NET does not support Windows 95. Cases in which you would need to support Remote Automation are described in [Where Does Remote Automation Fit In](where-does-remote-automation-fit-in-q.md).  
   
- La automatización remota es un tipo de [Automatización](../mfc/automation.md) que permite que un usuario de la interfaz ejecute un proveedor de interfaz que resida en otro equipo, por ejemplo, en una red.  
+ Remote Automation is a type of [Automation](../mfc/automation.md) that allows an interface consumer to execute an interface provider that resides on another machine, for example, on a network.  
   
- En este artículo se explica cómo crear los objetos de automatización que se pueden invocar y ejecutar de forma remota, y cómo crear controladores de automatización que pueden utilizar estos objetos de automatización remota.  También examina los valores de configuración y señala las principales diferencias entre la automatización remota y DCOM \(la versión enrutada de COM y OLE que permite interfaces distintos de los relacionadas con automatización que se invoque y ejecuta remotamente\).  
+ This article explains how to create Automation objects that can be invoked and executed remotely, and how to create Automation controllers that can use these Remote Automation objects. It also examines configuration options and points out the major differences between Remote Automation and DCOM (the distributed version of COM and OLE that allows interfaces other than those related to automation to be invoked and executed remotely).  
   
-## En esta sección  
- [Historial de DCOM \(Modelo de objetos componentes distribuido\)](../mfc/history-of-dcom.md)  
+## <a name="in-this-section"></a>In This Section  
+ [History of DCOM (Distributed Component Object Model)](../mfc/history-of-dcom.md)  
   
- [¿Dónde automatización remota cabe en?](../mfc/where-does-remote-automation-fit-in-q.md)  
+ [Where Does Remote Automation Fit In](where-does-remote-automation-fit-in-q.md)  
   
- [¿Qué automatización remota proporciona?](../mfc/what-does-remote-automation-provide-q.md)  
+ [What Does Remote Automation Provide](what-does-remote-automation-provide-q.md)  
   
- [Seguridad de automatización remota](../mfc/security-in-remote-automation.md)  
+ [Remote Automation Security](../mfc/security-in-remote-automation.md)  
   
- [Modelos de subprocesos](../mfc/remote-automation-threading-models.md)  
+ [Threading Models](../mfc/remote-automation-threading-models.md)  
   
- [Instalación](../mfc/remote-automation-installation.md)  
+ [Installation](../mfc/remote-automation-installation.md)  
   
- [El administrador de automatización](../mfc/automation-manager-mfc.md)  
+ [The Automation Manager](../mfc/automation-manager-mfc.md)  
   
--   [El administrador de conexiones de automatización remota](../mfc/remote-automation-connection-manager.md)  
+-   [The Remote Automation Connection Manager](../mfc/remote-automation-connection-manager.md)  
   
--   [Componentes de automatización remota](../mfc/remote-automation-user-components.md)  
+-   [Remote Automation User Components](../mfc/remote-automation-user-components.md)  
   
- [Crear programas que utilizan la automatización remota](../mfc/creating-programs-that-use-remote-automation.md)  
+ [Creating Programs That Use Remote Automation](../mfc/creating-programs-that-use-remote-automation.md)  
   
- [Automatización remota mediante AUTOCLIK y AUTODRIV](../mfc/running-remote-automation-using-autoclik-and-autodriv.md)  
+ [Running Remote Automation Using AUTOCLIK and AUTODRIV](../mfc/running-remote-automation-using-autoclik-and-autodriv.md)  
   
-## Vea también  
+## <a name="see-also"></a>See Also  
  [MFC COM](../mfc/mfc-com.md)   
- [automatización](../mfc/automation.md)
+ [Automation](../mfc/automation.md)
+

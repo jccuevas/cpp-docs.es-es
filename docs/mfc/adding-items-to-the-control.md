@@ -1,37 +1,56 @@
 ---
-title: "Agregar elementos al control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl (clase), agregar elementos"
+title: Adding Items to the Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListCtrl class [MFC], adding items
 ms.assetid: 715994bd-340d-4ad2-9882-411654137830
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Agregar elementos al control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7d0b2eed5ed31d8f18c8d37ce6facfb7f44ab3e3
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Para agregar elementos al control de lista \([CListCtrl](../mfc/reference/clistctrl-class.md)\), llame a una de varias versiones de la función miembro de [InsertItem](../Topic/CListCtrl::InsertItem.md) , dependiendo de qué información se tiene.  Una versión toma una estructura de [LV\_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) preparar.  Dado que la estructura de `LV_ITEM` contiene miembros numerosos, tiene un mayor control sobre los atributos del elemento del control de lista.  
+---
+# <a name="adding-items-to-the-control"></a>Adding Items to the Control
+To add items to the list control ([CListCtrl](../mfc/reference/clistctrl-class.md)), call one of several versions of the [InsertItem](../mfc/reference/clistctrl-class.md#insertitem) member function, depending on what information you have. One version takes a [LV_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) structure that you prepare. Because the `LV_ITEM` structure contains numerous members, you have greater control over the attributes of the list control item.  
   
- Dos miembros importantes \(con respecto a la vista de informe\) de la estructura de `LV_ITEM` son miembros de `iItem` y de `iSubItem` .  El miembro de `iItem` es el índice cero\- basado en elemento que la estructura hace referencia y el miembro de `iSubItem` es el índice de base uno de un subelemento, o cero si la estructura contiene información sobre un elemento.  Con estos dos miembros se determina, por cada elemento, el tipo y el valor de la información del subelemento que se muestra cuando el control de lista está en la vista de informe.  Para obtener más información, vea [CListCtrl::SetItem](../Topic/CListCtrl::SetItem.md).  
+ Two important members (in regard to the report view) of the `LV_ITEM` structure are the `iItem` and `iSubItem` members. The `iItem` member is the zero-based index of the item the structure is referencing and the `iSubItem` member is the one-based index of a subitem, or zero if the structure contains information about an item. With these two members you determine, per item, the type and value of subitem information that is displayed when the list control is in report view. For more information, see [CListCtrl::SetItem](../mfc/reference/clistctrl-class.md#setitem).  
   
- Los miembros adicionales especifica el texto del elemento, el icono, estado, y los datos de elemento. “Datos de elemento” es un valor definido por la aplicación asociada a un elemento de vista de lista.  Para obtener más información sobre la estructura de `LV_ITEM` , vea [CListCtrl::GetItem](../Topic/CListCtrl::GetItem.md).  
+ Additional members specify the item's text, icon, state, and item data. "Item data" is an application-defined value associated with a list view item. For more information about the `LV_ITEM` structure, see [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem).  
   
- Otras versiones de `InsertItem` utilizan uno o más valores independientes, correspondiente a los miembros de la estructura de `LV_ITEM` , lo inicializar sólo esos miembros que desea usar.  Normalmente, el control de lista administra el almacenamiento para los elementos de lista, pero puede almacenar parte de la información de la aplicación en su lugar, utilizando “elementos de devolución de llamada”. Para obtener más información, vea [Elementos y el De Callback de devolución de llamada](../mfc/callback-items-and-the-callback-mask.md) en este tema y [Elementos y el De Callback de devolución de llamada](http://msdn.microsoft.com/library/windows/desktop/bb774736) en [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ Other versions of `InsertItem` take one or more separate values, corresponding to members in the `LV_ITEM` structure, allowing you to initialize only those members you want to support. Generally, the list control manages storage for list items, but you can store some of the information in your application instead, using "callback items." For more information, see [Callback Items and the Callback Mask](../mfc/callback-items-and-the-callback-mask.md) in this topic and [Callback Items and the Callback Mask](http://msdn.microsoft.com/library/windows/desktop/bb774736) in the Windows SDK.  
   
- Para obtener más información, vea [Elementos y subelementos de vista de lista de la suma](http://msdn.microsoft.com/library/windows/desktop/bb774736).  
+ For more information, see [Adding List-View Items and Subitems](http://msdn.microsoft.com/library/windows/desktop/bb774736).  
   
-## Vea también  
- [Usar CListCtrl](../mfc/using-clistctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

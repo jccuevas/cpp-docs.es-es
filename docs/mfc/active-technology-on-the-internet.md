@@ -1,46 +1,65 @@
 ---
-title: "Tecnolog&#237;a activa en Internet | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicaciones de Internet, tecnología activa"
+title: Active Technology on the Internet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Internet applications [MFC], Active technology
 ms.assetid: 6f782aa1-5c2f-47a2-9e63-ddd0829d5a08
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Tecnolog&#237;a activa en Internet
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3286a06350fde7c345f07dce909f90c85bfb4d83
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La tecnología activa es una plataforma abierto que permite a los desarrolladores crear excitando, contenido dinámico y aplicaciones de internet global, o para la red interna de una compañía, conocido como intranet.  Las tecnologías clave proporcionadas por Microsoft para la programación de internet se describen a continuación.  
+---
+# <a name="active-technology-on-the-internet"></a>Active Technology on the Internet
+Active technology is an open platform that lets developers create exciting, dynamic content and applications for the global Internet, or for a company's internal network, known as an intranet. The major technologies provided by Microsoft for Internet programming are described below.  
   
-## Controles ActiveX  
- Los controles ActiveX \(antes controles OLE\) son objetos que se pueden insertar en páginas Web o cualquier otra aplicación que es un contenedor de controles ActiveX.  Botones de los ejemplos se incluyen, tableros de cotizaciones, y controles del gráfico.  Para obtener más información, vea [Controles ActiveX en internet](../mfc/activex-controls-on-the-internet.md).  
+## <a name="activex-controls"></a>ActiveX Controls  
+ ActiveX controls (formerly OLE controls) are objects that can be inserted into Web pages or any other application that is an ActiveX control container. Examples include buttons, stock tickers, and chart controls. For more information, see [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md).  
   
-## Documentos activos  
- Los documentos activos se pueden mostrar en exploradores web o los visores de documentos.  Los objetos incrustados tradicionales se limitados a una página y mostrados incrustado en el documento.  Con tecnología activa, el documento puede ser cuadro completo mostrado en la ventana completa del área de cliente.  Para obtener más información, vea [Documentos activos en internet](../mfc/active-documents-on-the-internet.md).  
+## <a name="active-documents"></a>Active Documents  
+ Active documents can be displayed by Web browsers or document viewers. Traditional embedded objects were limited to one page and were shown embedded in the document. With Active technology, the document can be displayed full frame in the entire client area window. For more information, see [Active Documents on the Internet](../mfc/active-documents-on-the-internet.md).  
   
-## Servicios de descarga de los datos de internet  
- Los datos se pueden descargar a través de internet mediante protocolos comunes: HTTP, FTP, y gopher.  Las clases de MFC WinInet facilitan transferir datos mediante HTTP, FTP, y los protocolos de gopher resumiendo TCP\/IP y protocolos WinSock.  Las clases del moniker asincrónico de MFC proporcionan una forma de descargar archivos sin bloquear y generar objetos grandes de forma asincrónica.  Para obtener más información, vea [Extensiones de Internet para Win32 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md).  
+## <a name="internet-data-download-services"></a>Internet Data Download Services  
+ Data can be downloaded over the Internet using common protocols: HTTP, FTP, and gopher. The MFC WinInet classes make it easy to transfer data using HTTP, FTP, and gopher protocols by abstracting the TCP/IP and WinSock protocols. The MFC asynchronous moniker classes provide a way to download files without blocking and to render large objects asynchronously. For more information, see [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md).  
   
-## Scripts activos  
- VBScript y otros controles se conectan los lenguajes de script y agregan funcionalidad interactiva a páginas Web.  El script mueve el procesamiento del servidor al cliente.  Por ejemplo, las entradas de formulario se pueden validar en el cliente y después enviar al servidor.  
+## <a name="active-scripts"></a>Active Scripts  
+ VBScript and other scripting languages connect controls and add interactive functionality to Web pages. Scripting moves processing from the server to the client. For example, form entries can be validated on the client and then sent to the server.  
   
-## Extensiones HTML  
- Las extensiones de HTML, como el objeto, se han agregado los controles admiten y al script.  
+## <a name="html-extensions"></a>HTML Extensions  
+ HTML extensions, such as the object tag, have been added to support controls and scripting.  
   
-## Vea también  
- [Fundamentos de programación para Internet de MFC](../mfc/mfc-internet-programming-basics.md)   
- [Controles ActiveX en Internet](../mfc/activex-controls-on-the-internet.md)   
- [Documentos activos en Internet](../mfc/active-documents-on-the-internet.md)   
- [Extensiones de Internet Win32 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)   
+ [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md)   
+ [Active Documents on the Internet](../mfc/active-documents-on-the-internet.md)   
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)
+
+

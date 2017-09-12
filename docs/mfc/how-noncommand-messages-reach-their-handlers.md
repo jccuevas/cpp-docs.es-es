@@ -1,33 +1,52 @@
 ---
-title: "C&#243;mo llegan a los controladores los mensajes que no son de comandos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "control de mensajes [C++], noncommand (mensajes)"
-  - "mensajes [C++], enrutar"
-  - "noncommand (mensajes)"
-  - "mensajes de Windows [C++], enrutar"
+title: How Noncommand Messages Reach Their Handlers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- messages [MFC], routing
+- noncommand messages
+- Windows messages [MFC], routing
+- message handling [MFC], noncommand messages
 ms.assetid: e7df8aef-9fae-41f4-9c11-881d8465f602
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# C&#243;mo llegan a los controladores los mensajes que no son de comandos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 512c69c81e2d2226fd3336a911e62c21e4ad67ad
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-A diferencia de comandos, los mensajes estándar de Windows no obtienen enrutado a través de una cadena de comandos pero son administrados normalmente por la ventana a la que Windows envía el mensaje.  La ventana podría ser una ventana de marco principal, una ventana secundaria MDI, un control estándar, cuadro de diálogo, una vista, o alguna otra clase de ventana secundaria.  
+---
+# <a name="how-noncommand-messages-reach-their-handlers"></a>How Noncommand Messages Reach Their Handlers
+Unlike commands, standard Windows messages do not get routed through a chain of command targets but are usually handled by the window to which Windows sends the message. The window might be a main frame window, an MDI child window, a standard control, a dialog box, a view, or some other kind of child window.  
   
- En tiempo de ejecución, cada ventana de Windows se asocia a un objeto de la ventana \(se deriva directa o indirectamente de `CWnd`\) que tiene su propio mapa asociado del mensaje y ejecuta el controlador.  El marco de trabajo usa el mapa de mensajes — con respecto a un comando — para asignar mensajes entrantes controladores.  
+ At run time, each Windows window is attached to a window object (derived directly or indirectly from `CWnd`) that has its own associated message map and handler functions. The framework uses the message map — as for a command — to map incoming messages to handlers.  
   
-## Vea también  
- [Cómo el marco llama a un controlador](../mfc/how-the-framework-calls-a-handler.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
+
+

@@ -1,170 +1,192 @@
 ---
-title: "TN043: Rutinas RFX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RFX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RFX (intercambio de campos de registros)"
-  - "RFX (intercambio de campos de registros), arquitectura"
-  - "TN043"
+title: 'TN043: RFX Routines | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- RFX
+dev_langs:
+- C++
+helpviewer_keywords:
+- RFX (record field exchange), architecture
+- TN043
+- RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN043: Rutinas RFX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8be94b49bd8ea339ae0639bad26110c23725d1f3
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn043-rfx-routines"></a>TN043: RFX Routines
 > [!NOTE]
->  La nota técnica siguiente no se ha actualizado desde que se incluyó por primera vez en la documentación en línea.  Como resultado, algunos procedimientos y temas podrían estar obsoletos o ser incorrectos.  Para obtener información más reciente, se recomienda buscar el tema de interés en el índice de la documentación en línea.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Esta nota describe la arquitectura de intercambio de campos de registros.  También describe cómo escribe un procedimiento de **RFX\_** .  
+ This note describes the record field exchange (RFX) architecture. It also describes how you write an **RFX_** procedure.  
   
-## Información general sobre el intercambio de campos de registros  
- Todas las funciones de campo de conjunto de registros se hace con el código de C\+\+.  No hay recursos especiales o macros mágicas.  El núcleo del mecanismo es una función virtual que se debe invalidar en cada clase derivada de conjunto de registros.  Se encuentra siempre en este formulario:  
+## <a name="overview-of-record-field-exchange"></a>Overview of Record Field Exchange  
+ All recordset field functions are done with C++ code. There are no special resources or magic macros. The heart of the mechanism is a virtual function that must be overridden in every derived recordset class. It is always found in this form:  
   
 ```  
 void CMySet::DoFieldExchange(CFieldExchange* pFX)  
-{  
-  //{{AFX_FIELD_MAP(CMySet)  
-  <recordset exchange field type call>  
-  <recordset exchange function call>  
-  //}}AFX_FIELD_MAP  
+{ *//{{AFX_FIELD_MAP(CMySet)  
+ <recordset exchange field type call>  
+ <recordset exchange function call> *//}}AFX_FIELD_MAP  
 }  
 ```  
   
- Los comentarios especiales de AFX de formato permiten que ClassWizard busque y editar el código en esta función.  El código que no es compatible con ClassWizard debe colocarse fuera de los comentarios especiales de formato.  
+ The special format AFX comments allow ClassWizard to locate and edit the code within this function. Code that is not compatible with ClassWizard should be placed outside of the special format comments.  
   
- En el ejemplo anterior, \<el recordset\_exchange\_field\_type\_call\> está en el formulario:  
-  
-```  
-pFX->SetFieldType(CFieldExchange::outputColumn);  
-```  
-  
- y \<el recordset\_exchange\_function\_call\> está en el formulario:  
+ In the above example, <recordset_exchange_field_type_call> is in the form:  
   
 ```  
-RFX_Custom(pFX, "Col2", m_Col2);  
+pFX->SetFieldType(CFieldExchange::outputColumn);
 ```  
   
- La mayoría de las funciones de **RFX\_** tienen tres argumentos como se indicó anteriormente, pero algunos \(por ejemplo.  `RFX_Text` y `RFX_Binary`\) tienen argumentos opcionales adicionales.  
+ and <recordset_exchange_function_call> is in the form:  
   
- Más de un **RFX\_** se puede incluir en cada función de `DoDataExchange` .  
+```  
+RFX_Custom(pFX, "Col2",
+    m_Col2);
+```  
   
- Vea “afxdb.h” para una lista de todas las rutinas de intercambio de campos de conjunto de registros proporcionadas MFC.  
+ Most **RFX_** functions have three arguments as shown above, but some (e.g. `RFX_Text` and `RFX_Binary`) have additional optional arguments.  
   
- Las llamadas de campo de conjunto de registros son una manera de registrar las ubicaciones de memoria \(normalmente miembros de datos\) para almacenar los datos de campo para una clase de **CMySet** .  
+ More than one **RFX_** may be included in each `DoDataExchange` function.  
   
-## Notas  
- Las funciones de campo de conjunto de registros están diseñados para trabajar solo con las clases de `CRecordset` .  No suelen usarse por otras clases MFC.  
+ See 'afxdb.h' for a list of all the recordset field exchange routines provided with MFC.  
   
- Los valores iniciales de datos se establecen en el constructor estándar de C\+\+, normalmente en un bloque con `//{{AFX_FIELD_INIT(CMylSet)` y comentarios de `//}}AFX_FIELD_INIT` .  
+ Recordset field calls are a way of registering memory locations (usually data members) to store field data for a **CMySet** class.  
   
- Cada función de **RFX\_** debe admitir varias operaciones, extendiéndose de devolver el estado modificado de campo a almacenar el campo con objeto de modificar el campo.  
+## <a name="notes"></a>Notes  
+ Recordset field functions are designed to work only with the `CRecordset` classes. They are not generally usable by any other MFC classes.  
   
- Cada función que llama a `DoFieldExchange` \(por ejemplo `SetFieldNull`, `IsFieldDirty`\), realiza su propia inicialización alrededor de la llamada a `DoFieldExchange`.  
+ Initial values of data are set in the standard C++ constructor, usually in a block with `//{{AFX_FIELD_INIT(CMylSet)` and `//}}AFX_FIELD_INIT` comments.  
   
-## ¿Cómo funciona?  
- No necesita comprender lo siguiente para utilizar el intercambio de campos.  Sin embargo, entender el funcionamiento de ésta en segundo plano le ayudará a escribir el propio procedimiento de intercambio.  
+ Each **RFX_** function must support various operations, ranging from returning the dirty status of the field to archiving the field in preparation for editing the field.  
   
- La función miembro de `DoFieldExchange` es como la función miembro de `Serialize` — es responsable de obtener o establecer datos a y desde un formulario externo \(en este caso columnas de resultados de una consulta de ODBC\) from\/to datos de miembros en la clase.  El parámetro de `pFX` es el contexto para hacer de intercambio y es similar al parámetro de `CArchive` a `CObject::Serialize`.  `pFX` \(un objeto de `CFieldExchange` \) tiene un indicador de la operación, el cual es similar, sólo una generalización de indicador de la dirección de `CArchive` .  Una función RFX puede tener que admitir las operaciones siguientes:  
+ Each function that calls `DoFieldExchange` (for instance `SetFieldNull`, `IsFieldDirty`), does its own initialization around the call to `DoFieldExchange`.  
   
--   **BindParam** — Indicate donde ODBC debe recuperar los datos de parámetro  
+## <a name="how-does-it-work"></a>How Does It Work  
+ You do not need to understand the following in order to use record field exchange. However, understanding how this works behind the scenes will help you write your own exchange procedure.  
   
--   **BindFieldToColumn** — Indicate donde ODBC debe recuperar o los datos de outputColumn de depósito  
+ The `DoFieldExchange` member function is much like the `Serialize` member function — it is responsible for getting or setting data to/from an external form (in this case columns from the result of an ODBC query) from/to member data in the class. The `pFX` parameter is the context for doing data exchange and is similar to the `CArchive` parameter to `CObject::Serialize`. The `pFX` (a `CFieldExchange` object) has an operation indicator, which is similar to, but a generalization of the `CArchive` direction flag. An RFX function may have to support the following operations:  
   
--   **Fixup** — longitudes concretas de **CString\/CByteArray** , establezca el bit de estado NULL  
+- **BindParam** — Indicate where ODBC should retrieve parameter data  
   
--   **MarkForAddNew** — marca modificada si el valor ha cambiado desde llamada a AddNew  
+- **BindFieldToColumn** — Indicate where ODBC must retrieve/deposit outputColumn data  
   
--   **MarkForUpdate** — marca modificada si el valor ha cambiado desde llamada de edición  
+- **Fixup** — Set **CString/CByteArray** lengths, set NULL status bit  
   
--   **Name** — Agregue los nombres de campo para los campos marcó modificado  
+- **MarkForAddNew** — Mark dirty if value has changed since AddNew call  
   
--   **NameValue** — anexe “\<name\=\>de columna?” para modificado como campos  
+- **MarkForUpdate** — Mark dirty if value has changed since Edit call  
   
--   **Valor** — Anexe “?” seguido de separador, como “,” o ''  
+- **Name** — Append field names for fields marked dirty  
   
--   `SetFieldDirty` — \(es decir cambiado\) campo modificado mordido estado determinado  
+- **NameValue** — Append "\<column name>=" for fields marked dirty  
   
--   `SetFieldNull` — estado determinado mordido indicando el valor NULL para el campo  
+- **Value** — Append "" followed by separator, like ',' or ' '  
   
--   `IsFieldDirty` — valor devuelto de bits modificado de estado  
+- `SetFieldDirty` — Set status bit dirty (i.e. changed) field  
   
--   `IsFieldNull` — valor devuelto de bits null de estado  
+- `SetFieldNull` — Set status bit indicating null value for field  
   
--   `IsFieldNullable` — TRUE return si el campo puede contener valores nulos  
+- `IsFieldDirty` — Return value of dirty status bit  
   
--   **StoreField** \(valor de campo del archivo  
+- `IsFieldNull` — Return value of null status bit  
   
--   **LoadField** \(valor de campo almacenado recarga  
+- `IsFieldNullable` — Return TRUE if field can hold NULL values  
   
--   **GetFieldInfoValue** — información general return en un campo  
+- **StoreField** — Archive field value  
   
--   **GetFieldInfoOrdinal** — información general return en un campo  
+- **LoadField** — Reload archived field value  
   
-## Extensiones de usuario  
- Hay varias maneras de extender el mecanismo predeterminado RFX.  Se puede  
+- **GetFieldInfoValue** — Return general information on a field  
   
--   Agregue nuevos tipos de datos.  Por ejemplo:  
+- **GetFieldInfoOrdinal** — Return general information on a field  
   
-    ```  
-    CBookmark  
-    ```  
+## <a name="user-extensions"></a>User Extensions  
+ There are several ways to extend the default RFX mechanism. You can  
   
--   Agregue nuevos procedimientos de intercambio \(RFX\_???\).  
+-   Add new data types. For example:  
   
-    ```  
-    void AFXAPI RFX_Bigint(CFieldExchange* pFX, const char *szName,  
-        BIGINT& value);  
-    ```  
+ ```  
+    CBookmark 
+ ```  
   
--   Tiene las llamadas de inclusión adicionales RFX de funciones miembro de `DoFieldExchange` condicional o cualquier otra instrucción válida de C\+\+.  
+-   Add new exchange procedures (RFX_).  
   
-    ```  
+ ```  
+    void AFXAPI RFX_Bigint(CFieldExchange* pFX,
+    const char *szName,  
+    BIGINT& value);
+
+ ```  
+  
+-   Have the `DoFieldExchange` member function conditionally include additional RFX calls or any other valid C++ statements.  
+  
+ ```  
     while (posExtraFields != NULL)  
-    {  
-        RFX_Text(pFX, m_listName.GetNext(posExtraFields),   
-            m_listValue.GetNext(posExtraValues));  
-    }  
-    ```  
+ {  
+    RFX_Text(pFX,
+    m_listName.GetNext(posExtraFields),   
+    m_listValue.GetNext(posExtraValues));
+
+ }  
+ ```  
   
 > [!NOTE]
->  Este código no se puede editar por ClassWizard y solo se debería usar fuera de los comentarios especiales de formato.  
+>  Such code cannot be edited by ClassWizard and should be used only outside of the special format comments.  
   
-## Escribir una personalizada RFX  
- Para escribir dispone de la función personalizados de RFX, se sugiere que copia una función existente RFX y modificarlo a dispone propósitos.  La selección de la derecha RFX de copiar puede crear el trabajo mucho más fácil.  Las funciones de algún RFX tienen algunas propiedades únicas que debe tener en cuenta al decidir cuál para copiar.  
+## <a name="writing-a-custom-rfx"></a>Writing a Custom RFX  
+ To write your own Custom RFX function, it is suggested that you copy an existing RFX function and modify it to your own purposes. Selecting the right RFX to copy can make your job much easier. Some RFX functions have some unique properties that you should take into account when deciding which to copy.  
   
- **RFX\_Long and RFX\_Int**:  
- Estas son las funciones más simples de RFX.  El valor de los datos no necesita ninguna interpretación especial, y se corrige el tamaño de datos.  
+ **RFX_Long and RFX_Int**:  
+ These are the simplest RFX functions. The data value does not need any special interpretation, and the data size is fixed.  
   
- **RFX\_Single and RFX\_Double**:  
- Como RFX\_Long y RFX\_Int anterior, estas funciones son simples y pueden utilizar la implementación predeterminada ampliamente.  Se almacenan en dbflt.cpp en lugar de dbrfx.cpp, sin embargo, para habilitar cargar la biblioteca de punto flotante en tiempo de ejecución si son explícitamente referencia.  
+ **RFX_Single and RFX_Double**:  
+ Like RFX_Long and RFX_Int above, these functions are simple and can make use of the default implementation extensively. They are stored in dbflt.cpp instead of dbrfx.cpp, however, to enable loading the runtime floating point library only when they are explicitly reference.  
   
- **RFX\_Text and RFX\_Binary**:  
- Estas dos funciones reserva un buffer estático para contener la cadena\/información binaria, y deben registrar estos búferes con ODBC SQLBindCol en lugar de registrar &valor.  Debido a esto, estas dos funciones tienen partes de código de especial\- caso.  
+ **RFX_Text and RFX_Binary**:  
+ These two functions preallocate a static buffer to hold string/binary information, and must register these buffers with ODBC SQLBindCol instead of registering &value. Because of this, these two functions have lots of special-case code.  
   
  `RFX_Date`:  
- ODBC devuelve información de fecha y hora en su propia estructura de datos de TIMESTAMP\_STRUCT.  Esta función asigna dinámicamente un TIMESTAMP\_STRUCT como “proxy” para enviar y recibir datos de fecha y hora.  Varias operaciones deben transferir información de fecha y hora entre el objeto C\+\+ `CTime` y el proxy de TIMESTAMP\_STRUCT.  Esto complica esta función considerablemente, pero es un buen ejemplo de cómo utilizar un proxy para la transferencia de datos.  
+ ODBC returns date and time information in their own TIMESTAMP_STRUCT data structure. This function dynamically allocates a TIMESTAMP_STRUCT as a "proxy" for sending and receiving date time data. Various operations must transfer the date and time information between the C++ `CTime` object and the TIMESTAMP_STRUCT proxy. This complicates this function considerably, but it is a good example of how to use a proxy for data transfer.  
   
  `RFX_LongBinary`:  
- Esta es la única función de biblioteca de clases RFX que no utiliza el enlace de columna para recibir y enviar datos.  Esta función omite la operación de BindFieldToColumn y en su lugar, durante la operación de la corrección, asigna almacenamiento para contener los datos de entrada de SQL\_LONGVARCHAR o de SQL\_LONGVARBINARY, realice una llamada a SQLGetData para recuperar el valor en el almacenamiento asignado.  Al prepararse para exponer valores de los datos al origen de datos \(como operaciones de NameValue y valor\), esta función usa la funcionalidad de DATA\_AT\_EXEC de ODBC.  Vea [Nota técnica 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) para obtener más información sobre cómo trabajar con SQL\_LONGVARBINARY y SQL\_LONGVARCHARs.  
+ This is the only class library RFX function that does not use column binding to receive and send data. This function ignores the BindFieldToColumn operation and instead, during the Fixup operation, allocates storage to hold the incoming SQL_LONGVARCHAR or SQL_LONGVARBINARY data, then performs an SQLGetData call to retrieve the value into the allocated storage. When preparing to send data values back to the data source (such as NameValue and Value operations), this function uses ODBC's DATA_AT_EXEC functionality. See [Technical Note 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) for more information on working with SQL_LONGVARBINARY and SQL_LONGVARCHARs.  
   
- Al escribir poseer la función de **RFX\_** , podrá a menudo utilizar **CFieldExchange::Default** para implementar una operación determinada.  Busque la implementación predeterminado para la operación en cuestión.  Si realiza la operación se estaría escribiendo en la función de **RFX\_** que puede delegar a **CFieldExchange::Default.** Puede ver ejemplos de llamar a **CFieldExchange::Default** en dbrfx.cpp  
+ When writing your own **RFX_** function, you will often be able to use **CFieldExchange::Default** to implement a given operation. Look at the implementation of Default for the operation in question. If it performs the operation you would be writing in your **RFX_** function you can delegate to the **CFieldExchange::Default.** You can see examples of calling **CFieldExchange::Default** in dbrfx.cpp  
   
- Es importante llamar a `IsFieldType` al principio de la función RFX, y devuelve un valor inmediatamente si devuelve FALSE.  Este mecanismo conserva operaciones de parámetro de realizar en **outputColumns**, y viceversa \(como llamar a **BindParam** en **outputColumn**\).  Además, `IsFieldType` automáticamente el seguimiento del número de **outputColumns** \(`m_nFields`\) y params \(`m_nParams`\).  
+ It is important to call `IsFieldType` at the start of your RFX function, and return immediately if it returns FALSE. This mechanism keeps parameter operations from being performed on **outputColumns**, and vice versa (like calling **BindParam** on an **outputColumn**). In addition, `IsFieldType` automatically keeps track of the count of **outputColumns** (`m_nFields`) and params (`m_nParams`).  
   
-## Vea también  
- [Notas técnicas por número](../mfc/technical-notes-by-number.md)   
- [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

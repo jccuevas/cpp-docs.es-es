@@ -1,48 +1,66 @@
 ---
-title: "// Overridables (Comentario) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "comentarios, MFC"
-  - "archivos de código fuente MFC, Overridables (comentario)"
-  - "comentarios reemplazables en archivos de código fuente MFC"
-  - "reemplazar, comentarios reemplazables en archivos de código fuente MFC"
+title: -- Overridables Comment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Overridables comment in MFC source files
+- MFC source files, Overridables comment
+- overriding, Overridables comment in MFC source files
+- comments, MFC
 ms.assetid: 8968dea5-0d94-451f-bcb2-991580e65ba2
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# // Overridables (Comentario)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1c0031565dcc66b1db0c1f6ce35a4f7fc490da9f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La sección de `// Overridables` de una declaración de clase MFC contiene funciones virtuales que puede reemplazar en una clase derivada si necesita modificar el comportamiento de la clase base.  Se llama normalmente a partir de " ON ", aunque no es estrictamente necesario.  Las funciones aquí están diseñados para reemplazar y, a menudo implementan o proporcionan algún tipo de “devolución” o “enlace.” Normalmente, protegen estos miembros.  
+---
+# <a name="-overridables-comment"></a>// Overridables Comment
+The `// Overridables` section of an MFC class declaration contains virtual functions that you can override in a derived class when you need to modify the base class behavior. They are usually named starting with "On", although it is not strictly necessary. Functions here are designed to be overridden, and often implement or provide some sort of "callback" or "hook." Typically, these members are protected.  
   
- En MFC, las funciones virtuales puras siempre se almacenan en esta sección.  Una función virtual pura en C\+\+ es una del formulario:  
+ In MFC itself, pure virtual functions are always placed in this section. A pure virtual function in C++ is one of the form:  
   
  `virtual void OnDraw( ) = 0;`  
   
- En la lista de clase sample `CStdioFile`, en [Un ejemplo de los comentarios](../mfc/an-example-of-the-comments.md), la lista no incluye ninguna sección de los overridables.  Clase **CDocument**, por otro lado, listas aproximadamente 10 funciones overridable miembro.  
+ In the sample listing from class `CStdioFile`, in [An Example of the Comments](../mfc/an-example-of-the-comments.md), the list includes no overridables section. Class **CDocument**, on the other hand, lists approximately 10 overridable member functions.  
   
- En algunas clases, también puede ver el comentario `// Advanced Overridables`.  Estas son las funciones que solo los desarrolladores avanzados deben intentar reemplazar.  Probablemente nunca necesitará reemplazarlas.  
+ In some classes, you may also see the comment `// Advanced Overridables`. These are functions that only advanced programmers should attempt to override. You will probably never need to override them.  
   
 > [!NOTE]
->  Las convenciones descritas en este caso también funcionan bien, normalmente para los métodos y propiedades de automatización \(conocida como antes automatización OLE\).  Los métodos de automatización son similares a las operaciones de MFC.  Las propiedades de automatización son similares a los atributos de MFC.  Los eventos de automatización \(compatibles con los controles ActiveX, antes conocido como controles OLE\) son similares a las funciones overridable miembro MFC.  
+>  The conventions described in this article also work well, in general, for Automation (formerly known as OLE Automation) methods and properties. Automation methods are similar to MFC operations. Automation properties are similar to MFC attributes. Automation events (supported for ActiveX controls, formerly known as OLE controls) are similar to MFC overridable member functions.  
   
-## Vea también  
- [Usar los archivos de código fuente de MFC](../mfc/using-the-mfc-source-files.md)   
- [Un ejemplo de los comentarios](../mfc/an-example-of-the-comments.md)   
- [\/\/ Implementation \(Comentario\)](../mfc/decrement-implementation-comment.md)   
- [\/\/ Constructors \(Comentario\)](../mfc/decrement-constructors-comment.md)   
- [\/\/ Attributes \(Comentario\)](../mfc/decrement-attributes-comment.md)   
- [\/\/ Operations \(Comentario\)](../mfc/decrement-operations-comment.md)
+## <a name="see-also"></a>See Also  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)   
+ [An Example of the Comments](../mfc/an-example-of-the-comments.md)   
+ [// Implementation Comment](../mfc/decrement-implementation-comment.md)   
+ [// Constructors Comment](../mfc/decrement-constructors-comment.md)   
+ [// Attributes Comment](../mfc/decrement-attributes-comment.md)   
+ [// Operations Comment](../mfc/decrement-operations-comment.md)
+
+

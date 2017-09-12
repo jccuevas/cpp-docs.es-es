@@ -1,53 +1,72 @@
 ---
-title: "Excepciones: Iniciar excepciones desde sus propias funciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "excepciones, iniciar"
-  - "funciones [C++], producir excepciones"
-  - "producir excepciones, desde funciones"
+title: 'Exceptions: Throwing Exceptions from Your Own Functions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- throwing exceptions [MFC], from functions
+- functions [MFC], throwing exceptions
+- exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Excepciones: Iniciar excepciones desde sus propias funciones
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9a67bebf4f9f71ae86a5c0bcbe3716c96ced6b56
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Es posible utilizar el paradigma de control de excepciones de MFC sólo para detectar las excepciones producidas por funciones en MFC u otras bibliotecas.  Además de detectar excepciones producidas por código de biblioteca, puede producir excepciones del propio código si escribe las funciones que pueden encontrar condiciones excepcionales.  
+---
+# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Exceptions: Throwing Exceptions from Your Own Functions
+It is possible to use the MFC exception-handling paradigm solely to catch exceptions thrown by functions in MFC or other libraries. In addition to catching exceptions thrown by library code, you can throw exceptions from your own code if you are writing functions that can encounter exceptional conditions.  
   
- Cuando se produce una excepción, la ejecución de la función actual se detiene y salta directamente al bloque de **catch** del marco más interno de la excepción.  El mecanismo de excepción omite la ruta normal del resultado de una función.  Por consiguiente, asegúrese de eliminar los bloques de memoria que se eliminarán en una salida normal.  
+ When an exception is thrown, execution of the current function is stopped and jumps directly to the **catch** block of the innermost exception frame. The exception mechanism bypasses the normal exit path from a function. Therefore, you must be sure to delete those memory blocks that would be deleted in a normal exit.  
   
-#### Para producir una excepción  
+#### <a name="to-throw-an-exception"></a>To throw an exception  
   
-1.  El uso uno auxiliares de MFC funciona, por ejemplo `AfxThrowMemoryException`.  Estas funciones producen un objeto de excepción reservado del tipo adecuado.  
+1.  Use one of the MFC helper functions, such as `AfxThrowMemoryException`. These functions throw a preallocated exception object of the appropriate type.  
   
-     En el ejemplo siguiente, una función intenta asignar dos bloques de memoria y produce una excepción si se produce un error en cualquier asignación:  
+     In the following example, a function tries to allocate two memory blocks and throws an exception if either allocation fails:  
   
-     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/CPP/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]  
   
-     Si la primera asignación, puede producir simplemente la excepción de memoria insuficiente.  Si la primera asignación es correcta pero segunda falla, debe liberar la primera asignación bloqueada antes de iniciar la excepción.  Si ambas asignaciones tienen éxito, puede continuar normalmente y liberar los bloques al salir de la función.  
+     If the first allocation fails, you can simply throw the memory exception. If the first allocation is successful but the second one fails, you must free the first allocation block before throwing the exception. If both allocations succeed, you can proceed normally and free the blocks when exiting the function.  
   
-     O bien  
+     - or -  
   
-2.  Utilice una excepción definida por el usuario para indicar una condición del problema.  Puede producir un elemento de cualquier tipo, incluso una clase completa, como la excepción.  
+2.  Use a user-defined exception to indicate a problem condition. You can throw an item of any type, even an entire class, as your exception.  
   
-     El ejemplo siguiente se intenta reproducir un sonido a través de un dispositivo de ondas y produce una excepción si se produce un error.  
+     The following example attempts to play a sound through a wave device and throws an exception if there is a failure.  
   
-     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/CPP/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]  
   
 > [!NOTE]
->  El control predeterminado de MFC de excepciones sólo se aplica a los punteros a objetos de `CException` \(y los objetos de `CException`\- clases derivadas\).  El ejemplo anterior omite el mecanismo de excepción de MFC.  
+>  MFC's default handling of exceptions applies only to pointers to `CException` objects (and objects of `CException`-derived classes). The example above bypasses MFC's exception mechanism.  
   
-## Vea también  
- [Control de excepciones](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

@@ -1,45 +1,64 @@
 ---
-title: "Agregar columnas al control (Vista de informe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl (clase), agregar columnas"
-  - "CListCtrl (clase), vista de informes"
-  - "columnas [C++], agregar a CListCtrl"
-  - "vista de informes en la clase CListCtrl"
-  - "vistas, informe"
+title: Adding Columns to the Control (Report View) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListCtrl class [MFC], adding columns
+- report view in CListCtrl class [MFC]
+- views [MFC], report
+- columns [MFC], adding to CListCtrl
+- CListCtrl class [MFC], report view
 ms.assetid: 7392c0d7-f8a5-4e7b-9ae7-b53dc9dd80ae
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Agregar columnas al control (Vista de informe)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ae67c7c011123533227f1a7d4891b553f2cd0dc7
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="adding-columns-to-the-control-report-view"></a>Adding Columns to the Control (Report View)
 > [!NOTE]
->  El procedimiento siguiente se aplica a [CListView](../mfc/reference/clistview-class.md) o el objeto de [CListCtrl](../mfc/reference/clistctrl-class.md) .  
+>  The following procedure applies to either a [CListView](../mfc/reference/clistview-class.md) or [CListCtrl](../mfc/reference/clistctrl-class.md) object.  
   
- Cuando un control de lista está en la vista de informe, las columnas se muestran, proporcionando un método de organizar varios subelementos de cada elemento del control de lista.  Implementan a esta organización con una correspondencia entre una columna del control de lista y el subelemento asociado del elemento del control de lista.  Para obtener más información sobre subelementos, vea [Agregar elementos al Control](../mfc/adding-items-to-the-control.md).  Un ejemplo de un control de vista de informe lo proporciona la vista detalles en Windows 95 y el Explorador de Windows 98.  Las primeras listas de columnas carpeta, iconos de archivo, y etiquetas.  El otro tamaño de archivo de lista de las columnas, tipo de archivo, Last modified date, y así sucesivamente.  
+ When a list control is in report view, columns are displayed, providing a method of organizing the various subitems of each list control item. This organization is implemented with a one-to-one correspondence between a column in the list control and the associated subitem of the list control item. For more information on subitems, see [Adding Items to the Control](../mfc/adding-items-to-the-control.md). An example of a list control in report view is provided by the Details view in Windows 95 and Windows 98 Explorer. The first column lists folder, file icons, and labels. Other columns list file size, file type, date last modified, and so on.  
   
- Aunque las columnas se pueden agregar a un control de lista en cualquier momento, las columnas son visibles sólo cuando el control tiene el bit de estilo de `LVS_REPORT` activado.  
+ Even though columns can be added to a list control at any time, the columns are visible only when the control has the `LVS_REPORT` style bit turned on.  
   
- Cada columna tiene un objeto asociado al elemento de encabezado \(vea [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)\) que las etiquetas la columna y permiten que los usuarios cambien el tamaño de la columna.  
+ Each column has an associated header item (see [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) object that labels the column and allows users to resize the column.  
   
- Si el control de lista admite una vista de informe, debe agregar una columna para cada subelemento posibles en un elemento de control list.  Agregue una columna preparar una estructura de [LV\_COLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) y después mediante una llamada a [InsertColumn](../Topic/CListCtrl::InsertColumn.md).  Después de agregar las columnas necesarias \(denominadas a veces elementos de encabezado\), puede reordenarlos mediante las funciones miembro y diseñe pertenecer al control de encabezado incrustado.  Para obtener más información, vea [Ordenar elementos en el Control de encabezado](../mfc/ordering-items-in-the-header-control.md).  
+ If your list control supports a report view, you need to add a column for each possible subitem in a list control item. Add a column by preparing an [LV_COLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) structure and then making a call to [InsertColumn](../mfc/reference/clistctrl-class.md#insertcolumn). After adding the necessary columns (sometimes referred to as header items), you can reorder them using member functions and styles belonging to the embedded header control. For more information, see [Ordering Items in the Header Control](../mfc/ordering-items-in-the-header-control.md).  
   
 > [!NOTE]
->  Si el control de lista se crea con el estilo de **LVS\_NOCOLUMNHEADER** , cualquier intento de insertar columnas se omitirá.  
+>  If the list control is created with the **LVS_NOCOLUMNHEADER** style, any attempt to insert columns will be ignored.  
   
-## Vea también  
- [Usar CListCtrl](../mfc/using-clistctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

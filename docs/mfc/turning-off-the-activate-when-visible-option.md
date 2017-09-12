@@ -1,37 +1,56 @@
 ---
-title: "Desactivar la opci&#243;n Activar cuando est&#233; visible | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Controles ActiveX MFC [C++], activar opciones"
-  - "opción para activar cuando sea visible"
+title: Turning off the Activate When Visible Option | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], activate options
+- Activate When Visible option [MFC]
 ms.assetid: 8f7ddc5a-a7a6-4da8-bcb9-1b569f0ecb48
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Desactivar la opci&#243;n Activar cuando est&#233; visible
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 09ad4e1e219e52033006c83dfd249ac7b51c0510
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Un control tiene dos estados básicos: activo e inactivo.  Tradicionalmente, se distinguían por el hecho de que el control tuviera o no una ventana.  Un control activo tenía una ventana; un control inactivo no la tenía.  Con la introducción de la activación sin ventana, esta distinción ya no es universal, pero sigue aplicándose a muchos controles.  
+---
+# <a name="turning-off-the-activate-when-visible-option"></a>Turning off the Activate When Visible Option
+A control has two basic states: active and inactive. Traditionally, these states were distinguished by whether the control had a window. An active control had a window; an inactive control did not. With the introduction of windowless activation, this distinction is no longer universal, but still applies to many controls.  
   
- En comparación con el resto de inicialización habitual de un control ActiveX, la creación de una ventana es una operación muy costosa.  Idealmente, un control diferiría crear su ventana hasta absolutamente necesario.  
+ Compared with the rest of the initialization typically performed by an ActiveX control, the creation of a window is an extremely expensive operation. Ideally, a control would defer creating its window until absolutely necessary.  
   
- Muchos controles no necesitan ser activo el tiempo completo que están visibles en un contenedor.  A menudo, un control puede permanecer en estado inactivo hasta que el usuario realice una operación que lo requiera volverse activo \(por ejemplo, al hacer clic con el mouse o presionando la tecla TAB\).  Para que un control para permanecer inactivo hasta el contenedor necesita activarlo, quita el marcador de **OLEMISC\_ACTIVATEWHENVISIBLE** flags diferentes del control:  
+ Many controls do not need to be active the entire time they are visible in a container. Often, a control can remain in the inactive state until the user performs an operation that requires it to become active (for example, clicking with the mouse or pressing the TAB key). To cause a control to remain inactive until the container needs to activate it, remove the **OLEMISC_ACTIVATEWHENVISIBLE** flag from the control's miscellaneous flags:  
   
- [!code-cpp[NVC_MFC_AxOpt#9](../mfc/codesnippet/CPP/turning-off-the-activate-when-visible-option_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#9](../mfc/codesnippet/cpp/turning-off-the-activate-when-visible-option_1.cpp)]  
   
- El indicador de **OLEMISC\_ACTIVATEWHENVISIBLE** automáticamente se omite si desactiva la opción de **Activate When Visible** en la página de [Configuración del control](../mfc/reference/control-settings-mfc-activex-control-wizard.md) del asistente para controles ActiveX MFC cuando cree el control.  
+ The **OLEMISC_ACTIVATEWHENVISIBLE** flag is automatically omitted if you turn off the **Activate When Visible** option in the [Control Settings](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page of the MFC ActiveX Control Wizard when you create your control.  
   
-## Vea también  
- [Controles ActiveX MFC: Optimización](../mfc/mfc-activex-controls-optimization.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
+
+

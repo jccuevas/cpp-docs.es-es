@@ -1,33 +1,52 @@
 ---
-title: "Identificadores de comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "identificadores de comando"
-  - "identificadores de comando, MFC"
+title: Command IDs | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- command IDs, MFC
+- command IDs
 ms.assetid: e0171a2b-45b9-41fa-945d-ec2f7602ded0
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Identificadores de comando
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7326b913df477a1ecbce7b0d995935e930ca5289
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-El identificador de comando describe un comando totalmente sólo \(codificada en el mensaje de **WM\_COMMAND** \).  Este identificador se asigna al objeto de la interfaz de usuario que genera el comando.  Normalmente, los id. se llama para la funcionalidad del objeto de la interfaz de usuario asignados a.  
+---
+# <a name="command-ids"></a>Command IDs
+A command is fully described by its command ID alone (encoded in the **WM_COMMAND** message). This ID is assigned to the user-interface object that generates the command. Typically, IDs are named for the functionality of the user-interface object they are assigned to.  
   
- Por ejemplo, un elemento claro Todo el menú de edición se puede asignar un identificador como **ID\_EDIT\_CLEAR\_ALL**.  La biblioteca de clases predefine algunos id., especialmente para los comandos que el marco controla propio, como **ID\_EDIT\_CLEAR\_ALL** o `ID_FILE_OPEN`.  Creará otros id. de comando personalmente.  
+ For example, a Clear All item in the Edit menu might be assigned an ID such as **ID_EDIT_CLEAR_ALL**. The class library predefines some IDs, particularly for commands that the framework handles itself, such as **ID_EDIT_CLEAR_ALL** or `ID_FILE_OPEN`. You will create other command IDs yourself.  
   
- Cuando crea posee los menús del editor de menús de Visual C\+\+, es una buena idea de seguir la convención de nomenclatura para bibliotecas de clases como se muestra en `ID_FILE_OPEN`.  [Comandos estándar](../mfc/standard-commands.md) explica los comandos estándar definidos por la biblioteca de clases.  
+ When you create your own menus in the Visual C++ menu editor, it is a good idea to follow the class library's naming convention as illustrated by `ID_FILE_OPEN`. [Standard Commands](../mfc/standard-commands.md) explains the standard commands defined by the class library.  
   
-## Vea también  
- [Objetos de interfaz de usuario e identificadores de comando](../mfc/user-interface-objects-and-command-ids.md)
+## <a name="see-also"></a>See Also  
+ [User-Interface Objects and Command IDs](../mfc/user-interface-objects-and-command-ids.md)
+
+

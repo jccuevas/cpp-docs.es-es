@@ -1,47 +1,66 @@
 ---
-title: "Destruir ventanas de marco | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PostNcDestroy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Default (método)"
-  - "destruir ventanas de marco"
-  - "DestroyWindow (método)"
-  - "ventanas de marco de documento, destruir"
-  - "ventanas de marco [C++], destruir"
-  - "MFC [C++], ventanas de marco"
-  - "OnClose (método)"
-  - "OnNcDestroy (método), y ventanas de marco"
-  - "PostNcDestroy (método)"
-  - "ventanas [C++], destruir"
+title: Destroying Frame Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PostNcDestroy
+dev_langs:
+- C++
+helpviewer_keywords:
+- Default method [MFC]
+- DestroyWindow method [MFC]
+- frame windows [MFC], destroying
+- OnNcDestroy method, and frame windows
+- document frame windows [MFC], destroying
+- destroying frame windows
+- MFC, frame windows
+- windows [MFC], destroying
+- OnClose method [MFC]
+- PostNcDestroy method [MFC]
 ms.assetid: 5affca77-1999-4507-a2b2-9aa226611b4b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Destruir ventanas de marco
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: afa6392a6cf1e3b6717a42bc577cfd4720370907
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-El marco de trabajo de MFC administra la destrucción de la ventana junto con la creación de esas ventanas asociadas al marco documentos ni vistas.  Si crea ventanas adicionales, es responsable de destruirlas.  
+---
+# <a name="destroying-frame-windows"></a>Destroying Frame Windows
+The MFC framework manages window destruction as well as creation for those windows associated with framework documents and views. If you create additional windows, you are responsible for destroying them.  
   
- En el marco, cuando el usuario cierra la ventana de marco, el controlador predeterminado de [OnClose](../Topic/CWnd::OnClose.md) de la ventana llama [DestroyWindow](../Topic/CWnd::DestroyWindow.md).  La función del último miembro denominada cuando se destruye la ventana de Windows es [OnNcDestroy](../Topic/CWnd::OnNcDestroy.md), que hace algún limpieza, llama a la función miembro de [valor predeterminado](../Topic/CWnd::Default.md) para realizar la limpieza de Windows, y llama a la función virtual [PostNcDestroy](../Topic/CWnd::PostNcDestroy.md)miembro.  La implementación de [CFrameWnd](../mfc/reference/cframewnd-class.md) de `PostNcDestroy` elimina el objeto de la ventana de C\+\+.  Nunca debe utilizar el operador de C\+\+ **borrar** en una ventana de marco.  Utilice `DestroyWindow` en su lugar.  
+ In the framework, when the user closes the frame window, the window's default [OnClose](../mfc/reference/cwnd-class.md#onclose) handler calls [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow). The last member function called when the Windows window is destroyed is [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy), which does some cleanup, calls the [Default](../mfc/reference/cwnd-class.md#default) member function to perform Windows cleanup, and lastly calls the virtual member function [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy). The [CFrameWnd](../mfc/reference/cframewnd-class.md) implementation of `PostNcDestroy` deletes the C++ window object. You should never use the C++ **delete** operator on a frame window. Use `DestroyWindow` instead.  
   
- Cuando se cierra la ventana principal, la aplicación se cierra.  Si hay documentos no guardados modificados, el marco muestra un cuadro de mensaje para preguntar si se guardan los documentos y garantiza que los documentos adecuados se guardan en caso necesario.  
+ When the main window closes, the application closes. If there are modified unsaved documents, the framework displays a message box to ask if the documents should be saved and ensures that the appropriate documents are saved if necessary.  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Crear ventanas de marco de documento](../mfc/creating-document-frame-windows.md)  
+-   [Creating document frame windows](../mfc/creating-document-frame-windows.md)  
   
-## Vea también  
- [Usar ventanas de marco](../mfc/using-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

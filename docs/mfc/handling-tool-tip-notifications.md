@@ -1,56 +1,75 @@
 ---
-title: "Controlar las notificaciones de informaci&#243;n sobre herramientas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBarCtrl (clase), controlar notificaciones"
-  - "notificaciones, información sobre herramientas"
-  - "información sobre herramientas [C++], notificaciones"
-  - "TOOLTIPTEXT (estructura)"
+title: Handling Tool Tip Notifications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- TOOLTIPTEXT structure [MFC]
+- CToolBarCtrl class [MFC], handling notifications
+- notifications [MFC], tool tips
+- tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Controlar las notificaciones de informaci&#243;n sobre herramientas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4b6ad56302dc7bcbafad48452408bd931696257b
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Cuando especifica el estilo de `TBSTYLE_TOOLTIPS` , la barra de herramientas crea y administra un control tooltip.  Una información sobre herramientas es una pequeña ventana emergente que contiene una línea de texto que describe un botón de la barra de herramientas.  La información sobre herramientas se oculta, produciendo sólo cuando el usuario coloca el cursor en un botón de la barra de herramientas y deja allí para aproximadamente la mitad segundo.  La información sobre herramientas aparece cerca del cursor.  
+---
+# <a name="handling-tool-tip-notifications"></a>Handling Tool Tip Notifications
+When you specify the `TBSTYLE_TOOLTIPS` style, the toolbar creates and manages a tool tip control. A tool tip is a small pop-up window that contains a line of text describing a toolbar button. The tool tip is hidden, appearing only when the user puts the cursor on a toolbar button and leaves it there for approximately one-half second. The tool tip is displayed near the cursor.  
   
- Antes de que se muestre la información sobre herramientas, el mensaje de notificación de **TTN\_NEEDTEXT** se envía a la ventana propietaria de la barra de herramientas para recuperar el texto descriptivo para el botón.  Si la ventana propietaria de la barra de herramientas es una ventana de `CFrameWnd` , la información sobre herramientas se muestran sin ningún esfuerzo adicional, porque `CFrameWnd` tiene un controlador predeterminado para la notificación de **TTN\_NEEDTEXT** .  Si la ventana propietaria de la barra de herramientas no se deriva de `CFrameWnd`, como una vista del cuadro de diálogo o el formulario, debe agregar una entrada al mensaje de la ventana propietaria asignado y proporcionar un controlador de notificación en el mapa de mensajes.  La entrada del mapa de mensajes de la ventana propietaria es la siguiente:  
+ Before the tool tip is displayed, the **TTN_NEEDTEXT** notification message is sent to the toolbar's owner window to retrieve the descriptive text for the button. If the toolbar's owner window is a `CFrameWnd` window, tool tips are displayed without any extra effort, because `CFrameWnd` has a default handler for the **TTN_NEEDTEXT** notification. If the toolbar's owner window is not derived from `CFrameWnd`, such as a dialog box or form view, you must add an entry to your owner window's message map and provide a notification handler in the message map. The entry to your owner window's message map is as follows:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/CPP/handling-tool-tip-notifications_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-tool-tip-notifications_1.cpp)]  
   
-## Comentarios  
+## <a name="remarks"></a>Remarks  
  `memberFxn`  
- La función miembro que se llamará cuando el texto es necesario para el botón.  
+ The member function to be called when text is needed for this button.  
   
- Observe que el id. de una información sobre herramientas siempre es 0.  
+ Note that the id of a tool tip is always 0.  
   
- Además de notificación de **TTN\_NEEDTEXT** , un control de información sobre herramientas puede enviar notificaciones siguientes a un control de barra de herramientas:  
+ In addition to the **TTN_NEEDTEXT** notification, a tool tip control can send the following notifications to a toolbar control:  
   
-|Notificación|Significado|  
-|------------------|-----------------|  
-|**TTN\_NEEDTEXTA**|El control de información sobre herramientas requiere el texto ASCII \(Windows 95 solo\)|  
-|**TTN\_NEEDTEXTW**|El control de información sobre herramientas requiere el texto Unicode \(Windows NT solo\)|  
-|**TBN\_HOTITEMCHANGE**|Indica que el elemento \(resaltado\) activo ha cambiado.|  
-|**NM\_RCLICK**|Indica que el usuario ha hecho clic con el botón secundario en un botón.|  
-|**TBN\_DRAGOUT**|Indica que el usuario ha hecho clic en el botón y que ha arrastrado el puntero del botón.  Permite una aplicación para implementar una operación de arrastrar y colocar de un botón de la barra de herramientas.  Al recibir esta notificación, la aplicación se iniciará la operación de arrastrar y colocar.|  
-|**TBN\_DROPDOWN**|Indica que el usuario ha hecho clic en un botón que utiliza el estilo de **TBSTYLE\_DROPDOWN** .|  
-|**TBN\_GETOBJECT**|Indica que el usuario mover el puntero sobre un botón que utiliza el estilo de **TBSTYLE\_DROPPABLE** .|  
+|Notification|Meaning|  
+|------------------|-------------|  
+|**TTN_NEEDTEXTA**|Tool tip control requires ASCII text (Windows 95 only)|  
+|**TTN_NEEDTEXTW**|Tool tip control requires UNICODE text (Windows NT only)|  
+|**TBN_HOTITEMCHANGE**|Indicates that the hot (highlighted) item has changed.|  
+|**NM_RCLICK**|Indicates the user has right-clicked a button.|  
+|**TBN_DRAGOUT**|Indicates the user has clicked the button and dragged the pointer off the button. It allows an application to implement drag and drop from a toolbar button. When receiving this notification, the application will begin the drag and drop operation.|  
+|**TBN_DROPDOWN**|Indicates the user has clicked a button that uses the **TBSTYLE_DROPDOWN** style.|  
+|**TBN_GETOBJECT**|Indicates the user moved the pointer over a button that uses the **TBSTYLE_DROPPABLE** style.|  
   
- Para una función de controlador de ejemplo y más información sobre cómo habilitar información sobre herramientas, vea [Información sobre herramientas](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).  
+ For an example handler function and more information about enabling tool tips, see [Tool Tips](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).  
   
-## Vea también  
- [Usar CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,52 +1,71 @@
 ---
-title: "Contenedores de controles ActiveX: Ver y modificar propiedades de los controles | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contenedores de controles ActiveX [C++], ver y modificar las propiedades"
-  - "controles ActiveX [C++], propiedades"
-  - "controles [MFC], propiedades"
-  - "propiedades [MFC], ver y modificar"
-  - "editores de recursos, ver y modificar controles ActiveX"
+title: 'ActiveX Control Containers: Viewing and Modifying Control Properties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- properties [MFC], viewing and modifying
+- ActiveX control containers [MFC], viewing and modifying properties
+- resource editors, viewing and modifying ActiveX controls
+- ActiveX controls [MFC], properties
+- controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Contenedores de controles ActiveX: Ver y modificar propiedades de los controles
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f147544230d135b89f208eef2aba8db9a31468f8
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Cuando inserte un control ActiveX en un proyecto, es útil ver y cambiar las propiedades admitidas por el control ActiveX.  En este artículo se explica cómo utilizar el editor de recursos de Visual C\+\+ para ello.  
+---
+# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX Control Containers: Viewing and Modifying Control Properties
+When you insert an ActiveX control into a project, it is useful to view and change the properties supported by the ActiveX control. This article discusses how to use the Visual C++ resource editor to do this.  
   
- Si la aplicación contenedora de controles ActiveX utiliza controles incrustados, puede ver y modificar las propiedades del control mientras en el editor de recursos.  También puede utilizar el editor de recursos para establecer valores de propiedad en tiempo de diseño.  El editor de recursos a guarda automáticamente estos valores en el archivo de recursos del proyecto.  Cualquier instancia del control tendrá sus propiedades inicializado con estos valores.  
+ If your ActiveX control container application uses embedded controls, you can view and modify the control's properties while in the resource editor. You can also use the resource editor to set property values during design time. The resource editor then automatically saves these values in the project's resource file. Any instance of the control will then have its properties initialized to these values.  
   
- Este procedimiento supone que ha insertado un control en el proyecto.  Para obtener información, vea [Contenedores de controles ActiveX: Insertar un Control Into una aplicación contenedora de Control](../mfc/inserting-a-control-into-a-control-container-application.md).  
+ This procedure assumes that you have inserted a control into your project. For information, see [ActiveX Control Containers: Inserting a Control Into a Control Container Application](../mfc/inserting-a-control-into-a-control-container-application.md).  
   
- El primer paso para ver las propiedades del control es agregar una instancia del control a la plantilla de cuadro de diálogo del proyecto.  
+ The first step in viewing the control's properties is to add an instance of the control to the project's dialog template.  
   
-### Para ver las propiedades de un control  
+### <a name="to-view-the-properties-of-a-control"></a>To view the properties of a control  
   
-1.  En la vista de recursos, abra la carpeta de **Cuadro de diálogo** .  
+1.  In Resource View, open the **Dialog** folder.  
   
-2.  Abra la plantilla principal del cuadro de diálogo.  
+2.  Open your main dialog box template.  
   
-3.  Inserte un control ActiveX mediante el cuadro de diálogo **Insertar control ActiveX** .  Para obtener más información, vea [Controles ActiveX de vista y a un cuadro de diálogo](../mfc/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
+3.  Insert an ActiveX control using the **Insert ActiveX Control** dialog box. For more information, see [Viewing and Adding ActiveX Controls to a Dialog Box](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
   
-4.  Seleccione el control ActiveX en el cuadro de diálogo.  
+4.  Select the ActiveX control in the dialog box.  
   
-5.  De la ventana Propiedades, haga clic en el botón de **Propiedades** .  
+5.  From the Properties window, click the **Properties** button.  
   
- Use el cuadro de diálogo **Propiedades** para modificar y probar nuevas propiedades inmediatamente.  
+ Use the **Properties** dialog box to modify and test new properties immediately.  
   
-## Vea también  
- [Contenedores de controles ActiveX](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

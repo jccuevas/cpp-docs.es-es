@@ -1,135 +1,128 @@
 ---
-title: "Documentos activos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "documentos activos [C++]"
-  - "documentos activos [C++], requisitos"
-  - "documentos activos [C++], vistas"
-  - "OLE [C++], documentos activos"
-  - "objetos de vista, requisitos"
-  - "vistas [C++], documentos activos"
+title: Active Documents | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC]
+- active documents [MFC], requirements
+- view objects [MFC], requirements
+- OLE [MFC], active documents
+- views [MFC], active documents
+- active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Documentos activos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e108d7ba0af27a9050740ef26764d2d25deaad14
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Los documentos activos amplían la tecnología de documento compuesto de OLE.  Estas extensiones se proporcionan en forma de interfaces adicionales que administran las vistas, de modo que los objetos puedan funcionar dentro de los contenedores pero mantener el control sobre la presentación y impresión funciona.  Este proceso permite mostrar documentos en marcos no nativos \(como Microsoft Office binder o Microsoft Internet Explorer\) y en marcos nativos \(como propios puertos de la vista del producto\).  
+---
+# <a name="active-documents"></a>Active Documents
+Active documents extend the compound document technology of OLE. These extensions are provided in the form of additional interfaces that manage views, so that objects can function within containers and yet retain control over their display and printing functions. This process makes it possible to display documents both in foreign frames (such as the Microsoft Office Binder or Microsoft Internet Explorer) and in native frames (such as the product's own view ports).  
   
- Esta sección describe [requisitos para los documentos activos](#requirements_for_active_documents)funcional.  El documento activos posee un conjunto de datos y tiene acceso al almacenamiento donde los datos se pueden guardar y recuperar.  Puede crear y administrar una o más vistas de sus datos.  Además de admitir la incrustación e interfaces habituales de activación in situ documentos de OLE, el documento activo comunica la posibilidad de crear vistas con `IOleDocument`.  A través de esta interfaz, el contenedor puede pedir crear \(y enumerar posiblemente\) vistas que el documento activo puede mostrar.  A través de esta interfaz, el documento activo también puede proporcionar información diferente sobre sí mismo, por ejemplo si admite varias vistas o rectángulos complejos.  
+ This section describes the functional [requirements for active documents](#requirements_for_active_documents). The active document owns a set of data and has access to storage where the data can be saved and retrieved. It can create and manage one or more views on its data. In addition to supporting the usual embedding and in-place activation interfaces of OLE documents, the active document communicates its ability to create views through `IOleDocument`. Through this interface, the container can ask to create (and possibly enumerate) the views that the active document can display. Through this interface, the active document can also provide miscellaneous information about itself, such as whether it supports multiple views or complex rectangles.  
   
- A continuación se muestra la interfaz de **IOleDocument** .  Observe que la interfaz de **IEnumOleDocumentViews** es un enumerador estándar OLE para los tipos de **IOleDocumentView \*** .  
+ The following is the **IOleDocument** interface. Note that the **IEnumOleDocumentViews** interface is a standard OLE enumerator for **IOleDocumentView \*** types.  
   
- `interface IOleDocument : IUnknown`  
+```  
+interface IOleDocument : IUnknown  
+    {  
+    HRESULT CreateView(  
+        [in] IOleInPlaceSite *pIPSite,  
+        [in] IStream *pstm,  
+        [in] DWORD dwReserved,  
+        [out] IOleDocumentView **ppView);  
+
+    HRESULT GetDocMiscStatus([out] DWORD *pdwStatus);  
+
+    HRESULT EnumViews(  
+        [out] IEnumOleDocumentViews **ppEnum,  
+        [out] IOleDocumentView **ppView);  
+    }  
+```  
   
- `{`  
+ Every active document must have a view frame provider with this interface. If the document is not embedded within a container, the active document server itself must provide the view frame. However, when the active document is embedded in an active document container, the container provides the view frame.  
   
- `HRESULT CreateView(`  
+ An active document can create one or more types of [views](#requirements_for_view_objects) of its data (for example, normal, outline, page layout, and so on). Views act like filters through which the data can be seen. Even if the document has only one type of view, you may still want to support multiple views as a means of supporting new window functionality (for example, the **New Window** item on the **Window** menu in Office applications).  
   
- `[in] IOleInPlaceSite *pIPSite,`  
+##  <a name="requirements_for_active_documents"></a> Requirements for Active Documents  
+ An active document that can be displayed in an active document container must:  
   
- `[in] IStream *pstm,`  
+-   Use OLE's Compound Files as its storage mechanism by implementing `IPersistStorage`.  
   
- `[in] DWORD dwReserved,`  
+-   Support the basic embedding features of OLE Documents, including **Create From File**. This necessitates the interfaces `IPersistFile`, `IOleObject`, and `IDataObject`.  
   
- `[out] IOleDocumentView **ppView);`  
+-   Support one or more views, each of which is capable of in-place activation. That is, the views must support the interface `IOleDocumentView` as well as the interfaces `IOleInPlaceObject` and `IOleInPlaceActiveObject` (using the container's **IOleInPlaceSite** and **IOleInPlaceFrame** interfaces).  
   
- `HRESULT GetDocMiscStatus([out] DWORD *pdwStatus);`  
+-   Support the standard active document interfaces `IOleDocument`, `IOleCommandTarget`, and `IPrint`.  
   
- `HRESULT EnumViews(`  
+ Knowledge of when and how to use the container-side interfaces is implied in these requirements.  
   
- `[out] IEnumOleDocumentViews **ppEnum,`  
+##  <a name="requirements_for_view_objects"></a> Requirements for View Objects  
+ An active document can create one or more views of its data. Functionally, these views are like ports onto a particular method for displaying the data. If an active document only supports a single view, the active document and that single view can be implemented using a single class. **IOleDocument::CreateView** returns the same object's `IOleDocumentView` interface pointer.  
   
- `[out] IOleDocumentView **ppView);`  
+ To be represented within an active document container, a view component must support **IOleInPlaceObject** and **IOleInPlaceActiveObject** in addition to `IOleDocumentView`:  
   
- `}`  
+```  
+interface IOleDocumentView : IUnknown  
+    {  
+    HRESULT SetInPlaceSite([in] IOleInPlaceSite *pIPSite);  
+    HRESULT GetInPlaceSite([out] IOleInPlaceSite **ppIPSite);  
+    HRESULT GetDocument([out] IUnknown **ppunk);  
+    [input_sync] HRESULT SetRect([in] LPRECT prcView);  
+    HRESULT GetRect([in] LPRECT prcView);  
+    [input_sync] HRESULT SetRectComplex(  
+        [in] LPRECT prcView,  
+        [in] LPRECT prcHScroll,  
+        [in] LPRECT prcVScroll,  
+        [in] LPRECT prcSizeBox);  
+    HRESULT Show([in] BOOL fShow);  
+    HRESULT UIActivate([in] BOOL fUIActivate);  
+    HRESULT Open(void);  
+    HRESULT CloseView([in] DWORD dwReserved);  
+    HRESULT SaveViewState([in] IStream *pstm);  
+    HRESULT ApplyViewState([in] IStream *pstm);  
+    HRESULT Clone(  
+        [in] IOleInPlaceSite *pIPSiteNew,  
+        [out] IOleDocumentView **ppViewNew);  
+    }  
+```  
   
- Cada documento activo debe tener un proveedor de cuadro de vista con esta interfaz.  Si el documento no se incrusta dentro de un contenedor, el propio servidor de documentos activos debe proporcionar un cuadro de vista.  Sin embargo, cuando el documento activo se incrusta en un contenedor de documento activo, el contenedor proporciona el cuadro de la vista.  
+ Every view has an associated view site, which encapsulates the view frame and the view port (HWND and a rectangular area in that window). The site exposes this functionality though the standard **IOleInPlaceSite** interface. Note that it is possible to have more than one view port on a single HWND.  
   
- Un documento activo puede crear uno o más tipos de [vistas](#requirements_for_view_objects) de los datos \(por ejemplo, normal, contorno, diseño de página, etc.\).  Ver actúan como filtros a través de los que los datos pueden considerarse.  Aunque el documento tiene sólo un tipo de vista, todavía puede admitir varias vistas como medio para admitir la funcionalidad de la nueva ventana \(por ejemplo, el elemento de **Nueva ventana** en el menú de **Ventana** en aplicaciones de Office\).  
+ Typically, each type of view has a different printed representation. Hence views and the corresponding view sites should implement the printing interfaces if `IPrint` and `IContinueCallback`, respectively. The view frame must negotiate with the view provider through **IPrint** when printing begins, so that headers, footers, margins, and related elements are printed correctly. The view provider notifies the frame of printing-related events through `IContinueCallback`. For more information on the use of these interfaces, see [Programmatic Printing](../mfc/programmatic-printing.md).  
   
-##  <a name="requirements_for_active_documents"></a> Requisitos para los documentos activos  
- Un documento activo que se puede mostrar en un contenedor de documento activo debe:  
+ Note that if an active document only supports a single view, then the active document and that single view can be implemented using a single concrete class. **IOleDocument::CreateView** simply returns the same object's `IOleDocumentView` interface pointer. In short, it is not necessary that there be two separate object instances when only one view is required.  
   
--   Utilice archivos compuestos OLE como el mecanismo de almacenamiento implementando `IPersistStorage`.  
+ A view object can also be a command target. By implementing `IOleCommandTarget` a view can receive commands that originate in the container's user interface (such as **New**, **Open**, **Save As**, **Print** on the **File** menu; and **Copy**, **Paste**, **Undo** on the **Edit** menu). For more information, see [Message Handling and Command Targets](../mfc/message-handling-and-command-targets.md).  
   
--   Admite las características principales de incrustación de documentos OLE, incluidos **Crear desde archivo**.  Esto necesita las interfaces `IPersistFile`, `IOleObject`, y `IDataObject`.  
-  
--   Admite una o más vistas, que es capaz de activación en contexto.  Es decir, las vistas deben admitir la interfaz `IOleDocumentView` así como las interfaces `IOleInPlaceObject` y `IOleInPlaceActiveObject` \(mediante **IOleInPlaceSite** de contenedor y las interfaces de **IOleInPlaceFrame** \).  
-  
--   Admite las interfaces `IOleDocument`, `IOleCommandTarget`, y `IPrint`de documentos activos del estándar.  
-  
- Conocimiento de cuándo y cómo utilizar las interfaces del contenedor\- lado se implica en estos requisitos.  
-  
-##  <a name="requirements_for_view_objects"></a> Requisitos para los objetos de vista  
- Un documento activo puede crear una o más vistas de sus datos.  Funcionalmente, estas vistas son los puertos sobre un método set para mostrar los datos.  Si un documento activo sólo admite una vista única, el documento activo y esa vista única se pueden implementar mediante una sola clase.  **IOleDocument::CreateView** devuelve el puntero de interfaz de `IOleDocumentView` del mismo objeto.  
-  
- Para trazar dentro de un contenedor de documento activo, un componente de la vista debe admitir **IOleInPlaceObject** y **IOleInPlaceActiveObject** además de `IOleDocumentView`:  
-  
- `interface IOleDocumentView : IUnknown`  
-  
- `{`  
-  
- `HRESULT SetInPlaceSite([in] IOleInPlaceSite *pIPSite);`  
-  
- `HRESULT GetInPlaceSite([out] IOleInPlaceSite **ppIPSite);`  
-  
- `HRESULT GetDocument([out] IUnknown **ppunk);`  
-  
- `[input_sync] HRESULT SetRect([in] LPRECT prcView);`  
-  
- `HRESULT GetRect([in] LPRECT prcView);`  
-  
- `[input_sync] HRESULT SetRectComplex(`  
-  
- `[in] LPRECT prcView,`  
-  
- `[in] LPRECT prcHScroll,`  
-  
- `[in] LPRECT prcVScroll,`  
-  
- `[in] LPRECT prcSizeBox);`  
-  
- `HRESULT Show([in] BOOL fShow);`  
-  
- `HRESULT UIActivate([in] BOOL fUIActivate);`  
-  
- `HRESULT Open(void);`  
-  
- `HRESULT CloseView([in] DWORD dwReserved);`  
-  
- `HRESULT SaveViewState([in] IStream *pstm);`  
-  
- `HRESULT ApplyViewState([in] IStream *pstm);`  
-  
- `HRESULT Clone(`  
-  
- `[in] IOleInPlaceSite *pIPSiteNew,`  
-  
- `[out] IOleDocumentView **ppViewNew);`  
-  
- `}`  
-  
- Cada vista tiene un sitio asociado de la vista, que encapsula el cuadro y el puerto de vista \(HWND y un área rectangular de esa ventana\).  El sitio expone esta funcionalidad sin embargo la interfaz estándar de **IOleInPlaceSite** .  Tenga en cuenta que es posible tener más de un puerto de un único HWND.  
-  
- Normalmente, cada tipo de vista tiene una representación diferente impresa.  Por consiguiente vistas y sitios correspondientes de la vista deben implementar las interfaces de impresión si `IPrint` y `IContinueCallback`, respectivamente.  El cuadro de la vista debe sopesar con el proveedor de la vista con **IPrint** al imprimir comienza, para imprimir encabezados, pies de página, los márgenes, y elementos relacionados correctamente.  El proveedor de vista notifica al cuadro de eventos impresión\- relacionados con `IContinueCallback`.  Para obtener más información sobre el uso de estas interfaces, vea [Imprimir mediante programación](../mfc/programmatic-printing.md).  
-  
- Tenga en cuenta que si un documento activo sólo admite una vista única, el documento activo y esa vista única se pueden implementar mediante una clase concreta única.  **IOleDocument::CreateView** simplemente devuelve el puntero de interfaz de `IOleDocumentView` del mismo objeto.  En resumen, no es necesario que haya dos instancias de objeto independientes cuando sólo se necesita una vista.  
-  
- Un objeto de vista también puede ser un destino del comando.  Implementar `IOleCommandTarget` una vista puede recibir los comandos que se originan en la interfaz de usuario del contenedor \(como **new**, **Abierta**, **Guardar como**, **Impresión** en el menú de **archivo** ; y **copiar**, **Pegar**, **Deshacer** en el menú de **edición** \).  Para obtener más información, vea [Control de mensajes y destinos de comando](../mfc/message-handling-and-command-targets.md).  
-  
-## Vea también  
- [Contención de documentos activos](../mfc/active-document-containment.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containment](../mfc/active-document-containment.md)
+
+

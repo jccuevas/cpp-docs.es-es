@@ -1,5 +1,5 @@
 ---
-title: CStatusBar (clase) | Documentos de Microsoft
+title: CStatusBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,11 +29,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- indicators, status bar
-- CStatusBar class
-- status bars
-- indicators
-- status indicators
+- CStatusBar [MFC], CStatusBar
+- CStatusBar [MFC], CommandToIndex
+- CStatusBar [MFC], Create
+- CStatusBar [MFC], CreateEx
+- CStatusBar [MFC], DrawItem
+- CStatusBar [MFC], GetItemID
+- CStatusBar [MFC], GetItemRect
+- CStatusBar [MFC], GetPaneInfo
+- CStatusBar [MFC], GetPaneStyle
+- CStatusBar [MFC], GetPaneText
+- CStatusBar [MFC], GetStatusBarCtrl
+- CStatusBar [MFC], SetIndicators
+- CStatusBar [MFC], SetPaneInfo
+- CStatusBar [MFC], SetPaneStyle
+- CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
 caps.latest.revision: 24
 author: mikeblome
@@ -53,79 +63,79 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 7f394d6519bcf86a4de3966bb958923aab8dd0c6
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fb2ea90d6570acb75cfeae1bab44094b1e46f808
 ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cstatusbar-class"></a>CStatusBar (clase)
-Una barra de control con una fila de paneles de salida de texto o "indicadores".  
+# <a name="cstatusbar-class"></a>CStatusBar Class
+A control bar with a row of text output panes, or "indicators."  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CStatusBar : public CControlBar  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CStatusBar::CStatusBar](#cstatusbar)|Construye un objeto `CStatusBar`.|  
+|[CStatusBar::CStatusBar](#cstatusbar)|Constructs a `CStatusBar` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CStatusBar::CommandToIndex](#commandtoindex)|Obtiene el índice para un identificador de indicador especificado.|  
-|[CStatusBar::Create](#create)|Crea la barra de estado, que se conecta a la `CStatusBar` de objetos y establece el alto de fuente y barra inicial.|  
-|[CStatusBar:: CreateEx](#createex)|Crea un `CStatusBar` objeto con estilos adicionales para el objeto incrustado `CStatusBarCtrl` objeto.|  
-|[CStatusBar::DrawItem](#drawitem)|Se llama cuando un aspecto visual de un cambios de control dibujado por el propietario de la barra de estado.|  
-|[CStatusBar::GetItemID](#getitemid)|Obtiene el identificador de indicador de un índice determinado.|  
-|[CStatusBar::GetItemRect](#getitemrect)|Obtiene Mostrar rectángulo para un índice determinado.|  
-|[CStatusBar::GetPaneInfo](#getpaneinfo)|Obtiene el Id. de indicador, estilo y ancho de un índice determinado.|  
-|[CStatusBar::GetPaneStyle](#getpanestyle)|Obtiene el estilo de indicador para un índice determinado.|  
-|[CStatusBar::GetPaneText](#getpanetext)|Obtiene el texto de indicador para un índice determinado.|  
-|[CStatusBar:: GetStatusBarCtrl](#getstatusbarctrl)|Permite el acceso directo al control subyacente común.|  
-|[CStatusBar:: SetIndicators](#setindicators)|Establece los identificadores de indicador.|  
-|[CStatusBar::SetPaneInfo](#setpaneinfo)|Id. de indicador de conjuntos, estilo y ancho de un índice determinado.|  
-|[CStatusBar::SetPaneStyle](#setpanestyle)|Establece el estilo de indicador para un índice determinado.|  
-|[CStatusBar::SetPaneText](#setpanetext)|Establece el texto de indicador para un índice determinado.|  
+|[CStatusBar::CommandToIndex](#commandtoindex)|Gets index for a given indicator ID.|  
+|[CStatusBar::Create](#create)|Creates the status bar, attaches it to the `CStatusBar` object, and sets the initial font and bar height.|  
+|[CStatusBar::CreateEx](#createex)|Creates a `CStatusBar` object with additional styles for the embedded `CStatusBarCtrl` object.|  
+|[CStatusBar::DrawItem](#drawitem)|Called when a visual aspect of an owner-draw status bar control changes.|  
+|[CStatusBar::GetItemID](#getitemid)|Gets indicator ID for a given index.|  
+|[CStatusBar::GetItemRect](#getitemrect)|Gets display rectangle for a given index.|  
+|[CStatusBar::GetPaneInfo](#getpaneinfo)|Gets indicator ID, style, and width for a given index.|  
+|[CStatusBar::GetPaneStyle](#getpanestyle)|Gets indicator style for a given index.|  
+|[CStatusBar::GetPaneText](#getpanetext)|Gets indicator text for a given index.|  
+|[CStatusBar::GetStatusBarCtrl](#getstatusbarctrl)|Allows direct access to the underlying common control.|  
+|[CStatusBar::SetIndicators](#setindicators)|Sets indicator IDs.|  
+|[CStatusBar::SetPaneInfo](#setpaneinfo)|Sets indicator ID, style, and width for a given index.|  
+|[CStatusBar::SetPaneStyle](#setpanestyle)|Sets indicator style for a given index.|  
+|[CStatusBar::SetPaneText](#setpanetext)|Sets indicator text for a given index.|  
   
-## <a name="remarks"></a>Comentarios  
- Los paneles de salida se utilizan habitualmente como líneas de mensaje y como indicadores de estado. Algunos ejemplos son las líneas de mensaje de Ayuda de menú que se describe brevemente el comando de menú seleccionado y los indicadores que muestran el estado de Bloq Despl, BLOQ NUM y otras claves.  
+## <a name="remarks"></a>Remarks  
+ The output panes commonly are used as message lines and as status indicators. Examples include the menu help-message lines that briefly explain the selected menu command and the indicators that show the status of the SCROLL LOCK, NUM LOCK, and other keys.  
   
- [CStatusBar:: GetStatusBarCtrl](#getstatusbarctrl), una función miembro nueva para MFC 4.0, permite aprovechar las ventajas de la compatibilidad del control común de Windows para la barra de estado personalización y funcionalidad adicional. `CStatusBar`funciones de miembro proporcionan la mayor parte de la funcionalidad de los controles comunes de Windows; Sin embargo, cuando se llama a `GetStatusBarCtrl`, puede asignar a las barras de estado aún más las características de una barra de estado de Windows 95 ó 98. Cuando se llama a `GetStatusBarCtrl`, devolverá una referencia a un `CStatusBarCtrl` objeto. Vea [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) para obtener más información acerca de cómo diseñar barras de herramientas con controles comunes de Windows. Para obtener más información acerca de los controles comunes, vea [controles comunes](http://msdn.microsoft.com/library/windows/desktop/bb775493) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [CStatusBar::GetStatusBarCtrl](#getstatusbarctrl), a member function new to MFC 4.0, allows you to take advantage of the Windows common control's support for status bar customization and additional functionality. `CStatusBar` member functions give you most of the functionality of the Windows common controls; however, when you call `GetStatusBarCtrl`, you can give your status bars even more of the characteristics of a Windows 95/98 status bar. When you call `GetStatusBarCtrl`, it will return a reference to a `CStatusBarCtrl` object. See [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) for more information about designing toolbars using Windows common controls. For more general information about common controls, see [Common Controls](http://msdn.microsoft.com/library/windows/desktop/bb775493) in the Windows SDK.  
   
- El marco de trabajo almacena información de indicador en una matriz con el indicador situado en la posición 0. Cuando se crea una barra de estado, use una matriz de identificadores que el marco de trabajo se asocia a los indicadores correspondientes de cadena. A continuación, puede usar un identificador de cadena o un índice para tener acceso a un indicador.  
+ The framework stores indicator information in an array with the leftmost indicator at position 0. When you create a status bar, you use an array of string IDs that the framework associates with the corresponding indicators. You can then use either a string ID or an index to access an indicator.  
   
- De forma predeterminada, el primer indicador es "elástico": ocupe la longitud de la barra de estado no usa los otros paneles de indicador, por lo que los otros paneles están alineados a la derecha.  
+ By default, the first indicator is "elastic": it takes up the status-bar length not used by the other indicator panes, so that the other panes are right-aligned.  
   
- Para crear una barra de estado, siga estos pasos:  
+ To create a status bar, follow these steps:  
   
-1.  Construir la `CStatusBar` objeto.  
+1.  Construct the `CStatusBar` object.  
   
-2.  Llame a la [crear](#create) (o [CreateEx](#createex)) funcionan al crear la ventana de la barra de estado y adjuntarla a la `CStatusBar` objeto.  
+2.  Call the [Create](#create) (or [CreateEx](#createex)) function to create the status-bar window and attach it to the `CStatusBar` object.  
   
-3.  Llame a [SetIndicators](#setindicators) para asociar un identificador de cadena a cada indicador.  
+3.  Call [SetIndicators](#setindicators) to associate a string ID with each indicator.  
   
- Hay tres maneras de actualizar el texto en un panel de barra de estado:  
+ There are three ways to update the text in a status-bar pane:  
   
-1.  Llame a [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) para actualizar el texto en el panel 0.  
+1.  Call [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) to update the text in pane 0 only.  
   
-2.  Llame a [CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext) en la barra de estado `ON_UPDATE_COMMAND_UI` controlador.  
+2.  Call [CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext) in the status bar's `ON_UPDATE_COMMAND_UI` handler.  
   
-3.  Llame a [denominada SetPaneText](#setpanetext) para actualizar el texto de un panel.  
+3.  Call [SetPaneText](#setpanetext) to update the text for any pane.  
   
- Llame a [SetPaneStyle](#setpanestyle) para actualizar el estilo de un panel de barra de estado.  
+ Call [SetPaneStyle](#setpanestyle) to update the style of a status-bar pane.  
   
- Para obtener más información sobre el uso de `CStatusBar`, vea el artículo [implementación de la barra de estado en MFC](../../mfc/status-bar-implementation-in-mfc.md) y [Nota técnica 31: barras de Control](../../mfc/tn031-control-bars.md).  
+ For more information on using `CStatusBar`, see the article [Status Bar Implementation in MFC](../../mfc/status-bar-implementation-in-mfc.md) and [Technical Note 31 : Control Bars](../../mfc/tn031-control-bars.md).  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -136,28 +146,28 @@ class CStatusBar : public CControlBar
   
  `CStatusBar`  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="commandtoindex"></a>CStatusBar::CommandToIndex  
- Obtiene el índice de indicador para un identificador especificado.  
+##  <a name="commandtoindex"></a>  CStatusBar::CommandToIndex  
+ Gets the indicator index for a given ID.  
   
 ```  
 int CommandToIndex(UINT nIDFind) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIDFind`  
- Identificador de cadena del indicador es cuyo índice se va a recuperar.  
+ String ID of the indicator whose index is to be retrieved.  
   
-### <a name="return-value"></a>Valor devuelto  
- El índice del indicador si se realiza correctamente; -1 si no se realiza correctamente.  
+### <a name="return-value"></a>Return Value  
+ The index of the indicator if successful; -1 if not successful.  
   
-### <a name="remarks"></a>Comentarios  
- El índice del primer indicador es 0.  
+### <a name="remarks"></a>Remarks  
+ The index of the first indicator is 0.  
   
-##  <a name="create"></a>CStatusBar::Create  
- Crea un estado de la barra (una ventana secundaria) y lo asocia a la `CStatusBar` objeto.  
+##  <a name="create"></a>  CStatusBar::Create  
+ Creates a status bar (a child window) and associates it with the `CStatusBar` object.  
   
 ```  
 virtual BOOL Create(
@@ -166,30 +176,30 @@ virtual BOOL Create(
     UINT nID = AFX_IDW_STATUS_BAR);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- Puntero a la [CWnd](../../mfc/reference/cwnd-class.md) objeto cuya ventana de Windows es el elemento primario de la barra de estado.  
+ Pointer to the [CWnd](../../mfc/reference/cwnd-class.md) object whose Windows window is the parent of the status bar.  
   
  `dwStyle`  
- El estilo de barra de estado. Además de las ventanas estándares [estilos](../../mfc/reference/window-styles.md), se admiten estos estilos.  
+ The status-bar style. In addition to the standard Windows [styles](../../mfc/reference/styles-used-by-mfc.md#window-styles), these styles are supported.  
   
-- `CBRS_TOP`Barra de control se encuentra en la parte superior de la ventana de marco.  
+- `CBRS_TOP` Control bar is at top of frame window.  
   
-- `CBRS_BOTTOM`Barra de control se encuentra en la parte inferior de la ventana de marco.  
+- `CBRS_BOTTOM` Control bar is at bottom of frame window.  
   
-- `CBRS_NOALIGN`Barra de control no se cambia de posición cuando se cambia de tamaño el elemento primario.  
+- `CBRS_NOALIGN` Control bar is not repositioned when the parent is resized.  
   
  `nID`  
- Identificador de ventana secundaria. de la barra de herramientas  
+ The toolbar's child-window ID.  
   
-### <a name="return-value"></a>Valor devuelto  
- Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- También establece la fuente inicial y establece el estado de alto de la barra en un valor predeterminado.  
+### <a name="remarks"></a>Remarks  
+ Also sets the initial font and sets the status bar's height to a default value.  
   
-##  <a name="createex"></a>CStatusBar:: CreateEx  
- Llame a esta función para crear un estado de la barra (una ventana secundaria) y asociarlo con el `CStatusBar` objeto.  
+##  <a name="createex"></a>  CStatusBar::CreateEx  
+ Call this function to create a status bar (a child window) and associate it with the `CStatusBar` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -199,70 +209,70 @@ virtual BOOL CreateEx(
     UINT nID = AFX_IDW_STATUS_BAR);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- Puntero a la [CWnd](../../mfc/reference/cwnd-class.md) objeto cuya ventana de Windows es el elemento primario de la barra de estado.  
+ Pointer to the [CWnd](../../mfc/reference/cwnd-class.md) object whose Windows window is the parent of the status bar.  
   
  `dwCtrlStyle`  
- Estilos adicionales para la creación de los datos incrustados [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) objeto. El valor predeterminado especifica una barra de estado sin un control de tamaño o la información sobre herramientas admiten. Estilos de barra de estado compatibles son:  
+ Additional styles for the creation of the embedded [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) object. The default specifies a status bar without a sizing grip or tooltip support. Status bar styles supported are:  
   
-- **SBARS_SIZEGRIP** el control de barra de estado incluye un control de tamaño en el extremo derecho de la barra de estado. Un control de tamaño es similar a un borde de tamaño; es un área rectangular que el usuario hacer clic y arrastrar para cambiar el tamaño de la ventana primaria.  
+- **SBARS_SIZEGRIP** The status bar control includes a sizing grip at the right end of the status bar. A sizing grip is similar to a sizing border; it is a rectangular area that the user can click and drag to resize the parent window.  
   
-- **SBT_TOOLTIPS** la barra de estado es compatible con información sobre herramientas.  
+- **SBT_TOOLTIPS** The status bar supports tooltips.  
   
- Para obtener más información acerca de estos estilos, consulte [configuración de CStatusBarCtrl](../../mfc/settings-for-the-cstatusbarctrl.md).  
+ For details on these styles, see [Settings for the CStatusBarCtrl](../../mfc/settings-for-the-cstatusbarctrl.md).  
   
  `dwStyle`  
- El estilo de barra de estado. El valor predeterminado especifica que se ha creado una barra de estado visible en la parte inferior de la ventana de marco. Aplicar cualquier combinación de estilos de control que se muestran en la barra de estado [estilos de ventana](../../mfc/reference/window-styles.md) y [CDialogBar::Create](../../mfc/reference/cdialogbar-class.md#create). Sin embargo, este parámetro siempre debe incluir los estilos WS_CHILD y WS_VISIBLE.  
+ The status bar style. The default specifies that a visible status bar be created at the bottom of the frame window. Apply any combination of status bar control styles listed in [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) and [CDialogBar::Create](../../mfc/reference/cdialogbar-class.md#create). However, this parameter should always include the WS_CHILD and WS_VISIBLE styles.  
   
  `nID`  
- Identificador de ventana secundaria de la barra estado.  
+ The status bar's child-window ID.  
   
-### <a name="return-value"></a>Valor devuelto  
- Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función también establece la fuente inicial y establece el estado de alto de la barra en un valor predeterminado.  
+### <a name="remarks"></a>Remarks  
+ This function also sets the initial font and sets the status bar's height to a default value.  
   
- Use `CreateEx`, en lugar de [crear](#create), cuando determinados estilos necesitan estar presente durante la creación del control de barra de estado incrustada. Por ejemplo, establecer `dwCtrlStyle` a **SBT_TOOLTIPS** para mostrar información sobre herramientas en un objeto de barra de estado.  
+ Use `CreateEx`, instead of [Create](#create), when certain styles need to be present during the creation of the embedded status bar control. For example, set `dwCtrlStyle` to **SBT_TOOLTIPS** to display tooltips in a status bar object.  
   
-##  <a name="cstatusbar"></a>CStatusBar::CStatusBar  
- Construye un `CStatusBar` objeto, crea una fuente de la barra de estado de forma predeterminada si es necesario y establece las características de fuente a los valores predeterminados.  
+##  <a name="cstatusbar"></a>  CStatusBar::CStatusBar  
+ Constructs a `CStatusBar` object, creates a default status-bar font if necessary, and sets the font characteristics to default values.  
   
 ```  
 CStatusBar();
 ```  
   
-##  <a name="drawitem"></a>CStatusBar::DrawItem  
- Esta función miembro se llama el marco de trabajo cuando un aspecto visual de una barra de estado dibujada por el usuario cambia.  
+##  <a name="drawitem"></a>  CStatusBar::DrawItem  
+ This member function is called by the framework when a visual aspect of an owner-drawn status bar changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- Un puntero a un [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) estructura que contiene información sobre el tipo de dibujo necesaria.  
+ A pointer to a [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) structure that contains information about the type of drawing required.  
   
-### <a name="remarks"></a>Comentarios  
- El **itemAction** miembro de la `DRAWITEMSTRUCT` estructura define la acción de dibujo que va a realizarse. Reemplace esta función miembro para implementar el dibujo de un dibujado por el propietario `CStatusBar` objeto. La aplicación debe restaurar todos los objetos de interfaz (GDI) de dispositivo de gráficos seleccionados para proporciona el contexto de presentación en `lpDrawItemStruct` antes de la finalización de esta función miembro.  
+### <a name="remarks"></a>Remarks  
+ The **itemAction** member of the `DRAWITEMSTRUCT` structure defines the drawing action that is to be performed. Override this member function to implement drawing for an owner-draw `CStatusBar` object. The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before the termination of this member function.  
   
-##  <a name="getitemid"></a>CStatusBar::GetItemID  
- Devuelve el identificador del indicador especificado por `nIndex`.  
+##  <a name="getitemid"></a>  CStatusBar::GetItemID  
+ Returns the ID of the indicator specified by `nIndex`.  
   
 ```  
 UINT GetItemID(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Índice del indicador cuyo identificador es va a recuperar.  
+ Index of the indicator whose ID is to be retrieved.  
   
-### <a name="return-value"></a>Valor devuelto  
- El identificador del indicador especificado por `nIndex`.  
+### <a name="return-value"></a>Return Value  
+ The ID of the indicator specified by `nIndex`.  
   
-##  <a name="getitemrect"></a>CStatusBar::GetItemRect  
- Copia las coordenadas del indicador especificado por `nIndex` en la estructura que señala `lpRect`.  
+##  <a name="getitemrect"></a>  CStatusBar::GetItemRect  
+ Copies the coordinates of the indicator specified by `nIndex` into the structure pointed to by `lpRect`.  
   
 ```  
 void GetItemRect(
@@ -270,18 +280,18 @@ void GetItemRect(
     LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Índice del indicador cuyas coordenadas del rectángulo que se van a recuperarse.  
+ Index of the indicator whose rectangle coordinates are to be retrieved.  
   
  `lpRect`  
- Apunta a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que va a recibir las coordenadas del indicador especificado por `nIndex`.  
+ Points to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure or a [CRect](../../atl-mfc-shared/reference/crect-class.md) object that will receive the coordinates of the indicator specified by `nIndex`.  
   
-### <a name="remarks"></a>Comentarios  
- Las coordenadas están en píxeles con respecto a la esquina superior izquierda de la barra de estado.  
+### <a name="remarks"></a>Remarks  
+ Coordinates are in pixels relative to the upper-left corner of the status bar.  
   
-##  <a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
- Conjuntos de `nID`, `nStyle`, y `cxWidth` para el Id., el estilo y el ancho del panel de indicador en la ubicación especificada por `nIndex`.  
+##  <a name="getpaneinfo"></a>  CStatusBar::GetPaneInfo  
+ Sets `nID`, `nStyle`, and `cxWidth` to the ID, style, and width of the indicator pane at the location specified by `nIndex`.  
   
 ```  
 void GetPaneInfo(
@@ -291,75 +301,75 @@ void GetPaneInfo(
     int& cxWidth) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Índice del panel es cuya información va a recuperar.  
+ Index of the pane whose information is to be retrieved.  
   
  `nID`  
- Referencia a un **UINT** que se establece en el identificador del panel.  
+ Reference to a **UINT** that is set to the ID of the pane.  
   
  `nStyle`  
- Referencia a un **UINT** que se establece el estilo del panel.  
+ Reference to a **UINT** that is set to the style of the pane.  
   
  `cxWidth`  
- Referencia a un entero que se establece el ancho del panel.  
+ Reference to an integer that is set to the width of the pane.  
   
-##  <a name="getpanestyle"></a>CStatusBar::GetPaneStyle  
- Llame a esta función miembro para recuperar el estilo del panel de la barra de estado.  
+##  <a name="getpanestyle"></a>  CStatusBar::GetPaneStyle  
+ Call this member function to retrieve the style of a status bar's pane.  
   
 ```  
 UINT GetPaneStyle(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Índice de la sección cuyo estilo sea va a recuperar.  
+ Index of the pane whose style is to be retrieved.  
   
-### <a name="return-value"></a>Valor devuelto  
- El estilo del panel de barra de estado especificado por `nIndex`.  
+### <a name="return-value"></a>Return Value  
+ The style of the status-bar pane specified by `nIndex`.  
   
-### <a name="remarks"></a>Comentarios  
- Estilo del panel determina cómo aparece en el panel.  
+### <a name="remarks"></a>Remarks  
+ A pane's style determines how the pane appears.  
   
- Para obtener una lista de estilos disponibles para las barras de estado, consulte [crear](#create).  
+ For a list of styles available for status bars, see [Create](#create).  
   
-##  <a name="getpanetext"></a>CStatusBar::GetPaneText  
- Llame a esta función miembro para recuperar el texto que aparece en un panel de barra de estado.  
+##  <a name="getpanetext"></a>  CStatusBar::GetPaneText  
+ Call this member function to retrieve the text that appears in a status-bar pane.  
   
 ```  
 CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rString) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Índice de la sección cuyo texto está va a recuperar.  
+ Index of the pane whose text is to be retrieved.  
   
  `rString`  
- Una referencia a un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto que contiene el texto que se va a recuperar.  
+ A reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object that contains the text to be retrieved.  
   
-### <a name="return-value"></a>Valor devuelto  
- Un `CString` objeto que contiene el texto del panel.  
+### <a name="return-value"></a>Return Value  
+ A `CString` object containing the pane's text.  
   
-### <a name="remarks"></a>Comentarios  
- La segunda forma de este miembro de función rellena un `CString` objeto con el texto de cadena.  
+### <a name="remarks"></a>Remarks  
+ The second form of this member function fills a `CString` object with the string text.  
   
-##  <a name="getstatusbarctrl"></a>CStatusBar:: GetStatusBarCtrl  
- Esta función miembro permite el acceso directo al control subyacente común.  
+##  <a name="getstatusbarctrl"></a>  CStatusBar::GetStatusBarCtrl  
+ This member function allows direct access to the underlying common control.  
   
 ```  
 CStatusBarCtrl& GetStatusBarCtrl() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Contiene una referencia a un [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) objeto.  
+### <a name="return-value"></a>Return Value  
+ Contains a reference to a [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) object.  
   
-### <a name="remarks"></a>Comentarios  
- Use `GetStatusBarCtrl` para aprovechar la funcionalidad del control común de barra de estado de Windows y para aprovechar la compatibilidad con [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) proporciona para la personalización de la barra de estado. Por ejemplo, mediante el control común, puede especificar un estilo que incluye un control de tamaño en la barra de estado, o puede especificar un estilo para que la barra de estado aparecen en la parte superior del área de cliente de la ventana primaria.  
+### <a name="remarks"></a>Remarks  
+ Use `GetStatusBarCtrl` to take advantage of the functionality of the Windows status-bar common control, and to take advantage of the support [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) provides for status-bar customization. For example, by using the common control, you can specify a style that includes a sizing grip on the status bar, or you can specify a style to have the status bar appear at the top of the parent window's client area.  
   
- Para obtener más información acerca de los controles comunes, vea [controles comunes](http://msdn.microsoft.com/library/windows/desktop/bb775493) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more general information about common controls, See [Common Controls](http://msdn.microsoft.com/library/windows/desktop/bb775493) in the Windows SDK.  
   
-##  <a name="setindicators"></a>CStatusBar:: SetIndicators  
- Id. de cada indicador se establece en el valor especificado por el elemento correspondiente de la matriz `lpIDArray`, carga el recurso de cadena especificado por cada identificador y establece el texto del indicador en la cadena.  
+##  <a name="setindicators"></a>  CStatusBar::SetIndicators  
+ Sets each indicator's ID to the value specified by the corresponding element of the array `lpIDArray`, loads the string resource specified by each ID, and sets the indicator's text to the string.  
   
 ```  
 BOOL SetIndicators(
@@ -367,18 +377,18 @@ BOOL SetIndicators(
     int nIDCount);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpIDArray`  
- Puntero a una matriz de identificadores.  
+ Pointer to an array of IDs.  
   
  `nIDCount`  
- Número de elementos de la matriz señalada por `lpIDArray`.  
+ Number of elements in the array pointed to by `lpIDArray`.  
   
-### <a name="return-value"></a>Valor devuelto  
- Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="setpaneinfo"></a>CStatusBar::SetPaneInfo  
- El panel de indicador especificado se establece en un nuevo identificador, estilo y ancho.  
+##  <a name="setpaneinfo"></a>  CStatusBar::SetPaneInfo  
+ Sets the specified indicator pane to a new ID, style, and width.  
   
 ```  
 void SetPaneInfo(
@@ -388,34 +398,34 @@ void SetPaneInfo(
     int cxWidth);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Índice de la sección de indicador cuyo estilo que se va a establecer.  
+ Index of the indicator pane whose style is to be set.  
   
  `nID`  
- Nuevo identificador para el panel de indicador.  
+ New ID for the indicator pane.  
   
  `nStyle`  
- Nuevo estilo para el panel de indicador.  
+ New style for the indicator pane.  
   
  `cxWidth`  
- Nuevo ancho para el panel de indicador.  
+ New width for the indicator pane.  
   
-### <a name="remarks"></a>Comentarios  
- Se admiten los siguientes estilos de indicador:  
+### <a name="remarks"></a>Remarks  
+ The following indicator styles are supported:  
   
-- **SBPS_NOBORDERS** ningún borde 3D en el panel.  
+- **SBPS_NOBORDERS** No 3-D border around the pane.  
   
-- **SBPS_POPOUT** inversa de borde para que el texto "aparece fuera."  
+- **SBPS_POPOUT** Reverse border so that text "pops out."  
   
-- **SBPS_DISABLED** no se dibujará el texto.  
+- **SBPS_DISABLED** Do not draw text.  
   
-- **SBPS_STRETCH** panel de Stretch para rellenar el espacio no utilizado. Un solo panel por la barra de estado puede tener este estilo.  
+- **SBPS_STRETCH** Stretch pane to fill unused space. Only one pane per status bar can have this style.  
   
-- **SBPS_NORMAL** stretch, bordes ni emergente.  
+- **SBPS_NORMAL** No stretch, borders, or pop-out.  
   
-##  <a name="setpanestyle"></a>CStatusBar::SetPaneStyle  
- Llame a esta función miembro para establecer el estilo del panel de la barra de estado.  
+##  <a name="setpanestyle"></a>  CStatusBar::SetPaneStyle  
+ Call this member function to set the style of a status bar's pane.  
   
 ```  
 void SetPaneStyle(
@@ -423,20 +433,20 @@ void SetPaneStyle(
     UINT nStyle);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Índice de la sección cuyo estilo que se va a establecer.  
+ Index of the pane whose style is to be set.  
   
  `nStyle`  
- Estilo del panel cuyo estilo que se va a establecer.  
+ Style of the pane whose style is to be set.  
   
-### <a name="remarks"></a>Comentarios  
- Estilo del panel determina cómo aparece en el panel.  
+### <a name="remarks"></a>Remarks  
+ A pane's style determines how the pane appears.  
   
- Para obtener una lista de estilos disponibles para las barras de estado, consulte [SetPaneInfo](#setpaneinfo).  
+ For a list of styles available for status bars, see [SetPaneInfo](#setpaneinfo).  
   
-##  <a name="setpanetext"></a>CStatusBar::SetPaneText  
- Llame a esta función miembro para establecer el texto del panel en la cadena que señala `lpszNewText`.  
+##  <a name="setpanetext"></a>  CStatusBar::SetPaneText  
+ Call this member function to set the pane text to the string pointed to by `lpszNewText`.  
   
 ```  
 BOOL SetPaneText(
@@ -445,34 +455,34 @@ BOOL SetPaneText(
     BOOL bUpdate = TRUE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Índice de la sección cuyo texto que se va a establecer.  
+ Index of the pane whose text is to be set.  
   
  `lpszNewText`  
- Puntero para el nuevo texto del panel.  
+ Pointer to the new pane text.  
   
- *bActualización*  
- Si **TRUE**, el panel se invalida después de establece el texto.  
+ *bUpdate*  
+ If **TRUE**, the pane is invalidated after the text is set.  
   
-### <a name="return-value"></a>Valor devuelto  
- Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Después de llamar a `SetPaneText`, debe agregar un controlador de actualización de la interfaz de usuario para mostrar el nuevo texto en la barra de estado.  
+### <a name="remarks"></a>Remarks  
+ After you call `SetPaneText`, you must add a UI update handler to display the new text in the status bar.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFCDocView #176](../../mfc/codesnippet/cpp/cstatusbar-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#176](../../mfc/codesnippet/cpp/cstatusbar-class_1.cpp)]  
   
- [!code-cpp[NVC_MFCDocView #177](../../mfc/codesnippet/cpp/cstatusbar-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#177](../../mfc/codesnippet/cpp/cstatusbar-class_2.cpp)]  
   
- [!code-cpp[NVC_MFCDocView #178](../../mfc/codesnippet/cpp/cstatusbar-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDocView#178](../../mfc/codesnippet/cpp/cstatusbar-class_3.cpp)]  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo MFC CTRLBARS](../../visual-cpp-samples.md)   
- [DLGCBR32 de ejemplo MFC](../../visual-cpp-samples.md)   
- [CControlBar (clase)](../../mfc/reference/ccontrolbar-class.md)   
- [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
- [CStatusBarCtrl (clase)](../../mfc/reference/cstatusbarctrl-class.md)   
- [CControlBar (clase)](../../mfc/reference/ccontrolbar-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CTRLBARS](../../visual-cpp-samples.md)   
+ [MFC Sample DLGCBR32](../../visual-cpp-samples.md)   
+ [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CStatusBarCtrl Class](../../mfc/reference/cstatusbarctrl-class.md)   
+ [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)
 

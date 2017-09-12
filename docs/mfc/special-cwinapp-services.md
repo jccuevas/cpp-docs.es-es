@@ -1,90 +1,107 @@
 ---
-title: "Servicios especiales de CWinApp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LoadStdProfileSettings"
-  - "EnableShellOpen"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objetos de aplicación [C++], servicios"
-  - "CWinApp (clase), arrastrar y colocar el Administrador de archivos"
-  - "CWinApp (clase), inicializar GDI+"
-  - "CWinApp (clase), documentos usados recientemente"
-  - "CWinApp (clase), servicios"
-  - "CWinApp (clase), registro shell"
-  - "arrastrar y colocar [C++], archivos"
-  - "DragAcceptFiles (método)"
-  - "EnableShellOpen (método)"
-  - "archivos [C++], arrastrar y colocar"
-  - "archivos [C++], usados más recientemente"
-  - "GDI+, inicializar para MFC"
-  - "GDI+, suprimir subproceso en segundo plano [MFC]"
-  - "LoadStdProfileSettings (método)"
-  - "MFC [C++], operaciones en archivo"
-  - "MFC [C++], enumeración de los archivos usados más recientemente"
-  - "MFC [C++], registro shell"
-  - "listas de MRU"
-  - "registrar tipos de archivos"
-  - "RegisterShellFileTypes (método)"
-  - "registro [C++], shell"
-  - "registro [C++], archivos usados más recientemente"
-  - "servicios, proporcionado por CWinApp"
-  - "Shell, registrar tipos de archivos"
+title: Special CWinApp Services | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LoadStdProfileSettings
+- EnableShellOpen
+dev_langs:
+- C++
+helpviewer_keywords:
+- files [MFC], most recently used
+- DragAcceptFiles method [MFC]
+- MRU lists
+- GDI+, initializing for MFC
+- GDI+, suppressing background thread [MFC]
+- CWinApp class [MFC], shell registration
+- application objects [MFC], services
+- CWinApp class [MFC], initializing GDI+
+- MFC, shell registration
+- CWinApp class [MFC], File Manager drag and drop
+- LoadStdProfileSettings method [MFC]
+- MFC, most-recently-used file list
+- RegisterShellFileTypes method [MFC]
+- drag and drop [MFC], files
+- registering file types
+- Shell, registering file types
+- services, provided by CWinApp
+- CWinApp class [MFC], recently used documents
+- CWinApp class [MFC], services
+- files [MFC], drag and drop
+- EnableShellOpen method [MFC]
+- registry [MFC], most recently used files
+- MFC, file operations
+- registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Servicios especiales de CWinApp
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 09e61d2091a8873e73f1e06a95e84c9cef4596f5
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Además de ejecutar el bucle de mensajes y de que el usuario tenga la oportunidad de inicializar la aplicación y para limpiar después de ella, [CWinApp](../mfc/reference/cwinapp-class.md) proporciona varios otros servicios.  
+---
+# <a name="special-cwinapp-services"></a>Special CWinApp Services
+Besides running the message loop and giving you an opportunity to initialize the application and clean up after it, [CWinApp](../mfc/reference/cwinapp-class.md) provides several other services.  
   
-##  <a name="_core_shell_registration"></a> Registro de shell  
- De forma predeterminada, el asistente para aplicaciones MFC permite al usuario a los archivos de datos abierto que la aplicación ha creado haciendo doble clic en el Explorador o administrador de archivo del archivo.  Si la aplicación es una aplicación MDI y especifica una extensión para los archivos que crea la aplicación, el asistente para aplicaciones MFC agregue llamadas a [RegisterShellFileTypes](../Topic/CWinApp::RegisterShellFileTypes.md) y las funciones miembro de [EnableShellOpen](../Topic/CWinApp::EnableShellOpen.md) de [CWinApp](../mfc/reference/cwinapp-class.md) a `InitInstance` reemplazan que escribe automáticamente.  
+##  <a name="_core_shell_registration"></a> Shell Registration  
+ By default, the MFC Application Wizard makes it possible for the user to open data files that your application has created by double-clicking them in File Explorer or File Manager. If your application is an MDI application and you specify an extension for the files your application creates, the MFC Application Wizard adds calls to the [RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes) and [EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen) member functions of [CWinApp](../mfc/reference/cwinapp-class.md) to the `InitInstance` override that it writes for you.  
   
- `RegisterShellFileTypes` registra los tipos de documento de la aplicación con el Explorador o el administrador de archivos del archivo.  La función agrega entradas a la base de datos de registro que Windows mantiene.  Las entradas registrar cada tipo de documento, asociar una extensión de archivo al tipo de archivo, especifique una línea de comandos para abrir la aplicación, y especifique un comando de intercambio de datos dinámicos de \(DDE\) de abrir un documento de ese tipo.  
+ `RegisterShellFileTypes` registers your application's document types with File Explorer or File Manager. The function adds entries to the registration database that Windows maintains. The entries register each document type, associate a file extension with the file type, specify a command line to open the application, and specify a dynamic data exchange (DDE) command to open a document of that type.  
   
- `EnableShellOpen` completa el proceso permitiendo la aplicación para recibir los comandos DDE desde el archivo Explorador o administrador de archivos de abrir el archivo elegido por el usuario.  
+ `EnableShellOpen` completes the process by allowing your application to receive DDE commands from File Explorer or File Manager to open the file chosen by the user.  
   
- Esta compatibilidad automático del registro en `CWinApp` elimina la necesidad de enviar un archivo .reg con la aplicación o de realizar el trabajo de la instalación especial.  
+ This automatic registration support in `CWinApp` eliminates the need to ship a .reg file with your application or to do special installation work.  
   
- Si desea inicializar GDI\+ para la aplicación \(llamando a [GdiplusStartup](_gdiplus_FUNC_GdiplusStartup_token_input_output_) en función de [InitInstance](../Topic/CWinApp::InitInstance.md) \), tiene que suprimir el subproceso en segundo plano de GDI\+.  
+ If you want to initialize GDI+ for your application (by calling [GdiplusStartup]--brokenlink--(_gdiplus_FUNC_GdiplusStartup_token_input_output_) in your [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) function), you have to suppress the GDI+ background thread.  
   
- Puede hacer estableciendo el miembro de **SuppressBackgroundThread** de la estructura de [GdiplusStartupInput](_gdiplus_STRUC_GdiplusStartupInput) a **VERDADERO**.  Al suprimir el subproceso de fondo GDI\+, las llamadas de **NotificationHook** y de **NotificationUnhook** \(vea [GdiplusStartupOutput](_gdiplus_STRUC_GdiplusStartupOutput)\) se deben realizar justo antes de entrar y de salir del bucle de mensajes de la aplicación.  Por consiguiente, un buen lugar para llamar a **GdiplusStartup** y las funciones de notificación de enlace tendrían un reemplazo de la función virtual [CWinApp::Run](../Topic/CWinApp::Run.md), como se muestra a continuación:  
+ You can do this by setting the **SuppressBackgroundThread** member of the [GdiplusStartupInput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupInput) structure to **TRUE**. When suppressing the GDI+ background thread, the **NotificationHook** and **NotificationUnhook** calls (see [GdiplusStartupOutput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupOutput)) should be made just prior to entering and exiting the application's message loop. Therefore, a good place to call **GdiplusStartup** and the hook notification functions would be in an override of the virtual function [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), as shown below:  
   
- [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/CPP/special-cwinapp-services_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   
- Si no suprime el subproceso en segundo plano GDI\+, los comandos DDE pueden emitir prematuramente a la aplicación antes de crear la ventana principal.  Los comandos DDE emitidos por el shell pueden estar cancelado prematuramente, por lo que los mensajes de error.  
+ If you do not suppress the background GDI+ thread, DDE commands can be prematurely issued to the application before its main window has been created. The DDE commands issued by the shell can be prematurely aborted, resulting in error messages.  
   
-##  <a name="_core_file_manager_drag_and_drop"></a> Arrastrar y colocar del administrador de archivos  
- Los archivos se pueden arrastrar desde la ventana vista de archivo en el Explorador del administrador de archivos o a una ventana en la aplicación.  Se podría, por ejemplo, habilite uno o más archivos que se arrastrarán a la ventana principal de una aplicación MDI, donde la aplicación podría recuperar los nombres de archivo y abrir ventanas secundarias MDI para esos archivos.  
+##  <a name="_core_file_manager_drag_and_drop"></a> File Manager Drag and Drop  
+ Files can be dragged from the file view window in File Manager or File Explorer to a window in your application. You might, for example, enable one or more files to be dragged to an MDI application's main window, where the application could retrieve the file names and open MDI child windows for those files.  
   
- Para habilitar arrastrar y colocar del archivo en la aplicación, el asistente para aplicaciones MFC escribe una llamada a la función [DragAcceptFiles](../Topic/CWnd::DragAcceptFiles.md) miembro de [CWnd](../mfc/reference/cwnd-class.md) para la ventana de marco principal en `InitInstance`.  Puede quitar esa llamada si no desea implementar la característica de arrastrar y colocar.  
+ To enable file drag and drop in your application, the MFC Application Wizard writes a call to the [CWnd](../mfc/reference/cwnd-class.md) member function [DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles) for your main frame window in your `InitInstance`. You can remove that call if you do not want to implement the drag-and-drop feature.  
   
 > [!NOTE]
->  También puede implementar un arrastrar y colocar más general capacidad\- que arrastra datos entre o dentro documento\- con OLE.  Para obtener información, vea el artículo [Arrastrar y colocar \(OLE\)](../mfc/drag-and-drop-ole.md).  
+>  You can also implement more general drag-and-drop capabilities—dragging data between or within documents—with OLE. For information, see the article [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md).  
   
-##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a> Seguimiento de documentos utilizados Más Recientemente  
- Cuando el usuario abre y cierra los archivos, el objeto application realiza el seguimiento de los cuatro archivos usados recientemente.  Los nombres de estos archivos se agregan al menú archivo y se actualizan cuando cambian.  El marco almacena estos nombres de archivo en el registro o en el archivo .ini, con el mismo nombre que el proyecto y los lee del archivo cuando se inicia la aplicación.  La invalidación de `InitInstance` que el asistente para aplicaciones MFC crea automáticamente incluye una llamada a la función [LoadStdProfileSettings](../Topic/CWinApp::LoadStdProfileSettings.md)miembro de [CWinApp](../mfc/reference/cwinapp-class.md) , que carga la información del registro o del archivo .ini, incluidos los nombres de archivos usados recientemente.  
+##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a> Keeping Track of the Most Recently Used Documents  
+ As the user opens and closes files, the application object keeps track of the four most recently used files. The names of these files are added to the File menu and updated when they change. The framework stores these file names in either the registry or in the .ini file, with the same name as your project and reads them from the file when your application starts up. The `InitInstance` override that the MFC Application Wizard creates for you includes a call to the [CWinApp](../mfc/reference/cwinapp-class.md) member function [LoadStdProfileSettings](../mfc/reference/cwinapp-class.md#loadstdprofilesettings), which loads information from the registry or .ini file, including the most recently used file names.  
   
- Se almacenan estas entradas como sigue:  
+ These entries are stored as follows:  
   
--   En Windows NT, Windows 2000, y versiones posteriores, el valor se almacena en una clave del Registro.  
+-   In Windows NT, Windows 2000, and later, the value is stored to a registry key.  
   
--   En Windows 3.x, el valor se almacena en el archivo Win.ini.  
+-   In Windows 3.x, the value is stored in the WIN.INI file.  
   
--   En Windows 95 y versiones posteriores, el valor se almacena en una versión almacenada en memoria caché de WIN.INI.  
+-   In Windows 95 and later, the value is stored in a cached version of WIN.INI.  
   
-## Vea también  
- [CWinApp: The Application \(Clase\)](../mfc/cwinapp-the-application-class.md)
+## <a name="see-also"></a>See Also  
+ [CWinApp: The Application Class](../mfc/cwinapp-the-application-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Controladores de mensajes WM_: N - O | Documentos de Microsoft'
+title: 'WM_ Message Handlers: N - O | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,22 +28,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ON_WM_NCCALCSIZE
-- ON_WM_NCMBUTTONDOWN
-- ON_WM_NCRBUTTONDBLCLK
-- ON_WM_NCMBUTTONDBLCLK
-- ON_WM_NCLBUTTONDBLCLK
-- ON_WM_NCDESTROY
-- ON_WM_NCRBUTTONDOWN
-- ON_WM_NCLBUTTONDOWN
-- ON_WM_NCCREATE
-- ON_WM_NCRBUTTONUP
-- ON_WM_NCLBUTTONUP
-- ON_WM_NCPAINT
-- ON_WM_NCACTIVATE
-- ON_WM_NCHITTEST
-- ON_WM_NCMOUSEMOVE
-- ON_WM_NCMBUTTONUP
+- ON_WM_NCCALCSIZE [MFC]
+- ON_WM_NCMBUTTONDOWN [MFC]
+- ON_WM_NCRBUTTONDBLCLK [MFC]
+- ON_WM_NCMBUTTONDBLCLK [MFC]
+- ON_WM_NCLBUTTONDBLCLK [MFC]
+- ON_WM_NCDESTROY [MFC]
+- ON_WM_NCRBUTTONDOWN [MFC]
+- ON_WM_NCLBUTTONDOWN [MFC]
+- ON_WM_NCCREATE [MFC]
+- ON_WM_NCRBUTTONUP [MFC]
+- ON_WM_NCLBUTTONUP [MFC]
+- ON_WM_NCPAINT [MFC]
+- ON_WM_NCACTIVATE [MFC]
+- ON_WM_NCHITTEST [MFC]
+- ON_WM_NCMOUSEMOVE [MFC]
+- ON_WM_NCMBUTTONUP [MFC]
 - WM_ messages
 ms.assetid: 4efd1cda-b642-4e8b-89e8-73255fa70d77
 caps.latest.revision: 17
@@ -64,20 +64,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: f1e2a3a42c105e5f0e6d0fca714c5cd4d1216f2f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1b7f987adb6226973de34a5bbc504d6814394bc5
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="wm-message-handlers-n---o"></a>Controladores de mensajes WM_: N - O
-Las siguientes entradas de mapa de la izquierda se corresponden con los prototipos de función de la derecha:  
+# <a name="wm-message-handlers-n---o"></a>WM_ Message Handlers: N - O
+The following map entries on the left correspond to the function prototypes on the right:  
   
-|Entrada de asignación|Prototipo de función|  
+|Map entry|Function prototype|  
 |---------------|------------------------|  
 |ON_WM_NCACTIVATE()|afx_msg BOOL [OnNcActivate](../../mfc/reference/cwnd-class.md#onncactivate)(BOOL);|  
-|ON_WM_NCCALCSIZE()|afx_msg void [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)(BOOL, NCCALCSIZE_PARAMS FAR *);|  
+|ON_WM_NCCALCSIZE()|afx_msg void [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)(BOOL, NCCALCSIZE_PARAMS FAR*);|  
 |ON_WM_NCCREATE()|afx_msg BOOL [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)(LPCREATESTRUCT);|  
 |ON_WM_NCDESTROY()|afx_msg void [OnNcDestroy](../../mfc/reference/cwnd-class.md#onncdestroy)();|  
 |ON_WM_NCHITTEST()|afx_msg LRESULT [OnNcHitTest](../../mfc/reference/cwnd-class.md#onnchittest)(CPoint);|  
@@ -98,10 +98,10 @@ Las siguientes entradas de mapa de la izquierda se corresponden con los prototip
 |ON_WM_NCXBUTTONDOWN()|afx_msg void [OnNcXButtonDown](../../mfc/reference/cwnd-class.md#onncxbuttondown)(short, UINT, CPoint);|  
 |ON_WM_NCXBUTTONUP()|afx_msg void [OnNcXButtonUp](../../mfc/reference/cwnd-class.md#onncxbuttonup)(short, UINT, CPoint);|  
 |ON_WM_NEXTMENU()|afx_msg void [OnNextMenu](../../mfc/reference/cwnd-class.md#onnextmenu)(UINT, LPMDINEXTMENU);|  
-|ON_WM_NOTIFYFORMAT()|afx_msg UINT [OnNotifyFormat](../../mfc/reference/cwnd-class.md#onnotifyformat)(CWnd *, UINT);|  
+|ON_WM_NOTIFYFORMAT()|afx_msg UINT [OnNotifyFormat](../../mfc/reference/cwnd-class.md#onnotifyformat)(CWnd*, UINT);|  
   
-## <a name="see-also"></a>Vea también  
- [Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)   
- [Controladores de mensajes WM_](../../mfc/reference/handlers-for-wm-messages.md)
+## <a name="see-also"></a>See Also  
+ [Message Maps](../../mfc/reference/message-maps-mfc.md)   
+ [Handlers for WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
 
 

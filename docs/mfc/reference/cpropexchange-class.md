@@ -1,5 +1,5 @@
 ---
-title: Clase CPropExchange | Documentos de Microsoft
+title: CPropExchange Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,9 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CPropExchange class
-- OLE controls, persistence
-- controls [MFC], OLE
+- CPropExchange [MFC], ExchangeBlobProp
+- CPropExchange [MFC], ExchangeFontProp
+- CPropExchange [MFC], ExchangePersistentProp
+- CPropExchange [MFC], ExchangeProp
+- CPropExchange [MFC], ExchangeVersion
+- CPropExchange [MFC], GetVersion
+- CPropExchange [MFC], IsAsynchronous
+- CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
 caps.latest.revision: 22
 author: mikeblome
@@ -44,60 +49,60 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 655d8e2f074c3bd12b1b52ece74efb844c7a9904
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cf71556f16272d2d4beef7ade248c28dd2509f01
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cpropexchange-class"></a>Clase CPropExchange
-Admite la implementación de persistencia para controles OLE.  
+# <a name="cpropexchange-class"></a>CPropExchange Class
+Supports the implementation of persistence for your OLE controls.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class AFX_NOVTABLE CPropExchange  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPropExchange::ExchangeBlobProp](#exchangeblobprop)|Cambia una propiedad de objeto binario grande (BLOB).|  
-|[CPropExchange::ExchangeFontProp](#exchangefontprop)|Cambia una propiedad de fuente.|  
-|[CPropExchange::ExchangePersistentProp](#exchangepersistentprop)|Cambia una propiedad de un control y un archivo.|  
-|[CPropExchange::ExchangeProp](#exchangeprop)|Intercambia las propiedades de cualquier tipo integrado.|  
-|[CPropExchange::ExchangeVersion](#exchangeversion)|Intercambia el número de versión de un control OLE.|  
-|[CPropExchange:: GetVersion](#getversion)|Recupera el número de versión de un control OLE.|  
-|[CPropExchange::IsAsynchronous](#isasynchronous)|Determina si los intercambios de propiedad se realizan asincrónicamente.|  
-|[CPropExchange::IsLoading](#isloading)|Indica si se va propiedades cargado en el control o guardado de él.|  
+|[CPropExchange::ExchangeBlobProp](#exchangeblobprop)|Exchanges a binary large object (BLOB) property.|  
+|[CPropExchange::ExchangeFontProp](#exchangefontprop)|Exchanges a font property.|  
+|[CPropExchange::ExchangePersistentProp](#exchangepersistentprop)|Exchanges a property between a control and a file.|  
+|[CPropExchange::ExchangeProp](#exchangeprop)|Exchanges properties of any built-in type.|  
+|[CPropExchange::ExchangeVersion](#exchangeversion)|Exchanges the version number of an OLE control.|  
+|[CPropExchange::GetVersion](#getversion)|Retrieves the version number of an OLE control.|  
+|[CPropExchange::IsAsynchronous](#isasynchronous)|Determines if property exchanges are done asynchronously.|  
+|[CPropExchange::IsLoading](#isloading)|Indicates whether properties are being loaded into the control or saved from it.|  
   
-## <a name="remarks"></a>Comentarios  
- `CPropExchange`no tiene una clase base.  
+## <a name="remarks"></a>Remarks  
+ `CPropExchange` does not have a base class.  
   
- Establece el contexto y la dirección de un cambio de propiedad.  
+ Establishes the context and direction of a property exchange.  
   
- La persistencia es el intercambio de información de estado del control, que normalmente se representan mediante sus propiedades, entre el control y un medio.  
+ Persistence is the exchange of the control's state information, usually represented by its properties, between the control itself and a medium.  
   
- El marco de trabajo construye un objeto derivado de `CPropExchange` cuando se notifica que son propiedades de un control OLE que cargarse desde o almacenamiento almacenado en persistente.  
+ The framework constructs an object derived from `CPropExchange` when it is notified that an OLE control's properties are to be loaded from or stored to persistent storage.  
   
- El marco de trabajo pasa un puntero a este `CPropExchange` objeto para el control `DoPropExchange` (función). Si utiliza un Asistente para crear los archivos de inicio para el control, el control `DoPropExchange` llamadas a funciones `COleControl::DoPropExchange`. La versión de la clase base intercambia las propiedades del control stock; modificar la versión de la clase derivada a propiedades de exchange que ha agregado al control.  
+ The framework passes a pointer to this `CPropExchange` object to your control's `DoPropExchange` function. If you used a wizard to create the starter files for your control, your control's `DoPropExchange` function calls `COleControl::DoPropExchange`. The base-class version exchanges the control's stock properties; you modify your derived class's version to exchange properties you have added to your control.  
   
- `CPropExchange`puede utilizarse para serializar las propiedades de un control o inicializar las propiedades de un control durante la carga o la creación de un control. El `ExchangeProp` y `ExchangeFontProp` funciones miembro de `CPropExchange` pueden almacenar propiedades y cargarlos desde un medio diferente.  
+ `CPropExchange` can be used to serialize a control's properties or initialize a control's properties upon the load or creation of a control. The `ExchangeProp` and `ExchangeFontProp` member functions of `CPropExchange` are able to store properties to and load them from different media.  
   
- Para obtener más información sobre el uso de `CPropExchange`, vea el artículo [controles ActiveX de MFC: páginas de propiedades](../../mfc/mfc-activex-controls-property-pages.md).  
+ For more information on using `CPropExchange`, see the article [MFC ActiveX Controls: Property Pages](../../mfc/mfc-activex-controls-property-pages.md).  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CPropExchange`  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxctl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
   
-##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
- Serializa una propiedad que almacena datos de objeto binario grande (BLOB).  
+##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp  
+ Serializes a property that stores binary large object (BLOB) data.  
   
 ```  
 virtual BOOL ExchangeBlobProp(
@@ -106,26 +111,26 @@ virtual BOOL ExchangeBlobProp(
     HGLOBAL hBlobDefault = NULL) = 0;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pszPropName`  
- El nombre de la propiedad que se intercambian.  
+ The name of the property being exchanged.  
   
  `phBlob`  
- Puntero a una variable que apunta a donde se almacena la propiedad (variable normalmente es un miembro de la clase).  
+ Pointer to a variable pointing to where the property is stored (variable is typically a member of your class).  
   
  `hBlobDefault`  
- Valor predeterminado de la propiedad.  
+ Default value for the property.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si el cambio se realizó correctamente; 0 si no lo consigue.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>Comentarios  
- Valor de la propiedad es de lectura o escrito a, según corresponda, la variable hace referencia a `phBlob`. Si `hBlobDefault` se especifica, se utilizará como valor predeterminado de la propiedad. Este valor se utiliza si, por cualquier motivo, la serialización del control se produce un error.  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to, as appropriate, the variable referenced by `phBlob`. If `hBlobDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization fails.  
   
- Las funciones **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, y **CPropsetPropExchange::ExchangeBlobProp** reemplazar esta función virtual pura.  
+ The functions **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, and **CPropsetPropExchange::ExchangeBlobProp** override this pure virtual function.  
   
-##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
- Cambia una propiedad de fuente entre un medio de almacenamiento y el control.  
+##  <a name="exchangefontprop"></a>  CPropExchange::ExchangeFontProp  
+ Exchanges a font property between a storage medium and the control.  
   
 ```  
 virtual BOOL ExchangeFontProp(
@@ -135,29 +140,29 @@ virtual BOOL ExchangeFontProp(
     LPFONTDISP pFontDispAmbient) = 0;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pszPropName`  
- El nombre de la propiedad que se intercambian.  
+ The name of the property being exchanged.  
   
  `font`  
- Una referencia a un [CFontHolder](../../mfc/reference/cfontholder-class.md) objeto que contiene la propiedad font.  
+ A reference to a [CFontHolder](../../mfc/reference/cfontholder-class.md) object that contains the font property.  
   
  `pFontDesc`  
- Un puntero a un [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) estructura que contiene los valores para inicializar el estado predeterminado de la propiedad font cuando `pFontDispAmbient` es **NULL**.  
+ A pointer to a [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) structure containing values for initializing the default state of the font property when `pFontDispAmbient` is **NULL**.  
   
  `pFontDispAmbient`  
- Un puntero a la **IFontDisp** interfaz de una fuente que se utilizará para inicializar el estado predeterminado de la propiedad font.  
+ A pointer to the **IFontDisp** interface of a font to be used for initializing the default state of the font property.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si el cambio se realizó correctamente; 0 si no lo consigue.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>Comentarios  
- Si se carga desde el medio de la propiedad font para el control, las características de la fuente se recuperan desde el medio y la `CFontHolder` hacen referencia al objeto `font` se inicializa con ellos. Si se va a almacenar la propiedad font, las características en el objeto de fuente se escriben en el medio.  
+### <a name="remarks"></a>Remarks  
+ If the font property is being loaded from the medium to the control, the font's characteristics are retrieved from the medium and the `CFontHolder` object referenced by `font` is initialized with them. If the font property is being stored, the characteristics in the font object are written to the medium.  
   
- Las funciones **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, y **CPropsetPropExchange::ExchangeFontProp** reemplazar esta función virtual pura.  
+ The functions **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, and **CPropsetPropExchange::ExchangeFontProp** override this pure virtual function.  
   
-##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
- Intercambia una propiedad entre el control y un archivo.  
+##  <a name="exchangepersistentprop"></a>  CPropExchange::ExchangePersistentProp  
+ Exchanges a property between the control and a file.  
   
 ```  
 virtual BOOL ExchangePersistentProp(
@@ -167,29 +172,29 @@ virtual BOOL ExchangePersistentProp(
     LPUNKNOWN pUnkDefault) = 0;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pszPropName`  
- El nombre de la propiedad que se intercambian.  
+ The name of the property being exchanged.  
   
  `ppUnk`  
- Un puntero a una variable que contiene un puntero a la propiedad **IUnknown** interfaz (esta variable normalmente es un miembro de la clase).  
+ A pointer to a variable containing a pointer to the property's **IUnknown** interface (this variable is typically a member of your class).  
   
  `iid`  
- Identificador de interfaz de la interfaz en la propiedad que se va a utilizar el control.  
+ Interface ID of the interface on the property that the control will use.  
   
  `pUnkDefault`  
- Valor predeterminado de la propiedad.  
+ Default value for the property.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si el cambio se realizó correctamente; 0 si no lo consigue.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>Comentarios  
- Si la propiedad se está cargando desde el archivo al control, la propiedad se crea y se inicializa desde el archivo. Si se va a almacenar la propiedad, su valor se escribe en el archivo.  
+### <a name="remarks"></a>Remarks  
+ If the property is being loaded from the file to the control, the property is created and initialized from the file. If the property is being stored, its value is written to the file.  
   
- Las funciones **CArchivePropExchange::ExchangePersistentProp**, **CResetPropExchange::ExchangePersistentProp**, y **CPropsetPropExchange::ExchangePersistentProp** reemplazar esta función virtual pura.  
+ The functions **CArchivePropExchange::ExchangePersistentProp**, **CResetPropExchange::ExchangePersistentProp**, and **CPropsetPropExchange::ExchangePersistentProp** override this pure virtual function.  
   
-##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp  
- Cambia una propiedad de un medio de almacenamiento y el control.  
+##  <a name="exchangeprop"></a>  CPropExchange::ExchangeProp  
+ Exchanges a property between a storage medium and the control.  
   
 ```  
 virtual BOOL ExchangeProp(
@@ -199,14 +204,14 @@ virtual BOOL ExchangeProp(
     const void* pvDefault = NULL) = 0 ;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pszPropName`  
- El nombre de la propiedad que se intercambian.  
+ The name of the property being exchanged.  
   
  `vtProp`  
- Un símbolo que especifica el tipo de la propiedad que se intercambian. Los valores posibles son:  
+ A symbol specifying the type of the property being exchanged. Possible values are:  
   
-|Símbolo|Tipo de propiedad|  
+|Symbol|Property Type|  
 |------------|-------------------|  
 |`VT_I2`|**short**|  
 |`VT_I4`|**long**|  
@@ -217,21 +222,21 @@ virtual BOOL ExchangeProp(
 |`VT_R8`|**double**|  
   
  `pvProp`  
- Puntero al valor de la propiedad.  
+ A pointer to the property's value.  
   
  *pvDefault*  
- Puntero a un valor predeterminado para la propiedad.  
+ Pointer to a default value for the property.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si el cambio se realizó correctamente; 0 si no lo consigue.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>Comentarios  
- Si se carga desde el medio de la propiedad al control, el valor de propiedad es recuperado desde el medio y almacenado en el objeto al que señala `pvProp`. Si la propiedad se va a almacenar en el medio, el valor del objeto indicado por `pvProp` se escribe en el medio.  
+### <a name="remarks"></a>Remarks  
+ If the property is being loaded from the medium to the control, the property's value is retrieved from the medium and stored in the object pointed to by `pvProp`. If the property is being stored to the medium, the value of the object pointed to by `pvProp` is written to the medium.  
   
- Las funciones **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, y **CPropsetPropExchange::ExchangeProp** reemplazar esta función virtual pura.  
+ The functions **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, and **CPropsetPropExchange::ExchangeProp** override this pure virtual function.  
   
-##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
- Llamado por el marco de trabajo para controlar la persistencia de un número de versión.  
+##  <a name="exchangeversion"></a>  CPropExchange::ExchangeVersion  
+ Called by the framework to handle persistence of a version number.  
   
 ```  
 virtual BOOL ExchangeVersion(
@@ -240,52 +245,52 @@ virtual BOOL ExchangeVersion(
     BOOL bConvert);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  *dwVersionLoaded*  
- Referencia a una variable donde se almacenará el número de versión de los datos persistentes que se está cargados.  
+ Reference to a variable where the version number of the persistent data being loaded will be stored.  
   
  `dwVersionDefault`  
- El número de versión actual del control.  
+ The current version number of the control.  
   
  `bConvert`  
- Indica si se debe convertir los datos persistentes en la versión actual o mantenerlo en la misma versión que se cargó.  
+ Indicates whether to convert persistent data to the current version or keep it at the same version that was loaded.  
   
-### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si la función se realiza correctamente; en caso contrario, es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function succeeded; 0 otherwise.  
   
-##  <a name="getversion"></a>CPropExchange:: GetVersion  
- Llame a esta función para recuperar el número de versión del control.  
+##  <a name="getversion"></a>  CPropExchange::GetVersion  
+ Call this function to retrieve the version number of the control.  
   
 ```  
 DWORD GetVersion();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- El número de versión del control.  
+### <a name="return-value"></a>Return Value  
+ The version number of the control.  
   
-##  <a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
- Determina si los intercambios de propiedad se realizan asincrónicamente.  
+##  <a name="isasynchronous"></a>  CPropExchange::IsAsynchronous  
+ Determines if property exchanges are done asynchronously.  
   
 ```  
 BOOL IsAsynchronous();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Devuelve TRUE si son propiedades de forma asincrónica, intercambia lo contrario, FALSE.  
+### <a name="return-value"></a>Return Value  
+ Returns TRUE if properties are exchanged asynchronously, otherwise FALSE.  
   
-##  <a name="isloading"></a>CPropExchange::IsLoading  
- Llame a esta función para determinar si se están propiedades cargadas en el control o guardado de él.  
+##  <a name="isloading"></a>  CPropExchange::IsLoading  
+ Call this function to determine whether properties are being loaded to the control or saved from it.  
   
 ```  
 BOOL IsLoading();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si se cargan las propiedades; en caso contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if properties are being loaded; otherwise 0.  
   
-## <a name="see-also"></a>Vea también  
- [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
- [COleControl:: DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
 
 
 

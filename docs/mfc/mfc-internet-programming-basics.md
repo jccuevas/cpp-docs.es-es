@@ -1,92 +1,112 @@
 ---
-title: "Fundamentos de programaci&#243;n para Internet de MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tecnología activa [C++]"
-  - "controles ActiveX [C++], Internet"
-  - "aplicaciones de Internet [C++]"
-  - "aplicaciones de Internet [C++], tecnología activa"
-  - "aplicaciones de Internet [C++], controles ActiveX"
-  - "aplicaciones de Internet [C++], escribir"
-  - "contenido de Internet [C++]"
-  - "ISAPI"
-  - "extensiones ISAPI, programar con ISAPI"
-  - "filtros ISAPI, programar con ISAPI"
-  - "programación [C++], Internet"
-  - "aplicaciones web [C++], clases MFC"
-  - "WinInet (clases)"
+title: MFC Internet Programming Basics | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ISAPI extensions, programming with ISAPI
+- Internet applications [MFC]
+- ISAPI
+- ActiveX controls [MFC], Internet
+- programming [MFC], Internet
+- Web applications [MFC], MFC classes
+- ISAPI filters [MFC], programming with ISAPI
+- Internet applications [MFC], ActiveX controls
+- Internet applications [MFC], writing
+- Internet applications [MFC], Active technology
+- Active technology [MFC]
+- Internet content [MFC]
+- WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Fundamentos de programaci&#243;n para Internet de MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8c281eef992c7e8e02231dd3eb82e4b5c6d3e408
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Microsoft proporciona muchas API para el cliente programado y las aplicaciones de servidor.  Muchas aplicaciones nuevas se están escribiendo para internet y, como las tecnologías, las capacidades del explorador, y el cambio de las opciones de seguridad, los nuevos tipos de aplicaciones se escriben.  Exploradores se ejecutan en los equipos cliente, proporcionando acceso a World Wide Web y mostrar páginas HTML que contienen texto, gráficos, los controles ActiveX, y documentos.  Los Servidores proporcionan FTP, HTTP, y los servicios de gopher, y las aplicaciones de extensiones de servidor de usar CGI.  La aplicación personalizada puede recuperar información y proporcionar datos en internet.  
+---
+# <a name="mfc-internet-programming-basics"></a>MFC Internet Programming Basics
+Microsoft provides many APIs for programming both client and server applications. Many new applications are being written for the Internet, and as technologies, browser capabilities, and security options change, new types of applications will be written. Browsers run on client computers, providing access to the World Wide Web and displaying HTML pages that contain text, graphics, ActiveX controls, and documents. Servers provide FTP, HTTP, and gopher services, and run server extension applications using CGI. Your custom application can retrieve information and provide data on the Internet.  
   
- ![Aplicaciones cliente y servidor](../mfc/media/vc38bq1.png "vc38BQ1")  
+ ![Client and server applications](../mfc/media/vc38bq1.gif "vc38bq1")  
   
- MFC proporciona clases que programación admiten de internet.  Puede utilizar [COleControl](../mfc/reference/colecontrol-class.md) y [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) y las clases MFC relacionadas para escribir controles y documentos activos de ActiveX.  Puede utilizar clases MFC como [CInternetSession](../mfc/reference/cinternetsession-class.md), [CFtpConnection](../mfc/reference/cftpconnection-class.md), y [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) para recuperar archivos e información mediante protocolos de Internet como FTP, HTTP, y gopher.  
+ MFC provides classes that support Internet programming. You can use [COleControl](../mfc/reference/colecontrol-class.md) and [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) and related MFC classes to write ActiveX controls and Active documents. You can use MFC classes such as [CInternetSession](../mfc/reference/cinternetsession-class.md), [CFtpConnection](../mfc/reference/cftpconnection-class.md), and [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) to retrieve files and information using Internet protocols such as FTP, HTTP, and gopher.  
   
-## En esta sección  
+## <a name="in-this-section"></a>In This Section  
   
--   [Clases MFC Herramienta de creación de HTML\-relacionadas](../mfc/internet-related-mfc-classes.md)  
+-   [Internet-Related MFC Classes](../mfc/internet-related-mfc-classes.md)  
   
--   [Información de Internet por tema](../mfc/internet-information-by-topic.md)  
+-   [Internet Information by Topic](../mfc/internet-information-by-topic.md)  
   
--   [Información de Internet por tarea](../mfc/internet-information-by-task.md)  
+-   [Internet Information by Task](../mfc/internet-information-by-task.md)  
   
--   [Tecnología activa en internet](../mfc/active-technology-on-the-internet.md)  
+-   [Active Technology on the Internet](../mfc/active-technology-on-the-internet.md)  
   
--   [Fundamentos de WinInet](../mfc/wininet-basics.md)  
+-   [WinInet Basics](../mfc/wininet-basics.md)  
   
--   [fundamentos de HTML](../mfc/html-basics.md)  
+-   [HTML Basics](../mfc/html-basics.md)  
   
--   [fundamentos de HTTP](../mfc/http-basics.md)  
+-   [HTTP Basics](../mfc/http-basics.md)  
   
-## Secciones relacionadas  
+## <a name="related-sections"></a>Related Sections  
   
--   [Controles ActiveX en internet](../mfc/activex-controls-on-the-internet.md)  
+-   [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md)  
   
--   [Documentos activos en internet](../mfc/active-documents-on-the-internet.md)  
+-   [Active Documents on the Internet](../mfc/active-documents-on-the-internet.md)  
   
--   [Monikeres asincrónicos en internet](../mfc/asynchronous-monikers-on-the-internet.md)  
+-   [Asynchronous Monikers on the Internet](../mfc/asynchronous-monikers-on-the-internet.md)  
   
--   [Extensiones de Internet para Win32 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)  
+-   [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)  
   
--   [Tareas de programación de Internet de MFC](../mfc/mfc-internet-programming-tasks.md)  
+-   [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)  
   
--   [Opciones de diseño de aplicaciones](../mfc/application-design-choices.md)  
+-   [Application Design Choices](../mfc/application-design-choices.md)  
   
--   [Aplicaciones MFC de escritura](../mfc/writing-mfc-applications.md)  
+-   [Writing MFC Applications](../mfc/writing-mfc-applications.md)  
   
--   [Aplicaciones de internet de pruebas](../mfc/testing-internet-applications.md)  
+-   [Testing Internet Applications](../mfc/testing-internet-applications.md)  
   
--   [Seguridad de Internet](../mfc/internet-security-cpp.md)  
+-   [Internet Security](../mfc/internet-security-cpp.md)  
   
--   [Compatibilidad ATL para Controles de DHTML](../atl/atl-support-for-dhtml-controls.md)  
+-   [ATL Support for DHTML Controls](../atl/atl-support-for-dhtml-controls.md)  
   
-##  <a name="_core_web_sites_for_more_information"></a> Sitios Web para la información de Más  
- Para obtener más información sobre la tecnología de Microsoft Internet, vea [Microsoft Developer Network \(MSDN\)](http://go.microsoft.com/fwlink/?LinkID=56322) el sitio Web. \(Los vínculos pueden cambiar sin previo aviso.\)  
+##  <a name="_core_web_sites_for_more_information"></a> Web Sites for More Information  
+ For additional information about Microsoft Internet technology, see the [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/linkid=56322) Web site. (Links may change without notice.)  
   
- Este sitio Web para los desarrolladores contiene información sobre cómo utilizar las herramientas de desarrollo y las tecnologías de Microsoft, y los casos superiores sobre informes recientes y futuras.  En esta página, puede ir a muchos sitios relacionados del desarrollador, incluir .NET, y a centros de desarrollador de XML.  También puede descargar el SDK beta y ejemplos.  
+ This Web site for developers contains information on using Microsoft development tools and technologies, and top stories about recent and upcoming conferences. From this page, you can jump to many related developer sites, including the .NET, and XML Developer Centers. You can also download beta SDKs and samples.  
   
- [World Wide Web Consortium \(W3C\)](http://go.microsoft.com/fwlink/?LinkID=37125) Publica las especificaciones de HTML, HTTP, CGI, y otras tecnologías de World Wide Web.  
+ The [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/linkid=37125) publishes specifications for HTML, HTTP, CGI, and other World Wide Web technologies.  
   
-##  <a name="_core_more_internet_help"></a> Más Ayuda de internet  
- La sección OLE de [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] contiene información adicional sobre programación OLE.  Esta información proporciona detalles sobre cómo utilizar las funciones de Win32 WinInet directamente, en lugar de a través de las clases MFC.  También contiene información general sobre tecnologías de internet.  
+##  <a name="_core_more_internet_help"></a> More Internet Help  
+ The OLE section of the Windows SDK contains additional information about OLE programming. This information provides details about using the Win32 WinInet functions directly, rather than through the MFC classes. It also contains overview information about Internet technologies.  
   
-## Vea también  
- [MFC Internet Programming \(NIB\)](http://msdn.microsoft.com/es-es/0f7a1f3a-385b-4d56-a55b-0d766840c58a)
+## <a name="see-also"></a>See Also  
+
+
+
+

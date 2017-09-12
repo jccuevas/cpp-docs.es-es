@@ -1,89 +1,108 @@
 ---
-title: "Cambiar los estilos de una ventana creada por MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CFrameWnd (clase), estilos de ventanas"
-  - "ventanas secundarias, estilos"
-  - "CMainFrame (clase)"
-  - "CMDIChildWnd (clase), cambiar estilos de ventana"
-  - "CREATESTRUCT (macro)"
-  - "estilo de ancho predeterminado"
-  - "valores predeterminados [C++], estilo de ventana"
-  - "MDI [C++], estilos de ventanas"
-  - "MFC [C++], ventanas"
-  - "estilo de interfaz de varios documentos"
-  - "PreCreateWindow (método), cambiar estilos de ventana"
-  - "PreCreateWindow (método), estilos de ventanas"
-  - "interfaz de único documento (SDI), cambiar atributos de ventana"
-  - "interfaz de único documento (SDI), estilo"
-  - "estilos, ventanas"
-  - "estilos de ventanas [C++]"
-  - "ventanas [C++], MFC"
-  - "WS_OVERLAPPEDWINDOW (macro)"
+title: Changing the Styles of a Window Created by MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- window styles [MFC]
+- WS_OVERLAPPEDWINDOW macro [MFC]
+- single document interface (SDI), changing window attributes
+- MDI [MFC], window styles
+- windows [MFC], MFC
+- child windows [MFC], styles
+- MFC, windows
+- CFrameWnd class [MFC], window styles
+- CREATESTRUCT macro [MFC]
+- CMDIChildWnd class [MFC], changing window styles
+- multidocument interface style
+- PreCreateWindow method [MFC], window styles
+- single document interface (SDI), style
+- default window style
+- defaults [MFC], window style
+- PreCreateWindow method [MFC], changing window styles
+- CMainFrame class [MFC]
+- styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Cambiar los estilos de una ventana creada por MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9a96e74ad840c35c2101c9d9d9329562d420168b
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En la versión de la función de `WinMain` , MFC registra varias clases de ventana estándar para usted.  Porque no modifica normalmente `WinMain`de MFC, la función no proporciona ninguna posibilidad de cambiar los estilos de ventana predeterminado de MFC.  En este artículo se explica cómo puede cambiar los estilos de una clase de ventana en preregistered en una aplicación existente.  
+---
+# <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Changing the Styles of a Window Created by MFC
+In its version of the `WinMain` function, MFC registers several standard window classes for you. Because you don't normally edit MFC's `WinMain`, that function gives you no opportunity to change the MFC default window styles. This article explains how you can change the styles of such a preregistered window class in an existing application.  
   
-##  <a name="_core_changing_styles_in_a_new_mfc_application"></a> Cambiar estilos en una aplicación MFC New  
- Si utiliza Visual C\+\+ 2.0 o posterior, puede cambiar los estilos de ventana predeterminadas en el Asistente para aplicaciones al crear la aplicación.  En las características página de la interfaz de usuario del Asistente para aplicaciones, puede cambiar los estilos de la ventana de marco principal y las ventanas MDI secundarias.  Para cualquier tipo de la ventana, puede especificar el grosor del marco \(general o enrarecer\) y cualquiera de los siguientes:  
+##  <a name="_core_changing_styles_in_a_new_mfc_application"></a> Changing Styles in a New MFC Application  
+ If you're using Visual C++ 2.0 or later, you can change the default window styles in the Application Wizard when you create your application. In the Application Wizard's User Interface Features page, you can change styles for your main frame window and MDI child windows. For either window type, you can specify its frame thickness (thick or thin) and any of the following:  
   
--   Si la ventana tiene Minimizar o controles Maximizar.  
+-   Whether the window has Minimize or Maximize controls.  
   
--   Si aparece la ventana minimizada inicialmente, maximizar, o ninguno.  
+-   Whether the window appears initially minimized, maximized, or neither.  
   
- Para las ventanas de marco principal, también puede especificar si la ventana tiene un menú sistema.  Para las ventanas MDI secundarias, puede especificar si la ventana admite paneles splitter.  
+ For main frame windows, you can also specify whether the window has a System Menu. For MDI child windows, you can specify whether the window supports splitter panes.  
   
-##  <a name="_core_changing_styles_in_an_existing_application"></a> Cambiar estilos en una aplicación existente  
- Si cambia los atributos de la ventana en una aplicación existente, siga las instrucciones del resto de este artículo en su lugar.  
+##  <a name="_core_changing_styles_in_an_existing_application"></a> Changing Styles in an Existing Application  
+ If you're changing window attributes in an existing application, follow the instructions in the rest of this article instead.  
   
- Para cambiar los atributos de ventana predeterminados utilizados por una aplicación creada de marco con el Asistente para aplicaciones, reemplace la función miembro virtual de [PreCreateWindow](../Topic/CWnd::PreCreateWindow.md) de la ventana.  `PreCreateWindow` permite que una aplicación para tener acceso al proceso de creación administrado normalmente internamente por la clase de [CDocTemplate](../mfc/reference/cdoctemplate-class.md) .  El marco de trabajo llama a `PreCreateWindow` justo antes de crear la ventana.  Modificar la estructura de [CREATESTRUCT](../mfc/reference/createstruct-structure.md) pasada a `PreCreateWindow`, la aplicación puede cambiar los atributos utilizados para crear la ventana.  Por ejemplo, para asegurarse de que una ventana no utilice una leyenda, utilice la operación bit a bit siguiente:  
+ To change the default window attributes used by a framework application created with the Application Wizard, override the window's [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) virtual member function. `PreCreateWindow` allows an application to access the creation process normally managed internally by the [CDocTemplate](../mfc/reference/cdoctemplate-class.md) class. The framework calls `PreCreateWindow` just prior to creating the window. By modifying the [CREATESTRUCT](../mfc/reference/createstruct-structure.md) structure passed to `PreCreateWindow`, your application can change the attributes used to create the window. For example, to ensure that a window does not use a caption, use the following bitwise operation:  
   
- [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/CPP/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]  
   
- La aplicación de ejemplo de [CTRLBARS](../top/visual-cpp-samples.md) muestra esta técnica para cambiar los atributos de la ventana.  Dependiendo de lo que cambia la aplicación en `PreCreateWindow`, puede ser necesario a la implementación de la clase base de la función.  
+ The [CTRLBARS](../visual-cpp-samples.md) sample application demonstrates this technique for changing window attributes. Depending on what your application changes in `PreCreateWindow`, it may be necessary to call the base class implementation of the function.  
   
- La siguiente discusión cubre el caso SDI y [Caso de MDI](#_core_the_mdi_case).  
+ The following discussion covers the SDI case and the [MDI case](#_core_the_mdi_case).  
   
-##  <a name="_core_the_sdi_case"></a> El caso SDI  
- En una aplicación de \(SDI\) de interfaz de un único documento, el estilo de ventana predeterminada en el marco es una combinación de los estilos de **WS\_OVERLAPPEDWINDOW** y de **FWS\_ADDTOTITLE** .  **FWS\_ADDTOTITLE** es un estilo MFC\- específico que indica al marco para agregar el título del documento a la leyenda de la ventana.  Para cambiar los atributos de la ventana en una aplicación SDI, reemplace la función de `PreCreateWindow` en la clase derivada de `CFrameWnd` \(que los nombres `CMainFrame`del Asistente para aplicaciones\).  Por ejemplo:  
+##  <a name="_core_the_sdi_case"></a> The SDI Case  
+ In a single document interface (SDI) application, the default window style in the framework is a combination of the **WS_OVERLAPPEDWINDOW** and **FWS_ADDTOTITLE** styles. **FWS_ADDTOTITLE** is an MFC-specific style that instructs the framework to add the document title to the window's caption. To change the window attributes in an SDI application, override the `PreCreateWindow` function in your class derived from `CFrameWnd` (which the Application Wizard names `CMainFrame`). For example:  
   
- [!code-cpp[NVC_MFCDocViewSDI#11](../mfc/codesnippet/CPP/changing-the-styles-of-a-window-created-by-mfc_2.cpp)]  
+ [!code-cpp[NVC_MFCDocViewSDI#11](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_2.cpp)]  
   
- Este código crea una ventana de marco principal sin Minimizar y los botones Maximizar y sin borde importante.  La ventana se centra inicialmente en la pantalla.  
+ This code creates a main frame window without Minimize and Maximize buttons and without a sizable border. The window is initially centered on the screen.  
   
-##  <a name="_core_the_mdi_case"></a> El caso de MDI  
- Un poco más trabajo se requiere para cambiar el estilo de ventana de ventana secundaria en una aplicación de \(MDI\) de interfaz de múltiples documentos.  De forma predeterminada, una aplicación creada MDI con el Asistente para aplicaciones utiliza la clase de [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) predeterminado definida en MFC.  Para cambiar el estilo de ventana de una ventana MDI secundaria, debe derivar una nueva clase de `CMDIChildWnd` y reemplazar todas las referencias a `CMDIChildWnd` en el proyecto con referencias a la nueva clase.  Probablemente, la única referencia a `CMDIChildWnd` en la aplicación se encuentra en la función miembro de `InitInstance` de la aplicación.  
+##  <a name="_core_the_mdi_case"></a> The MDI Case  
+ A little more work is required to change the window style of a child window in a multiple document interface (MDI) application. By default, an MDI application created with the Application Wizard uses the default [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) class defined in MFC. To change the window style of an MDI child window, you must derive a new class from `CMDIChildWnd` and replace all references to `CMDIChildWnd` in your project with references to the new class. Most likely, the only reference to `CMDIChildWnd` in the application is located in your application's `InitInstance` member function.  
   
- El estilo de ventana predeterminada utilizada en una aplicación MDI es una combinación de los estilos de **WS\_CHILD**, de **WS\_OVERLAPPEDWINDOW**, y de **FWS\_ADDTOTITLE** .  Para cambiar los atributos de la ventana de las ventanas secundarias de una aplicación MDI, reemplace la función de [PreCreateWindow](../Topic/CWnd::PreCreateWindow.md) en la clase derivada de `CMDIChildWnd`.  Por ejemplo:  
+ The default window style used in an MDI application is a combination of the **WS_CHILD**, **WS_OVERLAPPEDWINDOW**, and **FWS_ADDTOTITLE** styles. To change the window attributes of an MDI application's child windows, override the [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) function in your class derived from `CMDIChildWnd`. For example:  
   
- [!code-cpp[NVC_MFCDocView#16](../mfc/codesnippet/CPP/changing-the-styles-of-a-window-created-by-mfc_3.cpp)]  
+ [!code-cpp[NVC_MFCDocView#16](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_3.cpp)]  
   
- Este código crea las ventanas secundarias MDI sin un botón de maximizar.  
+ This code creates MDI child windows without a Maximize button.  
   
-### ¿Sobre qué desea obtener más información?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Estilos de Windows](../mfc/reference/window-styles.md)  
+-   [Windows styles](../mfc/reference/styles-used-by-mfc.md#window-styles)  
   
--   [Estilos de la Cuadro\-ventana](../mfc/frame-window-styles-cpp.md)  
+-   [Frame-window styles](../mfc/frame-window-styles-cpp.md)  
   
--   [\<caps:sentence id\="tgt44" sentenceid\="26254917059da4aba50f886a6c5db931" class\="tgtSentence"\>Estilos de ventana\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms632600)  
+-   [Window styles](http://msdn.microsoft.com/library/windows/desktop/ms632600)  
   
-## Vea también  
- [Estilos de ventana de marco](../mfc/frame-window-styles-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Frame-Window Styles](../mfc/frame-window-styles-cpp.md)
+
+

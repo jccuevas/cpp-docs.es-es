@@ -1,41 +1,58 @@
 ---
-title: "Usar los archivos de c&#243;digo fuente de MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "comentarios, MFC"
-  - "archivos de código fuente MFC"
-  - "MFC, archivos de código fuente"
-  - "obtener acceso a miembro privado"
-  - "obtener acceso a miembro protegido"
-  - "miembros públicos"
-  - "archivos de código fuente"
-  - "archivos de código fuente, MFC"
+title: Using the MFC Source Files | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- public members
+- source files
+- MFC, source files
+- MFC source files
+- comments, MFC
+- private member access
+- protected member access
+- source files, MFC
 ms.assetid: 3230e8fb-3b69-4ddf-9538-365ac7ea5e72
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Usar los archivos de c&#243;digo fuente de MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0d9bca5c1f58a4028b8395c19d465825eb353701
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-El código fuente completo de la biblioteca de \(MFC\) de la clase de la Microsoft foundation class.  Archivos de encabezado \(.h\) está en el directorio del \\atlmfc\\include; los archivos de implementación \(.cpp\) están en el directorio de \\atlmfc\\src\\mfc.  
+---
+# <a name="using-the-mfc-source-files"></a>Using the MFC Source Files
+The Microsoft Foundation Class (MFC) Library supplies full source code. Header files (.h) are in the \atlmfc\include directory; implementation files (.cpp) are in the \atlmfc\src\mfc directory.  
   
- Esta familia de casos explica convenciones que utiliza MFC para comentar las distintas partes de cada clase, lo medio de estos comentarios, y lo que debe saber para buscar en cada sección.  Los asistentes de Visual C\+\+ utilizan convenciones similares para las clases que crea automáticamente, y encontrará probablemente a estas convenciones útiles para el propio código.  
+ This family of articles explains the conventions that MFC uses to comment the various parts of each class, what these comments mean, and what you should expect to find in each section. The Visual C++ wizards use similar conventions for the classes that they create for you, and you will probably find these conventions useful for your own code.  
   
- Puede que esté familiarizado con **público**, `protected`, y las palabras clave de `private` C\+\+.  Al examinar los archivos de encabezado de MFC, encontrará que cada clase puede tener varios de cada uno de ellos.  Por ejemplo, las variables miembro y las funciones públicas podrían estar en más de una palabra clave de **público** .  Esto es porque MFC separa las variables miembro y las funciones basándose en su uso, no por el tipo de acceso permitido.  MFC utiliza `private` moderación; incluso los elementos consideró los detalles de la implementación se protegen normalmente y muchas veces son públicas.  Aunque el acceso a los detalles de la implementación se desaliente, MFC permite la decisión.  
+ You might be familiar with the **public**, `protected`, and `private` C++ keywords. When looking at the MFC header files, you will find that each class may have several of each of these. For example, public member variables and functions might be under more than one **public** keyword. This is because MFC separates member variables and functions based on their use, not by the type of access allowed. MFC uses `private` sparingly; even items considered implementation details are generally protected and many times are public. Although access to the implementation details is discouraged, MFC leaves the decision to you.  
   
- En los archivos de código fuente de MFC y los archivos que el asistente para aplicaciones MFC crea, encontrará comentarios como estas dentro de declaraciones de clase \(normalmente en el orden indicado\):  
+ In both the MFC source files and the files that the MFC Application Wizard creates, you will find comments like these within class declarations (usually in this order):  
   
  `// Constructors`  
   
@@ -47,19 +64,21 @@ El código fuente completo de la biblioteca de \(MFC\) de la clase de la Microso
   
  `// Implementation`  
   
- Temas cubiertos en esta familia de son los artículos:  
+ Topics covered in this family of articles include:  
   
--   [Un ejemplo de los comentarios](../mfc/an-example-of-the-comments.md)  
+-   [An example of the comments](../mfc/an-example-of-the-comments.md)  
   
--   [El comentario de la implementación de \/\/](../mfc/decrement-implementation-comment.md)  
+-   [The // Implementation comment](../mfc/decrement-implementation-comment.md)  
   
--   [El comentario de \/\/Constructores](../mfc/decrement-constructors-comment.md)  
+-   [The // Constructors comment](../mfc/decrement-constructors-comment.md)  
   
--   [El comentario de los atributos de \/\/](../mfc/decrement-attributes-comment.md)  
+-   [The // Attributes comment](../mfc/decrement-attributes-comment.md)  
   
--   [El comentario de las operaciones de \/\/](../mfc/decrement-operations-comment.md)  
+-   [The // Operations comment](../mfc/decrement-operations-comment.md)  
   
--   [El comentario de \/\/Overridables](../mfc/decrement-overridables-comment.md)  
+-   [The // Overridables comment](../mfc/decrement-overridables-comment.md)  
   
-## Vea también  
- [Temas generales de MFC](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

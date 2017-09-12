@@ -1,42 +1,61 @@
 ---
-title: "Secuencia de operaciones para crear aplicaciones OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicaciones [OLE]"
-  - "aplicaciones [OLE], crear"
-  - "aplicaciones OLE [C++]"
-  - "aplicaciones OLE [C++], crear"
+title: Sequence of Operations for Creating OLE Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE applications [MFC], creating
+- OLE applications [MFC]
+- applications [OLE], creating
+- applications [OLE]
 ms.assetid: 84b0f606-36c1-4253-9cea-44427f0074b9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Secuencia de operaciones para crear aplicaciones OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b52e194220ad1384def52e0a099fe82503bdf2a9
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La tabla siguiente muestra el rol y el rol de marco en crear OLE que vincula y que inserta aplicaciones.  Éstos representan las opciones disponibles en lugar de una secuencia de pasos para realizar.  
+---
+# <a name="sequence-of-operations-for-creating-ole-applications"></a>Sequence of Operations for Creating OLE Applications
+The following table shows your role and the framework's role in creating OLE linking and embedding applications. These represent options available rather than a sequence of steps to perform.  
   
-### Crear aplicaciones OLE  
+### <a name="creating-ole-applications"></a>Creating OLE Applications  
   
-|Tarea|Hace|Hace el marco|  
-|-----------|----------|-------------------|  
-|Cree un componente COM.|Ejecute el asistente para aplicaciones MFC.  Elija **Full\-server** o **Mini\-server** en la pestaña de **Compatib. doc. compuestos** .|El marco genera una aplicación esqueleto con la capacidad del componente COM habilitada.  Toda la funcionalidad COM se puede transferir a la aplicación existente con sólo la modificación leve.|  
-|Cree una aplicación contenedora desde cero.|Ejecute el asistente para aplicaciones MFC.  Elija **Contenedor** en la pestaña de **Compatib. doc. compuestos** .  Mediante la vista de clases, vaya al editor de código fuente.  Complete el código para las funciones COM de controlador.|El marco genera una aplicación esqueleto que puede insertar los objetos COM creados con aplicaciones de componentes COM \(servidor\).|  
-|Cree una aplicación que admita automatización desde cero.|Ejecute el asistente para aplicaciones MFC.  Elija **Automatización** desde la ficha de **Características avanzadas** .  Utilice la vista de clases para exponer métodos y propiedades de la aplicación para la automatización.|El marco genera una aplicación esqueleto que se pueda activar y automatizar por otras aplicaciones.|  
+|Task|You do|The framework does|  
+|----------|------------|------------------------|  
+|Create a COM component.|Run the MFC Application Wizard. Choose **Full-server** or **Mini-server** in the **Compound Document Support** tab.|The framework generates a skeleton application with COM component capability enabled. All of the COM capability can be transferred to your existing application with only slight modification.|  
+|Create a container application from scratch.|Run the MFC Application Wizard. Choose **Container** in the **Compound Document Support** tab. Using Class View, go to the source code editor. Fill in code for your COM handler functions.|The framework generates a skeleton application that can insert COM objects created by COM component (server) applications.|  
+|Create an application that supports Automation from scratch.|Run the MFC Application Wizard. Choose **Automation** from the **Advanced Features** tab. Use Class View to expose methods and properties in your application for automation.|The framework generates a skeleton application that can be activated and automated by other applications.|  
   
-## Vea también  
- [Compilar en el marco](../mfc/building-on-the-framework.md)   
- [Secuencia de operaciones para compilar aplicaciones MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
- [Secuencia de operaciones para crear controles ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)   
- [Secuencia de operaciones para crear aplicaciones de base de datos](../mfc/sequence-of-operations-for-creating-database-applications.md)
+## <a name="see-also"></a>See Also  
+ [Building on the Framework](../mfc/building-on-the-framework.md)   
+ [Sequence of Operations for Building MFC Applications](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
+ [Sequence of Operations for Creating ActiveX Controls](../mfc/sequence-of-operations-for-creating-activex-controls.md)   
+ [Sequence of Operations for Creating Database Applications](../mfc/sequence-of-operations-for-creating-database-applications.md)
+
+

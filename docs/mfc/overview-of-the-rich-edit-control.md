@@ -1,38 +1,57 @@
 ---
-title: "Informaci&#243;n general del control Rich Edit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles Rich Edit"
+title: Overview of the Rich Edit Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- rich edit controls [MFC]
 ms.assetid: ad589b9f-a3fd-4820-bf1f-6b1965997e68
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Informaci&#243;n general del control Rich Edit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a65d8829007bdb1fae17a74236dc9ca95ed5f278
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="overview-of-the-rich-edit-control"></a>Overview of the Rich Edit Control
 > [!IMPORTANT]
->  Si utiliza un control rich edit en un cuadro de diálogo \(independientemente de si la aplicación es SDI, MDI, o diálogo\- basado\), debe llamar a [AfxInitRichEdit](../Topic/AfxInitRichEdit.md) una vez antes de que se muestre el cuadro de diálogo.  Un lugar típico para llamar a esta función es la función miembro de `InitInstance` del programa.  No necesita llamarlo para cada vez que se muestra el cuadro de diálogo, solo la primera vez.  No tiene que llamar a `AfxInitRichEdit` si trabaja con `CRichEditView`.  
+>  If you are using a rich edit control in a dialog box (regardless of whether your application is SDI, MDI, or dialog-based), you must call [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) once before the dialog box is displayed. A typical place to call this function is in your program's `InitInstance` member function. You do not need to call it for each time you display the dialog box, only the first time. You do not have to call `AfxInitRichEdit` if you are working with `CRichEditView`.  
   
- Los controles rich edit \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) proporcionan una interfaz de programación para dar formato al texto.  Sin embargo, una aplicación debe implementar cualquier componente de la interfaz de usuario necesario colocar operaciones de formato a disposición del usuario.  Es decir, el control rich edit permite cambiar los atributos de caracteres o del párrafo de texto seleccionado.  Algunos ejemplos de los atributos de caracteres están en negrita, cursiva, familia de fuentes, y tamaño en puntos.  Los ejemplos de los atributos de párrafo incluyen la alineación, márgenes, y las tabulaciones.  Sin embargo, depende de usted para proporcionar la interfaz de usuario, si eso es botones de la barra de herramientas, elementos de menú, cuadro de diálogo o de carácter de formato.  También hay funciones para ver el control rich edit para los atributos de la selección actual.  Utilice estas funciones para mostrar las configuraciones actuales para los atributos, por ejemplo, estableciendo una marca de verificación en la interfaz de usuario de comandos si la selección tiene el atributo negrita formato de caracteres.  
+ Rich edit controls ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) provide a programming interface for formatting text. However, an application must implement any user interface components necessary to make formatting operations available to the user. That is, the rich edit control supports changing the character or paragraph attributes of the selected text. Some examples of character attributes are bold, italics, font family, and point size. Examples of paragraph attributes include alignment, margins, and tab stops. However, it is up to you to provide the user interface, whether that is toolbar buttons, menu items, or a format character dialog box. There are also functions to query the rich edit control for the attributes of the current selection. Use these functions to display the current settings for the attributes, for example, setting a check mark on the command UI if the selection has the bold character formatting attribute.  
   
- Para obtener más información sobre el carácter y el formato de párrafo, vea [Formato de caracteres](../mfc/character-formatting-in-rich-edit-controls.md) y [Formato de párrafo](../mfc/paragraph-formatting-in-rich-edit-controls.md) más adelante en este tema.  
+ For more information on character and paragraph formatting, see [Character Formatting](../mfc/character-formatting-in-rich-edit-controls.md) and [Paragraph Formatting](../mfc/paragraph-formatting-in-rich-edit-controls.md) later in this topic.  
   
- Los controles rich edit admiten casi todas las operaciones y mensajes de notificación utilizados con controles de edición de varias líneas.  Así, las aplicaciones que utilizan con los controles de edición se pueden cambiar fácilmente para utilizar los controles rich edit.  Aplicaciones de permisos adicionales de mensajes y de notificaciones para tener acceso a la funcionalidad única a los controles rich edit.  Para obtener información sobre los controles de edición, vea [CEdit](../mfc/reference/cedit-class.md).  
+ Rich edit controls support almost all of the operations and notification messages used with multiline edit controls. Thus, applications that already use edit controls can be easily changed to use rich edit controls. Additional messages and notifications enable applications to access the functionality unique to rich edit controls. For information about edit controls, see [CEdit](../mfc/reference/cedit-class.md).  
   
- Para obtener más información sobre notificaciones, vea [Notificaciones de un control Rich edit](../mfc/notifications-from-a-rich-edit-control.md) más adelante en este tema.  
+ For more information on notifications, see [Notifications from a Rich Edit Control](../mfc/notifications-from-a-rich-edit-control.md) later in this topic.  
   
-## Vea también  
- [Usar CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

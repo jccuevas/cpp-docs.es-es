@@ -1,33 +1,52 @@
 ---
-title: "Destinos de comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "asignación de comandos"
-  - "enrutamiento de comandos, destinos de comando"
-  - "destinos de comando"
-  - "mensajes, comando"
+title: Command Targets | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- command targets
+- command mapping
+- messages, command [MFC]
+- command routing [MFC], command targets
 ms.assetid: b0f784e5-c6dc-4391-9e71-aa7b7dcbe9f0
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Destinos de comando
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cc7608b674993484f77a5e0e5a2e5de195582bbd
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La ilustración [Comandos del marco](../mfc/user-interface-objects-and-command-ids.md) muestra la conexión entre un objeto de interfaz de usuario, como un elemento de menú, y la función de controlador que el marco de trabajo llama a para realizar el comando resultante cuando se hace clic en el objeto.  
+---
+# <a name="command-targets"></a>Command Targets
+The figure [Commands in the Framework](../mfc/user-interface-objects-and-command-ids.md) shows the connection between a user-interface object, such as a menu item, and the handler function that the framework calls to carry out the resulting command when the object is clicked.  
   
- Windows envía los mensajes que no son mensajes de comando directamente a una ventana cuyo a llamen a controlador del mensaje.  Sin embargo, el marco distribuye los comandos a varios objetos candidatas — “comando denominado destino” — uno de los cuales invoca normalmente un controlador para el comando.  El trabajo de las funciones de controlador de la misma manera para los comandos y los mensajes estándar de Windows, pero los mecanismos mediante los que llaman es diferentes, como se explica en [Cómo el marco de trabajo llama a un controlador](../mfc/how-the-framework-calls-a-handler.md).  
+ Windows sends messages that are not command messages directly to a window whose handler for the message is then called. However, the framework routes commands to a number of candidate objects — called "command targets" — one of which normally invokes a handler for the command. The handler functions work the same way for both commands and standard Windows messages, but the mechanisms by which they are called are different, as explained in [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md).  
   
-## Vea también  
- [Mensajes y comandos en el marco](../mfc/messages-and-commands-in-the-framework.md)
+## <a name="see-also"></a>See Also  
+ [Messages and Commands in the Framework](../mfc/messages-and-commands-in-the-framework.md)
+
+

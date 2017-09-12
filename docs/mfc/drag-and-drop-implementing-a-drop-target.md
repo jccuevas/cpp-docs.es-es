@@ -1,57 +1,75 @@
 ---
-title: "Arrastrar y colocar: Implementar un destino de colocaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arrastrar y colocar, destino de colocación"
-  - "funciones OLE de arrastrar y colocar, destino de colocación"
-  - "funciones OLE de arrastrar y colocar, implementar destinos de colocación"
+title: 'Drag and Drop: Implementing a Drop Target | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE drag and drop [MFC], implementing drop targets
+- OLE drag and drop [MFC], drop target
+- drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Arrastrar y colocar: Implementar un destino de colocaci&#243;n
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f6d4fb84423e3d2b67ad6d5a91bf001be5098061
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En este artículo se describe cómo crear la aplicación un destino.  Implementando un destino toma ligeramente más trabajo que implementando un origen de colocación, pero sigue siendo relativamente simple.  Estas técnicas también se aplica a las aplicaciones de no OLE.  
+---
+# <a name="drag-and-drop-implementing-a-drop-target"></a>Drag and Drop: Implementing a Drop Target
+This article outlines how to make your application a drop target. Implementing a drop target takes slightly more work than implementing a drop source, but it is still relatively simple. These techniques also apply to non-OLE applications.  
   
-#### Para implementar un destino  
+#### <a name="to-implement-a-drop-target"></a>To implement a drop target  
   
-1.  Agregue una variable miembro a cada vista de la aplicación que desea ser un destino.  Esta variable miembro debe ser de `COleDropTarget` tipo o una clase derivada de ella.  
+1.  Add a member variable to each view in the application that you want to be a drop target. This member variable must be of type `COleDropTarget` or a class derived from it.  
   
-2.  De la función de clase de vista que controla el mensaje de `WM_CREATE` \(normalmente `OnCreate`\), llame a la función miembro de `Register` de la nueva variable miembro.  `Revoke` se llamará automáticamente automáticamente cuando se destruye la vista.  
+2.  From your view class's function that handles the `WM_CREATE` message (typically `OnCreate`), call the new member variable's `Register` member function. `Revoke` will be called automatically for you when your view is destroyed.  
   
-3.  Reemplazar las funciones siguientes.  Si desea que el mismo comportamiento en la aplicación, reemplace estas funciones en la clase de vista.  Si desea modificar el comportamiento en casos aisladas o para desearlo para habilitar la interrupción en las ventanas no de`CView` , reemplace estas funciones en `COleDropTarget`\- clase derivada.  
+3.  Override the following functions. If you want the same behavior throughout your application, override these functions in your view class. If you want to modify behavior in isolated cases or want to enable dropping on non-`CView` windows, override these functions in your `COleDropTarget`-derived class.  
   
-    |Invalidación|Para permitir|  
-    |------------------|-------------------|  
-    |`OnDragEnter`|Operaciones de entrega mostrado en la ventana.  Llamado cuando el cursor primero entra en la ventana.|  
-    |`OnDragLeave`|Comportamiento especial cuando la operación de arrastre sale de la ventana especificada.|  
-    |`OnDragOver`|Operaciones de entrega mostrado en la ventana.  Llamado cuando el cursor se arrastra a través de la ventana.|  
-    |`OnDrop`|El control de los datos que son descompuestos en la ventana especificada.|  
-    |`OnScrollBy`|Comportamiento especial para cuando el desplazamiento es necesario en la ventana de destino.|  
+    |Override|To allow|  
+    |--------------|--------------|  
+    |`OnDragEnter`|Drop operations to occur in the window. Called when the cursor first enters the window.|  
+    |`OnDragLeave`|Special behavior when the drag operation leaves the specified window.|  
+    |`OnDragOver`|Drop operations to occur in the window. Called when the cursor is being dragged across the window.|  
+    |`OnDrop`|Handling of data being dropped into the specified window.|  
+    |`OnScrollBy`|Special behavior for when scrolling is necessary in the target window.|  
   
- Vea el archivo de MAINVIEW.CPP que forma parte del ejemplo OLE [OCLIENT](../top/visual-cpp-samples.md) MFC para un ejemplo de cómo estas funciones trabajan juntos.  
+ See the MAINVIEW.CPP file that is part of the MFC OLE sample [OCLIENT](../visual-cpp-samples.md) for an example of how these functions work together.  
   
- Para obtener más información, vea:  
+ For more information, see:  
   
--   [Implementar un origen de colocación](../mfc/drag-and-drop-implementing-a-drop-source.md)  
+-   [Implementing a Drop Source](../mfc/drag-and-drop-implementing-a-drop-source.md)  
   
--   [La creación y objetos de datos de OLE y orígenes de datos de Destruir](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
+-   [Creating and Destroying OLE Data Objects and Data Sources](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
   
--   [Objetos de datos y orígenes de datos de OLE de manipulación](../mfc/data-objects-and-data-sources-manipulation.md)  
+-   [Manipulating OLE Data Objects and Data Sources](../mfc/data-objects-and-data-sources-manipulation.md)  
   
-## Vea también  
- [Arrastrar y colocar \(OLE\)](../mfc/drag-and-drop-ole.md)   
+## <a name="see-also"></a>See Also  
+ [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md)   
  [COleDropTarget Class](../mfc/reference/coledroptarget-class.md)
+

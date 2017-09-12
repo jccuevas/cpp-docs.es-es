@@ -1,70 +1,89 @@
 ---
-title: "Trabajar con el control de barra de herramientas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBarCtrl (clase), obtener acceso a la barra de herramientas"
-  - "GetToolBarCtrl (método)"
-  - "controles de barra de herramientas [MFC], obtener acceso"
-  - "barras de herramientas [C++], obtener acceso a controles comunes"
+title: Working with the Toolbar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetToolBarCtrl method [MFC]
+- toolbars [MFC], accessing common control
+- CToolBarCtrl class [MFC], accessing toolbar
+- toolbar controls [MFC], accessing
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Trabajar con el control de barra de herramientas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4a8bcb19890c1d00efcdfd9988515e724d9f8e39
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En este artículo se explica cómo puede tener acceso a [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) que es la base de [CToolBar](../mfc/reference/ctoolbar-class.md) para tener un mayor control sobre las barras de herramientas.  Éste es un tema avanzado.  
+---
+# <a name="working-with-the-toolbar-control"></a>Working with the Toolbar Control
+This article explains how you can access the [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) object underlying a [CToolBar](../mfc/reference/ctoolbar-class.md) for greater control over your toolbars. This is an advanced topic.  
   
-## Procedimientos  
+## <a name="procedures"></a>Procedures  
   
-#### Para tener acceso al control común de la barra de herramientas al objeto de CToolBar  
+#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>To access the toolbar common control underlying your CToolBar object  
   
-1.  Llamada [CToolBar::GetToolBarCtrl](../Topic/CToolBar::GetToolBarCtrl.md).  
+1.  Call [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).  
   
- `GetToolBarCtrl` devuelve una referencia a un objeto de [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) .  Puede utilizar la referencia a las funciones miembro de llamada de la clase de control toolbar.  
+ `GetToolBarCtrl` returns a reference to a [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) object. You can use the reference to call member functions of the toolbar control class.  
   
 > [!CAUTION]
->  Mientras que llamar a las funciones de `CToolBarCtrl`**Get** es seguro, tenga cuidado si llama a las funciones de **Establecer** .  Éste es un tema avanzado.  No debería ser necesario normalmente tener acceso al control toolbar subyacente.  
+>  While calling `CToolBarCtrl` **Get** functions is safe, use caution if you call the **Set** functions. This is an advanced topic. Normally you shouldn't need to access the underlying toolbar control.  
   
-### ¿Sobre qué desea obtener más información?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Controles \(controles comunes de Windows\)](../mfc/controls-mfc.md)  
+-   [Controls (Windows common controls)](../mfc/controls-mfc.md)  
   
--   [Fundamentos de la barra de herramientas](../mfc/toolbar-fundamentals.md)  
+-   [Toolbar fundamentals](../mfc/toolbar-fundamentals.md)  
   
--   [Barras de herramientas de acoplamiento y flotantes](../mfc/docking-and-floating-toolbars.md)  
+-   [Docking and floating toolbars](../mfc/docking-and-floating-toolbars.md)  
   
--   [Dinámicamente el tamaño de la barra de herramientas](../mfc/docking-and-floating-toolbars.md)  
+-   [Dynamically resizing the toolbar](../mfc/docking-and-floating-toolbars.md)  
   
--   [Información sobre herramientas de la barra de herramientas](../mfc/toolbar-tool-tips.md)  
+-   [Toolbar tool tips](../mfc/toolbar-tool-tips.md)  
   
--   [Actualizaciones de barra de estado de la exhibición de vuelo](../mfc/toolbar-tool-tips.md)  
+-   [Flyby status bar updates](../mfc/toolbar-tool-tips.md)  
   
--   [Administrar notificaciones de información sobre herramientas](../mfc/handling-tool-tip-notifications.md)  
+-   [Handling tool tip notifications](../mfc/handling-tool-tip-notifications.md)  
   
--   Clases [CToolBar](../mfc/reference/ctoolbar-class.md) y [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)  
+-   The [CToolBar](../mfc/reference/ctoolbar-class.md) and [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) classes  
   
--   [Administrar notificaciones de personalización](../mfc/handling-customization-notifications.md)  
+-   [Handling customization notifications](../mfc/handling-customization-notifications.md)  
   
--   [Barras de herramientas varias](../mfc/toolbar-fundamentals.md)  
+-   [Multiple toolbars](../mfc/toolbar-fundamentals.md)  
   
--   [Mediante las barras de herramientas anteriores](../mfc/using-your-old-toolbars.md)  
+-   [Using your old toolbars](../mfc/using-your-old-toolbars.md)  
   
--   [Barras de controles](../mfc/control-bars.md)  
+-   [Control bars](../mfc/control-bars.md)  
   
- Para obtener información general sobre cómo utilizar los controles comunes de Windows, vea [Controles comunes](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
+ For general information about using Windows common controls, see [Common Controls](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
   
-## Vea también  
- [Implementación de barra de herramientas de MFC](../mfc/mfc-toolbar-implementation.md)
+## <a name="see-also"></a>See Also  
+ [MFC Toolbar Implementation](../mfc/mfc-toolbar-implementation.md)
+
+

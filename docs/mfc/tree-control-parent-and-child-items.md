@@ -1,40 +1,59 @@
 ---
-title: "Elementos primario y secundario del control de &#225;rbol | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "elementos secundarios de control de árbol"
-  - "CTreeCtrl (clase), elementos primarios y secundarios"
-  - "elemento primario de CTreeCtrl"
-  - "controles de árbol, elementos primarios y secundarios"
+title: Tree Control Parent and Child Items | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- parent items in CTreeCtrl [MFC]
+- child items in tree control [MFC]
+- CTreeCtrl class [MFC], parent and child items
+- tree controls [MFC], parent and child items
 ms.assetid: abcea1e4-fe9b-40d9-86dc-1db235f8f103
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Elementos primario y secundario del control de &#225;rbol
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 823c7ce4bf946d8698b670f3c8b014d7dec1d7e9
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Cualquier elemento de un control de árbol \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) puede tener una lista de subelementos, que se llaman elementos secundarios, asociada al.  Un elemento que tiene uno o más elementos secundarios se denomina elemento primario.  Un elemento secundario se muestra debajo de su elemento primario y se aplica sangría para indicar que es subordinado al elemento primario.  Un elemento que no tiene ningún elemento primario está en la parte superior de la jerarquía y se denomina elemento raíz.  
+---
+# <a name="tree-control-parent-and-child-items"></a>Tree Control Parent and Child Items
+Any item in a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) can have a list of subitems, which are called child items, associated with it. An item that has one or more child items is called a parent item. A child item is displayed below its parent item and is indented to indicate it is subordinate to the parent. An item that has no parent is at the top of the hierarchy and is called a root item.  
   
- En un momento dado, el estado de la lista de un elemento primario de elementos secundarios puede ser expandida o contraer.  Cuando expanda el estado, los elementos secundarios se muestran debajo del elemento primario.  Cuando se contrae, los elementos secundarios no se muestran.  En la lista alterna automáticamente entre estados expandidos y contraídas cuando el usuario hace doble clic en el elemento primario o, si el elemento primario tiene el estilo de **TVS\_HASBUTTONS** , cuando el usuario hace clic en el botón asociado al elemento primario.  Una aplicación puede expandir o contraer elementos secundarios mediante el miembro de [expandir](../Topic/CTreeCtrl::Expand.md) funcione.  
+ At any given time, the state of a parent item's list of child items can be either expanded or collapsed. When the state is expanded, the child items are displayed below the parent item. When it is collapsed, the child items are not displayed. The list automatically toggles between the expanded and collapsed states when the user double-clicks the parent item or, if the parent has the **TVS_HASBUTTONS** style, when the user clicks the button associated with the parent item. An application can expand or collapse the child items by using the [Expand](../mfc/reference/ctreectrl-class.md#expand) member function.  
   
- Agrega un elemento a un control de árbol llamando a la función miembro de [InsertItem](../Topic/CTreeCtrl::InsertItem.md) .  Esta función devuelve un identificador del tipo de **HTREEITEM** , que identifica el elemento.  Al agregar un elemento, debe especificar el identificador del elemento primario del nuevo elemento.  Si especifica **nulo** o el valor de **TVI\_ROOT** en lugar de un identificador de elemento primario en la estructura de [TVINSERTSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb773452) o el parámetro de `hParent` , se agrega como elemento raíz.  
+ You add an item to a tree control by calling the [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) member function. This function returns a handle of the **HTREEITEM** type, which uniquely identifies the item. When adding an item, you must specify the handle of the new item's parent item. If you specify **NULL** or the **TVI_ROOT** value instead of a parent item handle in the [TVINSERTSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb773452) structure or `hParent` parameter, the item is added as a root item.  
   
- Un control de árbol envía un mensaje de notificación de [TVN\_ITEMEXPANDING](http://msdn.microsoft.com/library/windows/desktop/bb773537) cuando la lista de un elemento primario de elementos secundarios está a punto de ser expandida o contraer.  La notificación ofrece la oportunidad de evitar el cambio o establecer los atributos del elemento primario que depende del estado de la lista de elementos secundarios.  Después de cambiar el estado de la lista, el control de árbol envía un mensaje de notificación de [TVN\_ITEMEXPANDED](http://msdn.microsoft.com/library/windows/desktop/bb773533) .  
+ A tree control sends a [TVN_ITEMEXPANDING](http://msdn.microsoft.com/library/windows/desktop/bb773537) notification message when a parent item's list of child items is about to be expanded or collapsed. The notification gives you the opportunity to prevent the change or to set any attributes of the parent item that depend on the state of the list of child items. After changing the state of the list, the tree control sends a [TVN_ITEMEXPANDED](http://msdn.microsoft.com/library/windows/desktop/bb773533) notification message.  
   
- Cuando se expande una lista de elementos secundarios, se aplica sangría con relación al elemento primario.  Puede establecer la cantidad de sangría utilizando la función miembro de [SetIndent](../Topic/CTreeCtrl::SetIndent.md) o recuperar cantidad actual utilizando la función miembro de [GetIndent](../Topic/CTreeCtrl::GetIndent.md) .  
+ When a list of child items is expanded, it is indented relative to the parent item. You can set the amount of indentation by using the [SetIndent](../mfc/reference/ctreectrl-class.md#setindent) member function or retrieve the current amount by using the [GetIndent](../mfc/reference/ctreectrl-class.md#getindent) member function.  
   
-## Vea también  
- [Usar CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

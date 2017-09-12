@@ -1,41 +1,60 @@
 ---
-title: "Ejemplo de contenci&#243;n de documentos activos: Cuaderno de Office | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contenedores de documentos activos [C++], ejemplos"
-  - "documentos activos [C++], contenedores"
-  - "contenedores [C++], documento activo"
-  - "ejemplos [C++], contención de documentos activos"
-  - "MFC COM [C++], contención de documentos activos"
-  - "Cuaderno de Office"
+title: 'Example of Active Document Containment: Office Binder | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], containers
+- examples [MFC], active document containment
+- containers [MFC], active document
+- active document containers [MFC], examples
+- Office Binder [MFC]
+- MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Ejemplo de contenci&#243;n de documentos activos: Cuaderno de Office
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63a7202da76d8b7bf66f0d912b4cc855ccfd12d2
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Microsoft Office binder es un ejemplo de un contenedor de documento activo.  Un enlazador de Office incluye dos paneles principales, como los contenedores normalmente.  El panel izquierdo contiene iconos correspondientes a los documentos activos del enlazador.  Cada documento se denomina *una sección* dentro del enlazador.  Por ejemplo, un enlazador puede contener los documentos de Word, archivos de PowerPoint, hojas de cálculo de Excel, y así sucesivamente.  
+---
+# <a name="example-of-active-document-containment-office-binder"></a>Example of Active Document Containment: Office Binder
+The Microsoft Office Binder is an example of an active document container. An Office Binder includes two primary panes, as containers typically do. The left pane contains icons that correspond to active documents in the Binder. Each document is called a *section* within the Binder. For example, a Binder can contain Word documents, PowerPoint files, Excel spreadsheets, and so on.  
   
- Hacer clic en un icono en el panel izquierdo provoca el documento activo correspondiente.  El panel derecho del enlazador después muestra el contenido del documento activo actualmente seleccionado.  
+ Clicking an icon in the left pane activates the corresponding active document. The right pane of the Binder then displays the contents of the currently selected active document.  
   
- Si abre y genera un documento de Word en un cuaderno, la barra de menús y barras de herramientas de word aparecen en la parte superior del cuadro de la vista, y puede modificar el contenido del documento utilizando cualquier comando de Word o herramienta.  Sin embargo, la barra de menús es una combinación de las barras de menús binder y word.  Porque el enlazador y word tienen menús de **Ay&uda** , el contenido de los menús respectivos se combinan.  Los contenedores del documento activo como Office binder proporcionan automáticamente la combinación de menús de **Ay&uda** ; para obtener más información, vea [Combinación del menú ayuda](../mfc/help-menu-merging.md).  
+ If you open and activate a Word document in a Binder, the Word menu bar and toolbars appear at the top of the view frame, and you can edit the document's contents using any Word command or tool. However, the menu bar is a combination of both the Binder's and Word's menu bars. Because both Binder and Word have **Help** menus, the contents of the respective menus are merged. Active document containers such as Office Binder automatically provide **Help** menu merging; for more information, see [Help Menu Merging](../mfc/help-menu-merging.md).  
   
- Cuando selecciona un documento activo de otro tipo de aplicación, la interfaz binder para alojar el del tipo de aplicación del documento activo.  Por ejemplo, si un enlazador contiene una hoja de cálculo de Excel, observará que los menús del enlazador cambian cuando selecciona la sección de la hoja de cálculo de Excel.  
+ When you select an active document of another application type, the Binder's interface changes to accommodate that of the active document's application type. For example, if a Binder contains an Excel spreadsheet, you will observe that the menus in the Binder change when you select the Excel spreadsheet section.  
   
- Hay, por supuesto, otros posibles tipos de contenedores junto a los enlazadores.  El Explorador de archivos utiliza la interfaz típica de dual\- panel en el panel izquierdo utiliza un control de árbol para mostrar una lista jerárquica de directorios en una unidad o una red, mientras que el panel de la derecha muestra los archivos contenidos en el directorio seleccionado actualmente.  Un tipo de explorador internet de contenedor \(como Microsoft Internet Explorer\), en lugar de utilizar una interfaz de dual\- panel, tiene un solo cuadro y proporciona normalmente la navegación mediante hipervínculos.  
+ There are, of course, other possible types of containers beside Binders. File Explorer uses the typical dual-pane interface in which the left pane uses a tree control to display a hierarchical list of directories in a drive or network, while the right pane displays the files contained in the currently selected directory. An Internet browser-type of container (such as Microsoft Internet Explorer), rather than using a dual-pane interface, usually has a single frame and provides navigation using hyperlinks.  
   
-## Vea también  
- [Contención de documentos activos](../mfc/active-document-containment.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containment](../mfc/active-document-containment.md)
+
+

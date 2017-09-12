@@ -1,56 +1,75 @@
 ---
-title: "Portapapeles: Usar el mecanismo del Portapapeles de OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicaciones [OLE], Portapapeles"
-  - "Portapapeles [C++], formatos OLE"
-  - "formatos [C++], Portapapeles para (OLE)"
-  - "Portapapeles OLE"
-  - "Portapapeles OLE, formatos"
+title: 'Clipboard: Using the OLE Clipboard Mechanism | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [OLE], Clipboard
+- OLE Clipboard
+- Clipboard [MFC], OLE formats
+- OLE Clipboard, formats
+- formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Portapapeles: Usar el mecanismo del Portapapeles de OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8087ff3c5054193fa681ea094d1f223855889b78
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-OLE utiliza formatos estándar y algunos formatos OLE\- específicos para transferir datos a través del portapapeles.  
+---
+# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Clipboard: Using the OLE Clipboard Mechanism
+OLE uses standard formats and some OLE-specific formats for transferring data through the Clipboard.  
   
- Cuando se corta o los datos de la copia de una aplicación, los datos se almacenan en el portapapeles que se utilizará posteriormente en las operaciones de pegar.  Estos datos están en una variedad de formatos.  Cuando el usuario elige para pegar datos del portapapeles, la aplicación puede elegir cuál de estos formatos a utilizar.  La aplicación debe escribir para elegir el formato que proporciona la mayoría de la información, a menos que el usuario solicita específicamente un formato, utilizando el Pegado especial.  Antes de continuar, puede desear leer los temas de [Objetos de datos y orígenes de datos \(OLE\)](../mfc/data-objects-and-data-sources-ole.md) .  Describe los fundamentos de cómo funcionan las transferencias de datos, y cómo implementarlos en las aplicaciones.  
+ When you cut or copy data from an application, the data is stored on the Clipboard to be used later in paste operations. This data is in a variety of formats. When a user chooses to paste data from the Clipboard, the application can choose which of these formats to use. The application should be written to choose the format that provides the most information, unless the user specifically asks for a certain format, using Paste Special. Before continuing, you may want to read the [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md) topics. They describe the fundamentals of how data transfers work, and how to implement them in your applications.  
   
- Windows define varios formatos estándar que se pueden utilizar para transferir datos a través del portapapeles.  Estos incluyen metarchivos, texto, mapas de bits, y otros.  OLE define varios formatos OLE\-específicos, también.  Para las aplicaciones que necesitan más detalles que proporcionado por estos formatos estándar, es recomendable registrar sus propios formatos de Portapapeles personalizados.  Utilice la función [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) de la API Win32 para ello.  
+ Windows defines a number of standard formats that can be used for transferring data through the Clipboard. These include metafiles, text, bitmaps, and others. OLE defines a number of OLE-specific formats, as well. For applications that need more detail than given by these standard formats, it is a good idea to register their own custom Clipboard formats. Use the Win32 API function [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) to do this.  
   
- Por ejemplo, Microsoft Excel registra un formato personalizado para las hojas de cálculo.  Este formato tarda mucho más información que, por ejemplo, hace un mapa de bits.  Cuando estos datos se pega en una aplicación que admite el formato de la hoja de cálculo, todas las fórmulas y valores de la hoja de cálculo se conservan y se pueden actualizar en caso necesario.  Microsoft Excel también coloca los datos en el portapapeles en formatos para que pueda pegar como elemento.  Cualquier contenedor OLE de documento puede pegar esta información como elemento incrustado.  Este elemento incrustado se puede cambiar utilizando Microsoft Excel.  El portapapeles también contiene un mapa de bits simple del intervalo seleccionado en la hoja de cálculo.  Esto también se puede pegar en contenedores de OLE del documento o en editores bitmap, como paint.  En el caso de un mapa de bits, sin embargo, no hay forma de manipular los datos como una hoja de cálculo.  
+ For example, Microsoft Excel registers a custom format for spreadsheets. This format carries much more information than, for example, a bitmap does. When this data is pasted into an application that supports the spreadsheet format, all the formulas and values from the spreadsheet are retained and can be updated if necessary. Microsoft Excel also puts data on the Clipboard in formats so that it can be pasted as an OLE item. Any OLE document container can paste this information as an embedded item. This embedded item can be changed using Microsoft Excel. The Clipboard also contains a simple bitmap of the image of the selected range on the spreadsheet. This can also be pasted into OLE document containers or into bitmap editors, like Paint. In the case of a bitmap, however, there is no way to manipulate the data as a spreadsheet.  
   
- Para recuperar el la máxima información del portapapeles, las aplicaciones deben comprobar estos formatos personalizados antes de pegar datos del portapapeles.  
+ To retrieve the maximum amount of information from the Clipboard, applications should check for these custom formats before pasting data from the Clipboard.  
   
- Por ejemplo, para habilitar el comando cortar, puede escribir a controlador algo parecido a:  
+ For example, to enable the Cut command, you might write a handler something like the following:  
   
- [!code-cpp[NVC_MFCListView#3](../mfc/codesnippet/CPP/clipboard-using-the-ole-clipboard-mechanism_1.cpp)]  
+ [!code-cpp[NVC_MFCListView#3](../atl/reference/codesnippet/cpp/clipboard-using-the-ole-clipboard-mechanism_1.cpp)]  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Copiando y pegando datos](../mfc/clipboard-copying-and-pasting-data.md)  
+-   [Copying and pasting data](../mfc/clipboard-copying-and-pasting-data.md)  
   
--   [Agregar otros formatos](../mfc/clipboard-adding-other-formats.md)  
+-   [Adding other formats](../mfc/clipboard-adding-other-formats.md)  
   
--   [Utilizar el Portapapeles de Windows](../mfc/clipboard-using-the-windows-clipboard.md)  
+-   [Using the Windows Clipboard](../mfc/clipboard-using-the-windows-clipboard.md)  
   
 -   [OLE](../mfc/ole-background.md)  
   
--   [Objetos de datos de OLE y orígenes de datos y transferencia de datos uniforme](../mfc/data-objects-and-data-sources-ole.md)  
+-   [OLE data objects and data sources and uniform data transfer](../mfc/data-objects-and-data-sources-ole.md)  
   
-## Vea también  
- [Portapapeles](../mfc/clipboard.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard](../mfc/clipboard.md)
+
+

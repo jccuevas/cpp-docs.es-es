@@ -1,44 +1,63 @@
 ---
-title: "Notificaciones de un control Rich Edit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl (clase), notificaciones"
-  - "mensajes, notificación"
-  - "notificaciones, de CRichEditCtrl"
-  - "controles Rich Edit, notificaciones"
+title: Notifications from a Rich Edit Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- messages [MFC], notification [MFC]
+- CRichEditCtrl class [MFC], notifications
+- rich edit controls [MFC], notifications
+- notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Notificaciones de un control Rich Edit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cd56c62172b1d98cc5f95aceaa3fa45a7e642d23
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Los mensajes de notificación proporcionan los eventos que afectan a un control rich edit \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\).  Pueden ser procesados por la ventana primaria o, mediante la reflexión de mensaje, por el control rich edit propio.  Los controles rich edit admiten todos los mensajes de notificación utilizados con controles de edición junto con varios adicionales.  Puede determinar qué mensajes de notificación un control rich edit envían su ventana primaria estableciendo su “máscara de evento”.  
+---
+# <a name="notifications-from-a-rich-edit-control"></a>Notifications from a Rich Edit Control
+Notification messages report events affecting a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). They can be processed by the parent window or, using message reflection, by the rich edit control itself. Rich edit controls support all of the notification messages used with edit controls as well as several additional ones. You can determine which notification messages a rich edit control sends its parent window by setting its "event mask."  
   
- Para establecer la máscara de evento de un control rich edit, utilice la función miembro de [SetEventMask](../Topic/CRichEditCtrl::SetEventMask.md) .  Puede recuperar la máscara de suceso actual para un control rich edit utilizando la función miembro de [GetEventMask](../Topic/CRichEditCtrl::GetEventMask.md) .  
+ To set the event mask for a rich edit control, use the [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) member function. You can retrieve the current event mask for a rich edit control by using the [GetEventMask](../mfc/reference/cricheditctrl-class.md#geteventmask) member function.  
   
- Los párrafos siguientes se muestran varias notificaciones específicas y sus usos:  
+ The following paragraphs list several specific notifications and their uses:  
   
--   **EN\_MSGFILTER** que administra la notificación de **EN\_MSGFILTER** permite una clase, o control rich edit o la ventana primaria, filtra toda la entrada del teclado y de mouse al control.  El controlador puede evitar que el mensaje del teclado o del mouse se procese o puede cambiar el mensaje modificando la estructura especificada de [MSGFILTER](http://msdn.microsoft.com/library/windows/desktop/bb787936) .  
+-   **EN_MSGFILTER** Handling the **EN_MSGFILTER** notification lets a class, either the rich edit control or its parent window, filter all keyboard and mouse input to the control. The handler can prevent the keyboard or mouse message from being processed or can change the message by modifying the specified [MSGFILTER](http://msdn.microsoft.com/library/windows/desktop/bb787936) structure.  
   
--   Identificador de**EN\_PROTECTED**el mensaje de notificación de **EN\_PROTECTED** para detectar cuándo el usuario intenta modificar el texto protegido.  Para marcar un intervalo de texto como protected, puede establecer el efecto protegido de caracteres.  Para obtener más información, vea [Formato de caracteres en los controles Rich edit](../mfc/character-formatting-in-rich-edit-controls.md).  
+-   **EN_PROTECTED** Handle the **EN_PROTECTED** notification message to detect when the user attempts to modify protected text. To mark a range of text as protected, you can set the protected character effect. For more information, see [Character Formatting in Rich Edit Controls](../mfc/character-formatting-in-rich-edit-controls.md).  
   
--   **EN\_DROPFILES** puede permitir al usuario para quitar los archivos en un control rich edit procesando el mensaje de notificación de **EN\_DROPFILES** .  La estructura especificada de [ENDROPFILES](http://msdn.microsoft.com/library/windows/desktop/bb787895) contiene información sobre los archivos que están interrumpidos.  
+-   **EN_DROPFILES** You can enable the user to drop files in a rich edit control by processing the **EN_DROPFILES** notification message. The specified [ENDROPFILES](http://msdn.microsoft.com/library/windows/desktop/bb787895) structure contains information about the files being dropped.  
   
--   **EN\_SELCHANGE** una aplicación puede detectar cuando la selección actual cambia procesando el mensaje de notificación de **EN\_SELCHANGE** .  El mensaje de notificación especifica una estructura de [SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952) que contiene información sobre la nueva selección.  
+-   **EN_SELCHANGE** An application can detect when the current selection changes by processing the **EN_SELCHANGE** notification message. The notification message specifies a [SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952) structure containing information about the new selection.  
   
-## Vea también  
- [Usar CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,39 +1,58 @@
 ---
-title: "Administraci&#243;n de memoria: Asignaci&#243;n del mont&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "delete (operador), usar con depuración MFC"
-  - "detectar pérdidas de memoria"
-  - "asignación en el montón"
-  - "asignación en el montón, descripción"
-  - "asignación de memoria, memoria de montón"
-  - "pérdidas de memoria, detectar"
-  - "memoria, detectar pérdidas"
-  - "new (operador), usar con depuración MFC"
+title: 'Memory Management: Heap Allocation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory [MFC], detecting leaks
+- delete operator [MFC], using with debug MFC
+- heap allocation [MFC], described
+- memory allocation [MFC], heap memory
+- memory leaks [MFC], detecting
+- new operator [MFC], using with debug MFC
+- heap allocation [MFC]
+- detecting memory leaks [MFC]
 ms.assetid: a5d949c6-1b79-476e-9c66-513a558203d9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Administraci&#243;n de memoria: Asignaci&#243;n del mont&#243;n
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c3fa05362ea2d20b353ed6532686fbc54dcabb60
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La pila se reserva para la asignación de memoria necesita del programa.  Es un área independientemente del código de programa y la pila.  Los programas de c típicos utilizan funciones `malloc` y **free** para asignar y para la desasignación de memoria del montón.  La versión de depuración de MFC proporciona versiones modificadas de los operadores integrados **new** y **borrar** de C\+\+ para asignar y desasignar para objetos en memoria de la pila.  
+---
+# <a name="memory-management-heap-allocation"></a>Memory Management: Heap Allocation
+The heap is reserved for the memory allocation needs of the program. It is an area apart from the program code and the stack. Typical C programs use the functions `malloc` and **free** to allocate and deallocate heap memory. The Debug version of MFC provides modified versions of the C++ built-in operators **new** and **delete** to allocate and deallocate objects in heap memory.  
   
- Cuando se utiliza **new** y **borrar** en lugar de `malloc` y de **free**, puede aprovechar las mejoras de depuración de administración de memoria de la biblioteca de clases, que pueden ser útiles para detectar pérdidas de memoria.  Al compilar el programa con la versión de lanzamiento de MFC, las versiones estándar de los operadores de **new** y de **borrar** proporcionan una manera eficaz de asignar y desasignar de memoria \(la versión de lanzamiento de MFC no proporciona versiones modificadas de estos operadores\).  
+ When you use **new** and **delete** instead of `malloc` and **free**, you are able to take advantage of the class library's memory-management debugging enhancements, which can be useful in detecting memory leaks. When you build your program with the Release version of MFC, the standard versions of the **new** and **delete** operators provide an efficient way to allocate and deallocate memory (the Release version of MFC does not provide modified versions of these operators).  
   
- Observe que el tamaño total de los objetos asignados en el montón está limitado por la memoria virtual disponible en el sistema.  
+ Note that the total size of objects allocated on the heap is limited only by your system's available virtual memory.  
   
-## Vea también  
- [Administración de memoria](../mfc/memory-management.md)
+## <a name="see-also"></a>See Also  
+ [Memory Management](../mfc/memory-management.md)
+
+

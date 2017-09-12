@@ -1,45 +1,64 @@
 ---
-title: "Usar CStatusBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CStatusBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBarCtrl (clase), utilizar"
-  - "controles de la barra de estado, acerca de los controles de la barra de estado"
+title: Using CStatusBarCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CStatusBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CStatusBarCtrl class [MFC], using
+- status bar controls [MFC], about status bar controls
 ms.assetid: 08b39f83-580d-439a-b93e-7ef9e2a5702a
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Usar CStatusBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c5c03ed4d1ad2bb9814f2a3b6e229808e844d9c7
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Puede utilizar el control de barra de estado \([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)\) para crear una ventana de control que refleje varios tipos de información de estado sobre la aplicación.  La ventana de estado se puede dividir en las partes que muestran varios tipos de información.  
+---
+# <a name="using-cstatusbarctrl"></a>Using CStatusBarCtrl
+You can use the status bar control ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) to create a control window that reflects various kinds of status information about the application. The status window can be divided into parts that display more than one type of information.  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Métodos para crear una barra de estado](../mfc/methods-of-creating-a-status-bar.md)  
+-   [Methods of Creating a Status Bar](../mfc/methods-of-creating-a-status-bar.md)  
   
--   [Configuración del CStatusBarCtrl](../mfc/settings-for-the-cstatusbarctrl.md)  
+-   [Settings for the CStatusBarCtrl](../mfc/settings-for-the-cstatusbarctrl.md)  
   
--   [Mediante CStatusBarCtrl para crear un objeto de CStatusBarCtrl](../mfc/using-cstatusbarctrl-to-create-a-cstatusbarctrl-object.md)  
+-   [Using CStatusBarCtrl to Create a CStatusBarCtrl Object](../mfc/using-cstatusbarctrl-to-create-a-cstatusbarctrl-object.md)  
   
--   [Establecer el modo de un objeto de CStatusBarCtrl](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)  
+-   [Setting the Mode of a CStatusBarCtrl Object](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)  
   
--   [Inicializar la Parte de un objeto de CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)  
+-   [Initializing the Parts of a CStatusBarCtrl Object](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)  
   
--   [Mediante la información sobre herramientas en un objeto de CStatusBarCtrl](../mfc/using-tooltips-in-a-cstatusbarctrl-object.md)  
+-   [Using Tooltips in a CStatusBarCtrl Object](../mfc/using-tooltips-in-a-cstatusbarctrl-object.md)  
   
-## Vea también  
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

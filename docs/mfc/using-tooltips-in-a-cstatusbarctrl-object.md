@@ -1,40 +1,59 @@
 ---
-title: "Usar informaciones sobre herramientas en un objeto CStatusBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CStatusBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBarCtrl (clase), información sobre herramientas"
-  - "barras de estado, información sobre herramientas"
-  - "información sobre herramientas [C++], utilizar en barras de estado"
+title: Using Tooltips in a CStatusBarCtrl Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CStatusBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- tool tips [MFC], using in status bars
+- status bars [MFC], tool tips
+- CStatusBarCtrl class [MFC], tool tips
 ms.assetid: a77597a7-43ef-4b8f-87bc-a8ea1dc63dc3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Usar informaciones sobre herramientas en un objeto CStatusBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e26867f71fc81bf332a86fe24ed1ef9c53924b2e
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Para habilitar la información sobre herramientas para un control de barra de estado, cree el objeto de `CStatusBarCtrl` con el estilo de **SBT\_TOOLTIPS** .  
+---
+# <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>Using Tooltips in a CStatusBarCtrl Object
+To enable tooltips for a status bar control, create the `CStatusBarCtrl` object with the **SBT_TOOLTIPS** style.  
   
 > [!NOTE]
->  Si está utilizando un objeto de `CStatusBar` para implementar la barra de estado, use la función de `CStatusBar::CreateEx` .  Permite especificar los estilos adicionales para el objeto incrustado de **CStatusBarCtrl** .  
+>  If you are using a `CStatusBar` object to implement your status bar, use the `CStatusBar::CreateEx` function. It allows you to specify additional styles for the embedded **CStatusBarCtrl** object.  
   
- Una vez que el objeto de `CStatusBarCtrl` se ha creado correctamente, utilice [CStatusBarCtrl::SetTipText](../Topic/CStatusBarCtrl::SetTipText.md) y [CStatusBarCtrl::GetTipText](../Topic/CStatusBarCtrl::GetTipText.md) de establecer y recuperar el texto de sugerencia para un panel concreto.  
+ Once the `CStatusBarCtrl` object has been successfully created, use [CStatusBarCtrl::SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) and [CStatusBarCtrl::GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext) to set and retrieve the tip text for a specific pane.  
   
- Una vez que se ha establecido la información sobre herramientas, solo se muestra si el elemento tiene un icono y ningún texto, o si todo el texto no se pueden mostrar dentro del elemento.  La información sobre herramientas no se admiten en modo simple.  
+ Once the tool tip has been set, it is displayed only if the part has an icon and no text, or if all of the text cannot be displayed inside the part. Tool tips are not supported in simple mode.  
   
-## Vea también  
- [Usar CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

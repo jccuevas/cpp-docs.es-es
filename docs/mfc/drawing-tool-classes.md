@@ -1,53 +1,72 @@
 ---
-title: "Clases de herramientas de dibujo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.drawing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dibujar, clases de herramientas"
-  - "clases de salida"
-  - "clases de resultados en pantalla"
+title: Drawing Tool Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.drawing
+dev_langs:
+- C++
+helpviewer_keywords:
+- drawing [MFC], tool classes
+- screen output classes [MFC]
+- output classes [MFC]
 ms.assetid: e907bd89-38b5-47c9-b76a-95e0bf3bb41d
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Clases de herramientas de dibujo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d7b9378bacf343d02d204a679afc7295792c6d8
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Estas clases encapsulan las herramientas de dibujo que se utilizan para dibujar en un contexto de dispositivo.  
+---
+# <a name="drawing-tool-classes"></a>Drawing Tool Classes
+These classes encapsulate drawing tools that are used to draw on a device context.  
   
  [CGdiObject](../mfc/reference/cgdiobject-class.md)  
- La clase base para las herramientas de dibujo de GDI.  
+ The base class for GDI drawing tools.  
   
  [CBrush](../mfc/reference/cbrush-class.md)  
- Encapsula un pincel de GDI que se puede seleccionar como el pincel actual en un contexto de dispositivo.  Los pinceles se utilizan para rellenar interiores de los objetos que están dibujados.  
+ Encapsulates a GDI brush that can be selected as the current brush in a device context. Brushes are used for filling interiors of objects being drawn.  
   
  [CPen](../mfc/reference/cpen-class.md)  
- Encapsula un lápiz de GDI que se puede seleccionar como el lápiz actual en un contexto de dispositivo.  Lápices se utilizan para dibujar las fronteras de objetos.  
+ Encapsulates a GDI pen that can be selected as the current pen in a device context. Pens are used for drawing the border lines of objects.  
   
  [CFont](../mfc/reference/cfont-class.md)  
- Encapsula una fuente de GDI que se pueda seleccionar como la fuente actual en un contexto de dispositivo.  
+ Encapsulates a GDI font that can be selected as the current font in a device context.  
   
  [CBitmap](../mfc/reference/cbitmap-class.md)  
- Encapsula un mapa de bits de GDI, que proporciona una interfaz para los mapas de bits de manipulación.  
+ Encapsulates a GDI bitmap, providing an interface for manipulating bitmaps.  
   
  [CPalette](../mfc/reference/cpalette-class.md)  
- Encapsula una paleta de colores de GDI para el uso como interfaz entre la aplicación y un dispositivo de salida en color como una pantalla.  
+ Encapsulates a GDI color palette for use as an interface between the application and a color output device such as a display.  
   
  [CRectTracker](../mfc/reference/crecttracker-class.md)  
- Muestra y administra la interfaz de usuario para cambiar el tamaño y mover objetos rectangulares.  
+ Displays and handles the user interface for resizing and moving rectangular objects.  
   
-## Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

@@ -1,48 +1,67 @@
 ---
-title: "Mapas de mensajes derivados | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mapas de mensajes derivados"
-  - "control de mensajes, controladores de mensajes derivados"
-  - "mapas de mensajes, derivadas"
-  - "mensajes, enrutar"
+title: Derived Message Maps | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handling [MFC], derived message handlers
+- messages, routing
+- message maps [MFC]], derived
+- derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Mapas de mensajes derivados
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 76817ca4892bbdba9d67434d4c95741b690c3be3
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Durante el control de mensajes, comprobar propio mapa de mensajes de una clase no es el fin del caso de mensaje\- mapa.  ¿Qué ocurre si la clase `CMyView` \(derivado de `CView`\) no tiene ninguna entrada correspondiente para un mensaje?  
+---
+# <a name="derived-message-maps"></a>Derived Message Maps
+During message handling, checking a class's own message map is not the end of the message-map story. What happens if class `CMyView` (derived from `CView`) has no matching entry for a message  
   
- Tenga presente que `CView`, la clase base de `CMyView`, deriva a su vez de `CWnd`.  Así `CMyView` *es* `CView` y *es* `CWnd`.  Cada una de esas clases tiene su propio mapa de mensajes.  La figura “una jerarquía de vista” siguiente muestra la relación jerárquica de las clases, pero la tiene en cuenta que un objeto de `CMyView` es un solo objeto que tiene las características de las tres clases.  
+ Keep in mind that `CView`, the base class of `CMyView`, is derived in turn from `CWnd`. Thus `CMyView` *is* a `CView` and *is* a `CWnd`. Each of those classes has its own message map. The figure "A View Hierarchy" below shows the hierarchical relationship of the classes, but keep in mind that a `CMyView` object is a single object that has the characteristics of all three classes.  
   
- ![Jerarquía de una vista](../mfc/media/vc38621.png "vc38621")  
-Una jerarquía de vista  
+ ![Hierarchy of a view](../mfc/media/vc38621.gif "vc38621")  
+A View Hierarchy  
   
- Tan si un mensaje no se pueden buscar en mapa de mensajes de `CMyView` de clase, el marco también busca el mapa de mensajes de la clase base inmediata.  La macro de `BEGIN_MESSAGE_MAP` al principio del mapa de mensajes especifica dos nombres de clase como argumentos:  
+ So if a message can't be matched in class `CMyView`'s message map, the framework also searches the message map of its immediate base class. The `BEGIN_MESSAGE_MAP` macro at the start of the message map specifies two class names as its arguments:  
   
- [!code-cpp[NVC_MFCMessageHandling#2](../mfc/codesnippet/CPP/derived-message-maps_1.cpp)]  
+ [!code-cpp[NVC_MFCMessageHandling#2](../mfc/codesnippet/cpp/derived-message-maps_1.cpp)]  
   
- Los primeros nombres de argumento la clase a la que el mapa de mensajes pertenece.  El segundo argumento proporciona una conexión con la clase base inmediata — `CView` aquí — para que el marco puede buscar el mapa de mensajes, también.  
+ The first argument names the class to which the message map belongs. The second argument provides a connection with the immediate base class — `CView` here — so the framework can search its message map, too.  
   
- La clase derivada se heredan los controladores de mensajes proporcionados en una clase base junto.  Esto es muy similar a las funciones virtuales normales de miembro sin necesidad todas las funciones miembro de controlador virtuales.  
+ The message handlers provided in a base class are thus inherited by the derived class. This is very similar to normal virtual member functions without needing to make all handler member functions virtual.  
   
- Si no se encuentra ningún controlador en mapas cualquiera de los del mensaje de la clase base, el procesamiento de mensajes predeterminado se realiza.  Si el mensaje es un comando, el marco se enrutan al destino de comando siguiente.  Si es un mensaje estándar de Windows, el mensaje se pasa al procedimiento de ventana predeterminado adecuado.  
+ If no handler is found in any of the base-class message maps, default processing of the message is performed. If the message is a command, the framework routes it to the next command target. If it is a standard Windows message, the message is passed to the appropriate default window procedure.  
   
- El mensaje\- mapa de velocidad que coincide, el marco almacena en caché coincidencias recientes en la probabilidad que recibirá el mismo mensaje.  Una consecuencia de esto es que el marco procesa mensajes no controlados muy eficaz.  Los mapas de mensajes también son espacio\- más eficaces que las implementaciones que utilizan funciones virtuales.  
+ To speed message-map matching, the framework caches recent matches on the likelihood that it will receive the same message again. One consequence of this is that the framework processes unhandled messages quite efficiently. Message maps are also more space-efficient than implementations that use virtual functions.  
   
-## Vea también  
- [Cómo busca el marco los mapas de mensajes](../mfc/how-the-framework-searches-message-maps.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Searches Message Maps](../mfc/how-the-framework-searches-message-maps.md)
+
+

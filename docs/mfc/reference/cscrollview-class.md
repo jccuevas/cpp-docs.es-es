@@ -1,5 +1,5 @@
 ---
-title: Clase CScrollView | Documentos de Microsoft
+title: CScrollView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,9 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CScrollView class
-- views, scrolling
-- scrolling views
+- CScrollView [MFC], CScrollView
+- CScrollView [MFC], CheckScrollBars
+- CScrollView [MFC], FillOutsideRect
+- CScrollView [MFC], GetDeviceScrollPosition
+- CScrollView [MFC], GetDeviceScrollSizes
+- CScrollView [MFC], GetScrollPosition
+- CScrollView [MFC], GetTotalSize
+- CScrollView [MFC], ResizeParentToFit
+- CScrollView [MFC], ScrollToPosition
+- CScrollView [MFC], SetScaleToFitSize
+- CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
 caps.latest.revision: 24
 author: mikeblome
@@ -47,81 +55,81 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 0dc937a9559306ff527779c45af9fdb62cf602df
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b7db2e86937ae306b2447592b12ba893f8ac8690
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cscrollview-class"></a>CScrollView (clase)
-Un [CView](../../mfc/reference/cview-class.md) con capacidades de desplazamiento.  
+# <a name="cscrollview-class"></a>CScrollView Class
+A [CView](../../mfc/reference/cview-class.md) with scrolling capabilities.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CScrollView : public CView  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Constructores protegidos  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|Name|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CScrollView::CScrollView](#cscrollview)|Construye un objeto `CScrollView`.|  
+|[CScrollView::CScrollView](#cscrollview)|Constructs a `CScrollView` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CScrollView::CheckScrollBars](#checkscrollbars)|Indica si la vista de desplazamiento tiene barras de desplazamiento horizontal y vertical.|  
-|[CScrollView::FillOutsideRect](#filloutsiderect)|Rellena el área de una vista fuera del área desplazable.|  
-|[CScrollView::GetDeviceScrollPosition](#getdevicescrollposition)|Obtiene la posición de desplazamiento actual en unidades del dispositivo.|  
-|[CScrollView::GetDeviceScrollSizes](#getdevicescrollsizes)|Obtiene los tamaños de página y de línea de la vista desplazable, el tamaño total y el modo de asignación actual. Los tamaños se encuentran en unidades del dispositivo.|  
-|[CScrollView::GetScrollPosition](#getscrollposition)|Obtiene la posición de desplazamiento actual en unidades lógicas.|  
-|[CScrollView::GetTotalSize](#gettotalsize)|Obtiene el tamaño total de la vista de desplazamiento en unidades lógicas.|  
-|[CScrollView::ResizeParentToFit](#resizeparenttofit)|Hace que el tamaño de la vista para dictar el tamaño de su marco.|  
-|[CScrollView::ScrollToPosition](#scrolltoposition)|Desplaza la vista a un momento dado, especificado en unidades lógicas.|  
-|[CScrollView::SetScaleToFitSize](#setscaletofitsize)|Pone la vista de desplazamiento en modo de escala para el ajuste.|  
-|[CScrollView::SetScrollSizes](#setscrollsizes)|Establece el modo de asignación, tamaño total y cantidades de desplazamiento horizontal y vertical de la vista de desplazamiento.|  
+|[CScrollView::CheckScrollBars](#checkscrollbars)|Indicates whether the scroll view has horizontal and vertical scroll bars.|  
+|[CScrollView::FillOutsideRect](#filloutsiderect)|Fills the area of a view outside the scrolling area.|  
+|[CScrollView::GetDeviceScrollPosition](#getdevicescrollposition)|Gets the current scroll position in device units.|  
+|[CScrollView::GetDeviceScrollSizes](#getdevicescrollsizes)|Gets the current mapping mode, the total size, and the line and page sizes of the scrollable view. Sizes are in device units.|  
+|[CScrollView::GetScrollPosition](#getscrollposition)|Gets the current scroll position in logical units.|  
+|[CScrollView::GetTotalSize](#gettotalsize)|Gets the total size of the scroll view in logical units.|  
+|[CScrollView::ResizeParentToFit](#resizeparenttofit)|Causes the size of the view to dictate the size of its frame.|  
+|[CScrollView::ScrollToPosition](#scrolltoposition)|Scrolls the view to a given point, specified in logical units.|  
+|[CScrollView::SetScaleToFitSize](#setscaletofitsize)|Puts the scroll view into scale-to-fit mode.|  
+|[CScrollView::SetScrollSizes](#setscrollsizes)|Sets the scroll view's mapping mode, total size, and horizontal and vertical scroll amounts.|  
   
-## <a name="remarks"></a>Comentarios  
- Puede controlar estándar usted mismo desplazamiento en cualquier clase derivada de `CView` reemplazando mensaje asigna [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) y [OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) funciones miembro. Pero `CScrollView` agrega las siguientes características para su `CView` capacidades:  
+## <a name="remarks"></a>Remarks  
+ You can handle standard scrolling yourself in any class derived from `CView` by overriding the message-mapped [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) and [OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) member functions. But `CScrollView` adds the following features to its `CView` capabilities:  
   
--   Administra los tamaños de ventana y el área de visualización y modos de asignación.  
+-   It manages window and viewport sizes and mapping modes.  
   
--   Se desplaza automáticamente en respuesta a los mensajes de la barra de desplazamiento.  
+-   It scrolls automatically in response to scroll-bar messages.  
   
--   Se desplaza automáticamente en respuesta a los mensajes desde el teclado, un mouse sin desplazamiento o la rueda de IntelliMouse.  
+-   It scrolls automatically in response to messages from the keyboard, a non-scrolling mouse, or the IntelliMouse wheel.  
   
- Para desplazarse automáticamente en respuesta a los mensajes del teclado, agregar un mensaje WM_KEYDOWN y comprobar VK_DOWN, VK_PREV y llamada [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597).  
+ To scroll automatically in response to messages from the keyboard, add a WM_KEYDOWN message, and test for VK_DOWN, VK_PREV and call [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597).  
   
- Puede controlar la rueda del mouse usted mismo desplazamiento reemplazando mensaje asigna [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) y [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) funciones miembro. Que se usan para `CScrollView`, estas funciones miembro admiten el comportamiento recomendado para [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617), el mensaje de giro de la rueda.  
+ You can handle mouse wheel scrolling yourself by overriding the message-mapped [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) and [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) member functions. As they are for `CScrollView`, these member functions support the recommended behaviour for [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617), the wheel rotation message.  
   
- Para sacar partido del desplazamiento automático, derive la clase de vista de `CScrollView` en lugar de desde `CView`. Cuando la vista se crea por primera vez, si desea calcular el tamaño de la vista desplazable en función del tamaño del documento, llamada la `SetScrollSizes` el reemplazo de una función miembro [CView:: OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) o [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Debe escribir su propio código para consultar el tamaño del documento. Para obtener un ejemplo, consulte el [ejemplo Scribble](../../visual-cpp-samples.md).)  
+ To take advantage of automatic scrolling, derive your view class from `CScrollView` instead of from `CView`. When the view is first created, if you want to calculate the size of the scrollable view based on the size of the document, call the `SetScrollSizes` member function from your override of either [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) or [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (You must write your own code to query the size of the document. For an example, see the [Scribble sample](../../visual-cpp-samples.md).)  
   
- La llamada a la `SetScrollSizes` función miembro establece el modo de asignación de la vista, las dimensiones totales de la vista de desplazamiento y los importes de desplazamiento horizontal y vertical. Todos los tamaños están en unidades lógicas. Normalmente se calcula el tamaño lógico de la vista de datos almacenados en el documento, pero en algunos casos puede especificar un tamaño fijo. Para obtener ejemplos de ambos enfoques, consulte [CScrollView::SetScrollSizes](#setscrollsizes).  
+ The call to the `SetScrollSizes` member function sets the view's mapping mode, the total dimensions of the scroll view, and the amounts to scroll horizontally and vertically. All sizes are in logical units. The logical size of the view is usually calculated from data stored in the document, but in some cases you may want to specify a fixed size. For examples of both approaches, see [CScrollView::SetScrollSizes](#setscrollsizes).  
   
- Especifique los importes de desplazamiento horizontal y vertical en unidades lógicas. De forma predeterminada, si el usuario hace clic en un eje de la barra de desplazamiento fuera del cuadro de desplazamiento, `CScrollView` desplaza una "página". Si el usuario hace clic en una flecha de desplazamiento en cualquier extremo de una barra de desplazamiento, `CScrollView` desplaza "línea". De forma predeterminada, una página es 1/10 del tamaño total de la vista; una línea es 1/10 del tamaño de página. Invalidar estos valores predeterminados pasando tamaños personalizados en el `SetScrollSizes` función miembro. Por ejemplo, puede establecer el tamaño horizontal que alguna fracción del ancho del tamaño total y el tamaño vertical en el alto de una línea en la fuente actual.  
+ You specify the amounts to scroll horizontally and vertically in logical units. By default, if the user clicks a scroll bar shaft outside of the scroll box, `CScrollView` scrolls a "page." If the user clicks a scroll arrow at either end of a scroll bar, `CScrollView` scrolls a "line." By default, a page is 1/10 of the total size of the view; a line is 1/10 of the page size. Override these default values by passing custom sizes in the `SetScrollSizes` member function. For example, you might set the horizontal size to some fraction of the width of the total size and the vertical size to the height of a line in the current font.  
   
- En lugar de desplazarse, `CScrollView` puede escalar automáticamente la vista para el tamaño de la ventana actual. En este modo, la vista no tiene ninguna barra de desplazamiento y la vista lógica se expandirán o comprimirán para ajustarse exactamente a área de cliente de la ventana. Para utilizar esta capacidad de escala para el ajuste, llame a [CScrollView::SetScaleToFitSize](#setscaletofitsize). (Llame a `SetScaleToFitSize` o `SetScrollSizes`, pero no ambos.)  
+ Instead of scrolling, `CScrollView` can automatically scale the view to the current window size. In this mode, the view has no scroll bars and the logical view is stretched or shrunk to exactly fit the window's client area. To use this scale-to-fit capability, call [CScrollView::SetScaleToFitSize](#setscaletofitsize). (Call either `SetScaleToFitSize` or `SetScrollSizes`, but not both.)  
   
- Antes de la `OnDraw` se llama la función miembro de la clase de vista derivada, `CScrollView` ajusta automáticamente el origen de la ventanilla para el `CPaintDC` objeto de contexto de dispositivo que se pasa a `OnDraw`.  
+ Before the `OnDraw` member function of your derived view class is called, `CScrollView` automatically adjusts the viewport origin for the `CPaintDC` device-context object that it passes to `OnDraw`.  
   
- Para ajustar el origen de la ventanilla de la ventana desplazable, `CScrollView` reemplaza [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Este ajuste es automática para el `CPaintDC` contexto de dispositivo que `CScrollView` pasa a `OnDraw`, pero se debe llamar a **CScrollView::OnPrepareDC** usted mismo para otros contextos de dispositivo utiliza, como un `CClientDC`. Puede invalidar **CScrollView::OnPrepareDC** para configurar el lápiz, color de fondo y otros atributos de dibujos, pero la clase base para realizar el ajuste de escala.  
+ To adjust the viewport origin for the scrolling window, `CScrollView` overrides [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). This adjustment is automatic for the `CPaintDC` device context that `CScrollView` passes to `OnDraw`, but you must call **CScrollView::OnPrepareDC** yourself for any other device contexts you use, such as a `CClientDC`. You can override **CScrollView::OnPrepareDC** to set the pen, background color, and other drawing attributes, but call the base class to do scaling.  
   
- Barras de desplazamiento pueden aparecer en tres lugares con respecto a una vista, como se muestra en los siguientes casos:  
+ Scroll bars can appear in three places relative to a view, as shown in the following cases:  
   
--   Barras de desplazamiento de estilo de ventana estándar se pueden establecer para la vista utilizando la **WS_HSCROLL** y **WS_VSCROLL**[Windows estilos](../../mfc/reference/window-styles.md).  
+-   Standard window-style scroll bars can be set for the view using the **WS_HSCROLL** and **WS_VSCROLL**[Windows Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
--   También pueden agregarse controles de barra de desplazamiento en el marco que contiene la vista, en la que se reenvía el marco de trabajo de caso `WM_HSCROLL` y `WM_VSCROLL` mensajes desde la ventana de marco a la vista activa.  
+-   Scroll-bar controls can also be added to the frame containing the view, in which case the framework forwards `WM_HSCROLL` and `WM_VSCROLL` messages from the frame window to the currently active view.  
   
--   El marco también reenvía desplácese mensajes desde un `CSplitterWnd` splitter (control) en el panel divisor actualmente activo (una vista). Cuando se coloca en un [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md) con barras de desplazamiento compartido, un `CScrollView` objeto utilizará los compartidos en lugar de crear su propio.  
+-   The framework also forwards scroll messages from a `CSplitterWnd` splitter control to the currently active splitter pane (a view). When placed in a [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md) with shared scroll bars, a `CScrollView` object will use the shared ones rather than creating its own.  
   
- Para obtener más información sobre el uso de `CScrollView`, consulte [arquitectura documento/vista](../../mfc/document-view-architecture.md) y [derivadas vista de clases disponibles en MFC](../../mfc/derived-view-classes-available-in-mfc.md).  
+ For more information on using `CScrollView`, see [Document/View Architecture](../../mfc/document-view-architecture.md) and [Derived View Classes Available in MFC](../../mfc/derived-view-classes-available-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -132,11 +140,11 @@ class CScrollView : public CView
   
  `CScrollView`  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
- Llame a esta función miembro para determinar si la vista de desplazamiento tiene barras horizontales y verticales.  
+##  <a name="checkscrollbars"></a>  CScrollView::CheckScrollBars  
+ Call this member function to determine if the scroll view has horizontal and vertical bars.  
   
 ```  
 void CheckScrollBars(
@@ -144,25 +152,25 @@ void CheckScrollBars(
     BOOL& bHasVertBar) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  *bHasHorzBar*  
- Indica que la aplicación tiene una barra de desplazamiento horizontal.  
+ Indicates the application has a horizontal scroll bar.  
   
  *bHasVertBar*  
- Indica que la aplicación tiene una barra de desplazamiento vertical.  
+ Indicates the application has a vertical scroll bar.  
   
-##  <a name="cscrollview"></a>CScrollView::CScrollView  
- Construye un objeto `CScrollView`.  
+##  <a name="cscrollview"></a>  CScrollView::CScrollView  
+ Constructs a `CScrollView` object.  
   
 ```  
 CScrollView();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Debe llamar `SetScrollSizes` o `SetScaleToFitSize` antes el desplazamiento es utilizable vista.  
+### <a name="remarks"></a>Remarks  
+ You must call either `SetScrollSizes` or `SetScaleToFitSize` before the scroll view is usable.  
   
-##  <a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
- Llame a `FillOutsideRect` para rellenar el área de la vista que aparece fuera del área desplazable.  
+##  <a name="filloutsiderect"></a>  CScrollView::FillOutsideRect  
+ Call `FillOutsideRect` to fill the area of the view that appears outside of the scrolling area.  
   
 ```  
 void FillOutsideRect(
@@ -170,36 +178,36 @@ void FillOutsideRect(
     CBrush* pBrush);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- Contexto de dispositivo en el que es hacer el llenado.  
+ Device context in which the filling is to be done.  
   
  `pBrush`  
- Pincel con la que es rellenar el área.  
+ Brush with which the area is to be filled.  
   
-### <a name="remarks"></a>Comentarios  
- Utilice `FillOutsideRect` en la vista de desplazamiento `OnEraseBkgnd` función de controlador para evitar volver a dibujar un fondo excesivo.  
+### <a name="remarks"></a>Remarks  
+ Use `FillOutsideRect` in your scroll view's `OnEraseBkgnd` handler function to prevent excessive background repainting.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFCDocView&#164;](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#164](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
-##  <a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
- Llame a `GetDeviceScrollPosition` cuando necesite las posiciones actuales de horizontales y verticales de los cuadros de desplazamiento en las barras de desplazamiento.  
+##  <a name="getdevicescrollposition"></a>  CScrollView::GetDeviceScrollPosition  
+ Call `GetDeviceScrollPosition` when you need the current horizontal and vertical positions of the scroll boxes in the scroll bars.  
   
 ```  
 CPoint GetDeviceScrollPosition() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Las posiciones horizontales y verticales (en unidades de dispositivo) de los cuadros de desplazamiento como un `CPoint` objeto.  
+### <a name="return-value"></a>Return Value  
+ The horizontal and vertical positions (in device units) of the scroll boxes as a `CPoint` object.  
   
-### <a name="remarks"></a>Comentarios  
- Este par de coordenadas corresponde a la ubicación en el documento al que se ha desplazado la esquina superior izquierda de la vista. Esto es útil para la compensación de las posiciones de dispositivo de mouse a posiciones de dispositivo de vista de desplazamiento.  
+### <a name="remarks"></a>Remarks  
+ This coordinate pair corresponds to the location in the document to which the upper-left corner of the view has been scrolled. This is useful for offsetting mouse-device positions to scroll-view device positions.  
   
- `GetDeviceScrollPosition`Devuelve valores en unidades del dispositivo. Si desea que las unidades lógicas, use `GetScrollPosition` en su lugar.  
+ `GetDeviceScrollPosition` returns values in device units. If you want logical units, use `GetScrollPosition` instead.  
   
-##  <a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
- `GetDeviceScrollSizes`Obtiene los tamaños de página y de línea de la vista desplazable, el tamaño total y el modo de asignación actual.  
+##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes  
+ `GetDeviceScrollSizes` gets the current mapping mode, the total size, and the line and page sizes of the scrollable view.  
   
 ```  
 void GetDeviceScrollSizes(
@@ -209,103 +217,103 @@ void GetDeviceScrollSizes(
     SIZE& sizeLine) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nMapMode`  
- Devuelve el modo de asignación actual para esta vista. Para obtener una lista de valores posibles, consulte `SetScrollSizes`.  
+ Returns the current mapping mode for this view. For a list of possible values, see `SetScrollSizes`.  
   
  `sizeTotal`  
- Devuelve el tamaño total actual de la vista de desplazamiento en unidades del dispositivo.  
+ Returns the current total size of the scroll view in device units.  
   
  `sizePage`  
- Devuelve las cantidades horizontales y verticales actuales para desplazarse en cada dirección en respuesta a un mouse haga clic en un eje de una barra de desplazamiento. El **cx** miembro contiene la cantidad horizontal. El **cy** miembro contiene la cantidad vertical.  
+ Returns the current horizontal and vertical amounts to scroll in each direction in response to a mouse click in a scroll-bar shaft. The **cx** member contains the horizontal amount. The **cy** member contains the vertical amount.  
   
  `sizeLine`  
- Devuelve las cantidades horizontales y verticales actuales para desplazarse en cada dirección en respuesta a un mouse haga clic en una flecha de desplazamiento. El **cx** miembro contiene la cantidad horizontal. El **cy** miembro contiene la cantidad vertical.  
+ Returns the current horizontal and vertical amounts to scroll in each direction in response to a mouse click in a scroll arrow. The **cx** member contains the horizontal amount. The **cy** member contains the vertical amount.  
   
-### <a name="remarks"></a>Comentarios  
- Los tamaños se encuentran en unidades del dispositivo. Raramente se llama a esta función miembro.  
+### <a name="remarks"></a>Remarks  
+ Sizes are in device units. This member function is rarely called.  
   
-##  <a name="getscrollposition"></a>CScrollView::GetScrollPosition  
- Llame a `GetScrollPosition` cuando necesite las posiciones actuales de horizontales y verticales de los cuadros de desplazamiento en las barras de desplazamiento.  
+##  <a name="getscrollposition"></a>  CScrollView::GetScrollPosition  
+ Call `GetScrollPosition` when you need the current horizontal and vertical positions of the scroll boxes in the scroll bars.  
   
 ```  
 CPoint GetScrollPosition() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Las posiciones horizontales y verticales (en unidades lógicas) de los cuadros de desplazamiento como un `CPoint` objeto.  
+### <a name="return-value"></a>Return Value  
+ The horizontal and vertical positions (in logical units) of the scroll boxes as a `CPoint` object.  
   
-### <a name="remarks"></a>Comentarios  
- Este par de coordenadas corresponde a la ubicación en el documento al que se ha desplazado la esquina superior izquierda de la vista.  
+### <a name="remarks"></a>Remarks  
+ This coordinate pair corresponds to the location in the document to which the upper-left corner of the view has been scrolled.  
   
- `GetScrollPosition`Devuelve valores de unidades lógicas. Si desea que las unidades de dispositivo, use `GetDeviceScrollPosition` en su lugar.  
+ `GetScrollPosition` returns values in logical units. If you want device units, use `GetDeviceScrollPosition` instead.  
   
-##  <a name="gettotalsize"></a>CScrollView::GetTotalSize  
- Llame a `GetTotalSize` para recuperar los tamaños horizontales y verticales actuales de la vista de desplazamiento.  
+##  <a name="gettotalsize"></a>  CScrollView::GetTotalSize  
+ Call `GetTotalSize` to retrieve the current horizontal and vertical sizes of the scroll view.  
   
 ```  
 CSize GetTotalSize() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- El tamaño total de la vista de desplazamiento en unidades lógicas. Es el tamaño horizontal de la **cx** miembro de la `CSize` valor devuelto. Es el tamaño vertical de la **cy** miembro.  
+### <a name="return-value"></a>Return Value  
+ The total size of the scroll view in logical units. The horizontal size is in the **cx** member of the `CSize` return value. The vertical size is in the **cy** member.  
   
-##  <a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
- Llame a `ResizeParentToFit` para permitir que el tamaño de la vista determinan el tamaño de su ventana de marco.  
+##  <a name="resizeparenttofit"></a>  CScrollView::ResizeParentToFit  
+ Call `ResizeParentToFit` to let the size of your view dictate the size of its frame window.  
   
 ```  
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  *bShrinkOnly*  
- El tipo de cambio de tamaño para llevar a cabo. El valor predeterminado, **TRUE**, se reduce la ventana de marco, si procede. Barras de desplazamiento seguirá apareciendo para grandes vistas o ventanas de marco pequeño. Un valor de **FALSE** hace que la vista siempre cambiar el tamaño de la ventana de marco exactamente. Esto puede ser algo peligroso, ya que la ventana de marco podría obtener demasiado grande para que quepa en la pantalla o la ventana de marco de documento MDI (interfaz) varios.  
+ The kind of resizing to perform. The default value, **TRUE**, shrinks the frame window if appropriate. Scroll bars will still appear for large views or small frame windows. A value of **FALSE** causes the view always to resize the frame window exactly. This can be somewhat dangerous since the frame window could get too big to fit inside the multiple document interface (MDI) frame window or the screen.  
   
-### <a name="remarks"></a>Comentarios  
- Esto se recomienda únicamente para las vistas en ventanas de marco secundarias MDI. Utilice `ResizeParentToFit` en el `OnInitialUpdate` función de controlador de la derivada `CScrollView` clase. Para obtener un ejemplo de esta función miembro, vea [CScrollView::SetScrollSizes](#setscrollsizes).  
+### <a name="remarks"></a>Remarks  
+ This is recommended only for views in MDI child frame windows. Use `ResizeParentToFit` in the `OnInitialUpdate` handler function of your derived `CScrollView` class. For an example of this member function, see [CScrollView::SetScrollSizes](#setscrollsizes).  
   
- `ResizeParentToFit`se supone que se ha establecido el tamaño de la ventana de vista. Si el tamaño de la ventana de vista no se estableció cuando `ResizeParentToFit` es llama, obtendrá una aserción. Para asegurarse de que esto no ocurra, realizar la siguiente llamada antes de llamar a `ResizeParentToFit`:  
+ `ResizeParentToFit` assumes that the size of the view window has been set. If the view window size has not been set when `ResizeParentToFit` is called, you will get an assertion. To ensure that this does not happen, make the following call before calling `ResizeParentToFit`:  
   
- [!code-cpp[NVC_MFCDocView&#165;](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
- Llame a `ScrollToPosition` para desplazarse a un punto determinado en la vista.  
+##  <a name="scrolltoposition"></a>  CScrollView::ScrollToPosition  
+ Call `ScrollToPosition` to scroll to a given point in the view.  
   
 ```  
 void ScrollToPosition(POINT pt);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pt`  
- El punto de desplazamiento, en unidades lógicas. El **x** miembro debe ser un valor positivo (mayor o igual a 0, hasta el tamaño total de la vista). Lo mismo es cierto para la **y** miembro cuando el modo de asignación es `MM_TEXT`. El **y** miembro es negativo en la asignación de modos distintos de `MM_TEXT`.  
+ The point to scroll to, in logical units. The **x** member must be a positive value (greater than or equal to 0, up to the total size of the view). The same is true for the **y** member when the mapping mode is `MM_TEXT`. The **y** member is negative in mapping modes other than `MM_TEXT`.  
   
-### <a name="remarks"></a>Comentarios  
- Se puede desplazar la vista para que este punto está en la esquina superior izquierda de la ventana. Esta función miembro no debe llamarse si la vista se escala para ajustarse.  
+### <a name="remarks"></a>Remarks  
+ The view will be scrolled so that this point is at the upper-left corner of the window. This member function must not be called if the view is scaled to fit.  
   
-##  <a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
- Llame a `SetScaleToFitSize` cuando desea escalar el tamaño de la ventanilla para el tamaño actual de la ventana automáticamente.  
+##  <a name="setscaletofitsize"></a>  CScrollView::SetScaleToFitSize  
+ Call `SetScaleToFitSize` when you want to scale the viewport size to the current window size automatically.  
   
 ```  
 void SetScaleToFitSize(SIZE sizeTotal);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `sizeTotal`  
- Los tamaños horizontales y verticales para que la vista es escalar. Tamaño de la vista de desplazamiento se mide en unidades lógicas. El tamaño horizontal que se encuentra en la **cx** miembro. El tamaño vertical se encuentra en la **cy** miembro. Ambos **cx** y **cy** debe ser mayor o igual que 0.  
+ The horizontal and vertical sizes to which the view is to be scaled. The scroll view's size is measured in logical units. The horizontal size is contained in the **cx** member. The vertical size is contained in the **cy** member. Both **cx** and **cy** must be greater than or equal to 0.  
   
-### <a name="remarks"></a>Comentarios  
- Con las barras de desplazamiento, sólo una parte de la vista lógica puede aparecer en cualquier momento. Pero con la capacidad de escala para ajustar la vista no tiene ninguna barra de desplazamiento y la vista lógica se expandirán o comprimirán para ajustarse exactamente a área de cliente de la ventana. Cuando se cambia el tamaño de la ventana, la vista obtiene sus datos en una nueva escala según el tamaño de la ventana.  
+### <a name="remarks"></a>Remarks  
+ With scroll bars, only a portion of the logical view may be visible at any time. But with the scale-to-fit capability, the view has no scroll bars and the logical view is stretched or shrunk to exactly fit the window's client area. When the window is resized, the view draws its data at a new scale based on the size of the window.  
   
- Normalmente a colocar la llamada a `SetScaleToFitSize` en la invalidación de la vista `OnInitialUpdate` función miembro. Si no desea que el escalado automático, llame a la `SetScrollSizes` función miembro en su lugar.  
+ You'll typically place the call to `SetScaleToFitSize` in your override of the view's `OnInitialUpdate` member function. If you do not want automatic scaling, call the `SetScrollSizes` member function instead.  
   
- `SetScaleToFitSize`puede utilizarse para implementar una operación "Zoom para ajustar". Use `SetScrollSizes` para reinicializar el desplazamiento.  
+ `SetScaleToFitSize` can be used to implement a "Zoom to Fit" operation. Use `SetScrollSizes` to reinitialize scrolling.  
   
- `SetScaleToFitSize`se supone que se ha establecido el tamaño de la ventana de vista. Si el tamaño de la ventana de vista no se estableció cuando `SetScaleToFitSize` es llama, obtendrá una aserción. Para asegurarse de que esto no ocurra, realizar la siguiente llamada antes de llamar a `SetScaleToFitSize`:  
+ `SetScaleToFitSize` assumes that the size of the view window has been set. If the view window size has not been set when `SetScaleToFitSize` is called, you will get an assertion. To ensure that this does not happen, make the following call before calling `SetScaleToFitSize`:  
   
- [!code-cpp[NVC_MFCDocView&#165;](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
- Llame a `SetScrollSizes` cuando la vista está a punto de actualizar.  
+##  <a name="setscrollsizes"></a>  CScrollView::SetScrollSizes  
+ Call `SetScrollSizes` when the view is about to be updated.  
   
 ```  
 void SetScrollSizes(
@@ -315,52 +323,52 @@ void SetScrollSizes(
     const SIZE& sizeLine = sizeDefault);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nMapMode`  
- El modo de asignación para establecer para esta vista. Los posibles valores incluyen:  
+ The mapping mode to set for this view. Possible values include:  
   
-|Modo de asignación|Unidad lógica|Eje y positivo extiende...|  
+|Mapping Mode|Logical Unit|Positive y-axis Extends...|  
 |------------------|------------------|---------------------------------|  
-|`MM_TEXT`|1 píxel|Hacia abajo|  
-|`MM_HIMETRIC`|0,01 mm|Hacia arriba|  
-|`MM_TWIPS`|1/1440 en|Hacia arriba|  
-|`MM_HIENGLISH`|0,001 pda|Hacia arriba|  
-|`MM_LOMETRIC`|0,1 mm|Hacia arriba|  
-|`MM_LOENGLISH`|0,01 pda|Hacia arriba|  
+|`MM_TEXT`|1 pixel|Downward|  
+|`MM_HIMETRIC`|0.01 mm|Upward|  
+|`MM_TWIPS`|1/1440 in|Upward|  
+|`MM_HIENGLISH`|0.001 in|Upward|  
+|`MM_LOMETRIC`|0.1 mm|Upward|  
+|`MM_LOENGLISH`|0.01 in|Upward|  
   
- Todos estos modos se definen mediante Windows. Dos modos de asignación estándar, `MM_ISOTROPIC` y `MM_ANISOTROPIC`, no se utilizan para `CScrollView`. La biblioteca de clases proporciona la `SetScaleToFitSize` función de miembro para el escalado de la vista al tamaño de ventana. Tres de la columna en la tabla anterior describen la orientación de la coordenada.  
+ All of these modes are defined by Windows. Two standard mapping modes, `MM_ISOTROPIC` and `MM_ANISOTROPIC`, are not used for `CScrollView`. The class library provides the `SetScaleToFitSize` member function for scaling the view to window size. Column three in the table above describes the coordinate orientation.  
   
  `sizeTotal`  
- El tamaño total de la vista de desplazamiento. El **cx** miembro contiene la medida horizontal. El **cy** miembro contiene la extensión vertical. Los tamaños se encuentran en unidades lógicas. Ambos **cx** y **cy** debe ser mayor o igual que 0.  
+ The total size of the scroll view. The **cx** member contains the horizontal extent. The **cy** member contains the vertical extent. Sizes are in logical units. Both **cx** and **cy** must be greater than or equal to 0.  
   
  `sizePage`  
- Haga clic en las cantidades horizontales y verticales para desplazarse en cada dirección en respuesta a un mouse (ratón) en un eje de una barra de desplazamiento. El **cx** miembro contiene la cantidad horizontal. El **cy** miembro contiene la cantidad vertical.  
+ The horizontal and vertical amounts to scroll in each direction in response to a mouse click in a scroll-bar shaft. The **cx** member contains the horizontal amount. The **cy** member contains the vertical amount.  
   
  `sizeLine`  
- Las cantidades horizontales y verticales para desplazarse en cada dirección en respuesta a un mouse haga clic en una flecha de desplazamiento. El **cx** miembro contiene la cantidad horizontal. El **cy** miembro contiene la cantidad vertical.  
+ The horizontal and vertical amounts to scroll in each direction in response to a mouse click in a scroll arrow. The **cx** member contains the horizontal amount. The **cy** member contains the vertical amount.  
   
-### <a name="remarks"></a>Comentarios  
- Llamar en el reemplazo de la `OnUpdate` la función miembro para ajustar las características de desplazamiento cuando, por ejemplo, el documento se muestra inicialmente o cuando cambia de tamaño.  
+### <a name="remarks"></a>Remarks  
+ Call it in your override of the `OnUpdate` member function to adjust scrolling characteristics when, for example, the document is initially displayed or when it changes size.  
   
- Normalmente obtendrá información sobre el tamaño de documento asociado de la vista mediante una llamada a una función de miembro de documento, quizás denominada `GetMyDocSize`, que se proporciona con la clase derivada de documento. El código siguiente muestra este enfoque:  
+ You will typically obtain size information from the view's associated document by calling a document member function, perhaps called `GetMyDocSize`, that you supply with your derived document class. The following code shows this approach:  
   
- [!code-cpp[NVC_MFCDocView&#166;](../../mfc/codesnippet/cpp/cscrollview-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDocView#166](../../mfc/codesnippet/cpp/cscrollview-class_3.cpp)]  
   
- Como alternativa, puede a veces es necesario establecer un tamaño fijo, como se muestra en el código siguiente:  
+ Alternatively, you might sometimes need to set a fixed size, as in the following code:  
   
- [!code-cpp[NVC_MFCDocView&#167;](../../mfc/codesnippet/cpp/cscrollview-class_4.cpp)]  
+ [!code-cpp[NVC_MFCDocView#167](../../mfc/codesnippet/cpp/cscrollview-class_4.cpp)]  
   
- Debe establecer el modo de asignación en cualquiera de los modos de asignación de Windows excepto `MM_ISOTROPIC` o `MM_ANISOTROPIC`. Si desea utilizar un modo de asignación sin restricciones, llame a la `SetScaleToFitSize` función miembro en lugar de `SetScrollSizes`.  
+ You must set the mapping mode to any of the Windows mapping modes except `MM_ISOTROPIC` or `MM_ANISOTROPIC`. If you want to use an unconstrained mapping mode, call the `SetScaleToFitSize` member function instead of `SetScrollSizes`.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFCDocView&#168;](../../mfc/codesnippet/cpp/cscrollview-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#168](../../mfc/codesnippet/cpp/cscrollview-class_5.cpp)]  
   
- [!code-cpp[NVC_MFCDocView&#169;](../../mfc/codesnippet/cpp/cscrollview-class_6.cpp)]  
+ [!code-cpp[NVC_MFCDocView#169](../../mfc/codesnippet/cpp/cscrollview-class_6.cpp)]  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de MFC DIBLOOK](../../visual-cpp-samples.md)   
- [CView (clase)](../../mfc/reference/cview-class.md)   
- [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
- [CView (clase)](../../mfc/reference/cview-class.md)   
- [CSplitterWnd (clase)](../../mfc/reference/csplitterwnd-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample DIBLOOK](../../visual-cpp-samples.md)   
+ [CView Class](../../mfc/reference/cview-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CView Class](../../mfc/reference/cview-class.md)   
+ [CSplitterWnd Class](../../mfc/reference/csplitterwnd-class.md)
 

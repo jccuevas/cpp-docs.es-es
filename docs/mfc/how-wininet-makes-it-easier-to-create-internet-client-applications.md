@@ -1,59 +1,78 @@
 ---
-title: "C&#243;mo simplifica WinInet la creaci&#243;n de aplicaciones cliente de Internet | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Windows Sockets [C++], frente a WinInet"
-  - "WinInet (clases), aplicaciones cliente de Internet"
-  - "WinInet (clases), frente a WinSock"
+title: How WinInet Makes It Easier to Create Internet Client Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows Sockets [MFC], vs. WinInet
+- WinInet classes [MFC], vs. WinSock
+- WinInet classes [MFC], Internet client applications
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# C&#243;mo simplifica WinInet la creaci&#243;n de aplicaciones cliente de Internet
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63691437ad156494ecb0af2513ad6762f136e49d
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Las extensiones de Internet para Win32, o WinInet, proporcionan acceso a los protocolos de Internet comunes, incluidos gopher, FTP, y HTTP.  Mediante WinInet, puede escribir aplicaciones cliente de internet en un nivel alto de programación, sin tener que tratar WinSock, de TCP\/IP, o detalles de protocolos de Internet concretos.  WinInet proporciona un conjunto coherente de funciones para los tres protocolos, con una interfaz conocida de la API Win32.  Esta coherencia minimiza cambios de código que debe realizar si los cambios subyacentes de protocolo \(por ejemplo, FTP al HTTP\).  
+---
+# <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>How WinInet Makes It Easier to Create Internet Client Applications
+The Win32 Internet Extensions, or WinInet, provide access to common Internet protocols, including gopher, FTP, and HTTP. Using WinInet, you can write Internet client applications at a higher level of programming, without having to deal with WinSock, TCP/IP, or the details of specific Internet protocols. WinInet provides a consistent set of functions for all three protocols, with a familiar Win32 API interface. This consistency minimizes code changes you need to make if the underlying protocol changes (for example, from FTP to HTTP).  
   
- Visual C\+\+ proporciona dos maneras de utilizar WinInet.  Puede llamar a funciones de internet de Win32 \(vea directamente la documentación\) en [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] para obtener más información\) o puede utilizar WinInet con [Clases de MFC WinInet](../mfc/mfc-classes-for-creating-internet-client-applications.md).  
+ Visual C++ provides two ways for you to use WinInet. You can call the Win32 Internet functions directly (see the OLE documentation in the Windows SDK for more information) or you can use WinInet through the [MFC WinInet classes](../mfc/mfc-classes-for-creating-internet-client-applications.md).  
   
- **Puede utilizar WinInet:**  
+ **You can use WinInet to:**  
   
--   Páginas HTML de descarga.  
+-   Download HTML pages.  
   
-     El HTTP es un protocolo utilizado para transferir las páginas HTML de un servidor a un explorador cliente.  
+     HTTP is a protocol used to transfer HTML pages from a server to a client browser.  
   
--   Envíe las solicitudes de FTP para cargar o descargar archivos o para obtener listas de directorios.  
+-   Send FTP requests to upload or download files or get directory listings.  
   
-     Una solicitud típica es un inicio de sesión anónimo para descargar un archivo.  
+     A typical request is an anonymous logon to download a file.  
   
--   Utilice el sistema del menú de gopher para obtener acceso a los recursos de internet.  
+-   Use gopher's menu system for accessing resources on the Internet.  
   
-     Los elementos de menú pueden ser varios tipos, incluidos otros menús, una base de datos indizados que puede buscar, un grupo de noticias, o un archivo.  
+     Menu items can be several types, including other menus, an indexed database you can search, a newsgroup, or a file.  
   
- Para los tres protocolos, establezca una conexión, realiza solicitudes al servidor, y cierra la conexión.  
+ For all three protocols, you establish a connection, make requests to the server, and close the connection.  
   
- **Las clases de MFC WinInet facilitan la:**  
+ **The MFC WinInet classes make it easy to:**  
   
--   Leer la información de HTTP, FTP, y servidores gopher tan fácilmente como archivos de lectura de un disco duro.  
+-   Read information from HTTP, FTP, and gopher servers as easily as reading files from a hard drive.  
   
--   Use HTTP, FTP, y los protocolos de gopher sin programación directamente el WinSock o a TCP\/IP.  
+-   Use HTTP, FTP, and gopher protocols without programming directly to WinSock or TCP/IP.  
   
-     Los desarrolladores que utilizan funciones internet de Win32 no deben estar familiarizados con TCP\/IP o Windows Sockets.  Todavía puede programar en el nivel de socket, mediante WinSock y protocolos TCP\/IP directamente, pero es incluso más fácil de utilizar las clases de MFC WinInet para tener acceso a HTTP, a FTP, y los protocolos de gopher a través de Internet.  Para muchas operaciones comunes, los programadores no necesitan conocer los detalles del protocolo determinado que está utilizando.  
+     Developers who use the Win32 Internet functions do not need to be familiar with TCP/IP or Windows Sockets. You can still program at the socket level, using WinSock and TCP/IP protocols directly, but it's even easier to use the MFC WinInet classes to access HTTP, FTP, and gopher protocols across the Internet. For many common operations, developers do not need to know the details of the particular protocol they are using.  
   
- Muchas operaciones que se pueden realizar por equipo como cliente a otros equipos en internet pueden tardar mucho tiempo.  La velocidad de estas operaciones es limitada normalmente por la velocidad de red, pero también pueden verse afectadas por el otro el tráfico de red y la complejidad de la operación.  La conexión con un servidor FTP remoto, por ejemplo, requiere que el equipo primero busca el nombre de ese servidor para encontrar su dirección.  La aplicación a intentará conectarse al servidor en esa dirección.  Una vez que se abra la conexión, el equipo y el servidor remoto iniciarán una conversación con el File transferencia antes de poder utilizar realmente la conexión a los archivos de recuperación.  
+ Many operations that can be performed by your computer as a client to other computers on the Internet can take a long time. The speed of these operations is usually limited by the speed of your network connection, but they can also be affected by other network traffic and the complexity of the operation. Connecting to a remote FTP server, for example, requires that your computer first look up the name of that server to find its address. Your application will then attempt to connect to the server at that address. Once the connection is opened, your computer and the remote server will initiate a conversation with the file transfer protocol before you can actually use the connection to retrieve files.  
   
-## Vea también  
- [Extensiones de Internet Win32 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)   
- [Cómo simplifica MFC la creación de aplicaciones cliente de Internet](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
+## <a name="see-also"></a>See Also  
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
+ [How MFC Makes It Easier to Create Internet Client Applications](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
+
+

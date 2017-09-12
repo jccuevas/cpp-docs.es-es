@@ -1,5 +1,5 @@
 ---
-title: Clase CSinusoidalTransitionFromRange | Documentos de Microsoft
+title: CSinusoidalTransitionFromRange Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,7 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSinusoidalTransitionFromRange class
+- CSinusoidalTransitionFromRange [MFC], CSinusoidalTransitionFromRange
+- CSinusoidalTransitionFromRange [MFC], Create
+- CSinusoidalTransitionFromRange [MFC], m_dblMaximumValue
+- CSinusoidalTransitionFromRange [MFC], m_dblMinimumValue
+- CSinusoidalTransitionFromRange [MFC], m_duration
+- CSinusoidalTransitionFromRange [MFC], m_period
+- CSinusoidalTransitionFromRange [MFC], m_slope
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
 caps.latest.revision: 18
 author: mikeblome
@@ -41,61 +47,61 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: f9dd0e236207c0b4139de42f4c616aaad9dcad28
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0f781fc168d420bd180442c3bfdc88024b7fb826
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csinusoidaltransitionfromrange-class"></a>Clase CSinusoidalTransitionFromRange
-Encapsula una transición de intervalo sinusoidal que tiene un intervalo determinado de oscilación.  
+# <a name="csinusoidaltransitionfromrange-class"></a>CSinusoidalTransitionFromRange Class
+Encapsulates a sinusoidal-range transition that has a given range of oscillation.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSinusoidalTransitionFromRange : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange](#csinusoidaltransitionfromrange)|Construye un objeto de la transición.|  
+|[CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange](#csinusoidaltransitionfromrange)|Constructs a transition object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSinusoidalTransitionFromRange::Create](#create)|Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado. (Invalida [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CSinusoidalTransitionFromRange::Create](#create)|Calls the transition library to create encapsulated transition COM object. (Overrides [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-### <a name="public-data-members"></a>Miembros de datos públicos  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSinusoidalTransitionFromRange::m_dblMaximumValue](#m_dblmaximumvalue)|El valor de la variable de animación un pico de la onda sinusoidal.|  
-|[CSinusoidalTransitionFromRange::m_dblMinimumValue](#m_dblminimumvalue)|El valor de la variable de animación en un Valle de la onda sinusoidal.|  
-|[CSinusoidalTransitionFromRange::m_duration](#m_duration)|La duración de la transición.|  
-|[CSinusoidalTransitionFromRange::m_period](#m_period)|El período de oscilación de la onda sinusoidal en segundos.|  
-|[CSinusoidalTransitionFromRange::m_slope](#m_slope)|La pendiente en el inicio de la transición.|  
+|[CSinusoidalTransitionFromRange::m_dblMaximumValue](#m_dblmaximumvalue)|The value of the animation variable at a peak of the sinusoidal wave.|  
+|[CSinusoidalTransitionFromRange::m_dblMinimumValue](#m_dblminimumvalue)|The value of the animation variable at a trough of the sinusoidal wave.|  
+|[CSinusoidalTransitionFromRange::m_duration](#m_duration)|The duration of the transition.|  
+|[CSinusoidalTransitionFromRange::m_period](#m_period)|The period of oscillation of the sinusoidal wave in seconds.|  
+|[CSinusoidalTransitionFromRange::m_slope](#m_slope)|The slope at the start of the transition.|  
   
-## <a name="remarks"></a>Comentarios  
- El valor de la variable de animación oscila entre los valores mínimos y máximo especificados en toda la duración de una transición de intervalo sinusoidal. El parámetro "pendiente" se utiliza para eliminar la ambigüedad entre las dos ondas de seno posibles especificadas por los otros parámetros. Debido a que todas las transiciones se desactivan automáticamente, se recomienda asignada a ellos con el operador nuevo. Se crea el objeto de IUIAnimationTransition COM encapsulado por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables miembro después de la creación de este objeto COM no tiene ningún efecto.  
+## <a name="remarks"></a>Remarks  
+ The value of the animation variable fluctuates between the specified minimum and maximum values over the entire duration of a sinusoidal-range transition. The slope parameter is used to disambiguate between the two possible sine waves specified by the other parameters. Because all transitions are cleared automatically, it's recommended to allocated them using operator new. The encapsulated IUIAnimationTransition COM object is created by CAnimationController::AnimateGroup, until then it's NULL. Changing member variables after creation of this COM object has no effect.  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  [CSinusoidalTransitionFromRange](../../mfc/reference/csinusoidaltransitionfromrange-class.md)  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="create"></a>CSinusoidalTransitionFromRange::Create  
- Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado.  
+##  <a name="create"></a>  CSinusoidalTransitionFromRange::Create  
+ Calls the transition library to create encapsulated transition COM object.  
   
 ```  
 virtual BOOL Create(
@@ -103,15 +109,15 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pLibrary`  
- Puntero a la biblioteca de transición, que es responsable de la creación de transiciones estándares.  
+ A pointer to transition library, which is responsible for creation of standard transitions.  
   
-### <a name="return-value"></a>Valor devuelto  
- TRUE si la transición se crea correctamente; de lo contrario, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if transition is created successfully; otherwise FALSE.  
   
-##  <a name="csinusoidaltransitionfromrange"></a>CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange  
- Construye un objeto de la transición.  
+##  <a name="csinusoidaltransitionfromrange"></a>  CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange  
+ Constructs a transition object.  
   
 ```  
 CSinusoidalTransitionFromRange(
@@ -122,57 +128,57 @@ CSinusoidalTransitionFromRange(
     UI_ANIMATION_SLOPE slope);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `duration`  
- La duración de la transición.  
+ The duration of the transition.  
   
  `dblMinimumValue`  
- El valor de la variable de animación en un Valle de la onda sinusoidal.  
+ The value of the animation variable at a trough of the sinusoidal wave.  
   
  `dblMaximumValue`  
- El valor de la variable de animación un pico de la onda sinusoidal.  
+ The value of the animation variable at a peak of the sinusoidal wave.  
   
  `period`  
- El período de oscilación de la onda sinusoidal en segundos.  
+ The period of oscillation of the sinusoidal wave in seconds.  
   
  `slope`  
- La pendiente en el inicio de la transición.  
+ The slope at the start of the transition.  
   
-##  <a name="m_dblmaximumvalue"></a>CSinusoidalTransitionFromRange::m_dblMaximumValue  
- El valor de la variable de animación un pico de la onda sinusoidal.  
+##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue  
+ The value of the animation variable at a peak of the sinusoidal wave.  
   
 ```  
 DOUBLE m_dblMaximumValue;  
 ```  
   
-##  <a name="m_dblminimumvalue"></a>CSinusoidalTransitionFromRange::m_dblMinimumValue  
- El valor de la variable de animación en un Valle de la onda sinusoidal.  
+##  <a name="m_dblminimumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMinimumValue  
+ The value of the animation variable at a trough of the sinusoidal wave.  
   
 ```  
 DOUBLE m_dblMinimumValue;  
 ```  
   
-##  <a name="m_duration"></a>CSinusoidalTransitionFromRange::m_duration  
- La duración de la transición.  
+##  <a name="m_duration"></a>  CSinusoidalTransitionFromRange::m_duration  
+ The duration of the transition.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="m_period"></a>CSinusoidalTransitionFromRange::m_period  
- El período de oscilación de la onda sinusoidal en segundos.  
+##  <a name="m_period"></a>  CSinusoidalTransitionFromRange::m_period  
+ The period of oscillation of the sinusoidal wave in seconds.  
   
 ```  
 UI_ANIMATION_SECONDS m_period;  
 ```  
   
-##  <a name="m_slope"></a>CSinusoidalTransitionFromRange::m_slope  
- La pendiente en el inicio de la transición.  
+##  <a name="m_slope"></a>  CSinusoidalTransitionFromRange::m_slope  
+ The slope at the start of the transition.  
   
 ```  
 UI_ANIMATION_SLOPE m_slope;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Clases](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

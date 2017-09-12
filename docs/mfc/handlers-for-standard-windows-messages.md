@@ -1,51 +1,69 @@
 ---
-title: "Controladores para mensajes est&#225;ndar de Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "afx_msg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funciones [C++], controlador"
-  - "funciones controladoras, mensajes estándar de Windows"
-  - "control de mensajes [C++], controladores de mensajes de Windows"
-  - "mensajes [C++], Windows"
-  - "mensajes de Windows [C++], controladores"
+title: Handlers for Standard Windows Messages | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- afx_msg
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows messages [MFC], handlers
+- message handling [MFC], Windows message handlers
+- handler functions, standard Windows messages
+- functions [MFC], handler
+- messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Controladores para mensajes est&#225;ndar de Windows
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9fa19a16623224e92442b00d6ea082d70c8ba040
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Predefinidas controladores predeterminados para los mensajes estándar de Windows \(**WM\_**\) en la clase `CWnd`.  La biblioteca de clases basa los nombres para estos controladores en el nombre del mensaje.  Por ejemplo, el controlador del mensaje de `WM_PAINT` en `CWnd` como:  
+---
+# <a name="handlers-for-standard-windows-messages"></a>Handlers for Standard Windows Messages
+Default handlers for standard Windows messages (**WM_**) are predefined in class `CWnd`. The class library bases names for these handlers on the message name. For example, the handler for the `WM_PAINT` message is declared in `CWnd` as:  
   
  `afx_msg void OnPaint();`  
   
- La palabra clave de **afx\_msg** sugiere el efecto de la palabra clave de C\+\+ **virtual** distinguiendo controladores de otras funciones miembro de `CWnd` .  Observe, sin embargo, que estas funciones no son realmente virtuales; en su lugar se implementan mediante mapas de mensajes.  Los mapas de mensajes dependen sólo de macro estándar preprocesador, no en cualquier extensión del lenguaje C\+\+.  La palabra clave de **afx\_msg** resuelve el espacio en blanco después del preprocesamiento.  
+ The **afx_msg** keyword suggests the effect of the C++ **virtual** keyword by distinguishing the handlers from other `CWnd` member functions. Note, however, that these functions are not actually virtual; they are instead implemented through message maps. Message maps depend solely on standard preprocessor macros, not on any extensions to the C++ language. The **afx_msg** keyword resolves to white space after preprocessing.  
   
- Para reemplazar un controlador definido en una clase base, defina simplemente una función con el mismo prototipo en la clase derivada y crear una entrada de mensaje\- mapa para el controlador.  El controlador “reemplaza” cualquier controlador del mismo nombre en las clases base de la clase cualquiera de los.  
+ To override a handler defined in a base class, simply define a function with the same prototype in your derived class and to make a message-map entry for the handler. Your handler "overrides" any handler of the same name in any of your class's base classes.  
   
- En algunos casos, el controlador debe llamar al controlador reemplazado en la clase base para que la clase base y Windows pueden funcionar en el mensaje.  Cuando se llama al controlador de la clase base en la invalidación depende de las circunstancias.  Debe llamar a veces el controlador de la clase base primero y a veces por última vez.  Se llama a veces el controlador de la clase base condicional, si decide no procesar el mensaje personalmente.  Debe llamar a veces el controlador de la clase base, después condicional para ejecutarse dispone de código del controlador, dependiendo del valor o del estado devuelto por el controlador de la clase base.  
+ In some cases, your handler should call the overridden handler in the base class so the base class(es) and Windows can operate on the message. Where you call the base-class handler in your override depends on the circumstances. Sometimes you must call the base-class handler first and sometimes last. Sometimes you call the base-class handler conditionally, if you choose not to handle the message yourself. Sometimes you should call the base-class handler, then conditionally execute your own handler code, depending on the value or state returned by the base-class handler.  
   
 > [!CAUTION]
->  No es seguro modificar los argumentos pasados en un controlador si piensa pasarlos a un controlador de clases base.  Por ejemplo, podría verse tentado para modificar el argumento de `nChar` de controlador de `OnChar` \(convertir a mayúsculas, por ejemplo\).  Este comportamiento es bastante indeterminado, pero si necesita realizar este efecto, usa la función **SendMessage** miembro de `CWnd` en su lugar.  
+>  It is not safe to modify the arguments passed into a handler if you intend to pass them to a base-class handler. For example, you might be tempted to modify the `nChar` argument of the `OnChar` handler (to convert to uppercase, for example). This behavior is fairly obscure, but if you need to accomplish this effect, use the `CWnd` member function **SendMessage** instead.  
   
- ¿Cómo se determina la manera adecuada de reemplazar un mensaje determinado?  Cuando la ventana Propiedades escribe la estructura de la función controladora para un mensaje determinado — controlador de `OnCreate` para `WM_CREATE`, por ejemplo — traza en forma de función invalidada recomendada del miembro.  El ejemplo siguiente se recomienda que la llamada del controlador primero el controlador de la clase base y continúa sólo con tal de que no vuelve a 1.  
+ How do you determine the proper way to override a given message When the Properties window writes the skeleton of the handler function for a given message — an `OnCreate` handler for `WM_CREATE`, for example — it sketches in the form of the recommended overridden member function. The following example recommends that the handler first call the base-class handler and proceed only on condition that it does not return -1.  
   
- [!code-cpp[NVC_MFCMessageHandling#3](../mfc/codesnippet/CPP/handlers-for-standard-windows-messages_1.cpp)]  
+ [!code-cpp[NVC_MFCMessageHandling#3](../mfc/codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]  
   
- Por convención, los nombres de estos controladores comienzan con el prefijo “en”. Algunos de estos controladores no toman ningún argumento, mientras que otros tienen varios.  Algunos también tienen un tipo de valor devuelto distinto de `void`.  Documentan controladores predeterminados para todos los mensajes de **WM\_** en *la referencia de MFC* como las funciones miembro de clases `CWnd` cuyos nombres comienzan por “en”. Las declaraciones de función miembro en `CWnd` llevan **afx\_msg**.  
+ By convention, the names of these handlers begin with the prefix "On." Some of these handlers take no arguments, while others take several. Some also have a return type other than `void`. The default handlers for all **WM_** messages are documented in the *MFC Reference* as member functions of class `CWnd` whose names begin with "On." The member function declarations in `CWnd` are prefixed with **afx_msg**.  
   
-## Vea también  
- [Declarar funciones del controlador de mensajes](../mfc/declaring-message-handler-functions.md)
+## <a name="see-also"></a>See Also  
+ [Declaring Message Handler Functions](../mfc/declaring-message-handler-functions.md)
+

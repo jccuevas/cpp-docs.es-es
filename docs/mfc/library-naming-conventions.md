@@ -1,65 +1,84 @@
 ---
-title: "Convenciones de nomenclatura de la biblioteca | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "convenciones de código, nombres de la biblioteca MFC"
-  - "aplicaciones de consola, versiones de la biblioteca MFC"
-  - "convenciones [C++], nombres de la biblioteca MFC"
-  - "bibliotecas [C++], static"
-  - "MFC (bibliotecas), convenciones de nomenclatura"
-  - "NAFXCW.LIB"
-  - "NAFXCWD.LIB"
-  - "convenciones de nomenclatura [C++], bibliotecas de código del objeto MFC"
-  - "bibliotecas de código del objeto"
-  - "bibliotecas de código del objeto, convenciones de nomenclatura MFC"
+title: Library Naming Conventions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- NAFXCW.LIB [MFC]
+- libraries [MFC], static
+- coding conventions [MFC], MFC library names
+- NAFXCWD.LIB [MFC]
+- console applications [MFC], MFC library versions
+- naming conventions [MFC], MFC object code libraries
+- object code libraries, MFC naming conventions
+- object code libraries
+- conventions [MFC], MFC library names
+- MFC libraries, naming conventions
 ms.assetid: 39fe7d93-5a14-4c6a-b16c-bf318fa01278
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Convenciones de nomenclatura de la biblioteca
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5507c0565207978793168cc7c38798e38375c007
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Bibliotecas de código objeto para MFC utilizan las convenciones de nomenclatura siguientes.  Los nombres de biblioteca tienen el formulario  
+---
+# <a name="library-naming-conventions"></a>Library Naming Conventions
+Object-code libraries for MFC use the following naming conventions. The library names have the form  
   
- w`d`.LIB de`c`*de uAFX*  
+ *u*AFX*c*W*d*.LIB  
   
- donde marcadores las letras mostradas en minúsculas cursivas para los especificadores cuyos significados se muestran en la tabla siguiente:  
+ where the letters shown in italic lowercase are placeholders for specifiers whose meanings are shown in the following table:  
   
-### Convenciones de nomenclatura para bibliotecas  
+### <a name="library-naming-conventions"></a>Library Naming Conventions  
   
-|Especificador|Valores y significados|  
-|-------------------|----------------------------|  
-|*u*|ANSI \(n\) o Unicode \(u\)|  
-|`c`|Tipo de programa a crear: C\=all|  
-|`d`|Depuración o lanzamiento: D\=Debug; omita el especificador de lanzamiento|  
+|Specifier|Values and meanings|  
+|---------------|-------------------------|  
+|*u*|ANSI (N) or Unicode (U)|  
+|*c*|Type of program to create: C=all|  
+|*d*|Debug or Release: D=Debug; omit specifier for Release|  
   
- El valor predeterminado es compilar una aplicación ANSI de las ventanas de depuración para la plataforma de Intel: NAFXCWD.Lib.  Todas las bibliotecas incluidas en la tabla siguiente son archivo incluido en el directorio de \\atlmfc\\lib en Visual C\+\+ CD\-ROM.  
+ The default is to build a debug Windows ANSI application for the Intel platform: NAFXCWD.Lib. All libraries listed in the following table are included prebuilt in the \atlmfc\lib directory.  
   
-### Convenciones de nomenclatura para bibliotecas de vínculos estáticos  
+### <a name="static-link-library-naming-conventions"></a>Static-Link Library Naming Conventions  
   
-|Biblioteca|Descripción|  
-|----------------|-----------------|  
-|NAFXCW.LIB|Biblioteca de vínculos estáticos de MFC, versión de lanzamiento|  
-|NAFXCWD.LIB|Biblioteca de vínculos estáticos de MFC, versión de depuración|  
-|UAFXCW.LIB|Biblioteca de vínculos estáticos de MFC con compatibilidad de Unicode, versión de lanzamiento|  
-|UAFXCWD.LIB|Biblioteca de vínculos estáticos de MFC con compatibilidad de Unicode, versión de depuración|  
+|Library|Description|  
+|-------------|-----------------|  
+|NAFXCW.LIB|MFC Static-Link Library, Release version|  
+|NAFXCWD.LIB|MFC Static-Link Library, Debug version|  
+|UAFXCW.LIB|MFC Static-Link Library with Unicode support, Release version|  
+|UAFXCWD.LIB|MFC Static-Link Library with Unicode support, Debug version|  
   
 > [!NOTE]
->  Si necesita compilar una versión de la biblioteca, vea el archivo Readme.txt en el directorio de \\atlmfc\\src\\mfc.  Este archivo describe el uso del archivo MAKE proporcionado por NMAKE.  
+>  If you need to build a library version, see the Readme.Txt file in the \atlmfc\src\mfc directory. This file describes using the supplied makefile with NMAKE.  
   
- Para obtener más información, vea [Convenciones de nomenclatura para archivos DLL de MFC](../build/naming-conventions-for-mfc-dlls.md) y [Versiones de Unicode de las bibliotecas MFC](../mfc/unicode-in-mfc.md).  
+ For more information, see [Naming Conventions for MFC DLLs](../build/naming-conventions-for-mfc-dlls.md) and [Unicode Versions of the MFC Libraries](../mfc/unicode-in-mfc.md).  
   
-## Vea también  
- [Versiones de la biblioteca MFC](../mfc/mfc-library-versions.md)
+## <a name="see-also"></a>See Also  
+ [MFC Library Versions](../mfc/mfc-library-versions.md)
+
+

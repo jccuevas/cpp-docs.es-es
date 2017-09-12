@@ -1,34 +1,53 @@
 ---
-title: "Selecci&#243;n de elementos de control de &#225;rbol | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles [MFC], seleccionar elementos en"
-  - "CTreeCtrl (clase), selección de elementos"
-  - "selección de elementos en controles de árbol"
-  - "controles de árbol, selección de elementos"
+title: Tree Control Item Selection | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tree controls [MFC], item selection
+- controls [MFC], selecting items in
+- CTreeCtrl class [MFC], item selection
+- item selection in tree controls
 ms.assetid: 7bcb3b16-b9c8-4c06-9350-7bc3c1c5009b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Selecci&#243;n de elementos de control de &#225;rbol
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 022090fb17e7cbc41286d41b51b2cfcd3d7fc97c
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Cuando cambia la selección de un elemento a otro, un control de árbol \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) envían [TVN\_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) y los mensajes de notificación de [TVN\_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) .  Ambas notificaciones incluyen un valor que especifica si el cambio es el resultado de un clic del mouse o una pulsación de tecla.  Las notificaciones también incluyen información sobre el elemento que se ganando la selección y el elemento que está realizando la selección.  Puede utilizar esta información para establecer los atributos del elemento que dependen del estado de selección del elemento.  Devolver **VERDADERO** en respuesta a **TVN\_SELCHANGING** evita la selección de cambiar; devolver **FALSE** permite el cambio.  
+---
+# <a name="tree-control-item-selection"></a>Tree Control Item Selection
+When the selection changes from one item to another, a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sends [TVN_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) and [TVN_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) notification messages. Both notifications include a value that specifies whether the change is the result of a mouse click or a keystroke. The notifications also include information about the item that is gaining the selection and the item that is losing the selection. You can use this information to set item attributes that depend on the selection state of the item. Returning **TRUE** in response to **TVN_SELCHANGING** prevents the selection from changing; returning **FALSE** allows the change.  
   
- Una aplicación puede cambiar la selección llamando a la función miembro de [SelectItem](../Topic/CTreeCtrl::SelectItem.md) .  
+ An application can change the selection by calling the [SelectItem](../mfc/reference/ctreectrl-class.md#selectitem) member function.  
   
-## Vea también  
- [Usar CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

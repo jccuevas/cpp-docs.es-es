@@ -1,52 +1,71 @@
 ---
-title: "Administraci&#243;n de memoria: asignaci&#243;n de marcos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "detectar pérdidas de memoria"
-  - "asignación de marcos"
-  - "variables de marco"
-  - "variables de marco, eliminación automática de"
-  - "asignación en el montón, frente a asignación de marcos"
-  - "asignación de memoria, marcos"
-  - "pérdidas de memoria, asignar objetos del marco"
-  - "pérdidas de memoria, detectar"
-  - "pérdidas de memoria, asignación de marcos"
-  - "memoria, detectar pérdidas"
-  - "memoria, reclamar"
-  - "memoria, liberación"
-  - "ámbito, variables de marco"
-  - "marcos de pila"
-  - "variables, variables de marco"
+title: 'Memory Management: Frame Allocation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory leaks [MFC], frame allocation
+- memory [MFC], detecting leaks
+- memory [MFC], reclaiming
+- memory allocation [MFC], frames
+- frame variables [MFC], automatic deletion of
+- scope [MFC], frame variables
+- heap allocation [MFC], vs. frame allocation
+- variables [MFC], frame variables
+- memory leaks [MFC], detecting
+- memory, releasing [MFC]
+- stack frames [MFC]
+- memory leaks [MFC], allocating objects on the frame
+- detecting memory leaks [MFC]
+- frame allocation [MFC]
+- frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Administraci&#243;n de memoria: asignaci&#243;n de marcos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b52e647f3639977f28906f49de2d5a605bf32622
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La asignación en el cuadro toma su nombre de “marco de pila” se configurar siempre que se llame a una función.  El marco de pila es un área de memoria que almacena temporalmente los argumentos a la función así como las variables que se local definido a la función.  Las variables de capítulos a menudo se denominan variables “automáticas” porque el compilador automáticamente asigna espacio para ellos.  
+---
+# <a name="memory-management-frame-allocation"></a>Memory Management: Frame Allocation
+Allocation on the frame takes its name from the "stack frame" that is set up whenever a function is called. The stack frame is an area of memory that temporarily holds the arguments to the function as well as any variables that are defined local to the function. Frame variables are often called "automatic" variables because the compiler automatically allocates the space for them.  
   
- Hay dos características clave de las asignaciones del cuadro.  Primero, cuando define una variable local, suficiente espacio se asigna en el marco de pila para la variable completa, aunque es una matriz o una estructura de datos grande.  En segundo lugar, las variables de marco automáticamente se eliminan cuando salen del ámbito:  
+ There are two key characteristics of frame allocations. First, when you define a local variable, enough space is allocated on the stack frame to hold the entire variable, even if it is a large array or data structure. Second, frame variables are automatically deleted when they go out of scope:  
   
- [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/CPP/memory-management-frame-allocation_1.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]  
   
- Para las variables de la función local, esta transición de ámbito ocurre cuando sale de la función, pero el ámbito de una variable de cuadro puede ser menor que una función si se utilizan llaves anidadas.  Esta eliminación automática de las variables de marco es muy importante.  En el caso de tipos primitivos simples \(como `int` o **byte**\), las matrices, o estructuras de datos, la eliminación automática reclaman simplemente la memoria utilizada por la variable.  Dado que la variable ha salido del ámbito, no será accesible de todos modos.  En el caso de objetos de C\+\+, sin embargo, el proceso de eliminación automática es un poco más complejo.  
+ For local function variables, this scope transition happens when the function exits, but the scope of a frame variable can be smaller than a function if nested braces are used. This automatic deletion of frame variables is very important. In the case of simple primitive types (such as `int` or **byte**), arrays, or data structures, the automatic deletion simply reclaims the memory used by the variable. Since the variable has gone out of scope, it cannot be accessed anyway. In the case of C++ objects, however, the process of automatic deletion is a bit more complicated.  
   
- Cuando un objeto se define como variable de marco, invoque a su constructor automáticamente en el punto donde se encuentra la definición.  Cuando el objeto salga del ámbito, el destructor se invoca antes de que la memoria del objeto se reclame.  Esta construcción y destrucción automáticas pueden ser muy procedimientos, pero debe tener en cuenta las llamadas automáticas, especialmente al destructor.  
+ When an object is defined as a frame variable, its constructor is automatically invoked at the point where the definition is encountered. When the object goes out of scope, its destructor is automatically invoked before the memory for the object is reclaimed. This automatic construction and destruction can be very handy, but you must be aware of the automatic calls, especially to the destructor.  
   
- La ventaja clave de asignar objetos en el cuadro es que automáticamente se eliminarán.  Cuando asigna los objetos en el cuadro, no tiene que preocuparse de objetos olvidados produciendo pérdidas de memoria. \(Para obtener detalles sobre las pérdidas de memoria, vea el artículo [Detectar pérdidas de memoria en MFC](http://msdn.microsoft.com/es-es/29ee8909-96e9-4246-9332-d3a8aa8d4658).\) Una desventaja de la asignación del cuadro es que las variables de marco no se pueden utilizar fuera del ámbito.  Otro factor de elegir la asignación del cuadro en la asignación de pila es que para las estructuras grandes y objetos, suele ser preferible utilizar la pila en lugar de la pila para el almacenamiento desde el espacio de pila se limita a menudo.  
+ The key advantage of allocating objects on the frame is that they are automatically deleted. When you allocate your objects on the frame, you don't have to worry about forgotten objects causing memory leaks. (For details on memory leaks, see the article [Detecting Memory Leaks in MFC](http://msdn.microsoft.com/en-us/29ee8909-96e9-4246-9332-d3a8aa8d4658).) A disadvantage of frame allocation is that frame variables cannot be used outside their scope. Another factor in choosing frame allocation versus heap allocation is that for large structures and objects, it is often better to use the heap instead of the stack for storage since stack space is often limited.  
   
-## Vea también  
- [Administración de memoria](../mfc/memory-management.md)
+## <a name="see-also"></a>See Also  
+ [Memory Management](../mfc/memory-management.md)
+
+

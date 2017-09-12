@@ -1,43 +1,62 @@
 ---
-title: "Establecer el modo de un objeto CStatusBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CStatusBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBarCtrl (clase), modos simples y no simples"
-  - "IsSimple (método), utilizar"
-  - "modo no simple y controles de la barra de estado"
-  - "SetSimple (método)"
-  - "modo simple y controles de la barra de estado"
-  - "controles de la barra de estado, modos simples y no simples"
+title: Setting the Mode of a CStatusBarCtrl Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CStatusBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- simple mode and status bar controls
+- IsSimple method, using
+- SetSimple method [MFC]
+- status bar controls [MFC], simple and nonsimple modes
+- non-simple mode and status bar controls
+- CStatusBarCtrl class [MFC], simple and nonsimple modes
 ms.assetid: ca6076e5-1501-4e33-8d35-9308941e46c0
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Establecer el modo de un objeto CStatusBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: de773e6298a5bb33de9b3b07faa33f57fdbd7132
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Hay dos modos para un objeto de `CStatusBarCtrl` : simple y nonsimple.  En la mayoría de casos, el control de barra de estado tendrá uno o varios elementos, junto con el texto y quizás un icono o iconos.  Esto es el modo de nonsimple.  Para obtener más información sobre este modo, vea [Inicializar la Parte de un objeto de CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).  
+---
+# <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>Setting the Mode of a CStatusBarCtrl Object
+There are two modes for a `CStatusBarCtrl` object: simple and nonsimple. In the majority of cases, your status bar control will have one or more parts, along with text and perhaps an icon or icons. This is called the nonsimple mode. For more information on this mode, see [Initializing the Parts of a CStatusBarCtrl Object](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).  
   
- Sin embargo, hay casos donde sólo es necesario mostrar una línea de texto única.  En este caso, el modo simple es suficiente para necesidades.  Para cambiar el modo del objeto de `CStatusBarCtrl` a simple, haga una llamada a la función miembro de [SetSimple](../Topic/CStatusBarCtrl::SetSimple.md) .  Una vez que el control de barra de estado está en modo simple, establezca el texto llamando a la función miembro de **SetText** , pasando 255 como valor para el parámetro de **nPane** .  
+ However, there are cases where you only need to display a single line of text. In this case, the simple mode is sufficient for your needs. To change the mode of the `CStatusBarCtrl` object to simple, make a call to the [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple) member function. Once the status bar control is in simple mode, set the text by calling the **SetText** member function, passing 255 as the value for the **nPane** parameter.  
   
- Puede utilizar la función de [IsSimple](../Topic/CStatusBarCtrl::IsSimple.md) para determinar en qué modo es el objeto de `CStatusBarCtrl` .  
+ You can use the [IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple) function to determine what mode the `CStatusBarCtrl` object is in.  
   
 > [!NOTE]
->  Si el objeto de la barra de estado se cambia de nonsimple a simple, o viceversa, la ventana inmediatamente está rediseñada y, si es necesario, cualquier elemento definido automáticamente se restaura.  
+>  If the status bar object is being changed from nonsimple to simple, or vice versa, the window is immediately redrawn and, if applicable, any defined parts are automatically restored.  
   
-## Vea también  
- [Usar CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

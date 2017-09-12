@@ -1,39 +1,58 @@
 ---
-title: "Controladores de mensajes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "control de comandos, controladores de mensajes"
-  - "controladores"
-  - "controladores, comando"
-  - "controladores, message"
-  - "controladores de mensajes"
-  - "control de mensajes, funciones del controlador de mensajes"
+title: Message Handlers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handlers [MFC]
+- command handling [MFC], message handlers
+- handlers [MFC]
+- message handling [MFC], message handler functions
+- handlers [MFC], command
+- handlers [MFC], message
 ms.assetid: 51bc4e76-dbe3-4cc2-b026-3199d56b2fa9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Controladores de mensajes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4c645aba2c37f403121b311f12863334277e5612
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En MFC, una función dedicada *de controlador* procesa cada mensaje independiente.  Las funciones de controlador de mensajes son funciones miembro de una clase.  Esta documentación se usa *la función miembro de controladores de mensajes*de términos, *la función de controlador de mensajes*, *el controlador de mensajes*, y *el controlador* indistintamente.  Algunos tipos de controladores de mensajes también se denominan “controladores de comandos”.  
+---
+# <a name="message-handlers"></a>Message Handlers
+In MFC, a dedicated *handler* function processes each separate message. Message-handler functions are member functions of a class. This documentation uses the terms *message-handler member function*, *message-handler function*, *message handler*, and *handler* interchangeably. Some kinds of message handlers are also called "command handlers."  
   
- La escritura de los controladores de mensajes explica una proporción alta de trabajo al escribir una aplicación de .NET framework.  Esta familia de caso describe cómo funciona el mecanismo de mensaje\- procesamiento.  
+ Writing message handlers accounts for a large proportion of your work in writing a framework application. This article family describes how the message-processing mechanism works.  
   
- ¿Qué el controlador para un mensaje hace?  Hace todo lo que desea hacer en respuesta a ese mensaje.  Puede crear controladores usando la ventana Propiedades de la clase, y después completa el código del controlador mediante el editor de código fuente.  
+ What does the handler for a message do It does whatever you want done in response to that message. You can create the handlers by using the Properties window of the class, and then fill in the handler's code using the source code editor.  
   
- Puede utilizar todas las funciones de Microsoft Visual C\+\+ y MFC para escribir controladores.  Para obtener una lista de todas las clases, vea [Información general de la biblioteca de clases](../mfc/class-library-overview.md) en *la referencia de MFC*.  
+ You can use all of the facilities of Microsoft Visual C++ and MFC to write your handlers. For a list of all classes, see [Class Library Overview](../mfc/class-library-overview.md) in the *MFC Reference*.  
   
-## Vea también  
- [Mensajes y comandos en el marco](../mfc/messages-and-commands-in-the-framework.md)
+## <a name="see-also"></a>See Also  
+ [Messages and Commands in the Framework](../mfc/messages-and-commands-in-the-framework.md)
+
+

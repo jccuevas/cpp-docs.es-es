@@ -1,74 +1,92 @@
 ---
-title: "Grupos con pesta&#241;as MDI | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mdi, grupos con pestañas"
-  - "grupos con pestañas"
+title: MDI Tabbed Groups | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- mdi [MFC], tabbed groups
+- tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Grupos con pesta&#241;as MDI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 955c785bab2f16d12c71b3ba253f753e8ab581fb
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La característica con fichas \(MDI\) grupos de interfaz de múltiples documentos permite a las aplicaciones de \(MDI\) de interfaz de múltiples documentos para mostrar una o más ventanas con fichas \(o grupos de ventanas con fichas, conocidos como *grupos con pestañas*\) en el área de cliente MDI.  Las ventanas con fichas se pueden alinear vertical u horizontalmente.  Si los hosts de una aplicación más de un MDI tabularon al grupo, a los divisores separan los grupos.  
+---
+# <a name="mdi-tabbed-groups"></a>MDI Tabbed Groups
+The multiple document interface (MDI) tabbed groups feature enables multiple document interface (MDI) applications to display one or more tabbed windows (or groups of tabbed windows, known as *tabbed groups*) in the MDI client area. The tabbed windows can be aligned vertically or horizontally. If an application hosts more than one MDI tabbed group, the groups are separated by splitters.  
   
-## Características  
- Los siguientes son características de MDI tabularon grupos:  
+## <a name="features"></a>Features  
+ The following are the features of MDI tabbed groups:  
   
--   Una aplicación puede crear las ventanas con fichas dinámicamente.  
+-   An application can create tabbed windows dynamically.  
   
--   Una aplicación puede clasificar las ventanas con fichas horizontal o verticalmente.  
+-   An application can align tabbed windows horizontally or vertically.  
   
--   A los divisores separan grupos de ventanas con fichas.  El usuario puede cambiar el tamaño de los grupos con fichas mediante el divisor.  
+-   Groups of tabbed windows are separated by splitters. The user can resize tabbed groups by using the splitter.  
   
--   El usuario puede arrastrar las fichas individuales entre grupos.  
+-   The user can drag individual tabs between groups.  
   
--   El usuario puede arrastrar las fichas individuales para crear otros nuevos.  
+-   The user can drag individual tabs to create new groups.  
   
--   El usuario puede mover las tabulaciones o crear nuevos grupos mediante un menú contextual.  
+-   The user can move tabs or create new groups by using a shortcut menu.  
   
--   Una aplicación puede guardar y cargar el diseño de ventanas con fichas.  
+-   An application can save and load the layout of tabbed windows.  
   
--   Una aplicación puede guardar y cargar la lista de documentos de MDI.  
+-   An application can save and load the list of MDI documents.  
   
--   Una aplicación puede obtener acceso a grupos con pestañas individuales y modificar sus parámetros.  
+-   An application can access individual tabbed groups and modify their parameters.  
   
-### Mediante MDI con grupos  
- Los siguientes son tareas realizadas normalmente con MDI tabularon grupos:  
+### <a name="using-mdi-tabbed-groups"></a>Using MDI Tabbed Groups  
+ The following are tasks commonly performed with MDI tabbed groups:  
   
--   Para habilitar MDI con grupos para una ventana de marco principal, llama a [CMDIFrameWndEx::EnableMDITabbedGroups](../Topic/CMDIFrameWndEx::EnableMDITabbedGroups.md).  El segundo parámetro de este método es una instancia de la clase de `CMDITabInfo` .  Puede utilizar los parámetros predeterminados o modificarlos antes de llamar a `CMDIFrameWndEx::EnableMDITabbedGroups`.  
+-   To enable MDI tabbed groups for a main frame window, call [CMDIFrameWndEx::EnableMDITabbedGroups](../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups). The second parameter of this method is an instance of the `CMDITabInfo` class. You can use the default parameters or modify them before you call `CMDIFrameWndEx::EnableMDITabbedGroups`.  
   
--   Para modificar las propiedades de MDI con el grupo en tiempo de ejecución, crea o modifica un objeto de `CMDITabInfo` y llama a `CMDIFrameWndEx::EnableMDITabbedGroups` de nuevo  
+-   To modify the properties of an MDI tabbed group at run time, create or modify a `CMDITabInfo` object and call `CMDIFrameWndEx::EnableMDITabbedGroups` again  
   
--   Para obtener una lista de MDI con ventanas, llama a `CMDIFrameWndEx::GetMDITabGroups`.  
+-   To obtain a list of MDI tabbed windows, call `CMDIFrameWndEx::GetMDITabGroups`.  
   
--   Para crear un nuevo grupo con MDI junto a un activo con el grupo, llama a `CMDIFrameWndEx::MDITabNewGroup`.  
+-   To create a new MDI tabbed group next to an active tabbed group, call `CMDIFrameWndEx::MDITabNewGroup`.  
   
--   Para desplazar el foco a la ventana siguiente o anterior de un grupo con fichas, llame a `CMDIFrameWndEx::MDITabMoveToNextGroup`.  
+-   To shift the input focus to the previous or next window of a tabbed group, call `CMDIFrameWndEx::MDITabMoveToNextGroup`.  
   
--   Para determinar si una ventana es un miembro de una llamada grupal tabulada MDI `CMDIFrameWndEx::IsMemberOfMDITabGroup`.  
+-   To determine whether a window is a member of an MDI tabbed group call `CMDIFrameWndEx::IsMemberOfMDITabGroup`.  
   
--   Para determinar si habilitan las fichas MDI o grupos con pestañas MDI para una ventana de marco principal, llamada `CMDIFrameWndEx::AreMDITabs`.  Solamente para determinar si MDI con grupos están habilitadas, llamada `CMDIFrameWndEx::IsMDITabbedGroup`.  
+-   To determine whether MDI tabs or MDI tabbed groups are enabled for a main frame window, call `CMDIFrameWndEx::AreMDITabs`. To determine only whether MDI tabbed groups are enabled, call `CMDIFrameWndEx::IsMDITabbedGroup`.  
   
--   Para mostrar un menú contextual cuando el usuario hace clic en una pestaña o la arrastra a otro grupo con MDI, reemplace `CMDIFrameWndEx::OnShowMDITabContextMenu` en `CMDIFrameWndEx`\- clase derivada.  Si no implementa este método, la aplicación no mostrará el menú contextual.  
+-   To display a shortcut menu when the user clicks a tab or drags it to another MDI tabbed group, override `CMDIFrameWndEx::OnShowMDITabContextMenu` in the `CMDIFrameWndEx`-derived class. If you do not implement this method, the application will not display the shortcut menu.  
   
--   Para guardar el diseño de MDI con grupos en una aplicación, llame a `CMDIFrameWndEx::SaveMDIState`.  Para cargar MDI previamente guardado con perfiles de grupo, llama a `CMDIFrameWndEx::LoadMDIState`.  También puede llamar a estos métodos para cargar o guardar la lista de documentos abiertos en una aplicación MDI.  Para obtener más información sobre el estado de MDI de guardar y de carga, vea [CMDIFrameWndEx::LoadMDIState](../Topic/CMDIFrameWndEx::LoadMDIState.md).  
+-   To save the layout of MDI tabbed groups in an application, call `CMDIFrameWndEx::SaveMDIState`. To load a previously saved MDI tabbed group profile, call `CMDIFrameWndEx::LoadMDIState`. You can also call these methods to load or save the list of opened documents in an MDI application. For more information about saving and loading MDI state, see [CMDIFrameWndEx::LoadMDIState](../mfc/reference/cmdiframewndex-class.md#loadmdistate).  
   
-## Vea también  
- [Elementos de la interfaz de usuario](../mfc/user-interface-elements-mfc.md)   
- [CMDIFrameWndEx \(Clase\)](../mfc/reference/cmdiframewndex-class.md)   
- [Clase CMDIChildWndEx](../mfc/reference/cmdichildwndex-class.md)   
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [CMDIFrameWndEx Class](../mfc/reference/cmdiframewndex-class.md)   
+ [CMDIChildWndEx Class](../mfc/reference/cmdichildwndex-class.md)   
  [CMDITabInfo Class](../mfc/reference/cmditabinfo-class.md)
+

@@ -1,51 +1,70 @@
 ---
-title: "Clases de arquitectura de aplicaciones MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clases de arquitectura de aplicaciones"
-  - "clases [C++], MFC"
-  - "MFC [C++], desarrollo de aplicaciones"
-  - "MFC [C++], clases"
+title: MFC Application Architecture Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, classes
+- MFC, application development
+- classes [MFC], MFC
+- application architecture classes [MFC]
 ms.assetid: 71b2de54-b44d-407e-9c71-9baf954e18d9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Clases de arquitectura de aplicaciones MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ff7e847340e6afb6c1a97160a7b1763e43447a6a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Las clases de esta categoría contribuyen a la arquitectura de una aplicación de .NET framework.  Proporcionan la funcionalidad común a la mayoría de las aplicaciones.  Complete el marco para agregar funcionalidad específica de la aplicación.  Normalmente, para ello derivar clases nuevas de las clases de la arquitectura, y agregando nuevos miembros o reemplazando el miembro existente funciona.  
+---
+# <a name="mfc-application-architecture-classes"></a>MFC Application Architecture Classes
+Classes in this category contribute to the architecture of a framework application. They supply functionality common to most applications. You fill in the framework to add application-specific functionality. Typically, you do so by deriving new classes from the architecture classes, and then adding new members or overriding existing member functions.  
   
- [Asistentes para aplicaciones](../mfc/reference/mfc-application-wizard.md) genera varios tipos de aplicaciones, que utilizan el marco de aplicación de maneras de son iguales.  Las aplicaciones SDI \(interfaz de un único documento\) y MDI \(interfaz de múltiples documentos\) hacen uso completo de una parte del marco denominado arquitectura documento\/vista.  Otros tipos de aplicaciones, como aplicaciones diálogo\- basadas en, formulario\- función aplicaciones, y los archivos DLL, utilice sólo algunas de las características de la arquitectura documento\/vista.  
+ [Application wizards](../mfc/reference/mfc-application-wizard.md) generate several types of applications, all of which use the application framework in differing ways. SDI (single document interface) and MDI (multiple document interface) applications make full use of a part of the framework called document/view architecture. Other types of applications, such as dialog-based applications, form-based applications, and DLLs, use only some of document/view architecture features.  
   
- Las aplicaciones de documentos y vistas contienen uno o más conjuntos de documentos, de vistas, y ventanas de marco.  Un objeto de plantilla de documento asociado clases para cada conjunto de documento y vista\/cuadro.  
+ Document/view applications contain one or more sets of documents, views, and frame windows. A document-template object associates the classes for each document/view/frame set.  
   
- Aunque no tenga que utilizar la arquitectura documento\/vista en la aplicación MFC, hay varias ventajas para ello.  Compatibilidad OLE de contenedor y servidor de MFC se basa en la arquitectura documento\/vista, al igual que admiten para imprimir y vista previa de impresión.  
+ Although you do not have to use document/view architecture in your MFC application, there are a number of advantages to doing so. The MFC OLE container and server support is based on document/view architecture, as is support for printing and print preview.  
   
- Todas las aplicaciones MFC tienen al menos dos objetos: un objeto application derivado de [CWinApp](../mfc/reference/cwinapp-class.md), y algún tipo de objeto de la ventana principal, derivada \(a menudo indirectamente\) de [CWnd](../mfc/reference/cwnd-class.md). \(Más a menudo, la ventana principal se deriva de [CFrameWnd](../mfc/reference/cframewnd-class.md), de [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), o de [CDialog](../mfc/reference/cdialog-class.md), que se derivan de `CWnd`.\)  
+ All MFC applications have at least two objects: an application object derived from [CWinApp](../mfc/reference/cwinapp-class.md), and some sort of main window object, derived (often indirectly) from [CWnd](../mfc/reference/cwnd-class.md). (Most often, the main window is derived from [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), or [CDialog](../mfc/reference/cdialog-class.md), all of which are derived from `CWnd`.)  
   
- Las aplicaciones que utilizan la arquitectura documento\/vista contienen objetos adicionales.  Los objetos principales son:  
+ Applications that use document/view architecture contain additional objects. The principal objects are:  
   
--   Un objeto application derivado de la clase [CWinApp](../mfc/reference/cwinapp-class.md), como se mencionó anteriormente.  
+-   An application object derived from class [CWinApp](../mfc/reference/cwinapp-class.md), as mentioned before.  
   
--   Uno o más objetos de la clase document derivados de la clase [CDocument](../mfc/reference/cdocument-class.md).  Los objetos de la clase document son responsables de la representación interna de datos manipulando en la vista.  Pueden estar asociados a un archivo de datos.  
+-   One or more document class objects derived from class [CDocument](../mfc/reference/cdocument-class.md). Document class objects are responsible for the internal representation of the data manipulated in the view. They may be associated with a data file.  
   
--   Uno o más objetos de vista derivados de la clase [CView](../mfc/reference/cview-class.md).  Cada vista es una ventana que está asociado a un documento y se asocia a una ventana de marco.  Las vistas muestran y manipulan los datos contenidos en un objeto de clase de documento.  
+-   One or more view objects derived from class [CView](../mfc/reference/cview-class.md). Each view is a window that is attached to a document and associated with a frame window. Views display and manipulate the data contained in a document class object.  
   
- Las aplicaciones de documentos y vistas contienen las ventanas de marco \(derivadas de [CFrameWnd](../mfc/reference/cframewnd-class.md)\) y las plantillas de documento \(derivadas de [CDocTemplate](../mfc/reference/cdoctemplate-class.md)\).  
+ Document/view applications also contain frame windows (derived from [CFrameWnd](../mfc/reference/cframewnd-class.md)) and document templates (derived from [CDocTemplate](../mfc/reference/cdoctemplate-class.md)).  
   
-## Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

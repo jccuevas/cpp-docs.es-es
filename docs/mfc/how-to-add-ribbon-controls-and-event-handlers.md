@@ -1,52 +1,72 @@
 ---
-title: "C&#243;mo: Agregar controles de cinta y controladores de eventos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controladores de eventos, agregar"
-  - "controles de la cinta, agregar"
+title: 'How to: Add Ribbon Controls and Event Handlers | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handlers [MFC], adding
+- ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# C&#243;mo: Agregar controles de cinta y controladores de eventos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 99bd07de331cb9281bffeb39eb78123377fe31b6
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Los controles de la cinta de opciones son elementos, como botones y cuadros combinados, que agrega los paneles.  Los paneles son áreas de la barra de la cinta de opciones que muestran un grupo de controles relacionados.  
+---
+# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>How to: Add Ribbon Controls and Event Handlers
+Ribbon controls are elements, such as buttons and combo boxes, that you add to panels. Panels are areas of the ribbon bar that display a group of related controls.  
   
- En este tema, se abrirá el diseñador de la cinta de opciones, agregue un botón, y después vincula un evento que muestra “Hello World”.  
+ In this topic, you will open the Ribbon Designer, add a button, and then link an event that displays "Hello World".  
   
-### Para abrir el diseñador de la cinta de opciones  
+### <a name="to-open-the-ribbon-designer"></a>To open the Ribbon Designer  
   
-1.  En Visual Studio, en el menú de **Visualización** , haga clic en **vista de recursos**.  
+1.  In Visual Studio, on the **View** menu, click **Resource View**.  
   
-2.  En **vista de recursos**, haga doble clic en el recurso de la cinta de opciones para mostrarla en la superficie de diseño.  
+2.  In **Resource View**, double-click the ribbon resource to display it on the design surface.  
   
-### Para agregar un botón y un controlador de eventos  
+### <a name="to-add-a-button-and-an-event-handler"></a>To add a Button and an Event Handler  
   
-1.  De **Toolbar**, haga clic en **Button** y arrástrelo en un panel en la superficie de diseño.  
+1.  From the **Toolbar**, click **Button** and drag it on to a panel in the design surface.  
   
-2.  Haga clic con el botón secundario en el botón, haga clic en **Agregar controlador de eventos**.  
+2.  Right-click the button, and click **Add Event Handler**.  
   
-3.  En **Asistente para controladores de eventos**, confirme la configuración predeterminada y haga clic en **Agregar y editar**.  Para obtener más información, vea [Asistente para controladores de eventos](../ide/event-handler-wizard.md).  
+3.  In the **Event Handler Wizard**, confirm the default settings and click **Add and Edit**. For more information, see [Event Handler Wizard](../ide/event-handler-wizard.md).  
   
-4.  En el editor de código, agregue el siguiente código en la función de controlador:  
+4.  In the code editor, add the following code into the handler function:  
   
-    ```  
-    MessageBox((LPCTSTR)L"Hello World");  
-    ```  
+ ```  
+    MessageBox((LPCTSTR)L"Hello World");
+
+ ```  
   
-## Vea también  
- [Ejemplo de RibbonGadgets: Aplicación de gadgets de cinta](../top/visual-cpp-samples.md)   
- [Diseñador de la cinta de opciones \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [RibbonGadgets Sample: Ribbon Gadgets Application](../visual-cpp-samples.md)   
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

@@ -1,48 +1,67 @@
 ---
-title: "Manipular el control de informaci&#243;n sobre herramientas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolTipCtrl (clase), manipular atributos de información sobre herramientas"
-  - "información sobre herramientas [C++], atributos"
+title: Manipulating the Tool Tip Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CToolTipCtrl class [MFC], manipulating tool tip attributes
+- tool tips [MFC], attributes
 ms.assetid: 3600afe5-712a-4b56-8456-96e85fe879af
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Manipular el control de informaci&#243;n sobre herramientas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a6f30981d9bacbd9191c1cc70012131c9064b91f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La clase que `CToolTipCtrl` proporciona un grupo de funciones miembro que controla los distintos atributos del objeto de `CToolTipCtrl` y la ventana de información sobre herramientas.  
+---
+# <a name="manipulating-the-tool-tip-control"></a>Manipulating the Tool Tip Control
+Class `CToolTipCtrl` provides a group of member functions that control the various attributes of the `CToolTipCtrl` object and the tool tip window.  
   
- La inicial, el elemento emergente, y duraciones de reshow para ventanas de información sobre herramientas se pueden establecer y recuperar con llamadas a [GetDelayTime](../Topic/CToolTipCtrl::GetDelayTime.md) y a [SetDelayTime](../Topic/CToolTipCtrl::SetDelayTime.md).  
+ The initial, pop-up, and reshow durations for the tool tip windows can be set and retrieved with calls to [GetDelayTime](../mfc/reference/ctooltipctrl-class.md#getdelaytime) and [SetDelayTime](../mfc/reference/ctooltipctrl-class.md#setdelaytime).  
   
- Cambiar el aspecto de las ventanas de información sobre herramientas con las funciones siguientes:  
+ Change the appearance of the tool tip windows with the following functions:  
   
--   [GetMargin](../Topic/CToolTipCtrl::GetMargin.md) y recupera y conjuntos de [SetMargin](../Topic/CToolTipCtrl::SetMargin.md)el ancho entre el borde de la información sobre herramientas y el texto de información sobre herramientas.  
+-   [GetMargin](../mfc/reference/ctooltipctrl-class.md#getmargin) and [SetMargin](../mfc/reference/ctooltipctrl-class.md#setmargin) Retrieves and sets the width between the tool tip border and the tool tip text.  
   
--   [GetMaxTipWidth](../Topic/CToolTipCtrl::GetMaxTipWidth.md) y recupera y conjuntos de [SetMaxTipWidth](../Topic/CToolTipCtrl::SetMaxTipWidth.md)el ancho máximo de la ventana de información sobre herramientas.  
+-   [GetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#getmaxtipwidth) and [SetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#setmaxtipwidth) Retrieves and sets the maximum width of the tool tip window.  
   
--   [GetTipBkColor](../Topic/CToolTipCtrl::GetTipBkColor.md) y recupera y conjuntos de [SetTipBkColor](../Topic/CToolTipCtrl::SetTipBkColor.md)el color de fondo de la ventana de información sobre herramientas.  
+-   [GetTipBkColor](../mfc/reference/ctooltipctrl-class.md#gettipbkcolor) and [SetTipBkColor](../mfc/reference/ctooltipctrl-class.md#settipbkcolor) Retrieves and sets the background color of the tool tip window.  
   
--   [GetTipTextColor](../Topic/CToolTipCtrl::GetTipTextColor.md) y recupera y conjuntos de [SetTipTextColor](../Topic/CToolTipCtrl::SetTipTextColor.md)el color del texto de la ventana de información sobre herramientas.  
+-   [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) and [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) Retrieves and sets the text color of the tool tip window.  
   
- Para que el control de información sobre herramientas se notifique de mensajes importantes, como los mensajes de **WM\_LBUTTONXXX** , debe retransmitir que los mensajes a la información sobre herramientas controlan.  El mejor método para este retransmitir es realizar una llamada a [CToolTipCtrl::RelayEvent](../Topic/CToolTipCtrl::RelayEvent.md), en función de `PreTranslateMessage` de la ventana propietaria.  El ejemplo siguiente se muestra un método posible \(suponiendo que el control de información sobre herramientas se denomina `m_ToolTip`\):  
+ In order for the tool tip control to be notified of important messages, such as **WM_LBUTTONXXX** messages, you must relay the messages to your tool tip control. The best method for this relay is to make a call to [CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent), in the `PreTranslateMessage` function of the owner window. The following example illustrates one possible method (assuming the tool tip control is called `m_ToolTip`):  
   
- [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/CPP/manipulating-the-tool-tip-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]  
   
- Para quitar inmediatamente una ventana de información sobre herramientas, llame a la función miembro de [Pop](../Topic/CToolTipCtrl::Pop.md) .  
+ To immediately remove a tool tip window, call the [Pop](../mfc/reference/ctooltipctrl-class.md#pop) member function.  
   
-## Vea también  
- [Usar CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

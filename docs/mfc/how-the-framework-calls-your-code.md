@@ -1,44 +1,63 @@
 ---
-title: "C&#243;mo el marco llama al c&#243;digo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "eventos específicos de una aplicación [C++]"
-  - "control de comandos, llamar a controladores y código en MFC"
-  - "enrutamiento de comandos, marco de trabajo"
-  - "enrutamiento de comandos, MFC"
-  - "flujo de control [C++], marco de trabajo de MFC y código del usuario"
-  - "eventos [C++], enrutamiento de comandos en MFC"
-  - "eventos [C++], programación orientada a eventos"
-  - "MFC [C++], llamar a código"
-  - "MFC [C++], llamar a código desde"
+title: How the Framework Calls Your Code | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- control flow [MFC], MFC framework and your code
+- events [MFC], command routing in MFC
+- command routing [MFC], framework
+- command handling [MFC], calling handlers and code in MFC
+- events [MFC], event-driven programming
+- MFC, calling code from
+- MFC, calling code
+- application-specific events [MFC]
+- command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# C&#243;mo el marco llama al c&#243;digo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7d43c78de9b61fd09db9c9e46b8517bae81a9fc4
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Es crucial comprender la relación entre el código fuente y el marco de trabajo de MFC.  Cuando la aplicación se ejecuta, la mayor parte del flujo de control reside en el código del marco.  El marco de trabajo administra el bucle de mensajes que recibe mensajes de Windows mientras el usuario elige comandos y modifica datos en una vista.  Los eventos que el marco puede administrar en sí mismo no dependen del código en absoluto.  Por ejemplo, el marco sabe cómo cerrar ventanas y salir de la aplicación en respuesta a los comandos de usuario.  Como controla estas tareas, el marco de trabajo usa los controladores de mensajes y las funciones virtuales de C\+\+ para proporcionar posibilidades de responder a estos eventos también.  El código no es en control, sin embargo; el marco de es.  
+---
+# <a name="how-the-framework-calls-your-code"></a>How the Framework Calls Your Code
+It is crucial to understand the relationship between your source code and the code in the MFC framework. When your application runs, most of the flow of control resides in the framework's code. The framework manages the message loop that gets messages from Windows as the user chooses commands and edits data in a view. Events that the framework can handle by itself do not rely on your code at all. For example, the framework knows how to close windows and how to exit the application in response to user commands. As it handles these tasks, the framework uses message handlers and C++ virtual functions to give you opportunities to respond to these events as well. Your code is not in control, however; the framework is.  
   
- El marco de trabajo llama al código para los eventos específicos de la aplicación.  Por ejemplo, cuando el usuario elige un comando de menú, el marco distribuye el comando a lo largo de una secuencia de objetos de C\+\+: la ventana de la vista actual y el cuadro, el documento asociado a la vista, la plantilla de documento del documento, y el objeto application.  Si uno de estos objetos puede controlar el comando, lo hace, llamando a la función adecuada del controlador de mensajes.  Para cualquier comando concreto, el código denominado puede ser thes o puede ser el marco.  
+ The framework calls your code for application-specific events. For example, when the user chooses a menu command, the framework routes the command along a sequence of C++ objects: the current view and frame window, the document associated with the view, the document's document template, and the application object. If one of these objects can handle the command, it does so, calling the appropriate message-handler function. For any given command, the code called may be yours or it may be the framework's.  
   
- Esta organización es algo familiar a los programadores experimentados con la programación tradicional para Windows o programación controlada por eventos.  
+ This arrangement is somewhat familiar to programmers experienced with traditional programming for Windows or event-driven programming.  
   
- En temas relacionados, se leerá lo que hace como se inicializa y ejecuta la aplicación y después limpia el marco mientras la aplicación finaliza.  También entenderá donde el código escribe ajustes en.  
+ In related topics, you will read what the framework does as it initializes and runs the application and then cleans up as the application terminates. You will also understand where the code you write fits in.  
   
- Para obtener más información, vea [Clase CWinApp: La clase de aplicación](../mfc/cwinapp-the-application-class.md) y [Plantillas de documento y el proceso de Creación de documentos y vistas](../mfc/document-templates-and-the-document-view-creation-process.md).  
+ For more information, see [Class CWinApp: The Application Class](../mfc/cwinapp-the-application-class.md) and [Document Templates and the Document/View Creation Process](../mfc/document-templates-and-the-document-view-creation-process.md).  
   
-## Vea también  
- [Compilar en el marco](../mfc/building-on-the-framework.md)
+## <a name="see-also"></a>See Also  
+ [Building on the Framework](../mfc/building-on-the-framework.md)
+
+

@@ -1,41 +1,60 @@
 ---
-title: "Asignar y desasignar memoria de ventana | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "asignación de memoria, Window (objetos)"
-  - "desasignación de memoria"
-  - "desasignación de memoria, memoria de ventana"
-  - "almacenamiento para objetos de ventana"
-  - "almacenamiento para objetos de ventana, asignar"
-  - "Window (objetos), desasignar memoria de"
+title: Allocating and Deallocating Window Memory | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory allocation, window objects
+- memory deallocation
+- storage for window objects [MFC]
+- memory deallocation, window memory
+- window objects [MFC], deallocating memory for
+- storage for window objects [MFC], allocating
 ms.assetid: 7c962539-8461-4846-b5ca-fe3b15c313dc
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Asignar y desasignar memoria de ventana
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 68f76c8bdd52545881ea09b1e15b18101d6dd653
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-No utilice el operador de C\+\+ **borrar** destruir una ventana o una vista del cuadro.  En su lugar, llame a la función `DestroyWindow`miembro de `CWnd` .  Las ventanas del capítulo, por consiguiente, se deben asignar en el montón con el operador **new**.  Tenga cuidado al asignar las ventanas de marco en el marco de pila o global.  Otras ventanas se deben asignar en el marco de pila siempre que sea posible.  
+---
+# <a name="allocating-and-deallocating-window-memory"></a>Allocating and Deallocating Window Memory
+Do not use the C++ **delete** operator to destroy a frame window or view. Instead, call the `CWnd` member function `DestroyWindow`. Frame windows, therefore, should be allocated on the heap with operator **new**. Be careful when allocating frame windows on the stack frame or globally. Other windows should be allocated on the stack frame whenever possible.  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Crear ventanas](../mfc/creating-windows.md)  
+-   [Creating windows](../mfc/creating-windows.md)  
   
--   [Secuencia de destrucción ventana](../mfc/window-destruction-sequence.md)  
+-   [Window destruction sequence](../mfc/window-destruction-sequence.md)  
   
--   [Desasociar un CWnd del HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
+-   [Detaching a CWnd from its HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
   
-## Vea también  
- [Destruir objetos Window](../mfc/destroying-window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Destroying Window Objects](../mfc/destroying-window-objects.md)
+
+

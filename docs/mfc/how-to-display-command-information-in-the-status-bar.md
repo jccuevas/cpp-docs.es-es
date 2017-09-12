@@ -1,35 +1,54 @@
 ---
-title: "C&#243;mo: Mostrar informaci&#243;n de comandos en la barra de estado | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mostrar estado de comandos"
-  - "mensajes [C++]"
-  - "barras de estado, mostrar información de comandos"
-  - "barras de estado, área del mensaje"
+title: 'How to: Display Command Information in the Status Bar | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- prompts [MFC]
+- displaying command status [MFC]
+- status bars [MFC], message area
+- status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# C&#243;mo: Mostrar informaci&#243;n de comandos en la barra de estado
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ed04870c904c0b2cbe01686282bbfe8b4f1b1cb4
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Al ejecutar el Asistente para aplicaciones para crear la estructura de la aplicación, puede admitir una barra de herramientas y una barra de estado.  Simplemente una opción en el Asistente para aplicaciones MFC admite ambos.  Cuando una barra de estado está presente, la aplicación proporciona automáticamente información útil cuando el usuario mueve el puntero sobre elementos de menús.  La aplicación muestra automáticamente una cadena de solicitud en la barra de estado cuando se resalta el elemento de menú.  Por ejemplo, cuando el usuario mueve el puntero sobre el comando de **Cortado** en el menú de **edición** , la barra de estado puede mostrar los “cortes la selección y la coloca en el portapapeles” en el área de mensajes de la barra de estado.  El marcador ayuda a entender el propósito del elemento de menú.  Esto también funciona cuando el usuario hace clic en un botón de la barra de herramientas.  
+---
+# <a name="how-to-display-command-information-in-the-status-bar"></a>How to: Display Command Information in the Status Bar
+When you run the Application Wizard to create the skeleton of your application, you can support a toolbar and a status bar. Just one option in the Application Wizard supports both. When a status bar is present, the application automatically provides helpful feedback as the user moves the pointer over items on the menus. The application automatically displays a prompt string in the status bar when the menu item is highlighted. For example, when the user moves the pointer over the **Cut** command on the **Edit** menu, the status bar might display "Cuts the selection and puts it on the Clipboard" in the message area of the status bar. The prompt helps the user understand the purpose of the menu item. This also works when the user clicks a toolbar button.  
   
- Puede agregar a esta ayuda de barra de estado definiendo las cadenas de mensajes para los elementos de menú que se agrega al programa.  Para ello, especifique las cadenas de mensajes cuando se modifican las propiedades del elemento en el editor de menús.  Las cadenas que defina se almacenan en el archivo de recursos de la aplicación; tienen los mismos id. que los comandos se explican.  
+ You can add to this status-bar help by defining prompt strings for menu items that you add to the program. To do this, provide the prompt strings when you edit the properties of the menu item in the menu editor. The strings you define are stored in the application resource file; they have the same IDs as the commands they explain.  
   
- De forma predeterminada, el Asistente para aplicaciones agrega `AFX_IDS_IDLEMESSAGE`, el identificador de un mensaje estándar de " listo ", que se muestra cuando el programa está esperando mensajes nuevos.  Si especifica la opción de ayuda contextual en el Asistente para aplicaciones, el mensaje se cambia a “Ayuda For, presione F1”.  
+ By default, the Application Wizard adds `AFX_IDS_IDLEMESSAGE`, the ID for a standard "Ready" message, which is displayed when the program is waiting for new messages. If you specify the Context-Sensitive Help option in the Application Wizard, the message is changed to "For Help, press F1."  
   
-## Vea también  
- [Controlar y asignar mensajes](../mfc/message-handling-and-mapping.md)
+## <a name="see-also"></a>See Also  
+ [Message Handling and Mapping](../mfc/message-handling-and-mapping.md)
+
+

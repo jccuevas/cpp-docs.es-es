@@ -1,52 +1,71 @@
 ---
-title: "Controles y bandas Rebar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bandas, en controles rebar"
-  - "controles rebar, trabajar con bandas en"
+title: Rebar Controls and Bands | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- rebar controls [MFC], working with bands in
+- bands, in rebar controls
 ms.assetid: b647e7a5-9ea7-48b1-8e5f-096d104748f0
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Controles y bandas Rebar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 17449db3f089f882e8314befe51ac69991e5d46a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-El propósito principal de un control rebar es actuar como contenedor para ventanas secundarias, controles comunes de diálogo, menús, barras de herramientas, etc.  Esta contención admitida por el concepto de una “banda.” Cada banda rebar puede contener cualquier combinación de una barra de agarrador, un mapa de bits, de una etiqueta de texto, y una ventana secundaria.  
+---
+# <a name="rebar-controls-and-bands"></a>Rebar Controls and Bands
+The main purpose of a rebar control is to act as a container for child windows, common dialog controls, menus, toolbars, and so on. This containment is supported by the concept of a "band." Each rebar band can contain any combination of a gripper bar, a bitmap, a text label, and a child window.  
   
- La clase `CReBarCtrl` tiene muchas funciones miembro que puede utilizar para recuperar, y manipular, información para una banda específica del rebar:  
+ Class `CReBarCtrl` has many member functions that you can use to retrieve, and manipulate, information for a specific rebar band:  
   
--   [GetBandCount](../Topic/CReBarCtrl::GetBandCount.md) recupera el número de bandas actuales en el control rebar.  
+-   [GetBandCount](../mfc/reference/crebarctrl-class.md#getbandcount) Retrieves the number of current bands in the rebar control.  
   
--   [GetBandInfo](../Topic/CReBarCtrl::GetBandInfo.md) inicializa una estructura de **REBARBANDINFO** con información de banda especificada.  Hay una función miembro correspondiente de [SetBandInfo](../Topic/CReBarCtrl::SetBandInfo.md) .  
+-   [GetBandInfo](../mfc/reference/crebarctrl-class.md#getbandinfo) Initializes a **REBARBANDINFO** structure with information from the specified band. There is a corresponding [SetBandInfo](../mfc/reference/crebarctrl-class.md#setbandinfo) member function.  
   
--   [GetRect](../Topic/CReBarCtrl::GetRect.md) recupera el rectángulo delimitador de una banda especificada.  
+-   [GetRect](../mfc/reference/crebarctrl-class.md#getrect) Retrieves the bounding rectangle of a specified band.  
   
--   [GetRowCount](../Topic/CReBarCtrl::GetRowCount.md) recupera el número de filas de la banda en un control rebar.  
+-   [GetRowCount](../mfc/reference/crebarctrl-class.md#getrowcount) Retrieves the number of band rows in a rebar control.  
   
--   [IDToIndex](../Topic/CReBarCtrl::IDToIndex.md) recupera el índice de una banda especificada.  
+-   [IDToIndex](../mfc/reference/crebarctrl-class.md#idtoindex) Retrieves the index of a specified band.  
   
--   [GetBandBorders](../Topic/CReBarCtrl::GetBandBorders.md) recupera los bordes de una banda.  
+-   [GetBandBorders](../mfc/reference/crebarctrl-class.md#getbandborders) Retrieves the borders of a band.  
   
- Además de manipulación, varias funciones miembro son que permitan que se opera en bandas específicas rebar.  
+ In addition to manipulation, several member functions are provided that allow you to operate on specific rebar bands.  
   
- [InsertBand](../Topic/CReBarCtrl::InsertBand.md) y [DeleteBand](../Topic/CReBarCtrl::DeleteBand.md) agregan y quitan bandas rebar.  [MinimizeBand](../Topic/CReBarCtrl::MinimizeBand.md) y [MaximizeBand](../Topic/CReBarCtrl::MaximizeBand.md) afectan al tamaño actual de una banda concreta rebar.  [MoveBand](../Topic/CReBarCtrl::MoveBand.md) cambia el índice de una banda concreta rebar.  [ShowBand](../Topic/CReBarCtrl::ShowBand.md) muestra u oculta una banda rebar de usuario.  
+ [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) and [DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband) add and remove rebar bands. [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband) and [MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband) affect the current size of a specific rebar band. [MoveBand](../mfc/reference/crebarctrl-class.md#moveband) changes the index of a specific rebar band. [ShowBand](../mfc/reference/crebarctrl-class.md#showband) shows or hides a rebar band from the user.  
   
- El ejemplo siguiente muestra cómo agregar una banda de la barra de herramientas \(`m_wndToolBar`\) a un control existente rebar \(`m_wndReBar`\).  Banda se describe inicializando la estructura de `rbi` y después llamar a la función miembro de `InsertBand` :  
+ The following example demonstrates adding a toolbar band (`m_wndToolBar`) to an existing rebar control (`m_wndReBar`). The band is described by initializing the `rbi` structure and then calling the `InsertBand` member function:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/CPP/rebar-controls-and-bands_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]  
   
-## Vea también  
- [Usar CReBarCtrl](../mfc/using-crebarctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

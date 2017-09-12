@@ -1,64 +1,83 @@
 ---
-title: "Informaci&#243;n de Internet por tarea | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, aplicaciones de Internet"
+title: Internet Information by Task | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, Internet applications
 ms.assetid: da078bf5-53c3-4167-b1ef-509b5a544ad9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Informaci&#243;n de Internet por tarea
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8e847bcb7852a0338b07d26759fba9448e564bfd
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Las tareas mostradas en este tema se ordenan según la tarea que desea realizar.  
+---
+# <a name="internet-information-by-task"></a>Internet Information by Task
+The tasks listed in this topic are sorted based on the task you want to accomplish.  
   
- Las siguientes categorías de tareas se incluyen en este tema:  
+ The following categories of tasks are listed in this topic:  
   
--   [Controles ActiveX, documentos y tareas del moniker asincrónico](#_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks)  
+-   [ActiveX Controls, Documents and Asynchronous Moniker Tasks](#_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks)  
   
--   [Tareas de WinInet](#_core_wininet_tasks)  
+-   [WinInet Tasks](#_core_wininet_tasks)  
   
-## ¿Qué desea hacer?  
+## <a name="what-do-you-want-to-do"></a>What do you want to do  
   
-###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> Controles ActiveX, documentos y tareas del moniker asincrónico  
+###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> ActiveX Controls, Documents and Asynchronous Moniker Tasks  
   
--   [Obtenga información sobre documentos activos](../mfc/active-documents-on-the-internet.md)  
+-   [Learn about Active documents](../mfc/active-documents-on-the-internet.md)  
   
--   [Obtenga información sobre monikeres asincrónicos](../mfc/asynchronous-monikers-on-the-internet.md)  
+-   [Learn about Asynchronous Monikers](../mfc/asynchronous-monikers-on-the-internet.md)  
   
--   [Obtenga información sobre los controles ActiveX en el contexto de internet](../mfc/activex-controls-on-the-internet.md)  
+-   [Learn about ActiveX controls in the Internet context](../mfc/activex-controls-on-the-internet.md)  
   
--   [Obtenga información sobre documentos activos en el contexto de internet](../mfc/active-documents-on-the-internet.md)  
+-   [Learn about Active documents in the Internet context](../mfc/active-documents-on-the-internet.md)  
   
--   [Optimizar un control ActiveX](../mfc/mfc-activex-controls-optimization.md)  
+-   [Optimize an ActiveX control](../mfc/mfc-activex-controls-optimization.md)  
   
--   [Cree archivos CAB firmados para Controles MFC y ATL](http://msdn.microsoft.com/es-es/14e50724-2505-4258-ae6b-326b706de409)  
+-   [Create Signed CAB Files for MFC and ATL Controls](http://msdn.microsoft.com/en-us/14e50724-2505-4258-ae6b-326b706de409)  
   
-###  <a name="_core_wininet_tasks"></a> Tareas de WinInet  
+###  <a name="_core_wininet_tasks"></a> WinInet Tasks  
   
--   [Obtenga información sobre WinInet, las funciones de la API Win32 para el acceso a Internet](../mfc/wininet-basics.md)  
+-   [Learn about WinInet, the Win32 API functions for Internet access](../mfc/wininet-basics.md)  
   
--   [Revisión qué está implicada en la programación con WinInet](../mfc/win32-internet-extensions-wininet.md)  
+-   [Review what's involved with WinInet programming](../mfc/win32-internet-extensions-wininet.md)  
   
--   [Escriba una aplicación cliente de internet, mediante las clases de MFC WinInet](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)  
+-   [Write an Internet client application, using MFC WinInet classes](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)  
   
--   [Escriba una aplicación de cliente FTP](../mfc/steps-in-a-typical-ftp-client-application.md)  
+-   [Write an FTP client application](../mfc/steps-in-a-typical-ftp-client-application.md)  
   
--   [Escriba una aplicación de cliente HTTP](../mfc/steps-in-a-typical-http-client-application.md)  
+-   [Write an HTTP client application](../mfc/steps-in-a-typical-http-client-application.md)  
   
--   [Escriba una aplicación cliente de Gopher](../mfc/steps-in-a-typical-gopher-client-application.md)  
+-   [Write a Gopher client application](../mfc/steps-in-a-typical-gopher-client-application.md)  
   
-## Vea también  
- [Fundamentos de programación para Internet de MFC](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

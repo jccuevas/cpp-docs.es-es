@@ -1,55 +1,74 @@
 ---
-title: "Usar listas de im&#225;genes con controles de encabezado | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl (clase), listas de imágenes"
-  - "controles del encabezado, listas de imágenes"
-  - "listas de imágenes [C++], controles del encabezado"
+title: Using Image Lists with Header Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- header controls [MFC], image lists
+- CHeaderCtrl class [MFC], image lists
+- image lists [MFC], header controls
 ms.assetid: d5e9b310-6278-406c-909c-eefa09549a47
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Usar listas de im&#225;genes con controles de encabezado
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f2d7b7e07a4e5723f93311dcbf79f4dad3e2ef4b
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Los elementos de encabezado tienen la capacidad de mostrar una imagen dentro de un elemento de encabezado.  Esta imagen, almacenada en una lista asociada de la imagen, es 16 x 16 píxeles y tiene las mismas características que las imágenes de icono utilizada en un control de vista de lista.  Para implementar este comportamiento correctamente, debe crear e inicializar la lista de imágenes, asociar la lista con el control de encabezado, y modifique los atributos del elemento de encabezado que mostrará la imagen.  
+---
+# <a name="using-image-lists-with-header-controls"></a>Using Image Lists with Header Controls
+Header items have the ability to display an image within a header item. This image, stored in an associated image list, is 16 x 16 pixels and has the same characteristics as the icon images used in a list view control. In order to implement this behavior successfully, you must first create and initialize the image list, associate the list with the header control, and then modify the attributes of the header item that will display the image.  
   
- El procedimiento siguiente muestra los detalles, mediante un puntero a un control de encabezado \(`m_pHdrCtrl`\) y un puntero a una lista de imágenes \(`m_pHdrImages`\).  
+ The following procedure illustrates the details, using a pointer to a header control (`m_pHdrCtrl`) and a pointer to an image list (`m_pHdrImages`).  
   
-### Para mostrar una imagen en un elemento de encabezado  
+### <a name="to-display-an-image-in-a-header-item"></a>To display an image in a header item  
   
-1.  Construye una nueva imagen lista \(o utilice un objeto existente de la lista de imágenes\) mediante el constructor de [CImageList](../mfc/reference/cimagelist-class.md) , almacenando el puntero resultante.  
+1.  Construct a new image list (or use an existing image list object) using the [CImageList](../mfc/reference/cimagelist-class.md) constructor, storing the resultant pointer.  
   
-2.  Inicializa el nuevo objeto de la lista de imágenes llamando a [CImageList::Create](../Topic/CImageList::Create.md).  El código siguiente es un ejemplo de esta llamada.  
+2.  Initialize the new image list object by calling [CImageList::Create](../mfc/reference/cimagelist-class.md#create). The following code is one example of this call.  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/CPP/using-image-lists-with-header-controls_1.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]  
   
-3.  Agregue imágenes para cada elemento de encabezado.  El código siguiente agrega dos imágenes predefinidas.  
+3.  Add the images for each header item. The following code adds two predefined images.  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/CPP/using-image-lists-with-header-controls_2.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]  
   
-4.  Asociar la lista de imágenes con el control de encabezado con una llamada a [CHeaderCtrl::SetImageList](../Topic/CHeaderCtrl::SetImageList.md).  
+4.  Associate the image list with the header control with a call to [CHeaderCtrl::SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist).  
   
-5.  Modifique el elemento de encabezado para mostrar una imagen de la lista asociada de la imagen.  El ejemplo siguiente se asigna la primera imagen, de `m_phdrImages`, al primer elemento de encabezado, `m_pHdrCtrl`.  
+5.  Modify the header item to display an image from the associated image list. The following example assigns the first image, from `m_phdrImages`, to the first header item, `m_pHdrCtrl`.  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/CPP/using-image-lists-with-header-controls_3.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]  
   
- Para obtener información detallada sobre los valores de parámetros utilizados, vea [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)pertinente.  
+ For detailed information on the parameter values used, consult the pertinent [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md).  
   
 > [!NOTE]
->  Es posible tener varios controles utilizando la misma lista de imágenes.  Por ejemplo, en un control estándar de la vista de lista, puede haber una lista de imágenes \(16 x 16 imágenes de píxeles\) utilizada por tanto la pequeña vista de iconos de un control de vista de lista y los elementos de encabezado de la vista de lista controlan.  
+>  It is possible to have multiple controls using the same image list. For instance, in a standard list view control, there could be an image list (of 16 x 16 pixel images) used by both the small icon view of a list view control and the header items of the list view control.  
   
-## Vea también  
- [Usar CHeaderCtrl](../mfc/using-cheaderctrl.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)
+
+

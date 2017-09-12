@@ -1,45 +1,64 @@
 ---
-title: "Secuencia de operaciones para crear controles ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles ActiveX [C++], crear"
-  - "controles ActiveX en MFC [C++], crear"
-  - "controles OLE [C++], MFC"
-  - "secuencia [C++]"
-  - "secuencia [C++], para crear controles ActiveX"
+title: Sequence of Operations for Creating ActiveX Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], creating
+- ActiveX controls [MFC], creating
+- sequence [MFC], for creating ActiveX controls
+- OLE controls [MFC], MFC
+- sequence [MFC]
 ms.assetid: 7d868c53-a0af-4ef6-a89c-e1c03c583a53
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Secuencia de operaciones para crear controles ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4c293e5add988ef1b2dbe1ab976b2ac1c04d08d1
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La tabla siguiente muestra el rol y el rol de marco en crear controles ActiveX \(anteriormente conocido como controles OLE\).  
+---
+# <a name="sequence-of-operations-for-creating-activex-controls"></a>Sequence of Operations for Creating ActiveX Controls
+The following table shows your role and the framework's role in creating ActiveX controls (formerly known as OLE controls).  
   
-### Crear Controles ActiveX  
+### <a name="creating-activex-controls"></a>Creating ActiveX Controls  
   
-|Tarea|Hace|Hace el marco|  
-|-----------|----------|-------------------|  
-|Cree un marco del control ActiveX.|Ejecute el asistente para controles ActiveX MFC para crear el control.  Especifique las opciones que desee en las páginas opciones.  Las opciones incluyen el tipo y el nombre del control en el proyecto, la autorización, crear subclases, y un método de cuadro Acerca de.|El asistente para controles ActiveX MFC crea los archivos de un control ActiveX con funcionalidad básica, incluidos los archivos de código fuente de la aplicación, el control, y la página de propiedades o páginas; un archivo de recursos; un archivo de proyecto; y otros, bien todo a las especificaciones.|  
-|Vea lo que proporcionan el control y el asistente para controles ActiveX sin agregar una línea del propio código.|Compile el control ActiveX y pruébelo con Internet Explorer o [Ejemplo TSTCON](../top/visual-cpp-samples.md).|El control actual tiene la capacidad de cambiar de tamaño y de mover.  También tiene un método de **Cuadro Acerca de** \(si se elige\) que puede ser invocado.|  
-|Implemente los métodos y propiedades de control.|Implemente los métodos y propiedades CONTROL\- específicos agregando funciones miembro para proporcionar una interfaz expuesta a los datos del control.  Agregue las variables miembro para contener las estructuras de datos y utilizar controladores de eventos para desencadenar eventos cuando se determina.|El marco ha definido un mapa para admitir los eventos del control, propiedades, y los métodos, permitiéndole para centrarse en cómo se implementan las propiedades y métodos.  La propiedad predeterminada es visible y se proporciona un método predeterminado del cuadro acerca de.|  
-|Crear la página de propiedades o las páginas del control.|Usar los editores de recursos de Visual C\+\+ para editar visualmente la interfaz de la página de propiedades del control:<br /><br /> -   Crear páginas de propiedades adicionales.<br />-   Crear y editar los mapas de bits, iconos, y los cursores.<br /><br /> También puede probar la página de propiedades en el editor de cuadros de diálogo.|El archivo de recursos predeterminado creado por el Asistente para aplicaciones proporciona MFC muchos de los recursos que necesita.  Visual C\+\+ permite editar recursos existentes y agregar nuevos recursos con facilidad y visualmente.|  
-|Pruebe los eventos, los métodos, y las propiedades del control.|Recompile el contenedor de prueba del control y de uso para probar que los controladores correctamente.|Puede llamar a los métodos de control y manipular sus propiedades a través de la interfaz de la página de propiedades o a través del contenedor de prueba.  Además, contenedor de prueba de uso a los eventos de seguimiento desencadenados de control y de las notificaciones recibidos por el contenedor del control.|  
+|Task|You do|The framework does|  
+|----------|------------|------------------------|  
+|Create an ActiveX control framework.|Run the MFC ActiveX Control Wizard to create your control. Specify the options you want in the options pages. Options include the type and name of the control in the project, licensing, subclassing, and an About Box method.|The MFC ActiveX Control Wizard creates the files for an ActiveX control with basic functionality, including source files for your application, control, and property page or pages; a resource file; a project file; and others, all tailored to your specifications.|  
+|See what the control and the ActiveX Control Wizard offer without adding a line of your own code.|Build the ActiveX control and test it with Internet Explorer or the [TSTCON sample](../visual-cpp-samples.md).|The running control has the ability to be resized and moved. It also has an **About Box** method (if chosen) that can be invoked.|  
+|Implement the control's methods and properties.|Implement your control-specific methods and properties by adding member functions to provide an exposed interface to the control's data. Add member variables to hold data structures and use event handlers to fire events when you determine.|The framework has already defined a map to support the control's events, properties, and methods, leaving you to focus on how the properties and methods are implemented. The default property page is viewable and a default About Box method is supplied.|  
+|Construct the control's property page or pages.|Use the Visual C++ resource editors to visually edit the control's property page interface:<br /><br /> -   Create additional property pages.<br />-   Create and edit bitmaps, icons, and cursors.<br /><br /> You can also test the property page(s) in the dialog editor.|The default resource file created by the MFC Application Wizard supplies many of the resources you need. Visual C++ lets you edit existing resources and add new resources easily and visually.|  
+|Test the control's events, methods, and properties.|Rebuild the control and use Test Container to test that your handlers work correctly.|You can invoke the control's methods and manipulate its properties through the property page interface or through Test Container. In addition, use Test Container to track events fired from the control and notifications received by the control's container.|  
   
-## Vea también  
- [Compilar en el marco](../mfc/building-on-the-framework.md)   
- [Secuencia de operaciones para compilar aplicaciones MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
- [Secuencia de operaciones para crear aplicaciones OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
- [Secuencia de operaciones para crear aplicaciones de base de datos](../mfc/sequence-of-operations-for-creating-database-applications.md)
+## <a name="see-also"></a>See Also  
+ [Building on the Framework](../mfc/building-on-the-framework.md)   
+ [Sequence of Operations for Building MFC Applications](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
+ [Sequence of Operations for Creating OLE Applications](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
+ [Sequence of Operations for Creating Database Applications](../mfc/sequence-of-operations-for-creating-database-applications.md)
+
+

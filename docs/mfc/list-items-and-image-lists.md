@@ -1,45 +1,64 @@
 ---
-title: "Elementos de lista y listas de im&#225;genes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList (clase), y elementos de lista"
-  - "CListCtrl (clase), listas de imágenes"
-  - "listas de imágenes [C++], elementos de lista"
-  - "elementos de lista, listas de imágenes"
+title: List Items and Image Lists | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImageList class [MFC], and list items
+- image lists [MFC], list items
+- CListCtrl class [MFC], image lists
+- list items [MFC], image lists
 ms.assetid: 317d095f-f978-47da-acb6-7bfe7dd3bc69
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Elementos de lista y listas de im&#225;genes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: de7e5fa9537d4cec3fed7c891fba9a7c4c11c4d2
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Un “elemento” en un control de lista \([CListCtrl](../mfc/reference/clistctrl-class.md)\) consta del icono, la etiqueta y, posiblemente otra información \(en “subelementos”\).  
+---
+# <a name="list-items-and-image-lists"></a>List Items and Image Lists
+An "item" in a list control ([CListCtrl](../mfc/reference/clistctrl-class.md)) consists of an icon, a label, and possibly other information (in "subitems").  
   
- Los iconos de los elementos del control de lista se contienen en listas de imágenes.  Una lista de imágenes contiene iconos del mismo tamaño utilizados en vista de iconos.  Segundo, opcional, lista de imagen contiene versiones más pequeñas de los mismos iconos para utilizarlo en otras vistas del control.  Una tercera lista opcional contiene imágenes de “estado”, como casillas, para la presentación delante de los iconos pequeños en determinadas vistas.  Una cuarta lista opcional contiene imágenes que se muestran en los elementos individuales del encabezado del control de lista.  
+ The icons for list control items are contained in image lists. One image list contains full-sized icons used in icon view. A second, optional, image list contains smaller versions of the same icons for use in other views of the control. A third optional list contains "state" images, such as check boxes, for display in front of the small icons in certain views. A fourth optional list contains images that are displayed in individual header items of the list control.  
   
 > [!NOTE]
->  Si un control de vista de lista se crea con el estilo de `LVS_SHAREIMAGELISTS` , debe destruir explícitamente las listas de imágenes cuando dejan en uso.  Especifique este estilo si asigna las mismas listas de imágenes a varios controles de vista de lista; si no, más de un control podría intentar destruir la misma lista de imágenes.  
+>  If a list view control is created with the `LVS_SHAREIMAGELISTS` style, you are responsible for destroying the image lists when they are no longer in use. Specify this style if you assign the same image lists to multiple list view controls; otherwise, more than one control might try to destroy the same image list.  
   
- Para obtener más información sobre los elementos de lista, vea [Listas de imágenes de la vista de lista](http://msdn.microsoft.com/library/windows/desktop/bb774736) y [Elementos y subelementos](http://msdn.microsoft.com/library/windows/desktop/bb774736) en [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  Vea también la clase [CImageList](../mfc/reference/cimagelist-class.md) en *la referencia de MFC* y [Mediante CImageList](../mfc/using-cimagelist.md) en esta familia de casos.  
+ For more information about list items, see [List View Image Lists](http://msdn.microsoft.com/library/windows/desktop/bb774736) and [Items and Subitems](http://msdn.microsoft.com/library/windows/desktop/bb774736) in the Windows SDK. Also see class [CImageList](../mfc/reference/cimagelist-class.md) in the *MFC Reference* and [Using CImageList](../mfc/using-cimagelist.md) in this family of articles.  
   
- Para crear un control de lista, necesita proporcionar listas de imágenes que se utilizarán al insertar nuevos elementos en la lista.  El ejemplo siguiente se muestra este procedimiento, donde es puntero `m_pImagelist` de `CImageList` escrito y `m_listctrl` es un miembro de datos de `CListCtrl` .  
+ To create a list control, you need to supply image lists to be used when you insert new items into the list. The following example demonstrates this procedure, where `m_pImagelist` is a pointer of type `CImageList` and `m_listctrl` is a `CListCtrl` data member.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#19](../mfc/codesnippet/CPP/list-items-and-image-lists_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#19](../mfc/codesnippet/cpp/list-items-and-image-lists_1.cpp)]  
   
- Sin embargo, si no piensa mostrar iconos en la vista de lista o el control de lista, no necesita listas de imágenes.  
+ However, if you don't plan to display icons in your list view or list control, you don't need image lists.  
   
-## Vea también  
- [Usar CListCtrl](../mfc/using-clistctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

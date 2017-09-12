@@ -1,74 +1,92 @@
 ---
-title: "Barras de control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CControlBar (clase), barras de control MFC"
-  - "CDialogBar (clase), barras de control"
-  - "barras de comandos, tipos de"
-  - "barras de control [C++]"
-  - "barras de control [C++], tipos de"
-  - "CStatusBar (clase), barras de control"
-  - "CToolBar (clase), barras de control"
-  - "barras de cuadro de diálogo, barras de control"
-  - "MFC, barras de control"
-  - "barras de estado, barras de control"
-  - "barras de herramientas [C++], barras de control"
+title: Control Bars | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- command bars [MFC], types of
+- toolbars [MFC], control bars
+- control bars [MFC]
+- MFC, control bars
+- control bars [MFC], types of
+- CDialogBar class [MFC], control bars
+- status bars [MFC], control bars
+- CControlBar class [MFC], MFC control bars
+- dialog bars [MFC], control bars
+- CToolBar class [MFC], control bars
+- CStatusBar class [MFC], control bars
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Barras de control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8a85a895af5ccc7d66855e27cbe37aa3809affd2
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La “barra de control” es el nombre general para las barras de herramientas, barras de estado, y las barras de cuadro de diálogo.  Las clases MFC `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, y **CReBar** derivan de la clase [CControlBar](../mfc/reference/ccontrolbar-class.md), que implementa la funcionalidad común.  
+---
+# <a name="control-bars"></a>Control Bars
+"Control bar" is the general name for toolbars, status bars, and dialog bars. MFC classes `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, and **CReBar** derive from class [CControlBar](../mfc/reference/ccontrolbar-class.md), which implements their common functionality.  
   
- Las barras de control son ventanas que muestran filas de controles con los que los usuarios puedan seleccionar opciones, ejecutar comandos, u obtener información del programa.  Los tipos de barras de controles incluyen barras de herramientas, barras de cuadro de diálogo, y barras de estado.  
+ Control bars are windows that display rows of controls with which users can select options, execute commands, or obtain program information. Types of control bars include toolbars, dialog bars, and status bars.  
   
--   Barras de herramientas, en la clase [CToolBar](../mfc/reference/ctoolbar-class.md)  
+-   Toolbars, in class [CToolBar](../mfc/reference/ctoolbar-class.md)  
   
--   Barras de estado, en la clase [CStatusBar](../mfc/reference/cstatusbar-class.md)  
+-   Status bars, in class [CStatusBar](../mfc/reference/cstatusbar-class.md)  
   
--   Barras de cuadro de diálogo, en la clase [CDialogBar](../mfc/reference/cdialogbar-class.md)  
+-   Dialog bars, in class [CDialogBar](../mfc/reference/cdialogbar-class.md)  
   
--   Rebars, en la clase [CReBar](../mfc/reference/crebar-class.md)  
+-   Rebars, in class [CReBar](../mfc/reference/crebar-class.md)  
   
 > [!IMPORTANT]
->  A partir de la versión 4.0 de MFC, barras de herramientas, barras de estado, y la información sobre herramientas se implementan utilizando la funcionalidad del sistema implementada en el comctl32.dll en lugar de concreto anterior de implementación a MFC.  En la versión 6.0 de MFC, **CReBar**, que también incluye funcionalidad de comctl32.dll, se agregó.  
+>  As of MFC version 4.0, toolbars, status bars, and tool tips are implemented using system functionality implemented in the comctl32.dll instead of the previous implementation specific to MFC. In MFC version 6.0, **CReBar**, which also wraps comctl32.dll functionality, was added.  
   
- Las introducciones abreviadas a los tipos de barra de control siguen.  Para obtener más información, vea los vínculos siguientes.  
+ Brief introductions to the control-bar types follow. For further information, see the links below.  
   
-## Barras de controles  
- Las barras de control mejoran considerablemente la utilidad de un programa proporcionando acciones rápidos, un solo paso de comando.  La clase `CControlBar` proporciona funcionalidad común de todas las barras de herramientas, barras de estado, y barras de cuadro de diálogo.  `CControlBar` proporciona la funcionalidad para colocar la barra de control en la ventana de marco principal.  Dado que una barra de control es normalmente una ventana secundaria de una ventana de marco principal, es un “relacionado” a la vista del cliente o el cliente MDI de la ventana de marco.  Un objeto de barra de control utiliza información acerca del rectángulo de cliente de la ventana primaria para colocarse.  A continuación modifica el rectángulo restante de la cliente\- ventana del elemento primario de modo que la ventana vista de cliente o del cliente MDI rellena el resto de la ventana del cliente.  
-  
-> [!NOTE]
->  Si un botón en la barra de control no tiene **COMANDO** o un controlador de **UPDATE\_COMMAND\_UI** , el marco automáticamente deshabilita el botón.  
-  
-## Barras de herramientas  
- Una barra de herramientas es una barra de controles que muestra una fila de botones de mapas de bits que realicen comandos.  Presionar un botón de la barra de herramientas equivale a elegir un elemento de menú; llama al mismo controlador asignado a un elemento de menú si ese elemento de menú tiene el mismo identificador que el botón de la barra de herramientas.  Los botones pueden configurarse para que aparezcan y se comporten como los pulsadores, botones de radio, o casillas.  Una barra de herramientas se alinea normalmente con la parte superior de una ventana de marco, pero una barra de herramientas de MFC puede “acoplar” a cualquier lado de la ventana primaria o flota en su propia ventana de mini\- cuadro.  Una barra de herramientas también puede “flota” y puede cambiar su tamaño y arrastrándolos con el mouse.  Una barra de herramientas también puede mostrar información sobre herramientas cuando el usuario mueve el mouse sobre los botones de la barra de herramientas.  Una información sobre herramientas es una ventana emergente minúsculas que describe brevemente el propósito del botón.  
+## <a name="control-bars"></a>Control Bars  
+ Control bars greatly enhance a program's usability by providing quick, one-step command actions. Class `CControlBar` provides the common functionality of all toolbars, status bars, and dialog bars. `CControlBar` provides the functionality for positioning the control bar in its parent frame window. Because a control bar is usually a child window of a parent frame window, it is a "sibling" to the client view or MDI client of the frame window. A control-bar object uses information about its parent window's client rectangle to position itself. Then it alters the parent's remaining client-window rectangle so that the client view or MDI client window fills the rest of the client window.  
   
 > [!NOTE]
->  A partir de la versión 4.0 de MFC, la clase [CToolBar](../mfc/reference/ctoolbar-class.md) utiliza el control común de la barra de herramientas de Windows.  `CToolBar` contiene [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md).  Barras de herramientas anteriores todavía se admiten, sin embargo.  Vea el artículo [barras de herramientas](../mfc/mfc-toolbar-implementation.md).  
+>  If a button on the control bar doesn't have a **COMMAND** or **UPDATE_COMMAND_UI** handler, the framework automatically disables the button.  
   
-## Barras de estado  
- Una barra de estado es una barra de control que contiene los paneles texto\- generados, o “marcadores”. Los paneles de salida se utilizan como líneas de mensajes como indicadores de estado.  Los ejemplos de la línea de mensajes incluyen las líneas de AYUDA\- mensaje de comando que explican brevemente el menú o el comando seleccionado de la barra de herramientas del panel de la izquierda de la barra de estado predeterminada creada por el Asistente para aplicaciones MFC.  Los ejemplos del indicador de estado incluyen BLOQ DESPL, BLOQ NUM, y otras claves.  Las barras de estado se alinean normalmente con la parte inferior de una ventana de marco.  Vea la clase [CStatusBar](../mfc/reference/cstatusbar-class.md) y la clase [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md).  
+## <a name="toolbars"></a>Toolbars  
+ A toolbar is a control bar that displays a row of bitmapped buttons that carry out commands. Pressing a toolbar button is equivalent to choosing a menu item; it calls the same handler mapped to a menu item if that menu item has the same ID as the toolbar button. The buttons can be configured to appear and behave as pushbuttons, radio buttons, or check boxes. A toolbar is usually aligned to the top of a frame window, but an MFC toolbar can "dock" to any side of its parent window or float in its own mini-frame window. A toolbar can also "float" and you can change its size and drag it with a mouse. A toolbar can also display tool tips as the user moves the mouse over the toolbar's buttons. A tool tip is a tiny popup window that briefly describes the button's purpose.  
   
-## Barras de cuadro de diálogo  
- Una barra de cuadro diálogo es una barra de controles, basándose en un recurso de la diálogo\- plantilla, con la funcionalidad de un cuadro de diálogo no modal.  Las barras de cuadro de diálogo pueden contener Windows, personalizada, o controles ActiveX.  Como en un cuadro de diálogo, el usuario puede llegar entre los controles.  Las barras de cuadro de diálogo se pueden alinear a la parte superior, inferior, izquierdo, o el derecho de una ventana de marco y están también pueden desacoplar en su propia ventana de marco.  Vea la clase [CDialogBar](../mfc/reference/cdialogbar-class.md).  
+> [!NOTE]
+>  As of MFC version 4.0, class [CToolBar](../mfc/reference/ctoolbar-class.md) uses the Windows toolbar common control. A `CToolBar` contains a [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md). Older toolbars are still supported, however. See the article [ToolBars](../mfc/mfc-toolbar-implementation.md).  
   
-## Rebars  
- [rebar](../mfc/using-crebarctrl.md) es una barra de control que proporciona el acoplamiento, diseño, estado, y la información de persistencia del rebar controla.  Un objeto rebar puede contener una variedad de ventanas secundarias, normalmente otros controles, incluidos cuadros de edición, barras de herramientas, y los cuadros de lista.  Un objeto rebar puede mostrar sus ventanas secundarias sobre un mapa de bits especificado.  Puede cambiar el tamaño automáticamente o manualmente haciendo clic o arrastrando su barra de.  Vea la clase [CReBar](../mfc/reference/crebar-class.md).  
+## <a name="status-bars"></a>Status Bars  
+ A status bar is a control bar that contains text-output panes, or "indicators." The output panes are commonly used as message lines and as status indicators. Message line examples include the command help-message lines that briefly explain the selected menu or toolbar command in the leftmost pane of the default status bar created by the MFC Application Wizard. Status indicator examples include the SCROLL LOCK, NUM LOCK, and other keys. Status bars are usually aligned to the bottom of a frame window. See class [CStatusBar](../mfc/reference/cstatusbar-class.md) and class [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md).  
   
-## Vea también  
- [Elementos de la interfaz de usuario](../mfc/user-interface-elements-mfc.md)
+## <a name="dialog-bars"></a>Dialog Bars  
+ A dialog bar is a control bar, based on a dialog-template resource, with the functionality of a modeless dialog box. Dialog bars can contain Windows, custom, or ActiveX controls. As in a dialog box, the user can tab among the controls. Dialog bars can be aligned to the top, bottom, left, or right side of a frame window and they can also be floated in their own frame window. See class [CDialogBar](../mfc/reference/cdialogbar-class.md).  
+  
+## <a name="rebars"></a>Rebars  
+ A [rebar](../mfc/using-crebarctrl.md) is a control bar that provides docking, layout, state, and persistence information for rebar controls. A rebar object can contain a variety of child windows, usually other controls, including edit boxes, toolbars, and list boxes. A rebar object can display its child windows over a specified bitmap. It can be automatically or manually resized by clicking or dragging its gripper bar. See class [CReBar](../mfc/reference/crebar-class.md).  
+  
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

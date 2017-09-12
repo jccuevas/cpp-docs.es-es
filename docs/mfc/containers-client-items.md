@@ -1,42 +1,60 @@
 ---
-title: "Contenedores: Elementos de cliente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "elementos de cliente y contenedores OLE"
-  - "contenedores OLE, elementos de cliente"
+title: 'Containers: Client Items | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE containers [MFC], client items
+- client items and OLE containers
 ms.assetid: 231528b5-0744-4f83-8897-083bf55ed087
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Contenedores: Elementos de cliente
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5be6e1261c3592c074112c7cb99d2b8ceb43dea7
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En este artículo se explica qué son los elementos de cliente y de qué clases debe derivar la aplicación sus elementos de cliente.  
+---
+# <a name="containers-client-items"></a>Containers: Client Items
+This article explains what client items are and from what classes your application should derive its client items.  
   
- Los elementos de cliente son elementos de datos que pertenecen a otra aplicación contenidos en o se hace referencia en el documento OLE de aplicación contenedora.  Se insertan los elementos de cliente cuyo datos se contiene dentro del documento; se vinculan los cuyo datos se almacena en otra ubicación hace referencia el documento contenedor.  
+ Client items are data items belonging to another application that are either contained in or referenced by an OLE container application's document. Client items whose data is contained within the document are embedded; those whose data is stored in another location referenced by the container document are linked.  
   
- La clase del documento en una aplicación OLE se deriva de la clase [COleDocument](../mfc/reference/coledocument-class.md) en lugar de **CDocument**.  La clase de `COleDocument` hereda de **CDocument** toda la funcionalidad necesaria para utilizar la arquitectura documento\/vista en la que se basan las aplicaciones MFC.  `COleDocument` también define una interfaz que trate un documento como una colección de objetos de `CDocItem` .  Varias funciones miembro de `COleDocument` se proporcionan para agregar, recuperar, y eliminar elementos de esa colección.  
+ The document class in an OLE application is derived from the class [COleDocument](../mfc/reference/coledocument-class.md) rather than from **CDocument**. The `COleDocument` class inherits from **CDocument** all the functionality necessary for using the document/view architecture on which MFC applications are based. `COleDocument` also defines an interface that treats a document as a collection of `CDocItem` objects. Several `COleDocument` member functions are provided for adding, retrieving, and deleting elements of that collection.  
   
- Cada aplicación contenedora debe derivar por lo menos un tipo de `COleClientItem`.  Los objetos de esta clase representan los elementos, insertamos o vinculados, en el documento OLE.  Estos objetos existen mientras dure el documento que los contiene, a menos que se eliminen del documento.  
+ Every container application should derive at least one class from `COleClientItem`. Objects of this class represent items, embedded or linked, in the OLE document. These objects exist for the life of the document containing them, unless they are deleted from the document.  
   
- `CDocItem` es la clase base para `COleClientItem` y `COleServerItem`.  Los objetos de clases derivadas de estos dos actúan como intermediarios entre el elemento OLE y las aplicaciones cliente y servidor, respectivamente.  Cada vez que un nuevo elemento OLE se agrega al documento, el marco de trabajo de MFC agrega un nuevo objeto de `COleClientItem`de aplicaciones cliente \- clase derivada a la colección de objetos de `CDocItem` .  
+ `CDocItem` is the base class for `COleClientItem` and `COleServerItem`. Objects of classes derived from these two act as intermediaries between the OLE item and the client and server applications, respectively. Each time a new OLE item is added to the document, the MFC framework adds a new object of your client application's `COleClientItem`-derived class to the document's collection of `CDocItem` objects.  
   
-## Vea también  
- [Contenedores](../mfc/containers.md)   
- [Contenedores: Archivos compuestos](../mfc/containers-compound-files.md)   
- [Contenedores: Problemas de la interfaz de usuario](../mfc/containers-user-interface-issues.md)   
- [Contenedores: Características avanzadas](../mfc/containers-advanced-features.md)   
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Containers: Compound Files](../mfc/containers-compound-files.md)   
+ [Containers: User-Interface Issues](../mfc/containers-user-interface-issues.md)   
+ [Containers: Advanced Features](../mfc/containers-advanced-features.md)   
  [COleClientItem Class](../mfc/reference/coleclientitem-class.md)   
  [COleServerItem Class](../mfc/reference/coleserveritem-class.md)
+

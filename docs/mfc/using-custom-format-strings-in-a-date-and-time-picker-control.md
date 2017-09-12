@@ -1,45 +1,64 @@
 ---
-title: "Usar cadenas de formato personalizado en un control de selector de fecha y hora | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDateTimeCtrl (clase), estilos de presentación"
-  - "DateTimePicker (control) [MFC]"
-  - "DateTimePicker (control) [MFC], estilos de presentación"
+title: Using Custom Format Strings in a Date and Time Picker Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDateTimeCtrl class [MFC], display styles
+- DateTimePicker control [MFC], display styles
+- DateTimePicker control [MFC]
 ms.assetid: 7d577f03-6ca0-4597-9093-50b78f304719
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Usar cadenas de formato personalizado en un control de selector de fecha y hora
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9832b2b5316e00dc67487f5fcc117c75cc6f2f9b
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-De forma predeterminada, los controles de selector de fecha y hora proporcionan tres tipos de formato \(cada formato correspondiente a un estilo único\) para mostrar la fecha u hora actuales:  
+---
+# <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>Using Custom Format Strings in a Date and Time Picker Control
+By default, date and time picker controls provide three format types (each format corresponding to a unique style) for displaying the current date or time:  
   
--   **DTS\_LONGDATEFORMAT** muestra la fecha en formato largo, generar generó como “miércoles 3 de enero de 2000”.  
+-   **DTS_LONGDATEFORMAT** Displays the date in long format, producing output like "Wednesday, January 3, 2000".  
   
--   **DTS\_SHORTDATEFORMAT** muestra la fecha en formato corto, generar generó como “1\/3\/00 ".  
+-   **DTS_SHORTDATEFORMAT** Displays the date in short format, producing output like "1/3/00".  
   
--   **DTS\_TIMEFORMAT** muestra la hora en el formato largo, generar generó como “5:31: 42 P.M.”.  
+-   **DTS_TIMEFORMAT** Displays the time in long format, producing output like "5:31:42 PM".  
   
- Sin embargo, puede personalizar la apariencia de la fecha o la hora mediante una cadena de formato personalizado.  Esta cadena personalizada se compone de caracteres de formato existentes, caracteres de nonformat, o una combinación de ambos.  Una vez generada la cadena personalizada, haga una llamada a [CDateTimeCtrl::SetFormat](../Topic/CDateTimeCtrl::SetFormat.md) que pasa en la cadena personalizada.  El control selector de fecha y hora a continuación mostrará el valor actual utilizando la cadena de formato personalizado.  
+ However, you can customize the appearance of the date or time by using a custom format string. This custom string is made up of either existing format characters, nonformat characters, or a combination of both. Once the custom string is built, make a call to [CDateTimeCtrl::SetFormat](../mfc/reference/cdatetimectrl-class.md#setformat) passing in your custom string. The date and time picker control will then display the current value using your custom format string.  
   
- El código de ejemplo siguiente \(donde es el objeto `m_dtPicker` de `CDateTimeCtrl` \) muestra una posible solución:  
+ The following example code (where `m_dtPicker` is the `CDateTimeCtrl` object) demonstrates one possible solution:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#7](../mfc/codesnippet/CPP/using-custom-format-strings-in-a-date-and-time-picker-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#7](../mfc/codesnippet/cpp/using-custom-format-strings-in-a-date-and-time-picker-control_1.cpp)]  
   
- Además de las cadenas de formato personalizado, controles también [campos de devolución de llamada](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)admiten el selector de fecha y hora.  
+ In addition to custom format strings, date and time picker controls also support [callback fields](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).  
   
-## Vea también  
- [Usar CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

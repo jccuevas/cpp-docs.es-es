@@ -1,51 +1,71 @@
 ---
-title: "Configuraci&#243;n de la aplicaci&#243;n, Asistente para controles ActiveX MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.ctl.appset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Asistente para controles ActiveX MFC, configuración de la aplicación"
+title: Application Settings, MFC ActiveX Control Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.ctl.appset
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Configuraci&#243;n de la aplicaci&#243;n, Asistente para controles ActiveX MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1e4fb7cc0e9c07d1f1996531bfc4c5b2c05146a2
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Use esta página del Asistente para controles ActiveX MFC para diseñar y agregar características básicas a un nuevo proyecto de control ActiveX MFC. Esta configuración se aplica a la aplicación en sí, pero no a las características o los elementos específicos del control.  
+---
+# <a name="application-settings-mfc-activex-control-wizard"></a>Application Settings, MFC ActiveX Control Wizard
+Use this page of the MFC ActiveX Control Wizard to design and add basic features to a new MFC ActiveX project. These settings apply to the application itself and not to any specific feature or element of the control.  
   
- **Licencia en tiempo de ejecución**  
- Seleccione esta opción para generar un archivo de licencia de usuario para distribuir con el control. La licencia es un archivo de texto *nombre\_proyecto*.lic. Este archivo debe estar en el mismo directorio que el archivo DLL del control para permitir la creación de una instancia del control en un entorno en tiempo de diseño. Normalmente distribuirá este archivo con el control, pero los clientes no lo distribuirán.  
+ **Run-time license**  
+ Select this option to generate a user license file to distribute with the control. The license is a text file, *projname*.lic. This file must be in the same directory as the control's DLL to allow an instance of the control to be created in a design-time environment. You usually distribute this file with your control, but your customers do not distribute it.  
   
- **Generar archivos de ayuda**  
- Seleccione esta opción para generar archivos de ayuda auxiliares y configurar el proyecto para incluir ayuda del control. Un proyecto predeterminado, creado sin esta opción, solo genera un cuadro **Acerca de** que se muestra cuando el usuario hace clic con el botón derecho en el control, presiona F1 o hace clic en **Ayuda** en el contenedor del control.  
+ **Generate help files**  
+ Select this option to generate stubbed help files and configure the project to include help for your control. A default project, created without this option, generates only an **About** box that is displayed when the user right clicks the control, uses F1, or clicks **Help** on the control's container.  
   
 > [!NOTE]
->  La forma de presentar la ayuda depende de cómo interactúa el control con su contenedor. Si quiere incluir la ayuda con el contenedor, debe controlar los mensajes emitidos entre el control y el contenedor para mostrar la ayuda de forma adecuada.  
+>  How help is displayed depends on how your control interacts with its container. If you include help with your container, you must handle messages between the control and the container to display the help appropriately.  
   
- Al generar archivos de ayuda a través del asistente, el proyecto incluye lo siguiente:  
+ When you generate help files using the wizard, your project includes the following:  
   
--   El archivo .vcxproj contiene código para compilar y configurar el archivo de ayuda cuando se compile el proyecto.  
+-   The file .vcxproj contains code to build and configure the help file when the project is built.  
   
--   El archivo *nombre\_proyecto\_pág\_prop*.cpp incluye una función [SetHelpInfo](../Topic/COlePropertyPage::SetHelpInfo.md) en el constructor.  
+-   The file *projnamePropPage*.cpp file includes a [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) function in the constructor.  
   
--   El archivo nombre\_proyecto.hpj, es el archivo de proyecto de ayuda que el compilador de ayuda usa para crear el archivo de ayuda del control ActiveX. El archivo .hpj es un archivo de texto que contiene la información sobre cómo compilar el archivo de ayuda y las rutas de acceso a los archivos adicionales \(por ejemplo, mapas de bits\) que incluye el archivo de ayuda.  
+-   The file projname.hpj, is the help project file used by the help compiler to create the ActiveX control's help file. The .hpj file is a text file containing the information about building your help file and the paths to the additional files (for example, bitmaps) the help file includes.  
   
--   El proyecto incluye el directorio HLP, que contendrá los archivos de mapa de bits de ayuda del proyecto y el archivo de temas de ayuda \(*nombre\_proyecto*.rtf\). Este archivo de temas de ayuda contiene los temas de ayuda estándar para las propiedades, los eventos y los métodos admitidos por muchos controles ActiveX comunes. Puede editar el archivo .rtf para agregar o quitar temas de ayuda específicos.  
+-   The project includes the HLP directory to contain the project help bitmap files and the help topic file (*projname*.rtf). This help topic file contains the standard help topics for the common properties, events, and methods supported by many ActiveX controls. You can edit the .rtf file to add or remove specific help topics.  
   
-## Vea también  
- [Asistente para controles ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)   
- [Nombres del control, Asistente para controles ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)   
- [Configuración del control, Asistente para controles ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md)   
+ [Control Names, MFC ActiveX Control Wizard](../../mfc/reference/control-names-mfc-activex-control-wizard.md)   
+ [Control Settings, MFC ActiveX Control Wizard](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
+
+

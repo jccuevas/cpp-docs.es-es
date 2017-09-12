@@ -1,90 +1,116 @@
 ---
-title: "TN059: Usar macros de conversi&#243;n MBCS/Unicode de MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.mbcs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conversión de macros [C++]"
-  - "convertir Unicode"
-  - "macros [C++], conversión de macros MBCS"
-  - "MBCS [C++], conversión de macros"
-  - "MFCANS32.DLL"
-  - "TN059"
-  - "Unicode [C++], conversión de macros"
-  - "Unicode [C++], interfaces OLE"
+title: 'TN059: Using MFC MBCS-Unicode Conversion Macros | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.mbcs
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFCANS32.DLL
+- Unicode [MFC], conversion macros
+- Unicode [MFC], OLE interfaces
+- conversion macros [MFC]
+- converting Unicode
+- MBCS [MFC], conversion macros
+- macros [MFC], MBCS conversion macros
+- TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN059: Usar macros de conversi&#243;n MBCS/Unicode de MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4e52b3133566cb0a65861ad556fc4df2a8efe4f5
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059: Using MFC MBCS/Unicode Conversion Macros
 > [!NOTE]
->  La nota técnica siguiente no se ha actualizado desde que se incluyó por primera vez en la documentación en línea.  Como resultado, algunos procedimientos y temas podrían estar obsoletos o ser incorrectos.  Para obtener información más reciente, se recomienda buscar el tema de interés en el índice de la documentación en línea.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Esta nota describe cómo utilizar macros para la conversión de mbcs\/unicode, que se definen en AFXPRIV.H.  Estas macros son más útiles si la aplicación trata directamente de API OLE o por alguna razón, es a menudo convertir Unicode y MBCS.  
+ This note describes how to use the macros for MBCS/Unicode conversion, which are defined in AFXPRIV.H. These macros are most useful if your application deals directly with the OLE API or for some reason, often needs to convert between Unicode and MBCS.  
   
-## Información general  
- En MFC 3.x, se utilizó un especial DLL \(MF CANS32 .DLL\) automáticamente para convertir Unicode y MBCS cuando las interfaces VIEJAS fueron llamadas.  Esta DLL es un nivel casi transparente que permitía que las aplicaciones OLE fueran escritas como si las API y las interfaces de OLE fueran MBCS, aunque siempre son Unicode \(excepto en Macintosh\).  Aunque este nivel era aplicaciones adecuadas y permitidas para ser portado rápidamente de Win16 a Win32 \(MFC, Microsoft Word, Microsoft Excel, y VBA, son solo algunas de las aplicaciones de Microsoft que utilizan esta tecnología\), tenía un acierto a veces de rendimiento significativo.  Por esta razón, MFC 4.x no utiliza esta DLL y en su lugar no habla directamente con interfaces de Unicode OLE.  Para ello, MFC debe convertir a Unicode a MBCS al realizar una llamada a una interfaz OLE, y necesita a menudo convertir a MBCS de Unicode al implementar una interfaz OLE.  Para administrar esto eficaz y fácilmente, varias macros se crearon para crear esta conversión más fácil.  
+## <a name="overview"></a>Overview  
+ In MFC 3.x, a special DLL was used (MFCANS32.DLL) to automatically convert between Unicode and MBCS when OLE interfaces were called. This DLL was an almost transparent layer that allowed OLE applications to be written as if the OLE APIs and interfaces were MBCS, even though they are always Unicode (except on the Macintosh). While this layer was convenient and allowed applications to be quickly ported from Win16 to Win32 (MFC, Microsoft Word, Microsoft Excel, and VBA, are just some of the Microsoft applications that used this technology), it had a sometimes significant performance hit. For this reason, MFC 4.x does not use this DLL and instead talks directly to the Unicode OLE interfaces. To do this, MFC needs to convert to Unicode to MBCS when making a call to an OLE interface, and often needs to convert to MBCS from Unicode when implementing an OLE interface. In order to handle this efficiently and easily, a number of macros were created to make this conversion easier.  
   
- Uno de los obstáculos mayores de crear para ese conjunto de macros es asignación de memoria.  Dado que las cadenas no pueden ser en contexto convertido, nueva memoria para contener los resultados convierten debe ser asignada.  Esto podría haber realizado con el código siguiente:  
+ One of the biggest hurdles of creating such a set of macros is memory allocation. Because the strings cannot be converted in place, new memory to hold the converted results must be allocated. This could have been done with code similar to the following:  
   
 ```  
 // we want to convert an MBCS string in lpszA  
-int nLen = MultiByteToWideChar(CP_ACP, 0,lpszA, -1, NULL, NULL);  
+int nLen = MultiByteToWideChar(CP_ACP,
+    0,
+    lpszA, -1,
+    NULL,
+    NULL);
+
 LPWSTR lpszW = new WCHAR[nLen];  
-MultiByteToWideChar(CP_ACP, 0,   
-   lpszA, -1, lpszW, nLen);  
+MultiByteToWideChar(CP_ACP,
+    0,   
+    lpszA, -1,
+    lpszW,
+    nLen);
+
 // use it to call OLE here  
-pI->SomeFunctionThatNeedsUnicode(lpszW);  
+pI->SomeFunctionThatNeedsUnicode(lpszW);
+
 // free the string  
 delete[] lpszW;  
 ```  
   
- Este enfoque como varios problemas.  El mayor problema es que es mucho código a escribir, a probar, y depuración.  Algo que era una llamada de función simple, es mucho más complejo ahora.  Además, hay una sobrecarga significativa en tiempo de ejecución de esta manera.  Memoria tiene que ser asignada en el montón y ser por cada vez que se realiza una conversión.  Finalmente, el código anterior necesitaría tener `#ifdefs` adecuado agregado para las compilaciones de Unicode y Macintosh \(que no requieren esta conversión lugar\).  
+ This approach as a number of problems. The main problem is that it is a lot of code to write, test, and debug. Something that was a simple function call, is now much more complex. In addition, there is a significant runtime overhead in doing so. Memory has to be allocated on the heap and freed each time a conversion is done. Finally, the code above would need to have appropriate `#ifdefs` added for Unicode and Macintosh builds (which don't require this conversion to take place).  
   
- La solución que subimos con es crear algunas macros que 1\) la máscara la diferencia entre las distintas plataformas, y 2\) el uso un esquema de asignación de memoria eficaz, y 3\) son fáciles incrustar en código fuente existente.  A continuación se muestra un ejemplo de una de las definiciones:  
+ The solution we came up with is to create some macros which 1) mask the difference between the various platforms, and 2) use an efficient memory allocation scheme, and 3) are easy to insert into the existing source code. Here is an example of one of the definitions:  
   
 ```  
 #define A2W(lpa) (\  
-    ((LPCSTR)lpa == NULL) ? NULL : (\  
-          _convert = (strnlen(lpa)+1),\  
-        AfxA2WHelper((LPWSTR) alloca(_convert*2),   
-      lpa, _convert)\  
-    )\  
-)  
+ ((LPCSTR)lpa == NULL) NULL : (\  
+    _convert = (strnlen(lpa)+1),\  
+    AfxA2WHelper((LPWSTR) alloca(_convert*2),   
+    lpa,
+    _convert)\)\)  
 ```  
   
- Utilizando esta macro en lugar del código anterior y cosas sea mucho más simple:  
+ Using this macro instead of the code above and things are much simpler:  
   
 ```  
 // use it to call OLE here  
 USES_CONVERSION;  
-pI->SomeFunctionThatNeedsUnicode(T2OLE(lpszA));  
+pI->SomeFunctionThatNeedsUnicode(T2OLE(lpszA));
 ```  
   
- Hay llamadas adicionales donde es necesaria la conversión, pero el uso macros es sencilla y eficaz.  
+ There are extra calls where conversion is necessary, but using the macros is simple and effective.  
   
- La implementación de cada macro utiliza la función de \_alloca\(\) para asignar memoria del montón en lugar de la pila.  Asignar memoria de la pila es mucho más rápido que asignando memoria en la pila, y memoria automáticamente se libera cuando se sale de la función.  Además, las macros evitar llamar a **MultiByteToWideChar** \(o **WideCharToMultiByte**\) más de una vez.  Esto se hace asignando un poco más de memoria necesaria.  Sabemos que un MBC convertirá en al menos un **WCHAR** y que para cada **WCHAR** tendremos un máximo de dos bytes de MBC.  Asignando un poco más que lo necesario, pero siempre lo suficientemente controlar la conversión se evita la llamada de la segunda llamada segunda a la función de conversión.  La llamada a la aplicación auxiliar que la función **AfxA2Whelper** reduce el número de argumento inserta que se debe hacer para realizar la conversión \(esto da lugar a un código más pequeño, que si denominado **MultiByteToWideChar** directamente\).  
+ The implementation of each macro uses the _alloca() function to allocate memory from the stack instead of the heap. Allocating memory from the stack is much faster than allocating memory on the heap, and the memory is automatically freed when the function is exited. In addition, the macros avoid calling **MultiByteToWideChar** (or **WideCharToMultiByte**) more than one time. This is done by allocating a little bit more memory than is necessary. We know that an MBC will convert into at most one **WCHAR** and that for each **WCHAR** we will have a maximum of two MBC bytes. By allocating a little more than necessary, but always enough to handle the conversion the second call second call to the conversion function is avoided. The call to the helper function **AfxA2Whelper** reduces the number of argument pushes that must be done in order to perform the conversion (this results in smaller code, than if it called **MultiByteToWideChar** directly).  
   
- Para que las macros tienen espacio para almacenar una longitud temporal, es necesario declarar una variable local denominada el \_convert que hace esto en cada función que use las macros de conversión.  Esto se hace invocando la macro de **USES\_CONVERSION** como se explica anteriormente en el ejemplo.  
+ In order to for the macros to have space to store the a temporary length, it is necessary to declare a local variable called _convert that does this in each function that uses the conversion macros. This is done by invoking the **USES_CONVERSION** macro as seen above in the example.  
   
- Hay dos macros genéricas de conversión y macros específicas VIEJAS.  Describen a estos dos conjuntos diferentes macros a continuación.  Todas las macros residen en AFXPRIV.H.  
+ There are both generic conversion macros and OLE specific macros. These two different macro sets are discussed below. All of the macros reside in AFXPRIV.H.  
   
-## Macros genéricas de conversión  
- Las macros genéricas de conversión forman el mecanismo subyacente.  El ejemplo y la implementación macros mostrados en la sección anterior, A2W, es una como macro “genérica”.  No se relaciona con OLE específicamente.  Muestran el conjunto de macros genéricas a continuación:  
+## <a name="generic-conversion-macros"></a>Generic Conversion Macros  
+ The generic conversion macros form the underlying mechanism. The macro example and implementation shown in the previous section, A2W, is one such "generic" macro. It is not related to OLE specifically. The set of generic macros is listed below:  
   
 ```  
 A2CW      (LPCSTR) -> (LPCWSTR)  
@@ -93,12 +119,12 @@ W2CA      (LPCWSTR) -> (LPCSTR)
 W2A      (LPCWSTR) -> (LPSTR)  
 ```  
   
- Además de realizar conversiones de texto, también hay macros y funciones auxiliares para convertir `TEXTMETRIC`, `DEVMODE`, `BSTR`, y las cadenas asignadas OLE.  Estas macros están fuera del ámbito de este análisis – hace referencia a AFXPRIV.H para obtener más información sobre estas macros.  
+ Besides doing text conversions, there are also macros and helper functions for converting `TEXTMETRIC`, `DEVMODE`, `BSTR`, and OLE allocated strings. These macros are beyond the scope of this discussion - refer to AFXPRIV.H for more information on those macros.  
   
-## Macros VIEJAS de conversión  
- Las macros VIEJAS de conversión están diseñados específicamente para administrar las funciones que cuentan con caracteres de **OLESTR** .  Si examina los encabezados OLE, observará muchas referencias a **LPCOLESTR** y a **OLECHAR**.  Estos tipos se utilizan para hacer referencia al tipo de caracteres utilizados en interfaces VIEJAS de forma que no es específica de la plataforma.  Mapas de**OLECHAR** a `char` en plataformas de Win16 y Macintosh y a **WCHAR** en Win32.  
+## <a name="ole-conversion-macros"></a>OLE Conversion Macros  
+ The OLE conversion macros are designed specifically for handling functions that expect **OLESTR** characters. If you examine the OLE headers, you will see many references to **LPCOLESTR** and **OLECHAR**. These types are used to refer to the type of characters used in OLE interfaces in a way that is not specific to the platform. **OLECHAR** maps to `char` in Win16 and Macintosh platforms and **WCHAR** in Win32.  
   
- Para conservar el número de directivas de **\#ifdef** en el código MFC a un mínimo tenemos una macro similar para cada conversión participe donde OLE cadenas.  Las macros siguientes se utilizan con frecuencia:  
+ In order to keep the number of **#ifdef** directives in the MFC code to a minimum we have a similar macro for each conversion that where OLE strings are involved. The following macros are the most commonly used:  
   
 ```  
 T2COLE   (LPCTSTR) -> (LPCOLESTR)  
@@ -107,78 +133,91 @@ OLE2CT   (LPCOLESTR) -> (LPCTSTR)
 OLE2T   (LPCOLESTR) -> (LPCSTR)  
 ```  
   
- Una vez más hay macros similares para hacer `TEXTMETRIC`, `DEVMODE`, `BSTR`, y las cadenas asignadas OLE.  Hace referencia a AFXPRIV.H para obtener más información.  
+ Again, there are similar macros for doing `TEXTMETRIC`, `DEVMODE`, `BSTR`, and OLE allocated strings. Refer to AFXPRIV.H for more information.  
   
-## Otras consideraciones  
- No use las macros en un bucle ajustado.  Por ejemplo, no desea escribir la clase siguiente de código:  
+## <a name="other-considerations"></a>Other Considerations  
+ Do not use the macros in a tight loop. For example, you do not want to write the following kind of code:  
   
 ```  
 void BadIterateCode(LPCTSTR lpsz)  
 {  
-   USES_CONVERSION;  
-   for (int ii = 0; ii < 10000; ii++)  
-      pI->SomeMethod(ii, T2COLE(lpsz));  
+    USES_CONVERSION; 
+    for (int ii = 0; ii <10000; ii++)  
+    pI->SomeMethod(ii, T2COLE(lpsz));
+
 }  
 ```  
   
- En el código anterior puede dar lugar a asignar megabytes de memoria en la pila dependiendo de qué son el contenido de la cadena `lpsz` \!  También lleva tiempo para convertir la cadena en cada iteración del bucle.  En su lugar, mueva estas conversiones constantes del bucle:  
+ The code above could result in allocating megabytes of memory on the stack depending on what the contents of the string `lpsz` is! It also takes time to convert the string for each iteration of the loop. Instead, move such constant conversions out of the loop:  
   
 ```  
 void MuchBetterIterateCode(LPCTSTR lpsz)  
 {  
-   USES_CONVERSION;  
-   LPCOLESTR lpszT = T2COLE(lpsz);  
-   for (int ii = 0; ii < 10000; ii++)  
-      pI->SomeMethod(ii, lpszT);  
+    USES_CONVERSION; 
+    LPCOLESTR lpszT = T2COLE(lpsz);
+
+    for (int ii = 0; ii <10000; ii++)  
+    pI->SomeMethod(ii, lpszT);
+
 }  
 ```  
   
- Si la cadena no es una constante, entonces encapsula la llamada al método en una función.  Esto permitirá al búfer de conversión es liberado cada vez.  Por ejemplo:  
+ If the string is not constant, then encapsulate the method call into a function. This will allow the conversion buffer to be freed each time. For example:  
   
 ```  
 void CallSomeMethod(int ii, LPCTSTR lpsz)  
 {  
-   USES_CONVERSION;  
-   pI->SomeMethod(ii, T2COLE(lpsz));  
+    USES_CONVERSION; 
+    pI->SomeMethod(ii, T2COLE(lpsz));
+
 }  
-  
+ 
 void MuchBetterIterateCode2(LPCTSTR* lpszArray)  
 {  
-   for (int ii = 0; ii < 10000; ii++)  
-      CallSomeMethod(ii, lpszArray[ii]);  
+    for (int ii = 0; ii <10000; ii++)  
+    CallSomeMethod(ii, lpszArray[ii]);
+
 }  
 ```  
   
- Nunca devuelve el resultado de una de las macros, a menos que el valor devuelto implica crear una copia de los datos antes de volver.  Por ejemplo, este código es incorrecta:  
+ Never return the result of one of the macros, unless the return value implies making a copy of the data before the return. For example, this code is bad:  
   
 ```  
 LPTSTR BadConvert(ISomeInterface* pI)  
 {  
-   USES_CONVERSION;  
-   LPOLESTR lpsz = NULL;  
-   pI->GetFileName(&lpsz);  
-   LPTSTR lpszT = OLE2T(lpsz);  
-   CoMemFree(lpsz);  
-   return lpszT; // bad! returning alloca memory  
+    USES_CONVERSION; 
+    LPOLESTR lpsz = NULL;  
+    pI->GetFileName(&lpsz);
+
+ LPTSTR lpszT = OLE2T(lpsz);
+
+    CoMemFree(lpsz);
+
+ return lpszT; // bad! returning alloca memory  
 }  
 ```  
   
- El código anterior podría corregir cambiando el valor devuelto algo que copia el valor:  
+ The code above could be fixed by changing the return value to something that copies the value:  
   
 ```  
 CString BetterConvert(ISomeInterface* pI)  
 {  
-   USES_CONVERSION;  
-   LPOLESTR lpsz = NULL;  
-   pI->GetFileName(&lpsz);  
-   LPTSTR lpszT = OLE2T(lpsz);  
-   CoMemFree(lpsz);  
-   return lpszT; // CString makes copy  
+    USES_CONVERSION; 
+    LPOLESTR lpsz = NULL;  
+    pI->GetFileName(&lpsz);
+
+ LPTSTR lpszT = OLE2T(lpsz);
+
+    CoMemFree(lpsz);
+
+ return lpszT; // CString makes copy  
 }  
 ```  
   
- Las macros son fáciles de utilizar y fáciles de incrustar en código, pero como puede indicar de las advertencias anterior, debe tener cuidado al utilizarlas.  
+ The macros are easy to use and easy to insert into your code, but as you can tell from the caveats above, you need to be careful when using them.  
   
-## Vea también  
- [Notas técnicas por número](../mfc/technical-notes-by-number.md)   
- [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+
