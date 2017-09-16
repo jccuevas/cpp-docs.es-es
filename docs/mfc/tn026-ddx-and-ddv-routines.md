@@ -1,243 +1,286 @@
 ---
-title: "TN026: Rutinas DDX y DDV | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DDX"
-  - "DDV"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DDV (validación de datos de cuadro de diálogo), procedimientos"
-  - "DDX (intercambio de datos de cuadros de diálogo), procedimientos"
-  - "TN026"
+title: 'TN026: DDX and DDV Routines | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DDX
+- DDV
+dev_langs:
+- C++
+helpviewer_keywords:
+- DDX (dialog data exchange), procedures
+- TN026
+- DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN026: Rutinas DDX y DDV
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3e12612a13fd24f4a19ba0c1950b651088896a72
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn026-ddx-and-ddv-routines"></a>TN026: DDX and DDV Routines
 > [!NOTE]
->  La nota técnica siguiente no se ha actualizado desde que se incluyó por primera vez en la documentación en línea.  Como resultado, algunos procedimientos y temas podrían estar obsoletos o ser incorrectos.  Para obtener información más reciente, se recomienda buscar el tema de interés en el índice de la documentación en línea.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Esta nota describe el diálogo arquitectura de \(DDV\) de validación de datos de intercambio de datos \(DDX\) y de cuadro de diálogo.  También describe cómo escribe un procedimiento de DDX\_ o de DDV\_ y cómo extender ClassWizard para utilizar las rutinas.  
+ This note describes the dialog data exchange (DDX) and dialog data validation (DDV) architecture. It also describes how you write a DDX_ or DDV_ procedure and how you can extend ClassWizard to use your routines.  
   
-## Información general de diálogo Data Exchange  
- Todas las funciones de datos de cuadro de diálogo se hace con el código de C\+\+.  No hay recursos especiales o macros mágicas.  El núcleo del mecanismo es una función virtual que se invalida en cada clase de diálogo que haga el diálogo de intercambio y validación.  Se encuentra siempre en este formulario:  
+## <a name="overview-of-dialog-data-exchange"></a>Overview of Dialog Data Exchange  
+ All dialog data functions are done with C++ code. There are no special resources or magic macros. The heart of the mechanism is a virtual function that is overridden in every dialog class that does dialog data exchange and validation. It is always found in this form:  
   
 ```  
 void CMyDialog::DoDataExchange(CDataExchange* pDX)  
 {  
-    CDialog::DoDataExchange(pDX);    // call base class  
-  
-    //{{AFX_DATA_MAP(CMyDialog)  
-        <data_exchange_function_call>  
-        <data_validation_function_call>  
-    //}}AFX_DATA_MAP  
+    CDialog::DoDataExchange(pDX);
+*// call base class  
+ *//{{AFX_DATA_MAP(CMyDialog)  
+ <data_exchange_function_call>  
+ <data_validation_function_call> *//}}AFX_DATA_MAP  
 }  
 ```  
   
- Los comentarios especiales de AFX de formato permiten que ClassWizard busque y editar el código en esta función.  El código que no es compatible con ClassWizard debe colocarse fuera de los comentarios especiales de formato.  
+ The special format AFX comments allow ClassWizard to locate and edit the code within this function. Code that is not compatible with ClassWizard should be placed outside of the special format comments.  
   
- En el ejemplo anterior, \<el data\_exchange\_function\_call\> está en el formulario:  
-  
-```  
-DDX_Custom(pDX, nIDC, field);  
-```  
-  
- y \<el data\_validation\_function\_call\> es opcional y se encuentra en el formulario:  
+ In the above example, <data_exchange_function_call> is in the form:  
   
 ```  
-DDV_Custom(pDX, field, ...);  
+DDX_Custom(pDX,
+    nIDC,
+    field);
 ```  
   
- Más de un par de DDX\_\/DDV\_ se puede incluir en cada función de `DoDataExchange` .  
+ and <data_validation_function_call> is optional and is in the form:  
   
- Vea “afxdd\_.h” para una lista de todas las rutinas de intercambio de datos de cuadro de diálogo y de rutinas de validación de datos de diálogo proporcionadas MFC.  
+```  
+DDV_Custom(pDX,
+    field, ...);
+```  
   
- Los datos del diálogo es simplemente que: datos de miembros en la clase de **CMyDialog** .  No se almacena en un struct o nada similar.  
+ More than one DDX_/DDV_ pair may be included in each `DoDataExchange` function.  
   
-## Notas  
- Aunque denominemos este “datos de diálogo”, todas las características disponibles en cualquier clase derivada de `CWnd` y no se limitan solo los diálogos.  
+ See 'afxdd_.h' for a list of all the dialog data exchange routines and dialog data validation routines provided with MFC.  
   
- Los valores iniciales de datos se establecen en el constructor estándar de C\+\+, normalmente en un bloque con `//{{AFX_DATA_INIT` y comentarios de `//}}AFX_DATA_INIT` .  
+ Dialog data is just that: member data in the **CMyDialog** class. It is not stored in a struct or anything similar.  
   
- `CWnd::UpdateData` es la operación que realiza la inicialización y el control de errores alrededor de la llamada a `DoDataExchange`.  
+## <a name="notes"></a>Notes  
+ Although we call this "dialog data," all features are available in any class derived from `CWnd` and are not limited to just dialogs.  
   
- Puede llamar a `CWnd::UpdateData` en cualquier momento para realizar de intercambio y validación.  De forma predeterminada `UpdateData`\(TRUE\) se llama al controlador predeterminado y `UpdateData`\(FALSE\) de `CDialog::OnOK` se denomina en `CDialog::OnInitDialog`predeterminado.  
+ Initial values of data are set in the standard C++ constructor, usually in a block with `//{{AFX_DATA_INIT` and `//}}AFX_DATA_INIT` comments.  
   
- La rutina de DDV\_ debe seguir inmediatamente a la rutina de DDX\_ para ese *campo*.  
+ `CWnd::UpdateData` is the operation that does the initialization and error handling around the call to `DoDataExchange`.  
   
-## ¿Cómo funciona?  
- No necesita comprender lo siguiente para utilizar datos de diálogo.  Sin embargo, entender el funcionamiento de ésta en segundo plano le ayudará a escribir el propio procedimiento de intercambio o de validación.  
+ You can call `CWnd::UpdateData` at any time to perform data exchange and validation. By default `UpdateData`(TRUE) is called in the default `CDialog::OnOK` handler and `UpdateData`(FALSE) is called in the default `CDialog::OnInitDialog`.  
   
- La función miembro de `DoDataExchange` es como la función miembro de `Serialize` \- es responsable de obtener o establecer datos a y desde un formulario externo \(en este caso controles en un cuadro de diálogo\) from\/to datos de miembros en la clase.  El parámetro de `pDX` es el contexto para hacer de intercambio y es similar al parámetro de `CArchive` a `CObject::Serialize`.  `pDX` \(un objeto de `CDataExchange` \) tiene una dirección que el mensaje como `CArchive` tiene un indicador de la dirección:  
+ The DDV_ routine should immediately follow the DDX_ routine for that *field*.  
   
--   Si **\!m\_bSaveAndValidate**, entonces carga el estado de los datos de los controles.  
+## <a name="how-does-it-work"></a>How Does It Work  
+ You do not need to understand the following in order to use dialog data. However, understanding how this works behind the scenes will help you write your own exchange or validation procedure.  
   
--   Si `m_bSaveAndValidate`, entonces establece el estado de los controles.  
+ The `DoDataExchange` member function is much like the `Serialize` member function - it is responsible for getting or setting data to/from an external form (in this case controls in a dialog) from/to member data in the class. The `pDX` parameter is the context for doing data exchange and is similar to the `CArchive` parameter to `CObject::Serialize`. The `pDX` (a `CDataExchange` object) has a direction flag much like `CArchive` has a direction flag:  
   
- La validación se produce cuando se establece `m_bSaveAndValidate` .  El valor de `m_bSaveAndValidate` viene determinado por el parámetro de BOOL a `CWnd::UpdateData`.  
+-   If **!m_bSaveAndValidate**, then load the data state into the controls.  
   
- Hay tres otros miembros interesantes de `CDataExchange` :  
+-   If `m_bSaveAndValidate`, then set the data state from the controls.  
   
--   `m_pDlgWnd`: La ventana \(normalmente un diálogo\) que contiene los controles.  Así se evita que los llamadores de funciones globales de DDX\_ y de DDV\_ tengan que pasar “this” a cada rutina de DDX\/DDV.  
+ Validation only occurs when `m_bSaveAndValidate` is set. The value of `m_bSaveAndValidate` is determined by the BOOL parameter to `CWnd::UpdateData`.  
   
--   `PrepareCtrl`, y `PrepareEditCtrl`: Prepara un control de cuadro de diálogo para el intercambio de datos.  Almacena el identificador de control para establecer el foco si se produce un error de validación.  `PrepareCtrl` se utiliza para los controles de nonedit y `PrepareEditCtrl` se utiliza para los controles de edición.  
+ There are three other interesting `CDataExchange` members:  
   
--   **Con errores**: Se llama después de introducir para buscar un cuadro de mensaje que avisa al usuario al error de entrada.  Esta rutina restablecerá el foco al último control \(la última llamada a `PrepareCtrl`\/`PrepareEditCtrl`\) y producirá una excepción.  Esta función miembro se puede llamar desde las rutinas de DDX\_ y de DDV\_.  
+- `m_pDlgWnd`: The window (usually a dialog) that contains the controls. This is to prevent callers of the DDX_ and DDV_ global functions from having to pass 'this' to every DDX/DDV routine.  
   
-## Extensiones de usuario  
- Hay varias maneras de extender el mecanismo predeterminado DDX\/DDV.  Puede realizar lo siguiente:  
+- `PrepareCtrl`, and `PrepareEditCtrl`: Prepares a dialog control for data exchange. Stores that control's handle for setting the focus if a validation fails. `PrepareCtrl` is used for nonedit controls and `PrepareEditCtrl` is used for edit controls.  
   
--   Agregue nuevos tipos de datos.  
+- **Fail**: Called after bringing up a message box alerting the user to the input error. This routine will restore the focus to the last control (the last call to `PrepareCtrl`/`PrepareEditCtrl`) and throw an exception. This member function may be called from both DDX_ and DDV_ routines.  
   
-    ```  
-    CTime  
-    ```  
+## <a name="user-extensions"></a>User Extensions  
+ There are several ways to extend the default DDX/DDV mechanism. You can:  
   
--   Agregue nuevos procedimientos de intercambio \(DDX\_???\).  
+-   Add new data types.  
   
-    ```  
-    void PASCAL DDX_Time(CDataExchange* pDX, int nIDC, CTime& tm);  
-    ```  
+ ```  
+    CTime 
+ ```  
   
--   Agregue nuevos procedimientos de validación \(DDV\_???\).  
+-   Add new exchange procedures (DDX_).  
   
-    ```  
-    void PASCAL DDV_TimeFuture(CDataExchange* pDX, CTime tm, BOOL bFuture);  
-    // make sure time is in the future or past  
-    ```  
+ ```  
+    void PASCAL DDX_Time(CDataExchange* pDX,
+    int nIDC,
+    CTime& tm);
+
+ ```  
   
--   Pase las expresiones arbitrarias a los procedimientos de validación.  
+-   Add new validation procedures (DDV_).  
   
-    ```  
-    DDV_MinMax(pDX, age, 0, m_maxAge);  
-    ```  
+ ```  
+    void PASCAL DDV_TimeFuture(CDataExchange* pDX,
+    CTime tm,
+    BOOL bFuture);
+*// make sure time is in the future or past  
+ ```  
+  
+-   Pass arbitrary expressions to the validation procedures.  
+  
+ ```  
+    DDV_MinMax(pDX,
+    age,
+    0,
+    m_maxAge);
+
+ ```  
   
     > [!NOTE]
-    >  Tales expresiones arbitrarias no se pueden editar por ClassWizard y por tanto no se deben ir fuera de los comentarios especiales de formato \(\/{{AFX\_DATA\_MAP \(CMyClass\)\).  
+    >  Such arbitrary expressions cannot be edited by ClassWizard and therefore should be moved outside of the special format comments (//{{AFX_DATA_MAP(CMyClass)).  
   
- Tiene los condicionantes de la función miembro de **DoDialogExchange** o cualquier otra instrucción válida de C\+\+ con llamadas de función entremezcladas de intercambio y validación.  
+ Have the **DoDialogExchange** member function include conditionals or any other valid C++ statements with intermixed exchange and validation function calls.  
   
 ```  
 //{{AFX_DATA_MAP(CMyClass)  
-DDX_Check(pDX, IDC_SEX, m_bFemale);  
-DDX_Text(pDX, IDC_EDIT1, m_age);  
+DDX_Check(pDX,
+    IDC_SEX,
+    m_bFemale);
+
+DDX_Text(pDX,
+    IDC_EDIT1,
+    m_age);
+
 //}}AFX_DATA_MAP  
 if (m_bFemale)  
-    DDV_MinMax(pDX, age, 0, m_maxFemaleAge);  
+    DDV_MinMax(pDX,
+    age,
+    0,
+    m_maxFemaleAge);
+
 else  
-    DDV_MinMax(pDX, age, 0, m_maxMaleAge);  
+    DDV_MinMax(pDX,
+    age,
+    0,
+    m_maxMaleAge);
 ```  
   
 > [!NOTE]
->  Como se indicó anteriormente, este código no se puede editar por ClassWizard y solo se debería usar fuera de los comentarios especiales de formato.  
+>  As shown above, such code cannot be edited by ClassWizard and should be used only outside of the special format comments.  
   
-## Compatibilidad de ClassWizard  
- ClassWizard admite un subconjunto de personalizaciones de DDX\/DDV que permite integrar dispone de las rutinas de DDX\_ y de DDV\_ en la interfaz de usuario de ClassWizard.  Ello se pendiente sólo beneficioso si piensa reutilizar rutinas determinadas de DDX y de DDV en un proyecto o en muchos proyectos.  
+## <a name="classwizard-support"></a>ClassWizard Support  
+ ClassWizard supports a subset of DDX/DDV customizations by allowing you to integrate your own DDX_ and DDV_ routines into the ClassWizard user interface. Doing this is only cost beneficial if you plan to reuse particular DDX and DDV routines in a project or in many projects.  
   
- Para ello, las entradas especiales se crean en DDX.CLW \(versiones anteriores de Visual C\+\+ almacenan esta información en APSTUDIO.INI\) o en el archivo de .CLW del proyecto.  Las entradas especiales se pueden entrar en la sección \[de información general\] del archivo de .CLW del proyecto o en la sección \[de ExtraDDX\] del archivo de DDX.CLW en el directorio de Files\\Microsoft Visual Studio\\Visual C\+\+\\bin de \\Program.  Puede que tenga que crear el archivo de DDX.CLW si no existe.  Si piensa utilizar las rutinas de personalizadas DDX\_\/DDV\_ sólo en un proyecto, agregue entradas a la sección \[de información general\] del archivo de proyecto .CLW en su lugar.  Si piensa utilizar las rutinas en muchos proyectos, agregue entradas a la sección de \[ExtraDDX\] de DDX.CLW.  
+ To do this, special entries are made in DDX.CLW (previous versions of Visual C++ stored this information in APSTUDIO.INI) or in your project's .CLW file. The special entries can be entered either in the [General Info] section of your project's .CLW file or in the [ExtraDDX] section of the DDX.CLW file in the \Program Files\Microsoft Visual Studio\Visual C++\bin directory. You may need to create the DDX.CLW file if it doesn't already exist. If you plan to use the custom DDX_/DDV_ routines only in a certain project, add the entries to the [General Info] section of your project .CLW file instead. If you plan to use the routines on many projects, add the entries to the [ExtraDDX] section of DDX.CLW.  
   
- El formato general de estas entradas especiales es:  
+ The general format of these special entries is:  
   
 ```  
 ExtraDDXCount=n  
 ```  
   
- ¿dónde n es el número de ExtraDDX? líneas a seguir  
+ where n is the number of ExtraDDX lines to follow  
   
 ```  
-ExtraDDX?=<keys>;<vb-keys>; <prompt>; <type>; <initValue>; <DDX_Proc>  
+ExtraDDX=<keys>;<vb-keys>; <prompt>; <type>; <initValue>; <DDX_Proc>  
 [;<DDV_Proc>; <prompt1>; <arg1>; [<prompt2>; <fmt2>]]  
 ```  
   
- ¿dónde? es un número 1 – indicación de n qué DDX escriba en la lista que se está definiendo.  
+ where  is a number 1 - n indicating which DDX type in the list that is being defined.  
   
- Cada campo está delimitado por “; ” carácter.  Los campos y su finalidad se describen a continuación.  
+ Each field is delimited by a ';' character. The fields and their purpose are described below.  
   
- \<claves\>  
- \= la lista de caracteres individuales que indican para qué diálogo controla este tipo de la variable está permitido.  
+ \<keys>  
+ = list of single characters indicating for which dialog controls this variable type is allowed.  
   
- E \= edición  
+ E = edit  
   
- C \= casilla de la dos\- provincia  
+ C = two-state check box  
   
- c \= control checkbox estado  
+ c = tri-state check box  
   
- R \= primero botón de radio de un grupo  
+ R = first radio button in a group  
   
- L \= cuadro de lista nonsorted  
+ L = nonsorted list box  
   
- l \= cuadro de lista ordenada  
+ l = sorted list box  
   
- M \= cuadro combinado \(con el elemento de edición\)  
+ M = combo box (with edit item)  
   
- N \= lista nonsorted de entrega  
+ N = nonsorted drop list  
   
- n \= lista ordenada de entrega  
+ n = sorted drop list  
   
- es 1 \= si la inserción de DDX se agrega al principio de la lista \(valor predeterminado agrega a la cola\) De se utiliza normalmente para las rutinas de DDX que transfiere la propiedad “Control”.  
+ 1 = if the DDX insert should be added to head of list (default is add to tail) This is generally used for DDX routines that transfer the 'Control' property.  
   
- \<VB\-teclas\>  
- Este campo se utiliza en el producto de 16 bits para los controles de VBX \(controles de VBX no se admiten en el producto de 32 bits\)  
+ \<vb-keys>  
+ This field is used only in the 16-bit product for VBX controls (VBX controls are not supported in the 32-bit product)  
   
- \<indicador\>  
- Cadena en el lugar del cuadro combinado de la propiedad \(ninguna comillas\)  
+ \<prompt>  
+ String to place in the Property combo box (no quotes)  
   
- \<tipo\>  
- Elija el identificador para que el tipo emita en el archivo de encabezado.  En nuestro ejemplo anterior con DDX\_Time, esto se establecería a CTime.  
+ \<type>  
+ Single identifier for type to emit in the header file. In our example above with DDX_Time, this would be set to CTime.  
   
- \<VB\-teclas\>  
- No se utiliza en esta versión y siempre debe estar vacío  
+ \<vb-keys>  
+ Not used in this version and should always be empty  
   
- \<initValue\>  
- Valor inicial — 0 o espacio en blanco.  Si está en blanco, no se escribe ninguna línea de inicialización en \/\/{{sección de AFX\_DATA\_INIT del archivo de implementación.  Una entrada en blanco se debe utilizar para los objetos de C\+\+ \(como `CString`, `CTime`, etc.\) que tienen constructores que garantiza la inicialización correcta.  
+ \<initValue>  
+ Initial value — 0 or blank. If it is blank, then no initialization line will be written in the //{{AFX_DATA_INIT section of the implementation file. A blank entry should be used for C++ objects (such as `CString`, `CTime`, and so on) that have constructors that guarantee correct initialization.  
   
- \<DDX\_Proc\>  
- Único identificador para el procedimiento de DDX\_.  El nombre de función de C\+\+ debe comenzar con “DDX\_”, pero no incluye “DDX\_” en \<el identificador\> de DDX\_Proc.  En el ejemplo anterior, \<el identificador\> de DDX\_Proc sería tiempo.  Cuando ClassWizard escribe la llamada de función en el archivo de implementación en {{sección de AFX\_DATA\_MAP, anexa este nombre a DDX\_, lo protege DDX\_Time.  
+ <DDX_Proc>  
+ Single identifier for the DDX_ procedure. The C++ function name must start with "DDX_," but don't include "DDX_" in the <DDX_Proc> identifier. In the example above, the <DDX_Proc> identifier would be Time. When ClassWizard writes the function call to the implementation file in the {{AFX_DATA_MAP section, it appends this name to DDX_, thus arriving at DDX_Time.  
   
- \<comentario\>  
- Esto para mostrar en el cuadro de diálogo para la variable con este DDX.  Coloque el texto que desee aquí, y proporcionan normalmente algo que describe la operación realizada por pares de DDX\/DDV.  
+ \<comment>  
+ Comment to show in dialog for variable with this DDX. Place any text you would like here, and usually provide something that describes the operation performed by the DDX/DDV pair.  
   
- \<DDV\_Proc\>  
- La parte de DDV de entrada es opcional.  No todas las rutinas de DDX cuentan con las rutinas de DDV.  A menudo, es más conveniente incluir la fase de validación como parte integral de la transferencia.  Éste suele ser el caso si la rutina de DDV no requiere parámetros, porque Pero no admite las rutinas de DDV sin ningún parámetro.  
+ <DDV_Proc>  
+ The DDV portion of the entry is optional. Not all DDX routines have corresponding DDV routines. Often, it is more convenient to include the validation phase as an integral part of the transfer. This is often the case when your DDV routine doesn't require any parameters, because ClassWizard does not support DDV routines without any parameters.  
   
- \<argumento\>  
- Único identificador para el procedimiento de DDV\_.  El nombre de función de C\+\+ debe comenzar con “DDV\_”, pero no incluye “DDX\_” en \<el identificador\> de DDX\_Proc.  
+ \<arg>  
+ Single identifier for the DDV_ procedure. The C++ function name must start with "DDV_", but do not include "DDX_" in the <DDX_Proc> identifier.  
   
- seguido de 1 o 2 args de DDV:  
+ followed by 1 or 2 DDV args:  
   
- \<promptX\>  
- cadena el lugar sobre el elemento de edición \(con & para el acelerador\)  
+ \<promptX>  
+ string to place above the edit item (with & for accelerator)  
   
- \<fmtX\>  
- carácter de formato para el tipo de argumento, uno de  
+ \<fmtX>  
+ format character for the arg type, one of  
   
- d \= int  
+ d = int  
   
- u \= sin signo  
+ u = unsigned  
   
- D \= long int \(es decir,\)  
+ D = long int (that is, long)  
   
- U \= de unsigned long \(es decir, DWORD\)  
+ U = long unsigned (that is, DWORD)  
   
- f \= float  
+ f = float  
   
- F \= doble  
+ F = double  
   
- s \= cadena  
+ s = string  
   
-## Vea también  
- [Notas técnicas por número](../mfc/technical-notes-by-number.md)   
- [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

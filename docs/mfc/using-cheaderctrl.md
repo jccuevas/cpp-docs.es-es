@@ -1,62 +1,81 @@
 ---
-title: "Usar CHeaderCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CHeaderCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl (clase)"
-  - "controles del encabezado, utilizar"
+title: Using CHeaderCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CHeaderCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- header controls [MFC], using
+- CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Usar CHeaderCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3b0d6b19847a3ebc366676a1c3f4816941d919f8
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Utilice un control de encabezado, representado por la clase [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), para mostrar los encabezados de columna en una lista acolumnada.  Por ejemplo, un control de encabezado sería útil para implementar controles de columna en una hoja de cálculo.  
+---
+# <a name="using-cheaderctrl"></a>Using CHeaderCtrl
+Use a header control, represented by class [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), to display column headers for a columnar list. For example, a header control would be useful for implementing column controls in a spreadsheet.  
   
- El control de encabezado suele dividirse en las partes, denominadas “los elementos de encabezado”, cada transporte un título para la columna asociada de texto o números.  Dependiendo de los estilos establece, puede proporcionar varias maneras sencillas para que los usuarios manipular los elementos de encabezado.  
+ The header control is usually divided into parts, called "header items," each bearing a title for the associated column of text or numbers. Depending on the styles you set, you can provide a number of direct ways for users to manipulate the header items.  
   
 > [!NOTE]
->  [CListCtrl](../mfc/reference/clistctrl-class.md) proporciona un control de encabezado incrustado, y [CListView](../mfc/reference/clistview-class.md) encapsula `CListCtrl` en una clase MFC.  Piense en general sobre el uso `CHeaderCtrl` a las listas de etiqueta que piensa dibujarse a sí mismo.  
+>  [CListCtrl](../mfc/reference/clistctrl-class.md) provides an embedded header control, and [CListView](../mfc/reference/clistview-class.md) encapsulates `CListCtrl` in an MFC class. In general, think of using `CHeaderCtrl` to label lists that you intend to draw yourself.  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Control y control de lista de encabezado](../mfc/header-control-and-list-control.md)  
+-   [Header Control and List Control](../mfc/header-control-and-list-control.md)  
   
--   [Ejemplos del Control de encabezado](../mfc/header-control-examples.md)  
+-   [Header Control Examples](../mfc/header-control-examples.md)  
   
--   [Elementos de encabezado en un Control de encabezado](../mfc/header-items-in-a-header-control.md)  
+-   [Header Items in a Header Control](../mfc/header-items-in-a-header-control.md)  
   
--   [Personalizar la apariencia del elemento de encabezado](../mfc/customizing-the-header-item-s-appearance.md)  
+-   [Customizing the Header Item's Appearance](../mfc/customizing-the-header-item-s-appearance.md)  
   
--   [Proporcionar compatibilidad de arrastrar y colocar para los elementos de encabezado](../mfc/providing-drag-and-drop-support-for-header-items.md)  
+-   [Providing Drag-and-Drop Support for Header Items](../mfc/providing-drag-and-drop-support-for-header-items.md)  
   
--   [Utilizar listas de Imágenes con Controles de encabezado](../mfc/using-image-lists-with-header-controls.md)  
+-   [Using Image Lists with Header Controls](../mfc/using-image-lists-with-header-controls.md)  
   
--   [Crear Controles de encabezado Propietario\- que se dibujen](../mfc/making-owner-drawn-header-controls.md)  
+-   [Making Owner-Drawn Header Controls](../mfc/making-owner-drawn-header-controls.md)  
   
--   [Trabajar con un Control de encabezado](../mfc/working-with-a-header-control.md)  
+-   [Working with a Header Control](../mfc/working-with-a-header-control.md)  
   
--   [Crear el Control de encabezado](../mfc/creating-the-header-control.md)  
+-   [Creating the Header Control](../mfc/creating-the-header-control.md)  
   
--   [Agregar elementos al Control de encabezado](../mfc/adding-items-to-the-header-control.md)  
+-   [Adding Items to the Header Control](../mfc/adding-items-to-the-header-control.md)  
   
--   [Ordenar elementos en el Control de encabezado](../mfc/ordering-items-in-the-header-control.md)  
+-   [Ordering Items in the Header Control](../mfc/ordering-items-in-the-header-control.md)  
   
--   [Notificaciones de la Encabezado\- CONTROL de procesamiento](../mfc/processing-header-control-notifications.md)  
+-   [Processing Header-Control Notifications](../mfc/processing-header-control-notifications.md)  
   
-## Vea también  
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

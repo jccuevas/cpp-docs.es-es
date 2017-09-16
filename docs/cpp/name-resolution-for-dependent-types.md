@@ -1,26 +1,43 @@
 ---
-title: "Resoluci&#243;n de nombres para los tipos dependientes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Name Resolution for Dependent Types | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Resoluci&#243;n de nombres para los tipos dependientes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 055b6e4300179d3a2350782b9d92547d288dbe5a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/11/2017
 
-Utilice **typename** para los nombres completos en definiciones de plantilla, para indicar al compilador que el nombre completo dado identifica un tipo.  Para obtener más información, vea [typename](../cpp/typename.md).  
+---
+# <a name="name-resolution-for-dependent-types"></a>Name Resolution for Dependent Types
+Use **typename** for qualified names in template definitions to tell the compiler that the given qualified name identifies a type. For more information, see [typename](../cpp/typename.md).  
   
 ```cpp  
 // template_name_resolution1.cpp  
@@ -45,18 +62,16 @@ int main()
 }  
 ```  
   
-### Salida  
-  
-```  
+```Output  
 Name resolved by using typename keyword.  
 ```  
   
- La búsqueda de nombre para los nombres dependientes examina los nombres en el contexto de la definición de la plantilla \(en el ejemplo siguiente, este contexto encontraría `myFunction(char)`\) y el contexto de la creación de instancias de la plantilla.  En el ejemplo siguiente, se crean instancias de la plantilla en main; por consiguiente, `MyNamespace::myFunction` es visible desde el punto de creación de las instancias, y se elige como la mejor coincidencia.  Si `MyNamespace::myFunction` cambiase de nombre, se llamaría a `myFunction(char)` en su lugar.  
+ Name lookup for dependent names examines names from both the context of the template definition—in the following example, this context would find `myFunction(char)`—and the context of the template instantiation.In the following example, the template is instantiated in main; therefore, the `MyNamespace::myFunction` is visible from the point of instantiation and is picked as the better match. If `MyNamespace::myFunction` were renamed, `myFunction(char)` would be called instead.  
   
- Todos los nombres se resuelven como si fueran nombres dependientes.  Sin embargo, recomendamos utilizar nombres completos si hay alguna posibilidad de conflicto.  
+ All names are resolved as if they were dependent names. Nevertheless, we recommend that you use fully qualified names if there is any possible conflict.  
   
 ```cpp  
-//template_name_resolution2.cpp  
+// template_name_resolution2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
 using namespace std;  
@@ -93,14 +108,14 @@ int main()
 }  
 ```  
   
-### Salida  
+### <a name="output"></a>Output  
   
 ```  
 Int MyNamespace::myFunction  
 ```  
   
-### Desambiguación de plantilla  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] aplica las reglas del estándar C\+\+98\/03\/11 para la desambiguación de la palabra clave “template”.  En el ejemplo siguiente, [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)] aceptaría las líneas no conformes y las líneas que cumplen. [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] solo acepta las líneas que cumplen.  
+### <a name="template-disambiguation"></a>Template Disambiguation  
+ [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] enforces the C++98/03/11 standard rules for disambiguation with the "template" keyword. In the following example, Visual C++ 2010 would accept both the nonconforming lines and the conforming lines.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] accepts only the conforming lines.  
   
 ```cpp  
 #include <iostream>  
@@ -129,7 +144,7 @@ int main() {
 }  
 ```  
   
- Se requiere la conformidad con las reglas de desambiguación, porque, de forma predeterminada, C\+\+ supone que `AY::Rebind` no es una plantilla, por lo que el compilador interpreta el siguiente “`<`” como "menos que".  Debe saber que `Rebind` es una plantilla para que pueda analizar correctamente “`<`” como un corchete angular.  
+ Conformance with the disambiguation rules is required because, by default, C++ assumes that `AY::Rebind` isn't a template, and so the compiler interprets the following "`<`" as a less-than. It has to know that `Rebind` is a template so that it can correctly parse "`<`" as an angle bracket.  
   
-## Vea también  
- [Resolución de nombres](../cpp/templates-and-name-resolution.md)
+## <a name="see-also"></a>See Also  
+ [Name Resolution](../cpp/templates-and-name-resolution.md)

@@ -1,53 +1,72 @@
 ---
-title: "CWinApp: The Application (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CWinApp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clase de aplicación"
-  - "CWinApp (clase), CWinThread"
-  - "CWinApp (clase), multithreading"
-  - "CWinApp (clase), WinMain"
-  - "CWinThread (clase), y CWinApp"
-  - "InitApplication (método)"
-  - "MFC [C++], WinMain y"
-  - "WinMain (método)"
-  - "WinMain (método), en MFC"
+title: 'CWinApp: The Application Class | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CWinApp
+dev_langs:
+- C++
+helpviewer_keywords:
+- application class [MFC]
+- CWinApp class [MFC], CWinThread
+- MFC, WinMain and
+- CWinApp class [MFC], multithreading
+- CWinThread class [MFC], and CWinApp
+- InitApplication method [MFC]
+- WinMain method [MFC]
+- WinMain method [MFC], in MFC
+- CWinApp class [MFC], WinMain
 ms.assetid: 935822bb-d463-481b-a5f6-9719d68ed1d5
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# CWinApp: The Application (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3bdd125b3759b7259b6865410bd3a4bbaea11b1c
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La clase principal de la aplicación en MFC encapsula la inicialización, ejecute, y la finalización de una aplicación para el sistema operativo Windows.  Una aplicación compilada en el marco debe tener un único objeto de una clase derivada de [CWinApp](../mfc/reference/cwinapp-class.md).  Se construye este objeto antes de que se creen las ventanas.  
+---
+# <a name="cwinapp-the-application-class"></a>CWinApp: The Application Class
+The main application class in MFC encapsulates the initialization, running, and termination of an application for the Windows operating system. An application built on the framework must have one and only one object of a class derived from [CWinApp](../mfc/reference/cwinapp-class.md). This object is constructed before windows are created.  
   
- `CWinApp` se deriva de `CWinThread`, que representa el subproceso principal de la ejecución de la aplicación, que puede tener uno o más subprocesos.  En versiones recientes de MFC, `InitInstance`, **Ejecutar**, `ExitInstance`, y las funciones miembro de `OnIdle` están realmente en la clase `CWinThread`.  Estas funciones se tratan aquí como si fuesen miembros de `CWinApp` en su lugar, porque la descripción se conoce al rol de objeto como un objeto de la aplicación en lugar de como subproceso primario.  
-  
-> [!NOTE]
->  La clase app constituye el subproceso principal de la aplicación de la ejecución.  Mediante funciones de la API Win32, también puede crear subprocesos secundarios de la ejecución.  Estos subprocesos pueden utilizar la biblioteca MFC.  Para obtener más información, vea [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
-  
- Como cualquier programa para el sistema operativo Windows, la aplicación de .NET framework tiene una función de `WinMain` .  En una aplicación de .NET framework, sin embargo, no se escribe `WinMain`.  Proporciona la biblioteca de clases y denominada cuando se inicia la aplicación.  `WinMain` contiene servicios estándar como registrar clases de ventana.  Llama a las funciones miembro del objeto application para inicializar y ejecutar la aplicación. \(Puede personalizar `WinMain` reemplazando el miembro de `CWinApp` funciona que las llamadas de `WinMain` .\)  
-  
- Para inicializar la aplicación, las llamadas de `WinMain` el miembro de `InitApplication` y de `InitInstance` del objeto application funcionan.  Para ejecutar el bucle de mensajes de la aplicación, `WinMain` llama a la función miembro de **Ejecutar** .  En la finalización, `WinMain` llama a la función miembro de `ExitInstance` del objeto application.  
+ `CWinApp` is derived from `CWinThread`, which represents the main thread of execution for your application, which might have one or more threads. In recent versions of MFC, the `InitInstance`, **Run**, `ExitInstance`, and `OnIdle` member functions are actually in class `CWinThread`. These functions are discussed here as if they were `CWinApp` members instead, because the discussion concerns the object's role as application object rather than as primary thread.  
   
 > [!NOTE]
->  Los nombres mostrados en **negrita** en esta documentación indican los elementos proporcionados por la biblioteca Microsoft Foundation Class\) y Visual C\+\+.  Los nombres mostrados en el tipo de `monospaced` indican los elementos que crea o invalida.  
+>  Your application class constitutes your application's primary thread of execution. Using Win32 API functions, you can also create secondary threads of execution. These threads can use the MFC Library. For more information, see [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
-## Vea también  
- [Temas generales de MFC](../mfc/general-mfc-topics.md)   
- [CWinApp y el Asistente para aplicaciones MFC](../mfc/cwinapp-and-the-mfc-application-wizard.md)   
- [Funciones miembro de CWinApp que se pueden sobrecargar](../mfc/overridable-cwinapp-member-functions.md)   
- [Servicios especiales de CWinApp](../mfc/special-cwinapp-services.md)
+ Like any program for the Windows operating system, your framework application has a `WinMain` function. In a framework application, however, you do not write `WinMain`. It is supplied by the class library and is called when the application starts up. `WinMain` performs standard services such as registering window classes. It then calls member functions of the application object to initialize and run the application. (You can customize `WinMain` by overriding the `CWinApp` member functions that `WinMain` calls.)  
+  
+ To initialize the application, `WinMain` calls your application object's `InitApplication` and `InitInstance` member functions. To run the application's message loop, `WinMain` calls the **Run** member function. On termination, `WinMain` calls the application object's `ExitInstance` member function.  
+  
+> [!NOTE]
+>  Names shown in **bold** in this documentation indicate elements supplied by the Microsoft Foundation Class Library and Visual C++. Names shown in `monospaced` type indicate elements that you create or override.  
+  
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)   
+ [CWinApp and the MFC Application Wizard](../mfc/cwinapp-and-the-mfc-application-wizard.md)   
+ [Overridable CWinApp Member Functions](../mfc/overridable-cwinapp-member-functions.md)   
+ [Special CWinApp Services](../mfc/special-cwinapp-services.md)
+
+

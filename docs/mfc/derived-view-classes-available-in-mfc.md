@@ -1,53 +1,72 @@
 ---
-title: "Clases de vistas derivadas disponibles en MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clases [C++], derivadas"
-  - "CView (clase), clases derivadas de"
-  - "clases derivadas, clases de vista"
-  - "clases de vista, derivadas"
+title: Derived View Classes Available in MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CView class [MFC], classes derived from
+- classes [MFC], derived
+- derived classes [MFC], view classes
+- view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Clases de vistas derivadas disponibles en MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 371a836bf3976f74801c70c68924144d9ea0a725
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La tabla siguiente muestra las clases y sus relaciones uno otras de la vista MFC.  Las funciones de la clase de vista dependen de la clase de vista de MFC que deriva de.  
+---
+# <a name="derived-view-classes-available-in-mfc"></a>Derived View Classes Available in MFC
+The following table shows MFC's view classes and their relationships to one another. The capabilities of your view class depend on the MFC view class from which it derives.  
   
-### Clases de vista  
+### <a name="view-classes"></a>View Classes  
   
-|Clase|Descripción|  
+|Class|Description|  
 |-----------|-----------------|  
-|[CView](../mfc/reference/cview-class.md)|Clase base de todos vistas.|  
-|[CCtrlView](../mfc/reference/cctrlview-class.md)|Clase base de `CTreeView`, de `CListView`, de `CEditView`, y de `CRichEditView`.  Estas clases permiten utilizar la arquitectura documento\/vista con controles comunes indicados de Windows.|  
-|[CEditView](../mfc/reference/ceditview-class.md)|Una vista sencilla basada en el control del cuadro de edición de Windows.  Permite la protección y la edición de texto y se puede utilizar como base para una aplicación de editor de texto simple.  Vea también `CRichEditView`.|  
-|[CRichEditView](../mfc/reference/cricheditview-class.md)|Una vista que contiene un objeto de [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) .  Esta clase es análoga a `CEditView`pero, a diferencia de `CEditView`, texto con formato de los identificadores de `CRichEditView` .|  
-|[CListView](../mfc/reference/clistview-class.md)|Una vista que contiene un objeto de [CListCtrl](../mfc/reference/clistctrl-class.md) .|  
-|[CTreeView](../mfc/reference/ctreeview-class.md)|Una vista que contiene un objeto de [CTreeCtrl](../mfc/reference/ctreectrl-class.md) , para las vistas que se parecen a la ventana del Explorador de soluciones en Visual C\+\+.|  
-|[CScrollView](../mfc/reference/cscrollview-class.md)|Clase base de `CFormView`, de `CRecordView`, y de `CDaoRecordView`.  Implementa desplazar el contenido de la vista.|  
-|[CFormView](../mfc/reference/cformview-class.md)|Una vista de formulario, una vista que contiene controles.  Una aplicación formulario\- basada proporciona uno o más tales interfaces del formulario.|  
-|[CHtmlView](../mfc/reference/chtmlview-class.md)|Una vista de explorador web que el usuario de la aplicación puede examinar sitios en World Wide Web, así como carpetas en el sistema de archivos local y en una red.  La vista explorador web también puede funcionar como un contenedor de documentos activos.|  
-|[CRecordView](../mfc/reference/crecordview-class.md)|Una vista de formulario que muestra los registros de base de datos ODBC en controles.  Si selecciona la compatibilidad de ODBC en el proyecto, la clase base de la vista es `CRecordView`.  La vista está conectada a un objeto de `CRowset` .|  
-|[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)|Una vista de formulario que muestra los registros de base de datos de DAO en controles.  Si selecciona la compatibilidad de DAO en el proyecto, la clase base de la vista es `CDaoRecordView`.  La vista está conectada a un objeto de `CDaoRecordset` .|  
-|[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)|Una vista de formulario que muestra los registros de OLE DB en controles.  Si selecciona la compatibilidad OLE DB en el proyecto, la clase base de la vista es `COleDBRecordView`.  La vista está conectada a un objeto de `CRowset` .|  
+|[CView](../mfc/reference/cview-class.md)|Base class of all views.|  
+|[CCtrlView](../mfc/reference/cctrlview-class.md)|Base class of `CTreeView`, `CListView`, `CEditView`, and `CRichEditView`. These classes let you use document/view architecture with the indicated Windows common controls.|  
+|[CEditView](../mfc/reference/ceditview-class.md)|A simple view based on the Windows edit box control. Allows entering and editing text and can be used as the basis for a simple text editor application. See also `CRichEditView`.|  
+|[CRichEditView](../mfc/reference/cricheditview-class.md)|A view containing a [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) object. This class is analogous to `CEditView`, but unlike `CEditView`, `CRichEditView` handles formatted text.|  
+|[CListView](../mfc/reference/clistview-class.md)|A view containing a [CListCtrl](../mfc/reference/clistctrl-class.md) object.|  
+|[CTreeView](../mfc/reference/ctreeview-class.md)|A view containing a [CTreeCtrl](../mfc/reference/ctreectrl-class.md) object, for views that resemble the Solution Explorer window in Visual C++.|  
+|[CScrollView](../mfc/reference/cscrollview-class.md)|Base class of `CFormView`, `CRecordView`, and `CDaoRecordView`. Implements scrolling the view's contents.|  
+|[CFormView](../mfc/reference/cformview-class.md)|A form view, a view that contains controls. A forms-based application provides one or more such form interfaces.|  
+|[CHtmlView](../mfc/reference/chtmlview-class.md)|A Web browser view with which the application's user can browse sites on the World Wide Web, as well as folders in the local file system and on a network. The Web browser view can also work as an Active document container.|  
+|[CRecordView](../mfc/reference/crecordview-class.md)|A form view that displays ODBC database records in controls. If you select ODBC support in your project, the view's base class is `CRecordView`. The view is connected to a `CRowset` object.|  
+|[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)|A form view that displays DAO database records in controls. If you select DAO support in your project, the view's base class is `CDaoRecordView`. The view is connected to a `CDaoRecordset` object.|  
+|[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)|A form view that displays OLE DB records in controls. If you select OLE DB support in your project, the view's base class is `COleDBRecordView`. The view is connected to a `CRowset` object.|  
   
 > [!NOTE]
->  A partir de la versión 4.0 de MFC, `CEditView` se deriva de `CCtrlView`.  
+>  As of MFC version 4.0, `CEditView` is derived from `CCtrlView`.  
   
- Para utilizar estas clases en la aplicación, derive las clases de vista de la aplicación de ellas.  Para obtener información relacionada, vea [Vistas de desplazamiento y escala](../mfc/scrolling-and-scaling-views.md).  Para obtener más información sobre las clases de base de datos, vea [Información general: Programación de la base de datos](../data/data-access-programming-mfc-atl.md).  
+ To use these classes in your application, derive the application's view classes from them. For related information, see [Scrolling and Scaling Views](../mfc/scrolling-and-scaling-views.md). For more information on the database classes, see [Overview: Database Programming](../data/data-access-programming-mfc-atl.md).  
   
-## Vea también  
- [Usar vistas](../mfc/using-views.md)
+## <a name="see-also"></a>See Also  
+ [Using Views](../mfc/using-views.md)
+
+

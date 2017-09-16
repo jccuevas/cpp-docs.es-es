@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCListCtrl | Documentos de Microsoft
+title: CMFCListCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,7 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCListCtrl class
+- CMFCListCtrl [MFC], EnableMarkSortedColumn
+- CMFCListCtrl [MFC], EnableMultipleSort
+- CMFCListCtrl [MFC], GetHeaderCtrl
+- CMFCListCtrl [MFC], IsMultipleSort
+- CMFCListCtrl [MFC], OnCompareItems
+- CMFCListCtrl [MFC], OnGetCellBkColor
+- CMFCListCtrl [MFC], OnGetCellFont
+- CMFCListCtrl [MFC], OnGetCellTextColor
+- CMFCListCtrl [MFC], RemoveSortColumn
+- CMFCListCtrl [MFC], SetSortColumn
+- CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
 caps.latest.revision: 29
 author: mikeblome
@@ -45,50 +55,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 3a4c67b2d7ea2a5356f7c053403edf414319a928
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6270fa413b67b3237ee923d10217b168f0ddc33e
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfclistctrl-class"></a>Clase CMFCListCtrl
-El `CMFCListCtrl` clase extiende la funcionalidad de [CListCtrl (clase)](../../mfc/reference/clistctrl-class.md) clase admitiendo la funcionalidad de control avanzado de encabezado de la [CMFCHeaderCtrl clase](../../mfc/reference/cmfcheaderctrl-class.md).  
+# <a name="cmfclistctrl-class"></a>CMFCListCtrl Class
+The `CMFCListCtrl` class extends the functionality of [CListCtrl Class](../../mfc/reference/clistctrl-class.md) class by supporting the advanced header control functionality of the [CMFCHeaderCtrl Class](../../mfc/reference/cmfcheaderctrl-class.md).  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCListCtrl : public CListCtrl  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCListCtrl::EnableMarkSortedColumn](#enablemarksortedcolumn)|Habilita la capacidad marcar una columna ordenada con un color de fondo diferente.|  
-|[CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)|Habilita el modo de ordenación de varias.|  
-|[CMFCListCtrl::GetHeaderCtrl](#getheaderctrl)|Devuelve una referencia al control de encabezado subrayado.|  
-|[CMFCListCtrl::IsMultipleSort](#ismultiplesort)|Comprueba si el control de lista está en modo de ordenación múltiple.|  
-|[CMFCListCtrl::OnCompareItems](#oncompareitems)|Llamado por el marco de trabajo cuando deben comparar dos elementos de control de lista.|  
-|[CMFCListCtrl::OnGetCellBkColor](#ongetcellbkcolor)|Llamado por el marco de trabajo cuando se debe determinar el color de fondo de una celda individual.|  
-|[CMFCListCtrl::OnGetCellFont](#ongetcellfont)|Llamado por el marco de trabajo cuando se debe obtener la fuente de la celda que se va a dibujar.|  
-|[CMFCListCtrl::OnGetCellTextColor](#ongetcelltextcolor)|Llamado por el marco de trabajo cuando se debe determinar el color del texto de una celda individual.|  
-|[CMFCListCtrl::RemoveSortColumn](#removesortcolumn)|Quita una columna de ordenación de la lista de columnas ordenadas.|  
-|[CMFCListCtrl::SetSortColumn](#setsortcolumn)|Establece la columna ordenada actual y el criterio de ordenación.|  
-|[CMFCListCtrl::Sort](#sort)|Ordena el control de lista.|  
+|[CMFCListCtrl::EnableMarkSortedColumn](#enablemarksortedcolumn)|Enables the ability to mark a sorted column with a different background color.|  
+|[CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)|Enables multiple sort mode.|  
+|[CMFCListCtrl::GetHeaderCtrl](#getheaderctrl)|Returns a reference to the underlined header control.|  
+|[CMFCListCtrl::IsMultipleSort](#ismultiplesort)|Checks if the list control is in multiple sort mode.|  
+|[CMFCListCtrl::OnCompareItems](#oncompareitems)|Called by the framework when it must compare two list control items.|  
+|[CMFCListCtrl::OnGetCellBkColor](#ongetcellbkcolor)|Called by the framework when it must determine the background color of an individual cell.|  
+|[CMFCListCtrl::OnGetCellFont](#ongetcellfont)|Called by the framework when it must obtain the font for the cell being drawn.|  
+|[CMFCListCtrl::OnGetCellTextColor](#ongetcelltextcolor)|Called by the framework when it must determine the text color of an individual cell.|  
+|[CMFCListCtrl::RemoveSortColumn](#removesortcolumn)|Removes a sort column from the list of sorted columns.|  
+|[CMFCListCtrl::SetSortColumn](#setsortcolumn)|Sets the current sorted column and the sort order.|  
+|[CMFCListCtrl::Sort](#sort)|Sorts the list control.|  
   
-## <a name="remarks"></a>Comentarios  
- `CMFCListCtrl`ofrece dos mejoras en [CListCtrl (clase)](../../mfc/reference/clistctrl-class.md) clase. En primer lugar, indica que la ordenación de columnas es una opción disponible dibujando automáticamente una flecha de ordenación en el encabezado. En segundo lugar, admite datos ordenar varias columnas al mismo tiempo.  
+## <a name="remarks"></a>Remarks  
+ `CMFCListCtrl` offers two enhancements to [CListCtrl Class](../../mfc/reference/clistctrl-class.md) class. First, it indicates that column sorting is an available option by automatically drawing a sort arrow on the header. Second, it supports data sorting on multiple columns at the same time.  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar varios métodos en la `CMFCListCtrl` clase. En el ejemplo se muestra cómo crear un control de lista, insertar columnas, insertar elementos, establecer el texto de un elemento y establecer la fuente del control de lista. Este fragmento de código forma parte de la [ejemplo de demostración de Visual Studio](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCListCtrl` class. The example shows how to create a list control, insert columns, insert items, set the text of an item, and set the font of the list control. This code snippet is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&#25;](../../mfc/codesnippet/cpp/cmfclistctrl-class_1.h)]  
-[!code-cpp[26 de NVC_MFC_VisualStudioDemo #](../../mfc/codesnippet/cpp/cmfclistctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#25](../../mfc/codesnippet/cpp/cmfclistctrl-class_1.h)]  
+[!code-cpp[NVC_MFC_VisualStudioDemo#26](../../mfc/codesnippet/cpp/cmfclistctrl-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -99,11 +109,11 @@ class CMFCListCtrl : public CListCtrl
   
  [CMFCListCtrl](../../mfc/reference/cmfclistctrl-class.md)  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxlistctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxlistctrl.h  
   
-##  <a name="enablemarksortedcolumn"></a>CMFCListCtrl::EnableMarkSortedColumn  
- Marca las columnas ordenadas con un color de fondo diferente.  
+##  <a name="enablemarksortedcolumn"></a>  CMFCListCtrl::EnableMarkSortedColumn  
+ Marks the sorted columns with a different background color.  
   
 ```  
 void EnableMarkSortedColumn(
@@ -111,58 +121,58 @@ void EnableMarkSortedColumn(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  [in] `bMark`  
- Parámetro booleano que determina si se debe habilitar un color de fondo diferente.  
+ A Boolean parameter that determines whether to enable a different background color.  
   
  [in] `bRedraw`  
- Parámetro booleano que determina si se va a dibujar el control inmediatamente.  
+ A Boolean parameter that determines whether to redraw the control immediately.  
   
-### <a name="remarks"></a>Comentarios  
- `EnableMarkSortedColumn`usa el método `CDrawingManager::PixelAlpha` calcular el color que se utilizará para ordena las columnas. El color seleccionado se basa en el color de fondo normal.  
+### <a name="remarks"></a>Remarks  
+ `EnableMarkSortedColumn` uses the method `CDrawingManager::PixelAlpha` to calculate what color to use for sorted columns. The color picked is based upon the regular background color.  
   
-##  <a name="enablemultiplesort"></a>CMFCListCtrl::EnableMultipleSort  
- Permite ordenar las filas de datos en el control de lista por varias columnas.  
+##  <a name="enablemultiplesort"></a>  CMFCListCtrl::EnableMultipleSort  
+ Enables sorting the rows of data in the list control by multiple columns.  
   
 ```  
 void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- Valor booleano que especifica si se habilita el modo de ordenación de varias columnas.  
+ A Boolean that specifies whether to enable multiple column sort mode.  
   
-### <a name="remarks"></a>Comentarios  
- Cuando se habilita la ordenación según varias columnas, las columnas tienen una jerarquía. Las filas de datos se ordenarán primero por la columna principal. Los valores equivalentes se ordenan por cada columna subsiguientes según su prioridad.  
+### <a name="remarks"></a>Remarks  
+ When you enable sorting based on multiple columns, the columns do have a hierarchy. The rows of data will first be sorted by the primary column. Any equivalent values are then sorted by each subsequent column based on priority.  
   
-##  <a name="getheaderctrl"></a>CMFCListCtrl::GetHeaderCtrl  
- Devuelve una referencia al control de encabezado.  
+##  <a name="getheaderctrl"></a>  CMFCListCtrl::GetHeaderCtrl  
+ Returns a reference to the header control.  
   
 ```  
 virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Una referencia a la base de [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) objeto.  
+### <a name="return-value"></a>Return Value  
+ A reference to the underlying [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) object.  
   
-### <a name="remarks"></a>Comentarios  
- El control de encabezado de un control de lista es la ventana que contiene los títulos de las columnas. Normalmente se coloca directamente encima de las columnas.  
+### <a name="remarks"></a>Remarks  
+ The header control for a list control is the window that contains the titles for the columns. It is usually positioned directly above the columns.  
   
-##  <a name="ismultiplesort"></a>CMFCListCtrl::IsMultipleSort  
- Comprueba si el control de lista admite actualmente la ordenación en varias columnas.  
+##  <a name="ismultiplesort"></a>  CMFCListCtrl::IsMultipleSort  
+ Checks whether the list control currently supports sorting on multiple columns.  
   
 ```  
 BOOL IsMultipleSort() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el control de lista admite a la ordenación de varias; `FALSE` en caso contrario.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the list control supports multiple sort; `FALSE` otherwise.  
   
-### <a name="remarks"></a>Comentarios  
- Cuando un [CMFCListCtrl clase](../../mfc/reference/cmfclistctrl-class.md) admite la ordenación de varias, el usuario puede ordenar los datos en el control de lista por varias columnas. Para habilitar la ordenación de varias, llame a [CMFCListCtrl::EnableMultipleSort](#enablemultiplesort).  
+### <a name="remarks"></a>Remarks  
+ When a [CMFCListCtrl Class](../../mfc/reference/cmfclistctrl-class.md) supports multiple sorting, the user can sort the data in the list control by multiple columns. To enable multiple sorting, call [CMFCListCtrl::EnableMultipleSort](#enablemultiplesort).  
   
-##  <a name="oncompareitems"></a>CMFCListCtrl::OnCompareItems  
- El marco de trabajo llama a este método cuando compara dos elementos.  
+##  <a name="oncompareitems"></a>  CMFCListCtrl::OnCompareItems  
+ The framework calls this method when it compares two items.  
   
 ```  
 virtual int OnCompareItems(
@@ -171,24 +181,24 @@ virtual int OnCompareItems(
     int iColumn);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  [in] `lParam1`  
- Primer elemento que comparar.  
+ The first item to compare.  
   
  [in] `lParam2`  
- Segundo elemento que comparar.  
+ The second item to compare.  
   
  [in] `iColumn`  
- El índice de la columna que se está ordenando este método.  
+ The index of the column that this method is sorting.  
   
-### <a name="return-value"></a>Valor devuelto  
- Un entero que indica la posición relativa de los dos elementos. Un valor negativo indica que el primer elemento debería preceder al segundo, un valor positivo indica que el primer elemento debería seguir al segundo, y cero significa que los dos elementos son equivalentes.  
+### <a name="return-value"></a>Return Value  
+ An integer that indicates the relative position of the two items. A negative value indicates that the first item should precede the second, positive value indicates that the first item should follow the second, and zero means that the two items are equivalent.  
   
-### <a name="remarks"></a>Comentarios  
- La implementación predeterminada siempre devuelve 0. Debe reemplazar esta función para proporcionar un algoritmo de ordenación.  
+### <a name="remarks"></a>Remarks  
+ The default implementation always returns 0. You must override this function to provide a sorting algorithm.  
   
-##  <a name="ongetcellbkcolor"></a>CMFCListCtrl::OnGetCellBkColor  
- El marco de trabajo llama a este método cuando debe determinar el color de fondo de una celda individual.  
+##  <a name="ongetcellbkcolor"></a>  CMFCListCtrl::OnGetCellBkColor  
+ The framework calls this method when it must determine the background color of an individual cell.  
   
 ```  
 virtual COLORREF OnGetCellBkColor(
@@ -196,21 +206,21 @@ virtual COLORREF OnGetCellBkColor(
     int nColumn);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  [in] `nRow`  
- La fila de la celda en cuestión.  
+ The row of the cell in question.  
   
  [in] `nColumn`  
- La columna de la celda en cuestión.  
+ The column of the cell in question.  
   
-### <a name="return-value"></a>Valor devuelto  
- Un `COLOREF` valor que especifica el color de fondo de la celda.  
+### <a name="return-value"></a>Return Value  
+ A `COLOREF` value that specifies the background color of the cell.  
   
-### <a name="remarks"></a>Comentarios  
- La implementación predeterminada de `OnGetCellBkColor` no usa los parámetros de entrada proporcionados y en su lugar, simplemente llama a `GetBkColor`. Por lo tanto, de forma predeterminada, el control de toda la lista tendrá el mismo color de fondo. Puede invalidar `OnGetCellBkColor` en una clase derivada para marcar las celdas individuales con un color de fondo.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of `OnGetCellBkColor` does not use the supplied input parameters and instead simply calls `GetBkColor`. Therefore, by default, the whole list control will have the same background color. You can override `OnGetCellBkColor` in a derived class to mark individual cells with a separate background color.  
   
-##  <a name="ongetcellfont"></a>CMFCListCtrl::OnGetCellFont  
- El marco de trabajo llama a este método cuando obtiene la fuente de una celda individual.  
+##  <a name="ongetcellfont"></a>  CMFCListCtrl::OnGetCellFont  
+ The framework calls this method when it obtains the font for an individual cell.  
   
 ```  
 virtual HFONT OnGetCellFont(
@@ -219,24 +229,24 @@ virtual HFONT OnGetCellFont(
     DWORD dwData = 0);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  [in] `nRow`  
- La fila de la celda en cuestión.  
+ The row of the cell in question.  
   
  [in] `nColumn`  
- La columna de la celda en cuestión.  
+ The column of the cell in question.  
   
  [in] `dwData`  
- Datos definidos por el usuario. La implementación predeterminada no utiliza este parámetro.  
+ User-defined data. The default implementation does not use this parameter.  
   
-### <a name="return-value"></a>Valor devuelto  
- Identificador de la fuente que se utiliza para la celda actual.  
+### <a name="return-value"></a>Return Value  
+ A handle to the font that is used for the current cell.  
   
-### <a name="remarks"></a>Comentarios  
- De forma predeterminada, este método devuelve `NULL`. Todas las celdas de un control de lista tienen la misma fuente. Invalide este método para proporcionar distintas fuentes para celdas distintas.  
+### <a name="remarks"></a>Remarks  
+ By default, this method returns `NULL`. All of the cells in a list control have the same font. Override this method in order to provide different fonts for different cells.  
   
-##  <a name="ongetcelltextcolor"></a>CMFCListCtrl::OnGetCellTextColor  
- El marco de trabajo llama a este método cuando debe determinar el color del texto de una celda individual.  
+##  <a name="ongetcelltextcolor"></a>  CMFCListCtrl::OnGetCellTextColor  
+ The framework calls this method when it must determine the text color of an individual cell.  
   
 ```  
 virtual COLORREF OnGetCellTextColor(
@@ -244,35 +254,35 @@ virtual COLORREF OnGetCellTextColor(
     int nColumn);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  [in] `nRow`  
- La fila de la celda en cuestión.  
+ The row of the cell in question.  
   
  [in] `nColumn`  
- La columna de la celda en cuestión.  
+ The column of the cell in question.  
   
-### <a name="return-value"></a>Valor devuelto  
- Un `COLOREF` valor que especifica el color del texto de la celda.  
+### <a name="return-value"></a>Return Value  
+ A `COLOREF` value that specifies the text color of the cell.  
   
-### <a name="remarks"></a>Comentarios  
- De forma predeterminada, este método llama a `GetTextColor` , independientemente de los parámetros de entrada. El control de toda la lista tendrá el mismo color del texto. Puede invalidar `OnGetCellTextColor` en una clase derivada para marcar las celdas individuales con un color de texto independiente.  
+### <a name="remarks"></a>Remarks  
+ By default, this method calls `GetTextColor` regardless of input parameters. The whole list control will have the same text color. You can override `OnGetCellTextColor` in a derived class to mark individual cells with a separate text color.  
   
-##  <a name="removesortcolumn"></a>CMFCListCtrl::RemoveSortColumn  
- Quita una columna de ordenación de la lista de columnas ordenadas.  
+##  <a name="removesortcolumn"></a>  CMFCListCtrl::RemoveSortColumn  
+ Removes a sort column from the list of sorted columns.  
   
 ```  
 void RemoveSortColumn(int iColumn);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- La columna que se va a quitar.  
+ The column to remove.  
   
-### <a name="remarks"></a>Comentarios  
- Este método quita una columna de ordenación desde el control de encabezado. Llama a [CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn).  
+### <a name="remarks"></a>Remarks  
+ This method removes a sort column from the header control. It calls [CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn).  
   
-##  <a name="setsortcolumn"></a>CMFCListCtrl::SetSortColumn  
- Establece la columna ordenada actual y el criterio de ordenación.  
+##  <a name="setsortcolumn"></a>  CMFCListCtrl::SetSortColumn  
+ Sets the current sorted column and the sort order.  
   
 ```  
 void SetSortColumn(
@@ -281,21 +291,21 @@ void SetSortColumn(
     BOOL bAdd = FALSE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- La columna para ordenar.  
+ The column to sort.  
   
  [in] `bAscending`  
- Valor booleano que especifica el criterio de ordenación.  
+ A Boolean that specifies the sort order.  
   
  [in] `bAdd`  
- Un valor booleano que especifica si el método agrega la columna indicada por `iColumn` a la lista de columnas de ordenación.  
+ A Boolean that specifies whether the method adds the column indicated by `iColumn` to the list of sort columns.  
   
-### <a name="remarks"></a>Comentarios  
- Este método pasa los parámetros de entrada para el control de encabezado mediante el método [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
+### <a name="remarks"></a>Remarks  
+ This method passes the input parameters to the header control by using the method [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
   
-##  <a name="sort"></a>CMFCListCtrl::Sort  
- Ordena el control de lista.  
+##  <a name="sort"></a>  CMFCListCtrl::Sort  
+ Sorts the list control.  
   
 ```  
 virtual void Sort(
@@ -304,18 +314,18 @@ virtual void Sort(
     BOOL bAdd = FALSE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- La columna para ordenar.  
+ The column to sort.  
   
  [in] `bAscending`  
- Valor booleano que especifica el criterio de ordenación.  
+ A Boolean that specifies the sort order.  
   
  [in] `bAdd`  
- Un valor booleano que especifica si este método agrega la columna indicada por `iColumn` a la lista de columnas de ordenación.  
+ A Boolean that specifies whether this method adds the column indicated by `iColumn` to the list of sort columns.  
   
-## <a name="see-also"></a>Vea también  
- [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
- [Clases](../../mfc/reference/mfc-classes.md)   
- [CListCtrl (clase)](../../mfc/reference/clistctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CListCtrl Class](../../mfc/reference/clistctrl-class.md)
 

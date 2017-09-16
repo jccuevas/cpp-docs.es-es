@@ -1,44 +1,63 @@
 ---
-title: "Barras de cuadro de di&#225;logo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDialogBar (clase), barras de cuadro de diálogo"
-  - "barras de control, barras de cuadro de diálogo"
-  - "barras de cuadro de diálogo"
-  - "barras de cuadro de diálogo, acerca de las barras de cuadro de diálogo"
-  - "MFC, barras de control"
+title: Dialog Bars | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, control bars
+- CDialogBar class [MFC], dialog bars
+- control bars [MFC], dialog bars
+- dialog bars
+- dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Barras de cuadro de di&#225;logo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ae05404d6a2abae5f91f25b8a441565fab1af081
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Una barra de cuadro diálogo es una barra de herramientas, una clase de [barra de control](../mfc/control-bars.md) que puede contener cualquier tipo de control.  Porque tiene las características de un cuadro de diálogo no modal, un objeto de [CDialogBar](../mfc/reference/cdialogbar-class.md) proporciona una barra de herramientas más eficaz.  
+---
+# <a name="dialog-bars"></a>Dialog Bars
+A dialog bar is a toolbar, a kind of [control bar](../mfc/control-bars.md) that can contain any kind of control. Because it has the characteristics of a modeless dialog box, a [CDialogBar](../mfc/reference/cdialogbar-class.md) object provides a more powerful toolbar.  
   
- Hay varias diferencias clave entre una barra de herramientas y un objeto de `CDialogBar` .  Un objeto de `CDialogBar` se crea de un recurso de la diálogo\- plantilla, que puede crear con el editor de cuadros de diálogo de Visual C\+\+ y que puede contener cualquier tipo de control de Windows.  El usuario puede pestaña de control al control.  Y puede especificar un estilo de alineación para alinear la barra de cuadro diálogo con cualquier parte de la ventana de marco principal o incluso para dejarlo en contexto si cambian el tamaño al elemento primario.  La ilustración siguiente se muestra una barra de cuadro diálogo con diversos controles.  
+ There are several key differences between a toolbar and a `CDialogBar` object. A `CDialogBar` object is created from a dialog-template resource, which you can create with the Visual C++ dialog editor and which can contain any kind of Windows control. The user can tab from control to control. And you can specify an alignment style to align the dialog bar with any part of the parent frame window or even to leave it in place if the parent is resized. The following figure shows a dialog bar with a variety of controls.  
   
- ![Barra de cuadro de diálogo de VC](../mfc/media/vc378t1.png "vc378T1")  
-Una barra de cuadro de diálogo  
+ ![VC Dialog Bar](../mfc/media/vc378t1.gif "vc378t1")  
+A Dialog Bar  
   
- En otros aspectos, trabajar con un objeto de `CDialogBar` es como trabajar con un cuadro de diálogo no modal.  Utilice el editor de cuadros de diálogo para diseñar y crear el recurso de cuadro de diálogo.  
+ In other respects, working with a `CDialogBar` object is like working with a modeless dialog box. Use the dialog editor to design and create the dialog resource.  
   
- Una de las virtudes de barras de cuadro de diálogo es que pueden incluir controles distintos de los botones.  
+ One of the virtues of dialog bars is that they can include controls other than buttons.  
   
- Aunque es normal derivar dispone de clases de diálogo de `CDialog`, no deriva normalmente dispone de la clase para una barra de cuadro de diálogo.  Las barras de cuadro de diálogo son extensiones a una ventana principal y cualquier mensaje de la CONTROL\- notificación de la barra de cuadro de diálogo, como **BN\_CLICKED** o **EN\_CHANGE**, se enviará al elemento primario de la barra de cuadro de diálogo, la ventana principal.  
+ While it is normal to derive your own dialog classes from `CDialog`, you do not typically derive your own class for a dialog bar. Dialog bars are extensions to a main window and any dialog-bar control-notification messages, such as **BN_CLICKED** or **EN_CHANGE**, will be sent to the parent of the dialog bar, the main window.  
   
-## Vea también  
- [Elementos de la interfaz de usuario](../mfc/user-interface-elements-mfc.md)   
- [Ejemplo](../top/visual-cpp-samples.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Sample](../visual-cpp-samples.md)
+
+

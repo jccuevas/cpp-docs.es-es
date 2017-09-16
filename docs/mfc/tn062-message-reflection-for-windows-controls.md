@@ -1,177 +1,201 @@
 ---
-title: "TN062: Reflexi&#243;n de mensajes para controles de Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.controls.messages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reflexión de mensajes"
-  - "mensajes de notificación"
-  - "ON_CONTROL_REFLECT (macro)"
-  - "ON_CONTROL_REFLECT_EX (macro)"
-  - "ON_NOTIFY (mensaje)"
-  - "ON_NOTIFY_REFLECT (mensaje)"
-  - "ON_NOTIFY_REFLECT_EX (mensaje)"
-  - "ON_UPDATE_COMMAND_UI_REFLECT (macro)"
-  - "ON_WM_CHARTOITEM_REFLECT (macro)"
-  - "ON_WM_COMPAREITEM_REFLECT (macro)"
-  - "ON_WM_CTLCOLOR_REFLECT (macro)"
-  - "ON_WM_DELETEITEM_REFLECT (macro)"
-  - "ON_WM_DRAWITEM_REFLECT (macro)"
-  - "ON_WM_HSCROLL_REFLECT (macro)"
-  - "ON_WM_MEASUREITEM_REFLECT (macro)"
-  - "ON_WM_PARENTNOTIFY_REFLECT (macro)"
-  - "ON_WM_VKEYTOITEM_REFLECT (macro)"
-  - "ON_WM_VSCROLL_REFLECT (macro)"
-  - "TN062"
-  - "WM_COMMAND"
-  - "WM_CTLCOLOR (mensaje)"
-  - "WM_NOTIFY (mensaje)"
+title: 'TN062: Message Reflection for Windows Controls | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.controls.messages
+dev_langs:
+- C++
+helpviewer_keywords:
+- ON_WM_VKEYTOITEM_REFLECT macro [MFC]
+- ON_WM_DRAWITEM_REFLECT macro [MFC]
+- ON_WM_VSCROLL_REFLECT macro [MFC]
+- ON_NOTIFY_REFLECT message [MFC]
+- ON_CONTROL_REFLECT_EX macro [MFC]
+- ON_UPDATE_COMMAND_UI_REFLECT macro [MFC]
+- ON_NOTIFY_REFLECT_EX message [MFC]
+- ON_WM_HSCROLL_REFLECT macro [MFC]
+- message reflection [MFC]
+- ON_WM_COMPAREITEM_REFLECT macro [MFC]
+- ON_WM_MEASUREITEM_REFLECT macro [MFC]
+- ON_NOTIFY message [MFC]
+- WM_COMMAND [MFC]
+- WM_CTLCOLOR message [MFC]
+- TN062 [MFC]
+- ON_WM_CHARTOITEM_REFLECT macro [MFC]
+- ON_WM_CTLCOLOR_REFLECT macro [MFC]
+- ON_WM_DELETEITEM_REFLECT macro [MFC]
+- notification messages [MFC]
+- ON_WM_PARENTNOTIFY_REFLECT macro [MFC]
+- WM_NOTIFY message [MFC]
+- ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# TN062: Reflexi&#243;n de mensajes para controles de Windows
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7cc2af2bf3b5604f36d7c669f462c1293a51ac9f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn062-message-reflection-for-windows-controls"></a>TN062: Message Reflection for Windows Controls
 > [!NOTE]
->  La nota técnica siguiente no se ha actualizado desde que se incluyó por primera vez en la documentación en línea.  Como resultado, algunos procedimientos y temas podrían estar obsoletos o ser incorrectos.  Para obtener información más reciente, se recomienda buscar el tema de interés en el índice de la documentación en línea.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Esta nota técnica describe la reflexión de mensaje, una nueva característica de MFC 4,0.  También contiene instrucciones para crear un control reutilizable simple que usa la reflexión de mensaje.  
+ This technical note describes message reflection, a new feature in MFC 4.0. It also contains directions for creating a simple reusable control that uses message reflection.  
   
- Esta nota técnica no describe la reflexión de mensaje que se aplica a controles ActiveX \(antes denominados controles OLE\).  Vea el artículo [Controles ActiveX: Crear subclases de un Control de Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
+ This technical note does not discuss message reflection as it applies to ActiveX controls (formerly called OLE controls). Please see the article [ActiveX Controls: Subclassing a Windows Control](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
   
- **¿Cuál es la reflexión de mensaje?**  
+ **What Is Message Reflection**  
   
- Los controles de Windows con frecuencia envían mensajes de notificación a sus ventanas primarias.  Por ejemplo, muchos controles exponen un control el mensaje de notificación de color \(`WM_CTLCOLOR` o uno de sus variantes\) al elemento primario para permitir que el elemento primario proporcione un pincel para pintar el fondo del control.  
+ Windows controls frequently send notification messages to their parent windows. For instance, many controls send a control color notification message (`WM_CTLCOLOR` or one of its variants) to their parent to allow the parent to supply a brush for painting the background of the control.  
   
- En Windows y en MFC antes de la versión 4.0, la ventana primaria, a menudo un cuadro de diálogo, es responsable de administrar estos mensajes.  Esto significa que el código para administrar el mensaje debe estar en la clase de la ventana primaria y que tiene que ser duplicado en cada clase que necesite controlar este mensaje.  En el caso anterior, cada cuadro de diálogo que los controles deseados con fondos personalizados tendrían que controlar el mensaje de notificación de color del control.  Sería mucho más fácil reutilizar código si una clase de control podría escribirse que deben su propio color de fondo.  
+ In Windows and in MFC before version 4.0, the parent window, often a dialog box, is responsible for handling these messages. This means that the code for handling the message needs to be in the parent window's class and that it has to be duplicated in every class that needs to handle that message. In the case above, every dialog box that wanted controls with custom backgrounds would have to handle the control color notification message. It would be much easier to reuse code if a control class could be written that would handle its own background color.  
   
- En MFC 4,0, el otro mecanismo sigue funcionando — las ventanas principales pueden controlar mensajes de notificación.  Además, sin embargo, MFC 4,0 facilita la reutilización proporcionando una característica denominada “la reflexión de mensaje” que permite que estos mensajes de notificación se administran en la ventana de control secundario o la ventana primaria, o en ambos.  En el ejemplo del color de fondo del control, ahora puede escribir una clase de control que establezca su propio color de fondo controlando el mensaje reflejado de `WM_CTLCOLOR` — todo sin recurrir al elemento primario. \(Observe que desde la reflexión de mensaje es implementada por MFC, no por Windows, la clase de la ventana primaria debe derivarse de `CWnd` para que la reflexión de mensaje\).  
+ In MFC 4.0, the old mechanism still works — parent windows can handle notification messages. In addition, however, MFC 4.0 facilitates reuse by providing a feature called "message reflection" that allows these notification messages to be handled in either the child control window or the parent window, or in both. In the control background color example, you can now write a control class that sets its own background color by handling the reflected `WM_CTLCOLOR` message — all without relying on the parent. (Note that since message reflection is implemented by MFC, not by Windows, the parent window class must be derived from `CWnd` for message reflection to work.)  
   
- Las versiones anteriores de MFC se parece a la reflexión de mensaje mediante las funciones virtuales para algunos mensajes, como los mensajes para los cuadros de lista propietario\- dibujados \(`WM_DRAWITEM`, etc.\).  El nuevo mecanismo de reflexión de mensaje es general y coherente.  
+ Older versions of MFC did something similar to message reflection by providing virtual functions for a few messages, such as messages for owner-drawn list boxes (`WM_DRAWITEM`, and so on). The new message reflection mechanism is generalized and consistent.  
   
- La reflexión de mensaje es compatible con el código escrito para las versiones de MFC antes de 4,0.  
+ Message reflection is backward compatible with code written for versions of MFC before 4.0.  
   
- Si ha proporcionado un controlador para un mensaje concreto, o para un intervalo de mensajes, en la clase de la ventana primaria, reemplazará reflejado controladores de mensajes para el mismo mensaje le proporcionó no llama a la función de controlador de clases base en dispone el controlador.  Por ejemplo, si administra `WM_CTLCOLOR` en la del cuadro de diálogo, el control reemplazará cualquier controlador de mensajes reflejados.  
+ If you have supplied a handler for a specific message, or for a range of messages, in your parent window's class, it will override reflected message handlers for the same message provided you don't call the base class handler function in your own handler. For example, if you handle `WM_CTLCOLOR` in your dialog box class, your handling will override any reflected message handlers.  
   
- Si, en la clase de la ventana primaria, proporcione un controlador para un mensaje concreto de **WM\_NOTIFY** o un intervalo de los mensajes de **WM\_NOTIFY** , se llamará al controlador sólo si el control secundario que envía los mensajes no tiene un controlador de mensajes reflejados con **ON\_NOTIFY\_REFLECT\(\)**.  Si utiliza **ON\_NOTIFY\_REFLECT\_EX\(\)** en el mapa de mensajes, el controlador de mensajes puede o no puede permitir que la ventana principal controle el mensaje.  Si el controlador devuelve **FALSE**, el mensaje se controla el elemento primario también, mientras que una llamada que devuelve **VERDADERO** no permite que el elemento primario lo controle.  Observe que el mensaje reflejado se controla antes del mensaje de notificación.  
+ If, in your parent window class, you supply a handler for a specific **WM_NOTIFY** message or a range of **WM_NOTIFY** messages, your handler will be called only if the child control sending those messages does not have a reflected message handler through **ON_NOTIFY_REFLECT()**. If you use **ON_NOTIFY_REFLECT_EX()** in your message map, your message handler may or may not allow the parent window to handle the message. If the handler returns **FALSE**, the message will be handled by the parent as well, while a call that returns **TRUE** does not allow the parent to handle it. Note that the reflected message is handled before the notification message.  
   
- Cuando se envía un mensaje de **WM\_NOTIFY** , el control se proporciona la primera oportunidad de controlarla.  Si se envía otro mensaje reflejado, la ventana primaria tiene la primera oportunidad de controlarla y el control recibirá el mensaje reflejado.  Para ello, necesitará una función controladora y una entrada adecuada en el mapa de mensajes de la clase del control.  
+ When a **WM_NOTIFY** message is sent, the control is offered the first chance to handle it. If any other reflected message is sent, the parent window has the first chance to handle it and the control will receive the reflected message. To do so, it will need a handler function and an appropriate entry in the control's class message map.  
   
- La macro de mensaje\- mapa para los mensajes reflejados es ligeramente diferente que para las notificaciones regulares: tiene **\_REFLECT** anexado al nombre habitual.  Por ejemplo, para controlar un mensaje de **WM\_NOTIFY** en el elemento primario, se utiliza `ON_NOTIFY` macro en el mapa de mensajes del elemento primario.  Para controlar el mensaje reflejado en el control secundario, utilice la macro de **ON\_NOTIFY\_REFLECT** en el mapa de mensajes del control secundario.  En algunos casos, los parámetros son diferentes, también.  Observe que ClassWizard puede agregar las entradas de mensaje\- mapa para usted y proporcionar normalmente esquemáticas implementaciones de función con parámetros correctos.  
+ The message-map macro for reflected messages is slightly different than for regular notifications: it has **_REFLECT** appended to its usual name. For instance, to handle a **WM_NOTIFY** message in the parent, you use the macro `ON_NOTIFY` in the parent's message map. To handle the reflected message in the child control, use the **ON_NOTIFY_REFLECT** macro in the child control's message map. In some cases, the parameters are different, as well. Note that ClassWizard can usually add the message-map entries for you and provide skeleton function implementations with correct parameters.  
   
- Vea [TN061: Mensajes de ON\_NOTIFY y de WM\_NOTIFY](../mfc/tn061-on-notify-and-wm-notify-messages.md) para la información en el nuevo mensaje de **WM\_NOTIFY** .  
+ See [TN061: ON_NOTIFY and WM_NOTIFY Messages](../mfc/tn061-on-notify-and-wm-notify-messages.md) for information on the new **WM_NOTIFY** message.  
   
- **Entradas de Mensaje\- mapa y función Prototipos de controlador de mensajes reflejados**  
+ **Message-Map Entries and Handler Function Prototypes for Reflected Messages**  
   
- Para controlar un mensaje de notificación reflejado de control, use las macros de mensaje\- mapa y los prototipos de función enumerados en la tabla siguiente.  
+ To handle a reflected control notification message, use the message-map macros and function prototypes listed in the table below.  
   
- Pero puede agregar estas entradas de mensaje\- mapa para usted y proporcionar normalmente esquemáticas implementaciones de la función.  Vea [Definir un controlador de mensajes para un mensaje reflejados](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md) para obtener información sobre cómo definir los controladores de los mensajes reflejados.  
+ ClassWizard can usually add these message-map entries for you and provide skeleton function implementations. See [Defining a Message Handler for a Reflected Message](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md) for information about how to define handlers for reflected messages.  
   
- Para convertir el nombre del mensaje al nombre de la macro reflejado, anteponga **ON\_** y anexe **\_REFLECT**.  Por ejemplo, `WM_CTLCOLOR` se convierte en **ON\_WM\_CTLCOLOR\_REFLECT**. \(Para ver qué mensajes pueden ser reflejados, haga la conversión opuesta en las entradas de macro en la tabla siguiente\).  
+ To convert from the message name to the reflected macro name, prepend **ON_** and append **_REFLECT**. For example, `WM_CTLCOLOR` becomes **ON_WM_CTLCOLOR_REFLECT**. (To see which messages can be reflected, do the opposite conversion on the macro entries in the table below.)  
   
- Las tres excepciones a la regla anterior son los siguientes:  
+ The three exceptions to the rule above are as follows:  
   
--   La macro para las notificaciones de **WM\_COMMAND** es **ON\_CONTROL\_REFLECT**.  
+-   The macro for **WM_COMMAND** notifications is **ON_CONTROL_REFLECT**.  
   
--   La macro para las reflexiones de **WM\_NOTIFY** es **ON\_NOTIFY\_REFLECT**.  
+-   The macro for **WM_NOTIFY** reflections is **ON_NOTIFY_REFLECT**.  
   
--   La macro para las reflexiones de `ON_UPDATE_COMMAND_UI` es **ON\_UPDATE\_COMMAND\_UI\_REFLECT**.  
+-   The macro for `ON_UPDATE_COMMAND_UI` reflections is **ON_UPDATE_COMMAND_UI_REFLECT**.  
   
- En cada uno de los casos especiales anteriores, debe especificar el nombre de la función miembro de controlador.  En otros casos, debe usar el nombre estándar para la función controladora.  
+ In each of the above special cases, you must specify the name of the handler member function. In the other cases, you must use the standard name for your handler function.  
   
- El significado de los parámetros y valores devueltos de funciones se documentan en o nombre de función o el nombre de función con **Activado** work item.  Por ejemplo, **CtlColor** se documenta en `OnCtlColor`.  Varios controladores de mensajes reflejados necesitan menos parámetros que los controladores similares en una ventana primaria.  Solo coinciden con los nombres en la tabla siguiente con los nombres de los parámetros formales de la documentación.  
+ The meanings of the parameters and return values of the functions are documented under either the function name or the function name with **On** prepended. For instance, **CtlColor** is documented in `OnCtlColor`. Several reflected message handlers need fewer parameters than the similar handlers in a parent window. Just match the names in the table below with the names of the formal parameters in the documentation.  
   
-|Entrada de asignación|Prototipo de función|  
-|---------------------------|--------------------------|  
-|**ON\_CONTROL\_REFLECT\(**  `wNotifyCode` **,**  `memberFxn`  **\)**|**afx\_msg void**  `memberFxn`  **\( \);**|  
-|**ON\_NOTIFY\_REFLECT\(**  `wNotifyCode` **,**  `memberFxn`  **\)**|*resultado*\);de**afx\_msg void** `memberFxn` **\( NMHDR \*** `pNotifyStruct`**, LRESULT\***|  
-|**ON\_UPDATE\_COMMAND\_UI\_REFLECT\(**  `memberFxn`  **\)**|**afx\_msg void**  `memberFxn`  **\( CCmdUI\***  `pCmdUI`  **\);**|  
-|**ON\_WM\_CTLCOLOR\_REFLECT \(\)**|**afx\_msg HBRUSH CtlColor \( CDC\***  `pDC` **, UINT**  `nCtlColor`  **\);**|  
-|**ON\_WM\_DRAWITEM\_REFLECT \(\)**|**afx\_msg void DrawItem \( LPDRAWITEMSTRUCT**  `lpDrawItemStruct`  **\);**|  
-|**ON\_WM\_MEASUREITEM\_REFLECT \(\)**|**afx\_msg void MeasureItem \( LPMEASUREITEMSTRUCT**  `lpMeasureItemStruct`  **\);**|  
-|**ON\_WM\_DELETEITEM\_REFLECT \(\)**|**afx\_msg void DeleteItem \( LPDELETEITEMSTRUCT**  `lpDeleteItemStruct`  **\);**|  
-|**ON\_WM\_COMPAREITEM\_REFLECT \(\)**|**afx\_msg int CompareItem \( LPCOMPAREITEMSTRUCT**  `lpCompareItemStruct`  **\);**|  
-|**ON\_WM\_CHARTOITEM\_REFLECT \(\)**|**afx\_msg int CharToItem \( UINT**  `nKey` **, UINT**  `nIndex`  **\);**|  
-|**ON\_WM\_VKEYTOITEM\_REFLECT \(\)**|**afx\_msg int VKeyToItem \( UINT**  `nKey` **, UINT**  `nIndex`  **\);**|  
-|**ON\_WM\_HSCROLL\_REFLECT \(\)**|**afx\_msg void HScroll \( UINT**  `nSBCode` **, UINT**  `nPos`  **\);**|  
-|**ON\_WM\_VSCROLL\_REFLECT \(\)**|**afx\_msg void VScroll \( UINT**  `nSBCode` **, UINT**  `nPos`  **\);**|  
-|**ON\_WM\_PARENTNOTIFY\_REFLECT \(\)**|**afx\_msg void ParentNotify \( UINT**  `message` **, LPARAM**  `lParam`  **\);**|  
+|Map entry|Function prototype|  
+|---------------|------------------------|  
+|**ON_CONTROL_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( );**|  
+|**ON_NOTIFY_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( NMHDR \*** `pNotifyStruct` **, LRESULT\*** *result* **);**|  
+|**ON_UPDATE_COMMAND_UI_REFLECT(** `memberFxn` **)**|**afx_msg void** `memberFxn` **( CCmdUI\*** `pCmdUI` **);**|  
+|**ON_WM_CTLCOLOR_REFLECT( )**|**afx_msg HBRUSH CtlColor ( CDC\*** `pDC` **, UINT** `nCtlColor` **);**|  
+|**ON_WM_DRAWITEM_REFLECT( )**|**afx_msg void DrawItem ( LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|  
+|**ON_WM_MEASUREITEM_REFLECT( )**|**afx_msg void MeasureItem ( LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|  
+|**ON_WM_DELETEITEM_REFLECT( )**|**afx_msg void DeleteItem ( LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|  
+|**ON_WM_COMPAREITEM_REFLECT( )**|**afx_msg int CompareItem ( LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|  
+|**ON_WM_CHARTOITEM_REFLECT( )**|**afx_msg int CharToItem ( UINT** `nKey` **, UINT** `nIndex` **);**|  
+|**ON_WM_VKEYTOITEM_REFLECT( )**|**afx_msg int VKeyToItem ( UINT** `nKey` **, UINT** `nIndex` **);**|  
+|**ON_WM_HSCROLL_REFLECT( )**|**afx_msg void HScroll ( UINT** `nSBCode` **, UINT** `nPos` **);**|  
+|**ON_WM_VSCROLL_REFLECT( )**|**afx_msg void VScroll ( UINT** `nSBCode` **, UINT** `nPos` **);**|  
+|**ON_WM_PARENTNOTIFY_REFLECT( )**|**afx_msg void ParentNotify ( UINT** `message` **, LPARAM** `lParam` **);**|  
   
- Las macros de **ON\_NOTIFY\_REFLECT** y de **ON\_CONTROL\_REFLECT** tienen variaciones que permiten que más de un objeto \(como el control y su elemento primario\) administre un mensaje determinado.  
+ The **ON_NOTIFY_REFLECT** and **ON_CONTROL_REFLECT** macros have variations that allow more than one object (such as the control and its parent) to handle a given message.  
   
-|Entrada de asignación|Prototipo de función|  
-|---------------------------|--------------------------|  
-|**ON\_NOTIFY\_REFLECT\_EX\(**  `wNotifyCode` **,**  `memberFxn`  **\)**|*resultado*\);de**afx\_msg BOOL** `memberFxn` **\( NMHDR \*** `pNotifyStruct`**, LRESULT\***|  
-|**ON\_CONTROL\_REFLECT\_EX\(**  `wNotifyCode` **,**  `memberFxn`  **\)**|**afx\_msg BOOL**  `memberFxn`  **\( \);**|  
+|Map entry|Function prototype|  
+|---------------|------------------------|  
+|**ON_NOTIFY_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( NMHDR \*** `pNotifyStruct` **, LRESULT\*** *result* **);**|  
+|**ON_CONTROL_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( );**|  
   
-## Administrar mensajes reflejados: Un ejemplo de control de Flujo  
- Este sencillo ejemplo crea un control reutilizable denominado `CYellowEdit`.  El control funciona igual que un control de edición normal sólo que muestra el texto negro sobre fondo amarillo.  Sería fácil agregar las funciones miembro que permitirían que el control de `CYellowEdit` presentara diferentes colores.  
+## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Handling Reflected Messages: An Example of a Reusable control  
+ This simple example creates a reusable control called `CYellowEdit`. The control works the same as a regular edit control except that it displays black text on a yellow background. It would be easy to add member functions that would allow the `CYellowEdit` control to display different colors.  
   
-#### Para probar el ejemplo que crea un control reutilizable  
+#### <a name="to-try-the-example-that-creates-a-reusable-control"></a>To try the example that creates a reusable control  
   
-1.  Cree un nuevo cuadro de diálogo en una aplicación existente.  Para obtener más información, vea el tema de [editor de cuadros de diálogo](../mfc/dialog-editor.md) .  
+1.  Create a new dialog box in an existing application. For more information, see the [dialog editor](../windows/dialog-editor.md) topic.  
   
-     Debe tener una aplicación en la que desarrollar el control reutilizable.  Si no tiene una aplicación existente que utilizar, cree una aplicación diálogo\- basada mediante AppWizard.  
+     You must have an application in which to develop the reusable control. If you don't have an existing application to use, create a dialog-based application using AppWizard.  
   
-2.  Con el proyecto cargado en Visual C\+\+, utilice ClassWizard para crear una nueva clase denominada `CYellowEdit` basado en `CEdit`.  
+2.  With your project loaded into Visual C++, use ClassWizard to create a new class called `CYellowEdit` based on `CEdit`.  
   
-3.  Agregue las variables con tres miembros a la clase de `CYellowEdit` .  Los dos primeros se variables de **COLORREF** para contener el color del texto y el color de fondo.  El tercero será un objeto de `CBrush` que contendrá el pincel para pintar el fondo.  El objeto de `CBrush` permite crear el pincel una vez, simplemente haga referencia después de éste, y que destruya el pincel automáticamente cuando se destruye el control de `CYellowEdit` .  
+3.  Add three member variables to your `CYellowEdit` class. The first two will be **COLORREF** variables to hold the text color and the background color. The third will be a `CBrush` object that will hold the brush for painting the background. The `CBrush` object allows you to create the brush once, merely referencing it after that, and to destroy the brush automatically when the `CYellowEdit` control is destroyed.  
   
-4.  Inicialice las variables miembro escribiendo el constructor como sigue:  
+4.  Initialize the member variables by writing the constructor as follows:  
   
-    ```  
-    CYellowEdit::CYellowEdit()  
-    {  
-       m_clrText = RGB( 0, 0, 0 );  
-       m_clrBkgnd = RGB( 255, 255, 0 );  
-       m_brBkgnd.CreateSolidBrush( m_clrBkgnd );  
-    }  
-    ```  
+ ```  
+    CYellowEdit::CYellowEdit() 
+ {  
+    m_clrText = RGB(0,
+    0,
+    0);
+
+    m_clrBkgnd = RGB(255,
+    255,
+    0);
+
+    m_brBkgnd.CreateSolidBrush(m_clrBkgnd);
+
+ }  
+ ```  
   
-5.  Mediante ClassWizard, agregue un controlador para el mensaje reflejado de `WM_CTLCOLOR` a la clase de `CYellowEdit` .  Observe que el signo igual delante del nombre del mensaje en la lista de mensajes que puede controlar indica que el mensaje se refleja.  Esto se describe en [Definir un controlador de mensajes para un mensaje reflejados](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).  
+5.  Using ClassWizard, add a handler for the reflected `WM_CTLCOLOR` message to your `CYellowEdit` class. Note that the equal sign in front of the message name in the list of messages you can handle indicates that the message is reflected. This is described in [Defining a Message Handler for a Reflected Message](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).  
   
-     ClassWizard agrega la siguiente macro de mensaje\- mapa y la función esquemática automáticamente:  
+     ClassWizard adds the following message-map macro and skeleton function for you:  
   
-    ```  
-    ON_WM_CTLCOLOR_REFLECT()  
-  
-    // Note: other code will be in between....  
-  
+ ```  
+    ON_WM_CTLCOLOR_REFLECT() 
+ *// Note: other code will be in between....  
+ 
     HBRUSH CYellowEdit::CtlColor(CDC* pDC, UINT nCtlColor)   
-    {  
-       // TODO: Change any attributes of the DC here  
+ { *// TODO: Change any attributes of the DC here  
+ *// TODO: Return a non-NULL brush if the *//   parent's handler should not be called  
+    return NULL;  
+ }  
+ ```  
   
-       // TODO: Return a non-NULL brush if the  
-       //   parent's handler should not be called  
-       return NULL;  
-    }  
-    ```  
+6.  Replace the body of the function with the following code. The code specifies the text color, the text background color, and the background color for rest of the control.  
   
-6.  Reemplace el cuerpo de la función con el código siguiente.  El código especifica el color del texto, el color de fondo del texto, y el color de fondo para el resto del control.  
-  
-    ```  
-    pDC->SetTextColor( m_clrText );   // text  
-    pDC->SetBkColor( m_clrBkgnd );   // text bkgnd  
+ ```  
+    pDC->SetTextColor(m_clrText);
+*// text  
+    pDC->SetBkColor(m_clrBkgnd);
+*// text bkgnd  
     return m_brBkgnd;            // ctl bkgnd  
-    ```  
+ ```  
   
-7.  Cree un control de edición en el cuadro de diálogo, asócielo a una variable miembro doble\- haciendo clic en el control de edición mientras mantiene una clave de control siguiente.  En el cuadro de diálogo de variable miembro add, finalice el nombre de variable y elija la “Control” para la categoría, después “CYellowEdit” para el tipo de la variable.  No olvide establecer la tabulación en el cuadro de diálogo.  Además, asegúrese de incluir el archivo de encabezado para el control de `CYellowEdit` en el archivo de encabezado del cuadro de diálogo.  
+7.  Create an edit control in your dialog box, then attach it to a member variable by double-clicking the edit control while holding a control key down. In the Add Member Variable dialog box, finish the variable name and choose "Control" for the category, then "CYellowEdit" for the variable type. Don't forget to set the tab order in the dialog box. Also, be sure to include the header file for the `CYellowEdit` control in your dialog box's header file.  
   
-8.  Compile y ejecute su aplicación.  El control de edición tendrá un fondo amarillo.  
+8.  Build and run your application. The edit control will have a yellow background.  
   
-## Vea también  
- [Notas técnicas por número](../mfc/technical-notes-by-number.md)   
- [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

@@ -1,63 +1,82 @@
 ---
-title: "Implementaci&#243;n de barra de estado en MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COldStatusBar"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COldStatusBar (clase)"
-  - "CStatusBar (clase), y CStatusBarCtrl (clase)"
-  - "CStatusBar (clase), y barras de estado MFC"
-  - "CStatusBarCtrl (clase), y CStatusBar (clase)"
-  - "CStatusBarCtrl (clase), y barras de estado MFC"
-  - "barras de estado, y CStatusBarCtrl (clase)"
-  - "barras de estado, compatibilidad con versiones anteriores"
-  - "barras de estado, implementar en MFC"
-  - "barras de estado, antiguas con la clase COldStatusBar"
-  - "barras de estado, implementación de Windows 95"
-  - "indicadores de estado"
+title: Status Bar Implementation in MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- COldStatusBar
+dev_langs:
+- C++
+helpviewer_keywords:
+- status bars [MFC], implementing in MFC
+- CStatusBarCtrl class [MFC], and MFC status bars
+- CStatusBar class [MFC], and CStatusBarCtrl class [MFC]
+- CStatusBarCtrl class [MFC], and CStatusBar class [MFC]
+- status bars [MFC], backward compatibility
+- status bars [MFC], old with COldStatusBar class [MFC]
+- COldStatusBar class [MFC]
+- status bars [MFC], and CStatusBarCtrl class
+- CStatusBar class [MFC], and MFC status bars
+- status indicators
+- status bars [MFC], Windows 95 implementation
 ms.assetid: be5cd876-38e3-4d5c-b8cb-16d57a16a142
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Implementaci&#243;n de barra de estado en MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1cd1fcd13a99451cc81bdd48d0a7a0f90cbc2c7c
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Un objeto de [CStatusBar](../mfc/reference/cstatusbar-class.md) es una barra de controles con una fila de paneles de resultados de texto.  Los paneles de salida se utilizan como líneas de mensajes como indicadores de estado.  Los ejemplos incluyen las líneas de AYUDA\- mensaje de menú que explican brevemente el comando de menú seleccionado y los indicadores que muestran el estado de BLOQ DESPL, de BLOQ NUM, y otras claves.  
+---
+# <a name="status-bar-implementation-in-mfc"></a>Status Bar Implementation in MFC
+A [CStatusBar](../mfc/reference/cstatusbar-class.md) object is a control bar with a row of text output panes. The output panes are commonly used as message lines and as status indicators. Examples include the menu help-message lines that briefly explain the selected menu command and the indicators that show the status of the SCROLL LOCK, NUM LOCK, and other keys.  
   
- A partir de la versión 4.0 de MFC, barras de estado se implementan mediante la clase [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), que encapsula un control común de barra de estado.  Por compatibilidad con versiones anteriores, MFC conserva la más antigua implementación de barra de estado en la clase **COldStatusBar**.  La documentación para versiones anteriores de MFC describe **COldStatusBar** en `CStatusBar`.  
+ As of MFC version 4.0, status bars are implemented using class [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), which encapsulates a status bar common control. For backward compatibility, MFC retains the older status bar implementation in class **COldStatusBar**. The documentation for earlier versions of MFC describes **COldStatusBar** under `CStatusBar`.  
   
- [CStatusBar::GetStatusBarCtrl](../Topic/CStatusBar::GetStatusBarCtrl.md), una función miembro nueva a MFC 4,0, permite aprovechar las ventajas de la compatibilidad de controles comunes de Windows para la personalización y la funcionalidad adicional de la barra de estado.  las funciones miembro de`CStatusBar` ofrecen la mayor parte de la funcionalidad de los controles comunes de Windows; sin embargo, cuando se llama a `GetStatusBarCtrl`, puede proporcionar a barras de estado aun más de las características de una barra de estado.  Cuando se llama a `GetStatusBarCtrl`, devolverá una referencia a un objeto de `CStatusBarCtrl` .  Puede utilizar esa referencia para manipular el control de barra de estado.  
+ [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), a member function new to MFC 4.0, allows you to take advantage of the Windows common control's support for status bar customization and additional functionality. `CStatusBar` member functions give you most of the functionality of the Windows common controls; however, when you call `GetStatusBarCtrl`, you can give your status bars even more of the characteristics of a status bar. When you call `GetStatusBarCtrl`, it will return a reference to a `CStatusBarCtrl` object. You can use that reference to manipulate the status bar control.  
   
- La ilustración siguiente se muestra una barra de estado que muestra varios marcadores.  
+ The following figure shows a status bar that displays several indicators.  
   
- ![Barra de estado](../mfc/media/vc37dy1.png "vc37DY1")  
-Una barra de estado  
+ ![Status bar](../mfc/media/vc37dy1.gif "vc37dy1")  
+A Status Bar  
   
- Como la barra de herramientas, el objeto de la barra de estado se inserta en la ventana de marco principal y se crea automáticamente cuando se construye la ventana de marco.  La barra de estado, como todas las barras de controles, se destruye automáticamente también cuando se destruye el cuadro primario.  
+ Like the toolbar, the status-bar object is embedded in its parent frame window and is constructed automatically when the frame window is constructed. The status bar, like all control bars, is destroyed automatically as well when the parent frame is destroyed.  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Actualizar el texto de un panel de barra de estado](../mfc/updating-the-text-of-a-status-bar-pane.md)  
+-   [Updating the text of a status bar pane](../mfc/updating-the-text-of-a-status-bar-pane.md)  
   
--   Clases MFC [CStatusBar](../mfc/reference/cstatusbar-class.md) y [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)  
+-   MFC classes [CStatusBar](../mfc/reference/cstatusbar-class.md) and [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)  
   
--   [Barras de controles](../mfc/control-bars.md)  
+-   [Control bars](../mfc/control-bars.md)  
   
--   [Barras de cuadro de diálogo](../mfc/dialog-bars.md)  
+-   [Dialog bars](../mfc/dialog-bars.md)  
   
--   [Barras de herramientas \(implementación de barra de herramientas de MFC\)](../mfc/mfc-toolbar-implementation.md)  
+-   [Toolbars (MFC Toolbar Implementation)](../mfc/mfc-toolbar-implementation.md)  
   
-## Vea también  
- [Barras de estado](../mfc/status-bars.md)
+## <a name="see-also"></a>See Also  
+ [Status Bars](../mfc/status-bars.md)
+
+

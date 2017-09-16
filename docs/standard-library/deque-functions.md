@@ -1,5 +1,5 @@
 ---
-title: '&lt;deque&gt; (Funciones) | Microsoft Docs'
+title: '&lt;deque&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,20 +13,20 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 5cccff749b58c7e229068ebedf9e8b3c6984114c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 13e8632452c4fb76503f3ad489b155b0d58e9056
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltdequegt-functions"></a>&lt;deque&gt; (Funciones)
+# <a name="ltdequegt-functions"></a>&lt;deque&gt; functions
 ||  
 |-|  
 |[swap](#swap)|  
   
 ##  <a name="swap"></a>  swap  
- Intercambia los elementos de dos deques.  
+ Exchanges the elements of two deques.  
   
 ```
 void swap(
@@ -34,17 +34,17 @@ void swap(
     deque<Type, Allocator>& right,);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Objeto de tipo `deque`.  
+ An object of type `deque`.  
   
  `right`  
- Objeto de tipo `deque`.  
+ An object of type `deque`.  
   
-### <a name="example"></a>Ejemplo  
- Vea el ejemplo de [deque::swap](../standard-library/deque-class.md#swap).  
+### <a name="example"></a>Example  
+ See the example for [deque::swap](../standard-library/deque-class.md#swap).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [\<deque>](../standard-library/deque.md)
 
 

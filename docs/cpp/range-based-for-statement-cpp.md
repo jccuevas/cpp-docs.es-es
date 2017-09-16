@@ -1,43 +1,60 @@
 ---
-title: "Instrucci&#243;n for basada en intervalo (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Range-based for Statement (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
 caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Instrucci&#243;n for basada en intervalo (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: bc7fe69f815a1a1b10f36ef10b5f6f0c62811778
+ms.contentlocale: es-es
+ms.lasthandoff: 09/11/2017
 
-Ejecuta `statement` de forma repetida y secuencial para cada elemento de `expression`.  
+---
+# <a name="range-based-for-statement-c"></a>Range-based for Statement (C++)
+Executes `statement` repeatedly and sequentially for each element in `expression`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
       for ( for-range-declaration : expression )  
-   statement   
+   statement   
 ```  
   
-## Comentarios  
- Utilice la instrucción `for` basada en intervalo para construir los bucles que se deben ejecutar a lo largo de un "intervalo", que se define como cualquier elemento que se puede recorrer en iteración; por ejemplo, `std::vector`, o cualquier otra secuencia de STL cuyo intervalo esté definido por `begin()` y `end()`.  El nombre que se declara en la parte `for-range-declaration` es local de la instrucción `for` y no se puede volver a declarar en `expression` o `statement`.  Tenga en cuenta que es preferible utilizar la palabra clave [auto](../cpp/auto-cpp.md) en la parte `for-range-declaration` de la instrucción.  
+## <a name="remarks"></a>Remarks  
+ Use the range-based `for` statement to construct loops that must execute through a "range", which is defined as anything that you can iterate through—for example, `std::vector`, or any other C++ Standard Library sequence whose range is defined by a `begin()` and `end()`. The name that is declared in the `for-range-declaration` portion is local to the `for` statement and cannot be re-declared in `expression` or `statement`. Note that the [auto](../cpp/auto-cpp.md) keyword is preferred in the `for-range-declaration` portion of the statement. 
+
+ **New in Visual Studio 2017:**  Range-based for loops no longer require that begin() and end() return objects of the same type. This enables end() to return a sentinel object such as used by ranges as defined in the Ranges-V3 proposal. For more information, see [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) and the [range-v3 library on GitHub](https://github.com/ericniebler/range-v3).
   
- En este código se muestra cómo utilizar bucles `for` con intervalos para recorrer en iteración una matriz y un vector:  
+ This code shows how to use range-based `for` loops to iterate through an array and a vector:  
   
 ```cpp  
-  
 // range-based-for.cpp  
 // compile by using: cl /EHsc /nologo /W4  
 #include <iostream>  
@@ -69,7 +86,7 @@ int main()
     }  
     cout << endl;  
   
-    for( const auto &y : x ) { // Type inference by reference.  
+    for( const auto &y : x ) { // Type inference by const reference.  
         // Observes in-place. Preferred when no modify is needed.  
         cout << y << " ";  
     }  
@@ -93,7 +110,7 @@ int main()
   
 ```  
   
- Este es el resultado:  
+ Here is the output:  
   
  `1 2 3 4 5 6 7 8 9 10`  
   
@@ -109,20 +126,20 @@ int main()
   
  `end of vector test`  
   
- Un bucle `for` basado en intervalo finaliza cuando se ejecuta uno de estos elementos en `statement`: [break](../cpp/break-statement-cpp.md), [return](../cpp/return-statement-cpp.md) o [goto](../cpp/goto-statement-cpp.md) a una instrucción con etiqueta fuera del bucle **for** basado en intervalo.  Una instrucción [continue](../cpp/continue-statement-cpp.md) en un bucle `for` basado en intervalo solo finaliza la iteración actual.  
+ A range-based `for` loop terminates when one of these in `statement` is executed: a [break](../cpp/break-statement-cpp.md), [return](../cpp/return-statement-cpp.md), or [goto](../cpp/goto-statement-cpp.md) to a labeled statement outside the range-based **for** loop. A [continue](../cpp/continue-statement-cpp.md) statement in a range-based `for` loop terminates only the current iteration.  
   
- Tenga en cuenta lo siguiente sobre la instrucción `for` basada en intervalo:  
+ Keep in mind these facts about range-based `for`:  
   
--   Reconoce automáticamente las matrices.  
+-   Automatically recognizes arrays.  
   
--   Reconoce los contenedores que tienen `.begin()` y `.end()`.  
+-   Recognizes containers that have `.begin()` and `.end()`.  
   
--   Utiliza la búsqueda dependiente de argumentos `begin()` y `end()` para todo lo demás.  
+-   Uses argument-dependent lookup `begin()` and `end()` for anything else.  
   
-## Vea también  
+## <a name="see-also"></a>See Also  
  [auto](../cpp/auto-cpp.md)   
- [Instrucciones de iteración](../cpp/iteration-statements-cpp.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)   
- [while \(Instrucción\) \(C\+\+\)](../cpp/while-statement-cpp.md)   
- [do\-while \(instrucción de C\+\+\)](../cpp/do-while-statement-cpp.md)   
- [for \(Instrucción\) \(C\+\+\)](../cpp/for-statement-cpp.md)
+ [Iteration Statements](../cpp/iteration-statements-cpp.md)   
+ [Keywords](../cpp/keywords-cpp.md)   
+ [while Statement (C++)](../cpp/while-statement-cpp.md)   
+ [do-while Statement (C++)](../cpp/do-while-statement-cpp.md)   
+ [for Statement (C++)](../cpp/for-statement-cpp.md)

@@ -1,46 +1,65 @@
 ---
-title: "Contenedores | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicaciones de contenedor [C++]"
-  - "contenedores [C++]"
-  - "contenedores [C++], aplicaciones de contenedor"
-  - "contenedores [C++], aplicaciones de contenedor OLE"
-  - "contenedores OLE"
+title: Containers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- containers [MFC]
+- OLE containers
+- application containers [MFC]
+- containers [MFC], OLE container applications
+- containers [MFC], container applications
 ms.assetid: b19d7c05-4d02-44bd-b76a-4a6c25994a62
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Contenedores
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c8d7fce817920b9e11d4c6cf95d952522aed0371
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Una aplicación contenedora es una aplicación que puede escribir incrustado o elementos vinculados en solitario documentan.  Los documentos administrados por una aplicación contenedora deben poder almacenar y mostrar los componentes de OLE así como datos de documento compuesto creados por la propia aplicación.  Una aplicación contenedora también debe permitir que los usuarios inserten nuevos elementos o elementos existentes de edición.  
+---
+# <a name="containers"></a>Containers
+A container application is an application that can incorporate embedded or linked items into its own documents. The documents managed by a container application must be able to store and display OLE compound document components as well as data created by the application itself. A container application must also allow users to insert new items or edit existing items.  
   
-## En esta sección  
- [Implemente un contenedor](../mfc/containers-implementing-a-container.md)  
+## <a name="in-this-section"></a>In This Section  
+ [Implement a Container](../mfc/containers-implementing-a-container.md)  
   
- [Elementos del contenedor](../mfc/containers-client-items.md)  
+ [Container Client Items](../mfc/containers-client-items.md)  
   
- [Archivos compuestos de uso](../mfc/containers-compound-files.md)  
+ [Use Compound Files](../mfc/containers-compound-files.md)  
   
- [Problemas de la interfaz de usuario del contenedor](../mfc/containers-user-interface-issues.md)  
+ [Container User-Interface Issues](../mfc/containers-user-interface-issues.md)  
   
- [Características avanzadas de contenedores](../mfc/containers-advanced-features.md)  
+ [Advanced Features of Containers](../mfc/containers-advanced-features.md)  
   
-## Vea también  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
- [Servidores](../mfc/servers.md)   
- [Activación](../mfc/activation-cpp.md)   
- [Menús y recursos \(OLE\)](../mfc/menus-and-resources-ole.md)
+ [Servers](../mfc/servers.md)   
+ [Activation](../mfc/activation-cpp.md)   
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)
+
+

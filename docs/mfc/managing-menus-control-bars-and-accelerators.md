@@ -1,51 +1,70 @@
 ---
-title: "Administrar men&#250;s, barras de control y aceleradores | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tablas de aceleradores [C++]"
-  - "barras de control, actualizar en ventanas de marco"
-  - "ventanas de marco, actualizar"
-  - "MDI, ventanas de marco"
-  - "menús, actualizar cuando el contexto cambia"
-  - "compartir menús"
-  - "barras de estado, actualizar"
-  - "actualizar objetos de la interfaz de usuario"
-  - "objetos de interfaz de usuario, actualizar"
+title: Managing Menus, Control Bars, and Accelerators | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MDI [MFC], frame windows
+- control bars [MFC], updating in frame windows
+- menus [MFC], updating as context changes
+- user interface objects [MFC], updating
+- accelerator tables [MFC]
+- sharing menus [MFC]
+- updating user-interface objects [MFC]
+- frame windows [MFC], updating
+- status bars [MFC], updating
 ms.assetid: 97ca1997-06df-4373-b023-4f7ecd81047b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Administrar men&#250;s, barras de control y aceleradores
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2db732e8acd62ffea6f3acb472b78651366bc99e
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La ventana de marco administra actualizar objetos de interfaz de usuario, como menús, botones de la barra de herramientas, la barra de estado, y los aceleradores.  También administra compartir la barra de menús en las aplicaciones MDI.  
+---
+# <a name="managing-menus-control-bars-and-accelerators"></a>Managing Menus, Control Bars, and Accelerators
+The frame window manages updating user-interface objects, including menus, toolbar buttons, the status bar, and accelerators. It also manages sharing the menu bar in MDI applications.  
   
-## Administrar menús  
- La ventana de marco participa en actualizar los elementos de la interfaz de usuario utilizando el mecanismo de `ON_UPDATE_COMMAND_UI` descrito en [Cómo actualizar objetos de la Usuario\-interfaz](../mfc/how-to-update-user-interface-objects.md).  Los botones de las barras de herramientas y otras barras de control se actualizan durante el bucle inactivo.  Los elementos de menú en menús desplegables en la barra de menús se actualizan justo antes del menú afectan a continuación.  
+## <a name="managing-menus"></a>Managing Menus  
+ The frame window participates in updating user-interface items using the `ON_UPDATE_COMMAND_UI` mechanism described in [How to Update User-Interface Objects](../mfc/how-to-update-user-interface-objects.md). Buttons on toolbars and other control bars are updated during the idle loop. Menu items in drop-down menus on the menu bar are updated just before the menu drops down.  
   
- Para las aplicaciones MDI, la ventana de marco MDI administra la barra de menús y la leyenda.  Una ventana de marco MDI posee un menú predeterminado que se utiliza como la barra de menús cuando no hay ventanas secundarias MDI activo.  Cuando hay elementos secundarios activos, la barra de menús de MDI de la ventana de marco es asumida el control mediante el menú de la ventana secundaria MDI activo.  Si una aplicación MDI admite tipos de documento múltiples, como documentos de gráfico y de hoja de cálculo, cada tipo colocar sus propios menús en la barra de menús y cambia la leyenda de la ventana de marco principal.  
+ For MDI applications, the MDI frame window manages the menu bar and caption. An MDI frame window owns one default menu that is used as the menu bar when there are no active MDI child windows. When there are active children, the MDI frame window's menu bar is taken over by the menu for the active MDI child window. If an MDI application supports multiple document types, such as chart and worksheet documents, each type puts its own menus into the menu bar and changes the main frame window's caption.  
   
- [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) proporciona implementaciones predeterminadas para los comandos estándar del menú Ventana que aparece para las aplicaciones MDI.  En particular, implementan el comando nueva ventana \(**ID\_WINDOW\_NEW**\) para crear una nueva ventana y vista de marco en el documento actual.  Necesita reemplazar estas implementaciones sólo si necesita la personalización avanzada.  
+ [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) provides default implementations for the standard commands on the Window menu that appears for MDI applications. In particular, the New Window command (**ID_WINDOW_NEW**) is implemented to create a new frame window and view on the current document. You need to override these implementations only if you need advanced customization.  
   
- Las ventanas secundarias de MDI del mismo tipo de documento comparten recursos de menú.  Si varias ventanas secundarias MDI son creadas por la misma plantilla de documento, pueden todas usan el mismo recurso de menú, guardando en recursos del sistema de Windows.  
+ Multiple MDI child windows of the same document type share menu resources. If several MDI child windows are created by the same document template, they can all use the same menu resource, saving on system resources in Windows.  
   
-## Administrar la barra de estado  
- En el cuadro de la ventana las posiciones también la barra de estado dentro del área cliente y administran los indicadores de barra de estado.  La ventana de marco borra y actualiza el área de mensajes de la barra de estado según sea necesario y cadenas de mensajes de se muestra como el usuario selecciona elementos de menú o los botones de la barra de herramientas, como se describe en [Cómo mostrar la información del comando en la barra de estado](../mfc/how-to-display-command-information-in-the-status-bar.md).  
+## <a name="managing-the-status-bar"></a>Managing the Status Bar  
+ The frame window also positions the status bar within its client area and manages the status bar's indicators. The frame window clears and updates the message area in the status bar as needed and displays prompt strings as the user selects menu items or toolbar buttons, as described in [How to Display Command Information in the Status Bar](../mfc/how-to-display-command-information-in-the-status-bar.md).  
   
-## Administrar los Aceleradores  
- Cada ventana de marco mantiene una tabla opcional de aceleradores que haga la traducción de aceleradores de teclado automáticamente.  Este mecanismo facilita definir teclas de aceleración \(también denominadas teclas de método abreviado\) que invocan comandos de menú.  
+## <a name="managing-accelerators"></a>Managing Accelerators  
+ Each frame window maintains an optional accelerator table that does keyboard accelerator translation for you automatically. This mechanism makes it easy to define accelerator keys (also called shortcut keys) that invoke menu commands.  
   
-## Vea también  
- [Usar ventanas de marco](../mfc/using-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

@@ -1,39 +1,58 @@
 ---
-title: "Validaci&#243;n de datos de cuadro de di&#225;logo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "validación de datos [C++], cuadros de diálogo"
-  - "validación de datos [C++], cuadros de mensaje"
-  - "DDV (validación de datos de cuadro de diálogo) [C++]"
-  - "cuadros de diálogo [C++], validar datos"
-  - "validar datos [C++], entrada de datos del cuadro de diálogo"
-  - "validar datos [C++], cuadros de mensaje"
+title: Dialog Data Validation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- validating data [MFC], message boxes
+- data validation [MFC], dialog boxes
+- dialog boxes [MFC], validating data
+- validating data [MFC], dialog box data entry
+- DDV (dialog data validation) [MFC]
+- data validation [MFC], message boxes
 ms.assetid: f070c309-2044-4ff2-8c92-1ec1ea84af58
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Validaci&#243;n de datos de cuadro de di&#225;logo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5aebbd1b0f72717d134643762e238a6fb985695f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Puede especificar la validación además de intercambio de datos llamando a funciones de DDV, como se muestra en el ejemplo de [Diálogo de intercambio de datos](../mfc/dialog-data-exchange.md).  La llamada de `DDV_MaxChars` en el ejemplo valida que la cadena especificada en el control de cuadro de texto no está más de 20 caracteres.  La función de DDV alerta normalmente al usuario un cuadro de mensaje si se produce un error en la validación y coloca el foco en el control que provoca para que el usuario puede repetir los datos.  Una función de DDV de un control determinado debe llamar inmediatamente después de que la función de DDX para el mismo controla.  
+---
+# <a name="dialog-data-validation"></a>Dialog Data Validation
+You can specify validation in addition to data exchange by calling DDV functions, as shown in the example in [Dialog Data Exchange](../mfc/dialog-data-exchange.md). The `DDV_MaxChars` call in the example validates that the string entered in the text-box control is not longer than 20 characters. The DDV function typically alerts the user with a message box if the validation fails and puts the focus on the offending control so the user can reenter the data. A DDV function for a given control must be called immediately after the DDX function for the same control.  
   
- También puede definir dispone custom DDX y rutinas de DDV.  Para obtener información sobre estos y otros aspectos de DDX y de DDV, vea [Nota técnica 26 de MFC](../mfc/tn026-ddx-and-ddv-routines.md).  
+ You can also define your own custom DDX and DDV routines. For details on this and other aspects of DDX and DDV, see [MFC Technical Note 26](../mfc/tn026-ddx-and-ddv-routines.md).  
   
- [Asistente para agregar variables miembro](../ide/add-member-variable-wizard.md) escribirá todas las llamadas de DDX y de DDV en el mapa de datos.  
+ The [Add Member Variable Wizard](../ide/add-member-variable-wizard.md) will write all of the DDX and DDV calls in the data map for you.  
   
-## Vea también  
- [Intercambio y validación de datos de cuadros de diálogo](../mfc/dialog-data-exchange-and-validation.md)   
- [Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)   
- [Intercambio de datos de cuadro de diálogo](../mfc/dialog-data-exchange.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Data Exchange and Validation](../mfc/dialog-data-exchange-and-validation.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)   
+ [Dialog Data Exchange](../mfc/dialog-data-exchange.md)
+
+

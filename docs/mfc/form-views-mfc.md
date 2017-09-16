@@ -1,75 +1,93 @@
 ---
-title: "Vistas de formulario (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicaciones [MFC], basadas en formularios"
-  - "formularios [C++]"
-  - "formularios [C++], agregar a aplicaciones"
-  - "aplicaciones basadas en formularios"
-  - "interfaces de usuario, formularios"
+title: Form Views (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- user interfaces [MFC], forms
+- forms [MFC]
+- applications [MFC], forms-based
+- forms-based applications [MFC]
+- forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Vistas de formulario (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2f17483b98313575fcd9aea122e8c51ce5fd8920
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Puede agregar los formularios a cualquier aplicación de Visual C\+\+ que admite las bibliotecas MFC, incluidos [aplicación formulario\-basada](../mfc/reference/creating-a-forms-based-mfc-application.md) \(una cuya clase de vista se deriva de `CFormView`\).  Si no creó inicialmente la aplicación para admitir los formularios, Visual C\+\+ agregará esta compatibilidad automáticamente cuando se inserta un nuevo formulario.  En una aplicación SDI o MDI, que implementa [arquitectura documento\/vista](../mfc/document-view-architecture.md)predeterminado, cuando el usuario elige el comando de `New` \(de forma predeterminada, en el menú de **archivo** \), Visual C\+\+ pide al usuario elegir entre formularios disponibles.  
+---
+# <a name="form-views-mfc"></a>Form Views (MFC)
+You can add forms to any Visual C++ application that supports the MFC libraries, including a [forms-based application](../mfc/reference/creating-a-forms-based-mfc-application.md) (one whose view class is derived from `CFormView`). If you did not initially create your application to support forms, Visual C++ will add this support for you when you insert a new form. In an SDI or MDI application, which implements the default [document/view architecture](../mfc/document-view-architecture.md), when the user chooses the `New` command (by default, on the **File** menu), Visual C++ prompts the user to choose from the available forms.  
   
- Con una aplicación SDI, cuando el usuario elige el comando de `New` , la instancia actual del formulario continúa ejecutándose pero una nueva instancia de la aplicación con el formulario seleccionado se crea si no se encuentra.  En una aplicación MDI, la instancia actual del formulario continúa ejecutándose cuando el usuario elige el comando de `New` .  
+ With an SDI application, when the user chooses the `New` command, the current instance of the form continues to run but a new instance of the application with the selected form is created if one is not found. In an MDI application, the current instance of the form continues to run when the user chooses the `New` command.  
   
 > [!NOTE]
->  Puede insertar un formulario en una aplicación diálogo\- basada \(una cuyo tipo de cuadro de diálogo se basa en `CDialog` y una en la que no se implementa ninguna clase de vista\).  Sin embargo, sin la arquitectura documento\/vista, Visual C\+\+ automáticamente no implementa **archivo** &#124;funcionalidad de**new** .  Debe crear una manera para que el usuario vea formularios adicionales, como implementar un cuadro de diálogo con fichas que muestra las distintas páginas de propiedades.  
+>  You can insert a form into a dialog-based application (one whose dialog class is based on `CDialog` and one in which no view class is implemented). However, without the document/view architecture, Visual C++ does not automatically implement the **File**&#124;**New** functionality. You must create a way for the user to view additional forms, such as by implementing a tabbed dialog box with various property pages.  
   
- Cuando se inserta un nuevo formulario en la aplicación, Visual C\+\+ hace lo siguiente:  
+ When you insert a new form into your application, Visual C++ does the following:  
   
--   Crea una clase basada en una de las clases de formulario\- estilo que elija \(`CFormView`, `CRecordView`, `CDaoRecordView`, o `CDialog`\).  
+-   Creates a class based on one of the form-style classes that you choose (`CFormView`, `CRecordView`, `CDaoRecordView`, or `CDialog`).  
   
--   Crea un recurso de cuadro de diálogo con estilos adecuados \(o puede utilizar un recurso existente del diálogo que aún no se ha asociado a una clase\).  
+-   Creates a dialog resource with appropriate styles (or you can use an existing dialog resource that has not yet been associated with a class).  
   
-     Si elige un recurso existente del cuadro de diálogo, puede ser necesario establecer estos estilos mediante la página de propiedades del cuadro de diálogo.  Los estilos para un cuadro de diálogo deben incluir:  
+     If you choose an existing dialog resource, you may need to set these styles by using the Properties page for the dialog box. Styles for a dialog box must include:  
   
-     \=On De**WS\_CHILD**  
+     **WS_CHILD**=On  
   
-     \=Off de`WS_BORDER`  
+     `WS_BORDER`=Off  
   
-     \=Off De**WS\_VISIBLE**  
+     **WS_VISIBLE**=Off  
   
-     **WS\_CAPTION\=**desactivado  
+     **WS_CAPTION=**Off  
   
- Para las aplicaciones basadas en la arquitectura documento\/vista, el comando de **New Form** \(haga clic con el botón secundario en la vista de clases\) también:  
+ For applications based on the document/view architecture, the **New Form** command (right-click in Class View) also:  
   
--   Crea **CDocument**\- clase basada  
+-   Creates a **CDocument**-based class  
   
-     En lugar de hacer una nueva clase crear, puede utilizar cualquier **CDocument**existente \(clase basada en el proyecto.  
+     Instead of having a new class created, you can use any existing **CDocument**-based class in your project.  
   
--   Representa una plantilla de documento \(derivada de **CDocument**\) con la cadena, menú, y los recursos de icono.  
+-   Generates a document template (derived from **CDocument**) with string, menu, and icon resources.  
   
-     También puede crear una nueva clase en la que se basará la plantilla.  
+     You can also create a new class on which to base the template.  
   
--   Agregue una llamada a **AddDocumentTemplate** en el código de `InitInstance` de la aplicación.  
+-   Adds a call to **AddDocumentTemplate** in your application's `InitInstance` code.  
   
-     Visual C\+\+ agrega este código para cada nuevo formulario que crea, que agrega el formulario a la lista de formularios disponible cuando el usuario elige el comando de `New` .  Este código incluye el Id. de recurso asociado y los nombres del documento, de la vista, y de las clases asociados de marco que juntos constituyen el nuevo objeto de formulario.  
+     Visual C++ adds this code for each new form you create, which adds the form to the list of available forms when the user chooses the `New` command. This code includes the form's associated resource ID and the names of the associated document, view, and frame classes that together make up the new form object.  
   
-     Las plantillas de documento sirven como conexión entre documentos, las ventanas de marco, y las vistas.  Para un único documento, puede crear muchas plantillas.  
+     Document templates serve as the connection between documents, frame windows, and views. For a single document, you can create many templates.  
   
- Para obtener más información, vea:  
+ For more information, see:  
   
--   [Cree una aplicación Formulario\-basada](../mfc/reference/creating-a-forms-based-mfc-application.md)  
+-   [Create a Forms-Based Application](../mfc/reference/creating-a-forms-based-mfc-application.md)  
   
--   [Insertar un formulario en un proyecto](../mfc/inserting-a-form-into-a-project.md)  
+-   [Inserting a Form into a Project](../mfc/inserting-a-form-into-a-project.md)  
   
-## Vea también  
- [Elementos de la interfaz de usuario](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

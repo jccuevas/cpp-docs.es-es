@@ -1,119 +1,138 @@
 ---
-title: "Dise&#241;ador de la cinta de opciones (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.ribbon.F1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "diseñador de la cinta de opciones de MFC"
-  - "diseñador de la cinta de opciones (MFC)"
+title: Ribbon Designer (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.ribbon.F1
+dev_langs:
+- C++
+helpviewer_keywords:
+- Ribbon Designer (MFC)
+- MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Dise&#241;ador de la cinta de opciones (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 21372eebe92c9cba42d25f79b9e2ffc32f43f019
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-El diseñador de la cinta de opciones permite crear y personalizar las cintas de opciones de las aplicaciones MFC.  Una cinta de opciones es un elemento de la interfaz de usuario \(IU\) que organiza los comandos en grupos lógicos.  Estos grupos aparecen en pestañas independientes en una banda a lo largo de la parte superior de la ventana.  La cinta de opciones reemplaza a la barra de menús y a las barras de herramientas.  Una cinta de opciones puede mejorar considerablemente la facilidad de uso de la aplicación.  Para obtener más información, vea [Cintas de opciones](https://msdn.microsoft.com/es-es/library/cc872782.aspx).  En la siguiente ilustración se muestra una cinta de opciones.  
+---
+# <a name="ribbon-designer-mfc"></a>Ribbon Designer (MFC)
+The Ribbon Designer lets you create and customize ribbons in MFC applications. A ribbon is a user interface (UI) element that organizes commands into logical groups. These groups appear on separate tabs in a strip across the top of the window. The ribbon replaces the menu bar and toolbars. A ribbon can significantly improve application usability. For more information, see [Ribbons](http://go.microsoft.com/fwlink/linkid=129233). The following illustration shows a ribbon.  
   
- ![Control de recursos de la cinta de opciones de MFC](../mfc/media/ribbon_no_callouts.png "Ribbon\_No\_Callouts")  
+ ![MFC Ribbon Resource Control](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   
- En versiones anteriores de Visual Studio, las cintas de opciones se tenían que crear escribiendo código que emplee las clases de la cinta de opciones MFC, como [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md).  En [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], el diseñador de la cinta de opciones proporciona un método alternativo para la creación de las cintas de opciones. En primer lugar, cree y personalice una cinta de opciones como un recurso.  A continuación, cargue el recurso de cinta de opciones desde el código en la aplicación MFC.  Incluso puede usar los recursos de cinta de opciones y las clases de cinta de opciones MFC juntos.  Por ejemplo, puede crear un recurso de cinta de opciones y, a continuación, agregarle mediante programación más elementos en tiempo de ejecución con el código.  
+ In earlier versions of Visual Studio, ribbons had to be created by writing code that uses the MFC ribbon classes such as [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md). In [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], the ribbon designer provides an alternative method for building ribbons. First, create and customize a ribbon as a resource. Then load the ribbon resource from code in the MFC application. You can even use ribbon resources and MFC ribbon classes together. For example, you can create a ribbon resource, and then programmatically add more elements to it at runtime by using code.  
   
-## Descripción del diseñador de la cinta de opciones  
- El diseñador de la cinta de opciones crea y almacena la cinta de opciones como un recurso.  Cuando se crea un recurso de cinta de opciones, el diseñador de la cinta de opciones hace estas tres cosas:  
+## <a name="understanding-the-ribbon-designer"></a>Understanding the Ribbon Designer  
+ The ribbon designer creates and stores the ribbon as a resource. When you create a ribbon resource, the ribbon designer does these three things:  
   
--   Agrega una entrada en el script de definición de recursos de proyecto \(\*.rc\).  En el ejemplo siguiente, `IDR_RIBBON` es el nombre único que identifica el recurso de cinta de opciones, `RT_RIBBON_XML` es el tipo de recurso y `ribbon.mfcribbon-ms` es el nombre del archivo de recursos.  
+-   Adds an entry in the project resource definition script (*.rc). In the following example, `IDR_RIBBON` is the unique name that identifies the ribbon resource, `RT_RIBBON_XML` is the resource type, and `ribbon.mfcribbon-ms` is the name of the resource file.  
   
-    ```  
-    IDR_RIBBON             RT_RIBBON_XML                      "res\\ribbon.mfcribbon-ms"  
-    ```  
+ ```  
+    IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  
+ ```  
   
--   Agrega las definiciones de identificadores de comando a resource.h.  
+-   Adds the definitions of Command IDs to resource.h.  
   
-    ```  
-    #define IDR_RIBBON            307  
-    ```  
+ ```  
+ #define IDR_RIBBON            307  
+ ```  
   
--   Crea un archivo de recursos de cinta de opciones \(\*.mfcribbon\-ms\) que contiene el código XML que define los botones, los controles y los atributos de la cinta de opciones.  Los cambios realizados en la cinta de opciones en el diseñador de la cinta de opciones se almacenan en el archivo de recursos como XML.  En el ejemplo de código siguiente se muestra parte del contenido de un archivo \*.mfcribbon\-ms:  
+-   Creates a ribbon resource file (*.mfcribbon-ms) that contains the XML code that defines the ribbon's buttons, controls, and attributes. Changes to the ribbon in the ribbon designer are stored in the resource file as XML. The following code example shows part of the contents of a \*.mfcribbon-ms file:  
   
-    ```  
-    <RIBBON_BAR>  
-      <ELEMENT_NAME>RibbonBar</ELEMENT_NAME>  
-      <IMAGE>  
-        <ID>  
-          <NAME>IDB_BUTTONS</NAME>  
-          <VALUE>113</VALUE>  
-        </ID> …  
-    ```  
+ ```  
+ <RIBBON_BAR>  
+ <ELEMENT_NAME>RibbonBar</ELEMENT_NAME>  
+ <IMAGE>  
+ <ID>  
+ <NAME>IDB_BUTTONS</NAME>  
+ <VALUE>113</VALUE>  
+ </ID>   
+ ```  
   
- Para usar el recurso de cinta de opciones en la aplicación MFC, cárguelo mediante una llamada a [CMFCRibbonBar::LoadFromResource](../Topic/CMFCRibbonBar::LoadFromResource.md).  
+ To use the ribbon resource in your MFC application, load the resource by calling [CMFCRibbonBar::LoadFromResource](../mfc/reference/cmfcribbonbar-class.md#loadfromresource).  
   
-## Crear una cinta de opciones mediante el diseñador de la cinta de opciones  
- Estas son las dos maneras de agregar un recurso de cinta de opciones al proyecto MFC:  
+## <a name="creating-a-ribbon-by-using-the-ribbon-designer"></a>Creating a Ribbon By Using the Ribbon Designer  
+ These are the two ways to add a ribbon resource to your MFC project:  
   
--   Cree una aplicación MFC y configure el Asistente para proyectos MFC para crear la cinta de opciones.  Para obtener más información, vea [Tutorial: Crear una aplicación de cinta usando MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).  
+-   Create an MFC application and configure the MFC Project Wizard to create the ribbon. For more information, see [Walkthrough: Creating a Ribbon Application By Using MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).  
   
--   En un proyecto MFC existente, cree un recurso de cinta de opciones y cárguelo.  Para obtener más información, vea [Tutorial: Actualizar la aplicación Scribble de MFC \(Parte 1\)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
+-   In an existing MFC project, create a ribbon resource and load it. For more information, see [Walkthrough: Updating the MFC Scribble Application (Part 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
   
- Si el proyecto ya tiene una cinta de opciones codificada de forma manual, MFC tiene funciones que puede utilizar para convertir la cinta existente en un recurso de cinta de opciones.  Para obtener más información, vea [Cómo: Convertir una cinta de MFC existente en un recurso de cinta](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).  
+ If your project already has a manually coded ribbon, MFC has functions that you can use to convert the existing ribbon to a ribbon resource. For more information, see [How to: Convert an Existing MFC Ribbon to a Ribbon Resource](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).  
   
 > [!NOTE]
->  Las cintas de opciones no pueden crearse en aplicaciones basadas en cuadros de diálogo.  Para obtener más información, vea [Tipo de aplicación, Asistente para aplicaciones MFC](../mfc/reference/application-type-mfc-application-wizard.md).  
+>  Ribbons cannot be created in dialog-based applications. For more information, see [Application Type, MFC Application Wizard](../mfc/reference/application-type-mfc-application-wizard.md).  
   
-## Personalizar cintas de opciones  
- Para abrir una cinta de opciones en el diseñador de la cinta de opciones, haga doble clic en el recurso de cinta de opciones en la vista de recursos.  En el diseñador, puede agregar, quitar y personalizar elementos de la cinta de opciones, el botón Aplicación o la barra de herramientas de acceso rápido.  También puede vincular eventos, por ejemplo, eventos de clic de botón y eventos de menú, a un método de la aplicación.  
+## <a name="customizing-ribbons"></a>Customizing Ribbons  
+ To open a ribbon in the ribbon designer, double-click the ribbon resource in Resource View. In the designer, you can add, remove, and customize elements on the ribbon, the Application button, or the quick access toolbar. You can also link events, for example, button-click events and menu events, to a method in your application.  
   
- En la siguiente ilustración se muestran los distintos componentes del diseñador de la cinta de opciones.  
+ The following illustration shows the various components in the ribbon designer.  
   
- ![Diseñador de la cinta de opciones de MFC](../mfc/media/ribbon_designer.png "Ribbon\_Designer")  
+ ![MFC Ribbon Designer](../mfc/media/ribbon_designer.png "ribbon_designer")  
   
--   **Cuadro de herramientas:** contiene controles que se pueden arrastrar a la superficie del diseñador.  
+- **Toolbox:** Contains controls that can be dragged to the designer surface.  
   
--   **Superficie del diseñador:** contiene la representación visual del recurso de cinta de opciones.  
+- **Designer Surface:** Contains the visual representation of the ribbon resource.  
   
--   **Ventana Propiedades:** enumera los atributos del elemento seleccionado en la superficie del diseñador.  
+- **Properties window:** Lists the attributes of the item that is selected on the designer surface.  
   
--   **Ventana Vista de recursos:** muestra los recursos que incluyen recursos de cinta de opciones, en el proyecto.  
+- **Resource View window:** Displays the resources that include ribbon resources, in your project.  
   
--   **Barra de herramientas Editor de Ribbon:** contiene comandos que permiten obtener una vista previa de la cinta de opciones y cambiar su tema visual.  
+- **Ribbon Editor Toolbar:** Contains commands that let you preview the ribbon and change its visual theme.  
   
- Los temas siguientes describen cómo usar las características del diseñador de la cinta de opciones:  
+ The following topics describe how to use the features in the ribbon designer:  
   
--   [Cómo: Personalizar el botón Aplicación](../mfc/how-to-customize-the-application-button.md)  
+- [How to: Customize the Application Button](../mfc/how-to-customize-the-application-button.md)  
   
--   [Cómo: Personalizar la barra de herramientas de acceso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+- [How to: Customize the Quick Access Toolbar](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
--   [Cómo: Agregar controles de cinta y controladores de eventos](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
+- [How to: Add Ribbon Controls and Event Handlers](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
   
--   [Cómo: Cargar un recurso de cinta desde una aplicación MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
+- [How to: Load a Ribbon Resource from an MFC Application](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
   
-## Definiciones de elementos de la cinta de opciones  
- ![Cinta de opciones de MFC](../mfc/media/ribbon.png "Ribbon")  
+## <a name="definitions-of-ribbon-elements"></a>Definitions of Ribbon Elements  
+ ![MFC Ribbon](../mfc/media/ribbon.png "ribbon")  
   
--   **Botón Aplicación:** botón que aparece en la esquina superior izquierda de una cinta de opciones.  El botón Aplicación reemplaza al menú Archivo y está visible incluso cuando se minimiza la cinta de opciones.  Al hacer clic en el botón, se muestra un menú con una lista de comandos.  
+- **Application button:** The button that appears on the upper-left corner of a ribbon. The Application button replaces the File menu and is visible even when the ribbon is minimized. When the button is clicked, a menu that has a list of commands is displayed.  
   
--   **Barra de herramientas de acceso rápido:** pequeña barra de herramientas personalizable que muestra comandos usados con frecuencia.  
+- **Quick Access toolbar:** A small, customizable toolbar that displays frequently used commands.  
   
--   **Categoría**: agrupamiento lógico que representa el contenido de una pestaña de la cinta de opciones.  
+- **Category**: The logical grouping that represents the contents of a ribbon tab.  
   
--   **Botón Categoría predeterminada:** botón que aparece en la cinta de opciones al minimizarla.  Al hacer clic en el botón, la categoría vuelve a aparecer como un menú.  
+- **Category Default button:** The button that appears on the ribbon when the ribbon is minimized. When the button is clicked, the category reappears as a menu.  
   
--   **Panel:** área de la barra de la cinta de opciones que muestra un grupo de controles relacionados.  Cada categoría de la cinta de opciones contiene uno o más paneles de cinta de opciones.  
+- **Panel:** An area of the ribbon bar that displays a group of related controls. Every ribbon category contains one or more ribbon panels.  
   
--   **Elementos de la cinta de opciones:** controles de los paneles, por ejemplo, botones y cuadros combinados.  Para ver los distintos controles que se pueden hospedar en una cinta de opciones, vea [Ejemplo RibbonGadgets: aplicación de gadgets de la cinta de opciones](../top/visual-cpp-samples.md).  
+- **Ribbon elements:** Controls in the panels, for example, buttons and combo boxes. To see the various controls that can be hosted on a ribbon, see [RibbonGadgets Sample: Ribbon Gadgets Application](../visual-cpp-samples.md).  
   
-## Vea también  
- [Elementos de la interfaz de usuario](../mfc/user-interface-elements-mfc.md)   
- [Working with Resource Files](../mfc/working-with-resource-files.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Working with Resource Files](../windows/working-with-resource-files.md)
+
+

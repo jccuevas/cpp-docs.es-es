@@ -1,47 +1,65 @@
 ---
-title: "Informaci&#243;n detallada sobre la compatibilidad agregada por el Asistente para ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.atl.support"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, MFC (proyectos)"
-  - "MFC, compatibilidad ATL"
+title: Details of ATL Support Added by the ATL Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.atl.support
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, ATL support
+- ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Informaci&#243;n detallada sobre la compatibilidad agregada por el Asistente para ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 44532e102ab648ad553917b2b6a8a5307fc20f93
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Al [agregar compatibilidad ATL a un ejecutable o DLL MFC existentes](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual C\+\+ hace las siguientes modificaciones en el proyecto MFC existente \(en este ejemplo, el proyecto se denomina `MFCEXE`\):  
+---
+# <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Details of ATL Support Added by the ATL Wizard
+When you [add ATL support to an existing MFC executable or DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual C++ makes the following modifications to the existing MFC project (in this example, the project is called `MFCEXE`):  
   
--   Se agregan dos nuevos archivos \(un archivo .idl y un archivo .rgs, usado para registrar el servidor\).  
+-   Two new files (an .idl file and an .rgs file, used to register the server) are added.  
   
--   En los archivos principales de encabezado e implementación \(Mfcexe.h y Mfcexe.cpp\) se agrega una nueva clase \(derivada de **CAtlMFCModule**\).  Además de la nueva clase, se agrega código de registro a `InitInstance`.  También se agrega código a la función `ExitInstance` con el fin de revocar el objeto de clase.  En el archivo de encabezado, por último, se incluyen dos nuevos archivos de encabezado \(Initguid.h y Mfcexe\_i.c\) en el archivo de implementación, declarando e inicializando los nuevos GUID para la clase derivada de **CAtlMFCModule**.  
+-   In the main application header and implementation files (Mfcexe.h and Mfcexe.cpp), a new class (derived from **CAtlMFCModule**) is added. In addition to the new class, code is added to `InitInstance` for registration. Code is also added to the `ExitInstance` function for revoking the class object. In the header file, Finally, two new header files (Initguid.h and Mfcexe_i.c) are included in the implementation file, declaring and initializing the new GUIDs for the **CAtlMFCModule**-derived class.  
   
--   Con objeto de registrar el servidor adecuadamente, se agrega una entrada para el nuevo archivo .rgs al archivo de recursos del proyecto.  
+-   To register the server properly, an entry for the new .rgs file is added to the project's resource file.  
   
-## Notas para los proyectos de DLL  
- Al agregar compatibilidad ATL a un proyecto DLL MFC, se podrán apreciar ciertas diferencias:  Se agrega código a las funciones **DLLRegisterServer** y **DLLUnregisterServer** para registrar o anular el registro de la DLL.  También se agrega código a [DllCanUnloadNow](../Topic/CAtlDllModuleT::DllCanUnloadNow.md) y [DllGetClassObject](../Topic/CAtlDllModuleT::DllGetClassObject.md).  
+## <a name="notes-for-dll-projects"></a>Notes for DLL Projects  
+ When you add ATL support to an MFC DLL project, you will see some differences. Code is added to the **DLLRegisterServer** and **DLLUnregisterServer** functions for registering and unregistering the DLL. Code is also added to [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) and [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).  
   
-## Vea también  
- [Compatibilidad con ATL en un proyecto MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   
- [Agregar funcionalidad con los Asistentes para código](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Agregar una clase](../../ide/adding-a-class-visual-cpp.md)   
- [Agregar una función miembro](../../ide/adding-a-member-function-visual-cpp.md)   
- [Agregar una variable miembro](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Reemplazar una función virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Controlador de mensajes de MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Explorar la estructura de clases](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [ATL Support in an MFC Project](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
+

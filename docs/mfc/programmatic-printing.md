@@ -1,100 +1,101 @@
 ---
-title: "Imprimir mediante programaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "documentos activos [C++], imprimir"
-  - "IPrint (interfaz)"
-  - "imprimir [MFC]"
-  - "imprimir [MFC], documentos activos"
-  - "imprimir [MFC], mediante programación"
+title: Programmatic Printing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- printing [MFC], active documents
+- active documents [MFC], printing
+- printing [MFC], programmatic
+- IPrint interface
+- printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Imprimir mediante programaci&#243;n
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 43c8e2bab1b004df2c401ba21f28a96aef409de7
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-OLE proporcionaba significa identificar los documentos persistentes \(**GetClassFile**\) y cargarlos en el código asociado \(`CoCreateInstance`, **QueryInterface\(IID\_IPersistFile\)**, **QueryInterface\(IID\_IPersistStorage\)**, **IPersistFile::Load**, y **IPersistStorage::Load**\).  Para habilitar aún más documentos de impresión, contención de documento activo \(mediante un diseño OLE existente no enviado con OLE 2,0 originalmente\) presenta una interfaz de impresión de la base\- estándar, `IPrint`, normalmente \- disponibles a través de cualquier objeto que pueda cargar el estado persistente de tipo de documento.  Cada vista de un documento activo puede admitir opcionalmente a la interfaz de **IPrint** que proporciona estas funciones.  
+---
+# <a name="programmatic-printing"></a>Programmatic Printing
+OLE provided the means to uniquely identify persistent documents (**GetClassFile**) and load them into their associated code (`CoCreateInstance`, **QueryInterface(IID_IPersistFile)**, **QueryInterface(IID_IPersistStorage)**, **IPersistFile::Load**, and **IPersistStorage::Load**). To further enable printing documents, active document containment (using an existing OLE design not shipped with OLE 2.0 originally) introduces a base-standard printing interface, `IPrint`, generally available through any object that can load the persistent state of the document type. Each view of an active document can optionally support the **IPrint** interface to provide these capabilities.  
   
- La interfaz se define de `IPrint` como sigue:  
+ The `IPrint` interface is defined as follows:  
   
- `interface IPrint : IUnknown`  
+```  
+interface IPrint : IUnknown  
+    {  
+    HRESULT SetInitialPageNum([in] LONG nFirstPage);  
+    HRESULT GetPageInfo(  
+        [out] LONG *pnFirstPage,  
+        [out] LONG *pcPages);  
+    HRESULT Print(  
+        [in] DWORD grfFlags,  
+        [in,out] DVTARGETDEVICE **pptd,  
+        [in,out] PAGESET ** ppPageSet,  
+        [in,out] STGMEDIUM **ppstgmOptions,  
+        [in] IContinueCallback* pCallback,  
+        [in] LONG nFirstPage,  
+        [out] LONG *pcPagesPrinted,  
+        [out] LONG *pnPageLast);  
+    };  
+```  
   
- `{`  
+ Clients and containers simply use **IPrint::Print** to instruct the document to print itself once that document is loaded, specifying printing control flags, the target device, the pages to print, and additional options. The client can also control the continuation of printing through the interface `IContinueCallback` (see below).  
   
- `HRESULT SetInitialPageNum([in] LONG nFirstPage);`  
+ In addition, **IPrint::SetInitialPageNum** supports the ability to print a series of documents as one by numbering pages seamlessly, obviously a benefit for active document containers like Office Binder. **IPrint::GetPageInfo** makes displaying pagination information simple by allowing the caller to retrieve the starting page number previously passed to **SetInitialPageNum** (or the document's internal default starting page number) and the number of pages in the document.  
   
- `HRESULT GetPageInfo(`  
+ Objects that support `IPrint` are marked in the registry with the "Printable" key stored under the object's CLSID:  
   
- `[out] LONG *pnFirstPage,`  
+ HKEY_CLASSES_ROOT\CLSID\\{...}\Printable  
   
- `[out] LONG *pcPages);`  
+ `IPrint` is usually implemented on the same object that supports either `IPersistFile` or `IPersistStorage`. Callers note the capability to programmatically print the persistent state of some class by looking in the registry for the "Printable" key. Currently, "Printable" indicates support for at least `IPrint`; other interfaces may be defined in the future which would then be available through `QueryInterface` where **IPrint** simply represents the base level of support.  
   
- `HRESULT Print(`  
+ During a print procedure, you may want the client or container that initiated the printing to control whether or not the printing should continue. For example, the container may support a "Stop Print" command that should terminate the print job as soon as possible. To support this capability, the client of a printable object can implement a small notification sink object with the interface `IContinueCallback`:  
   
- `[in] DWORD grfFlags,`  
+```  
+interface IContinueCallback : IUnknown  
+    {  
+    HRESULT FContinue(void);  
+    HRESULT FContinuePrinting(  
+        [in] LONG cPagesPrinted,  
+        [in] LONG nCurrentPage,  
+        [in] LPOLESTR pszPrintStatus);  
+    };  
+```  
   
- `[in,out] DVTARGETDEVICE **pptd,`  
+ This interface is designed to be useful as a generic continuation callback function that takes the place of the various continuation procedures in the Win32 API (such as the **AbortProc** for printing and the **EnumMetafileProc** for metafile enumeration). Thus this interface design is useful in a wide variety of time-consuming processes.  
   
- `[in,out] PAGESET ** ppPageSet,`  
+ In the most generic cases, the **IContinueCallback::FContinue** function is called periodically by any lengthy process. The sink object returns `S_OK` to continue the operation, and **S_FALSE** to stop the procedure as soon as possible.  
   
- `[in,out] STGMEDIUM **ppstgmOptions,`  
+ **FContinue**, however, is not used in the context of **IPrint::Print**; rather, printing uses **IContinueCallback::FContinuePrint**. Any printing object should periodically call **FContinuePrinting** passing the number of pages that have been printing, the number of the page being printed, and an additional string describing the print status that the client may choose to display to the user (such as "Page 5 of 19").  
   
- `[in] IContinueCallback* pCallback,`  
-  
- `[in] LONG nFirstPage,`  
-  
- `[out] LONG *pcPagesPrinted,`  
-  
- `[out] LONG *pnPageLast);`  
-  
- `};`  
-  
- El uso **IPrint::Print** customers y los contenedores de simplemente indicar al documento para imprimirse que el documento cargado, especificando el control de impresión marca una vez, el dispositivo de destino, las páginas para imprimir, y opciones adicionales.  El cliente también puede controlar la continuación de impresión a través de la interfaz `IContinueCallback` \(vea a continuación\).  
-  
- Además, **IPrint::SetInitialPageNum** admite la capacidad de imprimir una serie de documentos como uno numerando páginas sin problemas, obviamente un marcado para los contenedores del documento activo como el Office binder.  **IPrint::GetPageInfo** crea mostrando información de paginación simple permite que el llamador recupere el número de página inicial último previamente a **SetInitialPageNum** \(o el número de página inicial predeterminado interno de documento\) y el número de páginas en el documento.  
-  
- Los objetos que `IPrint` admiten está marcada en el registro con la tecla “Printable” almacenado bajo el CLSID del objeto:  
-  
- HKEY\_CLASSES\_ROOT\\CLSID\\{...}\\Printable  
-  
- `IPrint` se suele implementar en el mismo objeto que admite `IPersistFile` o `IPersistStorage`.  Los llamadores tienen la capacidad mediante programación de imprimir el estado persistente de alguna clase buscando en el registro de la tecla “Printable”.  Actualmente, “Printable” indica al menos `IPrint`admiten; otras interfaces pueden ser definidas en el futuro que a continuación estará disponible con `QueryInterface` donde **IPrint** representa simplemente el nivel base de compatibilidad.  
-  
- Durante un procedimiento de impresión, puede que el cliente o el contenedor que iniciaron la impresión para controlar si la impresión debe continuar.  Por ejemplo, el contenedor puede admitir “un comando de paro de impresión” que debe finalizar el trabajo de impresión lo más rápidamente posible.  Para admitir esta funcionalidad, el cliente de un objeto imprimible puede implementar un objeto de receptor de notificación con la interfaz `IContinueCallback`:  
-  
- `interface IContinueCallback : IUnknown`  
-  
- `{`  
-  
- `HRESULT FContinue(void);`  
-  
- `HRESULT FContinuePrinting(`  
-  
- `[in] LONG cPagesPrinted,`  
-  
- `[in] LONG nCurrentPage,`  
-  
- `[in] LPOLESTR pszPrintStatus);`  
-  
- `};`  
-  
- Esta interfaz está diseñada para ser útil como función de devolución de llamada genérica de continuación que toma el lugar de los distintos procedimientos de continuación de la API Win32 \(como **AbortProc** para imprimir y **EnumMetafileProc** para la enumeración de metarchivo\).  Así este diseño de interfaz es útil en una gran variedad de procesos largos.  
-  
- En los casos más genéricos, la función de **IContinueCallback::FContinue** llama periódicamente por cualquier proceso largo.  El objeto de receptor devuelve `S_OK` para continuar la operación, y **S\_FALSE** para detener el procedimiento lo más rápidamente posible.  
-  
- **FContinue**, sin embargo, no se utiliza en el contexto de **IPrint::Print**; en su lugar, imprimir utiliza **IContinueCallback::FContinuePrint**.  Cualquier objeto de impresión debe llamar periódicamente **FContinuePrinting** que pasa el número de páginas que han estado imprimir, el número de la página que está impresa, y una cadena adicional que describe el estado de impresión que el cliente puede elegir para mostrar al usuario \(como “página 5 de 19 "\).  
-  
-## Vea también  
- [Contenedores de documentos activos](../mfc/active-document-containers.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containers](../mfc/active-document-containers.md)
+
+

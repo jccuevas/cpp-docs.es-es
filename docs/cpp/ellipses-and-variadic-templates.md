@@ -1,56 +1,73 @@
 ---
-title: "Puntos suspensivos y plantillas vari&#225;dicas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Ellipses and Variadic Templates | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# Puntos suspensivos y plantillas vari&#225;dicas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: cd760bb7b3d5c91ac0fccd92866043cda70d9967
+ms.contentlocale: es-es
+ms.lasthandoff: 09/11/2017
 
-En este artículo se muestra cómo utilizar los puntos suspensivos \(`...`\) con plantillas variádicas de C\+\+.  Los puntos suspensivos han tenido [muchos usos](../misc/ellipsis-dot-dot-dot.md) en C y C\+\+.  Entre ellos se incluyen listas de argumentos de variable para funciones.  La función `printf()` de la biblioteca en tiempo de ejecución de C es uno de los ejemplos más conocidos.  
+---
+# <a name="ellipses-and-variadic-templates"></a>Ellipses and Variadic Templates
+This article shows how to use the ellipsis (`...`) with C++ variadic templates. The ellipsis has had many uses in C and C++. These include variable argument lists for functions. The `printf()` function from the C Runtime Library is one of the most well-known examples.  
   
- Una *plantilla variádica* es una plantilla de clase o de función que admite un número arbitrario de argumentos.  Este mecanismo resulta especialmente útil para los desarrolladores de bibliotecas de C\+\+, ya que puede aplicarse tanto a las plantillas de clase como a las plantillas de función y, por tanto, proporciona una gama amplia de funcionalidad y flexibilidad con seguridad de tipos y no triviales.  
+ A *variadic template* is a class or function template that supports an arbitrary number of arguments. This mechanism is especially useful to C++ library developers because you can apply it to both class templates and function templates, and thereby provide a wide range of type-safe and non-trivial functionality and flexibility.  
   
-## Sintaxis  
- Las plantillas variádicas utilizan los puntos suspensivos de dos maneras.  A la izquierda del nombre de parámetro, significa un *paquete de parámetros*, y a la derecha del nombre de parámetro, expande los paquetes de parámetros en nombres diferentes.  
+## <a name="syntax"></a>Syntax  
+ An ellipsis is used in two ways by variadic templates. To the left of the parameter name, it signifies a *parameter pack*, and to the right of the parameter name, it expands the parameter packs into separate names.  
   
- A continuación se muestra un ejemplo básico de la sintaxis de definición de *clase de plantilla variádica*:  
+ Here's a basic example of *variadic template class* definition syntax:  
   
 ```cpp  
 template<typename... Arguments> class classname;  
 ```  
   
- Tanto en los paquetes de parámetros como en las expansiones se puede agregar espacio en blanco alrededor de los puntos suspensivos, según se desee, como se muestra en estos ejemplos:  
+ For both parameter packs and expansions, you can add whitespace around the ellipsis, based on your preference, as shown in these examples:  
   
 ```cpp  
 template<typename ...Arguments> class classname;  
 ```  
   
- O bien:  
+ Or this:  
   
 ```cpp  
 template<typename ... Arguments> class classname;  
 ```  
   
- Tenga en cuenta que en este artículo se utiliza la convención que se muestra en el primer ejemplo \(los puntos suspensivos van junto a `typename`\).  
+ Notice that this article uses the convention that's shown in the first example (the ellipsis is attached to `typename`).  
   
- En los ejemplos anteriores, `Arguments` es un paquete de parámetros.  La clase `classname` puede aceptar un número variable de argumentos, como en estos ejemplos:  
+ In the preceding examples, `Arguments` is a parameter pack. The class `classname` can accept a variable number of arguments, as in these examples:  
   
 ```cpp  
-  
 template<typename... Arguments> class vtclass;  
   
 vtclass< > vtinstance1;  
@@ -60,22 +77,22 @@ vtclass<long, std::vector<int>, std::string> vtinstance4;
   
 ```  
   
- Cuando se usa una definición de clase de plantilla variádica, también puede ser necesario al menos un parámetro:  
+ By using a variadic template class definition, you can also require at least one parameter:  
   
 ```cpp  
 template <typename First, typename... Rest> class classname;  
   
 ```  
   
- A continuación se muestra un ejemplo básico de sintaxis de *función de plantilla variádica*:  
+ Here's a basic example of *variadic template function* syntax:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(Arguments... args);  
 ```  
   
- A continuación, se expande el paquete de parámetros `Arguments` para su uso, como se muestra en la próxima sección, **Descripción de las plantillas variádicas**.  
+ The `Arguments` parameter pack is then expanded for use, as shown in the next section, **Understanding variadic templates**.  
   
- Es posible utilizar otras formas de sintaxis de función de plantilla variática, incluidas las de estos ejemplos, entre otras:  
+ Other forms of variadic template function syntax are possible—including, but not limited to, these examples:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(Arguments&... args);   
@@ -83,27 +100,27 @@ template <typename... Arguments> returntype functionname(Arguments&&... args);
 template <typename... Arguments> returntype functionname(Arguments*... args);  
 ```  
   
- También se permiten especificadores como `const`:  
+ Specifiers like `const` are also allowed:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(const Arguments&... args);  
   
 ```  
   
- Como ocurre con las definiciones de clase de plantilla variádica, se pueden crear funciones que requieran al menos un parámetro:  
+ As with variadic template class definitions, you can make functions that require at least one parameter:  
   
 ```cpp  
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);  
   
 ```  
   
- Las plantillas variádicas utilizan el operador `sizeof...()` \(relacionado con el anterior operador `sizeof()`\):  
+ Variadic templates use the `sizeof...()` operator (unrelated to the older `sizeof()` operator):  
   
 ```cpp  
 template<typename... Arguments>  
 void tfunc(const Arguments&... args)  
 {  
-    const unsigned numargs = sizeof...(Arguments);  
+    constexpr auto numargs{ sizeof...(Arguments) };  
   
     X xobj[numargs]; // array of some previously defined type X  
   
@@ -112,15 +129,14 @@ void tfunc(const Arguments&... args)
   
 ```  
   
-## Más información sobre la posición de los puntos suspensivos  
- Anteriormente en este artículo se ha descrito la posición de los puntos suspensivos que definen los paquetes de parámetros y las expansiones como "a la izquierda del nombre de parámetro, significa un paquete de parámetros, y a la derecha del nombre de parámetro, expande los paquetes de parámetros en nombres diferentes".  Esto es técnicamente cierto pero puede ser confuso trasladarlo al código.  Tenga en cuenta que:  
+## <a name="more-about-ellipsis-placement"></a>More about ellipsis placement  
+ Previously, this article described ellipsis placement that defines parameter packs and expansions as "to the left of the parameter name, it signifies a parameter pack, and to the right of the parameter name, it expands the parameter packs into separate names". This is technically true but can be confusing in translation to code. Consider:  
   
--   En una lista de parámetros de plantilla \(`template <parameter-list>`\), `typename...` introduce un paquete de parámetros de plantilla.  
+-   In a template-parameter-list (`template <parameter-list>`), `typename...` introduces a template parameter pack.  
   
--   En una cláusula de declaración de parámetros \(`func(parameter-list)`\), los puntos suspensivos "de nivel superior" introducen un paquete de parámetros de función, y la posición de los puntos suspensivos es importante:  
+-   In a parameter-declaration-clause (`func(parameter-list)`), a "top-level" ellipsis introduces a function parameter pack, and the ellipsis positioning is important:  
   
     ```cpp  
-  
     // v1 is NOT a function parameter pack:  
     template <typename... Types> void func1(std::vector<Types...> v1);   
   
@@ -128,10 +144,10 @@ void tfunc(const Arguments&... args)
     template <typename... Types> void func2(std::vector<Types>... v2);   
     ```  
   
--   Cuando los puntos suspensivos aparecen inmediatamente después de un nombre de parámetro, tiene una expansión del paquete de parámetros.  
+-   Where the ellipsis appears immediately after a parameter name, you have a parameter pack expansion.  
   
-## Ejemplo  
- Una buena manera de mostrar el mecanismo de la función de plantilla variádica consiste en utilizarlo para reescribir cierta funcionalidad de `printf`:  
+## <a name="example"></a>Example  
+ A good way to illustrate the variadic template function mechanism is to use it in a re-write of some of the functionality of `printf`:  
   
 ```cpp  
 #include <iostream>  
@@ -165,7 +181,7 @@ int main()
   
 ```  
   
-## Salida  
+## <a name="output"></a>Output  
   
 ```  
   
@@ -176,7 +192,6 @@ first, 2, third, 3.14159
 ```  
   
 > [!NOTE]
->  La mayoría de las implementaciones que incorporan funciones de plantilla variádica utilizan algún tipo de recursividad, pero es ligeramente diferente de la recursividad tradicional. La recursividad tradicional conlleva una función que se llama a sí misma utilizando la misma signatura. \(Puede estar sobrecargada o con plantilla, pero siempre se elige la misma signatura\). La recursividad variádica implica llamar a una plantilla de función variádica mediante diferentes números \(casi siempre en disminución\) de argumentos y, por tanto, pone un sello con una signatura diferente cada vez.  Sigue siendo necesario un "caso base", pero la naturaleza de la recursividad es diferente.  
+>  Most implementations that incorporate variadic template functions use recursion of some form, but it's slightly different from traditional recursion.  Traditional recursion involves a function calling itself by using the same signature. (It may be overloaded or templated, but the same signature is chosen each time.) Variadic recursion involves calling a variadic function template by using differing (almost always decreasing) numbers of arguments, and thereby stamping out a different signature every time. A "base case" is still required, but the nature of the recursion is different.  
   
-## Vea también  
- [Puntos suspensivos \(...\)](../misc/ellipsis-dot-dot-dot.md)
+

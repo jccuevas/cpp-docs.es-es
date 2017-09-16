@@ -1,38 +1,56 @@
 ---
-title: "Relaci&#243;n entre un objeto Window de C++ y un HWND | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "HWND"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CWnd (clase), HWND"
-  - "HWND"
-  - "HWND, Window (objetos)"
-  - "Window (objetos) [C++], HWND y"
-  - "Windows (ventana) [C++]"
+title: Relationship Between a C++ Window Object and an HWND | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- HWND
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows window [MFC]
+- window objects [MFC], HWND and
+- HWND [MFC]
+- CWnd class [MFC], HWND
+- HWND, window objects [MFC]
 ms.assetid: f2e76340-6691-4ee6-9424-0345634a9469
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Relaci&#243;n entre un objeto Window de C++ y un HWND
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1a82eeea31a3b48ed7467df50c9ecc17ada034c0
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-*El objeto* de ventana es un objeto de clase de C\+\+ `CWnd` \(o una clase derivada\) que el programa crea directamente.  Procede y va en respuesta al constructor del programa y las llamadas del destructor.  *La ventana*de Windows, por otro lado, es un identificador opaco a una estructura de datos interna de Windows que corresponde a una ventana y consume recursos del sistema si existe.  Una ventana de Windows se identifica mediante un “identificador de ventana” \(`HWND`\) y creado después de que el objeto de `CWnd` es creado por una llamada a la función miembro de **crear** de la clase `CWnd`.  La ventana se puede destruir cualquiera por una llamada del programa o por la acción de un usuario.  El identificador de ventana se almacena en la variable miembro de `m_hWnd` de objeto de la ventana.  La ilustración siguiente muestra la relación entre el objeto de la ventana de C\+\+ y la ventana de Windows.  Crear las ventanas se explica en [Crear Windows](../mfc/creating-windows.md).  Destrucción de las ventanas se explica en [Objetos de destrucción de la ventana](../mfc/destroying-window-objects.md).  
+---
+# <a name="relationship-between-a-c-window-object-and-an-hwnd"></a>Relationship Between a C++ Window Object and an HWND
+The window *object* is an object of the C++ `CWnd` class (or a derived class) that your program creates directly. It comes and goes in response to your program's constructor and destructor calls. The Windows *window*, on the other hand, is an opaque handle to an internal Windows data structure that corresponds to a window and consumes system resources when present. A Windows window is identified by a "window handle" (`HWND`) and is created after the `CWnd` object is created by a call to the **Create** member function of class `CWnd`. The window may be destroyed either by a program call or by a user's action. The window handle is stored in the window object's `m_hWnd` member variable. The following figure shows the relationship between the C++ window object and the Windows window. Creating windows is discussed in [Creating Windows](../mfc/creating-windows.md). Destroying windows is discussed in [Destroying Window Objects](../mfc/destroying-window-objects.md).  
   
- ![Objeto de ventana CWnd y ventana resultante](../mfc/media/vc37fj1.png "vc37FJ1")  
-Objeto de ventana y ventana de Windows  
+ ![CWnd window object and resulting window](../mfc/media/vc37fj1.gif "vc37fj1")  
+Window Object and Windows Window  
   
-## Vea también  
- [Window \(Objetos\)](../mfc/window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Window Objects](../mfc/window-objects.md)
+
+

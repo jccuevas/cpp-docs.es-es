@@ -1,46 +1,65 @@
 ---
-title: "Clases de arrastrar y colocar y de transferencia de datos OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX (clases) [C++]"
-  - "transferencia de datos [C++], OLE"
-  - "clases de transferencia de datos [C++]"
-  - "arrastrar y colocar [C++], clases"
-  - "arrastrar y colocar OLE [C++], y clases de transferencia de datos"
+title: OLE Drag-and-Drop and Data Transfer Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX classes [MFC]
+- OLE drag and drop [MFC], and data transfer classes
+- drag and drop [MFC], classes
+- data transfer [MFC], OLE
+- data transfer classes [MFC]
 ms.assetid: c8ab2825-ed69-4b88-8ae6-f368b94726b8
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Clases de arrastrar y colocar y de transferencia de datos OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 53bcb98592f0fc9dd1af72aec61f5dd30882d9c1
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Estas clases se utilizan en las transferencias de datos VIEJAS.  Permiten que los datos se transfieren entre las aplicaciones utilizando el portapapeles o con arrastrar y colocar.  
+---
+# <a name="ole-drag-and-drop-and-data-transfer-classes"></a>OLE Drag-and-Drop and Data Transfer Classes
+These classes are used in OLE data transfers. They allow data to be transferred between applications by using the Clipboard or through drag and drop.  
   
  [COleDropSource](../mfc/reference/coledropsource-class.md)  
- Controla la operación de arrastrar y colocar de principio a fin.  Esta clase determina cuando la operación de arrastre inicia y cuando finaliza.  También muestra la información del cursor durante la operación de arrastrar y colocar.  
+ Controls the drag-and-drop operation from start to finish. This class determines when the drag operation starts and when it ends. It also displays cursor feedback during the drag-and-drop operation.  
   
  [COleDataSource](../mfc/reference/coledatasource-class.md)  
- Se utiliza cuando una aplicación proporciona los datos para una transferencia de datos.  `COleDataSource` se puede ver como objeto orientado a objetos del portapapeles.  
+ Used when an application provides data for a data transfer. `COleDataSource` could be viewed as an object-oriented Clipboard object.  
   
  [COleDropTarget](../mfc/reference/coledroptarget-class.md)  
- Representa el destino de una operación de arrastrar y colocar.  Un objeto de `COleDropTarget` corresponde a una ventana en la pantalla.  Determina si aceptar los datos quitado sobre él se implementa la operación real de entrega.  
+ Represents the target of a drag-and-drop operation. A `COleDropTarget` object corresponds to a window on screen. It determines whether to accept any data dropped onto it and implements the actual drop operation.  
   
  [COleDataObject](../mfc/reference/coledataobject-class.md)  
- Se utiliza como el lado receptor a `COleDataSource`.  los objetos de`COleDataObject` proporcionan acceso a los datos almacenados en un objeto de `COleDataSource` .  
+ Used as the receiver side to `COleDataSource`. `COleDataObject` objects provide access to the data stored by a `COleDataSource` object.  
   
-## Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

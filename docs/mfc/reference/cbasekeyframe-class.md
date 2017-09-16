@@ -1,5 +1,5 @@
 ---
-title: Clase CBaseKeyFrame | Documentos de Microsoft
+title: CBaseKeyFrame Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,7 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CBaseKeyFrame class
+- CBaseKeyFrame [MFC], CBaseKeyFrame
+- CBaseKeyFrame [MFC], AddToStoryboard
+- CBaseKeyFrame [MFC], GetAnimationKeyframe
+- CBaseKeyFrame [MFC], IsAdded
+- CBaseKeyFrame [MFC], IsKeyframeAtOffset
+- CBaseKeyFrame [MFC], m_bAdded
+- CBaseKeyFrame [MFC], m_bIsKeyframeAtOffset
+- CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
 caps.latest.revision: 17
 author: mikeblome
@@ -42,60 +49,60 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: cfbaac379097c89b5dcb52fa36c0cd1f6e3d2c7f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5f79f26454a66666e317122c27df4ccf82a64bde
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbasekeyframe-class"></a>Clase CBaseKeyFrame
-Implementa la funcionalidad básica de un fotograma clave.  
+# <a name="cbasekeyframe-class"></a>CBaseKeyFrame Class
+Implements the basic functionality of a keyframe.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBaseKeyFrame : public CObject;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|Construye un objeto de fotograma clave.|  
+|[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|Constructs a keyframe object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Agrega un fotograma clave para el guión gráfico.|  
-|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Devuelve el valor subyacente del fotograma clave.|  
-|[CBaseKeyFrame::IsAdded](#isadded)|Indica si se ha agregado un fotograma clave en guiones gráficos.|  
-|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Especifica si el fotograma clave se debe agregar a guión gráfico con desplazamiento o después de la transición.|  
+|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Adds a keyframe to storyboard.|  
+|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Returns the underlying keyframe value.|  
+|[CBaseKeyFrame::IsAdded](#isadded)|Tells whether a keyframe has been added to storyboard.|  
+|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Specifies whether the keyframe should be added to storyboard at offset, or after transition.|  
   
-### <a name="protected-data-members"></a>Miembros de datos protegidos  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBaseKeyFrame::m_bAdded](#m_badded)|Especifica si se ha agregado este fotograma clave a un guión gráfico.|  
-|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Especifica si este fotograma clave se debe agregar a guión gráfico en un desplazamiento desde otro fotograma clave existente, o al final de algunos transición.|  
-|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Representa un fotograma clave de API de animación de Windows. Cuando no se ha inicializado un fotograma clave se establece en el valor predefinido UI_ANIMATION_KEYFRAME_STORYBOARD_START.|  
+|[CBaseKeyFrame::m_bAdded](#m_badded)|Specifies whether this keyframe has been added to a storyboard.|  
+|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Specifies whether this keyframe should be added to storyboard at an offset from another existing keyframe, or at the end of some transition.|  
+|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Represents a Windows Animation API keyframe. When a keyframe is not initialized it is set to the predefined value UI_ANIMATION_KEYFRAME_STORYBOARD_START.|  
   
-## <a name="remarks"></a>Comentarios  
- Encapsula la variable UI_ANIMATION_KEYFRAME. Actúa como clase base para cualquier implementación de fotograma clave. Un fotograma clave representa un momento determinado en un guión gráfico y puede utilizarse para especificar los tiempos de inicio y finalización de las transiciones. Hay dos tipos de fotogramas clave: agregar a guión gráfico en el desplazamiento especificado (en tiempo) de los fotogramas clave o fotogramas clave que se agregaron después de transición especificado. Dado que no se puede conocer las duraciones de algunas transiciones antes del comienzo de la animación, los valores reales de algunos fotogramas clave se determinan en tiempo de ejecución sólo. Dado que los fotogramas clave pueden depender de las transiciones, que a su vez, sus dependen de los fotogramas clave, es importante evitar recursividad infinita al generar cadenas de fotograma clave.  
+## <a name="remarks"></a>Remarks  
+ Encapsulates UI_ANIMATION_KEYFRAME variable. Serves as a base class for any keyframe implementation. A keyframe represents a moment in time within a storyboard and can be used to specify the start and end times of transitions. There are two types of keyframes - keyframes added to storyboard at the specified offset (in time), or keyframes added after specified transition. Because durations of some transitions can't be known before animation starts, the actual values of some keyframes are determined at runtime only. Because keyframes may depend on transitions, which in their turn depend on keyframes, it's important to prevent infinite recursions when building keyframe chains.  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CBaseKeyFrame`  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="addtostoryboard"></a>CBaseKeyFrame::AddToStoryboard  
- Agrega un fotograma clave para el guión gráfico.  
+##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard  
+ Adds a keyframe to storyboard.  
   
 ```  
 virtual BOOL AddToStoryboard(
@@ -103,86 +110,86 @@ virtual BOOL AddToStoryboard(
     BOOL bDeepAdd);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- Un puntero a un guión gráfico.  
+ A pointer to a storyboard.  
   
  `bDeepAdd`  
- Si este parámetro es TRUE y el fotograma clave que se va a agregar depende de algún otro fotograma clave o transición, este método intenta agregar este fotograma clave o una transición al guión gráfico en primer lugar.  
+ If this parameter is TRUE and the keyframe being added depends on some other keyframe or transition, this method tries to add this keyframe or transition to storyboard first.  
   
-### <a name="return-value"></a>Valor devuelto  
- TRUE si el fotograma clave se agregó al guión gráfico correctamente; de lo contrario, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if keyframe was added to storyboard successfully; otherwise FALSE.  
   
-### <a name="remarks"></a>Comentarios  
- Se llama a este método para agregar un fotograma clave para el guión gráfico.  
+### <a name="remarks"></a>Remarks  
+ This method is called to add a keyframe to storyboard.  
   
-##  <a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame  
- Construye un objeto de fotograma clave.  
+##  <a name="cbasekeyframe"></a>  CBaseKeyFrame::CBaseKeyFrame  
+ Constructs a keyframe object.  
   
 ```  
 CBaseKeyFrame();
 ```  
   
-##  <a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe  
- Devuelve el valor subyacente del fotograma clave.  
+##  <a name="getanimationkeyframe"></a>  CBaseKeyFrame::GetAnimationKeyframe  
+ Returns the underlying keyframe value.  
   
 ```  
 UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Un fotograma clave actual. El valor predeterminado es UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
+### <a name="return-value"></a>Return Value  
+ A current keyframe. The default value is UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
   
-### <a name="remarks"></a>Comentarios  
- Se trata de un descriptor de acceso para el valor subyacente del fotograma clave.  
+### <a name="remarks"></a>Remarks  
+ This is an accessor to the underlying keyframe value.  
   
-##  <a name="isadded"></a>CBaseKeyFrame::IsAdded  
- Indica si se ha agregado un fotograma clave en guiones gráficos.  
+##  <a name="isadded"></a>  CBaseKeyFrame::IsAdded  
+ Tells whether a keyframe has been added to storyboard.  
   
 ```  
 BOOL IsAdded() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- TRUE si se agrega un fotograma clave a un guión gráfico; es FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if a keyframe is added to a storyboard; otehrwise FALSE.  
   
-### <a name="remarks"></a>Comentarios  
- En la clase base IsAdded siempre devuelve TRUE, pero que se invalide en clases derivadas.  
+### <a name="remarks"></a>Remarks  
+ In the base class IsAdded always returns TRUE, but it's overridden in derived classes.  
   
-##  <a name="iskeyframeatoffset"></a>CBaseKeyFrame::IsKeyframeAtOffset  
- Especifica si el fotograma clave se debe agregar a guión gráfico con desplazamiento o después de la transición.  
+##  <a name="iskeyframeatoffset"></a>  CBaseKeyFrame::IsKeyframeAtOffset  
+ Specifies whether the keyframe should be added to storyboard at offset, or after transition.  
   
 ```  
 BOOL IsKeyframeAtOffset() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- TRUE si el fotograma clave se debe agregar al guión gráfico en algún desplazamiento especificado. FALSE si el fotograma clave se debe agregar a guión gráfico después de algunos transición.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the keyframe should be added to storyboard at some specified offset. FALSE if the keyframe should be added to storyboard after some transition.  
   
-### <a name="remarks"></a>Comentarios  
- Especifica si se debe agregar el fotograma clave en guiones gráficos en desplazamiento. El desplazamiento o transición debe especificarse en una clase derivada.  
+### <a name="remarks"></a>Remarks  
+ Specifies whether the keyframe should be added to storyboard at offset. The offset or transition must be specified in a derived class.  
   
-##  <a name="m_badded"></a>CBaseKeyFrame::m_bAdded  
- Especifica si se ha agregado este fotograma clave a un guión gráfico.  
+##  <a name="m_badded"></a>  CBaseKeyFrame::m_bAdded  
+ Specifies whether this keyframe has been added to a storyboard.  
   
 ```  
 BOOL m_bAdded;  
 ```  
   
-##  <a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset  
- Especifica si este fotograma clave se debe agregar a guión gráfico en un desplazamiento desde otro fotograma clave existente, o al final de algunos transición.  
+##  <a name="m_biskeyframeatoffset"></a>  CBaseKeyFrame::m_bIsKeyframeAtOffset  
+ Specifies whether this keyframe should be added to storyboard at an offset from another existing keyframe, or at the end of some transition.  
   
 ```  
 BOOL m_bIsKeyframeAtOffset;  
 ```  
   
-##  <a name="m_keyframe"></a>CBaseKeyFrame::m_keyframe  
- Representa un fotograma clave de API de animación de Windows. Cuando no se ha inicializado un fotograma clave se establece en el valor predefinido UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
+##  <a name="m_keyframe"></a>  CBaseKeyFrame::m_keyframe  
+ Represents a Windows Animation API keyframe. When a keyframe is not initialized it is set to the predefined value UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
   
 ```  
 UI_ANIMATION_KEYFRAME m_keyframe;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Clases](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

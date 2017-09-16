@@ -32,59 +32,59 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 6002dcd4cd0fe35c99ce56a1d9fd3b5f3c23dd08
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5cf0a7bed02578f4bd4e7fe8146c7f67835a01ac
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
-Define las clases [condition_variable](../standard-library/condition-variable-class.md) y [condition_variable_any](../standard-library/condition-variable-any-class.md) que se usan para crear objetos que esperan que una condición sea True.  
+Defines the classes [condition_variable](../standard-library/condition-variable-class.md) and [condition_variable_any](../standard-library/condition-variable-any-class.md) that are used to create objects that wait for a condition to become true.  
   
- Este encabezado utiliza el runtime de simultaneidad (ConcRT) para que pueda utilizarlo junto con otros mecanismos de ConcRT. Para obtener más información sobre ConcRT, vea [Runtime de simultaneidad](../parallel/concrt/concurrency-runtime.md).  
+ This header uses Concurrency Runtime (ConcRT) so that you can use it together with other ConcRT mechanisms. For more information about ConcRT, see [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <condition_variable>  
 ```  
   
 > [!NOTE]
->  En el código que se compila con **/CLR**, este encabezado está bloqueado.  
+>  In code that is compiled by using **/clr**, this header is blocked.  
   
-### <a name="remarks"></a>Comentarios  
- El código que espera una variable de condición también debe usar una `mutex`. Un subproceso de llamada debe bloquear la `mutex` antes de llamar a las funciones que esperan la variable de condición. La `mutex` se bloquea al volver la función llamada. La `mutex` no está bloqueada mientras el subproceso espera que la condición sea True. Para que no haya resultados imprevisibles, cada subproceso que espera por una variable de condición debe usar el mismo objeto `mutex`.  
+### <a name="remarks"></a>Remarks  
+ Code that waits for a condition variable must also use a `mutex`. A calling thread must lock the `mutex` before it calls the functions that wait for the condition variable. The `mutex` is then locked when the called function returns. The `mutex` is not locked while the thread waits for the condition to become true. So that there are no unpredictable results, each thread that waits for a condition variable must use the same `mutex` object.  
   
- Se pueden usar objetos de tipo `condition_variable_any` con una exclusión mutua de cualquier tipo. El tipo de la exclusión mutua que se usa no tiene que proporcionar el método `try_lock`. Solo se pueden usar objetos de tipo `condition_variable` con una exclusión mutua de tipo `unique_lock<mutex>`. Los objetos de este tipo pueden ser más rápidos que los objetos de tipo `condition_variable_any<unique_lock<mutex>>`.  
+ Objects of type `condition_variable_any` can be used with a mutex of any type. The type of the mutex that is used does not have to provide the `try_lock` method. Objects of type `condition_variable` can only be used with a mutex of type `unique_lock<mutex>`. Objects of this type may be faster than objects of type `condition_variable_any<unique_lock<mutex>>`.  
   
- Para esperar un evento, bloquee primero la exclusión mutua y después llame a uno de los métodos `wait` en la variable de condición. La llamada a `wait` se bloquea hasta que otro subproceso señala la variable de condición.  
+ To wait for an event, first lock the mutex, and then call one of the `wait` methods on the condition variable. The `wait` call blocks until another thread signals the condition variable.  
   
- Las *reactivaciones falsas* se producen cuando los subprocesos que están esperando a las variables de condición se desbloquean sin notificaciones adecuadas. Para reconocer estas reactivaciones falsas, el código que espera a que una condición sea True debe comprobar de forma explícita esa condición cuando el código vuelva de una función wait. Normalmente, esto se realiza mediante un bucle; puede usar `wait(unique_lock<mutex>& lock, Predicate pred)` para que realice este bucle por usted.  
+ *Spurious wakeups* occur when threads that are waiting for condition variables become unblocked without appropriate notifications. To recognize such spurious wakeups, code that waits for a condition to become true should explicitly check that condition when the code returns from a wait function. This is usually done by using a loop; you can use `wait(unique_lock<mutex>& lock, Predicate pred)` to perform this loop for you.  
   
 ```cpp  
 while (condition is false)
     wait for condition variable;
 ```  
   
- Las clases `condition_variable_any` y `condition_variable` tienen tres métodos que esperan una condición.  
+ The `condition_variable_any` and `condition_variable` classes each have three methods that wait for a condition.  
   
-- `wait` espera durante un período de tiempo ilimitado.  
+- `wait` waits for an unbounded time period.  
   
-- `wait_until` espera hasta una `time` especificada.  
+- `wait_until` waits until a specified `time`.  
   
-- `wait_for` espera durante un `time interval` especificado.  
+- `wait_for` waits for a specified `time interval`.  
   
- Cada uno de estos métodos tiene dos versiones sobrecargadas. Uno solo espera y se puede reactivar en falso. El otro toma un argumento de plantilla adicional que define un predicado. El método no vuelve hasta que el predicado sea `true`.  
+ Each of these methods has two overloaded versions. One just waits and can wake up spuriously. The other takes an additional template argument that defines a predicate. The method does not return until the predicate is `true`.  
   
- Cada clase tiene también dos métodos que se usan para notificar a una variable de condición que su condición es `true`.  
+ Each class also has two methods that are used to notify a condition variable that its condition is `true`.  
   
-- `notify_one` reactiva uno de los subprocesos que está esperando la variable de condición.  
+- `notify_one` wakes up one of the threads that is waiting for the condition variable.  
   
-- `notify_all` reactiva todos los subprocesos que están esperando la variable de condición.  
+- `notify_all` wakes up all of the threads that are waiting for the condition variable.  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
- [condition_variable (Clase)](../standard-library/condition-variable-class.md)   
- [condition_variable_any (Clase)](../standard-library/condition-variable-any-class.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [condition_variable Class](../standard-library/condition-variable-class.md)   
+ [condition_variable_any Class](../standard-library/condition-variable-any-class.md)
 

@@ -1,43 +1,62 @@
 ---
-title: "Usar un control de animaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles de animación [C++]"
-  - "CAnimateCtrl (clase), controles de animación"
-  - "controles [MFC], animación"
+title: Using an Animation Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- controls [MFC], animation
+- CAnimateCtrl class [MFC], animation controls
+- animation controls [MFC]
 ms.assetid: a009a464-e12d-4112-bf52-04a09b28dd88
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Usar un control de animaci&#243;n
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e7555102fdfdb3cbe1405b23a1acde25178567bb
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-El uso típico de una animación sigue el modelo siguiente:  
+---
+# <a name="using-an-animation-control"></a>Using an Animation Control
+Typical usage of an animation control follows the pattern below:  
   
--   Se crea el control.  Si el control se especifica en una plantilla de cuadro de diálogo, la creación es automática cuando se crea el cuadro de diálogo. \(Debe tener un miembro de [CAnimateCtrl](../mfc/reference/canimatectrl-class.md) en la clase de diálogo correspondiente al control de animación\). Alternativamente, puede utilizar la función miembro de [crear](../Topic/CAnimateCtrl::Create.md) para crear el control como una ventana secundaria de cualquier ventana.  
+-   The control is created. If the control is specified in a dialog box template, creation is automatic when the dialog box is created. (You should have a [CAnimateCtrl](../mfc/reference/canimatectrl-class.md) member in your dialog class that corresponds to the animation control.) Alternatively, you can use the [Create](../mfc/reference/canimatectrl-class.md#create) member function to create the control as a child window of any window.  
   
--   Cargue AVI clip en el control de la aplicación llamando a la función miembro de [Abierta](../Topic/CAnimateCtrl::Open.md) .  Si el control de animación está en un cuadro de diálogo, un buen lugar para ello es la función de [OnInitDialog](../Topic/CDialog::OnInitDialog.md) de la clase de diálogo.  
+-   Load an AVI clip into the animation control by calling the [Open](../mfc/reference/canimatectrl-class.md#open) member function. If your animation control is in a dialog box, a good place to do this is in the dialog class's [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) function.  
   
--   Reproducir recorte llamando a la función miembro de [Reproducir](../Topic/CAnimateCtrl::Play.md) .  Si el control de animación está en un cuadro de diálogo, un buen lugar para ello es la función de **OnInitDialog** de la clase de diálogo.  La llamada **Reproducir** no es necesaria si el control de animación tiene el estilo de `ACS_AUTOPLAY` establecido.  
+-   Play the clip by calling the [Play](../mfc/reference/canimatectrl-class.md#play) member function. If your animation control is in a dialog box, a good place to do this is in the dialog class's **OnInitDialog** function. Calling **Play** is not necessary if the animation control has the `ACS_AUTOPLAY` style set.  
   
--   Si desea mostrar partes de recorte o para jugarlas cuadro por el cuadro, utilice la función miembro de `Seek` .  Para detener recorte que se está reproduciendo, utilice la función miembro de `Stop` .  
+-   If you want to display portions of the clip or play it frame by frame, use the `Seek` member function. To stop a clip that is playing, use the `Stop` member function.  
   
--   Si no va a destruir el control inmediatamente, quite clip de memoria llamando a la función miembro de **cerrar** .  
+-   If you are not going to destroy the control right away, remove the clip from memory by calling the **Close** member function.  
   
--   Si el control de animación está en un cuadro de diálogo, éste y el objeto de `CAnimateCtrl` se destruyeron automáticamente.  Si no, deberá asegurarse de que el control y el objeto de `CAnimateCtrl` están destruirse correctamente.  La destrucción del control automáticamente cierra AVI recorte.  
+-   If the animation control is in a dialog box, it and the `CAnimateCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CAnimateCtrl` object are properly destroyed. Destroying the control automatically closes the AVI clip.  
   
-## Vea también  
- [Usar CAnimateCtrl](../mfc/using-canimatectrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CAnimateCtrl](../mfc/using-canimatectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: CEvent (clase) | Documentos de Microsoft
+title: CEvent Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,9 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- synchronization objects, event
-- synchronization classes, CEvent class
-- CEvent class
+- CEvent [MFC], CEvent
+- CEvent [MFC], PulseEvent
+- CEvent [MFC], ResetEvent
+- CEvent [MFC], SetEvent
+- CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
 caps.latest.revision: 27
 author: mikeblome
@@ -41,73 +43,73 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 9edadeec87cf04ae6166c173c65463d1509eb1d8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 07229413827af29688caffbff9b2ccbd6b113f4e
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cevent-class"></a>CEvent (clase)
-Representa un evento, que es un objeto de sincronización que permite que un subproceso notifique a otro que se ha producido un evento.  
+# <a name="cevent-class"></a>CEvent Class
+Represents an event, which is a synchronization object that enables one thread to notify another that an event has occurred.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CEvent : public CSyncObject  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CEvent::CEvent](#cevent)|Construye un objeto `CEvent`.|  
+|[CEvent::CEvent](#cevent)|Constructs a `CEvent` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CEvent::PulseEvent](#pulseevent)|Establece señala el evento disponible (), libera los subprocesos en espera y establece el evento como no disponible (no señalado).|  
-|[CEvent::ResetEvent](#resetevent)|Establece el evento como no disponible (no señalado).|  
-|[CEvent::SetEvent](#setevent)|Establece el evento en disponibles (señalado) y libera todos los subprocesos en espera.|  
-|[CEvent::Unlock](#unlock)|Libera el objeto de evento.|  
+|[CEvent::PulseEvent](#pulseevent)|Sets the event to available (signaled), releases waiting threads, and sets the event to unavailable (nonsignaled).|  
+|[CEvent::ResetEvent](#resetevent)|Sets the event to unavailable (nonsignaled).|  
+|[CEvent::SetEvent](#setevent)|Sets the event to available (signaled) and releases any waiting threads.|  
+|[CEvent::Unlock](#unlock)|Releases the event object.|  
   
-## <a name="remarks"></a>Comentarios  
- Los eventos son útiles cuando un subproceso debe saber cuándo se debe realizar su tarea. Por ejemplo, un subproceso que copia datos en un archivo de datos se notificará cuando hay nuevos datos disponibles. Mediante el uso de un `CEvent` objeto para notificar el subproceso de copia cuando hay nuevos datos disponibles, el subproceso puede realizar su tarea tan pronto como sea posible.  
+## <a name="remarks"></a>Remarks  
+ Events are useful when a thread must know when to perform its task. For example, a thread that copies data to a data archive must be notified when new data is available. By using a `CEvent` object to notify the copy thread when new data is available, the thread can perform its task as soon as possible.  
   
- `CEvent`los objetos tienen dos tipos: manual y automático.  
+ `CEvent` objects have two types: manual and automatic.  
   
- Automáticos `CEvent` objeto vuelve automáticamente a un estado (no disponible) no señalado después de libera al menos un subproceso. De forma predeterminada, un `CEvent` objeto es automático a menos que pase `TRUE` para el `bManualReset` parámetro durante la construcción.  
+ An automatic `CEvent` object automatically returns to a non-signaled (unavailable) state after at least one thread is released. By default, a `CEvent` object is automatic unless you pass `TRUE` for the `bManualReset` parameter during construction.  
   
- Un manual `CEvent` objeto permanece en el estado establecido [SetEvent](#setevent) o [ResetEvent](#resetevent) hasta que se llama a otra función. Para crear un manual `CEvent` de objetos, pasar `TRUE` para el `bManualReset` parámetro durante la construcción.  
+ A manual `CEvent` object stays in the state set by [SetEvent](#setevent) or [ResetEvent](#resetevent) until the other function is called. To create a manual `CEvent` object, pass `TRUE` for the `bManualReset` parameter during construction.  
   
- Para usar un `CEvent` objeto, construir la `CEvent` objeto cuando sea necesario. Especifique el nombre del evento que desea esperar y especificar que la aplicación debe inicialmente el propietario. A continuación, puede tener acceso el evento cuando se devuelve el constructor. Llame a [SetEvent](#setevent) señal (hacer disponible) el objeto de evento y luego se llama [Unlock](#unlock) cuando haya terminado obtener acceso al recurso controlado.  
+ To use a `CEvent` object, construct the `CEvent` object when it is required. Specify the name of the event you want to wait on, and also specify that your application should initially own it. You can then access the event when the constructor returns. Call [SetEvent](#setevent) to signal (make available) the event object and then call [Unlock](#unlock) when you are done accessing the controlled resource.  
   
- Un método alternativo para el uso de `CEvent` objetos consiste en Agregar una variable de tipo `CEvent` como un miembro de datos a la clase que desea controlar. Durante la construcción del objeto controlado, llame al constructor de la `CEvent` miembro de datos y especificar si el evento se señala inicialmente y specifythe tipo de objeto de evento que desea, el nombre del evento (si se utilizará en los límites de proceso), y atributos de seguridad deseado.  
+ An alternative method for using `CEvent` objects is to add a variable of type `CEvent` as a data member to the class you want to control. During construction of the controlled object, call the constructor of the `CEvent` data member and specify whether the event is initially signaled, and also specifythe type of event object you want, the name of the event (if it will be used across process boundaries), and any security attributes you want.  
   
- Para obtener acceso a un recurso controlado por un `CEvent` de esta manera, primero cree una variable de cualquier tipo de [CSingleLock](../../mfc/reference/csinglelock-class.md) o tipo [CMultiLock](../../mfc/reference/cmultilock-class.md) en el método de acceso del recurso. A continuación, llame a la `Lock` método del objeto de bloqueo (por ejemplo, [CMultiLock::Lock](../../mfc/reference/cmultilock-class.md#lock)). En este punto, el subproceso se bien tener acceso a los recursos, espere a que el recurso se libera y obtener acceso o espere a que se libere el recurso de tiempo de espera y no se pudo obtener acceso al recurso. En cualquier caso, se tiene acceso a los recursos de una manera segura para subprocesos. Para liberar los recursos, llame a `SetEvent` el objeto de evento de señal y, a continuación, usar el `Unlock` método del objeto de bloqueo (por ejemplo, [CMultiLock::Unlock](../../mfc/reference/cmultilock-class.md#unlock)), o dejar que el objeto de bloqueo quedan fuera de ámbito.  
+ To access a resource controlled by a `CEvent` object in this manner, first create a variable of either type [CSingleLock](../../mfc/reference/csinglelock-class.md) or type [CMultiLock](../../mfc/reference/cmultilock-class.md) in the access method of your resource. Then call the `Lock` method of the lock object (for example, [CMultiLock::Lock](../../mfc/reference/cmultilock-class.md#lock)). At this point, your thread will either gain access to the resource, wait for the resource to be released and gain access, or wait for the resource to be released, time out, and fail to gain access to the resource. In any case, your resource has been accessed in a thread-safe manner. To release the resource, call `SetEvent` to signal the event object, and then use the `Unlock` method of the lock object (for example, [CMultiLock::Unlock](../../mfc/reference/cmultilock-class.md#unlock)), or let the lock object fall out of scope.  
   
- Para obtener más información acerca de cómo usar `CEvent` los objetos, vea [subprocesamiento múltiple: cómo usar las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+ For more information about how to use `CEvent` objects, see [Multithreading: How to Use the Synchronization Classes](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
-## <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_Utilities nº&45;](../../mfc/codesnippet/cpp/cevent-class_1.cpp)]  
+## <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#45](../../mfc/codesnippet/cpp/cevent-class_1.cpp)]  
   
- [!code-cpp[NVC_MFC_Utilities nº&46;](../../mfc/codesnippet/cpp/cevent-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities#46](../../mfc/codesnippet/cpp/cevent-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CSyncObject](../../mfc/reference/csyncobject-class.md)  
   
  `CEvent`  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxmt.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxmt.h  
   
-##  <a name="cevent"></a>CEvent::CEvent  
- Construye una con o sin nombre `CEvent` objeto.  
+##  <a name="cevent"></a>  CEvent::CEvent  
+ Constructs a named or unnamed `CEvent` object.  
   
 ```  
 CEvent(
@@ -117,87 +119,87 @@ CEvent(
     LPSECURITY_ATTRIBUTES lpsaAttribute = NULL);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `bInitiallyOwn`  
- Si **TRUE**, el subproceso de la **CMultilock** o `CSingleLock` objeto está habilitado. De lo contrario, deben esperar todos los subprocesos que deseen tener acceso al recurso.  
+ If **TRUE**, the thread for the **CMultilock** or `CSingleLock` object is enabled. Otherwise, all threads wanting to access the resource must wait.  
   
  *bManualReset*  
- Si **TRUE**, especifica que el objeto de evento es un evento manual, de lo contrario, el objeto de evento es un evento automático.  
+ If **TRUE**, specifies that the event object is a manual event, otherwise the event object is an automatic event.  
   
  `lpszName`  
- Nombre del objeto `CEvent`. Se debe proporcionar si se utilizará el objeto a través de límites de proceso. Si el nombre coincide con un evento existente, el constructor genera una nueva `CEvent` objeto que hace referencia a los eventos de ese nombre. Si el nombre coincide con un objeto de sincronización existente que no es un evento, se producirá un error en la construcción. Si **NULL**, el nombre será null.  
+ Name of the `CEvent` object. Must be supplied if the object will be used across process boundaries. If the name matches an existing event, the constructor builds a new `CEvent` object which references the event of that name. If the name matches an existing synchronization object that is not an event, the construction will fail. If **NULL**, the name will be null.  
   
  `lpsaAttribute`  
- Atributos de seguridad del objeto de evento. Para obtener una descripción completa de esta estructura, vea [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Security attributes for the event object. For a full description of this structure, see [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) in the Windows SDK.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener acceso o liberar una `CEvent` , cree un [CMultiLock](../../mfc/reference/cmultilock-class.md) o [CSingleLock](../../mfc/reference/csinglelock-class.md) objeto y llamar a su [bloqueo](../../mfc/reference/csinglelock-class.md#lock) y [Unlock](../../mfc/reference/csinglelock-class.md#unlock) funciones miembro.  
+### <a name="remarks"></a>Remarks  
+ To access or release a `CEvent` object, create a [CMultiLock](../../mfc/reference/cmultilock-class.md) or [CSingleLock](../../mfc/reference/csinglelock-class.md) object and call its [Lock](../../mfc/reference/csinglelock-class.md#lock) and [Unlock](../../mfc/reference/csinglelock-class.md#unlock) member functions.  
   
- Para cambiar el estado de un `CEvent` objeto marcado (subprocesos no tienen que esperar), llame a [SetEvent](#setevent) o [PulseEvent](#pulseevent). Para establecer el estado de un `CEvent` objeto en no señalado (subprocesos deben esperar), llame a [ResetEvent](#resetevent).  
+ To change the state of a `CEvent` object to signaled (threads do not have to wait), call [SetEvent](#setevent) or [PulseEvent](#pulseevent). To set the state of a `CEvent` object to nonsignaled (threads must wait), call [ResetEvent](#resetevent).  
   
 > [!IMPORTANT]
->  Después de crear el `CEvent` objeto, utilice [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) para asegurarse de que la exclusión mutua no existe. Si la exclusión mutua existía inesperadamente, puede indicar un proceso invasor es uso inapropiado y puede prevé utilizar la exclusión mutua de forma malintencionada. En este caso, el procedimiento recomendado de preocupados por la seguridad es cerrar el identificador y continuar como si se produjo un error en la creación del objeto.  
+>  After creating the `CEvent` object, use [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) to ensure that the mutex didn't already exist. If the mutex did exist unexpectedly, it may indicate a rogue process is squatting and may be intending to use the mutex maliciously. In this case, the recommended security-conscious procedure is to close the handle and continue as if there was a failure in creating the object.  
   
-##  <a name="pulseevent"></a>CEvent::PulseEvent  
- Establece el estado del evento en señalado (disponible), libera todos los subprocesos en espera y que no señalado (no disponible) se restablece automáticamente.  
+##  <a name="pulseevent"></a>  CEvent::PulseEvent  
+ Sets the state of the event to signaled (available), releases any waiting threads, and resets it to nonsignaled (unavailable) automatically.  
   
 ```  
 BOOL PulseEvent();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realizó correctamente; en caso contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function was successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Si el evento es manual, se liberan todos los subprocesos en espera, el evento se establece en no señalado, y `PulseEvent` devuelve. Si el evento es automático, se libera un único subproceso, el evento está establecido en no señalado, y `PulseEvent` devuelve.  
+### <a name="remarks"></a>Remarks  
+ If the event is manual, all waiting threads are released, the event is set to nonsignaled, and `PulseEvent` returns. If the event is automatic, a single thread is released, the event is set to nonsignaled, and `PulseEvent` returns.  
   
- Si no hay subprocesos en espera o subprocesos no pueden liberarse inmediatamente, `PulseEvent` establece el estado del evento en no señalado y devuelve.  
+ If no threads are waiting, or no threads can be released immediately, `PulseEvent` sets the state of the event to nonsignaled and returns.  
   
- `PulseEvent`utiliza Win32 subyacente `PulseEvent` función, que se puede quitar temporalmente desde el estado de espera por una llamada a procedimiento asincrónico de modo kernel. Por lo tanto, `PulseEvent` es confiable y no debe utilizarse en aplicaciones nuevas. Para obtener más información, consulte el [función PulseEvent](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
+ `PulseEvent` uses the underlying Win32 `PulseEvent` function, which can be momentarily removed from the wait state by a kernel-mode asynchronous procedure call. Therefore, `PulseEvent` is unreliable and should not be used by new applications. For more information, see the [PulseEvent function](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
   
-##  <a name="resetevent"></a>CEvent::ResetEvent  
- Establece el estado del evento en no señalado hasta que establezca explícitamente como señalado por el [SetEvent](#setevent) función miembro.  
+##  <a name="resetevent"></a>  CEvent::ResetEvent  
+ Sets the state of the event to nonsignaled until explicitly set to signaled by the [SetEvent](#setevent) member function.  
   
 ```  
 BOOL ResetEvent();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realizó correctamente; en caso contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function was successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Esto hace que todos los subprocesos que deseen tener acceso a este evento para esperar.  
+### <a name="remarks"></a>Remarks  
+ This causes all threads wishing to access this event to wait.  
   
- Esta función miembro no se utiliza por eventos automáticos.  
+ This member function is not used by automatic events.  
   
-##  <a name="setevent"></a>CEvent::SetEvent  
- Establece el estado del evento en señalado, liberar los subprocesos en espera.  
+##  <a name="setevent"></a>  CEvent::SetEvent  
+ Sets the state of the event to signaled, releasing any waiting threads.  
   
 ```  
 BOOL SetEvent();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realizó correctamente, de lo contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function was successful, otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Si el evento es manual, el evento permanecerá señalado hasta [ResetEvent](#resetevent) se llama. Más de un subproceso puede liberarse en este caso. Si el evento es automático, el evento permanecerá señalado hasta que se libera un único subproceso. El sistema, a continuación, Establece el estado del evento en no señalado. Si no hay ningún subproceso en espera, el estado permanece señalado hasta que se libere un subproceso.  
+### <a name="remarks"></a>Remarks  
+ If the event is manual, the event will remain signaled until [ResetEvent](#resetevent) is called. More than one thread can be released in this case. If the event is automatic, the event will remain signaled until a single thread is released. The system will then set the state of the event to nonsignaled. If no threads are waiting, the state remains signaled until one thread is released.  
   
-##  <a name="unlock"></a>CEvent::Unlock  
- Libera el objeto de evento.  
+##  <a name="unlock"></a>  CEvent::Unlock  
+ Releases the event object.  
   
 ```  
 BOOL Unlock();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si el subproceso propietario del objeto de evento y el evento es un evento automático; en caso contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the thread owned the event object and the event is an automatic event; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Subprocesos que poseen actualmente un evento automático para liberar una vez terminados, si es su objeto de bloqueo que se reutilice llama a esta función miembro. Si el objeto de bloqueo no se puede volver a utilizar, esta función se llamará al destructor del objeto de bloqueo.  
+### <a name="remarks"></a>Remarks  
+ This member function is called by threads that currently own an automatic event to release it after they are done, if their lock object is to be reused. If the lock object is not to be reused, this function will be called by the lock object's destructor.  
   
-## <a name="see-also"></a>Vea también  
- [CSyncObject (clase)](../../mfc/reference/csyncobject-class.md)   
- [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CSyncObject Class](../../mfc/reference/csyncobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 

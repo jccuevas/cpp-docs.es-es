@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCRibbonLabel | Documentos de Microsoft
+title: CMFCRibbonLabel Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonLabel class
+- CMFCRibbonLabel [MFC], CMFCRibbonLabel
+- CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
 caps.latest.revision: 21
 author: mikeblome
@@ -36,45 +37,45 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: b93e0f6c46818515c8d6bcd8d71b78dcaa435ea6
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c778ed32d761f895c4a5f95c319198748983f1be
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonlabel-class"></a>Clase CMFCRibbonLabel
-Implementa una etiqueta de texto no seleccionable en una cinta.  
+# <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel Class
+Implements a non-clickable text label for a ribbon.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonLabel : public CMFCRibbonButton  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Construye e inicializa un `CMFCRibbonLabel` objeto con la cadena de texto especificado.|  
+|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Constructs and initializes a `CMFCRibbonLabel` object with the specified text string.|  
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|Destructor.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonLabel::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|  
-|`CMFCRibbonLabel::GetThisClass`|Usar el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
-|[CMFCRibbonLabel::SetACCData](#setaccdata)|Determina los datos de accesibilidad para el elemento de etiqueta de cinta actual. (Invalida [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
+|`CMFCRibbonLabel::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CMFCRibbonLabel::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCRibbonLabel::SetACCData](#setaccdata)|Determines the accessibility data for the current ribbon label element. (Overrides [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
   
-### <a name="remarks"></a>Comentarios  
- Después de crear una etiqueta de cinta de opciones, agregarlo a un panel mediante una llamada a [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
+### <a name="remarks"></a>Remarks  
+ After you create a ribbon label, add it to a panel by calling [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
- No se puede agregar una etiqueta de cinta de opciones en la barra de herramientas de acceso rápido.  
+ You cannot add a ribbon label to the Quick Access Toolbar.  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
@@ -83,11 +84,11 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
  [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxRibbonLabel.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxRibbonLabel.h  
   
-##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
- Construye e inicializa un [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) objeto que muestra la cadena de texto especificado.  
+##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
+ Constructs and initializes a [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) object that displays the specified text string.  
   
 ```  
 CMFCRibbonLabel(
@@ -95,15 +96,15 @@ CMFCRibbonLabel(
     BOOL bIsMultiLine = FALSE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
- El texto que aparecerá en la etiqueta.  
+ The text to appear in the label.  
   
  [in] `bIsMultiLine`  
- `TRUE`para especificar que la etiqueta es una etiqueta de varias líneas; de lo contrario, `FALSE`.  
+ `TRUE` to specify that the label is a multi-line label; otherwise, `FALSE`.  
   
-##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
- Determina los datos de accesibilidad para el elemento de etiqueta de cinta actual.  
+##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
+ Determines the accessibility data for the current ribbon label element.  
   
 ```  
 virtual BOOL SetACCData(
@@ -111,18 +112,18 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  [in] `pParent`  
- Representa la ventana primaria de la etiqueta de cinta actual.  
+ Represents the parent window of the current ribbon label.  
   
  [out] `data`  
- Un objeto del tipo `CAccessibilityData` que se rellena con los datos de la accesibilidad de la etiqueta de cinta actual.  
+ An object of type `CAccessibilityData` that is populated with the accessibility data of the current ribbon label.  
   
-### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el `data` parámetro era correctamente rellenado con los datos de la accesibilidad de la etiqueta de cinta actual; en caso contrario, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the `data` parameter was successfully populated with the accessibility data of the current ribbon label; otherwise, `FALSE`.  
   
-## <a name="see-also"></a>Vea también  
- [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
- [Clases](../../mfc/reference/mfc-classes.md)   
- [Clase CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonButton Class](../../mfc/reference/cmfcribbonbutton-class.md)
 

@@ -1,38 +1,57 @@
 ---
-title: "Edici&#243;n de etiquetas de control de &#225;rbol | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl (clase), editar etiquetas"
-  - "editar etiquetas de control de árbol"
-  - "edición de etiquetas en la clase CTreeCtrl"
-  - "controles de árbol, edición de etiquetas"
+title: Tree Control Label Editing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- editing tree control labels
+- CTreeCtrl class [MFC], editing labels
+- label editing in CTreeCtrl class [MFC]
+- tree controls [MFC], label editing
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Edici&#243;n de etiquetas de control de &#225;rbol
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 51c2f148861015f7d34c25f1f94c3047dd627aaa
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-El usuario puede modificar directamente las etiquetas de elementos en un control de árbol \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) con el estilo de **TVS\_EDITLABELS** .  El usuario inicia edición haciendo clic en la etiqueta del elemento que tiene el foco.  Se inicia una aplicación edición utilizando la función miembro de [EditLabel](../Topic/CTreeCtrl::EditLabel.md) .  El control de árbol envía la notificación al editar comienza y cuando se cancela o completado.  Cuando se completa la edición, es responsable de actualizar la etiqueta de elemento, si es adecuado.  
+---
+# <a name="tree-control-label-editing"></a>Tree Control Label Editing
+The user can directly edit the labels of items in a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) that has the **TVS_EDITLABELS** style. The user begins editing by clicking the label of the item that has the focus. An application begins editing by using the [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) member function. The tree control sends the notification when editing begins and when it is canceled or completed. When editing is completed, you are responsible for updating the item's label, if appropriate.  
   
- Cuando la edición de la etiqueta, un control de árbol envía un mensaje de notificación de [TVN\_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506) .  Procesando esta notificación, puede permitir la edición de algunas etiquetas y evitar la edición de otras.  Devolver 0 permite la edición, y el cambio se lo impide.  
+ When label editing begins, a tree control sends a [TVN_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506) notification message. By processing this notification, you can allow editing of some labels and prevent editing of others. Returning 0 allows editing, and returning nonzero prevents it.  
   
- Cuando la edición de la etiqueta se cancela o completada, un control de árbol envía un mensaje de notificación de [TVN\_ENDLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773515) .  El parámetro de `lParam` es la dirección de una estructura de [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) .  El miembro de **item** es una estructura de [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) que identifica el elemento e incluye el texto editado.  Es responsable de actualizar la etiqueta de elemento, si es necesario, quizás después de validar la cadena editada.  El miembro de **pszText** de `TV_ITEM` es 0 si la edición se cancela.  
+ When label editing is canceled or completed, a tree control sends a [TVN_ENDLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773515) notification message. The `lParam` parameter is the address of a [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) structure. The **item** member is a [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) structure that identifies the item and includes the edited text. You are responsible for updating the item's label, if appropriate, perhaps after validating the edited string. The **pszText** member of `TV_ITEM` is 0 if editing is canceled.  
   
- Durante la modificación de la etiqueta, normalmente en respuesta al mensaje de notificación de [TVN\_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506) , puede obtener un puntero al control de edición utilizado para la edición de la etiqueta utilizando la función miembro de [GetEditControl](../Topic/CTreeCtrl::GetEditControl.md) .  Puede llamar a la función miembro de [SetLimitText](../Topic/CEdit::SetLimitText.md) del control de edición para limitar la cantidad de texto que un usuario puede escribir o subclases con el control de edición para interceptar y para descartar caracteres no válidos.  Observe, sin embargo, que el control de edición se muestra únicamente después de que se envía**TVN\_BEGINLABELEDIT** .  
+ During label editing, typically in response to the [TVN_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506) notification message, you can get a pointer to the edit control used for label editing by using the [GetEditControl](../mfc/reference/ctreectrl-class.md#geteditcontrol) member function. You can call the edit control's [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) member function to limit the amount of text a user can enter or subclass the edit control to intercept and discard invalid characters. Note, however, that the edit control is displayed only *after* **TVN_BEGINLABELEDIT** is sent.  
   
-## Vea también  
- [Usar CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

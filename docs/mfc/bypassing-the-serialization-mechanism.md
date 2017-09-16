@@ -1,42 +1,61 @@
 ---
-title: "Omitir el mecanismo de serializaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objetos de archivo [C++]"
-  - "archivos [C++]"
-  - "archivos [C++], serialización"
-  - "excluir serialización"
-  - "serialización [C++], omitir"
-  - "serialización [C++], reemplazar"
-  - "serialización [C++], rol de marco de trabajo"
+title: Bypassing the Serialization Mechanism | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- archive objects [MFC]
+- bypassing serialization
+- archives [MFC], serialization
+- serialization [MFC], bypassing
+- archives [MFC]
+- serialization [MFC], role of framework
+- serialization [MFC], overriding
 ms.assetid: 48d4a279-b51c-4ba5-81cd-ed043312b582
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Omitir el mecanismo de serializaci&#243;n
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 12efe0a246eba721834bab2a37513aeafc09a24c
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Como se ha mencionado anteriormente, el marco de trabajo proporciona una manera predeterminada a leer y escribir datos a y desde los archivos.  La de serialización a través de un objeto de archivo satisface las necesidades de grandes muchas aplicaciones.  Una aplicación lee un archivo completamente en memoria, permite al usuario actualizar el archivo, y escribe la versión actualizada en el disco de nuevo.  
+---
+# <a name="bypassing-the-serialization-mechanism"></a>Bypassing the Serialization Mechanism
+As you have seen, the framework provides a default way to read and write data to and from files. Serializing through an archive object suits the needs of a great many applications. Such an application reads a file entirely into memory, lets the user update the file, and then writes the updated version to disk again.  
   
- Sin embargo, algunas aplicaciones de datos muy de manera diferente, y para estas aplicaciones la serialización a través de un archivo no es adecuado.  Programas de base de datos de los ejemplos se incluyen, programas que editan únicamente las partes de archivos grandes, los programas que escriben los archivos de solo texto, y los programas que comparten los archivos de datos.  
+ However, some applications operate on data very differently, and for these applications serialization through an archive is not suitable. Examples include database programs, programs that edit only parts of large files, programs that write text-only files, and programs that share data files.  
   
- En estos casos, puede reemplazar la función de [Serialice](../Topic/CObject::Serialize.md) de una manera diferente para mediar acciones a través de un objeto de [Archivo C](../mfc/reference/cfile-class.md) en lugar de un objeto de [CArchive](../mfc/reference/carchive-class.md) .  
+ In these cases, you can override the [Serialize](../mfc/reference/cobject-class.md#serialize) function in a different way to mediate file actions through a [CFile](../mfc/reference/cfile-class.md) object rather than a [CArchive](../mfc/reference/carchive-class.md) object.  
   
- Puede utilizar **Abierta**, **de lectura**, **Escribir**, **cerrar**, y funciones miembro de `Seek` de la clase `CFile` para abrir un archivo, mueva el puntero de archivo \(búsqueda\) a un punto concreto en el archivo, lee un registro \(un número de bytes especificado\) en ese momento, permitir que el usuario actualizar el registro, la búsqueda al mismo punto de nuevo y escribir el registro al archivo.  El marco abrirá el archivo para usted, y utilizar la función miembro de `GetFile` de la clase `CArchive` para obtener un puntero al objeto de `CFile` .  Para el uso aún más complejo y flexible, puede reemplazar las funciones miembro de [OnOpenDocument](../Topic/CDocument::OnOpenDocument.md) y de [OnSaveDocument](../Topic/CDocument::OnSaveDocument.md) de la clase `CWinApp`.  Para obtener más información, vea la clase [Archivo C](../mfc/reference/cfile-class.md) en *la referencia de MFC*.  
+ You can use the **Open**, **Read**, **Write**, **Close**, and `Seek` member functions of class `CFile` to open a file, move the file pointer (seek) to a specific point in the file, read a record (a specified number of bytes) at that point, let the user update the record, then seek to the same point again and write the record back to the file. The framework will open the file for you, and you can use the `GetFile` member function of class `CArchive` to obtain a pointer to the `CFile` object. For even more sophisticated and flexible use, you can override the [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) and [OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument) member functions of class `CWinApp`. For more information, see class [CFile](../mfc/reference/cfile-class.md) in the *MFC Reference*.  
   
- En este escenario, la invalidación de `Serialize` no hace nada, a menos que, por ejemplo, desea ejecutarlo leer y escribir un encabezado de archivo para mantenerla actualizada en que se cierra el documento.  
+ In this scenario, your `Serialize` override does nothing, unless, for example, you want to have it read and write a file header to keep it up to date when the document closes.  
   
-## Vea también  
- [Usar documentos](../mfc/using-documents.md)
+## <a name="see-also"></a>See Also  
+ [Using Documents](../mfc/using-documents.md)
+
+

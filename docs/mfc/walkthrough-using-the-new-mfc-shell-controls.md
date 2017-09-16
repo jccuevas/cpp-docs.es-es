@@ -1,182 +1,219 @@
 ---
-title: "Tutorial: Usar los nuevos controles de Shell de MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles shell (MFC)"
+title: 'Walkthrough: Using the New MFC Shell Controls | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Tutorial: Usar los nuevos controles de Shell de MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a6d09173d555fe5990917e2519da15b0cc657048
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En este tutorial creará una aplicación similar al Explorador de archivos.  Creará una ventana que contendrá dos paneles.  El panel de la izquierda contendrá un objeto [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) que muestra el Escritorio en una vista jerárquica.  El panel de la derecha contendrá un objeto [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) que muestra los archivos de la carpeta seleccionada en el panel de la izquierda.  
+---
+# <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Walkthrough: Using the New MFC Shell Controls
+In this walkthrough, you will create an application that resembles File Explorer. You will create a window that contains two panes. The left pane will contain a [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) object that displays your Desktop in a hierarchical view. The right pane will contain a [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) that shows the files in the folder that is selected in the left pane.  
   
-## Requisitos previos  
- En este tutorial se supone que ha configurado [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] para utilizar la **Configuración general de desarrollo**.  Si usa otra configuración de desarrollo, algunas ventanas de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] que utilizamos en este tutorial podrían no mostrarse de forma predeterminada.  
+## <a name="prerequisites"></a>Prerequisites  
+ This walkthrough assumes that you have set up [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] to use **General Development Settings**. If you are using a different development setting, some [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] windows that we use in this walkthrough might not be displayed by default.  
   
-### Para crear una nueva aplicación MFC mediante el Asistente para aplicaciones MFC  
+### <a name="to-create-a-new-mfc-application-by-using-the-mfc-application-wizard"></a>To create a new MFC application by using the MFC Application Wizard  
   
-1.  Utilice el **Asistente para aplicaciones MFC** para crear una nueva aplicación MFC.  Para ejecutar el asistente, en el menú de **Archivo** seleccione **Nuevo** y, a continuación, seleccione **Proyecto**.  Aparecerá el cuadro de diálogo **Nuevo proyecto**.  
+1.  Use the **MFC Application Wizard** to create a new MFC application. To run the wizard, from the **File** menu select **New**, and then select **Project**. The **New Project** dialog box will be displayed.  
   
-2.  En el cuadro de diálogo **Nuevo proyecto**, expanda el nodo **Visual C\+\+** en el panel **Tipos de proyecto** y seleccione **MFC**.  A continuación, en el panel **Plantillas**, seleccione **Aplicación MFC**.  Escriba un nombre para el proyecto, por ejemplo, `MFCShellControls`, y haga clic en **Aceptar**.  Aparecerá el **Asistente para aplicaciones MFC**.  
+2.  In the **New Project** dialog box, expand the **Visual C++** node in the **Project types** pane and select **MFC**. Then, in the **Templates** pane, select **MFC Application**. Type a name for the project, such as `MFCShellControls` and click **OK**. The **MFC Application Wizard** will be displayed.  
   
-3.  En el cuadro de diálogo **Asistente para aplicaciones MFC**, haga clic en **Siguiente**.  Aparecerá el panel **Tipo de aplicación**.  
+3.  In the **MFC Application Wizard** dialog box, click **Next**. The **Application Type** pane will be displayed.  
   
-4.  En el panel **Tipo de aplicación**, debajo de **Tipo de aplicación**, desactive la opción **Organización por fichas**.  A continuación, seleccione **Documento** y **Compatibilidad con la arquitectura documento\/vista**.  En **Estilo del proyecto**, seleccione **Visual Studio** y, en la lista desplegable **Estilo visual y colores**, seleccione **Office 2007 \(tema Azul\)**.  Deje el resto de las opciones tal como están.  Haga clic en **Siguiente** para mostrar el panel **Compatibilidad con documentos compuestos**.  
+4.  On the **Application Type** pane, under **Application type**, clear the **Tabbed documents** option. Next, select **Single document** and select **Document/View architecture support**. Under **Project style**, select **Visual Studio**, and from the **Visual style and colors** drop down list select **Office 2007 (Blue theme)**. Leave all other options as they are. Click **Next** to display the **Compound Document Support** pane.  
   
-5.  En el panel **Compatibilidad con documentos compuestos**, seleccione **Ninguno**.  Haga clic en **Siguiente** para mostrar el panel **Cadenas de plantillas de doc.**  
+5.  On the **Compound Document Support** pane, select **None**. Click **Next** to display the **Document Template Strings** pane.  
   
-6.  No realice ninguna modificación en el panel **Cadenas de plantillas de doc.** Haga clic en **Siguiente** para mostrar el panel **Compatibilidad con bases de datos**.  
+6.  Do not make any changes to the **Document Template Strings** pane. Click **Next** to display the **Database Support** pane.  
   
-7.  En el panel **Compatibilidad con bases de datos**, seleccione **Ninguno** porque esta aplicación no utiliza una base de datos.  Haga clic en **Siguiente** para mostrar el panel **Características de la interfaz de usuario**.  
+7.  On the **Database Support** pane, select **None** because this application does not use a database. Click **Next** to display the **User Interface Features** pane.  
   
-8.  En el panel **Características de la interfaz de usuario**, compruebe que la opción **Usar una barra de menús y una barra de herramientas** está activada.  Deje el resto de las opciones tal como están.  Haga clic en **Siguiente** para mostrar el panel **Características avanzadas**.  
+8.  On the **User Interface Features** pane, make sure that the **Use a menu bar and toolbar** option is selected. Leave all other options as they are. Click **Next** to display the **Advanced Features** pane.  
   
-9. En el panel **Características avanzadas**, debajo de **Características avanzadas**, seleccione solo **Controles ActiveX** y **Manifiesto de controles comunes**.  Debajo de **Paneles de marco avanzados**, seleccione solo la opción **Panel de navegación**.  Esto hará que el asistente cree el panel a la izquierda de la ventana con un control `CMFCShellTreeCtrl` ya insertado.  Haga clic en **Siguiente** para mostrar el panel **Clases generadas**.  
+9. On the **Advanced Features** pane, under **Advanced features**, select only **ActiveX controls** and **Common Control Manifest**. Under **Advanced frame panes**, select only the **Navigation pane** option. This will cause the wizard to create the pane to the left of the window with a `CMFCShellTreeCtrl` already embedded. Click **Next** to display the **Generated Classes** pane.  
   
-10. No vamos a realizar cambios en el panel **Clases generadas**.  Por tanto, haga clic en **Finalizar** para crear el nuevo proyecto de MFC.  
+10. We are not going to make any changes to the **Generated Classes** pane. Therefore, click **Finish** to create your new MFC project.  
   
-11. Compruebe que la aplicación se creó correctamente; para ello, compílela y ejecútela.  Para compilar la aplicación, en el menú **Compilar**, seleccione **Compilar solución**.  Si la aplicación se compila correctamente, en el menú **Depurar**, seleccione **Iniciar depuración** para ejecutarla.  
+11. Verify that the application was created successfully by building and running it. To build the application, from the **Build** menu select **Build Solution**. If the application builds successfully, run the application by selecting **Start Debugging** from the **Debug** menu.  
   
-     El asistente crea automáticamente una aplicación con una barra de menús estándar, una barra de herramientas estándar, una barra de estado estándar y una barra de Outlook a la izquierda de la ventana con una vista **Carpetas** y una vista **Calendario**.  
+     The wizard automatically creates an application that has a standard menu bar, a standard toolbar, a standard status bar, and an Outlook bar to the left of the window with a **Folders** view and a **Calendar** view.  
   
-### Para agregar el control de lista de shell a la vista del documento  
+### <a name="to-add-the-shell-list-control-to-the-document-view"></a>To add the shell list control to the document view  
   
-1.  En esta sección, agregará una instancia de `CMFCShellListCtrl` a la vista que el asistente creó.  Haga doble clic en MFCShellControlsView.h en el **Explorador de soluciones** para abrir el archivo de encabezado de la vista.  
+1.  In this section, you will add an instance of `CMFCShellListCtrl` to the view that the wizard created. Open the view header file by double-clicking MFCShellControlsView.h in the **Solution Explorer**.  
   
-     Busque la directiva `#pragma once` cerca de la parte superior del archivo de encabezado.  Inmediatamente debajo de la directiva, agregue este código para incluir el archivo de encabezado para `CMFCShellListCtrl`:  
+     Locate the `#pragma once` directive near the top of the header file. Immediately underneath it add this code to include the header file for `CMFCShellListCtrl`:  
   
-    ```  
+ ```  
     #include <afxShellListCtrl.h>  
-    ```  
+ ```  
   
-     Agregue una variable miembro de tipo `CMFCShellListCtrl`.  Primero, busque el siguiente comentario en el archivo de encabezado:  
+     Now add a member variable of type `CMFCShellListCtrl`. First, locate the following comment in the header file:  
   
-    ```  
-    // Generated message map functions  
-    ```  
+ ``` *// Generated message map functions  
+ ```  
   
-     Inmediatamente antes del comentario, agregue este código:  
+     Immediately above that comment add this code:  
   
-    ```  
-    private:  
-        CMFCShellListCtrl m_wndList;  
-    ```  
+ ```  
+    private: CMFCShellListCtrl m_wndList;  
+ ```  
   
-2.  El **Asistente para aplicaciones MFC** ya ha creado un objeto `CMFCShellTreeCtrl` en la clase `CMainFrame`, pero es miembro protegido.  Tendremos acceso a este objeto más adelante.  Por consiguiente, cree ahora un descriptor de acceso para él.  Haga doble clic en el **Explorador de soluciones** para abrir el archivo de encabezado MainFrm.h.  Localice el comentario siguiente:  
+2.  The **MFC Application Wizard** already created a `CMFCShellTreeCtrl` object in the `CMainFrame` class, but it is a protected member. We will access this object later. Therefore, create an accessor for it now. Open the MainFrm.h header file by double-clicking it in the **Solution Explorer**. Locate the following comment:  
   
-    ```  
-    // Attributes  
-    ```  
+ ``` *// Attributes  
+ ```  
   
-     Inmediatamente debajo de él, agregue la declaración de método siguiente:  
+     Immediately under it, add the following method declaration:  
   
-    ```  
-    public:  
-        CMFCShellTreeCtrl& GetShellTreeCtrl();  
-    ```  
+ ```  
+    public: 
+    CMFCShellTreeCtrl& GetShellTreeCtrl();
+
+ ```  
   
-     A continuación, haga doble clic en el **Explorador de soluciones** para abrir el archivo de código fuente MainFrm.cpp.  En la parte inferior de ese archivo, agregue la definición de método siguiente:  
+     Next, open the MainFrm.cpp source file by double-clicking it in the **Solution Explorer**. At the bottom of that file, add the following method definition:  
   
-    ```  
+ ```  
     CMFCShellTreeCtrl& CMainFrame::GetShellTreeCtrl()  
-    {  
-        return m_wndTree;  
-    }  
-    ```  
+ {  
+    return m_wndTree;  
+ }  
+ ```  
   
-3.  Ahora vamos a actualizar la clase `CMFCShellControlsView` para controlar el mensaje de Windows **WM\_CREATE**.  Abra el archivo de encabezado MFCShellControlsView.h y haga clic en esta línea de código:  
+3.  Now we update the `CMFCShellControlsView` class to handle the **WM_CREATE** windows message. Open the MFCShellControlsView.h header file and click on this line of code:  
   
-    ```  
+ ```  
     class CMFCShellControlsView : public CView  
-    ```  
+ ```  
   
-     A continuación, en la ventana **Propiedades**, haga clic en el icono **Mensajes**.  Desplácese hacia abajo hasta que encuentre el mensaje **WM\_CREATE**.  En la lista desplegable situada junto a **WM\_CREATE**, seleccione **\<Add\> OnCreate**.  De esta forma se crea un controlador de mensajes y se actualiza automáticamente el mapa de mensajes de MFC.  
+     Next, in the **Properties** window, click the **Messages** icon. Scroll down until you find the **WM_CREATE** message. From the drop down list next to **WM_CREATE**, select **\<Add> OnCreate**. This creates a message handler for us and automatically updates the MFC message map.  
   
-     En el método `OnCreate` vamos a crear ahora nuestro propio objeto `CMFCShellListCtrl`.  Busque la definición del método de `OnCreate` en el archivo de código fuente MFCShellControlsView.cpp y reemplace la implementación por el código siguiente:  
+     In the `OnCreate` method we will now create our `CMFCShellListCtrl` object. Find the `OnCreate` method definition in the MFCShellControlsView.cpp source file, and replace its implementation with the following code:  
   
-    ```  
+ ```  
     int CMFCShellControlsView::OnCreate(LPCREATESTRUCT lpCreateStruct)  
-    {  
-        if (CView::OnCreate(lpCreateStruct) == -1)  
-            return -1;  
+ {  
+    if (CView::OnCreate(lpCreateStruct) == -1)  
+    return -1;  
+ 
+    CRect rectDummy (0,
+    0,
+    0,
+    0);
+
+    m_wndList.Create(WS_CHILD | WS_VISIBLE | LVS_REPORT,  
+    rectDummy,
+    this,
+    1);
+
+ 
+    return 0;  
+ }  
+ ```  
   
-        CRect rectDummy (0, 0, 0, 0);  
-        m_wndList.Create(WS_CHILD | WS_VISIBLE | LVS_REPORT,  
-            rectDummy, this, 1);  
+4.  Repeat the previous step but for the **WM_SIZE** message. This will cause your applications view to be redrawn whenever a user changes the size of the application window. Replace the definition for the `OnSize` method with the following code:  
   
-        return 0;  
-    }  
-    ```  
+ ```  
+    void CMFCShellControlsView::OnSize(UINT nType,
+    int cx,
+    int cy)  
+ {  
+    CView::OnSize(nType,
+    cx,
+    cy);
+
+    m_wndList.SetWindowPos(NULL, -1, -1,
+    cx,
+    cy,  
+    SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE);
+
+ }  
+ ```  
   
-4.  Repita el paso anterior, esta vez para el mensaje **WM\_SIZE**.  Esto hará que la vista de las aplicaciones se rediseñe siempre que un usuario cambie el tamaño de la ventana de la aplicación.  Reemplace la definición del método `OnSize` por el código siguiente:  
+5.  The last step is to connect the `CMFCShellTreeCtrl` and `CMFCShellListCtrl` objects by using the [CMFCShellTreeCtrl::SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist) method. After you call this method, the `CMFCShellListCtrl` will automatically display the contents of the item selected in the `CMFCShellTreeCtrl`. We will do this in the `OnActivateView` method, which is overridden from [CView::OnActivateView](../mfc/reference/cview-class.md#onactivateview).  
   
-    ```  
-    void CMFCShellControlsView::OnSize(UINT nType, int cx, int cy)  
-    {  
-        CView::OnSize(nType, cx, cy);  
-        m_wndList.SetWindowPos(NULL, -1, -1, cx, cy,  
-            SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE);  
-    }  
-    ```  
+     In the MFCShellControlsView.h header file, inside the `CMFCShellControlsView` class declaration, add the following method declaration:  
   
-5.  El último paso es conectar los objetos `CMFCShellTreeCtrl` y `CMFCShellListCtrl` mediante el método [CMFCShellTreeCtrl::SetRelatedList](../Topic/CMFCShellTreeCtrl::SetRelatedList.md).  Después de llamar a este método, `CMFCShellListCtrl` mostrará automáticamente el contenido del elemento seleccionado en `CMFCShellTreeCtrl`.  Haremos esto en el método `OnActivateView`, que se invalida desde [CView::OnActivateView](../Topic/CView::OnActivateView.md).  
+ ```  
+    protected: 
+    virtual void OnActivateView(BOOL bActivate,  
+    CView* pActivateView,  
+    CView* pDeactiveView);
+
+ ```  
   
-     En el archivo de encabezado MFCShellControlsView.h, dentro de la declaración de clase de `CMFCShellControlsView`, agregue la declaración de método siguiente:  
+     Next, add the definition for this method to the MFCShellControlsView.cpp source file:  
   
-    ```  
-    protected:  
-        virtual void OnActivateView(BOOL bActivate,  
-            CView* pActivateView,  
-            CView* pDeactiveView);  
-    ```  
-  
-     A continuación, agregue la definición de este método al archivo de código fuente MFCShellControlsView.cpp:  
-  
-    ```  
+ ```  
     void CMFCShellControlsView::OnActivateView(BOOL bActivate,  
-        CView* pActivateView,  
-        CView* pDeactiveView)   
-    {  
-        if (bActivate && AfxGetMainWnd() != NULL)  
-        {  
-            ((CMainFrame*)AfxGetMainWnd())->GetShellTreeCtrl().SetRelatedList(&m_wndList);  
-        }  
+    CView* pActivateView,  
+    CView* pDeactiveView)   
+ {  
+    if (bActivate&& AfxGetMainWnd() != NULL)  
+ {  
+ ((CMainFrame*)AfxGetMainWnd())->GetShellTreeCtrl().SetRelatedList(&m_wndList);
+
+ }  
+ 
+    CView::OnActivateView(bActivate,
+    pActivateView,
+    pDeactiveView);
+
+ }  
+ ```  
   
-        CView::OnActivateView(bActivate, pActivateView, pDeactiveView);  
-    }  
-    ```  
+     Because we are calling methods from the `CMainFrame` class, we must add an `#include` directive at the top of the MFCShellControlsView.cpp source file:  
   
-     Dado que llamamos a los métodos desde la clase `CMainFrame`, debemos agregar una directiva `#include` en la parte superior del archivo de código fuente MFCShellControlsView.cpp:  
-  
-    ```  
+ ```  
     #include "MainFrm.h"  
-    ```  
+ ```  
   
-6.  Compruebe que la aplicación se creó correctamente; para ello, compílela y ejecútela.  Para compilar la aplicación, en el menú **Compilar**, seleccione **Compilar solución**.  Si la aplicación se compila correctamente, en el menú **Depurar**, seleccione **Iniciar depuración** para ejecutarla.  
+6.  Verify that the application was created successfully by building and running it. To build the application, from the **Build** menu select **Build Solution**. If the application builds successfully, run it by selecting **Start Debugging** from the **Debug** menu.  
   
-     Ahora deberían mostrarse los detalles del elemento seleccionado en el control `CMFCShellTreeCtrl` en el panel de vista.  Al hacer clic en un nodo en `CMFCShellTreeCtrl`, `CMFCShellListCtrl` se actualizará automáticamente.  Igualmente, si hace doble clic en una carpeta en `CMFCShellListCtrl`, `CMFCShellTreeCtrl` debe actualizarse automáticamente.  
+     You should now see the details for the item selected in the `CMFCShellTreeCtrl` in the view pane. When you click a node in the `CMFCShellTreeCtrl`, the `CMFCShellListCtrl` will be automatically updated. Likewise, if you double-click a folder in the `CMFCShellListCtrl`, the `CMFCShellTreeCtrl` should be automatically updated.  
   
-     Haga clic con el botón secundario en cualquier elemento del control de árbol o del control de lista.  Observe que obtiene el mismo menú contextual que si utilizara el Explorador de archivos auténtico.  
+     Right click any item in the tree control or in the list control. Note that you get the same context menu as if you were using the real File Explorer.  
   
-## Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
   
--   El asistente creó una barra de Outlook con un panel **Carpetas** y un panel **Calendario**.  Probablemente no tiene sentido colocar un panel **Calendario** en una ventana del Explorador.  Por consiguiente, vamos a quitarlo ahora.  
+-   The wizard created an Outlook bar with both a **Folders** pane and a **Calendar** pane. It probably does not make sense to have a **Calendar** pane in an Explorer window. Therefore, remove that pane now.  
   
--   `CMFCShellListCtrl` admite la presentación de archivos de distintos modos, como **Iconos grandes**, **Iconos pequeños**, **Lista** y **Detalles**.  Actualice la aplicación para implementar esta funcionalidad.  Sugerencia: vea [Ejemplos de Visual C\+\+](../top/visual-cpp-samples.md).  
+-   The `CMFCShellListCtrl` supports viewing files in different modes, such as **Large Icons**, **Small Icons**, **List**, and **Details**. Update your application to implement this functionality. Hint: see [Visual C++ Samples](../visual-cpp-samples.md).  
   
-## Vea también  
- [Tutoriales](../mfc/walkthroughs-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Walkthroughs](../mfc/walkthroughs-mfc.md)
+
+

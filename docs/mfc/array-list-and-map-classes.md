@@ -1,40 +1,59 @@
 ---
-title: "Clases de matriz, lista y mapa | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrices [C++], clases"
-  - "clases de colección, listas"
-  - "clases de colección, mapas"
-  - "lista de clases"
-  - "map (clases)"
+title: Array, List, and Map Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [MFC], classes
+- list classes [MFC]
+- collection classes [MFC], maps
+- map classes [MFC]
+- collection classes [MFC], lists
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Clases de matriz, lista y mapa
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 28ed43e1451c484dc2bb3ed08e1db194f77075de
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Para administrar los agregados de datos, la biblioteca de clases de proporciona a un grupo de clases de colección — matrices, listas, y los mapas \)que pueden contener una variedad de objeto y de tipos predefinidos.  Las colecciones se ordenan dinámicamente.  Estas clases se pueden utilizar en cualquier programa, están escritas para Windows o no.  Sin embargo, son muy útiles para implementar las estructuras de datos que definen las clases de documento en el marco de trabajo de la aplicación.  Puede derivar fácilmente clases de colección especializadas de éstos, o puede crearlos basándose en las clases de plantilla.  Para obtener más información sobre estos enfoques, vea el artículo [Colecciones](../mfc/collections.md).  Para obtener una lista de las clases de colección de plantillas, vea el artículo [Clases de plantilla para matrices, listas, y mapas](../mfc/template-classes-for-arrays-lists-and-maps.md).  
+---
+# <a name="array-list-and-map-classes"></a>Array, List, and Map Classes
+For handling aggregates of data, the class library provides a group of collection classes — arrays, lists, and maps — that can hold a variety of object and predefined types. The collections are dynamically sized. These classes can be used in any program, whether written for Windows or not. However, they are most useful for implementing the data structures that define your document classes in the application framework. You can readily derive specialized collection classes from these, or you can create them based on the template classes. For more information about these approaches, see the article [Collections](../mfc/collections.md). For a list of the template collection classes, see the article [Template Classes for Arrays, Lists, and Maps](../mfc/template-classes-for-arrays-lists-and-maps.md).  
   
- Las matrices son estructuras de datos unidimensionales que se almacenan de forma contigua en memoria.  Admiten acceso aleatorio muy rápido desde la dirección de memoria de cualquier elemento determinado puede calcular multiplicando el índice del elemento por el tamaño de un elemento y agregando el resultado a la dirección base de la matriz.  Pero las matrices son muy costosas si tiene que insertar elementos en la matriz, ya que la matriz completa más allá del elemento insertado tiene que mover para hacer sitio para el elemento que se desea insertar.  Las matrices pueden crecer y reduzca según sea necesario.  
+ Arrays are one-dimensional data structures that are stored contiguously in memory. They support very fast random access since the memory address of any given element can be calculated by multiplying the index of the element by the size of an element and adding the result to the base address of the array. But arrays are very expensive if you have to insert elements into the array, since the entire array past the element inserted has to be moved to make room for the element to be inserted. Arrays can grow and shrink as necessary.  
   
- Las listas son similares a las matrices pero se almacenan muy de manera diferente.  Cada elemento de una lista también incluye un puntero a los elementos anteriores y siguientes, en una lista doblemente vinculada.  Es muy rápidamente agregar o eliminar elementos puesto que implica tan solo el cambiar de algunos punteros.  Sin embargo, buscar una lista puede ser costoso puesto que todas las búsquedas necesitan iniciar en uno de los extremos de la lista.  
+ Lists are similar to arrays but are stored very differently. Each element in a list also includes a pointer to the previous and next elements, making it a doubly linked list. It is very fast to add or delete items because doing so only involves changing a few pointers. However, searching a list can be expensive since all searches need to start at one of the list's ends.  
   
- Los mapas se relacionan un valor de clave con un valor de datos.  Por ejemplo, la clave de un mapa podría ser una cadena y los datos un puntero en una lista.  Se pediría el mapa para proporcionar el puntero asociado a una cadena concreta.  Las búsquedas de mapa son rápidas porque los mapas utilizan las tablas hash para las búsquedas clave.  Agregar y eliminar elementos también es rápidas.  Los mapas se suelen usar con otras estructuras de datos como índices auxiliares.  MFC utiliza una clase especial de mapa denominada [mapa de mensajes](../mfc/mapping-messages.md) para asignar los mensajes de Windows en un puntero a la función controladora para ese mensaje.  
+ Maps relate a key value to a data value. For instance, the key of a map could be a string and the data a pointer into a list. You would ask the map to give you the pointer associated with a particular string. Map lookups are fast because maps use hash tables for key lookups. Adding and deleting items is also fast. Maps are often used with other data structures as auxiliary indices. MFC uses a special kind of map called a [message map](../mfc/mapping-messages.md) to map Windows messages to a pointer to the handler function for that message.  
   
-## Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

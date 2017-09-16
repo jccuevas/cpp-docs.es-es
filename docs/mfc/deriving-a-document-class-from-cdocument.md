@@ -1,41 +1,60 @@
 ---
-title: "Derivar una clase de documento de CDocument | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDocument (clase), derivar de"
-  - "clases [C++], derivar de CDocument"
-  - "clases derivadas, funciones que se reemplazan con frecuencia"
-  - "clases de documento, funciones que se reemplazan con frecuencia"
-  - "objetos de documentos, derivadas"
+title: Deriving a Document Class from CDocument | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDocument class [MFC], deriving from
+- classes [MFC], deriving from CDocument
+- document objects [MFC], derived
+- derived classes [MFC], functions often overridden
+- document classes [MFC], functions often overridden
 ms.assetid: e6a198e0-9799-43c0-83c5-04174d8b532c
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Derivar una clase de documento de CDocument
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 60954a57bd498479022703a27d1de96647b785df
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Los documentos contienen y administran los datos de aplicación.  Para usar la aplicación MFC Asistente\- proporcionó la clase document, debe hacer lo siguiente:  
+---
+# <a name="deriving-a-document-class-from-cdocument"></a>Deriving a Document Class from CDocument
+Documents contain and manage your application's data. To use the MFC Application Wizard-supplied document class, you must do the following:  
   
--   Derive una clase de **CDocument** para cada tipo de documento.  
+-   Derive a class from **CDocument** for each type of document.  
   
--   Agregue las variables miembro para almacenar los datos de cada documento.  
+-   Add member variables to store each document's data.  
   
--   Función miembro de **CDocument**`Serialize` de reemplazo de la clase del documento.  `Serialize` escribe y lee los datos del documento a y desde el disco.  
+-   Override **CDocument**'s `Serialize` member function in your document class. `Serialize` writes and reads the document's data to and from disk.  
   
-## Otras funciones de documento invalidan a menudo  
- Puede que también desee reemplazar otras funciones miembro de **CDocument** .  En particular, a menudo necesitará invalidar [OnNewDocument](../Topic/CDocument::OnNewDocument.md) y [OnOpenDocument](../Topic/CDocument::OnOpenDocument.md) para inicializar los miembros de datos y [DeleteContents](../Topic/CDocument::DeleteContents.md) de documento destruir datos dinámicamente asignados.  Para obtener información sobre los miembros reemplazables, vea la clase [CDocument](../mfc/reference/cdocument-class.md) en *la referencia de MFC*.  
+## <a name="other-document-functions-often-overridden"></a>Other Document Functions Often Overridden  
+ You may also want to override other **CDocument** member functions. In particular, you will often need to override [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) and [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) to initialize the document's data members and [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) to destroy dynamically allocated data. For information about overridable members, see class [CDocument](../mfc/reference/cdocument-class.md) in the *MFC Reference*.  
   
-## Vea también  
- [Usar documentos](../mfc/using-documents.md)
+## <a name="see-also"></a>See Also  
+ [Using Documents](../mfc/using-documents.md)
+
+

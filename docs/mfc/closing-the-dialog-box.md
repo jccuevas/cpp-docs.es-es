@@ -1,31 +1,50 @@
 ---
-title: "Cerrar el cuadro de di&#225;logo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cuadros de diálogo, cerrar"
-  - "cuadros de diálogo de MFC, cerrar"
+title: Closing the Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], closing
+- dialog boxes [MFC], closing
 ms.assetid: 946f5675-c482-46a4-a5dd-34fe138ffae5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Cerrar el cuadro de di&#225;logo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 689ef21296daafdd865787ac995c9f2872ebfd76
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Un cuadro de diálogo modal se cierra cuando el usuario elige uno de los botones, normalmente el botón ACEPTAR o el botón Cancelar.  Elegir del botón ACEPTAR o cancelar hace que Windows para enviar el objeto de diálogo un mensaje de la CONTROL\- notificación de **BN\_CLICKED** con el identificador del botón, **IDOK** o **IDCANCEL**.  `CDialog` proporciona funciones predeterminadas del controlador para estos mensajes: `OnOK` y `OnCancel`.  Controladores predeterminados llaman a la función miembro de `EndDialog` para cerrar la ventana de cuadro de diálogo.  También puede llamar `EndDialog` del propio código.  Para obtener más información, vea la función miembro de [EndDialog](../Topic/CDialog::EndDialog.md) de la clase `CDialog` en *la referencia de MFC*.  
+---
+# <a name="closing-the-dialog-box"></a>Closing the Dialog Box
+A modal dialog box closes when the user chooses one of its buttons, typically the OK button or the Cancel button. Choosing the OK or Cancel button causes Windows to send the dialog object a **BN_CLICKED** control-notification message with the button's ID, either **IDOK** or **IDCANCEL**. `CDialog` provides default handler functions for these messages: `OnOK` and `OnCancel`. The default handlers call the `EndDialog` member function to close the dialog window. You can also call `EndDialog` from your own code. For more information, see the [EndDialog](../mfc/reference/cdialog-class.md#enddialog) member function of class `CDialog` in the *MFC Reference*.  
   
- Para organizar para cerrar y eliminar un cuadro de diálogo, un reemplazo no modal `PostNcDestroy` e invocar el operador de **borrar** en el puntero de **this** .  [Destrucción del cuadro de diálogo](../mfc/destroying-the-dialog-box.md) explica lo que ocurrirá a continuación.  
+ To arrange for closing and deleting a modeless dialog box, override `PostNcDestroy` and invoke the **delete** operator on the **this** pointer. [Destroying the Dialog Box](../mfc/destroying-the-dialog-box.md) explains what happens next.  
   
-## Vea también  
- [Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

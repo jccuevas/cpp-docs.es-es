@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <exception>
-- std::<exception>
-- std.<exception>
+- <exception>", "std::<exception>", "std.<exception>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,55 +33,55 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 1d4ccc904c1f6011231e668194a9d84499fee934
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 09f4cf1012d42a802bcb673f2c3a55019888e751
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
-Define varios tipos y funciones relacionados con el control de excepciones. El control de excepciones se utiliza en aquellas situaciones en las que el sistema puede recuperarse de un error. Proporciona un medio para devolver el control de una función al programa. El objetivo de incorporar control de excepciones es aumentar la solidez del programa y proporcionar una manera de recuperarse de un error de forma ordenada.  
+Defines several types and functions related to the handling of exceptions. Exception handling is used in situations in which the system can recover from an error. It provides a means for control to be returned from a function to the program. The objective of incorporating exception handling is to increase the program's robustness while providing a way to recover from an error in an orderly fashion.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <exception>  
   
 ```  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)|Tipo que describe un puntero a una excepción.|  
-|[terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)|Tipo que describe un puntero a una función que se puede usar como `terminate_handler`.|  
-|[unexpected_handler](../standard-library/exception-typedefs.md#unexpected_handler)|Tipo que describe un puntero a una función que se puede usar como `unexpected_handler`.|  
+|[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)|A type that describes a pointer to an exception.|  
+|[terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)|A type that describes a pointer to a function suitable for use as a `terminate_handler`.|  
+|[unexpected_handler](../standard-library/exception-typedefs.md#unexpected_handler)|A type that describes a pointer to a function suitable for use as an `unexpected_handler`.|  
   
-### <a name="functions"></a>Funciones  
-  
-|||  
-|-|-|  
-|[current_exception](../standard-library/exception-functions.md#current_exception)|Obtiene un puntero a la excepción actual.|  
-|[get_terminate](../standard-library/exception-functions.md#get_terminate)|Obtiene la función `terminate_handler` actual.|  
-|[get_unexpected](../standard-library/exception-functions.md#get_unexpected)|Obtiene la función `unexpected_handler` actual.|  
-|[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)|Crea un objeto `exception_ptr` que contiene una copia de una excepción.|  
-|[rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)|Inicia una excepción pasada como parámetro.|  
-|[set_terminate](../standard-library/exception-functions.md#set_terminate)|Establece un nuevo `terminate_handler` al que se llamará cuando finalice el programa.|  
-|[set_unexpected](../standard-library/exception-functions.md#set_unexpected)|Establece un nuevo `unexpected_handler` cuando se encuentra una excepción inesperada.|  
-|[terminate](../standard-library/exception-functions.md#terminate)|Llama a un controlador de finalización.|  
-|[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|Devuelve **True** solo si se está procesando actualmente una excepción iniciada.|  
-|[unexpected](../standard-library/exception-functions.md#unexpected)|Llama a un controlador inesperado.|  
-  
-### <a name="classes"></a>Clases  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[bad_exception (Clase)](../standard-library/bad-exception-class.md)|La clase describe una excepción que se puede iniciar desde un `unexpected_handler`.|  
-|[exception (Clase)](../standard-library/exception-class.md)|La clase actúa como clase base para todas las excepciones iniciadas por determinadas expresiones y por la biblioteca estándar de C++.|  
+|[current_exception](../standard-library/exception-functions.md#current_exception)|Obtains a pointer to the current exception.|  
+|[get_terminate](../standard-library/exception-functions.md#get_terminate)|Obtains the current `terminate_handler` function.|  
+|[get_unexpected](../standard-library/exception-functions.md#get_unexpected)|Obtains the current `unexpected_handler` function.|  
+|[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)|Creates an `exception_ptr` object that holds a copy of an exception.|  
+|[rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)|Throws an exception passed as a parameter.|  
+|[set_terminate](../standard-library/exception-functions.md#set_terminate)|Establishes a new `terminate_handler` to be called at the termination of the program.|  
+|[set_unexpected](../standard-library/exception-functions.md#set_unexpected)|Establishes a new `unexpected_handler` to be when an unexpected exception is encountered.|  
+|[terminate](../standard-library/exception-functions.md#terminate)|Calls a terminate handler.|  
+|[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|Returns **true** only if a thrown exception is being currently processed.|  
+|[unexpected](../standard-library/exception-functions.md#unexpected)|Calls an unexpected handler.|  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
- [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[bad_exception Class](../standard-library/bad-exception-class.md)|The class describes an exception that can be thrown from an `unexpected_handler`.|  
+|[exception Class](../standard-library/exception-class.md)|The class serves as the base class for all exceptions thrown by certain expressions and by the C++ Standard Library.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

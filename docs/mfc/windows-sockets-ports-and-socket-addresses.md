@@ -1,61 +1,80 @@
 ---
-title: "Windows Sockets: Puertos y direcciones de Socket | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "direcciones [C++], socket"
-  - "puertos [C++]"
-  - "puertos [C++], definición"
-  - "sockets [C++], direcciones"
-  - "sockets [C++], puertos"
-  - "Windows Sockets [C++], direcciones"
-  - "Windows Sockets [C++], puertos"
+title: 'Windows Sockets: Ports and Socket Addresses | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ports [MFC], definition
+- Windows Sockets [MFC], ports
+- Windows Sockets [MFC], addresses
+- ports [MFC]
+- addresses [MFC], socket
+- sockets [MFC], addresses
+- sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Windows Sockets: Puertos y direcciones de Socket
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9c2f722c08af117d2394efac46496f9c6a144029
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En este artículo se explica los términos “puerto” y “address” según se utiliza con Windows Sockets.  
+---
+# <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets: Ports and Socket Addresses
+This article explains the terms "port" and "address" as used with Windows Sockets.  
   
-##  <a name="_core_port"></a> Puerto  
- Un puerto identifica un proceso único para que el servicio puede ser proporcionado.  En el contexto actual, un puerto está asociado a una aplicación que admite el Windows Sockets.  La idea es identificar cada aplicación de Windows Sockets únicamente por lo que puede tener más de una ejecución de la aplicación de Windows Sockets en un equipo.  
+##  <a name="_core_port"></a> Port  
+ A port identifies a unique process for which a service can be provided. In the present context, a port is associated with an application that supports Windows Sockets. The idea is to identify each Windows Sockets application uniquely so you can have more than one Windows Sockets application running on a machine at the same time.  
   
- Determinados puertos están reservadas para los servicios comunes, como FTP.  Debe evitar usar esos puertos a menos que esté proporcionando esa clase de servicio.  Los detalles de la especificación de Windows Sockets estos puertos reservados.  El archivo WINSOCK.H también los enumera.  
+ Certain ports are reserved for common services, such as FTP. You should avoid using those ports unless you are providing that kind of service. The Windows Sockets specification details these reserved ports. The file WINSOCK.H also lists them.  
   
- Para dejar el Windows Sockets DLL seleccionar un puerto utilizable para usted, pase 0 como valor de puerto.  MFC selecciona un valor de puerto mayor de 1.024 decimales.  Puede recuperar el valor del puerto que MFC seleccionado llamando a la función miembro de [CAsyncSocket::GetSockName](../Topic/CAsyncSocket::GetSockName.md) .  
+ To let the Windows Sockets DLL select a usable port for you, pass 0 as the port value. MFC selects a port value greater than 1,024 decimal. You can retrieve the port value that MFC selected by calling the [CAsyncSocket::GetSockName](../mfc/reference/casyncsocket-class.md#getsockname) member function.  
   
-##  <a name="_core_socket_address"></a> Dirección de socket  
- Cada objeto de socket se asocia a una dirección de \(IP\) de protocolo de Internet en la red.  Normalmente, la dirección es un nombre de equipo, como “ftp.microsoft.com”, o un número dotted, como “128.56.22.8”.  
+##  <a name="_core_socket_address"></a> Socket Address  
+ Each socket object is associated with an Internet Protocol (IP) address on the network. Typically, the address is a machine name, such as "ftp.microsoft.com", or a dotted number, such as "128.56.22.8".  
   
- Cuando se intenta crear un socket, normalmente no es necesario especificar la propia dirección.  
+ When you seek to create a socket, you typically do not need to specify your own address.  
   
 > [!NOTE]
->  Es posible que el equipo tiene las tarjetas de red varias \(o la aplicación podría ejecutarse un día en este equipo\), cada uno de los cuales representa otra red.  Si es así puede ser necesario proporcionar una dirección para especificar que la tarjeta de red el socket utilizará.  Esto es seguramente un uso avanzado y un posible problema de portabilidad.  
+>  It is possible that your machine has multiple network cards (or your application might someday run on such a machine), each representing a different network. If so, you might need to give an address to specify which network card the socket will use. This is certain to be an advanced usage and a possible portability issue.  
   
- Para obtener más información, vea:  
+ For more information, see:  
   
--   [Windows Sockets: Usar la clase CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets: Usar sockets con archivos](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows Sockets: Cómo funcionan los sockets con archivos](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
+-   [Windows Sockets: How Sockets with Archives Work](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
   
--   [Windows Sockets: Sockets de secuencia](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows Sockets: Sockets de datagrama](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md)  
   
-## Vea también  
- [Windows Sockets en MFC](../mfc/windows-sockets-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+
+

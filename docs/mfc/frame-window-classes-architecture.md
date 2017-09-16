@@ -1,46 +1,65 @@
 ---
-title: "Clases de ventana de marco (Arquitectura) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.frame"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clases de ventana de marco, arquitectura documento/vista"
+title: Frame Window Classes (Architecture) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.frame
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame window classes [MFC], document/view architecture
 ms.assetid: 5da01fb4-f531-46cc-914f-e422e4f07f5d
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Clases de ventana de marco (Arquitectura)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66f5c9f7ab9d8e72fb357accf84eb93bf44595ea
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En arquitectura documento\/vista, las ventanas de marco son ventanas que contienen una ventana de vista.  También admiten tener barras de control asociadas a ellos.  
+---
+# <a name="frame-window-classes-architecture"></a>Frame Window Classes (Architecture)
+In document/view architecture, frame windows are windows that contain a view window. They also support having control bars attached to them.  
   
- En las aplicaciones de \(MDI\) de interfaz de múltiples documentos, la ventana principal se deriva de `CMDIFrameWnd`.  Contiene indirectamente cuadros de documentos, que son objetos de `CMDIChildWnd` .  Los objetos de `CMDIChildWnd` , a su vez, contienen las vistas de los documentos.  
+ In multiple document interface (MDI) applications, the main window is derived from `CMDIFrameWnd`. It indirectly contains the documents' frames, which are `CMDIChildWnd` objects. The `CMDIChildWnd` objects, in turn, contain the documents' views.  
   
- En las aplicaciones de \(SDI\) de interfaz de un único documento, la ventana principal, derivada de `CFrameWnd`, contiene la vista del documento actual.  
+ In single document interface (SDI) applications, the main window, derived from `CFrameWnd`, contains the view of the current document.  
   
  [CFrameWnd](../mfc/reference/cframewnd-class.md)  
- La clase base para la ventana de marco principal de una aplicación SDI.  También la clase base para todas las clases de ventana de marco.  
+ The base class for an SDI application's main frame window. Also the base class for all other frame window classes.  
   
  [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)  
- La clase base para la ventana de marco principal de una aplicación MDI.  
+ The base class for an MDI application's main frame window.  
   
  [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)  
- La clase base para las ventanas de marco de documento de una aplicación MDI.  
+ The base class for an MDI application's document frame windows.  
   
  [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)  
- Proporciona la ventana cuadro de una vista a un documento de servidor se edita en contexto.  
+ Provides the frame window for a view when a server document is being edited in place.  
   
-## Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

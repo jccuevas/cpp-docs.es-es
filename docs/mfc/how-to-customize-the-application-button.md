@@ -1,66 +1,85 @@
 ---
-title: "C&#243;mo: Personalizar el bot&#243;n Aplicaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "botón de aplicación, personalizar"
+title: 'How to: Customize the Application Button | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# C&#243;mo: Personalizar el bot&#243;n Aplicaci&#243;n
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 28a3c05e9df5e3bb62e5019e3664a939a34e8b29
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Al hacer clic en el botón de la aplicación, un menú de comandos se muestra.  Normalmente, el menú contiene comandos archivo \(el archivo relacionados como **Abierta**, **Guardar**, **Impresión**, y **Salir**.  
+---
+# <a name="how-to-customize-the-application-button"></a>How to: Customize the Application Button
+When you click the Application button, a menu of commands is displayed. Typically, the menu contains file-related commands such as **Open**, **Save**, **Print**, and **Exit**.  
   
- ![Botón de aplicación de cinta de opciones de MFC](../mfc/media/application_button.png "Application\_Button")  
+ ![MFC Ribbon Application Button](../mfc/media/application_button.png "application_button")  
   
- Para personalizar el botón de la aplicación, ábralo en la ventana de **Propiedades** , modifique sus propiedades, y después genere una vista previa del control de cinta.  
+ To customize the Application button, open it in the **Properties** window, modify its properties, and then preview the ribbon control.  
   
-### Para abrir el botón de la aplicación en la ventana Propiedades  
+### <a name="to-open-the-application-button-in-the-properties-window"></a>To open the Application button in the Properties window  
   
-1.  En Visual Studio, en el menú de **Visualización** , haga clic en **vista de recursos**.  
+1.  In Visual Studio, on the **View** menu, click **Resource View**.  
   
-2.  En **vista de recursos**, haga doble clic en el recurso de la cinta de opciones para mostrarla en la superficie de diseño.  
+2.  In **Resource View**, double-click the ribbon resource to display it on the design surface.  
   
-3.  En la superficie de diseño, haga clic con el botón secundario en el menú del botón de la aplicación y haga clic en **Propiedades**.  
+3.  On design surface, right-click the Application button menu and then click **Properties**.  
   
-## Propiedades de los botones de la aplicación  
- La tabla siguiente define las propiedades de los botones de la aplicación.  
+## <a name="application-button-properties"></a>Application Button Properties  
+ The following table defines the properties of the Application button.  
   
-|Propiedad|Definición|  
-|---------------|----------------|  
-|**Botones**|Contiene la colección de hasta tres botones que aparecen en la esquina inferior derecha del menú de la aplicación.|  
-|**Leyenda**|Especifica el texto del control.  A diferencia de otros elementos de cinta de opciones, el botón de la aplicación no muestra el texto de la leyenda.  En su lugar, el texto se utiliza para la accesibilidad.|  
-|**Imagen de HDPI**|Especifica el identificador de alto icono de botón de la aplicación de \(HDPI\) de puntos por pulgada.  Cuando la aplicación se ejecuta en un alto PPP monitor, **Imagen de HDPI** se utiliza en lugar de **Proceso**.|  
-|**Imágenes grandes de HDPI**|Especifica el identificador de las imágenes grandes height PPP.  Cuando la aplicación se ejecuta en un alto PPP monitor, **Imágenes grandes de HDPI** se utiliza en lugar de **Imágenes grandes**.|  
-|**Pequeñas imágenes de HDPI**|Especifica el identificador de las pequeñas imágenes de alto PPP.  Cuando la aplicación se ejecuta en un alto PPP monitor, **Pequeñas imágenes de HDPI** se utiliza en lugar de **Pequeñas imágenes**.|  
-|**ID**|Especifica el identificador del control.|  
-|**Image**|Especifica el identificador del icono de botón de la aplicación.  El icono es un mapa de bits de 32 bits 26x26 que tiene transparencia alfa.  Resaltan partes transparentes de icono cuando el botón de la aplicación se hace clic o se mantiene el mouse sobre.|  
-|**Claves**|Especifica la cadena que se muestra cuando se habilita la navegación de la tecla\- sugerencia.  Se habilita la navegación de la Tecla\- sugerencia al presionar ALT.|  
-|**Imágenes grandes**|Especifica el identificador de la imagen que contiene una serie de los iconos 32x32.  Los iconos son utilizados por los botones en la colección elementos de Main.|  
-|**Elementos primarios**|Contiene una colección de elementos de menú que aparecen en el menú de la aplicación.|  
-|**Leyenda MRU**|Especifica el texto mostrado en el panel de lista más recientes de.|  
-|**Pequeñas imágenes**|Especifica el identificador de la imagen que contiene una serie de los iconos 16x16.  Los iconos son utilizados por los botones en la colección de los botones.|  
-|**Utilice**|Habilita o deshabilita el panel de lista más recientes de.  El panel de lista de Recientes aparece en el menú de la aplicación.|  
-|**Ancho**|Especifica el ancho en píxeles del panel de lista más recientes de.|  
+|Property|Definition|  
+|--------------|----------------|  
+|**Buttons**|Contains the collection of up to three buttons that appear in the bottom-right corner of the Application menu.|  
+|**Caption**|Specifies the text of the control. Unlike other ribbon elements, the Application button does not display caption text. Instead, the text is used for accessibility.|  
+|**HDPI Image**|Specifies the identifier of the high dots per inch (HDPI) Application button icon. When the application runs on a high DPI monitor, **HDPI Image** is used instead of **Image**.|  
+|**HDPI Large Images**|Specifies the identifier of the high DPI large images. When the application runs on a high DPI monitor, **HDPI Large Images** is used instead of **Large Images**.|  
+|**HDPI Small Images**|Specifies the identifier of the high DPI small images. When the application runs on a high DPI monitor, **HDPI Small Images** is used instead of **Small Images**.|  
+|**ID**|Specifies the identifier of the control.|  
+|**Image**|Specifies the identifier of the Application button icon. The icon is a 32-bit 26x26 bitmap that has alpha transparency. The transparent portions of the icon are highlighted when the Application button is clicked or hovered over.|  
+|**Keys**|Specifies the string that is displayed when key-tip navigation is enabled. Key-tip navigation is enabled when you press ALT.|  
+|**Large Images**|Specifies the identifier of the image that contains a series of 32x32 icons. The icons are used by the buttons in the Main Items collection.|  
+|**Main Items**|Contains a collection of menu items that appear on the Application menu.|  
+|**MRU Caption**|Specifies the text displayed on the Recent List panel.|  
+|**Small Images**|Specifies the identifier of the image that contains a series of 16x16 icons. The icons are used by the buttons in the Buttons collection.|  
+|**Use**|Enables or disables the Recent List panel. The Recent List panel appears on the Application menu.|  
+|**Width**|Specifies the width in pixels of the Recent List panel.|  
   
- El menú de la aplicación no aparece en la superficie de diseño.  Para verlo, debe obtener una vista previa de la cinta de opciones o ejecutar la aplicación.  
+ The Application menu does not appear on the design surface. To view it, you must either preview the ribbon or run the application.  
   
-#### Para obtener una vista previa del control de la cinta de opciones  
+#### <a name="to-preview-the-ribbon-control"></a>To preview the ribbon control  
   
--   En **Barra de herramientas del editor de la cinta de opciones**, haga clic en **Ribbon de prueba**.  
+-   On the **Ribbon Editor Toolbar**, click **Test Ribbon**.  
   
-## Vea también  
- [Diseñador de la cinta de opciones \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

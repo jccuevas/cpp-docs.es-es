@@ -1,80 +1,99 @@
 ---
-title: "Informaci&#243;n sobre herramientas de la barra de herramientas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CBRS_FLYBY (constante)"
-  - "CBRS_TOOLTIPS (constante)"
-  - "actualizaciones de la barra de estado flyby"
-  - "barras de estado, información sobre herramientas"
-  - "información sobre herramientas [C++]"
-  - "información sobre herramientas [C++], activar"
-  - "información sobre herramientas [C++], agregar texto"
-  - "actualizaciones"
-  - "actualizaciones, mensajes de la barra de estado"
-  - "actualizar mensajes de la barra de estado"
+title: Toolbar Tool Tips | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tool tips [MFC], activating
+- CBRS_TOOLTIPS constant [MFC]
+- tool tips [MFC], adding text
+- updates [MFC]
+- CBRS_FLYBY constant [MFC]
+- tool tips [MFC]
+- updating status bar messages
+- updates, status bar messages
+- status bars [MFC], tool tips
+- flyby status bar updates
 ms.assetid: d1696305-b604-4fad-9f09-638878371412
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Informaci&#243;n sobre herramientas de la barra de herramientas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 766437e46f51610a032db8ed3c24e880be2b17c2
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La información sobre herramientas son ventanas emergentes minúsculas que muestran descripciones breves del propósito de un botón de la barra de herramientas cuando se coloca el mouse sobre un botón durante un período de tiempo.  Cuando se crea una aplicación con el Asistente para aplicaciones que tiene una barra de herramientas, compatibilidad con la información sobre herramientas se proporciona automáticamente.  En este artículo se explica ambos compatibilidad de información sobre herramientas creado por el Asistente para aplicaciones y cómo agregar compatibilidad con la información sobre herramientas de la aplicación.  
+---
+# <a name="toolbar-tool-tips"></a>Toolbar Tool Tips
+Tool tips are the tiny popup windows that present short descriptions of a toolbar button's purpose when you position the mouse over a button for a period of time. When you create an application with the Application Wizard that has a toolbar, tool tip support is provided for you. This article explains both the tool tip support created by the Application Wizard and how to add tool tip support to your application.  
   
- Este artículo trata:  
+ This article covers:  
   
--   [Información sobre herramientas que generan](#_core_activating_tool_tips)  
+-   [Activating tool tips](#_core_activating_tool_tips)  
   
--   [Actualizaciones de barra de estado de la exhibición de vuelo](#_core_fly_by_status_bar_updates)  
+-   [Flyby status bar updates](#_core_fly_by_status_bar_updates)  
   
-##  <a name="_core_activating_tool_tips"></a> Información sobre herramientas que generan  
- Para generar información sobre herramientas en la aplicación, debe hacer dos cosas:  
+##  <a name="_core_activating_tool_tips"></a> Activating Tool Tips  
+ To activate tool tips in your application, you must do two things:  
   
--   Agregue el estilo de `CBRS_TOOLTIPS` a los otros estilos \(como **WS\_CHILD**, **WS\_VISIBLE**, y otros estilos de **CBRS\_** \) pasados como parámetro de `dwStyle` a la función de [CToolBar::Create](../Topic/CToolBar::Create.md) o en [SetBarStyle](../Topic/CControlBar::SetBarStyle.md).  
+-   Add the `CBRS_TOOLTIPS` style to the other styles (such as **WS_CHILD**, **WS_VISIBLE**, and other **CBRS_** styles) passed as the `dwStyle` parameter to the [CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) function or in [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
   
--   Como se describe en el procedimiento siguiente, anexe el texto de indicación de la barra de herramientas, separados por un carácter de nueva línea \(“\\n "\), el recurso de cadena que contiene el indicador de línea de comandos para el comando de la barra de herramientas.  El recurso de cadena comparte el identificador del botón de la barra de herramientas.  
+-   As described in the procedure below, append the toolbar tip text, separated by a newline character ('\n'), to the string resource containing the command-line prompt for the toolbar command. The string resource shares the ID of the toolbar button.  
   
-#### Para agregar texto de información sobre herramientas  
+#### <a name="to-add-the-tool-tip-text"></a>To add the tool tip text  
   
-1.  Mientras edita la barra de herramientas del editor de barras de herramientas, abra la ventana de **Toolbar Button Properties** de un botón determinado.  
+1.  While you are editing the toolbar in the toolbar editor, open the **Toolbar Button Properties** window for a given button.  
   
-2.  En el cuadro de **Mensaje** , especifique el texto que desea que aparezca en la información sobre herramientas para el botón.  
+2.  In the **Prompt** box, specify the text you want to appear in the tool tip for that button.  
   
 > [!NOTE]
->  Establecer el texto como propiedad del botón en el editor de barras de herramientas reemplaza el procedimiento anterior, en el que tendrá que abrir y editar el recurso de cadena.  
+>  Setting the text as a button property in the toolbar editor replaces the former procedure, in which you had to open and edit the string resource.  
   
- Si una barra de controles con la información sobre herramientas habilitadas tiene controles secundarios incluidos en ella, la barra de control mostrará una información sobre herramientas para cada control secundario en la barra de control mientras cumple los criterios siguientes:  
+ If a control bar with tool tips enabled has child controls placed on it, the control bar will display a tool tip for every child control on the control bar as long as it meets the following criteria:  
   
--   El identificador del control no es – 1.  
+-   The ID of the control is not - 1.  
   
--   La entrada de la tabla de cadenas con el mismo identificador que el control secundario en el archivo de recursos tiene una cadena de información sobre herramientas.  
+-   The string-table entry with the same ID as the child control in the resource file has a tool tip string.  
   
-##  <a name="_core_fly_by_status_bar_updates"></a> Actualizaciones de barra de estado de la exhibición de vuelo  
- Una característica relacionada con la información sobre herramientas es la actualización de la barra de estado de “flyby”.  De forma predeterminada, el mensaje en la barra de estado se describe sólo un botón de la barra de herramientas determinado cuando se activa el botón.  Incluidos `CBRS_FLYBY` en la lista de estilos pasados a `CToolBar::Create`, puede que estos mensajes actualizar cuando el cursor pasa sobre la barra de herramientas realmente activar el botón.  
+##  <a name="_core_fly_by_status_bar_updates"></a> Flyby Status Bar Updates  
+ A feature related to tool tips is "flyby" status bar updating. By default, the message on the status bar describes only a particular toolbar button when the button is activated. By including `CBRS_FLYBY` in your list of styles passed to `CToolBar::Create`, you can have these messages updated when the mouse cursor passes over the toolbar without actually activating the button.  
   
-### ¿Sobre qué desea obtener más información?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Implementación de la barra de herramientas de MFC \(de información general de las barras de herramientas\)](../mfc/mfc-toolbar-implementation.md)  
+-   [MFC Toolbar Implementation (overview information on toolbars)](../mfc/mfc-toolbar-implementation.md)  
   
--   [Barras de herramientas de acoplamiento y flotantes](../mfc/docking-and-floating-toolbars.md)  
+-   [Docking and floating toolbars](../mfc/docking-and-floating-toolbars.md)  
   
--   Clases [CToolBar](../mfc/reference/ctoolbar-class.md) y [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)  
+-   The [CToolBar](../mfc/reference/ctoolbar-class.md) and [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) classes  
   
--   [Trabajar con el control de barra de herramientas](../mfc/working-with-the-toolbar-control.md)  
+-   [Working with the toolbar control](../mfc/working-with-the-toolbar-control.md)  
   
--   [Mediante las barras de herramientas anteriores](../mfc/using-your-old-toolbars.md)  
+-   [Using your old toolbars](../mfc/using-your-old-toolbars.md)  
   
-## Vea también  
- [Implementación de barra de herramientas de MFC](../mfc/mfc-toolbar-implementation.md)
+## <a name="see-also"></a>See Also  
+ [MFC Toolbar Implementation](../mfc/mfc-toolbar-implementation.md)
+
+

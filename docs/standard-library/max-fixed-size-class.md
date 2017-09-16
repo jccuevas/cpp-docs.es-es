@@ -1,5 +1,5 @@
 ---
-title: Clase max_fixed_size | Microsoft Docs
+title: max_fixed_size Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - allocators/stdext::max_fixed_size
-- max_fixed_size
-- stdext::max_fixed_size
 - allocators/stdext::max_fixed_size::allocated
 - allocators/stdext::max_fixed_size::deallocated
 - allocators/stdext::max_fixed_size::full
@@ -20,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- max_fixed_size class
+- stdext::max_fixed_size
+- stdext::max_fixed_size [C++], allocated
+- stdext::max_fixed_size [C++], deallocated
+- stdext::max_fixed_size [C++], full
+- stdext::max_fixed_size [C++], released
+- stdext::max_fixed_size [C++], saved
 ms.assetid: 8c8f4588-37e9-4579-8168-ba3553800914
 caps.latest.revision: 18
 author: corob-msft
@@ -40,126 +43,126 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b819bce3ce817983f8318aa0490884d7bd6e1cad
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: fcd356c29a65e8f37547dc242536ff966e6dfa7f
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="maxfixedsize-class"></a>max_fixed_size (Clase)
-Describe un objeto de [clase máxima](../standard-library/allocators-header.md) que limita un objeto [freelist](../standard-library/freelist-class.md) a una longitud máxima fija.  
+# <a name="maxfixedsize-class"></a>max_fixed_size Class
+Describes a [max class](../standard-library/allocators-header.md) object that limits a [freelist](../standard-library/freelist-class.md) object to a fixed maximum length.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <std::size_t Max>  
 class max_fixed_size
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Max`|Clase máxima que determina el número máximo de elementos que se van a almacenar en `freelist`.|  
+|`Max`|The max class that determines the maximum number of elements to store in the `freelist`.|  
   
-### <a name="constructors"></a>Constructores  
-  
-|||  
-|-|-|  
-|[max_fixed_size](#max_fixed_size)|Construye un objeto de tipo `max_fixed_size`.|  
-  
-### <a name="member-functions"></a>Funciones miembro  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[allocated](#allocated)|Aumenta el número de bloques de memoria asignada.|  
-|[deallocated](#deallocated)|Reduce el número de bloques de memoria asignada.|  
-|[full](#full)|Devuelve un valor que especifica si se deben agregar más bloques de memoria a la lista libre.|  
-|[released](#released)|Reduce el número de bloques de memoria de la lista libre.|  
-|[saved](#saved)|Aumenta el número de bloques de memoria de la lista libre.|  
+|[max_fixed_size](#max_fixed_size)|Constructs an object of type `max_fixed_size`.|  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<allocators>  
+### <a name="member-functions"></a>Member Functions  
   
- **Espacio de nombres:** stdext  
+|||  
+|-|-|  
+|[allocated](#allocated)|Increments the count of allocated memory blocks.|  
+|[deallocated](#deallocated)|Decrements the count of allocated memory blocks.|  
+|[full](#full)|Returns a value that specifies whether more memory blocks should be added to the free list.|  
+|[released](#released)|Decrements the count of memory blocks on the free list.|  
+|[saved](#saved)|Increments the count of memory blocks on the free list.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
+  
+ **Namespace:** stdext  
   
 ##  <a name="allocated"></a>  max_fixed_size::allocated  
- Aumenta el número de bloques de memoria asignada.  
+ Increments the count of allocated memory blocks.  
   
 ```
 void allocated(std::size_t _Nx = 1);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Nx`|Valor de incremento.|  
+|`_Nx`|The increment value.|  
   
-### <a name="remarks"></a>Comentarios  
- La función miembro no hace nada. Se llama a esta función miembro después de cada vez que `cache_freelist::allocate` realiza una llamada correcta al operador `new`. El argumento `_Nx` es el número de bloques de memoria del fragmento asignado por el operador `new`.  
+### <a name="remarks"></a>Remarks  
+ The member function does nothing. This member function is called after each successful call by `cache_freelist::allocate` to operator `new`. The argument `_Nx` is the number of memory blocks in the chunk allocated by operator `new`.  
   
 ##  <a name="deallocated"></a>  max_fixed_size::deallocated  
- Reduce el número de bloques de memoria asignada.  
+ Decrements the count of allocated memory blocks.  
   
 ```
 void deallocated(std::size_t _Nx = 1);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Nx`|Valor de incremento.|  
+|`_Nx`|The increment value.|  
   
-### <a name="remarks"></a>Comentarios  
- La función miembro no hace nada. Se llama a esta función miembro después de cada vez que `cache_freelist::deallocate` realiza una llamada al operador `delete`. El argumento `_Nx` es el número de bloques de memoria del fragmento desasignado por el operador `delete`.  
+### <a name="remarks"></a>Remarks  
+ The member function does nothing. This member function is called after each call by `cache_freelist::deallocate` to operator `delete`. The argument `_Nx` is the number of memory blocks in the chunk deallocated by operator `delete`.  
   
 ##  <a name="full"></a>  max_fixed_size::full  
- Devuelve un valor que especifica si se deben agregar más bloques de memoria a la lista libre.  
+ Returns a value that specifies whether more memory blocks should be added to the free list.  
   
 ```
 bool full();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- `true` si `Max <= _Nblocks`; de lo contrario, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if `Max <= _Nblocks`; otherwise, `false`.  
   
-### <a name="remarks"></a>Comentarios  
- Se llama a esta función miembro mediante `cache_freelist::deallocate`. Si la llamada devuelve `true`, `deallocate` coloca el bloque de memoria en la lista libre. Si devuelve False, `deallocate` llama al operador `delete` para que desasigne el bloque.  
+### <a name="remarks"></a>Remarks  
+ This member function is called by `cache_freelist::deallocate`. If the call returns `true`, `deallocate` puts the memory block on the free list; if it returns false, `deallocate` calls operator `delete` to deallocate the block.  
   
 ##  <a name="max_fixed_size"></a>  max_fixed_size::max_fixed_size  
- Construye un objeto de tipo `max_fixed_size`.  
+ Constructs an object of type `max_fixed_size`.  
   
 ```
 max_fixed_size();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Este constructor inicializa el valor almacenado `_Nblocks` en cero.  
+### <a name="remarks"></a>Remarks  
+ This constructor initializes the stored value `_Nblocks` to zero.  
   
 ##  <a name="released"></a>  max_fixed_size::released  
- Reduce el número de bloques de memoria de la lista libre.  
+ Decrements the count of memory blocks on the free list.  
   
 ```
 void released();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Disminuye el valor almacenado `_Nblocks`. La función miembro `released` de la [clase máxima](../standard-library/allocators-header.md) actual se llama mediante `cache_freelist::allocate` cada vez que quita un bloque de memoria de la lista libre.  
+### <a name="remarks"></a>Remarks  
+ Decrements the stored value `_Nblocks`. The `released` member function of the current [max class](../standard-library/allocators-header.md) is called by `cache_freelist::allocate` whenever it removes a memory block from the free list.  
   
 ##  <a name="saved"></a>  max_fixed_size::saved  
- Aumenta el número de bloques de memoria de la lista libre.  
+ Increments the count of memory blocks on the free list.  
   
 ```
 void saved();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Esta función miembro aumenta el valor almacenado `_Nblocks`. Esta función miembro se llama mediante `cache_freelist::deallocate` cada vez que coloca un bloque de memoria en la lista libre.  
+### <a name="remarks"></a>Remarks  
+ This member function increments the stored value `_Nblocks`. This member function is called by `cache_freelist::deallocate` whenever it puts a memory block on the free list.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

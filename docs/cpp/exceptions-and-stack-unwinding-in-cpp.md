@@ -1,118 +1,134 @@
 ---
-title: "Excepciones y desenredo de pila en C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Exceptions and Stack Unwinding in C++ | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Excepciones y desenredo de pila en C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: a0148b9d6de51d31cdc95b710dae5119298a3f9a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/11/2017
 
-En el mecanismo de excepciones de C\+\+, el control se mueve desde la instrucción throw hasta la primera instrucción catch que puede controlar el tipo producido.  Cuando se alcanza la instrucción catch, todas las variables automáticas que están en el ámbito entre las instrucciones throw y catch se destruyen en un proceso que se conoce como *desenredo de la pila*.  En el desenredo de la pila, la ejecución se desarrolla del modo siguiente:  
+---
+# <a name="exceptions-and-stack-unwinding-in-c"></a>Exceptions and Stack Unwinding in C++
+In the C++ exception mechanism, control moves from the throw statement to the first catch statement that can handle the thrown type. When the catch statement is reached, all of the automatic variables that are in scope between the throw and catch statements are destroyed in a process that is known as *stack unwinding*. In stack unwinding, execution proceeds as follows:  
   
-1.  El control alcanza la instrucción `try` mediante la ejecución secuencial normal.  La sección protegida en el bloque de `try` se ejecuta.  
+1.  Control reaches the `try` statement by normal sequential execution. The guarded section in the `try` block is executed.  
   
-2.  Si no se produce ninguna excepción durante la ejecución de la sección protegida, las cláusulas `catch` que siguen al bloque de `try` no se ejecutan.  La ejecución continúa en la instrucción después de la última cláusula `catch` que sigue al bloque de `try` asociado.  
+2.  If no exception is thrown during execution of the guarded section, the `catch` clauses that follow the `try` block are not executed. Execution continues at the statement after the last `catch` clause that follows the associated `try` block.  
   
-3.  Si se produce una excepción durante la ejecución de la sección protegida o en cualquier rutina a la que la sección protegida llama directa o indirectamente, se crea un objeto de excepción desde el objeto creado por el operando `throw`. \(Esto supone que un constructor de copias puede estar implicado\). En este punto, el compilador busca una cláusula `catch` en un contexto de ejecución superior que pueda controlar una excepción del tipo que se produce, o un controlador de `catch` que pueda controlar cualquier tipo de excepción.  Los controladores de `catch` se examinan en orden de aparición después del bloque de `try`.  Si no se encuentra ningún controlador adecuado, se examina el siguiente bloque de `try` de inclusión dinámica.  Este proceso continúa hasta que se examina el bloque de `try` de inclusión extremo.  
+3.  If an exception is thrown during execution of the guarded section or in any routine that the guarded section calls either directly or indirectly, an exception object is created from the object that is created by the `throw` operand. (This implies that a copy constructor may be involved.) At this point, the compiler looks for a `catch` clause in a higher execution context that can handle an exception of the type that is thrown, or for a `catch` handler that can handle any type of exception. The `catch` handlers are examined in order of their appearance after the `try` block. If no appropriate handler is found, the next dynamically enclosing `try` block is examined. This process continues until the outermost enclosing `try` block is examined.  
   
-4.  Si no se ha encontrado todavía un controlador coincidente, o si se produce una excepción durante el proceso de desenredo pero antes de que el controlador obtenga el control, se llama a la función `terminate` predefinida en tiempo de ejecución.  Si se produce una excepción después de que se produzca la excepción pero antes de que empiece el desenredo, se llama a `terminate`.  
+4.  If a matching handler is still not found, or if an exception occurs during the unwinding process but before the handler gets control, the predefined run-time function `terminate` is called. If an exception occurs after the exception is thrown but before the unwind begins, `terminate` is called.  
   
-5.  Si se encuentra un controlador de `catch` coincidente y detecta por valor, su parámetro formal se inicializa copiando el objeto de excepción.  Si detecta por referencia, el parámetro se inicializa para hacer referencia al objeto de excepción.  Una vez inicializado el parámetro formal, comienza el proceso de desenredo de la pila.  Esto implica la destrucción de todos los objetos automáticos que estaban construidos totalmente, pero todavía no destruidos, entre el principio del bloque de `try` asociado al controlador de `catch` y el sitio de producción de la excepción.  La destrucción se produce en orden inverso al de construcción.  Se ejecuta el controlador de `catch` y el programa reanuda la ejecución después del último controlador, es decir, en la primera instrucción o construcción que no es un controlador de `catch`.  El control solo puede entrar en un controlador de `catch` a través de una excepción producida, nunca a través de una instrucción `goto` o una etiqueta `case` en una instrucción `switch`.  
+5.  If a matching `catch` handler is found, and it catches by value, its formal parameter is initialized by copying the exception object. If it catches by reference, the parameter is initialized to refer to the exception object. After the formal parameter is initialized, the process of unwinding the stack begins. This involves the destruction of all automatic objects that were fully constructed—but not yet destructed—between the beginning of the `try` block that is associated with the `catch` handler and the throw site of the exception. Destruction occurs in reverse order of construction. The `catch` handler is executed and the program resumes execution after the last handler—that is, at the first statement or construct that is not a `catch` handler. Control can only enter a `catch` handler through a thrown exception, never through a `goto` statement or a `case` label in a `switch` statement.  
   
-## Ejemplo de desenredo de la pila  
- En el ejemplo siguiente se muestra cómo se desenreda la pila cuando se produce una excepción.  La ejecución del subproceso salta de la instrucción throw de `C` a la instrucción catch de `main` y desenreda cada función a lo largo del recorrido.  Observe el orden en que se crean los objetos `Dummy` y se destruyen después cuando salen del ámbito.  Observe también que ninguna función se completa excepto `main`, que contiene la instrucción catch.  La función `A` nunca vuelve de la llamada a `B()` y `B` nunca vuelve de la llamada a `C()`.  Si quita los comentarios de la definición del puntero de `Dummy` y la correspondiente instrucción delete, y ejecuta después el programa, observe que el puntero nunca se elimina.  Esto muestra lo que puede suceder cuando las funciones no proporcionan una garantía de excepción.  Para obtener más información, vea Diseñar para excepciones.  Si marca como comentario la instrucción catch, puede observar lo que sucede cuando un programa finaliza debido a una excepción no controlada.  
+## <a name="stack-unwinding-example"></a>Stack Unwinding Example  
+ The following example demonstrates how the stack is unwound when an exception is thrown. Execution on the thread jumps from the throw statement in `C` to the catch statement in `main`, and unwinds each function along the way. Notice the order in which the `Dummy` objects are created and then destroyed as they go out of scope. Also notice that no function completes except `main`, which contains the catch statement. Function `A` never returns from its call to `B()`, and `B` never returns from its call to `C()`. If you uncomment the definition of the `Dummy` pointer and the corresponding delete statement, and then run the program, notice that the pointer is never deleted. This shows what can happen when functions do not provide an exception guarantee. For more information, see How to: Design for Exceptions. If you comment out the catch statement, you can observe what happens when a program terminates because of an unhandled exception.  
   
 ```  
-#include <string>  
-#include <iostream>  
-using namespace std;  
+#include <string>  
+#include <iostream>  
+using namespace std;  
   
-class MyException{};  
-class Dummy  
+class MyException{};  
+class Dummy  
 {  
-    public:  
-    Dummy(string s) : MyName(s) { PrintMsg("Created Dummy:"); }  
-    Dummy(const Dummy& other) : MyName(other.MyName){ PrintMsg("Copy created Dummy:"); }  
-    ~Dummy(){ PrintMsg("Destroyed Dummy:"); }  
-    void PrintMsg(string s) { cout << s  << MyName <<  endl; }  
-    string MyName;   
-    int level;  
+    public:  
+    Dummy(string s) : MyName(s) { PrintMsg("Created Dummy:"); }  
+    Dummy(const Dummy& other) : MyName(other.MyName){ PrintMsg("Copy created Dummy:"); }  
+    ~Dummy(){ PrintMsg("Destroyed Dummy:"); }  
+    void PrintMsg(string s) { cout << s  << MyName <<  endl; }  
+    string MyName;   
+    int level;  
 };  
   
-void C(Dummy d, int i)  
-{   
-    cout << "Entering FunctionC" << endl;  
-    d.MyName = " C";  
-    throw MyException();     
+void C(Dummy d, int i)  
+{   
+    cout << "Entering FunctionC" << endl;  
+    d.MyName = " C";  
+    throw MyException();     
   
-    cout << "Exiting FunctionC" << endl;  
+    cout << "Exiting FunctionC" << endl;  
 }  
   
-void B(Dummy d, int i)  
+void B(Dummy d, int i)  
 {  
-    cout << "Entering FunctionB" << endl;  
-    d.MyName = "B";  
-    C(d, i + 1);     
-    cout << "Exiting FunctionB" << endl;   
+    cout << "Entering FunctionB" << endl;  
+    d.MyName = "B";  
+    C(d, i + 1);     
+    cout << "Exiting FunctionB" << endl;   
 }  
   
-void A(Dummy d, int i)  
-{   
-    cout << "Entering FunctionA" << endl;  
-    d.MyName = " A" ;  
-  //  Dummy* pd = new Dummy("new Dummy"); //Not exception safe!!!  
-    B(d, i + 1);  
- //   delete pd;   
-    cout << "Exiting FunctionA" << endl;     
+void A(Dummy d, int i)  
+{   
+    cout << "Entering FunctionA" << endl;  
+    d.MyName = " A" ;  
+  //  Dummy* pd = new Dummy("new Dummy"); //Not exception safe!!!  
+    B(d, i + 1);  
+ //   delete pd;   
+    cout << "Exiting FunctionA" << endl;     
 }  
   
-int main()  
+int main()  
 {  
-    cout << "Entering main" << endl;  
-    try  
-    {  
-        Dummy d(" M");  
-        A(d,1);  
-    }  
-    catch (MyException& e)  
-    {  
-        cout << "Caught an exception of type: " << typeid(e).name() << endl;  
-    }  
+    cout << "Entering main" << endl;  
+    try  
+    {  
+        Dummy d(" M");  
+        A(d,1);  
+    }  
+    catch (MyException& e)  
+    {  
+        cout << "Caught an exception of type: " << typeid(e).name() << endl;  
+    }  
   
-    cout << "Exiting main." << endl;  
-    char c;  
-    cin >> c;  
+    cout << "Exiting main." << endl;  
+    char c;  
+    cin >> c;  
 }  
   
-/* Output:  
-    Entering main  
-    Created Dummy: M  
-    Copy created Dummy: M  
-    Entering FunctionA  
-    Copy created Dummy: A  
-    Entering FunctionB  
-    Copy created Dummy: B  
-    Entering FunctionC  
-    Destroyed Dummy: C  
-    Destroyed Dummy: B  
-    Destroyed Dummy: A  
-    Destroyed Dummy: M  
-    Caught an exception of type: class MyException  
-    Exiting main.  
+/* Output:  
+    Entering main  
+    Created Dummy: M  
+    Copy created Dummy: M  
+    Entering FunctionA  
+    Copy created Dummy: A  
+    Entering FunctionB  
+    Copy created Dummy: B  
+    Entering FunctionC  
+    Destroyed Dummy: C  
+    Destroyed Dummy: B  
+    Destroyed Dummy: A  
+    Destroyed Dummy: M  
+    Caught an exception of type: class MyException  
+    Exiting main.  
   
 */  
   

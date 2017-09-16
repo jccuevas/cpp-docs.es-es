@@ -1,52 +1,71 @@
 ---
-title: "Arrastrar y colocar (OLE) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arrastrar y colocar [C++]"
-  - "arrastrar y colocar [C++], acerca de arrastrar y colocar en funciones OLE"
-  - "compatibilidad con arrastrar y colocar el Administrador de archivos"
-  - "OLE (aplicaciones), arrastrar y colocar"
-  - "funciones OLE de arrastrar y colocar"
-  - "aplicaciones de servidor OLE, arrastrar y colocar"
+title: Drag and Drop (OLE) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC], drag and drop
+- drag and drop [MFC]
+- OLE applications [MFC], drag and drop
+- File Manager drag and drop support [MFC]
+- drag and drop [MFC], about OLE drag and drop
+- OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Arrastrar y colocar (OLE)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b1f25b062583bf498fa18399a84e708db774aecf
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La característica de arrastrar y colocar de OLE es principalmente un acceso directo para copiar y pegar datos.  Cuando se utiliza el portapapeles para copiar o pegar datos, son necesarios varios pasos.  Selecciona los datos, haga clic en **Cortado** o **copiar** de menú de **edición** , desplácese al archivo de destino, la ventana o la aplicación, coloque el cursor en la ubicación deseada, y haga clic en **Pegar** de menú de **edición** .  
+---
+# <a name="drag-and-drop-ole"></a>Drag and Drop (OLE)
+The drag-and-drop feature of OLE is primarily a shortcut for copying and pasting data. When you use the Clipboard to copy or paste data, a number of steps are required. You select the data, click **Cut** or **Copy** from the **Edit** menu, move to the destination file, window or application, place the cursor in the desired location, and click **Paste** from the **Edit** menu.  
   
- La operación de arrastrar y colocar de OLE es diferente del mecanismo de arrastrar y colocar del administrador de archivos, que controla los nombres de archivo y se ha diseñado específicamente pasar los nombres de archivo a las aplicaciones.  La operación de arrastrar y colocar de OLE es mucho más general.  Le permite arrastrar y colocar los datos que se podría poner en el portapapeles.  
+ OLE drag and drop is different from the File Manager drag-and-drop mechanism, which can only handle filenames and is designed specifically to pass filenames to applications. OLE drag and drop is much more general. It allows you to drag and drop any data that could also be placed on the Clipboard.  
   
- Cuando se utiliza el método de arrastrar y colocar de OLE, quita dos pasos del proceso.  Selecciona los datos de la ventana de código fuente \(“el origen de colocación”\), la arrastra el destino deseado \(“destino”\), y colóquelo lanzar el botón del mouse.  La operación elimina la necesidad de menús y es más rápida que la secuencia de copias\/pegar.  El único requisito es que el origen de colocación y el destino deben estar abierto y al menos parcialmente visible en la pantalla.  
+ When you use OLE drag and drop, you remove two steps from the process. You select the data from the source window (the "drop source"), drag it to the desired destination (the "drop target"), and drop it by releasing the mouse button. The operation eliminates the need for menus and is quicker than the copy/paste sequence. The only requirement is that both the drop source and drop target must be open and at least partially visible on the screen.  
   
- Mediante el método de arrastrar y colocar de OLE, los datos se pueden transferir desde una ubicación a otra dentro de un documento, entre diferentes documentos, o entre aplicaciones.  Se puede implementar en un contenedor o una aplicación de servidor, y cualquier aplicación puede ser un origen de colocación, un destino, o ambas.  Si una aplicación tiene el origen de colocación y compatibilidad de destino implementados, la operación de arrastrar y colocar está habilitada entre ventanas secundarias, o dentro de una ventana.  Esta característica puede crear la aplicación mucho más fácil de utilizar.  
+ Using OLE drag and drop, data can be transferred from one location to another within a document, between different documents, or between applications. It can be implemented in either a container or a server application, and any application can be a drop source, a drop target, or both. If an application has both drop-source and drop-target support implemented, drag and drop is enabled between child windows, or within one window. This feature can make your application much easier to use.  
   
- Si solo desea usar la funcionalidad de arrastrar y colocar de OLE, vea [Arrastrar y colocar: El personalizar](../mfc/drag-and-drop-customizing.md).  Puede usar las técnicas explicadas en ese caso para crear orígenes de posición de las aplicaciones de no OLE.  El artículo [Arrastrar y colocar: Implementar un destino](../mfc/drag-and-drop-implementing-a-drop-target.md) describe cómo implementar la compatibilidad de destino para las aplicaciones VIEJAS y de no OLE.  También se útil examinar los ejemplos [OCLIENT](../top/visual-cpp-samples.md) y [HIERSVR](../top/visual-cpp-samples.md)MFC OLE.  
+ If you only want to use the drag-and-drop capabilities of OLE, see [Drag and Drop: Customizing](../mfc/drag-and-drop-customizing.md). You can use the techniques explained in that article to make non-OLE applications drop sources. The article [Drag and Drop: Implementing a Drop Target](../mfc/drag-and-drop-implementing-a-drop-target.md) describes how to implement drop-target support for both OLE and non-OLE applications. It will also be helpful to examine the MFC OLE samples [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md).  
   
- Si no ha leído la familia de [Objetos de datos y orígenes de datos \(OLE\)](../mfc/data-objects-and-data-sources-ole.md) de casos, puede ser tan ahora hacer.  Estos casos explican los fundamentos de la transferencia de datos, y cómo implementarla en las aplicaciones.  
+ If you have not read the [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md) family of articles, you may want to do so now. These articles explain the fundamentals of data transfer, and how to implement it in your applications.  
   
- Para obtener más información acerca de arrastrar y colocar, vea:  
+ For more information about drag and drop, see:  
   
--   [Arrastrar y colocar: Implementar un origen de colocación](../mfc/drag-and-drop-implementing-a-drop-source.md)  
+-   [Drag and Drop: Implementing a Drop Source](../mfc/drag-and-drop-implementing-a-drop-source.md)  
   
--   [Arrastrar y colocar: Implementar un destino](../mfc/drag-and-drop-implementing-a-drop-target.md)  
+-   [Drag and Drop: Implementing a Drop Target](../mfc/drag-and-drop-implementing-a-drop-target.md)  
   
--   [Arrastrar y colocar: El personalizar](../mfc/drag-and-drop-customizing.md)  
+-   [Drag and Drop: Customizing](../mfc/drag-and-drop-customizing.md)  
   
-## Vea también  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
- [Objetos de datos y orígenes de datos \(OLE\)](../mfc/data-objects-and-data-sources-ole.md)
+ [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md)
+
+

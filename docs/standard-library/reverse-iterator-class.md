@@ -1,5 +1,5 @@
 ---
-title: reverse_iterator (Clase) | Microsoft Docs
+title: reverse_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- reverse_iterator
 - xutility/std::reverse_iterator
 - iterator/std::reverse_iterator::difference_type
 - iterator/std::reverse_iterator::iterator_type
@@ -20,7 +19,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- reverse_iterator class
+- std::reverse_iterator [C++]
+- std::reverse_iterator [C++], difference_type
+- std::reverse_iterator [C++], iterator_type
+- std::reverse_iterator [C++], pointer
+- std::reverse_iterator [C++], reference
+- std::reverse_iterator [C++], base
+- std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
 caps.latest.revision: 21
 author: corob-msft
@@ -40,96 +45,96 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 91d9ed990039984894135accce5846a16bfbd7fb
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 27d970627c5511a0bf184fa43c37f19a4820a715
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="reverseiterator-class"></a>reverse_iterator (Clase)
-La clase de plantilla es un adaptador de iterador que describe un objeto iterador inverso que se comporta como un iterador de acceso aleatorio o bidireccional, pero en orden inverso. Habilita el recorrido hacia atrás de un intervalo.  
+# <a name="reverseiterator-class"></a>reverse_iterator Class
+The template class is an iterator adaptor that describes a reverse iterator object that behaves like a random-access or bidirectional iterator, only in reverse. It enables the backward traversal of a range.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class RandomIterator>  
 class reverse_iterator  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a>Parameters  
  RandomIterator  
- El tipo que representa el iterador que se adaptará para trabajar en orden inverso.  
+ The type that represents the iterator to be adapted to operate in reverse.  
   
-## <a name="remarks"></a>Comentarios  
- Los contenedores existentes en la Biblioteca estándar de C++ también definen los tipos `reverse_iterator` y `const_reverse_iterator`, y tienen las funciones miembro `rbegin` y `rend` que devuelven iteradores inversos. Estos iteradores tienen semántica de sobrescritura. El `reverse_iterator` adaptador complementa esta funcionalidad, ya que ofrecen una semántica de inserción y también puede usarse con secuencias.  
+## <a name="remarks"></a>Remarks  
+ Existing C++ Standard Library containers also define `reverse_iterator` and `const_reverse_iterator` types and have member functions `rbegin` and `rend` that return reverse iterators. These iterators have overwrite semantics. The `reverse_iterator` adaptor supplements this functionality as it offers insert semantics and can also be used with streams.  
   
- El `reverse_iterator` que requiere un iterador bidireccional no debe llamar a cualquiera de los miembros funciones `operator+=`, `operator+`, `operator-=`, `operator-`, o `operator[]`, que solo se puede usar con los iteradores de acceso aleatorio.  
+ The `reverse_iterator` that requires a bidirectional iterator must not call any of the member functions `operator+=`, `operator+`, `operator-=`, `operator-`, or `operator[]`, which may only be used with random-access iterators.  
   
- El intervalo de iterador es [*primer*, *última*), donde el corchete de la izquierda indica la inclusión de *primer* y los paréntesis de la derecha indica la inclusión de elementos hasta sin incluirla *última* propio. Se incluyen los mismos elementos en la secuencia inversa [ **rev** - *primer*, **rev** - *última*) para que si *última* es el elemento de uno más allá-el final de una secuencia, a continuación, el primer elemento **rev** - *primer* en los puntos de secuencia inversa para \*(*última* - 1). La identidad que relaciona todos los iteradores inversos con sus iteradores subyacentes es:  
+ The range of an iterator is [*first*, *last*), where the square bracket on the left indicates the inclusion of *first* and the parenthesis on the right indicates the inclusion of elements up to but excluding *last* itself. The same elements are included in the reversed sequence [ **rev** - *first*, **rev** - *last*) so that if *last* is the one-past-the-end element in a sequence, then the first element **rev** - *first* in the reversed sequence points to \*(*last* - 1). The identity which relates all reverse iterators to their underlying iterators is:  
   
  &\*( **reverse_iterator** ( *i* ) ) == &\*( *i* - 1 ).  
   
- En la práctica esto significa que, en la secuencia inversa, reverse_iterator hará referencia al elemento situado una posición más allá (a la derecha) del elemento al que el iterador se había referido en la secuencia original. Así pues, si un iterador señaló el elemento 6 en la secuencia (2, 4, 6, 8), entonces `reverse_iterator` señalará el elemento 4 en la secuencia inversa (8, 6, 4, 2).  
+ In practice, this means that in the reversed sequence the reverse_iterator will refer to the element one position beyond (to the right of) the element that the iterator had referred to in the original sequence. So if an iterator addressed the element 6 in the sequence (2, 4, 6, 8), then the `reverse_iterator` will address the element 4 in the reversed sequence (8, 6, 4, 2).  
   
-### <a name="constructors"></a>Constructores  
-  
-|||  
-|-|-|  
-|[reverse_iterator](#reverse_iterator)|Construye un `reverse_iterator` predeterminado o un `reverse_iterator` a partir de un iterador subyacente.|  
-  
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[difference_type](#difference_type)|Tipo que proporciona la diferencia entre dos `reverse_iterator` que hacen referencia a elementos del mismo contenedor.|  
-|[iterator_type](#iterator_type)|Tipo que proporciona el iterador subyacente para `reverse_iterator`.|  
-|[pointer](#pointer)|Tipo que proporciona un puntero a un elemento direccionado por `reverse_iterator`.|  
-|[reference](#reference)|Tipo que proporciona una referencia a un elemento direccionado por `reverse_iterator`.|  
+|[reverse_iterator](#reverse_iterator)|Constructs a default `reverse_iterator` or a `reverse_iterator` from an underlying iterator.|  
   
-### <a name="member-functions"></a>Funciones miembro  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[base](#base)|Recupera el iterador subyacente de su `reverse_iterator`.|  
+|[difference_type](#difference_type)|A type that provides the difference between two `reverse_iterator`s referring to elements within the same container.|  
+|[iterator_type](#iterator_type)|A type that provides the underlying iterator for a `reverse_iterator`.|  
+|[pointer](#pointer)|A type that provides a pointer to an element addressed by a `reverse_iterator`.|  
+|[reference](#reference)|A type that provides a reference to an element addressed by a `reverse_iterator`.|  
   
-### <a name="operators"></a>Operadores  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator_star](#op_star)|Devuelve el elemento que direcciona un `reverse_iterator`.|  
-|[operator+](#op_add)|Agrega un desplazamiento a un iterador y devuelve el nuevo `reverse_iterator` que direcciona el elemento insertado en la nueva posición de desplazamiento.|  
-|[operator++](#op_add_add)|Incrementa el `reverse_iterator` al elemento siguiente.|  
-|[operator+=](#op_add_eq)|Agrega un desplazamiento especificado desde un `reverse_iterator`.|  
-|[operator-](#operator-)|Resta un desplazamiento a `reverse_iterator` y devuelve un `reverse_iterator` que señala el elemento en la posición desplazada.|  
-|[operator--](#operator--)|Disminuye el `reverse_iterator` al elemento anterior.|  
-|[operator-=](#operator-_eq)|Resta un desplazamiento especificado a un `reverse_iterator`.|  
-|[operator->](#operator-_gt)|Devuelve un puntero al elemento direccionado por `reverse_iterator`.|  
-|[operator&#91;&#93;](#op_at)|Devuelve una referencia a un desplazamiento de elemento con respecto al elemento direccionado por `reverse_iterator` un número especificado de posiciones.|  
+|[base](#base)|Recovers the underlying iterator from its `reverse_iterator`.|  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<iterator>  
+### <a name="operators"></a>Operators  
   
- **Espacio de nombres:** std  
+|||  
+|-|-|  
+|[operator_star](#op_star)|Returns the element that a `reverse_iterator` addresses.|  
+|[operator+](#op_add)|Adds an offset to an iterator and returns the new `reverse_iterator` addressing the inserted element at the new offset position.|  
+|[operator++](#op_add_add)|Increments the `reverse_iterator` to the next element.|  
+|[operator+=](#op_add_eq)|Adds a specified offset from a `reverse_iterator`.|  
+|[operator-](#operator-)|Subtracts an offset from a `reverse_iterator` and returns a `reverse_iterator` addressing the element at the offset position.|  
+|[operator--](#operator--)|Decrements the `reverse_iterator` to the previous element.|  
+|[operator-=](#operator-_eq)|Subtracts a specified offset from a `reverse_iterator`.|  
+|[operator->](#operator-_gt)|Returns a pointer to the element addressed by the `reverse_iterator`.|  
+|[operator&#91;&#93;](#op_at)|Returns a reference to an element offset from the element addressed by a `reverse_iterator` by a specified number of positions.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<iterator>  
+  
+ **Namespace:** std  
   
 ##  <a name="base"></a>  reverse_iterator::base  
- Recupera el iterador subyacente de su `reverse_iterator`.  
+ Recovers the underlying iterator from its `reverse_iterator`.  
   
 ```   
 RandomIterator base() const;
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- El iterador subyacente de `reverse_iterator`.  
+### <a name="return-value"></a>Return Value  
+ The iterator underlying the `reverse_iterator`.  
   
-### <a name="remarks"></a>Comentarios  
- La identidad que relaciona todos los iteradores inversos con sus iteradores subyacentes es:  
+### <a name="remarks"></a>Remarks  
+ The identity that relates all reverse iterators to their underlying iterators is:  
   
  &\*( `reverse_iterator` ( *i* ) ) == &\*( *i* - 1 ).  
   
- En la práctica esto significa que, en la secuencia inversa, el `reverse_iterator` hará referencia al elemento situado una posición más allá (a la derecha) del elemento al que el iterador se había referido en la secuencia original. Así pues, si un iterador señaló el elemento 6 en la secuencia (2, 4, 6, 8), entonces `reverse_iterator` señalará el elemento 4 en la secuencia inversa (8, 6, 4, 2).  
+ In practice, this means that in the reversed sequence the `reverse_iterator` will refer to the element one position beyond (to the right of) the element that the iterator had referred to in the original sequence. So if an iterator addressed the element 6 in the sequence (2, 4, 6, 8), then the `reverse_iterator` will address the element 4 in the reversed sequence (8, 6, 4, 2).  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // reverse_iterator_base.cpp  
@@ -179,47 +184,47 @@ int main( )
 ```  
   
 ##  <a name="difference_type"></a>  reverse_iterator::difference_type  
- Tipo que proporciona la diferencia entre dos `reverse_iterator` que hacen referencia a elementos del mismo contenedor.  
+ A type that provides the difference between two `reverse_iterator`s referring to elements within the same container.  
   
 ```   
 typedef typename iterator_traits<RandomIterator>::difference_type  difference_type; 
 ```  
   
-### <a name="remarks"></a>Comentarios  
- El tipo de diferencia `reverse_iterator` es el mismo que el tipo de diferencia del iterador.  
+### <a name="remarks"></a>Remarks  
+ The `reverse_iterator` difference type is the same as the iterator difference type.  
   
- El tipo es un sinónimo del nombre de tipo de rasgo del iterador `iterator_traits`\< **RandomIterator**> **::pointer**.  
+ The type is a synonym for the iterator trait typename `iterator_traits`\< **RandomIterator**> **::pointer**.  
   
-### <a name="example"></a>Ejemplo  
-  Vea [reverse_iterator::operator&#91;&#93;](#op_at) para obtener un ejemplo de cómo declarar y usar `difference_type`.  
+### <a name="example"></a>Example  
+  See [reverse_iterator::operator&#91;&#93;](#op_at) for an example of how to declare and use `difference_type`.  
   
 ##  <a name="iterator_type"></a>  reverse_iterator::iterator_type  
- Tipo que proporciona el iterador subyacente para `reverse_iterator`.  
+ A type that provides the underlying iterator for a `reverse_iterator`.  
   
 ```  
 typedef RandomIterator iterator_type;  
 ```  
   
-### <a name="remarks"></a>Comentarios  
- El tipo es un sinónimo del parámetro de plantilla `Iterator`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Iterator`.  
   
-### <a name="example"></a>Ejemplo  
-  Vea [reverse_iterator::base](#base) para obtener un ejemplo de cómo declarar y usar `iterator_type`.  
+### <a name="example"></a>Example  
+  See [reverse_iterator::base](#base) for an example of how to declare and use `iterator_type`.  
   
 ##  <a name="op_star"></a>  reverse_iterator::operator*  
- Devuelve el elemento al que se dirige un iterador reverse_iterator.  
+ Returns the element that a reverse_iterator addresses.  
   
 ```   
 reference operator*() const;
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- El valor de los elementos a los que se dirige el reverse_iterator.  
+### <a name="return-value"></a>Return Value  
+ The value of the elements addressed by the reverse_iterator.  
   
-### <a name="remarks"></a>Comentarios  
- El operador devuelve \*( **actual** - 1).  
+### <a name="remarks"></a>Remarks  
+ The operator returns \*( **current** - 1).  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // reverse_iterator_op_ref.cpp  
@@ -263,23 +268,23 @@ int main( )
 ```  
   
 ##  <a name="op_add"></a>  reverse_iterator::operator+  
- Agrega un desplazamiento a un iterador y devuelve el nuevo `reverse_iterator` que direcciona el elemento insertado en la nueva posición de desplazamiento.  
+ Adds an offset to an iterator and returns the new `reverse_iterator` addressing the inserted element at the new offset position.  
   
 ```  
 reverse_iterator<RandomIterator> operator+(difference_type Off) const;
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `Off`  
- El desplazamiento que se agregará al iterador inverso.  
+ The offset to be added to the reverse iterator.  
   
-### <a name="return-value"></a>Valor devuelto  
- Un `reverse_iterator` que se dirige al elemento de desplazamiento.  
+### <a name="return-value"></a>Return Value  
+ A `reverse_iterator` addressing the offset element.  
   
-### <a name="remarks"></a>Comentarios  
- Solo se puede usar esta función miembro si el `reverse_iterator` cumple los requisitos de un iterador de acceso aleatorio.  
+### <a name="remarks"></a>Remarks  
+ This member function may only be used if the `reverse_iterator` satisfies the requirements for a random-access iterator.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // reverse_iterator_op_add.cpp  
@@ -335,20 +340,20 @@ After the +2 offset, the iterator rVPOS2 points
 ```  
   
 ##  <a name="op_add_add"></a>  reverse_iterator::operator++  
- Incrementa el reverse_iterator al elemento anterior.  
+ Increments the reverse_iterator to the previous element.  
   
 ```  
 reverse_iterator<RandomIterator>& operator++();
 reverse_iterator<RandomIterator> operator++(int);
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- El primer operador devuelve el `reverse_iterator` preincrementado y el segundo, el operador de postincremento, devuelve una copia del `reverse_iterator` incrementado.  
+### <a name="return-value"></a>Return Value  
+ The first operator returns the preincremented `reverse_iterator` and the second, the postincrement operator, returns a copy of the incremented `reverse_iterator`.  
   
-### <a name="remarks"></a>Comentarios  
- Solo se puede usar esta función miembro si el `reverse_iterator` cumple los requisitos de un iterador bidireccional.  
+### <a name="remarks"></a>Remarks  
+ This member function may only be used if the `reverse_iterator` satisfies the requirements for a bidirectional iterator.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // reverse_iterator_op_incr.cpp  
@@ -405,20 +410,20 @@ After incrementing, the iterator rVPOS1 points
 ```  
   
 ##  <a name="op_add_eq"></a>  reverse_iterator::operator+=  
- Agrega un desplazamiento especificado desde un reverse_iterator.  
+ Adds a specified offset from a reverse_iterator.  
   
 ```  
 reverse_iterator<RandomIterator>& operator+=(difference_type Off);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `Off`  
- El desplazamiento en el que se incrementa el iterador.  
+ The offset by which to increment the iterator.  
   
-### <a name="return-value"></a>Valor devuelto  
- Una referencia al elemento al que se dirige el `reverse_iterator`.  
+### <a name="return-value"></a>Return Value  
+ A reference to the element addressed by the `reverse_iterator`.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // reverse_iterator_op_addoff.cpp  
@@ -475,23 +480,23 @@ After the +2 offset, the iterator rVPOS1 now points
 ```  
   
 ##  <a name="reverse_iterator__operator-"></a>  reverse_iterator::operator-  
- Resta un desplazamiento a `reverse_iterator` y devuelve un `reverse_iterator` que señala el elemento en la posición desplazada.  
+ Subtracts an offset from a `reverse_iterator` and returns a `reverse_iterator` addressing the element at the offset position.  
   
 ```  
 reverse_iterator<RandomIterator> operator-(difference_type Off) const;
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `Off`  
- El desplazamiento que se restará del reverse_iterator.  
+ The offset to be subtracted from the reverse_iterator.  
   
-### <a name="return-value"></a>Valor devuelto  
- Un `reverse_iterator` que se dirige al elemento de desplazamiento.  
+### <a name="return-value"></a>Return Value  
+ A `reverse_iterator` addressing the offset element.  
   
-### <a name="remarks"></a>Comentarios  
- Solo se puede usar esta función miembro si el `reverse_iterator` cumple los requisitos de un iterador de acceso aleatorio.  
+### <a name="remarks"></a>Remarks  
+ This member function may only be used if the `reverse_iterator` satisfies the requirements for a random-access iterator.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // reverse_iterator_op_sub.cpp  
@@ -548,20 +553,20 @@ After the -2 offset, the iterator rVPOS2 points
 ```  
   
 ##  <a name="reverse_iterator__operator--"></a>  reverse_iterator::operator--  
- Disminuye el reverse_iterator al elemento anterior.  
+ Decrements the reverse_iterator to the previous element.  
   
 ```  
 reverse_iterator<RandomIterator>& operator--();
 reverse_iterator<RandomIterator> operator--(int);
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- El primer operador devuelve el `reverse_iterator` prereducido y el segundo, el operador de posdecremento, devuelve una copia del `reverse_iterator` reducido.  
+### <a name="return-value"></a>Return Value  
+ The first operator returns the predecremented `reverse_iterator` and the second, the postdecrement operator, returns a copy of the decremented `reverse_iterator`.  
   
-### <a name="remarks"></a>Comentarios  
- Solo se puede usar esta función miembro si el `reverse_iterator` cumple los requisitos de un iterador bidireccional.  
+### <a name="remarks"></a>Remarks  
+ This member function may only be used if the `reverse_iterator` satisfies the requirements for a bidirectional iterator.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // reverse_iterator_op_decr.cpp  
@@ -618,22 +623,22 @@ After the decrement, the iterator rVPOS1 points
 ```  
   
 ##  <a name="reverse_iterator__operator-_eq"></a>  reverse_iterator::operator-=  
- Resta un desplazamiento especificado a un `reverse_iterator`.  
+ Subtracts a specified offset from a `reverse_iterator`.  
   
 ```  
 reverse_iterator<RandomIterator>& operator-=(difference_type Off);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `Off`  
- El desplazamiento que se restará del `reverse_iterator`.  
+ The offset to be subtracted from the `reverse_iterator`.  
   
-### <a name="remarks"></a>Comentarios  
- Solo se puede usar esta función miembro si el `reverse_iterator` cumple los requisitos de un iterador de acceso aleatorio.  
+### <a name="remarks"></a>Remarks  
+ This member function may only be used if the `reverse_iterator` satisfies the requirements for a random-access iterator.  
   
- El operador evalúa **current** + _ *Off*. Después, devuelve **\*this**.  
+ The operator evaluates **current** + _ *Off*. then returns **\*this**.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // reverse_iterator_op_suboff.cpp  
@@ -690,19 +695,19 @@ After the -2 offset, the iterator rVPOS1 now points
 ```  
   
 ##  <a name="reverse_iterator__operator-_gt"></a>  reverse_iterator::operator-&gt;  
- Devuelve un puntero al elemento direccionado por `reverse_iterator`.  
+ Returns a pointer to the element addressed by the `reverse_iterator`.  
   
 ```   
 pointer operator->() const;
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Un puntero al elemento al que se dirige el `reverse_iterator`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the element addressed by the `reverse_iterator`.  
   
-### <a name="remarks"></a>Comentarios  
- El operador devuelve **&\*\*this**.  
+### <a name="remarks"></a>Remarks  
+ The operator returns **&\*\*this**.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // reverse_iterator_ptrto.cpp  
@@ -766,23 +771,23 @@ The reverse_iterator rpos points to:
 ```  
   
 ##  <a name="op_at"></a>  reverse_iterator::operator[]  
- Devuelve una referencia a un desplazamiento de elemento con respecto al elemento direccionado por `reverse_iterator` un número especificado de posiciones.  
+ Returns a reference to an element offset from the element addressed by a `reverse_iterator` by a specified number of positions.  
   
 ```   
 reference operator[](difference_type Off) const;
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `Off`  
- El desplazamiento desde la dirección del `reverse_iterator`.  
+ The offset from the `reverse_iterator` address.  
   
-### <a name="return-value"></a>Valor devuelto  
- La referencia al desplazamiento del elemento.  
+### <a name="return-value"></a>Return Value  
+ The reference to the element offset.  
   
-### <a name="remarks"></a>Comentarios  
- El operador devuelve **\***( **\*this** + `Off`).  
+### <a name="remarks"></a>Remarks  
+ The operator returns **\***( **\*this** + `Off`).  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // reverse_iterator_ret_ref.cpp  
@@ -840,16 +845,16 @@ The iterator rpos now points to: 2.
 ```  
   
 ##  <a name="pointer"></a>  reverse_iterator::pointer  
- Tipo que proporciona un puntero a un elemento direccionado por `reverse_iterator`.  
+ A type that provides a pointer to an element addressed by a `reverse_iterator`.  
   
 ```  
 typedef typename iterator_traits<RandomIterator>::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>Comentarios  
- El tipo es un sinónimo del nombre de tipo de rasgo del iterador `iterator_traits`\< *RandomIterator*> **::pointer**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the iterator trait typename `iterator_traits`\< *RandomIterator*> **::pointer**.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // reverse_iterator_pointer.cpp  
@@ -910,20 +915,20 @@ The iterator rpos points to:
 ```  
   
 ##  <a name="reference"></a>  reverse_iterator::reference  
- Un tipo que proporciona una referencia a un elemento al que se dirige un reverse_iterator.  
+ A type that provides a reference to an element addressed by a reverse_iterator.  
   
 ```  
 typedef typename iterator_traits<RandomIterator>::reference reference;  
 ```  
   
-### <a name="remarks"></a>Comentarios  
- El tipo es un sinónimo del nombre de tipo de rasgo del iterador `iterator_traits`\< *RandomIterator*> **::reference**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the iterator trait typename `iterator_traits`\< *RandomIterator*> **::reference**.  
   
-### <a name="example"></a>Ejemplo  
-  Vea [reverse_iterator::operator&#91;&#93;](#op_at) o [reverse_iterator::operator*](#op_star) para obtener ejemplos de cómo declarar y usar **reference**.  
+### <a name="example"></a>Example  
+  See [reverse_iterator::operator&#91;&#93;](#op_at) or [reverse_iterator::operator*](#op_star) for examples of how to declare and use **reference**.  
   
 ##  <a name="reverse_iterator"></a>  reverse_iterator::reverse_iterator  
- Construye un `reverse_iterator` predeterminado o un `reverse_iterator` a partir de un iterador subyacente.  
+ Constructs a default `reverse_iterator` or a `reverse_iterator` from an underlying iterator.  
   
 ```   
 reverse_iterator();  
@@ -933,21 +938,21 @@ template <class Type>
 reverse_iterator(const reverse_iterator<Type>& right);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `right`  
- El iterador que se va a adaptar a un `reverse_iterator`.  
+ The iterator that is to be adapted to a `reverse_iterator`.  
   
-### <a name="return-value"></a>Valor devuelto  
- Un `reverse_iterator` predeterminado o un `reverse_iterator` que adapta un iterador subyacente.  
+### <a name="return-value"></a>Return Value  
+ A default `reverse_iterator` or a `reverse_iterator` adapting an underlying iterator.  
   
-### <a name="remarks"></a>Comentarios  
- La identidad que relaciona todos los iteradores inversos con sus iteradores subyacentes es:  
+### <a name="remarks"></a>Remarks  
+ The identity which relates all reverse iterators to their underlying iterators is:  
   
  &\*( `reverse_iterator` ( *i* ) ) == &\*( *i* - 1 ).  
   
- En la práctica esto significa que, en la secuencia inversa, reverse_iterator hará referencia al elemento situado una posición más allá (a la derecha) del elemento al que el iterador se había referido en la secuencia original. Así pues, si un iterador señaló el elemento 6 en la secuencia (2, 4, 6, 8), entonces `reverse_iterator` señalará el elemento 4 en la secuencia inversa (8, 6, 4, 2).  
+ In practice, this means that in the reversed sequence the reverse_iterator will refer to the element one position beyond (to the right of) the element that the iterator had referred to in the original sequence. So if an iterator addressed the element 6 in the sequence (2, 4, 6, 8), then the `reverse_iterator` will address the element 4 in the reversed sequence (8, 6, 4, 2).  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // reverse_iterator_reverse_iterator.cpp  
@@ -990,9 +995,9 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)   
- [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

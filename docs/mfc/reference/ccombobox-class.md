@@ -1,5 +1,5 @@
 ---
-title: CComboBox (clase) | Documentos de Microsoft
+title: CComboBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -65,8 +65,57 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- combo boxes, CComboBox objects
-- CComboBox class
+- CComboBox [MFC], CComboBox
+- CComboBox [MFC], AddString
+- CComboBox [MFC], Clear
+- CComboBox [MFC], CompareItem
+- CComboBox [MFC], Copy
+- CComboBox [MFC], Create
+- CComboBox [MFC], Cut
+- CComboBox [MFC], DeleteItem
+- CComboBox [MFC], DeleteString
+- CComboBox [MFC], Dir
+- CComboBox [MFC], DrawItem
+- CComboBox [MFC], FindString
+- CComboBox [MFC], FindStringExact
+- CComboBox [MFC], GetComboBoxInfo
+- CComboBox [MFC], GetCount
+- CComboBox [MFC], GetCueBanner
+- CComboBox [MFC], GetCurSel
+- CComboBox [MFC], GetDroppedControlRect
+- CComboBox [MFC], GetDroppedState
+- CComboBox [MFC], GetDroppedWidth
+- CComboBox [MFC], GetEditSel
+- CComboBox [MFC], GetExtendedUI
+- CComboBox [MFC], GetHorizontalExtent
+- CComboBox [MFC], GetItemData
+- CComboBox [MFC], GetItemDataPtr
+- CComboBox [MFC], GetItemHeight
+- CComboBox [MFC], GetLBText
+- CComboBox [MFC], GetLBTextLen
+- CComboBox [MFC], GetLocale
+- CComboBox [MFC], GetMinVisible
+- CComboBox [MFC], GetTopIndex
+- CComboBox [MFC], InitStorage
+- CComboBox [MFC], InsertString
+- CComboBox [MFC], LimitText
+- CComboBox [MFC], MeasureItem
+- CComboBox [MFC], Paste
+- CComboBox [MFC], ResetContent
+- CComboBox [MFC], SelectString
+- CComboBox [MFC], SetCueBanner
+- CComboBox [MFC], SetCurSel
+- CComboBox [MFC], SetDroppedWidth
+- CComboBox [MFC], SetEditSel
+- CComboBox [MFC], SetExtendedUI
+- CComboBox [MFC], SetHorizontalExtent
+- CComboBox [MFC], SetItemData
+- CComboBox [MFC], SetItemDataPtr
+- CComboBox [MFC], SetItemHeight
+- CComboBox [MFC], SetLocale
+- CComboBox [MFC], SetMinVisibleItems
+- CComboBox [MFC], SetTopIndex
+- CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
 caps.latest.revision: 25
 author: mikeblome
@@ -86,145 +135,145 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 6cd8407f3c70469afa256d8fb7608b7de43b6c72
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dfedd307ab71d780e9a6ae03dea2608580319f60
 ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccombobox-class"></a>CComboBox (clase)
-Proporciona la funcionalidad de un cuadro combinado de Windows.  
+# <a name="ccombobox-class"></a>CComboBox Class
+Provides the functionality of a Windows combo box.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CComboBox : public CWnd  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CComboBox::CComboBox](#ccombobox)|Construye un objeto `CComboBox`.|  
+|[CComboBox::CComboBox](#ccombobox)|Constructs a `CComboBox` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CComboBox:: AddString](#addstring)|Agrega una cadena al final de la lista en el cuadro de lista de un cuadro combinado o en la posición ordenada para cuadros de lista con el **CBS_SORT** estilo.|  
-|[CComboBox::Clear](#clear)|Elimina (borra) la selección actual, si existe alguno, en el control de edición.|  
-|[CComboBox::CompareItem](#compareitem)|Lo llama el marco de trabajo para determinar la posición relativa de un nuevo elemento de lista en un cuadro combinado dibujado por el propietario ordenado.|  
-|[CComboBox::Copy](#copy)|Copia la selección actual, si hay alguno, en el Portapapeles en **CF_TEXT** formato.|  
-|[CComboBox::Create](#create)|Crea el cuadro combinado y lo adjunta a la `CComboBox` objeto.|  
-|[CComboBox::Cut](#cut)|Elimina (cortes) la selección actual, si existe alguno, en la edición de control y copia el texto eliminado en el Portapapeles en **CF_TEXT** formato.|  
-|[CComboBox::DeleteItem](#deleteitem)|Llamado por el marco de trabajo cuando se elimina un elemento de lista de un cuadro combinado dibujado por el propietario.|  
-|[CComboBox::DeleteString](#deletestring)|Elimina una cadena en el cuadro de lista de un cuadro combinado.|  
-|[CComboBox::Dir](#dir)|Agrega una lista de nombres de archivo en el cuadro de lista de un cuadro combinado.|  
-|[CComboBox::DrawItem](#drawitem)|Lo llama el marco cuando un aspecto visual de cambia de un cuadro combinado dibujado por el propietario.|  
-|[CComboBox::FindString](#findstring)|Busca la primera cadena que contiene el prefijo especificado en el cuadro de lista de un cuadro combinado.|  
-|[CComboBox::FindStringExact](#findstringexact)|Busca la primera cadena de cuadro de lista (en un cuadro combinado) que coincida con la cadena especificada.|  
-|[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|Recupera información sobre la `CComboBox` objeto.|  
-|[CComboBox::GetCount](#getcount)|Recupera el número de elementos en el cuadro de lista de un cuadro combinado.|  
-|[CComboBox::GetCueBanner](#getcuebanner)|Obtiene el texto de indicación que se muestra para un control de cuadro combinado.|  
-|[CComboBox::GetCurSel](#getcursel)|Recupera el índice del elemento actualmente seleccionado, si existe alguno, en el cuadro de lista de un cuadro combinado.|  
-|[CComboBox::GetDroppedControlRect](#getdroppedcontrolrect)|Recupera las coordenadas de pantalla del cuadro de lista (colocarlo hacia abajo) visible de un cuadro combinado desplegable.|  
-|[CComboBox::GetDroppedState](#getdroppedstate)|Determina si el cuadro de lista de un cuadro combinado desplegable está visible (desplegada).|  
-|[CComboBox::GetDroppedWidth](#getdroppedwidth)|Recupera el ancho mínimo permitido para la parte de cuadro de lista desplegable de un cuadro combinado.|  
-|[CComboBox::GetEditSel](#geteditsel)|Obtiene las posiciones de carácter inicial y final de la selección actual en el control de edición de un cuadro combinado.|  
-|[CComboBox::GetExtendedUI](#getextendedui)|Determina si un cuadro combinado tiene la interfaz de usuario predeterminada o la interfaz de usuario extendida.|  
-|[CComboBox::GetHorizontalExtent](#gethorizontalextent)|Devuelve el ancho en píxeles que la parte de cuadro de lista del cuadro combinado se puede desplazar horizontalmente.|  
-|[CComboBox::GetItemData](#getitemdata)|Recupera el valor de 32 bits proporcionada por la aplicación asociado al elemento de cuadro combinado especificado.|  
-|[CComboBox::GetItemDataPtr](#getitemdataptr)|Recupera el puntero de 32 bits proporcionada por la aplicación que está asociado con el elemento de cuadro combinado especificado.|  
-|[CComboBox::GetItemHeight](#getitemheight)|Recupera el alto de los elementos de lista en un cuadro combinado.|  
-|[CComboBox::GetLBText](#getlbtext)|Obtiene una cadena en el cuadro de lista de un cuadro combinado.|  
-|[CComboBox::GetLBTextLen](#getlbtextlen)|Obtiene la longitud de una cadena en el cuadro de lista de un cuadro combinado.|  
-|[CComboBox::GetLocale](#getlocale)|Recupera el identificador de configuración regional de un cuadro combinado.|  
-|[CComboBox::GetMinVisible](#getminvisible)|Obtiene el número mínimo de elementos visibles en la lista desplegable del cuadro combinado actual.|  
-|[CComboBox::GetTopIndex](#gettopindex)|Devuelve el índice del primer elemento visible en la parte de cuadro de lista del cuadro combinado.|  
-|[CComboBox::InitStorage](#initstorage)|Preasigna bloques de memoria para los elementos y las cadenas en la parte de cuadro de lista del cuadro combinado.|  
-|[CComboBox::InsertString](#insertstring)|Inserta una cadena en el cuadro de lista de un cuadro combinado.|  
-|[CComboBox::LimitText](#limittext)|Limita la longitud del texto que el usuario puede escribir en el control de edición de un cuadro combinado.|  
-|[CComboBox::MeasureItem](#measureitem)|Lo llama el marco de trabajo para determinar las dimensiones del cuadro combinado cuando se crea un cuadro combinado dibujado por el propietario.|  
-|[CComboBox::Paste](#paste)|Inserta los datos del Portapapeles en el control de edición en la posición actual del cursor. Se insertan datos solo si el Portapapeles contiene datos en **CF_TEXT** formato.|  
-|[CComboBox::ResetContent](#resetcontent)|Quita todos los elementos de la lista cuadro y control de un cuadro combinado de edición.|  
-|[CComboBox::SelectString](#selectstring)|Busca una cadena en el cuadro de lista de un cuadro combinado y, si se encuentra la cadena, selecciona la cadena en el cuadro de lista y copia la cadena en el control de edición.|  
-|[CComboBox::SetCueBanner](#setcuebanner)|Establece el texto de indicación que se muestra para un control de cuadro combinado.|  
-|[CComboBox::SetCurSel](#setcursel)|Selecciona una cadena en el cuadro de lista de un cuadro combinado.|  
-|[CComboBox::SetDroppedWidth](#setdroppedwidth)|Establece el ancho mínimo permitido para la parte de cuadro de lista desplegable de un cuadro combinado.|  
-|[CComboBox::SetEditSel](#seteditsel)|Selecciona caracteres en el control de edición de un cuadro combinado.|  
-|[CComboBox::SetExtendedUI](#setextendedui)|Selecciona la interfaz de usuario predeterminada o la interfaz de usuario extendida para un cuadro combinado que tiene el **CBS_DROPDOWN** o **CBS_DROPDOWNLIST** estilo.|  
-|[CComboBox::SetHorizontalExtent](#sethorizontalextent)|Establece el ancho en píxeles que la parte de cuadro de lista del cuadro combinado se puede desplazar horizontalmente.|  
-|[CComboBox::SetItemData](#setitemdata)|Establece el valor de 32 bits asociado con el elemento especificado en un cuadro combinado.|  
-|[CComboBox::SetItemDataPtr](#setitemdataptr)|Establece el puntero de 32 bits asociado con el elemento especificado en un cuadro combinado.|  
-|[CComboBox::SetItemHeight](#setitemheight)|Establece el alto de elementos de lista en un cuadro combinado o el alto de la parte de control de edición (o texto estático) de un cuadro combinado.|  
-|[CComboBox::SetLocale](#setlocale)|Establece el identificador de configuración regional para un cuadro combinado.|  
-|[CComboBox::SetMinVisibleItems](#setminvisibleitems)|Establece el número mínimo de elementos visibles en la lista desplegable del cuadro combinado actual.|  
-|[CComboBox::SetTopIndex](#settopindex)|Indica la parte de cuadro de lista del cuadro combinado para mostrar el elemento con el índice especificado en la parte superior.|  
-|[CComboBox::ShowDropDown](#showdropdown)|Muestra u oculta el cuadro de lista de un cuadro combinado que tiene el **CBS_DROPDOWN** o **CBS_DROPDOWNLIST** estilo.|  
+|[CComboBox::AddString](#addstring)|Adds a string to the end of the list in the list box of a combo box, or at the sorted position for list boxes with the **CBS_SORT** style.|  
+|[CComboBox::Clear](#clear)|Deletes (clears) the current selection, if any, in the edit control.|  
+|[CComboBox::CompareItem](#compareitem)|Called by the framework to determine the relative position of a new list item in a sorted owner-drawn combo box.|  
+|[CComboBox::Copy](#copy)|Copies the current selection, if any, onto the Clipboard in **CF_TEXT** format.|  
+|[CComboBox::Create](#create)|Creates the combo box and attaches it to the `CComboBox` object.|  
+|[CComboBox::Cut](#cut)|Deletes (cuts) the current selection, if any, in the edit control and copies the deleted text onto the Clipboard in **CF_TEXT** format.|  
+|[CComboBox::DeleteItem](#deleteitem)|Called by the framework when a list item is deleted from an owner-drawn combo box.|  
+|[CComboBox::DeleteString](#deletestring)|Deletes a string from the list box of a combo box.|  
+|[CComboBox::Dir](#dir)|Adds a list of file names to the list box of a combo box.|  
+|[CComboBox::DrawItem](#drawitem)|Called by the framework when a visual aspect of an owner-drawn combo box changes.|  
+|[CComboBox::FindString](#findstring)|Finds the first string that contains the specified prefix in the list box of a combo box.|  
+|[CComboBox::FindStringExact](#findstringexact)|Finds the first list-box string (in a combo box) that matches the specified string.|  
+|[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|Retrieves information about the `CComboBox` object.|  
+|[CComboBox::GetCount](#getcount)|Retrieves the number of items in the list box of a combo box.|  
+|[CComboBox::GetCueBanner](#getcuebanner)|Gets the cue text that is displayed for a combo box control.|  
+|[CComboBox::GetCurSel](#getcursel)|Retrieves the index of the currently selected item, if any, in the list box of a combo box.|  
+|[CComboBox::GetDroppedControlRect](#getdroppedcontrolrect)|Retrieves the screen coordinates of the visible (dropped down) list box of a drop-down combo box.|  
+|[CComboBox::GetDroppedState](#getdroppedstate)|Determines whether the list box of a drop-down combo box is visible (dropped down).|  
+|[CComboBox::GetDroppedWidth](#getdroppedwidth)|Retrieves the minimum allowed width for the drop-down list-box portion of a combo box.|  
+|[CComboBox::GetEditSel](#geteditsel)|Gets the starting and ending character positions of the current selection in the edit control of a combo box.|  
+|[CComboBox::GetExtendedUI](#getextendedui)|Determines whether a combo box has the default user interface or the extended user interface.|  
+|[CComboBox::GetHorizontalExtent](#gethorizontalextent)|Returns the width in pixels that the list-box portion of the combo box can be scrolled horizontally.|  
+|[CComboBox::GetItemData](#getitemdata)|Retrieves the application-supplied 32-bit value associated with the specified combo-box item.|  
+|[CComboBox::GetItemDataPtr](#getitemdataptr)|Retrieves the application-supplied 32-bit pointer that is associated with the specified combo-box item.|  
+|[CComboBox::GetItemHeight](#getitemheight)|Retrieves the height of list items in a combo box.|  
+|[CComboBox::GetLBText](#getlbtext)|Gets a string from the list box of a combo box.|  
+|[CComboBox::GetLBTextLen](#getlbtextlen)|Gets the length of a string in the list box of a combo box.|  
+|[CComboBox::GetLocale](#getlocale)|Retrieves the locale identifier for a combo box.|  
+|[CComboBox::GetMinVisible](#getminvisible)|Gets the minimum number of visible items in the drop-down list of the current combo box.|  
+|[CComboBox::GetTopIndex](#gettopindex)|Returns the index of the first visible item in the list-box portion of the combo box.|  
+|[CComboBox::InitStorage](#initstorage)|Preallocates blocks of memory for items and strings in the list-box portion of the combo box.|  
+|[CComboBox::InsertString](#insertstring)|Inserts a string into the list box of a combo box.|  
+|[CComboBox::LimitText](#limittext)|Limits the length of the text that the user can enter into the edit control of a combo box.|  
+|[CComboBox::MeasureItem](#measureitem)|Called by the framework to determine combo box dimensions when an owner-drawn combo box is created.|  
+|[CComboBox::Paste](#paste)|Inserts the data from the Clipboard into the edit control at the current cursor position. Data is inserted only if the Clipboard contains data in **CF_TEXT** format.|  
+|[CComboBox::ResetContent](#resetcontent)|Removes all items from the list box and edit control of a combo box.|  
+|[CComboBox::SelectString](#selectstring)|Searches for a string in the list box of a combo box and, if the string is found, selects the string in the list box and copies the string to the edit control.|  
+|[CComboBox::SetCueBanner](#setcuebanner)|Sets the cue text that is displayed for a combo box control.|  
+|[CComboBox::SetCurSel](#setcursel)|Selects a string in the list box of a combo box.|  
+|[CComboBox::SetDroppedWidth](#setdroppedwidth)|Sets the minimum allowed width for the drop-down list-box portion of a combo box.|  
+|[CComboBox::SetEditSel](#seteditsel)|Selects characters in the edit control of a combo box.|  
+|[CComboBox::SetExtendedUI](#setextendedui)|Selects either the default user interface or the extended user interface for a combo box that has the **CBS_DROPDOWN** or **CBS_DROPDOWNLIST** style.|  
+|[CComboBox::SetHorizontalExtent](#sethorizontalextent)|Sets the width in pixels that the list-box portion of the combo box can be scrolled horizontally.|  
+|[CComboBox::SetItemData](#setitemdata)|Sets the 32-bit value associated with the specified item in a combo box.|  
+|[CComboBox::SetItemDataPtr](#setitemdataptr)|Sets the 32-bit pointer associated with the specified item in a combo box.|  
+|[CComboBox::SetItemHeight](#setitemheight)|Sets the height of list items in a combo box or the height of the edit-control (or static-text) portion of a combo box.|  
+|[CComboBox::SetLocale](#setlocale)|Sets the locale identifier for a combo box.|  
+|[CComboBox::SetMinVisibleItems](#setminvisibleitems)|Sets the minimum number of visible items in the drop-down list of the current combo box.|  
+|[CComboBox::SetTopIndex](#settopindex)|Tells the list-box portion of the combo box to display the item with the specified index at the top.|  
+|[CComboBox::ShowDropDown](#showdropdown)|Shows or hides the list box of a combo box that has the **CBS_DROPDOWN** or **CBS_DROPDOWNLIST** style.|  
   
-## <a name="remarks"></a>Comentarios  
- Un cuadro combinado se compone de un cuadro de lista combinado con un control estático o un control de edición. La parte de cuadro de lista del control puede mostrarse en todo momento o solo puede desplegable cuando el usuario selecciona la flecha de lista desplegable situada junto al control.  
+## <a name="remarks"></a>Remarks  
+ A combo box consists of a list box combined with either a static control or edit control. The list-box portion of the control may be displayed at all times or may only drop down when the user selects the drop-down arrow next to the control.  
   
- El elemento seleccionado actualmente (si existe) en el cuadro de lista se muestra en el método estático o control de edición. Además, si el cuadro combinado tiene el estilo de lista desplegable, el usuario puede escribir el carácter inicial de uno de los elementos en la lista y el cuadro de lista, si está visible, se resaltará el elemento siguiente sin ese carácter inicial.  
+ The currently selected item (if any) in the list box is displayed in the static or edit control. In addition, if the combo box has the drop-down list style, the user can type the initial character of one of the items in the list, and the list box, if visible, will highlight the next item with that initial character.  
   
- La tabla siguiente compara el cuadro combinado tres [estilos](../../mfc/reference/combo-box-styles.md).  
+ The following table compares the three combo-box [styles](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles).  
   
-|Estilo|Está visible cuando el cuadro de lista|Control estático o de edición|  
+|Style|When is list box visible|Static or edit control|  
 |-----------|-------------------------------|-----------------------------|  
-|Sencillo|Always|Editar|  
-|Drop-down|Cuando quita hacia abajo|Editar|  
-|Lista desplegable|Cuando quita hacia abajo|Estático|  
+|Simple|Always|Edit|  
+|Drop-down|When dropped down|Edit|  
+|Drop-down list|When dropped down|Static|  
   
- Puede crear un `CComboBox` objeto desde una plantilla de cuadro de diálogo o directamente en el código. En ambos casos, llame primero al constructor de `CComboBox` para construir el `CComboBox` objeto; a continuación, llamar a la [crear](#create) función de miembro para crear el control y adjuntarlo a la `CComboBox` objeto.  
+ You can create a `CComboBox` object from either a dialog template or directly in your code. In both cases, first call the constructor `CComboBox` to construct the `CComboBox` object; then call the [Create](#create) member function to create the control and attach it to the `CComboBox` object.  
   
- Si desea controlar los mensajes de notificación de Windows enviados por un cuadro combinado a su elemento primario (normalmente una clase derivada de `CDialog`), agregar una función de miembro de entrada y el controlador de mensajes de mapa de mensajes para la clase primaria para cada mensaje.  
+ If you want to handle Windows notification messages sent by a combo box to its parent (usually a class derived from `CDialog`), add a message-map entry and message-handler member function to the parent class for each message.  
   
- Cada entrada de mapa de mensajes tiene el formato siguiente:  
+ Each message-map entry takes the following form:  
   
  **ON_**Notification **(**`id`**,**`memberFxn`**)**  
   
- donde `id` especifica el identificador de ventana secundaria del control de cuadro combinado que se envía la notificación y `memberFxn` es el nombre de la función de miembro primario haya terminado de escribir para controlar la notificación.  
+ where `id` specifies the child-window ID of the combo-box control sending the notification and `memberFxn` is the name of the parent member function you have written to handle the notification.  
   
- Prototipo de función del elemento primario es el siguiente:  
+ The parent's function prototype is as follows:  
   
  **afx_msg** `void` `memberFxn` **( );**  
   
- No se puede predecir el orden en el que ciertas notificaciones se enviarán. En concreto, un **CBN_SELCHANGE** notificación puede producirse antes o después de un **CBN_CLOSEUP** notificación.  
+ The order in which certain notifications will be sent cannot be predicted. In particular, a **CBN_SELCHANGE** notification may occur either before or after a **CBN_CLOSEUP** notification.  
   
- Posibles entradas de mapa de mensajes son los siguientes:  
+ Potential message-map entries are the following:  
   
-- **ON_CBN_CLOSEUP** (Windows 3.1 y posteriores). Se cerró el cuadro de lista de un cuadro combinado. Este mensaje de notificación no se envía para un cuadro combinado que tiene el [CBS_SIMPLE](../../mfc/reference/combo-box-styles.md) estilo.  
+- **ON_CBN_CLOSEUP** (Windows 3.1 and later.) The list box of a combo box has closed. This notification message is not sent for a combo box that has the [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
-- **ON_CBN_DBLCLK** el usuario hace doble clic en una cadena en el cuadro de lista de un cuadro combinado. Este mensaje de notificación sólo se envía para un cuadro combinado con el **CBS_SIMPLE** estilo. Para un cuadro combinado con el [CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md) o [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) estilo, no se puede producir un doble clic porque un solo clic oculta el cuadro de lista.  
+- **ON_CBN_DBLCLK** The user double-clicks a string in the list box of a combo box. This notification message is only sent for a combo box with the **CBS_SIMPLE** style. For a combo box with the [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, a double-click cannot occur because a single click hides the list box.  
   
-- **ON_CBN_DROPDOWN** el cuadro de lista de un cuadro combinado está a punto de lista desplegable (puede hacerse visible). Este mensaje de notificación puede darse solo en un cuadro combinado con el **CBS_DROPDOWN** o **CBS_DROPDOWNLIST** estilo.  
+- **ON_CBN_DROPDOWN** The list box of a combo box is about to drop down (be made visible). This notification message can occur only for a combo box with the **CBS_DROPDOWN** or **CBS_DROPDOWNLIST** style.  
   
-- **ON_CBN_EDITCHANGE** el usuario ha realizado una acción que puede haber modificado el texto en la parte de control de edición de un cuadro combinado. A diferencia de la **CBN_EDITUPDATE** mensaje, este mensaje se envía después de la pantalla de actualizaciones de Windows. No se envía si el cuadro combinado tiene la **CBS_DROPDOWNLIST** estilo.  
+- **ON_CBN_EDITCHANGE** The user has taken an action that may have altered the text in the edit-control portion of a combo box. Unlike the **CBN_EDITUPDATE** message, this message is sent after Windows updates the screen. It is not sent if the combo box has the **CBS_DROPDOWNLIST** style.  
   
-- **ON_CBN_EDITUPDATE** la parte del control de edición de un cuadro combinado está a punto de mostrar el texto modificado. Este mensaje de notificación se envía después de que el control ha dado formato al texto, pero antes de que se muestre el texto. No se envía si el cuadro combinado tiene la **CBS_DROPDOWNLIST** estilo.  
+- **ON_CBN_EDITUPDATE** The edit-control portion of a combo box is about to display altered text. This notification message is sent after the control has formatted the text but before it displays the text. It is not sent if the combo box has the **CBS_DROPDOWNLIST** style.  
   
-- **ON_CBN_ERRSPACE** el cuadro combinado no puede asignar memoria suficiente para satisfacer una solicitud concreta.  
+- **ON_CBN_ERRSPACE** The combo box cannot allocate enough memory to meet a specific request.  
   
-- **ON_CBN_SELENDCANCEL** (Windows 3.1 y posteriores). Indica que se debe cancelar la selección del usuario. El usuario hace clic en un elemento y, a continuación, haga clic en otra ventana o control para ocultar el cuadro de lista de un cuadro combinado. Este mensaje de notificación se envía antes de la **CBN_CLOSEUP** mensaje de notificación para indicar que se debe omitir la selección del usuario. El **CBN_SELENDCANCEL** o **CBN_SELENDOK** se envía el mensaje de notificación incluso si la **CBN_CLOSEUP** no se envía el mensaje de notificación (al igual que en el caso de un cuadro combinado con el **CBS_SIMPLE** estilo).  
+- **ON_CBN_SELENDCANCEL** (Windows 3.1 and later.) Indicates the user's selection should be canceled. The user clicks an item and then clicks another window or control to hide the list box of a combo box. This notification message is sent before the **CBN_CLOSEUP** notification message to indicate that the user's selection should be ignored. The **CBN_SELENDCANCEL** or **CBN_SELENDOK** notification message is sent even if the **CBN_CLOSEUP** notification message is not sent (as in the case of a combo box with the **CBS_SIMPLE** style).  
   
-- **ON_CBN_SELENDOK** el usuario selecciona un elemento y, a continuación, presiona la tecla ENTRAR o haga clic en la tecla de flecha abajo para ocultar el cuadro de lista de un cuadro combinado. Este mensaje de notificación se envía antes de la **CBN_CLOSEUP** mensaje para indicar que la selección del usuario debe considerarse válida. El **CBN_SELENDCANCEL** o **CBN_SELENDOK** se envía el mensaje de notificación incluso si la **CBN_CLOSEUP** no se envía el mensaje de notificación (al igual que en el caso de un cuadro combinado con el **CBS_SIMPLE** estilo).  
+- **ON_CBN_SELENDOK** The user selects an item and then either presses the ENTER key or clicks the DOWN ARROW key to hide the list box of a combo box. This notification message is sent before the **CBN_CLOSEUP** message to indicate that the user's selection should be considered valid. The **CBN_SELENDCANCEL** or **CBN_SELENDOK** notification message is sent even if the **CBN_CLOSEUP** notification message is not sent (as in the case of a combo box with the **CBS_SIMPLE** style).  
   
-- **ON_CBN_KILLFOCUS** el cuadro combinado está perdiendo el foco de entrada.  
+- **ON_CBN_KILLFOCUS** The combo box is losing the input focus.  
   
-- **ON_CBN_SELCHANGE** la selección en el cuadro de lista de un cuadro combinado está a punto de cambiarse porque el usuario haga clic en el cuadro de lista o cambiar la selección mediante las teclas de dirección. Al procesar este mensaje, puede que el texto en el control de edición del cuadro combinado solo se pueden recuperar a través de `GetLBText` o a otra función similar. `GetWindowText`no se puede usar.  
+- **ON_CBN_SELCHANGE** The selection in the list box of a combo box is about to be changed as a result of the user either clicking in the list box or changing the selection by using the arrow keys. When processing this message, the text in the edit control of the combo box can only be retrieved via `GetLBText` or another similar function. `GetWindowText` cannot be used.  
   
-- **ON_CBN_SETFOCUS** el cuadro combinado recibe el foco de entrada.  
+- **ON_CBN_SETFOCUS** The combo box receives the input focus.  
   
- Si crea un `CComboBox` objeto dentro de un cuadro de diálogo (a través de un recurso de cuadro de diálogo), el `CComboBox` objeto se destruye automáticamente cuando el usuario cierra el cuadro de diálogo.  
+ If you create a `CComboBox` object within a dialog box (through a dialog resource), the `CComboBox` object is automatically destroyed when the user closes the dialog box.  
   
- Si incrusta un `CComboBox` objeto dentro de otra ventana del objeto, no es necesario destruirlo. Si crea el `CComboBox` del objeto en la pila, se destruye automáticamente. Si crea el `CComboBox` objeto en el montón mediante el uso de la **nueva** función, se debe llamar a **eliminar** del objeto que se va a destruir cuando se destruye el cuadro combinado de Windows.  
+ If you embed a `CComboBox` object within another window object, you do not need to destroy it. If you create the `CComboBox` object on the stack, it is destroyed automatically. If you create the `CComboBox` object on the heap by using the **new** function, you must call **delete** on the object to destroy it when the Windows combo box is destroyed.  
   
- **Tenga en cuenta** si desea controlar `WM_KEYDOWN` y `WM_CHAR` mensajes, tendrá que subclase del cuadro combinado editar y controles de cuadro de lista, derivar clases de `CEdit` y `CListBox`, y agregar controladores para los mensajes a las clases derivadas. Para obtener más información, consulte [http://support.microsoft.com/default.aspxscid=kb;en-us; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) y [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).  
+ **Note** If you want to handle `WM_KEYDOWN` and `WM_CHAR` messages, you have to subclass the combo box's edit and list box controls, derive classes from `CEdit` and `CListBox`, and add handlers for those messages to the derived classes. For more information, see [http://support.microsoft.com/default.aspxscid=kb;en-us;Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) and [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -233,97 +282,97 @@ class CComboBox : public CWnd
   
  `CComboBox`  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="addstring"></a>CComboBox:: AddString  
- Agrega una cadena en el cuadro de lista de un cuadro combinado.  
+##  <a name="addstring"></a>  CComboBox::AddString  
+ Adds a string to the list box of a combo box.  
   
 ```  
 int AddString(LPCTSTR lpszString);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpszString`  
- Apunta a la cadena terminada en null que se va a agregarse.  
+ Points to the null-terminated string that is to be added.  
   
-### <a name="return-value"></a>Valor devuelto  
- Si el valor devuelto es mayor o igual que 0, es el índice de base cero de la cadena en el cuadro de lista. El valor devuelto es **CB_ERR** si se produce un error; el valor devuelto es **CB_ERRSPACE** si no hay suficiente espacio disponible para almacenar la nueva cadena.  
+### <a name="return-value"></a>Return Value  
+ If the return value is greater than or equal to 0, it is the zero-based index to the string in the list box. The return value is **CB_ERR** if an error occurs; the return value is **CB_ERRSPACE** if insufficient space is available to store the new string.  
   
-### <a name="remarks"></a>Comentarios  
- Si el cuadro de lista no se creó con la [CBS_SORT](../../mfc/reference/combo-box-styles.md) estilo, la cadena se agrega al final de la lista. En caso contrario, la cadena se inserta en la lista y la lista está ordenada.  
+### <a name="remarks"></a>Remarks  
+ If the list box was not created with the [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, the string is added to the end of the list. Otherwise, the string is inserted into the list, and the list is sorted.  
   
 > [!NOTE]
->  Esta función no es compatible con el control **ComboBoxEx** de Windows. Para obtener más información sobre este control, vea [controles ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+>  This function is not supported by the Windows **ComboBoxEx** control. For more information on this control, see [ComboBoxEx Controls](http://msdn.microsoft.com/library/windows/desktop/bb775738) in the Windows SDK.  
   
- Para insertar una cadena en una ubicación específica dentro de la lista, use la [InsertString](#insertstring) función miembro.  
+ To insert a string into a specific location within the list, use the [InsertString](#insertstring) member function.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox 3](../../mfc/reference/codesnippet/cpp/ccombobox-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#3](../../mfc/reference/codesnippet/cpp/ccombobox-class_1.cpp)]  
   
-##  <a name="ccombobox"></a>CComboBox::CComboBox  
- Construye un objeto `CComboBox`.  
+##  <a name="ccombobox"></a>  CComboBox::CComboBox  
+ Constructs a `CComboBox` object.  
   
 ```  
 CComboBox();
 ```  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox n.º 1](../../mfc/reference/codesnippet/cpp/ccombobox-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_2.cpp)]  
   
-##  <a name="clear"></a>CComboBox::Clear  
- Elimina (borra) la selección actual, si existe alguno, en el control de edición del cuadro combinado.  
+##  <a name="clear"></a>  CComboBox::Clear  
+ Deletes (clears) the current selection, if any, in the edit control of the combo box.  
   
 ```  
 void Clear();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Para eliminar la selección actual y coloca el contenido eliminado en el Portapapeles, utilice la [cortar](#cut) función miembro.  
+### <a name="remarks"></a>Remarks  
+ To delete the current selection and place the deleted contents onto the Clipboard, use the [Cut](#cut) member function.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #4](../../mfc/reference/codesnippet/cpp/ccombobox-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#4](../../mfc/reference/codesnippet/cpp/ccombobox-class_3.cpp)]  
   
-##  <a name="compareitem"></a>CComboBox::CompareItem  
- Lo llama el marco de trabajo para determinar la posición relativa de un nuevo elemento en la parte de cuadro de lista de un cuadro combinado de ordenado dibujado por el propietario.  
+##  <a name="compareitem"></a>  CComboBox::CompareItem  
+ Called by the framework to determine the relative position of a new item in the list-box portion of a sorted owner-draw combo box.  
   
 ```  
 virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpCompareItemStruct`  
- Un puntero largo a una [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) estructura.  
+ A long pointer to a [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) structure.  
   
-### <a name="return-value"></a>Valor devuelto  
- Indica la posición relativa de los dos elementos se describe en el `COMPAREITEMSTRUCT` estructura. Puede ser cualquiera de los siguientes valores:  
+### <a name="return-value"></a>Return Value  
+ Indicates the relative position of the two items described in the `COMPAREITEMSTRUCT` structure. It can be any of the following values:  
   
-|Valor|Significado|  
+|Value|Meaning|  
 |-----------|-------------|  
-|- 1|Elemento 1 se ordena antes que el elemento 2.|  
-|0|Elemento 1 y el elemento 2 ordenan de la misma.|  
-|1|Elemento 1 se ordena después del elemento 2.|  
+|- 1|Item 1 sorts before item 2.|  
+|0|Item 1 and item 2 sort the same.|  
+|1|Item 1 sorts after item 2.|  
   
- Vea [CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) para obtener una descripción de `COMPAREITEMSTRUCT`.  
+ See [CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) for a description of `COMPAREITEMSTRUCT`.  
   
-### <a name="remarks"></a>Comentarios  
- De forma predeterminada, esta función miembro no hace nada. Si creas un cuadro combinado de dibujado por el propietario con el **LBS_SORT** estilo, se debe reemplazar esta función miembro para ayudar a ordenar elementos nuevos agregados al cuadro de lista el marco de trabajo.  
+### <a name="remarks"></a>Remarks  
+ By default, this member function does nothing. If you create an owner-draw combo box with the **LBS_SORT** style, you must override this member function to assist the framework in sorting new items added to the list box.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox Nº 5](../../mfc/reference/codesnippet/cpp/ccombobox-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#5](../../mfc/reference/codesnippet/cpp/ccombobox-class_4.cpp)]  
   
-##  <a name="copy"></a>CComboBox::Copy  
- Copia la selección actual, si existe alguno, en el control de edición del cuadro combinado en el Portapapeles en **CF_TEXT** formato.  
+##  <a name="copy"></a>  CComboBox::Copy  
+ Copies the current selection, if any, in the edit control of the combo box onto the Clipboard in **CF_TEXT** format.  
   
 ```  
 void Copy();
 ```  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #6](../../mfc/reference/codesnippet/cpp/ccombobox-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#6](../../mfc/reference/codesnippet/cpp/ccombobox-class_5.cpp)]  
   
-##  <a name="create"></a>CComboBox::Create  
- Crea el cuadro combinado y lo adjunta a la `CComboBox` objeto.  
+##  <a name="create"></a>  CComboBox::Create  
+ Creates the combo box and attaches it to the `CComboBox` object.  
   
 ```  
 virtual BOOL Create(
@@ -333,100 +382,100 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Especifica el estilo del cuadro combinado. Aplicar cualquier combinación de [estilos de cuadro combinado](../../mfc/reference/combo-box-styles.md) al cuadro.  
+ Specifies the style of the combo box. Apply any combination of [combo-box styles](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) to the box.  
   
  `rect`  
- Apunta a la posición y el tamaño del cuadro combinado. Puede ser un [estructura RECT](../../mfc/reference/rect-structure1.md) o un `CRect` objeto.  
+ Points to the position and size of the combo box. Can be a [RECT structure](../../mfc/reference/rect-structure1.md) or a `CRect` object.  
   
  `pParentWnd`  
- Especifica la ventana del elemento primario del cuadro combinado (normalmente un `CDialog`). No debe ser **NULL**.  
+ Specifies the combo box's parent window (usually a `CDialog`). It must not be **NULL**.  
   
  `nID`  
- Especifica el identificador del control. del cuadro combinado  
+ Specifies the combo box's control ID.  
   
-### <a name="return-value"></a>Valor devuelto  
- Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Crear un `CComboBox` objeto en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a **crear**, que crea el cuadro combinado de Windows y lo adjunta a la `CComboBox` objeto.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CComboBox` object in two steps. First, call the constructor and then call **Create**, which creates the Windows combo box and attaches it to the `CComboBox` object.  
   
- Cuando **crear** se ejecuta, Windows envía la [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), y [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) mensajes al cuadro combinado.  
+ When **Create** executes, Windows sends the [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), and [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) messages to the combo box.  
   
- Estos mensajes se controlan de manera predeterminada el [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), y [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) funciones miembro de la `CWnd` clase base. Para extender el control de mensajes de forma predeterminada, derive una clase de `CComboBox`, agregue un mapa de mensajes a la nueva clase y reemplazan las funciones de miembro anterior de controlador de mensajes. Invalidar `OnCreate`, por ejemplo, para realizar la inicialización necesaria para una nueva clase.  
+ These messages are handled by default by the [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), and [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) member functions in the `CWnd` base class. To extend the default message handling, derive a class from `CComboBox`, add a message map to the new class, and override the preceding message-handler member functions. Override `OnCreate`, for example, to perform needed initialization for a new class.  
   
- Aplique el siguiente [estilos de ventana](../../mfc/reference/window-styles.md) a un control de cuadro combinado. :  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to a combo-box control. :  
   
-- **WS_CHILD** siempre  
+- **WS_CHILD** Always  
   
-- **WS_VISIBLE** normalmente  
+- **WS_VISIBLE** Usually  
   
-- **WS_DISABLED** rara vez  
+- **WS_DISABLED** Rarely  
   
-- **WS_VSCROLL** para agregar el desplazamiento vertical para el cuadro de lista en el cuadro combinado  
+- **WS_VSCROLL** To add vertical scrolling for the list box in the combo box  
   
-- **WS_HSCROLL** para agregar un desplazamiento horizontal para el cuadro de lista en el cuadro combinado  
+- **WS_HSCROLL** To add horizontal scrolling for the list box in the combo box  
   
-- **WS_GROUP** a controles de grupo  
+- **WS_GROUP** To group controls  
   
-- **WS_TABSTOP** debe incluir el cuadro combinado en el orden de tabulación  
+- **WS_TABSTOP** To include the combo box in the tabbing order  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox n.º 2](../../mfc/reference/codesnippet/cpp/ccombobox-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_6.cpp)]  
   
-##  <a name="cut"></a>CComboBox::Cut  
- Eliminaciones (cortes) la selección actual, si existe alguno, en el cuadro combinado editar controlar y copia el texto eliminado en el Portapapeles en **CF_TEXT** formato.  
+##  <a name="cut"></a>  CComboBox::Cut  
+ Deletes (cuts) the current selection, if any, in the combo-box edit control and copies the deleted text onto the Clipboard in **CF_TEXT** format.  
   
 ```  
 void Cut();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Para eliminar la selección actual sin incluir el texto eliminado en el Portapapeles, llame a la [desactive](#clear) función miembro.  
+### <a name="remarks"></a>Remarks  
+ To delete the current selection without placing the deleted text onto the Clipboard, call the [Clear](#clear) member function.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #7](../../mfc/reference/codesnippet/cpp/ccombobox-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#7](../../mfc/reference/codesnippet/cpp/ccombobox-class_7.cpp)]  
   
-##  <a name="deleteitem"></a>CComboBox::DeleteItem  
- Lo llama el marco de trabajo cuando el usuario elimina un elemento de un dibujado por el propietario `CComboBox` de un objeto o destruye el cuadro combinado.  
+##  <a name="deleteitem"></a>  CComboBox::DeleteItem  
+ Called by the framework when the user deletes an item from an owner-draw `CComboBox` object or destroys the combo box.  
   
 ```  
 virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpDeleteItemStruct`  
- Un puntero largo a una ventana de [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) estructura que contiene información sobre el elemento eliminado. Vea [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) para obtener una descripción de esta estructura.  
+ A long pointer to a Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) structure that contains information about the deleted item. See [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) for a description of this structure.  
   
-### <a name="remarks"></a>Comentarios  
- La implementación predeterminada de esta función no hace nada. Reemplace esta función para volver a dibujar el cuadro combinado, según sea necesario.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function does nothing. Override this function to redraw the combo box as needed.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]  
   
-##  <a name="deletestring"></a>CComboBox::DeleteString  
- Elimina el elemento en la posición `nIndex` en el cuadro combinado.  
+##  <a name="deletestring"></a>  CComboBox::DeleteString  
+ Deletes the item in position `nIndex` from the combo box.  
   
 ```  
 int DeleteString(UINT nIndex);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Especifica el índice de la cadena que se va a eliminar.  
+ Specifies the index to the string that is to be deleted.  
   
-### <a name="return-value"></a>Valor devuelto  
- Si el valor devuelto es mayor o igual que 0, es un recuento de las cadenas permanecen en la lista. El valor devuelto es **CB_ERR** si `nIndex` especifica un índice mayor que el número de elementos en la lista.  
+### <a name="return-value"></a>Return Value  
+ If the return value is greater than or equal to 0, then it is a count of the strings remaining in the list. The return value is **CB_ERR** if `nIndex` specifies an index greater than the number of items in the list.  
   
-### <a name="remarks"></a>Comentarios  
- Todos los elementos que siguen a `nIndex` ahora Bajar una posición. Por ejemplo, si un cuadro combinado contiene dos elementos, eliminar el primer elemento hará que el resto de producto esté ahora en la primera posición. `nIndex`= 0 para el elemento en la primera posición.  
+### <a name="remarks"></a>Remarks  
+ All items following `nIndex` now move down one position. For example, if a combo box contains two items, deleting the first item will cause the remaining item to now be in the first position. `nIndex`=0 for the item in the first position.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox n.º 9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]  
   
-##  <a name="dir"></a>CComboBox::Dir  
- Agrega una lista de nombres de archivo o las unidades en el cuadro de lista de un cuadro combinado.  
+##  <a name="dir"></a>  CComboBox::Dir  
+ Adds a list of filenames or drives to the list box of a combo box.  
   
 ```  
 int Dir(
@@ -434,59 +483,59 @@ int Dir(
     LPCTSTR lpszWildCard);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `attr`  
- Puede ser cualquier combinación de la `enum` describen los valores de [CFile:: GetStatus](../../mfc/reference/cfile-class.md#getstatus) o cualquier combinación de los siguientes valores:  
+ Can be any combination of the `enum` values described in [CFile::GetStatus](../../mfc/reference/cfile-class.md#getstatus) or any combination of the following values:  
   
-- **DDL_READWRITE** puede ser de lectura o escrito al archivo.  
+- **DDL_READWRITE** File can be read from or written to.  
   
-- **DDL_READONLY** se puede leer desde pero no escriben en el archivo.  
+- **DDL_READONLY** File can be read from but not written to.  
   
-- **DDL_HIDDEN** archivo está oculto y no aparece en un listado de directorios.  
+- **DDL_HIDDEN** File is hidden and does not appear in a directory listing.  
   
-- **DDL_SYSTEM** archivo es un archivo de sistema.  
+- **DDL_SYSTEM** File is a system file.  
   
-- **DDL_DIRECTORY** el nombre especificado por `lpszWildCard` especifica un directorio.  
+- **DDL_DIRECTORY** The name specified by `lpszWildCard` specifies a directory.  
   
-- **DDL_ARCHIVE** archivo se ha archivado.  
+- **DDL_ARCHIVE** File has been archived.  
   
-- **DDL_DRIVES** incluyen todas las unidades que coinciden con el nombre especificado por `lpszWildCard`.  
+- **DDL_DRIVES** Include all drives that match the name specified by `lpszWildCard`.  
   
-- **DDL_EXCLUSIVE** indicador Exclusive. Si se establece la marca exclusiva, se muestran solo los archivos del tipo especificado. En caso contrario, los archivos del tipo especificado se enumeran además de archivos "normales".  
+- **DDL_EXCLUSIVE** Exclusive flag. If the exclusive flag is set, only files of the specified type are listed. Otherwise, files of the specified type are listed in addition to "normal" files.  
   
  `lpszWildCard`  
- Apunta a una cadena de especificación de archivo. La cadena puede contener caracteres comodín (por ejemplo, *.\*).  
+ Points to a file-specification string. The string can contain wildcards (for example, *.\*).  
   
-### <a name="return-value"></a>Valor devuelto  
- Si el valor devuelto es mayor o igual que 0, es el índice de base cero del último nombre de archivo agregado a la lista. El valor devuelto es **CB_ERR** si se produce un error; el valor devuelto es **CB_ERRSPACE** si no hay suficiente espacio disponible para almacenar las nuevas cadenas.  
+### <a name="return-value"></a>Return Value  
+ If the return value is greater than or equal to 0, it is the zero-based index of the last filename added to the list. The return value is **CB_ERR** if an error occurs; the return value is **CB_ERRSPACE** if insufficient space is available to store the new strings.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función no es compatible con el control **ComboBoxEx** de Windows. Para obtener más información sobre este control, vea [controles ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This function is not supported by the Windows **ComboBoxEx** control. For more information on this control, see [ComboBoxEx Controls](http://msdn.microsoft.com/library/windows/desktop/bb775738) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
   
-##  <a name="drawitem"></a>CComboBox::DrawItem  
- Lo llama el marco cuando un aspecto visual de un cuadro combinado cambia de dibujado por el propietario.  
+##  <a name="drawitem"></a>  CComboBox::DrawItem  
+ Called by the framework when a visual aspect of an owner-draw combo box changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- Un puntero a un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) estructura que contiene información sobre el tipo de dibujo necesaria.  
+ A pointer to a [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure that contains information about the type of drawing required.  
   
-### <a name="remarks"></a>Comentarios  
- El **itemAction** miembro de la `DRAWITEMSTRUCT` estructura define la acción de dibujo que va a realizarse. Vea [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) para obtener una descripción de esta estructura.  
+### <a name="remarks"></a>Remarks  
+ The **itemAction** member of the `DRAWITEMSTRUCT` structure defines the drawing action that is to be performed. See [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) for a description of this structure.  
   
- De forma predeterminada, esta función miembro no hace nada. Reemplace esta función miembro para implementar el dibujo de un dibujado por el propietario `CComboBox` objeto. Antes de que finalice esta función miembro, la aplicación debe restaurar todos los objetos de interfaz (GDI) de dispositivo de gráficos seleccionados para proporciona el contexto de presentación en `lpDrawItemStruct`.  
+ By default, this member function does nothing. Override this member function to implement drawing for an owner-draw `CComboBox` object. Before this member function terminates, the application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct`.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox Nº 11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]  
   
-##  <a name="findstring"></a>CComboBox::FindString  
- Encuentre, pero no se selecciona, la primera cadena que contiene el prefijo especificado en el cuadro de lista de un cuadro combinado.  
+##  <a name="findstring"></a>  CComboBox::FindString  
+ Finds, but doesn't select, the first string that contains the specified prefix in the list box of a combo box.  
   
 ```  
 int FindString(
@@ -494,24 +543,24 @@ int FindString(
     LPCTSTR lpszString) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nStartAfter`  
- Contiene el índice basado en cero del elemento situado delante del primer elemento que se va a buscar. Cuando la búsqueda alcanza la parte inferior del cuadro de lista, continúa desde la parte superior del cuadro de lista hacia el elemento especificado por `nStartAfter`. Si es-1, el cuadro de lista todo se busca desde el principio.  
+ Contains the zero-based index of the item before the first item to be searched. When the search reaches the bottom of the list box, it continues from the top of the list box back to the item specified by `nStartAfter`. If -1, the entire list box is searched from the beginning.  
   
  `lpszString`  
- Apunta a la cadena terminada en null que contiene el prefijo que se va a buscar. La búsqueda no distingue mayúsculas independiente, por lo que esta cadena puede contener cualquier combinación de letras mayúsculas y minúsculas.  
+ Points to the null-terminated string that contains the prefix to search for. The search is case independent, so this string can contain any combination of uppercase and lowercase letters.  
   
-### <a name="return-value"></a>Valor devuelto  
- Si el valor devuelto es mayor o igual que 0, es el índice de base cero del elemento coincidente. Es **CB_ERR** si la búsqueda se realizó correctamente.  
+### <a name="return-value"></a>Return Value  
+ If the return value is greater than or equal to 0, it is the zero-based index of the matching item. It is **CB_ERR** if the search was unsuccessful.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función no es compatible con el control **ComboBoxEx** de Windows. Para obtener más información sobre este control, vea [controles ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This function is not supported by the Windows **ComboBoxEx** control. For more information on this control, see [ComboBoxEx Controls](http://msdn.microsoft.com/library/windows/desktop/bb775738) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
   
-##  <a name="findstringexact"></a>CComboBox::FindStringExact  
- Llame a la `FindStringExact` función de miembro para encontrar la primera cadena de cuadro de lista (en un cuadro combinado) que coincida con la cadena especificada en `lpszFind`.  
+##  <a name="findstringexact"></a>  CComboBox::FindStringExact  
+ Call the `FindStringExact` member function to find the first list-box string (in a combo box) that matches the string specified in `lpszFind`.  
   
 ```  
 int FindStringExact(
@@ -519,54 +568,54 @@ int FindStringExact(
     LPCTSTR lpszFind) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndexStart`  
- Especifica el índice basado en cero del elemento situado delante del primer elemento que se va a buscar. Cuando la búsqueda alcanza la parte inferior del cuadro de lista, continúa desde la parte superior del cuadro de lista hacia el elemento especificado por `nIndexStart`. Si `nIndexStart` es -1, se busca en el cuadro de lista todo desde el principio.  
+ Specifies the zero-based index of the item before the first item to be searched. When the search reaches the bottom of the list box, it continues from the top of the list box back to the item specified by `nIndexStart`. If `nIndexStart` is -1, the entire list box is searched from the beginning.  
   
  `lpszFind`  
- Apunta a la cadena terminada en null que se buscará. Esta cadena puede contener un nombre de archivo completo, incluida la extensión. La búsqueda no distingue entre mayúsculas y minúsculas, por lo que esta cadena puede contener cualquier combinación de letras mayúsculas y minúsculas.  
+ Points to the null-terminated string to search for. This string can contain a complete filename, including the extension. The search is not case sensitive, so this string can contain any combination of uppercase and lowercase letters.  
   
-### <a name="return-value"></a>Valor devuelto  
- Índice de base cero del elemento coincidente, o **CB_ERR** si la búsqueda se realizó correctamente.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the matching item, or **CB_ERR** if the search was unsuccessful.  
   
-### <a name="remarks"></a>Comentarios  
- Si el cuadro combinado se creó con un estilo de dibujo del propietario pero sin la [CBS_HASSTRINGS](../../mfc/reference/combo-box-styles.md) estilo, `FindStringExact` intenta hacer coincidir el valor de palabra doble con respecto al valor de `lpszFind`.  
+### <a name="remarks"></a>Remarks  
+ If the combo box was created with an owner-draw style but without the [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, `FindStringExact` attempts to match the doubleword value against the value of `lpszFind`.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]  
   
-##  <a name="getcomboboxinfo"></a>CComboBox::GetComboBoxInfo  
- Recupera información de la `CComboBox` objeto.  
+##  <a name="getcomboboxinfo"></a>  CComboBox::GetComboBoxInfo  
+ Retrieves information for the `CComboBox` object.  
   
 ```  
 BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  *pcbi*  
- Un puntero a la [COMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775798) estructura.  
+ A pointer to the [COMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775798) structure.  
   
-### <a name="return-value"></a>Valor devuelto  
- Devuelve **TRUE** se ejecuta correctamente, **FALSE** en caso de error.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función miembro emula la funcionalidad de la [CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839) de mensajes, como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the [CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839) message, as described in the Windows SDK.  
   
-##  <a name="getcount"></a>CComboBox::GetCount  
- Llame a esta función miembro para recuperar el número de elementos en la parte de cuadro de lista de un cuadro combinado.  
+##  <a name="getcount"></a>  CComboBox::GetCount  
+ Call this member function to retrieve the number of items in the list-box portion of a combo box.  
   
 ```  
 int GetCount() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- El número de elementos. El recuento devuelto es una unidad mayor que el valor de índice del último elemento (el índice está basado en cero). Es **CB_ERR** si se produce un error.  
+### <a name="return-value"></a>Return Value  
+ The number of items. The returned count is one greater than the index value of the last item (the index is zero-based). It is **CB_ERR** if an error occurs.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #14](../../mfc/reference/codesnippet/cpp/ccombobox-class_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#14](../../mfc/reference/codesnippet/cpp/ccombobox-class_14.cpp)]  
   
-##  <a name="getcuebanner"></a>CComboBox::GetCueBanner  
- Obtiene el texto de indicación que se muestra para un control de cuadro combinado.  
+##  <a name="getcuebanner"></a>  CComboBox::GetCueBanner  
+ Gets the cue text that is displayed for a combo box control.  
   
 ```  
 CString GetCueBanner() const;  
@@ -576,193 +625,193 @@ BOOL GetCueBanner(
     int cchText) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[out] `lpszText`|Puntero a un búfer que recibe el texto de titular de indicación.|  
-|[in] `cchText`|Tamaño del búfer que el `lpszText` parámetro señala.|  
+|[out] `lpszText`|Pointer to a buffer that receives the cue banner text.|  
+|[in] `cchText`|Size of the buffer that the `lpszText` parameter points to.|  
   
-### <a name="return-value"></a>Valor devuelto  
- En la primera sobrecarga, un [CString](../../atl-mfc-shared/using-cstring.md) objeto que contiene el texto de titular de indicación de si existe; en caso contrario, un `CString` objeto que tiene una longitud cero.  
+### <a name="return-value"></a>Return Value  
+ In the first overload, a [CString](../../atl-mfc-shared/using-cstring.md) object that contains the cue banner text if it exists; otherwise, a `CString` object that has zero length.  
   
- O bien  
+ -or-  
   
- En la segunda sobrecarga, `true` si este método es correcto; en caso contrario, `false`.  
+ In the second overload, `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Comentarios  
- Texto de indicación es un mensaje que se muestra en el área de entrada del control de cuadro combinado. Se muestra el texto de indicación hasta que el usuario proporciona la entrada.  
+### <a name="remarks"></a>Remarks  
+ Cue text is a prompt that is displayed in the input area of the combo box control. The cue text is displayed until the user provides input.  
   
- Este método envía el [CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843) mensaje, que se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843) message, which is described in the Windows SDK.  
   
-##  <a name="getcursel"></a>CComboBox::GetCurSel  
- Llame a esta función miembro para determinar qué elemento del cuadro combinado está seleccionado.  
+##  <a name="getcursel"></a>  CComboBox::GetCurSel  
+ Call this member function to determine which item in the combo box is selected.  
   
 ```  
 int GetCurSel() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Índice de base cero del elemento actualmente seleccionado en el cuadro de lista de un cuadro combinado, o **CB_ERR** si se selecciona ningún elemento.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the currently selected item in the list box of a combo box, or **CB_ERR** if no item is selected.  
   
-### <a name="remarks"></a>Comentarios  
- `GetCurSel`Devuelve un índice en la lista.  
+### <a name="remarks"></a>Remarks  
+ `GetCurSel` returns an index into the list.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #15](../../mfc/reference/codesnippet/cpp/ccombobox-class_15.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#15](../../mfc/reference/codesnippet/cpp/ccombobox-class_15.cpp)]  
   
-##  <a name="getdroppedcontrolrect"></a>CComboBox::GetDroppedControlRect  
- Llame a la `GetDroppedControlRect` función miembro para recuperar las coordenadas de pantalla del cuadro visible (quita) de lista desplegable de un cuadro combinado desplegable.  
+##  <a name="getdroppedcontrolrect"></a>  CComboBox::GetDroppedControlRect  
+ Call the `GetDroppedControlRect` member function to retrieve the screen coordinates of the visible (dropped-down) list box of a drop-down combo box.  
   
 ```  
 void GetDroppedControlRect(LPRECT lprect) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  *lprect*  
- Apunta a la [estructura RECT](../../mfc/reference/rect-structure1.md) que va a recibir las coordenadas.  
+ Points to the [RECT structure](../../mfc/reference/rect-structure1.md) that is to receive the coordinates.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox Nº 16](../../mfc/reference/codesnippet/cpp/ccombobox-class_16.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#16](../../mfc/reference/codesnippet/cpp/ccombobox-class_16.cpp)]  
   
-##  <a name="getdroppedstate"></a>CComboBox::GetDroppedState  
- Llame a la `GetDroppedState` función de miembro para determinar si el cuadro de lista de un cuadro combinado desplegable está visible (desplegada).  
+##  <a name="getdroppedstate"></a>  CComboBox::GetDroppedState  
+ Call the `GetDroppedState` member function to determine whether the list box of a drop-down combo box is visible (dropped down).  
   
 ```  
 BOOL GetDroppedState() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si el cuadro de lista está visible; en caso contrario es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the list box is visible; otherwise 0.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #17](../../mfc/reference/codesnippet/cpp/ccombobox-class_17.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#17](../../mfc/reference/codesnippet/cpp/ccombobox-class_17.cpp)]  
   
-##  <a name="getdroppedwidth"></a>CComboBox::GetDroppedWidth  
- Llame a esta función para recuperar el ancho mínimo permitido, en píxeles, del cuadro de lista de un cuadro combinado.  
+##  <a name="getdroppedwidth"></a>  CComboBox::GetDroppedWidth  
+ Call this function to retrieve the minimum allowable width, in pixels, of the list box of a combo box.  
   
 ```  
 int GetDroppedWidth() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Si se realiza correctamente, el ancho mínimo permitido, en píxeles; en caso contrario, **CB_ERR**.  
+### <a name="return-value"></a>Return Value  
+ If successful, the minimum allowable width, in pixels; otherwise, **CB_ERR**.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función solo se aplica a los cuadros combinados con el [CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md) o [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) estilo.  
+### <a name="remarks"></a>Remarks  
+ This function only applies to combo boxes with the [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
- De forma predeterminada, el ancho mínimo permitido del cuadro de lista desplegable es 0. Se puede establecer el ancho mínimo permitido mediante una llamada a [SetDroppedWidth](#setdroppedwidth). Cuando se muestra la parte de cuadro de lista del cuadro combinado, su ancho es mayor el ancho mínimo permitido o el ancho del cuadro combinado.  
+ By default, the minimum allowable width of the drop-down list box is 0. The minimum allowable width can be set by calling [SetDroppedWidth](#setdroppedwidth). When the list-box portion of the combo box is displayed, its width is the larger of the minimum allowable width or the combo box width.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [SetDroppedWidth](#setdroppedwidth).  
+### <a name="example"></a>Example  
+  See the example for [SetDroppedWidth](#setdroppedwidth).  
   
-##  <a name="geteditsel"></a>CComboBox::GetEditSel  
- Obtiene las posiciones de carácter inicial y final de la selección actual en el control de edición de un cuadro combinado.  
+##  <a name="geteditsel"></a>  CComboBox::GetEditSel  
+ Gets the starting and ending character positions of the current selection in the edit control of a combo box.  
   
 ```  
 DWORD GetEditSel() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Un valor de 32 bits que contiene la posición inicial de la palabra de orden inferior y la posición del primer carácter después del final de la selección de la palabra de orden superior. Si esta función se utiliza en un cuadro combinado sin un control de edición, **CB_ERR** se devuelve.  
+### <a name="return-value"></a>Return Value  
+ A 32-bit value that contains the starting position in the low-order word and the position of the first nonselected character after the end of the selection in the high-order word. If this function is used on a combo box without an edit control, **CB_ERR** is returned.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #18](../../mfc/reference/codesnippet/cpp/ccombobox-class_18.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#18](../../mfc/reference/codesnippet/cpp/ccombobox-class_18.cpp)]  
   
-##  <a name="getextendedui"></a>CComboBox::GetExtendedUI  
- Llame a la `GetExtendedUI` función de miembro para determinar si un cuadro combinado tiene la interfaz de usuario predeterminada o la interfaz de usuario extendida.  
+##  <a name="getextendedui"></a>  CComboBox::GetExtendedUI  
+ Call the `GetExtendedUI` member function to determine whether a combo box has the default user interface or the extended user interface.  
   
 ```  
 BOOL GetExtendedUI() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si el cuadro combinado tiene la interfaz de usuario extendida; en caso contrario es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the combo box has the extended user interface; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Se puede identificar la interfaz de usuario extendida de las maneras siguientes:  
+### <a name="remarks"></a>Remarks  
+ The extended user interface can be identified in the following ways:  
   
--   Haga clic en el control estático muestra el cuadro de lista solo para los cuadros combinados con el [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) estilo.  
+-   Clicking the static control displays the list box only for combo boxes with the [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
--   Al presionar la tecla flecha abajo, muestra el cuadro de lista (F4 está deshabilitada).  
+-   Pressing the DOWN ARROW key displays the list box (F4 is disabled).  
   
- El desplazamiento en el control estático se deshabilita cuando la lista de elementos no es visible (flecha claves están deshabilitadas).  
+ Scrolling in the static control is disabled when the item list is not visible (arrow keys are disabled).  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #19](../../mfc/reference/codesnippet/cpp/ccombobox-class_19.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#19](../../mfc/reference/codesnippet/cpp/ccombobox-class_19.cpp)]  
   
-##  <a name="gethorizontalextent"></a>CComboBox::GetHorizontalExtent  
- En el cuadro combinado, recupera el ancho en píxeles por el que la parte de cuadro de lista del cuadro combinado se puede desplazar horizontalmente.  
+##  <a name="gethorizontalextent"></a>  CComboBox::GetHorizontalExtent  
+ Retrieves from the combo box the width in pixels by which the list-box portion of the combo box can be scrolled horizontally.  
   
 ```  
 UINT GetHorizontalExtent() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- El ancho de desplazamiento de la parte de cuadro de lista del cuadro combinado, en píxeles.  
+### <a name="return-value"></a>Return Value  
+ The scrollable width of the list-box portion of the combo box, in pixels.  
   
-### <a name="remarks"></a>Comentarios  
- Esto solo es aplicable si la parte de cuadro de lista del cuadro combinado tiene una barra de desplazamiento horizontal.  
+### <a name="remarks"></a>Remarks  
+ This is applicable only if the list-box portion of the combo box has a horizontal scroll bar.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox Nº 20](../../mfc/reference/codesnippet/cpp/ccombobox-class_20.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#20](../../mfc/reference/codesnippet/cpp/ccombobox-class_20.cpp)]  
   
-##  <a name="getitemdata"></a>CComboBox::GetItemData  
- Recupera el valor de 32 bits proporcionada por la aplicación asociado al elemento de cuadro combinado especificado.  
+##  <a name="getitemdata"></a>  CComboBox::GetItemData  
+ Retrieves the application-supplied 32-bit value associated with the specified combo-box item.  
   
 ```  
 DWORD_PTR GetItemData(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Contiene el índice de base cero de un elemento de cuadro de lista del cuadro combinado.  
+ Contains the zero-based index of an item in the combo box's list box.  
   
-### <a name="return-value"></a>Valor devuelto  
- El valor de 32 bits asociado con el elemento, o **CB_ERR** si se produce un error.  
+### <a name="return-value"></a>Return Value  
+ The 32-bit value associated with the item, or **CB_ERR** if an error occurs.  
   
-### <a name="remarks"></a>Comentarios  
- El valor de 32 bits se puede establecer con el `dwItemData` parámetro de un [SetItemData](#setitemdata) llamada a función miembro. Use la `GetItemDataPtr` función de miembro si el valor de 32 bits que se va a recuperar un puntero ( **void\***).  
+### <a name="remarks"></a>Remarks  
+ The 32-bit value can be set with the `dwItemData` parameter of a [SetItemData](#setitemdata) member function call. Use the `GetItemDataPtr` member function if the 32-bit value to be retrieved is a pointer ( **void\***).  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
   
-##  <a name="getitemdataptr"></a>CComboBox::GetItemDataPtr  
- Recupera el valor de 32 bits proporcionada por la aplicación asociado al elemento de cuadro combinado especificado como un puntero ( **void\***).  
+##  <a name="getitemdataptr"></a>  CComboBox::GetItemDataPtr  
+ Retrieves the application-supplied 32-bit value associated with the specified combo-box item as a pointer ( **void\***).  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Contiene el índice de base cero de un elemento de cuadro de lista del cuadro combinado.  
+ Contains the zero-based index of an item in the combo box's list box.  
   
-### <a name="return-value"></a>Valor devuelto  
- Recupera un puntero, o -1 si se produce un error.  
+### <a name="return-value"></a>Return Value  
+ Retrieves a pointer, or -1 if an error occurs.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #22](../../mfc/reference/codesnippet/cpp/ccombobox-class_22.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#22](../../mfc/reference/codesnippet/cpp/ccombobox-class_22.cpp)]  
   
-##  <a name="getitemheight"></a>CComboBox::GetItemHeight  
- Llame a la `GetItemHeight` función miembro para recuperar el alto de los elementos de lista en un cuadro combinado.  
+##  <a name="getitemheight"></a>  CComboBox::GetItemHeight  
+ Call the `GetItemHeight` member function to retrieve the height of list items in a combo box.  
   
 ```  
 int GetItemHeight(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Especifica el componente del cuadro combinado cuyo alto es va a recuperar. Si el `nIndex` parámetro es -1, se recupera el alto de la parte de control de edición (o texto estático) del cuadro combinado. Si el cuadro combinado tiene la [CBS_OWNERDRAWVARIABLE](../../mfc/reference/combo-box-styles.md) estilo, `nIndex` especifica el índice de base cero del elemento de lista cuyo alto es va a recuperar. En caso contrario, `nIndex` debe establecerse en 0.  
+ Specifies the component of the combo box whose height is to be retrieved. If the `nIndex` parameter is -1, the height of the edit-control (or static-text) portion of the combo box is retrieved. If the combo box has the [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, `nIndex` specifies the zero-based index of the list item whose height is to be retrieved. Otherwise, `nIndex` should be set to 0.  
   
-### <a name="return-value"></a>Valor devuelto  
- El alto, en píxeles, del elemento especificado en un cuadro combinado. El valor devuelto es **CB_ERR** si se produce un error.  
+### <a name="return-value"></a>Return Value  
+ The height, in pixels, of the specified item in a combo box. The return value is **CB_ERR** if an error occurs.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #23](../../mfc/reference/codesnippet/cpp/ccombobox-class_23.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#23](../../mfc/reference/codesnippet/cpp/ccombobox-class_23.cpp)]  
   
-##  <a name="getlbtext"></a>CComboBox::GetLBText  
- Obtiene una cadena en el cuadro de lista de un cuadro combinado.  
+##  <a name="getlbtext"></a>  CComboBox::GetLBText  
+ Gets a string from the list box of a combo box.  
   
 ```  
 int GetLBText(
@@ -774,89 +823,89 @@ void GetLBText(
     CString& rString) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Contiene el índice de base cero de la cadena del cuadro de lista que se copiará.  
+ Contains the zero-based index of the list-box string to be copied.  
   
  `lpszText`  
- Señala a un búfer que va a recibir la cadena. El búfer debe tener espacio suficiente para la cadena y un carácter nulo de terminación.  
+ Points to a buffer that is to receive the string. The buffer must have sufficient space for the string and a terminating null character.  
   
  `rString`  
- Una referencia a un `CString`.  
+ A reference to a `CString`.  
   
-### <a name="return-value"></a>Valor devuelto  
- La longitud (en bytes) de la cadena, sin incluir el carácter nulo de terminación. Si `nIndex` no especifica un índice válido, el valor devuelto es **CB_ERR**.  
+### <a name="return-value"></a>Return Value  
+ The length (in bytes) of the string, excluding the terminating null character. If `nIndex` does not specify a valid index, the return value is **CB_ERR**.  
   
-### <a name="remarks"></a>Comentarios  
- La segunda forma de este miembro de función rellena un `CString` objeto con el texto del elemento.  
+### <a name="remarks"></a>Remarks  
+ The second form of this member function fills a `CString` object with the item's text.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #24](../../mfc/reference/codesnippet/cpp/ccombobox-class_24.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#24](../../mfc/reference/codesnippet/cpp/ccombobox-class_24.cpp)]  
   
-##  <a name="getlbtextlen"></a>CComboBox::GetLBTextLen  
- Obtiene la longitud de una cadena en el cuadro de lista de un cuadro combinado.  
+##  <a name="getlbtextlen"></a>  CComboBox::GetLBTextLen  
+ Gets the length of a string in the list box of a combo box.  
   
 ```  
 int GetLBTextLen(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Contiene el índice de base cero de la cadena del cuadro de lista.  
+ Contains the zero-based index of the list-box string.  
   
-### <a name="return-value"></a>Valor devuelto  
- La longitud de la cadena en bytes, sin incluir el carácter nulo de terminación. Si `nIndex` no especifica un índice válido, el valor devuelto es **CB_ERR**.  
+### <a name="return-value"></a>Return Value  
+ The length of the string in bytes, excluding the terminating null character. If `nIndex` does not specify a valid index, the return value is **CB_ERR**.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [CComboBox::GetLBText](#getlbtext).  
+### <a name="example"></a>Example  
+  See the example for [CComboBox::GetLBText](#getlbtext).  
   
-##  <a name="getlocale"></a>CComboBox::GetLocale  
- Recupera la configuración regional utilizada por el cuadro combinado.  
+##  <a name="getlocale"></a>  CComboBox::GetLocale  
+ Retrieves the locale used by the combo box.  
   
 ```  
 LCID GetLocale() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- El valor de identificador (LCID) de configuración regional para las cadenas en el cuadro combinado.  
+### <a name="return-value"></a>Return Value  
+ The locale identifier (LCID) value for the strings in the combo box.  
   
-### <a name="remarks"></a>Comentarios  
- Por ejemplo, la configuración regional se usa para determinar el criterio de ordenación de las cadenas en un cuadro combinado ordenado.  
+### <a name="remarks"></a>Remarks  
+ The locale is used, for example, to determine the sort order of the strings in a sorted combo box.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [CComboBox::SetLocale](#setlocale).  
+### <a name="example"></a>Example  
+  See the example for [CComboBox::SetLocale](#setlocale).  
   
-##  <a name="getminvisible"></a>CComboBox::GetMinVisible  
- Obtiene el número mínimo de elementos visibles en la lista desplegable del control de cuadro combinado actual.  
+##  <a name="getminvisible"></a>  CComboBox::GetMinVisible  
+ Gets the minimum number of visible items in the drop-down list of the current combo box control.  
   
 ```  
 int GetMinVisible() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- El número mínimo de elementos visibles en la lista actual de la lista desplegable.  
+### <a name="return-value"></a>Return Value  
+ The minimum number of visible items in the current drop-down list.  
   
-### <a name="remarks"></a>Comentarios  
- Este método envía el [CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) mensaje, que se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) message, which is described in the Windows SDK.  
   
-##  <a name="gettopindex"></a>CComboBox::GetTopIndex  
- Recupera el índice de base cero del primer elemento visible en la parte de cuadro de lista del cuadro combinado.  
+##  <a name="gettopindex"></a>  CComboBox::GetTopIndex  
+ Retrieves the zero-based index of the first visible item in the list-box portion of the combo box.  
   
 ```  
 int GetTopIndex() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Índice de base cero del primer elemento visible en la parte de cuadro de lista del cuadro combinado si es correcto, **CB_ERR** en caso contrario.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the first visible item in the list-box portion of the combo box if successful, **CB_ERR** otherwise.  
   
-### <a name="remarks"></a>Comentarios  
- Inicialmente, el elemento 0 se encuentra en la parte superior del cuadro de lista, pero si se desplaza el cuadro de lista, puede ser otro elemento en la parte superior.  
+### <a name="remarks"></a>Remarks  
+ Initially, item 0 is at the top of the list box, but if the list box is scrolled, another item may be at the top.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #25](../../mfc/reference/codesnippet/cpp/ccombobox-class_25.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#25](../../mfc/reference/codesnippet/cpp/ccombobox-class_25.cpp)]  
   
-##  <a name="initstorage"></a>CComboBox::InitStorage  
- Asigna memoria para almacenar los elementos de cuadro de lista en la parte de cuadro de lista del cuadro combinado.  
+##  <a name="initstorage"></a>  CComboBox::InitStorage  
+ Allocates memory for storing list box items in the list-box portion of the combo box.  
   
 ```  
 int InitStorage(
@@ -864,28 +913,28 @@ int InitStorage(
     UINT nBytes);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nItems`  
- Especifica el número de elementos que se va a agregar.  
+ Specifies the number of items to add.  
   
  `nBytes`  
- Especifica la cantidad de memoria, en bytes, que se asignan para las cadenas de elemento.  
+ Specifies the amount of memory, in bytes, to allocate for item strings.  
   
-### <a name="return-value"></a>Valor devuelto  
- Si tiene éxito, el número máximo de elementos que puede almacenar la parte de cuadro de lista del cuadro combinado antes de que se necesita una reasignación de memoria, en caso contrario, **CB_ERRSPACE**, lo que significa que no hay suficiente memoria está disponible.  
+### <a name="return-value"></a>Return Value  
+ If successful, the maximum number of items that the list-box portion of the combo box can store before a memory reallocation is needed, otherwise **CB_ERRSPACE**, meaning not enough memory is available.  
   
-### <a name="remarks"></a>Comentarios  
- Llame a esta función antes de agregar un gran número de elementos a la parte de cuadro de lista de los `CComboBox`.  
+### <a name="remarks"></a>Remarks  
+ Call this function before adding a large number of items to the list-box portion of the `CComboBox`.  
   
- Windows 95 ó 98 sólo: el `wParam` parámetro está limitado a los valores de 16 bits. Esto significa que los cuadros de lista no pueden contener más de 32.767 elementos. Aunque el número de elementos está restringido, el tamaño total de los elementos de un cuadro de lista está limitado únicamente por la memoria disponible.  
+ Windows 95/98 only: The `wParam` parameter is limited to 16-bit values. This means list boxes cannot contain more than 32,767 items. Although the number of items is restricted, the total size of the items in a list box is limited only by available memory.  
   
- Esta función le ayuda a acelerar la inicialización de los cuadros de lista que tiene un gran número de elementos (más de 100). Preasigna la cantidad especificada de memoria para que las siguientes [AddString](#addstring), [InsertString](#insertstring), y [Dir](#dir) funciones toman el menor tiempo posible. Puede utilizar las estimaciones para los parámetros. Si sobrestimar, se asigna memoria adicional; Si subestimar, la asignación normal se usa para los elementos que superan la cantidad preasignada.  
+ This function helps speed up the initialization of list boxes that have a large number of items (more than 100). It preallocates the specified amount of memory so that subsequent [AddString](#addstring), [InsertString](#insertstring), and [Dir](#dir) functions take the shortest possible time. You can use estimates for the parameters. If you overestimate, some extra memory is allocated; if you underestimate, the normal allocation is used for items that exceed the preallocated amount.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[26 de # NVC_MFC_CComboBox](../../mfc/reference/codesnippet/cpp/ccombobox-class_26.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#26](../../mfc/reference/codesnippet/cpp/ccombobox-class_26.cpp)]  
   
-##  <a name="insertstring"></a>CComboBox::InsertString  
- Inserta una cadena en el cuadro de lista de un cuadro combinado.  
+##  <a name="insertstring"></a>  CComboBox::InsertString  
+ Inserts a string into the list box of a combo box.  
   
 ```  
 int InsertString(
@@ -893,93 +942,93 @@ int InsertString(
     LPCTSTR lpszString);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Contiene el índice de base cero de la posición en el cuadro de lista que recibirá la cadena. Si este parámetro es -1, la cadena se agrega al final de la lista.  
+ Contains the zero-based index to the position in the list box that will receive the string. If this parameter is -1, the string is added to the end of the list.  
   
  `lpszString`  
- Apunta a la cadena terminada en null que se va a insertar.  
+ Points to the null-terminated string that is to be inserted.  
   
-### <a name="return-value"></a>Valor devuelto  
- Índice de base cero de la posición donde se insertó la cadena. El valor devuelto es **CB_ERR** si se produce un error. El valor devuelto es **CB_ERRSPACE** si no hay suficiente espacio disponible para almacenar la nueva cadena.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the position at which the string was inserted. The return value is **CB_ERR** if an error occurs. The return value is **CB_ERRSPACE** if insufficient space is available to store the new string.  
   
-### <a name="remarks"></a>Comentarios  
- A diferencia de la [AddString](#addstring) función miembro, el `InsertString` función miembro no provoca una lista con los [CBS_SORT](../../mfc/reference/combo-box-styles.md) estilo que se va a ordenar.  
+### <a name="remarks"></a>Remarks  
+ Unlike the [AddString](#addstring) member function, the `InsertString` member function does not cause a list with the [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style to be sorted.  
   
 > [!NOTE]
->  Esta función no es compatible con el control **ComboBoxEx** de Windows. Para obtener más información sobre este control, vea [controles ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+>  This function is not supported by the Windows **ComboBoxEx** control. For more information on this control, see [ComboBoxEx Controls](http://msdn.microsoft.com/library/windows/desktop/bb775738) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
   
-##  <a name="limittext"></a>CComboBox::LimitText  
- Limita la longitud en bytes del texto que el usuario puede escribir en el control de edición de un cuadro combinado.  
+##  <a name="limittext"></a>  CComboBox::LimitText  
+ Limits the length in bytes of the text that the user can enter into the edit control of a combo box.  
   
 ```  
 BOOL LimitText(int nMaxChars);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nMaxChars`  
- Especifica la longitud (en bytes) del texto que el usuario puede escribir. Si este parámetro es 0, se establece la longitud del texto a 65.535 bytes.  
+ Specifies the length (in bytes) of the text that the user can enter. If this parameter is 0, the text length is set to 65,535 bytes.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si se realiza correctamente. Si se llama en un cuadro combinado con el estilo [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) o un cuadro combinado sin un control de edición, el valor devuelto es **CB_ERR**.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful. If called for a combo box with the style [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or for a combo box without an edit control, the return value is **CB_ERR**.  
   
-### <a name="remarks"></a>Comentarios  
- Si el cuadro combinado no tiene el estilo [CBS_AUTOHSCROLL](../../mfc/reference/combo-box-styles.md), establecer el límite del texto sea mayor que el tamaño del control de edición no tiene ningún efecto.  
+### <a name="remarks"></a>Remarks  
+ If the combo box does not have the style [CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles), setting the text limit to be larger than the size of the edit control will have no effect.  
   
- `LimitText`solo limita el texto que el usuario puede escribir. No tiene ningún efecto en cualquier texto ya en el control de edición cuando se envía el mensaje, ni afecta a la longitud del texto que se copian en el control de edición cuando se selecciona una cadena en el cuadro de lista.  
+ `LimitText` only limits the text the user can enter. It has no effect on any text already in the edit control when the message is sent, nor does it affect the length of the text copied to the edit control when a string in the list box is selected.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #28](../../mfc/reference/codesnippet/cpp/ccombobox-class_28.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#28](../../mfc/reference/codesnippet/cpp/ccombobox-class_28.cpp)]  
   
-##  <a name="measureitem"></a>CComboBox::MeasureItem  
- Lo llama el marco cuando se crea un cuadro combinado con un estilo de dibujo del propietario.  
+##  <a name="measureitem"></a>  CComboBox::MeasureItem  
+ Called by the framework when a combo box with an owner-draw style is created.  
   
 ```  
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpMeasureItemStruct`  
- Un puntero largo a una [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) estructura.  
+ A long pointer to a [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) structure.  
   
-### <a name="remarks"></a>Comentarios  
- De forma predeterminada, esta función miembro no hace nada. Reemplace esta función miembro y rellene el `MEASUREITEMSTRUCT` estructura para informar a Windows de las dimensiones de la lista de cuadro en el cuadro combinado. Si se crea el cuadro combinado con el [CBS_OWNERDRAWVARIABLE](../../mfc/reference/combo-box-styles.md) estilo, el marco de trabajo llama a esta función miembro para cada elemento en el cuadro de lista. En caso contrario, este miembro se llama solo una vez.  
+### <a name="remarks"></a>Remarks  
+ By default, this member function does nothing. Override this member function and fill in the `MEASUREITEMSTRUCT` structure to inform Windows of the dimensions of the list box in the combo box. If the combo box is created with the [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, the framework calls this member function for each item in the list box. Otherwise, this member is called only once.  
   
- Mediante el **CBS_OWNERDRAWFIXED** estilo en un cuadro combinado de dibujado por el propietario creado con la [SubclassDlgItem](../../mfc/reference/cwnd-class.md#subclassdlgitem) función miembro de `CWnd` incluye consideraciones de programación adicional. Vea la explicación en [14 de nota técnica](../../mfc/tn014-custom-controls.md).  
+ Using the **CBS_OWNERDRAWFIXED** style in an owner-draw combo box created with the [SubclassDlgItem](../../mfc/reference/cwnd-class.md#subclassdlgitem) member function of `CWnd` involves further programming considerations. See the discussion in [Technical Note 14](../../mfc/tn014-custom-controls.md).  
   
- Vea [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) para obtener una descripción de la `MEASUREITEMSTRUCT` estructura.  
+ See [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) for a description of the `MEASUREITEMSTRUCT` structure.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #29](../../mfc/reference/codesnippet/cpp/ccombobox-class_29.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#29](../../mfc/reference/codesnippet/cpp/ccombobox-class_29.cpp)]  
   
-##  <a name="paste"></a>CComboBox::Paste  
- Inserta los datos del Portapapeles en el control de edición del cuadro combinado en la posición actual del cursor.  
+##  <a name="paste"></a>  CComboBox::Paste  
+ Inserts the data from the Clipboard into the edit control of the combo box at the current cursor position.  
   
 ```  
 void Paste();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Se insertan datos solo si el Portapapeles contiene datos en **CF_TEXT** formato.  
+### <a name="remarks"></a>Remarks  
+ Data is inserted only if the Clipboard contains data in **CF_TEXT** format.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #30](../../mfc/reference/codesnippet/cpp/ccombobox-class_30.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#30](../../mfc/reference/codesnippet/cpp/ccombobox-class_30.cpp)]  
   
-##  <a name="resetcontent"></a>CComboBox::ResetContent  
- Quita todos los elementos de la lista cuadro y control de un cuadro combinado de edición.  
+##  <a name="resetcontent"></a>  CComboBox::ResetContent  
+ Removes all items from the list box and edit control of a combo box.  
   
 ```  
 void ResetContent();
 ```  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #31](../../mfc/reference/codesnippet/cpp/ccombobox-class_31.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#31](../../mfc/reference/codesnippet/cpp/ccombobox-class_31.cpp)]  
   
-##  <a name="selectstring"></a>CComboBox::SelectString  
- Busca una cadena en el cuadro de lista de un cuadro combinado y, si se encuentra la cadena, selecciona la cadena en el cuadro de lista y lo copia en el control de edición.  
+##  <a name="selectstring"></a>  CComboBox::SelectString  
+ Searches for a string in the list box of a combo box, and if the string is found, selects the string in the list box and copies it to the edit control.  
   
 ```  
 int SelectString(
@@ -987,99 +1036,99 @@ int SelectString(
     LPCTSTR lpszString);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nStartAfter`  
- Contiene el índice basado en cero del elemento situado delante del primer elemento que se va a buscar. Cuando la búsqueda alcanza la parte inferior del cuadro de lista, continúa desde la parte superior del cuadro de lista hacia el elemento especificado por `nStartAfter`. Si es-1, el cuadro de lista todo se busca desde el principio.  
+ Contains the zero-based index of the item before the first item to be searched. When the search reaches the bottom of the list box, it continues from the top of the list box back to the item specified by `nStartAfter`. If -1, the entire list box is searched from the beginning.  
   
  `lpszString`  
- Apunta a la cadena terminada en null que contiene el prefijo que se va a buscar. La búsqueda no distingue mayúsculas independiente, por lo que esta cadena puede contener cualquier combinación de letras mayúsculas y minúsculas.  
+ Points to the null-terminated string that contains the prefix to search for. The search is case independent, so this string can contain any combination of uppercase and lowercase letters.  
   
-### <a name="return-value"></a>Valor devuelto  
- Índice de base cero del elemento seleccionado si se encuentra la cadena. Si la búsqueda se realizó correctamente, el valor devuelto es **CB_ERR** y no se cambia la selección actual.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the selected item if the string was found. If the search was unsuccessful, the return value is **CB_ERR** and the current selection is not changed.  
   
-### <a name="remarks"></a>Comentarios  
- Una cadena se selecciona solo si sus caracteres iniciales (desde el punto inicial) coincide con los caracteres de la cadena de prefijo.  
+### <a name="remarks"></a>Remarks  
+ A string is selected only if its initial characters (from the starting point) match the characters in the prefix string.  
   
- Tenga en cuenta que la `SelectString` y `FindString` funciones miembro buscar una cadena, pero la `SelectString` función miembro también selecciona la cadena.  
+ Note that the `SelectString` and `FindString` member functions both find a string, but the `SelectString` member function also selects the string.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #32](../../mfc/reference/codesnippet/cpp/ccombobox-class_32.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#32](../../mfc/reference/codesnippet/cpp/ccombobox-class_32.cpp)]  
   
-##  <a name="setcuebanner"></a>CComboBox::SetCueBanner  
- Establece el texto de indicación que se muestra para un control de cuadro combinado.  
+##  <a name="setcuebanner"></a>  CComboBox::SetCueBanner  
+ Sets the cue text that is displayed for a combo box control.  
   
 ```  
 BOOL SetCueBanner(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] *lpszText*|Puntero a un búfer terminada en null que contiene el texto de indicación.|  
+|[in] *lpszText*|Pointer to a null-terminated buffer that contains the cue text.|  
   
-### <a name="return-value"></a>Valor devuelto  
- `true`Si el método es correcto; en caso contrario, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Comentarios  
- Texto de indicación es un mensaje que se muestra en el área de entrada del control de cuadro combinado. Se muestra el texto de indicación hasta que el usuario proporciona la entrada.  
+### <a name="remarks"></a>Remarks  
+ Cue text is a prompt that is displayed in the input area of the combo box control. The cue text is displayed until the user provides input.  
   
- Este método envía el [CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897) mensaje, que se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This method sends the [CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se define la variable `m_combobox`, que se usa para obtener acceso mediante programación el control de cuadro combinado. Esta variable se utiliza en el siguiente ejemplo.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_combobox`, that is used to programmatically access the combo box control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CComboBox_s1 n.º 1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
+ [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
-### <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se establece el titular de indicación para el control de cuadro combinado.  
+### <a name="example"></a>Example  
+ The following code example sets the cue banner for the combo box control.  
   
- [!code-cpp[NVC_MFC_CComboBox_s1 n.º 2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
+ [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
   
-##  <a name="setcursel"></a>CComboBox::SetCurSel  
- Selecciona una cadena en el cuadro de lista de un cuadro combinado.  
+##  <a name="setcursel"></a>  CComboBox::SetCurSel  
+ Selects a string in the list box of a combo box.  
   
 ```  
 int SetCurSel(int nSelect);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nSelect`  
- Especifica el índice de base cero de la cadena para seleccionar. Si es-1, se quita cualquier selección actual en el cuadro de lista y se borra el control de edición.  
+ Specifies the zero-based index of the string to select. If -1, any current selection in the list box is removed and the edit control is cleared.  
   
-### <a name="return-value"></a>Valor devuelto  
- Índice de base cero del elemento seleccionado si el mensaje es correcto. El valor devuelto es **CB_ERR** si `nSelect` es mayor que el número de elementos de la lista o si `nSelect` se establece en -1, que borra la selección.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the item selected if the message is successful. The return value is **CB_ERR** if `nSelect` is greater than the number of items in the list or if `nSelect` is set to -1, which clears the selection.  
   
-### <a name="remarks"></a>Comentarios  
- Si es necesario, el cuadro de lista desplaza la cadena en la vista (si el cuadro de lista está visible). El texto en el control de edición del cuadro combinado se cambia para reflejar la nueva selección. Se quita cualquier selección anterior en el cuadro de lista.  
+### <a name="remarks"></a>Remarks  
+ If necessary, the list box scrolls the string into view (if the list box is visible). The text in the edit control of the combo box is changed to reflect the new selection. Any previous selection in the list box is removed.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox Nº 33](../../mfc/reference/codesnippet/cpp/ccombobox-class_35.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#33](../../mfc/reference/codesnippet/cpp/ccombobox-class_35.cpp)]  
   
-##  <a name="setdroppedwidth"></a>CComboBox::SetDroppedWidth  
- Llame a esta función para establecer el ancho mínimo permitido, en píxeles, del cuadro de lista de un cuadro combinado.  
+##  <a name="setdroppedwidth"></a>  CComboBox::SetDroppedWidth  
+ Call this function to set the minimum allowable width, in pixels, of the list box of a combo box.  
   
 ```  
 int SetDroppedWidth(UINT nWidth);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nWidth`  
- El ancho mínimo permitido de la parte de cuadro de lista del cuadro combinado, en píxeles.  
+ The minimum allowable width of the list-box portion of the combo box, in pixels.  
   
-### <a name="return-value"></a>Valor devuelto  
- Si tiene éxito, el nuevo ancho de la lista de cuadro, de lo contrario **CB_ERR**.  
+### <a name="return-value"></a>Return Value  
+ If successful, the new width of the list box, otherwise **CB_ERR**.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función solo se aplica a los cuadros combinados con el [CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md) o [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) estilo.  
+### <a name="remarks"></a>Remarks  
+ This function only applies to combo boxes with the [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
- De forma predeterminada, el ancho mínimo permitido del cuadro de lista desplegable es 0. Cuando se muestra la parte de cuadro de lista del cuadro combinado, su ancho es mayor el ancho mínimo permitido o el ancho del cuadro combinado.  
+ By default, the minimum allowable width of the drop-down list box is 0. When the list-box portion of the combo box is displayed, its width is the larger of the minimum allowable width or the combo box width.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #34](../../mfc/reference/codesnippet/cpp/ccombobox-class_36.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#34](../../mfc/reference/codesnippet/cpp/ccombobox-class_36.cpp)]  
   
-##  <a name="seteditsel"></a>CComboBox::SetEditSel  
- Selecciona caracteres en el control de edición de un cuadro combinado.  
+##  <a name="seteditsel"></a>  CComboBox::SetEditSel  
+ Selects characters in the edit control of a combo box.  
   
 ```  
 BOOL SetEditSel(
@@ -1087,70 +1136,70 @@ BOOL SetEditSel(
     int nEndChar);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nStartChar`  
- Especifica la posición inicial. Si la posición de inicio se establece en -1, se quita cualquier selección existente.  
+ Specifies the starting position. If the starting position is set to -1, then any existing selection is removed.  
   
  `nEndChar`  
- Especifica la posición final. Si la posición final se establece en -1, a continuación, todo el texto desde la posición de inicio hasta el último carácter en el control de edición está seleccionada.  
+ Specifies the ending position. If the ending position is set to -1, then all text from the starting position to the last character in the edit control is selected.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función miembro se realiza correctamente; en caso contrario es 0. Es **CB_ERR** si `CComboBox` tiene la [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) estilo o no tiene un cuadro de lista.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the member function is successful; otherwise 0. It is **CB_ERR** if `CComboBox` has the [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style or does not have a list box.  
   
-### <a name="remarks"></a>Comentarios  
- Las posiciones son de base cero. Para seleccionar el primer carácter del control de edición, especifique una posición inicial de 0. La posición final es el carácter justo después del último carácter que seleccione. Por ejemplo, para seleccionar los primeros cuatro caracteres del control de edición, usaría una posición inicial de 0 y una posición final de 4.  
+### <a name="remarks"></a>Remarks  
+ The positions are zero-based. To select the first character of the edit control, you specify a starting position of 0. The ending position is for the character just after the last character to select. For example, to select the first four characters of the edit control, you would use a starting position of 0 and an ending position of 4.  
   
 > [!NOTE]
->  Esta función no es compatible con el control **ComboBoxEx** de Windows. Para obtener más información sobre este control, vea [controles ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775738) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+>  This function is not supported by the Windows **ComboBoxEx** control. For more information on this control, see [ComboBoxEx Controls](http://msdn.microsoft.com/library/windows/desktop/bb775738) in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [CComboBox::GetEditSel](#geteditsel).  
+### <a name="example"></a>Example  
+  See the example for [CComboBox::GetEditSel](#geteditsel).  
   
-##  <a name="setextendedui"></a>CComboBox::SetExtendedUI  
- Llame a la `SetExtendedUI` función de miembro para seleccionar la interfaz de usuario predeterminada o la interfaz de usuario extendida para un cuadro combinado que tiene el [CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md) o [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) estilo.  
+##  <a name="setextendedui"></a>  CComboBox::SetExtendedUI  
+ Call the `SetExtendedUI` member function to select either the default user interface or the extended user interface for a combo box that has the [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
 ```  
 int SetExtendedUI(BOOL bExtended = TRUE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
- *bEl*  
- Especifica si el cuadro combinado debe usar la interfaz de usuario extendida o la interfaz de usuario de forma predeterminada. Un valor de **TRUE** selecciona extendido interfaz de usuario; un valor de **FALSE** selecciona la interfaz de usuario estándar.  
+### <a name="parameters"></a>Parameters  
+ *bExtended*  
+ Specifies whether the combo box should use the extended user interface or the default user interface. A value of **TRUE** selects the extended user interface; a value of **FALSE** selects the standard user interface.  
   
-### <a name="return-value"></a>Valor devuelto  
- **CB_OKAY** si la operación se realiza correctamente, o **CB_ERR** si se produce un error.  
+### <a name="return-value"></a>Return Value  
+ **CB_OKAY** if the operation is successful, or **CB_ERR** if an error occurs.  
   
-### <a name="remarks"></a>Comentarios  
- Se puede identificar la interfaz de usuario extendida de las maneras siguientes:  
+### <a name="remarks"></a>Remarks  
+ The extended user interface can be identified in the following ways:  
   
--   Haga clic en el control estático muestra el cuadro de lista solo para los cuadros combinados con el **CBS_DROPDOWNLIST** estilo.  
+-   Clicking the static control displays the list box only for combo boxes with the **CBS_DROPDOWNLIST** style.  
   
--   Al presionar la tecla flecha abajo, muestra el cuadro de lista (F4 está deshabilitada).  
+-   Pressing the DOWN ARROW key displays the list box (F4 is disabled).  
   
- El desplazamiento en el control estático se deshabilita cuando no está visible la lista de elementos (se deshabilitan las teclas de dirección).  
+ Scrolling in the static control is disabled when the item list is not visible (the arrow keys are disabled).  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [CComboBox::GetExtendedUI](#getextendedui).  
+### <a name="example"></a>Example  
+  See the example for [CComboBox::GetExtendedUI](#getextendedui).  
   
-##  <a name="sethorizontalextent"></a>CComboBox::SetHorizontalExtent  
- Establece el ancho, en píxeles, por el que la parte de cuadro de lista del cuadro combinado se puede desplazar horizontalmente.  
+##  <a name="sethorizontalextent"></a>  CComboBox::SetHorizontalExtent  
+ Sets the width, in pixels, by which the list-box portion of the combo box can be scrolled horizontally.  
   
 ```  
 void SetHorizontalExtent(UINT nExtent);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  *nExtent*  
- Especifica el número de píxeles por el que la parte de cuadro de lista del cuadro combinado se puede desplazar horizontalmente.  
+ Specifies the number of pixels by which the list-box portion of the combo box can be scrolled horizontally.  
   
-### <a name="remarks"></a>Comentarios  
- Si el ancho del cuadro de lista es menor que este valor, la barra de desplazamiento horizontal desplazará horizontalmente los elementos en el cuadro de lista. Si el ancho del cuadro de lista es igual o mayor que este valor, se oculta la barra de desplazamiento horizontal o, si el cuadro combinado tiene la [CBS_DISABLENOSCROLL](../../mfc/reference/combo-box-styles.md) estilo, deshabilitado.  
+### <a name="remarks"></a>Remarks  
+ If the width of the list box is smaller than this value, the horizontal scroll bar will horizontally scroll items in the list box. If the width of the list box is equal to or greater than this value, the horizontal scroll bar is hidden or, if the combo box has the [CBS_DISABLENOSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, disabled.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #35](../../mfc/reference/codesnippet/cpp/ccombobox-class_37.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#35](../../mfc/reference/codesnippet/cpp/ccombobox-class_37.cpp)]  
   
-##  <a name="setitemdata"></a>CComboBox::SetItemData  
- Establece el valor de 32 bits asociado con el elemento especificado en un cuadro combinado.  
+##  <a name="setitemdata"></a>  CComboBox::SetItemData  
+ Sets the 32-bit value associated with the specified item in a combo box.  
   
 ```  
 int SetItemData(
@@ -1158,24 +1207,24 @@ int SetItemData(
     DWORD_PTR dwItemData);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Contiene un índice de base cero para el elemento que se va a establecer.  
+ Contains a zero-based index to the item to set.  
   
  `dwItemData`  
- Contiene el nuevo valor para asociar al elemento.  
+ Contains the new value to associate with the item.  
   
-### <a name="return-value"></a>Valor devuelto  
- **CB_ERR** si se produce un error.  
+### <a name="return-value"></a>Return Value  
+ **CB_ERR** if an error occurs.  
   
-### <a name="remarks"></a>Comentarios  
- Use la `SetItemDataPtr` función de miembro si el elemento de 32 bits es un puntero.  
+### <a name="remarks"></a>Remarks  
+ Use the `SetItemDataPtr` member function if the 32-bit item is to be a pointer.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
   
-##  <a name="setitemdataptr"></a>CComboBox::SetItemDataPtr  
- Establece el valor de 32 bits asociado con el elemento especificado en un cuadro combinado para ser el puntero especificado ( **void\***).  
+##  <a name="setitemdataptr"></a>  CComboBox::SetItemDataPtr  
+ Sets the 32-bit value associated with the specified item in a combo box to be the specified pointer ( **void\***).  
   
 ```  
 int SetItemDataPtr(
@@ -1183,24 +1232,24 @@ int SetItemDataPtr(
     void* pData);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Contiene un índice de base cero del elemento.  
+ Contains a zero-based index to the item.  
   
  `pData`  
- Contiene el puntero a asociar al elemento.  
+ Contains the pointer to associate with the item.  
   
-### <a name="return-value"></a>Valor devuelto  
- **CB_ERR** si se produce un error.  
+### <a name="return-value"></a>Return Value  
+ **CB_ERR** if an error occurs.  
   
-### <a name="remarks"></a>Comentarios  
- Este puntero es válido durante la vida de un cuadro combinado, incluso aunque la posición del elemento relativa en el cuadro combinado podría cambiar conforme se agregan o quitan elementos. Por lo tanto, puede cambiar el índice del elemento en el cuadro, pero el puntero es confiable.  
+### <a name="remarks"></a>Remarks  
+ This pointer remains valid for the life of the combo box, even though the item's relative position within the combo box might change as items are added or removed. Hence, the item's index within the box can change, but the pointer remains reliable.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #37](../../mfc/reference/codesnippet/cpp/ccombobox-class_39.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#37](../../mfc/reference/codesnippet/cpp/ccombobox-class_39.cpp)]  
   
-##  <a name="setitemheight"></a>CComboBox::SetItemHeight  
- Llame a la `SetItemHeight` función de miembro para establecer el alto de los elementos de lista en un cuadro combinado o el alto de la parte de control de edición (o texto estático) de un cuadro combinado.  
+##  <a name="setitemheight"></a>  CComboBox::SetItemHeight  
+ Call the `SetItemHeight` member function to set the height of list items in a combo box or the height of the edit-control (or static-text) portion of a combo box.  
   
 ```  
 int SetItemHeight(
@@ -1208,123 +1257,123 @@ int SetItemHeight(
     UINT cyItemHeight);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Especifica si se ha establecido el alto de los elementos de lista o el alto de la parte de control de edición (o texto estático) del cuadro combinado.  
+ Specifies whether the height of list items or the height of the edit-control (or static-text) portion of the combo box is set.  
   
- Si el cuadro combinado tiene la [CBS_OWNERDRAWVARIABLE](../../mfc/reference/combo-box-styles.md) estilo, `nIndex` especifica el índice de base cero del elemento de lista cuyo alto se va a ser; de lo contrario, `nIndex` debe ser 0 y el alto de la lista de todos los elementos que se establecerá.  
+ If the combo box has the [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, `nIndex` specifies the zero-based index of the list item whose height is to be set; otherwise, `nIndex` must be 0 and the height of all list items will be set.  
   
- Si `nIndex` es -1, el alto del control de edición o parte de texto estático de un cuadro combinado que se va a establecer.  
+ If `nIndex` is -1, the height of the edit-control or static-text portion of the combo box is to be set.  
   
  `cyItemHeight`  
- Especifica el alto, en píxeles, del componente de cuadro combinado identificado por `nIndex`.  
+ Specifies the height, in pixels, of the combo-box component identified by `nIndex`.  
   
-### <a name="return-value"></a>Valor devuelto  
- **CB_ERR** si el índice o el alto es válido; en caso contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ **CB_ERR** if the index or height is invalid; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- El alto de la parte de control de edición (o texto estático) del cuadro combinado se establece independientemente de la altura de los elementos de lista. Una aplicación debe asegurarse de que el alto de la parte de control de edición (o texto estático) no es menor que el alto de un elemento determinado del cuadro de lista.  
+### <a name="remarks"></a>Remarks  
+ The height of the edit-control (or static-text) portion of the combo box is set independently of the height of the list items. An application must ensure that the height of the edit-control (or static-text) portion is not smaller than the height of a particular list-box item.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #38](../../mfc/reference/codesnippet/cpp/ccombobox-class_40.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#38](../../mfc/reference/codesnippet/cpp/ccombobox-class_40.cpp)]  
   
-##  <a name="setlocale"></a>CComboBox::SetLocale  
- Establece el identificador de configuración regional de este cuadro combinado.  
+##  <a name="setlocale"></a>  CComboBox::SetLocale  
+ Sets the locale identifier for this combo box.  
   
 ```  
 LCID SetLocale(LCID nNewLocale);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nNewLocale`  
- El nuevo valor de identificador (LCID) de configuración regional para establecer para el cuadro combinado.  
+ The new locale identifier (LCID) value to set for the combo box.  
   
-### <a name="return-value"></a>Valor devuelto  
- El valor de identificador (LCID) de configuración regional anterior de este cuadro combinado.  
+### <a name="return-value"></a>Return Value  
+ The previous locale identifier (LCID) value for this combo box.  
   
-### <a name="remarks"></a>Comentarios  
- Si **SetLocale** no se llama, el valor predeterminado se obtiene la configuración regional del sistema. Esta configuración regional predeterminada del sistema puede modificarse mediante el uso del Panel de Control de aplicación de configuración Regional (o internacional).  
+### <a name="remarks"></a>Remarks  
+ If **SetLocale** is not called, the default locale is obtained from the system. This system default locale can be modified by using Control Panel's Regional (or International) application.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox #39](../../mfc/reference/codesnippet/cpp/ccombobox-class_41.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#39](../../mfc/reference/codesnippet/cpp/ccombobox-class_41.cpp)]  
   
-##  <a name="setminvisibleitems"></a>CComboBox::SetMinVisibleItems  
- Establece al número mínimo de elementos visibles en la lista desplegable el combinado actual de control de cuadro.  
+##  <a name="setminvisibleitems"></a>  CComboBox::SetMinVisibleItems  
+ Sets the minimum number of visible items in the drop-down list of the current combo box control.  
   
 ```  
 BOOL SetMinVisibleItems(int iMinVisible);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iMinVisible`|Especifica el número mínimo de elementos visibles.|  
+|[in] `iMinVisible`|Specifies the minimum number of visible items.|  
   
-### <a name="return-value"></a>Valor devuelto  
- `true`Si este método se realiza correctamente; en caso contrario, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Comentarios  
- Este método envía el [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) mensaje, que se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se define la variable `m_combobox`, que se usa para obtener acceso mediante programación el control de cuadro combinado. Esta variable se utiliza en el siguiente ejemplo.  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_combobox`, that is used to programmatically access the combo box control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CComboBox_s1 n.º 1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
+ [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
-### <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se inserta 20 elementos en la lista desplegable de un control de cuadro combinado. A continuación, especifica que se muestre un mínimo de 10 elementos cuando el usuario presiona la flecha de lista desplegable.  
+### <a name="example"></a>Example  
+ The following code example inserts 20 items into the drop-down list of a combo box control. Then it specifies that a minimum of 10 items be displayed when a user presses the drop-down arrow.  
   
- [!code-cpp[NVC_MFC_CComboBox_s1 n.º 2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
+ [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
   
-##  <a name="settopindex"></a>CComboBox::SetTopIndex  
- Garantiza que un determinado elemento está visible en la parte de cuadro de lista del cuadro combinado.  
+##  <a name="settopindex"></a>  CComboBox::SetTopIndex  
+ Ensures that a particular item is visible in the list-box portion of the combo box.  
   
 ```  
 int SetTopIndex(int nIndex);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Especifica el índice de base cero del elemento de cuadro de lista.  
+ Specifies the zero-based index of the list-box item.  
   
-### <a name="return-value"></a>Valor devuelto  
- Cero si es correcto, o **CB_ERR** si se produce un error.  
+### <a name="return-value"></a>Return Value  
+ Zero if successful, or **CB_ERR** if an error occurs.  
   
-### <a name="remarks"></a>Comentarios  
- El sistema desplaza el cuadro de lista hasta que el elemento o especificado por `nIndex` aparece en la parte superior de la lista se ha alcanzado cuadro o el intervalo de desplazamiento máximo.  
+### <a name="remarks"></a>Remarks  
+ The system scrolls the list box until either the item specified by `nIndex` appears at the top of the list box or the maximum scroll range has been reached.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_CComboBox Nº 40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]  
   
-##  <a name="showdropdown"></a>CComboBox::ShowDropDown  
- Muestra u oculta el cuadro de lista de un cuadro combinado que tiene el [CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md) o [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) estilo.  
+##  <a name="showdropdown"></a>  CComboBox::ShowDropDown  
+ Shows or hides the list box of a combo box that has the [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
 ```  
 void ShowDropDown(BOOL bShowIt = TRUE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  *bShowIt*  
- Especifica si el cuadro de lista desplegable se pueden mostrar u ocultar. Un valor de **TRUE** muestra el cuadro de lista. Un valor de **FALSE** oculta el cuadro de lista.  
+ Specifies whether the drop-down list box is to be shown or hidden. A value of **TRUE** shows the list box. A value of **FALSE** hides the list box.  
   
-### <a name="remarks"></a>Comentarios  
- De forma predeterminada, un cuadro combinado de este tipo mostrará el cuadro de lista.  
+### <a name="remarks"></a>Remarks  
+ By default, a combo box of this style will show the list box.  
   
- Esta función miembro no tiene ningún efecto en un cuadro combinado que se creó con la [CBS_SIMPLE](../../mfc/reference/combo-box-styles.md) estilo.  
+ This member function has no effect on a combo box created with the [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [CComboBox::GetDroppedState](#getdroppedstate).  
+### <a name="example"></a>Example  
+  See the example for [CComboBox::GetDroppedState](#getdroppedstate).  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo MFC CTRLBARS](../../visual-cpp-samples.md)   
- [CWnd (clase)](../../mfc/reference/cwnd-class.md)   
- [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
- [CWnd (clase)](../../mfc/reference/cwnd-class.md)   
- [Clase CButton](../../mfc/reference/cbutton-class.md)   
- [Clase CEdit](../../mfc/reference/cedit-class.md)   
- [CListBox (clase)](../../mfc/reference/clistbox-class.md)   
- [Clase CScrollBar](../../mfc/reference/cscrollbar-class.md)   
- [Clase CStatic](../../mfc/reference/cstatic-class.md)   
- [CDialog (clase)](../../mfc/reference/cdialog-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CTRLBARS](../../visual-cpp-samples.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [CButton Class](../../mfc/reference/cbutton-class.md)   
+ [CEdit Class](../../mfc/reference/cedit-class.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)   
+ [CScrollBar Class](../../mfc/reference/cscrollbar-class.md)   
+ [CStatic Class](../../mfc/reference/cstatic-class.md)   
+ [CDialog Class](../../mfc/reference/cdialog-class.md)
 

@@ -1,32 +1,50 @@
 ---
-title: "Funciones miembro que se agregan con frecuencia | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDialog (clase), miembros"
-  - "clases de cuadro de diálogo, funciones miembro que se agregan con frecuencia"
-  - "cuadros de diálogo de MFC, mensajes de notificación de controles"
+title: Commonly Added Member Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDialog class [MFC], members
+- MFC dialog boxes [MFC], control-notification messages
+- dialog classes [MFC], commonly added member functions
 ms.assetid: f6bd50e8-872a-4039-9996-a85bfccea18d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Funciones miembro que se agregan con frecuencia
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c45d0bfb2541d6c7c30ec33aa3ed9df576a6741c
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Si el cuadro de diálogo contiene los pulsadores distinta de la ACEPTAR o cancelar, debe escribir funciones miembro de controladores de mensajes en la clase de diálogo para responder a los mensajes de la CONTROL\- notificación que representan.  Para obtener un ejemplo, vea el programa de ejemplo de [Scribble](../top/visual-cpp-samples.md) .  También puede controlar mensajes de la CONTROL\- notificación de otros controles en el cuadro de diálogo.  
+---
+# <a name="commonly-added-member-functions"></a>Commonly Added Member Functions
+If your dialog box contains pushbuttons other than OK or Cancel, you need to write message-handler member functions in your dialog class to respond to the control-notification messages they generate. For an example, see the [Scribble](../visual-cpp-samples.md) sample program. You can also handle control-notification messages from other controls in your dialog box.  
   
-## Vea también  
- [Cuadros de diálogo](../mfc/dialog-boxes.md)   
- [Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)   
- [Funciones miembro que se reemplazan con frecuencia](../mfc/commonly-overridden-member-functions.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)   
+ [Commonly Overridden Member Functions](../mfc/commonly-overridden-member-functions.md)
+

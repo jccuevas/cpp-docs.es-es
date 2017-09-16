@@ -1,47 +1,63 @@
 ---
-title: "Resoluci&#243;n de ambig&#252;edad | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Resolving ambiguous declarations (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 3d773ee7-bbea-47de-80c2-cb0a9d4ec0b9
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Resoluci&#243;n de ambig&#252;edad
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 0f49a3b4b7c131a477dc7ff25c95b15173d0bb85
+ms.contentlocale: es-es
+ms.lasthandoff: 09/11/2017
 
-Para realizar conversiones explícitas de un tipo a otro, debe utilizar las conversiones especificando el nombre de tipo que desee.  Algunas conversiones de tipos producen ambigüedad sintáctica.  La siguiente conversión de tipo de estilo de función es ambigua:  
+---
+# <a name="resolving-ambiguous-declarations-c"></a>Resolving ambiguous declarations (C++)
+To perform explicit conversions from one type to another, you must use casts, specifying the desired type name. Some type casts result in syntactic ambiguity. The following function-style type cast is ambiguous:  
   
 ```  
 char *aName( String( s ) );  
 ```  
   
- No queda claro si es una declaración de función o una declaración de objeto con una conversión de estilo de función como inicializador: podría declarar una función que devolviera el tipo **char \*** que toma un argumento de tipo `String` o podría declarar el argumento de objeto `aName` e inicializarlo con el valor de conversión `s` al tipo `String`.  
+ It is unclear whether it is a function declaration or an object declaration with a function-style cast as the initializer: It could declare a function returning type **char \*** that takes one argument of type `String`, or it could declare the object `aName` and initialize it with the value of `s` cast to type `String`.  
   
- Si una declaración puede considerarse una declaración de función válida, se trata como tal.  Solo si no puede ser una declaración de función \(es decir, si fuera sintácticamente incorrecta\) es una instrucción que podría tratarse como una conversión de tipo de estilo de función.  Por consiguiente, el compilador interpreta la instrucción como una declaración de una función y omite los paréntesis incluidos alrededor del identificador `s`.  Sin embargo, las instrucciones:  
+ If a declaration can be considered a valid function declaration, it is treated as such. Only if it cannot possibly be a function declaration — that is, if it would be syntactically incorrect — is a statement examined to see if it is a function-style type cast. Therefore, the compiler considers the statement to be a declaration of a function and ignores the parentheses around the identifier `s`. On the other hand, the statements:  
   
 ```  
 char *aName( (String)s );  
 ```  
   
- y  
+ and  
   
 ```  
 char *aName = String( s );  
 ```  
   
- son claramente declaraciones de objetos, y para realizar la inicialización de `aName` se llama a una conversión del tipo `String` al tipo **char \*** definida por el usuario.  
+ are clearly declarations of objects, and a user-defined conversion from type `String` to type **char \*** is invoked to perform the initialization of `aName`.  
   
-## Vea también  
- [C\+\+ Abstract Declarators](http://msdn.microsoft.com/es-es/e7e18c18-0cad-4450-942b-d27e1d4dd088)
+## <a name="see-also"></a>See Also  
+ 

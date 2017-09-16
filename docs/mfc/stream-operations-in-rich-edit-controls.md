@@ -1,38 +1,57 @@
 ---
-title: "Operaciones de secuencia en los controles Rich Edit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl (clase), operaciones con secuencias"
-  - "CRichEditCtrl (clase), almacenamiento con secuencias"
-  - "controles Rich Edit, operaciones con secuencias"
-  - "almacenamiento, secuencia en CRichEditCtrl"
-  - "operaciones con secuencias en CRichEditCtrl"
-  - "almacenamiento con secuencias y CRichEditCtrl"
+title: Stream Operations in Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRichEditCtrl class [MFC], stream operations
+- CRichEditCtrl class [MFC], stream storage
+- rich edit controls [MFC], stream operations
+- storage, stream in CRichEditCtrl
+- stream operations in CRichEditCtrl
+- stream storage and CRichEditCtrl
 ms.assetid: 110b4684-1e76-4ca6-9ef0-5bc8b2d93c78
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Operaciones de secuencia en los controles Rich Edit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6db5dc840d0fdd08f1f04107b53fa69a7ff4fff3
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Puede utilizar secuencias para transferir datos en o de un control rich edit \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\).  Una secuencia se define mediante una estructura de [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) , que especifica un búfer y una función de devolución de llamada definido por la aplicación.  
+---
+# <a name="stream-operations-in-rich-edit-controls"></a>Stream Operations in Rich Edit Controls
+You can use streams to transfer data into or out of a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). A stream is defined by an [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) structure, which specifies a buffer and an application-defined callback function.  
   
- Para leer datos de un control rich edit \(es decir, secuencia los datos en\), utilice la función miembro de [StreamIn](../Topic/CRichEditCtrl::StreamIn.md) .  El control llama repetidamente la función de devolución de llamada definido por la aplicación, que transfiere una parte de los datos en el búfer cada vez.  
+ To read data into a rich edit control (that is, stream the data in), use the [StreamIn](../mfc/reference/cricheditctrl-class.md#streamin) member function. The control repeatedly calls the application-defined callback function, which transfers a portion of the data into the buffer each time.  
   
- Para guardar el contenido de un control rich edit \(es decir, secuencia los datos out\), puede utilizar la función miembro de [StreamOut](../Topic/CRichEditCtrl::StreamOut.md) .  El control escribe repetidamente en el búfer y después llama a la función de devolución de llamada definido por la aplicación.  Para cada llamada, la función de devolución de llamada guarda el contenido del búfer.  
+ To save the contents of a rich edit control (that is, stream the data out), you can use the [StreamOut](../mfc/reference/cricheditctrl-class.md#streamout) member function. The control repeatedly writes to the buffer and then calls the application-defined callback function. For each call, the callback function saves the contents of the buffer.  
   
-## Vea también  
- [Usar CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

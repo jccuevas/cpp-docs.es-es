@@ -1,5 +1,5 @@
 ---
-title: Funciones &lt;array&gt; | Microsoft Docs
+title: '&lt;array&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,22 +17,26 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 326e4fddbf29e706faa4e726ece331a0fe64471b
+helpviewer_keywords:
+- std::array [C++], get
+- std::get [C++]
+- std::swap [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d7bb16b490d20934a263147c0d6e28694e006552
 ms.contentlocale: es-es
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltarraygt-functions"></a>Funciones &lt;array&gt;
-El encabezado \<array> incluye dos funciones no miembro, `get` y `swap`, que operan en objetos `array`.  
+# <a name="ltarraygt-functions"></a>&lt;array&gt; functions
+The \<array> header includes two non-member functions, `get` and `swap`, that operate on `array` objects.  
   
 |||  
 |-|-|  
 |[get](#get)|[swap](#swap)|  
   
 ##  <a name="get"></a>  get  
-Devuelve una referencia al elemento especificado de la matriz.  
+Returns a reference to the specified element of the array.  
   
 ```  
 template <int Index, class T, size_t N>  
@@ -45,20 +49,20 @@ template <int Index, class T, size_t N>
 constexpr T&& get(array<T, N>&& arr) noexcept;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `Index`  
- El desplazamiento del elemento.  
+ The element offset.  
   
  `T`  
- El tipo de un elemento.  
+ The type of an element.  
   
  `N`  
- Número de elementos de la matriz.  
+ The number of elements in the array.  
   
  `arr`  
- La matriz de la que se selecciona.  
+ The array to select from.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <array>   
@@ -91,30 +95,30 @@ int main()
 ```  
   
 ##  <a name="swap"></a>  swap  
-Especialización de plantilla no miembro de `std::swap` que intercambia dos objetos `array`.  
+A non-member template specialization of `std::swap` that swaps two `array` objects.  
   
 ```  
 template <class Ty, std::size_t N>  
 void swap(array<Ty, N>& left, array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- El tipo de un elemento.  
+ The type of an element.  
   
  `N`  
- Se refiere al tamaño de la matriz.  
+ The size of the array.  
   
  `left`  
- Primera matriz que se va a intercambiar.  
+ The first array to swap.  
   
  `right`  
- Segunda matriz que se va a intercambiar.  
+ The second array to swap.  
   
-### <a name="remarks"></a>Comentarios  
- La función de plantilla ejecuta `left.swap(right)`.  
+### <a name="remarks"></a>Remarks  
+ The template function executes `left.swap(right)`.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__swap.cpp   
@@ -160,7 +164,7 @@ int main()
 0 1 2 3  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [\<array>](../standard-library/array.md)
 
 

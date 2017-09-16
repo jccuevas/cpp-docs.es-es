@@ -1,48 +1,67 @@
 ---
-title: "Elementos de devoluci&#243;n de llamada y m&#225;scara de devoluci&#243;n de llamada | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "elementos de devolución de llamada de clase CListCtrl"
-  - "CListCtrl (clase), elementos de devolución de llamada y máscara de devolución de llamada"
+title: Callback Items and the Callback Mask | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- callback items in CListCtrl class [MFC]
+- CListCtrl class [MFC], callback item and callback mask
 ms.assetid: 67c1f76f-6144-453e-9376-6712f89430ae
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Elementos de devoluci&#243;n de llamada y m&#225;scara de devoluci&#243;n de llamada
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e943e5445620b25437a0f6d70a6703a927d5e636
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Para cada uno de sus elementos, un control de vista de lista almacena normalmente el texto de la etiqueta, el índice de la lista de imágenes de los iconos de los elementos, y un conjunto de bit marca para el estado del elemento.  Puede definir los elementos como elementos de devolución de llamada, que son útiles si la aplicación almacena ya parte de la información de un elemento.  
+---
+# <a name="callback-items-and-the-callback-mask"></a>Callback Items and the Callback Mask
+For each of its items, a list view control typically stores the label text, the image list index of the item's icons, and a set of bit flags for the item's state. You can define individual items as callback items, which are useful if your application already stores some of the information for an item.  
   
- Define un elemento como elemento de devolución especificando los valores adecuados para los miembros de `pszText` y de `iImage` de la estructura de **LV\_ITEM** \(vea [CListCtrl::GetItem](../Topic/CListCtrl::GetItem.md)\).  Si la aplicación mantiene el elemento o el texto del subelemento, especifique el valor de **LPSTR\_TEXTCALLBACK** para el miembro de `pszText` .  Si la aplicación realiza el seguimiento del icono del elemento, especifique el valor de **I\_IMAGECALLBACK** para el miembro de `iImage` .  
+ You define an item as a callback item by specifying appropriate values for the `pszText` and `iImage` members of the **LV_ITEM** structure (see [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem)). If the application maintains the item's or subitem's text, specify the **LPSTR_TEXTCALLBACK** value for the `pszText` member. If the application keeps track of the icon for the item, specify the **I_IMAGECALLBACK** value for the `iImage` member.  
   
- Además de definir elementos de devolución de llamada, también puede modificar la máscara de devolución de llamada del control.  Esta máscara es un conjunto de marcas de bits que especifican los estados de los elementos para los que la aplicación, en lugar del control, almacena los datos actuales.  Máscara de devolución se aplica a los elementos del control, a diferencia de la designación de elemento de devolución de llamada, que se aplica a un elemento específico.  Máscara de devolución es cero de forma predeterminada, lo que significa que el control sigue todos los estados del elemento.  Para cambiar este comportamiento predeterminado, inicialice la máscara a cualquier combinación de los valores siguientes:  
+ In addition to defining callback items, you can also modify the control's callback mask. This mask is a set of bit flags that specify the item states for which the application, rather than the control, stores the current data. The callback mask applies to all of the control's items, unlike the callback item designation, which applies to a specific item. The callback mask is zero by default, meaning that the control tracks all item states. To change this default behavior, initialize the mask to any combination of the following values:  
   
--   el elemento de`LVIS_CUT`The se marca para una operación de cortar y pegar.  
+-   `LVIS_CUT` The item is marked for a cut-and-paste operation.  
   
--   el elemento de`LVIS_DROPHILITED`The se resalta como destino de arrastrar y colocar.  
+-   `LVIS_DROPHILITED` The item is highlighted as a drag-and-drop target.  
   
--   el elemento de`LVIS_FOCUSED`The tiene el foco.  
+-   `LVIS_FOCUSED` The item has the focus.  
   
--   se selecciona el elemento de`LVIS_SELECTED`The.  
+-   `LVIS_SELECTED` The item is selected.  
   
--   La aplicación de**LVIS\_OVERLAYMASK**The almacena el índice de la lista de imágenes de la imagen actual de superposición de cada elemento.  
+-   **LVIS_OVERLAYMASK** The application stores the image list index of the current overlay image for each item.  
   
--   La aplicación de**LVIS\_STATEIMAGEMASK**The almacena el índice de la imagen del estado actual de cada elemento.  
+-   **LVIS_STATEIMAGEMASK** The application stores the image list index of the current state image for each item.  
   
- Para obtener más información sobre cómo recuperar y establecer esta máscara, vea [CListCtrl::GetCallbackMask](../Topic/CListCtrl::GetCallbackMask.md) y [CListCtrl::SetCallbackMask](../Topic/CListCtrl::SetCallbackMask.md).  
+ For further information on retrieving and setting this mask, see [CListCtrl::GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask) and [CListCtrl::SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask).  
   
-## Vea también  
- [Usar CListCtrl](../mfc/using-clistctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

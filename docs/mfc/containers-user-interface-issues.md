@@ -1,39 +1,58 @@
 ---
-title: "Contenedores: Problemas de la interfaz de usuario | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contenedores, problemas de la interfaz de usuario"
-  - "contenedores OLE, interfaz de usuario"
-  - "problemas de la interfaz de usuario"
+title: 'Containers: User-Interface Issues | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- containers [MFC], user-interface issues
+- OLE containers [MFC], user interface
+- user interface issues
 ms.assetid: c833c249-a633-4f1c-82d6-ec6b4892863a
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Contenedores: Problemas de la interfaz de usuario
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e2fbe71272393cbf019a76fc38502f18053f091b
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Debe agregar varias características a la interfaz de usuario de aplicación contenedora adecuadamente para administrar los elementos vinculados y incrustados.  Estas características implican cambios en la estructura de menús y eventos que la aplicación controla.  Para obtener información detallada sobre ellas, vea los artículos siguientes:  
+---
+# <a name="containers-user-interface-issues"></a>Containers: User-Interface Issues
+You must add a number of features to a container application's user interface to adequately manage linked and embedded items. These features involve changes to the menu structure and to the events that the application handles. For detailed information about them, see the following articles:  
   
-|Para obtener información sobre|Vea|  
-|------------------------------------|---------|  
-|Adiciones de menú para los contenedores|[Menús y recursos: Adiciones de contenedor](../mfc/menus-and-resources-container-additions.md)|  
-|Recursos adicionales para los contenedores|[Menús y recursos: Adiciones de contenedor](../mfc/menus-and-resources-container-additions.md)|  
-|Elementos vinculados o insertados de dibujo|[Ejemplo de contenedor](../top/visual-cpp-samples.md)|  
-|Nuevos cuadros de diálogo para los contenedores|[Cuadros de diálogo de OLE](../mfc/dialog-boxes-in-ole.md)|  
+|For information on|See|  
+|------------------------|---------|  
+|Menu additions for containers|[Menus and Resources: Container Additions](../mfc/menus-and-resources-container-additions.md)|  
+|Additional resources for containers|[Menus and Resources: Container Additions](../mfc/menus-and-resources-container-additions.md)|  
+|Painting linked or embedded items|[Container sample](../visual-cpp-samples.md)|  
+|New dialog boxes for containers|[Dialog Boxes in OLE](../mfc/dialog-boxes-in-ole.md)|  
   
-## Vea también  
- [Contenedores](../mfc/containers.md)   
- [Contenedores: Características avanzadas](../mfc/containers-advanced-features.md)   
- [Menús y recursos \(OLE\)](../mfc/menus-and-resources-ole.md)
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Containers: Advanced Features](../mfc/containers-advanced-features.md)   
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)
+
+

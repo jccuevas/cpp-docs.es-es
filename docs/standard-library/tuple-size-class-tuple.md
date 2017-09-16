@@ -1,5 +1,5 @@
 ---
-title: tuple_size (Clase) | Microsoft Docs
+title: tuple_size Class; | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,13 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- tuple_size
-- std::tuple_size
-- utility/std::tuple_size
+- tuple_size", "std::tuple_size", "utility/std::tuple_size
 dev_langs:
 - C++
 helpviewer_keywords:
-- tuple_size Class
+- ', '
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
 caps.latest.revision: 23
 author: corob-msft
@@ -35,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: f0ae102852f1db46b68d86438e20ce9645535d19
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 15bc0b29c4775438ee93b899c061aa539f5c1546
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="tuplesize-class"></a>tuple_size (Clase);
-Informa el número de elementos que contiene una `tuple` .  
+# <a name="tuplesize-class"></a>tuple_size Class;
+Reports the number of elements that a `tuple` contains.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 // TEMPLATE STRUCT tuple_size  
@@ -80,34 +78,34 @@ template <class Tuple>
    struct tuple_size<const volatile Tuple>;   
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a>Parameters  
 *Tuple*  
-El tipo de tupla. 
+The type of the tuple. 
   
 *Elem*  
-El tipo de los elementos de la matriz. 
+The type of the array elements. 
   
 *Size*  
-Se refiere al tamaño de la matriz. 
+The size of the array. 
   
 *T1*  
-El tipo del primer miembro del par. 
+The type of the first member of the pair. 
   
 *T2*  
-El tipo del segundo miembro del par. 
+The type of the second member of the pair. 
   
-*Tipos*  
-Los tipos de los elementos de tupla. 
+*Types*  
+The types of the tuple elements. 
   
   
-## <a name="remarks"></a>Comentarios  
-La clase de plantilla tiene un miembro `value` que es una expresión constante entera cuyo valor es la extensión del tipo de tupla `Tuple`.  
+## <a name="remarks"></a>Remarks  
+The template class has a member `value` that is an integral constant expression whose value is the extent of the tuple type `Tuple`.  
   
-La especialización de plantilla para matrices tiene un miembro `value` que es una expresión constante entera cuyo valor es `Size`, que es el tamaño de la matriz.  
+The template specialization for arrays has a member `value` that is an integral constant expression whose value is `Size`, which is the size of the array.  
   
-La especialización de plantilla para pares tiene un miembro `value` que es una expresión constante entera cuyo valor es 2.  
+The template specialization for pair has a member `value` that is an integral constant expression whose value is 2.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <tuple>   
@@ -135,15 +133,15 @@ int main()
  0 1.5 2 3.7  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<tuple>  
- **Encabezado:** \<array> (para la especialización de matrices)  
- **Encabezado:** \<utility> (para la especialización de pares)  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<tuple>  
+ **Header:** \<array> (for array specialization)  
+ **Header:** \<utility> (for pair specialization)  
   
- **Espacio de nombres:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [\<tuple>](../standard-library/tuple.md)   
  [tuple](../standard-library/tuple-class.md)  
- [tuple_element (Clase)](../standard-library/tuple-element-class-tuple.md)
+ [tuple_element Class](../standard-library/tuple-element-class-tuple.md)
 

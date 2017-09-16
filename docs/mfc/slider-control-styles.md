@@ -1,42 +1,61 @@
 ---
-title: "Estilos de control deslizante | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSliderCtrl (clase), estilos"
-  - "controles deslizantes, estilos"
-  - "estilos, CSliderCtrl"
-  - "estilos, controles deslizantes"
+title: Slider Control Styles | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- slider controls [MFC], styles
+- CSliderCtrl class [MFC], styles
+- styles [MFC], CSliderCtrl
+- styles [MFC], slider controls
 ms.assetid: 64c491fc-5af1-4f97-ae30-854071b3dc02
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Estilos de control deslizante
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 21d2b10675ceb88e36ffb1bcf13d53ed60e9ec50
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Los controles deslizantes \([CSliderCtrl](../mfc/reference/csliderctrl-class.md)\) pueden tener una vertical u horizontal.  No pueden tener marcas de paso por dos partes, ambos lados, o ninguno.  También se pueden utilizar para especificar un intervalo de valores consecutivos.  Estas propiedades se controlan mediante los estilos del control deslizante, que se especifican cuando se crea el control deslizante.  
+---
+# <a name="slider-control-styles"></a>Slider Control Styles
+Slider controls ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) can have either a vertical or horizontal orientation. They can have tick marks on either side, both sides, or neither. They can also be used to specify a range of consecutive values. These properties are controlled by using slider control styles, which you specify when you create the slider control.  
   
- Los estilos de `TBS_HORZ` y de `TBS_VERT` determinan la orientación del control deslizante.  Si no especifica una orientación, el control deslizante se orienta horizontalmente.  
+ The `TBS_HORZ` and `TBS_VERT` styles determine the orientation of the slider control. If you do not specify an orientation, the slider control is oriented horizontally.  
   
- El estilo de `TBS_AUTOTICKS` crea un control deslizante que tiene una marca de graduación para cada incremento en el intervalo de valores.  Estas marcas de paso se agregan automáticamente al llamar a la función miembro de [SetRange](../Topic/CSliderCtrl::SetRange.md) .  Si no especifica `TBS_AUTOTICKS`, puede utilizar funciones miembro, como [SetTic](../Topic/CSliderCtrl::SetTic.md) y [SetTicFreq](../Topic/CSliderCtrl::SetTicFreq.md), para especificar las posiciones de las marcas de paso.  Para crear un control deslizante controle qué no muestra marcas de paso, puede utilizar el estilo de `TBS_NOTICKS` .  
+ The `TBS_AUTOTICKS` style creates a slider control that has a tick mark for each increment in its range of values. These tick marks are added automatically when you call the [SetRange](../mfc/reference/csliderctrl-class.md#setrange) member function. If you do not specify `TBS_AUTOTICKS`, you can use member functions, such as [SetTic](../mfc/reference/csliderctrl-class.md#settic) and [SetTicFreq](../mfc/reference/csliderctrl-class.md#setticfreq), to specify the positions of the tick marks. To create a slider control that does not display tick marks, you can use the `TBS_NOTICKS` style.  
   
- Puede mostrar marcas de paso de o ambos lados del control deslizante.  Para los controles horizontal de control deslizante, puede especificar el estilo de `TBS_BOTTOM` o de `TBS_TOP` .  Para los controles en paralelo de control deslizante, puede especificar el estilo de `TBS_RIGHT` o de `TBS_LEFT` . \(`TBS_BOTTOM` y `TBS_RIGHT` son los predeterminados.\) Por marcas de paso a ambos lados del control deslizante en cualquier guía, especifique el estilo de `TBS_BOTH` .  
+ You can display tick marks on either or both sides of the slider control. For horizontal slider controls, you can specify the `TBS_BOTTOM` or `TBS_TOP` style. For vertical slider controls, you can specify the `TBS_RIGHT` or `TBS_LEFT` style. (`TBS_BOTTOM` and `TBS_RIGHT` are the default settings.) For tick marks on both sides of the slider control in any orientation, specify the `TBS_BOTH` style.  
   
- Un control deslizante puede mostrar un intervalo de selección sólo si especifica el estilo de `TBS_ENABLESELRANGE` cuando lo crea.  Cuando un control deslizante tiene este estilo, las marcas de graduación en las posiciones inicial y final de un intervalo de selección se muestran como triángulos \(en lugar de guiones verticales\) y se resalta el intervalo de selección.  Por ejemplo, los intervalos de selección pueden resultar útiles en una aplicación de programación simple.  El usuario podría seleccionar un radio de acción de marcas de paso correspondiente a horas en un día para identificar una hora de la reunión programada.  
+ A slider control can display a selection range only if you specify the `TBS_ENABLESELRANGE` style when you create it. When a slider control has this style, the tick marks at the starting and ending positions of a selection range are displayed as triangles (instead of vertical dashes) and the selection range is highlighted. For example, selection ranges might be useful in a simple scheduling application. The user could select a range of tick marks corresponding to hours in a day to identify a scheduled meeting time.  
   
- De forma predeterminada, el control deslizante de un control deslizante varía con los cambios en el intervalo de selección.  Si el control deslizante tiene el estilo de **TBS\_FIXEDLENGTH** , el control deslizante sigue siendo el mismo incluso si los cambios del intervalo de la selección.  Un control deslizante que tiene el estilo de **TBS\_NOTHUMB** no incluye un control deslizante.  
+ By default, the length of a slider control's slider varies as the selection range changes. If the slider control has the **TBS_FIXEDLENGTH** style, the length of the slider remains the same even if the selection range changes. A slider control that has the **TBS_NOTHUMB** style does not include a slider.  
   
-## Vea también  
- [Usar CSliderCtrl](../mfc/using-csliderctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSliderCtrl](../mfc/using-csliderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

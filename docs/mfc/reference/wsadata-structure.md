@@ -1,74 +1,92 @@
 ---
-title: "WSADATA (Estructura) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WSADATA"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WSADATA (estructura)"
+title: WSADATA Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- WSADATA
+dev_langs:
+- C++
+helpviewer_keywords:
+- WSADATA structure [MFC]
 ms.assetid: 80cc60e5-f9ae-4290-8ed5-07003136627d
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# WSADATA (Estructura)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d640639aaf048173547cbeaf4f40d2041c026768
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La estructura de `WSADATA` se utiliza para almacenar la información de inicialización de Windows Sockets devuelta por una llamada a la función global de `AfxSocketInit` .  
+---
+# <a name="wsadata-structure"></a>WSADATA Structure
+The `WSADATA` structure is used to store Windows Sockets initialization information returned by a call to the `AfxSocketInit` global function.  
   
-## Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      struct WSAData {  
-   WORD wVersion;  
-   WORD wHighVersion;  
-   char szDescription[WSADESCRIPTION_LEN+1];  
-   char szSystemStatus[WSASYSSTATUS_LEN+1];  
-   unsigned short iMaxSockets;  
-   unsigned short iMaxUdpDg;  
-   char FAR * lpVendorInfo;  
+struct WSAData {  
+    WORD wVersion;  
+    WORD wHighVersion;  
+    char szDescription[WSADESCRIPTION_LEN+1];  
+    char szSystemStatus[WSASYSSTATUS_LEN+1];  
+    unsigned short iMaxSockets;  
+    unsigned short iMaxUdpDg;  
+    char FAR* lpVendorInfo;  
 };  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parameters  
  *wVersion*  
- La versión de la especificación de Windows Sockets que el Windows Sockets DLL espera que el llamador utilice.  
+ The version of the Windows Sockets specification that the Windows Sockets DLL expects the caller to use.  
   
  *wHighVersion*  
- La versión más alta de la especificación de Windows Sockets que esta DLL puede admitir \(también codificada como arriba\).  Normalmente, esto es lo mismo que **wVersion**.  
+ The highest version of the Windows Sockets specification that this DLL can support (also encoded as above). Normally, this is the same as **wVersion**.  
   
  *szDescription*  
- Una cadena ASCII terminada en null en la que el Windows Sockets DLL copia una descripción de la implementación de Windows Sockets, incluidos la identificación del proveedor.  El texto \(hasta 256 caracteres\) puede contener cualquier carácter, pero los proveedores se advierte con incluir caracteres de control y de formato: el uso más probable que una aplicación pondrá esto a es mostrarlo \(truncado posiblemente\) en un mensaje de estado.  
+ A null-terminated ASCII string into which the Windows Sockets DLL copies a description of the Windows Sockets implementation, including vendor identification. The text (up to 256 characters in length) can contain any characters, but vendors are cautioned against including control and formatting characters: the most likely use that an application will put this to is to display it (possibly truncated) in a status message.  
   
  *szSystemStatus*  
- Una cadena ASCII terminada en null en la que el Windows Sockets DLL copia el estado o la información de configuración pertinente.  El Windows Sockets DLL debe utilizar este campo solo si la información puede ser útil al usuario o el personal de soporte; no debe considerarse como extensión de campo de **szDescription** .  
+ A null-terminated ASCII string into which the Windows Sockets DLL copies relevant status or configuration information. The Windows Sockets DLL should use this field only if the information might be useful to the user or support staff; it should not be considered as an extension of the **szDescription** field.  
   
  *iMaxSockets*  
- El número máximo de sockets que puede un único proceso potencialmente abierto.  Una implementación de Windows Sockets puede proporcionar un grupo global de sockets para la asignación a cualquier proceso; como alternativa, puede asignar los recursos de por\- proceso para sockets.  El número puede reflejar bien la manera en que el Windows Sockets DLL o el software de red se configuró.  Los programadores de aplicaciones pueden utilizar este número como indicación cruda de si la implementación de Windows Sockets es utilizable por la aplicación.  Por ejemplo, un servidor de X Windows podría comprobar **iMaxSockets** la primera vez que se inicie: si es menor que 8, la aplicación mostraría un mensaje de error que indica al usuario para reconfigurar el software de red. \(Esto es una situación en la que el texto de **szSystemStatus** podría utilizarse.\) Obviamente no hay ninguna garantía de que una aplicación determinada puede asignar realmente los sockets de **iMaxSockets** , ya que puede haber otras aplicaciones Windows Sockets en uso.  
+ The maximum number of sockets that a single process can potentially open. A Windows Sockets implementation can provide a global pool of sockets for allocation to any process; alternately, it can allocate per-process resources for sockets. The number can well reflect the way in which the Windows Sockets DLL or the networking software was configured. Application writers can use this number as a crude indication of whether the Windows Sockets implementation is usable by the application. For example, an X Windows server might check **iMaxSockets** when first started: if it is less than 8, the application would display an error message instructing the user to reconfigure the networking software. (This is a situation in which the **szSystemStatus** text might be used.) Obviously there is no guarantee that a particular application can actually allocate **iMaxSockets** sockets, since there can be other Windows Sockets applications in use.  
   
  *iMaxUdpDg*  
- El tamaño en bytes del datagrama mayor de \(UDP\) de Protocolo de datagramas de usuario que se puede enviar o recibir mediante una aplicación de Windows Sockets.  Si la implementación no impone ningún límite, **iMaxUdpDg** es cero.  En muchas implementaciones de sockets de Berkeley, existe un límite implícitamente de 8192 bytes en los datagramas de UDP \(que se hace fragmentos si es necesario\).  Una implementación de Windows Sockets puede imponer un límite basado, por ejemplo, para la asignación de búferes de nuevo ensamble del fragmento.  El valor mínimo de **iMaxUdpDg** para una implementación en de Windows Sockets es 512.  Observe que independientemente del valor de **iMaxUdpDg**, es desaconsejable de intentar enviar un datagrama de difusión que sea mayor que la Unidad de transmisión máxima \(MTU\) para la red. \(El Windows Sockets API de no proporciona un mecanismo para detectar MTU, pero no debería ser menor de 512 bytes\).  
+ The size in bytes of the largest User Datagram Protocol (UDP) datagram that can be sent or received by a Windows Sockets application. If the implementation imposes no limit, **iMaxUdpDg** is zero. In many implementations of Berkeley sockets, there is an implicit limit of 8192 bytes on UDP datagrams (which are fragmented if necessary). A Windows Sockets implementation can impose a limit based, for instance, on the allocation of fragment reassembly buffers. The minimum value of **iMaxUdpDg** for a compliant Windows Sockets implementation is 512. Note that regardless of the value of **iMaxUdpDg**, it is inadvisable to attempt to send a broadcast datagram that is larger than the Maximum Transmission Unit (MTU) for the network. (The Windows Sockets API does not provide a mechanism to discover the MTU, but it must be no less than 512 bytes.)  
   
  *lpVendorInfo*  
- Un puntero lejano a una estructura de datos proveedor\- concreta.  La definición de esta estructura \(si se proporciona\) está fuera del ámbito de la especificación de Windows Sockets.  
+ A far pointer to a vendor-specific data structure. The definition of this structure (if supplied) is beyond the scope of the Windows Sockets specification.  
   
 > [!NOTE]
->  En MFC, la estructura de `WSADATA` es devuelta por la función de `AfxSocketInit` , que se llama a la función de `InitInstance` .  Puede recuperar la estructura y almacenarla en el programa si necesita usar información de ella más adelante.  
+>  In MFC, the `WSADATA` structure is returned by the `AfxSocketInit` function, which you call in your `InitInstance` function. You can retrieve the structure and store it in your program if you need to use information from it later.  
   
-## Requisitos  
- **Encabezado:** winsock2.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winsock2.h  
   
-## Vea también  
- [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [AfxSocketInit](../Topic/AfxSocketInit.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)
+
+

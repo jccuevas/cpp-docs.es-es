@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <utility>
-- utility/std::<utility>
-- std.<utility>
-- std::<utility>
+- <utility>", "utility/std::<utility>", "std::<utility>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,64 +33,64 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1a65dea30745ce3afa680c0851fe33cc9f386404
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cd4b8e005352db1da07b37373b27c317b80405ff
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
-Define los tipos, funciones y operadores de las biblioteca estándar de C++ que facilitan la creación y administración de pares de objetos, que resultan útiles cuando se deben tratar dos objetos como si fueran uno solo.  
+Defines C++ Standard Library types, functions, and operators that help to construct and manage pairs of objects, which are useful whenever two objects need to be treated as if they were one.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <utility>  
   
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Los pares se usan ampliamente en la biblioteca estándar de C++. Son necesarios como argumentos y valores de devolución para distintas funciones y como tipos de elemento para contenedores como [la clase map](../standard-library/map-class.md) y la [clase multimap](../standard-library/multimap-class.md). \<map> incluye automáticamente el encabezado \<utility> para ayudar en la administración de los elementos de tipo de par clave/valor.  
+## <a name="remarks"></a>Remarks  
+ Pairs are widely used in the C++ Standard Library. They are required both as the arguments and return values for various functions and as element types for containers such as [map class](../standard-library/map-class.md) and [multimap class](../standard-library/multimap-class.md). The \<utility> header is automatically included by \<map> to assist in managing their key/value pair type elements.  
   
-### <a name="classes"></a>Clases  
-  
-|||  
-|-|-|  
-|[tuple_element](../standard-library/tuple-element-class-tuple.md)|Clase que contiene el tipo de un elemento `pair`.|  
-|[tuple_size](../standard-library/tuple-size-class-tuple.md)|Clase que contiene el recuento de elementos `pair`.|  
-  
-### <a name="functions"></a>Funciones  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[forward](../standard-library/utility-functions.md#forward)|Impide que el reenvío directo oculte el tipo de referencia (`lvalue` o `rvalue`) del argumento.|  
-|[get](../standard-library/utility-functions.md#get)|Función que obtiene un elemento de un objeto `pair`.|  
-|[make_pair](../standard-library/utility-functions.md#make_pair)|Función de aplicación auxiliar de plantilla usada para construir objetos de tipo `pair`, donde los tipos de componente se basan en los tipos de datos pasados como parámetros.|  
-|[move](../standard-library/utility-functions.md#move)|Devuelve los argumentos pasados como referencia `rvalue`.|  
-|[swap](../standard-library/utility-functions.md#swap)|Intercambia los elementos de dos objetos `pair`.|  
+|[tuple_element](../standard-library/tuple-element-class-tuple.md)|A class that wraps the type of a `pair` element.|  
+|[tuple_size](../standard-library/tuple-size-class-tuple.md)|A class that wraps `pair` element count.|  
   
-### <a name="operators"></a>Operadores  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/utility-operators.md#op_neq)|Comprueba si el objeto de par del lado izquierdo del operador no es igual que el objeto de par del lado derecho.|  
-|[operator==](../standard-library/utility-operators.md#op_eq_eq)|Comprueba si el objeto de par del lado izquierdo del operador es igual que el objeto de par del lado derecho.|  
-|[operator<](../standard-library/utility-operators.md#op_lt)|Comprueba si el objeto de par del lado izquierdo del operador es menor que el objeto de par del lado derecho.|  
-|[operator\<=](../standard-library/utility-operators.md#op_gt_eq)|Comprueba si el objeto de par del lado izquierdo del operador es menor o igual que el objeto de par del lado derecho.|  
-|[operator>](../standard-library/utility-operators.md#op_gt)|Comprueba si el objeto de par del lado izquierdo del operador es mayor que el objeto de par del lado derecho.|  
-|[operator>=](../standard-library/utility-operators.md#op_gt_eq)|Comprueba si el objeto de par del lado izquierdo del operador es mayor o igual que el objeto de par del lado derecho.|  
+|[forward](../standard-library/utility-functions.md#forward)|Preserves the reference type (either `lvalue` or `rvalue`) of the argument from being obscured by perfect forwarding.|  
+|[get](../standard-library/utility-functions.md#get)|A function that gets an element from a `pair` object.|  
+|[make_pair](../standard-library/utility-functions.md#make_pair)|A template helper function used to construct objects of type `pair`, where the component types are based on the data types passed as parameters.|  
+|[move](../standard-library/utility-functions.md#move)|Returns the passed in argument as an `rvalue` reference.|  
+|[swap](../standard-library/utility-functions.md#swap)|Exchanges the elements of two `pair` objects.|  
   
-### <a name="structs"></a>Estructuras  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[operator!=](../standard-library/utility-operators.md#op_neq)|Tests if the pair object on the left side of the operator is not equal to the pair object on the right side.|  
+|[operator==](../standard-library/utility-operators.md#op_eq_eq)|Tests if the pair object on the left side of the operator is equal to the pair object on the right side.|  
+|[operator<](../standard-library/utility-operators.md#op_lt)|Tests if the pair object on the left side of the operator is less than the pair object on the right side.|  
+|[operator\<=](../standard-library/utility-operators.md#op_gt_eq)|Tests if the pair object on the left side of the operator is less than or equal to the pair object on the right side.|  
+|[operator>](../standard-library/utility-operators.md#op_gt)|Tests if the pair object on the left side of the operator is greater than the pair object on the right side.|  
+|[operator>=](../standard-library/utility-operators.md#op_gt_eq)|Tests if the pair object on the left side of the operator is greater than or equal to the pair object on the right side.|  
+  
+### <a name="structs"></a>Structs  
   
 |||  
 |-|-|  
 |[identity](../standard-library/identity-structure.md)||  
-|[pair](../standard-library/pair-structure.md)|Tipo que proporciona la capacidad de tratar dos objetos como uno solo.|  
+|[pair](../standard-library/pair-structure.md)|A type that provides for the ability to treat two objects as a single object.|  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
- [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

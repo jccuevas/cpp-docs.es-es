@@ -1,5 +1,5 @@
 ---
-title: common_type (Clase) | Microsoft Docs
+title: common_type Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- common_type
 - type_traits/std::common_type
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 9166035a7de5414f23149354f0c8fb658f4a30fe
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: de91723a1957090d9df279cc1ad4788bdd20b696
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="commontype-class"></a>common_type (Clase)
-Determina el tipo común de uno o más tipos.  
+# <a name="commontype-class"></a>common_type Class
+Determines the common type of one or more types.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class... T>  
@@ -68,14 +67,14 @@ struct common_type<T, U, V...> {
 };
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- Lista de tipos que son [tipos completos](../c-language/incomplete-types.md) o nulos.  
+#### <a name="parameters"></a>Parameters  
+ List of types that are either [complete types](../c-language/incomplete-types.md) or void.  
   
-## <a name="remarks"></a>Comentarios  
- El miembro `type` es el tipo común al que se pueden convertir todos los tipos de la lista de parámetros.  
+## <a name="remarks"></a>Remarks  
+ The `type` member is the common type to which all types in the parameter list can be converted.  
   
-## <a name="example"></a>Ejemplo  
- El programa siguiente muestra algunos escenarios de uso correctos y realiza pruebas para obtener resultados.  
+## <a name="example"></a>Example  
+ The following program demonstrates some correct usage scenarios and tests for results.  
   
 ```cpp  
 // Compile using cl.exe /EHsc  
@@ -116,7 +115,7 @@ int main()
 }  
 ```  
   
-## <a name="output"></a>Salida  
+## <a name="output"></a>Output  
   
 ```
 Test for typedefs of common_type int
@@ -138,12 +137,12 @@ ModifiedIntType: false
 ClassType: true
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espacio de nombres:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

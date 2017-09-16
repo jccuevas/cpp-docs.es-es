@@ -1,49 +1,64 @@
 ---
-title: Operadores de &lt;stack&gt; | Microsoft Docs
+title: '&lt;stack&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- stack/std::operator!=
+- stack/std::operator&gt;
+- stack/std::operator&gt;=
+- stack/std::operator&lt;
+- stack/std::operator&lt;=
+- stack/std::operator==
+dev_langs:
+- C++
 ms.assetid: 9c1fc282-2f61-4727-9e80-84ea5d4934a2
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0f71a4dbef2f1128f9c29a2cc3993f78a06c4318
+helpviewer_keywords:
+- std::operator!= (stack)
+- std::operator&gt; (stack)
+- std::operator&gt;= (stack)
+- std::operator&lt; (stack)
+- std::operator&lt;= (stack)
+- std::operator== (stack)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6f217361b36b5f16360308fd94970de9c3a86669
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltstackgt-operators"></a>Operadores de &lt;stack&gt;
+# <a name="ltstackgt-operators"></a>&lt;stack&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- Comprueba si el objeto de pila del lado izquierdo del operador no es igual que el objeto de pila del lado derecho.  
+ Tests if the stack object on the left side of the operator is not equal to stack object on the right side.  
   
 ```  
 bool operator!=(const stack <Type, Container>& left, const stack <Type, Container>& right,);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Un objeto de tipo **stack**.  
+ An object of type **stack**.  
   
  `right`  
- Un objeto de tipo **stack**.  
+ An object of type **stack**.  
   
-### <a name="return-value"></a>Valor devuelto  
- **true** si las pilas no son iguales, o bien **false** si las pilas son iguales.  
+### <a name="return-value"></a>Return Value  
+ **true** if the stacks or stacks are not equal; **false** if stacks or stacks are equal.  
   
-### <a name="remarks"></a>Comentarios  
- La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. Dos pilas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.  
+### <a name="remarks"></a>Remarks  
+ The comparison between stacks objects is based on a pairwise comparison of their elements. Two stacks are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_op_me.cpp  
@@ -85,26 +100,26 @@ The stacks s1 and s3 are equal.
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- Comprueba si el objeto de pila del lado izquierdo del operador es menor que el objeto de pila del lado derecho.  
+ Tests if the stack object on the left side of the operator is less than the stack object on the right side.  
   
 ```  
 bool operator<(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Un objeto de tipo **stack**.  
+ An object of type **stack**.  
   
  `right`  
- Un objeto de tipo **stack**.  
+ An object of type **stack**.  
   
-### <a name="return-value"></a>Valor devuelto  
- **true** si la pila del lado izquierdo del operador es menor que y no igual que la pila del lado derecho del operador. Si no es así, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the stack on the left side of the operator is less than and not equal to the stack on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentarios  
- La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. La relación de menor que entre dos objetos de pila se basa en una comparación del primer par de elementos diferentes.  
+### <a name="remarks"></a>Remarks  
+ The comparison between stack objects is based on a pairwise comparison of their elements. The less-than relationship between two stack objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_op_lt.cpp  
@@ -165,26 +180,26 @@ The stack s1 from the top down is: ( 8 6 4 2 ).
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- Comprueba si el objeto de pila del lado izquierdo del operador es menor o igual que el objeto de pila del lado derecho.  
+ Tests if the stack object on the left side of the operator is less than or equal to the stack object on the right side.  
   
 ```  
 bool operator<=(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Un objeto de tipo **stack**.  
+ An object of type **stack**.  
   
  `right`  
- Un objeto de tipo **stack**.  
+ An object of type **stack**.  
   
-### <a name="return-value"></a>Valor devuelto  
- **true** si la pila del lado izquierdo del operador es menor o igual que la pila del lado derecho del operador. Si no es así, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the stack on the left side of the operator is less than or equal to the stack on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentarios  
- La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. La relación de menor o igual entre dos objetos de pila se basa en una comparación del primer par de elementos diferentes.  
+### <a name="remarks"></a>Remarks  
+ The comparison between stack objects is based on a pairwise comparison of their elements. The less than or equal to relationship between two stack objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_op_le.cpp  
@@ -228,26 +243,26 @@ The stack s1 is less than or equal to the stack s3.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Comprueba si el objeto de pila del lado izquierdo del operador es igual al objeto de pila del lado derecho.  
+ Tests if the stack object on the left side of the operator is equal to stack object on the right side.  
   
 ```  
 bool operator==(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Un objeto de tipo **stack**.  
+ An object of type **stack**.  
   
  `right`  
- Un objeto de tipo **stack**.  
+ An object of type **stack**.  
   
-### <a name="return-value"></a>Valor devuelto  
- **true** si las pilas son iguales, o bien **false** si las pilas no son iguales.  
+### <a name="return-value"></a>Return Value  
+ **true** if the stacks or stacks are equal; **false** if stacks or stacks are not equal.  
   
-### <a name="remarks"></a>Comentarios  
- La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. Dos pilas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.  
+### <a name="remarks"></a>Remarks  
+ The comparison between stack objects is based on a pairwise comparison of their elements. Two stacks are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_op_eq.cpp  
@@ -289,26 +304,26 @@ The stacks s1 and s3 are equal.
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- Comprueba si el objeto de pila del lado izquierdo del operador es mayor que el objeto de pila del lado derecho.  
+ Tests if the stack object on the left side of the operator is greater than the stack object on the right side.  
   
 ```  
 bool operator>(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Un objeto de tipo **stack**.  
+ An object of type **stack**.  
   
  `right`  
- Un objeto de tipo **stack**.  
+ An object of type **stack**.  
   
-### <a name="return-value"></a>Valor devuelto  
- **true** si la pila del lado izquierdo del operador es mayor que y no igual que la pila del lado derecho del operador. Si no es así, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the stack on the left side of the operator is greater than and not equal to the stack on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentarios  
- La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. La relación de mayor que entre dos objetos de pila se basa en una comparación del primer par de elementos diferentes.  
+### <a name="remarks"></a>Remarks  
+ The comparison between stack objects is based on a pairwise comparison of their elements. The greater-than relationship between two stack objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_op_gt.cpp  
@@ -354,26 +369,26 @@ The stack s1 is greater than the stack s3.
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- Comprueba si el objeto de pila del lado izquierdo del operador es mayor o igual que el objeto de pila del lado derecho.  
+ Tests if the stack object on the left side of the operator is greater than or equal to the stack object on the right side.  
   
 ```  
 bool operator>=(const stack <Type, Container>& left, const stack <Type, Container>& right);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `left`  
- Un objeto de tipo **stack**.  
+ An object of type **stack**.  
   
  `right`  
- Un objeto de tipo **stack**.  
+ An object of type **stack**.  
   
-### <a name="return-value"></a>Valor devuelto  
- **true** si la pila del lado izquierdo del operador es estrictamente menor que la pila del lado derecho del operador. En caso contrario, es **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the stack on the left side of the operator is strictly less than the stack on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Comentarios  
- La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. La relación de mayor o igual entre dos objetos de pila se basa en una comparación del primer par de elementos diferentes.  
+### <a name="remarks"></a>Remarks  
+ The comparison between stack objects is based on a pairwise comparison of their elements. The greater than or equal to relationship between two stack objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Ejemplo  
+### <a name="example"></a>Example  
   
 ```cpp  
 // stack_op_ge.cpp  
@@ -417,7 +432,7 @@ The stack s1 is less than the stack s2.
 The stack s1 is greater than or equal to the stack s3.  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [\<stack>](../standard-library/stack.md)
 
 

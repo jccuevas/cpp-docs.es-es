@@ -1,42 +1,61 @@
 ---
-title: "Usar un control de tecla de acceso r&#225;pido | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHotKeyCtrl (clase), utilizar"
-  - "controles de tecla de acceso rápido"
+title: Using a Hot Key Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHotKeyCtrl class [MFC], using
+- hot key controls
 ms.assetid: cdd6524b-cc43-447f-b151-164273559685
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Usar un control de tecla de acceso r&#225;pido
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9590d2ea6c374523b2d369f50affab16b7467331
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-El uso típico de una tecla de acceso rápido sigue el modelo siguiente:  
+---
+# <a name="using-a-hot-key-control"></a>Using a Hot Key Control
+Typical usage of a hot key control follows the pattern below:  
   
--   Se crea el control.  Si el control se especifica en una plantilla de cuadro de diálogo, la creación es automática cuando se crea el cuadro de diálogo. \(Debe tener un miembro de [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) en la clase de diálogo correspondiente al control de la tecla de acceso rápido\). Alternativamente, puede utilizar la función miembro de [crear](../Topic/CHotKeyCtrl::Create.md) para crear el control como una ventana secundaria de cualquier ventana.  
+-   The control is created. If the control is specified in a dialog box template, creation is automatic when the dialog box is created. (You should have a [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) member in your dialog class that corresponds to the hot key control.) Alternatively, you can use the [Create](../mfc/reference/chotkeyctrl-class.md#create) member function to create the control as a child window of any window.  
   
--   Si desea establecer un valor predeterminado para el control, llame a la función miembro de [SetHotKey](../Topic/CHotKeyCtrl::SetHotKey.md) .  Si desea prohibir a ciertos estados de cambio, llame a [SetRules](../Topic/CHotKeyCtrl::SetRules.md).  Para los controles de un cuadro de diálogo, un buen momento para ello es la función de [OnInitDialog](../Topic/CDialog::OnInitDialog.md) del cuadro de diálogo.  
+-   If you want to set a default value for the control, call the [SetHotKey](../mfc/reference/chotkeyctrl-class.md#sethotkey) member function. If you want to prohibit certain shift states, call [SetRules](../mfc/reference/chotkeyctrl-class.md#setrules). For controls in a dialog box, a good time to do this is in the dialog box's [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) function.  
   
--   El usuario interactúa con el control presionando una combinación de teclas de acceso rápido al control de la tecla de acceso rápido tiene el foco.  El usuario a indica de algún modo que esta tarea se completa, quizás haciendo clic en un botón del cuadro de diálogo.  
+-   The user interacts with the control by pressing a hot key combination when the hot key control has focus. The user then somehow indicates that this task is complete, perhaps by clicking a button in the dialog box.  
   
--   Cuando se notifica al programa que el usuario ha seleccionado una tecla de acceso rápido, debe utilizar la función [GetHotKey](../Topic/CHotKeyCtrl::GetHotKey.md) miembro para recuperar los valores virtuales de estado de clave y de cambio de control de la tecla de acceso rápido.  
+-   When your program is notified that the user has selected a hot key, it should use the member function [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) to retrieve the virtual key and shift state values from the hot key control.  
   
--   Una vez que ya sabe qué clave puede establecer el usuario seleccionado, la tecla de acceso rápido utilizando uno de los métodos descritos en [Establecer una tecla de acceso rápido](../mfc/setting-a-hot-key.md).  
+-   Once you know what key the user selected, you can set the hot key using one of the methods described in [Setting a Hot Key](../mfc/setting-a-hot-key.md).  
   
--   Si el control de la tecla de acceso rápido está en un cuadro de diálogo, éste y el objeto de `CHotKeyCtrl` se destruyeron automáticamente.  Si no, deberá asegurarse de que el control y el objeto de `CHotKeyCtrl` están destruirse correctamente.  
+-   If the hot key control is in a dialog box, it and the `CHotKeyCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CHotKeyCtrl` object are properly destroyed.  
   
-## Vea también  
- [Usar CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

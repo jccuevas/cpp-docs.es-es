@@ -1,34 +1,53 @@
 ---
-title: "Destruir el control de lista | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl (clase), destruir controles"
-  - "controles de lista, destruir"
+title: Destroying the List Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- list controls [MFC], destroying
+- CListCtrl class [MFC], destroying controls
 ms.assetid: 513ec820-3a02-49d2-b073-a6a7a3fc91b3
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Destruir el control de lista
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5d0062a0ca0ebbc1d5fa79ae08d8d063089649a0
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Si se inserta el objeto de [CListCtrl](../mfc/reference/clistctrl-class.md) como miembro de datos de una clase de vista o de cuadro de diálogo, se destruye cuando se destruye al propietario.  Si utiliza [CListView](../mfc/reference/clistview-class.md), el marco destruye el control cuando destruye la vista.  
+---
+# <a name="destroying-the-list-control"></a>Destroying the List Control
+If you embed your [CListCtrl](../mfc/reference/clistctrl-class.md) object as a data member of a view or dialog class, it is destroyed when its owner is destroyed. If you use a [CListView](../mfc/reference/clistview-class.md), the framework destroys the control when it destroys the view.  
   
- Si se organiza para algunos de los datos de la lista que se almacenarán en la aplicación en lugar del control de lista, necesitará organizar para la desasignación.  Para obtener más información, vea [Elementos y el De Callback de devolución de llamada](http://msdn.microsoft.com/library/windows/desktop/bb774736) en [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ If you arrange for some of your list data to be stored in the application rather than the list control, you will need to arrange for its deallocation. For more information, see [Callback Items and the Callback Mask](http://msdn.microsoft.com/library/windows/desktop/bb774736) in the Windows SDK.  
   
- Además, es responsable de desasignar cualquier lista de imágenes que creó y que asociado al objeto de control list.  
+ In addition, you are responsible for deallocating any image lists you created and associated with the list control object.  
   
-## Vea también  
- [Usar CListCtrl](../mfc/using-clistctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: recursive_mutex (Clase) | Microsoft Docs
+title: recursive_mutex Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,98 +35,104 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0e5fccf4d1c1019d8922ae0676d7f5fe8e8dfd2a
+helpviewer_keywords:
+- std::recursive_mutex [C++]
+- std::recursive_mutex [C++], recursive_mutex
+- std::recursive_mutex [C++], lock
+- std::recursive_mutex [C++], try_lock
+- std::recursive_mutex [C++], unlock
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b95335a0b67f7345dd61a1de5d6da4589055dc72
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="recursivemutex-class"></a>recursive_mutex (Clase)
-Representa un *tipo de exclusión mutua*. Al contrario que [mutex](../standard-library/mutex-class-stl.md), el comportamiento de las llamadas a métodos de bloqueo para objetos que ya están bloqueados está bien definido.  
+# <a name="recursivemutex-class"></a>recursive_mutex Class
+Represents a *mutex type*. In contrast to [mutex](../standard-library/mutex-class-stl.md), the behavior of calls to locking methods for objects that are already locked is well-defined.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```
 class recursive_mutex;
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[recursive_mutex](#recursive_mutex)|Construye un objeto `recursive_mutex`.|  
-|[~recursive_mutex (Destructor)](#dtorrecursive_mutex_destructor)|Libera todos los recursos usados por el objeto `recursive_mutex`.|  
+|[recursive_mutex](#recursive_mutex)|Constructs a `recursive_mutex` object.|  
+|[~recursive_mutex Destructor](#dtorrecursive_mutex_destructor)|Releases any resources that are used by the `recursive_mutex` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[lock](#lock)|Bloquea el subproceso de llamada hasta que este obtiene la propiedad de la exclusión mutua.|  
-|[try_lock](#try_lock)|Intenta obtener la propiedad de la exclusión mutua sin bloquearla.|  
-|[unlock](#unlock)|Libera la propiedad de la exclusión mutua.|  
+|[lock](#lock)|Blocks the calling thread until the thread obtains ownership of the mutex.|  
+|[try_lock](#try_lock)|Attempts to obtain ownership of the mutex without blocking.|  
+|[unlock](#unlock)|Releases ownership of the mutex.|  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<mutex >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<mutex>  
   
- **Espacio de nombres:** std  
+ **Namespace:** std  
   
-##  <a name="lock"></a> lock  
- Bloquea el subproceso que realiza la llamada hasta que este obtiene la propiedad `mutex`.  
+##  <a name="lock"></a>  lock  
+ Blocks the calling thread until the thread obtains ownership of the `mutex`.  
   
 ```cpp  
 void lock();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Si el subproceso que realiza la llamada ya posee `mutex`, el método se devuelve inmediatamente, y el bloqueo anterior permanece vigente.  
+### <a name="remarks"></a>Remarks  
+ If the calling thread already owns the `mutex`, the method returns immediately, and the previous lock remains in effect.  
   
-##  <a name="recursive_mutex"></a> recursive_mutex  
- Crea un objeto `recursive_mutex` que no está bloqueado.  
+##  <a name="recursive_mutex"></a>  recursive_mutex  
+ Constructs a `recursive_mutex` object that is not locked.  
   
 ```cpp  
 recursive_mutex();
 ```  
   
-##  <a name="dtorrecursive_mutex_destructor"></a> ~recursive_mutex  
- Libera todos los recursos usados por el objeto.  
+##  <a name="dtorrecursive_mutex_destructor"></a>  ~recursive_mutex  
+ Releases any resources that are used by the object.  
   
 ```cpp  
 ~recursive_mutex();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Si el objeto está bloqueado cuando se ejecuta el destructor, el comportamiento es indefinido.  
+### <a name="remarks"></a>Remarks  
+ If the object is locked when the destructor runs, the behavior is undefined.  
   
-##  <a name="try_lock"></a> try_lock  
- Intenta obtener la propiedad de `mutex` sin bloquearlo.  
+##  <a name="try_lock"></a>  try_lock  
+ Attempts to obtain ownership of the `mutex` without blocking.  
   
 ```cpp  
 bool try_lock() noexcept;
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- `true` si el método obtiene correctamente la propiedad de `mutex` o si el subproceso que realiza la llamada ya posee `mutex`; de otro modo, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the method successfully obtains ownership of the `mutex` or if the calling thread already owns the `mutex`; otherwise, `false`.  
   
-### <a name="remarks"></a>Comentarios  
- Si el subproceso que realiza la llamada ya posee `mutex`, la función devuelve `true` inmediatamente, y el bloqueo anterior permanece vigente.  
+### <a name="remarks"></a>Remarks  
+ If the calling thread already owns the `mutex`, the function immediately returns `true`, and the previous lock remains in effect.  
   
-##  <a name="unlock"></a> unlock  
- Libera la propiedad de la exclusión mutua.  
+##  <a name="unlock"></a>  unlock  
+ Releases ownership of the mutex.  
   
 ```cpp  
 void unlock();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Este método libera la propiedad de `mutex` solo después de que se llame tantas veces como se ha llamado a [lock](#lock) y [try_lock](#try_lock) correctamente en el objeto `recursive_mutex`.  
+### <a name="remarks"></a>Remarks  
+ This method releases ownership of the `mutex` only after it is called as many times as [lock](#lock) and [try_lock](#try_lock) have been called successfully on the `recursive_mutex` object.  
   
- Si el subproceso que realiza la llamada no posee `mutex`, el comportamiento es indefinido.  
+ If the calling thread does not own the `mutex`, the behavior is undefined.  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
 

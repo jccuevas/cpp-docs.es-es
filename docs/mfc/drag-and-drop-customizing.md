@@ -1,46 +1,64 @@
 ---
-title: "Arrastrar y colocar: Personalizaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arrastrar y colocar, llamar a DoDragDrop"
-  - "arrastrar y colocar, COleDataSource (objeto)"
-  - "arrastrar y colocar, personalizar el comportamiento"
-  - "arrastrar y colocar, implementar en aplicaciones no OLE"
-  - "funciones OLE de arrastrar y colocar, personalizar el comportamiento"
+title: 'Drag and Drop: Customizing | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- drag and drop [MFC], implementing in non-OLE applications
+- drag and drop [MFC], customizing behavior
+- drag and  [MFC], COleDataSource object
+- drag and drop [MFC], calling DoDragDrop
+- OLE drag and drop [MFC], customizing behavior
 ms.assetid: 03369d3e-46bf-4140-b58c-d0c9657cf38a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Arrastrar y colocar: Personalizaci&#243;n
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bdfdc32dc8f9b97becf8fd1189123b19d483c30b
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La implementación predeterminada de la característica de arrastrar y colocar es suficiente para la mayoría de las aplicaciones.  Sin embargo, algunas aplicaciones pueden requerir que este comportamiento estándar está cambiado.  En este artículo se explica los pasos necesarios para cambiar estos valores predeterminados.  Además, puede utilizar esta técnica para establecer las aplicaciones que no admiten documentos compuestos como orígenes de posición.  
+---
+# <a name="drag-and-drop-customizing"></a>Drag and Drop: Customizing
+The default implementation of the drag-and-drop feature is sufficient for most applications. However, some applications may require that this standard behavior be changed. This article explains the steps necessary to change these defaults. In addition, you can use this technique to establish applications that do not support compound documents as drop sources.  
   
- Si está personalizando el comportamiento estándar de arrastrar y colocar de OLE, o tiene una aplicación de no OLE, debe crear un objeto de `COleDataSource` para contener datos.  Cuando el usuario inicia una operación de arrastrar y colocar, el código debe llamar a la función de `DoDragDrop` de este objeto en lugar de otras clases que las operaciones de arrastrar y colocar admiten.  
+ If you are customizing standard OLE drag-and-drop behavior, or you have a non-OLE application, you must create a `COleDataSource` object to contain the data. When the user starts a drag-and-drop operation, your code should call the `DoDragDrop` function from this object instead of from other classes that support drag-and-drop operations.  
   
- Opcionalmente, puede crear un objeto de `COleDropSource` para controlar el destino y para invalidar algunas de sus funciones según el tipo de comportamiento que desea cambiar.  Este objeto de origen de posición se pasa a `COleDataSource::DoDragDrop` para cambiar el comportamiento predeterminado de estas funciones.  Estas opciones diferentes permiten mucha flexibilidad para admite operaciones de arrastrar y colocar en la aplicación.  Para obtener más información sobre los orígenes de datos, vea el artículo [Objetos de datos y orígenes de datos \(OLE\)](../mfc/data-objects-and-data-sources-ole.md).  
+ Optionally, you can create a `COleDropSource` object to control the drop and override some of its functions depending on the type of behavior you want to change. This drop-source object is then passed to `COleDataSource::DoDragDrop` to change the default behavior of these functions. These different options allow a great deal of flexibility in how you support drag-and-drop operations in your application. For more information about data sources, see the article [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md).  
   
- Puede invalidar las siguientes funciones para personalizar las operaciones de arrastrar y colocar:  
+ You can override the following functions to customize drag-and-drop operations:  
   
-|Invalidación|Para personalizar|  
-|------------------|-----------------------|  
-|`OnBeginDrag`|Cómo arrastrar se inicia después de llamar a `DoDragDrop`.|  
-|`GiveFeedback`|Comentarios visuales, como apariencia de cursor, para distintos resultados de entrega.|  
-|`QueryContinueDrag`|La finalización de una operación de arrastrar y colocar.  Esta función permite comprobar los estados de la tecla modificadora durante la operación de arrastre.|  
+|Override|To customize|  
+|--------------|------------------|  
+|`OnBeginDrag`|How dragging is initiated after you call `DoDragDrop`.|  
+|`GiveFeedback`|Visual feedback, such as cursor appearance, for different drop results.|  
+|`QueryContinueDrag`|The termination of a drag-and-drop operation. This function enables you to check modifier key states during the drag operation.|  
   
-## Vea también  
- [Arrastrar y colocar \(OLE\)](../mfc/drag-and-drop-ole.md)   
+## <a name="see-also"></a>See Also  
+ [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md)   
  [COleDropSource Class](../mfc/reference/coledropsource-class.md)   
  [COleDataSource Class](../mfc/reference/coledatasource-class.md)
+

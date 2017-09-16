@@ -1,5 +1,5 @@
 ---
-title: Clase mask_array | Microsoft Docs
+title: mask_array Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- mask_array
 - valarray/std::mask_array
 dev_langs:
 - C++
@@ -35,28 +34,28 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: bdc17f9cd2964cc18895b7fe4063aabd054268a1
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f2e587423bbd706ac732180872a56db920f661a1
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="maskarray-class"></a>mask_array (Clase)
-Clase de plantilla auxiliar e interna que admite objetos que son subconjuntos de valarrays principales, especificados con una expresión booleana, proporcionando operaciones entre matrices de subconjuntos.  
+# <a name="maskarray-class"></a>mask_array Class
+An internal, auxiliary template class that supports objects that are subsets of parent valarrays, specified with a Boolean expression, by providing operations between the subset arrays.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
   
   
-## <a name="remarks"></a>Comentarios  
- La clase describe un objeto que almacena una referencia a un objeto **va** de la clase [valarray](../standard-library/valarray-class.md)**\<Type>**, junto con un objeto **ba** de la clase [valarray\<bool>](../standard-library/valarray-bool-class.md), que describe la secuencia de los elementos que se pueden seleccionar desde el objeto **valarray\<Type>**.  
+## <a name="remarks"></a>Remarks  
+ The class describes an object that stores a reference to an object **va** of class [valarray](../standard-library/valarray-class.md)**\<Type>**, along with an object **ba** of class [valarray\<bool>](../standard-library/valarray-bool-class.md), which describes the sequence of elements to select from the **valarray\<Type>** object.  
   
- La única manera de construir un objeto **mask_array\<Type>** consiste en escribir una expresión de formato [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at). Las funciones miembro de la clase mask_array se comportarán como las firmas de función correspondientes definidas para **valarray\<Type>**, excepto en que solo la secuencia de elementos seleccionados se ve afectada.  
+ You construct a **mask_array\<Type>** object only by writing an expression of the form [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at). The member functions of class mask_array then behave like the corresponding function signatures defined for **valarray\<Type>**, except that only the sequence of selected elements is affected.  
   
- La secuencia consta como máximo de elementos **ba.size** . Un elemento *J* solo se incluye si **ba**[ *J*] es true. Por lo tanto, hay tantos elementos en la secuencia de elementos true en **ba**. Si `I` es el índice del elemento true más bajo en **ba**, **va**[ `I`] es el elemento cero de la secuencia seleccionada.  
+ The sequence consists of at most **ba.size** elements. An element *J* is included only if **ba**[ *J*] is true. Thus, there are as many elements in the sequence as there are true elements in **ba**. If `I` is the index of the lowest true element in **ba**, then **va**[ `I`] is element zero in the selected sequence.  
   
-## <a name="example"></a>Ejemplo:  
+## <a name="example"></a>Example:  
   
 ```  
 // mask_array.cpp  
@@ -90,19 +89,19 @@ int main( )
 }  
 ```  
   
-### <a name="output"></a>Salida  
+### <a name="output"></a>Output  
   
 ```  
 The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).  
 The modified operand valarray is:  (0 -1 2 -1 10 -1 10 -1 10 -1).  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<valarray>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<valarray>  
   
- **Espacio de nombres:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

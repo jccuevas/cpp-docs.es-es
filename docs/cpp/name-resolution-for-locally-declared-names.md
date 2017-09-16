@@ -1,31 +1,50 @@
 ---
-title: "Resoluci&#243;n de nombres declarados localmente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Name Resolution for Locally Declared Names | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 743b88f3-de11-48f4-ae83-931449ea3886
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Resoluci&#243;n de nombres declarados localmente
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63a5b95c5b4a1df7f850a4cf01b54b63e30196e6
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Se puede hacer referencia al propio nombre de la pantalla con o sin argumentos de plantilla.  En el ámbito de una plantilla de clase, el nombre en sí hace referencia a la plantilla.  En el ámbito de una especialización de plantilla o especialización parcial, el nombre hace referencia a la especialización o especialización parcial.  También se puede hacer referencia a otras especializaciones o especializaciones parciales de la plantilla con los argumentos de plantilla adecuados.  
+---
+# <a name="name-resolution-for-locally-declared-names"></a>Name Resolution for Locally Declared Names
+
+The template's name itself can be referred to with or without the template arguments. In the scope of a class template, the name itself refers to the template. In the scope of a template specialization or partial specialization, the name alone refers to the specialization or partial specialization. Other specializations or partial specializations of the template can also be referenced, with the appropriate template arguments.  
   
-## Ejemplo  
- En el código siguiente se muestra que el nombre de una plantilla de clase A se interpreta de manera diferente en el ámbito de una especialización o especialización parcial.  
+## <a name="example"></a>Example
+
+ The following code shows that the class template's name A is interpreted differently in the scope of a specialization or partial specialization.  
   
-```  
+```cpp
 // template_name_resolution3.cpp  
 // compile with: /c  
 template <class T> class A {  
@@ -43,12 +62,13 @@ template<> class A<int> {
 };  
 ```  
   
-## Ejemplo  
- En el caso de un conflicto de nombres entre un parámetro de plantilla y otro objeto, el parámetro de plantilla se puede o no se puede ocultar.  Las reglas siguientes ayudarán a determinar la prioridad.  
+## <a name="example"></a>Example
+
+ In the case of a name conflict between a template parameter and another object, the template parameter can or cannot be hidden. The following rules will help determine precedence.  
   
- El parámetro de plantilla está dentro del ámbito desde el punto donde aparece por primera vez hasta el final de la plantilla de clase o función.  Si el nombre aparece de nuevo en la lista de argumentos de plantilla o en la lista de clases base, hace referencia al mismo tipo.  En C\+\+ estándar, no se puede declarar ningún otro nombre que sea idéntico al parámetro de plantilla en el mismo ámbito.  Una extensión de Microsoft permite que el parámetro de plantilla se vuelva a definir en el ámbito de la plantilla.  En el ejemplo siguiente se muestra cómo usar el parámetro de plantilla en la especificación base de una plantilla de clase.  
+ The template parameter is in scope from the point where it first appears until the end of the class or function template. If the name appears again in the template argument list or in the list of base classes, it refers to the same type. In standard C++, no other name that is identical to the template parameter can be declared in the same scope. A Microsoft extension allows the template parameter to be redefined in the scope of the template. The following example shows using the template parameter in the base specification of a class template.  
   
-```  
+```cpp
 // template_name_resolution4.cpp  
 // compile with: /EHsc  
 template <class T>  
@@ -62,10 +82,11 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- Al definir las funciones miembro de una plantilla fuera de la plantilla de clase, se puede usar un nombre de parámetro de plantilla diferente.  Si la definición de la función miembro de la plantilla utiliza un nombre diferente para el parámetro de plantilla que la declaración, y el nombre utilizado en la definición está en conflicto con otro miembro de la declaración, el miembro de la declaración de plantilla tiene prioridad.  
+## <a name="example"></a>Example
+
+ When defining a template's member functions outside the class template, a different template parameter name can be used. If the template member function definition uses a different name for the template parameter than the declaration does, and the name used in the definition conflicts with another member of the declaration, the member in the template declaration takes precedence.  
   
-```  
+```cpp
 // template_name_resolution5.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -92,11 +113,15 @@ int main() {
 }  
 ```  
   
-  **Z::Z\(\)**   
-## Ejemplo  
- Al definir una función de plantilla o una función miembro fuera del espacio de nombres en el que se declaró la plantilla, el argumento de plantilla tiene prioridad sobre los nombres de otros miembros del espacio de nombres.  
-  
+```Output  
+Z::Z()  
 ```  
+  
+## <a name="example"></a>Example
+
+ When defining a template function or member function outside the namespace in which the template was declared, the template argument takes precedence over the names of other members of the namespace.  
+  
+```cpp
 // template_name_resolution6.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -122,11 +147,15 @@ int main() {
 }  
 ```  
   
-  **C\<T\>::g**   
-## Ejemplo  
- En las definiciones que están fuera de la declaración de clase de plantilla, si una clase de plantilla tiene una clase base que no depende de un argumento de plantilla y si la clase base o uno de sus miembros tiene el mismo nombre que un argumento de plantilla, el nombre de la clase base o miembro oculta el argumento de plantilla.  
-  
+```Output  
+C<T>::g  
 ```  
+  
+## <a name="example"></a>Example
+
+ In definitions that are outside of the template class declaration, if a template class has a base class that does not depend on a template argument and if the base class or one of its members has the same name as a template argument, then the base class or member name hides the template argument.  
+  
+```cpp
 // template_name_resolution7.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -155,7 +184,12 @@ int main() {
 }  
 ```  
   
-  **Base**  
-**1**   
-## Vea también  
- [Resolución de nombres](../cpp/templates-and-name-resolution.md)
+```Output  
+Base  
+1  
+```  
+  
+## <a name="see-also"></a>See Also
+
+ [Name Resolution](../cpp/templates-and-name-resolution.md)
+

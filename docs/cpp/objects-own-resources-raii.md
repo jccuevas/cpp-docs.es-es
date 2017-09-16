@@ -1,52 +1,67 @@
 ---
-title: "Recursos propios de los objetos (RAII) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Objects Own Resources (RAII) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: f86b484e-5a27-4c3b-a92a-dfaa5dd6d93a
 caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# Recursos propios de los objetos (RAII)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 7ada23181e062a513e752055bd7531a895f698be
+ms.contentlocale: es-es
+ms.lasthandoff: 09/11/2017
 
-Asegúrese de que los objetos recursos propios.  Este principio también se conoce como la “adquisición de recurso es inicialización” o “RAII.”  
+---
+# <a name="objects-own-resources-raii"></a>Objects Own Resources (RAII)
+Make sure that objects own resources. This principle is also known as “resource acquisition is initialization” or “RAII.”  
   
-## Ejemplo  
- Pase cada “nuevo” objeto como un argumento de constructor a otro objeto con nombre que lo posee \(casi siempre unique\_ptr\).  
+## <a name="example"></a>Example  
+ Pass every “new” object as a constructor argument to another named object that owns it (almost always unique_ptr).  
   
 ```cpp  
 void f() {  
-  unique_ptr<widget> p( new widget(…) );  
-  my_class x( new widget() );  
-  …  
+    unique_ptr<widget> p( new widget() );  
+    my_class x( new widget() );  
+    // ...  
 } // automatic destruction and deallocation for both widget objects  
-  // automatic exception safety, as if “finally { p->dispose(); x.w.dispose(); }”  
-  
+  // automatic exception safety, as if "finally { p->dispose(); x.w.dispose(); }"  
 ```  
   
- Siempre inmediatamente pase a cualquier recurso a otro objeto que lo posee.  
+ Always immediately pass any new resource to another object that owns it.  
   
 ```cpp  
 void g() {  
-  other_class y( OpenFile() );  
-  …  
+    other_class y( OpenFile() );  
+    // ...  
 } // automatic closing and release for file resource  
-  // automatic exception safety, as if “finally { y.file.dispose(); }”  
-  
+  // automatic exception safety, as if "finally { y.file.dispose(); }"  
 ```  
   
-## Vea también  
- [Aquí está otra vez C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Referencia de lenguaje C\+\+](../cpp/cpp-language-reference.md)   
- [Biblioteca estándar de C\+\+](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)

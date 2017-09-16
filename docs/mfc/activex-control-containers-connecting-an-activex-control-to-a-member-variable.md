@@ -1,52 +1,71 @@
 ---
-title: "Contenedores de controles ActiveX: Conectar un control ActiveX a una variable de miembro | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contenedores de controles ActiveX [C++], obtener acceso a controles ActiveX"
-  - "contenedores de controles ActiveX [C++], controles ActiveX como variables de miembro"
-  - "controles ActiveX [C++], obtener acceso"
-  - "controles ActiveX [C++], variables de miembro del proyecto"
-  - "conectar controles ActiveX a variables de miembro del contenedor"
-  - "variables miembro [C++], controles ActiveX del proyecto"
+title: 'ActiveX Control Containers: Connecting an ActiveX Control to a Member Variable | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX control containers [MFC], accessing ActiveX controls
+- ActiveX controls [MFC], member variables of project
+- connecting ActiveX controls to container member variables
+- ActiveX controls [MFC], accessing
+- member variables [MFC], ActiveX controls in project
+- ActiveX control containers [MFC], ActiveX controls as member variables
 ms.assetid: 7898a336-440d-4a60-be43-cb062b807aee
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Contenedores de controles ActiveX: Conectar un control ActiveX a una variable de miembro
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7d79444d098c1946f6cd54d8d904a06c17923c3f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La manera más fácil de tener acceso a un control ActiveX dentro de la aplicación contenedora de control es asociar el control ActiveX con una variable miembro de la clase de diálogo que contendrá el control.  
+---
+# <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>ActiveX Control Containers: Connecting an ActiveX Control to a Member Variable
+The easiest way to access an ActiveX control from within its control container application is to associate the ActiveX control with a member variable of the dialog class that will contain the control.  
   
 > [!NOTE]
->  Ésta no es la única manera de tener acceso a un control incrustado dentro de una clase de contenedor, pero con el propósito de este artículo es suficiente.  
+>  This is not the only way to access an embedded control from within a container class, but for the purposes of this article it is sufficient.  
   
-### Agregar una variable miembro a la clase de diálogo  
+### <a name="adding-a-member-variable-to-the-dialog-class"></a>Adding a member variable to the dialog class  
   
-1.  En la vista de clases, haga clic con el botón secundario en la clase principal del diálogo para abrir el menú contextual.  Por ejemplo, `CContainerDlg`.  
+1.  From Class View, right-click the main dialog class to open the shortcut menu. For example, `CContainerDlg`.  
   
-2.  En el menú contextual, haga **Add** y de **Agregar variable**.  
+2.  From the shortcut menu, click **Add** and then **Add Variable**.  
   
-3.  En el asistente para agregar variables miembro, haga clic en **Control variable**.  
+3.  In the Add Member Variable Wizard, click **Control variable**.  
   
-4.  En el cuadro de lista de **Id. de control** , seleccione el identificador de control ActiveX incrustado.  Por ejemplo, `IDC_CIRCCTRL1`.  
+4.  In the **Control ID** list box, select the control ID of the embedded ActiveX control. For example, `IDC_CIRCCTRL1`.  
   
-5.  En el cuadro de **Nombre de la variable** , escriba un nombre.  
+5.  In the **Variable Name** box, enter a name.  
   
-     Por ejemplo, `m_circctl`.  
+     For example, `m_circctl`.  
   
-6.  Haga clic en **Finalizar** para aceptar las opciones y salir del asistente para agregar variables miembro.  
+6.  Click **Finish** to accept your choices and exit the Add Member Variable Wizard.  
   
-## Vea también  
- [Contenedores de controles ActiveX](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

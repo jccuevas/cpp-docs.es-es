@@ -1,5 +1,5 @@
 ---
-title: Clase CCustomTransition | Documentos de Microsoft
+title: CCustomTransition Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,7 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CCustomTransition class
+- CCustomTransition [MFC], CCustomTransition
+- CCustomTransition [MFC], Create
+- CCustomTransition [MFC], SetInitialValue
+- CCustomTransition [MFC], SetInitialVelocity
+- CCustomTransition [MFC], m_bInitialValueSpecified
+- CCustomTransition [MFC], m_bInitialVelocitySpecified
+- CCustomTransition [MFC], m_initialValue
+- CCustomTransition [MFC], m_initialVelocity
+- CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
 caps.latest.revision: 17
 author: mikeblome
@@ -43,74 +51,74 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
-ms.openlocfilehash: 483fb2ab84d2c41fe4666a4ea333c0be8b07caee
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 79f70e6666c79ccf3fa0e857a7350ab22357148e
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccustomtransition-class"></a>Clase CCustomTransition
-Implementa una transición personalizada.  
+# <a name="ccustomtransition-class"></a>CCustomTransition Class
+Implements a custom transition.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCustomTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCustomTransition::CCustomTransition](#ccustomtransition)|Construye un objeto de transición personalizada.|  
+|[CCustomTransition::CCustomTransition](#ccustomtransition)|Constructs a custom transition object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCustomTransition::Create](#create)|Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado. (Invalida [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
-|[CCustomTransition::SetInitialValue](#setinitialvalue)|Establece un valor inicial, que se aplica a una variable de animación asociada a esta transición.|  
-|[CCustomTransition::SetInitialVelocity](#setinitialvelocity)|Establece una velocidad inicial, que se aplica a una variable de animación asociada a esta transición.|  
+|[CCustomTransition::Create](#create)|Calls the transition library to create encapsulated transition COM object. (Overrides [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CCustomTransition::SetInitialValue](#setinitialvalue)|Sets an initial value, which will be applied to an animation variable associated with this transition.|  
+|[CCustomTransition::SetInitialVelocity](#setinitialvelocity)|Sets an initial velocity, which will be applied to an animation variable associated with this transition.|  
   
-### <a name="protected-data-members"></a>Miembros de datos protegidos  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|Especifica si se ha especificado el valor inicial con SetInitialValue.|  
-|[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|Especifica si se ha especificado el progreso inicial con SetInitialVelocity.|  
-|[CCustomTransition::m_initialValue](#m_initialvalue)|Almacena el valor inicial.|  
-|[CCustomTransition::m_initialVelocity](#m_initialvelocity)|Almacena el progreso inicial.|  
-|[CCustomTransition::m_pInterpolator](#m_pinterpolator)|Almacena un puntero a un interpolador personalizado.|  
+|[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|Specifies whether the initial value was specified with SetInitialValue.|  
+|[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|Specifies whether the initial velocity was specified with SetInitialVelocity.|  
+|[CCustomTransition::m_initialValue](#m_initialvalue)|Stores the initial value.|  
+|[CCustomTransition::m_initialVelocity](#m_initialvelocity)|Stores the initial velocity.|  
+|[CCustomTransition::m_pInterpolator](#m_pinterpolator)|Stores a pointer to a custom interpolator.|  
   
-## <a name="remarks"></a>Comentarios  
- La clase CCustomTransitions permite a los desarrolladores implementar transiciones personalizadas. Se crea y se utiliza como una transición estándar, pero su constructor acepta como parámetro, un puntero a un interpolador personalizado. Realice los pasos siguientes para usar transiciones personalizadas: 1. Derivar una clase CCustomInterpolator e implementar al menos InterpolateValue método. 2. Asegúrese de que la duración del objeto personalizado interpolador debe ser superior a la duración de la animación que se utiliza. 3. Crear una instancia (mediante el operador new) un objeto CCustomTransition y pasar un puntero a un interpolador personalizado en el constructor. 4. Llame a CCustomTransition::SetInitialValue y CCustomTransition::SetInitialVelocity si estos parámetros son necesarios para la interpolación personalizada. 5. Sitúe el puntero pase personalizado al método AddTransition del objeto de animación, cuyo valor debe animarse con el algoritmo personalizado. 6. Cuando se debe cambiar el valor del objeto de animación API de animación de Windows llamará InterpolateValue (y otros métodos relevantes) en CCustomInterpolator.  
+## <a name="remarks"></a>Remarks  
+ The CCustomTransitions class allows developers to implement custom transitions. It's created and used as a standard transition, but its constructor accepts as parameter a pointer to a custom interpolator. Perform the following steps to use custom transitions: 1. Derive a class from CCustomInterpolator and implement at least InterpolateValue method. 2. Ensure that the lifetime of custom interpolator object must be longer than duration of animation where it's used. 3. Instantiate (using operator new) a CCustomTransition object and pass a pointer to custom interpolator in the constructor. 4. Call CCustomTransition::SetInitialValue and CCustomTransition::SetInitialVelocity if these parameters are required for custom interpolation. 5. Pass the pointer to custom transition to AddTransition method of animation object, whose value should be animated with the custom algorithm. 6. When the value of animation object should change Windows Animation API will call InterpolateValue (and other relevant methods) in CCustomInterpolator.  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  `CCustomTransition`  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="ccustomtransition"></a>CCustomTransition::CCustomTransition  
- Construye un objeto de transición personalizada.  
+##  <a name="ccustomtransition"></a>  CCustomTransition::CCustomTransition  
+ Constructs a custom transition object.  
   
 ```  
 CCustomTransition(CCustomInterpolator* pInterpolator);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pInterpolator`  
- Puntero a un interpolador personalizado.  
+ A pointer to custom interpolator.  
   
-##  <a name="create"></a>CCustomTransition::Create  
- Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado.  
+##  <a name="create"></a>  CCustomTransition::Create  
+ Calls the transition library to create encapsulated transition COM object.  
   
 ```  
 virtual BOOL Create(
@@ -118,70 +126,70 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* pFactory);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pFactory`  
- Puntero al generador de transición, que es responsable de la creación de transiciones personalizadas.  
+ A pointer to transition factory, which is responsible for creation of custom transitions.  
   
-### <a name="return-value"></a>Valor devuelto  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Comentarios  
- Este método también puede establecer un valor inicial y velocidad inicial que se aplicará a una variable de animación, que está asociada a esta transición. Para ello es necesario llamar a SetInitialValue y SetInitialVelocity antes de que el marco de trabajo crea el objeto COM de transición encapsulado (ocurre cuando se llama a CAnimationController::AnimateGroup).  
+### <a name="remarks"></a>Remarks  
+ This method also can set initial value and initial velocity to be applied to an animation variable, which is associated with this transition. For this purpose you have to call SetInitialValue and SetInitialVelocity before the framework creates the encapsulated transition COM object (it happens when you call CAnimationController::AnimateGroup).  
   
-##  <a name="m_binitialvaluespecified"></a>CCustomTransition::m_bInitialValueSpecified  
- Especifica si se ha especificado el valor inicial con SetInitialValue.  
+##  <a name="m_binitialvaluespecified"></a>  CCustomTransition::m_bInitialValueSpecified  
+ Specifies whether the initial value was specified with SetInitialValue.  
   
 ```  
 BOOL m_bInitialValueSpecified;  
 ```  
   
-##  <a name="m_binitialvelocityspecified"></a>CCustomTransition::m_bInitialVelocitySpecified  
- Especifica si se ha especificado el progreso inicial con SetInitialVelocity.  
+##  <a name="m_binitialvelocityspecified"></a>  CCustomTransition::m_bInitialVelocitySpecified  
+ Specifies whether the initial velocity was specified with SetInitialVelocity.  
   
 ```  
 BOOL m_bInitialVelocitySpecified;  
 ```  
   
-##  <a name="m_initialvalue"></a>CCustomTransition::m_initialValue  
- Almacena el valor inicial.  
+##  <a name="m_initialvalue"></a>  CCustomTransition::m_initialValue  
+ Stores the initial value.  
   
 ```  
 DOUBLE m_initialValue;  
 ```  
   
-##  <a name="m_initialvelocity"></a>CCustomTransition::m_initialVelocity  
- Almacena el progreso inicial.  
+##  <a name="m_initialvelocity"></a>  CCustomTransition::m_initialVelocity  
+ Stores the initial velocity.  
   
 ```  
 DOUBLE m_initialVelocity;  
 ```  
   
-##  <a name="m_pinterpolator"></a>CCustomTransition::m_pInterpolator  
- Almacena un puntero a un interpolador personalizado.  
+##  <a name="m_pinterpolator"></a>  CCustomTransition::m_pInterpolator  
+ Stores a pointer to a custom interpolator.  
   
 ```  
 CCustomInterpolator* m_pInterpolator;  
 ```  
   
-##  <a name="setinitialvalue"></a>CCustomTransition::SetInitialValue  
- Establece un valor inicial, que se aplica a una variable de animación asociada a esta transición.  
+##  <a name="setinitialvalue"></a>  CCustomTransition::SetInitialValue  
+ Sets an initial value, which will be applied to an animation variable associated with this transition.  
   
 ```  
 void SetInitialValue(DOUBLE initialValue);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `initialValue`  
   
-##  <a name="setinitialvelocity"></a>CCustomTransition::SetInitialVelocity  
- Establece una velocidad inicial, que se aplica a una variable de animación asociada a esta transición.  
+##  <a name="setinitialvelocity"></a>  CCustomTransition::SetInitialVelocity  
+ Sets an initial velocity, which will be applied to an animation variable associated with this transition.  
   
 ```  
 void SetInitialVelocity(DOUBLE initialVelocity);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `initialVelocity`  
   
-## <a name="see-also"></a>Vea también  
- [Clases](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

@@ -1,99 +1,116 @@
 ---
-title: "Conceptos b&#225;sicos de HTML | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "HTML, acerca de HTML"
+title: HTML Basics | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# Conceptos b&#225;sicos de HTML
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 765f52d5de6f85346eefe13ce60db45520a25552
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La mayoría de los exploradores tienen la capacidad de examinar el código fuente HTML de las páginas que se examina.  Cuando se ve el origen que verá varias etiquetas HTML \(lenguaje de marcación de hipertexto\), delimitadas por corchetes angulares \(\<\>\), están intercalados con el texto.  
+---
+# <a name="html-basics"></a>HTML Basics
+Most browsers have the capability of examining the HTML source of the pages you browse. When you view the source you will see a number of HTML (Hypertext markup language) tags, surrounded by angle brackets(<>), interspersed with text.  
   
- Los pasos bajo las etiquetas HTML de uso para compilar una página Web sencilla.  En estos pasos, escribirá el texto sin formato de un archivo en el Bloc de notas, realizará algunos cambios, guarde el archivo, y recargará la página en el explorador para ver los cambios.  
+ The steps below use HTML tags to build a simple Web page. In these steps, you'll type plain text into a file in Notepad, make a few changes, save the file, and reload your page in the browser to see your changes.  
   
-#### Para crear un archivo HTML  
+#### <a name="to-create-an-html-file"></a>To create an HTML file  
   
-1.  Abra Bloc de notas o cualquier editor de texto sin formato.  
+1.  Open Notepad or any plain text editor.  
   
-2.  En el menú de **archivo** , elija `New`.  
+2.  From the **File** menu, choose `New`.  
   
-3.  Escriba las líneas siguientes:  
+3.  Type the following lines:  
   
-    ```  
-    <HTML>  
-    <HEAD>  
-    <TITLE>Top HTML Tags</TITLE>  
-    </HEAD>  
-    </HTML>  
-    ```  
+ ```  
+ <HTML>  
+ <HEAD>  
+ <TITLE>Top HTML Tags</TITLE>  
+ </HEAD>  
+ </HTML>  
+ ```  
   
-4.  En el menú de **archivo** , elija **Guardar**, y guarde el archivo como c:\\webpages\\First.htm.  Deje abierto el archivo en el editor.  
+4.  From the **File** menu, choose **Save**, and save the file as c:\webpages\First.htm. Leave the file open in the editor.  
   
-5.  Cambie al explorador y, en el menú de **archivo** , elija **Abierta**, o escriba `file://C:/webpages/first.htm` en el cuadro de edición de la dirección URL del explorador.  Debe ver una página en blanco con la ventana generación “etiquetas HTML máximas.”  
+5.  Switch to your browser, and from the **File** menu, choose **Open**, or type `file://C:/webpages/first.htm` in the browser's URL edit box. You should see a blank page with the window caption "Top HTML Tags."  
   
-     Observe las etiquetas están emparejadas y se incluyen entre corchetes angulares.  Las etiquetas no distinguen entre mayúsculas y minúsculas, pero el uso de mayúsculas suele usarse para crear que las etiquetas se resaltan.  
+     Notice the tags are paired and are included in angle brackets. Tags are not case-sensitive, but capitalization is often used to make tags stand out.  
   
-     La etiqueta \<HTML\> comienza el documento, y label \/HTML \<\> end.  Finalizando las etiquetas \(necesarias no siempre\) es igual que la etiqueta inicial, pero tiene una barra diagonal \(\/\) delante de la etiqueta.  No puede haber espacios entre el corchete angular \(\<\) y el inicio de la etiqueta.  
+     The tag \<HTML> starts the document, and the tag \</HTML> ends it. Ending tags (not always required) are the same as the starting tag, but have a forward slash (/) in front of the tag. There should be no spaces between the angle bracket (<) and the start of your tag.  
   
-6.  Vuelva al Bloc de notas, y después \<de la\> línea de \/HEAD, escriba:  
+6.  Switch back to Notepad, and after the \</HEAD> line, type:  
   
-    ```  
-    <BODY>  
+ ```  
+ <BODY>  
     HTML is swell.  
     Life is good.  
-    </BODY>  
-    ```  
+ </BODY>  
+ ```  
   
-7.  En el menú de **archivo** , elija **Guardar**.  
+7.  From the **File** menu, choose **Save**.  
   
-8.  Vuelva al explorador y actualizan la página.  
+8.  Switch back to your browser and refresh the page.  
   
-     Las palabras aparecerán en el área de cliente de la ventana del explorador.  Observe que el retorno de carro se omite.  Si desea tener un salto de línea, debe incluir una etiqueta de `<BR>` después de la primera línea.  
+     The words will appear in the client area of your browser's window. Notice that your carriage return is ignored. If you want to have a line break, you must include a `<BR>` tag after the first line.  
   
-     Para todos los pasos siguientes, insertar el texto en cualquier parte entre \<el CUERPO\> y \<\/BODY\> para agregar el cuerpo del documento.  
+     For all the steps that follow, insert the text anywhere between \<BODY> and \</BODY> to add to the body of your document.  
   
-9. Agregue un encabezado:  
+9. Add a header:  
   
-    ```  
-    <H3>Here's the big picture</H3>  
-    ```  
+ ```  
+ <H3>Here's the big picture</H3>  
+ ```  
   
-10. Agregue una imagen, mediante un archivo .gif guardado en el mismo directorio que la página:  
+10. Add an image, using a .gif file saved in the same directory as your page:  
   
-    ```  
-    <IMG src="yourfile.gif">  
-    ```  
+ ```  
+ <IMG src="yourfile.gif">  
+ ```  
   
-11. Agregue una lista:  
+11. Add a list:  
   
-    ```  
-    <UL>Make me an unordered list.  
-    <LI>One programmer</LI>  
-    <LI>Ten SDKs</LI>  
-    <LI>Great Internet Apps</LI>  
-    </UL>  
-    ```  
+ ```  
+ <UL>Make me an unordered list.  
+ <LI>One programmer</LI>  
+ <LI>Ten SDKs</LI>  
+ <LI>Great Internet Apps</LI>  
+ </UL>  
+ ```  
   
-12. El número la lista en su lugar, utiliza OL\> emparejado \<y \<\/OL\> etiqueta en \<su lugar UL\> y \<etiquetas\> de \/UL.  
+12. To number the list instead, use paired \<OL> and \</OL> tags in place of the \<UL> and \</UL> tags.  
   
- Esto debe comenzar.  Si ve grandes característica en una página Web, puede averiguar cómo se creó examinando el código fuente HTML.  Los editores HTML como portada de Microsoft se pueden utilizar para crear páginas simples y avanzado.  
+ That should get you started. If you see a great feature on a Web page, you can find out how it was created by examining the HTML source. HTML editors such as Microsoft Front Page can be used to create both simple and advanced pages.  
   
- A continuación se muestra el código fuente HTML completo del archivo que ha estado compilar:  
+ Here's the entire HTML source for the file you've been building:  
   
 ```  
 <HTML>  
@@ -114,9 +131,11 @@ Life is good.
 </HTML>  
 ```  
   
- Para obtener una descripción completa de etiquetas, los atributos, y las extensiones, vea la especificación del Lenguaje de marcado de hipertexto \(HTML\):  
+ For a complete description of tags, attributes, and extensions, see the Hypertext Markup Language (HTML) specification:  
   
- [http:\/\/www.w3.org\/pub\/WWW\/MarkUp\/](http://www.w3.org/pub/WWW/MarkUp/)  
+ [http://www.w3.org/pub/WWW/MarkUp/](http://www.w3.org/pub/www/markup/)  
   
-## Vea también  
- [Fundamentos de programación para Internet de MFC](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

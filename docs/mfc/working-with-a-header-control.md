@@ -1,40 +1,59 @@
 ---
-title: "Trabajar con un control de encabezado | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles del encabezado"
-  - "controles del encabezado, trabajar con"
+title: Working with a Header Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- header controls [MFC], working with
+- header controls
 ms.assetid: af3afb5c-bf97-451b-8fee-3adcb8257210
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Trabajar con un control de encabezado
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9504196cddd69effb45300a1130051e2b8a1c184
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La manera fácil de utilizar un control de encabezado \([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)\) está junto con un control de lista; vea [Mediante CListCtrl](../mfc/using-clistctrl.md) más adelante en esta familia de tema.  También puede utilizar un control de encabezado en sí mismo.  Llamadas **InitCommonControls** MFC para usted.  Las tareas clave son los siguientes:  
+---
+# <a name="working-with-a-header-control"></a>Working with a Header Control
+The easy way to use a header control ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) is in conjunction with a list control; see [Using CListCtrl](../mfc/using-clistctrl.md) later in this topic family. You can also use a header control by itself. MFC calls **InitCommonControls** for you. The key tasks are as follows:  
   
--   [Crear el control de encabezado](../mfc/creating-the-header-control.md)  
+-   [Creating the header control](../mfc/creating-the-header-control.md)  
   
--   [Agregar elementos al control de encabezado](../mfc/adding-items-to-the-header-control.md)  
+-   [Adding items to the header control](../mfc/adding-items-to-the-header-control.md)  
   
--   [Ordenar elementos en el control de encabezado](../mfc/ordering-items-in-the-header-control.md)  
+-   [Ordering items in the header control](../mfc/ordering-items-in-the-header-control.md)  
   
--   [Notificaciones de la encabezado\- CONTROL de procesamiento](../mfc/processing-header-control-notifications.md)  
+-   [Processing header-control notifications](../mfc/processing-header-control-notifications.md)  
   
- Si el objeto de control de encabezado se inserta en una clase primaria de la vista o de cuadro de diálogo, se destruye el control cuando se destruye el elemento primario.  
+ If the header control object is embedded in a parent view or dialog class, the control is destroyed when the parent is destroyed.  
   
-## Vea también  
- [Usar CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,52 +1,71 @@
 ---
-title: "Arrastrar y colocar: Implementar un origen de colocaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arrastrar y colocar, llamar a DoDragDrop"
-  - "arrastrar y colocar, colocar origen"
-  - "arrastrar y colocar, inicializar operaciones de arrastrar"
-  - "funciones OLE de arrastrar y colocar, llamar a DoDragDrop"
-  - "funciones OLE de arrastrar y colocar, colocar origen"
-  - "funciones OLE de arrastrar y colocar, inicializar operaciones de arrastrar"
+title: 'Drag and Drop: Implementing a Drop Source | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE drag and drop [MFC], initiating drag operations
+- drag and drop [MFC], calling DoDragDrop
+- OLE drag and drop [MFC], drop source
+- OLE drag and drop [MFC], calling DoDragDrop
+- drag and drop [MFC], initiating drag operations
+- drag and drop [MFC], drop source
 ms.assetid: 0ed2fda0-63fa-4b1e-b398-f1f142f40035
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Arrastrar y colocar: Implementar un origen de colocaci&#243;n
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f3bb2f7b11c3ce4d46f0dda53980c0c751ec41ef
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En este artículo se explica cómo obtener la aplicación para proporcionar datos a una operación de arrastrar y colocar.  
+---
+# <a name="drag-and-drop-implementing-a-drop-source"></a>Drag and Drop: Implementing a Drop Source
+This article explains how to get your application to provide data to a drag-and-drop operation.  
   
- La implementación básica de un origen de posición es relativamente simple.  El primer paso es determinar qué inicio de los eventos una operación de arrastre.  Las instrucciones recomendados de la interfaz de usuario definen el principio de una operación de arrastre como la selección de datos y un evento de `WM_LBUTTONDOWN` que aparecen en un dentro de punto los datos seleccionados.  Los ejemplos [OCLIENT](../top/visual-cpp-samples.md) y [HIERSVR](../top/visual-cpp-samples.md) MFC OLE siguen estas instrucciones.  
+ Basic implementation of a drop source is relatively simple. The first step is to determine what events begin a drag operation. Recommended user interface guidelines define the beginning of a drag operation as the selection of data and a `WM_LBUTTONDOWN` event occurring on a point inside the selected data. The MFC OLE samples [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md) follow these guidelines.  
   
- Si la aplicación es un contenedor y los datos seleccionado es haber vinculado o un objeto incrustado de `COleClientItem`escrito, llame a su función miembro de `DoDragDrop` .  Si no, cree un objeto de `COleDataSource` , inicialícela con la selección, llame a la función miembro de `DoDragDrop` del objeto de origen de datos.  Si la aplicación es el servidor, utilice `COleServerItem::DoDragDrop`.  Para obtener información sobre cómo personalizar el comportamiento de arrastrar y colocar estándar, vea el artículo [Arrastrar y colocar: El personalizar](../mfc/drag-and-drop-customizing.md).  
+ If your application is a container and the selected data is a linked or an embedded object of type `COleClientItem`, call its `DoDragDrop` member function. Otherwise, construct a `COleDataSource` object, initialize it with the selection, and call the data source object's `DoDragDrop` member function. If your application is a server, use `COleServerItem::DoDragDrop`. For information about customizing standard drag-and-drop behavior, see the article [Drag and Drop: Customizing](../mfc/drag-and-drop-customizing.md).  
   
- Si `DoDragDrop` devuelve `DROPEFFECT_MOVE`, elimine los datos de origen del documento de origen inmediatamente.  Ningún otro valor devuelto de `DoDragDrop` tiene cualquier efecto en un origen de colocación.  
+ If `DoDragDrop` returns `DROPEFFECT_MOVE`, delete the source data from the source document immediately. No other return value from `DoDragDrop` has any effect on a drop source.  
   
- Para obtener más información, vea:  
+ For more information, see:  
   
--   [Implementar un destino](../mfc/drag-and-drop-implementing-a-drop-target.md)  
+-   [Implementing a Drop Target](../mfc/drag-and-drop-implementing-a-drop-target.md)  
   
--   [Personalizar arrastrar y colocar](../mfc/drag-and-drop-customizing.md)  
+-   [Customizing Drag and Drop](../mfc/drag-and-drop-customizing.md)  
   
--   [La creación y objetos de datos de OLE y orígenes de datos de Destruir](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
+-   [Creating and Destroying OLE Data Objects and Data Sources](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
   
--   [Objetos de datos y orígenes de datos de OLE de manipulación](../mfc/data-objects-and-data-sources-manipulation.md)  
+-   [Manipulating OLE Data Objects and Data Sources](../mfc/data-objects-and-data-sources-manipulation.md)  
   
-## Vea también  
- [Arrastrar y colocar \(OLE\)](../mfc/drag-and-drop-ole.md)   
- [COleDataSource::DoDragDrop](../Topic/COleDataSource::DoDragDrop.md)   
- [COleClientItem::DoDragDrop](../Topic/COleClientItem::DoDragDrop.md)   
- [CView::OnDragLeave](../Topic/CView::OnDragLeave.md)
+## <a name="see-also"></a>See Also  
+ [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md)   
+ [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop)   
+ [COleClientItem::DoDragDrop](../mfc/reference/coleclientitem-class.md#dodragdrop)   
+ [CView::OnDragLeave](../mfc/reference/cview-class.md#ondragleave)
+
+

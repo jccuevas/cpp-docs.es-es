@@ -1,48 +1,67 @@
 ---
-title: "Agregar una clase MFC desde una biblioteca de tipos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clases [C++], agregar MFC"
-  - "MFC, agregar clases desde bibliotecas de tipos"
-  - "bibliotecas de tipos, agregar clases MFC"
+title: Adding an MFC Class from a Type Library | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- classes [MFC], adding MFC
+- MFC, adding classes from type libraries
+- type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Agregar una clase MFC desde una biblioteca de tipos
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c0cbd52202de867fb330a3acd2d72a4b940f56ed
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Use este asistente para crear una clase MFC a partir de una interfaz de una biblioteca de tipos disponible.  Puede agregar una clase MFC a una [aplicación MFC](../../mfc/reference/creating-an-mfc-application.md), una [DLL de MFC](../../mfc/reference/creating-an-mfc-dll-project.md) o un [control ActiveX de MFC](../../mfc/reference/creating-an-mfc-activex-control.md).  
+---
+# <a name="adding-an-mfc-class-from-a-type-library"></a>Adding an MFC Class from a Type Library
+Use this wizard to create an MFC class from an interface in an available type library. You can add an MFC class to an [MFC application](../../mfc/reference/creating-an-mfc-application.md), an [MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md), or an [MFC ActiveX control](../../mfc/reference/creating-an-mfc-activex-control.md).  
   
 > [!NOTE]
->  No es necesario crear un proyecto MFC con la automatización habilitada para poder agregar una clase desde una biblioteca de tipos.  
+>  You do not need to create your MFC project with Automation enabled to add a class from a type library.  
   
- Una biblioteca de tipos contiene una descripción binaria de las interfaces expuestas por un componente, que define los métodos junto con sus parámetros y los tipos devueltos.  La biblioteca de tipos debe estar registrada para que pueda mostrarse en la lista **Bibliotecas de tipos disponibles** del cuadro de diálogo Asistente para agregar clases de la biblioteca de tipos.  Para obtener más información, vea "Dentro de COM distribuido: bibliotecas de tipos e integración del lenguaje" en MSDN Library.  
+ A type library contains a binary description of the interfaces exposed by a component, defining the methods along with their parameters and return types. Your type library must be registered for it to appear in the **Available type libraries** list in the Add Class from Typelib Wizard. See "Inside Distributed COM: Type Libraries and Language Integration" in the MSDN library for more information.  
   
-### Para agregar una clase MFC desde una biblioteca de tipos  
+### <a name="to-add-an-mfc-class-from-a-type-library"></a>To add an MFC class from a type library  
   
-1.  En el **Explorador de soluciones** o en la [Vista de clases](http://msdn.microsoft.com/es-es/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga clic con el botón secundario del mouse en el nombre del proyecto al que desee agregar la clase.  
+1.  In either **Solution Explorer** or [Class View](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), right-click the name of the project to which you want to add the class.  
   
-2.  En el menú contextual, haga clic en **Agregar** y, después, en **Agregar clase**.  
+2.  From the shortcut menu, click **Add**, and then click **Add Class**.  
   
-3.  En el panel Plantillas del cuadro de diálogo [Agregar clase](../../ide/add-class-dialog-box.md), haga clic en **Clase MFC de TypeLib** y después seleccione **Abrir**. Se ejecuta el [Asistente para agregar clases de la biblioteca de tipos](../../mfc/reference/add-class-from-typelib-wizard.md).  
+3.  In the [Add Class](../../ide/add-class-dialog-box.md) dialog box, in the Templates pane, click **MFC Class from Typelib**, and then click **Open** to display the [Add Class from Typelib Wizard](../../mfc/reference/add-class-from-typelib-wizard.md).  
   
- En el asistente puede agregar más de una clase a una biblioteca de tipos.  De igual forma, puede agregar clases de más de una biblioteca de tipos en la misma sesión del asistente.  
+ In the wizard, you can add more than one class in a type library. Likewise, you can add classes from more than one type library in a single wizard session.  
   
- El asistente crea una clase MFC, derivada de [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md), para cada interfaz que se agregue desde la biblioteca de tipos seleccionada.  `COleDispatchDriver` implementa el cliente de la automatización OLE.  
+ The wizard creates an MFC class, derived from [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md), for each interface you add from the selected type library. `COleDispatchDriver` implements the client side of OLE automation.  
   
-## Vea también  
- [Clientes de automatización](../../mfc/automation-clients.md)   
- [Clientes de automatización: Usar bibliotecas de tipos](../../mfc/automation-clients-using-type-libraries.md)
+## <a name="see-also"></a>See Also  
+ [Automation Clients](../../mfc/automation-clients.md)   
+ [Automation Clients: Using Type Libraries](../../mfc/automation-clients-using-type-libraries.md)
+
+

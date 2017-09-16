@@ -1,67 +1,86 @@
 ---
-title: "Comandos est&#225;ndar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "identificadores de comando, comandos estándar"
-  - "comandos [C++], estándar"
-  - "comandos estándar del menú Edición"
-  - "menú Archivo"
-  - "Ayuda, menús"
-  - "identificadores [C++], identificadores de comando"
-  - "comandos de OLE"
-  - "identificadores definidos por programadores [C++]"
-  - "identificadores de comandos estándar"
-  - "comandos estándar"
-  - "Comandos del menú Ver"
-  - "Comandos del menú Ventana"
+title: Standard Commands | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- File menu
+- identifiers [MFC], command IDs
+- command IDs, standard commands
+- OLE commands
+- commands [MFC], standard
+- standard command IDs
+- Window menu commands
+- standard commands
+- View menu commands
+- Edit menu standard commands
+- Help [MFC], menus
+- programmer-defined IDs [MFC]
 ms.assetid: 88cf3ab4-79b3-4ac6-9365-8ac561036fbf
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Comandos est&#225;ndar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 092d67376a9384ab9470d2d3bd6b1dcb12ad37a6
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-El marco define muchos mensajes de comando estándar.  Los id. para estos comandos tienen normalmente el formulario:  
+---
+# <a name="standard-commands"></a>Standard Commands
+The framework defines many standard command messages. The IDs for these commands typically take the form:  
   
- **ID\_** *Source\_Item*  
+ **ID_** *Source*_*Item*  
   
- donde es *el origen* normalmente un nombre de menú y *un elemento* es un elemento de menú.  Por ejemplo, el identificador de comando para el comando de Nuevo en el menú archivo es `ID_FILE_NEW`.  Los id. de comando estándar se muestran en negrita en la documentación.  Los id. Programador\- definido se muestran en una fuente diferente de texto circundante.  
+ where *Source* is usually a menu name and *Item* is a menu item. For example, the command ID for the New command on the File menu is `ID_FILE_NEW`. Standard command IDs are shown in bold type in the documentation. Programmer-defined IDs are shown in a font that is different from the surrounding text.  
   
- A continuación se muestra una lista de algunos de los comandos más importantes compatibles:  
+ The following is a list of some of the most important commands supported:  
   
- *Comandos de menú archivo*  
- Nuevo, Abrir, cerrar, Save, Guardar como, configuración de página, configuración de impresión, imprimir, vista previa de impresión, salida, y archivos más\-reciente\- utilizados.  
+ *File Menu Commands*  
+ New, Open, Close, Save, Save As, Page Setup, Print Setup, Print, Print Preview, Exit, and most-recently-used files.  
   
- *Comandos de menú Edición*  
- La clear, Todo claro, copiar, cortar, búsqueda, pegar, repetición, reemplaza, seleccione Todo, deshacer, y rehacer.  
+ *Edit Menu Commands*  
+ Clear, Clear All, Copy, Cut, Find, Paste, Repeat, Replace, Select All, Undo, and Redo.  
   
- *Comandos del menú Ver*  
- Barra de herramientas y de estado.  
+ *View Menu Commands*  
+ Toolbar and Status Bar.  
   
- *Comandos del menú Ventana*  
- Nuevo, organice, cascada, mosaico Horizontal, mosaico Vertical, y división.  
+ *Window Menu Commands*  
+ New, Arrange, Cascade, Tile Horizontal, Tile Vertical, and Split.  
   
- *Comandos del menú Ayuda*  
- Índice, Ayuda de Utilizar, y About.  
+ *Help Menu Commands*  
+ Index, Using Help, and About.  
   
- *Comandos de OLE \(menú Edición\)*  
- Inserte el objeto New, edite los vínculos, el vínculo de pegar, el Pegado especial, y el objeto *typename* \(comandos de verbo\).  
+ *OLE Commands (Edit Menu)*  
+ Insert New Object, Edit Links, Paste Link, Paste Special, and *typename* Object (verb commands).  
   
- El marco de trabajo proporciona diversos niveles de compatibilidad para estos comandos.  Admiten algunos comandos solo mientras los id. definido del comando, mientras que otros se admiten con implementaciones completas.  Por ejemplo, el marco implementa el comando abierto en el menú archivo creando un nuevo objeto document, muestra un cuadro de diálogo abierto, y abra y lea el archivo.  En cambio, debe implementar comandos en el menú Edición personalmente, puesto que los comandos como **ID\_EDIT\_COPY** dependen de la naturaleza de los datos que se copian.  
+ The framework provides varying levels of support for these commands. Some commands are supported only as defined command IDs, while others are supported with thorough implementations. For example, the framework implements the Open command on the File menu by creating a new document object, displaying an Open dialog box, and opening and reading the file. In contrast, you must implement commands on the Edit menu yourself, since commands like **ID_EDIT_COPY** depend on the nature of the data you are copying.  
   
- Para obtener más información sobre los comandos admitidos y de implementación proporcionado, vea [Nota técnica 22](../mfc/tn022-standard-commands-implementation.md).  Definen los comandos de estándar en el archivo AFXRES.H.  
+ For more information about the commands supported and the level of implementation provided, see [Technical Note 22](../mfc/tn022-standard-commands-implementation.md). The standard commands are defined in the file AFXRES.H.  
   
-## Vea también  
- [Objetos de interfaz de usuario e identificadores de comando](../mfc/user-interface-objects-and-command-ids.md)
+## <a name="see-also"></a>See Also  
+ [User-Interface Objects and Command IDs](../mfc/user-interface-objects-and-command-ids.md)
+
+

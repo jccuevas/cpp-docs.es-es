@@ -1,142 +1,160 @@
 ---
-title: "Controles ActiveX MFC: Usar el enlace de datos en un control ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "bindable"
-  - "requestedit"
-  - "defaultbind"
-  - "displaybind"
-  - "dispid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles enlazados [C++], ActiveX en MFC"
-  - "controles [MFC], enlace de datos"
-  - "enlace de datos [C++], controles ActiveX en MFC"
-  - "controles enlazados a datos [C++], controles ActiveX en MFC"
-  - "controles ActiveX en MFC, enlace de datos"
+title: 'MFC ActiveX Controls: Using Data Binding in an ActiveX Control | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- bindable
+- requestedit
+- defaultbind
+- displaybind
+- dispid
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], data binding
+- data binding [MFC], MFC ActiveX controls
+- data-bound controls [MFC], MFC ActiveX controls
+- controls [MFC], data binding
+- bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Controles ActiveX MFC: Usar el enlace de datos en un control ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 23904fa0438e9dff02365a4631d361644bf666b2
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Uno de los usos más eficaces de controles ActiveX es el enlace de datos, lo que permite que una propiedad de control enlace con un campo concreto en una base de datos.  Cuando un usuario modifica datos en esta propiedad enlazada, el control notifica a la base de datos y las solicitudes que el campo de registro están actualizados.  La base de datos a continuación notifica al control de corrección o error de la solicitud.  
+---
+# <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX Controls: Using Data Binding in an ActiveX Control
+One of the more powerful uses of ActiveX controls is data binding, which allows a property of the control to bind with a specific field in a database. When a user modifies data in this bound property, the control notifies the database and requests that the record field be updated. The database then notifies the control of the success or failure of the request.  
   
- Este artículo trata el lado del control de la tarea.  Implementar las interacciones del enlace de datos con la base de datos es responsabilidad del contenedor del control.  Cómo se administran las interacciones de base de datos en el contenedor está fuera del ámbito de esta documentación.  Cómo se prepara el control para el enlace de datos se explica en el resto de este artículo.  
+ This article covers the control side of your task. Implementing the data binding interactions with the database is the responsibility of the control container. How you manage the database interactions in your container is beyond the scope of this documentation. How you prepare the control for data binding is explained in the rest of this article.  
   
- ![Diagrama conceptual de un control enlazado a datos](../mfc/media/vc374v1.png "vc374V1")  
-Diagrama conceptual de un control enlazado a datos  
+ ![Conceptual diagram of a data&#45;bound control](../mfc/media/vc374v1.gif "vc374v1")  
+Conceptual Diagram of a Data-Bound Control  
   
- La clase de `COleControl` proporciona dos funciones miembro que crean enlace de datos un proceso sencillo para implementar.  La primera función, [BoundPropertyRequestEdit](../Topic/COleControl::BoundPropertyRequestEdit.md), se utiliza para solicitar permiso para cambiar el valor de propiedad.  se llama[BoundPropertyChanged](../Topic/COleControl::BoundPropertyChanged.md), la segunda función, después de que el valor de propiedad se ha cambiado correctamente.  
+ The `COleControl` class provides two member functions that make data binding an easy process to implement. The first function, [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), is used to request permission to change the property value. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), the second function, is called after the property value has been successfully changed.  
   
- En este artículo se tratan los siguientes temas:  
+ This article covers the following topics:  
   
--   [Crear una propiedad común enlazable](#vchowcreatingbindablestockproperty)  
+-   [Creating a Bindable Stock Property](#vchowcreatingbindablestockproperty)  
   
--   [Creando un enlazable get\/set el método](#vchowcreatingbindablegetsetmethod)  
+-   [Creating a Bindable Get/Set Method](#vchowcreatingbindablegetsetmethod)  
   
-##  <a name="vchowcreatingbindablestockproperty"></a> Crear una propiedad común enlazable  
- Es posible crear una propiedad de la acción de dato\- límite, aunque es más probable que desee [enlazable get\/set el método](#vchowcreatingbindablegetsetmethod).  
-  
-> [!NOTE]
->  Las propiedades comunes tienen los atributos de **bindable** y de **requestedit** de forma predeterminada.  
-  
-#### Para agregar una propiedad común enlazable mediante el asistente para agregar propiedades  
-  
-1.  Inicia un proyecto mediante [Asistente para controles ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md).  
-  
-2.  Haga clic con el botón secundario en el nodo de la interfaz para el control.  
-  
-     Esto abre el menú contextual.  
-  
-3.  En el menú contextual, haga clic en **Add** y haga clic en **Agregar propiedad**.  
-  
-4.  Seleccione una de las entradas de la lista desplegable de **PropertyName** .  Por ejemplo, puede seleccionar **Texto**.  
-  
-     Dado que **Texto** es una propiedad común, los atributos de **bindable** y de **requestedit** se comprueban ya.  
-  
-5.  Active las casillas siguientes desde la ficha de **Atributos IDL** : **displaybind** y **defaultbind** para agregar atributos a la definición de propiedad del archivo de .IDL del proyecto.  Estos atributos hacen que el control visible para el usuario y crea la propiedad común la propiedad enlazable predeterminada.  
-  
- En este punto, el control puede mostrar datos de un origen de datos, pero el usuario no podrá actualizar los campos de datos.  Si desea que el control también para poder actualizar datos, cambiar la función de `OnOcmCommand`[OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) para ser la siguiente:  
-  
- [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/CPP/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]  
-  
- Ahora puede compilar el proyecto, que registrará el control.  Cuando se inserta el control en un cuadro de diálogo, las propiedades de **Campo de datos** y de **Origen de datos** se habrán agregado y puede seleccionar un origen de datos y un campo para mostrar en el control.  
-  
-##  <a name="vchowcreatingbindablegetsetmethod"></a> Creando un enlazable get\/set el método  
- Además de un dato\- límite get\/set el método, también puede crear [propiedad común enlazable](#vchowcreatingbindablestockproperty).  
+##  <a name="vchowcreatingbindablestockproperty"></a> Creating a Bindable Stock Property  
+ It is possible to create a data-bound stock property, although it is more likely that you will want a [bindable get/set method](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
->  Este procedimiento se supone que tiene un proyecto de control ActiveX que cree subclases un control de Windows.  
+>  Stock properties have the **bindable** and **requestedit** attributes by default.  
   
-#### Para agregar un enlazable obtenga o establezca el método mediante el asistente para agregar propiedades  
+#### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>To add a bindable stock property using the Add Property Wizard  
   
-1.  Cargue el proyecto de control.  
+1.  Begin a project using the [MFC ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md).  
   
-2.  En la página de **Configuración del control** , seleccione una clase de ventana para que el control cree subclases.  Por ejemplo, quizá desee crear subclases de un control de edición.  
+2.  Right-click the interface node for your control.  
   
-3.  Cargue el proyecto de control.  
+     This opens the shortcut menu.  
   
-4.  Haga clic con el botón secundario en el nodo de la interfaz para el control.  
+3.  From the shortcut menu, click **Add** and then click **Add Property**.  
   
-     Esto abre el menú contextual.  
+4.  Select one of the entries from the **Property Name** drop-down list. For example, you can select **Text**.  
   
-5.  En el menú contextual, haga clic en **Add** y haga clic en **Agregar propiedad**.  
+     Because **Text** is a stock property, the **bindable** and **requestedit** attributes are already checked.  
   
-6.  Escriba el nombre de propiedad en el cuadro de **Nombre de propiedad** .  Utilice `MyProp` para este ejemplo.  
+5.  Select the following check boxes from the **IDL Attributes** tab: **displaybind** and **defaultbind** to add the attributes to the property definition in the project's .IDL file. These attributes make the control visible to the user and make the stock property the default bindable property.  
   
-7.  Seleccione un tipo de datos de cuadro de lista desplegable de **Tipo de propiedad** .  Uso **corto** para este ejemplo.  
+ At this point, your control can display data from a data source, but the user will not be able to update data fields. If you want your control to also be able to update data, change the `OnOcmCommand` [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) function to look as follows:  
   
-8.  Para **Tipo de implementación**, haga clic en **Get\/Set Methods**.  
+ [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]  
   
-9. Active las casillas siguientes de la pestaña de atributos IDL: **bindable**, **requestedit**, **displaybind**, y **defaultbind** para agregar atributos a la definición de propiedad del archivo de .IDL del proyecto.  Estos atributos hacen que el control visible para el usuario y crea la propiedad común la propiedad enlazable predeterminada.  
+ You can now build the project, which will register the control. When you insert the control in a dialog box, the **Data Field** and **Data Source** properties will have been added and you can now select a data source and field to display in the control.  
   
-10. Haga clic en **Finalizar**.  
+##  <a name="vchowcreatingbindablegetsetmethod"></a> Creating a Bindable Get/Set Method  
+ In addition to a data-bound get/set method, you can also create a [bindable stock property](#vchowcreatingbindablestockproperty).  
   
-11. Modifique el cuerpo de la función de `SetMyProp` de modo que contenga el código siguiente:  
+> [!NOTE]
+>  This procedure assumes you have an ActiveX control project that subclasses a Windows control.  
   
-     [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/CPP/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]  
+#### <a name="to-add-a-bindable-getset-method-using-the-add-property-wizard"></a>To add a bindable get/set method using the Add Property Wizard  
   
-12. El parámetro pasado a las funciones de `BoundPropertyChanged` y de `BoundPropertyRequestEdit` es el dispid de la propiedad, que es el parámetro que se pasa al atributo id. \(\) de la propiedad en el archivo de .IDL.  
+1.  Load your control's project.  
   
-13. Modifique la función de [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) lo que contiene el código siguiente:  
+2.  On the **Control Settings** page, select a window class for the control to subclass. For example, you may want to subclass an EDIT control.  
   
-     [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/CPP/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]  
+3.  Load your control's project.  
   
-14. Modifique la función de `OnDraw` de modo que contenga el código siguiente:  
+4.  Right-click the interface node for your control.  
   
-     [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/CPP/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]  
+     This opens the shortcut menu.  
   
-15. A la sección pública del archivo de encabezado el archivo de encabezado para la clase de control, agrega las definiciones siguientes \(constructores\) para las variables miembro:  
+5.  From the shortcut menu, click **Add** and then click **Add Property**.  
   
-     [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/CPP/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]  
+6.  Type the property name in the **Property Name** box. Use `MyProp` for this example.  
   
-16. Haga que la siguiente línea la última línea en `DoPropExchange` funciona:  
+7.  Select a data type from the **Property Type** drop-down list box. Use **short** for this example.  
   
-     [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/CPP/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]  
+8.  For **Implementation Type**, click **Get/Set Methods**.  
   
-17. Modifique la función de `OnResetState` de modo que contenga el código siguiente:  
+9. Select the following check boxes from the IDL Attributes tab: **bindable**, **requestedit**, **displaybind**, and **defaultbind** to add the attributes to the property definition in the project's .IDL file. These attributes make the control visible to the user and make the stock property the default bindable property.  
   
-     [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/CPP/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]  
+10. Click **Finish**.  
   
-18. Modifique la función de `GetMyProp` de modo que contenga el código siguiente:  
+11. Modify the body of the `SetMyProp` function so that it contains the following code:  
   
-     [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/CPP/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]  
+     [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]  
   
- Ahora puede compilar el proyecto, que registrará el control.  Cuando se inserta el control en un cuadro de diálogo, las propiedades de **Campo de datos** y de **Origen de datos** se habrán agregado y puede seleccionar un origen de datos y un campo para mostrar en el control.  
+12. The parameter passed to the `BoundPropertyChanged` and `BoundPropertyRequestEdit` functions is the dispid of the property, which is the parameter passed to the id() attribute for the property in the .IDL file.  
   
-## Vea también  
- [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Controles enlazados a datos \(ADO y RDO\)](../data/ado-rdo/data-bound-controls-ado-and-rdo.md)
+13. Modify the [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) function so it contains the following code:  
+  
+     [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]  
+  
+14. Modify the `OnDraw` function so that it contains the following code:  
+  
+     [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]  
+  
+15. To the public section of the header file the header file for your control class, add the following definitions (constructors) for member variables:  
+  
+     [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]  
+  
+16. Make the following line the last line in the `DoPropExchange` function:  
+  
+     [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]  
+  
+17. Modify the `OnResetState` function so that it contains the following code:  
+  
+     [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]  
+  
+18. Modify the `GetMyProp` function so that it contains the following code:  
+  
+     [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]  
+  
+ You can now build the project, which will register the control. When you insert the control in a dialog box, the **Data Field** and **Data Source** properties will have been added and you can now select a data source and field to display in the control.  
+  
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+
+

@@ -1,5 +1,5 @@
 ---
-title: sync_shared (Clase) | Microsoft Docs
+title: sync_shared Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,16 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- sync_shared
 - allocators/stdext::sync_shared
-- stdext::sync_shared
 - allocators/stdext::sync_shared::allocate
 - allocators/stdext::sync_shared::deallocate
 - allocators/stdext::sync_shared::equals
 dev_langs:
 - C++
 helpviewer_keywords:
-- sync_shared class
+- stdext::sync_shared
+- stdext::sync_shared [C++], allocate
+- stdext::sync_shared [C++], deallocate
+- stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
 caps.latest.revision: 19
 author: corob-msft
@@ -38,98 +39,98 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: d3cfcde97a0f6c89b1f18c4026c6ab49db66fd96
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 14dae43c422833556004f6522c4096a85fb0ac3f
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="syncshared-class"></a>sync_shared (Clase)
-Describe un [filtro de sincronización](../standard-library/allocators-header.md) que usa una exclusión mutua para controlar el acceso a un objeto de caché compartido por todos los asignadores.  
+# <a name="syncshared-class"></a>sync_shared Class
+Describes a [synchronization filter](../standard-library/allocators-header.md) that uses a mutex to control access to a cache object that is shared by all allocators.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Cache>  
 class sync_shared
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Cache`|El tipo de caché asociado al filtro de sincronización. Puede ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
+|`Cache`|The type of cache associated with the synchronization filter. This can be [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md), or [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
   
-### <a name="member-functions"></a>Funciones miembro  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[allocate](#allocate)|Asigna un bloque de memoria.|  
-|[deallocate](#deallocate)|Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.|  
-|[equals](#equals)|Compara dos cachés para determinar si son iguales.|  
+|[allocate](#allocate)|Allocates a block of memory.|  
+|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
+|[equals](#equals)|Compares two caches for equality.|  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<allocators>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
   
- **Espacio de nombres:** stdext  
+ **Namespace:** stdext  
   
 ##  <a name="allocate"></a>  sync_shared::allocate  
- Asigna un bloque de memoria.  
+ Allocates a block of memory.  
   
 ```
 void *allocate(std::size_t count);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`count`|El número de elementos de la matriz que se van a asignar.|  
+|`count`|The number of elements in the array to be allocated.|  
   
-### <a name="return-value"></a>Valor devuelto  
- Un puntero al objeto asignado.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the allocated object.  
   
-### <a name="remarks"></a>Comentarios  
- La función miembro bloquea la exclusión mutua, llama a `cache.allocate(count)`, desbloquea la exclusión mutua y devuelve el resultado de la llamada anterior a `cache.allocate(count)`. `cache` representa el objeto de caché actual.  
+### <a name="remarks"></a>Remarks  
+ The member function locks the mutex, calls `cache.allocate(count)`, unlocks the mutex, and returns the result of the earlier call to `cache.allocate(count)`. `cache` represents the current cache object.  
   
 ##  <a name="deallocate"></a>  sync_shared::deallocate  
- Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.  
+ Frees a specified number of objects from storage beginning at a specified position.  
   
 ```
 void deallocate(void* ptr, std::size_t count);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|Un puntero al primer objeto que se va a desasignar del almacenamiento.|  
-|`count`|El número de objetos que se van a desasignar del almacenamiento.|  
+|`ptr`|A pointer to the first object to be deallocated from storage.|  
+|`count`|The number of objects to be deallocated from storage.|  
   
-### <a name="remarks"></a>Comentarios  
- Esta función miembro bloquea la exclusión mutua, llama a `cache.deallocate(ptr, count)`, donde `cache` representa el objeto de caché y, después, desbloquea la exclusión mutua.  
+### <a name="remarks"></a>Remarks  
+ This member function locks the mutex, calls `cache.deallocate(ptr, count)`, where `cache` represents the cache object, and then unlocks the mutex.  
   
 ##  <a name="equals"></a>  sync_shared::equals  
- Compara dos cachés para determinar si son iguales.  
+ Compares two caches for equality.  
   
 ```
 bool equals(const sync_shared<Cache>& Other) const;
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Cache`|El tipo de caché asociado al filtro de sincronización.|  
-|`Other`|La caché para comparar la igualdad.|  
+|`Cache`|The type of cache associated with the synchronization filter.|  
+|`Other`|The cache to compare for equality.|  
   
-### <a name="return-value"></a>Valor devuelto  
- `true` si el resultado de `cache.equals(Other.cache)`, donde `cache` representa el objeto de caché, en `true`. De lo contrario, es `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the result of `cache.equals(Other.cache)`, where `cache` represents the cache object, is `true`; otherwise, `false`.  
   
-### <a name="remarks"></a>Comentarios  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

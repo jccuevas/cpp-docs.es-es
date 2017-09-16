@@ -1,63 +1,82 @@
 ---
-title: "Clases de cuadros de di&#225;logo comunes OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX (clases) [C++]"
-  - "clases de cuadros de diálogo comunes"
-  - "clases de cuadro de diálogo [C++], OLE"
-  - "clases de cuadros de diálogo comunes OLE [C++]"
+title: OLE Common Dialog Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX classes [MFC]
+- dialog classes [MFC], OLE
+- OLE common dialog classes [MFC]
+- common dialog classes [MFC]
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Clases de cuadros de di&#225;logo comunes OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f0f67a3f736eee501b15cb28defd9dd1826bef18
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Estas clases controlan tareas VIEJAS comunes implementando varios cuadros de diálogo de OLE estándar.  También proporcionan una interfaz de usuario coherente para la funcionalidad OLE.  
+---
+# <a name="ole-common-dialog-classes"></a>OLE Common Dialog Classes
+These classes handle common OLE tasks by implementing a number of standard OLE dialog boxes. They also provide a consistent user interface for OLE functionality.  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- Utiliza el marco para contener las implementaciones comunes para todos los cuadros de diálogo de OLE.  Todas las clases de cuadro de diálogo en la categoría de la interfaz de usuario se derivan de esta clase base.  `COleDialog` no se puede utilizar directamente.  
+ Used by the framework to contain common implementations for all OLE dialog boxes. All dialog box classes in the user-interface category are derived from this base class. `COleDialog` cannot be used directly.  
   
  [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
- Muestra el cuadro de diálogo del objeto INSERT, la interfaz de usuario estándar para insertar los nuevos elementos vinculados o insertados OLE.  
+ Displays the Insert Object dialog box, the standard user interface for inserting new OLE linked or embedded items.  
   
  [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)  
- Muestra el cuadro de diálogo de pegar especial, la interfaz de usuario estándar para implementar el comando de pegar especial de edición.  
+ Displays the Paste Special dialog box, the standard user interface for implementing the Edit Paste Special command.  
   
  [COleLinksDialog](../mfc/reference/colelinksdialog-class.md)  
- Muestra el cuadro de diálogo de los vínculos de edición, la interfaz de usuario estándar para la información de modificación sobre elementos vinculados.  
+ Displays the Edit Links dialog box, the standard user interface for modifying information about linked items.  
   
  [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)  
- Muestra el cuadro de diálogo del icono de cambio, la interfaz de usuario estándar para cambiar el icono asociado a un elemento incrustado o vinculado OLE.  
+ Displays the Change Icon dialog box, the standard user interface for changing the icon associated with an OLE embedded or linked item.  
   
  [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)  
- Muestra el cuadro de diálogo convert, la interfaz de usuario estándar para convertir elementos de OLE a partir de un tipo a otro.  
+ Displays the Convert dialog box, the standard user interface for converting OLE items from one type to another.  
   
  [COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)  
- Encapsula el cuadro de diálogo Propiedades OLE común de Windows.  Los cuadros de diálogo de Propiedades de OLE comunes proporcionan una manera fácil de mostrar y modificar las propiedades de un elemento OLE de una manera coherente con los estándares de Windows.  
+ Encapsulates the Windows common OLE Properties dialog box. Common OLE Properties dialog boxes provide an easy way to display and modify the properties of an OLE document item in a manner consistent with Windows standards.  
   
  [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)  
- Muestra el cuadro de diálogo de la actualización, la interfaz de usuario estándar para actualizar todos los vínculos en un documento.  El cuadro de diálogo contiene un indicador de progreso para indicar cómo el cierre el procedimiento de actualización está completamente.  
+ Displays the Update dialog box, the standard user interface for updating all links in a document. The dialog box contains a progress indicator to indicate how close the update procedure is to completion.  
   
  [COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)  
- Muestra el cuadro de diálogo del origen del cambio, la interfaz de usuario estándar para cambiar el destino o el origen de un vínculo.  
+ Displays the Change Source dialog box, the standard user interface for changing the destination or source of a link.  
   
  [COleBusyDialog](../mfc/reference/colebusydialog-class.md)  
- Muestra el Servidor No disponibles y los cuadros de diálogo No Responder de Servidor, la interfaz de usuario estándar para administrar las llamadas a las aplicaciones No disponibles.  Mostrado normalmente automáticamente por la implementación de `COleMessageFilter` .  
+ Displays the Server Busy and Server Not Responding dialog boxes, the standard user interface for handling calls to busy applications. Usually displayed automatically by the `COleMessageFilter` implementation.  
   
-## Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

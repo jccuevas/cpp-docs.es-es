@@ -1,123 +1,139 @@
 ---
-title: "Controles ActiveX MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MFC ActiveX Controls (MFC)"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles ActiveX [C++], MFC"
-  - "COleControl (clase), controles ActiveX en MFC"
-  - "contenedores [C++], controles ActiveX en MFC"
-  - "mapas de envío, para controles ActiveX en MFC"
-  - "eventos [C++], Controles ActiveX"
-  - "controles ActiveX en MFC [C++]"
-  - "controles ActiveX en MFC [C++], estado activo e inactivo"
-  - "controles ActiveX en MFC [C++], contenedores"
-  - "controles ActiveX en MFC [C++], serializar"
-  - "serialización [C++], controles ActiveX en MFC"
+title: MFC ActiveX Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MFC ActiveX Controls (MFC)
+dev_langs:
+- C++
+helpviewer_keywords:
+- COleControl class [MFC], MFC ActiveX controls
+- ActiveX controls [MFC], MFC
+- containers [MFC], MFC ActiveX controls
+- MFC ActiveX controls [MFC], serializing
+- MFC ActiveX controls [MFC], containers
+- serialization [MFC], MFC ActiveX controls
+- dispatch maps [MFC]], for MFC ActiveX controls
+- MFC ActiveX controls [MFC], active/inactive state
+- events [MFC], ActiveX controls
+- MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Controles ActiveX MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a584f1787c8ee5a3bb28cb3b336a138cb9f56f54
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Un control ActiveX es un componente de software reutilizable, basado en el modelo de objetos componentes \(COM\), que admite una gran variedad de funciones OLE y se puede personalizar de modo que se adapte a las necesidades del software.  Los controles ActiveX están diseñados para su uso tanto en contenedores de controles ActiveX ordinarios como en páginas web de Internet.  Puede crear controles ActiveX con MFC, descrita aquí, o con [Active Template Library \(ATL\)](../atl/active-template-library-atl-concepts.md).  
+---
+# <a name="mfc-activex-controls"></a>MFC ActiveX Controls
+An ActiveX control is a reusable software component based on the Component Object Model (COM) that supports a wide variety of OLE functionality and can be customized to fit many software needs. ActiveX controls are designed for use both in ordinary ActiveX control containers and on the Internet, in World Wide Web pages. You can create ActiveX controls either with MFC, described here, or with the [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
   
- Un control ActiveX puede dibujarse por sí mismo en su propia ventana, responde a eventos \(por ejemplo, los clics del mouse\) y se administra a través de una interfaz que incluye propiedades y métodos similares a los de los objetos de automatización.  
+ An ActiveX control can draw itself in its own window, respond to events (such as mouse clicks), and be managed through an interface that includes properties and methods similar to those in Automation objects.  
   
- Estos controles se pueden desarrollar para muchos usos, por ejemplo, acceso a bases de datos, supervisión de datos o representación gráfica.  Además de su portabilidad, los controles ActiveX admiten ahora características que previamente no estaban disponibles, como compatibilidad con contenedores OLE existentes y la capacidad de integrar sus menús con los del contenedor OLE.  Además, un control ActiveX admite totalmente la automatización, que permite al control exponer propiedades de lectura\/escritura y un conjunto de métodos a los que puede llamar el usuario del control.  
+ These controls can be developed for many uses, such as database access, data monitoring, or graphing. Besides their portability, ActiveX controls support features previously not available to ActiveX controls, such as compatibility with existing OLE containers and the ability to integrate their menus with the OLE container menus. In addition, an ActiveX control fully supports Automation, which allows the control to expose read\write properties and a set of methods that can be called by the control user.  
   
- Puede crear controles ActiveX sin ventana y controles que solo crean una ventana cuando pasan a ser activos.  Los controles sin ventana aceleran la presentación de la aplicación y permiten tener controles transparentes y no rectangulares.  Las propiedades de los controles ActiveX también pueden cargarse de forma asincrónica.  
+ You can create windowless ActiveX controls and controls that only create a window when they become active. Windowless controls speed up the display of your application and make it possible to have transparent and nonrectangular controls. You can also load ActiveX control properties asynchronously.  
   
- Un control ActiveX se implementa como un servidor en proceso \(normalmente un pequeño objeto\) que se puede utilizar en cualquier contenedor OLE.  Observe que la funcionalidad completa de un control ActiveX solo está disponible cuando se utiliza dentro de un contenedor OLE diseñado para tener en cuenta los controles ActiveX.  Vea [Portar controles ActiveX a otras aplicaciones](../mfc/containers-for-activex-controls.md) para obtener una lista de contenedores que admiten controles ActiveX.  Este tipo de contenedor, en lo sucesivo denominado "contenedor de control", puede operar un control ActiveX mediante las propiedades y métodos del control, y recibe notificaciones del control ActiveX en forma de eventos.  En la figura siguiente se muestra esta interacción.  
+ An ActiveX control is implemented as an in-process server (typically a small object) that can be used in any OLE container. Note that the full functionality of an ActiveX control is available only when used within an OLE container designed to be aware of ActiveX controls. See [Port ActiveX Controls to Other Applications](../mfc/containers-for-activex-controls.md) for a list of containers that support ActiveX controls. This container type, hereafter called a "control container," can operate an ActiveX control by using the control's properties and methods, and receives notifications from the ActiveX control in the form of events. The following figure demonstrates this interaction.  
   
- ![Interacción del contenedor de controles ActiveX y el control](../mfc/media/vc37221.png "vc37221")  
-Interacción entre un contenedor de controles ActiveX y un control ActiveX con ventanas  
+ ![Interplay of ActiveX control container and control](../mfc/media/vc37221.gif "vc37221")  
+Interaction Between an ActiveX Control Container and a Windowed ActiveX Control  
   
- Para obtener información reciente sobre la optimización de los controles ActiveX, vea [Controles ActiveX de MFC: Optimización](../mfc/mfc-activex-controls-optimization.md).  
+ For some recent information on optimizing your ActiveX controls, see [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md).  
   
- Para crear un control ActiveX de MFC, vea [Crear un proyecto de control ActiveX](../mfc/reference/mfc-activex-control-wizard.md).  
+ To create an MFC ActiveX control, see [Create an ActiveX control project](../mfc/reference/mfc-activex-control-wizard.md).  
   
- Para obtener más información, vea:  
+ For more information, see:  
   
--   [Contenedores de controles ActiveX](../mfc/activex-control-containers.md)  
+-   [ActiveX Control Containers](../mfc/activex-control-containers.md)  
   
--   [Documentos activos](../mfc/active-documents.md)  
+-   [Active Documents](../mfc/active-documents.md)  
   
--   [Utilizar controles ActiveX](../data/ado-rdo/using-activex-controls.md)  
+-   [Understanding ActiveX Controls](http://msdn.microsoft.com/library/windows/desktop/ms693753)  
   
--   [\<caps:sentence id\="tgt23" sentenceid\="e07c7a1ebdac21120a91f75018670c81" class\="tgtSentence"\>Descripción de los controles ActiveX\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms693753)  
+-   [Upgrading an Existing ActiveX Control to be Used on the Internet](../mfc/upgrading-an-existing-activex-control.md)  
   
--   [Actualizar un control ActiveX existente que se utilizará en Internet](../mfc/upgrading-an-existing-activex-control.md)  
+##  <a name="_core_basic_components_of_an_activex_control"></a> Basic Components of an ActiveX Control  
+ An ActiveX control uses several programmatic elements to interact efficiently with a control container and with the user. These are class [COleControl](../mfc/reference/colecontrol-class.md), a set of event-firing functions, and a dispatch map.  
   
-##  <a name="_core_basic_components_of_an_activex_control"></a> Componentes básicos de un control ActiveX  
- Un control ActiveX utiliza varios elementos de programación para interactuar eficazmente con un contenedor de controles y con el usuario.  Se trata de la clase [COleControl](../mfc/reference/colecontrol-class.md), un conjunto de funciones de desencadenamiento de eventos y un mapa de envíos.  
+ Every ActiveX control object you develop inherits a powerful set of features from its MFC base class, `COleControl`. These features include in-place activation, and Automation logic. `COleControl` can provide the control object with the same functionality as an MFC window object, plus the ability to fire events. `COleControl` can also provide [windowless controls](../mfc/providing-windowless-activation.md), which rely on their container for help with some of the functionality a window provides (mouse capture, keyboard focus, scrolling), but offer much faster display.  
   
- Cada objeto de control ActiveX que se desarrolla hereda un conjunto eficaz de características de la clase base de MFC, `COleControl`.  Estas características incluyen la activación en contexto y la lógica de automatización.  `COleControl` puede proporcionar el objeto de control con la misma funcionalidad que un objeto de ventana de MFC, más la capacidad de desencadenar eventos.  `COleControl` también puede proporcionar [controles sin ventana](../mfc/providing-windowless-activation.md), que se basan en el contenedor para obtener ayuda con algunas funcionalidades que una ventana proporciona \(captura del mouse, foco de teclado, desplazamiento\), pero ofrecen una presentación mucho más rápida.  
+ Because the control class derives from `COleControl`, it inherits the capability to send, or "fire," messages, called events, to the control container when certain conditions are met. These events are used to notify the control container when something important happens in the control. You can send additional information about an event to the control container by attaching parameters to the event. For more information about ActiveX control events, see the article [MFC ActiveX Controls: Events](../mfc/mfc-activex-controls-events.md).  
   
- Dado que la clase control se deriva de `COleControl`, hereda la capacidad de enviar, o "desencadena", los mensajes, denominados eventos, para el contenedor del control cuando se cumplen ciertas condiciones.  Estos eventos se usan para notificar al contenedor del control cuando algo importante ocurre en el control.  Puede enviar información adicional sobre un evento al contenedor del control si asocia parámetros al evento.  Para obtener más información acerca de los eventos de control ActiveX, vea el artículo [Controles ActiveX de MFC: Eventos](../mfc/mfc-activex-controls-events.md).  
+ The final element is a dispatch map, which is used to expose a set of functions (called methods) and attributes (called properties) to the control user. Properties allow the control container or the control user to manipulate the control in various ways. The user can change the appearance of the control, change certain values of the control, or make requests of the control, such as accessing a specific piece of data that the control maintains. This interface is determined by the control developer and is defined using **Class View**. For more information on ActiveX control methods and properties, see the articles [MFC ActiveX Controls: Methods](../mfc/mfc-activex-controls-methods.md) and [Properties](../mfc/mfc-activex-controls-properties.md).  
   
- El último elemento es un mapa de envíos, que se utiliza para exponer un conjunto de funciones \(denominadas métodos\) y atributos \(denominados propiedades\) al usuario del control.  Las propiedades permiten que el contenedor del control o el usuario del control lo manipulen de varias maneras.  El usuario puede cambiar el aspecto del control, cambiar algunos valores del control o hacer solicitudes del control, por ejemplo, obtener acceso a una parte específica de los datos que el control mantiene.  Esta interfaz viene determinada por el desarrollador del control y se define mediante **Vista de clases**.  Para obtener más información sobre los métodos y propiedades de los controles ActiveX, vea los artículos [Controles ActiveX de MFC: Métodos](../mfc/mfc-activex-controls-methods.md) y [Propiedades](../mfc/mfc-activex-controls-properties.md).  
+##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> Interaction Between Controls with Windows and ActiveX Control Containers  
+ When a control is used within a control container, it uses two mechanisms to communicate: it exposes properties and methods, and it fires events. The following figure demonstrates how these two mechanisms are implemented.  
   
-##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> Interacción entre los controles con contenedores de ActiveX y de Windows  
- Cuando un control se utiliza dentro de un contenedor, utiliza dos mecanismos para la comunicación: expone propiedades y métodos, y desencadena eventos.  En la ilustración siguiente se muestra cómo se implementan estos dos mecanismos.  
+ ![ActiveX control communicates with its container](../mfc/media/vc37222.gif "vc37222")  
+Communication Between an ActiveX Control Container and an ActiveX Control  
   
- ![El control ActiveX se comunica con su contenedor](../mfc/media/vc37222.png "vc37222")  
-Comunicación entre un contendor de controles ActiveX y un control ActiveX  
+ The previous figure also illustrates how other OLE interfaces (besides automation and events) are handled by controls.  
   
- En la ilustración anterior se muestra también cómo los controles administran otras interfaces OLE \(además de la automatización y los eventos\).  
+ All of a control's communication with the container is performed by `COleControl`. To handle some of the container's requests, **COleControl** will call member functions that are implemented in the control class. All methods and some properties are handled in this way. Your control's class can also initiate communication with the container by calling member functions of `COleControl`. Events are fired in this manner.  
   
- `COleControl` realiza toda la comunicación de un control con el contenedor.  Para controlar algunas de las solicitudes de contenedor, **COleControl** llamará a las funciones miembro implementadas en la clase del control.  Todos los métodos y algunas propiedades se controlan de esta manera.  La clase del control también puede iniciar la comunicación con el contenedor si se llama a las funciones miembro de `COleControl`.  Los eventos se desencadenan de esta manera.  
+##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Active and Inactive States of an ActiveX Control  
+ A control has two basic states: active and inactive. Traditionally, these states were distinguished by whether the control had a window. An active control had a window; an inactive control did not. With the introduction of windowless activation, this distinction is no longer universal, but still applies to many controls.  
   
-##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Estados activos e inactivos de un control ActiveX  
- Un control tiene dos estados básicos: activo e inactivo.  Tradicionalmente, se distinguían por el hecho de que el control tuviera o no una ventana.  Un control activo tenía una ventana; un control inactivo no la tenía.  Con la introducción de la activación sin ventana, esta distinción ya no es universal, pero sigue aplicándose a muchos controles.  
+ When a [windowless control](../mfc/providing-windowless-activation.md) goes active, it invokes mouse capture, keyboard focus, scrolling, and other window services from its container. You can also [provide mouse interaction to inactive controls](../mfc/providing-mouse-interaction-while-inactive.md), as well as create controls that [wait until activated to create a window](../mfc/turning-off-the-activate-when-visible-option.md).  
   
- Cuando se activa un [control sin ventana](../mfc/providing-windowless-activation.md), invoca la captura del mouse, el foco de teclado, el desplazamiento y otros servicios de ventana desde el contenedor.  También se puede [proporcionar interacción con el mouse a los controles inactivos](../mfc/providing-mouse-interaction-while-inactive.md), así como crear controles que [esperan a ser activados para crear una ventana](../mfc/turning-off-the-activate-when-visible-option.md).  
+ When a control with a window becomes active, it is able to interact fully with the control container, the user, and Windows. The figure below demonstrates the paths of communication between the ActiveX control, the control container, and the operating system.  
   
- Cuando un control con una ventana se activa, puede interactuar completamente con el contenedor, el usuario y Windows.  En la ilustración siguiente se muestran las rutas de comunicación entre el control ActiveX, el contenedor y el sistema operativo.  
+ ![Msg processing in active windowed ActiveX control](../mfc/media/vc37223.gif "vc37223")  
+Windows Message Processing in a Windowed ActiveX Control (When Active)  
   
- ![Procesamiento de mensajes en el control ActiveX con ventanas activo](../mfc/media/vc37223.png "vc37223")  
-Procesamiento de mensajes de ventanas en un control ActiveX con ventanas \(cuando esté activo\)  
+##  <a name="_core_serializing_activex_elements"></a> Serialization  
+ The ability to serialize data, sometimes referred to as persistence, allows the control to write the value of its properties to persistent storage. Controls can then be recreated by reading the object's state from the storage.  
   
-##  <a name="_core_serializing_activex_elements"></a> Serialización  
- La capacidad de serializar los datos, a la que a veces se hace referencia como persistencia, permite que el control escriba el valor de las propiedades en el almacenamiento persistente.  Los controles pueden volver a crearse entonces si se lee el estado del objeto en el almacenamiento.  
+ Note that a control is not responsible for obtaining access to the storage medium. Instead, the control's container is responsible for providing the control with a storage medium to use at the appropriate times. For more information on serialization, see the article [MFC ActiveX Controls: Serializing](../mfc/mfc-activex-controls-serializing.md). For information on optimizing serialization, see [Optimizing Persistence and Initialization](../mfc/optimizing-persistence-and-initialization.md) in ActiveX Controls: Optimization.  
   
- Tenga en cuenta que un control no es responsable de obtener acceso al soporte de almacenamiento.  En su lugar, el contenedor del control es responsable de proporcionar al control un medio de almacenamiento para usarlo en el momento adecuado.  Para obtener más información sobre la serialización, vea el artículo [Controles ActiveX de MFC: Serializar](../mfc/mfc-activex-controls-serializing.md).  Para obtener información sobre cómo optimizar la serialización, vea [Optimizar la persistencia y la inicialización](../mfc/optimizing-persistence-and-initialization.md) en Controles ActiveX: Optimización.  
+##  <a name="_core_installing_activex_control_classes_and_tools"></a> Installing ActiveX Control Classes and Tools  
+ When you install Visual C++, the MFC ActiveX control classes and retail and debug ActiveX control run-time DLLs are automatically installed if ActiveX controls are selected in Setup (they are selected by default).  
   
-##  <a name="_core_installing_activex_control_classes_and_tools"></a> Instalar clases y herramientas de controles ActiveX  
- Cuando se instala Visual C\+\+, las clases de control ActiveX de MFC y las DLL en tiempo de ejecución de control ActiveX para la versión de lanzamiento y depuración se instalan automáticamente si los controles ActiveX están seleccionados en Configuración \(lo están de forma predeterminada\).  
+ By default, the ActiveX control classes and tools are installed in the following subdirectories under \Program Files\Microsoft Visual Studio .NET:  
   
- De forma predeterminada, las clases y las herramientas de controles ActiveX se instalan en los siguientes subdirectorios en \\Archivos de programa\\Microsoft Visual Studio .NET:  
+-   **\Common7\Tools**  
   
--   **\\Common7\\Tools**  
+     Contains the Test Container files (TstCon32.exe, as well as its Help files).  
   
-     Contiene los archivos del contenedor de prueba \(TstCon32.exe, así como los archivos de Ayuda\).  
+-   **\Vc7\atlmfc\include**  
   
--   **\\Vc7\\atlmfc\\include**  
+     Contains the include files needed to develop ActiveX controls with MFC  
   
-     Contiene los archivos de inclusión necesarios para desarrollar controles ActiveX con MFC  
+-   **\Vc7\atlmfc\src\mfc**  
   
--   **\\Vc7\\atlmfc\\src\\mfc**  
+     Contains the source code for specific ActiveX control classes in MFC  
   
-     Contiene el código fuente de las clases de control ActiveX específicas de MFC  
+-   **\Vc7\atlmfc\lib**  
   
--   **\\Vc7\\atlmfc\\lib**  
+     Contains the libraries required to develop ActiveX controls with MFC  
   
-     Contiene las bibliotecas necesarias para desarrollar controles ActiveX con MFC  
+ There are also samples for MFC ActiveX controls. For more information about these samples, see [Controls Samples: MFC-Based ActiveX Controls](../visual-cpp-samples.md)  
   
- También hay ejemplos para controles ActiveX de MFC.  Para obtener más información sobre estos ejemplos, vea [Ejemplos de controles: Controles ActiveX basados en MFC](../top/visual-cpp-samples.md)  
-  
-## Vea también  
- [Elementos de la interfaz de usuario](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

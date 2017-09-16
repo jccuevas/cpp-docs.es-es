@@ -1,5 +1,5 @@
 ---
-title: Clase CSplitterWndEx | Documentos de Microsoft
+title: CSplitterWndEx Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSplitterWndEx
+- CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
 caps.latest.revision: 24
 author: mikeblome
@@ -35,46 +35,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
-ms.openlocfilehash: 08b26bc2321485181941dbaaa9a903de9a401ef8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c80722c339756f42889db39e1820edc8dc035f28
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csplitterwndex-class"></a>Clase CSplitterWndEx
+# <a name="csplitterwndex-class"></a>CSplitterWndEx Class
 
 
 
-Representa una ventana divisora personalizada.  
+Represents a customized splitter window.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSplitterWndEx : public CSplitterWnd  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|`CSplitterWndEx::CSplitterWndEx`|Constructor predeterminado.|  
+|`CSplitterWndEx::CSplitterWndEx`|Default constructor.|  
 |`CSplitterWndEx::~CSplitterWndEx`|Destructor.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Llamado por el marco para dibujar una ventana divisora. (Invalida [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|  
+|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Called by the framework to draw a splitter window. (Overrides [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|  
   
-## <a name="remarks"></a>Comentarios  
- Invalidar el `OnDrawSplitter` método para personalizar la apariencia de los componentes gráficos de una ventana divisora.  
+## <a name="remarks"></a>Remarks  
+ Override the `OnDrawSplitter` method to customize the appearance of the graphical components of a splitter window.  
   
- El `CSplitterWndEx` clase se utiliza junto con el [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), y [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) métodos, que se implementan mediante un administrador visual. Para hacer que un administrador visual dibujar una ventana divisora en la aplicación, sustituir las declaraciones de la `CSplitterWnd` clase con la `CSplitterWndEx` clase. Para las aplicaciones de la ventana de marco, se declara la clase de ventana divisora en la clase CMainFrame que se encuentra en mainfrm.h. Para obtener un ejemplo, consulte el `OutlookDemo` en el directorio de ejemplos.  
+ The `CSplitterWndEx` class is used together with the [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), and [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) methods, which are implemented by a visual manager. To cause a visual manager to draw a splitter window in your application, replace declarations of the `CSplitterWnd` class with the `CSplitterWndEx` class. For frame window applications, the splitter window class is declared in the CMainFrame class that is located in mainfrm.h. For an example, see the `OutlookDemo` sample in the Samples directory.  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](cobject-class.md)  
   
  [CCmdTarget](ccmdtarget-class.md)  
@@ -83,11 +83,11 @@ class CSplitterWndEx : public CSplitterWnd
   
  [CSplitterWnd](csplitterwnd-class.md)  
    
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxsplitterwndex.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxsplitterwndex.h  
   
-##  <a name="ondrawsplitter"></a>CSplitterWndEx::OnDrawSplitter  
- Llamado por el marco para dibujar una ventana divisora.  
+##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter  
+ Called by the framework to draw a splitter window.  
   
 ```  
 virtual void OnDrawSplitter(  
@@ -97,20 +97,20 @@ virtual void OnDrawSplitter(
 );  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Puntero al contexto de dispositivo. Si este parámetro es `NULL`, el marco de trabajo se vuelve a dibujar la ventana activa.  
+ Pointer to the device context. If this parameter is `NULL`, the framework redraws the active window.  
   
  [in] `nType`  
- Uno de los `CSplitterWnd::ESplitType` los valores de enumeración que especifica el elemento de la ventana divisora para dibujar. Los valores válidos son `splitBox`, `splitBar`, `splitIntersection` y `splitBorder`.  
+ One of the `CSplitterWnd::ESplitType` enumeration values that specifies the splitter window element to draw. Valid values are `splitBox`, `splitBar`, `splitIntersection`, and `splitBorder`.  
   
  [in] `rect`  
- Un rectángulo delimitador que especifica las dimensiones y ubicación para dibujar el elemento de la ventana divisora especificado.  
+ A bounding rectangle that specifies the dimensions and location to draw the specified splitter window element.  
   
-### <a name="remarks"></a>Comentarios  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Vea también  
- [Gráfico de jerarquía](../hierarchy-chart.md)   
- [Clases](mfc-classes.md)   
- [CSplitterWnd (clase)](csplitterwnd-class.md)   
- [Clase CMFCVisualManager](cmfcvisualmanager-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../hierarchy-chart.md)   
+ [Classes](mfc-classes.md)   
+ [CSplitterWnd Class](csplitterwnd-class.md)   
+ [CMFCVisualManager Class](cmfcvisualmanager-class.md)

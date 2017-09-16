@@ -1,5 +1,5 @@
 ---
-title: Clase COleServerDoc | Documentos de Microsoft
+title: COleServerDoc Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -52,13 +52,44 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- servers, OLE
-- OLE server applications, managing server documents
-- container/server applications
-- OLE server documents
-- COleServerDoc class
-- server documents, OLE
-- OLE containers, server documents
+- COleServerDoc [MFC], COleServerDoc
+- COleServerDoc [MFC], ActivateDocObject
+- COleServerDoc [MFC], ActivateInPlace
+- COleServerDoc [MFC], DeactivateAndUndo
+- COleServerDoc [MFC], DiscardUndoState
+- COleServerDoc [MFC], GetClientSite
+- COleServerDoc [MFC], GetEmbeddedItem
+- COleServerDoc [MFC], GetItemClipRect
+- COleServerDoc [MFC], GetItemPosition
+- COleServerDoc [MFC], GetZoomFactor
+- COleServerDoc [MFC], IsDocObject
+- COleServerDoc [MFC], IsEmbedded
+- COleServerDoc [MFC], IsInPlaceActive
+- COleServerDoc [MFC], NotifyChanged
+- COleServerDoc [MFC], NotifyClosed
+- COleServerDoc [MFC], NotifyRename
+- COleServerDoc [MFC], NotifySaved
+- COleServerDoc [MFC], OnDeactivate
+- COleServerDoc [MFC], OnDeactivateUI
+- COleServerDoc [MFC], OnDocWindowActivate
+- COleServerDoc [MFC], OnResizeBorder
+- COleServerDoc [MFC], OnShowControlBars
+- COleServerDoc [MFC], OnUpdateDocument
+- COleServerDoc [MFC], RequestPositionChange
+- COleServerDoc [MFC], SaveEmbedding
+- COleServerDoc [MFC], ScrollContainerBy
+- COleServerDoc [MFC], UpdateAllItems
+- COleServerDoc [MFC], CreateInPlaceFrame
+- COleServerDoc [MFC], DestroyInPlaceFrame
+- COleServerDoc [MFC], GetDocObjectServer
+- COleServerDoc [MFC], OnClose
+- COleServerDoc [MFC], OnExecOleCmd
+- COleServerDoc [MFC], OnFrameWindowActivate
+- COleServerDoc [MFC], OnGetEmbeddedItem
+- COleServerDoc [MFC], OnReactivateAndUndo
+- COleServerDoc [MFC], OnSetHostNames
+- COleServerDoc [MFC], OnSetItemRects
+- COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
 caps.latest.revision: 24
 author: mikeblome
@@ -78,93 +109,93 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: db50c2a5709fbc07d0e0db99a4cffc733c4b6ead
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd5f9c7aec119a3e559b25742a378674ba403f48
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coleserverdoc-class"></a>Clase COleServerDoc
-La clase base para los documentos de servidor OLE.  
+# <a name="coleserverdoc-class"></a>COleServerDoc Class
+The base class for OLE server documents.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleServerDoc::COleServerDoc](#coleserverdoc)|Construye un objeto `COleServerDoc`.|  
+|[COleServerDoc::COleServerDoc](#coleserverdoc)|Constructs a `COleServerDoc` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleServerDoc::ActivateDocObject](#activatedocobject)|Activa el documento DocObject asociado.|  
-|[COleServerDoc::ActivateInPlace](#activateinplace)|Activa el documento para su edición en contexto.|  
-|[COleServerDoc::DeactivateAndUndo](#deactivateandundo)|Desactiva la interfaz de usuario del servidor.|  
-|[COleServerDoc::DiscardUndoState](#discardundostate)|Descarta la información de estado de deshacer.|  
-|[COleServerDoc::GetClientSite](#getclientsite)|Recupera un puntero al propio `IOleClientSite` interfaz.|  
-|[COleServerDoc::GetEmbeddedItem](#getembeddeditem)|Devuelve un puntero a un elemento que representa todo el documento.|  
-|[COleServerDoc::GetItemClipRect](#getitemcliprect)|Devuelve el rectángulo de recorte actual para su edición en contexto.|  
-|[COleServerDoc::GetItemPosition](#getitemposition)|Devuelve el rectángulo de posición actual, con respecto al área de cliente de la aplicación contenedora para edición en contexto.|  
-|[COleServerDoc::GetZoomFactor](#getzoomfactor)|Devuelve el factor de zoom en píxeles.|  
-|[COleServerDoc::IsDocObject](#isdocobject)|Determina si el documento es un objeto DocObject.|  
-|[COleServerDoc::IsEmbedded](#isembedded)|Indica si el documento está incrustado en un documento contenedor o ejecución independiente.|  
-|[COleServerDoc::IsInPlaceActive](#isinplaceactive)|Devuelve `TRUE` si el elemento está activado en su lugar.|  
-|[COleServerDoc::NotifyChanged](#notifychanged)|Notifica a los contenedores que el usuario ha cambiado el documento.|  
-|[COleServerDoc::NotifyClosed](#notifyclosed)|Notifica a los contenedores que el usuario cerró el documento.|  
-|[COleServerDoc::NotifyRename](#notifyrename)|Notifica a los contenedores que el usuario ha cambiado el nombre del documento.|  
-|[COleServerDoc::NotifySaved](#notifysaved)|Notifica a los contenedores que el usuario ha guardado el documento.|  
-|[COleServerDoc::OnDeactivate](#ondeactivate)|Lo llama el marco de trabajo cuando el usuario desactiva un elemento que se ha activado en su lugar.|  
-|[COleServerDoc::OnDeactivateUI](#ondeactivateui)|Llamado por el marco para destruir controles y otros elementos de interfaz de usuario creados para la activación en contexto.|  
-|[COleServerDoc::OnDocWindowActivate](#ondocwindowactivate)|Llamado por el marco de trabajo cuando se activa o se desactiva la ventana de marco de documento del contenedor.|  
-|[COleServerDoc::OnResizeBorder](#onresizeborder)|Llamado por el marco cuando cambia la ventana de marco o la ventana de documento de la aplicación contenedora.|  
-|[COleServerDoc::OnShowControlBars](#onshowcontrolbars)|Llamado por el marco de trabajo para mostrar u ocultar las barras de control de edición en contexto.|  
-|[COleServerDoc::OnUpdateDocument](#onupdatedocument)|Lo llama el marco de trabajo cuando se guarda un documento de servidor es un elemento incrustado, actualizar copia del contenedor del elemento.|  
-|[COleServerDoc::RequestPositionChange](#requestpositionchange)|Cambia la posición del marco de edición en contexto.|  
-|[COleServerDoc::SaveEmbedding](#saveembedding)|Indica a la aplicación de contenedor para guardar el documento.|  
-|[COleServerDoc::ScrollContainerBy](#scrollcontainerby)|Desplaza el documento contenedor.|  
-|[COleServerDoc::UpdateAllItems](#updateallitems)|Notifica a los contenedores que el usuario ha cambiado el documento.|  
+|[COleServerDoc::ActivateDocObject](#activatedocobject)|Activates the associated DocObject document.|  
+|[COleServerDoc::ActivateInPlace](#activateinplace)|Activates the document for in-place editing.|  
+|[COleServerDoc::DeactivateAndUndo](#deactivateandundo)|Deactivates the server's user interface.|  
+|[COleServerDoc::DiscardUndoState](#discardundostate)|Discards undo-state information.|  
+|[COleServerDoc::GetClientSite](#getclientsite)|Retrieves a pointer to the underlying `IOleClientSite` interface.|  
+|[COleServerDoc::GetEmbeddedItem](#getembeddeditem)|Returns a pointer to an item representing the entire document.|  
+|[COleServerDoc::GetItemClipRect](#getitemcliprect)|Returns the current clipping rectangle for in-place editing.|  
+|[COleServerDoc::GetItemPosition](#getitemposition)|Returns the current position rectangle, relative to the container application's client area, for in-place editing.|  
+|[COleServerDoc::GetZoomFactor](#getzoomfactor)|Returns the zoom factor in pixels.|  
+|[COleServerDoc::IsDocObject](#isdocobject)|Determines if the document is a DocObject.|  
+|[COleServerDoc::IsEmbedded](#isembedded)|Indicates whether the document is embedded in a container document or running stand-alone.|  
+|[COleServerDoc::IsInPlaceActive](#isinplaceactive)|Returns `TRUE` if the item is currently activated in place.|  
+|[COleServerDoc::NotifyChanged](#notifychanged)|Notifies containers that the user has changed the document.|  
+|[COleServerDoc::NotifyClosed](#notifyclosed)|Notifies containers that the user has closed the document.|  
+|[COleServerDoc::NotifyRename](#notifyrename)|Notifies containers that the user has renamed the document.|  
+|[COleServerDoc::NotifySaved](#notifysaved)|Notifies containers that the user has saved the document.|  
+|[COleServerDoc::OnDeactivate](#ondeactivate)|Called by the framework when the user deactivates an item that was activated in place.|  
+|[COleServerDoc::OnDeactivateUI](#ondeactivateui)|Called by the framework to destroy controls and other user-interface elements created for in-place activation.|  
+|[COleServerDoc::OnDocWindowActivate](#ondocwindowactivate)|Called by the framework when the container's document frame window is activated or deactivated.|  
+|[COleServerDoc::OnResizeBorder](#onresizeborder)|Called by the framework when the container application's frame window or document window is resized.|  
+|[COleServerDoc::OnShowControlBars](#onshowcontrolbars)|Called by the framework to show or hide control bars for in-place editing.|  
+|[COleServerDoc::OnUpdateDocument](#onupdatedocument)|Called by the framework when a server document that is an embedded item is saved, updating the container's copy of the item.|  
+|[COleServerDoc::RequestPositionChange](#requestpositionchange)|Changes the position of the in-place editing frame.|  
+|[COleServerDoc::SaveEmbedding](#saveembedding)|Tells the container application to save the document.|  
+|[COleServerDoc::ScrollContainerBy](#scrollcontainerby)|Scrolls the container document.|  
+|[COleServerDoc::UpdateAllItems](#updateallitems)|Notifies containers that the user has changed the document.|  
   
-### <a name="protected-methods"></a>Métodos protegidos  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleServerDoc::CreateInPlaceFrame](#createinplaceframe)|Llamado por el marco para crear una ventana de marco de edición en contexto.|  
-|[COleServerDoc::DestroyInPlaceFrame](#destroyinplaceframe)|Llamado por el marco para destruir una ventana de marco de edición en contexto.|  
-|[COleServerDoc::GetDocObjectServer](#getdocobjectserver)|Reemplazar esta función para crear un nuevo `CDocObjectServer` objeto e indicar que este documento es un contenedor de DocObject.|  
-|[COleServerDoc::OnClose](#onclose)|Llamado por el marco cuando solicita un contenedor para cerrar el documento.|  
-|[COleServerDoc::OnExecOleCmd](#onexecolecmd)|Ejecuta un comando especificado o muestra ayuda para el comando.|  
-|[COleServerDoc::OnFrameWindowActivate](#onframewindowactivate)|Llamado por el marco de trabajo cuando se activa o se desactiva la ventana de marco del contenedor.|  
-|[COleServerDoc:: OnGetEmbeddedItem](#ongetembeddeditem)|Se llama para obtener un `COleServerItem` que representa el documento completo; se utiliza para obtener un elemento incrustado. Implementación necesaria.|  
-|[COleServerDoc::OnReactivateAndUndo](#onreactivateandundo)|Llamado por el marco para deshacer los cambios realizados durante la edición en contexto.|  
-|[COleServerDoc::OnSetHostNames](#onsethostnames)|Llamado por el marco de trabajo cuando un contenedor establece el título de ventana para un objeto incrustado.|  
-|[COleServerDoc::OnSetItemRects](#onsetitemrects)|Llamado por el marco para situar la ventana de marco de edición en contexto dentro de la ventana de la aplicación contenedora.|  
-|[COleServerDoc::OnShowDocument](#onshowdocument)|Llamado por el marco de trabajo para mostrar u ocultar el documento.|  
+|[COleServerDoc::CreateInPlaceFrame](#createinplaceframe)|Called by the framework to create a frame window for in-place editing.|  
+|[COleServerDoc::DestroyInPlaceFrame](#destroyinplaceframe)|Called by the framework to destroy a frame window for in-place editing.|  
+|[COleServerDoc::GetDocObjectServer](#getdocobjectserver)|Override this function to create a new `CDocObjectServer` object and indicate that this document is a DocObject container.|  
+|[COleServerDoc::OnClose](#onclose)|Called by the framework when a container requests to close the document.|  
+|[COleServerDoc::OnExecOleCmd](#onexecolecmd)|Executes a specified command or displays help for the command.|  
+|[COleServerDoc::OnFrameWindowActivate](#onframewindowactivate)|Called by the framework when the container's frame window is activated or deactivated.|  
+|[COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem)|Called to get a `COleServerItem` that represents the entire document; used to get an embedded item. Implementation required.|  
+|[COleServerDoc::OnReactivateAndUndo](#onreactivateandundo)|Called by the framework to undo changes made during in-place editing.|  
+|[COleServerDoc::OnSetHostNames](#onsethostnames)|Called by the framework when a container sets the window title for an embedded object.|  
+|[COleServerDoc::OnSetItemRects](#onsetitemrects)|Called by the framework to position the in-place editing frame window within the container application's window.|  
+|[COleServerDoc::OnShowDocument](#onshowdocument)|Called by the framework to show or hide the document.|  
   
-## <a name="remarks"></a>Comentarios  
- Puede contener un documento de servidor [COleServerItem](../../mfc/reference/coleserveritem-class.md) objetos que representan la interfaz del servidor para los elementos incrustados o vinculados. Cuando una aplicación de servidor se inicia por un contenedor para editar un elemento incrustado, el elemento se carga como su propio documento de servidor; el `COleServerDoc` objeto contiene una sola `COleServerItem` objeto, formada por todo el documento. Cuando una aplicación de servidor se inicia por un contenedor para editar un elemento vinculado, se carga un documento existente del disco; una parte del contenido del documento está resaltada para indicar que el elemento vinculado.  
+## <a name="remarks"></a>Remarks  
+ A server document can contain [COleServerItem](../../mfc/reference/coleserveritem-class.md) objects, which represent the server interface to embedded or linked items. When a server application is launched by a container to edit an embedded item, the item is loaded as its own server document; the `COleServerDoc` object contains just one `COleServerItem` object, consisting of the entire document. When a server application is launched by a container to edit a linked item, an existing document is loaded from disk; a portion of the document's contents is highlighted to indicate the linked item.  
   
- `COleServerDoc`los objetos también pueden contener elementos de la [COleClientItem](../../mfc/reference/coleclientitem-class.md) clase. Esto le permite crear aplicaciones de servidor del contenedor. El marco de trabajo proporciona funciones para almacenar correctamente la `COleClientItem` elementos mientras atiende la `COleServerItem` objetos.  
+ `COleServerDoc` objects can also contain items of the [COleClientItem](../../mfc/reference/coleclientitem-class.md) class. This allows you to create container-server applications. The framework provides functions to properly store the `COleClientItem` items while servicing the `COleServerItem` objects.  
   
- Si la aplicación de servidor no admite vínculos, un documento de servidor siempre contendrá un único elemento de servidor, que representa todo el objeto incrustado como un documento. Si la aplicación de servidor admite vínculos, se debe crear un elemento del servidor cada vez que se copia una selección en el Portapapeles.  
+ If your server application does not support links, a server document will always contain only one server item, which represents the entire embedded object as a document. If your server application does support links, it must create a server item each time a selection is copied to the Clipboard.  
   
- Usar `COleServerDoc`, derivar una clase e implementar la [OnGetEmbeddedItem](#ongetembeddeditem) función miembro, que permite al servidor admiten objetos incrustados. Derivar una clase de `COleServerItem` para implementar los elementos en sus documentos y devolver objetos de esa clase de `OnGetEmbeddedItem`.  
+ To use `COleServerDoc`, derive a class from it and implement the [OnGetEmbeddedItem](#ongetembeddeditem) member function, which allows your server to support embedded items. Derive a class from `COleServerItem` to implement the items in your documents, and return objects of that class from `OnGetEmbeddedItem`.  
   
- Para admitir los elementos vinculados, `COleServerDoc` proporciona el [OnGetLinkedItem](../../mfc/reference/colelinkingdoc-class.md#ongetlinkeditem) función miembro. Puede usar la implementación predeterminada o anularlo si tiene su propia forma de administrar los elementos de documento.  
+ To support linked items, `COleServerDoc` provides the [OnGetLinkedItem](../../mfc/reference/colelinkingdoc-class.md#ongetlinkeditem) member function. You can use the default implementation or override it if you have your own way of managing document items.  
   
- Es necesario un `COleServerDoc`-clase derivada para cada tipo de servidor compatible con la aplicación de documento. Por ejemplo, si la aplicación de servidor es compatible con las hojas de cálculo y gráficos, necesita dos `COleServerDoc`-las clases derivadas.  
+ You need one `COleServerDoc`-derived class for each type of server document your application supports. For example, if your server application supports worksheets and charts, you need two `COleServerDoc`-derived classes.  
   
- Para obtener más información sobre los servidores, vea el artículo [servidores: implementar un servidor](../../mfc/servers-implementing-a-server.md).  
+ For more information on servers, see the article [Servers: Implementing a Server](../../mfc/servers-implementing-a-server.md).  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -177,181 +208,181 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
   
  `COleServerDoc`  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="activatedocobject"></a>COleServerDoc::ActivateDocObject  
- Activa el documento DocObject asociado.  
+##  <a name="activatedocobject"></a>  COleServerDoc::ActivateDocObject  
+ Activates the associated DocObject document.  
   
 ```  
 void ActivateDocObject();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- De forma predeterminada, `COleServerDoc` no admite documentos activos (también denominados DocObjects). Para habilitar esta compatibilidad, consulte [GetDocObjectServer](#getdocobjectserver) y la clase [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md).  
+### <a name="remarks"></a>Remarks  
+ By default, `COleServerDoc` does not support Active documents (also referred to as DocObjects). To enable this support, see [GetDocObjectServer](#getdocobjectserver) and class [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md).  
   
-##  <a name="activateinplace"></a>COleServerDoc::ActivateInPlace  
- Activa el elemento para su edición en contexto.  
+##  <a name="activateinplace"></a>  COleServerDoc::ActivateInPlace  
+ Activates the item for in-place editing.  
   
 ```  
 BOOL ActivateInPlace();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si es correcto; de lo contrario, 0, lo que indica que el elemento está completamente abierto.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0, which indicates that the item is fully open.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función realiza todas las operaciones necesarias para la activación en contexto. Crea una ventana de marco en contexto, lo activa y tamaños al elemento, configura compartidos menús y otros controles, desplaza el elemento en la vista y establece el foco en la ventana de marco en contexto.  
+### <a name="remarks"></a>Remarks  
+ This function performs all operations necessary for in-place activation. It creates an in-place frame window, activates it and sizes it to the item, sets up shared menus and other controls, scrolls the item into view, and sets the focus to the in-place frame window.  
   
- Esta función llama a la implementación predeterminada de [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow). Llame a esta función si la aplicación admite otro verbo para la activación en contexto (como reproducir).  
+ This function is called by the default implementation of [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow). Call this function if your application supports another verb for in-place activation (such as Play).  
   
-##  <a name="coleserverdoc"></a>COleServerDoc::COleServerDoc  
- Construye un `COleServerDoc` objeto sin necesidad de conectarse con las DLL del sistema OLE.  
+##  <a name="coleserverdoc"></a>  COleServerDoc::COleServerDoc  
+ Constructs a `COleServerDoc` object without connecting with the OLE system DLLs.  
   
 ```  
 COleServerDoc();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Se debe llamar a [COleLinkingDoc::Register](../../mfc/reference/colelinkingdoc-class.md#register) para abrir las comunicaciones con OLE. Si está utilizando [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) en la aplicación, `COleLinkingDoc::Register` es llamado por `COleLinkingDoc`de implementación de `OnNewDocument`, `OnOpenDocument`, y `OnSaveDocument`.  
+### <a name="remarks"></a>Remarks  
+ You must call [COleLinkingDoc::Register](../../mfc/reference/colelinkingdoc-class.md#register) to open communications with OLE. If you are using [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) in your application, `COleLinkingDoc::Register` is called for you by `COleLinkingDoc`'s implementation of `OnNewDocument`, `OnOpenDocument`, and `OnSaveDocument`.  
   
-##  <a name="createinplaceframe"></a>COleServerDoc::CreateInPlaceFrame  
- El marco de trabajo llama a esta función para crear una ventana de marco de edición en contexto.  
+##  <a name="createinplaceframe"></a>  COleServerDoc::CreateInPlaceFrame  
+ The framework calls this function to create a frame window for in-place editing.  
   
 ```  
 virtual COleIPFrameWnd* CreateInPlaceFrame(CWnd* pParentWnd);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- Puntero a la ventana primaria de la aplicación contenedora.  
+ Pointer to the container application's parent window.  
   
-### <a name="return-value"></a>Valor devuelto  
- Un puntero a la ventana de marco en contexto, o **NULL** si no lo consigue.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the in-place frame window, or **NULL** if unsuccessful.  
   
-### <a name="remarks"></a>Comentarios  
- La implementación predeterminada usa la información especificada en la plantilla de documento para crear el marco. La vista utilizada es la primera vista creada para el documento. Esta vista se separa en el marco original temporalmente y se adjunta al marco recién creado.  
+### <a name="remarks"></a>Remarks  
+ The default implementation uses information specified in the document template to create the frame. The view used is the first view created for the document. This view is temporarily detached from the original frame and attached to the newly created frame.  
   
- Avanzada reemplazable.  
+ This is an advanced overridable.  
   
-##  <a name="deactivateandundo"></a>COleServerDoc::DeactivateAndUndo  
- Llame a esta función si deshacer compatible con la aplicación y el usuario elige deshacer después de activar un elemento, pero antes de editarlo.  
+##  <a name="deactivateandundo"></a>  COleServerDoc::DeactivateAndUndo  
+ Call this function if your application supports Undo and the user chooses Undo after activating an item but before editing it.  
   
 ```  
 BOOL DeactivateAndUndo();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Distinto de cero en caso de éxito; en caso contrario, es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero on success; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Al llamar a esta función, si la aplicación se escribe utilizando la biblioteca Microsoft Foundation Class, [COleClientItem::OnDeactivateAndUndo](../../mfc/reference/coleclientitem-class.md#ondeactivateandundo) para llamar, que desactiva la interfaz de usuario del servidor.  
+### <a name="remarks"></a>Remarks  
+ If the container application is written using the Microsoft Foundation Class Library, calling this function causes [COleClientItem::OnDeactivateAndUndo](../../mfc/reference/coleclientitem-class.md#ondeactivateandundo) to be called, which deactivates the server's user interface.  
   
-##  <a name="destroyinplaceframe"></a>COleServerDoc::DestroyInPlaceFrame  
- El marco de trabajo llama a esta función para destruir una ventana de marco en contexto y devolver al servidor de la ventana de documento de la aplicación a su estado antes de la activación en contexto.  
+##  <a name="destroyinplaceframe"></a>  COleServerDoc::DestroyInPlaceFrame  
+ The framework calls this function to destroy an in-place frame window and return the server application's document window to its state before in-place activation.  
   
 ```  
 virtual void DestroyInPlaceFrame(COleIPFrameWnd* pFrameWnd);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pFrameWnd`  
- Puntero a la ventana de marco en contexto para ser destruidos.  
+ Pointer to the in-place frame window to be destroyed.  
   
-### <a name="remarks"></a>Comentarios  
- Avanzada reemplazable.  
+### <a name="remarks"></a>Remarks  
+ This is an advanced overridable.  
   
-##  <a name="discardundostate"></a>COleServerDoc::DiscardUndoState  
- Si el usuario realiza una operación de edición que no se puede deshacer, llame a esta función para forzar la aplicación de contenedor para descartar la información de estado de deshacer.  
+##  <a name="discardundostate"></a>  COleServerDoc::DiscardUndoState  
+ If the user performs an editing operation that cannot be undone, call this function to force the container application to discard its undo-state information.  
   
 ```  
 BOOL DiscardUndoState();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Distinto de cero en caso de éxito; en caso contrario, es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero on success; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función se proporciona para que los servidores que admiten deshacer pueden liberar los recursos que sea consumidos por la información de estado de deshacer no se puede usar.  
+### <a name="remarks"></a>Remarks  
+ This function is provided so that servers that support Undo can free resources that would otherwise be consumed by undo-state information that cannot be used.  
   
-##  <a name="getclientsite"></a>COleServerDoc::GetClientSite  
- Recupera un puntero al propio `IOleClientSite` interfaz.  
+##  <a name="getclientsite"></a>  COleServerDoc::GetClientSite  
+ Retrieves a pointer to the underlying `IOleClientSite` interface.  
   
 ```  
 LPOLECLIENTSITE GetClientSite() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Recupera un puntero al propio [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706) interfaz.  
+### <a name="return-value"></a>Return Value  
+ Retrieves a pointer to the underlying [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706) interface.  
   
-##  <a name="getdocobjectserver"></a>COleServerDoc::GetDocObjectServer  
- Reemplazar esta función para crear un nuevo `CDocObjectServer` elemento y devolver un puntero a él.  
+##  <a name="getdocobjectserver"></a>  COleServerDoc::GetDocObjectServer  
+ Override this function to create a new `CDocObjectServer` item and return a pointer to it.  
   
 ```  
 virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pDocSite`  
- Puntero a la `IOleDocumentSite` interfaz que se conectará el servidor de este documento.  
+ Pointer to the `IOleDocumentSite` interface that will connect this document to the server.  
   
-### <a name="return-value"></a>Valor devuelto  
- Un puntero a un `CDocObjectServer`; **NULL** si la operación ha fallado.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CDocObjectServer`; **NULL** if the operation failed.  
   
-### <a name="remarks"></a>Comentarios  
- Cuando se activa un servidor DocObject, la devolución de no **NULL** puntero muestra que el cliente puede admitir DocObjects. La implementación predeterminada devuelve **NULL**.  
+### <a name="remarks"></a>Remarks  
+ When a DocObject server is activated, the return of a non- **NULL** pointer shows that the client can support DocObjects. The default implementation returns **NULL**.  
   
- Una implementación típica de un documento que admite DocObjects simplemente asignará un nuevo `CDocObjectServer` de objetos y devolver al llamador. Por ejemplo:  
+ A typical implementation for a document that supports DocObjects will simply allocate a new `CDocObjectServer` object and return it to the caller. For example:  
   
- [!code-cpp[NVC_MFCOleServer&3;](../../mfc/codesnippet/cpp/coleserverdoc-class_1.cpp)]  
+ [!code-cpp[NVC_MFCOleServer#3](../../mfc/codesnippet/cpp/coleserverdoc-class_1.cpp)]  
   
-##  <a name="getembeddeditem"></a>COleServerDoc::GetEmbeddedItem  
- Llame a esta función para obtener un puntero a un elemento que representa todo el documento.  
+##  <a name="getembeddeditem"></a>  COleServerDoc::GetEmbeddedItem  
+ Call this function to get a pointer to an item representing the entire document.  
   
 ```  
 COleServerItem* GetEmbeddedItem();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Un puntero a un elemento que representa el documento completo; **NULL** si la operación ha fallado.  
+### <a name="return-value"></a>Return Value  
+ A pointer to an item representing the entire document; **NULL** if the operation failed.  
   
-### <a name="remarks"></a>Comentarios  
- Llama a [COleServerDoc:: OnGetEmbeddedItem](#ongetembeddeditem), una función virtual con ninguna implementación predeterminada.  
+### <a name="remarks"></a>Remarks  
+ It calls [COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem), a virtual function with no default implementation.  
   
-##  <a name="getitemcliprect"></a>COleServerDoc::GetItemClipRect  
- Llame a la `GetItemClipRect` la función miembro para obtener las coordenadas del rectángulo de recorte del elemento que se está editando en su lugar.  
+##  <a name="getitemcliprect"></a>  COleServerDoc::GetItemClipRect  
+ Call the `GetItemClipRect` member function to get the clipping-rectangle coordinates of the item that is being edited in place.  
   
 ```  
 void GetItemClipRect(LPRECT lpClipRect) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpClipRect`  
- Puntero a un `RECT` estructura o un `CRect` objeto que recibe las coordenadas del rectángulo de recorte del elemento.  
+ Pointer to a `RECT` structure or a `CRect` object to receive the clipping-rectangle coordinates of the item.  
   
-### <a name="remarks"></a>Comentarios  
- Las coordenadas están en píxeles con respecto al área de cliente de la ventana de aplicación de contenedor.  
+### <a name="remarks"></a>Remarks  
+ Coordinates are in pixels relative to the container application window's client area.  
   
- No debería ocurrir dibujo fuera del rectángulo de recorte. Normalmente, el dibujo se restringe automáticamente. Utilice esta función para determinar si el usuario se ha desplazado fuera de la parte visible del documento. Si es así, desplazar el documento contenedor según sea necesario mediante una llamada a [ScrollContainerBy](#scrollcontainerby).  
+ Drawing should not occur outside the clipping rectangle. Usually, drawing is automatically restricted. Use this function to determine whether the user has scrolled outside the visible portion of the document; if so, scroll the container document as needed by means of a call to [ScrollContainerBy](#scrollcontainerby).  
   
-##  <a name="getitemposition"></a>COleServerDoc::GetItemPosition  
- Llame a la `GetItemPosition` para obtener las coordenadas del elemento que se está editando en lugar de función miembro.  
+##  <a name="getitemposition"></a>  COleServerDoc::GetItemPosition  
+ Call the `GetItemPosition` member function to get the coordinates of the item being edited in place.  
   
 ```  
 void GetItemPosition(LPRECT lpPosRect) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpPosRect`  
- Puntero a un `RECT` estructura o un `CRect` objeto que recibe las coordenadas del elemento.  
+ Pointer to a `RECT` structure or a `CRect` object to receive the coordinates of the item.  
   
-### <a name="remarks"></a>Comentarios  
- Las coordenadas están en píxeles con respecto al área de cliente de la ventana de aplicación de contenedor.  
+### <a name="remarks"></a>Remarks  
+ Coordinates are in pixels relative to the container application window's client area.  
   
- La posición del elemento que se puede comparar con el rectángulo de recorte actual para determinar el alcance a la que el elemento esté visible (o no) en la pantalla.  
+ The item's position can be compared with the current clipping rectangle to determine the extent to which the item is visible (or not visible) on the screen.  
   
-##  <a name="getzoomfactor"></a>COleServerDoc::GetZoomFactor  
- El `GetZoomFactor` función miembro determina el factor de zoom de"" de un elemento que se ha activado para la edición en contexto.  
+##  <a name="getzoomfactor"></a>  COleServerDoc::GetZoomFactor  
+ The `GetZoomFactor` member function determines the "zoom factor" of an item that has been activated for in-place editing.  
   
 ```  
 BOOL GetZoomFactor(
@@ -360,174 +391,174 @@ BOOL GetZoomFactor(
     LPCRECT lpPosRect = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  *lpSizeNum*  
- Puntero a un objeto de clase `CSize` que contendrá el numerador del factor de zoom. Puede ser **NULL**.  
+ Pointer to an object of class `CSize` that will hold the zoom factor's numerator. Can be **NULL**.  
   
  *lpSizeDenom*  
- Puntero a un objeto de clase `CSize` que contendrá el denominador del factor de zoom. Puede ser **NULL**.  
+ Pointer to an object of class `CSize` that will hold the zoom factor's denominator. Can be **NULL**.  
   
  `lpPosRect`  
- Puntero a un objeto de clase `CRect` que describe la posición del elemento nuevo. Si este argumento es **NULL**, la función utiliza la posición del elemento actual.  
+ Pointer to an object of class `CRect` that describes the item's new position. If this argument is **NULL**, the function uses the item's current position.  
   
-### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si se activa el elemento en lugar de edición y el factor de zoom es distinto de 100% (1:1); en caso contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the item is activated for in-place editing and its zoom factor is other than 100% (1:1); otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- El factor de zoom, en píxeles, que es la proporción de tamaño del elemento a su tamaño actual. Si la aplicación no ha establecido la extensión del elemento, su tamaño natural (según lo determinado por [COleServerItem::OnGetExtent](../../mfc/reference/coleserveritem-class.md#ongetextent)) se utiliza.  
+### <a name="remarks"></a>Remarks  
+ The zoom factor, in pixels, is the proportion of the item's size to its current extent. If the container application has not set the item's extent, its natural extent (as determined by [COleServerItem::OnGetExtent](../../mfc/reference/coleserveritem-class.md#ongetextent)) is used.  
   
- La función establece sus primeros dos argumentos en el numerador y el denominador "factor de zoom." del elemento Si el elemento no se está editando en su lugar, la función establece estos argumentos a un valor predeterminado de 100% (o 1:1) y devuelve cero. Para obtener más información, consulte 40 Nota técnica, [en lugar MFC/OLE cambiar el tamaño y zoom](../../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).  
+ The function sets its first two arguments to the numerator and denominator of the item's "zoom factor." If the item is not being edited in place, the function sets these arguments to a default value of 100% (or 1:1) and returns zero. For further information, see Technical Note 40, [MFC/OLE In-Place Resizing and Zooming](../../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).  
   
-##  <a name="isdocobject"></a>COleServerDoc::IsDocObject  
- Determina si el documento es un objeto DocObject.  
+##  <a name="isdocobject"></a>  COleServerDoc::IsDocObject  
+ Determines if the document is a DocObject.  
   
 ```  
 BOOL IsDocObject() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- **TRUE** si el documento es DocObject; de lo contrario, **FALSE**.  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if the document is a DocObject; otherwise **FALSE**.  
   
-##  <a name="isembedded"></a>COleServerDoc::IsEmbedded  
- Llame a la `IsEmbedded` para determinar si el documento representa un objeto incrustado en un contenedor de la función miembro.  
+##  <a name="isembedded"></a>  COleServerDoc::IsEmbedded  
+ Call the `IsEmbedded` member function to determine whether the document represents an object embedded in a container.  
   
 ```  
 BOOL IsEmbedded() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si la `COleServerDoc` objeto es un documento que representa un objeto incrustado en un contenedor; de lo contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `COleServerDoc` object is a document that represents an object embedded in a container; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Un documento que se cargan desde un archivo no se incrusta aunque pueden ser manipulados por una aplicación de contenedor como un vínculo. Para incrustar, se considera un documento que está incrustado en un documento contenedor.  
+### <a name="remarks"></a>Remarks  
+ A document loaded from a file is not embedded although it may be manipulated by a container application as a link. A document that is embedded in a container document is considered to be embedded.  
   
-##  <a name="isinplaceactive"></a>COleServerDoc::IsInPlaceActive  
- Llame a la `IsInPlaceActive` la función miembro para determinar si el elemento está actualmente en estado activo en contexto.  
+##  <a name="isinplaceactive"></a>  COleServerDoc::IsInPlaceActive  
+ Call the `IsInPlaceActive` member function to determine whether the item is currently in the in-place active state.  
   
 ```  
 BOOL IsInPlaceActive() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si la `COleServerDoc` objeto está activo en su lugar; de lo contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `COleServerDoc` object is active in place; otherwise 0.  
   
-##  <a name="notifychanged"></a>COleServerDoc::NotifyChanged  
- Llame a esta función para notificar a todos los elementos vinculados conectados al documento que ha cambiado el documento.  
+##  <a name="notifychanged"></a>  COleServerDoc::NotifyChanged  
+ Call this function to notify all linked items connected to the document that the document has changed.  
   
 ```  
 void NotifyChanged();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Normalmente, se llama a esta función cuando el usuario cambie algunos atributos globales, como las dimensiones del documento del servidor. Si un elemento OLE está vinculado al documento con un vínculo automático, el elemento se actualiza para reflejar los cambios. En aplicaciones de contenedor escritas con la biblioteca Microsoft Foundation Class, el [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) función miembro de `COleClientItem` se llama.  
+### <a name="remarks"></a>Remarks  
+ Typically, you call this function after the user changes some global attribute such as the dimensions of the server document. If an OLE item is linked to the document with an automatic link, the item is updated to reflect the changes. In container applications written with the Microsoft Foundation Class Library, the [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) member function of `COleClientItem` is called.  
   
 > [!NOTE]
->  Esta función se incluye por compatibilidad con OLE 1. Las nuevas aplicaciones deben utilizar [UpdateAllItems](#updateallitems).  
+>  This function is included for compatibility with OLE 1. New applications should use [UpdateAllItems](#updateallitems).  
   
-##  <a name="notifyclosed"></a>COleServerDoc::NotifyClosed  
- Llame a esta función para notificar a los contenedores que se ha cerrado el documento.  
+##  <a name="notifyclosed"></a>  COleServerDoc::NotifyClosed  
+ Call this function to notify the container(s) that the document has been closed.  
   
 ```  
 void NotifyClosed();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Cuando el usuario elige el comando Cerrar en el menú archivo, `NotifyClosed` llama a `COleServerDoc`de implementación de la [OnCloseDocument](../../mfc/reference/cdocument-class.md#onclosedocument) función miembro. En aplicaciones de contenedor escritas con la biblioteca Microsoft Foundation Class, el [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) función miembro de `COleClientItem` se llama.  
+### <a name="remarks"></a>Remarks  
+ When the user chooses the Close command from the File menu, `NotifyClosed` is called by `COleServerDoc`'s implementation of the [OnCloseDocument](../../mfc/reference/cdocument-class.md#onclosedocument) member function. In container applications written with the Microsoft Foundation Class Library, the [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) member function of `COleClientItem` is called.  
   
-##  <a name="notifyrename"></a>COleServerDoc::NotifyRename  
- Llame a esta función cuando el usuario cambia el nombre del documento de servidor.  
+##  <a name="notifyrename"></a>  COleServerDoc::NotifyRename  
+ Call this function after the user renames the server document.  
   
 ```  
 void NotifyRename(LPCTSTR lpszNewName);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpszNewName`  
- Puntero a una cadena que especifica el nuevo nombre del documento de servidor. por lo general, suele ser una ruta de acceso completa.  
+ Pointer to a string specifying the new name of the server document; this is typically a fully qualified path.  
   
-### <a name="remarks"></a>Comentarios  
- Cuando el usuario elige el comando Guardar como en el menú archivo, `NotifyRename` llama a `COleServerDoc`de implementación de la [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument) función miembro. Esta función se notifica a los archivos DLL, que a su vez notificar a los contenedores del sistema OLE. En aplicaciones de contenedor escritas con la biblioteca Microsoft Foundation Class, el [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) función miembro de `COleClientItem` se llama.  
+### <a name="remarks"></a>Remarks  
+ When the user chooses the Save As command from the File menu, `NotifyRename` is called by `COleServerDoc`'s implementation of the [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument) member function. This function notifies the OLE system DLLs, which in turn notify the containers. In container applications written with the Microsoft Foundation Class Library, the [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) member function of `COleClientItem` is called.  
   
-##  <a name="notifysaved"></a>COleServerDoc::NotifySaved  
- Llame a esta función cuando el usuario guarda el documento de servidor.  
+##  <a name="notifysaved"></a>  COleServerDoc::NotifySaved  
+ Call this function after the user saves the server document.  
   
 ```  
 void NotifySaved();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Cuando el usuario elige el comando Guardar en el menú archivo, `NotifySaved` es llamado por `COleServerDoc`de implementación de [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument). Esta función se notifica a los archivos DLL, que a su vez notificar a los contenedores del sistema OLE. En aplicaciones de contenedor escritas con la biblioteca Microsoft Foundation Class, el [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) función miembro de `COleClientItem` se llama.  
+### <a name="remarks"></a>Remarks  
+ When the user chooses the Save command from the File menu, `NotifySaved` is called for you by `COleServerDoc`'s implementation of [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument). This function notifies the OLE system DLLs, which in turn notify the containers. In container applications written with the Microsoft Foundation Class Library, the [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) member function of `COleClientItem` is called.  
   
-##  <a name="onclose"></a>COleServerDoc::OnClose  
- Llamado por el marco cuando un contenedor solicita que se cierre el documento de servidor.  
+##  <a name="onclose"></a>  COleServerDoc::OnClose  
+ Called by the framework when a container requests that the server document be closed.  
   
 ```  
 virtual void OnClose(OLECLOSE dwCloseOption);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `dwCloseOption`  
- Un valor de la enumeración `OLECLOSE`. Este parámetro puede tener uno de los valores siguientes:  
+ A value from the enumeration `OLECLOSE`. This parameter can have one of the following values:  
   
-- `OLECLOSE_SAVEIFDIRTY`El archivo se guarda si se ha modificado.  
+- `OLECLOSE_SAVEIFDIRTY` The file is saved if it has been modified.  
   
-- `OLECLOSE_NOSAVE`El archivo se cierra sin estar guardado.  
+- `OLECLOSE_NOSAVE` The file is closed without being saved.  
   
-- `OLECLOSE_PROMPTSAVE`Si se ha modificado el archivo, el usuario se le pide confirmación para guardarlo.  
+- `OLECLOSE_PROMPTSAVE` If the file has been modified, the user is prompted about saving it.  
   
-### <a name="remarks"></a>Comentarios  
- La implementación predeterminada llama `CDocument::OnCloseDocument`.  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls `CDocument::OnCloseDocument`.  
   
- Para obtener más información y valores adicionales, consulte [OLECLOSE](http://msdn.microsoft.com/library/windows/desktop/ms680623) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information and additional values, see [OLECLOSE](http://msdn.microsoft.com/library/windows/desktop/ms680623) in the Windows SDK.  
   
-##  <a name="ondeactivate"></a>COleServerDoc::OnDeactivate  
- Llamado por el marco de trabajo cuando el usuario desactiva un elemento incrustado o vinculado que está activo actualmente en el contexto.  
+##  <a name="ondeactivate"></a>  COleServerDoc::OnDeactivate  
+ Called by the framework when the user deactivates an embedded or linked item that is currently in-place active.  
   
 ```  
 virtual void OnDeactivate();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Esta función restaura la interfaz de usuario de la aplicación contenedora a su estado original y destruye los menús y otros controles que se crearon para la activación en contexto.  
+### <a name="remarks"></a>Remarks  
+ This function restores the container application's user interface to its original state and destroys any menus and other controls that were created for in-place activation.  
   
- La información de estado de deshacer incondicionalmente se debería liberar en este momento.  
+ The undo state information should be unconditionally released at this point.  
   
- Para obtener más información, vea el artículo [activación](../../mfc/activation-cpp.md)...  
+ For more information, see the article [Activation](../../mfc/activation-cpp.md)..  
   
-##  <a name="ondeactivateui"></a>COleServerDoc::OnDeactivateUI  
- Se llama cuando el usuario desactiva un elemento que se ha activado en su lugar.  
+##  <a name="ondeactivateui"></a>  COleServerDoc::OnDeactivateUI  
+ Called when the user deactivates an item that was activated in place.  
   
 ```  
 virtual void OnDeactivateUI(BOOL bUndoable);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `bUndoable`  
- Especifica si se pueden deshacer los cambios de edición.  
+ Specifies whether the editing changes can be undone.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función restaura a su estado original, ocultar los menús y otros controles que se crearon para la activación en contexto interfaz de usuario de la aplicación contenedora.  
+### <a name="remarks"></a>Remarks  
+ This function restores the container application's user interface to its original state, hiding any menus and other controls that were created for in-place activation.  
   
- El marco siempre establece `bUndoable` a **FALSE**. Si el servidor permite deshacer y hay una operación que se puede deshacer, llame a la implementación de clase base con `bUndoable` establecido en **TRUE**.  
+ The framework always sets `bUndoable` to **FALSE**. If the server supports undo and there is an operation that can be undone, call the base-class implementation with `bUndoable` set to **TRUE**.  
   
-##  <a name="ondocwindowactivate"></a>COleServerDoc::OnDocWindowActivate  
- El marco de trabajo llama a esta función para activar o desactivar una ventana de documento para su edición en contexto.  
+##  <a name="ondocwindowactivate"></a>  COleServerDoc::OnDocWindowActivate  
+ The framework calls this function to activate or deactivate a document window for in-place editing.  
   
 ```  
 virtual void OnDocWindowActivate(BOOL bActivate);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `bActivate`  
- Especifica si la ventana de documento está activado o desactivado.  
+ Specifies whether the document window is to be activated or deactivated.  
   
-### <a name="remarks"></a>Comentarios  
- La implementación predeterminada se quita o agrega los elementos de la interfaz de usuario de nivel de marco según corresponda. Reemplace esta función si desea realizar acciones adicionales cuando se activa o desactiva el documento que contiene el elemento.  
+### <a name="remarks"></a>Remarks  
+ The default implementation removes or adds the frame-level user interface elements as appropriate. Override this function if you want to perform additional actions when the document containing your item is activated or deactivated.  
   
- Para obtener más información, vea el artículo [activación](../../mfc/activation-cpp.md)...  
+ For more information, see the article [Activation](../../mfc/activation-cpp.md)..  
   
-##  <a name="onexecolecmd"></a>COleServerDoc::OnExecOleCmd  
- El marco de trabajo llama a esta función para ejecutar un comando especificado o muestra ayuda para el comando.  
+##  <a name="onexecolecmd"></a>  COleServerDoc::OnExecOleCmd  
+ The framework calls this function to execute a specified command or display help for the command.  
   
 ```  
 virtual HRESULT OnExecOleCmd(
@@ -538,15 +569,15 @@ virtual HRESULT OnExecOleCmd(
     VARIANTARG* pvarargOut);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pguidCmdGroup`  
- Puntero a un GUID que identifica un conjunto de comandos. Puede ser **NULL** para indicar el grupo de comandos de manera predeterminada.  
+ A pointer to a GUID that identifies a set of commands. Can be **NULL** to indicate the default command group.  
   
  `nCmdID`  
- Comando para ejecutar. Debe estar en el grupo identificado por `pguidCmdGroup`.  
+ The command to execute. Must be in the group identified by `pguidCmdGroup`.  
   
  *nCmdExecOut*  
- La forma en el objeto debe ejecutar el comando, uno o varios de los siguientes valores de la **OLECMDEXECOPT** (enumeración):  
+ The way the object should execute the command, one or more of the following values from the **OLECMDEXECOPT** enumeration:  
   
  **OLECMDEXECOPT_DODEFAULT**  
   
@@ -557,82 +588,82 @@ virtual HRESULT OnExecOleCmd(
  **OLECMDEXECOPT_SHOWHELP**  
   
  `pvarargIn`  
- Puntero a un **VARIANTARG** que contiene los argumentos de entrada para el comando. Puede ser **NULL**.  
+ Pointer to a **VARIANTARG** containing input arguments for the command. Can be **NULL**.  
   
  `pvarargOut`  
- Puntero a un **VARIANTARG** para recibir los valores devueltos de la salida del comando. Puede ser **NULL**.  
+ Pointer to a **VARIANTARG** to receive the output return values from the command. Can be **NULL**.  
   
-### <a name="return-value"></a>Valor devuelto  
- Devuelve `S_OK` si es correcto; en caso contrario, uno de los siguientes códigos de error:  
+### <a name="return-value"></a>Return Value  
+ Returns `S_OK` if successful; otherwise, one of the following error codes:  
   
-|Valor|Descripción|  
+|Value|Description|  
 |-----------|-----------------|  
-|**E_UNEXPECTED**|Se produjo un error inesperado|  
-|**E_FAIL**|Se produjo el error|  
-|**E_NOTIMPL**|Indica MFC sí debería intentar traducir y enviar el comando|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup`no es **NULL** pero no especifica un grupo de comandos reconocidos|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID`no se reconoce como un comando válido en el grupo`pguidCmdGroup`|  
-|**OLECMDERR_DISABLED**|El comando identificado por `nCmdID` está deshabilitado y no se puede ejecutar|  
-|**OLECMDERR_NOHELP**|Llamador más frecuentes para obtener ayuda sobre el comando identificado por `nCmdID` pero no hay ayuda disponible|  
-|**OLECMDERR_CANCELED**|El usuario canceló la ejecución|  
+|**E_UNEXPECTED**|Unexpected error occurred|  
+|**E_FAIL**|Error occurred|  
+|**E_NOTIMPL**|Indicates MFC itself should attempt to translate and dispatch the command|  
+|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` is non- **NULL** but does not specify a recognized command group|  
+|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` is not recognized as a valid command in the group `pguidCmdGroup`|  
+|**OLECMDERR_DISABLED**|The command identified by `nCmdID` is disabled and cannot be executed|  
+|**OLECMDERR_NOHELP**|Caller asked for help on the command identified by `nCmdID` but no help is available|  
+|**OLECMDERR_CANCELED**|User canceled the execution|  
   
-### <a name="remarks"></a>Comentarios  
- `COleCmdUI`puede utilizarse para habilitar, actualizar y establecer otras propiedades de los comandos de interfaz de usuario de DocObject. Después de los comandos de inicialización, puede ejecutarlas con `OnExecOleCmd`.  
+### <a name="remarks"></a>Remarks  
+ `COleCmdUI` can be used to enable, update, and set other properties of DocObject user interface commands. After the commands are initialized, you can execute them with `OnExecOleCmd`.  
   
- El marco de trabajo llama a la función antes de intentar traducir y enviar un comando de documentos OLE. No es necesario reemplazar esta función para controlar los comandos de documento estándares de OLE, pero debe proporcionar un reemplazo para esta función si desea administrar sus propios comandos personalizados o controlar los comandos que aceptan parámetros o devuelven resultados.  
+ The framework calls the function before attempting to translate and dispatch an OLE document command. You don't need to override this function to handle standard OLE document commands, but you must supply an override to this function if you want to handle your own custom commands or handle commands that accept parameters or return results.  
   
- La mayoría de los comandos no toman argumentos o valores devueltos. Para la mayoría de los comandos que el llamador pueda pasar **NULL**s para `pvarargIn` y `pvarargOut`. Para los comandos que esperan que los valores de entrada, el llamador puede declarar e inicializar un **VARIANTARG** variable y pasar un puntero a la variable `pvarargIn`. Para los comandos que requieren un valor único, el argumento puede almacenarse directamente en el **VARIANTARG** y pasa a la función. Se deben empaquetar varios argumentos dentro de la **VARIANTARG** mediante uno de los tipos compatibles (como `IDispatch` y **SAFEARRAY** ).  
+ Most of the commands do not take arguments or return values. For a majority of commands the caller can pass **NULL**s for `pvarargIn` and `pvarargOut`. For commands that expect input values, the caller can declare and initialize a **VARIANTARG** variable and pass a pointer to the variable in `pvarargIn`. For commands that require a single value, the argument can be stored directly in the **VARIANTARG** and passed to the function. Multiple arguments must be packaged within the **VARIANTARG** using one of the supported types (such as `IDispatch` and **SAFEARRAY** ).  
   
- De forma similar, si un comando devuelve argumentos, el llamador debe declarar un **VARIANTARG**, inicialícelo `VT_EMPTY`y pasar su dirección en `pvarargOut`. Si un comando devuelve un valor único, puede almacenar el valor directamente en el objeto `pvarargOut`. Se deben empaquetar varios valores de salida de alguna manera apropiada para el **VARIANTARG**.  
+ Similarly, if a command returns arguments the caller is expected to declare a **VARIANTARG**, initialize it to `VT_EMPTY`, and pass its address in `pvarargOut`. If a command returns a single value, the object can store that value directly in `pvarargOut`. Multiple output values must be packaged in some way appropriate for the **VARIANTARG**.  
   
- La implementación de la clase base de esta función recorrerá la **OLE_COMMAND_MAP** estructuras asociadas con el destino del comando e intente enviar el comando a un controlador adecuado. Implementación de la clase base solo funciona con los comandos que no aceptan argumentos o valores devueltos. Si necesita controlar los comandos que aceptan argumentos o valores devueltos, debe reemplazar esta función y trabajar con el `pvarargIn` y `pvarargOut` parámetros usted mismo.  
+ The base-class implementation of this function will walk the **OLE_COMMAND_MAP** structures associated with the command target and try to dispatch the command to an appropriate handler. The base-class implementation works only with commands that do not accept arguments or return values. If you need to handle commands that do accept arguments or return values, you must override this function and work with the `pvarargIn` and `pvarargOut` parameters yourself.  
   
-##  <a name="onframewindowactivate"></a>COleServerDoc::OnFrameWindowActivate  
- El marco de trabajo llama a esta función cuando se activa o se desactiva la ventana de marco de la aplicación contenedora.  
+##  <a name="onframewindowactivate"></a>  COleServerDoc::OnFrameWindowActivate  
+ The framework calls this function when the container application's frame window is activated or deactivated.  
   
 ```  
 virtual void OnFrameWindowActivate(BOOL bActivate);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `bActivate`  
- Especifica si la ventana de marco está activado o desactivado.  
+ Specifies whether the frame window is to be activated or deactivated.  
   
-### <a name="remarks"></a>Comentarios  
- La implementación predeterminada, cancela la ventana de marco puede estar en cualquier modo de ayuda. Reemplace esta función si desea realizar un procesamiento especial cuando se activa o desactiva la ventana de marco.  
+### <a name="remarks"></a>Remarks  
+ The default implementation cancels any help modes the frame window might be in. Override this function if you want to perform special processing when the frame window is activated or deactivated.  
   
- Para obtener más información, vea el artículo [activación](../../mfc/activation-cpp.md)...  
+ For more information, see the article [Activation](../../mfc/activation-cpp.md)..  
   
-##  <a name="ongetembeddeditem"></a>COleServerDoc:: OnGetEmbeddedItem  
- Llamado por el marco cuando una aplicación llama a la aplicación de servidor para crear o editar un elemento incrustado.  
+##  <a name="ongetembeddeditem"></a>  COleServerDoc::OnGetEmbeddedItem  
+ Called by the framework when a container application calls the server application to create or edit an embedded item.  
   
 ```  
 virtual COleServerItem* OnGetEmbeddedItem() = 0;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Un puntero a un elemento que representa el documento completo; **NULL** si la operación ha fallado.  
+### <a name="return-value"></a>Return Value  
+ A pointer to an item representing the entire document; **NULL** if the operation failed.  
   
-### <a name="remarks"></a>Comentarios  
- No hay ninguna implementación predeterminada. Debe reemplazar esta función para devolver un objeto que representa el documento completo. El valor devuelto debe ser un objeto de un `COleServerItem`-clase derivada.  
+### <a name="remarks"></a>Remarks  
+ There is no default implementation. You must override this function to return an item that represents the entire document. This return value should be an object of a `COleServerItem`-derived class.  
   
-##  <a name="onreactivateandundo"></a>COleServerDoc::OnReactivateAndUndo  
- El marco de trabajo llama a esta función cuando el usuario decide deshacer los cambios realizados en los elementos que se han activado en su lugar, cambiar y desactiva posteriormente.  
+##  <a name="onreactivateandundo"></a>  COleServerDoc::OnReactivateAndUndo  
+ The framework calls this function when the user chooses to undo changes made to an item that has been activated in place, changed, and subsequently deactivated.  
   
 ```  
 virtual BOOL OnReactivateAndUndo();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- La implementación predeterminada no hace nada excepto retorno **FALSE** para indicar el error.  
+### <a name="remarks"></a>Remarks  
+ The default implementation does nothing except return **FALSE** to indicate failure.  
   
- Reemplace esta función si la aplicación admite deshacer. Suele realizar la operación de deshacer y activar el elemento mediante una llamada a `ActivateInPlace`. Si la aplicación está escrita con la biblioteca Microsoft Foundation Class, llamada `COleClientItem::ReactivateAndUndo` hace que llamen a esta función.  
+ Override this function if your application supports undo. Usually you would perform the undo operation, then activate the item by calling `ActivateInPlace`. If the container application is written with the Microsoft Foundation Class Library, calling `COleClientItem::ReactivateAndUndo` causes this function to be called.  
   
-##  <a name="onresizeborder"></a>COleServerDoc::OnResizeBorder  
- El marco de trabajo llama a esta función cuando cambian de tamaño de ventanas de marco de la aplicación contenedora.  
+##  <a name="onresizeborder"></a>  COleServerDoc::OnResizeBorder  
+ The framework calls this function when the container application's frame windows change size.  
   
 ```  
 virtual void OnResizeBorder(
@@ -641,25 +672,25 @@ virtual void OnResizeBorder(
     BOOL bFrame);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpRectBorder`  
- Puntero a un `RECT` estructura o un `CRect` objeto que especifica las coordenadas del borde.  
+ Pointer to a `RECT` structure or a `CRect` object that specifies the coordinates of the border.  
   
  `lpUIWindow`  
- Puntero a un objeto de clase **IOleInPlaceUIWindow** que posee la sesión de edición en el contexto actual.  
+ Pointer to an object of class **IOleInPlaceUIWindow** that owns the current in-place editing session.  
   
- *fotogramas b*  
- **TRUE** si `lpUIWindow` apunta a la ventana de marco de nivel superior de la aplicación contenedora, o **FALSE** si `lpUIWindow` apunta a la ventana de marco de nivel de documento de la aplicación contenedora.  
+ *bFrame*  
+ **TRUE** if `lpUIWindow` points to the container application's top-level frame window, or **FALSE** if `lpUIWindow` points to the container application's document-level frame window.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función cambia de tamaño y ajusta las barras de herramientas y otros elementos de interfaz de usuario según el nuevo tamaño de ventana.  
+### <a name="remarks"></a>Remarks  
+ This function resizes and adjusts toolbars and other user-interface elements in accordance with the new window size.  
   
- Para obtener más información, consulte [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) in the Windows SDK.  
   
- Avanzada reemplazable.  
+ This is an advanced overridable.  
   
-##  <a name="onsethostnames"></a>COleServerDoc::OnSetHostNames  
- Llamado por el marco de trabajo cuando el contenedor establece o cambia los nombres de host para este documento.  
+##  <a name="onsethostnames"></a>  COleServerDoc::OnSetHostNames  
+ Called by the framework when the container sets or changes the host names for this document.  
   
 ```  
 virtual void OnSetHostNames(
@@ -667,20 +698,20 @@ virtual void OnSetHostNames(
     LPCTSTR lpszHostObj);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpszHost`  
- Puntero a una cadena que especifica el nombre de la aplicación contenedora.  
+ Pointer to a string that specifies the name of the container application.  
   
  `lpszHostObj`  
- Puntero a una cadena que especifica el nombre del contenedor para el documento.  
+ Pointer to a string that specifies the container's name for the document.  
   
-### <a name="remarks"></a>Comentarios  
- La implementación predeterminada, cambia el título del documento para todas las vistas que hacen referencia a este documento.  
+### <a name="remarks"></a>Remarks  
+ The default implementation changes the document title for all views referring to this document.  
   
- Reemplace esta función si la aplicación establece los títulos a través de un mecanismo diferente.  
+ Override this function if your application sets the titles through a different mechanism.  
   
-##  <a name="onsetitemrects"></a>COleServerDoc::OnSetItemRects  
- El marco de trabajo llama a esta función para situar la ventana de marco de edición en contexto dentro de la ventana de marco de la aplicación contenedora.  
+##  <a name="onsetitemrects"></a>  COleServerDoc::OnSetItemRects  
+ The framework calls this function to position the in-place editing frame window within the container application's frame window.  
   
 ```  
 virtual void OnSetItemRects(
@@ -688,20 +719,20 @@ virtual void OnSetItemRects(
     LPCRECT lpClipRect);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpPosRect`  
- Puntero a un `RECT` estructura o un `CRect` objeto que especifica la posición de la ventana de marco en contexto con respecto al área de cliente de la aplicación contenedora.  
+ Pointer to a `RECT` structure or a `CRect` object that specifies the in-place frame window's position relative to the container application's client area.  
   
  `lpClipRect`  
- Puntero a un `RECT` estructura o un `CRect` objeto que especifica el rectángulo de recorte de la ventana de marco en contexto con respecto al área de cliente de la aplicación contenedora.  
+ Pointer to a `RECT` structure or a `CRect` object that specifies the in-place frame window's clipping rectangle relative to the container application's client area.  
   
-### <a name="remarks"></a>Comentarios  
- Reemplazar esta función para actualizar el factor de zoom de la vista, si es necesario.  
+### <a name="remarks"></a>Remarks  
+ Override this function to update the view's zoom factor, if necessary.  
   
- Esta función normalmente se llama en respuesta a un `RequestPositionChange` llamar, aunque se puede llamar en cualquier momento por el contenedor para solicitar un cambio en la posición del elemento en el contexto.  
+ This function is usually called in response to a `RequestPositionChange` call, although it can be called at any time by the container to request a position change for the in-place item.  
   
-##  <a name="onshowcontrolbars"></a>COleServerDoc::OnShowControlBars  
- El marco de trabajo llama a esta función para mostrar u ocultar las barras de control de la aplicación de servidor asociadas a la ventana de marco identificada por `pFrameWnd`.  
+##  <a name="onshowcontrolbars"></a>  COleServerDoc::OnShowControlBars  
+ The framework calls this function to show or hide the server application's control bars associated with the frame window identified by `pFrameWnd`.  
   
 ```  
 virtual void OnShowControlBars(
@@ -709,86 +740,86 @@ virtual void OnShowControlBars(
     BOOL bShow);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pFrameWnd`  
- Puntero a la ventana de marco cuyas barras de control deben estar ocultas o se muestra.  
+ Pointer to the frame window whose control bars should be hidden or shown.  
   
  `bShow`  
- Determina si se muestran barras de control o se oculta.  
+ Determines whether control bars are shown or hidden.  
   
-### <a name="remarks"></a>Comentarios  
- La implementación predeterminada enumera todas las barras de controles que pertenecen a esa ventana de marco y oculta o muestra.  
+### <a name="remarks"></a>Remarks  
+ The default implementation enumerates all control bars owned by that frame window and hides or shows them.  
   
-##  <a name="onshowdocument"></a>COleServerDoc::OnShowDocument  
- El marco llama el `OnShowDocument` funcionar cuando el documento de servidor debe ser oculto o se muestra.  
+##  <a name="onshowdocument"></a>  COleServerDoc::OnShowDocument  
+ The framework calls the `OnShowDocument` function when the server document must be hidden or shown.  
   
 ```  
 virtual void OnShowDocument(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `bShow`  
- Especifica si la interfaz de usuario al documento deben mostrarse u ocultarse.  
+ Specifies whether the user interface to the document is to be shown or hidden.  
   
-### <a name="remarks"></a>Comentarios  
- Si `bShow` es **TRUE**, la implementación predeterminada activa la aplicación de servidor, si es necesario y hace que la aplicación de contenedor desplazar la ventana para que el elemento está visible. Si `bShow` es **FALSE**, la implementación predeterminada desactiva el elemento mediante una llamada a `OnDeactivate`, destruye u oculta todas las ventanas de marco que se han creado para el documento, excepto el primero. Si no queda ningún documento visible, la implementación predeterminada oculta la aplicación de servidor.  
+### <a name="remarks"></a>Remarks  
+ If `bShow` is **TRUE**, the default implementation activates the server application, if necessary, and causes the container application to scroll its window so that the item is visible. If `bShow` is **FALSE**, the default implementation deactivates the item through a call to `OnDeactivate`, then destroys or hides all frame windows that have been created for the document, except the first one. If no visible documents remain, the default implementation hides the server application.  
   
-##  <a name="onupdatedocument"></a>COleServerDoc::OnUpdateDocument  
- Llamado por el marco al guardar un documento que es un elemento incrustado en un documento compuesto.  
+##  <a name="onupdatedocument"></a>  COleServerDoc::OnUpdateDocument  
+ Called by the framework when saving a document that is an embedded item in a compound document.  
   
 ```  
 virtual BOOL OnUpdateDocument();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si el documento se actualizó correctamente; en caso contrario, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the document was successfully updated; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- La implementación predeterminada llama el [COleServerDoc::NotifySaved](#notifysaved) y [COleServerDoc::SaveEmbedding](#saveembedding) las funciones de miembro y, a continuación, marca el documento como limpio. Reemplace esta función si desea realizar el procesamiento cuando se actualiza un elemento incrustado especial.  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls the [COleServerDoc::NotifySaved](#notifysaved) and [COleServerDoc::SaveEmbedding](#saveembedding) member functions and then marks the document as clean. Override this function if you want to perform special processing when updating an embedded item.  
   
-##  <a name="requestpositionchange"></a>COleServerDoc::RequestPositionChange  
- Llame a esta función miembro para que la aplicación cambie la posición del elemento.  
+##  <a name="requestpositionchange"></a>  COleServerDoc::RequestPositionChange  
+ Call this member function to have the container application change the item's position.  
   
 ```  
 void RequestPositionChange(LPCRECT lpPosRect);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpPosRect`  
- Puntero a un `RECT` estructura o un `CRect` objeto que contiene la posición del elemento nuevo.  
+ Pointer to a `RECT` structure or a `CRect` object containing the item's new position.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función normalmente se denomina (junto con `UpdateAllItems`) cuando ha cambiado los datos de un elemento de activo en contexto. Después de esta llamada, el contenedor puede o no se puede realizar el cambio mediante una llamada a `OnSetItemRects`. La posición resultante podría ser diferente del solicitado.  
+### <a name="remarks"></a>Remarks  
+ This function is usually called (in conjunction with `UpdateAllItems`) when the data in an in-place active item has changed. Following this call, the container might or might not perform the change by calling `OnSetItemRects`. The resulting position might be different from the one requested.  
   
-##  <a name="saveembedding"></a>COleServerDoc::SaveEmbedding  
- Llame a esta función para indicar a la aplicación para guardar el objeto incrustado.  
+##  <a name="saveembedding"></a>  COleServerDoc::SaveEmbedding  
+ Call this function to tell the container application to save the embedded object.  
   
 ```  
 void SaveEmbedding();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Esta función se invoca automáticamente desde `OnUpdateDocument`. Tenga en cuenta que esta función hace que el elemento se actualice en el disco, por lo que normalmente se llama sólo como resultado de una acción de usuario específico.  
+### <a name="remarks"></a>Remarks  
+ This function is called automatically from `OnUpdateDocument`. Note that this function causes the item to be updated on disk, so it is usually called only as a result of a specific user action.  
   
-##  <a name="scrollcontainerby"></a>COleServerDoc::ScrollContainerBy  
- Llame a la `ScrollContainerBy` función miembro a la cantidad, en píxeles, de desplazamiento del documento contenedor indicado por `sizeScroll`.  
+##  <a name="scrollcontainerby"></a>  COleServerDoc::ScrollContainerBy  
+ Call the `ScrollContainerBy` member function to scroll the container document by the amount, in pixels, indicated by `sizeScroll`.  
   
 ```  
 BOOL ScrollContainerBy(CSize sizeScroll);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `sizeScroll`  
- Indica cuánto se desplaza el documento contenedor.  
+ Indicates how far the container document is to scroll.  
   
-### <a name="return-value"></a>Valor devuelto  
- Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- Los valores positivos indican el desplazamiento hacia abajo y a la derecha. los valores negativos indican el desplazamiento hacia arriba y hacia la izquierda.  
+### <a name="remarks"></a>Remarks  
+ Positive values indicate scrolling down and to the right; negative values indicate scrolling up and to the left.  
   
-##  <a name="updateallitems"></a>COleServerDoc::UpdateAllItems  
- Llame a esta función para notificar a todos los elementos vinculados conectados al documento que ha cambiado el documento.  
+##  <a name="updateallitems"></a>  COleServerDoc::UpdateAllItems  
+ Call this function to notify all linked items connected to the document that the document has changed.  
   
 ```  
 void UpdateAllItems(
@@ -798,37 +829,37 @@ void UpdateAllItems(
     DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pSender`  
- Puntero al elemento que se modificó el documento, o **NULL** si todos los elementos que se van a actualizarse.  
+ Pointer to the item that modified the document, or **NULL** if all items are to be updated.  
   
  `lHint`  
- Contiene información acerca de la modificación.  
+ Contains information about the modification.  
   
  `pHint`  
- Puntero a un objeto que almacena información sobre la modificación.  
+ Pointer to an object storing information about the modification.  
   
  `nDrawAspect`  
- Determina cómo se dibujarse el elemento. Se trata de un valor de la `DVASPECT` (enumeración). Este parámetro puede tener uno de los valores siguientes:  
+ Determines how the item is to be drawn. This is a value from the `DVASPECT` enumeration. This parameter can have one of the following values:  
   
-- `DVASPECT_CONTENT`Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
+- `DVASPECT_CONTENT` Item is represented in such a way that it can be displayed as an embedded object inside its container.  
   
-- `DVASPECT_THUMBNAIL`Se representa en una representación "miniatura" para que se puede mostrar en una herramienta de exploración.  
+- `DVASPECT_THUMBNAIL` Item is rendered in a "thumbnail" representation so that it can be displayed in a browsing tool.  
   
-- `DVASPECT_ICON`Elemento se representa mediante un icono.  
+- `DVASPECT_ICON` Item is represented by an icon.  
   
-- `DVASPECT_DOCPRINT`Elemento se representa como si se imprimiera utilizando el comando Imprimir en el menú archivo.  
+- `DVASPECT_DOCPRINT` Item is represented as if it were printed using the Print command from the File menu.  
   
-### <a name="remarks"></a>Comentarios  
- Se suele llamar a esta función cuando el usuario cambie el documento de servidor. Si un elemento OLE está vinculado al documento con un vínculo automático, el elemento se actualiza para reflejar los cambios. En aplicaciones de contenedor escritas con la biblioteca Microsoft Foundation Class, el [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) función miembro de `COleClientItem` se llama.  
+### <a name="remarks"></a>Remarks  
+ You typically call this function after the user changes the server document. If an OLE item is linked to the document with an automatic link, the item is updated to reflect the changes. In container applications written with the Microsoft Foundation Class Library, the [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) member function of `COleClientItem` is called.  
   
- Esta función llama a la `OnUpdate` función de miembro para cada uno de los elementos del documento excepto el envío, pasando `pHint`, `lHint`, y `nDrawAspect`. Use estos parámetros para pasar información a los artículos acerca de las modificaciones realizadas en el documento. Puede codificar información mediante `lHint` o puede definir un `CObject`-clase derivada para almacenar información sobre las modificaciones y pasar un objeto de esa clase utilizando `pHint`. Invalidar el `OnUpdate` función miembro en su `COleServerItem`-clase derivada para optimizar la actualización de cada elemento dependiendo de si ha cambiado su presentación.  
+ This function calls the `OnUpdate` member function for each of the document's items except the sending item, passing `pHint`, `lHint`, and `nDrawAspect`. Use these parameters to pass information to the items about the modifications made to the document. You can encode information using `lHint` or you can define a `CObject`-derived class to store information about the modifications and pass an object of that class using `pHint`. Override the `OnUpdate` member function in your `COleServerItem`-derived class to optimize the updating of each item depending on whether its presentation has changed.  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo HIERSVR](../../visual-cpp-samples.md)   
- [Clase COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)   
- [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
- [COleDocument (clase)](../../mfc/reference/coledocument-class.md)   
- [Clase COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)   
- [COleTemplateServer (clase)](../../mfc/reference/coletemplateserver-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
+ [COleLinkingDoc Class](../../mfc/reference/colelinkingdoc-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDocument Class](../../mfc/reference/coledocument-class.md)   
+ [COleLinkingDoc Class](../../mfc/reference/colelinkingdoc-class.md)   
+ [COleTemplateServer Class](../../mfc/reference/coletemplateserver-class.md)
 

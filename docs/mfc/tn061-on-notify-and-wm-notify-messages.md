@@ -1,56 +1,74 @@
 ---
-title: "TN061: Mensajes ON_NOTIFY y WM_NOTIFY | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ON_NOTIFY"
-  - "WM_NOTIFY"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mensajes de notificación"
-  - "ON_NOTIFY (mensaje)"
-  - "ON_NOTIFY_EX (mensaje)"
-  - "ON_NOTIFY_EX_RANGE (mensaje)"
-  - "ON_NOTIFY_RANGE (mensaje)"
-  - "TN061"
-  - "WM_NOTIFY (mensaje)"
+title: 'TN061: ON_NOTIFY and WM_NOTIFY Messages | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ON_NOTIFY
+- WM_NOTIFY
+dev_langs:
+- C++
+helpviewer_keywords:
+- ON_NOTIFY_EX message [MFC]
+- TN061
+- ON_NOTIFY message [MFC]
+- ON_NOTIFY_EX_RANGE message [MFC]
+- ON_NOTIFY_RANGE message [MFC]
+- notification messages
+- WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# TN061: Mensajes ON_NOTIFY y WM_NOTIFY
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d61314d9e2794d76e9c77d8943d807da28d9fe8
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: ON_NOTIFY and WM_NOTIFY Messages
 > [!NOTE]
->  La nota técnica siguiente no se ha actualizado desde que se incluyó por primera vez en la documentación en línea.  Como resultado, algunos procedimientos y temas podrían estar obsoletos o ser incorrectos.  Para obtener información más reciente, se recomienda buscar el tema de interés en el índice de la documentación en línea.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Esta nota técnica proporciona información adicional en el nuevo mensaje de **WM\_NOTIFY** y describe \(y utilizado\) la manera recomendada de controlar mensajes de **WM\_NOTIFY** en la aplicación MFC.  
+ This technical note provides background information on the new **WM_NOTIFY** message and describes the recommended (and most common) way of handling **WM_NOTIFY** messages in your MFC application.  
   
- **Mensajes de notificación de Windows 3.x**  
+ **Notification Messages in Windows 3.x**  
   
- En Windows 3.x, los controles notifican a los elementos primarios de eventos como los clics, los cambios en el contenido y selección, y dibujo del fondo del control enviando un mensaje al elemento primario.  Las notificaciones simples se envían como mensajes especiales de **WM\_COMMAND** , con el código de notificación \(como **BN\_CLICKED**\) y el identificador de control empaquetado en `wParam` y el identificador de control en `lParam`.  Observe que desde `wParam` y `lParam` está lleno, no hay ninguna manera de pasar ningún dato adicionales — estos mensajes pueden ser sólo notificación simple.  Por ejemplo, en la notificación de **BN\_CLICKED** , no hay ninguna manera de enviar información sobre la ubicación del cursor cuando se hizo clic en el botón.  
+ In Windows 3.x, controls notify their parents of events such as mouse clicks, changes in content and selection, and control background painting by sending a message to the parent. Simple notifications are sent as special **WM_COMMAND** messages, with the notification code (such as **BN_CLICKED**) and control ID packed into `wParam` and the control's handle in `lParam`. Note that since `wParam` and `lParam` are full, there is no way to pass any additional data — these messages can be only simple notification. For instance, in the **BN_CLICKED** notification, there's no way to send information about the location of the mouse cursor when the button was clicked.  
   
- Cuando los controles de Windows 3.x deben enviar un mensaje de notificación que incluye datos adicionales, utilice una variedad de mensajes especial, incluidos `WM_CTLCOLOR`, `WM_VSCROLL`, `WM_HSCROLL`, `WM_DRAWITEM`, `WM_MEASUREITEM`, `WM_COMPAREITEM`, `WM_DELETEITEM`, `WM_CHARTOITEM`, `WM_VKEYTOITEM`, etc.  Estos mensajes se pueden reflejar de nuevo al control que los envió.  Para obtener más información, vea [TN062: Mensaje Reflexión para Controles de Windows](../mfc/tn062-message-reflection-for-windows-controls.md).  
+ When controls in Windows 3.x need to send a notification message that includes additional data, they use a variety of special-purpose messages, including `WM_CTLCOLOR`, `WM_VSCROLL`, `WM_HSCROLL`, `WM_DRAWITEM`, `WM_MEASUREITEM`, `WM_COMPAREITEM`, `WM_DELETEITEM`, `WM_CHARTOITEM`, `WM_VKEYTOITEM`, and so on. These messages can be reflected back to the control that sent them. For more information, see [TN062: Message Reflection for Windows Controls](../mfc/tn062-message-reflection-for-windows-controls.md).  
   
- **Mensajes de notificación en Win32**  
+ **Notification Messages in Win32**  
   
- Para los controles que existían en Windows 3.1, la API Win32 utiliza la mayoría de los mensajes de notificación utilizados en Windows 3.x.  Sin embargo, Win32 también agrega varios complejo, los controles complejos a los admitidos en Windows 3.x.  Con frecuencia, necesidad de estos controles de enviar datos adicionales con los mensajes de notificación.  En lugar de agregar un nuevo mensaje de **WM\_\*** para cada nueva notificación que necesita datos adicionales, los diseñadores de la API Win32 eligieron para agregar un único mensaje, **WM\_NOTIFY**, que pueden pasar cualquier cantidad de datos adicionales en un modo estandarizado.  
+ For controls that existed in Windows 3.1, the Win32 API uses most of the notification messages that were used in Windows 3.x. However, Win32 also adds a number of sophisticated, complex controls to those supported in Windows 3.x. Frequently, these controls need to send additional data with their notification messages. Rather than adding a new **WM_\*** message for each new notification that needs additional data, the designers of the Win32 API chose to add just one message, **WM_NOTIFY**, which can pass any amount of additional data in a standardized fashion.  
   
- Los mensajes de**WM\_NOTIFY** contienen el identificador del control que envía el mensaje en `wParam` y un puntero a una estructura en `lParam`.  Esta estructura es una estructura de **NMHDR** o de alguna estructura mayor que tiene una estructura de **NMHDR** como primer miembro.  Observe que ya que el miembro de **NMHDR** es primero, un puntero a esta estructura puede utilizarse como puntero a **NMHDR** o como un puntero a la estructura mayor dependiendo de cómo se convierte.  
+ **WM_NOTIFY** messages contain the ID of the control sending the message in `wParam` and a pointer to a structure in `lParam`. This structure is either an **NMHDR** structure or some larger structure that has an **NMHDR** structure as its first member. Note that since the **NMHDR** member is first, a pointer to this structure can be used as either a pointer to an **NMHDR** or as a pointer to the larger structure depending on how you cast it.  
   
- En la mayoría de los casos, el puntero señalará a una estructura mayor y deberá conviértalo cuando se usa.  Sólo en algunas notificaciones, como las notificaciones de notificaciones \(cuyos nombres empiezan con **NM\_**\) y de **TTN\_SHOW** y de **TTN\_POP** de control tooltip, es una estructura de **NMHDR** utilizada realmente.  
+ In most cases, the pointer will point to a larger structure and you'll need to cast it when you use it. In only a few notifications, such as the common notifications (whose names start with **NM_**) and the tool tip control's **TTN_SHOW** and **TTN_POP** notifications, is an **NMHDR** structure actually used.  
   
- La estructura de **NMHDR** o miembro inicial contiene el identificador y el identificador del control que envía el mensaje y el código de notificación \(como **TTN\_SHOW**\).  El formato de la estructura de **NMHDR** se muestra a continuación:  
+ The **NMHDR** structure or initial member contains the handle and ID of the control sending the message and the notification code (such as **TTN_SHOW**). The format of the **NMHDR** structure is shown below:  
   
 ```  
 typedef struct tagNMHDR {  
@@ -60,9 +78,9 @@ typedef struct tagNMHDR {
 } NMHDR;  
 ```  
   
- Para un mensaje de **TTN\_SHOW** , establecerán al miembro de **code** a **TTN\_SHOW**.  
+ For a **TTN_SHOW** message, the **code** member would be set to **TTN_SHOW**.  
   
- La mayoría de las notificaciones pasan un puntero a una estructura más grande que contiene una estructura de **NMHDR** como primer miembro.  Por ejemplo, considere la estructura utilizada por el mensaje de notificación de **LVN\_KEYDOWN** del control de vista de lista, se envía a una clave se clava un control de vista de lista.  Los puntos de puntero a una estructura de **LV\_KEYDOWN** , que se define como se muestra a continuación:  
+ Most notifications pass a pointer to a larger structure that contains an **NMHDR** structure as its first member. For instance, consider the structure used by the list view control's **LVN_KEYDOWN** notification message, which is sent when a key is pressed in a list view control. The pointer points to an **LV_KEYDOWN** structure, which is defined as shown below:  
   
 ```  
 typedef struct tagLV_KEYDOWN {  
@@ -72,164 +90,195 @@ typedef struct tagLV_KEYDOWN {
 } LV_KEYDOWN;  
 ```  
   
- Observe que ya que el miembro de **NMHDR** es el primero en esta estructura, el puntero que se pasa en el mensaje de notificación puede ser echado a un puntero a **NMHDR** o puntero a **LV\_KEYDOWN**.  
+ Note that since the **NMHDR** member is first in this structure, the pointer you're passed in the notification message can be cast to either a pointer to an **NMHDR** or a pointer to an **LV_KEYDOWN**.  
   
- **Notificaciones comunes a Controles nuevos Windows**  
+ **Notifications Common to All New Windows Controls**  
   
- Algunas notificaciones son comunes a todos los controles de Windows.  Estas notificaciones pasan un puntero a una estructura de **NMHDR** .  
+ Some notifications are common to all of the new Windows controls. These notifications pass a pointer to an **NMHDR** structure.  
   
-|Código de notificación|Enviado porque|  
-|----------------------------|--------------------|  
-|**NM\_CLICK**|El usuario hizo clic en el botón primario en el control|  
-|**NM\_DBLCLK**|El usuario hace doble clic en el botón primario en el control|  
-|**NM\_RCLICK**|El usuario hizo clic con el botón secundario del mouse en el control|  
-|**NM\_RDBLCLK**|El usuario hizo doble clic con el botón secundario del mouse en el control|  
-|**NM\_RETURN**|El usuario presionó la tecla ENTRAR cuando el control tiene el foco de entrada|  
-|**NM\_SETFOCUS**|El Control se ha definido el foco de entrada|  
-|**NM\_KILLFOCUS**|El Control ha perdido el foco de entrada|  
-|**NM\_OUTOFMEMORY**|El Control no puede completar una operación porque no hay memoria suficiente disponible|  
+|Notification code|Sent because|  
+|-----------------------|------------------|  
+|**NM_CLICK**|User clicked left mouse button in the control|  
+|**NM_DBLCLK**|User double-clicked left mouse button in the control|  
+|**NM_RCLICK**|User clicked right mouse button in the control|  
+|**NM_RDBLCLK**|User double-clicked right mouse button in the control|  
+|**NM_RETURN**|User pressed the ENTER key while control has input focus|  
+|**NM_SETFOCUS**|Control has been given input focus|  
+|**NM_KILLFOCUS**|Control has lost input focus|  
+|**NM_OUTOFMEMORY**|Control could not complete an operation because there was not enough memory available|  
   
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON\_NOTIFY: Administrar mensajes de WM\_NOTIFY en aplicaciones MFC  
- Los mensajes de notificación de los identificadores de `CWnd::OnNotify` de la función.  La implementación predeterminada comprueba el mapa de mensajes para que los controladores de notificación llamen.  No reemplaza normalmente `OnNotify`.  En su lugar, proporciona una función controladora y agrega una entrada de mensaje\- mapa para ese controlador el mapa de mensajes de la clase de la ventana propietaria.  
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: Handling WM_NOTIFY Messages in MFC Applications  
+ The function `CWnd::OnNotify` handles notification messages. Its default implementation checks the message map for notification handlers to call. In general, you do not override `OnNotify`. Instead, you provide a handler function and add a message-map entry for that handler to the message map of your owner window's class.  
   
- Pero, a través de la hoja de propiedades de ClassWizard, puede crear la entrada de mensaje\- mapa de `ON_NOTIFY` y proporcionarle con una función esquemática del controlador.  Para obtener más información sobre cómo utilizar ClassWizard para facilitar este, vea [Asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md).  
+ ClassWizard, via the ClassWizard property sheet, can create the `ON_NOTIFY` message-map entry and provide you with a skeleton handler function. For more information on using ClassWizard to make this easier, see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md).  
   
- La macro de mensaje\- mapa de `ON_NOTIFY` tiene la siguiente sintaxis:  
+ The `ON_NOTIFY` message-map macro has the following syntax:  
   
 ```  
-  
-ON_NOTIFY( wNotifyCode, id, memberFxn )  
+ 
+ON_NOTIFY(
+wNotifyCode  ,  
+id  ,
+    memberFxn)  
+ 
 ```  
   
- donde los parámetros título en cursivas se reemplazan:  
+ where the italicized parameters are replaced with:  
   
  `wNotifyCode`  
- El código para que el mensaje de notificación es administrado, por ejemplo **LVN\_KEYDOWN**.  
+ The code for the notification message to be handled, such as **LVN_KEYDOWN**.  
   
  `id`  
- El identificador secundario del control para el que se envía la notificación.  
+ The child identifier of the control for which the notification is sent.  
   
  `memberFxn`  
- La función miembro que se llamará cuando se envía esta notificación.  
+ The member function to be called when this notification is sent.  
   
- La función miembro se debe declarar con el siguiente prototipo:  
+ Your member function must be declared with the following prototype:  
   
 ```  
-  
-afx_msg void memberFxn( NMHDR * pNotifyStruct, LRESULT * result );  
+ 
+afx_msg void  
+memberFxn  
+(NMHDR* 
+pNotifyStruct  , LRESULT* result);
+
+ 
 ```  
   
-## Comentarios  
- donde los parámetros título en cursivas:  
+## <a name="remarks"></a>Remarks  
+ where the italicized parameters are:  
   
  `pNotifyStruct`  
- Un puntero a la estructura de notificación, como se describe en la sección anterior.  
+ A pointer to the notification structure, as described in the section above.  
   
  *result*  
- Un puntero al código de resultado que establecerá antes de volver.  
+ A pointer to the result code you'll set before you return.  
   
-## Ejemplo  
- Para especificar que la función `OnKeydownList1` miembro para controlar los mensajes de **LVN\_KEYDOWN** de `CListCtrl` cuyo identificador es `IDC_LIST1`, utilizaría ClassWizard para agregar lo siguiente al mapa de mensajes:  
+## <a name="example"></a>Example  
+ To specify that you want the member function `OnKeydownList1` to handle **LVN_KEYDOWN** messages from the `CListCtrl` whose ID is `IDC_LIST1`, you would use ClassWizard to add the following to your message map:  
   
 ```  
-ON_NOTIFY( LVN_KEYDOWN, IDC_LIST1, OnKeydownList1 )  
+ON_NOTIFY(LVN_KEYDOWN,
+    IDC_LIST1,
+    OnKeydownList1)  
 ```  
   
- En el ejemplo anterior, la función proporcionada por ClassWizard es:  
+ In the example above, the function provided by ClassWizard is:  
   
 ```  
 void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)  
 {  
-   LV_KEYDOWN* pLVKeyDow = (LV_KEYDOWN*)pNMHDR;  
-   // TODO: Add your control notification handler  
-   //       code here  
-  
-   *pResult = 0;  
+    LV_KEYDOWN* pLVKeyDow = (LV_KEYDOWN*)pNMHDR; *// TODO: Add your control notification handler *//       code here  
+ 
+ *pResult = 0;  
 }  
 ```  
   
- Observe que ClassWizard proporciona un puntero de tipo adecuado automáticamente.  Puede tener acceso a la estructura de notificación con `pNMHDR` o `pLVKeyDow`.  
+ Note that ClassWizard provides a pointer of the proper type automatically. You can access the notification structure through either `pNMHDR` or `pLVKeyDow`.  
   
-##  <a name="_mfcnotes_on_notify_range"></a> ON\_NOTIFY\_RANGE  
- Si necesita procesar el mismo mensaje de **WM\_NOTIFY** para un conjunto de controles, puede usar **ON\_NOTIFY\_RANGE** en lugar de `ON_NOTIFY`.  Por ejemplo, puede tener un conjunto de botones para los que desea realizar la misma acción para el mensaje de notificación.  
+##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE  
+ If you need to process the same **WM_NOTIFY** message for a set of controls, you can use **ON_NOTIFY_RANGE** rather than `ON_NOTIFY`. For instance, you may have a set of buttons for which you want to perform the same action for a certain notification message.  
   
- Cuando se utiliza **ON\_NOTIFY\_RANGE**, puede especificar un intervalo contiguo de identificadores secundarios para que controlen el mensaje de notificación especificando los identificadores secundarios inicial y final del intervalo.  
+ When you use **ON_NOTIFY_RANGE**, you specify a contiguous range of child identifiers for which to handle the notification message by specifying the beginning and ending child identifiers of the range.  
   
- Pero no administra **ON\_NOTIFY\_RANGE**; para utilizarlo, debe editar el mensaje se asigna.  
+ ClassWizard does not handle **ON_NOTIFY_RANGE**; to use it, you need to edit your message map yourself.  
   
- El prototipo de la entrada y la función de mensaje\- mapa para **ON\_NOTIFY\_RANGE** es la siguiente:  
-  
-```  
-  
-ON_NOTIFY_RANGE(   
-wNotifyCode  
-,   
-id  
-,   
-idLast  
-,   
-memberFxn  
- )  
+ The message-map entry and function prototype for **ON_NOTIFY_RANGE** are as follows:  
   
 ```  
+ 
+ON_NOTIFY_RANGE(
+wNotifyCode  ,   
+id  ,   
+idLast  ,
+    memberFxn)  
+ 
+```  
   
- donde los parámetros título en cursivas se reemplazan:  
+ where the italicized parameters are replaced with:  
   
  `wNotifyCode`  
- El código para que el mensaje de notificación es administrado, por ejemplo **LVN\_KEYDOWN**.  
+ The code for the notification message to be handled, such as **LVN_KEYDOWN**.  
   
  `id`  
- El primer identificador en el intervalo contiguo de identificadores.  
+ The first identifier in the contiguous range of identifiers.  
   
  `idLast`  
- El identificador pasado en el intervalo contiguo de identificadores.  
+ The last identifier in the contiguous range of identifiers.  
   
  `memberFxn`  
- La función miembro que se llamará cuando se envía esta notificación.  
+ The member function to be called when this notification is sent.  
   
- La función miembro se debe declarar con el siguiente prototipo:  
+ Your member function must be declared with the following prototype:  
   
 ```  
-  
-afx_msg void memberFxn( UINT id, NMHDR * pNotifyStruct, LRESULT * result );  
+ 
+afx_msg void  
+memberFxn  
+(UINT   
+id  ,
+    NMHDR* 
+pNotifyStruct  ,
+    LRESULT* result);
+
+ 
 ```  
   
-## Comentarios  
- donde los parámetros título en cursivas:  
+## <a name="remarks"></a>Remarks  
+ where the italicized parameters are:  
   
  `id`  
- El identificador secundario del control que envió la notificación.  
+ The child identifier of the control that sent the notification.  
   
  `pNotifyStruct`  
- Un puntero a la estructura de notificación, como se ha descrito anteriormente.  
+ A pointer to the notification structure, as described above.  
   
  *result*  
- Un puntero al código de resultado que establecerá antes de volver.  
+ A pointer to the result code you'll set before you return.  
   
-##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON\_NOTIFY\_EX, ON\_NOTIFY\_EX\_RANGE  
- Si desea más de un objeto en el enrutamiento de notificación para controlar un mensaje, puede utilizar **ON\_NOTIFY\_EX** \(o **ON\_NOTIFY\_EX\_RANGE**\) en lugar de `ON_NOTIFY` \(o **ON\_NOTIFY\_RANGE**\).  La única diferencia entre la versión de **EX** y la versión regular es que la función miembro denominada para la versión de **EX** devuelve **bool** que indica si el procesamiento de mensajes debe continuar.  Devolver **FALSE** de esta función permite procesar el mismo mensaje en más de un objeto.  
+##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE  
+ If you want more than one object in the notification routing to handle a message, you can use **ON_NOTIFY_EX** (or **ON_NOTIFY_EX_RANGE**) rather than `ON_NOTIFY` (or **ON_NOTIFY_RANGE**). The only difference between the **EX** version and the regular version is that the member function called for the **EX** version returns a **BOOL** that indicates whether or not message processing should continue. Returning **FALSE** from this function allows you to process the same message in more than one object.  
   
- Pero no administra **ON\_NOTIFY\_EX** o **ON\_NOTIFY\_EX\_RANGE**; si desea utilizar cualquiera de ellos, debe editar el mensaje se asigna.  
+ ClassWizard does not handle **ON_NOTIFY_EX** or **ON_NOTIFY_EX_RANGE**; if you want to use either of them, you need to edit your message map yourself.  
   
- El prototipo de la entrada y la función de mensaje\- mapa para **ON\_NOTIFY\_EX** y **ON\_NOTIFY\_EX\_RANGE** son los siguientes.  El significado de los parámetros son los mismos que para las versiones no de**EX** .  
-  
-```  
-  
-ON_NOTIFY_EX( nCode, id, memberFxn ) ON_NOTIFY_EX_RANGE( wNotifyCode, id, idLast, memberFxn )  
-```  
-  
- El prototipo para ambos anterior es el mismo:  
+ The message-map entry and function prototype for **ON_NOTIFY_EX** and **ON_NOTIFY_EX_RANGE** are as follows. The meanings of the parameters are the same as for the non-**EX** versions.  
   
 ```  
-  
-afx_msg BOOL memberFxn( UINT id, NMHDR * pNotifyStruct, LRESULT * result );  
+ 
+ON_NOTIFY_EX(
+nCode  ,  
+id  ,
+    memberFxn) ON_NOTIFY_EX_RANGE(
+wNotifyCode  ,   
+id  ,   
+idLast  ,
+    memberFxn)  
+ 
 ```  
   
-## Comentarios  
- En ambos casos, `id` contiene el identificador secundario del control que envió la notificación.  
+ The prototype for both of the above is the same:  
   
- La función debe devolver **VERDADERO** si el mensaje de notificación se ha controlado completamente o **FALSE** si otros objetos en el enrutamiento de comandos tienen la oportunidad de controlar el mensaje.  
+```  
+ 
+afx_msg BOOL  
+memberFxn  
+(UINT   
+id  ,
+    NMHDR* 
+pNotifyStruct  ,
+    LRESULT* result);
+
+ 
+```  
   
-## Vea también  
- [Notas técnicas por número](../mfc/technical-notes-by-number.md)   
- [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
+## <a name="remarks"></a>Remarks  
+ In both cases, `id` holds the child identifier of the control that sent the notification.  
+  
+ Your function must return **TRUE** if the notification message has been completely handled or **FALSE** if other objects in the command routing should have a chance to handle the message.  
+  
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<bitset>
-- std.<bitset>
-- <bitset>
+- std::<bitset>", "<bitset>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: d0b9f494cec6212616813f9d622b97ff9d54bd3e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9d78841f96bcff52cf7ffd68bc18263dd012e8ba
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
-Define la clase de plantilla bitset y dos funciones auxiliares de plantilla para representar y manipular secuencias de bits de tamaño fijo.  
+Defines the template class bitset and two supporting template functions for representing and manipulating fixed-size sequences of bits.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -54,25 +52,25 @@ Define la clase de plantilla bitset y dos funciones auxiliares de plantilla para
   
 ```  
   
-### <a name="operators"></a>Operadores  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator&](../standard-library/bitset-operators.md#op_amp)|Efectúa una operación AND bit a bit entre dos conjuntos de bits.|  
-|[operator<\<](../standard-library/bitset-operators.md#op_lt_lt)|Inserta una representación de texto de la secuencia de bits en el flujo de salida estándar.|  
-|[operator>>](../standard-library/bitset-operators.md#op_gt_gt)|Inserta una representación de texto de la secuencia de bits en el flujo de entrada estándar.|  
-|[operator^](../standard-library/bitset-operators.md#op_xor)|Efectúa una operación EXCLUSIVE-OR bit a bit entre dos conjuntos de bits.|  
-|[operator&#124;](../standard-library/bitset-operators.md#op_or)|Efectúa una operación OR bit a bit entre dos conjuntos de bits.|  
+|[operator&](../standard-library/bitset-operators.md#op_amp)|Performs a bitwise AND between two bitsets.|  
+|[operator<\<](../standard-library/bitset-operators.md#op_lt_lt)|Inserts a text representation of the bit sequence into the standard output stream.|  
+|[operator>>](../standard-library/bitset-operators.md#op_gt_gt)|Inserts a text representation of the bit sequence into the standard input stream.|  
+|[operator^](../standard-library/bitset-operators.md#op_xor)|Performs a bitwise EXCLUSIVE-OR between two bitsets.|  
+|[operator&#124;](../standard-library/bitset-operators.md#op_or)|Performs a bitwise OR between two bitsets.|  
   
-### <a name="classes"></a>Clases  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[bitset (Clase)](../standard-library/bitset-class.md)|La clase de plantilla describe un tipo de objeto que almacena una secuencia que consta de un número fijo de bits que proporcionan una manera compacta de mantener indicadores para un conjunto de elementos o condiciones.|  
+|[bitset Class](../standard-library/bitset-class.md)|The template class describes a type of object that stores a sequence consisting of a fixed number of bits that provide a compact way of keeping flags for a set of items or conditions.|  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
- [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

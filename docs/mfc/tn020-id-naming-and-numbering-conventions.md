@@ -1,115 +1,134 @@
 ---
-title: "TN020: Convenciones de nomenclatura y numeraci&#243;n de identificadores | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.id"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "identificadores de recursos"
-  - "identificadores de recursos, nomenclatura y numeración"
-  - "TN020"
+title: 'TN020: ID Naming and Numbering Conventions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.id
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN020
+- resource identifiers, naming and numbering
+- resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# TN020: Convenciones de nomenclatura y numeraci&#243;n de identificadores
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 87a4ee80b5ce116c792b17f0ba18f34693a5586b
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En esta nota se describen las convenciones de nomenclatura y numeración de identificadores que MFC 2.0 utiliza para los recursos, los comandos, las cadenas, los controles y las ventanas secundarias.  
+---
+# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: ID Naming and Numbering Conventions
+This note describes the ID naming and numbering conventions that MFC 2.0 uses for resources, commands, strings, controls, and child windows.  
   
- Las convenciones de nomenclatura y numeración de identificadores de MFC se han diseñado para cumplir los requisitos siguientes:  
+ The MFC ID naming and numbering conventions are intended to meet the following requirements:  
   
--   Proporcionar un estándar de nomenclatura de identificadores coherente en la biblioteca MFC y las aplicaciones MFC compatibles con el editor de recursos de Visual C\+\+.  Esto permite al programador interpretar el tipo y el origen de un recurso por su identificador.  
+-   Provide a consistent ID-naming standard used across the MFC library and MFC applications that are supported by the Visual C++ resource editor. This makes it easier for the programmer to interpret the type and origin of a resource from its ID.  
   
--   Enfatizar la relación 1 a 1 segura entre ciertos tipos de identificadores.  
+-   Emphasize the strong 1-to-1 relationship between certain types of IDs.  
   
--   Proporcionar conformidad con estándares ampliamente utilizado para asignar nombres a los identificadores en Windows.  
+-   Conform to already widely used standards for naming IDs in Windows.  
   
--   Dividir el espacio de numeración de los identificadores.  El programador, MFC, Windows y los recursos editados con Visual C\+\+ pueden asignar números de identificador.  La creación de particiones adecuada ayudará a evitar la duplicación de números de identificador.  
+-   Partition the ID-numbering space. ID numbers can be assigned by the programmer, MFC, Windows, and Visual C++-edited resources. Appropriate partitioning will help avoid duplication of ID numbers.  
   
-## Convención de nomenclatura de prefijos de identificador  
- En una aplicación pueden aparecer varios tipos de identificadores.  La convención de nomenclatura de identificadores de MFC define distintos prefijos para los diferentes tipos de recursos.  
+## <a name="the-id-prefix-naming-convention"></a>The ID Prefix Naming Convention  
+ Several types of IDs can occur in an application. The MFC ID-naming convention defines different prefixes for different resource types.  
   
- MFC utiliza el prefijo "IDR\_" para indicar un id. de recurso que se aplica a varios tipos de recursos.  Por ejemplo, para una ventana marco determinada, MFC utiliza el mismo prefijo “IDR\_” para indicar un menú, un acelerador, una cadena y un recurso de icono.  En la tabla siguiente se muestran los diferentes prefijos y su uso:  
+ MFC uses the prefix "IDR_" to indicate a resource ID that applies to multiple resource types. For example, for a given frame window, MFC uses the same "IDR_" prefix to indicate a menu, accelerator, string and icon resource. The following table shows the various prefixes and their usage:  
   
-|Prefijo|Utilice|  
-|-------------|-------------|  
-|IDR\_|Para varios tipos de recursos \(se utiliza principalmente para los menús, los aceleradores y las cintas\).|  
-|IDD\_|Para los recursos de plantilla de cuadro de diálogo \(por ejemplo, IDD\_DIALOG1\).|  
-|IDC\_|Para los recursos de cursor.|  
-|IDI\_|Para los recursos de icono.|  
-|IDB\_|Para los recursos de mapa de bits.|  
-|IDS\_|Para los recursos de cadena.|  
+|Prefix|Use|  
+|------------|---------|  
+|IDR_|For multiple resource types (primarily used for menus, accelerators, and ribbons).|  
+|IDD_|For dialog template resources (for example, IDD_DIALOG1).|  
+|IDC_|For cursor resources.|  
+|IDI_|For icon resources.|  
+|IDB_|For bitmap resources.|  
+|IDS_|For string resources.|  
   
- Dentro de un recurso DIALOG, MFC sigue estas convenciones:  
+ Within a DIALOG resource, MFC follows these conventions:  
   
-|Prefijo o etiqueta|Utilice|  
-|------------------------|-------------|  
-|IDOK, IDCANCEL|Para los identificadores estándar de botón de comando.|  
-|IDC\_|Para otros controles del cuadro de diálogo.|  
+|Prefix or label|Use|  
+|---------------------|---------|  
+|IDOK, IDCANCEL|For standard push button IDs.|  
+|IDC_|For other dialog controls.|  
   
- El prefijo "IDC\_" también se utiliza para los cursores.  Este conflicto de denominación no suele ser un problema porque una aplicación típica tendrá pocos cursores y muchos controles de cuadro de diálogo.  
+ The "IDC_" prefix is also used for cursors. This naming conflict is not usually a problem because a typical application will have few cursors and many dialog controls.  
   
- Dentro de un recurso de menú, MFC sigue estas convenciones:  
+ Within a menu resource, MFC follows these conventions:  
   
-|Prefijo|Utilice|  
-|-------------|-------------|  
-|IDM\_|Para los elementos de menú que no utilizan la arquitectura de comandos de MFC.|  
-|ID\_|Para los comandos de menú que utilizan la arquitectura de comandos de MFC.|  
+|Prefix|Use|  
+|------------|---------|  
+|IDM_|For menu items that do not use the MFC command architecture.|  
+|ID_|For menu commands that use the MFC command architecture.|  
   
- Los comandos que siguen la arquitectura de comandos de MFC deben tener un controlador de comandos `ON_COMMAND` y pueden tener un controlador `ON_UPDATE_COMMAND_UI`.  Si estos controladores de comandos siguen la arquitectura de comandos de MFC, funcionarán correctamente si se enlazan a un comando de menú, un botón de la barra de herramientas o un botón de la barra de cuadro de diálogo.  El mismo prefijo "ID\_" se utiliza también para una cadena de mensaje de menú que se muestra en la barra de mensajes del programa.  La mayoría de los elementos de menú de la aplicación deben seguir las convenciones de comandos de MFC.  Todos los identificadores de comando estándar \(por ejemplo, `ID_FILE_NEW`\) siguen esta convención.  
+ Commands that follow the MFC command architecture must have an `ON_COMMAND` command handler and can have an `ON_UPDATE_COMMAND_UI` handler. If these command handlers follow the MFC command architecture, they will function correctly whether they are bound to a menu command, a toolbar button, or a dialog bar button. The same "ID_" prefix is also used for a menu prompt string that is displayed on the program's message bar. Most of the menu items in your application should follow the MFC command conventions. All of the standard command IDs (for example, `ID_FILE_NEW`) follow this convention.  
   
- MFC también utiliza "IDP\_" como formato de cadenas especializado \(en lugar de "IDS\_"\).  Las cadenas con el prefijo "IDP\_" son mensajes, es decir, cadenas utilizadas en cuadros de mensaje. Las cadenas "IDP\_" pueden contener "%1" y "%2"como marcadores de posición de cadenas determinadas por el programa. Además suelen tener temas de Ayuda asociados, mientras que las cadenas "IDS\_" no los tienen. Las cadenas "IDP\_" siempre se traducen y las cadenas "IDS\_" pueden no estar traducidas.  
+ MFC also uses "IDP_" as a specialized form of strings (instead of "IDS_"). Strings with the "IDP_" prefix are prompts, that is, strings used in message boxes. "IDP_" strings can contain "%1" and "%2" as placeholders of strings determined by the program. "IDP_" strings usually have help topics associated with them, and "IDS_" strings do not. "IDP_" strings are always localized, and "IDS_" strings might not be localized.  
   
- La biblioteca MFC también utiliza el prefijo "IDW\_" como una forma especializada de identificadores de controles \(en lugar de "IDC\_"\).  Las clases del marco asignan estos identificadores a las ventanas secundarias, por ejemplo, las vistas y los divisores.  Los id. de implementación de MFC llevan el prefijo "AFX\_".  
+ The MFC library also uses the "IDW_" prefix as a specialized form of control IDs (instead of "IDC_"). These IDs are assigned to child windows such as views and splitters by the framework classes. MFC implementation IDs are prefixed with "AFX_".  
   
-## Convención de numeración de identificadores  
- En la tabla siguiente se enumeran los intervalos válidos para los identificadores de los tipos específicos.  Algunos de los límites se deben a la implementación técnica y otros son convenciones que se han diseñado para evitar que los identificadores entren en conflicto con los identificadores predefinidos de Windows o con las implementaciones predeterminadas de MFC.  
+## <a name="the-id-numbering-convention"></a>The ID-Numbering Convention  
+ The following table lists the valid ranges for the IDs of the specific types. Some of the limits are technical implementation limits, and others are conventions that are designed to prevent your IDs from colliding with Windows predefined IDs or MFC default implementations.  
   
- Se recomienda encarecidamente definir todos los identificadores dentro de los intervalos recomendados.  El límite inferior de estos intervalos es 1 porque 0 no se utiliza.  Se recomienda utilizar la convención común y usar 100 o 101 como primer identificador.  
+ We strongly recommend that you define all IDs inside the recommended ranges. The lower limit of these ranges is 1 because 0 is not used. We recommend that you use the common convention and use 100 or 101 as the first ID.  
   
-|Prefijo|Tipo de recurso|Intervalo válido|  
-|-------------|---------------------|----------------------|  
-|IDR\_|varias|De 1 a 0x6FFF|  
-|IDD\_|plantillas de cuadro de diálogo|De 1 a 0x6FFF|  
-|IDC\_, IDI\_, IDB\_|cursores, iconos, mapas de bits|De 1 a 0x6FFF|  
-|IDS\_, IDP\_|cadenas generales|De 1 a 0x7FFF|  
-|ID\_|comandos|De 0x8000 a 0xDFFF|  
-|IDC\_|controles|De 8 a 0xDFFF|  
+|Prefix|Resource type|Valid range|  
+|------------|-------------------|-----------------|  
+|IDR_|multiple|1 through 0x6FFF|  
+|IDD_|dialog templates|1 through 0x6FFF|  
+|IDC_,IDI_,IDB_|cursors, icons, bitmaps|1 through 0x6FFF|  
+|IDS_, IDP_|general strings|1 through 0x7FFF|  
+|ID_|commands|0x8000 through 0xDFFF|  
+|IDC_|controls|8 through 0xDFFF|  
   
- Los motivos de estos límites de intervalo son las siguientes:  
+ Reasons for these range limits:  
   
--   Por convención, el valor de identificador de 0 no se utiliza.  
+-   By convention, the ID value of 0 is not used.  
   
--   Las limitaciones de implementación de Windows exigen que los id. de recurso verdaderos sean menores o iguales que 0x7FFF.  
+-   Windows implementation limitations restrict true resource IDs to be less than or equal to 0x7FFF.  
   
--   El marco interno de MFC se reserva estos intervalos:  
+-   MFC's internal framework reserves these ranges:  
   
-    -   De 0x7000 a 0x7FFF \(vea afxres.h\)  
+    -   0x7000 through 0x7FFF (see afxres.h)  
   
-    -   De 0xE000 a 0xEFFF \(vea afxres.h\)  
+    -   0xE000 through 0xEFFF (see afxres.h)  
   
-    -   De 16000 a 18000 \(vea afxribbonres.h\)  
+    -   16000 through 18000 (see afxribbonres.h)  
   
-     Estos intervalos pueden cambiar en futuras implementaciones de MFC.  
+     These ranges may change in future MFC implementations.  
   
--   Varios comandos del sistema de Windows utilizan el intervalo de 0xF000 a 0xFFFF.  
+-   Several Windows system commands use the range of 0xF000 through 0xFFFF.  
   
--   Los id. de control de 1 a 7 están reservados para controles estándar como IDOK e IDCANCEL.  
+-   Control IDs of 1 through 7 are reserved for standard controls such as IDOK and IDCANCEL.  
   
--   El intervalo de 0x8000 a 0xFFFF para las cadenas se reserva para los mensajes de menú de los comandos.  
+-   The range of 0x8000 through 0xFFFF for strings is reserved for menu prompts for commands.  
   
-## Vea también  
- [Notas técnicas por número](../mfc/technical-notes-by-number.md)   
- [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

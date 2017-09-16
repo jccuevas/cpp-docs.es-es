@@ -1,113 +1,132 @@
 ---
-title: "Implementaci&#243;n de barra de herramientas de MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mapas de bits [C++], barra de herramientas"
-  - "botones [C++], barras de herramientas de MFC"
-  - "CToolBar (clase), crear barras de herramientas"
-  - "CToolBarCtrl (clase), implementar barras de herramientas"
-  - "acoplamiento de barras de herramientas"
-  - "barras de herramientas flotantes"
-  - "barras de herramientas de MFC"
-  - "información sobre herramientas [C++], habilitar"
-  - "controles de barra de herramientas [MFC]"
-  - "barras de herramientas [C++]"
-  - "barras de herramientas [C++], crear"
-  - "barras de herramientas [C++], acoplar"
-  - "barras de herramientas [C++], flotante"
-  - "barras de herramientas [C++], implementar barras de herramientas de MFC"
+title: MFC Toolbar Implementation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- toolbars [MFC], creating
+- buttons [MFC], MFC toolbars
+- toolbars [MFC], docking
+- CToolBar class [MFC], creating toolbars
+- MFC toolbars
+- floating toolbars [MFC]
+- toolbars [MFC], floating
+- docking toolbars [MFC]
+- bitmaps [MFC], toolbar
+- toolbar controls [MFC]
+- CToolBarCtrl class [MFC], implementing toolbars
+- tool tips [MFC], enabling
+- toolbars [MFC]
+- toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Implementaci&#243;n de barra de herramientas de MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0c04958a1d726381432a5b4281dfa634518d8c10
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Una barra de herramientas es una [barra de control](../mfc/control-bars.md) que contiene imágenes de mapa de bits de controles.  Estas imágenes se comportan como botones de comando, casillas o botones de radio.  MFC suministra la clase [CToolbar](../mfc/reference/ctoolbar-class.md) para administrar las barras de herramientas.  
+---
+# <a name="mfc-toolbar-implementation"></a>MFC Toolbar Implementation
+A toolbar is a [control bar](../mfc/control-bars.md) that contains the bitmap images of controls. These images can behave like pushbuttons, check boxes, or radio buttons. MFC supplies class [CToolbar](../mfc/reference/ctoolbar-class.md) to manage toolbars.  
   
- Si se habilita, los usuarios de las barras de herramientas de MFC pueden acoplarlas al borde de una ventana o hacerlas "flotar" en cualquier parte dentro de la ventana de la aplicación.  MFC no admite barras de herramientas personalizables como las del entorno de desarrollo.  
+ If you enable it, users of MFC toolbars can dock them to the edge of a window or "float" them anywhere within the application window. MFC doesn't support customizable toolbars like those in the development environment.  
   
- MFC admite también información sobre herramientas: pequeñas ventanas emergentes que describen el propósito de un botón de la barra de herramientas cuando se coloca el mouse sobre el botón.  De forma predeterminada, cuando el usuario presiona un botón de la barra de herramientas, aparece una cadena de estado en la barra de estado \(si hay una\).  Se puede activar la actualización de la barra de estado al "sobrevolar" para mostrar la cadena de estado cuando el mouse se coloca sobre el botón sin presionarlo.  
+ MFC also supports tool tips: small pop-up windows that describe a toolbar button's purpose when you position the mouse over the button. By default, when the user presses a toolbar button, a status string appears in the status bar (if there is one). You can activate "fly by" status bar updating to display the status string when the mouse is positioned over the button without pressing it.  
   
 > [!NOTE]
->  A partir de la versión 4.0 de MFC, las barras de herramientas y la información sobre herramientas se implementan con la funcionalidad de Windows 95 y versiones posteriores, en lugar de usar la implementación anterior específica de MFC.  
+>  As of MFC version 4.0, toolbars and tool tips are implemented using Windows 95 and later functionality instead of the previous implementation specific to MFC.  
   
- Por compatibilidad con versiones anteriores, MFC conserva la implementación más antigua de la barra de herramientas en la clase **COldToolBar**.  En la documentación de versiones anteriores de MFC se describe **COldToolBar** en `CToolBar`.  
+ For backward compatibility, MFC retains the older toolbar implementation in class **COldToolBar**. The documentation for earlier versions of MFC describe **COldToolBar** under `CToolBar`.  
   
- Puede crear la primera barra de herramientas de un programa si selecciona la opción Barra de herramientas en el Asistente para aplicaciones.  También puede crear barras de herramientas adicionales.  
+ Create the first toolbar in your program by selecting the Toolbar option in the Application Wizard. You can also create additional toolbars.  
   
- En este artículo se presenta lo siguiente:  
+ The following are introduced in this article:  
   
--   [Botones de barra de herramientas](#_core_toolbar_buttons)  
+-   [Toolbar buttons](#_core_toolbar_buttons)  
   
--   [Barras de herramientas de acoplamiento y flotantes](#_core_docking_and_floating_toolbars)  
+-   [Docking and floating toolbars](#_core_docking_and_floating_toolbars)  
   
--   [Barras de herramientas e información sobre herramientas](#_core_toolbars_and_tool_tips)  
+-   [Toolbars and tool tips](#_core_toolbars_and_tool_tips)  
   
--   [Clases CToolBar y CToolBarCtrl](#_core_the_ctoolbar_and_ctoolbarctrl_classes)  
+-   [The CToolBar and CToolBarCtrl classes](#_core_the_ctoolbar_and_ctoolbarctrl_classes)  
   
--   [Mapa de bits de la barra de herramientas](#_core_the_toolbar_bitmap)  
+-   [The Toolbar bitmap](#_core_the_toolbar_bitmap)  
   
-##  <a name="_core_toolbar_buttons"></a> Botones de barra de herramientas  
- Los botones de una barra de herramientas son análogos a los elementos de un menú.  Ambos tipos de objetos de la interfaz de usuario generan comandos, que se pueden administrar mediante las funciones de controlador que el programa proporciona.  Los botones de la barra de herramientas duplican a menudo la funcionalidad de los comandos de menú y proporcionan una interfaz de usuario alternativa para la misma funcionalidad.  Para organizar esta duplicación de forma sencilla, asigne el mismo id. al botón y al elemento de menú.  
+##  <a name="_core_toolbar_buttons"></a> Toolbar Buttons  
+ The buttons in a toolbar are analogous to the items in a menu. Both kinds of user-interface objects generate commands, which your program handles by providing handler functions. Often toolbar buttons duplicate the functionality of menu commands, providing an alternative user interface to the same functionality. Such duplication is arranged simply by giving the button and the menu item the same ID.  
   
- Puede hacer que los botones de una barra de herramientas aparezcan y se comporten como botones de comando, las casillas o los botones de radio.  Para obtener más información, vea la clase [CToolBar](../mfc/reference/ctoolbar-class.md).  
+ You can make the buttons in a toolbar appear and behave as pushbuttons, check boxes, or radio buttons. For more information, see class [CToolBar](../mfc/reference/ctoolbar-class.md).  
   
-##  <a name="_core_docking_and_floating_toolbars"></a> Barras de herramientas de acoplamiento y flotantes  
- Una barra de herramientas de MFC puede:  
+##  <a name="_core_docking_and_floating_toolbars"></a> Docking and Floating Toolbars  
+ An MFC toolbar can:  
   
--   Mantenerse estática a lo largo de un lado de la ventana primaria.  
+-   Remain stationary along one side of its parent window.  
   
--   Arrastrarse y "acoplarse", o asociarse, a cualquier lado o lados de la ventana primaria que el usuario especifique.  
+-   Be dragged and "docked," or attached, by the user to any side or sides of the parent window you specify.  
   
--   "Flotar", o desasociarse de la ventana marco, en su propia ventana minimarco para que el usuario pueda moverla a cualquier posición adecuada.  
+-   Be "floated," or detached from the frame window, in its own mini-frame window so the user can move it around to any convenient position.  
   
--   Cambiar de tamaño mientras flota.  
+-   Be resized while floating.  
   
- Para obtener más información, vea el artículo [Barras de herramientas de acoplamiento y flotantes](../mfc/docking-and-floating-toolbars.md).  
+ For more information, see the article [Docking and Floating Toolbars](../mfc/docking-and-floating-toolbars.md).  
   
-##  <a name="_core_toolbars_and_tool_tips"></a> Barras de herramientas e información sobre herramientas  
- También se puede hacer que las barras de herramientas de MFC muestren "información sobre herramientas", que son ventanas emergentes minúsculas que contienen una breve descripción de texto del propósito de un botón de la barra de herramientas.  Cuando el usuario mueve el mouse sobre un botón de la barra de herramientas, la ventana de información sobre herramientas emerge para proporcionar una sugerencia.  Para obtener más información, vea el artículo [Información sobre herramientas de la barra de herramientas](../mfc/toolbar-tool-tips.md).  
+##  <a name="_core_toolbars_and_tool_tips"></a> Toolbars and Tool Tips  
+ MFC toolbars can also be made to display "tool tips" — tiny popup windows containing a short text description of a toolbar button's purpose. As the user moves the mouse over a toolbar button, the tool tip window pops up to offer a hint. For more information, see the article [Toolbar Tool Tips](../mfc/toolbar-tool-tips.md).  
   
-##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a> Clases CToolBar y CToolBarCtrl  
- Las barras de herramientas de la aplicación se administran mediante la clase [CToolBar](../mfc/reference/ctoolbar-class.md).  A partir de la versión 4.0 de MFC, `CToolBar` se ha implementado de nuevo para utilizar el control común de barra de herramientas que está disponible en Windows 95 o versiones posteriores y en Windows NT versión 3.51 o versiones posteriores.  
+##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a> The CToolBar and CToolBarCtrl Classes  
+ You manage your application's toolbars via class [CToolBar](../mfc/reference/ctoolbar-class.md). As of MFC version 4.0, `CToolBar` has been reimplemented to use the toolbar common control available under Windows 95 or later and Windows NT version 3.51 or later.  
   
- Esta nueva implementación da lugar a menos código MFC para las barras de herramientas, porque MFC utiliza la compatibilidad con el sistema operativo.  La nueva implementación también mejora la capacidad.  Puede utilizar las funciones miembro de `CToolBar` para manipular las barras de herramientas o puede obtener una referencia al objeto subyacente [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) y llamar a sus funciones miembro para la personalización y funcionalidad adicionales de la barra de herramientas.  
+ This reimplementation results in less MFC code for toolbars, because MFC makes use of the operating system support. The reimplementation also improves capability. You can use `CToolBar` member functions to manipulate toolbars, or you can obtain a reference to the underlying [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) object and call its member functions for toolbar customization and additional functionality.  
   
 > [!TIP]
->  Si ha invertido mucho en la implementación MFC anterior de `CToolBar`, esa compatibilidad sigue estando disponible.  Vea el artículo [Usar las barras de herramientas anteriores](../mfc/using-your-old-toolbars.md).  
+>  If you have invested heavily in the older MFC implementation of `CToolBar`, that support is still available. See the article [Using Your Old Toolbars](../mfc/using-your-old-toolbars.md).  
   
- Vea también el ejemplo general de MFC [DOCKTOOL](../top/visual-cpp-samples.md).  
+ Also see the MFC General sample [DOCKTOOL](../visual-cpp-samples.md).  
   
-##  <a name="_core_the_toolbar_bitmap"></a> Mapa de bits de la barra de herramientas  
- Una vez construido, un objeto `CToolBar` carga un solo mapa de bits que contiene una imagen de cada botón para crear la imagen de la barra de herramientas.  El Asistente para aplicaciones crea un mapa de bits de barra de herramientas estándar que se puede personalizar con el [editor de barras de herramientas](../mfc/toolbar-editor.md) de Visual C\+\+.  
+##  <a name="_core_the_toolbar_bitmap"></a> The Toolbar Bitmap  
+ Once constructed, a `CToolBar` object creates the toolbar image by loading a single bitmap that contains one image for each button. The Application Wizard creates a standard toolbar bitmap that you can customize with the Visual C++ [toolbar editor](../windows/toolbar-editor.md).  
   
-### ¿Sobre qué desea obtener más información?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Fundamentos de la barra de herramientas](../mfc/toolbar-fundamentals.md)  
+-   [Toolbar fundamentals](../mfc/toolbar-fundamentals.md)  
   
--   [Barras de herramientas de acoplamiento y flotantes](../mfc/docking-and-floating-toolbars.md)  
+-   [Docking and floating toolbars](../mfc/docking-and-floating-toolbars.md)  
   
--   [Información sobre herramientas de la barra de herramientas](../mfc/toolbar-tool-tips.md)  
+-   [Toolbar tool tips](../mfc/toolbar-tool-tips.md)  
   
--   [Trabajar con el control ToolBar](../mfc/working-with-the-toolbar-control.md)  
+-   [Working with the Toolbar Control](../mfc/working-with-the-toolbar-control.md)  
   
--   [Usar las barras de herramientas anteriores](../mfc/using-your-old-toolbars.md)  
+-   [Using Your Old Toolbars](../mfc/using-your-old-toolbars.md)  
   
--   Clases [CToolBar](../mfc/reference/ctoolbar-class.md) y [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)  
+-   The [CToolBar](../mfc/reference/ctoolbar-class.md) and [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) classes  
   
-## Vea también  
- [Barras de herramientas](../mfc/toolbars.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>See Also  
+ [Toolbars](../mfc/toolbars.md)   
+ [Toolbar Editor](../windows/toolbar-editor.md)
+
+

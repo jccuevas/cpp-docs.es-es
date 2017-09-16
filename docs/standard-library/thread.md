@@ -1,5 +1,5 @@
 ---
-title: '&lt;subproceso&gt; | Documentos de Microsoft'
+title: '&lt;thread&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,67 +31,67 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 496269689428e73dc78893092844afb1650da20d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6603589c5aa80e1c3e09fa19222c32d8f91c7dc3
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
-Incluya el encabezado estándar \<subproceso > para definir la clase `thread` y diversas funciones auxiliares.  
+Include the standard header \<thread> to define the class `thread` and various supporting functions.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <thread>  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  En el código compilado mediante **/CLR**, este encabezado está bloqueado.  
+>  In code that is compiled by using **/clr**, this header is blocked.  
   
- El `__STDCPP_THREADS__` macro se define como un valor distinto de cero para indicar que los subprocesos son compatibles con este encabezado.  
+ The `__STDCPP_THREADS__` macro is defined as a nonzero value to indicate that threads are supported by this header.  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-classes"></a>Clases públicas  
+### <a name="public-classes"></a>Public Classes  
   
-|Name|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[thread (Clase)](../standard-library/thread-class.md)|Define un objeto que se utiliza para observar y administrar un subproceso de ejecución en una aplicación.|  
+|[thread Class](../standard-library/thread-class.md)|Defines an object that is used to observe and manage a thread of execution in an application.|  
   
-### <a name="public-structures"></a>Estructuras públicas  
+### <a name="public-structures"></a>Public Structures  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[hash (Estructura, biblioteca estándar de C++)](../standard-library/hash-structure-stl.md)|Define una función miembro que devuelve un valor que se determina de forma única mediante un `thread::id`. Define la función miembro un [hash](../standard-library/hash-class.md) función que es adecuado para los valores de asignación de tipo `thread::id` a una distribución de valores de índice.|  
+|[hash Structure (C++ Standard Library)](../standard-library/hash-structure-stl.md)|Defines a member function that returns a value that is uniquely determined by a `thread::id`. The member function defines a [hash](../standard-library/hash-class.md) function that is suitable for mapping values of type `thread::id` to a distribution of index values.|  
   
-### <a name="public-functions"></a>Funciones públicas  
+### <a name="public-functions"></a>Public Functions  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[get_id](../standard-library/thread-functions.md#get_id)|Identifica de forma única el subproceso de ejecución actual.|  
-|[sleep_for](../standard-library/thread-functions.md#sleep_for)|Bloquea el subproceso de llamada.|  
-|[sleep_until](../standard-library/thread-functions.md#sleep_until)|Bloquea el subproceso de llamada al menos hasta la hora especificada.|  
-|[swap](../standard-library/thread-functions.md#swap)|Intercambia los Estados de dos `thread` objetos.|  
-|[yield](../standard-library/thread-functions.md#yield)|Indica al sistema operativo que ejecute otros subprocesos, incluso si el subproceso actual seguiría ejecutándose en condiciones normales.|  
+|[get_id](../standard-library/thread-functions.md#get_id)|Uniquely identifies the current thread of execution.|  
+|[sleep_for](../standard-library/thread-functions.md#sleep_for)|Blocks the calling thread.|  
+|[sleep_until](../standard-library/thread-functions.md#sleep_until)|Blocks the calling thread at least until the specified time.|  
+|[swap](../standard-library/thread-functions.md#swap)|Exchanges the states of two `thread` objects.|  
+|[yield](../standard-library/thread-functions.md#yield)|Signals the operating system to run other threads, even if the current thread would ordinarily continue to run.|  
   
-### <a name="public-operators"></a>Operadores públicos  
+### <a name="public-operators"></a>Public Operators  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[operador > = (operador)](../standard-library/thread-operators.md#op_gt_eq)|Determina si un objeto `thread::id` es mayor o igual que otro objeto.|  
-|[operador > (operador)](../standard-library/thread-operators.md#op_gt)|Determina si un objeto `thread::id` es mayor que otro objeto.|  
-|[operador < = (operador)](../standard-library/thread-operators.md#op_lt_eq)|Determina si un objeto `thread::id` es menor o igual que otro objeto.|  
-|[operador < (operador)](../standard-library/thread-operators.md#op_lt)|Determina si un objeto `thread::id` es menor que otro objeto.|  
-|[operador! = (operador)](../standard-library/thread-operators.md#op_neq)|Compara dos objetos `thread::id` para determinar si no son iguales.|  
-|[Operator == (operador)](../standard-library/thread-operators.md#op_eq_eq)|Compara dos objetos `thread::id` para determinar si son iguales.|  
-|[operador << (operador)](../standard-library/thread-operators.md#op_lt_lt)|Inserta una representación de texto de un objeto `thread::id` en una secuencia.|  
+|[operator>= Operator](../standard-library/thread-operators.md#op_gt_eq)|Determines whether one `thread::id` object is greater than or equal to another.|  
+|[operator> Operator](../standard-library/thread-operators.md#op_gt)|Determines whether one `thread::id` object is greater than another.|  
+|[operator<= Operator](../standard-library/thread-operators.md#op_lt_eq)|Determines whether one `thread::id` object is less than or equal to another.|  
+|[operator< Operator](../standard-library/thread-operators.md#op_lt)|Determines whether one `thread::id` object is less than another.|  
+|[operator!= Operator](../standard-library/thread-operators.md#op_neq)|Compares two `thread::id` objects for inequality.|  
+|[operator== Operator](../standard-library/thread-operators.md#op_eq_eq)|Compares two `thread::id` objects for equality.|  
+|[operator<< Operator](../standard-library/thread-operators.md#op_lt_lt)|Inserts a text representation of a `thread::id` object into a stream.|  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
- [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

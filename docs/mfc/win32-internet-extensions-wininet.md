@@ -1,61 +1,81 @@
 ---
-title: "Extensiones de Internet Win32 (WinInet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicaciones cliente, Internet de Win32"
-  - "aplicaciones de Internet, extensiones de Internet de Win32"
-  - "aplicaciones cliente de Internet, acerca de las aplicaciones cliente de Internet"
-  - "WinInet (clases), acerca de las clases WinInet"
+title: Win32 Internet Extensions (WinInet) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Internet applications [MFC], Win32 Internet Extensions
+- Internet client applications [MFC], about Internet client applications
+- client applications [MFC], Win32 Internet
+- WinInet classes [MFC], about WinInet classes
 ms.assetid: f8c80f0b-ce14-4f0d-a3cf-4f7d8c5cca59
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Extensiones de Internet Win32 (WinInet)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6a79dbe269dd9c39b4f875f574fc8100ae7f367f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Una aplicación cliente de internet es un programa que tiene acceso a la información desde un origen de datos de red \(servidor\) mediante protocolos de Internet como gopher, FTP, o HTTP.  Una aplicación cliente de internet puede tener acceso a un servidor para recuperar datos como mapas de tiempo, precios comunes, o titulares de periódico, como.  El cliente de internet puede tener acceso al servidor a través de una red externa \(internet\) o una red interna \(a veces denominada una intranet\).  
+---
+# <a name="win32-internet-extensions-wininet"></a>Win32 Internet Extensions (WinInet)
+An Internet client application is a program that accesses information from a network data source (server) using Internet protocols such as gopher, FTP, or HTTP. An Internet client application might access a server to retrieve data such as weather maps, stock prices, or newspaper headlines, for example. The Internet client can access the server through an external network (the Internet) or an internal network (sometimes called an intranet).  
   
- MFC incluye extensiones de Internet para Win32, o WinInet, para crear una aplicación cliente de internet.  MFC encapsula estas extensiones en un conjunto de estándar, clases fáciles de usar de internet.  Puede escribir una aplicación cliente WinInet a las funciones de Win32 directamente o mediante clases de MFC WinInet.  
+ MFC includes the Win32 Internet Extensions, or WinInet, for creating an Internet client application. MFC encapsulates these Internet extensions in a set of standard, easy-to-use classes. You can write a WinInet client application by calling the Win32 functions directly or by using the MFC WinInet classes.  
   
- Las funciones de internet de Microsoft Win32 \(WinInet\) le ayudan a crear internet a la parte integral de cualquier aplicación.  Las nuevas funciones, incluidas en WININET.DLL, simplifican el acceso de internet mediante el HTTP \(Protocolo de transferencia de hipertexto\), FTP \(Protocolo de transferencia de archivos\), y gopher.  
+ The Microsoft Win32 Internet functions (WinInet) assist you in making the Internet an integral part of any application. The new functions, contained in WININET.DLL, simplify accessing the Internet using HTTP (Hypertext Transfer Protocol), FTP (File Transfer Protocol), and gopher.  
   
- Los temas siguientes describen el proceso de crear una aplicación cliente de internet:  
+ The following topics discuss the process of creating an Internet client application:  
   
--   [Cómo WinInet le crea Easier para crear aplicaciones cliente de internet](../mfc/how-wininet-makes-it-easier-to-create-internet-client-applications.md)  
+-   [How WinInet Makes It Easier to Create Internet Client Applications](../mfc/how-wininet-makes-it-easier-to-create-internet-client-applications.md)  
   
--   [Cómo MFC le crea Easier para crear aplicaciones cliente de internet](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)  
+-   [How MFC Makes It Easier to Create Internet Client Applications](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)  
   
--   [Clases de MFC para crear aplicaciones cliente de internet](../mfc/mfc-classes-for-creating-internet-client-applications.md)  
+-   [MFC Classes for Creating Internet Client Applications](../mfc/mfc-classes-for-creating-internet-client-applications.md)  
   
--   [Requisitos previos para las clases de cliente de internet](../mfc/prerequisites-for-internet-client-classes.md)  
+-   [Prerequisites for Internet Client Classes](../mfc/prerequisites-for-internet-client-classes.md)  
   
--   [Escritura de las clases de Utilizar MFC un WinInet de la aplicación cliente de internet](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)  
+-   [Writing an Internet Client Application Using MFC WinInet Classes](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)  
   
- Los temas siguientes proporcionan los pasos para realizar las tareas típicas WinInet:  
+ The following topics provide steps for performing typical WinInet tasks:  
   
--   [Pasos en una aplicación cliente de internet de Típica](../mfc/steps-in-a-typical-internet-client-application.md)  
+-   [Steps in a Typical Internet Client Application](../mfc/steps-in-a-typical-internet-client-application.md)  
   
--   [Pasos en una aplicación de cliente FTP de Típica](../mfc/steps-in-a-typical-ftp-client-application.md)  
+-   [Steps in a Typical FTP Client Application](../mfc/steps-in-a-typical-ftp-client-application.md)  
   
--   [Pasos en una aplicación de cliente FTP de Típica para eliminar un archivo](../mfc/steps-in-a-typical-ftp-client-application-to-delete-a-file.md)  
+-   [Steps in a Typical FTP Client Application to Delete a File](../mfc/steps-in-a-typical-ftp-client-application-to-delete-a-file.md)  
   
--   [Pasos en una aplicación cliente de Gopher Típica](../mfc/steps-in-a-typical-gopher-client-application.md)  
+-   [Steps in a Typical Gopher Client Application](../mfc/steps-in-a-typical-gopher-client-application.md)  
   
--   [Pasos en una aplicación de cliente HTTP de Típica](../mfc/steps-in-a-typical-http-client-application.md)  
+-   [Steps in a Typical HTTP Client Application](../mfc/steps-in-a-typical-http-client-application.md)  
   
-## Vea también  
- [MFC Internet Programming \(NIB\)](http://msdn.microsoft.com/es-es/0f7a1f3a-385b-4d56-a55b-0d766840c58a)   
- [Fundamentos de programación para Internet de MFC](../mfc/mfc-internet-programming-basics.md)   
- [Fundamentos de WinInet](../mfc/wininet-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)   
+ [WinInet Basics](../mfc/wininet-basics.md)
+
+
+
+

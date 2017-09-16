@@ -1,92 +1,111 @@
 ---
-title: "Elementos de la interfaz de usuario (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, interfaz de usuario"
-  - "interfaces de usuario"
-  - "interfaces de usuario, crear"
+title: User Interface Elements (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, user interface
+- user interfaces, creating
+- user interfaces
 ms.assetid: f5daf2c1-bc08-4b71-9b03-da2c0aab5764
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Elementos de la interfaz de usuario (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 957f5a89d015dbc023cd5dd464ae1fb9176166fb
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Para obtener información sobre cómo crear la interfaz de usuario para la aplicación mediante la biblioteca de \(MFC\) de la clase de la base de Microsoft, vea los temas siguientes.  
+---
+# <a name="user-interface-elements-mfc"></a>User Interface Elements (MFC)
+For information about how to create the user interface for your application by using the Microsoft Foundation Class (MFC) Library, see the following topics.  
   
-## En esta sección  
- [Controles ActiveX](../mfc/activex-controls.md)  
- Describe cómo utilizar el componente de software reutilizable basándose en el modelo de objetos componentes \(COM\), que admite una gran variedad de funciones OLE y se puede personalizar para ajustarse de funciones OLE  
+## <a name="in-this-section"></a>In This Section  
+ [ActiveX Controls](../mfc/activex-controls.md)  
+ Describes how to use reusable software component based on the Component Object Model (COM), which supports a wide variety of OLE functionality and can be customized to fit many software needs  
   
- [Portapapeles](../mfc/clipboard.md)  
- Describe cómo implementar la compatibilidad para el Portapapeles de Windows en aplicaciones MFC.  
+ [Clipboard](../mfc/clipboard.md)  
+ Describes how to implement support for the Windows Clipboard in MFC applications.  
   
- [Controles](../mfc/controls-mfc.md)  
- Describe los controles comunes de Windows, como los controles propietario\- dibujados, los controles ActiveX, y otras clases control proporcionadas por la biblioteca MFC.  
+ [Controls](../mfc/controls-mfc.md)  
+ Describes Windows common controls, including owner-drawn controls, ActiveX controls, and other control classes supplied by the MFC Library.  
   
- [Barras de control](../mfc/control-bars.md)  
- Describe la funcionalidad de barras de herramientas, barras de estado, y de barras de cuadro de diálogo.  
+ [Control Bars](../mfc/control-bars.md)  
+ Describes functionality of toolbars, status bars, and dialog bars.  
   
- [Barras de cuadro de diálogo](../mfc/dialog-bars.md)  
- Describe una clase de barra de control que puede contener cualquier tipo de control.  
+ [Dialog Bars](../mfc/dialog-bars.md)  
+ Describes a kind of control bar that can contain any kind of control.  
   
- [Cuadros de diálogo](../mfc/dialog-boxes.md)  
- Describe cómo crear cuadros de diálogo mediante los editores y los asistentes para código.  
+ [Dialog Boxes](../mfc/dialog-boxes.md)  
+ Describes how to create dialog boxes by using the editors and code wizards.  
   
- [Arquitectura documento\/vista](../mfc/document-view-architecture.md)  
- Describe la administración de datos en MFC.  
+ [Document/View Architecture](../mfc/document-view-architecture.md)  
+ Describes data management in MFC.  
   
- [Vistas de formulario](../mfc/form-views-mfc.md)  
- Describe cómo agregar compatibilidad de formularios a la aplicación.  
+ [Form Views](../mfc/form-views-mfc.md)  
+ Describes how to add forms support to your application.  
   
- [Ayuda HTML: Ayuda contextual para los programas](../mfc/html-help-context-sensitive-help-for-your-programs.md)  
- Describe cómo agregar ayuda contextual a las aplicaciones mediante ayuda HTML.  
+ [HTML Help: Context-Sensitive Help for Your Programs](../mfc/html-help-context-sensitive-help-for-your-programs.md)  
+ Describes how to add context-sensitive help to your applications by using HTML Help.  
   
- [Grupos con pestañas MDI](../mfc/mdi-tabbed-groups.md)  
- Permite a las aplicaciones de \(MDI\) de interfaz de múltiples documentos para mostrar una o más ventanas con fichas \(o grupos de ventanas con fichas, que se conocen como *grupos con pestañas*\) en el área de cliente MDI.  
+ [MDI Tabbed Groups](../mfc/mdi-tabbed-groups.md)  
+ Enables multiple document interface (MDI) applications to display one or more tabbed windows (or groups of tabbed windows, which are known as *tabbed groups*) in the MDI client area.  
   
  [Menus](../mfc/menus-mfc.md)  
- Describe cómo agregar menús de la interfaz de usuario.  
+ Describes how to add menus to your user interface.  
   
  [OLE](../mfc/ole-mfc.md)  
- Proporciona vínculos a temas que explican el objeto que vincula y que inserta.  
+ Provides links to topics that discuss object linking and embedding.  
   
- [Impresión y vista previa de impresión](../mfc/printing-and-print-preview.md)  
- Describe la compatibilidad de MFC con la impresión y vista previa de impresión de las aplicaciones.  
+ [Printing and Print Preview](../mfc/printing-and-print-preview.md)  
+ Describes MFC support for printing and print preview from your applications.  
   
- [Hojas de propiedades](../mfc/property-sheets-mfc.md)  
- Describe cómo utilizar las hojas de propiedades para administrar un gran número el control en un cuadro de diálogo.  
+ [Property Sheets](../mfc/property-sheets-mfc.md)  
+ Describes how to use property sheets to manage large numbers of control in a dialog box.  
   
- [Diseñador de la cinta de opciones \(MFC\)](../mfc/ribbon-designer-mfc.md)  
- Describe la compatibilidad de MFC con los recursos de la interfaz de usuario de la cinta de opciones que crean y modificar.  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)  
+ Describes MFC support for creating and modifying ribbon UI resources.  
   
- [Barras de estado](../mfc/status-bars.md)  
- Describe cómo utilizar las barras de estado en las aplicaciones.  
+ [Status Bars](../mfc/status-bars.md)  
+ Describes how to use status bars in your applications.  
   
- [Información sobre herramientas](../mfc/tool-tips.md)  
- Describe cómo implementar información sobre herramientas para ayudar a los usuarios al utilizar las aplicaciones.  
+ [Tool Tips](../mfc/tool-tips.md)  
+ Describes how to implement tool tips to assist users in using your applications.  
   
- [Barras de herramientas](../mfc/toolbars.md)  
- Describe los fundamentos sobre cómo utilizar las barras de herramientas de MFC.  
+ [Toolbars](../mfc/toolbars.md)  
+ Describes the fundamentals about how to use toolbars in MFC.  
   
- [Administrador de visualización](../mfc/visualization-manager.md)  
- Actúa como una clase donde se puede colocar todo el código de dibujo para la aplicación.  
+ [Visualization Manager](../mfc/visualization-manager.md)  
+ Acts as one class where you can put all the drawing code for your application.  
   
  [Windows](../mfc/windows.md)  
- Describe los fundamentos sobre cómo utilizar las ventanas en MFC.  
+ Describes the fundamentals about how to use windows in MFC.  
   
-## Secciones relacionadas  
- [Aplicaciones de escritorio de MFC](../mfc/mfc-desktop-applications.md)  
- Proporciona material de referencia de la biblioteca MFC.  MFC es un conjunto de clases que constituyen un marco de aplicación, que es el marco de una aplicación escrita para la API de Windows.
+## <a name="related-sections"></a>Related Sections  
+ [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)  
+ Provides reference material for the MFC Library. MFC is a set of classes that constitute an application framework, which is the framework of an application written for the Windows API.
+
+

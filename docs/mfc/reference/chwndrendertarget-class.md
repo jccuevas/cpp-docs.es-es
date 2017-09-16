@@ -1,5 +1,5 @@
 ---
-title: Clase CHwndRenderTarget | Documentos de Microsoft
+title: CHwndRenderTarget Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CHwndRenderTarget class
+- CHwndRenderTarget [MFC], CHwndRenderTarget
+- CHwndRenderTarget [MFC], Attach
+- CHwndRenderTarget [MFC], CheckWindowState
+- CHwndRenderTarget [MFC], Create
+- CHwndRenderTarget [MFC], Detach
+- CHwndRenderTarget [MFC], GetHwnd
+- CHwndRenderTarget [MFC], GetHwndRenderTarget
+- CHwndRenderTarget [MFC], ReCreate
+- CHwndRenderTarget [MFC], Resize
+- CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
 caps.latest.revision: 17
 author: mikeblome
@@ -44,186 +53,186 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 1af6795e89c995ba6b5a7b094f06b0aea776f561
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7758d32bbf6fb0ba7d1402cd0890d7eb8cf3d741
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="chwndrendertarget-class"></a>Clase CHwndRenderTarget
-Un contenedor para ID2D1HwndRenderTarget.  
+# <a name="chwndrendertarget-class"></a>CHwndRenderTarget Class
+A wrapper for ID2D1HwndRenderTarget.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CHwndRenderTarget : public CRenderTarget;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|Construye un objeto CHwndRenderTarget de HWND.|  
+|[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|Constructs a CHwndRenderTarget object from HWND.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHwndRenderTarget::Attach](#attach)|Conexiones existentes representan la interfaz de destino para el objeto|  
-|[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|Indica si está ocluido HWND asociado a este destino de representación.|  
-|[CHwndRenderTarget::Create](#create)|Crea un destino de representación asociado a la ventana|  
-|[CHwndRenderTarget::Detach](#detach)|Separa la interfaz de destino de representación del objeto|  
-|[CHwndRenderTarget::GetHwnd](#gethwnd)|Devuelve el HWND asociado a este destino de representación.|  
-|[CHwndRenderTarget::GetHwndRenderTarget](#gethwndrendertarget)|Interfaz de ID2D1HwndRenderTarget devuelve.|  
-|[CHwndRenderTarget::ReCreate](#recreate)|Vuelve a crear un destino de representación asociado a la ventana|  
-|[CHwndRenderTarget::Resize](#resize)|Cambia el tamaño de destino de representación para el tamaño de píxel especificado|  
+|[CHwndRenderTarget::Attach](#attach)|Attaches existing render target interface to the object|  
+|[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|Indicates whether the HWND associated with this render target is occluded.|  
+|[CHwndRenderTarget::Create](#create)|Creates a render target associated with the window|  
+|[CHwndRenderTarget::Detach](#detach)|Detaches render target interface from the object|  
+|[CHwndRenderTarget::GetHwnd](#gethwnd)|Returns the HWND associated with this render target.|  
+|[CHwndRenderTarget::GetHwndRenderTarget](#gethwndrendertarget)|Returns ID2D1HwndRenderTarget interface.|  
+|[CHwndRenderTarget::ReCreate](#recreate)|Re-creates a render target associated with the window|  
+|[CHwndRenderTarget::Resize](#resize)|Changes the size of the render target to the specified pixel size|  
   
-### <a name="public-operators"></a>Operadores públicos  
+### <a name="public-operators"></a>Public Operators  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHwndRenderTarget::operator ID2D1HwndRenderTarget *](#operator_id2d1hwndrendertarget_star)|Interfaz de ID2D1HwndRenderTarget devuelve.|  
+|[CHwndRenderTarget::operator ID2D1HwndRenderTarget*](#operator_id2d1hwndrendertarget_star)|Returns ID2D1HwndRenderTarget interface.|  
   
-### <a name="protected-data-members"></a>Miembros de datos protegidos  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|Un puntero a un objeto ID2D1HwndRenderTarget.|  
+|[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|A pointer to an ID2D1HwndRenderTarget object.|  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
   
  [CHwndRenderTarget](../../mfc/reference/chwndrendertarget-class.md)  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="attach"></a>CHwndRenderTarget::Attach  
- Conexiones existentes representan la interfaz de destino para el objeto  
+##  <a name="attach"></a>  CHwndRenderTarget::Attach  
+ Attaches existing render target interface to the object  
   
 ```  
 void Attach(ID2D1HwndRenderTarget* pTarget);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pTarget`  
- Interfaz existente del destino de representación. No puede ser NULL  
+ Existing render target interface. Cannot be NULL  
   
-##  <a name="checkwindowstate"></a>CHwndRenderTarget::CheckWindowState  
- Indica si está ocluido HWND asociado a este destino de representación.  
+##  <a name="checkwindowstate"></a>  CHwndRenderTarget::CheckWindowState  
+ Indicates whether the HWND associated with this render target is occluded.  
   
 ```  
 D2D1_WINDOW_STATE CheckWindowState() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Un valor que indica si el HWND asociado a este destino de representación está ocluido.  
+### <a name="return-value"></a>Return Value  
+ A value that indicates whether the HWND associated with this render target is occluded.  
   
-##  <a name="chwndrendertarget"></a>CHwndRenderTarget::CHwndRenderTarget  
- Construye un objeto CHwndRenderTarget de HWND.  
+##  <a name="chwndrendertarget"></a>  CHwndRenderTarget::CHwndRenderTarget  
+ Constructs a CHwndRenderTarget object from HWND.  
   
 ```  
 CHwndRenderTarget(HWND hwnd = NULL);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `hwnd`  
- HWND asociado a este destino de representación  
+ The HWND associated with this render target  
   
-##  <a name="create"></a>CHwndRenderTarget::Create  
- Crea un destino de representación asociado a la ventana  
+##  <a name="create"></a>  CHwndRenderTarget::Create  
+ Creates a render target associated with the window  
   
 ```  
 BOOL Create(HWND hWnd);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `hWnd`  
- HWND asociado a este destino de representación  
+ The HWND associated with this render target  
   
-### <a name="return-value"></a>Valor devuelto  
- Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE  
   
-##  <a name="detach"></a>CHwndRenderTarget::Detach  
- Separa la interfaz de destino de representación del objeto  
+##  <a name="detach"></a>  CHwndRenderTarget::Detach  
+ Detaches render target interface from the object  
   
 ```  
 ID2D1HwndRenderTarget* Detach();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Puntero al desasociar representar la interfaz de destino.  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached render target interface.  
   
-##  <a name="gethwnd"></a>CHwndRenderTarget::GetHwnd  
- Devuelve el HWND asociado a este destino de representación.  
+##  <a name="gethwnd"></a>  CHwndRenderTarget::GetHwnd  
+ Returns the HWND associated with this render target.  
   
 ```  
 HWND GetHwnd() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- HWND asociado a este destino de representación.  
+### <a name="return-value"></a>Return Value  
+ The HWND associated with this render target.  
   
-##  <a name="gethwndrendertarget"></a>CHwndRenderTarget::GetHwndRenderTarget  
- Interfaz de ID2D1HwndRenderTarget devuelve.  
+##  <a name="gethwndrendertarget"></a>  CHwndRenderTarget::GetHwndRenderTarget  
+ Returns ID2D1HwndRenderTarget interface.  
   
 ```  
 ID2D1HwndRenderTarget* GetHwndRenderTarget();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Puntero a una interfaz ID2D1HwndRenderTarget o NULL si el objeto no se ha inicializado todavía.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1HwndRenderTarget interface or NULL if object is not initialized yet.  
   
-##  <a name="m_phwndrendertarget"></a>CHwndRenderTarget::m_pHwndRenderTarget  
- Un puntero a un objeto ID2D1HwndRenderTarget.  
+##  <a name="m_phwndrendertarget"></a>  CHwndRenderTarget::m_pHwndRenderTarget  
+ A pointer to an ID2D1HwndRenderTarget object.  
   
 ```  
 ID2D1HwndRenderTarget* m_pHwndRenderTarget;  
 ```  
   
-##  <a name="operator_id2d1hwndrendertarget_star"></a>CHwndRenderTarget::operator ID2D1HwndRenderTarget *  
- Interfaz de ID2D1HwndRenderTarget devuelve.  
+##  <a name="operator_id2d1hwndrendertarget_star"></a>  CHwndRenderTarget::operator ID2D1HwndRenderTarget*  
+ Returns ID2D1HwndRenderTarget interface.  
   
 ```  
 operator ID2D1HwndRenderTarget*();
 ```   
   
-### <a name="return-value"></a>Valor devuelto  
- Puntero a una interfaz ID2D1HwndRenderTarget o NULL si el objeto no se ha inicializado todavía.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1HwndRenderTarget interface or NULL if object is not initialized yet.  
   
-##  <a name="recreate"></a>CHwndRenderTarget::ReCreate  
- Vuelve a crear un destino de representación asociado a la ventana  
+##  <a name="recreate"></a>  CHwndRenderTarget::ReCreate  
+ Re-creates a render target associated with the window  
   
 ```  
 BOOL ReCreate(HWND hWnd);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `hWnd`  
- HWND asociado a este destino de representación  
+ The HWND associated with this render target  
   
-### <a name="return-value"></a>Valor devuelto  
- Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="resize"></a>CHwndRenderTarget::Resize  
- Cambia el tamaño de destino de representación para el tamaño de píxel especificado  
+##  <a name="resize"></a>  CHwndRenderTarget::Resize  
+ Changes the size of the render target to the specified pixel size  
   
 ```  
 BOOL Resize(const CD2DSizeU& size);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `size`  
- El nuevo tamaño del destino de representación en píxeles del dispositivo  
+ The new size of the render target in device pixels  
   
-### <a name="return-value"></a>Valor devuelto  
- Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-## <a name="see-also"></a>Vea también  
- [Clases](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

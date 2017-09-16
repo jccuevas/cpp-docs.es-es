@@ -1,5 +1,5 @@
 ---
-title: CAsyncSocket (clase) | Documentos de Microsoft
+title: CAsyncSocket Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -48,12 +48,40 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- network communications
-- asynchronous Windows Sockets
-- CAsyncSocket class
-- Windows Sockets [C++], asynchronous
-- communications [C++], network
-- sockets [C++], Windows
+- CAsyncSocket [MFC], CAsyncSocket
+- CAsyncSocket [MFC], Accept
+- CAsyncSocket [MFC], AsyncSelect
+- CAsyncSocket [MFC], Attach
+- CAsyncSocket [MFC], Bind
+- CAsyncSocket [MFC], Close
+- CAsyncSocket [MFC], Connect
+- CAsyncSocket [MFC], Create
+- CAsyncSocket [MFC], Detach
+- CAsyncSocket [MFC], FromHandle
+- CAsyncSocket [MFC], GetLastError
+- CAsyncSocket [MFC], GetPeerName
+- CAsyncSocket [MFC], GetPeerNameEx
+- CAsyncSocket [MFC], GetSockName
+- CAsyncSocket [MFC], GetSockNameEx
+- CAsyncSocket [MFC], GetSockOpt
+- CAsyncSocket [MFC], IOCtl
+- CAsyncSocket [MFC], Listen
+- CAsyncSocket [MFC], Receive
+- CAsyncSocket [MFC], ReceiveFrom
+- CAsyncSocket [MFC], ReceiveFromEx
+- CAsyncSocket [MFC], Send
+- CAsyncSocket [MFC], SendTo
+- CAsyncSocket [MFC], SendToEx
+- CAsyncSocket [MFC], SetSockOpt
+- CAsyncSocket [MFC], ShutDown
+- CASyncSocket [MFC], Socket
+- CAsyncSocket [MFC], OnAccept
+- CAsyncSocket [MFC], OnClose
+- CAsyncSocket [MFC], OnConnect
+- CAsyncSocket [MFC], OnOutOfBandData
+- CAsyncSocket [MFC], OnReceive
+- CAsyncSocket [MFC], OnSend
+- CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
 caps.latest.revision: 23
 author: mikeblome
@@ -73,107 +101,107 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: c7a175fc12146d98becc5d06f80e975df5b5a008
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 389ca5c63bac4e3546d5132ea90730cb4c4fe084
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="casyncsocket-class"></a>CAsyncSocket (clase)
-Representa un Socket de Windows, un extremo de comunicación de red.  
+# <a name="casyncsocket-class"></a>CAsyncSocket Class
+Represents a Windows Socket — an endpoint of network communication.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAsyncSocket : public CObject  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAsyncSocket::CAsyncSocket](#casyncsocket)|Construye un objeto `CAsyncSocket`.|  
+|[CAsyncSocket::CAsyncSocket](#casyncsocket)|Constructs a `CAsyncSocket` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAsyncSocket:: Accept](#accept)|Acepta una conexión en el socket.|  
-|[CAsyncSocket::AsyncSelect](#asyncselect)|Notificación de eventos de solicitudes para el socket.|  
-|[CAsyncSocket::Attach](#attach)|Asocia un identificador de socket a un `CAsyncSocket` objeto.|  
-|[CAsyncSocket::Bind](#bind)|Asocia una dirección local del socket.|  
-|[CAsyncSocket::Close](#close)|Cierra el socket.|  
-|[CAsyncSocket:: Connect](#connect)|Establece una conexión a un socket del mismo nivel.|  
-|[CAsyncSocket::Create](#create)|Crea un socket.|  
-|[CAsyncSocket::Detach](#detach)|Desasocia un identificador de socket desde un `CAsyncSocket` objeto.|  
-|[CAsyncSocket::FromHandle](#fromhandle)|Devuelve un puntero a un `CAsyncSocket` objeto, dado un identificador de socket.|  
-|[CAsyncSocket::GetLastError](#getlasterror)|Obtiene el estado de error de la última operación con error.|  
-|[CAsyncSocket::GetPeerName](#getpeername)|Obtiene la dirección del socket del mismo nivel al que está conectado el socket.|  
-|[CAsyncSocket::GetPeerNameEx](#getpeernameex)|Obtiene la dirección del socket del mismo nivel al que el socket está conectado (controla direcciones IPv6).|  
-|[CAsyncSocket::GetSockName](#getsockname)|Obtiene el nombre local para un socket.|  
-|[CAsyncSocket::GetSockNameEx](#getsocknameex)|Obtiene el nombre local para un socket (controla direcciones IPv6).|  
-|[CAsyncSocket::GetSockOpt](#getsockopt)|Recupera una opción de socket.|  
-|[CAsyncSocket::IOCtl](#ioctl)|Controla el modo del socket.|  
-|[CAsyncSocket:: Listen](#listen)|Establece un socket para escuchar las solicitudes de conexión entrante.|  
-|[CAsyncSocket::Receive](#receive)|Recibe los datos desde el socket.|  
-|[CAsyncSocket::ReceiveFrom](#receivefrom)|Recibe un datagrama y almacena la dirección de origen.|  
-|[CAsyncSocket::ReceiveFromEx](#receivefromex)|Recibe un datagrama y almacena la dirección de origen (controla direcciones IPv6).|  
-|[CAsyncSocket::Send](#send)|Envía datos a un socket conectado.|  
-|[:: SendTo](#sendto)|Envía datos a un destino específico.|  
-|[CAsyncSocket::SendToEx](#sendtoex)|Envía datos a un destino concreto (controla direcciones IPv6).|  
-|[CAsyncSocket::SetSockOpt](#setsockopt)|Establece una opción de socket.|  
-|[CAsyncSocket::ShutDown](#shutdown)|Deshabilita **enviar** o **recepción** llama en el socket.|  
-|[CASyncSocket::Socket](#socket)|Asigna un identificador de socket.|  
+|[CAsyncSocket::Accept](#accept)|Accepts a connection on the socket.|  
+|[CAsyncSocket::AsyncSelect](#asyncselect)|Requests event notification for the socket.|  
+|[CAsyncSocket::Attach](#attach)|Attaches a socket handle to a `CAsyncSocket` object.|  
+|[CAsyncSocket::Bind](#bind)|Associates a local address with the socket.|  
+|[CAsyncSocket::Close](#close)|Closes the socket.|  
+|[CAsyncSocket::Connect](#connect)|Establishes a connection to a peer socket.|  
+|[CAsyncSocket::Create](#create)|Creates a socket.|  
+|[CAsyncSocket::Detach](#detach)|Detaches a socket handle from a `CAsyncSocket` object.|  
+|[CAsyncSocket::FromHandle](#fromhandle)|Returns a pointer to a `CAsyncSocket` object, given a socket handle.|  
+|[CAsyncSocket::GetLastError](#getlasterror)|Gets the error status for the last operation that failed.|  
+|[CAsyncSocket::GetPeerName](#getpeername)|Gets the address of the peer socket to which the socket is connected.|  
+|[CAsyncSocket::GetPeerNameEx](#getpeernameex)|Gets the address of the peer socket to which the socket is connected (handles IPv6 addresses).|  
+|[CAsyncSocket::GetSockName](#getsockname)|Gets the local name for a socket.|  
+|[CAsyncSocket::GetSockNameEx](#getsocknameex)|Gets the local name for a socket (handles IPv6 addresses).|  
+|[CAsyncSocket::GetSockOpt](#getsockopt)|Retrieves a socket option.|  
+|[CAsyncSocket::IOCtl](#ioctl)|Controls the mode of the socket.|  
+|[CAsyncSocket::Listen](#listen)|Establishes a socket to listen for incoming connection requests.|  
+|[CAsyncSocket::Receive](#receive)|Receives data from the socket.|  
+|[CAsyncSocket::ReceiveFrom](#receivefrom)|Receives a datagram and stores the source address.|  
+|[CAsyncSocket::ReceiveFromEx](#receivefromex)|Receives a datagram and stores the source address (handles IPv6 addresses).|  
+|[CAsyncSocket::Send](#send)|Sends data to a connected socket.|  
+|[CAsyncSocket::SendTo](#sendto)|Sends data to a specific destination.|  
+|[CAsyncSocket::SendToEx](#sendtoex)|Sends data to a specific destination (handles IPv6 addresses).|  
+|[CAsyncSocket::SetSockOpt](#setsockopt)|Sets a socket option.|  
+|[CAsyncSocket::ShutDown](#shutdown)|Disables **Send** and/or **Receive** calls on the socket.|  
+|[CASyncSocket::Socket](#socket)|Allocates a socket handle.|  
   
-### <a name="protected-methods"></a>Métodos protegidos  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAsyncSocket::OnAccept](#onaccept)|Notifica a un socket de escucha puede aceptar solicitudes de conexión pendientes llamando a **Accept**.|  
-|[CAsyncSocket::OnClose](#onclose)|Notifica cerró un socket que el socket conectado a él.|  
-|[CAsyncSocket::OnConnect](#onconnect)|Notifica a un socket de conexión que el intento de conexión está completo, si correctamente o no.|  
-|[CAsyncSocket::OnOutOfBandData](#onoutofbanddata)|Notifica a un socket de recepción que hay datos fuera de banda que leerse en el socket, normalmente un mensaje urgente.|  
-|[CAsyncSocket::OnReceive](#onreceive)|Notifica a un socket de escucha que hay datos que desea recuperar mediante una llamada a **recepción**.|  
-|[CAsyncSocket::OnSend](#onsend)|Notifica a un socket que se pueden enviar datos al llamar a **enviar**.|  
+|[CAsyncSocket::OnAccept](#onaccept)|Notifies a listening socket that it can accept pending connection requests by calling **Accept**.|  
+|[CAsyncSocket::OnClose](#onclose)|Notifies a socket that the socket connected to it has closed.|  
+|[CAsyncSocket::OnConnect](#onconnect)|Notifies a connecting socket that the connection attempt is complete, whether successfully or in error.|  
+|[CAsyncSocket::OnOutOfBandData](#onoutofbanddata)|Notifies a receiving socket that there is out-of-band data to be read on the socket, usually an urgent message.|  
+|[CAsyncSocket::OnReceive](#onreceive)|Notifies a listening socket that there is data to be retrieved by calling **Receive**.|  
+|[CAsyncSocket::OnSend](#onsend)|Notifies a socket that it can send data by calling **Send**.|  
   
-### <a name="public-operators"></a>Operadores públicos  
+### <a name="public-operators"></a>Public Operators  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAsyncSocket::operator =](#operator_eq)|Asigna un nuevo valor a un `CAsyncSocket` objeto.|  
-|[CAsyncSocket::operator SOCKET](#operator_socket)|Utilice este operador para recuperar la **SOCKET** identificador de la `CAsyncSocket` objeto.|  
+|[CAsyncSocket::operator =](#operator_eq)|Assigns a new value to a `CAsyncSocket` object.|  
+|[CAsyncSocket::operator SOCKET](#operator_socket)|Use this operator to retrieve the **SOCKET** handle of the `CAsyncSocket` object.|  
   
-### <a name="public-data-members"></a>Miembros de datos públicos  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAsyncSocket::m_hSocket](#m_hsocket)|Indica el **SOCKET** identificador asociado a esta `CAsyncSocket` objeto.|  
+|[CAsyncSocket::m_hSocket](#m_hsocket)|Indicates the **SOCKET** handle attached to this `CAsyncSocket` object.|  
   
-## <a name="remarks"></a>Comentarios  
- Clase `CAsyncSocket` encapsula la API de Windows Socket para funciones, que proporciona una abstracción orientada a objetos para los programadores que deseen utilizar Windows Sockets en conjunción con MFC.  
+## <a name="remarks"></a>Remarks  
+ Class `CAsyncSocket` encapsulates the Windows Socket Functions API, providing an object-oriented abstraction for programmers who want to use Windows Sockets in conjunction with MFC.  
   
- Esta clase se basa en el supuesto de que entiende las comunicaciones de red. Usted es responsable de controlar el bloqueo de las diferencias de orden de bytes, y las conversiones entre Unicode y juegos de caracteres multibyte establezca cadenas (MBCS). Si desea que una interfaz más útil que administra estos problemas, vea la clase [CSocket](../../mfc/reference/csocket-class.md).  
+ This class is based on the assumption that you understand network communications. You are responsible for handling blocking, byte-order differences, and conversions between Unicode and multibyte character set (MBCS) strings. If you want a more convenient interface that manages these issues for you, see class [CSocket](../../mfc/reference/csocket-class.md).  
   
- Utilizar un `CAsyncSocket` objeto, llame a su constructor, a continuación, llame el [crear](#create) función para crear el identificador de socket subyacente (tipo `SOCKET`), excepto en sockets aceptados. Para una llamada de socket de servidor el [escuchar](#listen) función miembro y para una llamada de socket de cliente la [conectar](#connect) función miembro. El socket de servidor debe llamar a la [Accept](#accept) función al recibir una solicitud de conexión. Utilice los restantes `CAsyncSocket` funciones para llevar a cabo las comunicaciones entre los sockets. Al finalizar, destruir el `CAsyncSocket` si se ha creado en el montón de objeto; el destructor llama automáticamente a la [cerrar](#close) (función). El `SOCKET` tipo de datos se describe en el artículo [Windows Sockets: fondo](../../mfc/windows-sockets-background.md).  
+ To use a `CAsyncSocket` object, call its constructor, then call the [Create](#create) function to create the underlying socket handle (type `SOCKET`), except on accepted sockets. For a server socket call the [Listen](#listen) member function, and for a client socket call the [Connect](#connect) member function. The server socket should call the [Accept](#accept) function upon receiving a connection request. Use the remaining `CAsyncSocket` functions to carry out communications between sockets. Upon completion, destroy the `CAsyncSocket` object if it was created on the heap; the destructor automatically calls the [Close](#close) function. The `SOCKET` data type is described in the article [Windows Sockets: Background](../../mfc/windows-sockets-background.md).  
   
 > [!NOTE]
->  Al utilizar sockets MFC en subprocesos secundarios en una aplicación MFC vinculado estáticamente, debe llamar a `AfxSocketInit` en cada subproceso que usa sockets para inicializar las bibliotecas de socket. De forma predeterminada, `AfxSocketInit` se llama sólo en el subproceso principal.  
+>  When using MFC sockets in secondary threads in a statically linked MFC application, you must call `AfxSocketInit` in each thread that uses sockets to initialize the socket libraries. By default, `AfxSocketInit` is called only in the primary thread.  
   
- Para obtener más información, consulte [Windows Sockets: usar clase CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md) y artículos relacionados., así como [API de Windows Sockets 2](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ For more information, see [Windows Sockets: Using Class CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md) and related articles., as well as [Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CAsyncSocket`  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxsock.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxsock.h  
   
-##  <a name="accept"></a>CAsyncSocket:: Accept  
- Llame a esta función miembro para aceptar una conexión en un socket.  
+##  <a name="accept"></a>  CAsyncSocket::Accept  
+ Call this member function to accept a connection on a socket.  
   
 ```  
 virtual BOOL Accept(
@@ -182,116 +210,116 @@ virtual BOOL Accept(
     int* lpSockAddrLen = NULL);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `rConnectedSocket`  
- Una referencia identifica un nuevo socket que está disponible para la conexión.  
+ A reference identifying a new socket that is available for connection.  
   
  `lpSockAddr`  
- Un puntero a un [SOCKADDR](../../mfc/reference/sockaddr-structure.md) estructura que recibe la dirección de la conexión de socket, como conoce en la red. El formato exacto de la `lpSockAddr` argumento viene determinado por la familia de direcciones establecida cuando se creó el socket. Si `lpSockAddr` o `lpSockAddrLen` son iguales a **NULL**, se devuelve ninguna información sobre la dirección remota del socket aceptado.  
+ A pointer to a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure that receives the address of the connecting socket, as known on the network. The exact format of the `lpSockAddr` argument is determined by the address family established when the socket was created. If `lpSockAddr` and/or `lpSockAddrLen` are equal to **NULL**, then no information about the remote address of the accepted socket is returned.  
   
  `lpSockAddrLen`  
- Un puntero a la longitud de la dirección en `lpSockAddr` en bytes. El `lpSockAddrLen` es un parámetro de resultado del valor: debe contener la cantidad de espacio que se señala inicialmente `lpSockAddr`; devuelta contendrá la longitud real (en bytes) de la dirección devuelta.  
+ A pointer to the length of the address in `lpSockAddr` in bytes. The `lpSockAddrLen` is a value-result parameter: it should initially contain the amount of space pointed to by `lpSockAddr`; on return it will contain the actual length (in bytes) of the address returned.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente; de lo contrario, 0 y un código de error específico se pueden recuperar mediante una llamada a [GetLastError](#getlasterror). Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** el `lpSockAddrLen` argumento es demasiado pequeño (menor que el tamaño de una [SOCKADDR](../../mfc/reference/sockaddr-structure.md) estructura).  
+- **WSAEFAULT** The `lpSockAddrLen` argument is too small (less than the size of a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure).  
   
-- **WSAEINPROGRESS** es una llamada de bloqueo de Windows Sockets en curso.  
+- **WSAEINPROGRESS** A blocking Windows Sockets call is in progress.  
   
-- **WSAEINVAL** `Listen` no fue invocado antes de Aceptar.  
+- **WSAEINVAL** `Listen` was not invoked prior to accept.  
   
-- **WSAEMFILE** la cola está vacía al entrar para aceptar y no hay disponible ningún descriptores.  
+- **WSAEMFILE** The queue is empty upon entry to accept and there are no descriptors available.  
   
-- `WSAENOBUFS`No hay espacio de búfer está disponible.  
+- `WSAENOBUFS` No buffer space is available.  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEOPNOTSUPP** el socket que se hace referencia no es un tipo que admita el servicio orientado a la conexión.  
+- **WSAEOPNOTSUPP** The referenced socket is not a type that supports connection-oriented service.  
   
-- **WSAEWOULDBLOCK** el socket se marca como no sea de bloqueo y no hay conexiones están presentes para ser aceptados.  
+- **WSAEWOULDBLOCK** The socket is marked as nonblocking and no connections are present to be accepted.  
   
-### <a name="remarks"></a>Comentarios  
- Esta rutina extrae la primera conexión de la cola de conexiones pendientes, crea un nuevo socket con las mismas propiedades que este socket y lo adjunta a `rConnectedSocket`. Si no hay conexiones pendientes en la cola, **Accept** devuelve cero y `GetLastError` devuelve un error. El socket aceptado ( *rConnectedSocket)* no se puede usar para aceptar más conexiones. El socket original permanece abierta y escucha.  
+### <a name="remarks"></a>Remarks  
+ This routine extracts the first connection in the queue of pending connections, creates a new socket with the same properties as this socket, and attaches it to `rConnectedSocket`. If no pending connections are present on the queue, **Accept** returns zero and `GetLastError` returns an error. The accepted socket ( *rConnectedSocket)* cannot be used to accept more connections. The original socket remains open and listening.  
   
- El argumento `lpSockAddr` es un parámetro de resultado que se rellena con la dirección de socket de conexión, tal como conoce el nivel de comunicaciones. **Aceptar** se utiliza con tipos de socket basado en conexión como **SOCK_STREAM**.  
+ The argument `lpSockAddr` is a result parameter that is filled in with the address of the connecting socket, as known to the communications layer. **Accept** is used with connection-based socket types such as **SOCK_STREAM**.  
   
-##  <a name="asyncselect"></a>CAsyncSocket::AsyncSelect  
- Llame a esta función miembro para solicitar la notificación de eventos para un socket.  
+##  <a name="asyncselect"></a>  CAsyncSocket::AsyncSelect  
+ Call this member function to request event notification for a socket.  
   
 ```  
 BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONNECT | FD_CLOSE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lEvent`  
- Máscara de bits que especifica una combinación de eventos de red en el que está interesada la aplicación.  
+ A bitmask which specifies a combination of network events in which the application is interested.  
   
-- **FD_READ** desea recibir una notificación de preparación para la lectura.  
+- **FD_READ** Want to receive notification of readiness for reading.  
   
-- **FD_WRITE** desea recibir una notificación cuando hay datos disponibles para su lectura.  
+- **FD_WRITE** Want to receive notification when data is available to be read.  
   
-- **FD_OOB** desea recibir una notificación de la llegada de datos fuera de banda.  
+- **FD_OOB** Want to receive notification of the arrival of out-of-band data.  
   
-- **FD_ACCEPT** desea recibir una notificación de las conexiones entrantes.  
+- **FD_ACCEPT** Want to receive notification of incoming connections.  
   
-- **FD_CONNECT** desea recibir notificación de los resultados de la conexión.  
+- **FD_CONNECT** Want to receive notification of connection results.  
   
-- **FD_CLOSE** desea recibir una notificación cuando se cerró un socket de un elemento del mismo nivel.  
+- **FD_CLOSE** Want to receive notification when a socket has been closed by a peer.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente; de lo contrario, 0 y un código de error específico se pueden recuperar mediante una llamada a [GetLastError](#getlasterror). Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEINVAL** indica que uno de los parámetros especificados no era válido.  
+- **WSAEINVAL** Indicates that one of the specified parameters was invalid.  
   
-- **WSAEINPROGRESS** está en curso una operación bloqueo de Windows Sockets.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función se utiliza para especificar qué funciones de notificación de devolución de llamada MFC se llamará para el socket. `AsyncSelect`establece automáticamente este socket en modo de no bloqueo. Para obtener más información, vea el artículo [Windows Sockets: sockets de notificación](../../mfc/windows-sockets-socket-notifications.md).  
+### <a name="remarks"></a>Remarks  
+ This function is used to specify which MFC callback notification functions will be called for the socket. `AsyncSelect` automatically sets this socket to nonblocking mode. For more information, see the article [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="attach"></a>CAsyncSocket::Attach  
- Llame a esta función miembro para adjuntar el `hSocket` identificador de un `CAsyncSocket` objeto.  
+##  <a name="attach"></a>  CAsyncSocket::Attach  
+ Call this member function to attach the `hSocket` handle to an `CAsyncSocket` object.  
   
 ```  
 BOOL Attach(
     SOCKET hSocket, long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONNECT | FD_CLOSE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `hSocket`  
- Contiene un identificador de un socket.  
+ Contains a handle to a socket.  
   
  `lEvent`  
- Máscara de bits que especifica una combinación de eventos de red en el que está interesada la aplicación.  
+ A bitmask which specifies a combination of network events in which the application is interested.  
   
-- **FD_READ** desea recibir una notificación de preparación para la lectura.  
+- **FD_READ** Want to receive notification of readiness for reading.  
   
-- **FD_WRITE** desea recibir una notificación cuando hay datos disponibles para su lectura.  
+- **FD_WRITE** Want to receive notification when data is available to be read.  
   
-- **FD_OOB** desea recibir una notificación de la llegada de datos fuera de banda.  
+- **FD_OOB** Want to receive notification of the arrival of out-of-band data.  
   
-- **FD_ACCEPT** desea recibir una notificación de las conexiones entrantes.  
+- **FD_ACCEPT** Want to receive notification of incoming connections.  
   
-- **FD_CONNECT** desea recibir notificación de los resultados de la conexión.  
+- **FD_CONNECT** Want to receive notification of connection results.  
   
-- **FD_CLOSE** desea recibir una notificación cuando se cerró un socket de un elemento del mismo nivel.  
+- **FD_CLOSE** Want to receive notification when a socket has been closed by a peer.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful.  
   
-### <a name="remarks"></a>Comentarios  
- El **SOCKET** identificador se almacena en el objeto [m_hSocket](#m_hsocket) miembro de datos.  
+### <a name="remarks"></a>Remarks  
+ The **SOCKET** handle is stored in the object's [m_hSocket](#m_hsocket) data member.  
   
-##  <a name="bind"></a>CAsyncSocket::Bind  
- Llame a esta función miembro para asociar una dirección local del socket.  
+##  <a name="bind"></a>  CAsyncSocket::Bind  
+ Call this member function to associate a local address with the socket.  
   
 ```  
 BOOL Bind(
@@ -304,67 +332,67 @@ BOOL Bind (
     int nSockAddrLen);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nSocketPort`  
- El puerto identifica la aplicación de socket.  
+ The port identifying the socket application.  
   
  `lpszSocketAddress`  
- La dirección de red, un número de puntos, como "128.56.22.8". Pasar el **NULL** la cadena de este parámetro indica la **CAsyncSocket** instancia debe escuchar la actividad del cliente en todas las interfaces de red.  
+ The network address, a dotted number such as "128.56.22.8". Passing the **NULL** string for this parameter indicates the **CAsyncSocket** instance should listen for client activity on all network interfaces.  
   
  `lpSockAddr`  
- Un puntero a un [SOCKADDR](../../mfc/reference/sockaddr-structure.md) estructura que contiene la dirección que se asigna a este socket.  
+ A pointer to a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure that contains the address to assign to this socket.  
   
  `nSockAddrLen`  
- La longitud de la dirección en `lpSockAddr` en bytes.  
+ The length of the address in `lpSockAddr` in bytes.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente; de lo contrario, 0 y un código de error específico se pueden recuperar mediante una llamada a [GetLastError](#getlasterror). Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEADDRINUSE** la dirección especificada ya está en uso. (Consulte la **SO_REUSEADDR** opción de socket [SetSockOpt](#setsockopt).)  
+- **WSAEADDRINUSE** The specified address is already in use. (See the **SO_REUSEADDR** socket option under [SetSockOpt](#setsockopt).)  
   
-- **WSAEFAULT** el `nSockAddrLen` argumento es demasiado pequeño (menor que el tamaño de una [SOCKADDR](../../mfc/reference/sockaddr-structure.md) estructura).  
+- **WSAEFAULT** The `nSockAddrLen` argument is too small (less than the size of a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure).  
   
-- **WSAEINPROGRESS** es una llamada de bloqueo de Windows Sockets en curso.  
+- **WSAEINPROGRESS** A blocking Windows Sockets call is in progress.  
   
-- **WSAEAFNOSUPPORT** la familia de direcciones especificado no es compatible con este puerto.  
+- **WSAEAFNOSUPPORT** The specified address family is not supported by this port.  
   
-- **WSAEINVAL** el socket ya está enlazado a una dirección.  
+- **WSAEINVAL** The socket is already bound to an address.  
   
-- `WSAENOBUFS`No hay suficientes búferes disponibles, hay demasiadas conexiones.  
+- `WSAENOBUFS` Not enough buffers available, too many connections.  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-### <a name="remarks"></a>Comentarios  
- Esta rutina se utiliza en un datagrama no conectada o un socket de secuencia, que antes posteriores **conectar** o `Listen` llamadas. Antes de pueda aceptar solicitudes de conexión, un socket de servidor escucha debe seleccionar un número de puerto y ponerlo a conocidos de Windows Sockets mediante una llamada a **enlace**. **Enlazar** establece la asociación local (número de puerto/dirección de host) del socket asignando un nombre local para un socket sin nombre.  
+### <a name="remarks"></a>Remarks  
+ This routine is used on an unconnected datagram or stream socket, before subsequent **Connect** or `Listen` calls. Before it can accept connection requests, a listening server socket must select a port number and make it known to Windows Sockets by calling **Bind**. **Bind** establishes the local association (host address/port number) of the socket by assigning a local name to an unnamed socket.  
   
-##  <a name="casyncsocket"></a>CAsyncSocket::CAsyncSocket  
- Construye un objeto de socket en blanco.  
+##  <a name="casyncsocket"></a>  CAsyncSocket::CAsyncSocket  
+ Constructs a blank socket object.  
   
 ```  
 CAsyncSocket();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Después de crear el objeto, se debe llamar a su **crear** función de miembro para crear el **SOCKET** estructura de datos y enlazar su dirección. (En el servidor de una comunicación de Windows Sockets, cuando el socket de escucha crea un socket para usar en el **Accept** llamada, no se llama **crear** para ese socket.)  
+### <a name="remarks"></a>Remarks  
+ After constructing the object, you must call its **Create** member function to create the **SOCKET** data structure and bind its address. (On the server side of a Windows Sockets communication, when the listening socket creates a socket to use in the **Accept** call, you do not call **Create** for that socket.)  
   
-##  <a name="close"></a>CAsyncSocket::Close  
- Cierra el socket.  
+##  <a name="close"></a>  CAsyncSocket::Close  
+ Closes the socket.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Esta función libera el descriptor de socket para que aún más las referencias a ella se producirá un error con el error **WSAENOTSOCK**. Si esta es la última referencia al socket subyacente, se descartan la información de nomenclatura asociada y los datos de la cola. Llamadas de destructor del objeto de socket **cerrar** para usted.  
+### <a name="remarks"></a>Remarks  
+ This function releases the socket descriptor so that further references to it will fail with the error **WSAENOTSOCK**. If this is the last reference to the underlying socket, the associated naming information and queued data are discarded. The socket object's destructor calls **Close** for you.  
   
- Para `CAsyncSocket`, pero no para `CSocket`, la semántica de **cerrar** se ven afectados por las opciones de socket **SO_LINGER** y **SO_DONTLINGER**. Para obtener más información, vea la función miembro `GetSockOpt`.  
+ For `CAsyncSocket`, but not for `CSocket`, the semantics of **Close** are affected by the socket options **SO_LINGER** and **SO_DONTLINGER**. For further information, see member function `GetSockOpt`.  
   
-##  <a name="connect"></a>CAsyncSocket:: Connect  
- Llame a esta función miembro para establecer una conexión a un socket de datagrama o la secuencia no conectada.  
+##  <a name="connect"></a>  CAsyncSocket::Connect  
+ Call this member function to establish a connection to an unconnected stream or datagram socket.  
   
 ```  
 BOOL Connect(
@@ -377,65 +405,65 @@ BOOL Connect(
     int nSockAddrLen);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpszHostAddress`  
- La dirección de red del socket al que está conectado este objeto: un nombre de equipo, como "ftp.microsoft.com" o un número de puntos, como "128.56.22.8".  
+ The network address of the socket to which this object is connected: a machine name such as "ftp.microsoft.com", or a dotted number such as "128.56.22.8".  
   
  `nHostPort`  
- El puerto identifica la aplicación de socket.  
+ The port identifying the socket application.  
   
  `lpSockAddr`  
- Un puntero a un [SOCKADDR](../../mfc/reference/sockaddr-structure.md) estructura que contiene la dirección del socket conectado.  
+ A pointer to a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure that contains the address of the connected socket.  
   
  `nSockAddrLen`  
- La longitud de la dirección en `lpSockAddr` en bytes.  
+ The length of the address in `lpSockAddr` in bytes.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente; de lo contrario, 0 y un código de error específico se pueden recuperar mediante una llamada a [GetLastError](#getlasterror). Si indica un código de error **WSAEWOULDBLOCK**y la aplicación utiliza las devoluciones de llamada reemplazables, su aplicación recibirá una `OnConnect` mensaje una vez completada la operación de conexión. Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). If this indicates an error code of **WSAEWOULDBLOCK**, and your application is using the overridable callbacks, your application will receive an `OnConnect` message when the connect operation is complete. The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEADDRINUSE** la dirección especificada ya está en uso.  
+- **WSAEADDRINUSE** The specified address is already in use.  
   
-- **WSAEINPROGRESS** es una llamada de bloqueo de Windows Sockets en curso.  
+- **WSAEINPROGRESS** A blocking Windows Sockets call is in progress.  
   
-- **WSAEADDRNOTAVAIL** la dirección especificada no está disponible en el equipo local.  
+- **WSAEADDRNOTAVAIL** The specified address is not available from the local machine.  
   
-- **WSAEAFNOSUPPORT** direcciones de la familia especificada no se puede usar con este socket.  
+- **WSAEAFNOSUPPORT** Addresses in the specified family cannot be used with this socket.  
   
-- **WSAECONNREFUSED** se rechazó el intento de conexión.  
+- **WSAECONNREFUSED** The attempt to connect was rejected.  
   
-- **WSAEDESTADDRREQ** se requiere una dirección de destino.  
+- **WSAEDESTADDRREQ** A destination address is required.  
   
-- **WSAEFAULT** el `nSockAddrLen` argumento es incorrecto.  
+- **WSAEFAULT** The `nSockAddrLen` argument is incorrect.  
   
-- **WSAEINVAL** dirección de host no válido.  
+- **WSAEINVAL** Invalid host address.  
   
-- **WSAEISCONN** el socket ya está conectado.  
+- **WSAEISCONN** The socket is already connected.  
   
-- **WSAEMFILE** no hay más descriptores de archivo están disponibles.  
+- **WSAEMFILE** No more file descriptors are available.  
   
-- **WSAENETUNREACH** no se puede alcanzar la red desde este host en este momento.  
+- **WSAENETUNREACH** The network cannot be reached from this host at this time.  
   
-- `WSAENOBUFS`No hay espacio de búfer está disponible. No se puede conectar el socket.  
+- `WSAENOBUFS` No buffer space is available. The socket cannot be connected.  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAETIMEDOUT** intenta conectarse el tiempo de espera sin establecer una conexión.  
+- **WSAETIMEDOUT** Attempt to connect timed out without establishing a connection.  
   
-- **WSAEWOULDBLOCK** el socket se marca como no sea de bloqueo y la conexión no pueden completarse inmediatamente.  
+- **WSAEWOULDBLOCK** The socket is marked as nonblocking and the connection cannot be completed immediately.  
   
-### <a name="remarks"></a>Comentarios  
- Si el socket no está enlazado, el sistema asigna los valores únicos para la asociación local y el socket se marca como dependiente. Observe que si el campo de dirección de la estructura de nombre es todo ceros **conectar** devolverá cero. Para obtener información de error extendida, llame a la `GetLastError` función miembro.  
+### <a name="remarks"></a>Remarks  
+ If the socket is unbound, unique values are assigned to the local association by the system, and the socket is marked as bound. Note that if the address field of the name structure is all zeroes, **Connect** will return zero. To get extended error information, call the `GetLastError` member function.  
   
- Para los sockets de secuencia (tipo **SOCK_STREAM**), se inicia una conexión activa al host externo. Cuando la llamada de socket se completa correctamente, el socket está listo para enviar y recibir datos.  
+ For stream sockets (type **SOCK_STREAM**), an active connection is initiated to the foreign host. When the socket call completes successfully, the socket is ready to send/receive data.  
   
- Para un socket de datagrama (tipo **SOCK_DGRAM**), se establece un destino predeterminado, que se usará en posteriores **enviar** y **recepción** llamadas.  
+ For a datagram socket (type **SOCK_DGRAM**), a default destination is set, which will be used on subsequent **Send** and **Receive** calls.  
   
-##  <a name="create"></a>CAsyncSocket::Create  
- Llame a la **crear** función miembro después de crear un objeto de socket para crear el socket de Windows y adjuntarlo.  
+##  <a name="create"></a>  CAsyncSocket::Create  
+ Call the **Create** member function after constructing a socket object to create the Windows socket and attach it.  
   
 ```  
 BOOL Create(
@@ -445,108 +473,108 @@ BOOL Create(
     LPCTSTR lpszSocketAddress = NULL);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nSocketPort`  
- Un puerto conocido para usarse con el socket, o 0 si desea que Windows Sockets seleccionar un puerto.  
+ A well-known port to be used with the socket, or 0 if you want Windows Sockets to select a port.  
   
  `nSocketType`  
- **SOCK_STREAM** o **SOCK_DGRAM**.  
+ **SOCK_STREAM** or **SOCK_DGRAM**.  
   
  `lEvent`  
- Máscara de bits que especifica una combinación de eventos de red en el que está interesada la aplicación.  
+ A bitmask which specifies a combination of network events in which the application is interested.  
   
-- **FD_READ** desea recibir una notificación de preparación para la lectura.  
+- **FD_READ** Want to receive notification of readiness for reading.  
   
-- **FD_WRITE** desea recibir una notificación de preparación para la escritura.  
+- **FD_WRITE** Want to receive notification of readiness for writing.  
   
-- **FD_OOB** desea recibir una notificación de la llegada de datos fuera de banda.  
+- **FD_OOB** Want to receive notification of the arrival of out-of-band data.  
   
-- **FD_ACCEPT** desea recibir una notificación de las conexiones entrantes.  
+- **FD_ACCEPT** Want to receive notification of incoming connections.  
   
-- **FD_CONNECT** desea recibir una notificación de conexión completa.  
+- **FD_CONNECT** Want to receive notification of completed connection.  
   
-- **FD_CLOSE** desea recibir una notificación de cierre del socket.  
+- **FD_CLOSE** Want to receive notification of socket closure.  
   
  *lpszSockAddress*  
- Un puntero a una cadena que contiene la dirección de red del socket conectado, un número de puntos, como "128.56.22.8". Pasar el **NULL** la cadena de este parámetro indica la **CAsyncSocket** instancia debe escuchar la actividad del cliente en todas las interfaces de red.  
+ A pointer to a string containing the network address of the connected socket, a dotted number such as "128.56.22.8".Passing the **NULL** string for this parameter indicates the **CAsyncSocket** instance should listen for client activity on all network interfaces.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente; de lo contrario, 0 y un código de error específico se pueden recuperar mediante una llamada a [GetLastError](#getlasterror). Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEAFNOSUPPORT** no se admite la familia de direcciones especificado.  
+- **WSAEAFNOSUPPORT** The specified address family is not supported.  
   
-- **WSAEINPROGRESS** está en curso una operación bloqueo de Windows Sockets.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAEMFILE** no hay más descriptores de archivo están disponibles.  
+- **WSAEMFILE** No more file descriptors are available.  
   
-- `WSAENOBUFS`No hay espacio de búfer está disponible. No se puede crear el socket.  
+- `WSAENOBUFS` No buffer space is available. The socket cannot be created.  
   
-- **WSAEPROTONOSUPPORT** no se admite el puerto especificado.  
+- **WSAEPROTONOSUPPORT** The specified port is not supported.  
   
-- **WSAEPROTOTYPE** el puerto especificado es del tipo incorrecto para este socket.  
+- **WSAEPROTOTYPE** The specified port is the wrong type for this socket.  
   
-- **WSAESOCKTNOSUPPORT** no se admite el tipo de socket especificado en esta familia de direcciones.  
+- **WSAESOCKTNOSUPPORT** The specified socket type is not supported in this address family.  
   
-### <a name="remarks"></a>Comentarios  
- **Crear** llamadas [Socket](#socket) y si se realiza correctamente, llama [enlace](#bind) para enlazar el socket a la dirección especificada. Se admiten los siguientes tipos de socket:  
+### <a name="remarks"></a>Remarks  
+ **Create** calls [Socket](#socket) and if successful, it calls [Bind](#bind) to bind the socket to the specified address. The following socket types are supported:  
   
-- **SOCK_STREAM** proporciona secuenciado, secuencias de bytes confiable, dúplex completo basado en conexión. Utiliza el protocolo de Control de transmisión (TCP) para la familia de direcciones de Internet.  
+- **SOCK_STREAM** Provides sequenced, reliable, full-duplex, connection-based byte streams. Uses the Transmission Control Protocol (TCP) for the Internet address family.  
   
-- **SOCK_DGRAM** admite datagramas, que son paquetes sin conexión no confiables de longitud máxima fija (normalmente corta). Utiliza el protocolo de datagramas de usuario (UDP) para la familia de direcciones de Internet.  
+- **SOCK_DGRAM** Supports datagrams, which are connectionless, unreliable packets of a fixed (typically small) maximum length. Uses the User Datagram Protocol (UDP) for the Internet address family.  
   
     > [!NOTE]
-    >  El **Accept** función miembro toma una referencia a un nuevo `CSocket` objeto como su parámetro. Debe construir este objeto antes de llamar a **Accept**. Tenga en cuenta que si este objeto socket se sale del ámbito, se cerrará la conexión. No llame a **crear** para este nuevo objeto de socket.  
+    >  The **Accept** member function takes a reference to a new, empty `CSocket` object as its parameter. You must construct this object before you call **Accept**. Keep in mind that if this socket object goes out of scope, the connection closes. Do not call **Create** for this new socket object.  
   
 > [!IMPORTANT]
-> **Crear** es **no** segura para subprocesos.  Si se llama en un entorno multiproceso que podía invocarse simultáneamente en subprocesos diferentes, asegúrese de proteger cada llamada con una exclusión mutua u otro bloqueo de sincronización.  
+> **Create** is **not** thread-safe.  If you are calling it in a multi-threaded environment where it could be invoked simultaneously by different threads, be sure to protect each call with a mutex or other synchronization lock.  
   
- Para obtener más información acerca de los sockets de secuencia y datagrama, consulte los artículos [Windows Sockets: fondo](../../mfc/windows-sockets-background.md) y [Windows Sockets: puertos y direcciones de Socket](../../mfc/windows-sockets-ports-and-socket-addresses.md) y [API de Windows Sockets 2](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ For more information about stream and datagram sockets, see the articles [Windows Sockets: Background](../../mfc/windows-sockets-background.md) and [Windows Sockets: Ports and Socket Addresses](../../mfc/windows-sockets-ports-and-socket-addresses.md) and [Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
-##  <a name="detach"></a>CAsyncSocket::Detach  
- Llame a esta función miembro para separar el **SOCKET** controlar en el `m_hSocket` miembro de datos de la `CAsyncSocket` objeto y establecer `m_hSocket` a **NULL**.  
+##  <a name="detach"></a>  CAsyncSocket::Detach  
+ Call this member function to detach the **SOCKET** handle in the `m_hSocket` data member from the `CAsyncSocket` object and set `m_hSocket` to **NULL**.  
   
 ```  
 SOCKET Detach();
 ```  
   
-##  <a name="fromhandle"></a>CAsyncSocket::FromHandle  
- Devuelve un puntero a un `CAsyncSocket` objeto.  
+##  <a name="fromhandle"></a>  CAsyncSocket::FromHandle  
+ Returns a pointer to a `CAsyncSocket` object.  
   
 ```  
 static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `hSocket`  
- Contiene un identificador de un socket.  
+ Contains a handle to a socket.  
   
-### <a name="return-value"></a>Valor devuelto  
- Un puntero a un `CAsyncSocket` objeto, o **NULL** si no hay ningún `CAsyncSocket` objeto asociado al `hSocket`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to an `CAsyncSocket` object, or **NULL** if there is no `CAsyncSocket` object attached to `hSocket`.  
   
-### <a name="remarks"></a>Comentarios  
- Cuando se da una **SOCKET** controlar si una `CAsyncSocket` objeto no está asociado al identificador, la función miembro devuelve **NULL**.  
+### <a name="remarks"></a>Remarks  
+ When given a **SOCKET** handle, if a `CAsyncSocket` object is not attached to the handle, the member function returns **NULL**.  
   
-##  <a name="getlasterror"></a>CAsyncSocket::GetLastError  
- Llame a esta función miembro para obtener el estado de error de la última operación con error.  
+##  <a name="getlasterror"></a>  CAsyncSocket::GetLastError  
+ Call this member function to get the error status for the last operation that failed.  
   
 ```  
 static int PASCAL GetLastError();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- El valor devuelto indica el código de error para la rutina de API de Windows Sockets último realizada por este subproceso.  
+### <a name="return-value"></a>Return Value  
+ The return value indicates the error code for the last Windows Sockets API routine performed by this thread.  
   
-### <a name="remarks"></a>Comentarios  
- Cuando una función miembro determinada indica que se produjo un error, `GetLastError` se debe llamar para recuperar el código de error adecuado. Consulte las descripciones de la función miembro individual para obtener una lista de códigos de error aplicable.  
+### <a name="remarks"></a>Remarks  
+ When a particular member function indicates that an error has occurred, `GetLastError` should be called to retrieve the appropriate error code. See the individual member function descriptions for a list of applicable error codes.  
   
- Para obtener más información acerca de los códigos de error, consulte [API de Windows Sockets 2](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ For more information about the error codes, see [Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
-##  <a name="getpeername"></a>CAsyncSocket::GetPeerName  
- Llame a esta función miembro para obtener la dirección del socket del mismo nivel al que se conecta este socket.  
+##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName  
+ Call this member function to get the address of the peer socket to which this socket is connected.  
   
 ```  
 BOOL GetPeerName(
@@ -559,39 +587,39 @@ BOOL GetPeerName(
     int* lpSockAddrLen);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `rPeerAddress`  
- Hacer referencia a un `CString` objeto que recibe la dirección IP numérica con puntos.  
+ Reference to a `CString` object that receives a dotted number IP address.  
   
  `rPeerPort`  
- Hacer referencia a un **UINT** que almacena un puerto.  
+ Reference to a **UINT** that stores a port.  
   
  `lpSockAddr`  
- Un puntero a la [SOCKADDR](../../mfc/reference/sockaddr-structure.md) estructura que recibe el nombre del socket del mismo nivel.  
+ A pointer to the [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure that receives the name of the peer socket.  
   
  `lpSockAddrLen`  
- Un puntero a la longitud de la dirección en `lpSockAddr` en bytes. En la devolución, el `lpSockAddrLen` argumento contiene el tamaño real de `lpSockAddr` devuelto en bytes.  
+ A pointer to the length of the address in `lpSockAddr` in bytes. On return, the `lpSockAddrLen` argument contains the actual size of `lpSockAddr` returned in bytes.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente; de lo contrario, 0 y un código de error específico se pueden recuperar mediante una llamada a [GetLastError](#getlasterror). Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** el `lpSockAddrLen` argumento no es suficientemente grande.  
+- **WSAEFAULT** The `lpSockAddrLen` argument is not large enough.  
   
-- **WSAEINPROGRESS** es una llamada de bloqueo de Windows Sockets en curso.  
+- **WSAEINPROGRESS** A blocking Windows Sockets call is in progress.  
   
-- **WSAENOTCONN** el socket no está conectado.  
+- **WSAENOTCONN** The socket is not connected.  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-### <a name="remarks"></a>Comentarios  
- Para controlar las direcciones IPv6, utilice [CAsyncSocket::GetPeerNameEx](#getpeernameex).  
+### <a name="remarks"></a>Remarks  
+ To handle IPv6 addresses, use [CAsyncSocket::GetPeerNameEx](#getpeernameex).  
   
-##  <a name="getpeernameex"></a>CAsyncSocket::GetPeerNameEx  
- Llame a esta función miembro para obtener la dirección del socket del mismo nivel al que este socket está conectado (controla direcciones IPv6).  
+##  <a name="getpeernameex"></a>  CAsyncSocket::GetPeerNameEx  
+ Call this member function to get the address of the peer socket to which this socket is connected (handles IPv6 addresses).  
   
 ```  
 BOOL GetPeerNameEx(
@@ -599,33 +627,33 @@ BOOL GetPeerNameEx(
     UINT& rPeerPort);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `rPeerAddress`  
- Hacer referencia a un `CString` objeto que recibe la dirección IP numérica con puntos.  
+ Reference to a `CString` object that receives a dotted number IP address.  
   
  `rPeerPort`  
- Hacer referencia a un **UINT** que almacena un puerto.  
+ Reference to a **UINT** that stores a port.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente; de lo contrario, 0 y un código de error específico se pueden recuperar mediante una llamada a [GetLastError](#getlasterror). Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** el `lpSockAddrLen` argumento no es suficientemente grande.  
+- **WSAEFAULT** The `lpSockAddrLen` argument is not large enough.  
   
-- **WSAEINPROGRESS** es una llamada de bloqueo de Windows Sockets en curso.  
+- **WSAEINPROGRESS** A blocking Windows Sockets call is in progress.  
   
-- **WSAENOTCONN** el socket no está conectado.  
+- **WSAENOTCONN** The socket is not connected.  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función es el mismo que [CAsyncSocket::GetPeerName](#getpeername) salvo que controla IPv6 direcciones protocolos así como antiguos.  
+### <a name="remarks"></a>Remarks  
+ This function is the same as [CAsyncSocket::GetPeerName](#getpeername) except that it handles IPv6 addresses as well as older protocols.  
   
-##  <a name="getsockname"></a>CAsyncSocket::GetSockName  
- Llame a esta función miembro para obtener el nombre local de un socket.  
+##  <a name="getsockname"></a>  CAsyncSocket::GetSockName  
+ Call this member function to get the local name for a socket.  
   
 ```  
 BOOL GetSockName(
@@ -638,41 +666,41 @@ BOOL GetSockName(
     int* lpSockAddrLen);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `rSocketAddress`  
- Hacer referencia a un `CString` objeto que recibe la dirección IP numérica con puntos.  
+ Reference to a `CString` object that receives a dotted number IP address.  
   
  `rSocketPort`  
- Hacer referencia a un **UINT** que almacena un puerto.  
+ Reference to a **UINT** that stores a port.  
   
  `lpSockAddr`  
- Un puntero a un [SOCKADDR](../../mfc/reference/sockaddr-structure.md) estructura que recibe la dirección del socket.  
+ A pointer to a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure that receives the address of the socket.  
   
  `lpSockAddrLen`  
- Un puntero a la longitud de la dirección en `lpSockAddr` en bytes.  
+ A pointer to the length of the address in `lpSockAddr` in bytes.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente; de lo contrario, 0 y un código de error específico se pueden recuperar mediante una llamada a [GetLastError](#getlasterror). Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** el `lpSockAddrLen` argumento no es suficientemente grande.  
+- **WSAEFAULT** The `lpSockAddrLen` argument is not large enough.  
   
-- **WSAEINPROGRESS** está en curso una operación bloqueo de Windows Sockets.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEINVAL** el socket no se ha enlazado a una dirección con **enlace**.  
+- **WSAEINVAL** The socket has not been bound to an address with **Bind**.  
   
-### <a name="remarks"></a>Comentarios  
- Esta llamada es especialmente útil cuando un **conectar** se ha realizado la llamada sin realizar una **enlace** primero; esta llamada proporciona el único medio por el que puede determinar la asociación local que se ha establecido por el sistema.  
+### <a name="remarks"></a>Remarks  
+ This call is especially useful when a **Connect** call has been made without doing a **Bind** first; this call provides the only means by which you can determine the local association which has been set by the system.  
   
- Para controlar las direcciones IPv6, utilice [CAsyncSocket::GetSockNameEx](#getsocknameex)  
+ To handle IPv6 addresses, use [CAsyncSocket::GetSockNameEx](#getsocknameex)  
   
-##  <a name="getsocknameex"></a>CAsyncSocket::GetSockNameEx  
- Llame a esta función miembro para obtener el nombre local de un socket (controla direcciones IPv6).  
+##  <a name="getsocknameex"></a>  CAsyncSocket::GetSockNameEx  
+ Call this member function to get the local name for a socket (handles IPv6 addresses).  
   
 ```  
 BOOL GetSockNameEx(
@@ -680,35 +708,35 @@ BOOL GetSockNameEx(
     UINT& rSocketPort);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `rSocketAddress`  
- Hacer referencia a un `CString` objeto que recibe la dirección IP numérica con puntos.  
+ Reference to a `CString` object that receives a dotted number IP address.  
   
  `rSocketPort`  
- Hacer referencia a un **UINT** que almacena un puerto.  
+ Reference to a **UINT** that stores a port.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente; de lo contrario, 0 y un código de error específico se pueden recuperar mediante una llamada a [GetLastError](#getlasterror). Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** el `lpSockAddrLen` argumento no es suficientemente grande.  
+- **WSAEFAULT** The `lpSockAddrLen` argument is not large enough.  
   
-- **WSAEINPROGRESS** está en curso una operación bloqueo de Windows Sockets.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEINVAL** el socket no se ha enlazado a una dirección con **enlace**.  
+- **WSAEINVAL** The socket has not been bound to an address with **Bind**.  
   
-### <a name="remarks"></a>Comentarios  
- Esta llamada es el mismo que [CAsyncSocket::GetSockName](#getsockname) salvo que controla IPv6 direcciones protocolos así como antiguos.  
+### <a name="remarks"></a>Remarks  
+ This call is the same as [CAsyncSocket::GetSockName](#getsockname) except that it handles IPv6 addresses as well as older protocols.  
   
- Esta llamada es especialmente útil cuando un **conectar** se ha realizado la llamada sin realizar una **enlace** primero; esta llamada proporciona el único medio por el que puede determinar la asociación local que se ha establecido por el sistema.  
+ This call is especially useful when a **Connect** call has been made without doing a **Bind** first; this call provides the only means by which you can determine the local association which has been set by the system.  
   
-##  <a name="getsockopt"></a>CAsyncSocket::GetSockOpt  
- Llame a esta función miembro para recuperar una opción de socket.  
+##  <a name="getsockopt"></a>  CAsyncSocket::GetSockOpt  
+ Call this member function to retrieve a socket option.  
   
 ```  
 BOOL GetSockOpt(
@@ -718,71 +746,71 @@ BOOL GetSockOpt(
     int nLevel = SOL_SOCKET);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nOptionName`  
- La opción de socket para los que el valor es va a recuperar.  
+ The socket option for which the value is to be retrieved.  
   
  `lpOptionValue`  
- Un puntero al búfer en el que el valor de la opción solicitada es va a devolver. Se devuelve el valor asociado a la opción seleccionada en el búfer de `lpOptionValue`. El entero que apunta `lpOptionLen` originalmente debe contener el tamaño de este búfer en bytes; y la devolución, se establecerá en el tamaño del valor devuelto. Para **SO_LINGER**, será el tamaño de una `LINGER` estructura; para todas las demás opciones será el tamaño de una **BOOL** o `int`, dependiendo de la opción. Consulte la lista de opciones y sus tamaños en la sección Comentarios.  
+ A pointer to the buffer in which the value for the requested option is to be returned. The value associated with the selected option is returned in the buffer `lpOptionValue`. The integer pointed to by `lpOptionLen` should originally contain the size of this buffer in bytes; and on return, it will be set to the size of the value returned. For **SO_LINGER**, this will be the size of a `LINGER` structure; for all other options it will be the size of a **BOOL** or an `int`, depending on the option. See the list of options and their sizes in the Remarks section.  
   
  `lpOptionLen`  
- Un puntero al tamaño de la `lpOptionValue` búfer en bytes.  
+ A pointer to the size of the `lpOptionValue` buffer in bytes.  
   
  `nLevel`  
- El nivel en el que se define la opción; los niveles admitidos sólo son **SOL_SOCKET** y **IPPROTO_TCP**.  
+ The level at which the option is defined; the only supported levels are **SOL_SOCKET** and **IPPROTO_TCP**.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente; de lo contrario, 0 y un código de error específico se pueden recuperar mediante una llamada a [GetLastError](#getlasterror). Si nunca se ha establecido una opción con `SetSockOpt`, a continuación, `GetSockOpt` devuelve el valor predeterminado para la opción. Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). If an option was never set with `SetSockOpt`, then `GetSockOpt` returns the default value for the option. The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** el `lpOptionLen` argumento no era válido.  
+- **WSAEFAULT** The `lpOptionLen` argument was invalid.  
   
-- **WSAEINPROGRESS** está en curso una operación bloqueo de Windows Sockets.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAENOPROTOOPT** la opción es desconocido o no compatible. En particular, **SO_BROADCAST** no se admite en sockets de tipo **SOCK_STREAM**, mientras que **SO_ACCEPTCONN**, **SO_DONTLINGER**, **SO_KEEPALIVE**, **SO_LINGER**, y **SO_OOBINLINE** no se admite en sockets de tipo **SOCK_DGRAM**.  
+- **WSAENOPROTOOPT** The option is unknown or unsupported. In particular, **SO_BROADCAST** is not supported on sockets of type **SOCK_STREAM**, while **SO_ACCEPTCONN**, **SO_DONTLINGER**, **SO_KEEPALIVE**, **SO_LINGER**, and **SO_OOBINLINE** are not supported on sockets of type **SOCK_DGRAM**.  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-### <a name="remarks"></a>Comentarios  
- `GetSockOpt`Recupera el valor actual de una opción de socket asociado a un socket de cualquier tipo, en cualquier estado y almacena el resultado en `lpOptionValue`. Opciones afectan a las operaciones de socket, como el enrutamiento de paquetes, la transferencia de datos fuera de banda y así sucesivamente.  
+### <a name="remarks"></a>Remarks  
+ `GetSockOpt` retrieves the current value for a socket option associated with a socket of any type, in any state, and stores the result in `lpOptionValue`. Options affect socket operations, such as the routing of packets, out-of-band data transfer, and so on.  
   
- Se admiten las siguientes opciones para `GetSockOpt`. El tipo identifica el tipo de datos dirigidos por `lpOptionValue`. El **TCP_NODELAY** opción utiliza nivel **IPPROTO_TCP**; todas las demás opciones utilizan nivel **SOL_SOCKET**.  
+ The following options are supported for `GetSockOpt`. The Type identifies the type of data addressed by `lpOptionValue`. The **TCP_NODELAY** option uses level **IPPROTO_TCP**; all other options use level **SOL_SOCKET**.  
   
-|Valor|Tipo|Significado|  
+|Value|Type|Meaning|  
 |-----------|----------|-------------|  
-|**SO_ACCEPTCONN**|**BOOL**|Socket está escuchando.|  
-|**SO_BROADCAST**|**BOOL**|Socket está configurado para la transmisión de mensajes de difusión.|  
-|**SO_DEBUG**|**BOOL**|Está habilitada la depuración.|  
-|**SO_DONTLINGER**|**BOOL**|Si es true, el **SO_LINGER** opción está deshabilitada.|  
-|**SO_DONTROUTE**|**BOOL**|El enrutamiento está deshabilitado.|  
-|**SO_ERROR**|`int`|Recuperar el estado de error y borrar.|  
-|**SO_KEEPALIVE**|**BOOL**|Se están enviando abiertas.|  
-|**SO_LINGER**|**struct LINGER**|Devuelve las opciones actuales de permanencia.|  
-|**SO_OOBINLINE**|**BOOL**|Está recibiendo datos fuera de banda en el flujo normal de datos.|  
-|**SO_RCVBUF**|`int`|Recibe el tamaño del búfer.|  
-|**SO_REUSEADDR**|**BOOL**|El socket se puede enlazar a una dirección que ya está en uso.|  
-|**SO_SNDBUF**|`int`|Envía el tamaño del búfer.|  
-|**SO_TYPE**|`int`|El tipo de socket (por ejemplo, **SOCK_STREAM**).|  
-|**TCP_NODELAY**|**BOOL**|Deshabilita el algoritmo de Nagle para la fusión de envíos.|  
+|**SO_ACCEPTCONN**|**BOOL**|Socket is listening.|  
+|**SO_BROADCAST**|**BOOL**|Socket is configured for the transmission of broadcast messages.|  
+|**SO_DEBUG**|**BOOL**|Debugging is enabled.|  
+|**SO_DONTLINGER**|**BOOL**|If true, the **SO_LINGER** option is disabled.|  
+|**SO_DONTROUTE**|**BOOL**|Routing is disabled.|  
+|**SO_ERROR**|`int`|Retrieve error status and clear.|  
+|**SO_KEEPALIVE**|**BOOL**|Keep-alives are being sent.|  
+|**SO_LINGER**|**struct LINGER**|Returns the current linger options.|  
+|**SO_OOBINLINE**|**BOOL**|Out-of-band data is being received in the normal data stream.|  
+|**SO_RCVBUF**|`int`|Buffer size for receives.|  
+|**SO_REUSEADDR**|**BOOL**|The socket can be bound to an address which is already in use.|  
+|**SO_SNDBUF**|`int`|Buffer size for sends.|  
+|**SO_TYPE**|`int`|The type of the socket (for example, **SOCK_STREAM**).|  
+|**TCP_NODELAY**|**BOOL**|Disables the Nagle algorithm for send coalescing.|  
   
- Opciones de Berkeley Software Distribution (BSD) no se admite para `GetSockOpt` son:  
+ Berkeley Software Distribution (BSD) options not supported for `GetSockOpt` are:  
   
-|Valor|Tipo|Significado|  
+|Value|Type|Meaning|  
 |-----------|----------|-------------|  
-|**SO_RCVLOWAT**|`int`|Recibir marca de agua suave.|  
-|**SO_RCVTIMEO**|`int`|Tiempo de espera de recepción.|  
-|**SO_SNDLOWAT**|`int`|Enviar la marca de agua suave.|  
-|**SO_SNDTIMEO**|`int`|Tiempo de espera de envío.|  
-|**IP_OPTIONS**||Obtener opciones de encabezado IP.|  
-|**TCP_MAXSEG**|`int`|Obtener el tamaño máximo de segmento TCP.|  
+|**SO_RCVLOWAT**|`int`|Receive low water mark.|  
+|**SO_RCVTIMEO**|`int`|Receive timeout.|  
+|**SO_SNDLOWAT**|`int`|Send low water mark.|  
+|**SO_SNDTIMEO**|`int`|Send timeout.|  
+|**IP_OPTIONS**||Get options in IP header.|  
+|**TCP_MAXSEG**|`int`|Get TCP maximum segment size.|  
   
- Llamar a `GetSockOpt` con una opción no admitida se producirá en el código de error **WSAENOPROTOOPT** que se devuelven desde `GetLastError`.  
+ Calling `GetSockOpt` with an unsupported option will result in an error code of **WSAENOPROTOOPT** being returned from `GetLastError`.  
   
-##  <a name="ioctl"></a>CAsyncSocket::IOCtl  
- Llame a esta función miembro para controlar el modo de un socket.  
+##  <a name="ioctl"></a>  CAsyncSocket::IOCtl  
+ Call this member function to control the mode of a socket.  
   
 ```  
 BOOL IOCtl(
@@ -790,267 +818,267 @@ BOOL IOCtl(
     DWORD* lpArgument);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lCommand`  
- El comando para llevar a cabo en el socket.  
+ The command to perform on the socket.  
   
  `lpArgument`  
- Un puntero a un parámetro para `lCommand`.  
+ A pointer to a parameter for `lCommand`.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente; de lo contrario, 0 y un código de error específico se pueden recuperar mediante una llamada a [GetLastError](#getlasterror). Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEINVAL** `lCommand` no es un comando válido, o `lpArgument` no es un parámetro aceptable para `lCommand`, o el comando no es aplicable al tipo de socket proporcionado.  
+- **WSAEINVAL** `lCommand` is not a valid command, or `lpArgument` is not an acceptable parameter for `lCommand`, or the command is not applicable to the type of socket supplied.  
   
-- **WSAEINPROGRESS** está en curso una operación bloqueo de Windows Sockets.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-### <a name="remarks"></a>Comentarios  
- Esta rutina se puede usar en ningún socket en cualquier estado. Se utiliza para obtener o recuperar parámetros operativos asociadas al socket, independiente del subsistema de comunicaciones y protocolo. Se admiten los siguientes comandos:  
+### <a name="remarks"></a>Remarks  
+ This routine can be used on any socket in any state. It is used to get or retrieve operating parameters associated with the socket, independent of the protocol and communications subsystem. The following commands are supported:  
   
-- **FIONBIO** habilitar o deshabilitar el modo de no bloqueo en el socket. El `lpArgument` parámetro señala a una `DWORD`, que es distinto de cero si se puede habilitar modo de no bloqueo y cero si es que va a deshabilitar. Si `AsyncSelect` se ha emitido en un socket, a continuación, se intenta utilizar **IOCtl** volver a establecer el socket en modo de bloqueo se producirá un error con **WSAEINVAL**. Vuelva a establecer el socket en modo de bloqueo y evitar el **WSAEINVAL** error, primero debe deshabilitar una aplicación `AsyncSelect` llamando a `AsyncSelect` con el `lEvent` parámetro igual a 0, a continuación, llame a **IOCtl**.  
+- **FIONBIO** Enable or disable nonblocking mode on the socket. The `lpArgument` parameter points at a `DWORD`, which is nonzero if nonblocking mode is to be enabled and zero if it is to be disabled. If `AsyncSelect` has been issued on a socket, then any attempt to use **IOCtl** to set the socket back to blocking mode will fail with **WSAEINVAL**. To set the socket back to blocking mode and prevent the **WSAEINVAL** error, an application must first disable `AsyncSelect` by calling `AsyncSelect` with the `lEvent` parameter equal to 0, then call **IOCtl**.  
   
-- **FIONREAD** determinar el número máximo de bytes que se pueden leer con una **recepción** llamar desde este socket. El `lpArgument` parámetro señala a una `DWORD` en el que **IOCtl** almacena el resultado. Si este socket es de tipo **SOCK_STREAM**, **FIONREAD** devuelve la cantidad total de datos que se pueden leer en un único **recepción**; esto es normalmente el mismo que la cantidad total de datos en cola en el socket. Si este socket es de tipo **SOCK_DGRAM**, **FIONREAD** devuelve el tamaño del primer datagrama en cola en el socket.  
+- **FIONREAD** Determine the maximum number of bytes that can be read with one **Receive** call from this socket. The `lpArgument` parameter points at a `DWORD` in which **IOCtl** stores the result. If this socket is of type **SOCK_STREAM**, **FIONREAD** returns the total amount of data which can be read in a single **Receive**; this is normally the same as the total amount of data queued on the socket. If this socket is of type **SOCK_DGRAM**, **FIONREAD** returns the size of the first datagram queued on the socket.  
   
-- **SIOCATMARK** determinar si se han leído todos los datos de fuera de banda. Esto se aplica sólo a un socket de tipo **SOCK_STREAM** que se ha configurado para la recepción en línea de datos fuera de banda ( **SO_OOBINLINE**). Si no hay datos fuera de banda está esperando a leer, la operación devuelve distinto de cero. De lo contrario devuelve 0 y el siguiente **recepción** o `ReceiveFrom` realizadas en el socket recuperará algunos o todos los datos anteriores a la "marca"; la aplicación debe utilizar el **SIOCATMARK** operación para determinar si los datos permanecen. Si hay datos normales antes de los datos (fuera de banda) "urgentes", se recibirán en orden. (Tenga en cuenta que un **recepción** o `ReceiveFrom` nunca se mezcle datos fuera de banda y normales en la misma llamada.) El `lpArgument` parámetro señala a una `DWORD` en el que **IOCtl** almacena el resultado.  
+- **SIOCATMARK** Determine whether all out-of-band data has been read. This applies only to a socket of type **SOCK_STREAM** which has been configured for in-line reception of any out-of-band data ( **SO_OOBINLINE**). If no out-of-band data is waiting to be read, the operation returns nonzero. Otherwise it returns 0, and the next **Receive** or `ReceiveFrom` performed on the socket will retrieve some or all of the data preceding the "mark"; the application should use the **SIOCATMARK** operation to determine whether any data remains. If there is any normal data preceding the "urgent" (out-of-band) data, it will be received in order. (Note that a **Receive** or `ReceiveFrom` will never mix out-of-band and normal data in the same call.) The `lpArgument` parameter points at a `DWORD` in which **IOCtl** stores the result.  
   
- Esta función es un subconjunto de **ioctl()** como utiliza en sockets Berkeley. En concreto, no hay ningún comando que es equivalente a **FIOASYNC**, mientras que **SIOCATMARK** es el comando solo de nivel de socket que se admite.  
+ This function is a subset of **ioctl()** as used in Berkeley sockets. In particular, there is no command which is equivalent to **FIOASYNC**, while **SIOCATMARK** is the only socket-level command which is supported.  
   
-##  <a name="listen"></a>CAsyncSocket:: Listen  
- Llame a esta función miembro para escuchar las solicitudes de conexión entrante.  
+##  <a name="listen"></a>  CAsyncSocket::Listen  
+ Call this member function to listen for incoming connection requests.  
   
 ```  
 BOOL Listen(int nConnectionBacklog = 5);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  *nConnectionBacklog*  
- La longitud máxima que puede alcanzar la cola de conexiones pendientes. Intervalo válido es de 1 a 5.  
+ The maximum length to which the queue of pending connections can grow. Valid range is from 1 to 5.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente; de lo contrario, 0 y un código de error específico se pueden recuperar mediante una llamada a [GetLastError](#getlasterror). Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEADDRINUSE** se ha realizado un intento para escuchar en una dirección en uso.  
+- **WSAEADDRINUSE** An attempt has been made to listen on an address in use.  
   
-- **WSAEINPROGRESS** está en curso una operación bloqueo de Windows Sockets.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAEINVAL** el socket no se ha enlazado con **enlace** o ya está conectado.  
+- **WSAEINVAL** The socket has not been bound with **Bind** or is already connected.  
   
-- **WSAEISCONN** el socket ya está conectado.  
+- **WSAEISCONN** The socket is already connected.  
   
-- **WSAEMFILE** no hay más descriptores de archivo están disponibles.  
+- **WSAEMFILE** No more file descriptors are available.  
   
-- `WSAENOBUFS`No hay espacio de búfer está disponible.  
+- `WSAENOBUFS` No buffer space is available.  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEOPNOTSUPP** el socket que se hace referencia no es del tipo que admite la `Listen` operación.  
+- **WSAEOPNOTSUPP** The referenced socket is not of a type that supports the `Listen` operation.  
   
-### <a name="remarks"></a>Comentarios  
- Para aceptar conexiones, el socket se crea por primera vez con **crear**, se especifica un trabajo pendiente para las conexiones entrantes con `Listen`, y, a continuación, se aceptan las conexiones con **Accept**. `Listen`se aplica sólo a sockets que admiten conexiones, es decir, los de tipo **SOCK_STREAM**. Este socket se coloca en modo "pasivo donde se confirma y en cola pendientes de aceptación, el proceso de las conexiones entrantes".  
+### <a name="remarks"></a>Remarks  
+ To accept connections, the socket is first created with **Create**, a backlog for incoming connections is specified with `Listen`, and then the connections are accepted with **Accept**. `Listen` applies only to sockets that support connections, that is, those of type **SOCK_STREAM**. This socket is put into "passive" mode where incoming connections are acknowledged and queued pending acceptance by the process.  
   
- Esta función se utiliza normalmente a los servidores (o cualquier aplicación que desee aceptar conexiones) que podría tener más de una solicitud de conexión en un momento: si llega una solicitud de conexión con la cola completa, el cliente recibirá un error con una indicación de **WSAECONNREFUSED**.  
+ This function is typically used by servers (or any application that wants to accept connections) that could have more than one connection request at a time: if a connection request arrives with the queue full, the client will receive an error with an indication of **WSAECONNREFUSED**.  
   
- `Listen`intenta seguir funcionando racional cuando no hay disponibles puertos (descriptores). Aceptará conexiones hasta que la cola está vacía. Si los puertos están disponibles, una llamada posterior a `Listen` o **Accept** se renueve la cola a la actual o más reciente "trabajo pendiente," si es posible y reanudar escuchar las conexiones entrantes.  
+ `Listen` attempts to continue to function rationally when there are no available ports (descriptors). It will accept connections until the queue is emptied. If ports become available, a later call to `Listen` or **Accept** will refill the queue to the current or most recent "backlog," if possible, and resume listening for incoming connections.  
   
-##  <a name="m_hsocket"></a>CAsyncSocket::m_hSocket  
- Contiene el **SOCKET** controlar para el socket encapsulado por este `CAsyncSocket` objeto.  
+##  <a name="m_hsocket"></a>  CAsyncSocket::m_hSocket  
+ Contains the **SOCKET** handle for the socket encapsulated by this `CAsyncSocket` object.  
   
 ```  
 SOCKET m_hSocket;  
 ```  
   
-##  <a name="onaccept"></a>CAsyncSocket::OnAccept  
- Llamado por el marco de trabajo para notificar a un socket de escucha puede aceptar solicitudes de conexión pendientes llamando a la [Accept](#accept) función miembro.  
+##  <a name="onaccept"></a>  CAsyncSocket::OnAccept  
+ Called by the framework to notify a listening socket that it can accept pending connection requests by calling the [Accept](#accept) member function.  
   
 ```  
 virtual void OnAccept(int nErrorCode);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nErrorCode`  
- El error más reciente en un socket. Los siguientes códigos de error se aplica a la `OnAccept` función miembro:  
+ The most recent error on a socket. The following error codes applies to the `OnAccept` member function:  
   
-- **0** la función que se ejecutó correctamente.  
+- **0** The function executed successfully.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [Windows Sockets: sockets de notificación](../../mfc/windows-sockets-socket-notifications.md).  
+### <a name="remarks"></a>Remarks  
+ For more information, see [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="onclose"></a>CAsyncSocket::OnClose  
- Llamado por el marco de trabajo para notificar a este socket que se cierra el socket conectado por su proceso.  
+##  <a name="onclose"></a>  CAsyncSocket::OnClose  
+ Called by the framework to notify this socket that the connected socket is closed by its process.  
   
 ```  
 virtual void OnClose(int nErrorCode);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nErrorCode`  
- El error más reciente en un socket. Códigos de error siguientes se aplican a la `OnClose` función miembro:  
+ The most recent error on a socket. The following error codes apply to the `OnClose` member function:  
   
-- **0** la función que se ejecutó correctamente.  
+- **0** The function executed successfully.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAECONNRESET** conexión restablecida por el lado remoto.  
+- **WSAECONNRESET** The connection was reset by the remote side.  
   
-- **WSAECONNABORTED** se anuló la conexión debido al tiempo de espera u otro error.  
+- **WSAECONNABORTED** The connection was aborted due to timeout or other failure.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [Windows Sockets: sockets de notificación](../../mfc/windows-sockets-socket-notifications.md).  
+### <a name="remarks"></a>Remarks  
+ For more information, see [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="onconnect"></a>CAsyncSocket::OnConnect  
- Llamado por el marco de trabajo para notificar al conectar el socket que su intento de conexión se ha completado, ya sea correctamente o en error.  
+##  <a name="onconnect"></a>  CAsyncSocket::OnConnect  
+ Called by the framework to notify this connecting socket that its connection attempt is completed, whether successfully or in error.  
   
 ```  
 virtual void OnConnect(int nErrorCode);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nErrorCode`  
- El error más reciente en un socket. Códigos de error siguientes se aplican a la `OnConnect` función miembro:  
+ The most recent error on a socket. The following error codes apply to the `OnConnect` member function:  
   
-- **0** la función que se ejecutó correctamente.  
+- **0** The function executed successfully.  
   
-- **WSAEADDRINUSE** la dirección especificada ya está en uso.  
+- **WSAEADDRINUSE** The specified address is already in use.  
   
-- **WSAEADDRNOTAVAIL** la dirección especificada no está disponible en el equipo local.  
+- **WSAEADDRNOTAVAIL** The specified address is not available from the local machine.  
   
-- **WSAEAFNOSUPPORT** direcciones de la familia especificada no se puede usar con este socket.  
+- **WSAEAFNOSUPPORT** Addresses in the specified family cannot be used with this socket.  
   
-- **WSAECONNREFUSED** forzosamente se rechazó el intento de conexión.  
+- **WSAECONNREFUSED** The attempt to connect was forcefully rejected.  
   
-- **WSAEDESTADDRREQ** se requiere una dirección de destino.  
+- **WSAEDESTADDRREQ** A destination address is required.  
   
-- **WSAEFAULT** el `lpSockAddrLen` argumento es incorrecto.  
+- **WSAEFAULT** The `lpSockAddrLen` argument is incorrect.  
   
-- **WSAEINVAL** el socket ya está enlazado a una dirección.  
+- **WSAEINVAL** The socket is already bound to an address.  
   
-- **WSAEISCONN** el socket ya está conectado.  
+- **WSAEISCONN** The socket is already connected.  
   
-- **WSAEMFILE** no hay más descriptores de archivo están disponibles.  
+- **WSAEMFILE** No more file descriptors are available.  
   
-- **WSAENETUNREACH** no se puede alcanzar la red desde este host en este momento.  
+- **WSAENETUNREACH** The network cannot be reached from this host at this time.  
   
-- `WSAENOBUFS`No hay espacio de búfer está disponible. No se puede conectar el socket.  
+- `WSAENOBUFS` No buffer space is available. The socket cannot be connected.  
   
-- **WSAENOTCONN** el socket no está conectado.  
+- **WSAENOTCONN** The socket is not connected.  
   
-- **WSAENOTSOCK** el descriptor es un archivo, no es un socket.  
+- **WSAENOTSOCK** The descriptor is a file, not a socket.  
   
-- **WSAETIMEDOUT** el intento de conexión agotó el tiempo de espera sin establecer una conexión.  
+- **WSAETIMEDOUT** The attempt to connect timed out without establishing a connection.  
   
-### <a name="remarks"></a>Comentarios  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  En [CSocket](../../mfc/reference/csocket-class.md), el `OnConnect` nunca se llama la función de notificación. Para las conexiones, simplemente llame **conectar**, lo cual devolverá cuando se complete la conexión (correctamente o error). Cómo se administran las notificaciones de conexión es un detalle de implementación de MFC.  
+>  In [CSocket](../../mfc/reference/csocket-class.md), the `OnConnect` notification function is never called. For connections, you simply call **Connect**, which will return when the connection is completed (either successfully or in error). How connection notifications are handled is an MFC implementation detail.  
   
- Para obtener más información, consulte [Windows Sockets: sockets de notificación](../../mfc/windows-sockets-socket-notifications.md).  
+ For more information, see [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[1 NVC_MFCAsyncSocket](../../mfc/reference/codesnippet/cpp/casyncsocket-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAsyncSocket#1](../../mfc/reference/codesnippet/cpp/casyncsocket-class_1.cpp)]  
   
-##  <a name="onoutofbanddata"></a>CAsyncSocket::OnOutOfBandData  
- Llamado por el marco de trabajo para notificar al socket receptor que el socket emisor tiene datos fuera de banda para enviar.  
+##  <a name="onoutofbanddata"></a>  CAsyncSocket::OnOutOfBandData  
+ Called by the framework to notify the receiving socket that the sending socket has out-of-band data to send.  
   
 ```  
 virtual void OnOutOfBandData(int nErrorCode);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nErrorCode`  
- El error más reciente en un socket. Códigos de error siguientes se aplican a la `OnOutOfBandData` función miembro:  
+ The most recent error on a socket. The following error codes apply to the `OnOutOfBandData` member function:  
   
-- **0** la función que se ejecutó correctamente.  
+- **0** The function executed successfully.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-### <a name="remarks"></a>Comentarios  
- Datos fuera de banda están un canal lógicamente independiente que está asociado a cada par de sockets conectados de tipo **SOCK_STREAM**. El canal se utiliza generalmente para enviar datos urgentes.  
+### <a name="remarks"></a>Remarks  
+ Out-of-band data is a logically independent channel that is associated with each pair of connected sockets of type **SOCK_STREAM**. The channel is generally used to send urgent data.  
   
- MFC admite datos fuera de banda, pero los usuarios de la clase `CAsyncSocket` no se recomienda utilizarla. La manera más fácil es crear un segundo socket para transferir estos datos. Para obtener más información acerca de los datos fuera de banda, consulte [Windows Sockets: sockets de notificación](../../mfc/windows-sockets-socket-notifications.md).  
+ MFC supports out-of-band data, but users of class `CAsyncSocket` are discouraged from using it. The easier way is to create a second socket for passing such data. For more information about out-of-band data, see [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="onreceive"></a>CAsyncSocket::OnReceive  
- Llamado por el marco de trabajo para notificar a este socket que hay datos en el búfer que se puede recuperar mediante una llamada a la **recepción** función miembro.  
+##  <a name="onreceive"></a>  CAsyncSocket::OnReceive  
+ Called by the framework to notify this socket that there is data in the buffer that can be retrieved by calling the **Receive** member function.  
   
 ```  
 virtual void OnReceive(int nErrorCode);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nErrorCode`  
- El error más reciente en un socket. Códigos de error siguientes se aplican a la `OnReceive` función miembro:  
+ The most recent error on a socket. The following error codes apply to the `OnReceive` member function:  
   
-- **0** la función que se ejecutó correctamente.  
+- **0** The function executed successfully.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [Windows Sockets: sockets de notificación](../../mfc/windows-sockets-socket-notifications.md).  
+### <a name="remarks"></a>Remarks  
+ For more information, see [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFCAsyncSocket&#2;](../../mfc/reference/codesnippet/cpp/casyncsocket-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAsyncSocket#2](../../mfc/reference/codesnippet/cpp/casyncsocket-class_2.cpp)]  
   
-##  <a name="onsend"></a>CAsyncSocket::OnSend  
- Llamado por el marco de trabajo para notificar el socket que puede enviar datos al llamar a la **enviar** función miembro.  
+##  <a name="onsend"></a>  CAsyncSocket::OnSend  
+ Called by the framework to notify the socket that it can now send data by calling the **Send** member function.  
   
 ```  
 virtual void OnSend(int nErrorCode);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nErrorCode`  
- El error más reciente en un socket. Códigos de error siguientes se aplican a la `OnSend` función miembro:  
+ The most recent error on a socket. The following error codes apply to the `OnSend` member function:  
   
-- **0** la función que se ejecutó correctamente.  
+- **0** The function executed successfully.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [Windows Sockets: sockets de notificación](../../mfc/windows-sockets-socket-notifications.md).  
+### <a name="remarks"></a>Remarks  
+ For more information, see [Windows Sockets: Socket Notifications](../../mfc/windows-sockets-socket-notifications.md).  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFCAsyncSocket&3;](../../mfc/reference/codesnippet/cpp/casyncsocket-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAsyncSocket#3](../../mfc/reference/codesnippet/cpp/casyncsocket-class_3.cpp)]  
   
-##  <a name="operator_eq"></a>CAsyncSocket::operator =  
- Asigna un nuevo valor a un `CAsyncSocket` objeto.  
+##  <a name="operator_eq"></a>  CAsyncSocket::operator =  
+ Assigns a new value to a `CAsyncSocket` object.  
   
 ```  
 void operator=(const CAsyncSocket& rSrc);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `rSrc`  
- Una referencia a un archivo `CAsyncSocket` objeto.  
+ A reference to an existing `CAsyncSocket` object.  
   
-### <a name="remarks"></a>Comentarios  
- Llame a esta función para copiar uno existente `CAsyncSocket` objeto a otro `CAsyncSocket` objeto.  
+### <a name="remarks"></a>Remarks  
+ Call this function to copy an existing `CAsyncSocket` object to another `CAsyncSocket` object.  
   
-##  <a name="operator_socket"></a>CAsyncSocket::operator SOCKET  
- Utilice este operador para recuperar la **SOCKET** identificador de la `CAsyncSocket` objeto.  
+##  <a name="operator_socket"></a>  CAsyncSocket::operator SOCKET  
+ Use this operator to retrieve the **SOCKET** handle of the `CAsyncSocket` object.  
   
 ```  
 operator SOCKET() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Si se realiza correctamente, el identificador de la **SOCKET** objeto; en caso contrario, **NULL**.  
+### <a name="return-value"></a>Return Value  
+ If successful, the handle of the **SOCKET** object; otherwise, **NULL**.  
   
-### <a name="remarks"></a>Comentarios  
- Puede utilizar el controlador para llamar directamente a las API de Windows.  
+### <a name="remarks"></a>Remarks  
+ You can use the handle to call Windows APIs directly.  
   
-##  <a name="receive"></a>CAsyncSocket::Receive  
- Llame a esta función miembro para recibir datos de un socket.  
+##  <a name="receive"></a>  CAsyncSocket::Receive  
+ Call this member function to receive data from a socket.  
   
 ```  
 virtual int Receive(
@@ -1059,63 +1087,63 @@ virtual int Receive(
     int nFlags = 0);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- Un búfer para los datos entrantes.  
+ A buffer for the incoming data.  
   
  `nBufLen`  
- La longitud de `lpBuf` en bytes.  
+ The length of `lpBuf` in bytes.  
   
  `nFlags`  
- Especifica la manera en que se realiza la llamada. La semántica de esta función se determina mediante las opciones de socket y `nFlags` parámetro. Se construye mediante la combinación de cualquiera de los siguientes valores con C++ `OR` operador:  
+ Specifies the way in which the call is made. The semantics of this function are determined by the socket options and the `nFlags` parameter. The latter is constructed by combining any of the following values with the C++ `OR` operator:  
   
-- **MSG_PEEK** inspeccionar los datos entrantes. Los datos se copian en el búfer, pero no se quitan de la cola de entrada.  
+- **MSG_PEEK** Peek at the incoming data. The data is copied into the buffer but is not removed from the input queue.  
   
-- **MSG_OOB** procesar datos fuera de banda.  
+- **MSG_OOB** Process out-of-band data.  
   
-### <a name="return-value"></a>Valor devuelto  
- Si se produce ningún error, **recepción** devuelve el número de bytes recibidos. Si se ha cerrado la conexión, devuelve 0. De lo contrario, un valor de **SOCKET_ERROR** se devuelve, y un código de error específico que se puede recuperar mediante una llamada a [GetLastError](#getlasterror). Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ If no error occurs, **Receive** returns the number of bytes received. If the connection has been closed, it returns 0. Otherwise, a value of **SOCKET_ERROR** is returned, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAENOTCONN** el socket no está conectado.  
+- **WSAENOTCONN** The socket is not connected.  
   
-- **WSAEINPROGRESS** está en curso una operación bloqueo de Windows Sockets.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEOPNOTSUPP MSG_OOB** se ha especificado, pero el socket no es de tipo **SOCK_STREAM**.  
+- **WSAEOPNOTSUPP MSG_OOB** was specified, but the socket is not of type **SOCK_STREAM**.  
   
-- **WSAESHUTDOWN** se cerró el socket; no es posible llamar a **recepción** en un socket después `ShutDown` se ha invocado con `nHow` establecido en 0 ó 2.  
+- **WSAESHUTDOWN** The socket has been shut down; it is not possible to call **Receive** on a socket after `ShutDown` has been invoked with `nHow` set to 0 or 2.  
   
-- **WSAEWOULDBLOCK** el socket se marca como no sea de bloqueo y la **recepción** operación causaría un bloqueo.  
+- **WSAEWOULDBLOCK** The socket is marked as nonblocking and the **Receive** operation would block.  
   
-- **WSAEMSGSIZE** el datagrama es demasiado grande para caber en el búfer especificado y se ha truncado.  
+- **WSAEMSGSIZE** The datagram was too large to fit into the specified buffer and was truncated.  
   
-- **WSAEINVAL** el socket no se ha enlazado con **enlace**.  
+- **WSAEINVAL** The socket has not been bound with **Bind**.  
   
-- **WSAECONNABORTED** el circuito virtual se anuló debido al tiempo de espera u otro error.  
+- **WSAECONNABORTED** The virtual circuit was aborted due to timeout or other failure.  
   
-- **WSAECONNRESET** el circuito virtual se restableció por el lado remoto.  
+- **WSAECONNRESET** The virtual circuit was reset by the remote side.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función se utiliza para la secuencia conectados o sockets de datagramas y se utiliza para leer los datos entrantes.  
+### <a name="remarks"></a>Remarks  
+ This function is used for connected stream or datagram sockets and is used to read incoming data.  
   
- Para los sockets de tipo **SOCK_STREAM**, como se devuelve toda la información está disponible hasta el tamaño del búfer proporcionado. Si el socket se ha configurado para la recepción en línea de datos fuera de banda (opción de socket **SO_OOBINLINE**) y no se ha leído datos fuera de banda, se devolverán datos sólo fuera de banda. La aplicación puede utilizar el **IOCtlSIOCATMARK** opción o [OnOutOfBandData](#onoutofbanddata) para determinar si los datos de más de fuera de banda permanecen a leerse.  
+ For sockets of type **SOCK_STREAM**, as much information as is currently available up to the size of the buffer supplied is returned. If the socket has been configured for in-line reception of out-of-band data (socket option **SO_OOBINLINE**) and out-of-band data is unread, only out-of-band data will be returned. The application can use the **IOCtlSIOCATMARK** option or [OnOutOfBandData](#onoutofbanddata) to determine whether any more out-of-band data remains to be read.  
   
- Para los sockets de datagramas, se extraen los datos desde el primer datagrama en cola, hasta el tamaño del búfer proporcionado. Si el datagrama es mayor que el búfer proporcionado, el búfer se llena con la primera parte del datagrama, el exceso de datos se pierde, y **recepción** devuelve un valor de **SOCKET_ERROR** con el código de error establecido en **WSAEMSGSIZE**. Si no hay datos entrantes están disponibles en el socket, un valor de **SOCKET_ERROR** se devuelve con el código de error establecido en **WSAEWOULDBLOCK**. El [OnReceive](#onreceive) función de devolución de llamada puede utilizarse para determinar cuándo llegan a más datos.  
+ For datagram sockets, data is extracted from the first enqueued datagram, up to the size of the buffer supplied. If the datagram is larger than the buffer supplied, the buffer is filled with the first part of the datagram, the excess data is lost, and **Receive** returns a value of **SOCKET_ERROR** with the error code set to **WSAEMSGSIZE**. If no incoming data is available at the socket, a value of **SOCKET_ERROR** is returned with the error code set to **WSAEWOULDBLOCK**. The [OnReceive](#onreceive) callback function can be used to determine when more data arrives.  
   
- Si el socket es de tipo **SOCK_STREAM** y el lado remoto cerró la conexión correctamente, un **recepción** finalizará inmediatamente con 0 bytes recibidos. Si se ha restablecido la conexión, un **recepción** producirá el error **WSAECONNRESET**.  
+ If the socket is of type **SOCK_STREAM** and the remote side has shut down the connection gracefully, a **Receive** will complete immediately with 0 bytes received. If the connection has been reset, a **Receive** will fail with the error **WSAECONNRESET**.  
   
- **Recibir** debe llamarse una vez por cada vez [CAsyncSocket::OnReceive](#onreceive) se llama.  
+ **Receive** should be called only once for each time [CAsyncSocket::OnReceive](#onreceive) is called.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [CAsyncSocket::OnReceive](#onreceive).  
+### <a name="example"></a>Example  
+  See the example for [CAsyncSocket::OnReceive](#onreceive).  
   
-##  <a name="receivefrom"></a>CAsyncSocket::ReceiveFrom  
- Llame a esta función miembro para recibir un datagrama y almacenar la dirección de origen en el [SOCKADDR](../../mfc/reference/sockaddr-structure.md) estructura o en `rSocketAddress`.  
+##  <a name="receivefrom"></a>  CAsyncSocket::ReceiveFrom  
+ Call this member function to receive a datagram and store the source address in the [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure or in `rSocketAddress`.  
   
 ```  
 int ReceiveFrom(
@@ -1134,76 +1162,76 @@ int ReceiveFrom(
     int nFlags = 0);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- Un búfer para los datos entrantes.  
+ A buffer for the incoming data.  
   
  `nBufLen`  
- La longitud de `lpBuf` en bytes.  
+ The length of `lpBuf` in bytes.  
   
  `rSocketAddress`  
- Hacer referencia a un `CString` objeto que recibe la dirección IP numérica con puntos.  
+ Reference to a `CString` object that receives a dotted number IP address.  
   
  `rSocketPort`  
- Hacer referencia a un **UINT** que almacena un puerto.  
+ Reference to a **UINT** that stores a port.  
   
  `lpSockAddr`  
- Un puntero a un [SOCKADDR](../../mfc/reference/sockaddr-structure.md) estructura que contiene la dirección de origen tras la devolución.  
+ A pointer to a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure that holds the source address upon return.  
   
  `lpSockAddrLen`  
- Un puntero a la longitud de la dirección de origen `lpSockAddr` en bytes.  
+ A pointer to the length of the source address in `lpSockAddr` in bytes.  
   
  `nFlags`  
- Especifica la manera en que se realiza la llamada. La semántica de esta función se determina mediante las opciones de socket y `nFlags` parámetro. Se construye mediante la combinación de cualquiera de los siguientes valores con C++ `OR` operador:  
+ Specifies the way in which the call is made. The semantics of this function are determined by the socket options and the `nFlags` parameter. The latter is constructed by combining any of the following values with the C++ `OR` operator:  
   
-- **MSG_PEEK** inspeccionar los datos entrantes. Los datos se copian en el búfer, pero no se quitan de la cola de entrada.  
+- **MSG_PEEK** Peek at the incoming data. The data is copied into the buffer but is not removed from the input queue.  
   
-- **MSG_OOB** procesar datos fuera de banda.  
+- **MSG_OOB** Process out-of-band data.  
   
-### <a name="return-value"></a>Valor devuelto  
- Si se produce ningún error, `ReceiveFrom` devuelve el número de bytes recibidos. Si se ha cerrado la conexión, devuelve 0. De lo contrario, un valor de **SOCKET_ERROR** se devuelve, y un código de error específico que se puede recuperar mediante una llamada a `GetLastError`. Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ If no error occurs, `ReceiveFrom` returns the number of bytes received. If the connection has been closed, it returns 0. Otherwise, a value of **SOCKET_ERROR** is returned, and a specific error code can be retrieved by calling `GetLastError`. The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** el `lpSockAddrLen` argumento no era válido: el `lpSockAddr` búfer es demasiado pequeño para dar cabida a la dirección del mismo nivel.  
+- **WSAEFAULT** The `lpSockAddrLen` argument was invalid: the `lpSockAddr` buffer was too small to accommodate the peer address.  
   
-- **WSAEINPROGRESS** está en curso una operación bloqueo de Windows Sockets.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAEINVAL** el socket no se ha enlazado con **enlace**.  
+- **WSAEINVAL** The socket has not been bound with **Bind**.  
   
-- **WSAENOTCONN** el socket no conectado ( **SOCK_STREAM** solo).  
+- **WSAENOTCONN** The socket is not connected ( **SOCK_STREAM** only).  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEOPNOTSUPP MSG_OOB** se ha especificado, pero el socket no es de tipo **SOCK_STREAM**.  
+- **WSAEOPNOTSUPP MSG_OOB** was specified, but the socket is not of type **SOCK_STREAM**.  
   
-- **WSAESHUTDOWN** se cerró el socket; no es posible llamar a `ReceiveFrom` en un socket después `ShutDown` se ha invocado con `nHow` establecido en 0 ó 2.  
+- **WSAESHUTDOWN** The socket has been shut down; it is not possible to call `ReceiveFrom` on a socket after `ShutDown` has been invoked with `nHow` set to 0 or 2.  
   
-- **WSAEWOULDBLOCK** el socket se marca como no sea de bloqueo y la `ReceiveFrom` operación causaría un bloqueo.  
+- **WSAEWOULDBLOCK** The socket is marked as nonblocking and the `ReceiveFrom` operation would block.  
   
-- **WSAEMSGSIZE** el datagrama es demasiado grande para caber en el búfer especificado y se ha truncado.  
+- **WSAEMSGSIZE** The datagram was too large to fit into the specified buffer and was truncated.  
   
-- **WSAECONNABORTED** el circuito virtual se anuló debido al tiempo de espera u otro error.  
+- **WSAECONNABORTED** The virtual circuit was aborted due to timeout or other failure.  
   
-- **WSAECONNRESET** el circuito virtual se restableció por el lado remoto.  
+- **WSAECONNRESET** The virtual circuit was reset by the remote side.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función se utiliza para leer los datos entrantes en un socket (posiblemente conectado) y capturar la dirección desde la que se enviaron los datos.  
+### <a name="remarks"></a>Remarks  
+ This function is used to read incoming data on a (possibly connected) socket and capture the address from which the data was sent.  
   
- Para controlar las direcciones IPv6, utilice [CAsyncSocket::ReceiveFromEx](#receivefromex).  
+ To handle IPv6 addresses, use [CAsyncSocket::ReceiveFromEx](#receivefromex).  
   
- Para los sockets de tipo **SOCK_STREAM**, como se devuelve toda la información está disponible hasta el tamaño del búfer proporcionado. Si el socket se ha configurado para la recepción en línea de datos fuera de banda (opción de socket **SO_OOBINLINE**) y no se ha leído datos fuera de banda, se devolverán datos sólo fuera de banda. La aplicación puede utilizar el **IOCtlSIOCATMARK** opción o `OnOutOfBandData` para determinar si los datos de más de fuera de banda permanecen a leerse. El `lpSockAddr` y `lpSockAddrLen` se omiten los parámetros de **SOCK_STREAM** sockets.  
+ For sockets of type **SOCK_STREAM**, as much information as is currently available up to the size of the buffer supplied is returned. If the socket has been configured for in-line reception of out-of-band data (socket option **SO_OOBINLINE**) and out-of-band data is unread, only out-of-band data will be returned. The application can use the **IOCtlSIOCATMARK** option or `OnOutOfBandData` to determine whether any more out-of-band data remains to be read. The `lpSockAddr` and `lpSockAddrLen` parameters are ignored for **SOCK_STREAM** sockets.  
   
- Para los sockets de datagramas, se extraen los datos desde el primer datagrama en cola, hasta el tamaño del búfer proporcionado. Si el datagrama es mayor que el búfer proporcionado, el búfer se llena con la primera parte del mensaje, el exceso de datos se pierde, y `ReceiveFrom` devuelve un valor de **SOCKET_ERROR** con el código de error establecido en **WSAEMSGSIZE**.  
+ For datagram sockets, data is extracted from the first enqueued datagram, up to the size of the buffer supplied. If the datagram is larger than the buffer supplied, the buffer is filled with the first part of the message, the excess data is lost, and `ReceiveFrom` returns a value of **SOCKET_ERROR** with the error code set to **WSAEMSGSIZE**.  
   
- Si `lpSockAddr` es distinto de cero, y el socket es de tipo **SOCK_DGRAM**, la dirección de red del socket que envió la información se copia en el correspondiente [SOCKADDR](../../mfc/reference/sockaddr-structure.md) estructura. El valor indicado por `lpSockAddrLen` se inicializa en el tamaño de esta estructura y se modifica en el valor devuelto para indicar el tamaño real de la dirección que se almacenan allí. Si no hay datos entrantes están disponibles en el socket, la `ReceiveFrom` llamada espera a que lleguen a menos que el socket de datos no sea de bloqueo. En este caso, un valor de **SOCKET_ERROR** se devuelve con el código de error establecido en **WSAEWOULDBLOCK**. El `OnReceive` devolución de llamada puede utilizarse para determinar cuándo llegan a más datos.  
+ If `lpSockAddr` is nonzero, and the socket is of type **SOCK_DGRAM**, the network address of the socket which sent the data is copied to the corresponding [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure. The value pointed to by `lpSockAddrLen` is initialized to the size of this structure, and is modified on return to indicate the actual size of the address stored there. If no incoming data is available at the socket, the `ReceiveFrom` call waits for data to arrive unless the socket is nonblocking. In this case, a value of **SOCKET_ERROR** is returned with the error code set to **WSAEWOULDBLOCK**. The `OnReceive` callback can be used to determine when more data arrives.  
   
- Si el socket es de tipo **SOCK_STREAM** y el lado remoto cerró la conexión correctamente, un `ReceiveFrom` finalizará inmediatamente con 0 bytes recibidos.  
+ If the socket is of type **SOCK_STREAM** and the remote side has shut down the connection gracefully, a `ReceiveFrom` will complete immediately with 0 bytes received.  
   
-##  <a name="receivefromex"></a>CAsyncSocket::ReceiveFromEx  
- Llame a esta función miembro para recibir un datagrama y almacenar la dirección de origen en el [SOCKADDR](../../mfc/reference/sockaddr-structure.md) estructura o en `rSocketAddress` (controla direcciones IPv6).  
+##  <a name="receivefromex"></a>  CAsyncSocket::ReceiveFromEx  
+ Call this member function to receive a datagram and store the source address in the [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure or in `rSocketAddress` (handles IPv6 addresses).  
   
 ```  
 int ReceiveFromEx(
@@ -1214,70 +1242,70 @@ int ReceiveFromEx(
     int nFlags = 0);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- Un búfer para los datos entrantes.  
+ A buffer for the incoming data.  
   
  `nBufLen`  
- La longitud de `lpBuf` en bytes.  
+ The length of `lpBuf` in bytes.  
   
  `rSocketAddress`  
- Hacer referencia a un `CString` objeto que recibe la dirección IP numérica con puntos.  
+ Reference to a `CString` object that receives a dotted number IP address.  
   
  `rSocketPort`  
- Hacer referencia a un **UINT** que almacena un puerto.  
+ Reference to a **UINT** that stores a port.  
   
  `nFlags`  
- Especifica la manera en que se realiza la llamada. La semántica de esta función se determina mediante las opciones de socket y `nFlags` parámetro. Se construye mediante la combinación de cualquiera de los siguientes valores con C++ `OR` operador:  
+ Specifies the way in which the call is made. The semantics of this function are determined by the socket options and the `nFlags` parameter. The latter is constructed by combining any of the following values with the C++ `OR` operator:  
   
-- **MSG_PEEK** inspeccionar los datos entrantes. Los datos se copian en el búfer, pero no se quitan de la cola de entrada.  
+- **MSG_PEEK** Peek at the incoming data. The data is copied into the buffer but is not removed from the input queue.  
   
-- **MSG_OOB** procesar datos fuera de banda.  
+- **MSG_OOB** Process out-of-band data.  
   
-### <a name="return-value"></a>Valor devuelto  
- Si se produce ningún error, `ReceiveFromEx` devuelve el número de bytes recibidos. Si se ha cerrado la conexión, devuelve 0. De lo contrario, un valor de **SOCKET_ERROR** se devuelve, y un código de error específico que se puede recuperar mediante una llamada a `GetLastError`. Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ If no error occurs, `ReceiveFromEx` returns the number of bytes received. If the connection has been closed, it returns 0. Otherwise, a value of **SOCKET_ERROR** is returned, and a specific error code can be retrieved by calling `GetLastError`. The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** el `lpSockAddrLen` argumento no era válido: el `lpSockAddr` búfer es demasiado pequeño para dar cabida a la dirección del mismo nivel.  
+- **WSAEFAULT** The `lpSockAddrLen` argument was invalid: the `lpSockAddr` buffer was too small to accommodate the peer address.  
   
-- **WSAEINPROGRESS** está en curso una operación bloqueo de Windows Sockets.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAEINVAL** el socket no se ha enlazado con **enlace**.  
+- **WSAEINVAL** The socket has not been bound with **Bind**.  
   
-- **WSAENOTCONN** el socket no conectado ( **SOCK_STREAM** solo).  
+- **WSAENOTCONN** The socket is not connected ( **SOCK_STREAM** only).  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEOPNOTSUPP MSG_OOB** se ha especificado, pero el socket no es de tipo **SOCK_STREAM**.  
+- **WSAEOPNOTSUPP MSG_OOB** was specified, but the socket is not of type **SOCK_STREAM**.  
   
-- **WSAESHUTDOWN** se cerró el socket; no es posible llamar a `ReceiveFromEx` en un socket después `ShutDown` se ha invocado con `nHow` establecido en 0 ó 2.  
+- **WSAESHUTDOWN** The socket has been shut down; it is not possible to call `ReceiveFromEx` on a socket after `ShutDown` has been invoked with `nHow` set to 0 or 2.  
   
-- **WSAEWOULDBLOCK** el socket se marca como no sea de bloqueo y la `ReceiveFromEx` operación causaría un bloqueo.  
+- **WSAEWOULDBLOCK** The socket is marked as nonblocking and the `ReceiveFromEx` operation would block.  
   
-- **WSAEMSGSIZE** el datagrama es demasiado grande para caber en el búfer especificado y se ha truncado.  
+- **WSAEMSGSIZE** The datagram was too large to fit into the specified buffer and was truncated.  
   
-- **WSAECONNABORTED** el circuito virtual se anuló debido al tiempo de espera u otro error.  
+- **WSAECONNABORTED** The virtual circuit was aborted due to timeout or other failure.  
   
-- **WSAECONNRESET** el circuito virtual se restableció por el lado remoto.  
+- **WSAECONNRESET** The virtual circuit was reset by the remote side.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función se utiliza para leer los datos entrantes en un socket (posiblemente conectado) y capturar la dirección desde la que se enviaron los datos.  
+### <a name="remarks"></a>Remarks  
+ This function is used to read incoming data on a (possibly connected) socket and capture the address from which the data was sent.  
   
- Esta función es el mismo que [CAsyncSocket::ReceiveFrom](#receivefrom) salvo que controla IPv6 direcciones protocolos así como antiguos.  
+ This function is the same as [CAsyncSocket::ReceiveFrom](#receivefrom) except that it handles IPv6 addresses as well as older protocols.  
   
- Para los sockets de tipo **SOCK_STREAM**, como se devuelve toda la información está disponible hasta el tamaño del búfer proporcionado. Si el socket se ha configurado para la recepción en línea de datos fuera de banda (opción de socket **SO_OOBINLINE**) y no se ha leído datos fuera de banda, se devolverán datos sólo fuera de banda. La aplicación puede utilizar el **IOCtlSIOCATMARK** opción o `OnOutOfBandData` para determinar si los datos de más de fuera de banda permanecen a leerse. El `lpSockAddr` y `lpSockAddrLen` se omiten los parámetros de **SOCK_STREAM** sockets.  
+ For sockets of type **SOCK_STREAM**, as much information as is currently available up to the size of the buffer supplied is returned. If the socket has been configured for in-line reception of out-of-band data (socket option **SO_OOBINLINE**) and out-of-band data is unread, only out-of-band data will be returned. The application can use the **IOCtlSIOCATMARK** option or `OnOutOfBandData` to determine whether any more out-of-band data remains to be read. The `lpSockAddr` and `lpSockAddrLen` parameters are ignored for **SOCK_STREAM** sockets.  
   
- Para los sockets de datagramas, se extraen los datos desde el primer datagrama en cola, hasta el tamaño del búfer proporcionado. Si el datagrama es mayor que el búfer proporcionado, el búfer se llena con la primera parte del mensaje, el exceso de datos se pierde, y `ReceiveFromEx` devuelve un valor de **SOCKET_ERROR** con el código de error establecido en **WSAEMSGSIZE**.  
+ For datagram sockets, data is extracted from the first enqueued datagram, up to the size of the buffer supplied. If the datagram is larger than the buffer supplied, the buffer is filled with the first part of the message, the excess data is lost, and `ReceiveFromEx` returns a value of **SOCKET_ERROR** with the error code set to **WSAEMSGSIZE**.  
   
- Si `lpSockAddr` es distinto de cero, y el socket es de tipo **SOCK_DGRAM**, la dirección de red del socket que envió la información se copia en el correspondiente [SOCKADDR](../../mfc/reference/sockaddr-structure.md) estructura. El valor indicado por `lpSockAddrLen` se inicializa en el tamaño de esta estructura y se modifica en el valor devuelto para indicar el tamaño real de la dirección que se almacenan allí. Si no hay datos entrantes están disponibles en el socket, la `ReceiveFromEx` llamada espera a que lleguen a menos que el socket de datos no sea de bloqueo. En este caso, un valor de **SOCKET_ERROR** se devuelve con el código de error establecido en **WSAEWOULDBLOCK**. El `OnReceive` devolución de llamada puede utilizarse para determinar cuándo llegan a más datos.  
+ If `lpSockAddr` is nonzero, and the socket is of type **SOCK_DGRAM**, the network address of the socket which sent the data is copied to the corresponding [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure. The value pointed to by `lpSockAddrLen` is initialized to the size of this structure, and is modified on return to indicate the actual size of the address stored there. If no incoming data is available at the socket, the `ReceiveFromEx` call waits for data to arrive unless the socket is nonblocking. In this case, a value of **SOCKET_ERROR** is returned with the error code set to **WSAEWOULDBLOCK**. The `OnReceive` callback can be used to determine when more data arrives.  
   
- Si el socket es de tipo **SOCK_STREAM** y el lado remoto cerró la conexión correctamente, un `ReceiveFromEx` finalizará inmediatamente con 0 bytes recibidos.  
+ If the socket is of type **SOCK_STREAM** and the remote side has shut down the connection gracefully, a `ReceiveFromEx` will complete immediately with 0 bytes received.  
   
-##  <a name="send"></a>CAsyncSocket::Send  
- Llame a esta función miembro para enviar datos en un socket conectado.  
+##  <a name="send"></a>  CAsyncSocket::Send  
+ Call this member function to send data on a connected socket.  
   
 ```  
 virtual int Send(
@@ -1286,67 +1314,67 @@ virtual int Send(
     int nFlags = 0);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- Búfer que contiene los datos que se transmitan.  
+ A buffer containing the data to be transmitted.  
   
  `nBufLen`  
- La longitud de los datos de `lpBuf` en bytes.  
+ The length of the data in `lpBuf` in bytes.  
   
  `nFlags`  
- Especifica la manera en que se realiza la llamada. La semántica de esta función se determina mediante las opciones de socket y `nFlags` parámetro. Se construye mediante la combinación de cualquiera de los siguientes valores con C++ `OR` operador:  
+ Specifies the way in which the call is made. The semantics of this function are determined by the socket options and the `nFlags` parameter. The latter is constructed by combining any of the following values with the C++ `OR` operator:  
   
-- **MSG_DONTROUTE** especifica que los datos no deben ser susceptible de enrutamiento. Puede elegir un proveedor de Windows Sockets pasar por alto este indicador.  
+- **MSG_DONTROUTE** Specifies that the data should not be subject to routing. A Windows Sockets supplier can choose to ignore this flag.  
   
-- **MSG_OOB** enviar datos fuera de banda ( **SOCK_STREAM** solo).  
+- **MSG_OOB** Send out-of-band data ( **SOCK_STREAM** only).  
   
-### <a name="return-value"></a>Valor devuelto  
- Si se produce ningún error, **enviar** devuelve el número total de caracteres que se envían. (Tenga en cuenta que puede ser menor que el número indicado por `nBufLen`.) De lo contrario, un valor de **SOCKET_ERROR** se devuelve, y un código de error específico que se puede recuperar mediante una llamada a [GetLastError](#getlasterror). Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ If no error occurs, **Send** returns the total number of characters sent. (Note that this can be less than the number indicated by `nBufLen`.) Otherwise, a value of **SOCKET_ERROR** is returned, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEACCES** la dirección solicitada es una dirección de difusión, pero no se ha establecido el marcador adecuado.  
+- **WSAEACCES** The requested address is a broadcast address, but the appropriate flag was not set.  
   
-- **WSAEINPROGRESS** está en curso una operación bloqueo de Windows Sockets.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAEFAULT** el `lpBuf` argumento no es una parte del espacio de direcciones de usuario válida.  
+- **WSAEFAULT** The `lpBuf` argument is not in a valid part of the user address space.  
   
-- **WSAENETRESET** se debe restablecer la conexión porque la implementación de Windows Sockets quitó.  
+- **WSAENETRESET** The connection must be reset because the Windows Sockets implementation dropped it.  
   
-- `WSAENOBUFS`La implementación de Windows Sockets notifica un interbloqueo de búfer.  
+- `WSAENOBUFS` The Windows Sockets implementation reports a buffer deadlock.  
   
-- **WSAENOTCONN** el socket no está conectado.  
+- **WSAENOTCONN** The socket is not connected.  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEOPNOTSUPP MSG_OOB** se ha especificado, pero el socket no es de tipo **SOCK_STREAM**.  
+- **WSAEOPNOTSUPP MSG_OOB** was specified, but the socket is not of type **SOCK_STREAM**.  
   
-- **WSAESHUTDOWN** se cerró el socket; no es posible llamar a **enviar** en un socket después `ShutDown` se ha invocado con `nHow` establecido en 1 o 2.  
+- **WSAESHUTDOWN** The socket has been shut down; it is not possible to call **Send** on a socket after `ShutDown` has been invoked with `nHow` set to 1 or 2.  
   
-- **WSAEWOULDBLOCK** el socket se marca como no sea de bloqueo y la operación causaría un bloqueo.  
+- **WSAEWOULDBLOCK** The socket is marked as nonblocking and the requested operation would block.  
   
-- **WSAEMSGSIZE** el socket es de tipo **SOCK_DGRAM**, y el datagrama es mayor que el máximo admitido por la implementación de Windows Sockets.  
+- **WSAEMSGSIZE** The socket is of type **SOCK_DGRAM**, and the datagram is larger than the maximum supported by the Windows Sockets implementation.  
   
-- **WSAEINVAL** el socket no se ha enlazado con **enlace**.  
+- **WSAEINVAL** The socket has not been bound with **Bind**.  
   
-- **WSAECONNABORTED** el circuito virtual se anuló debido al tiempo de espera u otro error.  
+- **WSAECONNABORTED** The virtual circuit was aborted due to timeout or other failure.  
   
-- **WSAECONNRESET** el circuito virtual se restableció por el lado remoto.  
+- **WSAECONNRESET** The virtual circuit was reset by the remote side.  
   
-### <a name="remarks"></a>Comentarios  
- **Enviar** se utiliza para escribir los datos salientes en los sockets de datagramas o la secuencia conectados. Para los sockets de datagramas, se debe tener cuidado de no debe exceder el tamaño máximo de paquetes IP de las subredes subyacentes, que viene determinado por la **iMaxUdpDg** el elemento en el [WSADATA](../../mfc/reference/wsadata-structure.md) estructura devuelta por `AfxSocketInit`. Si los datos están demasiado largos para pasar de forma atómica a través del protocolo subyacente, el error **WSAEMSGSIZE** se devuelve a través de `GetLastError`, y se transmite ningún dato.  
+### <a name="remarks"></a>Remarks  
+ **Send** is used to write outgoing data on connected stream or datagram sockets. For datagram sockets, care must be taken not to exceed the maximum IP packet size of the underlying subnets, which is given by the **iMaxUdpDg** element in the [WSADATA](../../mfc/reference/wsadata-structure.md) structure returned by `AfxSocketInit`. If the data is too long to pass atomically through the underlying protocol, the error **WSAEMSGSIZE** is returned via `GetLastError`, and no data is transmitted.  
   
- Tenga en cuenta que para un datagrama socket la realización correcta de un **enviar** no indica que se ha entregado correctamente los datos.  
+ Note that for a datagram socket the successful completion of a **Send** does not indicate that the data was successfully delivered.  
   
- En `CAsyncSocket` objetos de tipo **SOCK_STREAM**, el número de bytes escritos puede estar entre 1 y la longitud solicitada, dependiendo de la disponibilidad de búfer en los hosts locales y externos.  
+ On `CAsyncSocket` objects of type **SOCK_STREAM**, the number of bytes written can be between 1 and the requested length, depending on buffer availability on both the local and foreign hosts.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [CAsyncSocket::OnSend](#onsend).  
+### <a name="example"></a>Example  
+  See the example for [CAsyncSocket::OnSend](#onsend).  
   
-##  <a name="sendto"></a>:: SendTo  
- Llame a esta función miembro para enviar datos a un destino concreto.  
+##  <a name="sendto"></a>  CAsyncSocket::SendTo  
+ Call this member function to send data to a specific destination.  
   
 ```  
 int SendTo(
@@ -1365,88 +1393,88 @@ int SendTo(
     int nFlags = 0);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- Búfer que contiene los datos que se transmitan.  
+ A buffer containing the data to be transmitted.  
   
  `nBufLen`  
- La longitud de los datos de `lpBuf` en bytes.  
+ The length of the data in `lpBuf` in bytes.  
   
  `nHostPort`  
- El puerto identifica la aplicación de socket.  
+ The port identifying the socket application.  
   
  `lpszHostAddress`  
- La dirección de red del socket al que está conectado este objeto: un nombre de equipo, como "ftp.microsoft.com" o un número de puntos, como "128.56.22.8".  
+ The network address of the socket to which this object is connected: a machine name such as "ftp.microsoft.com," or a dotted number such as "128.56.22.8".  
   
  `nFlags`  
- Especifica la manera en que se realiza la llamada. La semántica de esta función se determina mediante las opciones de socket y `nFlags` parámetro. Se construye mediante la combinación de cualquiera de los siguientes valores con C++ `OR` operador:  
+ Specifies the way in which the call is made. The semantics of this function are determined by the socket options and the `nFlags` parameter. The latter is constructed by combining any of the following values with the C++ `OR` operator:  
   
-- **MSG_DONTROUTE** especifica que los datos no deben ser susceptible de enrutamiento. Puede elegir un proveedor de Windows Sockets pasar por alto este indicador.  
+- **MSG_DONTROUTE** Specifies that the data should not be subject to routing. A Windows Sockets supplier can choose to ignore this flag.  
   
-- **MSG_OOB** enviar datos fuera de banda ( **SOCK_STREAM** solo).  
+- **MSG_OOB** Send out-of-band data ( **SOCK_STREAM** only).  
   
  `lpSockAddr`  
- Un puntero a un [SOCKADDR](../../mfc/reference/sockaddr-structure.md) estructura que contiene la dirección de socket de destino.  
+ A pointer to a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure that contains the address of the target socket.  
   
  `nSockAddrLen`  
- La longitud de la dirección en `lpSockAddr` en bytes.  
+ The length of the address in `lpSockAddr` in bytes.  
   
-### <a name="return-value"></a>Valor devuelto  
- Si se produce ningún error, `SendTo` devuelve el número total de caracteres que se envían. (Tenga en cuenta que puede ser menor que el número indicado por `nBufLen`.) De lo contrario, un valor de **SOCKET_ERROR** se devuelve, y un código de error específico que se puede recuperar mediante una llamada a [GetLastError](#getlasterror). Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ If no error occurs, `SendTo` returns the total number of characters sent. (Note that this can be less than the number indicated by `nBufLen`.) Otherwise, a value of **SOCKET_ERROR** is returned, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEACCES** la dirección solicitada es una dirección de difusión, pero no se ha establecido el marcador adecuado.  
+- **WSAEACCES** The requested address is a broadcast address, but the appropriate flag was not set.  
   
-- **WSAEINPROGRESS** está en curso una operación bloqueo de Windows Sockets.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAEFAULT** el `lpBuf` o `lpSockAddr` parámetros no forman parte del espacio de direcciones del usuario, o la `lpSockAddr` argumento es demasiado pequeño (menor que el tamaño de una [SOCKADDR](../../mfc/reference/sockaddr-structure.md) estructura).  
+- **WSAEFAULT** The `lpBuf` or `lpSockAddr` parameters are not part of the user address space, or the `lpSockAddr` argument is too small (less than the size of a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure).  
   
-- **WSAEINVAL** el nombre de host no es válido.  
+- **WSAEINVAL** The host name is invalid.  
   
-- **WSAENETRESET** se debe restablecer la conexión porque la implementación de Windows Sockets quitó.  
+- **WSAENETRESET** The connection must be reset because the Windows Sockets implementation dropped it.  
   
-- `WSAENOBUFS`La implementación de Windows Sockets notifica un interbloqueo de búfer.  
+- `WSAENOBUFS` The Windows Sockets implementation reports a buffer deadlock.  
   
-- **WSAENOTCONN** el socket no conectado ( **SOCK_STREAM** solo).  
+- **WSAENOTCONN** The socket is not connected ( **SOCK_STREAM** only).  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEOPNOTSUPP MSG_OOB** se ha especificado, pero el socket no es de tipo **SOCK_STREAM**.  
+- **WSAEOPNOTSUPP MSG_OOB** was specified, but the socket is not of type **SOCK_STREAM**.  
   
-- **WSAESHUTDOWN** se cerró el socket; no es posible llamar a `SendTo` en un socket después `ShutDown` se ha invocado con `nHow` establecido en 1 o 2.  
+- **WSAESHUTDOWN** The socket has been shut down; it is not possible to call `SendTo` on a socket after `ShutDown` has been invoked with `nHow` set to 1 or 2.  
   
-- **WSAEWOULDBLOCK** el socket se marca como no sea de bloqueo y la operación causaría un bloqueo.  
+- **WSAEWOULDBLOCK** The socket is marked as nonblocking and the requested operation would block.  
   
-- **WSAEMSGSIZE** el socket es de tipo **SOCK_DGRAM**, y el datagrama es mayor que el máximo admitido por la implementación de Windows Sockets.  
+- **WSAEMSGSIZE** The socket is of type **SOCK_DGRAM**, and the datagram is larger than the maximum supported by the Windows Sockets implementation.  
   
-- **WSAECONNABORTED** el circuito virtual se anuló debido al tiempo de espera u otro error.  
+- **WSAECONNABORTED** The virtual circuit was aborted due to timeout or other failure.  
   
-- **WSAECONNRESET** el circuito virtual se restableció por el lado remoto.  
+- **WSAECONNRESET** The virtual circuit was reset by the remote side.  
   
-- **WSAEADDRNOTAVAIL** la dirección especificada no está disponible en el equipo local.  
+- **WSAEADDRNOTAVAIL** The specified address is not available from the local machine.  
   
-- **WSAEAFNOSUPPORT** direcciones de la familia especificada no se puede usar con este socket.  
+- **WSAEAFNOSUPPORT** Addresses in the specified family cannot be used with this socket.  
   
-- **WSAEDESTADDRREQ** se requiere una dirección de destino.  
+- **WSAEDESTADDRREQ** A destination address is required.  
   
-- **WSAENETUNREACH** no se puede alcanzar la red desde este host en este momento.  
+- **WSAENETUNREACH** The network cannot be reached from this host at this time.  
   
-### <a name="remarks"></a>Comentarios  
- `SendTo`se utiliza en los sockets de datagramas o la secuencia y se utiliza para escribir los datos salientes en un socket. Para los sockets de datagramas, se debe tener cuidado de no debe exceder el tamaño máximo de paquetes IP de las subredes subyacentes, que viene determinado por la **iMaxUdpDg** el elemento en el [WSADATA](../../mfc/reference/wsadata-structure.md) estructura rellena [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Si los datos están demasiado largos para pasar de forma atómica a través del protocolo subyacente, el error **WSAEMSGSIZE** se devuelve, y se transmite ningún dato.  
+### <a name="remarks"></a>Remarks  
+ `SendTo` is used on datagram or stream sockets and is used to write outgoing data on a socket. For datagram sockets, care must be taken not to exceed the maximum IP packet size of the underlying subnets, which is given by the **iMaxUdpDg** element in the [WSADATA](../../mfc/reference/wsadata-structure.md) structure filled out by [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). If the data is too long to pass atomically through the underlying protocol, the error **WSAEMSGSIZE** is returned, and no data is transmitted.  
   
- Tenga en cuenta que la realización correcta de un `SendTo` no indica que se ha entregado correctamente los datos.  
+ Note that the successful completion of a `SendTo` does not indicate that the data was successfully delivered.  
   
- `SendTo`sólo se utiliza en una **SOCK_DGRAM** socket para enviar un datagrama a un socket específico identificado por el `lpSockAddr` parámetro.  
+ `SendTo` is only used on a **SOCK_DGRAM** socket to send a datagram to a specific socket identified by the `lpSockAddr` parameter.  
   
- Para enviar una difusión (en un **SOCK_DGRAM** sólo), la dirección en la `lpSockAddr` parámetro debe crearse utilizando la dirección IP especial **INADDR_BROADCAST** (definido en el archivo de encabezado de Windows Sockets WINSOCK. (H) junto con el número de puerto deseado. O bien, si la `lpszHostAddress` parámetro es **NULL**, el socket está configurado para la difusión. No es recomendable generalmente para un datagrama difusión supere el tamaño en el que puede producirse fragmentación, lo que implica que la parte de datos del datagrama (sin incluir los encabezados) no debe superar los 512 bytes.  
+ To send a broadcast (on a **SOCK_DGRAM** only), the address in the `lpSockAddr` parameter should be constructed using the special IP address **INADDR_BROADCAST** (defined in the Windows Sockets header file WINSOCK.H) together with the intended port number. Or, if the `lpszHostAddress` parameter is **NULL**, the socket is configured for broadcast. It is generally inadvisable for a broadcast datagram to exceed the size at which fragmentation can occur, which implies that the data portion of the datagram (excluding headers) should not exceed 512 bytes.  
   
- Para controlar las direcciones IPv6, utilice [CAsyncSocket::SendToEx](#sendtoex).  
+ To handle IPv6 addresses, use [CAsyncSocket::SendToEx](#sendtoex).  
   
-##  <a name="sendtoex"></a>CAsyncSocket::SendToEx  
- Llame a esta función miembro para enviar datos a un destino concreto (controla direcciones IPv6).  
+##  <a name="sendtoex"></a>  CAsyncSocket::SendToEx  
+ Call this member function to send data to a specific destination (handles IPv6 addresses).  
   
 ```  
 int SendToEx(
@@ -1457,82 +1485,82 @@ int SendToEx(
     int nFlags = 0);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- Búfer que contiene los datos que se transmitan.  
+ A buffer containing the data to be transmitted.  
   
  `nBufLen`  
- La longitud de los datos de `lpBuf` en bytes.  
+ The length of the data in `lpBuf` in bytes.  
   
  `nHostPort`  
- El puerto identifica la aplicación de socket.  
+ The port identifying the socket application.  
   
  `lpszHostAddress`  
- La dirección de red del socket al que está conectado este objeto: un nombre de equipo, como "ftp.microsoft.com" o un número de puntos, como "128.56.22.8".  
+ The network address of the socket to which this object is connected: a machine name such as "ftp.microsoft.com," or a dotted number such as "128.56.22.8".  
   
  `nFlags`  
- Especifica la manera en que se realiza la llamada. La semántica de esta función se determina mediante las opciones de socket y `nFlags` parámetro. Se construye mediante la combinación de cualquiera de los siguientes valores con C++ `OR` operador:  
+ Specifies the way in which the call is made. The semantics of this function are determined by the socket options and the `nFlags` parameter. The latter is constructed by combining any of the following values with the C++ `OR` operator:  
   
-- **MSG_DONTROUTE** especifica que los datos no deben ser susceptible de enrutamiento. Puede elegir un proveedor de Windows Sockets pasar por alto este indicador.  
+- **MSG_DONTROUTE** Specifies that the data should not be subject to routing. A Windows Sockets supplier can choose to ignore this flag.  
   
-- **MSG_OOB** enviar datos fuera de banda ( **SOCK_STREAM** solo).  
+- **MSG_OOB** Send out-of-band data ( **SOCK_STREAM** only).  
   
-### <a name="return-value"></a>Valor devuelto  
- Si se produce ningún error, `SendToEx` devuelve el número total de caracteres que se envían. (Tenga en cuenta que puede ser menor que el número indicado por `nBufLen`.) De lo contrario, un valor de **SOCKET_ERROR** se devuelve, y un código de error específico que se puede recuperar mediante una llamada a [GetLastError](#getlasterror). Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ If no error occurs, `SendToEx` returns the total number of characters sent. (Note that this can be less than the number indicated by `nBufLen`.) Otherwise, a value of **SOCKET_ERROR** is returned, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEACCES** la dirección solicitada es una dirección de difusión, pero no se ha establecido el marcador adecuado.  
+- **WSAEACCES** The requested address is a broadcast address, but the appropriate flag was not set.  
   
-- **WSAEINPROGRESS** está en curso una operación bloqueo de Windows Sockets.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAEFAULT** el `lpBuf` o `lpSockAddr` parámetros no forman parte del espacio de direcciones del usuario, o la `lpSockAddr` argumento es demasiado pequeño (menor que el tamaño de una [SOCKADDR](../../mfc/reference/sockaddr-structure.md) estructura).  
+- **WSAEFAULT** The `lpBuf` or `lpSockAddr` parameters are not part of the user address space, or the `lpSockAddr` argument is too small (less than the size of a [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure).  
   
-- **WSAEINVAL** el nombre de host no es válido.  
+- **WSAEINVAL** The host name is invalid.  
   
-- **WSAENETRESET** se debe restablecer la conexión porque la implementación de Windows Sockets quitó.  
+- **WSAENETRESET** The connection must be reset because the Windows Sockets implementation dropped it.  
   
-- `WSAENOBUFS`La implementación de Windows Sockets notifica un interbloqueo de búfer.  
+- `WSAENOBUFS` The Windows Sockets implementation reports a buffer deadlock.  
   
-- **WSAENOTCONN** el socket no conectado ( **SOCK_STREAM** solo).  
+- **WSAENOTCONN** The socket is not connected ( **SOCK_STREAM** only).  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-- **WSAEOPNOTSUPP MSG_OOB** se ha especificado, pero el socket no es de tipo **SOCK_STREAM**.  
+- **WSAEOPNOTSUPP MSG_OOB** was specified, but the socket is not of type **SOCK_STREAM**.  
   
-- **WSAESHUTDOWN** se cerró el socket; no es posible llamar a `SendToEx` en un socket después `ShutDown` se ha invocado con `nHow` establecido en 1 o 2.  
+- **WSAESHUTDOWN** The socket has been shut down; it is not possible to call `SendToEx` on a socket after `ShutDown` has been invoked with `nHow` set to 1 or 2.  
   
-- **WSAEWOULDBLOCK** el socket se marca como no sea de bloqueo y la operación causaría un bloqueo.  
+- **WSAEWOULDBLOCK** The socket is marked as nonblocking and the requested operation would block.  
   
-- **WSAEMSGSIZE** el socket es de tipo **SOCK_DGRAM**, y el datagrama es mayor que el máximo admitido por la implementación de Windows Sockets.  
+- **WSAEMSGSIZE** The socket is of type **SOCK_DGRAM**, and the datagram is larger than the maximum supported by the Windows Sockets implementation.  
   
-- **WSAECONNABORTED** el circuito virtual se anuló debido al tiempo de espera u otro error.  
+- **WSAECONNABORTED** The virtual circuit was aborted due to timeout or other failure.  
   
-- **WSAECONNRESET** el circuito virtual se restableció por el lado remoto.  
+- **WSAECONNRESET** The virtual circuit was reset by the remote side.  
   
-- **WSAEADDRNOTAVAIL** la dirección especificada no está disponible en el equipo local.  
+- **WSAEADDRNOTAVAIL** The specified address is not available from the local machine.  
   
-- **WSAEAFNOSUPPORT** direcciones de la familia especificada no se puede usar con este socket.  
+- **WSAEAFNOSUPPORT** Addresses in the specified family cannot be used with this socket.  
   
-- **WSAEDESTADDRREQ** se requiere una dirección de destino.  
+- **WSAEDESTADDRREQ** A destination address is required.  
   
-- **WSAENETUNREACH** no se puede alcanzar la red desde este host en este momento.  
+- **WSAENETUNREACH** The network cannot be reached from this host at this time.  
   
-### <a name="remarks"></a>Comentarios  
- Este método es el mismo que [:: SendTo](#sendto) salvo que controla IPv6 direcciones protocolos así como antiguos.  
+### <a name="remarks"></a>Remarks  
+ This method is the same as [CAsyncSocket::SendTo](#sendto) except that it handles IPv6 addresses as well as older protocols.  
   
- `SendToEx`se utiliza en los sockets de datagramas o la secuencia y se utiliza para escribir los datos salientes en un socket. Para los sockets de datagramas, se debe tener cuidado de no debe exceder el tamaño máximo de paquetes IP de las subredes subyacentes, que viene determinado por la **iMaxUdpDg** el elemento en el [WSADATA](../../mfc/reference/wsadata-structure.md) estructura rellena [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Si los datos están demasiado largos para pasar de forma atómica a través del protocolo subyacente, el error **WSAEMSGSIZE** se devuelve, y se transmite ningún dato.  
+ `SendToEx` is used on datagram or stream sockets and is used to write outgoing data on a socket. For datagram sockets, care must be taken not to exceed the maximum IP packet size of the underlying subnets, which is given by the **iMaxUdpDg** element in the [WSADATA](../../mfc/reference/wsadata-structure.md) structure filled out by [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). If the data is too long to pass atomically through the underlying protocol, the error **WSAEMSGSIZE** is returned, and no data is transmitted.  
   
- Tenga en cuenta que la realización correcta de un `SendToEx` no indica que se ha entregado correctamente los datos.  
+ Note that the successful completion of a `SendToEx` does not indicate that the data was successfully delivered.  
   
- `SendToEx`sólo se utiliza en una **SOCK_DGRAM** socket para enviar un datagrama a un socket específico identificado por el `lpSockAddr` parámetro.  
+ `SendToEx` is only used on a **SOCK_DGRAM** socket to send a datagram to a specific socket identified by the `lpSockAddr` parameter.  
   
- Para enviar una difusión (en un **SOCK_DGRAM** sólo), la dirección en la `lpSockAddr` parámetro debe crearse utilizando la dirección IP especial **INADDR_BROADCAST** (definido en el archivo de encabezado de Windows Sockets WINSOCK. (H) junto con el número de puerto deseado. O bien, si la `lpszHostAddress` parámetro es **NULL**, el socket está configurado para la difusión. No es recomendable generalmente para un datagrama difusión supere el tamaño en el que puede producirse fragmentación, lo que implica que la parte de datos del datagrama (sin incluir los encabezados) no debe superar los 512 bytes.  
+ To send a broadcast (on a **SOCK_DGRAM** only), the address in the `lpSockAddr` parameter should be constructed using the special IP address **INADDR_BROADCAST** (defined in the Windows Sockets header file WINSOCK.H) together with the intended port number. Or, if the `lpszHostAddress` parameter is **NULL**, the socket is configured for broadcast. It is generally inadvisable for a broadcast datagram to exceed the size at which fragmentation can occur, which implies that the data portion of the datagram (excluding headers) should not exceed 512 bytes.  
   
-##  <a name="setsockopt"></a>CAsyncSocket::SetSockOpt  
- Llame a esta función miembro para establecer una opción de socket.  
+##  <a name="setsockopt"></a>  CAsyncSocket::SetSockOpt  
+ Call this member function to set a socket option.  
   
 ```  
 BOOL SetSockOpt(
@@ -1542,130 +1570,130 @@ BOOL SetSockOpt(
     int nLevel = SOL_SOCKET);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nOptionName`  
- La opción de socket para los que el valor va a establecerse.  
+ The socket option for which the value is to be set.  
   
  `lpOptionValue`  
- Un puntero al búfer en el que se proporciona el valor de la opción solicitada.  
+ A pointer to the buffer in which the value for the requested option is supplied.  
   
  `nOptionLen`  
- El tamaño de la `lpOptionValue` búfer en bytes.  
+ The size of the `lpOptionValue` buffer in bytes.  
   
  `nLevel`  
- El nivel en el que se define la opción; los niveles admitidos sólo son **SOL_SOCKET** y **IPPROTO_TCP**.  
+ The level at which the option is defined; the only supported levels are **SOL_SOCKET** and **IPPROTO_TCP**.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente; de lo contrario, 0 y un código de error específico se pueden recuperar mediante una llamada a [GetLastError](#getlasterror). Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEFAULT** `lpOptionValue` no es una parte válida del espacio de direcciones del proceso.  
+- **WSAEFAULT** `lpOptionValue` is not in a valid part of the process address space.  
   
-- **WSAEINPROGRESS** está en curso una operación bloqueo de Windows Sockets.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAEINVAL** `nLevel` no es válido, o la información de `lpOptionValue` no es válido.  
+- **WSAEINVAL** `nLevel` is not valid, or the information in `lpOptionValue` is not valid.  
   
-- **WSAENETRESET** conexión ha agotado cuando **SO_KEEPALIVE** se establece.  
+- **WSAENETRESET** Connection has timed out when **SO_KEEPALIVE** is set.  
   
-- **WSAENOPROTOOPT** la opción es desconocido o no compatible. En particular, **SO_BROADCAST** no se admite en sockets de tipo **SOCK_STREAM**, mientras que **SO_DONTLINGER**, **SO_KEEPALIVE**, **SO_LINGER**, y **SO_OOBINLINE** no se admite en sockets de tipo **SOCK_DGRAM**.  
+- **WSAENOPROTOOPT** The option is unknown or unsupported. In particular, **SO_BROADCAST** is not supported on sockets of type **SOCK_STREAM**, while **SO_DONTLINGER**, **SO_KEEPALIVE**, **SO_LINGER**, and **SO_OOBINLINE** are not supported on sockets of type **SOCK_DGRAM**.  
   
-- **WSAENOTCONN** conexión ha sido restablecer cuando **SO_KEEPALIVE** se establece.  
+- **WSAENOTCONN** Connection has been reset when **SO_KEEPALIVE** is set.  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-### <a name="remarks"></a>Comentarios  
- `SetSockOpt`establece el valor actual de una opción de socket asociado a un socket de cualquier tipo, en cualquier estado. Aunque pueden existir opciones en varios niveles de protocolo, esta especificación sólo define opciones que existen en el nivel superior "socket". Opciones afectan a las operaciones de socket, como si se recepción datos inmediatos en el flujo normal de datos, si el socket pueden enviar mensajes de difusión y así sucesivamente.  
+### <a name="remarks"></a>Remarks  
+ `SetSockOpt` sets the current value for a socket option associated with a socket of any type, in any state. Although options can exist at multiple protocol levels, this specification only defines options that exist at the uppermost "socket" level. Options affect socket operations, such as whether expedited data is received in the normal data stream, whether broadcast messages can be sent on the socket, and so on.  
   
- Hay dos tipos de opciones de socket: opciones booleanas que habilitar o deshabilitación una característica o el comportamiento y las opciones que requieren una estructura o un valor entero. Para habilitar una opción de booleana `lpOptionValue` apunta a un entero distinto de cero. Para deshabilitar la opción `lpOptionValue` apunta a un entero igual a cero. `nOptionLen`debe ser igual a **sizeof (bool)** para opciones booleanas. Para otras opciones, `lpOptionValue` apunta al entero o estructura que contiene el valor deseado para la opción y `nOptionLen` es la longitud de la estructura o un entero.  
+ There are two types of socket options: Boolean options that enable or disable a feature or behavior, and options which require an integer value or structure. To enable a Boolean option, `lpOptionValue` points to a nonzero integer. To disable the option `lpOptionValue` points to an integer equal to zero. `nOptionLen` should be equal to **sizeof(BOOL)** for Boolean options. For other options, `lpOptionValue` points to the integer or structure that contains the desired value for the option, and `nOptionLen` is the length of the integer or structure.  
   
- **SO_LINGER** la acción realizada cuando no enviado los datos en la cola en un socket de controles y la **cerrar** función se invoca para cerrar el socket.  
+ **SO_LINGER** controls the action taken when unsent data is queued on a socket and the **Close** function is called to close the socket.  
   
- De forma predeterminada, no se puede enlazar un socket (consulte [enlace](#bind)) a una dirección local que ya está en uso. En ocasiones, sin embargo, puede ser deseable "reutilizar" una dirección de esta manera. Puesto que todas las conexiones se identifican mediante la combinación de direcciones locales y remotas, no hay ningún problema de tener dos sockets enlazados a la misma dirección local, como las direcciones remotas son diferentes.  
+ By default, a socket cannot be bound (see [Bind](#bind)) to a local address which is already in use. On occasion, however, it may be desirable to "reuse" an address in this way. Since every connection is uniquely identified by the combination of local and remote addresses, there is no problem with having two sockets bound to the same local address as long as the remote addresses are different.  
   
- Para informar a la implementación de Windows Sockets que un **enlazar** llamada en un socket que no se pueden bloquear porque la dirección deseada ya está en uso por otro socket, la aplicación debe establecer el **SO_REUSEADDR** socket opción para el socket antes de emitir la **enlazar** llamar. Tenga en cuenta que la opción se interpreta sólo en el momento de la **enlazar** llamar: por lo tanto, es necesario (pero inofensivo) establecer la opción en un socket que no esté enlazado a una dirección existente, y establecer o restablecer la opción después de la **enlazar** llamada no tiene ningún efecto en este o cualquier otro tipo de socket.  
+ To inform the Windows Sockets implementation that a **Bind** call on a socket should not be disallowed because the desired address is already in use by another socket, the application should set the **SO_REUSEADDR** socket option for the socket before issuing the **Bind** call. Note that the option is interpreted only at the time of the **Bind** call: it is therefore unnecessary (but harmless) to set the option on a socket which is not to be bound to an existing address, and setting or resetting the option after the **Bind** call has no effect on this or any other socket.  
   
- Una aplicación puede solicitar que la implementación de Windows Sockets habilitar el uso de paquetes "keep-alive" en las conexiones de protocolo de Control de transmisión (TCP) activando la **SO_KEEPALIVE** opción de socket. Una implementación de Windows Sockets no necesita admitir el uso de abiertas: si lo hace, la semántica precisa son específicos de la implementación, pero debe ajustarse a la sección 4.2.3.6 de RFC 1122: "requisitos para Hosts de Internet: niveles de comunicación." Si se interrumpe una conexión como resultado de "abiertas" el código de error **WSAENETRESET** se devuelve a las llamadas en curso en el socket, y las subsiguientes llamadas se producirá un error con **WSAENOTCONN**.  
+ An application can request that the Windows Sockets implementation enable the use of "keep-alive" packets on Transmission Control Protocol (TCP) connections by turning on the **SO_KEEPALIVE** socket option. A Windows Sockets implementation need not support the use of keep-alives: if it does, the precise semantics are implementation-specific but should conform to section 4.2.3.6 of RFC 1122: "Requirements for Internet Hosts — Communication Layers." If a connection is dropped as the result of "keep-alives" the error code **WSAENETRESET** is returned to any calls in progress on the socket, and any subsequent calls will fail with **WSAENOTCONN**.  
   
- El **TCP_NODELAY** opción deshabilita el algoritmo de Nagle. El algoritmo de Nagle se utiliza para reducir el número de pequeños paquetes enviados por un host mediante el almacenamiento en búfer de datos no confirmados de envío hasta que puede enviarse un paquete de tamaño completo. Sin embargo, para algunas aplicaciones de este algoritmo puede reducir el rendimiento, y **TCP_NODELAY** puede utilizarse para desactivarlo. Escritores de aplicación no deben establecer **TCP_NODELAY** a menos que el efecto de hacerlo es claros y deseado, desde la configuración **TCP_NODELAY** puede tener un efecto negativo importante en el rendimiento de la red. **Tcp_nodelay** es el único admite la opción de socket que usa un nivel de **IPPROTO_TCP**; todas las demás opciones utilizan nivel **SOL_SOCKET**.  
+ The **TCP_NODELAY** option disables the Nagle algorithm. The Nagle algorithm is used to reduce the number of small packets sent by a host by buffering unacknowledged send data until a full-size packet can be sent. However, for some applications this algorithm can impede performance, and **TCP_NODELAY** can be used to turn it off. Application writers should not set **TCP_NODELAY** unless the impact of doing so is well-understood and desired, since setting **TCP_NODELAY** can have a significant negative impact on network performance. **TCP_NODELAY** is the only supported socket option which uses level **IPPROTO_TCP**; all other options use level **SOL_SOCKET**.  
   
- Algunas implementaciones de la oferta de Windows Sockets genere información de depuración si el **SO_DEBUG** opción está establecida por una aplicación.  
+ Some implementations of Windows Sockets supply output debug information if the **SO_DEBUG** option is set by an application.  
   
- Se admiten las siguientes opciones para `SetSockOpt`. El tipo identifica el tipo de datos dirigidos por `lpOptionValue`.  
+ The following options are supported for `SetSockOpt`. The Type identifies the type of data addressed by `lpOptionValue`.  
   
-|Valor|Tipo|Significado|  
+|Value|Type|Meaning|  
 |-----------|----------|-------------|  
-|**SO_BROADCAST**|**BOOL**|Permitir la transmisión de mensajes de difusión en el socket.|  
-|**SO_DEBUG**|**BOOL**|Registra información de depuración.|  
-|**SO_DONTLINGER**|**BOOL**|No bloquear **cerrar** esperando los datos que se envían. Esta opción es equivalente a establecer **SO_LINGER** con **l_onoff** establecido en cero.|  
-|**SO_DONTROUTE**|**BOOL**|No enrutar: enviar directamente a la interfaz.|  
-|**SO_KEEPALIVE**|**BOOL**|Enviar keepalive.|  
-|**SO_LINGER**|**struct LINGER**|Demora **cerrar** si no enviado los datos están presentes.|  
-|**SO_OOBINLINE**|**BOOL**|Recibir datos fuera de banda en el flujo normal de datos.|  
-|**SO_RCVBUF**|`int`|Especifique recibe el tamaño del búfer.|  
-|**SO_REUSEADDR**|**BOOL**|Permitir que el socket esté enlazado a una dirección que ya está en uso. (See [Bind](#bind).)|  
-|**SO_SNDBUF**|`int`|Especificar el tamaño de búfer para los envíos.|  
-|**TCP_NODELAY**|**BOOL**|Deshabilita el algoritmo de Nagle para la fusión de envíos.|  
+|**SO_BROADCAST**|**BOOL**|Allow transmission of broadcast messages on the socket.|  
+|**SO_DEBUG**|**BOOL**|Record debugging information.|  
+|**SO_DONTLINGER**|**BOOL**|Don't block **Close** waiting for unsent data to be sent. Setting this option is equivalent to setting **SO_LINGER** with **l_onoff** set to zero.|  
+|**SO_DONTROUTE**|**BOOL**|Don't route: send directly to interface.|  
+|**SO_KEEPALIVE**|**BOOL**|Send keep-alives.|  
+|**SO_LINGER**|**struct LINGER**|Linger on **Close** if unsent data is present.|  
+|**SO_OOBINLINE**|**BOOL**|Receive out-of-band data in the normal data stream.|  
+|**SO_RCVBUF**|`int`|Specify buffer size for receives.|  
+|**SO_REUSEADDR**|**BOOL**|Allow the socket to be bound to an address which is already in use. (See [Bind](#bind).)|  
+|**SO_SNDBUF**|`int`|Specify buffer size for sends.|  
+|**TCP_NODELAY**|**BOOL**|Disables the Nagle algorithm for send coalescing.|  
   
- Opciones de Berkeley Software Distribution (BSD) no se admite para `SetSockOpt` son:  
+ Berkeley Software Distribution (BSD) options not supported for `SetSockOpt` are:  
   
-|Valor|Tipo|Significado|  
+|Value|Type|Meaning|  
 |-----------|----------|-------------|  
-|**SO_ACCEPTCONN**|**BOOL**|Socket de escucha|  
-|**SO_ERROR**|`int`|Obtiene el estado de error y borra.|  
-|**SO_RCVLOWAT**|`int`|Recibir marca de agua suave.|  
-|**SO_RCVTIMEO**|`int`|Tiempo de espera de recepción|  
-|**SO_SNDLOWAT**|`int`|Enviar la marca de agua suave.|  
-|**SO_SNDTIMEO**|`int`|Tiempo de espera de envío.|  
-|**SO_TYPE**|`int`|Tipo del socket.|  
-|**IP_OPTIONS**||Establezca el campo de opciones en el encabezado IP.|  
+|**SO_ACCEPTCONN**|**BOOL**|Socket is listening|  
+|**SO_ERROR**|`int`|Get error status and clear.|  
+|**SO_RCVLOWAT**|`int`|Receive low water mark.|  
+|**SO_RCVTIMEO**|`int`|Receive timeout|  
+|**SO_SNDLOWAT**|`int`|Send low water mark.|  
+|**SO_SNDTIMEO**|`int`|Send timeout.|  
+|**SO_TYPE**|`int`|Type of the socket.|  
+|**IP_OPTIONS**||Set options field in IP header.|  
   
-##  <a name="shutdown"></a>CAsyncSocket::ShutDown  
- Llamada a esta función miembro para deshabilitar envía, recibe, o ambos en el socket.  
+##  <a name="shutdown"></a>  CAsyncSocket::ShutDown  
+ Call this member function to disable sends, receives, or both on the socket.  
   
 ```  
 BOOL ShutDown(int nHow = sends);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nHow`  
- Una marca que describe qué tipos de operación ya no se permitirá, mediante los valores enumerados siguientes:  
+ A flag that describes what types of operation will no longer be allowed, using the following enumerated values:  
   
-- **recibe = 0**  
+- **receives = 0**  
   
-- **envía = 1**  
+- **sends = 1**  
   
-- **tanto = 2**  
+- **both = 2**  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente; de lo contrario, 0 y un código de error específico se pueden recuperar mediante una llamada a [GetLastError](#getlasterror). Los errores siguientes se aplican a esta función miembro:  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling [GetLastError](#getlasterror). The following errors apply to this member function:  
   
-- **WSANOTINITIALISED** correcta [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) debe producirse antes de utilizar esta API.  
+- **WSANOTINITIALISED** A successful [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) must occur before using this API.  
   
-- **WSAENETDOWN** implementación de los Sockets de Windows ha detectado que el subsistema de red no pudo.  
+- **WSAENETDOWN** The Windows Sockets implementation detected that the network subsystem failed.  
   
-- **WSAEINVAL** `nHow` no es válido.  
+- **WSAEINVAL** `nHow` is not valid.  
   
-- **WSAEINPROGRESS** está en curso una operación bloqueo de Windows Sockets.  
+- **WSAEINPROGRESS** A blocking Windows Sockets operation is in progress.  
   
-- **WSAENOTCONN** el socket no conectado ( **SOCK_STREAM** solo).  
+- **WSAENOTCONN** The socket is not connected ( **SOCK_STREAM** only).  
   
-- **WSAENOTSOCK** el descriptor no es un socket.  
+- **WSAENOTSOCK** The descriptor is not a socket.  
   
-### <a name="remarks"></a>Comentarios  
- `ShutDown`se utiliza en todos los tipos de sockets para deshabilitar la recepción, transmisión o ambos. Si `nHow` es 0, recibe subsiguientes en el socket se deshabilitará. Esto no tiene ningún efecto en las capas de protocolo inferiores.  
+### <a name="remarks"></a>Remarks  
+ `ShutDown` is used on all types of sockets to disable reception, transmission, or both. If `nHow` is 0, subsequent receives on the socket will be disallowed. This has no effect on the lower protocol layers.  
   
- Protocolo de Control de transmisión (TCP), no se cambia la ventana TCP y los datos entrantes serán aceptados (pero no confirmado) hasta que se agote la ventana. Protocolo de datagramas de usuario (UDP), los datagramas entrantes aceptados y en cola. En ningún caso se generará un paquete de error ICMP. Si `nHow` es 1, no se permiten los envíos posteriores. Para los sockets TCP, se enviará un FIN. Establecer `nHow` a 2 deshabilita tanto los envíos y recepciones como se describió anteriormente.  
+ For Transmission Control Protocol (TCP), the TCP window is not changed and incoming data will be accepted (but not acknowledged) until the window is exhausted. For User Datagram Protocol (UDP), incoming datagrams are accepted and queued. In no case will an ICMP error packet be generated. If `nHow` is 1, subsequent sends are disallowed. For TCP sockets, a FIN will be sent. Setting `nHow` to 2 disables both sends and receives as described above.  
   
- Tenga en cuenta que `ShutDown` no cerrar el socket y los recursos adjuntados al socket no se liberarán hasta que **cerrar** se llama. Una aplicación no debe confiar en poder reutilizar un socket después de que se ha cerrado. En concreto, una implementación de Windows Sockets no es necesario para admitir el uso de **conectar** en un socket de este tipo.  
+ Note that `ShutDown` does not close the socket, and resources attached to the socket will not be freed until **Close** is called. An application should not rely on being able to reuse a socket after it has been shut down. In particular, a Windows Sockets implementation is not required to support the use of **Connect** on such a socket.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [CAsyncSocket::OnReceive](#onreceive).  
+### <a name="example"></a>Example  
+  See the example for [CAsyncSocket::OnReceive](#onreceive).  
   
-##  <a name="socket"></a>CASyncSocket::Socket  
- Asigna un identificador de socket.  
+##  <a name="socket"></a>  CASyncSocket::Socket  
+ Allocates a socket handle.  
   
 ```  
 BOOL Socket(
@@ -1675,40 +1703,40 @@ BOOL Socket(
     int nAddressFormat = PF_INET);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nSocketType`  
- Especifica `SOCK_STREAM` o `SOCK_DGRAM`.  
+ Specifies `SOCK_STREAM` or `SOCK_DGRAM`.  
   
  `lEvent`  
- Máscara de bits que especifica una combinación de eventos de red en el que está interesada la aplicación.  
+ A bitmask that specifies a combination of network events in which the application is interested.  
   
-- `FD_READ`: Desea recibir una notificación de preparación para la lectura.  
+- `FD_READ`: Want to receive notification of readiness for reading.  
   
-- `FD_WRITE`: Desea recibir una notificación de preparación para la escritura.  
+- `FD_WRITE`: Want to receive notification of readiness for writing.  
   
-- `FD_OOB`: Desea recibir una notificación de la llegada de datos fuera de banda.  
+- `FD_OOB`: Want to receive notification of the arrival of out-of-band data.  
   
-- `FD_ACCEPT`: Desea recibir una notificación de las conexiones entrantes.  
+- `FD_ACCEPT`: Want to receive notification of incoming connections.  
   
-- `FD_CONNECT`: Desea recibir una notificación de conexión completa.  
+- `FD_CONNECT`: Want to receive notification of completed connection.  
   
-- `FD_CLOSE`: Desea recibir una notificación de cierre del socket.  
+- `FD_CLOSE`: Want to receive notification of socket closure.  
   
  `nProtocolType`  
- Protocolo que se usará con el socket que es específico de la familia de la dirección indicada.  
+ Protocol to be used with the socket that is specific to the indicated address family.  
   
  `nAddressFormat`  
- Especificación para la familia de direcciones.  
+ Address family specification.  
   
-### <a name="return-value"></a>Valor devuelto  
- Devuelve `TRUE` si la operación se realiza correctamente; de lo contrario, devuelve `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` on success, `FALSE` on failure.  
   
-### <a name="remarks"></a>Comentarios  
- Este método asigna un identificador de socket. No llamar [CAsyncSocket::Bind](#bind) para enlazar el socket a una dirección especificada, por lo que debe llamar a `Bind` más adelante para enlazar el socket a una dirección especificada. Puede usar [CAsyncSocket::SetSockOpt](#setsockopt) para establecer la opción de socket antes del enlace.  
+### <a name="remarks"></a>Remarks  
+ This method allocates a socket handle. It does not call [CAsyncSocket::Bind](#bind) to bind the socket to a specified address, so you need to call `Bind` later to bind the socket to a specified address. You can use [CAsyncSocket::SetSockOpt](#setsockopt) to set the socket option before it is bound.  
   
-## <a name="see-also"></a>Vea también  
- [CObject (clase)](../../mfc/reference/cobject-class.md)   
- [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
- [CSocket (clase)](../../mfc/reference/csocket-class.md)   
- [Clase CSocketFile](../../mfc/reference/csocketfile-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CSocket Class](../../mfc/reference/csocket-class.md)   
+ [CSocketFile Class](../../mfc/reference/csocketfile-class.md)
 

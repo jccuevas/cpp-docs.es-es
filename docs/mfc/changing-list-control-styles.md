@@ -1,43 +1,62 @@
 ---
-title: "Cambiar los estilos de control de lista | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl (clase), cambiar estilos"
-  - "CListCtrl (clase), estilos"
-  - "estilos, CListCtrl"
+title: Changing List Control Styles | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- styles [MFC], CListCtrl
+- CListCtrl class [MFC], styles
+- CListCtrl class [MFC], changing styles
 ms.assetid: be74a005-0795-417c-9056-f6342aa74b26
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Cambiar los estilos de control de lista
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bfc54eaadf15d29aaa6317c7b286f10daa5b9453
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Puede cambiar el estilo de ventana de un control de lista \([CListCtrl](../mfc/reference/clistctrl-class.md)\) en cualquier momento después de crearlo.  Cambiar la orientación de ventana, cambia la clase de vista que utiliza el control.  Por ejemplo, emular el Explorador, es posible que proporcione elementos de menú o los botones de la barra de herramientas para cambiar el control entre vistas diferentes: vista de iconos, vista de lista, etc.  
+---
+# <a name="changing-list-control-styles"></a>Changing List Control Styles
+You can change the window style of a list control ([CListCtrl](../mfc/reference/clistctrl-class.md)) at any time after you create it. By changing the window style, you change the kind of view the control uses. For example, to emulate the Explorer, you might supply menu items or toolbar buttons for switching the control between different views: icon view, list view, and so on.  
   
- Por ejemplo, cuando el usuario selecciona el elemento de menú, podría hacer una llamada a [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) para recuperar el estilo del control actual y después llamar a [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) para restaurar el estilo.  Para obtener más información, vea [Utilizar Controles de vista de lista](http://msdn.microsoft.com/library/windows/desktop/bb774736) en [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For example, when the user selects your menu item, you could make a call to [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) to retrieve the current style of the control and then call [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) to reset the style. For more information, see [Using List View Controls](http://msdn.microsoft.com/library/windows/desktop/bb774736) in the Windows SDK.  
   
- Los estilos disponibles se muestran en [crear](../Topic/CListCtrl::Create.md).  Los estilos `LVS_ICON`, `LVS_SMALLICON`, `LVS_LIST`, y `LVS_REPORT` señalan las cuatro vistas de control list.  
+ Available styles are listed in [Create](../mfc/reference/clistctrl-class.md#create). The styles `LVS_ICON`, `LVS_SMALLICON`, `LVS_LIST`, and `LVS_REPORT` designate the four list control views.  
   
-## Estilos extendidos  
- Además de los estilos estándar para un control de lista, hay otro conjunto, como estilos extendidos.  Estos estilos, descritos en [Estilos extendidos de la vista de lista](http://msdn.microsoft.com/library/windows/desktop/bb774732) en [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)], proporcionan varias funciones útiles que personalizan el comportamiento de control de la lista.  Para implementar el comportamiento de un estilo \(como selección de suspensión\), haga una llamada a [CListCtrl::SetExtendedStyle](../Topic/CListCtrl::SetExtendedStyle.md), pasando el estilo necesario.  El ejemplo siguiente se muestra la llamada de función:  
+## <a name="extended-styles"></a>Extended Styles  
+ In addition to the standard styles for a list control, there is another set, referred to as extended styles. These styles, discussed in [Extended List View Styles](http://msdn.microsoft.com/library/windows/desktop/bb774732) in the Windows SDK, provide a variety of useful features that customize the behavior of your list control. To implement the behavior of a certain style (such as hover selection), make a call to [CListCtrl::SetExtendedStyle](../mfc/reference/clistctrl-class.md#setextendedstyle), passing the needed style. The following example demonstrates the function call:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#22](../mfc/codesnippet/CPP/changing-list-control-styles_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#22](../mfc/codesnippet/cpp/changing-list-control-styles_1.cpp)]  
   
 > [!NOTE]
->  Para que la selección de suspensión funcione, debe hacer **LVS\_EX\_ONECLICKACTIVATE** o **LVS\_EX\_TWOCLICKACTIVATE** activar.  
+>  For hover selection to work, you must also have either **LVS_EX_ONECLICKACTIVATE** or **LVS_EX_TWOCLICKACTIVATE** turned on.  
   
-## Vea también  
- [Usar CListCtrl](../mfc/using-clistctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<stdexcept>
-- std::<stdexcept>
-- <stdexcept>
+- std::<stdexcept>", "<stdexcept>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a01f0cf531196d59815eb87f03ee9d8a15574088
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 42d6d48b08732712b4b7c7898b937017197b20a0
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltstdexceptgt"></a>&lt;stdexcept&gt;
-Define varias clases estándar usadas para notificar excepciones. Las clases forman una jerarquía de derivación, todas ellas derivadas de la clase [exception](../standard-library/exception-class.md), e incluyen dos tipos generales de excepciones: errores lógicos y errores en tiempo de ejecución. Los errores lógicos son errores producidos por el programador. Se derivan de la clase base logic_error e incluyen:  
+Defines several standard classes used for reporting exceptions. The classes form a derivation hierarchy all derived from class [exception](../standard-library/exception-class.md) and include two general types of exceptions: logical errors and run-time errors. The logical errors are caused programmer mistakes. They derive from the base class logic_error and include:  
   
 -   `domain_error`  
   
@@ -53,7 +51,7 @@ Define varias clases estándar usadas para notificar excepciones. Las clases for
   
 -   `out_of_range`  
   
- Los errores de tiempo de ejecución se producen debido a errores en las funciones de biblioteca o en el sistema de tiempo de ejecución. Se derivan de la clase base runtime_error e incluyen:  
+ The run-time errors occur because of mistakes in either the library functions or in the run-time system. They derive from the base class runtime_error and include:  
   
 -   `overflow_error`  
   
@@ -61,22 +59,22 @@ Define varias clases estándar usadas para notificar excepciones. Las clases for
   
 -   `underflow_error`  
   
-### <a name="classes"></a>Clases  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[domain_error (Clase)](../standard-library/domain-error-class.md)|Clase que actúa como la clase base para todas las excepciones iniciadas para notificar un error de dominio.|  
-|[invalid_argument (Clase)](../standard-library/invalid-argument-class.md)|Clase que actúa como la clase base para todas las excepciones iniciadas para notificar un argumento inválido.|  
-|[length_error (Clase)](../standard-library/length-error-class.md)|Clase que actúa como la clase base para todas las excepciones iniciadas para informar de un intento de generar un objeto demasiado largo como para poder especificarlo.|  
-|[logic_error (Clase)](../standard-library/logic-error-class.md)|Clase que actúa como la clase base para todas las excepciones iniciadas para informar de errores supuestamente detectables antes de que se ejecute el programa, como las infracciones de las condiciones lógicas previas.|  
-|[out_of_range (Clase)](../standard-library/out-of-range-class.md)|Clase que actúa como la clase base para todas las excepciones iniciadas para informar sobre un argumento que está fuera de su rango válido.|  
-|[overflow_error (Clase)](../standard-library/overflow-error-class.md)|Clase que actúa como la clase base para todas las excepciones iniciadas para notificar un desbordamiento aritmético.|  
-|[range_error (Clase)](../standard-library/range-error-class.md)|Clase que actúa como la clase base para todas las excepciones iniciadas para notificar un error de rango.|  
-|[runtime_error (Clase)](../standard-library/runtime-error-class.md)|Clase que actúa como la clase base para todas las excepciones iniciadas para informar de errores supuestamente detectables únicamente cuando se ejecute el programa.|  
-|[underflow_error (Clase)](../standard-library/underflow-error-class.md)|Clase que actúa como la clase base para todas las excepciones iniciadas para notificar un subdesbordamiento aritmético.|  
+|[domain_error Class](../standard-library/domain-error-class.md)|The class serves as the base class for all exceptions thrown to report a domain error.|  
+|[invalid_argument Class](../standard-library/invalid-argument-class.md)|The class serves as the base class for all exceptions thrown to report an invalid argument.|  
+|[length_error Class](../standard-library/length-error-class.md)|The class serves as the base class for all exceptions thrown to report an attempt to generate an object too long to be specified.|  
+|[logic_error Class](../standard-library/logic-error-class.md)|The class serves as the base class for all exceptions thrown to report errors presumably detectable before the program executes, such as violations of logical preconditions.|  
+|[out_of_range Class](../standard-library/out-of-range-class.md)|The class serves as the base class for all exceptions thrown to report an argument that is out of its valid range.|  
+|[overflow_error Class](../standard-library/overflow-error-class.md)|The class serves as the base class for all exceptions thrown to report an arithmetic overflow.|  
+|[range_error Class](../standard-library/range-error-class.md)|The class serves as the base class for all exceptions thrown to report a range error.|  
+|[runtime_error Class](../standard-library/runtime-error-class.md)|The class serves as the base class for all exceptions thrown to report errors presumably detectable only when the program executes.|  
+|[underflow_error Class](../standard-library/underflow-error-class.md)|The class serves as the base class for all exceptions thrown to report an arithmetic underflow.|  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
- [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

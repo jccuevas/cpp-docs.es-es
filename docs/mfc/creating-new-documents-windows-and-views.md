@@ -1,69 +1,88 @@
 ---
-title: "Crear nuevos documentos, ventanas y vistas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ventanas secundarias, crear MDI"
-  - "personalizar objetos predeterminados de MFC"
-  - "objetos de documentos, crear"
-  - "ventanas de marco [C++], crear"
-  - "inicializar vistas"
-  - "MDI [C++], crear ventanas"
-  - "MDI [C++], ventanas de marco"
-  - "MFC [C++], documentos"
-  - "MFC [C++], ventanas de marco"
-  - "MFC [C++], vistas"
-  - "objetos predeterminados de MFC"
-  - "objetos predeterminados de MFC, personalizar"
-  - "objetos [C++], crear objetos de documentos"
-  - "reemplazar, comportamiento de vista predeterminada"
-  - "objetos de vista"
-  - "objetos de vista, crear"
-  - "vistas [C++], inicializar"
-  - "vistas [C++], invalidar el comportamiento predeterminado"
-  - "Window (objetos) [C++], crear"
-  - "ventanas [C++], crear"
-  - "ventanas [C++], MDI"
+title: Creating New Documents, Windows, and Views | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MDI [MFC], creating windows
+- window objects [MFC], creating
+- objects [MFC], creating document objects
+- MFC default objects
+- frame windows [MFC], creating
+- windows [MFC], MDI
+- MFC, documents
+- view objects [MFC], creating
+- windows [MFC], creating
+- overriding, default view behavior
+- views [MFC], initializing
+- customizing MFC default objects
+- MFC, frame windows
+- MFC, views
+- MDI [MFC], frame windows
+- child windows [MFC], creating MDI
+- view objects [MFC]
+- document objects [MFC], creating
+- MFC default objects [MFC], customizing
+- views [MFC], overriding default behavior
+- initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Crear nuevos documentos, ventanas y vistas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 124a063f0e0a0b9ce3363d5950b2b0c50e969118
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Las ilustraciones siguientes proporcionan información general sobre el proceso de creación de documentos, las vistas, las ventanas de marco.  Otros casos que se centran en los objetos que participan proporcionan más detalles.  
+---
+# <a name="creating-new-documents-windows-and-views"></a>Creating New Documents, Windows, and Views
+The following figures give an overview of the creation process for documents, views, and frame windows. Other articles that focus on the participating objects provide further details.  
   
- Al completar este proceso, los objetos de cooperación existen y almacena punteros entre sí.  Las ilustraciones siguientes muestran la secuencia en la que se crean los objetos.  Puede seguir el orden de la figura a la figura.  
+ Upon completion of this process, the cooperating objects exist and store pointers to each other. The following figures show the sequence in which objects are created. You can follow the sequence from figure to figure.  
   
- ![Secuencia para crear un documento](../mfc/media/vc387l1.png "vc387L1")  
-Secuencia de creación de un documento  
+ ![Sequence for creating a document](../mfc/media/vc387l1.gif "vc387l1")  
+Sequence in Creating a Document  
   
- ![Secuencia de creación de ventanas de marco](../mfc/media/vc387l2.png "vc387L2")  
-Secuencia de creación de una ventana de marco  
+ ![Frame Window Creation Sequence](../mfc/media/vc387l2.png "vc387l2")  
+Sequence in Creating a Frame Window  
   
- ![Secuencia para crear una vista](../mfc/media/vc387l3.png "vc387L3")  
-Secuencia de creación de una vista  
+ ![Sequence for creating a view](../mfc/media/vc387l3.gif "vc387l3")  
+Sequence in Creating a View  
   
- Para obtener información sobre cómo inicializar el marco el nuevo, la vista, y los objetos de la cuadro\- ventana, vea las clases [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), y [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) en la referencia de la biblioteca MFC.  Vea también [Nota técnica 22](../mfc/tn022-standard-commands-implementation.md), que explica la creación y procesos de inicialización más bajo su descripción de los comandos estándar de .NET framework para los elementos de `New` y de **Abierta** en el menú de **archivo** .  
+ For information about how the framework initializes the new document, view, and frame-window objects, see classes [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), and [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) in the MFC Library Reference. Also see [Technical Note 22](../mfc/tn022-standard-commands-implementation.md), which explains the creation and initialization processes further under its discussion of the framework's standard commands for the `New` and **Open** items on the **File** menu.  
   
-##  <a name="_core_initializing_your_own_additions_to_these_classes"></a> El que se inicializa Own Adiciones a las clases de These  
- Las ilustraciones anteriores también sugiere puntos en los que puede reemplazar funciones miembro para inicializar los objetos de la aplicación.  Un reemplazo de `OnInitialUpdate` en la clase de vista es el mejor lugar para inicializar la vista.  La llamada de `OnInitialUpdate` aparece inmediatamente después de crear la ventana de marco y la vista dentro de la ventana de marco se adjunta al documento.  Por ejemplo, si la vista es una vista de desplazamiento \(derivada de `CScrollView` en lugar de `CView`\), debe establecer el tamaño de la vista basado en el tamaño documento en la invalidación de `OnInitialUpdate` . \(Este proceso se describe en la clase [CScrollView](../mfc/reference/cscrollview-class.md).\) Puede reemplazar las funciones `OnNewDocument` y `OnOpenDocument` miembro de **CDocument** para proporcionar inicialización específica de la aplicación del documento.  Normalmente, debe reemplazar ambos como un documento se puede crear de dos maneras.  
+##  <a name="_core_initializing_your_own_additions_to_these_classes"></a> Initializing Your Own Additions to These Classes  
+ The preceding figures also suggest the points at which you can override member functions to initialize your application's objects. An override of `OnInitialUpdate` in your view class is the best place to initialize the view. The `OnInitialUpdate` call occurs immediately after the frame window is created and the view within the frame window is attached to its document. For example, if your view is a scroll view (derived from `CScrollView` rather than `CView`), you should set the view size based on the document size in your `OnInitialUpdate` override. (This process is described in the description of class [CScrollView](../mfc/reference/cscrollview-class.md).) You can override the **CDocument** member functions `OnNewDocument` and `OnOpenDocument` to provide application-specific initialization of the document. Typically, you must override both since a document can be created in two ways.  
   
- En la mayoría de los casos, el reemplazo debe llamar a la versión de la clase base.  Para obtener más información, vea funciones denominadas miembro de las clases [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), y [CWinApp](../mfc/reference/cwinapp-class.md) en la referencia de la biblioteca MFC.  
+ In most cases, your override should call the base class version. For more information, see the named member functions of classes [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), and [CWinApp](../mfc/reference/cwinapp-class.md) in the MFC Library Reference.  
   
-## Vea también  
- [Plantillas de documento y el proceso de creación de documentos y vistas](../mfc/document-templates-and-the-document-view-creation-process.md)   
- [Clear plantillas de documentos](../mfc/document-template-creation.md)   
- [Crear documentos y vistas](../mfc/document-view-creation.md)   
- [Relaciones entre objetos MFC](../mfc/relationships-among-mfc-objects.md)
+## <a name="see-also"></a>See Also  
+ [Document Templates and the Document/View Creation Process](../mfc/document-templates-and-the-document-view-creation-process.md)   
+ [Document Template Creation](../mfc/document-template-creation.md)   
+ [Document/View Creation](../mfc/document-view-creation.md)   
+ [Relationships Among MFC Objects](../mfc/relationships-among-mfc-objects.md)
+
+

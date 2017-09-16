@@ -1,47 +1,66 @@
 ---
-title: "Informaci&#243;n sobre herramientas en ventanas no derivadas de CFrameWnd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles [MFC], información sobre herramientas"
-  - "habilitar la información sobre herramientas"
-  - "funciones controladoras, información sobre herramientas"
-  - "Ayuda, información sobre herramientas para controles"
-  - "TOOLTIPTEXT (estructura)"
-  - "TTN_NEEDTEXT (mensaje)"
+title: Tool Tips in Windows Not Derived from CFrameWnd | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- enabling tool tips [MFC]
+- TOOLTIPTEXT structure [MFC]
+- Help [MFC], tool tips for controls
+- TTN_NEEDTEXT message [MFC]
+- controls [MFC], tool tips
+- handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Informaci&#243;n sobre herramientas en ventanas no derivadas de CFrameWnd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd2adc442eaa9a37522a276cca097bb9feda8fb6
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Esta familia de caso cubre habilitar la información sobre herramientas de los controles contenidos en una ventana que no se deriva de [CFrameWnd](../mfc/reference/cframewnd-class.md).  El artículo [Información sobre herramientas de barras de herramientas](../mfc/toolbar-tool-tips.md) proporciona información sobre la información sobre herramientas de los controles en `CFrameWnd`.  
+---
+# <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Tool Tips in Windows Not Derived from CFrameWnd
+This article family covers enabling tool tips for controls contained in a window that is not derived from [CFrameWnd](../mfc/reference/cframewnd-class.md). The article [Toolbars Tool Tips](../mfc/toolbar-tool-tips.md) provides information about tool tips for controls in a `CFrameWnd`.  
   
- Temas cubiertos en incluyen de la familia de artículo:  
+ Topics covered in this article family include:  
   
--   [Habilitar información sobre herramientas](../mfc/enabling-tool-tips.md)  
+-   [Enabling Tool Tips](../mfc/enabling-tool-tips.md)  
   
--   [Administrar la notificación de TTN\_NEEDTEXT para informaciones sobre herramientas](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)  
+-   [Handling TTN_NEEDTEXT Notification for Tool Tips](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)  
   
--   [La estructura de TOOLTIPTEXT](../mfc/tooltiptext-structure.md)  
+-   [The TOOLTIPTEXT Structure](../mfc/tooltiptext-structure.md)  
   
- La información sobre herramientas aparecen automáticamente para los botones y otros controles contenidos en una ventana primaria derivada de `CFrameWnd`.  Esto es porque `CFrameWnd` tiene un controlador predeterminado para la notificación de [TTN\_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760269) , que controla las notificaciones de **TTN\_NEEDTEXT** de los controles de información sobre herramientas asociados a los controles.  
+ Tool tips are automatically displayed for buttons and other controls contained in a parent window derived from `CFrameWnd`. This is because `CFrameWnd` has a default handler for the [TTN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760269) notification, which handles **TTN_NEEDTEXT** notifications from tool tip controls associated with controls.  
   
- Sin embargo, no se llama a este controlador predeterminado cuando la notificación de **TTN\_NEEDTEXT** se envía de un control de información sobre herramientas asociado a un control en una ventana que no es `CFrameWnd`, como un control en un cuadro de diálogo o una vista de formulario.  Por consiguiente, es necesario que proporcione una función controladora para el mensaje de notificación de **TTN\_NEEDTEXT** para mostrar información sobre herramientas para los controles secundarios.  
+ However, this default handler is not called when the **TTN_NEEDTEXT** notification is sent from a tool tip control associated with a control in a window that is not a `CFrameWnd`, such as a control on a dialog box or a form view. Therefore, it is necessary for you to provide a handler function for the **TTN_NEEDTEXT** notification message in order to display tool tips for child controls.  
   
- La información sobre herramientas predeterminadas proporcionadas para las ventanas por [CWnd::EnableToolTips](../Topic/CWnd::EnableToolTips.md) no tienen texto asociado a ellas.  Para recuperar el texto de la información sobre herramientas muestra, notificación de **TTN\_NEEDTEXT** se envía a la ventana primaria de control tooltip justo antes de que se muestra la ventana de la información sobre herramientas.  Si no hay ningún controlador para que este mensaje asignar un valor al miembro de **pszText** de la estructura de **TOOLTIPTEXT** , no habrá texto mostrado para la información sobre herramientas.  
+ The default tool tips provided for your windows by [CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) do not have text associated with them. To retrieve text for the tool tip to display, the **TTN_NEEDTEXT** notification is sent to the tool tip control's parent window just before the tool tip window is displayed. If there is no handler for this message to assign some value to the **pszText** member of the **TOOLTIPTEXT** structure, there will be no text displayed for the tool tip.  
   
-## Vea también  
- [Información sobre herramientas](../mfc/tool-tips.md)
+## <a name="see-also"></a>See Also  
+ [Tool Tips](../mfc/tool-tips.md)
+
+

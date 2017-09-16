@@ -1,110 +1,127 @@
 ---
-title: "TN035: Usar varios archivos de recursos y archivos de encabezado con Visual C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.resources"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "archivos de recursos, varios"
-  - "TN035"
+title: 'TN035: Using Multiple Resource Files and Header Files with Visual C++ | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.resources
+dev_langs:
+- C++
+helpviewer_keywords:
+- resource files, multiple
+- TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
 caps.latest.revision: 13
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# TN035: Usar varios archivos de recursos y archivos de encabezado con Visual C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8e8cc5c7127ecd953ca97d8fd90b2ee94e08cc04
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Using Multiple Resource Files and Header Files with Visual C++
 > [!NOTE]
->  La nota técnica siguiente no se ha actualizado desde que se incluyó por primera vez en la documentación en línea.  Como resultado, algunos procedimientos y temas podrían estar obsoletos o ser incorrectos.  Para obtener información más reciente, se recomienda buscar el tema de interés en el índice de la documentación en línea.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Esta nota describe cómo el editor de recursos de Visual C\+\+ permite compartir varios archivos de recursos y archivos de encabezado en un solo proyecto o entre varios proyectos y cómo se puede aprovechar esa característica.  Esta nota responde a estas preguntas:  
+ This note describes how the Visual C++ resource editor supports multiple resource files and header files shared in a single project or shared across multiple projects and how you can take advantage of that support. This note answers these questions:  
   
--   ¿Cuándo se podría desear dividir un proyecto en varios archivos de recursos o archivos de encabezado y cómo se hace?  
+-   When might you want to split a project into multiple resource files and/or header files, and how you do it  
   
--   ¿Cómo se comparte un archivo .H de encabezado común entre dos archivos .RC?  
+-   How do you share a common header .H file between two .RC files  
   
--   ¿Cómo se dividen recursos de proyecto en varios archivos .RC?  
+-   How do you divide project resources into multiple .RC files  
   
--   ¿Cómo administra el usuario \(y las herramientas\) las dependencias de compilación entre archivos .RC, .CPP y .H?  
+-   How do you (and the tools) manage build dependencies between .RC, .CPP, and .H files  
   
- Debe tener en cuenta que si agrega un archivo de recursos adicional al proyecto, ClassWizard no reconocerá los recursos en el archivo agregado.  
+ You should be aware that if you add an additional resource file to your project, ClassWizard will not recognize the resources in the added file.  
   
- Esta nota está estructurada para responder a las preguntas anteriores de la manera siguiente:  
+ This note is structured to answer the above questions as follows:  
   
--   **Overview of How Visual C\+\+ Manages Resource Files and Header Files** proporciona información general sobre cómo el comando de inclusión de conjuntos de recursos de Visual C\+\+ permite utilizar archivos de recursos y archivos de encabezado en el mismo proyecto.  
+- **Overview of How Visual C++ Manages Resource Files and Header Files** provides an overview of how the Resource Set Includes command in Visual C++ lets you use multiple resource files and header files in the same project.  
   
--   **Analysis of AppWizard\-created .RC and .H Files** examina los diversos archivos de recursos y encabezado usados por una aplicación creada mediante AppWizard.  Estos archivos son un buen modelo para los archivos de recursos y de encabezado adicionales que puede agregar al proyecto.  
+- **Analysis of AppWizard-created .RC and .H Files** looks at the multiple resource and header files that are used by an AppWizard-created application. These files serve as a good model for additional resource files and header files you might want to add to your project.  
   
--   **Including Additional Header Files** describe dónde debería incluir los archivos de encabezado y proporciona detalles de cómo hacerlo.  
+- **Including Additional Header Files** describes where you might want to include multiple header files, and provides details how to do so.  
   
--   **Sharing a Header File Between Two .RC Files** muestra cómo se puede compartir un archivo de encabezado entre varios archivos .RC de diferentes proyectos o, quizá, del mismo proyecto.  
+- **Sharing a Header File Between Two .RC Files** shows how you can share one header file between multiple .RC files in different projects, or perhaps in the same project.  
   
--   **Using Multiple Resource Files in the Same Project** describe dónde puede dividir el proyecto en varios archivos .RC y proporciona detalles de cómo hacerlo.  
+- **Using Multiple Resource Files in the Same Project** describes where you might want to break up your project into multiple .RC files, and provides details how to do so.  
   
--   **Enforcement of Non\-Editable Visual C\+\+ Files** describe cómo puede asegurarse de que Visual C\+\+ no modifique ni cambie involuntariamente el formato de un recurso personalizado.  
+- **Enforcement of Non-Editable Visual C++ Files** describes how you can make sure Visual C++ does not edit and unintentionally reformat a custom resource.  
   
--   **Managing Symbols Shared by Multiple Visual C\+\+\-Edited .RC Files** describe cómo compartir los mismos símbolos entre varios archivos .RC y cómo evitar asignar valores numéricos de identificador duplicados.  
+- **Managing Symbols Shared by Multiple Visual C++-Edited .RC Files** describes how to share the same symbols across multiple .RC files and how to avoid assigning duplicate ID numeric values.  
   
--   **Managing Dependencies Between .RC, .CPP, and .H Files** describe cómo Visual C\+\+ evita la recompilación innecesaria de archivos .CPP dependientes de los archivos de símbolos de recursos.  
+- **Managing Dependencies Between .RC, .CPP, and .H Files** describes how Visual C++ avoids unnecessary recompiling .CPP files that are dependent on resource symbol files.  
   
--   **How Visual C\+\+ Manages Set Includes Information** proporciona detalles técnicos sobre cómo realiza Visual C\+\+ el seguimiento de los varios archivos .RC \(anidados\) y varios archivos de encabezado especificados con \#include en un archivo .RC.  
+- **How Visual C++ Manages Set Includes Information** provides technical details about how Visual C++ keeps track of multiple (nested) .RC files and multiple header files that are #include'd by an .RC file.  
   
- **Información general sobre cómo administra Visual C\+\+ archivos de recursos y archivos de encabezado**  
+ **Overview of How Visual C++ Manages Resource Files and Header Files**  
   
- Visual C\+\+ administra un único archivo de recursos de .RC y un archivo de encabezado .H correspondiente como un par de archivos estrechamente acoplado.  Al modificar y guardar los recursos en un archivo .RC, puede editar y guardar símbolos indirectamente en el correspondiente archivo .H.  Aunque puede abrir y editar varios archivos .RC al mismo tiempo \(mediante la interfaz de usuario MDI de Visual C\+\+\) para cualquier archivo .RC dado, de manera indirecta se edita exactamente un archivo de encabezado correspondiente.  
+ Visual C++ manages a single .RC resource file and a corresponding .H header file as a tightly coupled pair of files. When you edit and save resources in an .RC file, you indirectly edit and save symbols in the corresponding .H file. Although you can open and edit multiple .RC files at a time (using Visual C++'s MDI user interface) for any given .RC file you indirectly edit exactly one corresponding header file.  
   
- **Archivo de encabezado de símbolos**  
+ **Symbol Header File**  
   
- De forma predeterminada, Visual C\+\+ nombra siempre el archivo de encabezado correspondiente RESOURCE.H, sin importar el nombre del archivo de recursos \(por ejemplo, MYAPP.RC\).  Mediante el comando **Archivos de inclusión de recursos** del menú **Ver** de Visual C\+\+, puede cambiar el nombre de este archivo de encabezado actualizando el archivo de encabezado de símbolos en el cuadro de diálogo **Archivos de inclusión establecidos**.  
+ By default, Visual C++ always names the corresponding header file RESOURCE.H, regardless of the name of the resource file (e.g., MYAPP.RC). Using the **Resource Includes** command from the **View** menu in Visual C++, you can change the name of this header file by updating the Symbol Header File file in the **Set Includes** dialog box.  
   
- **Directivas de símbolos de solo lectura**  
+ **Read-Only Symbol Directives**  
   
- Aunque Visual C\+\+ solo edita un archivo de encabezado para cualquier archivo dado de .RC, Visual C\+\+ admite referencias a símbolos definidos en archivos de encabezado de solo lectura adicionales.  Mediante el comando **Archivos de inclusión de recursos** del menú **Ver** de Visual C\+\+, puede especificar cualquier número de archivos de encabezado de solo lectura adicionales como directivas símbolos de solo lectura.  La restricción "solo lectura" significa que al agregar un nuevo recurso al archivo .RC, puede utilizar un símbolo definido en el archivo de encabezado de solo lectura; pero, si elimina el recurso, el símbolo continuará estando definido en el archivo de encabezado de solo lectura.  No se puede cambiar el valor numérico asignado a un símbolo de solo lectura.  
+ Although Visual C++ only edits one header file for any given .RC file, Visual C++ supports references to symbols defined in additional read-only header files. Using the **Resource Includes** command from the **View** menu in Visual C++, you can specify any number of additional read-only header files as Read-Only Symbol Directives. The "read-only" restriction means that when you add a new resource in the .RC file, you can use a symbol defined in the read-only header file; but if you delete the resource, the symbol still remains defined in the read-only header file. You cannot change the numeric value assigned to a read-only symbol.  
   
- **Directivas de tiempo de compilación**  
+ **Compile-Time Directives**  
   
- Visual C\+\+ admite también el anidamiento de archivos de recursos, donde un archivo .RC está especificado con \#include dentro de otro.  Al editar un archivo .RC determinado mediante Visual C\+\+, los recursos de los archivos especificados con \#include no son visibles.  Pero, cuando se compila el archivo .RC, los archivos especificados con \#include también se compilan.  Mediante el comando **Archivos de inclusión de recursos** del menú **Ver** en Visual C\+\+, puede especificar cualquier número de archivos .RC especificados con \#include como directivas de tiempo de compilación.  
+ Visual C++ also supports nesting of resource files, where one .RC file is #include'd within another. When you edit a given .RC file using Visual C++, any resources in the #include'd files are not visible. But when you compile the .RC file, the #include'd files are also compiled. Using the **Resource Includes** command from the **View** menu in Visual C++, you can specify any number of #include'd .RC files as Compile-Time Directives.  
   
- Observe qué ocurre si se lee en Visual C\+\+ un archivo .RC que especifique con \#include otro archivo .RC que *no* se especifique como directiva de tiempo de compilación.  Esta situación podría surgir al llevar a Visual C\+\+ un archivo .RC que se haya mantenido previamente de manera manual con un editor de texto.  Cuando Visual C\+\+ lee el archivo .RC especificado con \#include, combina los recursos especificados con \#include en el archivo .RC principal.  Cuando se guarde el archivo .RC principal, la instrucción \#include se reemplazará por los recursos especificados con \#include.  Si no desea que se produzca esta combinación, debe quitar la instrucción \#include del archivo .RC principal *antes* de leerlo en Visual C\+\+; a continuación, utilizando Visual C\+\+, vuelva a agregar la misma instrucción \#include como una directiva de tiempo de compilación.  
+ Note what happens if you read into Visual C++ an .RC file that #include's another .RC file that is *not* specified as a Compile-Time Directive. This situation might arise when you bring to Visual C++ an .RC file that you had been previously maintaining manually with a text editor. When Visual C++ reads the #include'd .RC file, it merges the #include'd resources into the parent .RC file. When you save the parent .RC file, the #include statement, in effect, will be replaced by the #include'd resources. If you do not want this merge to happen, you should remove the #include statement from the parent .RC file *prior* to reading it into Visual C++; then using Visual C++, add back the same #include statement as a Compile-Time Directive.  
   
- Visual C\+\+ guarda en un archivo .RC las tres clases anteriores de información establecida de inclusión \(archivo de encabezado de símbolos, directivas de símbolos de solo lectura y directivas en tiempo de compilación\) en directivas \#include *y* en recursos TEXTINCLUDE.  Los recursos TEXTINCLUDE, un detalle de implementación del normalmente no hay que preocuparse, se explican en [Cómo administra Visual C\+\+ la información de inclusión establecida](#_mfcnotes_tn035_set_includes).  
+ Visual C++ saves in an .RC file the three kinds of above Set Includes information (Symbol Header File, Read-Only Symbol Directives, and Compile-Time Directives) in #include directives *and* in TEXTINCLUDE resources. The TEXTINCLUDE resources, an implementation detail that you do not normally need to deal with, are explained in [How Visual C++ Manages Set Includes Information](#_mfcnotes_tn035_set_includes).  
   
- **Análisis de archivos .RC y .H creados mediante AppWizard**  
+ **Analysis of AppWizard-Created .RC and .H Files**  
   
- El examen del código de aplicación generado por AppWizard proporciona una idea clara de cómo Visual C\+\+ administra varios archivos de recursos y archivos de encabezado.  Los extractos de código que se examinan a continuación proceden de una aplicación MYAPP generada mediante AppWizard con las opciones predeterminadas.  
+ Examining the application code produced by AppWizard provides insight into how Visual C++ manages multiple resource files and header files. The code excerpts examined below are from a MYAPP application produced by AppWizard using the default options.  
   
- Una aplicación creada mediante AppWizard utiliza varios archivos de recursos y varios archivos de encabezado, como se resume en el diagrama siguiente:  
+ An AppWizard-created application uses multiple resource files and multiple header files, as summarized in the diagram below:  
   
 ```  
-RESOURCE.H     AFXRES.H                      
-       \       /                                
-        \     /                                  
-       MYAPP.RC                                 
-           |                                  
-           |                                
-     RES\MYAPP.RC2    
-     AFXRES.RC                     
-     AFXPRINT.RC                   
+RESOURCE.H     AFXRES.H      
+ \       /                
+ \     /  
+    MYAPP.RC 
+ |  
+ |                
+    RES\MYAPP.RC2 
+    AFXRES.RC 
+    AFXPRINT.RC 
 ```  
   
- Puede ver estas relaciones de varios archivos mediante el comando de inclusión de archivos de Visual C\+\+.  
+ You can view these multiple file relationships using the Visual C++ File/Set Includes command.  
   
  MYAPP.RC  
- El archivo de recursos de la aplicación que se edita mediante Visual C\+\+.  
+ The application resource file that you edit using Visual C++.  
   
- RESOURCE.H es el archivo de encabezado específico de la aplicación.  AppWizard siempre lo llama RESOURCE.H, de manera coherente con la denominación predeterminada de Visual C\+\+ para el archivo de encabezado.  La instrucción \#include para este archivo de encabezado es la primera instrucción del archivo de recursos \(MYAPP.RC\):  
+ RESOURCE.H is the application-specific header file. It is always named RESOURCE.H by AppWizard, consistent with Visual C++'s default naming of the header file. The #include for this header file is the first statement in the resource file (MYAPP.RC):  
   
 ```  
 //Microsoft Visual C++ generated resource script  
@@ -112,22 +129,22 @@ RESOURCE.H     AFXRES.H
 #include "resource.h"  
 ```  
   
- RES\\MYAPP.RC2  
- Contiene recursos que no se editarán en Visual C\+\+ pero se incluirán en el archivo compilado final .EXE.  AppWizard no crea tales recursos de forma predeterminada, ya que Visual C\+\+ puede editar todos los recursos estándar, incluido el recurso de versión \(una nueva característica de esta versión\).  AppWizard genera un archivo vacío en caso de que desee agregar sus propios recursos con formato personalizado a este archivo.  
+ RES\MYAPP.RC2  
+ Contains resources that will not be edited by Visual C++ but will be included in the final compiled .EXE file. AppWizard creates no such resources by default, since Visual C++ can edit all of the standard resources, including the version resource (a new feature in this release). An empty file is generated by AppWizard in case you wish to add your own custom formatted resources to this file.  
   
- Si utiliza recursos con formato personalizado, puede agregarlos a RES\\MYAPP.RC2 y modificarlos con el editor de texto de Visual C\+\+.  
+ If you use custom formatted resources, you can add them to RES\MYAPP.RC2 and edit them using the Visual C++ text editor.  
   
- AFXRES.RC y AFXPRINT.RC contienen recursos estándar necesarios para ciertas características de .NET Framework.  Como RES\\MYAPP.RC2, estos dos archivos de recursos proporcionados por .NET Framework se especifican con \#include al final de MYAPP.RC y se especifican en las directivas de tiempo de compilación del cuadro de diálogo Archivos de inclusión establecidos.  Por tanto, no verá ni editará directamente estos recursos de .NET Framework mientras edite MYAPP.RC en Visual C\+\+, pero se compilarán en el archivo binario de .RES de la aplicación y en el archivo final .EXE.  Para obtener más información sobre los recursos estándar de .NET framework, incluidos los procedimientos para modificarlos, vea la [Nota técnica 23](../mfc/tn023-standard-mfc-resources.md).  
+ AFXRES.RC and AFXPRINT.RC contain standard resources required by certain features of the framework. Like RES\MYAPP.RC2, these two framework-provided resource files are #include'd at the end of MYAPP.RC, and they are specified in the Compile-Time Directives of the Set Includes dialog box. Thus, you do not directly view or edit these framework resources while you edit MYAPP.RC in Visual C++, but they are compiled into the application's binary .RES file and final .EXE file. For more information on the standard framework resources, including procedures for modifying them, see [Technical Note 23](../mfc/tn023-standard-mfc-resources.md).  
   
- AFXRES.H define símbolos estándar, tales como `ID_FILE_NEW`, usados por .NET Framework y, específicamente, en AFXRES.RC.  AFXRES.H también especifica mediante \#include WINRES.H, que contiene un subconjunto de WINDOWS.H necesario para los archivos .RC generados por Visual C\+\+, así como AFXRES.RC.  Los símbolos definidos en AFXRES.H están disponibles cuando se edita el archivo de recursos de la aplicación \(MYAPP.RC\).  Por ejemplo, `ID_FILE_NEW` se utiliza para el elemento de menú de Archivo Nuevo en recursos de menús de MYAPP.RC.  No se puede cambiar ni eliminar estos símbolos definidos por .NET framework.  
+ AFXRES.H defines standard symbols, such as `ID_FILE_NEW`, used by the framework and specifically used in AFXRES.RC. AFXRES.H also #include's WINRES.H, which contains a subset of WINDOWS.H that are needed by Visual C++ generated .RC files as well as AFXRES.RC. The symbols defined in AFXRES.H are available as you edit the application resource file (MYAPP.RC). For example, `ID_FILE_NEW` is used for the File New menu item in MYAPP.RC's menu resource. You cannot change or delete these framework-defined symbols.  
   
- **Incluir archivos de encabezado adicionales**  
+## <a name="_mfcnotes_tn035_including"></a> Including Additional Header Files  
   
- La aplicación creada mediante AppWizard incluye solo dos archivos de encabezado: RESOURCE.H y AFXRES.H.  Solo RESOURCE.H es específico de la aplicación.  Puede ser necesario incluir archivos de encabezado de solo lectura adicionales en los casos siguientes:  
+ The AppWizard-created application includes only two header files: RESOURCE.H and AFXRES.H. Only RESOURCE.H is application-specific. You may need to include additional read-only header files in the following cases:  
   
- El archivo de encabezado lo proporciona un origen externo o desea compartir el archivo de encabezado entre varios proyectos o partes diferentes del mismo proyecto.  
+ The header file is provided by an external source, or you want to share the header file among multiple projects or multiple parts of the same project.  
   
- El archivo de encabezado tiene formato y comentarios que no desea que Visual C\+\+ modifique o filtre cuando guarde el archivo.  Por ejemplo, quizá desee conservar las instrucciones \#define que utilicen aritmética simbólica, tales como:  
+ The header file has formatting and comments that you do not want Visual C++ to change or filter out when it saves the file. For example, maybe you want to preserve #define's that use symbolic arithmetic such as:  
   
 ```  
 #define RED 0  
@@ -139,61 +156,59 @@ RESOURCE.H     AFXRES.H
 #define ID_GREEN_BUTTON (ID_COLOR_BUTTON + GREEN)  
 ```  
   
- Puede incluir archivos de encabezado de solo lectura adicionales mediante el comando **Archivos de inclusión de recursos** para especificar la instrucción \#include como segunda directiva de símbolos de solo lectura, como en:  
+ You can include additional read-only header files by using the **Resource Includes** command to specify the #include statement as a second Read-Only Symbol Directive, as in:  
   
 ```  
 #include "afxres.h"  
 #include "second.h"  
 ```  
   
- El nuevo diagrama de relación entre archivos tiene ahora el siguiente aspecto:  
+ The new file relationship diagram now looks like this:  
   
 ```  
-               AFXRES.H         
-RESOURCE.H     SECOND.H                      
-      \       /                                
-       \     /                                  
-      MYAPP.RC     
-          |                                  
-          |                                
-    RES\MYAPP.RC2    
-    AFXRES.RC                     
-    AFXPRINT.RC                   
+    AFXRES.H 
+RESOURCE.H     SECOND.H      
+ \       /                
+ \     /  
+    MYAPP.RC 
+ |  
+ |                
+    RES\MYAPP.RC2 
+    AFXRES.RC 
+    AFXPRINT.RC 
 ```  
   
- **Compartir un archivos de encabezado entre dos archivos .RC**  
+ **Sharing a Header File Between Two .RC Files**  
   
- Quizá desee compartir un archivo de encabezado entre dos archivos .RC que estén en proyectos diferentes o, posiblemente, en el mismo proyecto.  Para ello, solo tiene que aplicar la técnica de directivas de solo lectura descrita anteriormente a ambos archivos .RC.  Si los dos archivos .RC son para aplicaciones diferentes \(proyectos diferentes\), el resultado se muestra en el diagrama siguiente:  
+ You may want to share a header file between two .RC files that are in different projects, or possibly the same project. To do so, simply apply the Read-Only Directives technique described above to both .RC files. In the case where the two .RC files are for different applications (different projects), the result is illustrated in the following diagram:  
   
 ```  
-     RESOURCE.H   AFXRES.H   RESOURCE.H    
-    (for MYAPP1)  SECOND.H   (for MYAPP2)               
-          \       /     \       /             
-           \     /       \     /               
-          MYAPP1.RC      MYAPP2.RC                   
-           /    \        /     \                     
-          /      \      /       \              
+    RESOURCE.H AFXRES.H   RESOURCE.H    
+ (for MYAPP1) SECOND.H   (for MYAPP2)               
+ \       /     \       /             
+ \     /       \     /               
+    MYAPP1.RC MYAPP2.RC */    \        /     \ */      \      /       \              
 RES\MYAPP1.RC2  AFXRES.RC     RES\MYAPP2.RC2                
-                AFXPRINT.RC                   
+    AFXPRINT.RC 
 ```  
   
- El caso donde el segundo archivo de encabezado es compartido por dos archivos .RC en la misma aplicación \(proyecto\) se describe a continuación.  
+ The case where the second header file is shared by two .RC files in the same application (project) is discussed below.  
   
- **Usar varios archivos de recursos en el mismo proyecto**  
+ **Using Multiple Resource Files in the Same Project**  
   
- Visual C\+\+ y el compilador de recursos admiten varios archivos .RC en el mismo proyecto mediante instrucciones \#include de un archivo .RC dentro de otro.  Se permite el anidamiento de varios niveles.  Hay varias razones para dividir los recursos del proyecto en varios archivos .RC:  
+ Visual C++ and the Resource Compiler support multiple .RC files in the same project through #include's of one .RC file within another. Multiple nesting is allowed. There are various reasons to split your project's resources into multiple .RC files:  
   
--   Es más fácil administrar un gran número de recursos entre varios miembros del equipo del proyecto si se dividen los recursos en varios archivos .RC.  Si utiliza un paquete de administración de control de código fuente para desproteger los archivos y proteger los cambios, dividir los recursos en varios archivos .RC producirá un control más preciso sobre la administración de cambios en los recursos.  
+-   It is easier to manage a large number of resources among multiple project team members if you split the resources into multiple .RC files. If you use a source control management package for checking out files and checking in changes, splitting the resources into multiple .RC files will give you finer control over managing changes to resources.  
   
--   Si desea utilizar directivas de preprocesador, tales como \#ifdef, \#endif y \#define, para partes de los recursos, debe aislarlos en recursos de solo lectura que se compilarán mediante el compilador de recursos.  
+-   If you want to use preprocessor directives, such as #ifdef, #endif, and #define, for portions of your resources, you must isolate them in read-only resources that will be compiled by the Resource Compiler.  
   
--   Los archivos .RC componentes se cargarán y guardarán más rápidamente en Visual C\+\+ que un archivo .RC compuesto.  
+-   Component .RC files will load and save faster in Visual C++ than one composite .RC file.  
   
--   Si desea mantener un recurso con un editor de texto en un formato legible, debe mantenerlo en un archivo .RC independiente del que edite Visual C\+\+.  
+-   If you want to maintain a resource with a text editor in a human-readable form, you should keep it in a .RC file separate from the one Visual C++ edits.  
   
--   Si necesita conservar un recurso definido por el usuario en un archivo de formato binario o de texto que sea interpretable por otro editor de datos especializado, debe mantenerlo en un archivo .RC independiente para que Visual C\+\+ no cambie el formato a datos hexadecimales.  Los recursos de archivo .WAV \(sonido\) del ejemplo de conceptos avanzados de [SPEAKN](../top/visual-cpp-samples.md) son un buen ejemplo.  
+-   If you need to keep a user-defined resource in a binary or text form that is interpretable by another specialized data editor, then you should keep it in a separate .RC file so Visual C++ does not change the format to hexadecimal data. The .WAV (sound) file resources in the MFC Advanced Concepts sample [SPEAKN](../visual-cpp-samples.md) are a good example.  
   
- Puede usar \#include con SECOND.RC en las directivas de tiempo de compilación en el cuadro de diálogo Archivos de inclusión establecidos:  
+ You can #include a SECOND.RC in the Compile-Time Directives in the Set Includes dialog box:  
   
 ```  
 #include "res\myapp.rc2"  // non-Visual C++ edited resources  
@@ -203,62 +218,60 @@ RES\MYAPP1.RC2  AFXRES.RC     RES\MYAPP2.RC2
 #include "afxprint.rc"  // printing/print preview resources  
 ```  
   
- El resultado se describe en el diagrama siguiente:  
+ The result is illustrated in the following diagram:  
   
 ```  
-RESOURCE.H     AFXRES.H                      
-       \       /                                
-        \     /                                  
-       MYAPP.RC  
-           |                                  
-           |                                
-     RES\MYAPP.RC2  
-     SECOND.RC    
-     AFXRES.RC                     
-     AFXPRINT.RC                   
+RESOURCE.H     AFXRES.H      
+ \       /                
+ \     /  
+    MYAPP.RC 
+ |  
+ |                
+    RES\MYAPP.RC2 
+    SECOND.RC 
+    AFXRES.RC 
+    AFXPRINT.RC 
 ```  
   
- Si usa directivas de tiempo de compilación, puede organizar los recursos editables y no editables de Visual C\+\+ en varios archivos .RC, donde el archivo MYAPP.RC "principal" no hace nada pero especifica mediante \#include los otros archivos .RC.  Si utiliza un archivo .MAK de proyecto de Visual C\+\+, debe incluir el archivo .RC "principal" en el proyecto para que todos los recursos especificados con \#include se compilen con la aplicación.  
+ Using Compile-Time Directives, you can organize your Visual C++-editable and non-editable resources into multiple .RC files, where the "master" MYAPP.RC does nothing but #include the other .RC files. If you are using a Visual C++ project .MAK file, then you should include the "master" .RC file in the project so that all the #include'd resources are compiled with your application.  
   
- **Cumplimiento de archivos no editables de Visual C\+\+**  
+ **Enforcement of Noneditable Visual C++ Files**  
   
- El archivo RES\\MYAPP.R C2 creado mediante AppWizard es un ejemplo de archivo que contiene recursos que *no* se desea que se lean accidentalmente en Visual C\+\+ y, a continuación, se vuelvan a escribir con pérdida de información de formato.  Para protegerse de esto, coloque las siguientes líneas al principio del archivo RES\\MYAPP.RC2:  
+ The AppWizard-created RES\MYAPP.RC2 file is an example of a file that contains resources that you do *not* want to accidentally read into Visual C++ and then write it back out with loss of formatting information. To protect against this, place the following lines in the beginning of the RES\MYAPP.RC2 file:  
   
 ```  
 #ifdef APSTUDIO_INVOKED  
-    #error this file is not editable by Visual C++  
+ #error this file is not editable by Visual C++  
 #endif //APSTUDIO_INVOKED  
 ```  
   
- Cuando Visual C\+\+ compila el archivo .RC, define **APSTUDIO\_INVOKED**, así como **RC\_INVOKED**.  Si se daña la estructura de archivos creada mediante AppWizard creada y Visual C\+\+ lee la línea \#error anterior, notifica un error irrecuperable y anula la lectura del archivo .RC.  
+ When Visual C++ compiles the .RC file, it defines **APSTUDIO_INVOKED** as well as **RC_INVOKED**. If the AppWizard-created file structure is corrupted and Visual C++ reads the #error line above, it reports a fatal error and abort the reading of the .RC file.  
   
- **Administrar símbolos compartidos por varios archivos .RC editados por Visual C\+\+**  
+ **Managing Symbols Shared by Multiple Visual C++-Edited .RC Files**  
   
- Cuando se dividen los recursos en varios archivos .RC que se desea editar por separado en Visual C\+\+ surgen dos problemas:  
+ Two issues arise when you split up your resources into multiple .RC files that you want to edit separately in Visual C++:  
   
--   Quizás desee compartir los mismos símbolos entre varios archivos .RC.  
+-   You might want to share the same symbols across multiple .RC files.  
   
--   Debe ayudar a Visual C\+\+ a evitar que asigne los mismos valores numéricos de id. a distintos recursos \(símbolos\).  
+-   You need to help Visual C++ avoid assigning the same ID numeric values to distinct resources (symbols).  
   
- En el diagrama siguiente se muestra una organización de archivos .RC y.H que se ocupa del primer problema:  
+ The following diagram illustrates an organization of .RC and .H files that deals with the first issue:  
   
 ```  
-              MYAPP.RC  
-             /         \  
-            /           \  
+    MYAPP.RC */         \ */           \  
 MYSTRS.H   / MYSHARED.H  \  MYMENUS.H  
-     \    /    /      \   \    \  
-      \  /    /        \   \    \  
-   MYSTRS.RC           MYMENUS.RC  
+ \    /    /      \   \    \  
+ \  /    /        \   \    \  
+    MYSTRS.RC MYMENUS.RC  
 ```  
   
- En este ejemplo, los recursos de cadena se mantienen en un archivo de recursos, MYSTRS.RC y los menús se mantienen en otro, MYMENUS.RC.  Es posible que algunos símbolos, por ejemplo para comandos, deban compartirse entre los dos archivos.  Por ejemplo, ID\_TOOLS\_SPELL puede ser el identificador de comando de menú para el elemento Ortografía de un menú Herramientas; y también puede ser el identificador de cadena del símbolo del sistema que .NET framework muestra en la barra de estado de la ventana principal de la aplicación.  
+ In this example, string resources are kept in one resource file, MYSTRS.RC, and menus are kept in another, MYMENUS.RC. Some symbols, such as for commands, may need to be shared between the two files. For example, a ID_TOOLS_SPELL may be the menu command ID for the Spell item in a Tools menu; and it may also be the string ID of the command prompt displayed by the framework in the application's main window status bar.  
   
- El símbolo ID\_TOOLS\_SPELL se mantiene en el archivo de encabezado compartido, MYSHARED.H.  Este archivo de encabezado compartido se mantiene manualmente con un editor de texto; Visual C\+\+ no lo edita directamente.  En los dos archivos de recursos MYSTRS.RC y MYMENUS.RC, especifique \#include MYSHARED.H en las directivas de solo lectura para MYAPP.RC mediante el comando **Archivos de inclusión de recursos**, como se describió anteriormente.  
+ The ID_TOOLS_SPELL symbol is kept in the shared header file, MYSHARED.H. You maintain this shared header file manually with a text editor; Visual C++ does not directly edit it. In the two resource files MYSTRS.RC and MYMENUS.RC, you specify #include MYSHARED.H in the Read-Only Directives for MYAPP.RC, using the **Resource Includes** command, as described earlier.  
   
- Es más conveniente prever el símbolo que se compartirá antes de intentar usarlo para identificar cualquier recurso.  Agregue el símbolo al archivo de encabezado compartido y, si aún no ha especificado con \#include el archivo de encabezado compartido en las directivas de solo lectura para el archivo .RC, hágalo antes de utilizar el símbolo.  Si no ha previsto compartir el símbolo de esta manera, tendrá que mover manualmente \(mediante un editor de texto\) la instrucción \#define para el símbolo desde, por ejemplo, MYMENUS.H hasta MYSHARED.H antes de utilizarla en MYSTRS.RC.  
+ It is most convenient to anticipate a symbol you will share before you attempt use it to identify any resource. Add the symbol to the shared header file and, if you have not already #include'd the shared header file in the Read-Only Directives for the .RC file, do so before using the symbol. If you did not anticipate sharing the symbol in this way, then you will have to manually (using a text editor) move the #define statement for the symbol from, say, MYMENUS.H to MYSHARED.H before using it in MYSTRS.RC.  
   
- Cuando administre símbolos en varios archivos .RC, también debe ayudar a Visual C\+\+ a evitar asignar los mismos valores numéricos de id. a recursos \(símbolos\) distintos.  Para cualquier archivo .RC dado, Visual C\+\+ asigna id. de manera incremental en cada uno de estos cuatro dominios de id.  Entre las sesiones de edición, Visual C\+\+ realiza un seguimiento del último id. asignado en cada uno de los dominios del archivo de encabezado de símbolos para el archivo .RC.  Estos son los valores de APS\_NEXT para un archivo .RC vacío \(nuevo\):  
+ When you manage symbols in multiple .RC files, you also must help Visual C++ avoid assigning the same ID numeric values to distinct resources (symbols). For any given .RC file, Visual C++ incrementally assigns IDs in each of four ID domains. Between editing sessions, Visual C++ keeps track of the last ID it assigned in each of the domains in the symbol header file for the .RC file. Here is what the APS_NEXT values are for an empty (new) .RC file:  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  101  
@@ -267,19 +280,19 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 #define _APS_NEXT_SYMED_VALUE     101  
 ```  
   
- **\_APS\_NEXT\_RESOURCE\_VALUE** es el siguiente valor de símbolo que se utilizará para un recurso de cuadro de diálogo, un recurso de menú y así sucesivamente.  El intervalo válido para los valores de símbolos de recursos es de 1 a 0x6FFF.  
+ **_APS_NEXT_RESOURCE_VALUE** is the next symbol value that will be used for a dialog resource, menu resource, and so on. The valid range for resource symbol values is 1 to 0x6FFF.  
   
- **\_APS\_NEXT\_COMMAND\_VALUE** es el siguiente valor de símbolo que se utilizará para una identificación de comando.  El intervalo válido para los valores de símbolos de comando es 0x8000 a 0xDFFF.  
+ **_APS_NEXT_COMMAND_VALUE** is the next symbol value that will be used for a command identification. The valid range for command symbol values is 0x8000 to 0xDFFF.  
   
- **\_APS\_NEXT\_CONTROL\_VALUE** es el siguiente valor de símbolo que se utilizará para un control de cuadro de diálogo.  El intervalo válido para los valores de símbolo de control del diálogo es de 8 a 0xDFFF.  
+ **_APS_NEXT_CONTROL_VALUE** is the next symbol value that will be used for a dialog control. The valid range for dialog control symbol values is 8 to 0xDFFF.  
   
- **\_APS\_NEXT\_SYMED\_VALUE** es el siguiente valor de símbolo que se emitirá al asignar manualmente un valor de símbolo mediante el comando Nuevo del explorador de símbolos.  
+ **_APS_NEXT_SYMED_VALUE** is the next symbol value that will be issued when you manually assign a symbol value using the New command in the Symbol Browser.  
   
- Visual C\+\+ comienza con valores ligeramente superiores al valor legal inferior al crear un nuevo archivo .RC.  AppWizard también inicializará estos valores a algo más adecuado para aplicaciones MFC.  Para obtener más información acerca de los intervalos de valores de id., vea la [Nota técnica 20](../mfc/tn020-id-naming-and-numbering-conventions.md).  
+ Visual C++ starts with slightly higher values that the lowest legal value when creating a new .RC file. AppWizard will also initialize these values to something more appropriate for MFC applications. For more information about ID value ranges, see [Technical Note 20](../mfc/tn020-id-naming-and-numbering-conventions.md).  
   
- Ahora, cada vez que se crea un nuevo archivo de recursos, incluso en el mismo proyecto, Visual C\+\+ define los mismos valores de **\_APS\_NEXT\_**.  Esto significa que si agrega, por ejemplo, varios diálogos en dos archivos .RC diferentes, es muy probable que se asigne el mismo valor \#define a diferentes diálogos.  Por ejemplo, IDD\_MY\_DLG1 en el primer archivo .RC podría estar asignado al mismo número, 101, que IDD\_MY\_DLG2 en un segundo archivo .RC.  
+ Now every time you create a new resource file, even in the same project, Visual C++ defines the same **_APS_NEXT\_** values. This means that if you add, say, multiple dialogs in two different .RC files, it is highly likely that the same #define value will be assigned to different dialogs. For example, IDD_MY_DLG1 in the first .RC file might be assigned the same number, 101, as IDD_MY_DLG2 in a second .RC file.  
   
- Para evitar esto, debe reservar un intervalo numérico independiente para cada uno de los cuatro dominios de id. en los respectivos archivos .RC.  Haga esto manualmente actualizando los valores de **\_APS\_NEXT** en cada uno de los archivos .RC `before` de empezar a añadir recursos.  Por ejemplo, si el primer archivo .RC utiliza los valores predeterminados de **\_APS\_NEXT**, puede que a continuación desee asignar los siguientes valores de **\_APS\_NEXT** al segundo archivo .RC:  
+ To avoid this, you should reserve a separate numeric range for each of the four domains of IDs in the respective .RC files. Do this by manually updating the **_APS_NEXT** values in each of the .RC files `before` you start adding resources. For example, if the first .RC file uses the default **_APS_NEXT** values, then you might want to assign the following **_APS_NEXT** values to the second .RC file:  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  2000  
@@ -288,70 +301,70 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 #define _APS_NEXT_SYMED_VALUE     2000  
 ```  
   
- Por supuesto, continúa siendo posible que Visual C\+\+ asigne tantos id. en el primer archivo .RC que los valores numéricos empiecen a superponerse a los reservados para el segundo archivo .RC.  Debe reservar intervalos suficientemente grandes para que no ocurra esto.  
+ Of course, it is still possible that Visual C++ will assign so many IDs in the first .RC file that the numeric values start to overlap those reserved for the second .RC file. You should reserve sufficiently large ranges so that this does not happen.  
   
- **Administrar dependencias entre archivos .RC, .CPP y .H**  
+ **Managing Dependencies Between .RC, .CPP, and .H Files**  
   
- Cuando Visual C\+\+ guarda un archivo .RC, también guarda los cambios de símbolos en archivo RESOURCE.H correspondiente.  Cualquiera de los archivos .CPP que hacen referencia a recursos del archivo .RC deben incluir con \#include el archivo RESOURCE.H, normalmente en el archivo de encabezado del proyecto principal.  Esto provoca un efecto secundario no deseado debido a la administración de proyectos interna del entorno de desarrollo, que examina los archivos de código fuente para detectar dependencias de encabezado.  Cada vez que se agrega un nuevo símbolo en Visual C\+\+, todo el archivo .CPP que incluye con \#include RESOURCE.H debe volver a compilarse.  
+ When Visual C++ saves an .RC file, it also saves symbol changes to the corresponding RESOURCE.H file. Any of your .CPP files that refer to resources in the .RC file must #include the RESOURCE.H file, usually from within your project's master header file. This leads to an undesirable side-effect because of the development environment's internal project management which scans source files for header dependencies. Every time you add a new symbol in Visual C++, all the .CPP file that #include RESOURCE.H would need to be recompiled.  
   
- Visual C\+\+ evita la dependencia de RESOURCE.H incluyendo el siguiente comentario como primera línea del archivo RESOURCE.H:  
+ Visual C++, circumvents the dependency on RESOURCE.H by including the following comment as the first line of the RESOURCE.H file:  
   
 ```  
 //{{NO_DEPENDENCIES}}  
 ```  
   
- El entorno de desarrollo interpreta este comentario omitiendo los cambios en RESOURCE.H para que no sea necesario recompilar los archivos .CPP dependientes.  
+ The development environment interprets this comment by ignoring the changes to RESOURCE.H so that dependent .CPP files will not need to be recompiled.  
   
- Visual C\+\+ agrega siempre la línea de comentario \/\/{{NO\_DEPENDENCIES}} a un archivo .RC cuando guarda el archivo.  En algunos casos, evitar la dependencia de compilación de RESOURCE.H puede provocar errores en tiempo de ejecución que no se detectan en tiempo de vinculación.  Por ejemplo, si utiliza el explorador de símbolos para cambiar el valor numérico asignado a un símbolo para un recurso, el recurso no se encontrará correctamente y no se cargará en tiempo de ejecución de la aplicación si no se vuelve a compilar el archivo .CPP que hace referencia al recurso.  En estos casos, se debe volver a compilar explícitamente los archivos .CPP que se sepan afectados por los cambios de símbolos en RESOURCE.H o seleccione **Volver a generar todo**.  Si necesita cambiar con frecuencia valores de símbolos para un determinado grupo de recursos, es probable que le resulte más cómodo y seguro dividir estos símbolos en un archivo de encabezado de solo lectura independiente, como se describe en la sección anterior [Archivos de encabezado de inclusión adicionales](#_mfcnotes_tn035_including).  
+ Visual C++ always adds the //{{NO_DEPENDENCIES}} comment line to a .RC file when it saves the file. In some cases, circumventing of the build dependency on RESOURCE.H may lead to run-time errors undetected at link time. For example, if you use the Symbol Browser to change the numeric value assigned to a symbol for a resource, the resource will not be correctly found and loaded at application run-time if the .CPP file referring to the resource is not recompiled. In such cases, you should explicitly recompile any .CPP files that you know are affected by the symbol changes in RESOURCE.H or select **Rebuild All**. If you have the need to frequently change symbol values for a certain group of resources, you will probably find it more convenient and safer to break out these symbols into a separate read-only header file, as described in the above section [Including Additional Header Files](#_mfcnotes_tn035_including).  
   
- **Cómo administra Visual C\+\+ la información de inclusión establecida**  
+## <a name="_mfcnotes_tn035_set_includes"></a> How Visual C++ Manages Set Includes Information**  
   
- Tal y como se describió anteriormente, el comando de inclusión del menú Archivo permite especificar tres tipos de información:  
+ As discussed above, the File menu Set Includes command lets you specify three types of information:  
   
--   Archivo de encabezado de símbolos  
+-   Symbol Header File  
   
--   Directivas de símbolos de solo lectura  
+-   Read-Only Symbol Directives  
   
--   Directivas de tiempo de compilación  
+-   Compile-Time Directives  
   
- A continuación se describe cómo mantiene Visual C\+\+ esta información en un archivo .RC.  No necesita esta información para utilizar Visual C\+\+, pero puede mejorar su comprensión para que pueda usar con más confianza la característica de inclusión.  
+ The following describes how Visual C++ maintains this information in a .RC file. You do not need this information to use Visual C++, but it may enhance your understanding so that you can more confidently use the Set Includes feature.  
   
- Cada uno de los tres tipos anteriores de información de inclusión se almacena en el archivo .RC de dos formas: \(1\) como \#include u otras directivas interpretables mediante el compilador de recursos y \(2\), como recursos especiales TEXTINCLUDE interpretables solo por Visual C\+\+.  
+ Each of the above three types of Set Includes information is stored in the .RC file in two forms: (1) as #include or other directives interpretable by the Resource Compiler, and (2) as special TEXTINCLUDE resources interpretable only by Visual C++.  
   
- El propósito del recurso TEXTINCLUDE es almacenar con seguridad información de inclusión en una forma que sea fácilmente presentable en el cuadro de diálogo **Archivos de inclusión establecidos** de Visual C\+\+.  TEXTINCLUDE es un *tipo de recurso* definido por Visual C\+\+.  Visual C\+\+ reconoce tres recursos TEXTINCLUDE específicos que tienen los números de identificación de recurso 1, 2 y 3:  
+ The purpose of the TEXTINCLUDE resource is to safely store Set Include information in a form that is readily presentable in Visual C++'s **Set Includes** dialog box. TEXTINCLUDE is a *resource type* defined by Visual C++. Visual C++ recognizes three specific TEXTINCLUDE resources that have the resource identification numbers 1, 2 and 3:  
   
-|Id. de recurso TEXTINCLUDE|Tipo de información de inclusión|  
-|--------------------------------|--------------------------------------|  
-|1|Archivo de encabezado de símbolos|  
-|2|Directivas de símbolos de solo lectura|  
-|3|Directivas de tiempo de compilación|  
+|TEXTINCLUDE resource ID|Type of Set Includes information|  
+|-----------------------------|--------------------------------------|  
+|1|Symbol Header File|  
+|2|Read-Only Symbol Directives|  
+|3|Compile-Time Directives|  
   
- Los archivos MYAPP.RC y RESOURCE.H predeterminados creados por AppWizard ilustran los tres tipos de información de inclusión, como se describe a continuación.  La sintaxis de RC requiere los tokens adicionales \\0 y "" entre los bloques BEGIN y END para especificar cadenas terminadas en cero y el carácter de comilla doble, respectivamente.  
+ Each of the three types of Set Includes information is illustrated by the default MYAPP.RC and RESOURCE.H files created by AppWizard, as described below. The extra \0 and "" tokens between BEGIN and END blocks are required by the RC syntax to specify zero terminated strings and the double quote character respectively.  
   
-## Archivo de encabezado de símbolos  
- El formato de la información de archivo de encabezado de símbolos interpretada mediante el compilador de recursos es simplemente una instrucción \#include:  
+## <a name="symbol-header-file"></a>Symbol Header File  
+ The form of the Symbol Header File information interpreted by the Resource Compiler is simply a #include statement:  
   
 ```  
 #include "resource.h"  
 ```  
   
- El recurso TEXTINCLUDE correspondiente es:  
+ The corresponding TEXTINCLUDE resource is:  
   
 ```  
 1 TEXTINCLUDE DISCARDABLE  
 BEGIN  
-   "resource.h\0"  
+ "resource.h\0"  
 END  
 ```  
   
-## Directivas de símbolos de solo lectura  
- Las directivas de símbolos de solo lectura se incluyen al principio de MYAPP.RC con el siguiente formato interpretable por el compilador de recursos:  
+## <a name="read-only-symbol-directives"></a>Read-Only Symbol Directives  
+ Read-Only Symbol Directives are included at the top of MYAPP.RC in the following form interpretable by the Resource Compiler:  
   
 ```  
 #include "afxres.h"  
 ```  
   
- El recurso TEXTINCLUDE correspondiente es:  
+ The corresponding TEXTINCLUDE resource is:  
   
 ```  
 2 TEXTINCLUDE DISCARDABLE  
@@ -361,8 +374,8 @@ BEGIN
 END  
 ```  
   
-## Directivas de tiempo de compilación  
- Las directivas de tiempo de compilación se incluyen al final de MYAPP.RC con el siguiente formato interpretable por el compilador de recursos:  
+## <a name="compile-time-directives"></a>Compile-Time Directives  
+ Compile-Time Directives are included at the end of MYAPP.RC in the following form interpretable by the Resource Compiler:  
   
 ```  
 #ifndef APSTUDIO_INVOKED  
@@ -377,9 +390,9 @@ END
 #endif  // not APSTUDIO_INVOKED  
 ```  
   
- La directiva \#ifndef APSTUDIO\_INVOKED indica a Visual C\+\+ que omita las directivas de tiempo de compilación.  
+ The #ifndef APSTUDIO_INVOKED directive instructs Visual C++ to skip over Compile-Time Directives.  
   
- El recurso TEXTINCLUDE correspondiente es:  
+ The corresponding TEXTINCLUDE resource is:  
   
 ```  
 3 TEXTINCLUDE DISCARDABLE  
@@ -392,6 +405,8 @@ BEGIN
 END  
 ```  
   
-## Vea también  
- [Notas técnicas por número](../mfc/technical-notes-by-number.md)   
- [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

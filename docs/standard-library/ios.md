@@ -1,102 +1,119 @@
 ---
-title: "&lt;ios&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.<ios>"
-  - "std::<ios>"
-  - "<ios>"
-  - "ios/std::<ios>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ios (encabezado)"
+title: '&lt;ios&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::<ios>", "<ios>", "ios/std::<ios>
+dev_langs:
+- C++
+helpviewer_keywords:
+- ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# &lt;ios&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 80505906a05e2ff186ea9b9f5fcc1a12746d1a7e
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
 
-Define varios tipos y funciones básicos para el funcionamiento de iostreams.  Este encabezado se suele incluir automáticamente mediante otro encabezado de iostreams; rara vez se incluye directamente.  
+---
+# <a name="ltiosgt"></a>&lt;ios&gt;
+Defines several types and functions basic to the operation of iostreams. This header is typically included for you by another iostream headers; you rarely include it directly.  
   
-## Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #include <ios>  
   
 ```  
   
-## Comentarios  
- Un grupo grande de funciones son los manipuladores.  Un manipulador declarado en \<ios\> modifica los valores almacenados en su objeto de argumento de la clase [ios\_base](../standard-library/ios-base-class.md).  Otros manipuladores realizan acciones en flujos controlados por objetos de un tipo derivado de esta clase, tales como una especialización de una de las clases de plantilla [basic\_istream](../standard-library/basic-istream-class.md) o [basic\_ostream](../standard-library/basic-ostream-class.md).  Por ejemplo, [noskipws](../Topic/noskipws.md)\(**str**\) borra la marca de formato `ios_base::skipws` en el objeto **str**, que puede ser de uno de estos tipos.  
+## <a name="remarks"></a>Remarks  
+ A large group of functions are manipulators. A manipulator declared in \<ios> alters the values stored in its argument object of class [ios_base](../standard-library/ios-base-class.md). Other manipulators perform actions on streams controlled by objects of a type derived from this class, such as a specialization of one of the template classes [basic_istream](../standard-library/basic-istream-class.md) or [basic_ostream](../standard-library/basic-ostream-class.md). For example, [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) clears the format flag `ios_base::skipws` in the object **str**, which can be of one of these types.  
   
- También puede llamar a un manipulador insertándolo en un flujo de salida o extrayéndolo de un flujo de entrada, gracias a las operaciones especiales de inserción y extracción proporcionadas para las clases derivadas de `ios_base`.  Por ejemplo:  
+ You can also call a manipulator by inserting it into an output stream or extracting it from an input stream, because of special insertion and extraction operations supplied for the classes derived from `ios_base`. For example:  
   
+```
+istr>> noskipws;
 ```  
-istr >> noskipws;  
-```  
   
- llama a [noskipws](../Topic/noskipws.md)\(**istr**\).  
+ calls [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).  
   
-### Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[ios](../Topic/ios.md)|Es compatible con la clase ios de la antigua biblioteca iostream.|  
-|[streamoff](../Topic/streamoff.md)|Admite operaciones internas.|  
-|[streampos](../Topic/streampos.md)|Contiene la posición actual del puntero de búfer o el puntero de archivo.|  
-|[streamsize](../Topic/streamsize.md)|Especifica el tamaño del flujo.|  
-|[wios](../Topic/wios.md)|Es compatible con la clase wios de la antigua biblioteca iostream.|  
-|[wstreampos](../Topic/wstreampos.md)|Contiene la posición actual del puntero de búfer o el puntero de archivo.|  
+|[ios](../standard-library/ios-typedefs.md#ios)|Supports the ios class from the old iostream library.|  
+|[streamoff](../standard-library/ios-typedefs.md#streamoff)|Supports internal operations.|  
+|[streampos](../standard-library/ios-typedefs.md#streampos)|Holds the current position of the buffer pointer or file pointer.|  
+|[streamsize](../standard-library/ios-typedefs.md#streamsize)|Specifies the size of the stream.|  
+|[wios](../standard-library/ios-typedefs.md#wios)|Supports the wios class from the old iostream library.|  
+|[wstreampos](../standard-library/ios-typedefs.md#wstreampos)|Holds the current position of the buffer pointer or file pointer.|  
   
-### Manipuladores  
-  
-|||  
-|-|-|  
-|[boolalpha](../Topic/boolalpha.md)|Especifica que las variables de tipo [bool](../cpp/bool-cpp.md) aparezcan como **true** o **false** en el flujo.|  
-|[dec](../Topic/dec.md)|Especifica que las variables de entero aparezcan en notación de base 10.|  
-|[defaultfloat](../Topic/%3Cios%3E%20defaultfloat.md)|Configura los indicadores de un objeto `ios_base` para que utilicen un formato de presentación predeterminado para valores float.|  
-|[fijo](../Topic/fixed.md)|Especifica que un número de punto flotante se muestre en notación de decimal fijo.|  
-|[hex](../Topic/hex.md)|Especifica que las variables de entero aparezcan en notación de base 16.|  
-|[internal](../Topic/internal%20\(Standard%20C++%20Library\).md)|Hace que el signo de un número esté justificado a la izquierda y el número se alinee a la derecha.|  
-|[izquierda](../Topic/left.md)|Hace que el texto con un ancho menor que el ancho de salida aparezca en el vaciado de flujo con el margen izquierdo.|  
-|[noboolalpha](../Topic/noboolalpha.md)|Especifica que las variables de tipo [bool](../cpp/bool-cpp.md) aparezcan como 1 o 0 en el flujo.|  
-|[noshowbase](../Topic/noshowbase.md)|Desactiva la opción que indica la base notacional en que se muestra un número.|  
-|[noshowpoint](../Topic/noshowpoint.md)|Muestra solo la parte de número entero en los números de punto flotante cuya parte fraccionaria es cero.|  
-|[noshowpos](../Topic/noshowpos.md)|Hace que los números positivos no tengan signo explícito.|  
-|[noskipws](../Topic/noskipws.md)|Hace que el flujo de entrada lea los espacios.|  
-|[nounitbuf](../Topic/nounitbuf.md)|Hace que la salida se almacene en búfer y se procese cuando el búfer esté lleno.|  
-|[nouppercase](../Topic/nouppercase.md)|Especifica que los dígitos hexadecimales y el exponente en notación científica aparezcan en minúscula.|  
-|[oct](../Topic/oct%20\(%3Cios%3E\).md)|Especifica que las variables de entero aparezcan en notación de base 8.|  
-|[derecha](../Topic/right.md)|Hace que el texto con un ancho menor que el ancho de salida aparezca en el vaciado de flujo con el margen derecho.|  
-|[científica](../Topic/scientific.md)|Hace que los números de punto flotante se muestren con notación científica.|  
-|[showbase](../Topic/showbase.md)|Indica la base notacional en que se muestra un número.|  
-|[showpoint](../Topic/showpoint.md)|Muestra la parte de número entero de un número de punto flotante y los dígitos que hay a la derecha del separador decimal, incluso cuando la parte fraccionaria es cero.|  
-|[showpos](../Topic/showpos.md)|Hace que los números positivos tengan signo explícito.|  
-|[skipws](../Topic/skipws.md)|Hace que el flujo de entrada no lea los espacios.|  
-|[unitbuf](../Topic/unitbuf.md)|Hace que la salida se procese cuando el búfer no está lleno.|  
-|[mayúsculas](../Topic/uppercase.md)|Especifica que los dígitos hexadecimales y el exponente en notación científica aparezcan en mayúscula.|  
-  
-### Clases  
+### <a name="manipulators"></a>Manipulators  
   
 |||  
 |-|-|  
-|[basic\_ios](../standard-library/basic-ios-class.md)|La clase de plantilla describe las funciones de almacenamiento y miembro comunes tanto a los flujos de entrada \(de la clase de plantilla [basic\_istream](../standard-library/basic-istream-class.md)\) como a los de salida \(de la clase de plantilla [basic\_ostream](../standard-library/basic-ostream-class.md)\) que dependen de los parámetros de plantilla.|  
-|[fpos](../standard-library/fpos-class.md)|La clase de plantilla describe un objeto que puede almacenar toda la información necesaria para restaurar un indicador de posición de archivo arbitraria en cualquier flujo.|  
-|[ios\_base](../standard-library/ios-base-class.md)|La clase describe las funciones de almacenamiento y miembro comunes al flujo de entrada y al de salida que no dependen de los parámetros de plantilla.|  
+|[boolalpha](../standard-library/ios-functions.md#boolalpha)|Specifies that variables of type [bool](../cpp/bool-cpp.md) appear as **true** or **false** in the stream.|  
+|[dec](../standard-library/ios-functions.md#dec)|Specifies that integer variables appear in base 10 notation.|  
+|[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Configures the flags of an `ios_base` object to use a default display format for float values.|  
+|[fixed](../standard-library/ios-functions.md#fixed)|Specifies that a floating-point number is displayed in fixed-decimal notation.|  
+|[hex](../standard-library/ios-functions.md#hex)|Specifies that integer variables appear in base 16 notation.|  
+|[internal](../standard-library/ios-functions.md#internal)|Causes a number's sign to be left justified and the number to be right justified.|  
+|[left](../standard-library/ios-functions.md#left)|Causes text that is not as wide as the output width to appear in the stream flush with the left margin.|  
+|[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Specifies that variables of type [bool](../cpp/bool-cpp.md) appear as 1 or 0 in the stream.|  
+|[noshowbase](../standard-library/ios-functions.md#noshowbase)|Turns off indicating the notational base in which a number is displayed.|  
+|[noshowpoint](../standard-library/ios-functions.md#noshowpoint)|Displays only the whole-number part of floating-point numbers whose fractional part is zero.|  
+|[noshowpos](../standard-library/ios-functions.md#noshowpos)|Causes positive numbers to not be explicitly signed.|  
+|[noskipws](../standard-library/ios-functions.md#noskipws)|Cause spaces to be read by the input stream.|  
+|[nounitbuf](../standard-library/ios-functions.md#nounitbuf)|Causes output to be buffered and processed when the buffer is full.|  
+|[nouppercase](../standard-library/ios-functions.md#nouppercase)|Specifies that hexadecimal digits and the exponent in scientific notation appear in lowercase.|  
+|[oct](../standard-library/ios-functions.md#oct)|Specifies that integer variables appear in base 8 notation.|  
+|[right](../standard-library/ios-functions.md#right)|Causes text that is not as wide as the output width to appear in the stream flush with the right margin.|  
+|[scientific](../standard-library/ios-functions.md#scientific)|Causes floating point numbers to be displayed using scientific notation.|  
+|[showbase](../standard-library/ios-functions.md#showbase)|Indicates the notational base in which a number is displayed.|  
+|[showpoint](../standard-library/ios-functions.md#showpoint)|Displays the whole-number part of a floating-point number and digits to the right of the decimal point even when the fractional part is zero.|  
+|[showpos](../standard-library/ios-functions.md#showpos)|Causes positive numbers to be explicitly signed.|  
+|[skipws](../standard-library/ios-functions.md#skipws)|Cause spaces to not be read by the input stream.|  
+|[unitbuf](../standard-library/ios-functions.md#unitbuf)|Causes output to be processed when the buffer is not empty.|  
+|[uppercase](../standard-library/ios-functions.md#uppercase)|Specifies that hexadecimal digits and the exponent in scientific notation appear in uppercase.|  
   
-## Vea también  
- [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
- [Seguridad para subprocesos en la biblioteca estándar de C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Programación con iostream](../standard-library/iostream-programming.md)   
- [Convenciones de iostreams](../standard-library/iostreams-conventions.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[basic_ios](../standard-library/basic-ios-class.md)|The template class describes the storage and member functions common to both input streams (of template class [basic_istream](../standard-library/basic-istream-class.md)) and output streams (of template class [basic_ostream](../standard-library/basic-ostream-class.md)) that depend on the template parameters.|  
+|[fpos](../standard-library/fpos-class.md)|The template class describes an object that can store all the information needed to restore an arbitrary file-position indicator within any stream.|  
+|[ios_base](../standard-library/ios-base-class.md)|The class describes the storage and member functions common to both input and output streams that do not depend on the template parameters.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
+
+
+
+

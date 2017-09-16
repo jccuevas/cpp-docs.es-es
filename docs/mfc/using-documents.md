@@ -1,66 +1,85 @@
 ---
-title: "Usar documentos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "datos [MFC], documentos"
-  - "datos [MFC], leer"
-  - "arquitectura documento/vista [C++], documentos"
-  - "documentos [C++]"
-  - "documentos [C++], aplicaciones de C++"
-  - "archivos [C++]"
-  - "archivos [C++], escribir"
-  - "imprimir [MFC], documentos"
-  - "leer datos [C++], documentos y vistas"
-  - "vistas [C++], aplicaciones de C++"
-  - "escribir en archivos [C++]"
+title: Using Documents | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- documents [MFC], C++ applications
+- data [MFC], reading
+- documents [MFC]
+- files [MFC], writing to
+- data [MFC], documents
+- files [MFC]
+- views [MFC], C++ applications
+- document/view architecture [MFC], documents
+- reading data [MFC], documents and views
+- printing [MFC], documents
+- writing to files [MFC]
 ms.assetid: f390d6d8-d0e1-4497-9b6a-435f7ce0776c
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Usar documentos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc12ddaff980b92c5174b2de7a5f6a122e4f5a08
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Funcionando juntos, documentos y vistas:  
+---
+# <a name="using-documents"></a>Using Documents
+Working together, documents and views:  
   
--   Contiene, administrar, y mostrar [datos](../mfc/managing-data-with-document-data-variables.md)específico de la aplicación.  
+-   Contain, manage, and display your application-specific [data](../mfc/managing-data-with-document-data-variables.md).  
   
--   Proporciona una interfaz [variables de datos del documento](../mfc/managing-data-with-document-data-variables.md) formado por para manipular los datos.  
+-   Provide an interface consisting of [document data variables](../mfc/managing-data-with-document-data-variables.md) for manipulating the data.  
   
--   Participe en [archivos de escritura y lectura](../mfc/serializing-data-to-and-from-files.md).  
+-   Participate in [writing and reading files](../mfc/serializing-data-to-and-from-files.md).  
   
--   Participe en [el imprimir](../mfc/role-of-the-view-in-printing.md).  
+-   Participate in [printing](../mfc/role-of-the-view-in-printing.md).  
   
--   [Identificador](../mfc/handling-commands-in-the-document.md) la mayoría de los comandos y los mensajes de la aplicación.  
+-   [Handle](../mfc/handling-commands-in-the-document.md) most of your application's commands and messages.  
   
- El documento está implicado determinado de administrar datos.  Almacena los datos, normalmente, en variables miembro de clase del documento.  Vista utiliza estas variables para tener acceso a los datos para la presentación y la actualización.  El mecanismo de serialización predeterminado de documento administra la lectura y la escritura de los datos a y desde los archivos.  Los documentos también pueden controlar los comandos \(pero no los mensajes de Windows distintas de **WM\_COMMAND**\).  
+ The document is particularly involved in managing data. Store your data, normally, in document class member variables. The view uses these variables to access the data for display and update. The document's default serialization mechanism manages reading and writing the data to and from files. Documents can also handle commands (but not Windows messages other than **WM_COMMAND**).  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Derivar de una clase de CDocument](../mfc/deriving-a-document-class-from-cdocument.md)  
+-   [Deriving a document class from CDocument](../mfc/deriving-a-document-class-from-cdocument.md)  
   
--   [Administrar datos con variables de datos del documento](../mfc/managing-data-with-document-data-variables.md)  
+-   [Managing data with document data variables](../mfc/managing-data-with-document-data-variables.md)  
   
--   [Serialización de datos a y desde los archivos](../mfc/serializing-data-to-and-from-files.md)  
+-   [Serializing data to and from files](../mfc/serializing-data-to-and-from-files.md)  
   
--   [Omitir el mecanismo de serialización](../mfc/bypassing-the-serialization-mechanism.md)  
+-   [Bypassing the serialization mechanism](../mfc/bypassing-the-serialization-mechanism.md)  
   
--   [Control de comandos en el documento](../mfc/handling-commands-in-the-document.md)  
+-   [Handling commands in the document](../mfc/handling-commands-in-the-document.md)  
   
--   [La función miembro de OnNewDocument](../Topic/CDocument::OnNewDocument.md)  
+-   [The OnNewDocument member function](../mfc/reference/cdocument-class.md#onnewdocument)  
   
--   [La función miembro de DeleteContents](../Topic/CDocument::DeleteContents.md)  
+-   [The DeleteContents member function](../mfc/reference/cdocument-class.md#deletecontents)  
   
-## Vea también  
- [Arquitectura documento\/vista](../mfc/document-view-architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

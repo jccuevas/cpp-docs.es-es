@@ -1,44 +1,63 @@
 ---
-title: "M&#233;todos de creaci&#243;n de una barra de estado | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBar (clase), frente a CStatusBarCtrl"
-  - "CStatusBarCtrl (clase), crear"
-  - "CStatusBarCtrl (clase), frente a CStatusBar"
-  - "métodos [MFC]"
-  - "métodos [MFC], crear barras de estado"
-  - "barras de estado, crear"
+title: Methods of Creating a Status Bar | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CStatusBar class [MFC], vs. CStatusBarCtrl
+- methods [MFC], creating status bars
+- CStatusBarCtrl class [MFC], vs. CStatusBar
+- CStatusBarCtrl class [MFC], creating
+- methods [MFC]
+- status bars [MFC], creating
 ms.assetid: 9aeaf290-7099-4762-a5ba-9c26705333c9
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# M&#233;todos de creaci&#243;n de una barra de estado
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6a6e89b3082bd373ae7210f7a353543ed8525da4
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-MFC proporciona dos clases para crear barras de estado: [CStatusBar](../mfc/reference/cstatusbar-class.md) y [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) \(que contiene el control común API de Windows\).  `CStatusBar` proporciona toda la funcionalidad de controles comunes de la barra de estado, automáticamente interactúa con los menús y barras de herramientas, y controla muchos de los valores necesarios y estructuras de control común para se; sin embargo, el archivo ejecutable resultante será normalmente mayor que lo creó mediante `CStatusBarCtrl`.  
+---
+# <a name="methods-of-creating-a-status-bar"></a>Methods of Creating a Status Bar
+MFC provides two classes to create status bars: [CStatusBar](../mfc/reference/cstatusbar-class.md) and [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (which wraps the Windows common control API). `CStatusBar` provides all of the functionality of the status bar common control, it automatically interacts with menus and toolbars, and it handles many of the required common control settings and structures for you; however, your resulting executable usually will be larger than that created by using `CStatusBarCtrl`.  
   
- `CStatusBarCtrl` produce normalmente a un ejecutable menor, y puede optar por utilizar `CStatusBarCtrl` si no piensa integrar la barra de estado en la arquitectura de MFC.  Si piensa utilizar `CStatusBarCtrl` y para integrar la barra de estado en la arquitectura de MFC, debe tener cuidado adicional para comunicar manipulaciones del control de barra de estado a MFC.  Esta comunicación no es difícil; sin embargo, es el trabajo adicional que no es necesario cuando se utiliza `CStatusBar`.  
+ `CStatusBarCtrl` usually results in a smaller executable, and you may prefer to use `CStatusBarCtrl` if you do not intend to integrate the status bar into the MFC architecture. If you plan to use `CStatusBarCtrl` and integrate the status bar into the MFC architecture, you must take additional care to communicate status bar control manipulations to MFC. This communication is not difficult; however, it is additional work that is unneeded when you use `CStatusBar`.  
   
- Visual C\+\+ proporciona dos maneras de aprovechar el control común de la barra de estado.  
+ Visual C++ provides two ways to take advantage of the status bar common control.  
   
--   Cree la barra de estado mediante `CStatusBar`, y llame a [CStatusBar::GetStatusBarCtrl](../Topic/CStatusBar::GetStatusBarCtrl.md) para obtener acceso a las funciones miembro de `CStatusBarCtrl` .  
+-   Create the status bar using `CStatusBar`, and then call [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl) to get access to the `CStatusBarCtrl` member functions.  
   
--   Cree la barra de estado mediante el constructor de [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) .  
+-   Create the status bar using [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)'s constructor.  
   
- Cualquier método dará el acceso a las funciones miembro del control de barra de estado.  Cuando se llama a `CStatusBar::GetStatusBarCtrl`, devuelve una referencia a un objeto de `CStatusBarCtrl` para poder utilizar alguna establece de funciones miembro.  Vea [CStatusBar](../mfc/reference/cstatusbar-class.md) para obtener información sobre la construcción y crear una barra de estado mediante `CStatusBar`.  
+ Either method will give you access to the member functions of the status bar control. When you call `CStatusBar::GetStatusBarCtrl`, it returns a reference to a `CStatusBarCtrl` object so you can use either set of member functions. See [CStatusBar](../mfc/reference/cstatusbar-class.md) for information on constructing and creating a status bar using `CStatusBar`.  
   
-## Vea también  
- [Usar CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

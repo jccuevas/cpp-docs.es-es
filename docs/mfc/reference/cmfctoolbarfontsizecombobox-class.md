@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCToolBarFontSizeComboBox | Documentos de Microsoft
+title: CMFCToolBarFontSizeComboBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCToolBarFontSizeComboBox class
+- CMFCToolBarFontSizeComboBox [MFC], CMFCToolBarFontSizeComboBox
+- CMFCToolBarFontSizeComboBox [MFC], GetTwipSize
+- CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
+- CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
 caps.latest.revision: 26
 author: mikeblome
@@ -38,51 +41,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9dddb563617a708bdc8b2193fa5ee8bd10321828
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: aa53b70eb9f152e8a4319613fa804c3296bfc0e2
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctoolbarfontsizecombobox-class"></a>Clase CMFCToolBarFontSizeComboBox
-Un botón de barra de herramientas que contiene un control de cuadro combinado que permite al usuario seleccionar un tamaño de fuente.  
+# <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox Class
+A toolbar button that contains a combo box control that enables the user to select a font size.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Constructores protegidos  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|Name|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox](#cmfctoolbarfontsizecombobox)|Construye un objeto `CMFCToolBarFontSizeComboBox`.|  
+|[CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox](#cmfctoolbarfontsizecombobox)|Constructs a `CMFCToolBarFontSizeComboBox` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize)|Devuelve el tamaño de fuente seleccionado en twips.|  
-|[CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes)|La lista del cuadro combinado se rellena con todos los tamaños de fuente compatibles para una fuente especificada.|  
-|[CMFCToolBarFontSizeComboBox::SetTwipSize](#settwipsize)|Establece el tamaño de fuente en twips.|  
+|[CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize)|Returns the selected font size in twips.|  
+|[CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes)|Fills the combo box list with all supported font sizes for a specified font.|  
+|[CMFCToolBarFontSizeComboBox::SetTwipSize](#settwipsize)|Sets the font size in twips.|  
   
-## <a name="remarks"></a>Comentarios  
- Puede usar un `CMFCToolBarFontSizeComboBox` objeto junto con un [CMFCToolBarFontComboBox clase](../../mfc/reference/cmfctoolbarfontcombobox-class.md) objeto y permitir al usuario seleccionar una fuente y tamaño.  
+## <a name="remarks"></a>Remarks  
+ You can use a `CMFCToolBarFontSizeComboBox` object together with a [CMFCToolBarFontComboBox Class](../../mfc/reference/cmfctoolbarfontcombobox-class.md) object to enable a user to select a font and font size.  
   
- Puede agregar un botón de cuadro combinado de tamaño de fuente a una barra de herramientas, como agregar un botón de cuadro combinado de fuente. Para obtener más información, consulte [CMFCToolBarFontComboBox clase](../../mfc/reference/cmfctoolbarfontcombobox-class.md).  
+ You can add a font size combo box button to a toolbar just as you add a font combo box button. For more information, see [CMFCToolBarFontComboBox Class](../../mfc/reference/cmfctoolbarfontcombobox-class.md).  
   
- Cuando el usuario selecciona una fuente nueva en un `CMFCToolBarFontComboBox` objeto, puede rellenar el cuadro combinado de tamaño de fuente con los tamaños admitidos de la fuente mediante la [CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes) método.  
+ When the user selects a new font in a `CMFCToolBarFontComboBox` object, you can fill the font size combo box with the supported sizes for that font by using the [CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes) method.  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar varios métodos en la `CMFCToolBarFontSizeComboBox` clase para configurar un `CMFCToolBarFontSizeComboBox` objeto. En el ejemplo se muestra cómo recuperar el tamaño de fuente, en twips, desde el cuadro de texto, rellene el cuadro combinado de tamaño de fuente con todos los tamaños válidos de la fuente y especifique el tamaño de fuente en twips. Este fragmento de código forma parte de la [ejemplo de panel de palabras](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCToolBarFontSizeComboBox` class to configure a `CMFCToolBarFontSizeComboBox` object. The example illustrates how to retrieve the font size, in twips, from the text box, fill the font size combo box with all valid sizes of the given font, and specify the font size in twips. This code snippet is part of the [Word Pad sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_WordPad Nº&8;](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
@@ -91,63 +94,63 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
   
  [CMFCToolBarFontSizeComboBox](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxtoolbarfontcombobox.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbarfontcombobox.h  
   
-##  <a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
- Construye un objeto `CMFCToolBarFontSizeComboBox`.  
+##  <a name="cmfctoolbarfontsizecombobox"></a>  CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
+ Constructs a `CMFCToolBarFontSizeComboBox` object.  
   
 ```  
 CMFCToolBarFontSizeComboBox();
 ```  
   
-##  <a name="gettwipsize"></a>CMFCToolBarFontSizeComboBox::GetTwipSize  
- Recupera el tamaño de fuente, en twips, desde el cuadro de texto de un cuadro combinado de tamaño de fuente.  
+##  <a name="gettwipsize"></a>  CMFCToolBarFontSizeComboBox::GetTwipSize  
+ Retrieves the font size, in twips, from the text box of a font size combo box.  
   
 ```  
 int GetTwipSize() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Si el valor devuelto es positivo, es el tamaño de fuente en twips. Es -1 si el cuadro de texto del cuadro combinado está vacío. Es -2 si se produce un error.  
+### <a name="return-value"></a>Return Value  
+ If the return value is positive, it is the font size in twips. It is -1 if the text box of the combo box is empty. It is -2 if an error occurs.  
   
-##  <a name="rebuildfontsizes"></a>CMFCToolBarFontSizeComboBox::RebuildFontSizes  
- Rellena un cuadro combinado de tamaño de fuente con todos los tamaños válidos de la fuente dada.  
+##  <a name="rebuildfontsizes"></a>  CMFCToolBarFontSizeComboBox::RebuildFontSizes  
+ Fills a font size combo box with all valid sizes of the given font.  
   
 ```  
 void RebuildFontSizes(const CString& strFontName);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `[in] strFontName`  
- Especifica un nombre de fuente.  
+ Specifies a font name.  
   
-### <a name="remarks"></a>Comentarios  
- Llame a esta función cuando desee sincronizar entre la selección en un cuadro combinado de fuente y un cuadro combinado de tamaño de fuente, como un [CMFCToolBarFontComboBox clase](../../mfc/reference/cmfctoolbarfontcombobox-class.md).  
+### <a name="remarks"></a>Remarks  
+ Call this function when you want to synchronize between selection in a font combo box and a font size combo box, such as a [CMFCToolBarFontComboBox Class](../../mfc/reference/cmfctoolbarfontcombobox-class.md).  
   
-##  <a name="settwipsize"></a>CMFCToolBarFontSizeComboBox::SetTwipSize  
- Redondea especificado (en twips) para el tamaño más cercano en puntos y, a continuación, Establece el tamaño seleccionado en el cuadro combinado para ese valor.  
+##  <a name="settwipsize"></a>  CMFCToolBarFontSizeComboBox::SetTwipSize  
+ Rounds the specified size (in twips) to the nearest size in points, and then sets the selected size in the combo box to that value.  
   
 ```  
 void SetTwipSize(int nSize);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  [in] `nSize`  
- Especifica el tamaño de fuente (en twips) para establecer.  
+ Specifies the font size (in twips) to set.  
   
-### <a name="remarks"></a>Comentarios  
- Puede recuperar el tamaño de fuente válido anterior más adelante llamando a la [CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize) método.  
+### <a name="remarks"></a>Remarks  
+ You can retrieve the previous valid font size later by calling the [CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize) method.  
   
-## <a name="see-also"></a>Vea también  
- [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
- [Clases](../../mfc/reference/mfc-classes.md)   
- [Clase CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)   
- [Clase CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [Clase CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)   
- [Clase CMFCFontInfo](../../mfc/reference/cmfcfontinfo-class.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)   
+ [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [CMFCToolBarComboBoxButton Class](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)   
+ [CMFCFontInfo Class](../../mfc/reference/cmfcfontinfo-class.md)   
  [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
- [Tutorial: Poner controles en barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+ [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 
 

@@ -1,32 +1,52 @@
 ---
-title: "alignof y alignas (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: alignof and alignas (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 1d18aa8a-9621-4fb5-86e5-4cc86d5187f4
 caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# alignof y alignas (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: fa0553d259c2ef33b33cede107a9a2f54612bd7f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/11/2017
 
-El especificador de tipo `alignas` es una manera portátil y estándar de C\+\+ de especificar una alineación personalizada de variables y tipos definidos por el usuario.  El operador `alignof` también es una forma estándar y portátil de obtener la alineación de una variable o un tipo especificado.  
+---
+# <a name="alignof-and-alignas-c"></a>alignof and alignas (C++)
+The `alignas` type specifier is a portable, C++ standard way to specify custom alignment of variables and user defined types. The `alignof` operator is likewise a standard, portable way to obtain the alignment of a specified type or variable.  
   
-## Ejemplo  
- Puede usar `alignas` en una clase, struct o union, o en miembros individuales.  Cuando varios especificadores de `alignas` se encuentran, el compilador elige el más estricto \(el que tiene el valor más grande\).  
+## <a name="example"></a>Example  
+ You can use `alignas` on a class, struck or union, or on individual members. When multiple `alignas` specifiers are encountered, the compiler will choose the strictest one, (the one with the largest value).  
   
-```  
+```cpp  
+// alignas_alignof.cpp
+// compile with: cl /EHsc alignas_alignof.cpp
+#include <iostream>
+
 struct alignas(16) Bar  
 {      
     int i;       // 4 bytes  
@@ -34,10 +54,12 @@ struct alignas(16) Bar
     alignas(4) char arr[3];  
     short s;          // 2 bytes  
 };  
-…  
-cout << alignof(Bar) << endl; // output: 16  
-  
+
+int main()
+{  
+    std::cout << alignof(Bar) << std::endl; // output: 16  
+}  
 ```  
   
-## Vea también  
- [Alineación](../cpp/alignment-cpp-declarations.md)
+## <a name="see-also"></a>See Also  
+ [Alignment](../cpp/alignment-cpp-declarations.md)

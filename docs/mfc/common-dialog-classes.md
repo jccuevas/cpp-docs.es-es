@@ -1,52 +1,71 @@
 ---
-title: "Clases de cuadros de di&#225;logo comunes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cuadros de diálogo comunes [C++]"
-  - "cuadros de diálogo comunes [C++], clases de cuadros de diálogo comunes"
-  - "clases de cuadros de diálogo comunes [C++]"
-  - "cuadros de diálogo [C++], cuadros de diálogo comunes de Windows"
-  - "clases de cuadro de diálogo [C++]"
-  - "clases de cuadro de diálogo [C++], común"
-  - "cuadros de diálogo de MFC, cuadros de diálogo comunes de Windows"
-  - "cuadros de diálogo comunes de Windows [C++]"
+title: Common Dialog Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog classes [MFC]
+- dialog boxes [MFC], Windows common dialogs
+- common dialog boxes [MFC], common dialog classes
+- common dialog classes [MFC]
+- MFC dialog boxes [MFC], Windows common dialogs
+- Windows common dialogs [MFC]
+- dialog classes [MFC], common
+- common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Clases de cuadros de di&#225;logo comunes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0811c6b121aa86f09f3656b1061ff4aadbefd0a1
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Además de la clase [CDialog](../mfc/reference/cdialog-class.md), MFC proporciona que varias clases derivadas de `CDialog` que encapsulan los cuadros de diálogo de uso común, como se muestra en la tabla siguiente.  Los cuadros de diálogo encapsulados se denominan “cuadros de diálogo comunes” y son parte de la biblioteca común del diálogo de Windows \(COMMDLG.DLL\).  Proporcionan los recursos y el código de la diálogo\- plantilla para estas clases en los cuadros de diálogo comunes de Windows que forman parte de las versiones de Windows 3,1 y versiones posteriores.  
+---
+# <a name="common-dialog-classes"></a>Common Dialog Classes
+In addition to class [CDialog](../mfc/reference/cdialog-class.md), MFC supplies several classes derived from `CDialog` that encapsulate commonly used dialog boxes, as shown in the following table. The dialog boxes encapsulated are called the "common dialog boxes" and are part of the Windows common dialog library (COMMDLG.DLL). The dialog-template resources and code for these classes are provided in the Windows common dialog boxes that are part of Windows versions 3.1 and later.  
   
-### Clases comunes de diálogo  
+### <a name="common-dialog-classes"></a>Common Dialog Classes  
   
-|Clase derivada de diálogo|Objetivo|  
-|-------------------------------|--------------|  
-|[CColorDialog](../mfc/reference/ccolordialog-class.md)|Permite al usuario seleccionar colores.|  
-|[CFileDialog](../mfc/reference/cfiledialog-class.md)|Permite al usuario seleccionar un nombre de archivo para abrir o guardar.|  
-|[CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)|Permite al usuario iniciar una búsqueda o de reemplazo en un archivo de texto.|  
-|[CFontDialog](../mfc/reference/cfontdialog-class.md)|Permite al usuario especificar una fuente.|  
-|[CPrintDialog](../mfc/reference/cprintdialog-class.md)|Permite al usuario especificar la información para un trabajo de impresión.|  
-|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Hoja de propiedades de impresión de Windows 2000.|  
+|Derived dialog class|Purpose|  
+|--------------------------|-------------|  
+|[CColorDialog](../mfc/reference/ccolordialog-class.md)|Lets user select colors.|  
+|[CFileDialog](../mfc/reference/cfiledialog-class.md)|Lets user select a filename to open or to save.|  
+|[CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)|Lets user initiate a find or replace operation in a text file.|  
+|[CFontDialog](../mfc/reference/cfontdialog-class.md)|Lets user specify a font.|  
+|[CPrintDialog](../mfc/reference/cprintdialog-class.md)|Lets user specify information for a print job.|  
+|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Windows 2000 print property sheet.|  
   
- Para obtener más información sobre las clases comunes de cuadro de diálogo, vea los nombres de clase individuales en *la referencia de MFC*.  MFC también proporciona varias clases estándar de diálogo utilizadas para OLE.  Para obtener información sobre estas clases, vea la clase base, [COleDialog](../mfc/reference/coledialog-class.md), en *la referencia de MFC*.  
+ For more information about the common dialog classes, see the individual class names in the *MFC Reference*. MFC also supplies a number of standard dialog classes used for OLE. For information about these classes, see the base class, [COleDialog](../mfc/reference/coledialog-class.md), in the *MFC Reference*.  
   
- Otras tres clases de MFC tienen diálogo\- como características.  Para obtener información sobre las clases [CFormView](../mfc/reference/cformview-class.md), [CRecordView](../mfc/reference/crecordview-class.md), y [CDaoRecordView](../mfc/reference/cdaorecordview-class.md), vea las clases en *la referencia de MFC*.  Para obtener información sobre la clase [CDialogBar](../mfc/reference/cdialogbar-class.md), vea [Barras de cuadro de diálogo](../mfc/dialog-bars.md).  
+ Three other classes in MFC have dialog-like characteristics. For information about classes [CFormView](../mfc/reference/cformview-class.md), [CRecordView](../mfc/reference/crecordview-class.md), and [CDaoRecordView](../mfc/reference/cdaorecordview-class.md), see the classes in the *MFC Reference*. For information about class [CDialogBar](../mfc/reference/cdialogbar-class.md), see [Dialog Bars](../mfc/dialog-bars.md).  
   
-## Vea también  
- [Cuadros de diálogo](../mfc/dialog-boxes.md)   
- [Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)   
- [Cuadros de diálogo en OLE](../mfc/dialog-boxes-in-ole.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)   
+ [Dialog Boxes in OLE](../mfc/dialog-boxes-in-ole.md)
+
+

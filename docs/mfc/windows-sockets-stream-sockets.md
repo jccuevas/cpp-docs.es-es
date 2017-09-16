@@ -1,54 +1,74 @@
 ---
-title: "Windows Sockets: Sockets de secuencias | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sockets [C++], sockets de secuencia"
-  - "sockets de secuencia [C++]"
-  - "Windows Sockets [C++], sockets de secuencia"
+title: 'Windows Sockets: Stream Sockets | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows Sockets [MFC], stream sockets
+- sockets [MFC], stream sockets
+- stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Windows Sockets: Sockets de secuencias
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 380b2922e253fcbeea84557e8bb15f9c2912e3c3
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En este artículo se describe los sockets de secuencia, uno de los dos tipos de socket de Windows disponibles. \(El otro tipo es [socket de datagrama](../mfc/windows-sockets-datagram-sockets.md).\)  
+---
+# <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Stream Sockets
+This article describes stream sockets, one of the two Windows Socket types available. (The other type is the [datagram socket](../mfc/windows-sockets-datagram-sockets.md).)  
   
- Los sockets de secuencia preven un flujo de datos sin límites de registro: una secuencia de bytes que pueden ser bidireccionales \(la aplicación está llena \- dúplex: puede transmitir y recibir a través de socket\).  Las secuencias se pueden confirmar sobre para entregar datos ordenados, unduplicated. \(“Secuenciado” significa que los paquetes se entregarán en el orden enviado. “Unduplicated” significa que obtiene un paquete determinado solo una vez.\) La recepción de los mensajes de secuencia se garantiza, y secuencias son apropiadas a administrar grandes cantidades de datos.  
+ Stream sockets provide for a data flow without record boundaries: a stream of bytes that can be bidirectional (the application is full duplex: it can both transmit and receive through the socket). Streams can be relied upon to deliver sequenced, unduplicated data. ("Sequenced" means that packets are delivered in the order sent. "Unduplicated" means that you get a particular packet only once.) Receipt of stream messages is guaranteed, and streams are well suited to handling large amounts of data.  
   
- El nivel de transporte de red puede dividir o agrupar datos en los paquetes de tamaño razonable.  La clase de `CSocket` administrará el empaquetado y el desempaque automáticamente.  
+ The network transport layer may break up or group data into packets of reasonable size. The `CSocket` class will handle the packing and unpacking for you.  
   
- Las secuencias se basan en conexiones explícitas: el socket A solicita una conexión a b de socket; b de socket acepta o rechaza la solicitud de conexión.  
+ Streams are based on explicit connections: socket A requests a connection to socket B; socket B accepts or rejects the connection request.  
   
- Una llamada telefónica proporciona una buena analogía para una secuencia.  En circunstancias normales, la parte receptora oye lo que se indica en el orden que se indica, sin la duplicación o la pérdida.  Los sockets de secuencia son adecuados, por ejemplo, para las implementaciones como el Protocolo de transferencia de archivos \(FTP\), que facilita transferir ASCII o archivos binarios de tamaño arbitrario.  
+ A telephone call provides a good analogy for a stream. Under normal circumstances, the receiving party hears what you say in the order that you say it, without duplication or loss. Stream sockets are appropriate, for example, for implementations such as the File Transfer Protocol (FTP), which facilitates transferring ASCII or binary files of arbitrary size.  
   
- Los sockets de secuencia son preferibles a sockets de datagrama cuando los datos se deben garantizar para proteger y cuando el tamaño de datos es grande.  Para obtener más información sobre los sockets de secuencia, vea la especificación de Windows Sockets.  La especificación de está disponible en [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ Stream sockets are preferable to datagram sockets when the data must be guaranteed to arrive and when data size is large. For more information about stream sockets, see the Windows Sockets specification. The specification is available in the Windows SDK.  
   
- Mediante sockets de secuencia puede ser superior a las aplicaciones diseñadas para utilizar un socket de datagrama para propagar todos los sockets receptora en red porque  
+ Using stream sockets can be superior to applications designed to use a datagram socket for broadcasting to all receiving sockets on the network because  
   
--   El modelo de difusión está sujeto a problemas de la inundación de red \(o “tormenta”\).  
+-   The broadcast model is subject to network flood (or "storm") problems.  
   
--   El modelo cliente\-servidor adoptado posteriormente es más eficaz.  
+-   The client-server model adopted subsequently is more efficient.  
   
--   La transferencia de datos confiable de fuentes del modelo de la secuencia, donde no hace el modelo de datagrama.  
+-   The stream model supplies reliable data transfer, where the datagram model does not.  
   
--   El modelo final aprovecha la capacidad de comunicarse entre Unicode y aplicaciones de socket ANSI que la clase CArchive presta a la clase CSocket.  
+-   The final model takes advantage of the ability to communicate between Unicode and ANSI socket applications that class CArchive lends to class CSocket.  
   
     > [!NOTE]
-    >  Si utiliza la clase `CSocket`, debe utilizar una secuencia.  Una aserción de MFC produce un error si especifica el socket de la **SOCK\_DGRAM**.  
+    >  If you use class `CSocket`, you must use a stream. An MFC assertion fails if you specify the socket type as **SOCK_DGRAM**.  
   
-## Vea también  
- [Windows Sockets en MFC](../mfc/windows-sockets-in-mfc.md)   
- [Windows Sockets: Nociones](../mfc/windows-sockets-background.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
+ [Windows Sockets: Background](../mfc/windows-sockets-background.md)
+
+

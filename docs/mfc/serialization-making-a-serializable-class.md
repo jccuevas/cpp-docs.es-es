@@ -1,102 +1,121 @@
 ---
-title: "Serialization: Making a Serializable (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clases [C++], derivadas"
-  - "CObject (clase), derivar clases serializables"
-  - "constructores [C++], definir sin argumentos"
-  - "DECLARE_SERIAL (macro)"
-  - "constructor predeterminado"
-  - "valores predeterminados [C++], constructor"
-  - "IMPLEMENT_SERIAL (macro)"
-  - "ningún constructor predeterminado"
-  - "ningún constructor con argumentos"
-  - "clase serializables"
-  - "serialización [C++], clases serializables"
-  - "Serialize (método), reemplazar"
-  - "VERSIONABLE_SCHEMA (macro)"
+title: 'Serialization: Making a Serializable Class | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- serializable class [MFC]
+- DECLARE_SERIAL macro [MFC]
+- default constructor [MFC]
+- VERSIONABLE_SCHEMA macro [MFC]
+- classes [MFC], derived
+- IMPLEMENT_SERIAL macro [MFC]
+- no-arguments constructor [MFC]]
+- Serialize method, overriding
+- defaults [MFC], constructor
+- CObject class [MFC], deriving serializable classes
+- constructors [MFC], defining with no arguments
+- serialization [MFC], serializable classes
+- no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Serialization: Making a Serializable (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f19fb9c7aa7c8ee05c6973247b8309dd5a381b36
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Cinco pasos principales son necesarios para crear una clase serializable.  Se enumeran y se explican en las secciones siguientes:  
+---
+# <a name="serialization-making-a-serializable-class"></a>Serialization: Making a Serializable Class
+Five main steps are required to make a class serializable. They are listed below and explained in the following sections:  
   
-1.  [Derivar de la clase de CObject](#_core_deriving_your_class_from_cobject) \(o de alguna clase derivada de `CObject`\).  
+1.  [Deriving your class from CObject](#_core_deriving_your_class_from_cobject) (or from some class derived from `CObject`).  
   
-2.  [Reemplazar la función miembro de Serialize](#_core_overriding_the_serialize_member_function).  
+2.  [Overriding the Serialize member function](#_core_overriding_the_serialize_member_function).  
   
-3.  [Mediante la macro de DECLARE\_SERIAL](#_core_using_the_declare_serial_macro) en la declaración de clase.  
+3.  [Using the DECLARE_SERIAL macro](#_core_using_the_declare_serial_macro) in the class declaration.  
   
-4.  [Definir un constructor que no toma ningún argumento](#_core_defining_a_constructor_with_no_arguments).  
+4.  [Defining a constructor that takes no arguments](#_core_defining_a_constructor_with_no_arguments).  
   
-5.  [Mediante la macro de IMPLEMENT\_SERIAL en el archivo de implementación](#_core_using_the_implement_serial_macro_in_the_implementation_file) para la clase.  
+5.  [Using the IMPLEMENT_SERIAL macro in the implementation file](#_core_using_the_implement_serial_macro_in_the_implementation_file) for your class.  
   
- Si llama a `Serialize` directamente en lugar de a través de \>\> y \<\< operadores de [CArchive](../mfc/reference/carchive-class.md), los tres últimos pasos no son necesarios para la serialización.  
+ If you call `Serialize` directly rather than through the >> and << operators of [CArchive](../mfc/reference/carchive-class.md), the last three steps are not required for serialization.  
   
-##  <a name="_core_deriving_your_class_from_cobject"></a> Derivar de la clase de CObject  
- El protocolo y la funcionalidad básicos de serialización se definen en la clase de `CObject` .  Si deriva la clase de `CObject` \(o una clase derivada de `CObject`\), como se muestra en la siguiente declaración de la clase `CPerson`, puede obtener acceso al protocolo de serialización y funcionalidad de `CObject`.  
+##  <a name="_core_deriving_your_class_from_cobject"></a> Deriving Your Class from CObject  
+ The basic serialization protocol and functionality are defined in the `CObject` class. By deriving your class from `CObject` (or from a class derived from `CObject`), as shown in the following declaration of class `CPerson`, you gain access to the serialization protocol and functionality of `CObject`.  
   
-##  <a name="_core_overriding_the_serialize_member_function"></a> Reemplazar la función miembro de Serialize  
- La función miembro de `Serialize` , que se define en la clase de `CObject` , es responsable realmente de serializar los datos necesarios capturar el estado actual de un objeto.  La función de `Serialize` tiene un argumento de `CArchive` que utilice para leer y escribir los datos de objeto.  El objeto de [CArchive](../mfc/reference/carchive-class.md) tiene una función miembro, `IsStoring`, que indica si `Serialize` está almacenando \(datos de escritura\) o carga \(datos de lectura\).  Mediante los resultados de `IsStoring` como guía, inserte los datos de objeto en el objeto de `CArchive` con el operador de inserción \(**\<\<**\) o datos de extraer con el operador de extracción \(**\>\>**\).  
+##  <a name="_core_overriding_the_serialize_member_function"></a> Overriding the Serialize Member Function  
+ The `Serialize` member function, which is defined in the `CObject` class, is responsible for actually serializing the data necessary to capture an object's current state. The `Serialize` function has a `CArchive` argument that it uses to read and write the object data. The [CArchive](../mfc/reference/carchive-class.md) object has a member function, `IsStoring`, which indicates whether `Serialize` is storing (writing data) or loading (reading data). Using the results of `IsStoring` as a guide, you either insert your object's data in the `CArchive` object with the insertion operator (**<\<**) or extract data with the extraction operator (**>>**).  
   
- Considere una clase que se deriva de `CObject` y tiene dos nuevas variables miembro, tipos `CString` y **palabra**.  El siguiente fragmento de la declaración de clase muestra las nuevas variables miembro y la declaración de la función invalidada de miembro de `Serialize` :  
+ Consider a class that is derived from `CObject` and has two new member variables, of types `CString` and **WORD**. The following class declaration fragment shows the new member variables and the declaration for the overridden `Serialize` member function:  
   
- [!code-cpp[NVC_MFCSerialization#1](../mfc/codesnippet/CPP/serialization-making-a-serializable-class_1.h)]  
+ [!code-cpp[NVC_MFCSerialization#1](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_1.h)]  
   
-#### Para reemplazar la función miembro de Serialize  
+#### <a name="to-override-the-serialize-member-function"></a>To override the Serialize member function  
   
-1.  Llame a la versión de la clase base de `Serialize` para asegurarse de que serializan a la parte heredado del objeto.  
+1.  Call your base class version of `Serialize` to make sure that the inherited portion of the object is serialized.  
   
-2.  Inserte o extraer las variables miembro específicas a la clase.  
+2.  Insert or extract the member variables specific to your class.  
   
-     Los operadores de inserción y de extracción interactúan con la clase del archivo para leer y escribir los datos.  El ejemplo siguiente se muestra cómo implementar `Serialize` para la clase de `CPerson` declarada anteriormente:  
+     The insertion and extraction operators interact with the archive class to read and write the data. The following example shows how to implement `Serialize` for the `CPerson` class declared above:  
   
-     [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/CPP/serialization-making-a-serializable-class_2.cpp)]  
+     [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]  
   
- También puede utilizar [CArchive::Read](../Topic/CArchive::Read.md) y el miembro de [CArchive::Write](../Topic/CArchive::Write.md) funciona para leer y escribir grandes cantidades de datos sin tipo.  
+ You can also use the [CArchive::Read](../mfc/reference/carchive-class.md#read) and [CArchive::Write](../mfc/reference/carchive-class.md#write) member functions to read and write large amounts of untyped data.  
   
-##  <a name="_core_using_the_declare_serial_macro"></a> Mediante la macro de DECLARE\_SERIAL  
- La macro de `DECLARE_SERIAL` se requiere en la declaración de clases que admitan la serialización, como se muestra aquí:  
+##  <a name="_core_using_the_declare_serial_macro"></a> Using the DECLARE_SERIAL Macro  
+ The `DECLARE_SERIAL` macro is required in the declaration of classes that will support serialization, as shown here:  
   
- [!code-cpp[NVC_MFCSerialization#3](../mfc/codesnippet/CPP/serialization-making-a-serializable-class_3.h)]  
+ [!code-cpp[NVC_MFCSerialization#3](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_3.h)]  
   
-##  <a name="_core_defining_a_constructor_with_no_arguments"></a> Definir un Constructor sin argumentos  
- MFC requiere un constructor predeterminado cuando vuelve a crear los objetos según se deserializan \(carga desde el disco\).  El proceso de deserialización completará a todas las variables miembros con los valores necesarios para volver a crear el objeto.  
+##  <a name="_core_defining_a_constructor_with_no_arguments"></a> Defining a Constructor with No Arguments  
+ MFC requires a default constructor when it re-creates your objects as they are deserialized (loaded from disk). The deserialization process will fill in all member variables with the values required to re-create the object.  
   
- Este constructor se puede declarar public, protected, o privado.  Si lo crea protegido o privado, ayuda a asegurarse de que se usará sólo las funciones de serialización.  El constructor debe colocar el objeto en un estado que permite que se elimine en caso necesario.  
+ This constructor can be declared public, protected, or private. If you make it protected or private, you help make sure that it will only be used by the serialization functions. The constructor must put the object in a state that allows it to be deleted if necessary.  
   
 > [!NOTE]
->  Si olvida definir un constructor sin argumentos en una clase que utilice macros de `DECLARE_SERIAL` y de `IMPLEMENT_SERIAL` , no obtendrá una “ninguna advertencia del compilador disponibles del constructor predeterminado” en la línea donde se utiliza la macro de `IMPLEMENT_SERIAL` .  
+>  If you forget to define a constructor with no arguments in a class that uses the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros, you will get a "no default constructor available" compiler warning on the line where the `IMPLEMENT_SERIAL` macro is used.  
   
-##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a> Mediante la macro de IMPLEMENT\_SERIAL en el archivo de implementación  
- La macro de `IMPLEMENT_SERIAL` se utiliza para definir las diversas funciones necesarias al derivar una clase serializable de `CObject`.  Utiliza esta macro en el archivo de implementación \(.CPP\) para la clase.  Los primeros dos argumentos a la macro es el nombre de la clase y el nombre de la clase base inmediata.  
+##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a> Using the IMPLEMENT_SERIAL Macro in the Implementation File  
+ The `IMPLEMENT_SERIAL` macro is used to define the various functions needed when you derive a serializable class from `CObject`. You use this macro in the implementation file (.CPP) for your class. The first two arguments to the macro are the name of the class and the name of its immediate base class.  
   
- El tercer argumento a esta macro es un número de esquema.  El número de esquema es esencialmente un número de versión para los objetos de la clase.  Utilice un mayor o igual que 0 entero para el número de esquema. \(No confunda este número de esquema con terminología de la base de datos\).  
+ The third argument to this macro is a schema number. The schema number is essentially a version number for objects of the class. Use an integer greater than or equal to 0 for the schema number. (Don't confuse this schema number with database terminology.)  
   
- El código comprueba de serialización de MFC el número del esquema al leer objetos en memoria.  Si no coincide con el número del esquema del objeto en el disco el número del esquema de la clase en la memoria, la biblioteca producirá `CArchiveException`, impidiendo que el programa lee una versión incorrecta del objeto.  
+ The MFC serialization code checks the schema number when reading objects into memory. If the schema number of the object on disk does not match the schema number of the class in memory, the library will throw a `CArchiveException`, preventing your program from reading an incorrect version of the object.  
   
- Si desea que la función miembro de `Serialize` pueda leer varias versiones \(es decir, archivos escritos en versiones diferentes de la aplicación\) puede utilizar el valor **VERSIONABLE\_SCHEMA** como argumento a la macro de `IMPLEMENT_SERIAL` .  Para obtener información de uso y un ejemplo, vea la función miembro de `GetObjectSchema` de la clase `CArchive`.  
+ If you want your `Serialize` member function to be able to read multiple versions — that is, files written with different versions of the application — you can use the value **VERSIONABLE_SCHEMA** as an argument to the `IMPLEMENT_SERIAL` macro. For usage information and an example, see the `GetObjectSchema` member function of class `CArchive`.  
   
- El ejemplo siguiente se muestra cómo utilizar `IMPLEMENT_SERIAL` para una clase, `CPerson`, que se deriva de `CObject`:  
+ The following example shows how to use `IMPLEMENT_SERIAL` for a class, `CPerson`, that is derived from `CObject`:  
   
- [!code-cpp[NVC_MFCSerialization#4](../mfc/codesnippet/CPP/serialization-making-a-serializable-class_4.cpp)]  
+ [!code-cpp[NVC_MFCSerialization#4](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_4.cpp)]  
   
- Una vez que tiene una clase serializable, puede serializar objetos de clase, como se describe en el artículo [Serialización: Serialización de un objeto](../mfc/serialization-serializing-an-object.md).  
+ Once you have a serializable class, you can serialize objects of the class, as discussed in the article [Serialization: Serializing an Object](../mfc/serialization-serializing-an-object.md).  
   
-## Vea también  
- [Serialización](../mfc/serialization-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Serialization](../mfc/serialization-in-mfc.md)
+
+

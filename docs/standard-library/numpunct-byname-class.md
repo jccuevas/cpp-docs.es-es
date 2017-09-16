@@ -1,5 +1,5 @@
 ---
-title: numpunct_byname (Clase) | Microsoft Docs
+title: numpunct_byname Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- numpunct_byname
 - xlocnum/std::numpunct_byname
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1821793921924a5f0bb75703f581705f7f1d8115
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ccf23ec18332b96ae3532a4f384d829a398a3b54
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="numpunctbyname-class"></a>numpunct_byname (Clase)
-La clase de plantilla derivada describe un objeto que puede actuar como una faceta `numpunct` de una configuración regional concreta, lo que habilita el formato y la puntuación de expresiones numéricas y booleanas.  
+# <a name="numpunctbyname-class"></a>numpunct_byname Class
+The derived template class describes an object that can serve as a `numpunct` facet of a given locale enabling the formatting and punctuation of numeric and Boolean expressions.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType>
@@ -64,16 +63,16 @@ protected:
  };
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Su comportamiento viene determinado por la configuración regional [con nombre](../standard-library/locale-class.md#name) `_Locname`. El constructor inicializa su objeto base con [numpunct](../standard-library/numpunct-class.md#numpunct)\<CharType>( `_Refs`).  
+## <a name="remarks"></a>Remarks  
+ Its behavior is determined by the [named](../standard-library/locale-class.md#name) locale `_Locname`. The constructor initializes its base object with [numpunct](../standard-library/numpunct-class.md#numpunct)\<CharType>( `_Refs`).  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **Espacio de nombres:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

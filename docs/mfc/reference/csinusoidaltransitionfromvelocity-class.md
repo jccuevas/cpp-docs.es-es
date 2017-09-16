@@ -1,5 +1,5 @@
 ---
-title: Clase CSinusoidalTransitionFromVelocity | Documentos de Microsoft
+title: CSinusoidalTransitionFromVelocity Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSinusoidalTransitionFromVelocity class
+- CSinusoidalTransitionFromVelocity [MFC], CSinusoidalTransitionFromVelocity
+- CSinusoidalTransitionFromVelocity [MFC], Create
+- CSinusoidalTransitionFromVelocity [MFC], m_duration
+- CSinusoidalTransitionFromVelocity [MFC], m_period
 ms.assetid: cc885f17-b84b-45ee-8f1f-36a8bbb7adad
 caps.latest.revision: 18
 author: mikeblome
@@ -38,58 +41,58 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 035c92a807fdbe9028547472a3dc816995b95c91
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4c2d4ce4d3119a3035bccc36e6519b2bdbe2d81c
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csinusoidaltransitionfromvelocity-class"></a>Clase CSinusoidalTransitionFromVelocity
-Encapsula una transición de progreso sinusoidal cuya amplitud determina el progreso inicial de la variable de animación.  
+# <a name="csinusoidaltransitionfromvelocity-class"></a>CSinusoidalTransitionFromVelocity Class
+Encapsulates a sinusoidal-velocity transition that has an amplitude that is determined by the initial velocity of the animation variable.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSinusoidalTransitionFromVelocity : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity](#csinusoidaltransitionfromvelocity)|Construye un objeto de la transición.|  
+|[CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity](#csinusoidaltransitionfromvelocity)|Constructs a transition object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSinusoidalTransitionFromVelocity::Create](#create)|Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado. (Invalida [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CSinusoidalTransitionFromVelocity::Create](#create)|Calls the transition library to create encapsulated transition COM object. (Overrides [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-### <a name="public-data-members"></a>Miembros de datos públicos  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSinusoidalTransitionFromVelocity::m_duration](#m_duration)|La duración de la transición.|  
-|[CSinusoidalTransitionFromVelocity::m_period](#m_period)|El período de oscilación de la onda sinusoidal en segundos.|  
+|[CSinusoidalTransitionFromVelocity::m_duration](#m_duration)|The duration of the transition.|  
+|[CSinusoidalTransitionFromVelocity::m_period](#m_period)|The period of oscillation of the sinusoidal wave in seconds.|  
   
-## <a name="remarks"></a>Comentarios  
- El valor de la variable de animación oscila alrededor del valor inicial en toda la duración de una transición de intervalo sinusoidal. La amplitud de la oscilación determina el progreso de la variable de animación cuando se inicia la transición. Debido a que todas las transiciones se desactivan automáticamente, se recomienda asignada a ellos con el operador nuevo. Se crea el objeto de IUIAnimationTransition COM encapsulado por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables miembro después de la creación de este objeto COM no tiene ningún efecto.  
+## <a name="remarks"></a>Remarks  
+ The value of the animation variable oscillates around the initial value over the entire duration of a sinusoidal-range transition. The amplitude of the oscillation is determined by the animation variable's velocity when the transition begins. Because all transitions are cleared automatically, it's recommended to allocated them using operator new. The encapsulated IUIAnimationTransition COM object is created by CAnimationController::AnimateGroup, until then it's NULL. Changing member variables after creation of this COM object has no effect.  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  [CSinusoidalTransitionFromVelocity](../../mfc/reference/csinusoidaltransitionfromvelocity-class.md)  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="create"></a>CSinusoidalTransitionFromVelocity::Create  
- Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado.  
+##  <a name="create"></a>  CSinusoidalTransitionFromVelocity::Create  
+ Calls the transition library to create encapsulated transition COM object.  
   
 ```  
 virtual BOOL Create(
@@ -97,15 +100,15 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pLibrary`  
- Puntero a la biblioteca de transición, que es responsable de la creación de transiciones estándares.  
+ A pointer to transition library, which is responsible for creation of standard transitions.  
   
-### <a name="return-value"></a>Valor devuelto  
- TRUE si la transición se crea correctamente; de lo contrario, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if transition is created successfully; otherwise FALSE.  
   
-##  <a name="csinusoidaltransitionfromvelocity"></a>CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity  
- Construye un objeto de la transición.  
+##  <a name="csinusoidaltransitionfromvelocity"></a>  CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity  
+ Constructs a transition object.  
   
 ```  
 CSinusoidalTransitionFromVelocity(
@@ -113,27 +116,27 @@ CSinusoidalTransitionFromVelocity(
     UI_ANIMATION_SECONDS period);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `duration`  
- La duración de la transición.  
+ The duration of the transition.  
   
  `period`  
- El período de oscilación de la onda sinusoidal en segundos.  
+ The period of oscillation of the sinusoidal wave in seconds.  
   
-##  <a name="m_duration"></a>CSinusoidalTransitionFromVelocity::m_duration  
- La duración de la transición.  
+##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration  
+ The duration of the transition.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="m_period"></a>CSinusoidalTransitionFromVelocity::m_period  
- El período de oscilación de la onda sinusoidal en segundos.  
+##  <a name="m_period"></a>  CSinusoidalTransitionFromVelocity::m_period  
+ The period of oscillation of the sinusoidal wave in seconds.  
   
 ```  
 UI_ANIMATION_SECONDS m_period;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Clases](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

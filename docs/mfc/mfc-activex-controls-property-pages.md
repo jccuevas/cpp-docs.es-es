@@ -1,124 +1,142 @@
 ---
-title: "Controles ActiveX MFC: P&#225;ginas de propiedades | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CPropertyPageDialog (clase)"
-  - "DDP_ functions"
-  - "DoDataExchange (método)"
-  - "controles ActiveX en MFC, propiedades"
-  - "controles ActiveX en MFC, páginas de propiedades"
-  - "OLEIVERB_PROPERTIES"
-  - "páginas de propiedades, controles ActiveX en MFC"
+title: 'MFC ActiveX Controls: Property Pages | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DDP_ functions [MFC]
+- MFC ActiveX controls [MFC], properties
+- property pages [MFC], MFC ActiveX controls
+- DoDataExchange method [MFC]
+- OLEIVERB_PROPERTIES
+- CPropertyPageDialog class [MFC]
+- MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Controles ActiveX MFC: P&#225;ginas de propiedades
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b61c93f269b38bf4cca26c4cd27c64f8136e6954
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Las páginas de propiedades permiten al usuario de un control ActiveX ver y cambiar las propiedades del control ActiveX.  Para obtener acceso a estas propiedades, se invoca un cuadro de diálogo de propiedades del control, el cual contiene una o varias páginas de propiedades que proporcionan una interfaz gráfica personalizada para ver y editar las propiedades del control.  
+---
+# <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX Controls: Property Pages
+Property pages allow an ActiveX control user to view and change ActiveX control properties. These properties are accessed by invoking a control properties dialog box, which contains one or more property pages that provide a customized, graphical interface for viewing and editing the control properties.  
   
- Las páginas de propiedades del control ActiveX se muestran de dos maneras:  
+ ActiveX control property pages are displayed in two ways:  
   
--   Cuando se invoca el verbo de las propiedades del control \(**OLEIVERB\_PROPERTIES**\), el control se abre un cuadro de diálogo de propiedades modal que contiene las páginas de propiedades del control.  
+-   When the control's Properties verb (**OLEIVERB_PROPERTIES**) is invoked, the control opens a modal property dialog box that contains the control's property pages.  
   
--   El contenedor puede mostrar su propio cuadro de diálogo no modal que muestra las páginas de propiedades del control seleccionado.  
+-   The container can display its own modeless dialog box that shows the property pages of the selected control.  
   
- El cuadro de diálogo de propiedades \(que se muestra en la figura siguiente\) consta de un área para mostrar la página actual de la propiedad, pestañas para cambiar entre las páginas de propiedades, y una colección de botones que realicen tareas comunes como cerrar el diálogo de la página de propiedades, se cualquier cambio realizado, o inmediatamente aplicando los cambios al control ActiveX.  
+ The properties dialog box (illustrated in the following figure) consists of an area for displaying the current property page, tabs for switching between property pages, and a collection of buttons that perform common tasks such as closing the property page dialog, canceling any changes made, or immediately applying any changes to the ActiveX control.  
   
- ![Cuadro de diálogo de propiedades de Circ3](../mfc/media/vc373i1.png "vc373I1")  
-Cuadro de diálogo Propiedades  
+ ![Properties dialog box for Circ3](../mfc/media/vc373i1.gif "vc373i1")  
+Properties Dialog Box  
   
- En este artículo se tratan los temas relacionados con las páginas de propiedades de un control ActiveX.  Se incluyen los siguientes:  
+ This article covers topics related to using property pages in an ActiveX control. These include:  
   
--   [Implementar la propiedad predeterminada de un control ActiveX](#_core_implementing_the_default_property_page)  
+-   [Implementing the default property page for an ActiveX control](#_core_implementing_the_default_property_page)  
   
--   [Agregar controles a una página de propiedades](#_core_adding_controls_to_a_property_page)  
+-   [Adding controls to a property page](#_core_adding_controls_to_a_property_page)  
   
--   [Personalizar la función de DoDataExchange](#_core_customizing_the_dodataexchange_function)  
+-   [Customizing the DoDataExchange function](#_core_customizing_the_dodataexchange_function)  
   
- Para obtener más información sobre cómo utilizar las páginas de propiedades de un control ActiveX, vea los artículos siguientes:  
+ For more information on using property pages in an ActiveX control, see the following articles:  
   
--   [Controles ActiveX MFC: Agregar otra página de propiedades personalizadas](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
+-   [MFC ActiveX Controls: Adding Another Custom Property Page](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
--   [Controles ActiveX MFC: Usar páginas de propiedades estándar](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
+-   [MFC ActiveX Controls: Using Stock Property Pages](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
   
- Para obtener información sobre cómo utilizar las hojas de propiedades en una aplicación MFC distinto de un control ActiveX, vea [Hojas de propiedades](../mfc/property-sheets-mfc.md).  
+ For information on using property sheets in an MFC application other than an ActiveX control, see [Property Sheets](../mfc/property-sheets-mfc.md).  
   
-##  <a name="_core_implementing_the_default_property_page"></a> Implementar la página de propiedad predeterminada  
- Si utiliza el asistente para controles ActiveX para crear el proyecto de control, el asistente para controles ActiveX proporciona una clase de página de la propiedad predeterminada del control derivado de [COlePropertyPage Class](../mfc/reference/colepropertypage-class.md).  Inicialmente, esta página de propiedades está en blanco, pero puede agregar cualquier control de cuadro de diálogo o conjunto de controles al.  Dado que el asistente para controles ActiveX solo crea una clase de la página de propiedades de forma predeterminada, las clases adicionales de la página de propiedades \(también derivadas de `COlePropertyPage`\) se deben realizar utilizando la vista de clases.  Para obtener más información sobre este procedimiento, vea [Controles ActiveX MFC: Agregar otra página de propiedades personalizadas](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).  
+##  <a name="_core_implementing_the_default_property_page"></a> Implementing the Default Property Page  
+ If you use the ActiveX Control Wizard to create your control project, the ActiveX Control Wizard provides a default property page class for the control derived from [COlePropertyPage Class](../mfc/reference/colepropertypage-class.md). Initially, this property page is blank, but you can add any dialog box control or set of controls to it. Because the ActiveX Control Wizard creates only one property page class by default, additional property page classes (also derived from `COlePropertyPage`) must be created using Class View. For more information on this procedure, see [MFC ActiveX Controls: Adding Another Custom Property Page](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).  
   
- Implementar una página de propiedades \(en este caso, el valor predeterminado\) es un proceso de tres\- paso:  
+ Implementing a property page (in this case, the default) is a three-step process:  
   
-#### Para implementar una página de propiedades  
+#### <a name="to-implement-a-property-page"></a>To implement a property page  
   
-1.  Agregue `COlePropertyPage`\- clase derivada al proyecto de control.  Si el proyecto se creó mediante el asistente para controles ActiveX \(como en este caso\), la clase de página de la propiedad predeterminada ya existe.  
+1.  Add a `COlePropertyPage`-derived class to the control project. If the project was created using the ActiveX Control Wizard (as in this case), the default property page class already exists.  
   
-2.  Utilice el editor de cuadros de diálogo para agregar controles a la plantilla de página de propiedades.  
+2.  Use the dialog editor to add any controls to the property page template.  
   
-3.  Personalizar la función de `COlePropertyPage`\- clase derivada de `DoDataExchange` a los valores de intercambio entre el control de la página de propiedades y el control ActiveX.  
+3.  Customize the `DoDataExchange` function of the `COlePropertyPage`-derived class to exchange values between the property page control and the ActiveX control.  
   
- Como las vistas, los procedimientos siguientes utilizan un control sencillo \(denominado “ejemplo”\).  El ejemplo se creó mediante el asistente para controles ActiveX y sólo contiene la propiedad caption común.  
+ For example purposes, the following procedures use a simple control (named "Sample"). Sample was created using the ActiveX Control Wizard and contains only the stock Caption property.  
   
-##  <a name="_core_adding_controls_to_a_property_page"></a> Agregar Controles a una página de propiedades  
+##  <a name="_core_adding_controls_to_a_property_page"></a> Adding Controls to a Property Page  
   
-#### Para agregar controles a una página de propiedades  
+#### <a name="to-add-controls-to-a-property-page"></a>To add controls to a property page  
   
-1.  Con el proyecto de control abierta, abra la vista de recursos.  
+1.  With your control project open, open Resource View.  
   
-2.  Haga doble clic en el icono de directorio de **Cuadro de diálogo** .  
+2.  Double-click the **Dialog** directory icon.  
   
-3.  Abra el cuadro de diálogo de **IDD\_PROPPAGE\_SAMPLE** .  
+3.  Open the **IDD_PROPPAGE_SAMPLE** dialog box.  
   
-     El asistente para controles ActiveX anexa el nombre del proyecto al final del identificador de diálogo, en este caso, ejemplo.  
+     The ActiveX Control Wizard appends the name of the project to the end of the dialog ID, in this case, Sample.  
   
-4.  Arrastrar y colocar el control seleccionado del cuadro de herramientas al área del cuadro de diálogo.  
+4.  Drag and drop the selected control from the Toolbox onto the dialog box area.  
   
-5.  Para este ejemplo, la leyenda de un control label de texto “: ” y un control de cuadro de edición con un identificador de **IDC\_CAPTION** es suficiente.  
+5.  For this example, a text label control "Caption :" and an edit box control with an **IDC_CAPTION** identifier are sufficient.  
   
-6.  Haga clic en **Guardar** en la barra de herramientas para guardar los cambios.  
+6.  Click **Save** on the Toolbar to save your changes.  
   
- Ahora que se ha modificado la interfaz de usuario, debe enlazar el control de edición con la propiedad caption.  Esto se hace en la sección siguiente editando la función de `CSamplePropPage::DoDataExchange` .  
+ Now that the user interface has been modified, you need to link the edit box with the Caption property. This is done in the following section by editing the `CSamplePropPage::DoDataExchange` function.  
   
-##  <a name="_core_customizing_the_dodataexchange_function"></a> Personalizar la función de DoDataExchange  
- La función de [CWnd::DoDataExchange](../Topic/CWnd::DoDataExchange.md) de la página de propiedades permite vincular valores de la página de propiedades con los valores reales de las propiedades del control.  Para establecer vínculos, debe asignar los campos correspondientes de la página de propiedades a sus propiedades respectivas del control.  
+##  <a name="_core_customizing_the_dodataexchange_function"></a> Customizing the DoDataExchange Function  
+ Your property page [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) function allows you to link property page values with the actual values of properties in the control. To establish links, you must map the appropriate property page fields to their respective control properties.  
   
- Estas asignaciones se implementan utilizando las funciones de **DDP\_** de la página de propiedades.  Las funciones de **DDP\_** funcionan como las funciones de **DDX\_** utilizadas en los cuadros de diálogo estándar de MFC, con una excepción.  Además de la referencia a una variable miembro, las funciones de **DDP\_** toman el nombre de la propiedad del control.  A continuación se muestra una entrada típica en función de `DoDataExchange` para una página de propiedades.  
+ These mappings are implemented using the property page **DDP_** functions. The **DDP_** functions work like the **DDX_** functions used in standard MFC dialogs, with one exception. In addition to the reference to a member variable, **DDP_** functions take the name of the control property. The following is a typical entry in the `DoDataExchange` function for a property page.  
   
- [!code-cpp[NVC_MFC_AxUI#31](../mfc/codesnippet/CPP/mfc-activex-controls-property-pages_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#31](../mfc/codesnippet/cpp/mfc-activex-controls-property-pages_1.cpp)]  
   
- Esta función asociado a la variable miembro de `m_caption` de la página de propiedades al leyenda, mediante la función de `DDP_TEXT` .  
+ This function associates the property page's `m_caption` member variable with the Caption, using the `DDP_TEXT` function.  
   
- Después de hacer el control de página de propiedades insertar, debe establecer un vínculo entre el control de página de propiedades, `IDC_CAPTION`, y la propiedad real del control, leyenda, mediante la función de **DDP\_Text** anteriormente descrita.  
+ After you have the property page control inserted, you need to establish a link between the property page control, `IDC_CAPTION`, and the actual control property, Caption, using the **DDP_Text** function as described above.  
   
- [Páginas de propiedades](../mfc/reference/property-pages-mfc.md) está disponible para otros tipos de controles de cuadro de diálogo, como casillas, botones de radio, y cuadros de lista.  La tabla siguiente enumera el conjunto completo de funciones de **DDP\_** de la página de propiedades y sus propósitos:  
+ [Property Pages](../mfc/reference/property-pages-mfc.md) are available for other dialog control types, such as check boxes, radio buttons, and list boxes. The table below lists the entire set of property page **DDP_** functions and their purposes:  
   
-### Funciones de página de propiedades  
+### <a name="property-page-functions"></a>Property Page Functions  
   
-|Nombre de la función|Utilice esta función para vincular|  
-|--------------------------|----------------------------------------|  
-|`DDP_CBIndex`|El índice seleccionado de la cadena en un cuadro combinado con una propiedad del control.|  
-|`DDP_CBString`|La cadena seleccionado en un cuadro combinado con una propiedad del control.  La cadena seleccionado puede empezar con las mismas letras que el valor de propiedad pero no tiene que coincidir con él totalmente.|  
-|`DDP_CBStringExact`|La cadena seleccionado en un cuadro combinado con una propiedad del control.  La cadena seleccionado y el valor de cadena de propiedad deben coincidir exactamente.|  
-|`DDP_Check`|Una casilla con una propiedad del control.|  
-|`DDP_LBIndex`|El índice seleccionado de la cadena en un cuadro de lista con una propiedad del control.|  
-|`DDP_LBString`|La cadena seleccionado en un cuadro de lista con una propiedad del control.  La cadena seleccionado puede empezar con las mismas letras que el valor de propiedad pero no tiene que coincidir con él totalmente.|  
-|`DDP_LBStringExact`|La cadena seleccionado en un cuadro de lista con una propiedad del control.  La cadena seleccionado y el valor de cadena de propiedad deben coincidir exactamente.|  
-|`DDP_Radio`|Un botón de radio a una propiedad del control.|  
-|**DDP\_Text**|Texto con una propiedad del control.|  
+|Function name|Use this function to link|  
+|-------------------|-------------------------------|  
+|`DDP_CBIndex`|The selected string's index in a combo box with a control property.|  
+|`DDP_CBString`|The selected string in a combo box with a control property. The selected string can begin with the same letters as the property's value but need not match it fully.|  
+|`DDP_CBStringExact`|The selected string in a combo box with a control property. The selected string and the property's string value must match exactly.|  
+|`DDP_Check`|A check box with a control property.|  
+|`DDP_LBIndex`|The selected string's index in a list box with a control property.|  
+|`DDP_LBString`|The selected string in a list box with a control property. The selected string can begin with the same letters as the property's value but need not match it fully.|  
+|`DDP_LBStringExact`|The selected string in a list box with a control property. The selected string and the property's string value must match exactly.|  
+|`DDP_Radio`|A radio button with a control property.|  
+|**DDP_Text**|Text with a control property.|  
   
-## Vea también  
- [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)   
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
  [COlePropertyPage Class](../mfc/reference/colepropertypage-class.md)
+

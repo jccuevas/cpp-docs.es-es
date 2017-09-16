@@ -1,47 +1,66 @@
 ---
-title: "Personalizar la apariencia del elemento de encabezado | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl (clase), personalizar elementos de menú"
-  - "estilos HDS_"
-  - "controles del encabezado, personalización de elementos"
+title: Customizing the Header Item&#39;s Appearance | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- header controls [MFC], customization of items
+- CHeaderCtrl class [MFC], customizing the items
+- HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Personalizar la apariencia del elemento de encabezado
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 27f5bc3f96a06c21b559462ea5d003b9d7872a69
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Estableciendo el parámetro *de dwStyle* al crear un control de encabezado \([CHeaderCtrl::Create](../Topic/CHeaderCtrl::Create.md)\), puede definir el aspecto y comportamiento de los elementos de encabezado o del control de encabezado propio.  
+---
+# <a name="customizing-the-header-item39s-appearance"></a>Customizing the Header Item&#39;s Appearance
+By setting the *dwStyle* parameter when you first create a header control ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), you can define the appearance and behavior of header items or of the header control itself.  
   
- A continuación se muestra un muestreo de los estilos que puede establecer, y su finalidad:  
+ Here is a sampling of the styles you can set, and their purpose:  
   
--   Para que un elemento de encabezado parecer un mismo botón, utilice el estilo de `HDS_BUTTONS` .  
+-   To make a header item look like a pushbutton, use the `HDS_BUTTONS` style.  
   
-     Utilice este estilo si desea realizar acciones en respuesta a los clics del mouse en un elemento de encabezado, como ordenar datos por una columna concreta, como se hace en Microsoft Outlook.  
+     Use this style if you want to carry out actions in response to mouse clicks on a header item, such as sorting data by a particular column, as is done in Microsoft Outlook.  
   
--   Para dar a los elementos de encabezado un aspecto del “seguimiento activo” cuando el cursor pasa sobre ellos, utilice el estilo de `HDS_HOTTRACK` .  
+-   To give the header items a "hot tracking" appearance when the mouse cursor passes over them, use the `HDS_HOTTRACK` style.  
   
-     El seguimiento activo muestra un contorno 3D como el pasar el puntero sobre un elemento en una barra de otra forma plana.  
+     Hot tracking displays a 3D outline as the pointer passes over an item in an otherwise flat bar.  
   
--   Para indicar que el control de encabezado debe ocultar, utilice el estilo de `HDS_HIDDEN` .  
+-   To indicate that the header control should be hidden, use the `HDS_HIDDEN` style.  
   
-     El estilo de `HDS_HIDDEN` indica que el control de encabezado está diseñado para utilizarse como un contenedor de datos y no control visual.  Este estilo automáticamente no oculta el control pero, en su lugar, afecta al comportamiento de `CHeaderCtrl::Layout`.  El valor devuelto en el miembro de **cy** de la estructura de `WINDOWPOS` será cero que indica que el control no debe estar visible para el usuario.  
+     The `HDS_HIDDEN` style indicates that the header control is intended to be used as a data container and not a visual control. This style does not automatically hide the control but, instead, affects the behavior of `CHeaderCtrl::Layout`. The value returned in the **cy** member of the `WINDOWPOS` structure will be zero indicating that the control should not be visible to the user.  
   
- Para obtener más información sobre estas propiedades, vea [Elementos](http://msdn.microsoft.com/library/windows/desktop/bb775238) en [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  Para obtener información acerca de cómo agregar elementos a un control de encabezado, vea [Agregar elementos al Control de encabezado](../mfc/adding-items-to-the-header-control.md).  
+ For more information about these properties, see [Items](http://msdn.microsoft.com/library/windows/desktop/bb775238) in the Windows SDK. For information about adding items to a header control, see [Adding Items to the Header Control](../mfc/adding-items-to-the-header-control.md).  
   
-## Vea también  
- [Usar CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

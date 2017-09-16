@@ -1,42 +1,61 @@
 ---
-title: "Usar una lista de im&#225;genes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList (clase), utilizar"
-  - "listas de imágenes [C++]"
-  - "listas [C++], imagen"
+title: Using an Image List | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- lists [MFC], image
+- CImageList class [MFC], using
+- image lists [MFC]
 ms.assetid: e0aed188-a1e6-400e-9f51-033d61c5541f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Usar una lista de im&#225;genes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 28533532f589e58307ca6e5624a3faf758d24e06
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-El uso típico de una lista de imágenes sigue el modelo siguiente:  
+---
+# <a name="using-an-image-list"></a>Using an Image List
+Typical usage of an image list follows the pattern below:  
   
--   Crea un objeto de [CImageList](../mfc/reference/cimagelist-class.md) y llame a una de las sobrecargas del rol de [crear](../Topic/CImageList::Create.md) para crear una imagen de lista e para adjuntarla al objeto de `CImageList` .  
+-   Construct a [CImageList](../mfc/reference/cimagelist-class.md) object and call one of the overloads of its [Create](../mfc/reference/cimagelist-class.md#create) function to create an image list and attach it to the `CImageList` object.  
   
--   Si no agregó imágenes cuando creó la lista de imágenes, agregue imágenes a la lista de imágenes llamando a la función miembro de [Add](../Topic/CImageList::Add.md) o de [de lectura](../Topic/CImageList::Read.md) .  
+-   If you didn't add images when you created the image list, add images to the image list by calling the [Add](../mfc/reference/cimagelist-class.md#add) or [Read](../mfc/reference/cimagelist-class.md#read) member function.  
   
--   Asociar la lista de imágenes con un control llamando a la función miembro de ese control, o imágenes de dibujo de la imagen se muestran utilizando la función miembro de [Dibujar](../Topic/CImageList::Draw.md) de la lista de imágenes.  
+-   Associate the image list with a control by calling the appropriate member function of that control, or draw images from the image list yourself using the image list's [Draw](../mfc/reference/cimagelist-class.md#draw) member function.  
   
--   Quizás permite al usuario arrastre una imagen, con compatibilidad integrada de la lista de imágenes para arrastrar.  
+-   Perhaps allow the user to drag an image, using the image list's built-in support for dragging.  
   
 > [!NOTE]
->  Si la lista de imágenes se realizó con el operador de **new** , debe destruir el objeto de `CImageList` cuando se hace con ella.  
+>  If the image list was created with the **new** operator, you must destroy the `CImageList` object when you are done with it.  
   
-## Vea también  
- [Usar CImageList](../mfc/using-cimagelist.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CImageList](../mfc/using-cimagelist.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

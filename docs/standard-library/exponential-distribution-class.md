@@ -1,5 +1,5 @@
 ---
-title: exponential_distribution (Clase) | Microsoft Docs
+title: exponential_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- exponential_distribution
 - random/std::exponential_distribution
 - random/std::exponential_distribution::reset
 - random/std::exponential_distribution::lambda
@@ -25,7 +24,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- exponential_distribution class
+- std::exponential_distribution [C++]
+- std::exponential_distribution [C++], reset
+- std::exponential_distribution [C++], lambda
+- std::exponential_distribution [C++], param
+- std::exponential_distribution [C++], min
+- std::exponential_distribution [C++], max
+- std::exponential_distribution [C++], param_type
+- std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
 caps.latest.revision: 18
 author: corob-msft
@@ -45,17 +51,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: eaf28ef7a02d358422d7e655688f5f4bf7cccc7d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9a01105b4c35fb1ada147fc4026eb0e459fc1229
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="exponentialdistribution-class"></a>exponential_distribution (Clase)
-Genera una distribución exponencial.  
+# <a name="exponentialdistribution-class"></a>exponential_distribution Class
+Generates an exponential distribution.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class RealType = double>
@@ -85,30 +91,30 @@ public:
    result_type max() const;
    };  
 ``` 
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
 *RealType*  
-Un tipo de resultado de punto flotante, el valor predeterminado es `double`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).  
+The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-*URNG* El motor de generador de números aleatorios. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*URNG* The random number generator engine. For possible types, see [\<random>](../standard-library/random.md).
   
   
-## <a name="remarks"></a>Comentarios  
- La clase de plantilla describe una distribución que produce valores de un tipo de entero especificado por el usuario o de tipo `double` si no se proporciona ninguno, distribuido según la distribución exponencial. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.  
+## <a name="remarks"></a>Remarks  
+ The template class describes a distribution that produces values of a user-specified integral type, or type `double` if none is provided, distributed according to the Exponential Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
-|[exponential_distribution)](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|  
+|[exponential_distribution](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|  
 |`exponential_distribution::operator()`||[param_type](#param_type)|  
   
-La función miembro de propiedad `lambda()` devuelve el valor del parámetro de distribución almacenado `lambda`.  
+The property member function `lambda()` returns the value for the stored distribution parameter `lambda`.  
   
-La función miembro de propiedad `param()` establece o devuelve el paquete de parámetros de distribución almacenado `param_type`.  
+The property member function `param()` sets or returns the `param_type` stored distribution parameter package.  
   
-Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-Para obtener información detallada sobre la distribución exponencial, vea el artículo de Wolfram MathWorld sobre la [distribución exponencial](http://go.microsoft.com/fwlink/LinkId=401098).  
+For detailed information about the exponential distribution, see the Wolfram MathWorld article [Exponential Distribution](http://go.microsoft.com/fwlink/LinkId=401098).  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -184,35 +190,35 @@ Distribution for 10 samples:
     10: 2.1201210996  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **Espacio de nombres:** std  
+ **Namespace:** std  
   
 ##  <a name="exponential_distribution"></a>  exponential_distribution::exponential_distribution  
- Construye la distribución.  
+ Constructs the distribution.  
   
 ```  
 explicit exponential_distribution(result_type lambda = 1.0);
 explicit exponential_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
 *lambda*  
- El parámetro de distribución `lambda`.  
+ The `lambda` distribution parameter.  
   
 *parm*  
- Paquete de parámetros utilizado para construir la distribución.  
+ The parameter package used to construct the distribution.  
   
-### <a name="remarks"></a>Comentarios  
-**Condición previa:** `0.0 < lambda`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < lambda`  
   
-El primer constructor crea un objeto cuyo valor `lambda` almacenado contiene el valor *lambda*.  
+The first constructor constructs an object whose stored `lambda` value holds the value *lambda*.  
   
-El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  exponential_distribution::param_type  
-Almacena los parámetros de la distribución.  
+Stores the parameters of the distribution.  
   
 ```
 struct param_type {  
@@ -225,19 +231,19 @@ struct param_type {
    };
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
 *lambda*  
-El parámetro de distribución `lambda`.  
+The `lambda` distribution parameter.  
   
 *right*  
-El objeto `param_type` que se va a comparar con este.  
+The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>Comentarios  
-**Condición previa:** `0.0 < lambda`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < lambda`  
   
-Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
 [\<random>](../standard-library/random.md)
 
 

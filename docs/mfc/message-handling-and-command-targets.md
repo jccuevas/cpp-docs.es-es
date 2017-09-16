@@ -1,73 +1,81 @@
 ---
-title: "Control de mensajes y destinos de comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IOleCommandTarget"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "enrutamiento de comandos, destinos de comando"
-  - "destinos de comando"
-  - "IOleCommandTarget (interfaz)"
-  - "control de mensajes, documentos activos"
+title: Message Handling and Command Targets | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IOleCommandTarget
+dev_langs:
+- C++
+helpviewer_keywords:
+- command targets [MFC]
+- message handling [MFC], active documents
+- IOleCommandTarget interface [MFC]
+- command routing [MFC], command targets
 ms.assetid: e45ce14c-e6b6-4262-8f3b-4e891e0ec2a3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Control de mensajes y destinos de comando
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 76940076c98329a33be2d1908c332a08939848a8
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La interfaz de envío `IOleCommandTarget` de comando define un mecanismo sencillo y extensible ver y ejecutar comandos.  Este mecanismo es más sencillo que `IDispatch` de automatización porque se basa completamente en un conjunto estándar de comandos; los comandos tienen raramente argumentos, y no hay información de tipo implicada \(seguridad de tipos se disminuye para los argumentos del comando también\).  
+---
+# <a name="message-handling-and-command-targets"></a>Message Handling and Command Targets
+The command dispatch interface `IOleCommandTarget` defines a simple and extensible mechanism to query and execute commands. This mechanism is simpler than Automation's `IDispatch` because it relies entirely on a standard set of commands; commands rarely have arguments, and no type information is involved (type safety is diminished for command arguments as well).  
   
- En el diseño de interfaz de envío de comando, cada comando pertenece a un “grupo de comando” que sí mismo se identifica con **GUID**.  Por consiguiente, cualquier persona puede definir un grupo y definir todos los comandos dentro de ese grupo sin necesidad de coordinar con Microsoft o cualquier otro proveedor. \(Este es esencialmente el mismo significa de definición como **dispinterface** más **dispIDs** en la automatización.  Hay superposición aquí, aunque este mecanismo de enrutamiento de comandos es solo para el enrutamiento de comandos y no para el script y programación a gran escala como identificadores de automatización\).  
+ In the command dispatch interface design, each command belongs to a "command group" which is itself identified with a **GUID**. Therefore, anyone can define a new group and define all the commands within that group without any need to coordinate with Microsoft or any other vendor. (This is essentially the same means of definition as a **dispinterface** plus **dispIDs** in Automation. There is overlap here, although this command routing mechanism is only for command routing and not for scripting/programmability on a large scale as Automation handles.)  
   
- `IOleCommandTarget` controla los escenarios siguientes:  
+ `IOleCommandTarget` handles the following scenarios:  
   
--   Cuando un objeto se haber producido en contexto, solo las barras de herramientas del objeto se muestran habitualmente y barras de herramientas de objeto pueden tener botones para algunos de los comandos del contenedor como **Impresión**, **Impresión Vista previa**, **Guardar**, `New`, **Zoom**, y otros. \(Las normas de activación en contexto recomienda los objetos quitan como botones de las barras de herramientas, o al menos las deshabilitados.  Este diseño permite habilitar pero son enrutados a esos comandos el controlador apropiado.\) Actualmente, no hay ningún mecanismo para que el objeto enviar estos comandos al contenedor.  
+-   When an object is in-place activated, only the object's toolbars are typically displayed and the object's toolbars may have buttons for some of the container commands like **Print**, **Print Preview**, **Save**, `New`, **Zoom**, and others. (In-place activation standards recommend that objects remove such buttons from their toolbars, or at least disable them. This design allows those commands to be enabled and yet routed to the right handler.) Currently, there is no mechanism for the object to dispatch these commands to the container.  
   
--   Cuando un documento activo se incrusta en un contenedor de documento activo \(como Office binder\), el contenedor puede necesitar enviar los comandos tal **Impresión**, **Página Programa de instalación**, **Propiedades**, et al documento activo contenido.  
+-   When an active document is embedded in an active document container (such as Office Binder), the container may need to send commands such **Print**, **Page Setup**, **Properties**, and others to the contained active document.  
   
- Este enrutamiento de comandos simple se puede controlar con estándares existentes y `IDispatch`de automatización.  Sin embargo, la sobrecarga implicada con `IDispatch` es más necesario aquí, por lo que `IOleCommandTarget` proporciona un más simple significa lograr los mismos fines:  
+ This simple command routing could be handled through existing Automation standards and `IDispatch`. However, the overhead involved with `IDispatch` is more than is necessary here, so `IOleCommandTarget` provides a simpler means to achieve the same ends:  
   
- `interface IOleCommandTarget : IUnknown`  
+```  
+interface IOleCommandTarget : IUnknown  
+    {  
+    HRESULT QueryStatus(  
+        [in] GUID *pguidCmdGroup,  
+        [in] ULONG cCmds,  
+        [in,out][size_is(cCmds)] OLECMD *prgCmds,  
+        [in,out] OLECMDTEXT *pCmdText);  
+    HRESULT Exec(  
+        [in] GUID *pguidCmdGroup,  
+        [in] DWORD nCmdID,  
+        [in] DWORD nCmdExecOpt,  
+        [in] VARIANTARG *pvaIn,  
+        [in,out] VARIANTARG *pvaOut);  
+    }  
+```  
   
- `{`  
+ The `QueryStatus` method here tests whether a particular set of commands, the set being identified with a **GUID**, is supported. This call fills an array of **OLECMD** values (structures) with the supported list of commands as well as returning text describing the name of a command and/or status information. When the caller wishes to invoke a command, it can pass the command (and the set **GUID**) to **Exec** along with options and arguments, getting back a return value.  
   
- `HRESULT QueryStatus(`  
-  
- `[in] GUID *pguidCmdGroup,`  
-  
- `[in] ULONG cCmds,`  
-  
- `[in,out][size_is(cCmds)] OLECMD *prgCmds,`  
-  
- `[in,out] OLECMDTEXT *pCmdText);`  
-  
- `HRESULT Exec(`  
-  
- `[in] GUID *pguidCmdGroup,`  
-  
- `[in] DWORD nCmdID,`  
-  
- `[in] DWORD nCmdExecOpt,`  
-  
- `[in] VARIANTARG *pvaIn,`  
-  
- `[in,out] VARIANTARG *pvaOut);`  
-  
- `}`  
-  
- El método de `QueryStatus` aquí prueba si se admite un conjunto de comandos, el conjunto de detalle que se identifica con **GUID**.  Esta llamada rellena una matriz de valores de **OLECMD** \(estructuras\) con la lista de comandos compatible así como devuelve el texto que describe el nombre de un comando o de la información de estado.  Cuando el llamador para invocar un comando, puede pasar el comando \(y **GUID**determinado\) a **Ejecución** junto con las opciones y argumentos, obtener la devuelve un valor devuelto.  
-  
-## Vea también  
- [Contenedores de documentos activos](../mfc/active-document-containers.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containers](../mfc/active-document-containers.md)
+
+

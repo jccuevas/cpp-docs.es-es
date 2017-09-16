@@ -1,49 +1,68 @@
 ---
-title: "Administrar ventanas secundarias MDI | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MDICLIENT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ventanas secundarias"
-  - "ventanas secundarias, y ventana MDICLIENT"
-  - "ventanas de marco [C++], ventanas secundarias MDI"
-  - "MDI [C++], ventanas secundarias"
-  - "MDI [C++], ventanas de marco"
-  - "ventana MDICLIENT"
-  - "ventanas [C++], MDI"
+title: Managing MDI Child Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MDICLIENT
+dev_langs:
+- C++
+helpviewer_keywords:
+- MDI [MFC], child windows
+- child windows [MFC], and MDICLIENT window
+- MDICLIENT window [MFC]
+- windows [MFC], MDI
+- frame windows [MFC], MDI child windows
+- child windows [MFC]
+- MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Administrar ventanas secundarias MDI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 11655e9d318d7b240b72da8fbe4cfdd465210b1c
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Las ventanas de marco principal MDI \(una por la aplicación\) contienen una ventana secundaria especial denominada la ventana de **MDICLIENT** .  La ventana de **MDICLIENT** administra el área cliente de la ventana de marco principal, y al propio tiene ventanas secundarias: las ventanas de documento, derivadas de `CMDIChildWnd`.  Dado que las ventanas de documento son ventanas propios de marco \(las ventanas MDI secundarias\), también pueden tener sus propios elementos secundarios.  En todos estos casos, la ventana primaria administrar las ventanas secundarias y transmite a algunos comandos ellas.  
+---
+# <a name="managing-mdi-child-windows"></a>Managing MDI Child Windows
+MDI main frame windows (one per application) contain a special child window called the **MDICLIENT** window. The **MDICLIENT** window manages the client area of the main frame window, and itself has child windows: the document windows, derived from `CMDIChildWnd`. Because the document windows are frame windows themselves (MDI child windows), they can also have their own children. In all of these cases, the parent window manages its child windows and forwards some commands to them.  
   
- En una ventana de marco MDI, la ventana de marco administra la ventana de **MDICLIENT** , colocándola de nuevo junto con las barras de controles.  La ventana de **MDICLIENT** , a su vez, administra todas las ventanas secundarias de marco MDI.  La ilustración siguiente muestra la relación entre una ventana de marco MDI, su ventana de **MDICLIENT** , y las ventanas secundarias de marco de documento.  
+ In an MDI frame window, the frame window manages the **MDICLIENT** window, repositioning it in conjunction with control bars. The **MDICLIENT** window, in turn, manages all MDI child frame windows. The following figure shows the relationship between an MDI frame window, its **MDICLIENT** window, and its child document frame windows.  
   
- ![Ventanas secundarias en una ventana de marco MDI](../mfc/media/vc37gb1.png "vc37GB1")  
-Ventanas marco de MDI y ventanas secundarias  
+ ![Child windows in an MDI frame window](../mfc/media/vc37gb1.gif "vc37gb1")  
+MDI Frame Windows and Children  
   
- Una ventana de marco MDI también funciona junto con la ventana secundaria actual de MDI, si la hay.  La ventana de marco MDI delega mensajes de comando al elemento secundario de MDI antes de intentar controlarlos propio.  
+ An MDI frame window also works in conjunction with the current MDI child window, if there is one. The MDI frame window delegates command messages to the MDI child before it tries to handle them itself.  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Crear ventanas de marco de documento](../mfc/creating-document-frame-windows.md)  
+-   [Creating document frame windows](../mfc/creating-document-frame-windows.md)  
   
--   [Estilos de la Cuadro\-ventana](../mfc/frame-window-styles-cpp.md)  
+-   [Frame-window styles](../mfc/frame-window-styles-cpp.md)  
   
-## Vea también  
- [Usar ventanas de marco](../mfc/using-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

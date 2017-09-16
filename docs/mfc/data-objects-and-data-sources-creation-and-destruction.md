@@ -1,93 +1,111 @@
 ---
-title: "Objetos de datos y or&#237;genes de datos: Creaci&#243;n y destrucci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objetos de datos [C++], crear"
-  - "objetos de datos [C++], destruir"
-  - "objetos de orígenes de datos [C++], crear"
-  - "objetos de orígenes de datos [C++], destruir"
-  - "orígenes de datos [C++], y objetos de datos"
-  - "orígenes de datos [C++], crear"
-  - "orígenes de datos [C++], destruir"
-  - "orígenes de datos [C++], rol"
-  - "destruir objetos de datos"
-  - "destrucción [C++], objetos de datos"
-  - "destrucción [C++], orígenes de datos"
-  - "creación de objetos [C++], objetos de orígenes de datos"
+title: 'Data Objects and Data Sources: Creation and Destruction | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- destroying data objects [MFC]
+- object creation [MFC], data source objects
+- data sources [MFC], and data objects
+- data source objects [MFC], creating
+- destruction [MFC], data sources
+- data source objects [MFC], destroying
+- data objects [MFC], creating
+- data objects [MFC], destroying
+- data sources [MFC], role
+- data sources [MFC], destroying
+- destruction [MFC], data objects
+- data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Objetos de datos y or&#237;genes de datos: Creaci&#243;n y destrucci&#243;n
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b0117f2ea3ab82b9748a611f9b1c52e2e089cabb
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Tal como se explica en el artículo [Objetos de datos y orígenes de datos \(OLE\)](../mfc/data-objects-and-data-sources-ole.md), los objetos de datos y los orígenes de datos representan ambas caras de la transferencia de datos.  En este artículo explica cuándo se deben crear y destruir estos objetos y orígenes para realizar a las transferencias de datos correctamente, incluidas estas acciones:  
+---
+# <a name="data-objects-and-data-sources-creation-and-destruction"></a>Data Objects and Data Sources: Creation and Destruction
+As explained in the article [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md), data objects and data sources represent both sides of a data transfer. This article explains when to create and destroy these objects and sources to perform your data transfers properly, including:  
   
--   [Crear objetos de datos](#_core_creating_data_objects)  
+-   [Creating data objects](#_core_creating_data_objects)  
   
--   [Destruir objetos de datos](#_core_destroying_data_objects)  
+-   [Destroying data objects](#_core_destroying_data_objects)  
   
--   [Crear orígenes de datos](#_core_creating_data_sources)  
+-   [Creating data sources](#_core_creating_data_sources)  
   
--   [Destruir orígenes de datos](#_core_destroying_data_sources)  
+-   [Destroying data sources](#_core_destroying_data_sources)  
   
-##  <a name="_core_creating_data_objects"></a> Crear objetos de datos  
- Los objetos de datos los usa la aplicación de destino, ya sea de cliente o de servidor.  Un objeto de datos de la aplicación de destino es un extremo de una conexión entre la aplicación de origen y la aplicación de destino.  Un objeto de datos de la aplicación de destino se usa para acceder a los datos del origen de datos e interactuar con ellos.  
+##  <a name="_core_creating_data_objects"></a> Creating Data Objects  
+ Data objects are used by the destination application — either the client or the server. A data object in the destination application is one end of a connection between the source application and the destination application. A data object in the destination application is used to access and interact with the data in the data source.  
   
- Existen dos situaciones comunes en las que es necesario un objeto de datos.  La primera sucede al colocar datos en la aplicación con el proceso de arrastrar y colocar.  La segunda sucede al elegir Pegar o Pegado especial en el menú Edición.  
+ There are two common situations where a data object is needed. The first situation is when data is dropped in your application using drag and drop. The second situation is when Paste or Paste Special is chosen from the Edit menu.  
   
- En el caso de arrastrar y colocar, no es necesario crear un objeto de datos.  Se pasará a la función `OnDrop` un puntero a un objeto de datos existente.  Este objeto de datos lo crea el marco como parte de la operación de arrastrar y colocar, y también será el encargado de destruirlo.  Si otro método se encarga de pegar, esto no siempre es así.  Para obtener más información, vea [Destruir objetos de datos](#_core_destroying_data_objects).  
+ In a drag-and-drop situation, you do not need to create a data object. A pointer to an existing data object will be passed to your `OnDrop` function. This data object is created by the framework as part of the drag-and-drop operation and will also be destroyed by it. This is not always the case when pasting is done by another method. For more information, see [Destroying Data Objects](#_core_destroying_data_objects).  
   
- Si la aplicación realiza una operación de pegar o de pegado especial, debe crear un objeto `COleDataObject` y llamar a su función miembro `AttachClipboard`.  De este modo, el objeto de datos se asocia con los datos del Portapapeles.  Después puede usar este objeto de datos en la función de pegar.  
+ If the application is performing a paste or paste special operation, you should create a `COleDataObject` object and call its `AttachClipboard` member function. This associates the data object with the data on the Clipboard. You can then use this data object in your paste function.  
   
-##  <a name="_core_destroying_data_objects"></a> Destruir objetos de datos  
- Si sigue el esquema descrito en [Crear objetos de datos](#_core_creating_data_objects), destruir objetos de datos es un aspecto trivial de las transferencias de datos.  MFC destruirá el objeto de datos que se creó con la función para pegar cuando se vuelva a iniciar la función para pegar.  
+##  <a name="_core_destroying_data_objects"></a> Destroying Data Objects  
+ If you follow the scheme described in [Creating Data Objects](#_core_creating_data_objects), destroying data objects is a trivial aspect of data transfers. The data object that was created in your paste function will be destroyed by MFC when your paste function returns.  
   
- Si sigue otro método para controlar las operaciones de pegado, asegúrese de que se destruya el objeto de datos una vez completada la operación.  Hasta que se destruya el objeto de datos, ninguna aplicación podrá copiar correctamente los datos en el Portapapeles.  
+ If you follow another method of handling paste operations, make sure the data object is destroyed after your paste operation is complete. Until the data object is destroyed, it will be impossible for any application to successfully copy data to the Clipboard.  
   
-##  <a name="_core_creating_data_sources"></a> Crear orígenes de datos  
- Los orígenes de datos los usa el origen de la transferencia de datos, que puede ser el lado del cliente o el lado del servidor de la transferencia de datos.  Un origen de datos de la aplicación de origen es un extremo de una conexión entre la aplicación de origen y la aplicación de destino.  Un objeto de datos de la aplicación de destino se usa para interactuar con los datos del origen de datos.  
+##  <a name="_core_creating_data_sources"></a> Creating Data Sources  
+ Data sources are used by the source of the data transfer, which can be either the client or the server side of the data transfer. A data source in the source application is one end of a connection between the source application and the destination application. A data object in the destination application is used to interact with the data in the data source.  
   
- Los orígenes de datos se crean cuando una aplicación tiene que copiar datos en el Portapapeles.  Un escenario habitual sería el siguiente:  
+ Data sources are created when an application needs to copy data to the Clipboard. A typical scenario runs like this:  
   
-1.  El usuario selecciona algunos datos.  
+1.  The user selects some data.  
   
-2.  El usuario elige **Copiar** \(o **Cortar**\) en el menú **Editar**  o inicia una operación de arrastrar y colocar.  
+2.  The user chooses **Copy** (or **Cut**) from the **Edit** menu or begins a drag-and-drop operation.  
   
-3.  Según el diseño del programa, la aplicación crea un objeto `COleDataSource` o un objeto de una clase derivada de `COleDataSource`.  
+3.  Depending on the design of the program, the application creates either a `COleDataSource` object or an object from a class derived from `COleDataSource`.  
   
-4.  Los datos seleccionados se insertan en el origen de datos con una llamada a una de las funciones de los grupos `COleDataSource::CacheData` o `COleDataSource::DelayRenderData`.  
+4.  The selected data is inserted into the data source by calling one of the functions in the `COleDataSource::CacheData` or `COleDataSource::DelayRenderData` groups.  
   
-5.  La aplicación llama a la función miembro `SetClipboard` \(o la función miembro `DoDragDrop` si se trata de una operación de arrastrar y colocar\) que pertenece al objeto creado en el paso 3.  
+5.  The application calls the `SetClipboard` member function (or the `DoDragDrop` member function if this is a drag-and-drop operation) belonging to the object created in step 3.  
   
-6.  Si se trata de una operación **Cortar**  o `DoDragDrop` devuelve `DROPEFFECT_MOVE`, los datos que seleccionó en el paso 1 se eliminan del documento.  
+6.  If this is a **Cut** operation or `DoDragDrop` returns `DROPEFFECT_MOVE`, the data selected in step 1 is deleted from the document.  
   
- Este escenario se implementa en los ejemplos OLE de MFC [OCLIENT](../top/visual-cpp-samples.md) y [HIERSVR](../top/visual-cpp-samples.md).  Para cada clase derivada de `CView` de la aplicación, examine el código fuente para todas las funciones excepto `GetClipboardData` y `OnGetClipboardData`.  Estas dos funciones están en las implementaciones de clase derivada `COleClientItem` o `COleServerItem`.  Estos programas de ejemplo constituyen una buena muestra de cómo implementar estos conceptos.  
+ This scenario is implemented by the MFC OLE samples [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md). Look at the source for each application's `CView`-derived class for all but the `GetClipboardData` and `OnGetClipboardData` functions. These two functions are in either the `COleClientItem` or `COleServerItem`-derived class implementations. These sample programs provide a good example of how to implement these concepts.  
   
- Otra situación en la que puede que quiera crear un objeto `COleDataSource` sucede cuando modifica el comportamiento predeterminado de una operación de arrastrar y colocar.  Para obtener más información, vea el artículo [Arrastrar y colocar: personalización](../mfc/drag-and-drop-customizing.md).  
+ One other situation in which you might want to create a `COleDataSource` object occurs if you are modifying the default behavior of a drag-and-drop operation. For more information, see the [Drag and Drop: Customizing](../mfc/drag-and-drop-customizing.md) article.  
   
-##  <a name="_core_destroying_data_sources"></a> Destruir orígenes de datos  
- La aplicación responsable de los orígenes de datos debe destruirlos.  En situaciones donde se entrega el origen de datos a OLE, como una llamada a [COleDataSource::DoDragDrop](../Topic/COleDataSource::DoDragDrop.md), debe llamar a **pDataSrc\-\>InternalRelease**.  Por ejemplo:  
+##  <a name="_core_destroying_data_sources"></a> Destroying Data Sources  
+ Data sources must be destroyed by the application currently responsible for them. In situations where you hand the data source to OLE, such as calling [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), you need to call **pDataSrc->InternalRelease**. For example:  
   
- [!code-cpp[NVC_MFCListView#1](../mfc/codesnippet/CPP/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
+ [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
   
- Si no ha entregado el origen de datos a OLE, el usuario es el responsable de destruirlo, igual que sucede con cualquier objeto habitual de C\+\+.  
+ If you have not handed your data source to OLE, then you are responsible for destroying it, as with any typical C++ object.  
   
- Para obtener más información, vea [Arrastrar y colocar](../mfc/drag-and-drop-ole.md), [Portapapeles](../mfc/clipboard.md) y [Manipular objetos de datos y orígenes de datos](../mfc/data-objects-and-data-sources-manipulation.md).  
+ For more information, see [Drag and Drop](../mfc/drag-and-drop-ole.md), [Clipboard](../mfc/clipboard.md), and [Manipulating Data Objects and Data Sources](../mfc/data-objects-and-data-sources-manipulation.md).  
   
-## Vea también  
- [Objetos de datos y orígenes de datos \(OLE\)](../mfc/data-objects-and-data-sources-ole.md)   
+## <a name="see-also"></a>See Also  
+ [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md)   
  [COleDataObject Class](../mfc/reference/coledataobject-class.md)   
  [COleDataSource Class](../mfc/reference/coledatasource-class.md)
+

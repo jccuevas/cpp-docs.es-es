@@ -1,45 +1,64 @@
 ---
-title: "Archivo (Men&#250; en una aplicaci&#243;n de base de datos MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "menú Archivo"
-  - "aplicaciones de base de datos [C++], comandos del menú Archivo"
+title: File Menu in an MFC Database Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- File menu
+- database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Archivo (Men&#250; en una aplicaci&#243;n de base de datos MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: df27a26720aca2ed02d9e3e972a96052ce6729ba
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-¿Si crea una aplicación de base de datos MFC y no utiliza la serialización, cómo se debe interpretar el Abrir, cierre, el Guardar, y el Guardar como comandos en el menú archivo?  Aunque no hay instrucciones de estilo para esta pregunta, algunas sugerencias:  
+---
+# <a name="file-menu-in-an-mfc-database-application"></a>File Menu in an MFC Database Application
+If you create an MFC database application and don't use serialization, how should you interpret the Open, Close, Save, and Save As commands on the File menu While there are no style guidelines for this question, here are a few suggestions:  
   
--   Elimine el comando abierto desde el menú archivo completamente.  
+-   Eliminate the File menu's Open command entirely.  
   
--   Interpreta el comando que abiertas como “base de datos abierto” y mostrar el usuario una lista de orígenes de datos que la aplicación reconoce.  
+-   Interpret the Open command as "open database" and show the user a list of data sources your application recognizes.  
   
--   Interpreta el comando abiertas como, quizás, “perfil abierto.” Mantenga el Abrir para abrir un archivo serializado, pero utiliza el archivo para almacenar un documento serializado que contiene información de “perfil de usuario”, como las preferencias del usuario, incluida su Id. de inicio de sesión \(opcionalmente excepto la contraseña\) y el origen de datos al mismo ejecutadas recientemente con.  
+-   Interpret the Open command as, perhaps, "open profile." Retain Open for opening a serialized file, but use the file to store a serialized document containing "user profile" information, such as the user's preferences, including his or her login ID (optionally excluding the password) and the data source he or she most recently worked with.  
   
- El asistente para aplicaciones MFC permite crear una aplicación sin comandos de menú archivo relativos al documento.  Seleccione la opción de **Vista de base de datos sin compatibilidad con archivos** en la página de **Compatib. bases datos** .  
+ The MFC Application Wizard supports creating an application with no document-related File menu commands. Select the **Database view without file support** option on the **Database Support** page.  
   
- Para interpretar un comando de menú archivo de una manera especial, debe reemplazar uno o más controladores de comandos, sobre todo en `CWinApp`\- clase derivada.  Por ejemplo, si invalida completamente `OnFileOpen` \(que implementa el comando de `ID_FILE_OPEN` \) para indicar la “base de datos abierto: ”  
+ To interpret a File menu command in a special way, you must override one or more command handlers, mostly in your `CWinApp`-derived class. For example, if you completely override `OnFileOpen` (which implements the `ID_FILE_OPEN` command) to mean "open database:"  
   
--   No llame a la versión de la clase base de `OnFileOpen`, ya que reemplaza completamente la implementación predeterminada del marco de trabajo de comando.  
+-   Don't call the base class version of `OnFileOpen`, since you're completely replacing the framework's default implementation of the command.  
   
--   Utilice el controlador en su lugar para mostrar orígenes de datos de una lista del cuadro de diálogo.  Puede mostrar este diálogo llamando a `CDatabase::OpenEx` o `CDatabase::Open` con el parámetro **nulo**.  Se abrirá un cuadro de diálogo de ODBC que muestra todos los orígenes de datos disponibles en el equipo del usuario.  
+-   Use the handler instead to display a dialog box listing data sources. You can display such a dialog by calling `CDatabase::OpenEx` or `CDatabase::Open` with the parameter **NULL**. This opens an ODBC dialog box that displays all available data sources on the user's machine.  
   
--   Dado que las aplicaciones de base de datos no se guardan normalmente un documento entero, probablemente deseará quitar el Guardar y Guardar como implementaciones a menos que utilice un documento serializado para almacenar la información del perfil.  Si no, puede implementar el comando Save como, por ejemplo, “transacción de confirmación”. Vea [Nota técnica 22](../mfc/tn022-standard-commands-implementation.md) para obtener más información sobre cómo invalidar estos comandos.  
+-   Because database applications typically don't save a whole document, you'll probably want to remove the Save and Save As implementations unless you use a serialized document to store profile information. Otherwise, you might implement the Save command as, for example, "commit transaction." See [Technical Note 22](../mfc/tn022-standard-commands-implementation.md) for more information about overriding these commands.  
   
-## Vea también  
- [Serialización: Serialización frente a entrada\/salida de bases de datos](../mfc/serialization-serialization-vs-database-input-output.md)
+## <a name="see-also"></a>See Also  
+ [Serialization: Serialization vs. Database Input/Output](../mfc/serialization-serialization-vs-database-input-output.md)
+
+

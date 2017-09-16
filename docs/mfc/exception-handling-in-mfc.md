@@ -1,140 +1,159 @@
 ---
-title: "Control de excepciones en MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ejecución anómala del programa [C++]"
-  - "excepciones del archivo [C++]"
-  - "aserciones [C++], cuándo se utilizan excepciones"
-  - "automatización [C++], excepciones"
-  - "control de excepciones de C++, habilitar"
-  - "control de excepciones de C++, MFC (aplicaciones)"
-  - "control de excepciones de C++, tipos de"
-  - "bibliotecas de clases [C++], compatibilidad de excepciones"
-  - "DAO [C++], excepciones"
-  - "excepciones de la base de datos [C++]"
-  - "control de errores [C++], excepciones y"
-  - "errores [C++], detectados por aserciones"
-  - "control de excepciones [C++], MFC"
-  - "macros de excepción [C++]"
-  - "excepciones [C++], macros de MFC frente a palabras clave de C++"
-  - "llamadas a funciones, resultados"
-  - "palabras clave [C++], control de excepciones"
-  - "macros [C++], control de excepciones"
-  - "macros [C++], macros de excepción de MFC"
-  - "memoria [C++], out_of_memory (excepciones)"
-  - "MFC [C++], excepciones"
-  - "excepciones ODBC [C++]"
-  - "excepciones OLE [C++], control de excepciones de MFC"
-  - "out_of_memory (excepciones) [C++]"
-  - "excepciones predefinidas [C++]"
-  - "solicitudes para servicios no admitidos"
-  - "excepción de asignación de recursos"
-  - "recursos [C++], asignar"
-  - "serialización [C++], excepciones"
-  - "Windows [C++], excepciones de asignación de recursos"
+title: Exception Handling in MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DAO [MFC], exceptions
+- assertions [MFC], When to use exceptions
+- exception handling [MFC], MFC
+- resource allocation exception
+- resources [MFC], allocating
+- keywords [MFC], exception handling
+- errors [MFC], detected by assertions
+- ODBC exceptions [MFC]
+- serialization [MFC], exceptions
+- Automation [MFC], exceptions
+- exception macros [MFC]
+- predefined exceptions [MFC]
+- C++ exception handling [MFC], enabling
+- C++ exception handling [MFC], MFC applications
+- requests for unsupported services [MFC]
+- database exceptions [MFC]
+- archive exceptions [MFC]
+- MFC, exceptions
+- C++ exception handling [MFC], types of
+- macros [MFC], exception handling
+- abnormal program execution [MFC]
+- OLE exceptions [MFC], MFC exception handling
+- error handling [MFC], exceptions and
+- class libraries [MFC], exception support
+- exceptions [MFC], MFC macros vs. C++ keywords
+- memory [MFC], out-of-memory exceptions
+- Windows [MFC], resource allocation exceptions
+- macros [MFC], MFC exception macros
+- function calls [MFC], results
+- out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Control de excepciones en MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 52a4deadf4aae102256e8f44c3cf47bb5a123aa9
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En este artículo se explica los mecanismos de control de excepciones disponibles en MFC.  Dos mecanismos disponibles:  
+---
+# <a name="exception-handling-in-mfc"></a>Exception Handling in MFC
+This article explains the exception-handling mechanisms available in MFC. Two mechanisms are available:  
   
--   Excepciones de C\+\+, disponible en la versión 3.0 de MFC y posterior  
+-   C++ exceptions, available in MFC version 3.0 and later  
   
--   Las macros de excepción de MFC, disponible en las versiones 1.0 de MFC y posterior  
+-   The MFC exception macros, available in MFC versions 1.0 and later  
   
- Si escribe una nueva aplicación mediante MFC, debe utilizar el mecanismo de C\+\+.  Puede utilizar el mecanismo macro\- basado si la aplicación existente utiliza ya ese mecanismo ampliamente.  
+ If you're writing a new application using MFC, you should use the C++ mechanism. You can use the macro-based mechanism if your existing application already uses that mechanism extensively.  
   
- Puede convertir fácilmente código existente para utilizar excepciones de C\+\+ en lugar de las macros de excepción de MFC.  Las ventajas de convertir el código e instrucciones para ello se describen en el caso [Excepciones: Convertir desde macros de excepciones de MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).  
+ You can readily convert existing code to use C++ exceptions instead of the MFC exception macros. Advantages of converting your code and guidelines for doing so are described in the article [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).  
   
- Si ha desarrollado ya una aplicación utilizando las macros de excepción de MFC, puede seguir utilizando estas macros en el código existente, mientras utiliza las excepciones de C\+\+ en el nuevo código.  El artículo [Excepciones: Cambios en las macros de excepción en la versión 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) proporciona instrucciones para ello.  
-  
-> [!NOTE]
->  Para habilitar el control de excepciones de C\+\+ en el código, seleccione el permiso C\+\+ Excepciones en la generación de código en la carpeta C\/C\+\+ de cuadro de diálogo de [Páginas de propiedades](../ide/property-pages-visual-cpp.md) del proyecto, o utilice la opción del compilador \/GX.  El valor predeterminado es \/GX –, que deshabilita el control de excepciones.  
-  
- En este artículo se tratan los siguientes temas:  
-  
--   [Cuándo utilizar excepciones](#_core_when_to_use_exceptions)  
-  
--   [Compatibilidad con la excepción de MFC](#_core_mfc_exception_support)  
-  
--   [Información adicional sobre excepciones](#_core_further_reading_about_exceptions)  
-  
-##  <a name="_core_when_to_use_exceptions"></a> Cuándo utilizar Excepciones  
- Tres categorías de resultados pueden ocurrir cuando una función se llama durante la ejecución del programa: ejecución normal, ejecución de error, o ejecución anómala.  Cada categoría se describe a continuación.  
-  
--   Ejecución normal  
-  
-     La función puede ejecutarse normalmente y volver.  Algunas funciones devuelven un código de resultado al llamador, que indica el resultado de la función.  Los códigos de resultado posibles se definen estrictamente para la función y representan el intervalo de los posibles resultados de la función.  El código de resultado puede indicar corrección o error o incluso puede indicar un tipo determinado de error que está comprendido en el intervalo normal de expectativas.  Por ejemplo, una función de estado de archivo puede devolver un código que indica que el archivo no existe.  Observe que el término “código de error” no se utiliza como un código de resultado representa uno de muchos resultados esperados.  
-  
--   Ejecución errónea  
-  
-     El llamador incurre en alguna equivocación en pasar argumentos a la función o llama a la función en un contexto inadecuado.  Esta situación se produce un error, y debe ser detectado por una aserción durante el desarrollo de software. \(Para obtener más información sobre las aserciones, vea [Aserciones de C\/C\+\+](../Topic/C-C++%20Assertions.md).\)  
-  
--   Ejecución anormal  
-  
-     La ejecución anormal incluye las situaciones en las condiciones fuera del control del programa, como memoria insuficiente o errores de E\/S, se influyen el resultado de la función.  Las situaciones anormales deben controlarse en la detección y excepciones.  
-  
- Mediante excepciones es especialmente adecuado para la ejecución anómala.  
-  
-##  <a name="_core_mfc_exception_support"></a> Compatibilidad con la excepción de MFC  
- Si utiliza las excepciones de C\+\+ directamente o utiliza las macros de excepción de MFC, utilizará [CException Class](../mfc/reference/cexception-class.md) o `CException`\- objetos derivados que puede iniciar el marco o por la aplicación.  
-  
- La tabla siguiente se muestran las excepciones predefinidas proporcionadas por MFC.  
-  
-|Clase de excepción|Significado|  
-|------------------------|-----------------|  
-|[CMemoryException Class](../mfc/reference/cmemoryexception-class.md)|En fuera\-de\- memoria|  
-|[CFileException Class](../mfc/reference/cfileexception-class.md)|Excepción de archivo|  
-|[CArchiveException Class](../mfc/reference/carchiveexception-class.md)|Excepción de archivos y de Serialización|  
-|[CNotSupportedException Class](../mfc/reference/cnotsupportedexception-class.md)|Respuesta a la solicitud del servicio no compatibles|  
-|[CResourceException Class](../mfc/reference/cresourceexception-class.md)|Excepción de la asignación de recursos de Windows|  
-|[CDaoException Class](../mfc/reference/cdaoexception-class.md)|Excepciones de base de datos \(clases DAO\)|  
-|[CDBException Class](../mfc/reference/cdbexception-class.md)|Excepciones de base de datos \(clases ODBC\)|  
-|[COleException Class](../mfc/reference/coleexception-class.md)|Excepciones de OLE|  
-|[COleDispatchException Class](../mfc/reference/coledispatchexception-class.md)|Excepciones de envío \(automatización\)|  
-|[CUserException Class](../mfc/reference/cuserexception-class.md)|La excepción que avisa al usuario un cuadro de mensaje, inicia [CException Class](../mfc/reference/cexception-class.md)genérico|  
+ If you have already developed an application using the MFC exception macros, you can continue using these macros in your existing code, while using C++ exceptions in your new code. The article [Exceptions: Changes to Exception Macros in Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) gives guidelines for doing so.  
   
 > [!NOTE]
->  MFC admite las excepciones de C\+\+ y macros de excepción de MFC.  MFC no admite directamente a los controladores de excepciones estructurados Windows NT \(SEH\), como se describe en [Control de excepciones estructurado](http://msdn.microsoft.com/library/windows/desktop/ms680657).  
+>  To enable C++ exception handling in your code, select Enable C++ Exceptions on the Code Generation page in the C/C++ folder of the project's [Property Pages](../ide/property-pages-visual-cpp.md) dialog box, or use the /GX compiler option. The default is /GX-, which disables exception handling.  
   
-##  <a name="_core_further_reading_about_exceptions"></a> Información adicional sobre excepciones  
- Los artículos siguientes explican mediante la biblioteca MFC para dar de excepción:  
+ This article covers the following topics:  
   
--   [Excepciones: Detectar y eliminar excepciones](../mfc/exceptions-catching-and-deleting-exceptions.md)  
+-   [When to use exceptions](#_core_when_to_use_exceptions)  
   
--   [Excepciones: Examinar contenidos de excepciones](../mfc/exceptions-examining-exception-contents.md)  
+-   [MFC exception support](#_core_mfc_exception_support)  
   
--   [Excepciones: Liberar objetos en las excepciones](../mfc/exceptions-freeing-objects-in-exceptions.md)  
+-   [Further reading about exceptions](#_core_further_reading_about_exceptions)  
   
--   [Excepciones: Iniciar excepciones desde sus propias funciones](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)  
+##  <a name="_core_when_to_use_exceptions"></a> When to Use Exceptions  
+ Three categories of outcomes can occur when a function is called during program execution: normal execution, erroneous execution, or abnormal execution. Each category is described below.  
   
--   [Excepciones: Excepciones de base de datos](../mfc/exceptions-database-exceptions.md)  
+-   Normal execution  
   
--   [Excepciones: Excepciones OLE](../mfc/exceptions-ole-exceptions.md)  
+     The function may execute normally and return. Some functions return a result code to the caller, which indicates the outcome of the function. The possible result codes are strictly defined for the function and represent the range of possible outcomes of the function. The result code can indicate success or failure or can even indicate a particular type of failure that is within the normal range of expectations. For example, a file-status function can return a code that indicates that the file does not exist. Note that the term "error code" is not used because a result code represents one of many expected outcomes.  
   
- Los artículos siguientes comparan las macros de excepción de MFC con las palabras clave de excepciones de C\+\+ y explica cómo puede adaptar el código:  
+-   Erroneous execution  
   
--   [Excepciones: Cambios en las macros de excepción en la versión 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)  
+     The caller makes some mistake in passing arguments to the function or calls the function in an inappropriate context. This situation causes an error, and it should be detected by an assertion during program development. (For more information on assertions, see [C/C++ Assertions](/visualstudio/debugger/c-cpp-assertions).)  
   
--   [Excepciones: Convertir desde macros de excepciones de MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)  
+-   Abnormal execution  
   
--   [Excepciones: Usar macros de MFC y excepciones de C\+\+](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)  
+     Abnormal execution includes situations where conditions outside the program's control, such as low memory or I/O errors, are influencing the outcome of the function. Abnormal situations should be handled by catching and throwing exceptions.  
   
-## Vea también  
- [Control de excepciones de C\+\+](../cpp/cpp-exception-handling.md)   
- [Cómo se hago: ¿Cree mis clases de excepción personalizadas de Own?](http://go.microsoft.com/fwlink/?LinkId=128045)
+ Using exceptions is especially appropriate for abnormal execution.  
+  
+##  <a name="_core_mfc_exception_support"></a> MFC Exception Support  
+ Whether you use the C++ exceptions directly or use the MFC exception macros, you will use [CException Class](../mfc/reference/cexception-class.md) or `CException`-derived objects that may be thrown by the framework or by your application.  
+  
+ The following table shows the predefined exceptions provided by MFC.  
+  
+|Exception class|Meaning|  
+|---------------------|-------------|  
+|[CMemoryException Class](../mfc/reference/cmemoryexception-class.md)|Out-of-memory|  
+|[CFileException Class](../mfc/reference/cfileexception-class.md)|File exception|  
+|[CArchiveException Class](../mfc/reference/carchiveexception-class.md)|Archive/Serialization exception|  
+|[CNotSupportedException Class](../mfc/reference/cnotsupportedexception-class.md)|Response to request for unsupported service|  
+|[CResourceException Class](../mfc/reference/cresourceexception-class.md)|Windows resource allocation exception|  
+|[CDaoException Class](../mfc/reference/cdaoexception-class.md)|Database exceptions (DAO classes)|  
+|[CDBException Class](../mfc/reference/cdbexception-class.md)|Database exceptions (ODBC classes)|  
+|[COleException Class](../mfc/reference/coleexception-class.md)|OLE exceptions|  
+|[COleDispatchException Class](../mfc/reference/coledispatchexception-class.md)|Dispatch (automation) exceptions|  
+|[CUserException Class](../mfc/reference/cuserexception-class.md)|Exception that alerts the user with a message box, then throws a generic [CException Class](../mfc/reference/cexception-class.md)|  
+  
+> [!NOTE]
+>  MFC supports both C++ exceptions and the MFC exception macros. MFC does not directly support Windows NT structured exception handlers (SEH), as discussed in [Structured Exception Handling](http://msdn.microsoft.com/library/windows/desktop/ms680657).  
+  
+##  <a name="_core_further_reading_about_exceptions"></a> Further Reading About Exceptions  
+ The following articles explain using the MFC library for exception handing:  
+  
+-   [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md)  
+  
+-   [Exceptions: Examining Exception Contents](../mfc/exceptions-examining-exception-contents.md)  
+  
+-   [Exceptions: Freeing Objects in Exceptions](../mfc/exceptions-freeing-objects-in-exceptions.md)  
+  
+-   [Exceptions: Throwing Exceptions from Your Own Functions](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)  
+  
+-   [Exceptions: Database Exceptions](../mfc/exceptions-database-exceptions.md)  
+  
+-   [Exceptions: OLE Exceptions](../mfc/exceptions-ole-exceptions.md)  
+  
+ The following articles compare the MFC exception macros with the C++ exception keywords and explain how you can adapt your code:  
+  
+-   [Exceptions: Changes to Exception Macros in Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)  
+  
+-   [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md)  
+  
+-   [Exceptions: Using MFC Macros and C++ Exceptions](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)  
+  
+## <a name="see-also"></a>See Also  
+ [C++ Exception Handling](../cpp/cpp-exception-handling.md)   
+ [How Do I: Create my Own Custom Exception Classes](http://go.microsoft.com/fwlink/linkid=128045)
+
+

@@ -1,5 +1,5 @@
 ---
-title: Clase is_scalar | Microsoft Docs
+title: is_scalar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_scalar
 - type_traits/std::is_scalar
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 7025e3eb4545689522375a9b7943360d9144c0f8
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0f3d5447a026c7e4955292a4f6057c015d7178c6
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isscalar-class"></a>is_scalar (Clase)
-Comprueba si el tipo es escalar.  
+# <a name="isscalar-class"></a>is_scalar Class
+Tests if type is scalar.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_scalar;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Tipo que se va a consultar.  
+ The type to query.  
   
-## <a name="remarks"></a>Comentarios  
- Una instancia de tipo predicado contiene true si el tipo `Ty` es un entero, un punto flotante, una enumeración, un puntero o un puntero a miembro, o bien un formulario `cv-qualified` de uno de ellos; en caso contrario, contiene false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is an integral type, a floating point type, an enumeration type, a pointer type, or a pointer to member type, or a `cv-qualified` form of one of them, otherwise it holds false.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_scalar.cpp   
@@ -95,12 +94,12 @@ is_scalar<int> == true
 is_scalar<float> == true  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espacio de nombres:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Clase is_compound](../standard-library/is-compound-class.md)
+ [is_compound Class](../standard-library/is-compound-class.md)
 

@@ -1,205 +1,224 @@
 ---
-title: "TN021: Enrutamiento de comandos y mensajes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.routing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "enrutamiento de comandos [C++], Nota técnica de TN021"
-  - "TN021"
-  - "mensajes de Windows [C++], enrutar"
+title: 'TN021: Command and Message Routing | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.routing
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN021
+- command routing [MFC], technical note TN021
+- Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# TN021: Enrutamiento de comandos y mensajes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 41e050bcfaa39f2aec0cc62ee31e8a0e6b7d8391
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn021-command-and-message-routing"></a>TN021: Command and Message Routing
 > [!NOTE]
->  La nota técnica siguiente no se ha actualizado desde que se incluyó por primera vez en la documentación en línea.  Como resultado, algunos procedimientos y temas podrían estar obsoletos o ser incorrectos.  Para obtener información más reciente, se recomienda buscar el tema de interés en el índice de la documentación en línea.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Esta nota describe la arquitectura de enrutamiento y el envío de un comando así como temas avanzados en el enrutamiento de mensajes general de la ventana.  
+ This note describes the command routing and dispatch architecture as well as advanced topics in general window message routing.  
   
- Consulte en Visual C\+\+ para los detalles generales en arquitecturas descritas a continuación, especialmente la diferencia entre los mensajes de Windows, las notificaciones del control, y los comandos.  Esta nota se supone que está muy familiarizado con los problemas descritos en la documentación impresa y solo los temas muy avanzadas de direcciones.  
+ Please refer to Visual C++ for general details on the architectures described here, especially the distinction between Windows messages, control notifications, and commands. This note assumes you are very familiar with the issues described in the printed documentation and only addresses very advanced topics.  
   
-## Funcionalidad Evolves MFC 1,0 de enrutamiento y el envío de un comando a la arquitectura de MFC 2,0  
- Windows tiene el mensaje de **WM\_COMMAND** que se sobrecarga para proporcionar notificaciones de los comandos de menú, de teclas de aceleración y de notificaciones de la diálogo\- CONTROL.  
+## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>Command Routing and Dispatch MFC 1.0 Functionality Evolves to MFC 2.0 Architecture  
+ Windows has the **WM_COMMAND** message that is overloaded to provide notifications of menu commands, accelerator keys and dialog-control notifications.  
   
- MFC 1,0 compilaciones que algún permitiendo que un controlador de comandos \(por ejemplo, “OnFileNew”\) en una clase derivada de **CWnd** obtenga denominado en respuesta a **WM\_COMMAND**concreto.  Esto se pega junto con una estructura de datos con el mapa de mensajes, y los resultados en un mecanismo muy espacio\- eficaz de comando.  
+ MFC 1.0 built on that a little by allowing a command handler (for example, "OnFileNew") in a **CWnd** derived class to get called in response to a specific **WM_COMMAND**. This is glued together with a data structure called the message map, and results in a very space-efficient command mechanism.  
   
- Función adicional también proporcionada de MFC 1,0 para separar las notificaciones del control de mensajes del comando.  Un identificador de 16 bits representan los comandos, conocido a veces como identificador de comando  Los comandos salen de **CFrameWnd** \(es decir, un menú seleccione o un acelerador traducido\) y obtienen normalmente enrutar a una variedad de otras ventanas.  
+ MFC 1.0 also provided additional functionality for separating control notifications from command messages. Commands are represented by a 16-bit ID, sometimes known as a Command ID. Commands normally start from a **CFrameWnd** (that is, a menu select or a translated accelerator) and get routed to a variety of other windows.  
   
- MFC 1,0 usa el enrutamiento de comandos en un sentido limitado para la implementación de la interfaz de múltiples documentos \(MDI\). \(Comandos de MDI del cuadro de un delegado desde la ventana hasta la ventana secundaria MDI activo.\)  
+ MFC 1.0 used command routing in a limited sense for the implementation of Multiple Document Interface (MDI). (An MDI frame window delegate commands to its active MDI Child window.)  
   
- Esta funcionalidad se ha general y se ha mejorado en MFC 2,0 para permitir que los comandos administran un intervalo mayor de objetos \(no sólo objetos de la ventana\).  Proporciona una arquitectura más formal y más extensible para distribuir mensajes y reutiliza el enrutamiento del destino de comando para no solo control de comandos, sino también para actualizar objetos de interfaz de usuario \(como elementos de menú y botones de la barra de herramientas\) para reflejar la disponibilidad actual de un comando.  
+ This functionality has been generalized and extended in MFC 2.0 to allow commands to be handled by a wider range of objects (not just window objects). It provides a more formal and extensible architecture for routing messages and reuses the command target routing for not only handling of commands, but also for updating UI objects (like menu items and toolbar buttons) to reflect the current availability of a command.  
   
-## Id. de comando  
- Vea Visual C\+\+ para obtener una explicación del enrutamiento de comandos y el proceso de enlace.  [Nota técnica 20](../mfc/tn020-id-naming-and-numbering-conventions.md) contiene información en la nomenclatura de identificador.  
+## <a name="command-ids"></a>Command IDs  
+ See Visual C++ for an explanation of the command routing and binding process. [Technical Note 20](../mfc/tn020-id-naming-and-numbering-conventions.md) contains information on ID naming.  
   
- Utilizamos el prefijo genérico “ID\_” para los id. del comando.  Los id. de comando son \>\= 0x8000.  La línea de mensajes o la barra de estado mostrará la cadena de descripción del comando si hay un recurso de STRINGTABLE con los mismos id. que el identificador de comando  
+ We use the generic prefix "ID_" for command IDs. Command IDs are >= 0x8000. The message line or status bar will show the command description string if there is a STRINGTABLE resource with the same IDs as the command ID.  
   
- En los recursos de la aplicación, se puede id del comando aparecerá en varios lugares:  
+ In the resources of your application, a command ID can appears in several places:  
   
--   En un recurso de STRINGTABLE que tiene el mismo identificador que el indicador de línea de mensajes.  
+-   In one STRINGTABLE resource that has the same ID as the message-line prompt.  
   
--   En posiblemente muchos recursos de MENU asociados a los elementos de menú que invocan el mismo comando.  
+-   In possibly many MENU resources that are attached to menu items that invoke the same command.  
   
--   \(AVANZADO\) en un botón del cuadro de diálogo para un comando de GOSUB.  
+-   (ADVANCED) in a dialog button for a GOSUB command.  
   
- En el código fuente de la aplicación, se puede id del comando aparecerá en varios lugares:  
+ In the source code of your application, a command ID can appears in several places:  
   
--   En el RESOURCE.H \(u otro archivo principal de encabezado de símbolos\) para definir id. específicos de la aplicación del comando.  
+-   In your RESOURCE.H (or other main symbol header file) to define application-specific command IDs.  
   
--   PERHAPS en una matriz del identificador utilizado para crear una barra de herramientas.  
+-   PERHAPS In an ID array used to create a toolbar.  
   
--   En una macro de **ON\_COMMAND** .  
+-   In an **ON_COMMAND** macro.  
   
--   PERHAPS en una macro de **ON\_UPDATE\_COMMAND\_UI** .  
+-   PERHAPS In an **ON_UPDATE_COMMAND_UI** macro.  
   
- Actualmente, la única implementación en MFC que requiere id. de comando es \>\= 0x8000 es la implementación de los cuadros y de los comandos de GOSUB.  
+ Currently, the only implementation in MFC that requires command IDs be >= 0x8000 is the implementation of GOSUB dialogs/commands.  
   
-## Comandos de GOSUB, arquitectura de comando de Utilizar en cuadros de diálogo  
- La arquitectura del enrutamiento y los comandos el habilitar funciona bien con las ventanas de marco, elementos de menú, los botones de la barra de herramientas, los botones de la barra de cuadro de diálogo, otras barras de controles y otros elementos de interfaz de usuario diseñados para actualizar a petición y distribuir comandos o id. del control a un destino principal de comando \(normalmente la ventana de marco principal\).  Que el destino principal de comando puede distribuir las notificaciones de comandos o de control a otros objetos del destino de comando según corresponda.  
+## <a name="gosub-commands-using-command-architecture-in-dialogs"></a>GOSUB Commands, Using Command Architecture in Dialogs  
+ The command architecture of routing and enabling commands works well with frame windows, menu items, toolbar buttons, dialog bar buttons, other control bars and other user-interface elements designed to update on demand and route commands or control IDs to a main command target (usually the main frame window). That main command target may route the command or control notifications to other command target objects as appropriate.  
   
- Un diálogo \(modal o no modal\) puede beneficiarse de algunas de las características de la arquitectura de comando si asigna el identificador de control de cuadro de diálogo al identificador de comando apropiada  Compatibilidad para los cuadros de diálogo no es automática, por lo que puede tener que escribir código adicional.  
+ A dialog (modal or modeless) can benefit from some of the features of the command architecture if you assign the control ID of the dialog control to the appropriate command ID. Support for dialogs is not automatic, so you may have to write some additional code.  
   
- Observe que para que todas estas características funcionen correctamente, el comando que los id. deben ser \>\= 0x8000.  Dado que muchos cuadros de diálogo pueden obtener a enrutar al mismo cuadro, los comandos compartidos deben ser \>\= 0x8000, mientras que el IDCs nonshared en un diálogo específico debe ser \<\= 0x7FFF.  
+ Note that for all these features to work properly, your command IDs should be >= 0x8000. Since many dialogs could get routed to the same frame, shared commands should be >= 0x8000, while the nonshared IDCs in a specific dialog should be <= 0x7FFF.  
   
- Puede colocar un botón normal en un diálogo modal normal con IDC de botón establecido en el identificador de comando apropiada  Cuando el usuario selecciona el botón, el propietario del diálogo \(normalmente la ventana de marco principal\) obtiene el comando como cualquier otro comando.  Esto se denomina un comando de GOSUB puesto que se utiliza normalmente para abrir otro diálogo \(un GOSUB del primer diálogo\).  
+ You can place a normal button in a normal modal dialog with the IDC of the button set to the appropriate command ID. When the user selects the button, the owner of the dialog (usually the main frame window) gets the command just like any other command. This is called a GOSUB command since it usually is used to bring up another dialog (a GOSUB of the first dialog).  
   
- También puede llamar a la función **CWnd::UpdateDialogControls** en el diálogo y pasarle la dirección de la ventana de marco principal.  Esta función habilitará o deshabilitará los controles de cuadro de diálogo basándose en si tienen controladores de comandos en el cuadro.  Esta función se denomina automáticamente automáticamente para las barras de controles en el bucle de inactividad de la aplicación, pero debe llamar directamente para los cuadros de diálogo normales que desea tener esta característica.  
+ You can also call the function **CWnd::UpdateDialogControls** on your dialog and pass it the address of your main frame window. This function will enable or disable your dialog controls based on whether they have command handlers in the frame. This function is called automatically for you for control bars in your application's idle loop, but you must call it directly for normal dialogs that you wish to have this feature.  
   
-## Cuando se llama a ON\_UPDATE\_COMMAND\_UI  
- Mantener el estado habilitado\/activada de todos los elementos de menú de un programa todo el tiempo pueden ser un problema de computación.  Una técnica común es habilitar\/elementos de menú comprobados sólo cuando el usuario selecciona el MENU EMERGENTE.  Implementación de MFC 2,0 de **CFrameWnd** controla el mensaje de **WM\_INITMENUPOPUP** y utiliza la arquitectura de enrutamiento de comandos para determinar los estados de menús a través de los controladores de **ON\_UPDATE\_COMMAND\_UI** .  
+## <a name="when-onupdatecommandui-is-called"></a>When ON_UPDATE_COMMAND_UI is Called  
+ Maintaining the enabled/checked state of all a program's menu items all the time can be a computationally expensive problem. A common technique is to enable/check menu items only when the user selects the POPUP. The MFC 2.0 implementation of **CFrameWnd** handles the **WM_INITMENUPOPUP** message and uses the command routing architecture to determine the states of menus through **ON_UPDATE_COMMAND_UI** handlers.  
   
- **CFrameWnd** también controla el mensaje de **WM\_ENTERIDLE** para describir el elemento de menú actual seleccionado en la barra de estado \(también conocida como línea de mensajes\).  
+ **CFrameWnd** also handles the **WM_ENTERIDLE** message to describe the current menu item selected on the status bar (also known as the message line).  
   
- La estructura de menú de una aplicación, editar en Visual C\+\+, se utiliza para representar los posibles comandos disponibles en tiempo de **WM\_INITMENUPOPUP** .  Los controladores de**ON\_UPDATE\_COMMAND\_UI** pueden modificar el estado o el texto de un menú, o para avanzadas utilizan \(como la lista de archivos usados recientemente del archivo o el menú emergente OLE de verbos\), modificar realmente la estructura de menú antes de que se dibuje el menú.  
+ An application's menu structure, edited by Visual C++, is used to represent the potential commands available at **WM_INITMENUPOPUP** time. **ON_UPDATE_COMMAND_UI** handlers can modify the state or text of a menu, or for advanced uses (like the File MRU list or the OLE Verbs pop-up menu), actually modify the menu structure before the menu is drawn.  
   
- La misma ordenación de procesamiento de **ON\_UPDATE\_COMMAND\_UI** se hace para las barras de herramientas \(y otras barras de controles\) cuando la aplicación incorpora el bucle inactivo.  Vea *la biblioteca de clases de referencia* y  [Nota técnica 31](../mfc/tn031-control-bars.md) para obtener más información sobre las barras de controles.  
+ The same sort of **ON_UPDATE_COMMAND_UI** processing is done for toolbars (and other control bars) when the application enters its idle loop. See the *Class Library Reference* and [Technical Note 31](../mfc/tn031-control-bars.md) for more information on control bars.  
   
-## Menús emergentes anidados  
- Si utiliza una estructura de menú anidadas, observará que se llama al controlador de **ON\_UPDATE\_COMMAND\_UI** para el primer elemento de menú del menú emergente de dos diferentes casos.  
+## <a name="nested-pop-up-menus"></a>Nested Pop-up Menus  
+ If you are using a nested menu structure, you will notice that the **ON_UPDATE_COMMAND_UI** handler for the first menu item in the pop-up menu is called in two different cases.  
   
- Primero, se llama a para el elemento emergente propio.  Esto es necesario porque los menús emergentes no tienen id. y se utiliza el identificador del primer elemento de menú del elemento emergente para hacer referencia al elemento emergente completo.  En este caso, la variable miembro de **m\_pSubMenu** del objeto de **CCmdUI** se no null e indicará al menú emergente.  
+ First, it is called for the pop-up menu itself. This is necessary because pop-up menus do not have IDs and we use the ID of the first menu item of the pop-up menu to refer to the entire pop-up menu. In this case, the **m_pSubMenu** member variable of the **CCmdUI** object will be non-NULL and will point to the pop-up menu.  
   
- En segundo lugar, se llama inmediatamente antes que los elementos de menú del menú emergente deben ser dibujados.  En este caso, el identificador consulta únicamente el primer elemento de menú y la variable miembro de **m\_pSubMenu** del objeto de **CCmdUI** serán NULL.  
+ Second, it is called just before the menu items in the pop-up menu are to be drawn. In this case, the ID refers just to the first menu item and the **m_pSubMenu** member variable of the **CCmdUI** object will be NULL.  
   
- Esto permite habilitar el menú emergente distinto de sus elementos de menú, pero es necesario escribir a algún menú código monitores.  Por ejemplo, en un menú anidado con la siguiente estructura:  
+ This allows you to enable the pop-up menu distinct from its menu items, but requires that you write some menu aware code. For example, in a nested menu with the following structure:  
   
 ```  
 File>  
-    New>  
-        Sheet (ID_NEW_SHEET)  
-        Chart (ID_NEW_CHART)  
+    New> 
+    Sheet (ID_NEW_SHEET)  
+    Chart (ID_NEW_CHART)  
 ```  
   
- Los comandos de ID\_NEW\_SHEET y de ID\_NEW\_CHART pueden habilitar o deshabilitar independientemente.  El menú emergente de **new** debe estar habilitado si cualquiera de los dos está habilitada.  
+ The ID_NEW_SHEET and ID_NEW_CHART commands can be independently enabled or disabled. The **New** pop-up menu should be enabled if either of the two is enabled.  
   
- El controlador de comandos para ID\_NEW\_SHEET \(el primer comando del elemento emergente\) será similar a:  
+ The command handler for ID_NEW_SHEET (the first command in the pop-up) would look something like:  
   
 ```  
 void CMyApp::OnUpdateNewSheet(CCmdUI* pCmdUI)  
 {  
     if (pCmdUI->m_pSubMenu != NULL)  
-    {  
-        // enable entire pop-up for "New" sheet and chart  
-        BOOL bEnable = m_bCanCreateSheet || m_bCanCreateChart;  
-  
-        // CCmdUI::Enable is a no-op for this case, so we  
-        //   must do what it would have done.  
-        pCmdUI->m_pMenu->EnableMenuItem(pCmdUI->m_nIndex,  
-            MF_BYPOSITION |   
-                (bEnable ? MF_ENABLED : (MF_DISABLED | MF_GRAYED)));  
-        return;  
-    }  
-    // otherwise just the New Sheet command  
-    pCmdUI->Enable(m_bCanCreateSheet);  
-}  
+ { *// enable entire pop-up for "New" sheet and chart  
+    BOOL bEnable = m_bCanCreateSheet || m_bCanCreateChart;  
+ *// CCmdUI::Enable is a no-op for this case,
+    so we *//   must do what it would have done.  
+    pCmdUI->m_pMenu->EnableMenuItem(pCmdUI->m_nIndex, 
+    MF_BYPOSITION |   
+ (bEnable  MF_ENABLED : (MF_DISABLED | MF_GRAYED)));
+
+    return; 
+ } *// otherwise just the New Sheet command  
+    pCmdUI->Enable(m_bCanCreateSheet);
+
+} 
 ```  
   
- El controlador de comandos para ID\_NEW\_CHART sería controlador normal del comando de actualización y será similar a:  
+ The command handler for ID_NEW_CHART would be a normal update command handler and look something like:  
   
 ```  
 void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)  
 {  
-    pCmdUI->Enable(m_bCanCreateChart);  
-}  
+    pCmdUI->Enable(m_bCanCreateChart);
+
+} 
 ```  
   
-## ON\_COMMAND y ON\_BN\_CLICKED  
- Las macros de mapa de mensajes para **ON\_COMMAND** y **ON\_BN\_CLICKED** son iguales.  El mecanismo de enrutamiento de notificación de comando y de control MFC utiliza solo el identificador de comando para decidir dónde distribuir a.  Las notificaciones del Control con el código de notificación de control de cero \(**BN\_CLICKED**\) se interpretan como comandos.  
+## <a name="oncommand-and-onbnclicked"></a>ON_COMMAND and ON_BN_CLICKED  
+ The message map macros for **ON_COMMAND** and **ON_BN_CLICKED** are the same. The MFC command and control notification routing mechanism only uses the command ID to decide where to route to. Control notifications with control notification code of zero (**BN_CLICKED**) are interpreted as commands.  
   
 > [!NOTE]
->  De hecho, todos los mensajes de notificación de control atraviesan la cadena de controlador de comandos.  Por ejemplo, es técnicamente posible escribir un controlador de notificación de control para **EN\_CHANGE** en la clase del documento.  Esto no suele ser aconsejable porque las aplicaciones prácticas de esta característica son pocas, la característica no es compatible con ClassWizard, y el uso de características puede ocasionar código frágil.  
+>  In fact, all control notification messages go through the command handler chain. For example, it is technically possible for you to write a control notification handler for **EN_CHANGE** in your document class. This is not generally advisable because the practical applications of this feature are few, the feature is not supported by ClassWizard, and use of the feature can result in fragile code.  
   
-## Deshabilitar deshabilitar automático de controles de botón  
- Si se coloca un control de botón de una barra de cuadro de diálogo, o en un diálogo mediante donde está llamando **CWnd::UpdateDialogControls** en dispone, observará que los botones que no tienen controladores de **ON\_COMMAND** o de **ON\_UPDATE\_COMMAND\_UI** automáticamente estarán deshabilitadas automáticamente por el marco.  En algunos casos, no necesitará tener un controlador, sino que deseará el botón sigan siendo habilitado.  La manera más fácil de lograrlo es agregar un controlador ficticio de comando \(fácil hacer con ClassWizard\) y no hacer nada de ella.  
+## <a name="disabling-the-automatic-disabling-of-button-controls"></a>Disabling the Automatic Disabling of Button Controls  
+ If you place a button control on a dialog bar, or in a dialog using where you are calling **CWnd::UpdateDialogControls** on your own, you will notice that buttons which do not have **ON_COMMAND** or **ON_UPDATE_COMMAND_UI** handlers will be automatically disabled for you by the framework. In some cases, you will not need to have a handler, but you will want the button to remain enabled. The easiest way to achieve this is to add a dummy command handler (easy to do with ClassWizard) and do nothing in it.  
   
-## Enrutamiento de mensajes de la ventana  
- A continuación se describe más temas avanzados en las clases MFC y cómo el enrutamiento de mensajes de Windows y otros temas las afectan a.  Información aquí se describe sólo brevemente.  Consulte *la referencia de la biblioteca de clases* para obtener más información sobre las API públicas.  Consulte el código fuente de la biblioteca MFC para obtener más información sobre los detalles de implementación.  
+## <a name="window-message-routing"></a>Window Message Routing  
+ The following describes some more advanced topics on the MFC classes and how Windows message routing and other topics impact them. The information here is only described briefly. Refer to the *Class Library Reference* for details about public APIs. Please refer to the MFC library source code for more information on implementation details.  
   
- Hace referencia a [Nota técnica 17](../mfc/tn017-destroying-window-objects.md) para los detalles de limpieza de la ventana, un tema muy importante para todo el **CWnd**\- clases derivadas.  
+ Please refer to [Technical Note 17](../mfc/tn017-destroying-window-objects.md) for details on Window cleanup, a very important topic for all **CWnd**-derived classes.  
   
-## Problemas de CWnd  
- La función **CWnd::OnChildNotify** miembro de implementación proporciona una arquitectura eficaz y extensible para ventanas secundarias \(también conocidas como controles\) el enlace o sea de otra manera informada de mensajes, de comandos, y las notificaciones del control que van a su elemento primario \(o a “propietario”\).  Si la ventana secundaria \(\/control\) es el propio objeto de c\+\+. **CWnd** , la función virtual **OnChildNotify** se denomina primero con los parámetros del mensaje original \(es decir, una estructura de **MSG** \).  La ventana secundaria puede salir de mensaje único, comerlo, o modificar el mensaje para el elemento primario \(poco\).  
+## <a name="cwnd-issues"></a>CWnd Issues  
+ The implementation member function **CWnd::OnChildNotify** provides a powerful and extensible architecture for child windows (also known as controls) to hook or otherwise be informed of messages, commands, and control notifications that go to their parent (or "owner"). If the child window (/control) is a C++ **CWnd** object itself, the virtual function **OnChildNotify** is called first with the parameters from the original message (that is, a **MSG** structure). The child window can leave the message alone, eat it, or modify the message for the parent (rare).  
   
- La implementación de **CWnd** predeterminado controla los mensajes siguientes y utiliza el enlace de **OnChildNotify** para permitir las ventanas secundarias \(controles\) al primer acceso en el mensaje:  
+ The default **CWnd** implementation handles the following messages and uses the **OnChildNotify** hook to allow child windows (controls) to first access at the message:  
   
--   **WM\_MEASUREITEM** y **WM\_DRAWITEM** \(para el uno mismo\-dibujo\)  
+- **WM_MEASUREITEM** and **WM_DRAWITEM** (for self-draw)  
   
--   **WM\_COMPAREITEM** y **WM\_DELETEITEM** \(para el uno mismo\-dibujo\)  
+- **WM_COMPAREITEM** and **WM_DELETEITEM** (for self-draw)  
   
--   **WM\_HSCROLL** y **WM\_VSCROLL**  
+- **WM_HSCROLL** and **WM_VSCROLL**  
   
--   **WM\_CTLCOLOR**  
+- **WM_CTLCOLOR**  
   
--   **WM\_PARENTNOTIFY**  
+- **WM_PARENTNOTIFY**  
   
- Observará el enlace de **OnChildNotify** se utiliza para cambiar mensajes de propietario\- dibuje mensajes de uno mismo\- dibujo.  
+ You will notice the **OnChildNotify** hook is used for changing owner-draw messages into self-draw messages.  
   
- Además de enlace de **OnChildNotify** , los mensajes de desplazamiento tienen comportamiento adicional de enrutamiento.  Vea más adelante para obtener más información sobre las barras de desplazamiento y los orígenes de los mensajes de **WM\_HSCROLL** y de **WM\_VSCROLL** .  
+ In addition to the **OnChildNotify** hook, scroll messages have further routing behavior. Please see below for more details on scroll bars and sources of **WM_HSCROLL** and **WM_VSCROLL** messages.  
   
-## Problemas de CFrameWnd  
- La clase de **CFrameWnd** proporciona la mayor parte del enrutamiento y la interfaz de usuario de comando que actualiza la implementación.  Esto se utiliza principalmente para la ventana de marco principal de la aplicación \(**CWinApp::m\_pMainWnd**\) pero se aplica a todas las ventanas de marco.  
+## <a name="cframewnd-issues"></a>CFrameWnd Issues  
+ The **CFrameWnd** class provides most of the command routing and user-interface updating implementation. This is primarily used for the main frame window of the application (**CWinApp::m_pMainWnd**) but applies to all frame windows.  
   
- La ventana de marco principal es la ventana con la barra de menús y es el elemento primario de la barra de estado o de la línea de mensajes.  Consulte la descripción anterior en el enrutamiento y **WM\_INITMENUPOPUP.**de comando  
+ The main frame window is the window with the menu bar and is the parent of the status bar or message line. Please refer to the above discussion on command routing and **WM_INITMENUPOPUP.**  
   
- La clase de **CFrameWnd** proporciona la administración de la vista activa.  Los siguientes mensajes se distribuyen con la vista activa:  
+ The **CFrameWnd** class provides management of the active view. The following messages are routed through the active view:  
   
--   Todos los mensajes de comando \(la vista activa obtiene el primer acceso a ellos\).  
+-   All command messages (the active view gets first access to them).  
   
--   Mensajes de**WM\_HSCROLL** y de **WM\_VSCROLL** de las barras de desplazamiento relacionado \(vea a continuación\).  
+- **WM_HSCROLL** and **WM_VSCROLL** messages from sibling scroll bars (see below).  
   
--   **WM\_ACTIVATE** \(y **WM\_MDIACTIVATE** para MDI\) obtienen convertido en llamadas a la función virtual **CView::OnActivateView**.  
+- **WM_ACTIVATE** (and **WM_MDIACTIVATE** for MDI) get turned into calls to the virtual function **CView::OnActivateView**.  
   
-## Problemas de CMDIFrameWnd\/CMDIChildWnd  
- Ambos tipos de ventana de marco MDI derivan de **CFrameWnd** y por consiguiente se habilitan para la misma clase de enrutamiento de comandos y actualizar de la interfaz de usuario proporcionados en **CFrameWnd**.  En una aplicación típica de MDI, sólo la ventana de marco principal \(es decir, el objeto de **CMDIFrameWnd** \) contiene la barra de menús y la barra de estado y por consiguiente es el origen principal de la implementación del enrutamiento de comandos.  
+## <a name="cmdiframewndcmdichildwnd-issues"></a>CMDIFrameWnd/CMDIChildWnd Issues  
+ Both MDI frame window classes derive from **CFrameWnd** and therefore are both enabled for the same sort of command routing and user-interface updating provided in **CFrameWnd**. In a typical MDI application, only the main frame window (that is, the **CMDIFrameWnd** object) holds the menu bar and the status bar and therefore is the main source of the command routing implementation.  
   
- El esquema general de enrutamiento es que la ventana MDI secundaria de activo obtiene el primer acceso a comandos.  Las funciones de **PreTranslateMessage** predeterminado controlan las tablas del acelerador para las ventanas secundarias MDI \(primero\) y el marco MDI \(segundo\) así como los aceleradores de comando estándar del sistema de MDI controla normalmente por **TranslateMDISysAccel** \(último\).  
+ The general routing scheme is that the active MDI child window gets first access to commands. The default **PreTranslateMessage** functions handle accelerator tables for both MDI child windows (first) and the MDI frame (second) as well as the standard MDI system-command accelerators normally handled by **TranslateMDISysAccel** (last).  
   
-## Problemas de la barra de desplazamiento  
- Al administrar el desplazamiento\- mensaje \(**WM\_HSCROLL**\/**OnHScroll** y\/o **WM\_VSCROLL**\/**OnVScroll**\), debe intentar escribir el código del controlador de modo que no se basa en si el mensaje de la barra de desplazamiento procede.  Esto no es sólo un problema general de Windows, ya que los mensajes de desplazamiento pueden proceder de controles auténticos de la barra de desplazamiento o de las barras de desplazamiento de **WS\_HSCROLL**\/de**WS\_VSCROLL** que no son controles de barra de desplazamiento.  
+## <a name="scroll-bar-issues"></a>Scroll Bar Issues  
+ When handling scroll-message (**WM_HSCROLL**/**OnHScroll** and/or **WM_VSCROLL**/**OnVScroll**), you should try to write the handler code so it does not rely on where the scroll bar message came from. This is not only a general Windows issue, since scroll messages can come from true scroll bar controls or from **WS_HSCROLL**/**WS_VSCROLL** scroll bars which are not scroll bar controls.  
   
- MFC extiende que al permitir a los controles de barra de desplazamiento son elementos secundarios o elementos relacionados de la ventana que se desplazados \(de hecho, la relación entre la barra de desplazamiento y la ventana de elemento primario\/secundario que es desplazados pueden ser nada\).  Esto es especialmente importante para las barras de desplazamiento compartidas con las ventanas divisoras.  Hace referencia a [Nota técnica 29](../mfc/tn029-splitter-windows.md) para obtener detalles sobre la implementación de **CSplitterWnd** incluidos más información sobre problemas compartidos de la barra de desplazamiento.  
+ MFC extends that to allow for scroll bar controls to be either child or siblings of the window being scrolled (in fact, the parent/child relationship between the scroll bar and window being scrolled can be anything). This is especially important for shared scroll bars with splitter windows. Please refer to [Technical Note 29](../mfc/tn029-splitter-windows.md) for details on the implementation of **CSplitterWnd** including more information on shared scroll bar issues.  
   
- En un nota al margen, hay dos clases derivadas de **CWnd** donde los estilos de la barra de desplazamiento especificados en la hora de creación se interceptan y no se pasan a Windows.  Cuando se pasa a una rutina de creación, **WS\_HSCROLL** y **WS\_VSCROLL** se pueden establecer independientemente, pero después de la creación no se puede cambiar.  ¿Por supuesto, no debe comprobar o establecer directamente el WS\_? DESPLACE los bits de estilo de la ventana que crearon.  
+ On a side note, there are two **CWnd** derived classes where the scroll bar styles specified at create time are trapped and not passed to Windows. When passed to a creation routine, **WS_HSCROLL** and **WS_VSCROLL** can be independently set, but after creation cannot be changed. Of course, you should not directly test or set the WS_SCROLL style bits of the window that they created.  
   
- Para **CMDIFrameWnd** los estilos de la barra de desplazamiento que se pasa a **crear** o **LoadFrame** se utiliza para crear el MDICLIENT.  Si desea tener un área desplazable de MDICLIENT \(como el administrador de programa de Windows\) asegúrese de establecer ambos estilos de la barra de desplazamiento \(**WS\_HSCROLL** &#124; **WS\_VSCROLL**\) para el estilo usado para crear **CMDIFrameWnd**.  
+ For **CMDIFrameWnd** the scroll bar styles you pass in to **Create** or **LoadFrame** are used to create the MDICLIENT. If you wish to have a scrollable MDICLIENT area (like the Windows Program Manager) be sure to set both scroll bar styles (**WS_HSCROLL** &#124; **WS_VSCROLL**) for the style used to create the **CMDIFrameWnd**.  
   
- Para **CSplitterWnd** los estilos de la barra de desplazamiento se aplican a las barras de desplazamiento compartidas especiales regiones splitter.  Para las ventanas estáticas splitter, no establecerá normalmente los estilos de la barra de desplazamiento.  Para ventanas divisoras dinámicas, es normalmente tendrá el estilo de la barra de desplazamiento establecido en la dirección que se va a dividir, es decir, **WS\_HSCROLL** si puede dividir filas, **WS\_VSCROLL** si puede dividir columnas.  
+ For **CSplitterWnd** the scroll bar styles apply to the special shared scroll bars for the splitter regions. For static splitter windows, you will normally not set either scroll bar style. For dynamic splitter windows, you will usually have the scroll bar style set for the direction you will split, That is, **WS_HSCROLL** if you can split rows, **WS_VSCROLL** if you can split columns.  
   
-## Vea también  
- [Notas técnicas por número](../mfc/technical-notes-by-number.md)   
- [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

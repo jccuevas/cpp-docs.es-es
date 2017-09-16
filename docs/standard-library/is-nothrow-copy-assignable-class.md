@@ -1,5 +1,5 @@
 ---
-title: Clase is_nothrow_copy_assignable | Microsoft Docs
+title: is_nothrow_copy_assignable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_nothrow_copy_assignable
 - type_traits/std::is_nothrow_copy_assignable
 dev_langs:
 - C++
@@ -34,38 +33,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 64502f44f46280317028fc2e7092e28cfc75f343
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3515b7c881d55df77724c093d66f5870ec2e185f
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isnothrowcopyassignable-class"></a>Clase is_nothrow_copy_assignable
-Comprueba si el tipo tiene un operador de asignación de copia que el compilador sabe que no se inicia.  
+# <a name="isnothrowcopyassignable-class"></a>is_nothrow_copy_assignable Class
+Tests whether type has a copy assignment operator that is known to the compiler not to throw.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>
 struct is_nothrow_copy_assignable;
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Tipo que se va a consultar.  
+ The type to query.  
   
-## <a name="remarks"></a>Comentarios  
- Una instancia del predicado de tipo es true para un tipo de referencia `T` si `is_nothrow_assignable<T&, const T&>` es true; en caso contrario, es false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true for a referenceable type `T` where `is_nothrow_assignable<T&, const T&>` holds true; otherwise it holds false.  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espacio de nombres:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Clase is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)   
+ [is_nothrow_assignable Class](../standard-library/is-nothrow-assignable-class.md)   
 
 
 

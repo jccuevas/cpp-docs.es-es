@@ -1,50 +1,69 @@
 ---
-title: "Servidores: Implementar documentos de servidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicaciones de servidor OLE, implementar servidores OLE"
-  - "aplicaciones de servidor OLE, administrar documentos de servidor"
-  - "documentos de servidor, implementar"
-  - "servidores, documentos de servidor"
+title: 'Servers: Implementing Server Documents | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC], managing server documents
+- OLE server applications [MFC], implementing OLE servers
+- servers, server documents
+- server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Servidores: Implementar documentos de servidor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: df2da0855532b4f5503933b3c0b1f6379b3d0ade
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En este artículo se explica los pasos que debe seguir para implementar correctamente un documento de servidor si no ha especificado la opción de servidor OLE en el asistente para aplicaciones.  
+---
+# <a name="servers-implementing-server-documents"></a>Servers: Implementing Server Documents
+This article explains the steps you must take to successfully implement a server document if you did not specify the OLE Server option in the application wizard.  
   
-#### Para definir una clase de documento del servidor  
+#### <a name="to-define-a-server-document-class"></a>To define a server document class  
   
-1.  Derive la clase de `COleServerDoc` en lugar de **CDocument**.  
+1.  Derive your document class from `COleServerDoc` instead of **CDocument**.  
   
-2.  Cree una clase de elemento de servidor derivada de `COleServerItem`.  
+2.  Create a server item class derived from `COleServerItem`.  
   
-3.  Implemente la función miembro de `OnGetEmbeddedItem` de la clase de documento del servidor.  
+3.  Implement the `OnGetEmbeddedItem` member function of your server document class.  
   
-     se llama`OnGetEmbeddedItem` cuando el usuario de una aplicación contenedora crea o modifica un elemento incrustado.  Debe devolver un elemento que representa el documento.  Debería ser un objeto de `COleServerItem`\- clase derivada.  
+     `OnGetEmbeddedItem` is called when the user of a container application creates or edits an embedded item. It should return an item representing the entire document. This should be an object of your `COleServerItem`-derived class.  
   
-4.  Reemplace la función miembro de `Serialize` para serializar el contenido del documento.  No es necesario serializar la lista de elementos del servidor a menos que se utiliza para representar datos nativos en el documento.  Para obtener más información, vea *implementar elementos del Servidor* en el caso [Servidores: Elementos de Servidor](../mfc/servers-server-items.md).  
+4.  Override the `Serialize` member function to serialize the contents of the document. You do not need to serialize the list of server items unless you are using them to represent the native data in your document. For more information, see *Implementing Server Items* in the article [Servers: Server Items](../mfc/servers-server-items.md).  
   
- Cuando se crea un documento de servidor, el marco registra automáticamente el documento con los archivos DLL de OLE del sistema.  Esto permite que los archivos DLL identifican los documentos de servidor.  
+ When a server document is created, the framework automatically registers the document with the OLE system DLLs. This allows the DLLs to identify the server documents.  
   
- Para obtener más información, vea [COleServerItem](../mfc/reference/coleserveritem-class.md) y [COleServerDoc](../mfc/reference/coleserverdoc-class.md) en *la referencia de la biblioteca de clases*.  
+ For more information, see [COleServerItem](../mfc/reference/coleserveritem-class.md) and [COleServerDoc](../mfc/reference/coleserverdoc-class.md) in the *Class Library Reference*.  
   
-## Vea también  
- [Servidores](../mfc/servers.md)   
- [Servidores: Elementos de servidor](../mfc/servers-server-items.md)   
- [Servidores: Implementar un servidor](../mfc/servers-implementing-a-server.md)   
- [Servidores: Implementar ventanas de marco en contexto](../mfc/servers-implementing-in-place-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Servers](../mfc/servers.md)   
+ [Servers: Server Items](../mfc/servers-server-items.md)   
+ [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md)   
+ [Servers: Implementing In-Place Frame Windows](../mfc/servers-implementing-in-place-frame-windows.md)
+
+

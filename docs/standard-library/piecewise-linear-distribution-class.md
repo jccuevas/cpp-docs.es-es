@@ -1,5 +1,5 @@
 ---
-title: piecewise_linear_distribution (Clase) | Microsoft Docs
+title: piecewise_linear_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- piecewise_linear_distribution
 - random/std::piecewise_linear_distribution
 - random/std::piecewise_linear_distribution::reset
 - random/std::piecewise_linear_distribution::intervals
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- piecewise_linear_distribution class
+- std::piecewise_linear_distribution [C++]
+- std::piecewise_linear_distribution [C++], reset
+- std::piecewise_linear_distribution [C++], intervals
+- std::piecewise_linear_distribution [C++], densities
+- std::piecewise_linear_distribution [C++], param
+- std::piecewise_linear_distribution [C++], min
+- std::piecewise_linear_distribution [C++], max
+- std::piecewise_linear_distribution [C++], param_type
+- std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
 caps.latest.revision: 21
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4c98be8541c04dd9819fd459fad4cfdf25951a0c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 1f704513f6b0016ee460a6415b6beb3c397830bd
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution (Clase)
-Genera una distribución lineal a trozos que tenga intervalos de ancho variable con probabilidad variable linealmente en cada intervalo.  
+# <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution Class
+Generates a piecewise linear distribution that has varying-width intervals with linearly varying probability in each interval.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class RealType = double>
 class piecewise_linear_distribution  
@@ -96,35 +103,35 @@ public:
    result_type max() const;
    };  
 ```  
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a>Parameters  
  `RealType`  
- El tipo de resultado de punto flotante, el valor predeterminado es `double`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).  
+ The floating point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Comentarios  
- Esta distribución de muestreo tiene intervalos de ancho variable con probabilidad variable linealmente en cada intervalo. Para obtener más información sobre otras distribuciones de muestreo, vea [piecewise_linear_distribution](../standard-library/piecewise-constant-distribution-class.md) y [discrete_distribution](../standard-library/discrete-distribution-class.md).  
+## <a name="remarks"></a>Remarks  
+ This sampling distribution has varying-width intervals with linearly varying probability in each interval. For information about other sampling distributions, see [piecewise_linear_distribution](../standard-library/piecewise-constant-distribution-class.md) and [discrete_distribution](../standard-library/discrete-distribution-class.md).  
   
- La tabla siguiente incluye vínculos a artículos sobre miembros individuales:  
+ The following table links to articles about individual members:  
   
 ||||  
 |-|-|-|  
 |[piecewise_linear_distribution](#piecewise_linear_distribution)|`piecewise_linear_distribution::intervals`|`piecewise_linear_distribution::param`|  
 |`piecewise_linear_distribution::operator()`|`piecewise_linear_distribution::densities`|[param_type](#param_type)|  
   
-La función de propiedad `intervals()` devuelve un `vector<result_type>` con el conjunto de intervalos almacenados de la distribución.  
+The property function `intervals()` returns a `vector<result_type>` with the set of stored intervals of the distribution.  
   
-La función de la propiedad `densities()` devuelve un `vector<result_type>` con las densidades almacenadas para cada conjunto de intervalos, que se calculan según los pesos proporcionados en los parámetros del constructor.  
+The property function `densities()` returns a `vector<result_type>` with the stored densities for each interval set, which are calculated according to the weights provided in the constructor parameters.  
   
-El miembro de propiedad `param()` establece o devuelve el paquete de parámetros de distribución almacenado `param_type`.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-Las funciones miembro `min()` y `max()` devuelven el resultado posible más pequeño y el resultado posible más grande, respectivamente.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-La función miembro `reset()` descarta cualquier valor almacenado en caché, de modo que la siguiente llamada a `operator()` no depende de ningún valor obtenido del motor antes de la llamada.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -229,13 +236,13 @@ Distribution for 100 samples:
    14-15 :::::  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **Espacio de nombres:** std  
+ **Namespace:** std  
   
-##  <a name="piecewise_linear_distribution"></a> piecewise_linear_distribution::piecewise_linear_distribution  
- Construye la distribución.  
+##  <a name="piecewise_linear_distribution"></a>  piecewise_linear_distribution::piecewise_linear_distribution  
+ Constructs the distribution.  
   
 ```  
  
@@ -266,38 +273,38 @@ piecewise_linear_distribution(size_t count, RealType xmin, RealType xmax, UnaryO
 explicit piecewise_linear_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
 *firstI*  
-Un iterador de entrada del primer elemento del intervalo de distribución.  
+An input iterator of the first element in the distribution range.  
   
 *lastI*  
-Un iterador de entrada del último elemento del intervalo de distribución.  
+An input iterator of the last element in the distribution range.  
   
 *firstW*  
-Un iterador de entrada del primer elemento del intervalo de pesos.  
+An input iterator of the first element in the weights range.  
   
 *intervals*  
-[initializer_list](../cpp/initializers.md) con los intervalos de la distribución.  
+An [initializer_list](../cpp/initializers.md) with the intervals of the distribution.  
   
 *count*  
-Número de elementos del intervalo de distribución.  
+The number of elements in the distribution range.  
   
 *xmin*  
-Valor mínimo del intervalo de distribución.  
+The lowest value in the distribution range.  
   
 *xmax*  
-Valor máximo del intervalo de distribución. Debe ser mayor que *xmin*.  
+The highest value in the distribution range. Must be greater than *xmin*.  
   
 *weightfunc*  
-Objeto que representa la función de probabilidad de la distribución. Tanto el parámetro como el valor devuelto debe poder convertirse a `double`.  
+The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to `double`.  
   
 *parm*  
-La estructura de parámetros utilizada para construir la distribución.  
+The parameter structure used to construct the distribution.  
   
-### <a name="remarks"></a>Comentarios  
-El constructor predeterminado establece los parámetros almacenados, como que hay un intervalo, 0 a 1, con una densidad de probabilidad de 1.  
+### <a name="remarks"></a>Remarks  
+The default constructor sets the stored parameters such that there is one interval, 0 to 1, with a probability density of 1.  
   
-El constructor del intervalo de iterador  
+The iterator range constructor  
   
 ```  
 template <class InputIteratorI, class InputIteratorW>  
@@ -307,9 +314,9 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```  
   
-construye un objeto de distribución con intervalos de iteradores sobre la secuencia [ `firstI`, `lastI`) y una secuencia de peso coincidente que empiece en `firstW`.  
+constructs a distribution object with itnervals from iterators over the sequence [ `firstI`, `lastI`) and a matching weight sequence starting at `firstW`.  
   
-El constructor de lista de inicializador  
+The initializer list constructor  
   
 ```  
 template <class UnaryOperation>  
@@ -318,9 +325,9 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```  
   
-construye un objeto de distribución con intervalos desde la lista de inicializador `intervals` y pesos generados desde la función `weightfunc`.  
+constructs a distribution object with intervals from the intializer list `intervals` and weights generated from the function `weightfunc`.  
   
-El constructor definido como  
+The constructor defined as  
   
 ```  
 template <class UnaryOperation>  
@@ -331,16 +338,16 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```  
   
-construye un objeto de distribución con `count` intervalos distribuidos uniformemente en [`xmin,xmax`], asignando a cada intervalo pesos según la función `weightfunc`, y `weightfunc` debe aceptar un parámetro y tener un valor devuelto que puedan convertirse en `double`. **Condición previa:**`xmin < xmax`.  
+constructs a distribution object with `count` intervals distributed uniformly over [ `xmin,xmax`], assigning each interval weights according to the function `weightfunc`, and `weightfunc` must accept one parameter and have a return value, both of which are convertible to `double`. **Precondition:**`xmin < xmax`.  
   
-El constructor definido como  
+The constructor defined as  
 ```  
 explicit piecewise_linear_distribution(const param_type& parm);
 ```  
-crea un objeto de distribución usando `parm` como la estructura de parámetros almacenados.  
+constructs a distribution object using `parm` as the stored parameter structure.  
   
-##  <a name="param_type"></a> piecewise_linear_distribution::param_type  
-Almacena todos los parámetros de la distribución.  
+##  <a name="param_type"></a>  piecewise_linear_distribution::param_type  
+Stores all the parameters of the distribution.  
   
 ```  
 struct param_type {  
@@ -360,15 +367,15 @@ struct param_type {
    };  
 ```  
 
-### <a name="parameters"></a>Parámetros  
-Vea los parámetros del constructor para [piecewise_linear_distribution](#piecewise_linear_distribution).  
+### <a name="parameters"></a>Parameters  
+See constructor parameters for [piecewise_linear_distribution](#piecewise_linear_distribution).  
   
-### <a name="remarks"></a>Comentarios  
- **Condición previa:** `xmin < xmax`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `xmin < xmax`  
   
-Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

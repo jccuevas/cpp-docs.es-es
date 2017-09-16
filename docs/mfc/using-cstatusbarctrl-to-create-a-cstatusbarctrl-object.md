@@ -1,46 +1,65 @@
 ---
-title: "Usar CStatusBarCtrl para crear un objeto CStatusBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CStatusBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBarCtrl (clase), crear"
-  - "controles de la barra de estado, crear"
+title: Using CStatusBarCtrl to Create a CStatusBarCtrl Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CStatusBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- status bar controls [MFC], creating
+- CStatusBarCtrl class [MFC], creating
 ms.assetid: 365c2b65-12de-49e6-9a2e-416c6ee10d60
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Usar CStatusBarCtrl para crear un objeto CStatusBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cc4f7e0b0639b228c70ca438096e341627bb2a56
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-A continuación se muestra un ejemplo típico de [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md):  
+---
+# <a name="using-cstatusbarctrl-to-create-a-cstatusbarctrl-object"></a>Using CStatusBarCtrl to Create a CStatusBarCtrl Object
+Here is an example of a typical use of [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md):  
   
-### Para utilizar un control de barra de estado con elementos  
+### <a name="to-use-a-status-bar-control-with-parts"></a>To use a status bar control with parts  
   
-1.  Cree el objeto de `CStatusBarCtrl` .  
+1.  Construct the `CStatusBarCtrl` object.  
   
-2.  Llame a [SetMinHeight](../Topic/CStatusBarCtrl::SetMinHeight.md) si desea establecer el alto mínimo del área de dibujo del control de barra de estado.  
+2.  Call [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight) if you want to set the minimum height of the status bar control's drawing area.  
   
-3.  Llame a [SetBkColor](../Topic/CStatusBarCtrl::SetBkColor.md) para establecer el color de fondo del control de barra de estado.  
+3.  Call [SetBkColor](../mfc/reference/cstatusbarctrl-class.md#setbkcolor) to set the background color of the status bar control.  
   
-4.  Llamada [SetParts](../Topic/CStatusBarCtrl::SetParts.md) para establecer el número de elementos en un control de barra de estado y la coordenada del borde derecho de cada partición.  
+4.  Call [SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) to set the number of parts in a status bar control and the coordinate of the right edge of each part.  
   
-5.  Llame a [SetText](../Topic/CStatusBarCtrl::SetText.md) para establecer el texto en una parte determinada del control de barra de estado.  El mensaje invalida la parte del control que ha cambiado, haciendo que muestra el nuevo texto cuando el control después recibe el mensaje de `WM_PAINT` .  
+5.  Call [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) to set the text in a given part of the status bar control. The message invalidates the portion of the control that has changed, causing it to display the new text when the control next receives the `WM_PAINT` message.  
   
- En algunos casos, la barra de estado sólo necesita mostrar una línea de texto.  En este caso, haga una llamada a [SetSimple](../Topic/CStatusBarCtrl::SetSimple.md).  Esto coloca el control de barra de estado en modo “simple”, que muestra una línea de texto única.  
+ In some cases, the status bar only needs to display a line of text. In this case, make a call to [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple). This puts the status bar control into "simple" mode, which displays a single line of text.  
   
-## Vea también  
- [Usar CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

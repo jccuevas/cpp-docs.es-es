@@ -1,37 +1,56 @@
 ---
-title: "Controles de pesta&#241;a y hojas de propiedades | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTabCtrl (clase), y hojas de propiedades"
-  - "hojas de propiedades, controles de fichas"
-  - "controles de fichas, y hojas de propiedades"
+title: Tab Controls and Property Sheets | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- property sheets, tab controls
+- tab controls [MFC], and property sheets
+- CTabCtrl class [MFC], and property sheets
 ms.assetid: f3b87bea-9ad9-41e6-a7ff-a9285308267e
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Controles de pesta&#241;a y hojas de propiedades
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 60c05199db74a131e791d97e66f8b6b04f24d571
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Las hojas de propiedades son cuadros de diálogo de múltiple\- página o “pestaña dialoga” que puede mostrar hasta 24 recursos de plantilla de cuadro de diálogo al usuario.  Para obtener ejemplos de las hojas de propiedades, vea cuadro de diálogo Propiedades de presentación de Windows o la aplicación de ejemplo siguiente de MFC:  
+---
+# <a name="tab-controls-and-property-sheets"></a>Tab Controls and Property Sheets
+Property sheets are multiple-page dialogs or "tab dialogs" that can display up to 24 dialog template resources to the user. For examples of property sheets, see the Windows Display Properties dialog box or the following MFC sample application:  
   
- [El error CMNCTRL1: Muestra las clases de controles comunes, parte 1](../top/visual-cpp-samples.md)  
+ [CMNCTRL1: Demonstrates Common Control Classes, Part 1](../visual-cpp-samples.md)  
   
- [El error CMNCTRL2: Muestra las clases de controles comunes, parte 2](../top/visual-cpp-samples.md)  
+ [CMNCTRL2: Demonstrates Common Control Classes, Part 2](../visual-cpp-samples.md)  
   
- Las hojas de propiedades se pueden implementar fácilmente mediante la clase MFC [CPropertySheet](../mfc/reference/cpropertysheet-class.md).  
+ Property sheets can be easily implemented using the MFC class [CPropertySheet](../mfc/reference/cpropertysheet-class.md).  
   
-## Vea también  
- [Usar CTabCtrl](../mfc/using-ctabctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTabCtrl](../mfc/using-ctabctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: CMetaFileDC (clase) | Documentos de Microsoft
+title: CMetaFileDC Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,9 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMetaFileDC class
-- Windows metafiles [C++]
-- metafiles, implementing
+- CMetaFileDC [MFC], CMetaFileDC
+- CMetaFileDC [MFC], Close
+- CMetaFileDC [MFC], CloseEnhanced
+- CMetaFileDC [MFC], Create
+- CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
 caps.latest.revision: 23
 author: mikeblome
@@ -41,141 +43,141 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 4bff4d7601c4ffbc6fe5cbe73f5e057b79abf1e5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 121824f832fdb134a289f292d59378a796864413
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmetafiledc-class"></a>CMetaFileDC (clase)
-Implementa un metarchivo de Windows, que contiene una secuencia de comandos de la interfaz de dispositivo gráfico (GDI) que puede volver a consultar para crear la imagen o el texto que desee.  
+# <a name="cmetafiledc-class"></a>CMetaFileDC Class
+Implements a Windows metafile, which contains a sequence of graphics device interface (GDI) commands that you can replay to create a desired image or text.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMetaFileDC : public CDC  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMetaFileDC::CMetaFileDC](#cmetafiledc)|Construye un objeto `CMetaFileDC`.|  
+|[CMetaFileDC::CMetaFileDC](#cmetafiledc)|Constructs a `CMetaFileDC` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMetaFileDC::Close](#close)|Cierra el contexto de dispositivo y crea un identificador de metarchivo.|  
-|[CMetaFileDC::CloseEnhanced](#closeenhanced)|Cierra un contexto de dispositivo de metarchivo mejorado y crea un identificador de metarchivo mejorado.|  
-|[CMetaFileDC::Create](#create)|Crea el contexto de dispositivo de metarchivo de Windows y lo adjunta a la `CMetaFileDC` objeto.|  
-|[CMetaFileDC::CreateEnhanced](#createenhanced)|Crea un contexto de dispositivo de metarchivo para un metarchivo de formato mejorado.|  
+|[CMetaFileDC::Close](#close)|Closes the device context and creates a metafile handle.|  
+|[CMetaFileDC::CloseEnhanced](#closeenhanced)|Closes an enhanced-metafile device context and creates an enhanced-metafile handle.|  
+|[CMetaFileDC::Create](#create)|Creates the Windows metafile device context and attaches it to the `CMetaFileDC` object.|  
+|[CMetaFileDC::CreateEnhanced](#createenhanced)|Creates a metafile device context for an enhanced-format metafile.|  
   
-## <a name="remarks"></a>Comentarios  
- Para implementar un metarchivo de Windows, cree primero un `CMetaFileDC` objeto. Invocar el `CMetaFileDC` constructor, a continuación, llame a la [crear](#create) función miembro, que crea un contexto de dispositivo de metarchivo de Windows y lo adjunta a la `CMetaFileDC` objeto.  
+## <a name="remarks"></a>Remarks  
+ To implement a Windows metafile, first create a `CMetaFileDC` object. Invoke the `CMetaFileDC` constructor, then call the [Create](#create) member function, which creates a Windows metafile device context and attaches it to the `CMetaFileDC` object.  
   
- Enviar a continuación la `CMetaFileDC` objeto de la secuencia de `CDC` comandos GDI que piensa para poder reproducir. Únicamente los comandos GDI que creación una salida, como `MoveTo` y `LineTo`, se puede utilizar.  
+ Next send the `CMetaFileDC` object the sequence of `CDC` GDI commands that you intend for it to replay. Only those GDI commands that create output, such as `MoveTo` and `LineTo`, can be used.  
   
- Después de enviar los comandos que desee en el metarchivo, llame a la **cerrar** función miembro, que cierra los contextos de dispositivo de metarchivo y devuelve un identificador de metarchivo. A continuación, eliminarlos de la `CMetaFileDC` objeto.  
+ After you have sent the desired commands to the metafile, call the **Close** member function, which closes the metafile device contexts and returns a metafile handle. Then dispose of the `CMetaFileDC` object.  
   
- [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) , a continuación, puede utilizar el identificador del metarchivo para reproducir el metarchivo repetidamente. Metarchivo también puede ser manipulado por las funciones de Windows como [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), que copia un metarchivo en disco.  
+ [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) can then use the metafile handle to play the metafile repeatedly. The metafile can also be manipulated by Windows functions such as [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), which copies a metafile to disk.  
   
- Cuando ya no es necesario el metarchivo, eliminarla de la memoria con el [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) función de Windows.  
+ When the metafile is no longer needed, delete it from memory with the [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) Windows function.  
   
- También puede implementar la `CMetaFileDC` objeto por lo que puede controlar las llamadas de salida y atributo GDI llama como `GetTextExtent`. Un metarchivo de este tipo es más flexible y pueden más fácil reutilizar código GDI general, que a menudo, consta de una combinación de las llamadas de salida y el atributo. El `CMetaFileDC` clase hereda dos contextos de dispositivo, `m_hDC` y `m_hAttribDC`, de `CDC`. El `m_hDC` contexto de dispositivo administra todo [CDC](../../mfc/reference/cdc-class.md) llamadas de salida de la GDI y el `m_hAttribDC` contexto de dispositivo administra todo `CDC` GDI atributo llama. Normalmente, estos contextos de dos dispositivo hacen referencia al mismo dispositivo. En el caso de `CMetaFileDC`, el controlador de dominio está establecido en **NULL** de forma predeterminada.  
+ You can also implement the `CMetaFileDC` object so that it can handle both output calls and attribute GDI calls such as `GetTextExtent`. Such a metafile is more flexible and can more easily reuse general GDI code, which often consists of a mix of output and attribute calls. The `CMetaFileDC` class inherits two device contexts, `m_hDC` and `m_hAttribDC`, from `CDC`. The `m_hDC` device context handles all [CDC](../../mfc/reference/cdc-class.md) GDI output calls and the `m_hAttribDC` device context handles all `CDC` GDI attribute calls. Normally, these two device contexts refer to the same device. In the case of `CMetaFileDC`, the attribute DC is set to **NULL** by default.  
   
- Crear un segundo contexto de dispositivo que apunta a la pantalla, impresora o dispositivo que no sea un metarchivo, a continuación, llame el `SetAttribDC` para asociar el nuevo contexto de dispositivo con la función miembro `m_hAttribDC`. Llamadas GDI para obtener información ahora se dirigirá a la nueva `m_hAttribDC`. Salida GDI llama irá a `m_hDC`, que representa el metarchivo.  
+ Create a second device context that points to the screen, a printer, or device other than a metafile, then call the `SetAttribDC` member function to associate the new device context with `m_hAttribDC`. GDI calls for information will now be directed to the new `m_hAttribDC`. Output GDI calls will go to `m_hDC`, which represents the metafile.  
   
- Para obtener más información sobre `CMetaFileDC`, consulte [contextos de dispositivo](../../mfc/device-contexts.md).  
+ For more information on `CMetaFileDC`, see [Device Contexts](../../mfc/device-contexts.md).  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CDC](../../mfc/reference/cdc-class.md)  
   
  `CMetaFileDC`  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="close"></a>CMetaFileDC::Close  
- Cierra el contexto de dispositivo de metarchivo y crea un identificador de metarchivo de Windows que puede usar para reproducir el metarchivo mediante la [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) función miembro.  
+##  <a name="close"></a>  CMetaFileDC::Close  
+ Closes the metafile device context and creates a Windows metafile handle that can be used to play the metafile by using the [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) member function.  
   
 ```  
 HMETAFILE Close();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Válido **HMETAFILE** si la función se realiza correctamente; en caso contrario **NULL**.  
+### <a name="return-value"></a>Return Value  
+ A valid **HMETAFILE** if the function is successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>Comentarios  
- El identificador del metarchivo de Windows también puede utilizarse para manipular el metarchivo con funciones de Windows como [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480).  
+### <a name="remarks"></a>Remarks  
+ The Windows metafile handle can also be used to manipulate the metafile with Windows functions such as [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480).  
   
- Eliminar el metarchivo tras su uso mediante una llamada a Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) (función).  
+ Delete the metafile after use by calling the Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) function.  
   
-##  <a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
- Cierra un contexto de dispositivo de metarchivo mejorado y devuelve un identificador que identifica un metarchivo de formato mejorado.  
+##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
+ Closes an enhanced-metafile device context and returns a handle that identifies an enhanced-format metafile.  
   
 ```  
 HENHMETAFILE CloseEnhanced();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Un identificador de un metarchivo mejorado, si es correcto; de lo contrario, **NULL**.  
+### <a name="return-value"></a>Return Value  
+ A handle of an enhanced metafile, if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>Comentarios  
- Una aplicación puede utilizar el identificador de metarchivo mejorado devuelto por esta función para realizar las siguientes tareas:  
+### <a name="remarks"></a>Remarks  
+ An application can use the enhanced-metafile handle returned by this function to perform the following tasks:  
   
--   Mostrar una imagen almacenada en un metarchivo mejorado  
+-   Display a picture stored in an enhanced metafile  
   
--   Crear copias del metarchivo mejorado  
+-   Create copies of the enhanced metafile  
   
--   Enumerar, editar o copiar registros individuales del metarchivo mejorado  
+-   Enumerate, edit, or copy individual records in the enhanced metafile  
   
--   Recuperar una descripción opcional del contenido del metarchivo desde el encabezado del metarchivo mejorado  
+-   Retrieve an optional description of the metafile contents from the enhanced-metafile header  
   
--   Recuperar una copia del encabezado del metarchivo mejorado  
+-   Retrieve a copy of the enhanced-metafile header  
   
--   Recuperar una copia binaria del metarchivo mejorado  
+-   Retrieve a binary copy of the enhanced metafile  
   
--   Enumerar los colores de la paleta opcional  
+-   Enumerate the colors in the optional palette  
   
--   Convertir un metarchivo de formato mejorado en un metarchivo de formato de Windows  
+-   Convert an enhanced-format metafile into a Windows-format metafile  
   
- Cuando la aplicación ya no necesita el identificador del metarchivo mejorado, debe liberar el identificador mediante una llamada a Win32 **DeleteEnhMetaFile** (función).  
+ When the application no longer needs the enhanced metafile handle, it should release the handle by calling the Win32 **DeleteEnhMetaFile** function.  
   
-##  <a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
- Construir un `CMetaFileDC` objeto en dos pasos.  
+##  <a name="cmetafiledc"></a>  CMetaFileDC::CMetaFileDC  
+ Construct a `CMetaFileDC` object in two steps.  
   
 ```  
 CMetaFileDC();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- En primer lugar, llame a `CMetaFileDC`, a continuación, llame a **crear**, que crea el contexto de dispositivo de metarchivo de Windows y lo adjunta a la `CMetaFileDC` objeto.  
+### <a name="remarks"></a>Remarks  
+ First, call `CMetaFileDC`, then call **Create**, which creates the Windows metafile device context and attaches it to the `CMetaFileDC` object.  
   
-##  <a name="create"></a>CMetaFileDC::Create  
- Construir un `CMetaFileDC` objeto en dos pasos.  
+##  <a name="create"></a>  CMetaFileDC::Create  
+ Construct a `CMetaFileDC` object in two steps.  
   
 ```  
 BOOL Create(LPCTSTR lpszFilename = NULL);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  *lpszFilename*  
- Apunta a una cadena de caracteres terminada en null. Especifica el nombre de archivo del metarchivo que se va a crear. Si *lpszFilename* es **NULL**, se crea un nuevo metarchivo en la memoria.  
+ Points to a null-terminated character string. Specifies the filename of the metafile to create. If *lpszFilename* is **NULL**, a new in-memory metafile is created.  
   
-### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función se realiza correctamente; de lo contrario, es 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>Comentarios  
- En primer lugar, llame al constructor de `CMetaFileDC`, a continuación, llame a **crear**, que crea el contexto de dispositivo de metarchivo de Windows y lo adjunta a la `CMetaFileDC` objeto.  
+### <a name="remarks"></a>Remarks  
+ First, call the constructor `CMetaFileDC`, then call **Create**, which creates the Windows metafile device context and attaches it to the `CMetaFileDC` object.  
   
-##  <a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
- Crea un contexto de dispositivo para un metarchivo de formato mejorado.  
+##  <a name="createenhanced"></a>  CMetaFileDC::CreateEnhanced  
+ Creates a device context for an enhanced-format metafile.  
   
 ```  
 BOOL CreateEnhanced(
@@ -185,42 +187,42 @@ BOOL CreateEnhanced(
     LPCTSTR lpszDescription);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pDCRef`  
- Identifica un dispositivo de referencia de metarchivo mejorado.  
+ Identifies a reference device for the enhanced metafile.  
   
  `lpszFileName`  
- Apunta a una cadena de caracteres terminada en null. Especifica el nombre de archivo de metarchivo mejorado a crearse. Si este parámetro es **NULL**, metarchivo mejorado está basada en memoria y su contenido que se pierden cuando se destruye el objeto o cuando Win32 **DeleteEnhMetaFile** se llama la función.  
+ Points to a null-terminated character string. Specifies the filename for the enhanced metafile to be created. If this parameter is **NULL**, the enhanced metafile is memory based and its contents lost when the object is destroyed or when the Win32 **DeleteEnhMetaFile** function is called.  
   
  `lpBounds`  
- Apunta a un [RECT](../../mfc/reference/rect-structure1.md) estructura de datos o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica las dimensiones en **HIMETRIC** unidades (en incrementos de.01 milímetros) de la imagen que se almacenará en el metarchivo mejorado.  
+ Points to a [RECT](../../mfc/reference/rect-structure1.md) data structure or a [CRect](../../atl-mfc-shared/reference/crect-class.md) object that specifies the dimensions in **HIMETRIC** units (in .01-millimeter increments) of the picture to be stored in the enhanced metafile.  
   
  `lpszDescription`  
- Apunta a una cadena terminada en cero que especifica el nombre de la aplicación que creó la imagen, así como el título de la imagen.  
+ Points to a zero-terminated string that specifies the name of the application that created the picture, as well as the picture's title.  
   
-### <a name="return-value"></a>Valor devuelto  
- Un identificador del contexto de dispositivo de metarchivo mejorado, si es correcto; de lo contrario, **NULL**.  
+### <a name="return-value"></a>Return Value  
+ A handle of the device context for the enhanced metafile, if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>Comentarios  
- Este controlador de dominio puede utilizarse para almacenar una imagen independiente del dispositivo.  
+### <a name="remarks"></a>Remarks  
+ This DC can be used to store a device-independent picture.  
   
- Windows usa el dispositivo de referencia identificado por el `pDCRef` parámetro para registrar la resolución y las unidades del dispositivo en el que apareció originalmente una imagen. Si el `pDCRef` parámetro es **NULL**, que utiliza el dispositivo de presentación actual como referencia.  
+ Windows uses the reference device identified by the `pDCRef` parameter to record the resolution and units of the device on which a picture originally appeared. If the `pDCRef` parameter is **NULL**, it uses the current display device for reference.  
   
- Los miembros izquierdos y superiores de la `RECT` estructura de datos que señala el `lpBounds` parámetro debe ser inferior a los miembros de la derecha y abajo, respectivamente. Puntos a lo largo de los bordes del rectángulo se incluyen en la imagen. Si `lpBounds` es **NULL**, la interfaz de dispositivo gráfico (GDI) calcula las dimensiones del rectángulo más pequeño que puede encerrar la imagen dibujada por la aplicación. El `lpBounds` parámetro debe especificarse siempre que sea posible.  
+ The left and top members of the `RECT` data structure pointed to by the `lpBounds` parameter must be smaller than the right and bottom members, respectively. Points along the edges of the rectangle are included in the picture. If `lpBounds` is **NULL**, the graphics device interface (GDI) computes the dimensions of the smallest rectangle that can enclose the picture drawn by the application. The `lpBounds` parameter should be supplied where possible.  
   
- La cadena señalada por el `lpszDescription` parámetro debe contener un carácter null entre el nombre de la aplicación y el nombre de imagen y debe terminar con dos caracteres null, por ejemplo, "XYZ gráficos Editor\0Bald Eagle\0\0," donde \0 representa el carácter nulo. Si `lpszDescription` es **NULL**, no hay ninguna entrada correspondiente en el encabezado del metarchivo mejorado.  
+ The string pointed to by the `lpszDescription` parameter must contain a null character between the application name and the picture name and must terminate with two null characters —for example, "XYZ Graphics Editor\0Bald Eagle\0\0," where \0 represents the null character. If `lpszDescription` is **NULL**, there is no corresponding entry in the enhanced-metafile header.  
   
- Aplicaciones utilizan el controlador de dominio creado por esta función para almacenar una imagen de gráficos en un metarchivo mejorado. El identificador que identifica este controlador de dominio se puede pasar a cualquier función GDI.  
+ Applications use the DC created by this function to store a graphics picture in an enhanced metafile. The handle identifying this DC can be passed to any GDI function.  
   
- Después de que una aplicación almacena una imagen en un metarchivo mejorado, puede mostrar la imagen en cualquier dispositivo de salida llamando el `CDC::PlayMetaFile` (función). Cuando se muestra la imagen, Windows utiliza el rectángulo que apunta el `lpBounds` parámetro y los datos de la resolución del dispositivo de referencia de posición y escalar la imagen. El contexto de dispositivo devuelto por esta función contiene los mismos atributos predeterminados asociados a cualquier controlador de dominio.  
+ After an application stores a picture in an enhanced metafile, it can display the picture on any output device by calling the `CDC::PlayMetaFile` function. When displaying the picture, Windows uses the rectangle pointed to by the `lpBounds` parameter and the resolution data from the reference device to position and scale the picture. The device context returned by this function contains the same default attributes associated with any new DC.  
   
- Las aplicaciones deben utilizar Win32 **GetWinMetaFileBits** función para convertir un metarchivo mejorado con el formato de metarchivo de Windows anterior.  
+ Applications must use the Win32 **GetWinMetaFileBits** function to convert an enhanced metafile to the older Windows metafile format.  
   
- Debe utilizar el nombre de archivo para el metarchivo mejorado el. Extensión EMF.  
+ The filename for the enhanced metafile should use the .EMF extension.  
   
-## <a name="see-also"></a>Vea también  
- [CDC (clase)](../../mfc/reference/cdc-class.md)   
- [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CDC Class](../../mfc/reference/cdc-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

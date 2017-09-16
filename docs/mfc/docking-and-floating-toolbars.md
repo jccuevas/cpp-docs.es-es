@@ -1,121 +1,140 @@
 ---
-title: "Barras de herramientas acopladas y flotantes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CBRS_SIZE_DYNAMIC"
-  - "CBRS_SIZE_FIXED"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CBRS_ALIGN_ANY (constante)"
-  - "CBRS_SIZE_DYNAMIC (constante)"
-  - "CBRS_SIZE_FIXED (constante)"
-  - "barras de herramientas de tamaño fijo"
-  - "paletas flotantes"
-  - "barras de herramientas flotantes"
-  - "ventanas de marco, barras de herramientas de acoplamiento"
-  - "paletas, flotante"
-  - "tamaño"
-  - "tamaño, barras de herramientas"
-  - "controles de barra de herramientas [MFC], contener"
-  - "barras de herramientas [C++], acoplar"
-  - "barras de herramientas [C++], flotante"
-  - "barras de herramientas [C++], tamaño"
-  - "barras de herramientas [C++], contener"
+title: Docking and Floating Toolbars | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CBRS_SIZE_DYNAMIC
+- CBRS_SIZE_FIXED
+dev_langs:
+- C++
+helpviewer_keywords:
+- size [MFC], toolbars
+- size
+- frame windows [MFC], toolbar docking
+- CBRS_ALIGN_ANY constant [MFC]
+- palettes, floating
+- toolbars [MFC], docking
+- CBRS_SIZE_DYNAMIC constant [MFC]
+- floating toolbars
+- toolbars [MFC], size
+- toolbars [MFC], floating
+- fixed-size toolbars
+- CBRS_SIZE_FIXED constant [MFC]
+- toolbar controls [MFC], wrapping
+- toolbars [MFC], wrapping
+- floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Barras de herramientas acopladas y flotantes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a22dbdc0aec475896833460411275c7bae8c3b85
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-La biblioteca Microsoft Foundation Class admite las barras de herramientas acoplables.  Una barra de herramientas acoplable puede ser asociada, o acoplar, a cualquier lado de la ventana primaria, o el posible desasociado, o dejarla flotando, en su propia ventana de mini\- cuadro.  En este artículo se explica cómo utilizar las barras de herramientas acoplables en las aplicaciones.  
+---
+# <a name="docking-and-floating-toolbars"></a>Docking and Floating Toolbars
+The Microsoft Foundation Class Library supports dockable toolbars. A dockable toolbar can be attached, or docked, to any side of its parent window, or it can be detached, or floated, in its own mini-frame window. This article explains how to use dockable toolbars in your applications.  
   
- Si utiliza el Asistente para aplicaciones para generar la estructura de la aplicación, se le elegir si desea que las barras de herramientas acoplables.  De forma predeterminada, el Asistente para aplicaciones genera código que realiza los tres acciones necesarios para colocar una barra de herramientas acoplable en la aplicación:  
+ If you use the Application Wizard to generate the skeleton of your application, you are asked to choose whether you want dockable toolbars. By default, the Application Wizard generates the code that performs the three actions necessary to place a dockable toolbar in your application:  
   
--   [Acoplamiento de permisos en una ventana de marco](#_core_enabling_docking_in_a_frame_window).  
+-   [Enable docking in a frame window](#_core_enabling_docking_in_a_frame_window).  
   
--   [Acoplamiento de permiso de una barra de herramientas](#_core_enabling_docking_for_a_toolbar).  
+-   [Enable docking for a toolbar](#_core_enabling_docking_for_a_toolbar).  
   
--   [Acople la barra de herramientas \(a la ventana de marco\)](#_core_docking_the_toolbar).  
+-   [Dock the toolbar (to the frame window)](#_core_docking_the_toolbar).  
   
- Si faltan cualquiera de estos pasos, la aplicación mostrará una barra de herramientas estándar.  Los dos últimos pasos se deben realizar para cada barra de herramientas acoplable dentro de la aplicación.  
+ If any of these steps are missing, your application will display a standard toolbar. The last two steps must be performed for each dockable toolbar in your application.  
   
- Otros temas cubiertos en incluyen de caso:  
+ Other topics covered in this article include:  
   
--   [Flotante de la barra de herramientas](#_core_floating_the_toolbar)  
+-   [Floating the toolbar](#_core_floating_the_toolbar)  
   
--   [Dinámicamente el tamaño de la barra de herramientas](#_core_dynamically_resizing_the_toolbar)  
+-   [Dynamically resizing the toolbar](#_core_dynamically_resizing_the_toolbar)  
   
--   [Establecer las posiciones de ajuste de una barra de herramientas de corregir\- estilo](#_core_setting_wrap_positions_for_a_fixed.2d.style_toolbar)  
+-   [Setting wrap positions for a fixed-style toolbar](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)  
   
- Vea el ejemplo [DOCKTOOL](../top/visual-cpp-samples.md) MFC General para los ejemplos.  
+ See the MFC General sample [DOCKTOOL](../visual-cpp-samples.md) for examples.  
   
-##  <a name="_core_enabling_docking_in_a_frame_window"></a> Habilitar el acoplamiento en una ventana de marco  
- Para acoplar barras de herramientas a una ventana de marco, la ventana de marco \(o destino\) se debe habilitar para permitir acoplamiento.  Esto se hace utilizando la función de [CFrameWnd::EnableDocking](../Topic/CFrameWnd::EnableDocking.md) , que toma un parámetro de `DWORD` que es un conjunto de indicación de los bits de estilo qué lado de la ventana de marco acepta el acoplamiento.  Si una barra de herramientas está a punto de ser acoplada y hay lados multiproceso que puede acoplarse a, los lados indicados en el parámetro pasado a `EnableDocking` se utilizan en el orden siguiente: parte superior, inferior, izquierdo, derecho.  Si desea poder acoplar barras de controles en cualquier punto, pase `CBRS_ALIGN_ANY` a `EnableDocking`.  
+##  <a name="_core_enabling_docking_in_a_frame_window"></a> Enabling Docking in a Frame Window  
+ To dock toolbars to a frame window, the frame window (or destination) must be enabled to allow docking. This is done using the [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) function, which takes one `DWORD` parameter that is a set of style bits indicating which side of the frame window accepts docking. If a toolbar is about to be docked and there are multiple sides that it could be docked to, the sides indicated in the parameter passed to `EnableDocking` are used in the following order: top, bottom, left, right. If you want to be able to dock control bars anywhere, pass `CBRS_ALIGN_ANY` to `EnableDocking`.  
   
-##  <a name="_core_enabling_docking_for_a_toolbar"></a> Habilitar el acoplamiento de una barra de herramientas  
- Después de haber preparado el destino para acoplar, debe preparar la barra de herramientas \(o el origen\) de manera similar.  Llamada [CControlBar::EnableDocking](../Topic/CControlBar::EnableDocking.md) para cada barra de herramientas que desee acoplar, especificando los extremos de destino a los que desea acoplar la barra de herramientas.  Si ninguno de los lados especificados en la llamada a la coincidencia de `CControlBar::EnableDocking` los lados habilitados para acoplar en la ventana de marco, la barra de herramientas no pueden acoplar — flotarán.  Cuando queda flotando, permanece como una barra de herramientas flotante, incapaz de acoplarse a la ventana de marco.  
+##  <a name="_core_enabling_docking_for_a_toolbar"></a> Enabling Docking for a Toolbar  
+ After you have prepared the destination for docking, you must prepare the toolbar (or source) in a similar fashion. Call [CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking) for each toolbar you want to dock, specifying the destination sides to which the toolbar should dock. If none of the sides specified in the call to `CControlBar::EnableDocking` match the sides enabled for docking in the frame window, the toolbar cannot dock — it will float. Once it has been floated, it remains a floating toolbar, unable to dock to the frame window.  
   
- Si el efecto deseado es permanentemente una barra de herramientas flotante, llama a `EnableDocking` con un parámetro de 0.  A continuación llamada [CFrameWnd::FloatControlBar](../Topic/CFrameWnd::FloatControlBar.md).  La barra de herramientas permanece flotante, permanentemente incapaz de acoplarse en cualquier sitio.  
+ If the effect you want is a permanently floating toolbar, call `EnableDocking` with a parameter of 0. Then call [CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar). The toolbar remains floating, permanently unable to dock anywhere.  
   
-##  <a name="_core_docking_the_toolbar"></a> Acoplar la barra de herramientas  
- El marco de trabajo llama a [CFrameWnd::DockControlBar](../Topic/CFrameWnd::DockControlBar.md) cuando el usuario intenta quitar la barra de herramientas en el lado de la ventana de marco que permite acoplamiento.  
+##  <a name="_core_docking_the_toolbar"></a> Docking the Toolbar  
+ The framework calls [CFrameWnd::DockControlBar](../mfc/reference/cframewnd-class.md#dockcontrolbar) when the user attempts to drop the toolbar on a side of the frame window that allows docking.  
   
- Además, puede llamar a esta función en cualquier momento para acoplar barras de controles en la ventana de marco.  Esto se hace normalmente durante la inicialización.  Más de una barra de herramientas se puede acoplar a un lado determinado de la ventana de marco.  
+ In addition, you can call this function at any time to dock control bars to the frame window. This is normally done during initialization. More than one toolbar can be docked to a particular side of the frame window.  
   
-##  <a name="_core_floating_the_toolbar"></a> Flotante de la barra de herramientas  
- Desasociando una barra de herramientas acoplable de la ventana de marco se denomina flotación de la barra de herramientas.  Llamada [CFrameWnd::FloatControlBar](../Topic/CFrameWnd::FloatControlBar.md) para ello.  Especifique la barra de herramientas que se flotarán, el punto donde debe ser colocada, y un estilo de alineación que determina si la barra de herramientas flotante es horizontal o vertical.  
+##  <a name="_core_floating_the_toolbar"></a> Floating the Toolbar  
+ Detaching a dockable toolbar from the frame window is called floating the toolbar. Call [CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar) to do this. Specify the toolbar to be floated, the point where it should be placed, and an alignment style that determines whether the floating toolbar is horizontal or vertical.  
   
- El marco de trabajo llama a esta función cuando un usuario arrastra una barra de herramientas de su ubicación acoplada y colóquelo en una ubicación donde el acoplar no está habilitada.  Esto puede estar en cualquier parte dentro o fuera de la ventana de marco.  Como con `DockControlBar`, también puede llamar a esta función durante la inicialización.  
+ The framework calls this function when a user drags a toolbar off its docked location and drops it in a location where docking is not enabled. This can be anywhere inside or outside the frame window. As with `DockControlBar`, you can also call this function during initialization.  
   
- Implementación de MFC de las barras de herramientas acoplables no proporciona algunas características extendidas encontradas en algunas aplicaciones que admiten las barras de herramientas acoplables.  Las características como barras de herramientas personalizables no se proporcionan.  
+ The MFC implementation of dockable toolbars does not provide some of the extended features found in some applications that support dockable toolbars. Features such as customizable toolbars are not provided.  
   
-##  <a name="_core_dynamically_resizing_the_toolbar"></a> Dinámicamente de tamaño de la barra de herramientas  
- A partir de la versión 4.0 de Visual C\+\+, puede crearla posible para los usuarios de la aplicación para cambiar el tamaño de las barras de herramientas flotante dinámicamente.  Normalmente, una barra de herramientas tiene una forma larga, lineal, mostrará horizontalmente.  Pero puede cambiar la forma de la barra de herramientas orientación y.  Por ejemplo, cuando el usuario acopla una barra de herramientas con uno de los lados verticales de la ventana de marco, cambia la forma a un diseño vertical.  También es posible volver a dar forma la barra de herramientas en un rectángulo con varias filas de botones.  
+##  <a name="_core_dynamically_resizing_the_toolbar"></a> Dynamically Resizing the Toolbar  
+ As of Visual C++ version 4.0, you can make it possible for users of your application to resize floating toolbars dynamically. Typically, a toolbar has a long, linear shape, displayed horizontally. But you can change the toolbar's orientation and its shape. For example, when the user docks a toolbar against one of the vertical sides of the frame window, the shape changes to a vertical layout. It's also possible to reshape the toolbar into a rectangle with multiple rows of buttons.  
   
- Puede realizar lo siguiente:  
+ You can:  
   
--   Especifique el tamaño dinámico como característica de la barra de herramientas.  
+-   Specify dynamic sizing as a toolbar characteristic.  
   
--   Especifique corregido el tamaño como una característica de la barra de herramientas.  
+-   Specify fixed sizing as a toolbar characteristic.  
   
- Para proporcionar esta compatibilidad, hay dos nuevos estilos de la barra de herramientas para su uso en las llamadas a la función miembro de [CToolBar::Create](../Topic/CToolBar::Create.md) .  Son estos:  
+ To provide this support, there are two new toolbar styles for use in your calls to the [CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) member function. They are:  
   
--   Barra de control de**CBRS\_SIZE\_DYNAMIC**es dinámica.  
+-   **CBRS_SIZE_DYNAMIC** Control bar is dynamic.  
   
--   Se corrige la barra de control de**CBRS\_SIZE\_FIXED**.  
+-   **CBRS_SIZE_FIXED** Control bar is fixed.  
   
- El estilo dinámico de tamaño permite al usuario cambiar el tamaño de la barra de herramientas cuando es flotante, pero no mientras está acoplado.  La barra de herramientas “ajusta” cuando sea necesario desformar como arrastres de usuario los bordes.  
+ The size dynamic style lets your user resize the toolbar while it is floating, but not while it is docked. The toolbar "wraps" where needed to change shape as the user drags its edges.  
   
- El estilo corregido tamaño conserva los estados de ajuste de una barra de herramientas, corrigiendo la posición de cada columna.  El usuario de la aplicación no puede cambiar la forma de la barra de herramientas.  Los ajustes de la barra de herramientas en los lugares notificados, como las ubicaciones de separadores entre los botones.  Mantiene esta forma si la barra de herramientas está acoplada o flotante.  El efecto es una paleta fija con varias columnas de botones.  
+ The size fixed style preserves the wrap states of a toolbar, fixing the position of the buttons in each column. Your application's user can't change the shape of the toolbar. The toolbar wraps at designated places, such as the locations of separators between the buttons. It maintains this shape whether the toolbar is docked or floating. The effect is a fixed palette with multiple columns of buttons.  
   
- También puede utilizar [CToolBar::GetButtonStyle](../Topic/CToolBar::GetButtonStyle.md) para devolver un estado y un estilo para los botones de las barras de herramientas.  El estilo de un botón determina cómo aparece el botón y cómo responde a los datos proporcionados por el usuario; el estado indica si el botón está en un estado ajustada.  
+ You can also use [CToolBar::GetButtonStyle](../mfc/reference/ctoolbar-class.md#getbuttonstyle) to return a state and style for buttons on your toolbars. A button's style determines how the button appears and how it responds to user input; the state tells whether the button is in a wrapped state.  
   
-##  <a name="_core_setting_wrap_positions_for_a_fixed.2d.style_toolbar"></a> Establecer el ajuste las posiciones de una barra de herramientas de Corregir\- estilo  
- Para una barra de herramientas con el estilo corregido tamaño, índices denominados del botón de la barra de herramientas en los que la barra de herramientas se ajustarán.  El código siguiente muestra cómo hacerlo en la invalidación de `OnCreate` de la ventana de marco principal:  
+##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a> Setting Wrap Positions for a Fixed-Style Toolbar  
+ For a toolbar with the size fixed style, designate toolbar button indexes at which the toolbar will wrap. The following code shows how to do this in your main frame window's `OnCreate` override:  
   
- [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/CPP/docking-and-floating-toolbars_1.cpp)]  
+ [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]  
   
- El ejemplo [DOCKTOOL](../top/visual-cpp-samples.md) MFC General muestra cómo utilizar funciones miembro de clases [CControlBar](../mfc/reference/ccontrolbar-class.md) y [CToolBar](../mfc/reference/ctoolbar-class.md) para administrar el diseño dinámico de una barra de herramientas.  Vea el archivo EDITBAR.CPP en DOCKTOOL.  
+ The MFC General sample [DOCKTOOL](../visual-cpp-samples.md) shows how to use member functions of classes [CControlBar](../mfc/reference/ccontrolbar-class.md) and [CToolBar](../mfc/reference/ctoolbar-class.md) to manage dynamic layout of a toolbar. See the file EDITBAR.CPP in DOCKTOOL.  
   
-### ¿Sobre qué desea obtener más información?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Fundamentos de la barra de herramientas](../mfc/toolbar-fundamentals.md)  
+-   [Toolbar fundamentals](../mfc/toolbar-fundamentals.md)  
   
--   [Información sobre herramientas de la barra de herramientas](../mfc/toolbar-tool-tips.md)  
+-   [Toolbar tool tips](../mfc/toolbar-tool-tips.md)  
   
--   [Mediante las barras de herramientas anteriores](../mfc/using-your-old-toolbars.md)  
+-   [Using your old toolbars](../mfc/using-your-old-toolbars.md)  
   
-## Vea también  
- [Implementación de barra de herramientas de MFC](../mfc/mfc-toolbar-implementation.md)
+## <a name="see-also"></a>See Also  
+ [MFC Toolbar Implementation](../mfc/mfc-toolbar-implementation.md)
+
+

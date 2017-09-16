@@ -1,36 +1,55 @@
 ---
-title: "Administraci&#243;n de memoria: Bloques de memoria redimensionables | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bloques, asignación de memoria"
-  - "asignación de memoria, tamaño del bloque de memoria"
-  - "bloques de memoria, asignar"
-  - "bloques de memoria, tamaño ajustable"
-  - "memoria, daños"
-  - "bloques de memoria de tamaño ajustable"
+title: 'Memory Management: Resizable Memory Blocks | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory blocks [MFC], resizable
+- memory [MFC], corruption
+- memory allocation [MFC], memory block size
+- memory blocks [MFC], allocating
+- blocks [MFC], memory allocation
+- resizable memory blocks [MFC]
 ms.assetid: f0efe6f4-a3ed-4541-9195-51ec1291967a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Administraci&#243;n de memoria: Bloques de memoria redimensionables
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6259834253e570befdfbac6cf97d8fbc7258edd9
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Los operadores de **new** y de **borrar** , descritos en el caso [Administración de memoria: Ejemplos](../mfc/memory-management-examples.md), son buenos para asignar y desasignar los bloques y los objetos de memoria de tamaño fijo.  En ocasiones, la aplicación puede necesitar los bloques de memoria de tamaño variable.  Debe utilizar las funciones de la biblioteca en tiempo de ejecución estándar de C [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md), y [libre](../c-runtime-library/reference/free.md) para administrar los bloques de memoria existe en la pila.  
+---
+# <a name="memory-management-resizable-memory-blocks"></a>Memory Management: Resizable Memory Blocks
+The **new** and **delete** operators, described in the article [Memory Management: Examples](../mfc/memory-management-examples.md), are good for allocating and deallocating fixed-size memory blocks and objects. Occasionally, your application may need resizable memory blocks. You must use the standard C run-time library functions [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md), and [free](../c-runtime-library/reference/free.md) to manage resizable memory blocks on the heap.  
   
 > [!IMPORTANT]
->  Mezclar los operadores de **new** y de **borrar** con las funciones de asignación de memoria de tamaño variable en el mismo bloque de memoria dará lugar a memoria dañado en la versión de depuración de MFC.  No debe utilizar `realloc` en un bloque de memoria asignado con **new**.  Igualmente, no debe asignar un bloque de memoria con el operador de **new** y eliminarlo con **free**, o utilice el operador de **borrar** en un bloque de memoria asignado con `malloc`.  
+>  Mixing the **new** and **delete** operators with the resizable memory-allocation functions on the same memory block will result in corrupted memory in the Debug version of MFC. You should not use `realloc` on a memory block allocated with **new**. Likewise, you should not allocate a memory block with the **new** operator and delete it with **free**, or use the **delete** operator on a block of memory allocated with `malloc`.  
   
-## Vea también  
- [Administración de memoria: Asignación del montón](../mfc/memory-management-heap-allocation.md)
+## <a name="see-also"></a>See Also  
+ [Memory Management: Heap Allocation](../mfc/memory-management-heap-allocation.md)
+
+

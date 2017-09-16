@@ -1,109 +1,133 @@
 ---
-title: "TN001: Registro de clases de ventana | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.registration"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AfxRegisterClass (función)"
-  - "TN001"
-  - "WNDCLASS"
+title: 'TN001: Window Class Registration | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.registration
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN001
+- WNDCLASS [MFC]
+- AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# TN001: Registro de clases de ventana
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a54f529dacf090ee9052baad6a84fdc92c4a5c90
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Esta nota describe las rutinas de MFC que registran [Clase WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)especial es necesario por Microsoft Windows.  Los atributos específicos de `WNDCLASS` utilizados por MFC y Windows se tratan.  
+---
+# <a name="tn001-window-class-registration"></a>TN001: Window Class Registration
+This note describes the MFC routines that register the special [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es needed by Microsoft Windows. Specific `WNDCLASS` attributes used by MFC and Windows are discussed.  
   
-## El problema  
- Los atributos de un objeto de [CWnd](../mfc/reference/cwnd-class.md) , como un identificador de `HWND` en Windows, se almacenan en dos lugares: el objeto de la ventana y `WNDCLASS`.  El nombre de `WNDCLASS` se pasa a las funciones generales de la creación de la ventana como [CWnd::Create](../Topic/CWnd::Create.md) y [CFrameWnd::Create](../Topic/CFrameWnd::Create.md) en el parámetro de `lpszClassName` .  
+## <a name="the-problem"></a>The Problem  
+ The attributes of a [CWnd](../mfc/reference/cwnd-class.md) object, like an `HWND` handle in Windows, are stored in two places: the window object and the `WNDCLASS`. The name of the `WNDCLASS` is passed to general window creation functions such as [CWnd::Create](../mfc/reference/cwnd-class.md#create) and [CFrameWnd::Create](../mfc/reference/cframewnd-class.md#create) in the `lpszClassName` parameter.  
   
- Este `WNDCLASS` se debe registrar con uno de cuatro significa:  
+ This `WNDCLASS` must be registered through one of four means:  
   
--   Implícitamente mediante MFC proporcionada `WNDCLASS`.  
+-   Implicitly by using a MFC provided `WNDCLASS`.  
   
--   Implícitamente haciendo subclases un control de Windows \(o algún otro control\).  
+-   Implicitly by subclassing a Windows control (or some other control).  
   
--   Explícitamente llamando a MFC [AfxRegisterWndClass](../Topic/AfxRegisterWndClass.md) o [AfxRegisterClass](../Topic/AfxRegisterClass.md).  
+-   Explicitly by calling the MFC [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) or [AfxRegisterClass](../mfc/reference/application-information-and-management.md#afxregisterclass).  
   
--   Llamando explícitamente a la rutina [RegisterClass](http://msdn.microsoft.com/library/windows/desktop/ms633586)de Windows.  
+-   Explicitly by calling the Windows routine [RegisterClass](http://msdn.microsoft.com/library/windows/desktop/ms633586).  
   
-## Campos de clase WNDCLASS  
- La estructura de `WNDCLASS` consta de varios campos que describen una clase de ventana.  La tabla siguiente se muestran los campos y especificar cómo se utilizan en una aplicación MFC:  
+## <a name="wndclass-fields"></a>WNDCLASS Fields  
+ The `WNDCLASS` structure consists of various fields that describe a window class. The following table shows the fields and specifies how they are used in an MFC application:  
   
-|Campo|Descripción|  
+|Field|Description|  
 |-----------|-----------------|  
-|`lpfnWndProc`|el procedimiento de ventana, debe ser `AfxWndProc`|  
-|`cbClsExtra`|no utilizado \(debe ser cero\)|  
-|`cbWndExtra`|no utilizado \(debe ser cero\)|  
-|`hInstance`|rellenado automáticamente con [AfxGetInstanceHandle](../Topic/AfxGetInstanceHandle.md)|  
-|`hIcon`|el icono de las ventanas de marco, vea abajo|  
-|`hCursor`|el cursor para cuando el mouse está sobre la ventana, vea abajo|  
-|`hbrBackground`|el color de fondo, vea abajo|  
-|`lpszMenuName`|no utilizado \(debe ser NULL\)|  
-|`lpszClassName`|el nombre de clase, vea abajo|  
+|`lpfnWndProc`|window proc, must be an `AfxWndProc`|  
+|`cbClsExtra`|not used (should be zero)|  
+|`cbWndExtra`|not used (should be zero)|  
+|`hInstance`|automatically filled with [AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
+|`hIcon`|icon for frame windows, see below|  
+|`hCursor`|cursor for when mouse is over window, see below|  
+|`hbrBackground`|background color, see below|  
+|`lpszMenuName`|not used (should be NULL)|  
+|`lpszClassName`|class name, see below|  
   
-## WNDCLASSes proporcionado  
- Versiones anteriores de MFC \(antes de MFC 4,0\), siempre que varias clases de ventana predefinidas.  Estas clases de ventana se ya no proporcionan de forma predeterminada.  Las aplicaciones deben utilizar `AfxRegisterWndClass` con los parámetros adecuados.  
+## <a name="provided-wndclasses"></a>Provided WNDCLASSes  
+ Earlier versions of MFC (before MFC 4.0), provided several predefined Window classes. These Window classes are no longer provided by default. Applications should use `AfxRegisterWndClass` with the appropriate parameters.  
   
- Si la aplicación proporciona un recurso con el Id. de recurso especificado \(por ejemplo, AFX\_IDI\_STD\_FRAME\), MFC utilizará ese recurso.  Si no utilizará el recurso predeterminado.  Para el icono, se utiliza el icono de aplicación estándar, y para el cursor, se utiliza la flecha estándar el cursor.  
+ If the application provides a resource with the specified resource ID (for example, AFX_IDI_STD_FRAME), MFC will use that resource. Otherwise it will use the default resource. For the icon, the standard application icon is used, and for the cursor, the standard arrow cursor is used.  
   
- Dos iconos admiten las aplicaciones MDI con los únicos tipos de documento: un icono de la aplicación principal, el otro icono del documento y las ventanas icónicos de MDIChild.  Para los tipos de documento varias con iconos diferentes, debe registrar `WNDCLASS`adicional es o utilizar la función de [CFrameWnd::LoadFrame](../Topic/CFrameWnd::LoadFrame.md) .  
+ Two icons support MDI applications with single document types: one icon for the main application, the other icon for iconic document/MDIChild windows. For multiple document types with different icons, you must register additional `WNDCLASS`es or use the [CFrameWnd::LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) function.  
   
- `CFrameWnd::LoadFrame` registrará `WNDCLASS` utilizando el identificador del icono que se especifica como primer parámetro y los atributos estándar siguientes:  
+ `CFrameWnd::LoadFrame` will register a `WNDCLASS` using the icon ID you specify as the first parameter and the following standard attributes:  
   
--   estilos de clase: CS\_DBLCLKS &#124; CS\_HREDRAW &#124; CS\_VREDRAW;  
+-   class style : CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;  
   
--   icono AFX\_IDI\_STD\_FRAME  
+-   icon AFX_IDI_STD_FRAME  
   
--   flecha cursor  
+-   arrow cursor  
   
--   Color de fondo de COLOR\_WINDOW  
+-   COLOR_WINDOW background color  
   
- Los valores para el color de fondo y el cursor para [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) no se utilizan como el área cliente de `CMDIFrameWnd` es cubierta completamente por la ventana de **MDICLIENT** .  Microsoft no anima crear subclases de la ventana de **MDICLIENT** de modo que utilice colores estándar y los tipos de cursor cuando sea posible.  
+ The values for background color and cursor for the [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) are not used since the client area of the `CMDIFrameWnd` is completely covered by the **MDICLIENT** window. Microsoft does not encourage subclassing the **MDICLIENT** window so use the standard colors and cursor types when possible.  
   
-## Crear subclases y creando superclases Controles  
- Si crea subclases o convierte en superclase un control de Windows \(por ejemplo, [CButton](../mfc/reference/cbutton-class.md)\) y la clase obtiene automáticamente los atributos de `WNDCLASS` proporcionados en la implementación de Windows de ese control.  
+## <a name="subclassing-and-superclassing-controls"></a>Subclassing and Superclassing Controls  
+ If you subclass or superclass a Windows control (for example, [CButton](../mfc/reference/cbutton-class.md)) then your class automatically gets the `WNDCLASS` attributes provided in the Windows implementation of that control.  
   
-## La función de Clase  
- MFC proporciona una función auxiliar para registrar una clase de ventana.  Dado un conjunto de atributos \(estilos de clase de ventana, el cursor, pincel de fondo, e icono\), se genera un nombre sintetizado, y se registra la clase de ventana resultante.  Por ejemplo,  
-  
-```  
-const char* AfxRegisterWndClass(UINT nClassStyle, HCURSOR hCursor, HBRUSH hbrBackground, HICON hIcon);  
-```  
-  
- Esta función devuelve una cadena temporal del nombre de clase de ventana registrado generado.  Para obtener más información sobre esta función, vea [AfxRegisterWndClass](../Topic/AfxRegisterWndClass.md).  
-  
- La cadena devuelta es un puntero temporal en un búfer de cadena estático.  Es válida hasta la siguiente llamada a `AfxRegisterWndClass`.  Si desea conservar esta cadena sobre, almacenarlos en una variable de [CString](../atl-mfc-shared/using-cstring.md) , como en este ejemplo:  
+## <a name="the-afxregisterwndclass-function"></a>The AfxRegisterWndClass Function  
+ MFC provides a helper function for registering a window class. Given a set of attributes (window class style, cursor, background brush, and icon), a synthetic name is generated, and the resulting window class is registered. For example,  
   
 ```  
-CString strWndClass = AfxRegisterWndClass(CS_DBLCLK, ...);  
+const char* AfxRegisterWndClass(UINT nClassStyle,
+    HCURSOR hCursor,
+    HBRUSH hbrBackground,
+    HICON hIcon);
+```  
+  
+ This function returns a temporary string of the generated registered window class name. For more information about this function, see [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass).  
+  
+ The returned string is a temporary pointer to a static string buffer. It is valid until the next call to `AfxRegisterWndClass`. If you want to keep this string around, store it in a [CString](../atl-mfc-shared/using-cstring.md) variable, as in this example:  
+  
+```  
+CString strWndClass = AfxRegisterWndClass(CS_DBLCLK, ...);
+
 ...  
 CWnd* pWnd = new CWnd;  
-pWnd->Create(strWndClass, ...);  
+pWnd->Create(strWndClass, ...);
+
 ...  
 ```  
   
- `AfxRegisterWndClass` producirá [CResourceException](../mfc/reference/cresourceexception-class.md) si la clase de ventana no podría para registrar \(debido a parámetros incorrectos, o fuera de memoria de Windows\).  
+ `AfxRegisterWndClass` will throw a [CResourceException](../mfc/reference/cresourceexception-class.md) if the window class failed to register (either because of bad parameters, or out of Windows memory).  
   
-## Las funciones de RegisterClass y de AfxRegisterClass  
- Si desea hacer algo compleja que `AfxRegisterWndClass` proporciona, puede llamar a la API de Windows `RegisterClass` o la función `AfxRegisterClass`MFC.  `CWnd`, [CFrameWnd](../mfc/reference/cframewnd-class.md) y las funciones de [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)`Create` toman un nombre de cadena de `lpszClassName` para la clase de ventana como primer parámetro.  Puede utilizar cualquier nombre de clase de ventana registrado, independientemente del método que lo registrando.  
+## <a name="the-registerclass-and-afxregisterclass-functions"></a>The RegisterClass and AfxRegisterClass Functions  
+ If you want to do anything more sophisticated than what `AfxRegisterWndClass` provides, you can call the Windows API `RegisterClass` or the MFC function `AfxRegisterClass`. The `CWnd`, [CFrameWnd](../mfc/reference/cframewnd-class.md) and [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create` functions take a `lpszClassName` string name for the window class as the first parameter. You can use any registered window class name, regardless of the method you used to register it.  
   
- Es importante utilizar `AfxRegisterClass` \(o `AfxRegisterWndClass`\) en un archivo DLL en Win32.  Win32 no automáticamente las clases de registro registradas por el archivo DLL, por lo que debe explícitamente las clases del registro cuando finaliza el archivo DLL.  Mediante `AfxRegisterClass` en lugar de `RegisterClass` esto se administra automáticamente para usted.  `AfxRegisterClass` mantiene una lista de clases únicas registradas por el archivo DLL y automáticamente con ellos cuando DLL finaliza.  Cuando se utiliza `RegisterClass` en un archivo DLL, deberá asegurarse de que todas las clases no son registradas cuando finaliza DLL \(en función de [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) \).  Error al realizar esta podría hacer `RegisterClass` para producir un error inesperado mientras otra aplicación cliente intenta utilizar el archivo DLL.  
+ It is important to use `AfxRegisterClass` (or `AfxRegisterWndClass`) in a DLL on Win32. Win32 does not automatically unregister classes registered by a DLL, so you must explicitly unregister classes when the DLL is terminated. By using `AfxRegisterClass` instead of `RegisterClass` this is handled automatically for you. `AfxRegisterClass` maintains a list of unique classes registered by your DLL and will automatically unregister them when the DLL terminates. When you use `RegisterClass` in a DLL, you must ensure that all classes are unregistered when the DLL is terminated (in your [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) function). Failure to do so might cause `RegisterClass` to fail unexpectedly when another client application tries to use your DLL.  
   
-## Vea también  
- [Notas técnicas por número](../mfc/technical-notes-by-number.md)   
- [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

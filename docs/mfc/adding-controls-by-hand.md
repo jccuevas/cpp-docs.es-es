@@ -1,48 +1,67 @@
 ---
-title: "Agregar controles a mano | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles comunes [C++], agregar"
-  - "controlar focos de entrada"
-  - "controles [MFC], agregar a cuadros de diálogo"
-  - "controles de cuadro de diálogo [C++], agregar a cuadros de diálogo"
-  - "foco, controlar entradas"
-  - "foco de control de entrada"
-  - "controles comunes de Windows [C++], agregar"
+title: Adding Controls By Hand | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows common controls [MFC], adding
+- dialog box controls [MFC], adding to dialog boxes
+- controlling input focus
+- input focus control
+- focus, controlling input [MFC]
+- controls [MFC], adding to dialog boxes
+- common controls [MFC], adding
 ms.assetid: bc843e59-0c51-4b5b-8bf2-343f716469d2
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Agregar controles a mano
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f91b61355e5a1c46099cc78cdafc3b26fde08c0e
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Puede [agregue controles a un cuadro de diálogo con el editor de cuadros de diálogo](../mfc/using-the-dialog-editor-to-add-controls.md) o agregarlos personalmente, con código.  
+---
+# <a name="adding-controls-by-hand"></a>Adding Controls By Hand
+You can either [add controls to a dialog box with the dialog editor](../mfc/using-the-dialog-editor-to-add-controls.md) or add them yourself, with code.  
   
- Para crear un objeto el mismo control, se insertará normalmente el objeto de control de C\+\+ de objeto de diálogo o la cuadro\- ventana de c\+\+.  Como muchos otros objetos en el marco, los controles requieren la construcción de dos pasos.  Se debe llamar a la función miembro de **crear** de control como parte de la creación de la ventana primaria del cuadro de diálogo o el cuadro.  Para los cuadros de diálogo, esto se hace normalmente en [OnInitDialog](../Topic/CDialog::OnInitDialog.md), y para las ventanas de marco, en [OnCreate](../Topic/CWnd::OnCreate.md).  
+ To create a control object yourself, you will usually embed the C++ control object in a C++ dialog or frame-window object. Like many other objects in the framework, controls require two-stage construction. You should call the control's **Create** member function as part of creating the parent dialog box or frame window. For dialog boxes, this is usually done in [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), and for frame windows, in [OnCreate](../mfc/reference/cwnd-class.md#oncreate).  
   
- El ejemplo siguiente se muestra cómo puede declarar un objeto de `CEdit` en la declaración de clase de una clase derivada de diálogo y llame a la función miembro de **crear** en `OnInitDialog`.  Dado que el objeto de `CEdit` se declara como un objeto incrustado, automáticamente se crea cuando se construye el objeto cuadro de diálogo, pero aún debe inicializar con su propia función miembro de **crear** .  
+ The following example shows how you might declare a `CEdit` object in the class declaration of a derived dialog class and then call the **Create** member function in `OnInitDialog`. Because the `CEdit` object is declared as an embedded object, it is automatically constructed when the dialog object is constructed, but it must still be initialized with its own **Create** member function.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#1](../mfc/codesnippet/CPP/adding-controls-by-hand_1.h)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#1](../mfc/codesnippet/cpp/adding-controls-by-hand_1.h)]  
   
- La siguiente función de `OnInitDialog` coloque un rectángulo, llamar **crear** para crear el control de edición de Windows y para adjuntarlo al objeto sin inicializar de `CEdit` .  
+ The following `OnInitDialog` function sets up a rectangle, then calls **Create** to create the Windows edit control and attach it to the uninitialized `CEdit` object.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#2](../mfc/codesnippet/CPP/adding-controls-by-hand_2.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#2](../mfc/codesnippet/cpp/adding-controls-by-hand_2.cpp)]  
   
- Después de crear el objeto de edición, también puede establecer el foco al control llamando a la función miembro de `SetFocus` .  Por último, se devuelve 0 de `OnInitDialog` para mostrar que establece el foco.  Si se devuelve un valor distinto de cero, el administrador de diálogo establece el foco al primer elemento del control en la lista de elementos de cuadro de diálogo.  En la mayoría de los casos, es conveniente para agregar controles a los cuadros de diálogo con el editor de cuadros de diálogo.  
+ After creating the edit object, you can also set the input focus to the control by calling the `SetFocus` member function. Finally, you return 0 from `OnInitDialog` to show that you set the focus. If you return a nonzero value, the dialog manager sets the focus to the first control item in the dialog item list. In most cases, you'll want to add controls to your dialog boxes with the dialog editor.  
   
-## Vea también  
- [Crear y usar controles](../mfc/making-and-using-controls.md)   
- [Controles](../mfc/controls-mfc.md)   
- [CDialog::OnInitDialog](../Topic/CDialog::OnInitDialog.md)
+## <a name="see-also"></a>See Also  
+ [Making and Using Controls](../mfc/making-and-using-controls.md)   
+ [Controls](../mfc/controls-mfc.md)   
+ [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)
+
+

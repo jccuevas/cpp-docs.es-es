@@ -1,5 +1,5 @@
 ---
-title: duration_values (Estructura) | Microsoft Docs
+title: duration_values Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,76 +34,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b170debfdb4759b41963bc0faca13b3db11ad39a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 71c90fc57ee4e7b6bb7628426401dd72ec3de20f
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="durationvalues-structure"></a>duration_values (Estructura)
-Proporciona valores concretos para el parámetro de plantilla [duration](../standard-library/duration-class.md) `Rep`.  
+# <a name="durationvalues-structure"></a>duration_values Structure
+Provides specific values for the [duration](../standard-library/duration-class.md) template parameter `Rep`.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Rep>  
 struct duration_values;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[max](#max)|Estático. Especifica el límite superior para un valor de tipo `Rep`.|  
-|[min](#min)|Estático. Especifica el límite inferior para un valor de tipo `Rep`.|  
-|[cero](#zero)|Estático. Devuelve `Rep(0)`.|  
+|[max](#max)|Static. Specifies the upper limit for a value of type `Rep`.|  
+|[min](#min)|Static. Specifies the lower limit for a value of type `Rep`.|  
+|[zero](#zero)|Static. Returns `Rep(0)`.|  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<chrono >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<chrono>  
   
- **Espacio de nombres:** std::chrono  
+ **Namespace:** std::chrono  
   
 ##  <a name="max"></a>  duration_values::max  
- Método estático que devuelve el límite superior para los valores de tipo `Ref`.  
+ Static method that returns the upper bound for values of type `Ref`.  
   
 ```  
 static constexpr Rep max();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- En efecto, devuelve `numeric_limits<Rep>::max()`.  
+### <a name="return-value"></a>Return Value  
+ In effect, returns `numeric_limits<Rep>::max()`.  
   
-### <a name="remarks"></a>Comentarios  
- Cuando `Rep` es un tipo definido por el usuario, el valor devuelto debe ser mayor que [duration_values::zero](#zero).  
+### <a name="remarks"></a>Remarks  
+ When `Rep` is a user-defined type, the return value must be greater than [duration_values::zero](#zero).  
   
 ##  <a name="min"></a>  duration_values::min  
- Método estático que devuelve el límite inferior para valores de tipo `Ref`.  
+ Static method that returns the lower bound for values of type `Ref`.  
   
 ```  
 static constexpr Rep min();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- En efecto, devuelve `numeric_limits<Rep>::lowest()`.  
+### <a name="return-value"></a>Return Value  
+ In effect, returns `numeric_limits<Rep>::lowest()`.  
   
-### <a name="remarks"></a>Comentarios  
- Cuando `Rep` es un tipo definido por el usuario, el valor devuelto debe ser menor o igual que [duration_values::zero](#zero).  
+### <a name="remarks"></a>Remarks  
+ When `Rep` is a user-defined type, the return value must be less than or equal to [duration_values::zero](#zero).  
   
 ##  <a name="zero"></a>  duration_values::zero  
- Devuelve `Rep(0)`.  
+ Returns `Rep(0)`.  
   
 ```  
 static constexpr Rep zero();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Cuando `Rep` es un tipo definido por el usuario, el valor devuelto debe representar el infinito aditivo.  
+### <a name="remarks"></a>Remarks  
+ When `Rep` is a user-defined type, the return value must represent the additive infinity.  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)
 
 

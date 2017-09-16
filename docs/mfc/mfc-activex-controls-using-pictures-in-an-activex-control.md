@@ -1,158 +1,177 @@
 ---
-title: "Controles ActiveX MFC: Utilizar im&#225;genes en un control ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LPPICTUREDISP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OnDraw (método), controles ActiveX MFC"
-  - "ActiveX MFC (controles), imágenes"
-  - "OnDraw (método)"
-  - "OnResetState (método)"
-  - "CLSID_CPicturePropPage"
+title: 'MFC ActiveX Controls: Using Pictures in an ActiveX Control | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LPPICTUREDISP
+dev_langs:
+- C++
+helpviewer_keywords:
+- OnDraw method, MFC ActiveX controls
+- MFC ActiveX controls [MFC], pictures
+- OnDraw method [MFC]
+- OnResetState method [MFC]
+- CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Controles ActiveX MFC: Utilizar im&#225;genes en un control ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0de8bb1cf7a43aa993712cbdb81664e3ba5afe03
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En este artículo se describe el tipo de imagen común y cómo implementarlo en el control ActiveX. Entre los temas se incluyen los siguientes:  
+---
+# <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX Controls: Using Pictures in an ActiveX Control
+This article describes the common Picture type and how to implement it in your ActiveX control. Topics include:  
   
--   [Información general sobre las propiedades de imagen personalizadas](#_core_overview_of_custom_picture_properties)  
+-   [Overview of Custom Picture Properties](#_core_overview_of_custom_picture_properties)  
   
--   [Implementar una propiedad de imagen personalizada en el control ActiveX](#_core_implementing_a_custom_picture_property_in_your_activex_control)  
+-   [Implementing a Custom Picture Property in Your ActiveX Control](#_core_implementing_a_custom_picture_property_in_your_activex_control)  
   
--   [Adiciones al proyecto de control](#_core_additions_to_your_control_project)  
+-   [Additions to Your Control Project](#_core_additions_to_your_control_project)  
   
-##  <a name="_core_overview_of_custom_picture_properties"></a> Información general sobre las propiedades de imagen personalizadas  
- Un tipo de imagen es una opción de un grupo de tipos comunes para algunos controles ActiveX. El tipo de imagen controla los metarchivos, los mapas de bits o los iconos y permite al usuario especificar una imagen que se mostrará en un control ActiveX. Las propiedades de imagen personalizadas se implementan mediante un objeto de imagen y las funciones Get\/Set que permiten controlar el acceso de usuario a la propiedad de imagen. Control el acceso de usuarios a la propiedad de imagen personalizada mediante la página de propiedades de imágenes estándar.  
+##  <a name="_core_overview_of_custom_picture_properties"></a> Overview of Custom Picture Properties  
+ A Picture type is one of a group of types common to some ActiveX controls. The Picture type handles metafiles, bitmaps, or icons and allows the user to specify a picture to be displayed in an ActiveX control. Custom Picture properties are implemented using a picture object and Get/Set functions that allow the control user access to the Picture property. Control users access the custom Picture property using the stock Picture property page.  
   
- Además del tipo de imagen estándar, también están disponibles los tipos de fuente y color. Para obtener más información sobre el uso del tipo de fuente estándar en el control ActiveX, vea el artículo [Controles ActiveX MFC: Usar fuentes](../mfc/mfc-activex-controls-using-fonts.md).  
+ In addition to the standard Picture type, Font and Color types are also available. For more information on using the standard Font type in your ActiveX control, see the article [MFC ActiveX Controls: Using Fonts](../mfc/mfc-activex-controls-using-fonts.md).  
   
- Las clases de controles ActiveX proporcionan varios componentes que puede usar para implementar la propiedad de imagen en el control. Estos componentes incluyen:  
+ The ActiveX control classes provide several components you can use to implement the Picture property within the control. These components include:  
   
--   La clase [CPictureHolder](../mfc/reference/cpictureholder-class.md).  
+-   The [CPictureHolder](../mfc/reference/cpictureholder-class.md) class.  
   
-     Esta clase proporciona fácil acceso a la funcionalidad y al objeto de imagen del elemento mostrado por la propiedad de imagen personalizada.  
+     This class provides easy access to the picture object and functionality for the item displayed by the custom Picture property.  
   
--   Compatibilidad con las propiedades de tipo **LPPICTUREDISP**, implementadas con las funciones Get\/Set.  
+-   Support for properties of type **LPPICTUREDISP**, implemented with Get/Set functions.  
   
-     Con la vista de clases, puede agregar rápidamente una propiedad personalizada \(o varias\) que admita el tipo de imagen. Para obtener más información sobre la adición de propiedades de controles ActiveX con la vista de clases, vea el [Controles ActiveX MFC: Propiedades](../mfc/mfc-activex-controls-properties.md).  
+     Using Class View you can quickly add a custom property, or properties, that supports the Picture type. For more information on adding ActiveX control properties with Class View, see the article [MFC ActiveX Controls: Properties](../mfc/mfc-activex-controls-properties.md).  
   
--   Página de propiedades que manipula la propiedad o las propiedades de imagen de un control.  
+-   A property page that manipulates a control's Picture property or properties.  
   
-     Esta página de propiedades forma parte de un grupo de páginas de propiedades estándar disponibles para los controles ActiveX. Para obtener más información sobre las páginas de propiedades de controles ActiveX, vea el [Controles ActiveX MFC: Usar páginas de propiedades estándar](../mfc/mfc-activex-controls-using-stock-property-pages.md).  
+     This property page is part of a group of stock property pages available to ActiveX controls. For more information on ActiveX control property pages, see the article [MFC ActiveX Controls: Using Stock Property Pages](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
   
-##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementar una propiedad de imagen personalizada en el control ActiveX  
- Cuando complete los pasos que se describen en esta sección, el control podrá mostrar imágenes elegidas por el usuario. El usuario puede cambiar la imagen mostrada mediante una página de propiedades que muestra la imagen actual y tiene un botón Examinar que permite que el usuario seleccione diferentes imágenes.  
+##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementing a Custom Picture Property in Your ActiveX Control  
+ When you have completed the steps outlined in this section, the control can display pictures chosen by its user. The user can change the displayed picture using a property page that shows the current picture and has a Browse button that allows the user to the select different pictures.  
   
- Una propiedad de imagen personalizada se implementa mediante un proceso similar al usado para implementar otras propiedades; la diferencia principal radica en que la propiedad personalizada debe admitir un tipo de imagen. Dado que el elemento de la propiedad de imagen se debe dibujar con el control ActiveX, deben realizarse varias adiciones y modificaciones en la propiedad para que pueda implementarse totalmente.  
+ A custom Picture property is implemented using a process similar to that used for implementing other properties, the main difference being that the custom property must support a Picture type. Because the item of the Picture property must be drawn by the ActiveX control, a number of additions and modifications must be made to the property before it can be fully implemented.  
   
- Para implementar una propiedad de imagen personalizada, debe hacer lo siguiente:  
+ To implement a custom Picture property, you must do the following:  
   
--   [Agregar código al proyecto de control](#_core_additions_to_your_control_project).  
+-   [Add code to your control project](#_core_additions_to_your_control_project).  
   
-     Se deben agregar un identificador de página de propiedades de imagen estándar, un miembro de datos de tipo `CPictureHolder` y una propiedad personalizada de tipo **LPPICTUREDISP** con una implementación Get\/Set.  
+     A standard Picture property page ID, a data member of type `CPictureHolder`, and a custom property of type **LPPICTUREDISP** with a Get/Set implementation must be added.  
   
--   [Modificar varias funciones en la clase del control](#_core_modifications_to_your_control_project).  
+-   [Modify several functions in your control class](#_core_modifications_to_your_control_project).  
   
-     Estas modificaciones se realizarán en varias funciones que son responsables del dibujo del control ActiveX.  
+     These modifications will be made to several functions that are responsible for the drawing of your ActiveX control.  
   
-##  <a name="_core_additions_to_your_control_project"></a> Adiciones al proyecto de control  
- Para agregar el identificador de página de propiedades para la página de propiedades de imagen estándar, inserte la siguiente línea después de la `BEGIN_PROPPAGEIDS` macro en el archivo de implementación \(. CPP\):  
+##  <a name="_core_additions_to_your_control_project"></a> Additions to Your Control Project  
+ To add the property page ID for the standard Picture property page, insert the following line after the `BEGIN_PROPPAGEIDS` macro in the control implementation file (.CPP):  
   
- [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
- También debe incrementar el parámetro de recuento de la macro `BEGIN_PROPPAGEIDS` en uno. Esto se ilustra en la línea siguiente:  
+ You must also increment the count parameter of your `BEGIN_PROPPAGEIDS` macro by one. The following line illustrates this:  
   
- [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
+ [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
   
- Para agregar el miembro de datos `CPictureHolder` a la clase de control, inserte la siguiente línea en la sección protegida de la declaración de clase del control en el archivo de encabezado del control \(. \(H\):  
+ To add the `CPictureHolder` data member to the control class, insert the following line under the protected section of the control class declaration in the control header file (.H):  
   
- [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
+ [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- No es necesario asignar un nombre al miembro de datos `m_pic`; cualquier nombre bastará.  
+ It is not necessary to name your data member `m_pic`; any name will suffice.  
   
- A continuación, agregue una propiedad personalizada que admita un tipo de imagen:  
+ Next, add a custom property that supports a Picture type:  
   
-#### Para agregar una propiedad de imagen personalizada mediante el Asistente para agregar propiedades  
+#### <a name="to-add-a-custom-picture-property-using-the-add-property-wizard"></a>To add a custom picture property using the Add Property Wizard  
   
-1.  Cargue el proyecto del control.  
+1.  Load your control's project.  
   
-2.  En la vista de clases, expanda el nodo de biblioteca del control.  
+2.  In Class View, expand the library node of your control.  
   
-3.  Haga clic con el botón derecho en el nodo de interfaz del control \(el segundo nodo del nodo de biblioteca\) para abrir el menú contextual.  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  En el menú contextual, elija **Agregar** y, luego, **Agregar propiedad**.  
+4.  From the shortcut menu, choose **Add** and then **Add Property**.  
   
-5.  En el cuadro **Nombre de propiedad**, escriba el nombre de la propiedad. Con fines de ejemplo, `ControlPicture` se utiliza en este procedimiento.  
+5.  In the **Property Name** box, type the property name. For example purposes, `ControlPicture` is used in this procedure.  
   
-6.  En el cuadro **Tipo de propiedad**, seleccione **IPictureDisp \*** como tipo de propiedad.  
+6.  In the **Property Type** box, select **IPictureDisp\*** for the property type.  
   
-7.  Para **Tipo de implementación**, haga clic en **Métodos Get\/Set**.  
+7.  For **Implementation Type**, click **Get/Set Methods**.  
   
-8.  Escriba nombres únicos para las funciones Get y Set o acepte los nombres predeterminados. \(En este ejemplo, se usan los nombres predeterminados `GetControlPicture` y `SetControlPicture`\).  
+8.  Type unique names for your Get and Set Functions or accept the default names. (In this example, the default names `GetControlPicture` and `SetControlPicture` are used.)  
   
-9. Haga clic en **Finalizar**.  
+9. Click **Finish**.  
   
- El Asistente para agregar propiedades agrega el siguiente código entre los comentarios del mapa de envíos en el archivo de encabezado del control \(.H\):  
+ The Add Property Wizard adds the following code between the dispatch map comments in the control header (.H) file:  
   
- [!code-cpp[NVC_MFC_AxPic#4](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_4.h)]  
+ [!code-cpp[NVC_MFC_AxPic#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_4.h)]  
   
- Además, se insertó el siguiente código en el mapa de envíos del archivo de implementación del control \(.CPP\):  
+ In addition, the following code was inserted in the dispatch map of the control implementation (.CPP) file:  
   
- [!code-cpp[NVC_MFC_AxPic#5](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_5.cpp)]  
+ [!code-cpp[NVC_MFC_AxPic#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_5.cpp)]  
   
- El Asistente para agregar propiedades también agrega las dos siguientes funciones de código auxiliar en el archivo de implementación:  
+ The Add Property Wizard also adds the following two stub functions in the control implementation file:  
   
- [!code-cpp[NVC_MFC_AxPic#6](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_6.cpp)]  
-  
-> [!NOTE]
->  Los nombres de clase y función del control pueden diferir de los del ejemplo anterior.  
-  
-###  <a name="_core_modifications_to_your_control_project"></a> Modificaciones en el proyecto de control  
- Después de realizar las adiciones necesarias en el proyecto de control, debe modificar varias funciones que afectan a la representación del control ActiveX. Estas funciones, `OnResetState`, `OnDraw` y las funciones Get\/Set de una propiedad de imagen personalizada se encuentran en el archivo de implementación. \(Observe que en este ejemplo, la clase de control se denomina `CSampleCtrl`, el miembro de datos `CPictureHolder` se denomina `m_pic` y el nombre de la propiedad de imagen personalizada es `ControlPicture`\).  
-  
- En la función `OnResetState` del control, agregue la siguiente línea opcional después de la llamada a `COleControl::OnResetState`:  
-  
- [!code-cpp[NVC_MFC_AxPic#7](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_7.cpp)]  
-  
- De este modo, la imagen del control se establece en una imagen en blanco.  
-  
- Para dibujar la imagen correctamente, realice una llamada a [CPictureHolder::Render](../Topic/CPictureHolder::Render.md) en la función `OnDraw` del control. Modifique la función para que sea similar a la del ejemplo siguiente:  
-  
- [!code-cpp[NVC_MFC_AxPic#8](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_8.cpp)]  
-  
- En la función Get de la propiedad de imagen personalizada del control, agregue la siguiente línea:  
-  
- [!code-cpp[NVC_MFC_AxPic#9](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_9.cpp)]  
-  
- En la función Set de la propiedad de imagen personalizada del control, agregue las líneas siguientes:  
-  
- [!code-cpp[NVC_MFC_AxPic#10](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_10.cpp)]  
-  
- La propiedad de imagen debe hacerse persistente para que la información que se agregue durante el diseño se muestre en tiempo de ejecución. Agregue la siguiente línea a la función `DoPropExchange` de la clase derivada de `COleControl`:  
-  
- [!code-cpp[NVC_MFC_AxPic#11](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_11.cpp)]  
+ [!code-cpp[NVC_MFC_AxPic#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_6.cpp)]  
   
 > [!NOTE]
->  Los nombres de clase y función pueden diferir de los del ejemplo anterior.  
+>  Your control class and function names might differ from the example above.  
   
- Después de completar las modificaciones, vuelva a generar el proyecto para incorporar la nueva funcionalidad de la propiedad de imagen personalizada y use el contenedor de prueba para probar la nueva propiedad. Consulte [Probar propiedades y eventos con un contenedor de prueba](../mfc/testing-properties-and-events-with-test-container.md) para obtener información acerca de cómo acceder al contenedor de prueba.  
+###  <a name="_core_modifications_to_your_control_project"></a> Modifications to Your Control Project  
+ After you have made the necessary additions to your control project, you need to modify several functions that affect the rendering of your ActiveX control. These functions, `OnResetState`, `OnDraw`, and the Get/Set functions of a custom Picture property, are located in the control implementation file. (Note that in this example the control class is called `CSampleCtrl`, the `CPictureHolder` data member is called `m_pic`, and the custom picture property name is `ControlPicture`.)  
   
-## Vea también  
- [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Controles ActiveX MFC: Usar fuentes](../mfc/mfc-activex-controls-using-fonts.md)   
- [Controles ActiveX MFC: Páginas de propiedades](../mfc/mfc-activex-controls-property-pages.md)
+ In the control `OnResetState` function, add the following optional line after the call to `COleControl::OnResetState`:  
+  
+ [!code-cpp[NVC_MFC_AxPic#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_7.cpp)]  
+  
+ This sets the control's picture to a blank picture.  
+  
+ To draw the picture properly, make a call to [CPictureHolder::Render](../mfc/reference/cpictureholder-class.md#render) in the control `OnDraw` function. Modify your function to resemble the following example:  
+  
+ [!code-cpp[NVC_MFC_AxPic#8](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_8.cpp)]  
+  
+ In the Get function of the control's custom picture property, add the following line:  
+  
+ [!code-cpp[NVC_MFC_AxPic#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_9.cpp)]  
+  
+ In the Set function of the control's custom Picture property, add the following lines:  
+  
+ [!code-cpp[NVC_MFC_AxPic#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_10.cpp)]  
+  
+ The picture property must be made persistent so that information added at design time will show up at run time. Add the following line to the `COleControl`-derived class's `DoPropExchange` function:  
+  
+ [!code-cpp[NVC_MFC_AxPic#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_11.cpp)]  
+  
+> [!NOTE]
+>  Your class and function names might differ from the example above.  
+  
+ After you complete the modifications, rebuild your project to incorporate the new functionality of the custom Picture property and use Test Container to test the new property. See [Testing Properties and Events with Test Container](../mfc/testing-properties-and-events-with-test-container.md) for information on how to access the test container.  
+  
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls: Using Fonts](../mfc/mfc-activex-controls-using-fonts.md)   
+ [MFC ActiveX Controls: Property Pages](../mfc/mfc-activex-controls-property-pages.md)
+
+

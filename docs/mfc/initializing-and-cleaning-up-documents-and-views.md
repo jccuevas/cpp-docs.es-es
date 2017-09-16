@@ -1,62 +1,81 @@
 ---
-title: "Inicializar y limpiar documentos y vistas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objetos de documentos, ciclo de vida de"
-  - "documentos, limpieza"
-  - "documentos, inicializar"
-  - "inicializar documentos"
-  - "inicializar objetos, objetos de documentos"
-  - "inicializar vistas"
-  - "vistas, limpieza"
-  - "vistas, inicializar"
+title: Initializing and Cleaning Up Documents and Views | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing documents [MFC]
+- views [MFC], cleaning up
+- documents [MFC], initializing
+- documents [MFC], cleaning up
+- views [MFC], initializing
+- initializing objects [MFC], document objects
+- document objects [MFC], life cycle of
+- initializing views [MFC]
 ms.assetid: 95d6f09b-a047-4079-856a-ae7d0548e9d2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Inicializar y limpiar documentos y vistas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e08b862b32a58c545fb1f3265ec6a5110b920724
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Utilice las instrucciones siguientes para inicializar y limpiar después de documentos y vistas:  
+---
+# <a name="initializing-and-cleaning-up-documents-and-views"></a>Initializing and Cleaning Up Documents and Views
+Use the following guidelines for initializing and cleaning up after your documents and views:  
   
--   El marco de trabajo de MFC inicializa documentos y vistas; puede inicializar los datos que agregue a ellos.  
+-   The MFC framework initializes documents and views; you initialize any data you add to them.  
   
--   El marco limpia como cierre documentos y vistas; debe desasignar cualquier memoria que se afectara asignado en el montón dentro de las funciones miembro de esos documentos y vistas.  
+-   The framework cleans up as documents and views close; you must deallocate any memory that you allocated on the heap from within the member functions of those documents and views.  
   
 > [!NOTE]
->  Recuerde que la inicialización para toda la aplicación es mejor hecho en el reemplazo de la función miembro de [InitInstance](../Topic/CWinApp::InitInstance.md) de la clase `CWinApp`, y limpieza para toda la aplicación es mejor hecho en el reemplazo de la función [ExitInstance](../Topic/CWinApp::ExitInstance.md)miembro de `CWinApp` .  
+>  Recall that initialization for the whole application is best done in your override of the [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) member function of class `CWinApp`, and cleanup for the whole application is best done in your override of the `CWinApp` member function [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance).  
   
- El ciclo de vida de un documento \(y la ventana de marco y vista u vistas\) en una aplicación MDI es la siguiente:  
+ The life cycle of a document (and its frame window and view or views) in an MDI application is as follows:  
   
-1.  Durante la creación dinámica, se llama al constructor del documento.  
+1.  During dynamic creation, the document constructor is called.  
   
-2.  Para cada nuevo, se llama [OnNewDocument](../Topic/CDocument::OnNewDocument.md) o [OnOpenDocument](../Topic/CDocument::OnOpenDocument.md) del documento.  
+2.  For each new document, the document's [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) or [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) is called.  
   
-3.  El usuario interactúa con el documento en su duración.  Esto ocurre normalmente cuando el usuario trabaja en datos de documento con la vista, seleccionar y editar los datos.  La vista pasa cambios en el documento para el almacenamiento y actualizar otras vistas.  Durante este tiempo el documento y vista pueden controlar los comandos.  
+3.  The user interacts with the document throughout its lifetime. Typically this happens as the user works on document data through the view, selecting and editing the data. The view passes changes on to the document for storage and updating other views. During this time both the document and the view might handle commands.  
   
-4.  El marco de trabajo llama a [DeleteContents](../Topic/CDocument::DeleteContents.md) para eliminar datos específicos de un documento.  
+4.  The framework calls [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) to delete data specific to a document.  
   
-5.  Se llama al destructor del documento.  
+5.  The document's destructor is called.  
   
- En una aplicación SDI, el paso 1 se realiza una vez, cuando el documento se crea por primera vez.  A continuación los pasos 2 a 4 se realizan repetidamente cada vez que se abra un documento nuevo.  El nuevo documento reutiliza el objeto documento existente.  Finalmente, se realiza el paso 5 cuando se cierra la aplicación.  
+ In an SDI application, step 1 is performed once, when the document is first created. Then steps 2 through 4 are performed repeatedly each time a new document is opened. The new document reuses the existing document object. Finally, step 5 is performed when the application ends.  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Documentos y vistas que se inicializan](../mfc/initializing-documents-and-views.md)  
+-   [Initializing Documents and Views](../mfc/initializing-documents-and-views.md)  
   
--   [El limpiar documentos ni vistas](../mfc/cleaning-up-documents-and-views.md)  
+-   [Cleaning Up Documents and Views](../mfc/cleaning-up-documents-and-views.md)  
   
-## Vea también  
- [Arquitectura documento\/vista](../mfc/document-view-architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

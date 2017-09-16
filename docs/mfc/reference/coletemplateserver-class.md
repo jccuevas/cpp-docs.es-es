@@ -1,5 +1,5 @@
 ---
-title: Clase COleTemplateServer | Documentos de Microsoft
+title: COleTemplateServer Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,14 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Automation servers [C++], implementing
-- servers, OLE
-- OLE server applications, managing server documents
-- link containers [C++]
-- visual editing, servers
-- OLE link containers
-- COleTemplateServer class
-- OLE server applications, COleTemplateServer class
+- COleTemplateServer [MFC], COleTemplateServer
+- COleTemplateServer [MFC], ConnectTemplate
+- COleTemplateServer [MFC], Unregister
+- COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
 caps.latest.revision: 23
 author: mikeblome
@@ -45,46 +41,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ea82939cd0e8a8ba5612c65d238be8ae9996ef08
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7ea6cb24647abb96cf0d535a4b1c25055a68acb6
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coletemplateserver-class"></a>COleTemplateServer (clase)
-Se utiliza para servidores de edición visual OLE, servidores de automatización y contenedores de vínculos (aplicaciones que admiten vínculos con incrustaciones).  
+# <a name="coletemplateserver-class"></a>COleTemplateServer Class
+Used for OLE visual editing servers, automation servers, and link containers (applications that support links to embeddings).  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleTemplateServer : public COleObjectFactory  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleTemplateServer::COleTemplateServer](#coletemplateserver)|Construye un objeto `COleTemplateServer`.|  
+|[COleTemplateServer::COleTemplateServer](#coletemplateserver)|Constructs a `COleTemplateServer` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleTemplateServer::ConnectTemplate](#connecttemplate)|Se conecta a una plantilla de documento para subyacente `COleObjectFactory` objeto.|  
-|[COleTemplateServer::Unregister](#unregister)|Anula el registro de la plantilla de documento asociado.|  
-|[COleTemplateServer:: UpdateRegistry](#updateregistry)|Registra el tipo de documento con el registro del sistema OLE.|  
+|[COleTemplateServer::ConnectTemplate](#connecttemplate)|Connects a document template to the underlying `COleObjectFactory` object.|  
+|[COleTemplateServer::Unregister](#unregister)|Unregisters the associated document template.|  
+|[COleTemplateServer::UpdateRegistry](#updateregistry)|Registers the document type with the OLE system registry.|  
   
-## <a name="remarks"></a>Comentarios  
- Esta clase se deriva de la clase [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); normalmente, puede usar `COleTemplateServer` directamente en lugar de derivar su propia clase. `COleTemplateServer`utiliza un [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) objeto para administrar los documentos de servidor. Use `COleTemplateServer` al implementar un servidor completo, es decir, un servidor que se puede ejecutar como una aplicación independiente. Servidores completos suelen ser aplicaciones de múltiples documentos (MDI) de la interfaz, aunque se admiten aplicaciones de único documento (SDI) de la interfaz. Una `COleTemplateServer` objeto necesario para cada tipo de documento de servidor que admite una aplicación; es decir, si la aplicación de servidor es compatible con las hojas de cálculo y gráficos, debe tener dos `COleTemplateServer` objetos.  
+## <a name="remarks"></a>Remarks  
+ This class is derived from the class [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); usually, you can use `COleTemplateServer` directly rather than deriving your own class. `COleTemplateServer` uses a [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) object to manage the server documents. Use `COleTemplateServer` when implementing a full server, that is, a server that can be run as a standalone application. Full servers are typically multiple document interface (MDI) applications, although single document interface (SDI) applications are supported. One `COleTemplateServer` object is needed for each type of server document an application supports; that is, if your server application supports both worksheets and charts, you must have two `COleTemplateServer` objects.  
   
- `COleTemplateServer`reemplaza el `OnCreateInstance` función de miembro definida por `COleObjectFactory`. Esta función miembro es llamada por el marco para crear un objeto de C++ del tipo correcto.  
+ `COleTemplateServer` overrides the `OnCreateInstance` member function defined by `COleObjectFactory`. This member function is called by the framework to create a C++ object of the proper type.  
   
- Para obtener más información acerca de los servidores, vea el artículo [servidores: implementar un servidor](../../mfc/servers-implementing-a-server.md).  
+ For more information about servers, see the article [Servers: Implementing a Server](../../mfc/servers-implementing-a-server.md).  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -93,21 +89,21 @@ class COleTemplateServer : public COleObjectFactory
   
  `COleTemplateServer`  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxdisp.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
   
-##  <a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer  
- Construye un objeto `COleTemplateServer`.  
+##  <a name="coletemplateserver"></a>  COleTemplateServer::COleTemplateServer  
+ Constructs a `COleTemplateServer` object.  
   
 ```  
 COleTemplateServer();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener una breve descripción del uso de la `COleTemplateServer` de clases, consulte la [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) general sobre la clase.  
+### <a name="remarks"></a>Remarks  
+ For a brief description of the use of the `COleTemplateServer` class, see the [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) class overview.  
   
-##  <a name="connecttemplate"></a>COleTemplateServer::ConnectTemplate  
- Conecta la plantilla de documento señalada `pDocTemplate` a subyacente [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) objeto.  
+##  <a name="connecttemplate"></a>  COleTemplateServer::ConnectTemplate  
+ Connects the document template pointed to by `pDocTemplate` to the underlying [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) object.  
   
 ```  
 void ConnectTemplate(
@@ -116,34 +112,34 @@ void ConnectTemplate(
     BOOL bMultiInstance);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `clsid`  
- Referencia al identificador de clase OLE que solicita la plantilla.  
+ Reference to the OLE class ID that the template requests.  
   
  `pDocTemplate`  
- Puntero a la plantilla de documento.  
+ Pointer to the document template.  
   
  `bMultiInstance`  
- Indica si una sola instancia de la aplicación puede admitir varias creaciones de instancias. Si **TRUE**, se ejecutan varias instancias de la aplicación para que cada solicitud crear un objeto.  
+ Indicates whether a single instance of the application can support multiple instantiations. If **TRUE**, multiple instances of the application are launched for each request to create an object.  
   
-### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [clave CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ For more information, see [CLSID Key](http://msdn.microsoft.com/library/windows/desktop/ms691424) in the Windows SDK.  
   
-##  <a name="unregister"></a>COleTemplateServer::Unregister  
- Anula el registro de la plantilla de documento asociado.  
+##  <a name="unregister"></a>  COleTemplateServer::Unregister  
+ Unregisters the associated document template.  
   
 ```  
 BOOL Unregister();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- TRUE si es correcto; en caso contrario, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if successful; otherwise FALSE.  
   
-### <a name="remarks"></a>Comentarios  
+### <a name="remarks"></a>Remarks  
  EnterRemarks  
   
-##  <a name="updateregistry"></a>COleTemplateServer:: UpdateRegistry  
- Carga la información de tipo de archivo de la cadena de plantilla de documento y coloca dicha información en el registro del sistema OLE.  
+##  <a name="updateregistry"></a>  COleTemplateServer::UpdateRegistry  
+ Loads file-type information from the document-template string and places that information in the OLE system registry.  
   
 ```  
 void UpdateRegistry(
@@ -153,42 +149,42 @@ void UpdateRegistry(
     BOOL bRegister = TRUE);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `nAppType`  
- Un valor de la **OLE_APPTYPE** enumeración, que se define en AFXDISP. H. Puede tener uno de los siguientes valores:  
+ A value from the **OLE_APPTYPE** enumeration, which is defined in AFXDISP.H. It can have any one of the following values:  
   
-- `OAT_INPLACE_SERVER`Servidor tiene interfaz de usuario de servidor completo.  
+- `OAT_INPLACE_SERVER` Server has full server user-interface.  
   
-- `OAT_SERVER`Servidor admite únicamente la incrustación.  
+- `OAT_SERVER` Server supports only embedding.  
   
-- `OAT_CONTAINER`Contenedor admite vínculos a objetos incrustados.  
+- `OAT_CONTAINER` Container supports links to embedded objects.  
   
-- `OAT_DISPATCH_OBJECT`Objeto es `IDispatch`-capaz.  
+- `OAT_DISPATCH_OBJECT` Object is `IDispatch`-capable.  
   
-- **OAT_DOC_OBJECT_SERVER** Server admite tanto la incrustación y el modelo de objeto de documento de componentes.  
+- **OAT_DOC_OBJECT_SERVER** Server supports both embedding and the Document Object component model.  
   
  `rglpszRegister`  
- Una lista de entradas que se escribe en el registro sólo si no existen entradas.  
+ A list of entries that is written into the registry only if no entries exist.  
   
  `rglpszOverwrite`  
- Una lista de entradas que se escribe en el registro, independientemente de que existan las entradas anteriores.  
+ A list of entries that is written into the registry regardless of whether any preceding entries exist.  
   
  `bRegister`  
- Determina si la clase se va a registrar. Si `bRegister` es **TRUE**, la clase se registra con el registro del sistema. De lo contrario, anula el registro de la clase.  
+ Determines whether the class is to be registered. If `bRegister` is **TRUE**, the class is registered with the system registry. Otherwise, it unregisters the class.  
   
-### <a name="remarks"></a>Comentarios  
- Se carga la información de registro mediante una llamada a [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Las subcadenas recuperadas son aquéllos identificados por los índices **regFileTypeId**, **regFileTypeName**, y **fileNewName**, como se describe en el `GetDocString` páginas de referencia.  
+### <a name="remarks"></a>Remarks  
+ The registration information is loaded by means of a call to [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). The substrings retrieved are those identified by the indexes **regFileTypeId**, **regFileTypeName**, and **fileNewName**, as described in the `GetDocString` reference pages.  
   
- Si el **regFileTypeId** subcadena está vacía o si la llamada a `GetDocString` se produce un error por cualquier otra razón, esta función produce un error y no se especifica la información de archivo en el registro.  
+ If the **regFileTypeId** substring is empty or if the call to `GetDocString` fails for any other reason, this function fails and the file information is not entered in the registry.  
   
- La información de los argumentos `rglpszRegister` y `rglpszOverwrite` se escribe en el registro mediante una llamada a [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). La información de forma predeterminada, que se registra cuando los dos argumentos son **NULL**, es adecuado para la mayoría de las aplicaciones. Para obtener información sobre la estructura de la información de estos argumentos, vea `AfxOleRegisterServerClass`.  
+ The information in the arguments `rglpszRegister` and `rglpszOverwrite` is written to the registry through a call to [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). The default information, which is registered when the two arguments are **NULL**, is suitable for most applications. For information on the structure of the information in these arguments, see `AfxOleRegisterServerClass`.  
   
- Para obtener más información, consulte [implementa la interfaz IDispatch](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ For more information, see [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo HIERSVR](../../visual-cpp-samples.md)   
- [COleObjectFactory (clase)](../../mfc/reference/coleobjectfactory-class.md)   
- [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
- [Clase COleServerDoc](../../mfc/reference/coleserverdoc-class.md)   
- [Clase COleServerItem](../../mfc/reference/coleserveritem-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
+ [COleObjectFactory Class](../../mfc/reference/coleobjectfactory-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleServerDoc Class](../../mfc/reference/coleserverdoc-class.md)   
+ [COleServerItem Class](../../mfc/reference/coleserveritem-class.md)
 

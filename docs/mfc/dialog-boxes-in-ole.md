@@ -1,54 +1,73 @@
 ---
-title: "Cuadros de di&#225;logo en OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cuadros de diálogo"
-  - "cuadros de diálogo, acerca de los cuadros de diálogo"
-  - "cuadros de diálogo, OLE"
-  - "insertar objeto"
-  - "cuadros de diálogo de MFC, cuadros de diálogo de OLE"
-  - "cuadros de diálogo de OLE"
-  - "cuadros de diálogo de OLE, acerca de los cuadros de diálogo de OLE"
+title: Dialog Boxes in OLE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], OLE dialog boxes
+- OLE dialog boxes
+- dialog boxes
+- OLE dialog boxes [MFC], about OLE dialog boxes
+- dialog boxes [MFC], about dialog boxes
+- dialog boxes [MFC], OLE
+- Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Cuadros de di&#225;logo en OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0b84789d2141e86884adb5bd9fe79c0af39edd18
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Mientras un usuario ejecuta una aplicación OLE\- habilitada, hay ocasiones en que la aplicación necesita información del usuario para realizar la operación.  Las clases VIEJAS MFC proporcionan varios cuadros de diálogo para recopilar la información necesaria.  Este tema muestra las tareas administradas por los cuadros de diálogo de OLE y clases necesarios para mostrar estos cuadros de diálogo.  Para obtener información detallada sobre los cuadros de diálogo de OLE y las estructuras que se utilizan para personalizar su comportamiento, vea [Referencia de MFC](../mfc/mfc-desktop-applications.md).  
+---
+# <a name="dialog-boxes-in-ole"></a>Dialog Boxes in OLE
+While a user runs an OLE-enabled application, there are times when the application needs information from the user in order to carry out the operation. The MFC OLE classes provide a number of dialog boxes to gather the required information. This topic lists the tasks handled by the OLE dialog boxes and the classes needed to display those dialog boxes. For details on OLE dialog boxes and the structures used to customize their behavior, see [MFC Reference](../mfc/mfc-desktop-applications.md).  
   
- *Insertar objeto*  
- Este cuadro de diálogo permite al usuario inserte objetos creados recientemente o existentes en el documento compuesto.  También permite que el usuario elija para mostrar el elemento como un icono y habilita el botón de comando de icono de cambio.  Mostrar este cuadro de diálogo cuando el usuario elige el objeto INSERT en el menú Edición.  Utilice la clase de [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md) para mostrar este cuadro de diálogo.  Observe que no puede incrustar una aplicación MDI en sí mismo.  Una aplicación que es un contenedor\/servidor no se pueden insertar en sí mismo a menos que sea una aplicación SDI.  
+ *Insert Object*  
+ This dialog box allows the user to insert newly created or existing objects into the compound document. It also allows the user to choose to display the item as an icon and enables the Change Icon command button. Display this dialog box when the user chooses Insert Object from the Edit menu. Use the [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md) class to display this dialog box. Note that you cannot insert an MDI application into itself. An application that is a container/server cannot be inserted into itself unless it is an SDI application.  
   
- *Pegado especial*  
- Este cuadro de diálogo permite al usuario controlar el formato utilizado al pegar datos en un documento compuesto.  El usuario puede elegir el formato de los datos, si insertar o vincular los datos, y si mostrarlo como icono.  Mostrar este cuadro de diálogo cuando el usuario elige el Pegado especial en el menú Edición.  Utilice la clase de [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md) para mostrar este cuadro de diálogo.  
+ *Paste Special*  
+ This dialog box allows the user to control the format used when pasting data into a compound document. The user can choose the format of the data, whether to embed or link the data, and whether to display it as an icon. Display this dialog box when the user chooses Paste Special from the Edit menu. Use the [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md) class to display this dialog box.  
   
- *Cambie el icono*  
- Este cuadro de diálogo permite al usuario seleccione el icono aparece para representar el elemento incrustado o vinculado.  Mostrar este cuadro de diálogo cuando el usuario elige el icono de cambio de menú Edición o elija el botón de icono de cambio en los cuadros de diálogo de pegar especial o convert.  También mostrarlo cuando el usuario abre el cuadro de diálogo de objeto INSERT y elija la presentación como icono.  Utilice la clase de [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md) para mostrar este cuadro de diálogo.  
+ *Change Icon*  
+ This dialog box allows the user to select which icon is displayed to represent the linked or embedded item. Display this dialog box when the user chooses Change Icon from the Edit menu or chooses the Change Icon button in either the Paste Special or Convert dialog boxes. Also display it when the user opens the Insert Object dialog box and chooses Display as Icon. Use the [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md) class to display this dialog box.  
   
- *Convertir*  
- Este cuadro de diálogo permite que el usuario cambie el tipo de un elemento incrustado o vinculado.  Por ejemplo, si ha insertado un metarchivo en un documento compuesto y desea después para utilizar otra aplicación para modificar el metarchivo incrustado, puede utilizar el cuadro de diálogo convert.  Este cuadro de diálogo se muestra normalmente haciendo clic en el objeto *del tipo de elemento* en el menú Edición y después, en el menú en cascada, haciendo clic en convertir.  Utilice la clase de [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) para mostrar este cuadro de diálogo.  Para obtener un ejemplo, ejecute el ejemplo OLE [OCLIENT](../top/visual-cpp-samples.md)MFC.  
+ *Convert*  
+ This dialog box allows the user to change the type of an embedded or linked item. For example, if you have embedded a metafile in a compound document and later want to use another application to modify the embedded metafile, you can use the Convert dialog box. This dialog box is usually displayed by clicking *item type* Object on the Edit menu and then, on the cascading menu, clicking Convert. Use the [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) class to display this dialog box. For an example, run the MFC OLE sample [OCLIENT](../visual-cpp-samples.md).  
   
- *Edite los vínculos o actualizar los vínculos*  
- El cuadro de diálogo de los vínculos de edición permite al usuario a la información de cambio sobre el origen de un objeto vinculado.  El cuadro de diálogo de los vínculos de actualización comprueba los orígenes de todos los elementos vinculados en el cuadro de diálogo actual y muestra el cuadro de diálogo de los vínculos de edición en caso necesario.  Muestre el cuadro de diálogo de los vínculos de edición cuando el usuario elige vínculos en el menú Edición.  El cuadro de diálogo de los vínculos de actualización se muestra normalmente cuando se abre un documento compuesto primero.  Utilice [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) o la clase de [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) , dependiendo de cuadro de diálogo que desea mostrar.  
+ *Edit Links or Update Links*  
+ The Edit Links dialog box allows the user to change information about the source of a linked object. The Update Links dialog box verifies the sources of all the linked items in the current dialog box and displays the Edit Links dialog box if necessary. Display the Edit Links dialog box when the user chooses Links from the Edit menu. The Update Links dialog box is usually displayed when a compound document is first opened. Use either the [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) or the [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) class, depending on which dialog box you want to display.  
   
- *Servidor ocupado o Servidor No Responder*  
- El cuadro de diálogo No disponible del Servidor se muestra cuando el usuario intenta generar un elemento y el servidor no puede actualmente controlar la solicitud, normalmente porque el servidor está en uso por otro usuario o tarea.  Aparecerá el cuadro de diálogo No Responder de Servidor si el servidor no responde a la solicitud de activación en absoluto.  Estos cuadros de diálogo se muestran mediante `COleMessageFilter`, basándose en una implementación de la interfaz **IMessageFilter**OLE, y el usuario puede decidir si intentar la activación solicita de nuevo.  Utilice la clase de [COleBusyDialog](../mfc/reference/colebusydialog-class.md) para mostrar este cuadro de diálogo.  
+ *Server Busy or Server Not Responding*  
+ The Server Busy dialog box is displayed when the user attempts to activate an item and the server is currently unable to handle the request, usually because the server is in use by another user or task. The Server Not Responding dialog box is displayed if the server does not respond to the activation request at all. These dialog boxes are displayed via `COleMessageFilter`, based on an implementation of the OLE interface **IMessageFilter**, and the user can decide whether to attempt the activation request again. Use the [COleBusyDialog](../mfc/reference/colebusydialog-class.md) class to display this dialog box.  
   
-## Vea también  
- [Cuadros de diálogo](../mfc/dialog-boxes.md)   
- [Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)   
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)   
  [OLE](../mfc/ole-in-mfc.md)
+
+

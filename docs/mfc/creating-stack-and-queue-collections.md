@@ -1,59 +1,78 @@
 ---
-title: "Crear colecciones de pila y de cola | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clases de colección, crear"
-  - "colecciones, poner en cola"
-  - "colecciones, pila"
-  - "clases de la colección MFC, colecciones de cola"
-  - "clases de la colección MFC, colecciones de pila"
-  - "colecciones de cola"
-  - "pila"
-  - "colecciones de pila"
+title: Creating Stack and Queue Collections | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC collection classes [MFC], stack collections
+- collections, stack
+- stack
+- collection classes [MFC], creating
+- queue collections
+- MFC collection classes [MFC], queue collections
+- stack collections
+- collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Crear colecciones de pila y de cola
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 26e7012530dc05cc413fd04a8ababc756cf29c8a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-En este artículo se explica cómo crear otras estructuras de datos, como [montones](#_core_stacks) y [colas](#_core_queues), clases de la lista de MFC.  Los ejemplos utilizan las clases derivadas de `CList`, pero puede utilizar `CList` directamente a menos que necesite agregar funcionalidad.  
+---
+# <a name="creating-stack-and-queue-collections"></a>Creating Stack and Queue Collections
+This article explains how to create other data structures, such as [stacks](#_core_stacks) and [queues](#_core_queues), from MFC list classes. The examples use classes derived from `CList`, but you can use `CList` directly unless you need to add functionality.  
   
-##  <a name="_core_stacks"></a> Montones  
- Puesto que la colección de listas estándar tiene un encabezado y una cola, es fácil crear una colección de listas derivada que imita el comportamiento de una pila LIFO \(último en entrar, primero en salir\).  Un montón es como una pila de bandejas en una cafetería.  Mientras que las bandejas se agregan a la pila, van encima de la pila.  La bandeja última agregada es la primera que se quitará.  Las funciones `AddHead` y `RemoveHead` miembro de la colección de listas se pueden utilizar para agregar y quitar elementos específicamente de encabezado de la lista; así, el elemento recientemente agregado es el primero que se quitará.  
+##  <a name="_core_stacks"></a> Stacks  
+ Because the standard list collection has both a head and a tail, it is easy to create a derived list collection that mimics the behavior of a last-in-first-out stack. A stack is like a stack of trays in a cafeteria. As trays are added to the stack, they go on top of the stack. The last tray added is the first to be removed. The list collection member functions `AddHead` and `RemoveHead` can be used to add and remove elements specifically from the head of the list; thus, the most recently added element is the first to be removed.  
   
-#### Para crear una colección de pila  
+#### <a name="to-create-a-stack-collection"></a>To create a stack collection  
   
-1.  Derive una nueva clase de lista a partir de una de las clases existentes de la lista de MFC y agregue más funciones miembro para admitir la funcionalidad de las operaciones del montón.  
+1.  Derive a new list class from one of the existing MFC list classes and add more member functions to support the functionality of stack operations.  
   
-     El ejemplo siguiente se muestra cómo agregar funciones miembro a los elementos de la inserción en la pila, recurrir a escondidas en el elemento superior de la pila, y extraer el elemento superior de la pila:  
+     The following example shows how to add member functions to push elements on to the stack, peek at the top element of the stack, and pop the top element from the stack:  
   
-     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/CPP/creating-stack-and-queue-collections_1.h)]  
+     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]  
   
- Observe que este enfoque expone la clase subyacente de `CObList` .  El usuario puede llamar a la función miembro de `CObList` , si tiene sentido para una pila o no.  
+ Note that this approach exposes the underlying `CObList` class. The user can call any `CObList` member function, whether it makes sense for a stack or not.  
   
-##  <a name="_core_queues"></a> Colas  
- Puesto que la colección de listas estándar tiene un encabezado y una cola, también es fácil crear una colección de listas derivada que imita el comportamiento de una cola primero en entrar, primero en salir.  Una cola es como una línea de personas en una cafetería.  La primera person de la línea es la primera que se procesará.  Mientras proceden más personas, ir al final de la línea para esperar el giro.  Las funciones `AddTail` y `RemoveHead` miembro de la colección de listas se pueden utilizar para agregar y quitar elementos específicamente el encabezado o de la cola de la lista; así, el elemento recientemente agregado siempre es el último que se quitará.  
+##  <a name="_core_queues"></a> Queues  
+ Because the standard list collection has both a head and a tail, it is also easy to create a derived list collection that mimics the behavior of a first-in-first-out queue. A queue is like a line of people in a cafeteria. The first person in line is the first to be served. As more people come, they go to the end of the line to wait their turn. The list collection member functions `AddTail` and `RemoveHead` can be used to add and remove elements specifically from the head or tail of the list; thus, the most recently added element is always the last to be removed.  
   
-#### Para crear una colección de cola  
+#### <a name="to-create-a-queue-collection"></a>To create a queue collection  
   
-1.  Derive una nueva clase de lista a partir de una de las clases predefinidas de lista proporcionadas en la biblioteca Microsoft Foundation Class\) y agregue más funciones miembro para admitir la semántica de las operaciones de la cola.  
+1.  Derive a new list class from one of the predefined list classes provided with the Microsoft Foundation Class Library and add more member functions to support the semantics of queue operations.  
   
-     El ejemplo siguiente muestra cómo puede anexar funciones miembro para agregar un elemento al final de la cola y obtener el elemento de delante de la cola.  
+     The following example shows how you can append member functions to add an element to the end of the queue and get the element from the front of the queue.  
   
-     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/CPP/creating-stack-and-queue-collections_2.h)]  
+     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]  
   
-## Vea también  
- [Colecciones](../mfc/collections.md)
+## <a name="see-also"></a>See Also  
+ [Collections](../mfc/collections.md)
+
+

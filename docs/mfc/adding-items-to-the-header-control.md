@@ -1,41 +1,60 @@
 ---
-title: "Agregar elementos al control de encabezado | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl (clase), agregar elementos"
-  - "controles [MFC], encabezado"
-  - "controles del encabezado, agregar elementos"
+title: Adding Items to the Header Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- controls [MFC], header
+- CHeaderCtrl class [MFC], adding items
+- header controls [MFC], adding items to
 ms.assetid: 2e9a28b1-7302-4a93-8037-c5a4183e589a
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Agregar elementos al control de encabezado
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2462eb917e8466f5fd826854e781bedb1c39b848
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Después de crear el control de encabezado \([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)\) en la ventana primaria, agregue tantos “elementos de encabezado” como necesita: normalmente uno por columna.  
+---
+# <a name="adding-items-to-the-header-control"></a>Adding Items to the Header Control
+After creating your header control ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) in its parent window, add as many "header items" as you need: usually one per column.  
   
-### Para agregar un elemento de encabezado  
+### <a name="to-add-a-header-item"></a>To add a header item  
   
-1.  Preparar una estructura de [HD\_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) .  
+1.  Prepare an [HD_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) structure.  
   
-2.  Llamada [CHeaderCtrl::InsertItem](../Topic/CHeaderCtrl::InsertItem.md), pasando la estructura.  
+2.  Call [CHeaderCtrl::InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), passing the structure.  
   
-3.  Repita los pasos 1 y 2 para los elementos adicionales.  
+3.  Repeat steps 1 and 2 for additional items.  
   
- Para obtener más información, vea [Agregar un elemento a un Control de encabezado](http://msdn.microsoft.com/library/windows/desktop/bb775238) en [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For more information, see [Adding an Item to a Header Control](http://msdn.microsoft.com/library/windows/desktop/bb775238) in the Windows SDK.  
   
-## Vea también  
- [Usar CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

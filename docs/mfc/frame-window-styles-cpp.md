@@ -1,46 +1,64 @@
 ---
-title: "Estilos de ventana de marco (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ventanas de marco [C++], estilos"
-  - "MFC [C++], ventanas de marco"
-  - "PreCreateWindow (método), establecer estilos de ventana"
-  - "estilos, ventanas"
-  - "estilos de ventanas [C++]"
-  - "ventanas [C++], MFC"
+title: Frame-Window Styles (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- window styles [MFC]
+- PreCreateWindow method, setting window styles
+- windows [MFC], MFC
+- frame windows [MFC], styles
+- MFC, frame windows
+- styles [MFC], windows
 ms.assetid: fc5058c1-eec8-48d8-9f76-3fc01cfa53f7
 caps.latest.revision: 8
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Estilos de ventana de marco (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 69905342d643c58727dd513451e87285b44f9d8f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Las ventanas de marco que se obtiene con el marco son adecuados para la mayoría de los programas, pero puede hacerse flexibilidad adicional utilizando las funciones avanzadas [PreCreateWindow](../Topic/CWnd::PreCreateWindow.md) y la función global [Clase](../Topic/AfxRegisterWndClass.md)MFC.  `PreCreateWindow` es una función miembro de `CWnd`.  
+---
+# <a name="frame-window-styles-c"></a>Frame-Window Styles (C++)
+The frame windows you get with the framework are suitable for most programs, but you can gain additional flexibility by using the advanced functions [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) and the MFC global function [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow` is a member function of `CWnd`.  
   
- Si aplica los estilos de **WS\_HSCROLL** y de **WS\_VSCROLL** a la ventana de marco principal, en su lugar se aplican a la ventana de **MDICLIENT** para que los usuarios puedan desplazarse el área de **MDICLIENT** .  
+ If you apply the **WS_HSCROLL** and **WS_VSCROLL** styles to the main frame window, they are instead applied to the **MDICLIENT** window so users can scroll the **MDICLIENT** area.  
   
- Si se establece el bit de estilo de **FWS\_ADDTOTITLE** de la ventana \(que es de forma predeterminada\), la vista indica a ventana cuadro qué título a mostrar en la barra de título de la ventana basándose en el nombre de la vista.  
+ If the window's **FWS_ADDTOTITLE** style bit is set (which it is by default), the view tells the frame window what title to display in the window's title bar based on the view's document name.  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Administrar las ventanas secundarias MDI \(MDICLIENT\)](../mfc/managing-mdi-child-windows.md), la ventana dentro de un marco MDI que contiene las ventanas MDI secundarias  
+-   [Managing MDI child windows (MDICLIENT)](../mfc/managing-mdi-child-windows.md), the window within an MDI frame that contains the MDI child windows  
   
--   [Cambiar los estilos de una ventana creada por MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
+-   [Changing the styles of a window created by MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
   
--   [Estilos de ventana](../mfc/reference/window-styles.md)  
+-   [Window styles](../mfc/reference/styles-used-by-mfc.md#window-styles)  
   
-## Vea también  
- [Ventanas de marco](../mfc/frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Frame Windows](../mfc/frame-windows.md)
+
+

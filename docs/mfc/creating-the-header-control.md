@@ -1,54 +1,73 @@
 ---
-title: "Crear el control de encabezado | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl (clase), crear"
-  - "controles del encabezado, crear"
+title: Creating the Header Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHeaderCtrl class [MFC], creating
+- header controls [MFC], creating
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Crear el control de encabezado
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19990137630ff7074523f98399ca21b0accc00ee
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-El control de encabezado no es directamente disponibles en el editor de cuadros de diálogo \(aunque se puede agregar un control de lista, que incluye un control de encabezado\).  
+---
+# <a name="creating-the-header-control"></a>Creating the Header Control
+The header control is not directly available in the dialog editor (although you can add a list control, which includes a header control).  
   
-### Para colocar un control de encabezado en un cuadro de diálogo  
+### <a name="to-put-a-header-control-in-a-dialog-box"></a>To put a header control in a dialog box  
   
-1.  Inserte manualmente una variable miembro de [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) escrito en la clase de diálogo.  
+1.  Manually embed a member variable of type [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) in your dialog class.  
   
-2.  En [OnInitDialog](../Topic/CDialog::OnInitDialog.md), cree y establezca los estilos para `CHeaderCtrl`, colocarlos, y los muestran.  
+2.  In [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), create and set the styles for the `CHeaderCtrl`, position it, and display it.  
   
-3.  Agregar elementos al control de encabezado.  
+3.  Add items to the header control.  
   
-4.  Utilice la ventana Propiedades para asignar funciones controladoras en la clase de diálogo para cualquier mensaje de notificación de encabezado\- CONTROL que necesite controlar \(vea [Asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)\).  
+4.  Use the Properties window to map handler functions in the dialog class for any header-control notification messages you need to handle (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)).  
   
-### Para colocar un control de encabezado en una vista \(no un CListView\)  
+### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>To put a header control in a view (not a CListView)  
   
-1.  Inserte un objeto de [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) en la clase de vista.  
+1.  Embed a [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) object in your view class.  
   
-2.  El estilo, posición, y muestra la ventana de control del encabezado en la función miembro de [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md) de la vista.  
+2.  Style, position, and display the header control window in the view's [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) member function.  
   
-3.  Agregar elementos al control de encabezado.  
+3.  Add items to the header control.  
   
-4.  Utilice la ventana Propiedades para asignar funciones de controlador en la clase de vista para cualquier mensaje de notificación de encabezado\- CONTROL que necesite controlar \(vea [Asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)\).  
+4.  Use the Properties window to map handler functions in the view class for any header-control notification messages you need to handle (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)).  
   
- En cualquier caso, se crea el objeto incrustado de control cuando se crea el objeto de vista o del diálogo.  Se debe llamar a [CHeaderCtrl::Create](../Topic/CHeaderCtrl::Create.md) para crear la ventana de control.  Para colocar el control, la llamada [CHeaderCtrl::Layout](../Topic/CHeaderCtrl::Layout.md) para determinar el tamaño inicial del control y para colocar y [SetWindowPos](../Topic/CWnd::SetWindowPos.md) para establecer la posición que desee.  A continuación agregue elementos como se describe en [Agregar elementos al Control de encabezado](../mfc/adding-items-to-the-header-control.md).  
+ In either case, the embedded control object is created when the view or dialog object is created. Then you must call [CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create) to create the control window. To position the control, call [CHeaderCtrl::Layout](../mfc/reference/cheaderctrl-class.md#layout) to determine the control's initial size and position and [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos) to set the position you want. Then add items as described in [Adding Items to the Header Control](../mfc/adding-items-to-the-header-control.md).  
   
- Para obtener más información, vea [Crear un Control de encabezado](http://msdn.microsoft.com/library/windows/desktop/bb775238) en [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For more information, see [Creating a Header Control](http://msdn.microsoft.com/library/windows/desktop/bb775238) in the Windows SDK.  
   
-## Vea también  
- [Usar CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

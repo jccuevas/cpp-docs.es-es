@@ -1,5 +1,5 @@
 ---
-title: sync_none (Clase) | Microsoft Docs
+title: sync_none Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,16 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- sync_none
 - allocators/stdext::sync_none
-- stdext::sync_none
 - allocators/stdext::sync_none::allocate
 - allocators/stdext::sync_none::deallocate
 - allocators/stdext::sync_none::equals
 dev_langs:
 - C++
 helpviewer_keywords:
-- sync_none class
+- stdext::sync_none
+- stdext::sync_none [C++], allocate
+- stdext::sync_none [C++], deallocate
+- stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
 caps.latest.revision: 21
 author: corob-msft
@@ -38,95 +39,95 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f56f09f3c3591d0c969ea3b3e242cf39812356fb
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 086bf59fa51ee86e14bdb981796587023a034d89
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="syncnone-class"></a>sync_none (Clase)
-Describe un [filtro de sincronización](../standard-library/allocators-header.md) que no proporciona ninguna sincronización.  
+# <a name="syncnone-class"></a>sync_none Class
+Describes a [synchronization filter](../standard-library/allocators-header.md) that provides no synchronization.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Cache>  
 class sync_none
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Cache`|El tipo de caché asociado al filtro de sincronización. Puede ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
+|`Cache`|The type of cache associated with the synchronization filter. This can be [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md), or [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
   
-### <a name="member-functions"></a>Funciones miembro  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[allocate](#allocate)|Asigna un bloque de memoria.|  
-|[deallocate](#deallocate)|Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.|  
-|[equals](#equals)|Compara dos cachés para determinar si son iguales.|  
+|[allocate](#allocate)|Allocates a block of memory.|  
+|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
+|[equals](#equals)|Compares two caches for equality.|  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<allocators>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
   
- **Espacio de nombres:** stdext  
+ **Namespace:** stdext  
   
 ##  <a name="allocate"></a>  sync_none::allocate  
- Asigna un bloque de memoria.  
+ Allocates a block of memory.  
   
 ```
 void *allocate(std::size_t count);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`count`|El número de elementos de la matriz que se van a asignar.|  
+|`count`|The number of elements in the array to be allocated.|  
   
-### <a name="remarks"></a>Comentarios  
- La función miembro devuelve `cache.allocate(count)`, donde `cache` es el objeto de caché.  
+### <a name="remarks"></a>Remarks  
+ The member function returns `cache.allocate(count)`, where `cache` is the cache object.  
   
 ##  <a name="deallocate"></a>  sync_none::deallocate  
- Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.  
+ Frees a specified number of objects from storage beginning at a specified position.  
   
 ```
 void deallocate(void* ptr, std::size_t count);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|Un puntero al primer objeto que se va a desasignar del almacenamiento.|  
-|`count`|El número de objetos que se van a desasignar del almacenamiento.|  
+|`ptr`|A pointer to the first object to be deallocated from storage.|  
+|`count`|The number of objects to be deallocated from storage.|  
   
-### <a name="remarks"></a>Comentarios  
- La función miembro llama a `cache.deallocate(ptr, count)`, donde `cache` representa el objeto de caché.  
+### <a name="remarks"></a>Remarks  
+ The member function calls `cache.deallocate(ptr, count)`, where `cache` represents the cache object.  
   
 ##  <a name="equals"></a>  sync_none::equals  
- Compara dos cachés para determinar si son iguales.  
+ Compares two caches for equality.  
   
 ```
 bool equals(const sync<Cache>& Other) const;
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
   
-|Parámetro|Descripción|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Cache`|El objeto de caché del filtro de sincronización.|  
-|`Other`|El objeto de caché para comparar la igualdad.|  
+|`Cache`|The cache object of the synchronization filter.|  
+|`Other`|The cache object to compare for equality.|  
   
-### <a name="return-value"></a>Valor devuelto  
- La función miembro siempre devuelve `true`.  
+### <a name="return-value"></a>Return Value  
+ The member function always returns `true`.  
   
-### <a name="remarks"></a>Comentarios  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

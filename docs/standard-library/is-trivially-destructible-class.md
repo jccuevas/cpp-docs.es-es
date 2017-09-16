@@ -1,5 +1,5 @@
 ---
-title: Clase is_trivially_destructible | Microsoft Docs
+title: is_trivially_destructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- is_trivially_destructible
 - type_traits/std::is_trivially_destructible
 dev_langs:
 - C++
@@ -35,35 +34,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 523d8a6ce58f39340bd33406439774824f85b7cb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f19c2da258fda90e73b247105131a5a45b8418bc
+ms.contentlocale: es-es
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallydestructible-class"></a>Clase is_trivially_destructible
-Comprueba si el tipo se puede destruir de forma trivial.  
+# <a name="istriviallydestructible-class"></a>is_trivially_destructible Class
+Tests whether the type is trivially destructible.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>  
 struct is_trivially_destructible;
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Tipo que se va a consultar.  
+ The type to query.  
   
-## <a name="remarks"></a>Comentarios  
- Una instancia del predicado de tipo es true si el tipo `T` se puede destruir y el compilador sabe que el destructor no usa operaciones no triviales. En caso contrario, es False.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `T` is a destructible type, and the destructor is known to the compiler to use no non-trivial operations. Otherwise, it holds false.  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espacio de nombres:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

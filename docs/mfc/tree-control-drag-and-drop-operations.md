@@ -1,39 +1,58 @@
 ---
-title: "Operaciones de arrastrar y colocar del control de &#225;rbol | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl (clase), operaciones de arrastrar y colocar"
-  - "arrastrar y colocar, CTreeCtrl"
-  - "controles de árbol, operaciones de arrastrar y colocar"
+title: Tree Control Drag-and-Drop Operations | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTreeCtrl class [MFC], drag and drop operations
+- drag and drop [MFC], CTreeCtrl
+- tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Operaciones de arrastrar y colocar del control de &#225;rbol
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5beda5b1c08ed33e532d8987e1caee1a2745ff3c
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
-Un control de árbol \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) envía una notificación cuando el usuario inicia para arrastrar un elemento.  El control envía un mensaje de notificación de [TVN\_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) cuando el usuario comienza arrastrando un elemento con el botón primario y un mensaje de notificación de [TVN\_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) cuando el usuario comienza arrastrando con el botón secundario.  Puede evitar que un control de árbol envíe estas notificaciones dando al control de árbol el estilo de **TVS\_DISABLEDRAGDROP** .  
+---
+# <a name="tree-control-drag-and-drop-operations"></a>Tree Control Drag-and-Drop Operations
+A tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sends a notification when the user starts to drag an item. The control sends a [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) notification message when the user begins dragging an item with the left mouse button and a [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) notification message when the user begins dragging with the right button. You can prevent a tree control from sending these notifications by giving the tree control the **TVS_DISABLEDRAGDROP** style.  
   
- Se obtiene una imagen para mostrar durante una operación de arrastre llamando a la función miembro de [CreateDragImage](../Topic/CTreeCtrl::CreateDragImage.md) .  El control de árbol crea un mapa de bits que arrastra basado en la etiqueta del elemento que se arrastra.  El control de árbol crea una lista de imágenes, agrega el mapa de bits a, y devuelve un puntero al objeto de [CImageList](../mfc/reference/cimagelist-class.md) .  
+ You obtain an image to display during a drag operation by calling the [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) member function. The tree control creates a dragging bitmap based on the label of the item being dragged. Then the tree control creates an image list, adds the bitmap to it, and returns a pointer to the [CImageList](../mfc/reference/cimagelist-class.md) object.  
   
- Debe proporcionar código que arrastra realmente el elemento.  Esto implica normalmente el uso de las funciones que arrastre de las funciones de la lista de imágenes y el procesamiento de los mensajes de [WM\_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) y de [WM\_LBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms645608) \(o [WM\_RBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646243)\) enviados después de iniciarse la operación de arrastrar.  Para obtener más información sobre las funciones de la lista de imágenes, vea [CImageList](../mfc/reference/cimagelist-class.md) en *la referencia de MFC* y [Listas de imágenes](http://msdn.microsoft.com/library/windows/desktop/bb761389) en [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  Para obtener más información sobre arrastrar un elemento del control de árbol, vea [Arrastrar el elemento de vista de árbol](http://msdn.microsoft.com/library/windows/desktop/bb760017), también en [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)].  
+ You must provide the code that actually drags the item. This typically involves using the dragging capabilities of the image list functions and processing the [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) and [WM_LBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms645608) (or [WM_RBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646243)) messages sent after the drag operation has begun. For more information about the image list functions, see [CImageList](../mfc/reference/cimagelist-class.md) in the *MFC Reference* and [Image Lists](http://msdn.microsoft.com/library/windows/desktop/bb761389) in the Windows SDK. For more information about dragging a tree control item, see [Dragging the Tree View Item](http://msdn.microsoft.com/library/windows/desktop/bb760017), also in the [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
- Si los elementos en un control de árbol son ser destinos de una operación de arrastrar y colocar, necesita saber cuándo el cursor está en un elemento de destino.  Puede averiguar llamando a la función miembro de [HitTest](../Topic/CTreeCtrl::HitTest.md) .  Especifica un punto y el entero, o la dirección de una estructura de [TVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb773448) que contiene las coordenadas actuales del cursor.  Cuando finaliza la función, integer o estructura contiene un marcador que indica la ubicación del cursor en relación con el control de árbol.  Si el cursor está sobre un elemento en el control de árbol, la estructura contiene el identificador de elemento también.  
+ If items in a tree control are to be the targets of a drag-and-drop operation, you need to know when the mouse cursor is on a target item. You can find out by calling the [HitTest](../mfc/reference/ctreectrl-class.md#hittest) member function. You specify either a point and integer, or the address of a [TVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb773448) structure that contains the current coordinates of the mouse cursor. When the function returns, the integer or structure contains a flag indicating the location of the mouse cursor relative to the tree control. If the cursor is over an item in the tree control, the structure contains the handle of the item as well.  
   
- Puede indicar que un elemento es el destino de una operación de arrastrar y colocar llamando a la función miembro de [SetItem](../Topic/CTreeCtrl::SetItem.md) para establecer el estado en el valor de `TVIS_DROPHILITED` .  Un elemento que tiene este estado se dibuja en el estilo usado para indicar un destino de arrastrar y colocar.  
+ You can indicate that an item is the target of a drag-and-drop operation by calling the [SetItem](../mfc/reference/ctreectrl-class.md#setitem) member function to set the state to the `TVIS_DROPHILITED` value. An item that has this state is drawn in the style used to indicate a drag-and-drop target.  
   
-## Vea también  
- [Usar CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Controles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,11 +1,11 @@
 ---
-title: Clase CWinFormsControl | Documentos de Microsoft
+title: CWinFormsControl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,9 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- MFC [C++], Windows Forms support
-- CWinFormsControl class
-- Windows Forms [C++], MFC support
+- CWinFormsControl [MFC], CWinFormsControl
+- CWinFormsControl [MFC], CreateManagedControl
+- CWinFormsControl [MFC], GetControl
+- CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
 caps.latest.revision: 28
 author: mikeblome
@@ -40,64 +41,65 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 49e24c04deda3df5683908fa9ca485cf7802214b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bcebe98f8e276a2092195eef49c3de4049c07b90
+ms.contentlocale: es-es
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cwinformscontrol-class"></a>Clase CWinFormsControl
-Proporciona la funcionalidad básica para hospedar un control de formularios Windows Forms.  
+# <a name="cwinformscontrol-class"></a>CWinFormsControl Class
+Provides the basic functionality for hosting of a Windows Forms control.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class TManagedControl>  
 class CWinFormsControl : public CWnd  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a>Parameters  
  `TManagedControl`  
- Un control de formularios Windows Forms de .NET Framework que se mostrará en la aplicación MFC.  
+ A .NET Framework Windows Forms control to be displayed in the MFC application.  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWinFormsControl::CWinFormsControl](#cwinformscontrol)|Construye un objeto de contenedor de control de formularios Windows Forms de MFC.|  
+|[CWinFormsControl::CWinFormsControl](#cwinformscontrol)|Constructs an MFC Windows Forms control wrapper object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWinFormsControl:: CreateManagedControl](#createmanagedcontrol)|Crea un control de formularios Windows Forms en un contenedor de MFC.|  
-|[CWinFormsControl::GetControl](#getcontrol)|Recupera un puntero al control de formularios Windows Forms.|  
-|[CWinFormsControl::GetControlHandle](#getcontrolhandle)|Recupera un identificador para el control de formularios Windows Forms.|  
+|[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)|Creates a Windows Forms control in an MFC container.|  
+|[CWinFormsControl::GetControl](#getcontrol)|Retrieves a pointer to the Windows Forms control.|  
+|[CWinFormsControl::GetControlHandle](#getcontrolhandle)|Retrieves a handle to the Windows Forms control.|  
   
-### <a name="public-operators"></a>Operadores públicos  
+### <a name="public-operators"></a>Public Operators  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWinFormsControl::operator-&gt;](#operator_-_gt)|Reemplaza [CWinFormsControl::GetControl](#getcontrol) en expresiones.|  
-|[CWinFormsControl::operator TManagedControl ^](#operator_tmanagedcontrol)|Convierte un tipo de puntero a un control de formularios Windows Forms.|  
+|[CWinFormsControl::operator -&gt;](#operator_-_gt)|Replaces [CWinFormsControl::GetControl](#getcontrol) in expressions.|  
+|[CWinFormsControl::operator TManagedControl^](#operator_tmanagedcontrol)|Casts a type as a pointer to a Windows Forms control.|  
   
-## <a name="remarks"></a>Comentarios  
- La `CWinFormsControl` clase proporciona la funcionalidad básica para hospedar un control de formularios Windows Forms.  
+## <a name="remarks"></a>Remarks  
+ The `CWinFormsControl` class provides the basic functionality for hosting of a Windows Forms control.  
   
- Para obtener más información sobre el uso de formularios Windows Forms, vea [mediante un Control de usuario de Windows Forms en MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ For more information on using Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
- El código MFC no debe almacenar en caché los identificadores de ventana (normalmente se almacenan en `m_hWnd`). Algunas propiedades de controles de formularios Windows Forms requieren que Win32 subyacente `Window` se destruyen y volver a crear con `DestroyWindow` y `CreateWindow`. Los identificadores de la implementación de formularios Windows Forms de MFC la `Destroy` y `Create` eventos de los controles que se va a actualizar el `m_hWnd` miembro.  
+ Your MFC code should not cache Window handles (usually stored in `m_hWnd`). Some Windows Forms control properties require that the underlying Win32 `Window` be destroyed and recreated using `DestroyWindow` and `CreateWindow`. The MFC Windows Forms implementation handles the `Destroy` and `Create` events of the controls to update the `m_hWnd` member.  
   
 > [!NOTE]
->  Integración de formularios Windows Forms de MFC sólo funciona en los proyectos que se vinculen dinámicamente a MFC (en el que se ha definido AFXDLL).  
+>  MFC Windows Forms integration works only in projects which link dynamically with MFC (in which AFXDLL is defined).  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxwinforms.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwinforms.h  
   
-##  <a name="createmanagedcontrol"></a>CWinFormsControl:: CreateManagedControl  
- Crea un control de formularios Windows Forms en un contenedor de MFC.  
+##  <a name="createmanagedcontrol"></a>  CWinFormsControl::CreateManagedControl  
+ Creates a Windows Forms control in an MFC container.  
   
 ```  
 inline BOOL CreateManagedControl(
@@ -127,103 +129,103 @@ inline BOOL CreateManagedControl(
     int nID);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `pType`  
- El tipo de datos del control que se va a crear. Debe ser un [tipo](https://msdn.microsoft.com/en-us/library/system.type) tipo de datos.  
+ The data type of the control to be created. Must be a [Type](https://msdn.microsoft.com/en-us/library/system.type) data type.  
   
  `dwStyle`  
- Estilo de ventana que se va a aplicar al control. Especificar una combinación de [estilos de ventana](../../mfc/reference/window-styles.md). Actualmente, se admiten sólo los siguientes estilos: WS_TABSTOP, WS_VISIBLE, WS_DISABLED y WS_GROUP.  
+ The window style to apply to the control. Specify a combination of [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles). Currently, only the following styles are supported: WS_TABSTOP, WS_VISIBLE, WS_DISABLED and WS_GROUP.  
   
  `rect`  
- Un [estructura RECT](../../mfc/reference/rect-structure1.md) que define las coordenadas de las esquinas superior izquierda e inferior derecha del control (primera sobrecarga sólo).  
+ A [RECT Structure](../../mfc/reference/rect-structure1.md) that defines the coordinates of the upper-left and lower-right corners of the control (first overload only).  
   
  `nPlaceHolderID`  
- El identificador del control de titular de contexto estático se coloca en el Editor de recursos. El control de formularios Windows Forms recién creado reemplaza el control estático, suponiendo que su posición, el orden z y los estilos (segunda sobrecarga sólo).  
+ The handle of the static place holder control placed in the Resource Editor. The newly created Windows Forms control replaces the static control, assuming its position, z-order, and styles (second overload only).  
   
  `pParentWnd`  
- Puntero a la ventana primaria.  
+ A pointer to the parent window.  
   
  `nID`  
- El número de Id. de recurso que se asignará al control recién creado.  
+ The resource ID number to be assigned to the newly created control.  
   
  `pControl`  
- Una instancia de un control de formularios Windows Forms que asociar la [CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md) (sólo la sobrecarga de la cuarta) del objeto.  
+ An instance of a Windows Forms control to be associated with the [CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md) object (fourth overload only).  
   
-### <a name="return-value"></a>Valor devuelto  
- Si se realiza correctamente, devuelve un valor distinto de cero. Si se produce un error, devuelve cero.  
+### <a name="return-value"></a>Return Value  
+ If successful, returns a nonzero value. If unsuccessful, returns zero.  
   
-### <a name="remarks"></a>Comentarios  
- Este método crea una instancia de un control de formularios Windows Forms de .NET Framework en un contenedor de MFC.  
+### <a name="remarks"></a>Remarks  
+ This method instantiates a .NET Framework Windows Forms control in an MFC container.  
   
- La primera sobrecarga del método acepta un tipo de datos de .NET Framework `pType` para que MFC puede crear instancias de un nuevo objeto de este tipo. `pType`debe ser un [tipo](https://msdn.microsoft.com/en-us/library/system.type) tipo de datos.  
+ The first overload of the method accepts a .NET Framework data type `pType` so that MFC can instantiate a new object of this type. `pType` must be a [Type](https://msdn.microsoft.com/en-us/library/system.type) data type.  
   
- La segunda sobrecarga del método crea un control de formularios Windows Forms según el `TManagedControl` parámetro de plantilla de la `CWinFormsControl` clase. El tamaño y la posición del control se basa en el `RECT` estructura se pasa al método. Sólo `dwStyle` es importante para los estilos.  
+ The second overload of the method creates a Windows Forms control based on the `TManagedControl` template parameter of the `CWinFormsControl` class. The size and position of the control is based on the `RECT` structure passed to the method. Only `dwStyle` matters for the styles.  
   
- La tercera sobrecarga del método crea un control de formularios Windows Forms que reemplaza a un control estático, se destruye y suponiendo que su posición, el orden z y los estilos. El control estático sólo actúa como un marcador de posición para el control de formularios Windows Forms. Al crear el control, esta sobrecarga combina los estilos de `dwStyle` con estilos de recursos del control estático.  
+ The third overload of the method creates a Windows Forms control that replaces a static control, destroying it and assuming its position, z-order, and styles. The static control serves only as a placeholder for the Windows Forms control. When creating the control, this overload combines the styles from `dwStyle` with the static control's resource styles.  
   
- El cuarta sobrecarga del método permite pasar de un control de formularios Windows Forms ya tiene instanciado `pControl` que MFC se ajustará. Debe ser del mismo tipo que el `TManagedControl` parámetro de plantilla de la `CWinFormsControl` clase.  
+ The fourth overload of the method allows you to pass in an already instantiated Windows Forms control `pControl` that MFC will wrap. It must be of the same type as the `TManagedControl` template parameter of the `CWinFormsControl` class.  
   
- Consulte [mediante un Control de usuario de Windows Forms en MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) para obtener ejemplos sobre el uso de Windows Forms controla.  
+ See [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) for samples on using Windows Form controls.  
   
-##  <a name="cwinformscontrol"></a>CWinFormsControl::CWinFormsControl  
- Construye un objeto de contenedor de control de formularios Windows Forms de MFC.  
+##  <a name="cwinformscontrol"></a>  CWinFormsControl::CWinFormsControl  
+ Constructs an MFC Windows Forms control wrapper object.  
   
 ```  
 CWinFormsControl();
 ```  
   
-### <a name="remarks"></a>Comentarios  
- El control de formularios Windows Forms se crea una instancia cuando se llama a [CWinFormsControl:: CreateManagedControl](#createmanagedcontrol).  
+### <a name="remarks"></a>Remarks  
+ The Windows Forms control is instantiated when you call [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).  
   
-##  <a name="getcontrol"></a>CWinFormsControl::GetControl  
- Recupera un puntero al control de formularios Windows Forms.  
+##  <a name="getcontrol"></a>  CWinFormsControl::GetControl  
+ Retrieves a pointer to the Windows Forms control.  
   
 ```  
 inline TManagedControl^ GetControl() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Devuelve un puntero para el control de formularios Windows Forms.  
+### <a name="return-value"></a>Return Value  
+ Returns a pointer to the Windows Forms control.  
   
-### <a name="example"></a>Ejemplo  
-  Consulte [CWinFormsControl:: CreateManagedControl](#createmanagedcontrol).  
+### <a name="example"></a>Example  
+  See [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).  
   
-##  <a name="getcontrolhandle"></a>CWinFormsControl::GetControlHandle  
- Recupera un identificador para el control de formularios Windows Forms.  
+##  <a name="getcontrolhandle"></a>  CWinFormsControl::GetControlHandle  
+ Retrieves a handle to the Windows Forms control.  
   
 ```  
 inline HWND GetControlHandle() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Devuelve un identificador para el control de formularios Windows Forms.  
+### <a name="return-value"></a>Return Value  
+ Returns a handle to the Windows Forms control.  
   
-### <a name="remarks"></a>Comentarios  
- `GetControlHandle`es un método auxiliar que devuelve el identificador de ventana que se almacenan en las propiedades del control de .NET Framework. El valor del identificador de ventana se copia en [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) durante la llamada a [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).  
+### <a name="remarks"></a>Remarks  
+ `GetControlHandle` is a helper method that returns the window handle stored in the .NET Framework control properties. The window handle value is copied to [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) during the call to [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).  
   
-##  <a name="operator_-_gt"></a>CWinFormsControl::operator-&gt;  
- Reemplaza [CWinFormsControl::GetControl](#getcontrol) en expresiones.  
+##  <a name="operator_-_gt"></a>  CWinFormsControl::operator -&gt;  
+ Replaces [CWinFormsControl::GetControl](#getcontrol) in expressions.  
   
 ```  
 inline TManagedControl^  operator->() const;  
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Este operador proporciona una sintaxis adecuada que reemplaza `GetControl` en expresiones.  
+### <a name="remarks"></a>Remarks  
+ This operator provides a convenient syntax that replaces `GetControl` in expressions.  
   
- Para obtener más información sobre Windows Forms, vea [mediante un Control de usuario de Windows Forms en MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ For more information on Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="operator_tmanagedcontrol"></a>CWinFormsControl::operator TManagedControl ^  
- Convierte un tipo de puntero a un control de formularios Windows Forms.  
+##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl^  
+ Casts a type as a pointer to a Windows Forms control.  
   
 ```  
 inline operator TManagedControl^() const;  
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Este operador pasa `CWinFormsControl<``TManagedControl``>` a las funciones que aceptan un puntero a un control de formularios Windows Forms.  
+### <a name="remarks"></a>Remarks  
+ This operator passes `CWinFormsControl<TManagedControl>` to functions that accept a pointer to a Windows Forms control.  
   
-## <a name="see-also"></a>Vea también  
- [Clase CWinFormsDialog](../../mfc/reference/cwinformsdialog-class.md)   
- [Clase CWinFormsView](../../mfc/reference/cwinformsview-class.md)
+## <a name="see-also"></a>See Also  
+ [CWinFormsDialog Class](../../mfc/reference/cwinformsdialog-class.md)   
+ [CWinFormsView Class](../../mfc/reference/cwinformsview-class.md)
 

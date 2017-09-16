@@ -1,5 +1,5 @@
 ---
-title: Clase CColorDialog | Documentos de Microsoft
+title: CColorDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,9 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- colors, dialog box
-- dialog boxes, colors
-- CColorDialog class
+- CColorDialog [MFC], CColorDialog
+- CColorDialog [MFC], DoModal
+- CColorDialog [MFC], GetColor
+- CColorDialog [MFC], GetSavedCustomColors
+- CColorDialog [MFC], SetCurrentColor
+- CColorDialog [MFC], OnColorOK
+- CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
 caps.latest.revision: 25
 author: mikeblome
@@ -43,76 +47,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a8aee088aadbca18acda348c574c8f4b55d1ecbb
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 88568399cc2977fb246bf2e54f7706066a2ef6b5
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccolordialog-class"></a>Clase CColorDialog
-Permite incorporar un cuadro de diálogo de selección de color en la aplicación.  
+# <a name="ccolordialog-class"></a>CColorDialog Class
+Allows you to incorporate a color-selection dialog box into your application.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CColorDialog : public CCommonDialog  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructores públicos  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CColorDialog::CColorDialog](#ccolordialog)|Construye un objeto `CColorDialog`.|  
+|[CColorDialog::CColorDialog](#ccolordialog)|Constructs a `CColorDialog` object.|  
   
-### <a name="public-methods"></a>Métodos públicos  
+### <a name="public-methods"></a>Public Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CColorDialog::DoModal](#domodal)|Muestra un cuadro de diálogo color y permite al usuario realizar una selección.|  
-|[CColorDialog::GetColor](#getcolor)|Devuelve un **COLORREF** estructura que contiene los valores del color seleccionado.|  
-|[CColorDialog::GetSavedCustomColors](#getsavedcustomcolors)|Recupera los colores personalizados creados por el usuario.|  
-|[CColorDialog::SetCurrentColor](#setcurrentcolor)|Fuerza la selección actual de color para el color especificado.|  
+|[CColorDialog::DoModal](#domodal)|Displays a color dialog box and allows the user to make a selection.|  
+|[CColorDialog::GetColor](#getcolor)|Returns a **COLORREF** structure containing the values of the selected color.|  
+|[CColorDialog::GetSavedCustomColors](#getsavedcustomcolors)|Retrieves custom colors created by the user.|  
+|[CColorDialog::SetCurrentColor](#setcurrentcolor)|Forces the current color selection to the specified color.|  
   
-### <a name="protected-methods"></a>Métodos protegidos  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CColorDialog::OnColorOK](#oncolorok)|Invalidar para validar el color especificado en el cuadro de diálogo.|  
+|[CColorDialog::OnColorOK](#oncolorok)|Override to validate the color entered into the dialog box.|  
   
-### <a name="public-data-members"></a>Miembros de datos públicos  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nombre|Descripción|  
+|Name|Description|  
 |----------|-----------------|  
-|[CColorDialog::m_cc](#m_cc)|Una estructura que se utiliza para personalizar la configuración del cuadro de diálogo.|  
+|[CColorDialog::m_cc](#m_cc)|A structure used to customize the settings of the dialog box.|  
   
-## <a name="remarks"></a>Comentarios  
- Un `CColorDialog` objeto es un cuadro de diálogo con una lista de colores que se definen para el sistema de presentación. El usuario puede seleccionar o crear un color determinado en la lista, que es, a continuación, informar a la aplicación cuando se cierra el cuadro de diálogo.  
+## <a name="remarks"></a>Remarks  
+ A `CColorDialog` object is a dialog box with a list of colors that are defined for the display system. The user can select or create a particular color from the list, which is then reported back to the application when the dialog box exits.  
   
- Para construir un `CColorDialog` , utilice el constructor proporcionado o derivar una clase nueva y utilice su propio constructor personalizado.  
+ To construct a `CColorDialog` object, use the provided constructor or derive a new class and use your own custom constructor.  
   
- Una vez que se ha construido el cuadro de diálogo, puede establecer o modificar los valores de la [m_cc](#m_cc) estructura para inicializar los valores de los controles del cuadro de diálogo. El `m_cc` estructura es de tipo [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
+ Once the dialog box has been constructed, you can set or modify any values in the [m_cc](#m_cc) structure to initialize the values of the dialog box's controls. The `m_cc` structure is of type [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
   
- Después de inicializar los controles del cuadro de diálogo, llame a la `DoModal` la función miembro para mostrar el cuadro de diálogo y permitir al usuario seleccionar un color. `DoModal`Devuelve la selección del usuario de uno de ellos Aceptar del cuadro de diálogo ( **IDOK**) o Cancelar ( **IDCANCEL**) botón.  
+ After initializing the dialog box's controls, call the `DoModal` member function to display the dialog box and allow the user to select a color. `DoModal` returns the user's selection of either the dialog box's OK ( **IDOK**) or Cancel ( **IDCANCEL**) button.  
   
- Si `DoModal` devuelve **IDOK**, puede utilizar uno de `CColorDialog`de funciones miembro para recuperar la información de entrada del usuario.  
+ If `DoModal` returns **IDOK**, you can use one of `CColorDialog`'s member functions to retrieve the information input by the user.  
   
- Puede utilizar las ventanas [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) función para determinar si se produjo un error durante la inicialización del cuadro de diálogo y para obtener más información sobre el error.  
+ You can use the Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) function to determine whether an error occurred during initialization of the dialog box and to learn more about the error.  
   
- `CColorDialog`se basa en el COMMDLG. Archivo DLL que se incluye con las versiones 3.1 y versiones posteriores de Windows.  
+ `CColorDialog` relies on the COMMDLG.DLL file that ships with Windows versions 3.1 and later.  
   
- Para personalizar el cuadro de diálogo, derive una clase de `CColorDialog`, proporcionan una plantilla de cuadro de diálogo personalizado y agregar un mapa de mensajes para procesar los mensajes de notificación de los controles extendidos. Los mensajes no procesados deben pasarse a la clase base.  
+ To customize the dialog box, derive a class from `CColorDialog`, provide a custom dialog template, and add a message map to process the notification messages from the extended controls. Any unprocessed messages should be passed to the base class.  
   
- No es necesario personalizar la función de enlace.  
+ Customizing the hook function is not required.  
   
 > [!NOTE]
->  En algunas instalaciones de la `CColorDialog` objeto no se mostrará con un fondo gris si ha utilizado el marco de trabajo que para hacer otras `CDialog` gris de objetos.  
+>  On some installations the `CColorDialog` object will not display with a gray background if you have used the framework to make other `CDialog` objects gray.  
   
- Para obtener más información sobre el uso de `CColorDialog`, consulte [clases de cuadro de diálogo comunes](../../mfc/common-dialog-classes.md)  
+ For more information on using `CColorDialog`, see [Common Dialog Classes](../../mfc/common-dialog-classes.md)  
   
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -125,11 +129,11 @@ class CColorDialog : public CCommonDialog
   
  `CColorDialog`  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxdlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdlgs.h  
   
-##  <a name="ccolordialog"></a>CColorDialog::CColorDialog  
- Construye un objeto `CColorDialog`.  
+##  <a name="ccolordialog"></a>  CColorDialog::CColorDialog  
+ Constructs a `CColorDialog` object.  
   
 ```  
 CColorDialog(
@@ -138,132 +142,132 @@ CColorDialog(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  *clrInit*  
- La selección de color predeterminado. Si no se especifica ningún valor, el valor predeterminado es RGB(0,0,0) (negro).  
+ The default color selection. If no value is specified, the default is RGB(0,0,0) (black).  
   
  `dwFlags`  
- Un conjunto de marcadores que personalizan la función y la apariencia del cuadro de diálogo. Para obtener más información, consulte el [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) estructura en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ A set of flags that customize the function and appearance of the dialog box. For more information, see the [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) structure in the Windows SDK.  
   
  `pParentWnd`  
- Puntero a la ventana primaria o propietaria del cuadro de diálogo.  
+ A pointer to the dialog box's parent or owner window.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFCDocView&#49;](../../mfc/codesnippet/cpp/ccolordialog-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#49](../../mfc/codesnippet/cpp/ccolordialog-class_1.cpp)]  
   
-##  <a name="domodal"></a>CColorDialog::DoModal  
- Llame a esta función para mostrar el cuadro de diálogo color comunes de Windows y permitir al usuario seleccionar un color.  
+##  <a name="domodal"></a>  CColorDialog::DoModal  
+ Call this function to display the Windows common color dialog box and allow the user to select a color.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- **IDOK** o **IDCANCEL**. Si **IDCANCEL** es devuelto, llame a Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) función para determinar si se produjo un error.  
+### <a name="return-value"></a>Return Value  
+ **IDOK** or **IDCANCEL**. If **IDCANCEL** is returned, call the Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) function to determine whether an error occurred.  
   
- **IDOK** y **IDCANCEL** son constantes que indican si el usuario seleccionó el botón Aceptar o Cancelar.  
+ **IDOK** and **IDCANCEL** are constants that indicate whether the user selected the OK or Cancel button.  
   
-### <a name="remarks"></a>Comentarios  
- Si desea inicializar las distintas opciones del cuadro de diálogo color estableciendo los miembros de la [m_cc](#m_cc) estructura, debe hacerlo antes de llamar a `DoModal` después de que se construye el objeto de cuadro de diálogo.  
+### <a name="remarks"></a>Remarks  
+ If you want to initialize the various color dialog-box options by setting members of the [m_cc](#m_cc) structure, you should do this before calling `DoModal` but after the dialog-box object is constructed.  
   
- Después de llamar a `DoModal`, puede llamar a otro miembro de funciones para recuperar la configuración o la entrada de información por el usuario en el cuadro de diálogo.  
+ After calling `DoModal`, you can call other member functions to retrieve the settings or information input by the user into the dialog box.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [CColorDialog::CColorDialog](#ccolordialog).  
+### <a name="example"></a>Example  
+  See the example for [CColorDialog::CColorDialog](#ccolordialog).  
   
-##  <a name="getcolor"></a>CColorDialog::GetColor  
- Llame a esta función después de llamar a `DoModal` para recuperar la información sobre el color seleccionado por el usuario.  
+##  <a name="getcolor"></a>  CColorDialog::GetColor  
+ Call this function after calling `DoModal` to retrieve the information about the color the user selected.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que contiene la información de RGB del color seleccionado en el cuadro de diálogo color.  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that contains the RGB information for the color selected in the color dialog box.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFCDocView&#50;](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#50](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]  
   
-##  <a name="getsavedcustomcolors"></a>CColorDialog::GetSavedCustomColors  
- `CColorDialog`objetos permiten al usuario, además de elegir los colores, definir un máximo de 16 colores personalizados.  
+##  <a name="getsavedcustomcolors"></a>  CColorDialog::GetSavedCustomColors  
+ `CColorDialog` objects permit the user, in addition to choosing colors, to define up to 16 custom colors.  
   
 ```  
 static COLORREF* PASCAL GetSavedCustomColors();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Puntero a una matriz de valores de color RGB 16 que almacena colores personalizados creados por el usuario.  
+### <a name="return-value"></a>Return Value  
+ A pointer to an array of 16 RGB color values that stores custom colors created by the user.  
   
-### <a name="remarks"></a>Comentarios  
- El `GetSavedCustomColors` función miembro proporciona acceso a estos colores. Estos colores se pueden recuperar después [DoModal](#domodal) devuelve **IDOK**.  
+### <a name="remarks"></a>Remarks  
+ The `GetSavedCustomColors` member function provides access to these colors. These colors can be retrieved after [DoModal](#domodal) returns **IDOK**.  
   
- Cada uno de los valores RGB 16 en la matriz devuelta se inicializa en RGB(255,255,255) (blanco). Los colores personalizados elegidos por el usuario se guardan sólo entre invocaciones de cuadro de diálogo dentro de la aplicación. Si desea guardar estos colores entre las distintas invocaciones de la aplicación, debe guardar ellos de alguna otra manera, como en una inicialización (. Archivo INI).  
+ Each of the 16 RGB values in the returned array is initialized to RGB(255,255,255) (white). The custom colors chosen by the user are saved only between dialog box invocations within the application. If you wish to save these colors between invocations of the application, you must save them in some other manner, such as in an initialization (.INI) file.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFCDocView&#51;](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#51](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]  
   
-##  <a name="m_cc"></a>CColorDialog::m_cc  
- Una estructura de tipo [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830), cuyos miembros almacenan las características y los valores del cuadro de diálogo.  
+##  <a name="m_cc"></a>  CColorDialog::m_cc  
+ A structure of type [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830), whose members store the characteristics and values of the dialog box.  
   
 ```  
 CHOOSECOLOR m_cc;  
 ```  
   
-### <a name="remarks"></a>Comentarios  
- Después de crear un `CColorDialog` objeto, puede usar `m_cc` para configurar varios aspectos del cuadro de diálogo antes de llamar a la [DoModal](#domodal) función miembro.  
+### <a name="remarks"></a>Remarks  
+ After constructing a `CColorDialog` object, you can use `m_cc` to set various aspects of the dialog box before calling the [DoModal](#domodal) member function.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFCDocView nº&53;](../../mfc/codesnippet/cpp/ccolordialog-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#53](../../mfc/codesnippet/cpp/ccolordialog-class_4.cpp)]  
   
-##  <a name="oncolorok"></a>CColorDialog::OnColorOK  
- Invalidar para validar el color especificado en el cuadro de diálogo.  
+##  <a name="oncolorok"></a>  CColorDialog::OnColorOK  
+ Override to validate the color entered into the dialog box.  
   
 ```  
 virtual BOOL OnColorOK();
 ```  
   
-### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si no se debe descartar el cuadro de diálogo; en caso contrario, 0 para aceptar el color que se ha especificado.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the dialog box should not be dismissed; otherwise 0 to accept the color that was entered.  
   
-### <a name="remarks"></a>Comentarios  
- Reemplace esta función sólo si desea proporcionar validación personalizada del color que el usuario selecciona en el cuadro de diálogo color.  
+### <a name="remarks"></a>Remarks  
+ Override this function only if you want to provide custom validation of the color the user selects in the color dialog box.  
   
- El usuario puede seleccionar un color mediante uno de los dos métodos siguientes:  
+ The user can select a color by one of the following two methods:  
   
--   Al hacer clic en un color en la paleta de colores. Los valores RGB del color seleccionado, a continuación, se reflejan en los cuadros de edición RGB correspondientes.  
+-   Clicking a color on the color palette. The selected color's RGB values are then reflected in the appropriate RGB edit boxes.  
   
--   Cuadros de edición de introducir valores en el RGB  
+-   Entering values in the RGB edit boxes  
   
- Reemplazar `OnColorOK` le permite rechazar un color que el usuario escribe en un cuadro de diálogo común de color por cualquier motivo específico de la aplicación.  
+ Overriding `OnColorOK` allows you to reject a color the user enters into a common color dialog box for any application-specific reason.  
   
- Normalmente, no es necesario usar esta función porque el marco de trabajo proporciona validación predeterminada de colores y muestra un cuadro de mensaje si se introduce un color válido.  
+ Normally, you do not need to use this function because the framework provides default validation of colors and displays a message box if an invalid color is entered.  
   
- Puede llamar a [SetCurrentColor](#setcurrentcolor) desde `OnColorOK` para forzar una selección de color. Una vez `OnColorOK` se ha desencadenado (es decir, el usuario hace clic **Aceptar** para aceptar el cambio de color), se puede llamar a [GetColor](#getcolor) para obtener el valor RGB del color nuevo.  
+ You can call [SetCurrentColor](#setcurrentcolor) from within `OnColorOK` to force a color selection. Once `OnColorOK` has been fired (that is, the user clicks **OK** to accept the color change), you can call [GetColor](#getcolor) to get the RGB value of the new color.  
   
-### <a name="example"></a>Ejemplo  
- [!code-cpp[52 NVC_MFCDocView](../../mfc/codesnippet/cpp/ccolordialog-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#52](../../mfc/codesnippet/cpp/ccolordialog-class_5.cpp)]  
   
-##  <a name="setcurrentcolor"></a>CColorDialog::SetCurrentColor  
- Llame a esta función después de llamar a `DoModal` para forzar la selección de color actual en el valor de color especificada en `clr`.  
+##  <a name="setcurrentcolor"></a>  CColorDialog::SetCurrentColor  
+ Call this function after calling `DoModal` to force the current color selection to the color value specified in `clr`.  
   
 ```  
 void SetCurrentColor(COLORREF clr);
 ```  
   
-### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parameters  
  `clr`  
- Un valor de color RGB.  
+ An RGB color value.  
   
-### <a name="remarks"></a>Comentarios  
- Esta función se llama desde un controlador de mensajes o `OnColorOK`. El cuadro de diálogo actualizará automáticamente la selección del usuario en función del valor de la `clr` parámetro.  
+### <a name="remarks"></a>Remarks  
+ This function is called from within a message handler or `OnColorOK`. The dialog box will automatically update the user's selection based on the value of the `clr` parameter.  
   
-### <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [CColorDialog::OnColorOK](#oncolorok).  
+### <a name="example"></a>Example  
+  See the example for [CColorDialog::OnColorOK](#oncolorok).  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo MDI de MFC](../../visual-cpp-samples.md)   
- [Ejemplo de MFC DRAWCLI](../../visual-cpp-samples.md)   
- [Clase CCommonDialog](../../mfc/reference/ccommondialog-class.md)   
- [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample MDI](../../visual-cpp-samples.md)   
+ [MFC Sample DRAWCLI](../../visual-cpp-samples.md)   
+ [CCommonDialog Class](../../mfc/reference/ccommondialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
