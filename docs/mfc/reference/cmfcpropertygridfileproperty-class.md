@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyGridFileProperty Class | Microsoft Docs
+title: Clase CMFCPropertyGridFileProperty | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCPropertyGridFileProperty [MFC], CMFCPropertyGridFileProperty
+- CMFCPropertyGridFileProperty class
+- CMFCPropertyGridFileProperty::OnClickButton method
 ms.assetid: 2bb8b8b4-47fc-4798-bd5e-dc8ea0b4cd9d
 caps.latest.revision: 25
 author: mikeblome
@@ -35,52 +36,52 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 555142a3adcb20478b426da131054e451b503c5e
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 56e9d258f5d608b03497632bef84cf73611f2e9a
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty Class
-The `CMFCPropertyGridFileProperty` class supports a property list control item that opens a file selection dialog box.  
+# <a name="cmfcpropertygridfileproperty-class"></a>Clase CMFCPropertyGridFileProperty
+La `CMFCPropertyGridFileProperty` clase es compatible con un elemento de control de lista de propiedades que se abre un cuadro de diálogo de selección de archivo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty](#cmfcpropertygridfileproperty)|Constructs a `CMFCPropertyGridFileProperty` object.|  
+|[CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty](#cmfcpropertygridfileproperty)|Construye un objeto `CMFCPropertyGridFileProperty`.|  
 |`CMFCPropertyGridFileProperty::~CMFCPropertyGridFileProperty`|Destructor.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|`CMFCPropertyGridFileProperty::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
-|`CMFCPropertyGridFileProperty::OnClickButton`|(Overrides [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
+|`CMFCPropertyGridFileProperty::GetThisClass`|Usar el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
+|`CMFCPropertyGridFileProperty::OnClickButton`|(Invalida [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)  
   
  [CMFCPropertyGridFileProperty](../../mfc/reference/cmfcpropertygridfileproperty-class.md)  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxpropertygridctrl.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxpropertygridctrl.h  
   
-##  <a name="cmfcpropertygridfileproperty"></a>  CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty  
- Constructs a `CMFCPropertyGridFileProperty` object.  
+##  <a name="cmfcpropertygridfileproperty"></a>CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty  
+ Construye un objeto `CMFCPropertyGridFileProperty`.  
   
 ```  
 CMFCPropertyGridFileProperty(
@@ -94,44 +95,44 @@ CMFCPropertyGridFileProperty(
     DWORD_PTR dwData=0);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `strName`  
- The property name.  
+ Nombre de la propiedad.  
   
  [in] `bOpenFileDialog`  
- `TRUE` to open an **Open File** dialog box; `FALSE` to open a **Save File** dialog box.  
+ `TRUE`Para abrir un **abrir archivo** cuadro de diálogo; `FALSE` para abrir un **Guardar archivo** cuadro de diálogo.  
   
  [in] `strFileName`  
- The initial file name.  
+ El nombre de archivo inicial.  
   
  [in] `lpszDefExt`  
- A string of one or more file name extensions. The default value is `NULL`.  
+ Una cadena con una o más extensiones de nombre de archivo. El valor predeterminado es `NULL`.  
   
  [in] `dwFlags`  
- Dialog box flags. The default value is a bitwise combination (OR) of `OFN_HIDEREADONLY` and `OFN_OVERWRITEPROMPT`.  
+ Marcas de cuadro de diálogo El valor predeterminado es una combinación bit a bit (OR) de `OFN_HIDEREADONLY` y `OFN_OVERWRITEPROMPT`.  
   
  [in] `lpszFilter`  
- A string of one or more file filters. The default value is `NULL`.  
+ Una cadena de uno o más filtros de archivo. El valor predeterminado es `NULL`.  
   
  [in] `lpszDescr`  
- The property item description. The default value is `NULL`.  
+ Una descripción del elemento de propiedad. El valor predeterminado es `NULL`.  
   
  [in] `dwData`  
- Application-specific data that is associated with the property item. For example, a 32-bit integer or a pointer to other data. The default value is 0.  
+ Datos específicos de la aplicación que están asociados al elemento de propiedad. Por ejemplo, un entero de 32 bits o un puntero a otros datos. El valor predeterminado es 0.  
   
-### <a name="return-value"></a>Return Value  
+### <a name="return-value"></a>Valor devuelto  
   
-### <a name="remarks"></a>Remarks  
- For a full list of available flags, see [OPENFILENAME structure](https://msdn.microsoft.com/library/ms646839.aspx).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener una lista completa de los indicadores disponibles, vea [estructura OPENFILENAME](https://msdn.microsoft.com/library/ms646839.aspx).  
   
-### <a name="example"></a>Example  
- The following example demonstrates how to create an object using the constructor of the `CMFCPropertyGridFileProperty` class. This example is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).  
+### <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo crear un objeto mediante el constructor de la clase `CMFCPropertyGridFileProperty`. Este ejemplo forma parte de la [ejemplo de demostración de Visual Studio](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo#22](../../mfc/codesnippet/cpp/cmfcpropertygridfileproperty-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo&#22;](../../mfc/codesnippet/cpp/cmfcpropertygridfileproperty-class_1.cpp)]  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md)   
- [CMFCPropertyGridProperty Class](../../mfc/reference/cmfcpropertygridproperty-class.md)
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [Clases](../../mfc/reference/mfc-classes.md)   
+ [Clase CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)   
+ [Clase CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
 

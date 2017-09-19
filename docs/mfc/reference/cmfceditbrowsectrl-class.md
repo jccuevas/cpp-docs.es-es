@@ -1,5 +1,5 @@
 ---
-title: CMFCEditBrowseCtrl Class | Microsoft Docs
+title: Clase CMFCEditBrowseCtrl | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,16 +24,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCEditBrowseCtrl [MFC], EnableBrowseButton
-- CMFCEditBrowseCtrl [MFC], EnableFileBrowseButton
-- CMFCEditBrowseCtrl [MFC], EnableFolderBrowseButton
-- CMFCEditBrowseCtrl [MFC], GetMode
-- CMFCEditBrowseCtrl [MFC], OnAfterUpdate
-- CMFCEditBrowseCtrl [MFC], OnBrowse
-- CMFCEditBrowseCtrl [MFC], OnChangeLayout
-- CMFCEditBrowseCtrl [MFC], OnDrawBrowseButton
-- CMFCEditBrowseCtrl [MFC], OnIllegalFileName
-- CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
+- CMFCEditBrowseCtrl::PreTranslateMessage method
+- CMFCEditBrowseCtrl constructor
+- CMFCEditBrowseCtrl class
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
 caps.latest.revision: 33
 author: mikeblome
@@ -53,81 +46,81 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: c235654d7298705f448729a43cf66c5851b6ab29
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 5c5650da677a442628049c9ef4b41c2142cfb2c2
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl Class
-The `CMFCEditBrowseCtrl` class supports the edit browse control, which is an editable text box that optionally contains a browse button. When the user clicks the browse button, the control performs a custom action or displays a standard dialog box that contains a file browser or a folder browser.  
+# <a name="cmfceditbrowsectrl-class"></a>Clase CMFCEditBrowseCtrl
+La `CMFCEditBrowseCtrl` clase es compatible con el control de exploración de edición, que es un cuadro de texto editable que contiene opcionalmente un botón Examinar. Cuando el usuario hace clic en el botón Examinar, el control realiza una acción personalizada o muestra un cuadro de diálogo estándar que contiene un explorador de archivos o un explorador de carpetas.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CMFCEditBrowseCtrl : public CEdit  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|Default constructor.|  
+|`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|Constructor predeterminado.|  
 |`CMFCEditBrowseCtrl::~CMFCEditBrowseCtrl`|Destructor.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Enables or disables (hides) the browse button.|  
-|[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Enables the browse button and puts the edit browse control in *file browse* mode.|  
-|[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|Enables the browse button and puts the edit browse control in *folder browse* mode.|  
-|[CMFCEditBrowseCtrl::GetMode](#getmode)|Returns the current browse mode.|  
-|[CMFCEditBrowseCtrl::OnAfterUpdate](#onafterupdate)|Called by the framework after the edit browse control is updated with the result of a browse action.|  
-|[CMFCEditBrowseCtrl::OnBrowse](#onbrowse)|Called by the framework after the user clicks the browse button.|  
-|[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Redraws the current edit browse control.|  
-|[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Called by the framework to draw the browse button.|  
-|[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Called by the framework when an illegal file name was entered in the edit control.|  
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. For syntax and more information, see [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
-|[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Sets a custom image for the browse button.|  
+|[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Habilita o deshabilita (oculta) el botón Examinar.|  
+|[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Habilita el botón Examinar y coloca el control de exploración de edición en *Examinar archivo* modo.|  
+|[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|Habilita el botón Examinar y coloca el control de exploración de edición en *examinar carpetas* modo.|  
+|[CMFCEditBrowseCtrl::GetMode](#getmode)|Devuelve el modo de exploración actual.|  
+|[CMFCEditBrowseCtrl::OnAfterUpdate](#onafterupdate)|Llamado por el marco de trabajo cuando el control de exploración de edición se actualiza con el resultado de una acción de exploración.|  
+|[CMFCEditBrowseCtrl::OnBrowse](#onbrowse)|Llamado por el marco de trabajo cuando el usuario hace clic en el botón Examinar.|  
+|[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Vuelve a dibujar el control de exploración de edición actual.|  
+|[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Llamado por el marco para dibujar el botón Examinar.|  
+|[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Llamado por el marco de trabajo cuando se especificó un nombre de archivo no válido en el control de edición.|  
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|Convierte los mensajes de ventana antes de que se envíen a la [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. Para obtener más información y la sintaxis, vea [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
+|[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Establece una imagen personalizada para el botón Examinar.|  
   
-## <a name="remarks"></a>Remarks  
- Use an edit browse control to select a file or folder name. Optionally, use the control to perform a custom action such as to display a dialog box. You can display or not display the browse button, and you can apply a custom label or image on the button.  
+## <a name="remarks"></a>Comentarios  
+ Utilice un control de exploración de edición para seleccionar un nombre de archivo o carpeta. Opcionalmente, puede utilizar el control para realizar una acción personalizada como para mostrar un cuadro de diálogo. Puede mostrar o no mostrar el botón Examinar, y puede aplicar una etiqueta personalizada o una imagen en el botón.  
   
- The *browse mode* of the edit browse control determines whether it displays a browse button and what action occurs when the button is clicked. For more information, see the [GetMode](#getmode) method.  
+ El *modo de exploración* de la exploración de editar control determina si muestra un botón de examinar y qué acción se produce cuando se hace clic en el botón. Para obtener más información, consulte el [GetMode](#getmode) método.  
   
- The `CMFCEditBrowseCtrl` class supports the following modes.  
+ La `CMFCEditBrowseCtrl` clase admite los modos siguientes.  
   
  `custom mode`  
- A custom action is performed when the user clicks the browse button. For example, you can display an application-specific dialog box.  
+ Se realiza una acción personalizada cuando el usuario hace clic en el botón Examinar. Por ejemplo, puede mostrar un cuadro de diálogo específicos de la aplicación.  
   
  `file mode`  
- A standard file selection dialog box is displayed when the user clicks the browse button.  
+ Cuando el usuario hace clic en el botón Examinar, se muestra un cuadro de diálogo de selección de archivos estándar.  
   
  `folder mode`  
- A standard folder selection dialog box is displayed when the user clicks the browse button.  
+ Cuando el usuario hace clic en el botón Examinar, se muestra un cuadro de diálogo de selección de carpeta estándar.  
   
-## <a name="how-to-specify-an-edit-browse-control"></a>How-To: Specify an Edit Browse Control  
- Perform the following steps to incorporate an edit browse control in your application:  
+## <a name="how-to-specify-an-edit-browse-control"></a>Cómo: Especificar un Control de exploración de edición  
+ Realice los pasos siguientes para incorporar un control de exploración de edición en la aplicación:  
   
-1.  If you want to implement a custom browse mode, derive your own class from the `CMFCEditBrowseCtrl` class and then override the [CMFCEditBrowseCtrl::OnBrowse](#onbrowse) method. In the overridden method, execute a custom browse action and update the edit browse control with the result.  
+1.  Si desea implementar un modo de exploración personalizado, derive su propia clase de la `CMFCEditBrowseCtrl` de clase y, a continuación, reemplace el [CMFCEditBrowseCtrl::OnBrowse](#onbrowse) método. En el método reemplazado, ejecutar una acción de exploración personalizada y actualice el control de exploración de edición con el resultado.  
   
-2.  Embed either the `CMFCEditBrowseCtrl` object or the derived edit browse control object into the parent window object.  
+2.  Incrustar en la `CMFCEditBrowseCtrl` objeto o el objeto de control de edición derivada examinar en el objeto de la ventana primaria.  
   
-3.  If you use the **Class Wizard** to create a dialog box, add an edit control ( `CEdit`) to the dialog box form. Also, add a variable to access the control in your header file. In your header file, change the type of the variable from `CEdit` to `CMFCEditBrowseCtrl`. The edit browse control will be created automatically. If you do not use the **Class Wizard**, add a `CMFCEditBrowseCtrl` variable to your header file and then call its `Create` method.  
+3.  Si utiliza la **Class Wizard** para crear un cuadro de diálogo, agregue un control de edición ( `CEdit`) para el formulario de cuadro de diálogo. Además, agregue una variable para tener acceso al control en el archivo de encabezado. En el archivo de encabezado, cambie el tipo de la variable de `CEdit` a `CMFCEditBrowseCtrl`. El control de exploración de edición se creará automáticamente. Si no utiliza la **Class Wizard**, agregar un `CMFCEditBrowseCtrl` variable a su archivo de encabezado y después llamar a su `Create` (método).  
   
-4.  If you add an edit browse control to a dialog box, use the **ClassWizard** tool to set up data exchange.  
+4.  Si agrega un control de exploración de edición a un cuadro de diálogo, use la **ClassWizard** herramienta para configurar el intercambio de datos.  
   
-5.  Call the [EnableFolderBrowseButton](#enablefolderbrowsebutton), [EnableFileBrowseButton](#enablefilebrowsebutton), or [EnableBrowseButton](#enablebrowsebutton) method to set the browse mode and display the browse button. Call the [GetMode](#getmode) method to obtain the current browse mode.  
+5.  Llame a la [EnableFolderBrowseButton](#enablefolderbrowsebutton), [EnableFileBrowseButton](#enablefilebrowsebutton), o [EnableBrowseButton](#enablebrowsebutton) método para establecer el modo de exploración y mostrar el botón Examinar. Llame a la [GetMode](#getmode) método para obtener el modo de exploración actual.  
   
-6.  To provide a custom image for the browse button, call the [SetBrowseButtonImage](#setbrowsebuttonimage) method or override the [OnDrawBrowseButton](#ondrawbrowsebutton) method.  
+6.  Para proporcionar una imagen personalizada para el botón Examinar, llame a la [SetBrowseButtonImage](#setbrowsebuttonimage) método o reemplazar el [OnDrawBrowseButton](#ondrawbrowsebutton) método.  
   
-7.  To remove the browse button from the edit browse control, call the [EnableBrowseButton](#enablebrowsebutton) method with the `bEnable` parameter set to `FALSE`.  
+7.  Para quitar el control de exploración de editar el botón Examinar, llame a la [EnableBrowseButton](#enablebrowsebutton) método con la `bEnable` establecido en `FALSE`.  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -138,17 +131,17 @@ class CMFCEditBrowseCtrl : public CEdit
   
  [CMFCEditBrowseCtrl](../../mfc/reference/cmfceditbrowsectrl-class.md)  
   
-## <a name="example"></a>Example  
- The following example demonstrates how to use two methods in the `CMFCEditBrowseCtrl` class: `EnableFolderBrowseButton` and `EnableFileBrowseButton`. This example is part of the [New Controls sample](../../visual-cpp-samples.md).  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar dos métodos en el `CMFCEditBrowseCtrl` clase: `EnableFolderBrowseButton` y `EnableFileBrowseButton`. Este ejemplo forma parte de la [ejemplo nuevos controles](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]  
-[!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls Nº&6;](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]  
+[!code-cpp[NVC_MFC_NewControls&#7;](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxeditbrowsectrl.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxeditbrowsectrl.h  
   
-##  <a name="enablebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableBrowseButton  
- Displays or does not display the browse button on the current edit browse control.  
+##  <a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl::EnableBrowseButton  
+ Muestra o no mostrar el botón Examinar en el control de exploración de edición actual.  
   
 ```  
 void EnableBrowseButton(
@@ -156,20 +149,20 @@ void EnableBrowseButton(
     LPCTSTR szLabel=_T("..."));
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bEnable`  
- `TRUE` to display the browse button; `FALSE` not to display the browse button. The default value is `TRUE`.  
+ `TRUE`para mostrar el botón Examinar; `FALSE` no se muestre el botón Examinar. El valor predeterminado es `TRUE`.  
   
  `szLabel`  
- The label that is displayed on the browse button. The default value is " **...**".  
+ La etiqueta que se muestra en el botón Examinar. El valor predeterminado es " **... **".  
   
-### <a name="remarks"></a>Remarks  
- If the `bEnable` parameter is `TRUE`, implement a custom action to perform when the browse button is clicked. To implement a custom action, derive a class from the `CMFCEditBrowseCtrl` class and then override its [OnBrowse](#onbrowse) method.  
+### <a name="remarks"></a>Comentarios  
+ Si el `bEnable` parámetro es `TRUE`, implementar una acción personalizada para llevar a cabo cuando se hace clic en el botón Examinar. Para implementar una acción personalizada, derive una clase de la `CMFCEditBrowseCtrl` de clase y, a continuación, invalide su [OnBrowse](#onbrowse) método.  
   
- If the `bEnable` parameter is `TRUE`, the browse mode of the control is `BrowseMode_Default`; otherwise, the browse mode is `BrowseMode_None`. For more information about browse modes, see the [GetMode](#getmode) method.  
+ Si el `bEnable` parámetro es `TRUE`, es el modo de exploración del control `BrowseMode_Default`; en caso contrario, es el modo de exploración `BrowseMode_None`. Para obtener más información acerca de los modos de exploración, consulte la [GetMode](#getmode) método.  
   
-##  <a name="enablefilebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFileBrowseButton  
- Displays the browse button on the current edit browse control and puts the control in *file browse* mode.  
+##  <a name="enablefilebrowsebutton"></a>CMFCEditBrowseCtrl::EnableFileBrowseButton  
+ Muestra el botón Examinar en el control de exploración de edición actual y coloca el control en *Examinar archivo* modo.  
   
 ```  
 void EnableFileBrowseButton(
@@ -178,85 +171,85 @@ void EnableFileBrowseButton(
     DWORD dwFlags = OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `lpszDefExt`  
- Specifies the default file name extension that is used in the file selection dialog box. The default value is `NULL`.  
+ Especifica la extensión de nombre de archivo predeterminado que se usa en el cuadro de diálogo de selección de archivos. El valor predeterminado es `NULL`.  
   
  `lpszFilter`  
- Specifies the default filter string that is used in the file selection dialog box. The default value is `NULL`.  
+ Especifica la cadena de filtro predeterminado que se usa en el cuadro de diálogo de selección de archivos. El valor predeterminado es `NULL`.  
   
  `dwFlags`  
- Dialog box flags. The default value is a bitwise combination (OR) of OFN_HIDEREADONLY and OFN_OVERWRITEPROMPT.  
+ Marcas de cuadro de diálogo. El valor predeterminado es una combinación bit a bit (OR) de OFN_HIDEREADONLY y OFN_OVERWRITEPROMPT.  
   
-### <a name="remarks"></a>Remarks  
- When the edit browse control is in file browse mode and the user clicks the browse button, the control displays the standard file selection dialog box.  
+### <a name="remarks"></a>Comentarios  
+ Cuando el control de cuadro de búsqueda modificable está en modo de búsqueda de archivo y el usuario hace clic en el botón Examinar, el control muestra el cuadro de diálogo de selección de archivos estándar.  
   
- For a full list of available flags, see [OPENFILENAME structure](https://msdn.microsoft.com/library/ms646839.aspx).  
+ Para obtener una lista completa de los indicadores disponibles, vea [estructura OPENFILENAME](https://msdn.microsoft.com/library/ms646839.aspx).  
   
-##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton  
- Displays the browse button on the current edit browse control and puts the control in *folder browse* mode.  
+##  <a name="enablefolderbrowsebutton"></a>CMFCEditBrowseCtrl::EnableFolderBrowseButton  
+ Muestra el botón Examinar en el control de exploración de edición actual y coloca el control en *examinar carpetas* modo.  
   
 ```  
 void EnableFolderBrowseButton();
 ```  
   
-### <a name="remarks"></a>Remarks  
- When the edit browse control is in folder browse mode and the user clicks the browse button, the control displays the standard folder selection dialog box.  
+### <a name="remarks"></a>Comentarios  
+ Cuando el control de exploración de edición está en modo de exploración de la carpeta y el usuario hace clic en el botón Examinar, el control muestra el cuadro de diálogo de selección de carpeta estándar.  
   
-##  <a name="getmode"></a>  CMFCEditBrowseCtrl::GetMode  
- Retrieves the browse mode of the current edit browse control.  
+##  <a name="getmode"></a>CMFCEditBrowseCtrl::GetMode  
+ Recupera el modo de exploración del control de exploración de edición actual.  
   
 ```  
 CMFCEditBrowseCtrl::BrowseMode GetMode() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- One of the enumeration values that specifies the current mode of the edit browse control. The browse mode determines whether the framework displays the browse button and what action occurs when a user clicks that button.  
+### <a name="return-value"></a>Valor devuelto  
+ Uno de los valores de enumeración que especifica el modo actual de la edición examinar control. El modo de exploración determina si el marco de trabajo muestra el botón Examinar y qué acción se produce cuando un usuario hace clic en ese botón.  
   
- The following table lists the possible return values.  
+ La tabla siguiente muestra los valores devueltos posibles.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|`BrowseMode_Default`|`custom mode`. A programmer-defined action is performed.|  
-|`BrowseMode_File`|`file mode`. The standard file browser dialog box is displayed.|  
-|`BrowseMode_Folder`|`folder mode`. The standard folder browser dialog box is displayed.|  
-|`BrowseMode_None`|The browse button is not displayed.|  
+|`BrowseMode_Default`|`custom mode`. Se realiza una acción definida por el programador.|  
+|`BrowseMode_File`|`file mode`. Se muestra el cuadro de diálogo Explorador de archivos estándar.|  
+|`BrowseMode_Folder`|`folder mode`. Se muestra el cuadro de diálogo del explorador de carpeta estándar.|  
+|`BrowseMode_None`|No se muestra el botón Examinar.|  
   
-### <a name="remarks"></a>Remarks  
- By default, a `CMFCEditBrowseCtrl` object is initialized to `BrowseMode_None` mode. Modify the browse mode with the [CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton), [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton), and [CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton) methods.  
+### <a name="remarks"></a>Comentarios  
+ De forma predeterminada, un `CMFCEditBrowseCtrl` objeto se inicializa en `BrowseMode_None` modo. Modificar el modo de exploración con el [CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton), [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton), y [CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton) métodos.  
   
-##  <a name="onafterupdate"></a>  CMFCEditBrowseCtrl::OnAfterUpdate  
- Called by the framework after the edit browse control is updated with the result of a browse action.  
+##  <a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate  
+ Llamado por el marco de trabajo cuando el control de exploración de edición se actualiza con el resultado de una acción de exploración.  
   
 ```  
 virtual void OnAfterUpdate();
 ```  
   
-### <a name="remarks"></a>Remarks  
- Override this method in a derived class to implement a custom action.  
+### <a name="remarks"></a>Comentarios  
+ Invalide este método en una clase derivada para implementar una acción personalizada.  
   
-##  <a name="onbrowse"></a>  CMFCEditBrowseCtrl::OnBrowse  
- Called by the framework after the user clicks the browse button of the edit browse control.  
+##  <a name="onbrowse"></a>CMFCEditBrowseCtrl::OnBrowse  
+ Lo llama el marco de trabajo después de que el usuario hace clic en el botón de examinar el control de edición Examinar.  
   
 ```  
 virtual void OnBrowse();
 ```  
   
-### <a name="remarks"></a>Remarks  
- Use this method to execute custom code when the user clicks the browse button of the edit browse control. Derive your own class from the `CMFCEditBrowseCtrl` class and override its `OnBrowse` method. In that method, implement a custom browse action and optionally update the text box of the edit browse control. In your application, use the [EnableBrowseButton](#enablebrowsebutton) method to put the edit browse control in *custom browse* mode.  
+### <a name="remarks"></a>Comentarios  
+ Utilice este método para ejecutar código personalizado cuando el usuario hace clic en el botón de examinar el control de edición Examinar. Derive su propia clase de la `CMFCEditBrowseCtrl` clase e invalidar su `OnBrowse` método. En ese método, implementar una acción de exploración personalizada y, opcionalmente, actualice el cuadro de texto del control de exploración de edición. En la aplicación, use la [EnableBrowseButton](#enablebrowsebutton) método para colocar el control de exploración de edición en *exploración personalizada* modo.  
   
-##  <a name="onchangelayout"></a>  CMFCEditBrowseCtrl::OnChangeLayout  
- Redraws the current edit browse control.  
+##  <a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout  
+ Vuelve a dibujar el control de exploración de edición actual.  
   
 ```  
 virtual void OnChangeLayout();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method when the browse mode of the edit browse control changes. For more information, see [CMFCEditBrowseCtrl::GetMode](#getmode).  
+### <a name="remarks"></a>Comentarios  
+ El marco de trabajo llama a este método cuando el modo de exploración de la exploración de edición del control cambios. Para obtener más información, consulte [CMFCEditBrowseCtrl::GetMode](#getmode).  
   
-##  <a name="ondrawbrowsebutton"></a>  CMFCEditBrowseCtrl::OnDrawBrowseButton  
- Called by the framework to draw the browse button on the edit browse control.  
+##  <a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl::OnDrawBrowseButton  
+ Llamado por el marco para dibujar el botón Examinar en el control de exploración de edición.  
   
 ```  
 virtual void OnDrawBrowseButton(
@@ -266,24 +259,24 @@ virtual void OnDrawBrowseButton(
     BOOL bIsButtonHot);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pDC`  
- A pointer to a device context.  
+ Puntero a un contexto de dispositivo.  
   
  `Rect`  
- The bounding rectangle of the browse button.  
+ El rectángulo delimitador del botón Examinar.  
   
  `bIsButtonPressed`  
- `TRUE` if the button is pressed; otherwise, `FALSE`.  
+ `TRUE`Si se presiona el botón; de lo contrario, `FALSE`.  
   
  `bIsButtonHot`  
- `TRUE` if the button is highlighted; otherwise, `FALSE`.  
+ `TRUE`Si el botón está resaltado; de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- Override this function in a derived class to customize the appearance of the browse button.  
+### <a name="remarks"></a>Comentarios  
+ Reemplace esta función en una clase derivada para personalizar la apariencia del botón Examinar.  
   
-##  <a name="setbrowsebuttonimage"></a>  CMFCEditBrowseCtrl::SetBrowseButtonImage  
- Sets a custom image on the browse button of the edit browse control.  
+##  <a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage  
+ Establece una imagen personalizada en el botón de examinar el control de edición Examinar.  
   
 ```  
 void SetBrowseButtonImage(
@@ -298,39 +291,39 @@ void SetBrowseButtonImage(
 void SetBrowseButtonImage(UINT uiBmpResId);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `hIcon`  
- The handle of an icon.  
+ El identificador de un icono.  
   
  `hBitmap`  
- The handle of a bitmap.  
+ El identificador de un mapa de bits.  
   
  `uiBmpResId`  
- The resource ID of a bitmap.  
+ El identificador de recurso de un mapa de bits.  
   
  `bAutoDestroy`  
- `TRUE` to delete the specified icon or bitmap when this method exits; otherwise, `FALSE`. The default value is `TRUE`.  
+ `TRUE`Para eliminar el icono especificado o un mapa de bits cuando este método finaliza; de lo contrario, `FALSE`. El valor predeterminado es `TRUE`.  
   
-### <a name="remarks"></a>Remarks  
- Use this method to apply a custom image to the browse button. By default, the framework obtains a standard image when the edit browse control is in *file browse* or *folder browse* mode.  
+### <a name="remarks"></a>Comentarios  
+ Utilice este método para aplicar una imagen personalizada en el botón Examinar. De forma predeterminada, el marco de trabajo obtiene una imagen estándar cuando el control de exploración de edición que se encuentra en *Examinar archivo* o *examinar carpetas* modo.  
   
-##  <a name="onillegalfilename"></a>  CMFCEditBrowseCtrl::OnIllegalFileName  
- Called by the framework when an illegal file name was entered in the edit control.  
+##  <a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName  
+ Llamado por el marco de trabajo cuando se especificó un nombre de archivo no válido en el control de edición.  
   
 ```  
 virtual BOOL OnIllegalFileName(CString& strFileName);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `strFileName`  
- Specifies the illegal file name.  
+ Especifica el nombre de archivo no válido.  
   
-### <a name="return-value"></a>Return Value  
- Should return `FALSE` if this file name can not be passed further to the file dialog. In this case, focus is set back to the edit control and the user should continue editing. The default implementation displays a message box telling the user about the illegal file name and returns `FALSE`. You can override this method, correct the file name, and return `TRUE` for further processing.  
+### <a name="return-value"></a>Valor devuelto  
+ Debe devolver `FALSE` si el nombre de archivo no pueden pasarse más para el cuadro de diálogo de archivo. En este caso, el foco se vuelve a establecer el control de edición y el usuario debe seguir editando. La implementación predeterminada se muestra un cuadro de mensaje que indica al usuario sobre el nombre de archivo no válido y se devuelve `FALSE`. Puede invalidar este método, corrija el nombre de archivo y devolver `TRUE` para su posterior procesamiento.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [Clases](../../mfc/reference/mfc-classes.md)
 

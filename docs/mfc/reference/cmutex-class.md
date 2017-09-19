@@ -1,5 +1,5 @@
 ---
-title: CMutex Class | Microsoft Docs
+title: Clase CMutex | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMutex [MFC], CMutex
+- CMutex class
+- synchronization classes, CMutex class
+- synchronization objects, mutex
+- mutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
 caps.latest.revision: 22
 author: mikeblome
@@ -35,53 +38,53 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 3f68fe590efd8e5eda87c2f346168ebb71300641
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 159f2e02dfe44d74ebcaad687a23cef734b61fc9
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmutex-class"></a>CMutex Class
-Represents a "mutex" — a synchronization object that allows one thread mutually exclusive access to a resource.  
+# <a name="cmutex-class"></a>Clase CMutex
+Representa una "exclusión mutua", un objeto de sincronización que permite que un subproceso tenga acceso de manera mutuamente exclusivo a un recurso.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CMutex : public CSyncObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMutex::CMutex](#cmutex)|Constructs a `CMutex` object.|  
+|[CMutex::CMutex](#cmutex)|Construye un objeto `CMutex`.|  
   
-## <a name="remarks"></a>Remarks  
- Mutexes are useful when only one thread at a time can be allowed to modify data or some other controlled resource. For example, adding nodes to a linked list is a process that should only be allowed by one thread at a time. By using a `CMutex` object to control the linked list, only one thread at a time can gain access to the list.  
+## <a name="remarks"></a>Comentarios  
+ Las exclusiones mutuas son útiles cuando se permita sólo un subproceso a la vez para modificar datos o algún otro recurso controlado. Por ejemplo, agregar nodos a una lista vinculada es un proceso que sólo se permite un subproceso al mismo tiempo. Mediante el uso de un `CMutex` objeto para controlar la lista vinculada, sólo un subproceso a la vez puede obtener acceso a la lista.  
   
- To use a `CMutex` object, construct the `CMutex` object when it is needed. Specify the name of the mutex you wish to wait on, and that your application should initially own it. You can then access the mutex when the constructor returns. Call [CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock) when you are done accessing the controlled resource.  
+ Para usar un `CMutex` objeto, construir la `CMutex` objeto cuando sea necesario. Especifique el nombre de la exclusión mutua que se va a esperar y que la aplicación inicialmente debe poseer. A continuación, puede tener acceso a la exclusión mutua cuando se devuelve el constructor. Llame a [CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock) cuando termine teniendo acceso al recurso controlado.  
   
- An alternative method for using `CMutex` objects is to add a variable of type `CMutex` as a data member to the class you wish to control. During construction of the controlled object, call the constructor of the `CMutex` data member specifying if the mutex is initially owned, the name of the mutex (if it will be used across process boundaries), and desired security attributes.  
+ Un método alternativo para el uso de `CMutex` objetos consiste en Agregar una variable de tipo `CMutex` como un miembro de datos a la clase que desee controlar. Durante la construcción del objeto controlado, llame al constructor de la `CMutex` miembro de datos que especifica si la exclusión mutua posee inicialmente, el nombre de la exclusión mutua (si se utilizará en los límites de proceso) y desea los atributos de seguridad.  
   
- To access resources controlled by `CMutex` objects in this manner, first create a variable of either type [CSingleLock](../../mfc/reference/csinglelock-class.md) or type [CMultiLock](../../mfc/reference/cmultilock-class.md) in your resource's access member function. Then call the lock object's `Lock` member function (for example, [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). At this point, your thread will either gain access to the resource, wait for the resource to be released and gain access, or wait for the resource to be released and time out, failing to gain access to the resource. In any case, your resource has been accessed in a thread-safe manner. To release the resource, use the lock object's `Unlock` member function (for example, [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), or allow the lock object to fall out of scope.  
+ Para obtener acceso a los recursos controlados por `CMutex` objetos de este modo, primero cree una variable de cualquier tipo de [CSingleLock](../../mfc/reference/csinglelock-class.md) o tipo [CMultiLock](../../mfc/reference/cmultilock-class.md) en función de miembro de acceso de su recurso. A continuación, llame al objeto de bloqueo `Lock` función miembro (por ejemplo, [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). En este punto, el subproceso se obtienen acceso al recurso, espere a que el recurso para liberarse y obtener acceso o espere a que el recurso que se libere y el tiempo de espera, no obtiene acceso al recurso. En cualquier caso, se tiene acceso a los recursos de una manera segura para subprocesos. Para liberar el recurso, utilice el objeto de bloqueo `Unlock` función miembro (por ejemplo, [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), o permitir que el objeto de bloqueo quedar fuera del ámbito.  
   
- For more information on using `CMutex` objects, see the article [Multithreading: How to Use the Synchronization Classes](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+ Para obtener más información sobre el uso de `CMutex` los objetos, vea el artículo [subprocesamiento múltiple: cómo usar las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CSyncObject](../../mfc/reference/csyncobject-class.md)  
   
  `CMutex`  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxmt.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxmt.h  
   
-##  <a name="cmutex"></a>  CMutex::CMutex  
- Constructs a named or unnamed `CMutex` object.  
+##  <a name="cmutex"></a>CMutex::CMutex  
+ Construye una con o sin nombre `CMutex` objeto.  
   
 ```  
 CMutex(
@@ -90,25 +93,25 @@ CMutex(
     LPSECURITY_ATTRIBUTES lpsaAttribute = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bInitiallyOwn`  
- Specifies if the thread creating the `CMutex` object initially has access to the resource controlled by the mutex.  
+ Especifica si el subproceso de creación del `CMutex` objeto inicialmente tiene acceso al recurso controlado por la exclusión mutua.  
   
  `lpszName`  
- Name of the `CMutex` object. If another mutex with the same name exists, `lpszName` must be supplied if the object will be used across process boundaries. If **NULL**, the mutex will be unnamed. If the name matches an existing mutex, the constructor builds a new `CMutex` object which references the mutex of that name. If the name matches an existing synchronization object that is not a mutex, the construction will fail.  
+ Nombre del objeto `CMutex`. Si existe otra exclusión mutua con el mismo nombre, `lpszName` debe especificarse si el objeto se utiliza en los límites de proceso. Si **NULL**, la exclusión mutua estará sin nombre. Si el nombre coincide con una exclusión mutua existente, el constructor genera una nueva `CMutex` objeto que hace referencia a la exclusión mutua de ese nombre. Si el nombre coincide con un objeto de sincronización existente que no es una exclusión mutua, se producirá un error en la construcción.  
   
  `lpsaAttribute`  
- Security attributes for the mutex object. For a full description of this structure, see [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) in the Windows SDK.  
+ Atributos de seguridad para el objeto de exclusión mutua. Para obtener una descripción completa de esta estructura, vea [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="remarks"></a>Remarks  
- To access or release a `CMutex` object, create a [CMultiLock](../../mfc/reference/cmultilock-class.md) or [CSingleLock](../../mfc/reference/csinglelock-class.md) object and call its [Lock](../../mfc/reference/csinglelock-class.md#lock) and [Unlock](../../mfc/reference/csinglelock-class.md#unlock) member functions. If the `CMutex` object is being used stand-alone, call its `Unlock` member function to release it.  
+### <a name="remarks"></a>Comentarios  
+ Para obtener acceso o liberar una `CMutex` , cree un [CMultiLock](../../mfc/reference/cmultilock-class.md) o [CSingleLock](../../mfc/reference/csinglelock-class.md) objeto y llamar a su [bloqueo](../../mfc/reference/csinglelock-class.md#lock) y [Unlock](../../mfc/reference/csinglelock-class.md#unlock) funciones miembro. Si el `CMutex` objeto se utiliza independiente, llame a su `Unlock` función miembro para liberarlo.  
   
 > [!IMPORTANT]
->  After creating the `CMutex` object, use [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) to ensure that the mutex did not already exist. If the mutex did exist unexpectedly, it may indicate a rogue process is squatting and may be intending to use the mutex maliciously. In this case, the recommended security-conscious procedure is to close the handle and continue as if there was a failure in creating the object.  
+>  Después de crear el `CMutex` objeto, utilice [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) para asegurarse de que la exclusión mutua no existía. Si la exclusión mutua existía inesperadamente, puede indicar un proceso invasor es uso inapropiado y puede prevé utilizar la exclusión mutua de forma malintencionada. En este caso, el procedimiento recomendado de preocupados por la seguridad es cerrar el identificador y continuar como si se produjo un error en la creación del objeto.  
   
-## <a name="see-also"></a>See Also  
- [CSyncObject Class](../../mfc/reference/csyncobject-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>Vea también  
+ [CSyncObject (clase)](../../mfc/reference/csyncobject-class.md)   
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)
 
 
 

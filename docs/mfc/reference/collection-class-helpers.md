@@ -1,5 +1,5 @@
 ---
-title: Collection Class Helpers | Microsoft Docs
+title: "Aplicaciones auxiliares de clase de colección | Documentos de Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,8 +16,8 @@ helpviewer_keywords:
 - DestructElements function
 - ConstructElements function
 - SerializeElements function
-- collection classes [MFC], helper functions
-- helper functions collection class [MFC]
+- collection classes, helper functions
+- helper functions collection class
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
 caps.latest.revision: 14
 author: mikeblome
@@ -37,30 +37,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 20e953c408a72717bc7e738298fd7f12ffc30699
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: d2649ef9c8b0320a94ec28a2341baa0f768b07d0
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="collection-class-helpers"></a>Collection Class Helpers
-The collection classes `CMap`, `CList`, and `CArray` use templated global helper functions for such purposes as comparing, copying, and serializing elements. As part of your implementation of classes based on `CMap`, `CList`, and `CArray`, you must override these functions as necessary with versions tailored to the type of data stored in your map, list, or array. For information on overriding helper functions such as `SerializeElements`, see the article [Collections: How to Make a Type-Safe Collection](../../mfc/how-to-make-a-type-safe-collection.md). Note that **ConstructElements** and **DestructElements** have been deprecated.  
+# <a name="collection-class-helpers"></a>Aplicaciones auxiliares de clase de colección
+Las clases de colección `CMap`, `CList`, y `CArray` usar funciones de aplicación auxiliar con plantilla global para estos fines, como comparar, copiar y seleccionar elementos. Como parte de la implementación de clases basadas en `CMap`, `CList`, y `CArray`, debe invalidar estas funciones según sea necesario con las versiones adaptadas para el tipo de datos almacenados en el mapa, lista o matriz. Para obtener información sobre cómo reemplazar las funciones auxiliares como `SerializeElements`, vea el artículo [colecciones: cómo crear una colección con seguridad de tipos](../../mfc/how-to-make-a-type-safe-collection.md). Tenga en cuenta que **ConstructElements** y **DestructElements** han quedado en desuso.  
   
- The Microsoft Foundation Class Library provides the following global functions in afxtempl.h to help you customize your collection classes:  
+ La biblioteca Microsoft Foundation Class proporciona las siguientes funciones globales en afxtempl.h que le ayudarán a personalizar sus clases de colección:  
   
-### <a name="collection-class-helpers"></a>Collection Class Helpers  
+### <a name="collection-class-helpers"></a>Aplicaciones auxiliares de clase de colección  
   
 |||  
 |-|-|  
-|[CompareElements](#compareelements)|Indicates whether elements are the same.|  
-|[CopyElements](#copyelements)|Copies elements from one array to another.|  
-|[DumpElements](#dumpelements)|Provides stream-oriented diagnostic output.|  
-|[HashKey](#hashkey)|Calculates a hash key.|  
-|[SerializeElements](#serializeelements)|Stores or retrieves elements to or from an archive.|  
+|[CompareElements](#compareelements)|Indica si los elementos son iguales.|  
+|[CopyElements](#copyelements)|Copia los elementos de una matriz a otra.|  
+|[DumpElements](#dumpelements)|Proporciona los resultados de diagnóstico orientados a secuencias.|  
+|[HashKey](#hashkey)|Calcula una clave hash.|  
+|[SerializeElements](#serializeelements)|Almacena o recupera elementos a o desde un archivo.|  
   
-##  <a name="compareelements"></a>  CompareElements  
- Called directly by [CList::Find](clist-class.md#not_found.md#clist__find and indirectly by [cmap__lookup](cmap-class.md#lookup) and [cmap__operator &#91;&#93;](cmap-class.md#operator_at).  
+##  <a name="compareelements"></a>CompareElements  
+ Llamadas directas [CList::Find] (clist class.md #not_found.md #clist__find e indirectamente [cmap__lookup](cmap-class.md#lookup) y [[] cmap__operator](cmap-class.md#operator_at).  
   
 ```   
 template<class TYPE, class ARG_TYPE>  
@@ -70,34 +70,34 @@ CompareElements(
     const ARG_TYPE* pElement2);  
 ```  
   
-### <a name="parameters"></a>Parameters  
- *TYPE*  
- The type of the first element to be compared.  
+### <a name="parameters"></a>Parámetros  
+ *TIPO DE*  
+ El tipo del primer elemento que se va a comparar.  
   
  `pElement1`  
- Pointer to the first element to be compared.  
+ Puntero al primer elemento que se va a comparar.  
   
  `ARG_TYPE`  
- The type of the second element to be compared.  
+ El tipo del segundo elemento se va a comparar.  
   
  `pElement2`  
- Pointer to the second element to be compared.  
+ Puntero al segundo elemento se va a comparar.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the object pointed to by `pElement1` is equal to the object pointed to by `pElement2`; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ Distinto de cero si el objeto al que apunta `pElement1` es igual que el objeto al que señala `pElement2`; de lo contrario, 0.  
   
-### <a name="remarks"></a>Remarks  
- The `CMap` calls use the `CMap` template parameters *KEY* and `ARG_KEY`.  
+### <a name="remarks"></a>Comentarios  
+ El `CMap` llama uso el `CMap` parámetros de plantilla *clave* y `ARG_KEY`.  
   
- The default implementation returns the result of the comparison of *\*pElement1* and *\*pElement2*. Override this function so that it compares the elements in a way that is appropriate for your application.  
+ La implementación predeterminada devuelve el resultado de la comparación de * \*pElement1* y * \*pElement2*. Reemplazar esta función para que compara los elementos de una manera que sea adecuada para su aplicación.  
   
- The C++ language defines the comparison operator ( `==`) for simple types ( `char`, `int`, **float**, and so on) but does not define a comparison operator for classes and structures. If you want to use `CompareElements` or to instantiate one of the collection classes that uses it, you must either define the comparison operator or overload `CompareElements` with a version that returns appropriate values.  
+ El lenguaje C++ define el operador de comparación ( `==`) para los tipos simples ( `char`, `int`, **float**, etc.) pero no define un operador de comparación para las clases y estructuras. Si desea usar `CompareElements` o para crear una instancia de una de las clases de colección que lo utiliza, debe definir el operador de comparación o sobrecarga `CompareElements` con una versión que devuelve los valores adecuados.  
   
-### <a name="requirements"></a>Requirements  
-   **Header:** afxtempl.h   
+### <a name="requirements"></a>Requisitos  
+   **Encabezado:** afxtempl.h   
   
-##  <a name="copyelements"></a>  CopyElements  
- This function is called directly by [CArray::Append](carray-class.md#append) and [CArray::Copy](carray-class.md#copy).  
+##  <a name="copyelements"></a>CopyElements  
+ Esta función se invoca directamente a [CArray::Append](carray-class.md#append) y [CArray::Copy](carray-class.md#copy).  
   
 ```   
 template<class TYPE>  
@@ -107,29 +107,29 @@ void AFXAPI CopyElements(
     INT_PTR nCount);  
 ```  
   
-### <a name="parameters"></a>Parameters  
- *TYPE*  
- Template parameter specifying the type of elements to be copied.  
+### <a name="parameters"></a>Parámetros  
+ *TIPO DE*  
+ Parámetro de plantilla que especifica el tipo de elementos que se copian.  
   
  `pDest`  
- Pointer to the destination where the elements will be copied.  
+ Puntero al destino donde se copiarán los elementos.  
   
  `pSrc`  
- Pointer to the source of the elements to be copied.  
+ Puntero al origen de los elementos que se va a copiar.  
   
  `nCount`  
- Number of elements to be copied.  
+ Número de elementos copiados.  
   
-### <a name="remarks"></a>Remarks  
- The default implementation uses the simple assignment operator ( **=** ) to perform the copy operation. If the type being copied does not have an overloaded operator=, then the default implementation performs a bitwise copy.  
+### <a name="remarks"></a>Comentarios  
+ La implementación predeterminada usa el operador de asignación simple ( ** = ** ) para realizar la operación de copia. Si el tipo que se está copiando no tiene un operador sobrecargado =, la implementación predeterminada realiza una copia bit a bit.  
   
- For information on implementing this and other helper functions, see the article [Collections: How to Make a Type-Safe Collection](../how-to-make-a-type-safe-collection.md).  
+ Para obtener información sobre la implementación de esta y otras funciones auxiliares, vea el artículo [colecciones: cómo crear una colección con seguridad de tipos](../how-to-make-a-type-safe-collection.md).  
   
-### <a name="requirements"></a>Requirements  
-  **Header** afxtempl.h  
+### <a name="requirements"></a>Requisitos  
+  **Encabezado** afxtempl.h  
   
-##  <a name="dumpelements"></a>  DumpElements  
- Provides stream-oriented diagnostic output in text form for the elements of your collection when overridden.  
+##  <a name="dumpelements"></a>DumpElements  
+ Proporciona los resultados de diagnóstico orientados a secuencia en forma de texto para los elementos de la colección cuando se reemplaza.  
   
 ```   
 template<class TYPE>  
@@ -139,52 +139,52 @@ void  AFXAPI DumpElements(
     INT_PTR nCount);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `dc`  
- Dump context for dumping elements.  
+ Volcar contexto para volcar los elementos.  
   
- *TYPE*  
- Template parameter specifying the type of the elements.  
+ *TIPO DE*  
+ Especifica el tipo de los elementos de un parámetro de plantilla.  
   
  `pElements`  
- Pointer to the elements to be dumped.  
+ Puntero a los elementos que se va a volcar.  
   
  `nCount`  
- Number of elements to be dumped.  
+ Número de elementos que se va a volcar.  
   
-### <a name="remarks"></a>Remarks  
- The **CArray::Dump**, **CList::Dump**, and **CMap::Dump** functions call this if the depth of the dump is greater than 0.  
+### <a name="remarks"></a>Comentarios  
+ El **CArray::Dump**, **CList::Dump**, y **CMap::Dump** funciones llamar si la profundidad del volcado de memoria es mayor que 0.  
   
- The default implementation does nothing. If the elements of your collection are derived from `CObject`, your override will typically iterate through the collection's elements, calling `Dump` for each element in turn.  
+ La implementación predeterminada no hace nada. Si se derivan de los elementos de la colección de `CObject`, la invalidación normalmente recorrer los elementos de la colección, una llamada a `Dump` para cada elemento de turno.  
   
 
-### <a name="requirements"></a>Requirements  
-  **Header** afxtempl.h  
+### <a name="requirements"></a>Requisitos  
+  **Encabezado** afxtempl.h  
   
-##  <a name="hashkey"></a>  HashKey  
- Calculates a hash value for the given key.  
+##  <a name="hashkey"></a>HashKey  
+ Calcula un valor hash con la clave dada.  
   
 ```  
 template<class ARG_KEY>  
 AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key); 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `ARG_KEY`  
- Template parameter specifying the data type used to access map keys.  
+ Parámetro de plantilla que especifica el tipo de datos utilizado para tener acceso a claves de asignación.  
   
  `key`  
- The key whose hash value is to be calculated.  
+ Clave cuyo valor hash se va a calcular.  
   
-### <a name="return-value"></a>Return Value  
- The key's hash value.  
+### <a name="return-value"></a>Valor devuelto  
+ Valor hash de la clave.  
   
-### <a name="remarks"></a>Remarks  
- This function is called directly by [CMap::RemoveKey](cmap-class.md#removekey) and indirectly by [CMap::Lookup](cmap-class.md#lookup) and [CMap::Operator &#91;&#93;](cmap-class.md#operator_at).
+### <a name="remarks"></a>Comentarios  
+ Esta función se invoca directamente a [CMap::RemoveKey](cmap-class.md#removekey) e indirectamente [CMap::Lookup](cmap-class.md#lookup) y [[] CMap::Operator](cmap-class.md#operator_at).
   
- The default implementation creates a hash value by shifting `key` right by four positions. Override this function so that it returns hash values appropriate for your application.  
+ La implementación predeterminada crea un valor hash desplazando `key` derecha por cuatro posiciones. Reemplazar esta función para que devuelva valores hash adecuada para su aplicación.  
   
-### <a name="example"></a>Example
+### <a name="example"></a>Ejemplo
  ```cpp  
 template <> UINT AFXAPI HashKey(unsigned __int64 key)
 {
@@ -194,43 +194,43 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 }
  ```
  
-### <a name="requirements"></a>Requirements  
-  **Header** afxtempl.h 
+### <a name="requirements"></a>Requisitos  
+  **Encabezado** afxtempl.h 
   
-##  <a name="serializeelements"></a>  SerializeElements  
- [CArray](carray-class.md), [CList](clist-class.md), and [CMap](cmap-class.md) call this function to serialize elements.  
+##  <a name="serializeelements"></a>SerializeElements  
+ [CArray](carray-class.md), [CList](clist-class.md), y [CMap](cmap-class.md) llame a esta función para serializar elementos.  
   
 ```   
 template<class TYPE>  
 void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);  
 ```  
   
-### <a name="parameters"></a>Parameters  
- *TYPE*  
- Template parameter specifying the type of the elements.  
+### <a name="parameters"></a>Parámetros  
+ *TIPO DE*  
+ Especifica el tipo de los elementos de un parámetro de plantilla.  
   
  `ar`  
- An archive object to archive to or from.  
+ Archivar a o desde un objeto de almacenamiento.  
   
  `pElements`  
- Pointer to the elements being archived.  
+ Puntero a los elementos que se archivan.  
   
  `nCount`  
- Number of elements being archived  
+ Número de elementos que se estén almacenando  
   
-### <a name="remarks"></a>Remarks  
- The default implementation does a bitwise read or write.  
+### <a name="remarks"></a>Comentarios  
+ La implementación predeterminada realiza un bit a bit de lectura o escritura.  
   
- For information on implementing this and other helper functions, see the article [Collections: How to Make a Type-Safe Collection](../how-to-make-a-type-safe-collection.md).  
+ Para obtener información sobre la implementación de esta y otras funciones auxiliares, vea el artículo [colecciones: cómo crear una colección con seguridad de tipos](../how-to-make-a-type-safe-collection.md).  
   
-### <a name="example"></a>Example  
- See the example in the article [Collections: How to Make a Type-Safe Collection](../how-to-make-a-type-safe-collection.md).  
+### <a name="example"></a>Ejemplo  
+ Vea el ejemplo en el artículo [colecciones: cómo crear una colección con seguridad de tipos](../how-to-make-a-type-safe-collection.md).  
  
-### <a name="requirements"></a>Requirements  
-  **Header** afxtempl.h 
+### <a name="requirements"></a>Requisitos  
+  **Encabezado** afxtempl.h 
     
-## <a name="see-also"></a>See Also  
- [Macros and Globals](mfc-macros-and-globals.md)   
- [CMap Class](cmap-class.md)   
- [CList Class](clist-class.md)   
- [CArray Class](carray-class.md)
+## <a name="see-also"></a>Vea también  
+ [Macros y funciones globales](mfc-macros-and-globals.md)   
+ [Clase CMap](cmap-class.md)   
+ [CList (clase)](clist-class.md)   
+ [CArray (clase)](carray-class.md)

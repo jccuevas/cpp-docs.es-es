@@ -35,17 +35,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 9001045194ca9a7b96a5ba44ab01b2e7a736be06
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ce86a87e5f22b27c5b1d7eeeeb4edcbcac8e15c7
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/18/2017
 
 ---
-# <a name="1-object"></a>_1 Object
-Placeholders for replaceable arguments.  
+# <a name="1-object"></a>_1 (Objeto)
+Marcadores de posición para argumentos reemplazables.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 namespace placeholders {  
@@ -54,12 +54,12 @@ namespace placeholders {
  } // namespace placeholders (within std)  
 ```  
   
-## <a name="remarks"></a>Remarks  
- The objects `_1, _2, ... _M` are placeholders designating the first, second, ..., Mth argument, respectively in a function call to an object returned by [bind](../standard-library/functional-functions.md#bind). You use `_N` to specify where the Nth argument should be inserted when the bind expression is evaluated.  
+## <a name="remarks"></a>Comentarios  
+ Los objetos `_1, _2, ... _M` son marcadores de posición que designa el primer, segundo,..., argumento de mes, respectivamente, en una llamada de función en el objeto devuelto por [enlazar](../standard-library/functional-functions.md#bind). `_N` se usa para especificar dónde se debe insertar el argumento Nth cuando se evalúa la expresión de enlace.  
   
- In this implementation the value of `M` is 20.  
+ En esta implementación, el valor de `M` es 20.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__functional_placeholder.cpp   
@@ -111,12 +111,12 @@ int main()
 3^2 == 9  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<functional>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<functional>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
- [bind](../standard-library/functional-functions.md#bind)   
- [is_placeholder Class](../standard-library/is-placeholder-class.md)
+## <a name="see-also"></a>Vea también  
+ [enlazar](../standard-library/functional-functions.md#bind)   
+ [is_placeholder (Clase)](../standard-library/is-placeholder-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: binder2nd Class | Microsoft Docs
+title: binder2nd (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- binder2nd
 - xfunctional/std::binder2nd
 dev_langs:
 - C++
@@ -33,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: f9a8fbf0154d9455b18ba6e4b695be9b542ac175
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 9a2f3f31798d1cdadf00e95b9f393e93a20d29ea
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="binder2nd-class"></a>binder2nd Class
-A template class providing a constructor that converts a binary function object into a unary function object by binding the second argument of the binary function to a specified value.  
+# <a name="binder2nd-class"></a>binder2nd (Clase)
+Clase de plantilla que proporciona un constructor que convierte un objeto de función binaria en un objeto de función unaria enlazando el segundo argumento de la función binaria a un valor especificado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 template <class Operation>
@@ -67,25 +68,25 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Func`  
- The binary function object to be converted to a unary function object.  
+ El objeto de función binaria que se va a convertir en un objeto de función unaria.  
   
  `right`  
- The value to which the second argument of the binary function object is to be bound.  
+ El valor al que se enlazará el segundo argumento del objeto de función binaria.  
   
  `left`  
- The value of the argument that the adapted binary object compares to the fixed value of the second argument.  
+ El valor del argumento que el objeto binario adaptado compara con el valor fijo del segundo argumento.  
   
-## <a name="return-value"></a>Return Value  
- The unary function object that results from binding the second argument of the binary function object to the value `right.`  
+## <a name="return-value"></a>Valor devuelto  
+ El objeto de función unaria resultante de enlazar el segundo argumento del objeto de función binaria con el valor `right.`  
   
-## <a name="remarks"></a>Remarks  
- The template class stores a copy of a binary function object _ *Func* in **op**, and a copy of `right` in **value**. It defines its member function `operator()` as returning **op**( `left`, **value**).  
+## <a name="remarks"></a>Comentarios  
+ La clase de plantilla almacena una copia de un objeto de función binaria _ *Func* en **op** y una copia de `right` en **value**. Define su función miembro `operator()` para que devuelva **op**( `left`, **value**).  
   
- If `Func` is an object of type **Operation** and c is a constant, then [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) is equivalent to the `binder2nd` class constructor `binder2nd`\< **Operation**> ( `Func`, `c` ) and more convenient.  
+ Si `Func` es un objeto de tipo **Operation** y c es una constante, [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) es equivalente al constructor de clase `binder2nd` `binder2nd`\< **Operation**> ( `Func`, `c` ) y más conveniente.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // functional_binder2nd.cpp  
@@ -135,14 +136,14 @@ The number of elements in v1 less than 10 is: 2.
 */  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<functional>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<functional>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
 
 
 

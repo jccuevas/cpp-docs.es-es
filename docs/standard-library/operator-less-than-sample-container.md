@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::operator<", "operator<", "std.<", "<", "std.operator<", "std::<
+- std::operator<
+- operator<
+- std.<
+- <
+- std.operator<
+- std::<
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,20 +41,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 74a967a4bb2314ff9f36a8753a514a3a47ce1be3
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c5aac1f35d33f38546550d0fe9ae41c6a08eecc9
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt; (&lt;sample container&gt;)
 > [!NOTE]
->  This topic is in the Visual C++ documentation as a nonfunctional example of containers used in the C++ Standard Library. For more information, see [C++ Standard Library Containers](../standard-library/stl-containers.md).  
+>  Este tema se incluye en la documentación de Visual C++ como un ejemplo no funcional de los contenedores usados en la biblioteca estándar de C++. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).  
   
- Overloads **operator<** to compare two objects of template class [Container](../standard-library/sample-container-class.md).  
+ Sobrecarga **operator<** para comparar dos objetos de la clase de plantilla [Container](../standard-library/sample-container-class.md).  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class Ty>  
@@ -58,10 +63,10 @@ bool operator<(
     const Container <Ty>& right);
 ```  
   
-## <a name="return-value"></a>Return Value  
- Returns `lexicographical_compare(left.begin, left.end, right.begin, right.end)`.  
+## <a name="return-value"></a>Valor devuelto  
+ Devuelve `lexicographical_compare(left.begin, left.end, right.begin, right.end)`.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
 [\<sample container>](../standard-library/sample-container.md)  
 [begin](../standard-library/container-class-begin.md)  
 [end](../standard-library/container-class-end.md)  

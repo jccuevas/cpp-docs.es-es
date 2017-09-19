@@ -1,5 +1,5 @@
 ---
-title: CInstantaneousTransition Class | Microsoft Docs
+title: Clase CInstantaneousTransition | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CInstantaneousTransition [MFC], CInstantaneousTransition
-- CInstantaneousTransition [MFC], Create
-- CInstantaneousTransition [MFC], m_dblFinalValue
+- CInstantaneousTransition class
 ms.assetid: c3d5121f-2c6b-4221-9e57-10e082a31120
 caps.latest.revision: 17
 author: mikeblome
@@ -39,68 +37,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 8568b96f2820e640bba2f607953546695c2a8e2b
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: d0d6d4bee051222bec4333f486f493c2feeda9d6
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cinstantaneoustransition-class"></a>CInstantaneousTransition Class
-Encapsulates an instantaneous transition.  
+# <a name="cinstantaneoustransition-class"></a>Clase CInstantaneousTransition
+Encapsula una transición instantánea.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CInstantaneousTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CInstantaneousTransition::CInstantaneousTransition](#cinstantaneoustransition)|Constructs a transition object and initializes its final value.|  
+|[CInstantaneousTransition::CInstantaneousTransition](#cinstantaneoustransition)|Construye un objeto de transición e inicializa su valor final.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CInstantaneousTransition::Create](#create)|Calls the transition library to create encapsulated transition COM object. (Overrides [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CInstantaneousTransition::Create](#create)|Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado. (Invalida [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-### <a name="public-data-members"></a>Public Data Members  
+### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|The value of the animation variable at the end of the transition.|  
+|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|El valor de la animación al final de la transición.|  
   
-## <a name="remarks"></a>Remarks  
- During an instantaneous transition, the value of the animation variable changes instantly from its current value to a specified final value. The duration of this transition is always zero. Because all transitions are cleared automatically, it's recommended to allocated them using operator new. The encapsulated IUIAnimationTransition COM object is created by CAnimationController::AnimateGroup, until then it's NULL. Changing member variables after creation of this COM object has no effect.  
+## <a name="remarks"></a>Comentarios  
+ Durante una transición de la instantánea, el valor de la variable de animación cambia al instante desde su valor actual en un valor final especificado. La duración de esta transición es siempre cero. Debido a que todas las transiciones se desactivan automáticamente, se recomienda asignada a ellos con el operador nuevo. Se crea el objeto de IUIAnimationTransition COM encapsulado por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables miembro después de la creación de este objeto COM no tiene ningún efecto.  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  [CInstantaneousTransition](../../mfc/reference/cinstantaneoustransition-class.md)  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxanimationcontroller.h  
   
-##  <a name="cinstantaneoustransition"></a>  CInstantaneousTransition::CInstantaneousTransition  
- Constructs a transition object and initializes its final value.  
+##  <a name="cinstantaneoustransition"></a>CInstantaneousTransition::CInstantaneousTransition  
+ Construye un objeto de transición e inicializa su valor final.  
   
 ```  
 CInstantaneousTransition(DOUBLE dblFinalValue);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `dblFinalValue`  
- The value of the animation variable at the end of the transition.  
+ El valor de la animación al final de la transición.  
   
-##  <a name="create"></a>  CInstantaneousTransition::Create  
- Calls the transition library to create encapsulated transition COM object.  
+##  <a name="create"></a>CInstantaneousTransition::Create  
+ Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado.  
   
 ```  
 virtual BOOL Create(
@@ -108,21 +106,21 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
 `pLibrary`  
- A pointer to an [IUIAnimationTransitionLibrary interface](https://msdn.microsoft.com/library/windows/desktop/dd371897), which defines a library of standard transitions.  
+ Un puntero a un [IUIAnimationTransitionLibrary interfaz](https://msdn.microsoft.com/library/windows/desktop/dd371897), que define una biblioteca de transiciones estándares.  
 
   
-### <a name="return-value"></a>Return Value  
- TRUE if transition is created successfully; otherwise FALSE.  
+### <a name="return-value"></a>Valor devuelto  
+ TRUE si la transición se crea correctamente; de lo contrario, FALSE.  
   
-##  <a name="m_dblfinalvalue"></a>  CInstantaneousTransition::m_dblFinalValue  
- The value of the animation variable at the end of the transition.  
+##  <a name="m_dblfinalvalue"></a>CInstantaneousTransition::m_dblFinalValue  
+ El valor de la animación al final de la transición.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Classes](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>Vea también  
+ [Clases](../../mfc/reference/mfc-classes.md)
 

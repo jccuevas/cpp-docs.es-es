@@ -1,5 +1,5 @@
 ---
-title: is_copy_constructible Class | Microsoft Docs
+title: Clase is_copy_constructible | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_copy_constructible
 - type_traits/std::is_copy_constructible
 dev_langs:
 - C++
@@ -33,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 1c93a43f448ecd533f989b364eed5a74b56d3eba
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 1f98b67a4b9773a4c701dd89f4db404b4587c694
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="iscopyconstructible-class"></a>is_copy_constructible Class
-Tests if type has a copy constructor.  
+# <a name="iscopyconstructible-class"></a>Clase is_copy_constructible
+Comprueba si el tipo tiene un constructor de copia.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class Ty>  
 struct is_copy_constructible;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Ty`  
- The type to query.  
+ Tipo que se va a consultar.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if the type `Ty` is a class that has a copy constructor, otherwise it holds false.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia del predicado de tipo es true si el tipo `Ty` es una clase que tiene un constructor de copia; en caso contrario, es false.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 #include <type_traits>   
@@ -92,12 +93,12 @@ is_copy_constructible<Copyable> == true
 is_copy_constructible<NotCopyable > == false  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: CODBCFieldInfo Structure | Microsoft Docs
+title: CODBCFieldInfo (estructura) | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,8 +13,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ODBC [MFC], data source information
-- CODBCFieldInfo structure [MFC]
+- ODBC, data source information
+- CODBCFieldInfo structure
 ms.assetid: 92598b4f-facc-4108-b282-63a179ff79ab
 caps.latest.revision: 12
 author: mikeblome
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 73fa2ac08d93fd9b9c9324cd1cb9ae57c4d62456
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 1080eb323c599014d84acab94aee4622795fdb96
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo Structure
-The `CODBCFieldInfo` structure contains information about the fields in an ODBC data source.  
+# <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo (Estructura)
+El `CODBCFieldInfo` estructura contiene información acerca de los campos en un origen de datos ODBC.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 struct CODBCFieldInfo  
@@ -57,32 +57,32 @@ struct CODBCFieldInfo
 };  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `m_strName`  
- The name of the field.  
+ Nombre del campo.  
   
  *m_nSQLType*  
- The SQL data type of the field. This can be an ODBC SQL data type or a driver-specific SQL data type. For a list of valid ODBC SQL data types, see "SQL Data Types" in the Windows SDK. For information about driver-specific SQL data types, see the driver's documentation.  
+ El tipo de datos SQL del campo. Esto puede ser un tipo de datos SQL de ODBC o un tipo de datos SQL específicas del controlador. Para obtener una lista de tipos de datos de ODBC SQL válidos, vea "Tipos de datos de SQL" en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Para obtener información acerca de los tipos de datos SQL específico del controlador, consulte la documentación del controlador.  
   
  *m_nPrecision*  
- The maximum precision of the field. For details, see "Precision, Scale, Length, and Display Size" in the Windows SDK.  
+ La precisión máxima del campo. Para obtener más información, vea "Precisión, escala, longitud y tamaño de presentación" en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  *m_nScale*  
- The scale of the field. For details, see "Precision, Scale, Length, and Display Size" in the Windows SDK.  
+ La escala del campo. Para obtener más información, vea "Precisión, escala, longitud y tamaño de presentación" en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  *m_nNullability*  
- Whether the field accepts a Null value. This can be one of two values: **SQL_NULLABLE** if the field accepts Null values, or **SQL_NO_NULLS** if the field does not accept Null values.  
+ Si el campo acepta un valor Null. Puede ser uno de dos valores: **SQL_NULLABLE** si el campo acepta valores Null, o **SQL_NO_NULLS** si el campo no acepta valores Null.  
   
-## <a name="remarks"></a>Remarks  
- To retrieve this information, call [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).  
+## <a name="remarks"></a>Comentarios  
+ Para recuperar esta información, llame a [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxdb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxdb.h  
   
-## <a name="see-also"></a>See Also  
- [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>Vea también  
+ [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)   
- [CRecordset::GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
+ [CRecordset:: GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
 
 
 

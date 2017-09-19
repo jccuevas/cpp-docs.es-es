@@ -1,5 +1,5 @@
 ---
-title: make_signed Class | Microsoft Docs
+title: Clase make_signed | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- make_signed
 - type_traits/std::make_signed
 dev_langs:
 - C++
@@ -34,17 +35,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 1c4a018f0868163c496eecccf4a1cd2f7be5da28
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 43b41b7016faeb593af12d01f940c27d00882b9e
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="makesigned-class"></a>make_signed Class
-Makes type or the smallest signed type greater than or equal in size to type.  
+# <a name="makesigned-class"></a>make_signed (Clase)
+Hace que el tipo o el tipo con signo más pequeño sea igual o superior en tamaño al tipo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 template <class T>
@@ -54,19 +55,19 @@ template <class T>
 using make_signed_t = typename make_signed<T>::type;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- The type to modify.  
+ Tipo que se va a modificar.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type modifier holds a modified-type that is `T` if `is_signed<T>` holds true. Otherwise it is the smallest unsigned type `UT` for which `sizeof (T) <= sizeof (UT)`.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia del modificador de tipo contiene un tipo modificado que es `T` si `is_signed<T>` es true. En caso contrario, es el tipo sin signo menor `UT` para el que `sizeof (T) <= sizeof (UT)`.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)
 
 

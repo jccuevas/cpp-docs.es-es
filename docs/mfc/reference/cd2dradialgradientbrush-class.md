@@ -1,5 +1,5 @@
 ---
-title: CD2DRadialGradientBrush Class | Microsoft Docs
+title: Clase CD2DRadialGradientBrush | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,22 +30,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DRadialGradientBrush [MFC], CD2DRadialGradientBrush
-- CD2DRadialGradientBrush [MFC], Attach
-- CD2DRadialGradientBrush [MFC], Create
-- CD2DRadialGradientBrush [MFC], Destroy
-- CD2DRadialGradientBrush [MFC], Detach
-- CD2DRadialGradientBrush [MFC], Get
-- CD2DRadialGradientBrush [MFC], GetCenter
-- CD2DRadialGradientBrush [MFC], GetGradientOriginOffset
-- CD2DRadialGradientBrush [MFC], GetRadiusX
-- CD2DRadialGradientBrush [MFC], GetRadiusY
-- CD2DRadialGradientBrush [MFC], SetCenter
-- CD2DRadialGradientBrush [MFC], SetGradientOriginOffset
-- CD2DRadialGradientBrush [MFC], SetRadiusX
-- CD2DRadialGradientBrush [MFC], SetRadiusY
-- CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
-- CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
+- CD2DRadialGradientBrush class
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
 caps.latest.revision: 17
 author: mikeblome
@@ -65,63 +50,63 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: c8a0bdfea24b6df30d707ad8c0165391c5cae524
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 8b3fd7f468745567969ba1f7e9d6871a9060582b
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush Class
-A wrapper for ID2D1RadialGradientBrush.  
+# <a name="cd2dradialgradientbrush-class"></a>Clase CD2DRadialGradientBrush
+Un contenedor para ID2D1RadialGradientBrush.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CD2DRadialGradientBrush : public CD2DGradientBrush;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|Constructs a CD2DLinearGradientBrush object.|  
-|[CD2DRadialGradientBrush::~CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|The destructor. Called when a D2D radial gradient brush object is being destroyed.|  
+|[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|Construye un objeto CD2DLinearGradientBrush.|  
+|[CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Destructor. Se llama cuando se destruye un objeto de pincel de degradado radial D2D.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CD2DRadialGradientBrush::Attach](#attach)|Attaches existing resource interface to the object|  
-|[CD2DRadialGradientBrush::Create](#create)|Creates a CD2DRadialGradientBrush. (Overrides [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
-|[CD2DRadialGradientBrush::Destroy](#destroy)|Destroys a CD2DRadialGradientBrush object. (Overrides [CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|  
-|[CD2DRadialGradientBrush::Detach](#detach)|Detaches resource interface from the object|  
-|[CD2DRadialGradientBrush::Get](#get)|Returns ID2D1RadialGradientBrush interface|  
-|[CD2DRadialGradientBrush::GetCenter](#getcenter)|Retrieves the center of the gradient ellipse|  
-|[CD2DRadialGradientBrush::GetGradientOriginOffset](#getgradientoriginoffset)|Retrieves the offset of the gradient origin relative to the gradient ellipse's center|  
-|[CD2DRadialGradientBrush::GetRadiusX](#getradiusx)|Retrieves the x-radius of the gradient ellipse|  
-|[CD2DRadialGradientBrush::GetRadiusY](#getradiusy)|Retrieves the y-radius of the gradient ellipse|  
-|[CD2DRadialGradientBrush::SetCenter](#setcenter)|Specifies the center of the gradient ellipse in the brush's coordinate space|  
-|[CD2DRadialGradientBrush::SetGradientOriginOffset](#setgradientoriginoffset)|Specifies the offset of the gradient origin relative to the gradient ellipse's center|  
-|[CD2DRadialGradientBrush::SetRadiusX](#setradiusx)|Specifies the x-radius of the gradient ellipse, in the brush's coordinate space|  
-|[CD2DRadialGradientBrush::SetRadiusY](#setradiusy)|Specifies the y-radius of the gradient ellipse, in the brush's coordinate space|  
+|[CD2DRadialGradientBrush::Attach](#attach)|Conexiones existentes de la interfaz de recursos para el objeto|  
+|[CD2DRadialGradientBrush::Create](#create)|Crea un CD2DRadialGradientBrush. (Invalida [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DRadialGradientBrush::Destroy](#destroy)|Destruye un objeto CD2DRadialGradientBrush. (Invalida [CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|  
+|[CD2DRadialGradientBrush::Detach](#detach)|Separa la interfaz de recursos desde el objeto|  
+|[CD2DRadialGradientBrush::Get](#get)|Interfaz de ID2D1RadialGradientBrush devuelve|  
+|[CD2DRadialGradientBrush::GetCenter](#getcenter)|Recupera el centro de la elipse de degradado|  
+|[CD2DRadialGradientBrush::GetGradientOriginOffset](#getgradientoriginoffset)|Recupera el desplazamiento del origen del degradado con respecto al centro de la elipse de degradado|  
+|[CD2DRadialGradientBrush::GetRadiusX](#getradiusx)|Recupera el radio x de la elipse de degradado|  
+|[CD2DRadialGradientBrush::GetRadiusY](#getradiusy)|Recupera el radio y de la elipse de degradado|  
+|[CD2DRadialGradientBrush::SetCenter](#setcenter)|Especifica el centro de la elipse del degradado en el espacio de coordenadas del pincel|  
+|[CD2DRadialGradientBrush::SetGradientOriginOffset](#setgradientoriginoffset)|Especifica el desplazamiento del origen del degradado con respecto al centro de la elipse de degradado|  
+|[CD2DRadialGradientBrush::SetRadiusX](#setradiusx)|Especifica el radio x de la elipse del degradado, en el espacio de coordenadas del pincel|  
+|[CD2DRadialGradientBrush::SetRadiusY](#setradiusy)|Especifica el radio de la elipse del degradado, y en el espacio de coordenadas del pincel|  
   
-### <a name="public-operators"></a>Public Operators  
+### <a name="public-operators"></a>Operadores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush*](#operator_id2d1radialgradientbrush_star)|Returns ID2D1RadialGradientBrush interface|  
+|[CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *](#operator_id2d1radialgradientbrush_star)|Interfaz de ID2D1RadialGradientBrush devuelve|  
   
-### <a name="protected-data-members"></a>Protected Data Members  
+### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|A pointer to an ID2D1RadialGradientBrush.|  
-|[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|The center, gradient origin offset, and x-radius and y-radius of the brush's gradient.|  
+|[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|Puntero a un ID2D1RadialGradientBrush.|  
+|[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|El centro, desplazamiento de degradado de origen y radio x y radio y del pincel de degradado del.|  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
@@ -132,29 +117,29 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
   
  `CD2DRadialGradientBrush`  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxrendertarget.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::~CD2DRadialGradientBrush  
- The destructor. Called when a D2D radial gradient brush object is being destroyed.  
+##  <a name="_dtorcd2dradialgradientbrush"></a>CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush  
+ Destructor. Se llama cuando se destruye un objeto de pincel de degradado radial D2D.  
   
 ```  
 virtual ~CD2DRadialGradientBrush();
 ```  
   
-##  <a name="attach"></a>  CD2DRadialGradientBrush::Attach  
- Attaches existing resource interface to the object  
+##  <a name="attach"></a>CD2DRadialGradientBrush::Attach  
+ Conexiones existentes de la interfaz de recursos para el objeto  
   
 ```  
 void Attach(ID2D1RadialGradientBrush* pResource);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pResource`  
- Existing resource interface. Cannot be NULL  
+ Interfaz de recursos existente. No puede ser NULL  
   
-##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush  
- Constructs a CD2DLinearGradientBrush object.  
+##  <a name="cd2dradialgradientbrush"></a>CD2DRadialGradientBrush::CD2DRadialGradientBrush  
+ Construye un objeto CD2DLinearGradientBrush.  
   
 ```  
 CD2DRadialGradientBrush(
@@ -168,180 +153,180 @@ CD2DRadialGradientBrush(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pParentTarget`  
- A pointer to the render target.  
+ Puntero para el destino de representación.  
   
  `gradientStops`  
- A pointer to an array of D2D1_GRADIENT_STOP structures.  
+ Puntero a una matriz de estructuras D2D1_GRADIENT_STOP.  
   
  `gradientStopsCount`  
- A value greater than or equal to 1 that specifies the number of gradient stops in the gradientStops array.  
+ Un valor mayor o igual a 1 que especifica el número de puntos de degradado en la matriz gradientStops.  
   
  `RadialGradientBrushProperties`  
- The center, gradient origin offset, and x-radius and y-radius of the brush's gradient.  
+ El centro, desplazamiento de degradado de origen y radio x y radio y del pincel de degradado del.  
   
  `colorInterpolationGamma`  
- The space in which color interpolation between the gradient stops is performed.  
+ El espacio en el color que se realiza la interpolación entre los delimitadores de degradado.  
   
  `extendMode`  
- The behavior of the gradient outside the [0,1] normalized range.  
+ El comportamiento del degradado fuera del intervalo [0,1] normalizado.  
   
  `pBrushProperties`  
- A pointer to the opacity and transformation of a brush.  
+ Puntero a la opacidad y la transformación de un pincel.  
   
  `bAutoDestroy`  
- Indicates that the object will be destroyed by owner (pParentTarget).  
+ Indica que se destruirá el objeto propietario (pParentTarget).  
   
-##  <a name="create"></a>  CD2DRadialGradientBrush::Create  
- Creates a CD2DRadialGradientBrush.  
+##  <a name="create"></a>CD2DRadialGradientBrush::Create  
+ Crea un CD2DRadialGradientBrush.  
   
 ```  
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pRenderTarget`  
- A pointer to the render target.  
+ Puntero para el destino de representación.  
   
-### <a name="return-value"></a>Return Value  
- If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
+### <a name="return-value"></a>Valor devuelto  
+ Si el método se ejecuta correctamente, devuelve S_OK. De lo contrario, devuelve un código de error HRESULT.  
   
-##  <a name="destroy"></a>  CD2DRadialGradientBrush::Destroy  
- Destroys a CD2DRadialGradientBrush object.  
+##  <a name="destroy"></a>CD2DRadialGradientBrush::Destroy  
+ Destruye un objeto CD2DRadialGradientBrush.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>  CD2DRadialGradientBrush::Detach  
- Detaches resource interface from the object  
+##  <a name="detach"></a>CD2DRadialGradientBrush::Detach  
+ Separa la interfaz de recursos desde el objeto  
   
 ```  
 ID2D1RadialGradientBrush* Detach();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Pointer to detached resource interface.  
+### <a name="return-value"></a>Valor devuelto  
+ Puntero a interfaz desasociadas recursos.  
   
-##  <a name="get"></a>  CD2DRadialGradientBrush::Get  
- Returns ID2D1RadialGradientBrush interface  
+##  <a name="get"></a>CD2DRadialGradientBrush::Get  
+ Interfaz de ID2D1RadialGradientBrush devuelve  
   
 ```  
 ID2D1RadialGradientBrush* Get();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Pointer to an ID2D1RadialGradientBrush interface or NULL if object is not initialized yet.  
+### <a name="return-value"></a>Valor devuelto  
+ Puntero a una interfaz ID2D1RadialGradientBrush o NULL si el objeto no se ha inicializado todavía.  
   
-##  <a name="getcenter"></a>  CD2DRadialGradientBrush::GetCenter  
- Retrieves the center of the gradient ellipse  
+##  <a name="getcenter"></a>CD2DRadialGradientBrush::GetCenter  
+ Recupera el centro de la elipse de degradado  
   
 ```  
 CD2DPointF GetCenter() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The center of the gradient ellipse. This value is expressed in the brush's coordinate space  
+### <a name="return-value"></a>Valor devuelto  
+ El centro de la elipse del degradado. Este valor se expresa en el espacio de coordenadas del pincel  
   
-##  <a name="getgradientoriginoffset"></a>  CD2DRadialGradientBrush::GetGradientOriginOffset  
- Retrieves the offset of the gradient origin relative to the gradient ellipse's center  
+##  <a name="getgradientoriginoffset"></a>CD2DRadialGradientBrush::GetGradientOriginOffset  
+ Recupera el desplazamiento del origen del degradado con respecto al centro de la elipse de degradado  
   
 ```  
 CD2DPointF GetGradientOriginOffset() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The offset of the gradient origin from the center of the gradient ellipse. This value is expressed in the brush's coordinate space  
+### <a name="return-value"></a>Valor devuelto  
+ El desplazamiento del origen degradado desde el centro de la elipse del degradado. Este valor se expresa en el espacio de coordenadas del pincel  
   
-##  <a name="getradiusx"></a>  CD2DRadialGradientBrush::GetRadiusX  
- Retrieves the x-radius of the gradient ellipse  
+##  <a name="getradiusx"></a>CD2DRadialGradientBrush::GetRadiusX  
+ Recupera el radio x de la elipse de degradado  
   
 ```  
 FLOAT GetRadiusX() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The x-radius of the gradient ellipse. This value is expressed in the brush's coordinate space  
+### <a name="return-value"></a>Valor devuelto  
+ El radio de x de la elipse del degradado. Este valor se expresa en el espacio de coordenadas del pincel  
   
-##  <a name="getradiusy"></a>  CD2DRadialGradientBrush::GetRadiusY  
- Retrieves the y-radius of the gradient ellipse  
+##  <a name="getradiusy"></a>CD2DRadialGradientBrush::GetRadiusY  
+ Recupera el radio y de la elipse de degradado  
   
 ```  
 FLOAT GetRadiusY() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The y-radius of the gradient ellipse. This value is expressed in the brush's coordinate space  
+### <a name="return-value"></a>Valor devuelto  
+ Radio y de la elipse del degradado. Este valor se expresa en el espacio de coordenadas del pincel  
   
-##  <a name="m_pradialgradientbrush"></a>  CD2DRadialGradientBrush::m_pRadialGradientBrush  
- A pointer to an ID2D1RadialGradientBrush.  
+##  <a name="m_pradialgradientbrush"></a>CD2DRadialGradientBrush::m_pRadialGradientBrush  
+ Puntero a un ID2D1RadialGradientBrush.  
   
 ```  
 ID2D1RadialGradientBrush* m_pRadialGradientBrush;  
 ```  
   
-##  <a name="m_radialgradientbrushproperties"></a>  CD2DRadialGradientBrush::m_RadialGradientBrushProperties  
- The center, gradient origin offset, and x-radius and y-radius of the brush's gradient.  
+##  <a name="m_radialgradientbrushproperties"></a>CD2DRadialGradientBrush::m_RadialGradientBrushProperties  
+ El centro, desplazamiento de degradado de origen y radio x y radio y del pincel de degradado del.  
   
 ```  
 D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES m_RadialGradientBrushProperties;  
 ```  
   
-##  <a name="operator_id2d1radialgradientbrush_star"></a>  CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush*  
- Returns ID2D1RadialGradientBrush interface  
+##  <a name="operator_id2d1radialgradientbrush_star"></a>CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *  
+ Interfaz de ID2D1RadialGradientBrush devuelve  
   
 ```  
 operator ID2D1RadialGradientBrush*();
 ```   
   
-### <a name="return-value"></a>Return Value  
- Pointer to an ID2D1RadialGradientBrush interface or NULL if object is not initialized yet.  
+### <a name="return-value"></a>Valor devuelto  
+ Puntero a una interfaz ID2D1RadialGradientBrush o NULL si el objeto no se ha inicializado todavía.  
   
-##  <a name="setcenter"></a>  CD2DRadialGradientBrush::SetCenter  
- Specifies the center of the gradient ellipse in the brush's coordinate space  
+##  <a name="setcenter"></a>CD2DRadialGradientBrush::SetCenter  
+ Especifica el centro de la elipse del degradado en el espacio de coordenadas del pincel  
   
 ```  
 void SetCenter(CD2DPointF point);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `point`  
- The center of the gradient ellipse, in the brush's coordinate space  
+ El centro de la elipse del degradado, en el espacio de coordenadas del pincel  
   
-##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset  
- Specifies the offset of the gradient origin relative to the gradient ellipse's center  
+##  <a name="setgradientoriginoffset"></a>CD2DRadialGradientBrush::SetGradientOriginOffset  
+ Especifica el desplazamiento del origen del degradado con respecto al centro de la elipse de degradado  
   
 ```  
 void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `gradientOriginOffset`  
- The offset of the gradient origin from the center of the gradient ellipse  
+ El desplazamiento del origen degradado desde el centro de la elipse de degradado  
   
-##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX  
- Specifies the x-radius of the gradient ellipse, in the brush's coordinate space  
+##  <a name="setradiusx"></a>CD2DRadialGradientBrush::SetRadiusX  
+ Especifica el radio x de la elipse del degradado, en el espacio de coordenadas del pincel  
   
 ```  
 void SetRadiusX(FLOAT radiusX);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `radiusX`  
- The x-radius of the gradient ellipse. This value is in the brush's coordinate space  
+ El radio de x de la elipse del degradado. Este valor está en el espacio de coordenadas del pincel  
   
-##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY  
- Specifies the y-radius of the gradient ellipse, in the brush's coordinate space  
+##  <a name="setradiusy"></a>CD2DRadialGradientBrush::SetRadiusY  
+ Especifica el radio de la elipse del degradado, y en el espacio de coordenadas del pincel  
   
 ```  
 void SetRadiusY(FLOAT radiusY);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `radiusY`  
- The y-radius of the gradient ellipse. This value is in the brush's coordinate space  
+ Radio y de la elipse del degradado. Este valor está en el espacio de coordenadas del pincel  
   
-## <a name="see-also"></a>See Also  
- [Classes](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>Vea también  
+ [Clases](../../mfc/reference/mfc-classes.md)
 

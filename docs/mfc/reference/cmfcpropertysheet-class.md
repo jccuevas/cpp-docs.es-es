@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertySheet Class | Microsoft Docs
+title: Clase CMFCPropertySheet | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,23 +31,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCPropertySheet [MFC], CMFCPropertySheet
-- CMFCPropertySheet [MFC], AddPage
-- CMFCPropertySheet [MFC], AddPageToTree
-- CMFCPropertySheet [MFC], AddTreeCategory
-- CMFCPropertySheet [MFC], EnablePageHeader
-- CMFCPropertySheet [MFC], GetHeaderHeight
-- CMFCPropertySheet [MFC], GetLook
-- CMFCPropertySheet [MFC], GetNavBarWidth
-- CMFCPropertySheet [MFC], GetTab
-- CMFCPropertySheet [MFC], InitNavigationControl
-- CMFCPropertySheet [MFC], OnActivatePage
-- CMFCPropertySheet [MFC], OnDrawPageHeader
-- CMFCPropertySheet [MFC], OnRemoveTreePage
-- CMFCPropertySheet [MFC], RemoveCategory
-- CMFCPropertySheet [MFC], RemovePage
-- CMFCPropertySheet [MFC], SetIconsList
-- CMFCPropertySheet [MFC], SetLook
+- CMFCPropertySheet::PreTranslateMessage method
+- CMFCPropertySheet::OnInitDialog method
+- CMFCPropertySheet class
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
 caps.latest.revision: 35
 author: mikeblome
@@ -67,86 +53,86 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 7f37532948f47aa8e5c986e29691f9346f8fe62c
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: a157a0afa4542bc023ba4d7149e78a71bbd56e74
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet Class
-The `CMFCPropertySheet` class supports a property sheet where each property page is denoted by a page tab, a toolbar button, a tree control node, or a list item.  
+# <a name="cmfcpropertysheet-class"></a>Clase de CMFCPropertySheet
+La clase `CMFCPropertySheet` admite una hoja de propiedades donde cada página de propiedades se indica mediante una pestaña de página, un botón de barra de herramientas, un nodo del control de árbol o un elemento de lista.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CMFCPropertySheet : public CPropertySheet  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCPropertySheet::CMFCPropertySheet](#cmfcpropertysheet)|Constructs a `CMFCPropertySheet` object.|  
+|[CMFCPropertySheet::CMFCPropertySheet](#cmfcpropertysheet)|Construye un objeto `CMFCPropertySheet`.|  
 |`CMFCPropertySheet::~CMFCPropertySheet`|Destructor.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCPropertySheet::AddPage](#addpage)|Adds a page to the property sheet.|  
-|[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Adds a new property page to the tree control.|  
-|[CMFCPropertySheet::AddTreeCategory](#addtreecategory)|Adds a new node to the tree control.|  
-|[CMFCPropertySheet::EnablePageHeader](#enablepageheader)|Reserves space at the top of each page to draw a custom header.|  
-|[CMFCPropertySheet::GetHeaderHeight](#getheaderheight)|Retrieves the height of the current header.|  
-|[CMFCPropertySheet::GetLook](#getlook)|Retrieves an enumeration value that specifies the appearance of the current property sheet.|  
-|[CMFCPropertySheet::GetNavBarWidth](#getnavbarwidth)|Retries the width of the navigation bar in pixels.|  
-|[CMFCPropertySheet::GetTab](#gettab)|Retrieves the internal tab control object that supports the current property sheet control.|  
-|`CMFCPropertySheet::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
-|[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)|Initializes the appearance of the current property sheet control.|  
-|[CMFCPropertySheet::OnActivatePage](#onactivatepage)|Called by the framework when a property page is enabled.|  
-|[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Called by the framework to draw a custom property page header.|  
-|`CMFCPropertySheet::OnInitDialog`|Handles the [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) message. (Overrides [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
-|[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Called by the framework to remove a property page from a tree control.|  
-|`CMFCPropertySheet::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. (Overrides `CPropertySheet::PreTranslateMessage`.)|  
-|[CMFCPropertySheet::RemoveCategory](#removecategory)|Removes a node from the tree control.|  
-|[CMFCPropertySheet::RemovePage](#removepage)|Removes a property page from the property sheet.|  
-|[CMFCPropertySheet::SetIconsList](#seticonslist)|Specifies the list of images that are used in the navigation control of the Outlook pane.|  
-|[CMFCPropertySheet::SetLook](#setlook)|Specifies the appearance of the property sheet.|  
+|[CMFCPropertySheet::AddPage](#addpage)|Agrega una página a la hoja de propiedades.|  
+|[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Agrega una nueva página de propiedades al control de árbol.|  
+|[CMFCPropertySheet::AddTreeCategory](#addtreecategory)|Agrega un nuevo nodo al control de árbol.|  
+|[CMFCPropertySheet::EnablePageHeader](#enablepageheader)|Reserva espacio en la parte superior de cada página para dibujar un encabezado personalizado.|  
+|[CMFCPropertySheet::GetHeaderHeight](#getheaderheight)|Recupera el alto del encabezado actual.|  
+|[CMFCPropertySheet::GetLook](#getlook)|Recupera un valor de enumeración que especifica el aspecto de la hoja de propiedades actual.|  
+|[CMFCPropertySheet::GetNavBarWidth](#getnavbarwidth)|Recupera el ancho de la barra de navegación, en píxeles.|  
+|[CMFCPropertySheet::GetTab](#gettab)|Recupera el objeto de control de la pestaña interna que admite el control de la hoja de propiedades actual.|  
+|`CMFCPropertySheet::GetThisClass`|Usar el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
+|[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)|Inicializa el aspecto del control de la hoja de propiedades actual.|  
+|[CMFCPropertySheet::OnActivatePage](#onactivatepage)|Lo llama el marco de trabajo cuando se ha habilitado una página de propiedades.|  
+|[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Lo llama el marco de trabajo para dibujar un encabezado de la página de propiedades personalizada.|  
+|`CMFCPropertySheet::OnInitDialog`|Controla la [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) mensaje. (Invalida [CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
+|[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Lo llama el marco de trabajo para quitar una página de propiedades de un control de árbol.|  
+|`CMFCPropertySheet::PreTranslateMessage`|Convierte los mensajes de ventana antes de que se envíen a la [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. (Invalida `CPropertySheet::PreTranslateMessage`).|  
+|[CMFCPropertySheet::RemoveCategory](#removecategory)|Quita un nodo del control de árbol.|  
+|[CMFCPropertySheet::RemovePage](#removepage)|Quita una página de propiedades de la hoja de propiedades.|  
+|[CMFCPropertySheet::SetIconsList](#seticonslist)|Especifica la lista de imágenes que se usan en el control de navegación del panel de Outlook.|  
+|[CMFCPropertySheet::SetLook](#setlook)|Especifica el aspecto de la hoja de propiedades.|  
   
-## <a name="remarks"></a>Remarks  
- The `CMFCPropertySheet` class represents property sheets, also known as tab dialog boxes. The `CMFCPropertySheet` class can display a property page in a variety of ways.  
+## <a name="remarks"></a>Comentarios  
+ La clase `CMFCPropertySheet` representa hojas de propiedades, también conocidas como cuadros de diálogo de pestaña. La clase `CMFCPropertySheet` puede mostrar una página de propiedades de varias formas.  
   
- Perform the following steps to use the `CMFCPropertySheet` class in your application:  
+ Realice los pasos siguientes para usar la clase `CMFCPropertySheet` en la aplicación:  
   
-1.  Derive a class from the `CMFCPropertySheet` class and name the class, for example, CMyPropertySheet.  
+1.  Derive una clase de la clase `CMFCPropertySheet` y llámela, por ejemplo, CMyPropertySheet.  
   
-2.  Construct a [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md) object for each property page.  
+2.  Construir un [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md) objeto para cada página de propiedades.  
   
-3.  Call the [CMFCPropertySheet::SetLook](#setlook) method in the CMyPropertySheet constructor. A parameter of that method specifies that property pages shall be displayed either as tabs along the top or left of the property sheet; tabs in the style of a Microsoft OneNote property sheet; buttons on a Microsoft Outlook toolbar control; nodes on a tree control; or as a list of items on the left side of the property sheet.  
+3.  Llame a la [CMFCPropertySheet::SetLook](#setlook) método en el constructor CMyPropertySheet. Un parámetro de ese método especifica que las páginas de propiedades se mostrarán como pestañas a lo largo de la parte superior o izquierda de la hoja de propiedades, como pestañas en el estilo de una hoja de propiedades de Microsoft OneNote, como botones en un control de barra de herramientas de Microsoft Outlook, como nodos en un control de árbol o como una lista de elementos en el lado izquierdo de la hoja de propiedades.  
   
-4.  If you create a property sheet in the style of a Microsoft Outlook toolbar, call the [CMFCPropertySheet::SetIconsList](#seticonslist) method to associate an image list together with the property pages.  
+4.  Si crea una hoja de propiedades en el estilo de una barra de herramientas de Microsoft Outlook, llame a la [CMFCPropertySheet::SetIconsList](#seticonslist) para asociar una lista de imágenes, junto con las páginas de propiedades.  
   
-5.  Call the [CMFCPropertySheet::AddPage](#addpage) method for each property page.  
+5.  Llame a la [CMFCPropertySheet::AddPage](#addpage) método para cada página de propiedades.  
   
-6.  Create a `CMFCPropertySheet` control and call its `DoModal` method.  
+6.  Cree un control `CMFCPropertySheet` y llame a su método `DoModal`.  
   
-## <a name="illustrations"></a>Illustrations  
- The following illustration depicts a property sheet that is in the style of an embedded Microsoft Outlook toolbar. The Outlook toolbar appears on the left side of the property sheet.  
+## <a name="illustrations"></a>Ilustraciones  
+ La siguiente ilustración muestra una hoja de propiedades que se encuentra en el estilo de una barra de herramientas incrustada de Microsoft Outlook. La barra de herramientas de Outlook aparece en el lado izquierdo de la hoja de propiedades.  
   
- ![CMFCPropertySheet color controls](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")  
+ ![Color de CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")  
   
- The following illustration depicts a property sheet that contains a [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md) object. That object is a property sheet in the style of a standard common controls property sheet.  
+ La siguiente ilustración muestra una hoja de propiedades que contiene un [CMFCPropertyGridCtrl clase](../../mfc/reference/cmfcpropertygridctrl-class.md) objeto. Ese objeto es una hoja de propiedades del estilo de una hoja de propiedades de controles comunes estándar.  
   
- ![CMFCPropertySheet list and property controls](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")  
+ ![Propiedad y lista de CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")  
   
- The following illustration depicts a property sheet that is in the style of a tree control.  
+ La siguiente ilustración muestra una hoja de propiedades que se encuentra en el estilo de un control de árbol.  
   
- ![Peroperty Tree](../../mfc/reference/media/proptree.png "proptree")  
+ ![Árbol de propiedades](../../mfc/reference/media/proptree.png "proptree")  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -157,27 +143,27 @@ class CMFCPropertySheet : public CPropertySheet
   
  [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxpropertysheet.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxpropertysheet.h  
   
-##  <a name="addpage"></a>  CMFCPropertySheet::AddPage  
- Adds a page to the property sheet.  
+##  <a name="addpage"></a>CMFCPropertySheet::AddPage  
+ Agrega una página a la hoja de propiedades.  
   
 ```  
 void AddPage(CPropertyPage* pPage);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pPage`  
- Pointer to a page object. This parameter cannot be `NULL`.  
+ Puntero a un objeto de página. Este parámetro no puede ser `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- This method adds the specified property page as the rightmost tab in the property sheet. Therefore, use this method to add pages in left-to-right order.  
+### <a name="remarks"></a>Comentarios  
+ Este método agrega la página de propiedades especificado en la ficha situada en la hoja de propiedades. Por lo tanto, utilice este método para agregar páginas en orden de izquierda a derecha.  
   
- If the property sheet is in the style of Microsoft Outlook, the framework displays a list of navigation buttons at the left of the property sheet. After this method adds a property page, it adds a corresponding button to the list. To display a property page, click its corresponding button. For more information about styles of property sheets, see [CMFCPropertySheet::SetLook](#setlook).  
+ Si la hoja de propiedades está en el estilo de Microsoft Outlook, el marco de trabajo muestra una lista de botones de navegación a la izquierda de la hoja de propiedades. Después de que este método agrega una página de propiedades, agrega un botón correspondiente a la lista. Para mostrar una página de propiedades, haga clic en su botón correspondiente. Para obtener más información acerca de los estilos de hojas de propiedades, consulte [CMFCPropertySheet::SetLook](#setlook).  
   
-##  <a name="addpagetotree"></a>  CMFCPropertySheet::AddPageToTree  
- Adds a new property page to the tree control.  
+##  <a name="addpagetotree"></a>CMFCPropertySheet::AddPageToTree  
+ Agrega una nueva página de propiedades al control de árbol.  
   
 ```  
 void AddPageToTree(
@@ -187,24 +173,24 @@ void AddPageToTree(
     int nSelIconNum=-1);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pCategory`  
- Pointer to a parent tree node, or `NULL` to associate the specified page with the top-level node. Call the [CMFCPropertySheet::AddTreeCategory](#addtreecategory) method to obtain this pointer.  
+ Puntero a un nodo de árbol principal, o `NULL` para asociar la página especificada con el nodo de nivel superior. Llame a la [CMFCPropertySheet::AddTreeCategory](#addtreecategory) método para obtener este puntero.  
   
  [in] `pPage`  
- Pointer to a property page object.  
+ Puntero a un objeto de página de propiedades.  
   
  [in] `nIconNum`  
- Zero-based index of an icon, or -1 if no icon is used. The icon is displayed next to the tree control property page when the page is not selected. The default value is -1.  
+ Índice de base cero de un icono o -1 si no se utiliza ningún icono. El icono aparece junto a la página de propiedades del control de árbol cuando la página no está seleccionada. El valor predeterminado es -1.  
   
  [in] `nSelIconNum`  
- Zero-based index of an icon, or -1 if no icon is used. The icon is displayed next to the tree control property page when the page is selected. The default value is -1.  
+ Índice de base cero de un icono o -1 si no se utiliza ningún icono. Cuando se selecciona la página, se muestra el icono situado junto a la página de propiedades del control de árbol. El valor predeterminado es -1.  
   
-### <a name="remarks"></a>Remarks  
- This method adds a property page as a leaf of a tree control. To add a property page, create a `CMFCPropertySheet` object, call the [CMFCPropertySheet::SetLook](#setlook) method with the `look` parameter set to `CMFCPropertySheet::PropSheetLook_Tree`, and then use this method to add the property page.  
+### <a name="remarks"></a>Comentarios  
+ Este método agrega una página de propiedades como una hoja de un control de árbol. Para agregar una página de propiedades, cree una `CMFCPropertySheet` objeto, llame a la [CMFCPropertySheet::SetLook](#setlook) método con la `look` establecido en `CMFCPropertySheet::PropSheetLook_Tree`y, a continuación, utilice este método para agregar la página de propiedades.  
   
-##  <a name="addtreecategory"></a>  CMFCPropertySheet::AddTreeCategory  
- Adds a new node to the tree control.  
+##  <a name="addtreecategory"></a>CMFCPropertySheet::AddTreeCategory  
+ Agrega un nuevo nodo al control de árbol.  
   
 ```  
 CMFCPropertySheetCategoryInfo* AddTreeCategory(
@@ -214,29 +200,29 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
     const CMFCPropertySheetCategoryInfo* pParentCategory=NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `lpszLabel`  
- The name of the node.  
+ El nombre del nodo.  
   
  [in] `nIconNum`  
- Zero-based index of an icon, or -1 if no icon is used. The icon is displayed next to the tree control property page when the page is not selected. The default value is -1.  
+ Índice de base cero de un icono o -1 si no se utiliza ningún icono. El icono aparece junto a la página de propiedades del control de árbol cuando la página no está seleccionada. El valor predeterminado es -1.  
   
  [in] `nSelectedIconNum`  
- Zero-based index of an icon, or -1 if no icon is used. The icon is displayed next to the tree control property page when the page is selected. The default value is -1.  
+ Índice de base cero de un icono o -1 si no se utiliza ningún icono. Cuando se selecciona la página, se muestra el icono situado junto a la página de propiedades del control de árbol. El valor predeterminado es -1.  
   
  [in] `pParentCategory`  
- Pointer to a parent tree node, or `NULL` to associate the specified page with the top-level node. Set this parameter with the [CMFCPropertySheet::AddTreeCategory](#addtreecategory) method.  
+ Puntero a un nodo de árbol principal, o `NULL` para asociar la página especificada con el nodo de nivel superior. Establezca este parámetro con el [CMFCPropertySheet::AddTreeCategory](#addtreecategory) método.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the new node in the tree control.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero al nuevo nodo en el control de árbol.  
   
-### <a name="remarks"></a>Remarks  
- Use this method to add a new node, which is also referred to as a category, to the tree control. To add a node, create a `CMFCPropertySheet` object, call the [CMFCPropertySheet::SetLook](#setlook) method with the `look` parameter set to `CMFCPropertySheet::PropSheetLook_Tree`, and then use this method to add the node.  
+### <a name="remarks"></a>Comentarios  
+ Utilice este método para agregar un nuevo nodo, que también se conoce como una categoría, para el control de árbol. Para agregar un nodo, cree una `CMFCPropertySheet` objeto, llame a la [CMFCPropertySheet::SetLook](#setlook) método con la `look` establecido en `CMFCPropertySheet::PropSheetLook_Tree`y, a continuación, utilice este método para agregar el nodo.  
   
- Use the return value of this method in subsequent calls to [CMFCPropertySheet::AddPageToTree](#addpagetotree) and [CMFCPropertySheet::AddTreeCategory](#addtreecategory).  
+ Utilice el valor devuelto de este método en llamadas posteriores a [CMFCPropertySheet::AddPageToTree](#addpagetotree) y [CMFCPropertySheet::AddTreeCategory](#addtreecategory).  
   
-##  <a name="cmfcpropertysheet"></a>  CMFCPropertySheet::CMFCPropertySheet  
- Constructs a `CMFCPropertySheet` object.  
+##  <a name="cmfcpropertysheet"></a>CMFCPropertySheet::CMFCPropertySheet  
+ Construye un objeto `CMFCPropertySheet`.  
   
 ```  
 CMFCPropertySheet(
@@ -250,115 +236,115 @@ CMFCPropertySheet(
     UINT iSelectPage=0);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pszCaption`  
- A string that contains the property sheet caption. Cannot be `NULL`.  
+ Una cadena que contiene el título de la hoja de propiedades. No puede ser `NULL`.  
   
  [in] `nIDCaption`  
- A resource ID that contains the property sheet caption.  
+ Un identificador de recurso que contiene el título de la hoja de propiedades.  
   
  [in] `pParentWnd`  
- Pointer to the parent window of the property sheet, or `NULL` if the parent window is the main window of the application. The default value is `NULL`.  
+ Puntero a la ventana primaria de la hoja de propiedades o `NULL` si la ventana primaria es la ventana principal de la aplicación. El valor predeterminado es `NULL`.  
   
  [in] `iSelectPage`  
- The zero-based index of the top property page. The default value is 0.  
+ Índice de base cero de la página de propiedades principales. El valor predeterminado es 0.  
   
-### <a name="remarks"></a>Remarks  
- For more information, see the parameters for the [CPropertySheet::CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet) constructor.  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte los parámetros para la [CPropertySheet::CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet) constructor.  
   
-##  <a name="enablepageheader"></a>  CMFCPropertySheet::EnablePageHeader  
- Reserves space at the top of each page to draw a custom header.  
+##  <a name="enablepageheader"></a>CMFCPropertySheet::EnablePageHeader  
+ Reserva espacio en la parte superior de cada página para dibujar un encabezado personalizado.  
   
 ```  
 void EnablePageHeader(int nHeaderHeight);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `nHeaderHeight`  
- The height of the header, in pixels.  
+ El alto del encabezado, en píxeles.  
   
-### <a name="remarks"></a>Remarks  
- To use the value of the `nHeaderHeight` parameter to draw a custom header, override the [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) method.  
+### <a name="remarks"></a>Comentarios  
+ Para usar el valor de la `nHeaderHeight` parámetro para dibujar un encabezado personalizado, invalide el [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) método.  
   
-##  <a name="getheaderheight"></a>  CMFCPropertySheet::GetHeaderHeight  
- Retrieves the height of the current header.  
+##  <a name="getheaderheight"></a>CMFCPropertySheet::GetHeaderHeight  
+ Recupera el alto del encabezado actual.  
   
 ```  
 int GetHeaderHeight() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The height of the header, in pixels.  
+### <a name="return-value"></a>Valor devuelto  
+ El alto del encabezado, en píxeles.  
   
-### <a name="remarks"></a>Remarks  
- Call the [CMFCPropertySheet::EnablePageHeader](#enablepageheader) method before you call this method.  
+### <a name="remarks"></a>Comentarios  
+ Llame a la [CMFCPropertySheet::EnablePageHeader](#enablepageheader) método antes de llamar a este método.  
   
-##  <a name="getlook"></a>  CMFCPropertySheet::GetLook  
- Retrieves an enumeration value that specifies the appearance of the current property sheet.  
+##  <a name="getlook"></a>CMFCPropertySheet::GetLook  
+ Recupera un valor de enumeración que especifica el aspecto de la hoja de propiedades actual.  
   
 ```  
 PropSheetLook GetLook() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- One of the enumeration values that specifies the appearance of the property sheet. For a list of possible values, see the enumeration table in the Remarks section of [CMFCPropertySheet::SetLook](#setlook).  
+### <a name="return-value"></a>Valor devuelto  
+ Uno de los valores de enumeración que especifica el aspecto de la hoja de propiedades. Para obtener una lista de valores posibles, vea la tabla de enumeración en la sección Comentarios de [CMFCPropertySheet::SetLook](#setlook).  
   
-##  <a name="getnavbarwidth"></a>  CMFCPropertySheet::GetNavBarWidth  
- Gets the width of the navigation bar.  
+##  <a name="getnavbarwidth"></a>CMFCPropertySheet::GetNavBarWidth  
+ Obtiene el ancho de la barra de navegación.  
   
 ```  
 int GetNavBarWidth() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The width of the navigation bar in pixels.  
+### <a name="return-value"></a>Valor devuelto  
+ Ancho de la barra de navegación, en píxeles.  
   
-##  <a name="gettab"></a>  CMFCPropertySheet::GetTab  
- Retrieves the internal tab control object that supports the current property sheet control.  
+##  <a name="gettab"></a>CMFCPropertySheet::GetTab  
+ Recupera el objeto de control de la pestaña interna que admite el control de la hoja de propiedades actual.  
   
 ```  
 CMFCTabCtrl& GetTab() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- An internal tab control object.  
+### <a name="return-value"></a>Valor devuelto  
+ Un objeto de control de ficha interno.  
   
-### <a name="remarks"></a>Remarks  
- You can set a property sheet so that it appears in different styles, such as a tree control, a list of navigation buttons, or a set of tabbed pages.  
+### <a name="remarks"></a>Comentarios  
+ Puede establecer una hoja de propiedades para que aparezca en diferentes estilos, como un control de árbol, una lista de botones de navegación o un conjunto de páginas con pestañas.  
   
- Before you call this method, call the [CMFCPropertySheet::SetLook](#setlook) method to set the appearance of the property sheet control. Then call the [CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol) method to initialize the internal tab control object. Use this method to retrieve the tab control object and then use that object to work with the tabs on the property sheet.  
+ Antes de llamar a este método, llame a la [CMFCPropertySheet::SetLook](#setlook) para establecer la apariencia del control de hoja de propiedades. A continuación, llame a la [CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol) método para inicializar el objeto de control de ficha interno. Utilice este método para recuperar el objeto de control de pestaña y, a continuación, usar ese objeto para trabajar con las fichas en la hoja de propiedades.  
   
- This method asserts in debug mode if the property sheet control is not set to appear in the style of Microsoft OneNote.  
+ Este método valida en modo de depuración, si no se establece el control de la hoja de propiedades que aparecen en el estilo de Microsoft OneNote.  
   
-##  <a name="initnavigationcontrol"></a>  CMFCPropertySheet::InitNavigationControl  
- Initializes the appearance of the current property sheet control.  
+##  <a name="initnavigationcontrol"></a>CMFCPropertySheet::InitNavigationControl  
+ Inicializa el aspecto del control de la hoja de propiedades actual.  
   
 ```  
 virtual CWnd* InitNavigationControl();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the window of the property sheet control.  
+### <a name="return-value"></a>Valor devuelto  
+ Puntero a la ventana de control de la hoja de propiedades.  
   
-### <a name="remarks"></a>Remarks  
- A property sheet control can appear in several different forms, such as a set of tabbed pages, a tree control, or a list of navigation buttons. Use the [CMFCPropertySheet::SetLook](#setlook) method to specify the appearance of the property sheet control.  
+### <a name="remarks"></a>Comentarios  
+ Puede aparecer un control de la hoja de propiedades en diferentes formatos, como un conjunto de páginas con pestañas, un control de árbol o una lista de botones de navegación. Utilice la [CMFCPropertySheet::SetLook](#setlook) método para especificar la apariencia del control de hoja de propiedades.  
   
-##  <a name="onactivatepage"></a>  CMFCPropertySheet::OnActivatePage  
- Called by the framework when a property page is enabled.  
+##  <a name="onactivatepage"></a>CMFCPropertySheet::OnActivatePage  
+ Lo llama el marco de trabajo cuando se ha habilitado una página de propiedades.  
   
 ```  
 virtual void OnActivatePage(CPropertyPage* pPage);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pPage`  
- Pointer to a property page object that represents the enabled property page.  
+ Puntero a un objeto de la página de propiedad que representa la página de la propiedad enabled.  
   
-### <a name="remarks"></a>Remarks  
- By default, this method ensures that the enabled property page is scrolled into view. If the style of the current property sheet contains a Microsoft Outlook pane, this method sets the corresponding Outlook button to the checked state.  
+### <a name="remarks"></a>Comentarios  
+ De forma predeterminada, este método garantiza que la página de la propiedad enabled se desplaza en la vista. Si el estilo de la hoja de propiedades actual contiene un panel de Microsoft Outlook, este método establece el botón correspondiente de Outlook en el estado de activación.  
   
-##  <a name="ondrawpageheader"></a>  CMFCPropertySheet::OnDrawPageHeader  
- Called by the framework to draw the header for a custom property page.  
+##  <a name="ondrawpageheader"></a>CMFCPropertySheet::OnDrawPageHeader  
+ Llamado por el marco para dibujar el encabezado de página de propiedades personalizadas.  
   
 ```  
 virtual void OnDrawPageHeader(
@@ -367,67 +353,67 @@ virtual void OnDrawPageHeader(
     CRect rectHeader);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pDC`  
- Pointer to a device context.  
+ Puntero a un contexto de dispositivo.  
   
  [in] `nPage`  
- The zero-based property page number.  
+ El número de página de la propiedad de base cero.  
   
  [in] `rectHeader`  
- A bounding rectangle that specifies where to draw the header.  
+ Un rectángulo delimitador que especifica dónde se va a dibujar el encabezado.  
   
-### <a name="remarks"></a>Remarks  
- By default, this method does nothing. If you override this method, call the [CMFCPropertySheet::EnablePageHeader](#enablepageheader) method before the framework calls this method.  
+### <a name="remarks"></a>Comentarios  
+ De forma predeterminada, este método no hace nada. Si invalida este método, llame a la [CMFCPropertySheet::EnablePageHeader](#enablepageheader) método antes de que el marco de trabajo llama a este método.  
   
-##  <a name="onremovetreepage"></a>  CMFCPropertySheet::OnRemoveTreePage  
- Called by the framework to remove a property page from a tree control.  
+##  <a name="onremovetreepage"></a>CMFCPropertySheet::OnRemoveTreePage  
+ Lo llama el marco de trabajo para quitar una página de propiedades de un control de árbol.  
   
 ```  
 virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pPage`  
- Pointer to a property page object that represents the property page to remove.  
+ Puntero a un objeto de la página de propiedad que representa la página de propiedades para quitar.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if this method is successful; otherwise, `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si este método se realiza correctamente; de lo contrario, `FALSE`.  
   
-##  <a name="removecategory"></a>  CMFCPropertySheet::RemoveCategory  
- Removes a node from the tree control.  
+##  <a name="removecategory"></a>CMFCPropertySheet::RemoveCategory  
+ Quita un nodo del control de árbol.  
   
 ```  
 void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pCategory`  
- Pointer to a category (node) to remove.  
+ Puntero a una categoría (nodo) para quitar.  
   
-### <a name="remarks"></a>Remarks  
- Use this method to remove a node, which is also referred to as a category, from a tree control. Use the [CMFCPropertySheet::AddTreeCategory](#addtreecategory) method to add a node to a tree control.  
+### <a name="remarks"></a>Comentarios  
+ Utilice este método para quitar un nodo, que también se conoce como una categoría de un control de árbol. Utilice la [CMFCPropertySheet::AddTreeCategory](#addtreecategory) para agregar un nodo a un control de árbol.  
   
-##  <a name="removepage"></a>  CMFCPropertySheet::RemovePage  
- Removes a property page from the property sheet.  
+##  <a name="removepage"></a>CMFCPropertySheet::RemovePage  
+ Quita una página de propiedades de la hoja de propiedades.  
   
 ```  
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pPage`  
- Pointer to property page object that represents the property page to remove. Cannot be `NULL`.  
+ Puntero al objeto de la página de propiedad que representa la página de propiedades para quitar. No puede ser `NULL`.  
   
  [in] `nPage`  
- Zero-based index of the page to remove.  
+ Índice de base cero de la página para quitar.  
   
-### <a name="remarks"></a>Remarks  
- This method removes the specified property page and destroys its associated window. The property page object that the `pPage` parameter specifies is not destroyed until the [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) window is closed.  
+### <a name="remarks"></a>Comentarios  
+ Este método quita la página de propiedades especificada y destruye la ventana asociada. La página de propiedades de objeto que el `pPage` parámetro especifica que no se destruye hasta que el [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) ventana está cerrada.  
   
-##  <a name="seticonslist"></a>  CMFCPropertySheet::SetIconsList  
- Specifies the list of images that are used in the navigation control of the Outlook pane.  
+##  <a name="seticonslist"></a>CMFCPropertySheet::SetIconsList  
+ Especifica la lista de imágenes que se usan en el control de navegación del panel de Outlook.  
   
 ```  
 BOOL SetIconsList(
@@ -437,29 +423,29 @@ BOOL SetIconsList(
 void SetIconsList(HIMAGELIST hIcons);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `uiImageListResID`  
- The resource ID of an image list.  
+ El identificador de recurso de una lista de imágenes.  
   
  [in] `cx`  
- The width, in pixels, of icons in the image list.  
+ El ancho, en píxeles, de los iconos en la lista de imágenes.  
   
  [in] `clrTransparent`  
- The transparent image color. The parts of the image that are this color will be transparent. The default value is the color magenta, RGB(255,0,255).  
+ El color transparente de imagen. Las partes de la imagen que son de este color será transparentes. El valor predeterminado es el color fucsia, RGB(255,0,255).  
   
  [in] `hIcons`  
- A handle to an existing image list.  
+ Identificador de una lista de imágenes existente.  
   
-### <a name="return-value"></a>Return Value  
- In the first method overload syntax, `TRUE` if this method is successful; otherwise, `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ En el primer método de sobrecarga sintaxis, `TRUE` si este método es correcta; en caso contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- If the property sheet is in the style of Microsoft Outlook, the framework displays a list of navigation buttons, called the Outlook pane control, at the left of the property sheet. Use this method to set the image list to be used by the Outlook pane control.  
+### <a name="remarks"></a>Comentarios  
+ Si la hoja de propiedades está en el estilo de Microsoft Outlook, el marco de trabajo muestra una lista de botones de navegación, llamado el control de panel de Outlook a la izquierda de la hoja de propiedades. Utilice este método para establecer la lista de imágenes que va a usar el control de panel de Outlook.  
   
- For more information about the methods that support this method, see [CImageList::Create](../../mfc/reference/cimagelist-class.md#create) and [CImageList::Add](../../mfc/reference/cimagelist-class.md#add). For more information about how to set the style of a property sheet, see [CMFCPropertySheet::SetLook](#setlook).  
+ Para obtener más información acerca de los métodos que admite este método, consulte [CImageList:: Create](../../mfc/reference/cimagelist-class.md#create) y [CImageList::Add](../../mfc/reference/cimagelist-class.md#add). Para obtener más información acerca de cómo establecer el estilo de una hoja de propiedades, consulte [CMFCPropertySheet::SetLook](#setlook).  
   
-##  <a name="setlook"></a>  CMFCPropertySheet::SetLook  
- Specifies the appearance of the property sheet.  
+##  <a name="setlook"></a>CMFCPropertySheet::SetLook  
+ Especifica el aspecto de la hoja de propiedades.  
   
 ```  
 void SetLook(
@@ -467,29 +453,29 @@ void SetLook(
     int nNavControlWidth=100);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `look`  
- One of the enumeration values that specifies the appearance of the property sheet. The default style for a property sheet is `CMFCPropertySheet::PropSheetLook_Tabs`. For more information, see the table in the Remarks section of this topic.  
+ Uno de los valores de enumeración que especifica el aspecto de la hoja de propiedades. El estilo predeterminado para una hoja de propiedades es `CMFCPropertySheet::PropSheetLook_Tabs`. Para obtener más información, vea la tabla en la sección Comentarios de este tema.  
   
  [in] `nNavControlWidth`  
- The width of the navigation control, in pixels. The default value is 100.  
+ El ancho del control de navegación, en píxeles. El valor predeterminado es 100.  
   
-### <a name="remarks"></a>Remarks  
- To display a property sheet in a style other than the default, call this method before you create the property sheet window.  
+### <a name="remarks"></a>Comentarios  
+ Para mostrar una hoja de propiedades en un estilo distinto del predeterminado, llame a este método antes de crear la ventana de la hoja de propiedades.  
   
- The following table lists the enumeration values that can be specified in the `look` parameter.  
+ La tabla siguiente enumeran los valores de enumeración que se pueden especificar en el `look` parámetro.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|`CMFCPropertySheet::PropSheetLook_Tabs`|(Default) Displays a tab for each property page. Tabs are displayed at the top of the property sheet and are stacked if there are more tabs than will fit in a single row.|  
-|`CMFCPropertySheet::PropSheetLook_OutlookBar`|Displays a list of navigation buttons, in the style of the Microsoft Outlook bar, at the left side of the property sheet. Each button in the list corresponds to a property page. The framework displays scroll arrows if there are more buttons than will fit in the visible area of the list.|  
-|`CMFCPropertySheet::PropSheetLook_Tree`|Displays a tree control at the left side of the property sheet. Each parent or child node of the tree control corresponds to a property page. The framework displays scroll arrows if there are more nodes than will fit in the visible area of the tree control.|  
-|`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|Displays a tab, in the style of Microsoft OneNote, for each property page. The framework displays tabs at the top of the property sheet and scroll arrows if there are more tabs than will fit in a single row.|  
-|`CMFCPropertySheet::PropSheetLook_List`|Displays a list at the left side of the property sheet. Each list item corresponds to a property page. The framework displays scroll arrows if there are more list items than will fit in the visible area of the list.|  
+|`CMFCPropertySheet::PropSheetLook_Tabs`|(Valor predeterminado) Muestra una ficha para cada página de propiedades. Las fichas se muestran en la parte superior de la hoja de propiedades y se apilan si hay más fichas que caben en una sola fila.|  
+|`CMFCPropertySheet::PropSheetLook_OutlookBar`|Muestra una lista de botones de navegación, en el estilo de la barra de Outlook de Microsoft, en el lado izquierdo de la hoja de propiedades. Cada botón de la lista corresponde a una página de propiedades. El marco de trabajo muestra flechas de desplazamiento si hay varios botones que caben en el área visible de la lista.|  
+|`CMFCPropertySheet::PropSheetLook_Tree`|Muestra un control de árbol en el lado izquierdo de la hoja de propiedades. Cada nodo primario o secundario del control de árbol corresponde a una página de propiedades. El marco de trabajo muestra flechas de desplazamiento si hay más nodos de los que caben en el área visible del control de árbol.|  
+|`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|Muestra una ficha en el estilo de Microsoft OneNote, para cada propiedad. El marco de trabajo muestra las fichas en la parte superior de la hoja de propiedades y flechas de desplazamiento si hay más fichas que caben en una sola fila.|  
+|`CMFCPropertySheet::PropSheetLook_List`|Muestra una lista en el lado izquierdo de la hoja de propiedades. Cada elemento de lista corresponde a una página de propiedades. El marco de trabajo muestra flechas de desplazamiento si hay más elementos de lista que caben en el área visible de la lista.|  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCPropertyPage Class](../../mfc/reference/cmfcpropertypage-class.md)   
- [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md)
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [Clases](../../mfc/reference/mfc-classes.md)   
+ [Clase CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)   
+ [Clase CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)
 

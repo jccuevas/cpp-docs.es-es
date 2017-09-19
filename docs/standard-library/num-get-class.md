@@ -1,5 +1,5 @@
 ---
-title: num_get Class | Microsoft Docs
+title: num_get (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- num_get
 - xlocnum/std::num_get
 - locale/std::num_get::char_type
 - locale/std::num_get::iter_type
@@ -17,11 +18,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- std::num_get [C++]
-- std::num_get [C++], char_type
-- std::num_get [C++], iter_type
-- std::num_get [C++], do_get
-- std::num_get [C++], get
+- num_get class
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
 caps.latest.revision: 18
 author: corob-msft
@@ -41,70 +38,70 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: d0b5823b285ace08d64652e22660ea3c9a742e90
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f8595909a294775034c3e1b725d37bfe0f846a93
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="numget-class"></a>num_get Class
-A template class that describes an object that can serve as a locale facet to control conversions of sequences of type `CharType` to numeric values.  
+# <a name="numget-class"></a>num_get (clase)
+Una clase de plantilla que describe un objeto que puede actuar como una faceta de la configuración regional para controlar las conversiones de las secuencias de tipo `CharType` en valores numéricos.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 template <class CharType, class InputIterator = istreambuf_iterator<CharType>>  
 class num_get : public locale::facet;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `CharType`  
- The type used within a program to encode characters in a locale.  
+ Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.  
   
  `InputIterator`  
- The type of iterator from which the numeric get functions read their input.  
+ El tipo de iterador del que las funciones get numéricas leen su entrada.  
   
-## <a name="remarks"></a>Remarks  
- As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
+## <a name="remarks"></a>Comentarios  
+ Como ocurre con cualquier faceta de configuración regional, el identificador de objeto estático tiene un valor almacenado inicial de cero. El primer intento de acceso a su valor almacenado almacena un valor positivo único en **id.**  
   
-### <a name="constructors"></a>Constructors  
-  
-|||  
-|-|-|  
-|[num_get](#num_get)|The constructor for objects of type `num_get` that are used to extract numerical values from sequences.|  
-  
-### <a name="typedefs"></a>Typedefs  
+### <a name="constructors"></a>Constructores  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
-|[iter_type](#iter_type)|A type that describes an input iterator.|  
+|[num_get](#num_get)|Constructor para los objetos de tipo `num_get` que se usan para extraer valores numéricos de secuencias.|  
   
-### <a name="member-functions"></a>Member Functions  
+### <a name="typedefs"></a>Definiciones de tipo  
   
 |||  
 |-|-|  
-|[do_get](#do_get)|A virtual function that is called to extracts a numerical or Boolean value from a character sequence.|  
-|[get](#get)|Extracts a numerical or Boolean value from a character sequence.|  
+|[char_type](#char_type)|Tipo que se usa para describir un carácter empleado por una configuración regional.|  
+|[iter_type](#iter_type)|Tipo que describe un iterador de entrada.|  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<locale>  
+### <a name="member-functions"></a>Funciones miembro  
   
- **Namespace:** std  
+|||  
+|-|-|  
+|[do_get](#do_get)|Función virtual a la que se llama para extraer un valor numérico o un valor booleano de una secuencia de caracteres.|  
+|[get](#get)|Extrae un valor numérico o un valor booleano de una secuencia de caracteres.|  
   
-##  <a name="char_type"></a>  num_get::char_type  
- A type that is used to describe a character used by a locale.  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<locale>  
+  
+ **Espacio de nombres:** std  
+  
+##  <a name="char_type"></a> num_get::char_type  
+ Tipo que se usa para describir un carácter empleado por una configuración regional.  
   
 ```
 typedef CharType char_type;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for the template parameter **CharType**.  
+### <a name="remarks"></a>Comentarios  
+ El tipo es un sinónimo del parámetro de plantilla **CharType**.  
   
-##  <a name="do_get"></a>  num_get::do_get  
- A virtual function that is called to extracts a numerical or Boolean value from a character sequence.  
+##  <a name="do_get"></a> num_get::do_get  
+ Función virtual a la que se llama para extraer un valor numérico o un valor booleano de una secuencia de caracteres.  
   
 ```
 virtual iter_type do_get(
@@ -185,27 +182,27 @@ virtual iter_type do_get(
     bool& val) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- The beginning of the range of characters from which to read the number.  
+ El principio del intervalo de caracteres del que se va a leer el número.  
   
  `last`  
- The end of the range of characters from which to read the number.  
+ El final del intervalo de caracteres del que se va a leer el número.  
   
  `_Iosbase`  
- The [ios_base](../standard-library/ios-base-class.md) whose flags are used by the conversion.  
+ El objeto [ios_base](../standard-library/ios-base-class.md) cuyas marcas se usan por la conversión.  
   
  `_State`  
- The state to which failbit (see [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) is added upon failure.  
+ El estado al que failbit (ver [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) se agrega en caso de error.  
   
  `val`  
- The value that was read.  
+ Valor que se leyó.  
   
-### <a name="return-value"></a>Return Value  
- The iterator after the value has been read.  
+### <a name="return-value"></a>Valor devuelto  
+ El iterador después de que el valor se haya leído.  
   
-### <a name="remarks"></a>Remarks  
- The first virtual protected member function,  
+### <a name="remarks"></a>Comentarios  
+ La primera función miembro virtual protegida,  
   
 ```  
 virtual iter_type do_get(
@@ -216,27 +213,27 @@ virtual iter_type do_get(
     long& val) const;
 ```  
   
- matches sequential elements beginning at `first` in the sequence `[first, last)` until it has recognized a complete, nonempty integer input field. If successful, it converts this field to its equivalent value as type `long`, and stores the result in `val`. It returns an iterator designating the first element beyond the numeric input field. Otherwise, the function stores nothing in `val` and sets `ios_base::failbit` in `state`. It returns an iterator designating the first element beyond any prefix of a valid integer input field. In either case, if the return value equals `last`, the function sets `ios_base::eofbit` in `state`.  
+ coincide con elementos secuenciales, empezando por `first` en la secuencia `[first, last)` hasta que se reconoce una completa, el campo de entrada de enteros no vacío. Si tiene éxito, convierte este campo a su valor equivalente como tipo `long`y almacena el resultado en `val`. Devuelve un iterador que designa el primer elemento más allá del campo de entrada numérico. De otro modo, la función no almacena nada en `val` y establece `ios_base::failbit` en `state`. Devuelve un iterador que designa el primer elemento más allá de cualquier prefijo de un campo de entrada numérico entero válido. En cualquier caso, si el valor devuelto es igual a `last`, la función establece `ios_base::eofbit` en `state`.  
   
- The integer input field is converted by the same rules used by the scan functions for matching and converting a series of `char` elements from a file. (Each such `char` element is assumed to map to an equivalent element of type `Elem` by a simple, one-to-one, mapping.) The equivalent scan conversion specification is determined as follows:  
+ El campo de entrada numérico entero se convierte mediante las mismas reglas que han usado las funciones de análisis para hacer coincidir y convertir una serie de elementos `char` de un archivo. (Se presupone que cada uno de estos elementos `char` se asigna a un elemento equivalente de tipo `Elem` mediante una asignación simple, uno a uno). La especificación de conversión de análisis equivalente se determina de la manera siguiente:  
   
- If `iosbase.`[ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct), the conversion specification is `lo`.  
+ Si `iosbase.`[ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct), la especificación de conversión es `lo`.  
   
- If `iosbase.flags() & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex), the conversion specification is `lx`.  
+ Si `iosbase.flags() & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex), la especificación de conversión es `lx`.  
   
- If `iosbase.flags() & ios_base::basefield == 0`, the conversion specification is `li`.  
+ Si `iosbase.flags() & ios_base::basefield == 0`, la especificación de conversión es `li`.  
   
- Otherwise, the conversion specification is `ld`.  
+ De otro modo, la especificación de conversión es `ld`.  
   
- The format of an integer input field is further determined by the [locale facet](../standard-library/locale-class.md#facet_class)`fac` returned by the call [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.` [ios_base::getloc](../standard-library/ios-base-class.md#getloc)`())`. Specifically:  
+ El formato de un campo de entrada numérico entero se determina por la [faceta de configuración regional](../standard-library/locale-class.md#facet_class)`fac` que se devuelve mediante la llamada a [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.` [ios_base::getloc](../standard-library/ios-base-class.md#getloc)`())`. De manera específica:  
   
- `fac.` [numpunct::grouping](../standard-library/numpunct-class.md#grouping) `()` determines how digits are grouped to the left of any decimal point  
+ `fac.` [numpunct::grouping](../standard-library/numpunct-class.md#grouping) `()` determina cómo se agrupan los dígitos a la izquierda de cualquier separador decimal.  
   
- `fac.` [numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep) `()` determines the sequence that separates groups of digits to the left of any decimal point.  
+ `fac.` [numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep) `()` determina la secuencia que separa grupos de dígitos a la izquierda de cualquier separador decimal.  
   
- If no instances of `fac.thousands_sep()` occur in the numeric input field, no grouping constraint is imposed. Otherwise, any grouping constraints imposed by `fac.grouping()` are enforced and separators are removed before the scan conversion occurs.  
+ Si no se produce ninguna instancia de `fac.thousands_sep()` en el campo de entrada numérico, no se impone ninguna restricción de agrupación. De otro modo, se aplica cualquier restricción de agrupación impuesta por `fac.grouping()` y los separadores se quitan antes de que se produzca la conversión de análisis.  
   
- The fourth virtual protected member function:  
+ La cuarta función miembro virtual protegida:  
   
 ```  
 virtual iter_type do_get(
@@ -247,9 +244,9 @@ virtual iter_type do_get(
     unsigned long& val) const;
 ```  
   
- behaves the same as the first, except that it replaces a conversion specification of `ld` with `lu`. If successful it converts the numeric input field to a value of type `unsigned long` and stores that value in `val`.  
+ se comporta igual que la primera, excepto que reemplaza una especificación de conversión de `ld` por `lu`. Si se realiza correctamente, convierte el campo de entrada numérico en un valor de tipo `unsigned long` y almacena ese valor en `val`.  
   
- The fifth virtual protected member function:  
+ La quinta función miembro virtual protegida:  
   
 ```
 virtual iter_type do_get(
@@ -260,9 +257,9 @@ virtual iter_type do_get(
     long long& val) const;
 ```  
   
- behaves the same as the first, except that it replaces a conversion specification of `ld` with `lld`. If successful it converts the numeric input field to a value of type `long long` and stores that value in `val`.  
+ se comporta igual que la primera, excepto que reemplaza una especificación de conversión de `ld` por `lld`. Si se realiza correctamente, convierte el campo de entrada numérico en un valor de tipo `long long` y almacena ese valor en `val`.  
   
- The sixth virtual protected member function:  
+ La sexta función miembro virtual protegida:  
   
 ```  
 virtual iter_type do_get(
@@ -273,9 +270,9 @@ virtual iter_type do_get(
     unsigned long long& val) const;
 ```  
 
- behaves the same as the first, except that it replaces a conversion specification of `ld` with `llu`. If successful it converts the numeric input field to a value of type `unsigned long long` and stores that value in `val`.  
+ se comporta igual que la primera, excepto que reemplaza una especificación de conversión de `ld` por `llu`. Si se realiza correctamente, convierte el campo de entrada numérico en un valor de tipo `unsigned long long` y almacena ese valor en `val`.  
   
- The seventh virtual protected member function:  
+ La séptima función miembro virtual protegida:  
   
 ```
 virtual iter_type do_get(
@@ -286,9 +283,9 @@ virtual iter_type do_get(
     float& val) const;
 ```  
   
- behaves the same as the first, except that it endeavors to match a complete, nonempty floating-point input field. `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` determines the sequence that separates the integer digits from the fraction digits. The equivalent scan conversion specifier is `lf`.  
+ se comporta igual que la primera, excepto que intenta coincidir con un campo de entrada de punto flotante completo y que no esté vacío. `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` determina la secuencia que separa los dígitos enteros de los dígitos de fracción. El especificador de conversión de análisis equivalente es `lf`.  
   
- The eighth virtual protected member function:  
+ La octava función miembro virtual protegida:  
   
 ```  
 virtual iter_type do_get(
@@ -299,9 +296,9 @@ virtual iter_type do_get(
     double& val) const;
 ```  
   
- behaves the same as the first, except that it endeavors to match a complete, nonempty floating-point input field. `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` determines the sequence that separates the integer digits from the fraction digits. The equivalent scan conversion specifier is `lf`.  
+ se comporta igual que la primera, excepto que intenta coincidir con un campo de entrada de punto flotante completo y que no esté vacío. `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` determina la secuencia que separa los dígitos enteros de los dígitos de fracción. El especificador de conversión de análisis equivalente es `lf`.  
   
- The ninth virtual protected member function:  
+ La novena función miembro virtual protegida:  
   
 ```  
 virtual iter_type do_get(
@@ -312,9 +309,9 @@ virtual iter_type do_get(
     long double& val) const;
 ```  
   
- behaves the same as the eighth, except that the equivalent scan conversion specifier is `Lf`.  
+ se comporta igual que la octava, excepto que el especificador de conversión de análisis equivalente es `Lf`.  
   
- The tenth virtual protected member function:  
+ La función miembro protegido virtual décima:  
   
 ```  
 virtual iter_type do_get(
@@ -325,9 +322,9 @@ virtual iter_type do_get(
     void *& val) const;
 ```  
   
- behaves the same the first, except that the equivalent scan conversion specifier is `p`.  
+ se comporta igual que la primera, excepto que el especificador de conversión de análisis equivalente es `p`.  
   
- The last (eleventh) virtual protected member function:  
+ La última (undécima) función miembro virtual protegida:  
   
 ```  
 virtual iter_type do_get(
@@ -338,15 +335,15 @@ virtual iter_type do_get(
     bool& val) const;
 ```  
   
- behaves the same as the first, except that it endeavors to match a complete, nonempty Boolean input field. If successful it converts the Boolean input field to a value of type `bool` and stores that value in `val`.  
+ se comporta igual que la primera, excepto que intenta coincidir con un campo de entrada booleano completo y que no esté vacío. Si se realiza correctamente, convierte el campo de entrada booleano en un valor de tipo `bool` y almacena ese valor en `val`.  
   
- A Boolean input field takes one of two forms. If `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) is false, it is the same as an integer input field, except that the converted value must be either 0 (for false) or 1 (for true). Otherwise, the sequence must match either `fac.`[numpunct::falsename](../standard-library/numpunct-class.md#falsename)`()` (for false), or `fac.`[numpunct::truename](../standard-library/numpunct-class.md#truename)`()` (for true).  
+ Un campo de entrada booleano adopta una de dos formas. Si `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) es False, es igual que un campo de entrada numérico entero, excepto que el valor convertido debe ser 0 (para False) o 1 (para True). De otro modo, la secuencia debe coincidir con `fac.`[numpunct::falsename](../standard-library/numpunct-class.md#falsename)`()` (para False), o con `fac.`[numpunct::truename](../standard-library/numpunct-class.md#truename)`()` (para True).  
   
-### <a name="example"></a>Example  
-  See the example for [get](#get), where the virtual member function is called by `do_get`.  
+### <a name="example"></a>Ejemplo  
+  Vea el ejemplo de [get](#get), donde `do_get` llama a la función miembro virtual.  
   
-##  <a name="get"></a>  num_get::get  
- Extracts a numerical or Boolean value from a character sequence.  
+##  <a name="get"></a> num_get::get  
+ Extrae un valor numérico o un valor booleano de una secuencia de caracteres.  
   
 ```
 iter_type get(
@@ -427,49 +424,49 @@ iter_type get(
     void *& val) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- The beginning of the range of characters from which to read the number.  
+ El principio del intervalo de caracteres del que se va a leer el número.  
   
  `last`  
- The end of the range of characters from which to read the number.  
+ El final del intervalo de caracteres del que se va a leer el número.  
   
  `_Iosbase`  
- The [ios_base](../standard-library/ios-base-class.md) whose flags are used by the conversion.  
+ El objeto [ios_base](../standard-library/ios-base-class.md) cuyas marcas se usan por la conversión.  
   
  `_State`  
- The state to which failbit (see [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) is added upon failure.  
+ El estado al que failbit (ver [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) se agrega en caso de error.  
   
  `val`  
- The value that was read.  
+ Valor que se leyó.  
   
-### <a name="return-value"></a>Return Value  
- The iterator after the value has been read.  
+### <a name="return-value"></a>Valor devuelto  
+ El iterador después de que el valor se haya leído.  
   
-### <a name="remarks"></a>Remarks  
- All member functions return [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`).  
+### <a name="remarks"></a>Comentarios  
+ Todas las funciones miembro devuelven [do_get](#do_get)( `first` `last` `_Iosbase`, `_State`, `val`).  
   
- The first virtual protected member function tries to match sequential elements beginning at first in the sequence [ `first`, `last`) until it has recognized a complete, nonempty integer input field. If successful, it converts this field to its equivalent value as type **long** and stores the result in `val`. It returns an iterator designating the first element beyond the numeric input field. Otherwise, the function stores nothing in `val` and sets `ios_base::failbit` in _ *State*. It returns an iterator designating the first element beyond any prefix of a valid integer input field. In either case, if the return value equals **last**, the function sets `ios_base::eofbit` in `_State`.  
+ La primera función miembro virtual protegida intenta comparar los elementos secuenciales, empezando al principio de la secuencia [ `first`, `last`) hasta que reconoce un campo de entrada numérico entero completo y que no esté vacío. Si se realiza correctamente, convierte este campo en su valor equivalente como el tipo **long** y almacena el resultado en `val`. Devuelve un iterador que designa el primer elemento más allá del campo de entrada numérico. De otro modo, la función no almacena nada en `val` y establece `ios_base::failbit` en _ *State*. Devuelve un iterador que designa el primer elemento más allá de cualquier prefijo de un campo de entrada numérico entero válido. En cualquier caso, si el valor devuelto es igual a **last**, la función establece `ios_base::eofbit` en `_State`.  
   
- The integer input field is converted by the same rules used by the scan functions for matching and converting a series of `char` elements from a file. Each such `char` element is assumed to map to an equivalent element of type **CharType** by a simple, one-to-one mapping. The equivalent scan conversion specification is determined as follows:  
+ El campo de entrada numérico entero se convierte mediante las mismas reglas que han usado las funciones de análisis para hacer coincidir y convertir una serie de elementos `char` de un archivo. Se supone que cada uno de estos elementos `char` se asigna a un elemento equivalente de tipo **CharType** mediante una asignación simple, uno a uno. La especificación de conversión de análisis equivalente se determina de la manera siguiente:  
   
--   If **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), the conversion specification is **lo**.  
+-   Si **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), la especificación de conversión es **lo**.  
   
--   If **iosbase.flags** & **ios_base::basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex), the conversion specification is **lx**.  
+-   Si **iosbase.flags** & **ios_base::basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex), la especificación de conversión es **lx**.  
   
--   If **iosbase.flags** & **ios_base::basefield** == 0, the conversion specification is `li`.  
+-   Si **iosbase.flags** & **ios_base::basefield** == 0, la especificación de conversión es `li`.  
   
--   Otherwise, the conversion specification is **ld**.  
+-   De otro modo, la especificación de conversión es **ld**.  
   
- The format of an integer input field is further determined by the [locale facet](../standard-library/locale-class.md#facet_class)**fac** returned by the call [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md)\< **Elem**>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). Specifically:  
+ El formato de un campo de entrada numérico entero se determina por la [faceta de configuración regional](../standard-library/locale-class.md#facet_class)**fac** que se devuelve mediante la llamada a [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md)\< **Elem**>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). De manera específica:  
   
-- **fac**. [grouping](../standard-library/numpunct-class.md#grouping) determines how digits are grouped to the left of any decimal point.  
+- **fac**. [grouping](../standard-library/numpunct-class.md#grouping) determina cómo se agrupan los dígitos a la izquierda de cualquier separador decimal.  
   
-- **fac**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) determines the sequence that separates groups of digits to the left of any decimal point.  
+- **fac**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) determina la secuencia que separa grupos de dígitos a la izquierda de cualquier separador decimal.  
   
- If no instances of **fac**. `thousands_sep` occur in the numeric input field, no grouping constraint is imposed. Otherwise, any grouping constraints imposed by **fac**. **grouping** is enforced and separators are removed before the scan conversion occurs.  
+ Si ninguna instancia de **fac**. `thousands_sep` se produce en el campo de entrada numérico, no se impone ninguna restricción de agrupación. De otro modo, cualquier restricción de agrupación impuesta por **fac**. **grouping** se aplica y los separadores se quitan antes de que se produzca la conversión de análisis.  
   
- The second virtual protected member function:  
+ La segunda función miembro virtual protegida:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -479,9 +476,9 @@ virtual iter_type do_get(iter_type first,
     unsigned long& val) const;
 ```  
   
- behaves the same as the first, except that it replaces a conversion specification of **ld** with **lu**. If successful, it converts the numeric input field to a value of type `unsigned long` and stores that value in `val`.  
+ se comporta igual que la primera, excepto que reemplaza una especificación de conversión de **ld** por **lu**. Si se realiza correctamente, convierte el campo de entrada numérico en un valor de tipo `unsigned long` y almacena ese valor en `val`.  
   
- The third virtual protected member function:  
+ La tercera función miembro virtual protegida:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -491,9 +488,9 @@ virtual iter_type do_get(iter_type first,
     double& val) const;
 ```  
   
- behaves the same as the first, except that it tries to match a complete, nonempty floating-point input field. **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) determines the sequence that separates the integer digits from the fraction digits. The equivalent scan conversion specifier is **lf**.  
+ se comporta igual que la primera, excepto que intenta coincidir con un campo de entrada de punto flotante completo y que no esté vacío. **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) determina la secuencia que separa los dígitos enteros de los dígitos de fracción. El especificador de conversión de análisis equivalente es **lf**.  
   
- The fourth virtual protected member function:  
+ La cuarta función miembro virtual protegida:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -503,9 +500,9 @@ virtual iter_type do_get(iter_type first,
     long double& val) const;
 ```  
   
- behaves the same the third, except that the equivalent scan conversion specifier is **Lf**.  
+ se comporta igual que la tercera, excepto que el especificador de conversión de análisis equivalente es **Lf**.  
   
- The fifth virtual protected member function:  
+ La quinta función miembro virtual protegida:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -515,9 +512,9 @@ virtual iter_type do_get(iter_type first,
     void *& val) const;
 ```  
   
- behaves the same the first, except that the equivalent scan conversion specifier is **p**.  
+ se comporta igual que la primera, excepto que el especificador de conversión de análisis equivalente es **p**.  
   
- The sixth virtual protected member function:  
+ La sexta función miembro virtual protegida:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -527,11 +524,11 @@ virtual iter_type do_get(iter_type first,
     bool& val) const;
 ```  
   
- behaves the same as the first, except that it tries to match a complete, nonempty boolean input field. If successful it converts the Boolean input field to a value of type `bool` and stores that value in `val`.  
+ se comporta igual que la primera, excepto que intenta coincidir con un campo de entrada booleano completo y que no esté vacío. Si se realiza correctamente, convierte el campo de entrada booleano en un valor de tipo `bool` y almacena ese valor en `val`.  
   
- A boolean input field takes one of two forms. If **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) is **false**, it is the same as an integer input field, except that the converted value must be either 0 (for **false**) or 1 (for **true**). Otherwise, the sequence must match either **fac**. [falsename](../standard-library/numpunct-class.md#falsename) (for **false**), or **fac**. [truename](../standard-library/numpunct-class.md#truename) (for **true**).  
+ Un campo de entrada booleano adopta una de dos formas. Si **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) es **False**, es igual que un campo de entrada numérico entero, excepto que el valor convertido debe ser 0 (para **False**) o 1 (para **True**). De otro modo, la secuencia debe coincidir con **fac**. [falsename](../standard-library/numpunct-class.md#falsename) (para **False**) o con **fac**. [truename](../standard-library/numpunct-class.md#truename) (para **True**).  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // num_get_get.cpp  
@@ -563,44 +560,44 @@ int main( )
 }  
 ```  
   
-##  <a name="iter_type"></a>  num_get::iter_type  
- A type that describes an input iterator.  
+##  <a name="iter_type"></a> num_get::iter_type  
+ Tipo que describe un iterador de entrada.  
   
 ```
 typedef InputIterator iter_type;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for the template parameter **InputIterator**.  
+### <a name="remarks"></a>Comentarios  
+ El tipo es un sinónimo del parámetro de plantilla **InputIterator**.  
   
-##  <a name="num_get"></a>  num_get::num_get  
- The constructor for objects of type `num_get` that are used to extract numerical values from sequences.  
+##  <a name="num_get"></a> num_get::num_get  
+ Constructor para los objetos de tipo `num_get` que se usan para extraer valores numéricos de secuencias.  
   
 ```
 explicit num_get(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `_Refs`  
- Integer value used to specify the type of memory management for the object.  
+ Valor entero que se usa para especificar el tipo de administración de memoria del objeto.  
   
-### <a name="remarks"></a>Remarks  
- The possible values for the `_Refs` parameter and their significance are:  
+### <a name="remarks"></a>Comentarios  
+ Los valores posibles del parámetro `_Refs` y su importancia son:  
   
--   0: The lifetime of the object is managed by the locales that contain it.  
+-   0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.  
   
--   1: The lifetime of the object must be manually managed.  
+-   1: la vigencia del objeto se debe administrar de manera manual.  
   
--   \> 1: These values are not defined.  
+-   \>1: no se definen estos valores.  
   
- No direct examples are possible, because the destructor is protected.  
+ No es posible mostrar ejemplos directos, porque el destructor está protegido.  
   
- The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
+ El constructor inicializa su objeto base con **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [\<locale>](../standard-library/locale.md)   
- [facet Class](../standard-library/locale-class.md#facet_class)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [facet (Clase)](../standard-library/locale-class.md#facet_class)   
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: aligned_storage Class | Microsoft Docs
+title: aligned_storage (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- aligned_storage
 - type_traits/std::aligned_storage
 dev_langs:
 - C++
@@ -34,17 +35,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: aba37911df828d499dd3594e2db0e4fe0916c105
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 0da44c2fb505b2edbce9e5ccb028a6e167b4cf17
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="alignedstorage-class"></a>aligned_storage Class
-Makes suitably aligned type.  
+# <a name="alignedstorage-class"></a>aligned_storage (Clase)
+Crea un tipo alineado como corresponda.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <std::size_t Len, std::size_t Align>  
@@ -54,17 +55,17 @@ template <std::size_t Len, std::size_t Align = alignment_of<max_align_t>::value>
 using aligned_storage_t = typename aligned_storage<Len, Align>::type;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Len`  
- The object size.  
+ Tamaño del objeto.  
   
  `Align`  
- The object alignment.  
+ Alineación del objeto.  
   
-## <a name="remarks"></a>Remarks  
- The template member typedef `type` is a synonym for a POD type with alignment `Align` and size `Len`. `Align` must be equal to `alignment_of<T>::value` for some type `T`, or to the default alignment.  
+## <a name="remarks"></a>Comentarios  
+ El typedef de miembro `type` de plantilla es un sinónimo de un tipo POD con alineación `Align` y tamaño `Len`. `Align` debe ser igual a `alignment_of<T>::value` para algún tipo `T` o para la alineación predeterminada.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 #include <type_traits>   
@@ -89,12 +90,12 @@ alignment_of<int> == 4
 aligned to double == 8  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)   
- [alignment_of Class](../standard-library/alignment-of-class.md)
+ [alignment_of (Clase)](../standard-library/alignment-of-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: forward_iterator_tag Struct | Microsoft Docs
+title: forward_iterator_tag (Struct) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- forward_iterator_tag
 - xutility/std::forward_iterator_tag
 dev_langs:
 - C++
@@ -34,39 +35,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: a6c63426b1516a99b05f31b3cd07e7c3c014bf29
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 659ada41e69a0d9d2ab90e80b60ea0b3e4546d3b
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="forwarditeratortag-struct"></a>forward_iterator_tag Struct
-A class that provides a return type for **iterator_category** function that represents a forward iterator.  
+# <a name="forwarditeratortag-struct"></a>forward_iterator_tag (Struct)
+Clase que proporciona un tipo de valor devuelto para una función **iterator_category** que representa un iterador hacia delante.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 struct forward_iterator_tag    : public input_iterator_tag {};
 ```  
   
-## <a name="remarks"></a>Remarks  
- The category tag classes are used as compile tags for algorithm selection. The template function needs to find out what is the most specific category of its iterator argument so that it can use the most efficient algorithm at compile time. For every iterator of type `Iterator`, `iterator_traits`< `Iterator`> **::iterator_category** must be defined to be the most specific category tag that describes the iterator's behavior.  
+## <a name="remarks"></a>Comentarios  
+ Las clases de etiquetas de categoría se usan como etiquetas de compilación para la selección de algoritmos. La función de plantilla debe descubrir cuál es la categoría más específica de su argumento de iterador para que pueda usar el algoritmo más eficaz en tiempo de compilación. Para cada iterador de tipo `Iterator`, `iterator_traits`< `Iterator`> **::iterator_category** debe definirse para que sea la etiqueta de categoría más específica que describa el comportamiento del iterador.  
   
- The type is the same as **iterator**\< **Iter**> **::iterator_category** when **Iter** describes an object that can serve as a forward iterator.  
+ El tipo es igual a **iterator**\< **Iter**> **::iterator_category** cuando **Iter** describe un objeto que puede actuar como un iterador hacia delante.  
   
-## <a name="example"></a>Example  
- See [iterator_traits](../standard-library/iterator-traits-struct.md) or [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) for an example of how to use the **iterator_tag**s.  
+## <a name="example"></a>Ejemplo  
+ Vea [iterator_traits](../standard-library/iterator-traits-struct.md) o [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) para obtener un ejemplo de cómo usar **iterator_tag**s.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<iterator>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<iterator>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
- [input_iterator_tag Struct](../standard-library/input-iterator-tag-struct.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>Vea también  
+ [input_iterator_tag (Struct)](../standard-library/input-iterator-tag-struct.md)   
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
 
 
 

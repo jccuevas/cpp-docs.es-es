@@ -1,5 +1,5 @@
 ---
-title: cache_freelist Class | Microsoft Docs
+title: cache_freelist (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - allocators/stdext::cache_freelist
+- stdext::cache_freelist
+- cache_freelist
 - allocators/stdext::cache_freelist::allocate
 - allocators/stdext::cache_freelist::deallocate
 dev_langs:
 - C++
 helpviewer_keywords:
-- stdext::cache_freelist
-- stdext::cache_freelist [C++], allocate
-- stdext::cache_freelist [C++], deallocate
+- cache_freelist class
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
 caps.latest.revision: 19
 author: corob-msft
@@ -37,97 +37,97 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: d57430ebb8046a4b30aa112563feea7d6fc77cf2
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7d15c40a0116e8d6de2346a7da74045c2a7ee795
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="cachefreelist-class"></a>cache_freelist Class
-Defines a [block allocator](../standard-library/allocators-header.md) that allocates and deallocates memory blocks of a single size.  
+# <a name="cachefreelist-class"></a>cache_freelist (Clase)
+Define un [asignador de bloques](../standard-library/allocators-header.md) que asigna y desasigna bloques de memoria de un tamaño único.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 template <std::size_t Sz, class Max>  
 class cache_freelist
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
   
-|Parameter|Description|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
-|`Sz`|The number of elements in the array to be allocated.|  
-|`Max`|The max class representing the maximum size of the free list. This can be [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), or [max_variable_size](../standard-library/max-variable-size-class.md).|  
+|`Sz`|El número de elementos de la matriz que se van a asignar.|  
+|`Max`|La clase máxima que representa el tamaño máximo de la lista libre. Esta puede ser [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).|  
   
-## <a name="remarks"></a>Remarks  
- The cache_freelist template class maintains a free list of memory blocks of size `Sz`. When the free list is full it uses `operator delete` to deallocate memory blocks. When the free list is empty it uses `operator new` to allocate new memory blocks. The maximum size of the free list is determined by the class max class passed in the `Max` parameter.  
+## <a name="remarks"></a>Comentarios  
+ La clase de plantilla cache_freelist mantiene una lista libre de bloques de memoria de tamaño `Sz`. Cuando la lista libre está llena, usa `operator delete` para desasignar bloques de memoria. Cuando la lista libre está vacía, usa `operator new` para asignar nuevos bloques de memoria. El tamaño máximo de la lista libre viene determinado por la clase máxima que se ha pasado en el parámetro `Max`.  
   
- Each memory block holds `Sz` bytes of usable memory and the data that `operator new` and `operator delete` require.  
+ Cada bloque de memoria contiene `Sz` bytes de memoria utilizable y los datos que `operator new` y `operator delete` requieren.  
   
-### <a name="constructors"></a>Constructors  
-  
-|||  
-|-|-|  
-|[cache_freelist](#cache_freelist)|Constructs an object of type `cache_freelist`.|  
-  
-### <a name="member-functions"></a>Member Functions  
+### <a name="constructors"></a>Constructores  
   
 |||  
 |-|-|  
-|[allocate](#allocate)|Allocates a block of memory.|  
-|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
+|[cache_freelist](#cache_freelist)|Construye un objeto de tipo `cache_freelist`.|  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<allocators>  
+### <a name="member-functions"></a>Funciones miembro  
   
- **Namespace:** stdext  
+|||  
+|-|-|  
+|[allocate](#allocate)|Asigna un bloque de memoria.|  
+|[deallocate](#deallocate)|Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.|  
+  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<allocators>  
+  
+ **Espacio de nombres:** stdext  
   
 ##  <a name="allocate"></a>  cache_freelist::allocate  
- Allocates a block of memory.  
+ Asigna un bloque de memoria.  
   
 ```
 void *allocate(std::size_t count);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   
-|Parameter|Description|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
-|`count`|The number of elements in the array to be allocated.|  
+|`count`|El número de elementos de la matriz que se van a asignar.|  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the allocated object.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero al objeto asignado.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
 ##  <a name="cache_freelist"></a>  cache_freelist::cache_freelist  
- Constructs an object of type `cache_freelist`.  
+ Construye un objeto de tipo `cache_freelist`.  
   
 ```
 cache_freelist();
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
 ##  <a name="deallocate"></a>  cache_freelist::deallocate  
- Frees a specified number of objects from storage beginning at a specified position.  
+ Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.  
   
 ```
 void deallocate(void* ptr, std::size_t count);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   
-|Parameter|Description|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
-|`ptr`|A pointer to the first object to be deallocated from storage.|  
-|`count`|The number of objects to be deallocated from storage.|  
+|`ptr`|Un puntero al primer objeto que se va a desasignar del almacenamiento.|  
+|`count`|El número de objetos que se van a desasignar del almacenamiento.|  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: is_placeholder Class | Microsoft Docs
+title: Clase is_placeholder | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_placeholder
 - functional/std::is_placeholder
 dev_langs:
 - C++
@@ -33,26 +34,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 15cd09104039d45df72e2bc0476d9d6005b69a68
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: a3624a752a500410ad906ba43a6c65310ba1cb41
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="isplaceholder-class"></a>is_placeholder Class
-Tests if type is a placeholder.  
+# <a name="isplaceholder-class"></a>is_placeholder (Clase)
+Comprueba si el tipo es un marcador de posición.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 struct is_placeholder {  
    static const int value;  
    };  
   
-## <a name="remarks"></a>Remarks  
- The constant value `value` is 0 if the type `Ty` is not a placeholder; otherwise, its value is the position of the function call argument that it binds to. You use it to determine the value `N` for the Nth placeholder `_N`.  
+## <a name="remarks"></a>Comentarios  
+ El valor constante `value` es 0 si el tipo `Ty` no es un marcador de posición. En caso contrario, su valor es la posición del argumento de llamada de función al que enlaza. Se usa para determinar el valor `N` del enésimo marcador de posición `_N`.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__functional__is_placeholder.cpp   
@@ -82,12 +83,12 @@ int main()
 3  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<functional>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<functional>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
- [_1 Object](../standard-library/1-object.md)
+## <a name="see-also"></a>Vea también  
+ [Objeto _1](../standard-library/1-object.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: is_nothrow_copy_constructible Class | Microsoft Docs
+title: Clase is_nothrow_copy_constructible | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_nothrow_copy_constructible
 - type_traits/std::is_nothrow_copy_constructible
 dev_langs:
 - C++
@@ -33,36 +34,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: f57d5fa2cce0aa8515803d966b3900b1f7ec52e8
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: c71cdf2bdc69f79884f08ede6cb1dd0c20cbd0cd
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible Class
-Tests whether type has a **nothrow** copy constructor.  
+# <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible (clase)
+Comprueba si el tipo tiene un constructor de copias **nothrow**.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 template <class Ty>
 struct is_nothrow_copy_constructible;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Ty`  
- The type to query.  
+ Tipo que se va a consultar.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if the type `Ty` has a nothrow copy constructor, otherwise it holds false.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia del predicado de tipo contiene true si el tipo `Ty` tiene un constructor de copias nothrow; en caso contrario, contiene false.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)
 
 

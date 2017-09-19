@@ -1,5 +1,5 @@
 ---
-title: '&lt;future&gt; enums | Microsoft Docs'
+title: '&lt;future&gt; (Enumeraciones) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,25 +13,25 @@ f1_keywords:
 ms.assetid: 8c675645-db47-4cab-bc0e-7b87f8a302df
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 9343cd3d49c6574aafbf039a06625dfcd6a3519f
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 786d999dc03692c11e2c511023f1feb2c84573f8
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="ltfuturegt-enums"></a>&lt;future&gt; enums
+# <a name="ltfuturegt-enums"></a>&lt;future&gt; (Enumeraciones)
 ||||  
 |-|-|-|  
-|[future_errc](#future_errc)|[future_status](#future_status)|[launch](#launch)|  
+|[future_errc](#future_errc)|[future_status](#future_status)|[iniciar](#launch)|  
   
-##  <a name="future_errc"></a>  future_errc Enumeration  
- Supplies symbolic names for all of the errors that are reported by the [future_error](../standard-library/future-error-class.md) class.  
+##  <a name="future_errc"></a>  future_errc (Enumeración)  
+ Proporciona nombres simbólicos para todos los errores notificados por la clase [future_error](../standard-library/future-error-class.md).  
   
 class future_errc { broken_promise, future_already_retrieved, promise_already_satisfied, no_state };  
   
-##  <a name="future_status"></a>  future_status Enumeration  
- Supplies symbolic names for the reasons that a timed wait function can return.  
+##  <a name="future_status"></a>  future_status (Enumeración)  
+ Proporciona nombres simbólicos para los motivos que una función que ha agotado el tiempo de espera puede devolver.  
   
 ```
 enum future_status{    ready,
@@ -39,12 +39,12 @@ enum future_status{    ready,
  deferred};
 ```  
   
-##  <a name="launch"></a>  launch Enumeration  
- Represents a bitmask type that describes the possible modes for the template function [async](../standard-library/future-functions.md#async).  
+##  <a name="launch"></a>  launch (Enumeración)  
+ Representa un tipo de máscara de bits que describe los posibles modos para la función de plantilla [async](../standard-library/future-functions.md#async).  
   
 class launch{ async, deferred };  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [\<future>](../standard-library/future.md)
 
 

@@ -33,50 +33,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: fa99b5815a0612727d163ca65440fea13dafedbc
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 212b2b5af678bd39b4ecc7d6622c71db20db5a26
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
-Defines a template `tuple` whose instances hold objects of varying types.  
+Define una `tuple` de plantilla cuyas instancias contienen objetos de tipos diferentes.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #include <tuple>  
 ```  
   
-### <a name="classes"></a>Classes  
+### <a name="classes"></a>Clases  
   
 |||  
 |-|-|  
-|[tuple](../standard-library/tuple-class.md)|Wraps a fixed-length sequence of elements.|  
-|[tuple_element Class](../standard-library/tuple-element-class-tuple.md)|Wraps the type of a `tuple` element.|  
-|[tuple_size Class](../standard-library/tuple-size-class-tuple.md)|Wraps `tuple` element count.|  
+|[tuple](../standard-library/tuple-class.md)|Ajusta una secuencia de elementos de longitud fija.|  
+|[tuple_element (Clase)](../standard-library/tuple-element-class-tuple.md)|Ajusta el tipo de un elemento `tuple`.|  
+|[tuple_size (Clase)](../standard-library/tuple-size-class-tuple.md)|Contiene el número de elementos `tuple`.|  
   
-### <a name="operators"></a>Operators  
-  
-|||  
-|-|-|  
-|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|Comparison of `tuple` objects, equal|  
-|[operator!=](../standard-library/tuple-operators.md#op_neq)|Comparison of `tuple` objects, not equal|  
-|[operator<](../standard-library/tuple-operators.md#op_lt)|Comparison of `tuple` objects, less than|  
-|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|Comparison of `tuple` objects, less than or equal|  
-|[operator>](../standard-library/tuple-operators.md#op_gt)|Comparison of `tuple` objects, greater than|  
-|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|Comparison of `tuple` objects, greater than or equal|  
-  
-### <a name="functions"></a>Functions  
+### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[get](../standard-library/tuple-functions.md#get)|Gets an element from a `tuple` object.|  
-|[make_tuple](../standard-library/tuple-functions.md#make_tuple)|Makes a `tuple` from element values.|  
-|[tie](../standard-library/tuple-functions.md#tie)|Makes a `tuple` from element references.|  
+|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|Comparación de objetos `tuple`, igualdad|  
+|[operator!=](../standard-library/tuple-operators.md#op_neq)|Comparación de objetos `tuple`, desigualdad|  
+|[operator<](../standard-library/tuple-operators.md#op_lt)|Comparación de objetos `tuple`, menor que|  
+|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|Comparación de objetos `tuple`, menor o igual que|  
+|[operator>](../standard-library/tuple-operators.md#op_gt)|Comparación de objetos `tuple`, mayor que|  
+|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|Comparación de objetos `tuple`, mayor o igual que|  
   
-## <a name="see-also"></a>See Also  
+### <a name="functions"></a>Funciones  
+  
+|||  
+|-|-|  
+|[get](../standard-library/tuple-functions.md#get)|Obtiene un elemento de un objeto `tuple`.|  
+|[make_tuple](../standard-library/tuple-functions.md#make_tuple)|Crea una `tuple` a partir de valores de elemento.|  
+|[tie](../standard-library/tuple-functions.md#tie)|Crea una `tuple` a partir de referencias de elemento.|  
+  
+## <a name="see-also"></a>Vea también  
  [\<array>](../standard-library/array.md)
 
 

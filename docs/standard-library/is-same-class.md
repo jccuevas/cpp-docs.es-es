@@ -1,5 +1,5 @@
 ---
-title: is_same Class | Microsoft Docs
+title: Clase is_same | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_same
 - type_traits/std::is_same
 dev_langs:
 - C++
@@ -34,34 +35,34 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 7d8131b60cd89fae164205b6f04b6213c280ad0b
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 763b2b9e120976270ccdad8509e0d60f280f9344
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="issame-class"></a>is_same Class
-Tests if two types are the same.  
+# <a name="issame-class"></a>is_same (Clase)
+Comprueba si dos tipos son iguales.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class Ty1, class Ty2>  
 struct is_same;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Ty1`  
- The first type to query.  
+ Primer tipo que se va a consultar.  
   
  `Ty2`  
- The second type to query.  
+ Segundo tipo que se va a consultar.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if the types `Ty1` and `Ty2` are the same type, otherwise it holds false.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia del predicado de tipo es true si los tipos `Ty1` y `Ty2` son iguales; en caso contrario, es false.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__type_traits__is_same.cpp   
@@ -105,13 +106,13 @@ is_same<int, int> == true
 is_same<int, const int> == false  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_convertible Class](../standard-library/is-convertible-class.md)   
- [is_base_of Class](../standard-library/is-base-of-class.md)
+ [Clase is_convertible](../standard-library/is-convertible-class.md)   
+ [Clase is_base_of](../standard-library/is-base-of-class.md)
 

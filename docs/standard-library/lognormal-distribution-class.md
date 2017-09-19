@@ -1,5 +1,5 @@
 ---
-title: lognormal_distribution Class | Microsoft Docs
+title: Clase lognormal_distribution | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- lognormal_distribution
 - random/std::lognormal_distribution
 - random/std::lognormal_distribution::reset
 - random/std::lognormal_distribution::m
@@ -26,15 +27,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- std::lognormal_distribution [C++]
-- std::lognormal_distribution [C++], reset
-- std::lognormal_distribution [C++], m
-- std::lognormal_distribution [C++], s
-- std::lognormal_distribution [C++], param
-- std::lognormal_distribution [C++], min
-- std::lognormal_distribution [C++], max
-- std::lognormal_distribution [C++], param_type
-- std::lognormal_distribution [C++], param_type
+- lognormal_distribution class
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
 caps.latest.revision: 15
 author: corob-msft
@@ -54,17 +47,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 145806b7b8994283b21ebcf2a3b0033eece9a1cc
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3c5d969e7250987471f88579d30e36d7838a9ed1
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="lognormaldistribution-class"></a>lognormal_distribution Class
-Generates a log normal distribution.  
+# <a name="lognormaldistribution-class"></a>lognormal_distribution (Clase)
+Genera una distribución log-normal.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
 ```  
 template <class RealType = double>  
 class lognormal_distribution  
@@ -91,33 +84,33 @@ public:
    result_type max() const;
    };  
 ```  
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
 *RealType*  
-The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
+Un tipo de resultado de punto flotante, el valor predeterminado es `double`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Remarks  
-The template class describes a distribution that produces values of a user-specified integral type, or type `double` if none is provided, distributed according to the Log Normal Distribution. The following table links to articles about individual members.  
+## <a name="remarks"></a>Comentarios  
+La clase de plantilla describe una distribución que produce valores de un tipo de entero especificado por el usuario o de tipo `double` si no se proporciona ninguno, distribuido según la distribución log-normal. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.  
   
 ||||  
 |-|-|-|  
 |[lognormal_distribution](#lognormal_distribution)|`lognormal_distribution::m`|`lognormal_distribution::param`|  
 |`lognormal_distribution::operator()`|`lognormal_distribution::s`|[param_type](#param_type)|  
   
-The property functions `m()` and `s()` return the values for the stored distribution parameters *m* and *s*, respectively.  
+Las funciones de propiedad `m()` y `s()` devuelven los valores para los parámetros de distribución almacenados *m* y *s*, respectivamente.  
   
-The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
+El miembro de propiedad `param()` establece o devuelve el paquete de parámetros de distribución almacenado `param_type`.  
 
-The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
+Las funciones miembro `min()` y `max()` devuelven el resultado posible más pequeño y el resultado posible más grande, respectivamente.  
   
-The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
+La función miembro `reset()` descarta cualquier valor almacenado en caché, de modo que la siguiente llamada a `operator()` no depende de ningún valor obtenido del motor antes de la llamada.  
   
-The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
+Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
   
-For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
+Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).  
   
-For detailed information about the LogNormal distribution, see the Wolfram MathWorld article [LogNormal Distribution](http://go.microsoft.com/fwlink/LinkId=400917).  
+Para obtener más información sobre la distribución LogNormal, vea el artículo de Wolfram MathWorld sobre la [distribución LogNormal](http://go.microsoft.com/fwlink/LinkId=400917).  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -201,38 +194,38 @@ Distribution for 10 samples:
     10: 5.4406507912  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<random>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<random>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
 ##  <a name="lognormal_distribution"></a>  lognormal_distribution::lognormal_distribution  
- Constructs the distribution.  
+ Construye la distribución.  
   
 ```  
 explicit lognormal_distribution(RealType m = 0.0, RealType s = 1.0);
 explicit lognormal_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
 *m*  
-The `m` distribution parameter.  
+El parámetro de distribución `m`.  
   
 *s*  
-The `s` distribution parameter.  
+El parámetro de distribución `s`.  
   
 *parm*  
-The `param_type` structure used to construct the distribution.  
+La estructura `param_type` usada para construir la distribución.  
   
-### <a name="remarks"></a>Remarks  
-**Precondition:** `0.0 < s`  
+### <a name="remarks"></a>Comentarios  
+**Condición previa:** `0.0 < s`  
   
-The first constructor constructs an object whose stored `m` value holds the value *m* and whose stored `s` value holds the value *s*.  
+El primer constructor crea un objeto cuyo valor `m` almacenado contiene el valor *m* y cuyo valor `s` almacenado contiene el valor *s*.  
   
-The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
+El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.  
   
 ##  <a name="param_type"></a>  lognormal_distribution::param_type  
-Stores the parameters of the distribution.  
+Almacena los parámetros de la distribución.  
   
 ```  
 struct param_type {  
@@ -245,22 +238,22 @@ struct param_type {
    bool operator!=(const param_type& right) const;
 };  
 ```    
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
 *m*  
-The `m` distribution parameter.  
+El parámetro de distribución `m`.  
   
 *s*  
-The `s` distribution parameter.  
+El parámetro de distribución `s`.  
   
 *right*  
-The `param_type` structure used to compare.  
+La estructura `param_type` que se usa para comparar.  
   
-### <a name="remarks"></a>Remarks  
-**Precondition:** `0.0 < s`  
+### <a name="remarks"></a>Comentarios  
+**Condición previa:** `0.0 < s`  
   
-This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
+Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
 [\<random>](../standard-library/random.md)
 
 

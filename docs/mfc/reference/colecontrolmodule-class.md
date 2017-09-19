@@ -1,5 +1,5 @@
 ---
-title: COleControlModule Class | Microsoft Docs
+title: Clase COleControlModule | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,10 +13,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE control modules [MFC]
-- MFC ActiveX controls [MFC], OLE control modules
-- COleControlModule class [MFC]
-- control modules [MFC]
+- OLE control modules
+- MFC ActiveX controls, OLE control modules
+- COleControlModule class
+- control modules
 ms.assetid: 0721724d-d4af-4eda-ad34-5a2b27810dd4
 caps.latest.revision: 23
 author: mikeblome
@@ -36,28 +36,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: b90d95781f579a8f8f93d76684b52d67b95a2223
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
+ms.openlocfilehash: 2e77c386875d25f47f0cc07eb3b7d315f1678c56
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="colecontrolmodule-class"></a>COleControlModule Class
-The base class from which you derive an OLE control module object.  
+# <a name="colecontrolmodule-class"></a>Clase COleControlModule
+La clase base de la que se deriva un objeto de módulo de control OLE.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class COleControlModule : public CWinApp  
 ```  
   
-## <a name="remarks"></a>Remarks  
- This class provides member functions for initializing your control module. Each OLE control module that uses the Microsoft Foundation classes can only contain one object derived from `COleControlModule`. This object is constructed when other C++ global objects are constructed. Declare your derived `COleControlModule` object at the global level.  
+## <a name="remarks"></a>Comentarios  
+ Esta clase proporciona funciones miembro para inicializar el módulo de control. Cada módulo de control OLE que utiliza Microsoft Foundation classes sólo puede contener un objeto derivado de `COleControlModule`. Este objeto se crea cuando se crean otros objetos globales de C++. Declarar la derivada `COleControlModule` objeto en el nivel global.  
   
- For more information on using the `COleControlModule` class, see the [CWinApp](../../mfc/reference/cwinapp-class.md) class and the article [ActiveX Controls](../../mfc/mfc-activex-controls.md).  
+ Para obtener más información sobre el uso de la `COleControlModule` de clases, consulte la [CWinApp](../../mfc/reference/cwinapp-class.md) clase y el artículo [controles ActiveX](../../mfc/mfc-activex-controls.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -68,12 +68,12 @@ class COleControlModule : public CWinApp
   
  `COleControlModule`  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxctl.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxctl.h  
   
-## <a name="see-also"></a>See Also  
- [MFC Sample TESTHELP](../../visual-cpp-samples.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>Vea también  
+ [Ejemplo de MFC TESTHELP](../../visual-cpp-samples.md)   
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)
 
 
 

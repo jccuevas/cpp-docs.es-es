@@ -1,5 +1,5 @@
 ---
-title: '&lt;algorithm&gt; functions | Microsoft Docs'
+title: Funciones &lt;algorithm&gt; | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,90 +8,172 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - algorithm/std::adjacent_find
+- adjacent_find
 - algorithm/std::all_of
+- all_of
 - algorithm/std::any_of
+- any_of
 - algorithm/std::binary_search
+- binary_search
 - algorithm/std::copy
+- copy
 - algorithm/std::copy_backward
+- copy_backward
 - algorithm/std::copy_if
+- copy_if
 - algorithm/std::copy_n
+- copy_n
 - algorithm/std::equal
+- equal
 - algorithm/std::equal_range
+- equal_range
 - algorithm/std::fill
+- fill
 - algorithm/std::fill_n
+- fill_n
 - algorithm/std::find
+- find
 - algorithm/std::find_end
+- find_end
 - algorithm/std::find_first_of
+- find_first_of
 - algorithm/std::find_if
+- find_if
 - algorithm/std::find_if_not
+- find_if_not
 - algorithm/std::for_each
+- for_each
 - algorithm/std::generate
+- generate
 - algorithm/std::generate_n
+- generate_n
 - algorithm/std::includes
+- includes
 - algorithm/std::inplace_merge
+- inplace_merge
 - algorithm/std::is_heap
+- is_heap
 - algorithm/std::is_heap_until
+- is_heap_until
 - algorithm/std::is_partitioned
+- is_partitioned
 - algorithm/std::is_permutation
+- is_permutation
 - algorithm/std::is_sorted
+- is_sorted
 - algorithm/std::is_sorted_until
+- is_sorted_until
 - algorithm/std::iter_swap
+- iter_swap
 - algorithm/std::lexicographical_compare
+- lexicographical_compare
 - algorithm/std::lower_bound
+- lower_bound
 - algorithm/std::make_heap
+- make_heap
 - algorithm/std::max
+- max
 - algorithm/std::max_element
+- max_element
 - algorithm/std::merge
+- merge
 - algorithm/std::min
+- min
 - algorithm/std::minmax
+- minmax
 - algorithm/std::minmax_element
+- minmax_element
 - algorithm/std::min_element
+- min_element
 - algorithm/std::mismatch
+- mismatch
 - algorithm/std::move
+- move
 - algorithm/std::move_backward
+- move_backward
 - algorithm/std::next_permutation
+- next_permutation
 - algorithm/std::none_of
+- none_of
 - algorithm/std::nth_element
+- nth_element
 - algorithm/std::partial_sort
+- partial_sort
 - algorithm/std::partial_sort_copy
+- partial_sort_copy
 - algorithm/std::partition
+- partition
 - algorithm/std::partition_point
+- partition_point
 - algorithm/std::pop_heap
+- pop_heap
 - algorithm/std::prev_permutation
+- prev_permutation
 - algorithm/std::push_heap
+- push_heap
 - algorithm/std::random_shuffle
+- random_shuffle
 - algorithm/std::remove
+- remove
 - algorithm/std::remove_copy
+- remove_copy
 - algorithm/std::remove_copy_if
+- remove_copy_if
 - algorithm/std::remove_if
+- remove_if
 - algorithm/std::replace
+- replace
 - algorithm/std::replace_copy
+- replace_copy
 - algorithm/std::replace_copy_if
+- replace_copy_if
 - algorithm/std::replace_if
+- replace_if
 - algorithm/std::reverse
+- reverse
 - algorithm/std::reverse_copy
+- reverse_copy
 - algorithm/std::rotate
+- rotate
 - algorithm/std::rotate_copy
+- rotate_copy
 - algorithm/std::search
+- search
 - algorithm/std::search_n
+- search_n
 - algorithm/std::set_difference
+- set_difference
 - algorithm/std::set_intersection
+- set_intersection
 - algorithm/std::set_symmetric_difference
+- set_symmetric_difference
 - algorithm/std::set_union
+- set_union
 - algorithm/std::shuffle
+- shuffle
 - algorithm/std::sort
+- sort
 - algorithm/std::sort_heap
+- sort_heap
 - algorithm/std::stable_partition
+- stable_partition
 - algorithm/std::stable_sort
+- stable_sort
 - algorithm/std::swap_ranges
+- swap_ranges
 - algorithm/std::transform
+- transform
 - algorithm/std::unique
+- unique
 - algorithm/std::unique_copy
+- unique_copy
 - algorithm/std::upper_bound
+- upper_bound
 - xutility/std::copy
 - xutility/std::copy_backward
 - xutility/std::copy_n
 - xutility/std::count
+- count
 - xutility/std::equal
 - xutility/std::fill
 - xutility/std::fill_n
@@ -112,113 +194,14 @@ caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
-helpviewer_keywords:
-- std::adjacent_find [C++]
-- std::all_of [C++]
-- std::any_of [C++]
-- std::binary_search [C++]
-- std::copy [C++]
-- std::copy_backward [C++]
-- std::copy_if [C++]
-- std::copy_n [C++]
-- std::equal [C++]
-- std::equal_range [C++]
-- std::fill [C++]
-- std::fill_n [C++]
-- std::find [C++]
-- std::find_end [C++]
-- std::find_first_of [C++]
-- std::find_if [C++]
-- std::find_if_not [C++]
-- std::for_each [C++]
-- std::generate [C++]
-- std::generate_n [C++]
-- std::includes [C++]
-- std::inplace_merge [C++]
-- std::is_heap [C++]
-- std::is_heap_until [C++]
-- std::is_partitioned [C++]
-- std::is_permutation [C++]
-- std::is_sorted [C++]
-- std::is_sorted_until [C++]
-- std::iter_swap [C++]
-- std::lexicographical_compare [C++]
-- std::lower_bound [C++]
-- std::make_heap [C++]
-- std::max [C++]
-- std::max_element [C++]
-- std::merge [C++]
-- std::min [C++]
-- std::minmax [C++]
-- std::minmax_element [C++]
-- std::min_element [C++]
-- std::mismatch [C++]
-- std::move [C++]
-- std::move_backward [C++]
-- std::next_permutation [C++]
-- std::none_of [C++]
-- std::nth_element [C++]
-- std::partial_sort [C++]
-- std::partial_sort_copy [C++]
-- std::partition [C++]
-- std::partition_point [C++]
-- std::pop_heap [C++]
-- std::prev_permutation [C++]
-- std::push_heap [C++]
-- std::random_shuffle [C++]
-- std::remove [C++]
-- std::remove_copy [C++]
-- std::remove_copy_if [C++]
-- std::remove_if [C++]
-- std::replace [C++]
-- std::replace_copy [C++]
-- std::replace_copy_if [C++]
-- std::replace_if [C++]
-- std::reverse [C++]
-- std::reverse_copy [C++]
-- std::rotate [C++]
-- std::rotate_copy [C++]
-- std::search [C++]
-- std::search_n [C++]
-- std::set_difference [C++]
-- std::set_intersection [C++]
-- std::set_symmetric_difference [C++]
-- std::set_union [C++]
-- std::shuffle [C++]
-- std::sort [C++]
-- std::sort_heap [C++]
-- std::stable_partition [C++]
-- std::stable_sort [C++]
-- std::swap_ranges [C++]
-- std::transform [C++]
-- std::unique [C++]
-- std::unique_copy [C++]
-- std::upper_bound [C++]
-- std::copy [C++]
-- std::copy_backward [C++]
-- std::copy_n [C++]
-- std::count [C++]
-- std::equal [C++]
-- std::fill [C++]
-- std::fill_n [C++]
-- std::find [C++]
-- std::is_permutation [C++]
-- std::lexicographical_compare [C++]
-- std::move [C++]
-- std::move_backward [C++]
-- std::reverse [C++]
-- std::rotate [C++]
-- std::count_if [C++]
-- std::partition_copy [C++]
-- std::swap [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 941b66bd40b1b14fd07f823023675d9ac52e141c
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 6b3c288921fd86c4c02a8e2ffa09a060fe5fd3a1
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; functions
+# <a name="ltalgorithmgt-functions"></a>Funciones &lt;algorithm&gt;
 ||||  
 |-|-|-|  
 |[move](#alg_move)|[adjacent_find](#adjacent_find)|[all_of](#all_of)|  
@@ -252,7 +235,7 @@ ms.lasthandoff: 09/09/2017
 |[upper_bound](#upper_bound)|  
   
 ##  <a name="adjacent_find"></a>  adjacent_find  
- Searches for two adjacent elements that are either equal or satisfy a specified condition.  
+ Busca dos elementos adyacentes que son iguales o cumplen una condición especificada.  
   
 ```  
 template<class ForwardIterator>  
@@ -267,25 +250,25 @@ template<class ForwardIterator , class BinaryPredicate>
         BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A forward iterator addressing the position of the first element in the range to be searched.  
+ Iterador hacia delante que dirige a la posición del primer elemento del intervalo en el que se buscará.  
   
  `last`  
- A forward iterator addressing the position one past the final element in the range to be searched.  
+ Iterador hacia delante que dirige a la posición situada una posición después del último elemento del intervalo en el que se buscará.  
   
  `comp`  
- The binary predicate giving the condition to be satisfied by the values of the adjacent elements in the range being searched.  
+ El predicado binario que da la condición que deben cumplir los valores de los elementos adyacentes en el intervalo en el que se buscará.  
   
-### <a name="return-value"></a>Return Value  
- A forward iterator to the first element of the adjacent pair that are either equal to each other (in the first version) or that satisfy the condition given by the binary predicate (in the second version), provided that such a pair of elements is found. Otherwise, an iterator pointing to `last` is returned.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador hacia delante hasta el primer elemento del par adyacente en el que las partes son iguales entre sí (en la primera versión) o cumplen la condición dada por el predicado binario (en la segunda versión), si se encuentra algún par de elementos que cumpla una de estas condiciones. Si no, se devuelve un iterador que apunta a `last`.  
   
-### <a name="remarks"></a>Remarks  
- The `adjacent_find` algorithm is a nonmutating sequence algorithm. The range to be searched must be valid; all pointers must be dereferenceable and the last position is reachable from the first by incrementation. The time complexity of the algorithm is linear in the number of elements contained in the range.  
+### <a name="remarks"></a>Comentarios  
+ El algoritmo `adjacent_find` es un algoritmo de secuencia no cambiante. El intervalo en el que se buscará debe ser válido: todos los punteros deben poder desreferenciarse y se debe poder acceder a la última posición desde la primera con incrementos. La complejidad temporal del algoritmo es lineal en el número de elementos incluidos en el intervalo.  
   
- The `operator==` used to determine the match between elements must impose an equivalence relation between its operands.  
+ El `operator==` utilizado para determinar la coincidencia entre los elementos debe imponer una relación de equivalencia entre sus operandos.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_adj_fnd.cpp  
@@ -348,7 +331,7 @@ There are two adjacent elements where the second is twice the first.
 ```  
   
 ##  <a name="all_of"></a>  all_of  
- Returns `true` when a condition is present at each element in the given range.  
+ Devuelve `true` cuando una condición está presente en todos los elementos del intervalo especificado.  
   
 ```  
 template<class InputIterator, class Predicate>  
@@ -358,24 +341,24 @@ template<class InputIterator, class Predicate>
         BinaryPredicatecomp);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- An input iterator that indicates where to start to check for a condition. The iterator marks where a range of elements starts.  
+ Iterador de entrada que indica dónde comenzar a comprobar una condición. El iterador marca el comienzo de un intervalo de elementos.  
   
  `last`  
- An input iterator that indicates the end of the range of elements to check for a condition.  
+ Iterador de entrada que indica el final del intervalo de elementos en el que se va a comprobar una condición.  
   
  `comp`  
- A condition to test for. This is a user-defined predicate function object that defines the condition to be satisfied by an element being checked. A predicate takes a single argument and returns `true` or `false`.  
+ Condición que se va a probar. Es un objeto de función de predicado definido por el usuario que define la condición que debe cumplir el elemento que se está comprobando. Un predicado toma un único argumento y devuelve `true` o `false`.  
   
-### <a name="return-value"></a>Return Value  
- Returns `true` if the condition is detected at each element in the indicated range, and `false` if the condition is not detected at least one time.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `true` si se detecta la condición en cada elemento del intervalo indicado, y `false` si la condición no se detecta al menos una vez.  
   
-### <a name="remarks"></a>Remarks  
- The template function returns `true` only if, for each `N` in the range `[0,Last - first)`, the predicate `comp(*(_First + N))` is `true`.  
+### <a name="remarks"></a>Comentarios  
+ La función de plantilla devuelve `true` solo si, para cada `N` del intervalo `[0,Last - first)`, el predicado `comp(*(_First + N))` es `true`.  
   
 ##  <a name="any_of"></a>  any_of  
- Returns `true` when a condition is present at least once in the specified range of elements.  
+ Devuelve `true` cuando una condición está presente al menos una vez en el intervalo especificado de elementos.  
   
 ```  
 template<class InputIterator, class UnaryPredicate>  
@@ -385,26 +368,26 @@ template<class InputIterator, class UnaryPredicate>
         UnaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- An input iterator that indicates where to start checking a range of elements for a condition.  
+ Iterador de entrada que indica dónde comenzar a comprobar una condición en un intervalo de elementos.  
   
  `last`  
- An input iterator that indicates the end of the range of elements to check for a condition.  
+ Iterador de entrada que indica el final del intervalo de elementos en el que se va a comprobar una condición.  
   
  `comp`  
- A condition to test for. This is provided by a user-defined predicate function object. The predicate defines the condition to be satisfied by the element being tested. A predicate takes a single argument and returns `true` or `false`.  
+ Condición que se va a probar. La proporciona un objeto de función de predicado definido por el usuario. El predicado define la condición que debe cumplir el elemento que se está probando. Un predicado toma un único argumento y devuelve `true` o `false`.  
   
-### <a name="return-value"></a>Return Value  
- Returns `true` if the condition is detected at least once in the indicated range, `false` if the condition is never detected.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `true` si se detecta la condición al menos una vez en el intervalo indicado, y `false` si la condición no se detecta ninguna vez.  
   
-### <a name="remarks"></a>Remarks  
- The template function returns `true` only if, for some `N` in the range  
+### <a name="remarks"></a>Comentarios  
+ La función de plantilla devuelve `true` solo si, para cada `N` del intervalo  
   
- `[0, last - first)`, the predicate `comp(*(first + N))` is true.  
+ `[0, last - first)`, el predicado `comp(*(first + N))` es true.  
   
 ##  <a name="binary_search"></a>  binary_search  
- Tests whether there is an element in a sorted range that is equal to a specified value or that is equivalent to it in a sense specified by a binary predicate.  
+ Comprueba si hay un elemento en un intervalo ordenado que sea igual a un valor especificado o equivalente a este del modo especificado por un predicado binario.  
   
 ```  
 template<class ForwardIterator, class Type>      
@@ -422,34 +405,34 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- A forward iterator addressing the position of the first element in the range to be searched.  
+ Iterador hacia delante que dirige a la posición del primer elemento del intervalo en el que se buscará.  
   
  `last`  
- A forward iterator addressing the position one past the final element in the range to be searched.  
+ Iterador hacia delante que dirige a la posición situada una posición después del último elemento del intervalo en el que se buscará.  
   
  `value`  
- The value required to be matched by the value of the element or that must satisfy the condition with the element value specified by the binary predicate.  
+ Valor que debe coincidir con el valor del elemento o que debe cumplir la condición con el valor del elemento especificado por el predicado binario.  
   
  `comp`  
- User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns `true` when satisfied and `false` when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve `true` si se cumplen y `false` si no.  
   
-### <a name="return-value"></a>Return Value  
- `true` if an element is found in the range that is equal or equivalent to the specified value; otherwise, `false`.  
+### <a name="return-value"></a>Valor devuelto  
+ `true` si se encuentra un elemento en el intervalo que sea igual o equivalente al valor especificado; de lo contrario, `false`.  
   
-### <a name="remarks"></a>Remarks  
- The sorted source range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo de origen ordenado al que se hace referencia debe ser válido; todos los punteros deben poder desreferenciarse y, dentro de la secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- The sorted range must each be arranged as a precondition to the application of the `binary_search` algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
+ El intervalo ordenado debe estar organizado como condición previa a la aplicación del algoritmo `binary_search` según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados.  
   
- The source ranges are not modified by `binary_search`.  
+ `binary_search` no modifica los intervalos de origen.  
   
- The value types of the forward iterators need to be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements  
+ Los tipos de valor de los iteradores hacia delante tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes.  
   
- The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last` - `first`).  
+ La complejidad del algoritmo es logarítmica los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcionales al ( `last`  -  `first`).  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_bin_srch.cpp  
@@ -532,7 +515,7 @@ int main( )
 ```  
   
 ##  <a name="copy"></a>  copy  
- Assigns the values of elements from a source range to a destination range, iterating through the source sequence of elements and assigning them new positions in a forward direction.  
+ Asigna los valores de elementos de un intervalo de origen a un intervalo de destino, recorriendo en iteración la secuencia de origen de elementos y asignándoles nuevas posiciones en una dirección hacia delante.  
   
 ```  
 template<class InputIterator, class OutputIterator>  
@@ -542,27 +525,27 @@ template<class InputIterator, class OutputIterator>
         OutputIterator destBeg);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- An input iterator addressing the position of the first element in the source range.  
+ Iterador de entrada que direcciona la posición del primer elemento del intervalo de origen.  
   
  `last`  
- An input iterator addressing the position that is one past the final element in the source range.  
+ Iterador de entrada que direcciona la posición situada una posición después del último elemento del intervalo de origen.  
   
  *destBeg*  
- An output iterator addressing the position of the first element in the destination range.  
+ Iterador de salida que direcciona la posición del primer elemento del intervalo de destino.  
   
-### <a name="return-value"></a>Return Value  
- An output iterator addressing the position that is one past the final element in the destination range, that is, the iterator addresses `result` + ( `last` -  `first` ).  
+### <a name="return-value"></a>Valor devuelto  
+ Un iterador de salida que direcciona la posición que es un elemento más allá del último elemento del intervalo de destino, es decir, el iterador direcciona `result` + ( `last`  -   `first` ).  
   
-### <a name="remarks"></a>Remarks  
- The source range must be valid and there must be sufficient space at the destination to hold all the elements being copied.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo de origen debe ser válido y debe haber suficiente espacio en el destino para contener todos los elementos que se van a copiar.  
   
- Because the algorithm copies the source elements in order beginning with the first element, the destination range can overlap with the source range provided the `last` position of the source range is not contained in the destination range. **copy** can be used to shift elements to the left but not the right, unless there is no overlap between the source and destination ranges. To shift to the right any number of positions, use the [copy_backward](../standard-library/algorithm-functions.md#copy_backward) algorithm.  
+ Puesto que el algoritmo copia los elementos de origen por orden a partir del primer elemento, el intervalo de destino puede superponerse al intervalo de origen siempre y cuando la posición `last` del intervalo de origen no esté incluida en el intervalo de destino. Se puede usar**copy** para desplazar elementos hacia la izquierda pero no hacia la derecha, a menos que no haya superposición entre los intervalos de origen y de destino. Para desplazar a la derecha cualquier número de posiciones, use el algoritmo [copy_backward](../standard-library/algorithm-functions.md#copy_backward).  
   
- The **copy** algorithm only modifies values pointed to by the iterators, assigning new values to elements in the destination range. It cannot be used to create new elements and cannot insert elements into an empty container directly.  
+ El algoritmo **copy** solo modifica los valores a los que apuntan los iteradores, asignando nuevos valores a los elementos del intervalo de destino. No se puede utilizar para crear elementos nuevos y no puede insertar elementos en un contenedor vacío directamente.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_copy.cpp  
@@ -621,7 +604,7 @@ v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )
 ```  
   
 ##  <a name="copy_backward"></a>  copy_backward  
- Assigns the values of elements from a source range to a destination range, iterating through the source sequence of elements and assigning them new positions in a backward direction.  
+ Asigna los valores de elementos de un intervalo de origen a un intervalo de destino, recorriendo en iteración la secuencia de origen de elementos y asignándoles nuevas posiciones en una dirección hacia atrás.  
   
 ```  
 template<class BidirectionalIterator1, class BidirectionalIterator2>  
@@ -631,31 +614,31 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
         BidirectionalIterator2 destEnd);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A bidirectional iterator addressing the position of the first element in the source range.  
+ Iterador bidireccional que direcciona la posición del primer elemento del intervalo de origen.  
   
  `last`  
- A bidirectional iterator addressing the position that is one past the final element in the source range.  
+ Iterador bidireccional que direcciona la posición situada un elemento más allá del último elemento del intervalo de origen.  
   
  `destEnd`  
- A bidirectional iterator addressing the position of one past the final element in the destination range.  
+ Iterador bidireccional que direcciona la posición de un elemento más allá del último elemento del intervalo de destino.  
   
-### <a name="return-value"></a>Return Value  
- An output iterator addressing the position that is one past the final element in the destination range, that is, the iterator addresses `destEnd` - ( `last` -  `first` ).  
+### <a name="return-value"></a>Valor devuelto  
+ Un iterador de salida que direcciona la posición que es un elemento más allá del último elemento del intervalo de destino, es decir, el iterador direcciona `destEnd` -( `last`  -   `first` ).  
   
-### <a name="remarks"></a>Remarks  
- The source range must be valid and there must be sufficient space at the destination to hold all the elements being copied.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo de origen debe ser válido y debe haber suficiente espacio en el destino para contener todos los elementos que se van a copiar.  
   
- The `copy_backward` algorithm imposes more stringent requirements than that the copy algorithm. Both its input and output iterators must be bidirectional.  
+ El algoritmo `copy_backward` impone requisitos más rigurosos que los del algoritmo de copia. Tanto sus iteradores de entrada como de salida deben ser bidireccionales.  
   
- The `copy_backward` and [move_backward](../standard-library/algorithm-functions.md#move_backward) algorithms are the only C++ Standard Library algorithms designating the output range with an iterator pointing to the end of the destination range.  
+ Los algoritmos `copy_backward` y [move_backward](../standard-library/algorithm-functions.md#move_backward) son los únicos algoritmos de la Biblioteca estándar de C++ que designan el intervalo de salida con un iterador que apunta al final del intervalo de destino.  
   
- Because the algorithm copies the source elements in order beginning with the last element, the destination range can overlap with the source range provided the  `first` position of the source range is not contained in the destination range. `copy_backward` can be used to shift elements to the right but not the left, unless there is no overlap between the source and destination ranges. To shift to the left any number of positions, use the [copy](../standard-library/algorithm-functions.md#copy) algorithm.  
+ Puesto que el algoritmo copia los elementos de origen por orden a partir del último elemento, el intervalo de destino puede superponerse al intervalo de origen siempre y cuando la posición `first` del intervalo de origen no esté contenida en el intervalo de destino. Se puede utilizar `copy_backward` para desplazar elementos hacia la derecha pero no hacia la izquierda, a menos que no haya superposición entre los intervalos de origen y de destino. Para desplazar a la izquierda cualquier número de posiciones, use el algoritmo [copy](../standard-library/algorithm-functions.md#copy).  
   
- The `copy_backward` algorithm only modifies values pointed to by the iterators, assigning new values to elements in the destination range. It cannot be used to create new elements and cannot insert elements into an empty container directly.  
+ El algoritmo `copy_backward` solo modifica los valores a los que apuntan los iteradores, asignando nuevos valores a los elementos del intervalo de destino. No se puede utilizar para crear elementos nuevos y no puede insertar elementos en un contenedor vacío directamente.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_copy_bkwd.cpp  
@@ -707,7 +690,7 @@ int main() {
 ```  
   
 ##  <a name="copy_if"></a>  copy_if  
- In a range of elements, copies the elements that are `true` for the specified condition.  
+ En un intervalo de elementos, copia aquellos que son `true` para la condición especificada.  
   
 ```  
 template<class InputIterator, class OutputIterator, class BinaryPredicate>  
@@ -718,31 +701,31 @@ template<class InputIterator, class OutputIterator, class BinaryPredicate>
         Predicate pred);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- An input iterator that indicates the start of a range to check for the condition.  
+ Iterador de entrada que indica el inicio de un intervalo en el que se va a comprobar la condición.  
   
  `last`  
- An input iterator that indicates the end of the range.  
+ Iterador de entrada que indica el final del intervalo.  
   
  `dest`  
- The output iterator that indicates the destination for the copied elements.  
+ Iterador de salida que indica el destino de los elementos copiados.  
   
  `_Pred`  
- The condition against which every element in the range is tested. This condition is provided by a user-defined predicate function object. A predicate takes one argument and returns `true` or `false`.  
+ Condición con la que se comprueba cada elemento del intervalo. La proporciona un objeto de función de predicado definido por el usuario. Un predicado toma un argumento y devuelve `true` o `false`.  
   
-### <a name="return-value"></a>Return Value  
- An output iterator that equals `dest` incremented once for each element that fulfills the condition. In other words, the return value minus `dest` equals the number of copied elements.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador de salida igual a `dest` incrementado una vez para cada elemento que cumple la condición. En otras palabras, el valor devuelto menos `dest` es igual al número de elementos copiados.  
   
-### <a name="remarks"></a>Remarks  
- The template function evaluates  
+### <a name="remarks"></a>Comentarios  
+ La función de plantilla evalúa  
   
  `if (_Pred(*_First + N)) * dest++ = *(_First + N))`  
   
- once for each `N` in the range `[0, last - first)`, for strictly increasing values of `N` starting with the lowest value. If `dest` and  `first` designate regions of storage, `dest` must not be in the range `[ first, last )`.  
+ una vez por cada `N` del intervalo `[0, last - first)`, con los valores de `N` incrementados de forma estricta empezando por el valor inferior. Si `dest` y `first` designan regiones de almacenamiento, `dest` no debe estar en el intervalo `[` `first``,` `last``)`.  
   
 ##  <a name="copy_n"></a>  copy_n  
- Copies a specified number of elements.  
+ Copia un número especificado de elementos.  
   
 ```  
 template<class InputIterator, class Size, class OutputIterator>  
@@ -752,24 +735,24 @@ template<class InputIterator, class Size, class OutputIterator>
         OutputIterator dest);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- An input iterator that indicates where to copy elements from.  
+ Iterador de entrada que indica de dónde se copiarán los elementos.  
   
  `count`  
- A signed or unsigned integer type specifying the number of elements to copy.  
+ Tipo entero con o sin signo que especifica el número de elementos que se copiarán.  
   
  `dest`  
- An output iterator that indicates where to copy elements to.  
+ Iterador de salida que indica adónde se copiarán los elementos.  
   
-### <a name="return-value"></a>Return Value  
- Returns an output iterator where elements have been copied to. It is the same as the returned value of the third parameter, `dest`.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve un iterador de salida de la ubicación a la que se copiaron los elementos. Es el mismo que el valor devuelto del tercer parámetro, `dest`.  
   
-### <a name="remarks"></a>Remarks  
- The template function evaluates `*(dest + N) = *(first + N))` once for each `N` in the range `[0, count)`, for strictly increasing values of `N` starting with the lowest value. It then returns `dest + N`. If `dest` and `first` designate regions of storage, `dest` must not be in the range `[first, last)`.  
+### <a name="remarks"></a>Comentarios  
+ La función de plantilla evalúa `*(dest + N) = *(first + N))` una vez por cada `N` en el intervalo `[0, count)`, para aumentar de forma estricta los valores de `N` a partir del valor más bajo. Después, devuelve `dest + N`. Si `dest` y `first` designan regiones de almacenamiento, `dest` no debe estar en el intervalo `[first, last)`.  
   
 ##  <a name="count"></a>  count  
- Returns the number of elements in a range whose values match a specified value.  
+ Devuelve el número de elementos de un intervalo cuyos valores coinciden con un valor especificado.  
   
 ```  
 template<class InputIterator, class Type> 
@@ -779,25 +762,25 @@ template<class InputIterator, class Type>
         const Type& val);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- An input iterator addressing the position of the first element in the range to be traversed.  
+ Iterador de entrada que dirige a la posición del primer elemento del intervalo que se va a atravesar.  
   
  `last`  
- An input iterator addressing the position one past the final element in the range to be traversed.  
+ Iterador de entrada que dirige a la posición situada una posición después del último elemento del intervalo que se va a atravesar.  
   
  `val`  
- The value of the elements to be counted.  
+ Valor de los elementos que se van a contar.  
   
-### <a name="return-value"></a>Return Value  
- The difference type of the **InputIterator** that counts the number of elements in the range [  `first`, `last` ) that have value `val`.  
+### <a name="return-value"></a>Valor devuelto  
+ Tipo de diferencia de **InputIterator** que cuenta el número de elementos del intervalo [`first`, `last`) que tienen valor `val`.  
   
-### <a name="remarks"></a>Remarks  
- The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
+### <a name="remarks"></a>Comentarios  
+ El `operator==` que se usa para determinar la coincidencia entre un elemento y el valor especificado debe imponer una relación de equivalencia entre sus operandos.  
   
- This algorithm is generalized to count elements that satisfy any predicate with the template function [count_if](../standard-library/algorithm-functions.md#count_if).  
+ Este algoritmo se generaliza para contar los elementos que satisfacen cualquier predicado con la función de plantilla [count_if](../standard-library/algorithm-functions.md#count_if).  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_count.cpp  
@@ -835,7 +818,7 @@ The number of 10s in v2 is: 3.
 ```  
   
 ##  <a name="count_if"></a>  count_if  
- Returns the number of elements in a range whose values satisfy a specified condition.  
+ Devuelve el número de elementos de un intervalo cuyos valores satisfacen una condición especificada.  
   
 ```  
 template<class InputIterator, class Predicate>
@@ -845,23 +828,23 @@ template<class InputIterator, class Predicate>
         Predicate pred);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- An input iterator addressing the position of the first element in the range to be searched.  
+ Iterador de entrada que dirige a la posición del primer elemento del intervalo en el que se buscará.  
   
  `last`  
- An input iterator addressing the position one past the final element in the range to be searched.  
+ Iterador de entrada que dirige a la posición situada una posición después del último elemento del intervalo en el que se buscará.  
   
  `_Pred`  
- User-defined predicate function object that defines the condition to be satisfied if an element is to be counted. A predicate takes single argument and returns **true** or **false**.  
+ Objeto de función de predicado definido por el usuario que define la condición que debe cumplir el elemento para que se cuente. Un predicado toma un único argumento y devuelve **True** o **False**.  
   
-### <a name="return-value"></a>Return Value  
- The number of elements that satisfy the condition specified by the predicate.  
+### <a name="return-value"></a>Valor devuelto  
+ Número de elementos que satisfacen la condición especificada por el predicado.  
   
-### <a name="remarks"></a>Remarks  
- This template function is a generalization of the algorithm [count](../standard-library/algorithm-functions.md#count), replacing the predicate "equals a specific value" with any predicate.  
+### <a name="remarks"></a>Comentarios  
+ Esta función de plantilla es una generalización del algoritmo [count](../standard-library/algorithm-functions.md#count) donde el predicado "es igual a un valor específico" se sustituye por cualquier predicado.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_count_if.cpp  
@@ -905,11 +888,11 @@ The number of elements in v1 greater than 10 is: 2.
 ```  
   
 ##  <a name="equal"></a>  equal  
- Compares two ranges element by element for equality or equivalence in a sense specified by a binary predicate.  
+ Compara dos intervalos elemento a elemento para ver si son iguales o equivalentes según lo especificado por un predicado binario.  
   
- Use `std::equal` when comparing elements in different container types (for example `vector` and `list`) or when comparing different element types, or when you need to compare sub-ranges of containers. Otherwise, when comparing elements of the same type in the same container type, use the non-member `operator==` that is provided for each container.  
+ Use `std::equal` al comparar elementos de diferentes tipos de contenedor (por ejemplo, `vector` y `list`) o al comparar diferentes tipos de elemento, o cuando sea necesario comparar subintervalos de contenedores. Por otra parte, al comparar elementos de igual tipo en el mismo tipo de contenedor, use `operator==` no miembro que se proporciona para cada contenedor.  
   
- Use the dual-range overloads in C++14 code because the overloads that only take a single iterator for the second range will not detect differences if the second range is longer than the first range, and will result in undefined behavior if the second range is shorter than the first range.  
+ Use las sobrecargas de dos intervalos en código C ++ 14 porque las sobrecargas que toman un único iterador para el segundo intervalo no detectan las diferencias si el segundo intervalo es más largo que el primero y esto provoca un comportamiento indefinido si el segundo intervalo es más corto que el primero.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -941,33 +924,33 @@ bool equal(
     BinaryPredicate Comp);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `First1`  
- An input iterator addressing the position of the first element in the first range to be tested.  
+ Un iterador de entrada que dirige a la posición del primer elemento en el primer intervalo que se va a probar.  
   
  `Last1`  
- An input iterator addressing the position one past the last element in the first range to be tested.  
+ Un iterador de entrada que dirige a la posición situada una posición después del último elemento en el primer intervalo que se va a probar.  
   
  `First2`  
- An input iterator addressing the position of the first element in the second range to be tested.  
+ Un iterador de entrada que dirige a la posición del primer elemento en el segundo intervalo que se va a probar.  
   
  `First2`  
- An input iterator addressing the position of one past the last element in the second range to be tested.  
+ Un iterador de entrada que dirige a la posición situada una posición después del último elemento en el segundo intervalo que se va a probar.  
   
  `Comp`  
- User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se van a tomar como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="return-value"></a>Return Value  
- **true** if and only if the ranges are identical or equivalent under the binary predicate when compared element by element; otherwise, **false**.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** únicamente si los intervalos son idénticos o equivalentes en el predicado binario cuando se compara elemento a elemento; en caso contrario, **False**.  
   
-### <a name="remarks"></a>Remarks  
- The range to be searched must be valid; all iterators must be dereferenceable and the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo en el que se va a buscar debe ser válido: todos los iteradores deben poder desreferenciarse y se debe poder acceder a la última posición desde la primera con incrementos.  
   
- If the two ranges are equal length, then the time complexity of the algorithm is linear in the number of elements contained in the range. Otherwise the function immediately returns `false`.  
+ Si los dos intervalos tienen la misma duración, la complejidad temporal del algoritmo es lineal en el número de elementos incluidos en el intervalo. De lo contrario, la función devuelve inmediatamente `false`.  
   
- Neither the `operator==` nor the user-defined predicate is required to impose an equivalence relation that symmetric, reflexive and transitive between its operands.  
+ No es necesario que `operator==` o el predicado definido por el usuario impongan una relación de equivalencia que sea simétrica, reflexiva y transitiva entre sus operandos.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 #include <iostream>  
@@ -1002,7 +985,7 @@ int main()
 ```  
   
 ##  <a name="equal_range"></a>  equal_range  
- Given an ordered range, finds the subrange in which all elements are equivalent to a given value.  
+ En un intervalo ordenado, busca el subintervalo en el que todos los elementos son equivalentes a un valor determinado.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -1019,34 +1002,34 @@ pair<ForwardIterator, ForwardIterator> equal_range(
     Predicate comp);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- A forward iterator addressing the position of the first element in the range to be searched.  
+ Iterador hacia delante que dirige a la posición del primer elemento del intervalo en el que se buscará.  
   
  `last`  
- A forward iterator addressing the position one past the final element in the range to be searched.  
+ Iterador hacia delante que dirige a la posición situada una posición después del último elemento del intervalo en el que se buscará.  
   
  `val`  
- The value being searched for in the ordered range.  
+ Valor que se va a buscar en el intervalo ordenado.  
   
  `comp`  
- User-defined predicate function object that defines the sense in which one element is less than another.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro.  
   
-### <a name="return-value"></a>Return Value  
- A pair of forward iterators that specify a subrange, contained within the range searched, in which all of the elements are equivalent to `val` in the sense defined by the binary predicate used (either `comp` or the default, less-than).  
+### <a name="return-value"></a>Valor devuelto  
+ Par de iteradores hacia delante que especifican un subintervalo incluido dentro del intervalo en el que se busca, en el que todos los elementos son equivalentes a `val` en el sentido definido por el predicado binario usado (ya sea `comp` o el valor predeterminado, menor que).  
   
- If no elements in the range are equivalent to `val`, the returned pair of forward iterators are equal and specify the point where `val` could be inserted without disturbing the order of the range.  
+ Si en el intervalo no hay elementos equivalentes a `val`, el par de iteradores hacia delante devueltos son iguales y especifican el punto donde podría insertarse `val` sin alterar el orden del intervalo.  
   
-### <a name="remarks"></a>Remarks  
- The first iterator of the pair returned by the algorithm is [lower_bound](../standard-library/algorithm-functions.md#lower_bound), and the second iterator is [upper_bound](../standard-library/algorithm-functions.md#upper_bound).  
+### <a name="remarks"></a>Comentarios  
+ El primer iterador del par devuelto por el algoritmo es [lower_bound](../standard-library/algorithm-functions.md#lower_bound) y el segundo es [upper_bound](../standard-library/algorithm-functions.md#upper_bound).  
   
- The range must be sorted according to the predicate provided to `equal_range`. For example, if you are going to use the greater-than predicate, the range must be sorted in descending order.  
+ El intervalo debe estar ordenado según el predicado proporcionado para `equal_range`. Por ejemplo, si va a usar el predicado mayor que, el intervalo debe ordenarse en orden descendente.  
   
- Elements in the possibly empty subrange defined by the pair of iterators returned by `equal_range` will be equivalent to `val` in the sense defined by the predicate used.  
+ Los elementos del subintervalo posiblemente vacío definido por el par de iteradores devueltos por `equal_range` serán equivalentes a `val` en el sentido definido por el predicado empleado.  
   
- The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last` - `first`).  
+ La complejidad del algoritmo es logarítmica los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcionales al ( `last`  -  `first`).  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_equal_range.cpp  
@@ -1165,7 +1148,7 @@ int main()
 ```  
   
 ##  <a name="fill"></a>  fill  
- Assigns the same new value to every element in a specified range.  
+ Asigna el mismo valor nuevo a cada elemento de un intervalo especificado.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -1175,20 +1158,20 @@ void fill(
     const Type& val);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A forward iterator addressing the position of the first element in the range to be traversed.  
+ Iterador hacia delante que dirige a la posición del primer elemento del intervalo que se va a atravesar.  
   
  `last`  
- A forward iterator addressing the position one past the final element in the range to be traversed.  
+ Iterador hacia delante que dirige a la posición situada una posición después del último elemento del intervalo que se va a atravesar.  
   
  `val`  
- The value to be assigned to elements in the range [  `first`, `last`).  
+ Valor que se va a asignar a los elementos del intervalo [`first`, `last`).  
   
-### <a name="remarks"></a>Remarks  
- The destination range must be valid; all pointers must be dereferenceable, and the last position is reachable from the first by incrementation. The complexity is linear with the size of the range.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo de destino debe ser válido; todos los punteros deben poder desreferenciarse y se debe poder acceder a la última posición desde la primera con incrementos. La complejidad es lineal con el tamaño del intervalo.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_fill.cpp  
@@ -1230,7 +1213,7 @@ Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )
 ```  
   
 ##  <a name="fill_n"></a>  fill_n  
- Assigns a new value to a specified number of elements in a range beginning with a particular element.  
+ Asigna un nuevo valor a un número especificado de elementos de un intervalo a partir de un elemento determinado.  
   
 ```  
 template<class OutputIterator, class Size, class Type>  
@@ -1240,23 +1223,23 @@ OutputIterator fill_n(
     const Type& Val);   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `First`  
- An output iterator addressing the position of the first element in the range to be assigned the value `Val`.  
+ Iterador de salida que dirige a la posición del primer elemento del intervalo al que se va a asignar el valor `Val`.  
   
  `Count`  
- A signed or unsigned integer type specifying the number of elements to be assigned the value.  
+ Tipo entero con o sin signo que especifica el número de elementos que se van a asignar al valor.  
   
  `Val`  
- The value to be assigned to elements in the range [ `First`,          *First + Count*).  
+ Valor que se va a asignar a los elementos del intervalo [`First`,          *First + Count*).  
   
-### <a name="return-value"></a>Return Value  
- An iterator to the element that follows the last element filled if `Count` > zero, otherwise the first element.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador al elemento que sigue al último elemento relleno si `Count` > cero, en caso contrario, el primer elemento.  
   
-### <a name="remarks"></a>Remarks  
- The destination range must be valid; all pointers must be dereferenceable, and the last position is reachable from the first by incrementation. The complexity is linear with the size of the range.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo de destino debe ser válido; todos los punteros deben poder desreferenciarse y se debe poder acceder a la última posición desde la primera con incrementos. La complejidad es lineal con el tamaño del intervalo.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_fill_n.cpp  
@@ -1306,7 +1289,7 @@ int main()
 ```  
   
 ##  <a name="find"></a>  find  
- Locates the position of the first occurrence of an element in a range that has a specified value.  
+ Busca la posición de la primera aparición de un elemento en un intervalo que tiene un valor especificado.  
   
 ```  
 template<class InputIterator, class T>  
@@ -1316,26 +1299,26 @@ InputIterator find(
     const T& val);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- An input iterator addressing the position of the first element in the range to be searched for the specified value.  
+ Iterador de entrada que direcciona la posición del primer elemento del intervalo en el que se va a buscar el valor especificado.  
   
  `last`  
- An input iterator addressing the position one past the final element in the range to be searched for the specified value.  
+ Iterador de entrada que direcciona la posición de un elemento más allá del último elemento del intervalo en el que se va a buscar el valor especificado.  
   
  `val`  
- The value to be searched for.  
+ Valor que se va a buscar.  
   
-### <a name="return-value"></a>Return Value  
- An input iterator addressing the first occurrence of the specified value in the range being searched. If no element is found with an equivalent value, returns `last`.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador de entrada que direcciona la primera aparición del valor especificado en el intervalo en el que se está buscando. Si no se encuentra ningún elemento con un valor equivalente, devuelve `last`.  
   
-### <a name="remarks"></a>Remarks  
- The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
+### <a name="remarks"></a>Comentarios  
+ El `operator==` que se usa para determinar la coincidencia entre un elemento y el valor especificado debe imponer una relación de equivalencia entre sus operandos.  
   
- For a code example using `find()`, see [find_if](../standard-library/algorithm-functions.md#find_if).  
+ Para obtener un ejemplo de código con `find()`, vea [find_if](../standard-library/algorithm-functions.md#find_if).  
   
 ##  <a name="find_end"></a>  find_end  
- Looks in a range for the last subsequence that is identical to a specified sequence or that is equivalent in a sense specified by a binary predicate.  
+ Busca en un intervalo la última subsecuencia que es idéntica a una secuencia especificada o que es equivalente según lo especificado por un predicado binario.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -1354,31 +1337,31 @@ ForwardIterator1 find_end(
     Pred Comp);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `First1`  
- A forward iterator addressing the position of the first element in the range to be searched.  
+ Iterador hacia delante que dirige a la posición del primer elemento del intervalo en el que se buscará.  
   
  `Last1`  
- A forward iterator addressing the position one past the last element in the range to be searched.  
+ Iterador hacia delante que dirige a la posición situada una posición después del último elemento del intervalo en el que se buscará.  
   
  `First2`  
- A forward iterator addressing the position of the first element in the range to search for.  
+ Iterador hacia delante que dirige a la posición del primer elemento del intervalo en el que se buscará.  
   
  `Last2`  
- A forward iterator addressing the position one past the last element in the range to search for.  
+ Iterador hacia delante que dirige a la posición del último elemento del intervalo en el que se buscará.  
   
  `Comp`  
- User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se van a tomar como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="return-value"></a>Return Value  
- A forward iterator addressing the position of the first element of the last subsequence within [First1, Last1) that matches the specified sequence [First2, Last2).  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador hacia delante que dirige a la posición del primer elemento de la última subsecuencia dentro de [First1, Last1) que coincide con la secuencia especificada [First2, Last2).  
   
-### <a name="remarks"></a>Remarks  
- The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
+### <a name="remarks"></a>Comentarios  
+ El `operator==` que se usa para determinar la coincidencia entre un elemento y el valor especificado debe imponer una relación de equivalencia entre sus operandos.  
   
- The ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position is reachable from the first by incrementation.  
+ Los intervalos a los que se hace referencia deben ser válidos: todos los punteros deben poder desreferenciarse y, dentro de cada secuencia, se debe poder acceder a la última posición desde la primera con incrementos.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_find_end.cpp  
@@ -1475,7 +1458,7 @@ There is a sequence of elements in v1 that are equivalent to those
 ```  
   
 ##  <a name="find_first_of"></a>  find_first_of  
- Searches for the first occurrence of any of several values within a target range or for the first occurrence of any of several elements that are equivalent in a sense specified by a binary predicate to a specified set of the elements.  
+ Busca la primera aparición de cualquiera de varios valores dentro de un intervalo de destino o la primera aparición de cualquiera de varios elementos que son equivalentes según lo especificado por un predicado binario en un conjunto especificado de los elementos.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -1494,31 +1477,31 @@ ForwardIterator1 find_first_of(
     BinaryPredicate  comp);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first1`  
- A forward iterator addressing the position of the first element in the range to be searched.  
+ Iterador hacia delante que dirige a la posición del primer elemento del intervalo en el que se buscará.  
   
  `last1`  
- A forward iterator addressing the position one past the final element in the range to be searched.  
+ Iterador hacia delante que dirige a la posición situada una posición después del último elemento del intervalo en el que se buscará.  
   
   `first2`  
- A forward iterator addressing the position of the first element in the range to be matched.  
+ Iterador hacia delante que dirige a la posición del primer elemento del intervalo con el que se establecerá la coincidencia.  
   
  `last2`  
- A forward iterator addressing the position one past the final element in the range to be matched.  
+ Iterador hacia delante que dirige a la posición situada una posición después del último elemento del intervalo con el que se establecerá la coincidencia.  
   
  `comp`  
- User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se van a tomar como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="return-value"></a>Return Value  
- A forward iterator addressing the position of the first element of the first subsequence that matches the specified sequence or that is equivalent in a sense specified by a binary predicate.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador hacia delante que dirige a la posición del primer elemento de la primera subsecuencia que coincide con la secuencia especificada o que es equivalente en un sentido especificado por un predicado binario.  
   
-### <a name="remarks"></a>Remarks  
- The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
+### <a name="remarks"></a>Comentarios  
+ El `operator==` que se usa para determinar la coincidencia entre un elemento y el valor especificado debe imponer una relación de equivalencia entre sus operandos.  
   
- The ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position is reachable from the first by incrementation.  
+ Los intervalos a los que se hace referencia deben ser válidos: todos los punteros deben poder desreferenciarse y, dentro de cada secuencia, se debe poder acceder a la última posición desde la primera con incrementos.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_find_first_of.cpp  
@@ -1618,7 +1601,7 @@ There is a sequence of elements in v1 that are equivalent
 ```  
   
 ##  <a name="find_if"></a>  find_if  
- Locates the position of the first occurrence of an element in a range that satisfies a specified condition.  
+ Busca la posición de la primera aparición de un elemento en un intervalo que cumple una condición especificada.  
   
 ```  
 template<class InputIterator, class Predicate>  
@@ -1628,23 +1611,23 @@ InputIterator find_if(
     Predicate pred);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- An input iterator addressing the position of the first element in the range to be searched.  
+ Iterador de entrada que dirige a la posición del primer elemento del intervalo en el que se buscará.  
   
  `last`  
- An input iterator addressing the position one past the final element in the range to be searched.  
+ Iterador de entrada que dirige a la posición situada una posición después del último elemento del intervalo en el que se buscará.  
   
  `pred`  
- User-defined predicate function object or [lambda expression](../cpp/lambda-expressions-in-cpp.md) that defines the condition to be satisfied by the element being searched for. A predicate takes single argument and returns `true` (satisfied) or `false` (not satisfied). The signature of `pred` must effectively be `bool pred(const T& arg);`, where `T` is a type to which `InputIterator` can be implicitly converted when dereferenced. The `const` keyword is shown only to illustrate that the function object or lambda should not modify the argument.  
+ Objeto de función de predicado definido por el usuario o [expresión lambda](../cpp/lambda-expressions-in-cpp.md) que define la condición que debe cumplir el elemento que se va a buscar. Un predicado toma un solo argumento y devuelve `true` (se cumple) o `false` (no se cumple). La signatura de `pred` debe ser, en la práctica, `bool pred(const T& arg);`, donde `T` es un tipo al que `InputIterator` se puede convertir implícitamente al desreferenciarse. La palabra clave `const` solo se muestra para ilustrar el hecho de que el objeto de función o la lambda no debería modificar el argumento.  
   
-### <a name="return-value"></a>Return Value  
- An input iterator that refers to the first element in the range that satisfies the condition specified by the predicate (the predicate results in `true`). If no element is found to satisfy the predicate, returns `last`.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador de entrada que hace referencia al primer elemento del intervalo que cumple la condición especificada por el predicado (el predicado devuelve `true`). Si no se encuentra ningún elemento que cumpla el predicado, devuelve `last`.  
   
-### <a name="remarks"></a>Remarks  
- This template function is a generalization of the algorithm [find](../standard-library/algorithm-functions.md#find), replacing the predicate "equals a specific value" with any predicate. For the logical opposite (find the first element that does not satisfy the predicate), see [find_if_not](../standard-library/algorithm-functions.md#find_if_not).  
+### <a name="remarks"></a>Comentarios  
+ Esta función de plantilla es una generalización del algoritmo [find](../standard-library/algorithm-functions.md#find) donde el predicado "es igual a un valor específico" se sustituye por cualquier predicado. Para ver información sobre la operación lógica opuesta (buscar el primer elemento que no cumple el predicado), vea [find_if_not](../standard-library/algorithm-functions.md#find_if_not).  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // cl.exe /W4 /nologo /EHsc /MTd  
@@ -1731,7 +1714,7 @@ int main()
 ```  
   
 ##  <a name="find_if_not"></a>  find_if_not  
- Returns the first element in the indicated range that does not satisfy a condition.  
+ Devuelve el primer elemento del intervalo indicado que no satisface una condición.  
   
 ```  
 template<class InputIterator, class Predicate>  
@@ -1741,26 +1724,26 @@ InputIterator find_if_not(
     Predicate pred);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- An input iterator addressing the position of the first element in the range to be searched.  
+ Iterador de entrada que dirige a la posición del primer elemento del intervalo en el que se buscará.  
   
  `last`  
- An input iterator addressing the position one past the final element in the range to be searched.  
+ Iterador de entrada que dirige a la posición situada una posición después del último elemento del intervalo en el que se buscará.  
   
  `pred`  
- User-defined predicate function object or [lambda expression](../cpp/lambda-expressions-in-cpp.md) that defines the condition to be not satisfied by the element being searched for. A predicate takes single argument and returns `true` (satisfied) or `false` (not satisfied). The signature of `pred` must effectively be `bool pred(const T& arg);`, where `T` is a type to which `InputIterator` can be implicitly converted when dereferenced. The `const` keyword is shown only to illustrate that the function object or lambda should not modify the argument.  
+ Objeto de función de predicado definido por el usuario o [expresión lambda](../cpp/lambda-expressions-in-cpp.md) que define la condición que no debe cumplir el elemento que se va a buscar. Un predicado toma un solo argumento y devuelve `true` (se cumple) o `false` (no se cumple). La signatura de `pred` debe ser, en la práctica, `bool pred(const T& arg);`, donde `T` es un tipo al que `InputIterator` se puede convertir implícitamente al desreferenciarse. La palabra clave `const` solo se muestra para ilustrar el hecho de que el objeto de función o la lambda no debería modificar el argumento.  
   
-### <a name="return-value"></a>Return Value  
- An input iterator that refers to the first element in the range that does not satisfy the condition specified by the predicate (the predicate results in `false`). If all elements satisfy the predicate (the predicate results in `true` for every element), returns `last`.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador de entrada que hace referencia al primer elemento del intervalo que no cumple la condición especificada por el predicado (el predicado devuelve `false`). Si todos los elementos cumplen el predicado (si el predicado devuelve `true` con todos los elementos), devuelve `last`.  
   
-### <a name="remarks"></a>Remarks  
- This template function is a generalization of the algorithm [find](../standard-library/algorithm-functions.md#find), replacing the predicate "equals a specific value" with any predicate. For the logical opposite (find the first element that does satisfy the predicate), see [find_if](../standard-library/algorithm-functions.md#find_if).  
+### <a name="remarks"></a>Comentarios  
+ Esta función de plantilla es una generalización del algoritmo [find](../standard-library/algorithm-functions.md#find) donde el predicado "es igual a un valor específico" se sustituye por cualquier predicado. Para ver información sobre la operación lógica opuesta (buscar el primer elemento que sí cumple el predicado), vea [find_if](../standard-library/algorithm-functions.md#find_if).  
   
- For a code example readily adaptable to `find_if_not()`, see [find_if](../standard-library/algorithm-functions.md#find_if).  
+ Para obtener un ejemplo de código que se adapta fácilmente a `find_if_not()`, vea [find_if](../standard-library/algorithm-functions.md#find_if).  
   
 ##  <a name="for_each"></a>  for_each  
- Applies a specified function object to each element in a forward order within a range and returns the function object.  
+ Aplica un objeto de función especificado a cada elemento en un orden hacia delante dentro de un intervalo y devuelve el objeto de función.  
   
 ```  
 template<class InputIterator, class Function>  
@@ -1770,27 +1753,27 @@ Function for_each(
     Function _Func);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- An input iterator addressing the position of the first element in the range to be operated on.  
+ Iterador de entrada que dirige a la posición del primer elemento del intervalo en el que se va a operar.  
   
  `last`  
- An input iterator addressing the position one past the final element in the range operated on.  
+ Iterador de entrada que dirige a la posición situada una posición después del último elemento del intervalo en el que se va a operar.  
   
  `_Func`  
- User-defined function object that is applied to each element in the range.  
+ Objeto de función definido por el usuario que se aplica a cada elemento del intervalo.  
   
-### <a name="return-value"></a>Return Value  
- A copy of the function object after it has been applied to all of the elements in the range.  
+### <a name="return-value"></a>Valor devuelto  
+ Copia del objeto de función una vez aplicado a todos los elementos del intervalo.  
   
-### <a name="remarks"></a>Remarks  
- The algorithm `for_each` is very flexible, allowing the modification of each element within a range in different, user-specified ways. Templatized functions may be reused in a modified form by passing different parameters. User-defined functions may accumulate information within an internal state that the algorithm may return after processing all of the elements in the range.  
+### <a name="remarks"></a>Comentarios  
+ El algoritmo `for_each` es muy flexible, lo que permite la modificación de cada elemento de un intervalo de formas distintas especificadas por el usuario. Las funciones de plantilla se pueden volver a usar en un formato modificado si se pasan parámetros diferentes. Las funciones definidas por el usuario pueden acumular información dentro de un estado interno que el algoritmo puede devolver después de procesar todos los elementos del intervalo.  
   
- The range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- The complexity is linear with at most ( `last` -  `first`) comparisons.  
+ La complejidad es lineal con, a lo sumo ( `last`  -   `first`) las comparaciones.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_for_each.cpp  
@@ -1904,7 +1887,7 @@ The average of the elements of v1 is:
 ```  
   
 ##  <a name="generate"></a>  generate  
- Assigns the values generated by a function object to each element in a range.  
+ Asigna los valores generados por un objeto de función a cada elemento de un intervalo.  
   
 ```  
 template<class ForwardIterator, class Generator>  
@@ -1914,24 +1897,24 @@ void generate(
     Generator _Gen);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A forward iterator addressing the position of the first element in the range to which values are to be assigned.  
+ Iterador hacia delante que dirige a la posición del primer elemento del intervalo al que se van a asignar valores.  
   
  `last`  
- A forward iterator addressing the position one past the final element in the range to which values are to be assigned.  
+ Iterador hacia delante que dirige a la posición situada una posición después del último elemento del intervalo al que se van a asignar valores.  
   
  `_Gen`  
- A function object that is called with no arguments that is used to generate the values to be assigned to each of the elements in the range.  
+ Objeto de función al que se llama sin argumentos que se usa para generar los valores que se van a asignar a cada uno de los elementos del intervalo.  
   
-### <a name="remarks"></a>Remarks  
- The function object is invoked for each element in the range and does not need to return the same value each time it is called. It may, for example, read from a file or refer to and modify a local state. The generator's result type must be convertible to the value type of the forward iterators for the range.  
+### <a name="remarks"></a>Comentarios  
+ El objeto de función se invoca por cada elemento en el intervalo y no es necesario que el valor devuelto sea el mismo cada vez que se llama. Así, por ejemplo, puede leer de un archivo o hacer referencia a un estado local y modificarlo. El tipo de resultado del generador debe poder convertirse en el tipo de valor de los iteradores hacia delante del intervalo.  
   
- The range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- The complexity is linear, with exactly ( `last` -  `first`) calls to the generator being required.  
+ La complejidad es lineal con exactamente ( `last`  -   `first`) las llamadas a la que se requiere un generador.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_generate.cpp  
@@ -1975,7 +1958,7 @@ Deque deq1 is ( 15724 11478 29358 26962 24464 ).
 ```  
   
 ##  <a name="generate_n"></a>  generate_n  
- Assigns the values generated by a function object to a specified number of elements in a range and returns to the position one past the last assigned value.  
+ Asigna los valores generados por un objeto de función a un número especificado de elementos de un intervalo y vuelve a la posición situada una más allá del último valor asignado.  
   
 ```  
 template<class OutputIterator, class Diff, class Generator>  
@@ -1985,24 +1968,24 @@ void generate_n(
     Generator Gen);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `First`  
- An output iterator addressing the position of first element in the range to which values are to be assigned.  
+ Iterador de salida que direcciona la posición del primer elemento del intervalo al que se van a asignar valores.  
   
  `Count`  
- A signed or unsigned integer type specifying the number of elements to be assigned a value by the generator function.  
+ Tipo de entero con signo o sin signo que especifica el número de elementos a los que la función de generador va a asignar un valor.  
   
  `Gen`  
- A function object that is called with no arguments that is used to generate the values to be assigned to each of the elements in the range.  
+ Objeto de función al que se llama sin argumentos que se usa para generar los valores que se van a asignar a cada uno de los elementos del intervalo.  
   
-### <a name="remarks"></a>Remarks  
- The function object is invoked for each element in the range and does not need to return the same value each time it is called. It may, for example, read from a file or refer to and modify a local state. The generator's result type must be convertible to the value type of the forward iterators for the range.  
+### <a name="remarks"></a>Comentarios  
+ El objeto de función se invoca por cada elemento en el intervalo y no es necesario que el valor devuelto sea el mismo cada vez que se llama. Así, por ejemplo, puede leer de un archivo o hacer referencia a un estado local y modificarlo. El tipo de resultado del generador debe poder convertirse en el tipo de valor de los iteradores hacia delante del intervalo.  
   
- The range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- The complexity is linear, with exactly `Count` calls to the generator being required.  
+ La complejidad es lineal, siendo necesarias exactamente `Count` llamadas al generador.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // cl.exe /EHsc /nologo /W4 /MTd  
@@ -2047,7 +2030,7 @@ int main()
 ```  
   
 ##  <a name="includes"></a>  includes  
- Tests whether one sorted range contains all the elements contained in a second sorted range, where the ordering or equivalence criterion between elements may be specified by a binary predicate.  
+ Prueba si un intervalo ordenado contiene todos los elementos incluidos en un segundo intervalo ordenado, donde el criterio de ordenación o equivalencia entre los elementos se pueden especificar mediante un predicado binario.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -2066,39 +2049,39 @@ bool includes(
     BinaryPredicate comp );  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first1`  
- An input iterator addressing the position of the first element in the first of two sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
+ Iterador de entrada que dirige a la posición del primer elemento del primero de dos intervalos de origen ordenados donde se va a comprobar que todos los elementos del segundo estén incluidos en el primero.  
   
  `last1`  
- An input iterator addressing the position one past the last element in the first of two sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
+ Iterador de entrada que dirige a la posición situada una posición después del último elemento del primero de dos intervalos de origen ordenados donde se va a comprobar que todos los elementos del segundo estén incluidos en el primero.  
   
   `first2`  
- An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
+ Iterador de entrada que dirige a la posición del primer elemento del segundo de dos intervalos de origen ordenados consecutivos donde se va a comprobar que todos los elementos del segundo estén incluidos en el primero.  
   
  `last2`  
- An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
+ Iterador de entrada que dirige a la posición situada una posición después del último elemento del segundo de dos intervalos de origen ordenados consecutivos donde se va a comprobar que todos los elementos del segundo estén incluidos en el primero.  
   
  `comp`  
- User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the first sorted range contains all the elements in the second sorted range; otherwise, **false**.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si el primer intervalo ordenado contiene todos los elementos del segundo intervalo ordenado; de lo contrario, **False**.  
   
-### <a name="remarks"></a>Remarks  
- Another way to think of this test is that it determined whether the second source range is a subset of the first source range.  
+### <a name="remarks"></a>Comentarios  
+ Otra utilidad de esta prueba es que permite determinar si el segundo intervalo de origen es un subconjunto del primero.  
   
- The sorted source ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position must be reachable from the first by incrementation.  
+ Los intervalos de origen ordenados a los que se hace referencia deben ser válidos; todos los punteros deben poder desreferenciarse y, dentro de cada secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- The sorted source ranges must each be arranged as a precondition to the application of the algorithm includes in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
+ Los intervalos de origen ordenados deben estar organizados como condición previa a la aplicación del algoritmo includes según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados.  
   
- The source ranges are not modified by the algorithm **merge**.  
+ El algoritmo **merge**no modifica los intervalos de origen.  
   
- The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. More precisely, the algorithm tests whether all the elements in the first sorted range under a specified binary predicate have equivalent ordering to those in the second sorted range.  
+ Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro). Esto produce una ordenación entre los elementos no equivalentes. Más concretamente, el algoritmo comprueba si todos los elementos del primer intervalo ordenado de un predicado binario especificado tienen una ordenación equivalente a los del segundo intervalo ordenado.  
   
- The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) - ( * last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
+ La complejidad del algoritmo es lineal con al menos 2 \* (( *last1 - first1*)-(* last2 - first2 *)) - 1 comparaciones para intervalos de origen no vacíos.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_includes.cpp  
@@ -2248,7 +2231,7 @@ At least one of the elements in vector v3b is  not contained under mod_lesser in
 ```  
   
 ##  <a name="inplace_merge"></a>  inplace_merge  
- Combines the elements from two consecutive sorted ranges into a single sorted range, where the ordering criterion may be specified by a binary predicate.  
+ Combina los elementos de dos intervalos ordenados consecutivos en un único intervalo ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -2265,27 +2248,27 @@ void inplace_merge(
     Predicate comp);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A bidirectional iterator addressing the position of the first element in the first of two consecutive sorted ranges to be combined and sorted into a single range.  
+ Iterador bidireccional que dirige a la posición del primer elemento del primero de dos intervalos ordenados consecutivos que se van a combinar y ordenar en un solo intervalo.  
   
  `middle`  
- A bidirectional iterator addressing the position of the first element in the second of two consecutive sorted ranges to be combined and sorted into a single range.  
+ Iterador bidireccional que dirige a la posición del primer elemento del segundo de dos intervalos ordenados consecutivos que se van a combinar y ordenar en un solo intervalo.  
   
  `last`  
- A bidirectional iterator addressing the position one past the last element in the second of two consecutive sorted ranges to be combined and sorted into a single range.  
+ Iterador bidireccional que dirige a la posición situada una posición después del último elemento del segundo de dos intervalos ordenados consecutivos que se van a combinar y ordenar en un solo intervalo.  
   
  `comp`  
- User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.  
   
-### <a name="remarks"></a>Remarks  
- The sorted consecutive ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position must be reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ Los intervalos consecutivos ordenados a los que se hace referencia deben ser válidos; todos los punteros deben poder desreferenciarse y, dentro de cada secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- The sorted consecutive ranges must each be arranged as a precondition to the application of the `inplace_merge` algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges. The operation is stable as the relative order of elements within each range is preserved. When there are equivalent elements in both source ranges, the element is the first range precedes the element from the second in the combined range.  
+ Los intervalos consecutivos ordenados deben estar organizados como condición previa a la aplicación del algoritmo `inplace_merge` según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados. La operación es estable, ya que se conserva el orden relativo de los elementos de cada intervalo. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo en el intervalo combinado.  
   
- The complexity depends on the available memory as the algorithm allocates memory to a temporary buffer. If sufficient memory is available, the best case is linear with ( * last - first*) - 1 comparisons; if no auxiliary memory is available, the worst case is  *N* log *(N)*, where  *N* = ( * last - first*).  
+ La complejidad depende de la memoria disponible, ya que el algoritmo asigna memoria a un búfer temporal. Si hay suficiente memoria disponible, el mejor de los casos es lineal con (* apellido - nombre*) - 1 comparaciones; si no hay memoria auxiliar está disponible, el peor de los casos es *N* registro *(N)*, donde *N* = (* apellido - nombre*).  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_inplace_merge.cpp  
@@ -2397,7 +2380,7 @@ Merged inplace with binary predicate mod_lesser specified,
 ```  
   
 ##  <a name="is_heap"></a>  is_heap  
- Returns `true` if the elements in the specified range form a heap.  
+ Devuelve `true` si los elementos del intervalo especificado forman un montón.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -2412,28 +2395,28 @@ bool is_heap(
     BinaryPredicate comp);   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A random access iterator that indicates the start of a range to check for a heap.  
+ Iterador de acceso aleatorio que indica el inicio de un intervalo en el que se va a buscar un montón.  
   
  `last`  
- A random access iterator that indicates the end of a range.  
+ Iterador de acceso aleatorio que indica el final de un intervalo.  
   
  `comp`  
- A condition to test to order elements. A binary predicate takes a single argument and returns `true` or `false`.  
+ Condición que se va a probar para ordenar los elementos. Un predicado binario toma un solo argumento y devuelve `true` o `false`.  
   
-### <a name="return-value"></a>Return Value  
- Returns `true` if the elements in the specified range form a heap, `false` if they do not.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `true` si los elementos del intervalo especificado forman un montón y `false` si no lo hacen.  
   
-### <a name="remarks"></a>Remarks  
- The first template function returns [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(` `first ,` `last ) ==` `last`.  
+### <a name="remarks"></a>Comentarios  
+ La primera función de plantilla devuelve [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(` `first``,` `last``) ==` `last`.  
   
- The second template function returns  
+ La segunda función de plantilla devuelve  
   
  `is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`.  
   
 ##  <a name="is_heap_until"></a>  is_heap_until  
- Returns an iterator positioned at the first element in the range [ `begin`, `end`) that does not satisfy the heap ordering condition, or `end` if the range forms a heap.  
+ Devuelve un iterador situado en el primer elemento del intervalo [`begin`, `end`) que no satisface la condición de ordenación de montón, o `end` si el intervalo forma un montón.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -2448,26 +2431,26 @@ RandomAccessIterator is_heap_until(
     BinaryPredicate compare);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `begin`  
- A random access iterator that specifies the first element of a range to check for a heap.  
+ Iterador de acceso aleatorio que especifica el primer elemento de un intervalo para comprobar si hay un montón.  
   
  `end`  
- A random access iterator that specifies the end of the range to check for a heap.  
+ Iterador de acceso aleatorio que especifica el final del intervalo para comprobar si hay un montón.  
   
  `compare`  
- A binary predicate that specifies the strict weak ordering condition that defines a heap. The default predicate when `compare` is not specified is `std::less<>`.  
+ Predicado binario que especifica la condición de ordenación débil estricta que define un montón. El valor predeterminado del predicado cuando no se especifica `compare` es `std::less<>`.  
   
-### <a name="return-value"></a>Return Value  
- Returns `end` if the specified range forms a heap or contains one or fewer elements. Otherwise, returns an iterator for the first element found that does not satisfy the heap condition.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `end` si el intervalo especificado forma un montón o contiene uno o menos elementos. De lo contrario, devuelve un iterador para el primer elemento encontrado que no satisface la condición de montón.  
   
-### <a name="remarks"></a>Remarks  
- The first template function returns the last iterator `next` in `[ begin , end ]` where `[ begin , next)` is a heap ordered by the function object `std::less<>`. If the distance `end - begin < 2`, the function returns `end`.  
+### <a name="remarks"></a>Comentarios  
+ La primera función de plantilla devuelve el último iterador `next` de `[``begin``,` `end``]` donde `[``begin``, next)` es un montón ordenado por el objeto de función `std::less<>`. Si la distancia `end` `-` `begin` `< 2`, la función devuelve `end`.  
   
- The second template function behaves the same as the first, except that it uses the predicate `compare` instead of `std::less<>` as the heap ordering condition.  
+ La segunda función de plantilla se comporta igual que la primera, salvo que usa el predicado `compare` en lugar de `std::less<>` como condición de ordenación de montón.  
   
 ##  <a name="is_partitioned"></a>  is_partitioned  
- Returns `true` if all the elements in the given range that test `true` for a condition come before any elements that test `false`.  
+ Devuelve `true` si todos los elementos del intervalo especificado que prueban si una condición es `true` aparecen antes que cualquier elemento que prueba si es `false`.  
   
 ```  
 template<class InputIterator, class BinaryPredicate>  
@@ -2477,24 +2460,24 @@ bool is_partitioned(
     BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- An input iterator that indicates where a range starts to check for a condition.  
+ Iterador de entrada que indica dónde comienza a comprobar una condición un intervalo.  
   
  `last`  
- An input iterator that indicates the end of a range.  
+ Iterador de entrada que indica el final de un intervalo.  
   
  `comp`  
- The condition to test for. This is provided by a user-defined predicate function object that defines the condition to be satisfied by the element being searched for. A predicate takes a single argument and returns `true` or `false`.  
+ Condición que se va a comprobar. La proporciona un objeto de función de predicado definido por el usuario que define la condición que debe cumplir el elemento que se está buscando. Un predicado toma un único argumento y devuelve `true` o `false`.  
   
-### <a name="return-value"></a>Return Value  
- Returns true when all of the elements in the given range that test `true` for a condition come before any elements that test `false`, and otherwise returns `false`.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve True si todos los elementos del intervalo especificado que cumplen la condición `true` aparecen antes que los elementos que cumplen `false`; de lo contrario, devuelve `false`.  
   
-### <a name="remarks"></a>Remarks  
- The template function returns `true` only if all elements in `[` `first ,` `last )` are partitioned by `comp`; that is, all elements `X` in `[` `first ,` `last )` for which `comp (X)` is true occur before all elements `Y` for which `comp (Y)` is `false`.  
+### <a name="remarks"></a>Comentarios  
+ La función de plantilla devuelve `true` solo si todos los elementos de `[` `first``,` `last``)` han sido divididos en particiones por `comp`; es decir, todos los elementos `X` de `[` `first``,` `last``)` para los que `comp``(X)` es True se producen antes que todos los elementos `Y` para los que `comp``(Y)` es `false`.  
   
 ##  <a name="is_permutation"></a>  is_permutation  
- Returns true if both ranges contain the same elements, whether or not the elements are in the same order. Use the dual-range overloads in C++14 code because the overloads that only take a single iterator for the second range will not detect differences if the second range is longer than the first range, and will result in undefined behavior if the second range is shorter than the first range.  
+ Devuelve true si ambos intervalos contienen los mismos elementos, independientemente de si los elementos están en el mismo orden. Use las sobrecargas de dos intervalos en código C ++ 14 porque las sobrecargas que toman un único iterador para el segundo intervalo no detectan las diferencias si el segundo intervalo es más largo que el primero y esto provoca un comportamiento indefinido si el segundo intervalo es más corto que el primero.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -2527,34 +2510,34 @@ bool is_permutation(
     Predicate Pred);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `First1`  
- A forward iterator that refers to the first element of the range.  
+ Iterador hacia delante que hace referencia al primer elemento del intervalo.  
   
  `Last1`  
- A forward iterator that refers one past the last element of the range.  
+ Iterador hacia delante que hace referencia a un elemento más allá del último elemento del intervalo.  
   
  `First2`  
- A forward iterator that refers to the first element of a second range, used for comparison.  
+ Iterador hacia delante que hace referencia al primer elemento de un segundo intervalo, usado para la comparación.  
   
  `Last2`  
- A forward iterator that refers to one past the last element of a second range, used for comparison.  
+ Iterador hacia delante que hace referencia a un elemento más allá del último elemento de un segundo intervalo, usado para la comparación.  
   
  `Pred`  
- A predicate that tests for equivalence and returns a `bool`.  
+ Predicado que comprueba la equivalencia y devuelve `bool`.  
   
-### <a name="return-value"></a>Return Value  
- `true` when the ranges can be rearranged so as to be identical according to the comparator predicate; otherwise, `false`.  
+### <a name="return-value"></a>Valor devuelto  
+ Es `true` cuando los intervalos se pueden reorganizar de manera que sean idénticos según el predicado de comparación; en caso contrario, es `false`.  
   
-### <a name="remarks"></a>Remarks  
- `is_permutation` has quadratic complexity in the worst case.  
+### <a name="remarks"></a>Comentarios  
+ En el peor de los casos, `is_permutation` tiene complejidad cuadrática.  
   
- The first template function assumes that there are as many elements in the range beginning at `First2` as there are in the range designated by [ `First1`, `Last1`). If there are more elements in the second range, they are ignored; if there are less, undefined behavior will occur. The third template function (C++14 and later) does not make this assumption.  Both return `true` only if, for each element X in the range designated by [ `First1`, `Last1`) there are as many elements Y in the same range for which X == Y as there are in the range beginning at `First2` or [ `First2, Last2).` Here, `operator==` must perform a pairwise comparison between its operands.  
+ La primera función de plantilla asume que hay tantos elementos en el intervalo que empieza en `First2` como en el intervalo designado por [`First1`, `Last1`). Si hay más elementos en el segundo intervalo, se ignoran; si hay menos, se producirá un comportamiento indefinido. La tercera función de plantilla (C++14 y versiones posteriores) no hace esta suposición.  Ambos devuelven `true` únicamente si para cada elemento X del intervalo designado por [`First1`, `Last1`) hay tantos elementos Y en el mismo intervalo para los cuales X == Y como en el intervalo que comienza en `First2` o [`First2, Last2).` Here, `operator==` debe realizar una comparación en pares entre sus operandos.  
   
- The second and fourth template functions behave the same, except that they replace `operator==(X, Y)` with `Pred(X, Y)`. To behave correctly, the predicate must be symmetric, reflexive and transitive.  
+ La segunda y la cuarta funciones de plantilla se comportan de la misma forma, salvo que reemplazan `operator==(X, Y)` con `Pred(X, Y)`. Para que se comporten correctamente, el predicado debe ser simétrico, reflexivo y transitivo.  
   
-### <a name="example"></a>Example  
-  The following example shows how to use `is_permutation`:  
+### <a name="example"></a>Ejemplo  
+  En el siguiente ejemplo se muestra cómo usar `is_permutation`:  
   
 ```cpp  
 #include <vector>  
@@ -2610,7 +2593,7 @@ int main()
 ```  
   
 ##  <a name="is_sorted"></a>  is_sorted  
- Returns `true` if the elements in the specified range are in sorted order.  
+ Devuelve `true` si los elementos del intervalo especificado están ordenados.  
   
 ```  
 template<class ForwardIterator>  
@@ -2625,25 +2608,25 @@ bool is_sorted(
     BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A forward iterator that indicates where the range to check begins.  
+ Iterador hacia delante que indica dónde empieza el intervalo que se va a comprobar.  
   
  `last`  
- A forward iterator that indicates the end of a range.  
+ Iterador hacia delante que indica el final de un intervalo.  
   
  `comp`  
- The condition to test to determine an order between two elements. A predicate takes a single argument and returns `true` or `false`. This performs the same task as `operator<`.  
+ Condición que se va a probar para determinar un orden entre dos elementos. Un predicado toma un único argumento y devuelve `true` o `false`. Realiza la misma tarea que `operator<`.  
   
-### <a name="remarks"></a>Remarks  
- The first template function returns [is_sorted_until](http://msdn.microsoft.com/en-us/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`( first, last ) == last`. The `operator<` function performs the order comparison.  
+### <a name="remarks"></a>Comentarios  
+ La primera función de plantilla devuelve [is_sorted_until](http://msdn.microsoft.com/en-us/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`(` `first``,` `last``) ==` `last`. La función operator< realiza la comparación de orden.  
   
- The second template function returns `is_sorted_until( first, last , comp ) == last`. The `comp` predicate function performs the order comparison.  
+ La segunda función de plantilla devuelve `is_sorted_until``(` `first``,` `last``,` `comp``) ==` `last`. La función de predicado `comp` realiza la comparación de orden.  
   
 ##  <a name="is_sorted_until"></a>  is_sorted_until  
- Returns a `ForwardIterator` that is set to the last element that is in sorted order from a specified range.  
+ Devuelve un `ForwardIterator` que se establece en el último elemento que está en el criterio de ordenación de un intervalo especificado.  
   
- The second version lets you provide a `BinaryPredicate` function that returns `true` when two given elements are in sorted order, and `false` otherwise.  
+ La segunda versión permite proporcionar una función `BinaryPredicate` que devuelve `true` cuando dos elementos determinados están en el criterio de ordenación, y `false` en caso contrario.  
   
 ```  
 template<class ForwardIterator>  
@@ -2659,26 +2642,26 @@ template<class ForwardIterator, class BinaryPredicate>
     );  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A forward iterator that indicates where the range to check starts.  
+ Iterador hacia delante que indica dónde se inicia el intervalo que se va a comprobar.  
   
  `last`  
- A forward iterator that indicates the end of a range.  
+ Iterador hacia delante que indica el final de un intervalo.  
   
  `comp`  
- The condition to test to determine an order between two elements. A predicate takes a single argument and returns `true` or `false`.  
+ Condición que se va a probar para determinar un orden entre dos elementos. Un predicado toma un único argumento y devuelve `true` o `false`.  
   
-### <a name="return-value"></a>Return Value  
- Returns a `ForwardIterator` set to the last element in sorted order. The sorted sequence starts from  `first`.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve un `ForwardIterator` establecido en el último elemento en el criterio de ordenación. La secuencia ordenada se inicia desde `first`.  
   
-### <a name="remarks"></a>Remarks  
- The first template function returns the last iterator `next` in `[` `first ,` `last ]` so that `[` `first , next)` is a sorted sequence ordered by `operator<`. If `distance()` `< 2` the function returns `last`.  
+### <a name="remarks"></a>Comentarios  
+ La primera función de plantilla devuelve el último iterador `next` de `[` `first``,` `last``]` de modo que `[` `first``, next)` es una secuencia ordenada por `operator<`. Si `distance()` `< 2`, la función devuelve `last`.  
   
- The second template function behaves the same, except that it replaces `operator<(X, Y)` with `comp (X, Y)`.  
+ La segunda función de plantilla se comporta igual, salvo que sustituye `operator<(X, Y)` por `comp``(X, Y)`.  
   
 ##  <a name="iter_swap"></a>  iter_swap  
- Exchanges two values referred to by a pair of specified iterators.  
+ Intercambia dos valores a los que se hace referencia mediante un par de iteradores especificados.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -2686,19 +2669,19 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- One of the forward iterators whose value is to be exchanged.  
+ Uno de los iteradores hacia delante cuyo valor se va a intercambiar.  
   
  `right`  
- The second of the forward iterators whose value is to be exchanged.  
+ Segundo de los iteradores hacia delante cuyo valor se va a intercambiar.  
   
-### <a name="remarks"></a>Remarks  
- `swap` should be used in preference to i **ter_swap**, which was included in the C++ Standard for backward compatibility. If `Fit1` and `Fit2` are forward iterators, then `iter_swap` ( `Fit1`, `Fit2` ), is equivalent to `swap` ( * `Fit1`, \* `Fit2` ).  
+### <a name="remarks"></a>Comentarios  
+ Preferentemente, se debería usar `swap` en lugar de **ter_swap**, que se incluía en el estándar de C++ por motivos de compatibilidad con versiones anteriores. Si `Fit1` y `Fit2` son iteradores hacia delante, `iter_swap` (`Fit1`, `Fit2`) es equivalente a `swap` (* `Fit1`, \* `Fit2`).  
   
- The value types of the input forward iterators must have the same value.  
+ Los tipos de valor de los iteradores hacia delante de entrada deben tener el mismo valor.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_iter_swap.cpp  
@@ -2832,7 +2815,7 @@ After exchanging first elements,
 ```  
   
 ##  <a name="lexicographical_compare"></a>  lexicographical_compare  
- Compares element by element between two sequences to determine which is lesser of the two.  
+ Compara dos secuencias elemento a elemento para determinar cuál es menor de los dos.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -2852,35 +2835,35 @@ bool lexicographical_compare(
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first1`  
- An input iterator addressing the position of the first element in the first range to be compared.  
+ Iterador de entrada que dirige a la posición del primer elemento del primer intervalo que se va a comparar.  
   
  `last1`  
- An input iterator addressing the position one past the final element in the first range to be compared.  
+ Iterador de entrada que dirige a la posición situada una posición después del último elemento del primer intervalo que se va a comparar.  
   
   `first2`  
- An input iterator addressing the position of the first element in the second range to be compared.  
+ Iterador de entrada que dirige a la posición del primer elemento del segundo intervalo que se va a comparar.  
   
  `last2`  
- An input iterator addressing the position one past the final element in the second range to be compared.  
+ Iterador de entrada que dirige a la posición situada una posición después del último elemento del segundo intervalo que se va a comparar.  
   
  `comp`  
- User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the first range is lexicographically less than the second range; otherwise **false**.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si el primer intervalo es lexicográficamente menor que el segundo; en caso contrario, **False**.  
   
-### <a name="remarks"></a>Remarks  
- A lexicographical comparison between sequences compares them element by element until:  
+### <a name="remarks"></a>Comentarios  
+ Una comparación lexicográfica entre secuencias las compara elemento a elemento hasta que:  
   
--   It finds two corresponding elements unequal, and the result of their comparison is taken as the result of the comparison between sequences.  
+-   Encuentra dos elementos correspondientes distintos y el resultado de la comparación se toma como resultado de la comparación entre secuencias.  
   
--   No inequalities are found, but one sequence has more elements than the other, and the shorter sequence is considered less than the longer sequence.  
+-   No se encuentra ninguna desigualdad, pero una secuencia tiene más elementos que la otra y la secuencia más corta se considera menor que la más larga.  
   
--   No inequalities are found and the sequences have the same number of elements, and so the sequences are equal and the result of the comparison is false.  
+-   No se encuentra ninguna desigualdad y las secuencias tienen el mismo número de elementos, así que las secuencias son iguales y el resultado de la comparación es False.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_lex_comp.cpp  
@@ -2976,7 +2959,7 @@ Vector v1 is not lexicographically_less than v2 under twice.
 ```  
   
 ##  <a name="lower_bound"></a>  lower_bound  
- Finds the position of the first element in an ordered range that has a value greater than or equivalent to a specified value, where the ordering criterion may be specified by a binary predicate.  
+ Busca la posición del primer elemento en un intervalo ordenado que tiene un valor mayor o equivalente a un valor especificado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
  template<class ForwardIterator, class Type>  
@@ -2994,34 +2977,34 @@ ForwardIterator lower_bound(
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- A forward iterator addressing the position of the first element in the range to be searched.  
+ Iterador hacia delante que dirige a la posición del primer elemento del intervalo en el que se buscará.  
   
  `last`  
- A forward iterator addressing the position one past the final element in the range to be searched.  
+ Iterador hacia delante que dirige a la posición situada una posición después del último elemento del intervalo en el que se buscará.  
   
  `value`  
- The value whose first position or possible first position is being searched for in the ordered range.  
+ Valor en cuya primera posición o posible primera posición se busca en el intervalo ordenado.  
   
  `comp`  
- User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="return-value"></a>Return Value  
- A forward iterator at the position of the first element in an ordered range with a value that is greater than or equivalent to a specified value, where the equivalence is specified with a binary predicate.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador hacia delante en la posición del primer elemento de un intervalo ordenado con un valor mayor que un valor especificado o equivalente a este, donde la equivalencia se especifica con un predicado binario.  
   
-### <a name="remarks"></a>Remarks  
- The sorted source range referenced must be valid; all iterators must be dereferenceable and within the sequence the last position must be reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo de origen ordenado al que se hace referencia debe ser válido; todos los iteradores deben poder desreferenciarse y, dentro de la secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- A sorted range is a precondition of using `lower_bound` and where the ordering is the same as specified by with binary predicate.  
+ Un intervalo ordenado es una condición previa al uso de `lower_bound`; en él el orden es el mismo que el especificado por el predicado binario.  
   
- The range is not modified by the algorithm `lower_bound`.  
+ El algoritmo `lower_bound` no modifica el intervalo.  
   
- The value types of the forward iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements  
+ Los tipos de valor de los iteradores hacia delante tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes.  
   
- The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last - first`).  
+ La complejidad del algoritmo es logarítmica para los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcional a (`last - first`).  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_lower_bound.cpp  
@@ -3113,7 +3096,7 @@ int main( )
 ```  
   
 ##  <a name="make_heap"></a>  make_heap  
- Converts elements from a specified range into a heap in which the first element is the largest and for which a sorting criterion may be specified with a binary predicate.  
+ Convierte elementos de un intervalo especificado en un montón en el que el primer elemento es el mayor y para el que se puede especificar un criterio de ordenación con un predicado binario.  
   
 ```  
  template<class RandomAccessIterator>  
@@ -3129,28 +3112,28 @@ void make_heap(
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A random-access iterator addressing the position of the first element in the range to be converted into a heap.  
+ Iterador de acceso aleatorio que dirige a la posición del primer elemento del intervalo que se va a convertir en un montón.  
   
  `last`  
- A random-access iterator addressing the position one past the final element in the range to be converted into a heap.  
+ Iterador de acceso aleatorio que dirige a la posición situada una posición después del último elemento del intervalo que se va a convertir en un montón.  
   
  `comp`  
- User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="remarks"></a>Remarks  
- Heaps have two properties:  
+### <a name="remarks"></a>Comentarios  
+ Los montones tienen dos propiedades:  
   
--   The first element is always the largest.  
+-   El primer elemento siempre es el mayor.  
   
--   Elements may be added or removed in logarithmic time.  
+-   Se pueden agregar o quitar elementos en tiempo logarítmico.  
   
- Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
+ Los montones son una forma ideal de implementar colas de prioridad y se usan en la implementación del adaptador de contenedor de la biblioteca estándar de C++ [priority_queue (Clase)](../standard-library/priority-queue-class.md).  
   
- The complexity is linear, requiring 3 \* ( * last - first*) comparisons.  
+ La complejidad es lineal, que requieren 3 \* (* apellido - nombre *) las comparaciones.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_make_heap.cpp  
@@ -3193,7 +3176,7 @@ int main() {
 ```  
   
 ##  <a name="max"></a>  max  
- Compares two objects and returns the larger of the two, where the ordering criterion may be specified by a binary predicate.  
+ Compara dos objetos y devuelve el mayor de los dos, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
 template<class Type>  
@@ -3218,26 +3201,26 @@ template<class Type, class Pr>
     );  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- The first of the two objects being compared.  
+ Primero de los dos objetos que se van a comparar.  
   
  `right`  
- The second of the two objects being compared.  
+ Segundo de los dos objetos que se van a comparar.  
   
  `comp`  
- A binary predicate used to compare the two objects.  
+ Predicado binario utilizado para comparar los dos objetos.  
   
  `_IList`  
- The initializer list that contains the objects to be compared.  
+ Lista de inicializadores que contiene los objetos que se van a comparar.  
   
-### <a name="return-value"></a>Return Value  
- The greater of the two objects, unless neither is greater; in that case, it returns the first of the two objects. In the case of an initializer_list, it returns the greatest of the objects in the list.  
+### <a name="return-value"></a>Valor devuelto  
+ El mayor de los dos objetos, a menos que ninguno sea mayor; en ese caso, devuelve el primero de los dos objetos. En el caso de una initializer_list, devuelve el mayor de los objetos de la lista.  
   
-### <a name="remarks"></a>Remarks  
- The `max` algorithm is unusual in having objects passed as parameters. Most C++ Standard Library algorithms operate on a range of elements whose position is specified by iterators passed as parameters. If you need a function that operates on a range of elements, use [max_element](../standard-library/algorithm-functions.md#max_element) instead.  
+### <a name="remarks"></a>Comentarios  
+ Es poco habitual que el algoritmo `max` tenga objetos que se pasan como parámetros. La mayoría de los algoritmos de la biblioteca estándar de C++ actúan sobre un intervalo de elementos cuya posición se especifica mediante iteradores pasados como parámetros. Si necesita una función que actúe sobre un intervalo de elementos, use [max_element](../standard-library/algorithm-functions.md#max_element) en su lugar.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_max.cpp  
@@ -3406,7 +3389,7 @@ Vector v5 = max (v1,v3) is ( 0 2 4 ).
 ```  
   
 ##  <a name="max_element"></a>  max_element  
- Finds the first occurrence of largest element in a specified range where the ordering criterion may be specified by a binary predicate.  
+ Busca la primera aparición del elemento mayor en un intervalo especificado donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
 template<class ForwardIterator>  
@@ -3417,25 +3400,25 @@ ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryP
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A forward iterator addressing the position of the first element in the range to be searched for the largest element.  
+ Iterador hacia delante que direcciona la posición del primer elemento del intervalo en el que se va a buscar el elemento mayor.  
   
  `last`  
- A forward iterator addressing the position one past the final element in the range to be searched for the largest element.  
+ Iterador hacia delante que direcciona la posición de un elemento más allá del último elemento del intervalo en el que se va a buscar el elemento mayor.  
   
  `comp`  
- User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.  
   
-### <a name="return-value"></a>Return Value  
- A forward iterator addressing the position of the first occurrence of the largest element in the range searched.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador hacia delante que direcciona la posición de la primera aparición del elemento mayor en el intervalo buscado.  
   
-### <a name="remarks"></a>Remarks  
- The range referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de cada secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- The complexity is linear: ( `last` -  `first`) - 1 comparisons are required for a nonempty range.  
+ La complejidad es lineal: ( `last`  -   `first`) - 1 comparaciones son necesarias para un intervalo no vacío.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_max_element.cpp  
@@ -3536,7 +3519,7 @@ int main( )
 ```  
   
 ##  <a name="merge"></a>  merge  
- Combines all of the elements from two sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
+ Combina todos los elementos de dos intervalos de origen ordenados en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
 template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -3558,44 +3541,44 @@ OutputIterator merge(
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first1`  
- An input iterator addressing the position of the first element in the first of two sorted source ranges to be combined and sorted into a single range.  
+ Iterador de entrada que direcciona la posición del primer elemento del primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo.  
   
  `last1`  
- An input iterator addressing the position one past the last element in the first of two sorted source ranges to be combined and sorted into a single range.  
+ Iterador de entrada que direcciona la posición situada una posición después del último elemento del primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo.  
   
   `first2`  
- An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be combined and sorted into a single range.  
+ Iterador de entrada que direcciona la posición del primer elemento del segundo de dos intervalos de origen ordenados consecutivos que se van a combinar y ordenar en un solo intervalo.  
   
  `last2`  
- An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be combined and sorted into a single range.  
+ Iterador de entrada que direcciona la posición situada una posición después del último elemento del segundo de dos intervalos de origen ordenados consecutivos que se van a combinar y ordenar en un solo intervalo.  
   
  `result`  
- An output iterator addressing the position of the first element in the destination range where the two source ranges are to be combined into a single sorted range.  
+ Iterador de salida que direcciona la posición del primer elemento del intervalo de destino donde los dos intervalos de origen se van a combinar en un solo intervalo ordenado.  
   
  `comp`  
- User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.  
   
-### <a name="return-value"></a>Return Value  
- An output iterator addressing the position one past the last element in the sorted destination range.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador de salida que direcciona la posición situada una posición después del último elemento del intervalo de destino ordenado.  
   
-### <a name="remarks"></a>Remarks  
- The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ Los intervalos de origen ordenados a los que se hace referencia deben ser válidos; todos los punteros deben poder desreferenciarse y, dentro de cada secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
+ El intervalo de destino no debe superponerse a ninguno de los intervalos de origen y debe ser lo suficientemente grande como para contener el intervalo de destino.  
   
- The sorted source ranges must each be arranged as a precondition to the application of the **merge** algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
+ Los intervalos de origen ordenados deben estar organizados como condición previa a la aplicación del algoritmo **merge** según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados.  
   
- The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm **merge**.  
+ La operación es estable, ya que se conserva el orden relativo de los elementos de cada intervalo en el intervalo de destino. El algoritmo **merge**no modifica los intervalos de origen.  
   
- The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range.  
+ Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro). Esto produce una ordenación entre los elementos no equivalentes. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo intervalo de origen en el intervalo de destino.  
   
- The complexity of the algorithm is linear with at most ( * last1 - first1*) - ( * last2 - first2*) - 1 comparisons.  
+ La complejidad del algoritmo es lineal con sumo (* last1 - first1*)-(* last2 - first2*) - 1 comparaciones.  
   
- The [list class](../standard-library/list-class.md) provides a member function "merge" to merge the elements of two lists.  
+ La [clase list ](../standard-library/list-class.md) proporciona una función miembro "merge" para combinar los elementos de dos listas.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_merge.cpp  
@@ -3706,7 +3689,7 @@ int main() {
 ```  
   
 ##  <a name="min"></a>  min  
- Compares two objects and returns the lesser of the two, where the ordering criterion may be specified by a binary predicate.  
+ Compara dos objetos y devuelve el menor de los dos, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
 template<class Type>  
@@ -3730,26 +3713,26 @@ template<class Type, class Pr>    Type min (
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- The first of the two objects being compared.  
+ Primero de los dos objetos que se van a comparar.  
   
  `right`  
- The second of the two objects being compared.  
+ Segundo de los dos objetos que se van a comparar.  
   
  `comp`  
- A binary predicate used to compare the two objects.  
+ Predicado binario utilizado para comparar los dos objetos.  
   
  `_IList`  
- The initializer_list that contains the members to be compared.  
+ initializer_list que contiene los miembros que se van a comparar.  
   
-### <a name="return-value"></a>Return Value  
- The lesser of the two objects, unless neither is lesser; in that case, it returns the first of the two objects. In the case of an initializer_list, it returns the least of the objects in the list.  
+### <a name="return-value"></a>Valor devuelto  
+ El menor de los dos objetos, a menos que ninguno sea menor; en ese caso, devuelve el primero de los dos objetos. En el caso de una initializer_list, devuelve el menor de los objetos de la lista.  
   
-### <a name="remarks"></a>Remarks  
- The `min` algorithm is unusual in having objects passed as parameters. Most C++ Standard Library algorithms operate on a range of elements whose position is specified by iterators passed as parameters. If you need a function that uses a range of elements, use [min_element](../standard-library/algorithm-functions.md#min_element).  
+### <a name="remarks"></a>Comentarios  
+ Es poco habitual que el algoritmo `min` tenga objetos que se pasan como parámetros. La mayoría de los algoritmos de la biblioteca estándar de C++ actúan sobre un intervalo de elementos cuya posición se especifica mediante iteradores pasados como parámetros. Si necesita una función que emplee un intervalo de elementos, use [min_element](../standard-library/algorithm-functions.md#min_element).  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_min.cpp  
@@ -3917,7 +3900,7 @@ Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).
 ```  
   
 ##  <a name="min_element"></a>  min_element  
- Finds the first occurrence of smallest element in a specified range where the ordering criterion may be specified by a binary predicate.  
+ Busca la primera aparición del menor elemento en un intervalo especificado donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
  template<class ForwardIterator>  
@@ -3928,25 +3911,25 @@ ForwardIterator min_element(ForwardIterator first, ForwardIterator last, BinaryP
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- A forward iterator addressing the position of the first element in the range to be searched for the smallest element.  
+ Iterador hacia delante que dirige a la posición del primer elemento del intervalo en el que se va a buscar el elemento menor.  
   
  `last`  
- A forward iterator addressing the position one past the final element in the range to be searched for the smallest element.  
+ Iterador hacia delante que dirige a la posición situada una posición después del último elemento del intervalo en el que se va a buscar el elemento menor.  
   
  `comp`  
- User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.  
   
-### <a name="return-value"></a>Return Value  
- A forward iterator addressing the position of the first occurrence of the smallest element in the range searched.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador hacia delante que dirige a la posición de la primera aparición del elemento menor en el intervalo en el que se busca.  
   
-### <a name="remarks"></a>Remarks  
- The range referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de cada secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- The complexity is linear: ( `last` - `first`) - 1 comparisons are required for a nonempty range.  
+ La complejidad es lineal: ( `last`  -  `first`) - 1 comparaciones son necesarias para un intervalo no vacío.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_min_element.cpp  
@@ -4057,7 +4040,7 @@ The smallest element in v1 under the mod_lesser
 ```  
   
 ##  <a name="minmax_element"></a>  minmax_element  
- Performs the work performed by `min_element` and `max_element` in one call.  
+ Realiza el trabajo efectuado por `min_element` y `max_element` en una llamada.  
   
 ```  
 template<class ForwardIterator>  
@@ -4075,36 +4058,36 @@ template<class ForwardIterator, class BinaryPredicate>
                 );  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A forward iterator that indicates the beginning of a range.  
+ Iterador hacia delante que indica el principio de un intervalo.  
   
  `last`  
- A forward iterator that indicates the end of a range.  
+ Iterador hacia delante que indica el final de un intervalo.  
   
  `comp`  
- An optional test used to order elements.  
+ Prueba opcional usada para ordenar elementos.  
   
-### <a name="return-value"></a>Return Value  
- Returns  
+### <a name="return-value"></a>Valor devuelto  
+ Valores devueltos  
   
  `pair<ForwardIterator, ForwardIterator>`  
   
- `(` [min_element](../standard-library/algorithm-functions.md#min_element)`(first, last), `[max_element](../standard-library/algorithm-functions.md#max_element)`(first, last))`.  
+ `(` [min_element](../standard-library/algorithm-functions.md#min_element)(`first`, `last`), [max_element](../standard-library/algorithm-functions.md#max_element)(`first`, `last`)).  
   
-### <a name="remarks"></a>Remarks  
- The first template function returns  
+### <a name="remarks"></a>Comentarios  
+ La primera función de plantilla devuelve  
   
  `pair<ForwardIterator,ForwardIterator>`  
   
- `(min_element(_First,Last), max_element(_First,Last))`.  
+ `(min_element(_First,Last),max_element(_First,Last))`Operador  
   
- The second template function behaves the same, except that it replaces `operator<(X, Y)` with `comp (X, Y)`.  
+ La segunda función de plantilla se comporta igual, salvo que sustituye `operator<(X, Y)` por `comp``(X, Y)`.  
   
- If the sequence is non-empty, the function performs at most `3 * (last - first - 1) / 2` comparisons.  
+ Si la secuencia no está vacía, la función realiza a lo sumo `3 * (``last` `-` `first` `- 1) / 2` comparaciones.  
   
 ##  <a name="minmax"></a>  minmax  
- Compares two input parameters and returns them as a pair, in order of lesser to greater.  
+ Compara dos parámetros de entrada y los devuelve como un par, de menor a mayor.  
   
 ```  
 template<class Type>  
@@ -4131,32 +4114,32 @@ template<class Type, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- The first of the two objects being compared.  
+ Primero de los dos objetos que se van a comparar.  
   
  `right`  
- The second of the two objects being compared.  
+ Segundo de los dos objetos que se van a comparar.  
   
  `comp`  
- A binary predicate used to compare the two objects.  
+ Predicado binario utilizado para comparar los dos objetos.  
   
  `_IList`  
- The initializer_list that contains the members to be compared.  
+ initializer_list que contiene los miembros que se van a comparar.  
   
-### <a name="remarks"></a>Remarks  
- The first template function returns `pair<const Type&, const Type&>( right , left )` if `right` is less than `left`. Otherwise, it returns `pair<const Type&, const Type&>( left , right )`.  
+### <a name="remarks"></a>Comentarios  
+ La primera función de plantilla devuelve `pair<const Type&, const Type&>(``right``,` `left``)` si `right` es menor que `left`. De lo contrario, devuelve `pair<const Type&, const Type&>(``left``,` `right``)`.  
   
- The second member function returns a pair where the first element is the lesser and the second is the greater when compared by the predicate `comp`.  
+ La segunda función miembro devuelve un par donde el primer elemento es el menor y el segundo es el mayor cuando se comparan mediante el predicado `comp`.  
   
- The remaining template functions behave the same, except that they replace the `left` and `right` parameters with `_IList`.  
+ Las funciones de plantilla restantes se comportan de la misma forma, salvo que reemplazan los parámetros `left` y `right` con `_IList`.  
   
- The function performs exactly one comparison.  
+ La función realiza exactamente una comparación.  
   
 ##  <a name="mismatch"></a>  mismatch  
- Compares two ranges element by element and locates the first position where a difference occurs.  
+ Compara dos intervalos elemento a elemento y localiza la primera posición en la que se produce una diferencia.  
   
- Use the dual-range overloads in C++14 code because the overloads that only take a single iterator for the second range will not detect differences if the second range is longer than the first range, and will result in undefined behavior if the second range is shorter than the first range.  
+ Use las sobrecargas de dos intervalos en código C ++ 14 porque las sobrecargas que toman un único iterador para el segundo intervalo no detectan las diferencias si el segundo intervalo es más largo que el primero y esto provoca un comportamiento indefinido si el segundo intervalo es más corto que el primero.  
   
 ```  
  template<class InputIterator1, class InputIterator2> pair<InputIterator1, InputIterator2>>   
@@ -4189,36 +4172,36 @@ mismatch(
      BinaryPredicate Comp);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `First1`  
- An input iterator addressing the position of the first element in the first range to be tested.  
+ Un iterador de entrada que dirige a la posición del primer elemento en el primer intervalo que se va a probar.  
   
  `Last1`  
- An input iterator addressing the position one past the last element in the first range to be tested.  
+ Un iterador de entrada que dirige a la posición situada una posición después del último elemento en el primer intervalo que se va a probar.  
   
  `First2`  
- An input iterator addressing the position of the first element in the second range to be tested.  
+ Un iterador de entrada que dirige a la posición del primer elemento en el segundo intervalo que se va a probar.  
   
  `Last2`  
- An input iterator addressing the position of one past the last element in the second range to be tested.  
+ Un iterador de entrada que dirige a la posición situada una posición después del último elemento en el segundo intervalo que se va a probar.  
   
  `Comp`  
- User-defined predicate function object that compares the current elements in each range and determines whether they are equivalent. It returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que compara los elementos actuales de cada intervalo y determina si son equivalentes. Devuelve **True** si se cumple y **False** si no.  
   
-### <a name="return-value"></a>Return Value  
- A pair of iterators addressing the positions of the mismatch in the two ranges, the first component iterator to the position in the first range and the second component iterator to the position in the second range. If there is no difference between the elements in the ranges compared or if the binary predicate in the second version is satisfied by all element pairs from the two ranges, then the first component iterator points to the position one past the final element in the first range and the second component iterator to position one past the final element tested in the second range.  
+### <a name="return-value"></a>Valor devuelto  
+ Un par de iteradores que dirigen a las posiciones no coincidentes en los dos intervalos, el primer iterador del componente a la posición del primer intervalo y el segundo iterador del componente a la posición del segundo intervalo. Si no hay ninguna diferencia entre los elementos de los intervalos comparados o si todos los pares de elemento de los dos rangos satisfacen el predicado binario en la segunda versión, el primer iterador componente apunta a la posición uno pasado el elemento final en el primer intervalo y el segundo iterador del componente, a la posición uno pasado el último elemento probado en el segundo intervalo.  
   
-### <a name="remarks"></a>Remarks  
- The first template function assumes that there are as many elements in the range beginning at first2 as there are in the range designated by [first1, last1). If there are more in the second range, they are ignored; if there are less then undefined behavior will result.  
+### <a name="remarks"></a>Comentarios  
+ La primera función de plantilla asume que hay tantos elementos en el intervalo que empieza en first2 como en el intervalo designado mediante por [first1, last1). Si hay más en el segundo intervalo, se ignoran; si hay menos, el resultado será un comportamiento indefinido.  
   
- The range to be searched must be valid; all iterators must be dereferenceable and the last position is reachable from the first by incrementation.  
+ El intervalo en el que se va a buscar debe ser válido: todos los iteradores deben poder desreferenciarse y se debe poder acceder a la última posición desde la primera con incrementos.  
   
- The time complexity of the algorithm is linear in the number of elements contained in the shorter range.  
+ La complejidad temporal del algoritmo es lineal en el número de elementos incluidos en el intervalo más corto.  
   
- The user-defined predicate is not required to impose an equivalence relation that symmetric, reflexive and transitive between its operands.  
+ No es necesario que el predicado definido por el usuario imponga una relación de equivalencia que sea simétrica, reflexiva y transitiva entre sus operandos.  
   
-### <a name="example"></a>Example  
-  The following example demonstrates how to use mismatch. The C++03 overload is shown only in order to demonstrate how it can produce an unexpected result.  
+### <a name="example"></a>Ejemplo  
+  En el siguiente ejemplo se muestra cómo usar la no coincidencia. La sobrecarga C++03 solo se muestra para demostrar cómo puede producir un resultado inesperado.  
   
 ```cpp  
 #include <vector>  
@@ -4314,7 +4297,7 @@ Press a key
 ```  
   
 ##  <a name="alg_move"></a>  &lt;alg&gt; move  
- Move elements associated with a specified range.  
+ Mueve los elementos asociados a un intervalo especificado.  
   
 ```  
 template<class InputIterator, class OutputIterator>  
@@ -4325,21 +4308,21 @@ template<class InputIterator, class OutputIterator>
                   );  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- An input iterator that indicates where to start the range of elements to move.  
+ Iterador de entrada que indica dónde comienza el intervalo de elementos que se moverán.  
   
  `last`  
- An input iterator that indicates the end of a range of elements to move.  
+ Iterador de entrada que indica el final de un intervalo de elementos que se moverán.  
   
  `dest`  
- The output iterator that is to contain the moved elements.  
+ Iterador de salida que contendrá los elementos movidos.  
   
-### <a name="remarks"></a>Remarks  
- The template function evaluates `*(dest + N) = move(*(first + N))` once for each `N` in the range `[0, last - first)`, for strictly increasing values of `N` starting with the lowest value. It then returns `dest + N`. If `dest` and `first` designate regions of storage, `dest` must not be in the range `[first, last)`.  
+### <a name="remarks"></a>Comentarios  
+ La función de plantilla evalúa `*(dest + N) = move(*(first + N))` una vez por cada `N` en el intervalo `[0, last - first)`, para aumentar de forma estricta los valores de `N` a partir del valor más bajo. Después, devuelve `dest + N`. Si `dest` y `first` designan regiones de almacenamiento, `dest` no debe estar en el intervalo `[first, last)`.  
   
 ##  <a name="move_backward"></a>  move_backward  
- Moves the elements of one iterator to another. The move starts with the last element in a specified range, and ends with the first element in that range.  
+ Mover los elementos de un iterador a otro. El movimiento comienza con el último elemento de un intervalo especificado y termina con el primer elemento de ese intervalo.  
   
 ```  
 template<class BidirectionalIterator1, class BidirectionalIterator2>  
@@ -4350,23 +4333,23 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- An iterator that indicates the start of a range to move elements from.  
+ Iterador que indica el inicio de un intervalo del que se van a mover elementos.  
   
  `last`  
- An iterator that indicates the end of a range to move elements from. This element is not moved.  
+ Iterador que indica el final de un intervalo del que se van a mover elementos. Este elemento no se mueve.  
   
  `destEnd`  
- A bidirectional iterator addressing the position of one past the final element in the destination range.  
+ Iterador bidireccional que direcciona la posición de un elemento más allá del último elemento del intervalo de destino.  
   
-### <a name="remarks"></a>Remarks  
- The template function evaluates `*(destEnd - N - 1) = move(*(last - N - 1))` once for each `N` in the range `[0, last - first)`, for strictly increasing values of `N` starting with the lowest value. It then returns `destEnd - (last - first)`. If `destEnd` and  `first` designate regions of storage, `destEnd` must not be in the range `[first, last)`.  
+### <a name="remarks"></a>Comentarios  
+ La función de plantilla evalúa `*(destEnd - N - 1) = move(*(last - N - 1))` una vez por cada `N` en el intervalo `[0, last - first)`, para aumentar de forma estricta los valores de `N` a partir del valor más bajo. Después, devuelve `destEnd - (last - first)`. Si `destEnd` y `first` designan regiones de almacenamiento, `destEnd` no debe estar en el intervalo `[first, last)`.  
   
- `move` and `move_backward` are functionally equivalent to using `copy` and `copy_backward` with a move iterator.  
+ `move` y `move_backward` son funcionalmente equivalentes a utilizar `copy` y `copy_backward` con un iterador de movimiento.  
   
 ##  <a name="next_permutation"></a>  next_permutation  
- Reorders the elements in a range so that the original ordering is replaced by the lexicographically next greater permutation if it exists, where the sense of next may be specified with a binary predicate.  
+ Reorganiza los elementos de un intervalo de modo que la ordenación original se reemplaza con la mayor permutación lexicográficamente siguiente si existe, donde el sentido de siguiente se puede especificar con un predicado binario.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -4377,27 +4360,27 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A bidirectional iterator pointing to the position of the first element in the range to be permuted.  
+ Iterador bidireccional que apunta a la posición del primer elemento del intervalo que se va a permutar.  
   
  `last`  
- A bidirectional iterator pointing to the position one past the final element in the range to be permuted.  
+ Iterador bidireccional que apunta a la posición situada una posición después del último elemento del intervalo que se va a permutar.  
   
  `comp`  
- User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define el criterio de comparación que deben cumplir los elementos sucesivos de la ordenación. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the lexicographically next permutation exists and has replaced the original ordering of the range; otherwise **false**, in which case the ordering is transformed into the lexicographically smallest permutation.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si la permutación lexicográficamente siguiente existe y ha sustituido a la ordenación original del intervalo; de lo contrario, **False**, en cuyo caso la ordenación se transforma en la permutación lexicográficamente menor.  
   
-### <a name="remarks"></a>Remarks  
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- The default binary predicate is less than and the elements in the range must be less than comparable to insure that the next permutation is well defined.  
+ El predicado binario predeterminado es menor que y los elementos del intervalo deben ser comparables con menor que para asegurarse de que la permutación siguiente esté bien definida.  
   
- The complexity is linear with at most ( * last - first*)/2 swaps.  
+ La complejidad es lineal con, a lo sumo (* apellido - nombre *) / 2 intercambia.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_next_perm.cpp  
@@ -4537,7 +4520,7 @@ After another next_permutation of vector v1,
 ```  
   
 ##  <a name="nth_element"></a>  nth_element  
- Partitions a range of elements, correctly locating the                 *n*th element of the sequence in the range so that all the elements in front of it are less than or equal to it and all the elements that follow it in the sequence are greater than or equal to it.  
+ Divide un intervalo de elementos, situando correctamente el elemento *enésimo* de la secuencia en el intervalo de modo que todos los elementos que hay delante sean menores o iguales que él y todos los que lo siguen en la secuencia sean mayores o iguales que él.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4548,29 +4531,29 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A random-access iterator addressing the position of the first element in the range to be partitioned.  
+ Iterador de acceso aleatorio que dirige a la posición del primer elemento del intervalo que se va a dividir.  
   
  *_Nth*  
- A random-access iterator addressing the position of element to be correctly ordered on the boundary of the partition.  
+ Iterador de acceso aleatorio que dirige a la posición del elemento que se va a ordenar correctamente en el límite de la partición.  
   
  `last`  
- A random-access iterator addressing the position one past the final element in the range to be partitioned.  
+ Iterador de acceso aleatorio que dirige a la posición situada una posición después del último elemento del intervalo que se va a dividir.  
   
  `comp`  
- User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define el criterio de comparación que deben cumplir los elementos sucesivos de la ordenación. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="remarks"></a>Remarks  
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- The `nth_element` algorithm does not guarantee that elements in the sub-ranges either side of the  *n*th element are sorted. It thus makes fewer guarantees than `partial_sort`, which orders the elements in the range below some chosen element, and may be used as a faster alternative to `partial_sort` when the ordering of the lower range is not required.  
+ El algoritmo `nth_element` no garantiza que los elementos de los subintervalos situados a los lados del elemento *enésimo* estén ordenados. Por eso ofrece menos garantías que `partial_sort`, que ordena los elementos del intervalo bajo algún elemento seleccionado y se puede usar como una alternativa más rápida a `partial_sort` cuando no se necesita la ordenación del intervalo inferior.  
   
- Elements are equivalent, but not necessarily equal, if neither is less than the other.  
+ Los elementos son equivalentes, pero no necesariamente iguales, si ninguno es menor que el otro.  
   
- The average of a sort complexity is linear with respect to  * last - first*.  
+ El promedio de una complejidad de la ordenación es lineal con respecto a * apellido - nombre *.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_nth_elem.cpp  
@@ -4637,31 +4620,31 @@ int main() {
 ```  
   
 ##  <a name="none_of"></a>  none_of  
- Returns `true` when a condition is never present among elements in the given range.  
+ Devuelve `true` cuando una condición nunca está presente entre los elementos del intervalo especificado.  
   
 ```  
 template<class InputIterator, class BinaryPredicate>  
 bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- An input iterator that indicates where to start to check a range of elements for a condition.  
+ Iterador de entrada que indica dónde comenzar a comprobar una condición en un intervalo de elementos.  
   
  `last`  
- An input iterator that indicates the end of a range of elements.  
+ Iterador de entrada que indica el final de un intervalo de elementos.  
   
  `comp`  
- The condition to test for. This is provided by a user-defined predicate function object that defines the condition. A predicate takes a single argument and returns `true` or `false`.  
+ Condición que se va a comprobar. La proporciona y la define un objeto de función de predicado definido por el usuario. Un predicado toma un único argumento y devuelve `true` o `false`.  
   
-### <a name="return-value"></a>Return Value  
- Returns `true` if the condition is not detected at least once in the indicated range, and `false` if the condition is detected.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve `true` si no se detecta la condición al menos una vez en el intervalo indicado, y `false` si la condición sí se detecta.  
   
-### <a name="remarks"></a>Remarks  
- The template function returns `true` only if, for some `N` in the range `[0, last - first)`, the predicate `comp(*(first + N))` is always `false`.  
+### <a name="remarks"></a>Comentarios  
+ Devuelve la función de plantilla `true` únicamente si para algunos `N` en el intervalo `[0, last - first)`, el predicado `comp(*(first + N))` siempre es `false`.  
   
 ##  <a name="partial_sort"></a>  partial_sort  
- Arranges a specified number of the smaller elements in a range into a nondescending order or according to an ordering criterion specified by a binary predicate.  
+ Organiza un número especificado de los elementos menores de un intervalo en un orden no descendente, o de acuerdo con un criterio de ordenación especificado por un predicado binario.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4679,27 +4662,27 @@ template<class RandomAccessIterator, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- A random-access iterator addressing the position of the first element in the range to be sorted.  
+ Iterador de acceso aleatorio que dirige a la posición del primer elemento del intervalo que se va a ordenar.  
   
  `sortEnd`  
- A random-access iterator addressing the position one past the final element in the subrange to be sorted.  
+ Iterador de acceso aleatorio que dirige a la posición situada una posición después del último elemento del subintervalo que se va a ordenar.  
   
  `last`  
- A random-access iterator addressing the position one past the final element in the range to be partially sorted.  
+ Iterador de acceso aleatorio que dirige a la posición situada una posición después del último elemento del intervalo que se va a ordenar de forma parcial.  
   
  `comp`  
- User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define el criterio de comparación que deben cumplir los elementos sucesivos de la ordenación. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="remarks"></a>Remarks  
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- Elements are equivalent, but not necessarily equal, if neither is less than the other. The **sort** algorithm is not stable and does not guarantee that the relative ordering of equivalent elements will be preserved. The algorithm `stable_sort` does preserve this original ordering.  
+ Los elementos son equivalentes, pero no necesariamente iguales, si ninguno es menor que el otro. El algoritmo **sort** no es estable ni garantiza la conservación de la ordenación relativa de los elementos equivalentes. El algoritmo `stable_sort` conserva esta ordenación original.  
   
- The average partial sort complexity is  *O*(( `last`- `first`) log ( `sortEnd`- `first`)).  
+ La complejidad de la ordenación parcial promedio es *O*((`last`- `first`) log (`sortEnd`- `first`)).  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_partial_sort.cpp  
@@ -4773,7 +4756,7 @@ Partially resorted (UDgreater) vector:
 ```  
   
 ##  <a name="partial_sort_copy"></a>  partial_sort_copy  
- Copies elements from a source range into a destination range where the source elements are ordered by either less than or another specified binary predicate.  
+ Copia los elementos de un intervalo de origen a un intervalo de destino donde los elementos de origen están ordenados por menor que u otro predicado binario especificado.  
   
 ```  
  template<class InputIterator, class RandomAccessIterator>  
@@ -4793,31 +4776,31 @@ template<class InputIterator, class RandomAccessIterator, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first1`  
- An input iterator addressing the position of the first element in the source range.  
+ Iterador de entrada que direcciona la posición del primer elemento del intervalo de origen.  
   
  `last1`  
- An input iterator addressing the position one past the final element in the source range.  
+ Iterador de entrada que dirige a la posición situada una posición después del último elemento del intervalo de origen.  
   
   `first2`  
- A random-access iterator addressing the position of the first element in the sorted destination range.  
+ Iterador de acceso aleatorio que dirige a la posición del primer elemento del intervalo de destino ordenado.  
   
  `last2`  
- A random-access iterator addressing the position one past the final element in the sorted destination range.  
+ Iterador de acceso aleatorio que dirige a la posición situada una posición después del último elemento del intervalo de destino ordenado.  
   
  `comp`  
- User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns `true` when satisfied and `false` when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se van a tomar como equivalentes. Un predicado binario toma dos argumentos y devuelve `true` si se cumplen y `false` si no.  
   
-### <a name="return-value"></a>Return Value  
- A random-access iterator addressing the element in the destination range one position beyond the last element inserted from the source range.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador de acceso aleatorio que dirige al elemento del intervalo de destino situado una posición después del último elemento del intervalo de origen.  
   
-### <a name="remarks"></a>Remarks  
- The source and destination ranges must not overlap and must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ Los intervalos de origen y destino no deben superponerse y deben ser válidos; todos los punteros se deben poder desreferenciar y, dentro de cada secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- The binary predicate must provide a strict weak ordering so that elements that are not equivalent are ordered, but elements that are equivalent are not. Two elements are equivalent under less than, but not necessarily equal, if neither is less than the other.  
+ El predicado binario debe proporcionar una ordenación débil estricta para que se ordenen los elementos que no son equivalentes, pero no los que sí son equivalentes. Dos elementos son equivalentes según menor que, pero no necesariamente iguales, si ninguno es menor que el otro.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_partial_sort_copy.cpp  
@@ -4894,7 +4877,7 @@ int main() {
 ```  
   
 ##  <a name="partition"></a>  partition  
- Classifies elements in a range into two disjoint sets, with those elements satisfying a unary predicate preceding those that fail to satisfy it.  
+ Clasifica los elementos de un intervalo en dos conjuntos disjuntos, donde los elementos que satisfacen un predicado unario preceden a los que no lo satisfacen.  
   
 ```  
 template<class BidirectionalIterator, class Predicate>  
@@ -4905,27 +4888,27 @@ template<class BidirectionalIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A bidirectional iterator addressing the position of the first element in the range to be partitioned.  
+ Iterador bidireccional que dirige a la posición del primer elemento del intervalo que se va a dividir.  
   
  `last`  
- A bidirectional iterator addressing the position one past the final element in the range to be partitioned.  
+ Iterador bidireccional que dirige a la posición situada una posición después del último elemento del intervalo que se va a dividir.  
   
  `comp`  
- User-defined predicate function object that defines the condition to be satisfied if an element is to be classified. A predicate takes a single argument and returns **true** or **false**.  
+ Objeto de función de predicado definido por el usuario que define la condición que debe cumplir un elemento para ser clasificado. Un predicado toma un único argumento y devuelve **rue** o **False**.  
   
-### <a name="return-value"></a>Return Value  
- A bidirectional iterator addressing the position of the first element in the range to not satisfy the predicate condition.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador bidireccional que dirige a la posición del primer elemento del intervalo que no cumple la condición del predicado.  
   
-### <a name="remarks"></a>Remarks  
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- Elements  *a* and  *b* are equivalent, but not necessarily equal, if both  *Pr* ( *a*,  *b*) is false and  *Pr* ( *b*,  *a*) if false, where  *Pr* is the parameter-specified predicate. The **partition** algorithm is not stable and does not guarantee that the relative ordering of equivalent elements will be preserved. The algorithm **stable_ partition** does preserve this original ordering.  
+ Los elementos *a* y *b* son equivalentes, pero no necesariamente iguales, si *Pr* (*a*, *b*) es falso y *Pr* (*b*, *a*) también, donde *Pr* es el predicado especificado por el parámetro. El algoritmo **partition** no es estable ni garantiza la conservación de la ordenación relativa de los elementos equivalentes. El algoritmo **stable_ partition** conserva esta ordenación original.  
   
- The complexity is linear: there are ( `last` -  `first`) applications of `comp` and at most ( `last` -  `first`)/2 swaps.  
+ La complejidad es lineal: hay ( `last`  -   `first`) las aplicaciones de `comp` y a lo sumo ( `last`  -   `first`) / 2 intercambia.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_partition.cpp  
@@ -4965,7 +4948,7 @@ int main( ) {
 ```  
   
 ##  <a name="partition_copy"></a>  partition_copy  
- Copies elements for which a condition is `true` to one destination, and for which the condition is `false` to another. The elements must come from a specified range.  
+ Copia a un destino los elementos para los que una condición es `true` y a otro destino diferente los elementos para los que la condición es `false`. Los elementos deben proceder de un intervalo especificado.  
   
 ```  
 template<class InputIterator, class OutputIterator1, class OutputIterator2, class Predicate>  
@@ -4979,27 +4962,27 @@ template<class InputIterator, class OutputIterator1, class OutputIterator2, clas
         );  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- An input iterator that indicates the beginning of a range to check for a condition.  
+ Iterador de entrada que indica el inicio de un intervalo en el que se va a comprobar una condición.  
   
  `last`  
- An input iterator that indicates the end of a range.  
+ Iterador de entrada que indica el final de un intervalo.  
   
  `dest1`  
- An output iterator used to copy elements that return true for a condition tested by using `_Pred`.  
+ Iterador de salida usado para copiar elementos que devuelven True para una condición probada mediante `_Pred`.  
   
  `dest2`  
- An output iterator used to copy elements that return false for a condition tested by using `_Pred`.  
+ Iterador de salida usado para copiar elementos que devuelven False para una condición probada mediante `_Pred`.  
   
  `_Pred`  
- The condition to test for. This is provided by a user-defined predicate function object that defines the condition to be tested. A predicate takes a single argument and returns `true` or `false`.  
+ Condición que se va a comprobar. La proporciona y la define un objeto de función de predicado definido por el usuario. Un predicado toma un único argumento y devuelve `true` o `false`.  
   
-### <a name="remarks"></a>Remarks  
- The template function copies each element `X` in `[first,last)` to `*dest1++` if `_Pred(X)` is true, or to `*dest2++` if not. It returns `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.  
+### <a name="remarks"></a>Comentarios  
+ La función de plantilla copia cada elemento `X` en `[first,last)` a `*dest1++` si `_Pred(X)` es true, o a `*dest2++` si no es así. Devuelve `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.  
   
 ##  <a name="partition_point"></a>  partition_point  
- Returns the first element in the given range that does not satisfy the condition. The elements are sorted so that those that satisfy the condition come before those that do not.  
+ Devuelve el primer elemento del intervalo especificado que no satisface la condición. Los elementos se ordenan de forma que aquellos que satisfacen la condición están antes que los que no lo hacen.  
   
 ```  
 template<class ForwardIterator, class Predicate>  
@@ -5010,24 +4993,24 @@ template<class ForwardIterator, class Predicate>
     );  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A `ForwardIterator` that indicates the start of a range to check for a condition.  
+ `ForwardIterator` que indica el inicio de un intervalo en el que se va a comprobar una condición.  
   
  `last`  
- A `ForwardIterator` that indicates the end of a range.  
+ `ForwardIterator` que indica el final de un intervalo.  
   
  `comp`  
- The condition to test for. This is provided by a user-defined predicate function object that defines the condition to be satisfied by the element being searched for. A predicate takes a single argument and returns `true` or `false`.  
+ Condición que se va a comprobar. La proporciona un objeto de función de predicado definido por el usuario que define la condición que debe cumplir el elemento que se está buscando. Un predicado toma un único argumento y devuelve `true` o `false`.  
   
-### <a name="return-value"></a>Return Value  
- Returns a `ForwardIterator` that refers to the first element that does not fulfill the condition tested for by `comp`, or returns `last` if one is not found.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve un `ForwardIterator` que hace referencia al primer elemento que no cumple la condición comprobada por `comp`, o `last` si no encuentra ninguno.  
   
-### <a name="remarks"></a>Remarks  
- The template function finds the first iterator `it` in `[first, last)` for which `comp(*it)` is `false`. The sequence must be ordered by `comp`.  
+### <a name="remarks"></a>Comentarios  
+ La función de plantilla no encuentra el primer iterador `it` en `[first, last)` que `comp(*it)` es `false`. La secuencia debe ordenarse por `comp`.  
   
 ##  <a name="pop_heap"></a>  pop_heap  
- Removes the largest element from the front of a heap to the next-to-last position in the range and then forms a new heap from the remaining elements.  
+ Quita el elemento mayor del principio de un montón hasta la penúltima posición del intervalo y después forma un nuevo montón con los elementos restantes.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -5038,34 +5021,34 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A random-access iterator addressing the position of the first element in the heap.  
+ Iterador de acceso aleatorio que dirige a la posición del primer elemento del montón.  
   
  `last`  
- A random-access iterator addressing the position one past the final element in the heap.  
+ Iterador de acceso aleatorio que dirige a la posición situada una posición después del último elemento del montón.  
   
  `comp`  
- User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="remarks"></a>Remarks  
- The `pop_heap` algorithm is the inverse of the operation performed by the push_heap algorithm, in which an element at the next-to-last position of a range is added to a heap consisting of the prior elements in the range, in the case when the element being added to the heap is larger than any of the elements already in the heap.  
+### <a name="remarks"></a>Comentarios  
+ El algoritmo `pop_heap` es el inverso de la operación realizada por el algoritmo push_heap, que agrega un elemento en la posición siguiente a la última de un intervalo a un montón que se compone de los elementos anteriores del intervalo, en el caso de que el elemento que se va a agregar al montón sea mayor que cualquiera de los elementos ya presentes en este.  
   
- Heaps have two properties:  
+ Los montones tienen dos propiedades:  
   
--   The first element is always the largest.  
+-   El primer elemento siempre es el mayor.  
   
--   Elements may be added or removed in logarithmic time.  
+-   Se pueden agregar o quitar elementos en tiempo logarítmico.  
   
- Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
+ Los montones son una forma ideal de implementar colas de prioridad y se usan en la implementación del adaptador de contenedor de la biblioteca estándar de C++ [priority_queue (Clase)](../standard-library/priority-queue-class.md).  
   
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- The range excluding the newly added element at the end must be a heap.  
+ El intervalo que excluye al elemento recién agregado al final debe ser un montón.  
   
- The complexity is logarithmic, requiring at most log ( * last - first*) comparisons.  
+ La complejidad es logarítmica, a lo sumo necesidad de registro (* apellido - nombre *) las comparaciones.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_pop_heap.cpp  
@@ -5128,7 +5111,7 @@ int main( )  {
 ```  
   
 ##  <a name="prev_permutation"></a>  prev_permutation  
- Reorders the elements in a range so that the original ordering is replaced by the lexicographically previous greater permutation if it exists, where the sense of previous may be specified with a binary predicate.  
+ Reorganiza los elementos de un intervalo de modo que la ordenación original se sustituya por la mayor permutación lexicográficamente anterior, si existe, donde el sentido de anterior se puede especificar con un predicado binario.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -5144,27 +5127,27 @@ template<class BidirectionalIterator, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A bidirectional iterator pointing to the position of the first element in the range to be permuted.  
+ Iterador bidireccional que apunta a la posición del primer elemento del intervalo que se va a permutar.  
   
  `last`  
- A bidirectional iterator pointing to the position one past the final element in the range to be permuted.  
+ Iterador bidireccional que apunta a la posición situada una posición después del último elemento del intervalo que se va a permutar.  
   
  `comp`  
- User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns `true` when satisfied and `false` when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define el criterio de comparación que deben cumplir los elementos sucesivos de la ordenación. Un predicado binario toma dos argumentos y devuelve `true` si se cumplen y `false` si no.  
   
-### <a name="return-value"></a>Return Value  
- `true` if the lexicographically previous permutation exists and has replaced the original ordering of the range; otherwise `false`, in which case the ordering is transformed into the lexicographically largest permutation.  
+### <a name="return-value"></a>Valor devuelto  
+ `true` si la permutación lexicográficamente anterior existe y ha sustituido a la ordenación original del intervalo; de lo contrario, `false`, en cuyo caso la ordenación se transforma en la permutación lexicográficamente mayor.  
   
-### <a name="remarks"></a>Remarks  
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- The default binary predicate is less than and the elements in the range must be less-than comparable to ensure that the previous permutation is well defined.  
+ El predicado binario predeterminado es menor que y los elementos del intervalo deben ser comparables con menor que para asegurarse de que la permutación anterior esté bien definida.  
   
- The complexity is linear, with at most ( `last` -  `first`)/2 swaps.  
+ La complejidad es lineal, como máximo ( `last`  -   `first`) / 2 intercambia.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_prev_perm.cpp  
@@ -5299,7 +5282,7 @@ After another prev_permutation of vector v1,
 ```  
   
 ##  <a name="push_heap"></a>  push_heap  
- Adds an element that is at the end of a range to an existing heap consisting of the prior elements in the range.  
+ Agrega un elemento que está al final de un intervalo a un montón existente que se compone de los elementos anteriores del intervalo.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -5310,34 +5293,34 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A random-access iterator addressing the position of the first element in the heap.  
+ Iterador de acceso aleatorio que dirige a la posición del primer elemento del montón.  
   
  `last`  
- A random-access iterator addressing the position one past the final element in the range to be converted into a heap.  
+ Iterador de acceso aleatorio que dirige a la posición situada una posición después del último elemento del intervalo que se va a convertir en un montón.  
   
  `comp`  
- User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="remarks"></a>Remarks  
- The element must first be pushed back to the end of an existing heap and then the algorithm is used to add this element to the existing heap.  
+### <a name="remarks"></a>Comentarios  
+ El elemento primero debe moverse al final de un montón existente y luego se usa el algoritmo para agregarlo al montón existente.  
   
- Heaps have two properties:  
+ Los montones tienen dos propiedades:  
   
--   The first element is always the largest.  
+-   El primer elemento siempre es el mayor.  
   
--   Elements may be added or removed in logarithmic time.  
+-   Se pueden agregar o quitar elementos en tiempo logarítmico.  
   
- Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
+ Los montones son una forma ideal de implementar colas de prioridad y se usan en la implementación del adaptador de contenedor de la biblioteca estándar de C++ [priority_queue (Clase)](../standard-library/priority-queue-class.md).  
   
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- The range excluding the newly added element at the end must be a heap.  
+ El intervalo que excluye al elemento recién agregado al final debe ser un montón.  
   
- The complexity is logarithmic, requiring at most log ( *last - first*) comparisons.  
+ La complejidad es logarítmica, que requiere a lo sumo registro ( *apellido - nombre*) las comparaciones.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_push_heap.cpp  
@@ -5405,10 +5388,10 @@ int main( ) {
 ```  
   
 ##  <a name="random_shuffle"></a>  random_shuffle  
- The std::random_shuffle() function is deprecated, replaced by [std::shuffle](../standard-library/algorithm-functions.md#shuffle). For a code example and more information, see [\<random>](../standard-library/random.md) and the Stackoverflow posting  [Why are std::random_shuffle methods being deprecated in C++14?](http://go.microsoft.com/fwlink/?LinkId=397954).  
+ La función std::random_shuffle() está en desuso, reemplazado por [std:: shuffle](../standard-library/algorithm-functions.md#shuffle). Para obtener un ejemplo de código y obtener más información, vea [ \<aleatorio >](../standard-library/random.md) y la entrada de Stackoverflow sobre [¿por qué son los métodos de std:: random_shuffle está en desuso en C ++ 14?](http://go.microsoft.com/fwlink/?LinkId=397954).  
   
 ##  <a name="remove"></a>  remove  
- Eliminates a specified value from a given range without disturbing the order of the remaining elements and returning the end of a new range free of the specified value.  
+ Elimina un valor especificado de un intervalo determinado sin alterar el orden de los elementos restantes y devolver el final de un nuevo intervalo libre del valor especificado.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -5416,31 +5399,31 @@ template<class ForwardIterator, class Type>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A forward iterator addressing the position of the first element in the range from which elements are being removed.  
+ Iterador hacia delante que direcciona la posición del primer elemento del intervalo del que se quitan los elementos.  
   
  `last`  
- A forward iterator addressing the position one past the final element in the range from which elements are being removed.  
+ Iterador hacia delante que direcciona la posición uno después del elemento final del intervalo del que se quitan los elementos.  
   
  `val`  
- The value that is to be removed from the range.  
+ El valor que debe quitarse del intervalo.  
   
-### <a name="return-value"></a>Return Value  
- A forward iterator addressing the new end position of the modified range, one past the final element of the remnant sequence free of the specified value.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador hacia delante que direcciona la nueva posición final del intervalo modificado, una después del elemento final del resto de la secuencia sin el valor especificado.  
   
-### <a name="remarks"></a>Remarks  
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- The order of the elements not removed remains stable.  
+ El orden de los elementos no quitados no se ve afectado.  
   
- The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
+ El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.  
   
- The complexity is linear; there are ( `last` -  `first`) comparisons for equality.  
+ La complejidad es lineal; hay ( `last`  -   `first`) comparaciones para igualdad.  
   
- The [list class](../standard-library/list-class.md) has a more efficient member function version of **remove**, which also relinks pointers.  
+ La [clase list](../standard-library/list-class.md) tiene una versión de función miembro más eficaz de **remove**, que también vuelve a vincular los punteros.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_remove.cpp  
@@ -5487,7 +5470,7 @@ int main( ) {
 ```  
   
 ##  <a name="remove_copy"></a>  remove_copy  
- Copies elements from a source range to a destination range, except that elements of a specified value are not copied, without disturbing the order of the remaining elements and returning the end of a new destination range.  
+ Copia elementos de un intervalo de origen a un intervalo de destino, excepto que los elementos de un valor especificado no se copian, sin alterar el orden de los elementos restantes y devolver el final de un nuevo intervalo de destino.  
   
 ```  
 template<class InputIterator, class OutputIterator, class Type>  
@@ -5495,34 +5478,34 @@ template<class InputIterator, class OutputIterator, class Type>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- An input iterator addressing the position of the first element in the range from which elements are being removed.  
+ Iterador de entrada que direcciona la posición del primer elemento del intervalo del que se quitan los elementos.  
   
  `last`  
- An input iterator addressing the position one past the final element in the range from which elements are being removed.  
+ Iterador de entrada que direcciona la posición situada una posición después del elemento final del intervalo del que se quitan los elementos.  
   
  `result`  
- An output iterator addressing the position of the first element in the destination range to which elements are being removed.  
+ Iterador de salida que direcciona la posición del primer elemento del intervalo de destino del que se quitan los elementos.  
   
  `val`  
- The value that is to be removed from the range.  
+ El valor que debe quitarse del intervalo.  
   
-### <a name="return-value"></a>Return Value  
- A forward iterator addressing the new end position of the destination range, one past the final element of the copy of the remnant sequence free of the specified value.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador hacia delante que direcciona la nueva posición final del intervalo de destino, situada una posición después del elemento final de la copia de la secuencia restante sin el valor especificado.  
   
-### <a name="remarks"></a>Remarks  
- The source and destination ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ Los intervalos de origen y destino a los que se hace referencia deben ser válidos; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- There must be enough space in the destination range to contain the remnant elements that will be copied after elements of the specified value are removed.  
+ Debe haber suficiente espacio en el intervalo de destino para incluir los elementos restantes que se copiarán después de quitar elementos del valor especificado.  
   
- The order of the elements not removed remains stable.  
+ El orden de los elementos no quitados no se ve afectado.  
   
- The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
+ El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.  
   
- The complexity is linear; there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments.  
+ La complejidad es lineal; hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_remove_copy.cpp  
@@ -5566,7 +5549,7 @@ int main() {
 ```  
   
 ##  <a name="remove_copy_if"></a>  remove_copy_if  
- Copies elements from a source range to a destination range, except that satisfying a predicate are not copied, without disturbing the order of the remaining elements and returning the end of a new destination range.  
+ Copia elementos de un intervalo de origen a un intervalo de destino, excepto que los elementos que satisfacen un predicado no se copian, sin alterar el orden de los elementos restantes y devolver el final de un nuevo intervalo de destino.  
   
 ```  
 template<class InputIterator, class OutputIterator, class Predicate>  
@@ -5574,36 +5557,36 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- An input iterator addressing the position of the first element in the range from which elements are being removed.  
+ Iterador de entrada que direcciona la posición del primer elemento del intervalo del que se quitan los elementos.  
   
  `last`  
- An input iterator addressing the position one past the final element in the range from which elements are being removed.  
+ Iterador de entrada que direcciona la posición situada una posición después del elemento final del intervalo del que se quitan los elementos.  
   
  `result`  
- An output iterator addressing the position of the first element in the destination range to which elements are being removed.  
+ Iterador de salida que direcciona la posición del primer elemento del intervalo de destino del que se quitan los elementos.  
   
  `_Pred`  
- The unary predicate that must be satisfied is the value of an element is to be replaced.  
+ El predicado unario que debe cumplirse es el valor de un elemento que se va a reemplazar.  
   
-### <a name="return-value"></a>Return Value  
- A forward iterator addressing the new end position of the destination range, one past the final element of the remnant sequence free of the elements satisfying the predicate.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador hacia delante que direcciona la nueva posición final del intervalo de destino, situada una posición después del elemento final de la secuencia restante sin los elementos que cumplen el predicado.  
   
-### <a name="remarks"></a>Remarks  
- The source range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo de origen al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- There must be enough space in the destination range to contain the remnant elements that will be copied after elements of the specified value are removed.  
+ Debe haber suficiente espacio en el intervalo de destino para incluir los elementos restantes que se copiarán después de quitar elementos del valor especificado.  
   
- The order of the elements not removed remains stable.  
+ El orden de los elementos no quitados no se ve afectado.  
   
- The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
+ El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.  
   
- The complexity is linear: there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments.  
+ La complejidad es lineal: hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones.  
   
- For information on how these functions behave, see [Checked Iterators](../standard-library/checked-iterators.md).  
+ Para más información sobre el comportamiento de estas funciones, vea [Iteradores activados](../standard-library/checked-iterators.md).  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_remove_copy_if.cpp  
@@ -5654,7 +5637,7 @@ int main() {
 ```  
   
 ##  <a name="remove_if"></a>  remove_if  
- Eliminates elements that satisfy a predicate from a given range without disturbing the order of the remaining elements and returning the end of a new range free of the specified value.  
+ Elimina los elementos que cumplen un predicado de un intervalo determinado sin alterar el orden de los elementos restantes y devolver el final de un nuevo intervalo libre del valor especificado.  
   
 ```  
 template<class ForwardIterator, class Predicate>  
@@ -5662,31 +5645,31 @@ template<class ForwardIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A forward iterator pointing to the position of the first element in the range from which elements are being removed.  
+ Iterador hacia delante que apunta a la posición del primer elemento del intervalo del que se van a quitar elementos.  
   
  `last`  
- A forward iterator pointing to the position one past the final element in the range from which elements are being removed.  
+ Iterador hacia delante que apunta a la posición situada una posición después del último elemento del intervalo del que se van a quitar elementos.  
   
  `_Pred`  
- The unary predicate that must be satisfied is the value of an element is to be replaced.  
+ El predicado unario que debe cumplirse es el valor de un elemento que se va a reemplazar.  
   
-### <a name="return-value"></a>Return Value  
- A forward iterator addressing the new end position of the modified range, one past the final element of the remnant sequence free of the specified value.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador hacia delante que direcciona la nueva posición final del intervalo modificado, una después del elemento final del resto de la secuencia sin el valor especificado.  
   
-### <a name="remarks"></a>Remarks  
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- The order of the elements not removed remains stable.  
+ El orden de los elementos no quitados no se ve afectado.  
   
- The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
+ El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.  
   
- The complexity is linear: there are ( `last` -  `first`) comparisons for equality.  
+ La complejidad es lineal: hay ( `last`  -   `first`) comparaciones para igualdad.  
   
- List has a more efficient member function version of remove which relinks pointers.  
+ List tiene una versión de función miembro más eficaz de remove, que vuelve a vincular los punteros.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_remove_if.cpp  
@@ -5737,36 +5720,36 @@ int main( ) {
 ```  
   
 ##  <a name="replace"></a>  replace  
- Examines each element in a range and replaces it if it matches a specified value.  
+ Examina cada elemento de un intervalo y lo reemplaza si coincide con un valor especificado.  
   
 ```  
 template<class ForwardIterator, class Type>  
 void replace(ForwardIterator first, ForwardIterator last, const Type& _OldVal, const Type& _NewVal);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A forward iterator pointing to the position of the first element in the range from which elements are being replaced.  
+ Iterador hacia delante que apunta a la posición del primer elemento del intervalo en el que se van a sustituir elementos.  
   
  `last`  
- A forward iterator pointing to the position one past the final element in the range from which elements are being replaced.  
+ Iterador hacia delante que apunta a la posición situada una posición después del último elemento del intervalo en el que se van a sustituir elementos.  
   
  `_OldVal`  
- The old value of the elements being replaced.  
+ Valor anterior de los elementos que se van a reemplazar.  
   
  `_NewVal`  
- The new value being assigned to the elements with the old value.  
+ Nuevo valor que se va a asignar a los elementos con el valor anterior.  
   
-### <a name="remarks"></a>Remarks  
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- The order of the elements not replaced remains stable.  
+ El orden de los elementos no reemplazados no se ve afectado.  
   
- The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
+ El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.  
   
- The complexity is linear; there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
+ La complejidad es lineal; hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones de nuevos valores.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_replace.cpp  
@@ -5805,7 +5788,7 @@ int main( ) {
 ```  
   
 ##  <a name="replace_copy"></a>  replace_copy  
- Examines each element in a source range and replaces it if it matches a specified value while copying the result into a new destination range.  
+ Examina cada elemento de un intervalo de origen y lo reemplaza si coincide con un valor especificado y copia el resultado a un nuevo intervalo de destino.  
   
 ```  
  template<class InputIterator, class OutputIterator, class Type>  
@@ -5818,35 +5801,35 @@ int main( ) {
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- An input iterator pointing to the position of the first element in the range from which elements are being replaced.  
+ Iterador de entrada que apunta a la posición del primer elemento del intervalo cuyos elementos se reemplazan.  
   
  `last`  
- An input iterator pointing to the position one past the final element in the range from which elements are being replaced.  
+ Iterador de entrada que apunta a la posición situada una posición después del último elemento del intervalo cuyos elementos se reemplazan.  
   
  `result`  
- An output iterator pointing to the first element in the destination range to where the altered sequence of elements is being copied.  
+ Iterador de salida que apunta al primer elemento del intervalo de destino en el que se va a copiar la secuencia de elementos modificada.  
   
  `_OldVal`  
- The old value of the elements being replaced.  
+ Valor anterior de los elementos que se van a reemplazar.  
   
  `_NewVal`  
- The new value being assigned to the elements with the old value.  
+ Nuevo valor que se va a asignar a los elementos con el valor anterior.  
   
-### <a name="return-value"></a>Return Value  
- An output iterator pointing to the position one past the final element in the destination range to where the altered sequence of elements is being copied.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador de salida que apunta a la posición situada una posición después del último elemento del intervalo de destino en el que se va a copiar la secuencia de elementos modificada.  
   
-### <a name="remarks"></a>Remarks  
- The source and destination ranges referenced must not overlap and must both be valid: all pointers must be dereferenceable and within the sequences the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ Los intervalos de origen y destino a los que se hace referencia no deben superponerse y deben ser válidos: todos los punteros se deben poder desreferenciar y, dentro de las secuencias, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- The order of the elements not replaced remains stable.  
+ El orden de los elementos no reemplazados no se ve afectado.  
   
- The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
+ El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.  
   
- The complexity is linear: there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
+ La complejidad es lineal: hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones de nuevos valores.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_replace_copy.cpp  
@@ -5904,7 +5887,7 @@ int main( ) {
 ```  
   
 ##  <a name="replace_copy_if"></a>  replace_copy_if  
- Examines each element in a source range and replaces it if it satisfies a specified predicate while copying the result into a new destination range.  
+ Examina cada elemento de un intervalo de origen y lo reemplaza si satisface un predicado especificado y copia el resultado a un nuevo intervalo de destino.  
   
 ```  
 template<class InputIterator, class OutputIterator, class Predicate, class Type>  
@@ -5917,35 +5900,35 @@ OutputIterator replace_copy_if(
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- An input iterator pointing to the position of the first element in the range from which elements are being replaced.  
+ Iterador de entrada que apunta a la posición del primer elemento del intervalo cuyos elementos se reemplazan.  
   
  `last`  
- An input iterator pointing to the position one past the final element in the range from which elements are being replaced.  
+ Iterador de entrada que apunta a la posición situada una posición después del último elemento del intervalo cuyos elementos se reemplazan.  
   
  `result`  
- An output iterator pointing to the position of the first element in the destination range to which elements are being copied.  
+ Iterador de salida que apunta a la posición del primer elemento del intervalo de destino en el que se copian los elementos.  
   
  `_Pred`  
- The unary predicate that must be satisfied is the value of an element is to be replaced.  
+ El predicado unario que debe cumplirse es el valor de un elemento que se va a reemplazar.  
   
  `val`  
- The new value being assigned to the elements whose old value satisfies the predicate.  
+ Nuevo valor que se asigna a los elementos cuyo valor antiguo cumple el predicado.  
   
-### <a name="return-value"></a>Return Value  
- An output iterator pointing to the position one past the final element in the destination range to where the altered sequence of elements is being copied.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador de salida que apunta a la posición situada una posición después del último elemento del intervalo de destino en el que se va a copiar la secuencia de elementos modificada.  
   
-### <a name="remarks"></a>Remarks  
- The source and destination ranges referenced must not overlap and must both be valid: all pointers must be dereferenceable and within the sequences the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ Los intervalos de origen y destino a los que se hace referencia no deben superponerse y deben ser válidos: todos los punteros se deben poder desreferenciar y, dentro de las secuencias, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- The order of the elements not replaced remains stable.  
+ El orden de los elementos no reemplazados no se ve afectado.  
   
- The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
+ El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.  
   
- The complexity is linear; there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
+ La complejidad es lineal; hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones de nuevos valores.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_replace_copy_if.cpp  
@@ -6010,7 +5993,7 @@ int main( ) {
 ```  
   
 ##  <a name="replace_if"></a>  replace_if  
- Examines each element in a range and replaces it if it satisfies a specified predicate.  
+ Examina cada elemento de un intervalo y lo reemplaza si satisface un predicado especificado.  
   
 ```  
 template<class ForwardIterator, class Predicate, class Type>  
@@ -6018,31 +6001,31 @@ void replace_if(ForwardIterator first, ForwardIterator last, Predicate pred, con
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A forward iterator pointing to the position of the first element in the range from which elements are being replaced.  
+ Iterador hacia delante que apunta a la posición del primer elemento del intervalo en el que se van a sustituir elementos.  
   
  `last`  
- An iterator pointing to the position one past the final element in the range from which elements are being replaced.  
+ Iterador que apunta a la posición situada una posición después del último elemento del intervalo en el que se van a sustituir elementos.  
   
  `_Pred`  
- The unary predicate that must be satisfied is the value of an element is to be replaced.  
+ El predicado unario que debe cumplirse es el valor de un elemento que se va a reemplazar.  
   
  `val`  
- The new value being assigned to the elements whose old value satisfies the predicate.  
+ Nuevo valor que se asigna a los elementos cuyo valor antiguo cumple el predicado.  
   
-### <a name="remarks"></a>Remarks  
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- The order of the elements not replaced remains stable.  
+ El orden de los elementos no reemplazados no se ve afectado.  
   
- The algorithm `replace_if` is a generalization of the algorithm **replace**, allowing any predicate to be specified, rather than equality to a specified constant value.  
+ El algoritmo `replace_if` es una generalización del algoritmo **replace**, lo que permite especificar cualquier predicado en lugar de igualdad con un valor constante especificado.  
   
- The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
+ El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.  
   
- The complexity is linear: there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
+ La complejidad es lineal: hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones de nuevos valores.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_replace_if.cpp  
@@ -6087,7 +6070,7 @@ int main( ) {
 ```  
   
 ##  <a name="reverse"></a>  reverse  
- Reverses the order of the elements within a range.  
+ Invierte el orden de los elementos dentro de un intervalo.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -6095,17 +6078,17 @@ template<class BidirectionalIterator>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A bidirectional iterator pointing to the position of the first element in the range within which the elements are being permuted.  
+ Iterador bidireccional que apunta a la posición del primer elemento del intervalo en el que se van a permutar los elementos.  
   
  `last`  
- A bidirectional iterator pointing to the position one past the final element in the range within which the elements are being permuted.  
+ Iterador bidireccional que apunta a la posición situada una posición después del último elemento del intervalo en el que se van a permutar los elementos.  
   
-### <a name="remarks"></a>Remarks  
- The source range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo de origen al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_reverse.cpp  
@@ -6148,7 +6131,7 @@ The modified vector v1 with values reversed is:
 ```  
   
 ##  <a name="reverse_copy"></a>  reverse_copy  
- Reverses the order of the elements within a source range while copying them into a destination range  
+ Invierte el orden de los elementos dentro de un intervalo de origen mientras los copia a un intervalo de destino  
   
 ```  
 template<class BidirectionalIterator, class OutputIterator>  
@@ -6159,23 +6142,23 @@ OutputIterator reverse_copy(
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A bidirectional iterator pointing to the position of the first element in the source range within which the elements are being permuted.  
+ Iterador bidireccional que apunta a la posición del primer elemento del intervalo de origen en el que se permutan los elementos.  
   
  `last`  
- A bidirectional iterator pointing to the position one past the final element in the source range within which the elements are being permuted.  
+ Iterador bidireccional que apunta a la posición situada una posición después del último elemento del intervalo de origen en el que se permutan los elementos.  
   
  `result`  
- An output iterator pointing to the position of the first element in the destination range to which elements are being copied.  
+ Iterador de salida que apunta a la posición del primer elemento del intervalo de destino en el que se copian los elementos.  
   
-### <a name="return-value"></a>Return Value  
- An output iterator pointing to the position one past the final element in the destination range to where the altered sequence of elements is being copied.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador de salida que apunta a la posición situada una posición después del último elemento del intervalo de destino en el que se va a copiar la secuencia de elementos modificada.  
   
-### <a name="remarks"></a>Remarks  
- The source and destination ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ Los intervalos de origen y destino a los que se hace referencia deben ser válidos; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_reverse_copy.cpp  
@@ -6216,7 +6199,7 @@ int main( ) {
 ```  
   
 ##  <a name="rotate"></a>  rotate  
- Exchanges the elements in two adjacent ranges.  
+ Intercambia los elementos de dos intervalos adyacentes.  
   
 ```  
 template<class ForwardIterator>  
@@ -6224,22 +6207,22 @@ template<class ForwardIterator>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A forward iterator addressing the position of the first element in the range to be rotated.  
+ Iterador hacia delante que direcciona la posición del primer elemento del intervalo que se va a intercambiar.  
   
  `middle`  
- A forward iterator defining the boundary within the range that addresses the position of the first element in the second part of the range whose elements are to be exchanged with those in the first part of the range.  
+ Iterador hacia delante que define el límite dentro del intervalo que direcciona la posición del primer elemento de la segunda parte del intervalo cuyos elementos se van a intercambiar con los de la primera parte del intervalo.  
   
 `Last`  
- A forward iterator addressing the position one past the final element in the range to be rotated.  
+ Iterador hacia delante que direcciona la posición situada una posición después del último elemento del intervalo que se va a intercambiar.  
   
-### <a name="remarks"></a>Remarks  
- The ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ Los intervalos a los que se hace referencia deben ser válidos; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- The complexity is linear with at most ( `last` -  `first`) swaps.  
+ La complejidad es lineal con, a lo sumo ( `last`  -   `first`) intercambia.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_rotate.cpp  
@@ -6315,7 +6298,7 @@ After the rotation of a single deque element to the back,
 ```  
   
 ##  <a name="rotate_copy"></a>  rotate_copy  
- Exchanges the elements in two adjacent ranges within a source range and copies the result to a destination range.  
+ Intercambia los elementos de dos intervalos adyacentes dentro de un intervalo de origen y copia el resultado a un intervalo de destino.  
   
 ```  
 template<class ForwardIterator, class OutputIterator>  
@@ -6327,28 +6310,28 @@ OutputIterator rotate_copy(
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A forward iterator addressing the position of the first element in the range to be rotated.  
+ Iterador hacia delante que direcciona la posición del primer elemento del intervalo que se va a intercambiar.  
   
  `middle`  
- A forward iterator defining the boundary within the range that addresses the position of the first element in the second part of the range whose elements are to be exchanged with those in the first part of the range.  
+ Iterador hacia delante que define el límite dentro del intervalo que direcciona la posición del primer elemento de la segunda parte del intervalo cuyos elementos se van a intercambiar con los de la primera parte del intervalo.  
   
  _ `Last`  
- A forward iterator addressing the position one past the final element in the range to be rotated.  
+ Iterador hacia delante que direcciona la posición situada una posición después del último elemento del intervalo que se va a intercambiar.  
   
  `result`  
- An output iterator addressing the position of the first element in the destination range.  
+ Iterador de salida que direcciona la posición del primer elemento del intervalo de destino.  
   
-### <a name="return-value"></a>Return Value  
- An output iterator addressing the position one past the final element in the destination range.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador de salida que direcciona la posición situada una posición después del último elemento del intervalo de destino.  
   
-### <a name="remarks"></a>Remarks  
- The ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ Los intervalos a los que se hace referencia deben ser válidos; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- The complexity is linear with at most ( `last` -  `first`) swaps.  
+ La complejidad es lineal con, a lo sumo ( `last`  -   `first`) intercambia.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_rotate_copy.cpp  
@@ -6408,7 +6391,7 @@ int main() {
 ```  
   
 ##  <a name="search"></a>  search  
- Searches for the first occurrence of a sequence within a target range whose elements are equal to those in a given sequence of elements or whose elements are equivalent in a sense specified by a binary predicate to the elements in the given sequence.  
+ Busca la primera aparición de una secuencia dentro de un intervalo de destino cuyos elementos son iguales que los de una secuencia determinada de elementos o cuyos elementos son equivalentes según lo especificado por un predicado binario a los elementos de la secuencia especificada.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -6428,33 +6411,33 @@ template<class ForwardIterator1, class ForwardIterator2, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first1`  
- A forward iterator addressing the position of the first element in the range to be searched.  
+ Iterador hacia delante que dirige a la posición del primer elemento del intervalo en el que se buscará.  
   
  `last1`  
- A forward iterator addressing the position one past the final element in the range to be searched.  
+ Iterador hacia delante que dirige a la posición situada una posición después del último elemento del intervalo en el que se buscará.  
   
   `first2`  
- A forward iterator addressing the position of the first element in the range to be matched.  
+ Iterador hacia delante que dirige a la posición del primer elemento del intervalo con el que se establecerá la coincidencia.  
   
  `last2`  
- A forward iterator addressing the position one past the final element in the range to be matched.  
+ Iterador hacia delante que dirige a la posición situada una posición después del último elemento del intervalo con el que se establecerá la coincidencia.  
   
  `comp`  
- User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se van a tomar como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="return-value"></a>Return Value  
- A forward iterator addressing the position of the first element of the first subsequence that matches the specified sequence or that is equivalent in a sense specified by a binary predicate.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador hacia delante que dirige a la posición del primer elemento de la primera subsecuencia que coincide con la secuencia especificada o que es equivalente en un sentido especificado por un predicado binario.  
   
-### <a name="remarks"></a>Remarks  
- The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
+### <a name="remarks"></a>Comentarios  
+ El `operator==` que se usa para determinar la coincidencia entre un elemento y el valor especificado debe imponer una relación de equivalencia entre sus operandos.  
   
- The ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation.  
+ Los intervalos a los que se hace referencia deben ser válidos; todos los punteros deben poder desreferenciarse y, dentro de cada secuencia, se debe poder acceder a la última posición desde la primera mediante incrementos.  
   
- Average complexity is linear with respect to the size of the searched range, and worst case complexity is also linear with respect to the size of the sequence being searched for.  
+ La complejidad del promedio es lineal con respecto al tamaño del intervalo en el que se busca; el peor escenario de complejidad también es lineal con respecto al tamaño de la secuencia que se está buscando.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_search.cpp  
@@ -6553,7 +6536,7 @@ There is a sequence of elements in v1 that are equivalent
 ```  
   
 ##  <a name="search_n"></a>  search_n  
- Searches for the first subsequence in a range that of a specified number of elements having a particular value or a relation to that value as specified by a binary predicate.  
+ Busca la primera subsecuencia de un intervalo en la que un número especificado de elementos tienen un valor determinado o una relación con ese valor según lo especificado por un predicado binario.  
   
 ```  
 template<class ForwardIterator1, class Diff2, class Type>  
@@ -6573,33 +6556,33 @@ template<class ForwardIterator1, class Diff2, class Type, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first1`  
- A forward iterator addressing the position of the first element in the range to be searched.  
+ Iterador hacia delante que dirige a la posición del primer elemento del intervalo en el que se buscará.  
   
  `last1`  
- A forward iterator addressing the position one past the final element in the range to be searched.  
+ Iterador hacia delante que dirige a la posición situada una posición después del último elemento del intervalo en el que se buscará.  
   
  `count`  
- The size of the subsequence being searched for.  
+ Tamaño de la subsecuencia que se está buscando.  
   
  `val`  
- The value of the elements in the sequence being searched for.  
+ Valor de los elementos de la secuencia que se está buscando.  
   
  `comp`  
- User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se van a tomar como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="return-value"></a>Return Value  
- A forward iterator addressing the position of the first element of the first subsequence that matches the specified sequence or that is equivalent in a sense specified by a binary predicate.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador hacia delante que dirige a la posición del primer elemento de la primera subsecuencia que coincide con la secuencia especificada o que es equivalente en un sentido especificado por un predicado binario.  
   
-### <a name="remarks"></a>Remarks  
- The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
+### <a name="remarks"></a>Comentarios  
+ El `operator==` que se usa para determinar la coincidencia entre un elemento y el valor especificado debe imponer una relación de equivalencia entre sus operandos.  
   
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- Complexity is linear with respect to the size of the searched.  
+ La complejidad es lineal con respecto al tamaño de lo buscado.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_search_n.cpp  
@@ -6683,7 +6666,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
 ```  
   
 ##  <a name="set_difference"></a>  set_difference  
- Unites all of the elements that belong to one sorted source range, but not to a second sorted source range, into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
+ Agrupa todos los elementos que pertenecen a un intervalo de origen ordenado, pero no a un segundo intervalo de origen ordenado, en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
  template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -6705,42 +6688,42 @@ OutputIterator set_difference(
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first1`  
- An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
+ Iterador de entrada que dirige a la posición del primer elemento del primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la diferencia de los dos intervalos de origen.  
   
  `last1`  
- An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
+ Iterador de entrada que dirige a la posición situada una posición después del último elemento del primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la diferencia de los dos intervalos de origen.  
   
  `first2`  
- An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
+ Iterador de entrada que dirige a la posición del primer elemento del segundo de dos intervalos de origen ordenados consecutivos que se van a combinar y ordenar en un solo intervalo que representa la diferencia de los dos intervalos de origen.  
   
  `last2`  
- An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
+ Iterador de entrada que dirige a la posición situada una posición después del último elemento del segundo de dos intervalos de origen ordenados consecutivos que se van a combinar y ordenar en un solo intervalo que representa la diferencia de los dos intervalos de origen.  
   
  `result`  
- An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the difference of the two source ranges.  
+ Iterador de salida que dirige a la posición del primer elemento del intervalo de destino donde los dos intervalos de origen se van a combinar en un solo intervalo ordenado que representa la diferencia de los dos intervalos de origen.  
   
  `comp`  
- User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.  
   
-### <a name="return-value"></a>Return Value  
- An output iterator addressing the position one past the last element in the sorted destination range representing the difference of the two source ranges.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador de salida que dirige a la posición situada una posición después del último elemento del intervalo de destino ordenado que representa la diferencia de los dos intervalos de origen.  
   
-### <a name="remarks"></a>Remarks  
- The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ Los intervalos de origen ordenados a los que se hace referencia deben ser válidos; todos los punteros deben poder desreferenciarse y, dentro de cada secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- The destination range should not overlap either of the source ranges and should be large enough to contain the first source range.  
+ El intervalo de destino no debe superponerse a ninguno de los intervalos de origen y debe ser lo suficientemente grande como para contener el intervalo del primer origen.  
   
- The sorted source ranges must each be arranged as a precondition to the application of the `set_difference` algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
+ Los intervalos de origen ordenados deben estar organizados como condición previa a la aplicación del algoritmo `set_difference` según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados.  
   
- The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm merge.  
+ La operación es estable, ya que se conserva el orden relativo de los elementos de cada intervalo en el intervalo de destino. El algoritmo merge no modifica los intervalos de origen.  
   
- The value types of the input iterators need be less-than-comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element such that there are more in the first source range than in the second, then the destination range will contain the number by which the occurrences of those elements in the first source range exceed the occurrences of those elements in the second source range.  
+ Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro). Esto produce una ordenación entre los elementos no equivalentes. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo intervalo de origen en el intervalo de destino. Si los intervalos de origen contienen duplicados de un elemento, de forma que hay más en el primer intervalo de origen que en el segundo, el intervalo de destino contendrá el número por el que las apariciones de esos elementos en el primer intervalo de origen supera a las apariciones de esos elementos en el segundo intervalo de origen.  
   
- The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) - ( *last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
+ La complejidad del algoritmo es lineal con al menos 2 \* (( *last1 - first1*)-( *last2 - first2*)) - 1 comparaciones para intervalos de origen no vacíos.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_set_diff.cpp  
@@ -6860,7 +6843,7 @@ int main( )
 ```  
   
 ##  <a name="set_intersection"></a>  set_intersection  
- Unites all of the elements that belong to both sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
+ Agrupa todos los elementos que pertenecen a ambos intervalos de origen ordenados en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
  template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -6882,42 +6865,42 @@ OutputIterator set_intersection(
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first1`  
- An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
+ Iterador de entrada que direcciona la posición del primer elemento en el primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la intersección de los dos intervalos de origen.  
   
  `last1`  
- An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
+ Iterador de entrada que direcciona la posición situada una posición después del último elemento en el primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la intersección de los dos intervalos de origen.  
   
   `first2`  
- An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
+ Iterador de entrada que direcciona la posición del primer elemento en el segundo de dos intervalos de origen ordenados consecutivos que se van a combinar y ordenar en un solo intervalo que representa la intersección de los dos intervalos de origen.  
   
  `last2`  
- An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
+ Iterador de entrada que direcciona la posición situada una posición después del último elemento en el segundo de dos intervalos de origen ordenados consecutivos que se van a combinar y ordenar en un solo intervalo que representa la intersección de los dos intervalos de origen.  
   
- **_** *Result*  
- An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the intersection of the two source ranges.  
+ **_** *Resultado*  
+ Iterador de salida que direcciona la posición del primer elemento del intervalo de destino donde los dos intervalos de origen se van a combinar en un solo intervalo ordenado que representa la intersección de los dos intervalos de origen.  
   
  `comp`  
- User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.  
   
-### <a name="return-value"></a>Return Value  
- An output iterator addressing the position one past the last element in the sorted destination range representing the intersection of the two source ranges.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador de salida que direcciona la posición situada una posición después del último elemento del intervalo de destino ordenado que representa la intersección de los dos intervalos de origen.  
   
-### <a name="remarks"></a>Remarks  
- The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ Los intervalos de origen ordenados a los que se hace referencia deben ser válidos; todos los punteros deben poder desreferenciarse y, dentro de cada secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
+ El intervalo de destino no debe superponerse a ninguno de los intervalos de origen y debe ser lo suficientemente grande como para contener el intervalo de destino.  
   
- The sorted source ranges must each be arranged as a precondition to the application of the merge algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
+ Los intervalos de origen ordenados deben estar organizados como condición previa a la aplicación del algoritmo merge según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados.  
   
- The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm.  
+ La operación es estable, ya que se conserva el orden relativo de los elementos de cada intervalo en el intervalo de destino. El algoritmo no modifica los intervalos de origen.  
   
- The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element, then the destination range will contain the maximum number of those elements that occur in both source ranges.  
+ Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo intervalo de origen en el intervalo de destino. Si los intervalos de origen contienen duplicados de un elemento, el intervalo de destino contendrá el número máximo de los elementos que aparecen en ambos intervalos de origen.  
   
- The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) + ( *last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
+ La complejidad del algoritmo es lineal con al menos 2 \* (( *last1 - first1*) + ( *last2 - first2*)) - 1 comparaciones para intervalos de origen no vacíos.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_set_intersection.cpp  
@@ -7031,7 +7014,7 @@ int main() {
 ```  
   
 ##  <a name="set_symmetric_difference"></a>  set_symmetric_difference  
- Unites all of the elements that belong to one, but not both, of the sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
+ Agrupa todos los elementos que pertenecen a uno, pero no a ambos, de los intervalos de origen ordenados en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
 template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -7053,42 +7036,42 @@ OutputIterator set_symmetric_difference(
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first1`  
- An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
+ Iterador de entrada que direcciona la posición del primer elemento del primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la diferencia simétrica de los dos intervalos de origen.  
   
  `last1`  
- An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
+ Iterador de entrada que direcciona la posición situada una posición después del último elemento del primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la diferencia simétrica de los dos intervalos de origen.  
   
   `first2`  
- An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
+ Iterador de entrada que direcciona la posición del primer elemento del segundo de dos intervalos de origen ordenados consecutivos que se van a combinar y ordenar en un solo intervalo que representa la diferencia simétrica de los dos intervalos de origen.  
   
  `last2`  
- An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
+ Iterador de entrada que direcciona la posición situada una posición después del último elemento del segundo de dos intervalos de origen ordenados consecutivos que se van a combinar y ordenar en un solo intervalo que representa la diferencia simétrica de los dos intervalos de origen.  
   
- **_** *Result*  
- An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the symmetric difference of the two source ranges.  
+ **_** *Resultado*  
+ Iterador de salida que direcciona la posición del primer elemento del intervalo de destino donde los dos intervalos de origen se van a combinar en un solo intervalo ordenado que representa la diferencia simétrica de los dos intervalos de origen.  
   
  `comp`  
- User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.  
   
-### <a name="return-value"></a>Return Value  
- An output iterator addressing the position one past the last element in the sorted destination range representing the symmetric difference of the two source ranges.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador de salida que direcciona la posición situada una posición después del último elemento del intervalo de destino ordenado que representa la diferencia simétrica de los dos intervalos de origen.  
   
-### <a name="remarks"></a>Remarks  
- The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ Los intervalos de origen ordenados a los que se hace referencia deben ser válidos; todos los punteros deben poder desreferenciarse y, dentro de cada secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
+ El intervalo de destino no debe superponerse a ninguno de los intervalos de origen y debe ser lo suficientemente grande como para contener el intervalo de destino.  
   
- The sorted source ranges must each be arranged as a precondition to the application of the **merge** algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
+ Los intervalos de origen ordenados deben estar organizados como condición previa a la aplicación del algoritmo **merge** según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados.  
   
- The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm merge.  
+ La operación es estable, ya que se conserva el orden relativo de los elementos de cada intervalo en el intervalo de destino. El algoritmo merge no modifica los intervalos de origen.  
   
- The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element, then the destination range will contain the absolute value of the number by which the occurrences of those elements in the one of the source ranges exceeds the occurrences of those elements in the second source range.  
+ Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo intervalo de origen en el intervalo de destino. Si los intervalos de origen contienen duplicados de un elemento, el intervalo de destino contendrá el valor absoluto del número por el que las apariciones de esos elementos en uno de los intervalos de origen supera a las apariciones de esos elementos en el segundo intervalo de origen.  
   
- The complexity of the algorithm is linear with at most 2 \* ( (*last1 - first1*) - (*last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
+ La complejidad del algoritmo es lineal con al menos 2 \* ((*last1 - first1*)-(*last2 - first2*)) - 1 comparaciones para intervalos de origen no vacíos.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_set_sym_diff.cpp  
@@ -7208,7 +7191,7 @@ int main( )
 ```  
   
 ##  <a name="set_union"></a>  set_union  
- Unites all of the elements that belong to at least one of two sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
+ Agrupa todos los elementos que pertenecen al menos a uno de los dos intervalos de origen ordenados en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
  template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -7229,42 +7212,42 @@ OutputIterator set_union(
     BinaryPredicate comp );  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first1`  
- An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
+ Iterador de entrada que direcciona la posición del primer elemento en el primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la unión de los dos intervalos de origen.  
   
  `last1`  
- An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
+ Iterador de entrada que direcciona la posición situada una posición después del último elemento en el primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la unión de los dos intervalos de origen.  
   
   `first2`  
- An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
+ Iterador de entrada que direcciona la posición del primer elemento en el segundo de dos intervalos de origen ordenados consecutivos que se van a combinar y ordenar en un solo intervalo que representa la unión de los dos intervalos de origen.  
   
  `last2`  
- An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
+ Iterador de entrada que direcciona la posición situada una posición después del último elemento en el segundo de dos intervalos de origen ordenados consecutivos que se van a combinar y ordenar en un solo intervalo que representa la unión de los dos intervalos de origen.  
   
- **_** *Result*  
- An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the union of the two source ranges.  
+ **_** *Resultado*  
+ Iterador de salida que direcciona la posición del primer elemento del intervalo de destino donde los dos intervalos de origen se van a combinar en un solo intervalo ordenado que representa la unión de los dos intervalos de origen.  
   
  `comp`  
- User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.  
   
-### <a name="return-value"></a>Return Value  
- An output iterator addressing the position one past the last element in the sorted destination range representing the union of the two source ranges.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador de salida que direcciona la posición situada una posición después del último elemento del intervalo de destino ordenado que representa la unión de los dos intervalos de origen.  
   
-### <a name="remarks"></a>Remarks  
- The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ Los intervalos de origen ordenados a los que se hace referencia deben ser válidos; todos los punteros deben poder desreferenciarse y, dentro de cada secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
+ El intervalo de destino no debe superponerse a ninguno de los intervalos de origen y debe ser lo suficientemente grande como para contener el intervalo de destino.  
   
- The sorted source ranges must each be arranged as a precondition to the application of the **merge** algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
+ Los intervalos de origen ordenados deben estar organizados como condición previa a la aplicación del algoritmo **merge** según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados.  
   
- The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm **merge**.  
+ La operación es estable, ya que se conserva el orden relativo de los elementos de cada intervalo en el intervalo de destino. El algoritmo **merge**no modifica los intervalos de origen.  
   
- The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element, then the destination range will contain the maximum number of those elements that occur in both source ranges.  
+ Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro). Esto produce una ordenación entre los elementos no equivalentes. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo intervalo de origen en el intervalo de destino. Si los intervalos de origen contienen duplicados de un elemento, el intervalo de destino contendrá el número máximo de los elementos que aparecen en ambos intervalos de origen.  
   
- The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) - ( *last2 - first2*) ) - 1 comparisons.  
+ La complejidad del algoritmo es lineal con al menos 2 \* (( *last1 - first1*)-( *last2 - first2*)) - 1 comparaciones.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_set_union.cpp  
@@ -7384,7 +7367,7 @@ int main( )
 ```  
   
 ##  <a name="shuffle"></a>  std::shuffle  
- Shuffles (rearranges) elements for a given range by using a random number generator.  
+ Ordena (reorganiza) elementos para un intervalo determinado utilizando un generador de números aleatorio.  
   
 ```  
 template<class RandomAccessIterator, class UniformRandomNumberGenerator>  
@@ -7393,21 +7376,21 @@ void shuffle(RandomAccessIterator first,
     UniformRandomNumberGenerator&& gen);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- An iterator to the first element in the range to be shuffled, inclusive. Must meet the requirements of `RandomAccessIterator` and `ValueSwappable`.  
+ Un iterador del primer elemento del intervalo que debe ordenarse, incluido. Debe cumplir los requisitos de `RandomAccessIterator` y `ValueSwappable`.  
   
  `last`  
- An iterator to the last element in the range to be shuffled, exclusive. Must meet the requirements of `RandomAccessIterator` and `ValueSwappable`.  
+ Un iterador del último elemento del intervalo que debe ordenarse, excluido. Debe cumplir los requisitos de `RandomAccessIterator` y `ValueSwappable`.  
   
  `gen`  
- The random number generator that the `shuffle()` function will use for the operation. Must meet the requirements of a `UniformRandomNumberGenerator`.  
+ El generador de números aleatorios que la función `shuffle()` utilizará para la operación. Debe cumplir los requisitos de un `UniformRandomNumberGenerator`.  
   
-### <a name="remarks"></a>Remarks  
- For more information, and a code sample that uses `shuffle()`, see [\<random>](../standard-library/random.md).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información y un ejemplo de código que emplea `shuffle()`, vea [\<random>](../standard-library/random.md).  
   
 ##  <a name="sort"></a>  sort  
- Arranges the elements in a specified range into a nondescending order or according to an ordering criterion specified by a binary predicate.  
+ Organiza los elementos de un intervalo especificado en un orden no descendente o de acuerdo con un criterio de ordenación especificado por un predicado binario.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -7423,24 +7406,24 @@ template<class RandomAccessIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- A random-access iterator addressing the position of the first element in the range to be sorted.  
+ Iterador de acceso aleatorio que dirige a la posición del primer elemento del intervalo que se va a ordenar.  
   
  `last`  
- A random-access iterator addressing the position one past the final element in the range to be sorted.  
+ Iterador de acceso aleatorio que dirige a la posición situada una posición después del último elemento del intervalo que se va a ordenar.  
   
  `comp`  
- User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. This binary predicate takes two arguments and returns `true` if the two arguments are in order and `false` otherwise. This comparator function must impose a strict weak ordering on pairs of elements from the sequence. For more information, see [Algorithms](../standard-library/algorithms.md).  
+ Objeto de función de predicado definido por el usuario que define el criterio de comparación que deben cumplir los elementos sucesivos de la ordenación. Este predicado binario toma dos argumentos y devuelve `true` si los dos están en orden y `false` en caso contrario. Esta función de comparador debe imponer una ordenación débil estricta en los pares de elementos de la secuencia. Para más información, vea [Algoritmos](../standard-library/algorithms.md).  
   
-### <a name="remarks"></a>Remarks  
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- Elements are equivalent, but not necessarily equal, if neither is less than the other. The `sort` algorithm is not stable and so does not guarantee that the relative ordering of equivalent elements will be preserved. The algorithm `stable_sort` does preserve this original ordering.  
+ Los elementos son equivalentes, pero no necesariamente iguales, si ninguno es menor que el otro. El algoritmo `sort` no es estable ni garantiza la conservación de la ordenación relativa de los elementos equivalentes. El algoritmo `stable_sort` conserva esta ordenación original.  
   
- The average of a sort complexity is  *O*( *N* log  *N*), where  *N* =  *last - first*.  
+ El promedio de una complejidad de la ordenación es *O*( *N* registro *N*), donde *N* =  *apellido - nombre*.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_sort.cpp  
@@ -7509,7 +7492,7 @@ Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 ```  
   
 ##  <a name="sort_heap"></a>  sort_heap  
- Converts a heap into a sorted range.  
+ Convierte un montón en un intervalo ordenado.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -7524,34 +7507,34 @@ template<class RandomAccessIterator, class Predicate>
       Predicate comp);  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A random-access iterator addressing the position of the first element in the target heap.  
+ Iterador de acceso aleatorio que dirige a la posición del primer elemento del montón de destino.  
   
  `last`  
- A random-access iterator addressing the position one past the final element in the target heap.  
+ Iterador de acceso aleatorio que dirige a la posición situada una posición después del último elemento del montón de destino.  
   
  `comp`  
- User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="remarks"></a>Remarks  
- Heaps have two properties:  
+### <a name="remarks"></a>Comentarios  
+ Los montones tienen dos propiedades:  
   
--   The first element is always the largest.  
+-   El primer elemento siempre es el mayor.  
   
--   Elements may be added or removed in logarithmic time.  
+-   Se pueden agregar o quitar elementos en tiempo logarítmico.  
   
- After the application if this algorithm, the range it was applied to is no longer a heap.  
+ Después de la aplicación de este algoritmo, el intervalo al que se ha aplicado ya no es un montón.  
   
- This is not a stable sort because the relative order of equivalent elements is not necessarily preserved.  
+ No es un orden estable, porque no se conserva necesariamente el orden relativo de los elementos equivalentes.  
   
- Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
+ Los montones son una forma ideal de implementar colas de prioridad y se usan en la implementación del adaptador de contenedor de la biblioteca estándar de C++ [priority_queue (Clase)](../standard-library/priority-queue-class.md).  
   
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- The complexity is at most  *N* log  *N*, where  *N* = ( *last - first*).  
+ La complejidad es a lo sumo *N* registro *N*, donde *N* = ( *apellido - nombre*).  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_sort_heap.cpp  
@@ -7602,7 +7585,7 @@ int main() {
 ```  
   
 ##  <a name="stable_partition"></a>  stable_partition  
- Classifies elements in a range into two disjoint sets, with those elements satisfying a unary predicate preceding those that fail to satisfy it, preserving the relative order of equivalent elements.  
+ Clasifica los elementos de un intervalo en dos conjuntos disjuntos, donde los elementos que satisfacen un predicado unario preceden a los que no lo satisfacen, conservando el orden relativo de los elementos equivalentes.  
   
 ```  
 template<class BidirectionalIterator, class Predicate>  
@@ -7613,25 +7596,25 @@ BidirectionalIterator stable_partition(
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A bidirectional iterator addressing the position of the first element in the range to be partitioned.  
+ Iterador bidireccional que dirige a la posición del primer elemento del intervalo que se va a dividir.  
   
  `last`  
- A bidirectional iterator addressing the position one past the final element in the range to be partitioned.  
+ Iterador bidireccional que dirige a la posición situada una posición después del último elemento del intervalo que se va a dividir.  
   
  `_Pred`  
- User-defined predicate function object that defines the condition to be satisfied if an element is to be classified. A predicate takes single argument and returns **true** or **false**.  
+ Objeto de función de predicado definido por el usuario que define la condición que debe cumplir un elemento para ser clasificado. Un predicado toma un único argumento y devuelve **True** o **False**.  
   
-### <a name="return-value"></a>Return Value  
- A bidirectional iterator addressing the position of the first element in the range to not satisfy the predicate condition.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador bidireccional que dirige a la posición del primer elemento del intervalo que no cumple la condición del predicado.  
   
-### <a name="remarks"></a>Remarks  
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- Elements  *a* and  *b* are equivalent, but not necessarily equal, if both  *Pr* ( *a*,  *b*) is false and  *Pr* ( *b*,  *a*) if false, where  *Pr* is the parameter-specified predicate. The **stable_ partition** algorithm is stable and guarantees that the relative ordering of equivalent elements will be preserved. The algorithm **partition** does not necessarily preserve this original ordering.  
+ Los elementos *a* y *b* son equivalentes, pero no necesariamente iguales, si *Pr* (*a*, *b*) es falso y *Pr* (*b*, *a*) también, donde *Pr* es el predicado especificado por el parámetro. El algoritmo **stable_ partition** es estable y garantiza la conservación de la ordenación relativa de los elementos equivalentes. El algoritmo **partition** no conserva necesariamente esta ordenación original.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_stable_partition.cpp  
@@ -7677,7 +7660,7 @@ int main( ) {
 ```  
   
 ##  <a name="stable_sort"></a>  stable_sort  
- Arranges the elements in a specified range into a nondescending order or according to an ordering criterion specified by a binary predicate and preserves the relative ordering of equivalent elements.  
+ Organiza los elementos de un intervalo especificado en un orden no descendente o de acuerdo con un criterio de ordenación especificado por un predicado binario y conserva el orden relativo de los elementos equivalentes.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -7691,24 +7674,24 @@ void stable_sort(
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A bidirectional iterator addressing the position of the first element in the range to be sorted.  
+ Iterador bidireccional que dirige a la posición del primer elemento del intervalo que se va a ordenar.  
   
  `last`  
- A bidirectional iterator addressing the position one past the final element in the range to be sorted.  
+ Iterador bidireccional que dirige a la posición situada una posición después del último elemento del intervalo que se va a ordenar.  
   
  `comp`  
- User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define el criterio de comparación que deben cumplir los elementos sucesivos de la ordenación. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="remarks"></a>Remarks  
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.  
   
- Elements are equivalent, but not necessarily equal, if neither is less than the other. The **sort** algorithm is stable and guarantees that the relative ordering of equivalent elements will be preserved.  
+ Los elementos son equivalentes, pero no necesariamente iguales, si ninguno es menor que el otro. El algoritmo **sort** es estable y garantiza la conservación de la ordenación relativa de los elementos equivalentes.  
   
- The run-time complexity of `stable_sort` depends on the amount of memory available, but the best case (given sufficient memory) is  *O*( *N* log  *N*) and the worst case is  *O*(  *N* ( log  *N* )2 ), where  *N* =  *last - First.* Usually, the **sort** algorithm is significantly faster than `stable_sort`.  
+ La complejidad del tiempo de ejecución de `stable_sort` depende de la cantidad de memoria disponible, pero es el mejor de los casos (tiene suficiente memoria) *O*( *N* registro *N*) y es el peor de los casos *O*( *N* (registro *N* ) 2), donde *N* =  *apellido - nombre.* Normalmente, el algoritmo **sort** es considerablemente más rápido que `stable_sort`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_stable_sort.cpp  
@@ -7776,7 +7759,7 @@ Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 ```  
   
 ##  <a name="swap"></a>  swap  
- The first override exchanges the values of two objects. The second override exchanges the values between two arrays of objects.  
+ El primer reemplazo intercambia los valores de dos objetos. El segundo reemplazo intercambia los valores entre dos matrices de objetos.  
   
 ```  
 template<class Type>  
@@ -7790,17 +7773,17 @@ template<class Type, size_t N>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- For the first override, the first object to have its contents exchanged. For the second override, the first array of objects to have its contents exchanged.  
+ En el primer reemplazo, primer objeto cuyo contenido se intercambia. En el segundo reemplazo, primera matriz de objetos cuyo contenido se intercambia.  
   
  `right`  
- For the first override, the second object to have its contents exchanged. For the second override, the second array of objects to have its contents exchanged.  
+ En el primer reemplazo, segundo objeto cuyo contenido se intercambia. En el segundo reemplazo, segunda matriz de objetos cuyo contenido se intercambia.  
   
-### <a name="remarks"></a>Remarks  
- The first overload is designed to operate on individual objects. The second overload swaps the contents of objects between two arrays.  
+### <a name="remarks"></a>Comentarios  
+ La primera sobrecarga está diseñada para actuar sobre objetos individuales. La segunda sobrecarga intercambia el contenido de objetos entre dos matrices.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_swap.cpp  
@@ -7857,7 +7840,7 @@ Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).
 ```  
   
 ##  <a name="swap_ranges"></a>  swap_ranges  
- Exchanges the elements of one range with the elements of another, equal sized range.  
+ Intercambia los elementos de un intervalo con los elementos de otro intervalo del mismo tamaño.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -7868,25 +7851,25 @@ ForwardIterator2 swap_ranges(
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first1`  
- A forward iterator pointing to the first position of the first range whose elements are to be exchanged.  
+ Iterador hacia delante que apunta a la primera posición del primer intervalo cuyos elementos se van a intercambiar.  
   
  `last1`  
- A forward iterator pointing to one past the final position of the first range whose elements are to be exchanged.  
+ Iterador hacia delante que apunta a la posición situada una posición después del último elemento del primer intervalo cuyos elementos se van a intercambiar.  
   
   `first2`  
- A forward iterator pointing to the first position of the second range whose elements are to be exchanged.  
+ Iterador hacia delante que apunta a la primera posición del segundo intervalo cuyos elementos se van a intercambiar.  
   
-### <a name="return-value"></a>Return Value  
- A forward iterator pointing to one past the final position of the second range whose elements are to be exchanged.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador hacia delante que apunta a la posición situada una posición después del último elemento del segundo intervalo cuyos elementos se van a intercambiar.  
   
-### <a name="remarks"></a>Remarks  
- The ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation. The second range has to be as large as the first range.  
+### <a name="remarks"></a>Comentarios  
+ Los intervalos a los que se hace referencia deben ser válidos; todos los punteros deben poder desreferenciarse y, dentro de cada secuencia, se debe poder acceder a la última posición desde la primera mediante incrementos. El segundo intervalo tiene que ser tan grande como el primero.  
   
- The complexity is linear with `last1` -  `first1` swaps performed. If elements from containers of the same type are being swapped, them the `swap` member function from that container should be used, because the member function typically has constant complexity.  
+ La complejidad es lineal con `last1`  -   `first1` intercambios realiza. Si se intercambian elementos de contenedores del mismo tipo, se debería usar la función miembro `swap` de ese contenedor, porque esta normalmente tiene complejidad constante.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_swap_ranges.cpp  
@@ -7948,7 +7931,7 @@ After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).
 ```  
   
 ##  <a name="transform"></a>  transform  
- Applies a specified function object to each element in a source range or to a pair of elements from two source ranges and copies the return values of the function object into a destination range.  
+ Aplica un objeto de función especificado a cada elemento de un intervalo de origen o a un par de elementos de dos intervalos de origen y copia los valores devueltos del objeto de función a un intervalo de destino.  
   
 ```  
  template<class InputIterator, class OutputIterator, class UnaryFunction>  
@@ -7968,33 +7951,33 @@ OutputIterator transform(
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first1`  
- An input iterator addressing the position of the first element in the first source range to be operated on.  
+ Iterador de entrada que dirige a la posición del primer elemento del primer intervalo de origen en el que se va a operar.  
   
  `last1`  
- An input iterator addressing the position one past the final element in the first source range operated on.  
+ Iterador de entrada que dirige a la posición situada una posición después del último elemento del primer intervalo de origen en el que se va a operar.  
   
   `first2`  
- An input iterator addressing the position of the first element in the second source range to be operated on.  
+ Iterador de entrada que dirige a la posición del primer elemento del segundo intervalo de origen en el que se va a operar.  
   
  `result`  
- An output iterator addressing the position of the first element in the destination range.  
+ Iterador de salida que direcciona la posición del primer elemento del intervalo de destino.  
   
  `_Func`  
- User-defined unary function object used in the first version of the algorithm that is applied to each element in the first source range or A user-defined (UD) binary function object used in the second version of the algorithm that is applied pairwise, in a forward order, to the two source ranges.  
+ Objeto de función unario definido por el usuario empleado en la primera versión del algoritmo que se aplica a cada elemento del primer intervalo de origen u objeto de función binario definido por el usuario empleado en la segunda versión del algoritmo que se aplica en pares, en un orden hacia delante, a los dos intervalos de origen.  
   
-### <a name="return-value"></a>Return Value  
- An output iterator addressing the position one past the final element in the destination range that is receiving the output elements transformed by the function object.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador de salida que dirige a la posición situada una posición después del último elemento del intervalo de destino que va a recibir los elementos de salida transformados por el objeto de función.  
   
-### <a name="remarks"></a>Remarks  
- The ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation. The destination range must be large enough to contain the transformed source range.  
+### <a name="remarks"></a>Comentarios  
+ Los intervalos a los que se hace referencia deben ser válidos; todos los punteros deben poder desreferenciarse y, dentro de cada secuencia, se debe poder acceder a la última posición desde la primera mediante incrementos. El intervalo de destino debe ser lo suficientemente grande como para contener el intervalo de origen transformado.  
   
- If `result` is set equal to  `first1` in the first version of the algorithm, then the source and destination ranges will be the same and the sequence will be modified in place. But the `result` may not address a position within the range [`first1` + 1, `last1`).  
+ Si `result` está establecida en `first1` en la primera versión del algoritmo, a continuación, los intervalos de origen y de destino será el mismo y la secuencia que se va a modificar en su lugar. Pero la `result` no se puede resolver una posición dentro del intervalo [`first1` + 1, `last1`).  
   
- The complexity is linear with at most (`last1` -  `first1`) comparisons.  
+ La complejidad es lineal con, a lo sumo (`last1` -  `first1`) las comparaciones.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_transform.cpp  
@@ -8082,7 +8065,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
 ```  
   
 ##  <a name="unique"></a>  unique  
- Removes duplicate elements that are adjacent to each other in a specified range.  
+ Quita los elementos duplicados adyacentes entre sí en un intervalo especificado.  
   
 ```  
 template<class ForwardIterator>  
@@ -8098,33 +8081,33 @@ template<class ForwardIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A forward iterator addressing the position of the first element in the range to be scanned for duplicate removal.  
+ Iterador hacia delante que dirige a la posición del primer elemento del intervalo que se va a examinar para la eliminación de duplicados.  
   
  `last`  
- A forward iterator addressing the position one past the final element in the range to be scanned for duplicate removal.  
+ Iterador hacia delante que dirige a la posición situada una posición después del último elemento del intervalo que se va a examinar para la eliminación de duplicados.  
   
  `comp`  
- User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se van a tomar como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="return-value"></a>Return Value  
- A forward iterator to the new end of the modified sequence that contains no consecutive duplicates, addressing the position one past the last element not removed.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador hacia delante al nuevo final de la secuencia modificada que no contiene duplicados consecutivos, que se dirige a la posición situada una posición después del último elemento no eliminado.  
   
-### <a name="remarks"></a>Remarks  
- Both forms of the algorithm remove the second duplicate of a consecutive pair of equal elements.  
+### <a name="remarks"></a>Comentarios  
+ Ambas formas del algoritmo quitan el segundo duplicado de un par consecutivo de elementos iguales.  
   
- The operation of the algorithm is stable so that the relative order of the undeleted elements is not changed.  
+ La operación de algoritmo es estable, de forma que no se altera el orden relativo de los elementos no borrados.  
   
- The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation. he number of elements in the sequence is not changed by the algorithm **unique** and the elements beyond the end of the modified sequence are dereferenceable but not specified.  
+ El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos. El algoritmo **unique** no modifica el número de elementos de la secuencia y los elementos más allá del final de la secuencia modificada se pueden desreferenciar pero no especificar.  
   
- The complexity is linear, requiring ( `last` -  `first`) - 1 comparisons.  
+ La complejidad es lineal, que requieren ( `last`  -   `first`) - 1 comparaciones.  
   
- List provides a more efficient member function "unique", which may perform better.  
+ List proporciona una función miembro "unique" más eficaz que puede funcionar mejor.  
   
- These algorithms cannot be used on an associative container.  
+ Estos algoritmos no se puede usar en un contenedor asociativo.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_unique.cpp  
@@ -8212,7 +8195,7 @@ Removing adjacent elements satisfying the binary
 ```  
   
 ##  <a name="unique_copy"></a>  unique_copy  
- Copies elements from a source range into a destination range except for the duplicate elements that are adjacent to each other.  
+ Copia los elementos de un intervalo de origen a un intervalo de destino salvo los elementos duplicados que son adyacentes entre sí.  
   
 ```  
  template<class InputIterator, class OutputIterator>  
@@ -8228,32 +8211,32 @@ OutputIterator unique_copy( InputIterator first,
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   `first`  
- A forward iterator addressing the position of the first element in the source range to be copied.  
+ Iterador hacia delante que dirige a la posición del primer elemento del intervalo de origen que se va a copiar.  
   
  `last`  
- A forward iterator addressing the position one past the final element in the source range to be copied.  
+ Iterador hacia delante que dirige a la posición situada una posición después del último elemento del intervalo de origen que se va a copiar.  
   
  `result`  
- An output iterator addressing the position of the first element in the destination range that is receiving the copy with consecutive duplicates removed.  
+ Iterador de salida que dirige a la posición del primer elemento del intervalo de destino que recibe la copia con duplicados consecutivos quitados.  
   
  `comp`  
- User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se van a tomar como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="return-value"></a>Return Value  
- An output iterator addressing the position one past the final element in the destination range that is receiving the copy with consecutive duplicates removed.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador de salida que dirige a la posición situada una posición después del último elemento del intervalo de destino que va a recibir la copia con duplicados consecutivos quitados.  
   
-### <a name="remarks"></a>Remarks  
- Both forms of the algorithm remove the second duplicate of a consecutive pair of equal elements.  
+### <a name="remarks"></a>Comentarios  
+ Ambas formas del algoritmo quitan el segundo duplicado de un par consecutivo de elementos iguales.  
   
- The operation of the algorithm is stable so that the relative order of the undeleted elements is not changed.  
+ La operación de algoritmo es estable, de forma que no se altera el orden relativo de los elementos no borrados.  
   
- The ranges referenced must be valid; all pointers must be dereferenceable and within a sequence the last position is reachable from the first by incrementation.  
+ Los intervalos a los que se hace referencia deben ser válidos: todos los punteros deben poder desreferenciarse y, dentro de una secuencia, se debe poder tener acceso a la última posición desde la primera con incrementos.  
   
- The complexity is linear, requiring ( `last` -  `first`) comparisons.  
+ La complejidad es lineal, que requieren ( `last`  -   `first`) las comparaciones.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_unique_copy.cpp  
@@ -8326,7 +8309,7 @@ int main() {
 ```  
   
 ##  <a name="upper_bound"></a>  upper_bound  
- Finds the position of the first element in an ordered range that has a value that is greater than a specified value, where the ordering criterion may be specified by a binary predicate.  
+ Busca la posición del primer elemento de un intervalo ordenado que tiene un valor mayor que un valor especificado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -8344,34 +8327,34 @@ template<class ForwardIterator, class Type, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- The position of the first element in the range to be searched.  
+ Posición del primer elemento del intervalo en el que se va a buscar.  
   
  `last`  
- The position one past the final element in the range to be searched.  
+ Posición situada una posición después del último elemento del intervalo en el que se va a buscar.  
   
  `value`  
- The value in the ordered range that needs to be exceeded by the value of the element addressed by the iterator returned.  
+ Valor del intervalo ordenado que debe ser superado por el valor del elemento al que se dirige el iterador devuelto.  
   
  `comp`  
- User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
+ Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.  
   
-### <a name="return-value"></a>Return Value  
- A forward iterator to the position of the first element that has a value greater than a specified value.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador hacia delante a la posición del primer elemento que tiene un valor mayor que uno especificado.  
   
-### <a name="remarks"></a>Remarks  
- The sorted source range referenced must be valid; all iterators must be dereferenceable and within the sequence the last position must be reachable from the first by incrementation.  
+### <a name="remarks"></a>Comentarios  
+ El intervalo de origen ordenado al que se hace referencia debe ser válido; todos los iteradores deben poder desreferenciarse y, dentro de la secuencia, la última posición debe ser accesible desde la primera mediante incrementos.  
   
- A sorted range is a precondition of the use of `upper_bound` and where the ordering criterion is the same as specified by the binary predicate.  
+ Un intervalo ordenado es una condición previa al uso de `upper_bound`; en él el criterio de ordenación es el mismo que el especificado por el predicado binario.  
   
- The range is not modified by `upper_bound`.  
+ `upper_bound` no modifica el intervalo.  
   
- The value types of the forward iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements  
+ Los tipos de valor de los iteradores hacia delante tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes.  
   
- The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last - first`).  
+ La complejidad del algoritmo es logarítmica para los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcional a (`last - first`).  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // alg_upper_bound.cpp  
@@ -8461,5 +8444,5 @@ int main( )
 }  
   
 ```  
-## <a name="see-also"></a>See Also   
+## <a name="see-also"></a>Vea también   
  [\<algorithm>](../standard-library/algorithm.md)

@@ -1,38 +1,23 @@
 ---
-title: '&lt;map&gt; operators | Microsoft Docs'
+title: Operadores de &lt;map&gt; | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- map/std::operator!=
-- map/std::operator&gt;
-- map/std::operator&gt;=
-- map/std::operator&lt;
-- map/std::operator&lt;=
-- map/std::operator==
-dev_langs:
-- C++
+f1_keywords: []
 ms.assetid: 7df02b9f-701c-44ed-834a-a819badc5bd0
 caps.latest.revision: 7
 manager: ghogen
-helpviewer_keywords:
-- std::operator!= (map)
-- std::operator&gt; (map)
-- std::operator&gt;= (map)
-- std::operator&lt; (map)
-- std::operator&lt;= (map)
-- std::operator== (map)
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 74159cfb320589fd86049a3295d2fed0ae761f7e
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 193e9630fed60412eae2e3ba83a1eb5a201e0bec
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="ltmapgt-operators"></a>&lt;map&gt; operators
+# <a name="ltmapgt-operators"></a>Operadores de &lt;map&gt;
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
@@ -41,7 +26,7 @@ ms.lasthandoff: 09/09/2017
 |[operator&lt;](#op_lt_multimap)|[operator&lt;=](#op_lt_eq_multimap)|[operator==](#op_eq_eq_multimap)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- Tests if the map object on the left side of the operator is not equal to the map object on the right side.  
+ Comprueba si el objeto de mapa del lado izquierdo del operador no es igual que el objeto de mapa del lado derecho.  
   
 ```
 bool operator!=(
@@ -49,20 +34,20 @@ bool operator!=(
       const map <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type **map**.  
+ Objeto de tipo **map**.  
   
  `right`  
- An object of type **map**.  
+ Objeto de tipo **map**.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the maps are not equal; **false** if maps are equal.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si los mapas no son iguales; **False** si los mapas son iguales.  
   
-### <a name="remarks"></a>Remarks  
- The comparison between map objects is based on a pairwise comparison of their elements. Two maps are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
+### <a name="remarks"></a>Comentarios  
+ La comparación entre los objetos de mapa se basa en una comparación en pares de sus elementos. Dos mapas listas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // map_op_ne.cpp  
@@ -101,7 +86,7 @@ The maps m1 and m3 are equal.
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- Tests if the map object on the left side of the operator is less than the map object on the right side.  
+ Comprueba si el objeto de mapa del lado izquierdo del operador es menor que el objeto de mapa del lado derecho.  
   
 ```
 bool operator<(
@@ -109,20 +94,20 @@ bool operator<(
       const map <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type **map**.  
+ Objeto de tipo **map**.  
   
  `right`  
- An object of type **map**.  
+ Objeto de tipo **map**.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the map on the left side of the operator is strictly less than the map on the right side of the operator; otherwise **false**.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si el mapa del lado izquierdo del operador es estrictamente menor que el mapa del lado derecho del operador. En caso contrario, **False**.  
   
-### <a name="remarks"></a>Remarks  
- The comparison between map objects is based on a pairwise comparison of their elements. The less-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
+### <a name="remarks"></a>Comentarios  
+ La comparación entre los objetos de mapa se basa en una comparación en pares de sus elementos. La relación de menor que entre dos objetos se basa en una comparación del primer par de elementos diferentes.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // map_op_lt.cpp  
@@ -161,7 +146,7 @@ The map m1 is not less than the map m3.
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- Tests if the map object on the left side of the operator is less than or equal to the map object on the right side.  
+ Comprueba si el objeto de mapa del lado izquierdo del operador es menor o igual que el objeto de mapa del lado derecho.  
   
 ```
 bool operator<=(
@@ -169,17 +154,17 @@ bool operator<=(
       const map <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type **map**.  
+ Objeto de tipo **map**.  
   
  `right`  
- An object of type **map**.  
+ Objeto de tipo **map**.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the map on the left side of the operator is less than or equal to the map on the right side of the operator; otherwise **false**.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si el mapa del lado izquierdo del operador es menor o igual que el mapa del lado derecho del operador. En caso contrario, **False**.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // map_op_le.cpp  
@@ -225,7 +210,7 @@ The map m1 is less than or equal to the map m4.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Tests if the map object on the left side of the operator is equal to the map object on the right side.  
+ Comprueba si el objeto de mapa del lado izquierdo del operador es igual que el objeto de mapa del lado derecho.  
   
 ```
 bool operator==(
@@ -233,20 +218,20 @@ bool operator==(
       const map <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type **map**.  
+ Objeto de tipo **map**.  
   
  `right`  
- An object of type **map**.  
+ Objeto de tipo **map**.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the map on the left side of the operator is equal to the map on the right side of the operator; otherwise **false**.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si el mapa del lado izquierdo del operador es igual que el mapa del lado derecho del operador. En caso contrario, **False**.  
   
-### <a name="remarks"></a>Remarks  
- The comparison between map objects is based on a pairwise comparison of their elements. Two maps are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
+### <a name="remarks"></a>Comentarios  
+ La comparación entre los objetos de mapa se basa en una comparación en pares de sus elementos. Dos mapas listas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // map_op_eq.cpp  
@@ -285,7 +270,7 @@ The maps m1 and m3 are equal.
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- Tests if the map object on the left side of the operator is greater than the map object on the right side.  
+ Comprueba si el objeto de mapa del lado izquierdo del operador es mayor que el objeto de mapa del lado derecho.  
   
 ```
 bool operator>(
@@ -293,20 +278,20 @@ bool operator>(
       const map <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type **map**.  
+ Objeto de tipo **map**.  
   
  `right`  
- An object of type **map**.  
+ Objeto de tipo **map**.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the map on the left side of the operator is greater than the map on the right side of the operator; otherwise **false**.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si el mapa del lado izquierdo del operador es mayor que el mapa del lado derecho del operador. En caso contrario, **False**.  
   
-### <a name="remarks"></a>Remarks  
- The comparison between map objects is based on a pairwise comparison of their elements. The greater-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
+### <a name="remarks"></a>Comentarios  
+ La comparación entre los objetos de mapa se basa en una comparación en pares de sus elementos. La relación de mayor que entre dos objetos se basa en una comparación del primer par de elementos diferentes.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // map_op_gt.cpp  
@@ -345,7 +330,7 @@ The map m1 is greater than the map m3.
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- Tests if the map object on the left side of the operator is greater than or equal to the map object on the right side.  
+ Comprueba si el objeto de mapa del lado izquierdo del operador es mayor o igual que el objeto de mapa del lado derecho.  
   
 ```
 bool operator>=(
@@ -353,17 +338,17 @@ bool operator>=(
       const map <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type **map**.  
+ Objeto de tipo **map**.  
   
  `right`  
- An object of type **map**.  
+ Objeto de tipo **map**.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the map on the left side of the operator is greater than or equal to the map on the right side of the list; otherwise **false**.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si el mapa del lado izquierdo del operador es mayor o igual que el mapa del lado derecho de la lista. En caso contrario, **False**.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // map_op_ge.cpp  
@@ -409,7 +394,7 @@ Map m1 is greater than or equal to map m4.
 ```  
   
 ##  <a name="op_neq_multimap"></a>  operator!= (multimap)  
- Tests if the multimap object on the left side of the operator is not equal to the multimap object on the right side.  
+ Comprueba si el objeto de mapa múltiple del lado izquierdo del operador no es igual que el objeto de mapa múltiple del lado derecho.  
   
 ```
 bool operator!=(
@@ -417,20 +402,20 @@ bool operator!=(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type `multimap`.  
+ Objeto de tipo `multimap`.  
   
  `right`  
- An object of type `multimap`.  
+ Objeto de tipo `multimap`.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the multimaps are not equal; **false** if multimaps are equal.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si los mapas múltiples no son iguales; **False** si los mapas múltiples son iguales.  
   
-### <a name="remarks"></a>Remarks  
- The comparison between multimap objects is based on a pairwise comparison of their elements. Two multimaps are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
+### <a name="remarks"></a>Comentarios  
+ La comparación entre los objetos de mapa múltiple se basa en una comparación en pares de sus elementos. Dos mapas múltiples son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // multimap_op_ne.cpp  
@@ -469,7 +454,7 @@ The multimaps m1 and m3 are equal.
 ```  
   
 ##  <a name="op_lt_multimap"></a>  operator&lt;  
- Tests if the multimap object on the left side of the operator is less than the multimap object on the right side.  
+ Comprueba si el objeto de mapa múltiple del lado izquierdo del operador es menor que el objeto de mapa múltiple del lado derecho.  
   
 ```
 bool operator<(
@@ -477,20 +462,20 @@ bool operator<(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type `multimap`.  
+ Objeto de tipo `multimap`.  
   
  `right`  
- An object of type `multimap`.  
+ Objeto de tipo `multimap`.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the multimap on the left side of the operator is strictly less than the multimap on the right side of the operator; otherwise **false**.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si el mapa múltiple del lado izquierdo del operador es estrictamente menor que el mapa múltiple del lado derecho del operador. En caso contrario, **False**.  
   
-### <a name="remarks"></a>Remarks  
- The comparison between multimap objects is based on a pairwise comparison of their elements. The less-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
+### <a name="remarks"></a>Comentarios  
+ La comparación entre los objetos de mapa múltiple se basa en una comparación en pares de sus elementos. La relación de menor que entre dos objetos se basa en una comparación del primer par de elementos diferentes.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // multimap_op_lt.cpp  
@@ -529,7 +514,7 @@ The multimap m1 is not less than the multimap m3.
 ```  
   
 ##  <a name="eq_multimap"></a>  operator&lt;=  
- Tests if the multimap object on the left side of the operator is less than or equal to the multimap object on the right side.  
+ Comprueba si el objeto de mapa múltiple del lado izquierdo del operador es menor o igual que el objeto de mapa múltiple del lado derecho.  
   
 ```
 bool operator<=(
@@ -537,17 +522,17 @@ bool operator<=(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type `multimap`.  
+ Objeto de tipo `multimap`.  
   
  `right`  
- An object of type `multimap`.  
+ Objeto de tipo `multimap`.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the multimap on the left side of the operator is less than or equal to the multimap on the right side of the operator; otherwise **false**.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si el mapa múltiple del lado izquierdo del operador es menor o igual que el mapa múltiple del lado derecho del operador. En caso contrario, **alse**.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // multimap_op_le.cpp  
@@ -593,7 +578,7 @@ m1 is less than or equal to m4
 ```  
   
 ##  <a name="op_eq_eq_multimap"></a>  operator==  
- Tests if the multimap object on the left side of the operator is equal to the multimap object on the right side.  
+ Comprueba si el objeto de mapa múltiple del lado izquierdo del operador es igual que el objeto de mapa múltiple del lado derecho.  
   
 ```
 bool operator==(
@@ -601,20 +586,20 @@ bool operator==(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type `multimap`.  
+ Objeto de tipo `multimap`.  
   
  `right`  
- An object of type `multimap`.  
+ Objeto de tipo `multimap`.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the multimap on the left side of the operator is equal to the multimap on the right side of the operator; otherwise **false**.  
+### <a name="return-value"></a>Valor devuelto  
+ **rue** si el mapa múltiple del lado izquierdo del operador es igual que el mapa múltiple del lado derecho del operador. En caso contrario, **alse**.  
   
-### <a name="remarks"></a>Remarks  
- The comparison between multimap objects is based on a pairwise comparison of their elements. Two multimaps are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
+### <a name="remarks"></a>Comentarios  
+ La comparación entre los objetos de mapa múltiple se basa en una comparación en pares de sus elementos. Dos mapas múltiples son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // multimap_op_eq.cpp  
@@ -653,7 +638,7 @@ m1 and m3 are equal
 ```  
   
 ##  <a name="op_gt_multimap"></a>  operator&gt;  
- Tests if the multimap object on the left side of the operator is greater than the multimap object on the right side.  
+ Comprueba si el objeto de mapa múltiple del lado izquierdo del operador es mayor que el objeto de mapa múltiple del lado derecho.  
   
 ```
 bool operator>(
@@ -661,20 +646,20 @@ bool operator>(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type `multimap`.  
+ Objeto de tipo `multimap`.  
   
  `right`  
- An object of type `multimap`.  
+ Objeto de tipo `multimap`.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the multimap on the left side of the operator is greater than the multimap on the right side of the operator; otherwise **false**.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si el mapa múltiple del lado izquierdo del operador es mayor que el mapa múltiple del lado derecho del operador. En caso contrario, **False**.  
   
-### <a name="remarks"></a>Remarks  
- The comparison between multimap objects is based on a pairwise comparison of their elements. The greater-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
+### <a name="remarks"></a>Comentarios  
+ La comparación entre los objetos de mapa múltiple se basa en una comparación en pares de sus elementos. La relación de mayor que entre dos objetos se basa en una comparación del primer par de elementos diferentes.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // multimap_op_gt.cpp  
@@ -713,7 +698,7 @@ The multimap m1 is greater than the multimap m3.
 ```  
   
 ##  <a name="op_gt_eq_multimap"></a>  operator&gt;=  
- Tests if the multimap object on the left side of the operator is greater than or equal to the multimap object on the right side.  
+ Comprueba si el objeto de mapa múltiple del lado izquierdo del operador es mayor o igual que el objeto de mapa múltiple del lado derecho.  
   
 ```
 bool operator>=(
@@ -721,17 +706,17 @@ bool operator>=(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type `multimap`.  
+ Objeto de tipo `multimap`.  
   
  `right`  
- An object of type `multimap`.  
+ Objeto de tipo `multimap`.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the multimap on the left side of the operator is greater than or equal to the multimap on the right side of the list; otherwise **false**.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si el mapa múltiple del lado izquierdo del operador es mayor o igual que el mapa múltiple del lado derecho de la lista. En caso contrario, **False**.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // multimap_op_ge.cpp  
@@ -776,7 +761,7 @@ The multimap m1 is greater than or equal to the multimap m4.
 *\  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [\<map>](../standard-library/map.md)
 
 

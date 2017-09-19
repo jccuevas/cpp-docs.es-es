@@ -1,5 +1,5 @@
 ---
-title: add_const Class | Microsoft Docs
+title: add_const (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- add_const
 - type_traits/std::add_const
 dev_langs:
 - C++
@@ -34,31 +35,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 7865a718b4fa0ed95971ec091d5cfcd1b18a92ac
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: cb3ac9b9a7d25d129e1faa1b98cac176153c3966
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="addconst-class"></a>add_const Class
-Makes const type from type.  
+# <a name="addconst-class"></a>add_const (Clase)
+Crea un tipo const a partir de un tipo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class Ty>  
 struct add_const;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Ty`  
- The type to modify.  
+ Tipo que se va a modificar.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type modifier holds a modified-type that is `Ty` if `Ty` is a reference, a function, or a const-qualified type, otherwise `const Ty`.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia del modificador de tipo contiene un tipo modificado que es `Ty` si `Ty` es una referencia, una función o un tipo calificado como const; si no, es `const Ty`.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__type_traits__add_const.cpp   
@@ -82,12 +83,12 @@ int main()
 add_const<int> == int  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)   
- [remove_const Class](../standard-library/remove-const-class.md)
+ [remove_const (Clase)](../standard-library/remove-const-class.md)
 

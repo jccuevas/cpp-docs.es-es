@@ -1,5 +1,5 @@
 ---
-title: '&lt;stack&gt; | Microsoft Docs'
+title: '&lt;pila&gt; | Documentos de Microsoft'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<stack>", "<stack>
+- std.<stack>
+- std::<stack>
+- <stack>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,43 +36,43 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 4f63ff66c50d830feb3fe34b2102bd9ed47e6eb2
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a769d1f945c6a79c0941a505e3291ae0f5529bbd
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
-Defines the template class stack and two supporting templates.  
+Define la pila de la clase de plantilla y dos plantillas auxiliares.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #include <stack>  
   
 ```  
   
-### <a name="operators"></a>Operators  
+### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/stack-operators.md#op_neq)|Tests if the stack object on the left side of the operator is not equal to the stack object on the right side.|  
-|[operator<](../standard-library/stack-operators.md#op_lt)|Tests if the stack object on the left side of the operator is less than the stack object on the right side.|  
-|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Tests if the stack object on the left side of the operator is less than or equal to the stack object on the right side.|  
-|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Tests if the stack object on the left side of the operator is equal to the stack object on the right side.|  
-|[operator>](../standard-library/stack-operators.md#op_gt)|Tests if the stack object on the left side of the operator is greater than the stack object on the right side.|  
-|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Tests if the stack object on the left side of the operator is greater than or equal to the stack object on the right side.|  
+|[operator!=](../standard-library/stack-operators.md#op_neq)|Comprueba si el objeto de pila del lado izquierdo del operador no es igual que el objeto de pila del lado derecho.|  
+|[operator<](../standard-library/stack-operators.md#op_lt)|Comprueba si el objeto de pila del lado izquierdo del operador es menor que el objeto de pila del lado derecho.|  
+|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es menor o igual que el objeto de pila del lado derecho.|  
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es igual que el objeto de pila del lado derecho.|  
+|[operator>](../standard-library/stack-operators.md#op_gt)|Comprueba si el objeto de pila del lado izquierdo del operador es mayor que el objeto de pila del lado derecho.|  
+|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es mayor o igual que el objeto de pila del lado derecho.|  
   
-### <a name="classes"></a>Classes  
+### <a name="classes"></a>Clases  
   
 |||  
 |-|-|  
-|[stack Class](../standard-library/stack-class.md)|A template container adaptor class that provides a restriction of functionality limiting access to the element most recently added to some underlying container type.|  
+|[stack (Clase)](../standard-library/stack-class.md)|Clase de adaptador de contenedor de plantilla que proporciona una restricción de la funcionalidad que limita el acceso al elemento agregado más recientemente a algún tipo de contenedor subyacente.|  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
 
 

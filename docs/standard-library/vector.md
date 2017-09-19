@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <vector>", "std::<vector>
+- <vector>
+- std.<vector>
+- std::<vector>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -33,21 +35,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: d1f299db45d83e5d669703d6df0c966aefd89c82
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 77c13a5f8d813bbeaa0dae2307769a575bb22fa8
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
-Defines the container template class vector and several supporting templates.  
+Define el vector de clases de plantilla de contenedores y varias plantillas auxiliares.  
   
- The `vector` is a container that organizes elements of a given type in a linear sequence. It enables fast random access to any element, and dynamic additions and removals to and from the sequence. The `vector` is the preferred container for a sequence when random-access performance is at a premium.  
+ El `vector` es un contenedor que organiza los elementos de un tipo determinado en una secuencia lineal. Permite el acceso aleatorio rápido a cualquier elemento, así como agregar y eliminar elementos de la secuencia de forma dinámica. El `vector` es el contenedor más apropiado para una secuencia cuando el rendimiento de acceso aleatorio es importante.  
   
- For more information about the class `vector`, see [vector Class](../standard-library/vector-class.md). For information about the specialization `vector<bool>`, see [vector\<bool> Class](../standard-library/vector-bool-class.md).  
+ Para más información sobre la clase `vector`, vea [vector (Clase)](../standard-library/vector-class.md). Para más información sobre la especialización `vector<bool>`, vea [vector\<bool> (Clase)](../standard-library/vector-bool-class.md).  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 namespace std {  
@@ -97,50 +99,50 @@ void swap (
 }  // namespace std  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- Type  
- The template parameter for the type of data stored in the vector.  
+#### <a name="parameters"></a>Parámetros  
+ Tipo  
+ Parámetro de plantilla para el tipo de datos almacenados en el vector.  
   
- Allocator  
- The template parameter for the stored allocator object responsible for memory allocation and deallocation.  
+ Asignador  
+ Parámetro de plantilla para el objeto de asignador almacenado responsable de la asignación y desasignación de memoria.  
   
  `left`  
- The first (left) vector in a compare operation  
+ Primer vector (izquierdo) en una operación de comparación  
   
  `right`  
- The second (right) vector in a compare operation.  
+ Segundo vector (derecho) en una operación de comparación.  
   
-### <a name="operators"></a>Operators  
-  
-|||  
-|-|-|  
-|[operator! =](../standard-library/vector-operators.md#op_neq)|Tests if the vector object on the left side of the operator is not equal to the vector object on the right side.|  
-|[operator<](../standard-library/vector-operators.md#op_lt)|Tests if the vector object on the left side of the operator is less than the vector object on the right side.|  
-|[operator\<=](../standard-library/vector-operators.md#op_gt_eq)|Tests if the vector object on the left side of the operator is less than or equal to the vector object on the right side.|  
-|[operator==](../standard-library/vector-operators.md#op_eq_eq)|Tests if the vector object on the left side of the operator is equal to the vector object on the right side.|  
-|[operator>](../standard-library/vector-operators.md#op_gt)|Tests if the vector object on the left side of the operator is greater than the vector object on the right side.|  
-|[operator>=](../standard-library/vector-operators.md#op_gt_eq)|Tests if the vector object on the left side of the operator is greater than or equal to the vector object on the right side.|  
-  
-### <a name="classes"></a>Classes  
+### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[vector Class](../standard-library/vector-class.md)|A template class of sequence containers that arrange elements of a given type in a linear arrangement and allow fast random access to any element.|  
+|[operator! =](../standard-library/vector-operators.md#op_neq)|Comprueba si el objeto de vector en el lado izquierdo del operador no es igual que el objeto de vector en el lado derecho.|  
+|[operator<](../standard-library/vector-operators.md#op_lt)|Comprueba si el objeto de vector en el lado izquierdo del operador es menor que el objeto de vector en el lado derecho.|  
+|[operator\<=](../standard-library/vector-operators.md#op_gt_eq)|Comprueba si el objeto de vector en el lado izquierdo del operador es menor o igual que el objeto de vector en el lado derecho.|  
+|[operator==](../standard-library/vector-operators.md#op_eq_eq)|Comprueba si el objeto de vector en el lado izquierdo del operador es igual que el objeto de vector en el lado derecho.|  
+|[operator>](../standard-library/vector-operators.md#op_gt)|Comprueba si el objeto de vector en el lado izquierdo del operador es mayor que el objeto de vector en el lado derecho|  
+|[operator>=](../standard-library/vector-operators.md#op_gt_eq)|Comprueba si el objeto de vector en el lado izquierdo del operador es mayor o igual que el objeto de vector en el lado derecho|  
   
-### <a name="specializations"></a>Specializations  
+### <a name="classes"></a>Clases  
   
 |||  
 |-|-|  
-|[vector\<bool> Class](../standard-library/vector-bool-class.md)|A full specialization of the template class vector for elements of type `bool` with an allocator for the underlying type used by the specialization.|  
+|[vector (Clase)](../standard-library/vector-class.md)|Una clase de plantilla de contenedores de secuencias que organiza los elementos de un tipo determinado en una organización lineal y permite el acceso aleatorio rápido a cualquier elemento.|  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<vector>  
+### <a name="specializations"></a>Especializaciones  
   
- **Namespace:** std  
+|||  
+|-|-|  
+|[vector\<bool> (Clase)](../standard-library/vector-bool-class.md)|Una especialización completa de la clase de plantilla vector para los elementos del tipo `bool` con un asignador para el tipo subyacente utilizado por la especialización.|  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<vector>  
+  
+ **Espacio de nombres:** std  
+  
+## <a name="see-also"></a>Vea también  
+ [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: CSliderCtrl Class | Microsoft Docs
+title: CSliderCtrl (clase) | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -48,40 +48,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSliderCtrl [MFC], CSliderCtrl
-- CSliderCtrl [MFC], ClearSel
-- CSliderCtrl [MFC], ClearTics
-- CSliderCtrl [MFC], Create
-- CSliderCtrl [MFC], CreateEx
-- CSliderCtrl [MFC], GetBuddy
-- CSliderCtrl [MFC], GetChannelRect
-- CSliderCtrl [MFC], GetLineSize
-- CSliderCtrl [MFC], GetNumTics
-- CSliderCtrl [MFC], GetPageSize
-- CSliderCtrl [MFC], GetPos
-- CSliderCtrl [MFC], GetRange
-- CSliderCtrl [MFC], GetRangeMax
-- CSliderCtrl [MFC], GetRangeMin
-- CSliderCtrl [MFC], GetSelection
-- CSliderCtrl [MFC], GetThumbLength
-- CSliderCtrl [MFC], GetThumbRect
-- CSliderCtrl [MFC], GetTic
-- CSliderCtrl [MFC], GetTicArray
-- CSliderCtrl [MFC], GetTicPos
-- CSliderCtrl [MFC], GetToolTips
-- CSliderCtrl [MFC], SetBuddy
-- CSliderCtrl [MFC], SetLineSize
-- CSliderCtrl [MFC], SetPageSize
-- CSliderCtrl [MFC], SetPos
-- CSliderCtrl [MFC], SetRange
-- CSliderCtrl [MFC], SetRangeMax
-- CSliderCtrl [MFC], SetRangeMin
-- CSliderCtrl [MFC], SetSelection
-- CSliderCtrl [MFC], SetThumbLength
-- CSliderCtrl [MFC], SetTic
-- CSliderCtrl [MFC], SetTicFreq
-- CSliderCtrl [MFC], SetTipSide
-- CSliderCtrl [MFC], SetToolTips
+- Windows common controls [C++], CSliderCtrl
+- slider controls, CSliderCtrl class
+- CSliderCtrl class, common controls
+- CSliderCtrl class
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
 caps.latest.revision: 22
 author: mikeblome
@@ -101,82 +71,82 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: ae609da71c2f805c75e3d8c0bca0011b5b84651a
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 745dc253ac0837ffc62f47db2038e6302b83b558
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 04/01/2017
 
 ---
-# <a name="csliderctrl-class"></a>CSliderCtrl Class
-Provides the functionality of the Windows common slider control.  
+# <a name="csliderctrl-class"></a>CSliderCtrl (clase)
+Proporciona la funcionalidad del control deslizante común de Windows.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CSliderCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CSliderCtrl::CSliderCtrl](#csliderctrl)|Constructs a `CSliderCtrl` object.|  
+|[CSliderCtrl::CSliderCtrl](#csliderctrl)|Construye un objeto `CSliderCtrl`.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CSliderCtrl::ClearSel](#clearsel)|Clears the current selection in a slider control.|  
-|[CSliderCtrl::ClearTics](#cleartics)|Removes the current tick marks from a slider control.|  
-|[CSliderCtrl::Create](#create)|Creates a slider control and attaches it to a `CSliderCtrl` object.|  
-|[CSliderCtrl::CreateEx](#createex)|Creates a slider control with the specified Windows extended styles and attaches it to a `CSliderCtrl` object.|  
-|[CSliderCtrl::GetBuddy](#getbuddy)|Retrieves the handle to a slider control buddy window at a given location.|  
-|[CSliderCtrl::GetChannelRect](#getchannelrect)|Retrieves the size of the slider control's channel.|  
-|[CSliderCtrl::GetLineSize](#getlinesize)|Retrieves the line size of a slider control.|  
-|[CSliderCtrl::GetNumTics](#getnumtics)|Retrieves the number of tick marks in a slider control.|  
-|[CSliderCtrl::GetPageSize](#getpagesize)|Retrieves the page size of a slider control.|  
-|[CSliderCtrl::GetPos](#getpos)|Retrieves the current position of the slider.|  
-|[CSliderCtrl::GetRange](#getrange)|Retrieves the minimum and maximum positions for a slider.|  
-|[CSliderCtrl::GetRangeMax](#getrangemax)|Retrieves the maximum position for a slider.|  
-|[CSliderCtrl::GetRangeMin](#getrangemin)|Retrieves the minimum position for a slider.|  
-|[CSliderCtrl::GetSelection](#getselection)|Retrieves the range of the current selection.|  
-|[CSliderCtrl::GetThumbLength](#getthumblength)|Retrieves the length of the slider in the current trackbar control.|  
-|[CSliderCtrl::GetThumbRect](#getthumbrect)|Retrieves the size of the slider control's thumb.|  
-|[CSliderCtrl::GetTic](#gettic)|Retrieves the position of the specified tick mark.|  
-|[CSliderCtrl::GetTicArray](#getticarray)|Retrieves the array of tick mark positions for a slider control.|  
-|[CSliderCtrl::GetTicPos](#getticpos)|Retrieves the position of the specified tick mark, in client coordinates.|  
-|[CSliderCtrl::GetToolTips](#gettooltips)|Retrieves the handle to the tooltip control assigned to the slider control, if any.|  
-|[CSliderCtrl::SetBuddy](#setbuddy)|Assigns a window as the buddy window for a slider control.|  
-|[CSliderCtrl::SetLineSize](#setlinesize)|Sets the line size of a slider control.|  
-|[CSliderCtrl::SetPageSize](#setpagesize)|Sets the page size of a slider control.|  
-|[CSliderCtrl::SetPos](#setpos)|Sets the current position of the slider.|  
-|[CSliderCtrl::SetRange](#setrange)|Sets the minimum and maximum positions for a slider.|  
-|[CSliderCtrl::SetRangeMax](#setrangemax)|Sets the maximum position for a slider.|  
-|[CSliderCtrl::SetRangeMin](#setrangemin)|Sets the minimum position for a slider.|  
-|[CSliderCtrl::SetSelection](#setselection)|Sets the range of the current selection.|  
-|[CSliderCtrl::SetThumbLength](#setthumblength)|Sets the length of the slider in the current trackbar control.|  
-|[CSliderCtrl::SetTic](#settic)|Sets the position of the specified tick mark.|  
-|[CSliderCtrl::SetTicFreq](#setticfreq)|Sets the frequency of tick marks per slider control increment.|  
-|[CSliderCtrl::SetTipSide](#settipside)|Positions a tooltip control used by a trackbar control.|  
-|[CSliderCtrl::SetToolTips](#settooltips)|Assigns a tooltip control to a slider control.|  
+|[CSliderCtrl::ClearSel](#clearsel)|Borra la selección actual en un control deslizante.|  
+|[CSliderCtrl::ClearTics](#cleartics)|Quita las marcas de graduación actual de un control deslizante.|  
+|[CSliderCtrl::Create](#create)|Crea un control deslizante y lo adjunta a un `CSliderCtrl` objeto.|  
+|[CSliderCtrl::CreateEx](#createex)|Crea un control deslizante con los estilos extendidos de Windows especificados y lo adjunta a un `CSliderCtrl` objeto.|  
+|[CSliderCtrl::GetBuddy](#getbuddy)|Recupera el identificador de ventana deslizante control relacionada en una ubicación especificada.|  
+|[CSliderCtrl::GetChannelRect](#getchannelrect)|Recupera el tamaño del canal del control deslizante.|  
+|[CSliderCtrl::GetLineSize](#getlinesize)|Recupera el tamaño de la línea de un control deslizante.|  
+|[CSliderCtrl::GetNumTics](#getnumtics)|Recupera el número de marcas de graduación en un control deslizante.|  
+|[CSliderCtrl::GetPageSize](#getpagesize)|Recupera el tamaño de página de un control deslizante.|  
+|[CSliderCtrl::GetPos](#getpos)|Recupera la posición actual del control deslizante.|  
+|[CSliderCtrl::GetRange](#getrange)|Recupera las posiciones mínimas y máxima para un control deslizante.|  
+|[CSliderCtrl::GetRangeMax](#getrangemax)|Recupera la posición máxima para un control deslizante.|  
+|[CSliderCtrl::GetRangeMin](#getrangemin)|Recupera la posición mínima para un control deslizante.|  
+|[CSliderCtrl::GetSelection](#getselection)|Recupera el intervalo de la selección actual.|  
+|[CSliderCtrl::GetThumbLength](#getthumblength)|Recupera la longitud del control deslizante en el control de barra de seguimiento actual.|  
+|[CSliderCtrl::GetThumbRect](#getthumbrect)|Recupera el tamaño de la posición del control deslizante.|  
+|[CSliderCtrl::GetTic](#gettic)|Recupera la posición de la marca de graduación especificado.|  
+|[CSliderCtrl::GetTicArray](#getticarray)|Recupera la matriz de posiciones de marca de graduación para un control deslizante.|  
+|[CSliderCtrl::GetTicPos](#getticpos)|Recupera la posición de la marca de graduación especificado, en coordenadas de cliente.|  
+|[CSliderCtrl::GetToolTips](#gettooltips)|Recupera el identificador del control de información sobre herramientas asignado para el control deslizante, si lo hay.|  
+|[CSliderCtrl::SetBuddy](#setbuddy)|Asigna una ventana como la ventana relacionada para un control deslizante.|  
+|[CSliderCtrl::SetLineSize](#setlinesize)|Establece el tamaño de la línea de un control deslizante.|  
+|[CSliderCtrl::SetPageSize](#setpagesize)|Establece el tamaño de página de un control deslizante.|  
+|[CSliderCtrl::SetPos](#setpos)|Establece la posición actual del control deslizante.|  
+|[CSliderCtrl::SetRange](#setrange)|Establece las posiciones mínimas y máxima para un control deslizante.|  
+|[CSliderCtrl::SetRangeMax](#setrangemax)|Establece la posición máxima para un control deslizante.|  
+|[CSliderCtrl::SetRangeMin](#setrangemin)|Establece la posición mínima para un control deslizante.|  
+|[CSliderCtrl::SetSelection](#setselection)|Establece la duración de la selección actual.|  
+|[CSliderCtrl::SetThumbLength](#setthumblength)|Establece la longitud del control deslizante en el control de barra de seguimiento actual.|  
+|[CSliderCtrl::SetTic](#settic)|Establece la posición de la marca de graduación especificado.|  
+|[CSliderCtrl::SetTicFreq](#setticfreq)|Establece la frecuencia de TIC marcas por incremento del control deslizante.|  
+|[CSliderCtrl::SetTipSide](#settipside)|Posiciones un control de información sobre herramientas utilizado por un control de barra de seguimiento.|  
+|[CSliderCtrl::SetToolTips](#settooltips)|Asigna un control de información sobre herramientas para un control deslizante.|  
   
-## <a name="remarks"></a>Remarks  
- A "slider control" (also known as a trackbar) is a window containing a slider and optional tick marks. When the user moves the slider, using either the mouse or the direction keys, the control sends notification messages to indicate the change.  
+## <a name="remarks"></a>Comentarios  
+ Un "control deslizante" (también conocido como una barra de seguimiento) es una ventana que contiene un control deslizante y las marcas de graduación opcionales. Cuando el usuario mueve el control deslizante, con el mouse o las teclas de dirección, el control envía mensajes de notificación para indicar el cambio.  
   
- Slider controls are useful when you want the user to select a discrete value or a set of consecutive values in a range. For example, you might use a slider control to allow the user to set the repeat rate of the keyboard by moving the slider to a given tick mark.  
+ Controles deslizantes son útiles cuando desea que el usuario seleccione un valor discreto o un conjunto de valores consecutivos en un intervalo. Por ejemplo, podría usar un control deslizante para permitir al usuario establecer la velocidad de repetición del teclado moviendo el control deslizante hasta una marca de graduación determinado.  
   
- This control (and therefore the `CSliderCtrl` class) is available only to programs running under Windows 95/98 and Windows NT version 3.51 and later.  
+ Este control (y, por tanto, la `CSliderCtrl` clase) está disponible solo para programas que se ejecutan en Windows 95 ó 98 y Windows NT versión 3.51 y posteriores.  
   
- The slider moves in increments that you specify when you create it. For example, if you specify that the slider should have a range of five, the slider can only occupy six positions: a position at the left side of the slider control and one position for each increment in the range. Typically, each of these positions is identified by a tick mark.  
+ El control deslizante se mueve en incrementos que especifican al crearlo. Por ejemplo, si se especifica que el control deslizante debe tener un intervalo de cinco, el control deslizante solo puede ocupar seis posiciones: una posición en el lado izquierdo del control deslizante y una posición para cada incremento en el intervalo. Normalmente, cada una de estas posiciones se identifica mediante una marca de graduación.  
   
- You create a slider by using the constructor and the **Create** member function of `CSliderCtrl`. Once you have created a slider control, you can use member functions in `CSliderCtrl` to change many of its properties. Changes that you can make include setting the minimum and maximum positions for the slider, drawing tick marks, setting a selection range, and repositioning the slider.  
+ Crear un control deslizante mediante el constructor y el **crear** función miembro de `CSliderCtrl`. Una vez haya creado un control deslizante, puede usar funciones de miembro en `CSliderCtrl` para cambiar muchos de sus propiedades. Cambios que puede realizar incluyen establecer las posiciones mínimas y máxima para el control deslizante, dibujar las marcas de graduación, establecer un intervalo de selección y volver a colocar el control deslizante.  
   
- For more information on using `CSliderCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CSliderCtrl](../../mfc/using-csliderctrl.md).  
+ Para obtener más información sobre el uso de `CSliderCtrl`, consulte [controles](../../mfc/controls-mfc.md) y [usar CSliderCtrl](../../mfc/using-csliderctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -185,33 +155,33 @@ class CSliderCtrl : public CWnd
   
  `CSliderCtrl`  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxcmn.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxcmn.h  
   
-##  <a name="clearsel"></a>  CSliderCtrl::ClearSel  
- Clears the current selection in a slider control.  
+##  <a name="clearsel"></a>CSliderCtrl::ClearSel  
+ Borra la selección actual en un control deslizante.  
   
 ```  
 void ClearSel(BOOL bRedraw = FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bRedraw`  
- Redraw flag. If this parameter is **TRUE**, the slider is redrawn after the selection is cleared; otherwise the slider is not redrawn.  
+ Volver a dibujar la marca. Si este parámetro es **TRUE**, se vuelve a dibujarse el control deslizante una vez borrada la selección; en caso contrario, el control deslizante no vuelve a dibujarse.  
   
-##  <a name="cleartics"></a>  CSliderCtrl::ClearTics  
- Removes the current tick marks from a slider control.  
+##  <a name="cleartics"></a>CSliderCtrl::ClearTics  
+ Quita las marcas de graduación actual de un control deslizante.  
   
 ```  
 void ClearTics(BOOL bRedraw = FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bRedraw`  
- Redraw flag. If this parameter is **TRUE**, the slider is redrawn after the tick marks are cleared; otherwise the slider is not redrawn.  
+ Volver a dibujar la marca. Si este parámetro es **TRUE**, se vuelve a dibujarse el control deslizante después de que se desactivan las marcas de graduación; en caso contrario, el control deslizante no vuelve a dibujarse.  
   
-##  <a name="create"></a>  CSliderCtrl::Create  
- Creates a slider control and attaches it to a `CSliderCtrl` object.  
+##  <a name="create"></a>CSliderCtrl::Create  
+ Crea un control deslizante y lo adjunta a un `CSliderCtrl` objeto.  
   
 ```  
 virtual BOOL Create(
@@ -221,31 +191,31 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `dwStyle`  
- Specifies the slider control's style. Apply any combination of [slider control styles](http://msdn.microsoft.com/library/windows/desktop/bb760147), described in the Windows SDK, to the control.  
+ Especifica el estilo del control deslizante. Aplicar cualquier combinación de [estilos de control deslizante](http://msdn.microsoft.com/library/windows/desktop/bb760147), que se describen en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)], para el control.  
   
  `rect`  
- Specifies the slider control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
+ Especifica el tamaño y la posición del control deslizante. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.  
   
  `pParentWnd`  
- Specifies the slider control's parent window, usually a `CDialog`. It must not be **NULL**.  
+ Especifica la ventana del elemento primario del control deslizante, normalmente un `CDialog`. No debe ser **NULL**.  
   
  `nID`  
- Specifies the slider control's ID.  
+ Especifica el identificador. del control deslizante  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if initialization was successful; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si la inicialización se realizó correctamente; en caso contrario es 0.  
   
-### <a name="remarks"></a>Remarks  
- You construct a `CSliderCtrl` in two steps. First, call the constructor, and then call **Create**, which creates the slider control and attaches it to the `CSliderCtrl` object.  
+### <a name="remarks"></a>Comentarios  
+ Crear un `CSliderCtrl` en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a **crear**, que crea el control deslizante y lo adjunta a la `CSliderCtrl` objeto.  
   
- Depending on the values set for `dwStyle`, the slider control can have either a vertical or horizontal orientation. It can have tick marks on either side, both sides, or neither. It can also be used to specify a range of consecutive values.  
+ Dependiendo de los valores establecidos para `dwStyle`, el control deslizante puede tener una orientación vertical u horizontal. Puede tener las marcas de graduación en cualquier lado, ambos o ninguno. También se puede utilizar para especificar un intervalo de valores consecutivos.  
   
- To apply extended window styles to the slider control, call [CreateEx](#createex) instead of **Create**.  
+ Para aplicar estilos de ventana extendidos para el control deslizante, llame al [CreateEx](#createex) en lugar de **crear**.  
   
-##  <a name="createex"></a>  CSliderCtrl::CreateEx  
- Creates a control (a child window) and associates it with the `CSliderCtrl` object.  
+##  <a name="createex"></a>CSliderCtrl::CreateEx  
+ Crea un control (una ventana secundaria) y lo asocia a la `CSliderCtrl` objeto.  
   
 ```  
 virtual BOOL CreateEx(
@@ -256,118 +226,118 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `dwExStyle`  
- Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
+ Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el `dwExStyle` parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `dwStyle`  
- Specifies the slider control's style. Apply any combination of [slider control styles](http://msdn.microsoft.com/library/windows/desktop/bb760147), described in the Windows SDK, to the control.  
+ Especifica el estilo del control deslizante. Aplicar cualquier combinación de [estilos de control deslizante](http://msdn.microsoft.com/library/windows/desktop/bb760147), que se describen en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)], para el control.  
   
  `rect`  
- A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
+ Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y la posición de la ventana que se creará, en coordenadas de cliente de `pParentWnd`.  
   
  `pParentWnd`  
- A pointer to the window that is the control's parent.  
+ Un puntero a la ventana que es primario del control.  
   
  `nID`  
- The control's child-window ID.  
+ Identificador de ventana secundaria. del control  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
-### <a name="remarks"></a>Remarks  
- Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
+### <a name="remarks"></a>Comentarios  
+ Use `CreateEx` en lugar de [crear](#create) para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_**.  
   
-##  <a name="csliderctrl"></a>  CSliderCtrl::CSliderCtrl  
- Constructs a `CSliderCtrl` object.  
+##  <a name="csliderctrl"></a>CSliderCtrl::CSliderCtrl  
+ Construye un objeto `CSliderCtrl`.  
   
 ```  
 CSliderCtrl();
 ```  
   
-##  <a name="getbuddy"></a>  CSliderCtrl::GetBuddy  
- Retrieves the handle to a slider control buddy window at a given location.  
+##  <a name="getbuddy"></a>CSliderCtrl::GetBuddy  
+ Recupera el identificador de ventana deslizante control relacionada en una ubicación especificada.  
   
 ```  
 CWnd* GetBuddy(BOOL fLocation = TRUE) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `fLocation`  
- A Boolean value that indicates which of two buddy window handles to retrieve. Can be one of the following values:  
+ Un valor booleano que indica cuál de los dos identificadores de ventana conocido para recuperar. Puede presentar uno de los siguientes valores:  
   
-- **TRUE** Retrieves the handle to the buddy to the left of the slider. If the slider control uses the `TBS_VERT` style, the message will retrieve the buddy above the slider.  
+- **TRUE** recupera el identificador para el contacto a la izquierda del control deslizante. Si usa el control deslizante de la `TBS_VERT` estilo, el mensaje recuperará el amigo encima del control deslizante.  
   
-- **FALSE** Retrieves the handle to the buddy to the right of the slider. If the slider control uses the `TBS_VERT` style, the message will retrieve the buddy below the slider.  
+- **FALSE** recupera el identificador para el contacto a la derecha del control deslizante. Si usa el control deslizante de la `TBS_VERT` estilo, el mensaje recuperará el amigo debajo del control deslizante.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the buddy window at the location specified by `fLocation`, or **NULL** if no buddy window exists at that location.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana relacionada en la ubicación especificada por `fLocation`, o **NULL** si no existe ninguna ventana amigo en esa ubicación.  
   
-### <a name="remarks"></a>Remarks  
- This member function implements the behavior of the Win32 message [TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178), as described in the Windows SDK. For a description of the slider control styles, see [Trackbar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760147) in the Windows SDK.  
+### <a name="remarks"></a>Comentarios  
+ Esta función miembro implementa el comportamiento del mensaje de Win32 [TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178), tal y como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Para obtener una descripción de los estilos de control deslizante, consulte [estilos del Control Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect  
- Retrieves the size and position of the bounding rectangle for a slider control's channel.  
+##  <a name="getchannelrect"></a>CSliderCtrl::GetChannelRect  
+ Recupera el tamaño y la posición del rectángulo delimitador para el canal del control deslizante.  
   
 ```  
 void GetChannelRect(LPRECT lprc) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `lprc`  
- A pointer to a [CRect](../../atl-mfc-shared/reference/crect-class.md) object that contains the size and position of the channel's bounding rectangle when the function returns.  
+ Un puntero a un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que contiene el tamaño y la posición del canal del rectángulo delimitador cuando la función devuelve.  
   
-### <a name="remarks"></a>Remarks  
- The channel is the area over which the slider moves and which contains the highlight when a range is selected.  
+### <a name="remarks"></a>Comentarios  
+ El canal es el área que se mueve el control deslizante y que contiene el elemento resaltado cuando se selecciona un intervalo.  
   
-##  <a name="getlinesize"></a>  CSliderCtrl::GetLineSize  
- Retrieves the size of the line for a slider control.  
+##  <a name="getlinesize"></a>CSliderCtrl::GetLineSize  
+ Recupera el tamaño de la línea para un control deslizante.  
   
 ```  
 int GetLineSize() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The size of a line for the slider control.  
+### <a name="return-value"></a>Valor devuelto  
+ El tamaño de una línea para el control deslizante.  
   
-### <a name="remarks"></a>Remarks  
- The line size affects how much the slider moves for the **TB_LINEUP** and **TB_LINEDOWN** notifications. The default setting for the line size is 1.  
+### <a name="remarks"></a>Comentarios  
+ El tamaño de la línea afecta a la cantidad el control deslizante se mueve para la **TB_LINEUP** y **TB_LINEDOWN** notificaciones. La configuración predeterminada para el tamaño de línea es 1.  
   
-##  <a name="getnumtics"></a>  CSliderCtrl::GetNumTics  
- Retrieves the number of tick marks in a slider control.  
+##  <a name="getnumtics"></a>CSliderCtrl::GetNumTics  
+ Recupera el número de marcas de graduación en un control deslizante.  
   
 ```  
 UINT GetNumTics() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The number of tick marks in the slider control.  
+### <a name="return-value"></a>Valor devuelto  
+ El número de marcas de graduación en el control deslizante.  
   
-##  <a name="getpagesize"></a>  CSliderCtrl::GetPageSize  
- Retrieves the size of the page for a slider control.  
+##  <a name="getpagesize"></a>CSliderCtrl::GetPageSize  
+ Recupera el tamaño de la página de un control deslizante.  
   
 ```  
 int GetPageSize() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The size of a page for the slider control.  
+### <a name="return-value"></a>Valor devuelto  
+ El tamaño de una página para el control deslizante.  
   
-### <a name="remarks"></a>Remarks  
- The page size affects how much the slider moves for the **TB_PAGEUP** and **TB_PAGEDOWN** notifications.  
+### <a name="remarks"></a>Comentarios  
+ El tamaño de página afecta a la cantidad el control deslizante se mueve para la **TB_PAGEUP** y **TB_PAGEDOWN** notificaciones.  
   
-##  <a name="getpos"></a>  CSliderCtrl::GetPos  
- Retrieves the current position of the slider in a slider control.  
+##  <a name="getpos"></a>CSliderCtrl::GetPos  
+ Recupera la posición actual del control deslizante en un control deslizante.  
   
 ```  
 int GetPos() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The current position.  
+### <a name="return-value"></a>Valor devuelto  
+ Posición actual.  
   
-##  <a name="getrange"></a>  CSliderCtrl::GetRange  
- Retrieves the maximum and minimum positions for the slider in a slider control.  
+##  <a name="getrange"></a>CSliderCtrl::GetRange  
+ Recupera las posiciones mínimas y máxima para el control deslizante en un control deslizante.  
   
 ```  
 void GetRange(
@@ -375,38 +345,38 @@ void GetRange(
     int& nMax) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nMin`  
- Reference to an integer that receives the minimum position.  
+ Referencia a un entero que recibe la posición de mínimo.  
   
  `nMax`  
- Reference to an integer that receives the maximum position.  
+ Referencia a un entero que recibe la posición máxima.  
   
-### <a name="remarks"></a>Remarks  
- This function copies the values into the integers referenced by `nMin` and `nMax`.  
+### <a name="remarks"></a>Comentarios  
+ Esta función copia los valores a los enteros encontrados por `nMin` y `nMax`.  
   
-##  <a name="getrangemax"></a>  CSliderCtrl::GetRangeMax  
- Retrieves the maximum position for the slider in a slider control.  
+##  <a name="getrangemax"></a>CSliderCtrl::GetRangeMax  
+ Recupera la posición máxima para el control deslizante en un control deslizante.  
   
 ```  
 int GetRangeMax() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The control's maximum position.  
+### <a name="return-value"></a>Valor devuelto  
+ La posición del control máximo.  
   
-##  <a name="getrangemin"></a>  CSliderCtrl::GetRangeMin  
- Retrieves the minimum position for the slider in a slider control.  
+##  <a name="getrangemin"></a>CSliderCtrl::GetRangeMin  
+ Recupera la posición mínima para el control deslizante en un control deslizante.  
   
 ```  
 int GetRangeMin() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The control's minimum position.  
+### <a name="return-value"></a>Valor devuelto  
+ La posición del control mínimo.  
   
-##  <a name="getselection"></a>  CSliderCtrl::GetSelection  
- Retrieves the starting and ending positions of the current selection in a slider control.  
+##  <a name="getselection"></a>CSliderCtrl::GetSelection  
+ Recupera las posiciones inicial y finales de la selección actual en un control deslizante.  
   
 ```  
 void GetSelection(
@@ -414,92 +384,92 @@ void GetSelection(
     int& nMax) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nMin`  
- Reference to an integer that receives the starting position of the current selection.  
+ Referencia a un entero que recibe la posición inicial de la selección actual.  
   
  `nMax`  
- Reference to an integer that receives the ending position of the current selection.  
+ Referencia a un entero que recibe la posición final de la selección actual.  
   
-##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength  
- Retrieves the length of the slider in the current trackbar control.  
+##  <a name="getthumblength"></a>CSliderCtrl::GetThumbLength  
+ Recupera la longitud del control deslizante en el control de barra de seguimiento actual.  
   
 ```  
 int GetThumbLength() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The length of the slider, in pixels.  
+### <a name="return-value"></a>Valor devuelto  
+ La longitud del control deslizante, en píxeles.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201) message, which is described in the Windows SDK.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201) mensaje, que se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect  
- Retrieves the size and position of the bounding rectangle for the slider (thumb) in a slider control.  
+##  <a name="getthumbrect"></a>CSliderCtrl::GetThumbRect  
+ Recupera el tamaño y la posición del rectángulo delimitador para el control deslizante (USB) en un control deslizante.  
   
 ```  
 void GetThumbRect(LPRECT lprc) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `lprc`  
- A pointer to a `CRect` object that contains the bounding rectangle for the slider when the function returns.  
+ Un puntero a un `CRect` objeto que contiene el rectángulo delimitador para el control deslizante cuando la función devuelve.  
   
-##  <a name="gettic"></a>  CSliderCtrl::GetTic  
- Retrieves the position of a tick mark in a slider control.  
+##  <a name="gettic"></a>CSliderCtrl::GetTic  
+ Recupera la posición de una marca de graduación en un control deslizante.  
   
 ```  
 int GetTic(int nTic) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nTic`  
- Zero-based index identifying a tick mark.  
+ Índice basado en cero que identifica una marca de graduación.  
   
-### <a name="return-value"></a>Return Value  
- The position of the specified tick mark or - 1 if `nTic` does not specify a valid index.  
+### <a name="return-value"></a>Valor devuelto  
+ La posición de la marca de graduación especificado o - 1 si `nTic` no especifica un índice válido.  
   
-##  <a name="getticarray"></a>  CSliderCtrl::GetTicArray  
- Retrieves the address of the array containing the positions of tick marks for a slider control.  
+##  <a name="getticarray"></a>CSliderCtrl::GetTicArray  
+ Recupera la dirección de la matriz que contiene las posiciones de las marcas de graduación para un control deslizante.  
   
 ```  
 DWORD* GetTicArray() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The address of the array containing tick mark positions for the slider control.  
+### <a name="return-value"></a>Valor devuelto  
+ La dirección de la matriz que contiene las posiciones de marca de graduación para el control deslizante.  
   
-##  <a name="getticpos"></a>  CSliderCtrl::GetTicPos  
- Retrieves the current physical position of a tick mark in a slider control.  
+##  <a name="getticpos"></a>CSliderCtrl::GetTicPos  
+ Recupera la posición física actual de una marca de graduación en un control deslizante.  
   
 ```  
 int GetTicPos(int nTic) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nTic`  
- Zero-based index identifying a tick mark.  
+ Índice basado en cero que identifica una marca de graduación.  
   
-### <a name="return-value"></a>Return Value  
- The physical position, in client coordinates, of the specified tick mark or - 1 if `nTic` does not specify a valid index.  
+### <a name="return-value"></a>Valor devuelto  
+ La posición física, en coordenadas de cliente, de la marca de graduación especificado o - 1 si `nTic` no especifica un índice válido.  
   
-##  <a name="gettooltips"></a>  CSliderCtrl::GetToolTips  
- Retrieves the handle to the tooltip control assigned to the slider control, if any.  
+##  <a name="gettooltips"></a>CSliderCtrl::GetToolTips  
+ Recupera el identificador del control de información sobre herramientas asignado para el control deslizante, si lo hay.  
   
 ```  
 CToolTipCtrl* GetToolTips() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to a [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) object, or **NULL** if tooltips are not in use. If the slider control does not use the **TBS_TOOLTIPS** style, the return value is **NULL**.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a un [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objeto, o **NULL** si la información sobre herramientas no está en uso. Si el control deslizante no usa el **TBS_TOOLTIPS** estilo, el valor devuelto es **NULL**.  
   
-### <a name="remarks"></a>Remarks  
- This member function implements the behavior of the Win32 message [TBM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760209), as described in the Windows SDK. Note that this member function returns a `CToolTipCtrl` object instead of a handle to a control.  
+### <a name="remarks"></a>Comentarios  
+ Esta función miembro implementa el comportamiento del mensaje de Win32 [TBM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760209), tal y como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Tenga en cuenta que esta función miembro devuelve un `CToolTipCtrl` objeto en lugar de un identificador de un control.  
   
- For a description of the slider control styles, see [Trackbar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760147) in the Windows SDK.  
+ Para obtener una descripción de los estilos de control deslizante, consulte [estilos del Control Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy  
- Assigns a window as the buddy window for a slider control.  
+##  <a name="setbuddy"></a>CSliderCtrl::SetBuddy  
+ Asigna una ventana como la ventana relacionada para un control deslizante.  
   
 ```  
 CWnd* SetBuddy(
@@ -507,72 +477,72 @@ CWnd* SetBuddy(
     BOOL fLocation = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pWndBuddy`  
- A pointer to a `CWnd` object that will be set as the slider control's buddy.  
+ Un puntero a un `CWnd` objeto que se establecerá como amigo del control deslizante.  
   
  `fLocation`  
- Value specifying the location at which to display the buddy window. This value can be one of the following:  
+ Valor que especifica la ubicación en la que se va a mostrar la ventana relacionada. Este valor puede ser uno de los siguientes:  
   
-- **TRUE** The buddy will appear to the left of the trackbar if the trackbar control uses the `TBS_HORZ` style. If the trackbar uses the `TBS_VERT` style, the buddy appears above the trackbar control.  
+- **TRUE** el amigo aparecerán a la izquierda de la barra de seguimiento si el control trackbar utiliza el `TBS_HORZ` estilo. Si la barra de seguimiento utiliza la `TBS_VERT` de estilo, el amigo aparece encima del control trackbar.  
   
-- **FALSE** The buddy will appear to the right of the trackbar if the trackbar control uses the `TBS_HORZ` style. If the trackbar uses the `TBS_VERT` style, the buddy appears below the trackbar control.  
+- **FALSE** el amigo aparecerán a la derecha de la barra de seguimiento si el control de barra de seguimiento utiliza la `TBS_HORZ` estilo. Si la barra de seguimiento utiliza la `TBS_VERT` de estilo, el amigo aparece debajo del control trackbar.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that was previously assigned to the slider control at that location.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que se asignó previamente para el control deslizante en esa ubicación.  
   
-### <a name="remarks"></a>Remarks  
- This member function implements the behavior of the Win32 message [TBM_SETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760213), as described in the Windows SDK. Note that this member function uses pointers to `CWnd` objects, rather than window handles for both its return value and parameter.  
+### <a name="remarks"></a>Comentarios  
+ Esta función miembro implementa el comportamiento del mensaje de Win32 [TBM_SETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760213), tal y como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Tenga en cuenta que esta función miembro utiliza punteros a `CWnd` objetos, en lugar de identificadores de ventana para su valor devuelto y el parámetro.  
   
- For a description of the slider control styles, see [Trackbar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760147) in the Windows SDK.  
+ Para obtener una descripción de los estilos de control deslizante, consulte [estilos del Control Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize  
- Sets the size of the line for a slider control.  
+##  <a name="setlinesize"></a>CSliderCtrl::SetLineSize  
+ Establece el tamaño de la línea para un control deslizante.  
   
 ```  
 int SetLineSize(int nSize);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nSize`  
- The new line size of the slider control.  
+ El nuevo tamaño de línea del control deslizante.  
   
-### <a name="return-value"></a>Return Value  
- The previous line size.  
+### <a name="return-value"></a>Valor devuelto  
+ El tamaño de la línea anterior.  
   
-### <a name="remarks"></a>Remarks  
- The line size affects how much the slider moves for the **TB_LINEUP** and **TB_LINEDOWN** notifications.  
+### <a name="remarks"></a>Comentarios  
+ El tamaño de la línea afecta a la cantidad el control deslizante se mueve para la **TB_LINEUP** y **TB_LINEDOWN** notificaciones.  
   
-##  <a name="setpagesize"></a>  CSliderCtrl::SetPageSize  
- Sets the size of the page for a slider control.  
+##  <a name="setpagesize"></a>CSliderCtrl::SetPageSize  
+ Establece el tamaño de la página de un control deslizante.  
   
 ```  
 int SetPageSize(int nSize);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nSize`  
- The new page size of the slider control.  
+ El nuevo tamaño de página del control deslizante.  
   
-### <a name="return-value"></a>Return Value  
- The previous page size.  
+### <a name="return-value"></a>Valor devuelto  
+ El tamaño de página anterior.  
   
-### <a name="remarks"></a>Remarks  
- The page size affects how much the slider moves for the **TB_PAGEUP** and **TB_PAGEDOWN** notifications.  
+### <a name="remarks"></a>Comentarios  
+ El tamaño de página afecta a la cantidad el control deslizante se mueve para la **TB_PAGEUP** y **TB_PAGEDOWN** notificaciones.  
   
-##  <a name="setpos"></a>  CSliderCtrl::SetPos  
- Sets the current position of the slider in a slider control.  
+##  <a name="setpos"></a>CSliderCtrl::SetPos  
+ Establece la posición actual del control deslizante en un control deslizante.  
   
 ```  
 void SetPos(int nPos);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nPos`  
- Specifies the new slider position.  
+ Especifica la nueva posición del control deslizante.  
   
-##  <a name="setrange"></a>  CSliderCtrl::SetRange  
- Sets the range (minimum and maximum positions) for the slider in a slider control.  
+##  <a name="setrange"></a>CSliderCtrl::SetRange  
+ Establece la duración (posiciones mínima y máxima) para el control deslizante en un control deslizante.  
   
 ```  
 void SetRange(
@@ -581,18 +551,18 @@ void SetRange(
     BOOL bRedraw = FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nMin`  
- Minimum position for the slider.  
+ Posición mínimo para el control deslizante.  
   
  `nMax`  
- Maximum position for the slider.  
+ Posición máxima para el control deslizante.  
   
  `bRedraw`  
- The redraw flag. If this parameter is **TRUE**, the slider is redrawn after the range is set; otherwise the slider is not redrawn.  
+ La marca de renegociación. Si este parámetro es **TRUE**, se vuelve a dibujarse el control deslizante después de establece el intervalo; en caso contrario, el control deslizante no vuelve a dibujarse.  
   
-##  <a name="setrangemax"></a>  CSliderCtrl::SetRangeMax  
- Sets the maximum range for the slider in a slider control.  
+##  <a name="setrangemax"></a>CSliderCtrl::SetRangeMax  
+ Establece la duración máxima para el control deslizante en un control deslizante.  
   
 ```  
 void SetRangeMax(
@@ -600,15 +570,15 @@ void SetRangeMax(
     BOOL bRedraw = FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nMax`  
- Maximum position for the slider.  
+ Posición máxima para el control deslizante.  
   
  `bRedraw`  
- The redraw flag. If this parameter is **TRUE**, the slider is redrawn after the range is set; otherwise the slider is not redrawn.  
+ La marca de renegociación. Si este parámetro es **TRUE**, se vuelve a dibujarse el control deslizante después de establece el intervalo; en caso contrario, el control deslizante no vuelve a dibujarse.  
   
-##  <a name="setrangemin"></a>  CSliderCtrl::SetRangeMin  
- Sets the minimum range for the slider in a slider control.  
+##  <a name="setrangemin"></a>CSliderCtrl::SetRangeMin  
+ Establece la duración mínima para el control deslizante en un control deslizante.  
   
 ```  
 void SetRangeMin(
@@ -616,15 +586,15 @@ void SetRangeMin(
     BOOL bRedraw = FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nMin`  
- Minimum position for the slider.  
+ Posición mínimo para el control deslizante.  
   
  `bRedraw`  
- The redraw flag. If this parameter is **TRUE**, the slider is redrawn after the range is set; otherwise the slider is not redrawn.  
+ La marca de renegociación. Si este parámetro es **TRUE**, se vuelve a dibujarse el control deslizante después de establece el intervalo; en caso contrario, el control deslizante no vuelve a dibujarse.  
   
-##  <a name="setselection"></a>  CSliderCtrl::SetSelection  
- Sets the starting and ending positions for the current selection in a slider control.  
+##  <a name="setselection"></a>CSliderCtrl::SetSelection  
+ Establece las posiciones inicial y finales de la selección actual en un control deslizante.  
   
 ```  
 void SetSelection(
@@ -632,105 +602,105 @@ void SetSelection(
     int nMax);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nMin`  
- Starting position for the slider.  
+ Posición inicial para el control deslizante.  
   
  `nMax`  
- Ending position for the slider.  
+ Posición final para el control deslizante.  
   
-##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength  
- Sets the length of the slider in the current trackbar control.  
+##  <a name="setthumblength"></a>CSliderCtrl::SetThumbLength  
+ Establece la longitud del control deslizante en el control de barra de seguimiento actual.  
   
 ```  
 void SetThumbLength(int nLength);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   
-|Parameter|Description|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `nLength`|Length of the slider, in pixels.|  
+|[in] `nLength`|Longitud del control deslizante, en píxeles.|  
   
-### <a name="remarks"></a>Remarks  
- This method requires that the trackbar control be set to [TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147) style.  
+### <a name="remarks"></a>Comentarios  
+ Este método requiere que el control trackbar se establezca en [TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147) estilo.  
   
- This method sends the [TBM_SETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760234) message, which is described in the Windows SDK.  
+ Este método envía el [TBM_SETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760234) mensaje, que se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="example"></a>Example  
- The following code example defines the variable, `m_sliderCtrl`, that is used to access the current trackbar control. The example also defines a variable, `thumbLength`, that is used to store the default length of the trackbar control's thumb component. These variables are used in the next example.  
+### <a name="example"></a>Ejemplo  
+ En el ejemplo de código siguiente se define la variable `m_sliderCtrl`, que se usa para tener acceso al control de barra de seguimiento actual. El ejemplo también define una variable, `thumbLength`, que se utiliza para almacenar la longitud predeterminada del componente de posición del control trackbar. Estas variables se utilizan en el ejemplo siguiente.  
   
- [!code-cpp[NVC_MFC_CSliderCtrl_s1#1](../../mfc/reference/codesnippet/cpp/csliderctrl-class_1.h)]  
+ [!code-cpp[NVC_MFC_CSliderCtrl_s1 n.º 1](../../mfc/reference/codesnippet/cpp/csliderctrl-class_1.h)]  
   
-### <a name="example"></a>Example  
- The following code example sets the trackbar control's thumb component to twice its default length.  
+### <a name="example"></a>Ejemplo  
+ En el ejemplo de código siguiente se establece el componente de posición del control trackbar hasta dos veces su longitud predeterminada.  
   
- [!code-cpp[NVC_MFC_CSliderCtrl_s1#2](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_CSliderCtrl_s1 n.º 2](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]  
   
-##  <a name="settic"></a>  CSliderCtrl::SetTic  
- Sets the position of a tick mark in a slider control.  
+##  <a name="settic"></a>CSliderCtrl::SetTic  
+ Establece la posición de una marca de graduación en un control deslizante.  
   
 ```  
 BOOL SetTic(int nTic);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nTic`  
- Position of the tick mark. This parameter must specify a positive value.  
+ Posición de la marca de graduación. Este parámetro debe especificar un valor positivo.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the tick mark is set; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si se establece la marca de graduación; en caso contrario es 0.  
   
-##  <a name="setticfreq"></a>  CSliderCtrl::SetTicFreq  
- Sets the frequency with which tick marks are displayed in a slider.  
+##  <a name="setticfreq"></a>CSliderCtrl::SetTicFreq  
+ Establece la frecuencia con que marca las marcas se muestran en un control deslizante.  
   
 ```  
 void SetTicFreq(int nFreq);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *nFreq*  
- Frequency of the tick marks.  
+ Frecuencia de las marcas de graduación.  
   
-### <a name="remarks"></a>Remarks  
- For example, if the frequency is set to 2, a tick mark is displayed for every other increment in the slider's range. The default setting for the frequency is 1 (that is, every increment in the range is associated with a tick mark).  
+### <a name="remarks"></a>Comentarios  
+ Por ejemplo, si la frecuencia se establece en 2, se muestra una marca de graduación para cada incremento otro intervalo del control deslizante. La configuración predeterminada para la frecuencia es 1 (es decir, cada incremento en el intervalo está asociado con una marca de graduación).  
   
- You must create the control with the `TBS_AUTOTICKS` style to use this function. For more information, see [CSliderCtrl::Create](#create).  
+ Debe crear el control con el `TBS_AUTOTICKS` estilo que se va a usar esta función. Para obtener más información, consulte [CSliderCtrl::Create](#create).  
   
-##  <a name="settipside"></a>  CSliderCtrl::SetTipSide  
- Positions a tooltip control used by a trackbar control.  
+##  <a name="settipside"></a>CSliderCtrl::SetTipSide  
+ Posiciones un control de información sobre herramientas utilizado por un control de barra de seguimiento.  
   
 ```  
 int SetTipSide(int nLocation);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nLocation`  
- Value representing the location at which to display the tooltip control. For a list of possible values, see the Win32 message [TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240), as described in the Windows SDK.  
+ Valor que representa la ubicación en la que se va a mostrar el control de información sobre herramientas. Para obtener una lista de valores posibles, vea el mensaje de Win32 [TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240), tal y como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="return-value"></a>Return Value  
- A value that represents the tooltip control's previous location. The return value equals one of the possible values for `nLocation`.  
+### <a name="return-value"></a>Valor devuelto  
+ Un valor que representa la ubicación anterior del control de información sobre herramientas. El valor devuelto es igual a uno de los valores posibles para `nLocation`.  
   
-### <a name="remarks"></a>Remarks  
- This member function implements the behavior of the Win32 message **TBM_SETTIPSIDE**, as described in the Windows SDK. Slider controls that use the **TBS_TOOLTIPS** style display tooltips. For a description of the slider control styles, see [Trackbar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760147) in the Windows SDK.  
+### <a name="remarks"></a>Comentarios  
+ Esta función miembro implementa el comportamiento del mensaje de Win32 **TBM_SETTIPSIDE**, tal y como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Control deslizante controles que usan el **TBS_TOOLTIPS** aplicar estilo a mostrar información sobre herramientas. Para obtener una descripción de los estilos de control deslizante, consulte [estilos del Control Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) en el [!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
-##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips  
- Assigns a tooltip control to a slider control.  
+##  <a name="settooltips"></a>CSliderCtrl::SetToolTips  
+ Asigna un control de información sobre herramientas para un control deslizante.  
   
 ```  
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pWndTip`  
- A pointer to a [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) object containing the tooltips to use with the slider control.  
+ Un puntero a un [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objeto que contiene la información sobre herramientas para usar con el control deslizante.  
   
-### <a name="remarks"></a>Remarks  
- This member function implements the behavior of the Win32 message [TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242), as described in the Windows SDK. When a slider control is created with the **TBS_TOOLTIPS** style, it creates a default tooltip control that appears next to the slider, displaying the slider's current position. For a description of the slider control styles, see [Trackbar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760147) in the Windows SDK.  
+### <a name="remarks"></a>Comentarios  
+ Esta función miembro implementa el comportamiento del mensaje de Win32 [TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242), tal y como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Cuando se crea un control deslizante con el **TBS_TOOLTIPS** estilo, crea un control de información sobre herramientas predeterminada que aparece junto al control deslizante, mostrar la posición actual del control deslizante. Para obtener una descripción de los estilos de control deslizante, consulte [estilos del Control Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) en el [!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
-## <a name="see-also"></a>See Also  
- [MFC Sample CMNCTRL2](../../visual-cpp-samples.md)   
- [CWnd Class](../../mfc/reference/cwnd-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [CProgressCtrl Class](../../mfc/reference/cprogressctrl-class.md)
+## <a name="see-also"></a>Vea también  
+ [CMNCTRL2 de ejemplo MFC](../../visual-cpp-samples.md)   
+ [CWnd (clase)](../../mfc/reference/cwnd-class.md)   
+ [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
+ [CProgressCtrl (clase)](../../mfc/reference/cprogressctrl-class.md)
 

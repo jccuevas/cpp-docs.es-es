@@ -1,5 +1,5 @@
 ---
-title: SOCKADDR_IN Structure | Microsoft Docs
+title: SOCKADDR_IN (estructura) | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- SOCKADDR_IN structure [MFC]
+- SOCKADDR_IN structure
 ms.assetid: e8cd7c34-78bd-4e28-a990-eb3ca070b7a6
 caps.latest.revision: 13
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 975352895ce166fb53f65f8e5669a5ff8dda21a0
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: a1283740c0abb0538e5912efa11500c46b45bb9f
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 04/04/2017
 
 ---
-# <a name="sockaddrin-structure"></a>SOCKADDR_IN Structure
-In the Internet address family, the `SOCKADDR_IN` structure is used by Windows Sockets to specify a local or remote endpoint address to which to connect a socket.  
+# <a name="sockaddrin-structure"></a>SOCKADDR_IN (Estructura)
+En la familia de direcciones de Internet, el `SOCKADDR_IN` estructura se usa Windows Sockets para especificar una dirección de extremo local o remoto que se va a conectar un socket.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 struct sockaddr_in{  
@@ -54,23 +54,23 @@ struct in_addr sin_addr;
 };  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  *sin_family*  
- Address family (must be **AF_INET**).  
+ Familia de direcciones (debe ser **AF_INET**).  
   
  *sin_port*  
- IP port.  
+ Puerto de IP.  
   
  *sin_addr*  
- IP address.  
+ Dirección IP.  
   
- *sin_zero*  
- Padding to make structure the same size as `SOCKADDR`.  
+ *Sin_Zero*  
+ Relleno para igualar el tamaño como de la estructura `SOCKADDR`.  
   
-## <a name="remarks"></a>Remarks  
- This is the form of the `SOCKADDR` structure specific to the Internet address family and can be cast to `SOCKADDR`.  
+## <a name="remarks"></a>Comentarios  
+ Esta es la forma de la `SOCKADDR` estructura específicas de la familia de direcciones de Internet y se puede convertir en `SOCKADDR`.  
   
- The IP address component of this structure is of type **IN_ADDR**. The **IN_ADDR** structure is defined in Windows Sockets header file WINSOCK.H as follows:  
+ El componente de dirección IP de esta estructura es de tipo **dir_in**. El **dir_in** estructura se define en el archivo de encabezado de Windows Sockets WINSOCK. H como sigue:  
   
 ```  
 struct in_addr {
@@ -86,10 +86,10 @@ struct in_addr {
 };  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** winsock2.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** winsock2.h  
   
-## <a name="see-also"></a>See Also  
- [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [SOCKADDR Structure](../../mfc/reference/sockaddr-structure.md)
+## <a name="see-also"></a>Vea también  
+ [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [SOCKADDR (estructura)](../../mfc/reference/sockaddr-structure.md)
 

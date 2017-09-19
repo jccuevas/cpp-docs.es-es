@@ -1,5 +1,5 @@
 ---
-title: is_floating_point Class | Microsoft Docs
+title: Clase is_floating_point | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_floating_point
 - type_traits/std::is_floating_point
 dev_langs:
 - C++
@@ -34,33 +35,33 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: d907874f5528f131dd413ce9d6305a921ed86bf2
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: fad953c57d32b7851cff3083fc133dce5fd2ef10
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="isfloatingpoint-class"></a>is_floating_point Class
-Tests if type is floating point.  
+# <a name="isfloatingpoint-class"></a>is_floating_point (Clase)
+Comprueba si el tipo es de punto flotante.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class Ty>  
 struct is_floating_point;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Ty`  
- The type to query.  
+ Tipo que se va a consultar.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if the type `Ty` is a floating point type or a `cv-qualified` form of a floating point type, otherwise it holds false.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia del predicado de tipo contiene true si el tipo `Ty` es un tipo de punto flotante o un formulario `cv-qualified` de tipo de punto flotante; en caso contrario, contiene false.  
   
- A floating point type is one of `float`, `double`, or `long double`.  
+ Un tipo de punto flotante es uno de `float`, `double` o `long double`.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__type_traits__is_floating_point.cpp   
@@ -93,12 +94,12 @@ is_floating_point<int> == false
 is_floating_point<float> == true  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_integral Class](../standard-library/is-integral-class.md)
+ [Clase is_integral](../standard-library/is-integral-class.md)
 

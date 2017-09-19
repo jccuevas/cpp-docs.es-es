@@ -1,5 +1,5 @@
 ---
-title: CMFCTasksPaneTask Class | Microsoft Docs
+title: Clase CMFCTasksPaneTask | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,18 +26,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCTasksPaneTask [MFC], CMFCTasksPaneTask
-- CMFCTasksPaneTask [MFC], SetACCData
-- CMFCTasksPaneTask [MFC], m_bAutoDestroyWindow
-- CMFCTasksPaneTask [MFC], m_bIsBold
-- CMFCTasksPaneTask [MFC], m_dwUserData
-- CMFCTasksPaneTask [MFC], m_hwndTask
-- CMFCTasksPaneTask [MFC], m_nIcon
-- CMFCTasksPaneTask [MFC], m_nWindowHeight
-- CMFCTasksPaneTask [MFC], m_pGroup
-- CMFCTasksPaneTask [MFC], m_rect
-- CMFCTasksPaneTask [MFC], m_strName
-- CMFCTasksPaneTask [MFC], m_uiCommandID
+- CMFCTasksPaneTask class
 ms.assetid: c5a7513b-cd8f-4e2e-b16f-650e1fe30954
 caps.latest.revision: 27
 author: mikeblome
@@ -57,70 +46,70 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 801e063709db70cfd700d5398f2d7a19f9d875ad
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 20713b45c4b6aadc5cdfeaadb6ed269aaf7b337f
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask Class
-The `CMFCTasksPaneTask` class is a helper class that represents tasks for the task pane control ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). The task object represents an item in the task group ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Each task can have a command that the framework executes when a user clicks on the task and an icon that appears to the left of the task name.  
+# <a name="cmfctaskspanetask-class"></a>Clase CMFCTasksPaneTask
+El `CMFCTasksPaneTask` clase es una clase auxiliar que representa las tareas para el control de panel de tareas ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). El objeto de tarea representa un elemento en el grupo de tareas ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Cada tarea puede tener un comando que el marco ejecuta cuando un usuario hace clic en la tarea y en un icono que aparece a la izquierda del nombre de tarea.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CMFCTasksPaneTask : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCTasksPaneTask::CMFCTasksPaneTask](#cmfctaskspanetask)|Creates and initializes a `CMFCTasksPaneTask` object.|  
+|[CMFCTasksPaneTask::CMFCTasksPaneTask](#cmfctaskspanetask)|Crea e inicializa un `CMFCTasksPaneTask` objeto.|  
 |`CMFCTasksPaneTask::~CMFCTasksPaneTask`|Destructor.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCTasksPaneTask::SetACCData](#setaccdata)|Determines the accessibility data for the current task.|  
+|[CMFCTasksPaneTask::SetACCData](#setaccdata)|Determina los datos de accesibilidad para la tarea actual.|  
   
-### <a name="data-members"></a>Data Members  
+### <a name="data-members"></a>Miembros de datos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|Determines whether the task window is automatically destroyed.|  
-|[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|Determines whether the framework draws a task label in bold text.|  
-|[CMFCTasksPaneTask::m_dwUserData](#m_dwuserdata)|Contains user-defined data that the framework associates with the task. Set to zero if the task has no associated data.|  
-|[CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)|A handle to the task window.|  
-|[CMFCTasksPaneTask::m_nIcon](#m_nicon)|The index in the image list of the image that the framework displays next to the task.|  
-|[CMFCTasksPaneTask::m_nWindowHeight](#m_nwindowheight)|The height of the task window. If the task has no task window, this value is zero.|  
-|[CMFCTasksPaneTask::m_pGroup](#m_pgroup)|A pointer to the `CMFCTasksPaneTaskGroup` that this task belongs to.|  
-|[CMFCTasksPaneTask::m_rect](#m_rect)|Specifies the bounding rectangle of the task.|  
-|[CMFCTasksPaneTask::m_strName](#m_strname)|The name of the task.|  
-|[CMFCTasksPaneTask::m_uiCommandID](#m_uicommandid)|Specifies the command ID of the command that the framework executes when the user clicks the task. If this value is not a valid command ID, the task is treated as a simple label.|  
+|[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|Determina si la ventana de la tarea se destruye automáticamente.|  
+|[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|Determina si el marco de trabajo dibuja una etiqueta de tarea en negrita.|  
+|[CMFCTasksPaneTask::m_dwUserData](#m_dwuserdata)|Contiene los datos definidos por el usuario que el marco de trabajo se asocia a la tarea. Se establece en cero si la tarea no tiene ningún dato asociado.|  
+|[CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)|Identificador de la ventana de tareas.|  
+|[CMFCTasksPaneTask::m_nIcon](#m_nicon)|El índice en la lista de imágenes de la imagen que el marco se muestra junto a la tarea.|  
+|[CMFCTasksPaneTask::m_nWindowHeight](#m_nwindowheight)|El alto de la ventana de la tarea. Si la tarea no tiene ninguna ventana de la tarea, este valor es cero.|  
+|[CMFCTasksPaneTask::m_pGroup](#m_pgroup)|Un puntero a la `CMFCTasksPaneTaskGroup` que pertenece esta tarea.|  
+|[CMFCTasksPaneTask::m_rect](#m_rect)|Especifica el rectángulo delimitador de la tarea.|  
+|[CMFCTasksPaneTask::m_strName](#m_strname)|El nombre de la tarea.|  
+|[CMFCTasksPaneTask::m_uiCommandID](#m_uicommandid)|Especifica el identificador de comando del comando que el marco de trabajo se ejecuta cuando el usuario hace clic en la tarea. Si este valor no es un identificador de comando válido, la tarea se trata como una etiqueta simple.|  
   
-## <a name="remarks"></a>Remarks  
- The following illustration shows a task group that contains three tasks:  
+## <a name="remarks"></a>Comentarios  
+ La ilustración siguiente muestra un grupo de tareas que contiene tres tareas:  
   
- ![Task group, expanded](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
+ ![Grupo de tareas, expandido](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
   
 > [!NOTE]
->  If a task does not have a valid command ID, it is treated as a simple label.  
+>  Si una tarea no tiene un identificador de comando válido, se trata como una etiqueta simple.  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxTasksPane.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxTasksPane.h  
   
-##  <a name="cmfctaskspanetask"></a>  CMFCTasksPaneTask::CMFCTasksPaneTask  
- Creates and initializes a `CMFCTasksPaneTask` object.  
+##  <a name="cmfctaskspanetask"></a>CMFCTasksPaneTask::CMFCTasksPaneTask  
+ Crea e inicializa un `CMFCTasksPaneTask` objeto.  
   
 ```  
 CMFCTasksPaneTask(
@@ -134,133 +123,133 @@ CMFCTasksPaneTask(
     int nWindowHeight = 0);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pGroup`  
- Specifies the [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) to which the task belongs.  
+ Especifica la [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) al que pertenece la tarea.  
   
  `lpszName`  
- Specifies the name of the task.  
+ Especifica el nombre de la tarea.  
   
  `nIcon`  
- Specifies the index of the task's image in the image list.  
+ Especifica el índice de imagen de la tarea en la lista de imágenes.  
   
  `uiCommandID`  
- Specifies the command ID of the command that is executed when the task is clicked.  
+ Especifica el identificador de comando del comando que se ejecuta cuando se hace clic en la tarea.  
   
  `dwUserData`  
- User-defined data.  
+ Datos definidos por el usuario.  
   
  `hwndTask`  
- Specifies the handle to the task window.  
+ Especifica el identificador de la ventana de tareas.  
   
  `bAutoDestroyWindow`  
- If `TRUE`, the task window will be destroyed automatically.  
+ Si `TRUE`, se destruirán automáticamente la ventana de tareas.  
   
  `nWindowHeight`  
- Specifies the height of the task window.  
+ Especifica el alto de la ventana de la tarea.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="m_bautodestroywindow"></a>  CMFCTasksPaneTask::m_bAutoDestroyWindow  
- Determines whether the task window is automatically destroyed.  
+##  <a name="m_bautodestroywindow"></a>CMFCTasksPaneTask::m_bAutoDestroyWindow  
+ Determina si la ventana de la tarea se destruye automáticamente.  
   
 ```  
 BOOL m_bAutoDestroyWindow;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- Set to `TRUE` to specify that the task window ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) should be destroyed automatically; otherwise, `FALSE`.  
+### <a name="remarks"></a>Comentarios  
+ Establecer en `TRUE` para especificar que la ventana de tareas ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) se debe destruir automáticamente; en caso contrario, `FALSE`.  
   
-##  <a name="m_bisbold"></a>  CMFCTasksPaneTask::m_bIsBold  
- Determines whether a task label is drawn in bold text.  
+##  <a name="m_bisbold"></a>CMFCTasksPaneTask::m_bIsBold  
+ Determina si una etiqueta de tarea se dibuja texto en negrita.  
   
 ```  
 BOOL m_bIsBold;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- Set this member to `TRUE` to display bold text for the task label.  
+### <a name="remarks"></a>Comentarios  
+ Este miembro del grupo `TRUE` para mostrar texto en negrita para la etiqueta de la tarea.  
   
-##  <a name="m_dwuserdata"></a>  CMFCTasksPaneTask::m_dwUserData  
- Contains user-defined data that is associated with the task. Set to zero if no data is associated with the task.  
+##  <a name="m_dwuserdata"></a>CMFCTasksPaneTask::m_dwUserData  
+ Contiene los datos definidos por el usuario que está asociados a la tarea. Se establece en cero si no hay datos asociados a la tarea.  
   
 ```  
 DWORD m_dwUserData;  
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="m_hwndtask"></a>  CMFCTasksPaneTask::m_hwndTask  
- A handle to the task window.  
+##  <a name="m_hwndtask"></a>CMFCTasksPaneTask::m_hwndTask  
+ Identificador de la ventana de tareas.  
   
 ```  
 HWND m_hwndTask;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- To add a task window, call [CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow).  
+### <a name="remarks"></a>Comentarios  
+ Para agregar una ventana de tareas, llame [CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow).  
   
-##  <a name="m_nicon"></a>  CMFCTasksPaneTask::m_nIcon  
- The index position in an image list that identifies an image that is displayed next to the specified task.  
+##  <a name="m_nicon"></a>CMFCTasksPaneTask::m_nIcon  
+ Posición de índice en una lista de imágenes que identifica una imagen que se muestra junto a la tarea especificada.  
   
 ```  
 int m_nIcon;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The image list is set by [CMFCTasksPane::SetIconsList](../../mfc/reference/cmfctaskspane-class.md#seticonslist).  
+### <a name="remarks"></a>Comentarios  
+ Establece la lista de imágenes [CMFCTasksPane::SetIconsList](../../mfc/reference/cmfctaskspane-class.md#seticonslist).  
   
- Set `m_nIcon` to -1 if you want to display the task without an image.  
+ Establecer `m_nIcon` en -1 si desea que aparezca la tarea sin una imagen.  
   
-##  <a name="m_nwindowheight"></a>  CMFCTasksPaneTask::m_nWindowHeight  
- The height of the task window. If the task has no task window, this value is zero.  
+##  <a name="m_nwindowheight"></a>CMFCTasksPaneTask::m_nWindowHeight  
+ El alto de la ventana de la tarea. Si la tarea no tiene ninguna ventana de la tarea, este valor es cero.  
   
 ```  
 int m_nWindowHeight;  
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="m_pgroup"></a>  CMFCTasksPaneTask::m_pGroup  
- Pointer to the [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) to which this task belongs.  
+##  <a name="m_pgroup"></a>CMFCTasksPaneTask::m_pGroup  
+ Puntero a la [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) al que pertenece esta tarea.  
   
 ```  
 CMFCTasksPaneTaskGroup* m_pGroup;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- Every task must have a parent group. You add groups to a task pane by calling [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
+### <a name="remarks"></a>Comentarios  
+ Cada tarea debe tener un grupo primario. Agregar grupos a un panel de tareas mediante una llamada a [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
-##  <a name="m_rect"></a>  CMFCTasksPaneTask::m_rect  
- Specifies the bounding rectangle of the task.  
+##  <a name="m_rect"></a>CMFCTasksPaneTask::m_rect  
+ Especifica el rectángulo delimitador de la tarea.  
   
 ```  
 CRect m_rect;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- This value is calculated by the framework when the task is drawn.  
+### <a name="remarks"></a>Comentarios  
+ Este valor se calcula mediante el marco de trabajo cuando se dibuja la tarea.  
   
-##  <a name="m_strname"></a>  CMFCTasksPaneTask::m_strName  
- The name of the task.  
+##  <a name="m_strname"></a>CMFCTasksPaneTask::m_strName  
+ El nombre de la tarea.  
   
 ```  
 CString m_strName;  
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="m_uicommandid"></a>  CMFCTasksPaneTask::m_uiCommandID  
- Specifies the command ID of the command that is executed when the user clicks the task. If this value is not a valid command ID, the task is treated as a simple label.  
+##  <a name="m_uicommandid"></a>CMFCTasksPaneTask::m_uiCommandID  
+ Especifica el identificador de comando del comando que se ejecuta cuando el usuario hace clic en la tarea. Si este valor no es un identificador de comando válido, la tarea se trata como una etiqueta simple.  
   
 ```  
 UINT m_uiCommandID;  
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="setaccdata"></a>  CMFCTasksPaneTask::SetACCData  
- Determines the accessibility data for the current task.  
+##  <a name="setaccdata"></a>CMFCTasksPaneTask::SetACCData  
+ Determina los datos de accesibilidad para la tarea actual.  
   
 ```  
 virtual BOOL SetACCData(
@@ -268,18 +257,18 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pParent`  
- Represents the parent window of the current task.  
+ Representa la ventana primaria de la tarea actual.  
   
  [out] `data`  
- An object of type `CAccessibilityData` that is populated with the accessibility data of the current task.  
+ Un objeto del tipo `CAccessibilityData` que se rellena con los datos de la accesibilidad de la tarea actual.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the `data` parameter was successfully populated with the accessibility data of the current task; otherwise, `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si el `data` parámetro era correctamente rellenado con los datos de la accesibilidad de la tarea actual; en caso contrario, `FALSE`.  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CObject Class](../../mfc/reference/cobject-class.md)
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [Clases](../../mfc/reference/mfc-classes.md)   
+ [CObject (clase)](../../mfc/reference/cobject-class.md)
 

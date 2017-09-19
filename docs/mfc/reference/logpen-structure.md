@@ -1,5 +1,5 @@
 ---
-title: LOGPEN Structure | Microsoft Docs
+title: LOGPEN (estructura) | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- LOGPEN structure [MFC]
+- LOGPEN structure
 ms.assetid: a89e8690-6b61-4af5-990c-7c82da24f3b0
 caps.latest.revision: 12
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: d87f885848fd7f77b05475de0ab99e1214e474a7
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: f3868d2ac6a7b18cfe43f7da8865aed0a3ecf88d
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="logpen-structure"></a>LOGPEN Structure
-The `LOGPEN` structure defines the style, width, and color of a pen, a drawing object used to draw lines and borders. The [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) function uses the `LOGPEN` structure.  
+# <a name="logpen-structure"></a>LOGPEN (Estructura)
+El `LOGPEN` estructura define el estilo, ancho y color de un lápiz, un objeto de dibujo que se utiliza para dibujar líneas y bordes. El [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) función utiliza la `LOGPEN` estructura.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 typedef struct tagLOGPEN {  /* lgpn */  
@@ -53,42 +53,42 @@ typedef struct tagLOGPEN {  /* lgpn */
 } LOGPEN;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  *lopnStyle*  
- Specifies the pen type. This member can be one of the following values:  
+ Especifica el tipo de lápiz. Este miembro puede ser uno de los siguientes valores:  
   
-- **PS_SOLID** Creates a solid pen.  
+- **PS_SOLID** crea un lápiz sólido.  
   
-- **PS_DASH** Creates a dashed pen. (Valid only when the pen width is 1.)  
+- **PS_DASH** crea un lápiz rayado. (Válido sólo si el ancho del lápiz es 1).  
   
-- **PS_DOT** Creates a dotted pen. (Valid only when the pen width is 1.)  
+- **PS_DOT** crea un lápiz con puntos. (Válido sólo si el ancho del lápiz es 1).  
   
-- **PS_DASHDOT** Creates a pen with alternating dashes and dots. (Valid only when the pen width is 1.)  
+- **PS_DASHDOT** crea un lápiz con guiones y puntos alternativamente. (Válido sólo si el ancho del lápiz es 1).  
   
-- **PS_DASHDOTDOT** Creates a pen with alternating dashes and double dots. (Valid only when the pen width is 1.)  
+- **PS_DASHDOTDOT** crea un lápiz con guiones y puntos dobles alternos. (Válido sólo si el ancho del lápiz es 1).  
   
-- **PS_NULL** Creates a null pen.  
+- **PS_NULL** crea un lápiz null.  
   
-- **PS_INSIDEFRAME** Creates a pen that draws a line inside the frame of closed shapes produced by GDI output functions that specify a bounding rectangle (for example, the **Ellipse**, **Rectangle**, `RoundRect`, `Pie`, and `Chord` member functions). When this style is used with GDI output functions that do not specify a bounding rectangle (for example, the `LineTo` member function), the drawing area of the pen is not limited by a frame.  
+- **PS_INSIDEFRAME** crea un lápiz que dibuja una línea dentro del marco de las formas cerradas generados por funciones de salida GDI que especifican un rectángulo delimitador (por ejemplo, el **elipse**, **rectángulo**, `RoundRect`, `Pie`, y `Chord` funciones miembro). Cuando se utiliza este estilo con GDI funciones que no se especifican un rectángulo delimitador de salida (por ejemplo, el `LineTo` función miembro), el área de dibujo del lápiz no está limitado por un marco.  
   
-     If a pen has the **PS_INSIDEFRAME** style and a color that does not match a color in the logical color table, the pen is drawn with a dithered color. The **PS_SOLID** pen style cannot be used to create a pen with a dithered color. The **PS_INSIDEFRAME** style is identical to **PS_SOLID** if the pen width is less than or equal to 1.  
+     Si tiene un lápiz la **PS_INSIDEFRAME** estilo y un color que no coincide con un color en la tabla de colores lógica, se dibuja el lápiz con un color interpolado. El **PS_SOLID** no se puede usar el estilo de pluma para crear un lápiz con un color interpolado. El **PS_INSIDEFRAME** estilo es idéntico a **PS_SOLID** si el ancho del lápiz es menor o igual que 1.  
   
-     When the **PS_INSIDEFRAME** style is used with GDI objects produced by functions other than **Ellipse**, **Rectangle**, and `RoundRect`, the line may not be completely inside the specified frame.  
+     Cuando el **PS_INSIDEFRAME** estilo se usa con objetos GDI producidos por las funciones que no sea **elipse**, **rectángulo**, y `RoundRect`, la línea no puede estar completamente dentro del marco especificado.  
   
  *lopnWidth*  
- Specifies the pen width, in logical units. If the **lopnWidth** member is 0, the pen is 1 pixel wide on raster devices regardless of the current mapping mode.  
+ Especifica el ancho del lápiz, en unidades lógicas. Si el **lopnWidth** miembro es 0, el lápiz es 1 píxel de ancho en dispositivos de trama independientemente del modo de asignación actual.  
   
  *lopnColor*  
- Specifies the pen color.  
+ Especifica el color del lápiz.  
   
-## <a name="remarks"></a>Remarks  
- The **y** value in the [POINT](../../mfc/reference/point-structure1.md) structure for the **lopnWidth** member is not used.  
+## <a name="remarks"></a>Comentarios  
+ El **y** valor en el [punto](../../mfc/reference/point-structure1.md) estructura para el **lopnWidth** miembro no se usa.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** wingdi.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** wingdi.h  
   
-## <a name="see-also"></a>See Also  
- [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>Vea también  
+ [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect)
 
 

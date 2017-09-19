@@ -1,5 +1,5 @@
 ---
-title: '&lt;condition_variable&gt; enums | Microsoft Docs'
+title: '&lt;condition_variable&gt; (Enumeraciones) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,24 +11,24 @@ f1_keywords:
 ms.assetid: f261ad79-e25b-4afa-9f8a-909ce697e0d8
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 1ac74f3a5073ae0b3dde0dfbed7059054e50689a
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 8eefe4c79537e8efabe4ef1fdad11b180deefcd1
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="ltconditionvariablegt-enums"></a>&lt;condition_variable&gt; enums
+# <a name="ltconditionvariablegt-enums"></a>&lt;condition_variable&gt; (Enumeraciones)
 ||  
 |-|  
 |[cv_status](#cv_status)|  
   
-##  <a name="cv_status"></a>  cv_status Enumeration  
- Supplies symbolic names for the return values of the methods of template class [condition_variable](../standard-library/condition-variable-class.md).  
+##  <a name="cv_status"></a>  cv_status (Enumeración)  
+ Proporciona nombres simbólicos para los valores devueltos de los métodos de la clase de plantilla [condition_variable](../standard-library/condition-variable-class.md).  
   
 class cv_status { no_timeout timeout };  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<condition_variable>](../standard-library/condition-variable.md)
 
 

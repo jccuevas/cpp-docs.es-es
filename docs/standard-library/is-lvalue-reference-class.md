@@ -1,5 +1,5 @@
 ---
-title: is_lvalue_reference Class | Microsoft Docs
+title: Clase is_lvalue_reference | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_lvalue_reference
 - type_traits/std::is_lvalue_reference
 dev_langs:
 - C++
@@ -34,38 +35,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: d95d1194812ca4b5184d96026d384068502e9b75
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 71a98284e641ad5d24dc3f1413bdf8d210b2091a
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="islvaluereference-class"></a>is_lvalue_reference Class
-Tests if type is an lvalue reference.  
+# <a name="islvaluereference-class"></a>is_lvalue_reference (Clase)
+Comprueba si el tipo es una referencia a un valor L.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 template <class Ty>
 struct is_lvalue_reference;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Ty`  
- The type to query.  
+ Tipo que se va a consultar.  
   
-## <a name="remarks"></a>Remarks  
- An instance of this type predicate holds true if the type `Ty` is a reference to an object or to a function, otherwise it holds false. Note that `Ty` may not be an rvalue reference. For more information about rvalues, see [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+## <a name="remarks"></a>Comentarios  
+ Una instancia de este predicado de tipo contiene true si el tipo `Ty` es una referencia a un objeto o una función; de lo contrario, contiene false. Tenga en cuenta que es posible que `Ty` no sea una referencia a un valor R. Para obtener más información sobre rvalues, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)   
- [Lvalues and Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)
+ [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: CInternetFile Class | Microsoft Docs
+title: Clase de CInternetFile | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,19 +27,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CInternetFile [MFC], CInternetFile
-- CInternetFile [MFC], Abort
-- CInternetFile [MFC], Close
-- CInternetFile [MFC], Flush
-- CInternetFile [MFC], GetLength
-- CInternetFile [MFC], Read
-- CInternetFile [MFC], ReadString
-- CInternetFile [MFC], Seek
-- CInternetFile [MFC], SetReadBufferSize
-- CInternetFile [MFC], SetWriteBufferSize
-- CInternetFile [MFC], Write
-- CInternetFile [MFC], WriteString
-- CInternetFile [MFC], m_hFile
+- CInternetFile class
+- Internet files
+- Internet files, CInternetFile class
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
 caps.latest.revision: 23
 author: mikeblome
@@ -59,66 +49,66 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 714aa0d61692c07068253ad0d942b9a52d4df83d
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 6e1d6227ebd642025e6b00019518d29080cf0454
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cinternetfile-class"></a>CInternetFile Class
-Allows access to files on remote systems that use Internet protocols.  
+# <a name="cinternetfile-class"></a>CInternetFile (clase)
+Permite el acceso a archivos en sistemas remotos que utilizan protocolos de Internet.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CInternetFile : public CStdioFile  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="protected-constructors"></a>Protected Constructors  
+### <a name="protected-constructors"></a>Constructores protegidos  
   
-|Name|Description|  
+|Name|Descripción|  
 |----------|-----------------|  
-|[CInternetFile::CInternetFile](#cinternetfile)|Constructs a `CInternetFile` object.|  
+|[CInternetFile::CInternetFile](#cinternetfile)|Construye un objeto `CInternetFile`.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CInternetFile::Abort](#abort)|Closes the file, ignoring all warnings and errors.|  
-|[CInternetFile::Close](#close)|Closes a `CInternetFile` and frees its resources.|  
-|[CInternetFile::Flush](#flush)|Flushes the contents of the write buffer and makes sure the data in memory is written to the target machine.|  
-|[CInternetFile::GetLength](#getlength)|Returns the size of the file.|  
-|[CInternetFile::Read](#read)|Reads the number of specified bytes.|  
-|[CInternetFile::ReadString](#readstring)|Reads a stream of characters.|  
-|[CInternetFile::Seek](#seek)|Repositions the pointer in an open file.|  
-|[CInternetFile::SetReadBufferSize](#setreadbuffersize)|Sets the size of the buffer where data will be read.|  
-|[CInternetFile::SetWriteBufferSize](#setwritebuffersize)|Sets the size of the buffer where data will be written.|  
-|[CInternetFile::Write](#write)|Writes the number of specified bytes.|  
-|[CInternetFile::WriteString](#writestring)|Writes a null-terminated string to a file.|  
+|[CInternetFile::Abort](#abort)|Cierra el archivo, omitiendo todos los errores y advertencias.|  
+|[CInternetFile::Close](#close)|Cierra un `CInternetFile` y libera sus recursos.|  
+|[CInternetFile::Flush](#flush)|Vuelca el contenido del búfer de escritura y se asegura de que los datos en memoria se escriben en el equipo de destino.|  
+|[CInternetFile::GetLength](#getlength)|Devuelve el tamaño del archivo.|  
+|[CInternetFile:: Read](#read)|Lee el número de bytes especificados.|  
+|[CInternetFile::ReadString](#readstring)|Lee una secuencia de caracteres.|  
+|[CInternetFile::Seek](#seek)|Cambia de posición el puntero en un archivo abierto.|  
+|[CInternetFile::SetReadBufferSize](#setreadbuffersize)|Establece el tamaño del búfer donde se leerán los datos.|  
+|[CInternetFile::SetWriteBufferSize](#setwritebuffersize)|Establece el tamaño del búfer donde se escribirán datos.|  
+|[CInternetFile:: Write](#write)|Escribe el número de bytes especificados.|  
+|[CInternetFile::WriteString](#writestring)|Escribe una cadena terminada en null en un archivo.|  
   
-### <a name="public-operators"></a>Public Operators  
+### <a name="public-operators"></a>Operadores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CInternetFile::operator HINTERNET](#operator_hinternet)|A casting operator for an Internet handle.|  
+|[CInternetFile::operator HINTERNET](#operator_hinternet)|Un operador de conversión para un identificador de Internet.|  
   
-### <a name="protected-data-members"></a>Protected Data Members  
+### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CInternetFile::m_hFile](#m_hfile)|A handle to a file.|  
+|[CInternetFile::m_hFile](#m_hfile)|Un identificador a un archivo.|  
   
-## <a name="remarks"></a>Remarks  
- Provides a base class for the [CHttpFile](../../mfc/reference/chttpfile-class.md) and [CGopherFile](../../mfc/reference/cgopherfile-class.md) file classes. You never create a `CInternetFile` object directly. Instead, create an object of one of its derived classes by calling [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) or [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest). You also can create a `CInternetFile` object by calling [CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
+## <a name="remarks"></a>Comentarios  
+ Proporciona una clase base para la [CHttpFile](../../mfc/reference/chttpfile-class.md) y [CGopherFile](../../mfc/reference/cgopherfile-class.md) clases de archivos. No cree nunca un `CInternetFile` objeto directamente. En su lugar, cree un objeto de uno de sus clases derivadas llamando a [CGopherConnection:: OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) o [CHttpConnection:: OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest). También puede crear un `CInternetFile` objeto mediante una llamada a [CFtpConnection:: OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
   
- The `CInternetFile` member functions **Open**, `LockRange`, `UnlockRange`, and `Duplicate` are not implemented for `CInternetFile`. If you call these functions on a `CInternetFile` object, you will get a [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
+ El `CInternetFile` funciones miembro **abiertos**, `LockRange`, `UnlockRange`, y `Duplicate` no se implementan para `CInternetFile`. Si se llama a estas funciones en una `CInternetFile` objeto, obtendrá un [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- To learn more about how `CInternetFile` works with the other MFC Internet classes, see the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md).  
+ Para obtener más información acerca de cómo `CInternetFile` funciona con otras clases de Internet de MFC, vea el artículo [programación para Internet con WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
@@ -127,23 +117,23 @@ class CInternetFile : public CStdioFile
   
  `CInternetFile`  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxinet.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxinet.h  
   
-##  <a name="abort"></a>  CInternetFile::Abort  
- Closes the file associated with this object and makes the file unavailable for reading or writing.  
+##  <a name="abort"></a>CInternetFile::Abort  
+ Cierra el archivo asociado a este objeto y hace que el archivo no esté disponible para lectura o escritura.  
   
 ```  
 virtual void Abort();
 ```  
   
-### <a name="remarks"></a>Remarks  
- If you have not closed the file before destroying the object, the destructor closes it for you.  
+### <a name="remarks"></a>Comentarios  
+ Si no ha cerrado el archivo antes de destruir el objeto, el destructor cierra automáticamente.  
   
- When handling exceptions, **Abort** differs from [Close](#close) in two important ways. First, the **Abort** function does not throw an exception on failures because it ignores failures. Second, **Abort** does not **ASSERT** if the file has not been opened or was closed previously.  
+ Cuando el control de excepciones, **anular** difiere de [cerrar](#close) en dos aspectos importantes. En primer lugar, el **anular** función no produce una excepción en errores porque omite los errores. Segundo, **anular** no **ASSERT** si el archivo no se abrió o se ha cerrado previamente.  
   
-##  <a name="cinternetfile"></a>  CInternetFile::CInternetFile  
- This member function is called when a `CInternetFile` object is created.  
+##  <a name="cinternetfile"></a>CInternetFile::CInternetFile  
+ Esta función miembro se llama cuando un `CInternetFile` se crea el objeto.  
   
 ```  
 CInternetFile(
@@ -162,74 +152,74 @@ CInternetFile(
     BOOL bReadMode);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `hFile`  
- A handle to an Internet file.  
+ Identificador de un archivo de Internet.  
   
  `pstrFileName`  
- A pointer to a string containing the file name.  
+ Un puntero a una cadena que contiene el nombre de archivo.  
   
  `pConnection`  
- A pointer to a [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) object.  
+ Un puntero a un [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) objeto.  
   
  *bReadMode*  
- Indicates whether the file is read-only.  
+ Indica si el archivo es de sólo lectura.  
   
  `hSession`  
- A handle to an Internet session.  
+ Identificador de sesión de Internet.  
   
  `pstrServer`  
- A pointer to a string containing the name of the server.  
+ Un puntero a una cadena que contiene el nombre del servidor.  
   
  `dwContext`  
- The context identifier for the `CInternetFile` object. See [WinInet Basics](../../mfc/wininet-basics.md) for more information about the context identifier.  
+ El identificador de contexto para la `CInternetFile` objeto. Consulte [Fundamentos de WinInet](../../mfc/wininet-basics.md) para obtener más información sobre el identificador de contexto.  
   
-### <a name="remarks"></a>Remarks  
- You never create a `CInternetFile` object directly. Instead, create an object of one of its derived classes by calling [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) or [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest). You also can create a `CInternetFile` object by calling [CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
+### <a name="remarks"></a>Comentarios  
+ No cree nunca un `CInternetFile` objeto directamente. En su lugar, cree un objeto de uno de sus clases derivadas llamando a [CGopherConnection:: OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) o [CHttpConnection:: OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest). También puede crear un `CInternetFile` objeto mediante una llamada a [CFtpConnection:: OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
   
-##  <a name="close"></a>  CInternetFile::Close  
- Closes a `CInternetFile` and frees any of its resources.  
+##  <a name="close"></a>CInternetFile::Close  
+ Cierra un `CInternetFile` y libera sus recursos.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>Remarks  
- If the file was opened for writing, there is an implicit call to [Flush](#flush) to assure that all buffered data is written to the host. You should call **Close** when you are finished using a file.  
+### <a name="remarks"></a>Comentarios  
+ Si el archivo se abre para escritura, hay una llamada implícita a [vaciar](#flush) para asegurarse de que todos los datos almacenados en búfer se escriban en el host. Debe llamar a **cerrar** cuando haya terminado de usar un archivo.  
   
-##  <a name="flush"></a>  CInternetFile::Flush  
- Call this member function to flush the contents of the write buffer.  
+##  <a name="flush"></a>CInternetFile::Flush  
+ Llame a esta función miembro para vaciar el contenido del búfer de escritura.  
   
 ```  
 virtual void Flush();
 ```  
   
-### <a name="remarks"></a>Remarks  
- Use `Flush` to assure that all data in memory has actually been written to the target machine and to assure your transaction with the host machine has been completed. `Flush` is only effective on `CInternetFile` objects opened for writing.  
+### <a name="remarks"></a>Comentarios  
+ Use `Flush` para asegurarse de que todos los datos en la memoria se ha escrito realmente en el equipo de destino y para asegurarse de que se ha completado la transacción con el equipo host. `Flush`sólo es efectivo en `CInternetFile` objetos abrir para escritura.  
   
-##  <a name="getlength"></a>  CInternetFile::GetLength  
- Returns the size of the file.  
+##  <a name="getlength"></a>CInternetFile::GetLength  
+ Devuelve el tamaño del archivo.  
   
 ```  
 virtual ULONGLONG GetLength() const;  
 ```  
   
-##  <a name="m_hfile"></a>  CInternetFile::m_hFile  
- A handle to the file associated with this object.  
+##  <a name="m_hfile"></a>CInternetFile::m_hFile  
+ Un identificador para el archivo asociado a este objeto.  
   
 ```  
 HINTERNET m_hFile;  
 ```  
   
-##  <a name="operator_hinternet"></a>  CInternetFile::operator HINTERNET  
- Use this operator to get the Windows handle for the current Internet session.  
+##  <a name="operator_hinternet"></a>CInternetFile::operator HINTERNET  
+ Utilice este operador para obtener el identificador de Windows para la sesión actual de Internet.  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
-##  <a name="read"></a>  CInternetFile::Read  
- Call this member function to read into the given memory, starting at `lpvBuf`, the specified number of bytes, `nCount`.  
+##  <a name="read"></a>CInternetFile:: Read  
+ Llame a esta función miembro para leer en la memoria determinada, comenzando en `lpvBuf`, el número especificado de bytes, `nCount`.  
   
 ```  
 virtual UINT Read(
@@ -237,23 +227,23 @@ virtual UINT Read(
     UINT nCount);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `lpBuf`  
- A pointer to a memory address to which file data is read.  
+ Puntero a una dirección de memoria para la que se leen datos de archivo.  
   
  `nCount`  
- The number of bytes to be written.  
+ Número de bytes que se escribirán.  
   
-### <a name="return-value"></a>Return Value  
- The number of bytes transferred to the buffer. The return value may be less than `nCount` if the end of file was reached.  
+### <a name="return-value"></a>Valor devuelto  
+ Número de bytes que se transfieren al búfer. El valor devuelto puede ser menor que `nCount` si se alcanzó el final del archivo.  
   
-### <a name="remarks"></a>Remarks  
- The function returns the number of bytes actually read — a number that may be less than `nCount` if the file ends. If an error occurs while reading the file, the function throws a [CInternetException](../../mfc/reference/cinternetexception-class.md) object that describes the error. Note that reading past the end of the file is not considered an error and no exception will be thrown.  
+### <a name="remarks"></a>Comentarios  
+ La función devuelve el número de bytes que se leyeron realmente (número que puede ser menor que `nCount` si el archivo finaliza). Si se produce un error al leer el archivo, la función produce una [clase CInternetException](../../mfc/reference/cinternetexception-class.md) objeto que describe el error. Tenga en cuenta que leer más allá del final del archivo no se considera un error y no se generará ninguna excepción.  
   
- To ensure all data is retrieved, an application must continue to call the **CInternetFile::Read** method until the method returns zero.  
+ Para asegurarse de que se recuperan todos los datos, una aplicación debe seguir llamar a la **CInternetFile:: Read** método hasta que el método devuelve cero.  
   
-##  <a name="readstring"></a>  CInternetFile::ReadString  
- Call this member function to read a stream of characters until it finds a newline character.  
+##  <a name="readstring"></a>CInternetFile::ReadString  
+ Llame a esta función miembro para leer una secuencia de caracteres hasta que encuentra un carácter de nueva línea.  
   
 ```  
 virtual BOOL ReadString(CString& rString);
@@ -264,28 +254,28 @@ virtual LPTSTR ReadString(
     UINT nMax);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pstr`  
- A pointer to a string which will receive the line being read.  
+ Un puntero a una cadena que recibirá la línea que se va a leer.  
   
  `nMax`  
- The maximum number of characters to be read.  
+ El número máximo de caracteres que leer.  
   
  `rString`  
- A reference to the [CString](../../atl-mfc-shared/reference/cstringt-class.md) object that receives the read line.  
+ Una referencia a la [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto que recibe la línea de lectura.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the buffer containing plain data retrieved from the [CInternetFile](../../mfc/reference/cinternetfile-class.md) object. Regardless of the data type of the buffer passed to this method, it does not perform any manipulations on the data (for example, conversion to Unicode), so you must map the returned data to the structure you expect, as if the **void\*** type were returned.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero al búfer que contiene los datos sin formato que se recuperan de la [CInternetFile](../../mfc/reference/cinternetfile-class.md) objeto. Independientemente del tipo de datos del búfer pasado a este método, no realiza las manipulaciones de los datos (por ejemplo, la conversión a Unicode), por lo que debe asignar los datos devueltos a la estructura de espera, como si la **void\* ** devolvió el tipo.  
   
- **NULL** if end-of-file was reached without reading any data; or, if boolean, **FALSE** if end-of-file was reached without reading any data.  
+ **NULL** si se alcanzó el final de archivo sin necesidad de leer los datos; o bien, si es booleano, **FALSE** si se alcanzó el final de archivo sin necesidad de leer los datos.  
   
-### <a name="remarks"></a>Remarks  
- The function places the resulting line into the memory referenced by the `pstr` parameter. It stops reading characters when it reaches the maximum number of characters, specified by `nMax`. The buffer always receives a terminating null character.  
+### <a name="remarks"></a>Comentarios  
+ La función coloca la línea resultante en la memoria al que hace referencia el `pstr` parámetro. Deja de leer caracteres cuando alcanza el número máximo de caracteres, especificado por `nMax`. El búfer recibe siempre un carácter nulo de terminación.  
   
- If you call `ReadString` without first calling [SetReadBufferSize](#setreadbuffersize), you will get a buffer of 4096 bytes.  
+ Si se llama a `ReadString` sin llamar primero a [SetReadBufferSize](#setreadbuffersize), obtendrá un búfer de 4096 bytes.  
   
-##  <a name="seek"></a>  CInternetFile::Seek  
- Call this member function to reposition the pointer in a previously opened file.  
+##  <a name="seek"></a>CInternetFile::Seek  
+ Llame a esta función miembro para colocar el puntero en un archivo abierto anteriormente.  
   
 ```  
 virtual ULONGLONG Seek(
@@ -293,77 +283,77 @@ virtual ULONGLONG Seek(
     UINT nFrom);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `lOffset`  
- Offset in bytes to move the read/write pointer in the file.  
+ Desplazamiento en bytes para mover el puntero de lectura y escritura en el archivo.  
   
  `nFrom`  
- Relative reference for the offset. Must be one of the following values:  
+ Referencia relativa para el desplazamiento. Debe ser uno de los siguientes valores:  
   
-- **CFile::begin** Move the file pointer `lOff` bytes forward from the beginning of the file.  
+- **CFile::begin** mover el puntero de archivo `lOff` reenvían bytes desde el principio del archivo.  
   
-- **CFile::current** Move the file pointer `lOff` bytes from the current position in the file.  
+- **CFile::current** mover el puntero de archivo `lOff` bytes desde la posición actual en el archivo.  
   
-- **CFile::end** Move the file pointer `lOff` bytes from the end of the file. `lOff` must be negative to seek into the existing file; positive values will seek past the end of the file.  
+- **CFile::end** mover el puntero de archivo `lOff` bytes desde el final del archivo. `lOff`debe ser negativo para buscar en el archivo existente; los valores positivos realizará una búsqueda más allá del final del archivo.  
   
-### <a name="return-value"></a>Return Value  
- The new byte offset from the beginning of the file if the requested position is legal; otherwise, the value is undefined and a [CInternetException](../../mfc/reference/cinternetexception-class.md) object is thrown.  
+### <a name="return-value"></a>Valor devuelto  
+ El nuevo desplazamiento de bytes desde el principio del archivo si la posición solicitada es legal; de lo contrario, el valor es indefinido y un [clase CInternetException](../../mfc/reference/cinternetexception-class.md) se inicia el objeto.  
   
-### <a name="remarks"></a>Remarks  
- The `Seek` function permits random access to a file's contents by moving the pointer a specified amount, absolutely or relatively. No data is actually read during the seek.  
+### <a name="remarks"></a>Comentarios  
+ El `Seek` función permite el acceso aleatorio al contenido de un archivo, mueva el puntero una cantidad especificada, absoluta o relativa. En realidad se leerá ningún dato durante la búsqueda.  
   
- At this time, a call to this member function is only supported for data associated with `CHttpFile` objects. It is not supported for FTP or gopher requests. If you call `Seek` for one of these unsupported services, it will pass back you to the Win32 error code **ERROR_INTERNET_INVALID_OPERATION**.  
+ En este momento, sólo se admite una llamada a esta función miembro de los datos asociados con `CHttpFile` objetos. No se admite para las solicitudes FTP o gopher. Si se llama a `Seek` en uno de estos servicios no compatibles, pasará vuelve al código de error Win32 **ERROR_INTERNET_INVALID_OPERATION**.  
   
- When a file is opened, the file pointer is at offset 0, the beginning of the file.  
+ Cuando se abre un archivo, es el puntero de archivo en el desplazamiento 0, el principio del archivo.  
   
 > [!NOTE]
->  Using `Seek` may cause an implicit call to [Flush](#flush).  
+>  Usando `Seek` puede provocar una llamada implícita a [vaciar](#flush).  
   
-### <a name="example"></a>Example  
-  See the example for the base class implementation ( [CFile::Seek](../../mfc/reference/cfile-class.md#seek)).  
+### <a name="example"></a>Ejemplo  
+  Vea el ejemplo de implementación de la clase base ( [CFile::Seek](../../mfc/reference/cfile-class.md#seek)).  
   
-##  <a name="setreadbuffersize"></a>  CInternetFile::SetReadBufferSize  
- Call this member function to set the size of the temporary read buffer used by a `CInternetFile`-derived object.  
+##  <a name="setreadbuffersize"></a>CInternetFile::SetReadBufferSize  
+ Llame a esta función miembro para establecer el tamaño del búfer de lectura temporal utilizado por un `CInternetFile`-objeto derivado.  
   
 ```  
 BOOL SetReadBufferSize(UINT nReadSize);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *nReadSize*  
- The desired buffer size in bytes.  
+ Tamaño deseado del búfer en bytes.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.  
+### <a name="return-value"></a>Valor devuelto  
+ Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Si se produce un error en la llamada, la función de Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) puede llamar para determinar la causa del error.  
   
-### <a name="remarks"></a>Remarks  
- The underlying WinInet APIs do not perform buffering, so choose a buffer size that allows your application to read data efficiently, regardless of the amount of data to be read. If each call to [Read](#read) normally involves a large aount of data (for example, four or more kilobytes), you should not need a buffer. However, if you call **Read** to get small chunks of data, or if you use [ReadString](#readstring) to read individual lines at a time, then a read buffer improves application performance.  
+### <a name="remarks"></a>Comentarios  
+ Las APIs WinInet subyacente no realizar el almacenamiento en búfer, elija un tamaño de búfer que permite a la aplicación leer los datos de manera eficaz, independientemente de la cantidad de datos que deben leerse. Si cada llamada a [lectura](#read) normalmente implica una aount grande de datos (por ejemplo, cuatro o más kilobytes), no es necesario un búfer. Sin embargo, si se llama a **lectura** obtener pequeños bloques de datos, o si usa [ReadString](#readstring) para leer las líneas individuales en un momento, un búfer de lectura mejora el rendimiento de la aplicación.  
   
- By default, a `CInternetFile` object does not provide any buffering for reading. If you call this member function, you must be sure that the file has been opened for read access.  
+ De forma predeterminada, un `CInternetFile` objeto no proporciona ningún almacenamiento en búfer para su lectura. Si se llama a esta función miembro, debe asegurarse de que el archivo se ha abierto para acceso de lectura.  
   
- You can increase the buffer size at any time, but shrinking the buffer will have no effect. If you call [ReadString](#readstring) without first calling `SetReadBufferSize`, you will get a buffer of 4096 bytes.  
+ Puede aumentar el tamaño del búfer en cualquier momento, pero reducir el búfer no tiene ningún efecto. Si se llama a [ReadString](#readstring) sin llamar primero a `SetReadBufferSize`, obtendrá un búfer de 4096 bytes.  
   
-##  <a name="setwritebuffersize"></a>  CInternetFile::SetWriteBufferSize  
- Call this member function to set the size of the temporary write buffer used by a `CInternetFile`-derived object.  
+##  <a name="setwritebuffersize"></a>CInternetFile::SetWriteBufferSize  
+ Llame a esta función miembro para establecer el tamaño del búfer de escritura temporal utilizado por un `CInternetFile`-objeto derivado.  
   
 ```  
 BOOL SetWriteBufferSize(UINT nWriteSize);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *nWriteSize*  
- The size of the buffer in bytes.  
+ El tamaño del búfer en bytes.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.  
+### <a name="return-value"></a>Valor devuelto  
+ Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Si se produce un error en la llamada, la función de Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) puede llamar para determinar la causa del error.  
   
-### <a name="remarks"></a>Remarks  
- The underlying WinInet APIs don't perform buffering, so choose a buffer size that allows your application to write data efficiently regardless of the amount of data to be written. If each call to [Write](#write) normally involves a large amount of data (for example, four or more kilobytes at a time), you should not need a buffer. However, if you call [Write](#write) to write small chunks of data, a write buffer improves your application's performance.  
+### <a name="remarks"></a>Comentarios  
+ Así se subyacente WinInet APIs no realiza el almacenamiento en búfer, elija un tamaño de búfer que permite a su aplicación para escribir datos eficazmente, independientemente de la cantidad de datos que se va a escribir. Si cada llamada a [escribir](#write) normalmente implica una gran cantidad de datos (por ejemplo, cuatro o más kilobytes a la vez), no es necesario un búfer. Sin embargo, si se llama a [escribir](#write) para escribir pequeños bloques de datos, un búfer de escritura mejora el rendimiento de la aplicación.  
   
- By default, a `CInternetFile` object does not provide any buffering for writing. If you call this member function, you must be sure that the file has been opened for write access. You can change the size of the write buffer at any time, but doing so causes an implicit call to [Flush](#flush).  
+ De forma predeterminada, un `CInternetFile` objeto no proporciona ningún almacenamiento en búfer para escribir en él. Si se llama a esta función miembro, debe asegurarse de que el archivo se ha abierto para acceso de escritura. Puede cambiar el tamaño del búfer de escritura en cualquier momento, pero si lo hace una llamada implícita a [vaciar](#flush).  
   
-##  <a name="write"></a>  CInternetFile::Write  
- Call this member function to write into the given memory, `lpvBuf`, the specified number of bytes, `nCount`.  
+##  <a name="write"></a>CInternetFile:: Write  
+ Llame a esta función miembro para escribir en la memoria dada, `lpvBuf`, el número especificado de bytes, `nCount`.  
   
 ```  
 virtual void Write(
@@ -371,32 +361,32 @@ virtual void Write(
     UINT nCount);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `lpBuf`  
- A pointer to the first byte to be written.  
+ Un puntero al primer byte que se va a escribir.  
   
  `nCount`  
- Specifies the number of bytes to be written.  
+ Especifica el número de bytes que se escribirán.  
   
-### <a name="remarks"></a>Remarks  
- If any error occurs while writing the data, the function throws a [CInternetException](../../mfc/reference/cinternetexception-class.md) object describing the error.  
+### <a name="remarks"></a>Comentarios  
+ Si se produce un error al escribir los datos, la función produce una [clase CInternetException](../../mfc/reference/cinternetexception-class.md) objeto que describe el error.  
   
-##  <a name="writestring"></a>  CInternetFile::WriteString  
- This function writes a null-terminated string to the associated file.  
+##  <a name="writestring"></a>CInternetFile::WriteString  
+ Esta función escribe una cadena terminada en null en el archivo asociado.  
   
 ```  
 virtual void WriteString(LPCTSTR pstr);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pstr`  
- A pointer to a string containing the contents to be written.  
+ Puntero a una cadena que contiene el contenido que se va a escribir.  
   
-### <a name="remarks"></a>Remarks  
- If any error occurs while writing the data, the function throws a [CInternetException](../../mfc/reference/cinternetexception-class.md) object describing the error.  
+### <a name="remarks"></a>Comentarios  
+ Si se produce un error al escribir los datos, la función produce una [clase CInternetException](../../mfc/reference/cinternetexception-class.md) objeto que describe el error.  
   
-## <a name="see-also"></a>See Also  
- [CStdioFile Class](../../mfc/reference/cstdiofile-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [CInternetConnection Class](../../mfc/reference/cinternetconnection-class.md)
+## <a name="see-also"></a>Vea también  
+ [Clase CStdioFile](../../mfc/reference/cstdiofile-class.md)   
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [CInternetConnection (clase)](../../mfc/reference/cinternetconnection-class.md)
 

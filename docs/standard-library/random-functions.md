@@ -1,52 +1,48 @@
 ---
-title: '&lt;random&gt; functions | Microsoft Docs'
+title: Funciones &lt;random&gt; | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- random/std::generate_canonical
+f1_keywords: []
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
-helpviewer_keywords:
-- std::generate_canonical
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 0929e7c6749af19065f42f10ee6c15ab4d4a3e88
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 3aebef535acb59046fab53d49051df16bd362c3c
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="ltrandomgt-functions"></a>&lt;random&gt; functions
+# <a name="ltrandomgt-functions"></a>Funciones &lt;random&gt;
   
-##  <a name="generate_canonical"></a>  generate_canonical  
- Returns a floating-point value from a random sequence.  
+##  <a name="generate_canonical"></a> generate_canonical  
+ Especifica un valor de punto flotante de una secuencia aleatoria.  
   
 > [!NOTE]
->  The ISO C++ Standard states that this function should return values in the range [ `0`, `1`). Visual Studio is not yet compliant with this constraint. As a workaround to generate values in this range, use [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md).  
+>  La norma ISO C++ indica que esta función debe devolver valores dentro del intervalo [ `0`, `1`). Visual Studio todavía no cumple plenamente esta limitación. Use [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md) como solución provisional para generar valores en este intervalo.  
   
 ```  
 template <class RealType, size_t Bits, class Generator>  
 RealType generate_canonical(Generator& Gen);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `RealType`  
- The floating point integral type. For possible types, see [\<random>](../standard-library/random.md).  
+ Tipo integral de punto flotante. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).  
   
  `Bits`  
- The random number generator.  
+ Generador de números aleatorios.  
   
  `Gen`  
- The random number generator.  
+ Generador de números aleatorios.  
   
-### <a name="remarks"></a>Remarks  
- The template function calls `operator()` of `Gen` repeatedly and packs the returned values into a floating-point value `x` of type `RealType` until it has gathered the specified number of mantissa bits in `x`. The specified number is the smaller of `Bits` (which must be nonzero) and the full number of mantissa bits in `RealType`. The first call supplies the lowest-order bits. The function returns `x`.  
+### <a name="remarks"></a>Comentarios  
+ La función de plantilla llama a `operator()` de `Gen` repetidas veces y empaqueta los valores devueltos en un valor de punto flotante `x` de tipo `RealType` hasta reunir el número especificado de bits de mantisa en `x`. El número especificado es el más pequeño de `Bits` (que no debe ser cero) y el número completo de bits de mantisa en `RealType`. La primera llamada proporciona los bits de orden más bajo. La función devuelve `x`.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [\<random>](../standard-library/random.md)
 
 

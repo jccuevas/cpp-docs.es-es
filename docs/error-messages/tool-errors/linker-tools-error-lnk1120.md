@@ -1,7 +1,7 @@
 ---
-title: Linker Tools Error LNK1120 | Microsoft Docs
+title: Las herramientas del vinculador LNK1120 Error | Documentos de Microsoft
 ms.custom: 
-ms.date: 05/17/2017
+ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,17 +34,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: MT
-ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
-ms.openlocfilehash: f183981b9c3bccdf2629e8f5f3bd2c1b07b52b6a
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 1809ed4e5950165d6a187fd3c62871c25124663f
 ms.contentlocale: es-es
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 05/10/2017
 
 ---
-# <a name="linker-tools-error-lnk1120"></a>Linker Tools Error LNK1120
-*number* unresolved externals  
+# <a name="linker-tools-error-lnk1120"></a>Error de las herramientas del vinculador LNK1120
+*número* externos sin resolver  
   
-Error LNK1120 reports the count (*number*) of unresolved external symbol errors for this link operation. Most unresolved external symbol errors are reported individually by [Linker Tools Error LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) and  [Linker Tools Error LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md), which precede this error message, once for each unresolved external symbol error.  
+El error LNK1120 notifica el recuento (*número*) de errores de símbolo externo sin resolver de esta operación de enlace. La mayoría no resuelta se notifican los errores de símbolo externo individualmente por [Error de las herramientas del vinculador LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) y [Error de las herramientas del vinculador LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md), que preceden a este mensaje de error, una vez para cada uno de ellos sin resolver errores de símbolo externo.  
   
-To fix this error, correct all of the other unresolved external errors or other linker errors that precede it in the build output. This error is not reported when no unresolved external errors remain.  
+Para corregir este error, corrija todos los demás errores externos sin resolver u otros errores del vinculador que lo preceden en la salida de compilación. Este error no se produce cuando no permanecen errores externos sin resolver.  
 

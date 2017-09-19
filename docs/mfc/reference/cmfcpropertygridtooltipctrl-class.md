@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyGridToolTipCtrl Class | Microsoft Docs
+title: Clase CMFCPropertyGridToolTipCtrl | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,13 +21,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCPropertyGridToolTipCtrl [MFC], CMFCPropertyGridToolTipCtrl
-- CMFCPropertyGridToolTipCtrl [MFC], Create
-- CMFCPropertyGridToolTipCtrl [MFC], Deactivate
-- CMFCPropertyGridToolTipCtrl [MFC], GetLastRect
-- CMFCPropertyGridToolTipCtrl [MFC], Hide
-- CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
-- CMFCPropertyGridToolTipCtrl [MFC], Track
+- CMFCPropertyGridToolTipCtrl class
+- CMFCPropertyGridToolTipCtrl class, destructor
+- PreTranslateMessage method
+- ~CMFCPropertyGridToolTipCtrl destructor
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
 caps.latest.revision: 24
 author: mikeblome
@@ -47,56 +44,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: bdc742b8713252d57dbf58888f51b37d7042623f
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: e5290706799dcd253205ac74dad72cd7783d19dd
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl Class
-Implements a tooltip control that the [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md) uses to display tooltips.  
+# <a name="cmfcpropertygridtooltipctrl-class"></a>Clase CMFCPropertyGridToolTipCtrl
+Implementa una información sobre herramientas que controlan la [CMFCPropertyGridCtrl clase](../../mfc/reference/cmfcpropertygridctrl-class.md) usa para mostrar información sobre herramientas.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CMFCPropertyGridToolTipCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
 |||  
 |-|-|  
-|Name|Description|  
-|[CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl](#cmfcpropertygridtooltipctrl)|Constructs a `CMFCPropertyGridToolTipCtrl` object.|  
+|Nombre|Descripción|  
+|[CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl](#cmfcpropertygridtooltipctrl)|Construye un objeto `CMFCPropertyGridToolTipCtrl`.|  
 |`CMFCPropertyGridToolTipCtrl::~CMFCPropertyGridToolTipCtrl`|Destructor.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
 |||  
 |-|-|  
-|Name|Description|  
-|[CMFCPropertyGridToolTipCtrl::Create](#create)|Creates a window for the tooltip control.|  
-|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Deactivates and hides the tooltip control.|  
-|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Returns the coordinates of the last position of the tooltip control.|  
-|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Hides the tooltip control.|  
-|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Used by class [CWinApp](../../mfc/reference/cwinapp-class.md) to translate window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. (Overrides [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
-|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Sets the spacing between the tooltip text and the border of the tooltip window.|  
-|[CMFCPropertyGridToolTipCtrl::Track](#track)|Displays the tooltip control.|  
+|Nombre|Descripción|  
+|[CMFCPropertyGridToolTipCtrl::Create](#create)|Crea una ventana para el control de información sobre herramientas.|  
+|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Desactiva y oculta el control de información sobre herramientas.|  
+|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Devuelve las coordenadas de la última posición del control de información sobre herramientas.|  
+|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Oculta el control de información sobre herramientas.|  
+|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de que se envíen a la [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. (Invalida [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Establece el espaciado entre el texto y el borde de la ventana de información sobre herramientas.|  
+|[CMFCPropertyGridToolTipCtrl::Track](#track)|Muestra el control de información sobre herramientas.|  
   
-## <a name="remarks"></a>Remarks  
- Tooltips are displayed when the pointer rests on a property name. The [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) class displays a tooltip so that it is easily readable by the user. Usually, the position of a tooltip is determined by the position of the pointer. By using this class, the tooltip appears over the property name and resembles the natural property extension, so that the property name is fully visible.  
+## <a name="remarks"></a>Comentarios  
+ Se muestra información sobre herramientas cuando se sitúa el puntero sobre un nombre de propiedad. El [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) clase muestra una información sobre herramientas para que sea fácilmente legible por el usuario. Normalmente, la posición de una información sobre herramientas se determina por la posición del puntero. Mediante esta clase, la información sobre herramientas aparece sobre el nombre de propiedad y es similar a la extensión de propiedad natural, para que sea totalmente visible el nombre de propiedad.  
   
- MFC automatically creates this control and uses it in the [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md).  
+ MFC automáticamente crea este control y se utiliza en el [CMFCPropertyGridCtrl clase](../../mfc/reference/cmfcpropertygridctrl-class.md).  
   
-## <a name="example"></a>Example  
- The following example demonstrates how to construct an object of the `CMFCPropertyGridToolTipCtrl` class, and how to display the tooltip control.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo construir un objeto de la `CMFCPropertyGridToolTipCtrl` clase y cómo mostrar el control de información sobre herramientas.  
   
- [!code-cpp[NVC_MFC_RibbonApp#23](../../mfc/reference/codesnippet/cpp/cmfcpropertygridtooltipctrl-class_1.cpp)]  
+ [!code-cpp[23 de NVC_MFC_RibbonApp #](../../mfc/reference/codesnippet/cpp/cmfcpropertygridtooltipctrl-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -105,71 +102,71 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
   
  [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md)  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxpropertygridtooltipctrl.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxpropertygridtooltipctrl.h  
   
-##  <a name="cmfcpropertygridtooltipctrl"></a>  CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
- Constructs a `CMFCPropertyGridToolTipCtrl` object.  
+##  <a name="cmfcpropertygridtooltipctrl"></a>CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
+ Construye un objeto `CMFCPropertyGridToolTipCtrl`.  
   
 ```  
 CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl();
 ```  
   
-##  <a name="create"></a>  CMFCPropertyGridToolTipCtrl::Create  
- Creates a window for the tooltip control.  
+##  <a name="create"></a>CMFCPropertyGridToolTipCtrl::Create  
+ Crea una ventana para el control de información sobre herramientas.  
   
 ```  
 BOOL Create(CWnd* pWndParent);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pWndParent`  
- A pointer to the parent window.  
+ Puntero a la ventana primaria.  
   
-### <a name="return-value"></a>Return Value  
- TRUE if the window was successfully created; otherwise, FALSE.  
+### <a name="return-value"></a>Valor devuelto  
+ TRUE si la ventana se creó correctamente; de lo contrario, FALSE.  
   
-##  <a name="deactivate"></a>  CMFCPropertyGridToolTipCtrl::Deactivate  
- Deactivates and hides the tooltip control.  
+##  <a name="deactivate"></a>CMFCPropertyGridToolTipCtrl::Deactivate  
+ Desactiva y oculta el control de información sobre herramientas.  
   
 ```  
 void Deactivate();
 ```  
   
-### <a name="remarks"></a>Remarks  
- This method sets the last position and text to empty values, so that future calls to [CMFCPropertyGridToolTipCtrl::Track](#track) display the tooltip.  
+### <a name="remarks"></a>Comentarios  
+ Este método establece la última posición y texto a los valores vacíos, para que las futuras llamadas a [CMFCPropertyGridToolTipCtrl::Track](#track) mostrar la información sobre herramientas.  
   
-##  <a name="getlastrect"></a>  CMFCPropertyGridToolTipCtrl::GetLastRect  
- Returns the coordinates of the last position of the tooltip control.  
+##  <a name="getlastrect"></a>CMFCPropertyGridToolTipCtrl::GetLastRect  
+ Devuelve las coordenadas de la última posición del control de información sobre herramientas.  
   
 ```  
 void GetLastRect(CRect& rect) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [out] `rect`  
- Contains the last position of the tooltip control.  
+ Contiene la última posición del control de información sobre herramientas.  
   
-##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
- Hides the tooltip control.  
+##  <a name="hide"></a>CMFCPropertyGridToolTipCtrl::Hide  
+ Oculta el control de información sobre herramientas.  
   
 ```  
 void Hide();
 ```  
   
-##  <a name="settextmargin"></a>  CMFCPropertyGridToolTipCtrl::SetTextMargin  
- Sets the spacing between the tooltip text and the border of the tooltip window.  
+##  <a name="settextmargin"></a>CMFCPropertyGridToolTipCtrl::SetTextMargin  
+ Establece el espaciado entre el texto y el borde de la ventana de información sobre herramientas.  
   
 ```  
 void SetTextMargin(int nTextMargin);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `nTextMargin`  
- Specifies the spacing between the tooltip control text and the border of the tooltip window. The default value is 10 pixels.  
+ Especifica el espaciado entre el texto de información sobre herramientas del control y el borde de la ventana de información sobre herramientas. El valor predeterminado es 10 píxeles.  
   
-##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
- Displays the tooltip control.  
+##  <a name="track"></a>CMFCPropertyGridToolTipCtrl::Track  
+ Muestra el control de información sobre herramientas.  
   
 ```  
 void Track(
@@ -177,17 +174,17 @@ void Track(
     const CString& strText);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `rect`  
- Specifies the position and size of the tooltip control.  
+ Especifica la posición y el tamaño del control de información sobre herramientas.  
   
  [in] `strText`  
- Specifies the text to be shown in the tooltip.  
+ Especifica el texto que se mostrará en la información sobre herramientas.  
   
-### <a name="remarks"></a>Remarks  
- This method displays the tooltip control at the position and size specified by `rect`. If the position, size, and text have not changed since the last time this method was called, this method has no effect.  
+### <a name="remarks"></a>Comentarios  
+ Este método muestra el control de información sobre herramientas en la posición y el tamaño especificado por `rect`. Si la posición, el tamaño y el texto no han cambiado desde la última vez que se llama a este método, este método tiene ningún efecto.  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [Clases](../../mfc/reference/mfc-classes.md)
 

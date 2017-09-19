@@ -1,5 +1,5 @@
 ---
-title: is_trivially_default_constructible Class | Microsoft Docs
+title: Clase is_trivially_default_constructible | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_trivially_default_constructible
 - type_traits/std::is_trivially_default_constructible
 dev_langs:
 - C++
@@ -33,50 +34,50 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 7378e982af31c1030012934924a053666fb4fff2
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: dd41fbdcc33250bc60a0b919b17dd52862549a77
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible Class
-Tests if type has trivial default constructor.  
+# <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible (clase)
+Comprueba si el tipo tiene un constructor predeterminado trivial.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 template <class Ty>
 struct is_trivially_default_constructible;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Ty`  
- The type to query.  
+ Tipo que se va a consultar.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if the type `Ty` is a class that has a trivial constructor, otherwise it holds false.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia del predicado de tipo es true si el tipo `Ty` es una clase que tiene un constructor trivial; en caso contrario, es false.  
   
- A default constructor for a class `Ty` is trivial if:  
+ Un constructor predeterminado para una clase `Ty` es trivial si:  
   
--   it is an implicitly declared default constructor  
+-   es un constructor predeterminado declarado implícitamente  
   
--   the class `Ty` has no virtual functions  
+-   la clase `Ty` no tiene ninguna función virtual  
   
--   the class `Ty` has no virtual bases  
+-   la clase `Ty` no tiene ninguna base virtual  
   
--   all the direct bases of the class `Ty` have trivial constructors  
+-   todas las bases directas de la clase `Ty` tienen constructores triviales  
   
--   the classes of all the non-static data members of class type have trivial constructors  
+-   las clases de todos los miembros de datos no estáticos del tipo de clase tienen constructores triviales  
   
--   the classes of all the non-static data members of type array of class have trivial constructors  
+-   las clases de todos los miembros de datos no estáticos de la matriz de tipo de clase tienen constructores triviales  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)
 
 

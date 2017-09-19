@@ -1,5 +1,5 @@
 ---
-title: messages_byname Class | Microsoft Docs
+title: messages_byname (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- messages_byname
 - xlocmes/std::messages_byname
 dev_langs:
 - C++
@@ -33,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 5bc3f2ed4f97c1beaead7510a0c5c09f5bd91e9b
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 014346887441678f53872aa7b791931e89361a5c
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="messagesbyname-class"></a>messages_byname Class
-The derived template class describes an object that can serve as a message facet of a given locale, enabling the retrieval of localized messages.  
+# <a name="messagesbyname-class"></a>messages_byname (Clase)
+La clase de plantilla derivada describe un objeto que puede actuar como una faceta de mensajes de una configuración regional concreta, lo que permite la recuperación de mensajes localizados.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 template <class CharType>
@@ -63,23 +64,23 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `_Locname`  
- A named locale.  
+ Una configuración regional con nombre.  
   
  `_Refs`  
- An initial reference count.  
+ Un recuento de referencias inicial.  
   
-## <a name="remarks"></a>Remarks  
- Its behavior is determined by the named locale `_Locname`. Each constructor initializes its base object with [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`).  
+## <a name="remarks"></a>Comentarios  
+ Su comportamiento viene determinado por la configuración regional con nombre `_Locname`. Cada constructor inicializa su objeto base con [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`).  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<locale>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<locale>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Vea también  
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

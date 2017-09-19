@@ -1,5 +1,5 @@
 ---
-title: char_traits&lt;char&gt; Struct | Microsoft Docs
+title: char_traits&lt;char&gt; (Struct) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,26 +34,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: dc17cc4dc82063566ea2cf3119c6eeb54a863a4a
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 0cf4c829018016f255ceab407f905fd15114c7f4
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="chartraitsltchargt-struct"></a>char_traits&lt;char&gt; Struct
-A struct that is a specialization of the template struct **char_traits\<CharType>** to an element of type `char`.  
+# <a name="chartraitsltchargt-struct"></a>char_traits&lt;char&gt; (Struct)
+Un struct que es una especialización del struct de plantilla **char_traits\<CharType>** para un elemento de tipo `char`.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 template <>  
 struct char_traits<char>;
 ```  
   
-## <a name="remarks"></a>Remarks  
- Specialization allows the struct to take advantage of library functions that manipulate objects of this type `char`.  
+## <a name="remarks"></a>Comentarios  
+ La especialización permite que struct aproveche las funciones de biblioteca que manipulan objetos de este tipo `char`.  
   
-## <a name="example"></a>Example  
- See the typedefs and member functions of the template class [char_traits Class](../standard-library/char-traits-struct.md)
+## <a name="example"></a>Ejemplo  
+ Consultar las funciones miembro y typedefs de la clase de plantilla [char_traits (clase)](../standard-library/char-traits-struct.md)
 

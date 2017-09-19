@@ -1,5 +1,5 @@
 ---
-title: messages_base Class | Microsoft Docs
+title: messages_base (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- messages_base
 - locale/std::messages_base
 dev_langs:
 - C++
@@ -33,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: e6b6228f458fedc9db0117e52ae2e0a76cafa519
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4e10582050f922e880577dc5a19d99a1ac03128e
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="messagesbase-class"></a>messages_base Class
-The base class describes an `int` type for the catalog of messages.  
+# <a name="messagesbase-class"></a>messages_base (Clase)
+La clase base describe un tipo `int` para el catálogo de mensajes.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 struct messages_base : locale::facet {
@@ -52,16 +53,16 @@ struct messages_base : locale::facet {
 };
 ```  
   
-## <a name="remarks"></a>Remarks  
- The type catalog is a synonym for type `int` that describes the possible return values from messages:: [do_open](../standard-library/messages-class.md#do_open).  
+## <a name="remarks"></a>Comentarios  
+ El catálogo de tipos es un sinónimo del tipo `int` que describe los posibles valores devueltos de messages::[do_open](../standard-library/messages-class.md#do_open).  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<locale>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<locale>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Vea también  
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

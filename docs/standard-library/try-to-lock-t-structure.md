@@ -1,5 +1,5 @@
 ---
-title: try_to_lock_t Structure | Microsoft Docs
+title: try_to_lock_t (Estructura) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,29 +31,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: d99994751ce5a161ac439107be186b304131d041
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 1a6427beb2230c437b75e0539c430a7251f5f0ba
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="trytolockt-structure"></a>try_to_lock_t Structure
-Represents a `struct` that defines a [try_to_lock](../standard-library/mutex-functions.md#try_to_lock) object. Used to select one of the overloaded constructors of [unique_lock](../standard-library/unique-lock-class.md).  
+# <a name="trytolockt-structure"></a>try_to_lock_t (Estructura)
+Representa una `struct` que define un objeto [try_to_lock](../standard-library/mutex-functions.md#try_to_lock). Se usa para seleccionar uno de los constructores sobrecargados de [unique_lock](../standard-library/unique-lock-class.md).  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 struct try_to_lock_t;
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<mutex>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<mutex >  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: is_const Class | Microsoft Docs
+title: Clase is_const | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_const
 - type_traits/std::is_const
 dev_langs:
 - C++
@@ -34,31 +35,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 1eadc0ee02d8f32f5c3415ad54f1373335386f19
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 6d52068343d9a5cb16aea1821685e8f365197b0b
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="isconst-class"></a>is_const Class
-Tests if type is const.  
+# <a name="isconst-class"></a>is_const (Clase)
+Comprueba si el tipo es const.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class Ty>  
 struct is_const;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Ty`  
- The type to query.  
+ Tipo que se va a consultar.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if `Ty` is `const-qualified`.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia del predicado de tipo es true si `Ty` es `const-qualified`.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__type_traits__is_const.cpp   
@@ -94,12 +95,12 @@ is_const<int> == false
 is_const<const int> == true  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_volatile Class](../standard-library/is-volatile-class.md)
+ [Clase is_volatile](../standard-library/is-volatile-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: CAnimationSize Class | Microsoft Docs
+title: Clase CAnimationSize | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,16 +24,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationSize [MFC], CAnimationSize
-- CAnimationSize [MFC], AddTransition
-- CAnimationSize [MFC], GetCX
-- CAnimationSize [MFC], GetCY
-- CAnimationSize [MFC], GetDefaultValue
-- CAnimationSize [MFC], GetValue
-- CAnimationSize [MFC], SetDefaultValue
-- CAnimationSize [MFC], GetAnimationVariableList
-- CAnimationSize [MFC], m_cxValue
-- CAnimationSize [MFC], m_cyValue
+- CAnimationSize class
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
 caps.latest.revision: 17
 author: mikeblome
@@ -53,76 +44,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 2f65230f8a54737c95e99925a9a7812686acad2f
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
+ms.openlocfilehash: 84b9ae3b81f72f6c0ae8e88f78357c29e8d82ffd
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="canimationsize-class"></a>CAnimationSize Class
-Implements the functionality of a size object whose dimensions can be animated.  
+# <a name="canimationsize-class"></a>Clase CAnimationSize
+Implementa la funcionalidad de un objeto cuyas dimensiones se pueden animar.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CAnimationSize : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CAnimationSize::CAnimationSize](#canimationsize)|Overloaded. Constructs an animation size object.|  
+|[CAnimationSize::CAnimationSize](#canimationsize)|Sobrecargado. Construye un objeto de tamaño de la animación.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CAnimationSize::AddTransition](#addtransition)|Adds transitions for Width and Height.|  
-|[CAnimationSize::GetCX](#getcx)|Provides access to CAnimationVariable representing Width.|  
-|[CAnimationSize::GetCY](#getcy)|Provides access to CAnimationVariable representing Height.|  
-|[CAnimationSize::GetDefaultValue](#getdefaultvalue)|Returns the default values for Width and Height.|  
-|[CAnimationSize::GetValue](#getvalue)|Returns current value.|  
-|[CAnimationSize::SetDefaultValue](#setdefaultvalue)|Sets default value.|  
+|[CAnimationSize::AddTransition](#addtransition)|Agrega las transiciones de ancho y alto.|  
+|[CAnimationSize::GetCX](#getcx)|Proporciona acceso a CAnimationVariable que representa el ancho.|  
+|[CAnimationSize::GetCY](#getcy)|Proporciona acceso a CAnimationVariable que representa el alto.|  
+|[CAnimationSize::GetDefaultValue](#getdefaultvalue)|Devuelve los valores predeterminados para Width y Height.|  
+|[CAnimationSize::GetValue](#getvalue)|Devuelve el valor actual.|  
+|[CAnimationSize::SetDefaultValue](#setdefaultvalue)|Establece el valor predeterminado.|  
   
-### <a name="protected-methods"></a>Protected Methods  
+### <a name="protected-methods"></a>Métodos protegidos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CAnimationSize::GetAnimationVariableList](#getanimationvariablelist)|Puts the encapsulated animation variables into a list. (Overrides [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
+|[CAnimationSize::GetAnimationVariableList](#getanimationvariablelist)|Coloca las variables de animación encapsulado en una lista. (Invalida [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
-### <a name="public-operators"></a>Public Operators  
+### <a name="public-operators"></a>Operadores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CAnimationSize::operator CSize](#operator_csize)|Converts a CAnimationSize to a CSize.|  
-|[CAnimationSize::operator=](#operator_eq)|Assigns szSrc to CAnimationSize.|  
+|[CAnimationSize::operator CSize](#operator_csize)|Convierte un CAnimationSize un CSize.|  
+|[CAnimationSize::operator =](#operator_eq)|Asigna szSrc a CAnimationSize.|  
   
-### <a name="protected-data-members"></a>Protected Data Members  
+### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CAnimationSize::m_cxValue](#m_cxvalue)|The encapsulated animation variable that represents width of animation size.|  
-|[CAnimationSize::m_cyValue](#m_cyvalue)|The encapsulated animation variable that represents height of animation size.|  
+|[CAnimationSize::m_cxValue](#m_cxvalue)|La variable de animación encapsulado que representa el ancho del tamaño de la animación.|  
+|[CAnimationSize::m_cyValue](#m_cyvalue)|La variable de animación encapsulado que representa el alto del tamaño de la animación.|  
   
-## <a name="remarks"></a>Remarks  
- The CAnimationSize class encapsulates two CAnimationVariable objects and can represent in applications a size. For example, you can use this class to animate a size of any two dimensional object on the screen (like rectangle, control etc). To use this class in application, just instantiate an object of this class, add it to animation controller using CAnimationController::AddAnimationObject and call AddTransition for each transition to be applied to Width and/or Height.  
+## <a name="remarks"></a>Comentarios  
+ La clase CAnimationSize encapsula dos objetos CAnimationVariable y aplicaciones puede representar un tamaño. Por ejemplo, puede utilizar esta clase para animar un tamaño de dos objeto tridimensional en la pantalla (como en el rectángulo, controlar etcetera). Para utilizar esta clase en la aplicación, simplemente crear una instancia de un objeto de esta clase, agregue al controlador de animación mediante CAnimationController::AddAnimationObject y llame a AddTransition para cada transición se aplique a ancho o alto.  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)  
   
  `CAnimationSize` 
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>  CAnimationSize::AddTransition  
- Adds transitions for Width and Height.  
+##  <a name="addtransition"></a>CAnimationSize::AddTransition  
+ Agrega las transiciones de ancho y alto.  
   
 ```  
 void AddTransition(
@@ -130,18 +121,18 @@ void AddTransition(
     CBaseTransition* pCYTransition);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pCXTransition`  
- A pointer to transition for Width.  
+ Puntero a la transición para el ancho.  
   
  `pCYTransition`  
- A pointer to transition for Height.  
+ Puntero a la transición de alto.  
   
-### <a name="remarks"></a>Remarks  
- Call this function to add the specified transitions to the internal list of transitions to be applied to animation variables for Width and Height. When you add transitions, they are not applied immediately and stored in an internal list. Transitions are applied (added to a storyboard for a particular value) when you call CAnimationController::AnimateGroup. If you don't need to apply a transition to one of dimensions, you can pass NULL.  
+### <a name="remarks"></a>Comentarios  
+ Llame a esta función para agregar las transiciones especificadas a la lista interna de transiciones que se aplicará a las variables de animación para ancho y alto. Al agregar transiciones, no se aplican inmediatamente y almacenados en una lista interna. Las transiciones se aplican (agregado a un guión gráfico para un determinado valor) cuando se llama a CAnimationController::AnimateGroup. Si no es necesario aplicar una transición a una de las dimensiones, puede pasar NULL.  
   
-##  <a name="canimationsize"></a>  CAnimationSize::CAnimationSize  
- Constructs an animation size object.  
+##  <a name="canimationsize"></a>CAnimationSize::CAnimationSize  
+ Construye un objeto de tamaño de la animación.  
   
 ```  
 CAnimationSize();
@@ -154,24 +145,24 @@ CAnimationSize(
     DWORD dwUserData = 0);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szDefault`  
- Specifies default size.  
+ Especifica el tamaño predeterminado.  
   
  `nGroupID`  
- Specifies Group ID.  
+ Especifica el identificador de grupo.  
   
  `nObjectID`  
- Specifies Object ID.  
+ Especifica el identificador de objeto.  
   
  `dwUserData`  
- Specifies user-defined data.  
+ Especifica los datos definidos por el usuario.  
   
-### <a name="remarks"></a>Remarks  
- The object is constructed with default values for width, height, Object ID and Group ID, which will be set to 0. They can be changed later at runtime using SetDefaultValue and SetID.  
+### <a name="remarks"></a>Comentarios  
+ Se construye el objeto con valores predeterminados para el ancho, alto, objeto de identificador y el identificador de grupo, que se establecerá en 0. Puede cambiar posteriormente en tiempo de ejecución mediante SetDefaultValue y SetID.  
   
-##  <a name="getanimationvariablelist"></a>  CAnimationSize::GetAnimationVariableList  
- Puts the encapsulated animation variables into a list.  
+##  <a name="getanimationvariablelist"></a>CAnimationSize::GetAnimationVariableList  
+ Coloca las variables de animación encapsulado en una lista.  
   
 ```  
 virtual void GetAnimationVariableList(
@@ -179,121 +170,121 @@ virtual void GetAnimationVariableList(
     CAnimationVariable*>& lst);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `lst`  
- When the function returns, it contains pointers to two CAnimationVariable objects representing the width and height.  
+ Cuando la función vuelve, contiene punteros a dos objetos CAnimationVariable que representa el ancho y alto.  
   
-##  <a name="getcx"></a>  CAnimationSize::GetCX  
- Provides access to CAnimationVariable representing Width.  
+##  <a name="getcx"></a>CAnimationSize::GetCX  
+ Proporciona acceso a CAnimationVariable que representa el ancho.  
   
 ```  
 CAnimationVariable& GetCX();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A reference to encapsulated CAnimationVariable representing Width.  
+### <a name="return-value"></a>Valor devuelto  
+ Una referencia a CAnimationVariable encapsulado que representa el ancho.  
   
-### <a name="remarks"></a>Remarks  
- You can call this method to get direct access to underlying CAnimationVariable representing Width.  
+### <a name="remarks"></a>Comentarios  
+ Puede llamar a este método para obtener acceso directo a CAnimationVariable subyacente que representa el ancho.  
   
-##  <a name="getcy"></a>  CAnimationSize::GetCY  
- Provides access to CAnimationVariable representing Height.  
+##  <a name="getcy"></a>CAnimationSize::GetCY  
+ Proporciona acceso a CAnimationVariable que representa el alto.  
   
 ```  
 CAnimationVariable& GetCY();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A reference to encapsulated CAnimationVariable representing Height.  
+### <a name="return-value"></a>Valor devuelto  
+ Una referencia a CAnimationVariable encapsulado que representa el alto.  
   
-### <a name="remarks"></a>Remarks  
- You can call this method to get direct access to underlying CAnimationVariable representing Height.  
+### <a name="remarks"></a>Comentarios  
+ Puede llamar a este método para obtener acceso directo a CAnimationVariable subyacente que representa el alto.  
   
-##  <a name="getdefaultvalue"></a>  CAnimationSize::GetDefaultValue  
- Returns the default values for Width and Height.  
+##  <a name="getdefaultvalue"></a>CAnimationSize::GetDefaultValue  
+ Devuelve los valores predeterminados para Width y Height.  
   
 ```  
 CSize GetDefaultValue();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A CSize object containing default values.  
+### <a name="return-value"></a>Valor devuelto  
+ Un objeto CSize que contiene los valores predeterminados.  
   
-### <a name="remarks"></a>Remarks  
- Call this function to retrieve default value, which was previously set by constructor or SetDefaultValue.  
+### <a name="remarks"></a>Comentarios  
+ Llame a esta función para recuperar el valor predeterminado, que se ha establecido previamente mediante el constructor o SetDefaultValue.  
   
-##  <a name="getvalue"></a>  CAnimationSize::GetValue  
- Returns current value.  
+##  <a name="getvalue"></a>CAnimationSize::GetValue  
+ Devuelve el valor actual.  
   
 ```  
 BOOL GetValue(CSize& szValue);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szValue`  
- Output. Contains the current value when this method returns.  
+ Salida. Cuando este método vuelve, contiene el valor actual.  
   
-### <a name="return-value"></a>Return Value  
- TRUE, if the current value was successfully retrieved; otherwise FALSE.  
+### <a name="return-value"></a>Valor devuelto  
+ Es TRUE si el valor actual se recuperó correctamente; de lo contrario, FALSE.  
   
-### <a name="remarks"></a>Remarks  
- Call this function to retrieve the current value of animation size. If this method fails or underlying COM objects for Width and Size have not been initialized, szValue contains default value, which was previously set in constructor or by SetDefaultValue.  
+### <a name="remarks"></a>Comentarios  
+ Llame a esta función para recuperar el valor actual del tamaño de la animación. Si este método produce un error o no se hayan inicializado para el ancho y el tamaño de los objetos COM subyacentes, szValue contiene el valor predeterminado, que estableció anteriormente en el constructor o SetDefaultValue.  
   
-##  <a name="m_cxvalue"></a>  CAnimationSize::m_cxValue  
- The encapsulated animation variable that represents width of animation size.  
+##  <a name="m_cxvalue"></a>CAnimationSize::m_cxValue  
+ La variable de animación encapsulado que representa el ancho del tamaño de la animación.  
   
 ```  
 CAnimationVariable m_cxValue;  
 ```  
   
-##  <a name="m_cyvalue"></a>  CAnimationSize::m_cyValue  
- The encapsulated animation variable that represents height of animation size.  
+##  <a name="m_cyvalue"></a>CAnimationSize::m_cyValue  
+ La variable de animación encapsulado que representa el alto del tamaño de la animación.  
   
 ```  
 CAnimationVariable m_cyValue;  
 ```  
   
-##  <a name="operator_csize"></a>  CAnimationSize::operator CSize  
- Converts a CAnimationSize to a CSize.  
+##  <a name="operator_csize"></a>CAnimationSize::operator CSize  
+ Convierte un CAnimationSize un CSize.  
   
 ```  
 operator CSize();
 ```   
   
-### <a name="return-value"></a>Return Value  
- Current value of animation size as CSize.  
+### <a name="return-value"></a>Valor devuelto  
+ Valor actual del tamaño de la animación como CSize.  
   
-### <a name="remarks"></a>Remarks  
- This function internally calls GetValue. If GetValue for some reason fails, the returned size will contain default values for Width and Height.  
+### <a name="remarks"></a>Comentarios  
+ Esta función llama internamente a GetValue. Si se produce un error en GetValue por alguna razón, el tamaño devuelto contendrá valores predeterminados para Width y Height.  
   
-##  <a name="operator_eq"></a>  CAnimationSize::operator=  
- Assigns szSrc to CAnimationSize.  
+##  <a name="operator_eq"></a>CAnimationSize::operator =  
+ Asigna szSrc a CAnimationSize.  
   
 ```  
 void operator=(const CSize& szSrc);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szSrc`  
- Refers to CSize or SIZE.  
+ Hace referencia a CSize o tamaño.  
   
-### <a name="remarks"></a>Remarks  
- Assigns szSrc to CAnimationSize. It's recommended to do that before animation start, because this operator calls SetDefaultValue, which recreates the underlying COM objects for Width and Height if they have been created. If you subscribed this animation object to events (ValueChanged or IntegerValueChanged), you need to re-enable these events.  
+### <a name="remarks"></a>Comentarios  
+ Asigna szSrc a CAnimationSize. Se recomienda hacerlo antes del inicio de la animación, ya que llama a este operador SetDefaultValue, que vuelve a crear los objetos COM subyacentes para ancho y alto si se han creado. Si está suscrito a este objeto de animación a eventos (ValueChanged o IntegerValueChanged), debe volver a habilitar estos eventos.  
   
-##  <a name="setdefaultvalue"></a>  CAnimationSize::SetDefaultValue  
- Sets default value.  
+##  <a name="setdefaultvalue"></a>CAnimationSize::SetDefaultValue  
+ Establece el valor predeterminado.  
   
 ```  
 void SetDefaultValue(const CSize& szDefault);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szDefault`  
- Specifies new default size.  
+ Especifica el nuevo tamaño de forma predeterminada.  
   
-### <a name="remarks"></a>Remarks  
- Use this function to set a default value to animation object. This methods assigns default values to Width and Height of animation size. It also recreates underlying COM objects if they have been created. If you subscribed this animation object to events (ValueChanged or IntegerValueChanged), you need to re-enable these events.  
+### <a name="remarks"></a>Comentarios  
+ Utilice esta función para establecer un valor predeterminado para el objeto de animación. Este método asigna valores predeterminados para el ancho y alto del tamaño de la animación. También crea los objetos COM subyacentes si se han creado. Si está suscrito a este objeto de animación a eventos (ValueChanged o IntegerValueChanged), debe volver a habilitar estos eventos.  
   
-## <a name="see-also"></a>See Also  
- [Classes](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>Vea también  
+ [Clases](../../mfc/reference/mfc-classes.md)
 

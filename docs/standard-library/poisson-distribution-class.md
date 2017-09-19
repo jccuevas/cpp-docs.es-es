@@ -1,5 +1,5 @@
 ---
-title: poisson_distribution Class | Microsoft Docs
+title: poisson_distribution (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- poisson_distribution
 - random/std::poisson_distribution
 - random/std::poisson_distribution::reset
 - random/std::poisson_distribution::mean
@@ -24,14 +25,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- std::poisson_distribution [C++]
-- std::poisson_distribution [C++], reset
-- std::poisson_distribution [C++], mean
-- std::poisson_distribution [C++], param
-- std::poisson_distribution [C++], min
-- std::poisson_distribution [C++], max
-- std::poisson_distribution [C++], param_type
-- std::poisson_distribution [C++], param_type
+- poisson_distribution class
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
 caps.latest.revision: 19
 author: corob-msft
@@ -51,17 +45,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: d7237dd8a273323eb8424223848bde9d647c06da
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a8a87f4101cca4a709d594ac2ad19726eb505c00
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="poissondistribution-class"></a>poisson_distribution Class
-Generates a Poisson distribution.  
+# <a name="poissondistribution-class"></a>poisson_distribution (Clase)
+Genera una distribución de Poisson.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class IntType = int>
@@ -92,33 +86,33 @@ public:
    };  
 ``` 
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
 *IntType*  
-The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).  
+Un tipo de resultado de entero, el valor predeterminado es `int`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Remarks  
-The template class describes a distribution that produces values of a user-specified integral type with a Poisson distribution. The following table links to articles about individual members.  
+## <a name="remarks"></a>Comentarios  
+La clase de plantilla describe una distribución que genera valores de un tipo integral especificado por el usuario con la distribución de Poisson. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.  
   
 ||||  
 |-|-|-|  
-|[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|  
+|[poisson_distribution)](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|  
 |`poisson_distribution::operator()`||[param_type](#param_type)|  
   
-The property function `mean()` returns the value for stored distribution parameter *mean*.  
+La función de propiedad `mean()` devuelve el valor de parámetro de distribución *mean* almacenado.  
   
-The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
+El miembro de propiedad `param()` establece o devuelve el paquete de parámetros de distribución almacenado `param_type`.  
 
-The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
+Las funciones miembro `min()` y `max()` devuelven el resultado posible más pequeño y el resultado posible más grande, respectivamente.  
   
-The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
+La función miembro `reset()` descarta cualquier valor almacenado en caché, de modo que la siguiente llamada a `operator()` no depende de ningún valor obtenido del motor antes de la llamada.  
   
-The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
+Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
   
-For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
+Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).  
   
-For detailed information about the Poisson distribution, see the Wolfram MathWorld article [Poisson Distribution](http://go.microsoft.com/fwlink/LinkId=401112).  
+Para obtener información detallada sobre la distribución de Poisson, vea el artículo de Wolfram MathWorld sobre la [distribución de Poisson](http://go.microsoft.com/fwlink/LinkId=401112).  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -172,7 +166,7 @@ int main()
   
 ```  
   
-First test:  
+Primera prueba:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.
@@ -189,7 +183,7 @@ Distribution for 100 samples:
     5 :  
 ```  
   
-Second test:  
+Segunda prueba:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.
@@ -216,35 +210,35 @@ Distribution for 100 samples:
    17 :  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<random>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<random>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-##  <a name="poisson_distribution"></a>  poisson_distribution::poisson_distribution  
-Constructs the distribution.  
+##  <a name="poisson_distribution"></a> poisson_distribution::poisson_distribution  
+Construye la distribución.  
   
 ```  
 explicit poisson_distribution(RealType mean = 1.0);
 explicit binomial_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
 *mean*  
-The `mean` distribution parameter.  
+El parámetro de distribución `mean`.  
   
 *parm*  
-The parameter structure used to construct the distribution.  
+La estructura de parámetros utilizada para construir la distribución.  
   
-### <a name="remarks"></a>Remarks  
- **Precondition:** `0.0 < mean`  
+### <a name="remarks"></a>Comentarios  
+ **Condición previa:** `0.0 < mean`  
   
-The first constructor constructs an object whose stored `mean` value holds the value *mean*.  
+El primer constructor crea un objeto cuyo valor `mean` almacenado contiene el valor *mean*.  
   
-The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
+El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.  
   
-##  <a name="param_type"></a>  poisson_distribution::param_type  
-Stores the parameters of the distribution.  
+##  <a name="param_type"></a> poisson_distribution::param_type  
+Almacena los parámetros de la distribución.  
   
 ```    
 struct param_type {  
@@ -257,15 +251,15 @@ struct param_type {
    };  
 ```  
   
-### <a name="parameters"></a>Parameters  
-See constructor parameters for [poisson_distribution](#poisson_distribution).  
+### <a name="parameters"></a>Parámetros  
+Vea los parámetros del constructor para [poisson_distribution](#poisson_distribution).  
   
-### <a name="remarks"></a>Remarks  
- **Precondition:** `0.0 < mean`  
+### <a name="remarks"></a>Comentarios  
+ **Condición previa:** `0.0 < mean`  
   
-This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
+Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [\<random>](../standard-library/random.md)
 
 

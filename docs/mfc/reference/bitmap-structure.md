@@ -1,5 +1,5 @@
 ---
-title: BITMAP Structure | Microsoft Docs
+title: Estructura de mapa de bits | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- BITMAP structure [MFC]
+- BITMAP structure
 ms.assetid: 05d33b4d-7232-4643-a108-87dda8ff5f22
 caps.latest.revision: 12
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 22bd4bfe4d2c396e0a7a706218c3d2fec08ab738
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: cd7e63cfe9e7a0f2305ca5c3cd7c2571a080a718
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="bitmap-structure"></a>BITMAP Structure
-The **BITMAP** structure defines the height, width, color format, and bit values of a logical bitmap**.**  
+# <a name="bitmap-structure"></a>BITMAP (Estructura)
+El **BITMAP** estructura define el alto, ancho, formato de color y valores de bit de un mapa de bits lógico**.**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 typedef struct tagBITMAP {  /* bm */  
@@ -57,32 +57,32 @@ typedef struct tagBITMAP {  /* bm */
 } BITMAP;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  *bmType*  
- Specifies the bitmap type. For logical bitmaps, this member must be 0.  
+ Especifica el tipo de mapa de bits. Para los mapas de bits lógicos, este miembro debe ser 0.  
   
- *bmWidth*  
- Specifies the width of the bitmap in pixels. The width must be greater than 0.  
+ *Bmbitspixel*  
+ Especifica el ancho del mapa de bits en píxeles. El ancho debe ser mayor que 0.  
   
  *bmHeight*  
- Specifies the height of the bitmap in raster lines. The height must be greater than 0.  
+ Especifica el alto del mapa de bits en líneas de trama. El alto debe ser mayor que 0.  
   
  *bmWidthBytes*  
- Specifies the number of bytes in each raster line. This value must be an even number since the graphics device interface (GDI) assumes that the bit values of a bitmap form an array of integer (2-byte) values. In other words, **bmWidthBytes** \* 8 must be the next multiple of 16 greater than or equal to the value obtained when the **bmWidth** member is multiplied by the **bmBitsPixel** member.  
+ Especifica el número de bytes de cada línea de la trama. Este valor debe ser un número par, ya que la Interfaz de dispositivo gráfico (GDI) supone que los valores de bit de un formulario de mapa de bits componen una matriz de valores enteros (2 bytes). En otras palabras, **bmWidthBytes** \* 8 debe ser el siguiente múltiplo de 16 mayor o igual que el valor obtenido cuando el **Bmbitspixel** miembro se multiplica por el **Bmwidth** miembro.  
   
  *bmPlanes*  
- Specifies the number of color planes in the bitmap.  
+ Especifica el número de planos de color del mapa de bits.  
   
- *bmBitsPixel*  
- Specifies the number of adjacent color bits on each plane needed to define a pixel.  
+ *Bmwidth*  
+ Especifica el número de bits de color adyacentes en cada plano necesario para definir un píxel.  
   
  *bmBits*  
- Points to the location of the bit values for the bitmap. The **bmBits** member must be a long pointer to an array of 1-byte values.  
+ Señala a la ubicación de los valores de bits para el mapa de bits. El **bmBits** miembro debe ser un puntero largo a una matriz de valores de 1 byte.  
   
-## <a name="remarks"></a>Remarks  
- The currently used bitmap formats are monochrome and color. The monochrome bitmap uses a 1-bit, 1-plane format. Each scan is a multiple of 16 bits.  
+## <a name="remarks"></a>Comentarios  
+ Los formatos de mapa de bits actualmente utilizados son monocromáticos y en color. El mapa de bits monocromático utiliza el formato de un 1 bit y 1 plano. Cada barrido es un múltiplo de 16 bits.  
   
- Scans are organized as follows for a monochrome bitmap of height *n*:  
+ Exámenes se organizan del siguiente modo para un mapa de bits monocromático de alto *n*:  
   
  `Scan 0`  
   
@@ -98,16 +98,16 @@ typedef struct tagBITMAP {  /* bm */
   
  `Scan n-1`  
   
- The pixels on a monochrome device are either black or white. If the corresponding bit in the bitmap is 1, the pixel is turned on (white). If the corresponding bit in the bitmap is 0, the pixel is turned off (black).  
+ Los píxeles de un dispositivo monocromático son blanco o negro. Si el bit correspondiente en el mapa de bits es 1, se activa el píxel (blanco). Si el bit correspondiente en el mapa de bits es 0, se desactiva el píxel (negro).  
   
- All devices support bitmaps that have the **RC_BITBLT** bit set in the **RASTERCAPS** index of the [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) member function.  
+ Todos los dispositivos admiten los mapas de bits que tienen la **RC_BITBLT** bit establecido en el **RASTERCAPS** índice de la [CDC:: GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) función miembro.  
   
- Each device has its own unique color format. In order to transfer a bitmap from one device to another, use the [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) and [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows functions.  
+ Cada dispositivo tiene su propio formato de color único. Para transferir un mapa de bits de un dispositivo a otro, utilice el [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) y [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funciones de Windows.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** wingdi.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** wingdi.h  
   
-## <a name="see-also"></a>See Also  
- [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>Vea también  
+ [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)
 

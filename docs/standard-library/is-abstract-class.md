@@ -1,5 +1,5 @@
 ---
-title: is_abstract Class | Microsoft Docs
+title: Clase is_abstract | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_abstract
 - type_traits/std::is_abstract
 dev_langs:
 - C++
@@ -34,31 +35,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 2639b07774fe8f7784c19776e5e4071b62f92708
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 04d82fcbd251ae743db18301e9e65ea6898c967c
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="isabstract-class"></a>is_abstract Class
-Tests if type is abstract class.  
+# <a name="isabstract-class"></a>is_abstract (Clase)
+Comprueba si el tipo es de clase abstracta.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class Ty>  
 struct is_abstract;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Ty`  
- The type to query.  
+ Tipo que se va a consultar.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if the type `Ty` is a class that has at least one pure virtual function, otherwise it holds false.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia del predicado de tipo contiene true si el tipo `Ty` es una clase que tiene, como mínimo, una función virtual pura; en caso contrario, contiene false.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__type_traits__is_abstract.cpp   
@@ -92,12 +93,12 @@ is_abstract<trivial> == false
 is_abstract<abstract> == true  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_polymorphic Class](../standard-library/is-polymorphic-class.md)
+ [Clase is_polymorphic](../standard-library/is-polymorphic-class.md)
 

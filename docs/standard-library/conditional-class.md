@@ -1,5 +1,5 @@
 ---
-title: conditional Class | Microsoft Docs
+title: conditional (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- conditional
 - type_traits/std::conditional
 dev_langs:
 - C++
@@ -34,17 +35,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: ac4654577ee1869050a2750587bdef36f170432e
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: b7e187e8ddbb4a9457b5fe9eddda152464d7518d
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="conditional-class"></a>conditional Class
-Selects one of two types, depending on the specified condition.  
+# <a name="conditional-class"></a>conditional (Clase)
+Selecciona uno de dos tipos en función de la condición especificada.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 template <bool B, class T1, class T2>  
@@ -54,25 +55,25 @@ template <bool _Test, class _T1, class _T2>
 using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `B`  
- The value that determines the selected type.  
+ Valor que determina el tipo seleccionado.  
   
  `T1`  
- The type result when B is true.  
+ Resultado del tipo cuando B es true.  
   
  `T2`  
- The type result when B is false.  
+ Resultado del tipo cuando B es false.  
   
-## <a name="remarks"></a>Remarks  
- The template member typedef `conditional<B, T1, T2>::type` evaluates to `T1` when `B` evaluates to `true`, and evaluates to `T2` when `B` evaluates to `false`.  
+## <a name="remarks"></a>Comentarios  
+ La definición de tipo de miembro de plantilla `conditional<B, T1, T2>::type` se evalúa como `T1` cuando `B` se evalúa como `true`, y se evalúa como `T2` cuando `B` se evalúa como `false`.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)
 
 

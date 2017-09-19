@@ -1,5 +1,5 @@
 ---
-title: Button Styles | Microsoft Docs
+title: "Estilos de botón | Documentos de Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,33 +38,33 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- BS_NOTIFY constant [MFC]
-- BS_RIGHTBUTTON constant [MFC]
-- styles [MFC], button objects
-- BS_USERBUTTON constant [MFC]
-- BS_VCENTER constant [MFC]
-- BS_PUSHLIKE constant [MFC]
-- BS_RADIOBUTTON constant [MFC]
-- BS_PUSHBUTTON constant [MFC]
-- BS_DEFPUSHBUTTON constant [MFC]
-- BS_LEFTTEXT constant [MFC]
+- BS_NOTIFY constant
+- BS_RIGHTBUTTON constant
+- styles, button objects
+- BS_USERBUTTON constant
+- BS_VCENTER constant
+- BS_PUSHLIKE constant
+- BS_RADIOBUTTON constant
+- BS_PUSHBUTTON constant
+- BS_DEFPUSHBUTTON constant
+- BS_LEFTTEXT constant
 - button objects (CButton), button styles
-- BS_AUTO3STATE constant [MFC]
-- BS_3STATE constant [MFC]
-- BS_OWNERDRAW constant [MFC]
-- BS_AUTORADIOBUTTON constant [MFC]
-- BS_GROUPBOX constant [MFC]
-- BS_BITMAP constant [MFC]
-- BS_CENTER constant [MFC]
-- BS_MULTILINE constant [MFC]
-- BS_BOTTOM constant [MFC]
-- BS_FLAT constant [MFC]
-- BS_AUTOCHECKBOX constant [MFC]
-- BS_RIGHT constant [MFC]
-- BS_CHECKBOX constant [MFC]
-- BS_LEFT constant [MFC]
-- BS_ICON constant [MFC]
-- BS_TOP constant [MFC]
+- BS_AUTO3STATE constant
+- BS_3STATE constant
+- BS_OWNERDRAW constant
+- BS_AUTORADIOBUTTON constant
+- BS_GROUPBOX constant
+- BS_BITMAP constant
+- BS_CENTER constant
+- BS_MULTILINE constant
+- BS_BOTTOM constant
+- BS_FLAT constant
+- BS_AUTOCHECKBOX constant
+- BS_RIGHT constant
+- BS_CHECKBOX constant
+- BS_LEFT constant
+- BS_ICON constant
+- BS_TOP constant
 - BS_TEXT constant
 ms.assetid: 41206f72-2b92-4250-ae32-31184046402f
 caps.latest.revision: 20
@@ -85,79 +85,80 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: f3056c9686359e1cc12c583bbf86217cba4055d6
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: cdd577cd6915a1f3c1e05fae68f7fed47cc79236
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="button-styles"></a>Button Styles
-This topic describes button types and styles.  
+# <a name="button-styles"></a>Estilos de botón
+Este tema describe los estilos y los tipos de botón.  
   
-## <a name="button-types"></a>Button Types  
- The following table lists button types. You can optionally choose one of the following. If you do not specify a button type, the default is `BS_PUSHBUTTON`.  
+## <a name="button-types"></a>Tipos de botones  
+ En la tabla siguiente se enumera los tipos de botón. Opcionalmente, puede elegir uno de los siguientes. Si no especifica un tipo de botón, el valor predeterminado es `BS_PUSHBUTTON`.  
   
-|Type|Description|  
+|Tipo|Descripción|  
 |----------|-----------------|  
-|`BS_3STATE`|Creates a check box button with three states: `BST_CHECKED`, `BST_INDETERMINATE`, and `BST_UNCHECKED`. Clicking on the button sends a `BN_CLICKED` notification to the owner window but does not change the state of the button. By default, associated text is displayed to the right of the check box. To display text to the left of the check box, use the `BS_LEFTTEXT` or `BS_RIGHTBUTTON` style.|  
-|`BS_AUTO3STATE`|Creates a check box button with three states: `BST_CHECKED`, `BST_INDETERMINATE`, and `BST_UNCHECKED`. Clicking on the button sends a `BN_CLICKED` notification to the owner window and changes the state of the button. The button states cycle in the order of `BST_CHECKED`, `BST_INDETERMINATE`, and `BST_UNCHECKED`. By default, associated text is displayed to the right of the check box. To display text to the left of the check box, use the `BS_LEFTTEXT` or `BS_RIGHTBUTTON` style.|  
-|`BS_AUTOCHECKBOX`|Creates a check box button with two states: `BST_CHECKED` and `BST_UNCHECKED`. Clicking on the button sends a `BN_CLICKED` notification to the owner window and changes the state of the button. By default, associated text is displayed to the right of the check box. To display text to the left of the check box, use the `BS_LEFTTEXT` or `BS_RIGHTBUTTON` style.|  
-|`BS_AUTORADIOBUTTON`|Creates a radio button with two states: `BST_CHECKED` and `BST_UNCHECKED`. Radio buttons are usually used in groups, with each group having a maximum of one checked option at a time. Clicking on the button sends a `BN_CLICKED` notification to the owner window, sets the state of the clicked radio button to `BST_CHECKED`, and sets the states of all other radio buttons in the button group to `BST_UNCHECKED`. By default, associated text is displayed to the right of the radio button. To display text to the left of the radio button, use the `BS_LEFTTEXT` or `BS_RIGHTBUTTON` style.|  
-|`BS_CHECKBOX`|Creates a check box button with two states: `BST_CHECKED` and `BST_UNCHECKED`. Clicking on the button sends a `BN_CLICKED` notification to the owner window but does not change the state of the button. By default, associated text is displayed to the right of the check box. To display text to the left of the check box, use the `BS_LEFTTEXT` or `BS_RIGHTBUTTON` style.|  
-|`BS_COMMANDLINK`|Creates a command link button. A command link button is a command button specific to [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] that displays a green arrow to the left of the main text and a note below the main text. You can set the note text using [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote).|  
-|`BS_DEFCOMMANDLINK`|Creates a command link button. A command link button is a command button specific to [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] that displays a green arrow to the left of the main text and a note below the main text. You can set the note text using [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote). If the button is in a dialog box, pressing the ENTER key sends a `BN_CLICKED` notification to the dialog box even when the button does not have the input focus.|  
-|`BS_DEFPUSHBUTTON`|Creates a command button that has a heavy black border. If the button is in a dialog box, pressing the ENTER key sends a `BN_CLICKED` notification to the dialog box even when the button does not have the input focus.|  
-|`BS_DEFSPLITBUTTON`|Creates a split button. A split button is a command button specific to [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] that contains a button adjacent to a drop-down arrow. When you click the button, the default command is executed. When you click the drop-down arrow, a menu of additional commands appears. If the split button is in a dialog box, pressing the ENTER key sends a `BN_CLICKED` notification to the dialog box even when the button does not have the input focus|  
-|`BS_GROUPBOX`|Creates a rectangle in which other buttons can be grouped. Text associated with this style is displayed in the rectangle's upper-left corner.|  
-|`BS_OWNERDRAW`|Creates an owner-drawn button. The framework calls the `DrawItem` method when a visual aspect of the button has changed. This style must be set when you use the `CBitmapButton` class.|  
-|`BS_PUSHBUTTON`|Creates a command button that sends a `BN_CLICKED` notification to the owner window when the user clicks the button.|  
-|`BS_RADIOBUTTON`|Creates a radio button with two states: `BST_CHECKED` and `BST_UNCHECKED`. Radio buttons are usually used in groups, with each group having a maximum of one checked option at a time. Clicking on the button sends a `BN_CLICKED` notification to the owner window but does not automatically change the state of any button in the group. By default, associated text is displayed to the right of the radio button. To display text to the left of the radio button, use the `BS_LEFTTEXT` or `BS_RIGHTBUTTON` style.|  
-|`BS_SPLITBUTTON`|Creates a split button. A split button is a command button specific to [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] that contains a button adjacent to a drop-down arrow. When you click the button, the default command is executed. When you click the drop-down arrow, a menu of additional commands appears.|  
-|`BS_USERBUTTON`|Obsolete, but provided for compatibility with 16-bit versions of Windows. Win32-based applications should use `BS_OWNERDRAW` instead.|  
+|`BS_3STATE`|Crea un botón de casilla de verificación con tres estados: `BST_CHECKED`, `BST_INDETERMINATE`, y `BST_UNCHECKED`. Al hacer clic en el botón envía una `BN_CLICKED` notificación a la ventana propietaria, pero no cambia el estado del botón. De forma predeterminada, se muestra el texto asociado a la derecha de la casilla de verificación. Para mostrar el texto a la izquierda de la casilla de verificación, utilice la `BS_LEFTTEXT` o `BS_RIGHTBUTTON` estilo.|  
+|`BS_AUTO3STATE`|Crea un botón de casilla de verificación con tres estados: `BST_CHECKED`, `BST_INDETERMINATE`, y `BST_UNCHECKED`. Al hacer clic en el botón envía una `BN_CLICKED` notificación a la ventana propietaria y cambia el estado del botón. El botón indica el ciclo en el orden de `BST_CHECKED`, `BST_INDETERMINATE`, y `BST_UNCHECKED`. De forma predeterminada, se muestra el texto asociado a la derecha de la casilla de verificación. Para mostrar el texto a la izquierda de la casilla de verificación, utilice la `BS_LEFTTEXT` o `BS_RIGHTBUTTON` estilo.|  
+|`BS_AUTOCHECKBOX`|Crea un botón de casilla de verificación con dos estados: `BST_CHECKED` y `BST_UNCHECKED`. Al hacer clic en el botón envía una `BN_CLICKED` notificación a la ventana propietaria y cambia el estado del botón. De forma predeterminada, se muestra el texto asociado a la derecha de la casilla de verificación. Para mostrar el texto a la izquierda de la casilla de verificación, utilice la `BS_LEFTTEXT` o `BS_RIGHTBUTTON` estilo.|  
+|`BS_AUTORADIOBUTTON`|Crea un botón de radio con dos estados: `BST_CHECKED` y `BST_UNCHECKED`. Botones de opción se utilizan normalmente en grupos, a cada grupo de un máximo de una opción con marca a la vez. Al hacer clic en el botón envía una `BN_CLICKED` notificación a la ventana propietaria, Establece el estado del botón de radio presionado para `BST_CHECKED`y establece los Estados de todos los otros botones de opción en el grupo de botones para `BST_UNCHECKED`. De forma predeterminada, se muestra el texto asociado a la derecha del botón de radio. Para mostrar el texto a la izquierda del botón de radio, utilice la `BS_LEFTTEXT` o `BS_RIGHTBUTTON` estilo.|  
+|`BS_CHECKBOX`|Crea un botón de casilla de verificación con dos estados: `BST_CHECKED` y `BST_UNCHECKED`. Al hacer clic en el botón envía una `BN_CLICKED` notificación a la ventana propietaria, pero no cambia el estado del botón. De forma predeterminada, se muestra el texto asociado a la derecha de la casilla de verificación. Para mostrar el texto a la izquierda de la casilla de verificación, utilice la `BS_LEFTTEXT` o `BS_RIGHTBUTTON` estilo.|  
+|`BS_COMMANDLINK`|Crea un botón de vínculo de comando. Un botón de vínculo de comando es un botón de comando específico de [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] que muestra una flecha verde a la izquierda del texto principal y una nota debajo del texto principal. Puede establecer el texto de nota con [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote).|  
+|`BS_DEFCOMMANDLINK`|Crea un botón de vínculo de comando. Un botón de vínculo de comando es un botón de comando específico de [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] que muestra una flecha verde a la izquierda del texto principal y una nota debajo del texto principal. Puede establecer el texto de nota con [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote). Si el botón está en un cuadro de diálogo, presione Intro clave envía una `BN_CLICKED` notificación al cuadro de diálogo, incluso cuando el botón no tiene el foco de entrada.|  
+|`BS_DEFPUSHBUTTON`|Crea un botón de comando que tiene un borde negro grueso. Si el botón está en un cuadro de diálogo, presione Intro clave envía una `BN_CLICKED` notificación al cuadro de diálogo, incluso cuando el botón no tiene el foco de entrada.|  
+|`BS_DEFSPLITBUTTON`|Crea un botón de división. Un botón de expansión es un botón de comando específico de [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] que contiene un botón adyacente a una flecha de lista desplegable. Al hacer clic en el botón, se ejecuta el comando predeterminado. Al hacer clic en la flecha de lista desplegable, aparece un menú de comandos adicionales. Si el botón de expansión está en un cuadro de diálogo, presione Intro clave envía una `BN_CLICKED` notificación al cuadro de diálogo, incluso cuando el botón no tiene el foco de entrada|  
+|`BS_GROUPBOX`|Crea un rectángulo en el que se pueden agrupar otros botones. Texto asociado con este estilo se muestra en la esquina superior izquierda de un rectángulo.|  
+|`BS_OWNERDRAW`|Crea un botón dibujado por el propietario. El marco llama el `DrawItem` método cuando la apariencia del botón ha cambiado. Este estilo debe establecerse al utilizar la `CBitmapButton` clase.|  
+|`BS_PUSHBUTTON`|Crea un botón de comando que envía una `BN_CLICKED` notificación a la ventana propietaria cuando el usuario hace clic en el botón.|  
+|`BS_RADIOBUTTON`|Crea un botón de radio con dos estados: `BST_CHECKED` y `BST_UNCHECKED`. Botones de opción se utilizan normalmente en grupos, a cada grupo de un máximo de una opción con marca a la vez. Al hacer clic en el botón envía una `BN_CLICKED` notificación a la ventana propietaria, pero no cambia automáticamente el estado de cualquier botón del grupo. De forma predeterminada, se muestra el texto asociado a la derecha del botón de radio. Para mostrar el texto a la izquierda del botón de radio, utilice la `BS_LEFTTEXT` o `BS_RIGHTBUTTON` estilo.|  
+|`BS_SPLITBUTTON`|Crea un botón de división. Un botón de expansión es un botón de comando específico de [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] que contiene un botón adyacente a una flecha de lista desplegable. Al hacer clic en el botón, se ejecuta el comando predeterminado. Al hacer clic en la flecha de lista desplegable, aparece un menú de comandos adicionales.|  
+|`BS_USERBUTTON`|Obsoleta, pero se proporciona para la compatibilidad con las versiones de 16 bits de Windows. Las aplicaciones basadas en Win32 deben utilizar `BS_OWNERDRAW` en su lugar.|  
   
-## <a name="radio-button-and-check-box-styles"></a>Radio Button and Check Box Styles  
- The following table lists styles that are specific to radio buttons and check boxes. These styles are ignored in all other button types. You can optionally choose one or more of the following.  
+## <a name="radio-button-and-check-box-styles"></a>Botón de radio y los estilos de la casilla de verificación  
+ La tabla siguiente enumera los estilos que son específicos de los botones de radio y casillas de verificación. Estos estilos se omiten en todos los demás tipos de botón. Opcionalmente, puede elegir uno o varios de los siguientes.  
   
-|Style|Description|  
+|Estilo|Descripción|  
 |-----------|-----------------|  
-|`BS_LEFTTEXT`|When combined with a radio button or check-box style, the text appears on the left side of the radio button or check box.|  
-|`BS_RIGHTBUTTON`|When combined with a radio button or check-box style, the text appears on the left side of the radio button or check box. This style is identical to the `BS_LEFTTEXT` style.|  
-|`BS_PUSHLIKE`|Makes a check box or radio button look and behave like a command button. The button appears pressed when its state is `BST_CHECKED`, pressed and dimmed when its state is `BST_INDETERMINATE`, and released when its state is `BST_UNCHECKED`.|  
+|`BS_LEFTTEXT`|Cuando se combina con un estilo de casilla de verificación o de botón de radio, el texto aparece en el lado izquierdo de la casilla de verificación o un botón de radio.|  
+|`BS_RIGHTBUTTON`|Cuando se combina con un estilo de casilla de verificación o de botón de radio, el texto aparece en el lado izquierdo de la casilla de verificación o un botón de radio. Este estilo es idéntica a la `BS_LEFTTEXT` estilo.|  
+|`BS_PUSHLIKE`|Realiza una casilla de verificación o botón de opción aspecto y se comporte como un botón de comando. El botón aparece presionado cuando su estado es `BST_CHECKED`, presiona y atenuado cuando su estado es `BST_INDETERMINATE`y se liberan cuando su estado es `BST_UNCHECKED`.|  
   
-## <a name="text-alignment-styles"></a>Text Alignment Styles  
- The following table lists horizontal and vertical text alignment options. You can optionally choose one of the following.  
+## <a name="text-alignment-styles"></a>Estilos de alineación de texto  
+ En la tabla siguiente enumera las opciones de alineación de texto horizontal y vertical. Opcionalmente, puede elegir uno de los siguientes.  
   
-|Style|Description|  
+|Estilo|Descripción|  
 |-----------|-----------------|  
-|`BS_LEFT`|Left aligns the text in the button rectangle. However, if the button is a check box or radio button that does not have the `BS_RIGHTBUTTON` style, the text is left aligned on the right side of the check box or radio button.|  
-|`BS_RIGHT`|Right aligns the text in the button rectangle. However, if the button is a check box or radio button that does not have the `BS_RIGHTBUTTON` style, the text is right aligned on the right side of the check box or radio button.|  
-|`BS_CENTER`|Centers text horizontally in the button rectangle.|  
-|`BS_TOP`|Places text at the top of the button rectangle.|  
-|`BS_BOTTOM`|Places text at the bottom of the button rectangle.|  
-|`BS_VCENTER`|Centers text vertically in the button rectangle.|  
+|`BS_LEFT`|Alinea el texto en el rectángulo de botón a la izquierda. Sin embargo, si el botón es una casilla de verificación o de botón de radio que no tiene la `BS_RIGHTBUTTON` estilo, deja el texto alineado a la derecha de la casilla de verificación o un botón de radio.|  
+|`BS_RIGHT`|Alinea el texto en el rectángulo de botón a la derecha. Sin embargo, si el botón es una casilla de verificación o de botón de radio que no tiene la `BS_RIGHTBUTTON` de estilo, el texto alineado a la derecha de la casilla de verificación o botón de opción es derecho.|  
+|`BS_CENTER`|Centra el texto horizontalmente en el rectángulo de botón.|  
+|`BS_TOP`|Coloca el texto en la parte superior del rectángulo de botón.|  
+|`BS_BOTTOM`|Coloca el texto en la parte inferior del rectángulo de botón.|  
+|`BS_VCENTER`|Centra el texto verticalmente en el rectángulo de botón.|  
   
-## <a name="button-content-options"></a>Button Content Options  
- The following table lists options that indicate what is displayed in the button. Button types that only display text ignore these styles. You can optionally choose one of the following.  
+## <a name="button-content-options"></a>Botón Opciones de contenido  
+ En la tabla siguiente se enumera las opciones que indican que se muestra en el botón. Tipos de botón mostrarán solo texto omitirán estos estilos. Opcionalmente, puede elegir uno de los siguientes.  
   
-|Style|Description|  
+|Estilo|Descripción|  
 |-----------|-----------------|  
-|`BS_BITMAP`|Specifies that the button displays a bitmap.|  
-|`BS_ICON`|Specifies that the button displays an icon.|  
-|`BS_TEXT`|Specifies that the button displays text.|  
+|`BS_BITMAP`|Especifica que el botón muestra un mapa de bits.|  
+|`BS_ICON`|Especifica que el botón muestre un icono.|  
+|`BS_TEXT`|Especifica que el botón muestra el texto.|  
   
-## <a name="other-options"></a>Other Options  
- The following table lists additional options that you can use with any button type. You can optionally choose one or more of the following.  
+## <a name="other-options"></a>Otras opciones  
+ En la tabla siguiente se enumera las opciones adicionales que puede utilizar con cualquier tipo de botón. Opcionalmente, puede elegir uno o varios de los siguientes.  
   
-|Style|Description|  
+|Estilo|Descripción|  
 |-----------|-----------------|  
-|`BS_FLAT`|Specifies that the button is two-dimensional and is not drawn with default shading to create a three-dimensional image.|  
-|`BS_MULTILINE`|Wraps the button text to multiple lines if the text string is too long to fit on a single line in the button rectangle.|  
-|`BS_NOTIFY`|Enables a button to send `BN_DBLCLK`, `BN_KILLFOCUS`, and `BN_SETFOCUS` notification messages to its parent window. Note that buttons send the `BN_CLICKED` notification regardless of whether this style is specified.|  
+|`BS_FLAT`|Especifica que el botón es bidimensional y no se dibuja con sombreado de forma predeterminada para crear una imagen tridimensional.|  
+|`BS_MULTILINE`|Ajusta el texto del botón en varias líneas si la cadena de texto es demasiado larga para caber en una sola línea en el rectángulo de botón.|  
+|`BS_NOTIFY`|Habilita un botón Enviar `BN_DBLCLK`, `BN_KILLFOCUS`, y `BN_SETFOCUS` mensajes de notificación a su ventana primaria. Tenga en cuenta que los botones de envío el `BN_CLICKED` notificación independientemente de si se ha especificado este estilo.|  
   
-## <a name="see-also"></a>See Also  
- [Styles Used by MFC](../../mfc/reference/styles-used-by-mfc.md)   
- [CButton::Create](../../mfc/reference/cbutton-class.md#create) [Button Styles](http://msdn.microsoft.com/library/windows/desktop/bb775951)   
+## <a name="see-also"></a>Vea también  
+ [Estilos utilizados por MFC](../../mfc/reference/styles-used-by-mfc.md)   
+ [CButton::Create](../../mfc/reference/cbutton-class.md#create)
+ [estilos de botón](http://msdn.microsoft.com/library/windows/desktop/bb775951)   
 
 
 

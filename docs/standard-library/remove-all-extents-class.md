@@ -1,5 +1,5 @@
 ---
-title: remove_all_extents Class | Microsoft Docs
+title: remove_all_extents (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- remove_all_extents
 - type_traits/std::remove_all_extents
 dev_langs:
 - C++
@@ -34,17 +35,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: d0add5114c674b784b7719d1b56d4284e46312d1
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: aa6a975b598f7e51445a777cc980d5541d7e0e8b
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="removeallextents-class"></a>remove_all_extents Class
-Makes non array type from array type.  
+# <a name="removeallextents-class"></a>remove_all_extents (Clase)
+Convierte un tipo de matriz en un tipo que no es de matriz.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 template <class T>
@@ -54,14 +55,14 @@ template <class T>
 using remove_all_extents_t = typename remove_all_extents<T>::type;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- The type to modify.  
+ Tipo que se va a modificar.  
   
-## <a name="remarks"></a>Remarks  
- An instance of `remove_all_extents<T>` holds a modified-type that is the element type of the array type `T` with all array dimensions removed, or `T` if `T` is not an array type.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia de `remove_all_extents<T>` contiene un tipo modificado que es el tipo de elemento del tipo de matriz `T` al que se han quitado todas las dimensiones de matriz, o `T` si `T` no es un tipo de matriz.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 #include <type_traits>   
@@ -83,12 +84,12 @@ int main()
     }  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)   
- [remove_extent Class](../standard-library/remove-extent-class.md)
+ [remove_extent (Clase)](../standard-library/remove-extent-class.md)
 

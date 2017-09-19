@@ -1,5 +1,5 @@
 ---
-title: '&lt;system_error&gt; enums | Microsoft Docs'
+title: Enumeraciones de &lt;system_error&gt; | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,36 +12,36 @@ f1_keywords:
 ms.assetid: b21321b7-404a-40de-8777-a85b77c6fa58
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 3f997127b68b6b7bf2dd07e8c3696610e8e2074f
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7b913b92480a12b0b3e255e17fa667b9c720f4f5
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="ltsystemerrorgt-enums"></a>&lt;system_error&gt; enums
+# <a name="ltsystemerrorgt-enums"></a>Enumeraciones de &lt;system_error&gt;
 |||  
 |-|-|  
-|[errc](#errc)|[io_errc](#io_errc)|  
+|[errc](#errc)|[io_errc)](#io_errc)|  
   
-##  <a name="errc"></a>  errc Enumeration  
- Provides symbolic names for all the error-code macros defined by Posix in `<errno.h>`.  
+##  <a name="errc"></a>  errc (Enumeración)  
+ Proporciona nombres simbólicos para todas las macros de código de error definidas por Posix en `<errno.h>`.  
   
 class errc { address_family_not_supported = EAFNOSUPPORT, address_in_use = EADDRINUSE, address_not_available = EADDRNOTAVAIL, already_connected = EISCONN, argument_list_too_long = E2BIG, argument_out_of_domain = EDOM, bad_address = EFAULT, bad_file_descriptor = EBADF, bad_message = EBADMSG, broken_pipe = EPIPE, connection_aborted = ECONNABORTED, connection_already_in_progress = EALREADY, connection_refused = ECONNREFUSED, connection_reset = ECONNRESET, cross_device_link = EXDEV, destination_address_required = EDESTADDRREQ, device_or_resource_busy = EBUSY, directory_not_empty = ENOTEMPTY, executable_format_error = ENOEXEC, file_exists = EEXIST, file_too_large = EFBIG, filename_too_long = ENAMETOOLONG, function_not_supported = ENOSYS, host_unreachable = EHOSTUNREACH, identifier_removed = EIDRM, illegal_byte_sequence = EILSEQ, inappropriate_io_control_operation = ENOTTY, interrupted = EINTR, invalid_argument = EINVAL, invalid_seek = ESPIPE, io_error = EIO, is_a_directory = EISDIR, message_size = EMSGSIZE, network_down = ENETDOWN, network_reset = ENETRESET, network_unreachable = ENETUNREACH, no_buffer_space = ENOBUFS, no_child_process = ECHILD, no_link = ENOLINK, no_lock_available = ENOLCK, no_message_available = ENODATA, no_message = ENOMSG, no_protocol_option = ENOPROTOOPT, no_space_on_device = ENOSPC, no_stream_resources = ENOSR, no_such_device_or_address = ENXIO, no_such_device = ENODEV, no_such_file_or_directory = ENOENT, no_such_process = ESRCH, not_a_directory = ENOTDIR, not_a_socket = ENOTSOCK, not_a_stream = ENOSTR, not_connected = ENOTCONN, not_enough_memory = ENOMEM, not_supported = ENOTSUP, operation_canceled = ECANCELED, operation_in_progress = EINPROGRESS, operation_not_permitted = EPERM, operation_not_supported = EOPNOTSUPP, operation_would_block = EWOULDBLOCK, owner_dead = EOWNERDEAD, permission_denied = EACCES, protocol_error = EPROTO, protocol_not_supported = EPROTONOSUPPORT, read_only_file_system = EROFS, resource_deadlock_would_occur = EDEADLK, resource_unavailable_try_again = EAGAIN, result_out_of_range = ERANGE, state_not_recoverable = ENOTRECOVERABLE, stream_timeout = ETIME, text_file_busy = ETXTBSY, timed_out = ETIMEDOUT, too_many_files_open_in_system = ENFILE, too_many_files_open = EMFILE, too_many_links = EMLINK, too_many_synbolic_link_levels = ELOOP, value_too_large = EOVERFLOW, wrong_protocol_type = EPROTOTYPE, };  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="io_errc"></a>  io_errc Enumeration  
- Provides symbolic names for the error conditions in \<iostream>. Can be used to create [error_condition](../standard-library/error-condition-class.md) objects to be compared with the value that's returned by the [ios_base::failure](../standard-library/ios-base-class.md#failure)`code()` function.  
+##  <a name="io_errc"></a>  io_errc (Enumeración)  
+ Proporciona nombres simbólicos para las condiciones de error en \<iostream>. Se puede usar para crear objetos [error_condition](../standard-library/error-condition-class.md) que se compararán con el valor devuelto por la función [ios_base::failure](../standard-library/ios-base-class.md#failure)`code()`.  
   
 class io_errc { stream = 1 };  
   
-### <a name="remarks"></a>Remarks  
- Both [std::make_error_code()](../standard-library/system-error-functions.md#make_error_code) and [std::make_error_condition()](../standard-library/system-error-functions.md#make_error_condition) are overloaded for this enum.  
+### <a name="remarks"></a>Comentarios  
+ Tanto [std::make_error_code()](../standard-library/system-error-functions.md#make_error_code) como [std::make_error_condition()](../standard-library/system-error-functions.md#make_error_condition) se sobrecargan para esta enumeración.  
   
- `ios_base::failure` can contain categories of error codes other than `error_condition`.  
+ `ios_base::failure` puede contener categorías de códigos de error distintas de `error_condition`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // io_errc.cpp  
@@ -70,7 +70,7 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<system_error>](../standard-library/system-error.md)
 
 

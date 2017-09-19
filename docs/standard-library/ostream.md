@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <ostream>", "ostream/std::<ostream>", "std::<ostream>
+- std.<ostream>
+- <ostream>
+- ostream/std::<ostream>
+- std::<ostream>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -33,56 +36,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 53af26cc0abcca122e8b1ba17d0346e477d6f82b
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4b8e9c4f86ac9bab261824c10a8e6d8c3506bc1a
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
-Defines the template class [basic_ostream](../standard-library/basic-ostream-class.md), which mediates insertions for the iostreams. The header also defines several related manipulators. (This header is typically included for you by another of the iostreams headers. You rarely need to include it directly.)  
+Define la clase de plantilla [basic_ostream](../standard-library/basic-ostream-class.md), que remite inserciones para iostreams. El encabezado define también varios manipuladores relacionados. (Este encabezado suele incluirlo automáticamente otro encabezado de iostreams. Rara vez tendrá que incluirlo directamente).  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #include <ostream>  
   
 ```  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Definiciones de tipo  
   
 |||  
 |-|-|  
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|Creates a type from `basic_ostream` that is specialized on `char` and `char_traits` specialized on `char`.|  
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|Creates a type from `basic_ostream` that is specialized on `wchar_t` and `char_traits` specialized on `wchar_t`.|  
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|Crea un tipo de `basic_ostream` que está especializado en `char` y `char_traits` especializado en `char`.|  
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|Crea un tipo de `basic_ostream` que está especializado en `wchar_t` y `char_traits` especializado en `wchar_t`.|  
   
-### <a name="manipulators"></a>Manipulators  
-  
-|||  
-|-|-|  
-|[endl](../standard-library/ostream-functions.md#endl)|Terminates a line and flushes the buffer.|  
-|[ends](../standard-library/ostream-functions.md#ends)|Terminates a string.|  
-|[flush](../standard-library/ostream-functions.md#flush)|Flushes the buffer.|  
-|[swap](../standard-library/ostream-functions.md#swap)|Exchanges the values of the left `basic_ostream` object parameter for those of the right `basic_ostream` object parameter.|  
-  
-### <a name="operators"></a>Operators  
+### <a name="manipulators"></a>Manipuladores  
   
 |||  
 |-|-|  
-|[operator<<](../standard-library/ostream-operators.md#op_lt_lt)|Writes various types to the stream.|  
+|[endl](../standard-library/ostream-functions.md#endl)|Termina una línea y vacía el búfer.|  
+|[ends](../standard-library/ostream-functions.md#ends)|Termina una cadena|  
+|[flush](../standard-library/ostream-functions.md#flush)|Vacía el búfer.|  
+|[swap](../standard-library/ostream-functions.md#swap)|Intercambia los valores del parámetro de objeto `basic_ostream` de la izquierda con los del parámetro del objeto `basic_ostream` de la derecha.|  
   
-### <a name="classes"></a>Classes  
+### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[basic_ostream](../standard-library/basic-ostream-class.md)|The template class describes an object that controls insertion of elements and encoded objects into a stream buffer.|  
+|[operator<<](../standard-library/ostream-operators.md#op_lt_lt)|Escribe varios tipos en la secuencia.|  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream Programming](../standard-library/iostream-programming.md)   
- [iostreams Conventions](../standard-library/iostreams-conventions.md)
+### <a name="classes"></a>Clases  
+  
+|||  
+|-|-|  
+|[basic_ostream](../standard-library/basic-ostream-class.md)|La clase de plantilla describe un objeto que controla la inserción de objetos codificados y elementos en un búfer de secuencia.|  
+  
+## <a name="see-also"></a>Vea también  
+ [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Programación con iostream](../standard-library/iostream-programming.md)   
+ [Convenciones de iostreams](../standard-library/iostreams-conventions.md)
 
 
 

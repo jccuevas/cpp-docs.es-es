@@ -1,7 +1,7 @@
 ---
-title: Compiler Warning (level 3) C4996 | Microsoft Docs
+title: Compilador (nivel 3) de la advertencia C4996 | Documentos de Microsoft
 ms.custom: 
-ms.date: 06/07/2017
+ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,56 +34,55 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: MT
-ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
-ms.openlocfilehash: 9b745d570155d7460b1ffb113ce0afcd0b67dedd
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 9a0c25772fadec86a893b8c7c4af09072eb0476f
 ms.contentlocale: es-es
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 05/10/2017
 
 ---
-# <a name="compiler-warning-level-3-c4996"></a>Compiler Warning (level 3) C4996
-
-The compiler encountered a deprecated declaration.  
+# <a name="compiler-warning-level-3-c4996"></a>Compilador (nivel 3) de la advertencia C4996
+El compilador encontró una declaración en desuso.  
   
-This warning or error has several possible meanings, depending on the context.  
+Esta advertencia o error tiene varios significados posibles, dependiendo del contexto.  
   
-C4996 occurs when the compiler encounters a function or variable that is marked as [deprecated](../../cpp/deprecated-cpp.md) by using a `__declspec(deprecated)` modifier. This warning is also issued when you attempt to access a function, class member or typedef that has the C++14 `[[deprecated]]` attribute. For more information, see [C++ Standard Attributes](../../cpp/attributes2.md). You can use this attribute yourself in your libraries to warn your clients about deprecated functions, members, or typedefs.  
+Advertencia C4996 se produce cuando el compilador encuentra una función o variable que esté marcada como [en desuso](../../cpp/deprecated-cpp.md) mediante el uso de un `__declspec(deprecated)` modificador. También se emite esta advertencia cuando se intenta acceder a una función, miembro de clase o definición de tipo que tiene C ++ 14 `[[deprecated]]` atributo. Para obtener más información, consulte [atributos estándar de C++](../../cpp/attributes2.md). Se puede usar este atributo usted mismo en las bibliotecas para advertir a los clientes sobre definiciones de tipos, miembros o funciones en desuso.  
   
-Several functions, member functions, template functions, and global variables in the libraries in Visual Studio are marked as deprecated. These functions may have a different preferred name, may be insecure or have a more secure variant, or may be obsolete. Many error messages include a suggested replacement for the deprecated function or global variable.  
+Varias funciones, funciones miembro, funciones de plantilla y variables globales de las bibliotecas de Visual Studio están marcadas como en desuso. Estas funciones pueden tener un nombre preferido distinto, no ser seguras o tener una variante más segura, o estar obsoletas. Muchos mensajes de error incluyen un reemplazo sugerido para la función en desuso o una variable global.  
   
-To fix this issue, we usually recommend you change your code to use the suggested safer or updated functions and global variables instead. If you need to use the existing functions or variables for portability reasons, the warning can be turned off.  
+Para corregir este problema, se recomienda suele que cambiar el código para usar las funciones de más seguras o actualizadas sugeridas y variables globales en su lugar. Si tiene que utilizar las funciones existentes o las variables por motivos de portabilidad, puede desactivar la advertencia.  
   
-You can turn off the warning for a specific line of code by using the [warning](../../preprocessor/warning.md) pragma `#pragma warning(suppress : 4996)`. You can turn it off within a file by using the warning pragma `#pragma warning(disable : 4996)`. You can turn it off globally in command line builds by using the **/wd4996** command line option. To turn off the warning for a project in the Visual Studio IDE, open the **Property Pages** dialog, select the **Configuration Properties**, **C/C++**, **Advanced** page and edit the **Disable Specific Warnings** property to add `4996`.  You can also use preprocessor macros to turn off certain specific classes of deprecation warnings used in the libraries. These macros are described below.  
+Puede desactivar las advertencias para una línea de código específica mediante el [advertencia](../../preprocessor/warning.md) pragma `#pragma warning(suppress : 4996)`. Que puede apagarlo dentro de un archivo mediante el uso de la directiva de advertencia pragma `#pragma warning(disable : 4996)`. Puede desactivarlo globalmente en las compilaciones de línea de comandos mediante el uso de la **/wd4996** opción de línea de comandos. Para desactivar la advertencia para un proyecto en el IDE de Visual Studio, abra el **páginas de propiedades** cuadro de diálogo, seleccione la **propiedades de configuración**, **C/C++**, **avanzadas** página y edite la **deshabilitar advertencias específicas** propiedad que se va a agregar `4996`.  También puede usar macros de preprocesador para desactivar determinadas clases específicas de las advertencias sobre desuso utilizadas en las bibliotecas. A continuación se describen estas macros.  
   
-Here are some of the library sources of C4996.  
+Estas son algunas de las fuentes de biblioteca de la advertencia C4996.  
   
-## <a name="posix-function-names"></a>POSIX function names  
+## <a name="posix-function-names"></a>Nombres de función POSIX  
   
-**The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name:** *new_name*. **See online help for details.**  
+**El nombre POSIX de este elemento está en desuso. En su lugar, utilice el nombre de compatible con ISO C y C++:** *new_name*. **Consulte la Ayuda en línea para obtener más información.**  
   
-Microsoft has renamed some POSIX functions in the CRT to conform with C99 and C++03 rules for implementation-defined global function names. Only the original POSIX names are deprecated, not the functions themselves. In most cases, a leading underscore was added to the POSIX function name to create a standard conformant name. The compiler issues a deprecation warning for the original function name, and suggests the preferred name.  
+Microsoft ha cambiado el nombre de algunas funciones POSIX en CRT para respetar C99 y C ++ 03 las reglas para nombres de funciones globales definidos por la implementación. Solo los nombres POSIX originales están en desuso, no las propias funciones. En la mayoría de casos, se agregó un carácter de subrayado inicial al nombre de función POSIX para crear un nombre conforme al estándar. El compilador emite una advertencia para el nombre de la función original y sugiere el nombre preferido.  
   
-To fix this issue, we usually recommend you change your code to use the suggested function names instead. However, the updated names are Microsoft-specific. If you need to use the existing function names for portability reasons, you can turn these warnings off. The POSIX functions are still available in the library under their original names.  
+Para corregir este problema, se recomienda suele que cambiar el código para usar los nombres de función sugeridas en su lugar. Sin embargo, los nombres actualizados son específicos de Microsoft. Si necesita usar los nombres de función existente por motivos de portabilidad, puede desactivar estas advertencias. Las funciones POSIX siguen estando disponibles en la biblioteca en sus nombres originales.  
   
-To turn off deprecation warnings for these functions, define the preprocessor macro **_CRT_NONSTDC_NO_WARNINGS**. You can define this at the command line by including the option `/D_CRT_NONSTDC_NO_WARNINGS`. To define this macro in Visual Studio, open the **Property Pages** dialog for your project. Expand **Configuration Properties**, **C/C++**, **Preprocessor**. In **Preprocessor Definitions**, add `_CRT_NONSTDC_NO_WARNINGS`. Choose **OK** to save, and then rebuild your project. To define this macro only in specific source files, add the line `#define _CRT_NONSTDC_NO_WARNINGS` before any line that includes a header file.  
+Para desactivar las advertencias sobre desuso para estas funciones, defina la macro de preprocesador **_CRT_NONSTDC_NO_WARNINGS**. Puede definirla en la línea de comandos si incluye la opción `/D_CRT_NONSTDC_NO_WARNINGS`. Para definir esta macro en Visual Studio, abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Expanda **Propiedades de configuración**, **C o C++**, **Preprocesador**. En **Definiciones de preprocesador**, agregue `_CRT_NONSTDC_NO_WARNINGS`. Seleccione **Aceptar** para guardar y, luego, vuelva a generar el proyecto. Para definir esta macro solamente en archivos de origen concretos, agregue la línea `#define _CRT_NONSTDC_NO_WARNINGS` antes de cualquier línea que incluya un archivo de encabezado.  
   
-## <a name="unsafe-crt-library-functions"></a>Unsafe CRT Library functions  
+## <a name="unsafe-crt-library-functions"></a>Funciones de biblioteca de CRT no seguras  
   
- **This function or variable may be unsafe. Consider using**  *safe_version* **instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS.  See online help for details.**  
+ **Esta función o variable puede ser no seguro. Considere el uso de***safe_version* **en su lugar.   Para deshabilitar el desuso, utilice _CRT_SECURE_NO_WARNINGS.  Consulte la ayuda en línea para obtener información detallada.**  
   
- Microsoft has deprecated some CRT and C++ Standard Library functions and globals in favor of more secure versions. In most cases, the deprecated functions allow unchecked read or write access to buffers, which can lead to serious security issues. The compiler issues a deprecation warning for these functions, and suggests the preferred function.  
+ Microsoft desusado algunas funciones de biblioteca estándar de C++ y CRT y las variables globales en favor de versiones más seguras. En la mayoría de los casos, las funciones en desuso permiten desactivada acceso de lectura o escritura a los búferes, lo que puede provocar problemas de seguridad grave. El compilador emite una advertencia de desuso para estas funciones y sugiere la función preferida.  
   
- To fix this issue, we recommend you use the function or variable *safe_version* instead. If you have verified that it's not possible for a buffer overwrite or overread to occur in your code, and you cannot change the code for portability reasons, you can turn off the warning.  
+ Para corregir este problema, se recomienda usar la función o variable *safe_version* en su lugar. Si ha comprobado que no es posible una sobrescritura de búfer o overread que se produzca en el código y no puede cambiar el código por motivos de portabilidad, puede desactivar la advertencia.  
    
- To turn off deprecation warnings for these functions in the CRT, define **_CRT_SECURE_NO_WARNINGS**. To turn off warnings about deprecated global variables, define **_CRT_SECURE_NO_WARNINGS_GLOBALS**. For more information about these deprecated functions and globals, see [Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md) and [Safe Libraries: C++ Standard Library](../../standard-library/safe-libraries-cpp-standard-library.md).  
+ Para desactivar las advertencias sobre desuso para estas funciones en CRT, defina **_CRT_SECURE_NO_WARNINGS**. Para desactivar las advertencias sobre variables globales en desuso, defina **_CRT_SECURE_NO_WARNINGS_GLOBALS**. Para obtener más información sobre estas globales y funciones en desuso, consulte [características de seguridad en CRT](../../c-runtime-library/security-features-in-the-crt.md) y [bibliotecas seguras: biblioteca estándar de C++](../../standard-library/safe-libraries-cpp-standard-library.md).  
   
-## <a name="unsafe-standard-library-functions"></a>Unsafe Standard Library functions  
+## <a name="unsafe-standard-library-functions"></a>Funciones no seguras de biblioteca estándar  
   
- **'std::** *function_name* **::\_Unchecked\_iterators::\_Deprecate' Call to std::** *function_name* **with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'**  
+ **' std::** *function_name* **::\_Unchecked\_iteradores::\_Deprecate' llamada a std::** *nombre_función* **con parámetros que pueden ser seguros: esta llamada se basa en el llamador para comprobar que los valores pasados son correctos. Para deshabilitar esta advertencia, utilice -D_SCL_SECURE_NO_WARNINGS. Consulte la documentación sobre cómo usar iteradores comprobados' de Visual C++.**  
   
-This warning appears in debug builds because certain C++ Standard Library template functions do not check parameters for correctness. In most cases, this is because not enough information is available to the function to check container bounds, or because iterators may be used incorrectly with the function. This warning helps you identify these function uses, because they may be a source of security holes in your program. For more information, see [Checked Iterators](../../standard-library/checked-iterators.md).  
+Esta advertencia aparece en las compilaciones de depuración porque algunas funciones de plantilla de la biblioteca estándar de C++ no comprueba los parámetros son correctos. En la mayoría de los casos, esto es porque no hay suficiente información disponible para la función que se va a comprobar los límites del contenedor o porque los iteradores se pueden usar de forma incorrecta con la función. Esta advertencia ayuda a identificar estos usos de la función, ya que pueden ser una fuente de vulnerabilidades de seguridad en el programa. Para obtener más información, consulta [Checked Iterators](../../standard-library/checked-iterators.md).  
   
-For example, this warning appears in Debug mode if you pass an element pointer to `std::copy` instead of a plain array. To fix this issue, use an appropriately declared array, so the library can check the array extents and do bounds checking.  
+Por ejemplo, esta advertencia aparece en el modo de depuración si se pasa un puntero de elemento a `std::copy` en lugar de una matriz sin formato. Para corregir este problema, use una matriz declarada correctamente, por lo que la biblioteca puede comprobar las extensiones de matriz y realice la comprobación de límites.  
   
 ```cpp  
 // C4996_copyarray.cpp
@@ -98,7 +97,7 @@ void example(char const * const src) {
 } 
 ```  
   
-Several standard library algorithms were updated to have "dual range" versions in C++14. If you use the dual range versions, the second range provides the necessary bounds checking:  
+Varios algoritmos de la biblioteca estándar se han actualizado para tener versiones de "intervalo dual" en C ++ 14. Si utiliza las versiones de doble intervalo, el segundo intervalo proporciona la comprobación de límites necesarios:  
   
 ```cpp  
 // C4996_containers.cpp
@@ -119,7 +118,7 @@ bool example(
 }
 ```  
   
-This example demonstrates several more ways the standard library may be used to check iterator usage, and when unchecked usage may be dangerous:  
+Este ejemplo muestra varias maneras más la biblioteca estándar de puede utilizarse para comprobar el uso de iterador y al uso desactivada puede ser peligroso:  
   
 ```cpp  
 // C4996_standard.cpp
@@ -204,11 +203,11 @@ int main()
 }  
 ```  
   
-If you have verified that your code cannot have a buffer overrun error in the Standard Library functions that trigger this warning, you may want to turn this warning off. To turn off warnings for these functions, define **_SCL_SECURE_NO_WARNINGS**.   
+Si ha comprobado que el código no puede tener un búfer saturación error en las funciones de biblioteca estándar que desencadenan esta advertencia, puede desactivar esta advertencia. Para desactivar las advertencias para estas funciones, defina **_SCL_SECURE_NO_WARNINGS**.   
   
-## <a name="example-checked-iterators-enabled"></a>Example: Checked iterators enabled  
+## <a name="example-checked-iterators-enabled"></a>Ejemplo: Iteradores comprobados habilitados  
   
-C4996 can also occur if you do not use a checked iterator when compiling with `_ITERATOR_DEBUG_LEVEL` defined as 1 or 2. It is set to 2 by default for debug mode builds, and to 0 for retail builds. See [Checked Iterators](../../standard-library/checked-iterators.md) for more information.  
+Advertencia C4996 también puede producirse si no utiliza un iterador comprobado al compilar con `_ITERATOR_DEBUG_LEVEL` definido como 1 o 2. Se establece en 2 de forma predeterminada para las compilaciones de modo de depuración y en 0 para las compilaciones comerciales. Vea [Checked Iterators](../../standard-library/checked-iterators.md) para obtener más información.  
   
 ```cpp  
 // C4996_checked.cpp  
@@ -230,29 +229,29 @@ int main() {
 }  
 ```  
   
-## <a name="unsafe-mfc-or-atl-code"></a>Unsafe MFC or ATL code  
+## <a name="unsafe-mfc-or-atl-code"></a>Código no seguro MFC o ATL  
   
-C4996 can also occur if you use MFC or ATL functions that were deprecated for security reasons.  
+Advertencia C4996 también puede producirse si se utilizan funciones MFC o ATL que quedaron en desuso por razones de seguridad.  
   
-To fix this issue, we strongly recommend you change your code to use updated functions instead.  
+Para corregir este problema, se recomienda que cambiar el código para usar las funciones actualizadas en su lugar.  
   
-For information on how to suppress these warnings, see [_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings).  
+Para obtener información sobre cómo suprimir estas advertencias, vea [_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings) y [_ATL_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/587d29d8-a75a-44a3-bec8-f724087e5e73).  
   
-## <a name="obsolete-crt-functions-and-variables"></a>Obsolete CRT functions and variables  
+## <a name="obsolete-crt-functions-and-variables"></a>Las variables y funciones de CRT obsoletas  
   
-**This function or variable has been superceded by newer library or operating system functionality. Consider using** *new_item* **instead. See online help for details.**  
+**Esta función o variable ha sido reemplazada por una funcionalidad más reciente de biblioteca o el sistema operativo. Considere el uso de** *new_item* **en su lugar. Consulte la ayuda en línea para obtener información detallada.**  
   
-Some library functions and global variables are deprecated as obsolete. These functions and variables may be removed in a future version of the library. The compiler issues a deprecation warning for these items, and suggests the preferred alternative.  
+Algunas variables globales y funciones de la biblioteca están en desuso por estar obsoletas. Es posible que estas funciones y variables se quiten en una versión futura de la biblioteca. El compilador emite una advertencia de desuso para estos elementos y sugiere la alternativa preferida.  
   
-To fix this issue, we recommend you change your code to use the suggested function or variable.  
+Para corregir este problema, se recomienda que cambiar el código para usar la sugerencia de función o variable.  
   
-To turn off deprecation warnings for these items, define **_CRT_OBSOLETE_NO_WARNINGS**. For more information, see the documentation for the deprecated function or variable.  
+Para desactivar las advertencias sobre desuso para estos elementos, defina **_CRT_OBSOLETE_NO_WARNINGS**. Para más información, consulte la documentación de la variable o función en desuso.  
   
-## <a name="example-marshalling-errors-in-clr-code"></a>Example: Marshalling errors in CLR code  
+## <a name="example-marshalling-errors-in-clr-code"></a>Ejemplo: Cálculo de referencias de errores en el código CLR  
   
-C4996 can also occur when you use the CLR marshaling library. In this case C4996 is an error, not a warning. This error occurs when you use [marshal_as](../../dotnet/marshal-as.md) to convert between two data types that require a [marshal_context Class](../../dotnet/marshal-context-class.md). You can also receive this error when the marshaling library does not support a conversion. For more information about the marshaling library, see [Overview of Marshaling in C++](../../dotnet/overview-of-marshaling-in-cpp.md).  
+Advertencia C4996 también puede producirse cuando se utiliza la biblioteca de cálculo de referencias de CLR. En este caso, C4996 es un error y no una advertencia. Este error se produce cuando se usa [serializar_as](../../dotnet/marshal-as.md) para convertir entre dos tipos de datos que requieren un [marshal_context (clase)](../../dotnet/marshal-context-class.md). También puede recibir este error cuando la biblioteca de serialización no admita una conversión. Para más información sobre la biblioteca de cálculo de referencias, vea [Overview of Marshaling in C++](../../dotnet/overview-of-marshaling-in-cpp.md).  
   
-This example generates C4996 because the marshaling library requires a context to convert from a `System::String` to a `const char *`.  
+Este ejemplo genera la advertencia C4996 porque la biblioteca de cálculo de referencias exige un contexto para convertir un `System::String` a una `const char *`.  
   
 ```cpp  
 // C4996_Marshal.cpp  
@@ -273,9 +272,9 @@ int main() {
 }  
 ```
   
-## <a name="example-user-defined-deprecated-function"></a>Example: User-defined deprecated function  
+## <a name="example-user-defined-deprecated-function"></a>Ejemplo: Función en desuso definido por el usuario  
   
-You can use the deprecated attribute in your own code to warn callers when you no longer recommend use of certain functions. In this example, C4996 is generated for the line on which the deprecated function is declared, and for the line on which the function is used.  
+Puede usar el atributo desusado en su propio código para advertir a los llamadores cuando ya no se recomienda el uso de determinadas funciones. En este ejemplo, se genera C4996 para la línea en la que se declara la función en desuso y la línea en el que se utiliza la función.  
   
 ```cpp  
 // C4996.cpp  

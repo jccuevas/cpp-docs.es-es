@@ -1,5 +1,5 @@
 ---
-title: regex_traits Class | Microsoft Docs
+title: regex_traits (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- regex_traits
 - regex/std::regex_traits
 - regex/std::regex_traits::char_type
 - regex/std::regex_traits::size_type
@@ -29,23 +30,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- std::regex_traits [C++]
-- std::regex_traits [C++], char_type
-- std::regex_traits [C++], size_type
-- std::regex_traits [C++], string_type
-- std::regex_traits [C++], locale_type
-- std::regex_traits [C++], char_class_type
-- std::regex_traits [C++], length
-- std::regex_traits [C++], translate
-- std::regex_traits [C++], translate_nocase
-- std::regex_traits [C++], transform
-- std::regex_traits [C++], transform_primary
-- std::regex_traits [C++], lookup_classname
-- std::regex_traits [C++], lookup_collatename
-- std::regex_traits [C++], isctype
-- std::regex_traits [C++], value
-- std::regex_traits [C++], imbue
-- std::regex_traits [C++], getloc
+- regex_traits class
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
 caps.latest.revision: 19
 author: corob-msft
@@ -65,17 +50,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 2ba77d9656a41d5046d1bd98221d235d8db04f3f
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: b7a7b0cfe5614cb87d82634e6d17643f5509ae13
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="regextraits-class"></a>regex_traits Class
-Describes characteristics of elements for matching.  
+# <a name="regextraits-class"></a>regex_traits (Clase)
+Describe las características de los elementos para buscar coincidencias.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
 ```  
 template<class Elem>
 class regex_traits {  
@@ -104,31 +89,31 @@ public:
    locale_type getloc() const;
 };  
  ``` 
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Elem`  
- The character element type to describe.  
+ El tipo de elemento de carácter que se va describir.  
   
-## <a name="remarks"></a>Remarks  
- The template class describes various regular expression traits for type `Elem`. The template class [basic_regex Class](../standard-library/basic-regex-class.md) uses this information to manipulate elements of type `Elem`.  
+## <a name="remarks"></a>Comentarios  
+ La clase de plantilla describe varios rasgos de expresión regular de tipo `Elem`. La clase de plantilla [basic_regex Class](../standard-library/basic-regex-class.md) usa esta información para manipular los elementos de tipo `Elem`.  
   
- Each `regex_traits` object holds an object of type `regex_traits::locale` which is used by some of its member functions. The default locale is a copy of `regex_traits::locale()`. The member function `imbue` replaces the locale object, and the member function `getloc` returns a copy of the locale object.  
+ Cada objeto `regex_traits` contiene un objeto de tipo `regex_traits::locale` que usan algunas de sus funciones miembro. La configuración regional predeterminada es una copia de `regex_traits::locale()`. La función miembro `imbue` reemplaza el objeto de configuración regional, y la función miembro `getloc` devuelve una copia del objeto de configuración regional.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<regex>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<regex>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
 ##  <a name="char_class_type"></a>  regex_traits::char_class_type  
- The type of character class designators.  
+ El tipo de designador de clases de caracteres.  
   
 ```  
 typedef T8 char_class_type;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for an unspecified type that designates character classes. Values of this type can be combined using the `|` operator to designate character classes that are the union of the classes designated by the operands.  
+### <a name="remarks"></a>Comentarios  
+ El tipo es un sinónimo de un tipo no especificado que designa clases de caracteres. Se pueden combinar los valores de este tipo mediante el operador `|` para designar clases de caracteres que constituyen la unión de las clases designadas por los operandos.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_char_class_type.cpp   
@@ -200,16 +185,16 @@ hex C == 12
 ```  
   
 ##  <a name="char_type"></a>  regex_traits::char_type  
- The type of an element.  
+ El tipo de un elemento.  
   
 ```  
 typedef Elem char_type;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The typedef is a synonym for the template argument `Elem`.  
+### <a name="remarks"></a>Comentarios  
+ La definición de tipo es un sinónimo del argumento de plantilla `Elem`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_char_type.cpp   
@@ -281,16 +266,16 @@ hex C == 12
 ```  
   
 ##  <a name="getloc"></a>  regex_traits::getloc  
- Returns the stored locale object.  
+ Devuelve el objeto de configuración regional almacenado.  
   
 ```  
 locale_type getloc() const;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The member function returns the stored `locale` object.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve el objeto `locale` almacenado.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_getloc.cpp   
@@ -362,20 +347,20 @@ hex C == 12
 ```  
   
 ##  <a name="imbue"></a>  regex_traits::imbue  
- Alters the stored locale object.  
+ Modifica el objeto de configuración regional almacenado.  
   
 ```  
 locale_type imbue(locale_type loc);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `loc`  
- The locale object to store.  
+ El objeto de configuración regional que se va a almacenar.  
   
-### <a name="remarks"></a>Remarks  
- The member function copies `loc` to the stored `locale` object and returns a copy of the previous value of the stored `locale` object.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro copia `loc` al objeto `locale` almacenado y devuelve una copia del valor anterior del objeto `locale` almacenado.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_imbue.cpp   
@@ -447,23 +432,23 @@ hex C == 12
 ```  
   
 ##  <a name="isctype"></a>  regex_traits::isctype  
- Tests for class membership.  
+ Realiza pruebas de pertenencia a una clase.  
   
 ```  
 bool isctype(char_type ch, char_class_type cls) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `ch`  
- The element to test.  
+ Elemento que se va a comprobar.  
   
  `cls`  
- The classes to test for.  
+ Las clases que se van a probar.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns true only if the character `ch` is in the character class designated by `cls`.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve true solo si el carácter `ch` está en la clase de caracteres designada por `cls`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_isctype.cpp   
@@ -535,20 +520,20 @@ hex C == 12
 ```  
   
 ##  <a name="length"></a>  regex_traits::length  
- Returns the length of a nul-terminated sequence.  
+ Devuelve la longitud de una secuencia terminada en null.  
   
 ```  
 static size_type length(const char_type *str);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `str`  
- The nul-terminated sequence.  
+ La secuencia terminada en null.  
   
-### <a name="remarks"></a>Remarks  
- The static member function returns `std::char_traits<char_type>::length(str)`.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro estática devuelve `std::char_traits<char_type>::length(str)`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_length.cpp   
@@ -620,16 +605,16 @@ hex C == 12
 ```  
   
 ##  <a name="locale_type"></a>  regex_traits::locale_type  
- The type of the stored locale object.  
+ El tipo de objeto de configuración regional almacenado.  
   
 ```  
 typedef T7 locale_type;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The typedef is a synonym for a type that encapsulates locales. In the specializations `regex_traits<char>` and `regex_traits<wchar_t>` it is a synonym for `std::locale`.  
+### <a name="remarks"></a>Comentarios  
+ La definición de tipo es un sinónimo de un tipo que encapsula las configuraciones regionales. En las especializaciones `regex_traits<char>` y `regex_traits<wchar_t>` es un sinónimo de `std::locale`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_locale_type.cpp   
@@ -701,28 +686,28 @@ hex C == 12
 ```  
   
 ##  <a name="lookup_classname"></a>  regex_traits::lookup_classname  
- Maps a sequence to a character class.  
+ Asigna una secuencia a una clase de caracteres.  
   
 ```  
 template <class FwdIt>  
 char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- Beginning of sequence to look up.  
+ Principio de la secuencia que se va a buscar.  
   
  `last`  
- End of sequence to look up.  
+ Final de la secuencia que se va a buscar.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns a value that designates the character class named by the character sequence pointed to by its arguments. The value does not depend on the case of the characters in the sequence.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve un valor que designa la clase de caracteres denominada por la secuencia de caracteres a la que señalan sus argumentos. El valor es independiente de mayúsculas o minúsculas en los caracteres de la secuencia.  
   
- The specialization `regex_traits<char>` recognizes the names `"d"`, `"s"`, `"w"`, `"alnum"`, `"alpha"`, `"blank"`, `"cntrl"`, `"digit"`, `"graph"`, `"lower"`, `"print"`, `"punct"`, `"space"`, `"upper"`, and `"xdigit"`, all without regard to case.  
+ La especialización `regex_traits<char>` reconoce los nombres `"d"`, `"s"`, `"w"`, `"alnum"`, `"alpha"`, `"blank"`, `"cntrl"`, `"digit"`, `"graph"`, `"lower"`, `"print"`, `"punct"`, `"space"`, `"upper"` y `"xdigit"` sin tener en cuenta mayúsculas o minúsculas.  
   
- The specialization `regex_traits<wchar_t>` recognizes the names `L"d"`, `L"s"`, `L"w"`, `L"alnum"`, `L"alpha"`, `L"blank"`, `L"cntrl"`, `L"digit"`, `L"graph"`, `L"lower"`, `L"print"`, `L"punct"`, `L"space"`, `L"upper"`, and `L"xdigit"`, all without regard to case.  
+ La especialización `regex_traits<wchar_t>` reconoce los nombres `L"d"`, `L"s"`, `L"w"`, `L"alnum"`, `L"alpha"`, `L"blank"`, `L"cntrl"`, `L"digit"`, `L"graph"`, `L"lower"`, `L"print"`, `L"punct"`, `L"space"`, `L"upper"` y `L"xdigit"` sin tener en cuenta mayúsculas o minúsculas.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_lookup_classname.cpp   
@@ -794,24 +779,24 @@ hex C == 12
 ```  
   
 ##  <a name="lookup_collatename"></a>  regex_traits::lookup_collatename  
- Maps a sequence to a collating element.  
+ Asigna una secuencia a un elemento de intercalación.  
   
 ```  
 template <class FwdIt>  
 string_type lookup_collatename(FwdIt first, FwdIt last) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- Beginning of sequence to look up.  
+ Principio de la secuencia que se va a buscar.  
   
  `last`  
- End of sequence to look up.  
+ Final de la secuencia que se va a buscar.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns a string object containing the collating element corresponding to the sequence `[first, last)`, or an empty string if the sequence is not a valid collating element.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve un objeto de cadena que contiene el elemento de intercalación correspondiente a la secuencia de `[first, last)`o una cadena vacía si la secuencia no es un elemento de intercalación válido.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_lookup_collatename.cpp   
@@ -883,16 +868,16 @@ hex C == 12
 ```  
   
 ##  <a name="regex_traits"></a>  regex_traits::regex_traits  
- Constructs the object.  
+ Construye el objeto.  
   
 ```  
 regex_traits();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The constructor constructs an object whose stored `locale` object is initialized to the default locale.  
+### <a name="remarks"></a>Comentarios  
+ El constructor crea un objeto cuyo objeto `locale` almacenado se inicializa en la configuración regional predeterminada.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_construct.cpp   
@@ -964,18 +949,18 @@ hex C == 12
 ```  
   
 ##  <a name="size_type"></a>  regex_traits::size_type  
- The type of a sequence length.  
+ Tipo de una longitud de secuencia.  
   
 ```  
 typedef T6 size_type;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The typedef is a synonym for an unsigned integral type. In the specializations `regex_traits<char>` and `regex_traits<wchar_t>` it is a synonym for `std::size_t`.  
+### <a name="remarks"></a>Comentarios  
+ La definición de tipo es un sinónimo para un tipo entero sin signo. En las especializaciones `regex_traits<char>` y `regex_traits<wchar_t>` es un sinónimo de `std::size_t`.  
   
- The typedef is a synonym for `std::size_t`.  
+ La definición de tipo es un sinónimo de `std::size_t`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_size_type.cpp   
@@ -1047,16 +1032,16 @@ hex C == 12
 ```  
   
 ##  <a name="string_type"></a>  regex_traits::string_type  
- The type of a string of elements.  
+ Tipo de una cadena de elementos.  
   
 ```  
 typedef basic_string<Elem> string_type;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The typedef is a synonym for `basic_string<Elem>`.  
+### <a name="remarks"></a>Comentarios  
+ La definición de tipo es un sinónimo de `basic_string<Elem>`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_string_type.cpp   
@@ -1128,24 +1113,24 @@ hex C == 12
 ```  
   
 ##  <a name="transform"></a>  regex_traits::transform  
- Converts to equivalent ordered sequence.  
+ Convierte a la secuencia ordenada equivalente.  
   
 ```  
 template <class FwdIt>  
 string_type transform(FwdIt first, FwdIt last) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- Beginning of sequence to transform.  
+ Principio de la secuencia que se va a transformar.  
   
  `last`  
- End of sequence to transform.  
+ Final de la secuencia que se va a transformar.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns a string that it generates by using a transformation rule that depends on the stored `locale` object. For two character sequences designated by the iterator ranges `[first1, last1)` and `[first2, last2)`, `transform(first1, last1) < transform(first2, last2)` if the character sequence designated by the iterator range `[first1, last1)` sorts before the character sequence designated by the iterator range `[first2, last2)`.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve una cadena que dicha función genera mediante una regla de transformación que depende del objeto `locale` almacenado. En el caso de dos secuencias de caracteres designadas por los rangos de iterador `[first1, last1)` y `[first2, last2)`, `transform(first1, last1) < transform(first2, last2)` si la secuencia de caracteres designada por el rango de iterador `[first1, last1)` se ordena antes que la secuencia de caracteres designada por el rango de iterador `[first2, last2)`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_transform.cpp   
@@ -1217,24 +1202,24 @@ hex C == 12
 ```  
   
 ##  <a name="transform_primary"></a>  regex_traits::transform_primary  
- Converts to equivalent caseless ordered sequence.  
+ Convierte a la secuencia ordenada caseless equivalente.  
   
 ```  
 template <class FwdIt>  
 string_type transform_primary(FwdIt first, FwdIt last) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `first`  
- Beginning of sequence to transform.  
+ Principio de la secuencia que se va a transformar.  
   
  `last`  
- End of sequence to transform.  
+ Final de la secuencia que se va a transformar.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns a string that it generates by using a transformation rule that depends on the stored `locale` object. For two character sequences designated by the iterator ranges `[first1, last1)` and `[first2, last2)`, `transform_primary(first1, last1) < transform_primary(first2, last2)` if the character sequence designated by the iterator range `[first1, last1)` sorts before the character sequence designated by the iterator range `[first2, last2)` without regard for case or accents.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve una cadena que dicha función genera mediante una regla de transformación que depende del objeto `locale` almacenado. En el caso de dos secuencias de caracteres designadas por los rangos de iterador `[first1, last1)` y `[first2, last2)`, `transform_primary(first1, last1) < transform_primary(first2, last2)` si la secuencia de caracteres designada por el rango de iterador `[first1, last1)` se ordena antes que la secuencia de caracteres designada por el rango de iterador `[first2, last2)` sin tener en cuenta mayúsculas y minúsculas o acentos.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_transform_primary.cpp   
@@ -1306,20 +1291,20 @@ hex C == 12
 ```  
   
 ##  <a name="translate"></a>  regex_traits::translate  
- Converts to equivalent matching element.  
+ Convierte a un elemento coincidente equivalente.  
   
 ```  
 char_type translate(char_type ch) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `ch`  
- The element to convert.  
+ El elemento que se va a convertir.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns a character that it generates by using a transformation rule that depends on the stored `locale` object. For two `char_type` objects `ch1` and `ch2`, `translate(ch1) == translate(ch2)` only if `ch1` and `ch2` should match when one occurs in the regular expression definition and the other occurs at a corresponding position in the target sequence for a locale-sensitive match.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve un carácter que dicha función genera mediante una regla de transformación que depende del objeto `locale` almacenado. Para dos objetos `char_type` y `ch1` de `ch2`, `translate(ch1) == translate(ch2)` solo si `ch1` y `ch2` deben coincidir cuando uno aparece en la definición de la expresión regular y el otro en la posición correspondiente de la secuencia de destino para una coincidencia que depende de la configuración regional.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_translate.cpp   
@@ -1391,20 +1376,20 @@ hex C == 12
 ```  
   
 ##  <a name="translate_nocase"></a>  regex_traits::translate_nocase  
- Converts to equivalent caseless matching element.  
+ Convierte al elemento equivalente que coincide sin distinción entre mayúsculas y minúsculas.  
   
 ```  
 char_type translate_nocase(char_type ch) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `ch`  
- The element to convert.  
+ El elemento que se va a convertir.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns a character that it generates by using a transformation rule that depends on the stored `locale` object. For two `char_type` objects `ch1` and `ch2`, `translate_nocase(ch1) == translate_nocase(ch2)` only if `ch1` and `ch2` should match when one occurs in the regular expression definition and the other occurs at a corresponding position in the target sequence for a case-insensitive match.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve un carácter que dicha función genera mediante una regla de transformación que depende del objeto `locale` almacenado. Para dos objetos `char_type` y `ch1` de `ch2`, `translate_nocase(ch1) == translate_nocase(ch2)` solo si `ch1` y `ch2` deben coincidir cuando uno aparece en la definición de la expresión regular y el otro en la posición correspondiente de la secuencia de destino para una coincidencia que no distingue entre mayúsculas y minúsculas.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_translate_nocase.cpp   
@@ -1476,23 +1461,23 @@ hex C == 12
 ```  
   
 ##  <a name="value"></a>  regex_traits::value  
- Converts an element to a digit value.  
+ Convierte un elemento en un valor de dígito.  
   
 ```  
 int value(Elem ch, int radix) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `ch`  
- The element to convert.  
+ El elemento que se va a convertir.  
   
  `radix`  
- The arithmetic base to use.  
+ Las operaciones aritméticas base que se van a usar.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns the value represented by the character `ch` in the base `radix`, or -1 if `ch` is not a valid digit in the base `radix`. The function will only be called with a `radix` argument of 8, 10, or 16.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve el valor representado por el carácter `ch` de `radix`base o -1 si `ch` no es un dígito válido en `radix`base. La función solo se llamará con un argumento `radix` de 8, 10 o 16.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__regex__regex_traits_value.cpp   
@@ -1563,16 +1548,16 @@ class digit == d == true
 hex C == 12  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
 [\<regex>](../standard-library/regex.md)  
-[regex_constants Class](../standard-library/regex-constants-class.md)  
-[regex_error Class](../standard-library/regex-error-class.md)  
-[\<regex> functions](../standard-library/regex-functions.md)  
-[regex_iterator Class](../standard-library/regex-iterator-class.md)  
-[\<regex> operators](../standard-library/regex-operators.md)  
-[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
-[\<regex> typedefs](../standard-library/regex-typedefs.md)  
- [regex_traits\<char> Class](../standard-library/regex-traits-char-class.md)   
- [regex_traits\<wchar_t> Class](../standard-library/regex-traits-wchar-t-class.md)
+[regex_constants (Clase)](../standard-library/regex-constants-class.md)  
+[regex_error (Clase)](../standard-library/regex-error-class.md)  
+[Funciones de \<regex>](../standard-library/regex-functions.md)  
+[regex_iterator (Clase)](../standard-library/regex-iterator-class.md)  
+[Operadores de \<regex>](../standard-library/regex-operators.md)  
+[regex_token_iterator (Clase)](../standard-library/regex-token-iterator-class.md)  
+[Definiciones de tipos \<regex>](../standard-library/regex-typedefs.md)  
+ [regex_traits\<char> (Clase)](../standard-library/regex-traits-char-class.md)   
+ [regex_traits\<wchar_t> (Clase)](../standard-library/regex-traits-wchar-t-class.md)
 
 

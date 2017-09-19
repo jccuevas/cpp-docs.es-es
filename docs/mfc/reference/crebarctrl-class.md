@@ -1,5 +1,5 @@
 ---
-title: CReBarCtrl Class | Microsoft Docs
+title: CReBarCtrl (clase) | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -60,52 +60,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CReBarCtrl [MFC], CReBarCtrl
-- CReBarCtrl [MFC], BeginDrag
-- CReBarCtrl [MFC], Create
-- CReBarCtrl [MFC], CreateEx
-- CReBarCtrl [MFC], DeleteBand
-- CReBarCtrl [MFC], DragMove
-- CReBarCtrl [MFC], EndDrag
-- CReBarCtrl [MFC], GetBandBorders
-- CReBarCtrl [MFC], GetBandCount
-- CReBarCtrl [MFC], GetBandInfo
-- CReBarCtrl [MFC], GetBandMargins
-- CReBarCtrl [MFC], GetBarHeight
-- CReBarCtrl [MFC], GetBarInfo
-- CReBarCtrl [MFC], GetBkColor
-- CReBarCtrl [MFC], GetColorScheme
-- CReBarCtrl [MFC], GetDropTarget
-- CReBarCtrl [MFC], GetExtendedStyle
-- CReBarCtrl [MFC], GetImageList
-- CReBarCtrl [MFC], GetPalette
-- CReBarCtrl [MFC], GetRect
-- CReBarCtrl [MFC], GetRowCount
-- CReBarCtrl [MFC], GetRowHeight
-- CReBarCtrl [MFC], GetTextColor
-- CReBarCtrl [MFC], GetToolTips
-- CReBarCtrl [MFC], HitTest
-- CReBarCtrl [MFC], IDToIndex
-- CReBarCtrl [MFC], InsertBand
-- CReBarCtrl [MFC], MaximizeBand
-- CReBarCtrl [MFC], MinimizeBand
-- CReBarCtrl [MFC], MoveBand
-- CReBarCtrl [MFC], PushChevron
-- CReBarCtrl [MFC], RestoreBand
-- CReBarCtrl [MFC], SetBandInfo
-- CReBarCtrl [MFC], SetBandWidth
-- CReBarCtrl [MFC], SetBarInfo
-- CReBarCtrl [MFC], SetBkColor
-- CReBarCtrl [MFC], SetColorScheme
-- CReBarCtrl [MFC], SetExtendedStyle
-- CReBarCtrl [MFC], SetImageList
-- CReBarCtrl [MFC], SetOwner
-- CReBarCtrl [MFC], SetPalette
-- CReBarCtrl [MFC], SetTextColor
-- CReBarCtrl [MFC], SetToolTips
-- CReBarCtrl [MFC], SetWindowTheme
-- CReBarCtrl [MFC], ShowBand
-- CReBarCtrl [MFC], SizeToRect
+- rebar controls, control bar
+- rebar controls, CReBarCtrl class
+- CReBarCtrl class
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
 caps.latest.revision: 23
 author: mikeblome
@@ -125,111 +82,111 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 4159876291c6fcb951e42446691bad1391eb28b8
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: c1da4de2897c74e9cb25bc060033f4bd43159174
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="crebarctrl-class"></a>CReBarCtrl Class
-Encapsulates the functionality of a rebar control, which is a container for a child window.  
+# <a name="crebarctrl-class"></a>CReBarCtrl (clase)
+Encapsula la funcionalidad de un control rebar, que es un contenedor para una ventana secundaria.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CReBarCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CReBarCtrl::CReBarCtrl](#crebarctrl)|Constructs a `CReBarCtrl` object.|  
+|[CReBarCtrl::CReBarCtrl](#crebarctrl)|Construye un objeto `CReBarCtrl`.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CReBarCtrl::BeginDrag](#begindrag)|Places the rebar control into drag-and-drop mode.|  
-|[CReBarCtrl::Create](#create)|Creates the rebar control and attaches it to the `CReBarCtrl` object.|  
-|[CReBarCtrl::CreateEx](#createex)|Creates a rebar control with the specified Windows extended styles and attaches it to a `CReBarCtrl` object.|  
-|[CReBarCtrl::DeleteBand](#deleteband)|Deletes a band from a rebar control.|  
-|[CReBarCtrl::DragMove](#dragmove)|Updates the drag position in the rebar control after a call to `BeginDrag`.|  
-|[CReBarCtrl::EndDrag](#enddrag)|Terminates the rebar control's drag-and-drop operation.|  
-|[CReBarCtrl::GetBandBorders](#getbandborders)|Retrieves the borders of a band.|  
-|[CReBarCtrl::GetBandCount](#getbandcount)|Retrieves the count of bands currently in the rebar control.|  
-|[CReBarCtrl::GetBandInfo](#getbandinfo)|Retrieves information about a specified band in a rebar control.|  
-|[CReBarCtrl::GetBandMargins](#getbandmargins)|Retrieves the margins of a band.|  
-|[CReBarCtrl::GetBarHeight](#getbarheight)|Retrieves the height of the rebar control.|  
-|[CReBarCtrl::GetBarInfo](#getbarinfo)|Retrieves information about the rebar control and the image list it uses.|  
-|[CReBarCtrl::GetBkColor](#getbkcolor)|Retrieves a rebar control's default background color.|  
-|[CReBarCtrl::GetColorScheme](#getcolorscheme)|Retrieves the [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) structure associated with the rebar control.|  
-|[CReBarCtrl::GetDropTarget](#getdroptarget)|Retrieves a rebar control's `IDropTarget` interface pointer.|  
-|[CReBarCtrl::GetExtendedStyle](#getextendedstyle)|Gets the extended style of the current rebar control.|  
-|[CReBarCtrl::GetImageList](#getimagelist)|Retrieves the image list associated with a rebar control.|  
-|[CReBarCtrl::GetPalette](#getpalette)|Retrieves the rebar control's current palette.|  
-|[CReBarCtrl::GetRect](#getrect)|Retrieves the bounding rectangle for a given band in a rebar control.|  
-|[CReBarCtrl::GetRowCount](#getrowcount)|Retrieves the number of band rows in a rebar control.|  
-|[CReBarCtrl::GetRowHeight](#getrowheight)|Retrieves the height of a specified row in a rebar control.|  
-|[CReBarCtrl::GetTextColor](#gettextcolor)|Retrieves a rebar control's default text color.|  
-|[CReBarCtrl::GetToolTips](#gettooltips)|Retrieves the handle to any tool tip control associated with the rebar control.|  
-|[CReBarCtrl::HitTest](#hittest)|Determines which portion of a rebar band is at a given point on the screen, if a rebar band exists at that point.|  
-|[CReBarCtrl::IDToIndex](#idtoindex)|Converts a band identifier (ID) to a band index in a rebar control.|  
-|[CReBarCtrl::InsertBand](#insertband)|Inserts a new band in a rebar control.|  
-|[CReBarCtrl::MaximizeBand](#maximizeband)|Resizes a band in a rebar control to its largest size.|  
-|[CReBarCtrl::MinimizeBand](#minimizeband)|Resizes a band in a rebar control to its smallest size.|  
-|[CReBarCtrl::MoveBand](#moveband)|Moves a band from one index to another.|  
-|[CReBarCtrl::PushChevron](#pushchevron)|Programmatically pushes a chevron.|  
-|[CReBarCtrl::RestoreBand](#restoreband)|Resizes a band in a rebar control to its ideal size.|  
-|[CReBarCtrl::SetBandInfo](#setbandinfo)|Sets characteristics of an existing band in a rebar control.|  
-|[CReBarCtrl::SetBandWidth](#setbandwidth)|Sets the width of the specified docked band in the current rebar control.|  
-|[CReBarCtrl::SetBarInfo](#setbarinfo)|Sets the characteristics of a rebar control.|  
-|[CReBarCtrl::SetBkColor](#setbkcolor)|Sets a rebar control's default background color.|  
-|[CReBarCtrl::SetColorScheme](#setcolorscheme)|Sets the color scheme for the buttons on a rebar control.|  
-|[CReBarCtrl::SetExtendedStyle](#setextendedstyle)|Sets the extended styles for the current rebar control.|  
-|[CReBarCtrl::SetImageList](#setimagelist)|Sets a rebar control's image list.|  
-|[CReBarCtrl::SetOwner](#setowner)|Sets a rebar control's owner window.|  
-|[CReBarCtrl::SetPalette](#setpalette)|Sets the rebar control's current palette.|  
-|[CReBarCtrl::SetTextColor](#settextcolor)|Sets a rebar control's default text color.|  
-|[CReBarCtrl::SetToolTips](#settooltips)|Associates a tool tip control with the rebar control.|  
-|[CReBarCtrl::SetWindowTheme](#setwindowtheme)|Sets the visual style of the rebar control.|  
-|[CReBarCtrl::ShowBand](#showband)|Shows or hides a given band in a rebar control.|  
-|[CReBarCtrl::SizeToRect](#sizetorect)|Fits a rebar control to a specified rectangle.|  
+|[CReBarCtrl::BeginDrag](#begindrag)|Coloca el control rebar en modo de arrastrar y colocar.|  
+|[CReBarCtrl::Create](#create)|Crea el control rebar y lo adjunta a la `CReBarCtrl` objeto.|  
+|[CReBarCtrl::CreateEx](#createex)|Crea un control rebar con los estilos extendidos de Windows especificados y lo asocia a un `CReBarCtrl` objeto.|  
+|[CReBarCtrl::DeleteBand](#deleteband)|Elimina una banda de un control rebar.|  
+|[CReBarCtrl::DragMove](#dragmove)|Actualiza la posición de arrastre en el control rebar después de llamar a `BeginDrag`.|  
+|[CReBarCtrl::EndDrag](#enddrag)|Finaliza la operación de arrastrar y colocar del control rebar.|  
+|[CReBarCtrl::GetBandBorders](#getbandborders)|Recupera los bordes de una banda.|  
+|[CReBarCtrl::GetBandCount](#getbandcount)|Recupera el número de bandas actualmente en el control rebar.|  
+|[CReBarCtrl::GetBandInfo](#getbandinfo)|Recupera información sobre una banda especificada en un control rebar.|  
+|[CReBarCtrl::GetBandMargins](#getbandmargins)|Recupera los márgenes de una banda.|  
+|[CReBarCtrl::GetBarHeight](#getbarheight)|Recupera el alto del control rebar.|  
+|[CReBarCtrl::GetBarInfo](#getbarinfo)|Recupera información sobre el control rebar y usa la lista de imágenes.|  
+|[CReBarCtrl::GetBkColor](#getbkcolor)|Recupera el color de fondo predeterminado de un control rebar.|  
+|[CReBarCtrl::GetColorScheme](#getcolorscheme)|Recupera el [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) estructura asociada con el control rebar.|  
+|[CReBarCtrl::GetDropTarget](#getdroptarget)|Recupera un control rebar `IDropTarget` puntero de interfaz.|  
+|[CReBarCtrl::GetExtendedStyle](#getextendedstyle)|Obtiene el estilo extendido del control rebar actual.|  
+|[CReBarCtrl::GetImageList](#getimagelist)|Recupera la lista de imágenes asociada a un control rebar.|  
+|[CReBarCtrl::GetPalette](#getpalette)|Recupera la paleta actual del control rebar.|  
+|[CReBarCtrl::GetRect](#getrect)|Recupera el rectángulo delimitador de una banda determinada en un control rebar.|  
+|[CReBarCtrl::GetRowCount](#getrowcount)|Recupera el número de filas de banda en un control rebar.|  
+|[CReBarCtrl::GetRowHeight](#getrowheight)|Recupera el alto de una fila especificada en un control rebar.|  
+|[CReBarCtrl::GetTextColor](#gettextcolor)|Recupera el color predeterminado del texto de un control rebar.|  
+|[CReBarCtrl::GetToolTips](#gettooltips)|Recupera el identificador de cualquier control de información sobre herramienta asociado al control rebar.|  
+|[CReBarCtrl::HitTest](#hittest)|Determina qué parte de una banda rebar es en un momento dado en la pantalla, si una banda rebar existe en ese momento.|  
+|[CReBarCtrl::IDToIndex](#idtoindex)|Convierte un identificador (ID) de banda en un índice de banda en un control rebar.|  
+|[CReBarCtrl:: InsertBand](#insertband)|Inserta una nueva banda en un control rebar.|  
+|[CReBarCtrl::MaximizeBand](#maximizeband)|Cambia el tamaño de una banda en un control rebar a su tamaño máximo.|  
+|[CReBarCtrl::MinimizeBand](#minimizeband)|Cambia el tamaño de una banda en un control rebar a su tamaño más pequeño.|  
+|[CReBarCtrl::MoveBand](#moveband)|Mueve una banda de un índice a otra.|  
+|[CReBarCtrl::PushChevron](#pushchevron)|Mediante programación, inserta un botón de contenido adicional.|  
+|[CReBarCtrl::RestoreBand](#restoreband)|Cambia el tamaño de una banda en un control rebar a su tamaño ideal.|  
+|[CReBarCtrl::SetBandInfo](#setbandinfo)|Establece las características de una banda existente en un control rebar.|  
+|[CReBarCtrl::SetBandWidth](#setbandwidth)|Establece el ancho de la banda acoplada especificado en el control rebar actual.|  
+|[CReBarCtrl::SetBarInfo](#setbarinfo)|Establece las características de un control rebar.|  
+|[CReBarCtrl::SetBkColor](#setbkcolor)|Establece el color de fondo predeterminado de un control rebar.|  
+|[CReBarCtrl::SetColorScheme](#setcolorscheme)|Establece la combinación de colores de los botones en un control rebar.|  
+|[CReBarCtrl::SetExtendedStyle](#setextendedstyle)|Establece los estilos extendidos para el control rebar actual.|  
+|[CReBarCtrl::SetImageList](#setimagelist)|Establece la lista de imágenes de un control rebar.|  
+|[CReBarCtrl::SetOwner](#setowner)|Establece la ventana de propietario de un control rebar.|  
+|[CReBarCtrl::SetPalette](#setpalette)|Establece la paleta actual del control rebar.|  
+|[CReBarCtrl::SetTextColor](#settextcolor)|Establece el color predeterminado del texto de un control rebar.|  
+|[CReBarCtrl::SetToolTips](#settooltips)|Asocia un control de información sobre herramientas del control rebar.|  
+|[CReBarCtrl::SetWindowTheme](#setwindowtheme)|Establece el estilo visual del control rebar.|  
+|[CReBarCtrl::ShowBand](#showband)|Muestra u oculta una banda determinada en un control rebar.|  
+|[CReBarCtrl::SizeToRect](#sizetorect)|Ajusta un control rebar a un rectángulo especificado.|  
   
-## <a name="remarks"></a>Remarks  
- The application in which the rebar control resides assigns the child window contained by the rebar control to the rebar band. The child window is usually another common control.  
+## <a name="remarks"></a>Comentarios  
+ La aplicación en el que reside el control rebar asigna la ventana secundaria que contiene el control rebar en la banda rebar. La ventana secundaria es normalmente otro control común.  
   
- Rebar controls contain one or more bands. Each band can contain a combination of a gripper bar, a bitmap, a text label, and a child window. The band can contain only one of each of these items.  
+ Controles rebar contienen una o más bandas. Cada banda puede contener una combinación de una barra de controles, un mapa de bits, una etiqueta de texto y una ventana secundaria. La banda puede contener sólo uno de cada uno de estos elementos.  
   
- The rebar control can display the child window over a specified background bitmap. All rebar control bands can be resized, except those that use the **RBBS_FIXEDSIZE** style. As you reposition or resize a rebar control band, the rebar control manages the size and position of the child window assigned to that band. To resize or change the order of bands within the control, click and drag a band's gripper bar.  
+ El control rebar puede mostrar la ventana secundaria en un mapa de bits de fondo especificado. Todas las bandas de control rebar pueden cambiar de tamaño, excepto las que utilizan el **RBBS_FIXEDSIZE** estilo. Cambiar la posición o cambiar el tamaño de una banda de control rebar, el control rebar administra el tamaño y posición de la ventana secundaria asignada a la banda. Para cambiar el tamaño o cambiar el orden de las bandas en el control, haga clic y arrastre la barra de controles de la banda.  
   
- The following illustration shows a rebar control that has three bands:  
+ La ilustración siguiente muestra un control rebar con tres bandas:  
   
--   Band 0 contains a flat, transparent toolbar control.  
+-   Banda 0 contiene un control de barra de herramientas plana y transparente.  
   
--   Band 1 contains both transparent standard and transparent dropdown buttons.  
+-   La banda 1 contiene dos botones transparentes desplegable estándar y transparente.  
   
--   Band 2 contains a combo box and four standard buttons.  
+-   Banda 2 contiene un cuadro combinado y cuatro botones estándar.  
   
-     ![Example of a Rebar menu](../../mfc/reference/media/vc4scc1.gif "vc4scc1")  
+     ![Ejemplo de un menú Rebar](../../mfc/reference/media/vc4scc1.gif "vc4scc1")  
   
-## <a name="rebar-control"></a>Rebar control  
- Rebar controls support:  
+## <a name="rebar-control"></a>Control rebar  
+ Compatibilidad con controles de rebar:  
   
--   Image lists.  
+-   Listas de imágenes.  
   
--   Message-handling.  
+-   Control de mensajes.  
   
--   Custom draw functionality.  
+-   Funcionalidad de dibujo personalizado.  
   
--   A variety of control styles in addition to standard window styles. For a list of these styles, see [Rebar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb774377) in the Windows SDK.  
+-   Una amplia variedad de estilos de control además de los estilos de ventana estándar. Para obtener una lista de estos estilos, consulte [estilos de Control Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
- For more information, see [Using CReBarCtrl](../../mfc/using-crebarctrl.md).  
+ Para obtener más información, consulte [CReBarCtrl utilizando](../../mfc/using-crebarctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -238,11 +195,11 @@ class CReBarCtrl : public CWnd
   
  `CReBarCtrl`  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxcmn.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxcmn.h  
   
-##  <a name="begindrag"></a>  CReBarCtrl::BeginDrag  
- Implements the behavior of the Win32 message [RB_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774429), as described in the Windows SDK.  
+##  <a name="begindrag"></a>CReBarCtrl::BeginDrag  
+ Implementa el comportamiento del mensaje de Win32 [RB_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774429), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 void BeginDrag(
@@ -250,15 +207,15 @@ void BeginDrag(
     DWORD dwPos = (DWORD)-1);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `uBand`  
- Zero-based index of the band that the drag-and-drop operation will affect.  
+ Índice de base cero de la banda que afectan la operación de arrastrar y colocar.  
   
  `dwPos`  
- A `DWORD` value that contains the starting mouse coordinates. The horizontal coordinate is contained in the LOWORD and the vertical coordinate is contained in the HIWORD. If you pass `(DWORD)-1`, the rebar control will use the position of the mouse the last time the control's thread called **GetMessage** or **PeekMessage**.  
+ Un `DWORD` valor que contiene las coordenadas del mouse inicial. La coordenada horizontal está contenida en el LOWORD y la coordenada vertical se encuentra en el HIWORD. Si se pasa `(DWORD)-1`, el control rebar usará la posición del mouse en la última vez que el subproceso del control denominado **GetMessage** o **PeekMessage**.  
   
-##  <a name="create"></a>  CReBarCtrl::Create  
- Creates the rebar control and attaches it to the `CReBarCtrl` object.  
+##  <a name="create"></a>CReBarCtrl::Create  
+ Crea el control rebar y lo adjunta a la `CReBarCtrl` objeto.  
   
 ```  
 virtual BOOL Create(
@@ -268,36 +225,36 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `dwStyle`  
- Specifies the combination of rebar control styles applied to the control. See [Rebar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb774377) in the Windows SDK for a list of supported styles.  
+ Especifica la combinación de estilos de control rebar aplicada al control. Consulte [estilos de Control Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] para obtener una lista de estilos compatibles.  
   
  `rect`  
- A reference to a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure, which is the position and size of the rebar control.  
+ Una referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura, que es la posición y el tamaño del control rebar.  
   
  `pParentWnd`  
- A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the rebar control. It must not be **NULL**.  
+ Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto de la ventana primaria del control rebar. No debe ser **NULL**.  
   
  `nID`  
- Specifies the rebar control's control ID.  
+ Especifica el identificador del control. del control rebar  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the object was created successfully; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si el objeto se creó correctamente; en caso contrario, 0.  
   
-### <a name="remarks"></a>Remarks  
- Create a rebar control in two steps:  
+### <a name="remarks"></a>Comentarios  
+ Crear un control rebar en dos pasos:  
   
-1.  Call [CReBarCtrl](#crebarctrl) to construct a `CReBarCtrl` object.  
+1.  Llame a [CReBarCtrl](#crebarctrl) para construir un `CReBarCtrl` objeto.  
   
-2.  Call this member function, which creates the Windows rebar control and attaches it to the `CReBarCtrl` object.  
+2.  Llame a esta función miembro, que crea el control rebar de Windows y lo adjunta a la `CReBarCtrl` objeto.  
   
- When you call **Create**, the common controls are initialized.  
+ Cuando se llama a **crear**, se inicializan los controles comunes.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CReBarCtrl#3](../../mfc/reference/codesnippet/cpp/crebarctrl-class_1.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_CReBarCtrl&3;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_1.cpp)]  
   
-##  <a name="createex"></a>  CReBarCtrl::CreateEx  
- Creates a control (a child window) and associates it with the `CReBarCtrl` object.  
+##  <a name="createex"></a>CReBarCtrl::CreateEx  
+ Crea un control (una ventana secundaria) y lo asocia a la `CReBarCtrl` objeto.  
   
 ```  
 virtual BOOL CreateEx(
@@ -308,75 +265,75 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `dwExStyle`  
- Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
+ Especifica el estilo extendido del control que se va a crear. Para obtener una lista de los estilos extendidos de Windows, consulte el `dwExStyle` parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `dwStyle`  
- Specifies the combination of rebar control styles applied to the control. For a list of supported styles, see [Rebar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb774377) in the Windows SDK.  
+ Especifica la combinación de estilos de control rebar aplicada al control. Para obtener una lista de estilos compatibles, consulte [estilos de Control Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  `rect`  
- A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
+ Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y la posición de la ventana que se creará, en coordenadas de cliente `pParentWnd`.  
   
  `pParentWnd`  
- A pointer to the window that is the control's parent.  
+ Puntero a la ventana que es principal el control.  
   
  `nID`  
- The control's child-window ID.  
+ Identificador de ventana secundaria. del control  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
-### <a name="remarks"></a>Remarks  
- Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
+### <a name="remarks"></a>Comentarios  
+ Utilice `CreateEx` en lugar de [crear](#create) para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_**.  
   
-##  <a name="crebarctrl"></a>  CReBarCtrl::CReBarCtrl  
- Creates a `CReBarCtrl` object.  
+##  <a name="crebarctrl"></a>CReBarCtrl::CReBarCtrl  
+ Crea un objeto `CReBarCtrl`.  
   
 ```  
 CReBarCtrl();
 ```  
   
-### <a name="example"></a>Example  
-  See the example for [CReBarCtrl::Create](#create).  
+### <a name="example"></a>Ejemplo  
+  Vea el ejemplo de [CReBarCtrl::Create](#create).  
   
-##  <a name="deleteband"></a>  CReBarCtrl::DeleteBand  
- Implements the behavior of the Win32 message [RB_DELETEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774431), as described in the Windows SDK.  
+##  <a name="deleteband"></a>CReBarCtrl::DeleteBand  
+ Implementa el comportamiento del mensaje de Win32 [RB_DELETEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774431), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 BOOL DeleteBand(UINT uBand);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `uBand`  
- Zero-based index of the band to be deleted.  
+ Índice de base cero de la banda que se va a eliminar.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the band deleted successfully; otherwise zero.  
+### <a name="return-value"></a>Valor devuelto  
+ Distinto de cero si la banda se eliminó correctamente; en caso contrario, es cero.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CReBarCtrl#4](../../mfc/reference/codesnippet/cpp/crebarctrl-class_2.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_CReBarCtrl Nº&4;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_2.cpp)]  
   
-##  <a name="dragmove"></a>  CReBarCtrl::DragMove  
- Implements the behavior of the Win32 message [RB_DRAGMOVE](https://msdn.microsoft.com/library/bb774433.aspx), as described in the Windows SDK.  
+##  <a name="dragmove"></a>CReBarCtrl::DragMove  
+ Implementa el comportamiento del mensaje de Win32 [RB_DRAGMOVE](https://msdn.microsoft.com/library/bb774433.aspx), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 void DragMove(DWORD dwPos = (DWORD)-1);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `dwPos`  
- A `DWORD` value that contains the new mouse coordinates. The horizontal coordinate is contained in the LOWORD and the vertical coordinate is contained in the HIWORD. If you pass `(DWORD)-1`, the rebar control will use the position of the mouse the last time the control's thread called **GetMessage** or **PeekMessage**.  
+ Un `DWORD` valor que contiene las nuevas coordenadas del mouse. La coordenada horizontal está contenida en el LOWORD y la coordenada vertical se encuentra en el HIWORD. Si se pasa `(DWORD)-1`, el control rebar usará la posición del mouse en la última vez que el subproceso del control denominado **GetMessage** o **PeekMessage**.  
   
-##  <a name="enddrag"></a>  CReBarCtrl::EndDrag  
- Implements the behavior of the Win32 message [RB_ENDDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774435), as described in the Windows SDK.  
+##  <a name="enddrag"></a>CReBarCtrl::EndDrag  
+ Implementa el comportamiento del mensaje de Win32 [RB_ENDDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774435), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 void EndDrag();
 ```  
   
-##  <a name="getbandborders"></a>  CReBarCtrl::GetBandBorders  
- Implements the behavior of the Win32 message [RB_GETBANDBORDERS](http://msdn.microsoft.com/library/windows/desktop/bb774437), as described in the Windows SDK.  
+##  <a name="getbandborders"></a>CReBarCtrl::GetBandBorders  
+ Implementa el comportamiento del mensaje de Win32 [RB_GETBANDBORDERS](http://msdn.microsoft.com/library/windows/desktop/bb774437), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 void GetBandBorders(
@@ -384,25 +341,25 @@ void GetBandBorders(
     LPRECT prc) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `uBand`  
- Zero-based index of the band for which the borders will be retrieved.  
+ Índice de base cero de la banda para el que se recuperarán los bordes.  
   
  `prc`  
- A pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that will receive the band borders. If the rebar control has the **RBS_BANDBORDERS** style, each member of this structure will receive the number of pixels, on the corresponding side of the band, that constitute the border. If the rebar control does not have the **RBS_BANDBORDERS** style, only the left member of this structure receives valid information. For a description of rebar control styles, see [Rebar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb774377) in the Windows SDK.  
+ Un puntero a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibirá los bordes de la banda. Si el control rebar tiene la **RBS_BANDBORDERS** estilo, cada miembro de esta estructura recibirá el número de píxeles que constituyen el borde, en el lado correspondiente de la banda. Si no tiene el control rebar la **RBS_BANDBORDERS** de estilo, sólo el miembro izquierdo de esta estructura recibe información válida. Para obtener una descripción de los estilos de control rebar, consulte [estilos de Control Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount  
- Implements the behavior of the Win32 message [RB_GETBANDCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774439), as described in the Windows SDK.  
+##  <a name="getbandcount"></a>CReBarCtrl::GetBandCount  
+ Implementa el comportamiento del mensaje de Win32 [RB_GETBANDCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774439), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 UINT GetBandCount() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The number of bands assigned to the control.  
+### <a name="return-value"></a>Valor devuelto  
+ El número de bandas asignado al control.  
   
-##  <a name="getbandinfo"></a>  CReBarCtrl::GetBandInfo  
- Implements the behavior of the Win32 message [RB_GETBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774451) as described in the Windows SDK.  
+##  <a name="getbandinfo"></a>CReBarCtrl::GetBandInfo  
+ Implementa el comportamiento del mensaje de Win32 [RB_GETBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774451) como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 BOOL GetBandInfo(
@@ -410,135 +367,135 @@ BOOL GetBandInfo(
     REBARBANDINFO* prbbi) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `uBand`  
- Zero-based index of the band for which the information will be retrieved.  
+ Índice de base cero de la banda para el que se recuperará la información.  
   
  `prbbi`  
- A pointer to a [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) structure to receive the band information. You must set the `cbSize` member of this structure to `sizeof(REBARBANDINFO)` and set the **fMask** member to the items you want to retrieve before sending this message.  
+ Un puntero a un [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) estructura para recibir la información de la banda. Debe establecer el `cbSize` miembro de esta estructura para `sizeof(REBARBANDINFO)` y establezca el **fMask** miembro a los elementos que desea recuperar antes de enviar este mensaje.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise zero.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si es correcto. En caso contrario, es cero.  
   
-##  <a name="getbandmargins"></a>  CReBarCtrl::GetBandMargins  
- Retrieves the margins of the band.  
+##  <a name="getbandmargins"></a>CReBarCtrl::GetBandMargins  
+ Recupera los márgenes de la banda.  
   
 ```  
 void GetBandMargins(PMARGINS pMargins);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *pMargins*  
- A pointer to a [MARGINS](http://msdn.microsoft.com/library/windows/desktop/bb773244)structure that will receive the information.  
+ Un puntero a un [márgenes](http://msdn.microsoft.com/library/windows/desktop/bb773244)estructura que recibirá la información.  
   
-### <a name="remarks"></a>Remarks  
- This member function emulates the functionality of the [RB_GETBANDMARGINS](http://msdn.microsoft.com/library/windows/desktop/bb774453) message, as described in the Windows SDK.  
+### <a name="remarks"></a>Comentarios  
+ Esta función miembro emula la funcionalidad de la [RB_GETBANDMARGINS](http://msdn.microsoft.com/library/windows/desktop/bb774453) de mensajes, como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="getbarheight"></a>  CReBarCtrl::GetBarHeight  
- Retrieves the height of the rebar bar.  
+##  <a name="getbarheight"></a>CReBarCtrl::GetBarHeight  
+ Recupera el alto de la barra de control rebar.  
   
 ```  
 UINT GetBarHeight() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Value that represents the height, in pixels, of the control.  
+### <a name="return-value"></a>Valor devuelto  
+ Valor que representa el alto, en píxeles, del control.  
   
-##  <a name="getbarinfo"></a>  CReBarCtrl::GetBarInfo  
- Implements the behavior of the Win32 message [RB_GETBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774457), as described in the Windows SDK.  
+##  <a name="getbarinfo"></a>CReBarCtrl::GetBarInfo  
+ Implementa el comportamiento del mensaje de Win32 [RB_GETBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774457), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 BOOL GetBarInfo(REBARINFO* prbi) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `prbi`  
- A pointer to a [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) structure that will receive the rebar control information. You must set the `cbSize` member of this structure to `sizeof(REBARINFO)` before sending this message.  
+ Un puntero a un [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) estructura que recibirá la información de control rebar. Debe establecer el `cbSize` miembro de esta estructura para `sizeof(REBARINFO)` antes de enviar este mensaje.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise zero.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si es correcto. En caso contrario, es cero.  
   
-##  <a name="getbkcolor"></a>  CReBarCtrl::GetBkColor  
- Implements the behavior of the Win32 message [RB_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774459), as described in the Windows SDK.  
+##  <a name="getbkcolor"></a>CReBarCtrl::GetBkColor  
+ Implementa el comportamiento del mensaje de Win32 [RB_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774459), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 COLORREF GetBkColor() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A **COLORREF** value that represent the current default background color.  
+### <a name="return-value"></a>Valor devuelto  
+ Un **COLORREF** valor que representa el color de fondo predeterminado actual.  
   
-##  <a name="getcolorscheme"></a>  CReBarCtrl::GetColorScheme  
- Retrieves the [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) structure for the rebar control.  
+##  <a name="getcolorscheme"></a>CReBarCtrl::GetColorScheme  
+ Recupera el [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) estructura del control rebar.  
   
 ```  
 BOOL GetColorScheme(COLORSCHEME* lpcs);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `lpcs`  
- A pointer to a [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) structure, as described in the Windows SDK.  
+ Un puntero a un [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) estructura, como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise zero.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si es correcto. En caso contrario, es cero.  
   
-### <a name="remarks"></a>Remarks  
- The **COLORSCHEME** structure includes the button highlight color and the button shadow color.  
+### <a name="remarks"></a>Comentarios  
+ El **COLORSCHEME** estructura incluye el color de resaltado de botón y el color de sombra de botón.  
   
-##  <a name="getdroptarget"></a>  CReBarCtrl::GetDropTarget  
- Implements the behavior of the Win32 message [RB_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb774463), as described in the Windows SDK.  
+##  <a name="getdroptarget"></a>CReBarCtrl::GetDropTarget  
+ Implementa el comportamiento del mensaje de Win32 [RB_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb774463), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 IDropTarget* GetDropTarget() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to an [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a un [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interfaz.  
   
-##  <a name="getextendedstyle"></a>  CReBarCtrl::GetExtendedStyle  
- Gets the extended styles of the current rebar control.  
+##  <a name="getextendedstyle"></a>CReBarCtrl::GetExtendedStyle  
+ Obtiene los estilos extendidos del control rebar actual.  
   
 ```  
 DWORD GetExtendedStyle() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A bitwise combination (OR) of flags that indicate the extended styles. The possible flags are `RBS_EX_SPLITTER` and `RBS_EX_TRANSPARENT`. For more information, see the `dwMask` parameter of the [CReBarCtrl::SetExtendedStyle](#setextendedstyle) method.  
+### <a name="return-value"></a>Valor devuelto  
+ Una combinación bit a bit (OR) de marcas que indican los estilos extendidos. Las marcas posibles son `RBS_EX_SPLITTER` y `RBS_EX_TRANSPARENT`. Para obtener más información, consulte el `dwMask` parámetro de la [CReBarCtrl::SetExtendedStyle](#setextendedstyle) método.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [RB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774433) message, which is described in the Windows SDK.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [RB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774433) mensaje, que se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="getimagelist"></a>  CReBarCtrl::GetImageList  
- Gets the `CImageList` object associated with a rebar control.  
+##  <a name="getimagelist"></a>CReBarCtrl::GetImageList  
+ Obtiene el `CImageList` objeto asociado con un control rebar.  
   
 ```  
 CImageList* GetImageList() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to a [CImageList](../../mfc/reference/cimagelist-class.md) object. Returns **NULL** if no image list is set for the control.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a un [CImageList](../../mfc/reference/cimagelist-class.md) objeto. Devuelve **NULL** si no se establece ninguna lista de imágenes para el control.  
   
-### <a name="remarks"></a>Remarks  
- This member function uses size and mask information stored in the [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) structure, as described in the Windows SDK.  
+### <a name="remarks"></a>Comentarios  
+ Esta función miembro utiliza el tamaño y la máscara de información almacenada en el [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) estructura, como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="getpalette"></a>  CReBarCtrl::GetPalette  
- Retrieves the rebar control's current palette.  
+##  <a name="getpalette"></a>CReBarCtrl::GetPalette  
+ Recupera la paleta actual del control rebar.  
   
 ```  
 CPalette* GetPalette() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to a [CPalette](../../mfc/reference/cpalette-class.md) object specifying the rebar control's current palette.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a un [CPalette](../../mfc/reference/cpalette-class.md) objeto especifica la paleta actual del control rebar.  
   
-### <a name="remarks"></a>Remarks  
- Note that this member function uses a `CPalette` object as its return value, rather than an `HPALETTE`.  
+### <a name="remarks"></a>Comentarios  
+ Tenga en cuenta que esta función miembro utiliza una `CPalette` objeto como su valor devuelto, en lugar de un `HPALETTE`.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CReBarCtrl#5](../../mfc/reference/codesnippet/cpp/crebarctrl-class_3.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_CReBarCtrl&#5;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_3.cpp)]  
   
-##  <a name="getrect"></a>  CReBarCtrl::GetRect  
- Implements the behavior of the Win32 message [RB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb774469), as described in the Windows SDK.  
+##  <a name="getrect"></a>CReBarCtrl::GetRect  
+ Implementa el comportamiento del mensaje de Win32 [RB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb774469), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 BOOL GetRect(
@@ -546,102 +503,102 @@ BOOL GetRect(
     LPRECT prc) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `uBand`  
- Zero-based index of a band in the rebar control.  
+ Índice de base cero de una banda en el control rebar.  
   
  `prc`  
- A pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that will receive the bounds of the rebar band.  
+ Un puntero a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibirá los límites de la banda rebar.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise zero.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si es correcto. En caso contrario, es cero.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CReBarCtrl#6](../../mfc/reference/codesnippet/cpp/crebarctrl-class_4.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_CReBarCtrl Nº&6;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_4.cpp)]  
   
-##  <a name="getrowcount"></a>  CReBarCtrl::GetRowCount  
- Implements the behavior of the Win32 message [RB_GETROWCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774471), as described in the Windows SDK.  
+##  <a name="getrowcount"></a>CReBarCtrl::GetRowCount  
+ Implementa el comportamiento del mensaje de Win32 [RB_GETROWCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774471), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 UINT GetRowCount() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A **UINT** value that represents the number of band rows in the control.  
+### <a name="return-value"></a>Valor devuelto  
+ Un **UINT** valor que representa el número de filas de banda en el control.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CReBarCtrl#7](../../mfc/reference/codesnippet/cpp/crebarctrl-class_5.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_CReBarCtrl&#7;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_5.cpp)]  
   
-##  <a name="getrowheight"></a>  CReBarCtrl::GetRowHeight  
- Implements the behavior of the Win32 message [RB_GETROWHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb774473), as described in the Windows SDK.  
+##  <a name="getrowheight"></a>CReBarCtrl::GetRowHeight  
+ Implementa el comportamiento del mensaje de Win32 [RB_GETROWHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb774473), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 UINT GetRowHeight(UINT uRow) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *uRow*  
- Zero-based index of the band that will have its height retrieved.  
+ Índice de base cero de la banda que tendrá su alto recuperado.  
   
-### <a name="return-value"></a>Return Value  
- A **UINT** value that represents the row height, in pixels.  
+### <a name="return-value"></a>Valor devuelto  
+ Un **UINT** valor que representa el alto de fila, en píxeles.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CReBarCtrl#8](../../mfc/reference/codesnippet/cpp/crebarctrl-class_6.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_CReBarCtrl Nº&8;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_6.cpp)]  
   
-##  <a name="gettextcolor"></a>  CReBarCtrl::GetTextColor  
- Implements the behavior of the Win32 message [RB_GETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774475), as described in the Windows SDK.  
+##  <a name="gettextcolor"></a>CReBarCtrl::GetTextColor  
+ Implementa el comportamiento del mensaje de Win32 [RB_GETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774475), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 COLORREF GetTextColor() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A **COLORREF** value that represent the current default text color.  
+### <a name="return-value"></a>Valor devuelto  
+ Un **COLORREF** valor que representa el color de texto actual.  
   
-##  <a name="gettooltips"></a>  CReBarCtrl::GetToolTips  
- Implements the behavior of the Win32 message [RB_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb774477), as described in the Windows SDK.  
+##  <a name="gettooltips"></a>CReBarCtrl::GetToolTips  
+ Implementa el comportamiento del mensaje de Win32 [RB_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb774477), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 CToolTipCtrl* GetToolTips() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to a [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) object.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a un [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objeto.  
   
-### <a name="remarks"></a>Remarks  
- Note that the MFC implementation of `GetToolTips` returns a pointer to a `CToolTipCtrl`, rather than an `HWND`.  
+### <a name="remarks"></a>Comentarios  
+ Tenga en cuenta que la implementación de MFC de `GetToolTips` devuelve un puntero a un `CToolTipCtrl`, en lugar de un `HWND`.  
   
-##  <a name="hittest"></a>  CReBarCtrl::HitTest  
- Implements the behavior of the Win32 message [RB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb774494), as described in the Windows SDK.  
+##  <a name="hittest"></a>CReBarCtrl::HitTest  
+ Implementa el comportamiento del mensaje de Win32 [RB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb774494), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 int HitTest(RBHITTESTINFO* prbht);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *prbht*  
- A pointer to a [RBHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774391) structure. Before sending the message, the **pt** member of this structure must be initialized to the point that will be tested, in client coordinates.  
+ Un puntero a un [RBHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774391) estructura. Antes de enviar el mensaje, el **pt** miembro de esta estructura se debe inicializar en el punto que se probará en coordenadas de cliente.  
   
-### <a name="return-value"></a>Return Value  
- The zero-based index of the band at the given point, or -1 if no rebar band was at the point.  
+### <a name="return-value"></a>Valor devuelto  
+ Índice de base cero de la banda en el punto especificado, o -1 si ningún banda rebar estaba en el punto.  
   
-##  <a name="idtoindex"></a>  CReBarCtrl::IDToIndex  
- Implements the behavior of the Win32 message [RB_IDTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774496), as described in the Windows SDK.  
+##  <a name="idtoindex"></a>CReBarCtrl::IDToIndex  
+ Implementa el comportamiento del mensaje de Win32 [RB_IDTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774496), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 int IDToIndex(UINT uBandID) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *uBandID*  
- The application-defined identifier of the specified band, passed in the **wID** member of the [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) structure when the band is inserted.  
+ El identificador definido por la aplicación de la banda especificada, se pasa en el **wID** miembro de la [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) estructura cuando se inserta la banda.  
   
-### <a name="return-value"></a>Return Value  
- The zero-based band index if successful, or -1 otherwise. If duplicate band indices exist, the first one is returned.  
+### <a name="return-value"></a>Valor devuelto  
+ El índice de base cero de banda si se realiza correctamente, o -1 en caso contrario. Si existen índices de banda duplicados, se devuelve la primera de ellas.  
   
-##  <a name="insertband"></a>  CReBarCtrl::InsertBand  
- Implements the behavior of the Win32 message [RB_INSERTBAND](http://msdn.microsoft.com/library/windows/desktop/bb774498), as described in the Windows SDK.  
+##  <a name="insertband"></a>CReBarCtrl:: InsertBand  
+ Implementa el comportamiento del mensaje de Win32 [RB_INSERTBAND](http://msdn.microsoft.com/library/windows/desktop/bb774498), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 BOOL InsertBand(
@@ -649,55 +606,55 @@ BOOL InsertBand(
     REBARBANDINFO* prbbi);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *uIndex*  
- Zero-based index of the location where the band will be inserted. If you set this parameter to -1, the control will add the new band at the last location.  
+ Índice de base cero de la ubicación donde se insertará la banda. Si este parámetro se establece en -1, el control agregará la nueva banda en la última ubicación.  
   
  `prbbi`  
- A pointer to a [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) structure that defines the band to be inserted. You must set the `cbSize` member of this structure to `sizeof(REBARBANDINFO)` before calling this function.  
+ Un puntero a un [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) estructura que define la banda que se va a insertar. Debe establecer el `cbSize` miembro de esta estructura para `sizeof(REBARBANDINFO)` antes de llamar a esta función.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise zero.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si es correcto. En caso contrario, es cero.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CReBarCtrl#9](../../mfc/reference/codesnippet/cpp/crebarctrl-class_7.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_CReBarCtrl&#9;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_7.cpp)]  
   
-##  <a name="maximizeband"></a>  CReBarCtrl::MaximizeBand  
- Resizes a band in a rebar control to its largest size.  
+##  <a name="maximizeband"></a>CReBarCtrl::MaximizeBand  
+ Cambia el tamaño de una banda en un control rebar a su tamaño máximo.  
   
 ```  
 void MaximizeBand(UINT uBand);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `uBand`  
- Zero-based index of the band to be maximized.  
+ Índice de base cero de la banda maximizarse.  
   
-### <a name="remarks"></a>Remarks  
- Implements the behavior of the Win32 message [RB_MAXIMIZEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774500) with `fIdeal` set to 0, as described in the Windows SDK.  
+### <a name="remarks"></a>Comentarios  
+ Implementa el comportamiento del mensaje de Win32 [RB_MAXIMIZEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774500) con `fIdeal` establecido en 0, como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CReBarCtrl#10](../../mfc/reference/codesnippet/cpp/crebarctrl-class_8.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_CReBarCtrl&#10;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_8.cpp)]  
   
-##  <a name="minimizeband"></a>  CReBarCtrl::MinimizeBand  
- Resizes a band in a rebar control to its smallest size.  
+##  <a name="minimizeband"></a>CReBarCtrl::MinimizeBand  
+ Cambia el tamaño de una banda en un control rebar a su tamaño más pequeño.  
   
 ```  
 void MinimizeBand(UINT uBand);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `uBand`  
- Zero-based index of the band to be minimized.  
+ Índice de base cero de la banda debe reducirse.  
   
-### <a name="remarks"></a>Remarks  
- Implements the behavior of the Win32 message [RB_MINIMIZEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774502), as described in the Windows SDK.  
+### <a name="remarks"></a>Comentarios  
+ Implementa el comportamiento del mensaje de Win32 [RB_MINIMIZEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774502), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CReBarCtrl#11](../../mfc/reference/codesnippet/cpp/crebarctrl-class_9.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_CReBarCtrl&#11;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_9.cpp)]  
   
-##  <a name="moveband"></a>  CReBarCtrl::MoveBand  
- Implements the behavior of the Win32 message [RB_MOVEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774504), as described in the Windows SDK.  
+##  <a name="moveband"></a>CReBarCtrl::MoveBand  
+ Implementa el comportamiento del mensaje de Win32 [RB_MOVEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774504), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 BOOL MoveBand(
@@ -705,18 +662,18 @@ BOOL MoveBand(
     UINT uTo);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *uFrom*  
- Zero-based index of the band to be moved.  
+ Índice de base cero de la banda que se va a mover.  
   
- *uTo*  
- Zero-based index of the new band position. This parameter value must never be greater than the number of bands minus one. To obtain the number of bands, call [GetBandCount](#getbandcount).  
+ *Ocul*  
+ Índice de base cero de la nueva posición de la banda. Este valor de parámetro nunca debe ser mayor que el número de bandas menos uno. Para obtener el número de bandas, llame a [GetBandCount](#getbandcount).  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise zero.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si es correcto. En caso contrario, es cero.  
   
-##  <a name="pushchevron"></a>  CReBarCtrl::PushChevron  
- Implements the behavior of the Win32 message [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506), as described in the Windows SDK.  
+##  <a name="pushchevron"></a>CReBarCtrl::PushChevron  
+ Implementa el comportamiento del mensaje de Win32 [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 void PushChevron(
@@ -724,32 +681,32 @@ void PushChevron(
     LPARAM lAppValue);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `uBand`  
- Zero-based index of the band whose chevron is to be pushed.  
+ Índice de base cero de la banda cuyo angular consiste en Insertar.  
   
  `lAppValue`  
- An application defined 32-bit value. See `lAppValue` in [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) in the Windows SDK.  
+ Una aplicación define el valor de 32 bits. Consulte `lAppValue` en [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="restoreband"></a>  CReBarCtrl::RestoreBand  
- Resizes a band in a rebar control to its ideal size.  
+##  <a name="restoreband"></a>CReBarCtrl::RestoreBand  
+ Cambia el tamaño de una banda en un control rebar a su tamaño ideal.  
   
 ```  
 void RestoreBand(UINT uBand);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `uBand`  
- Zero-based index of the band to be maximized.  
+ Índice de base cero de la banda maximizarse.  
   
-### <a name="remarks"></a>Remarks  
- Implements the behavior of the Win32 message [RB_MAXIMIZEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774500) with `fIdeal` set to 1, as described in the Windows SDK.  
+### <a name="remarks"></a>Comentarios  
+ Implementa el comportamiento del mensaje de Win32 [RB_MAXIMIZEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774500) con `fIdeal` establecido en 1, como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CReBarCtrl#12](../../mfc/reference/codesnippet/cpp/crebarctrl-class_10.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_CReBarCtrl&#12;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_10.cpp)]  
   
-##  <a name="setbandinfo"></a>  CReBarCtrl::SetBandInfo  
- Implements the behavior of the Win32 message [RB_SETBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774508), as described in the Windows SDK.  
+##  <a name="setbandinfo"></a>CReBarCtrl::SetBandInfo  
+ Implementa el comportamiento del mensaje de Win32 [RB_SETBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774508), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 BOOL SetBandInfo(
@@ -757,21 +714,21 @@ BOOL SetBandInfo(
     REBARBANDINFO* prbbi);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `uBand`  
- Zero-based index of the band to receive the new settings.  
+ Índice de base cero de la banda de la nueva configuración de recepción.  
   
  `prbbi`  
- Pointer to a [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) structure that defines the band to be inserted. You must set the `cbSize` member of this structure to `sizeof(REBARBANDINFO)` before sending this message.  
+ Puntero a un [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) estructura que define la banda que se va a insertar. Debe establecer el `cbSize` miembro de esta estructura para `sizeof(REBARBANDINFO)` antes de enviar este mensaje.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise zero.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si es correcto. En caso contrario, es cero.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CReBarCtrl#13](../../mfc/reference/codesnippet/cpp/crebarctrl-class_11.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_CReBarCtrl&#13;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_11.cpp)]  
   
-##  <a name="setbandwidth"></a>  CReBarCtrl::SetBandWidth  
- Sets the width of the specified docked band in the current rebar control.  
+##  <a name="setbandwidth"></a>CReBarCtrl::SetBandWidth  
+ Establece el ancho de la banda acoplada especificado en el control rebar actual.  
   
 ```  
 BOOL SetBandWidth(
@@ -779,79 +736,79 @@ BOOL SetBandWidth(
     int cxWidth);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   
-|Parameter|Description|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `uBand`|Zero-based index of a rebar band.|  
-|[in] `cxWidth`|New width of the rebar band, in pixels.|  
+|[in] `uBand`|Índice de base cero de una banda rebar.|  
+|[in] `cxWidth`|Nuevo ancho de la banda rebar, en píxeles.|  
   
-### <a name="return-value"></a>Return Value  
- `true` if the method is successful; otherwise, `false`.  
+### <a name="return-value"></a>Valor devuelto  
+ `true`Si el método es correcto; de lo contrario, `false`.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [RB_SETBANDWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb774511) message, which is described in the Windows SDK.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [RB_SETBANDWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb774511) mensaje, que se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="example"></a>Example  
- The following code example defines the variable, `m_rebar`, that is used to access the current rebar control. This variable is used in the next example.  
+### <a name="example"></a>Ejemplo  
+ En el ejemplo de código siguiente se define la variable `m_rebar`, que se utiliza para tener acceso al control rebar actual. Esta variable se utiliza en el siguiente ejemplo.  
   
- [!code-cpp[NVC_MFC_CReBarCtrl_s1#1](../../mfc/reference/codesnippet/cpp/crebarctrl-class_12.h)]  
+ [!code-cpp[1 NVC_MFC_CReBarCtrl_s1](../../mfc/reference/codesnippet/cpp/crebarctrl-class_12.h)]  
   
-### <a name="example"></a>Example  
- The following code example sets each rebar band to be the same width.  
+### <a name="example"></a>Ejemplo  
+ En el ejemplo de código siguiente se establece cada banda rebar tenga el mismo ancho.  
   
- [!code-cpp[NVC_MFC_CReBarCtrl_s1#2](../../mfc/reference/codesnippet/cpp/crebarctrl-class_13.cpp)]  
+ [!code-cpp[NVC_MFC_CReBarCtrl_s&#1;2](../../mfc/reference/codesnippet/cpp/crebarctrl-class_13.cpp)]  
   
-##  <a name="setbarinfo"></a>  CReBarCtrl::SetBarInfo  
- Implements the behavior of the Win32 message [RB_SETBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774513), as described in the Windows SDK.  
+##  <a name="setbarinfo"></a>CReBarCtrl::SetBarInfo  
+ Implementa el comportamiento del mensaje de Win32 [RB_SETBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774513), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 BOOL SetBarInfo(REBARINFO* prbi);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `prbi`  
- A pointer to a [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) structure that contains the information to be set. You must set the `cbSize` member of this structure to `sizeof(REBARINFO)` before sending this message  
+ Un puntero a un [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) estructura que contiene la información que puede establecer. Debe establecer el `cbSize` miembro de esta estructura para `sizeof(REBARINFO)` antes de enviar este mensaje  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise zero.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si es correcto. En caso contrario, es cero.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_CReBarCtrl#14](../../mfc/reference/codesnippet/cpp/crebarctrl-class_14.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_CReBarCtrl&#14;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_14.cpp)]  
   
-##  <a name="setbkcolor"></a>  CReBarCtrl::SetBkColor  
- Implements the behavior of the Win32 message [RB_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774515), as described in the Windows SDK.  
+##  <a name="setbkcolor"></a>CReBarCtrl::SetBkColor  
+ Implementa el comportamiento del mensaje de Win32 [RB_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774515), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 COLORREF SetBkColor(COLORREF clr);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `clr`  
- The **COLORREF** value that represents the new default background color.  
+ El **COLORREF** valor que representa el nuevo color de fondo predeterminado.  
   
-### <a name="return-value"></a>Return Value  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that represents the previous default background color.  
+### <a name="return-value"></a>Valor devuelto  
+ Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que representa el color de fondo predeterminado anterior.  
   
-### <a name="remarks"></a>Remarks  
- See this topic for more information about when to set the background color, and how to set the default.  
+### <a name="remarks"></a>Comentarios  
+ Vea este tema para obtener más información acerca de cuándo se debe establecer el color de fondo y cómo establecer el valor predeterminado.  
   
-##  <a name="setcolorscheme"></a>  CReBarCtrl::SetColorScheme  
- Sets the color scheme for the buttons on a rebar control.  
+##  <a name="setcolorscheme"></a>CReBarCtrl::SetColorScheme  
+ Establece la combinación de colores de los botones en un control rebar.  
   
 ```  
 void SetColorScheme(const COLORSCHEME* lpcs);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `lpcs`  
- A pointer to a [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) structure, as described in the Windows SDK.  
+ Un puntero a un [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) estructura, como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="remarks"></a>Remarks  
- The **COLORSCHEME** structure includes both the button highlight color and the button shadow color.  
+### <a name="remarks"></a>Comentarios  
+ El **COLORSCHEME** estructura incluye el color de resaltado de botón y el color de sombra de botón.  
   
-##  <a name="setextendedstyle"></a>  CReBarCtrl::SetExtendedStyle  
- Sets the extended styles for the current rebar control.  
+##  <a name="setextendedstyle"></a>CReBarCtrl::SetExtendedStyle  
+ Establece los estilos extendidos para el control rebar actual.  
   
 ```  
 DWORD SetExtendedStyle(
@@ -859,120 +816,120 @@ DWORD SetExtendedStyle(
     DWORD dwStyleEx);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   
-|Parameter|Description|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `dwMask`|A bitwise combination (OR) of flags that specify which flags in the `dwStyleEx` parameter apply. Use one or more of the following values:<br /><br /> RBS_EX_SPLITTER: By default, show the splitter on the bottom in horizontal mode, and to the right in vertical mode.<br /><br /> RBS_EX_TRANSPARENT: Forward the [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) message to the parent window.|  
-|[in] `dwStyleEx`|A bitwise combination (OR) of flags that specify the styles to apply. To set a style, specify the same flag that is used in the `dwMask` parameter. To reset a style, specify binary zero.|  
+|[in] `dwMask`|Una combinación bit a bit (OR) de marcas que especifican qué indicadores en el `dwStyleEx` parámetro aplicable. Utilice uno o varios de los siguientes valores:<br /><br /> RBS_EX_SPLITTER: De forma predeterminada, muestran el separador en la parte inferior en modo horizontal y a la derecha en el modo vertical.<br /><br /> RBS_EX_TRANSPARENT: Reenviar el [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) mensaje a la ventana primaria.|  
+|[in] `dwStyleEx`|Una combinación bit a bit (OR) de marcadores que especifican los estilos para aplicar. Para establecer un estilo, especifique el mismo marcador que se utiliza en el `dwMask` parámetro. Para restablecer un estilo, especifique cero binario.|  
   
-### <a name="return-value"></a>Return Value  
- The previous extended style.  
+### <a name="return-value"></a>Valor devuelto  
+ El estilo extendido anterior.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [RB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774519) message, which is described in the Windows SDK.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [RB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774519) mensaje, que se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="setimagelist"></a>  CReBarCtrl::SetImageList  
- Assigns an image list to a rebar control.  
+##  <a name="setimagelist"></a>CReBarCtrl::SetImageList  
+ Asigna una lista de imágenes a un control rebar.  
   
 ```  
 BOOL SetImageList(CImageList* pImageList);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pImageList`  
- A pointer to a [CImageList](../../mfc/reference/cimagelist-class.md) object containing the image list to be assigned to the rebar control.  
+ Un puntero a un [CImageList](../../mfc/reference/cimagelist-class.md) objeto que contiene la lista de imágenes que se asignará al control rebar.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise zero.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si es correcto. En caso contrario, es cero.  
   
-##  <a name="setowner"></a>  CReBarCtrl::SetOwner  
- Implements the behavior of the Win32 message [RB_SETPARENT](http://msdn.microsoft.com/library/windows/desktop/bb774522), as described in the Windows SDK.  
+##  <a name="setowner"></a>CReBarCtrl::SetOwner  
+ Implementa el comportamiento del mensaje de Win32 [RB_SETPARENT](http://msdn.microsoft.com/library/windows/desktop/bb774522), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 CWnd* SetOwner(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pWnd`  
- A pointer to a `CWnd` object to set as the owner of the rebar control.  
+ Un puntero a un `CWnd` objeto que se va a establecer como el propietario del control rebar.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the current owner of the rebar control.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es el propietario actual del control rebar.  
   
-### <a name="remarks"></a>Remarks  
- Note that this member function uses pointers to `CWnd` objects for both the current and selected owner of the rebar control, rather than handles to windows.  
+### <a name="remarks"></a>Comentarios  
+ Tenga en cuenta que esta función miembro utiliza punteros a `CWnd` de objetos para el propietario actual y seleccionado del control rebar, en lugar de identificadores a windows.  
   
 > [!NOTE]
->  This member function does not change the actual parent that was set when the control was created; rather it sends notification messages to the window you specify.  
+>  Esta función miembro no cambia al elemento primario real que se estableció cuando se creó el control; en su lugar envía mensajes de notificación a la ventana que especifique.  
   
-##  <a name="setpalette"></a>  CReBarCtrl::SetPalette  
- Implements the behavior of the Win32 message [RB_SETPALETTE](http://msdn.microsoft.com/library/windows/desktop/bb774520), as described in the Windows SDK.  
+##  <a name="setpalette"></a>CReBarCtrl::SetPalette  
+ Implementa el comportamiento del mensaje de Win32 [RB_SETPALETTE](http://msdn.microsoft.com/library/windows/desktop/bb774520), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 CPalette* SetPalette(HPALETTE hPal);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *hPal*  
- An `HPALETTE` that specifies the new palette that the rebar control will use.  
+ Un `HPALETTE` que especifica la nueva paleta que se va a utilizar el control rebar.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to a [CPalette](../../mfc/reference/cpalette-class.md) object specifying the rebar control's previous palette.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a un [CPalette](../../mfc/reference/cpalette-class.md) objeto especifica la paleta anterior del control rebar.  
   
-### <a name="remarks"></a>Remarks  
- Note that this member function uses a `CPalette` object as its return value, rather than an `HPALETTE`.  
+### <a name="remarks"></a>Comentarios  
+ Tenga en cuenta que esta función miembro utiliza una `CPalette` objeto como su valor devuelto, en lugar de un `HPALETTE`.  
   
-##  <a name="settextcolor"></a>  CReBarCtrl::SetTextColor  
- Implements the behavior of the Win32 message [RB_SETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774524), as described in the Windows SDK.  
+##  <a name="settextcolor"></a>CReBarCtrl::SetTextColor  
+ Implementa el comportamiento del mensaje de Win32 [RB_SETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774524), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 COLORREF SetTextColor(COLORREF clr);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `clr`  
- A **COLORREF** value that represents the new text color in the `CReBarCtrl` object.  
+ Un **COLORREF** valor que representa el nuevo texto de color la `CReBarCtrl` objeto.  
   
-### <a name="return-value"></a>Return Value  
- The [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value representing the previous text color associated with the `CReBarCtrl` object.  
+### <a name="return-value"></a>Valor devuelto  
+ El [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) que representa el color del texto anterior del valor asociado a la `CReBarCtrl` objeto.  
   
-### <a name="remarks"></a>Remarks  
- It is provided to support text color flexibility in a rebar control.  
+### <a name="remarks"></a>Comentarios  
+ Se proporciona para permitir la flexibilidad de color del texto en un control rebar.  
   
-##  <a name="settooltips"></a>  CReBarCtrl::SetToolTips  
- Associates a tool tip control with a rebar control.  
+##  <a name="settooltips"></a>CReBarCtrl::SetToolTips  
+ Asocia un control de información sobre herramientas a un control rebar.  
   
 ```  
 void SetToolTips(CToolTipCtrl* pToolTip);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *pToolTip*  
- A pointer to a [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) object  
+ Un puntero a un [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objeto  
   
-### <a name="remarks"></a>Remarks  
- You must destroy the `CToolTipCtrl` object when you are done with it.  
+### <a name="remarks"></a>Comentarios  
+ Deberá destruir la `CToolTipCtrl` objeto cuando haya terminado con él.  
   
-##  <a name="setwindowtheme"></a>  CReBarCtrl::SetWindowTheme  
- Sets the visual style of the rebar control.  
+##  <a name="setwindowtheme"></a>CReBarCtrl::SetWindowTheme  
+ Establece el estilo visual del control rebar.  
   
 ```  
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pszSubAppName`  
- A pointer to a Unicode string that contains the rebar visual style to set.  
+ Un puntero a una cadena Unicode que contiene el estilo visual de rebar para establecer.  
   
-### <a name="return-value"></a>Return Value  
- The return value is not used.  
+### <a name="return-value"></a>Valor devuelto  
+ No se utiliza el valor devuelto.  
   
-### <a name="remarks"></a>Remarks  
- This member function emulates the functionality of the [RB_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb774530) message, as described in the Windows SDK.  
+### <a name="remarks"></a>Comentarios  
+ Esta función miembro emula la funcionalidad de la [RB_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb774530) de mensajes, como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="showband"></a>  CReBarCtrl::ShowBand  
- Implements the behavior of the Win32 message [RB_SHOWBAND](http://msdn.microsoft.com/library/windows/desktop/bb774532), as described in the Windows SDK.  
+##  <a name="showband"></a>CReBarCtrl::ShowBand  
+ Implementa el comportamiento del mensaje de Win32 [RB_SHOWBAND](http://msdn.microsoft.com/library/windows/desktop/bb774532), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 BOOL ShowBand(
@@ -980,36 +937,36 @@ BOOL ShowBand(
     BOOL fShow = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `uBand`  
- Zero-based index of a band in the rebar control.  
+ Índice de base cero de una banda en el control rebar.  
   
  *fShow*  
- Indicates if the band should be shown or hidden. If this value is **TRUE**, the band will be shown. Otherwise, the band will be hidden.  
+ Indica si la banda se debe mostrar u ocultar. Si este valor es **TRUE**, se mostrará la banda. De lo contrario, se ocultará la banda.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise zero.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si es correcto. En caso contrario, es cero.  
   
-##  <a name="sizetorect"></a>  CReBarCtrl::SizeToRect  
- Implements the behavior of the Win32 message [RB_SIZETORECT](http://msdn.microsoft.com/library/windows/desktop/bb774534), as described in the Windows SDK.  
+##  <a name="sizetorect"></a>CReBarCtrl::SizeToRect  
+ Implementa el comportamiento del mensaje de Win32 [RB_SIZETORECT](http://msdn.microsoft.com/library/windows/desktop/bb774534), como se describe en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ```  
 BOOL SizeToRect(CRect& rect);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `rect`  
- A reference to a [CRect](../../atl-mfc-shared/reference/crect-class.md) object that specifies the rectangle that the rebar control should be sized to.  
+ Una referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica el rectángulo que se debe ajustar el control rebar.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise zero.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si es correcto. En caso contrario, es cero.  
   
-### <a name="remarks"></a>Remarks  
- Note that this member function uses a `CRect` object as a parameter, rather than a `RECT` structure.  
+### <a name="remarks"></a>Comentarios  
+ Tenga en cuenta que esta función miembro utiliza una `CRect` objeto como parámetro, en lugar de un `RECT` estructura.  
   
-## <a name="see-also"></a>See Also  
- [CWnd Class](../../mfc/reference/cwnd-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>Vea también  
+ [CWnd (clase)](../../mfc/reference/cwnd-class.md)   
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)
 
 
 

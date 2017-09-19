@@ -1,5 +1,5 @@
 ---
-title: CPalette Class | Microsoft Docs
+title: CPalette (clase) | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,16 +24,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CPalette [MFC], CPalette
-- CPalette [MFC], AnimatePalette
-- CPalette [MFC], CreateHalftonePalette
-- CPalette [MFC], CreatePalette
-- CPalette [MFC], FromHandle
-- CPalette [MFC], GetEntryCount
-- CPalette [MFC], GetNearestPaletteIndex
-- CPalette [MFC], GetPaletteEntries
-- CPalette [MFC], ResizePalette
-- CPalette [MFC], SetPaletteEntries
+- CPalette class
+- HPALETTE
+- color palettes, MFC
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
 caps.latest.revision: 23
 author: mikeblome
@@ -53,69 +46,69 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 2408f0701ee3fc7b4eb702ab024fc261443a5b40
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 6ccd389eaf765993c59311cc1041893f2cf9fbfa
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cpalette-class"></a>CPalette Class
-Encapsulates a Windows color palette.  
+# <a name="cpalette-class"></a>CPalette (clase)
+Encapsula una paleta de colores de Windows.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CPalette : public CGdiObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CPalette::CPalette](#cpalette)|Constructs a `CPalette` object with no attached Windows palette. You must initialize the `CPalette` object with one of the initialization member functions before it can be used.|  
+|[CPalette::CPalette](#cpalette)|Construye un `CPalette` objeto con ninguna paleta Windows conectada. Debe inicializar el `CPalette` objeto con una de las funciones de miembro de inicialización antes de poder usarlo.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CPalette::AnimatePalette](#animatepalette)|Replaces entries in the logical palette identified by the `CPalette` object. The application does not have to update its client area, because Windows maps the new entries into the system palette immediately.|  
-|[CPalette::CreateHalftonePalette](#createhalftonepalette)|Creates a halftone palette for the device context and attaches it to the `CPalette` object.|  
-|[CPalette::CreatePalette](#createpalette)|Creates a Windows color palette and attaches it to the `CPalette` object.|  
-|[CPalette::FromHandle](#fromhandle)|Returns a pointer to a `CPalette` object when given a handle to a Windows palette object.|  
-|[CPalette::GetEntryCount](#getentrycount)|Retrieves the number of palette entries in a logical palette.|  
-|[CPalette::GetNearestPaletteIndex](#getnearestpaletteindex)|Returns the index of the entry in the logical palette that most closely matches a color value.|  
-|[CPalette::GetPaletteEntries](#getpaletteentries)|Retrieves a range of palette entries in a logical palette.|  
-|[CPalette::ResizePalette](#resizepalette)|Changes the size of the logical palette specified by the `CPalette` object to the specified number of entries.|  
-|[CPalette::SetPaletteEntries](#setpaletteentries)|Sets RGB color values and flags in a range of entries in a logical palette.|  
+|[CPalette:: AnimatePalette](#animatepalette)|Reemplaza las entradas de la paleta lógica identificado por la `CPalette` objeto. La aplicación no tiene actualizar su área cliente, porque Windows asigna las entradas nuevas en la paleta del sistema inmediatamente.|  
+|[CPalette::CreateHalftonePalette](#createhalftonepalette)|Crea una paleta de semitonos para el contexto de dispositivo y lo adjunta a la `CPalette` objeto.|  
+|[CPalette::CreatePalette](#createpalette)|Crea una paleta de colores de Windows y lo adjunta a la `CPalette` objeto.|  
+|[CPalette::FromHandle](#fromhandle)|Devuelve un puntero a un `CPalette` objeto cuando se especifica un identificador a un objeto de la paleta de Windows.|  
+|[CPalette::GetEntryCount](#getentrycount)|Recupera el número de entradas de la paleta de una paleta lógica.|  
+|[CPalette::GetNearestPaletteIndex](#getnearestpaletteindex)|Devuelve el índice de la entrada de la paleta lógica que mejor coincida con un valor de color.|  
+|[CPalette::GetPaletteEntries](#getpaletteentries)|Recupera un intervalo de entradas de la paleta de una paleta lógica.|  
+|[CPalette::ResizePalette](#resizepalette)|Cambia el tamaño de la paleta lógica especificada por el `CPalette` objeto el número especificado de entradas.|  
+|[CPalette::SetPaletteEntries](#setpaletteentries)|Establece los indicadores y sus valores RGB de un intervalo de entradas de una paleta lógica.|  
   
-### <a name="public-operators"></a>Public Operators  
+### <a name="public-operators"></a>Operadores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CPalette::operator HPALETTE](#operator_hpalette)|Returns the `HPALETTE` attached to the `CPalette`.|  
+|[CPalette::operator HPALETTE](#operator_hpalette)|Devuelve el `HPALETTE` conectado a la `CPalette`.|  
   
-## <a name="remarks"></a>Remarks  
- A palette provides an interface between an application and a color output device (such as a display device). The interface allows the application to take full advantage of the color capabilities of the output device without severely interfering with the colors displayed by other applications. Windows uses the application's logical palette (a list of needed colors) and the system palette (which defines available colors) to determine the colors used.  
+## <a name="remarks"></a>Comentarios  
+ Una paleta proporciona una interfaz entre una aplicación y un dispositivo de salida de color (por ejemplo, un dispositivo de pantalla). La interfaz permite que la aplicación aprovechar al máximo las capacidades de color del dispositivo de salida sin gravemente interferir con los colores que se muestran por otras aplicaciones. Windows usa la paleta lógica de la aplicación (una lista de colores necesarias) y la paleta del sistema (que define los colores disponibles) para determinar los colores utilizados.  
   
- A `CPalette` object provides member functions for manipulating the palette referred to by the object. Construct a `CPalette` object and use its member functions to create the actual palette, a graphics device interface (GDI) object, and to manipulate its entries and other properties.  
+ Un `CPalette` objeto proporciona funciones miembro para manipular la paleta que hace referencia el objeto. Construir un `CPalette` de objetos y utilizar sus funciones miembro para crear la paleta real, un objeto de interfaz (GDI) de dispositivo de gráficos y manipular sus entradas y otras propiedades.  
   
- For more information on using `CPalette`, see [Graphic Objects](../../mfc/graphic-objects.md).  
+ Para obtener más información sobre el uso de `CPalette`, consulte [objetos gráficos](../../mfc/graphic-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CGdiObject](../../mfc/reference/cgdiobject-class.md)  
   
  `CPalette`  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxwin.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxwin.h  
   
-##  <a name="animatepalette"></a>  CPalette::AnimatePalette  
- Replaces entries in the logical palette attached to the `CPalette` object.  
+##  <a name="animatepalette"></a>CPalette:: AnimatePalette  
+ Reemplaza las entradas de la paleta lógica asociado a la `CPalette` objeto.  
   
 ```  
 void AnimatePalette(
@@ -124,110 +117,110 @@ void AnimatePalette(
     LPPALETTEENTRY lpPaletteColors);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nStartIndex`  
- Specifies the first entry in the palette to be animated.  
+ Especifica la primera entrada en la paleta a animar.  
   
  `nNumEntries`  
- Specifies the number of entries in the palette to be animated.  
+ Especifica el número de entradas en la paleta a animar.  
   
  `lpPaletteColors`  
- Points to the first member of an array of [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) structures to replace the palette entries identified by `nStartIndex` and `nNumEntries`.  
+ Apunta al primer miembro de una matriz de [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) estructuras para reemplazar las entradas de paleta identificadas por `nStartIndex` y `nNumEntries`.  
   
-### <a name="remarks"></a>Remarks  
- When an application calls `AnimatePalette`, it does not have to update its client area, because Windows maps the new entries into the system palette immediately.  
+### <a name="remarks"></a>Comentarios  
+ Cuando una aplicación llama `AnimatePalette`, no tiene que actualizar su área cliente, porque Windows asigna las entradas nuevas en la paleta del sistema inmediatamente.  
   
- The `AnimatePalette` function will only change entries with the **PC_RESERVED** flag set in the corresponding **palPaletteEntry** member of the [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) structure that is attached to the `CPalette` object. See **LOGPALETTE** in the Windows SDK for more information about this structure.  
+ El `AnimatePalette` función cambiará sólo las entradas con el **PC_RESERVED** marcador establecido en el correspondiente **palPaletteEntry** miembro de la [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) estructura que se adjunta a la `CPalette` objeto. Consulte **LOGPALETTE** en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] para obtener más información acerca de esta estructura.  
   
-##  <a name="cpalette"></a>  CPalette::CPalette  
- Constructs a `CPalette` object.  
+##  <a name="cpalette"></a>CPalette::CPalette  
+ Construye un objeto `CPalette`.  
   
 ```  
 CPalette();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The object has no attached palette until you call `CreatePalette` to attach one.  
+### <a name="remarks"></a>Comentarios  
+ El objeto no tiene ninguna paleta adjuntada hasta que llame a `CreatePalette` para conectar una.  
   
-##  <a name="createhalftonepalette"></a>  CPalette::CreateHalftonePalette  
- Creates a halftone palette for the device context.  
+##  <a name="createhalftonepalette"></a>CPalette::CreateHalftonePalette  
+ Crea una paleta de semitonos para el contexto de dispositivo.  
   
 ```  
 BOOL CreateHalftonePalette(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pDC`  
- Identifies the device context.  
+ Identifica el contexto de dispositivo.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the function is successful; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si la función se realiza correctamente; de lo contrario, es 0.  
   
-### <a name="remarks"></a>Remarks  
- An application should create a halftone palette when the stretching mode of a device context is set to **HALFTONE**. The logical halftone palette returned by the [CreateHalftonePalette](http://msdn.microsoft.com/library/windows/desktop/dd183503) member function should then be selected and realized into the device context before the [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) or [StretchDIBits](http://msdn.microsoft.com/library/windows/desktop/dd145121) function is called.  
+### <a name="remarks"></a>Comentarios  
+ Una aplicación debe crear una paleta de semitonos cuando el modo de ajuste de un contexto de dispositivo se establece en **SEMITONOS**. La paleta de semitonos lógica devuelta por la [CreateHalftonePalette](http://msdn.microsoft.com/library/windows/desktop/dd183503) función miembro, a continuación, se selecciona y realiza en el contexto de dispositivo antes de la [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) o [StretchDIBits](http://msdn.microsoft.com/library/windows/desktop/dd145121) se llama la función.  
   
- See the Windows SDK for more information about `CreateHalftonePalette` and **StretchDIBits**.  
+ Consulte la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] para obtener más información acerca de `CreateHalftonePalette` y **StretchDIBits**.  
   
-##  <a name="createpalette"></a>  CPalette::CreatePalette  
- Initializes a `CPalette` object by creating a Windows logical color palette and attaching it to the `CPalette` object.  
+##  <a name="createpalette"></a>CPalette::CreatePalette  
+ Inicializa un `CPalette` objeto creando una paleta de colores lógica de Windows y adjuntarlo a la `CPalette` objeto.  
   
 ```  
 BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `lpLogPalette`  
- Points to a [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) structure that contains information about the colors in the logical palette.  
+ Apunta a un [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) estructura que contiene información acerca de los colores de la paleta lógica.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
-### <a name="remarks"></a>Remarks  
- See the Windows SDK for more information about the **LOGPALETTE** structure.  
+### <a name="remarks"></a>Comentarios  
+ Consulte la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] para obtener más información acerca de la **LOGPALETTE** estructura.  
   
-##  <a name="fromhandle"></a>  CPalette::FromHandle  
- Returns a pointer to a `CPalette` object when given a handle to a Windows palette object.  
+##  <a name="fromhandle"></a>CPalette::FromHandle  
+ Devuelve un puntero a un `CPalette` objeto cuando se especifica un identificador a un objeto de la paleta de Windows.  
   
 ```  
 static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `hPalette`  
- A handle to a Windows GDI color palette.  
+ Identificador de una paleta de colores de Windows GDI.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to a `CPalette` object if successful; otherwise **NULL**.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a un `CPalette` objeto si se realiza correctamente; en caso contrario **NULL**.  
   
-### <a name="remarks"></a>Remarks  
- If a `CPalette` object is not already attached to the Windows palette, a temporary `CPalette` object is created and attached. This temporary `CPalette` object is valid only until the next time the application has idle time in its event loop, at which time all temporary graphic objects are deleted. In other words, the temporary object is valid only during the processing of one window message.  
+### <a name="remarks"></a>Comentarios  
+ Si un `CPalette` objeto no está asociado a la paleta de Windows, un archivo temporal `CPalette` objeto creado y conectado. Este temporal `CPalette` objeto es válido sólo hasta la próxima vez que la aplicación tenga tiempo de inactividad en el bucle de eventos, que hora gráfico temporal de todos los objetos se eliminan. En otras palabras, el objeto temporal es válido solo durante el procesamiento de mensajes de una ventana.  
   
-##  <a name="getentrycount"></a>  CPalette::GetEntryCount  
- Call this member function to retrieve the number of entries in a given logical palette.  
+##  <a name="getentrycount"></a>CPalette::GetEntryCount  
+ Llame a esta función miembro para recuperar el número de entradas de una paleta lógica determinada.  
   
 ```  
 int GetEntryCount();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Number of entries in a logical palette.  
+### <a name="return-value"></a>Valor devuelto  
+ Número de entradas de una paleta lógica.  
   
-##  <a name="getnearestpaletteindex"></a>  CPalette::GetNearestPaletteIndex  
- Returns the index of the entry in the logical palette that most closely matches the specified color value.  
+##  <a name="getnearestpaletteindex"></a>CPalette::GetNearestPaletteIndex  
+ Devuelve el índice de la entrada de la paleta lógica que mejor coincida con el valor de color especificado.  
   
 ```  
 UINT GetNearestPaletteIndex(COLORREF crColor) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `crColor`  
- Specifies the color to be matched.  
+ Especifica el color que se debe coincidir.  
   
-### <a name="return-value"></a>Return Value  
- The index of an entry in a logical palette. The entry contains the color that most nearly matches the specified color.  
+### <a name="return-value"></a>Valor devuelto  
+ El índice de una entrada en una paleta lógica. La entrada contiene el color que más se ajusta el color especificado.  
   
-##  <a name="getpaletteentries"></a>  CPalette::GetPaletteEntries  
- Retrieves a range of palette entries in a logical palette.  
+##  <a name="getpaletteentries"></a>CPalette::GetPaletteEntries  
+ Recupera un intervalo de entradas de la paleta de una paleta lógica.  
   
 ```  
 UINT GetPaletteEntries(
@@ -236,55 +229,55 @@ UINT GetPaletteEntries(
     LPPALETTEENTRY lpPaletteColors) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nStartIndex`  
- Specifies the first entry in the logical palette to be retrieved.  
+ Especifica la primera entrada de la paleta lógica va a recuperar.  
   
  `nNumEntries`  
- Specifies the number of entries in the logical palette to be retrieved.  
+ Especifica el número de entradas en la paleta lógica va a recuperar.  
   
  `lpPaletteColors`  
- Points to an array of [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) data structures to receive the palette entries. The array must contain at least as many data structures as specified by `nNumEntries`.  
+ Apunta a una matriz de [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) estructuras de datos para recibir las entradas de la paleta. La matriz debe contener al menos tantas estructuras de datos según lo especificado por `nNumEntries`.  
   
-### <a name="return-value"></a>Return Value  
- The number of entries retrieved from the logical palette; 0 if the function failed.  
+### <a name="return-value"></a>Valor devuelto  
+ Recupera el número de entradas de la paleta lógica; 0 si el error de la función.  
   
-##  <a name="operator_hpalette"></a>  CPalette::operator HPALETTE  
- Use this operator to get the attached Windows GDI handle of the `CPalette` object.  
+##  <a name="operator_hpalette"></a>CPalette::operator HPALETTE  
+ Utilice este operador para obtener el identificador de Windows GDI adjunto de la `CPalette` objeto.  
   
 ```  
 operator HPALETTE() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- If successful, a handle to the Windows GDI object represented by the `CPalette` object; otherwise **NULL**.  
+### <a name="return-value"></a>Valor devuelto  
+ Si tiene éxito, un identificador para el objeto de GDI de Windows representado por la `CPalette` objeto; en caso contrario **NULL**.  
   
-### <a name="remarks"></a>Remarks  
- This operator is a casting operator, which supports direct use of an `HPALETTE` object.  
+### <a name="remarks"></a>Comentarios  
+ Este operador es un operador de conversión, que admite el uso directo de una `HPALETTE` objeto.  
   
- For more information about using graphic objects, see the article [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the Windows SDK.  
+ Para obtener más información acerca del uso de objetos gráficos, vea el artículo [gráfico de objetos](http://msdn.microsoft.com/library/windows/desktop/dd144962) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="resizepalette"></a>  CPalette::ResizePalette  
- Changes the size of the logical palette attached to the `CPalette` object to the number of entries specified by `nNumEntries`.  
+##  <a name="resizepalette"></a>CPalette::ResizePalette  
+ Cambia el tamaño de la paleta lógico asociado a la `CPalette` objeto en el número de entradas especificado por `nNumEntries`.  
   
 ```  
 BOOL ResizePalette(UINT nNumEntries);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nNumEntries`  
- Specifies the number of entries in the palette after it has been resized.  
+ Especifica el número de entradas en la paleta después de se ha cambiado de tamaño.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the palette was successfully resized; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ Distinto de cero si la paleta cambió de tamaño correctamente; en caso contrario, 0.  
   
-### <a name="remarks"></a>Remarks  
- If an application calls `ResizePalette` to reduce the size of the palette, the entries remaining in the resized palette are unchanged. If the application calls `ResizePalette` to enlarge the palette, the additional palette entries are set to black (the red, green, and blue values are all 0), and the flags for all additional entries are set to 0.  
+### <a name="remarks"></a>Comentarios  
+ Si una aplicación llama `ResizePalette` para reducir el tamaño de la paleta, se modifican las entradas restantes en la paleta cuyo tamaño ha cambiado. Si la aplicación llama a `ResizePalette` para ampliar la paleta, se establecen las entradas de paleta adicional en negro (los valores rojos, verde y azules son 0), y los indicadores para todas las entradas adicionales se establecen en 0.  
   
- For more information on the Windows API `ResizePalette`, see [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) in the Windows SDK.  
+ Para obtener más información acerca de la API de Windows `ResizePalette`, consulte [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries  
- Sets RGB color values and flags in a range of entries in a logical palette.  
+##  <a name="setpaletteentries"></a>CPalette::SetPaletteEntries  
+ Establece los indicadores y sus valores RGB de un intervalo de entradas de una paleta lógica.  
   
 ```  
 UINT SetPaletteEntries(
@@ -293,28 +286,28 @@ UINT SetPaletteEntries(
     LPPALETTEENTRY lpPaletteColors);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nStartIndex`  
- Specifies the first entry in the logical palette to be set.  
+ Especifica la primera entrada en la paleta lógica a establecerse.  
   
  `nNumEntries`  
- Specifies the number of entries in the logical palette to be set.  
+ Especifica el número de entradas en la paleta lógica a establecerse.  
   
  `lpPaletteColors`  
- Points to an array of [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) data structures to receive the palette entries. The array must contain at least as many data structures as specified by `nNumEntries`.  
+ Apunta a una matriz de [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) estructuras de datos para recibir las entradas de la paleta. La matriz debe contener al menos tantas estructuras de datos según lo especificado por `nNumEntries`.  
   
-### <a name="return-value"></a>Return Value  
- The number of entries set in the logical palette; 0 if the function failed.  
+### <a name="return-value"></a>Valor devuelto  
+ Establece el número de entradas en la paleta lógica; 0 si el error de la función.  
   
-### <a name="remarks"></a>Remarks  
- If the logical palette is selected into a device context when the application calls `SetPaletteEntries`, the changes will not take effect until the application calls [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).  
+### <a name="remarks"></a>Comentarios  
+ Si se selecciona la paleta lógica en un contexto de dispositivo cuando la aplicación llama `SetPaletteEntries`, los cambios no surtirán efecto hasta que la aplicación llame [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).  
   
- For more information on the Windows structure **PALETTEENTRY**, see [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) in the Windows SDK.  
+ Para obtener más información sobre la estructura de Windows **PALETTEENTRY**, consulte [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-## <a name="see-also"></a>See Also  
- [MFC Sample DIBLOOK](../../visual-cpp-samples.md)   
- [CGdiObject Class](../../mfc/reference/cgdiobject-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>Vea también  
+ [Ejemplo de MFC DIBLOOK](../../visual-cpp-samples.md)   
+ [Clase CGdiObject](../../mfc/reference/cgdiobject-class.md)   
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
  [CPalette::GetPaletteEntries](#getpaletteentries)   
  [CPalette::SetPaletteEntries](#setpaletteentries)
 

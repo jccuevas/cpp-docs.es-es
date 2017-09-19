@@ -1,5 +1,5 @@
 ---
-title: '&lt;array&gt; operators | Microsoft Docs'
+title: Operadores de &lt;array&gt; | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,15 +18,15 @@ dev_langs:
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 4bd1ed8f2c2ea40d7f500e302189762bc7f24962
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c85e1930bc8bfe492368fd40fe488156cf9a3ed1
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="ltarraygt-operators"></a>&lt;array&gt; operators
-The \<array> header includes these `array` non-member comparison template functions.  
+# <a name="ltarraygt-operators"></a>Operadores de &lt;array&gt;
+El encabezado \<array> incluye estas funciones no miembro `array` de plantilla de comparación.  
   
 ||||  
 |-|-|-|  
@@ -34,7 +34,7 @@ The \<array> header includes these `array` non-member comparison template functi
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- Array comparison, not equal.  
+ Comparación de matriz, no igual.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -43,23 +43,23 @@ bool operator!=(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `Ty`  
- The type of an element.  
+ El tipo de un elemento.  
   
  `N`  
- The size of the array.  
+ Se refiere al tamaño de la matriz.  
   
  `left`  
- Left container to compare.  
+ Contenedor izquierdo que se va a comparar.  
   
  `right`  
- Right container to compare.  
+ Contenedor derecho que se va a comparar.  
   
-### <a name="remarks"></a>Remarks  
- The template function returns `!(left == right)`.  
+### <a name="remarks"></a>Comentarios  
+ La función de plantilla devuelve `!(left == right)`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__array__operator_ne.cpp   
@@ -104,7 +104,7 @@ true
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- Array comparison, less than.  
+ Comparación de matriz, menor que.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -113,23 +113,23 @@ bool operator<(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `Ty`  
- The type of an element.  
+ El tipo de un elemento.  
   
  `N`  
- The size of the array.  
+ Se refiere al tamaño de la matriz.  
   
  `left`  
- Left container to compare.  
+ Contenedor izquierdo que se va a comparar.  
   
  `right`  
- Right container to compare.  
+ Contenedor derecho que se va a comparar.  
   
-### <a name="remarks"></a>Remarks  
- The template function overloads `operator<` to compare two objects of template class [array Class](../standard-library/array-class-stl.md). The function returns `lexicographical_compare(left.begin(), left.end(), right.begin())`.  
+### <a name="remarks"></a>Comentarios  
+ La función de plantilla sobrecarga `operator<` para comparar dos objetos de clase de plantilla [clase array](../standard-library/array-class-stl.md). La función devuelve `lexicographical_compare(left.begin(), left.end(), right.begin())`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__array__operator_lt.cpp   
@@ -175,7 +175,7 @@ true
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- Array comparison, less than or equal.  
+ Comparación de matriz, menor o igual que.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -184,23 +184,23 @@ bool operator<=(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `Ty`  
- The type of an element.  
+ El tipo de un elemento.  
   
  `N`  
- The size of the array.  
+ Se refiere al tamaño de la matriz.  
   
  `left`  
- Left container to compare.  
+ Contenedor izquierdo que se va a comparar.  
   
  `right`  
- Right container to compare.  
+ Contenedor derecho que se va a comparar.  
   
-### <a name="remarks"></a>Remarks  
- The template function returns `!(right < left)`.  
+### <a name="remarks"></a>Comentarios  
+ La función de plantilla devuelve `!(right < left)`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__array__operator_le.cpp   
@@ -246,7 +246,7 @@ false
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Array comparison, equal.  
+ Comparación de matriz, igual.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -255,23 +255,23 @@ bool operator==(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `Ty`  
- The type of an element.  
+ El tipo de un elemento.  
   
  `N`  
- The size of the array.  
+ Se refiere al tamaño de la matriz.  
   
  `left`  
- Left container to compare.  
+ Contenedor izquierdo que se va a comparar.  
   
  `right`  
- Right container to compare.  
+ Contenedor derecho que se va a comparar.  
   
-### <a name="remarks"></a>Remarks  
- The template function overloads `operator==` to compare two objects of template class [array Class](../standard-library/array-class-stl.md). The function returns `equal(left.begin(), left.end(), right.begin())`.  
+### <a name="remarks"></a>Comentarios  
+ La función de plantilla sobrecarga `operator==` para comparar dos objetos de clase de plantilla [clase array](../standard-library/array-class-stl.md). La función devuelve `equal(left.begin(), left.end(), right.begin())`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__array__operator_eq.cpp   
@@ -317,7 +317,7 @@ false
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- Array comparison, greater than.  
+ Comparación de matriz, mayor que.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -326,23 +326,23 @@ bool operator>(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `Ty`  
- The type of an element.  
+ El tipo de un elemento.  
   
  `N`  
- The size of the array.  
+ Se refiere al tamaño de la matriz.  
   
  `left`  
- Left container to compare.  
+ Contenedor izquierdo que se va a comparar.  
   
  `right`  
- Right container to compare.  
+ Contenedor derecho que se va a comparar.  
   
-### <a name="remarks"></a>Remarks  
- The template function returns `(right < left)`.  
+### <a name="remarks"></a>Comentarios  
+ La función de plantilla devuelve `(right < left)`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__array__operator_gt.cpp   
@@ -388,7 +388,7 @@ true
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- Array comparison, greater than or equal.  
+ Comparación de matriz, mayor o igual que.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -397,23 +397,23 @@ bool operator>=(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `Ty`  
- The type of an element.  
+ El tipo de un elemento.  
   
  `N`  
- The size of the array.  
+ Se refiere al tamaño de la matriz.  
   
  `left`  
- Left container to compare.  
+ Contenedor izquierdo que se va a comparar.  
   
  `right`  
- Right container to compare.  
+ Contenedor derecho que se va a comparar.  
   
-### <a name="remarks"></a>Remarks  
- The template function returns `!(left < right)`.  
+### <a name="remarks"></a>Comentarios  
+ La función de plantilla devuelve `!(left < right)`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__array__operator_ge.cpp   
@@ -458,7 +458,7 @@ true
 false  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [\<array>](../standard-library/array.md)
 
 

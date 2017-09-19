@@ -1,5 +1,5 @@
 ---
-title: CPaneDialog Class | Microsoft Docs
+title: Clase CPaneDialog | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CPaneDialog [MFC], Create
-- CPaneDialog [MFC], HandleInitDialog
-- CPaneDialog [MFC], SetOccDialogInfo
+- CPaneDialog::OnLButtonDblClk method
+- CPaneDialog::OnLButtonDown method
+- CPaneDialog::CreateObject method
+- CPaneDialog::OnUpdateCmdUI method
+- CPaneDialog constructor
+- CPaneDialog::OnEraseBkgnd method
+- CPaneDialog class
+- CPaneDialog::OnWindowPosChanging method
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
 caps.latest.revision: 27
 author: mikeblome
@@ -39,50 +44,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: f31dc26c1262da98b87489f96ba6192bf901dc26
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 85c7e338382758dd809fb770c5ab14860e362da8
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cpanedialog-class"></a>CPaneDialog Class
-The `CPaneDialog` class supports a modeless, dockable dialog box.  
+# <a name="cpanedialog-class"></a>Clase CPaneDialog
+La `CPaneDialog` clase es compatible con un cuadro de diálogo no modal, acoplable.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CPaneDialog : public CDockablePane  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|`CPaneDialog::CPaneDialog`|Default constructor.|  
+|`CPaneDialog::CPaneDialog`|Constructor predeterminado.|  
 |`CPaneDialog::~CPaneDialog`|Destructor.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CPaneDialog::Create](#create)|Creates a dockable dialog box and attaches it to a `CPaneDialog` object.|  
-|`CPaneDialog::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
-|`CPaneDialog::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
-|[CPaneDialog::HandleInitDialog](#handleinitdialog)|Handles the [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) message. (Redefines `CBasePane::HandleInitDialog`.)|  
-|`CPaneDialog::OnEraseBkgnd`|Handles the [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) message. (Redefines [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
-|`CPaneDialog::OnLButtonDblClk`|Handles the [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) message. (Redefines [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
-|`CPaneDialog::OnLButtonDown`|Handles the [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) message. (Redefines [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
-|`CPaneDialog::OnUpdateCmdUI`|Called by the framework to update the dialog box window. (Overrides [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
-|`CPaneDialog::OnWindowPosChanging`|Handles the [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) message. (Redefines [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
-|[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Specifies the template for a dialog box that is an OLE control container.|  
+|[CPaneDialog::Create](#create)|Crea un cuadro de diálogo acoplable y lo adjunta a un `CPaneDialog` objeto.|  
+|`CPaneDialog::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|  
+|`CPaneDialog::GetThisClass`|Usar el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
+|[CPaneDialog::HandleInitDialog](#handleinitdialog)|Controla la [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) mensaje. (Redefine `CBasePane::HandleInitDialog`.)|  
+|`CPaneDialog::OnEraseBkgnd`|Controla la [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) mensaje. (Redefine [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
+|`CPaneDialog::OnLButtonDblClk`|Controla la [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) mensaje. (Redefine [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
+|`CPaneDialog::OnLButtonDown`|Controla la [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) mensaje. (Redefine [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
+|`CPaneDialog::OnUpdateCmdUI`|Llamado por el marco de trabajo para actualizar la ventana de cuadro de diálogo. (Invalida [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|`CPaneDialog::OnWindowPosChanging`|Controla la [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) mensaje. (Redefine [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
+|[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Especifica la plantilla de un cuadro de diálogo es un contenedor de controles OLE.|  
   
-## <a name="remarks"></a>Remarks  
- Construct a `CPaneDialog` object in two steps. First, construct the object in your code. Second, call [CPaneDialog::Create](#create). You must specify a valid resource template name or template ID and pass a pointer to the parent window. Otherwise, the creation process fails. The dialog box must specify the WS_CHILD and WS_VISIBLE style. We recommend that you also specify the WS_CLIPCHILDREN and WS_CLIPSIBLINGS styles. For more information, see [Window Styles](window-styles.md).  
+## <a name="remarks"></a>Comentarios  
+ Construir un `CPaneDialog` objeto en dos pasos. En primer lugar, se construye el objeto en el código. En segundo lugar, llame a [CPaneDialog::Create](#create). Debe especificar un identificador de nombre o la plantilla de la plantilla de recursos válidos y pasar un puntero a la ventana primaria. De lo contrario, se produce un error en el proceso de creación. El cuadro de diálogo debe especificar el estilo WS_CHILD y WS_VISIBLE. Se recomienda especificar los estilos WS_CLIPCHILDREN y WS_CLIPSIBLINGS. Para obtener más información, consulte [estilos de ventana](window-styles.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -97,11 +102,11 @@ class CPaneDialog : public CDockablePane
   
  [CPaneDialog](../../mfc/reference/cpanedialog-class.md)  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxpanedialog.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxpanedialog.h  
   
-##  <a name="create"></a>  CPaneDialog::Create  
- Creates a docking dialog box and attaches it to a `CPaneDialog` object.  
+##  <a name="create"></a>CPaneDialog::Create  
+ Crea un cuadro de diálogo de acoplamiento y lo adjunta a un `CPaneDialog` objeto.  
   
 ```  
 BOOL Create(
@@ -138,47 +143,47 @@ BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `lpszWindowName`  
- The name of the docking dialog box.  
+ El nombre del cuadro de diálogo de acoplamiento.  
   
  [in] `pParentWnd`  
- Points to the parent window.  
+ Apunta a la ventana primaria.  
   
  [in] `bHasGripper`  
- `TRUE` to create the docking dialog box with a caption (gripper); otherwise, `FALSE`.  
+ `TRUE`Para crear el cuadro de diálogo de acoplamiento con el título (agarrador); de lo contrario, `FALSE`.  
   
  [in] `lpszTemplateName`  
- The name of the resource dialog template.  
+ El nombre de la plantilla de cuadro de diálogo de recursos.  
   
  [in] `nStyle`  
- The Windows style.  
+ El estilo de Windows.  
   
  [in] `nID`  
- The control ID.  
+ El identificador del control.  
   
  [in] `nIDTemplate`  
- The resource ID of the dialog template.  
+ El identificador de recurso de la plantilla de cuadro de diálogo.  
   
  [in] `dwTabbedStyle`  
- The style of the tabbed window that results when the user drags another control pane onto the caption of this control pane. The default value is `AFX_CBRS_REGULAR_TABS`. For more information, see the Remarks section of the [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) method.  
+ El estilo de la ventana con fichas que se produce cuando el usuario arrastra otro panel de control en el título de este panel de control. El valor predeterminado es `AFX_CBRS_REGULAR_TABS`. Para obtener más información, vea la sección Comentarios de la [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) método.  
   
  [in] `dwControlBarStyle`  
- Additional style attributes. The default value is `AFX_DEFAULT_DOCKING_PANE_STYLE`. For more information, see the Remarks section of the [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) method.  
+ Atributos de estilo adicionales. El valor predeterminado es `AFX_DEFAULT_DOCKING_PANE_STYLE`. Para obtener más información, vea la sección Comentarios de la [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) método.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if this method succeeds; otherwise, `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si este método se realiza correctamente; de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-### <a name="example"></a>Example  
- The following example demonstrates how to use the `Create` method in the `CPaneDialog` class. This example is part of the [Set Pane Size sample](../../visual-cpp-samples.md).  
+### <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar el `Create` método en la `CPaneDialog` clase. Este ejemplo forma parte de la [ejemplo establece el tamaño del panel](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]  
-[!code-cpp[NVC_MFC_SetPaneSize#3](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_SetPaneSize&#2;](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]  
+[!code-cpp[NVC_MFC_SetPaneSize&3;](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
   
-##  <a name="handleinitdialog"></a>  CPaneDialog::HandleInitDialog  
- Handles the [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) message.  
+##  <a name="handleinitdialog"></a>CPaneDialog::HandleInitDialog  
+ Controla la [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) mensaje.  
   
 ```  
 afx_msg LRESULT HandleInitDialog(
@@ -186,41 +191,41 @@ afx_msg LRESULT HandleInitDialog(
     LPARAM lParam);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `wParam`  
- Handle to the control that is to receive the default keyboard focus.  
+ Identificador del control que va a recibir el foco de teclado predeterminado.  
   
  [in] `lParam`  
- Specifies additional initialization data.  
+ Especifica los datos de inicialización adicionales.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if this method is successful; otherwise, `FALSE`. In addition, `TRUE` sets the keyboard focus to the control specified by the `wParam` parameter; `FALSE` prevents setting the default keyboard focus.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si este método se realiza correctamente; de lo contrario, `FALSE`. Además, `TRUE` establece el foco de teclado en el control especificado por la `wParam` parámetro; `FALSE` impide establecer el foco de teclado predeterminado.  
   
-### <a name="remarks"></a>Remarks  
- The framework uses this method to initialize controls and the appearance of a dialog box. The framework calls this method before it displays the dialog box.  
+### <a name="remarks"></a>Comentarios  
+ El marco de trabajo usa este método para inicializar los controles y la apariencia de un cuadro de diálogo. El marco de trabajo llama a este método antes de mostrar el cuadro de diálogo.  
   
-##  <a name="setoccdialoginfo"></a>  CPaneDialog::SetOccDialogInfo  
- Specifies the template for a dialog box that is an OLE control container.  
+##  <a name="setoccdialoginfo"></a>CPaneDialog::SetOccDialogInfo  
+ Especifica la plantilla de un cuadro de diálogo es un contenedor de controles OLE.  
   
 ```  
 virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pOccDialogInfo`  
- Pointer to a dialog box template that is used to create the dialog box object. The value of this parameter is subsequently passed into the [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) method.  
+ Puntero a una plantilla de cuadro de diálogo que se utiliza para crear el objeto de cuadro de diálogo. El valor de este parámetro se pasa posteriormente a la [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) método.  
   
-### <a name="return-value"></a>Return Value  
- Always `TRUE`.  
+### <a name="return-value"></a>Valor devuelto  
+ Siempre es `TRUE`.  
   
-### <a name="remarks"></a>Remarks  
- This method supports the [COccManager](../../mfc/reference/coccmanager-class.md) class, which manages OLE control sites and ActiveX controls. The _AFX_OCC_DIALOG_INFO structure is defined in the afxocc.h header file.  
+### <a name="remarks"></a>Comentarios  
+ Este método admite la [COccManager](../../mfc/reference/coccmanager-class.md) (clase), que administra los sitios de control OLE y controles ActiveX. La estructura _AFX_OCC_DIALOG_INFO se define en el archivo de encabezado afxocc.h.  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)   
- [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles)
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [Clases](../../mfc/reference/mfc-classes.md)   
+ [Clase CDockablePane](../../mfc/reference/cdockablepane-class.md)   
+ [Estilos de ventana](../../mfc/reference/window-styles.md)
 
 
 

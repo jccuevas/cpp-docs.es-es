@@ -1,5 +1,5 @@
 ---
-title: CSmartDockingInfo Class | Microsoft Docs
+title: Clase CSmartDockingInfo | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,16 +24,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSmartDockingInfo [MFC], CopyTo
-- CSmartDockingInfo [MFC], m_bUseThemeColorInShading
-- CSmartDockingInfo [MFC], m_clrBaseBackground
-- CSmartDockingInfo [MFC], m_clrToneDest
-- CSmartDockingInfo [MFC], m_clrToneSrc
-- CSmartDockingInfo [MFC], m_clrTransparent
-- CSmartDockingInfo [MFC], m_nCentralGroupOffset
-- CSmartDockingInfo [MFC], m_sizeTotal
-- CSmartDockingInfo [MFC], m_uiMarkerBmpResID
-- CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
+- CSmartDockingInfo class
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
 caps.latest.revision: 27
 author: mikeblome
@@ -53,174 +44,174 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 004a49c00566369a14f89c9c383799a3461a9a05
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 9ae735b202299d26b98ec763f65c3f8772d9b914
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="csmartdockinginfo-class"></a>CSmartDockingInfo Class
-Defines the appearance of smart docking markers.  
+# <a name="csmartdockinginfo-class"></a>Clase CSmartDockingInfo
+Define el aspecto de los marcadores de acoplamiento inteligente.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CSmartDockingInfo : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|`CSmartDockingInfo::CSmartDockingInfo`|Default constructor.|  
+|`CSmartDockingInfo::CSmartDockingInfo`|Constructor predeterminado.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CSmartDockingInfo::CopyTo](#copyto)|Copies the current smart docking info parameters into the provided [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) object.|  
+|[CSmartDockingInfo::CopyTo](#copyto)|Copia de los parámetros de información de acoplamiento inteligente actuales en el [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) objeto.|  
   
-### <a name="data-members"></a>Data Members  
+### <a name="data-members"></a>Miembros de datos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Specifies whether to use the current theme color when the framework displays smart docking markers.|  
-|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Specifies the base background color of smart docking markers.|  
-|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|Specifies the color that replaces `m_clrToneSrc` in smart docking marker bitmaps.|  
-|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|Specifies the color of smart docking marker bitmaps.|  
-|[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|Specifies the color of smart docking marker bitmaps when they are transparent.|  
-|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|Specifies the offset of the central group of smart docking markers from the boundaries of the central group rectangle.|  
-|[CSmartDockingInfo::m_sizeTotal](#m_sizetotal)|Specifies the total size of all smart docking markers in a group.|  
-|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|Defines the resource IDs of the bitmaps that the framework uses for smart docking markers that are not highlighted.|  
-|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|Defines the resource IDs of the bitmaps that the framework uses for smart docking markers that are highlighted.|  
+|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Especifica si se utiliza el color del tema actual cuando el marco de trabajo muestra los marcadores de acoplamiento inteligente.|  
+|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Especifica el color de fondo base de los marcadores de acoplamiento inteligente.|  
+|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|Especifica el color que reemplaza `m_clrToneSrc` en mapas de bits de marcador de acoplamiento inteligente.|  
+|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|Especifica el color de mapas de bits de marcador acoplamiento inteligente.|  
+|[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|Especifica el color de mapas de bits de marcador acoplamiento inteligente cuando son transparentes.|  
+|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|Especifica el desplazamiento del grupo central de marcadores de acoplamiento inteligente de los límites del rectángulo del grupo central.|  
+|[CSmartDockingInfo::m_sizeTotal](#m_sizetotal)|Especifica el tamaño total de todos los marcadores de acoplamiento inteligente de un grupo.|  
+|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|Define los identificadores de recursos de los mapas de bits que utiliza el marco de trabajo para los marcadores de acoplamiento inteligentes que no se resaltan.|  
+|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|Define los identificadores de recursos de los mapas de bits que utiliza el marco de trabajo para los marcadores de acoplamiento inteligente que están resaltados.|  
   
-## <a name="remarks"></a>Remarks  
- The framework handles smart docking markers internally. The following illustration shows the standard smart docking markers:  
+## <a name="remarks"></a>Comentarios  
+ Los identificadores de framework inteligente marcadores de acoplamiento internamente. La ilustración siguiente muestra los marcadores estándares de acoplamiento inteligente:  
   
- ![Standard markers for smart docking](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")  
+ ![Marcadores estándares de acoplamiento inteligente](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")  
   
- In this figure, the image on the left shows a central group smart docking marker that does not have docking to a tab enabled. The image in the middle shows a right edge smart docking marker. The image on the right shows a central group smart docking marker that does have docking to a tab enabled. The central group smart docking marker has a main bitmap and five smart docking marker bitmaps.  
+ En esta figura, la imagen de la izquierda muestra un marcador de acoplamiento inteligente de grupo central que carece de acoplamiento a una ficha habilitada. La imagen en el medio muestra un marcador de acoplamiento inteligente del borde derecho. La imagen de la derecha muestra un marcador de acoplamiento inteligente de grupo central que tienen acoplamiento a una ficha habilitada. El marcador de acoplamiento inteligente de grupo central tiene un mapa de bits principal y cinco inteligente acoplamiento mapas de bits de marcador.  
   
- You can customize the following parameters of smart docking markers:  
+ Puede personalizar los parámetros siguientes de los marcadores de acoplamiento inteligente:  
   
--   Color. For example, you can replace the blue color of the markers in the figure with any user-defined color.  
+-   Color. Por ejemplo, puede reemplazar el color azul de los marcadores de la ilustración con cualquier color definido por el usuario.  
   
--   Transparency color.  
+-   Color de transparencia.  
   
--   Offset of a smart docking marker in the central group from the border of the bounding rectangle.  
+-   Desplazamiento de un marcador de acoplamiento inteligente del grupo central en el borde del rectángulo delimitador.  
   
--   The main bitmap that represents the central group.  
+-   El mapa de bits principal que representa el grupo central.  
   
--   The bitmaps that represents the regular and highlighted smart docking markers.  
+-   Los mapas de bits que representa los marcadores de acoplamiento inteligentes regulares y resaltados.  
   
- The following illustration shows an example of smart docking markers that have been customized:  
+ La siguiente ilustración muestra un ejemplo de marcadores de acoplamiento inteligente que se han personalizado:  
   
- ![Custom markers for smart docking](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")  
+ ![Marcadores personalizados de acoplamiento inteligente](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxDockingManager.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxDockingManager.h  
   
-##  <a name="copyto"></a>  CSmartDockingInfo::CopyTo  
- Copies the current smart docking parameters into the provided [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) object.  
+##  <a name="copyto"></a>CSmartDockingInfo::CopyTo  
+ Copia los parámetros actuales de acoplamiento inteligentes en proporcionado [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) objeto.  
   
 ```  
 void CopyTo(CSmartDockingInfo& params);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [out] `params`  
- An object of type `CSmartDockingInfo` that is populated with the current smart docking parameters.  
+ Un objeto del tipo `CSmartDockingInfo` que se rellena con los parámetros actuales de acoplamiento inteligentes.  
   
-##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
- Specifies whether to use the current theme color when the framework displays smart docking markers.  
+##  <a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading  
+ Especifica si se utiliza el color del tema actual cuando el marco de trabajo muestra los marcadores de acoplamiento inteligente.  
   
 ```  
 BOOL m_bUseThemeColorInShading;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- If `TRUE`, the markers are drawn using the current theme color; otherwise the markers are drawn with a light blue color.  
+### <a name="remarks"></a>Comentarios  
+ Si `TRUE`, los marcadores se dibujan con el color del tema actual; de lo contrario, los marcadores se dibujan con un color azul claro.  
   
- The default value is `FALSE`.  
+ El valor predeterminado es `FALSE`.  
   
-##  <a name="m_clrbasebackground"></a>  CSmartDockingInfo::m_clrBaseBackground  
- Specifies the base background color of smart docking markers.  
+##  <a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground  
+ Especifica el color de fondo base de los marcadores de acoplamiento inteligente.  
   
 ```  
 COLORREF m_clrBaseBackground;  
 ```  
   
-##  <a name="m_clrtonedest"></a>  CSmartDockingInfo::m_clrToneDest  
- Specifies the color that will replace `m_clrToneSrc` in smart docking marker bitmaps.  
+##  <a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest  
+ Especifica el color que va a reemplazar `m_clrToneSrc` en mapas de bits de marcador de acoplamiento inteligente.  
   
 ```  
 COLORREF m_clrToneDest;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- Set this value to change the color of marker bitmaps programmatically. For example, if you want to change the color of the standard markers provided with the framework, set this value to the desired color. By default, [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc) is set to RGB (61, 123, 241) (a bluish color).  
+### <a name="remarks"></a>Comentarios  
+ Establezca este valor para cambiar el color de mapas de bits de marcador mediante programación. Por ejemplo, si desea cambiar el color de los marcadores estándares proporcionada con el marco de trabajo, establezca este valor en el color que desee. De forma predeterminada, [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc) está establecido en RGB (61, 123, 241) (color azulado).  
   
- To change the color of custom markers, you must specify both `m_clrToneDest` and `m_clrToneSrc`.  
+ Para cambiar el color de los marcadores personalizados, debe especificar `m_clrToneDest` y `m_clrToneSrc`.  
   
-##  <a name="m_clrtonesrc"></a>  CSmartDockingInfo::m_clrToneSrc  
- Specifies the color of smart docking marker bitmaps.  
+##  <a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc  
+ Especifica el color de mapas de bits de marcador acoplamiento inteligente.  
   
 ```  
 COLORREF m_clrToneSrc;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- Set this value only when you want to replace the color of a custom bitmap with another color. You do not have to set this value if you are changing the color of a standard (framework provided) marker.  
+### <a name="remarks"></a>Comentarios  
+ Establezca este valor sólo cuando desea reemplazar el color de un mapa de bits personalizado con otro color. No es necesario establecer este valor si desea cambiar el color de un estándar (marco de trabajo proporciona) marcador.  
   
- Use `(COLORREF)-1` to leave a member of the smart docking group empty.  
+ Use `(COLORREF)-1` para dejar un miembro del grupo de acoplamiento inteligente vacía.  
   
-##  <a name="m_clrtransparent"></a>  CSmartDockingInfo::m_clrTransparent  
- Specifies the color of smart docking marker bitmaps when they are transparent.  
+##  <a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent  
+ Especifica el color de mapas de bits de marcador acoplamiento inteligente cuando son transparentes.  
   
 ```  
 COLORREF m_clrTransparent;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- You must set this value when you display custom markers and custom bitmaps in the docking group.  
+### <a name="remarks"></a>Comentarios  
+ Debe establecer este valor cuando se muestran marcadores personalizados y mapas de bits personalizados en el grupo de acoplamiento.  
   
-##  <a name="m_ncentralgroupoffset"></a>  CSmartDockingInfo::m_nCentralGroupOffset  
- Specifies the offset between the central group of smart docking markers and the boundaries of the central group rectangle.  
+##  <a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset  
+ Especifica el desplazamiento entre el grupo de marcadores de acoplamiento inteligente central y los límites del rectángulo del grupo central.  
   
 ```  
 int m_nCentralGroupOffset;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- Specify this value if you want to change the default offset between custom markers and the bounds of the central group of smart docking markers. The default offset is 5 pixels.  
+### <a name="remarks"></a>Comentarios  
+ Especifique este valor si desea cambiar el desplazamiento predeterminado entre marcadores personalizados y los límites del grupo central de marcadores de acoplamiento inteligente. El desplazamiento predeterminado es de 5 píxeles.  
   
-##  <a name="m_sizetotal"></a>  CSmartDockingInfo::m_sizeTotal  
- Specifies the total size of a bounding rectangle that encloses all smart docking markers in the central group.  
+##  <a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal  
+ Especifica el tamaño total de un rectángulo delimitador que rodea todos los marcadores de acoplamiento inteligente en el grupo central.  
   
 ```  
 CSize m_sizeTotal;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- Set `m_sizeTotal` to the size of the bounding rectangle of the central group marker. You are required to specify this value if you are using custom bitmaps for markers.  
+### <a name="remarks"></a>Comentarios  
+ Establecer `m_sizeTotal` al tamaño del rectángulo delimitador del marcador de grupo central. Debe especificar este valor si utiliza mapas de bits personalizados para los marcadores.  
   
-##  <a name="m_uimarkerbmpresid"></a>  CSmartDockingInfo::m_uiMarkerBmpResID  
- Defines the resource IDs of the bitmaps that are used for non-highlighted custom smart docking markers.  
+##  <a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID  
+ Define los identificadores de los mapas de bits que se utilizan para no resaltado personalizados marcadores de acoplamiento inteligente de recursos.  
   
 ```  
 UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];  
 ```  
   
-### <a name="remarks"></a>Remarks  
- Fill this array with the resource IDs of the bitmaps representing the smart docking markers. `AFX_SD_MARKERS_NUM` is currently defined as 5. You fill the array as follows:  
+### <a name="remarks"></a>Comentarios  
+ Rellene esta matriz con los identificadores de los mapas de bits que representa los marcadores de acoplamiento inteligente de recursos. `AFX_SD_MARKERS_NUM`se define como 5. Rellenar la matriz como sigue:  
   
  `params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;`  
   
@@ -232,15 +223,15 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;`  
   
-##  <a name="m_uimarkerlightbmpresid"></a>  CSmartDockingInfo::m_uiMarkerLightBmpResID  
- Defines the resource IDs of the bitmaps that are used for highlighted custom smart docking markers.  
+##  <a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID  
+ Define los identificadores de los mapas de bits que se utilizan para resaltado marcadores personalizados de acoplamiento inteligente de recursos.  
   
 ```  
 UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];  
 ```  
   
-### <a name="remarks"></a>Remarks  
- Fill this array with the resource IDs of the bitmaps representing the highlighted smart docking markers. `AFX_SD_MARKERS_NUM` is currently defined as 5. You fill the array as follows:  
+### <a name="remarks"></a>Comentarios  
+ Rellene esta matriz con los identificadores de los mapas de bits que representa los marcadores de acoplamiento inteligente resaltados de recursos. `AFX_SD_MARKERS_NUM`se define como 5. Rellenar la matriz como sigue:  
   
  `params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;`  
   
@@ -252,8 +243,8 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;`  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CObject Class](../../mfc/reference/cobject-class.md)
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [Clases](../../mfc/reference/mfc-classes.md)   
+ [CObject (clase)](../../mfc/reference/cobject-class.md)
 

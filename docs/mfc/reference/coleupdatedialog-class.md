@@ -1,5 +1,5 @@
 ---
-title: COleUpdateDialog Class | Microsoft Docs
+title: Clase COleUpdateDialog | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,8 +16,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COleUpdateDialog [MFC], COleUpdateDialog
-- COleUpdateDialog [MFC], DoModal
+- Update dialog
+- links [C++], updating
+- updating OLE links
+- OLE dialog boxes, Edit Link
+- OLE link updating
+- COleUpdateDialog class
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
 caps.latest.revision: 22
 author: mikeblome
@@ -37,40 +41,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: af1ebfad4c2aae99e6e1774842cb2bb78ffe7b69
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 8066a8dc9e572c14e9423af62d340e249351ac11
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="coleupdatedialog-class"></a>COleUpdateDialog Class
-Used for a special case of the OLE Edit Links dialog box, which should be used when you need to update only existing linked or embedded objects in a document.  
+# <a name="coleupdatedialog-class"></a>Clase COleUpdateDialog
+Se utiliza para un caso especial del cuadro de diálogo Editar vínculos de OLE, que se debe utilizar cuando se necesita actualizar solo los objetos existentes vinculados o incrustados en un documento.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class COleUpdateDialog : public COleLinksDialog  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|Constructs a `COleUpdateDialog` object.|  
+|[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|Construye un objeto `COleUpdateDialog`.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[COleUpdateDialog::DoModal](#domodal)|Displays the **Edit Links** dialog box in an update mode.|  
+|[COleUpdateDialog::DoModal](#domodal)|Muestra el **editar vínculos** cuadro de diálogo en el modo de actualización.|  
   
-## <a name="remarks"></a>Remarks  
- For more information regarding OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
+## <a name="remarks"></a>Comentarios  
+ Para obtener más información sobre los cuadros de diálogo OLE, vea el artículo [cuadros de diálogo en OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -87,11 +91,11 @@ class COleUpdateDialog : public COleLinksDialog
   
  `COleUpdateDialog`  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxodlgs.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxodlgs.h  
   
-##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog  
- Constructs a `COleUpdateDialog` object.  
+##  <a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog  
+ Construye un objeto `COleUpdateDialog`.  
   
 ```  
 explicit COleUpdateDialog(
@@ -101,44 +105,44 @@ explicit COleUpdateDialog(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pDoc`  
- Points to the document containing the links that may need updating.  
+ Señala el documento que contiene los vínculos que puede ser necesario actualizar.  
   
  *bUpdateLinks*  
- Flag that determines whether linked objects are to be updated.  
+ Marca que determina si los objetos vinculados deben actualizarse.  
   
  *bUpdateEmbeddings*  
- Flag that determines whether embedded objects are to be updated.  
+ Marca que determina si se puede actualizar los objetos incrustados.  
   
  `pParentWnd`  
- Points to the parent or owner window object (of type `CWnd`) to which the dialog object belongs. If it is **NULL**, the parent window of the dialog box will be set to the main application window.  
+ Señala al objeto de ventana primaria o propietaria (de tipo `CWnd`) al que pertenece el objeto de cuadro de diálogo. Si es **NULL**, la ventana primaria del cuadro de diálogo se establecerá en la ventana principal de la aplicación.  
   
-### <a name="remarks"></a>Remarks  
- This function constructs only a `COleUpdateDialog` object. To display the dialog box, call [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). This class should be used instead of `COleLinksDialog` when you want to update only existing linked or embedded items.  
+### <a name="remarks"></a>Comentarios  
+ Esta función sólo crea un `COleUpdateDialog` objeto. Para mostrar el cuadro de diálogo, llame a [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Esta clase debe utilizarse en lugar de `COleLinksDialog` cuando desee actualizar existente solo elementos vinculados o incrustados.  
   
-##  <a name="domodal"></a>  COleUpdateDialog::DoModal  
- Displays the Edit Links dialog box in update mode.  
+##  <a name="domodal"></a>COleUpdateDialog::DoModal  
+ Muestra el cuadro de diálogo Editar vínculos en modo de actualización.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Completion status for the dialog box. One of the following values:  
+### <a name="return-value"></a>Valor devuelto  
+ Estado de finalización para el cuadro de diálogo. Uno de los siguientes valores:  
   
-- **IDOK** if the dialog box returned successfully.  
+- **IDOK** si el cuadro de diálogo se devolvió correctamente.  
   
-- **IDCANCEL** if none of the linked or embedded items in the current document need updating.  
+- **IDCANCEL** si ninguno de los elementos vinculados o incrustados en el documento actual es necesario actualizar.  
   
-- **IDABORT** if an error occurred. If **IDABORT** is returned, call the [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) function in the Windows SDK.  
+- **IDABORT** si se produjo un error. Si **IDABORT** es devuelto, llame a la [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) función miembro para obtener más información sobre el tipo de error que se produjo. Para obtener una lista de posibles errores, consulte el [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) funcionan en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="remarks"></a>Remarks  
- All links and/or embeddings are updated unless the user selects the Cancel button.  
+### <a name="remarks"></a>Comentarios  
+ Todos los vínculos o incrustaciones se actualizan a menos que el usuario selecciona el botón Cancelar.  
   
-## <a name="see-also"></a>See Also  
- [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
- [COleLinksDialog Class](../../mfc/reference/colelinksdialog-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [COleLinksDialog Class](../../mfc/reference/colelinksdialog-class.md)
+## <a name="see-also"></a>Vea también  
+ [Ejemplo MFC OCLIENT](../../visual-cpp-samples.md)   
+ [Clase COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)   
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [Clase COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)
 

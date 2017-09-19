@@ -33,41 +33,41 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 85a63b12b203b237c2d948ccd4aabeeb9a8ef9e3
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 662bbde9b4fc43321bd1435d17d6b7110e7ac31c
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
-Defines the container template classes [unordered_map](../standard-library/unordered-map-class.md) and [unordered_multimap](../standard-library/unordered-multimap-class.md) and their supporting templates.  
+Define las clases de plantilla de contenedor [unordered_map](../standard-library/unordered-map-class.md) y [unordered_multimap](../standard-library/unordered-multimap-class.md), así como sus plantillas auxiliares.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #include <unordered_map>  
 ```  
   
-### <a name="classes"></a>Classes  
+### <a name="classes"></a>Clases  
   
 |||  
 |-|-|  
-|[unordered_map Class](../standard-library/unordered-map-class.md)|Stores hash table of {key, mapped} pairs.|  
-|[unordered_multimap Class](../standard-library/unordered-multimap-class.md)|Stores hash table of {key, mapped} pairs.|  
+|[unordered_map (Clase)](../standard-library/unordered-map-class.md)|Almacena la tabla de hash de pares {key, mapped}.|  
+|[unordered_multimap (Clase)](../standard-library/unordered-multimap-class.md)|Almacena la tabla de hash de pares {key, mapped}.|  
   
-### <a name="functions"></a>Functions  
+### <a name="functions"></a>Funciones  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Tests if the unordered_map object on the left side of the operator is not equal to the unordered_map object on the right side.|  
-|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Tests if the unordered_map object on the left side of the operator is equal to the unordered_map object on the right side.|  
-|[swap Function (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Swaps two maps.|  
-|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Tests if the unordered_multimap object on the left side of the operator is not equal to the unordered_multimap object on the right side.|  
-|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Tests if the unordered_multimap object on the left side of the operator is equal to the unordered_multimap object on the right side.|  
-|[swap Function (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Swaps two multimaps.|  
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Comprueba si el objeto unordered_map del lado izquierdo del operador no es igual que el objeto unordered_map del lado derecho.|  
+|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Comprueba si el objeto unordered_map del lado izquierdo del operador es igual que el objeto unordered_map del lado derecho.|  
+|[swap (Función) (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Intercambia dos mapas.|  
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Comprueba si el objeto unordered_multimap del lado izquierdo del operador no es igual que el objeto unordered_multimap del lado derecho.|  
+|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Comprueba si el objeto unordered_multimap del lado izquierdo del operador es igual que el objeto unordered_multimap del lado derecho.|  
+|[swap (Función) (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Intercambia dos mapas múltiples.|  
   
-## <a name="see-also"></a>See Also  
- [unordered_multiset Class](../standard-library/unordered-multiset-class.md)   
- [unordered_set Class](../standard-library/unordered-set-class.md)
+## <a name="see-also"></a>Vea también  
+ [unordered_multiset (Clase)](../standard-library/unordered-multiset-class.md)   
+ [unordered_set (Clase)](../standard-library/unordered-set-class.md)
 

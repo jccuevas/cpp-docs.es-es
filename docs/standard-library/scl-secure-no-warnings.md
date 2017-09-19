@@ -9,7 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- _SCL_SECURE_NO_DEPRECATE", "_SCL_SECURE_NO_WARNINGS
+- _SCL_SECURE_NO_DEPRECATE
+- _SCL_SECURE_NO_WARNINGS
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,50 +35,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 118fb8246000bfe40fbf88e9962f4bff7bacb026
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: e2f39c4f07235c75204a63e634053f887682337e
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
-Calling any one of the potentially unsafe methods in the C++ Standard Library will result in [Compiler Warning (level 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). To disable this warning, define the macro **_SCL_SECURE_NO_WARNINGS** in your code:  
+Llamar a cualquiera de los métodos potencialmente no seguros en la biblioteca estándar de C++ producirá una [Advertencia del compilador (nivel 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Para deshabilitar esta advertencia, defina la macro **_SCL_SECURE_NO_WARNINGS** en el código:  
   
 ```  
 #define _SCL_SECURE_NO_WARNINGS  
 ```  
   
-## <a name="remarks"></a>Remarks  
- Other ways to disable warning C4996 include:  
+## <a name="remarks"></a>Comentarios  
+ Otras formas de deshabilitar la advertencia C4996 incluyen:  
   
--   Using the [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md) compiler option:  
+-   Usar la opción del compilador [/D (Definiciones de preprocesador)](../build/reference/d-preprocessor-definitions.md):  
   
  ```  
     cl /D_SCL_SECURE_NO_WARNINGS [other compiler options] myfile.cpp  
 ```  
   
--   Using the [/w](../build/reference/compiler-option-warning-level.md) compiler option:  
+-   Usar la opción del compilador [/w](../build/reference/compiler-option-warning-level.md):  
   
  ```  
     cl /wd4996 [other compiler options] myfile.cpp  
 ```  
   
--   Using the [#pragma warning](../preprocessor/warning.md) directive:  
+-   Usar la directiva [#pragma warning](../preprocessor/warning.md):  
   
  ```  
  #pragma warning(disable:4996)  
 ```  
   
- Also, you can manually change the level of warning C4996 with the **/w\<l>\<n>** compiler option. For example, to set warning C4996 to level 4:  
+ Además, puede cambiar manualmente el nivel de advertencia C4996 con la opción del compilador **/w\<l>\<n>**. Por ejemplo, para establecer la advertencia C4996 en el nivel 4:  
   
 ```  
 cl /w44996 [other compiler options] myfile.cpp  
 ```  
   
- For more information, see [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Warning Level)](../build/reference/compiler-option-warning-level.md).  
+ Para más información, vea [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (nivel de advertencia)](../build/reference/compiler-option-warning-level.md).  
   
-## <a name="see-also"></a>See Also  
- [Safe Libraries: C++ Standard Library](../standard-library/safe-libraries-cpp-standard-library.md)
+## <a name="see-also"></a>Vea también  
+ [Bibliotecas seguras: Biblioteca estándar de C++](../standard-library/safe-libraries-cpp-standard-library.md)
 
 

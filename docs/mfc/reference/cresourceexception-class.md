@@ -1,5 +1,5 @@
 ---
-title: CResourceException Class | Microsoft Docs
+title: Clase CResourceException | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CResourceException [MFC], CResourceException
+- resource allocation exception
+- resources [C++], allocating
+- resource exceptions
+- exceptions, resource
+- CResourceException class
 ms.assetid: af6ae043-d124-4bfd-b35e-7bb0db67d289
 caps.latest.revision: 22
 author: mikeblome
@@ -35,36 +39,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: e177da6dbaabd6cd96f0a5e61303a6194bf7ba6d
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 2013a73f91687277df9dd1e6747aba2dd02a4346
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cresourceexception-class"></a>CResourceException Class
-Generated when Windows cannot find or allocate a requested resource.  
+# <a name="cresourceexception-class"></a>Clase CResourceException
+Se genera cuando Windows no puede encontrar o asignar un recurso solicitado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CResourceException : public CSimpleException  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CResourceException::CResourceException](#cresourceexception)|Constructs a `CResourceException` object.|  
+|[CResourceException::CResourceException](#cresourceexception)|Construye un objeto `CResourceException`.|  
   
-## <a name="remarks"></a>Remarks  
- No further qualification is necessary or possible.  
+## <a name="remarks"></a>Comentarios  
+ Calificación adicional no es necesaria ni posible.  
   
- For more information on using `CResourceException`, see the article [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).  
+ Para obtener más información sobre el uso de `CResourceException`, vea el artículo [de control de excepciones (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
@@ -73,22 +77,22 @@ class CResourceException : public CSimpleException
   
  `CResourceException`  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxwin.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxwin.h  
   
-##  <a name="cresourceexception"></a>  CResourceException::CResourceException  
- Constructs a `CResourceException` object.  
+##  <a name="cresourceexception"></a>CResourceException::CResourceException  
+ Construye un objeto `CResourceException`.  
   
 ```  
 CResourceException();
 ```  
   
-### <a name="remarks"></a>Remarks  
- Do not use this constructor directly, but rather call the global function [AfxThrowResourceException](exception-processing.md#afxthrowresourceexception). for more information about exceptions, see the article [Exception Handling in MFC](../exception-handling-in-mfc.md).  
+### <a name="remarks"></a>Comentarios  
+ No utilice este constructor directamente, pero en su lugar llame a la función global [AfxThrowResourceException](exception-processing.md#afxthrowresourceexception). Para obtener más información sobre las excepciones, vea el artículo [control de excepciones de MFC](../exception-handling-in-mfc.md).  
   
-## <a name="see-also"></a>See Also  
- [CException Class](cexception-class.md)   
- [Hierarchy Chart](../hierarchy-chart.md)
+## <a name="see-also"></a>Vea también  
+ [CException (clase)](cexception-class.md)   
+ [Gráfico de jerarquía](../hierarchy-chart.md)
 
 
 

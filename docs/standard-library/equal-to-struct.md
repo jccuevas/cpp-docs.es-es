@@ -1,14 +1,15 @@
 ---
-title: equal_to Struct | Microsoft Docs
+title: equal_to (Struct) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- cpp-standard-libraries
+- devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- equal_to
 - xfunctional/std::equal_to
 dev_langs:
 - C++
@@ -35,17 +36,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 21ed5f4db02ed8fa096a7e10271e5c3a5d9a3261
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: bac0d0114b10fc4ac7a83a60f21db5218cb3f1c8
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="equalto-struct"></a>equal_to Struct
-A binary predicate that performs the equality operation ( `operator==`) on its arguments.  
+# <a name="equalto-struct"></a>equal_to (Struct)
+Predicado binario que realiza la operación de igualdad (`operator==`) sobre sus argumentos.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class Type = void>  
@@ -64,23 +65,23 @@ struct equal_to<void>
  };  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Type`, `T`, `U`  
- Any type that supports an `operator==` that takes operands of the specified or inferred types.  
+ Cualquier tipo que admite un `operator==` que toma operandos de los tipos especificados o deducidos.  
   
  `Left`  
- The left operand of the equality operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
+ Operando izquierdo de la operación de igualdad. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.  
   
  `Right`  
- The right operand of the equality operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
+ Operando derecho de la operación de igualdad. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.  
   
-## <a name="return-value"></a>Return Value  
- The result of `Left == Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator==`.  
+## <a name="return-value"></a>Valor devuelto  
+ Resultado de `Left``==``Right`. La plantilla especializada realiza el reenvío directo del resultado, que tiene el tipo devuelto por `operator==`.  
   
-## <a name="remarks"></a>Remarks  
- The objects of type `Type` must be equality-comparable. This requires that the `operator==` defined on the set of objects satisfies the mathematical properties of an equivalence relation. All of the built-in numeric and pointer types satisfy this requirement.  
+## <a name="remarks"></a>Comentarios  
+ Los objetos de tipo `Type` deben ser comparables en igualdad. Esto requiere que el `operator==` definido en el conjunto de objetos satisfaga las propiedades matemáticas de una relación de equivalencia. Todos los tipos numéricos y de puntero integrados cumplen este requisito.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // functional_equal_to.cpp  

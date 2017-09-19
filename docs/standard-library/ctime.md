@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <ctime>", "std::<ctime>
+- std.<ctime>
+- <ctime>
+- std::<ctime>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -33,30 +35,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: d39cba1cb869813e9f56b7b0265df2f208fa1d91
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: acb2f3fd2d41b219c4dfb5d7e8c60b60a618fbf5
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="ltctimegt"></a>&lt;ctime&gt;
-Includes the Standard C library header \<time.h> and adds the associated names to the `std` namespace.  
+Incluye el encabezado \<time.h> de la biblioteca estándar de C y agrega los nombres asociados al espacio de nombres `std`.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #include <ctime>  
   
 ```  
   
-## <a name="remarks"></a>Remarks  
- Including this header ensures that the names declared using external linkage in the Standard C library header are declared in the `std` namespace.  
+## <a name="remarks"></a>Comentarios  
+ Incluir este encabezado también garantiza que los nombres declarados mediante vinculación externa en el encabezado de la biblioteca estándar de C se declaran en el espacio de nombres `std`.  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
- [C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
+ [Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)   
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: overflow_error Class | Microsoft Docs
+title: overflow_error (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- overflow_error
 - stdexcept/std::overflow_error
 dev_langs:
 - C++
@@ -33,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 61dd1daa1e7a17b53285cee185a6191fc60c2ed5
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0bcfc791c9e147ee505a8e94173437d3615bc589
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="overflowerror-class"></a>overflow_error Class
-The class serves as the base class for all exceptions thrown to report an arithmetic overflow.  
+# <a name="overflowerror-class"></a>overflow_error (Clase)
+Clase que actúa como la clase base para todas las excepciones iniciadas para notificar un desbordamiento aritmético.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class overflow_error : public runtime_error {  
@@ -55,10 +56,10 @@ public:
 };  
 ```  
   
-## <a name="remarks"></a>Remarks  
- The value returned by [what](../standard-library/exception-class.md) is a copy of **message**`.`[data](../standard-library/basic-string-class.md#data).  
+## <a name="remarks"></a>Comentarios  
+ El valor devuelto por [what](../standard-library/exception-class.md) es una copia de **message**`.`[data](../standard-library/basic-string-class.md#data).  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // overflow_error.cpp  
@@ -89,13 +90,13 @@ Type class std::overflow_error
 *\  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<stdexcept>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<stdexcept>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
- [runtime_error Class](../standard-library/runtime-error-class.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Vea también  
+ [runtime_error (Clase)](../standard-library/runtime-error-class.md)   
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

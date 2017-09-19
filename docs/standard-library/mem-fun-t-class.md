@@ -1,5 +1,5 @@
 ---
-title: mem_fun_t Class | Microsoft Docs
+title: Clase mem_fun_t | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- mem_fun_t
 - xfunctional/std::mem_fun_t
 dev_langs:
 - C++
@@ -33,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 145febc8075ba36f2ecc576bcafe4a23353b2ab2
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 88b79a99f04dc247fe52c7b65e6a9fd5f7cd4c2f
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="memfunt-class"></a>mem_fun_t Class
-An adapter class that allows a **non_const** member function that takes no arguments to be called as a unary function object when initialized with a pointer argument.  
+# <a name="memfunt-class"></a>mem_fun_t (Clase)
+Clase de adaptadores que permite llamar a una función miembro **non_const** que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de puntero.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 template <class Result, class Type>
@@ -55,31 +56,31 @@ class mem_fun_t : public unary_function<Type *, Result> {
  };
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `_Pm`  
- A pointer to the member function of class **Type** to be converted to a function object.  
+ Un puntero a la función miembro de clase **Type** que se convertirá en un objeto de función.  
   
  `_Pleft`  
- The object that the `_Pm` member function is called on.  
+ El objeto en que se llama a la función miembro `_Pm`.  
   
-## <a name="return-value"></a>Return Value  
- An adaptable unary function.  
+## <a name="return-value"></a>Valor devuelto  
+ Una función unaria adaptable.  
   
-## <a name="remarks"></a>Remarks  
- The template class stores a copy of `_Pm`, which must be a pointer to a member function of class **Type**, in a private member object. It defines its member function `operator()` as returning ( `_Pleft`->* `_Pm`)( ).  
+## <a name="remarks"></a>Comentarios  
+ La clase de plantilla almacena una copia de `_Pm`, que debe ser un puntero a una función miembro de clase **Type**, en un objeto miembro privado. Define su función miembro `operator()` para que devuelva ( `_Pleft`->* `_Pm`)( ).  
   
-## <a name="example"></a>Example  
- The constructor of `mem_fun_t` is not usually used directly; the helper function `mem_fun` is used to adapt member functions. See [mem_fun](../standard-library/functional-functions.md#mem_fun) for an example of how to use member function adaptors.  
+## <a name="example"></a>Ejemplo  
+ Normalmente, no se usa el constructor de `mem_fun_t` directamente; la función auxiliar `mem_fun` se usa para adaptar funciones miembro. Vea [mem_fun](../standard-library/functional-functions.md#mem_fun) para obtener un ejemplo de cómo usar adaptadores de funciones miembro.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<functional>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<functional>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [\<functional>](../standard-library/functional.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
 
 
 

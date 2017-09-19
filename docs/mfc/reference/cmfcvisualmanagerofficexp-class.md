@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerOfficeXP Class | Microsoft Docs
+title: Clase CMFCVisualManagerOfficeXP | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCVisualManagerOfficeXP class [MFC]
+- CMFCVisualManagerOfficeXP class
 ms.assetid: 46b6f854-37c2-4836-8f56-5cb6ff63c9af
 caps.latest.revision: 28
 author: mikeblome
@@ -33,34 +33,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 70b76629b6f4751bd86d5a2b00b535cbd42d84f6
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
+ms.openlocfilehash: a32c76011a176997283d41e06aeef9530c619613
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfcvisualmanagerofficexp-class"></a>CMFCVisualManagerOfficeXP Class
-The `CMFCVisualManagerOfficeXP` gives an application a Microsoft Office XP appearance.  
+# <a name="cmfcvisualmanagerofficexp-class"></a>Clase CMFCVisualManagerOfficeXP
+El `CMFCVisualManagerOfficeXP` proporciona a una aplicación un aspecto de Microsoft Office XP.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CMFCVisualManagerOfficeXP : public CMFCVisualManager  
 ```  
   
-## <a name="members"></a>Members  
- All of the members of this class are virtual functions that are derived from the ancestor of this class, [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md).  
+## <a name="members"></a>Miembros  
+ Todos los miembros de esta clase son funciones virtuales que se derivan de los antecesores de esta clase, [CMFCVisualManager clase](../../mfc/reference/cmfcvisualmanager-class.md).  
   
-## <a name="remarks"></a>Remarks  
- You use the `CMFCVisualManagerOfficeXP` class to change the visual appearance of your application to resemble that of Microsoft Office XP.  
+## <a name="remarks"></a>Comentarios  
+ Utiliza la `CMFCVisualManagerOfficeXP` clase para cambiar la apariencia visual de la aplicación para que se parecen a las de Microsoft Office XP.  
   
-## <a name="example"></a>Example  
- The following example demonstrates how to use `CMFCVisualManagerOfficeXP`. This code snippet is part of the [Desktop Alert Demo sample](../../visual-cpp-samples.md).  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo usar `CMFCVisualManagerOfficeXP`. Este fragmento de código forma parte de la [ejemplo de demostración de alerta de escritorio](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_DesktopAlertDemo#8](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerofficexp-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_DesktopAlertDemo Nº&8;](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerofficexp-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)  
@@ -69,11 +69,11 @@ class CMFCVisualManagerOfficeXP : public CMFCVisualManager
   
  [CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxvisualmanagerofficexp.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxvisualmanagerofficexp.h  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md)
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [Clases](../../mfc/reference/mfc-classes.md)   
+ [Clase CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
 

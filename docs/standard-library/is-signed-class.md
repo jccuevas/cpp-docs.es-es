@@ -1,5 +1,5 @@
 ---
-title: is_signed Class | Microsoft Docs
+title: Clase is_signed | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_signed
 - type_traits/std::is_signed
 dev_langs:
 - C++
@@ -34,31 +35,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 7d9f1c2d9c30215ea8c3184bef1d50e985285bea
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: e42e2f5ee1ffe76ffddb89b841c87a9e30e27bc3
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="issigned-class"></a>is_signed Class
-Test if type is signed integer.  
+# <a name="issigned-class"></a>is_signed (Clase)
+Compruebe si el tipo es un entero con signo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class Ty>  
 struct is_signed;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Ty`  
- The type to query.  
+ Tipo que se va a consultar.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if the type `Ty` is a signed integral type or a `cv-qualified` signed integral type, otherwise it holds false.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia del predicado de tipo contiene true si el tipo `Ty` es un tipo entero con signo o un tipo entero con signo `cv-qualified`; en caso contrario, contiene false.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__type_traits__is_signed.cpp   
@@ -94,12 +95,12 @@ is_signed<unsigned int> == false
 is_signed<float> == false  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_unsigned Class](../standard-library/is-unsigned-class.md)
+ [Clase is_unsigned](../standard-library/is-unsigned-class.md)
 

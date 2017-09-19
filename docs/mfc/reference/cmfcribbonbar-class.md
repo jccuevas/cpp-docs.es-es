@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonBar Class | Microsoft Docs
+title: Clase CMFCRibbonBar | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -105,97 +105,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonBar [MFC], ActivateContextCategory
-- CMFCRibbonBar [MFC], AddCategory
-- CMFCRibbonBar [MFC], AddContextCategory
-- CMFCRibbonBar [MFC], AddMainCategory
-- CMFCRibbonBar [MFC], AddPrintPreviewCategory
-- CMFCRibbonBar [MFC], AddQATOnlyCategory
-- CMFCRibbonBar [MFC], AddToTabs
-- CMFCRibbonBar [MFC], CreateEx
-- CMFCRibbonBar [MFC], Create
-- CMFCRibbonBar [MFC], DeactivateKeyboardFocus
-- CMFCRibbonBar [MFC], DrawMenuImage
-- CMFCRibbonBar [MFC], DWMCompositionChanged
-- CMFCRibbonBar [MFC], EnableKeyTips
-- CMFCRibbonBar [MFC], EnablePrintPreview
-- CMFCRibbonBar [MFC], EnableToolTips
-- CMFCRibbonBar [MFC], FindByData
-- CMFCRibbonBar [MFC], FindByID
-- CMFCRibbonBar [MFC], FindCategoryIndexByData
-- CMFCRibbonBar [MFC], ForceRecalcLayout
-- CMFCRibbonBar [MFC], GetActiveCategory
-- CMFCRibbonBar [MFC], GetCaptionHeight
-- CMFCRibbonBar [MFC], GetCategory
-- CMFCRibbonBar [MFC], GetCategoryCount
-- CMFCRibbonBar [MFC], GetCategoryHeight
-- CMFCRibbonBar [MFC], GetCategoryIndex
-- CMFCRibbonBar [MFC], GetContextName
-- CMFCRibbonBar [MFC], GetDroppedDown
-- CMFCRibbonBar [MFC], GetElementsByID
-- CMFCRibbonBar [MFC], GetApplicationButton
-- CMFCRibbonBar [MFC], GetFocused
-- CMFCRibbonBar [MFC], GetHideFlags
-- CMFCRibbonBar [MFC], GetItemIDsList
-- CMFCRibbonBar [MFC], GetKeyboardNavigationLevel
-- CMFCRibbonBar [MFC], GetKeyboardNavLevelCurrent
-- CMFCRibbonBar [MFC], GetKeyboardNavLevelParent
-- CMFCRibbonBar [MFC], GetMainCategory
-- CMFCRibbonBar [MFC], GetQATCommandsLocation
-- CMFCRibbonBar [MFC], GetQATDroppedDown
-- CMFCRibbonBar [MFC], GetQuickAccessCommands
-- CMFCRibbonBar [MFC], GetQuickAccessToolbarLocation
-- CMFCRibbonBar [MFC], GetTabTrancateRatio
-- CMFCRibbonBar [MFC], GetTooltipFixedWidthLargeImage
-- CMFCRibbonBar [MFC], GetTooltipFixedWidthRegular
-- CMFCRibbonBar [MFC], GetVisibleCategoryCount
-- CMFCRibbonBar [MFC], HideAllContextCategories
-- CMFCRibbonBar [MFC], HideKeyTips
-- CMFCRibbonBar [MFC], HitTest
-- CMFCRibbonBar [MFC], IsKeyTipEnabled
-- CMFCRibbonBar [MFC], IsMainRibbonBar
-- CMFCRibbonBar [MFC], IsPrintPreviewEnabled
-- CMFCRibbonBar [MFC], IsQATEmpty
-- CMFCRibbonBar [MFC], IsQuickAccessToolbarOnTop
-- CMFCRibbonBar [MFC], IsReplaceFrameCaption
-- CMFCRibbonBar [MFC], IsShowGroupBorder
-- CMFCRibbonBar [MFC], IsToolTipDescrEnabled
-- CMFCRibbonBar [MFC], IsToolTipEnabled
-- CMFCRibbonBar [MFC], IsTransparentCaption
-- CMFCRibbonBar [MFC], IsWindows7Look
-- CMFCRibbonBar [MFC], LoadFromResource
-- CMFCRibbonBar [MFC], OnClickButton
-- CMFCRibbonBar [MFC], OnEditContextMenu
-- CMFCRibbonBar [MFC], OnRTLChanged
-- CMFCRibbonBar [MFC], OnSetAccData
-- CMFCRibbonBar [MFC], OnShowRibbonContextMenu
-- CMFCRibbonBar [MFC], OnShowRibbonQATMenu
-- CMFCRibbonBar [MFC], OnSysKeyDown
-- CMFCRibbonBar [MFC], OnSysKeyUp
-- CMFCRibbonBar [MFC], PopTooltip
-- CMFCRibbonBar [MFC], PreTranslateMessage
-- CMFCRibbonBar [MFC], RecalcLayout
-- CMFCRibbonBar [MFC], RemoveAllCategories
-- CMFCRibbonBar [MFC], RemoveAllFromTabs
-- CMFCRibbonBar [MFC], RemoveCategory
-- CMFCRibbonBar [MFC], SaveToXMLBuffer
-- CMFCRibbonBar [MFC], SaveToXMLFile
-- CMFCRibbonBar [MFC], SetActiveCategory
-- CMFCRibbonBar [MFC], SetActiveMDIChild
-- CMFCRibbonBar [MFC], SetElementKeys
-- CMFCRibbonBar [MFC], SetApplicationButton
-- CMFCRibbonBar [MFC], SetKeyboardNavigationLevel
-- CMFCRibbonBar [MFC], SetMaximizeMode
-- CMFCRibbonBar [MFC], SetQuickAccessCommands
-- CMFCRibbonBar [MFC], SetQuickAccessDefaultState
-- CMFCRibbonBar [MFC], SetQuickAccessToolbarOnTop
-- CMFCRibbonBar [MFC], SetTooltipFixedWidth
-- CMFCRibbonBar [MFC], SetWindows7Look
-- CMFCRibbonBar [MFC], ShowCategory
-- CMFCRibbonBar [MFC], ShowContextCategories
-- CMFCRibbonBar [MFC], ShowKeyTips
-- CMFCRibbonBar [MFC], ToggleMimimizeState
-- CMFCRibbonBar [MFC], TranslateChar
+- CMFCRibbonBar class
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
 caps.latest.revision: 41
 author: mikeblome
@@ -215,138 +125,138 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 6bb7b22f771b8e7a58c6e1b29da765c95b5db10d
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 48a7fbeb72257776d132785c985221b0e8148d72
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfcribbonbar-class"></a>CMFCRibbonBar Class
-The `CMFCRibbonBar` class implements a ribbon bar similar to that used in Office 2007.  
+# <a name="cmfcribbonbar-class"></a>Clase CMFCRibbonBar
+La clase `CMFCRibbonBar` implementa una barra de cinta similar a la que se usaba en Office 2007.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
    
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CMFCRibbonBar : public CPane  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|`CMFCRibbonBar::CMFCRibbonBar`|Default constructor.|  
+|`CMFCRibbonBar::CMFCRibbonBar`|Constructor predeterminado.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCRibbonBar::ActivateContextCategory](#activatecontextcategory)|Activates a context category that is already visible.|  
-|[CMFCRibbonBar::AddCategory](#addcategory)|Adds a new ribbon category to the ribbon.|  
-|[CMFCRibbonBar::AddContextCategory](#addcontextcategory)|Adds a context category.|  
-|[CMFCRibbonBar::AddMainCategory](#addmaincategory)|Adds a new main ribbon category.|  
+|[CMFCRibbonBar::ActivateContextCategory](#activatecontextcategory)|Activa una categoría de contexto que ya está visible.|  
+|[CMFCRibbonBar::AddCategory](#addcategory)|Agrega una nueva categoría de cinta de opciones a la cinta.|  
+|[CMFCRibbonBar::AddContextCategory](#addcontextcategory)|Agrega una categoría de contexto.|  
+|[CMFCRibbonBar::AddMainCategory](#addmaincategory)|Agrega una nueva categoría principal de cinta de opciones.|  
 |[CMFCRibbonBar::AddPrintPreviewCategory](#addprintpreviewcategory)||  
 |[CMFCRibbonBar::AddQATOnlyCategory](#addqatonlycategory)||  
-|[CMFCRibbonBar::AddToTabs](#addtotabs)|Add a ribbon element to the right side of a ribbon bar.|  
-|[CMFCRibbonBar::CreateEx](#createex)|Creates a control bar and attaches it to the [CPane](../../mfc/reference/cpane-class.md) object. (Overrides [CPane::CreateEx](../../mfc/reference/cpane-class.md#createex).)|  
-|[CMFCRibbonBar::Create](#create)|Creates a ribbon bar control and attaches it to a ribbon bar.|  
+|[CMFCRibbonBar::AddToTabs](#addtotabs)|Agrega un elemento de la cinta de opciones a la derecha de una barra de cinta.|  
+|[CMFCRibbonBar::CreateEx](#createex)|Crea una barra de control y lo adjunta a la [CPane](../../mfc/reference/cpane-class.md) objeto. (Invalida [CPane::CreateEx](../../mfc/reference/cpane-class.md#createex).)|  
+|[CMFCRibbonBar::Create](#create)|Crea un control de barra de cinta y lo adjunta a una barra de cinta.|  
 |[CMFCRibbonBar::DeactivateKeyboardFocus](#deactivatekeyboardfocus)||  
 |[CMFCRibbonBar::DrawMenuImage](#drawmenuimage)||  
 |[CMFCRibbonBar::DWMCompositionChanged](#dwmcompositionchanged)||  
-|[CMFCRibbonBar::EnableKeyTips](#enablekeytips)|Enable or disable key tips for the ribbon control.|  
-|[CMFCRibbonBar::EnablePrintPreview](#enableprintpreview)|Enable the **Print Preview** tab.|  
-|[CMFCRibbonBar::EnableToolTips](#enabletooltips)|Enables or disables tooltips and tooltip descriptions on the ribbon bar.|  
-|[CMFCRibbonBar::FindByData](#findbydata)|Find a ribbon element by using data that a user specifies.|  
-|[CMFCRibbonBar::FindByID](#findbyid)|Finds a ribbon element that has the specified command id.|  
-|[CMFCRibbonBar::FindCategoryIndexByData](#findcategoryindexbydata)|Finds the index of the ribbon category that contains the user-defined data.|  
+|[CMFCRibbonBar::EnableKeyTips](#enablekeytips)|Habilita o deshabilita las sugerencias de teclas para el control de la cinta de opciones.|  
+|[CMFCRibbonBar::EnablePrintPreview](#enableprintpreview)|Habilitar la **preliminar** ficha.|  
+|[CMFCRibbonBar::EnableToolTips](#enabletooltips)|Habilita o deshabilita las descripciones de información sobre herramientas y la información sobre herramientas en la barra de cinta.|  
+|[CMFCRibbonBar::FindByData](#findbydata)|Busca un elemento de la cinta de opciones usando los datos que un usuario especifica.|  
+|[CMFCRibbonBar::FindByID](#findbyid)|Busca un elemento de la cinta de opciones que tiene el identificador de comando especificado.|  
+|[CMFCRibbonBar::FindCategoryIndexByData](#findcategoryindexbydata)|Busca el índice de la categoría de la cinta que contiene los datos definidos por el usuario.|  
 |[CMFCRibbonBar::ForceRecalcLayout](#forcerecalclayout)||  
-|[CMFCRibbonBar::GetActiveCategory](#getactivecategory)|Gets a pointer to an active category.|  
-|[CMFCRibbonBar::GetCaptionHeight](#getcaptionheight)|Returns the caption height. (Overrides [CBasePane::GetCaptionHeight](../../mfc/reference/cbasepane-class.md#getcaptionheight).)|  
-|[CMFCRibbonBar::GetCategory](#getcategory)|Gets the pointer to a category located at a specified index.|  
-|[CMFCRibbonBar::GetCategoryCount](#getcategorycount)|Gets the number of the ribbon categories in the ribbon bar.|  
+|[CMFCRibbonBar::GetActiveCategory](#getactivecategory)|Obtiene un puntero a una categoría activa.|  
+|[CMFCRibbonBar::GetCaptionHeight](#getcaptionheight)|Devuelve la altura del título. (Invalida [CBasePane::GetCaptionHeight](../../mfc/reference/cbasepane-class.md#getcaptionheight).)|  
+|[CMFCRibbonBar::GetCategory](#getcategory)|Obtiene el puntero a una categoría ubicada en un índice especificado.|  
+|[CMFCRibbonBar::GetCategoryCount](#getcategorycount)|Obtiene el número de categorías de la cinta de la barra de cinta.|  
 |[CMFCRibbonBar::GetCategoryHeight](#getcategoryheight)||  
-|[CMFCRibbonBar::GetCategoryIndex](#getcategoryindex)|Returns the index of a ribbon category.|  
-|[CMFCRibbonBar::GetContextName](#getcontextname)|Retrieves the name of the context category caption that you specify by using an ID.|  
+|[CMFCRibbonBar::GetCategoryIndex](#getcategoryindex)|Devuelve el índice de una categoría de la cinta.|  
+|[CMFCRibbonBar::GetContextName](#getcontextname)|Recupera el título de la categoría de contexto especificada con un identificador.|  
 |[CMFCRibbonBar::GetDroppedDown](#getdroppeddown)||  
-|[CMFCRibbonBar::GetElementsByID](#getelementsbyid)|Gets an array that contains the pointers to all the ribbon elements that have the specified ID.|  
-|[CMFCRibbonBar::GetApplicationButton](#getapplicationbutton)|Gets a pointer to a ribbon button.|  
-|[CMFCRibbonBar::GetFocused](#getfocused)|Returns a focused element.|  
+|[CMFCRibbonBar::GetElementsByID](#getelementsbyid)|Obtiene una matriz que contiene los punteros a todos los elementos de la cinta de opciones que tienen el identificador especificado.|  
+|[CMFCRibbonBar::GetApplicationButton](#getapplicationbutton)|Obtiene un puntero a un botón de la cinta de opciones.|  
+|[CMFCRibbonBar::GetFocused](#getfocused)|Devuelve un elemento que tiene el foco.|  
 |[CMFCRibbonBar::GetHideFlags](#gethideflags)||  
 |[CMFCRibbonBar::GetItemIDsList](#getitemidslist)||  
 |[CMFCRibbonBar::GetKeyboardNavigationLevel](#getkeyboardnavigationlevel)||  
 |[CMFCRibbonBar::GetKeyboardNavLevelCurrent](#getkeyboardnavlevelcurrent)||  
 |[CMFCRibbonBar::GetKeyboardNavLevelParent](#getkeyboardnavlevelparent)||  
-|[CMFCRibbonBar::GetMainCategory](#getmaincategory)|Returns a pointer to the ribbon category that is currently selected.|  
+|[CMFCRibbonBar::GetMainCategory](#getmaincategory)|Devuelve un puntero a la categoría de cinta de opciones seleccionada actualmente.|  
 |[CMFCRibbonBar::GetQATCommandsLocation](#getqatcommandslocation)||  
 |[CMFCRibbonBar::GetQATDroppedDown](#getqatdroppeddown)||  
-|[CMFCRibbonBar::GetQuickAccessCommands](#getquickaccesscommands)|Fills a list that contains the command IDs of all the elements that appear on the Quick Access Toolbar.|  
+|[CMFCRibbonBar::GetQuickAccessCommands](#getquickaccesscommands)|Rellena una lista que contiene los identificadores de comando de todos los elementos que aparecen en la barra de herramientas de acceso rápido.|  
 |[CMFCRibbonBar::GetQuickAccessToolbarLocation](#getquickaccesstoolbarlocation)||  
 |[CMFCRibbonBar::GetTabTrancateRatio](#gettabtrancateratio)||  
 |[CMFCRibbonBar::GetTooltipFixedWidthLargeImage](#gettooltipfixedwidthlargeimage)||  
 |[CMFCRibbonBar::GetTooltipFixedWidthRegular](#gettooltipfixedwidthregular)||  
 |[CMFCRibbonBar::GetVisibleCategoryCount](#getvisiblecategorycount)||  
-|[CMFCRibbonBar::HideAllContextCategories](#hideallcontextcategories)|Hides all the categories that are active and visible.|  
+|[CMFCRibbonBar::HideAllContextCategories](#hideallcontextcategories)|Oculta todas las categorías que están activas y visibles.|  
 |[CMFCRibbonBar::HideKeyTips](#hidekeytips)||  
-|[CMFCRibbonBar::HitTest](#hittest)|Finds a pointer to the ribbon element that is located at the specified point in the ribbon bar's client coordinates.|  
-|[CMFCRibbonBar::IsKeyTipEnabled](#iskeytipenabled)|Determines whether keytips are enabled.|  
+|[CMFCRibbonBar::HitTest](#hittest)|Busca un puntero al elemento de la cinta de opciones que se encuentra en el punto especificado en las coordenadas de cliente de la barra de cinta.|  
+|[CMFCRibbonBar::IsKeyTipEnabled](#iskeytipenabled)|Determina si se habilitan sugerencias de teclas.|  
 |[CMFCRibbonBar::IsMainRibbonBar](#ismainribbonbar)||  
-|[CMFCRibbonBar::IsPrintPreviewEnabled](#isprintpreviewenabled)|Determines whether the **Print Preview** tab is enabled.|  
+|[CMFCRibbonBar::IsPrintPreviewEnabled](#isprintpreviewenabled)|Determina si el **preliminar** pestaña está habilitada.|  
 |[CMFCRibbonBar::IsQATEmpty](#isqatempty)||  
-|[CMFCRibbonBar::IsQuickAccessToolbarOnTop](#isquickaccesstoolbarontop)|Specifies whether the Quick Access Toolbar is located above the ribbon bar.|  
-|[CMFCRibbonBar::IsReplaceFrameCaption](#isreplaceframecaption)|Determines whether the ribbon bar replaces the main frame caption, or is added below the frame caption.|  
+|[CMFCRibbonBar::IsQuickAccessToolbarOnTop](#isquickaccesstoolbarontop)|Especifica si la barra de herramientas de acceso rápido se encuentra encima de la barra de cinta.|  
+|[CMFCRibbonBar::IsReplaceFrameCaption](#isreplaceframecaption)|Determina si la barra de cinta reemplaza al título del marco principal o si se agrega debajo de la leyenda del marco.|  
 |[CMFCRibbonBar::IsShowGroupBorder](#isshowgroupborder)||  
-|[CMFCRibbonBar::IsToolTipDescrEnabled](#istooltipdescrenabled)|Determines whether the tooltip descriptions are enabled.|  
-|[CMFCRibbonBar::IsToolTipEnabled](#istooltipenabled)|Determines whether the tooltips for the ribbon bar are enabled.|  
+|[CMFCRibbonBar::IsToolTipDescrEnabled](#istooltipdescrenabled)|Determina si las descripciones de la información sobre herramientas están habilitadas.|  
+|[CMFCRibbonBar::IsToolTipEnabled](#istooltipenabled)|Determina si la información sobre herramientas de la barra de cinta está habilitada.|  
 |[CMFCRibbonBar::IsTransparentCaption](#istransparentcaption)||  
-|[CMFCRibbonBar::IsWindows7Look](#iswindows7look)|Indicates whether the ribbon has Windows 7-style look (small rectangular application button).|  
-|[CMFCRibbonBar::LoadFromResource](#loadfromresource)|Overloaded. Loads a Ribbon Bar from application resources.|  
+|[CMFCRibbonBar::IsWindows7Look](#iswindows7look)|Indica si la cinta de opciones tiene la apariencia de Windows 7 (botón de aplicación rectangular pequeño).|  
+|[CMFCRibbonBar::LoadFromResource](#loadfromresource)|Sobrecargado. Carga una barra de cinta a partir de los recursos de la aplicación.|  
 |[CMFCRibbonBar::OnClickButton](#onclickbutton)||  
 |[CMFCRibbonBar::OnEditContextMenu](#oneditcontextmenu)||  
-|[CMFCRibbonBar::OnRTLChanged](#onrtlchanged)|(Overrides `CPane::OnRTLChanged`.)|  
-|[CMFCRibbonBar::OnSetAccData](#onsetaccdata)|(Overrides [CBasePane::OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|  
+|[CMFCRibbonBar::OnRTLChanged](#onrtlchanged)|(Invalida `CPane::OnRTLChanged`).|  
+|[CMFCRibbonBar::OnSetAccData](#onsetaccdata)|(Invalida [CBasePane::OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|  
 |[CMFCRibbonBar::OnShowRibbonContextMenu](#onshowribboncontextmenu)||  
 |[CMFCRibbonBar::OnShowRibbonQATMenu](#onshowribbonqatmenu)||  
 |[CMFCRibbonBar::OnSysKeyDown](#onsyskeydown)||  
 |[CMFCRibbonBar::OnSysKeyUp](#onsyskeyup)||  
 |[CMFCRibbonBar::PopTooltip](#poptooltip)||  
-|[CMFCRibbonBar::PreTranslateMessage](#pretranslatemessage)|(Overrides `CBasePane::PreTranslateMessage`.)|  
-|[CMFCRibbonBar::RecalcLayout](#recalclayout)|(Overrides [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
-|[CMFCRibbonBar::RemoveAllCategories](#removeallcategories)|Removes all the ribbon categories from the ribbon bar.|  
-|[CMFCRibbonBar::RemoveAllFromTabs](#removeallfromtabs)|Removes all ribbon elements from the tab area.|  
-|[CMFCRibbonBar::RemoveCategory](#removecategory)|Removes the ribbon category that is located at the specified index.|  
-|[CMFCRibbonBar::SaveToXMLBuffer](#savetoxmlbuffer)|Saves the Ribbon Bar to a buffer.|  
-|[CMFCRibbonBar::SaveToXMLFile](#savetoxmlfile)|Saves the Ribbon Bar to XML file.|  
-|[CMFCRibbonBar::SetActiveCategory](#setactivecategory)|Sets a specified ribbon category to active.|  
+|[CMFCRibbonBar::PreTranslateMessage](#pretranslatemessage)|(Invalida `CBasePane::PreTranslateMessage`).|  
+|[CMFCRibbonBar::RecalcLayout](#recalclayout)|(Invalida [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
+|[CMFCRibbonBar::RemoveAllCategories](#removeallcategories)|Quita todas las categorías de la cinta de opciones de la barra de cinta.|  
+|[CMFCRibbonBar::RemoveAllFromTabs](#removeallfromtabs)|Quita todos los elementos de la cinta de opciones del área de pestañas.|  
+|[CMFCRibbonBar::RemoveCategory](#removecategory)|Quita la categoría de cinta de opciones que se encuentra en el índice especificado.|  
+|[CMFCRibbonBar::SaveToXMLBuffer](#savetoxmlbuffer)|Guarda la barra de cinta en un búfer.|  
+|[CMFCRibbonBar::SaveToXMLFile](#savetoxmlfile)|Guarda la barra de cinta en un archivo XML.|  
+|[CMFCRibbonBar::SetActiveCategory](#setactivecategory)|Establece una categoría especificada de la cinta de opciones como activa.|  
 |[CMFCRibbonBar::SetActiveMDIChild](#setactivemdichild)||  
-|[CMFCRibbonBar::SetElementKeys](#setelementkeys)|Sets the specified keytips for all ribbon elements that have the specified command ID.|  
-|[CMFCRibbonBar::SetApplicationButton](#setapplicationbutton)|Assigns an application ribbon button to the ribbon bar.|  
+|[CMFCRibbonBar::SetElementKeys](#setelementkeys)|Establece las sugerencias de teclas especificadas para todos los elementos de la cinta de opciones que tienen el identificador de comando especificado.|  
+|[CMFCRibbonBar::SetApplicationButton](#setapplicationbutton)|Asigna un botón de la cinta de opciones de aplicación a la barra de cinta.|  
 |[CMFCRibbonBar::SetKeyboardNavigationLevel](#setkeyboardnavigationlevel)||  
 |[CMFCRibbonBar::SetMaximizeMode](#setmaximizemode)||  
-|[CMFCRibbonBar::SetQuickAccessCommands](#setquickaccesscommands)|Adds one or more ribbon elements to the Quick Access Toolbar.|  
-|[CMFCRibbonBar::SetQuickAccessDefaultState](#setquickaccessdefaultstate)|Specifies the default state for the Quick Access Toolbar.|  
-|[CMFCRibbonBar::SetQuickAccessToolbarOnTop](#setquickaccesstoolbarontop)|Positions the Quick Access Toolbar (QAT) above or below the ribbon bar.|  
+|[CMFCRibbonBar::SetQuickAccessCommands](#setquickaccesscommands)|Agrega uno o más elementos de la cinta de opciones a la barra de herramientas de acceso rápido.|  
+|[CMFCRibbonBar::SetQuickAccessDefaultState](#setquickaccessdefaultstate)|Especifica el estado predeterminado de la barra de herramientas de acceso rápido.|  
+|[CMFCRibbonBar::SetQuickAccessToolbarOnTop](#setquickaccesstoolbarontop)|Coloca la barra de herramientas de acceso rápido (QAT) encima o debajo de la barra de cinta.|  
 |[CMFCRibbonBar::SetTooltipFixedWidth](#settooltipfixedwidth)||  
-|[CMFCRibbonBar::SetWindows7Look](#setwindows7look)|Enable/disable ribbon Windows 7-style look (small rectangular application button)|  
-|[CMFCRibbonBar::ShowCategory](#showcategory)|Shows or hides the specified ribbon category.|  
-|[CMFCRibbonBar::ShowContextCategories](#showcontextcategories)|Shows or hides the context categories that have the specified ID.|  
+|[CMFCRibbonBar::SetWindows7Look](#setwindows7look)|Habilita/deshabilita la apariencia de Windows 7 (botón de aplicación rectangular pequeño) para la cinta de opciones.|  
+|[CMFCRibbonBar::ShowCategory](#showcategory)|Muestra u oculta la categoría de la cinta de opciones especificada.|  
+|[CMFCRibbonBar::ShowContextCategories](#showcontextcategories)|Muestra u oculta las categorías de contexto que tienen el identificador especificado.|  
 |[CMFCRibbonBar::ShowKeyTips](#showkeytips)||  
-|[CMFCRibbonBar::ToggleMimimizeState](#togglemimimizestate)|Toggles the ribbon bar between the minimized and maximized states..|  
+|[CMFCRibbonBar::ToggleMimimizeState](#togglemimimizestate)|Alterna la barra de cinta entre los estados minimizado y maximizado.|  
 |[CMFCRibbonBar::TranslateChar](#translatechar)||  
   
-## <a name="remarks"></a>Remarks  
- Microsoft introduced the Office Fluent Ribbon when it simultaneously released Microsoft Office 2007. This ribbon bar is not just a new control. It represents a new user-interface paradigm. The ribbon is a pane that contains a set of tabs called categories. Each category is logically split into ribbon panels and each panel can contain various controls and command buttons.  
+## <a name="remarks"></a>Comentarios  
+ Microsoft presentó la cinta de opciones de Office Fluent junto con el lanzamiento de Microsoft Office 2007. Esta barra de cinta es mucho más que un control nuevo: representa un nuevo paradigma de interfaz de usuario. La cinta de opciones es un panel que contiene un conjunto de pestañas denominada categorías. Cada categoría se divide lógicamente en paneles de cinta y cada panel puede contener varios controles y botones de comando.  
   
- The elements that appear on the ribbon bar expand and contract to make the best use of available space. For example, if a ribbon panel has insufficient space to display its elements, it becomes a menu button that displays subitems on a pop-up menu. The ribbon bar behaves as a static (non-floating) control bar and can be docked at the top of a frame.  
+ Los elementos que aparecen en la barra de cinta se expanden y se contrae para optimizar el espacio disponible. Por ejemplo, si un panel de cinta no tiene suficiente espacio para mostrar sus elementos, se convierte en un botón de menú que muestra los subelementos en un menú emergente. La barra de cinta se comporta como una barra de control estática (no flotante) y se puede acoplar en la parte superior de un marco.  
   
- You can use the `CMFCRibbonStatusBar` class to implement a status bar similar to the one used in Office 2007. A ribbon category contains (and displays) a group of [ribbon panels](../../mfc/reference/cmfcribbonpanel-class.md). Each ribbon panel contains one or more ribbon elements, which are derived from [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).  
+ Puede usar la clase `CMFCRibbonStatusBar` para implementar una barra de estado similar a la que se usaba en Office 2007. Una categoría de cinta contiene (y muestra) en un grupo de [paneles de la cinta de opciones](../../mfc/reference/cmfcribbonpanel-class.md). Cada panel de la cinta de opciones contiene uno o varios elementos de cinta de opciones, que se derivan de [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).  
   
- For information about how to add a ribbon bar to your existing MFC application, see [Walkthrough: Updating the MFC Scribble Application](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
+ Para obtener información sobre cómo agregar una barra de cinta a una aplicación MFC existente, vea [Tutorial: actualizar la aplicación Scribble de MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -359,25 +269,25 @@ class CMFCRibbonBar : public CPane
   
  [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxribbonbar.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxribbonbar.h  
   
-##  <a name="activatecontextcategory"></a>  CMFCRibbonBar::ActivateContextCategory  
- Activates a context category that is already visible.  
+##  <a name="activatecontextcategory"></a>CMFCRibbonBar::ActivateContextCategory  
+ Activa una categoría de contexto que ya está visible.  
   
 ```  
 BOOL ActivateContextCategory(UINT uiContextID);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `uiContextID`  
- The context category ID.  
+ El identificador de categoría de contexto.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if a context category with `uiContextID` is found and activated; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si una categoría de contexto con `uiContextID` se encuentra y activado; en caso contrario, `FALSE`.  
   
-##  <a name="addcategory"></a>  CMFCRibbonBar::AddCategory  
- Creates and initializes a new ribbon category for the ribbon bar.  
+##  <a name="addcategory"></a>CMFCRibbonBar::AddCategory  
+ Crea e inicializa una nueva categoría de cinta de opciones de la barra de la cinta de opciones.  
   
 ```  
 CMFCRibbonCategory* AddCategory(
@@ -392,41 +302,41 @@ CMFCRibbonCategory* AddCategory(
     CRuntimeClass* pRTI= NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `lpszName`  
- Name of the ribbon category.  
+ Nombre de la categoría de cinta de opciones.  
   
  [in] `uiSmallImagesResID`  
- Resource ID of the small image list for the ribbon category.  
+ Identificador de recurso de la lista de imágenes pequeñas de la categoría de cinta de opciones.  
   
  [in] `uiLargeImagesResID`  
- Resource ID of the large image list for the ribbon category.  
+ Identificador de recurso de la lista de imágenes de gran tamaño para la categoría de cinta de opciones.  
   
  [in] `sizeSmallImage`  
- Specifies the size of small images for the ribbon category.  
+ Especifica el tamaño de las imágenes pequeñas de la categoría de cinta de opciones.  
   
  [in] `sizeLargeImage`  
- Specifies the size of large images for the ribbon category.  
+ Especifica el tamaño de imágenes de gran tamaño para la categoría de cinta de opciones.  
   
  [in] `nInsertAt`  
- Zero based index of the category location.  
+ Índice de base cero de la ubicación de la categoría.  
   
  [in] `pRTI`  
- Pointer to a [CMFCRibbonCategory Class](../../mfc/reference/cmfcribboncategory-class.md) run-time class to dynamically create a ribbon category at run-time.  
+ Puntero a un [CMFCRibbonCategory clase](../../mfc/reference/cmfcribboncategory-class.md) clase en tiempo de ejecución para crear dinámicamente una categoría de cinta de opciones en tiempo de ejecución.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the new ribbon category if the method was successful; otherwise, `NULL`.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a la nueva categoría de cinta si el método se realizó correctamente; de lo contrario, `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- If the `pRTI` parameter is not `NULL`, the new ribbon category is created dynamically using the run-time class.  
+### <a name="remarks"></a>Comentarios  
+ Si el `pRTI` parámetro no es `NULL`, la nueva categoría de cinta de opciones se crea dinámicamente mediante la clase en tiempo de ejecución.  
   
-### <a name="example"></a>Example  
- The following example demonstrates how to use the `AddCategory` method in the `CMFCRibbonBar` class.  
+### <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar el `AddCategory` método en la `CMFCRibbonBar` clase.  
   
- [!code-cpp[NVC_MFC_RibbonApp#5](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp&#5;](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_1.cpp)]  
   
-##  <a name="addcontextcategory"></a>  CMFCRibbonBar::AddContextCategory  
- Creates and initializes a new context category for the ribbon bar.  
+##  <a name="addcontextcategory"></a>CMFCRibbonBar::AddContextCategory  
+ Crea e inicializa una nueva categoría de contexto para la barra de cinta.  
   
 ```  
 CMFCRibbonCategory* AddContextCategory(
@@ -443,41 +353,41 @@ CMFCRibbonCategory* AddContextCategory(
     CRuntimeClass* pRTI = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `lpszName`  
- Name of the category.  
+ Nombre de la categoría.  
   
  [in] `lpszContextName`  
- Name of the context category caption.  
+ Nombre del título de categoría de contexto.  
   
  [in] `uiContextID`  
- Context ID.  
+ Identificador de contexto.  
   
  [in] `clrContext`  
- Color of the context category caption.  
+ Color del título de categoría de contexto.  
   
  [in] `uiSmallImagesResID`  
- Resource ID of the small image of a context category.  
+ Identificador de recurso de la imagen pequeña de una categoría de contexto.  
   
  [in] `uiLargeImagesResID`  
- Resource ID of the large image of a context category.  
+ Identificador de recurso de la imagen grande de una categoría de contexto.  
   
  [in] `sizeSmallImage`  
- Size of a small image.  
+ Tamaño de una imagen pequeña.  
   
  [in] `sizeLargeImage`  
- Size of a large image.  
+ Tamaño de una imagen grande.  
   
  [in] `pRTI`  
- Pointer to a runtime class.  
+ Puntero a una clase en tiempo de ejecución.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the newly created category, or `NULL` if the `CreateObject` method of `pRTI` cannot create the specified category.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a la categoría recién creada, o `NULL` si la `CreateObject` método `pRTI` no se puede crear la categoría especificada.  
   
-### <a name="remarks"></a>Remarks  
- Use this function to add a context category. Context categories are a special type of category that can be shown or hidden at runtime, depending on the current application context. For example, when the user selects an object, you can display special tabs with context categories which you use to change the specific selected object.  
+### <a name="remarks"></a>Comentarios  
+ Utilice esta función para agregar una categoría de contexto. Categorías de contexto son un tipo especial de categoría que se puede mostrar u ocultar en tiempo de ejecución, dependiendo del contexto de aplicación actual. Por ejemplo, cuando el usuario selecciona un objeto, puede mostrar fichas especiales con categorías de contexto que se utiliza para cambiar el objeto seleccionado específico.  
   
- The color of a context category can be one of the following values:  
+ El color de una categoría de contexto puede ser uno de los siguientes valores:  
   
 -   AFX_CategoryColor_None  
   
@@ -495,8 +405,8 @@ CMFCRibbonCategory* AddContextCategory(
   
 -   AFX_CategoryColor_Violet  
   
-##  <a name="addmaincategory"></a>  CMFCRibbonBar::AddMainCategory  
- Creates a new main ribbon category for the ribbon bar.  
+##  <a name="addmaincategory"></a>CMFCRibbonBar::AddMainCategory  
+ Crea una nueva categoría principal de la cinta de opciones de la barra de la cinta de opciones.  
   
 ```  
 CMFCRibbonMainPanel* AddMainCategory(
@@ -509,48 +419,48 @@ CMFCRibbonMainPanel* AddMainCategory(
     32));
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `lpszName`  
- Name of the main ribbon category.  
+ Nombre de la categoría principal de la cinta de opciones.  
   
  [in] `uiSmallImagesResID`  
- Resource ID of small images.  
+ Identificador de recurso de imágenes pequeñas.  
   
  [in] `uiLargeImagesResID`  
- Resource ID of large images.  
+ Identificador de recurso de imágenes de gran tamaño.  
   
  [in] `sizeSmallImage`  
- The size of small images.  
+ El tamaño de las imágenes pequeñas.  
   
  [in] `sizeLargeImage`  
- The size of large images.  
+ El tamaño de imágenes de gran tamaño.  
   
-### <a name="return-value"></a>Return Value  
- Pointer to the new main ribbon category if the method was successful; otherwise, `NULL`.  
+### <a name="return-value"></a>Valor devuelto  
+ Puntero a la nueva categoría principal de la cinta de opciones si el método se realizó correctamente; de lo contrario, `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- If a main ribbon category already exists, it is deleted.  
+### <a name="remarks"></a>Comentarios  
+ Si ya existe una categoría principal de la cinta de opciones, se elimina.  
   
-### <a name="example"></a>Example  
- The following example demonstrates how to use the `AddMainCategory` method in the `CMFCRibbonBar` class.  
+### <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar el `AddMainCategory` método en la `CMFCRibbonBar` clase.  
   
- [!code-cpp[NVC_MFC_RibbonApp#4](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp Nº&4;](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_2.cpp)]  
   
-##  <a name="addprintpreviewcategory"></a>  CMFCRibbonBar::AddPrintPreviewCategory  
- Creates a print preview category on the ribbon bar.  
+##  <a name="addprintpreviewcategory"></a>CMFCRibbonBar::AddPrintPreviewCategory  
+ Crea una categoría de la vista previa de impresión en la barra de la cinta de opciones.  
   
 ```  
 CMFCRibbonCategory* AddPrintPreviewCategory();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the new ribbon category if the method was successful; otherwise, `NULL`.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a la nueva categoría de cinta si el método se realizó correctamente; de lo contrario, `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- This method creates a ribbon category and the controls that it needs in order to provide a print preview.  
+### <a name="remarks"></a>Comentarios  
+ Este método crea una categoría de cinta y los controles que necesita para proporcionar una vista previa de impresión.  
   
-##  <a name="addqatonlycategory"></a>  CMFCRibbonBar::AddQATOnlyCategory  
- Creates a quick access toolbar ribbon category.  
+##  <a name="addqatonlycategory"></a>CMFCRibbonBar::AddQATOnlyCategory  
+ Crea una categoría de cinta de opciones de barra de herramientas de acceso rápido.  
   
 ```  
 CMFCRibbonCategory* AddQATOnlyCategory(
@@ -560,51 +470,51 @@ CMFCRibbonCategory* AddQATOnlyCategory(
     16));
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `lpszName`  
- Name of the category.  
+ Nombre de la categoría.  
   
  [in] `uiSmallImagesResID`  
- Resource ID of the image list for the category.  
+ Identificador de recurso de la lista de imágenes para la categoría.  
   
  [in] `sizeSmallImage`  
- Size of images for ribbon elements in the category.  
+ Tamaño de imágenes para los elementos de la cinta de opciones en la categoría.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the new category if the method was successful; otherwise, `NULL`.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a la nueva categoría si el método se realizó correctamente; de lo contrario, `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- The quick access toolbar ribbon category is only used on the quick access toolbar customization dialog box.  
+### <a name="remarks"></a>Comentarios  
+ La categoría de cinta de opciones de barra de herramientas de acceso rápido sólo se utiliza en el cuadro de diálogo de personalización de barra de herramientas de acceso rápido.  
   
-##  <a name="addtotabs"></a>  CMFCRibbonBar::AddToTabs  
- Adds the specified ribbon element to the tabs row of the ribbon bar.  
+##  <a name="addtotabs"></a>CMFCRibbonBar::AddToTabs  
+ Agrega el elemento especificado de la cinta de opciones a la fila de pestañas de la barra de la cinta de opciones.  
   
 ```  
 void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pElement`  
- Pointer to a ribbon element.  
+ Puntero a un elemento de la cinta de opciones.  
   
-### <a name="remarks"></a>Remarks  
- The ribbon element is positioned before any system buttons.  
+### <a name="remarks"></a>Comentarios  
+ El elemento de la cinta se coloca antes de los botones del sistema.  
   
-##  <a name="cmfcribbonbar"></a>  CMFCRibbonBar::CMFCRibbonBar  
- Constructs and initializes a [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) object.  
+##  <a name="cmfcribbonbar"></a>CMFCRibbonBar::CMFCRibbonBar  
+ Construye e inicializa un [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) objeto.  
   
 ```  
 CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `bReplaceFrameCaption`  
- `TRUE` for the ribbon bar to replace the caption of the main frame window; `FALSE` to locate the ribbon bar under the caption of the main frame window.  
+ `TRUE`de la barra de la cinta de opciones reemplazar el título de la ventana de marco principal; `FALSE` para buscar la barra de cinta en el título de la ventana de marco principal.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="create"></a>  CMFCRibbonBar::Create  
- Creates a window for the ribbon bar.  
+##  <a name="create"></a>CMFCRibbonBar::Create  
+ Crea una ventana de la barra de la cinta de opciones.  
   
 ```  
 BOOL Create(
@@ -613,28 +523,28 @@ BOOL Create(
     UINT nID = AFX_IDW_RIBBON_BAR);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pParentWnd`  
- Pointer to the parent window for the ribbon bar.  
+ Puntero a la ventana primaria de la barra de la cinta de opciones.  
   
  [in] `dwStyle`  
- A logical combination of styles for the new window.  
+ Combinación lógica de estilos de la nueva ventana.  
   
  [in] `nID`  
- ID of the new window.  
+ Id. de la nueva ventana.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the window was created; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si se creó la ventana; de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-### <a name="example"></a>Example  
- The following example demonstrates how to use the `Create` method of the `CMFCRibbonBar` class.  
+### <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar el `Create` método de la `CMFCRibbonBar` clase.  
   
- [!code-cpp[NVC_MFC_RibbonApp#1](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_3.cpp)]  
+ [!code-cpp[1 NVC_MFC_RibbonApp](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_3.cpp)]  
   
-##  <a name="createex"></a>  CMFCRibbonBar::CreateEx  
- Creates a window for the ribbon bar.  
+##  <a name="createex"></a>CMFCRibbonBar::CreateEx  
+ Crea una ventana de la barra de la cinta de opciones.  
   
 ```  
 BOOL CreateEx(
@@ -644,39 +554,39 @@ BOOL CreateEx(
     UINT nID = AFX_IDW_RIBBON_BAR);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pParentWnd`  
- Pointer to the parent window for the ribbon bar.  
+ Puntero a la ventana primaria de la barra de la cinta de opciones.  
   
  [in] `dwCtrlStyle`  
- This parameter is not used.  
+ Este parámetro no se utiliza.  
   
  [in] `dwStyle`  
- A logical combination of styles for the new window.  
+ Combinación lógica de estilos de la nueva ventana.  
   
  [in] `nID`  
- ID of the new window.  
+ Id. de la nueva ventana.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the window was created; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si se creó la ventana; de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="deactivatekeyboardfocus"></a>  CMFCRibbonBar::DeactivateKeyboardFocus  
- Closes all keytip controls on the ribbon bar.  
+##  <a name="deactivatekeyboardfocus"></a>CMFCRibbonBar::DeactivateKeyboardFocus  
+ Cierra todos los controles de keytip en la barra de la cinta de opciones.  
   
 ```  
 void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `bSetFocus`  
- `TRUE` to set the focus to the parent window of the ribbon bar.  
+ `TRUE`Para establecer el foco a la ventana primaria de la barra de la cinta de opciones.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="drawmenuimage"></a>  CMFCRibbonBar::DrawMenuImage  
- Draws the image for a menu button.  
+##  <a name="drawmenuimage"></a>CMFCRibbonBar::DrawMenuImage  
+ Dibuja la imagen de un botón de menú.  
   
 ```  
 BOOL DrawMenuImage(
@@ -685,62 +595,62 @@ BOOL DrawMenuImage(
     const CRect& rectImage);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pDC`  
- Pointer to a device context for the menu button.  
+ Puntero a un contexto de dispositivo para el botón de menú.  
   
  [in] `pMenuItem`  
- Pointer to a toolbar menu button.  
+ Puntero a un botón de menú de la barra de herramientas.  
   
  [in] `rectImage`  
- The display rectangle for a menu button.  
+ El rectángulo de presentación para un botón de menú.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the image was drawn; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si la imagen se dibuja; de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="dwmcompositionchanged"></a>  CMFCRibbonBar::DWMCompositionChanged  
- Adjusts the display of the ribbon bar when Desktop Window Manager (DWM) composition is enabled or disabled.  
+##  <a name="dwmcompositionchanged"></a>CMFCRibbonBar::DWMCompositionChanged  
+ Ajusta la presentación de la barra de cinta cuando la composición del Administrador de ventanas de escritorio (DWM) está habilitada o deshabilitada.  
   
 ```  
 virtual void DWMCompositionChanged();
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="enablekeytips"></a>  CMFCRibbonBar::EnableKeyTips  
- Enables or disables the keytip feature for the ribbon bar.  
+##  <a name="enablekeytips"></a>CMFCRibbonBar::EnableKeyTips  
+ Habilita o deshabilita la característica de keytip para la barra de cinta.  
   
 ```  
 void EnableKeyTips(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `bEnable`  
- `TRUE` to enable the keytips feature; `FALSE` to disable the keytips feature.  
+ `TRUE`Para habilitar la característica de sugerencias de teclas; `FALSE` para deshabilitar la característica de sugerencias de teclas.  
   
-### <a name="remarks"></a>Remarks  
- When you enable this feature, key tips are displayed when the user presses the ALT or F10 button. When the user presses ALT key, key tips are displayed with a 200 millisecond delay. This delay allows for shortcuts to be executed so that the pressed ALT key does not interfere with other combinations that include the ALT key.  
+### <a name="remarks"></a>Comentarios  
+ Al habilitar esta característica, sugerencias de teclas se muestran cuando el usuario presiona el botón ALT o F10. Cuando el usuario presiona la tecla ALT, sugerencias de teclas se muestran con un retraso de 200 milisegundos. Este retraso permite accesos directos a ejecutarse de forma que la tecla ALT presionada no interfiere con otras combinaciones que incluyen la tecla ALT.  
   
-##  <a name="enableprintpreview"></a>  CMFCRibbonBar::EnablePrintPreview  
- Enables or disables the **Print Preview** feature.  
+##  <a name="enableprintpreview"></a>CMFCRibbonBar::EnablePrintPreview  
+ Habilita o deshabilita la **preliminar** característica.  
   
 ```  
 void EnablePrintPreview(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `bEnable`  
- `TRUE` to enable the **Print Preview** feature; `FALSE` to disable the **Print Preview** feature.  
+ `TRUE`Para habilitar la **preliminar** característica; `FALSE` para deshabilitar la **preliminar** característica.  
   
-### <a name="remarks"></a>Remarks  
- If `bEnable` is `FALSE` and a print preview category exists, it is deleted.  
+### <a name="remarks"></a>Comentarios  
+ Si `bEnable` es `FALSE` y existe una categoría de la vista previa de impresión, se elimina.  
   
- By default the **Print Preview** feature is enabled.  
+ De forma predeterminada el **preliminar** característica está habilitada.  
   
-##  <a name="enabletooltips"></a>  CMFCRibbonBar::EnableToolTips  
- Enables or disables tooltips and optional tooltip descriptions on the ribbon bar.  
+##  <a name="enabletooltips"></a>CMFCRibbonBar::EnableToolTips  
+ Habilita o deshabilita la información sobre herramientas y las descripciones de la información sobre herramientas opcional en la barra de la cinta de opciones.  
   
 ```  
 void EnableToolTips(
@@ -748,18 +658,18 @@ void EnableToolTips(
     BOOL bEnableDescr = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `bEnable`  
- `TRUE` to enable tooltips on the ribbon bar; `FALSE` to disable tooltips on the ribbon bar.  
+ `TRUE`Para habilitar la información sobre herramientas en la barra de la cinta de opciones. `FALSE` para deshabilitar la información sobre herramientas en la barra de la cinta de opciones.  
   
  [in] `bEnableDescr`  
- `TRUE` to enable tooltip descriptions on the tooltip; `FALSE` to disable tooltip descriptions on the tooltip.  
+ `TRUE`Para habilitar las descripciones de la información sobre herramientas en la información sobre herramientas; `FALSE` para deshabilitar las descripciones de la información sobre herramientas en la información sobre herramientas.  
   
-### <a name="remarks"></a>Remarks  
- The `bEnable` parameter determines whether tooltips are displayed when the mouse hovers over a ribbon element. The `bEnableDescr` parameter determines whether additional descriptive text appears with the tooltip text.  
+### <a name="remarks"></a>Comentarios  
+ El `bEnable` parámetro determina si se muestra información sobre herramientas cuando se sitúa el mouse sobre un elemento de la cinta de opciones. El `bEnableDescr` parámetro determina si el texto descriptivo adicional aparece con el texto de información sobre herramientas.  
   
-##  <a name="findbydata"></a>  CMFCRibbonBar::FindByData  
- Retrieves a pointer to a ribbon element if it has the specified data and visibility.  
+##  <a name="findbydata"></a>CMFCRibbonBar::FindByData  
+ Recupera un puntero a un elemento de cinta si tiene los datos especificados y la visibilidad.  
   
 ```  
 CMFCRibbonBaseElement* FindByData(
@@ -767,21 +677,21 @@ CMFCRibbonBaseElement* FindByData(
     BOOL bVisibleOnly = TRUE) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `dwData`  
- The data associated with a ribbon element.  
+ Los datos asociados a un elemento de la cinta de opciones.  
   
  [in] `bVisibleOnly`  
- `TRUE` to search visible ribbon elements only; `FALSE` to search all ribbon elements.  
+ `TRUE`para buscar los elementos visibles de la cinta de opciones `FALSE` para buscar todos los elementos de la cinta de opciones.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to a ribbon element if it has the specified data and visibility; otherwise `NULL`.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a un elemento de la cinta si tiene los datos especificados y la visibilidad; de lo contrario, `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- A ribbon element is any control that you can add to the ribbon, such as a ribbon button, or a ribbon category, or a ribbon slider.  
+### <a name="remarks"></a>Comentarios  
+ Un elemento de cinta es cualquier control que puede agregar a la cinta de opciones, como un botón de la cinta de opciones, o una categoría de cinta o un control deslizante de la cinta de opciones.  
   
-##  <a name="findbyid"></a>  CMFCRibbonBar::FindByID  
- Retrieves a pointer to the ribbon element that has the specified command ID and search values.  
+##  <a name="findbyid"></a>CMFCRibbonBar::FindByID  
+ Recupera un puntero al elemento de cinta de opciones con los valores de identificador y búsqueda de comando especificado.  
   
 ```  
 CMFCRibbonBaseElement* FindByID(
@@ -790,137 +700,137 @@ CMFCRibbonBaseElement* FindByID(
     BOOL bExcludeQAT = FALSE) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `uiCmdID`  
- Command ID for a ribbon element.  
+ Identificador de comando para un elemento de la cinta de opciones.  
   
  [in] `bVisibleOnly`  
- `TRUE` to search visible ribbon elements only; `FALSE` to search all ribbon elements.  
+ `TRUE`para buscar los elementos visibles de la cinta de opciones `FALSE` para buscar todos los elementos de la cinta de opciones.  
   
  [in] `bExcludeQAT`  
- `TRUE` to exclude quick access toolbar elements from the search; otherwise, `FALSE`.  
+ `TRUE`excluir elementos de la barra de herramientas de acceso rápido de la búsqueda; de lo contrario, `FALSE`.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to a ribbon element if it has the specified command ID and search values; otherwise, `NULL`.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a un elemento de la cinta si tiene los valores de identificador y búsqueda de comando especificado; de lo contrario, `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- A ribbon element is any ribbon control that can be added to the ribbon, such as a ribbon button, or a ribbon category, or a ribbon slider.  
+### <a name="remarks"></a>Comentarios  
+ Un elemento de cinta es cualquier control de cinta de opciones que se puede agregar a la cinta de opciones, como un botón de la cinta de opciones, o una categoría de cinta o un control deslizante de la cinta de opciones.  
   
- In general, there can be more than one ribbon element that has the same command ID. If you want to obtain pointers to all ribbon elements that use a specified command ID, use the [CMFCRibbonBar::GetElementsByID](#getelementsbyid) method.  
+ En general, puede haber más de un elemento de la cinta de opciones que tiene el mismo identificador de comando. Si desea obtener punteros a todos los elementos de la cinta de opciones que usan un identificador de comando especificado, use la [CMFCRibbonBar::GetElementsByID](#getelementsbyid) método.  
   
-##  <a name="findcategoryindexbydata"></a>  CMFCRibbonBar::FindCategoryIndexByData  
- Retrieves the index of the ribbon category that contains the specified data.  
+##  <a name="findcategoryindexbydata"></a>CMFCRibbonBar::FindCategoryIndexByData  
+ Recupera el índice de la categoría de cinta que contiene los datos especificados.  
   
 ```  
 int FindCategoryIndexByData(DWORD dwData) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `dwData`  
- The data associated with a ribbon category.  
+ Los datos asociados a una categoría de cinta de opciones.  
   
-### <a name="return-value"></a>Return Value  
- The zero-based index of a ribbon category if the method was successful; otherwise -1.  
+### <a name="return-value"></a>Valor devuelto  
+ Índice de base cero de una categoría de cinta si el método se realizó correctamente; de lo contrario, devuelve-1.  
   
-##  <a name="forcerecalclayout"></a>  CMFCRibbonBar::ForceRecalcLayout  
- Adjusts the layout of all items in the ribbon bar and parent window and redraws the whole window.  
+##  <a name="forcerecalclayout"></a>CMFCRibbonBar::ForceRecalcLayout  
+ Ajusta el diseño de todos los elementos en la barra de la cinta y la ventana primaria y vuelve a dibujar toda la ventana.  
   
 ```  
 void ForceRecalcLayout();
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="getactivecategory"></a>  CMFCRibbonBar::GetActiveCategory  
- Retrieves a pointer to the active ribbon category.  
+##  <a name="getactivecategory"></a>CMFCRibbonBar::GetActiveCategory  
+ Recupera un puntero a la categoría de activo de la cinta de opciones.  
   
 ```  
 CMFCRibbonCategory* GetActiveCategory() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the active ribbon category; or `NULL` if no category is active.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a la categoría de activo de la cinta de opciones; o `NULL` si ninguna categoría está activa.  
   
-### <a name="remarks"></a>Remarks  
- A category is active if it has the focus. By default, the active category is the first category on the left side of the ribbon bar.  
+### <a name="remarks"></a>Comentarios  
+ Una categoría es activa si tiene el foco. De forma predeterminada, la categoría activa es la primera categoría en el lado izquierdo de la barra de la cinta de opciones.  
   
- The main category is displayed when the user presses the application button and it cannot be the active category.  
+ La categoría principal se muestra cuando el usuario presiona el botón de la aplicación y no puede ser la misma.  
   
-##  <a name="getapplicationbutton"></a>  CMFCRibbonBar::GetApplicationButton  
- Retrieves a pointer to the application button.  
+##  <a name="getapplicationbutton"></a>CMFCRibbonBar::GetApplicationButton  
+ Recupera un puntero al botón aplicación.  
   
 ```  
 CMFCRibbonApplicationButton* GetApplicationButton() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the application button; or `NULL` if the button has not been set.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero al botón de la aplicación; o `NULL` si no se ha establecido el botón.  
   
-##  <a name="getcaptionheight"></a>  CMFCRibbonBar::GetCaptionHeight  
- Retrieves the height of the caption area for the ribbon bar.  
+##  <a name="getcaptionheight"></a>CMFCRibbonBar::GetCaptionHeight  
+ Recupera el alto del área de título de la barra de la cinta de opciones.  
   
 ```  
 int GetCaptionHeight() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The height, in pixels, of the caption area for the ribbon bar.  
+### <a name="return-value"></a>Valor devuelto  
+ Alto, en píxeles, del área de título de la barra de la cinta de opciones.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="getcategory"></a>  CMFCRibbonBar::GetCategory  
- Retrieves a pointer to the ribbon category at the specified index.  
+##  <a name="getcategory"></a>CMFCRibbonBar::GetCategory  
+ Recupera un puntero a la categoría de cinta de opciones en el índice especificado.  
   
 ```  
 CMFCRibbonCategory* GetCategory(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `nIndex`  
- The zero-based index of a ribbon category in the list of ribbon categories that is contained in the ribbon bar.  
+ Índice de base cero de una categoría de cinta de opciones en la lista de categorías de la cinta de opciones que se encuentra en la barra de cinta.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the ribbon category at the specified index; otherwise, `NULL` if `nIndex` was out of range.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a la categoría de cinta de opciones en el índice especificado; de lo contrario, `NULL` si `nIndex` estaba fuera del intervalo.  
   
-##  <a name="getcategorycount"></a>  CMFCRibbonBar::GetCategoryCount  
- Retrieves the number of ribbon categories in the ribbon bar.  
+##  <a name="getcategorycount"></a>CMFCRibbonBar::GetCategoryCount  
+ Recupera el número de categorías de la cinta de opciones en la barra de la cinta de opciones.  
   
 ```  
 int GetCategoryCount() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The number of the ribbon categories in the ribbon bar.  
+### <a name="return-value"></a>Valor devuelto  
+ El número de las categorías de la cinta de opciones en la barra de la cinta de opciones.  
   
-##  <a name="getcategoryheight"></a>  CMFCRibbonBar::GetCategoryHeight  
- Retrieves the height of the category.  
+##  <a name="getcategoryheight"></a>CMFCRibbonBar::GetCategoryHeight  
+ Recupera el alto de la categoría.  
   
 ```  
 int GetCategoryHeight() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The height of the category.  
+### <a name="return-value"></a>Valor devuelto  
+ El alto de la categoría.  
   
-### <a name="remarks"></a>Remarks  
- The category height includes the height of the category tab.  
+### <a name="remarks"></a>Comentarios  
+ El alto de la categoría incluye el alto de la pestaña de categoría.  
   
-##  <a name="getcategoryindex"></a>  CMFCRibbonBar::GetCategoryIndex  
- Retrieves the index of the specified ribbon category.  
+##  <a name="getcategoryindex"></a>CMFCRibbonBar::GetCategoryIndex  
+ Recupera el índice de la categoría especificada de la cinta de opciones.  
   
 ```  
 int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pCategory`  
- Pointer to a ribbon category.  
+ Puntero a una categoría de cinta.  
   
-### <a name="return-value"></a>Return Value  
- The zero-based index of a ribbon category specified by `pCategory`; or -1 if the ribbon category is not found.  
+### <a name="return-value"></a>Valor devuelto  
+ Índice de base cero de una categoría de cinta especificado por `pCategory`; o -1 si no se encuentra la categoría de cinta de opciones.  
   
-##  <a name="getcontextname"></a>  CMFCRibbonBar::GetContextName  
- Retrieves the name of the context category caption specified by a context ID.  
+##  <a name="getcontextname"></a>CMFCRibbonBar::GetContextName  
+ Recupera el nombre del título de categoría de contexto especificado por un identificador de contexto.  
   
 ```  
 BOOL GetContextName(
@@ -928,30 +838,30 @@ BOOL GetContextName(
     CString& strName) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `uiContextID`  
- A ribbon category context ID.  
+ Un identificador de contexto de categoría de cinta de opciones.  
   
  [out] `strName`  
- The name of a context category caption.  
+ El nombre de un título de categoría de contexto.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the method was successful; otherwise, `FALSE` if `uiContextID` was zero or the context category caption was not found.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si el método se realizó correctamente; de lo contrario, `FALSE` si `uiContextID` es cero o no se encontró el título de la categoría de contexto.  
   
-##  <a name="getdroppeddown"></a>  CMFCRibbonBar::GetDroppedDown  
- Retrieves the ribbon element that is currently dropped down.  
+##  <a name="getdroppeddown"></a>CMFCRibbonBar::GetDroppedDown  
+ Recupera el elemento de la cinta de opciones que actualmente está desplegado.  
   
 ```  
 virtual CMFCRibbonBaseElement* GetDroppedDown();
 ```  
   
-### <a name="return-value"></a>Return Value  
- The ribbon element that is currently dropped down; or `NULL` if no ribbon element is currently dropped down.  
+### <a name="return-value"></a>Valor devuelto  
+ El elemento de la cinta de opciones que se encuentra actualmente o `NULL` si ningún elemento de la cinta se encuentra actualmente hacia abajo.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="getelementsbyid"></a>  CMFCRibbonBar::GetElementsByID  
- Retrieves an array of pointers to all ribbon elements that have a specific command ID.  
+##  <a name="getelementsbyid"></a>CMFCRibbonBar::GetElementsByID  
+ Recupera una matriz de punteros a todos los elementos de la cinta de opciones que tienen un Id.  
   
 ```  
 void GetElementsByID(
@@ -959,238 +869,238 @@ void GetElementsByID(
     CArray<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& arButtons);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `uiCmdID`  
- Command ID of a ribbon element.  
+ Id. de comando de un elemento de la cinta de opciones.  
   
  [out] `arButtons`  
- An array of pointers to ribbon elements.  
+ Matriz de punteros a elementos de la cinta de opciones.  
   
-### <a name="remarks"></a>Remarks  
- Multiple ribbon elements can have the same command ID because some ribbon elements can be copied to the quick access toolbar.  
+### <a name="remarks"></a>Comentarios  
+ Varios elementos de la cinta de opciones pueden tener el mismo identificador de comando ya se pueden copiar algunos elementos de la cinta de opciones en la barra de herramientas de acceso rápido.  
   
-##  <a name="gethideflags"></a>  CMFCRibbonBar::GetHideFlags  
- Retrieves the flags that indicate how much of the ribbon bar is visible.  
+##  <a name="gethideflags"></a>CMFCRibbonBar::GetHideFlags  
+ Recupera las marcas que indican la cantidad de la barra de la cinta de opciones está visible.  
   
 ```  
 DWORD GetHideFlags() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The flags that indicate how much of the ribbon bar is visible.  
+### <a name="return-value"></a>Valor devuelto  
+ Las marcas que indican la cantidad de la barra de la cinta de opciones está visible.  
   
-### <a name="remarks"></a>Remarks  
- The following table lists the possible combination of flags for the return value:  
+### <a name="remarks"></a>Comentarios  
+ La tabla siguiente enumera las combinaciones posibles de marcas para el valor devuelto:  
   
  `AFX_RIBBONBAR_HIDE_ELEMENTS`  
- The ribbon bar is minimized vertically and only the category tabs, main button, and quick access toolbar are visible.  
+ La barra de cinta está minimizada vertical y las fichas de categoría, botón principal y barra de herramientas de acceso rápido son visibles.  
   
  `AFX_RIBBONBAR_HIDE_ALL`  
- The width of the ribbon bar is less than the minimum width and is completely hidden.  
+ El ancho de la barra de cinta es menor que el ancho mínimo y está completamente oculta.  
   
-##  <a name="getitemidslist"></a>  CMFCRibbonBar::GetItemIDsList  
- Retrieves the command IDs for the specified collection of ribbon elements on the ribbon bar.  
+##  <a name="getitemidslist"></a>CMFCRibbonBar::GetItemIDsList  
+ Recupera los identificadores de comando para la colección de elementos de la cinta de opciones en la barra de cinta especificada.  
   
 ```  
 void GetItemIDsList(CList<UINT, UINT>& lstItems,  
     BOOL bHiddenOnly = FALSE) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [out] `lstItems`  
- The list of command IDs for ribbon elements that are contained in the ribbon bar.  
+ La lista de identificadores de comando para los elementos de cinta de opciones que se encuentran en la barra de cinta.  
   
  [in] `bHiddenOnly`  
- `TRUE` to exclude ribbon elements that are displayed; `FALSE` to include all ribbon elements in the ribbon bar.  
+ `TRUE`Para excluir elementos de la cinta de opciones que se muestran; `FALSE` para incluir todos los elementos de la cinta de opciones en la barra de cinta.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="getkeyboardnavigationlevel"></a>  CMFCRibbonBar::GetKeyboardNavigationLevel  
- Retrieves the current navigation level as the user presses the keytips that are contained on the ribbon bar.  
+##  <a name="getkeyboardnavigationlevel"></a>CMFCRibbonBar::GetKeyboardNavigationLevel  
+ Recupera el nivel de navegación actual cuando el usuario presiona las sugerencias de teclas que se encuentran en la barra de cinta.  
   
 ```  
 int GetKeyboardNavigationLevel() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The current navigation level as the user presses the keytips that are contained on the ribbon bar. The following table lists possible return values:  
+### <a name="return-value"></a>Valor devuelto  
+ El nivel de navegación actual que el usuario presiona las sugerencias de teclas que se encuentran en la barra de cinta. En la tabla siguiente enumera los posibles valores devueltos:  
   
  -1  
- Keytips are not displayed.  
+ No se muestran las sugerencias de teclas.  
   
  0  
- Keytips are displayed.  
+ Se muestran las sugerencias de teclas.  
   
  1  
- User has pressed a displayed keytip.  
+ Usuario ha presionado keytip mostrada.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="getkeyboardnavlevelcurrent"></a>  CMFCRibbonBar::GetKeyboardNavLevelCurrent  
- Retrieves the current keyboard navigation object on the ribbon bar.  
+##  <a name="getkeyboardnavlevelcurrent"></a>CMFCRibbonBar::GetKeyboardNavLevelCurrent  
+ Recupera el objeto actual de exploración de teclado en la barra de la cinta de opciones.  
   
 ```  
 CObject* GetKeyboardNavLevelCurrent() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The current keyboard navigation object on the ribbon bar; otherwise `NULL` if no object currently displays keytips.  
+### <a name="return-value"></a>Valor devuelto  
+ El objeto actual de exploración de teclado en la barra de la cinta de opciones. de lo contrario `NULL` si no hay ningún objeto actualmente muestra información sobre las teclas.  
   
-### <a name="remarks"></a>Remarks  
- The object that is currently displaying keytips is the current keyboard navigation object.  
+### <a name="remarks"></a>Comentarios  
+ El objeto que está mostrando información sobre las teclas es el objeto de navegación de teclado actual.  
   
-##  <a name="getkeyboardnavlevelparent"></a>  CMFCRibbonBar::GetKeyboardNavLevelParent  
- Retrieves the parent keyboard navigation object on the ribbon bar.  
+##  <a name="getkeyboardnavlevelparent"></a>CMFCRibbonBar::GetKeyboardNavLevelParent  
+ Recupera el objeto de navegación de teclado primario en la barra de la cinta de opciones.  
   
 ```  
 CObject* GetKeyboardNavLevelParent() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The parent keyboard navigation object on the ribbon bar; otherwise `NULL`.  
+### <a name="return-value"></a>Valor devuelto  
+ El objeto de navegación de teclado primario en la barra de la cinta de opciones. de lo contrario, `NULL`.  
   
-### <a name="remarks"></a>Remarks  
- When the user presses a keytip on the ribbon bar, the current keyboard navigation object becomes the parent keyboard navigation object.  
+### <a name="remarks"></a>Comentarios  
+ Cuando el usuario presiona keytip en la barra de la cinta de opciones, el objeto de navegación de teclado actual se convierte en el objeto de navegación de teclado primario.  
   
-##  <a name="getmaincategory"></a>  CMFCRibbonBar::GetMainCategory  
- Retrieves a pointer to the main ribbon category.  
+##  <a name="getmaincategory"></a>CMFCRibbonBar::GetMainCategory  
+ Recupera un puntero a la categoría principal de la cinta de opciones.  
   
 ```  
 CMFCRibbonCategory* GetMainCategory() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the main ribbon category.  
+### <a name="return-value"></a>Valor devuelto  
+ Puntero a la categoría principal de la cinta de opciones.  
   
-### <a name="remarks"></a>Remarks  
- The main ribbon category contains the main ribbon panel.  
+### <a name="remarks"></a>Comentarios  
+ La categoría principal de la cinta de opciones contiene el panel principal de la cinta de opciones.  
   
-##  <a name="getqatcommandslocation"></a>  CMFCRibbonBar::GetQATCommandsLocation  
- Retrieves the display rectangle for the commands section of the quick access toolbar.  
+##  <a name="getqatcommandslocation"></a>CMFCRibbonBar::GetQATCommandsLocation  
+ Recupera el rectángulo de presentación de la sección de comandos de la barra de herramientas de acceso rápido.  
   
 ```  
 CRect GetQATCommandsLocation() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The display rectangle for the commands section of the quick access toolbar.  
+### <a name="return-value"></a>Valor devuelto  
+ El rectángulo de presentación de la sección de comandos de la barra de herramientas de acceso rápido.  
   
-### <a name="remarks"></a>Remarks  
- The commands section of the display rectangle does not include the customization button.  
+### <a name="remarks"></a>Comentarios  
+ La sección de comandos del rectángulo de presentación no incluye el botón de personalización.  
   
-##  <a name="getqatdroppeddown"></a>  CMFCRibbonBar::GetQATDroppedDown  
- Retrieves a pointer to the ribbon element on the quick access toolbar that has its pop-up menu dropped down.  
+##  <a name="getqatdroppeddown"></a>CMFCRibbonBar::GetQATDroppedDown  
+ Recupera un puntero al elemento de cinta de opciones en la barra de herramientas de acceso rápido que tiene el menú emergente desplegado.  
   
 ```  
 CMFCRibbonBaseElement* GetQATDroppedDown();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the ribbon element on the quick access toolbar that has its pop-up menu dropped down.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero al elemento de cinta de opciones en la barra de herramientas de acceso rápido que tiene el menú emergente desplegado.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="getquickaccesscommands"></a>  CMFCRibbonBar::GetQuickAccessCommands  
- Retrieves a list of command IDs for the ribbon elements on the quick access toolbar.  
+##  <a name="getquickaccesscommands"></a>CMFCRibbonBar::GetQuickAccessCommands  
+ Recupera una lista de identificadores de comando para los elementos de la cinta de opciones en la barra de herramientas de acceso rápido.  
   
 ```  
 void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [out] `lstCommands`  
- The list of command IDs for the ribbon elements on the quick access toolbar.  
+ La lista de identificadores de comando para los elementos de la cinta de opciones en la barra de herramientas de acceso rápido.  
   
-### <a name="remarks"></a>Remarks  
- The list does not contain ribbon elements that are control separators.  
+### <a name="remarks"></a>Comentarios  
+ La lista no contiene elementos de cinta son separadores de control.  
   
-##  <a name="getquickaccesstoolbarlocation"></a>  CMFCRibbonBar::GetQuickAccessToolbarLocation  
- Retrieves the display rectangle for the quick access toolbar.  
+##  <a name="getquickaccesstoolbarlocation"></a>CMFCRibbonBar::GetQuickAccessToolbarLocation  
+ Recupera el rectángulo de presentación de la barra de herramientas de acceso rápido.  
   
 ```  
 CRect GetQuickAccessToolbarLocation() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The display rectangle for the quick access toolbar.  
+### <a name="return-value"></a>Valor devuelto  
+ El rectángulo de presentación de la barra de herramientas de acceso rápido.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="gettabtrancateratio"></a>  CMFCRibbonBar::GetTabTrancateRatio  
- Retrieves the percent size reduction in the display width of the category tabs.  
+##  <a name="gettabtrancateratio"></a>CMFCRibbonBar::GetTabTrancateRatio  
+ Recupera la reducción de tamaño porcentual en el ancho de las fichas de categoría.  
   
 ```  
 int GetTabTrancateRatio() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The percent size reduction in the display width of the category tabs.  
+### <a name="return-value"></a>Valor devuelto  
+ El porcentaje de tamaño de reducción en el ancho de las fichas de categoría.  
   
-### <a name="remarks"></a>Remarks  
- Category tabs are reduced in width when there is not enough width on the ribbon bar.  
+### <a name="remarks"></a>Comentarios  
+ Fichas de categorías se reducen el ancho cuando no hay suficiente ancho de la barra de la cinta de opciones.  
   
-##  <a name="gettooltipfixedwidthlargeimage"></a>  CMFCRibbonBar::GetTooltipFixedWidthLargeImage  
- Retrieves the large size of tooltip width for the ribbon bar.  
+##  <a name="gettooltipfixedwidthlargeimage"></a>CMFCRibbonBar::GetTooltipFixedWidthLargeImage  
+ Recupera el tamaño del ancho de la información sobre herramientas de la barra de la cinta de opciones.  
   
 ```  
 int GetTooltipFixedWidthLargeImage() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The large size of tooltip width in pixels.  
+### <a name="return-value"></a>Valor devuelto  
+ El gran tamaño de la información sobre herramientas ancho en píxeles.  
   
-### <a name="remarks"></a>Remarks  
- If the large size of tooltip width is 0, the width varies.  
+### <a name="remarks"></a>Comentarios  
+ Si el tamaño del ancho de la información sobre herramientas es 0, varía según el ancho.  
   
-##  <a name="gettooltipfixedwidthregular"></a>  CMFCRibbonBar::GetTooltipFixedWidthRegular  
- Retrieves the regular size of tooltip width for the ribbon bar.  
+##  <a name="gettooltipfixedwidthregular"></a>CMFCRibbonBar::GetTooltipFixedWidthRegular  
+ Recupera el tamaño normal del ancho de la información sobre herramientas de la barra de la cinta de opciones.  
   
 ```  
 int GetTooltipFixedWidthRegular() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The regular size of tooltip width in pixels.  
+### <a name="return-value"></a>Valor devuelto  
+ El tamaño normal de información sobre herramientas ancho en píxeles.  
   
-### <a name="remarks"></a>Remarks  
- If the regular size of tooltip width is 0, the width varies.  
+### <a name="remarks"></a>Comentarios  
+ Si el tamaño normal del ancho de la información sobre herramientas es 0, varía según el ancho.  
   
-##  <a name="getvisiblecategorycount"></a>  CMFCRibbonBar::GetVisibleCategoryCount  
- Retrieves the number of visible categories on the ribbon bar.  
+##  <a name="getvisiblecategorycount"></a>CMFCRibbonBar::GetVisibleCategoryCount  
+ Recupera el número de categorías visibles en la barra de la cinta de opciones.  
   
 ```  
 int GetVisibleCategoryCount() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The number of visible categories on the ribbon bar.  
+### <a name="return-value"></a>Valor devuelto  
+ El número de categorías visibles en la barra de la cinta de opciones.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="hideallcontextcategories"></a>  CMFCRibbonBar::HideAllContextCategories  
- Hides all the context categories on the ribbon bar.  
+##  <a name="hideallcontextcategories"></a>CMFCRibbonBar::HideAllContextCategories  
+ Oculta todas las categorías de contexto en la barra de la cinta de opciones.  
   
 ```  
 BOOL HideAllContextCategories();
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if at least one context category was hidden; otherwise, `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si se oculta la categoría de al menos un contexto; de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- If a context category is active, the active category is reset to the first visible category in the category list.  
+### <a name="remarks"></a>Comentarios  
+ Si una categoría de contexto está activa, la categoría activa se restablece a la primera categoría visible en la lista de categorías.  
   
-##  <a name="hidekeytips"></a>  CMFCRibbonBar::HideKeyTips  
- Hides all keytips on the ribbon bar.  
+##  <a name="hidekeytips"></a>CMFCRibbonBar::HideKeyTips  
+ Oculta todas las sugerencias de teclas en la barra de la cinta de opciones.  
   
 ```  
 void HideKeyTips();
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="hittest"></a>  CMFCRibbonBar::HitTest  
- Retrieves a pointer to the ribbon element specified by the location of the point.  
+##  <a name="hittest"></a>CMFCRibbonBar::HitTest  
+ Recupera un puntero al elemento de cinta especificado por la ubicación del punto.  
   
 ```  
 virtual CMFCRibbonBaseElement* HitTest(
@@ -1199,141 +1109,141 @@ virtual CMFCRibbonBaseElement* HitTest(
     BOOL bCheckPanelCaption= FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `point`  
- Location of the point in ribbon bar coordinates.  
+ Ubicación del punto en coordenadas de la barra de cinta de opciones.  
   
  [in] `bCheckActiveCategory`  
- `TRUE` to search the active category; `FALSE` not to search the active category.  
+ `TRUE`para buscar la categoría activa; `FALSE` no para buscar la categoría activa.  
   
  [in] `bCheckPanelCaption`  
- `TRUE` to test the caption of the ribbon panel with the point located in it; `FALSE` not to test the caption of the ribbon panel with the point located in it. See the Remarks section for more information.  
+ `TRUE`Para probar el título del panel de la cinta con el punto que se encuentra en él; `FALSE` no para probar el título del panel de la cinta con el punto ubicado en ella. Vea la sección Comentarios para obtener más información.  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the ribbon element located at the specified point; otherwise `NULL` if the point is not located in a ribbon element.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero al elemento de cinta que se encuentra en el punto especificado; de lo contrario `NULL` si el punto no se encuentra en un elemento de la cinta de opciones.  
   
-### <a name="remarks"></a>Remarks  
- The caption of the ribbon panel with the point located in it is not tested unless the `bCheckActiveCategory` parameter is `TRUE`.  
+### <a name="remarks"></a>Comentarios  
+ No se ha probado el título del panel de la cinta con el punto ubicado en él, a menos que la `bCheckActiveCategory` parámetro es `TRUE`.  
   
-##  <a name="iskeytipenabled"></a>  CMFCRibbonBar::IsKeyTipEnabled  
- Indicates whether the keytips feature is enabled.  
+##  <a name="iskeytipenabled"></a>CMFCRibbonBar::IsKeyTipEnabled  
+ Indica si está habilitada la característica de sugerencias de teclas.  
   
 ```  
 BOOL IsKeyTipEnabled() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the keytips feature is enabled; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si está habilitada la característica de sugerencias de teclas; de lo contrario, `FALSE`.  
   
-##  <a name="ismainribbonbar"></a>  CMFCRibbonBar::IsMainRibbonBar  
- Indicates whether the ribbon bar is the primary ribbon bar.  
+##  <a name="ismainribbonbar"></a>CMFCRibbonBar::IsMainRibbonBar  
+ Indica si la barra de cinta es la barra de cinta principal.  
   
 ```  
 virtual BOOL IsMainRibbonBar() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Always returns `TRUE`.  
+### <a name="return-value"></a>Valor devuelto  
+ Siempre devuelve `TRUE`.  
   
-### <a name="remarks"></a>Remarks  
- By default this method always returns `TRUE`. Override this method to indicate whether the ribbon bar is the primary ribbon bar.  
+### <a name="remarks"></a>Comentarios  
+ De forma predeterminada este método siempre devuelve `TRUE`. Invalide este método para indicar si la barra de cinta es la barra de cinta principal.  
   
-##  <a name="isprintpreviewenabled"></a>  CMFCRibbonBar::IsPrintPreviewEnabled  
- Indicates whether the **Print Preview** feature is enabled.  
+##  <a name="isprintpreviewenabled"></a>CMFCRibbonBar::IsPrintPreviewEnabled  
+ Indica si la **preliminar** característica está habilitada.  
   
 ```  
 BOOL IsPrintPreviewEnabled() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the **Print Preview** feature is enabled; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si el **preliminar** característica está habilitada; en caso contrario, `FALSE`.  
   
-##  <a name="isqatempty"></a>  CMFCRibbonBar::IsQATEmpty  
- Indicates whether the quick access toolbar contains command buttons.  
+##  <a name="isqatempty"></a>CMFCRibbonBar::IsQATEmpty  
+ Indica si la barra de herramientas de acceso rápido contiene botones de comando.  
   
 ```  
 BOOL IsQATEmpty() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the quick access toolbar contains command buttons; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si la barra de herramientas de acceso rápido contiene botones de comando; de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="isquickaccesstoolbarontop"></a>  CMFCRibbonBar::IsQuickAccessToolbarOnTop  
- Indicates whether the quick access toolbar is located over or under the ribbon bar.  
+##  <a name="isquickaccesstoolbarontop"></a>CMFCRibbonBar::IsQuickAccessToolbarOnTop  
+ Indica si la barra de herramientas de acceso rápido se encuentra en o debajo de la barra de la cinta de opciones.  
   
 ```  
 BOOL IsQuickAccessToolbarOnTop() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the quick access toolbar is located over the ribbon bar; `FALSE` if the quick access toolbar is located under the ribbon bar.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si la barra de herramientas de acceso rápido se encuentra sobre la barra de la cinta de opciones. `FALSE` si la barra de herramientas de acceso rápido se encuentra en la barra de cinta.  
   
-##  <a name="isreplaceframecaption"></a>  CMFCRibbonBar::IsReplaceFrameCaption  
- Indicates whether the ribbon bar replaces or is under the caption of the main frame window.  
+##  <a name="isreplaceframecaption"></a>CMFCRibbonBar::IsReplaceFrameCaption  
+ Indica si la barra de cinta reemplaza o está bajo el título de la ventana de marco principal.  
   
 ```  
 BOOL IsReplaceFrameCaption() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the ribbon bar replaces the caption of the main frame window; `FALSE` if ribbon bar is under the caption of the main frame window.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si la barra de cinta reemplaza el título de la ventana de marco principal; `FALSE` si la barra de cinta está bajo el título de la ventana de marco principal.  
   
-##  <a name="isshowgroupborder"></a>  CMFCRibbonBar::IsShowGroupBorder  
- Indicates whether button groups located on the ribbon bar display a group border.  
+##  <a name="isshowgroupborder"></a>CMFCRibbonBar::IsShowGroupBorder  
+ Indica si los grupos de botones de la barra de la cinta de opciones muestran un borde de grupo.  
   
 ```  
 virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pGroup`  
- This parameter is not used.  
+ Este parámetro no se utiliza.  
   
-### <a name="return-value"></a>Return Value  
- Always returns `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ Siempre devuelve `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- By default this method always returns `FALSE`. Override this method to indicate whether button groups located on the ribbon bar display a group border.  
+### <a name="remarks"></a>Comentarios  
+ De forma predeterminada este método siempre devuelve `FALSE`. Invalide este método para indicar si un borde de grupo muestran los grupos de botones de la barra de la cinta de opciones.  
   
-##  <a name="istooltipdescrenabled"></a>  CMFCRibbonBar::IsToolTipDescrEnabled  
- Indicates whether tooltip descriptions are enabled.  
+##  <a name="istooltipdescrenabled"></a>CMFCRibbonBar::IsToolTipDescrEnabled  
+ Indica si se habilitan las descripciones de la información sobre herramientas.  
   
 ```  
 BOOL IsToolTipDescrEnabled() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if tooltip descriptions are enabled; `FALSE` if tooltip descriptions are disabled.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si se habilitan las descripciones de la información sobre herramientas; `FALSE` si se deshabilitan las descripciones de la información sobre herramientas.  
   
-### <a name="remarks"></a>Remarks  
- Tooltip descriptions are additional descriptive text displayed with the tooltip text.  
+### <a name="remarks"></a>Comentarios  
+ Las descripciones de la información sobre herramientas son texto descriptivo adicional que se muestran con el texto de información sobre herramientas.  
   
-##  <a name="istooltipenabled"></a>  CMFCRibbonBar::IsToolTipEnabled  
- Indicates whether tooltips are enabled or disabled for the ribbon bar.  
+##  <a name="istooltipenabled"></a>CMFCRibbonBar::IsToolTipEnabled  
+ Indica si información sobre herramientas está habilitado o deshabilitado para la barra de la cinta de opciones.  
   
 ```  
 BOOL IsToolTipEnabled() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if tooltips are enabled; `FALSE` if tooltips are disabled.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si se habilitan las informaciones sobre herramientas; `FALSE` si se deshabilita la información sobre herramientas.  
   
-##  <a name="istransparentcaption"></a>  CMFCRibbonBar::IsTransparentCaption  
- Indicates whether the display is set for Windows Aero color scheme.  
+##  <a name="istransparentcaption"></a>CMFCRibbonBar::IsTransparentCaption  
+ Indica si la pantalla está establecida para la combinación de colores de Aero de Windows.  
   
 ```  
 BOOL IsTransparentCaption() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the color scheme is Windows Aero; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si la combinación de colores es Aero de Windows; de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="onclickbutton"></a>  CMFCRibbonBar::OnClickButton  
- This method is retained for backward compatibility with existing applications and should not be used for new development.  
+##  <a name="onclickbutton"></a>CMFCRibbonBar::OnClickButton  
+ Este método se conserva por compatibilidad con versiones anteriores con aplicaciones existentes y no se recomienda para nuevo desarrollo.  
   
 ```  
 virtual void OnClickButton(
@@ -1341,16 +1251,16 @@ virtual void OnClickButton(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pButton`  
- Pointer to the button that was clicked.  
+ Puntero al botón que se hizo clic.  
   
  [in] `point`  
- This parameter is not used.  
+ Este parámetro no se utiliza.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="oneditcontextmenu"></a>  CMFCRibbonBar::OnEditContextMenu  
+##  <a name="oneditcontextmenu"></a>CMFCRibbonBar::OnEditContextMenu  
 
   
 ```  
@@ -1359,43 +1269,43 @@ virtual void OnEditContextMenu(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pEdit`  
  [in] `point`  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="onrtlchanged"></a>  CMFCRibbonBar::OnRTLChanged  
- Called by the framework when the layout changes direction.  
+##  <a name="onrtlchanged"></a>CMFCRibbonBar::OnRTLChanged  
+ Llamado por el marco de trabajo cuando el diseño cambia de dirección.  
   
 ```  
 virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `bIsRTL`  
- `TRUE` if the layout is right-to-left; `FALSE` if the layout is left-to-right.  
+ `TRUE`Si el diseño es de derecha a izquierda; `FALSE` si el diseño es de izquierda a derecha.  
   
-### <a name="remarks"></a>Remarks  
- This method adjusts the layout of all controls on the ribbon bar for the new layout direction.  
+### <a name="remarks"></a>Comentarios  
+ Este método ajusta el diseño de todos los controles en la barra de la cinta de opciones para la nueva dirección de diseño.  
   
-##  <a name="onsetaccdata"></a>  CMFCRibbonBar::OnSetAccData  
- This method is internal to the Framework and is not intended to be called from user code.  
+##  <a name="onsetaccdata"></a>CMFCRibbonBar::OnSetAccData  
+ Este método es interno del marco y no está destinado a que se lo llame desde el código del usuario.  
   
 ```  
 BOOL OnSetAccData(long lVal);
 ```  
   
-### <a name="parameters"></a>Parameters  
- long `lVal`  
- The index of the accessible object.  
+### <a name="parameters"></a>Parámetros  
+ Long`lVal`  
+ El índice del objeto al que se puede acceder.  
   
-### <a name="return-value"></a>Return Value  
- S_OK if successful; otherwise FALSE or S_FALSE.  
+### <a name="return-value"></a>Valor devuelto  
+ S_OK si es correcto; de lo contrario, FALSE o S_FALSE.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="onshowribboncontextmenu"></a>  CMFCRibbonBar::OnShowRibbonContextMenu  
+##  <a name="onshowribboncontextmenu"></a>CMFCRibbonBar::OnShowRibbonContextMenu  
 
   
 ```  
@@ -1406,17 +1316,17 @@ virtual BOOL OnShowRibbonContextMenu(
     CMFCRibbonBaseElement* pHit);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pWnd`  
  [in] `x`  
  [in] `y`  
  [in] `pHit`  
   
-### <a name="return-value"></a>Return Value  
+### <a name="return-value"></a>Valor devuelto  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="onshowribbonqatmenu"></a>  CMFCRibbonBar::OnShowRibbonQATMenu  
+##  <a name="onshowribbonqatmenu"></a>CMFCRibbonBar::OnShowRibbonQATMenu  
 
   
 ```  
@@ -1427,18 +1337,18 @@ virtual BOOL OnShowRibbonQATMenu(
     CMFCRibbonBaseElement* pHit);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pWnd`  
  [in] `x`  
  [in] `y`  
  [in] `pHit`  
   
-### <a name="return-value"></a>Return Value  
+### <a name="return-value"></a>Valor devuelto  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="onsyskeydown"></a>  CMFCRibbonBar::OnSysKeyDown  
- Called by the framework when the user presses the F10 key or holds down the ALT key and then presses another key.  
+##  <a name="onsyskeydown"></a>CMFCRibbonBar::OnSysKeyDown  
+ Lo llama el marco de trabajo cuando el usuario presiona la tecla F10 o mantiene presionada la tecla ALT y, a continuación, presiona otra tecla.  
   
 ```  
 BOOL OnSysKeyDown(
@@ -1447,23 +1357,23 @@ BOOL OnSysKeyDown(
     LPARAM lParam);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pFrameWnd`  
- Pointer to the parent main frame window of the ribbon bar.  
+ Puntero a la ventana de marco principal primario de la barra de la cinta de opciones.  
   
  [in] `wParam`  
- Virtual key code of the key being pressed.  
+ Código de tecla virtual de presionar la tecla.  
   
  [in] `lParam`  
- Keyboard state flags when the key was pressed.  
+ Cuando se presiona la tecla del teclado indicadores de estado.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the keystroke event was processed; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si se ha procesado el evento de pulsación de tecla; de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="onsyskeyup"></a>  CMFCRibbonBar::OnSysKeyUp  
- Called by the framework when the user releases the F10 key, the ALT key, or a key that was pressed when the ALT key was held down.  
+##  <a name="onsyskeyup"></a>CMFCRibbonBar::OnSysKeyUp  
+ Lo llama el marco de trabajo cuando el usuario suelta una tecla que se presionó cuando se presiona la tecla ALT, la tecla ALT o la tecla F10.  
   
 ```  
 BOOL OnSysKeyUp(
@@ -1472,95 +1382,95 @@ BOOL OnSysKeyUp(
     LPARAM lParam);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pFrameWnd`  
- Pointer to the parent main frame window of the ribbon bar.  
+ Puntero a la ventana de marco principal primario de la barra de la cinta de opciones.  
   
  [in] `wParam`  
- Virtual key code of the key being released.  
+ Código de tecla virtual de la clave que se libera.  
   
  [in] `lParam`  
- This parameter is not used.  
+ Este parámetro no se utiliza.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the keystroke event was processed; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si se ha procesado el evento de pulsación de tecla; de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="poptooltip"></a>  CMFCRibbonBar::PopTooltip  
- Removes a tooltip from view.  
+##  <a name="poptooltip"></a>CMFCRibbonBar::PopTooltip  
+ Quita una información sobre herramientas de la vista.  
   
 ```  
 void PopTooltip();
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="pretranslatemessage"></a>  CMFCRibbonBar::PreTranslateMessage  
- Determines if the specified message is processed by the ribbon bar.  
+##  <a name="pretranslatemessage"></a>CMFCRibbonBar::PreTranslateMessage  
+ Determina si se procesa el mensaje especificado por la barra de la cinta de opciones.  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pMsg`  
- Pointer to a message.  
+ Puntero a un mensaje.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the message was processed by the ribbon bar; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si se ha procesado el mensaje de la barra de la cinta de opciones; de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="recalclayout"></a>  CMFCRibbonBar::RecalcLayout  
- Adjusts the layout of all controls on the ribbon bar.  
+##  <a name="recalclayout"></a>CMFCRibbonBar::RecalcLayout  
+ Ajusta el diseño de todos los controles en la barra de la cinta de opciones.  
   
 ```  
 virtual void RecalcLayout();
 ```  
   
-### <a name="remarks"></a>Remarks  
- After layout adjustment, the display of the ribbon bar is updated.  
+### <a name="remarks"></a>Comentarios  
+ Después del ajuste de diseño, se actualiza la presentación de la barra de cinta.  
   
-##  <a name="removeallcategories"></a>  CMFCRibbonBar::RemoveAllCategories  
- Deletes all ribbon categories from the ribbon bar.  
+##  <a name="removeallcategories"></a>CMFCRibbonBar::RemoveAllCategories  
+ Elimina todas las categorías de la cinta de opciones de la barra de cinta.  
   
 ```  
 void RemoveAllCategories();
 ```  
   
-### <a name="remarks"></a>Remarks  
- This method deletes all ribbon categories from memory and from the category list.  
+### <a name="remarks"></a>Comentarios  
+ Este método elimina todas las categorías de la cinta de opciones de memoria y de la lista de categorías.  
   
-##  <a name="removeallfromtabs"></a>  CMFCRibbonBar::RemoveAllFromTabs  
- Removes all ribbon elements from the tab area.  
+##  <a name="removeallfromtabs"></a>CMFCRibbonBar::RemoveAllFromTabs  
+ Quita todos los elementos de la cinta de opciones del área de pestañas.  
   
 ```  
 void RemoveAllFromTabs();
 ```  
   
-### <a name="remarks"></a>Remarks  
- Use this function if you want to remove all the elements that you added to the tab area by using [CMFCRibbonBar::AddToTabs](#addtotabs) method.  
+### <a name="remarks"></a>Comentarios  
+ Utilice esta función si desea quitar todos los elementos que se agregan al área de ficha mediante [CMFCRibbonBar::AddToTabs](#addtotabs) método.  
   
-##  <a name="removecategory"></a>  CMFCRibbonBar::RemoveCategory  
- Deletes the specified ribbon category from the ribbon bar.  
+##  <a name="removecategory"></a>CMFCRibbonBar::RemoveCategory  
+ Elimina la categoría especificada de la cinta de opciones de la barra de cinta.  
   
 ```  
 BOOL RemoveCategory(int nIndex);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `nIndex`  
- The zero-based index of a category in the list of ribbon categories that is contained in the ribbon bar.  
+ Índice de base cero de una categoría en la lista de categorías de la cinta de opciones que se encuentra en la barra de cinta.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the specified ribbon category was deleted; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si se ha eliminado la categoría especificada de la cinta de opciones; de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The specified ribbon category is deleted from memory and from the category list.  
+### <a name="remarks"></a>Comentarios  
+ La categoría especificada de la cinta de opciones se elimina de la memoria y de la lista de categorías.  
   
-##  <a name="setactivecategory"></a>  CMFCRibbonBar::SetActiveCategory  
- Sets the specified ribbon category as the active category.  
+##  <a name="setactivecategory"></a>CMFCRibbonBar::SetActiveCategory  
+ Establece la categoría de la cinta especificada como la categoría activa.  
   
 ```  
 BOOL SetActiveCategory(
@@ -1568,36 +1478,36 @@ BOOL SetActiveCategory(
     BOOL bForceRestore= FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pCategory`  
- A ribbon category that is contained in the ribbon bar.  
+ Una categoría de cinta que se encuentra en la barra de cinta.  
   
  [in] `bForceRestore`  
- `TRUE` to maximize the ribbon bar if it is minimized; `FALSE` to display the active category in a pop-up window if the ribbon bar is minimized.  
+ `TRUE`para maximizar la barra de cinta si está minimizado; `FALSE` para mostrar la categoría activa en una ventana emergente si se minimiza la barra de cinta.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the specified category was set as the active category; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si la categoría especificada se ha establecido como la categoría activa; de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The main ribbon category cannot be the active category.  
+### <a name="remarks"></a>Comentarios  
+ La categoría principal de la cinta de opciones no puede estar en la categoría activa.  
   
- If the category specified by `pCategory` is not displayed, it cannot be set as the active category.  
+ Si la categoría especificada por `pCategory` no es aparece, no puede establecerse como la categoría activa.  
   
-##  <a name="setactivemdichild"></a>  CMFCRibbonBar::SetActiveMDIChild  
- Associates the system buttons on the ribbon bar that belong to a multiple-document interface (MDI) child window to the specified MDI child window.  
+##  <a name="setactivemdichild"></a>CMFCRibbonBar::SetActiveMDIChild  
+ Asocia los botones de sistema en la barra de cinta que pertenecen a una ventana secundaria de la interfaz de múltiples documentos (MDI) a la ventana secundaria MDI especificada.  
   
 ```  
 void SetActiveMDIChild(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pWnd`  
- Pointer to an MDI child window.  
+ Puntero a una ventana secundaria MDI.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="setapplicationbutton"></a>  CMFCRibbonBar::SetApplicationButton  
- Assigns an application ribbon button to the ribbon bar.  
+##  <a name="setapplicationbutton"></a>CMFCRibbonBar::SetApplicationButton  
+ Asigna un botón de la cinta de opciones de aplicación a la barra de cinta.  
   
 ```  
 void SetApplicationButton(
@@ -1605,23 +1515,23 @@ void SetApplicationButton(
     CSize sizeButton);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pButton`  
- A pointer to the application ribbon button.  
+ Puntero para el botón de la cinta de opciones de aplicación.  
   
  [in] `sizeButton`  
- The size of the application ribbon button.  
+ El tamaño del botón de la cinta de opciones de aplicación.  
   
-### <a name="remarks"></a>Remarks  
- The application ribbon button is a large rounded button located at the upper-left corner of Ribbon control.  
+### <a name="remarks"></a>Comentarios  
+ El botón de la cinta de opciones de aplicación es un botón redondeado grande situado en la esquina superior izquierda del control de la cinta de opciones.  
   
-### <a name="example"></a>Example  
- The following example demonstrates how to use the `SetApplicationButton` method in the `CMFCRibbonBar` class.  
+### <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar el `SetApplicationButton` método en la `CMFCRibbonBar` clase.  
   
- [!code-cpp[NVC_MFC_RibbonApp#3](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp&3;](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_4.cpp)]  
   
-##  <a name="setelementkeys"></a>  CMFCRibbonBar::SetElementKeys  
- Sets the keytips for all ribbon elements that have the specified command ID.  
+##  <a name="setelementkeys"></a>CMFCRibbonBar::SetElementKeys  
+ Establece las sugerencias de teclas para todos los elementos de la cinta de opciones que tienen el identificador de comando especificado.  
   
 ```  
 BOOL SetElementKeys(
@@ -1630,24 +1540,24 @@ BOOL SetElementKeys(
     LPCTSTR lpszMenuKeys= NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `uiCmdID`  
- The command ID of a ribbon element.  
+ El identificador de comando de un elemento de la cinta de opciones.  
   
  [in] `lpszKeys`  
- The keytip.  
+ La sugerencia de tecla.  
   
  [in] `lpszMenuKeys`  
- The menu keytip.  
+ La sugerencia de tecla de menú.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the keytips of at least one ribbon element are set; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si se establecen las sugerencias de teclas del elemento de al menos una cinta de opciones; de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The optional menu keytip is for ribbon elements with a split button that opens a popup menu.  
+### <a name="remarks"></a>Comentarios  
+ La sugerencia de tecla de menú opcional es para los elementos de la cinta de opciones con un botón de división que se abre un menú emergente.  
   
-##  <a name="setkeyboardnavigationlevel"></a>  CMFCRibbonBar::SetKeyboardNavigationLevel  
- Sets the keyboard navigation level as the user presses the keytips that are contained on the ribbon bar.  
+##  <a name="setkeyboardnavigationlevel"></a>CMFCRibbonBar::SetKeyboardNavigationLevel  
+ Establece el nivel de exploración del teclado como el usuario presiona las sugerencias de teclas que se encuentran en la barra de cinta.  
   
 ```  
 void SetKeyboardNavigationLevel(
@@ -1655,18 +1565,18 @@ void SetKeyboardNavigationLevel(
     BOOL bSetFocus = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pLevel`  
- Pointer to the current keyboard navigation object.  
+ Puntero al objeto de navegación de teclado actual.  
   
  [in] `bSetFocus`  
- `TRUE` to set the keyboard focus to the ribbon bar.  
+ `TRUE`Para establecer el foco del teclado en la barra de cinta.  
   
-### <a name="remarks"></a>Remarks  
- Keyboard navigation of the ribbon bar starts when the user presses the ALT or F10 key. The user selects the next navigation level by pressing a keytip on the ribbon bar. The user can return to the previous navigation level by pressing the escape key.  
+### <a name="remarks"></a>Comentarios  
+ Navegación mediante el teclado de la barra de cinta se inicia cuando el usuario presiona la tecla ALT o F10. El usuario selecciona el siguiente nivel de navegación presionando keytip en la barra de la cinta de opciones. El usuario puede volver a nivel de exploración anterior presionando la tecla ESC.  
   
-##  <a name="setmaximizemode"></a>  CMFCRibbonBar::SetMaximizeMode  
- Adjusts the ribbon bar when the window size of a multiple-document interface (MDI) child window enters or leaves the maximized state.  
+##  <a name="setmaximizemode"></a>CMFCRibbonBar::SetMaximizeMode  
+ Ajusta la cinta de opciones de la barra cuando el tamaño de la ventana de una ventana secundaria de la interfaz de múltiples documentos (MDI) entra o sale del estado maximizado.  
   
 ```  
 void SetMaximizeMode(
@@ -1674,18 +1584,18 @@ void SetMaximizeMode(
     CWnd* pWnd = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `bMax`  
- `TRUE` to display the system buttons for an MDI child window on the ribbon bar; `FALSE` to remove the system buttons for an MDI child window from the ribbon bar.  
+ `TRUE`para mostrar los botones de sistema de una ventana secundaria MDI en la barra de la cinta de opciones. `FALSE` para quitar los botones de sistema de una ventana secundaria MDI de la barra de cinta.  
   
  [in] `pWnd`  
- Pointer to the main frame window for the ribbon bar.  
+ Puntero a la ventana de marco principal de la barra de la cinta de opciones.  
   
-### <a name="remarks"></a>Remarks  
- The ribbon bar displays system buttons for an MDI child window in the tab row when an MDI child window is maximized.  
+### <a name="remarks"></a>Comentarios  
+ La barra de la cinta de opciones muestra botones de sistema de una ventana secundaria MDI en la fila de pestañas cuando se maximiza una ventana secundaria MDI.  
   
-##  <a name="setquickaccesscommands"></a>  CMFCRibbonBar::SetQuickAccessCommands  
- Adds one or more ribbon elements to the Quick Access Toolbar.  
+##  <a name="setquickaccesscommands"></a>CMFCRibbonBar::SetQuickAccessCommands  
+ Agrega uno o más elementos de la cinta de opciones a la barra de herramientas de acceso rápido.  
   
 ```  
 void SetQuickAccessCommands(
@@ -1693,50 +1603,50 @@ void SetQuickAccessCommands(
     BOOL bRecalcLayout=TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `lstCommands`  
- The list of commands to be placed on the Quick Access Toolbar.  
+ La lista de comandos que se coloca en la barra de herramientas de acceso rápido.  
   
  [in] `bRecalcLayout`  
- `TRUE` if want to redraw the ribbon after you add the ribbon elements; `FALSE` otherwise.  
+ `TRUE`Si desea volver a dibujar la cinta después de agregar los elementos de la cinta de opciones; `FALSE` en caso contrario.  
   
-### <a name="example"></a>Example  
- The following example demonstrates how to use the `SetQuickAccessCommands` method in the `CMFCRibbonBar` class.  
+### <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar el `SetQuickAccessCommands` método en la `CMFCRibbonBar` clase.  
   
- [!code-cpp[NVC_MFC_RibbonApp#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_5.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp Nº&8;](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_5.cpp)]  
   
-##  <a name="setquickaccessdefaultstate"></a>  CMFCRibbonBar::SetQuickAccessDefaultState  
- Sets the quick access toolbar to the default state.  
+##  <a name="setquickaccessdefaultstate"></a>CMFCRibbonBar::SetQuickAccessDefaultState  
+ Establece la barra de herramientas de acceso rápido al estado predeterminado.  
   
 ```  
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `state`  
- The quick access toolbar default state.  
+ El estado predeterminado de barra de herramientas de acceso rápido.  
   
-### <a name="remarks"></a>Remarks  
- The quick access toolbar state includes a list of commands and their visibility.  
+### <a name="remarks"></a>Comentarios  
+ El estado de la barra de herramientas de acceso rápido incluye una lista de comandos y su visibilidad.  
   
-### <a name="example"></a>Example  
- The following example demonstrates how to use the `SetQuickAccessDefaultState` method in the `CMFCRibbonBar` class.  
+### <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar el `SetQuickAccessDefaultState` método en la `CMFCRibbonBar` clase.  
   
- [!code-cpp[NVC_MFC_RibbonApp#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_6.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp&#9;](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_6.cpp)]  
   
-##  <a name="setquickaccesstoolbarontop"></a>  CMFCRibbonBar::SetQuickAccessToolbarOnTop  
- Positions the quick access toolbar above or below the ribbon bar.  
+##  <a name="setquickaccesstoolbarontop"></a>CMFCRibbonBar::SetQuickAccessToolbarOnTop  
+ Coloca la barra de herramientas de acceso rápido por encima o debajo de la barra de la cinta de opciones.  
   
 ```  
 void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `bOnTop`  
- `TRUE` to position the quick access toolbar above the ribbon bar; `FALSE` to position the quick access toolbar below the ribbon bar.  
+ `TRUE`para colocar la barra de herramientas de acceso rápido encima de la barra de la cinta de opciones; `FALSE` para colocar la barra de herramientas de acceso rápido debajo de la barra de la cinta de opciones.  
   
-##  <a name="settooltipfixedwidth"></a>  CMFCRibbonBar::SetTooltipFixedWidth  
- Sets the regular and large sizes of tooltip fixed widths for the ribbon bar.  
+##  <a name="settooltipfixedwidth"></a>CMFCRibbonBar::SetTooltipFixedWidth  
+ Establece los tamaños grandes y regulares de información sobre herramientas que se fija el ancho de la barra de la cinta de opciones.  
   
 ```  
 void SetTooltipFixedWidth(
@@ -1744,18 +1654,18 @@ void SetTooltipFixedWidth(
     int nWidthLargeImage);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `nWidthRegular`  
- The width, in pixels, of a regular fixed sized tooltip.  
+ El ancho, en píxeles, de la información de tamaño fijo normal.  
   
  [in] `nWidthLargeImage`  
- The width, in pixels, of a large fixed sized tooltip.  
+ El ancho, en píxeles, de gran tamaño fijo de tamaño información sobre herramientas.  
   
-### <a name="remarks"></a>Remarks  
- Setting a parameter to 0 causes the corresponding width to vary.  
+### <a name="remarks"></a>Comentarios  
+ Si un parámetro en 0 hace que el ancho correspondiente variar.  
   
-##  <a name="showcategory"></a>  CMFCRibbonBar::ShowCategory  
- Shows or hides the specified ribbon category.  
+##  <a name="showcategory"></a>CMFCRibbonBar::ShowCategory  
+ Muestra u oculta la categoría de la cinta de opciones especificada.  
   
 ```  
 void ShowCategory(
@@ -1763,15 +1673,15 @@ void ShowCategory(
     BOOL bShow=TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `nIndex`  
- The index of the ribbon category.  
+ El índice de la categoría de cinta de opciones.  
   
  [in] `bShow`  
- If `TRUE`, show the ribbon category; otherwise, hide the ribbon category.  
+ Si `TRUE`, mostrar la categoría de cinta de opciones; en caso contrario, ocultar la categoría de cinta de opciones.  
   
-##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories  
- Shows or hides the context categories that have the specified ID.  
+##  <a name="showcontextcategories"></a>CMFCRibbonBar::ShowContextCategories  
+ Muestra u oculta las categorías de contexto que tienen el identificador especificado.  
   
 ```  
 void ShowContextCategories(
@@ -1779,77 +1689,77 @@ void ShowContextCategories(
     BOOL bShow=TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `uiContextID`  
- The context category ID.  
+ El identificador de categoría de contexto.  
   
  [in] `bShow`  
- If `TRUE`, show the categories that have the specified ID; otherwise, hide the categories that have the specified ID.  
+ Si `TRUE`, mostrar las categorías que tienen el identificador especificado; en caso contrario, ocultar las categorías que tienen el identificador especificado.  
   
-##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips  
- Shows the keytips for each ribbon element on the ribbon bar.  
+##  <a name="showkeytips"></a>CMFCRibbonBar::ShowKeyTips  
+ Muestra las sugerencias de teclas para cada elemento de la cinta de opciones en la barra de la cinta de opciones.  
   
 ```  
 void ShowKeyTips();
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="togglemimimizestate"></a>  CMFCRibbonBar::ToggleMimimizeState  
- Toggles the ribbon bar between the minimized and maximized states.  
+##  <a name="togglemimimizestate"></a>CMFCRibbonBar::ToggleMimimizeState  
+ Alterna la barra de cinta entre los estados minimizado y maximizado.  
   
 ```  
 void ToggleMimimizeState();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The misspelling in the method name is a known issue.  
+### <a name="remarks"></a>Comentarios  
+ El error ortográfico en el nombre del método es un problema conocido.  
   
- In the minimized state, the ribbon control is hidden and only the tabs are displayed. When the user clicks a tab, the ribbon control is displayed as a popup window. The window closes when the user clicks away or executes a command.  
+ En el estado minimizado, el control de cinta está oculto y solo se muestran las pestañas. Cuando el usuario hace clic en una pestaña, el control de cinta se muestra como una ventana emergente. La ventana se cierra cuando el usuario hace clic fuera o ejecuta un comando.  
   
-##  <a name="translatechar"></a>  CMFCRibbonBar::TranslateChar  
- Determines whether the specified keystroke character code is processed by the ribbon bar.  
+##  <a name="translatechar"></a>CMFCRibbonBar::TranslateChar  
+ Determina si se procesa el código de carácter de pulsación de tecla especificada por la barra de la cinta de opciones.  
   
 ```  
 virtual BOOL TranslateChar(UINT nChar);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `nChar`  
- A user keystroke character code.  
+ Un código de carácter de pulsación de tecla de usuario.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the character code was processed by the ribbon bar; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si el código de carácter se ha procesado por la barra de la cinta de opciones. de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
- The keytips feature enables users to navigate the ribbon bar by using the keyboard.  
+### <a name="remarks"></a>Comentarios  
+ La característica de sugerencias de teclas permite a los usuarios navegar por la barra de la cinta de opciones mediante el teclado.  
   
-##  <a name="getfocused"></a>  CMFCRibbonBar::GetFocused  
- Returns a focused element.  
+##  <a name="getfocused"></a>CMFCRibbonBar::GetFocused  
+ Devuelve un elemento que tiene el foco.  
   
 ```  
 virtual CMFCRibbonBaseElement* GetFocused();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to a focused element or `NULL`.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero a un elemento enfocado o `NULL`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="iswindows7look"></a>  CMFCRibbonBar::IsWindows7Look  
- Indicates whether the ribbon has Windows 7 look (small rectangular application button).  
+##  <a name="iswindows7look"></a>CMFCRibbonBar::IsWindows7Look  
+ Indica si la cinta tiene Windows 7 buscar (botón pequeña aplicación rectangular).  
   
 ```  
 BOOL IsWindows7Look() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the ribbon has Windows 7 look; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si la cinta tiene Windows 7 de búsqueda; de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="loadfromresource"></a>  CMFCRibbonBar::LoadFromResource  
- Overloaded. Loads a Ribbon Bar from application resources.  
+##  <a name="loadfromresource"></a>CMFCRibbonBar::LoadFromResource  
+ Sobrecargado. Carga una barra de cinta a partir de los recursos de la aplicación.  
   
 ```  
 virtual BOOL LoadFromResource(
@@ -1864,58 +1774,58 @@ virtual BOOL LoadFromResource(
     HINSTANCE hInstance = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `uiXMLResID`  
- Specifies resource ID of XML string with Ribbon Bar information.  
+ Especifica el recurso de cadena del identificador de XML con información de la barra de la cinta de opciones.  
   
  `lpszResType`  
- Specifies type of the resource located at `uiXMLResID`.  
+ Especifica el tipo de recurso ubicado en `uiXMLResID`.  
   
  `hInstance`  
- Handle to the module whose executable file contains the resource. If `hInstance` is `NULL`, the system loads the resource from the module that was used to create the current process.  
+ Identificador del módulo cuyo archivo ejecutable contiene el recurso. Si `hInstance` es `NULL`, el sistema carga el recurso desde el módulo que se usó para crear el proceso actual.  
   
  `lpszXMLResID`  
- Specifies resource ID (in string form) with Ribbon Bar information.  
+ Especifica el identificador de recurso (en forma de cadena) con información de la barra de la cinta de opciones.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if load succeeds; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si la carga se realiza correctamente; de lo contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="savetoxmlbuffer"></a>  CMFCRibbonBar::SaveToXMLBuffer  
- Saves the Ribbon Bar to a buffer.  
+##  <a name="savetoxmlbuffer"></a>CMFCRibbonBar::SaveToXMLBuffer  
+ Guarda la barra de cinta en un búfer.  
   
 ```  
 UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `ppBuffer`  
- When this function returns, `ppBuffer` points to a buffer allocated by this method and contains Ribbon Bar information in XML format.  
+ Esta función devuelve `ppBuffer` apunta a un búfer asignado por este método y contiene información de la barra de la cinta de opciones en formato XML.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if successful; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE` si es correcto; en caso contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="savetoxmlfile"></a>  CMFCRibbonBar::SaveToXMLFile  
- Saves the Ribbon Bar to an XML file.  
+##  <a name="savetoxmlfile"></a>CMFCRibbonBar::SaveToXMLFile  
+ La barra de cinta se guarda en un archivo XML.  
   
 ```  
 BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `lpszFilePath`  
- Specifies the output file.  
+ Especifica el archivo de salida.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if successful; otherwise `FALSE`.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE` si es correcto; en caso contrario, `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="setwindows7look"></a>  CMFCRibbonBar::SetWindows7Look  
- Enables or disables Windows 7 look (small rectangular application button) for the Ribbon.  
+##  <a name="setwindows7look"></a>CMFCRibbonBar::SetWindows7Look  
+ Habilita o deshabilita la apariencia de Windows 7 (botón aplicación rectangular pequeño) de la cinta de opciones.  
   
 ```  
 void SetWindows7Look(
@@ -1923,23 +1833,23 @@ void SetWindows7Look(
     BOOL bRecalc = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bWindows7Look`  
- `TRUE` sets Windows 7 look; `FALSE` otherwise.  
+ `TRUE`establece la apariencia de Windows 7; `FALSE` en caso contrario.  
   
  `bRecalc`  
- `TRUE` recalculates the ribbon layout; `FALSE` otherwise.  
+ `TRUE`vuelve a calcular el diseño de la cinta de opciones; `FALSE` en caso contrario.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CPane Class](../../mfc/reference/cpane-class.md)   
- [CMFCRibbonCategory Class](../../mfc/reference/cmfcribboncategory-class.md)   
- [CMFCRibbonPanel Class](../../mfc/reference/cmfcribbonpanel-class.md)   
- [CMFCRibbonBaseElement Class](../../mfc/reference/cmfcribbonbaseelement-class.md)   
- [Walkthrough: Updating the MFC Scribble Application](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [Clases](../../mfc/reference/mfc-classes.md)   
+ [Clase CPane](../../mfc/reference/cpane-class.md)   
+ [Clase de CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)   
+ [Clase CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)   
+ [Clase CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)   
+ [Tutorial: Actualizar la aplicación Scribble MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
 
 
 

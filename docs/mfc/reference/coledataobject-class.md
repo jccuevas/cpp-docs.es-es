@@ -1,5 +1,5 @@
 ---
-title: COleDataObject Class | Microsoft Docs
+title: Clase COleDataObject | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,17 +25,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COleDataObject [MFC], COleDataObject
-- COleDataObject [MFC], Attach
-- COleDataObject [MFC], AttachClipboard
-- COleDataObject [MFC], BeginEnumFormats
-- COleDataObject [MFC], Detach
-- COleDataObject [MFC], GetData
-- COleDataObject [MFC], GetFileData
-- COleDataObject [MFC], GetGlobalData
-- COleDataObject [MFC], GetNextFormat
-- COleDataObject [MFC], IsDataAvailable
-- COleDataObject [MFC], Release
+- drag and drop [C++], MFC support
+- Clipboard [C++], OLE support
+- uniform data transfer
+- OLE [C++], uniform data transfer
+- Clipboard [C++], MFC support
+- OLE Clipboard [C++], support
+- IDataObject interface, MFC encapsulation
+- data transfer [C++]
+- data transfer [C++], OLE
+- OLE data transfer [C++]
+- COleDataObject class
+- uniform data transfer, OLE
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
 caps.latest.revision: 20
 author: mikeblome
@@ -55,64 +56,64 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: f27818432b8c28445d344e6e92f853882b1f3b08
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: f30ca208252fe81f1e47d9e8f817cb9137656540
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="coledataobject-class"></a>COleDataObject Class
-Used in data transfers for retrieving data in various formats from the Clipboard, through drag and drop, or from an embedded OLE item.  
+# <a name="coledataobject-class"></a>Clase COleDataObject
+Se utiliza en las transferencias de datos para recuperar datos en diferentes formatos del Portapapeles, mediante arrastrar y colocar o a partir de un elemento OLE incrustado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class COleDataObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[COleDataObject::COleDataObject](#coledataobject)|Constructs a `COleDataObject` object.|  
+|[COleDataObject::COleDataObject](#coledataobject)|Construye un objeto `COleDataObject`.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[COleDataObject::Attach](#attach)|Attaches the specified OLE data object to the `COleDataObject`.|  
-|[COleDataObject::AttachClipboard](#attachclipboard)|Attaches the data object that is on the Clipboard.|  
-|[COleDataObject::BeginEnumFormats](#beginenumformats)|Prepares for one or more subsequent `GetNextFormat` calls.|  
-|[COleDataObject::Detach](#detach)|Detaches the associated `IDataObject` object.|  
-|[COleDataObject::GetData](#getdata)|Copies data from the attached OLE data object in a specified format.|  
-|[COleDataObject::GetFileData](#getfiledata)|Copies data from the attached OLE data object into a `CFile` pointer in the specified format.|  
-|[COleDataObject::GetGlobalData](#getglobaldata)|Copies data from the attached OLE data object into an `HGLOBAL` in the specified format.|  
-|[COleDataObject::GetNextFormat](#getnextformat)|Returns the next data format available.|  
-|[COleDataObject::IsDataAvailable](#isdataavailable)|Checks whether data is available in a specified format.|  
-|[COleDataObject::Release](#release)|Detaches and releases the associated `IDataObject` object.|  
+|[COleDataObject::Attach](#attach)|Adjunta el objeto de datos OLE especificado en el `COleDataObject`.|  
+|[COleDataObject::AttachClipboard](#attachclipboard)|Asocia el objeto de datos en el Portapapeles.|  
+|[COleDataObject:: BeginEnumFormats](#beginenumformats)|Se prepara para uno o más subsiguiente `GetNextFormat` llamadas.|  
+|[COleDataObject::Detach](#detach)|Desasocia asociado `IDataObject` objeto.|  
+|[COleDataObject::GetData](#getdata)|Copia datos desde el objeto de datos OLE adjunto en un formato especificado.|  
+|[COleDataObject::GetFileData](#getfiledata)|Copia datos desde el objeto de datos OLE adjunto en un `CFile` puntero en el formato especificado.|  
+|[COleDataObject::GetGlobalData](#getglobaldata)|Copia datos desde el objeto de datos OLE adjunto en un `HGLOBAL` en el formato especificado.|  
+|[COleDataObject::GetNextFormat](#getnextformat)|Devuelve el siguiente formato de datos disponible.|  
+|[COleDataObject:: IsDataAvailable](#isdataavailable)|Comprueba si los datos están disponibles en un formato especificado.|  
+|[COleDataObject::Release](#release)|Desasocia y libera asociado `IDataObject` objeto.|  
   
-## <a name="remarks"></a>Remarks  
- `COleDataObject` does not have a base class.  
+## <a name="remarks"></a>Comentarios  
+ `COleDataObject`no tiene una clase base.  
   
- These kinds of data transfers include a source and a destination. The data source is implemented as an object of the [COleDataSource](../../mfc/reference/coledatasource-class.md) class. Whenever a destination application has data dropped in it or is asked to perform a paste operation from the Clipboard, an object of the `COleDataObject` class must be created.  
+ Estos tipos de transferencias de datos incluyen un origen y un destino. El origen de datos se implementa como un objeto de la [COleDataSource](../../mfc/reference/coledatasource-class.md) clase. Cada vez que una aplicación de destino tiene datos colocados en él o se le pide que realice una operación de pegar desde el Portapapeles, un objeto de la `COleDataObject` debe crearse la clase.  
   
- This class enables you to determine whether the data exists in a specified format. You can also enumerate the available data formats or check whether a given format is available and then retrieve the data in the preferred format. Object retrieval can be accomplished in several different ways, including the use of a [CFile](../../mfc/reference/cfile-class.md), an `HGLOBAL`, or an **STGMEDIUM** structure.  
+ Esta clase le permite determinar si los datos existen en un formato especificado. Puede también enumere los formatos de datos disponibles o compruebe si un formato determinado está disponible y, a continuación, recuperar los datos en el formato preferido. Se puede realizar la recuperación de objetos de diferentes maneras, incluido el uso de un [CFile](../../mfc/reference/cfile-class.md), un `HGLOBAL`, o un **STGMEDIUM** estructura.  
   
- For more information, see the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure in the Windows SDK.  
+ Para obtener más información, consulte el [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) estructura en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
- For more information about using data objects in your application, see the article [Data Objects and Data Sources (OLE)](../../mfc/data-objects-and-data-sources-ole.md).  
+ Para obtener más información acerca de cómo utilizar objetos de datos en su aplicación, vea el artículo [objetos de datos y orígenes de datos (OLE)](../../mfc/data-objects-and-data-sources-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `COleDataObject`  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxole.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxole.h  
   
-##  <a name="attach"></a>  COleDataObject::Attach  
- Call this function to associate the `COleDataObject` object with an OLE data object.  
+##  <a name="attach"></a>COleDataObject::Attach  
+ Llame a esta función para asociar el `COleDataObject` con un objeto de datos OLE.  
   
 ```  
 void Attach(
@@ -120,72 +121,72 @@ void Attach(
     BOOL bAutoRelease = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *lpDataObject*  
- Points to an OLE data object.  
+ Apunta a un objeto de datos OLE.  
   
  `bAutoRelease`  
- **TRUE** if the OLE data object should be released when the `COleDataObject` object is destroyed; otherwise **FALSE**.  
+ **TRUE** si el objeto de datos OLE debe ser liberarla al `COleDataObject` objetos se destruyen; en caso contrario **FALSE**.  
   
-### <a name="remarks"></a>Remarks  
- For more information, see [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) in the Windows SDK.  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="attachclipboard"></a>  COleDataObject::AttachClipboard  
- Call this function to attach the data object that is currently on the Clipboard to the `COleDataObject` object.  
+##  <a name="attachclipboard"></a>COleDataObject::AttachClipboard  
+ Llame a esta función para asociar el objeto de datos que está actualmente en el Portapapeles para el `COleDataObject` objeto.  
   
 ```  
 BOOL AttachClipboard();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
->  Calling this function locks the Clipboard until this data object is released. The data object is released in the destructor for the `COleDataObject`. For more information, see [OpenClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649048) and [CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) in the Win32 documention.  
+>  Llamar a esta función bloquea el Portapapeles hasta que se publique este objeto de datos. Se libera el objeto de datos en el destructor de la `COleDataObject`. Para obtener más información, consulte [llamar a OpenClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649048) y [CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) en la documentación de Win32.  
   
-##  <a name="beginenumformats"></a>  COleDataObject::BeginEnumFormats  
- Call this function to prepare for subsequent calls to `GetNextFormat` for retrieving a list of data formats from the item.  
+##  <a name="beginenumformats"></a>COleDataObject:: BeginEnumFormats  
+ Llame a esta función para prepararse para las llamadas subsiguientes a `GetNextFormat` para recuperar una lista de formatos de datos del elemento.  
   
 ```  
 void BeginEnumFormats();
 ```  
   
-### <a name="remarks"></a>Remarks  
- After a call to `BeginEnumFormats`, the position of the first format supported by this data object is stored. Successive calls to `GetNextFormat` will enumerate the list of available formats in the data object.  
+### <a name="remarks"></a>Comentarios  
+ Después de llamar a `BeginEnumFormats`, se almacena la posición del primer formato admitido por este objeto de datos. Las llamadas sucesivas a `GetNextFormat` se enumere los formatos disponibles en el objeto de datos.  
   
- To check on the availability of data in a given format, use [COleDataObject::IsDataAvailable](#isdataavailable).  
+ Para comprobar la disponibilidad de los datos en un formato determinado, utilice [COleDataObject:: IsDataAvailable](#isdataavailable).  
   
- For more information, see [IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) in the Windows SDK.  
+ Para obtener más información, consulte [IDataObject:: EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="coledataobject"></a>  COleDataObject::COleDataObject  
- Constructs a `COleDataObject` object.  
+##  <a name="coledataobject"></a>COleDataObject::COleDataObject  
+ Construye un objeto `COleDataObject`.  
   
 ```  
 COleDataObject();
 ```  
   
-### <a name="remarks"></a>Remarks  
- A call to [COleDataObject::Attach](#attach) or [COleDataObject::AttachClipboard](#attachclipboard) must be made before calling other `COleDataObject` functions.  
+### <a name="remarks"></a>Comentarios  
+ Una llamada a [COleDataObject::Attach](#attach) o [COleDataObject::AttachClipboard](#attachclipboard) deben realizarse antes de llamar a otros `COleDataObject` funciones.  
   
 > [!NOTE]
->  Since one of the parameters to the drag-and-drop handlers is a pointer to a `COleDataObject`, there is no need to call this constructor to support drag and drop.  
+>  Dado que uno de los parámetros a los controladores de arrastrar y colocar es un puntero a un `COleDataObject`, no es necesario llamar a este constructor para admitir de arrastrar y colocar.  
   
-##  <a name="detach"></a>  COleDataObject::Detach  
- Call this function to detach the `COleDataObject` object from its associated OLE data object without releasing the data object.  
+##  <a name="detach"></a>COleDataObject::Detach  
+ Llame a esta función para separar el `COleDataObject` objeto de su objeto de datos OLE asociado sin liberar el objeto de datos.  
   
 ```  
 LPDATAOBJECT Detach();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the OLE data object that was detached.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero al objeto de datos OLE que se separó.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="getdata"></a>  COleDataObject::GetData  
- Call this function to retrieve data from the item in the specified format.  
+##  <a name="getdata"></a>COleDataObject::GetData  
+ Llame a esta función para recuperar datos desde el elemento en el formato especificado.  
   
 ```  
 BOOL GetData(
@@ -194,26 +195,26 @@ BOOL GetData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `cfFormat`  
- The format in which data is to be returned. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
+ El formato en el que se devolverán datos. Este parámetro puede ser uno de los formatos de Portapapeles predefinidos o el valor devuelto por el Windows nativo [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (función).  
   
  `lpStgMedium`  
- Points to a [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure that will receive data.  
+ Apunta a un [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) estructura que recibirá los datos.  
   
  `lpFormatEtc`  
- Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which data is to be returned. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, the default values are used for the other fields in the **FORMATETC** structure.  
+ Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se devolverán datos. Especifique un valor para este parámetro si desea especificar información de formato adicional más allá del formato del Portapapeles especificado por `cfFormat`. Si es **NULL**, se utilizan los valores predeterminados para los demás campos en la **FORMATETC** estructura.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
-### <a name="remarks"></a>Remarks  
- For more information, see [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431), [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431), [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), y [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
- For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
+ Para obtener más información, consulte [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="getfiledata"></a>  COleDataObject::GetFileData  
- Call this function to create a `CFile` or `CFile`-derived object and to retrieve data in the specified format into a `CFile` pointer.  
+##  <a name="getfiledata"></a>COleDataObject::GetFileData  
+ Llame a esta función para crear un `CFile` o `CFile`-objeto derivado y recuperar datos en el formato especificado en un `CFile` puntero.  
   
 ```  
 CFile* GetFileData(
@@ -221,28 +222,28 @@ CFile* GetFileData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `cfFormat`  
- The format in which data is to be returned. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
+ El formato en el que se devolverán datos. Este parámetro puede ser uno de los formatos de Portapapeles predefinidos o el valor devuelto por el Windows nativo [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (función).  
   
  `lpFormatEtc`  
- Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which data is to be returned. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, the default values are used for the other fields in the **FORMATETC** structure.  
+ Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se devolverán datos. Especifique un valor para este parámetro si desea especificar información de formato adicional más allá del formato del Portapapeles especificado por `cfFormat`. Si es **NULL**, se utilizan los valores predeterminados para los demás campos en la **FORMATETC** estructura.  
   
-### <a name="return-value"></a>Return Value  
- Pointer to the new `CFile` or `CFile`-derived object containing the data if successful; otherwise **NULL**.  
+### <a name="return-value"></a>Valor devuelto  
+ Puntero a la nueva `CFile` o `CFile`-objeto derivado que contiene los datos si es correcto; en caso contrario **NULL**.  
   
-### <a name="remarks"></a>Remarks  
- Depending on the medium the data is stored in, the actual type pointed to by the return value may be `CFile`, `CSharedFile`, or `COleStreamFile`.  
+### <a name="remarks"></a>Comentarios  
+ Según el medio de los datos se almacenan en el tipo real señalado por el valor devuelto puede ser `CFile`, `CSharedFile`, o `COleStreamFile`.  
   
 > [!NOTE]
->  The `CFile` object accessed by the return value of this function is owned by the caller. It is the responsibility of the caller to **delete** the `CFile` object, thereby closing the file.  
+>  La `CFile` objeto accediendo el valor devuelto de esta función es propiedad de la llamada. Es responsabilidad del autor de la llamada a **eliminar** la `CFile` objeto, con lo que se cierre el archivo.  
   
- For more information, see [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
+ Para obtener más información, consulte [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
- For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
+ Para obtener más información, consulte [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="getglobaldata"></a>  COleDataObject::GetGlobalData  
- Call this function to allocate a global memory block and to retrieve data in the specified format into an `HGLOBAL`.  
+##  <a name="getglobaldata"></a>COleDataObject::GetGlobalData  
+ Llame a esta función para asignar un bloque de memoria global y recuperar datos en el formato especificado en un `HGLOBAL`.  
   
 ```  
 HGLOBAL GetGlobalData(
@@ -250,44 +251,44 @@ HGLOBAL GetGlobalData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `cfFormat`  
- The format in which data is to be returned. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
+ El formato en el que se devolverán datos. Este parámetro puede ser uno de los formatos de Portapapeles predefinidos o el valor devuelto por el Windows nativo [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (función).  
   
  `lpFormatEtc`  
- Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which data is to be returned. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, the default values are used for the other fields in the **FORMATETC** structure.  
+ Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se devolverán datos. Especifique un valor para este parámetro si desea especificar información de formato adicional más allá del formato del Portapapeles especificado por `cfFormat`. Si es **NULL**, se utilizan los valores predeterminados para los demás campos en la **FORMATETC** estructura.  
   
-### <a name="return-value"></a>Return Value  
- The handle of the global memory block containing the data if successful; otherwise **NULL**.  
+### <a name="return-value"></a>Valor devuelto  
+ El identificador del bloque de memoria global que contiene los datos si es correcto; de lo contrario, **NULL**.  
   
-### <a name="remarks"></a>Remarks  
- For more information, see [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
- For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
+ Para obtener más información, consulte [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="getnextformat"></a>  COleDataObject::GetNextFormat  
- Call this function repeatedly to obtain all the formats available for retrieving data from the item.  
+##  <a name="getnextformat"></a>COleDataObject::GetNextFormat  
+ Llame a esta función repetidamente para obtener todos los formatos disponibles para recuperar datos de elemento.  
   
 ```  
 BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `lpFormatEtc`  
- Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure that receives the format information when the function call returns.  
+ Apunta a la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que recibe la información de formato cuando finaliza la llamada de función.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if another format is available; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ El formato es distinto de cero si el otro está disponible; en caso contrario, 0.  
   
-### <a name="remarks"></a>Remarks  
- After a call to [COleDataObject::BeginEnumFormats](#beginenumformats), the position of the first format supported by this data object is stored. Successive calls to `GetNextFormat` will enumerate the list of available formats in the data object. Use these functions to list the available formats.  
+### <a name="remarks"></a>Comentarios  
+ Después de llamar a [COleDataObject:: BeginEnumFormats](#beginenumformats), se almacena la posición del primer formato admitido por este objeto de datos. Las llamadas sucesivas a `GetNextFormat` se enumere los formatos disponibles en el objeto de datos. Utilice estas funciones para enumerar los formatos disponibles.  
   
- To check for the availability of a given format, call [COleDataObject::IsDataAvailable](#isdataavailable).  
+ Para comprobar la disponibilidad de un formato determinado, llame a [COleDataObject:: IsDataAvailable](#isdataavailable).  
   
- For more information, see [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) in the Windows SDK.  
+ Para obtener más información, consulte [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="isdataavailable"></a>  COleDataObject::IsDataAvailable  
- Call this function to determine if a particular format is available for retrieving data from the OLE item.  
+##  <a name="isdataavailable"></a>COleDataObject:: IsDataAvailable  
+ Llame a esta función para determinar si un formato concreto está disponible para recuperar datos de elemento OLE.  
   
 ```  
 BOOL IsDataAvailable(
@@ -295,41 +296,41 @@ BOOL IsDataAvailable(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `cfFormat`  
- The Clipboard data format to be used in the structure pointed to by `lpFormatEtc`. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
+ El formato de datos de Portapapeles para utilizarlo en la estructura que apunta `lpFormatEtc`. Este parámetro puede ser uno de los formatos de Portapapeles predefinidos o el valor devuelto por el Windows nativo [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) (función).  
   
  `lpFormatEtc`  
- Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format desired. Provide a value for this parameter only if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, the default values are used for the other fields in the **FORMATETC** structure.  
+ Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato deseado. Proporcione un valor para este parámetro solo si desea especificar información de formato adicional más allá del formato del Portapapeles especificado por `cfFormat`. Si es **NULL**, se utilizan los valores predeterminados para los demás campos en la **FORMATETC** estructura.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if data is available in the specified format; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ Distinto de cero si los datos están disponibles en el formato especificado; en caso contrario, 0.  
   
-### <a name="remarks"></a>Remarks  
- This function is useful before calling `GetData`, `GetFileData`, or `GetGlobalData`.  
+### <a name="remarks"></a>Comentarios  
+ Esta función resulta útil antes de llamar a `GetData`, `GetFileData`, o `GetGlobalData`.  
   
- For more information, see [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
+ Para obtener más información, consulte [IDataObject:: QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) y [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
- For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
+ Para obtener más información, consulte [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="example"></a>Example  
-  See the example for [CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata).  
+### <a name="example"></a>Ejemplo  
+  Vea el ejemplo de [CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata).  
   
-##  <a name="release"></a>  COleDataObject::Release  
- Call this function to release ownership of the [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) object that was previously associated with the `COleDataObject` object.  
+##  <a name="release"></a>COleDataObject::Release  
+ Llame a esta función para liberar la propiedad de la [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) objeto que estaba asociado previamente a la `COleDataObject` objeto.  
   
 ```  
 void Release();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The `IDataObject` was associated with the `COleDataObject` by calling **Attach** or `AttachClipboard` explicitly or by the framework. If the `bAutoRelease` parameter of **Attach** is **FALSE**, the `IDataObject` object will not be released. In this case, the caller is responsible for releasing the `IDataObject` by calling [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
+### <a name="remarks"></a>Comentarios  
+ El `IDataObject` estuvo asociado a la `COleDataObject` llamando a **adjuntar** o `AttachClipboard` o explícitamente por el marco de trabajo. Si el `bAutoRelease` parámetro de **adjuntar** es **FALSE**, el `IDataObject` no se liberará el objeto. En este caso, el llamador es responsable de liberar la `IDataObject` llamando a [IUnknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
   
-## <a name="see-also"></a>See Also  
- [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
- [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [COleDataSource Class](../../mfc/reference/coledatasource-class.md)   
- [COleClientItem Class](../../mfc/reference/coleclientitem-class.md)   
- [COleServerItem Class](../../mfc/reference/coleserveritem-class.md)
+## <a name="see-also"></a>Vea también  
+ [Ejemplo HIERSVR](../../visual-cpp-samples.md)   
+ [Ejemplo MFC OCLIENT](../../visual-cpp-samples.md)   
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [COleDataSource (clase)](../../mfc/reference/coledatasource-class.md)   
+ [Clase de COleClientItem](../../mfc/reference/coleclientitem-class.md)   
+ [Clase COleServerItem](../../mfc/reference/coleserveritem-class.md)
 

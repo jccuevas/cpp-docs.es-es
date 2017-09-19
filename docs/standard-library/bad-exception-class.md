@@ -1,5 +1,5 @@
 ---
-title: bad_exception Class | Microsoft Docs
+title: bad_exception (Clase)| Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- bad_exception
 - exception/std::bad_exception
 dev_langs:
 - C++
@@ -33,38 +34,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 2b61ecbc5e990f94f7d8fc4078ebaa644d78af88
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 7870c00b019718188b80a64e0102638deb76f588
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="badexception-class"></a>bad_exception Class
-The class describes an exception that can be thrown from an unexpected handler.  
+# <a name="badexception-class"></a>Clase bad_exception
+La clase describe una excepción que se puede iniciar desde un controlador inesperado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class bad_exception    : public exception {};  
 ```  
   
-## <a name="remarks"></a>Remarks  
- [unexpected](../standard-library/exception-functions.md#unexpected) will throw a `bad_exception` instead of terminating or instead of calling another function specified with [set_unexpected](../standard-library/exception-functions.md#set_unexpected) if `bad_exception` is included in the throw list of a function.  
+## <a name="remarks"></a>Comentarios  
+ [unexpected](../standard-library/exception-functions.md#unexpected) inicia `bad_exception` en lugar de terminar o de llamar a otra función especificada con [set_unexpected](../standard-library/exception-functions.md#set_unexpected) si `bad_exception` está incluido en la lista de excepciones de una función.  
   
- The value returned by **what** is an implementation-defined C string. None of the member functions throw any exceptions.  
+ El valor que devuelve **what** es una cadena de C definida por la implementación. Ninguna de las funciones miembro produce excepciones.  
   
- For a list of members inherited by the `bad_exception` class, see [exception Class](../standard-library/exception-class.md).  
+ Para obtener una lista de miembros heredados por la clase `bad_exception`, vea [Exception (Clase)](../standard-library/exception-class.md).  
   
-## <a name="example"></a>Example  
- See [set_unexpected](../standard-library/exception-functions.md#set_unexpected) for an example of the use of [unexpected](../standard-library/exception-functions.md#unexpected) throwing a `bad_exception`.  
+## <a name="example"></a>Ejemplo  
+ Vea [set_unexpected](../standard-library/exception-functions.md#set_unexpected) para obtener un ejemplo de uso de [unexpected](../standard-library/exception-functions.md#unexpected) iniciando `bad_exception`.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<exception>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<exception>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
-[exception Class](../standard-library/exception-class.md) [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Vea también  
+[Exception (Clase)](../standard-library/exception-class.md)
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

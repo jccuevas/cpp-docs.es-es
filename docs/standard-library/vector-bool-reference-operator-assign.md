@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- =", "operator=", "vector<bool>::reference::operator=", "std::vector<bool>::reference::operator=
+- =
+- operator=
+- vector<bool>::reference::operator=
+- std::vector<bool>::reference::operator=
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,17 +37,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 2e32be8e98ca3aa7ca408883e31df03c8fef7f74
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 82c542fff74866ac57d65dc25b8ee8f75d53415d
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>vector&lt;bool&gt;::reference::operator=
-Assigns a Boolean value to a bit, or the value held by a referenced element to a bit.  
+Asigna un valor booleano a un bit o asigna el valor contenido en un elemento al que se hace referencia a un bit.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 reference& operator=(const reference& Right);
@@ -52,14 +55,14 @@ reference& operator=(const reference& Right);
 reference& operator=(bool Val);
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Right`  
- The element reference whose value is to be assigned to the bit.  
+ Referencia del elemento cuyo valor se asigna al bit.  
   
  `Val`  
- The Boolean value to be assigned to the bit.  
+ Valor booleano que se asigna al bit.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // vector_bool_ref_op_assign.cpp  
@@ -118,7 +121,7 @@ int main()
   
 ```  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Salida  
   
 ```  
 The vector is: true false false true true  
@@ -133,13 +136,13 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<vector>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<vector>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
- [vector\<bool>::reference Class](../standard-library/vector-bool-reference-class.md)   
- [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>Vea también  
+ [vector\<bool>::reference (Clase)](../standard-library/vector-bool-reference-class.md)   
+ [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
 
 

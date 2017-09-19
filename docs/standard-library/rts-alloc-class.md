@@ -1,5 +1,5 @@
 ---
-title: rts_alloc Class | Microsoft Docs
+title: rts_alloc (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,17 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- stdext::rts_alloc
 - allocators/stdext::rts_alloc
+- rts_alloc
 - allocators/stdext::rts_alloc::allocate
 - allocators/stdext::rts_alloc::deallocate
 - allocators/stdext::rts_alloc::equals
 dev_langs:
 - C++
 helpviewer_keywords:
-- stdext::rts_alloc
-- stdext::rts_alloc [C++], allocate
-- stdext::rts_alloc [C++], deallocate
-- stdext::rts_alloc [C++], equals
+- rts_alloc class
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
 caps.latest.revision: 19
 author: corob-msft
@@ -39,99 +38,99 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: f3eb62d14b304decfe168b224f87f433ac0c39d9
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: fe127f896fa902f4a8cdb44454cf6e4c5f449e79
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="rtsalloc-class"></a>rts_alloc Class
-The rts_alloc template class describes a [filter](../standard-library/allocators-header.md) that holds an array of cache instances and determines which instance to use for allocation and deallocation at runtime instead of at compile time.  
+# <a name="rtsalloc-class"></a>rts_alloc (Clase)
+La clase de plantilla rts_alloc describe un [filtro](../standard-library/allocators-header.md) que contiene una matriz de instancias de caché y determina la instancia que se va a usar para la asignación y la desasignación en tiempo de ejecución, y no en tiempo de compilación.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 template <class Cache>  
 class rts_alloc
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
   
-|Parameter|Description|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
-|`Cache`|The type of cache instances contained in the array. This can be [cache_chunklist Class](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md), or [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
+|`Cache`|El tipo de instancias de caché contenido en la matriz. Puede ser [cache_chunklist (Clase)](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md)|  
   
-## <a name="remarks"></a>Remarks  
- This template class holds multiple block allocator instances and determines which instance to use for allocation or deallocation at runtime instead of at compile time. It is used with compilers that cannot compile rebind.  
+## <a name="remarks"></a>Comentarios  
+ Esta clase de plantilla contiene varias instancias del asignador de bloques y determina la instancia que se va a usar para la asignación o desasignación en tiempo de ejecución, y no en tiempo de compilación. Se usa con los compiladores que no se pueden reenlazar mediante compilación.  
   
-### <a name="member-functions"></a>Member Functions  
+### <a name="member-functions"></a>Funciones miembro  
   
 |||  
 |-|-|  
-|[allocate](#allocate)|Allocates a block of memory.|  
-|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
-|[equals](#equals)|Compares two caches for equality.|  
+|[allocate](#allocate)|Asigna un bloque de memoria.|  
+|[deallocate](#deallocate)|Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.|  
+|[equals](#equals)|Compara dos cachés para determinar si son iguales.|  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<allocators>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<allocators>  
   
- **Namespace:** stdext  
+ **Espacio de nombres:** stdext  
   
 ##  <a name="allocate"></a>  rts_alloc::allocate  
- Allocates a block of memory.  
+ Asigna un bloque de memoria.  
   
 ```
 void *allocate(std::size_t count);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   
-|Parameter|Description|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
-|`count`|The number of elements in the array to be allocated.|  
+|`count`|El número de elementos de la matriz que se van a asignar.|  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the allocated object.  
+### <a name="return-value"></a>Valor devuelto  
+ Un puntero al objeto asignado.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns `caches[_IDX].allocate(count)`, where the index `_IDX` is determined by the requested block size `count`, or, if `count` is too large, it returns `operator new(count)`. `cache`, which represents the cache object.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve `caches[_IDX].allocate(count)`, donde el índice `_IDX` viene determinado por el tamaño de bloque solicitado `count`, o bien, si `count` es demasiado grande, devuelve `operator new(count)`. `cache`, que representa el objeto de caché.  
   
 ##  <a name="deallocate"></a>  rts_alloc::deallocate  
- Frees a specified number of objects from storage beginning at a specified position.  
+ Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.  
   
 ```
 void deallocate(void* ptr, std::size_t count);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   
-|Parameter|Description|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
-|`ptr`|A pointer to the first object to be deallocated from storage.|  
-|`count`|The number of objects to be deallocated from storage.|  
+|`ptr`|Un puntero al primer objeto que se va a desasignar del almacenamiento.|  
+|`count`|El número de objetos que se van a desasignar del almacenamiento.|  
   
-### <a name="remarks"></a>Remarks  
- The member function calls `caches[_IDX].deallocate(ptr, count)`, where the index `_IDX` is determined by the requested block size `count`, or, if `count` is too large, it returns `operator delete(ptr)`.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro llama a `caches[_IDX].deallocate(ptr, count)`, donde el índice `_IDX` viene determinado por el tamaño de bloque solicitado `count`, o bien, si `count` es demasiado grande, devuelve `operator delete(ptr)`.  
   
 ##  <a name="equals"></a>  rts_alloc::equals  
- Compares two caches for equality.  
+ Compara dos cachés para determinar si son iguales.  
   
 ```
 bool equals(const sync<_Cache>& _Other) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   
-|Parameter|Description|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
-|`_Cache`|The cache object associated with the filter.|  
-|`_Other`|The cache object to compare for equality.|  
+|`_Cache`|El objeto de caché asociado con el filtro.|  
+|`_Other`|El objeto de caché para comparar la igualdad.|  
   
-### <a name="remarks"></a>Remarks  
- `true` if the result of `caches[0].equals(other.caches[0])`; otherwise, `false`. `caches` represents the array of cache objects.  
+### <a name="remarks"></a>Comentarios  
+ `true` si el resultado de `caches[0].equals(other.caches[0])`; en caso contrario, `false`. `caches` representa la matriz de objetos de caché.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)   
  [\<allocators>](../standard-library/allocators-header.md)
 

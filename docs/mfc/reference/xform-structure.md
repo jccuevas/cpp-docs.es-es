@@ -1,5 +1,5 @@
 ---
-title: XFORM Structure | Microsoft Docs
+title: XFORM (estructura) | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- XFORM structure [MFC]
+- XFORM structure
 ms.assetid: 4fb4ef5b-05d2-4884-82d1-1cb8f7be6302
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 3f5a82c21f031035f5f9591feb0c3d61eb9193f7
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 2d23b3838f1e2dcabb2affb96fa6f18942581ff8
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="xform-structure"></a>XFORM Structure
-The `XFORM` structure has the following form:  
+# <a name="xform-structure"></a>XFORM (Estructura)
+El `XFORM` estructura tiene el formato siguiente:  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 typedef struct  tagXFORM {  /* xfrm */  
@@ -56,21 +56,21 @@ typedef struct  tagXFORM {  /* xfrm */
 } XFORM;  
 ```  
   
-## <a name="remarks"></a>Remarks  
- The `XFORM` structure specifies a world-space to page-space transformation. The **eDx** and **eDy** members specify the horizontal and vertical translation components, respectively. The following table shows how the other members are used, depending on the operation:  
+## <a name="remarks"></a>Comentarios  
+ El `XFORM` estructura especifica un espacio del mundo para transformación de espacio en la página. El **eDx** y **eDy** miembros especifican los componentes de traslación horizontal y vertical, respectivamente. En la tabla siguiente se muestra cómo se utilizan los demás miembros, dependiendo de la operación:  
   
-|Operation|eM11|eM12|eM21|eM22|  
+|Operación|eM11|eM12|eM21|eM22|  
 |---------------|----------|----------|----------|----------|  
-|`Rotation`|Cosine of rotation angle|Sine of rotation angle|Negative sine of rotation angle|Cosine of rotation angle|  
-|**Scaling**|Horizontal scaling component|Nothing|Nothing|Vertical scaling component|  
-|**Shear**|Nothing|Horizontal proportionality constant|Vertical proportionality constant|Nothing|  
-|**Reflection**|Horizontal reflection component|Nothing|Nothing|Vertical reflection component|  
+|`Rotation`|Coseno del ángulo de giro|Seno del ángulo de giro|Negativo seno del ángulo de giro|Coseno del ángulo de giro|  
+|**Ajuste de escala**|Componente de escala horizontal|Nothing|Nothing|Componente de escala vertical|  
+|**Recorte**|Nothing|Constante de proporcionalidad horizontal|Constante de proporcionalidad vertical|Nothing|  
+|**Reflexión**|Componente de reflexión horizontal|Nothing|Nothing|Componente de reflexión vertical|  
   
-## <a name="requirements"></a>Requirements  
- **Header:** wingdi.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** wingdi.h  
   
-## <a name="see-also"></a>See Also  
- [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>Vea también  
+ [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CRgn::CreateFromData](../../mfc/reference/crgn-class.md#createfromdata)
 
 

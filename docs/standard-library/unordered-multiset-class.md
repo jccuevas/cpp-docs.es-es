@@ -1,5 +1,5 @@
 ---
-title: unordered_multiset Class | Microsoft Docs
+title: unordered_multiset (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- unordered_multiset
 - unordered_set/std::unordered_multiset
 - unordered_set/std::unordered_multiset::allocator_type
 - unordered_set/std::unordered_multiset::const_iterator
@@ -97,91 +98,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- std::unordered_multiset
-- std::unordered_multiset::allocator_type
-- std::unordered_multiset::const_iterator
-- std::unordered_multiset::const_local_iterator
-- std::unordered_multiset::const_pointer
-- std::unordered_multiset::const_reference
-- std::unordered_multiset::difference_type
-- std::unordered_multiset::hasher
-- std::unordered_multiset::iterator
-- std::unordered_multiset::key_equal
-- std::unordered_multiset::key_type
-- std::unordered_multiset::local_iterator
-- std::unordered_multiset::pointer
-- std::unordered_multiset::reference
-- std::unordered_multiset::size_type
-- std::unordered_multiset::value_type
-- std::unordered_multiset::begin
-- std::unordered_multiset::bucket
-- std::unordered_multiset::bucket_count
-- std::unordered_multiset::bucket_size
-- std::unordered_multiset::cbegin
-- std::unordered_multiset::cend
-- std::unordered_multiset::clear
-- std::unordered_multiset::count
-- std::unordered_multiset::emplace
-- std::unordered_multiset::emplace_hint
-- std::unordered_multiset::empty
-- std::unordered_multiset::end
-- std::unordered_multiset::equal_range
-- std::unordered_multiset::erase
-- std::unordered_multiset::find
-- std::unordered_multiset::get_allocator
-- std::unordered_multiset::hash
-- std::unordered_multiset::insert
-- std::unordered_multiset::key_eq
-- std::unordered_multiset::load_factor
-- std::unordered_multiset::max_bucket_count
-- std::unordered_multiset::max_load_factor
-- std::unordered_multiset::max_size
-- std::unordered_multiset::rehash
-- std::unordered_multiset::size
-- std::unordered_multiset::swap
-- std::unordered_multiset::unordered_multiset
-- std::unordered_multiset::operator=
-- std::unordered_multiset::allocator_type
-- std::unordered_multiset::const_iterator
-- std::unordered_multiset::const_local_iterator
-- std::unordered_multiset::const_pointer
-- std::unordered_multiset::const_reference
-- std::unordered_multiset::difference_type
-- std::unordered_multiset::hasher
-- std::unordered_multiset::iterator
-- std::unordered_multiset::key_equal
-- std::unordered_multiset::key_type
-- std::unordered_multiset::local_iterator
-- std::unordered_multiset::pointer
-- std::unordered_multiset::reference
-- std::unordered_multiset::size_type
-- std::unordered_multiset::value_type
-- std::unordered_multiset::begin
-- std::unordered_multiset::bucket
-- std::unordered_multiset::bucket_count
-- std::unordered_multiset::bucket_size
-- std::unordered_multiset::cbegin
-- std::unordered_multiset::cend
-- std::unordered_multiset::clear
-- std::unordered_multiset::count
-- std::unordered_multiset::emplace
-- std::unordered_multiset::emplace_hint
-- std::unordered_multiset::empty
-- std::unordered_multiset::end
-- std::unordered_multiset::equal_range
-- std::unordered_multiset::erase
-- std::unordered_multiset::find
-- std::unordered_multiset::get_allocator
-- std::unordered_multiset::hash_function
-- std::unordered_multiset::insert
-- std::unordered_multiset::key_eq
-- std::unordered_multiset::load_factor
-- std::unordered_multiset::max_bucket_count
-- std::unordered_multiset::max_load_factor
-- std::unordered_multiset::max_size
-- std::unordered_multiset::rehash
-- std::unordered_multiset::size
-- std::unordered_multiset::swap
+- unordered_multiset class
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
 caps.latest.revision: 24
 author: corob-msft
@@ -201,17 +118,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: ca362eadad4097efd06b92e8ae534f108ac8e52d
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4df02938056e6a49c71de0ce594cf7eeb84208f6
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="unorderedmultiset-class"></a>unordered_multiset Class
-The template class describes an object that controls a varying-length sequence of elements of type `const Key`. The sequence is weakly ordered by a hash function, which partitions the sequence into an ordered set of subsequences called buckets. Within each bucket a comparison function determines whether any pair of elements has equivalent ordering. Each element serves as both a sort key and a value. The sequence is represented in a way that permits lookup, insertion, and removal of an arbitrary element with a number of operations that can be independent of the number of elements in the sequence (constant time), at least when all buckets are of roughly equal length. In the worst case, when all of the elements are in one bucket, the number of operations is proportional to the number of elements in the sequence (linear time). Moreover, inserting an element invalidates no iterators, and removing an element invalidates only those iterators which point at the removed element.  
+# <a name="unorderedmultiset-class"></a>unordered_multiset (Clase)
+La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos de tipo `const Key`. La secuencia está ordenada débilmente por una función hash, que divide la secuencia en un conjunto ordenado subsecuencias denominadas depósitos. Dentro de cada depósito una función de comparación determina si algún par de elementos tiene una ordenación equivalente. Cada elemento actúa como clave de ordenación y como valor. La secuencia se representan de tal forma que permite la búsqueda, inserción y eliminación de un elemento arbitrario con una serie de operaciones que pueden ser independientes del número de elementos de la secuencia (tiempo constante), al menos cuando todos los depósitos tienen una longitud aproximadamente igual. En el peor de los casos, cuando todos los elementos están en un depósito, el número de operaciones es proporcional al número de elementos de la secuencia (tiempo lineal). Además, la inserción de un elemento no invalida ningún iterador y al quitar un elemento solo se invalidan los iteradores que apuntan al elemento quitado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class Key,  
@@ -221,98 +138,98 @@ template <class Key,
 class unordered_multiset;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
   
 |||  
 |-|-|  
-|Parameter|Description|  
-|`Key`|The key type.|  
-|`Hash`|The hash function object type.|  
-|`Pred`|The equality comparison function object type.|  
-|`Alloc`|The allocator class.|  
+|Parámetro|Descripción|  
+|`Key`|El tipo de clave.|  
+|`Hash`|El tipo de objeto de la función hash.|  
+|`Pred`|El tipo de objeto de función de comparación de igualdad.|  
+|`Alloc`|Clase de asignador.|  
   
-## <a name="members"></a>Members  
-  
-|||  
-|-|-|  
-|Type Definition|Description|  
-|[allocator_type](#allocator_type)|The type of an allocator for managing storage.|  
-|[const_iterator](#const_iterator)|The type of a constant iterator for the controlled sequence.|  
-|[const_local_iterator](#const_local_iterator)|The type of a constant bucket iterator for the controlled sequence.|  
-|[const_pointer](#const_pointer)|The type of a constant pointer to an element.|  
-|[const_reference](#const_reference)|The type of a constant reference to an element.|  
-|[difference_type](#difference_type)|The type of a signed distance between two elements.|  
-|[hasher](#hasher)|The type of the hash function.|  
-|[iterator](#iterator)|The type of an iterator for the controlled sequence.|  
-|[key_equal](#key_equal)|The type of the comparison function.|  
-|[key_type](#key_type)|The type of an ordering key.|  
-|[local_iterator](#local_iterator)|The type of a bucket iterator for the controlled sequence.|  
-|[pointer](#pointer)|The type of a pointer to an element.|  
-|[reference](#reference)|The type of a reference to an element.|  
-|[size_type](#size_type)|The type of an unsigned distance between two elements.|  
-|[value_type](#value_type)|The type of an element.|  
+## <a name="members"></a>Miembros  
   
 |||  
 |-|-|  
-|Member Function|Description|  
-|[begin](#begin)|Designates the beginning of the controlled sequence.|  
-|[bucket](#bucket)|Gets the bucket number for a key value.|  
-|[bucket_count](#bucket_count)|Gets the number of buckets.|  
-|[bucket_size](#bucket_size)|Gets the size of a bucket.|  
-|[cbegin](#cbegin)|Designates the beginning of the controlled sequence.|  
-|[cend](#cend)|Designates the end of the controlled sequence.|  
-|[clear](#clear)|Removes all elements.|  
-|[count](#count)|Finds the number of elements matching a specified key.|  
-|[emplace](#emplace)|Adds an element constructed in place.|  
-|[emplace_hint](#emplace_hint)|Adds an element constructed in place, with hint.|  
-|[empty](#empty)|Tests whether no elements are present.|  
-|[end](#end)|Designates the end of the controlled sequence.|  
-|[equal_range](#equal_range)|Finds range that matches a specified key.|  
-|[erase](#erase)|Removes elements at specified positions.|  
-|[find](#find)|Finds an element that matches a specified key.|  
-|[get_allocator](#get_allocator)|Gets the stored allocator object.|  
-|[hash_function](#hash)|Gets the stored hash function object.|  
-|[insert](#insert)|Adds elements.|  
-|[key_eq](#key_eq)|Gets the stored comparison function object.|  
-|[load_factor](#load_factor)|Counts the average elements per bucket.|  
-|[max_bucket_count](#max_bucket_count)|Gets the maximum number of buckets.|  
-|[max_load_factor](#max_load_factor)|Gets or sets the maximum elements per bucket.|  
-|[max_size](#max_size)|Gets the maximum size of the controlled sequence.|  
-|[rehash](#rehash)|Rebuilds the hash table.|  
-|[size](#size)|Counts the number of elements.|  
-|[swap](#swap)|Swaps the contents of two containers.|  
-|[unordered_multiset](#unordered_multiset)|Constructs a container object.|  
+|Definición de tipo|Descripción|  
+|[allocator_type](#allocator_type)|El tipo de un asignador para administrar el almacenamiento.|  
+|[const_iterator](#const_iterator)|El tipo de un iterador constante para la secuencia controlada.|  
+|[const_local_iterator](#const_local_iterator)|El tipo de un iterador de depósito constante para la secuencia controlada.|  
+|[const_pointer](#const_pointer)|El tipo de un puntero constante a un elemento.|  
+|[const_reference](#const_reference)|El tipo de una referencia constante a un elemento.|  
+|[difference_type](#difference_type)|El tipo de una distancia con signo entre dos elementos.|  
+|[hasher](#hasher)|El tipo de la función hash.|  
+|[iterator](#iterator)|El tipo de un iterador para la secuencia controlada.|  
+|[key_equal](#key_equal)|El tipo de la función de comparación.|  
+|[key_type](#key_type)|El tipo de una clave de ordenación.|  
+|[local_iterator](#local_iterator)|El tipo de un iterador de depósito para la secuencia controlada.|  
+|[pointer](#pointer)|El tipo de un puntero a un elemento.|  
+|[reference](#reference)|El tipo de una referencia a un elemento.|  
+|[size_type](#size_type)|El tipo de una distancia sin signo entre dos elementos.|  
+|[value_type](#value_type)|El tipo de un elemento.|  
   
 |||  
 |-|-|  
-|Operator|Description|  
-|[unordered_multiset::operator=](#op_eq)|Copies a hash table.|  
+|Función miembro|Descripción|  
+|[begin](#begin)|Designa el principio de la secuencia controlada.|  
+|[depósito](#bucket)|Obtiene el número de depósito para un valor de clave.|  
+|[bucket_count](#bucket_count)|Obtiene el número de depósitos.|  
+|[bucket_size](#bucket_size)|Obtiene el tamaño de un depósito.|  
+|[cbegin](#cbegin)|Designa el principio de la secuencia controlada.|  
+|[cend](#cend)|Designa el final de la secuencia controlada.|  
+|[clear](#clear)|Quita todos los elementos.|  
+|[count](#count)|Busca el número de elementos que coinciden con una clave especificada.|  
+|[emplace](#emplace)|Agrega un elemento construido en contexto.|  
+|[emplace_hint](#emplace_hint)|Agrega un elemento construido en contexto, con sugerencia.|  
+|[empty](#empty)|Comprueba si no hay ningún elemento presente.|  
+|[end](#end)|Designa el final de la secuencia controlada.|  
+|[equal_range](#equal_range)|Busca el intervalo que coincide con una clave especificada.|  
+|[erase](#erase)|Quita los elementos de las posiciones especificadas.|  
+|[find](#find)|Busca un elemento que coincide con una clave especificada.|  
+|[get_allocator](#get_allocator)|Obtiene el objeto de asignador almacenado.|  
+|[hash_function](#hash)|Obtiene el objeto de función hash almacenado.|  
+|[insert](#insert)|Agrega elementos.|  
+|[key_eq](#key_eq)|Obtiene el objeto de función de comparación almacenado.|  
+|[load_factor](#load_factor)|Cuenta los elementos promedio por depósito.|  
+|[max_bucket_count](#max_bucket_count)|Obtiene el número máximo de depósitos.|  
+|[max_load_factor](#max_load_factor)|Obtiene o establece los elementos máximos por depósito.|  
+|[max_size](#max_size)|Obtiene el tamaño máximo de la secuencia controlada.|  
+|[rehash)](#rehash)|Recompila la tabla hash.|  
+|[size](#size)|Cuenta el número de elementos.|  
+|[swap](#swap)|Intercambia el contenido de dos contenedores.|  
+|[unordered_multiset](#unordered_multiset)|Construye un objeto contenedor.|  
   
-## <a name="remarks"></a>Remarks  
- The object orders the sequence it controls by calling two stored objects, a comparison function object of type [unordered_multiset::key_equal](#key_equal) and a hash function object of type [unordered_multiset::hasher](#hasher). You access the first stored object by calling the member function [unordered_multiset::key_eq](#key_eq)`()`; and you access the second stored object by calling the member function [unordered_multiset::hash_function](#hash)`()`. Specifically, for all values `X` and `Y` of type `Key`, the call `key_eq()(X, Y)` returns true only if the two argument values have equivalent ordering; the call `hash_function()(keyval)` yields a distribution of values of type `size_t`. Unlike template class [unordered_set Class](../standard-library/unordered-set-class.md), an object of template class `unordered_multiset` does not ensure that `key_eq()(X, Y)` is always false for any two elements of the controlled sequence. (Keys need not be unique.)  
+|||  
+|-|-|  
+|Operador|Descripción|  
+|[unordered_multiset::operator=](#op_eq)|Copia una tabla hash.|  
   
- The object also stores a maximum load factor, which specifies the maximum desired average number of elements per bucket. If inserting an element causes [unordered_multiset::load_factor](#load_factor)`()` to exceed the maximum load factor, the container increases the number of buckets and rebuilds the hash table as needed.  
+## <a name="remarks"></a>Comentarios  
+ El objeto ordena la secuencia que controla llamando a dos objetos almacenados, un objeto de función de comparación de tipo [unordered_multiset::key_equal](#key_equal) y un objeto de función hash de tipo [unordered_multiset::hasher](#hasher). Se tiene acceso al primer objeto almacenado llamando a la función miembro [unordered_multiset::key_eq](#key_eq)`()` y se tiene acceso al segundo objeto almacenado llamando a la función miembro [unordered_multiset::hash_function](#hash)`()`. Concretamente, para todos los valores `X` e `Y` de tipo `Key`, la llamada a `key_eq()(X, Y)` solo devuelve true si los dos valores de argumento tienen una ordenación equivalente; la llamada a `hash_function()(keyval)` produce una distribución de valores de tipo `size_t`. A diferencia de la clase de plantilla [unordered_set](../standard-library/unordered-set-class.md), un objeto de clase de plantilla `unordered_multiset` no garantiza que `key_eq()(X, Y)` es siempre false para dos elementos cualesquiera de la secuencia controlada. (No es necesario que las claves sean únicas).  
   
- The actual order of elements in the controlled sequence depends on the hash function, the comparison function, the order of insertion, the maximum load factor, and the current number of buckets. You cannot in general predict the order of elements in the controlled sequence. You can always be assured, however, that any subset of elements that have equivalent ordering are adjacent in the controlled sequence.  
+ El objeto también almacena un factor de carga máxima, que especifica el número promedio deseado máximo de elementos por depósito. Si la inserción de un elemento hace que [unordered_multiset::load_factor](#load_factor)`()` supere el factor de carga máxima, el contenedor aumenta el número de depósitos y recompila la tabla hash según sea necesario.  
   
- The object allocates and frees storage for the sequence it controls through a stored allocator object of type [unordered_multiset::allocator_type](#allocator_type). Such an allocator object must have the same external interface as an object of template class `allocator`. Note that the stored allocator object is not copied when the container object is assigned.  
+ El orden real de los elementos de la secuencia controlada depende de la función hash, la función de comparación, el orden de inserción, el factor de carga máxima y el número actual de depósitos. En general no se puede predecir el orden de los elementos de la secuencia controlada. Sin embargo, siempre se puede asegurar que cualquier subconjunto de elementos que tengan una ordenación equivalente son adyacentes en la secuencia controlada.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<unordered_set>  
+ El objeto asigna y libera almacenamiento para la secuencia que controla a través de un objeto asignador almacenado de tipo [unordered_multiset::allocator_type](#allocator_type). Ese objeto de asignador debe tener la misma interfaz externa que un objeto de clase de plantilla `allocator`. Tenga en cuenta que el objeto de asignador almacenado no se copia cuando se asigna el objeto contenedor.  
   
- **Namespace:** std  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<unordered_set>  
+  
+ **Espacio de nombres:** std  
   
 ##  <a name="allocator_type"></a>  unordered_multiset::allocator_type  
- The type of an allocator for managing storage.  
+ El tipo de un asignador para administrar el almacenamiento.  
   
 ```  
 typedef Alloc allocator_type;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for the template parameter `Alloc`.  
+### <a name="remarks"></a>Comentarios  
+ El tipo es un sinónimo del parámetro de plantilla `Alloc`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_allocator_type.cpp   
@@ -340,7 +257,7 @@ al == std::allocator() is true
 ```  
   
 ##  <a name="begin"></a>  unordered_multiset::begin  
- Designates the beginning of the controlled sequence or a bucket.  
+ Designa el principio de la secuencia controlada o un depósito.  
   
 ```  
 iterator begin();
@@ -353,17 +270,17 @@ local_iterator begin(size_type nbucket);
 const_local_iterator begin(size_type nbucket) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   
 |||  
 |-|-|  
-|Parameter|Description|  
-|`nbucket`|The bucket number.|  
+|Parámetro|Descripción|  
+|`nbucket`|Número de depósito.|  
   
-### <a name="remarks"></a>Remarks  
- The first two member functions return a forward iterator that points at the first element of the sequence (or just beyond the end of an empty sequence). The last two member functions return a forward iterator that points at the first element of bucket `nbucket` (or just beyond the end of an empty bucket).  
+### <a name="remarks"></a>Comentarios  
+ Las dos primeras funciones miembro devuelven un iterador hacia delante que apunta al primer elemento de la secuencia (o más allá del final de una secuencia vacía). Las dos últimas funciones miembro devuelven un iterador hacia delante que apunta al primer elemento del depósito `nbucket` (o más allá del final de un depósito vacío).  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_begin.cpp   
@@ -409,20 +326,20 @@ int main()
 ```  
   
 ##  <a name="bucket"></a>  unordered_multiset::bucket  
- Gets the bucket number for a key value.  
+ Obtiene el número de depósito para un valor de clave.  
   
 ```  
 size_type bucket(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
- keyval  
- The key value to map.  
+### <a name="parameters"></a>Parámetros  
+ keyVal  
+ Valor de clave que se va a asignar.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns the bucket number currently corresponding to the key value `keyval`.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve el número de depósito que corresponde actualmente al valor de clave `keyval`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_bucket.cpp   
@@ -463,16 +380,16 @@ bucket_size(7) == 1
 ```  
   
 ##  <a name="bucket_count"></a>  unordered_multiset::bucket_count  
- Gets the number of buckets.  
+ Obtiene el número de depósitos.  
   
 ```  
 size_type bucket_count() const;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The member function returns the current number of buckets.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve el número actual de depósitos.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_bucket_count.cpp   
@@ -549,20 +466,20 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="bucket_size"></a>  unordered_multiset::bucket_size  
- Gets the size of a bucket  
+ Obtiene el tamaño de un depósito.  
   
 ```  
 size_type bucket_size(size_type nbucket) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nbucket`  
- The bucket number.  
+ Número de depósito.  
   
-### <a name="remarks"></a>Remarks  
- The member functions returns the size of bucket number `nbucket`.  
+### <a name="remarks"></a>Comentarios  
+ Las funciones miembro devuelven el tamaño del número de depósito `nbucket`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_bucket_size.cpp   
@@ -603,19 +520,19 @@ bucket_size(7) == 1
 ```  
   
 ##  <a name="cbegin"></a>  unordered_multiset::cbegin  
- Returns a `const` iterator that addresses the first element in the range.  
+ Devuelve un iterador `const` que direcciona el primer elemento del intervalo.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- A `const` forward-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador `const` de acceso hacia delante que apunta al primer elemento del intervalo o la ubicación situada más allá del final de un intervalo vacío (para un intervalo vacío, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>Remarks  
- With the return value of `cbegin`, the elements in the range cannot be modified.  
+### <a name="remarks"></a>Comentarios  
+ Con el valor devuelto de `cbegin`, los elementos del intervalo no se pueden modificar.  
   
- You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
+ Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo se considera que `Container` es un contenedor modificable (distinto de `const`) de cualquier naturaleza que admite `begin()` y `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -626,19 +543,19 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  unordered_multiset::cend  
- Returns a `const` iterator that addresses the location just beyond the last element in a range.  
+ Devuelve un iterador `const` que direcciona la ubicación situada más allá del último elemento de un intervalo.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>Return Value  
- A `const` forward-access iterator that points just beyond the end of the range.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador `const` de acceso hacia delante que apunta justo después del final del intervalo.  
   
-### <a name="remarks"></a>Remarks  
- `cend` is used to test whether an iterator has passed the end of its range.  
+### <a name="remarks"></a>Comentarios  
+ `cend` se usa para probar si un iterador ha sobrepasado el final de su intervalo.  
   
- You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
+ Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, se considera que `Container` es un contenedor modificable (distinto de `const`) de cualquier naturaleza que admite `end()` y `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -648,19 +565,19 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
- The value returned by `cend` should not be dereferenced.  
+ El valor devuelto por `cend` no se debe desreferenciar.  
   
 ##  <a name="clear"></a>  unordered_multiset::clear  
- Removes all elements.  
+ Quita todos los elementos.  
   
 ```  
 void clear();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The member function calls [unordered_multiset::erase](#erase)`(` [unordered_multiset::begin](#begin)`(),` [unordered_multiset::end](#end)`())`.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro llama a [unordered_multiset::erase](#erase)`(` [unordered_multiset::begin](#begin)`(),` [unordered_multiset::end](#end)`())`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_clear.cpp   
@@ -717,16 +634,16 @@ empty() == false
 ```  
   
 ##  <a name="const_iterator"></a>  unordered_multiset::const_iterator  
- The type of a constant iterator for the controlled sequence.  
+ El tipo de un iterador constante para la secuencia controlada.  
   
 ```  
 typedef T1 const_iterator;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type describes an object that can serve as a constant forward iterator for the controlled sequence. It is described here as a synonym for the implementation-defined type `T1`.  
+### <a name="remarks"></a>Comentarios  
+ El tipo describe un objeto que puede actuar como un iterador de avance constante de la secuencia controlada. Aquí se describe como sinónimo del tipo definido por implementación `T1`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_const_iterator.cpp   
@@ -759,16 +676,16 @@ int main()
 ```  
   
 ##  <a name="const_local_iterator"></a>  unordered_multiset::const_local_iterator  
- The type of a constant bucket iterator for the controlled sequence.  
+ El tipo de un iterador de depósito constante para la secuencia controlada.  
   
 ```  
 typedef T5 const_local_iterator;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type describes an object that can serve as a constant forward iterator for a bucket. It is described here as a synonym for the implementation-defined type `T5`.  
+### <a name="remarks"></a>Comentarios  
+ El tipo describe un objeto que puede actuar como iterador constante hacia delante para un depósito. Aquí se describe como sinónimo del tipo definido por implementación `T5`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_const_local_iterator.cpp   
@@ -806,16 +723,16 @@ int main()
 ```  
   
 ##  <a name="const_pointer"></a>  unordered_multiset::const_pointer  
- The type of a constant pointer to an element.  
+ El tipo de un puntero constante a un elemento.  
   
 ```  
 typedef Alloc::const_pointer const_pointer;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type describes an object that can serve as a constant pointer to an element of the controlled sequence.  
+### <a name="remarks"></a>Comentarios  
+ El tipo describe un objeto que puede actuar como puntero constante a un elemento de la secuencia controlada.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_const_pointer.cpp   
@@ -851,16 +768,16 @@ int main()
 ```  
   
 ##  <a name="const_reference"></a>  unordered_multiset::const_reference  
- The type of a constant reference to an element.  
+ El tipo de una referencia constante a un elemento.  
   
 ```  
 typedef Alloc::const_reference const_reference;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type describes an object that can serve as a constant reference to an element of the controlled sequence.  
+### <a name="remarks"></a>Comentarios  
+ El tipo describe un objeto que puede actuar como referencia constante a un elemento de la secuencia controlada.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_const_reference.cpp   
@@ -896,20 +813,20 @@ int main()
 ```  
   
 ##  <a name="count"></a>  unordered_multiset::count  
- Finds the number of elements matching a specified key.  
+ Busca el número de elementos que coinciden con una clave especificada.  
   
 ```  
 size_type count(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `keyval`  
- Key value to search for.  
+ Valor de clave que se va a buscar.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns the number of elements in the range delimited by [unordered_multiset::equal_range](#equal_range)`(keyval)`.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve el número de elementos incluidos en el rango delimitado por [unordered_multiset::equal_range](#equal_range)`(keyval)`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_count.cpp   
@@ -949,16 +866,16 @@ count('C') == 0
 ```  
   
 ##  <a name="difference_type"></a>  unordered_multiset::difference_type  
- The type of a signed distance between two elements.  
+ El tipo de una distancia con signo entre dos elementos.  
   
 ```  
 typedef T3 difference_type;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The signed integer type describes an object that can represent the difference between the addresses of any two elements in the controlled sequence. It is described here as a synonym for the implementation-defined type `T3`.  
+### <a name="remarks"></a>Comentarios  
+ El tipo de entero con signo describe un objeto que puede representar la diferencia entre las direcciones de dos elementos cualesquiera de la secuencia controlada. Aquí se describe como sinónimo del tipo definido por implementación `T3`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_difference_type.cpp   
@@ -1007,32 +924,32 @@ begin()-end() == -3
 ```  
   
 ##  <a name="emplace"></a>  unordered_multiset::emplace  
- Inserts an element constructed in place (no copy or move operations are performed).  
+ Inserta un elemento construido en contexto (no se realiza ninguna operación de copia o de movimiento).  
   
 ```  
 template <class... Args>  
 iterator emplace(Args&&... args);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   
 |||  
 |-|-|  
-|Parameter|Description|  
-|`args`|The arguments forwarded to construct an element to be inserted into the unordered_multiset.|  
+|Parámetro|Descripción|  
+|`args`|Argumentos reenviados para construir un elemento que se va a insertar en el unordered_multiset.|  
   
-### <a name="return-value"></a>Return Value  
- An iterator to the newly inserted element.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador al elemento recién insertado.  
   
-### <a name="remarks"></a>Remarks  
- No references to container elements are invalidated by this function, but it may invalidate all iterators to the container.  
+### <a name="remarks"></a>Comentarios  
+ Esta función no invalida ninguna referencia a elementos contenedores, pero puede invalidar todos los iteradores al contenedor.  
   
- During the insertion, if an exception is thrown but does not occur in the container's hash function, the container is not modified. If the exception is thrown in the hash function, the result is undefined.  
+ Durante la inserción, si se produce una excepción pero no ocurre en la función hash del contenedor, el contenedor no se modifica. Si la excepción se produce en la función hash, el resultado es indefinido.  
   
- For a code example, see [multiset::emplace](../standard-library/multiset-class.md#emplace).  
+ Para obtener un ejemplo de código, vea [multiset::emplace](../standard-library/multiset-class.md#emplace).  
   
 ##  <a name="emplace_hint"></a>  unordered_multiset::emplace_hint  
- Inserts an element constructed in place (no copy or move operations are performed), with a placement hint.  
+ Inserta un elemento construido en contexto (no se realiza ninguna operación de copia o de movimiento), con una sugerencia de colocación.  
   
 ```  
 template <class... Args>  
@@ -1041,35 +958,35 @@ iterator emplace_hint(
     Args&&... args);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   
 |||  
 |-|-|  
-|Parameter|Description|  
-|`args`|The arguments forwarded to construct an element to be inserted into the unordered_multiset.|  
-|`where`|A hint regarding the place to start searching for the correct point of insertion.|  
+|Parámetro|Descripción|  
+|`args`|Argumentos reenviados para construir un elemento que se va a insertar en el unordered_multiset.|  
+|`where`|Sugerencia con respecto al lugar donde se va a empezar a buscar el punto correcto de inserción.|  
   
-### <a name="return-value"></a>Return Value  
- An iterator to the newly inserted element.  
+### <a name="return-value"></a>Valor devuelto  
+ Iterador al elemento recién insertado.  
   
-### <a name="remarks"></a>Remarks  
- No references to container elements are invalidated by this function, but it may invalidate all iterators to the container.  
+### <a name="remarks"></a>Comentarios  
+ Esta función no invalida ninguna referencia a elementos contenedores, pero puede invalidar todos los iteradores al contenedor.  
   
- During the insertion, if an exception is thrown but does not occur in the container's hash function, the container is not modified. If the exception is thrown in the hash function, the result is undefined.  
+ Durante la inserción, si se produce una excepción pero no ocurre en la función hash del contenedor, el contenedor no se modifica. Si la excepción se produce en la función hash, el resultado es indefinido.  
   
- For a code example, see [set::emplace_hint](../standard-library/set-class.md#emplace_hint).  
+ Para obtener un ejemplo de código, vea [set::emplace_hint](../standard-library/set-class.md#emplace_hint).  
   
 ##  <a name="empty"></a>  unordered_multiset::empty  
- Tests whether no elements are present.  
+ Comprueba si no hay ningún elemento presente.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The member function returns true for an empty controlled sequence.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve true para una secuencia controlada vacía.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_empty.cpp   
@@ -1126,7 +1043,7 @@ empty() == false
 ```  
   
 ##  <a name="end"></a>  unordered_multiset::end  
- Designates the end of the controlled sequence.  
+ Designa el final de la secuencia controlada.  
   
 ```  
 iterator end();
@@ -1137,14 +1054,14 @@ const_iterator end() const;
 const_local_iterator end(size_type nbucket) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nbucket`  
- The bucket number.  
+ Número de depósito.  
   
-### <a name="remarks"></a>Remarks  
- The first two member functions return a forward iterator that points just beyond the end of the sequence. The last two member functions return a forward iterator that points just beyond the end of bucket `nbucket`.  
+### <a name="remarks"></a>Comentarios  
+ Las dos primeras funciones miembro devuelven un iterador hacia delante que apunta inmediatamente después del final de la secuencia. Las dos últimas funciones miembro devuelven un iterador hacia delante que apunta inmediatamente después del final del depósito `nbucket`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_end.cpp   
@@ -1192,7 +1109,7 @@ int main()
 ```  
   
 ##  <a name="equal_range"></a>  unordered_multiset::equal_range  
- Finds range that matches a specified key.  
+ Busca el intervalo que coincide con una clave especificada.  
   
 ```  
 std::pair<iterator, iterator>  
@@ -1202,14 +1119,14 @@ std::pair<const_iterator, const_iterator>
     equal_range(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `keyval`  
- Key value to search for.  
+ Valor de clave que se va a buscar.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns a pair of iterators `X` such that `[X.first, X.second)` delimits just those elements of the controlled sequence that have equivalent ordering with `keyval`. If no such elements exist, both iterators are `end()`.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve un par de iteradores `X` tales que `[X.first, X.second)` delimita únicamente los elementos de la secuencia controlada que tienen una ordenación equivalente con `keyval`. Si no hay elementos de este tipo, los dos iteradores son `end()`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_equal_range.cpp   
@@ -1259,7 +1176,7 @@ equal_range('b'): [b]
 ```  
   
 ##  <a name="erase"></a>  unordered_multiset::erase  
- Removes an element or a range of elements in a unordered_multiset from specified positions or removes elements that match a specified key.  
+ Quita un elemento o un intervalo de elementos de un unordered_multiset de las posiciones especificadas o quita los elementos que coinciden con una clave especificada.  
   
 ```  
 iterator erase(
@@ -1273,42 +1190,42 @@ size_type erase(
     const key_type& Key);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `Where`  
- Position of the element to be removed.  
+ Posición del elemento que se va a quitar.  
   
  `First`  
- Position of the first element to be removed.  
+ Posición del primer elemento que se va a quitar.  
   
  `Last`  
- Position just beyond the last element to be removed.  
+ Posición situada más allá del último elemento que se va a quitar.  
   
  `Key`  
- The key value of the elements to be removed.  
+ Valor de clave de los elementos que se van a quitar.  
   
-### <a name="return-value"></a>Return Value  
- For the first two member functions, a bidirectional iterator that designates the first element remaining beyond any elements removed, or an element that is the end of the unordered_multiset if no such element exists.  
+### <a name="return-value"></a>Valor devuelto  
+ Para las dos primeras funciones miembro, iterador bidireccional que designa el primer elemento que permanece más allá de los elementos quitados, o un elemento que es el final de unordered_multiset si no existe ese elemento.  
   
- For the third member function, returns the number of elements that have been removed from the unordered_multiset.  
+ Para la tercera función miembro, devuelve el número de elementos que se han quitado de unordered_multiset.  
   
-### <a name="remarks"></a>Remarks  
- For a code example, see [set::erase](../standard-library/set-class.md#erase).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener un ejemplo de código, vea [set::erase](../standard-library/set-class.md#erase).  
   
 ##  <a name="find"></a>  unordered_multiset::find  
- Finds an element that matches a specified key.  
+ Busca un elemento que coincide con una clave especificada.  
   
 ```  
 const_iterator find(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `keyval`  
- Key value to search for.  
+ Valor de clave que se va a buscar.  
   
-### <a name="remarks"></a>Remarks  
- The member function returns [unordered_multiset::equal_range](#equal_range)`(keyval).first`.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve [unordered_multiset::equal_range](#equal_range)`(keyval).first`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_find.cpp   
@@ -1353,16 +1270,16 @@ find('b') == true: [b]
 ```  
   
 ##  <a name="get_allocator"></a>  unordered_multiset::get_allocator  
- Gets the stored allocator object.  
+ Obtiene el objeto de asignador almacenado.  
   
 ```  
 Alloc get_allocator() const;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The member function returns the stored allocator object.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve el objeto de asignador almacenado.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_get_allocator.cpp   
@@ -1390,16 +1307,16 @@ al == std::allocator() is true
 ```  
   
 ##  <a name="hash"></a>  unordered_multiset::hash_function  
- Gets the stored hash function object.  
+ Obtiene el objeto de función hash almacenado.  
   
 ```  
 Hash hash_function() const;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The member function returns the stored hash function object.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve el objeto de función hash almacenado.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_hash_function.cpp   
@@ -1427,16 +1344,16 @@ hfn('b') == 1647086
 ```  
   
 ##  <a name="hasher"></a>  unordered_multiset::hasher  
- The type of the hash function.  
+ El tipo de la función hash.  
   
 ```  
 typedef Hash hasher;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for the template parameter `Hash`.  
+### <a name="remarks"></a>Comentarios  
+ El tipo es un sinónimo del parámetro de plantilla `Hash`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_hasher.cpp   
@@ -1464,7 +1381,7 @@ hfn('b') == 1647086
 ```  
   
 ##  <a name="insert"></a>  unordered_multiset::insert  
- Inserts an element or a range of elements into an unordered_multiset.  
+ Inserta un elemento o un intervalo de elementos en un unordered_multiset.  
   
 ```  
 // (1) single element  
@@ -1505,60 +1422,60 @@ void insert(
 IList);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   
 |||  
 |-|-|  
-|Parameter|Description|  
-|`Val`|The value of an element to be inserted into the unordered_multiset.|  
-|`Where`|The place to start searching for the correct point of insertion.|  
-|`ValTy`|Template parameter that specifies the argument type that the unordered_multiset can use to construct an element of [value_type](../standard-library/map-class.md#value_type), and perfect-forwards `Val` as an argument.|  
-|`First`|The position of the first element to be copied.|  
-|`Last`|The position just beyond the last element to be copied.|  
-|`InputIterator`|Template function argument that meets the requirements of an [input iterator](../standard-library/input-iterator-tag-struct.md) that points to elements of a type that can be used to construct [value_type](../standard-library/map-class.md#value_type) objects.|  
-|`IList`|The [initializer_list](../standard-library/initializer-list.md) from which to copy the elements.|  
+|Parámetro|Descripción|  
+|`Val`|Valor de un elemento que se va a insertar en el unordered_multiset.|  
+|`Where`|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto.|  
+|`ValTy`|Parámetro de plantilla que especifica el tipo de argumento que el unordered_multiset puede usar para construir un elemento de [value_type](../standard-library/map-class.md#value_type) y realiza un reenvío directo de `Val` como argumento.|  
+|`First`|Posición del primer elemento que se va a copiar.|  
+|`Last`|Posición situada más allá del último elemento que se va a copiar.|  
+|`InputIterator`|Argumento de la función de plantilla que cumple los requisitos de un [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que apunta a elementos de un tipo que se puede usar para crear objetos [value_type](../standard-library/map-class.md#value_type).|  
+|`IList`|El elemento [initializer_list](../standard-library/initializer-list.md) del que se van a copiar los elementos.|  
   
-### <a name="return-value"></a>Return Value  
- The single-element-insert member functions, (1) and (2), return an iterator to the position where the new element was inserted into the unordered_multiset.  
+### <a name="return-value"></a>Valor devuelto  
+ Las funciones miembro de inserción de un solo elemento, (1) y (2), devuelven un iterador a la posición donde se insertó el nuevo elemento en el unordered_multiset.  
   
- The single-element-with-hint member functions, (3) and (4), return an iterator that points to the position where the new element was inserted into the unordered_multiset.  
+ Las funciones miembro de inserción de un solo elemento con sugerencia, (3) y (4), devuelven un iterador que apunta a la posición donde se insertó el nuevo elemento en el unordered_multiset.  
   
-### <a name="remarks"></a>Remarks  
- No pointers or references are invalidated by this function, but it may invalidate all iterators to the container.  
+### <a name="remarks"></a>Comentarios  
+ Esta función no invalida ningún puntero ni ninguna referencia, pero puede invalidar todos los iteradores al contenedor.  
   
- During the insertion of just one element, if an exception is thrown but does not occur in the container's hash function, the container's state is not modified. If the exception is thrown in the hash function, the result is undefined. During the insertion of multiple elements, if an exception is thrown, the container is left in an unspecified but valid state.  
+ Durante la inserción de un solo elemento, si se produce una excepción pero no se realiza en la función hash del contenedor, no se modifica el estado del contenedor. Si la excepción se produce en la función hash, el resultado es indefinido. Durante la inserción de varios elementos, si se produce una excepción, el contenedor se deja en un estado sin especificar pero válido.  
   
- The [value_type](../standard-library/map-class.md#value_type) of a container is a typedef that belongs to the container, and, for set, `unordered_multiset<V>::value_type` is type `const V`.  
+ El [value_type](../standard-library/map-class.md#value_type) de un contenedor es una definición de tipo que pertenece al contenedor y, para un conjunto, `unordered_multiset<V>::value_type` es de tipo `const V`.  
   
- The range member function (5) inserts the sequence of element values into an unordered_multiset that corresponds to each element addressed by an iterator in the range `[First, Last)`; therefore, `Last` does not get inserted. The container member function `end()` refers to the position just after the last element in the container—for example, the statement `m.insert(v.begin(), v.end());` inserts all elements of `v` into `m`.  
+ La función miembro de intervalo (5) inserta la secuencia de valores de elemento en un unordered_multiset que corresponde a cada elemento direccionado por un iterador en el intervalo `[First, Last)`; por tanto, `Last` no se inserta. La función miembro de contenedor `end()` hace referencia a la posición situada justo después del último elemento del contenedor; por ejemplo, la instrucción `m.insert(v.begin(), v.end());` inserta todos los elementos de `v` en `m`.  
   
- The initializer list member function (6) uses an [initializer_list](../standard-library/initializer-list.md) to copy elements into the unordered_multiset.  
+ La función miembro de lista de inicializadores (6) usa una [initializer_list](../standard-library/initializer-list.md) para copiar los elementos al unordered_multiset.  
   
- For insertion of an element constructed in place—that is, no copy or move operations are performed—see [unordered_multiset::emplace](#emplace) and [unordered_multiset::emplace_hint](#emplace_hint).  
+ Para la inserción de un elemento construido en contexto (es decir, no se realiza ninguna operación de copia o movimiento), vea [unordered_multiset::emplace](#emplace) y [unordered_multiset::emplace_hint](#emplace_hint).  
   
- For a code example, see [multiset::insert](../standard-library/multiset-class.md#insert).  
+ Para obtener un ejemplo de código, vea [multiset::insert](../standard-library/multiset-class.md#insert).  
   
 ##  <a name="iterator"></a>  unordered_multiset::iterator  
- A type that provides a constant [forward iterator](../standard-library/forward-iterator-tag-struct.md) that can read elements in an unordered_multiset.  
+ Tipo que proporciona un [iterador hacia delante](../standard-library/forward-iterator-tag-struct.md) constante que puede leer elementos en un unordered_multiset.  
   
 ```  
 typedef implementation-defined iterator;  
 ```  
   
-### <a name="example"></a>Example  
-  See the example for [begin](../standard-library/multiset-class.md#begin) for an example of how to declare and use an **iterator**.  
+### <a name="example"></a>Ejemplo  
+  Vea el ejemplo de [begin](../standard-library/multiset-class.md#begin) para obtener un ejemplo de cómo declarar y usar un **iterador**.  
   
 ##  <a name="key_eq"></a>  unordered_multiset::key_eq  
- Gets the stored comparison function object.  
+ Obtiene el objeto de función de comparación almacenado.  
   
 ```  
 Pred key_eq() const;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The member function returns the stored comparison function object.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve el objeto de función de comparación almacenado.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_key_eq.cpp   
@@ -1588,16 +1505,16 @@ cmpfn('a', 'b') == false
 ```  
   
 ##  <a name="key_equal"></a>  unordered_multiset::key_equal  
- The type of the comparison function.  
+ El tipo de la función de comparación.  
   
 ```  
 typedef Pred key_equal;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for the template parameter `Pred`.  
+### <a name="remarks"></a>Comentarios  
+ El tipo es un sinónimo del parámetro de plantilla `Pred`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_key_equal.cpp   
@@ -1627,16 +1544,16 @@ cmpfn('a', 'b') == false
 ```  
   
 ##  <a name="key_type"></a>  unordered_multiset::key_type  
- The type of an ordering key.  
+ El tipo de una clave de ordenación.  
   
 ```  
 typedef Key key_type;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type is a synonym for the template parameter `Key`.  
+### <a name="remarks"></a>Comentarios  
+ El tipo es un sinónimo del parámetro de plantilla `Key`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_key_type.cpp   
@@ -1680,16 +1597,16 @@ int main()
 ```  
   
 ##  <a name="load_factor"></a>  unordered_multiset::load_factor  
- Counts the average elements per bucket.  
+ Cuenta los elementos promedio por depósito.  
   
 ```  
 float load_factor() const;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The member function returns `(float)`[unordered_multiset::size](#size)`() / (float)`[unordered_multiset::bucket_count](#bucket_count)`()`, the average number of elements per bucket.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve `(float)`[unordered_multiset::size](#size)`() / (float)`[unordered_multiset::bucket_count](#bucket_count)`()`, el promedio de elementos por depósito.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_load_factor.cpp   
@@ -1747,16 +1664,16 @@ int main()
 ```  
   
 ##  <a name="local_iterator"></a>  unordered_multiset::local_iterator  
- The type of a bucket iterator.  
+ Tipo de un iterador de depósito.  
   
 ```  
 typedef T4 local_iterator;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type describes an object that can serve as a forward iterator for a bucket. It is described here as a synonym for the implementation-defined type `T4`.  
+### <a name="remarks"></a>Comentarios  
+ El tipo describe un objeto que puede actuar como iterador hacia delante para un depósito. Aquí se describe como sinónimo del tipo definido por implementación `T4`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_local_iterator.cpp   
@@ -1794,16 +1711,16 @@ int main()
 ```  
   
 ##  <a name="max_bucket_count"></a>  unordered_multiset::max_bucket_count  
- Gets the maximum number of buckets.  
+ Obtiene el número máximo de depósitos.  
   
 ```  
 size_type max_bucket_count() const;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The member function returns the maximum number of buckets currently permitted.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve el número máximo de depósitos que se admiten actualmente.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_max_bucket_count.cpp   
@@ -1880,7 +1797,7 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="max_load_factor"></a>  unordered_multiset::max_load_factor  
- Gets or sets the maximum elements per bucket.  
+ Obtiene o establece los elementos máximos por depósito.  
   
 ```  
 float max_load_factor() const;
@@ -1889,14 +1806,14 @@ float max_load_factor() const;
 void max_load_factor(float factor);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `factor`  
- The new maximum load factor.  
+ El nuevo factor de carga máxima.  
   
-### <a name="remarks"></a>Remarks  
- The first member function returns the stored maximum load factor. The second member function replaces the stored maximum load factor with `factor`.  
+### <a name="remarks"></a>Comentarios  
+ La primera función miembro devuelve el factor de carga máxima almacenado. La segunda función miembro reemplaza el factor de carga máxima almacenado con `factor`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_max_load_factor.cpp   
@@ -1973,16 +1890,16 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="max_size"></a>  unordered_multiset::max_size  
- Gets the maximum size of the controlled sequence.  
+ Obtiene el tamaño máximo de la secuencia controlada.  
   
 ```  
 size_type max_size() const;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The member function returns the length of the longest sequence that the object can control.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve la longitud de la secuencia más larga que puede controlar el objeto.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_max_size.cpp   
@@ -2007,7 +1924,7 @@ max_size() == 4294967295
 ```  
   
 ##  <a name="op_eq"></a>  unordered_multiset::operator=  
- Copies a hash table.  
+ Copia una tabla hash.  
   
 ```  
 unordered_multiset& operator=(const unordered_multiset& right);
@@ -2015,17 +1932,17 @@ unordered_multiset& operator=(const unordered_multiset& right);
 unordered_multiset& operator=(unordered_multiset&& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   
 |||  
 |-|-|  
-|Parameter|Description|  
-|`right`|The [unordered_multiset](../standard-library/unordered-multiset-class.md) being copied into the `unordered_multiset`.|  
+|Parámetro|Descripción|  
+|`right`|El [unordered_multiset](../standard-library/unordered-multiset-class.md) que se copia en el `unordered_multiset`.|  
   
-### <a name="remarks"></a>Remarks  
- After erasing any existing elements in an `unordered_multiset`, `operator=` either copies or moves the contents of `right` into the `unordered_multiset`.  
+### <a name="remarks"></a>Comentarios  
+ Después de borrar todos los elementos existentes en un `unordered_multiset`, `operator=` copia o mueve el contenido de `right` a `unordered_multiset`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // unordered_multiset_operator_as.cpp  
@@ -2063,16 +1980,16 @@ int main( )
 ```  
   
 ##  <a name="pointer"></a>  unordered_multiset::pointer  
- The type of a pointer to an element.  
+ El tipo de un puntero a un elemento.  
   
 ```  
 typedef Alloc::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type describes an object that can serve as a pointer to an element of the controlled sequence.  
+### <a name="remarks"></a>Comentarios  
+ El tipo describe un objeto que puede actuar como puntero a un elemento de la secuencia controlada.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_pointer.cpp   
@@ -2109,16 +2026,16 @@ int main()
 ```  
   
 ##  <a name="reference"></a>  unordered_multiset::reference  
- The type of a reference to an element.  
+ El tipo de una referencia a un elemento.  
   
 ```  
 typedef Alloc::reference reference;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type describes an object that can serve as a reference to an element of the controlled sequence.  
+### <a name="remarks"></a>Comentarios  
+ El tipo describe un objeto que puede actuar como referencia a un elemento de la secuencia controlada.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_reference.cpp   
@@ -2155,20 +2072,20 @@ int main()
 ```  
   
 ##  <a name="rehash"></a>  unordered_multiset::rehash  
- Rebuilds the hash table.  
+ Recompila la tabla hash.  
   
 ```  
 void rehash(size_type nbuckets);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nbuckets`  
- The requested number of buckets.  
+ Número solicitado de depósitos.  
   
-### <a name="remarks"></a>Remarks  
- The member function alters the number of buckets to be at least `nbuckets` and rebuilds the hash table as needed.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro modifica el número de depósitos para que sea al menos `nbuckets` y vuelve a generar la tabla hash según sea necesario.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_rehash.cpp   
@@ -2231,16 +2148,16 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="size"></a>  unordered_multiset::size  
- Counts the number of elements.  
+ Cuenta el número de elementos.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The member function returns the length of the controlled sequence.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro devuelve la longitud de la secuencia controlada.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_size.cpp   
@@ -2297,16 +2214,16 @@ empty() == false
 ```  
   
 ##  <a name="size_type"></a>  unordered_multiset::size_type  
- The type of an unsigned distance between two elements.  
+ El tipo de una distancia sin signo entre dos elementos.  
   
 ```  
 typedef T2 size_type;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The unsigned integer type describes an object that can represent the length of any controlled sequence. It is described here as a synonym for the implementation-defined type `T2`.  
+### <a name="remarks"></a>Comentarios  
+ El tipo de entero sin signo describe un objeto que puede representar la longitud de cualquier secuencia controlada. Aquí se describe como sinónimo del tipo definido por implementación `T2`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_size_type.cpp   
@@ -2332,20 +2249,20 @@ size == 0
 ```  
   
 ##  <a name="swap"></a>  unordered_multiset::swap  
- Swaps the contents of two containers.  
+ Intercambia el contenido de dos contenedores.  
   
 ```  
 void swap(unordered_multiset& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `right`  
- The container to swap with.  
+ El contenedor con el que se intercambia.  
   
-### <a name="remarks"></a>Remarks  
- The member function swaps the controlled sequences between `*this` and `right`. If [unordered_multiset::get_allocator](#get_allocator)`() == right.get_allocator()`, it does so in constant time, it throws an exception only as a result of copying the stored traits object of type `Tr`, and it invalidates no references, pointers, or iterators that designate elements in the two controlled sequences. Otherwise, it performs a number of element assignments and constructor calls proportional to the number of elements in the two controlled sequences.  
+### <a name="remarks"></a>Comentarios  
+ La función miembro intercambia las secuencias controladas entre `*this` y `right`. Si [unordered_multiset::get_allocator](#get_allocator)`() == right.get_allocator()`, lo hace en tiempo constante, inicia una excepción solo como resultado de copiar el objeto de rasgos almacenado de tipo `Tr` y no invalida referencias, punteros o iteradores que designan elementos en las dos secuencias controladas. De lo contrario, realiza varias asignaciones de elementos y llamadas de constructor proporcionales al número de elementos de ambas secuencias controladas.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_swap.cpp   
@@ -2402,7 +2319,7 @@ int main()
 ```  
   
 ##  <a name="unordered_multiset"></a>  unordered_multiset::unordered_multiset  
- Constructs a container object.  
+ Construye un objeto contenedor.  
   
 ```  
 unordered_multiset(
@@ -2452,43 +2369,43 @@ unordered_multiset(
     const Allocator& Al = Alloc());
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
   
 |||  
 |-|-|  
-|Parameter|Description|  
-|`InputIterator`|The iterator type.|  
-|`Al`|The allocator object to store.|  
-|`Comp`|The comparison function object to store.|  
-|`Hash`|The hash function object to store.|  
-|`Bucket_count`|The minimum number of buckets.|  
-|`Right`|The container to copy.|  
-|`IList`|The initializer_list from which to copy.|  
+|Parámetro|Descripción|  
+|`InputIterator`|Tipo de iterador.|  
+|`Al`|Objeto de asignador que se va a almacenar.|  
+|`Comp`|Objeto de función de comparación que se va a almacenar.|  
+|`Hash`|Objeto de función hash que se va a almacenar.|  
+|`Bucket_count`|Número mínimo de depósitos.|  
+|`Right`|Contenedor que se va a copiar.|  
+|`IList`|initializer_list de la que se va a copiar.|  
   
-### <a name="remarks"></a>Remarks  
- The first constructor specifies a copy of the sequence controlled by `Right`. The second constructor specifies an empty controlled sequence. The third constructor inserts the sequence of element values `[First, Last)`. The fourth constructor specifies a copy of the sequence by moving `Right`.  
+### <a name="remarks"></a>Comentarios  
+ El primer constructor especifica una copia de la secuencia controlada por `Right`. El segundo constructor especifica una secuencia controlada vacía. El tercer constructor inserta la secuencia de valores de elemento `[First, Last)`. El cuarto constructor especifica una copia de la secuencia moviendo `Right`.  
   
- All constructors also initialize several stored values. For the copy constructor, the values are obtained from `Right`. Otherwise:  
+ Todos los constructores también inicializan varios valores almacenados. Para el constructor de copias, los valores se obtienen de `Right`. De lo contrario:  
   
- The minimum number of buckets is the argument `Bucket_count`, if present; otherwise it is a default value described here as the implementation-defined value `N0`.  
+ El número mínimo de depósitos es el argumento `Bucket_count`, si está presente; de lo contrario, es un valor predeterminado descrito aquí como el valor `N0` definido por la implementación.  
   
- The hash function object is the argument `Hash`, if present; otherwise it is `Hash()`.  
+ El objeto de función hash es el argumento `Hash`, si está presente; de lo contrario, es `Hash()`.  
   
- The comparison function object is the argument `Comp`, if present; otherwise it is `Comp()`.  
+ El objeto de función de comparación es el argumento `Comp`, si está presente; de lo contrario, es `Comp()`.  
   
- The allocator object is the argument `Al`, if present; otherwise, it is `Alloc()`.  
+ El objeto de asignador es el argumento `Al`, si está presente; de lo contrario, es `Alloc()`.  
   
 ##  <a name="value_type"></a>  unordered_multiset::value_type  
- The type of an element.  
+ El tipo de un elemento.  
   
 ```  
 typedef Key value_type;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- The type describes an element of the controlled sequence.  
+### <a name="remarks"></a>Comentarios  
+ El tipo describe un elemento de la secuencia controlada.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_value_type.cpp   
@@ -2531,10 +2448,10 @@ int main()
 [d] [c] [b] [a]  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<unordered_set>](../standard-library/unordered-set.md)   
- [Containers](../cpp/containers-modern-cpp.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
+ [Contenedores](../cpp/containers-modern-cpp.md)   
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
 
 

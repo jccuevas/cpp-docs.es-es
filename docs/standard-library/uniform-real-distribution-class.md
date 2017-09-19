@@ -1,5 +1,5 @@
 ---
-title: uniform_real_distribution Class | Microsoft Docs
+title: uniform_real_distribution (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- uniform_real_distribution
 - random/std::uniform_real_distribution
 - random/std::uniform_real_distribution::reset
 - random/std::uniform_real_distribution::a
@@ -26,15 +27,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- std::uniform_real_distribution [C++]
-- std::uniform_real_distribution [C++], reset
-- std::uniform_real_distribution [C++], a
-- std::uniform_real_distribution [C++], b
-- std::uniform_real_distribution [C++], param
-- std::uniform_real_distribution [C++], min
-- std::uniform_real_distribution [C++], max
-- std::uniform_real_distribution [C++], param_type
-- std::uniform_real_distribution [C++], param_type
+- uniform_real_distribution class
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
 caps.latest.revision: 18
 author: corob-msft
@@ -54,17 +47,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 0534c96f521c4bbe60647f0b644342c272b07209
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 34c8090f40b4653f4c8798ffac404dc1652f7b52
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="uniformrealdistribution-class"></a>uniform_real_distribution Class
-Generates a uniform (every value is equally probable) floating-point distribution within an output range that is inclusive-exclusive.  
+# <a name="uniformrealdistribution-class"></a>uniform_real_distribution (Clase)
+Genera una distribución de punto flotante uniforme (todos los valores son probables en la misma medida) dentro de un rango de salida inclusivo-exclusivo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
 ```  
 template<class RealType = double>
    class uniform_real_distribution {
@@ -94,31 +87,31 @@ public:
    result_type max() const;
 };
  ``` 
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
 *RealType*  
-The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
+Un tipo de resultado de punto flotante, el valor predeterminado es `double`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Remarks  
-The template class describes an inclusive-exclusive distribution that produces values of a user-specified integral floating point type with a distribution so that every value is equally probable. The following table links to articles about individual members.  
+## <a name="remarks"></a>Comentarios  
+La clase de plantilla describe una distribución inclusiva-exclusiva que genera valores de un tipo de punto flotante integral especificado por el usuario con una distribución, de modo que cada valor es probable en igual medida. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.  
   
 ||||  
 |-|-|-|  
 |[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|  
 |`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|  
   
-The property member `a()` returns the currently stored minimum bound of the distribution, while `b()` returns the currently stored maximum bound. For this distribution class, these minimum and maximum values are the same as those returned by the common property functions `min()` and `max()` described in the [\<random>](../standard-library/random.md) topic.  
+El miembro de propiedad `a()` devuelve el límite mínimo de la distribución almacenado actualmente, mientras que `b()` devuelve el límite máximo almacenado actualmente. Para esta clase de distribución, estos valores mínimo y máximo son los mismos que los devueltos por las funciones de propiedad común `min()` y `max()` descritas en el tema [\<random>](../standard-library/random.md).  
   
-The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
+El miembro de propiedad `param()` establece o devuelve el paquete de parámetros de distribución almacenado `param_type`.  
 
-The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
+Las funciones miembro `min()` y `max()` devuelven el resultado posible más pequeño y el resultado posible más grande, respectivamente.  
   
-The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
+La función miembro `reset()` descarta cualquier valor almacenado en caché, de modo que la siguiente llamada a `operator()` no depende de ningún valor obtenido del motor antes de la llamada.  
   
-The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
+Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
   
-For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
+Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -196,38 +189,38 @@ Distribution for 10 samples:
          10: 0.8795716566
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<random>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<random>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
 ##  <a name="uniform_real_distribution"></a>  uniform_real_distribution::uniform_real_distribution  
-Constructs the distribution.  
+Construye la distribución.  
   
 ```  
 explicit uniform_real_distribution(result_type a = 0.0, result_type b = 1.0);
 explicit uniform_real_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
 *a*  
-The lower bound for random values, inclusive.  
+Límite inferior para los valores aleatorios (incluido).  
   
 *b*  
-The upper bound for random values, exclusive.  
+Límite superior para los valores aleatorios (excluido).  
   
 *parm*  
-The `param_type` structure used to construct the distribution.  
+La estructura `param_type` usada para construir la distribución.  
   
-### <a name="remarks"></a>Remarks  
- **Precondition:** `a < b`  
+### <a name="remarks"></a>Comentarios  
+ **Condición previa:** `a < b`  
   
-The first constructor constructs an object whose stored `a` value holds the value *a* and whose stored `b` value holds the value *b*.  
+El primer constructor crea un objeto cuyo valor `a` almacenado contiene el valor *a* y cuyo valor `b` almacenado contiene el valor *b*.  
   
-The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
+El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.  
   
 ##  <a name="param_type"></a>  uniform_real_distribution::param_type  
- Stores all the parameters of the distribution.  
+ Almacena todos los parámetros de la distribución.  
   
 ```  
 struct param_type {  
@@ -240,22 +233,22 @@ struct param_type {
    bool operator!=(const param_type& right) const;
    };  
 ```  
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
 *a*  
-The lower bound for random values, inclusive.  
+Límite inferior para los valores aleatorios (incluido).  
   
 *b*  
-The upper bound for random values, exclusive.  
+Límite superior para los valores aleatorios (excluido).  
   
 *right*  
-The `param_type` object to compare to this.  
+El objeto `param_type` que se va a comparar con este.  
   
-### <a name="remarks"></a>Remarks  
- **Precondition:** `a < b`  
+### <a name="remarks"></a>Comentarios  
+ **Condición previa:** `a < b`  
   
-This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
+Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [\<random>](../standard-library/random.md)
 
 

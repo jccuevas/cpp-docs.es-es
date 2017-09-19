@@ -1,5 +1,5 @@
 ---
-title: COleCurrency Class | Microsoft Docs
+title: Clase COleCurrency | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,14 +22,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COleCurrency [MFC], COleCurrency
-- COleCurrency [MFC], Format
-- COleCurrency [MFC], GetStatus
-- COleCurrency [MFC], ParseCurrency
-- COleCurrency [MFC], SetCurrency
-- COleCurrency [MFC], SetStatus
-- COleCurrency [MFC], m_cur
-- COleCurrency [MFC], m_status
+- fixed-point numbers
+- numbers, fixed-point
+- CURRENCY
+- COleCurrency class
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
 caps.latest.revision: 24
 author: mikeblome
@@ -49,76 +45,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 423cb540de41430d615c11fe0640a0273b095222
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 38dbd45818f53430db37bb5807c255494c4a9896
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="colecurrency-class"></a>COleCurrency Class
-Encapsulates the `CURRENCY` data type of OLE automation.  
+# <a name="colecurrency-class"></a>Clase OLECurrency.
+Encapsula el tipo de datos `CURRENCY` de la automatización OLE.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class COleCurrency  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[COleCurrency::COleCurrency](#colecurrency)|Constructs a `COleCurrency` object.|  
+|[COleCurrency::COleCurrency](#colecurrency)|Construye un objeto `COleCurrency`.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[COleCurrency::Format](#format)|Generates a formatted string representation of a `COleCurrency` object.|  
-|[COleCurrency::GetStatus](#getstatus)|Gets the status (validity) of this `COleCurrency` object.|  
-|[COleCurrency::ParseCurrency](#parsecurrency)|Reads a **CURRENCY** value from a string and sets the value of `COleCurrency`.|  
-|[COleCurrency::SetCurrency](#setcurrency)|Sets the value of this `COleCurrency` object.|  
-|[COleCurrency::SetStatus](#setstatus)|Sets the status (validity) for this `COleCurrency` object.|  
+|[COleCurrency::Format](#format)|Genera una representación de cadena con formato de un `COleCurrency` objeto.|  
+|[COleCurrency::GetStatus](#getstatus)|Obtiene el estado (validez) de este `COleCurrency` objeto.|  
+|[COleCurrency::ParseCurrency](#parsecurrency)|Lee un **moneda** valor de una cadena y establece el valor de `COleCurrency`.|  
+|[COleCurrency::SetCurrency](#setcurrency)|Establece el valor de este `COleCurrency` objeto.|  
+|[COleCurrency::SetStatus](#setstatus)|Establece el estado (validez) de este `COleCurrency` objeto.|  
   
-### <a name="public-operators"></a>Public Operators  
+### <a name="public-operators"></a>Operadores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[operator =](#operator_eq)|Copies a `COleCurrency` value.|  
-|[operator +, -](#operator_plus_minus)|Adds, subtracts, and changes sign of `COleCurrency` values.|  
-|[operator +=, -=](#operator_plus_minus_eq)|Adds and subtracts a `COleCurrency` value from this `COleCurrency` object.|  
-|[operator */](#operator_star)|Scales a `COleCurrency` value by an integer value.|  
-|[operator *=, /=](#operator_star_div_eq)|Scales this `COleCurrency` value by an integer value.|  
-|[operator <<](#operator_stream)|Outputs a `COleCurrency` value to `CArchive` or `CDumpContext`.|  
-|[operator >>](#operator_stream)|Inputs a `COleCurrency` object from `CArchive`.|  
-|[operator CURRENCY](#operator_currency)|Converts a `COleCurrency` value into a **CURRENCY**.|  
-|[operator ==, <, <=, etc.](#colecurrency_relational_operators)|Compares two `COleCurrency` values.|  
+|[operador =](#operator_eq)|Copia un `COleCurrency` valor.|  
+|[operador +, -](#operator_plus_minus)|Agrega, resta y cambia el signo de `COleCurrency` valores.|  
+|[operador +=, =](#operator_plus_minus_eq)|Agrega y resta un `COleCurrency` el valor de este `COleCurrency` objeto.|  
+|[operador * /](#operator_star)|Escalas un `COleCurrency` valor mediante un valor entero.|  
+|[operador * =, / =](#operator_star_div_eq)|Esta escala `COleCurrency` valor mediante un valor entero.|  
+|[(operador)](#operator_stream)|Salidas de un `COleCurrency` valor `CArchive` o `CDumpContext`.|  
+|[operador >>](#operator_stream)|Entradas un `COleCurrency` objeto `CArchive`.|  
+|[operador de moneda](#operator_currency)|Convierte un `COleCurrency` valor en un **moneda**.|  
+|[operador ==,<,></,><=,></=,>](#colecurrency_relational_operators)|Compara dos `COleCurrency` valores.|  
   
-### <a name="public-data-members"></a>Public Data Members  
+### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[COleCurrency::m_cur](#m_cur)|Contains the underlying **CURRENCY** for this `COleCurrency` object.|  
-|[COleCurrency::m_status](#m_status)|Contains the status of this `COleCurrency` object.|  
+|[COleCurrency::m_cur](#m_cur)|Contiene subyacente **moneda** para este `COleCurrency` objeto.|  
+|[COleCurrency::m_status](#m_status)|Contiene el estado de este `COleCurrency` objeto.|  
   
-## <a name="remarks"></a>Remarks  
- **COleCurrency** does not have a base class.  
+## <a name="remarks"></a>Comentarios  
+ **COleCurrency** no tiene una clase base.  
   
- **CURRENCY** is implemented as an 8-byte, two's-complement integer value scaled by 10,000. This gives a fixed-point number with 15 digits to the left of the decimal point and 4 digits to the right. The **CURRENCY** data type is extremely useful for calculations involving money, or for any fixed-point calculation where accuracy is important. It is one of the possible types for the `VARIANT` data type of OLE automation.  
+ **MONEDA** se implementa como un valor entero de complemento de dos escalada de 10.000 de 8 bytes. Esto proporciona un número de punto fijo con 15 dígitos a la izquierda del separador decimal y cuatro dígitos a la derecha. El **moneda** tipo de datos es muy útil para cálculos monetarios, o para los cálculos de punto fijo, donde la precisión es importante. Es uno de los tipos posibles de la `VARIANT` el tipo de datos de la automatización OLE.  
   
- **COleCurrency** also implements some basic arithmetic operations for this fixed-point type. The supported operations have been selected to control the rounding errors which occur during fixed-point calculations.  
+ **COleCurrency** también implementa algunas operaciones aritméticas básicas para este tipo de punto fijo. Se han seleccionado las operaciones compatibles para controlar los errores de redondeo que se producen durante los cálculos de punto fijo.  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `COleCurrency`  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxdisp.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxdisp.h  
   
-##  <a name="colecurrency"></a>  COleCurrency::COleCurrency  
- Constructs a **COleCurrency** object.  
+##  <a name="colecurrency"></a>COleCurrency::COleCurrency  
+ Construye un **COleCurrency** objeto.  
   
 ```  
 COleCurrency();  
@@ -132,76 +128,76 @@ COleCurrency(
     long nFractionalUnits);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `cySrc`  
- A **CURRENCY** value to be copied into the new **COleCurrency** object.  
+ Un **moneda** valor que se copiará en el nuevo **COleCurrency** objeto.  
   
  `curSrc`  
- An existing **COleCurrency** object to be copied into the new **COleCurrency** object.  
+ Existente **COleCurrency** objeto que se copiará en el nuevo **COleCurrency** objeto.  
   
  *varSrc*  
- An existing **VARIANT** data structure (possibly a `COleVariant` object) to be converted to a currency value ( `VT_CY`) and copied into the new **COleCurrency** object.  
+ Existente **VARIANT** estructura de datos (posiblemente una `COleVariant` objeto) se convierta en un valor de divisa ( `VT_CY`) y se copian en el nuevo **COleCurrency** objeto.  
   
  `nUnits`, `nFractionalUnits`  
- Indicate the units and fractional part (in 1/10,000's) of the value to be copied into the new **COleCurrency** object.  
+ Indicar las unidades y la parte fraccionaria (en 1/10, miles) del valor que se copiará en la nueva **COleCurrency** objeto.  
   
-### <a name="remarks"></a>Remarks  
- All of these constructors create new **COleCurrency** objects initialized to the specified value. A brief description of each of these constructors follows. Unless otherwise noted, the status of the new **COleCurrency** item is set to valid.  
+### <a name="remarks"></a>Comentarios  
+ Todos estos constructores crean nuevos **COleCurrency** objetos inicializados en el valor especificado. Muestra una breve descripción de cada uno de estos constructores. A menos que se indique lo contrario, el estado de la nueva **COleCurrency** elemento está establecido en válido.  
   
-- COleCurrency() Constructs a **COleCurrency** object initialized to 0 (zero).  
+- Construcciones de COleCurrency() una **COleCurrency** objeto se inicializa en 0 (cero).  
   
-- COleCurrency(`cySrc`) Constructs a **COleCurrency** object from a [CURRENCY](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) value.  
+- COleCurrency (`cySrc`) construye una **COleCurrency** objeto a partir de un [moneda](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) valor.  
   
-- COleCurrency(`curSrc`) Constructs a **COleCurrency** object from an existing **COleCurrency** object. The new object has the same status as the source object.  
+- COleCurrency (`curSrc`) construye una **COleCurrency** objeto a partir de una **COleCurrency** objeto. El nuevo objeto tiene el mismo estado que el objeto de origen.  
   
-- COleCurrency(`varSrc`) Constructs a **COleCurrency** object. Attempts to convert a [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) structure or `COleVariant` object to a currency ( `VT_CY`) value. If this conversion is successful, the converted value is copied into the new **COleCurrency** object. If it is not, the value of the **COleCurrency** object is set to zero (0) and its status to invalid.  
+- COleCurrency (`varSrc`) construye una **COleCurrency** objeto. Intenta convertir un [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) estructura o `COleVariant` objeto a una moneda ( `VT_CY`) valor. Si esta conversión se realiza correctamente, el valor convertido se copia en el nuevo **COleCurrency** objeto. Si no, es el valor de la **COleCurrency** objeto se establece en cero (0) y su estado a no válido.  
   
-- `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a **COleCurrency** object from the specified numerical components. If the absolute value of the fractional part is greater than 10,000, the appropriate adjustment is made to the units. Note that the units and fractional part are specified by signed long values.  
+- `COleCurrency(`nUnits`, `'nFractionalUnits) construye una **COleCurrency** objeto de los componentes numéricos especificados. Si el valor absoluto de la parte fraccionaria es mayor que 10.000, se realiza el ajuste correspondiente a las unidades. Tenga en cuenta que las unidades y la parte fraccionaria se especifican mediante los valores de tipo long con signo.  
   
- For more information, see the [CURRENCY](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) and [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) entries in the Windows SDK.  
+ Para obtener más información, consulte el [moneda](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) y [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) entradas en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="example"></a>Example  
- The following examples show the effects of the zero-parameter and two-parameter constructors:  
+### <a name="example"></a>Ejemplo  
+ Los ejemplos siguientes muestran los efectos de los constructores de parámetro cero y dos parámetros:  
   
- [!code-cpp[NVC_MFCOleContainer#10](../../mfc/codesnippet/cpp/colecurrency-class_1.cpp)]  
+ [!code-cpp[NVC_MFCOleContainer&#10;](../../mfc/codesnippet/cpp/colecurrency-class_1.cpp)]  
   
-##  <a name="format"></a>  COleCurrency::Format  
- Call this member function to create a formatted representation of the currency value.  
+##  <a name="format"></a>COleCurrency::Format  
+ Llame a esta función miembro para crear una representación con formato del valor de moneda.  
   
 ```  
 CString Format(DWORD  dwFlags = 0, LCID  lcid = LANG_USER_DEFAULT) const; 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `dwFlags`  
- Indicates flags for locale settings. Only the following flag is relevant to currency:  
+ Indica los marcadores para la configuración regional. La siguiente marca de solo es relevante para la moneda:  
   
-- **LOCALE_NOUSEROVERRIDE** Use the system default locale settings, rather than custom user settings.  
+- **LOCALE_NOUSEROVERRIDE** usar la configuración regional predeterminada del sistema, en lugar de configuración de usuario personalizada.  
   
  `lcid`  
- Indicates locale ID to use for the conversion.  
+ Indica el identificador de configuración regional para la conversión.  
   
-### <a name="return-value"></a>Return Value  
- A `CString` that contains the formatted currency value.  
+### <a name="return-value"></a>Valor devuelto  
+ Un `CString` que contiene el valor con formato de moneda.  
   
-### <a name="remarks"></a>Remarks  
- It formats the value using the local language specifications (locale IDs). A currency symbol is not included in the value returned. If the status of this **COleCurrency** object is null, the return value is an empty string. If the status is invalid, the return string is specified by the string resource **IDS_INVALID_CURRENCY**.  
+### <a name="remarks"></a>Comentarios  
+ Da formato al valor con las especificaciones de idioma local (identificadores de configuración regional). Un símbolo de moneda no se incluye en el valor devuelto. Si el estado de este **COleCurrency** objeto es null, el valor devuelto es una cadena vacía. Si el estado no es válido, la cadena devuelta es especificada por el recurso de cadena **IDS_INVALID_CURRENCY**.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCOleContainer#11](../../mfc/codesnippet/cpp/colecurrency-class_2.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFCOleContainer&#11;](../../mfc/codesnippet/cpp/colecurrency-class_2.cpp)]  
   
-##  <a name="getstatus"></a>  COleCurrency::GetStatus  
- Call this member function to get the status (validity) of a given **COleCurrency** object.  
+##  <a name="getstatus"></a>COleCurrency::GetStatus  
+ Llame a esta función miembro para obtener el estado (validez) de un determinado **COleCurrency** objeto.  
   
 ```  
 CurrencyStatus GetStatus() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns the status of this **COleCurrency** value.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve el estado de este **COleCurrency** valor.  
   
-### <a name="remarks"></a>Remarks  
- The return value is defined by the `CurrencyStatus` enumerated type that is defined within the **COleCurrency** class.  
+### <a name="remarks"></a>Comentarios  
+ El valor devuelto se define mediante la `CurrencyStatus` tipo enumerado que se define dentro de la **COleCurrency** clase.  
   
 ```  
 enum CurrencyStatus {
@@ -211,53 +207,53 @@ enum CurrencyStatus {
     };  
 ```  
   
- For a brief description of these status values, see the following list:  
+ Para obtener una breve descripción de estos valores de estado, consulte la lista siguiente:  
   
-- **COleCurrency::valid** Indicates that this **COleCurrency** object is valid.  
+- **COleCurrency::valid** indica que este **COleCurrency** objeto es válido.  
   
-- **COleCurrency::invalid** Indicates that this **COleCurrency** object is invalid; that is, its value may be incorrect.  
+- **COleCurrency::invalid** indica que este **COleCurrency** objeto no es válido; es decir, su valor puede ser incorrecto.  
   
-- **COleCurrency::null** Indicates that this **COleCurrency** object is null, that is, that no value has been supplied for this object. (This is "null" in the database sense of "having no value," as opposed to the C++ **NULL**.)  
+- **COleCurrency::null** indica que este **COleCurrency** objeto es null, es decir, que no se ha proporcionado ningún valor para este objeto. (Esto es "null" en el sentido de la base de datos de "no tener ningún valor," en lugar de C++ **NULL**.)  
   
- The status of a **COleCurrency** object is invalid in the following cases:  
+ El estado de un **COleCurrency** objeto no es válido en los casos siguientes:  
   
--   If its value is set from a **VARIANT** or `COleVariant` value that could not be converted to a currency value.  
+-   Si se establece su valor desde una **VARIANT** o `COleVariant` valor que no se pudo convertir en un valor monetario.  
   
--   If this object has experienced an overflow or underflow during an arithmetic assignment operation, for example `+=` or **\*=**.  
+-   Si este objeto ha sufrido un desbordamiento o subdesbordamiento durante una operación aritmética de asignación, por ejemplo `+=` o ** \* = **.  
   
--   If an invalid value was assigned to this object.  
+-   Si se asignó un valor no válido para este objeto.  
   
--   If the status of this object was explicitly set to invalid using [SetStatus](#setstatus).  
+-   Si el estado de este objeto se estableció explícitamente en no válido con [SetStatus](#setstatus).  
   
- For more information on operations that may set the status to invalid, see the following member functions:  
+ Para obtener más información sobre las operaciones que puede establecer el estado no son válidos, vea las siguientes funciones miembro:  
   
-- [COleCurrency](#colecurrency)  
+- [OLECurrency.](#colecurrency)  
   
-- [operator =](#operator_eq)  
+- [operador =](#operator_eq)  
   
-- [operator + -](#operator_plus_minus)  
+- [operador +:](#operator_plus_minus)  
   
-- [operator += and -=](#operator_plus_minus_eq)  
+- [operador += y =](#operator_plus_minus_eq)  
   
-- [operator * /](#operator_star)  
+- [operador * /](#operator_star)  
   
-- [operator *= and /=](#operator_star_div_eq)  
+- [operador * = y / =](#operator_star_div_eq)  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCOleContainer#12](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFCOleContainer&#12;](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]  
   
-##  <a name="m_cur"></a>  COleCurrency::m_cur  
- The underlying [CURRENCY](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) structure for this **COleCurrency** object.  
+##  <a name="m_cur"></a>COleCurrency::m_cur  
+ Subyacente [moneda](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) estructura de este **COleCurrency** objeto.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
 > [!CAUTION]
->  Changing the value in the **CURRENCY** structure accessed by the pointer returned by this function will change the value of this **COleCurrency** object. It does not change the status of this **COleCurrency** object.  
+>  Cambie el valor en el **moneda** estructura accediendo el puntero devuelto por esta función cambiará el valor de esta **COleCurrency** objeto. No cambia el estado de este **COleCurrency** objeto.  
   
- For more information, see the [CURRENCY](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) entry in the Windows SDK.  
+ Para obtener más información, consulte el [moneda](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) entrada en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="m_status"></a>  COleCurrency::m_status  
- The type of this data member is the enumerated type `CurrencyStatus`, which is defined within the **COleCurrency** class.  
+##  <a name="m_status"></a>COleCurrency::m_status  
+ El tipo de este miembro de datos es el tipo enumerado `CurrencyStatus`, que se define dentro de la **COleCurrency** clase.  
   
 ```  
 enum CurrencyStatus{  
@@ -267,44 +263,44 @@ enum CurrencyStatus{
 };  
 ```  
   
-### <a name="remarks"></a>Remarks  
- For a brief description of these status values, see the following list:  
+### <a name="remarks"></a>Comentarios  
+ Para obtener una breve descripción de estos valores de estado, consulte la lista siguiente:  
   
-- **COleCurrency::valid** Indicates that this **COleCurrency** object is valid.  
+- **COleCurrency::valid** indica que este **COleCurrency** objeto es válido.  
   
-- **COleCurrency::invalid** Indicates that this **COleCurrency** object is invalid; that is, its value may be incorrect.  
+- **COleCurrency::invalid** indica que este **COleCurrency** objeto no es válido; es decir, su valor puede ser incorrecto.  
   
-- **COleCurrency::null** Indicates that this **COleCurrency** object is null, that is, that no value has been supplied for this object. (This is "null" in the database sense of "having no value," as opposed to the C++ **NULL**.)  
+- **COleCurrency::null** indica que este **COleCurrency** objeto es null, es decir, que no se ha proporcionado ningún valor para este objeto. (Esto es "null" en el sentido de la base de datos de "no tener ningún valor," en lugar de C++ **NULL**.)  
   
- The status of a **COleCurrency** object is invalid in the following cases:  
+ El estado de un **COleCurrency** objeto no es válido en los casos siguientes:  
   
--   If its value is set from a **VARIANT** or `COleVariant` value that could not be converted to a currency value.  
+-   Si se establece su valor desde una **VARIANT** o `COleVariant` valor que no se pudo convertir en un valor monetario.  
   
--   If this object has experienced an overflow or underflow during an arithmetic assignment operation, for example `+=` or **\*=**.  
+-   Si este objeto ha sufrido un desbordamiento o subdesbordamiento durante una operación aritmética de asignación, por ejemplo `+=` o ** \* = **.  
   
--   If an invalid value was assigned to this object.  
+-   Si se asignó un valor no válido para este objeto.  
   
--   If the status of this object was explicitly set to invalid using [SetStatus](#setstatus).  
+-   Si el estado de este objeto se estableció explícitamente en no válido con [SetStatus](#setstatus).  
   
- For more information on operations that may set the status to invalid, see the following member functions:  
+ Para obtener más información sobre las operaciones que puede establecer el estado no son válidos, vea las siguientes funciones miembro:  
   
-- [COleCurrency](#colecurrency)  
+- [OLECurrency.](#colecurrency)  
   
-- [operator =](#operator_eq)  
+- [operador =](#operator_eq)  
   
-- [operator +, -](#operator_plus_minus)  
+- [operador +, -](#operator_plus_minus)  
   
-- [operator +=, -=](#operator_plus_minus_eq)  
+- [operador +=, =](#operator_plus_minus_eq)  
   
-- [operator */](#operator_star)  
+- [operador * /](#operator_star)  
   
-- [operator *=, /=](#operator_star_div_eq)  
+- [operador * =, / =](#operator_star_div_eq)  
   
     > [!CAUTION]
-    >  This data member is for advanced programming situations. You should use the inline member functions [GetStatus](#getstatus) and [SetStatus](#setstatus). See `SetStatus` for further cautions regarding explicitly setting this data member.  
+    >  Este miembro de datos es para situaciones de programación avanzadas. Debe utilizar las funciones de miembro insertada [GetStatus](#getstatus) y [SetStatus](#setstatus). Consulte `SetStatus` para las precauciones adicionales con respecto a este miembro de datos se establece explícitamente.  
   
-##  <a name="operator_eq"></a>  COleCurrency::operator =  
- These overloaded assignment operators copy the source currency value into this **COleCurrency** object.  
+##  <a name="operator_eq"></a>COleCurrency::operator =  
+ Estos operadores de asignaciones sobrecargados copiar el valor de moneda de origen en esta **COleCurrency** objeto.  
   
 ```  
 const COleCurrency& operator=(CURRENCY cySrc);  
@@ -312,22 +308,22 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   const COleCurrency& operator=(const VARIANT& varSrc);
 ```  
   
-### <a name="remarks"></a>Remarks  
- A brief description of each operator follows:  
+### <a name="remarks"></a>Comentarios  
+ A continuación se muestra una breve descripción de cada operador:  
   
-- **operator =(** `cySrc` **)** The `CURRENCY` value is copied into the **COleCurrency** object and its status is set to valid.  
+- **operador = (** `cySrc` **)** el `CURRENCY` se copiará en el **COleCurrency** objeto y su estado se establece en válido.  
   
-- **operator =(** `curSrc` **)** The value and status of the operand, an existing **COleCurrency** object are copied into this **COleCurrency** object.  
+- **operador = (** `curSrc` **)** el valor y el estado del operando, existente **COleCurrency** objeto se copian en esta **COleCurrency** objeto.  
   
-- **operator =(** *varSrc* **)** If the conversion of the `VARIANT` value (or [COleVariant](../../mfc/reference/colevariant-class.md) object) to a currency ( `VT_CY`) is successful, the converted value is copied into this **COleCurrency** object and its status is set to valid. If the conversion is not successful, the value of the **COleCurrency** object is set to 0 and its status to invalid.  
+- **operador = (** *varSrc* **)** si la conversión de la `VARIANT` valor (o [COleVariant](../../mfc/reference/colevariant-class.md) objeto) a una moneda ( `VT_CY`) es correcta, el valor convertido se copia en esta **COleCurrency** objeto y su estado se establece en válido. Si la conversión no se realiza correctamente, el valor de la **COleCurrency** objeto se establece en 0 y su estado a no válido.  
   
- For more information, see the [CURRENCY](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) and [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) entries in the Windows SDK.  
+ Para obtener más información, consulte el [moneda](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) y [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) entradas en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFCOleContainer&#15;](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
   
-##  <a name="operator_plus_minus"></a>  COleCurrency::operator +, -  
- These operators allow you to add and subtract two **COleCurrency** values to and from each other and to change the sign of a **COleCurrency** value.  
+##  <a name="operator_plus_minus"></a>COleCurrency::operator +, -  
+ Estos operadores permiten sumar y restar dos **COleCurrency** valores a y desde entre sí y para cambiar el signo de un **COleCurrency** valor.  
   
 ```  
 COleCurrency operator+(const COleCurrency& cur) const;  
@@ -335,80 +331,80 @@ COleCurrency operator-(const COleCurrency& cur) const;
 COleCurrency operator-() const;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- If either of the operands is null, the status of the resulting **COleCurrency** value is null.  
+### <a name="remarks"></a>Comentarios  
+ Si cualquiera de los operandos es null, el estado del resultante **COleCurrency** valor es null.  
   
- If the arithmetic operation overflows, the resulting **COleCurrency** value is invalid.  
+ Si la operación aritmética desborda resultante **COleCurrency** valor no es válido.  
   
- If the operand is invalid and the other is not null, the status of the resulting **COleCurrency** value is invalid.  
+ Si el operando es válida y el otro es no null, el estado del resultante **COleCurrency** valor no es válido.  
   
- For more information on the valid, invalid, and null status values, see the [m_status](#m_status) member variable.  
+ Para obtener más información sobre los valores de estado válido, null y no válidos, consulte el [m_status](#m_status) variable miembro.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCOleContainer#16](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFCOleContainer Nº&16;](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]  
   
-##  <a name="operator_plus_minus_eq"></a>  COleCurrency::operator +=, -=  
- Allow you to add and subtract a **COleCurrency** value to and from this **COleCurrency** object.  
+##  <a name="operator_plus_minus_eq"></a>COleCurrency::operator +=, =  
+ Le permiten agregar y sustraer un **COleCurrency** valor hacia y desde este **COleCurrency** objeto.  
   
 ```  
 const COleCurrency& operator+=(const COleCurrency& cur);  
 const COleCurrency& operator-=(const COleCurrency& cur);
 ```  
   
-### <a name="remarks"></a>Remarks  
- If either of the operands is null, the status of this **COleCurrency** object is set to null.  
+### <a name="remarks"></a>Comentarios  
+ Si cualquiera de los operandos es null, el estado de este **COleCurrency** objeto está establecido en null.  
   
- If the arithmetic operation overflows, the status of this **COleCurrency** object is set to invalid.  
+ Si la operación aritmética desborda el estado de este **COleCurrency** objeto se establece en no válido.  
   
- If either of the operands is invalid and the other is not null, the status of this **COleCurrency** object is set to invalid.  
+ Si cualquiera de los operandos es válido y el otro no es null, el estado de este **COleCurrency** objeto se establece en no válido.  
   
- For more information on the valid, invalid, and null status values, see the [m_status](#m_status) member variable.  
+ Para obtener más información sobre los valores de estado válido, null y no válidos, consulte el [m_status](#m_status) variable miembro.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCOleContainer#17](../../mfc/codesnippet/cpp/colecurrency-class_6.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFCOleContainer&#17;](../../mfc/codesnippet/cpp/colecurrency-class_6.cpp)]  
   
-##  <a name="operator_star"></a>  COleCurrency::operator * and /  
- Allow you to scale a **COleCurrency** value by an integral value.  
+##  <a name="operator_star"></a>COleCurrency::operator * y /  
+ Le permiten escalar una **COleCurrency** valor por un valor entero.  
   
 ```  
 COleCurrency operator*(long nOperand) const;  
 COleCurrency operator/(long nOperand) const;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- If the **COleCurrency** operand is null, the status of the resulting **COleCurrency** value is null.  
+### <a name="remarks"></a>Comentarios  
+ Si el **COleCurrency** operando es null, el estado del resultante **COleCurrency** valor es null.  
   
- If the arithmetic operation overflows or underflows, the status of the resulting **COleCurrency** value is invalid.  
+ Si la operación aritmética desborda o subdesbordamientos, el estado del resultante **COleCurrency** valor no es válido.  
   
- If the **COleCurrency** operand is invalid, the status of the resulting **COleCurrency** value is invalid.  
+ Si el **COleCurrency** operando no es válido, el estado del resultante **COleCurrency** valor no es válido.  
   
- For more information on the valid, invalid, and null status values, see the [m_status](#m_status) member variable.  
+ Para obtener más información sobre los valores de estado válido, null y no válidos, consulte el [m_status](#m_status) variable miembro.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCOleContainer#18](../../mfc/codesnippet/cpp/colecurrency-class_7.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFCOleContainer&#18;](../../mfc/codesnippet/cpp/colecurrency-class_7.cpp)]  
   
-##  <a name="operator_star_div_eq"></a>  COleCurrency::operator *=, /=  
- Allow you to scale this **COleCurrency** value by an integral value.  
+##  <a name="operator_star_div_eq"></a>COleCurrency::operator * =, / =  
+ Le permiten escalar esto **COleCurrency** valor por un valor entero.  
   
 ```  
 const COleCurrency& operator*=(long nOperand);  
 const COleCurrency& operator/=(long nOperand);
 ```  
   
-### <a name="remarks"></a>Remarks  
- If the **COleCurrency** operand is null, the status of this **COleCurrency** object is set to null.  
+### <a name="remarks"></a>Comentarios  
+ Si el **COleCurrency** operando es null, el estado de este **COleCurrency** objeto está establecido en null.  
   
- If the arithmetic operation overflows, the status of this **COleCurrency** object is set to invalid.  
+ Si la operación aritmética desborda el estado de este **COleCurrency** objeto se establece en no válido.  
   
- If the **COleCurrency** operand is invalid, the status of this **COleCurrency** object is set to invalid.  
+ Si el **COleCurrency** operando no es válido, el estado de este **COleCurrency** objeto se establece en no válido.  
   
- For more information on the valid, invalid, and null status values, see the [m_status](#m_status) member variable.  
+ Para obtener más información sobre los valores de estado válido, null y no válidos, consulte el [m_status](#m_status) variable miembro.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCOleContainer#19](../../mfc/codesnippet/cpp/colecurrency-class_8.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFCOleContainer Nº&19;](../../mfc/codesnippet/cpp/colecurrency-class_8.cpp)]  
   
-##  <a name="operator_stream"></a>  COleCurrency::operator &lt;&lt;, &gt;&gt;  
- Supports diagnostic dumping and storing to an archive.  
+##  <a name="operator_stream"></a>COleCurrency::operator &lt; &lt;,&gt;&gt;  
+ Admite el volcado de diagnóstico y almacenar en un archivo.  
   
 ```  
 friend CDumpContext& operator<<(
@@ -424,20 +420,20 @@ friend CArchive& operator>>(
     COleCurrency& curSrc);
 ```  
   
-### <a name="remarks"></a>Remarks  
- The extraction ( **>>**) operator supports loading from an archive.  
+### <a name="remarks"></a>Comentarios  
+ La extracción ( ** >> **) operador admite la carga de un archivo.  
   
-##  <a name="operator_currency"></a>  COleCurrency::operator CURRENCY  
- Returns a `CURRENCY` structure whose value is copied from this **COleCurrency** object.  
+##  <a name="operator_currency"></a>COleCurrency::operator DIVISA  
+ Devuelve un `CURRENCY` estructura cuyo valor se copia desde este **COleCurrency** objeto.  
   
 ```  
 operator CURRENCY() const; 
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="parsecurrency"></a>  COleCurrency::ParseCurrency  
- Call this member function to parse a string to read a currency value.  
+##  <a name="parsecurrency"></a>COleCurrency::ParseCurrency  
+ Llame a esta función miembro para analizar una cadena para leer un valor de moneda.  
   
 ```  
 BOOL ParseCurrency(
@@ -449,37 +445,37 @@ throw(CMemoryException*);
 throw(COleException*);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *lpszCurrency*  
- A pointer to the null-terminated string which is to be parsed.  
+ Puntero a la cadena terminada en null que se va a analizar.  
   
  `dwFlags`  
- Indicates flags for locale settings, possibly the following flag:  
+ Indica los marcadores para la configuración regional, posiblemente la marca siguiente:  
   
-- **LOCALE_NOUSEROVERRIDE** Use the system default locale settings, rather than custom user settings.  
+- **LOCALE_NOUSEROVERRIDE** usar la configuración regional predeterminada del sistema, en lugar de configuración de usuario personalizada.  
   
  `lcid`  
- Indicates locale ID to use for the conversion.  
+ Indica el identificador de configuración regional para la conversión.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the string was successfully converted to a currency value, otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ Distinto de cero si la cadena se convirtió correctamente en un valor de moneda, de lo contrario, 0.  
   
-### <a name="remarks"></a>Remarks  
- It uses local language specifications (locale IDs) for the meaning of nonnumeric characters in the source string.  
+### <a name="remarks"></a>Comentarios  
+ Usa las especificaciones de idioma local (identificadores de configuración regional) para el significado de los caracteres no numéricos en la cadena de origen.  
   
- For a discussion of locale ID values, see [Supporting Multiple Languages](http://msdn.microsoft.com/en-us/47dc5add-232c-4268-b977-43e12da81ede).  
+ Para obtener una explicación de los valores de identificador de configuración regional, consulte [compatibilidad con varios idiomas](http://msdn.microsoft.com/en-us/47dc5add-232c-4268-b977-43e12da81ede).  
   
- If the string was successfully converted to a currency value, the value of this **COleCurrency** object is set to that value and its status to valid.  
+ Si la cadena se convirtió correctamente en una moneda de valor, el valor de esta **COleCurrency** objeto se establece en ese valor y su estado a válido.  
   
- If the string could not be converted to a currency value or if there was a numerical overflow, the status of this **COleCurrency** object is invalid.  
+ Si no se pudo convertir la cadena en un valor monetario o si se produjo un desbordamiento numérico, el estado de este **COleCurrency** objeto no es válido.  
   
- If the string conversion failed due to memory allocation errors, this function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md). In any other error state, this function throws a [COleException](../../mfc/reference/coleexception-class.md).  
+ Si la conversión de cadena erróneas debido a errores de asignación de memoria, esta función produce un [CMemoryException](../../mfc/reference/cmemoryexception-class.md). En cualquier otro estado de error, esta función lanza una [COleException](../../mfc/reference/coleexception-class.md).  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCOleContainer#13](../../mfc/codesnippet/cpp/colecurrency-class_9.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFCOleContainer&#13;](../../mfc/codesnippet/cpp/colecurrency-class_9.cpp)]  
   
-##  <a name="colecurrency_relational_operators"></a>  COleCurrency Relational Operators  
- Compare two currency values and return nonzero if the condition is true; otherwise 0.  
+##  <a name="colecurrency_relational_operators"></a>Operadores relacionales de OLECurrency.  
+ Comparar dos valores de moneda y devolver distinto de cero si la condición es true; en caso contrario, 0.  
   
 ```  
 BOOL operator==(const COleCurrency& cur) const;  
@@ -490,16 +486,16 @@ BOOL operator<=(const COleCurrency& cur) const;
 BOOL operator>=(const COleCurrency& cur) const;  
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
->  The return value of the ordering operations ( **<**, **\<=**, **>**, **>=**) is undefined if the status of either operand is null or invalid. The equality operators ( `==`, `!=`) consider the status of the operands.  
+>  El valor devuelto de las operaciones de ordenación ( ** < **, ** \< = **, ** > **, ** >= **) es indefinido si el estado de alguno de los operandos es null o no válido. Los operadores de igualdad ( `==`, `!=`) tenga en cuenta el estado de los operandos.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCOleContainer#20](../../mfc/codesnippet/cpp/colecurrency-class_10.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFCOleContainer&#20;](../../mfc/codesnippet/cpp/colecurrency-class_10.cpp)]  
   
-##  <a name="setcurrency"></a>  COleCurrency::SetCurrency  
- Call this member function to set the units and fractional part of this **COleCurrency** object.  
+##  <a name="setcurrency"></a>COleCurrency::SetCurrency  
+ Llame a esta función miembro para definir las unidades y la parte fraccionaria de este **COleCurrency** objeto.  
   
 ```  
 void SetCurrency(
@@ -507,31 +503,31 @@ void SetCurrency(
     long nFractionalUnits);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nUnits`, `nFractionalUnits`  
- Indicate the units and fractional part (in 1/10,000's) of the value to be copied into this **COleCurrency** object.  
+ Indicar las unidades y la parte fraccionaria (en 1/10, miles) del valor que se copiará en este **COleCurrency** objeto.  
   
-### <a name="remarks"></a>Remarks  
- If the absolute value of the fractional part is greater than 10,000, the appropriate adjustment is made to the units, as shown in the third of the following examples.  
+### <a name="remarks"></a>Comentarios  
+ Si el valor absoluto de la parte fraccionaria es mayor que 10.000, se realiza el ajuste correspondiente a las unidades, como se muestra en el tercero de los ejemplos siguientes.  
   
- Note that the units and fractional part are specified by signed long values. The fourth of the following examples shows what happens when the parameters have different signs.  
+ Tenga en cuenta que las unidades y la parte fraccionaria se especifican mediante los valores de tipo long con signo. El cuarto de los ejemplos siguientes muestra qué sucede cuando los parámetros tienen signos diferentes.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCOleContainer#14](../../mfc/codesnippet/cpp/colecurrency-class_11.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFCOleContainer&#14;](../../mfc/codesnippet/cpp/colecurrency-class_11.cpp)]  
   
-##  <a name="setstatus"></a>  COleCurrency::SetStatus  
- Call this member function to set the status (validity) of this **COleCurrency** object.  
+##  <a name="setstatus"></a>COleCurrency::SetStatus  
+ Llame a esta función miembro para establecer el estado (validez) de este **COleCurrency** objeto.  
   
 ```  
 void SetStatus(CurrencyStatus  status  );
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *status*  
- The new status for this **COleCurrency** object.  
+ El nuevo estado **COleCurrency** objeto.  
   
-### <a name="remarks"></a>Remarks  
- The *status* parameter value is defined by the `CurrencyStatus` enumerated type, which is defined within the **COleCurrency** class.  
+### <a name="remarks"></a>Comentarios  
+ El *estado* el valor del parámetro se define mediante la `CurrencyStatus` tipo enumerado, que se define dentro de la **COleCurrency** clase.  
   
 ```  
 enum CurrencyStatus {
@@ -541,18 +537,18 @@ enum CurrencyStatus {
     };  
 ```  
   
- For a brief description of these status values, see the following list:  
+ Para obtener una breve descripción de estos valores de estado, consulte la lista siguiente:  
   
-- **COleCurrency::valid** Indicates that this **COleCurrency** object is valid.  
+- **COleCurrency::valid** indica que este **COleCurrency** objeto es válido.  
   
-- **COleCurrency::invalid** Indicates that this **COleCurrency** object is invalid; that is, its value may be incorrect.  
+- **COleCurrency::invalid** indica que este **COleCurrency** objeto no es válido; es decir, su valor puede ser incorrecto.  
   
-- **COleCurrency::null** Indicates that this **COleCurrency** object is null, that is, that no value has been supplied for this object. (This is "null" in the database sense of "having no value," as opposed to the C++ **NULL**.)  
+- **COleCurrency::null** indica que este **COleCurrency** objeto es null, es decir, que no se ha proporcionado ningún valor para este objeto. (Esto es "null" en el sentido de la base de datos de "no tener ningún valor," en lugar de C++ **NULL**.)  
   
     > [!CAUTION]
-    >  This function is for advanced programming situations. This function does not alter the data in this object. It will most often be used to set the status to null or invalid. Note that the assignment operator ( [operator =](#operator_eq)) and [SetCurrency](#setcurrency) do set the status to of the object based on the source value(s).  
+    >  Esta función es para situaciones de programación avanzadas. Esta función no modifica los datos de este objeto. Frecuentemente se utilizará para establecer el estado como null o no válido. Tenga en cuenta que el operador de asignación ( [operador =](#operator_eq)) y [SetCurrency](#setcurrency) establecer el estado del objeto basado en los valores de origen.  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [COleVariant Class](../../mfc/reference/colevariant-class.md)
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [COleVariant (clase)](../../mfc/reference/colevariant-class.md)
 

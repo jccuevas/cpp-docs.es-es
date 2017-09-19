@@ -1,5 +1,5 @@
 ---
-title: gslice_array Class | Microsoft Docs
+title: gslice_array (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- gslice_array
 - valarray/std::gslice_array
 dev_langs:
 - C++
@@ -33,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: c20c44c8b84f7b15d84cc0c298dbde1f6dd4bafb
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: bebbeb68503c4a3838aeab48d530d899fef2b699
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="gslicearray-class"></a>gslice_array Class
-An internal, auxiliary template class that supports general slice objects by providing operations between subset arrays defined by the general slice of a valarray.  
+# <a name="gslicearray-class"></a>gslice_array (Clase)
+Clase de plantilla auxiliar e interna que admite objetos de segmentos generales proporcionando operaciones entre matrices de subconjuntos definidas por el segmento general de una valarray.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class Type>  
@@ -102,18 +103,18 @@ public:
 }  
 ```  
   
-## <a name="remarks"></a>Remarks  
- The class describes an object that stores a reference to an object **va** of class [valarray](../standard-library/valarray-class.md)**\<Type>**, along with an object **gs** of class [gslice](../standard-library/gslice-class.md) which describes the sequence of elements to select from the **valarray\<Type>** object.  
+## <a name="remarks"></a>Comentarios  
+ La clase describe un objeto que almacena una referencia a un objeto **va** de la clase [valarray](../standard-library/valarray-class.md)**\<Type>**, junto con un objeto **gs** de la clase [gslice](../standard-library/gslice-class.md), que describe la secuencia de los elementos que se pueden seleccionar desde el objeto **valarray\<Type>**.  
   
- You construct a **gslice_array\<Type>** object only by writing an expression of the form [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at). The member functions of class gslice_array then behave like the corresponding function signatures defined for **valarray\<Type>**, except that only the sequence of selected elements is affected.  
+ Para construir un objeto **gslice_array\<Type>**, se escribe solo una expresión de formato [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at). Las funciones miembro de la clase gslice_array se comportarán como las signaturas de función correspondientes definidas para **valarray\<Type>**, excepto en que solo la secuencia de elementos seleccionados se ve afectada.  
   
- The template class is created indirectly by certain valarray operations and cannot be used directly in the program. An internal auxiliary template class instead is used by the slice subscript operator:  
+ La clase de plantilla se crea indirectamente por determinadas operaciones valarray y no se puede usar directamente en el programa. En su lugar, el operador de subíndice de segmento usa una clase de plantilla auxiliar interna:  
   
  `gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&**).  
   
- You construct a **gslice_array\<Type>** object only by writing an expression of the form **va[gsl]**, for a slice **gsl** of valarray **va**. The member functions of class gslice_array then behave like the corresponding function signatures defined for **valarray\<Type>**, except that only the sequence of selected elements is affected. The sequence controlled by the gslice_array is defined by the three parameters of the slice constructor, the index of the first element in the first slice, the number of elements in each slice, and the distance between the elements in each slice.  
+ Para construir un objeto **gslice_array\<Type>**, se escribe solo una expresión de formato **va[gsl]**, para un segmento **gsl** de valarray **va**. Las funciones miembro de la clase gslice_array se comportarán como las signaturas de función correspondientes definidas para **valarray\<Type>**, excepto en que solo la secuencia de elementos seleccionados se ve afectada. La secuencia controlada por gslice_array se define mediante los tres parámetros del constructor de segmento, el índice del primer elemento en el primer segmento, el número de elementos en cada segmento y la distancia entre los elementos de cada segmento.  
   
- In the following example:  
+ En el ejemplo siguiente:  
   
 ```  
 const size_t lv[] = {2, 3};  
@@ -124,17 +125,17 @@ const valarray<size_t> len(lv, 2), str(dv, 2);
 //   indices 3, 5, 7, 10, 12, 14  
 ```  
   
- The indices must be valid for the procedure to be valid.  
+ Los índices deben ser válidos para que el procedimiento sea válido.  
   
-## <a name="example"></a>Example  
- See the example for [gslice::gslice](../standard-library/gslice-class.md#gslice) for an example of how to declare and use a slice_array.  
+## <a name="example"></a>Ejemplo  
+ Vea el ejemplo de [gslice::gslice](../standard-library/gslice-class.md#gslice) para obtener un ejemplo de cómo declarar y usar una slice_array.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<valarray>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<valarray>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Vea también  
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

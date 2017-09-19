@@ -1,5 +1,5 @@
 ---
-title: CDockablePaneAdapter Class | Microsoft Docs
+title: Clase CDockablePaneAdapter | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,10 +18,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDockablePaneAdapter [MFC], GetWrappedWnd
-- CDockablePaneAdapter [MFC], LoadState
-- CDockablePaneAdapter [MFC], SaveState
-- CDockablePaneAdapter [MFC], SetWrappedWnd
+- CDockablePaneAdapter class
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
 caps.latest.revision: 22
 author: mikeblome
@@ -41,63 +38,63 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 619d092046b8464e9349f35eecfa2d08baea6003
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 05d34e3ec84db48e50328b99c38abf1ef73747b4
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter Class
-Provides docking support for `CWnd`-derived panes.  
+# <a name="cdockablepaneadapter-class"></a>Clase CDockablePaneAdapter
+Proporciona compatibilidad para paneles derivados de `CWnd`.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CDockablePaneAdapter : public CDockablePane  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Returns the wrapped window.|  
-|[CDockablePaneAdapter::LoadState](#loadstate)|(Overrides [CDockablePane::LoadState](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917).)|  
-|[CDockablePaneAdapter::SaveState](#savestate)|(Overrides [CDockablePane::SaveState](http://msdn.microsoft.com/en-us/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
+|[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Devuelve la ventana ajustada.|  
+|[CDockablePaneAdapter::LoadState](#loadstate)|(Invalida [CDockablePane::LoadState](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917).)|  
+|[CDockablePaneAdapter::SaveState](#savestate)|(Invalida [CDockablePane::SaveState](http://msdn.microsoft.com/en-us/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||  
   
-## <a name="remarks"></a>Remarks  
- Usually, the framework instantiates objects of this class when you use the [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) or [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) methods.  
+## <a name="remarks"></a>Comentarios  
+ Normalmente, el marco de trabajo crea los objetos de esta clase cuando se utiliza la [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) o [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) métodos.  
   
- If you want to customize the `CDockablePaneAdapter` behavior, just derive a new class from it and set the runtime class information to a tabbed window by using [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).  
+ Si desea personalizar la `CDockablePaneAdapter` comportamiento, simplemente derivar una nueva clase y establezca la información de clase en tiempo de ejecución en una ventana con fichas mediante [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
   
  [CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CDockablePane](../../mfc/reference/cdockablepane-class.md)  
   
  [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxDockablePaneAdapter.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxDockablePaneAdapter.h  
   
-##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd  
- Returns the underlying window for the dockable pane adapter.  
+##  <a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
+ Devuelve la ventana subyacente para el adaptador de un panel acoplable.  
   
 ```  
 virtual CWnd* GetWrappedWnd() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the wrapped window.  
+### <a name="return-value"></a>Valor devuelto  
+ Puntero a la ventana ajustada.  
   
-### <a name="remarks"></a>Remarks  
- Use this function to access the wrapped window.  
+### <a name="remarks"></a>Comentarios  
+ Utilice esta función para obtener acceso a la ventana ajustada.  
   
-##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState  
- Loads the state of the pane from the registry.  
+##  <a name="loadstate"></a>CDockablePaneAdapter::LoadState  
+ Carga el estado del panel desde el registro.  
   
 ```  
 virtual BOOL LoadState(
@@ -106,22 +103,22 @@ virtual BOOL LoadState(
     UINT uiID = (UINT) -1);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `lpszProfileName`  
- The profile name.  
+ El nombre del perfil.  
   
  [in] `nIndex`  
- The profile index.  
+ El índice del perfil.  
   
  [in] `uiID`  
- The pane ID.  
+ El identificador del panel.  
   
-### <a name="return-value"></a>Return Value  
+### <a name="return-value"></a>Valor devuelto  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState  
- Saves the state of the pane to the registry.  
+##  <a name="savestate"></a>CDockablePaneAdapter::SaveState  
+ Guarda el estado del panel en el registro.  
   
 ```  
 virtual BOOL SaveState(
@@ -130,37 +127,37 @@ virtual BOOL SaveState(
     UINT uiID = (UINT) -1);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `lpszProfileName`  
- The profile name.  
+ El nombre del perfil.  
   
  [in] `nIndex`  
- The profile index (defaults to the control ID of the window).  
+ El índice de perfil (el valor predeterminado es el identificador del control de la ventana).  
   
  [in] `uiID`  
- The pane ID.  
+ El identificador del panel.  
   
-### <a name="return-value"></a>Return Value  
+### <a name="return-value"></a>Valor devuelto  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd  
- Sets the underlying window for the dockable pane adapter.  
+##  <a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
+ Establece la ventana subyacente para el adaptador de un panel acoplable.  
   
 ```  
 virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pWnd`  
- A pointer to the window for the pane adapter to wrap.  
+ Puntero a la ventana para el adaptador de panel ajustar.  
   
-### <a name="return-value"></a>Return Value  
+### <a name="return-value"></a>Valor devuelto  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [Clases](../../mfc/reference/mfc-classes.md)   
+ [Clase CDockablePane](../../mfc/reference/cdockablepane-class.md)
 

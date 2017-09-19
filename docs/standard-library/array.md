@@ -33,51 +33,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 780406772c509cb1320e1b8a1124cdc535b9c852
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3458390f8e6dcaee229346c66d569a5486ae74c4
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
-Defines the container template class `array` and several supporting templates.  
+Define la clase de plantilla de contenedores `array` y varias plantillas auxiliares.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #include <array>  
 ```  
   
-### <a name="classes"></a>Classes  
+### <a name="classes"></a>Clases  
   
 |||  
 |-|-|  
-|[array](../standard-library/array-class-stl.md)|Stores a fixed-length sequence of elements.|  
-|[tuple_element](../standard-library/tuple-element-class-tuple.md)|Wraps the type of an array element.|  
-|[tuple_size](../standard-library/tuple-size-class-tuple.md)|Wraps the size of an array element.|  
+|[array](../standard-library/array-class-stl.md)|Almacena una secuencia de elementos de longitud fija.|  
+|[tuple_element](../standard-library/tuple-element-class-tuple.md)|Contiene el tipo de un elemento de matriz.|  
+|[tuple_size](../standard-library/tuple-size-class-tuple.md)|Ajusta el tamaño de un elemento de la matriz.|  
   
-### <a name="operators"></a>Operators  
-  
-|||  
-|-|-|  
-|[operator==](../standard-library/array-operators.md#op_eq_eq)|array comparison, equal|  
-|[operator!=](../standard-library/array-operators.md#op_neq)|array comparison, not equal|  
-|[operator\<](../standard-library/array-operators.md#op_lt)|array comparison, less than|  
-|[operator>=](../standard-library/array-operators.md#op_gt_eq)|array comparison, greater than or equal|  
-|[operator>](../standard-library/array-operators.md#op_gt)|array comparison, greater than|  
-|[operator<=](../standard-library/array-operators.md#op_lt_eq)|array comparison, less than or equal|  
-  
-### <a name="functions"></a>Functions  
+### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[get](../standard-library/array-functions.md#get)|Get specified array element.|  
-|[swap](../standard-library/array-functions.md#swap)|Exchanges the contents of one array with the contents of another array.|  
+|[operator==](../standard-library/array-operators.md#op_eq_eq)|comparación de matriz, igual|  
+|[operator!=](../standard-library/array-operators.md#op_neq)|comparación de matriz, no igual|  
+|[operator\<](../standard-library/array-operators.md#op_lt)|comparación de matriz, menor que|  
+|[operator>=](../standard-library/array-operators.md#op_gt_eq)|comparación de matriz, mayor o igual que|  
+|[operator>](../standard-library/array-operators.md#op_gt)|comparación de matriz, mayor que|  
+|[operator<=](../standard-library/array-operators.md#op_lt_eq)|comparación de matriz, menor o igual que|  
   
-## <a name="see-also"></a>See Also  
+### <a name="functions"></a>Funciones  
+  
+|||  
+|-|-|  
+|[get](../standard-library/array-functions.md#get)|Obtiene el elemento de matriz especificado.|  
+|[swap](../standard-library/array-functions.md#swap)|Intercambia el contenido de una matriz con el contenido de otra.|  
+  
+## <a name="see-also"></a>Vea también  
  [\<tuple>](../standard-library/tuple.md)   
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
+ [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)
 
 
 

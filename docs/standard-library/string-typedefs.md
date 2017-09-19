@@ -1,5 +1,5 @@
 ---
-title: '&lt;string&gt; typedefs | Microsoft Docs'
+title: Definiciones de tipo de &lt;string&gt; | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,30 +14,30 @@ f1_keywords:
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 07de226afac564c50618d212648a63b90069c902
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: d9bc4c7f814c44d91ec1cff881107fdc92949368
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="ltstringgt-typedefs"></a>&lt;string&gt; typedefs
+# <a name="ltstringgt-typedefs"></a>Definiciones de tipo de &lt;string&gt;
 ||||  
 |-|-|-|  
 |[string](#string)|[u16string](#u16string)|[u32string](#u32string)|  
 |[wstring](#wstring)|  
   
 ##  <a name="string"></a>  string  
- A type that describes a specialization of the template class [basic_string](../standard-library/basic-string-class.md) with elements of type `char`.  
+ Un tipo que describe una especialización de la clase de plantilla [basic_string](../standard-library/basic-string-class.md) con elementos del tipo `char`.  
   
- Other typedefs that specialize `basic_string` include [wstring](../standard-library/string-typedefs.md#wstring), [u16string](../standard-library/string-typedefs.md#u16string), and [u32string](../standard-library/string-typedefs.md#u32string).  
+ Otras definiciones de tipo que especializan `basic_string` incluyen [wstring](../standard-library/string-typedefs.md#wstring), [u16string](../standard-library/string-typedefs.md#u16string) y [u32string](../standard-library/string-typedefs.md#u32string).  
   
 ```cpp  
 typedef basic_string<char, char_traits<char>, allocator<char>> string;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The following are equivalent declarations:  
+### <a name="remarks"></a>Comentarios  
+ Las declaraciones siguientes son equivalentes:  
   
 ```cpp  
 string str("");
@@ -45,43 +45,43 @@ string str("");
 basic_string<char> str("");
 ```  
   
- For a list of string constructors, see [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
+ Para obtener una lista de los constructores de cadena, vea [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
   
 ##  <a name="u16string"></a>  u16string  
- A type that describes a specialization of the template class [basic_string](../standard-library/basic-string-class.md) with elements of type `char16_t`.  
+ Un tipo que describe una especialización de la clase de plantilla [basic_string](../standard-library/basic-string-class.md) con elementos del tipo `char16_t`.  
   
- Other typedefs that specialize `basic_string` include [wstring](../standard-library/string-typedefs.md#wstring), [string](../standard-library/string-typedefs.md#string), and [u32string](../standard-library/string-typedefs.md#u32string).  
+ Hay otras definiciones de tipo que especializan `basic_string` entre las que se incluyen [wstring](../standard-library/string-typedefs.md#wstring), [string](../standard-library/string-typedefs.md#string) y [u32string](../standard-library/string-typedefs.md#u32string).  
   
 ```cpp  
 typedef basic_string<char16_t, char_traits<char16_t>, allocator<char16_t>> u16string;
 ```  
   
-### <a name="remarks"></a>Remarks  
- For a list of string constructors, see [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener una lista de los constructores de cadena, vea [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
   
 ##  <a name="u32string"></a>  u32string  
- A type that describes a specialization of the template class [basic_string](../standard-library/basic-string-class.md) with elements of type `char32_t`.  
+ Un tipo que describe una especialización de la clase de plantilla [basic_string](../standard-library/basic-string-class.md) con elementos del tipo `char32_t`.  
   
- Other typedefs that specialize `basic_string` include [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string), and [wstring](../standard-library/string-typedefs.md#wstring).  
+ Hay otras definiciones de tipo que especializan `basic_string`, entre las que se incluyen [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) y [wstring](../standard-library/string-typedefs.md#wstring).  
   
 ```cpp  
 typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32string;
 ```  
   
-### <a name="remarks"></a>Remarks  
- For a list of string constructors, see [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener una lista de los constructores de cadena, vea [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
   
 ##  <a name="wstring"></a>  wstring  
- A type that describes a specialization of the template class [basic_string](../standard-library/basic-string-class.md) with elements of type `wchar_t`.  
+ Un tipo que describe una especialización de la clase de plantilla [basic_string](../standard-library/basic-string-class.md) con elementos del tipo `wchar_t`.  
   
- Other typedefs that specialize `basic_string` include [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string), and [u32string](../standard-library/string-typedefs.md#u32string).  
+ Hay otras definiciones de tipo que especializan `basic_string`, entre las que se incluyen [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) y [u32string](../standard-library/string-typedefs.md#u32string).  
   
 ```cpp  
 typedef basic_string<wchar_t, char_traits<wchar_t>, allocator<wchar_t>> wstring;
 ```  
   
-### <a name="remarks"></a>Remarks  
- The following are equivalent declarations:  
+### <a name="remarks"></a>Comentarios  
+ Las declaraciones siguientes son equivalentes:  
   
 ```cpp  
 wstring wstr(L"");
@@ -89,12 +89,12 @@ wstring wstr(L"");
 basic_string<wchar_t> wstr(L"");
 ```  
   
- For a list of string constructors, see [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
+ Para obtener una lista de los constructores de cadena, vea [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
   
 > [!NOTE]
->  The size of `wchar_t` is implementation-defined. If your code depends on `wchar_t` to be a certain size, check your platform's implementation (for example, with `sizeof(wchar_t)`). If you need a string character type with a width that is guaranteed to remain the same on all platforms, use [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string), or [u32string](../standard-library/string-typedefs.md#u32string).  
+>  El tamaño de `wchar_t` está definido por la implementación. Si el tamaño del código depende de `wchar_t`, compruebe la implementación de la plataforma (por ejemplo, con `sizeof(wchar_t)`). Si necesita un tipo de carácter de cadena con una anchura garantizada de modo que se mantenga igual en todas las plataformas, use [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) o [u32string](../standard-library/string-typedefs.md#u32string).  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [\<string>](../standard-library/string.md)
 
 

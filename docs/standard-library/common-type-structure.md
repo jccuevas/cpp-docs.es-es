@@ -1,5 +1,5 @@
 ---
-title: common_type Structure | Microsoft Docs
+title: common_type (Estructura) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,17 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: c889874b0aaba8ca3a6e9b00c4d0885eb59a525a
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: d54c14d3b16f2667f0acfe29960d90cba704ca66
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/19/2017
 
 ---
-# <a name="commontype-structure"></a>common_type Structure
-Describes specializations of template class [common_type](../standard-library/common-type-class.md) for instantiations of [duration](../standard-library/duration-class.md) and [time_point](../standard-library/time-point-class.md).  
+# <a name="commontype-structure"></a>common_type (Estructura)
+Describe especializaciones de la clase de plantilla [common_type](../standard-library/common-type-class.md) para las creaciones de instancias de [duration](../standard-library/duration-class.md) y [time_point](../standard-library/time-point-class.md).  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class Rep1, class Period1,  
@@ -57,13 +57,13 @@ struct common_type
 chrono::time_point<Clock, Duration2>>;  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<chrono>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<chrono >  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)
 
 

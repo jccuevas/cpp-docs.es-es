@@ -1,5 +1,5 @@
 ---
-title: remove_pointer Class | Microsoft Docs
+title: remove_pointer (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- remove_pointer
 - type_traits/std::remove_pointer
 dev_langs:
 - C++
@@ -34,17 +35,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 9efa6c69388dd00d9ac3eae5b7f180b6c2284bb6
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: b9e00cba8b892c9834f56846f698ee59aca523cf
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="removepointer-class"></a>remove_pointer Class
-Makes type from pointer to type.  
+# <a name="removepointer-class"></a>remove_pointer (Clase)
+Convierte un tipo de puntero en un tipo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class T>  
@@ -54,14 +55,14 @@ template <class T>
 using remove_pointer_t = typename remove_pointer<T>::type;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- The type to modify.  
+ Tipo que se va a modificar.  
   
-## <a name="remarks"></a>Remarks  
- An instance of `remove_pointer<T>` holds a modified-type that is `T1` when `T` is of the form `T1*`, `T1* const`, `T1* volatile`, or `T1* const volatile`, otherwise `T`.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia de `remove_pointer<T>` contiene un tipo modificado que es `T1` cuando `T` tiene el formato `T1*`, `T1* const`, `T1* volatile` o `T1* const volatile`; de lo contrario, es `T`.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 #include <type_traits>   
@@ -83,12 +84,12 @@ int main()
 remove_pointer_t<int *> == int  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)   
- [add_pointer Class](../standard-library/add-pointer-class.md)
+ [add_pointer (Clase)](../standard-library/add-pointer-class.md)
 

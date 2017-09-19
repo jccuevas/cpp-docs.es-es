@@ -1,5 +1,5 @@
 ---
-title: is_pointer Class | Microsoft Docs
+title: Clase is_pointer | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_pointer
 - type_traits/std::is_pointer
 dev_langs:
 - C++
@@ -34,31 +35,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: e1553b6d2c77e3fc0f026817cb6e42b7eb8f2695
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 3bb2597b11ed4b5ebafac0e8548f9ddc18ac5fc4
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="ispointer-class"></a>is_pointer Class
-Tests if type is a pointer.  
+# <a name="ispointer-class"></a>is_pointer (Clase)
+Comprueba si el tipo es un puntero.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class Ty>  
 struct is_pointer;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Ty`  
- The type to query.  
+ Tipo que se va a consultar.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if the type `Ty` is a pointer to `void`, a pointer to an object, or a pointer to a function, or a `cv-qualified` form of one of them, otherwise it holds false. Note that `is_pointer` holds false if `Ty` is a pointer to member or a pointer to member function.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia del predicado de tipo contiene true si el tipo `Ty` es un puntero a `void`, un puntero a un objeto o un puntero a una función, o bien un formulario `cv-qualified` de uno de ellos; en caso contrario, contiene false. Tenga en cuenta que `is_pointer` es false si `Ty` es un puntero a un miembro o a una función miembro.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__type_traits__is_pointer.cpp   
@@ -97,13 +98,13 @@ is_pointer<int> == false
 is_pointer<int *> == true  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_member_pointer Class](../standard-library/is-member-pointer-class.md)   
- [is_reference Class](../standard-library/is-reference-class.md)
+ [Clase is_member_pointer](../standard-library/is-member-pointer-class.md)   
+ [Clase is_reference](../standard-library/is-reference-class.md)
 

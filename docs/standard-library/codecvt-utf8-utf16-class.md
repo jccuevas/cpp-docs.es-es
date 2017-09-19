@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- codecvt_utf8_utf16
 - codecvt/std::cvt_utf8_utf16
 dev_langs:
 - C++
@@ -33,35 +34,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 4f733e9eb6d5ebafe2c01fe1d7cc801fef6f7e3a
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: e628eb145b52cd3ab9b1e36770363c34099c6cb4
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="codecvtutf8utf16"></a>codecvt_utf8_utf16
-Represents a [locale](../standard-library/locale-class.md) facet that converts between wide characters encoded as UTF-16 and a byte stream encoded as UTF-8.
+Representa una faceta de [configuración regional](../standard-library/locale-class.md) que convierte entre caracteres anchos codificados como UTF-16 y un flujo de bytes codificados como UTF-8.
 
 ```
 template<class Elem, unsigned long Maxcode = 0x10ffff, codecvt_mode Mode = (codecvt_mode)0>
 class codecvt_utf8_utf16 : public _STD codecvt<Elem, char, StateType>
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parámetros
 
 `Elem`  
-The wide-character element type.  
+Tipo de elemento de carácter ancho.  
 `Maxcode`  
-The maximum number of characters for the locale facet.  
+Número máximo de caracteres de la faceta de configuración regional.  
 `Mode`  
-Configuration information for the locale facet.  
+Información de configuración de la faceta de configuración regional.  
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentarios
 
-The byte stream can be written to either a binary file or a text file.  
+El flujo de bytes puede escribirse en un archivo binario o en un archivo de texto.  
 
-## <a name="requirements"></a>Requirements
+## <a name="requirements"></a>Requisitos
 
-Header: <codecvt> Namespace: std
+Encabezado: Espacio de nombres <codecvt>: std
 

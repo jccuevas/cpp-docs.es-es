@@ -1,5 +1,5 @@
 ---
-title: is_trivially_constructible Class | Microsoft Docs
+title: Clase is_trivially_constructible | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,6 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
+- is_trivially_constructible
 - type_traits/std::is_trivially_constructible
 dev_langs:
 - C++
@@ -34,39 +35,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: fe756def468770270140ebc7cb6c9a91f2b926b2
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 4acc8f686d918391966949134a5c2b3c1a0a41a5
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="istriviallyconstructible-class"></a>is_trivially_constructible Class
-Tests whether a type is trivially constructible when the specified argument types are used.  
+# <a name="istriviallyconstructible-class"></a>Clase is_trivially_constructible
+Comprueba si un tipo se puede construir de forma trivial cuando se usan los tipos de argumento especificados.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 template <class T, class... Args>  
 struct is_trivially_constructible;
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- The type to query.  
+ Tipo que se va a consultar.  
   
  `Args`  
- The argument types to match in a constructor of `T`.  
+ Tipos de argumento que deben coincidir en un constructor de `T`.  
   
-## <a name="remarks"></a>Remarks  
- An instance of the type predicate holds true if the type `T` is trivially constructible by using the argument types in `Args`, otherwise it holds false. Type `T` is trivially constructible if the variable definition `T t(std::declval<Args>()...);` is well-formed and is known to call no non-trivial operations. Both `T` and all the types in `Args` must be complete types, `void`, or arrays of unknown bound.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia del predicado de tipo es true si el tipo `T` se puede construir de forma trivial mediante los tipos de argumento de `Args`. En caso contrario, es false. El tipo `T` se puede construir de forma trivial si la definición de variable `T t(std::declval<Args>()...);` tiene el formato correcto y se sabe que no llama a ninguna operación no trivial. Tanto `T` como todos los tipos de `Args` deben ser tipos completos, `void` o matrices de límite desconocido.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)
 
 

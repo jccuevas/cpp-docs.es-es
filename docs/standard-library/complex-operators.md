@@ -1,37 +1,23 @@
 ---
-title: '&lt;complex&gt; operators | Microsoft Docs'
+title: '&lt;complex&gt; (Operadores) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- complex/std::operator!=
-- complex/std::operator&gt;&gt;
-- complex/std::operator&lt;&lt;
-- complex/std::operator*
-- complex/std::operator+
-- complex/std::operator-
-- complex/std::operator/
-- complex/std::operator==
-dev_langs:
-- C++
+f1_keywords: []
 ms.assetid: aa282604-dcb9-46a2-bf1d-34c50aa6c4ba
 caps.latest.revision: 11
 manager: ghogen
-helpviewer_keywords:
-- std::operator!= (complex)
-- std::operator&gt;&gt; (complex)
-- std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 92d32d428e109c8e52d25328025e98030d5fc304
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ef11e8bca4971b4fb07669907b2234c90a040ef8
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="ltcomplexgt-operators"></a>&lt;complex&gt; operators
+# <a name="ltcomplexgt-operators"></a>&lt;complex&gt; (Operadores)
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
@@ -39,7 +25,7 @@ ms.lasthandoff: 09/09/2017
 |[operator/](#op_div)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- Tests for inequality between two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
+ Prueba la igualdad entre dos números complejos, uno de los cuales o ambos pueden pertenecer al subconjunto del tipo para las partes reales e imaginarias.  
   
 ```  
  
@@ -59,22 +45,22 @@ bool operator!=(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- A complex number or object of its parameter type to be tested for inequality.  
+ Un número complejo o un objeto de su tipo de parámetro para el que se va a probar la desigualdad.   
   
  `right`  
- A complex number or object of its parameter type to be tested for inequality.  
+ Un número complejo o un objeto de su tipo de parámetro para el que se va a probar la desigualdad.   
   
-### <a name="return-value"></a>Return Value  
- **true** if the numbers are not equal; **false** if numbers are equal.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si los números no son iguales; **False** si lo son.  
   
-### <a name="remarks"></a>Remarks  
- Two complex numbers are equal if and only if their real parts are equal and their imaginary parts are equal. Otherwise, they are unequal.  
+### <a name="remarks"></a>Comentarios  
+ Dos números complejos son iguales si sus partes reales son iguales y sus partes imaginarias también lo son. Si no se cumplen estas condiciones, significa que son distintas.  
   
- The operation is overloaded so that comparison tests can be executed without the conversion of the data to a particular format.  
+ Se sobrecarga la operación para poder ejecutar pruebas de comparación sin necesidad de conversión de datos a un formato determinado.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // complex_op_NE.cpp  
@@ -175,7 +161,7 @@ The complex numbers cl3b & cr3b are equal.
 ```  
   
 ##  <a name="op_star"></a>  operator*  
- Multiplies two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
+ Multiplica dos números complejos, donde uno de ellos o los dos pueden pertenecer al subconjunto del tipo para las partes reales e imaginarias.  
   
 ```  
  
@@ -195,20 +181,20 @@ complex<Type> operator*(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- The first of two complex numbers or a number that is of the parameter type for a complex number that is to be multiplied by the * operation.  
+ El primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a multiplicar mediante la operación *.  
   
  `right`  
- The second of two complex numbers or a number that is of the parameter type for a complex number that is to be multiplied by the * operation.  
+ El segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a multiplicar mediante la operación *.  
   
-### <a name="return-value"></a>Return Value  
- The complex number that results from the multiplication of the two numbers whose value and type are specified by the parameter inputs.  
+### <a name="return-value"></a>Valor devuelto  
+ El número complejo que es el resultado de la multiplicación de los dos números cuyo valor y tipo los especifican las entradas de parámetro.  
   
-### <a name="remarks"></a>Remarks  
- The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
+### <a name="remarks"></a>Comentarios  
+ La operación se sobrecarga para poder ejecutar operaciones aritméticas simples sin necesidad de conversión de datos a un formato determinado.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // complex_op_mult.cpp  
@@ -269,7 +255,7 @@ int main( )
 ```  
   
 ##  <a name="op_add"></a>  operator+  
- Adds two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
+ Suma dos números complejos, donde uno de ellos o los dos pueden pertenecer al subconjunto del tipo para las partes reales e imaginarias.  
   
 ```  
  
@@ -292,20 +278,20 @@ template <class Type>
 complex<Type> operator+(const complex<Type>& left);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- The first of two complex numbers or a number that is of the parameter type for a complex number that is to be added by the + operation.  
+ El primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a agregar mediante la operación +.  
   
  `right`  
- The second of two complex numbers or a number that is of the parameter type for a complex number that is to be added by the + operation.  
+ El segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a agregar mediante la operación +.  
   
-### <a name="return-value"></a>Return Value  
- The complex number that results from the addition of the two numbers whose value and type are specified by the parameter inputs.  
+### <a name="return-value"></a>Valor devuelto  
+ El número complejo que es el resultado de la adición de los dos números cuyo valor y tipo los especifican las entradas de parámetro.  
   
-### <a name="remarks"></a>Remarks  
- The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format. The unary operator returns `left`.  
+### <a name="remarks"></a>Comentarios  
+ La operación se sobrecarga para poder ejecutar operaciones aritméticas simples sin necesidad de conversión de datos a un formato determinado. Devuelve el operador unario `left`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // complex_op_add.cpp  
@@ -406,7 +392,7 @@ The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```  
   
 ##  <a name="operator-"></a>  operator-  
- Subtracts two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
+ Resta dos números complejos, donde uno de ellos o los dos pueden pertenecer al subconjunto del tipo para las partes reales e imaginarias.  
   
 ```   
 template <class Type>  
@@ -428,22 +414,22 @@ template <class Type>
 complex<Type> operator-(const complex<Type>& left);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- The first of two complex numbers or a number that is of the parameter type for a complex number that is to be subtracted by the - operation.  
+ El primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a restar mediante la operación -.  
   
  `right`  
- The second of two complex numbers or a number that is of the parameter type for a complex number that is to be subtracted by the - operation.  
+ El segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a restar mediante la operación -.  
   
-### <a name="return-value"></a>Return Value  
- The complex number that results from the subtraction of `right` from `left`, the two numbers whose values are specified by the parameter inputs.  
+### <a name="return-value"></a>Valor devuelto  
+ El número complejo que es el resultado de la resta de `right` desde `left`, los dos números cuyos valores los especifican las entradas de parámetro.  
   
-### <a name="remarks"></a>Remarks  
- The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
+### <a name="remarks"></a>Comentarios  
+ La operación se sobrecarga para poder ejecutar operaciones aritméticas simples sin necesidad de conversión de datos a un formato determinado.  
   
- The unary operator changes the sign of a complex number and returns a value whose real part is the negative of the real part of the number input and whose imaginary part is the negative of the imaginary part of the number input.  
+ El operador unario cambia el signo de un número complejo y devuelve un valor cuya parte real es el negativo de la parte real de la entrada numérica y cuya parte imaginaria es el negativo de la parte imaginaria de la entrada numérica.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // complex_op_sub.cpp  
@@ -544,7 +530,7 @@ The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```  
   
 ##  <a name="op_div"></a>  operator/  
- Divides two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
+ Divide dos números complejos, donde uno de ellos o los dos pueden pertenecer al subconjunto del tipo para las partes reales e imaginarias.  
   
 ```   
 template <class Type>  
@@ -563,20 +549,20 @@ complex<Type> operator*(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- A complex number or a number that is of the parameter type for a complex number that is the numerator to be divided by the denominator with the / operation.  
+ Un número complejo o un número que es del tipo de parámetro para un número complejo que es el numerador que se dividirá por el denominador con la operación /.  
   
  `right`  
- A complex number or a number that is of the parameter type for a complex number that is the denominator to be used to divide the numerator with the / operation.  
+ Un número complejo o un número que es del tipo de parámetro para un número complejo que es el denominador que se usará para dividir el numerador con la operación /.  
   
-### <a name="return-value"></a>Return Value  
- The complex number that results from the division of the numerator by the denominator, the values of which are specified by the parameter inputs.  
+### <a name="return-value"></a>Valor devuelto  
+ El número complejo que es el resultado de la división del numerador por el denominador, cuyos valores especifican las entradas de parámetro.  
   
-### <a name="remarks"></a>Remarks  
- The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
+### <a name="remarks"></a>Comentarios  
+ La operación se sobrecarga para poder ejecutar operaciones aritméticas simples sin necesidad de conversión de datos a un formato determinado.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // complex_op_div.cpp  
@@ -660,7 +646,7 @@ The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 ```  
   
 ##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
- Inserts a complex number specified into the output stream.  
+ Inserta un número complejo especificado en el flujo de salida.  
   
 ```   
 template <class Type, class Elem, class Traits>  
@@ -669,20 +655,20 @@ basic_ostream<Elem, Traits>& operator<<(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `Ostr`  
- The output stream into which the complex number is being entered.  
+ El flujo de salida en que se introduce el número complejo.  
   
  `right`  
- The complex number to be entered into the output stream  
+ El número complejo que se introduce en el flujo de salida.  
   
-### <a name="return-value"></a>Return Value  
- Writes the value of the specified complex number to the `Ostr` in a Cartesian format: ( *real part, imaginary part* ).  
+### <a name="return-value"></a>Valor devuelto  
+ Escribe el valor del número complejo especificado para `Ostr` en formato cartesiano: ( *parte real, parte imaginaria* ).  
   
-### <a name="remarks"></a>Remarks  
- The output stream is overloaded so that it will accept any form of a complex number, and its default output format is the Cartesian format.  
+### <a name="remarks"></a>Comentarios  
+ El flujo de salida se sobrecarga de modo que aceptará cualquier forma de un número complejo y su formato de salida predeterminado es el formato cartesiano.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // complex_op_insert.cpp  
@@ -718,7 +704,7 @@ The argument of c2 is: 0.523599 radians, which is 30 degrees.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Tests for equality between two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
+ Prueba la igualdad entre dos números complejos, uno de los cuales o ambos pueden pertenecer al subconjunto del tipo para las partes reales e imaginarias.  
   
 ```  
  
@@ -738,22 +724,22 @@ bool operator==(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- A complex number or object of its parameter type to be tested for inequality.  
+ Un número complejo o un objeto de su tipo de parámetro para el que se va a probar la desigualdad.   
   
  `right`  
- A complex number or object of its parameter type to be tested for inequality.  
+ Un número complejo o un objeto de su tipo de parámetro para el que se va a probar la desigualdad.   
   
-### <a name="return-value"></a>Return Value  
- **true** if the numbers are equal; **false** if numbers are not equal.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si los números son iguales; **False** si no lo son.  
   
-### <a name="remarks"></a>Remarks  
- Two complex numbers are equal if and only if their real parts are equal and their imaginary parts are equal. Otherwise, they are unequal.  
+### <a name="remarks"></a>Comentarios  
+ Dos números complejos son iguales si sus partes reales son iguales y sus partes imaginarias también lo son. Si no se cumplen estas condiciones, significa que son distintas.  
   
- The operation is overloaded so that comparison tests can be executed without the conversion of the data to a particular format.  
+ Se sobrecarga la operación para poder ejecutar pruebas de comparación sin necesidad de conversión de datos a un formato determinado.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // complex_op_EQ.cpp  
@@ -854,7 +840,7 @@ The complex numbers cl3b & cr3b are equal.
 ```  
   
 ##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
- Extracts a complex value from the input stream.  
+ Extrae un valor complejo del flujo de salida.  
   
 ```  
  
@@ -864,26 +850,26 @@ basic_istream<Elem, Traits>& operator>>(
    complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `Istr`  
- The input stream from which the complex number is being extracted.  
+ El flujo de entrada del que se extrae el número complejo.  
   
  `right`  
- The complex number that is being extracted from the input stream.  
+ El número complejo que se extrae del flujo de entrada.  
   
-### <a name="return-value"></a>Return Value  
- Reads the value of the specified complex number from `Istr` and returns it into `right`.  
+### <a name="return-value"></a>Valor devuelto  
+ Lee el valor del número complejo especificado de `Istr` y lo devuelve en `right`.  
   
-### <a name="remarks"></a>Remarks  
- The valid input formats are  
+### <a name="remarks"></a>Comentarios  
+ Los formatos de entrada válidos son  
   
-- *( real part, imaginary part )*  
+- *(parte real, parte imaginaria)*  
   
-- *( real part )*  
+- *(parte real)*  
   
-- *real part*  
+- *parte real*  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // complex_op_extract.cpp  
@@ -910,7 +896,7 @@ int main( )
   
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [\<complex>](../standard-library/complex.md)
 
 

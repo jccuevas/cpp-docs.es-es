@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <cassert>", "std::<cassert>
+- std.<cassert>
+- <cassert>
+- std::<cassert>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -33,31 +35,31 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: e44976e9676c4303c1585f9f73495d5164e05d69
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 5789fa2f7a33dd818ec28436145e36cdc07a6192
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="ltcassertgt"></a>&lt;cassert&gt;
-Includes the Standard C library header \<assert.h> and adds the associated names to the `std` namespace.  
+Incluye el encabezado \<assert.h> de la biblioteca estándar de C y agrega los nombres asociados al espacio de nombres `std`.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #include <cassert>  
   
 ```  
   
-## <a name="remarks"></a>Remarks  
- Including this header ensures that the names declared using external linkage in the Standard C library header are declared in the `std` namespace.  
+## <a name="remarks"></a>Comentarios  
+ Incluir este encabezado también garantiza que los nombres declarados mediante vinculación externa en el encabezado de la biblioteca estándar de C se declaran en el espacio de nombres `std`.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [assert Macro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)   
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
- [C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
+ [Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)   
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

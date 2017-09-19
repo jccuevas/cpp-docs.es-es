@@ -1,5 +1,5 @@
 ---
-title: CHtmlEditCtrlBase Class | Microsoft Docs
+title: Clase CHtmlEditCtrlBase | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -121,113 +121,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CHtmlEditCtrlBase [MFC], AddToGlyphTable
-- CHtmlEditCtrlBase [MFC], Bold
-- CHtmlEditCtrlBase [MFC], Button
-- CHtmlEditCtrlBase [MFC], CheckBox
-- CHtmlEditCtrlBase [MFC], ClearSelection
-- CHtmlEditCtrlBase [MFC], Copy
-- CHtmlEditCtrlBase [MFC], Cut
-- CHtmlEditCtrlBase [MFC], Delete
-- CHtmlEditCtrlBase [MFC], DropDownBox
-- CHtmlEditCtrlBase [MFC], EmptyGlyphTable
-- CHtmlEditCtrlBase [MFC], ExecCommand
-- CHtmlEditCtrlBase [MFC], Font
-- CHtmlEditCtrlBase [MFC], GetAbsolutePosition
-- CHtmlEditCtrlBase [MFC], GetBackColor
-- CHtmlEditCtrlBase [MFC], GetBlockFormat
-- CHtmlEditCtrlBase [MFC], GetBlockFormatNames
-- CHtmlEditCtrlBase [MFC], GetBookMark
-- CHtmlEditCtrlBase [MFC], GetDocument
-- CHtmlEditCtrlBase [MFC], GetDocumentHTML
-- CHtmlEditCtrlBase [MFC], GetDocumentTitle
-- CHtmlEditCtrlBase [MFC], GetEvent
-- CHtmlEditCtrlBase [MFC], GetEventSrcElement
-- CHtmlEditCtrlBase [MFC], GetFontFace
-- CHtmlEditCtrlBase [MFC], GetFontSize
-- CHtmlEditCtrlBase [MFC], GetForeColor
-- CHtmlEditCtrlBase [MFC], GetFrameZone
-- CHtmlEditCtrlBase [MFC], GetIsDirty
-- CHtmlEditCtrlBase [MFC], GetShowAlignedSiteTags
-- CHtmlEditCtrlBase [MFC], GetShowAllTags
-- CHtmlEditCtrlBase [MFC], GetShowAreaTags
-- CHtmlEditCtrlBase [MFC], GetShowBRTags
-- CHtmlEditCtrlBase [MFC], GetShowCommentTags
-- CHtmlEditCtrlBase [MFC], GetShowMiscTags
-- CHtmlEditCtrlBase [MFC], GetShowScriptTags
-- CHtmlEditCtrlBase [MFC], GetShowStyleTags
-- CHtmlEditCtrlBase [MFC], GetShowUnknownTags
-- CHtmlEditCtrlBase [MFC], HorizontalLine
-- CHtmlEditCtrlBase [MFC], HyperLink
-- CHtmlEditCtrlBase [MFC], IE50Paste
-- CHtmlEditCtrlBase [MFC], Iframe
-- CHtmlEditCtrlBase [MFC], Image
-- CHtmlEditCtrlBase [MFC], Indent
-- CHtmlEditCtrlBase [MFC], InsFieldSet
-- CHtmlEditCtrlBase [MFC], InsInputButton
-- CHtmlEditCtrlBase [MFC], InsInputHidden
-- CHtmlEditCtrlBase [MFC], InsInputImage
-- CHtmlEditCtrlBase [MFC], InsInputPassword
-- CHtmlEditCtrlBase [MFC], InsInputReset
-- CHtmlEditCtrlBase [MFC], InsInputSubmit
-- CHtmlEditCtrlBase [MFC], InsInputUpload
-- CHtmlEditCtrlBase [MFC], Is1DElement
-- CHtmlEditCtrlBase [MFC], Is2DElement
-- CHtmlEditCtrlBase [MFC], Italic
-- CHtmlEditCtrlBase [MFC], JustifyCenter
-- CHtmlEditCtrlBase [MFC], JustifyLeft
-- CHtmlEditCtrlBase [MFC], JustifyRight
-- CHtmlEditCtrlBase [MFC], ListBox
-- CHtmlEditCtrlBase [MFC], Marquee
-- CHtmlEditCtrlBase [MFC], NewDocument
-- CHtmlEditCtrlBase [MFC], OrderList
-- CHtmlEditCtrlBase [MFC], Outdent
-- CHtmlEditCtrlBase [MFC], Paragraph
-- CHtmlEditCtrlBase [MFC], Paste
-- CHtmlEditCtrlBase [MFC], PrintDocument
-- CHtmlEditCtrlBase [MFC], PrintPreview
-- CHtmlEditCtrlBase [MFC], QueryStatus
-- CHtmlEditCtrlBase [MFC], RadioButton
-- CHtmlEditCtrlBase [MFC], RefreshDocument
-- CHtmlEditCtrlBase [MFC], RemoveFormat
-- CHtmlEditCtrlBase [MFC], SaveAs
-- CHtmlEditCtrlBase [MFC], SelectAll
-- CHtmlEditCtrlBase [MFC], Set2DPosition
-- CHtmlEditCtrlBase [MFC], SetAbsolutePosition
-- CHtmlEditCtrlBase [MFC], SetAtomicSelection
-- CHtmlEditCtrlBase [MFC], SetAutoURLDetectMode
-- CHtmlEditCtrlBase [MFC], SetBackColor
-- CHtmlEditCtrlBase [MFC], SetBlockFormat
-- CHtmlEditCtrlBase [MFC], SetBookMark
-- CHtmlEditCtrlBase [MFC], SetCSSEditingLevel
-- CHtmlEditCtrlBase [MFC], SetDefaultComposeSettings
-- CHtmlEditCtrlBase [MFC], SetDesignMode
-- CHtmlEditCtrlBase [MFC], SetDisableEditFocusUI
-- CHtmlEditCtrlBase [MFC], SetDocumentHTML
-- CHtmlEditCtrlBase [MFC], SetFontFace
-- CHtmlEditCtrlBase [MFC], SetFontSize
-- CHtmlEditCtrlBase [MFC], SetForeColor
-- CHtmlEditCtrlBase [MFC], SetIE5PasteMode
-- CHtmlEditCtrlBase [MFC], SetLiveResize
-- CHtmlEditCtrlBase [MFC], SetMultiSelect
-- CHtmlEditCtrlBase [MFC], SetOverrideCursor
-- CHtmlEditCtrlBase [MFC], SetOverwriteMode
-- CHtmlEditCtrlBase [MFC], SetRespectVisInDesign
-- CHtmlEditCtrlBase [MFC], SetShowAlignedSiteTags
-- CHtmlEditCtrlBase [MFC], SetShowAllTags
-- CHtmlEditCtrlBase [MFC], SetShowAreaTags
-- CHtmlEditCtrlBase [MFC], SetShowBRTags
-- CHtmlEditCtrlBase [MFC], SetShowCommentTags
-- CHtmlEditCtrlBase [MFC], SetShowMiscTags
-- CHtmlEditCtrlBase [MFC], SetShowScriptTags
-- CHtmlEditCtrlBase [MFC], SetShowStyleTags
-- CHtmlEditCtrlBase [MFC], SetShowUnknownTags
-- CHtmlEditCtrlBase [MFC], TextArea
-- CHtmlEditCtrlBase [MFC], TextBox
-- CHtmlEditCtrlBase [MFC], UnBookmark
-- CHtmlEditCtrlBase [MFC], Underline
-- CHtmlEditCtrlBase [MFC], Unlink
-- CHtmlEditCtrlBase [MFC], UnorderList
+- CHtmlEditCtrlBase class
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
 caps.latest.revision: 21
 author: mikeblome
@@ -247,153 +141,153 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: df8a6665e01fed9de2328e1577683c5a69da5813
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: a32d9df86837c5cafd27f8f876a703d0b3ec3bfe
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 04/04/2017
 
 ---
-# <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase Class
-Represents an HTML editing component.  
+# <a name="chtmleditctrlbase-class"></a>Clase CHtmlEditCtrlBase
+Representa un componente de edición HTML.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class T> class CHtmlEditCtrlBase  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|Adds an entry to the glyph table, which specifies images to display for specific tags in design mode.|  
-|[CHtmlEditCtrlBase::Bold](#bold)|Toggles the bold state of the selected text.|  
-|[CHtmlEditCtrlBase::Button](#button)|Overwrites a button control on the current selection.|  
-|[CHtmlEditCtrlBase::CheckBox](#checkbox)|Overwrites a check box control on the current selection.|  
-|[CHtmlEditCtrlBase::ClearSelection](#clearselection)|Clears the current selection.|  
-|[CHtmlEditCtrlBase::Copy](#copy)|Copies the current selection to the clipboard.|  
-|[CHtmlEditCtrlBase::Cut](#cut)|Copies the current selection to the clipboard and then deletes it.|  
-|[CHtmlEditCtrlBase::Delete](#delete)|Deletes the current selection.|  
-|[CHtmlEditCtrlBase::DropDownBox](#dropdownbox)|Overwrites a drop-down selection control on the current selection.|  
-|[CHtmlEditCtrlBase::EmptyGlyphTable](#emptyglyphtable)|Removes all entries from the glyph table, which hides all images displayed for tags in design mode.|  
-|[CHtmlEditCtrlBase::ExecCommand](#execcommand)|Executes a command.|  
-|[CHtmlEditCtrlBase::Font](#font)|Opens a font dialog box to enable the user to change the text color, font, and font size of the current selection.|  
-|[CHtmlEditCtrlBase::GetAbsolutePosition](#getabsoluteposition)|Returns whether an element's position property is "absolute."|  
-|[CHtmlEditCtrlBase::GetBackColor](#getbackcolor)|Retrieves the background color of the current selection.|  
-|[CHtmlEditCtrlBase::GetBlockFormat](#getblockformat)|Retrieves the current block format tag.|  
-|[CHtmlEditCtrlBase::GetBlockFormatNames](#getblockformatnames)|Retrieves the strings corresponding to the available block format tags.|  
-|[CHtmlEditCtrlBase::GetBookMark](#getbookmark)|Retrieves the name of a bookmark anchor.|  
-|[CHtmlEditCtrlBase::GetDocument](#getdocument)|Retrieves the document object.|  
-|[CHtmlEditCtrlBase::GetDocumentHTML](#getdocumenthtml)|Retrieves the HTML of the current document.|  
-|[CHtmlEditCtrlBase::GetDocumentTitle](#getdocumenttitle)|Retrieves the document's title.|  
-|[CHtmlEditCtrlBase::GetEvent](#getevent)|Retrieves an interface pointer to the event object that contains information relevant to the most recent event.|  
-|[CHtmlEditCtrlBase::GetEventSrcElement](#geteventsrcelement)|Retrieves the object that fired the event.|  
-|[CHtmlEditCtrlBase::GetFontFace](#getfontface)|Retrieves the font name for the current selection.|  
-|[CHtmlEditCtrlBase::GetFontSize](#getfontsize)|Retrieves the font size for the current selection.|  
-|[CHtmlEditCtrlBase::GetForeColor](#getforecolor)|Retrieves the foreground (text) color of the current selection.|  
-|[CHtmlEditCtrlBase::GetFrameZone](#getframezone)|Returns the security zone of the current page in the web browser.|  
-|[CHtmlEditCtrlBase::GetIsDirty](#getisdirty)|Indicates whether the HTML document has changed.|  
-|[CHtmlEditCtrlBase::GetShowAlignedSiteTags](#getshowalignedsitetags)|Returns whether a glyph is displayed for all elements that have a **styleFloat** property.|  
-|[CHtmlEditCtrlBase::GetShowAllTags](#getshowalltags)|Returns whether the WebBrowser displays glyphs to show the location of all tags in a document.|  
-|[CHtmlEditCtrlBase::GetShowAreaTags](#getshowareatags)|Retrieves whether the WebBrowser displays a glyph for area tags.|  
-|[CHtmlEditCtrlBase::GetShowBRTags](#getshowbrtags)|Retrieves whether the WebBrowser displays a glyph for br tags.|  
-|[CHtmlEditCtrlBase::GetShowCommentTags](#getshowcommenttags)|Retrieves whether the WebBrowser displays a glyph for comment tags.|  
-|[CHtmlEditCtrlBase::GetShowMiscTags](#getshowmisctags)|Retrieves whether the WebBrowser displays all the tags shown in Microsoft Internet Explorer 4.0.|  
-|[CHtmlEditCtrlBase::GetShowScriptTags](#getshowscripttags)|Retrieves whether the WebBrowser displays a glyph for all the script tags.|  
-|[CHtmlEditCtrlBase::GetShowStyleTags](#getshowstyletags)|Retrieves whether the WebBrowser displays a glyph for all the style tags.|  
-|[CHtmlEditCtrlBase::GetShowUnknownTags](#getshowunknowntags)|Retrieves whether the WebBrowser displays a glyph for all unknown tags.|  
-|[CHtmlEditCtrlBase::HorizontalLine](#horizontalline)|Overwrites a horizontal line on the current selection.|  
-|[CHtmlEditCtrlBase::HyperLink](#hyperlink)|Inserts a hyperlink on the current selection.|  
-|[CHtmlEditCtrlBase::IE50Paste](#ie50paste)|Performs a paste operation compatible with Microsoft Internet Explorer 5.|  
-|[CHtmlEditCtrlBase::Iframe](#iframe)|Overwrites an inline frame on the current selection.|  
-|[CHtmlEditCtrlBase::Image](#image)|Overwrites an image on the current selection.|  
-|[CHtmlEditCtrlBase::Indent](#indent)|Increases the indent of the selected text by one indentation increment.|  
-|[CHtmlEditCtrlBase::InsFieldSet](#insfieldset)|Overwrites a box on the current selection.|  
-|[CHtmlEditCtrlBase::InsInputButton](#insinputbutton)|Overwrites a button control on the current selection.|  
-|[CHtmlEditCtrlBase::InsInputHidden](#insinputhidden)|Inserts a hidden control on the current selection.|  
-|[CHtmlEditCtrlBase::InsInputImage](#insinputimage)|Overwrites an image control on the current selection.|  
-|[CHtmlEditCtrlBase::InsInputPassword](#insinputpassword)|Overwrites a password control on the current selection.|  
-|[CHtmlEditCtrlBase::InsInputReset](#insinputreset)|Overwrites a reset control on the current selection.|  
-|[CHtmlEditCtrlBase::InsInputSubmit](#insinputsubmit)|Overwrites a submit control on the current selection.|  
-|[CHtmlEditCtrlBase::InsInputUpload](#insinputupload)|Overwrites a file upload control on the current selection.|  
-|[CHtmlEditCtrlBase::Is1DElement](#is1delement)|Determines if an element is statically positioned.|  
-|[CHtmlEditCtrlBase::Is2DElement](#is2delement)|Determines if an element is absolutely positioned.|  
-|[CHtmlEditCtrlBase::Italic](#italic)|Toggles the current selection between italic and nonitalic.|  
-|[CHtmlEditCtrlBase::JustifyCenter](#justifycenter)|Centers the format block in which the current selection is located.|  
-|[CHtmlEditCtrlBase::JustifyLeft](#justifyleft)|Left-justifies the format block in which the current selection is located.|  
-|[CHtmlEditCtrlBase::JustifyRight](#justifyright)|Right-justifies the format block in which the current selection is located.|  
-|[CHtmlEditCtrlBase::ListBox](#listbox)|Overwrites a list box selection control on the current selection.|  
-|[CHtmlEditCtrlBase::Marquee](#marquee)|Overwrites an empty marquee on the current selection.|  
-|[CHtmlEditCtrlBase::NewDocument](#newdocument)|Creates a new document.|  
-|[CHtmlEditCtrlBase::OrderList](#orderlist)|Toggles the current selection between an ordered list and a normal format block.|  
-|[CHtmlEditCtrlBase::Outdent](#outdent)|Decreases by one increment the indentation of the format block in which the current selection is located.|  
-|[CHtmlEditCtrlBase::Paragraph](#paragraph)|Overwrites a line break on the current selection.|  
-|[CHtmlEditCtrlBase::Paste](#paste)|Overwrites the contents of the clipboard on the current selection.|  
-|[CHtmlEditCtrlBase::PrintDocument](#printdocument)|Prints the current document.|  
-|[CHtmlEditCtrlBase::PrintPreview](#printpreview)|Opens the Print Preview window for the current document using either the default print preview template or a custom template.|  
-|[CHtmlEditCtrlBase::QueryStatus](#querystatus)|Call this method to query the status of commands.|  
-|[CHtmlEditCtrlBase::RadioButton](#radiobutton)|Overwrites a radio control on the current selection.|  
-|[CHtmlEditCtrlBase::RefreshDocument](#refreshdocument)|Refreshes the current document.|  
-|[CHtmlEditCtrlBase::RemoveFormat](#removeformat)|Removes the formatting tags from the current selection.|  
-|[CHtmlEditCtrlBase::SaveAs](#saveas)|Saves the current Web page to a file.|  
-|[CHtmlEditCtrlBase::SelectAll](#selectall)|Selects the entire document.|  
-|[CHtmlEditCtrlBase::Set2DPosition](#set2dposition)|Allows absolutely positioned elements to be moved by dragging.|  
-|[CHtmlEditCtrlBase::SetAbsolutePosition](#setabsoluteposition)|Sets an element's position property to "absolute" or "static."|  
-|[CHtmlEditCtrlBase::SetAtomicSelection](#setatomicselection)|Set atomic selection mode.|  
-|[CHtmlEditCtrlBase::SetAutoURLDetectMode](#setautourldetectmode)|Turns automatic URL detection on and off.|  
-|[CHtmlEditCtrlBase::SetBackColor](#setbackcolor)|Sets the background color of the current selection.|  
-|[CHtmlEditCtrlBase::SetBlockFormat](#setblockformat)|Sets the current block format tag.|  
-|[CHtmlEditCtrlBase::SetBookMark](#setbookmark)|Creates a bookmark anchor for the current selection or insertion point.|  
-|[CHtmlEditCtrlBase::SetCSSEditingLevel](#setcsseditinglevel)|Selects which CSS level (CSS1 or CSS2) the editor will support, if any.|  
-|[CHtmlEditCtrlBase::SetDefaultComposeSettings](#setdefaultcomposesettings)|Call this method to set the default compose settings.|  
-|[CHtmlEditCtrlBase::SetDesignMode](#setdesignmode)|Set design mode.|  
-|[CHtmlEditCtrlBase::SetDisableEditFocusUI](#setdisableeditfocusui)|Disables the hatched border and handles around an element that has edit focus.|  
-|[CHtmlEditCtrlBase::SetDocumentHTML](#setdocumenthtml)|Sets the HTML of the current document.|  
-|[CHtmlEditCtrlBase::SetFontFace](#setfontface)|Sets the font for the current selection.|  
-|[CHtmlEditCtrlBase::SetFontSize](#setfontsize)|Sets the font size for the current selection.|  
-|[CHtmlEditCtrlBase::SetForeColor](#setforecolor)|Sets the foreground (text) color of the current selection.|  
-|[CHtmlEditCtrlBase::SetIE5PasteMode](#setie5pastemode)|Sets the paste operation to be compatible with Microsoft Internet Explorer 5.|  
-|[CHtmlEditCtrlBase::SetLiveResize](#setliveresize)|Causes the WebBrowser to update an element's appearance continuously during a resizing or moving operation.|  
-|[CHtmlEditCtrlBase::SetMultiSelect](#setmultiselect)|Enables multiple selection.|  
-|[CHtmlEditCtrlBase::SetOverrideCursor](#setoverridecursor)|Commands the WebBrowser never to change the mouse pointer.|  
-|[CHtmlEditCtrlBase::SetOverwriteMode](#setoverwritemode)|Toggles the text-entry mode between insert and overwrite.|  
-|[CHtmlEditCtrlBase::SetRespectVisInDesign](#setrespectvisindesign)|Hides invisible elements in design mode.|  
-|[CHtmlEditCtrlBase::SetShowAlignedSiteTags](#setshowalignedsitetags)|Displays a glyph for all elements that have a **styleFloat** property.|  
-|[CHtmlEditCtrlBase::SetShowAllTags](#setshowalltags)|Displays glyphs to show the location of all tags in a document.|  
-|[CHtmlEditCtrlBase::SetShowAreaTags](#setshowareatags)|Displays a glyph for all the area tags.|  
-|[CHtmlEditCtrlBase::SetShowBRTags](#setshowbrtags)|Displays a glyph for all the br tags.|  
-|[CHtmlEditCtrlBase::SetShowCommentTags](#setshowcommenttags)|Displays a glyph for all the comment tags.|  
-|[CHtmlEditCtrlBase::SetShowMiscTags](#setshowmisctags)|Displays all the tags shown in Microsoft Internet Explorer 4.0.|  
-|[CHtmlEditCtrlBase::SetShowScriptTags](#setshowscripttags)|Displays a glyph for all the script tags.|  
-|[CHtmlEditCtrlBase::SetShowStyleTags](#setshowstyletags)|Displays a glyph for all the style tags.|  
-|[CHtmlEditCtrlBase::SetShowUnknownTags](#setshowunknowntags)|Displays a glyph for all the unknown tags.|  
-|[CHtmlEditCtrlBase::TextArea](#textarea)|Overwrites a multiline text input control on the current selection.|  
-|[CHtmlEditCtrlBase::TextBox](#textbox)|Overwrites a text control on the current selection.|  
-|[CHtmlEditCtrlBase::UnBookmark](#unbookmark)|Removes any bookmark from the current selection.|  
-|[CHtmlEditCtrlBase::Underline](#underline)|Toggles the current selection between underlined and not underlined.|  
-|[CHtmlEditCtrlBase::Unlink](#unlink)|Removes any hyperlink from the current selection.|  
-|[CHtmlEditCtrlBase::UnorderList](#unorderlist)|Toggles the current selection between an ordered list and a normal format block.|  
+|[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|Agrega una entrada a la tabla de glifo, que especifica las imágenes que se muestran para las etiquetas específicas en modo de diseño.|  
+|[CHtmlEditCtrlBase::Bold](#bold)|Alterna el estado de negrita del texto seleccionado.|  
+|[CHtmlEditCtrlBase::Button](#button)|Sobrescribe un control de botón en la selección actual.|  
+|[CHtmlEditCtrlBase::CheckBox](#checkbox)|Sobrescribe un control de casilla de verificación en la selección actual.|  
+|[CHtmlEditCtrlBase::ClearSelection](#clearselection)|Borra la selección actual.|  
+|[CHtmlEditCtrlBase::Copy](#copy)|Copia la selección actual en el Portapapeles.|  
+|[CHtmlEditCtrlBase::Cut](#cut)|Copia la selección actual en el Portapapeles y, a continuación, lo elimina.|  
+|[CHtmlEditCtrlBase::Delete](#delete)|Elimina la selección actual.|  
+|[CHtmlEditCtrlBase::DropDownBox](#dropdownbox)|Sobrescribe un control de selección de lista desplegable en la selección actual.|  
+|[CHtmlEditCtrlBase::EmptyGlyphTable](#emptyglyphtable)|Quita todas las entradas de la tabla de glifo que oculta todas las imágenes de muestra para las etiquetas en el modo de diseño.|  
+|[CHtmlEditCtrlBase::ExecCommand](#execcommand)|Ejecuta un comando.|  
+|[CHtmlEditCtrlBase::Font](#font)|Abre un cuadro de diálogo fuente para permitir al usuario cambiar el color del texto, fuente y tamaño de fuente de la selección actual.|  
+|[CHtmlEditCtrlBase::GetAbsolutePosition](#getabsoluteposition)|Devuelve si la propiedad de posición de un elemento es "absolute".|  
+|[CHtmlEditCtrlBase::GetBackColor](#getbackcolor)|Recupera el color de fondo de la selección actual.|  
+|[CHtmlEditCtrlBase::GetBlockFormat](#getblockformat)|Recupera la etiqueta de formato de bloque actual.|  
+|[CHtmlEditCtrlBase::GetBlockFormatNames](#getblockformatnames)|Recupera las cadenas correspondiente a las etiquetas de formato de bloque disponible.|  
+|[CHtmlEditCtrlBase::GetBookMark](#getbookmark)|Recupera el nombre de un delimitador de marcador.|  
+|[CHtmlEditCtrlBase::GetDocument](#getdocument)|Recupera el objeto de documento.|  
+|[CHtmlEditCtrlBase::GetDocumentHTML](#getdocumenthtml)|Recupera el código HTML del documento actual.|  
+|[CHtmlEditCtrlBase::GetDocumentTitle](#getdocumenttitle)|Recupera el título del documento.|  
+|[CHtmlEditCtrlBase::GetEvent](#getevent)|Recupera un puntero de interfaz al objeto de evento que contiene información sobre el evento más reciente.|  
+|[CHtmlEditCtrlBase::GetEventSrcElement](#geteventsrcelement)|Recupera el objeto que desencadenó el evento.|  
+|[CHtmlEditCtrlBase::GetFontFace](#getfontface)|Recupera el nombre de fuente para la selección actual.|  
+|[CHtmlEditCtrlBase::GetFontSize](#getfontsize)|Recupera el tamaño de fuente para la selección actual.|  
+|[CHtmlEditCtrlBase::GetForeColor](#getforecolor)|Recupera el color de primer plano (texto) de la selección actual.|  
+|[CHtmlEditCtrlBase::GetFrameZone](#getframezone)|Devuelve la zona de seguridad de la página actual en el explorador web.|  
+|[CHtmlEditCtrlBase::GetIsDirty](#getisdirty)|Indica si se ha cambiado el documento HTML.|  
+|[CHtmlEditCtrlBase::GetShowAlignedSiteTags](#getshowalignedsitetags)|Devuelve si se muestra un glifo para todos los elementos que tienen un **styleFloat** propiedad.|  
+|[CHtmlEditCtrlBase::GetShowAllTags](#getshowalltags)|Devuelve si el control WebBrowser muestra los glifos para mostrar la ubicación de todas las etiquetas en un documento.|  
+|[CHtmlEditCtrlBase::GetShowAreaTags](#getshowareatags)|Recupera si el control WebBrowser muestra un glifo para etiquetas de área.|  
+|[CHtmlEditCtrlBase::GetShowBRTags](#getshowbrtags)|Recupera si el control WebBrowser muestra un glifo para etiquetas de Brasil.|  
+|[CHtmlEditCtrlBase::GetShowCommentTags](#getshowcommenttags)|Recupera si el control WebBrowser muestra un glifo para etiquetas de comentario.|  
+|[CHtmlEditCtrlBase::GetShowMiscTags](#getshowmisctags)|Recupera si el control WebBrowser muestra todas las etiquetas que se muestra en Microsoft Internet Explorer 4.0.|  
+|[CHtmlEditCtrlBase::GetShowScriptTags](#getshowscripttags)|Recupera si el control WebBrowser muestra un glifo para todas las etiquetas de script.|  
+|[CHtmlEditCtrlBase::GetShowStyleTags](#getshowstyletags)|Recupera si el control WebBrowser muestra un glifo para todas las etiquetas de estilo.|  
+|[CHtmlEditCtrlBase::GetShowUnknownTags](#getshowunknowntags)|Recupera si el control WebBrowser muestra un glifo para todas las etiquetas desconocidos.|  
+|[CHtmlEditCtrlBase::HorizontalLine](#horizontalline)|Sobrescribe una línea horizontal en la selección actual.|  
+|[CHtmlEditCtrlBase::HyperLink](#hyperlink)|Inserta un hipervínculo en la selección actual.|  
+|[CHtmlEditCtrlBase::IE50Paste](#ie50paste)|Realiza una operación de pegar compatible con Microsoft Internet Explorer 5.|  
+|[CHtmlEditCtrlBase::Iframe](#iframe)|Sobrescribe un marco en la selección actual.|  
+|[CHtmlEditCtrlBase::Image](#image)|Sobrescribe una imagen en la selección actual.|  
+|[CHtmlEditCtrlBase::Indent](#indent)|Aumenta la sangría del texto seleccionado en el incremento de una sangría.|  
+|[CHtmlEditCtrlBase::InsFieldSet](#insfieldset)|Sobrescribe un cuadro en la selección actual.|  
+|[CHtmlEditCtrlBase::InsInputButton](#insinputbutton)|Sobrescribe un control de botón en la selección actual.|  
+|[CHtmlEditCtrlBase::InsInputHidden](#insinputhidden)|Inserta un control oculto en la selección actual.|  
+|[CHtmlEditCtrlBase::InsInputImage](#insinputimage)|Sobrescribe un control de imagen en la selección actual.|  
+|[CHtmlEditCtrlBase::InsInputPassword](#insinputpassword)|Sobrescribe un control de contraseña en la selección actual.|  
+|[CHtmlEditCtrlBase::InsInputReset](#insinputreset)|Sobrescribe un control de restablecimiento en la selección actual.|  
+|[CHtmlEditCtrlBase::InsInputSubmit](#insinputsubmit)|Sobrescribe un control de envío en la selección actual.|  
+|[CHtmlEditCtrlBase::InsInputUpload](#insinputupload)|Sobrescribe un control de carga de archivos en la selección actual.|  
+|[CHtmlEditCtrlBase::Is1DElement](#is1delement)|Determina si un elemento se coloca estáticamente.|  
+|[CHtmlEditCtrlBase::Is2DElement](#is2delement)|Determina si un elemento es una posición absoluta.|  
+|[CHtmlEditCtrlBase::Italic](#italic)|Alterna la selección actual entre cursiva y algunos.|  
+|[CHtmlEditCtrlBase::JustifyCenter](#justifycenter)|Centra el bloque del formato en que se encuentra la selección actual.|  
+|[CHtmlEditCtrlBase::JustifyLeft](#justifyleft)|Justifica a la izquierda del bloque del formato en que se encuentra la selección actual.|  
+|[CHtmlEditCtrlBase::JustifyRight](#justifyright)|Justifica a la derecha del bloque del formato en que se encuentra la selección actual.|  
+|[CHtmlEditCtrlBase::ListBox](#listbox)|Sobrescribe un control de selección del cuadro de lista en la selección actual.|  
+|[CHtmlEditCtrlBase::Marquee](#marquee)|Sobrescribe un recuadro vacío en la selección actual.|  
+|[CHtmlEditCtrlBase::NewDocument](#newdocument)|Crea un nuevo documento.|  
+|[CHtmlEditCtrlBase::OrderList](#orderlist)|Alterna la selección actual entre una lista ordenada y un bloque de formato normal.|  
+|[CHtmlEditCtrlBase::Outdent](#outdent)|Disminuye en un incremento la sangría del bloque del formato en que se encuentra la selección actual.|  
+|[CHtmlEditCtrlBase::Paragraph](#paragraph)|Sobrescribe un salto de línea en la selección actual.|  
+|[CHtmlEditCtrlBase::Paste](#paste)|Sobrescribe el contenido del Portapapeles en la selección actual.|  
+|[CHtmlEditCtrlBase::PrintDocument](#printdocument)|Imprime el documento actual.|  
+|[CHtmlEditCtrlBase::PrintPreview](#printpreview)|Abre la ventana de vista previa de impresión del documento actual mediante la plantilla de vista previa de impresión predeterminada o una plantilla personalizada.|  
+|[CHtmlEditCtrlBase::QueryStatus](#querystatus)|Llamar a este método para consultar el estado de comandos.|  
+|[CHtmlEditCtrlBase::RadioButton](#radiobutton)|Sobrescribe un control de radio en la selección actual.|  
+|[CHtmlEditCtrlBase::RefreshDocument](#refreshdocument)|Actualiza el documento actual.|  
+|[CHtmlEditCtrlBase::RemoveFormat](#removeformat)|Quita las etiquetas de formato de la selección actual.|  
+|[CHtmlEditCtrlBase::SaveAs](#saveas)|Guarda la página Web actual en un archivo.|  
+|[CHtmlEditCtrlBase::SelectAll](#selectall)|Selecciona todo el documento.|  
+|[CHtmlEditCtrlBase::Set2DPosition](#set2dposition)|Permite que se moverá al arrastrar elementos con posición absoluta.|  
+|[CHtmlEditCtrlBase::SetAbsolutePosition](#setabsoluteposition)|Establece la propiedad de posición de un elemento a "absoluto" o "."|  
+|[CHtmlEditCtrlBase::SetAtomicSelection](#setatomicselection)|Establezca el modo de selección atómica.|  
+|[CHtmlEditCtrlBase::SetAutoURLDetectMode](#setautourldetectmode)|Activa la detección automática de dirección URL y desactiva.|  
+|[CHtmlEditCtrlBase::SetBackColor](#setbackcolor)|Establece el color de fondo de la selección actual.|  
+|[CHtmlEditCtrlBase::SetBlockFormat](#setblockformat)|Establece la etiqueta de formato de bloque actual.|  
+|[CHtmlEditCtrlBase::SetBookMark](#setbookmark)|Crea un delimitador de marcador para el punto de inserción o la selección actual.|  
+|[CHtmlEditCtrlBase::SetCSSEditingLevel](#setcsseditinglevel)|Selecciona el nivel CSS (partir de CSS1 o CSS2) el editor admitirán, si lo hay.|  
+|[CHtmlEditCtrlBase::SetDefaultComposeSettings](#setdefaultcomposesettings)|Este método para establecer el valor predeterminado la configuración de redacción de llamada.|  
+|[CHtmlEditCtrlBase::SetDesignMode](#setdesignmode)|Establecer el modo de diseño.|  
+|[CHtmlEditCtrlBase::SetDisableEditFocusUI](#setdisableeditfocusui)|Deshabilita el borde sombreado y controla alrededor de un elemento que tiene el foco de edición.|  
+|[CHtmlEditCtrlBase::SetDocumentHTML](#setdocumenthtml)|Establece el código HTML del documento actual.|  
+|[CHtmlEditCtrlBase::SetFontFace](#setfontface)|Establece la fuente de la selección actual.|  
+|[CHtmlEditCtrlBase::SetFontSize](#setfontsize)|Establece el tamaño de fuente para la selección actual.|  
+|[CHtmlEditCtrlBase::SetForeColor](#setforecolor)|Establece el color de primer plano (texto) de la selección actual.|  
+|[CHtmlEditCtrlBase::SetIE5PasteMode](#setie5pastemode)|Establece la operación de pegar para ser compatible con Microsoft Internet Explorer 5.|  
+|[CHtmlEditCtrlBase::SetLiveResize](#setliveresize)|Hace que el control WebBrowser actualizar la apariencia de un elemento continuamente durante una operación de cambio de tamaño o mover.|  
+|[CHtmlEditCtrlBase::SetMultiSelect](#setmultiselect)|Permite la selección múltiple.|  
+|[CHtmlEditCtrlBase::SetOverrideCursor](#setoverridecursor)|Comandos de WebBrowser nunca para cambiar el puntero del mouse.|  
+|[CHtmlEditCtrlBase::SetOverwriteMode](#setoverwritemode)|Activa o desactiva el modo de entrada de texto entre insertar y sobrescribir.|  
+|[CHtmlEditCtrlBase::SetRespectVisInDesign](#setrespectvisindesign)|Oculta los elementos visibles en el modo de diseño.|  
+|[CHtmlEditCtrlBase::SetShowAlignedSiteTags](#setshowalignedsitetags)|Muestra un glifo para todos los elementos que tienen un **styleFloat** propiedad.|  
+|[CHtmlEditCtrlBase::SetShowAllTags](#setshowalltags)|Muestra los glifos para mostrar la ubicación de todas las etiquetas en un documento.|  
+|[CHtmlEditCtrlBase::SetShowAreaTags](#setshowareatags)|Muestra un glifo para todas las etiquetas de área.|  
+|[CHtmlEditCtrlBase::SetShowBRTags](#setshowbrtags)|Muestra un glifo para todas las etiquetas de Brasil.|  
+|[CHtmlEditCtrlBase::SetShowCommentTags](#setshowcommenttags)|Muestra un glifo para todas las etiquetas de comentario.|  
+|[CHtmlEditCtrlBase::SetShowMiscTags](#setshowmisctags)|Muestra todas las etiquetas que se muestra en Microsoft Internet Explorer 4.0.|  
+|[CHtmlEditCtrlBase::SetShowScriptTags](#setshowscripttags)|Muestra un glifo para todas las etiquetas de script.|  
+|[CHtmlEditCtrlBase::SetShowStyleTags](#setshowstyletags)|Muestra un glifo para todas las etiquetas de estilo.|  
+|[CHtmlEditCtrlBase::SetShowUnknownTags](#setshowunknowntags)|Muestra un glifo para todas las etiquetas desconocidos.|  
+|[CHtmlEditCtrlBase::TextArea](#textarea)|Sobrescribe un control de entrada de texto de varias líneas en la selección actual.|  
+|[CHtmlEditCtrlBase::TextBox](#textbox)|Sobrescribe un control de texto en la selección actual.|  
+|[CHtmlEditCtrlBase::UnBookmark](#unbookmark)|Quita cualquier marcador de la selección actual.|  
+|[CHtmlEditCtrlBase::Underline](#underline)|Alterna la selección actual entre subrayado y no subrayado.|  
+|[CHtmlEditCtrlBase::Unlink](#unlink)|Quita cualquier hipervínculo de la selección actual.|  
+|[CHtmlEditCtrlBase::UnorderList](#unorderlist)|Alterna la selección actual entre una lista ordenada y un bloque de formato normal.|  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- The name of the derived class.  
+ El nombre de la clase derivada.  
   
-## <a name="remarks"></a>Remarks  
- **CHtmlEditCtrlBase** provides member functions for the WebBrowser's HTML editing commands, such as [Bold](#bold). (Alternately, you can call [ExecCommand](#execcommand) to execute the **IDM_BOLD** command.)  
+## <a name="remarks"></a>Comentarios  
+ **CHtmlEditCtrlBase** proporciona funciones miembro para HTML de WebBrowser Editar comandos, como [negrita](#bold). (Como alternativa, puede llamar a [ExecCommand](#execcommand) para ejecutar el **IDM_BOLD** comando.)  
   
- **CHtmlEditCtrlBase** is not intended to stand on its own. It is designed to be a base class for derived classes that expose the HTML editing functionality of the WebBrowser (see [CHtmlEditCtrl](../../mfc/reference/chtmleditctrl-class.md) and [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)).  
+ **CHtmlEditCtrlBase** no está diseñado para funcionar con su propio. Está diseñado para ser una clase base para las clases derivadas que exponen la funcionalidad de WebBrowser de edición de HTML (consulte [CHtmlEditCtrl](../../mfc/reference/chtmleditctrl-class.md) y [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `CHtmlEditCtrlBase`  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxhtml.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxhtml.h  
   
-##  <a name="addtoglyphtable"></a>  CHtmlEditCtrlBase::AddToGlyphTable  
- Adds an entry to the glyph table, which specifies images to display for specific tags in design mode.  
+##  <a name="addtoglyphtable"></a>CHtmlEditCtrlBase::AddToGlyphTable  
+ Agrega una entrada a la tabla de glifo, que especifica las imágenes que se muestran para las etiquetas específicas en modo de diseño.  
   
 ```  
 HRESULT AddToGlyphTable(
@@ -407,170 +301,170 @@ HRESULT AddToGlyphTable(
     unsigned int nImgHeight) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szTag`  
- The tag name (for example, "P" or "table").  
+ El nombre de etiqueta (por ejemplo, "P" o "tabla").  
   
  *szImgUrl*  
- The image URL.  
+ La dirección URL de imagen.  
   
  *nTagType*  
- Tag type: 0 means the image is for the opening tag only. 1 means the image is for the closing tag only. 2 means the image is for both the opening and closing tags. Single tags such as br and comment must be added with the tag type set to 0.  
+ Tipo de etiqueta: 0 significa que la imagen es de solo la etiqueta de apertura. 1 significa que la imagen es de solo la etiqueta de cierre. 2 significa que la imagen es para las etiquetas de apertura y cierre. Etiquetas únicas como Brasil y marque como comentario deben agregarse con el tipo de etiqueta establecido en 0.  
   
  *nAlignment*  
- Alignment (rectangular elements only): This parameter indicates that the image is for an element with an alignment attribute. Left = 0, center = 1, right = 2, and undefined = 3. Left, right, or center attributes must be explicitly set on the element.  
+ Alineación (solo elementos rectangulares): este parámetro indica que la imagen es para un elemento con un atributo de alineación. Left = 0, center = 1, derecha = 2 y sin definir = 3. Izquierda, derecha o centro atributos deben establecerse explícitamente en el elemento.  
   
  *nPosInfo*  
- Positioning information. Determines what cascading style sheets (CSS) positioning value the glyph applies to, where static positioning = 0, absolute positioning = 1, relative positioning = 2, and all = 3. This field enables you to specify one glyph for a tag when it is not positioned and another glyph to show an anchor point when the tag is positioned.  
+ Información de posición. Determina el valor de posición (CSS) se aplica el glifo, donde estático de hojas de qué estilos en cascada posicionamiento = 0, posicionamiento absoluto = 1, posición relativa = 2 y todos = 3. Este campo le permite especificar un glifo para una etiqueta cuando no está colocado y otro glifo se va a mostrar un punto de anclaje cuando se sitúa la etiqueta.  
   
  *nDirection*  
- The direction. This parameter specifies the image for a tag based on the reading order of the current language. 0 specifies left to right, 1 specifies right to left, 2 specifies top to bottom, 3 specifies bottom to top, and 4 specifies all. You normally set this field to 4.  
+ La dirección. Este parámetro especifica la imagen de una etiqueta según el orden de lectura del idioma actual. el valor 0 especifica de izquierda a derecha, 1 especifica derecha a izquierda, 2 especifica arriba a abajo, 3 especifica abajo a arriba y 4 especifica todos. Normalmente, este campo se establece en 4.  
   
  *nImgWidth*  
- The image width in pixels.  
+ El ancho de la imagen en píxeles.  
   
  *nImgHeight*  
- The image height in pixels.  
+ El alto de la imagen en píxeles.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- For more information on the parameters, see "Glyph Table String Format" in [Using Editing Glyphs](https://msdn.microsoft.com/library/aa969614.aspx).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información sobre los parámetros, vea "Formato de cadena de glifo de tabla" en [glifos de edición usando](https://msdn.microsoft.com/library/aa969614.aspx).  
   
- This method sends the [IDM_ADDTOGLYPHTABLE command ID](https://msdn.microsoft.com/library/aa769891.aspx) to the WebBrowser control.  
+ Este método envía el [identificador de comando IDM_ADDTOGLYPHTABLE](https://msdn.microsoft.com/library/aa769891.aspx) para el control WebBrowser.  
   
-##  <a name="bold"></a>  CHtmlEditCtrlBase::Bold  
- Toggles the bold state of the selected text.  
+##  <a name="bold"></a>CHtmlEditCtrlBase::Bold  
+ Alterna el estado de negrita del texto seleccionado.  
   
 ```  
 HRESULT Bold() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_BOLD command ID](https://msdn.microsoft.com/library/aa769861.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_BOLD](https://msdn.microsoft.com/library/aa769861.aspx) para el control WebBrowser.  
   
-##  <a name="button"></a>  CHtmlEditCtrlBase::Button  
- Overwrites a button control on the current selection.  
+##  <a name="button"></a>CHtmlEditCtrlBase::Button  
+ Sobrescribe un control de botón en la selección actual.  
   
 ```  
 HRESULT Button(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID of the button control.  
+ El identificador del control de botón.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_BUTTON command ID](https://msdn.microsoft.com/library/aa769966.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_BUTTON](https://msdn.microsoft.com/library/aa769966.aspx) para el control WebBrowser.  
   
-##  <a name="checkbox"></a>  CHtmlEditCtrlBase::CheckBox  
- Overwrites a check box control on the current selection.  
+##  <a name="checkbox"></a>CHtmlEditCtrlBase::CheckBox  
+ Sobrescribe un control de casilla de verificación en la selección actual.  
   
 ```  
 HRESULT CheckBox(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID of the check box control.  
+ El identificador del control de casilla de verificación.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_CHECKBOX command ID](https://msdn.microsoft.com/library/aa769972.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_CHECKBOX](https://msdn.microsoft.com/library/aa769972.aspx) para el control WebBrowser.  
   
-##  <a name="clearselection"></a>  CHtmlEditCtrlBase::ClearSelection  
- Clears the current selection.  
+##  <a name="clearselection"></a>CHtmlEditCtrlBase::ClearSelection  
+ Borra la selección actual.  
   
 ```  
 HRESULT ClearSelection() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_CLEARSELECTION command ID](https://msdn.microsoft.com/library/aa770038.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_CLEARSELECTION](https://msdn.microsoft.com/library/aa770038.aspx) para el control WebBrowser.  
   
-##  <a name="copy"></a>  CHtmlEditCtrlBase::Copy  
- Copies the current selection to the clipboard.  
+##  <a name="copy"></a>CHtmlEditCtrlBase::Copy  
+ Copia la selección actual en el Portapapeles.  
   
 ```  
 HRESULT Copy() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_COPY command ID](https://msdn.microsoft.com/library/aa769872.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_COPY](https://msdn.microsoft.com/library/aa769872.aspx) para el control WebBrowser.  
   
-##  <a name="cut"></a>  CHtmlEditCtrlBase::Cut  
- Copies the current selection to the clipboard and then deletes it.  
+##  <a name="cut"></a>CHtmlEditCtrlBase::Cut  
+ Copia la selección actual en el Portapapeles y, a continuación, lo elimina.  
   
 ```  
 HRESULT Cut() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_CUT command ID](https://msdn.microsoft.com/library/aa769875.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_CUT](https://msdn.microsoft.com/library/aa769875.aspx) para el control WebBrowser.  
   
-##  <a name="delete"></a>  CHtmlEditCtrlBase::Delete  
- Deletes the current selection.  
+##  <a name="delete"></a>CHtmlEditCtrlBase::Delete  
+ Elimina la selección actual.  
   
 ```  
 HRESULT Delete() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_DELETE command ID](https://msdn.microsoft.com/library/aa769876.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_DELETE](https://msdn.microsoft.com/library/aa769876.aspx) para el control WebBrowser.  
   
-##  <a name="dropdownbox"></a>  CHtmlEditCtrlBase::DropDownBox  
- Overwrites a drop-down selection control on the current selection.  
+##  <a name="dropdownbox"></a>CHtmlEditCtrlBase::DropDownBox  
+ Sobrescribe un control de selección de lista desplegable en la selección actual.  
   
 ```  
 HRESULT DropDownBox(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID of the drop-down selection control.  
+ El identificador del control de selección de lista desplegable.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_DROPDOWNBOX command ID](https://msdn.microsoft.com/library/aa769984.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_DROPDOWNBOX](https://msdn.microsoft.com/library/aa769984.aspx) para el control WebBrowser.  
   
-##  <a name="emptyglyphtable"></a>  CHtmlEditCtrlBase::EmptyGlyphTable  
- Removes all entries from the glyph table, which hides all images displayed for tags in design mode.  
+##  <a name="emptyglyphtable"></a>CHtmlEditCtrlBase::EmptyGlyphTable  
+ Quita todas las entradas de la tabla de glifo que oculta todas las imágenes de muestra para las etiquetas en el modo de diseño.  
   
 ```  
 HRESULT EmptyGlyphTable() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_EMPTYGLYPHTABLE command ID](https://msdn.microsoft.com/library/aa769907.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_EMPTYGLYPHTABLE](https://msdn.microsoft.com/library/aa769907.aspx) para el control WebBrowser.  
   
-##  <a name="execcommand"></a>  CHtmlEditCtrlBase::ExecCommand  
- Executes a command.  
+##  <a name="execcommand"></a>CHtmlEditCtrlBase::ExecCommand  
+ Ejecuta un comando.  
   
 ```  
 HRESULT ExecCommand(
@@ -587,855 +481,855 @@ HRESULT ExecCommand(
     VARIANT* pOutVar = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `cmdID`  
- The command ID to be executed. For a list, see [MSHTML Command Identifiers](https://msdn.microsoft.com/library/aa741315.aspx).  
+ El identificador de comando que ejecutará. Para obtener una lista, vea [identificadores de comandos de MSHTML](https://msdn.microsoft.com/library/aa741315.aspx).  
   
  `cmdExecOpt`  
- Values taken from the [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) enumeration, which describe how the object should execute the command.  
+ Valores extraídos de la [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) enumeración, que describen la forma en que el objeto debe ejecutar el comando.  
   
  *pInVar*  
- The input arguments.  
+ Los argumentos de entrada.  
   
  *pOutVar*  
- The command output.  
+ La salida del comando.  
   
  *pGuid*  
- The GUID of the command group.  
+ El GUID del grupo de comandos.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method provides the functionality of [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300).  
+### <a name="remarks"></a>Comentarios  
+ Este método proporciona la funcionalidad de [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300).  
   
-##  <a name="font"></a>  CHtmlEditCtrlBase::Font  
- Opens a font dialog box to enable the user to change the text color, font, and font size of the current selection.  
+##  <a name="font"></a>CHtmlEditCtrlBase::Font  
+ Abre un cuadro de diálogo fuente para permitir al usuario cambiar el color del texto, fuente y tamaño de fuente de la selección actual.  
   
 ```  
 HRESULT Font() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_FONT command ID](https://msdn.microsoft.com/library/aa769913.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_FONT](https://msdn.microsoft.com/library/aa769913.aspx) para el control WebBrowser.  
   
-##  <a name="getabsoluteposition"></a>  CHtmlEditCtrlBase::GetAbsolutePosition  
- Returns whether an element's position property is "absolute."  
+##  <a name="getabsoluteposition"></a>CHtmlEditCtrlBase::GetAbsolutePosition  
+ Devuelve si la propiedad de posición de un elemento es "absolute".  
   
 ```  
 HRESULT GetAbsolutePosition(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bCurValue`  
- True if the element's position property is set to "absolute."  
+ True si la propiedad de posición del elemento se establece en "absolute".  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- For more information, see [IDM_ABSOLUTE_POSITION Command ID](https://msdn.microsoft.com/library/aa769889.aspx).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [Id. de comando de IDM_ABSOLUTE_POSITION](https://msdn.microsoft.com/library/aa769889.aspx).  
   
-##  <a name="getbackcolor"></a>  CHtmlEditCtrlBase::GetBackColor  
- Retrieves the background color of the current selection.  
+##  <a name="getbackcolor"></a>CHtmlEditCtrlBase::GetBackColor  
+ Recupera el color de fondo de la selección actual.  
   
 ```  
 HRESULT GetBackColor(int& nColor) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nColor`  
- The background color.  
+ Color de fondo.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_BACKCOLOR Command ID](https://msdn.microsoft.com/library/aa769858.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx) para el control WebBrowser.  
   
-##  <a name="getblockformat"></a>  CHtmlEditCtrlBase::GetBlockFormat  
- Retrieves the current block format tag.  
+##  <a name="getblockformat"></a>CHtmlEditCtrlBase::GetBlockFormat  
+ Recupera la etiqueta de formato de bloque actual.  
   
 ```  
 HRESULT GetBlockFormat(CString& strFormat) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *strFormat*  
- The current block format tag.  
+ La etiqueta de formato de bloque actual.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_BLOCKFMT command ID](https://msdn.microsoft.com/library/aa769883.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_BLOCKFMT](https://msdn.microsoft.com/library/aa769883.aspx) para el control WebBrowser.  
   
-##  <a name="getblockformatnames"></a>  CHtmlEditCtrlBase::GetBlockFormatNames  
- Retrieves the strings corresponding to the available block format tags.  
+##  <a name="getblockformatnames"></a>CHtmlEditCtrlBase::GetBlockFormatNames  
+ Recupera las cadenas correspondiente a las etiquetas de formato de bloque disponible.  
   
 ```  
 HRESULT GetBlockFormatNames(CStringArray& sa) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
- *sa*  
- The available block format tags, as an array of strings.  
+### <a name="parameters"></a>Parámetros  
+ *SA*  
+ Las etiquetas de formato de bloque disponible, como una matriz de cadenas.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_GETBLOCKFMTS command ID](https://msdn.microsoft.com/library/aa769884.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [IDM_GETBLOCKFMTS identificador del comando](https://msdn.microsoft.com/library/aa769884.aspx) para el control WebBrowser.  
   
-##  <a name="getbookmark"></a>  CHtmlEditCtrlBase::GetBookMark  
- Retrieves the name of a bookmark anchor.  
+##  <a name="getbookmark"></a>CHtmlEditCtrlBase::GetBookMark  
+ Recupera el nombre de un delimitador de marcador.  
   
 ```  
 HRESULT GetBookMark(CString& strAnchor) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *strAnchor*  
- The name of a bookmark anchor.  
+ El nombre de un delimitador de marcador.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- For more information, see [IDM_BOOKMARK Command ID](https://msdn.microsoft.com/library/aa769873.aspx).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [Id. de comando de IDM_BOOKMARK](https://msdn.microsoft.com/library/aa769873.aspx).  
   
-##  <a name="getdocument"></a>  CHtmlEditCtrlBase::GetDocument  
- Retrieves the document object.  
+##  <a name="getdocument"></a>CHtmlEditCtrlBase::GetDocument  
+ Recupera el objeto de documento.  
   
 ```  
 HRESULT GetDocument(IHTMLDocument2** ppDoc) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `ppDoc`  
- The document object.  
+ El objeto de documento.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-##  <a name="getdocumenthtml"></a>  CHtmlEditCtrlBase::GetDocumentHTML  
- Retrieves the HTML of the current document.  
+##  <a name="getdocumenthtml"></a>CHtmlEditCtrlBase::GetDocumentHTML  
+ Recupera el código HTML del documento actual.  
   
 ```  
 HRESULT GetDocumentHTML(CString& szHTML) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szHTML`  
- The HTML.  
+ El código HTML.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-##  <a name="getdocumenttitle"></a>  CHtmlEditCtrlBase::GetDocumentTitle  
- Retrieves the document's title.  
+##  <a name="getdocumenttitle"></a>CHtmlEditCtrlBase::GetDocumentTitle  
+ Recupera el título del documento.  
   
 ```  
 HRESULT GetDocumentTitle(CString& szTitle) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *szTitle*  
- The document's title.  
+ El título del documento.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-##  <a name="getevent"></a>  CHtmlEditCtrlBase::GetEvent  
- Retrieves an interface pointer to the event object that contains information relevant to the most recent event.  
+##  <a name="getevent"></a>CHtmlEditCtrlBase::GetEvent  
+ Recupera un puntero de interfaz al objeto de evento que contiene información sobre el evento más reciente.  
   
 ```  
 HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `ppEventObj`  
- The event object.  
+ El objeto de evento.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-##  <a name="geteventsrcelement"></a>  CHtmlEditCtrlBase::GetEventSrcElement  
- Retrieves the object that fired the event.  
+##  <a name="geteventsrcelement"></a>CHtmlEditCtrlBase::GetEventSrcElement  
+ Recupera el objeto que desencadenó el evento.  
   
 ```  
 HRESULT GetEventSrcElement(IHTMLElement** ppSrcElement) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *ppSrcElement*  
- The element that fired the event.  
+ El elemento que desencadenó el evento.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-##  <a name="getfontface"></a>  CHtmlEditCtrlBase::GetFontFace  
- Retrieves the font name for the current selection.  
+##  <a name="getfontface"></a>CHtmlEditCtrlBase::GetFontFace  
+ Recupera el nombre de fuente para la selección actual.  
   
 ```  
 HRESULT GetFontFace(CString& strFace) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `strFace`  
- The font name.  
+ El nombre de la fuente.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- If the current selection uses more than one font, `strFace` will be an empty string.  
+### <a name="remarks"></a>Comentarios  
+ Si la selección actual utiliza más de una fuente, `strFace` será una cadena vacía.  
   
- This method sends the [IDM_FONTNAME command ID](https://msdn.microsoft.com/library/aa769880.aspx) to the WebBrowser control.  
+ Este método envía el [identificador de comando IDM_FONTNAME](https://msdn.microsoft.com/library/aa769880.aspx) para el control WebBrowser.  
   
-##  <a name="getfontsize"></a>  CHtmlEditCtrlBase::GetFontSize  
- Retrieves the font size for the current selection.  
+##  <a name="getfontsize"></a>CHtmlEditCtrlBase::GetFontSize  
+ Recupera el tamaño de fuente para la selección actual.  
   
 ```  
 HRESULT GetFontSize(short& nSize) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nSize`  
- The font size.  
+ El tamaño de fuente.  
   
-### <a name="return-value"></a>Return Value  
- Returns the HTML font size (1-7). Returns 0 if the selection contains multiple font sizes.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve el tamaño de fuente HTML (1-7). Devuelve 0 si la selección contiene varios tamaños de fuente.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_FONTSIZE command ID](https://msdn.microsoft.com/library/aa769881.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_FONTSIZE](https://msdn.microsoft.com/library/aa769881.aspx) para el control WebBrowser.  
   
-##  <a name="getforecolor"></a>  CHtmlEditCtrlBase::GetForeColor  
- Retrieves the foreground (text) color of the current selection.  
+##  <a name="getforecolor"></a>CHtmlEditCtrlBase::GetForeColor  
+ Recupera el color de primer plano (texto) de la selección actual.  
   
 ```  
 HRESULT GetForeColor(int& nColor);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nColor`  
- The foreground color.  
+ El color de primer plano.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_FORECOLOR Command ID](https://msdn.microsoft.com/library/aa769882.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_FORECOLOR](https://msdn.microsoft.com/library/aa769882.aspx) para el control WebBrowser.  
   
-##  <a name="getframezone"></a>  CHtmlEditCtrlBase::GetFrameZone  
- Returns the security zone of the current page in the web browser.  
+##  <a name="getframezone"></a>CHtmlEditCtrlBase::GetFrameZone  
+ Devuelve la zona de seguridad de la página actual en el explorador web.  
   
 ```  
 HRESULT GetFrameZone(short& nZone) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *nZone*  
- The security zone.  
+ La zona de seguridad.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_GETFRAMEZONE command ID](https://msdn.microsoft.com/library/aa769916.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_GETFRAMEZONE](https://msdn.microsoft.com/library/aa769916.aspx) para el control WebBrowser.  
   
-##  <a name="getisdirty"></a>  CHtmlEditCtrlBase::GetIsDirty  
- Indicates whether the HTML document has changed.  
+##  <a name="getisdirty"></a>CHtmlEditCtrlBase::GetIsDirty  
+ Indica si se ha cambiado el documento HTML.  
   
 ```  
 HRESULT GetIsDirty() const;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- Indicates whether the document has changed. `GetIsDirty` returns an `HRESULT` from [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910).  
+### <a name="remarks"></a>Comentarios  
+ Indica si el documento ha cambiado. `GetIsDirty`Devuelve un `HRESULT` de [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910).  
   
-##  <a name="getshowalignedsitetags"></a>  CHtmlEditCtrlBase::GetShowAlignedSiteTags  
- Returns whether a glyph is displayed for all elements that have a **styleFloat** property.  
+##  <a name="getshowalignedsitetags"></a>CHtmlEditCtrlBase::GetShowAlignedSiteTags  
+ Devuelve si se muestra un glifo para todos los elementos que tienen un **styleFloat** propiedad.  
   
 ```  
 HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bCurValue`  
- True if a glyph is displayed for all elements that have a **styleFloat** property; false if no glyph is displayed.  
+ True si se muestra un glifo para todos los elementos que tienen un **styleFloat** propiedad; false si no se muestra ningún glifo.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- For more information, see [IDM_SHOWALIGNEDSITETAGS Command ID](https://msdn.microsoft.com/library/aa769947.aspx).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [Id. de comando de IDM_SHOWALIGNEDSITETAGS](https://msdn.microsoft.com/library/aa769947.aspx).  
   
-##  <a name="getshowalltags"></a>  CHtmlEditCtrlBase::GetShowAllTags  
- Returns whether the WebBrowser displays glyphs to show the location of all tags in a document.  
+##  <a name="getshowalltags"></a>CHtmlEditCtrlBase::GetShowAllTags  
+ Devuelve si el control WebBrowser muestra los glifos para mostrar la ubicación de todas las etiquetas en un documento.  
   
 ```  
 HRESULT GetShowAllTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bCurValue`  
- True if the WebBrowser displays glyphs to show the location of all tags in a document; false if it does not.  
+ True si el control WebBrowser muestra los glifos para mostrar la ubicación de todas las etiquetas en un documento; False si no es así.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- For more information, see [IDM_SHOWALLTAGS Command ID](https://msdn.microsoft.com/library/aa769948.aspx).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [Id. de comando de IDM_SHOWALLTAGS](https://msdn.microsoft.com/library/aa769948.aspx).  
   
-##  <a name="getshowareatags"></a>  CHtmlEditCtrlBase::GetShowAreaTags  
- Retrieves whether the WebBrowser displays a glyph for area tags.  
+##  <a name="getshowareatags"></a>CHtmlEditCtrlBase::GetShowAreaTags  
+ Recupera si el control WebBrowser muestra un glifo para etiquetas de área.  
   
 ```  
 HRESULT GetShowAreaTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bCurValue`  
- True if the WebBrowser displays a glyph for area tags, false if it does not.  
+ Es True si el control WebBrowser muestra un glifo para etiquetas de área, false si no es así.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- For more information, see [IDM_SHOWAREATAGS Command ID](https://msdn.microsoft.com/library/aa769949.aspx).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [Id. de comando de IDM_SHOWAREATAGS](https://msdn.microsoft.com/library/aa769949.aspx).  
   
-##  <a name="getshowbrtags"></a>  CHtmlEditCtrlBase::GetShowBRTags  
- Retrieves whether the WebBrowser displays a glyph for br tags.  
+##  <a name="getshowbrtags"></a>CHtmlEditCtrlBase::GetShowBRTags  
+ Recupera si el control WebBrowser muestra un glifo para etiquetas de Brasil.  
   
 ```  
 HRESULT GetShowBRTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bCurValue`  
- True if the WebBrowser displays a glyph for br tags, false if it doesn't.  
+ Es True si el control WebBrowser muestra un glifo para etiquetas de Brasil, false si no lo hace.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- For more information, see [IDM_SHOWWBRTAGS Command ID](https://msdn.microsoft.com/library/aa769956.aspx).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [Id. de comando de IDM_SHOWWBRTAGS](https://msdn.microsoft.com/library/aa769956.aspx).  
   
-##  <a name="getshowcommenttags"></a>  CHtmlEditCtrlBase::GetShowCommentTags  
- Retrieves whether the WebBrowser displays a glyph for comment tags.  
+##  <a name="getshowcommenttags"></a>CHtmlEditCtrlBase::GetShowCommentTags  
+ Recupera si el control WebBrowser muestra un glifo para etiquetas de comentario.  
   
 ```  
 HRESULT GetShowCommentTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bCurValue`  
- True if the WebBrowser displays a glyph for comment tags, false if it doesn't.  
+ Es True si el control WebBrowser muestra un glifo para etiquetas de comentario, false si no lo hace.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- For more information, see [IDM_SHOWCOMMENTTAGS Command ID](https://msdn.microsoft.com/library/aa769950.aspx).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [Id. de comando de IDM_SHOWCOMMENTTAGS](https://msdn.microsoft.com/library/aa769950.aspx).  
   
-##  <a name="getshowmisctags"></a>  CHtmlEditCtrlBase::GetShowMiscTags  
- Retrieves whether the WebBrowser displays all the tags shown in Microsoft Internet Explorer 4.0.  
+##  <a name="getshowmisctags"></a>CHtmlEditCtrlBase::GetShowMiscTags  
+ Recupera si el control WebBrowser muestra todas las etiquetas que se muestra en Microsoft Internet Explorer 4.0.  
   
 ```  
 HRESULT GetShowMiscTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bCurValue`  
- True if the WebBrowser displays all the tags shown in Microsoft Internet Explorer 4.0, false if it does not.  
+ Es True si el control WebBrowser muestra todas las etiquetas que se muestra en Microsoft Internet Explorer 4.0, false si no es así.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- For more information, see [IDM_SHOWMISCTAGS Command ID](https://msdn.microsoft.com/library/aa769952.aspx).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [Id. de comando de IDM_SHOWMISCTAGS](https://msdn.microsoft.com/library/aa769952.aspx).  
   
-##  <a name="getshowscripttags"></a>  CHtmlEditCtrlBase::GetShowScriptTags  
- Retrieves whether the WebBrowser displays a glyph for all the script tags.  
+##  <a name="getshowscripttags"></a>CHtmlEditCtrlBase::GetShowScriptTags  
+ Recupera si el control WebBrowser muestra un glifo para todas las etiquetas de script.  
   
 ```  
 HRESULT GetShowScriptTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bCurValue`  
- True if the WebBrowser displays a glyph for all the script tags, false if it does not.  
+ Es True si el control WebBrowser muestra un glifo para todas las etiquetas de script, false si no es así.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- For more information, see [IDM_SHOWSCRIPTTAGS Command ID](https://msdn.microsoft.com/library/aa769953.aspx).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [Id. de comando de IDM_SHOWSCRIPTTAGS](https://msdn.microsoft.com/library/aa769953.aspx).  
   
-##  <a name="getshowstyletags"></a>  CHtmlEditCtrlBase::GetShowStyleTags  
- Retrieves whether the WebBrowser displays a glyph for all the style tags.  
+##  <a name="getshowstyletags"></a>CHtmlEditCtrlBase::GetShowStyleTags  
+ Recupera si el control WebBrowser muestra un glifo para todas las etiquetas de estilo.  
   
 ```  
 HRESULT GetShowStyleTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bCurValue`  
- True if the WebBrowser displays a glyph for all the style tags, false if it does not  
+ True si el control WebBrowser muestra un glifo para todas las etiquetas de estilo, false si no es así  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- For more information, see [IDM_SHOWSTYLETAGS Command ID](https://msdn.microsoft.com/library/aa769954.aspx).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [Id. de comando de IDM_SHOWSTYLETAGS](https://msdn.microsoft.com/library/aa769954.aspx).  
   
-##  <a name="getshowunknowntags"></a>  CHtmlEditCtrlBase::GetShowUnknownTags  
- Retrieves whether the WebBrowser displays a glyph for all unknown tags.  
+##  <a name="getshowunknowntags"></a>CHtmlEditCtrlBase::GetShowUnknownTags  
+ Recupera si el control WebBrowser muestra un glifo para todas las etiquetas desconocidos.  
   
 ```  
 HRESULT GetShowUnknownTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bCurValue`  
- True if the WebBrowser displays a glyph for all unknown tags, false if it does not.  
+ Es True si el control WebBrowser muestra un glifo para todas las etiquetas desconocidos, false si no es así.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- For more information, see [IDM_SHOWUNKNOWNTAGS Command ID](https://msdn.microsoft.com/library/aa769955.aspx).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [Id. de comando de IDM_SHOWUNKNOWNTAGS](https://msdn.microsoft.com/library/aa769955.aspx).  
   
-##  <a name="horizontalline"></a>  CHtmlEditCtrlBase::HorizontalLine  
- Overwrites a horizontal line on the current selection.  
+##  <a name="horizontalline"></a>CHtmlEditCtrlBase::HorizontalLine  
+ Sobrescribe una línea horizontal en la selección actual.  
   
 ```  
 HRESULT HorizontalLine(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
- *szID*  
- The ID for the horizontal line.  
+### <a name="parameters"></a>Parámetros  
+ *NID*  
+ El identificador de la línea horizontal.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_HORIZONTALLINE command ID](https://msdn.microsoft.com/library/aa769968.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_HORIZONTALLINE](https://msdn.microsoft.com/library/aa769968.aspx) para el control WebBrowser.  
   
-##  <a name="hyperlink"></a>  CHtmlEditCtrlBase::HyperLink  
- Inserts a hyperlink on the current selection.  
+##  <a name="hyperlink"></a>CHtmlEditCtrlBase::HyperLink  
+ Inserta un hipervínculo en la selección actual.  
   
 ```  
 HRESULT HyperLink(LPCTSTR szUrl = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szUrl`  
- The hyperlink URL.  
+ La dirección URL del hipervínculo.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_HYPERLINK command ID](https://msdn.microsoft.com/library/aa769874.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_HYPERLINK](https://msdn.microsoft.com/library/aa769874.aspx) para el control WebBrowser.  
   
-##  <a name="ie50paste"></a>  CHtmlEditCtrlBase::IE50Paste  
- Performs a paste operation that's compatible with Internet Explorer 5.  
+##  <a name="ie50paste"></a>CHtmlEditCtrlBase::IE50Paste  
+ Realiza una operación de pegar es compatible con Internet Explorer 5.  
   
 ```  
 HRESULT IE50Paste(LPCTSTR szData) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szData`  
- The string to paste.  
+ Cadena que se va a pegar.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_IE50_PASTE command ID](https://msdn.microsoft.com/library/aa769922.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_IE50_PASTE](https://msdn.microsoft.com/library/aa769922.aspx) para el control WebBrowser.  
   
-##  <a name="iframe"></a>  CHtmlEditCtrlBase::Iframe  
- Overwrites an inline frame on the current selection.  
+##  <a name="iframe"></a>CHtmlEditCtrlBase::Iframe  
+ Sobrescribe un marco en la selección actual.  
   
 ```  
 HRESULT Iframe(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID for the inline frame.  
+ El identificador del marco flotante.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_IFRAME command ID](https://msdn.microsoft.com/library/aa769969.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_IFRAME](https://msdn.microsoft.com/library/aa769969.aspx) para el control WebBrowser.  
   
-##  <a name="image"></a>  CHtmlEditCtrlBase::Image  
- Overwrites an image on the current selection.  
+##  <a name="image"></a>CHtmlEditCtrlBase::Image  
+ Sobrescribe una imagen en la selección actual.  
   
 ```  
 HRESULT Image(LPCTSTR szUrl = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szUrl`  
- The path and file name of the image to be inserted.  
+ La ruta de acceso y el nombre de la imagen que se va a insertar.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_IMAGE command ID](https://msdn.microsoft.com/library/aa769970.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_IMAGE](https://msdn.microsoft.com/library/aa769970.aspx) para el control WebBrowser.  
   
-##  <a name="indent"></a>  CHtmlEditCtrlBase::Indent  
- Increases the indent of the selected text by one indentation increment.  
+##  <a name="indent"></a>CHtmlEditCtrlBase::Indent  
+ Aumenta la sangría del texto seleccionado en el incremento de una sangría.  
   
 ```  
 HRESULT Indent() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_INDENT command ID](https://msdn.microsoft.com/library/aa769963.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_INDENT](https://msdn.microsoft.com/library/aa769963.aspx) para el control WebBrowser.  
   
-##  <a name="insfieldset"></a>  CHtmlEditCtrlBase::InsFieldSet  
- Overwrites a box on the current selection.  
+##  <a name="insfieldset"></a>CHtmlEditCtrlBase::InsFieldSet  
+ Sobrescribe un cuadro en la selección actual.  
   
 ```  
 HRESULT InsFieldSet(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID for the box.  
+ El identificador para el cuadro.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_INSFIELDSET command ID](https://msdn.microsoft.com/library/aa769967.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_INSFIELDSET](https://msdn.microsoft.com/library/aa769967.aspx) para el control WebBrowser.  
   
-##  <a name="insinputbutton"></a>  CHtmlEditCtrlBase::InsInputButton  
- Overwrites a button control on the current selection.  
+##  <a name="insinputbutton"></a>CHtmlEditCtrlBase::InsInputButton  
+ Sobrescribe un control de botón en la selección actual.  
   
 ```  
 HRESULT InsInputButton(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID for the button control.  
+ El identificador para el control de botón.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_INSINPUTBUTTON command ID](https://msdn.microsoft.com/library/aa769971.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_INSINPUTBUTTON](https://msdn.microsoft.com/library/aa769971.aspx) para el control WebBrowser.  
   
-##  <a name="insinputhidden"></a>  CHtmlEditCtrlBase::InsInputHidden  
- Inserts a hidden control on the current selection.  
+##  <a name="insinputhidden"></a>CHtmlEditCtrlBase::InsInputHidden  
+ Inserta un control oculto en la selección actual.  
   
 ```  
 HRESULT InsInputHidden(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID for the hidden control.  
+ El identificador para el control oculto.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_INSINPUTHIDDEN command ID](https://msdn.microsoft.com/library/aa769974.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_INSINPUTHIDDEN](https://msdn.microsoft.com/library/aa769974.aspx) para el control WebBrowser.  
   
-##  <a name="insinputimage"></a>  CHtmlEditCtrlBase::InsInputImage  
- Overwrites an image control on the current selection.  
+##  <a name="insinputimage"></a>CHtmlEditCtrlBase::InsInputImage  
+ Sobrescribe un control de imagen en la selección actual.  
   
 ```  
 HRESULT InsInputImage(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID for the image control.  
+ El identificador para el control de imagen.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_INSINPUTIMAGE command ID](https://msdn.microsoft.com/library/aa769975.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_INSINPUTIMAGE](https://msdn.microsoft.com/library/aa769975.aspx) para el control WebBrowser.  
   
-##  <a name="insinputpassword"></a>  CHtmlEditCtrlBase::InsInputPassword  
- Overwrites a password control on the current selection.  
+##  <a name="insinputpassword"></a>CHtmlEditCtrlBase::InsInputPassword  
+ Sobrescribe un control de contraseña en la selección actual.  
   
 ```  
 HRESULT InsInputPassword(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID for the password control.  
+ El identificador para el control de contraseña.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_INSINPUTPASSWORD command ID](https://msdn.microsoft.com/library/aa769976.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_INSINPUTPASSWORD](https://msdn.microsoft.com/library/aa769976.aspx) para el control WebBrowser.  
   
-##  <a name="insinputreset"></a>  CHtmlEditCtrlBase::InsInputReset  
- Overwrites a reset control on the current selection.  
+##  <a name="insinputreset"></a>CHtmlEditCtrlBase::InsInputReset  
+ Sobrescribe un control de restablecimiento en la selección actual.  
   
 ```  
 HRESULT InsInputReset(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID for the reset control.  
+ El identificador para el control de restablecimiento.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_INSINPUTRESET command ID](https://msdn.microsoft.com/library/aa769978.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_INSINPUTRESET](https://msdn.microsoft.com/library/aa769978.aspx) para el control WebBrowser.  
   
-##  <a name="insinputsubmit"></a>  CHtmlEditCtrlBase::InsInputSubmit  
- Overwrites a submit control on the current selection.  
+##  <a name="insinputsubmit"></a>CHtmlEditCtrlBase::InsInputSubmit  
+ Sobrescribe un control de envío en la selección actual.  
   
 ```  
 HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID for the submit control.  
+ El identificador para el control de envío.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_INSINPUTSUBMIT command ID](https://msdn.microsoft.com/library/aa769979.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_INSINPUTSUBMIT](https://msdn.microsoft.com/library/aa769979.aspx) para el control WebBrowser.  
   
-##  <a name="insinputupload"></a>  CHtmlEditCtrlBase::InsInputUpload  
- Overwrites a file upload control on the current selection.  
+##  <a name="insinputupload"></a>CHtmlEditCtrlBase::InsInputUpload  
+ Sobrescribe un control de carga de archivos en la selección actual.  
   
 ```  
 HRESULT InsInputUpload(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID for the file upload control.  
+ El identificador para el control de carga de archivo.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_INSINPUTUPLOAD command ID](https://msdn.microsoft.com/library/aa769973.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_INSINPUTUPLOAD](https://msdn.microsoft.com/library/aa769973.aspx) para el control WebBrowser.  
   
-##  <a name="is1delement"></a>  CHtmlEditCtrlBase::Is1DElement  
- Determines if an element is statically positioned.  
+##  <a name="is1delement"></a>CHtmlEditCtrlBase::Is1DElement  
+ Determina si un elemento se coloca estáticamente.  
   
 ```  
 HRESULT Is1DElement(bool& bValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bValue`  
- True if the element is statically positioned, false otherwise.  
+ Es True si el elemento está estáticamente posicionadas.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_1D_ELEMENT command ID](https://msdn.microsoft.com/library/aa769885.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_1D_ELEMENT](https://msdn.microsoft.com/library/aa769885.aspx) para el control WebBrowser.  
   
-##  <a name="is2delement"></a>  CHtmlEditCtrlBase::Is2DElement  
- Determines if an element is absolutely positioned.  
+##  <a name="is2delement"></a>CHtmlEditCtrlBase::Is2DElement  
+ Determina si un elemento es una posición absoluta.  
   
 ```  
 HRESULT Is2DElement(bool& bValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bValue`  
- True if the element is absolutely positioned, false otherwise.  
+ Es True si el elemento es posición absoluta.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_2D_ELEMENT command ID](https://msdn.microsoft.com/library/aa769886.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_2D_ELEMENT](https://msdn.microsoft.com/library/aa769886.aspx) para el control WebBrowser.  
   
-##  <a name="italic"></a>  CHtmlEditCtrlBase::Italic  
- Toggles the current selection between italic and nonitalic.  
+##  <a name="italic"></a>CHtmlEditCtrlBase::Italic  
+ Alterna la selección actual entre cursiva y algunos.  
   
 ```  
 HRESULT Italic() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_ITALIC command ID](https://msdn.microsoft.com/library/aa769988.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_ITALIC](https://msdn.microsoft.com/library/aa769988.aspx) para el control WebBrowser.  
   
-##  <a name="justifycenter"></a>  CHtmlEditCtrlBase::JustifyCenter  
- Centers the format block in which the current selection is located.  
+##  <a name="justifycenter"></a>CHtmlEditCtrlBase::JustifyCenter  
+ Centra el bloque del formato en que se encuentra la selección actual.  
   
 ```  
 HRESULT JustifyCenter() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_JUSTIFYCENTER command ID](https://msdn.microsoft.com/library/aa769989.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_JUSTIFYCENTER](https://msdn.microsoft.com/library/aa769989.aspx) para el control WebBrowser.  
   
-##  <a name="justifyleft"></a>  CHtmlEditCtrlBase::JustifyLeft  
- Left-justifies the format block in which the current selection is located.  
+##  <a name="justifyleft"></a>CHtmlEditCtrlBase::JustifyLeft  
+ Justifica a la izquierda del bloque del formato en que se encuentra la selección actual.  
   
 ```  
 HRESULT JustifyLeft() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_JUSTIFYLEFT command ID](https://msdn.microsoft.com/library/aa770011.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_JUSTIFYLEFT](https://msdn.microsoft.com/library/aa770011.aspx) para el control WebBrowser.  
   
-##  <a name="justifyright"></a>  CHtmlEditCtrlBase::JustifyRight  
- Right-justifies the format block in which the current selection is located.  
+##  <a name="justifyright"></a>CHtmlEditCtrlBase::JustifyRight  
+ Justifica a la derecha del bloque del formato en que se encuentra la selección actual.  
   
 ```  
 HRESULT JustifyRight() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_JUSTIFYRIGHT command ID](https://msdn.microsoft.com/library/aa770013.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_JUSTIFYRIGHT](https://msdn.microsoft.com/library/aa770013.aspx) para el control WebBrowser.  
   
-##  <a name="listbox"></a>  CHtmlEditCtrlBase::ListBox  
- Overwrites a list box selection control on the current selection.  
+##  <a name="listbox"></a>CHtmlEditCtrlBase::ListBox  
+ Sobrescribe un control de selección del cuadro de lista en la selección actual.  
   
 ```  
 HRESULT ListBox(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID for the list box control.  
+ El identificador para el control de cuadro de lista.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_LISTBOX command ID](https://msdn.microsoft.com/library/aa769985.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_LISTBOX](https://msdn.microsoft.com/library/aa769985.aspx) para el control WebBrowser.  
   
-##  <a name="marquee"></a>  CHtmlEditCtrlBase::Marquee  
- Overwrites an empty marquee on the current selection.  
+##  <a name="marquee"></a>CHtmlEditCtrlBase::Marquee  
+ Sobrescribe un recuadro vacío en la selección actual.  
   
 ```  
 HRESULT Marquee(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID for the marquee.  
+ El identificador de la marquesina.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_MARQUEE command ID](https://msdn.microsoft.com/library/aa769981.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_MARQUEE](https://msdn.microsoft.com/library/aa769981.aspx) para el control WebBrowser.  
   
-##  <a name="newdocument"></a>  CHtmlEditCtrlBase::NewDocument  
- Creates a new document.  
+##  <a name="newdocument"></a>CHtmlEditCtrlBase::NewDocument  
+ Crea un nuevo documento.  
   
 ```  
 HRESULT NewDocument() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-##  <a name="orderlist"></a>  CHtmlEditCtrlBase::OrderList  
- Toggles the current selection between an ordered list and a normal format block.  
+##  <a name="orderlist"></a>CHtmlEditCtrlBase::OrderList  
+ Alterna la selección actual entre una lista ordenada y un bloque de formato normal.  
   
 ```  
 HRESULT OrderList(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID for the ordered list.  
+ El identificador de la lista ordenada.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_ORDERLIST command ID](https://msdn.microsoft.com/library/aa769982.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_ORDERLIST](https://msdn.microsoft.com/library/aa769982.aspx) para el control WebBrowser.  
   
-##  <a name="outdent"></a>  CHtmlEditCtrlBase::Outdent  
- Decreases by one increment the indentation of the format block in which the current selection is located.  
+##  <a name="outdent"></a>CHtmlEditCtrlBase::Outdent  
+ Disminuye en un incremento la sangría del bloque del formato en que se encuentra la selección actual.  
   
 ```  
 HRESULT Outdent() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_OUTDENT command ID](https://msdn.microsoft.com/library/aa770015.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_OUTDENT](https://msdn.microsoft.com/library/aa770015.aspx) para el control WebBrowser.  
   
-##  <a name="paragraph"></a>  CHtmlEditCtrlBase::Paragraph  
- Overwrites a line break on the current selection.  
+##  <a name="paragraph"></a>CHtmlEditCtrlBase::Paragraph  
+ Sobrescribe un salto de línea en la selección actual.  
   
 ```  
 HRESULT Paragraph(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID for the paragraph.  
+ El identificador para el párrafo.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_PARAGRAPH command ID](https://msdn.microsoft.com/library/aa769983.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_PARAGRAPH](https://msdn.microsoft.com/library/aa769983.aspx) para el control WebBrowser.  
   
-##  <a name="paste"></a>  CHtmlEditCtrlBase::Paste  
- Overwrites the contents of the clipboard on the current selection.  
+##  <a name="paste"></a>CHtmlEditCtrlBase::Paste  
+ Sobrescribe el contenido del Portapapeles en la selección actual.  
   
 ```  
 HRESULT Paste() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_PASTE command ID](https://msdn.microsoft.com/library/aa770017.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_PASTE](https://msdn.microsoft.com/library/aa770017.aspx) para el control WebBrowser.  
   
-##  <a name="printdocument"></a>  CHtmlEditCtrlBase::PrintDocument  
- Prints the current document.  
+##  <a name="printdocument"></a>CHtmlEditCtrlBase::PrintDocument  
+ Imprime el documento actual.  
   
 ```  
 HRESULT PrintDocument() const;  
@@ -1443,266 +1337,266 @@ HRESULT PrintDocument(LPCTSTR szPrintTemplate) const;
 HRESULT PrintDocument(bool bShowPrintDialog) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szPrintTemplate`  
- Path to a print template; if none is specified, the default print template is used.  
+ Ruta de acceso a una plantilla de impresión; Si no se especifica ninguno, se usa la plantilla de impresión predeterminada.  
   
  *bShowPrintDialog*  
- If true, shows the Print dialog.  
+ Si es true, muestra el cuadro de diálogo de impresión.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_PRINT command ID](https://msdn.microsoft.com/library/aa769937.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_PRINT](https://msdn.microsoft.com/library/aa769937.aspx) para el control WebBrowser.  
   
-##  <a name="printpreview"></a>  CHtmlEditCtrlBase::PrintPreview  
- Opens the Print Preview window for the current document using either the default print preview template or a custom template.  
+##  <a name="printpreview"></a>CHtmlEditCtrlBase::PrintPreview  
+ Abre la ventana de vista previa de impresión del documento actual mediante la plantilla de vista previa de impresión predeterminada o una plantilla personalizada.  
   
 ```  
 HRESULT PrintPreview() const;  
 HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szPrintTemplate`  
- Path to a print template.  
+ Ruta de acceso a una plantilla de impresión.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_PRINTPREVIEW command ID](https://msdn.microsoft.com/library/aa769938.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_PRINTPREVIEW](https://msdn.microsoft.com/library/aa769938.aspx) para el control WebBrowser.  
   
-##  <a name="querystatus"></a>  CHtmlEditCtrlBase::QueryStatus  
- Call this method to query the status of commands.  
+##  <a name="querystatus"></a>CHtmlEditCtrlBase::QueryStatus  
+ Llamar a este método para consultar el estado de comandos.  
   
 ```  
 long QueryStatus(long cmdID) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `cmdID`  
- The command ID. Command identifiers are taken from the `CGID_MSHTML` command group. These commands are defined in Mshtmcid.h. You can also find the list online at [MSHTML Command Identifiers](http://go.microsoft.com/fwlink/linkid=149220).  
+ Identificador del comando. Identificadores de comandos se toman de la `CGID_MSHTML` del grupo de comandos. Estos comandos se definen en Mshtmcid.h. También puede encontrar la lista en línea en [identificadores de comandos de MSHTML](http://go.microsoft.com/fwlink/linkid=149220).  
   
-### <a name="return-value"></a>Return Value  
- Returns an [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) indicating the status for `cmdID`, or 0 on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve un [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) que indica el estado de `cmdID`, o 0 en caso de error.  
   
-##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton  
- Overwrites a radio control on the current selection.  
+##  <a name="radiobutton"></a>CHtmlEditCtrlBase::RadioButton  
+ Sobrescribe un control de radio en la selección actual.  
   
 ```  
 HRESULT RadioButton(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID of the radio button.  
+ El identificador del botón de radio.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_RADIOBUTTON command ID](https://msdn.microsoft.com/library/aa769977.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_RADIOBUTTON](https://msdn.microsoft.com/library/aa769977.aspx) para el control WebBrowser.  
   
-##  <a name="refreshdocument"></a>  CHtmlEditCtrlBase::RefreshDocument  
- Refreshes the current document.  
+##  <a name="refreshdocument"></a>CHtmlEditCtrlBase::RefreshDocument  
+ Actualiza el documento actual.  
   
 ```  
 HRESULT RefreshDocument() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_REFRESH Command ID](https://msdn.microsoft.com/library/aa770020.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_REFRESH](https://msdn.microsoft.com/library/aa770020.aspx) para el control WebBrowser.  
   
-##  <a name="removeformat"></a>  CHtmlEditCtrlBase::RemoveFormat  
- Removes the formatting tags from the current selection.  
+##  <a name="removeformat"></a>CHtmlEditCtrlBase::RemoveFormat  
+ Quita las etiquetas de formato de la selección actual.  
   
 ```  
 HRESULT RemoveFormat() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_REMOVEFORMAT command ID](https://msdn.microsoft.com/library/aa770021.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_REMOVEFORMAT](https://msdn.microsoft.com/library/aa770021.aspx) para el control WebBrowser.  
   
-##  <a name="saveas"></a>  CHtmlEditCtrlBase::SaveAs  
- Saves the current Web page to a file.  
+##  <a name="saveas"></a>CHtmlEditCtrlBase::SaveAs  
+ Guarda la página Web actual en un archivo.  
   
 ```  
 HRESULT SaveAs(LPCTSTR szPath = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szPath`  
- The path and file name to which to save the Web page.  
+ La ruta de acceso y el nombre que se va a guardar la página Web.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_SAVEAS command ID](https://msdn.microsoft.com/library/aa770024.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [IDM_SAVEAS identificador del comando](https://msdn.microsoft.com/library/aa770024.aspx) para el control WebBrowser.  
   
-##  <a name="selectall"></a>  CHtmlEditCtrlBase::SelectAll  
- Selects the entire document.  
+##  <a name="selectall"></a>CHtmlEditCtrlBase::SelectAll  
+ Selecciona todo el documento.  
   
 ```  
 HRESULT SelectAll() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_SELECTALL command ID](https://msdn.microsoft.com/library/aa770025.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_SELECTALL](https://msdn.microsoft.com/library/aa770025.aspx) para el control WebBrowser.  
   
-##  <a name="set2dposition"></a>  CHtmlEditCtrlBase::Set2DPosition  
- Allows absolutely positioned elements to be moved by dragging.  
+##  <a name="set2dposition"></a>CHtmlEditCtrlBase::Set2DPosition  
+ Permite que se moverá al arrastrar elementos con posición absoluta.  
   
 ```  
 HRESULT Set2DPosition(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, absolutely positioned elements can be moved by dragging.  
+ Si es true, se pueden mover elementos con posición absoluta arrastrando.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_2D_POSITION command ID](https://msdn.microsoft.com/library/aa769887.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_2D_POSITION](https://msdn.microsoft.com/library/aa769887.aspx) para el control WebBrowser.  
   
-##  <a name="setabsoluteposition"></a>  CHtmlEditCtrlBase::SetAbsolutePosition  
- Sets an element's position property to "absolute" or "static."  
+##  <a name="setabsoluteposition"></a>CHtmlEditCtrlBase::SetAbsolutePosition  
+ Establece la propiedad de posición de un elemento a "absoluto" o "."  
   
 ```  
 HRESULT SetAbsolutePosition(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, the element's position property is "absolute"; if false, it is "static."  
+ Si es true, la propiedad de posición del elemento es "absoluta"; Si es false, es "estático".  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_ABSOLUTE_POSITION command ID](https://msdn.microsoft.com/library/aa769889.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_ABSOLUTE_POSITION](https://msdn.microsoft.com/library/aa769889.aspx) para el control WebBrowser.  
   
-##  <a name="setatomicselection"></a>  CHtmlEditCtrlBase::SetAtomicSelection  
- Set atomic selection mode.  
+##  <a name="setatomicselection"></a>CHtmlEditCtrlBase::SetAtomicSelection  
+ Establezca el modo de selección atómica.  
   
 ```  
 HRESULT SetAtomicSelection(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, any element that has an ATOMICSELECTION attribute set to TRUE will be selectable only as a unit.  
+ Si es true, cualquier elemento que tiene un atributo ATOMICSELECTION establecido en TRUE se podrán seleccionar solo como una unidad.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_ATOMICSELECTION command ID](https://msdn.microsoft.com/library/aa769892.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_ATOMICSELECTION](https://msdn.microsoft.com/library/aa769892.aspx) para el control WebBrowser.  
   
-##  <a name="setautourldetectmode"></a>  CHtmlEditCtrlBase::SetAutoURLDetectMode  
- Turns automatic URL detection on and off.  
+##  <a name="setautourldetectmode"></a>CHtmlEditCtrlBase::SetAutoURLDetectMode  
+ Activa la detección automática de dirección URL y desactiva.  
   
 ```  
 HRESULT SetAutoURLDetectMode(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, automatic URL detection is enabled.  
+ Si es true, se habilita la detección automática de dirección URL.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_AUTOURLDETECT_MODE command ID](https://msdn.microsoft.com/library/aa769893.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_AUTOURLDETECT_MODE](https://msdn.microsoft.com/library/aa769893.aspx) para el control WebBrowser.  
   
-##  <a name="setbackcolor"></a>  CHtmlEditCtrlBase::SetBackColor  
- Sets the background color of the current selection.  
+##  <a name="setbackcolor"></a>CHtmlEditCtrlBase::SetBackColor  
+ Establece el color de fondo de la selección actual.  
   
 ```  
 HRESULT SetBackColor(int nColor) const;  
 HRESULT SetBackColor(LPCTSTR szColor) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nColor`  
- The color. See `pvaIn` in [IDM_BACKCOLOR Command ID](https://msdn.microsoft.com/library/aa769858.aspx).  
+ El color. Vea `pvaIn` en [Id. de comando IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
   
  `szColor`  
- The color. See `pvaIn` in [IDM_BACKCOLOR Command ID](https://msdn.microsoft.com/library/aa769858.aspx).  
+ El color. Vea `pvaIn` en [Id. de comando IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_BACKCOLOR_ command ID](https://msdn.microsoft.com/library/aa769858.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_BACKCOLOR_](https://msdn.microsoft.com/library/aa769858.aspx) para el control WebBrowser.  
   
-##  <a name="setblockformat"></a>  CHtmlEditCtrlBase::SetBlockFormat  
- Sets the current block format tag.  
+##  <a name="setblockformat"></a>CHtmlEditCtrlBase::SetBlockFormat  
+ Establece la etiqueta de formato de bloque actual.  
   
 ```  
 HRESULT SetBlockFormat(LPCTSTR szFormat) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szFormat`  
- The format tag.  
+ La etiqueta de formato.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_BLOCKFMT_command ID](https://msdn.microsoft.com/library/aa769883.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [IDM_BLOCKFMT_command identificador](https://msdn.microsoft.com/library/aa769883.aspx) para el control WebBrowser.  
   
-##  <a name="setbookmark"></a>  CHtmlEditCtrlBase::SetBookMark  
- Creates a bookmark anchor for the current selection or insertion point.  
+##  <a name="setbookmark"></a>CHtmlEditCtrlBase::SetBookMark  
+ Crea un delimitador de marcador para el punto de inserción o la selección actual.  
   
 ```  
 HRESULT SetBookMark(LPCTSTR szAnchorName) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *szAnchorName*  
- The anchor name.  
+ El nombre del delimitador.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_BOOKMARK command ID](https://msdn.microsoft.com/library/aa769873.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_BOOKMARK](https://msdn.microsoft.com/library/aa769873.aspx) para el control WebBrowser.  
   
-##  <a name="setcsseditinglevel"></a>  CHtmlEditCtrlBase::SetCSSEditingLevel  
- Selects which CSS level (CSS1 or CSS2) the editor will support, if any.  
+##  <a name="setcsseditinglevel"></a>CHtmlEditCtrlBase::SetCSSEditingLevel  
+ Selecciona el nivel CSS (partir de CSS1 o CSS2) el editor admitirán, si lo hay.  
   
 ```  
 HRESULT SetCSSEditingLevel(short nLevel) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `nLevel`  
- The CSS level. Pass 0 if you do not want CSS support.  
+ El nivel de CSS. Pase 0 si no desea compatibilidad con CSS.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_CSSEDITING_LEVEL command ID](https://msdn.microsoft.com/library/aa769903.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_CSSEDITING_LEVEL](https://msdn.microsoft.com/library/aa769903.aspx) para el control WebBrowser.  
   
-##  <a name="setdefaultcomposesettings"></a>  CHtmlEditCtrlBase::SetDefaultComposeSettings  
- Call this method to set the default compose settings.  
+##  <a name="setdefaultcomposesettings"></a>CHtmlEditCtrlBase::SetDefaultComposeSettings  
+ Este método para establecer el valor predeterminado la configuración de redacción de llamada.  
   
 ```  
 HRESULT SetDefaultComposeSettings(
@@ -1715,481 +1609,481 @@ HRESULT SetDefaultComposeSettings(
     bool bUnderline = false) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *szFontName*  
- The font name.  
+ El nombre de la fuente.  
   
  *nFontSize*  
- The font size.  
+ El tamaño de fuente.  
   
  *crFontColor*  
- The font color.  
+ El color de fuente.  
   
  *crFontBgColor*  
- The font background color.  
+ El color de fondo de la fuente.  
   
- *bBold*  
- Pass true for bold text.  
+ *bnegrita*  
+ Pasar true para texto en negrita.  
   
  `bItalic`  
- Pass true for italic text.  
+ Pasar true para texto en cursiva.  
   
  `bUnderline`  
- Pass true for underlined text.  
+ Pasar true para texto subrayado.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_COMPOSESETTINGS command ID](https://msdn.microsoft.com/library/aa769901.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [IDM_COMPOSESETTINGS identificador del comando](https://msdn.microsoft.com/library/aa769901.aspx) para el control WebBrowser.  
   
-##  <a name="setdesignmode"></a>  CHtmlEditCtrlBase::SetDesignMode  
- Set design mode.  
+##  <a name="setdesignmode"></a>CHtmlEditCtrlBase::SetDesignMode  
+ Establecer el modo de diseño.  
   
 ```  
 BOOL SetDesignMode(BOOL bMode) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bMode`  
- If true, turns design mode on.  
+ Si es true, activa el modo de diseño.  
   
-### <a name="return-value"></a>Return Value  
- Returns TRUE on success, FALSE on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
-##  <a name="setdisableeditfocusui"></a>  CHtmlEditCtrlBase::SetDisableEditFocusUI  
- Disables the hatched border and handles around an element that has edit focus.  
+##  <a name="setdisableeditfocusui"></a>CHtmlEditCtrlBase::SetDisableEditFocusUI  
+ Deshabilita el borde sombreado y controla alrededor de un elemento que tiene el foco de edición.  
   
 ```  
 HRESULT SetDisableEditFocusUI(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, disables the hatched border and handles around a site selectable element when the element has "edit focus" in design mode; that is, when the text or contents of the element can be edited.  
+ Si es true, deshabilita el borde sombreado y controla alrededor de un elemento seleccionable de sitio cuando el elemento tiene "Editar foco" en el modo de diseño; es decir, cuando el texto o el contenido del elemento se puede editar.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM_DISABLE_EDITFOCUS_UI command ID](https://msdn.microsoft.com/library/aa769905.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM_DISABLE_EDITFOCUS_UI](https://msdn.microsoft.com/library/aa769905.aspx) para el control WebBrowser.  
   
-##  <a name="setdocumenthtml"></a>  CHtmlEditCtrlBase::SetDocumentHTML  
- Sets the HTML of the current document.  
+##  <a name="setdocumenthtml"></a>CHtmlEditCtrlBase::SetDocumentHTML  
+ Establece el código HTML del documento actual.  
   
 ```  
 HRESULT SetDocumentHTML(LPCTSTR szHTML) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szHTML`  
- The HTML.  
+ El código HTML.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-##  <a name="setfontface"></a>  CHtmlEditCtrlBase::SetFontFace  
- Sets the font for the current selection.  
+##  <a name="setfontface"></a>CHtmlEditCtrlBase::SetFontFace  
+ Establece la fuente de la selección actual.  
   
 ```  
 HRESULT SetFontFace(LPCTSTR szFace) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szFace`  
- The font name.  
+ El nombre de la fuente.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM FONTNAME Command ID](https://msdn.microsoft.com/library/aa769880.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando de IDM FONTNAME](https://msdn.microsoft.com/library/aa769880.aspx) para el control WebBrowser.  
   
-##  <a name="setfontsize"></a>  CHtmlEditCtrlBase::SetFontSize  
- Sets the font size for the current selection.  
+##  <a name="setfontsize"></a>CHtmlEditCtrlBase::SetFontSize  
+ Establece el tamaño de fuente para la selección actual.  
   
 ```  
 HRESULT SetFontSize(unsigned short size) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `size`  
- The HTML font size (1-7). A value of 0 sets the font size to 1.  
+ El tamaño de fuente HTML (1-7). Un valor de 0, Establece el tamaño de fuente en 1.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM FONTSIZE command ID](https://msdn.microsoft.com/library/aa769881.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM FONTSIZE](https://msdn.microsoft.com/library/aa769881.aspx) para el control WebBrowser.  
   
-##  <a name="setforecolor"></a>  CHtmlEditCtrlBase::SetForeColor  
- Sets the foreground (text) color of the current selection.  
+##  <a name="setforecolor"></a>CHtmlEditCtrlBase::SetForeColor  
+ Establece el color de primer plano (texto) de la selección actual.  
   
 ```  
 HRESULT SetForeColor(LPCTSTR szColor) const;  
 HRESULT SetForeColor(int nColor) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szColor`  
- The color.  
+ El color.  
   
  `nColor`  
- The color.  
+ El color.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM FORECOLOR command ID](https://msdn.microsoft.com/library/aa769882.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM FORECOLOR](https://msdn.microsoft.com/library/aa769882.aspx) para el control WebBrowser.  
   
-##  <a name="setie5pastemode"></a>  CHtmlEditCtrlBase::SetIE5PasteMode  
- Sets the paste operation to be compatible with Microsoft Internet Explorer 5.  
+##  <a name="setie5pastemode"></a>CHtmlEditCtrlBase::SetIE5PasteMode  
+ Establece la operación de pegar para ser compatible con Microsoft Internet Explorer 5.  
   
 ```  
 HRESULT SetIE5PasteMode(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, all paste operations are compatible with Internet Explorer 5; if false, paste operations are compatible with Internet Explorer 5.5.  
+ Si es true, todas las operaciones de pegar son compatibles con Internet Explorer 5; Si es false, las operaciones de pegar son compatibles con Internet Explorer 5.5.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM IE50_PASTE_MODE command ID](https://msdn.microsoft.com/library/aa769923.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM IE50_PASTE_MODE](https://msdn.microsoft.com/library/aa769923.aspx) para el control WebBrowser.  
   
-##  <a name="setliveresize"></a>  CHtmlEditCtrlBase::SetLiveResize  
- Causes the WebBrowser to update an element's appearance continuously during a resizing or moving operation, rather than updating only at the completion of the move or resize.  
+##  <a name="setliveresize"></a>CHtmlEditCtrlBase::SetLiveResize  
+ Hace que el control WebBrowser actualizar la apariencia de un elemento continuamente durante una operación de cambio de tamaño o mover, en lugar de actualizar solo en la finalización de la operación de movimiento o cambiar el tamaño.  
   
 ```  
 HRESULT SetLiveResize(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, causes the WebBrowser to update an element's appearance continuously during a resizing or moving operation; if false, it updates only at the completion of the move or resize.  
+ Si es true, hace que el control WebBrowser actualizar la apariencia de un elemento continuamente durante una operación de cambio de tamaño o mover; Si es false, se actualiza solo al final del desplazamiento o cambio de tamaño.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM LIVERESIZE command ID](https://msdn.microsoft.com/library/aa769928.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM LIVERESIZE](https://msdn.microsoft.com/library/aa769928.aspx) para el control WebBrowser.  
   
-##  <a name="setmultiselect"></a>  CHtmlEditCtrlBase::SetMultiSelect  
- Enables multiple selection.  
+##  <a name="setmultiselect"></a>CHtmlEditCtrlBase::SetMultiSelect  
+ Permite la selección múltiple.  
   
 ```  
 HRESULT SetMultiSelect(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, allows for the selection of more than one site-selectable element at a time when the user holds down the SHIFT or CTRL keys.  
+ Si es true, permite la selección de más de un elemento seleccionable de sitio a la vez cuando el usuario mantiene presionado las teclas MAYÚS o CTRL.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM MULTIPLESELECTION command ID](https://msdn.microsoft.com/library/aa769929.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM MULTIPLESELECTION](https://msdn.microsoft.com/library/aa769929.aspx) para el control WebBrowser.  
   
-##  <a name="setoverridecursor"></a>  CHtmlEditCtrlBase::SetOverrideCursor  
- Commands the WebBrowser never to change the mouse pointer.  
+##  <a name="setoverridecursor"></a>CHtmlEditCtrlBase::SetOverrideCursor  
+ Comandos de WebBrowser nunca para cambiar el puntero del mouse.  
   
 ```  
 HRESULT SetOverrideCursor(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, the WebBrowser will not change the mouse pointer.  
+ Si es true, el control WebBrowser no cambiará el puntero del mouse.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM OVERRIDE_CURSOR command ID](https://msdn.microsoft.com/library/aa769932.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM OVERRIDE_CURSOR](https://msdn.microsoft.com/library/aa769932.aspx) para el control WebBrowser.  
   
-##  <a name="setoverwritemode"></a>  CHtmlEditCtrlBase::SetOverwriteMode  
- Toggles the text-entry mode between insert and overwrite.  
+##  <a name="setoverwritemode"></a>CHtmlEditCtrlBase::SetOverwriteMode  
+ Activa o desactiva el modo de entrada de texto entre insertar y sobrescribir.  
   
 ```  
 HRESULT SetOverwriteMode(bool bMode) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bMode`  
- If true, text-entry mode is overwrite; if false, text-entry mode is insert.  
+ Si es true, se sobrescribe el modo de entrada de texto; Si es false, el modo de entrada de texto es insert.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM OVERWRITE command ID](https://msdn.microsoft.com/library/aa770016.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [IDM SOBRESCRIBIR el identificador de comando](https://msdn.microsoft.com/library/aa770016.aspx) para el control WebBrowser.  
   
-##  <a name="setrespectvisindesign"></a>  CHtmlEditCtrlBase::SetRespectVisInDesign  
- Hides invisible elements in design mode.  
+##  <a name="setrespectvisindesign"></a>CHtmlEditCtrlBase::SetRespectVisInDesign  
+ Oculta los elementos visibles en el modo de diseño.  
   
 ```  
 HRESULT SetRespectVisInDesign(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, any elements that have a visibility set to "hidden" or display property set to "none" will not be shown in both design mode and browse mode; if false, those elements will be displayed only in browse mode.  
+ Si es true, los elementos que tengan una visibilidad establecido en "hidden" o la propiedad establecida en "none" para mostrar no se mostrará en modo de diseño y modo de exploración; Si es false, los elementos se mostrarán solo en modo de exploración.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM RESPECTVISIBILITY_INDESIGN command ID](https://msdn.microsoft.com/library/aa770023.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM RESPECTVISIBILITY_INDESIGN](https://msdn.microsoft.com/library/aa770023.aspx) para el control WebBrowser.  
   
-##  <a name="setshowalignedsitetags"></a>  CHtmlEditCtrlBase::SetShowAlignedSiteTags  
- Displays a glyph for all elements that have a **styleFloat** property.  
+##  <a name="setshowalignedsitetags"></a>CHtmlEditCtrlBase::SetShowAlignedSiteTags  
+ Muestra un glifo para todos los elementos que tienen un **styleFloat** propiedad.  
   
 ```  
 HRESULT SetShowAlignedSiteTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, displays a glyph for all elements that have a **styleFloat** property.  
+ Si es true, muestra un glifo para todos los elementos que tienen un **styleFloat** propiedad.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM SHOWALIGNEDSITETAGS command ID](https://msdn.microsoft.com/library/aa769947.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM SHOWALIGNEDSITETAGS](https://msdn.microsoft.com/library/aa769947.aspx) para el control WebBrowser.  
   
-##  <a name="setshowalltags"></a>  CHtmlEditCtrlBase::SetShowAllTags  
- Displays glyphs to show the location of all tags in a document.  
+##  <a name="setshowalltags"></a>CHtmlEditCtrlBase::SetShowAllTags  
+ Muestra los glifos para mostrar la ubicación de todas las etiquetas en un documento.  
   
 ```  
 HRESULT SetShowAllTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, displays glyphs to show the location of all tags in a document.  
+ Si es true, muestra los glifos para mostrar la ubicación de todas las etiquetas en un documento.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM SHOWALLTAGS command ID](https://msdn.microsoft.com/library/aa769948.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM SHOWALLTAGS](https://msdn.microsoft.com/library/aa769948.aspx) para el control WebBrowser.  
   
-##  <a name="setshowareatags"></a>  CHtmlEditCtrlBase::SetShowAreaTags  
- Displays a glyph for all the area tags.  
+##  <a name="setshowareatags"></a>CHtmlEditCtrlBase::SetShowAreaTags  
+ Muestra un glifo para todas las etiquetas de área.  
   
 ```  
 HRESULT SetShowAreaTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, displays a glyph for all the area tags.  
+ Si es true, muestra un glifo para todas las etiquetas de área.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM SHOWAREATAGS command ID](https://msdn.microsoft.com/library/aa769949.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM SHOWAREATAGS](https://msdn.microsoft.com/library/aa769949.aspx) para el control WebBrowser.  
   
-##  <a name="setshowbrtags"></a>  CHtmlEditCtrlBase::SetShowBRTags  
- Displays a glyph for all the br tags.  
+##  <a name="setshowbrtags"></a>CHtmlEditCtrlBase::SetShowBRTags  
+ Muestra un glifo para todas las etiquetas de Brasil.  
   
 ```  
 HRESULT SetShowBRTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, displays a glyph for all the br tags.  
+ Si es true, muestra un glifo para todas las etiquetas de Brasil.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM SHOWWBRTAGS command ID](https://msdn.microsoft.com/library/aa769956.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM SHOWWBRTAGS](https://msdn.microsoft.com/library/aa769956.aspx) para el control WebBrowser.  
   
-##  <a name="setshowcommenttags"></a>  CHtmlEditCtrlBase::SetShowCommentTags  
- Displays a glyph for all the comment tags.  
+##  <a name="setshowcommenttags"></a>CHtmlEditCtrlBase::SetShowCommentTags  
+ Muestra un glifo para todas las etiquetas de comentario.  
   
 ```  
 HRESULT SetShowCommentTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, displays a glyph for all the comment tags.  
+ Si es true, muestra un glifo para todas las etiquetas de comentario.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM SHOWCOMMENTTAGS command ID](https://msdn.microsoft.com/library/aa769950.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM SHOWCOMMENTTAGS](https://msdn.microsoft.com/library/aa769950.aspx) para el control WebBrowser.  
   
-##  <a name="setshowmisctags"></a>  CHtmlEditCtrlBase::SetShowMiscTags  
- Displays all the tags shown in Microsoft Internet Explorer 4.0.  
+##  <a name="setshowmisctags"></a>CHtmlEditCtrlBase::SetShowMiscTags  
+ Muestra todas las etiquetas que se muestra en Microsoft Internet Explorer 4.0.  
   
 ```  
 HRESULT SetShowMiscTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, displays all the tags shown in Microsoft Internet Explorer 4.0.  
+ Si es true, muestra todas las etiquetas que se muestra en Microsoft Internet Explorer 4.0.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM SHOWMISCTAGS command ID](https://msdn.microsoft.com/library/aa769952.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM SHOWMISCTAGS](https://msdn.microsoft.com/library/aa769952.aspx) para el control WebBrowser.  
   
-##  <a name="setshowscripttags"></a>  CHtmlEditCtrlBase::SetShowScriptTags  
- Displays a glyph for all the script tags.  
+##  <a name="setshowscripttags"></a>CHtmlEditCtrlBase::SetShowScriptTags  
+ Muestra un glifo para todas las etiquetas de script.  
   
 ```  
 HRESULT SetShowScriptTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, displays a glyph for all the script tags.  
+ Si es true, muestra un glifo para todas las etiquetas de script.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM SHOWSCRIPTTAGS command ID](https://msdn.microsoft.com/library/aa769953.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM SHOWSCRIPTTAGS](https://msdn.microsoft.com/library/aa769953.aspx) para el control WebBrowser.  
   
-##  <a name="setshowstyletags"></a>  CHtmlEditCtrlBase::SetShowStyleTags  
- Displays a glyph for all the style tags.  
+##  <a name="setshowstyletags"></a>CHtmlEditCtrlBase::SetShowStyleTags  
+ Muestra un glifo para todas las etiquetas de estilo.  
   
 ```  
 HRESULT SetShowStyleTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, displays a glyph for all the style tags.  
+ Si es true, muestra un glifo para todas las etiquetas de estilo.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM SHOWSTYLETAGS command ID](https://msdn.microsoft.com/library/aa769954.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM SHOWSTYLETAGS](https://msdn.microsoft.com/library/aa769954.aspx) para el control WebBrowser.  
   
-##  <a name="setshowunknowntags"></a>  CHtmlEditCtrlBase::SetShowUnknownTags  
- Displays a glyph for all the unknown tags.  
+##  <a name="setshowunknowntags"></a>CHtmlEditCtrlBase::SetShowUnknownTags  
+ Muestra un glifo para todas las etiquetas desconocidos.  
   
 ```  
 HRESULT SetShowUnknownTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `bNewValue`  
- If true, displays a glyph for all the unknown tags.  
+ Si es true, muestra un glifo para todas las etiquetas desconocidos.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM SHOWUNKNOWNTAGS command ID](https://msdn.microsoft.com/library/aa769955.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM SHOWUNKNOWNTAGS](https://msdn.microsoft.com/library/aa769955.aspx) para el control WebBrowser.  
   
-##  <a name="textarea"></a>  CHtmlEditCtrlBase::TextArea  
- Overwrites a multiline text input control on the current selection.  
+##  <a name="textarea"></a>CHtmlEditCtrlBase::TextArea  
+ Sobrescribe un control de entrada de texto de varias líneas en la selección actual.  
   
 ```  
 HRESULT TextArea(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID of the multiline text input control.  
+ El identificador del control de entrada de texto multilínea.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM TEXTAREA command ID](https://msdn.microsoft.com/library/aa769986.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM TEXTAREA](https://msdn.microsoft.com/library/aa769986.aspx) para el control WebBrowser.  
   
-##  <a name="textbox"></a>  CHtmlEditCtrlBase::TextBox  
- Overwrites a text control on the current selection.  
+##  <a name="textbox"></a>CHtmlEditCtrlBase::TextBox  
+ Sobrescribe un control de texto en la selección actual.  
   
 ```  
 HRESULT TextBox(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID of the text control.  
+ El identificador del control de texto.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM TEXTBOX command ID](https://msdn.microsoft.com/library/aa769980.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM TEXTBOX](https://msdn.microsoft.com/library/aa769980.aspx) para el control WebBrowser.  
   
-##  <a name="unbookmark"></a>  CHtmlEditCtrlBase::UnBookmark  
- Removes any bookmark from the current selection.  
+##  <a name="unbookmark"></a>CHtmlEditCtrlBase::UnBookmark  
+ Quita cualquier marcador de la selección actual.  
   
 ```  
 HRESULT UnBookmark() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM UNBOOKMARK command ID](https://msdn.microsoft.com/library/aa770034.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [UNBOOKMARK IDM Id. de comando](https://msdn.microsoft.com/library/aa770034.aspx) para el control WebBrowser.  
   
-##  <a name="underline"></a>  CHtmlEditCtrlBase::Underline  
- Toggles the current selection between underlined and not underlined.  
+##  <a name="underline"></a>CHtmlEditCtrlBase::Underline  
+ Alterna la selección actual entre subrayado y no subrayado.  
   
 ```  
 HRESULT Underline() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM UNDERLINE command ID](https://msdn.microsoft.com/library/aa770035.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [IDM UNDERLINE Id. de comando](https://msdn.microsoft.com/library/aa770035.aspx) para el control WebBrowser.  
   
-##  <a name="unlink"></a>  CHtmlEditCtrlBase::Unlink  
- Removes any hyperlink from the current selection.  
+##  <a name="unlink"></a>CHtmlEditCtrlBase::Unlink  
+ Quita cualquier hipervínculo de la selección actual.  
   
 ```  
 HRESULT Unlink() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM UNLINK command ID](https://msdn.microsoft.com/library/aa770037.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [IDM DESVINCULAR el identificador de comando](https://msdn.microsoft.com/library/aa770037.aspx) para el control WebBrowser.  
   
-##  <a name="unorderlist"></a>  CHtmlEditCtrlBase::UnorderList  
- Toggles the current selection between an ordered list and a normal format block.  
+##  <a name="unorderlist"></a>CHtmlEditCtrlBase::UnorderList  
+ Alterna la selección actual entre una lista ordenada y un bloque de formato normal.  
   
 ```  
 HRESULT UnorderList(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `szId`  
- The ID of the unordered list.  
+ El identificador de la lista sin ordenar.  
   
-### <a name="return-value"></a>Return Value  
- Returns S_OK on success, or an error HRESULT on failure.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-### <a name="remarks"></a>Remarks  
- This method sends the [IDM UNORDERLIST command ID](https://msdn.microsoft.com/library/aa769987.aspx) to the WebBrowser control.  
+### <a name="remarks"></a>Comentarios  
+ Este método envía el [identificador de comando IDM UNORDERLIST](https://msdn.microsoft.com/library/aa769987.aspx) para el control WebBrowser.  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [HTMLEdit Sample](../../visual-cpp-samples.md)
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
+ [Ejemplo HTMLEdit](../../visual-cpp-samples.md)
 
 

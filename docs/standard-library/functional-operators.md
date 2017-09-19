@@ -1,5 +1,5 @@
 ---
-title: '&lt;functional&gt; operators | Microsoft Docs'
+title: '&lt;functional&gt; (Operadores) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,20 +20,20 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 1b6e189f5940fdbf7a9399a74ba0efaebf6ce823
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f38d129aab8703b6077b2848d7b71bb0a07e0ea7
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="ltfunctionalgt-operators"></a>&lt;functional&gt; operators
+# <a name="ltfunctionalgt-operators"></a>&lt;functional&gt; (Operadores)
 |||  
 |-|-|  
 |[operator!=](#op_neq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Tests if callable object is empty.  
+ Comprueba si el objeto al que se puede llamar está vacío.  
   
 ```  
 template <class Fty>  
@@ -43,20 +43,20 @@ template <class Fty>
 bool operator==(null_ptr_type npc, const function<Fty>& f);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `Fty`  
- The function type to wrap.  
+ Tipo de función que se va a contener.  
   
  `f`  
- The function object  
+ Objeto de función  
   
  `npc`  
- A null pointer.  
+ Un puntero nulo.  
   
-### <a name="remarks"></a>Remarks  
- The operators both take an argument that is a reference to a `function` object and an argument that is a null pointer constant. Both return true only if the `function` object is empty.  
+### <a name="remarks"></a>Comentarios  
+ Los dos operadores toman un argumento que es una referencia a un objeto `function` y un argumento que es una constante de puntero nulo. Ambos devuelven true únicamente si el objeto `function` está vacío.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__functional__operator_eq.cpp
@@ -90,7 +90,7 @@ empty == false
 ```  
   
 ##  <a name="op_neq"></a>  operator!=  
- Tests if callable object is not empty.  
+ Comprueba si el objeto al que se puede llamar no está vacío.  
   
 ```  
 template <class Fty>  
@@ -100,20 +100,20 @@ template <class Fty>
 bool operator!=(null_ptr_type npc, const function<Fty>& f);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `Fty`  
- The function type to wrap.  
+ Tipo de función que se va a contener.  
   
  `f`  
- The function object  
+ Objeto de función  
   
  `npc`  
- A null pointer.  
+ Un puntero nulo.  
   
-### <a name="remarks"></a>Remarks  
- The operators both take an argument that is a reference to a `function` object and an argument that is a null pointer constant. Both return true only if the `function` object is not empty.  
+### <a name="remarks"></a>Comentarios  
+ Los dos operadores toman un argumento que es una referencia a un objeto `function` y un argumento que es una constante de puntero nulo. Ambos devuelven True solo si el objeto `function` no está vacío.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // std__functional__operator_ne.cpp   
@@ -146,7 +146,7 @@ not empty == false
 not empty == true  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [\<functional>](../standard-library/functional.md)
 
 

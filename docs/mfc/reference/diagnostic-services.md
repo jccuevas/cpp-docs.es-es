@@ -1,5 +1,5 @@
 ---
-title: Diagnostic Services | Microsoft Docs
+title: "Servicios de diagnóstico | Documentos de Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,21 +13,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- diagnosi [MFC]s, diagnostic services
-- diagnostic macros [MFC], list of general MFC
-- services [MFC], diagnostic
+- diagnosis, diagnostic services
+- diagnostic macros, list of general MFC
+- services, diagnostic
 - MFC, diagnostic services
-- general diagnostic functions and variables [MFC]
-- diagnostics [MFC], diagnostic functions and variables
-- diagnostics [MFC], list of general MFC
-- diagnosis [MFC], diagnostic functions and variables
-- diagnosis [MFC], list of general MFC
+- general diagnostic functions and variables
+- diagnostics, diagnostic functions and variables
+- diagnostics, list of general MFC
+- diagnosis, diagnostic functions and variables
+- diagnosis, list of general MFC
 - general diagnostic macros in MFC
-- diagnostic macros [MFC]
-- diagnostic services [MFC]
+- diagnostic macros
+- diagnostic services
 - object diagnostic functions in MFC
-- diagnostics [MFC], diagnostic services
-- diagnostic functions and variables [MFC]
+- diagnostics, diagnostic services
+- diagnostic functions and variables
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
 caps.latest.revision: 20
 author: mikeblome
@@ -48,87 +48,87 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: f486a21308f376362fd236679858411b71dc01a5
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: ceaf02cbe0eedec6e8bd4980d87c025d6aa23615
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="diagnostic-services"></a>Diagnostic Services
-The Microsoft Foundation Class Library supplies many diagnostic services that make debugging your programs easier. These diagnostic services include macros and global functions that allow you to track your program's memory allocations, dump the contents of objects during run time, and print debugging messages during run time. The macros and global functions for diagnostic services are grouped into the following categories:  
+# <a name="diagnostic-services"></a>Servicios de diagnóstico
+La biblioteca MFC (Microsoft Foundation Class) ofrece muchos servicios de diagnóstico que facilitan la depuración de los programas con mayor facilidad. Estos servicios de diagnóstico incluyen macros y funciones globales que le permiten realizar un seguimiento de las asignaciones de memoria de su programa, volcar el contenido de los objetos en tiempo de ejecución e imprimir mensajes de depuración en tiempo de ejecución. Las macros y funciones globales para servicios de diagnóstico se agrupan en las siguientes categorías:  
   
--   General diagnostic macros  
+-   Macros de diagnóstico generales  
   
--   General diagnostic functions and variables  
+-   Funciones y variables de diagnóstico general  
   
--   Object diagnostic functions  
+-   Funciones de diagnóstico de objetos  
   
- These macros and functions are available for all classes derived from `CObject` in the Debug and Release versions of MFC. However, all except `DEBUG_NEW` and **VERIFY** do nothing in the Release version.  
+ Estas macros y funciones están disponibles para todas las clases derivan de `CObject` en las versiones de lanzamiento y depuración de MFC. Sin embargo, todos excepto `DEBUG_NEW` y **compruebe** no hacen nada en la versión de lanzamiento.  
   
- In the Debug library, all allocated memory blocks are bracketed with a series of "guard bytes." If these bytes are disturbed by an errant memory write, then the diagnostic routines can report a problem. If you include the line:  
+ En la biblioteca de depuración, todos los bloques de memoria asignada están encapsulados con una serie de "bytes de protección". Si estos bytes se ven afectados por una escritura de memoria errante, las rutinas de diagnóstico pueden informar de un problema. Si incluye la línea:  
   
- [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample #14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]  
   
- in your implementation file, all calls to **new** will store the filename and line number where the memory allocation took place. The function [CMemoryState::DumpAllObjectsSince](cmemorystate-structure.md#dumpallobjectssince) will display this extra information, allowing you to identify memory leaks. Refer also to the class [CDumpContext](../../mfc/reference/cdumpcontext-class.md) for additional information on diagnostic output.  
+ en el archivo de implementación, todas las llamadas a **nueva** almacenará el nombre de archivo y número de línea donde realizó la asignación de memoria. La función [CMemoryState:: DumpAllObjectsSince](cmemorystate-structure.md#dumpallobjectssince) mostrará esta información adicional, lo que le permite identificar pérdidas de memoria. Consulte también la clase [CDumpContext](../../mfc/reference/cdumpcontext-class.md) para obtener más información sobre los resultados de diagnóstico.  
   
- In addition, the C run-time library also supports a set of diagnostic functions you can use to debug your applications. For more information, see [Debug Routines](../../c-runtime-library/debug-routines.md) in the Run-Time Library Reference.  
+ Además, la biblioteca de tiempo de ejecución de C también admite un conjunto de funciones de diagnóstico que puede usar para depurar sus aplicaciones. Para obtener más información, consulte [rutinas de depuración](../../c-runtime-library/debug-routines.md) en la referencia de la biblioteca de tiempo de ejecución.  
   
-### <a name="mfc-general-diagnostic-macros"></a>MFC General Diagnostic Macros  
-  
-|||  
-|-|-|  
-|[ASSERT](#assert)|Prints a message and then aborts the program if the specified expression evaluates to **FALSE** in the Debug version of the library.|  
-|[ASSERT_KINDOF](#assert_kindof)|Tests that an object is an object of the specified class or of a class derived from the specified class.|  
-|[ASSERT_VALID](#assert_valid)|Tests the internal validity of an object by calling its `AssertValid` member function; typically overridden from `CObject`.|
-|[DEBUG_NEW](#debug_new)|Supplies a filename and line number for all object allocations in Debug mode to help find memory leaks.|  
-|[DEBUG_ONLY](#debug_only)|Similar to **ASSERT** but does not test the value of the expression; useful for code that should execute only in Debug mode.|  
-|[ENSURE and ENSURE_VALID](#ensure)|Use to validate data correctness.|
-|[THIS_FILE](#this_file)|Expands to the name of the file that is being compiled.|
-|[TRACE](#trace)|Provides `printf`-like capability in the Debug version of the library.|  
-|[VERIFY](#verify)|Similar to **ASSERT** but evaluates the expression in the Release version of the library as well as in the Debug version.|  
-  
-### <a name="mfc-general-diagnostic-variables-and-functions"></a>MFC General Diagnostic Variables and Functions  
+### <a name="mfc-general-diagnostic-macros"></a>Macros de diagnóstico generales de MFC  
   
 |||  
 |-|-|  
-|[afxDump](#afxdump)|Global variable that sends [CDumpContext](../../mfc/reference/cdumpcontext-class.md) information to the debugger output window or to the debug terminal.|  
-|[afxMemDF](#afxmemdf)|Global variable that controls the behavior of the debugging memory allocator.|  
-|[AfxCheckError](#afxcheckerror)|Global variable used to test the passed **SCODE** to see if it is an error and, if so, throws the appropriate error.|  
-|[AfxCheckMemory](#afxcheckmemory)|Checks the integrity of all currently allocated memory.|  
-|[AfxDebugBreak](#afxdebugbreak)|Causes a break in execution.|
-|[AfxDump](#cdumpcontext_in_mfc)|If called while in the debugger, dumps the state of an object while debugging.|  
-|[AfxDump](#afxdump)|Internal function that dumps the state of an object while debugging.|
-|[AfxDumpStack](#afxdumpstack)|Generate an image of the current stack. This function is always linked statically.|  
-|[AfxEnableMemoryLeakDump](#afxenablememoryleakdump)|Enables the memory leak dump.|  
-|[AfxEnableMemoryTracking](#afxenablememorytracking)|Turns memory tracking on and off.|  
-|[AfxIsMemoryBlock](#afxismemoryblock)|Verifies that a memory block has been properly allocated.|  
-|[AfxIsValidAddress](#afxisvalidaddress)|Verifies that a memory address range is within the program's bounds.|  
-|[AfxIsValidString](#afxisvalidstring)|Determines whether a pointer to a string is valid.|  
-|[AfxSetAllocHook](#afxsetallochook)|Enables the calling of a function on each memory allocation.|  
+|[ASSERT](#assert)|Imprime un mensaje y, a continuación, se anula el programa si la expresión especificada se evalúa como **FALSE** en la versión de depuración de la biblioteca.|  
+|[ASSERT_KINDOF](#assert_kindof)|Prueba que un objeto es un objeto de la clase especificada o de una clase derivada de la clase especificada.|  
+|[ASSERT_VALID](#assert_valid)|Comprueba la validez interna de un objeto mediante una llamada a su `AssertValid` función miembro; normalmente invalidada desde `CObject`.|
+|[DEBUG_NEW](#debug_new)|Ofrece un nombre de archivo y un número de línea para todas las asignaciones de objetos en modo de depuración para ayudar a encontrar fugas de memoria.|  
+|[DEBUG_ONLY](#debug_only)|Similar a **ASSERT** pero no prueba el valor de la expresión; útil para el código que se debe ejecutar solo en modo de depuración.|  
+|[Asegúrese de que y ENSURE_VALID](#ensure)|Usar para validar la corrección de datos.|
+|[THIS_FILE](#this_file)|Se expande al nombre del archivo que se está compilando.|
+|[TRACE](#trace)|Proporciona `printf`-como capacidad en la versión de depuración de la biblioteca.|  
+|[COMPROBAR](#verify)|Similar a **ASSERT** pero evalúa la expresión en la versión de lanzamiento de la biblioteca, así como en la versión de depuración.|  
   
-### <a name="mfc-object-diagnostic-functions"></a>MFC Object Diagnostic Functions  
+### <a name="mfc-general-diagnostic-variables-and-functions"></a>Funciones y variables de diagnóstico general de MFC  
   
 |||  
 |-|-|  
-|[AfxDoForAllClasses](#afxdoforallclasses)|Performs a specified function on all `CObject`-derived classes that support run-time type checking.|  
-|[AfxDoForAllObjects](#afxdoforallobjects)|Performs a specified function on all `CObject`-derived objects that were allocated with **new**.|  
+|[afxDump](#afxdump)|Variable global que envía [CDumpContext](../../mfc/reference/cdumpcontext-class.md) información en la ventana de salida del depurador o al terminal de depuración.|  
+|[afxMemDF](#afxmemdf)|Variable global que controla el comportamiento del asignador de memoria de depuración.|  
+|[AfxCheckError](#afxcheckerror)|Variable global que se utiliza para probar el valor **SCODE** para ver si es un error y, si es así, genera el error correspondiente.|  
+|[AfxCheckMemory](#afxcheckmemory)|Comprueba la integridad de toda la memoria asignada actualmente.|  
+|[AfxDebugBreak](#afxdebugbreak)|Produce una interrupción en ejecución.|
+|[AfxDump](#cdumpcontext_in_mfc)|Si se llama mientras se encuentra en el depurador, vuelca el estado de un objeto durante la depuración.|  
+|[AfxDump](#afxdump)|Función interna que vuelca el estado de un objeto durante la depuración.|
+|[AfxDumpStack](#afxdumpstack)|Genera una imagen de la pila actual. Esta función siempre está vinculada estáticamente.|  
+|[AfxEnableMemoryLeakDump](#afxenablememoryleakdump)|Habilita el volcado de fuga de memoria.|  
+|[AfxEnableMemoryTracking](#afxenablememorytracking)|Activa y desactiva el seguimiento de la memoria.|  
+|[AfxIsMemoryBlock](#afxismemoryblock)|Comprueba que se ha asignado correctamente un bloque de memoria.|  
+|[AfxIsValidAddress](#afxisvalidaddress)|Comprueba que un intervalo de direcciones de memoria se encuentra dentro de los límites del programa.|  
+|[AfxIsValidString](#afxisvalidstring)|Determina si un puntero a una cadena es válido.|  
+|[AfxSetAllocHook](#afxsetallochook)|Permite la llamada de una función en cada asignación de memoria.|  
+  
+### <a name="mfc-object-diagnostic-functions"></a>Funciones de diagnóstico de objetos de MFC  
+  
+|||  
+|-|-|  
+|[AfxDoForAllClasses](#afxdoforallclasses)|Realiza una función especificada en todos los `CObject`-clases derivadas que admiten la comprobación de tipos en tiempo de ejecución.|  
+|[AfxDoForAllObjects](#afxdoforallobjects)|Realiza una función especificada en todos los `CObject`-objetos asignados con derivados **nueva**.|  
 
-### <a name="mfc-compilation-macros"></a>MFC Compilation Macros
+### <a name="mfc-compilation-macros"></a>Macros de compilación de MFC
 |||
 |-|-|
-|[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Suppresses compiler warnings for the use of deprecated MFC functions.|  
+|[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Suprime las advertencias del compilador para el uso de funciones en desuso de MFC.|  
 
 
-## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
-Suppresses compiler warnings for the use of deprecated MFC functions.  
+## <a name="afx_secure_no_warnings"></a>_AFX_SECURE_NO_WARNINGS
+Suprime las advertencias del compilador para el uso de funciones en desuso de MFC.  
    
-### <a name="syntax"></a>Syntax   
+### <a name="syntax"></a>Sintaxis   
 ```  
 _AFX_SECURE_NO_WARNINGS  
 ```     
-### <a name="example"></a>Example  
- This code sample would cause a compiler warning if _AFX_SECURE_NO_WARNINGS were not defined.  
+### <a name="example"></a>Ejemplo  
+ Este ejemplo de código podría causar una advertencia del compilador si no se definieron _AFX_SECURE_NO_WARNINGS.  
   
  ```cpp
 // define this before including any afx files in stdafx.h
@@ -142,193 +142,193 @@ char sz[256];
 pRichEdit->GetSelText(sz);
 ```
 
-## <a name="afxdebugbreak"></a> AfxDebugBreak
-Call this function to cause a break (at the location of the call to `AfxDebugBreak`) in the execution of the debug version of your MFC application.  
+## <a name="afxdebugbreak"></a>AfxDebugBreak
+Llame a esta función para producir una interrupción (en la ubicación de la llamada a `AfxDebugBreak`) en la ejecución de la versión de depuración de la aplicación MFC.  
 
-### <a name="syntax"></a>Syntax    
+### <a name="syntax"></a>Sintaxis    
 ```
 void AfxDebugBreak( );    
 ```  
    
-### <a name="remarks"></a>Remarks  
- `AfxDebugBreak` has no effect in release versions of an MFC application and should be removed. This function should only be used in MFC applications. Use the Win32 API version, **DebugBreak**, to cause a break in non-MFC applications.  
+### <a name="remarks"></a>Comentarios  
+ `AfxDebugBreak`no tiene ningún efecto en las versiones de lanzamiento de una aplicación MFC y se debería quitar. Esta función sólo debe utilizarse en aplicaciones MFC. Usar la versión de API de Win32, **DebugBreak**, para producir una interrupción en las aplicaciones no están basados en MFC.  
    
-### <a name="requirements"></a>Requirements  
- **Header:** afxver_.h   
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxver_.h   
 
-##  <a name="assert"></a>  ASSERT
- Evaluates its argument.  
+##  <a name="assert"></a>ASSERT
+ Se evalúa como su argumento.  
   
 ```   
 ASSERT(booleanExpression)   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `booleanExpression`  
- Specifies an expression (including pointer values) that evaluates to nonzero or 0.  
+ Especifica una expresión (incluidos los valores de puntero) que se evalúa como cero o un valor 0.  
   
-### <a name="remarks"></a>Remarks  
- If the result is 0, the macro prints a diagnostic message and aborts the program. If the condition is nonzero, it does nothing.  
+### <a name="remarks"></a>Comentarios  
+ Si el resultado es 0, la macro imprime un mensaje de diagnóstico y anula el programa. Si la condición es distinto de cero, no realiza ninguna acción.  
   
- The diagnostic message has the form  
+ El mensaje de diagnóstico tiene la forma  
   
  `assertion failed in file <name> in line <num>`  
   
- where *name* is the name of the source file, and *num* is the line number of the assertion that failed in the source file.  
+ donde *nombre* es el nombre del archivo de origen, y *num* es el número de línea de la aserción que generaron errores en el archivo de origen.  
   
- In the Release version of MFC, **ASSERT** does not evaluate the expression and thus will not interrupt the program. If the expression must be evaluated regardless of environment, use the **VERIFY** macro in place of **ASSERT**.  
+ En la versión de lanzamiento de MFC, **ASSERT** no se evalúa la expresión y, por tanto, no se interrumpirá el programa. Si la expresión debe evaluarse independientemente del entorno, use el **compruebe** macro en lugar de **ASSERT**.  
   
 > [!NOTE]
->  This function is available only in the Debug version of MFC.  
+>  Esta función está disponible sólo en la versión de depuración de MFC.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_Utilities#44](../../mfc/codesnippet/cpp/diagnostic-services_2.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_Utilities #44](../../mfc/codesnippet/cpp/diagnostic-services_2.cpp)]  
 
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h 
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h 
 
-##  <a name="assert_kindof"></a>  ASSERT_KINDOF  
- This macro asserts that the object pointed to is an object of the specified class, or is an object of a class derived from the specified class.  
+##  <a name="assert_kindof"></a>ASSERT_KINDOF  
+ Esta macro se afirma que el objeto al que señala a un objeto de la clase especificada o es un objeto de una clase que deriva de la clase especificada.  
   
 ```   
 ASSERT_KINDOF(classname, pobject)  
 ```  
   
-### <a name="parameters"></a>Parameters  
- *classname*  
- The name of a `CObject`-derived class.  
+### <a name="parameters"></a>Parámetros  
+ *nombre de clase*  
+ El nombre de un `CObject`-clase derivada.  
   
- *pobject*  
- A pointer to a class object.  
+ *pObject*  
+ Un puntero a un objeto de clase.  
   
-### <a name="remarks"></a>Remarks  
- The *pobject* parameter should be a pointer to an object and can be **const**. The object pointed to and the class must support `CObject` run-time class information. As an example, to ensure that `pDocument` is a pointer to an object of the `CMyDoc` class, or any of its derivatives, you could code:  
+### <a name="remarks"></a>Comentarios  
+ El *pobject* parámetro debe ser un puntero a un objeto y puede ser **const**. El objeto al que apunta y debe ser compatible con la clase `CObject` información de clase en tiempo de ejecución. Por ejemplo, para asegurarse de que `pDocument` es un puntero a un objeto de la `CMyDoc` clase o cualquiera de sus derivados, se podría codificar:  
   
- [!code-cpp[NVC_MFCDocView#194](../../mfc/codesnippet/cpp/diagnostic-services_3.cpp)]  
+ [!code-cpp[NVC_MFCDocView #194](../../mfc/codesnippet/cpp/diagnostic-services_3.cpp)]  
   
- Using the `ASSERT_KINDOF` macro is exactly the same as coding:  
+ Mediante el `ASSERT_KINDOF` macro es exactamente igual que la codificación:  
   
- [!code-cpp[NVC_MFCDocView#195](../../mfc/codesnippet/cpp/diagnostic-services_4.cpp)]  
+ [!code-cpp[NVC_MFCDocView #195](../../mfc/codesnippet/cpp/diagnostic-services_4.cpp)]  
   
- This function works only for classes declared with the [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic or [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) macro.  
+ Esta función solo funciona para las clases que se declara con el [DECLARE_DYNAMIC] (ejecución tiempo objeto modelo services.md #declare_dynamic o [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) macro.  
   
 > [!NOTE]
->  This function is available only in the Debug version of MFC.  
+>  Esta función está disponible sólo en la versión de depuración de MFC.  
 
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h 
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h 
 
-##  <a name="assert_valid"></a>  ASSERT_VALID  
- Use to test your assumptions about the validity of an object's internal state.  
+##  <a name="assert_valid"></a>ASSERT_VALID  
+ Usar para probar sus suposiciones acerca de la validez del estado interno de un objeto.  
   
 ```   
 ASSERT_VALID(pObject)   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pObject`  
- Specifies an object of a class derived from `CObject` that has an overriding version of the `AssertValid` member function.  
+ Especifica un objeto de una clase derivada de `CObject` que tiene una versión de reemplazo de la `AssertValid` función miembro.  
   
-### <a name="remarks"></a>Remarks  
- `ASSERT_VALID` calls the `AssertValid` member function of the object passed as its argument.  
+### <a name="remarks"></a>Comentarios  
+ `ASSERT_VALID`llamadas a la `AssertValid` función de miembro del objeto pasado como argumento.  
   
- In the Release version of MFC, `ASSERT_VALID` does nothing. In the Debug version, it validates the pointer, checks against **NULL**, and calls the object's own `AssertValid` member functions. If any of these tests fails, an alert message is displayed in the same manner as [ASSERT](#assert).  
+ En la versión de lanzamiento de MFC, `ASSERT_VALID` no hace nada. En la versión de depuración, valida el puntero, se realiza una comprobación contra **NULL**y llama a la propia `AssertValid` funciones miembro. Si cualquiera de estas pruebas se produce un error, se muestra un mensaje de alerta en la misma manera que [ASSERT](#assert).  
   
 > [!NOTE]
->  This function is available only in the Debug version of MFC.  
+>  Esta función está disponible sólo en la versión de depuración de MFC.  
   
- For more information and examples, see [Debugging MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).  
+ Para obtener más información y ejemplos, vea [depurar aplicaciones de MFC](/visualstudio/debugger/mfc-debugging-techniques).  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCCObjectSample#19](../../mfc/codesnippet/cpp/diagnostic-services_5.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFCCObjectSample #19](../../mfc/codesnippet/cpp/diagnostic-services_5.cpp)]  
 
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h
 
-##  <a name="debug_new"></a>  DEBUG_NEW  
- Assists in finding memory leaks.  
+##  <a name="debug_new"></a>DEBUG_NEW  
+ Ayuda a buscar pérdidas de memoria.  
   
 ```   
 #define  new DEBUG_NEW   
 ```  
   
-### <a name="remarks"></a>Remarks  
- You can use `DEBUG_NEW` everywhere in your program that you would ordinarily use the **new** operator to allocate heap storage.  
+### <a name="remarks"></a>Comentarios  
+ Puede usar `DEBUG_NEW` en cualquier lugar en el programa que le gustaría usar normalmente el **nueva** operador que se va a asignar el almacenamiento de montón.  
   
- In debug mode (when the **_DEBUG** symbol is defined), `DEBUG_NEW` keeps track of the filename and line number for each object that it allocates. Then, when you use the [CMemoryState::DumpAllObjectsSince](cmemorystate-structure.md#dumpallobjectssince) member function, each object allocated with `DEBUG_NEW` is shown with the filename and line number where it was allocated.  
+ En modo de depuración (cuando la **_DEBUG** símbolo está definido), `DEBUG_NEW` realiza un seguimiento de lo nombre de archivo y número de línea para cada objeto que asigna. A continuación, cuando se usa el [CMemoryState:: DumpAllObjectsSince](cmemorystate-structure.md#dumpallobjectssince) función miembro, cada objeto asignado con `DEBUG_NEW` se muestra con el nombre de archivo y número de línea donde fue asignado.  
   
- To use `DEBUG_NEW`, insert the following directive into your source files:  
+ Para usar `DEBUG_NEW`, inserte la siguiente directiva en los archivos de origen:  
   
- [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample #14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]  
   
- Once you insert this directive, the preprocessor will insert `DEBUG_NEW` wherever you use **new**, and MFC does the rest. When you compile a release version of your program, `DEBUG_NEW` resolves to a simple **new** operation, and the filename and line number information are not generated.  
+ Una vez insertada esta directiva, el preprocesador insertará `DEBUG_NEW` , donde use **nueva**, y MFC encarga del resto. Cuando se compila una versión de lanzamiento del programa, `DEBUG_NEW` se resuelve como una simple **nueva** operación y la información de número de nombre de archivo y la línea no se generan.  
   
 > [!NOTE]
->  In previous versions of MFC (4.1 and earlier) you needed to put the `#define` statement after all statements that called the `IMPLEMENT_DYNCREATE` or `IMPLEMENT_SERIAL` macros. This is no longer necessary.  
+>  En versiones anteriores de MFC (4.1 y anterior) necesaria para colocar el `#define` instrucción después de todas las instrucciones que llama el `IMPLEMENT_DYNCREATE` o `IMPLEMENT_SERIAL` macros. Esto ya no es necesario.  
 
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h
 
-##  <a name="debug_only"></a>  DEBUG_ONLY  
- In debug mode (when the **_DEBUG** symbol is defined), `DEBUG_ONLY` evaluates its argument.  
+##  <a name="debug_only"></a>DEBUG_ONLY  
+ En modo de depuración (cuando la **_DEBUG** símbolo está definido), `DEBUG_ONLY` evalúa su argumento.  
   
 ```   
 DEBUG_ONLY(expression)   
 ```  
   
-### <a name="remarks"></a>Remarks  
- In a release build, **DEBUG_ONLY** does not evaluate its argument. This is useful when you have code that should be executed only in debug builds.  
+### <a name="remarks"></a>Comentarios  
+ En una versión de lanzamiento, **DEBUG_ONLY** no evalúa su argumento. Esto es útil si tiene código que se debe ejecutar únicamente en las compilaciones de depuración.  
   
- The `DEBUG_ONLY` macro is equivalent to surrounding *expression* with **#ifdef _DEBUG** and `#endif`.  
+ El `DEBUG_ONLY` macro equivale a que rodean *expresión* con **#ifdef _DEBUG** y `#endif`.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_Utilities#32](../../mfc/codesnippet/cpp/diagnostic-services_6.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_Utilities #32](../../mfc/codesnippet/cpp/diagnostic-services_6.cpp)]  
 
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h
 
- ### <a name="ensure"></a>  ENSURE and ENSURE_VALID
-Use to validate data correctness.  
+ ### <a name="ensure"></a>Asegúrese de que y ENSURE_VALID
+Usar para validar la corrección de datos.  
    
-### <a name="syntax"></a>Syntax    
+### <a name="syntax"></a>Sintaxis    
 ```
 ENSURE(  booleanExpression )  
 ENSURE_VALID( booleanExpression  )  
 ```
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `booleanExpression`  
- Specifies a boolean expression to be tested.  
+ Especifica una expresión booleana que se va a probar.  
    
-### <a name="remarks"></a>Remarks  
- The purpose of these macros is to improve the validation of parameters. The macros prevent further processing of incorrect parameters in your code. Unlike the **ASSERT** macros, the **ENSURE** macros throw an exception in addition to generating an assertion.  
+### <a name="remarks"></a>Comentarios  
+ El propósito de estas macros es mejorar la validación de parámetros. Las macros impiden continuar el proceso de parámetros incorrectos en el código. A diferencia de la **ASSERT** macros, el **Asegúrese** macros producen una excepción además de generar una aserción.  
   
- The macros behave in two ways, according to the project configuration. The macros call **ASSERT** and then throw an exception if the assertion fails. Thus, in Debug configurations (that is, where **_DEBUG** is defined) the macros produce an assertion and exception while in Release configurations, the macros produce only the exception (**ASSERT** does not evaluate the expression in Release configurations).  
+ Las macros se comporten de dos maneras, según la configuración del proyecto. La llamada de macros **ASSERT** y, a continuación, inicia una excepción si se produce un error en la aserción. Por lo tanto, en configuraciones de depuración (es decir, donde **_DEBUG** está definido) las macros de producen una aserción y la excepción mientras se encuentra en las configuraciones de versión, las macros producen solo la excepción (**ASSERT** no se evalúa la expresión en configuraciones de versión).  
   
- The macro **ENSURE_ARG** acts like the **ENSURE** macro.  
+ La macro **ENSURE_ARG** actúa como el **Asegúrese** macro.  
   
- **ENSURE_VALID** calls the `ASSERT_VALID` macro (which has an effect only in Debug builds). In addition, **ENSURE_VALID** throws an exception if the pointer is NULL. The NULL test is performed in both Debug and Release configurations.  
+ **ENSURE_VALID** llamadas el `ASSERT_VALID` macro (que tiene un efecto únicamente en las compilaciones de depuración). Además, **ENSURE_VALID** produce una excepción si el puntero es NULL. Se realiza la prueba NULL en configuraciones Debug y Release.  
   
- If any of these tests fails, an alert message is displayed in the same manner as **ASSERT**. The macro throws an invalid argument exception if needed.  
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h  
+ Si cualquiera de estas pruebas se produce un error, se muestra un mensaje de alerta en la misma manera que **ASSERT**. La macro produce una excepción de argumento no válido si es necesario.  
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h  
    
-### <a name="see-also"></a>See Also  
- [Macros and Globals](mfc-macros-and-globals.md)   
- [VERIFY](#verify)   
+### <a name="see-also"></a>Vea también  
+ [Macros y funciones globales](mfc-macros-and-globals.md)   
+ [COMPROBAR](#verify)   
  [ATLENSURE](#altensure)
 
-## <a name="this_file"></a> THIS_FILE
-Expands to the name of the file that is being compiled.  
+## <a name="this_file"></a>THIS_FILE
+Se expande al nombre del archivo que se está compilando.  
    
-### <a name="syntax"></a>Syntax    
+### <a name="syntax"></a>Sintaxis    
 ```
 THIS_FILE    
 ```  
    
-### <a name="remarks"></a>Remarks  
- The information is used by the **ASSERT** and **VERIFY** macros. The Application Wizard and code wizards place the macro in source code files they create.  
+### <a name="remarks"></a>Comentarios  
+ La información se usa por la **ASSERT** y **compruebe** macros. Los asistentes de Asistente para aplicaciones y código de colocar la macro en los archivos de código fuente que creen.  
    
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
 ```cpp
 #ifdef _DEBUG
 #undef THIS_FILE
@@ -339,130 +339,130 @@ static char THIS_FILE[] = __FILE__;
 // compiler recognizes. 
 ```
    
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h  
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h  
    
-### <a name="see-also"></a>See Also  
- [Macros and Globals](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>Vea también  
+ [Macros y funciones globales](mfc-macros-and-globals.md)   
  [ASSERT](#assert)   
- [VERIFY](#verify)
+ [COMPROBAR](#verify)
 
 
-##  <a name="trace"></a>  TRACE  
- Sends the specified string to the debugger of the current application.  
+##  <a name="trace"></a>SEGUIMIENTO  
+ Envía la cadena especificada al depurador de la aplicación actual.  
   
 ```   
 TRACE(exp)  
 TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)   
 ```  
   
-### <a name="remarks"></a>Remarks  
- See [ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2) for a description of **TRACE**. **TRACE** and `ATLTRACE2` have the same behavior.  
+### <a name="remarks"></a>Comentarios  
+ Vea [ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2) para obtener una descripción de **seguimiento**. **SEGUIMIENTO** y `ATLTRACE2` tienen el mismo comportamiento.  
   
- In the debug version of MFC, this macro sends the specified string to the debugger of the current application. In a release build, this macro compiles to nothing (no code is generated at all).  
+ En la versión de depuración de MFC, esta macro envía la cadena especificada al depurador de la aplicación actual. En una versión de lanzamiento, esta macro se compila a nada (código no se genera en absoluto).  
   
- For more information, see [Debugging MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).  
+ Para obtener más información, consulte [depurar aplicaciones de MFC](/visualstudio/debugger/mfc-debugging-techniques).  
 
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h
 
-##  <a name="verify"></a>  VERIFY  
- In the Debug version of MFC, evaluates its argument.  
+##  <a name="verify"></a>COMPROBAR  
+ En la versión de depuración de MFC, se evalúa como su argumento.  
   
 ```   
 VERIFY(booleanExpression)   
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `booleanExpression`  
- Specifies an expression (including pointer values) that evaluates to nonzero or 0.  
+ Especifica una expresión (incluidos los valores de puntero) que se evalúa como cero o un valor 0.  
   
-### <a name="remarks"></a>Remarks  
- If the result is 0, the macro prints a diagnostic message and halts the program. If the condition is nonzero, it does nothing.  
+### <a name="remarks"></a>Comentarios  
+ Si el resultado es 0, la macro imprime un mensaje de diagnóstico y detiene el programa. Si la condición es distinto de cero, no realiza ninguna acción.  
   
- The diagnostic message has the form  
+ El mensaje de diagnóstico tiene la forma  
   
  `assertion failed in file <name> in line <num>`  
   
- where *name* is the name of the source file and *num* is the line number of the assertion that failed in the source file.  
+ donde *nombre* es el nombre del archivo de origen y *num* es el número de línea de la aserción que generaron errores en el archivo de origen.  
   
- In the Release version of MFC, **VERIFY** evaluates the expression but does not print or interrupt the program. For example, if the expression is a function call, the call will be made.  
+ En la versión de lanzamiento de MFC, **compruebe** evalúa la expresión pero no imprimir ni interrumpir el programa. Por ejemplo, si la expresión es una llamada de función, se realizará la llamada.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCDocView#198](../../mfc/codesnippet/cpp/diagnostic-services_7.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFCDocView #198](../../mfc/codesnippet/cpp/diagnostic-services_7.cpp)]  
 
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h
 
-##  <a name="cdumpcontext_in_mfc"></a>  afxDump (CDumpContext in MFC)  
- Provides basic object-dumping capability in your application.  
+##  <a name="cdumpcontext_in_mfc"></a>afxDump (CDumpContext en MFC)  
+ Proporciona funcionalidad básica volcado de objetos en la aplicación.  
   
 ```   
 CDumpContext  afxDump;   
 ```  
   
-### <a name="remarks"></a>Remarks  
- `afxDump` is a predefined [CDumpContext](../../mfc/reference/cdumpcontext-class.md) object that allows you to send `CDumpContext` information to the debugger output window or to a debug terminal. Typically, you supply `afxDump` as a parameter to `CObject::Dump`.  
+### <a name="remarks"></a>Comentarios  
+ `afxDump`está predefinido [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objeto que le permite enviar `CDumpContext` información en la ventana de salida del depurador o en un terminal de depuración. Por lo general, proporcionar `afxDump` como un parámetro a `CObject::Dump`.  
   
- Under Windows NT and all versions of Windows, `afxDump` output is sent to the Output-Debug window of Visual C++ when you debug your application.  
+ En Windows NT y todas las versiones de Windows, `afxDump` la salida se envía a la ventana de salida de depuración de Visual C++ cuando se depura la aplicación.  
   
- This variable is defined only in the Debug version of MFC. For more information on `afxDump`, see [Debugging MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).  
+ Esta variable solo se define en la versión de depuración de MFC. Para obtener más información sobre `afxDump`, consulte [depurar aplicaciones de MFC](/visualstudio/debugger/mfc-debugging-techniques).  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_Utilities#23](../../mfc/codesnippet/cpp/diagnostic-services_8.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_Utilities #23](../../mfc/codesnippet/cpp/diagnostic-services_8.cpp)]  
 
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h
 
 
-## <a name="afxdump"></a> AfxDump (Internal)
-Internal function that MFC uses to dump the state of an object while debugging.  
+## <a name="afxdump"></a>AfxDump (interno)
+Función interna que utiliza MFC para volcar el estado de un objeto durante la depuración.  
 
-### <a name="syntax"></a>Syntax    
+### <a name="syntax"></a>Sintaxis    
 ```
 void AfxDump(const CObject* pOb);   
 ```
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pOb`  
- A pointer to an object of a class derived from `CObject`.  
+ Un puntero a un objeto de una clase derivada de `CObject`.  
    
-### <a name="remarks"></a>Remarks  
- **AfxDump** calls an object's `Dump` member function and sends the information to the location specified by the `afxDump` variable. **AfxDump** is available only in the Debug version of MFC.  
+### <a name="remarks"></a>Comentarios  
+ **AfxDump** llama a un objeto `Dump` función miembro y envía la información a la ubicación especificada por el `afxDump` variable. **AfxDump** solo está disponible en la versión de depuración de MFC.  
   
- Your program code should not call **AfxDump**, but should instead call the `Dump` member function of the appropriate object.  
+ El código del programa no debe llamar a **AfxDump**, pero en su lugar, debe llamar a la `Dump` función de miembro del objeto correspondiente.  
    
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h  
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h  
    
-### <a name="see-also"></a>See Also  
+### <a name="see-also"></a>Vea también  
  [CObject::Dump](cobject-class.md#dump)   
 
 
 
-##  <a name="afxmemdf"></a>  afxMemDF  
- This variable is accessible from a debugger or your program and allows you to tune allocation diagnostics.  
+##  <a name="afxmemdf"></a>afxMemDF  
+ Esta variable es accesible desde un depurador o el programa y le permite optimizar el diagnóstico de asignación.  
   
 ```   
 int  afxMemDF;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- `afxMemDF` can have the following values as specified by the enumeration `afxMemDF`:  
+### <a name="remarks"></a>Comentarios  
+ `afxMemDF`puede tener los valores siguientes según lo especificado por la enumeración `afxMemDF`:  
   
-- **allocMemDF** Turns on debugging allocator (default setting in Debug library).  
+- **allocMemDF** activa el asignador de depuración (valor predeterminado en la biblioteca de depuración).  
   
-- **delayFreeMemDF** Delays freeing memory. While your program frees a memory block, the allocator does not return that memory to the underlying operating system. This will place maximum memory stress on your program.  
+- **delayFreeMemDF** retrasa la liberación de memoria. Mientras el programa libera un bloque de memoria, el asignador no devuelve esa memoria para el sistema operativo subyacente. Esto provocará el esfuerzo de la cantidad máxima de memoria en el programa.  
   
-- **checkAlwaysMemDF** Calls `AfxCheckMemory` every time memory is allocated or freed. This will significantly slow memory allocations and deallocations.  
+- **checkAlwaysMemDF** llamadas `AfxCheckMemory` cada vez que se asigna o se libera memoria. Esto ralentiza notablemente cancelaciones de asignación y asignaciones de memoria.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_Utilities#30](../../mfc/codesnippet/cpp/diagnostic-services_9.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_Utilities #30](../../mfc/codesnippet/cpp/diagnostic-services_9.cpp)]  
 
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h
 
-##  <a name="afxcheckerror"></a>  AfxCheckError  
- This function tests the passed **SCODE** to see if it is an error.  
+##  <a name="afxcheckerror"></a>AfxCheckError  
+ Esta función comprueba el valor **SCODE** para ver si se trata de un error.  
   
 ```   
 void AFXAPI AfxCheckError(SCODE sc);
@@ -470,99 +470,99 @@ throw CMemoryException*
 throw COleException*  
 ```  
   
-### <a name="remarks"></a>Remarks  
- If it is an error, the function throws an exception. If the passed `SCODE` is **E_OUTOFMEMORY**, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) by calling [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). Otherwise, the function throws a [COleException](../../mfc/reference/coleexception-class.md) by calling [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
+### <a name="remarks"></a>Comentarios  
+ Si se produce un error, la función produce una excepción. Si el valor `SCODE` es **E_OUTOFMEMORY**, la función produce una [CMemoryException](../../mfc/reference/cmemoryexception-class.md) mediante una llamada a [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). En caso contrario, la función produce una [COleException](../../mfc/reference/coleexception-class.md) mediante una llamada a [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
   
- This function can be used to check the return values of calls to OLE functions in your application. By testing the return value with this function in your application, you can properly react to error conditions with a minimal amount of code.  
+ Esta función puede utilizarse para comprobar los valores devueltos de las llamadas a funciones OLE en la aplicación. Al probar el valor devuelto con esta función en la aplicación, pueden reaccionar correctamente ante situaciones de error con una cantidad mínima de código.  
   
 > [!NOTE]
->  This function has the same effect in debug and non-debug builds.  
+>  Esta función tiene el mismo efecto en versiones de depuración y las compilaciones de depuración no.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCOleContainer#33](../../mfc/codesnippet/cpp/diagnostic-services_10.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFCOleContainer Nº 33](../../mfc/codesnippet/cpp/diagnostic-services_10.cpp)]  
 
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h
 
-##  <a name="afxcheckmemory"></a>  AfxCheckMemory  
- This function validates the free memory pool and prints error messages as required.  
+##  <a name="afxcheckmemory"></a>AfxCheckMemory  
+ Esta función valida el bloque de memoria libre e imprime los mensajes de error según sea necesario.  
   
 ```   
 BOOL  AfxCheckMemory(); 
 ```  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if no memory errors; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si no hay errores de memoria; en caso contrario es 0.  
   
-### <a name="remarks"></a>Remarks  
- If the function detects no memory corruption, it prints nothing.  
+### <a name="remarks"></a>Comentarios  
+ Si la función detecta que no hay daños en la memoria, se imprime nada.  
   
- All memory blocks currently allocated on the heap are checked, including those allocated by **new** but not those allocated by direct calls to underlying memory allocators, such as the `malloc` function or the **GlobalAlloc** Windows function. If any block is found to be corrupted, a message is printed to the debugger output.  
+ Se comprueban todos los bloques de memoria asignados actualmente en el montón, las asignadas por incluidas **nueva** pero no las asignada por llamadas directas a los asignadores de memoria subyacente, como el `malloc` función o la **GlobalAlloc** la función de Windows. Si se encuentra cualquier bloque que está dañado, se imprime un mensaje en la salida del depurador.  
   
- If you include the line  
+ Si incluye la línea  
   
- [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample #14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]  
   
- in a program module, then subsequent calls to `AfxCheckMemory` show the filename and line number where the memory was allocated.  
+ en un módulo de programa, las llamadas posteriores, a continuación, al `AfxCheckMemory` mostrar el nombre de archivo y número de línea donde se asignó la memoria.  
   
 > [!NOTE]
->  If your module contains one or more implementations of serializable classes, then you must put the `#define` line after the last `IMPLEMENT_SERIAL` macro call.  
+>  Si el módulo contiene una o varias implementaciones de las clases serializables, debe colocar la `#define` línea después de la última `IMPLEMENT_SERIAL` llamada de macro.  
   
- This function works only in the Debug version of MFC.  
+ Esta función solo funciona en la versión de depuración de MFC.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCCObjectSample#26](../../mfc/codesnippet/cpp/diagnostic-services_11.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[26 de # NVC_MFCCObjectSample](../../mfc/codesnippet/cpp/diagnostic-services_11.cpp)]  
 
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h  
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h  
  
-##  <a name="afxdump"></a>  AfxDump (MFC)  
- Call this function while in the debugger to dump the state of an object while debugging.  
+##  <a name="afxdump"></a>AfxDump (MFC)  
+ Llame a esta función en el depurador para volcar el estado de un objeto durante la depuración.  
   
 ```   
 void AfxDump(const CObject* pOb); 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pOb`  
- A pointer to an object of a class derived from `CObject`.  
+ Un puntero a un objeto de una clase derivada de `CObject`.  
   
-### <a name="remarks"></a>Remarks  
- **AfxDump** calls an object's `Dump` member function and sends the information to the location specified by the `afxDump` variable. **AfxDump** is available only in the Debug version of MFC.  
+### <a name="remarks"></a>Comentarios  
+ **AfxDump** llama a un objeto `Dump` función miembro y envía la información a la ubicación especificada por el `afxDump` variable. **AfxDump** solo está disponible en la versión de depuración de MFC.  
   
- Your program code should not call **AfxDump**, but should instead call the `Dump` member function of the appropriate object.  
+ El código del programa no debe llamar a **AfxDump**, pero en su lugar, debe llamar a la `Dump` función de miembro del objeto correspondiente.  
 
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h  
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h  
 
-### <a name="see-also"></a>See Also  
+### <a name="see-also"></a>Vea también  
  [CObject::Dump](cobject-class.md#dump)   
 
 
   
-##  <a name="afxdumpstack"></a>  AfxDumpStack  
- This global function can be used to generate an image of the current stack.  
+##  <a name="afxdumpstack"></a>AfxDumpStack  
+ Esta función global puede utilizarse para generar una imagen de la pila actual.  
   
 ```   
 void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT); 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *dwTarget*  
- Indicates the target of the dump output. Possible values, which can be combined using the bitwise-OR ( **&#124;**) operator, are as follows:  
+ Indica el destino de la salida de volcado de memoria. Posibles valores, que se pueden combinar con la operación bit a bit OR ( **|**) (operador), son los siguientes:  
   
-- **AFX_STACK_DUMP_TARGET_TRACE** Sends output by means of the [TRACE](#trace) macro. The **TRACE** macro generates output in debug builds only; it generates no output in release builds. Also, **TRACE** can be redirected to other targets besides the debugger.  
+- **AFX_STACK_DUMP_TARGET_TRACE** envía los resultados por medio de la [seguimiento](#trace) macro. El **seguimiento** macro genera salida en las compilaciones de depuración solo; no se genera ningún resultado en versiones de lanzamiento. Además, **seguimiento** puede redirigirse a otros destinos además el depurador.  
   
-- **AFX_STACK_DUMP_TARGET_DEFAULT** Sends dump output to the default target. For a debug build, output goes to the **TRACE** macro. In a release build, output goes to the Clipboard.  
+- **AFX_STACK_DUMP_TARGET_DEFAULT** envía vuelque el resultado en el destino predeterminado. Para una compilación de depuración, la salida se dirige a la **seguimiento** macro. En una versión de lanzamiento, resultado se pasa en el Portapapeles.  
   
-- **AFX_STACK_DUMP_TARGET_CLIPBOARD** Sends output to the Clipboard only. The data is placed on the Clipboard as plain text using the **CF_TEXT** Clipboard format.  
+- **AFX_STACK_DUMP_TARGET_CLIPBOARD** envía los resultados en el Portapapeles únicamente. Los datos se colocan en el Portapapeles como texto sin formato mediante la **CF_TEXT** formato del Portapapeles.  
   
-- **AFX_STACK_DUMP_TARGET_BOTH** Sends output to the Clipboard and to the **TRACE** macro, simultaneously.  
+- **AFX_STACK_DUMP_TARGET_BOTH** envía los resultados en el Portapapeles y a la **seguimiento** macro, al mismo tiempo.  
   
-- **AFX_STACK_DUMP_TARGET_ODS** Sends output directly to the debugger by means of the Win32 function **OutputDebugString()**. This option will generate debugger output in both debug and release builds when a debugger is attached to the process. **AFX_STACK_DUMP_TARGET_ODS** always reaches the debugger (if it is attached) and cannot be redirected.  
+- **AFX_STACK_DUMP_TARGET_ODS** envía los resultados directamente al depurador por medio de la función de Win32 **OutputDebugString()**. Esta opción generará el resultado de la depuración en ambas versiones de depuración y lanzamiento cuando se adjunta un depurador al proceso. **AFX_STACK_DUMP_TARGET_ODS** siempre alcanza el depurador (si está conectado) y no se pueden redirigir.  
   
-### <a name="remarks"></a>Remarks  
- The example below reflects a single line of the output generated from calling `AfxDumpStack` from a button handler in an MFC dialog application:  
+### <a name="remarks"></a>Comentarios  
+ En el ejemplo siguiente refleja una sola línea de la salida generada de llamar al método `AfxDumpStack` de un controlador de botón en una aplicación de cuadro de diálogo MFC:  
   
  `=== begin AfxDumpStack output ===`  
   
@@ -608,82 +608,82 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
  `=== end AfxDumpStack() output ===`  
   
- Each line in the output above indicates the address of the last function call, the full path name of the module that contains the function call, and the function prototype called. If the function call on the stack does not happen at the exact address of the function, an offset of bytes is shown.  
+ Cada línea en la salida anterior indica la dirección de la última llamada de función, el nombre de ruta de acceso completa del módulo que contiene la llamada de función y el prototipo de función que llama. Si la llamada de función en la pila no se realiza en la dirección exacta de la función, se muestra un desplazamiento de bytes.  
   
- For example, the following table describes the first line of the above output:  
+ Por ejemplo, en la tabla siguiente se describen la primera línea de la salida anterior:  
   
-|Output|Description|  
+|Salida|Descripción|  
 |------------|-----------------|  
-|`00427D55:`|The return address of the last function call.|  
-|`DUMP2\DEBUG\DUMP2.EXE!`|The full path name of the module that contains the function call.|  
-|`void AfxDumpStack(unsigned long)`|The function prototype called.|  
-|`+ 181 bytes`|The offset in bytes from the address of the function prototype (in this case, `void AfxDumpStack(unsigned long)`) to the return address (in this case, `00427D55`).|  
+|`00427D55:`|La dirección de devolución de la última llamada de función.|  
+|`DUMP2\DEBUG\DUMP2.EXE!`|El nombre de ruta de acceso completa del módulo que contiene la llamada de función.|  
+|`void AfxDumpStack(unsigned long)`|El prototipo de función se llama.|  
+|`+ 181 bytes`|Desplazamiento en bytes de la dirección del prototipo de función (en este caso, `void AfxDumpStack(unsigned long)`) a la dirección de retorno (en este caso, `00427D55`).|  
   
- `AfxDumpStack` is available in debug and nondebug versions of the MFC libraries; however, the function is always linked statically, even when your executable file uses MFC in a shared DLL. In shared-library implementations, the function is found in the MFCS42.LIB library (and its variants).  
+ `AfxDumpStack`está disponible en versiones de depuración y nondebug de las bibliotecas MFC; Sin embargo, la función siempre está vinculada estáticamente, incluso cuando el archivo ejecutable utiliza MFC en un archivo DLL compartido. En implementaciones de biblioteca compartida, la función se encuentra en la MFCS42. Biblioteca LIB (y sus variantes).  
   
- To use this function successfully:  
+ Para usar esta función correctamente:  
   
--   The file IMAGEHLP.DLL must be on your path. If you do not have this DLL, the function will display an error message. See [Image Help Library](http://msdn.microsoft.com/library/windows/desktop/ms680321) for information on the function set provided by IMAGEHLP.  
+-   El archivo IMAGEHLP. Archivo DLL debe estar en la ruta de acceso. Si no tiene este archivo DLL, la función mostrará un mensaje de error. Vea [bibliotecas de Ayuda de imagen](http://msdn.microsoft.com/library/windows/desktop/ms680321) para obtener información sobre el conjunto de funciones proporcionado por IMAGEHLP.  
   
--   The modules that have frames on the stack must include debugging information. If they do not contain debugging information, the function will still generate a stack trace, but the trace will be less detailed.  
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h 
+-   Los módulos que tienen marcos en la pila deben incluir información de depuración. Si no contienen información de depuración, la función seguirá generando un seguimiento de pila, pero el seguimiento será menos detallado.  
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h 
 
-##  <a name="afxenablememoryleakdump"></a>  AfxEnableMemoryLeakDump  
- Enables and disables the memory leak dump in the `AFX_DEBUG_STATE` destructor.  
+##  <a name="afxenablememoryleakdump"></a>AfxEnableMemoryLeakDump  
+ Habilita y deshabilita el volcado de pérdida de memoria en el destructor `AFX_DEBUG_STATE` .  
   
 ```  
 BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `bDump`  
- `TRUE` indicates the memory leak dump is enabled; `FALSE` indicates the memory leak dump is disabled.  
+ `TRUE` indica que el volcado de pérdida de memoria está habilitado, mientras que `FALSE` indica que está deshabilitado.  
   
-### <a name="return-value"></a>Return Value  
- The previous value for this flag.  
+### <a name="return-value"></a>Valor devuelto  
+ Valor anterior de esta marca.  
   
-### <a name="remarks"></a>Remarks  
- When an application unloads the MFC library, the MFC library checks for memory leaks. At this point, any memory leaks are reported to the user through the **Debug** window of [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)].  
+### <a name="remarks"></a>Comentarios  
+ Cuando una aplicación descarga la biblioteca MFC, esta comprueba si hay pérdidas de memoria. En este momento, las pérdidas de memoria se notifican al usuario a través de la **depurar** ventana de [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)].  
   
- If your application loads another library before the MFC library, some memory allocations in that library will be incorrectly reported as memory leaks. False memory leaks can cause your application to close slowly as the MFC library reports them. In this case, use `AfxEnableMemoryLeakDump` to disable the memory leak dump.  
+ Si la aplicación carga otra biblioteca antes que la biblioteca MFC, algunas asignaciones de memoria de la biblioteca se notificarán incorrectamente como pérdidas de memoria. Las pérdidas de memoria falsas pueden hacer que la aplicación se cierre lentamente, ya que la biblioteca MFC las estará notificando. En este caso, use `AfxEnableMemoryLeakDump` para deshabilitar el volcado de pérdida de memoria.  
   
 > [!NOTE]
->  If you use this method to turn off the memory leak dump, you will not receive reports of valid memory leaks in your application. You should only use this method if you are confident that the memory leak report contains false memory leaks.  
+>  Si usa este método para desactivar el volcado de pérdida de memoria, no recibirá ningún informe de pérdidas de memoria válidas en la aplicación. Solo debe usar este método si está seguro de que el informe de pérdida de memoria contiene pérdidas de memoria falsas.  
 
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h 
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h 
 
-##  <a name="afxenablememorytracking"></a>  AfxEnableMemoryTracking  
- Diagnostic memory tracking is normally enabled in the Debug version of MFC.  
+##  <a name="afxenablememorytracking"></a>AfxEnableMemoryTracking  
+ Memoria para diagnósticos de seguimiento se activa normalmente en la versión de depuración de MFC.  
   
 ```   
 BOOL AfxEnableMemoryTracking(BOOL bTrack); 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *bTrack*  
- Setting this value to **TRUE** turns on memory tracking; **FALSE** turns it off.  
+ Establecer este valor en **TRUE** activa el seguimiento; de la memoria **FALSE** apaga el equipo.  
   
-### <a name="return-value"></a>Return Value  
- The previous setting of the tracking-enable flag.  
+### <a name="return-value"></a>Valor devuelto  
+ La configuración anterior de la marca de seguimiento a habilitar.  
   
-### <a name="remarks"></a>Remarks  
- Use this function to disable tracking on sections of your code that you know are allocating blocks correctly.  
+### <a name="remarks"></a>Comentarios  
+ Utilice esta función para deshabilitar el seguimiento en las secciones del código que sabe que son los bloques se asignan correctamente.  
   
- For more information on `AfxEnableMemoryTracking`, see [Debugging MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).  
+ Para obtener más información sobre `AfxEnableMemoryTracking`, consulte [depurar aplicaciones de MFC](/visualstudio/debugger/mfc-debugging-techniques).  
   
 > [!NOTE]
->  This function works only in the Debug version of MFC.  
+>  Esta función solo funciona en la versión de depuración de MFC.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_Utilities#24](../../mfc/codesnippet/cpp/diagnostic-services_12.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_Utilities #24](../../mfc/codesnippet/cpp/diagnostic-services_12.cpp)]  
   
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h 
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h 
 
-##  <a name="afxismemoryblock"></a>  AfxIsMemoryBlock  
- Tests a memory address to make sure it represents a currently active memory block that was allocated by the diagnostic version of **new**.  
+##  <a name="afxismemoryblock"></a>AfxIsMemoryBlock  
+ Comprueba una dirección de memoria para asegurarse de que representa un bloque de memoria activas actualmente que se asignó mediante la versión de diagnóstico de **nueva**.  
   
 ```   
 BOOL AfxIsMemoryBlock(
@@ -692,30 +692,30 @@ BOOL AfxIsMemoryBlock(
     LONG* plRequestNumber = NULL); 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `p`  
- Points to the block of memory to be tested.  
+ Apunta a un bloque de memoria se va a probar.  
   
  `nBytes`  
- Contains the length of the memory block in bytes.  
+ Contiene la longitud del bloque de memoria en bytes.  
   
  `plRequestNumber`  
- Points to a **long** integer that will be filled in with the memory block's allocation sequence number, or zero if it does not represent a currently active memory block.  
+ Apunta a un **largo** entero que se rellenará con el número de secuencia de asignación del bloque de memoria, o cero si no representa un bloque de memoria activas actualmente.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if the memory block is currently allocated and the length is correct; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si el bloque de memoria está asignado actualmente y la longitud es correcta; en caso contrario es 0.  
   
-### <a name="remarks"></a>Remarks  
- It also checks the specified size against the original allocated size. If the function returns nonzero, the allocation sequence number is returned in `plRequestNumber`. This number represents the order in which the block was allocated relative to all other **new** allocations.  
+### <a name="remarks"></a>Comentarios  
+ También comprueba el tamaño especificado en el tamaño de la asignación original. Si la función devuelve un valor distinto de cero, se devuelve el número de secuencia de asignación en `plRequestNumber`. Este número representa el orden en el que se asignó el bloque en relación con todos los demás **nueva** asignaciones.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_Utilities#27](../../mfc/codesnippet/cpp/diagnostic-services_13.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_Utilities #27](../../mfc/codesnippet/cpp/diagnostic-services_13.cpp)]  
   
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h 
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h 
 
-##  <a name="afxisvalidaddress"></a>  AfxIsValidAddress  
- Tests any memory address to ensure that it is contained entirely within the program's memory space.  
+##  <a name="afxisvalidaddress"></a>AfxIsValidAddress  
+ Pruebas de cualquier dirección de memoria para asegurarse de que se encuentra totalmente dentro de espacio de memoria del programa.  
   
 ```   
 BOOL AfxIsValidAddress(
@@ -724,32 +724,32 @@ BOOL AfxIsValidAddress(
     BOOL bReadWrite = TRUE); 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `lp`  
- Points to the memory address to be tested.  
+ Apunta a la dirección de memoria que se va a probar.  
   
  `nBytes`  
- Contains the number of bytes of memory to be tested.  
+ Contiene el número de bytes de memoria se va a probar.  
   
  *bReadWrite*  
- Specifies whether the memory is both for reading and writing ( **TRUE**) or just reading ( **FALSE**).  
+ Especifica si la memoria es tanto de lectura y escritura ( **TRUE**) o simplemente leyendo ( **FALSE**).  
   
-### <a name="return-value"></a>Return Value  
- In debug builds, nonzero if the specified memory block is contained entirely within the program's memory space; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ En las compilaciones de depuración, distinto de cero si el bloque de memoria especificado está dentro de completamente espacio de memoria del programa; en caso contrario es 0.  
   
- In non-debug builds, nonzero if `lp` is not NULL; otherwise 0.  
+ En las compilaciones de depuración no, distinto de cero si `lp` no es NULL; de lo contrario, 0.  
   
-### <a name="remarks"></a>Remarks  
- The address is not restricted to blocks allocated by **new**.  
+### <a name="remarks"></a>Comentarios  
+ La dirección no está restringida a bloques asignados por **nueva**.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_Utilities#28](../../mfc/codesnippet/cpp/diagnostic-services_14.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_Utilities #28](../../mfc/codesnippet/cpp/diagnostic-services_14.cpp)]  
   
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h 
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h 
 
-##  <a name="afxisvalidstring"></a>  AfxIsValidString  
- Use this function to determine whether a pointer to a string is valid.  
+##  <a name="afxisvalidstring"></a>AfxIsValidString  
+ Utilice esta función para determinar si un puntero a una cadena es válido.  
   
 ```   
 BOOL  AfxIsValidString(
@@ -757,59 +757,59 @@ BOOL  AfxIsValidString(
     int nLength = -1); 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `lpsz`  
- The pointer to test.  
+ Puntero que se va a probar.  
   
  `nLength`  
- Specifies the length of the string to be tested, in bytes. A value of -1 indicates that the string will be null-terminated.  
+ Especifica la longitud de la cadena que se va a probar, en bytes. Un valor de -1 indica que será la cadena terminada en null.  
   
-### <a name="return-value"></a>Return Value  
- In debug builds, nonzero if the specified pointer points to a string of the specified size; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ En las compilaciones de depuración, distinto de cero si el puntero especificado apunta a una cadena del tamaño especificado; en caso contrario es 0.  
   
- In non-debug builds, nonzero if `lpsz` is not NULL; otherwise 0.  
+ En las compilaciones de depuración no, distinto de cero si `lpsz` no es NULL; de lo contrario, 0.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFC_Utilities#29](../../mfc/codesnippet/cpp/diagnostic-services_15.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFC_Utilities #29](../../mfc/codesnippet/cpp/diagnostic-services_15.cpp)]  
 
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h 
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h 
 
-##  <a name="afxsetallochook"></a>  AfxSetAllocHook  
- Sets a hook that enables calling of the specified function before each memory block is allocated.  
+##  <a name="afxsetallochook"></a>AfxSetAllocHook  
+ Establece un enlace que permite llamar a la función especificada antes de que se asigna cada bloque de memoria.  
   
 ```   
 AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook); 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  *pfnAllocHook*  
- Specifies the name of the function to call. See the Remarks for the prototype of an allocation function.  
+ Especifica el nombre de la función se debe llamar. Vea la sección Comentarios para el prototipo de una función de asignación.  
   
-### <a name="return-value"></a>Return Value  
- Nonzero if you want to permit the allocation; otherwise 0.  
+### <a name="return-value"></a>Valor devuelto  
+ Es distinto de cero si desea permitir la asignación; en caso contrario es 0.  
   
-### <a name="remarks"></a>Remarks  
- The Microsoft Foundation Class Library debug-memory allocator can call a user-defined hook function to allow the user to monitor a memory allocation and to control whether the allocation is permitted. Allocation hook functions are prototyped as follows:  
+### <a name="remarks"></a>Comentarios  
+ El asignador de memoria de depuración de la biblioteca Microsoft Foundation Class puede llamar a una función de enlace definidos por el usuario para permitir al usuario para supervisar una asignación de memoria y para controlar si se permite la asignación. Funciones de enlace de asignación son un prototipo:  
   
  **BOOL AFXAPI AllocHook( size_t** `nSize`**, BOOL** `bObject`**, LONG** `lRequestNumber` **);**  
   
  `nSize`  
- The size of the proposed memory allocation.  
+ El tamaño de la asignación de memoria propuesto.  
   
  `bObject`  
- **TRUE** if the allocation is for a `CObject`-derived object; otherwise **FALSE**.  
+ **TRUE** si la asignación es para un `CObject`-objeto derivado; en caso contrario **FALSE**.  
   
  `lRequestNumber`  
- The memory allocation's sequence number.  
+ Número de secuencia de la asignación de memoria.  
   
- Note that the **AFXAPI** calling convention implies that the callee must remove the parameters from the stack.  
+ Tenga en cuenta que la **AFXAPI** convención de llamada implica que el destinatario debe quitar los parámetros de la pila.  
 
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h 
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h 
 
-##  <a name="afxdoforallclasses"></a>  AfxDoForAllClasses  
- Calls the specified iteration function for all serializable `CObject`-derived classes in the application's memory space.  
+##  <a name="afxdoforallclasses"></a>AfxDoForAllClasses  
+ Llama a la función de la iteración especificada para todos los serializable `CObject`-clases derivadas en el espacio de memoria de la aplicación.  
   
 ```   
 void  
@@ -818,29 +818,29 @@ AFXAPI AfxDoForAllClasses(
     void* pContext); 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pfn`  
- Points to an iteration function to be called for each class. The function arguments are a pointer to a `CRuntimeClass` object and a void pointer to extra data that the caller supplies to the function.  
+ Señala a una función de la iteración a llamarse para cada clase. Los argumentos de función son un puntero a un `CRuntimeClass` objeto y un puntero void para los datos adicionales que proporciona el autor de la llamada a la función.  
   
  `pContext`  
- Points to optional data that the caller can supply to the iteration function. This pointer can be **NULL**.  
+ Puntos de datos opcionales que puede proporcionar el autor de la llamada a la función de la iteración. Este puntero puede ser **NULL**.  
   
-### <a name="remarks"></a>Remarks  
- Serializable `CObject`-derived classes are classes derived using the `DECLARE_SERIAL` macro. The pointer that is passed to `AfxDoForAllClasses` in `pContext` is passed to the specified iteration function each time it is called.  
+### <a name="remarks"></a>Comentarios  
+ Serializable `CObject`-clases derivadas son clases derivadas usando la `DECLARE_SERIAL` macro. El puntero que se pasa a `AfxDoForAllClasses` en `pContext` se pasa a la función de la iteración especificada cada vez que se llama.  
   
 > [!NOTE]
->  This function works only in the Debug version of MFC.  
+>  Esta función solo funciona en la versión de depuración de MFC.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCCollections#113](../../mfc/codesnippet/cpp/diagnostic-services_16.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFCCollections #113](../../mfc/codesnippet/cpp/diagnostic-services_16.cpp)]  
   
- [!code-cpp[NVC_MFCCollections#114](../../mfc/codesnippet/cpp/diagnostic-services_17.cpp)]  
+ [!code-cpp[NVC_MFCCollections #114](../../mfc/codesnippet/cpp/diagnostic-services_17.cpp)]  
   
-### <a name="requirements"></a>Requirements  
- **Header:** afx.h 
+### <a name="requirements"></a>Requisitos  
+ **Encabezado:** afx.h 
 
-##  <a name="afxdoforallobjects"></a>  AfxDoForAllObjects  
- Executes the specified iteration function for all objects derived from `CObject` that have been allocated with **new**.  
+##  <a name="afxdoforallobjects"></a>AfxDoForAllObjects  
+ Ejecuta la función de la iteración especificada para todos los objetos derivan de `CObject` que hayan sido asignadas con **nueva**.  
   
 ```   
 void AfxDoForAllObjects(
@@ -848,23 +848,23 @@ void AfxDoForAllObjects(
     void* pContext); 
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pfn`  
- Points to an iteration function to execute for each object. The function arguments are a pointer to a `CObject` and a void pointer to extra data that the caller supplies to the function.  
+ Señala a una función de iteración que se ejecuta para cada objeto. Los argumentos de función son un puntero a un `CObject` y un puntero void a los datos adicionales que proporciona el autor de la llamada a la función.  
   
  `pContext`  
- Points to optional data that the caller can supply to the iteration function. This pointer can be **NULL**.  
+ Puntos de datos opcionales que puede proporcionar el autor de la llamada a la función de la iteración. Este puntero puede ser **NULL**.  
   
-### <a name="remarks"></a>Remarks  
- Stack, global, or embedded objects are not enumerated. The pointer passed to `AfxDoForAllObjects` in `pContext` is passed to the specified iteration function each time it is called.  
+### <a name="remarks"></a>Comentarios  
+ No se enumeran la pila, de forma global, o los objetos incrustados. El puntero se pasa a `AfxDoForAllObjects` en `pContext` se pasa a la función de la iteración especificada cada vez que se llama.  
   
 > [!NOTE]
->  This function works only in the Debug version of MFC.  
+>  Esta función solo funciona en la versión de depuración de MFC.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCCollections#115](../../mfc/codesnippet/cpp/diagnostic-services_18.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFCCollections #115](../../mfc/codesnippet/cpp/diagnostic-services_18.cpp)]  
   
- [!code-cpp[NVC_MFCCollections#116](../../mfc/codesnippet/cpp/diagnostic-services_19.cpp)]  
+ [!code-cpp[NVC_MFCCollections #116](../../mfc/codesnippet/cpp/diagnostic-services_19.cpp)]  
   
-## <a name="see-also"></a>See Also  
- [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>Vea también  
+ [Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)

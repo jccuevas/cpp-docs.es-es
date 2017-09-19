@@ -1,5 +1,5 @@
 ---
-title: CMFCPrintPreviewToolBar Class | Microsoft Docs
+title: Clase CMFCPrintPreviewToolBar | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,8 +11,10 @@ ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCPrintPreviewToolBar class [MFC]
-- CMFCPrintPreviewToolBar class [MFC], destructor
+- CMFCPrintPreviewToolBar class
+- CMFCPrintPreviewToolBar class, destructor
+- CMFCPrintPreviewToolBar::GetThisClass method
+- ~CMFCPrintPreviewToolBar destructor
 ms.assetid: 7b9f641b-d402-4339-8815-e5247237e7e5
 caps.latest.revision: 20
 author: mikeblome
@@ -32,39 +34,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: b193f4801de9500576e048a9cb321745f5c0a2b4
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 56cfa9460448db47330d87410d5aad589a9127c2
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 03/17/2017
 
 ---
-# <a name="cmfcprintpreviewtoolbar-class"></a>CMFCPrintPreviewToolBar Class
-The toolbar on the print preview.  
+# <a name="cmfcprintpreviewtoolbar-class"></a>Clase CMFCPrintPreviewToolBar
+La barra de herramientas en la vista previa de impresión.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CMFCPrintPreviewToolBar : public CMFCToolBar  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
 |||  
 |-|-|  
-|Name|Description|  
+|Nombre|Descripción|  
 |`CMFCPrintPreviewToolBar::~CMFCPrintPreviewToolBar`|Destructor.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
 |||  
 |-|-|  
-|Name|Description|  
-|`CMFCPrintPreviewToolBar::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|Nombre|Descripción|  
+|`CMFCPrintPreviewToolBar::GetThisClass`|Usar el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -81,10 +83,10 @@ class CMFCPrintPreviewToolBar : public CMFCToolBar
   
  [CMFCPrintPreviewToolBar](../../mfc/reference/cmfcprintpreviewtoolbar-class.md)  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxpreviewviewex.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxpreviewviewex.h  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [Clases](../../mfc/reference/mfc-classes.md)
 

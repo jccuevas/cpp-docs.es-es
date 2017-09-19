@@ -1,5 +1,5 @@
 ---
-title: CClientDC Class | Microsoft Docs
+title: CClientDC (clase) | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,8 +16,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CClientDC [MFC], CClientDC
-- CClientDC [MFC], m_hWnd
+- CClientDC class
+- device contexts, client area
+- client-area device context
+- CDC class, device contexts for client areas
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
 caps.latest.revision: 22
 author: mikeblome
@@ -37,86 +39,86 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: d3948274f1862de8f5cc8191140940ed97cdb02c
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 619bed4d31994bde8464ad710e9f050d6ba0696a
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cclientdc-class"></a>CClientDC Class
-Takes care of calling the Windows functions [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) at construction time and [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) at destruction time.  
+# <a name="cclientdc-class"></a>CClientDC (clase)
+Se encarga de llamar a las funciones de Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) en tiempo de construcción y [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) en tiempo de destrucción.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CClientDC : public CDC  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CClientDC::CClientDC](#cclientdc)|Constructs a `CClientDC` object connected to the `CWnd`.|  
+|[CClientDC::CClientDC](#cclientdc)|Construye un `CClientDC` objeto conectado a la `CWnd`.|  
   
-### <a name="protected-data-members"></a>Protected Data Members  
+### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CClientDC::m_hWnd](#m_hwnd)|The `HWND` of the window for which this `CClientDC` is valid.|  
+|[CClientDC::m_hWnd](#m_hwnd)|El `HWND` de la ventana para el que este `CClientDC` es válida.|  
   
-## <a name="remarks"></a>Remarks  
- This means that the device context associated with a `CClientDC` object is the client area of a window.  
+## <a name="remarks"></a>Comentarios  
+ Esto significa que el contexto de dispositivo asociado con un `CClientDC` objeto es el área de cliente de una ventana.  
   
- For more information on `CClientDC`, see [Device Contexts](../../mfc/device-contexts.md).  
+ Para obtener más información sobre `CClientDC`, consulte [contextos de dispositivo](../../mfc/device-contexts.md).  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CDC](../../mfc/reference/cdc-class.md)  
   
  `CClientDC`  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxwin.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxwin.h  
   
-##  <a name="cclientdc"></a>  CClientDC::CClientDC  
- Constructs a `CClientDC` object that accesses the client area of the [CWnd](../../mfc/reference/cwnd-class.md) pointed to by `pWnd`.  
+##  <a name="cclientdc"></a>CClientDC::CClientDC  
+ Construye un `CClientDC` objeto que tiene acceso al área cliente de la [CWnd](../../mfc/reference/cwnd-class.md) señala `pWnd`.  
   
 ```  
 explicit CClientDC(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pWnd`  
- The window whose client area the device context object will access.  
+ La ventana cuyo área de cliente que tendrá acceso el objeto de contexto de dispositivo.  
   
-### <a name="remarks"></a>Remarks  
- The constructor calls the Windows function [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
+### <a name="remarks"></a>Comentarios  
+ El constructor llama a la función de Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
   
- An exception (of type `CResourceException`) is thrown if the Windows `GetDC` call fails. A device context may not be available if Windows has already allocated all of its available device contexts. Your application competes for the five common display contexts available at any given time under Windows.  
+ Una excepción (de tipo `CResourceException`) se produce si Windows `GetDC` llamada produce un error. Un contexto de dispositivo no esté disponible si Windows ya asignado todos sus contextos de dispositivo disponible. La aplicación compite por los cinco comunes contextos de presentación disponibles en cualquier momento en Windows.  
   
-### <a name="example"></a>Example  
- [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_MFCDocView&#42;](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
   
-##  <a name="m_hwnd"></a>  CClientDC::m_hWnd  
- The `HWND` of the `CWnd` pointer used to construct the `CClientDC` object.  
+##  <a name="m_hwnd"></a>CClientDC::m_hWnd  
+ El `HWND` de la `CWnd` puntero utilizado para construir el `CClientDC` objeto.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
-### <a name="remarks"></a>Remarks  
- `m_hWnd` is a protected variable.  
+### <a name="remarks"></a>Comentarios  
+ `m_hWnd`es una variable protegida.  
   
-### <a name="example"></a>Example  
-  See the example for [CClientDC::CClientDC](#cclientdc).  
+### <a name="example"></a>Ejemplo  
+  Vea el ejemplo de [CClientDC::CClientDC](#cclientdc).  
   
-## <a name="see-also"></a>See Also  
- [MFC Sample MDI](../../visual-cpp-samples.md)   
- [CDC Class](../../mfc/reference/cdc-class.md)   
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [CDC Class](../../mfc/reference/cdc-class.md)
+## <a name="see-also"></a>Vea también  
+ [Ejemplo MDI de MFC](../../visual-cpp-samples.md)   
+ [CDC (clase)](../../mfc/reference/cdc-class.md)   
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [CDC (clase)](../../mfc/reference/cdc-class.md)
 

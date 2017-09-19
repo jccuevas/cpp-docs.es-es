@@ -5,11 +5,52 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- cpp-standard-libraries
+- devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <shared_mutex>", "shared_mutex/std::swap", "shared_mutex/std::shared_lock", "shared_mutex/std::shared_lock::shared_lock", "shared_mutex/std::shared_lock::operator=", "shared_mutex/std::shared_lock::operator =", "shared_mutex/std::shared_lock::lock", "shared_mutex/std::shared_lock::try_lock", "shared_mutex/std::shared_lock::try_lock_for", "shared_mutex/std::shared_lock::try_lock_until", "shared_mutex/std::shared_lock::unlock", "shared_mutex/std::shared_lock::swap", "shared_mutex/std::shared_lock::release", "shared_mutex/std::shared_lock::owns_lock", "shared_mutex/std::shared_lock::operator bool", "shared_mutex/std::shared_lock::mutex", "shared_mutex/std::shared_mutex", "shared_mutex/std::shared_mutex::native_handle_type", "shared_mutex/std::shared_mutex::shared_mutex", "shared_mutex/std::shared_mutex::operator=", "shared_mutex/std::shared_mutex::operator =", "shared_mutex/std::shared_mutex::lock", "shared_mutex/std::shared_mutex::try_lock", "shared_mutex/std::shared_mutex::unlock", "shared_mutex/std::shared_mutex::lock_shared", "shared_mutex/std::shared_mutex::try_lock_shared", "shared_mutex/std::shared_mutex::unlock_shared", "shared_mutex/std::shared_mutex::native_handle", "shared_mutex/std::shared_timed_mutex", "shared_mutex/std::shared_timed_mutex::shared_timed_mutex", "shared_mutex/std::shared_timed_mutex::operator=", "shared_mutex/std::shared_timed_mutex::operator =", "shared_mutex/std::shared_timed_mutex::lock", "shared_mutex/std::shared_timed_mutex::try_lock", "shared_mutex/std::shared_timed_mutex::try_lock_for", "shared_mutex/std::shared_timed_mutex::try_lock_until", "shared_mutex/std::shared_timed_mutex::unlock", "shared_mutex/std::shared_timed_mutex::lock_shared", "shared_mutex/std::shared_timed_mutex::try_lock_shared", "shared_mutex/std::shared_timed_mutex::try_lock_shared_for", "shared_mutex/std::shared_timed_mutex::try_lock_shared_until", "shared_mutex/std::shared_timed_mutex::unlock_shared
+- <shared_mutex>
+- shared_mutex/std::swap
+- shared_mutex/std::shared_lock
+- shared_mutex/std::shared_lock::shared_lock
+- shared_mutex/std::shared_lock::operator=
+- shared_mutex/std::shared_lock::operator =
+- shared_mutex/std::shared_lock::lock
+- shared_mutex/std::shared_lock::try_lock
+- shared_mutex/std::shared_lock::try_lock_for
+- shared_mutex/std::shared_lock::try_lock_until
+- shared_mutex/std::shared_lock::unlock
+- shared_mutex/std::shared_lock::swap
+- shared_mutex/std::shared_lock::release
+- shared_mutex/std::shared_lock::owns_lock
+- shared_mutex/std::shared_lock::operator bool
+- shared_mutex/std::shared_lock::mutex
+- shared_mutex/std::shared_mutex
+- shared_mutex/std::shared_mutex::native_handle_type
+- shared_mutex/std::shared_mutex::shared_mutex
+- shared_mutex/std::shared_mutex::operator=
+- shared_mutex/std::shared_mutex::operator =
+- shared_mutex/std::shared_mutex::lock
+- shared_mutex/std::shared_mutex::try_lock
+- shared_mutex/std::shared_mutex::unlock
+- shared_mutex/std::shared_mutex::lock_shared
+- shared_mutex/std::shared_mutex::try_lock_shared
+- shared_mutex/std::shared_mutex::unlock_shared
+- shared_mutex/std::shared_mutex::native_handle
+- shared_mutex/std::shared_timed_mutex
+- shared_mutex/std::shared_timed_mutex::shared_timed_mutex
+- shared_mutex/std::shared_timed_mutex::operator=
+- shared_mutex/std::shared_timed_mutex::operator =
+- shared_mutex/std::shared_timed_mutex::lock
+- shared_mutex/std::shared_timed_mutex::try_lock
+- shared_mutex/std::shared_timed_mutex::try_lock_for
+- shared_mutex/std::shared_timed_mutex::try_lock_until
+- shared_mutex/std::shared_timed_mutex::unlock
+- shared_mutex/std::shared_timed_mutex::lock_shared
+- shared_mutex/std::shared_timed_mutex::try_lock_shared
+- shared_mutex/std::shared_timed_mutex::try_lock_shared_for
+- shared_mutex/std::shared_timed_mutex::try_lock_shared_until
+- shared_mutex/std::shared_timed_mutex::unlock_shared
 dev_langs:
 - C++
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
@@ -31,29 +72,29 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 00352c9bcf207b551c0a1a2c86bcc4c7c81e6e68
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: e864aca13c5ae83b3806a95026a05f8f408e9071
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltsharedmutexgt"></a>&lt;shared_mutex&gt;
-The <shared_mutex> header provides synchronization primitives for protection of shared data that can be accessed by multiple threads. In addition to the exclusive access control provided by mutex classes, the shared mutex classes also allow shared ownership by multiple threads for non-exclusive access. Shared mutexes can be used to control resources that can be read by several threads without causing a race condition, but must be written exclusively by a single thread.  
+El encabezado <shared_mutex> proporciona primitivas de sincronización para la protección de datos compartidos a los que pueden tener acceso varios subprocesos. Además del control de acceso exclusivo proporcionado por las clases mutex, las clases mutex compartidas también permiten la propiedad compartida por varios subprocesos para el acceso no exclusivo. Las exclusiones mutuas compartidas pueden usarse para controlar los recursos que varios subprocesos pueden leer sin causar una condición de carrera, pero se deben escribir exclusivamente por un único subproceso.  
   
- The header <shared_mutex> defines the classes `shared_mutex` and `shared_timed_mutex`, the template class `shared_lock`, and the template function `swap` for shared mutex support.  
+ El encabezado <shared_mutex> define las clases `shared_mutex` y `shared_timed_mutex`, la clase de plantilla `shared_lock` y la función de plantilla `swap` para el soporte de la exclusión mutua compartida.  
   
-|Classes|Description|  
+|Clases|Descripción|  
 |-------------|-----------------|  
-|[shared_mutex Class](../standard-library/shared-mutex.md#class_shared_mutex)|A shared mutex type that can be locked exclusively by one agent or shared non-exclusively by multiple agents.|  
-|[shared_timed_mutex Class](../standard-library/shared-mutex.md#class_shared_timed_mutex)|A shared timed mutex type that can be locked exclusively by one agent or shared non-exclusively by multiple agents.|  
-|[shared_lock Class](../standard-library/shared-mutex.md#class_shared_lock)|A template class that wraps a shared mutex to support timed lock operations and non-exclusive sharing by multiple agents.|  
+|[shared_mutex (Clase)](../standard-library/shared-mutex.md#class_shared_mutex)|Un tipo de exclusión mutua compartida que se puede bloquear de manera exclusiva por un agente o compartir de manera no exclusiva por varios agentes.|  
+|[shared_timed_mutex (Clase)](../standard-library/shared-mutex.md#class_shared_timed_mutex)|Un tipo de exclusión mutua compartida temporizada que se puede bloquear de manera exclusiva por un agente o compartir de manera no exclusiva por varios agentes.|  
+|[shared_lock (Clase)](../standard-library/shared-mutex.md#class_shared_lock)|Una clase de plantilla que contiene una exclusión mutua compartida para admitir operaciones de bloqueo temporizado y que se puede compartir de manera no exclusiva por varios agentes.|  
   
-|Functions|Description|  
+|Funciones|Descripción|  
 |---------------|-----------------|  
-|[swap](../standard-library/shared-mutex.md#function_swap)|Swaps the content of the shared mutex objects referenced by the function parameters.|  
+|[swap](../standard-library/shared-mutex.md#function_swap)|Intercambia el contenido de los objetos de exclusión mutua compartida al que hacen referencia los parámetros de función.|  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 namespace std {
@@ -66,34 +107,34 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 }
 ```  
   
-## <a name="remarks"></a>Remarks  
- An instance of the class `shared_mutex` is a *shared mutex type*, a type that controls the shared ownership of a mutex within a scope. A shared mutex type meets all the requirements of a mutex type, as well as members to support shared non-exclusive ownership.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia de la clase `shared_mutex` es un *tipo de exclusión mutua compartida*, un tipo que controla la propiedad compartida de una exclusión mutua dentro de un ámbito. Un tipo de exclusión mutua compartida cumple todos los requisitos de un tipo de exclusión mutua, así como los miembros para admitir la propiedad compartida no exclusiva.  
   
- A shared mutex type supports the additional methods `lock_shared`, `unlock_shared`, and `try_lock_shared`:  
+ Un tipo de exclusión mutua compartida admite los métodos adicionales `lock_shared`, `unlock_shared` y `try_lock_shared`:  
   
--   The `lock_shared` method blocks the calling thread until the thread obtains shared ownership of the mutex.  
+-   El método `lock_shared` bloquea el subproceso que realiza la llamada hasta que el subproceso obtenga la propiedad compartida de la exclusión mutua.  
   
--   The `unlock_shared` method releases shared ownership of the mutex held by the calling thread.  
+-   El método `unlock_shared` libera la propiedad compartida de la exclusión mutua del subproceso que llama.  
   
--   The `try_lock_shared` method tries to obtain shared ownership of the mutex without blocking. Its return type is convertible to `bool` and is `true` if the method obtains ownership, but is otherwise `false`.  
+-   El método `try_lock_shared` intenta obtener la propiedad compartida de la exclusión mutua sin bloquear. Su tipo de valor devuelto se puede convertir a `bool` y `true` si el método obtiene la propiedad, pero en caso contrario es `false`.  
   
- The class `shared_timed_mutex` is a *shared timed mutex type*, a type that meets the requirements of both a shared mutex type and a timed mutex type.  
+ La clase `shared_timed_mutex` es un *tipo de exclusión mutua compartida temporizada*, un tipo que cumple los requisitos de exclusión mutua compartida y de exclusión mutua temporizada.  
   
- A shared timed mutex type supports the additional methods `try_lock_shared_for` and `try_lock_shared_until`:  
+ Un tipo de exclusión mutua compartida temporizada admite los métodos adicionales `try_lock_shared_for` y `try_lock_shared_until`:  
   
--   The `try_lock_shared_for` method attempts to obtain shared ownership of the mutex until the duration specified by the parameter has passed. If the duration is not positive, the method is equivalent to `try_lock_shared`. The method does not return within the duration specified unless shared ownership is obtained. Its return value is `true` if the method obtains ownership, but is otherwise `false`.  
+-   El método `try_lock_shared_for` intenta obtener la propiedad compartida de la exclusión mutua hasta que haya transcurrido el tiempo especificado por el parámetro. Si la duración no es positiva, el método es equivalente a `try_lock_shared`. El método no devuelve dentro de la duración especificada, a menos que se obtenga la propiedad compartida. Su valor devuelto es `true` si el método obtiene la propiedad, pero en caso contrario es `false`.  
   
--   The `try_lock_shared_until` method attempts to obtain shared ownership of the mutex until the specified absolute time has passed. If the specified time has already passed, the method is equivalent to `try_lock_shared`. The method does not return before the time specified unless shared ownership is obtained. Its return value is `true` if the method obtains ownership, but is otherwise `false`.  
+-   El método `try_lock_shared_until` intenta obtener la propiedad compartida de la exclusión mutua hasta que haya transcurrido el tiempo absoluto especificado. Si ya ha pasado el tiempo especificado, el método es equivalente a `try_lock_shared`. El método no devuelve antes del tiempo especificado, a menos que se obtenga la propiedad compartida. Su valor devuelto es `true` si el método obtiene la propiedad, pero en caso contrario es `false`.  
   
- The `shared_lock` template class extends support for timed locking and transfer of ownership to a shared mutex. Ownership of the mutex may be obtained at or after construction, and may be transferred to another `shared_lock` object. Objects of type `shared_lock` can be moved, but not copied.  
+ La clase de plantilla `shared_lock` extiende el soporte para el bloqueo temporizado y transfiere la propiedad a una exclusión mutua compartida. La propiedad de la exclusión mutua puede obtenerse en el momento de la construcción o después, y se puede transferir a otro objeto `shared_lock`. Los objetos de tipo `shared_lock` se pueden mover pero no copiar.  
   
 > [!WARNING]
->  Beginning in Visual Studio 2015, the C++ Standard Library synchronization types are based on Windows synchronization primitives and no longer use ConcRT (except when the target platform is Windows XP). The types defined in <shared_mutex> should not be used with any ConcRT types or functions.  
+>  A partir de Visual Studio 2015, los tipos de sincronización de la biblioteca estándar de C++ se basan en los primitivos de sincronización de Windows y ya no utilizan ConcRT (salvo cuando la plataforma de destino es Windows XP). Los tipos definidos en <shared_mutex> no deben usarse con ninguna función o tipo ConcRT.  
   
-## <a name="classes"></a>Classes  
+## <a name="classes"></a>Clases  
   
-###  <a name="class_shared_mutex"></a> shared_mutex Class  
- Class `shared_mutex` implements a non-recursive mutex with shared ownership semantics.  
+###  <a name="class_shared_mutex"></a> shared_mutex (Clase)  
+ La clase `shared_mutex` implementa una exclusión mutua no recursiva con la semántica de propiedad compartida.  
   
 ```cpp  
 class shared_mutex {
@@ -118,8 +159,8 @@ class shared_mutex {
    };  
 ```
 
-###  <a name="class_shared_timed_mutex"></a> shared_timed_mutex Class  
- Class `shared_timed_mutex` implements a non-recursive mutex with shared ownership semantics that meets the requirements of a timed mutex type.  
+###  <a name="class_shared_timed_mutex"></a> shared_timed_mutex (Clase)  
+ La clase `shared_timed_mutex` implementa una exclusión mutua no recursiva con la semántica de propiedad compartida que cumpla los requisitos de un tipo de exclusión mutua temporizada.  
   
 ```cpp  
 class shared_timed_mutex {
@@ -149,8 +190,8 @@ class shared_timed_mutex {
    };  
 ```
 
-###  <a name="class_shared_lock"></a> shared_lock Class  
- Template class `shared_lock` controls the shared ownership of a shared mutex object within a scope. The template parameter must be a shared mutex type.  
+###  <a name="class_shared_lock"></a> shared_lock (Clase)  
+ La clase de plantilla `shared_lock` controla la propiedad compartida de un objeto de exclusión mutua compartida dentro de un ámbito. El parámetro de plantilla debe ser un tipo de exclusión mutua compartida.  
 
 ```cpp  
 class shared_lock {
@@ -194,25 +235,25 @@ class shared_lock {
    };  
 ```
 
-## <a name="functions"></a>Functions  
+## <a name="functions"></a>Funciones  
   
-###  <a name="function_swap"></a> swap
- Swaps the `shared_lock` objects.  
+###  <a name="function_swap"></a>swap
+ Intercambia los objetos `shared_lock`.  
   
 ```cpp  
 template <class Mutex>
 void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 ```  
   
- Exchanges the content of two `shared_lock` objects. Effectively the same as `x.swap(y)`.  
+ Intercambia el contenido de dos objetos `shared_lock`. De forma efectiva es igual que `x``.swap(``y``)`.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<shared_mutex>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<shared_mutex>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
 

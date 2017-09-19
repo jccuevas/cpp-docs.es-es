@@ -1,5 +1,5 @@
 ---
-title: CMFCKeyMapDialog Class | Microsoft Docs
+title: Clase CMFCKeyMapDialog | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,16 +24,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCKeyMapDialog [MFC], CMFCKeyMapDialog
-- CMFCKeyMapDialog [MFC], DoModal
-- CMFCKeyMapDialog [MFC], FormatItem
-- CMFCKeyMapDialog [MFC], GetCommandKeys
-- CMFCKeyMapDialog [MFC], OnInsertItem
-- CMFCKeyMapDialog [MFC], OnPrintHeader
-- CMFCKeyMapDialog [MFC], OnPrintItem
-- CMFCKeyMapDialog [MFC], OnSetColumns
-- CMFCKeyMapDialog [MFC], PrintKeyMap
-- CMFCKeyMapDialog [MFC], SetColumnsWidth
+- CMFCKeyMapDialog class
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
 caps.latest.revision: 26
 author: mikeblome
@@ -53,55 +44,55 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 53142cc9536fdea778e9725378415e2c44be3042
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 6599f5c3cda6eb407f4545d42528c1c68950b94c
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog Class
-The `CMFCKeyMapDialog` class supports a control that maps commands to keys on the keyboard.  
+# <a name="cmfckeymapdialog-class"></a>Clase CMFCKeyMapDialog
+La `CMFCKeyMapDialog` clase es compatible con un control que asigna comandos a teclas del teclado.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CMFCKeyMapDialog : public CDialogEx  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCKeyMapDialog::CMFCKeyMapDialog](#cmfckeymapdialog)|Constructs a `CMFCKeyMapDialog` object.|  
+|[CMFCKeyMapDialog::CMFCKeyMapDialog](#cmfckeymapdialog)|Construye un objeto `CMFCKeyMapDialog`.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCKeyMapDialog::DoModal](#domodal)|Displays a keyboard mapping dialog box.|  
+|[CMFCKeyMapDialog::DoModal](#domodal)|Muestra un cuadro de diálogo de asignación de teclado.|  
   
-### <a name="protected-methods"></a>Protected Methods  
+### <a name="protected-methods"></a>Métodos protegidos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCKeyMapDialog::FormatItem](#formatitem)|Called by the framework to build a string that describes a key mapping. By default, the string contains the command name, the shortcut keys used, and the shortcut key description.|  
-|[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Retrieves a string that contains a list of shortcut keys associated with the specified command.|  
-|[CMFCKeyMapDialog::OnInsertItem](#oninsertitem)|Called by the framework before a new item is inserted into the internal list control that supports the keyboard mapping control.|  
-|[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)|Called by the framework to print the header for the keyboard map on a new page.|  
-|[CMFCKeyMapDialog::OnPrintItem](#onprintitem)|Called by the framework to print a keyboard mapping item.|  
-|[CMFCKeyMapDialog::OnSetColumns](#onsetcolumns)|Called by the framework to set captions for the columns in the internal list control that supports the keyboard mapping control.|  
-|[CMFCKeyMapDialog::PrintKeyMap](#printkeymap)|Called by the framework when a user clicks the **Print** button.|  
-|[CMFCKeyMapDialog::SetColumnsWidth](#setcolumnswidth)|Called by the framework to set the width of the columns in the internal list control that supports the keyboard mapping control.|  
+|[CMFCKeyMapDialog::FormatItem](#formatitem)|Llamado por el marco de trabajo para generar una cadena que describe una asignación de claves. De forma predeterminada, la cadena contiene el nombre de comando, utiliza las teclas de método abreviado y la descripción de la clave de acceso directo.|  
+|[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Recupera una cadena que contiene una lista de teclas de método abreviado asociada con el comando especificado.|  
+|[CMFCKeyMapDialog::OnInsertItem](#oninsertitem)|Llamado por el marco antes de inserta un nuevo elemento en el control de lista interna que admite el control de asignación de teclado.|  
+|[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)|Llamado por el marco de trabajo para imprimir el encabezado para la asignación de teclado en una página nueva.|  
+|[CMFCKeyMapDialog::OnPrintItem](#onprintitem)|Llamado por el marco de trabajo para imprimir un elemento de asignación de teclado.|  
+|[CMFCKeyMapDialog::OnSetColumns](#onsetcolumns)|Llamado por el marco para establecer los títulos de las columnas en el control de lista interna que admite el control de asignación de teclado.|  
+|[CMFCKeyMapDialog::PrintKeyMap](#printkeymap)|Llamado por el marco cuando un usuario hace clic en el **imprimir** botón.|  
+|[CMFCKeyMapDialog::SetColumnsWidth](#setcolumnswidth)|Llamado por el marco para establecer el ancho de las columnas en el control de lista interna que admite el control de asignación de teclado.|  
   
-## <a name="remarks"></a>Remarks  
- Use the `CMFCKeyMapDialog` class to implement a resizable keyboard mapping dialog box. The dialog box uses a list view control to display keyboard shortcuts and their associated commands.  
+## <a name="remarks"></a>Comentarios  
+ Utilice la `CMFCKeyMapDialog` clase para implementar un cuadro de diálogo de asignación de teclado de tamaño variable. El cuadro de diálogo, utiliza un control de vista de lista para mostrar métodos abreviados de teclado y sus comandos asociados.  
   
- To use the `CMFCKeyMapDialog` class in an application, pass in a pointer to the main frame window as a parameter to the `CMFCKeyMapDialog` constructor. Then call the `DoModal` method to start a modal dialog box.  
+ Usar el `CMFCKeyMapDialog` de clases en una aplicación, pase un puntero a la ventana de marco principal como un parámetro a la `CMFCKeyMapDialog` constructor. A continuación, llame el `DoModal` método para iniciar el cuadro de diálogo modal.  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -114,11 +105,11 @@ class CMFCKeyMapDialog : public CDialogEx
   
  [CMFCKeyMapDialog](../../mfc/reference/cmfckeymapdialog-class.md)  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxkeymapdialog.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxkeymapdialog.h  
   
-##  <a name="cmfckeymapdialog"></a>  CMFCKeyMapDialog::CMFCKeyMapDialog  
- Constructs a `CMFCKeyMapDialog` object.  
+##  <a name="cmfckeymapdialog"></a>CMFCKeyMapDialog::CMFCKeyMapDialog  
+ Construye un objeto `CMFCKeyMapDialog`.  
   
 ```  
 CMFCKeyMapDialog(
@@ -126,67 +117,67 @@ CMFCKeyMapDialog(
     BOOL bEnablePrint=FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pWndParentFrame`  
- A pointer to the parent window of the `CMFCKeyMapDialog` object.  
+ Un puntero a la ventana primaria de la `CMFCKeyMapDialog` objeto.  
   
  [in] `bEnablePrint`  
- `TRUE` if the list of accelerator keys can be printed; otherwise, `FALSE`. The default is `FALSE`.  
+ `TRUE`Si se puede imprimir la lista de teclas de aceleración; de lo contrario, `FALSE`. De manera predeterminada, es `FALSE`.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-### <a name="example"></a>Example  
- The following example demonstrates how to construct an object of the `CMFCKeyMapDialog` class. This example is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).  
+### <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo construir un objeto de la `CMFCKeyMapDialog` clase. Este ejemplo forma parte de la [ejemplo de demostración de Visual Studio](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]  
+ [!code-cpp[21 NVC_MFC_VisualStudioDemo](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]  
   
-##  <a name="domodal"></a>  CMFCKeyMapDialog::DoModal  
- Displays a keyboard mapping dialog box.  
+##  <a name="domodal"></a>CMFCKeyMapDialog::DoModal  
+ Muestra un cuadro de diálogo de asignación de teclado.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A signed integer, such as `IDOK` or `IDCANCEL`, that is passed to the [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog) method. The method, in turn, closes the dialog box. For more information, see [CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal).  
+### <a name="return-value"></a>Valor devuelto  
+ Un entero con signo, como `IDOK` o `IDCANCEL`, que se pasa a la [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog) método. El método, a su vez, cierra el cuadro de diálogo. Para obtener más información, consulte [CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal).  
   
-### <a name="remarks"></a>Remarks  
- The keyboard mapping dialog box enables you to select and assign accelerator keys to various categories of commands. In addition, you can copy the selected accelerator keys and their description to the clipboard.  
+### <a name="remarks"></a>Comentarios  
+ El cuadro de diálogo de asignación de teclado permite seleccionar y asignar teclas de aceleración a distintas categorías de comandos. Además, puede copiar las teclas de aceleración seleccionada y su descripción en el Portapapeles.  
   
-##  <a name="formatitem"></a>  CMFCKeyMapDialog::FormatItem  
- Called by the framework to build a string that describes a key mapping. By default, the string contains the command name, the shortcut keys used, and the shortcut key description.  
+##  <a name="formatitem"></a>CMFCKeyMapDialog::FormatItem  
+ Llamado por el marco de trabajo para generar una cadena que describe una asignación de claves. De forma predeterminada, la cadena contiene el nombre de comando, utiliza las teclas de método abreviado y la descripción de la clave de acceso directo.  
   
 ```  
 virtual CString FormatItem(int nItem) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `nItem`  
- The zero-based index of an item in the internal list of key mappings.  
+ Índice de base cero de un elemento de la lista interna de asignaciones de clave.  
   
-### <a name="return-value"></a>Return Value  
- A `CString` object that contains the formatted item text.  
+### <a name="return-value"></a>Valor devuelto  
+ Un `CString` objeto que contiene el texto del elemento con formato.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="getcommandkeys"></a>  CMFCKeyMapDialog::GetCommandKeys  
- Retrieves a string value. The string contains a list of shortcut keys that are associated with a specified command.  
+##  <a name="getcommandkeys"></a>CMFCKeyMapDialog::GetCommandKeys  
+ Recupera un valor de cadena. La cadena contiene una lista de teclas de método abreviado asociadas a un comando especificado.  
   
 ```  
 virtual CString GetCommandKeys(UINT uiCmdID) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `uiCmdID`  
- A command ID.  
+ Un identificador de comando.  
   
-### <a name="return-value"></a>Return Value  
- A semicolon-delimited (';') list of shortcut keys that is associated with the specified command.  
+### <a name="return-value"></a>Valor devuelto  
+ Delimitado por un punto y coma (';') lista de teclas de método abreviado asociada con el comando especificado.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="oninsertitem"></a>  CMFCKeyMapDialog::OnInsertItem  
- Called by the framework before a new item is inserted into an internal list control that supports the keyboard mapping control.  
+##  <a name="oninsertitem"></a>CMFCKeyMapDialog::OnInsertItem  
+ Llamado por el marco antes de inserta un nuevo elemento en un control de lista interna que admite el control de asignación de teclado.  
   
 ```  
 virtual void OnInsertItem(
@@ -194,17 +185,17 @@ virtual void OnInsertItem(
     int nItem);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pButton`  
- A pointer to a toolbar button that is used to map a keyboard key combination to a command name and description. The key map item is stored in an internal list control.  
+ Un puntero a un botón de barra de herramientas que se utiliza para asignar una combinación de teclas del teclado para un nombre de comando y una descripción. El elemento de mapa de claves se almacena en un control de lista interna.  
   
  [in] `nItem`  
- A zero-based index that specifies where to insert the new key map item in the internal list control.  
+ Índice de base cero que especifica dónde se debe insertar el nuevo elemento de mapa de claves en el control de lista interna.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="onprintheader"></a>  CMFCKeyMapDialog::OnPrintHeader  
- Called by the framework to print the header for the keyboard map on a new page.  
+##  <a name="onprintheader"></a>CMFCKeyMapDialog::OnPrintHeader  
+ Llamado por el marco de trabajo para imprimir el encabezado para la asignación de teclado en una página nueva.  
   
 ```  
 virtual int OnPrintHeader(
@@ -213,24 +204,24 @@ virtual int OnPrintHeader(
     int cx) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `dc`  
- The device context for the printer.  
+ El contexto de dispositivo para la impresora.  
   
  [in] `nPage`  
- The page number to print.  
+ Para imprimir el número de página.  
   
  [in] `cx`  
- The horizontal offset of the header, in pixels.  
+ El desplazamiento horizontal del encabezado, en píxeles.  
   
-### <a name="return-value"></a>Return Value  
- If successful, the height of the printed text. For more information, see the Return Value section of [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext).  
+### <a name="return-value"></a>Valor devuelto  
+ Si se realiza correctamente, el alto del texto impreso. Para obtener más información, consulte la sección de valor devuelto de [CDC:: DrawText](../../mfc/reference/cdc-class.md#drawtext).  
   
-### <a name="remarks"></a>Remarks  
- The framework uses this method to print the keyboard map. By default, this method prints the page number, application name, and dialog box title.  
+### <a name="remarks"></a>Comentarios  
+ El marco de trabajo utiliza este método para imprimir la asignación de teclado. De forma predeterminada, este método imprime el número de página, el nombre de aplicación y el título del cuadro de diálogo.  
   
-##  <a name="onprintitem"></a>  CMFCKeyMapDialog::OnPrintItem  
- Called by the framework to print a keyboard mapping item.  
+##  <a name="onprintitem"></a>CMFCKeyMapDialog::OnPrintItem  
+ Llamado por el marco de trabajo para imprimir un elemento de asignación de teclado.  
   
 ```  
 virtual int OnPrintItem(
@@ -241,60 +232,60 @@ virtual int OnPrintItem(
     BOOL bCalcHeight) const;  
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `dc`  
- The device context of the printer.  
+ El contexto de dispositivo de la impresora.  
   
  [in] `nItem`  
- The zero-based index of the item to print.  
+ Índice de base cero del elemento que se va a imprimir.  
   
  [in] `y`  
- The vertical offset between the top of the page and the position of the item.  
+ El desplazamiento vertical entre la parte superior de la página y la posición del elemento.  
   
  [in] `cx`  
- The horizontal offset between the left of the page and the position of the item.  
+ El desplazamiento horizontal entre la izquierda de la página y la posición del elemento.  
   
  [in] `bCalcHeight`  
- `TRUE` to calculate the best height for the print item; `FALSE` to truncate the print item so that it fits the default space.  
+ `TRUE`para calcular el alto mejor para el elemento de impresión; `FALSE` para truncar el elemento de impresión para que se ajuste el espacio predeterminado.  
   
-### <a name="return-value"></a>Return Value  
- The height of the printed item.  
+### <a name="return-value"></a>Valor devuelto  
+ Alto del elemento impreso.  
   
-### <a name="remarks"></a>Remarks  
- The framework calls this method to print a key map dialog box item. By default, this method prints the item's command name, shortcut keys, and command description.  
+### <a name="remarks"></a>Comentarios  
+ El marco de trabajo llama a este método para imprimir un elemento de cuadro de diálogo de mapa de claves. De forma predeterminada, este método imprime el nombre de comando del artículo, teclas de método abreviado y descripción del comando.  
   
-##  <a name="onsetcolumns"></a>  CMFCKeyMapDialog::OnSetColumns  
- Called by the framework to set captions for the columns in the internal list control that supports the keyboard mapping control.  
+##  <a name="onsetcolumns"></a>CMFCKeyMapDialog::OnSetColumns  
+ Llamado por el marco para establecer los títulos de las columnas en el control de lista interna que admite el control de asignación de teclado.  
   
 ```  
 virtual void OnSetColumns();
 ```  
   
-### <a name="remarks"></a>Remarks  
- By default, this method obtains the captions for the columns from three resources. The command column caption is from IDS_AFXBARRES_COMMAND, the key column caption is from IDS_AFXBARRES_KEYS, and the description column caption is from IDS_AFXBARRES_DESCRIPTION.  
+### <a name="remarks"></a>Comentarios  
+ De forma predeterminada, este método obtiene los títulos de las columnas de tres recursos. El título de columna de comando es de IDS_AFXBARRES_COMMAND, el título de la columna de clave es de IDS_AFXBARRES_KEYS y el título de columna de descripción es de IDS_AFXBARRES_DESCRIPTION.  
   
-##  <a name="printkeymap"></a>  CMFCKeyMapDialog::PrintKeyMap  
- Called by the framework when a user clicks the **Print** button.  
+##  <a name="printkeymap"></a>CMFCKeyMapDialog::PrintKeyMap  
+ Llamado por el marco cuando un usuario hace clic en el **imprimir** botón.  
   
 ```  
 virtual void PrintKeyMap();
 ```  
   
-### <a name="remarks"></a>Remarks  
- The `PrintKeyMap` method prints the key map. It initiates a new print job and then repeatedly calls the [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) and [CMFCKeyMapDialog::OnPrintItem](#onprintitem) methods until all the key mappings are printed.  
+### <a name="remarks"></a>Comentarios  
+ El `PrintKeyMap` método imprime el mapa de claves. Inicia un nuevo trabajo de impresión y luego llama repetidamente el [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) y [CMFCKeyMapDialog::OnPrintItem](#onprintitem) métodos hasta que se imprimen todas las asignaciones de clave.  
   
-##  <a name="setcolumnswidth"></a>  CMFCKeyMapDialog::SetColumnsWidth  
- Called by the framework to set the width of the columns in the internal list control that supports the keyboard mapping control.  
+##  <a name="setcolumnswidth"></a>CMFCKeyMapDialog::SetColumnsWidth  
+ Llamado por el marco para establecer el ancho de las columnas en el control de lista interna que admite el control de asignación de teclado.  
   
 ```  
 virtual void SetColumnsWidth();
 ```  
   
-### <a name="remarks"></a>Remarks  
- This method sets the internal list control's columns to default widths. First, the width of the shortcut keys column is calculated. Then one-third of the remaining width is allocated to the command column and the remaining two-thirds is allocated to the description column.  
+### <a name="remarks"></a>Comentarios  
+ Este método establece la lista interna columnas del control al ancho predeterminado. En primer lugar, se calcula el ancho de la columna de teclas de método abreviado. A continuación, un tercio del ancho restante se asigna a la columna de comandos y los dos tercios restantes se asigna a la columna Descripción.  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CKeyboardManager Class](../../mfc/reference/ckeyboardmanager-class.md)
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [Clases](../../mfc/reference/mfc-classes.md)   
+ [Clase CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)
 

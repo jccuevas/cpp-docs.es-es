@@ -1,14 +1,15 @@
 ---
-title: modulus Struct | Microsoft Docs
+title: modulus (Struct) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- cpp-standard-libraries
+- devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- modulus
 - xfunctional/std::modulus
 dev_langs:
 - C++
@@ -35,17 +36,16 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 5b3adc45ac78031df95a668f5c8e01a7e566acdf
-ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 430f1f9c0fcc58e3b4bfef167356960eb132b3f7
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="modulus-struct"></a>modulus Struct
-A predefined function object that performs the modulus division operation ( `operator%`) on its arguments.  
+# <a name="modulus-struct"></a>modulus (Struct)
+Un objeto de función predefinido que realiza la operación de división del módulo (`operator%`) sobre sus argumentos.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 template <class Type = void>
@@ -64,23 +64,23 @@ struct modulus<void>
 };
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `Type`, `T`, `U`  
- Any type that supports an `operator%` that takes operands of the specified or inferred types.  
+ Cualquier tipo que admite un `operator%` que toma operandos de los tipos especificados o deducidos.  
   
  `Left`  
- The left operand of the modulus operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
+ Operando izquierdo de la operación de módulo. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.  
   
  `Right`  
- The right operand of the modulus operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
+ Operando derecho de la operación de módulo. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.  
   
-## <a name="return-value"></a>Return Value  
- The result of `Left % Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator%`.  
+## <a name="return-value"></a>Valor devuelto  
+ Resultado de `Left``%``Right`. La plantilla especializada realiza el reenvío directo del resultado, que tiene el tipo devuelto por `operator%`.  
   
-## <a name="remarks"></a>Remarks  
- The `modulus` functor is restricted to integral types for the basic data types, or to user-defined types that implement `operator%`.  
+## <a name="remarks"></a>Comentarios  
+ El functor de `modulus` está limitado a tipos enteros para los tipos de datos básicos, o a tipos definidos por el usuario que implementan el `operator%`.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // functional_modulus.cpp  
@@ -136,14 +136,14 @@ The element-wise remainders of the modular division
  */  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<functional>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<functional>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
 
 
 

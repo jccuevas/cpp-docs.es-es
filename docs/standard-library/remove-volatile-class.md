@@ -1,5 +1,5 @@
 ---
-title: remove_volatile Class | Microsoft Docs
+title: remove_volatile (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- remove_volatile
 - type_traits/std::remove_volatile
 dev_langs:
 - C++
@@ -34,17 +35,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 40675fa94853c795e3332a285b3f3a8c5e30e720
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: 6c4e2273d6eed8e88f101a25f5b53b777a0bc48f
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="removevolatile-class"></a>remove_volatile Class
-Makes non volatile type from type.  
+# <a name="removevolatile-class"></a>remove_volatile (Clase)
+Crea un tipo no volátil a partir de un tipo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class T>  
@@ -54,14 +55,14 @@ template <class T>
 using remove_volatile_t = typename remove_volatile<T>::type;  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- The type to modify.  
+ Tipo que se va a modificar.  
   
-## <a name="remarks"></a>Remarks  
- An instance of `remove_volatile<T>` holds a modified-type that is `T1` when `T` is of the form `volatile T1`, otherwise `T`.  
+## <a name="remarks"></a>Comentarios  
+ Una instancia de `remove_volatile<T>` contiene un tipo modificado que es `T1` cuando `T` tiene la forma `volatile T1`; si no es `T`.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 #include <type_traits>   
@@ -83,12 +84,12 @@ int main()
 remove_volatile_t<volatile int> == int  
 ```  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)   
- [add_volatile Class](../standard-library/add-volatile-class.md)
+ [add_volatile (Clase)](../standard-library/add-volatile-class.md)
 

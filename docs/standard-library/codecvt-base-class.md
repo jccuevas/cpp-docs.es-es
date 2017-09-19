@@ -1,5 +1,5 @@
 ---
-title: codecvt_base Class | Microsoft Docs
+title: codecvt_base (Clase) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- codecvt_base
 - xlocale/std::codecvt_base
 dev_langs:
 - C++
@@ -33,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 892bdf1e5169bef9e057ac699ea91eddc184584a
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: d0c12f0dfb1b0ceb111f3c3313e78dd5c9197f70
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="codecvtbase-class"></a>codecvt_base Class
-A base class for the codecvt class that is used to define an enumeration type referred to as **result**, used as the return type for the facet member functions to indicate the result of a conversion.  
+# <a name="codecvtbase-class"></a>codecvt_base (Clase)
+Una clase base de la clase codecvt que se usa para definir un tipo de enumeración al que se hace referencia como **result**, que se usa como el tipo de valor devuelto para las funciones miembro de la faceta para indicar el resultado de una conversión.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 class codecvt_base : public locale::facet {
@@ -62,24 +63,24 @@ protected:
 };
 ```  
   
-## <a name="remarks"></a>Remarks  
- The class describes an enumeration common to all specializations of template class [codecvt](../standard-library/codecvt-class.md). The enumeration result describes the possible return values from [do_in](../standard-library/codecvt-class.md#do_in) or [do_out](../standard-library/codecvt-class.md#do_out):  
+## <a name="remarks"></a>Comentarios  
+ La clase describe una enumeración común a todas las especializaciones de la clase de plantilla [codecvt](../standard-library/codecvt-class.md). El resultado de la enumeración describe los posibles valores devueltos de [do_in](../standard-library/codecvt-class.md#do_in) o [do_out](../standard-library/codecvt-class.md#do_out):  
   
-- **ok** if the conversion between internal and external character encodings succeeds.  
+- **ok** si la conversión entre las codificaciones de caracteres internas y externas se realiza correctamente.  
   
-- **partial** if the destination is not large enough for the conversion to succeed.  
+- **partial** si el origen no es suficiente o si el destino no es lo suficientemente grande como para que la conversión se realice correctamente.  
   
-- **error** if the source sequence is ill formed.  
+- **error** si la secuencia de origen tiene un formato incorrecto.  
   
-- **noconv** if the function performs no conversion.  
+- **noconv** si la función no realiza ninguna conversión.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<locale>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<locale>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Vea también  
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

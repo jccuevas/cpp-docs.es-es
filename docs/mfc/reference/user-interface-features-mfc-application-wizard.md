@@ -1,5 +1,5 @@
 ---
-title: User Interface Features, MFC Application Wizard | Microsoft Docs
+title: "Características de la interfaz de usuario, Asistente para aplicaciones MFC | Documentos de Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,57 +33,57 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: d0612ca4dc78cbca0cffdd9f0ecb580864848ec5
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 390d06ddb09786ac4e9960c1933e0b1a76531f5e
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 04/01/2017
 
 ---
-# <a name="user-interface-features-mfc-application-wizard"></a>User Interface Features, MFC Application Wizard
-This topic explains the options that you can use to specify the look of your application. The user interface features available for your project depend on the type of application you specified in the [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md) page of the MFC Application Wizard. For example, if you create a single document interface application, you cannot add child frame styles.  
+# <a name="user-interface-features-mfc-application-wizard"></a>Características de la interfaz de usuario, Asistente para aplicaciones MFC
+En este tema se explica las opciones que puede usar para especificar la apariencia de la aplicación. Las características de interfaz de usuario disponibles para el proyecto dependen del tipo de aplicación que haya especificado en el [tipo de aplicación, Asistente para aplicaciones MFC](../../mfc/reference/application-type-mfc-application-wizard.md) página del Asistente para aplicaciones MFC. Por ejemplo, si crea una aplicación de interfaz de único documento, no se puede agregar estilos de marco secundario.  
   
- **Main frame styles**  
- Sets the features of your application's main window frame.  
+ **Estilos de marco principal**  
+ Establece las características del marco de ventana principal de la aplicación.  
   
-|Option|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
-|**Thick frame**|Creates a window that has a sizing border. The default.|  
-|**Minimize box**|Includes a minimize box in the main frame window. The default.|  
-|**Maximize box**|Includes a maximize box in the main frame window. The default.|  
-|**Minimized**|Opens the main frame window as an icon.|  
-|**Maximized**|Opens the main frame window to the full size of the display.|  
-|**System menu**|Includes a system menu in the main frame window. The default.|  
-|**About box**|Includes an **About** box for the application. The user can access this box from the application's **Help** menu. The default, and unchangeable unless you select **Dialog based**, in the [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md) page.<br /><br /> **Note** Usually, an unavailable option indicates that the wizard does not apply the option to the project, whether the unavailable item's check box is selected or cleared. In this case, the wizard always adds an **About** box to the project unless you first specify the project as dialog based and then uncheck the box.|  
-|**Initial status bar**|Adds a status bar to your application. The status bar contains automatic indicators for the keyboard's CAPS LOCK, NUM LOCK, and SCROLL LOCK keys and a message line that displays help strings for menu commands and toolbar buttons. Clicking this option also adds menu commands to display or hide the status bar. By default, an application has a status bar. Not available for dialog-based application types.|  
-|**Split window**|Provides a splitter bar. The splitter bar splits the application's main views. In a multiple document interface (MDI) application, the MDI child frame's client window is a splitter window, and in a single document interface (SDI) application and multiple top level document application, the main frame's client window is a splitter window. Not available for dialog-based application types.|  
+|**Marco grueso**|Crea una ventana que tiene un borde de tamaño. El valor predeterminado.|  
+|**Minimizar cuadro**|Incluye un cuadro para minimizar en la ventana de marco principal. El valor predeterminado.|  
+|**Maximizar el cuadro**|Incluye un cuadro para maximizar en la ventana de marco principal. El valor predeterminado.|  
+|**Minimizado**|Abre la ventana de marco principal como un icono.|  
+|**Maximizado**|Abre la ventana de marco principal para el tamaño completo de la pantalla.|  
+|**Menú del sistema**|Incluye un menú de sistema en la ventana de marco principal. El valor predeterminado.|  
+|**Cuadro acerca de**|Incluye un **sobre** cuadro de la aplicación. El usuario puede tener acceso a este cuadro de la aplicación **ayuda** menú. El valor predeterminado y puede cambiar a menos que seleccione **diálogo según**, en la [tipo de aplicación, Asistente para aplicaciones MFC](../../mfc/reference/application-type-mfc-application-wizard.md) página.<br /><br /> **Tenga en cuenta** por lo general, una opción no disponible indica que el asistente no aplica la opción al proyecto, si se selecciona o se desactiva la casilla del elemento no está disponible. En este caso, el asistente agrega siempre un **sobre** cuadro en el proyecto, a menos que especifique primero el proyecto como en función del cuadro de diálogo y, a continuación, desactive la casilla.|  
+|**Barra de estado inicial**|Agrega una barra de estado a la aplicación. La barra de estado contiene indicadores automáticos para las claves del teclado de BLOQ MAYÚS, BLOQ NUM y Bloq Despl y las cadenas de una línea de mensaje que muestra la ayuda para comandos de menú y barra de herramientas de botones. Al hacer clic en esta opción, también se agrega comandos de menú para mostrar u ocultar la barra de estado. De forma predeterminada, una aplicación tiene una barra de estado. No está disponible para los tipos de aplicación basada en el cuadro de diálogo.|  
+|**Ventana dividida**|Proporciona una barra divisora. La barra de división divide vistas principales de la aplicación. En una aplicación de múltiples documentos (MDI) de la interfaz, ventana de cliente del marco MDI secundario es una ventana divisora, y en una aplicación de único documento (SDI) de la interfaz y aplicación de múltiples documentos de nivel superior, la ventana de cliente del marco principal es una ventana divisora. No está disponible para los tipos de aplicación basada en el cuadro de diálogo.|  
   
- **Child frame styles**  
- Specifies the appearance and initial state of the child frames in your application. Child frame styles are available for MDI applications only.  
+ **Estilos de marco secundario**  
+ Especifica la apariencia y el estado inicial de los marcos secundarios en la aplicación. Estilos de marco secundario están disponibles para las aplicaciones MDI.  
   
-|Option|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
-|**Child minimize box**|Specifies whether a child window has a minimize button (enabled by default).|  
-|**Child maximize box**|Specifies whether a child window has a maximize button (enabled by default).|  
-|**Child maximized**|Specifies whether a child window is initially maximized by setting the cs.style flag **WS_MAXIMIZE** in the [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow) member function of `CChildFrame`.|  
+|**Cuadro de minimizar secundario**|Especifica si una ventana secundaria tiene un botón Minimizar (habilitado de forma predeterminada).|  
+|**Cuadro de maximizar secundario**|Especifica si una ventana secundaria tiene un botón Maximizar (habilitado de forma predeterminada).|  
+|**Maximizado secundario**|Especifica si una ventana secundaria se maximiza inicialmente estableciendo el indicador cs.style **WS_MAXIMIZE** en el [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow) función miembro de `CChildFrame`.|  
   
- **Command bars (menu/toolbar/ribbon)**  
- Indicates whether your application includes menus, toolbars, and/or a ribbon. Not available for dialog-based applications.  
+ **Barras de comandos (menú/barra de herramientas/cinta de opciones)**  
+ Indica si la aplicación incluye menús, barras de herramientas o una cinta de opciones. No está disponible para aplicaciones basadas en el cuadro de diálogo.  
   
-|Option|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
-|**Use a classic menu**|Specifies that your application contains a classic, non-draggable menu.|  
-|**Use a classic docking toolbar**|Adds a standard Windows toolbar to your application. The toolbar contains buttons for creating a new document; opening and saving document files; cutting copying, pasting, or printing text; and entering Help mode. Enabling this option also adds menu commands to display or hide the toolbar.|  
-|**Use a browser style toolbar**|Adds an Internet Explorer-style toolbar to your application.|  
-|**Use a menu bar and toolbar**|Indicates that your application contains a draggable menu bar and a toolbar.|  
-|**User-defined toolbars and images**|Allows the user to customize the toolbar and the toolbar images at runtime.|  
-|**Personalized menu behavior**|Specifies whether the menu contains the full list of items when opened, or if it contains only the commands that the user most frequently uses.|  
-|**Use a ribbon**|Uses an Office 2007-like ribbon in your application instead of a menu bar or toolbar.|  
+|**Usar un menú clásico**|Especifica que la aplicación contiene un menú clásico, no se pueden arrastrar.|  
+|**Usar una barra de herramientas de acoplamiento clásica**|Agrega una barra de herramientas estándar de Windows a la aplicación. La barra de herramientas contiene botones para crear un nuevo documento; Abrir y guardar archivos de documento; Cortar, copiar, pegar o imprimir texto; y entrar en el modo de ayuda. Si se habilita esta opción, también agrega comandos de menú para mostrar u ocultar la barra de herramientas.|  
+|**Usar una barra de herramientas de estilo de explorador**|Agrega una barra de herramientas de estilo de Internet Explorer a la aplicación.|  
+|**Usar una barra de menús y barra de herramientas**|Indica que la aplicación contiene una barra de menús arrastrable y una barra de herramientas.|  
+|**Las imágenes y las barras de herramientas definidas por el usuario**|Permite al usuario personalizar la barra de herramientas y las imágenes de barra de herramientas en tiempo de ejecución.|  
+|**Comportamiento de menús personalizado**|Especifica si el menú contiene la lista completa de elementos al abrirse, o si contiene solo los comandos que el usuario utiliza con más frecuencia.|  
+|**Usar una cinta de opciones**|Utiliza una cinta de opciones de Office 2007 similar en la aplicación en lugar de una barra de menús o barra de herramientas.|  
   
- **Dialog title**  
- For [CDialog Class](../../mfc/reference/cdialog-class.md)-based applications only, this title appears in the title bar of the dialog box. To edit this field, you must first select the **Dialog based** option under **Application type**. For more information, see [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md).  
+ **Título del cuadro de diálogo**  
+ Para [CDialog (clase)](../../mfc/reference/cdialog-class.md)-aplicaciones basadas únicamente en, este título aparecerá en la barra de título del cuadro de diálogo. Para editar este campo, primero debe seleccionar la **diálogo según** opción **tipo de aplicación**. Para obtener más información, consulte [tipo de aplicación, Asistente para aplicaciones MFC](../../mfc/reference/application-type-mfc-application-wizard.md).  
   
-## <a name="see-also"></a>See Also  
- [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>Vea también  
+ [Asistente para aplicaciones MFC](../../mfc/reference/mfc-application-wizard.md)
 
 

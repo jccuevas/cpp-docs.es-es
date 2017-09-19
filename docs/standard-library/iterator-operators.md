@@ -1,39 +1,23 @@
 ---
-title: '&lt;iterator&gt; operators | Microsoft Docs'
+title: Operadores de &lt;iterator&gt; | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- iterator/std::operator!=
-- iterator/std::operator&gt;
-- iterator/std::operator&gt;=
-- iterator/std::operator&lt;
-- iterator/std::operator&lt;=
-- iterator/std::operator+
-- iterator/std::operator-
-- iterator/std::operator==
-dev_langs:
-- C++
+f1_keywords: []
 ms.assetid: b7c664f0-49d4-4993-b5d1-9ac4859fdddc
 caps.latest.revision: 10
 manager: ghogen
-helpviewer_keywords:
-- std::operator!= (iterator)
-- std::operator&gt; (iterator)
-- std::operator&gt;= (iterator)
-- std::operator&lt; (iterator)
-- std::operator&lt;= (iterator), std::operator== (iterator)
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: 129433eebdc988b863d1a61d2ceaf220cd897096
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a369890d41b58fb3865780291822b4e7e045e919
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
-# <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; operators
+# <a name="ltiteratorgt-operators"></a>Operadores de &lt;iterator&gt;
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
@@ -41,7 +25,7 @@ ms.lasthandoff: 09/09/2017
 |[operator-](#operator-)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- Tests if the iterator object on the left side of the operator is not equal to the iterator object on the right side.  
+ Comprueba si el objeto iterador del lado izquierdo del operador no es igual que el objeto iterador del lado derecho.  
   
 ```  
 template <class RandomIterator>  
@@ -54,20 +38,20 @@ template <class CharType, class Tr>
 bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istreambuf_iterator<CharType, Traits>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type **iterator**.  
+ Objeto de tipo **iterator**.  
   
  `right`  
- An object of type **iterator**.  
+ Objeto de tipo **iterator**.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the iterator objects are not equal; **false** if the iterator objects are equal.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si los objetos iteradores no son iguales; **False** si son iguales.  
   
-### <a name="remarks"></a>Remarks  
- One iterator object is equal to another if they address the same elements in a container. If two iterators point to different elements in a container, then they are not equal.  
+### <a name="remarks"></a>Comentarios  
+ Un objeto iterador es igual a otro si direccionan los mismos elementos de un contenedor. Si dos iteradores apuntan a elementos distintos de un contenedor, no son iguales.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // iterator_op_ne.cpp  
@@ -130,7 +114,7 @@ The iterators are not equal.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Tests if the iterator object on the left side of the operator is equal to the iterator object on the right side.  
+ Comprueba si el objeto iterador del lado izquierdo del operador es igual que el objeto iterador del lado derecho.  
   
 ```  
 template <class RandomIterator1, class RandomIterator2>  
@@ -154,22 +138,22 @@ bool operator==(
     const istreambuf_iterator<CharType, Traits>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type iterator.  
+ Objeto de tipo iterador.  
   
  `right`  
- An object of type iterator.  
+ Objeto de tipo iterador.  
   
-### <a name="return-value"></a>Return Value  
- `true` if the iterator objects are equal; `false` if the iterator objects are not equal.  
+### <a name="return-value"></a>Valor devuelto  
+ `true` si los objetos iteradores son iguales; `false` si no son iguales.  
   
-### <a name="remarks"></a>Remarks  
- One iterator object is equal to another if they address the same elements in a container. If two iterators point to different elements in a container, then they are not equal.  
+### <a name="remarks"></a>Comentarios  
+ Un objeto iterador es igual a otro si direccionan los mismos elementos de un contenedor. Si dos iteradores apuntan a elementos distintos de un contenedor, no son iguales.  
   
- The first two template operators return true only if both `left` and `right` store the same iterator. The third template operator returns true only if both `left` and `right` store the same stream pointer. The fourth template operator returns ` left.equal ( right)`.  
+ Los dos primeros operadores de la plantilla devuelven True únicamente si `left` y `right` almacenan el mismo iterador. El tercer operador de la plantilla devuelve True únicamente si `left` y `right` almacenan el mismo puntero de flujo. El cuarto operador de la plantilla devuelve ` left.equal ( right)`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // iterator_op_eq.cpp  
@@ -232,27 +216,27 @@ The iterators are not equal.
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- Tests if the iterator object on the left side of the operator is less than the iterator object on the right side.  
+ Comprueba si el objeto iterador del lado izquierdo del operador es menor que el objeto iterador del lado derecho.  
   
 ```  
 template <class RandomIterator>  
 bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_iterator<RandomIterator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type **iterator**.  
+ Objeto de tipo **iterator**.  
   
  `right`  
- An object of type **iterator**.  
+ Objeto de tipo **iterator**.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the iterator on the left side of the expression is less than the iterator on the right side of the expression; **false** if it is greater than or equal to the iterator on the right.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si el iterador del lado izquierdo de la expresión es menor que el iterador del lado derecho de la expresión; **False** si es mayor o igual que el iterador de la derecha.  
   
-### <a name="remarks"></a>Remarks  
- One iterator object is less than another if it addresses an element that occurs earlier in the container than the element addressed by the other iterator object. One iterator object is not less than another if it addresses either the same element as the other iterator object or an element that occurs later in the container than the element addressed by the other iterator object.  
+### <a name="remarks"></a>Comentarios  
+ Un objeto iterador es menor que otro si direcciona un elemento que aparece en el contenedor antes que el elemento direccionado por el otro objeto iterador. Un objeto iterador no es menor que otro si direcciona el mismo elemento que el otro objeto iterador o bien un elemento que aparece en el contenedor después que el elemento direccionado por el otro objeto iterador.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // iterator_op_lt.cpp  
@@ -319,27 +303,27 @@ The iterator rVPOS1 is less than the iterator rVPOS2.
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- Tests if the iterator object on the left side of the operator is less than or equal to the iterator object on the right side.  
+ Comprueba si el objeto iterador del lado izquierdo del operador es menor o igual que el objeto iterador del lado derecho.  
   
 ```  
 template <class RandomIterator>  
 bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iterator<RandomIterator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type iterator.  
+ Objeto de tipo iterador.  
   
  `right`  
- An object of type iterator.  
+ Objeto de tipo iterador.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the iterator on the left side of the expression is less than or equal to the iterator on the right side of the expression; **false** if it is greater than the iterator on the right.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si el iterador del lado izquierdo de la expresión es menor o igual que el iterador del lado derecho de la expresión; **False** si es mayor que el iterador de la derecha.  
   
-### <a name="remarks"></a>Remarks  
- One iterator object is less than or equal to another if it addresses the same element or an element that occurs earlier in the container than the element addressed by the other iterator object. One iterator object is greater than another if it addresses an element that occurs later in the container than the element addressed by the other iterator object.  
+### <a name="remarks"></a>Comentarios  
+ Un objeto iterador es menor o igual que otro si direcciona el mismo elemento o un elemento que aparece en el contenedor antes que el elemento direccionado por el otro objeto iterador. Un objeto iterador es mayor que otro si direcciona un elemento que aparece en el contenedor después que el elemento direccionado por el otro objeto iterador.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // iterator_op_le.cpp  
@@ -410,27 +394,27 @@ The iterator rVPOS1 is less than or equal to the iterator rVPOS2.
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- Tests if the iterator object on the left side of the operator is greater than the iterator object on the right side.  
+ Comprueba si el objeto iterador del lado izquierdo del operador es mayor que el objeto iterador del lado derecho.  
   
 ```  
 template <class RandomIterator>  
 bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_iterator<RandomIterator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type iterator.  
+ Objeto de tipo iterador.  
   
  `right`  
- An object of type iterator.  
+ Objeto de tipo iterador.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the iterator on the left side of the expression is greater than the iterator on the right side of the expression; **false** if it is less than or equal to the iterator on the right.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si el iterador del lado izquierdo de la expresión es mayor que el iterador del lado derecho de la expresión; **False** si es menor o igual que el iterador de la derecha.  
   
-### <a name="remarks"></a>Remarks  
- One iterator object is greater than another if it addresses an element that occurs later in the container than the element addressed by the other iterator object. One iterator object is not greater than another if it addresses either the same element as the other iterator object or an element that occurs earlier in the container than the element addressed by the other iterator object.  
+### <a name="remarks"></a>Comentarios  
+ Un objeto iterador es mayor que otro si direcciona un elemento que aparece en el contenedor después que el elemento direccionado por el otro objeto iterador. Un objeto iterador no es mayor que otro si direcciona el mismo elemento que el otro objeto iterador o bien un elemento que aparece en el contenedor antes que el elemento direccionado por el otro objeto iterador.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // iterator_op_gt.cpp  
@@ -495,27 +479,27 @@ The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- Tests if the iterator object on the left side of the operator is greater than or equal to the iterator object on the right side.  
+ Comprueba si el objeto iterador del lado izquierdo del operador es mayor o igual que el objeto iterador del lado derecho.  
   
 ```  
 template <class RandomIterator>  
 bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iterator<RandomIterator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An object of type iterator.  
+ Objeto de tipo iterador.  
   
  `right`  
- An object of type iterator.  
+ Objeto de tipo iterador.  
   
-### <a name="return-value"></a>Return Value  
- **true** if the iterator on the left side of the expression is greater than or equal to the iterator on the right side of the expression; **false** if it is less than the iterator on the right.  
+### <a name="return-value"></a>Valor devuelto  
+ **True** si el iterador del lado izquierdo de la expresión es mayor o igual que el iterador del lado derecho de la expresión; **False** si es menor que el iterador de la derecha.  
   
-### <a name="remarks"></a>Remarks  
- One iterator object is greater than or equal to another if it addresses the same element or an element that occurs later in the container than the element addressed by the other iterator object. One iterator object is less than another if it addresses an element that occurs earlier in the container than the element addressed by the other iterator object.  
+### <a name="remarks"></a>Comentarios  
+ Un objeto iterador es mayor o igual que otro si direcciona el mismo elemento o un elemento que aparece en el contenedor después que el elemento direccionado por el otro objeto iterador. Un objeto iterador es menor que otro si direcciona un elemento que aparece en el contenedor antes que el elemento direccionado por el otro objeto iterador.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // iterator_op_ge.cpp  
@@ -586,7 +570,7 @@ The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```  
   
 ##  <a name="op_add"></a>  operator+  
- Adds an offset to an iterator and returns a `move_iterator` or a `reverse_iterator` addressing the inserted element at the new offset position.  
+ Agrega un desplazamiento a un iterador y devuelve `move_iterator` o `reverse_iterator` que direcciona el elemento insertado en la nueva posición de desplazamiento.  
   
 ```  
 template <class RandomIterator, class Diff>  
@@ -602,17 +586,17 @@ operator+(
     const reverse_iterator<RandomIterator>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `_Off`  
- The number of positions the const move_iterator or const reverse_iterator is to be offset.  
+ Número de posiciones que se va a desplazar move_iterator const o reverse_iterator const.  
   
  `right`  
- The iterator to be offset.  
+ Iterador que se va a desplazar.  
   
-### <a name="return-value"></a>Return Value  
- Returns the sum `right` + `_Off`.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve la suma `right` + `_Off`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // iterator_op_insert.cpp  
@@ -662,7 +646,7 @@ The iterator rVPOS1 now points to the fifth element
 ```  
   
 ##  <a name="operator-"></a>  operator-  
- Subtracts one iterator from another and returns the difference.  
+ Resta un iterador de otro y devuelve la diferencia.  
   
 ```  
 template <class RandomIterator1, class RandomIterator2>  
@@ -676,24 +660,24 @@ Tdiff operator-(
     const reverse_iterator<RandomIterator2>& right);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `left`  
- An iterator.  
+ Iterador.  
   
  `right`  
- An iterator.  
+ Iterador.  
   
-### <a name="return-value"></a>Return Value  
- The difference between two iterators `.`  
+### <a name="return-value"></a>Valor devuelto  
+ Diferencia existente entre dos iteradores `.`.  
   
-### <a name="remarks"></a>Remarks  
- The first template operator returns `left.base() - right.base()`.  
+### <a name="remarks"></a>Comentarios  
+ El primer operador de la plantilla devuelve `left.base() - right.base()`.  
   
- The second template operator returns `right.current - left.current`.  
+ El segundo operador de la plantilla devuelve `right.current - left.current`.  
   
- `Tdiff` is determined by the type of the returned expression. Otherwise, it is `RandomIterator1::difference_type`.  
+ `Tdiff` varía según el tipo de la expresión devuelta. De lo contrario, es `RandomIterator1::difference_type`.  
   
-### <a name="example"></a>Example  
+### <a name="example"></a>Ejemplo  
   
 ```cpp  
 // iterator_op_sub.cpp  
@@ -750,7 +734,7 @@ The iterator rVPOS2 now points to the fifth element
 The difference: rVPOS2 - rVPOS1= 4.  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [\<iterator>](../standard-library/iterator.md)
 
 

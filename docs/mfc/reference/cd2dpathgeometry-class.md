@@ -1,5 +1,5 @@
 ---
-title: CD2DPathGeometry Class | Microsoft Docs
+title: Clase CD2DPathGeometry | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,16 +24,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DPathGeometry [MFC], CD2DPathGeometry
-- CD2DPathGeometry [MFC], Attach
-- CD2DPathGeometry [MFC], Create
-- CD2DPathGeometry [MFC], Destroy
-- CD2DPathGeometry [MFC], Detach
-- CD2DPathGeometry [MFC], GetFigureCount
-- CD2DPathGeometry [MFC], GetSegmentCount
-- CD2DPathGeometry [MFC], Open
-- CD2DPathGeometry [MFC], Stream
-- CD2DPathGeometry [MFC], m_pPathGeometry
+- CD2DPathGeometry class
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
 caps.latest.revision: 17
 author: mikeblome
@@ -53,50 +44,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: de29f4ee2e53d552de99908085839f38902aa5fe
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 1c1158e55bf12d44f34896dd6752c9b8706db636
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cd2dpathgeometry-class"></a>CD2DPathGeometry Class
-A wrapper for ID2D1PathGeometry.  
+# <a name="cd2dpathgeometry-class"></a>Clase CD2DPathGeometry
+Un contenedor para ID2D1PathGeometry.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CD2DPathGeometry : public CD2DGeometry;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|Constructs a CD2DPathGeometry object.|  
+|[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|Construye un objeto CD2DPathGeometry.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CD2DPathGeometry::Attach](#attach)|Attaches existing resource interface to the object|  
-|[CD2DPathGeometry::Create](#create)|Creates a CD2DPathGeometry. (Overrides [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
-|[CD2DPathGeometry::Destroy](#destroy)|Destroys a CD2DPathGeometry object. (Overrides [CD2DGeometry::Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy).)|  
-|[CD2DPathGeometry::Detach](#detach)|Detaches resource interface from the object|  
-|[CD2DPathGeometry::GetFigureCount](#getfigurecount)|Retrieves tthe number of figures in the path geometry.|  
-|[CD2DPathGeometry::GetSegmentCount](#getsegmentcount)|Retrieves the number of segments in the path geometry.|  
-|[CD2DPathGeometry::Open](#open)|Retrieves the geometry sink that is used to populate the path geometry with figures and segments.|  
-|[CD2DPathGeometry::Stream](#stream)|Copies the contents of the path geometry to the specified ID2D1GeometrySink.|  
+|[CD2DPathGeometry::Attach](#attach)|Conexiones existentes de la interfaz de recursos para el objeto|  
+|[CD2DPathGeometry::Create](#create)|Crea un CD2DPathGeometry. (Invalida [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DPathGeometry::Destroy](#destroy)|Destruye un objeto CD2DPathGeometry. (Invalida [CD2DGeometry::Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy).)|  
+|[CD2DPathGeometry::Detach](#detach)|Separa la interfaz de recursos desde el objeto|  
+|[CD2DPathGeometry::GetFigureCount](#getfigurecount)|Recupera el número de figuras de la geometría de trayecto.|  
+|[CD2DPathGeometry::GetSegmentCount](#getsegmentcount)|Recupera el número de segmentos de la geometría de trayecto.|  
+|[CD2DPathGeometry::Open](#open)|Recupera el receptor de geometría que se usa para rellenar la geometría de trayecto con figuras y segmentos.|  
+|[CD2DPathGeometry::Stream](#stream)|Copia el contenido de la geometría de la ruta de acceso para el ID2D1GeometrySink especificado.|  
   
-### <a name="protected-data-members"></a>Protected Data Members  
+### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|A pointer to an ID2D1PathGeometry.|  
+|[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|Puntero a un ID2D1PathGeometry.|  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
@@ -105,22 +96,22 @@ class CD2DPathGeometry : public CD2DGeometry;
   
  `CD2DPathGeometry`  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxrendertarget.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxrendertarget.h  
   
-##  <a name="attach"></a>  CD2DPathGeometry::Attach  
- Attaches existing resource interface to the object  
+##  <a name="attach"></a>CD2DPathGeometry::Attach  
+ Conexiones existentes de la interfaz de recursos para el objeto  
   
 ```  
 void Attach(ID2D1PathGeometry* pResource);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pResource`  
- Existing resource interface. Cannot be NULL  
+ Interfaz de recursos existente. No puede ser NULL  
   
-##  <a name="cd2dpathgeometry"></a>  CD2DPathGeometry::CD2DPathGeometry  
- Constructs a CD2DPathGeometry object.  
+##  <a name="cd2dpathgeometry"></a>CD2DPathGeometry::CD2DPathGeometry  
+ Construye un objeto CD2DPathGeometry.  
   
 ```  
 CD2DPathGeometry(
@@ -128,95 +119,95 @@ CD2DPathGeometry(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pParentTarget`  
- A pointer to the render target.  
+ Puntero para el destino de representación.  
   
  `bAutoDestroy`  
- Indicates that the object will be destroyed by owner (pParentTarget).  
+ Indica que se destruirá el objeto propietario (pParentTarget).  
   
-##  <a name="create"></a>  CD2DPathGeometry::Create  
- Creates a CD2DPathGeometry.  
+##  <a name="create"></a>CD2DPathGeometry::Create  
+ Crea un CD2DPathGeometry.  
   
 ```  
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `pRenderTarget`  
- A pointer to the render target.  
+ Puntero para el destino de representación.  
   
-### <a name="return-value"></a>Return Value  
- If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
+### <a name="return-value"></a>Valor devuelto  
+ Si el método se ejecuta correctamente, devuelve S_OK. De lo contrario, devuelve un código de error HRESULT.  
   
-##  <a name="destroy"></a>  CD2DPathGeometry::Destroy  
- Destroys a CD2DPathGeometry object.  
+##  <a name="destroy"></a>CD2DPathGeometry::Destroy  
+ Destruye un objeto CD2DPathGeometry.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>  CD2DPathGeometry::Detach  
- Detaches resource interface from the object  
+##  <a name="detach"></a>CD2DPathGeometry::Detach  
+ Separa la interfaz de recursos desde el objeto  
   
 ```  
 ID2D1PathGeometry* Detach();
 ```  
   
-### <a name="return-value"></a>Return Value  
- Pointer to detached resource interface.  
+### <a name="return-value"></a>Valor devuelto  
+ Puntero a interfaz desasociadas recursos.  
   
-##  <a name="getfigurecount"></a>  CD2DPathGeometry::GetFigureCount  
- Retrieves tthe number of figures in the path geometry.  
+##  <a name="getfigurecount"></a>CD2DPathGeometry::GetFigureCount  
+ Recupera el número de figuras de la geometría de trayecto.  
   
 ```  
 int GetFigureCount() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns the number of figures in the path geometry.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve el número de cifras de la geometría de trayecto.  
   
-##  <a name="getsegmentcount"></a>  CD2DPathGeometry::GetSegmentCount  
- Retrieves the number of segments in the path geometry.  
+##  <a name="getsegmentcount"></a>CD2DPathGeometry::GetSegmentCount  
+ Recupera el número de segmentos de la geometría de trayecto.  
   
 ```  
 int GetSegmentCount() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- Returns the number of segments in the path geometry.  
+### <a name="return-value"></a>Valor devuelto  
+ Devuelve el número de segmentos de la geometría de trayecto.  
   
-##  <a name="m_ppathgeometry"></a>  CD2DPathGeometry::m_pPathGeometry  
- A pointer to an ID2D1PathGeometry.  
+##  <a name="m_ppathgeometry"></a>CD2DPathGeometry::m_pPathGeometry  
+ Puntero a un ID2D1PathGeometry.  
   
 ```  
 ID2D1PathGeometry* m_pPathGeometry;  
 ```  
   
-##  <a name="open"></a>  CD2DPathGeometry::Open  
- Retrieves the geometry sink that is used to populate the path geometry with figures and segments.  
+##  <a name="open"></a>CD2DPathGeometry::Open  
+ Recupera el receptor de geometría que se usa para rellenar la geometría de trayecto con figuras y segmentos.  
   
 ```  
 ID2D1GeometrySink* Open();
 ```  
   
-### <a name="return-value"></a>Return Value  
- A pointer to the ID2D1GeometrySink that is used to populate the path geometry with figures and segments.  
+### <a name="return-value"></a>Valor devuelto  
+ Puntero a la ID2D1GeometrySink que se usa para rellenar la geometría de trayecto con figuras y segmentos.  
   
-##  <a name="stream"></a>  CD2DPathGeometry::Stream  
- Copies the contents of the path geometry to the specified ID2D1GeometrySink.  
+##  <a name="stream"></a>CD2DPathGeometry::Stream  
+ Copia el contenido de la geometría de la ruta de acceso para el ID2D1GeometrySink especificado.  
   
 ```  
 BOOL Stream(ID2D1GeometrySink* geometrySink);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  `geometrySink`  
- The sink to which the path geometry's contents are copied. Modifying this sink does not change the contents of this path geometry.  
+ El receptor al que se copia el contenido de la geometría de la ruta de acceso. Modificar este receptor no cambia el contenido de la geometría de la ruta de acceso.  
   
-### <a name="return-value"></a>Return Value  
- If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
+### <a name="return-value"></a>Valor devuelto  
+ Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE.  
   
-## <a name="see-also"></a>See Also  
- [Classes](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>Vea también  
+ [Clases](../../mfc/reference/mfc-classes.md)
 

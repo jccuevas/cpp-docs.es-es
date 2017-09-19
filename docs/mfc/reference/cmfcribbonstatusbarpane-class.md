@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonStatusBarPane Class | Microsoft Docs
+title: Clase CMFCRibbonStatusBarPane | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,19 +27,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonStatusBarPane [MFC], CMFCRibbonStatusBarPane
-- CMFCRibbonStatusBarPane [MFC], GetAlmostLargeText
-- CMFCRibbonStatusBarPane [MFC], GetTextAlign
-- CMFCRibbonStatusBarPane [MFC], IsAnimation
-- CMFCRibbonStatusBarPane [MFC], IsExtended
-- CMFCRibbonStatusBarPane [MFC], OnDrawBorder
-- CMFCRibbonStatusBarPane [MFC], OnFillBackground
-- CMFCRibbonStatusBarPane [MFC], SetAlmostLargeText
-- CMFCRibbonStatusBarPane [MFC], SetAnimationList
-- CMFCRibbonStatusBarPane [MFC], SetTextAlign
-- CMFCRibbonStatusBarPane [MFC], StartAnimation
-- CMFCRibbonStatusBarPane [MFC], StopAnimation
-- CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
+- CMFCRibbonStatusBarPane class
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
 caps.latest.revision: 31
 author: mikeblome
@@ -59,58 +47,58 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: 7d56963a45e45085e1460ed801f56e190206df1c
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: a101e50f55efab44e4cb66d314b2426228dbc5c0
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane Class
-The `CMFCRibbonStatusBarPane` class implements a ribbon element that you can add to a ribbon status bar.  
+# <a name="cmfcribbonstatusbarpane-class"></a>Clase CMFCRibbonStatusBarPane
+La `CMFCRibbonStatusBarPane` clase implementa un elemento de la cinta de opciones que puede agregar a una barra de estado de la cinta de opciones.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CMFCRibbonStatusBarPane : public CMFCRibbonButton  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-### <a name="public-constructors"></a>Public Constructors  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane](#cmfcribbonstatusbarpane)|Constructs and initializes a `CMFCRibbonStatusBarPane` object.|  
+|[CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane](#cmfcribbonstatusbarpane)|Construye e inicializa un objeto `CMFCRibbonStatusBarPane`.|  
   
-### <a name="public-methods"></a>Public Methods  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCRibbonStatusBarPane::GetAlmostLargeText](#getalmostlargetext)|Returns the string that defines the longest text string that can be displayed in the pane without truncation.|  
-|[CMFCRibbonStatusBarPane::GetTextAlign](#gettextalign)|Returns the current setting of the text alignment.|  
-|[CMFCRibbonStatusBarPane::IsAnimation](#isanimation)|Determines whether the animation is in progress.|  
-|[CMFCRibbonStatusBarPane::IsExtended](#isextended)|Determines whether the pane is located in the extended area of the ribbon status bar.|  
-|[CMFCRibbonStatusBarPane::OnDrawBorder](#ondrawborder)|(Overrides [CMFCRibbonButton::OnDrawBorder](../../mfc/reference/cmfcribbonbutton-class.md#ondrawborder).)|  
-|[CMFCRibbonStatusBarPane::OnFillBackground](#onfillbackground)|(Overrides [CMFCRibbonButton::OnFillBackground](../../mfc/reference/cmfcribbonbutton-class.md#onfillbackground).)|  
-|[CMFCRibbonStatusBarPane::SetAlmostLargeText](#setalmostlargetext)|Defines the longest text string that can be displayed in the pane without truncation.|  
-|[CMFCRibbonStatusBarPane::SetAnimationList](#setanimationlist)|Assigns to the pane an image list that can be used for animation.|  
-|[CMFCRibbonStatusBarPane::SetTextAlign](#settextalign)|Sets the text alignment.|  
-|[CMFCRibbonStatusBarPane::StartAnimation](#startanimation)|Starts the animation that is assigned to the pane.|  
-|[CMFCRibbonStatusBarPane::StopAnimation](#stopanimation)|Stops the animation that is assigned to the pane. .|  
+|[CMFCRibbonStatusBarPane::GetAlmostLargeText](#getalmostlargetext)|Devuelve la cadena que define la cadena de texto más larga que puede mostrarse en el panel sin truncamiento.|  
+|[CMFCRibbonStatusBarPane::GetTextAlign](#gettextalign)|Devuelve el valor actual de la alineación del texto.|  
+|[CMFCRibbonStatusBarPane::IsAnimation](#isanimation)|Determina si la animación está en curso.|  
+|[CMFCRibbonStatusBarPane::IsExtended](#isextended)|Determina si el panel se encuentra en el área extendida de la barra de estado de la cinta de opciones.|  
+|[CMFCRibbonStatusBarPane::OnDrawBorder](#ondrawborder)|(Invalida [CMFCRibbonButton::OnDrawBorder](../../mfc/reference/cmfcribbonbutton-class.md#ondrawborder).)|  
+|[CMFCRibbonStatusBarPane::OnFillBackground](#onfillbackground)|(Invalida [CMFCRibbonButton::OnFillBackground](../../mfc/reference/cmfcribbonbutton-class.md#onfillbackground).)|  
+|[CMFCRibbonStatusBarPane::SetAlmostLargeText](#setalmostlargetext)|Define la cadena de texto más larga que puede mostrarse en el panel sin truncamiento.|  
+|[CMFCRibbonStatusBarPane::SetAnimationList](#setanimationlist)|Asigna al panel de una lista de imágenes que puede usar para ver la animación.|  
+|[CMFCRibbonStatusBarPane::SetTextAlign](#settextalign)|Establece la alineación del texto.|  
+|[CMFCRibbonStatusBarPane::StartAnimation](#startanimation)|Inicia la animación que se asigna al panel.|  
+|[CMFCRibbonStatusBarPane::StopAnimation](#stopanimation)|Detiene la animación que se asigna al panel. .|  
   
-### <a name="protected-methods"></a>Protected Methods  
+### <a name="protected-methods"></a>Métodos protegidos  
   
-|Name|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|Called by the framework when the animation that is assigned to the pane stops.|  
+|[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|Lo llama el marco de trabajo cuando se detiene la animación que se asigna al panel.|  
   
-## <a name="example"></a>Example  
- The following example demonstrates how to use the various methods in the `CMFCRibbonStatusBarPane` class. The example shows how to construct a `CMFCRibbonStatusBarPane` object, set the text alignment of the label of the status bar pane, define the longest text that can be displayed in the status bar pane without truncation, attach to the status bar pane an image list that can be used for animation, and start the animation.  
+## <a name="example"></a>Ejemplo  
+ En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCRibbonStatusBarPane`. En el ejemplo se muestra cómo construir un `CMFCRibbonStatusBarPane` de objeto, establecer la alineación del texto de la etiqueta del panel de barra de estado, definir el texto más largo que puede mostrarse en el panel de la barra de estado sin truncamiento, conectar en el panel de la barra de estado de una lista de imágenes que puede utilizarse para ver la animación e inicia la animación.  
   
- [!code-cpp[NVC_MFC_RibbonApp#2](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbarpane-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp&#2;](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbarpane-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
@@ -119,11 +107,11 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
   
  [CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md)  
   
-## <a name="requirements"></a>Requirements  
- **Header:** afxribbonstatusbarpane.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** afxribbonstatusbarpane.h  
   
-##  <a name="cmfcribbonstatusbarpane"></a>  CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane  
- Construct a pane object in the status bar.  
+##  <a name="cmfcribbonstatusbarpane"></a>CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane  
+ Crear un objeto de panel en la barra de estado.  
   
 ```  
 CMFCRibbonStatusBarPane(
@@ -152,53 +140,53 @@ CMFCRibbonStatusBarPane(
     BOOL bIsStatic=FALSE);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `nCmdID`  
- Specifies the command ID of the pane.  
+ Especifica el identificador de comando del panel.  
   
  [in] `lpszText`  
- Specifies text string to be displayed on pane.  
+ Especifica la cadena de texto que se mostrará en el panel.  
   
  [in] `bIsStatic`  
- If `TRUE`, the status pane cannot be highlighted or selected by clicking it.  
+ Si `TRUE`, el panel de estado no puede ser resaltado o seleccionado haciendo clic en él.  
   
  [in] `hIcon`  
- Specifies a handle to an icon to be displayed on the pane.  
+ Especifica un identificador de un icono que se mostrará en el panel.  
   
  [in] `lpszAlmostLargeText`  
- Specifies the longest text string that can be displayed by the pane.  
+ Especifica la cadena de texto más larga que puede mostrarse en el panel.  
   
  [in] `hBmpAnimationList`  
- Specifies a handle to an image list that is used for animation.  
+ Especifica un identificador de una lista de imágenes que se utiliza para ver la animación.  
   
  [in] `cxAnimation`  
- Specifies the width, in pixels, of the icon in the image list that is used for animation.  
+ Especifica el ancho, en píxeles, del icono en la lista de imágenes que se utiliza para ver la animación.  
   
  [in] `clrTrnsp`  
- Specifies the transparent color of images in the image list that are used for animation.  
+ Especifica el color transparente de las imágenes en la lista de imágenes que se utilizan para la animación.  
   
  [in] `uiAnimationListResID`  
- Specifies a resource ID of an image list that is used for animation.  
+ Especifica un identificador de recurso de una lista de imágenes que se utiliza para ver la animación.  
   
-##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
- Gets the longest text string that the status bar pane can display.  
+##  <a name="getalmostlargetext"></a>CMFCRibbonStatusBarPane::GetAlmostLargeText  
+ Obtiene la cadena de texto más larga que puede mostrar el panel de la barra de estado.  
   
 ```  
 LPCTSTR GetAlmostLargeText() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The longest text string that the status bar pane can display.  
+### <a name="return-value"></a>Valor devuelto  
+ La cadena de texto más larga que puede mostrar el panel de la barra de estado.  
   
-##  <a name="gettextalign"></a>  CMFCRibbonStatusBarPane::GetTextAlign  
- Gets the current setting of the text alignment of the label of the status bar pane.  
+##  <a name="gettextalign"></a>CMFCRibbonStatusBarPane::GetTextAlign  
+ Obtiene el valor actual de la alineación del texto de la etiqueta del panel de barra de estado.  
   
 ```  
 int GetTextAlign() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- The current text alignment which can be one of the following:  
+### <a name="return-value"></a>Valor devuelto  
+ La alineación del texto actual que puede ser uno de los siguientes:  
   
 -   TA_LEFT  
   
@@ -206,78 +194,78 @@ int GetTextAlign() const;
   
 -   TA_RIGHT.  
   
-##  <a name="isanimation"></a>  CMFCRibbonStatusBarPane::IsAnimation  
- Determines whether the animation is in progress.  
+##  <a name="isanimation"></a>CMFCRibbonStatusBarPane::IsAnimation  
+ Determina si la animación está en curso.  
   
 ```  
 BOOL IsAnimation() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if animation is in progress; `FALSE` otherwise.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si la animación está en curso; `FALSE` en caso contrario.  
   
-##  <a name="isextended"></a>  CMFCRibbonStatusBarPane::IsExtended  
- Determine whether the pane is located in the extended area of the ribbon status bar.  
+##  <a name="isextended"></a>CMFCRibbonStatusBarPane::IsExtended  
+ Determinar si el panel se encuentra en el área extendida de la barra de estado de la cinta de opciones.  
   
 ```  
 BOOL IsExtended() const;  
 ```  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if pane is on status bar extended area. `FALSE` otherwise.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si el panel se encuentra en el área extendida de la barra de estado. En caso contrario, es `FALSE`.  
   
-##  <a name="ondrawborder"></a>  CMFCRibbonStatusBarPane::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCRibbonStatusBarPane::OnDrawBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 virtual void OnDrawBorder(CDC*);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `CDC*`  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="onfillbackground"></a>  CMFCRibbonStatusBarPane::OnFillBackground  
+##  <a name="onfillbackground"></a>CMFCRibbonStatusBarPane::OnFillBackground  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `pDC`  
   
-### <a name="return-value"></a>Return Value  
+### <a name="return-value"></a>Valor devuelto  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentarios  
   
-##  <a name="onfinishanimation"></a>  CMFCRibbonStatusBarPane::OnFinishAnimation  
- Framework calls this method when the animation that is assigned to the pane ends.  
+##  <a name="onfinishanimation"></a>CMFCRibbonStatusBarPane::OnFinishAnimation  
+ Marco de trabajo llama a este método cuando finaliza la animación que se asigna al panel.  
   
 ```  
 virtual void OnFinishAnimation();
 ```  
   
-### <a name="remarks"></a>Remarks  
- `StopAnimation` method calls the `OnFinishAnimation` method, which you can use to clean up data when the animation ends.  
+### <a name="remarks"></a>Comentarios  
+ `StopAnimation`llamadas al método el `OnFinishAnimation` método, que puede utilizar para limpiar los datos cuando finaliza la animación.  
   
-##  <a name="setalmostlargetext"></a>  CMFCRibbonStatusBarPane::SetAlmostLargeText  
- Define the longest text that can be displayed in the status bar pane without truncation.  
+##  <a name="setalmostlargetext"></a>CMFCRibbonStatusBarPane::SetAlmostLargeText  
+ Definir el texto más largo que puede mostrarse en el panel de la barra de estado sin truncamiento.  
   
 ```  
 void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `lpszAlmostLargeText`  
- Specifies the longest string that can be displayed on the status bar pane without truncation.  
+ Especifica la cadena más larga que puede mostrarse en el panel de la barra de estado sin truncamiento.  
   
-### <a name="remarks"></a>Remarks  
- The library calculates the size of text that `lpszAlmostLargeText` specifies and resizes the pane accordingly. The text will be truncated if it still does not fit in the pane.  
+### <a name="remarks"></a>Comentarios  
+ La biblioteca calcula el tamaño del texto que `lpszAlmostLargeText` especifica y cambia el tamaño del panel en consecuencia. El texto se truncará si todavía no se ajusta en el panel.  
   
-##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList  
- Attaches to the status bar pane an image list that can be used for animation.  
+##  <a name="setanimationlist"></a>CMFCRibbonStatusBarPane::SetAnimationList  
+ En el panel de la barra de estado se asocia una lista de imágenes que puede usar para ver la animación.  
   
 ```  
 void SetAnimationList(
@@ -291,44 +279,44 @@ BOOL SetAnimationList(
     COLORREF clrTransp=RGB(192, 192 1, 192) 1);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `hBmpAnimationList`  
- Specifies a handle to an image list.  
+ Especifica un identificador de una lista de imágenes.  
   
  [in] `cxAnimation`  
- Specifies the width, in pixels, of the frame in the image list.  
+ Especifica el ancho, en píxeles, del marco en la lista de imágenes.  
   
  [in] `clrTransp`  
- Specifies the transparent color of the image list.  
+ Especifica el color transparente de la lista de imágenes.  
   
  [in] `uiAnimationListResID`  
- Specifies the resource ID of the image list.  
+ Especifica el identificador de recurso de la lista de imágenes.  
   
-### <a name="return-value"></a>Return Value  
- `TRUE` if the image list is successfully attached to the status bar pane; `FALSE` otherwise.  
+### <a name="return-value"></a>Valor devuelto  
+ `TRUE`Si la lista de imágenes está conectada correctamente con el panel de la barra de estado; `FALSE` en caso contrario.  
   
-##  <a name="settextalign"></a>  CMFCRibbonStatusBarPane::SetTextAlign  
- Sets the text alignment of the label of the status bar pane.  
+##  <a name="settextalign"></a>CMFCRibbonStatusBarPane::SetTextAlign  
+ Establece la alineación del texto de la etiqueta del panel de barra de estado.  
   
 ```  
 void SetTextAlign(int nAlign);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `nAlign`  
- Specifies the text alignment.  
+ Especifica la alineación del texto.  
   
-### <a name="remarks"></a>Remarks  
- `nAlign` can have one of the following values:  
+### <a name="remarks"></a>Comentarios  
+ `nAlign`puede tener uno de los siguientes valores:  
   
-- `TA_LEFT`: left alignment  
+- `TA_LEFT`: la alineación izquierda  
   
-- `TA_CENTER:` center alignment  
+- `TA_CENTER:`alineación central  
   
-- `TA_RIGHT:` right alignment  
+- `TA_RIGHT:`alineación a la derecha  
   
-##  <a name="startanimation"></a>  CMFCRibbonStatusBarPane::StartAnimation  
- Starts the animation that you assign to the pane.  
+##  <a name="startanimation"></a>CMFCRibbonStatusBarPane::StartAnimation  
+ Inicia la animación que se asigna al panel.  
   
 ```  
 void StartAnimation(
@@ -336,26 +324,26 @@ void StartAnimation(
     UINT nDuration=-1);
 ```  
   
-### <a name="parameters"></a>Parameters  
+### <a name="parameters"></a>Parámetros  
  [in] `nFrameDelay`  
- Specifies the animation frame rate, in milliseconds.  
+ Especifica la velocidad de fotogramas de animación, en milisegundos.  
   
  [in] `nDuration`  
- Specifies how long to play the animation, in milliseconds. Use -1 for an infinite loop.  
+ Especifica cuánto tiempo al reproducir la animación, en milisegundos. Utilice -1 para un bucle infinito.  
   
-### <a name="remarks"></a>Remarks  
- You must specify a handle to an image list before you call `StartAnimation` by using `SetAnimationList`.  
+### <a name="remarks"></a>Comentarios  
+ Debe especificar un identificador de una lista de imágenes antes de llamar a `StartAnimation` utilizando `SetAnimationList`.  
   
-##  <a name="stopanimation"></a>  CMFCRibbonStatusBarPane::StopAnimation  
- Stops the animation that you assigned to the status bar pane.  
+##  <a name="stopanimation"></a>CMFCRibbonStatusBarPane::StopAnimation  
+ Detiene la animación que asignó en el panel de la barra de estado.  
   
 ```  
 void StopAnimation();
 ```  
   
-## <a name="see-also"></a>See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonButton Class](../../mfc/reference/cmfcribbonbutton-class.md)   
- [CMFCRibbonStatusBar Class](../../mfc/reference/cmfcribbonstatusbar-class.md)
+## <a name="see-also"></a>Vea también  
+ [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
+ [Clases](../../mfc/reference/mfc-classes.md)   
+ [Clase CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)   
+ [Clase CMFCRibbonStatusBar](../../mfc/reference/cmfcribbonstatusbar-class.md)
 

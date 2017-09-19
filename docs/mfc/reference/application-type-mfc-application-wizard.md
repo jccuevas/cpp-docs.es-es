@@ -1,5 +1,5 @@
 ---
-title: Application Type, MFC Application Wizard | Microsoft Docs
+title: "Tipo de aplicación, Asistente para aplicaciones MFC | Documentos de Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,91 +33,91 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
-ms.openlocfilehash: fef2f03dddd85b8b4469172cb0c594e3643a62da
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: bd862d4a537f2297c1ee5a6fd517e22f7c684fa4
 ms.contentlocale: es-es
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 04/01/2017
 
 ---
-# <a name="application-type-mfc-application-wizard"></a>Application Type, MFC Application Wizard
-Use this page of the [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md) to design and add basic features to a new MFC application.  
+# <a name="application-type-mfc-application-wizard"></a>Tipo de aplicación, Asistente para aplicaciones MFC
+Utilice esta página de la [Asistente para aplicaciones MFC](../../mfc/reference/mfc-application-wizard.md) para diseñar y agregar características básicas a una nueva aplicación MFC.  
   
- **Application type**  
- Specifies the type of document support that you want to create in your application. The type of application you select determines the user interface options that are available for your application. See [User Interface Features, MFC Application Wizard](../../mfc/reference/user-interface-features-mfc-application-wizard.md) for more information.  
+ **Tipo de aplicación**  
+ Especifica el tipo de compatibilidad de documento que desea crear en la aplicación. El tipo de aplicación que seleccione determina las opciones de interfaz de usuario que están disponibles para la aplicación. Vea [características de la interfaz de usuario, Asistente para aplicaciones MFC](../../mfc/reference/user-interface-features-mfc-application-wizard.md) para obtener más información.  
   
- For more information about the types of documents, see:  
+ Para obtener más información acerca de los tipos de documentos, vea:  
   
--   [SDI and MDI](../../mfc/sdi-and-mdi.md)  
+-   [SDI y MDI](../../mfc/sdi-and-mdi.md)  
   
--   [Frame Windows](../../mfc/frame-windows.md)  
+-   [Ventanas de marco](../../mfc/frame-windows.md)  
   
--   [Frame-Window Classes](../../mfc/frame-window-classes.md)  
+-   [Clases de ventana de marco](../../mfc/frame-window-classes.md)  
   
--   [Documents, Views, and the Framework](../../mfc/documents-views-and-the-framework.md)  
+-   [Documentos, vistas y el marco](../../mfc/documents-views-and-the-framework.md)  
   
--   [Dialog Boxes](../../mfc/dialog-boxes.md)  
+-   [Cuadros de diálogo](../../mfc/dialog-boxes.md)  
   
-|Option|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
-|**Single document**|Creates a single document interface (SDI) architecture for your application, where a view class is based on [CView Class](../../mfc/reference/cview-class.md). You can change the base class for the view in the [Generated Classes, MFC Application Wizard](../../mfc/reference/generated-classes-mfc-application-wizard.md) page of the wizard. To create a form-based application, for example, use [CFormView Class](../../mfc/reference/cformview-class.md) for the view class.<br /><br /> In this type of application, the document's frame window can hold only one document.|  
-|**Multiple documents**|Creates a multiple document interface (MDI) architecture for your application, where a view class is based on `CView`. You can change the base class for the view in the **Generated Classes** page of the wizard. To create a form-based application, for example, use `CFormView` for the view class.<br /><br /> In this type of application, the document's frame window can hold multiple child windows.|  
-|**Tabbed documents**|Places each document on a separate tab.|  
-|**Dialog based**|Creates a dialog-based architecture for your application where a dialog class is based on `CDialog`. (To create an HTML dialog, select the box **Use HTML dialog**.)|  
-|**Use HTML dialog**|For dialog box applications only. Derives the dialog class from [CDHtmlDialog Class](../../mfc/reference/cdhtmldialog-class.md) instead of [CDialog Class](../../mfc/reference/cdialog-class.md). If you check this box, `CDHtmlDialog` is listed in the **Base class** box in the [Generated Classes, MFC Application Wizard](../../mfc/reference/generated-classes-mfc-application-wizard.md) page of the wizard.<br /><br /> A `CDHtmlDialog`-derived dialog box displays HTML-based dialog boxes, exchanges data with HTML controls and handles HTML events.|  
-|**Multiple top-level documents**|Creates a multiple top-level architecture for your application, where a view class is based on `CView`.<br /><br /> In this type of application, when a user clicks **New** (or **New Frame**) on the **File** menu, the application creates a window whose parent is implicitly the desktop. The new document frame appears in the taskbar and is not restricted to the client area of the application window.|  
+|**Documento único**|Crea una arquitectura de único documento (SDI) de la interfaz para la aplicación, donde una clase de vista se basa en [CView (clase)](../../mfc/reference/cview-class.md). Puede cambiar la clase base para la vista en la [clases generadas, Asistente para aplicaciones MFC](../../mfc/reference/generated-classes-mfc-application-wizard.md) página del asistente. Para crear una aplicación basada en formularios, por ejemplo, utilice [clase CFormView](../../mfc/reference/cformview-class.md) para la clase de vista.<br /><br /> En este tipo de aplicación, la ventana de marco del documento puede contener un solo documento.|  
+|**Varios documentos**|Crea una arquitectura de múltiples documentos (MDI) de la interfaz para la aplicación, donde una clase de vista se basa en `CView`. Puede cambiar la clase base para la vista en la **clases generadas** página del asistente. Para crear una aplicación basada en formularios, por ejemplo, utilice `CFormView` para la clase de vista.<br /><br /> En este tipo de aplicación, ventana de marco del documento puede contener varias ventanas secundarias.|  
+|**Documentos con fichas**|Coloca cada documento en una pestaña independiente.|  
+|**En función del cuadro de diálogo**|Crea una arquitectura basada en cuadros de diálogo para la aplicación que una clase de cuadro de diálogo se basa en `CDialog`. (Para crear un cuadro de diálogo HTML, active la casilla de **diálogo usar HTML**.)|  
+|**Utilice el cuadro de diálogo HTML**|Cuadro de diálogo cuadro solo para aplicaciones. Se deriva la clase de cuadro de diálogo de [clase CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) en lugar de [CDialog (clase)](../../mfc/reference/cdialog-class.md). Si activa esta casilla, `CDHtmlDialog` aparece en la **clase Base** cuadro el [clases generadas, Asistente para aplicaciones MFC](../../mfc/reference/generated-classes-mfc-application-wizard.md) página del asistente.<br /><br /> Un `CDHtmlDialog`-cuadro de diálogo derivada muestra cuadros de diálogo basado en HTML, intercambio de datos con HTML controla y administra los eventos HTML.|  
+|**Varios documentos de nivel superior**|Crea una arquitectura de nivel superior de múltiples para la aplicación, donde una clase de vista se basa en `CView`.<br /><br /> En este tipo de aplicación, cuando un usuario hace clic en **New** (o **nuevo marco**) en el **archivo** menú, la aplicación crea una ventana cuyo elemento primario es implícitamente el escritorio. El nuevo marco de documento aparece en la barra de tareas y no está restringido al área de cliente de la ventana de la aplicación.|  
   
- **Document/view architecture support**  
- Specifies whether to include document/view architecture in your application by using the [CDocument Class](../../mfc/reference/cdocument-class.md) and the [CView Class](../../mfc/reference/cview-class.md) (default). Clear this check box if you are porting a non-MFC application or if you want to reduce the size of your compiled executable. By default, an application without document/view architecture is derived from [CWinApp Class](../../mfc/reference/cwinapp-class.md), and it does not include MFC support for opening a document from a disk file.  
+ **Compatibilidad con la arquitectura documento/vista**  
+ Especifica si se debe incluir la arquitectura documento/vista en la aplicación mediante el [CDocument (clase)](../../mfc/reference/cdocument-class.md) y [CView (clase)](../../mfc/reference/cview-class.md) (valor predeterminado). Desactive esta casilla de verificación si va a trasladar una aplicación no basada en MFC o si desea reducir el tamaño del archivo ejecutable compilado. De forma predeterminada, se deriva de una aplicación sin la arquitectura documento/vista [CWinApp (clase)](../../mfc/reference/cwinapp-class.md), y no incluye compatibilidad con MFC para abrir un documento desde un archivo de disco.  
   
- **Resource language**  
- Sets the language of your resources. The list displays the languages available on your system, as installed by Visual Studio. If you want to select a language other than your system language, the appropriate template folder for that language must already be installed. For more information about installing language resources different from the defaults available in the **Resource language** list, see [Wizard Support for Other Languages](../../ide/wizard-support-for-other-languages.md).  
+ **Idioma de recurso**  
+ Establece el idioma de los recursos. La lista muestra los idiomas disponibles en el sistema, tal y como se instala Visual Studio. Si desea seleccionar un idioma distinto del idioma del sistema, ya debe instalarse la carpeta de plantillas apropiada para dicho idioma. Para obtener más información acerca de cómo instalar recursos de idiomas distintos de los predeterminados disponibles en la **idioma de recurso** lista, vea [compatibilidad del asistente con otros lenguajes](../../ide/wizard-support-for-other-languages.md).  
   
- The language that you select is reflected in the **Localized strings** option of the [Document Template Strings, MFC Application Wizard](../../mfc/reference/document-template-strings-mfc-application-wizard.md) page of the wizard.  
+ El idioma que seleccione se refleja en el **cadenas traducidas** opción de la [cadenas de plantillas de documentos, Asistente para aplicaciones MFC](../../mfc/reference/document-template-strings-mfc-application-wizard.md) página del asistente.  
   
- **Use Unicode libraries**  
- Specifies whether the Unicode or non-Unicode version of the MFC libraries is used.  
+ **Utilizar bibliotecas de Unicode**  
+ Especifica si se utiliza la versión de las bibliotecas MFC Unicode o no Unicode.  
   
- **Project style**  
- Indicates whether your application has a standard MFC, File Explorer, Visual Studio, or Office architecture and display. For more information, see [Creating a File Explorer-Style MFC Application](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md).  
+ **Estilo del proyecto**  
+ Indica si la aplicación tiene un estándar MFC, Explorador de archivos, Visual Studio, o arquitectura de Office y mostrar. Para obtener más información, consulte [crear una aplicación de MFC estilo Explorador de archivos](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md).  
   
-|Option|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
-|**MFC standard**|Provides a standard MFC application architecture.|  
-|**File Explorer**|Implements a File Explorer-like application by using a splitter window where the left pane is a [CTreeView Class](../../mfc/reference/ctreeview-class.md) and the right pane is a [CListView Class](../../mfc/reference/clistview-class.md).|  
-|**Visual Studio**|Implements a Visual Studio-like application that contains four dockable panes (**File View**, **Class View**, **Properties**, and **Output**) that are derived from [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) and a main frame window that is derived from [CMDIFrameWndEx Class](../../mfc/reference/cmdiframewndex-class.md) (default).|  
-|**Office**|Implements an Office-like application that contains a ribbon that is derived from [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md), an Outlook bar that is derived from [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md), a caption bar that is derived from [CMFCCaptionBar Class](../../mfc/reference/cmfccaptionbar-class.md), and a main frame that is derived from [CMDIFrameWndEx Class](../../mfc/reference/cmdiframewndex-class.md).|  
+|**Estándar MFC**|Proporciona una arquitectura de aplicación MFC estándar.|  
+|**Explorador de archivos**|Implementa una aplicación similar al explorador de archivos mediante el uso de una ventana divisora, donde es el panel izquierdo una [clase CTreeView](../../mfc/reference/ctreeview-class.md) y el panel derecho es un [CListView (clase)](../../mfc/reference/clistview-class.md).|  
+|**Visual Studio**|Implementa una aplicación de Visual Studio similar que contiene cuatro paneles acoplables (**Ver archivo**, **vista de clases**, **propiedades**, y **salida**) que se deriva de [clase CDockablePane](../../mfc/reference/cdockablepane-class.md) y una ventana de marco principal que se deriva de [CMDIFrameWndEx (clase)](../../mfc/reference/cmdiframewndex-class.md) (valor predeterminado).|  
+|**Office**|Implementa una aplicación de tipo de Office que contiene una cinta de opciones que se deriva de [CMFCRibbonBar (clase)](../../mfc/reference/cmfcribbonbar-class.md), una barra de Outlook que se deriva de [CMFCOutlookBar (clase)](../../mfc/reference/cmfcoutlookbar-class.md), una barra de título que se deriva de [CMFCCaptionBar (clase)](../../mfc/reference/cmfccaptionbar-class.md)y un marco principal que se deriva de [CMDIFrameWndEx (clase)](../../mfc/reference/cmdiframewndex-class.md).|  
   
- **Visual style and colors**  
- Determines the visual style of the application. The following options are available:  
+ **Estilo visual y colores**  
+ Determina el estilo visual de la aplicación. Están disponibles las siguientes opciones:  
   
--   **Windows Native/Default**  
+-   **Windows nativo/predeterminado**  
   
 -   **Office 2003**  
   
 -   **Visual Studio 2005**  
   
--   **Office 2007 (Blue theme)**  
+-   **Office 2007 (tema azul)**  
   
--   **Office 2007 (Black theme)**  
+-   **Office 2007 (tema negro)**  
   
--   **Office 2007 (Silver theme)**  
+-   **Office 2007 (tema plateado)**  
   
--   **Office 2007 (Aqua theme)**  
+-   **Office 2007 (tema aguamarina)**  
   
- **Enable visual style switching**  
- Specifies whether the user can change the visual style of the application at runtime, usually by selecting the appropriate visual style from a menu or ribbon.  
+ **Habilitar el cambio de estilos visuales**  
+ Especifica si el usuario puede cambiar el estilo visual de la aplicación en tiempo de ejecución, normalmente seleccionando el estilo visual correspondiente de un menú o una cinta de opciones.  
   
- **Use of MFC**  
- Specifies how to link to the MFC library. By default, MFC is linked as a shared DLL.  
+ **Uso de MFC**  
+ Especifica cómo vincular a la biblioteca MFC. De forma predeterminada, MFC se vincula como un archivo DLL compartido.  
   
-|Option|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
-|**Use MFC in a shared DLL**|Links the MFC library to an application as a shared DLL. The application makes calls to the MFC library at run time. This option reduces the disk and memory requirements of applications that consist of multiple executable files that use the MFC library. Both Win32 and MFC applications can call functions in your DLL (default)|  
-|**Use MFC in a static library**|Links an application to the static MFC library at build time.|  
+|**Utilizar MFC en un archivo DLL compartido**|Vincula la biblioteca MFC a una aplicación como un archivo DLL compartido. La aplicación realiza llamadas a la biblioteca MFC en tiempo de ejecución. Esta opción reduce los requisitos de disco y memoria de las aplicaciones que constan de varios archivos ejecutables que utilizan la biblioteca MFC. Las aplicaciones de Win32 y MFC pueden llamar a funciones en el archivo DLL (valor predeterminado)|  
+|**Utilizar MFC en una biblioteca estática**|Vincula una aplicación a la biblioteca MFC estática en tiempo de compilación.|  
   
-## <a name="see-also"></a>See Also  
- [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)   
- [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md)
+## <a name="see-also"></a>Vea también  
+ [Asistente para aplicaciones MFC](../../mfc/reference/mfc-application-wizard.md)   
+ [Tipos de archivos creados para proyectos de Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)
 
 

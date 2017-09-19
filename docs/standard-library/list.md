@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <list>", "std::<list>
+- <list>
+- std.<list>
+- std::<list>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -33,42 +35,42 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: fb74624184e764b66561f3bf1e59a632ee1cef58
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ce9fb66784027d81acaac6e98ad0f6a6121da956
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
-Defines the container template class list and several supporting templates.  
+Define la lista de clases de plantilla de contenedores y varias plantillas auxiliares.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #include <list>  
 ```  
   
-### <a name="operators"></a>Operators  
+### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/list-operators.md#op_neq)|Tests if the list object on the left side of the operator is not equal to the list object on the right side.|  
-|[operator<](../standard-library/list-operators.md#op_lt)|Tests if the list object on the left side of the operator is less than the list object on the right side.|  
-|[operator\<=](../standard-library/list-operators.md#op_gt_eq)|Tests if the list object on the left side of the operator is less than or equal to the list object on the right side.|  
-|[operator==](../standard-library/list-operators.md#op_eq_eq)|Tests if the list object on the left side of the operator is equal to the list object on the right side.|  
-|[operator>](../standard-library/list-operators.md#op_gt)|Tests if the list object on the left side of the operator is greater than the list object on the right side.|  
-|[operator>=](../standard-library/list-operators.md#op_gt_eq)|Tests if the list object on the left side of the operator is greater than or equal to the list object on the right side.|  
+|[operator!=](../standard-library/list-operators.md#op_neq)|Comprueba si el objeto de lista del lado izquierdo del operador no es igual que el objeto de lista del lado derecho.|  
+|[operator<](../standard-library/list-operators.md#op_lt)|Comprueba si el objeto de lista del lado izquierdo del operador es menor que el objeto de lista del lado derecho.|  
+|[operator\<=](../standard-library/list-operators.md#op_gt_eq)|Comprueba si el objeto de lista del lado izquierdo del operador es menor o igual que el objeto de lista del lado derecho.|  
+|[operator==](../standard-library/list-operators.md#op_eq_eq)|Comprueba si el objeto de lista del lado izquierdo del operador es igual que el objeto de lista del lado derecho.|  
+|[operator>](../standard-library/list-operators.md#op_gt)|Comprueba si el objeto de lista del lado izquierdo del operador es mayor que el objeto de lista del lado derecho.|  
+|[operator>=](../standard-library/list-operators.md#op_gt_eq)|Comprueba si el objeto de lista del lado izquierdo del operador es mayor o igual que el objeto de lista del lado derecho.|  
   
-### <a name="classes"></a>Classes  
+### <a name="classes"></a>Clases  
   
 |||  
 |-|-|  
-|[list Class](../standard-library/list-class.md)|A template class of sequence containers that maintain their elements in a linear arrangement and allow efficient insertions and deletions at any location within the sequence.|  
+|[Clase list](../standard-library/list-class.md)|Una clase de plantilla de contenedores de secuencias que mantienen sus elementos en disposición lineal y permiten realizar inserciones y eliminaciones de manera eficiente en cualquier ubicación de la secuencia.|  
   
-## <a name="see-also"></a>See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
+ [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
 
 

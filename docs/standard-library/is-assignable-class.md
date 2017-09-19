@@ -1,5 +1,5 @@
 ---
-title: is_assignable Class | Microsoft Docs
+title: Clase is_assignable | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,6 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- is_assignable
 - type_traits/std::is_assignable
 dev_langs:
 - C++
@@ -33,39 +34,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
-ms.openlocfilehash: c0e6d35e76a7bfddc1fbbc7eb7fa634fe7ed07c4
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 208853a8e173797a37da60a824d06341e279ea34
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 02/24/2017
 
 ---
-# <a name="isassignable-class"></a>is_assignable Class
-Tests whether a value of `From` type can be assigned to a `To` type.  
+# <a name="isassignable-class"></a>Clase is_assignable
+Comprueba si un valor de tipo `From` se puede asignar a un tipo `To`.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```
 template <class To, class From>  
 struct is_assignable;
 ```  
   
-#### <a name="parameters"></a>Parameters  
- To  
- The type of the object that receives the assignment.  
+#### <a name="parameters"></a>Parámetros  
+ Para  
+ El tipo del objeto que recibe la asignación.  
   
- From  
- The type of the object that provides the value.  
+ De  
+ El tipo del objeto que proporciona el valor.  
   
-## <a name="remarks"></a>Remarks  
- The unevaluated expression `declval<To>() = declval<From>()` must be well-formed. Both `From` and `To` must be complete types, `void`, or arrays of unknown bound.  
+## <a name="remarks"></a>Comentarios  
+ La expresión no evaluada `declval<To>() = declval<From>()` debe tener un formato correcto. Tanto `From` como `To` deben ser tipos completos, `void` o matrices de límite desconocido.  
   
-## <a name="requirements"></a>Requirements  
- **Header:** \<type_traits>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
   
- **Namespace:** std  
+ **Espacio de nombres:** std  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)
 
 
