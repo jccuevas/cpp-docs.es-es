@@ -36,10 +36,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 0286098cb87ecfea244269a8e5756829759b82f7
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: db5a6c23d11f8cdf144e42aee4880ee1ac26066a
 ms.contentlocale: es-es
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/23/2017
 
 ---
 # <a name="storage-classes-c"></a>Storage classes (C++)  

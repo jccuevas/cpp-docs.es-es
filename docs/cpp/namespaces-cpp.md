@@ -38,10 +38,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 42abd4adfe10b032849bfec391874cd249793c32
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: deb5926f15e4efad4378a9930f1e353e9af58516
 ms.contentlocale: es-es
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 09/23/2017
 
 ---
 # <a name="namespaces-c"></a>Namespaces (C++)
