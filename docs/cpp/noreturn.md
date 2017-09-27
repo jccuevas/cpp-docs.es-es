@@ -1,41 +1,58 @@
 ---
-title: "noreturn | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "noreturn_cpp"
-  - "noreturn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec (palabra clave) [C++], noreturn"
-  - "noreturn __declspec (palabra clave)"
+title: noreturn | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- noreturn_cpp
+- noreturn
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++], noreturn
+- noreturn __declspec keyword
 ms.assetid: 9c6517e5-22d7-4051-9974-3d2200ae4d1d
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# noreturn
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 45de52c2c3c0b60a62bf19e38854c53e841ed500
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-## Específicos de Microsoft  
- Este atributo `__declspec` indica al compilador que una función no devuelve resultados.  Como consecuencia, el compilador sabe que no se puede tener acceso al código que sigue a una llamada a una función **\_\_declspec\(noreturn\)**.  
+---
+# <a name="noreturn"></a>noreturn
+## <a name="microsoft-specific"></a>Específicos de Microsoft  
+ Este atributo `__declspec` indica al compilador que una función no devuelve resultados. En consecuencia, el compilador sabe que el código después de una llamada a un **__declspec (noreturn)** función no es accesible.  
   
- Si el compilador encuentra una función con una ruta de acceso de control que no devuelve un valor, genera una advertencia \(C4715\) o un mensaje de error \(C2202\).  Si no se puede tener acceso a la ruta de acceso de control debido a una función que nunca devuelve resultados, puede utilizar **\_\_declspec\(noreturn\)** para evitar esta advertencia o este error.  
+ Si el compilador encuentra una función con una ruta de acceso de control que no devuelve un valor, genera una advertencia (C4715) o un mensaje de error (C2202). Si no se puede tener acceso a la ruta de acceso de control debido a una función que nunca devuelve resultados, puede usar **__declspec (noreturn)** para evitar esta advertencia o error.  
   
 > [!NOTE]
->  La adición de **\_\_declspec\(noreturn\)** a una función que se espera que devuelva resultados puede dar lugar a un comportamiento indefinido.  
+>  Agregar **__declspec (noreturn)** a una función que se espera que devuelvan puede dar lugar a un comportamiento indefinido.  
   
-## Ejemplo  
- En el ejemplo siguiente, la cláusula **else** no contiene una instrucción return.  La declaración de `fatal` como **\_\_declspec\(noreturn\)** evita un mensaje de error o de advertencia.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente, la **else** cláusula no contiene una instrucción return.  Declarar `fatal` como **__declspec (noreturn)** evita un mensaje de advertencia o error.  
   
 ```  
 // noreturn2.cpp  
@@ -51,6 +68,6 @@ int main() {
 }  
 ```  
   
-## Vea también  
- [\_\_declspec](../cpp/declspec.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [__declspec](../cpp/declspec.md)   
+ [Palabras clave](../cpp/keywords-cpp.md)

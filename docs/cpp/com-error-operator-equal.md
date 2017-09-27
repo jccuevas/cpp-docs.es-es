@@ -1,38 +1,54 @@
 ---
-title: "_com_error::operator = | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_error::operator="
-  - "_com_error.operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= (operador), con objetos específicos de Visual C++"
-  - "operator = _com_error (objetos)"
-  - "operator= _com_error (objetos)"
+title: _com_error::operator = | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_error::operator=
+- _com_error.operator=
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator= _com_error objects
+- = operator, with specific Visual C++ objects
+- operator = _com_error objects
 ms.assetid: b9cc4094-d055-450c-b45a-0a95317488f8
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _com_error::operator =
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ddbd09e7783818cb5d2bc72941c8f9e0472e7a3c
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="comerroroperator-"></a>_com_error::operator =
 **Específicos de Microsoft**  
   
  Asigna un objeto `_com_error` existente a otro.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -41,11 +57,11 @@ manager: "ghogen"
 ) throw ( );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `that`  
- Un objeto `_com_error`.  
+ Objeto `_com_error`.  
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
- [\_com\_error \(Clase\)](../cpp/com-error-class.md)
+## <a name="see-also"></a>Vea también  
+ [_com_error (Clase)](../cpp/com-error-class.md)

@@ -1,35 +1,52 @@
 ---
-title: "Comportamiento no est&#225;ndar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compatibilidad y conformidad, comportamiento no estándar"
-  - "específico de Microsoft, comportamiento del compilador"
-  - "comportamiento no estándar, conformidad y compatibilidad"
+title: "Comportamiento no estándar | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- compatibility and compliance, nonstandard behavior
+- Microsoft-specific, compiler behavior
+- nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Comportamiento no est&#225;ndar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 13420db99afa801d02306f4dd8af4104ec322bd5
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-En las próximas secciones se muestran algunos de los lugares en los que la implementación de Visual C\+\+ de C\+\+ no cumple con el estándar de C\+\+.  Los números de sección que se indican a continuación se refieren a los números de sección del estándar de C\+\+ 11 \(ISO\/IEC 14882:2011\(E\)\).  
+---
+# <a name="nonstandard-behavior"></a>Comportamiento no estándar
+En las próximas secciones se muestran algunos de los lugares en los que la implementación de Visual C++ de C++ no cumple con el estándar de C++. Los números de sección que se indican a continuación se refieren a los números de sección del estándar de C++ 11 (ISO/IEC 14882:2011(E)).  
   
- La lista de límites del compilador que difieren de los definidos en el estándar de C\+\+ se proporciona en [Límites del compilador](../cpp/compiler-limits.md).  
+ La lista de límites del compilador que difieren de los definidos en el estándar de C++ se proporciona [límites del compilador](../cpp/compiler-limits.md).  
   
-## Tipos de valor devueltos de covariante  
- Las clases base virtuales no se admiten como tipos devueltos de covariante cuando la función virtual tiene un número variable de argumentos.  Esto no cumple con el párrafo 7 de la sección 10.3 de la especificación ISO de C\+\+.  El ejemplo siguiente no se compila y se produce el error del compilador [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
+## <a name="covariant-return-types"></a>Tipos de valor devueltos de covariante  
+ Las clases base virtuales no se admiten como tipos devueltos de covariante cuando la función virtual tiene un número variable de argumentos. Esto no cumple con el párrafo 7 de la sección 10.3 de la especificación ISO de C++. El ejemplo siguiente no se compila, error del compilador [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
   
 ```cpp  
 // CovariantReturn.cpp  
@@ -44,8 +61,8 @@ class B : virtual A
 };  
 ```  
   
-## Enlazar nombres no dependientes en plantillas  
- En estos momentos, el compilador de Visual C\+\+ no admite nombres no dependientes al analizar una plantilla inicialmente.  Esto no cumple con la sección 14.6.3 de la especificación ISO de C\+\+.  Esto puede hacer que se vean las sobrecargas declaradas después de la plantilla \(pero antes de que se creen instancias de la plantilla\).  
+## <a name="binding-nondependent-names-in-templates"></a>Enlazar nombres no dependientes en plantillas  
+ En estos momentos, el compilador de Visual C++ no admite nombres no dependientes al analizar una plantilla inicialmente. Esto no cumple con la sección 14.6.3 de la especificación ISO de C++. Esto puede hacer que se vean las sobrecargas declaradas después de la plantilla (pero antes de que se creen instancias de la plantilla).  
   
 ```cpp  
 #include <iostream>  
@@ -70,18 +87,18 @@ int main() {
   
 ```  
   
-## Especificadores de excepciones de funciones  
- Los especificadores de excepciones de funciones distintos de `throw()` se analizan pero no se usan.  Esto no cumple con la sección 15.4 de la especificación ISO de C\+\+.  Por ejemplo:  
+## <a name="function-exception-specifiers"></a>Especificadores de excepciones de funciones  
+ Los especificadores de excepciones de funciones distintos de `throw()` se analizan pero no se usan. Esto no cumple con la sección 15.4 de la especificación ISO de C++. Por ejemplo:  
   
 ```cpp  
 void f() throw(int); // parsed but not used  
 void g() throw();    // parsed and used  
 ```  
   
- Para obtener más información sobre las especificaciones de excepciones, vea [Especificaciones de excepciones](../cpp/exception-specifications-throw-cpp.md).  
+ Para obtener más información acerca de las especificaciones de excepción, vea [especificaciones de excepción](../cpp/exception-specifications-throw-cpp.md).  
   
-## char\_traits::eof\(\)  
- El estándar de C\+\+ indica que [char\_traits::eof](../Topic/char_traits::eof.md) no debe corresponder a un valor `char_type` válido.  El compilador de Visual C\+\+ exige esta restricción para el tipo `char`, pero no para el tipo `wchar_t`.  Esto no cumple con el requisito indicado en la tabla 62 de la sección 12.1.1 de la especificación ISO de C\+\+.  En el ejemplo siguiente se muestra esto.  
+## <a name="chartraitseof"></a>char_traits::eof()  
+ El estándar de C++ indica que [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) no deben corresponder a válido `char_type` valor. El compilador de Visual C++ exige esta restricción para el tipo `char`, pero no para el tipo `wchar_t`. Esto no cumple con el requisito indicado en la tabla 62 de la sección 12.1.1 de la especificación ISO de C++. En el ejemplo siguiente se muestra esto.  
   
 ```cpp  
 #include <iostream>  
@@ -98,5 +115,5 @@ int main()
 }  
 ```  
   
-## Ubicación de almacenamiento de objetos  
- El estándar de C\+\+ \(sección 1.8, párrafo 6\) requiere que los objetos de C\+\+ completos tengan ubicaciones de almacenamiento únicas.  Sin embargo, con Visual C\+\+ hay casos en los que tipos sin miembros de datos compartirán una ubicación de almacenamiento con otros tipos mientras dure el objeto.
+## <a name="storage-location-of-objects"></a>Ubicación de almacenamiento de objetos  
+ El estándar de C++ (sección 1.8, párrafo 6) requiere que los objetos de C++ completos tengan ubicaciones de almacenamiento únicas. Sin embargo, con Visual C++ hay casos en los que tipos sin miembros de datos compartirán una ubicación de almacenamiento con otros tipos mientras dure el objeto.

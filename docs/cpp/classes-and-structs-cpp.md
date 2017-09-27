@@ -1,39 +1,51 @@
 ---
-title: "Clases y structs (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clases [C++]"
-  - "estructuras , clases de C++"
-  - "tipos definidos por el usuario"
-  - "tipos definidos por el usuario, clases de C++"
-  - "Visual C++, clases"
+title: Clases y Structs (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- Visual C++, classes
+- structures, C++ classes
+- user-defined types
+- classes [C++]
+- user-defined types, C++ classes
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Clases y structs (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: db6fd2ff70e805e6681adb9eeca6adac41a38f0b
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-En esta sección se presentan las clases y structs de C\+\+.  Las dos construcciones son idénticas en C\+\+, salvo que, en los structs, la accesibilidad predeterminada es pública, mientras que en las clases es privada.  
+---
+# <a name="classes-and-structs-c"></a>Clases y structs (C++)
+En esta sección se presentan las clases y structs de C++. Las dos construcciones son idénticas en C++, salvo que, en los structs, la accesibilidad predeterminada es pública, mientras que en las clases es privada.  
   
-```  
-  
-```  
-  
- Las clases y los structs son las construcciones con las que define sus propios tipos.  Las clases y los structs pueden contener miembros de datos y funciones miembro, lo que permite describir el comportamiento y el estado del tipo.  
+ Las clases y los structs son las construcciones con las que define sus propios tipos. Las clases y los structs pueden contener miembros de datos y funciones miembro, lo que permite describir el comportamiento y el estado del tipo.  
   
  Se incluyen los temas siguientes:  
   
@@ -43,15 +55,15 @@ En esta sección se presentan las clases y structs de C\+\+.  Las dos construcci
   
 -   [Información general sobre miembros de clase](../cpp/class-member-overview.md)  
   
--   [Control de acceso a miembros](../cpp/member-access-control-cpp.md)  
+-   [Control de acceso de miembro](../cpp/member-access-control-cpp.md)  
   
 -   [Herencia](../cpp/inheritance-cpp.md)  
   
 -   [Miembros estáticos](../cpp/static-members-cpp.md)  
   
--   [Conversiones](../cpp/user-defined-type-conversions-cpp.md)  
+-   [Conversiones de tipos definidos por el usuario](../cpp/user-defined-type-conversions-cpp.md)  
   
--   [Miembros de datos mutables \(especificador mutable\)](../cpp/mutable-data-members-cpp.md)  
+-   [Mutable miembros de datos (especificador mutable)](../cpp/mutable-data-members-cpp.md)  
   
 -   [Declaraciones de clase anidadas](../cpp/nested-class-declarations.md)  
   
@@ -59,21 +71,21 @@ En esta sección se presentan las clases y structs de C\+\+.  Las dos construcci
   
 -   [Punteros a miembros](../cpp/pointers-to-members.md)  
   
--   [this \(Puntero\)](../cpp/this-pointer.md)  
+-   [this (Puntero)](../cpp/this-pointer.md)  
   
--   [Campos de bits de C\+\+](../cpp/cpp-bit-fields.md)  
+-   [Campos de bits de C++](../cpp/cpp-bit-fields.md)  
   
- Los tres tipos de clase son estructura, clase, y unión.  Se declaran mediante las palabras clave [struct](../cpp/struct-cpp.md), [class](../cpp/class-cpp.md) y [union](../cpp/unions.md) \(vea [Definir tipos de clase](http://msdn.microsoft.com/es-es/e8c65425-0f3a-4dca-afc2-418c3b1e57da)\).  En la tabla siguiente se muestran las diferencias entre los tres tipos de clase.  
+ Los tres tipos de clase son estructura, clase, y unión. Se declaran mediante la [struct](../cpp/struct-cpp.md), [clase](../cpp/class-cpp.md), y [union](../cpp/unions.md) palabras clave (vea [definir tipos de clase](http://msdn.microsoft.com/en-us/e8c65425-0f3a-4dca-afc2-418c3b1e57da)). En la tabla siguiente se muestran las diferencias entre los tres tipos de clase.  
   
- Para obtener más información sobre las uniones, vea [Unions](../cpp/unions.md).  Para obtener información sobre las clases administradas y los structs, vea [Clases y structs](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Para obtener más información sobre las uniones, vea [uniones](../cpp/unions.md). Para obtener información sobre las clases administradas y los structs, vea [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
-### Control de acceso y restricciones de las estructuras, clases y uniones  
+### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>Control de acceso y restricciones de las estructuras, clases y uniones  
   
 |Estructuras|Clases|Uniones|  
-|-----------------|------------|-------------|  
-|La clave de clase es `struct`|La clave de clase es **class**|La clave de clase es **union**|  
+|----------------|-------------|------------|  
+|La clave de clase es `struct`|clave de clase es **(clase)**|clave de clase es **union**|  
 |El acceso predeterminado es público|El acceso predeterminado es privado|El acceso predeterminado es público|  
 |No hay ninguna restricción de uso|No hay ninguna restricción de uso|Usan solo un miembro cada vez|  
   
-## Vea también  
- [Referencia de lenguaje C\+\+](../cpp/cpp-language-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)

@@ -1,35 +1,52 @@
 ---
-title: "_com_error::Description | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_error.Description"
-  - "_com_error::Description"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Description (método)"
+title: _com_error::Description | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_error.Description
+- _com_error::Description
+dev_langs:
+- C++
+helpviewer_keywords:
+- Description method
 ms.assetid: 88191e24-4ee8-44a6-8c4c-3758e22e0548
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_error::Description
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 0d91f6fded1fa1c4ea4d44cadd0d9285913b5f42
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="comerrordescription"></a>_com_error::Description
 **Específicos de Microsoft**  
   
- Llama a la función **IErrorInfo::GetDescription**.  
+ Llamadas **IErrorInfo:: GetDescription** función.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -37,13 +54,13 @@ _bstr_t Description( ) const;
   
 ```  
   
-## Valor devuelto  
- Devuelve el resultado de **IErrorInfo::GetDescription** para el objeto **IErrorInfo** grabado dentro del objeto `_com_error`.  El `BSTR` resultante se encapsula en un objeto `_bstr_t`.  Si no se registra ningún objeto **IErrorInfo**, devuelve un `_bstr_t` vacío.  
+## <a name="return-value"></a>Valor devuelto  
+ Devuelve el resultado de **IErrorInfo:: GetDescription** para el **IErrorInfo** objeto registrado dentro del `_com_error` objeto. El `BSTR` resultante se encapsula en un objeto `_bstr_t`. Si no hay ningún **IErrorInfo** está registrado, devuelve una instancia vacía `_bstr_t`.  
   
-## Comentarios  
- Llama a la función **IErrorInfo::GetDescription** y recupera el objeto **IErrorInfo** grabado dentro del objeto `_com_error`.  Cualquier error que se produzca mientras se llama al método **IErrorInfo::GetDescription** se omite.  
+## <a name="remarks"></a>Comentarios  
+ Llamadas el **IErrorInfo:: GetDescription** función y recupera **IErrorInfo** registrado dentro del `_com_error` objeto. Cualquier error al llamar a la **IErrorInfo:: GetDescription** método se pasa por alto.  
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
- [\_com\_error \(Clase\)](../cpp/com-error-class.md)
+## <a name="see-also"></a>Vea también  
+ [_com_error (Clase)](../cpp/com-error-class.md)

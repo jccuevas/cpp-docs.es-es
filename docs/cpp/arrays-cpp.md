@@ -1,31 +1,47 @@
 ---
-title: "Matrices (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrices [C++]"
-  - "declarar matrices, acerca de declarar matrices"
-  - "matrices multidimensionales"
+title: Matrices (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declaring arrays, about declaring arrays
+- multidimensional arrays
+- arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Matrices (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: efd124254ece8f863afee13e132eea7945525a0e
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Una matriz es una colección de objetos similares.  El caso más simple de una matriz es un vector, que se puede declarar mediante la secuencia siguiente:  
+---
+# <a name="arrays-c"></a>Matrices (C++)
+Una matriz es una colección de objetos similares. El caso más simple de una matriz es un vector, que se puede declarar mediante la secuencia siguiente:  
   
 ```  
   
@@ -36,25 +52,25 @@ decl-specifier identifier [ constant-expression ]
 [ constant-expression ] . . .  
 ```  
   
- 1.  El especificador de declaración:  
+ 1. El especificador de declaración:  
   
 -   Un especificador de clase de almacenamiento opcional.  
   
--   Especificadores **const** y\/o `volatile` opcionales.  
+-   Opcional **const** o `volatile` especificadores.  
   
 -   El tipo de nombre de los elementos de la matriz.  
   
- 2.  El declarador:  
+ 2. El declarador:  
   
 -   El identificador.  
   
--   Una expresión constante de tipo entero incluida entre corchetes, **\[\].** Si se declaran varias dimensiones con corchetes adicionales, la expresión constante se puede omitir en el primer conjunto de corchetes.  
+-   Una expresión constante de tipo entero incluida entre corchetes, **[].** Si se declaran varias dimensiones con corchetes adicionales, se puede omitir la expresión constante en el primer conjunto de corchetes.  
   
 -   Corchetes adicionales opcionales que encierran expresiones constantes.  
   
- 3.  Un inicializador opcional.  Vea [Inicializadores](../cpp/initializers.md).  
+ 3. Un inicializador opcional.  Vea [inicializadores](../cpp/initializers.md).  
   
- El número de elementos de la matriz viene determinado por la expresión constante.  El primer elemento de la matriz es el elemento 0 y el último elemento es el elemento \(*n*\-1\), donde *n* es el número de elementos que la matriz puede contener.  El elemento *constant\-expression* debe ser de tipo entero y debe ser mayor que 0.  Una matriz de tamaño cero es válida únicamente cuando la matriz es el último campo en un `struct` o **union** y cuando las extensiones de Microsoft \(\/Ze\) están habilitadas.  
+ El número de elementos de la matriz viene determinado por la expresión constante. El primer elemento de la matriz es el elemento 0 y el último elemento es el (*n*-1) elemento, donde * n * es el número de elementos de la matriz puede contener. El *expresión constante* debe ser de un tipo entero y debe ser mayor que 0. Una matriz de tamaño cero es válida sólo cuando la matriz es el último campo en un `struct` o **union** y cuando están habilitadas las extensiones de Microsoft (/Ze).  
   
  En el ejemplo siguiente se muestra cómo definir una matriz en tiempo de ejecución:  
   
@@ -81,7 +97,7 @@ int main() {
   
  Las matrices son tipos derivados y, por tanto, pueden construirse a partir de cualquier otro tipo derivado o fundamental, salvo funciones, referencias y `void`.  
   
- Las matrices construidas a partir de otras matrices son matrices multidimensionales.  Estas matrices multidimensionales se especifican colocando en orden varias expresiones constantes entre corchetes.  Por ejemplo, considere esta declaración:  
+ Las matrices construidas a partir de otras matrices son matrices multidimensionales. Estas matrices multidimensionales se especifican colocando en orden varias expresiones constantes entre corchetes. Por ejemplo, considere esta declaración:  
   
 ```  
 int i2[5][7];  
@@ -89,10 +105,10 @@ int i2[5][7];
   
  Especifica una matriz de tipo `int`, organizada conceptualmente en una matriz bidimensional de cinco filas y siete columnas, como se muestra en la ilustración siguiente:  
   
- ![Diseño conceptual de una matriz multidimensional](../cpp/media/vc38rc1.png "vc38RC1")  
+ ![Diseño conceptual de un múltiples &#45; matriz dimensional](../cpp/media/vc38rc1.gif "vc38RC1")  
 Diseño conceptual de matriz multidimensional  
   
- En las declaraciones de las matrices multidimensionales que tienen una lista de inicializadores \(como se describe en [Inicializadores](../cpp/initializers.md)\), se puede omitir la expresión constante que especifica los límites de la primera dimensión.  Por ejemplo:  
+ En las declaraciones de matrices multidimensionales que tienen una lista de inicializadores (como se describe en [inicializadores](../cpp/initializers.md)), se puede omitir la expresión constante que especifica los límites de la primera dimensión. Por ejemplo:  
   
 ```  
 // arrays2.cpp  
@@ -106,11 +122,11 @@ double TransportCosts[][cMarkets] = {
 };  
 ```  
   
- La declaración anterior define una matriz de tres filas por cuatro columnas.  Las filas representan fábricas y las columnas representan los mercados a los que distribuyen las fábricas.  Los valores son los costos de transporte de las fábricas a los mercados.  La primera dimensión de la matriz se omite, pero el compilador la completa examinando el inicializador.  
+ La declaración anterior define una matriz de tres filas por cuatro columnas. Las filas representan fábricas y las columnas representan los mercados a los que distribuyen las fábricas. Los valores son los costos de transporte de las fábricas a los mercados. La primera dimensión de la matriz se omite, pero el compilador la completa examinando el inicializador.  
   
  Temas de esta sección:  
   
--   [Usar matrices](../cpp/using-arrays-cpp.md)  
+-   [Uso de matrices](../cpp/using-arrays-cpp.md)  
   
 -   [Matrices en expresiones](../cpp/arrays-in-expressions.md)  
   
@@ -118,9 +134,9 @@ double TransportCosts[][cMarkets] = {
   
 -   [Direccionamiento indirecto en tipos de matriz](../cpp/indirection-on-array-types.md)  
   
--   [Orden de las matrices de C\+\+](../cpp/ordering-of-cpp-arrays.md)  
+-   [Orden de las matrices de C++](../cpp/ordering-of-cpp-arrays.md)  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  La técnica para omitir la especificación de los límites de la primera dimensión de una matriz multidimensional se puede utilizar también en las declaraciones de función de la manera siguiente:  
   
 ```  
@@ -170,9 +186,12 @@ double FindMinToMkt(int Mkt, double myTransportCosts[][cMkts], int mycFacts) {
 }  
 ```  
   
-  **El costo mínimo de transporte a Market 3 es: 17,29**   
-## Comentarios  
+```Output  
+The minimum cost to Market 3 is: 17.29  
+```  
+  
+## <a name="comments"></a>Comentarios  
  La función `FindMinToMkt` se escribe de forma que para agregar nuevas fábricas no sea necesario modificar el código, solo volver a compilarlo.  
   
-## Vea también  
- [C\+\+ Abstract Declarators](http://msdn.microsoft.com/es-es/e7e18c18-0cad-4450-942b-d27e1d4dd088)
+## <a name="see-also"></a>Vea también  
+ 

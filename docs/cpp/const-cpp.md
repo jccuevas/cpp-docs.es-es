@@ -1,43 +1,59 @@
 ---
-title: "const (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "const_cpp"
-  - "const"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const (palabra clave) [C++]"
+title: Const (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- const_cpp
+- const
+dev_langs:
+- C++
+helpviewer_keywords:
+- const keyword [C++]
 ms.assetid: b21c0271-1ad0-40a0-b21c-5e812bba0318
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# const (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 8a6a238f28ec8f84cd127b4af88a84edb26506ee
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Cuando se modifica una declaración de datos, la palabra clave **const** especifica que el objeto o la variable no se puede modificar.  
+---
+# <a name="const-c"></a>const (C++)
+Cuando se modifica una declaración de datos, el **const** palabra clave especifica que el objeto o la variable no es modificable.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-        const declaration ;  
+      const declaration ;  
 member-function const ;  
 ```  
   
-## valores const  
- La palabra clave **const** especifica que el valor de una variable es constante e indica al compilador que evite que el programador lo modifique.  
+## <a name="const-values"></a>valores const  
+ El **const** palabra clave especifica que el valor de una variable es constante e indica al compilador que evite que el programador lo modifique.  
   
 ```  
 // constant_values1.cpp  
@@ -48,7 +64,7 @@ int main() {
 }  
 ```  
   
- En C\+\+, se puede utilizar la palabra clave **const** en lugar de la directiva de preprocesador [\#define](../preprocessor/hash-define-directive-c-cpp.md) para definir valores constantes.  Los valores definidos con **const** están sujetos a la comprobación de tipos y se pueden usar en lugar de expresiones constantes.  En C\+\+, puede especificar el tamaño de una matriz con una variable **const** de la forma siguiente:  
+ En C++, puede utilizar el **const** palabra clave en lugar de la [#define](../preprocessor/hash-define-directive-c-cpp.md) directiva de preprocesador para definir valores constantes. Los valores definidos con **const** están sujetos a la comprobación de tipos y puede usarse en lugar de expresiones constantes. En C++, puede especificar el tamaño de una matriz con un **const** variable como se indica a continuación:  
   
 ```  
 // constant_values2.cpp  
@@ -57,9 +73,9 @@ const int maxarray = 255;
 char store_char[maxarray];  // allowed in C++; not allowed in C  
 ```  
   
- En C, los valores constantes tienen la vinculación externa como valor predeterminado, por lo que solo pueden aparecer en los archivos de código fuente.  En C\+\+, los valores constantes tienen la vinculación interna como valor predeterminado, que permite que aparezcan en los archivos de encabezado.  
+ En C, los valores constantes tienen la vinculación externa como valor predeterminado, por lo que solo pueden aparecer en los archivos de código fuente. En C++, los valores constantes tienen la vinculación interna como valor predeterminado, que permite que aparezcan en los archivos de encabezado.  
   
- La palabra clave **const** también se puede utilizar en las declaraciones de puntero.  
+ El **const** palabra clave puede utilizarse en declaraciones de puntero.  
   
 ```  
 // constant_values3.cpp  
@@ -71,7 +87,7 @@ int main() {
 }  
 ```  
   
- Un puntero a una variable declarada como **const** solo se puede asignar a un puntero que también se declare como **const**.  
+ Un puntero a una variable declarada como **const** puede asignarse únicamente a un puntero que también se declara como **const**.  
   
 ```  
 // constant_values4.cpp  
@@ -90,19 +106,19 @@ int main() {
   
  Puede utilizar punteros a datos constantes como parámetros de función para evitar que la función modifique un parámetro pasado a través de un puntero.  
   
- Para los objetos que se declaran como **const**, solo se puede llamar a las [funciones miembro de constante](../misc/constant-member-functions.md).  Esto garantiza que el objeto constante nunca se modifique.  
+ Para los objetos que se declaran como **const**, miembro de constante solo se puede invocar funciones. Esto garantiza que el objeto constante nunca se modifique.  
   
 ```  
 birthday.getMonth();    // Okay  
 birthday.setMonth( 4 ); // Error  
 ```  
   
- Se puede llamar a funciones miembro de constante o que no son de constante para un objeto que no es constante.  Una función miembro también se puede sobrecargar mediante la palabra clave **const**; esto permite que se llame a una versión diferente de la función para los objetos constantes y que no son constantes.  
+ Se puede llamar a funciones miembro de constante o que no son de constante para un objeto que no es constante. También puede sobrecargar una función miembro mediante la **const** palabra clave; Esto permite que una versión diferente de la función que se llamará para objetos constantes y.  
   
- Los constructores o destructores no se pueden declarar con la palabra clave **const**.  
+ No se puede declarar constructores o destructores con el **const** palabra clave.  
   
-## funciones miembro const  
- Declarar una función miembro con la palabra clave **const** especifica que la función es una función de “solo lectura” que no modifica el objeto para el que se llama.  Una función miembro constante no puede modificar los miembros de datos no estáticos ni llamar a funciones miembro que no sean constantes. Para declarar una función miembro constante, coloque la palabra clave **const** después del paréntesis de cierre de la lista de argumentos.  La palabra clave **const** se requiere tanto en la declaración como en la definición.  
+## <a name="const-member-functions"></a>funciones miembro const  
+ Declarar una función miembro con el **const** palabra clave especifica que la función es una función de "solo lectura" que no modifica el objeto para el que se llama. Una función miembro constante no se puede modificar a los miembros de datos no estáticos ni llamar a funciones que no son constantes cualquier miembro. Para declarar una función miembro constante, coloque el **const** palabra clave después del paréntesis de cierre de la lista de argumentos. El **const** palabra clave es necesaria en la declaración y la definición.  
   
 ```  
 // constant_member_function.cpp  
@@ -134,8 +150,8 @@ int main()
 }  
 ```  
   
-## Diferencias de const en C y C\+\+  
- Cuando se declara una variable como **const** en el archivo de código fuente de C, se hace de la forma siguiente:  
+## <a name="c-and-c-const-differences"></a>Diferencias de const en C y C++  
+ Cuando se declara una variable como **const** en un archivo de código fuente de C, lo hace como:  
   
 ```  
 const int i = 2;  
@@ -147,36 +163,32 @@ const int i = 2;
 extern const int i;  
 ```  
   
- Pero si desea obtener el mismo comportamiento en C\+\+, debe declarar la variable **const** como:  
+ Pero si desea para obtener el mismo comportamiento en C++, debe declarar la **const** variable como:  
   
 ```  
 extern const int i = 2;  
 ```  
   
- Si desea declarar una variable `extern` en un archivo de código fuente de C\+\+ para el uso en un archivo de código fuente de C, utilice:  
+ Si desea declarar una variable `extern` en un archivo de código fuente de C++ para el uso en un archivo de código fuente de C, utilice:  
   
 ```  
 extern "C" const int x=10;  
 ```  
   
- para evitar que el compilador de C\+\+ elimine nombres.  
+ para evitar que el compilador de C++ elimine nombres.  
   
-## Comentarios  
- Cuando va después de la lista de parámetros de una función miembro, la palabra clave **const** especifica que la función no modifica el objeto para el que se invoca.  
+## <a name="remarks"></a>Comentarios  
+ Al seguir la lista de parámetros de una función miembro, el **const** palabra clave especifica que la función no modifica el objeto para el que se invoca.  
   
- Para obtener más información sobre **const**, vea uno de los temas siguientes:  
-  
--   [Valores constantes](../misc/constant-values.md)  
-  
--   [Funciones miembro constantes](../misc/constant-member-functions.md)  
-  
+ Para obtener más información sobre **const**, vea los temas siguientes:  
+    
 -   [Punteros const y volatile](../cpp/const-and-volatile-pointers.md)  
   
--   [Calificadores de tipo \(Referencia del lenguaje C\)](../c-language/type-qualifiers.md)  
+-   [Calificadores de tipo (referencia del lenguaje C)](../c-language/type-qualifiers.md)  
   
 -   [volatile](../cpp/volatile-cpp.md)  
   
--   [\#define](../preprocessor/hash-define-directive-c-cpp.md).  
+-   [#define](../preprocessor/hash-define-directive-c-cpp.md).  
   
-## Vea también  
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Palabras clave](../cpp/keywords-cpp.md)

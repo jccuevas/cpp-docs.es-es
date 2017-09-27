@@ -1,41 +1,58 @@
 ---
-title: "bad_typeid (Excepci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "bad_typeid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bad_typeid (excepción)"
-  - "excepciones, bad_typeid"
+title: "bad_typeid (excepción) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- bad_typeid
+dev_langs:
+- C++
+helpviewer_keywords:
+- bad_typeid exception
+- exceptions, bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# bad_typeid (Excepci&#243;n)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ea7dc85862622180038cf520ef92b752b65eba84
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-La excepción `bad_typeid` la produce el [operador typeid](../cpp/typeid-operator.md) cuando el operando de `typeid` es un puntero NULL.  
+---
+# <a name="badtypeid-exception"></a>bad_typeid (Excepción)
+El `bad_typeid` excepción la producen el [typeid (operador)](../cpp/typeid-operator.md) cuando el operando de `typeid` es un puntero NULL.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
       catch (bad_typeid)  
-   statement  
+   statement  
 ```  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  La interfaz de `bad_typeid` es:  
   
 ```  
@@ -76,12 +93,12 @@ catch (bad_typeid){
 }  
 ```  
   
-## Salida  
+## <a name="output"></a>Resultado  
   
 ```  
 Object is NULL  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información de tipos en tiempo de ejecución](../cpp/run-time-type-information.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)
+ [Palabras clave](../cpp/keywords-cpp.md)

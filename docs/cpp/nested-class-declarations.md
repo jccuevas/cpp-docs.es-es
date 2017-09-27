@@ -1,33 +1,50 @@
 ---
-title: "Declaraciones de clase anidadas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clases [C++], declarar"
-  - "declaraciones, class"
-  - "declaraciones, clases anidadas"
-  - "declarar clases"
-  - "clases anidadas"
-  - "clases anidadas, declarar"
+title: Declaraciones de clase anidada | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- classes [C++], declaring
+- declarations, class
+- nested classes
+- nested classes, declaring
+- declaring classes
+- declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Declaraciones de clase anidadas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c66636f2780e15df83d016b604f78adae7b62143
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Una clase puede declararse dentro del ámbito de otra clase.  Esta clase se denomina una “clase anidada”. Las clases anidadas se consideran dentro del ámbito de la clase envolvente y están disponibles para su uso dentro de ese ámbito.  Para hacer referencia a una clase anidada de un ámbito distinto al ámbito de inclusión inmediato, debe utilizar un nombre completo.  
+---
+# <a name="nested-class-declarations"></a>Declaraciones de clase anidadas
+Una clase puede declararse dentro del ámbito de otra clase. Esta clase se denomina una “clase anidada”. Las clases anidadas se consideran dentro del ámbito de la clase envolvente y están disponibles para su uso dentro de ese ámbito. Para hacer referencia a una clase anidada de un ámbito distinto al ámbito de inclusión inmediato, debe utilizar un nombre completo.  
   
  En el siguiente ejemplo se muestra cómo declarar clases anidadas:  
   
@@ -63,14 +80,14 @@ int main()
 }  
 ```  
   
- `BufferedIO::BufferedInput` y `BufferedIO::BufferedOutput` se declaran dentro de `BufferedIO`.  Estos nombres de clase no son visibles fuera del ámbito de la clase `BufferedIO`.  Sin embargo, un objeto de tipo `BufferedIO` no contiene objetos de los tipos `BufferedInput` o `BufferedOutput`.  
+ `BufferedIO::BufferedInput` y `BufferedIO::BufferedOutput` se declaran dentro de `BufferedIO`. Estos nombres de clase no son visibles fuera del ámbito de la clase `BufferedIO`. Sin embargo, un objeto de tipo `BufferedIO` no contiene objetos de los tipos `BufferedInput` o `BufferedOutput`.  
   
- Las clases anidadas pueden utilizar directamente nombres, nombres de tipo, nombres de miembros estáticos y enumeradores solo de la clase envolvente.  Para usar nombres de otros miembros de clase, debe utilizar punteros, referencias o nombres de objeto.  
+ Las clases anidadas pueden utilizar directamente nombres, nombres de tipo, nombres de miembros estáticos y enumeradores solo de la clase envolvente. Para usar nombres de otros miembros de clase, debe utilizar punteros, referencias o nombres de objeto.  
   
  En el ejemplo anterior de `BufferedIO`, pueden tener acceso directamente a la enumeración `IOError` funciones miembro de las clases anidadas, `BufferedIO::BufferedInput` o `BufferedIO::BufferedOutput`, como se muestra en la función `good`.  
   
 > [!NOTE]
->  Las clases anidadas declaran solo tipos dentro del ámbito de la clase.  No provocan la creación de objetos contenidos de la clase anidada.  El ejemplo anterior declara dos clases anidadas pero no declara ningún objeto de estos tipos de clase.  
+>  Las clases anidadas declaran solo tipos dentro del ámbito de la clase. No provocan la creación de objetos contenidos de la clase anidada. El ejemplo anterior declara dos clases anidadas pero no declara ningún objeto de estos tipos de clase.  
   
  Una excepción a la visibilidad del ámbito de una declaración de clase es cuando se declara un nombre de tipo junto con una declaración adelantada.  En este caso, el nombre de clase declarado por la declaración adelantada está visible fuera de la clase envolvente, con el ámbito definido de modo que sea el menor envolvente no de clase.  Por ejemplo:  
   
@@ -99,11 +116,11 @@ int main()
 }  
 ```  
   
-## Privilegio de acceso en clases anidadas  
- El anidamiento de una clase dentro de otra clase no proporciona privilegios de acceso especiales a las funciones miembro de la clase anidada.  De forma similar, las funciones miembro de la clase envolvente no tienen ningún acceso especial a los miembros de la clase anidada.  
+## <a name="access-privilege-in-nested-classes"></a>Privilegio de acceso en clases anidadas  
+ El anidamiento de una clase dentro de otra clase no proporciona privilegios de acceso especiales a las funciones miembro de la clase anidada. De forma similar, las funciones miembro de la clase envolvente no tienen ningún acceso especial a los miembros de la clase anidada.  
   
-## Funciones miembro en clases anidadas  
- Las funciones miembro declaradas en clases anidadas se pueden definir en el ámbito del archivo.  El ejemplo anterior se podría haber escrito:  
+## <a name="member-functions-in-nested-classes"></a>Funciones miembro en clases anidadas  
+ Las funciones miembro declaradas en clases anidadas se pueden definir en el ámbito del archivo. El ejemplo anterior se podría haber escrito:  
   
 ```  
 // member_functions_in_nested_classes.cpp  
@@ -141,13 +158,13 @@ int main()
 }  
 ```  
   
- En el ejemplo anterior, se utiliza la sintaxis *qualified\-type\-name* para declarar el nombre de función.  La declaración:  
+ En el ejemplo anterior, el *qualified-type-name* sintaxis se utiliza para declarar el nombre de función. La declaración:  
   
 ```  
 BufferedIO::BufferedInput::read()  
 ```  
   
- significa “la función `read` que es miembro de la clase `BufferedInput` que está en el ámbito de la clase `BufferedIO`.” Dado que esta declaración usa la sintaxis *qualified\-type\-name*, es posible crear construcciones de la forma siguiente:  
+ significa “la función `read` que es miembro de la clase `BufferedInput` que está en el ámbito de la clase `BufferedIO`.” Dado que esta declaración usa la *qualified-type-name* construcciones de la forma siguiente de sintaxis, son posibles:  
   
 ```  
 typedef BufferedIO::BufferedInput BIO_INPUT;  
@@ -157,8 +174,8 @@ int BIO_INPUT::read()
   
  La declaración anterior es equivalente a la previa, pero usa un nombre de `typedef` en lugar de los nombres de clase.  
   
-## Funciones friend en clases anidadas  
- Las funciones friend declaradas en una clase anidada se considera que están en el ámbito de la clase anidada, no la clase envolvente.  Por lo tanto, las funciones friend no obtienen privilegios de acceso especiales a miembros o funciones miembro de la clase envolvente.  Si desea utilizar un nombre declarado en una clase anidada en una función friend y la función friend está definida en el ámbito del archivo, debe usar nombres de tipo representativo del modo siguiente:  
+## <a name="friend-functions-in-nested-classes"></a>Funciones friend en clases anidadas  
+ Las funciones friend declaradas en una clase anidada se considera que están en el ámbito de la clase anidada, no la clase envolvente. Por lo tanto, las funciones friend no obtienen privilegios de acceso especiales a miembros o funciones miembro de la clase envolvente. Si desea utilizar un nombre declarado en una clase anidada en una función friend y la función friend está definida en el ámbito del archivo, debe usar nombres de tipo representativo del modo siguiente:  
   
 ```  
 // friend_functions_and_nested_classes.cpp  
@@ -204,7 +221,7 @@ int main()
 }  
 ```  
   
- El código siguiente muestra la función `GetExtendedErrorStatus` declarada como una función friend.  En la función, que se define en el ámbito de archivo, se copia un mensaje de una matriz estática en un miembro de clase.  Observe que una mejor implementación de `GetExtendedErrorStatus` consiste en declararlo como:  
+ El código siguiente muestra la función `GetExtendedErrorStatus` declarada como una función friend. En la función, que se define en el ámbito de archivo, se copia un mensaje de una matriz estática en un miembro de clase. Observe que una mejor implementación de `GetExtendedErrorStatus` consiste en declararlo como:  
   
 ```  
 int GetExtendedErrorStatus( char *message )  
@@ -212,5 +229,5 @@ int GetExtendedErrorStatus( char *message )
   
  Con la interfaz anterior, varias clases pueden utilizar los servicios de esta función pasando una ubicación de memoria en la que desean que se copie el mensaje de error.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Clases y structs](../cpp/classes-and-structs-cpp.md)

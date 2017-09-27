@@ -1,32 +1,48 @@
 ---
-title: "private (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "private_cpp"
-  - "private"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "private (palabra clave) [C++]"
+title: Private (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- private_cpp
+- private
+dev_langs:
+- C++
+helpviewer_keywords:
+- private keyword [C++]
 ms.assetid: 94e99983-46a5-4e21-800c-28f8a7c6a8ff
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# private (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ec12850b2d2059c2824c0585edee21cb3fd1a7f7
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-## Sintaxis  
+---
+# <a name="private-c"></a>private (C++)
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 private:  
@@ -34,26 +50,26 @@ private:
 private base-class  
 ```  
   
-## Comentarios  
- Cuando precede a una lista de miembros de clase, la palabra clave `private` especifica que esos miembros son accesibles solo desde funciones miembro y friend de la clase.  Esto se aplica a todos los miembros declarados hasta el especificador de acceso siguiente o el final de la clase.  
+## <a name="remarks"></a>Comentarios  
+ Cuando precede a una lista de miembros de clase, la palabra clave `private` especifica que esos miembros son accesibles solo desde funciones miembro y friend de la clase. Esto se aplica a todos los miembros declarados hasta el especificador de acceso siguiente o el final de la clase.  
   
  Cuando precede al nombre de una clase base, la palabra clave `private` especifica que los miembros públicos y protegidos de la clase base son miembros privados de la clase derivada.  
   
- El acceso predeterminado de miembros de una clase es privado.  El acceso predeterminado de miembros de una estructura o unión es público.  
+ El acceso predeterminado de miembros de una clase es privado. El acceso predeterminado de miembros de una estructura o unión es público.  
   
- El acceso predeterminado de una clase base es privado para las clases y público para las estructuras.  Las uniones no pueden tener clases base.  
+ El acceso predeterminado de una clase base es privado para las clases y público para las estructuras. Las uniones no pueden tener clases base.  
   
- Para obtener información relacionada, vea [friend](../cpp/friend-cpp.md), [public](../cpp/public-cpp.md), [protected](../cpp/protected-cpp.md) y la tabla de acceso a miembros en [Controlar el acceso a los miembros de clase](../misc/controlling-access-to-class-members.md).  
+ Para obtener información relacionada, consulte [friend](../cpp/friend-cpp.md), [público](../cpp/public-cpp.md), [protegido](../cpp/protected-cpp.md)y en la tabla de acceso a miembros [controlar el acceso a los miembros de clase](member-access-control-cpp.md).  
   
-## Específicos de \/clr  
- En los tipos de CLR, las palabras clave de especificador de acceso de C\+\+ \(**public**, `private` y `protected`\) pueden afectar a la visibilidad de los tipos y los métodos con respecto a los ensamblados.  Para obtener más información, consulte este artículo sobre la [Visibilidad de tipos y de miembros](../misc/type-and-member-visibility.md).  
+## <a name="clr-specific"></a>Específicos de /clr  
+ En los tipos CLR, C++, obtener acceso a palabras clave de especificador (**público**, `private`, y `protected`) pueden afectar a la visibilidad de tipos y métodos con respecto a los ensamblados. Para obtener más información, consulte [Control de acceso de miembro](member-access-control-cpp.md).  
   
 > [!NOTE]
->  Los archivos compilados con [\/LN](../build/reference/ln-create-msil-module.md) no se ven afectados por este comportamiento.  En este caso, todas las clases administradas \(ya sean públicas o privadas\) estarán visibles.  
+>  Los archivos compilados con [/LN](../build/reference/ln-create-msil-module.md) no se ven afectados por este comportamiento. En este caso, todas las clases administradas (ya sean públicas o privadas) estarán visibles.  
   
-## Específicos de END \/clr  
+## <a name="end-clr-specific"></a>Específicos de END /clr  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // keyword_private.cpp  
@@ -90,6 +106,6 @@ int main() {
 }  
 ```  
   
-## Vea también  
- [Controlar el acceso a los miembros de clase](../misc/controlling-access-to-class-members.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Controlar el acceso a los miembros de clase](member-access-control-cpp.md)   
+ [Palabras clave](../cpp/keywords-cpp.md)

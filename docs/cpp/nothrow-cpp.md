@@ -1,45 +1,61 @@
 ---
-title: "nothrow (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "nothrow_cpp"
-  - "nothrow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec (palabra clave) [C++], nothrow"
-  - "nothrow __declspec (palabra clave)"
+title: nothrow (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- nothrow_cpp
+- nothrow
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++], nothrow
+- nothrow __declspec keyword
 ms.assetid: 0a475139-459c-4ec6-99e8-7ecd0d7f44a3
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# nothrow (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c74490229e2ef54e7947f5e8fedda6057ecccb70
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="nothrow-c"></a>nothrow (C++)
 **Específicos de Microsoft**  
   
  Atributo extendido `__declspec` que se puede usar en la declaración de funciones.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 return-type __declspec(nothrow) [call-convention] function-name ([argument-list])  
 ```  
   
-## Comentarios  
- Este atributo indica al compilador que la función declarada y las funciones a las que llama nunca iniciarán una excepción.  Con el modelo de control asincrónico de excepciones, que ahora es el predeterminado, el compilador puede eliminar los mecanismos de seguimiento de la duración de algunos objetos que no se pueden desenredar en esa función, y reducir significativamente el tamaño del código.  Dada la directiva de preprocesador siguiente, las tres declaraciones de función que se muestran a continuación son equivalentes:  
+## <a name="remarks"></a>Comentarios  
+ Este atributo indica al compilador que la función declarada y las funciones a las que llama nunca iniciarán una excepción. Con el modelo de control asincrónico de excepciones, que ahora es el predeterminado, el compilador puede eliminar los mecanismos de seguimiento de la duración de algunos objetos que no se pueden desenredar en esa función, y reducir significativamente el tamaño del código. Dada la directiva de preprocesador siguiente, las tres declaraciones de función que se muestran a continuación son equivalentes:  
   
 ```  
 #define WINAPI __declspec(nothrow) __stdcall   
@@ -49,12 +65,11 @@ void __declspec(nothrow) __stdcall f2();
 void __stdcall f3() throw();  
 ```  
   
- Con `void __declspec(nothrow) __stdcall f2();`, tiene la ventaja de que puede usar una definición de API, como la que ilustra la instrucción `#define`, para especificar fácilmente `nothrow` en un conjunto de funciones.  La tercera declaración`, void __stdcall f3() throw();`, es la sintaxis definida en el estándar de C\+\+.  
+ Con `void __declspec(nothrow) __stdcall f2();`, tiene la ventaja de que puede usar una definición de API, como la que ilustra la instrucción `#define`, para especificar fácilmente `nothrow` en un conjunto de funciones. La tercera declaración`, void __stdcall f3() throw();`, es la sintaxis definida en el estándar de C++.  
   
- Para obtener más información, vea [Control sincrónico de excepciones](http://msdn.microsoft.com/es-es/81595fae-d8ab-4c14-9670-8d6639cc0369).  
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
- [\_\_declspec](../cpp/declspec.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [__declspec](../cpp/declspec.md)   
+ [Palabras clave](../cpp/keywords-cpp.md)

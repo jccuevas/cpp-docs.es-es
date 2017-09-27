@@ -1,37 +1,54 @@
 ---
-title: "Especializaci&#243;n parcial de plantillas de clase (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "especialización parcial de plantillas de clase"
+title: "Especialización de plantilla (C++) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Especializaci&#243;n parcial de plantillas de clase (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: 6e6cf3d4ad48a50d6f4cdffa81cd4ca330ed33a9
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Las plantillas de clase pueden especializarse parcialmente y la clase resultante es una plantilla.  La especialización parcial permite que el código de plantilla se personalice parcialmente para tipos específicos en situaciones como las siguientes:  
+---
+# <a name="template-specialization-c"></a>Especialización de plantilla (C++)
+
+Las plantillas de clase pueden especializarse parcialmente y la clase resultante es una plantilla. La especialización parcial permite que el código de plantilla se personalice parcialmente para tipos específicos en situaciones como las siguientes:  
   
--   Una plantilla tiene varios tipos y solo algunos de ellos deben estar especializados.  El resultado es una plantilla con parámetros en los tipos restantes.  
+-   Una plantilla tiene varios tipos y solo algunos de ellos deben estar especializados. El resultado es una plantilla con parámetros en los tipos restantes.  
   
--   Una plantilla solo tiene un tipo, pero una especialización es necesaria para el puntero, la referencia, el puntero a miembro o los tipos de puntero a función.  La propia especialización sigue siendo una plantilla en el tipo al que señala o al que hace referencia.  
+-   Una plantilla solo tiene un tipo, pero una especialización es necesaria para el puntero, la referencia, el puntero a miembro o los tipos de puntero a función. La propia especialización sigue siendo una plantilla en el tipo al que señala o al que hace referencia.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-```  
+```cpp
 // partial_specialization_of_class_templates.cpp  
 template <class T> struct PTS {  
    enum {  
@@ -72,13 +89,17 @@ int main() {
 }  
 ```  
   
-  **PTS\<S\>::IsPointer \=\= 0 PTS\<S\>::IsPointerToDataMember \=\= 0**  
-**PTS\<S\*\>::IsPointer \=\= 1 PTS\<S\*\>::IsPointerToDataMember \=\=0**  
-**PTS\<int S::\*\>::IsPointer \=\= 0 PTS\<int S::\*\>::IsPointerToDataMember \=\= 1**   
-## Ejemplo  
- Si tiene una clase de colección de plantillas que toma cualquier tipo **T**, puede crear una especialización parcial que toma cualquier tipo de puntero **T\***.  En el código siguiente se muestra una plantilla de clase de colección `Bag` y una especialización parcial para los tipos de puntero en los que la colección desreferencia los tipos de puntero antes de copiarlos en la matriz.  A continuación, la colección almacena los valores a los que se señala.  Con la plantilla original, solo los propios punteros se hubieran almacenado en la colección y los datos serían vulnerables a la eliminación o la modificación.  En esta versión de puntero especial de la colección, se agrega código para comprobar si hay un puntero NULL en el método `add`.  
-  
+```Output  
+PTS<S>::IsPointer == 0 PTS<S>::IsPointerToDataMember == 0  
+PTS<S*>::IsPointer == 1 PTS<S*>::IsPointerToDataMember ==0  
+PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1  
 ```  
+  
+## <a name="example"></a>Ejemplo
+
+ Si tiene una clase de colección de plantilla que toma cualquier tipo **T**, puede crear una especialización parcial que toma cualquier tipo de puntero **T***. En el código siguiente se muestra una plantilla de clase de colección `Bag` y una especialización parcial para los tipos de puntero en los que la colección desreferencia los tipos de puntero antes de copiarlos en la matriz. A continuación, la colección almacena los valores a los que se señala. Con la plantilla original, solo los propios punteros se hubieran almacenado en la colección y los datos serían vulnerables a la eliminación o la modificación. En esta versión de puntero especial de la colección, se agrega código para comprobar si hay un puntero NULL en el método `add`.  
+  
+```cpp
 // partial_specialization_of_class_templates2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -179,14 +200,18 @@ int main() {
 }  
 ```  
   
-  **10 9 8**   
-**a b c**   
-**Puntero NULL**  
-**3 87 8 100**    
-## Ejemplo  
- En el ejemplo siguiente se define una clase de plantilla que toma pares de dos tipos cualquiera y después define una especialización parcial de esa clase de plantilla especializada de modo que uno de los tipos sea `int`.  La especialización define un método de ordenación adicional que implementa una ordenación de burbuja simple basada en el entero.  
-  
+```Output  
+10 9 8   
+a b c   
+Null pointer!  
+3 87 8 100   
 ```  
+  
+## <a name="example"></a>Ejemplo
+
+ En el ejemplo siguiente se define una clase de plantilla que toma pares de dos tipos cualquiera y después define una especialización parcial de esa clase de plantilla especializada de modo que uno de los tipos sea `int`. La especialización define un método de ordenación adicional que implementa una ordenación de burbuja simple basada en el entero.  
+  
+```cpp
 // partial_specialization_of_class_templates3.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -315,17 +340,19 @@ int main() {
 }  
 ```  
   
-  **{manzana, fruta}**  
-**{plátano, fruta}**  
-**{perro, animal}**  
-**{100, manzana}**  
-**{101, plátano}**  
-**{103, perro}**  
-**{89, gato}**  
-**Lista ordenada:**  
-**{89, gato}**  
-**{100, manzana}**  
-**{101, plátano}**  
-**{103, perro}**   
-## Vea también  
- [Especialización explícita de las plantillas de clase](../Topic/Explicit%20Specialization%20of%20Class%20Templates.md)
+```Output  
+{apple, fruit}  
+{banana, fruit}  
+{dog, animal}  
+{100, apple}  
+{101, banana}  
+{103, dog}  
+{89, cat}  
+  
+Sorted list:  
+{89, cat}  
+{100, apple}  
+{101, banana}  
+{103, dog}  
+```  
+

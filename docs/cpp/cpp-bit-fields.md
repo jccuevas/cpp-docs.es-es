@@ -1,41 +1,57 @@
 ---
-title: "Campos de bits de C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "campos de bits"
-  - "campos de bits"
-  - "campos [C++], bits"
+title: Campos de bits de C++ | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- bitfields
+- fields [C++], bit
+- bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Campos de bits de C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 71f70995cf1a59153a380f0e22f0321fd59abee0
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Las clases y estructuras pueden contener miembros que ocupan menos almacenamiento que un tipo entero.  Estos miembros se especifican como campos de bits.  La sintaxis para la especificación de *member\-declarator* de un campo de bits es la siguiente:  
+---
+# <a name="c-bit-fields"></a>Campos de bits de C++
+Las clases y estructuras pueden contener miembros que ocupan menos almacenamiento que un tipo entero. Estos miembros se especifican como campos de bits. La sintaxis de un campo de bits *declarador de miembro* especificación se indica a continuación:  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 declarator  : constant-expression  
 ```  
   
-## Comentarios  
- El `declarator` \(opcional\) es el nombre por el que se obtiene acceso al miembro en el programa.  Debe ser de tipo entero \(incluidos los tipos enumerados\).  *constant\-expression* especifica el número de bits que ocupa el miembro en la estructura.  Se pueden utilizar campos de bits anónimos \(es decir, miembros de campos de bits sin identificador\) para rellenar.  
+## <a name="remarks"></a>Comentarios  
+ El `declarator` (opcional) es el nombre por el que se obtiene acceso al miembro en el programa. Debe ser de tipo entero (incluidos los tipos enumerados). El *expresión constante* especifica el número de bits que ocupa el miembro de la estructura. Se pueden utilizar campos de bits anónimos (es decir, miembros de campos de bits sin identificador) para rellenar.  
   
 > [!NOTE]
 >  Un campo de bits sin nombre de ancho 0 fuerza la alineación del campo de bits siguiente al límite siguiente de `type`, donde `type` es el tipo del miembro.  
@@ -58,7 +74,7 @@ struct Date {
  ![Diseño de memoria de un objeto de fecha](../cpp/media/vc38uq1.png "vc38UQ1")  
 Diseño de memoria de objeto de fecha  
   
- Observe que `nYear` tiene 8 bits de longitud y que desbordaría el límite de palabra del tipo declarado, **unsigned short**.  Por tanto, comienza al principio de un nuevo **unsigned short**.  No es necesario que todos los campos de bits quepan en un objeto del tipo subyacente; se asignan nuevas unidades de almacenamiento según el número de bits solicitados en la declaración.  
+ Tenga en cuenta que `nYear` tiene una longitud de 8 bits y que desbordaría el límite de palabras del tipo declarado, **entero corto sin signo**. Por lo tanto, comienza al principio de un nuevo **entero corto sin signo**. No es necesario que todos los campos de bits quepan en un objeto del tipo subyacente; se asignan nuevas unidades de almacenamiento según el número de bits solicitados en la declaración.  
   
  **Específicos de Microsoft**  
   
@@ -82,17 +98,17 @@ struct Date {
   
  el diseño de memoria es el que se muestra en la ilustración siguiente.  
   
- ![Diseño de objeto de fecha con campo de bits de longitud cero](../cpp/media/vc38uq2.png "vc38UQ2")  
+ ![Diseño de objeto de fecha con cero &#45; campo de bits de longitud](../cpp/media/vc38uq2.png "vc38UQ2")  
 Diseño de objeto de fecha con campo de bits de longitud cero  
   
- El tipo subyacente de un campo de bits debe ser un tipo entero, como se describe en [Tipos fundamentales](../cpp/fundamental-types-cpp.md).  
+ El tipo subyacente de un campo de bits debe ser un tipo entero, como se describe en [tipos fundamentales](../cpp/fundamental-types-cpp.md).  
   
-## Restricciones de los campos de bits  
+## <a name="restrictions-on-bit-fields"></a>Restricciones de los campos de bits  
  En la lista siguiente se detallan operaciones erróneas en campos de bits:  
   
 1.  Tomar la dirección de un campo de bits.  
   
 2.  Inicializar una referencia con un campo de bits.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Clases y structs](../cpp/classes-and-structs-cpp.md)

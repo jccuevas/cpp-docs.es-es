@@ -1,77 +1,92 @@
 ---
-title: "Operador de llamada de funci&#243;n: () | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "( ) (operador de llamada a función)"
-  - "() (operador de llamada a función)"
-  - "operador de llamada a función ( )"
-  - "llamadas a funciones, funciones de C++"
-  - "llamadas a funciones, operador"
-  - "funciones [C++], operador de llamada a función"
-  - "operadores postfijos"
+title: "Operador de llamada de función: () | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ( ) function call operator
+- function calls, C++ functions
+- () function call operator
+- postfix operators
+- function calls, operator
+- functions [C++], function-call operator
+- function call operator ( )
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operador de llamada de funci&#243;n: ()
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: bcd44b1c33488d4bbe4dac8bfe541dfa04f4709a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Una expresión de postfijo seguida del operador de llamada de función, **\( \)**, especifica una llamada de función.  
+---
+# <a name="function-call-operator-"></a>Operador de llamada de función: ()
+Una expresión de postfijo seguida del operador de llamada de función, **()**, especifica una llamada de función.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 postfix-expression   
 ( [argument-expression-list ] )  
 ```  
   
-## Comentarios  
- Los argumentos del operador de llamada de función son cero o más expresiones separadas por comas \(los argumentos reales de la función\).  
+## <a name="remarks"></a>Comentarios  
+ Los argumentos del operador de llamada de función son cero o más expresiones separadas por comas (los argumentos reales de la función).  
   
- El elemento *postfix\-expression* se debe evaluar como una dirección de función \(por ejemplo, un identificador de función o el valor de un puntero de función\) y el elemento *argument\-expression\-list* es una lista de expresiones \(separadas por comas\) cuyos valores \(los argumentos\) se pasan a la función.  El elemento *argument\-expression\-list* puede estar vacío.  
+ El *postfix-expression* se debe evaluar como una dirección de función (por ejemplo, un identificador de función o el valor de un puntero a función), y *argument-expression-list* es una lista de expresiones (separadas por comas) cuyos valores (los argumentos) se pasan a la función. El elemento *argument-expression-list* puede estar vacío.  
   
- El elemento *postfix\-expression* debe ser de uno de estos tipos:  
+ El *postfix-expression* debe ser de uno de estos tipos:  
   
--   Una función que devuelve el tipo `T`.  Una declaración de ejemplo es  
+-   Una función que devuelve el tipo `T`. Una declaración de ejemplo es  
   
     ```  
     T func( int i )  
     ```  
   
--   Un puntero a una función que devuelve el tipo `T`.  Una declaración de ejemplo es  
+-   Un puntero a una función que devuelve el tipo `T`. Una declaración de ejemplo es  
   
     ```  
     T (*func)( int i )  
     ```  
   
--   Una referencia a una función que devuelve el tipo `T`.  Una declaración de ejemplo es  
+-   Una referencia a una función que devuelve el tipo `T`. Una declaración de ejemplo es  
   
     ```  
     T (&func)(int i)  
     ```  
   
--   Una desreferencia de función de puntero a miembro que devuelve el tipo `T`.  Estos son algunos ejemplos de llamadas de función:  
+-   Una desreferencia de función de puntero a miembro que devuelve el tipo `T`. Estos son algunos ejemplos de llamadas de función:  
   
     ```  
     (pObject->*pmf)();  
     (Object.*pmf)();  
     ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se llama a la función de biblioteca estándar `strcat_s` con tres argumentos:  
   
 ```  
@@ -81,7 +96,7 @@ postfix-expression
 #include <iostream>  
 #include <string>  
   
-// STL name space  
+// C++ Standard Library name space  
 using namespace std;  
   
 int main()  
@@ -100,9 +115,12 @@ int main()
 }  
 ```  
   
-  **Welcome to C\+\+**   
-## Resultados de la llamada de función  
- Una llamada de función se evalúa como un valor R a menos que la función se declare como un tipo de referencia.  Las funciones con tipo de valor devuelto de referencia se evalúan como valores L y se pueden utilizar en el lado izquierdo de una instrucción de asignación, de la manera siguiente:  
+```Output  
+Welcome to C++  
+```  
+  
+## <a name="function-call-results"></a>Resultados de la llamada de función  
+ Una llamada de función se evalúa como un valor R a menos que la función se declare como un tipo de referencia. Las funciones con tipo de valor devuelto de referencia se evalúan como valores L y se pueden utilizar en el lado izquierdo de una instrucción de asignación, de la manera siguiente:  
   
 ```  
 // expre_Function_Call_Results.cpp  
@@ -134,9 +152,9 @@ int main()
 }  
 ```  
   
- El código anterior define una clase denominada `Point`, que contiene objetos de datos privados que representan coordenadas *x* e *y*.  Estos objetos de datos se deben modificar y sus valores se deben recuperar.  Este programa es solo uno de varios diseños para esa clase; el uso de las funciones `GetX` y `SetX` o `GetY` y `SetY` es otro diseño posible.  
+ El código anterior define una clase denominada `Point`, que contiene los datos privados que representan objetos *x* y *y* coordenadas. Estos objetos de datos se deben modificar y sus valores se deben recuperar. Este programa es solo uno de varios diseños para esa clase; el uso de las funciones `GetX` y `SetX` o `GetY` y `SetY` es otro diseño posible.  
   
- Las funciones que devuelven tipos de clase, punteros a tipos de clase o referencias a tipos de clase se pueden utilizar como operando izquierdo para operadores de selección de miembros.  Por consiguiente, el código siguiente es legal.  
+ Las funciones que devuelven tipos de clase, punteros a tipos de clase o referencias a tipos de clase se pueden utilizar como operando izquierdo para operadores de selección de miembros. Por consiguiente, el código siguiente es legal.  
   
 ```  
 // expre_Function_Results2.cpp  
@@ -179,11 +197,10 @@ int main() {
 }  
 ```  
   
- Las funciones se pueden llamar de forma recursiva.  Para obtener más información sobre las declaraciones de función, vea [Especificadores de función](../misc/function-specifiers.md) y [Funciones miembro](../misc/member-functions-cpp.md).  El material relacionado está en [Programa y vinculación](../cpp/program-and-linkage-cpp.md).  
+ Las funciones se pueden llamar de forma recursiva. Para obtener más información acerca de las declaraciones de función, vea [funciones](functions-cpp.md). Material relacionado está en [programa y vinculación](../cpp/program-and-linkage-cpp.md).  
   
-## Vea también  
- [Expresiones postfijas](../cpp/postfix-expressions.md)   
- [Operadores de C\+\+](../misc/cpp-operators.md)   
- [Operadores de C\+\+, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>Vea también  
+ [Expresiones de postfijo](../cpp/postfix-expressions.md)   
+ [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Llamada de función](../c-language/function-call-c.md)   
- [\(NOTINBUILD\) Function Declarations](http://msdn.microsoft.com/es-es/3f9b4e14-60d2-47c1-acd8-4fa8fc988be7)
+

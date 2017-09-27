@@ -1,51 +1,66 @@
 ---
-title: "friend (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Friend"
-  - "friend_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clases de confianza"
-  - "friend (palabra clave) [C++]"
-  - "acceso a miembros, desde funciones de confianza"
+title: Friend (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- Friend
+- friend_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- member access, from friend functions
+- friend classes
+- friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# friend (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 2d8dd1c80e9b006b3689b6d17ad9d7635670cc98
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-En algunos casos, es más cómodo conceder acceso de nivel de miembro a funciones que no son miembros de una clase o a todas las funciones de una clase independiente.  Solo el implementador de la clase puede declarar cuáles son sus funciones o clases friend.  Las funciones o clases no pueden hacerlo por sí mismas.  En una declaración de clase, use la palabra clave `friend` y el nombre de una función no miembro u otra clase para conceder acceso a los miembros privados y protegidos de la clase.  
+---
+# <a name="friend-c"></a>friend (C++)
+En algunas circunstancias, es más cómodo conceder acceso de nivel de miembro a funciones que no son miembros de una clase o a todos los miembros de una clase independiente. Solo el implementador de la clase puede declarar cuáles son sus funciones o clases friend. Las funciones o clases no pueden hacerlo por sí mismas. En una definición de clase, use la `friend` palabra clave y el nombre de una función no miembro u otra clase para conceder acceso a los miembros privados y protegidos de la clase.         En una definición de plantilla, un parámetro de tipo se puede declarar como friend.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-        friend class-name;  
-friend function-declarator;  
+class friend F  
+friend F;  
 ```  
   
-## Declaraciones friend  
+## <a name="friend-declarations"></a>Declaraciones friend  
  Si declara una función friend que no se declaró previamente, esa función se exporta al ámbito de inclusión que no es de clase.  
   
- Las funciones declaradas en una declaración friend se tratan como si se hubieran declarado mediante la palabra clave `extern`.  \(Para obtener más información sobre `extern`, vea [Especificadores estáticos de clase de almacenamiento](http://msdn.microsoft.com/es-es/3ba9289a-a412-4a17-b319-ceb2c087df48)\).  
+ Las funciones declaradas en una declaración friend se tratan como si se hubieran declarado mediante la palabra clave `extern`. (Para obtener más información acerca de `extern`, consulte [especificadores de clase de almacenamiento estática](http://msdn.microsoft.com/en-us/3ba9289a-a412-4a17-b319-ceb2c087df48).)  
   
- Aunque las funciones con ámbito global se pueden declarar como friend antes que los prototipos, las funciones miembro no se pueden declarar como friend antes de que aparezca la declaración de clase completa.  En el siguiente ejemplo de código se muestra por qué esto produce un error:  
+ Aunque las funciones con ámbito global se pueden declarar como friend antes que los prototipos, las funciones miembro no se pueden declarar como friend antes de que aparezca la declaración de clase completa. En el siguiente ejemplo de código se muestra por qué esto produce un error:  
   
-```  
+```cpp  
 class ForwardDeclared;   // Class name is known.  
 class HasFriends  
 {  
@@ -53,19 +68,87 @@ class HasFriends
 };  
 ```  
   
- El ejemplo anterior introduce el nombre de clase `ForwardDeclared` en el ámbito, pero la declaración completa \(específicamente, la parte que declara la función `IsAFriend`\) no se conoce.  Por consiguiente, la declaración de `friend` en la clase `HasFriends` genera un error.  
+ El ejemplo anterior introduce el nombre de clase `ForwardDeclared` en el ámbito, pero la declaración completa (específicamente, la parte que declara la función `IsAFriend`) no se conoce. Por consiguiente, la declaración de `friend` en la clase `HasFriends` genera un error.  
   
- Para declarar dos clases que son de tipo friend entre sí, la segunda clase completa se debe especificar como friend de la primera clase.  La razón de esta restricción se debe a que el compilador solo tiene información suficiente para declarar funciones friend individuales en el punto donde se declara la segunda clase.  
+ A partir de C ++ 11, hay dos formas de declaraciones de confianza para una clase:  
+  
+```cpp  
+friend class F;  
+friend F;  
+```  
+  
+ El primer formulario presenta una nueva clase F si no se encontró ninguna clase existente con ese nombre en el espacio de nombres más interno.  **C ++ 11**: el segundo formulario no presenta una nueva clase; se puede utilizar cuando la clase ya se ha declarado y se debe usar cuando se declara un parámetro de tipo de plantilla o una definición de tipo como un amigo.  
+  
+ Utilice `class friend F` cuando el tipo de referencia no se ha declarado:  
+  
+```cpp  
+namespace NS  
+{  
+    class M  
+    {  
+        class friend F;  // Introduces F but doesn't define it  
+    };  
+}  
+```  
+  
+```cpp  
+namespace NS  
+{  
+    class M  
+    {  
+        friend F; // error C2433: 'NS::F': 'friend' not permitted on data declarations  
+    };  
+}  
+```  
+  
+ En el ejemplo siguiente, `friend F` hace referencia a la `F` clase que se declara fuera del ámbito de NS.  
+  
+```cpp  
+class F {};  
+namespace NS  
+{  
+    class M  
+    {  
+        friend F;  // OK   
+    };  
+}  
+```  
+  
+ Use `friend F` para declarar un parámetro de plantilla como friend:  
+  
+```cpp  
+template <typename T>  
+class my_class  
+{  
+    friend T;  
+    //...  
+};  
+```  
+  
+ Use `friend F` para declarar una definición de tipo como friend:  
+  
+```cpp  
+class Foo {};  
+typedef Foo F;  
+  
+class G  
+{  
+    friend F; // OK  
+    friend class F // Error C2371 -- redefinition  
+};  
+```  
+  
+ Para declarar dos clases que son de tipo friend entre sí, la segunda clase completa se debe especificar como friend de la primera clase. La razón de esta restricción se debe a que el compilador solo tiene información suficiente para declarar funciones friend individuales en el punto donde se declara la segunda clase.  
   
 > [!NOTE]
 >  Aunque la segunda clase completa debe ser definirse como friend en la primera clase, puede seleccionar las funciones de la primera clase que se definen como friend para la segunda clase.  
   
-## funciones de confianza  
- Una función `friend` es una función que no es miembro de una clase pero tiene acceso a los miembros privados y protegidos de la clase.  Las funciones friend no se consideran miembros de clase; son funciones externas normales que tienen privilegios de acceso especiales.  No están en el ámbito de la clase y no se las llama usando los operadores de selección de miembro \(**.** y –**\>**\) a menos que sean miembros de otra clase.  Una función `friend` la declara la clase que concede el acceso.  La declaración `friend` se puede colocar en cualquier lugar de la declaración de clase.  No se ve afectada por las palabras clave de control de acceso.  
+## <a name="friend-functions"></a>funciones de confianza  
+ Una función `friend` es una función que no es miembro de una clase pero tiene acceso a los miembros privados y protegidos de la clase. Las funciones friend no se consideran miembros de clase; son funciones externas normales que tienen privilegios de acceso especiales. No están en el ámbito de la clase, y no se les llama usando los operadores de selección de miembro (**.** y -**>**) a menos que sean miembros de otra clase. Una función `friend` la declara la clase que concede el acceso. La declaración `friend` se puede colocar en cualquier lugar de la declaración de clase. No se ve afectada por las palabras clave de control de acceso.  
   
- En el ejemplo siguiente se muestra una clase `Point` y una función friend, `ChangePrivate`.  La función `friend` tiene acceso al miembro de datos privado del objeto `Point` que recibe como parámetro.  
+ En el ejemplo siguiente se muestra una clase `Point` y una función friend, `ChangePrivate`. La función `friend` tiene acceso al miembro de datos privado del objeto `Point` que recibe como parámetro.  
   
-```  
+```cpp  
 // friend_functions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -95,10 +178,10 @@ int main()
 }  
 ```  
   
-## Miembros de clase como friend  
- Las funciones miembro de clase se pueden declarar como de confianza en otras clases.  Considere el ejemplo siguiente:  
+## <a name="class-members-as-friends"></a>Miembros de clase como friend  
+ Las funciones miembro de clase se pueden declarar como de confianza en otras clases. Considere el ejemplo siguiente:  
   
-```  
+```cpp  
 // classes_as_friends1.cpp  
 // compile with: /c  
 class B;  
@@ -124,17 +207,17 @@ int A::Func1( B& b ) { return b._b; }   // OK
 int A::Func2( B& b ) { return b._b; }   // C2248  
 ```  
   
- En el ejemplo anterior, solo se concede a la función `A::Func1( B& )` acceso de confianza a la clase `B`.  Por consiguiente, el acceso al miembro privado `_b` es correcto en `Func1` de la clase `A` pero no en `Func2`.  
+ En el ejemplo anterior, solo se concede a la función `A::Func1( B& )` acceso de confianza a la clase `B`. Por lo tanto, tener acceso al miembro privado `_b` es correcto en `Func1` de clase `A` , pero no en `Func2`.  
   
- Una clase `friend` es una clase todas cuyas funciones miembro con funciones de confianza de una clase, es decir, cuyas funciones miembro tienen acceso a los miembros privados y protegidos de la otra clase.  Suponga que la declaración `friend` de la clase `B` hubiera sido:  
+ Una clase `friend` es una clase todas cuyas funciones miembro con funciones de confianza de una clase, es decir, cuyas funciones miembro tienen acceso a los miembros privados y protegidos de la otra clase. Suponga que la declaración `friend` de la clase `B` hubiera sido:  
   
-```  
+```cpp  
 friend class A;  
 ```  
   
- En ese caso, a todas las funciones miembro de la clase `A` se les habría concedido acceso de confianza a la clase `B`.  El código siguiente es un ejemplo de una clase de confianza:  
+ En ese caso, a todas las funciones miembro de la clase `A` se les habría concedido acceso de confianza a la clase `B`. El código siguiente es un ejemplo de una clase de confianza:  
   
-```  
+```cpp  
 // classes_as_friends2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -163,21 +246,21 @@ int main() {
 }  
 ```  
   
- La confianza no es mutua a menos que se especifique explícitamente como tal.  En el ejemplo anterior, las funciones miembro de `YourClass` no pueden tener acceso a los miembros privados de `YourOtherClass`.  
+ La confianza no es mutua a menos que se especifique explícitamente como tal. En el ejemplo anterior, las funciones miembro de `YourClass` no pueden tener acceso a los miembros privados de `YourOtherClass`.  
   
  Un tipo administrado no puede tener funciones, clases o interfaces de confianza.  
   
- La confianza no se hereda, lo que significa que las clases derivadas de `YourOtherClass` no pueden tener acceso a los miembros privados de `YourClass`.  La confianza no es transitiva, por lo que las clases de confianza de `YourOtherClass` no pueden tener acceso a los miembros privados de `YourClass`.  
+ La confianza no se hereda, lo que significa que las clases derivadas de `YourOtherClass` no pueden tener acceso a los miembros privados de `YourClass`. La confianza no es transitiva, por lo que las clases de confianza de `YourOtherClass` no pueden tener acceso a los miembros privados de `YourClass`.  
   
- La ilustración siguiente muestra cuatro declaraciones de clase: `Base`, `Derived`, `aFriend` y `anotherFriend`.  Solo la clase `aFriend` tiene acceso directo a los miembros privados de `Base` \(y a cualquier miembro `Base` que pueda haber heredado\).  
+ La ilustración siguiente muestra cuatro declaraciones de clase: `Base`, `Derived`, `aFriend` y `anotherFriend`. Solo la clase `aFriend` tiene acceso directo a los miembros privados de `Base` (y a cualquier miembro `Base` que pueda haber heredado).  
   
- ![Implicaciones de relaciones de confianza](../cpp/media/vc38v41.png "vc38V41")  
+ ![Implicaciones de relaciones de confianza](../cpp/media/vc38v41.gif "vc38V41")  
 Implicaciones de relaciones de amistad  
   
-## Definiciones friend en línea  
- Las funciones friend se pueden definir dentro de declaraciones de clase.  Estas funciones son funciones insertadas y como funciones insertadas de miembro, se comportan como si se hubieran definido inmediatamente después de haberse considerado todos los miembros de clase pero antes de cerrarse el ámbito de clase \(el final de la declaración de clase\).  
+## <a name="inline-friend-definitions"></a>Definiciones friend en línea  
+ Las funciones friend se pueden definir dentro de declaraciones de clase. Estas funciones son funciones insertadas y como funciones insertadas de miembro, se comportan como si se hubieran definido inmediatamente después de haberse considerado todos los miembros de clase pero antes de cerrarse el ámbito de clase (el final de la declaración de clase).  
   
  Las funciones friend definidas dentro de declaraciones de clase no se consideran en el ámbito de la clase envolvente; están en el ámbito de archivo.  
   
-## Vea también  
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Palabras clave](../cpp/keywords-cpp.md)

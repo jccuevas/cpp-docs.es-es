@@ -1,34 +1,51 @@
 ---
-title: "_com_raise_error | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_raise_error"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_com_raise_error (función)"
+title: _com_raise_error | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_raise_error
+dev_langs:
+- C++
+helpviewer_keywords:
+- _com_raise_error function
 ms.assetid: a98226c2-c3fe-44f1-8ff5-85863de11cd6
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# _com_raise_error
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1f2072a6f3a6f78bc6751e39e0c79d978845fe97
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="comraiseerror"></a>_com_raise_error
 **Específicos de Microsoft**  
   
- Produce un [\_com\_error](../cpp/com-error-class.md) en respuesta a un error.  
+ Produce una [_com_error](../cpp/com-error-class.md) en respuesta a un error.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -38,17 +55,17 @@ caps.handback.revision: 10
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `hr`  
  Información de `HRESULT`.  
   
  `perrinfo`  
- Objeto **IErrorInfo**.  
+ **IErrorInfo** objeto.  
   
-## Comentarios  
- `_com_raise_error`, que se define en comdef.h, se puede reemplazar por una versión escrita por el usuario con el mismo nombre y prototipo.  Esto se podría hacer si se desea utilizar `#import` pero no se desea utilizar el control de excepciones de C\+\+.  En ese caso, una versión de usuario de **\_com\_raise\_error** podría decidir hacer `longjmp` o mostrar un cuadro de mensaje y detenerse.  La versión de usuario no debe volver, sin embargo, porque el código de compatibilidad con COM del compilador no espera que vuelva.  
+## <a name="remarks"></a>Comentarios  
+ `_com_raise_error`, que se define en comdef.h, se puede reemplazar por una versión escrita por el usuario con el mismo nombre y prototipo. Esto se podría hacer si se desea utilizar `#import` pero no se desea utilizar el control de excepciones de C++. En ese caso, una versión de usuario de **_com_raise_error** podría resultar útil un `longjmp` o mostrar un cuadro de mensaje y detener. La versión de usuario no debe volver, sin embargo, porque el código de compatibilidad con COM del compilador no espera que vuelva.  
   
- También puede utilizar [\_set\_com\_error\_handler](../cpp/set-com-error-handler.md) para reemplazar la función predeterminada de control de errores.  
+ También puede usar [_set_com_error_handler](../cpp/set-com-error-handler.md) para reemplazar la función de control de errores predeterminado.  
   
  De forma predeterminada, `_com_raise_error` se define de la manera siguiente:  
   
@@ -58,13 +75,13 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
 }  
 ```  
   
-## FIN de Específicos de Microsoft  
+**FIN de Específicos de Microsoft**  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** comdef.h  
   
- **Lib:** si la opción del compilador “wchar\_t es tipo nativo” está activada, use omsuppw.lib o comsuppwd.lib.  Si “wchar\_t es tipo nativo” está desactivada, use comsupp.lib.  Para obtener más información, vea [\/Zc:wchar\_t \(wchar\_t es un tipo nativo\)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
+ **Lib:** si la **wchar_t es tipo nativo** opción del compilador está activada, use omsuppw.lib o comsuppwd.lib. Si **wchar_t es tipo nativo** está desactivada, use comsupp.lib. Para obtener más información, vea [/Zc:wchar_t (wchar_t es un tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Funciones globales COM del compilador](../cpp/compiler-com-global-functions.md)   
- [\_set\_com\_error\_handler](../cpp/set-com-error-handler.md)
+ [_set_com_error_handler](../cpp/set-com-error-handler.md)

@@ -1,49 +1,66 @@
 ---
-title: "Compatibilidad con COM del compilador | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe (compilador), compatibilidad con COM"
-  - "COM, compatibilidad del compilador"
+title: Compatibilidad con COM del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- cl.exe compiler, COM support
+- COM, compiler support
 ms.assetid: 76a78442-f2a4-4985-9967-67e20773f847
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compatibilidad con COM del compilador
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d81c54f7af604024da852999ca78fa5ee55079ef
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-## Específicos de Microsoft  
- El compilador de Visual C\+\+ puede leer directamente bibliotecas de tipos de modelo de objetos componentes \(COM\) y traducir el contenido a código fuente de C\+\+ que se puede incluir en la compilación.  Existen extensiones de lenguaje disponibles para facilitar la programación COM en el cliente.  
+---
+# <a name="compiler-com-support"></a>Compatibilidad con COM del compilador
+## <a name="microsoft-specific"></a>Específicos de Microsoft  
+ El compilador de Visual C++ puede leer directamente bibliotecas de tipos de modelo de objetos componentes (COM) y traducir el contenido a código fuente de C++ que se puede incluir en la compilación. Existen extensiones de lenguaje disponibles para facilitar la programación COM en el cliente.  
   
- Mediante el uso de la [directiva de preprocesador \#import](../preprocessor/hash-import-directive-cpp.md), el compilador puede leer una biblioteca de tipos y convertirla en un archivo de encabezado de C\+\+ que describe las interfaces COM como clases.  Existe un conjunto de atributos `#import` disponible para el control por parte del usuario del contenido de los archivos de encabezado de biblioteca de tipos resultantes.  
+ Mediante el uso de la [directiva de preprocesador #import](../preprocessor/hash-import-directive-cpp.md), el compilador puede leer una biblioteca de tipos y convertir en un archivo de encabezado de C++ que describe el COM interfaces como clases. Existe un conjunto de atributos `#import` disponible para el control por parte del usuario del contenido de los archivos de encabezado de biblioteca de tipos resultantes.  
   
- Puede utilizar el [uuid](../cpp/uuid-cpp.md) de atributo extendido [\_\_declspec](../cpp/declspec.md) para asignar un identificador único global \(GUID\) a un objeto COM.  Se puede usar la palabra clave [\_\_uuidof](../cpp/uuidof-operator.md) para extraer el GUID asociado a un objeto COM.  Se puede usar otro atributo `__declspec`, [property](../cpp/property-cpp.md), para especificar los métodos **get** y **set** para un miembro de datos de un objeto COM.  
+ Puede usar el [__declspec](../cpp/declspec.md) atributo extendido [uuid](../cpp/uuid-cpp.md) para asignar un identificador único global (GUID) para un objeto COM. La palabra clave [__uuidof](../cpp/uuidof-operator.md) puede utilizarse para extraer el GUID asociado a un objeto COM. Otro `__declspec` atributo, [propiedad](../cpp/property-cpp.md), puede utilizarse para especificar el **obtener** y **establecer** métodos para un miembro de datos de un objeto COM.  
   
- Se proporciona un conjunto de funciones globales de compatibilidad con COM para admitir los tipos **VARIANT** y `BSTR`, implementar punteros inteligentes y encapsular el objeto de error iniciado por `_com_raise_error`:  
+ Se proporciona un conjunto de clases y funciones globales de soporte de COM para admitir la **VARIANT** y `BSTR` tipos, implementar punteros inteligentes y encapsular el objeto de error iniciado por `_com_raise_error`:  
   
--   [Funciones globales COM de compilador](../cpp/compiler-com-global-functions.md)  
+-   [Funciones globales COM del compilador](../cpp/compiler-com-global-functions.md)  
   
--   [\_bstr\_t](../cpp/bstr-t-class.md)  
+-   [_bstr_t](../cpp/bstr-t-class.md)  
   
--   [\_com\_error](../cpp/com-error-class.md)  
+-   [_com_error](../cpp/com-error-class.md)  
   
--   [\_com\_ptr\_t](../cpp/com-ptr-t-class.md)  
+-   [_com_ptr_t](../cpp/com-ptr-t-class.md)  
   
--   [\_variant\_t](../cpp/variant-t-class.md)  
+-   [_variant_t](../cpp/variant-t-class.md)  
   
-## FIN de Específicos de Microsoft  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Clases de compatibilidad con COM del compilador](../cpp/compiler-com-support-classes.md)   
  [Funciones globales COM del compilador](../cpp/compiler-com-global-functions.md)

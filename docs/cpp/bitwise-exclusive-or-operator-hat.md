@@ -1,51 +1,67 @@
 ---
-title: "Operador OR exclusivo bit a bit: ^ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "^ (operador)"
-  - "operadores bit a bit, OR (operador)"
-  - "OR exclusivo (operador)"
-  - "operadores [C++], bit a bit"
-  - "operadores [C++], lógico"
-  - "OR (operador), exclusivo bit a bit"
-  - "XOR (operador)"
+title: 'Operador OR exclusivo bit a bit: ^ | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- operators [C++], bitwise
+- exclusive OR operator
+- XOR operator
+- bitwise operators, OR operator
+- ^ operator
+- OR operator, bitwise exclusive
+- operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operador OR exclusivo bit a bit: ^
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c6d7713a28fa6c0dbe7a5543afa65cd927f614e7
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-## Sintaxis  
+---
+# <a name="bitwise-exclusive-or-operator-"></a>Operador OR exclusivo bit a bit: ^
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 expression ^ expression  
 ```  
   
-## Comentarios  
- El operador OR exclusivo bit a bit \(**^**\) compara cada bit de su primer operando con el bit correspondiente de su segundo operando.  Si un bit es 0 y el otro bit es 1, el bit del resultado correspondiente se establece en 1.  De lo contrario, el bit del resultado correspondiente se establece en 0.  
+## <a name="remarks"></a>Comentarios  
+El operador OR exclusivo bit a bit (**^**) compara cada bit del primer operando con el bit correspondiente de su segundo operando. Si un bit es 0 y el otro bit es 1, el bit del resultado correspondiente se establece en 1. De lo contrario, el bit del resultado correspondiente se establece en 0.  
   
- Ambos operandos del operador OR exclusivo bit a bit deben ser de tipos enteros.  Las conversiones aritméticas habituales descritas en [Conversiones aritméticas](../misc/arithmetic-conversions.md) se aplican a los operandos.  
+Ambos operandos del operador OR exclusivo bit a bit deben ser de tipos enteros. Las conversiones aritméticas habituales descritas en [conversiones estándar](standard-conversions.md) se aplican a los operandos.  
   
-## Palabra clave de operador para ^  
- El operador **xor** es el equivalente de texto de **^**.  Hay dos maneras de tener acceso al operador **xor** en los programas: incluir el archivo de encabezado `iso646.h` o compilar con la opción del compilador [\/Za](../build/reference/za-ze-disable-language-extensions.md) \(deshabilitar extensiones de lenguaje\).  
+## <a name="operator-keyword-for-"></a>Palabra clave de operador para ^  
+El **xor** operador es el equivalente de texto de ** ^ **. Hay dos maneras de obtener acceso a la **xor** operador en los programas: incluir el archivo de encabezado `iso646.h`, o compilar con la [/Za](../build/reference/za-ze-disable-language-extensions.md) opción del compilador (deshabilitar extensiones de lenguaje).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // expre_Bitwise_Exclusive_OR_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate bitwise exclusive OR  
@@ -59,8 +75,8 @@ int main() {
 }  
 ```  
   
-## Vea también  
- [Operadores bit a bit de C\+\+](../misc/cpp-bitwise-operators.md)   
- [Operadores de C\+\+](../misc/cpp-operators.md)   
- [Operadores de C\+\+, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Operadores bit a bit de C](../c-language/c-bitwise-operators.md)
+## <a name="see-also"></a>Vea también  
+ [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+
+
+

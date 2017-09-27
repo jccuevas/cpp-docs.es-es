@@ -1,64 +1,81 @@
 ---
-title: "code_seg (__declspec) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "code_seg_cpp"
-  - "code_seg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "code_seg __declspec (palabra clave)"
+title: code_seg (__declspec) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- code_seg_cpp
+- code_seg
+dev_langs:
+- C++
+helpviewer_keywords:
+- code_seg __declspec keyword
 ms.assetid: ad3c1105-15d3-4e08-b7b9-e4bd9d7b6aa0
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# code_seg (__declspec)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 242dfa36d3cd0c28d1feeb2bd4a2c41d29220b40
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="codeseg-declspec"></a>code_seg (__declspec)
 **Específicos de Microsoft**  
   
  El atributo de declaración `code_seg` asigna nombre a un segmento de texto ejecutable del archivo .obj en el que se almacenará el código objeto para la función o las funciones miembro de clase.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 __declspec(code_seg("segname")) declarator  
 ```  
   
-## Comentarios  
- El atributo `__declspec(code_seg(...))` permite colocar código en segmentos con nombre diferentes que se pueden paginar o bloquear en memoria individualmente.  Este atributo se puede usar para controlar la posición de las plantillas con instancia y del código generado por el compilador.  
+## <a name="remarks"></a>Comentarios  
+ El atributo `__declspec(code_seg(...))` permite colocar código en segmentos con nombre diferentes que se pueden paginar o bloquear en memoria individualmente. Este atributo se puede usar para controlar la posición de las plantillas con instancia y del código generado por el compilador.  
   
- Un *segmento* es un bloque de datos con nombre de un archivo .obj que se carga en memoria como una unidad.  Un *segmento de texto* es un segmento que contiene código ejecutable.  El término *sección* se suele usar indistintamente con el término segmento.  
+ A *segmento* es un bloque de datos en un archivo .obj que se carga en memoria como una unidad con nombre. A *segmento de texto* es un segmento que contiene código ejecutable. El término *sección* se suelen utilizar indistintamente con el segmento.  
   
- El código objeto que se genera cuando se define `declarator` se coloca en el segmento de texto especificado por `segname`, que es un literal de cadena de caracteres estrechos.  No es necesario especificar el nombre `segname` en una pragma [section](../preprocessor/section.md) para poder usarlo en una declaración.  De forma predeterminada, cuando no se especifica `code_seg`, el código objeto se coloca en un segmento denominado .text.  Un atributo `code_seg` invalida cualquier directiva [\#pragma code\_seg](../preprocessor/code-seg.md) existente.  Un atributo `code_seg` aplicado a una función miembro invalida cualquier atributo `code_seg` aplicado a la clase envolvente.  
+ El código objeto que se genera cuando se define `declarator` se coloca en el segmento de texto especificado por `segname`, que es un literal de cadena de caracteres estrechos. El nombre `segname` no tiene que especificarse en un [sección](../preprocessor/section.md) pragma antes de que se puede utilizar en una declaración. De forma predeterminada, cuando no se especifica `code_seg`, el código objeto se coloca en un segmento denominado .text. A `code_seg` atributo invalida cualquier existente [#pragma code_seg](../preprocessor/code-seg.md) directiva. Un atributo `code_seg` aplicado a una función miembro invalida cualquier atributo `code_seg` aplicado a la clase envolvente.  
   
- Si una entidad tiene un atributo `code_seg`, todas las declaraciones y definiciones de la misma entidad deben tener atributos `code_seg` idénticos.  Si una clase base tiene un atributo `code_seg`, las clases derivadas deben tener el mismo atributo.  
+ Si una entidad tiene un atributo `code_seg`, todas las declaraciones y definiciones de la misma entidad deben tener atributos `code_seg` idénticos. Si una clase base tiene un atributo `code_seg`, las clases derivadas deben tener el mismo atributo.  
   
- Cuando se aplica un atributo `code_seg` a una función o una función miembro que tiene ámbito de espacio de nombres, el código objeto de esa función se coloca en el segmento de texto especificado.  Cuando este atributo se aplica a una clase, todas las funciones miembro de la clase y las clases anidadas \(esto incluye las funciones miembro especiales generadas por el compilador\) se colocan en el segmento especificado.  Las clases definidas localmente \(por ejemplo, las clases definidas en el cuerpo de una función miembro\) no heredan el atributo `code_seg` del ámbito de inclusión.  
+ Cuando se aplica un atributo `code_seg` a una función o una función miembro que tiene ámbito de espacio de nombres, el código objeto de esa función se coloca en el segmento de texto especificado. Cuando este atributo se aplica a una clase, todas las funciones miembro de la clase y las clases anidadas (esto incluye las funciones miembro especiales generadas por el compilador) se colocan en el segmento especificado. Las clases definidas localmente (por ejemplo, las clases definidas en el cuerpo de una función miembro) no heredan el atributo `code_seg` del ámbito de inclusión.  
   
- Cuando se aplica un atributo `code_seg` a una clase de plantilla o una función de plantilla, todas las especializaciones implícitas de la plantilla se colocan en el segmento especificado.  Las especializaciones explícitas o parciales no heredan el atributo `code_seg` de la plantilla principal.  Se puede especificar el mismo atributo `code_seg` u otro diferente en la especialización.  No se puede aplicar un atributo `code_seg` a una creación de instancias explícitas de plantilla.  
+ Cuando se aplica un atributo `code_seg` a una clase de plantilla o una función de plantilla, todas las especializaciones implícitas de la plantilla se colocan en el segmento especificado. Las especializaciones explícitas o parciales no heredan el atributo `code_seg` de la plantilla principal. Se puede especificar el mismo atributo `code_seg` u otro diferente en la especialización. No se puede aplicar un atributo `code_seg` a una creación de instancias explícitas de plantilla.  
   
- De forma predeterminada, el código generado por el compilador como una función miembro especial se coloca en el segmento .text.  La directiva `#pragma code_seg` no invalida este valor predeterminado.  El atributo `code_seg` se usa en la clase, la plantilla de clase o la plantilla de función para controlar dónde se coloca el código generado por el compilador.  
+ De forma predeterminada, el código generado por el compilador como una función miembro especial se coloca en el segmento .text. La directiva `#pragma code_seg` no invalida este valor predeterminado. El atributo `code_seg` se usa en la clase, la plantilla de clase o la plantilla de función para controlar dónde se coloca el código generado por el compilador.  
   
- Las lambdas heredan los atributos `code_seg` de su ámbito de inclusión.  Para especificar un segmento para una expresión lambda, se aplica un atributo `code_seg` después de la cláusula de declaración de parámetros y antes de cualquier especificación mutable o de excepciones, cualquier especificación de tipo de valor devuelto final y el cuerpo de la expresión lambda.  Para obtener más información, vea [Sintaxis de las expresiones lambda](../cpp/lambda-expression-syntax.md).  En este ejemplo se define una expresión lambda en un segmento denominado PagedMem:  
+ Las lambdas heredan los atributos `code_seg` de su ámbito de inclusión. Para especificar un segmento para una expresión lambda, se aplica un atributo `code_seg` después de la cláusula de declaración de parámetros y antes de cualquier especificación mutable o de excepciones, cualquier especificación de tipo de valor devuelto final y el cuerpo de la expresión lambda. Para obtener más información, consulte [sintaxis de expresiones Lambda](../cpp/lambda-expression-syntax.md). En este ejemplo se define una expresión lambda en un segmento denominado PagedMem:  
   
 ```cpp  
 auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };  
 ```  
   
- Tenga cuidado cuando coloque determinadas funciones miembro, especialmente funciones miembro virtuales, en segmentos diferentes.  Si se define una función virtual en una clase derivada que reside en un segmento paginado cuando el método de la clase base reside en un segmento no paginado, otros métodos de clase base o el código de usuario puede suponer que al invocar el método virtual no se desencadenará un error de página.  
+ Tenga cuidado cuando coloque determinadas funciones miembro, especialmente funciones miembro virtuales, en segmentos diferentes. Si se define una función virtual en una clase derivada que reside en un segmento paginado cuando el método de la clase base reside en un segmento no paginado, otros métodos de clase base o el código de usuario puede suponer que al invocar el método virtual no se desencadenará un error de página.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo un atributo `code_seg` controla la posición de un segmento cuando se usa la especialización de plantilla implícita y explícita:  
   
 ```  
@@ -113,6 +130,6 @@ int main()
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
- [\_\_declspec](../cpp/declspec.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [__declspec](../cpp/declspec.md)   
+ [Palabras clave](../cpp/keywords-cpp.md)

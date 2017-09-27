@@ -1,32 +1,48 @@
 ---
-title: "Operador de conversi&#243;n: () | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "() (operador de conversión)"
-  - "operadores de conversión"
+title: "Operador de conversión: () | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- cast operators
+- () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
 caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operador de conversi&#243;n: ()
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: bf8299fb0992f42fabe49bbbbffe0693fc93d961
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="cast-operator-"></a>Operador de conversión: ()
 Una conversión de tipo proporciona un método para la conversión explícita del tipo de un objeto en una situación concreta.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -34,12 +50,12 @@ Una conversión de tipo proporciona un método para la conversión explícita de
 ( type-name ) cast-expression  
 ```  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Cualquier expresión unaria se considera una expresión de conversión.  
   
- El compilador trata *cast\-expression* como tipo *type\-name* una vez realizada una conversión de tipo.  Las conversiones se pueden utilizar para convertir objetos de cualquier tipo escalar en cualquier otro tipo escalar.  Las conversiones de tipos explícitas están restringidas por las mismas reglas que determinan los efectos de las conversiones implícitas.  Se pueden aplicar otras restricciones derivadas de los tamaños reales o de la representación de tipos específicos.  
+ El compilador trata *cast-expression* como tipo *type-name* una vez realizada una conversión de tipo. Las conversiones se pueden utilizar para convertir objetos de cualquier tipo escalar en cualquier otro tipo escalar. Las conversiones de tipos explícitas están restringidas por las mismas reglas que determinan los efectos de las conversiones implícitas. Se pueden aplicar otras restricciones derivadas de los tamaños reales o de la representación de tipos específicos.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // expre_CastOperator.cpp  
@@ -59,7 +75,7 @@ int main()
 }  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // expre_CastOperator2.cpp  
@@ -122,14 +138,16 @@ int main()
 }  
 ```  
   
-  **RawBytes truncado en 10 caracteres: Exciting\!\!**  
-**Bytes convertidos: Exciting**  
-**Observe que la conversión cambió la cadena interna sin formato**  
-**Bytes sin formato después de la conversión: Exciting**   
-## Vea también  
+```Output  
+RawBytes truncated to 10 chars:   Exciting!!  
+Casted Bytes:   Exciting  
+Note that the cast changed the raw internal string  
+Raw Bytes after cast:   Exciting  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Expresiones con operadores unarios](../cpp/expressions-with-unary-operators.md)   
- [Operadores de C\+\+](../misc/cpp-operators.md)   
- [Operadores de C\+\+, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Operador de conversión explícita de tipos: \(\)](../cpp/explicit-type-conversion-operator-parens.md)   
+ [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operador de conversión de tipos explícita:)](../cpp/explicit-type-conversion-operator-parens.md)   
  [Operadores de conversión](../cpp/casting-operators.md)   
  [Operadores de conversión](../c-language/cast-operators.md)

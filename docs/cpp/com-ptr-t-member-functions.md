@@ -1,28 +1,45 @@
 ---
-title: "_com_ptr_t (Funciones miembro) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_com_ptr_t (clase), funciones miembro"
+title: Funciones de miembro _com_ptr_t | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- _com_ptr_t class, member functions
 ms.assetid: 02a54c68-2452-4f8e-84b4-6bf67c51ea99
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# _com_ptr_t (Funciones miembro)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ee3f628fc6f3c9190df1be7258305ba858836a73
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Para obtener información sobre las funciones miembro de `_com_ptr_t`, vea la [clase \_com\_ptr\_t](../cpp/com-ptr-t-class.md).  
+---
+# <a name="comptrt-member-functions"></a>_com_ptr_t (Funciones miembro)
+Para obtener información sobre la `_com_ptr_t` funciones miembro, vea [clase _com_ptr_t](../cpp/com-ptr-t-class.md).  
   
-## Vea también  
- [\_com\_ptr\_t \(Clase\)](../cpp/com-ptr-t-class.md)
+## <a name="see-also"></a>Vea también  
+ [_com_ptr_t (Clase)](../cpp/com-ptr-t-class.md)

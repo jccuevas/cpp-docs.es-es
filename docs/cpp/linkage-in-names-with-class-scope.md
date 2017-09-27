@@ -1,35 +1,52 @@
 ---
-title: "Vinculaci&#243;n en nombres con &#225;mbito de clase | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nombres de clase [C++], vinculación"
-  - "ámbito de clase [C++], vinculación en nombres con"
-  - "clases [C++], nombres"
-  - "clases [C++], ámbito"
-  - "vinculación externa, reglas de vinculación de ámbito"
-  - "vinculación [C++], reglas de vinculación de ámbito"
-  - "nombres [C++], reglas de vinculación de ámbito"
-  - "ámbito [C++], nombres de clase"
-  - "ámbito [C++], reglas de vinculación"
+title: "Vinculación en nombres con ámbito de clase | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- scope [C++], linkage rules
+- linkage [C++], scope linkage rules
+- names [C++], scope linkage rules
+- classes [C++], scope
+- external linkage, scope linkage rules
+- class names [C++], linkage
+- classes [C++], names
+- scope [C++], class names
+- class scope [C++], linkage in names with
 ms.assetid: 45275ff3-6e94-4967-82c8-ba540ef4da28
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Vinculaci&#243;n en nombres con &#225;mbito de clase
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 37a0dcca1da0ae56a8144adf862eda89bfb1c4d6
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="linkage-in-names-with-class-scope"></a>Vinculación en nombres con ámbito de clase
 Las siguientes reglas de vinculación se aplican a los nombres con ámbito de clase:  
   
 -   Los miembros de clases estáticas tienen vinculación externa.  
@@ -40,9 +57,9 @@ Las siguientes reglas de vinculación se aplican a los nombres con ámbito de cl
   
  **Específicos de Microsoft**  
   
--   Las funciones declaradas como funciones `friend` deben tener vinculación externa.  Si se declara una función estática como `friend` se produce un error.  
+-   Las funciones declaradas como funciones `friend` deben tener vinculación externa. Si se declara una función estática como `friend` se produce un error.  
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Programa y vinculación](../cpp/program-and-linkage-cpp.md)

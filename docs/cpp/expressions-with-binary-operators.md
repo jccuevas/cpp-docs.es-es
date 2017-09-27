@@ -1,104 +1,121 @@
 ---
-title: "Expresiones con operadores binarios | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operadores binarios"
-  - "expresiones [C++], operadores binarios"
-  - "operadores [C++], binaria"
+title: Expresiones con operadores binarios | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- operators [C++], binary
+- binary operators
+- expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Expresiones con operadores binarios
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: cedb72a925b21c6bf121092626bc52214fc9c0f0
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Los operadores binarios actúan sobre dos operandos de una expresión.  Los operadores binarios son:  
+---
+# <a name="expressions-with-binary-operators"></a>Expresiones con operadores binarios
+Los operadores binarios actúan sobre dos operandos de una expresión. Los operadores binarios son:  
   
 -   [Operadores de multiplicación](../cpp/multiplicative-operators-and-the-modulus-operator.md)  
   
-    -   Multiplicación \(\*\)  
+    -   Multiplicación (*)  
   
-    -   División \(\/\)  
+    -   División (/)  
   
-    -   Módulo \(%\)  
+    -   Módulo (%)  
   
 -   [Operadores aditivos](../cpp/additive-operators-plus-and.md)  
   
-    -   Suma \(\+\)  
+    -   Suma (+)  
   
-    -   Resta \(–\)  
+    -   Resta (-)  
   
 -   [Operadores de desplazamiento](../cpp/left-shift-and-right-shift-operators-input-and-output.md)  
   
-    -   Desplazamiento a la derecha \(\>\>\)  
+    -   Desplazamiento a la derecha (>>)  
   
-    -   Desplazamiento a la izquierda \(\<\<\)  
+    -   Desplazamiento a la izquierda (<<)  
   
 -   [Operadores relacionales y de igualdad](../cpp/relational-operators-equal-and-equal.md)  
   
-    -   Menor que \(\<\)  
+    -   Menor que (\<)  
   
-    -   Mayor que \(\>\)  
+    -   Mayor que (>)  
   
-    -   Menor o igual que \(\<\=\)  
+    -   Menor o igual que (\<=)  
   
-    -   Mayor o igual que \(\>\=\)  
+    -   Mayor o igual que (>=)  
   
-    -   Igual a \(\=\=\)  
+    -   Igual a (==)  
   
-    -   No igual a \(\!\=\)  
+    -   No igual a (!=)  
   
 -   Operadores bit a bit  
   
-    -   [AND bit a bit \(&\)](../cpp/bitwise-and-operator-amp.md)  
+    -   [AND bit a bit (&)](../cpp/bitwise-and-operator-amp.md)  
   
-    -   [OR exclusivo bit a bit \(^\)](../cpp/bitwise-exclusive-or-operator-hat.md)  
+    -   [Bit a bit OR exclusivo (^)](../cpp/bitwise-exclusive-or-operator-hat.md)  
   
-    -   [OR inclusivo bit a bit \(&#124;\)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+    -   [Bit a bit OR inclusivo (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
   
 -   Operadores lógicos  
   
-    -   [AND lógico \(&&\)](../cpp/logical-and-operator-amp-amp.md)  
+    -   [Operador lógico AND (& &)](../cpp/logical-and-operator-amp-amp.md)  
   
-    -   [OR lógico \(&#124;&#124;\)](../cpp/logical-or-operator-pipe-pipe.md)  
+    -   [OR lógico (&#124; &#124;)](../cpp/logical-or-operator-pipe-pipe.md)  
   
 -   [Operadores de asignación](../cpp/assignment-operators.md)  
   
-    -   Asignación \(\=\)  
+    -   Asignación (=)  
   
-    -   Asignación y suma \(\+\=\)  
+    -   Asignación y suma (+=)  
   
-    -   Asignación y resta \(–\=\)  
+    -   Asignación y resta (-)  
   
-    -   Asignación y multiplicación \(\*\=\)  
+    -   Asignación y multiplicación (*=)  
   
-    -   Asignación y división \(\/\=\)  
+    -   Asignación y división (/=)  
   
-    -   Asignación y módulo \(%\=\)  
+    -   Asignación y módulo (%=)  
   
-    -   Asignación y desplazamiento a la izquierda \(\<\<\=\)  
+    -   Deja la asignación de desplazamiento (<\<=)  
   
-    -   Asignación y desplazamiento a la derecha \(\>\>\=\)  
+    -   Asignación y desplazamiento a la derecha (>>=)  
   
-    -   Asignación y AND bit a bit \(&\=\)  
+    -   Asignación y AND bit a bit (&=)  
   
-    -   Asignación y OR exclusivo bit a bit \(^\=\)  
+    -   Asignación y OR exclusivo bit a bit (^=)  
   
-    -   Asignación y OR inclusivo bit a bit \(&#124;\=\)  
+    -   Bit a bit asignación y OR inclusiva (&#124; =)  
   
--   [Operador de coma](../cpp/comma-operator.md) \(,\)  
+-   [Operador de coma](../cpp/comma-operator.md) (,)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tipos de expresiones](../cpp/types-of-expressions.md)

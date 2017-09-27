@@ -1,28 +1,45 @@
 ---
-title: "_com_error (Funciones miembro) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_com_error (clase), funciones miembro"
+title: Funciones de miembro _com_error | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- _com_error class, member functions
 ms.assetid: 39a73cdb-c12c-4d3b-a314-e3f6580f4d2d
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# _com_error (Funciones miembro)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c25764ee1be43b433b3c2e5ba51f895e9efdf0b6
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Para obtener información sobre las funciones miembro de **\_com\_error** , vea la [Clase \_com\_error](../cpp/com-error-class.md).  
+---
+# <a name="comerror-member-functions"></a>_com_error (Funciones miembro)
+Para obtener información sobre la **_com_error** funciones miembro, vea [clase _com_error](../cpp/com-error-class.md).  
   
-## Vea también  
- [\_com\_error \(Clase\)](../cpp/com-error-class.md)
+## <a name="see-also"></a>Vea también  
+ [_com_error (Clase)](../cpp/com-error-class.md)

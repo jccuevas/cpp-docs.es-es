@@ -1,87 +1,104 @@
 ---
-title: "Operadores de multiplicaci&#243;n y el operador de m&#243;dulo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "%"
-  - "/"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "% (operador)"
-  - "* (operador)"
-  - "operadores aritméticos [C++], operadores de multiplicación"
-  - "operador de división"
-  - "operador de división, operadores de multiplicación"
-  - "operador de módulo, C+"
-  - "operador de multiplicación [C++], operadores de multiplicación"
-  - "operadores de multiplicación [C++]"
-  - "operadores [C++], multiplicativo"
+title: "Operadores de multiplicación y el operador de módulo | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '%'
+- /
+dev_langs:
+- C++
+helpviewer_keywords:
+- operators [C++], multiplicative
+- arithmetic operators [C++], multiplicative operators
+- modulus operator, C+
+- '* operator'
+- division operator, multiplicative operators
+- '% operator'
+- multiplication operator [C++], multiplicative operators
+- multiplicative operators [C++]
+- division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Operadores de multiplicaci&#243;n y el operador de m&#243;dulo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b63a36817bb0366d21fba11c5e1e4eccbcc6951f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-## Sintaxis  
+---
+# <a name="multiplicative-operators-and-the-modulus-operator"></a>Operadores de multiplicación y el operador de módulo
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-expression * expression   
-expression / expression   
+expression * expression   
+expression / expression   
 expression % expression  
 ```  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Los operadores multiplicativos son:  
   
--   Multiplicación \(**\***\)  
+-   Multiplicación (**\***)  
   
--   División \(**\/**\)  
+-   División (**/**)  
   
--   Módulo \(resto de la división\) \(`%`\)  
+-   Módulo (resto de la división) (`%`)  
   
  Estos operadores binarios tienen asociatividad de izquierda a derecha.  
   
- Los operadores multiplicativos toman operandos de tipos aritméticos.  El operador de módulo \(`%`\) tiene un requisito más estricto en tanto que sus operandos deben ser de tipo entero. \(Para obtener el resto de una división de coma flotante, utilice la función de tiempo de ejecución, [fmod](../c-runtime-library/reference/fmod-fmodf.md)\). Las conversiones descritas en [Conversiones aritméticas](../misc/arithmetic-conversions.md) se aplican a los operandos y el resultado es del tipo convertido.  
+ Los operadores multiplicativos toman operandos de tipos aritméticos. El operador de módulo (`%`) tiene un requisito más estricto en tanto que sus operandos deben ser de tipo entero. (Para obtener el resto de una división de coma flotante, utilice la función de tiempo de ejecución, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Las conversiones descritas en [conversiones estándar](standard-conversions.md) se aplican a los operandos y el resultado es de tipo convertido.  
   
  El operador de multiplicación produce el resultado de multiplicar el primer operando por el segundo.  
   
  El operador de división produce el resultado de dividir el primer operando por el segundo.  
   
- El operador de módulo produce el resto proporcionado por la expresión siguiente, donde *e1* es el primer operando y *e2* es el segundo: *e1* – \(*e1* y *e2*\) \* *e2*, donde ambos operandos son de tipos enteros.  
+ El operador de módulo produce el resto proporcionado por la expresión siguiente, donde *e1* es el primer operando y *e2* es el segundo: *e1* -(*e1*  /  *e2*) \* *e2*, donde ambos operandos son de tipos enteros.  
   
- La división por 0 en una expresión de división o de módulo es indefinida y provoca un error en tiempo de ejecución.  Por consiguiente, las expresiones siguientes generan resultados erróneos, indefinidos:  
+ La división por 0 en una expresión de división o de módulo es indefinida y provoca un error en tiempo de ejecución. Por consiguiente, las expresiones siguientes generan resultados erróneos, indefinidos:  
   
 ```  
 i % 0  
 f / 0.0  
 ```  
   
- Si ambos operandos de una multiplicación, una división o una expresión de módulo tienen el mismo signo, el resultado es positivo.  De lo contrario, el resultado es negativo.  El resultado del signo de una operación de módulo lo define la implementación.  
+ Si ambos operandos de una multiplicación, una división o una expresión de módulo tienen el mismo signo, el resultado es positivo. De lo contrario, el resultado es negativo. El resultado del signo de una operación de módulo lo define la implementación.  
   
 > [!NOTE]
 >  Como las conversiones realizadas por los operadores multiplicativos no proporcionan condiciones de desbordamiento o subdesbordamiento, la información puede perderse si el resultado de una operación multiplicativa no se puede representar en el tipo de los operandos después de la conversión.  
   
-## Específicos de Microsoft  
- En Microsoft C\+\+, el resultado de una expresión de módulo tiene siempre el mismo signo que el primer operando.  
+## <a name="microsoft-specific"></a>Específicos de Microsoft  
+ En Microsoft C++, el resultado de una expresión de módulo tiene siempre el mismo signo que el primer operando.  
   
-## FIN de Específicos de Microsoft  
- Si la división calculada de dos enteros es inexacta y solo un operando es negativo, el resultado es el entero mayor \(en magnitud, independientemente del signo\) que es menor que el valor exacto que produciría la operación de división.  Por ejemplo, el valor calculado de –11 \/ 3 es –3,666666666.  El resultado de esa división entera es –3.  
+**FIN de Específicos de Microsoft**  
+ Si la división calculada de dos enteros es inexacta y solo un operando es negativo, el resultado es el entero mayor (en magnitud, independientemente del signo) que es menor que el valor exacto que produciría la operación de división. Por ejemplo, el valor calculado de -11 / 3 es-3.666666666. El resultado de esa división entera es -3.  
   
- La relación entre los operadores multiplicativos está determinada por la identidad \(*e1* \/ *e2*\) \* *e2* \+ *e1* % *e2* \=\= *e1*.  
+ La relación entre los operadores multiplicativos está determinada por la identidad (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.  
   
-## Ejemplo  
- El siguiente programa muestra los operadores multiplicativos.  Observe que ambos operandos de `10 / 3` se deben convertir explícitamente al tipo `float` para evitar el truncamiento, de manera que los dos operandos son de tipo `float` antes de la división.  
+## <a name="example"></a>Ejemplo  
+ El siguiente programa muestra los operadores multiplicativos. Tenga en cuenta que ambos operandos de `10 / 3` debe convertirse explícitamente al tipo `float` para evitar el truncamiento para que ambos operandos son de tipo `float` antes de la división.  
   
 ```  
 // expre_Multiplicative_Operators.cpp  
@@ -97,8 +114,7 @@ int main() {
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Expresiones con operadores binarios](../cpp/expressions-with-binary-operators.md)   
- [Operadores de C\+\+](../misc/cpp-operators.md)   
- [Operadores de C\+\+, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operadores de multiplicación de C](../c-language/c-multiplicative-operators.md)

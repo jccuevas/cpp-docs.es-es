@@ -1,44 +1,61 @@
 ---
-title: "Herencia &#250;nica | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "single inheritance_cpp"
-  - "single inheritance"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clases base, indirectas"
-  - "clases derivadas, clase base única"
-  - "herencia, única"
-  - "operadores [C++], resolución de ámbito"
-  - "operador de resolución de ámbito"
-  - "ámbito, operador de resolución de ámbito"
-  - "herencia única"
+title: "Único herencia | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- single inheritance_cpp
+- single inheritance
+dev_langs:
+- C++
+helpviewer_keywords:
+- single inheritance
+- base classes, indirect
+- scope, scope resolution operator
+- operators [C++], scope resolution
+- scope resolution operator
+- derived classes, single base class
+- inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Herencia &#250;nica
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b716d383d001b8e0812eaba76322aa3c7b66b8f4
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-En la "herencia única", una forma de herencia común, las clases solo tienen una clase base.  Considere la relación que se muestra en la siguiente ilustración.  
+---
+# <a name="single-inheritance"></a>Herencia única
+En la "herencia única", una forma de herencia común, las clases solo tienen una clase base. Considere la relación que se muestra en la siguiente ilustración.  
   
- ![Gráfico básico de herencia única](../cpp/media/vc38xj1.png "vc38XJ1")  
+ ![Solo básica &#45; gráfico de herencia](../cpp/media/vc38xj1.gif "vc38XJ1")  
 Gráfico sencillo de herencia única  
   
- Observe la progresión de general a específico en la ilustración.  Otro atributo común que se encuentra en el diseño de la mayoría de jerarquías de clases es que la clase derivada tiene una "especie" de relación con la clase base.  En la ilustración, `Book` es una clase de `PrintedDocument` y `PaperbackBook` es una clase de `book`.  
+ Observe la progresión de general a específico en la ilustración. Otro atributo común que se encuentra en el diseño de la mayoría de jerarquías de clases es que la clase derivada tiene una "especie" de relación con la clase base. En la ilustración, `Book` es una clase de `PrintedDocument` y `PaperbackBook` es una clase de `book`.  
   
- Otro elemento de interés en la ilustración: `Book` es una clase derivada \(de `PrintedDocument`\) y una clase base \(`PaperbackBook` se deriva de `Book`\).  En el ejemplo siguiente se muestra una declaración estructural de esta jerarquía de clases:  
+ Otro elemento de interés en la ilustración: `Book` es una clase derivada (de `PrintedDocument`) y una clase base (`PaperbackBook` se deriva de `Book`). En el ejemplo siguiente se muestra una declaración estructural de esta jerarquía de clases:  
   
 ```  
 // deriv_SingleInheritance.cpp  
@@ -52,23 +69,23 @@ class Book : public PrintedDocument {};
 class PaperbackBook : public Book {};  
 ```  
   
- `PrintedDocument` se considera una clase "base directa" de `Book`; es una clase "base indirecta" de `PaperbackBook`.  La diferencia es que una clase base directa aparece en la lista base de una declaración de clase y una clase base indirecta no.  
+ `PrintedDocument` se considera una clase "base directa" de `Book`; es una clase "base indirecta" de `PaperbackBook`. La diferencia es que una clase base directa aparece en la lista base de una declaración de clase y una clase base indirecta no.  
   
- La clase base de la que se deriva cada clase se declara antes de la declaración de la clase derivada.  No es suficiente proporcionar una declaración de referencia adelantada para una clase base; debe ser una declaración completa.  
+ La clase base de la que se deriva cada clase se declara antes de la declaración de la clase derivada. No es suficiente proporcionar una declaración de referencia adelantada para una clase base; debe ser una declaración completa.  
   
- En el ejemplo anterior, se usa el especificador de acceso **public**.  El significado de herencia pública, protegida y privada se describe en [Control de acceso a miembros](../cpp/member-access-control-cpp.md).  
+ En el ejemplo anterior, el especificador de acceso **público** se utiliza. El significado de herencia pública, protegida y privada se describe en [Control de acceso a miembros.](../cpp/member-access-control-cpp.md)  
   
  Una clase puede actuar como clase base para muchas clases específicas, como se muestra en la ilustración siguiente.  
   
- ![Gráfico acíclico dirigido](../cpp/media/vc38xj2.png "vc38XJ2")  
+ ![Gráfico acíclico dirigido](../cpp/media/vc38xj2.gif "vc38XJ2")  
 Ejemplo de gráfico acíclico dirigido  
   
- En el diagrama anterior, denominado "gráfico acíclico dirigido" \(o DAG\), algunas de las clases son clases base para más de una clase derivada.  Sin embargo, no sucede lo mismo al contrario: solo hay una clase base directa para una clase derivada dada.  El gráfico de la ilustración muestra una estructura de "herencia única".  
+ En el diagrama anterior, denominado "gráfico acíclico dirigido" (o DAG), algunas de las clases son clases base para más de una clase derivada. Sin embargo, no sucede lo mismo al contrario: solo hay una clase base directa para una clase derivada dada. El gráfico de la ilustración muestra una estructura de "herencia única".  
   
 > [!NOTE]
->  Los gráficos acíclicos dirigidos no son exclusivos de la herencia única.  También se usan para ilustrar gráficos de herencia múltiple.  Este tema se trata en [Herencia múltiple](http://msdn.microsoft.com/es-es/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
+>  Los gráficos acíclicos dirigidos no son exclusivos de la herencia única. También se usan para ilustrar gráficos de herencia múltiple. En este tema se trata en [herencia múltiple](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
   
- En la herencia, la clase derivada contiene los miembros de la clase base más cualquier miembro nuevo que se agregue.  Como resultado, una clase derivada puede hacer referencia a miembros de la clase base \(a menos que esos miembros se redefinan en la clase derivada\).  Se puede usar el operador de resolución de ámbito \(`::`\) para hacer referencia a los miembros de clases base directas o indirectas cuando esos miembros se han vuelto a definir en la clase derivada.  Considere este ejemplo:  
+ En la herencia, la clase derivada contiene los miembros de la clase base más cualquier miembro nuevo que se agregue. Como resultado, una clase derivada puede hacer referencia a miembros de la clase base (a menos que esos miembros se redefinan en la clase derivada). Se puede usar el operador de resolución de ámbito (`::`) para hacer referencia a los miembros de clases base directas o indirectas cuando esos miembros se han vuelto a definir en la clase derivada. Considere este ejemplo:  
   
 ```  
 // deriv_SingleInheritance2.cpp  
@@ -101,7 +118,7 @@ Book::Book( char *name, long pagecount ) {
 };  
 ```  
   
- Observe que el constructor para `Book`, \(`Book::Book`\), tiene acceso al miembro de datos, `Name`.  En un programa, se puede crear un objeto de tipo `Book`, que se usará del siguiente modo:  
+ Observe que el constructor para `Book`, (`Book::Book`), tiene acceso al miembro de datos, `Name`. En un programa, se puede crear un objeto de tipo `Book`, que se usará del siguiente modo:  
   
 ```  
 //  Create a new object of type Book. This invokes the  
@@ -114,7 +131,7 @@ Book LibraryBook( "Programming Windows, 2nd Ed", 944 );
 LibraryBook.PrintNameOf();  
 ```  
   
- Como demuestra el ejemplo anterior, los datos y funciones heredados y miembros de clase se usan de forma idéntica.  Si la implementación de la clase `Book` solicita la reimplementation de la función `PrintNameOf`, la función que pertenece a la clase `Document` solo se puede llamar mediante el operador de resolución de ámbito \(`::`\):  
+ Como demuestra el ejemplo anterior, los datos y funciones heredados y miembros de clase se usan de forma idéntica. Si la implementación de la clase `Book` solicita la reimplementation de la función `PrintNameOf`, la función que pertenece a la clase `Document` solo se puede llamar mediante el operador de resolución de ámbito (`::`):  
   
 ```  
 // deriv_SingleInheritance3.cpp  
@@ -140,7 +157,7 @@ void Book::PrintNameOf() {
 }  
 ```  
   
- Los punteros y las referencias a clases derivadas se pueden convertir implícitamente a punteros y referencias a sus clases base si hay una clase base accesible e inequívoca.  En el código siguiente se muestra este concepto mediante el uso de punteros \(el mismo principio se aplica a las referencias\):  
+ Los punteros y las referencias a clases derivadas se pueden convertir implícitamente a punteros y referencias a sus clases base si hay una clase base accesible e inequívoca. En el código siguiente se muestra este concepto mediante el uso de punteros (el mismo principio se aplica a las referencias):  
   
 ```  
 // deriv_SingleInheritance4.cpp  
@@ -159,13 +176,11 @@ int main() {
 }  
 ```  
   
- En el ejemplo anterior, se crean tipos diferentes.  Sin embargo, dado que todos estos tipos se derivan de la clase `Document`, hay una conversión implícita a `Document *`.  Como resultado, `DocLib` es una "lista heterogénea" \(una lista en la que no todos los objetos son del mismo tipo\) que contiene diferentes tipos de objetos.  
+ En el ejemplo anterior, se crean tipos diferentes. Sin embargo, dado que todos estos tipos se derivan de la clase `Document`, hay una conversión implícita a `Document *`. Como resultado, `DocLib` es una "lista heterogénea" (una lista en la que no todos los objetos son del mismo tipo) que contiene diferentes tipos de objetos.  
   
- Dado que la clase `Document` tiene una función `PrintNameOf`, puede imprimir el nombre de cada libro de la biblioteca, aunque puede omitir algo de información específica del tipo de documento \(recuento de páginas de `Book`, número de bytes para `HelpFile`, etc.\).  
+ Dado que la clase `Document` tiene una función `PrintNameOf`, puede imprimir el nombre de cada libro de la biblioteca, aunque puede omitir algo de información específica del tipo de documento (recuento de páginas de `Book`, número de bytes para `HelpFile`, etc.).  
   
 > [!NOTE]
->  Forzar la clase base para implementar una función como `PrintNameOf` no suele ser el mejor diseño.  [Funciones virtuales](../cpp/virtual-functions.md) proporciona otras alternativas de diseño.  
+>  Forzar la clase base para implementar una función como `PrintNameOf` no suele ser el mejor diseño. [Funciones virtuales](../cpp/virtual-functions.md) proporciona otras alternativas de diseño.  
   
-## Vea también  
- [Información general de las clases derivadas](../misc/overview-of-derived-classes.md)   
- [\(NOTINBUILD\) Multiple Inheritance](http://msdn.microsoft.com/es-es/3b74185e-2beb-4e29-8684-441e51d2a2ca)
+

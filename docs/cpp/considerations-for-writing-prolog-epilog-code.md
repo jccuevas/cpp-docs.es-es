@@ -1,35 +1,52 @@
 ---
-title: "Consideraciones para escribir c&#243;digo de pr&#243;logo y ep&#237;logo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__LOCAL_SIZE (constante)"
-  - "código de epílogo"
-  - "código de prólogo"
-  - "diseño de marco de pila"
-  - "pila, diseño de marco de pila"
+title: "Consideraciones para escribir código de prólogo y epílogo | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- stack frame layout
+- prolog code
+- epilog code
+- __LOCAL_SIZE constant
+- stack, stack frame layout
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Consideraciones para escribir c&#243;digo de pr&#243;logo y ep&#237;logo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 4dc75755fafb569c06dcb41b77ff54ebc0403b2d
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-## Específicos de Microsoft  
- Antes de escribir sus propias secuencias de código de prólogo y epílogo, es importante que comprenda cómo se diseña el marco de pila.  También es útil saber utilizar el símbolo **\_\_LOCAL\_SIZE**.  
+---
+# <a name="considerations-for-writing-prologepilog-code"></a>Consideraciones para escribir código de prólogo/epílogo
+## <a name="microsoft-specific"></a>Específicos de Microsoft  
+ Antes de escribir sus propias secuencias de código de prólogo y epílogo, es importante que comprenda cómo se diseña el marco de pila. También es útil saber cómo usar el **__LOCAL_SIZE** símbolos.  
   
-##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Diseño del marco de pila  
+##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a>Diseño del marco de pila  
  En este ejemplo se muestra el código de prólogo estándar que puede aparecer en una función de 32 bits:  
   
 ```  
@@ -39,7 +56,7 @@ sub         esp, localbytes    ; Allocate space for locals
 push        <registers>        ; Save registers  
 ```  
   
- La variable `localbytes` representa el número de bytes necesarios en la pila para las variables locales y la variable `<registers>` es un marcador de posición que representa la lista de registros que se guarden en la pila.  Después de insertar los registros, puede colocar cualquier otro dato adecuado en la pila.  A continuación, se muestra el código de epílogo correspondiente:  
+ La variable `localbytes` representa el número de bytes necesarios en la pila para las variables locales y la variable `<registers>` es un marcador de posición que representa la lista de registros que se guarden en la pila. Después de insertar los registros, puede colocar cualquier otro dato adecuado en la pila. A continuación, se muestra el código de epílogo correspondiente:  
   
 ```  
 pop         <registers>   ; Restore registers  
@@ -48,19 +65,19 @@ pop         ebp           ; Restore ebp
 ret                       ; Return from function  
 ```  
   
- La pila siempre va de mayor a menor \(de las direcciones de memoria superiores a las inferiores\).  El puntero base \(`ebp`\) señala al valor insertado de `ebp`.  El área de valores locales comienza en `ebp-4`.  Para tener acceso a las variables locales, calcule un desplazamiento de `ebp` restando el valor apropiado a `ebp`.  
+ La pila siempre va de mayor a menor (de las direcciones de memoria superiores a las inferiores). El puntero base (`ebp`) señala al valor insertado de `ebp`. El área de valores locales comienza en `ebp-4`. Para tener acceso a las variables locales, calcule un desplazamiento de `ebp` restando el valor apropiado a `ebp`.  
   
-##  <a name="_pluslang___local_size"></a> \_\_LOCAL\_SIZE  
- El compilador proporciona un símbolo, **\_\_LOCAL\_SIZE**, para su uso en el bloque de ensamblador alineado del código del prólogo de la función.  Este símbolo se utiliza para asignar espacio para variables locales del marco de pila en código de prólogo personalizado.  
+##  <a name="_pluslang___local_size"></a>__LOCAL_SIZE  
+ El compilador proporciona un símbolo, **__LOCAL_SIZE**, para su uso en el bloque de ensamblador alineado del código de prólogo de función. Este símbolo se utiliza para asignar espacio para variables locales del marco de pila en código de prólogo personalizado.  
   
- El compilador determina el valor de **\_\_LOCAL\_SIZE**.  Su valor es el número total de bytes de todas las variables locales definidas por el usuario y las variables temporales generadas por el compilador.  **\_\_LOCAL\_SIZE** se puede utilizar como operando inmediato; no se puede utilizar en una expresión.  No debe cambiar o volver a definir el valor de este símbolo.  Por ejemplo:  
+ El compilador determina el valor de **__LOCAL_SIZE**. Su valor es el número total de bytes de todas las variables locales definidas por el usuario y las variables temporales generadas por el compilador. **__LOCAL_SIZE** se puede utilizar como operando inmediato; no se puede utilizar en una expresión. No debe cambiar o volver a definir el valor de este símbolo. Por ejemplo:  
   
 ```  
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay  
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error  
 ```  
   
- El ejemplo siguiente de una función naked que contiene secuencias personalizadas de prólogo y de epílogo utiliza el símbolo **\_\_LOCAL\_SIZE** en la secuencia de prólogo:  
+ El siguiente ejemplo de una función naked que contiene personalizadas de prólogo y epílogo secuencias utiliza el **__LOCAL_SIZE** símbolos en la secuencia de prólogo:  
   
 ```  
 // the__local_size_symbol.cpp  
@@ -84,7 +101,7 @@ __declspec ( naked ) int main() {
 }  
 ```  
   
-### FIN de Específicos de Microsoft  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Llamadas de función naked](../cpp/naked-function-calls.md)

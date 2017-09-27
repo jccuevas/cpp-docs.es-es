@@ -1,44 +1,61 @@
 ---
-title: "this (Puntero) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "this"
-  - "this_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funciones miembro no estáticas"
-  - "punteros, a instancia de clase"
-  - "this (puntero)"
+title: this (puntero) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- this
+- this_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- nonstatic member functions
+- pointers, to class instance
+- this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# this (Puntero)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 86ccf50a089b1497bdc166ee9367215dc59b3ca1
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-El puntero **this** es un puntero accesible solo dentro de las funciones miembro no estáticas de un tipo de **clase**, `struct` o de **unión**.  Señala al objeto para el que se llama a la función miembro.  Las funciones miembro estáticas no tienen un puntero **this**.  
+---
+# <a name="this-pointer"></a>this (Puntero)
+El **esto** puntero es un puntero accesible únicamente dentro de las funciones miembro no estáticas de una **clase**, `struct`, o **union** tipo. Señala al objeto para el que se llama a la función miembro. Las funciones miembro estáticas no tienen un **esto** puntero.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-        this   
+      this   
 this->member-identifier  
 ```  
   
-## Comentarios  
- El puntero **this** de un objeto no forma parte del propio objeto; no se refleja en el resultado de una instrucción `sizeof` en el objeto.  En su lugar, cuando se llama a una función miembro no estática para un objeto, el compilador pasa la dirección del objeto como un argumento oculto a la función.  Por ejemplo, la siguiente llamada de función:  
+## <a name="remarks"></a>Comentarios  
+ Un objeto **esto** puntero no es parte del propio objeto; no se refleja en el resultado de una `sizeof` instrucción en el objeto. En su lugar, cuando se llama a una función miembro no estática para un objeto, el compilador pasa la dirección del objeto como un argumento oculto a la función. Por ejemplo, la siguiente llamada de función:  
   
 ```  
 myDate.setMonth( 3 );  
@@ -50,7 +67,7 @@ myDate.setMonth( 3 );
 setMonth( &myDate, 3 );  
 ```  
   
- La dirección del objeto está disponible desde la función miembro como el puntero **this**.  La mayoría de los usos de **this** son implícitos.  Es válido, aunque innecesario, utilizar explícitamente **this** cuando se hace referencia a los miembros de la clase.  Por ejemplo:  
+ La dirección del objeto está disponible en la función miembro como el **esto** puntero. La mayoría de los usos de **esto** son implícitas. Es válido, aunque es innecesario, utilizar explícitamente **esto** cuando se hace referencia a los miembros de la clase. Por ejemplo:  
   
 ```  
 void Date::setMonth( int mn )  
@@ -67,7 +84,7 @@ void Date::setMonth( int mn )
 return *this;  
 ```  
   
- El puntero **this** también se utiliza para protegerse de la autorreferencia:  
+ El **esto** puntero también se utiliza para protegerse de la referencia a sí misma:  
   
 ```  
 if (&Object != this) {  
@@ -75,11 +92,11 @@ if (&Object != this) {
 ```  
   
 > [!NOTE]
->  Dado que el puntero **this** no es modificable, no se permiten las asignaciones a **this**.  Implementaciones anteriores de C\+\+ permitían las asignaciones a **this**.  
+>  Dado que la **esto** puntero no es modificable, las asignaciones a **esto** no se permiten. Implementaciones anteriores de C++ permitían las asignaciones a **esto**.  
   
- En ocasiones, el puntero **this** se utiliza directamente; por ejemplo, para manipular estructuras de datos que hacen referencia a sí mismas, donde se requiere la dirección del objeto actual.  
+ En ocasiones, el **esto** puntero se usa directamente, por ejemplo, para manipular los datos autorreferencia las estructuras, donde se requiere la dirección del objeto actual.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // this_pointer.cpp  
@@ -144,10 +161,13 @@ int main()
 }  
 ```  
   
-  **my buffer**  
-**your buffer**   
-## Tipo del puntero this  
- El tipo de puntero **this** puede modificarse en la declaración de función mediante las palabras clave **const** y `volatile`.  Para declarar una función con los atributos de una o más de estas palabras clave, agregue las palabras clave después de la lista de argumentos de la función.  
+```Output  
+my buffer  
+your buffer  
+```  
+  
+## <a name="type-of-the-this-pointer"></a>Tipo del puntero this  
+ El **esto** se puede modificar el tipo de puntero en la declaración de función por la **const** y `volatile` palabras clave. Para declarar una función con los atributos de una o más de estas palabras clave, agregue las palabras clave después de la lista de argumentos de la función.  
   
  Considere este ejemplo:  
   
@@ -162,7 +182,7 @@ int main()
 }  
 ```  
   
- El código anterior declara una función miembro, `X`, en la que el puntero **this** se trata como un puntero **const** a un objeto **const**.  Se pueden usar combinaciones de opciones de *cv\-mod\-list*, pero estas modifican siempre el objeto al que señala **this**, no el puntero **this** propiamente dicho.  Por consiguiente, en la declaración siguiente se declara la función `X`; el puntero **this** es un puntero **const** a un objeto **const**:  
+ El código anterior declara una función miembro, `X`, en el que el **esto** puntero se trata como un **const** puntero a un **const** objeto. Combinaciones de *cv-mod-list* opciones pueden utilizarse, pero estas modifican siempre el objeto al que señala **esto**, no el **esto** propio puntero. Por lo tanto, la declaración siguiente declara la función `X`; el **esto** puntero es un **const** puntero a un **const** objeto:  
   
 ```  
 // type_of_this_pointer2.cpp  
@@ -175,29 +195,28 @@ int main()
 }  
 ```  
   
- La sintaxis siguiente describe el tipo de **this** en una función miembro, donde *cv\-qualifier\-list* se determina a partir del declarador de funciones miembro y puede ser **const** o **volatile** \(o ambos\). *class\-type* es el nombre de la clase:  
+ El tipo de **esto** en un miembro de la función se describe mediante la sintaxis siguiente, donde *cv-qualifier-list* se determina a partir del declarador de funciones miembro y puede ser **const**o **volátiles** (o ambos), y *tipo de clase* es el nombre de la clase:  
   
- *\[cv\-qualifier\-list\] class\-type*  **\* const this**  
+ *tipo de clase [cv-qualifier-list]* ** \* const esto  **  
   
- Dicho de otro modo, **this** siempre es un puntero const; no se puede reasignar.  Los calificadores **const** o `volatile` que se usan en la declaración de función miembro se aplican a la instancia de clase a la que apunta **this** en el ámbito de dicha función.  
+ En otras palabras, **esto** siempre es un puntero const; no se puede reasignar.  El **const** o `volatile` calificadores utilizados en la declaración de función miembro se aplican a la instancia de clase que señala **esto** en el ámbito de esa función.  
   
  En la tabla siguiente se explica más detalladamente el funcionamiento de estos modificadores.  
   
-### Semántica de los modificadores de this  
+### <a name="semantics-of-this-modifiers"></a>Semántica de los modificadores de this  
   
 |Modificador|Significado|  
-|-----------------|-----------------|  
-|**const**|No puede cambiar los datos de miembro; no puede llamar a funciones miembro que no sean **const**.|  
+|--------------|-------------|  
+|**const**|No se puede cambiar los datos de miembro; no se puede llamar a funciones de miembro que no son **const**.|  
 |`volatile`|Los datos de miembro se cargan desde la memoria cada vez que se obtiene acceso; deshabilita ciertas optimizaciones.|  
   
- Es un error pasar un objeto **const** a una función miembro que no sea **const**.  De igual forma, es un error pasar un objeto `volatile` a una función miembro que no sea `volatile`.  
+ Es un error pasar un **const** objeto a una función miembro que no sea **const**. De igual forma, es un error pasar un objeto `volatile` a una función miembro que no sea `volatile`.  
   
- Las funciones miembro declaradas como **const** no pueden cambiar los datos de miembro \(en dichas funciones, el puntero **this** es un puntero a un objeto **const**\).  
+ Las funciones miembro declaradas como **const** no se puede cambiar los datos de miembros: en dichas funciones, la **esto** puntero es un puntero a un **const** objeto.  
   
 > [!NOTE]
->  Los constructores y destructores no pueden declararse como **const** o `volatile`.  Pueden, sin embargo, invocarse en objetos **const** o `volatile`.  
+>  Constructores y destructores no pueden declararse como **const** o `volatile`. Sin embargo, pueden ser se invoca en **const** o `volatile` objetos.  
   
-## Vea también  
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)   
- [Tipo de puntero this](../misc/type-of-this-pointer.md)   
- [Coincidencia de argumentos y el puntero this](../misc/argument-matching-and-the-this-pointer.md)
+## <a name="see-also"></a>Vea también  
+ [Palabras clave](../cpp/keywords-cpp.md)   
+ 

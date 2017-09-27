@@ -1,51 +1,66 @@
 ---
-title: "auto (Palabra clave) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "auto"
-  - "auto_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto (palabra clave)"
-  - "clase de almacenamiento automática, auto (palabra clave)"
+title: palabra clave Auto | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- auto
+- auto_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- automatic storage class, auto keyword
+- auto keyword
 ms.assetid: 744a41c0-2510-4140-a1be-96257e722908
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# auto (Palabra clave)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 0413fd47b486cf1613b7c249b93e6a3507a5577c
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-La palabra clave `auto` es un especificador de declaración.  Sin embargo, C\+\+ estándar define un significado original y otro revisado para esta palabra clave.  En las versiones anteriores a [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)], la palabra clave `auto` declara una variable en la clase de almacenamiento *automático*; es decir, una variable que tiene una duración local.  A partir de [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)], la palabra clave `auto` declara un variable cuyo tipo se deduce de la expresión de inicialización de su declaración.  La opción del compilador [\/Zc: auto &#91;\-&#93;](../build/reference/zc-auto-deduce-variable-type.md) controla el significado de la palabra clave `auto`.  
+---
+# <a name="auto-keyword"></a>auto (Palabra clave)
+La palabra clave `auto` es un especificador de declaración. Sin embargo, C++ estándar define un significado original y otro revisado para esta palabra clave. Antes de Visual C++ 2010, la `auto` palabra clave declara una variable en el *automática* clase de almacenamiento; es decir, una variable que tiene una duración local. A partir de Visual C++ 2010, la `auto` palabra clave declara una variable cuyo tipo se deduce de la expresión de inicialización en su declaración. El [/Zc: auto &#91;-&#93;](../build/reference/zc-auto-deduce-variable-type.md) opción del compilador controla el significado de la `auto` (palabra clave).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 auto declarator ;  
 auto declarator initializer;  
 ```  
   
-## Comentarios  
- La definición de la palabra clave `auto` cambia en el lenguaje de programación C\+\+, pero no en el lenguaje de programación C.  
+## <a name="remarks"></a>Comentarios  
+ La definición de la palabra clave `auto` cambia en el lenguaje de programación C++, pero no en el lenguaje de programación C.  
   
  En los temas siguientes se describe la palabra clave `auto` y la opción del compilador correspondiente:  
   
--   En [auto](../cpp/auto-cpp.md) se describe la nueva definición de la palabra clave `auto`.  
+-   [Auto](../cpp/auto-cpp.md) describe la nueva definición de la `auto` (palabra clave).  
   
--   En [auto \(Palabra clave\) \(Especificador de clase de almacenamiento\)](http://msdn.microsoft.com/es-es/c7d0cecf-393d-4058-a6e6-b39e31d9edb0) se describe la definición original de la palabra clave `auto`.  
   
--   En [\/Zc:auto \(Deducir tipo de variable\)](../build/reference/zc-auto-deduce-variable-type.md) se describe la opción del compilador que indica al compilador qué definición de palabra clave `auto` debe utilizar.  
+-   [/ Zc: Auto (deducir tipo de Variable)](../build/reference/zc-auto-deduce-variable-type.md) describe la opción del compilador que indica al compilador qué definición de la `auto` palabra clave que se va a usar.  
   
-## Vea también  
- [\(NOTINBUILD\)Storage\-Class Specifiers](http://msdn.microsoft.com/es-es/10b3d22d-cb40-450b-994b-08cf9a211b6c)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Palabras clave](../cpp/keywords-cpp.md)

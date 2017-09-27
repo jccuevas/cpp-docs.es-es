@@ -1,51 +1,67 @@
 ---
-title: "Funciones con listas de argumentos de variable (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "listas de argumentos [C++], número variable"
-  - "argumentos [C++], número variable"
-  - "declaradores, funciones"
-  - "declarar funciones, variables"
-  - "llamadas a funciones, número variable de argumentos"
-  - "listas de argumentos variables"
+title: Funciones con listas de argumentos variables (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arguments [C++], variable number of
+- variable argument lists
+- declarators, functions
+- argument lists [C++], variable number of
+- declaring functions, variables
+- function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
 caps.latest.revision: 16
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Funciones con listas de argumentos de variable (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e7a1f434b9c286bfa625d703023080f55586f0a8
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Las declaraciones de función en las que el último miembro son los puntos suspensivos \(...\) pueden tomar un número variable de argumentos.  En estos casos, C\+\+ proporciona comprobación de tipos solo para los argumentos declarados explícitamente.  Puede utilizar listas de argumentos variables cuando necesite crear una función tan general que incluso el número y los tipos de argumentos puedan variar.  La familia de funciones es un ejemplo de funciones que usan listas de argumentos variables. `printf`*argument\-declaration\-list*  
+---
+# <a name="functions-with-variable-argument-lists--c"></a>Listas de funciones con argumentos de Variable (C++)
+Las declaraciones de función en las que el último miembro son los puntos suspensivos (...) pueden tomar un número variable de argumentos. En estos casos, C++ proporciona comprobación de tipos solo para los argumentos declarados explícitamente. Puede utilizar listas de argumentos variables cuando necesite crear una función tan general que incluso el número y los tipos de argumentos puedan variar. La familia de funciones es un ejemplo de las funciones que usan listas de argumentos variables. `printf` *argument-declaration-list*  
   
-## Funciones con argumentos variables  
+## <a name="functions-with-variable-arguments"></a>Funciones con argumentos variables  
  Para tener acceso a los argumentos declarados en esas funciones, use las macros incluidas en el archivo de inclusión estándar STDARG.H, tal como se describe a continuación.  
   
  **Específicos de Microsoft**  
   
- Microsoft C\+\+ permite especificar los puntos suspensivos como argumento si son el último argumento y van precedidos por una coma.  Por consiguiente, la declaración `int Func( int i, ... );` es válida, pero `int Func( int i ... );` no lo es.  
+ Microsoft C++ permite especificar los puntos suspensivos como argumento si son el último argumento y van precedidos por una coma. Por consiguiente, la declaración `int Func( int i, ... );` es válida, pero `int Func( int i ... );` no lo es.  
   
  **FIN de Específicos de Microsoft**  
   
- La declaración de una función que toma un número variable de argumentos requiere al menos un argumento de marcador de posición, incluso si no se utiliza.  Si no se proporciona este argumento de marcador de posición, no existe ninguna forma de obtener acceso a los argumentos restantes.  
+ La declaración de una función que toma un número variable de argumentos requiere al menos un argumento de marcador de posición, incluso si no se utiliza. Si no se proporciona este argumento de marcador de posición, no existe ninguna forma de obtener acceso a los argumentos restantes.  
   
- Cuando los argumentos de tipo `char` se pasan como argumentos variables, se convierten al tipo `int`.  De igual forma, cuando los argumentos de tipo **float** se pasan como argumentos variables, se convierten al tipo **double**.  Los argumentos de otros tipos están sujetos a las promociones habituales de entero y de punto flotante.  Vea [Promociones de entero](../misc/integral-promotions.md) para obtener más información.  
+ Cuando los argumentos de tipo `char` se pasan como argumentos variables, se convierten al tipo `int`. De forma similar, cuando los argumentos de tipo **float** se pasan como argumentos variables, se convierten al tipo **doble**. Los argumentos de otros tipos están sujetos a las promociones habituales de entero y de punto flotante. Vea [conversiones estándar](standard-conversions.md) para obtener más información.  
   
- Las funciones que requieren listas de variables se declaran con puntos suspensivos \(...\) en la lista de argumentos.  Utilice los tipos y macros que se describen en el archivo de inclusión STDARG.H para obtener acceso a los argumentos que pasa una lista de variables.  Para obtener más información sobre estas macros, vea [va\_arg, va\_copy, va\_end, va\_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) en la documentación de la biblioteca en tiempo de ejecución de C.  
+ Las funciones que requieren listas de variables se declaran con puntos suspensivos (...) en la lista de argumentos. Utilice los tipos y macros que se describen en el archivo de inclusión STDARG.H para obtener acceso a los argumentos que pasa una lista de variables. Para obtener más información acerca de estas macros, vea [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). en la documentación de la biblioteca en tiempo de ejecución de C.  
   
- En el ejemplo siguiente se muestra cómo funcionan las macros con el tipo \(declarado en STDARG.H\): `va_list` `va_end` `va_arg` `va_start`  
+ En el ejemplo siguiente se muestra cómo funcionan las macros con el tipo (declarado en STDARG. (H): 
   
 ```  
 // variable_argument_lists.cpp  
@@ -123,9 +139,9 @@ void ShowVar( char *szTypes, ... ) {
   
  En el ejemplo anterior se muestran estos conceptos importantes:  
   
-1.  Debe establecer un marcador de lista como variable de tipo `va_list` antes de que se tenga acceso a cualquier argumento de variable.  En el ejemplo anterior, el marcador se denomina `vl`.  
+1.  Debe establecer un marcador de lista como variable de tipo `va_list` antes de que se tenga acceso a cualquier argumento de variable. En el ejemplo anterior, el marcador se denomina `vl`.  
   
-2.  Se accede a los argumentos individuales mediante la macro `va_arg`.  Debe indicar a la macro `va_arg` el tipo de argumento que debe recuperar para poder transferir el número correcto de bytes desde la pila.  Si especifica un tipo incorrecto de un tamaño diferente del proporcionado por el programa de llamada a `va_arg`, los resultados son imprevisibles.  
+2.  Se accede a los argumentos individuales mediante la macro `va_arg`. Debe indicar a la macro `va_arg` el tipo de argumento que debe recuperar para poder transferir el número correcto de bytes desde la pila. Si especifica un tipo incorrecto de un tamaño diferente del proporcionado por el programa de llamada a `va_arg`, los resultados son imprevisibles.  
   
 3.  Debe convertir explícitamente, mediante la macro `va_arg`, el resultado obtenido al tipo que desee.  
   

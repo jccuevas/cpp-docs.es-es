@@ -1,40 +1,57 @@
 ---
-title: "Restricciones de la funci&#243;n main | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Main"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "main (función), restricciones de uso"
+title: "Restricciones de la función principal | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- Main
+dev_langs:
+- C++
+helpviewer_keywords:
+- main function, restrictions on using
 ms.assetid: 7b3df731-344b-44a8-850c-11cbcbfbfa83
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Restricciones de la funci&#243;n main
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 10fe82b0bb7ad700164b05ba466854db7716ba76
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-A la función **main** se le aplican varias restricciones que no se aplican a otras funciones de C\+\+.  La función **main**:  
+---
+# <a name="main-function-restrictions"></a>Restricciones de la función main
+Varias restricciones se aplican a la **principal** función que no se aplican a otras funciones de C++. El **principal** función:  
   
--   No se puede sobrecargar \(vea [Sobrecarga](../misc/overloading-cpp.md)\).  
+-   No se pueden sobrecargar (vea [sobrecarga de funciones](function-overloading.md)).  
   
--   No se puede declarar como **inline**.  
+-   No se pueden declarar como **en línea**.  
   
--   No se puede declarar como **static**.  
+-   No se pueden declarar como **estático**.  
   
 -   No se puede tomar su dirección.  
   
 -   No se puede llamar.  
   
-## Vea también  
- [main: inicio de programa](../cpp/main-program-startup.md)
+## <a name="see-also"></a>Vea también  
+ [main: Inicio de programa](../cpp/main-program-startup.md)

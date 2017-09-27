@@ -1,46 +1,62 @@
 ---
-title: "while (Instrucci&#243;n) (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "while_cpp"
-  - "while"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "while (palabra clave) [C++]"
-  - "while (palabra clave) [C++], sintaxis"
+title: "while (instrucción) (C++) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- while_cpp
+- while
+dev_langs:
+- C++
+helpviewer_keywords:
+- while keyword [C++]
+- while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# while (Instrucci&#243;n) (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 694852e40699ac7b2663392cb8a4c02218a422a7
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Ejecuta *statement* repetidamente hasta que *expression* se evalúa como cero.  
+---
+# <a name="while-statement-c"></a>while (Instrucción) (C++)
+Ejecuta *instrucción* repetidamente hasta que *expresión* se evalúa como cero.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
       while ( expression )  
-   statement  
+   statement  
 ```  
   
-## Comentarios  
- La comprobación de *expression* tiene lugar antes de cada ejecución del bucle; por tanto, un bucle `while` se ejecuta cero o más veces.  *expression* debe ser de tipo entero, un tipo de puntero o un tipo de clase con una conversión no ambigua a un tipo entero o de puntero.  
+## <a name="remarks"></a>Comentarios  
+ La prueba de *expresión* tiene lugar antes de cada ejecución del bucle; por lo tanto, un `while` el bucle ejecuta cero o más veces. *expresión* debe ser de un tipo entero, un tipo de puntero, o un tipo de clase con una conversión no ambigua a un entero o un tipo de puntero.  
   
- Un bucle `while` también puede finalizar cuando se ejecuta [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) o [return](../cpp/return-statement-cpp.md) dentro del cuerpo de instrucción.  Utilice [continue](../cpp/continue-statement-cpp.md) para finalizar la iteración actual sin salir del bucle `while`.  **continue** pasa el control a la siguiente iteración del bucle `while`.  
+ A `while` bucle también puede finalizar cuando un [salto](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), o [devolver](../cpp/return-statement-cpp.md) dentro de la instrucción se ejecuta el cuerpo. Use [continuar](../cpp/continue-statement-cpp.md) para finalizar la iteración actual sin salir del `while` bucle. **continuar** pasa el control a la siguiente iteración de la `while` bucle.  
   
  En el código siguiente se utiliza un bucle `while` para recortar los caracteres de subrayado finales de una cadena:  
   
@@ -71,11 +87,11 @@ int main()
 }  
 ```  
   
- La condición de finalización se evalúa al principio del bucle.  Si no hay ningún carácter de subrayado final, el bucle nunca se ejecuta.  
+ La condición de finalización se evalúa al principio del bucle. Si no hay ningún carácter de subrayado final, el bucle nunca se ejecuta.  
   
-## Vea también  
- [Instrucciones de iteración](../cpp/iteration-statements-cpp.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)   
- [do\-while \(instrucción de C\+\+\)](../cpp/do-while-statement-cpp.md)   
- [for \(Instrucción\) \(C\+\+\)](../cpp/for-statement-cpp.md)   
- [Instrucción for basada en intervalo \(C\+\+\)](../cpp/range-based-for-statement-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Iteration Statements](../cpp/iteration-statements-cpp.md)  (Instrucciones de iteración)  
+ [Palabras clave](../cpp/keywords-cpp.md)   
+ [Instrucción do-while (C++)](../cpp/do-while-statement-cpp.md)   
+ [for (Instrucción) (C++)](../cpp/for-statement-cpp.md)   
+ [Instrucción for basada en intervalo (C++)](../cpp/range-based-for-statement-cpp.md)

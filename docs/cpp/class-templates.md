@@ -1,44 +1,74 @@
 ---
-title: "Plantillas de clase | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "plantillas de clase"
-  - "clases [C++], funcionamiento en tipo"
-  - "plantillas, plantillas de clase"
+title: Plantillas de clase | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- classes [C++], operating on type
+- class templates
+- templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Plantillas de clase
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: f9e94e2b656262eff46cd75014e90110ab20dc43
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Puede utilizar plantillas de clase para crear una familia de clases que operen en un tipo.  Las plantillas de clase son tipos parametrizados.  Permiten crear una clase distinta para cada valor plausible de los parámetros pasados \(denominados argumentos de plantilla\).  
+---
+# <a name="class-templates"></a>Plantillas de clase
+Este tema describe las reglas que son específicas de las plantillas de clase de C++.  
   
- Los argumentos de plantilla pueden ser tipos o valores constantes de un tipo especificado.  Por ejemplo:  
+## <a name="member-functions-of-class-templates"></a>Funciones miembro de las plantillas de clase  
+ Las funciones miembro se pueden definir dentro o fuera de una plantilla de clase. Se definen como plantillas de función si se definen fuera de la plantilla de clase.  
   
-```  
-// class_templates.cpp  
-template <class T, int i> class TempClass   
+```cpp  
+// member_function_templates1.cpp  
+template<class T, int i> class MyStack  
 {  
-public:  
-    TempClass( void );  
-    ~TempClass( void );  
-    int MemberSet( T a, int b );  
-private:  
-    T Tarray[i];  
-    int arraysize;  
+    T*  pStack;  
+    T StackBuffer[i];  
+    static const int cItems = i * sizeof(T);  
+public:   
+    MyStack( void );  
+    void push( const T item );  
+    T& pop( void );  
+};  
+  
+template< class T, int i > MyStack< T, i >::MyStack( void )  
+{  
+};  
+  
+template< class T, int i > void MyStack< T, i >::push( const T item )  
+{  
+};  
+  
+template< class T, int i > T& MyStack< T, i >::pop( void )  
+{  
 };  
   
 int main()  
@@ -46,27 +76,391 @@ int main()
 }  
 ```  
   
- En este ejemplo, la clase con plantilla utiliza dos parámetros, un tipo `T` y un int `i`.  Al parámetro `T` se le puede pasar cualquier tipo, incluidas estructuras y clases.  Al parámetro `i` se le debe pasar una constante entera.  Como `i` es una constante definida en tiempo de compilación, puede definir una matriz de miembros de tamaño `i` mediante una declaración de matriz estándar.  
+ Observe que, al igual que con cualquier función miembro de clase de plantilla, la definición de la función miembro del constructor de la clase incluye la lista de argumentos de plantilla dos veces.  
   
- Para obtener más información, vea:  
+ Las funciones miembro pueden ser plantillas de función, especificando parámetros adicionales, como en el ejemplo siguiente.  
   
--   [Miembros de plantillas de clase](../Topic/Members%20of%20Class%20Templates.md)  
+```cpp  
+// member_templates.cpp  
+template<typename T>  
+class X  
+{  
+public:  
+   template<typename U>  
+   void mf(const U &u);  
+};  
   
--   [Plantillas para miembros de clase](../Topic/Templates%20for%20Class%20Members.md)  
+template<typename T> template <typename U>  
+void X<T>::mf(const U &u)  
+{  
+}  
   
--   [Funciones miembro de clases de plantilla](../Topic/Member%20Functions%20of%20Template%20Classes.md)  
+int main()  
+{  
+}  
   
--   [Plantillas de clase anidadas](../Topic/Nested%20Class%20Templates.md)  
+```  
   
--   [Creación de instancias de una plantilla de clase](../Topic/Class%20Template%20Instantiation.md)  
+## <a name="nested-class-templates"></a>Plantillas de clase anidadas  
+ Las plantillas se pueden definir dentro de clases o plantillas de clase, en cuyo caso se conocen como plantillas de miembro. Las plantillas de miembro que son clases se conocen como plantillas de clase anidadas. Plantillas de miembro son funciones se explican en [plantillas de función miembro](../cpp/member-function-templates.md).  
   
--   [Especialización explícita de las plantillas de clase](../Topic/Explicit%20Specialization%20of%20Class%20Templates.md)  
+ Las plantillas de clase anidada se declaran como plantillas de clase dentro del ámbito de la clase externa. Pueden definirse dentro o fuera de la clase envolvente.  
   
--   [Especialización parcial de plantillas de clase](../cpp/template-specialization-cpp.md)  
+ En el código siguiente se muestra una plantilla de clase anidada dentro de una clase ordinaria.  
   
--   [Argumentos predeterminados para plantillas de clase](../Topic/Default%20Arguments%20for%20Class%20Templates.md)  
+```cpp  
+// nested_class_template1.cpp  
+// compile with: /EHsc  
+#include <iostream>  
+using namespace std;  
   
--   [Friends de plantilla](../cpp/template-friends.md)  
+class X  
+{  
   
-## Vea también  
- [Plantillas](../cpp/templates-cpp.md)
+   template <class T>  
+   struct Y  
+   {  
+      T m_t;  
+      Y(T t): m_t(t) { }     
+   };  
+  
+   Y<int> yInt;  
+   Y<char> yChar;  
+  
+public:  
+   X(int i, char c) : yInt(i), yChar(c) { }  
+   void print()  
+   {  
+      cout << yInt.m_t << " " << yChar.m_t << endl;  
+   }  
+};  
+  
+int main()  
+{  
+   X x(1, 'a');  
+   x.print();  
+}  
+```  
+  
+```cpp  
+// nested_class_template2.cpp  
+// compile with: /EHsc  
+#include <iostream>  
+using namespace std;  
+  
+template <class T>  
+class X  
+{  
+   template <class U> class Y  
+   {  
+      U* u;  
+   public:  
+      Y();  
+      U& Value();  
+      void print();  
+      ~Y();  
+   };  
+  
+   Y<int> y;  
+public:  
+   X(T t) { y.Value() = t; }  
+   void print() { y.print(); }  
+};  
+  
+template <class T>   
+template <class U>  
+X<T>::Y<U>::Y()  
+{  
+   cout << "X<T>::Y<U>::Y()" << endl;  
+   u = new U();  
+}  
+  
+template <class T>   
+template <class U>  
+U& X<T>::Y<U>::Value()  
+{  
+   return *u;  
+}  
+  
+template <class T>   
+template <class U>  
+void X<T>::Y<U>::print()  
+{  
+   cout << this->Value() << endl;  
+}  
+  
+template <class T>   
+template <class U>  
+X<T>::Y<U>::~Y()  
+{  
+   cout << "X<T>::Y<U>::~Y()" << endl;  
+   delete u;  
+}  
+  
+int main()  
+{  
+   X<int>* xi = new X<int>(10);  
+   X<char>* xc = new X<char>('c');  
+   xi->print();  
+   xc->print();  
+   delete xi;  
+   delete xc;  
+}  
+  
+//Output:   
+X<T>::Y<U>::Y()  
+X<T>::Y<U>::Y()  
+10  
+99  
+X<T>::Y<U>::~Y()  
+X<T>::Y<U>::~Y()
+```  
+  
+ No se permite que las clases locales tengan plantillas de miembro.  
+  
+## <a name="template-friends"></a>Friends de plantilla  
+ Pueden tener plantillas de clase [amigos](http://msdn.microsoft.com/en-us/bf412640-d857-4acb-b2b5-513131cb9681). Una clase o plantilla de clase y una función o plantilla de función pueden ser elementos friend de una clase de plantilla. Los elementos friend también pueden ser especializaciones de una plantilla de clase o de función, pero no especializaciones parciales.  
+  
+ En el ejemplo siguiente, una función friend se define como una plantilla de función dentro de la plantilla de clase. Este código genera una versión de la función friend para cada instancia de la plantilla. Esta construcción es útil si la función friend depende de los mismos parámetros de plantilla que la clase.  
+  
+```cpp  
+// template_friend1.cpp  
+// compile with: /EHsc  
+  
+#include <iostream>  
+using namespace std;  
+  
+template <class T> class Array {  
+   T* array;  
+   int size;  
+  
+public:  
+   Array(int sz): size(sz) {  
+      array = new T[size];  
+      memset(array, 0, size * sizeof(T));  
+   }  
+  
+   Array(const Array& a) {  
+      size = a.size;  
+      array = new T[size];  
+      memcpy_s(array, a.array, sizeof(T));  
+   }  
+  
+   T& operator[](int i) {  
+      return *(array + i);  
+   }  
+  
+   int Length() { return size; }  
+  
+   void print() {  
+      for (int i = 0; i < size; i++)        
+         cout << *(array + i) << " ";  
+  
+      cout << endl;  
+   }  
+  
+   template<class T>  
+   friend Array<T>* combine(Array<T>& a1, Array<T>& a2);  
+};  
+  
+template<class T>  
+Array<T>* combine(Array<T>& a1, Array<T>& a2) {  
+   Array<T>* a = new Array<T>(a1.size + a2.size);  
+   for (int i = 0; i < a1.size; i++)  
+      (*a)[i] = *(a1.array + i);  
+  
+   for (int i = 0; i < a2.size; i++)  
+      (*a)[i + a1.size] = *(a2.array + i);  
+  
+   return a;  
+}  
+  
+int main() {  
+   Array<char> alpha1(26);  
+   for (int i = 0 ; i < alpha1.Length() ; i++)  
+      alpha1[i] = 'A' + i;  
+  
+   alpha1.print();  
+  
+   Array<char> alpha2(26);  
+   for (int i = 0 ; i < alpha2.Length() ; i++)  
+      alpha2[i] = 'a' + i;  
+  
+   alpha2.print();  
+   Array<char>*alpha3 = combine(alpha1, alpha2);  
+   alpha3->print();  
+   delete alpha3;  
+}  
+//Output:   
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z   
+a b c d e f g h i j k l m n o p q r s t u v w x y z   
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z   
+```  
+  
+ En el ejemplo siguiente se incluye una función friend que tiene una especialización de plantilla. Una especialización de plantilla de función es automáticamente friend si la plantilla de función original es friend.  
+  
+ También se puede declarar solo la versión especializada de la plantilla como friend, como indica el comentario que precede a la declaración friend del código siguiente. En este caso, se debe colocar la definición de especialización de plantilla friend fuera de la clase de plantilla.  
+  
+```cpp  
+// template_friend2.cpp  
+// compile with: /EHsc  
+#include <iostream>  
+using namespace std;  
+  
+template <class T>  
+class Array;  
+  
+template <class T>  
+void f(Array<T>& a);  
+  
+template <class T> class Array  
+{  
+    T* array;  
+    int size;  
+  
+public:  
+    Array(int sz): size(sz)  
+    {  
+        array = new T[size];  
+        memset(array, 0, size * sizeof(T));  
+    }  
+    Array(const Array& a)  
+    {  
+        size = a.size;  
+        array = new T[size];  
+        memcpy_s(array, a.array, sizeof(T));  
+    }  
+    T& operator[](int i)  
+    {  
+        return *(array + i);  
+    }  
+    int Length()  
+    {   
+        return size;  
+    }  
+    void print()  
+    {  
+        for (int i = 0; i < size; i++)  
+        {  
+            cout << *(array + i) << " ";  
+        }  
+        cout << endl;  
+    }  
+    // If you replace the friend declaration with the int-specific  
+    // version, only the int specialization will be a friend.  
+    // The code in the generic f will fail  
+    // with C2248: 'Array<T>::size' :  
+    // cannot access private member declared in class 'Array<T>'.  
+    //friend void f<int>(Array<int>& a);  
+  
+    friend void f<>(Array<T>& a);  
+};  
+  
+// f function template, friend of Array<T>  
+template <class T>  
+void f(Array<T>& a)  
+{  
+    cout << a.size << " generic" << endl;  
+}  
+  
+// Specialization of f for int arrays  
+// will be a friend because the template f is a friend.  
+template<> void f(Array<int>& a)  
+{  
+    cout << a.size << " int" << endl;  
+}  
+  
+int main()  
+{  
+    Array<char> ac(10);  
+    f(ac);  
+  
+    Array<int> a(10);  
+    f(a);  
+}  
+//Output:  
+10 generic  
+10 int  
+```  
+  
+ En el ejemplo siguiente se muestra una plantilla de clase friend declarada dentro de una plantilla de clase. La plantilla de clase se usa como argumento de plantilla para la clase friend. Las plantillas de clase friend se deben definir fuera de la plantilla de clase en la que se declaran. Las especializaciones o especializaciones parciales de las plantillas friend son también elementos friend de la plantilla de clase original.  
+  
+```cpp  
+// template_friend3.cpp  
+// compile with: /EHsc  
+#include <iostream>  
+using namespace std;  
+  
+template <class T>  
+class X  
+{  
+private:  
+   T* data;  
+   void InitData(int seed) { data = new T(seed); }  
+public:  
+   void print() { cout << *data << endl; }  
+   template <class U> friend class Factory;  
+};  
+  
+template <class U>  
+class Factory  
+{  
+public:  
+   U* GetNewObject(int seed)  
+   {  
+      U* pu = new U;  
+      pu->InitData(seed);  
+      return pu;  
+   }  
+};  
+  
+int main()  
+{  
+   Factory< X<int> > XintFactory;  
+   X<int>* x1 = XintFactory.GetNewObject(65);  
+   X<int>* x2 = XintFactory.GetNewObject(97);  
+  
+   Factory< X<char> > XcharFactory;  
+   X<char>* x3 = XcharFactory.GetNewObject(65);  
+   X<char>* x4 = XcharFactory.GetNewObject(97);  
+   x1->print();  
+   x2->print();  
+   x3->print();  
+   x4->print();  
+}  
+//Output:   
+65  
+97  
+A  
+a  
+```  
+  
+## <a name="reuse-of-template-parameters"></a>Reutilizar parámetros de plantilla  
+ Los parámetros de plantilla se pueden reutilizar en la lista de parámetros de plantilla. Por ejemplo, se permite el código siguiente:  
+  
+```cpp  
+// template_specifications2.cpp  
+  
+class Y   
+{  
+};  
+template<class T, T* pT> class X1   
+{  
+};  
+template<class T1, class T2 = T1> class X2   
+{  
+};  
+  
+Y aY;  
+  
+X1<Y, &aY> x1;  
+X2<int> x2;  
+  
+int main()  
+{  
+}  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Templates](../cpp/templates-cpp.md) (Plantillas [C++])
+
