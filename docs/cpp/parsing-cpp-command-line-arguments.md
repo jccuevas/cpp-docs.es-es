@@ -1,32 +1,49 @@
 ---
-title: "Analizar los argumentos de la l&#237;nea de comandos de C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "las comillas, los argumentos de línea de comandos"
-  - "comillas dobles"
-  - "línea de comandos, análisis"
-  - "análisis de argumentos de línea de comandos"
-  - "código de inicio, analizar los argumentos de línea de comandos"
+title: "Analizar los argumentos de línea de comandos de C++ | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- quotation marks, command-line arguments
+- double quotation marks
+- command line, parsing
+- parsing, command-line arguments
+- startup code, parsing command-line arguments
 ms.assetid: e634e733-ac2f-4298-abe2-7e9288c94951
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Analizar los argumentos de la l&#237;nea de comandos de C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5d3fbcd6b4e92d6e445d78a1b36efae319e472d7
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="parsing-c-command-line-arguments"></a>Analizar los argumentos de la línea de comandos de C++
 **Específicos de Microsoft**  
   
  El código de inicio de Microsoft C/C++ utiliza las reglas siguientes al interpretar los argumentos empleados en la línea de comandos del sistema operativo:  
@@ -35,9 +52,9 @@ manager: "ghogen"
   
 -   El carácter de intercalación (^) no se reconoce como carácter de escape ni como delimitador. El analizador de la línea de comandos del sistema operativo procesa completamente este carácter antes de pasarlo a la matriz `argv` del programa.  
   
--   Una cadena entre comillas dobles ("*cadena*") se interpreta como un argumento único, independientemente del espacio en blanco que contenga. Se puede incrustar una cadena entre comillas dentro de un argumento.  
+-   Una cadena entrecomillada comillas dobles ("*cadena*") se interpreta como un solo argumento, sin tener en cuenta el espacio blanco que contenga. Se puede incrustar una cadena entre comillas dentro de un argumento.  
   
--   Unas comillas precedidas por una barra diagonal inversa (\\") se interpreta como un carácter literal de comillas dobles (").  
+-   Unas comillas precedidas por una barra diagonal inversa (\\") se interpretan como un literal de cadena de comillas (").  
   
 -   Las barras diagonales inversas se interpretan literalmente, a menos que precedan inmediatamente a unas comillas.  
   
@@ -72,14 +89,14 @@ int main( int argc,      // Number of strings in array argv
   
 ### <a name="results-of-parsing-command-lines"></a>Resultados de analizar las líneas de comandos  
   
-|Entrada de la línea de comandos|argv[1]|argv [2]|argv [3]|  
+|Entrada de la línea de comandos|argv[1]|argv[2]|argv[3]|  
 |-------------------------|---------------|---------------|---------------|  
 |`"abc" d e`|`abc`|`d`|`e`|  
 |`a\\b d"e f"g h`|`a\\b`|`de fg`|`h`|  
 |`a\\\"b c d`|`a\"b`|`c`|`d`|  
 |`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|  
   
-## <a name="end-microsoft-specific"></a>FIN de Específicos de Microsoft  
+**FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Main: inicio del programa](../cpp/main-program-startup.md)
+ [main: Inicio de programa](../cpp/main-program-startup.md)

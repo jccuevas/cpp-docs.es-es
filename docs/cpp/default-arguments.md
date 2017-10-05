@@ -1,34 +1,51 @@
 ---
-title: "Argumentos predeterminados | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "argumentos [C++], valor predeterminado"
-  - "argumentos [C++], función"
-  - "declarar funciones, declaradores"
-  - "argumentos predeterminados"
-  - "valores predeterminados [C++], argumentos"
-  - "declaradores de función"
-  - "funciones [C++], argumentos predeterminados"
+title: Argumentos predeterminados | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arguments [C++], function
+- function declarators
+- functions [C++], default arguments
+- declaring functions, declarators
+- default arguments
+- arguments [C++], default
+- defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Argumentos predeterminados
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b14cd3b6ff1386ab2484b8a424c6ef2ceee1cd85
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-En muchos casos, las funciones tienen argumentos que se usan con tan poca frecuencia que un valor predeterminado sería suficiente.  Para resolver esto, la capacidad de argumento predeterminado permite especificar solo los argumentos de una función que son significativos en una llamada determinada.  Para ilustrar este concepto, considere el ejemplo que se presenta en [Sobrecarga de funciones](../cpp/function-overloading.md).  
+---
+# <a name="default-arguments"></a>Argumentos predeterminados
+En muchos casos, las funciones tienen argumentos que se usan con tan poca frecuencia que un valor predeterminado sería suficiente. Para resolver esto, la capacidad de argumento predeterminado permite especificar solo los argumentos de una función que son significativos en una llamada determinada. Para ilustrar este concepto, considere el ejemplo presentado en [sobrecarga de funciones](../cpp/function-overloading.md).  
   
 ```  
 // Prototype three print functions.  
@@ -47,7 +64,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.  
 ```  
   
- La implementación de la función `print` cambia ligeramente para reflejar el hecho de que solo existe una función para el tipo **double**:  
+ La implementación de la `print` función cambia ligeramente para reflejar el hecho de que existe solo una función de tipo **doble**:  
   
 ```  
 // default_arguments.cpp  
@@ -90,13 +107,13 @@ print( d, 0 ); // Override default argument to achieve other
   
  Tenga en cuenta los siguientes puntos al utilizar argumentos predeterminados:  
   
--   Los argumentos predeterminados solo se usan en las llamadas de función donde se omiten los argumentos de finalización; deben ser los últimos argumentos.  Por consiguiente, el código siguiente no es válido:  
+-   Los argumentos predeterminados solo se usan en las llamadas de función donde se omiten los argumentos de finalización; deben ser los últimos argumentos. Por consiguiente, el código siguiente no es válido:  
   
     ```  
     int print( double dvalue = 0.0, int prec );  
     ```  
   
--   Un argumento predeterminado no se puede volver a definir en declaraciones posteriores aunque la redefinición sea idéntica al original.  Por lo tanto, el siguiente código produce un error:  
+-   Un argumento predeterminado no se puede volver a definir en declaraciones posteriores aunque la redefinición sea idéntica al original. Por lo tanto, el siguiente código produce un error:  
   
     ```  
     // Prototype for print function.  
@@ -115,11 +132,11 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   Declaraciones posteriores pueden agregar argumentos predeterminados adicionales.  
   
--   Se puede proporcionar argumentos predeterminados para punteros a funciones.  Por ejemplo:  
+-   Se puede proporcionar argumentos predeterminados para punteros a funciones. Por ejemplo:  
   
     ```  
     int (*pShowIntVal)( int i = 0 );  
     ```  
   
-## Vea también  
- [Declaraciones abstractas de C\+\+](http://msdn.microsoft.com/es-es/e7e18c18-0cad-4450-942b-d27e1d4dd088)
+## <a name="see-also"></a>Vea también  
+ 

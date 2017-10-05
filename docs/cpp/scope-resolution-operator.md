@@ -1,44 +1,65 @@
 ---
-title: "Operador de resoluci&#243;n de &#225;mbito: :: | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "::"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ":: (operador)"
-  - "operadores [C++], resolución de ámbito"
-  - "operador de resolución de ámbito"
-  - "ámbito, operador de resolución de ámbito"
+title: "Operador de resolución de ámbito::: | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '::'
+dev_langs:
+- C++
+helpviewer_keywords:
+- scope, scope resolution operator
+- operators [C++], scope resolution
+- scope resolution operator
+- ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Operador de resoluci&#243;n de &#225;mbito: ::
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 715eb7c5e004d7e0731ef599e54beb5fc6690e50
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-El operador de resolución de ámbito `::` se usa para identificar los identificadores usados en distintos ámbitos y eliminar la ambigüedad entre ellos.  Para más información sobre ámbitos, vea [Ámbito](../cpp/scope-visual-cpp.md).  
+---
+# <a name="scope-resolution-operator-"></a>Operador de resolución de ámbito: ::
+El operador de resolución de ámbito `::` se usa para identificar los identificadores usados en distintos ámbitos y eliminar la ambigüedad entre ellos. Para obtener más información acerca del ámbito, consulte [ámbito](../cpp/scope-visual-cpp.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-:: identifier class-name :: identifier namespace :: identifier enum class :: identifier enum struct :: identifier  
+:: identifier  
+class-name :: identifier  
+namespace :: identifier  
+enum class :: identifier  
+enum struct :: identifier  
 ```  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  El `identifier` puede ser una variable, una función o un valor de enumeración.  
   
-## Con clases y espacios de nombres  
+## <a name="with-classes-and-namespaces"></a>Con clases y espacios de nombres  
  En el ejemplo siguiente se muestra cómo se usa el operador de resolución con clases y espacios de nombres:  
   
 ```cpp  
@@ -85,7 +106,7 @@ int main() {
 }  
 ```  
   
- El operador de resolución de ámbito se puede usar para identificar a un miembro de un espacio de nombres o para identificar un espacio de nombres que menciona el espacio de nombres del miembro en una directiva de uso.  En el ejemplo siguiente, se puede usar `NamespaceC` para calificar `ClassB` a pesar de que `ClassB` se declaró en el espacio de nombres `NamespaceB`, ya que una directiva de uso mencionó `NamespaceB` en `NamespaceC`.  
+ El operador de resolución de ámbito se puede usar para identificar a un miembro de un espacio de nombres o para identificar un espacio de nombres que menciona el espacio de nombres del miembro en una directiva de uso. En el ejemplo siguiente, se puede usar `NamespaceC` para calificar `ClassB` a pesar de que `ClassB` se declaró en el espacio de nombres `NamespaceB`, ya que una directiva de uso mencionó `NamespaceB` en `NamespaceC`.  
   
 ```cpp  
 namespace NamespaceB {  
@@ -109,7 +130,7 @@ int main() {
   
 ```  
   
- Se pueden usar cadenas de operadores de resolución de ámbito.  En el ejemplo siguiente, `NamespaceD::NamespaceD1` identifica el espacio de nombres anidado `NamespaceD1` y `NamespaceE::ClassE::ClassE1` identifica la clase anidada `ClassE1`.  
+ Se pueden usar cadenas de operadores de resolución de ámbito. En el ejemplo siguiente, `NamespaceD::NamespaceD1` identifica el espacio de nombres anidado `NamespaceD1` y `NamespaceE::ClassE::ClassE1` identifica la clase anidada `ClassE1`.  
   
 ```cpp  
 namespace NamespaceD{  
@@ -137,7 +158,7 @@ int main() {
   
 ```  
   
-## Con miembros estáticos  
+## <a name="with-static-members"></a>Con miembros estáticos  
  Debe usar el operador de resolución de ámbito para llamar a miembros estáticos de clases.  
   
 ```cpp  
@@ -157,8 +178,8 @@ int main() {
   
 ```  
   
-## Con enumeraciones de ámbito  
- El operador de resolución de ámbito se usa también con los valores de una enumeración de ámbito [Declaraciones de enumeración](../cpp/enumerations-cpp.md), como en el ejemplo siguiente:  
+## <a name="with-scoped-enumerations"></a>Con enumeraciones de ámbito  
+ El operador de resolución de ámbito también se utiliza con los valores de una enumeración de ámbito [declaraciones de enumeración](../cpp/enumerations-cpp.md), como en el ejemplo siguiente:  
   
 ```cpp  
 enum class EnumA{  
@@ -174,7 +195,6 @@ int main() {
   
 ```  
   
-## Vea también  
- [Operadores de C\+\+, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>Vea también  
+ [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Espacios de nombres](../cpp/namespaces-cpp.md)   
- [Nombres y nombres completos](../misc/names-and-qualified-names.md)

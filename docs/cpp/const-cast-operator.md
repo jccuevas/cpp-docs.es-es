@@ -1,33 +1,50 @@
 ---
-title: "const_cast (Operador) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "const_cast"
-  - "const_cast_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_cast (palabra clave) [C++]"
+title: const_cast (operador) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- const_cast
+- const_cast_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- const_cast keyword [C++]
 ms.assetid: 4d8bb203-ef33-4a10-9f9f-c64d4fbc1687
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# const_cast (Operador)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 8f72367cb4970b2ce0121efc43b79691155808df
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Quita los atributos **const**, `volatile` y **\_\_unaligned** de una clase.  
+---
+# <a name="constcast-operator"></a>const_cast (Operador)
+Quita el **const**, `volatile`, y **__unaligned** atributos de una clase.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -39,14 +56,14 @@ expression
   
 ```  
   
-## Comentarios  
- Un puntero a cualquier tipo de objeto o un puntero a un miembro de datos se puede convertir explícitamente a un tipo que sea idéntico, salvo en el caso de los calificadores **const**, `volatile` y **\_\_unaligned**.  Para los punteros y las referencias, el resultado hará referencia al objeto original.  Para los punteros a miembros de datos, el resultado hará referencia al mismo miembro que el puntero original \(sin convertir\) al miembro de datos.  Según el tipo del objeto al que se hace referencia, una operación de escritura a través del puntero, referencia o puntero a miembro de datos resultante podría generar un comportamiento indefinido.  
+## <a name="remarks"></a>Comentarios  
+ Un puntero a cualquier tipo de objeto o un puntero a un miembro de datos se puede convertir explícitamente a un tipo que es idéntico, salvo por la **const**, `volatile`, y **__unaligned** calificadores. Para los punteros y las referencias, el resultado hará referencia al objeto original. Para los punteros a miembros de datos, el resultado hará referencia al mismo miembro que el puntero original (sin convertir) al miembro de datos. Según el tipo del objeto al que se hace referencia, una operación de escritura a través del puntero, referencia o puntero a miembro de datos resultante podría generar un comportamiento indefinido.  
   
  No puede utilizar el operador `const_cast` para invalidar directamente el estado constante de una variable constante.  
   
  El operador `const_cast` convierte un valor de puntero NULL al valor de puntero NULL del tipo de destino.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // expre_const_cast_Operator.cpp  
@@ -77,8 +94,8 @@ int main() {
 }  
 ```  
   
- En la línea que contiene `const_cast`, el tipo de datos del puntero `this` es `const CCTest *`.  El operador `const_cast` cambia el tipo de datos del puntero `this` a `CCTest *`, lo que permite que se modifique el elemento `number` miembro.  La conversión se produce únicamente para el resto de la instrucción en la que aparece.  
+ En la línea que contiene `const_cast`, el tipo de datos del puntero `this` es `const CCTest *`. El operador `const_cast` cambia el tipo de datos del puntero `this` a `CCTest *`, lo que permite que se modifique el elemento `number` miembro. La conversión se produce únicamente para el resto de la instrucción en la que aparece.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Operadores de conversión](../cpp/casting-operators.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)
+ [Palabras clave](../cpp/keywords-cpp.md)

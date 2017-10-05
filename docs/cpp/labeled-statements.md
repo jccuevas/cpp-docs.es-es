@@ -1,31 +1,48 @@
 ---
-title: "Instrucciones con etiquetas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "goto"
-  - "case"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "instrucción con etiqueta"
-  - "instrucciones, con etiqueta"
+title: Las instrucciones de la etiqueta | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- goto
+- case
+dev_langs:
+- C++
+helpviewer_keywords:
+- labeled statement
+- statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Instrucciones con etiquetas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9011728bf6b8eac5a8ce13ebca2301fc36ad633a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="labeled-statements"></a>Instrucciones con etiqueta
 Las etiquetas se usan para transferir el control de programas directamente a la instrucción especificada.  
   
 ```  
@@ -36,8 +53,8 @@ default :  statement
   
  El ámbito de una etiqueta es toda la función donde se declara.  
   
-## Comentarios  
- Hay tres tipos de instrucciones con etiquetas.  En todas ellas se utiliza el carácter de dos puntos para distinguir el tipo de etiqueta de la instrucción.  La etiqueta case y las etiquetas predeterminadas son específicas para las instrucciones case.  
+## <a name="remarks"></a>Comentarios  
+ Hay tres tipos de instrucciones con etiquetas. En todas ellas se utiliza el carácter de dos puntos para distinguir el tipo de etiqueta de la instrucción. La etiqueta case y las etiquetas predeterminadas son específicas para las instrucciones case.  
   
 ```cpp  
 #include <iostream>   
@@ -66,13 +83,13 @@ int main() {
   
 ```  
   
- **La instrucción goto**  
+ **Goto (instrucción)**  
   
- La aparición de una etiqueta *identifier* en el programa de origen declara una etiqueta.  Solo una instrucción [goto](../cpp/goto-statement-cpp.md) puede transferir el control a una etiqueta *identifier*.  En el siguiente fragmento de código se muestra el uso de la instrucción `goto` y una etiqueta *identifier*:  
+ La apariencia de un *identificador* etiqueta en el programa de origen declara una etiqueta. Solo un [goto](../cpp/goto-statement-cpp.md) instrucción puede transferir el control a un *identificador* etiqueta. El siguiente fragmento de código muestra el uso de la `goto` instrucción y un *identificador* etiqueta:  
   
- Una etiqueta no puede aparecer por sí misma; debe estar asociada siempre a una instrucción.  Si se necesita la propia etiqueta, coloque una instrucción null detrás de la etiqueta.  
+ Una etiqueta no puede aparecer por sí misma; debe estar asociada siempre a una instrucción. Si se necesita la propia etiqueta, coloque una instrucción null detrás de la etiqueta.  
   
- La etiqueta tiene ámbito de función y no se puede volver a declarar dentro de la función.  Sin embargo, se puede utilizar el mismo nombre como una etiqueta en diferentes funciones.  
+ La etiqueta tiene ámbito de función y no se puede volver a declarar dentro de la función. Sin embargo, se puede utilizar el mismo nombre como una etiqueta en diferentes funciones.  
   
 ```  
 // labels_with_goto.cpp  
@@ -93,7 +110,7 @@ int main() {
   
  **La instrucción case**  
   
- Las etiquetas que aparecen después de la palabra clave **case** no pueden aparecer también fuera de una instrucción `switch`.  \(Esta restricción también se aplica a la palabra clave **default**\). En el fragmento de código siguiente se muestra el uso correcto de las etiquetas **case**:  
+ Las etiquetas que aparecen después de la **caso** palabra clave no puede aparecer también fuera de un `switch` instrucción. (Esta restricción también se aplica a la **predeterminado** (palabra clave).) El siguiente fragmento de código muestra el uso correcto de **caso** etiquetas:  
   
 ```  
 // Sample Microsoft Windows message processing loop.  
@@ -121,8 +138,8 @@ switch( msg )
 }  
 ```  
   
-## Etiquetas en la instrucción case  
- Las etiquetas que aparecen después de la palabra clave **case** no pueden aparecer también fuera de una instrucción `switch`.  \(Esta restricción también se aplica a la palabra clave **default**\). En el fragmento de código siguiente se muestra el uso correcto de las etiquetas **case**:  
+## <a name="labels-in-the-case-statement"></a>Etiquetas en la instrucción case  
+ Las etiquetas que aparecen después de la **caso** palabra clave no puede aparecer también fuera de un `switch` instrucción. (Esta restricción también se aplica a la **predeterminado** (palabra clave).) El siguiente fragmento de código muestra el uso correcto de **caso** etiquetas:  
   
 ```  
 // Sample Microsoft Windows message processing loop.  
@@ -165,12 +182,12 @@ switch( msg )
 }  
 ```  
   
-## Etiquetas en la instrucción goto  
- La aparición de una etiqueta *identifier* en el programa de origen declara una etiqueta.  Solo una instrucción [goto](../cpp/goto-statement-cpp.md) puede transferir el control a una etiqueta *identifier*.  En el siguiente fragmento de código se muestra el uso de la instrucción `goto` y una etiqueta *identifier*:  
+## <a name="labels-in-the-goto-statement"></a>Etiquetas en la instrucción goto  
+ La apariencia de un *identificador* etiqueta en el programa de origen declara una etiqueta. Solo un [goto](../cpp/goto-statement-cpp.md) instrucción puede transferir el control a un *identificador* etiqueta. El siguiente fragmento de código muestra el uso de la `goto` instrucción y un *identificador* etiqueta:  
   
- Una etiqueta no puede aparecer por sí misma; debe estar asociada siempre a una instrucción.  Si se necesita la propia etiqueta, coloque una instrucción null detrás de la etiqueta.  
+ Una etiqueta no puede aparecer por sí misma; debe estar asociada siempre a una instrucción. Si se necesita la propia etiqueta, coloque una instrucción null detrás de la etiqueta.  
   
- La etiqueta tiene ámbito de función y no se puede volver a declarar dentro de la función.  Sin embargo, se puede utilizar el mismo nombre como una etiqueta en diferentes funciones.  
+ La etiqueta tiene ámbito de función y no se puede volver a declarar dentro de la función. Sin embargo, se puede utilizar el mismo nombre como una etiqueta en diferentes funciones.  
   
 ```  
 // labels_with_goto.cpp  
@@ -189,6 +206,6 @@ int main() {
   
 ```  
   
-## Vea también  
- [Información general sobre las instrucciones de C\+\+](../cpp/overview-of-cpp-statements.md)   
- [switch \(Instrucción\) \(C\+\+\)](../cpp/switch-statement-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Información general sobre instrucciones de C++](../cpp/overview-of-cpp-statements.md)   
+ [switch (Instrucción) (C++)](../cpp/switch-statement-cpp.md)

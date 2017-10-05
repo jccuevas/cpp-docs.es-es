@@ -1,59 +1,77 @@
 ---
-title: "Definiciones de argumentos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "argc (argumento)"
-  - "argumentos [C++], para función main"
-  - "argv (argumento)"
-  - "envp (argumento)"
-  - "main (función), argumentos"
+title: Definiciones de argumentos | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- envp argument
+- main function, arguments
+- arguments [C++], for main function
+- argv argument
+- argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Definiciones de argumentos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d50e32a54cdb10af4adbfb3cfda64b8f1b21b2eb
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="argument-definitions"></a>Definiciones de argumentos
 Los argumentos del prototipo  
   
 ```  
   
-int main( int argc[ , char *argv[ ] [, char *envp[ ] ] ] ); int wmain( int argc[ , wchar_t *argv[ ] [, wchar_t *envp[ ] ] ] );  
+int main( int  
+argc[ ,char*argv[] [,char*envp[] ] ] );intwmain(intargc[ ,wchar_t*argv[] [,wchar_t*envp[] ] ] );  
 ```  
   
- proporcionan una manera cómoda de analizar los argumentos en la línea de comandos y, opcionalmente, acceder a las variables de entorno.  Las definiciones de los argumentos son las siguientes:  
+ proporcionan una manera cómoda de analizar los argumentos en la línea de comandos y, opcionalmente, acceder a las variables de entorno. Las definiciones de los argumentos son las siguientes:  
   
  `argc`  
- Un entero que contiene el número de argumentos que aparecen detrás de `argv`.  El parámetro `argc` es siempre mayor o igual que 1.  
+ Un entero que contiene el número de argumentos que aparecen detrás de `argv`. El parámetro `argc` es siempre mayor o igual que 1.  
   
  `argv`  
- Una matriz de cadenas terminadas en null que representan los argumentos de la línea de comandos especificados por el usuario del programa.  Por convención, `argv`**\[0\]** es el comando con el que se invoca el programa, `argv`**\[1\]** es el primer argumento de la línea de comandos, etc., hasta `argv`**\[**`argc`**\]**, que siempre es **NULL**.  Vea [Personalizar el procesamiento de la línea de comandos](../cpp/customizing-cpp-command-line-processing.md) para obtener información sobre cómo suprimir el procesamiento de la línea de comandos.  
+ Una matriz de cadenas terminadas en null que representan los argumentos de la línea de comandos especificados por el usuario del programa. Por convención, `argv` **[0]** es el comando con el que se invoca el programa, `argv` **[1]** es el primer argumento de línea de comandos y así sucesivamente, hasta que `argv` ** [**`argc`**]**, que es siempre **NULL**. Vea [personalizar el procesamiento de línea de comandos](../cpp/customizing-cpp-command-line-processing.md) para obtener información sobre cómo suprimir el procesamiento de línea de comandos.  
   
- El primer argumento de la línea de comandos siempre es `argv`**\[1\]** y el último es `argv`**\[**`argc` – 1**\]**.  
+ El primer argumento de línea de comandos es siempre `argv` **[1]** y la última de ellas es `argv` **[** `argc` - 1**]**.  
   
 > [!NOTE]
->  Por convención, `argv`**\[0\]** es el comando con el que se invoca el programa.  Sin embargo, es posible generar un proceso mediante [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) y, si usa el primer y el segundo argumento \(`lpApplicationName` y `lpCommandLine`\), `argv`**\[0\]** puede que no sea el nombre ejecutable; use [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) para recuperar el nombre ejecutable y la ruta de acceso completa.  
+>  Por convención, `argv`**[0]** es el comando con el que se invoca el programa.  Sin embargo, es posible generar un proceso mediante [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) y si usa los argumentos primeros y segundo (`lpApplicationName` y `lpCommandLine`), `argv` **[0]** no puede ser el nombre del archivo ejecutable; usar [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) para recuperar el nombre del archivo ejecutable y la ruta de acceso completa.  
   
-## Específicos de Microsoft  
+## <a name="microsoft-specific"></a>Específicos de Microsoft  
  `envp`  
- La matriz `envp`, que es una extensión común en muchos sistemas UNIX, se utiliza en Microsoft C\+\+.  Es una matriz de cadenas que representan las variables establecidas en el entorno de usuario.  Esta matriz termina con una entrada **NULL**.  Puede declararse como una matriz de punteros a **char \(char** \*envp\[ \]**\)** o como un puntero a punteros a **char \(char** \*\*envp**\)**.  Si su programa usa **wmain** en lugar de **main**, utilice el tipo de datos `wchar_t` en lugar de `char`.  El bloque de entorno que se pasa a **main** y a **wmain** es una copia "inmóvil" del entorno actual.  Si posteriormente cambia el entorno mediante una llamada a **putenv** o `_wputenv`, el entorno actual \(devuelto por `getenv`\/`_wgetenv` y las variables `_environ`\/ `_wenviron`\) cambiará, pero el bloque al que apunta envp no cambiará.  Vea [Personalizar el procesamiento de la línea de comandos](../cpp/customizing-cpp-command-line-processing.md) para obtener información sobre cómo suprimir el procesamiento del entorno.  Este argumento es compatible con ANSI en C, pero no en C\+\+.  
+ La matriz `envp`, que es una extensión común en muchos sistemas UNIX, se utiliza en Microsoft C++. Es una matriz de cadenas que representan las variables establecidas en el entorno de usuario. Esta matriz termina con un **NULL** entrada. Se puede declarar como una matriz de punteros a **char (char** \*envp []**)** o como un puntero para punteros a **char (char** \* \* envp**)**. Si el programa utiliza **wmain** en lugar de **principal**, use la `wchar_t` tipo de datos en lugar de `char`. El bloque de entorno pasa a **principal** y **wmain** es una copia "inmovilizada" del entorno actual. Si posteriormente cambia el entorno a través de una llamada a **putenv** o `_wputenv`, el entorno actual (devuelto por `getenv` / `_wgetenv` y `_environ` /  `_wenviron` variable) se cambio, pero el bloque al que apunta envp no cambiará. Vea [personalizar el procesamiento de línea de comandos](../cpp/customizing-cpp-command-line-processing.md) para obtener información sobre cómo suprimir el procesamiento de entorno. Este argumento es compatible con ANSI en C, pero no en C++.  
   
-## FIN de Específicos de Microsoft  
+**FIN de Específicos de Microsoft**  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo usar los argumentos `argc`, `argv` y `envp` de **main**:  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar el `argc`, `argv`, y `envp` argumentos **principal**:  
   
 ```  
 // argument_definitions.cpp  
@@ -79,5 +97,5 @@ int main( int argc, char *argv[], char *envp[] ) {
 }  
 ```  
   
-## Vea también  
- [main: inicio de programa](../cpp/main-program-startup.md)
+## <a name="see-also"></a>Vea también  
+ [main: Inicio de programa](../cpp/main-program-startup.md)

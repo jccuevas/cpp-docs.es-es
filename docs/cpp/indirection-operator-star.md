@@ -1,44 +1,60 @@
 ---
-title: "Operador de direccionamiento indirecto: * | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "* (operador)"
-  - "operador de direccionamiento indirecto"
-  - "operador de direccionamiento indirecto, sintaxis"
-  - "operadores [C++], direccionamiento indirecto"
+title: 'Operador de direccionamiento indirecto: * | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- '* operator'
+- indirection operator
+- operators [C++], indirection
+- indirection operator, syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operador de direccionamiento indirecto: *
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1f9b758e3bfa1a01ed2b2a428758c3e4a982fdae
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-## Sintaxis  
+---
+# <a name="indirection-operator-"></a>Operador de direccionamiento indirecto: *
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 * cast-expression  
 ```  
   
-## Comentarios  
- El operador de direccionamiento indirecto unario \(**\***\) desreferencia un puntero; es decir, convierte un valor de puntero en un valor L.  El operando del operador de direccionamiento indirecto debe ser un puntero a un tipo.  El resultado de la expresión de direccionamiento indirecto es el tipo del que se deriva el tipo de puntero.  El uso del operador **\*** en este contexto es diferente de su significado como operador binario, que es multiplicación.  
+## <a name="remarks"></a>Comentarios  
+ El operador de direccionamiento indirecto unario (**\***) desreferencia un puntero; es decir, convierte un valor de puntero a un valor l. El operando del operador de direccionamiento indirecto debe ser un puntero a un tipo. El resultado de la expresión de direccionamiento indirecto es el tipo del que se deriva el tipo de puntero. El uso de la ** \* ** operador en este contexto es diferente de su significado como operador binario, que es multiplicación.  
   
- Si el operando señala a una función, el resultado es un designador de función.  Si señala a una ubicación de almacenamiento, el resultado es un valor L que designa la ubicación de almacenamiento.  
+ Si el operando señala a una función, el resultado es un designador de función. Si señala a una ubicación de almacenamiento, el resultado es un valor L que designa la ubicación de almacenamiento.  
   
- El operador de direccionamiento indirecto se puede utilizar de manera acumulativa para desreferenciar punteros a punteros.  Por ejemplo:  
+ El operador de direccionamiento indirecto se puede utilizar de manera acumulativa para desreferenciar punteros a punteros. Por ejemplo:  
   
 ```  
 // expre_Indirection_Operator.cpp  
@@ -60,7 +76,7 @@ int main() {
 }  
 ```  
   
- Si el valor de puntero no es válido, el resultado es indefinido.  La lista siguiente incluye algunas de las condiciones más comunes que invalidan un valor de puntero.  
+ Si el valor de puntero no es válido, el resultado es indefinido. La lista siguiente incluye algunas de las condiciones más comunes que invalidan un valor de puntero.  
   
 -   El puntero es un puntero null.  
   
@@ -70,9 +86,8 @@ int main() {
   
 -   El puntero especifica una dirección no utilizada por el programa que se ejecuta.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Expresiones con operadores unarios](../cpp/expressions-with-unary-operators.md)   
- [Operadores de C\+\+](../misc/cpp-operators.md)   
- [Operadores de C\+\+, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Operador address\-of: &](../cpp/address-of-operator-amp.md)   
- [Operadores de direccionamiento indirecto y address\-of](../c-language/indirection-and-address-of-operators.md)
+ [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operador Address-of: &](../cpp/address-of-operator-amp.md)   
+ [Operadores de direccionamiento indirecto y address-of](../c-language/indirection-and-address-of-operators.md)

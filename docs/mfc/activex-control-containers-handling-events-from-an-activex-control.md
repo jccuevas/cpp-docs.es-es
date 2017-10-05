@@ -1,76 +1,95 @@
 ---
-title: "Contenedores de controles ActiveX: Controlar eventos desde un control ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contenedores de controles ActiveX [C++], receptores de eventos"
-  - "controles ActiveX [C++], eventos"
-  - "BEGIN_EVENTSINK_MAP (macro)"
-  - "END_EVENTSINK_MAP (macro), utilizar"
-  - "controladores de eventos [C++], controles ActiveX"
-  - "control de eventos [C++], controles ActiveX"
-  - "eventos [C++], controles ActiveX"
-  - "ON_EVENT (macro)"
+title: 'Contenedores de controles ActiveX: Controlar eventos desde un Control ActiveX | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handlers [MFC], ActiveX controls
+- ActiveX control containers [MFC], event sinks
+- event handling [MFC], ActiveX controls
+- ON_EVENT macro [MFC]
+- ActiveX controls [MFC], events [MFC]
+- END_EVENTSINK_MAP macro, using
+- events [MFC], ActiveX controls
+- BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Contenedores de controles ActiveX: Controlar eventos desde un control ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 3903be230f130aeaeb1953faf73a0c8af4c3492f
+ms.openlocfilehash: a8fb283d8b5b8afbf3b06e27495ccc957e0099ad
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-En este artículo se describe mediante la ventana Propiedades para instalar controladores de eventos para controles ActiveX en un contenedor de controles ActiveX.  Se utilizan los controladores de eventos para recibir notificaciones \(del control\) de ciertos eventos y realizar alguna acción en respuesta.  Esta notificación se denomina la “despedida” el evento.  
+---
+# <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contenedores de controles ActiveX: Controlar eventos desde un control ActiveX
+Este artículo describe mediante la ventana Propiedades para instalar a controladores de eventos para controles ActiveX en un contenedor de controles ActiveX. Los controladores de eventos se utilizan para recibir notificaciones (desde el control) de ciertos eventos y realizar alguna acción en respuesta. Esta notificación se denomina "activar" el evento.  
   
 > [!NOTE]
->  Este artículo utiliza un contenedor diálogo\- basado en proyecto denominado de contenedor de controles ActiveX y un control incrustado denominados Circ como ejemplos en los procedimientos y el código.  
+>  Este artículo utiliza un basada en cuadros de diálogo contenedor proyecto de control ActiveX denominado Container y un control incrustado denominado Circ como ejemplos en los procedimientos y el código.  
   
- Mediante el botón eventos en la ventana Propiedades, puede crear un mapa de los eventos que pueden aparecer en la aplicación contenedora de controles ActiveX.  Este mapa, denominado “mapa de receptor de eventos,” crea y mantiene por Visual C\+\+ cuando agregue controladores de eventos a la clase del contenedor del control.  Cada controlador de eventos, implementado con un evento asigna entrada, asigna un evento específico de una función miembro del controlador de eventos del contenedor.  Esta función se denomina de controlador de eventos al evento especificado es desencadenado por el objeto de control ActiveX.  
+ Con el botón de eventos en la ventana Propiedades, puede crear un mapa de eventos que se pueden producir en su aplicación de contenedor de controles ActiveX. Este mapa, denominado un "mapa de receptores de eventos '', se crean y mantienen por Visual C++ cuando agregue controladores de eventos a la clase de contenedor de control. Cada controlador de eventos, que se implementa con una entrada de mapa de eventos, asigna un evento específico a una función de miembro de controlador de eventos de contenedor. Esta función de controlador de eventos se llama cuando se desencadena el evento especificado por el objeto de control ActiveX.  
   
- Para obtener más información sobre asignaciones de receptor de eventos, vea [Mapas de receptor de eventos](../mfc/reference/event-sink-maps.md) en *la referencia de la biblioteca de clases*.  
+ Para obtener más información sobre los mapas de receptor de eventos, vea [mapas de receptor de eventos](../mfc/reference/event-sink-maps.md) en el *Class Library Reference*.  
   
-##  <a name="_core_event_handler_modifications_to_the_project"></a> Controlador de eventos Modifications al proyecto  
- Cuando se utiliza la ventana Propiedades para agregar controladores de eventos, un mapa de receptor de eventos se declara y se define en el proyecto.  Las instrucciones siguientes se agregan al archivo de control .CPP la primera vez que agrega un controlador de eventos.  Este código declara un receptor de eventos asignado para la clase de cuadro de diálogo \(en este caso, `CContainerDlg`\):  
+##  <a name="_core_event_handler_modifications_to_the_project"></a>Modificaciones del controlador de eventos en el proyecto  
+ Cuando utiliza la ventana Propiedades para agregar controladores de eventos, un mapa de receptores de eventos se declaran y se definen en el proyecto. Las instrucciones siguientes se agregan al control. Archivo CPP la primera vez que se agrega un controlador de eventos. Este código declara un mapa de receptores de eventos para la clase de cuadro de diálogo (en este caso, `CContainerDlg`):  
   
- [!code-cpp[NVC_MFC_AxCont#8](../mfc/codesnippet/CPP/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]  
-[!code-cpp[NVC_MFC_AxCont#9](../mfc/codesnippet/CPP/activex-control-containers-handling-events-from-an-activex-control_2.cpp)]  
+ [!code-cpp[NVC_MFC_AxCont#8](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]  
+[!code-cpp[NVC_MFC_AxCont#9](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_2.cpp)]  
   
- Cuando utiliza la ventana Propiedades para agregar eventos, un evento asigna la entrada \(`ON_EVENT`\) se agrega al mapa de receptor de eventos y una función de controlador de eventos se agrega al archivo de implementación de contenedor \(.CPP\).  
+ Cuando use la ventana Propiedades para agregar eventos, un evento asignar entrada (`ON_EVENT`) se agrega a la asignación de receptor de eventos y un controlador de eventos se agrega la función a la implementación del contenedor (. Archivo CPP).  
   
- El ejemplo siguiente declara un controlador de eventos, denominado `OnClickInCircCtrl`, para el evento de **ClickIn** de control de Circ:  
+ En el ejemplo siguiente se declara un controlador de eventos, denominado `OnClickInCircCtrl`, para el control Circ **ClickIn** eventos:  
   
- [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/CPP/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
   
- Además, la plantilla siguiente se agrega al archivo de implementación de la clase de `CContainerDlg` \(.CPP\) para la función miembro de controlador de eventos:  
+ Además, se agrega la siguiente plantilla para el `CContainerDlg` la implementación de clase (. Archivo CPP) para la función de miembro de controlador de eventos:  
   
- [!code-cpp[NVC_MFC_AxCont#11](../mfc/codesnippet/CPP/activex-control-containers-handling-events-from-an-activex-control_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxCont#11](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_4.cpp)]  
   
- Para obtener más información acerca de las macros de receptor de eventos, vea [Mapas de receptor de eventos](../mfc/reference/event-sink-maps.md) en *la referencia de la biblioteca de clases*.  
+ Para obtener más información sobre las macros de receptor de eventos, vea [mapas de receptor de eventos](../mfc/reference/event-sink-maps.md) en el *Class Library Reference*.  
   
-#### Para crear una función de controlador de eventos  
+#### <a name="to-create-an-event-handler-function"></a>Para crear una función de controlador de eventos  
   
-1.  En la vista de clases, seleccione la clase de diálogo que contiene el control ActiveX.  Para este ejemplo, utilice `CContainerDlg`.  
+1.  En la vista de clases, seleccione la clase de cuadro de diálogo que contiene el control ActiveX. En este ejemplo, utilice `CContainerDlg`.  
   
-2.  En la ventana Propiedades, haga clic en el botón **Eventos**.  
+2.  En la ventana Propiedades, haga clic en el **eventos** botón.  
   
-3.  En la ventana Propiedades, seleccione el identificador de control ActiveX incrustado.  Para este ejemplo, utilice `IDC_CIRCCTRL1`.  
+3.  En la ventana Propiedades, seleccione el identificador del control del control ActiveX incrustado. En este ejemplo, utilice `IDC_CIRCCTRL1`.  
   
-     La ventana Propiedades muestra una lista de los eventos que se pueden desencadenar el control ActiveX incrustado.  Cualquier función miembro mostrada en negrita ya tiene funciones controladoras asignadas a él.  
+     La ventana Propiedades muestra una lista de eventos que puede ser activado por el control ActiveX incrustado. Cualquier función miembro mostrada en negrita ya tiene funciones controladoras asignadas a él.  
   
-4.  Seleccione el evento que desea que la clase de diálogo para controlar.  Para este ejemplo, seleccione **Hacer clic en**.  
+4.  Seleccione el evento que desea que la clase de cuadro de diálogo para administrar. En este ejemplo, seleccione **haga clic en**.  
   
-5.  En el cuadro de lista desplegable a la derecha, seleccione **\<Add\> ClickCircctrl1**.  
+5.  En el cuadro de lista desplegable de la derecha, seleccione ** \<Agregar > ClickCircctrl1**.  
   
-6.  Haga doble clic en la nueva función de controlador de vista de la clase para saltar al código de controlador de eventos en el archivo de implementación \(.CPP\) de `CContainerDlg`.  
+6.  Haga doble clic en la nueva función de controlador de vista de clases para saltar al código del controlador de eventos en la implementación (. Archivo CPP) de `CContainerDlg`.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Contenedores de controles ActiveX](../mfc/activex-control-containers.md)
+
+

@@ -1,40 +1,56 @@
 ---
-title: "Constructores de copia y operadores de asignaci&#243;n de copia (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= (operador), copiar objetos"
-  - "asignar valores para copiar objetos"
-  - "operadores de asignación, para copiar objetos"
-  - "instrucciones de asignación, copiar objetos"
-  - "copiar objetos"
-  - "inicializar objetos, mediante copia de objetos"
-  - "objetos [C++], copiar"
+title: "Constructores de copia y operadores de asignación de copia (C++) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- = operator, copying objects
+- assignment statements, copying objects
+- assignment operators, for copying objects
+- objects [C++], copying
+- initializing objects, by copying objects
+- copying objects
+- assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Constructores de copia y operadores de asignaci&#243;n de copia (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: cf4bda1b14450a5be3ffa9a95661db7d1ad360d2
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="copy-constructors-and-copy-assignment-operators-c"></a>Constructores de copia y operadores de asignación de copia (C++)
 > [!NOTE]
->  A partir de C\+\+ 11, se admiten dos tipos de asignación en el lenguaje: *asignación de copia* y *asignación de movimiento*.  En este artículo, "asignación" significa asignación de copia a menos que se establezca explícitamente lo contrario.  Para obtener información sobre la asignación de movimiento, consulte [Operadores de constructores de movimiento y asignaciones de movimiento \(C\+\+\)](http://msdn.microsoft.com/es-es/1442de5f-37a5-42a1-83a6-ec9cfe0414db).  
+>  A partir de C ++ 11, se admiten dos tipos de asignación en el lenguaje: *Copiar asignación* y *asignación de movimiento*. En este artículo, "asignación" significa asignación de copia a menos que se establezca explícitamente lo contrario. Para obtener información acerca de la asignación de movimiento, consulte [constructores de movimiento y operadores de asignación de movimiento (C++)](http://msdn.microsoft.com/en-us/1442de5f-37a5-42a1-83a6-ec9cfe0414db).  
 >   
 >  Tanto la operación de asignación como la operación de inicialización provocan que los objetos se copien.  
   
--   **Asignación**: cuando se asigna el valor de un objeto a otro objeto, el primer objeto se copia en el segundo objeto.  Por lo tanto,  
+-   **Asignación**: cuando se asigna el valor de un objeto a otro objeto, el primer objeto se copia en el segundo objeto. Por lo tanto,  
   
     ```cpp  
     Point a, b;  
@@ -44,9 +60,9 @@ manager: "ghogen"
   
      hace que el valor de `b` se copie en `a`.  
   
--   **Inicialización**: La inicialización se produce cuando se declara un nuevo objeto, cuando los argumentos se pasan a las funciones por valor o cuando los valores se devuelven de las funciones por valor.  
+-   **Inicialización**: inicialización se produce cuando se declara un nuevo objeto, cuando se pasan argumentos a funciones por valor, o cuando se devuelven los valores de las funciones por valor.  
   
- Puede definir la semántica de “copy” para los objetos de tipo de clase.  Por ejemplo, considere este código:  
+ Puede definir la semántica de “copy” para los objetos de tipo de clase. Por ejemplo, considere este código:  
   
 ```cpp  
 TextFile a, b;  
@@ -59,13 +75,11 @@ b = a;
   
 -   Mediante el operador de asignación `operator=`, junto con una referencia al tipo de clase como tipo de valor devuelto y el parámetro que se pasa por referencia `const`; por ejemplo, `ClassName& operator=(const ClassName& x);`.  
   
--   Utilizando el constructor de copias.  Para obtener más información sobre el constructor de copias, vea [Reglas para la declaración de constructores](../misc/rules-for-declaring-constructors.md).  
+-   Utilizando el constructor de copias.   
   
- Si no declara un constructor de copias, el compilador genera uno automáticamente miembro a miembro.  Si no declara una asignación de copia, el compilador genera una automáticamente miembro a miembro. Declarar un constructor de copias no suprime el operador de asignación de copias generado por el compilador, ni viceversa.  Si se implementa cualquiera de ellos, es recomendable implementar también el otro de modo que el significado del código esté claro.  
-  
- La asignación miembro a miembro se trata con más detalle en [\(NOTINBUILD\) Memberwise Assignment and Initialization](http://msdn.microsoft.com/es-es/94048213-8b49-4416-8069-b1b7a6f271f9).  
-  
- El constructor de copias toma un argumento de tipo *class\-name***&**, donde *class\-name* es el nombre de la clase para la que se define el constructor.  Por ejemplo:  
+ Si no declara un constructor de copias, el compilador genera uno automáticamente miembro a miembro.  Si no declara una asignación de copia, el compilador genera una automáticamente miembro a miembro. Declarar un constructor de copias no suprime el operador de asignación de copias generado por el compilador, ni viceversa. Si se implementa cualquiera de ellos, es recomendable implementar también el otro de modo que el significado del código esté claro.  
+   
+ El constructor de copias toma un argumento de tipo *nombre de la clase***&**, donde *nombre de la clase* es el nombre de la clase para el que se define el constructor. Por ejemplo:  
   
 ```cpp  
 // spec1_copying_class_objects.cpp  
@@ -82,21 +96,20 @@ int main()
 ```  
   
 > [!NOTE]
->  Haga que el tipo del argumento del constructor de copias sea *const class\-name***&** siempre que sea posible.  Esto evita que el constructor de copias modifique accidentalmente el objeto del que se está copiando.  También permite copiar de objetos **const**.  
+>  Hacer que el tipo de argumento del constructor de copias *nombre de clase const* ** & ** siempre que sea posible. Esto evita que el constructor de copias modifique accidentalmente el objeto del que se está copiando. También permite copiar de **const** objetos.  
   
-## Constructores de copias generados por el compilador  
- Los constructores de copias generados por el compilador, como los constructores de copias definidos por el usuario, tienen un único argumento de tipo "referencia a *class\-name*". La excepción es cuando todas las clases base y las clases de miembro tienen constructores de copias declarados de modo que toman un solo argumento de tipo **const** *class\-name***&**.  En ese caso, el argumento del constructor de copias generado por el compilador también es **const**.  
+## <a name="compiler-generated-copy-constructors"></a>Constructores de copias generados por el compilador  
+ Constructores de copias generado por el compilador, como los constructores de copias definido por el usuario, tienen un único argumento de tipo "hacen referencia a *nombre de la clase*." Una excepción es cuando todas las clases base y miembro tienen constructores de copias declarados como tomando un único argumento de tipo **const** *nombre de la clase***&**. En tal caso, el argumento del constructor de copias generados por el compilador también es **const**.  
   
- Cuando el tipo de argumento al constructor de copias no es **const**, la inicialización que se realiza copiando un objeto **const** genera un error.  Lo contrario no es cierto: si el argumento es **const**, puede inicializar copiando un objeto que no sea **const**.  
+ Cuando el tipo de argumento al constructor de copias no es **const**, inicialización copiando un **const** objeto genera un error. Lo contrario no es cierto: si el argumento es **const**, puede inicializar copiando un objeto que no sea **const**.  
   
- Los operadores de asignación generados por el compilador siguen el mismo patrón con respecto a **const**. Toman un solo argumento de tipo *class\-name***&** a menos que los operadores de asignaciones de todas las clases base y clases de miembro tomen argumentos de tipo **const** *class\-name&*. En este caso, el operador de asignación generado de la clase toma un argumento **const**.  
+ Operadores de asignación generados por el compilador siguen el mismo patrón con respecto a **const.** Toman un único argumento de tipo *nombre de la clase* ** & ** a menos que los operadores de asignación de todas las clases base y miembro tomen argumentos de tipo **const** *nombre de la clase &.* En este caso, la clase generado de toma de operador de asignación un **const** argumento.  
   
 > [!NOTE]
 >  Cuando los constructores de copias, generados por el compilador o definidos por el usuario, inicializan las clases base virtuales, estas se inicializan solo una vez: en el momento en que se construyen.  
   
- Las implicaciones son similares a las del constructor de copias.  Cuando el tipo del argumento no es **const**, la asignación de un objeto **const** genera un error.  Lo contrario no es cierto: si un valor **const** se asigna a un valor que no es **const**, la asignación se realiza correctamente.  
+ Las implicaciones son similares a las del constructor de copias. Cuando el tipo de argumento no es **const**, asignación de un **const** objeto genera un error. Lo contrario no es cierto: si un **const** valor se asigna a un valor que no es **const**, la asignación se realiza correctamente.  
   
- Para obtener más información sobre los operadores de asignaciones sobrecargados, vea [Asignación](../cpp/assignment.md).  
+ Para obtener más información acerca de los operadores de asignaciones sobrecargados, vea [asignación](../cpp/assignment.md).  
   
-## Vea también  
- [Funciones miembro especiales](../misc/special-member-functions-cpp.md)
+

@@ -1,31 +1,47 @@
 ---
-title: "Constructores de movimiento y operadores de asignaci&#243;n de movimiento (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "constructor de movimiento"
+title: "Constructores de movimiento y operadores de asignación de movimiento (C++) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- move constructor
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Constructores de movimiento y operadores de asignaci&#243;n de movimiento (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 07debd120c7757c049d1e3d23dfe1bb065a3cc17
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-En este tema se describe cómo escribir un *constructor de movimiento* y un operador de asignaciones de movimiento para una clase de C\+\+.  Un constructor de movimiento permite implementar semántica de movimiento, lo que puede mejorar significativamente el rendimiento de las aplicaciones.  Para obtener más información sobre la semántica de transferencia de recursos, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+---
+# <a name="move-constructors-and-move-assignment-operators-c"></a>Constructores de movimiento y operadores de asignación de movimiento (C++)
+Este tema describe cómo escribir un *constructor de movimiento* y un operador de asignación de movimiento para una clase de C++. Un constructor de movimiento permite implementar semántica de movimiento, lo que puede mejorar significativamente el rendimiento de las aplicaciones. Para obtener más información acerca de la semántica de movimiento, consulte [declarador de referencia Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
- Este tema se basa en la siguiente clase de C\+\+, `MemoryBlock`, que administra un búfer de memoria.  
+ Este tema se basa en la siguiente clase de C++, `MemoryBlock`, que administra un búfer de memoria.  
   
 ```cpp  
 // MemoryBlock.h  
@@ -103,9 +119,9 @@ private:
 };  
 ```  
   
- Los procedimientos siguientes describen cómo escribir un constructor de movimiento y un operador de asignación de movimiento para la clase de C\+\+ de ejemplo.  
+ Los procedimientos siguientes describen cómo escribir un constructor de movimiento y un operador de asignación de movimiento para la clase de C++ de ejemplo.  
   
-### Para crear un constructor de movimiento para una clase de C\+\+  
+### <a name="to-create-a-move-constructor-for-a-c-class"></a>Para crear un constructor de movimiento para una clase de C++  
   
 1.  Defina un método de constructor vacío que tome una referencia de valor R al tipo de clase como su parámetro, como se muestra en el ejemplo siguiente:  
   
@@ -124,14 +140,14 @@ private:
     _length = other._length;  
     ```  
   
-3.  Asigne los miembros de datos del objeto de origen a valores predeterminados.  Esto evita que el destructor libere varias veces los recursos \(tales como la memoria\):  
+3.  Asigne los miembros de datos del objeto de origen a valores predeterminados. Esto evita que el destructor libere varias veces los recursos (tales como la memoria):  
   
     ```cpp  
     other._data = nullptr;  
     other._length = 0;  
     ```  
   
-### Para crear un operador de asignaciones de movimiento para una clase de C\+\+  
+### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>Para crear un operador de asignaciones de movimiento para una clase de C++  
   
 1.  Defina un operador de asignación vacío que tome una referencia de valor R al tipo de clase como su parámetro y devuelva una referencia al tipo de clase, como se muestra en el ejemplo siguiente:  
   
@@ -149,7 +165,7 @@ private:
     }  
     ```  
   
-3.  En la instrucción condicional, libere los recursos \(tales como la memoria\) del objeto al que se asigna.  
+3.  En la instrucción condicional, libere los recursos (tales como la memoria) del objeto al que se asigna.  
   
      El ejemplo siguiente libera el miembro `_data` del objeto al que se asigna:  
   
@@ -178,7 +194,7 @@ private:
     return *this;  
     ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra el constructor de movimiento y el operador de asignación de movimiento completos para la clase `MemoryBlock`:  
   
 ```cpp  
@@ -226,8 +242,8 @@ MemoryBlock& operator=(MemoryBlock&& other)
 }  
 ```  
   
-## Ejemplo  
- El ejemplo siguiente muestra cómo la semántica de transferencia de recursos puede mejorar el rendimiento de las aplicaciones.  El ejemplo agrega dos elementos a un objeto vectorial y después inserta un nuevo elemento entre los dos existentes.  En [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)], la clase `vector` usa semántica de transferencia de recursos para realizar la operación de inserción eficazmente moviendo los elementos del vector en lugar de copiarlos.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente muestra cómo la semántica de transferencia de recursos puede mejorar el rendimiento de las aplicaciones. El ejemplo agrega dos elementos a un objeto vectorial y después inserta un nuevo elemento entre los dos existentes. En Visual C++ 2010, la `vector` clase usa semántica para realizar la operación de inserción eficazmente moviendo los elementos del vector en lugar de copiarlos de movimiento.  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -272,7 +288,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- Antes de [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)], este ejemplo genera la siguiente salida:  
+ Antes de Visual C++ 2010, este ejemplo produce el siguiente resultado:  
   
 ```  
 In MemoryBlock(size_t). length = 25.  
@@ -297,12 +313,12 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  La versión de este ejemplo que usa semántica de movimiento de recursos es más eficiente que la versión que no la usa, porque realiza menos operaciones de copia, asignación de memoria y desasignación de memoria.  
   
-## Programación eficaz  
- Para evitar pérdidas de recursos, libere siempre los recursos \(tales como memoria, identificadores de archivos y sockets\) en el operador de asignación de movimiento.  
+## <a name="robust-programming"></a>Programación sólida  
+ Para evitar pérdidas de recursos, libere siempre los recursos (tales como memoria, identificadores de archivos y sockets) en el operador de asignación de movimiento.  
   
  Para evitar la destrucción irrecuperable de recursos, administre correctamente la autoasignación en el operador de asignación de movimiento.  
   
- Si proporciona tanto un constructor de movimiento como un operador de asignación de movimiento para la clase, puede eliminar código redundante escribiendo el constructor de movimiento para llamar al operador de asignación de movimiento.  En el ejemplo siguiente se muestra una versión revisada del constructor de movimiento que llama al operador de asignación de movimiento:  
+ Si proporciona tanto un constructor de movimiento como un operador de asignación de movimiento para la clase, puede eliminar código redundante escribiendo el constructor de movimiento para llamar al operador de asignación de movimiento. En el ejemplo siguiente se muestra una versión revisada del constructor de movimiento que llama al operador de asignación de movimiento:  
   
 ```  
 // Move constructor.  
@@ -314,8 +330,8 @@ MemoryBlock(MemoryBlock&& other)
 }  
 ```  
   
- La función [std::move](../Topic/move.md) conserva la propiedad rvalue del parámetro `other`.  
+ El [std:: Move](../standard-library/utility-functions.md#move) función conserva la propiedad de valor r de la `other` parámetro.  
   
-## Vea también  
- [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<utility\> move](http://msdn.microsoft.com/es-es/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+## <a name="see-also"></a>Vea también  
+ [Declarador de referencia rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
+ [\<utilidad > mover](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

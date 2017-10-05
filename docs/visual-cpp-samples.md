@@ -30,11 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: c5de7e4f11b2e1aa87eab408c5e85e08632a42f2
+ms.translationtype: HT
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: d35603be262e21e2570e21bb72ff2bc40c3d6d76
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="visual-c-samples"></a>Ejemplos de Visual C++
@@ -42,7 +42,7 @@ Los ejemplos de Visual C++ enumerados a continuación muestran distinta funciona
   
  [Ejemplos de Visual Studio](http://code.msdn.microsoft.com/vstudio/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B)  
   
- [Ejemplos de aplicaciones de la Tienda Windows](http://code.msdn.microsoft.com/windowsapps/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B)  
+ [Ejemplos de aplicación de la Tienda Windows](http://code.msdn.microsoft.com/windowsapps/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B)  
   
  [Marco de código All-In-One](http://1code.codeplex.com/)  
   

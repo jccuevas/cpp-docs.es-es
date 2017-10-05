@@ -1,45 +1,62 @@
 ---
-title: "_variant_t (Operadores relacionales) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_variant_t::operator=="
-  - "_variant_t.operator!="
-  - "_variant_t::operator!="
-  - "_variant_t.operator=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "!= (operador)"
-  - "== (operador), con objetos específicos de Visual C++"
-  - "operador !=, operadores relacionales"
-  - "operador !=, variante"
-  - "operador ==, variante"
-  - "operator!=, operadores relacionales"
-  - "operator!=, variante"
-  - "operator==, variante"
-  - "operadores relacionales, _variant_t (clase)"
+title: Operadores relacionales _variant_t | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _variant_t::operator==
+- _variant_t.operator!=
+- _variant_t::operator!=
+- _variant_t.operator==
+dev_langs:
+- C++
+helpviewer_keywords:
+- '!= operator'
+- relational operators, _variant_t class
+- operator!=, variant
+- operator!=, relational operators
+- operator !=, variant
+- operator ==, variant
+- operator==, variant
+- operator !=, relational operators
+- == operator, with specific Visual C++ objects
 ms.assetid: 141bacb8-41a2-44dd-b3c0-4ad1f884f4ea
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _variant_t (Operadores relacionales)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d8bcf9550e3e3f8af1836aa3f6e8747089837142
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="variantt-relational-operators"></a>_variant_t (Operadores relacionales)
 **Específicos de Microsoft**  
   
  Compara dos objetos `_variant_t` para ver si son iguales o no.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -57,20 +74,20 @@ bool operator!=(
 ) const;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *varSrc*  
- **VARIANT** que se va a comparar con el objeto `_variant_t`.  
+ A **VARIANT** va a comparar con la `_variant_t` objeto.  
   
  `pSrc`  
- Puntero a **VARIANT** que se va a comparar con el objeto `_variant_t`.  
+ Puntero a la **VARIANT** va a comparar con la `_variant_t` objeto.  
   
-## Valor devuelto  
- Devuelve **true** si la comparación es positiva; **false** si no.  
+## <a name="return-value"></a>Valor devuelto  
+ Devuelve **true** si la comparación es positiva, **false** si no es así.  
   
-## Comentarios  
- Compara un objeto `_variant_t` con **VARIANT**, para comprobar la igualdad o desigualdad.  
+## <a name="remarks"></a>Comentarios  
+ Compara una `_variant_t` objeto con un **VARIANT**, comprobar la igualdad o desigualdad.  
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
- [\_variant\_t \(Clase\)](../cpp/variant-t-class.md)
+## <a name="see-also"></a>Vea también  
+ [_variant_t (Clase)](../cpp/variant-t-class.md)

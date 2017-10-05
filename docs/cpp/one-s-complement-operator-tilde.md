@@ -1,48 +1,64 @@
 ---
-title: "Operador de complemento de uno: ~ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "~"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~ (operador), sintaxis"
-  - "bit a bit (operador de complemento)"
-  - "compl (operador)"
-  - "operador de complemento de uno"
-  - "tilde (~) (operador de complemento de uno)"
+title: 'Uno &#39; s operador de complemento: ~ | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- ~
+dev_langs:
+- C++
+helpviewer_keywords:
+- tilde (~) one's complement operator
+- one's complement operator
+- bitwise-complement operator
+- compl operator
+- ~ operator, syntax
 ms.assetid: 4bf81967-34f7-4b4b-aade-fd03d5da0174
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operador de complemento de uno: ~
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 918555af04d20be2533b488ee26f031e10a54ca4
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-## Sintaxis  
+---
+# <a name="one39s-complement-operator-"></a>Uno &#39; s operador de complemento: ~
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 ~ cast-expression  
 ```  
   
-## Comentarios  
- El operador de complemento de uno \(`~`\), denominado a veces operador de “complemento bit a bit”, produce un complemento de uno bit a bit de su operando.  Es decir, cada bit que es 1 en el operando es 0 en el resultado.  Y a la inversa: cada bit que es 0 en el operando es 1 en el resultado.  El operando del operador de complemento de uno debe ser de tipo entero.  
+## <a name="remarks"></a>Comentarios  
+ El operador de complemento de uno (`~`), denominado a veces operador de “complemento bit a bit”, produce un complemento de uno bit a bit de su operando. Es decir, cada bit que es 1 en el operando es 0 en el resultado. Y a la inversa: cada bit que es 0 en el operando es 1 en el resultado. El operando del operador de complemento de uno debe ser de tipo entero.  
   
-## Palabra clave del operador para ~  
- El operador `compl` es el equivalente de texto de `~`.  Hay dos maneras de tener acceso al operador `compl` en los programas: incluir el archivo de encabezado `iso646.h` o compilar con [\/Za](../build/reference/za-ze-disable-language-extensions.md).  
+## <a name="operator-keyword-for-"></a>Palabra clave del operador para ~  
+ El operador `compl` es el equivalente de texto de `~`. Hay dos maneras de obtener acceso a la `compl` operador en los programas: incluir el archivo de encabezado `iso646.h`, o compilar con [/Za](../build/reference/za-ze-disable-language-extensions.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // expre_One_Complement_Operator.cpp  
@@ -61,10 +77,9 @@ int main () {
   
  En este ejemplo, el nuevo valor asignado a `y` es el complemento de uno del valor sin signo 0xFFFF, or 0x0000.  
   
- La promoción de entero se realiza en operandos enteros y el tipo resultante es el tipo al que se promueve el operando.  Vea [Promociones de entero](../misc/integral-promotions.md) para obtener más información sobre cómo se realiza la promoción.  
+ La promoción de entero se realiza en operandos enteros y el tipo resultante es el tipo al que se promueve el operando. Vea [conversiones estándar](standard-conversions.md) para obtener más información sobre cómo se realiza la promoción.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Expresiones con operadores unarios](../cpp/expressions-with-unary-operators.md)   
- [Operadores de C\+\+](../misc/cpp-operators.md)   
- [Operadores de C\+\+, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operadores aritméticos unarios](../c-language/unary-arithmetic-operators.md)

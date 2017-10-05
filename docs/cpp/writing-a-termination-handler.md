@@ -1,47 +1,64 @@
 ---
-title: "Escribir un controlador de finalizaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "control de excepciones, controladores de terminación"
-  - "excepciones, terminar"
-  - "controladores"
-  - "controladores, terminación"
-  - "control estructurado de excepciones, controladores de terminación"
-  - "controladores de terminación"
-  - "controladores de terminación, escribir"
-  - "try-catch (palabra clave) [C++], controladores de terminación"
+title: "Escribir un controlador de terminación | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- structured exception handling, termination handlers
+- exceptions, terminating
+- termination handlers, writing
+- handlers
+- handlers, termination
+- termination handlers
+- exception handling, termination handlers
+- try-catch keyword [C++], termination handlers
 ms.assetid: 52aa1f8f-f8dd-44b8-be94-5e2fc88d44fb
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Escribir un controlador de finalizaci&#243;n
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 06fb01f2ee2782f8786308554923b3c5597a4574
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-A diferencia de los controladores de excepciones, los controladores de terminación se ejecutan siempre, independientemente de si el bloque de código protegido ha finalizado normalmente.  El único propósito del controlador de terminación debe ser garantizar que los recursos, como la memoria, los identificadores y los archivos, se cierran correctamente independientemente de cómo termine de ejecutarse una sección de código.  
+---
+# <a name="writing-a-termination-handler"></a>Escribir un controlador de finalización
+A diferencia de los controladores de excepciones, los controladores de terminación se ejecutan siempre, independientemente de si el bloque de código protegido ha finalizado normalmente. El único propósito del controlador de terminación debe ser garantizar que los recursos, como la memoria, los identificadores y los archivos, se cierran correctamente independientemente de cómo termine de ejecutarse una sección de código.  
   
- Los controladores de terminación utilizan la instrucción try\-finally.  
+ Los controladores de terminación utilizan la instrucción try-finally.  
   
-## ¿Qué más desea saber?  
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?  
   
--   [Instrucción try\-finally](../cpp/try-finally-statement.md)  
+-   [La instrucción try-finally](../cpp/try-finally-statement.md)  
   
--   [Limpiar los recursos](../cpp/cleaning-up-resources.md)  
+-   [Limpiar recursos](../cpp/cleaning-up-resources.md)  
   
--   [Cronología de las acciones en el control de excepciones](../cpp/timing-of-exception-handling-a-summary.md)  
+-   [Cronología de las acciones de control de excepciones](../cpp/timing-of-exception-handling-a-summary.md)  
   
 -   [Restricciones en los controladores de terminación](../cpp/restrictions-on-termination-handlers.md)  
   
-## Vea también  
- [Control de excepciones estructurado](../cpp/structured-exception-handling-c-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Control de excepciones estructurado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

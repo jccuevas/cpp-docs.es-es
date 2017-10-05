@@ -1,34 +1,51 @@
 ---
-title: "__hook | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__hook_cpp"
-  - "__hook"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__hook (palabra clave) [C++]"
-  - "controladores de eventos, conectar eventos"
+title: __hook | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __hook_cpp
+- __hook
+dev_langs:
+- C++
+helpviewer_keywords:
+- __hook keyword [C++]
+- event handlers, connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# __hook
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 21bb75853d8664ad46bc48fc907946ae5a147f9a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="hook"></a>__hook
 Asocia un método de control a un evento.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -44,70 +61,70 @@ long __hook(
 );  
 ```  
   
-#### Parámetros  
- **&** *SourceClass* `::` *EventMethod*  
+#### <a name="parameters"></a>Parámetros  
+ **&***SourceClass* `::` *EventMethod*  
  Un puntero al método de evento al que se enlaza el método de controlador de eventos:  
   
--   Eventos de C\+\+ nativo: *SourceClass* es la clase del origen de eventos e *EventMethod* es el evento.  
+-   Eventos de C++ nativo: *SourceClass* es la clase de origen de eventos y *EventMethod* es el evento.  
   
--   Eventos COM: *SourceClass* es la interfaz de origen de eventos e *EventMethod* es uno de sus métodos.  
+-   Eventos COM: *SourceClass* es la interfaz de origen de eventos y *EventMethod* es uno de sus métodos.  
   
--   Eventos administrados: *SourceClass* es la clase del origen de eventos e *EventMethod* es el evento.  
+-   Eventos administrados: *SourceClass* es la clase de origen de eventos y *EventMethod* es el evento.  
   
  `interface`  
- El nombre de interfaz que se va a enlazar a `receiver`, solo para los receptores de eventos COM en los que el parámetro *layout\_dependent* del atributo [event\_receiver](../windows/event-receiver.md) es **true**.  
+ El nombre de la interfaz que se va a enlazar a `receiver`, solo para los receptores de eventos COM en el que el *layout_dependent* parámetro de la [event_receiver](../windows/event-receiver.md) atributo es **true**.  
   
- *source*  
- Un puntero a una instancia del origen de eventos.  Dependiendo del `type` de código especificado en **event\_receiver**, *source* puede ser uno de:  
+ *origen*  
+ Un puntero a una instancia del origen de eventos. Según el código de `type` especificado en **event_receiver**, *origen* puede ser uno de los siguientes:  
   
 -   Un puntero nativo de objeto de origen de eventos.  
   
--   Un puntero basado en **IUnknown** \(origen COM\).  
+-   Un **IUnknown**-en función de puntero (origen COM).  
   
--   Un puntero de objeto administrado \(para eventos administrados\).  
+-   Un puntero de objeto administrado (para eventos administrados).  
   
- **&** *ReceiverClass* `::` `HandlerMethod`  
- Un puntero al método de controlador de eventos que se a enlazar a un evento.  El controlador se especifica como un método de una clase o una referencia a la misma; si no se especifica el nombre de la clase, `__hook` supone que la clase es aquella en que se llama.  
+ **&***ReceiverClass* `::``HandlerMethod`  
+ Un puntero al método de controlador de eventos que se a enlazar a un evento. El controlador se especifica como un método de una clase o una referencia a la misma; si no se especifica el nombre de la clase, `__hook` supone que la clase es aquella en que se llama.  
   
--   Eventos de C\+\+ nativo: *ReceiverClass* es la clase del receptor de eventos y `HandlerMethod` es el controlador.  
+-   Eventos de C++ nativo: *ReceiverClass* es la clase de receptor de eventos y `HandlerMethod` es el controlador.  
   
--   Eventos COM: *ReceiverClass* es la interfaz del receptor de eventos y `HandlerMethod` es uno de sus controladores.  
+-   Eventos COM: *ReceiverClass* es la interfaz de receptor de eventos y `HandlerMethod` es uno de sus controladores.  
   
--   Eventos administrados: *ReceiverClass* es la clase del receptor de eventos y `HandlerMethod` es el controlador.  
+-   Eventos administrados: *ReceiverClass* es la clase de receptor de eventos y `HandlerMethod` es el controlador.  
   
- `receiver` \(opcional\)  
- Un puntero a una instancia de la clase del receptor de eventos.  Si no se especifica un receptor, el valor predeterminado es la estructura o clase del receptor en que se llama a `__hook`.  
+ `receiver`(opcional)  
+ Un puntero a una instancia de la clase del receptor de eventos. Si no se especifica un receptor, el valor predeterminado es la estructura o clase del receptor en que se llama a `__hook`.  
   
-## Uso  
+## <a name="usage"></a>Uso  
  Se puede usar en cualquier ámbito de función, incluida main, fuera de la clase del receptor de eventos.  
   
-## Comentarios  
- Utilice la función intrínseca `__hook` en un receptor de eventos para asociar o enlazar un método de controlador con un método de evento.  Después se llama al controlador especificado cuando el origen provoca el evento especificado.  Puede enlazar varios controladores a un único evento o enlazar varios eventos a un único controlador.  
+## <a name="remarks"></a>Comentarios  
+ Utilice la función intrínseca `__hook` en un receptor de eventos para asociar o enlazar un método de controlador con un método de evento. Después se llama al controlador especificado cuando el origen provoca el evento especificado. Puede enlazar varios controladores a un único evento o enlazar varios eventos a un único controlador.  
   
- Hay dos formas de `__hook`.  Puede usar el primer formulario \(de cuatro argumentos\) en la mayoría de los casos, concretamente, para los receptores de eventos COM en los que el parámetro *layout\_dependent* de [event\_receiver](../windows/event-receiver.md) es **false**.  
+ Hay dos formas de `__hook`. Puede usar la primera forma (cuatro argumento) en la mayoría de los casos, concretamente, para los receptores de eventos COM en el que el *layout_dependent* parámetro de la [event_receiver](../windows/event-receiver.md) atributo es **false **.  
   
- En estos casos no necesita enlazar todos los métodos en una interfaz antes de desencadenar un evento en uno de los métodos; solo debe enlazarse el método que controlará el evento.  Puede usar el segundo formulario \(de dos argumentos\) de `__hook` solo para un receptor de eventos COM en el que *layout\_dependent* es **\=true**.  
+ En estos casos no necesita enlazar todos los métodos en una interfaz antes de desencadenar un evento en uno de los métodos; solo debe enlazarse el método que controlará el evento. Puede usar la segunda forma (dos argumentos) de `__hook` solo para un receptor de eventos COM en el que *layout_dependent***= true**.  
   
- `__hook` devuelve un valor de tipo long.  Un valor devuelto distinto de cero indica que se ha producido un error \(los eventos administrados producirán una excepción\).  
+ `__hook` devuelve un valor de tipo long. Un valor devuelto distinto de cero indica que se ha producido un error (los eventos administrados producirán una excepción).  
   
  El compilador comprueba la existencia de un evento y que la firma del evento coincida con la firma del delegado.  
   
  Con excepción de eventos COM, se puede llamar a `__hook` y `__unhook` fuera del receptor de eventos.  
   
- Una alternativa al uso de `__hook` es utilizar el operador \+\=.  
+ Una alternativa al uso de `__hook` es utilizar el operador +=.  
   
- Para obtener información sobre la codificación de eventos administrados en la nueva sintaxis, vea [event](../windows/event-cpp-component-extensions.md).  
+ Para obtener información sobre los eventos administrados en la nueva sintaxis de codificación, vea [eventos](../windows/event-cpp-component-extensions.md).  
   
 > [!NOTE]
 >  Una clase o struct basada en plantilla no puede contener eventos.  
   
-## Ejemplo  
- Vea [Control de eventos en C\+\+ nativo](../cpp/event-handling-in-native-cpp.md) y [Control de eventos en COM](../cpp/event-handling-in-com.md) para obtener ejemplos.  
+## <a name="example"></a>Ejemplo  
+ Vea [control de eventos en C++ nativo](../cpp/event-handling-in-native-cpp.md) y [control de eventos en COM](../cpp/event-handling-in-com.md) para obtener ejemplos.  
   
-## Vea también  
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)   
+## <a name="see-also"></a>Vea también  
+ [Palabras clave](../cpp/keywords-cpp.md)   
  [Control de eventos](../cpp/event-handling.md)   
- [event\_source](../windows/event-source.md)   
- [event\_receiver](../windows/event-receiver.md)   
- [\_\_unhook](../cpp/unhook.md)   
- [\_\_raise](../cpp/raise.md)
+ [event_source](../windows/event-source.md)   
+ [event_receiver](../windows/event-receiver.md)   
+ [__unhook](../cpp/unhook.md)   
+ [__raise](../cpp/raise.md)

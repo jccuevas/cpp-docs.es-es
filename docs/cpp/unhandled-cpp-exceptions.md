@@ -1,36 +1,52 @@
 ---
-title: "Excepciones de C++ no controladas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "control de excepciones de C++, excepciones no controladas"
-  - "catch (palabra clave) [C++], controlador no encontrado"
-  - "controladores de eventos, excepciones no controladas"
-  - "excepciones, no controladas"
-  - "excepciones no controladas"
+title: Las excepciones de C++ no controladas | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handlers, unhandled exceptions
+- catch keyword [C++], handler not found
+- exceptions, unhandled
+- C++ exception handling, unhandled exceptions
+- unhandled exceptions
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Excepciones de C++ no controladas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 590dc46e5cf761f02ba85dba950c04a2da4df022
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Si no se puede encontrar un controlador coincidente \(o el controlador **catch** de puntos suspensivos\) para la excepción actual, se llama a la función predefinida `terminate` en tiempo de ejecución. \(También puede llamar explícitamente a `terminate` en cualquiera de sus controladores\). La acción predeterminada de `terminate` es llamar a `abort`.  Si desea que `terminate` llame a otra función del programa antes de salir de la aplicación, llame a la función `set_terminate` con el nombre de la función que se va a llamar como argumento único.  Puede llamar a `set_terminate` en cualquier punto del programa.  La rutina `terminate` siempre llama a la última función especificada como argumento para `set_terminate`.  
+---
+# <a name="unhandled-c-exceptions"></a>Excepciones de C++ no controladas
+Si un controlador coincidente (o los puntos suspensivos **catch** controlador) no se encuentra para la excepción actual, predefinida `terminate` se llama la función de tiempo de ejecución. (También puede llamar explícitamente a `terminate` en cualquiera de sus controladores). La acción predeterminada de `terminate` es llamar a `abort`. Si desea que `terminate` llame a otra función del programa antes de salir de la aplicación, llame a la función `set_terminate` con el nombre de la función que se va a llamar como argumento único. Puede llamar a `set_terminate` en cualquier punto del programa. El `terminate` rutina siempre llama a la última función especificada como argumento a `set_terminate`.  
   
-## Ejemplo  
- En el ejemplo siguiente se inicia una excepción `char *`, pero no contiene un controlador designado para detectar excepciones de tipo `char *`.  La llamada a `set_terminate` indica a `terminate` que llame a `term_func`.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se inicia una excepción `char *`, pero no contiene un controlador designado para detectar excepciones de tipo `char *`. La llamada a `set_terminate` indica a `terminate` que llame a `term_func`.  
   
 ```  
 // exceptions_Unhandled_Exceptions.cpp  
@@ -55,13 +71,13 @@ int main() {
 }  
 ```  
   
-## Salida  
+## <a name="output"></a>Resultado  
   
 ```  
 term_func was called by terminate.  
 ```  
   
- La función `term_func` debe finalizar el programa o el subproceso actual, idealmente mediante una llamada a `exit`.  Si no lo hace y, en su lugar, regresa a su llamador, se llama a `abort`.  
+ La función `term_func` debe finalizar el programa o el subproceso actual, idealmente mediante una llamada a `exit`. Si no lo hace y, en su lugar, regresa a su llamador, se llama a `abort`.  
   
-## Vea también  
- [Control de excepciones de C\+\+](../cpp/cpp-exception-handling.md)
+## <a name="see-also"></a>Vea también  
+ [Control de excepciones de C++](../cpp/cpp-exception-handling.md)

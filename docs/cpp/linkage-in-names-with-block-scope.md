@@ -1,36 +1,53 @@
 ---
-title: "Vinculaci&#243;n en nombres con &#225;mbito de bloque | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ámbito de bloque [C++]"
-  - "vinculación externa, reglas de vinculación de ámbito"
-  - "vinculación [C++], reglas de vinculación de ámbito"
-  - "nombres [C++], reglas de vinculación de ámbito"
-  - "ámbito [C++], reglas de vinculación"
+title: "Vinculación en nombres con ámbito de bloque | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- scope [C++], linkage rules
+- linkage [C++], scope linkage rules
+- names [C++], scope linkage rules
+- block scope [C++]
+- external linkage, scope linkage rules
 ms.assetid: 73efa91a-f761-47f7-bbd9-9f9e3508e218
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Vinculaci&#243;n en nombres con &#225;mbito de bloque
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: de093c90e0da4a906d8aefebfb7048733c1a1f1d
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Las siguientes reglas de vinculación se aplican a los nombres con ámbito de bloque \(nombres locales\):  
+---
+# <a name="linkage-in-names-with-block-scope"></a>Vinculación en nombres con ámbito de bloque
+Las siguientes reglas de vinculación se aplican a los nombres con ámbito de bloque (nombres locales):  
   
--   Los nombres declarados como `extern` tienen vinculación externa a menos que se hayan declarado previamente como **static**.  
+-   Nombres declarados como `extern` tienen vinculación externa a menos que se hubieran declarado previamente como **estático**.  
   
 -   El resto de los nombres con ámbito de bloque no tienen vinculación.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Programa y vinculación](../cpp/program-and-linkage-cpp.md)

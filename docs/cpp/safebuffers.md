@@ -1,60 +1,77 @@
 ---
-title: "safebuffers | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "safebuffers"
-  - "safebuffers_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec (palabra clave) (C++), safebuffers"
-  - "safebuffers __declspec (palabra clave)"
+title: safebuffers | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- safebuffers
+- safebuffers_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword (C++), safebuffers
+- safebuffers __declspec keyword
 ms.assetid: 0b0dce14-4523-44d2-8070-5dd0fdabc618
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# safebuffers
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ceb7d5796002bd54055b74d56a136706890494c4
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="safebuffers"></a>safebuffers
 **Específicos de Microsoft**  
   
  Indica al compilador que no inserte comprobaciones de seguridad de saturación del búfer para una función.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 __declspec( safebuffers )  
 ```  
   
-## Comentarios  
- La opción del compilador **\/GS** hace que el compilador compruebe las saturaciones del búfer mediante la inserción de comprobaciones de seguridad en la pila.  Los tipos de estructuras de datos que son aptos para las comprobaciones de seguridad se describen en [\/GS \(Comprobación de seguridad del búfer\)](../build/reference/gs-buffer-security-check.md).  Para obtener más información sobre la detección de saturación del búfer, vea [Comprobación de seguridad exhaustiva del compilador](http://go.microsoft.com/fwlink/?linkid=7260) en el sitio web de MSDN.  
+## <a name="remarks"></a>Comentarios  
+ El **/GS** opción del compilador hace que el compilador comprobar las saturaciones de búfer mediante la inserción de comprobaciones de seguridad en la pila. Los tipos de estructuras de datos que son aptas para la comprobación de seguridad se describen en [/GS (comprobación de seguridad de búfer)](../build/reference/gs-buffer-security-check.md). Para obtener más información acerca de la detección de saturación del búfer, vea [compilador Security Checks In Depth](http://go.microsoft.com/fwlink/?linkid=7260) en el sitio Web de MSDN.  
   
- Un análisis manual externo o realizado por un experto para revisar el código puede determinar si una función está protegida de la saturación del búfer.  En ese caso, se pueden suprimir las comprobaciones de seguridad de una función mediante la aplicación de la palabra clave \_\_`declspec(safebuffers)` en la declaración de función.  
+ Un análisis manual externo o realizado por un experto para revisar el código puede determinar si una función está protegida de la saturación del búfer. En ese caso, puede suprimir las comprobaciones de seguridad para una función aplicando el `__declspec(safebuffers)` palabra clave para la declaración de función.  
   
 > [!CAUTION]
->  Las comprobaciones de seguridad del búfer proporcionan una protección de seguridad importante y apenas repercuten en el rendimiento.  Por tanto, se recomienda que no las suprima, excepto en el caso poco frecuente de que el rendimiento de una función tenga una importancia crítica y se sepa que la función está segura.  
+>  Las comprobaciones de seguridad del búfer proporcionan una protección de seguridad importante y apenas repercuten en el rendimiento. Por tanto, se recomienda que no las suprima, excepto en el caso poco frecuente de que el rendimiento de una función tenga una importancia crítica y se sepa que la función está segura.  
   
-## Funciones insertadas  
- Una *función principal* puede utilizar una palabra clave [inlining](../misc/inline-inline-forceinline.md) para insertar una copia de una *función secundaria*.  Si la palabra clave \_\_`declspec(safebuffers)` se aplica a una función, la detección de saturación del búfer se suprime para esa función.  Sin embargo, inlining afecta a la palabra clave \_\_`declspec(safebuffers)` de las maneras siguientes.  
+## <a name="inline-functions"></a>Funciones insertadas  
+ A *función principal* puede usar un [inclusión](inline-functions-cpp.md) palabra clave que se va a insertar una copia de un *función secundaria*. Si el `__declspec(safebuffers)` palabra clave se aplica a una función, detección de saturación del búfer se suprime para esa función. Sin embargo, inlining afecta a la `__declspec(safebuffers)` palabra clave de las maneras siguientes.  
   
- Supongamos que la opción del compilador **\/GS** está especificada para ambas funciones pero la función principal especifica la palabra clave \_\_`declspec(safebuffers)` .  Las estructuras de datos en la función secundaria hacen que sea apta para las comprobaciones de seguridad, y la función no suprime dichas comprobaciones.  En este caso:  
+ Suponga que el **/GS** se especifica la opción de compilador para ambas funciones, pero la función principal especifica la `__declspec(safebuffers)` palabra clave. Las estructuras de datos en la función secundaria hacen que sea apta para las comprobaciones de seguridad, y la función no suprime dichas comprobaciones. En este caso:  
   
--   Especifique la palabra clave [\_\_forceinline](../misc/inline-inline-forceinline.md) en la función secundaria para hacer que el compilador inserte esa función independientemente de las optimizaciones del compilador.  
+-   Especifique el [__forceinline](inline-functions-cpp.md) palabra clave en la función secundaria para hacer que el compilador inserte esa función independientemente de las optimizaciones del compilador.  
   
--   Dado que la función secundaria es apta para las comprobaciones de seguridad, las comprobaciones de seguridad también se aplican a la función principal, aunque especifique la palabra clave \_\_`declspec(safebuffers)` .  
+-   Dado que la función secundaria es apta para las comprobaciones de seguridad, comprobaciones de seguridad también se aplican a la función principal, aunque especifique el `__declspec(safebuffers)` palabra clave.  
   
-## Ejemplo  
- En el código siguiente se muestra cómo se puede usar la palabra clave \_\_`declspec(safebuffers)` .  
+## <a name="example"></a>Ejemplo  
+ El código siguiente muestra cómo utilizar el `__declspec(safebuffers)` palabra clave.  
   
 ```  
 // compile with: /c /GS  
@@ -81,8 +98,8 @@ int wmain() {
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
- [\_\_declspec](../cpp/declspec.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)   
- [inline, \_\_inline, \_\_forceinline](../misc/inline-inline-forceinline.md)   
- [strict\_gs\_check](../preprocessor/strict-gs-check.md)
+## <a name="see-also"></a>Vea también  
+ [__declspec](../cpp/declspec.md)   
+ [Palabras clave](../cpp/keywords-cpp.md)   
+ [inline, __inline, \__forceinline](inline-functions-cpp.md)   
+ [strict_gs_check](../preprocessor/strict-gs-check.md)

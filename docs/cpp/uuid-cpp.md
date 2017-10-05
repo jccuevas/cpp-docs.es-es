@@ -1,37 +1,53 @@
 ---
-title: "uuid (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "uuid"
-  - "uuid_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec (palabra clave) [C++], uuid"
-  - "uuid __declspec (palabra clave)"
+title: UUID (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- uuid
+- uuid_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++], uuid
+- uuid __declspec keyword
 ms.assetid: 9d004621-09bc-4a8d-871b-648f5d5102d7
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# uuid (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 80975b751b6e167573a038e55042b3546821c68f
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="uuid-c"></a>uuid (C++)
 **Específicos de Microsoft**  
   
- El compilador adjunta un GUID a una clase o estructura declarada o definida \(solo definiciones completas de objeto COM\) con el atributo `uuid`.  
+ El compilador adjunta un GUID a una clase o estructura declarada o definida (solo definiciones completas de objeto COM) con el atributo `uuid`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -40,20 +56,20 @@ ComObjectGUID
 ") ) declarator  
 ```  
   
-## Comentarios  
- El atributo `uuid` toma una cadena como argumento.  Esta cadena denomina un GUID en formato del Registro normal con o sin los delimitadores **{ }**.  Por ejemplo:  
+## <a name="remarks"></a>Comentarios  
+ El atributo `uuid` toma una cadena como argumento. Esta cadena denomina un GUID en formato de registro normal con o sin el **{}** delimitadores. Por ejemplo:  
   
 ```  
 struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;  
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;  
 ```  
   
- Este atributo se puede aplicar en un nueva declaración.  Esto permite que los encabezados de sistema suministren las definiciones de interfaces tales como **IUnknown**, y que la nueva declaración en algún otro encabezado \(por ejemplo, COMDEF.H\) suministre el GUID.  
+ Este atributo se puede aplicar en un nueva declaración. Esto permite que los encabezados de sistema suministren las definiciones de interfaces tales como **IUnknown**y la nueva declaración en algún otro encabezado (por ejemplo, COMDEF. (H) para proporcionar el GUID.  
   
- La palabra clave [\_\_uuidof](../cpp/uuidof-operator.md) se puede aplicar para recuperar el GUID de constante asociado a un tipo definido por el usuario.  
+ La palabra clave [__uuidof](../cpp/uuidof-operator.md) pueden aplicarse para recuperar el GUID de constante asociado a un tipo definido por el usuario.  
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
- [\_\_declspec](../cpp/declspec.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [__declspec](../cpp/declspec.md)   
+ [Palabras clave](../cpp/keywords-cpp.md)

@@ -1,47 +1,62 @@
 ---
-title: "Expresiones primarias | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "expresiones [C++], literal"
-  - "expresiones [C++], name"
-  - "expresiones [C++], principal"
-  - "expresiones [C++], nombres completos"
-  - "expresiones primarias"
+title: Expresiones primarias | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- primary expressions
+- expressions [C++], name
+- expressions [C++], literal
+- expressions [C++], primary
+- expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Expresiones primarias
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 2ba603c19a88849c15c9402e21d2acf39bb9f54d
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Las expresiones primarias son los bloques de creación de expresiones más complejas.  Son literales, nombres, y nombres calificados por el operador de resolución de ámbito \(`::`\).  Una expresión primaria puede tener cualquiera de las formas siguientes:  
+---
+# <a name="primary-expressions"></a>Expresiones primarias
+Las expresiones primarias son los bloques de creación de expresiones más complejas. Son literales, nombres, y nombres calificados por el operador de resolución de ámbito (`::`).  Una expresión primaria puede tener cualquiera de las formas siguientes:  
   
 ```  
   
-        literal  
-this  
-:: name  
-name   
-( expression )  
+      literal  
+      this  
+:: namename( expression )  
 ```  
   
- Un *literal* es una expresión primaria constante.  Su tipo depende de la forma de su especificación.  Vea [Literales](../cpp/numeric-boolean-and-pointer-literals-cpp.md) para obtener información completa sobre la especificación de literales.  
+ A *literal* es una expresión primaria constante. Su tipo depende de la forma de su especificación. Vea [literales](../cpp/numeric-boolean-and-pointer-literals-cpp.md) para obtener información completa acerca de cómo especificar literales.  
   
- La palabra clave **this** es un puntero a un objeto de clase.  Está disponible en funciones miembro no estáticas y señala a la instancia de la clase para la que se ha invocado la función.  La palabra clave **this** no se puede utilizar fuera del cuerpo de una función miembro de clase.  
+ El **esto** palabra clave es un puntero a un objeto de clase. Está disponible en funciones miembro no estáticas y señala a la instancia de la clase para la que se ha invocado la función. El **esto** palabra clave no se puede usar fuera del cuerpo de una función miembro de clase.  
   
- El tipo del puntero **this** es `type` **\*const** \(donde `type` es el nombre de clase\) en funciones que no modifican específicamente el puntero **this**.  En el ejemplo siguiente se muestran declaraciones de funciones miembro y los tipos de **this**:  
+ El tipo de la **esto** puntero es `type` ** \*const** (donde `type` es el nombre de clase) dentro de las funciones no modifican específicamente el **esta** puntero. En el ejemplo siguiente se muestra el miembro declaraciones de función y los tipos de **esto**:  
   
 ```  
 // expre_Primary_Expressions.cpp  
@@ -55,13 +70,13 @@ public:
 };  
 ```  
   
- Vea [Tipo de puntero this](../misc/type-of-this-pointer.md) para obtener más información sobre la modificación del tipo del puntero **this**.  
+ Vea [this (puntero)](this-pointer.md) para obtener más información acerca de cómo modificar el tipo de la **esto** puntero.  
   
- El operador de resolución de ámbito \(`::`\) seguido de un nombre constituye una expresión primaria.  Dichos nombres deben ser nombres en el ámbito global, no nombres de miembro.  El tipo de esta expresión está determinado por la declaración del nombre.  Es un valor L \(es decir, puede aparecer en el lado izquierdo de una expresión de operador de asignaciones\) si el nombre de declaración es un valor L.  El operador de resolución de ámbito permite que se haga referencia a un nombre global, incluso si ese nombre está oculto en el ámbito actual.  Vea [Ámbito](../cpp/scope-visual-cpp.md) para obtener un ejemplo de cómo se utiliza el operador de resolución de ámbito.  
+ El operador de resolución de ámbito (`::`) seguido de un nombre constituye una expresión primaria.  Dichos nombres deben ser nombres en el ámbito global, no nombres de miembro.  El tipo de esta expresión está determinado por la declaración del nombre. Es un valor L (es decir, puede aparecer en el lado izquierdo de una expresión de operador de asignaciones) si el nombre de declaración es un valor L. El operador de resolución de ámbito permite que se haga referencia a un nombre global, incluso si ese nombre está oculto en el ámbito actual. Vea [ámbito](../cpp/scope-visual-cpp.md) para obtener un ejemplo de cómo usar el operador de resolución de ámbito.  
   
- Una expresión delimitada entre paréntesis es una expresión primaria cuyos tipo y valor son idénticos a los de la expresión no incluida entre paréntesis.  Es un valor L si la expresión no incluida entre paréntesis es un l\-valor.  
+ Una expresión delimitada entre paréntesis es una expresión primaria cuyos tipo y valor son idénticos a los de la expresión no incluida entre paréntesis. Es un valor L si la expresión no incluida entre paréntesis es un l-valor.  
   
- En el contexto de la sintaxis de expresión primaria proporcionada más arriba, *name* no significa nada en la sintaxis descrita para [Nombres](http://msdn.microsoft.com/es-es/1c49cc24-08d5-4884-b170-ba8ed42d80db), aunque cuando se utiliza el operador de resolución de ámbito delante del nombre, no se permiten tipos de nombres que solo pueden aparecer en una clase.  Esto incluye nombres de función de conversión definida por el usuario y nombres de destructor.  
+ En el contexto de la sintaxis de expresión primaria indicada anteriormente, *nombre* significa cualquier cosa en la sintaxis descrita para [nombres](http://msdn.microsoft.com/en-us/1c49cc24-08d5-4884-b170-ba8ed42d80db), aunque cuando mediante el operador de resolución de ámbito antes del nombre, tipos de nombres que sólo puede ocurrir en una clase no se permiten.  Esto incluye nombres de función de conversión definida por el usuario y nombres de destructor.  
   
  Entre los ejemplos de expresiones primarias se incluyen:  
   
@@ -75,7 +90,7 @@ this // in a member function, a pointer to the class instance
 ( i + 1 ) // a parenthesized expression  
 ```  
   
- Los ejemplos siguientes se consideran nombres \(*name*\) todos ellos, y por consiguiente expresiones primarias, en diversas formas:  
+ Los ejemplos siguientes se consideran *nombres*y por consiguiente expresiones primarias, en diversas formas:  
   
 ```  
 MyClass // a identifier  
@@ -87,5 +102,5 @@ A::B   // a qualified name
 A<int> // a template id  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tipos de expresiones](../cpp/types-of-expressions.md)

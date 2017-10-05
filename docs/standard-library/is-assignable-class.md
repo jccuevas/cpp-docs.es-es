@@ -1,0 +1,73 @@
+---
+title: Clase is_assignable | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- type_traits/std::is_assignable
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_assignable
+ms.assetid: 53444287-c8be-4ad2-9487-a85c066a4f84
+caps.latest.revision: 14
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
+ms.openlocfilehash: 3801ef0c7a4642dd3c07b714441e49d7d5ac6bc0
+ms.contentlocale: es-es
+ms.lasthandoff: 10/03/2017
+
+---
+# <a name="isassignable-class"></a>Clase is_assignable
+Comprueba si un valor de tipo `From` se puede asignar a un tipo `To`.  
+  
+## <a name="syntax"></a>Sintaxis  
+  
+```
+template <class To, class From>  
+struct is_assignable;
+```  
+  
+#### <a name="parameters"></a>Parámetros  
+ Para  
+ El tipo del objeto que recibe la asignación.  
+  
+ De  
+ El tipo del objeto que proporciona el valor.  
+  
+## <a name="remarks"></a>Comentarios  
+ La expresión no evaluada `declval<To>() = declval<From>()` debe tener un formato correcto. Tanto `From` como `To` deben ser tipos completos, `void` o matrices de límite desconocido.  
+  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<type_traits>  
+  
+ **Espacio de nombres:** std  
+  
+## <a name="see-also"></a>Vea también  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+
+

@@ -1,32 +1,49 @@
 ---
-title: "Argumentos de funci&#243;n de tipo de referencia | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "argumentos [C++], función"
-  - "argumentos de función, tipo de referencia"
-  - "parámetros de la función, tipo de referencia"
-  - "funciones [C++], parámetros"
-  - "pasar parámetros, argumentos de tipo de referencia"
+title: "Argumentos de función de tipo de referencia | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arguments [C++], function
+- functions [C++], paramters
+- function parameters, reference-type
+- function arguments, reference-type
+- passing parameters, reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Argumentos de funci&#243;n de tipo de referencia
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e74cbde44cad618720983fbda4a6cf9ce8b75dc1
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Suele ser más eficaz pasar referencias, en lugar de objetos grandes, a las funciones.  De este modo, el compilador puede pasar la dirección del objeto mientras mantiene la sintaxis que se habría utilizado para tener acceso al objeto.  Considere el ejemplo siguiente, en el que se usa la estructura `Date`:  
+---
+# <a name="reference-type-function-arguments"></a>Argumentos de función de tipo de referencia
+Suele ser más eficaz pasar referencias, en lugar de objetos grandes, a las funciones. De este modo, el compilador puede pasar la dirección del objeto mientras mantiene la sintaxis que se habría utilizado para tener acceso al objeto. Considere el ejemplo siguiente, en el que se usa la estructura `Date`:  
   
 ```  
 // reference_type_function_arguments.cpp  
@@ -67,9 +84,9 @@ int main()
 }  
 ```  
   
- El código anterior muestra que, para acceder a los miembros de una estructura pasada por referencia, se usa el operador de selección de miembro \(**.**\) en lugar del operador de selección de miembro de puntero \(**–\>**\).  
+ El código anterior muestra que se accede a los miembros de una estructura pasada por referencia mediante el operador de selección de miembro (**.**) en lugar del operador de selección de miembro de puntero (**->**).  
   
- Aunque los argumentos pasados como tipos de referencia se rigen por la sintaxis de los tipos que no son de puntero, mantienen una característica importante de los tipos de puntero: son modificables a menos que se declaren como **const**.  Dado que el código anterior no tenía como intención modificar el objeto `GDate`, un prototipo de función más adecuado sería:  
+ Aunque los argumentos pasados como tipos de referencia rigen por la sintaxis de los tipos de no son de puntero, mantienen una característica importante de los tipos de puntero: son modificables a menos que se declara como **const**. Dado que el código anterior no tenía como intención modificar el objeto `GDate`, un prototipo de función más adecuado sería:  
   
 ```  
 long JulianFromGregorian( const Date& GDate );  
@@ -77,7 +94,7 @@ long JulianFromGregorian( const Date& GDate );
   
  Este prototipo garantiza que la función `JulianFromGregorian` no cambiará su argumento.  
   
- Cualquier función que se ajuste a un prototipo que toma un tipo de referencia puede aceptar un objeto del mismo tipo en su lugar, porque hay una conversión estándar de *typename* a *typename***&**.  
+ Cualquier función prototipo que toma un tipo de referencia puede aceptar un objeto del mismo tipo en su lugar, porque no hay una conversión estándar de *typename* a *typename* ** & **.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencias](../cpp/references-cpp.md)

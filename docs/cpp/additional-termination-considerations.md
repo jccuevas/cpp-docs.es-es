@@ -1,30 +1,47 @@
 ---
-title: "Consideraciones de finalizaci&#243;n adicionales | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "salir de aplicaciones"
-  - "programas [C++], terminar"
-  - "salir de aplicaciones"
+title: "Consideraciones de finalización adicionales | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- quitting applications
+- exiting applications
+- programs [C++], terminating
 ms.assetid: acbe2332-9d8a-4a58-a471-dd652a837384
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Consideraciones de finalizaci&#243;n adicionales
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a97c2061b9d677fd31b40d320a7cfe73540adc56
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Puede finalizar un programa C\+\+ mediante **exit**, `return` o **abort**.  Puede agregar procesamiento de salida mediante la función `atexit`.  Esto se trata en las siguientes secciones.  
+---
+# <a name="additional-termination-considerations"></a>Consideraciones de finalización adicionales
+Puede finalizar un programa de C++ mediante el uso de **salir**, `return`, o **anular**. Puede agregar procesamiento de salida mediante la función `atexit`. Esto se trata en las siguientes secciones.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Inicio y finalización](../cpp/startup-and-termination-cpp.md)

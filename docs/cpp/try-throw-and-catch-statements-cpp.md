@@ -1,51 +1,67 @@
 ---
-title: "Instrucciones try, throw y catch (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "catch_cpp"
-  - "throw"
-  - "try_cpp"
-  - "try"
-  - "throw_cpp"
-  - "catch"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "catch (palabra clave) [C++]"
-  - "palabras clave [C++], control de excepciones"
-  - "Control de excepciones de C++, la sintaxis de instrucción"
-  - "try-catch (palabra clave) [C++], acerca de control de excepciones try-catch"
-  - "throw (palabra clave) [C++]"
-  - "try-catch (palabra clave) [C++]"
-  - "try-catch (palabra clave) [C++], control de excepciones"
-  - "producir excepciones, throw (palabra clave)"
-  - "try-catch (palabra clave) [C++], throw (palabra clave) [C++] s"
-  - "producir excepciones, implementar el control de excepciones de C++"
-  - "producir excepciones"
-  - "throw (palabra clave) [C++], throw() frente a throw (...)"
+title: try, throw y catch instrucciones (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- catch_cpp
+- throw
+- try_cpp
+- try
+- throw_cpp
+- catch
+dev_langs:
+- C++
+helpviewer_keywords:
+- catch keyword [C++]
+- keywords [C++], exception handling
+- C++ exception handling, statement syntax
+- try-catch keyword [C++], about try-catch exception handling
+- throw keyword [C++]
+- try-catch keyword [C++]
+- try-catch keyword [C++], exception handling
+- throwing exceptions, throw keyword
+- try-catch keyword [C++], throw keyword [C++]s
+- throwing exceptions, implementing C++ exception handling
+- throwing exceptions
+- throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
 caps.latest.revision: 24
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Instrucciones try, throw y catch (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 89db418a92239460379d1ea41d2d49a8073095c2
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="try-throw-and-catch-statements-c"></a>Instrucciones try, throw y catch (C++)
 Para implementar el control de excepciones de C++, se usan expresiones `try`, `throw` y `catch`.  
   
  En primer lugar, se debe usar un bloque `try` para incluir una o más instrucciones que pueden iniciar una excepción.  
   
- Una expresión `throw` indica que se ha producido una condición excepcional, a menudo un error, en un bloque `try`. Se puede usar un objeto de cualquier tipo como operando de una expresión `throw`. Normalmente, este objeto se emplea para comunicar información sobre el error. En la mayoría de los casos, recomendamos que use la [std:: Exception](../standard-library/exception-class1.md) clase o una de las clases derivadas que se definen en la biblioteca estándar. Si no es adecuado usar una de ellas, se recomienda derivar su propia clase de excepción de `std::exception`.  
+ Una expresión `throw` indica que se ha producido una condición excepcional, a menudo un error, en un bloque `try`. Se puede usar un objeto de cualquier tipo como operando de una expresión `throw`. Normalmente, este objeto se emplea para comunicar información sobre el error. En la mayoría de los casos, recomendamos que use la [std:: Exception](../standard-library/exception-class.md) clase o una de las clases derivadas que se definen en la biblioteca estándar. Si no es adecuado usar una de ellas, se recomienda derivar su propia clase de excepción de `std::exception`.  
   
  Para controlar las excepciones que se pueden producir, implemente uno o varios bloques `catch` inmediatamente después de un bloque `try`. Cada bloque `catch` especifica el tipo de excepción que puede controlar.  
   
@@ -87,7 +103,7 @@ MyData GetNetworkResource()
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El código después de la cláusula `try` es la sección de código protegida. El `throw` expresión *produce*es decir, produce, una excepción. El bloque de código que hay detrás de la cláusula `catch` es el controlador de excepciones. Este es el controlador que *detecta* la excepción que se produce si los tipos en el `throw` y `catch` expresiones son compatibles. Para obtener una lista de reglas que rigen la coincidencia de tipos en `catch` bloques, vea [se evalúan los bloques Catch cómo](../cpp/how-catch-blocks-are-evaluated-cpp.md). Si la instrucción `catch` especifica puntos suspensivos (...) en lugar de un tipo, el bloque `catch` controla todos los tipos de excepciones. Cuando se compila con la [/EHa](../build/reference/eh-exception-handling-model.md) opción, estos pueden incluir excepciones estructuradas de C y excepciones asincrónicas generadas por el sistema o generados por la aplicación, como infracciones de división por cero y de punto flotante de protección, de memoria. Puesto que los bloques `catch` se procesan por orden de programa para encontrar un tipo coincidente, un controlador de puntos suspensivos debe ser el último controlador del bloque `try` asociado. Use `catch(...)` con precaución; no permita que un programa continúe a menos que el bloque catch sepa controlar la excepción específica que se detecta. Normalmente, un bloque `catch(...)` se emplea para registrar errores y realizar limpiezas especiales antes de que se detenga la ejecución de un programa.  
+ El código después de la cláusula `try` es la sección de código protegida. El `throw` expresión *produce*: es decir, se genera: una excepción. El bloque de código que hay detrás de la cláusula `catch` es el controlador de excepciones. Este es el controlador que *detecta* la excepción que se produce si los tipos en el `throw` y `catch` expresiones son compatibles. Para obtener una lista de reglas que rigen la coincidencia de tipos en `catch` bloques, vea [se evalúan los bloques Catch cómo](../cpp/how-catch-blocks-are-evaluated-cpp.md). Si la instrucción `catch` especifica puntos suspensivos (...) en lugar de un tipo, el bloque `catch` controla todos los tipos de excepciones. Cuando se compila con la [/EHa](../build/reference/eh-exception-handling-model.md) opción, estos pueden incluir excepciones estructuradas de C y las excepciones asincrónicas generadas por el sistema o generados por la aplicación como infracciones de división por cero y de punto flotante de protección, de memoria . Puesto que los bloques `catch` se procesan por orden de programa para encontrar un tipo coincidente, un controlador de puntos suspensivos debe ser el último controlador del bloque `try` asociado. Use `catch(...)` con precaución; no permita que un programa continúe a menos que el bloque catch sepa controlar la excepción específica que se detecta. Normalmente, un bloque `catch(...)` se emplea para registrar errores y realizar limpiezas especiales antes de que se detenga la ejecución de un programa.  
   
  Una expresión `throw` sin operandos vuelve a iniciar la excepción que se controla actualmente. Se recomienda usar este formato al volver a iniciar la excepción, ya que esto conserva la información de tipo polimórfico de la excepción original. Una expresión así únicamente se debe usar en un controlador `catch` o en una función a la que se llama desde un controlador `catch`. El objeto de excepción que se vuelve a iniciar es el objeto de excepción original, no una copia.  
   
@@ -96,7 +112,7 @@ try {
    throw CSomeOtherException();  
 }  
 catch(...) {  
-   // Catch all exceptions – dangerous!!!  
+   // Catch all exceptions - dangerous!!!  
    // Respond (perhaps only partially) to the exception, then  
    // re-throw to pass the exception to some other handler  
    // ...  
@@ -107,5 +123,5 @@ catch(...) {
 ## <a name="see-also"></a>Vea también  
  [Control de excepciones de C++](../cpp/cpp-exception-handling.md)   
  [Palabras clave](../cpp/keywords-cpp.md)   
- [Excepciones C++ no controladas](../cpp/unhandled-cpp-exceptions.md)   
+ [Excepciones de C++ no controladas](../cpp/unhandled-cpp-exceptions.md)   
  [__uncaught_exception](../c-runtime-library/reference/uncaught-exception.md)

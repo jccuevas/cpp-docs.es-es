@@ -1,48 +1,65 @@
 ---
-title: "appdomain | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "appdomain_cpp"
-  - "appdomain"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec (palabra clave) [C++], appdomain"
-  - "appdomain __declspec (palabra clave)"
+title: AppDomain | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- appdomain_cpp
+- appdomain
+dev_langs:
+- C++
+helpviewer_keywords:
+- appdomain __declspec keyword
+- __declspec keyword [C++], appdomain
 ms.assetid: 29d843cb-cb6b-4d1b-a48d-d928a877234d
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# appdomain
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9d4143fa5bb7b302899207041d38cd355ac31b42
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Especifica que cada dominio de aplicación de la aplicación administrada debe tener una copia propia de una variable global determinada o de una variable miembro static.  Para obtener más información, vea [Dominios de aplicación y Visual C\+\+](../dotnet/application-domains-and-visual-cpp.md).  
+---
+# <a name="appdomain"></a>appdomain
+Especifica que cada dominio de aplicación de la aplicación administrada debe tener una copia propia de una variable global determinada o de una variable miembro static. Vea [dominios de aplicación y Visual C++](../dotnet/application-domains-and-visual-cpp.md) para obtener más información.  
   
- Cada dominio de aplicación tiene su propia copia de una variable por appdomain.  Un constructor de una variable appdomain se ejecuta cuando se carga un ensamblado en un dominio de aplicación, y se ejecuta el destructor cuando se descarga el dominio de aplicación.  
+ Cada dominio de aplicación tiene su propia copia de una variable por appdomain. Un constructor de una variable appdomain se ejecuta cuando se carga un ensamblado en un dominio de aplicación, y se ejecuta el destructor cuando se descarga el dominio de aplicación.  
   
- Si desea que todos los dominios de aplicación de un proceso de Common Language Runtime compartan una variable global, utilice el modificador `__declspec(process)`.  `__declspec(process)` está activada de forma predeterminada en [\/clr](../build/reference/clr-common-language-runtime-compilation.md) y `__declspec(appdomain)` está activada de forma predeterminada en **\/clr:pure**.  `__declspec(appdomain)` se aplica en **\/clr:safe**.  
+ Si desea que todos los dominios de aplicación de un proceso de Common Language Runtime compartan una variable global, utilice el modificador `__declspec(process)`. `__declspec(process)`está en vigor de forma predeterminada en [/CLR](../build/reference/clr-common-language-runtime-compilation.md) y `__declspec(appdomain)` está en vigor de forma predeterminada en **/CLR: pure**. `__declspec(appdomain)`se aplica en **/CLR: safe**. Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso en Visual Studio 2015.  
   
- `__declspec(appdomain)` es válido solo cuando se usa una de las opciones del compilador **\/clr**.  Solo una variable global, una variable miembro estática o una variable local estática se pueden marcar con `__declspec(appdomain)`.  Es un error aplicar `__declspec(appdomain)` a miembros estáticos de tipos administrados, porque siempre tienen este comportamiento.  
+ `__declspec(appdomain)`solo es válida cuando uno de los **/CLR** se utiliza la opción del compilador. Solo una variable global, una variable miembro estática o una variable local estática se pueden marcar con `__declspec(appdomain)`. Es un error aplicar `__declspec(appdomain)` a miembros estáticos de tipos administrados, porque siempre tienen este comportamiento.  
   
- Usar `__declspec(appdomain)` es similar a usar el [almacenamiento local de subprocesos \(TLS\)](../parallel/thread-local-storage-tls.md).  Los subprocesos tienen su propio almacenamiento, como los dominios de aplicación.  Al usar `__declspec(appdomain)`, se garantiza que la variable global tiene su propio almacenamiento en cada dominio de aplicación creado para esta aplicación.  
+ Usar `__declspec(appdomain)` es similar al uso [almacenamiento Local de subprocesos (TLS)](../parallel/thread-local-storage-tls.md). Los subprocesos tienen su propio almacenamiento, como los dominios de aplicación. Al usar `__declspec(appdomain)`, se garantiza que la variable global tiene su propio almacenamiento en cada dominio de aplicación creado para esta aplicación.  
   
- Hay limitaciones para la combinación de variables por proceso y por appdomain; vea [proceso](../cpp/process.md) para obtener más información.  
+ Existen limitaciones para la combinación de cada proceso variables y por appdomain; vea [proceso](../cpp/process.md) para obtener más información.  
   
- Por ejemplo, en el inicio del programa, primero se inicializan todas las variables por proceso y, después, todas las variables por appdomain.  Por consiguiente, cuando se inicializa una variable por proceso, esta no puede depender del valor de cualquier variable de dominio por aplicación.  No se recomienda combinar el uso \(asignación\) de variables por appdomain y por proceso.  
+ Por ejemplo, en el inicio del programa, primero se inicializan todas las variables por proceso y, después, todas las variables por appdomain. Por consiguiente, cuando se inicializa una variable por proceso, esta no puede depender del valor de cualquier variable de dominio por aplicación. No se recomienda combinar el uso (asignación) de variables por appdomain y por proceso.  
   
- Para obtener información sobre cómo llamar a una función en un dominio de aplicación concreto, vea [call\_in\_appdomain \(Función\)](../dotnet/call-in-appdomain-function.md).  
+ Para obtener información acerca de cómo llamar a una función en un dominio de aplicación específica, consulte [call_in_appdomain (función)](../dotnet/call-in-appdomain-function.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // declspec_appdomain.cpp  
@@ -119,28 +136,31 @@ int main() {
 }  
 ```  
   
-  **\_\_declspec\(process\) CGlobal::CGlobal constructor**  
-**\_\_declspec\(appdomain\) CGlobal::CGlobal constructor**  
-**Valor inicial**  
-**process\_global value in appdomain 'declspec\_appdomain.exe': 10**  
-**appdomain\_global value in appdomain 'declspec\_appdomain.exe': 10**  
-**\_\_declspec\(appdomain\) CGlobal::CGlobal constructor**  
-**process\_global value in appdomain 'Domain 1': 10**  
-**appdomain\_global value in appdomain 'Domain 1': 10**  
-**\_\_declspec\(appdomain\) CGlobal::CGlobal constructor**  
-**process\_global value in appdomain 'Domain 2': 10**  
-**appdomain\_global value in appdomain 'Domain 2': 10**  
-**Changed value**  
-**process\_global value in appdomain 'declspec\_appdomain.exe': 20**  
-**appdomain\_global value in appdomain 'declspec\_appdomain.exe': 10**  
-**process\_global value in appdomain 'Domain 1': 20**  
-**appdomain\_global value in appdomain 'Domain 1': 11**  
-**process\_global value in appdomain 'Domain 2': 20**  
-**appdomain\_global value in appdomain 'Domain 2': 12**  
-**\_\_declspec\(appdomain\) CGlobal::~CGlobal destructor**  
-**\_\_declspec\(appdomain\) CGlobal::~CGlobal destructor**  
-**\_\_declspec\(appdomain\) CGlobal::~CGlobal destructor**  
-**\_\_declspec\(process\) CGlobal::~CGlobal destructor**   
-## Vea también  
- [\_\_declspec](../cpp/declspec.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)
+```Output  
+__declspec(process) CGlobal::CGlobal constructor  
+__declspec(appdomain) CGlobal::CGlobal constructor  
+Initial value  
+process_global value in appdomain 'declspec_appdomain.exe': 10  
+appdomain_global value in appdomain 'declspec_appdomain.exe': 10  
+__declspec(appdomain) CGlobal::CGlobal constructor  
+process_global value in appdomain 'Domain 1': 10  
+appdomain_global value in appdomain 'Domain 1': 10  
+__declspec(appdomain) CGlobal::CGlobal constructor  
+process_global value in appdomain 'Domain 2': 10  
+appdomain_global value in appdomain 'Domain 2': 10  
+Changed value  
+process_global value in appdomain 'declspec_appdomain.exe': 20  
+appdomain_global value in appdomain 'declspec_appdomain.exe': 10  
+process_global value in appdomain 'Domain 1': 20  
+appdomain_global value in appdomain 'Domain 1': 11  
+process_global value in appdomain 'Domain 2': 20  
+appdomain_global value in appdomain 'Domain 2': 12  
+__declspec(appdomain) CGlobal::~CGlobal destructor  
+__declspec(appdomain) CGlobal::~CGlobal destructor  
+__declspec(appdomain) CGlobal::~CGlobal destructor  
+__declspec(process) CGlobal::~CGlobal destructor  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [__declspec](../cpp/declspec.md)   
+ [Palabras clave](../cpp/keywords-cpp.md)

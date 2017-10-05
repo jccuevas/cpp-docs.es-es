@@ -1,47 +1,63 @@
 ---
-title: "Operador address-of: &amp; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "address-of"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "& (operador)"
-  - "& (operador), address-of (operador)"
-  - "address-of (operador) (&)"
+title: 'Operador Address-of: &amp; | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- address-of
+dev_langs:
+- C++
+helpviewer_keywords:
+- address-of operator (&)
+- '& operator'
+- '& operator, address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operador address-of: &amp;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 56e2606759cc381c1ae6f6f4f1f7cbc1d9d2d810
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-## Sintaxis  
+---
+# <a name="address-of-operator-amp"></a>Operador Address-of:&amp;
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 & cast-expression  
 ```  
   
-## Comentarios  
- El operador unario address\-of \(**&**\) toma la dirección de su operando.  El operando del operador address\-of puede ser un designador de función o un valor L que designe un objeto que no es un campo de bits y no se declara con el especificador de clase de almacenamiento **register**.  
+## <a name="remarks"></a>Comentarios  
+ El operador unario address-of (**&**) toma la dirección de su operando. El operando del operador address-of puede ser un designador de función o un valor L que designe un objeto que no es un campo de bits y no se declara con el especificador de clase de almacenamiento **register**.  
   
- El operador address\-of solo se puede aplicar a variables con tipos fundamentales, de estructura, de clase o de unión que se declaren en el nivel de ámbito de archivo o para referencias de matriz de subíndice.  En estas expresiones, se puede agregar o quitar de la expresión address\-of una expresión constante que no incluya el operador address\-of.  
+ El operador address-of solo se puede aplicar a variables con tipos fundamentales, de estructura, de clase o de unión que se declaren en el nivel de ámbito de archivo o para referencias de matriz de subíndice. En estas expresiones, se puede agregar o quitar de la expresión address-of una expresión constante que no incluya el operador address-of.  
   
- Cuando se aplica a funciones o valores L, el resultado de la expresión es un tipo de puntero \(un valor R\) derivado del tipo del operando.  Por ejemplo, si el operando es de tipo `char`, el resultado de la expresión es de tipo puntero a `char`.  El operator address\-of, aplicado a objetos **const** o `volatile`, se evalúa como **const** `type` **\*** o `volatile` `type` **\***, donde `type` es el tipo del objeto original.  
+ Cuando se aplica a funciones o valores L, el resultado de la expresión es un tipo de puntero (un valor R) derivado del tipo del operando. Por ejemplo, si el operando es de tipo `char`, el resultado de la expresión es de tipo puntero a `char`. El operador address-of, aplicado a **const** o `volatile` los objetos, se evalúa como **const** `type` ** \* ** o `volatile` `type` ** \* **, donde `type` es el tipo del objeto original.  
   
- Cuando el operador address\-of se aplica a un [nombre completo](http://msdn.microsoft.com/es-es/3fefb16d-8120-4627-8b3f-3d90fbdcd1df), el resultado depende de si *qualified\-name* especifica un miembro estático.  En ese caso, el resultado es un puntero al tipo especificado en la declaración del miembro.  Si el miembro no es estático, el resultado es un puntero al *name* del miembro de la clase que se indica mediante el elemento *qualified\-class\-name*. \(Vea [Expresiones primarias](../cpp/primary-expressions.md) para obtener más información sobre el elemento *qualified\-class\-name*\). En el fragmento de código siguiente se muestra cómo difiere el resultado, dependiendo de si el miembro es estático:  
+ Cuando se aplica el operador address-of a una [nombre completo](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df), el resultado depende de si la *nombre calificado* especifica un miembro estático. En ese caso, el resultado es un puntero al tipo especificado en la declaración del miembro. Si el miembro no es estático, el resultado es un puntero al miembro *nombre* de la clase indicada por *qualified-class-name*. (Consulte [expresiones primarias](../cpp/primary-expressions.md) para obtener más información acerca de *qualified-class-name*.) En el fragmento de código siguiente se muestra cómo difiere el resultado, dependiendo de si el miembro es estático:  
   
 ```  
 // expre_Address_Of_Operator.cpp  
@@ -61,11 +77,11 @@ int main() {
   
  En este ejemplo, la expresión `&PTM::fValue` proporciona el tipo `float *` en lugar de `float PTM::*`, porque `fValue` es un miembro estático.  
   
- La dirección de una función sobrecargada se puede tomar solo cuando está claro a qué versión de la función se hace referencia.  Vea [Dirección de funciones sobrecargadas](../misc/address-of-overloaded-functions.md) para obtener información sobre cómo obtener la dirección de una función sobrecargada concreta.  
+ La dirección de una función sobrecargada se puede tomar solo cuando está claro a qué versión de la función se hace referencia. Vea [sobrecarga de funciones](function-overloading.md) para obtener información acerca de cómo obtener la dirección de una determinada función sobrecargada.  
   
- Al aplicar el operator address\-of a un tipo de referencia se obtiene el mismo resultado que al aplicar el operador al objeto al que se enlaza la referencia.  Por ejemplo:  
+ Al aplicar el operator address-of a un tipo de referencia se obtiene el mismo resultado que al aplicar el operador al objeto al que se enlaza la referencia. Por ejemplo:  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // expre_Address_Of_Operator2.cpp  
@@ -82,13 +98,13 @@ int main() {
 }  
 ```  
   
-## Salida  
+## <a name="output"></a>Resultado  
   
 ```  
 &d equals &rd  
 ```  
   
- En el ejemplo siguiente se usa el operator address\-of para pasar un argumento de puntero a una función:  
+ En el ejemplo siguiente se usa el operator address-of para pasar un argumento de puntero a una función:  
   
 ```  
 // expre_Address_Of_Operator3.cpp  
@@ -109,15 +125,14 @@ int main() {
 }  
 ```  
   
-## Salida  
+## <a name="output"></a>Resultado  
   
 ```  
 25  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Expresiones con operadores unarios](../cpp/expressions-with-unary-operators.md)   
- [Operadores de C\+\+](../misc/cpp-operators.md)   
- [Operadores de C\+\+, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Declarador de referencia a un valor L: &](../cpp/lvalue-reference-declarator-amp.md)   
- [Operadores de direccionamiento indirecto y address\-of](../c-language/indirection-and-address-of-operators.md)
+ [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Declarador de referencia lvalue: &](../cpp/lvalue-reference-declarator-amp.md)   
+ [Operadores de direccionamiento indirecto y address-of](../c-language/indirection-and-address-of-operators.md)

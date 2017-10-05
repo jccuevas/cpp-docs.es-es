@@ -1,41 +1,58 @@
 ---
-title: "Operadores de conversi&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operadores de conversión"
-  - "operadores [C++], convertir"
+title: "Operadores de conversión | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs:
+- C++
+helpviewer_keywords:
+- operators [C++], casting
+- casting operators
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Operadores de conversi&#243;n
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a516297b687db349a6bcc867fc94dcd85118a8a5
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Hay varios operadores de conversión específicos del lenguaje C\+\+.  Estos operadores están diseñados para quitar una parte de la ambigüedad y riesgo inherentes a las conversiones antiguas del lenguaje C.  Estos operadores son:  
+---
+# <a name="casting-operators"></a>Operadores de conversión
+Hay varios operadores de conversión específicos del lenguaje C++. Estos operadores están diseñados para quitar una parte de la ambigüedad y riesgo inherentes a las conversiones antiguas del lenguaje C. Estos operadores son:  
   
--   [dynamic\_cast](../cpp/dynamic-cast-operator.md) Se usa para la conversión de tipos polimórficos.  
+-   [dynamic_cast](../cpp/dynamic-cast-operator.md) usada para la conversión de tipos polimórficos.  
   
--   [static\_cast](../cpp/static-cast-operator.md) Se usa para la conversión de tipos no polimórficos.  
+-   [static_cast](../cpp/static-cast-operator.md) usada para la conversión de tipos no polimórficos.  
   
--   [const\_cast](../cpp/const-cast-operator.md) Se usa para quitar los atributos `const`, `volatile` y `__unaligned`.  
+-   [const_cast](../cpp/const-cast-operator.md) usa para quitar el `const`, `volatile`, y `__unaligned` atributos.  
   
--   [reinterpret\_cast](../cpp/reinterpret-cast-operator.md) Se usa para la reinterpretación simple de bits.  
+-   [reinterpret_cast](../cpp/reinterpret-cast-operator.md) utilizado para la reinterpretación simple de bits.  
   
--   [safe\_cast](../windows/safe-cast-cpp-component-extensions.md) Se usa para producir MSIL que se puede comprobar.  
+-   [safe_cast](../windows/safe-cast-cpp-component-extensions.md) se usa para generar MSIL comprobable.  
   
- Use `const_cast` y `reinterpret_cast` como último recurso, ya que estos operadores plantean los mismos peligros que las conversiones antiguas.  Sin embargo, siguen siendo necesarios para reemplazar completamente las conversiones antiguas.  
+ Use `const_cast` y `reinterpret_cast` como último recurso, ya que estos operadores plantean los mismos peligros que las conversiones antiguas. Sin embargo, siguen siendo necesarios para reemplazar completamente las conversiones antiguas.  
   
-## Vea también  
- [Convertir](../cpp/casting.md)
+## <a name="see-also"></a>Vea también  
+ [Conversión](../cpp/casting.md)

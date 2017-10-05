@@ -1,33 +1,50 @@
 ---
-title: "final (especificador) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "final"
-  - "final_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "final (identificador)"
+title: final (especificador) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- final
+- final_CPP
+dev_langs:
+- C++
+helpviewer_keywords:
+- final Identifier
 ms.assetid: 649866d0-79d4-449f-ab74-f84b911b79a3
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# final (especificador)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c9f0a638707466778e75a3eabfe838c84b0355d7
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Puede utilizar la palabra clave `final` para designar funciones virtuales que no se pueden invalidar en una clase derivada.  También puede utilizarla para designar clases que no se pueden heredar.  
+---
+# <a name="final-specifier"></a>final (especificador)
+Puede utilizar la palabra clave `final` para designar funciones virtuales que no se pueden invalidar en una clase derivada. También puede utilizarla para designar clases que no se pueden heredar.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -39,12 +56,12 @@ function-declaration final;
 class class-name final base-classes  
 ```  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  `final` es contextual y tiene un significado especial solo cuando se utiliza después de una declaración de función o nombre de clase; de lo contrario, no es una palabra clave reservada.  
   
  Cuando `final` se utiliza en declaraciones de clase, `base-classes` es una parte opcional de la declaración.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa la palabra clave `final` para especificar que no se puede invalidar una función virtual.  
   
 ```cpp  
@@ -60,7 +77,7 @@ class DerivedClass: public BaseClass
 };  
 ```  
   
- Para obtener información sobre cómo especificar que las funciones miembro se puedan invalidar, vea [override \(especificador\)](../cpp/override-specifier.md).  
+ Para obtener información sobre cómo especificar que se pueden invalidar las funciones miembro, vea [especificador de reemplazo](../cpp/override-specifier.md).  
   
  En el ejemplo siguiente se usa la palabra clave `final` para especificar que una clase no se puede heredar.  
   
@@ -75,7 +92,6 @@ class DerivedClass: public BaseClass // compiler error: BaseClass is
 };  
 ```  
   
-## Vea también  
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)   
- [\(NOTINBUILD\) C\+\+ Type Names](http://msdn.microsoft.com/es-es/b53ba470-e583-4e5c-b634-6018f6110674)   
- [override \(especificador\)](../cpp/override-specifier.md)
+## <a name="see-also"></a>Vea también  
+ [Palabras clave](../cpp/keywords-cpp.md)   
+ [override (Especificador)](../cpp/override-specifier.md)

@@ -1,55 +1,71 @@
 ---
-title: "Unions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "union_cpp"
-  - "union"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipos de clase, uniones como"
-  - "union (palabra clave) [C++]"
+title: Uniones | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- union_cpp
+- union
+dev_langs:
+- C++
+helpviewer_keywords:
+- class types, unions as
+- union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# Unions
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 3a4cbede49c32fd7ae60320fa13b9dd4e3c729a8
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-`union` es un tipo definido por el usuario en el que todos los miembros comparten la misma ubicación de memoria.  Esto significa que, en un momento dado, una unión no puede contener más de un objeto de su lista de miembros.  También significa que, independientemente de cuántos miembros tiene una unión, en todo momento usa únicamente la memoria suficiente para almacenar al miembro más grande.  
+---
+# <a name="unions"></a>Uniones
+`union` es un tipo definido por el usuario en el que todos los miembros comparten la misma ubicación de memoria. Esto significa que, en un momento dado, una unión no puede contener más de un objeto de su lista de miembros. También significa que, independientemente de cuántos miembros tiene una unión, en todo momento usa únicamente la memoria suficiente para almacenar al miembro más grande.  
   
- Las uniones pueden ser útiles para conservar memoria cuando se tienen muchos objetos y\/o memoria limitada.  Sin embargo, debe extremar las precauciones para usarlas correctamente, ya que es el responsable de garantizar que accede siempre al último miembro que se escribió.  Si los tipos de miembro tienen un constructor no trivial, debe escribir código adicional para construir y destruir ese miembro explícitamente.  Antes de usar una unión, considere si el problema que intenta resolver se puede expresar mejor usando una clase base y clases derivadas.  
+ Las uniones pueden ser útiles para conservar memoria cuando se tienen muchos objetos y/o memoria limitada. Sin embargo, debe extremar las precauciones para usarlas correctamente, ya que es el responsable de garantizar que accede siempre al último miembro que se escribió. Si los tipos de miembro tienen un constructor no trivial, debe escribir código adicional para construir y destruir ese miembro explícitamente. Antes de usar una unión, considere si el problema que intenta resolver se puede expresar mejor usando una clase base y clases derivadas.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 union [name]  { member-list };  
-  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `name`  
  Nombre del tipo dado a la unión.  
   
  `member-list`  
- Miembros que puede contener la unión.  Vea la sección Comentarios.  
+ Miembros que puede contener la unión. Vea la sección Comentarios.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
   
-## Declarar una unión  
+## <a name="declaring-a-union"></a>Declarar una unión  
  Comience la declaración de una unión con la palabra clave `union` y agregue la lista de miembros entre llaves:  
   
-```  
+```cpp  
 // declaring_a_union.cpp  
 union RecordType    // Declare a simple union type  
 {  
@@ -68,11 +84,10 @@ int main()
 }  
 ```  
   
-## Usar uniones  
- En el ejemplo anterior, el código que acceda a la unión debe saber qué miembro mantiene los datos.  La solución más común a este problema es incluir la unión en una estructura junto con un miembro de enumeración adicional que indica el tipo de datos almacenados actualmente en la unión.  Esto se denomina una *unión discriminada*, y en el ejemplo siguiente se muestra el patrón básico.  
+## <a name="using-unions"></a>Usar uniones  
+ En el ejemplo anterior, el código que acceda a la unión debe saber qué miembro mantiene los datos. La solución más común a este problema es incluir la unión en una estructura junto con un miembro de enumeración adicional que indica el tipo de datos almacenados actualmente en la unión. Esto se denomina una *unión discriminada* y en el ejemplo siguiente se muestra el patrón básico.  
   
-```  
-  
+```cpp  
 #include "stdafx.h"  
 #include <queue>  
   
@@ -155,16 +170,16 @@ void Initialize()
   
 ```  
   
- En el ejemplo anterior, observe que la unión de la estructura de entrada no tiene nombre.  Se trata de una unión anónima, y se accede a sus miembros como si fueran miembros directos de la estructura.  Para obtener más información sobre las uniones anónimas, vea la sección siguiente.  
+ En el ejemplo anterior, observe que la unión de la estructura de entrada no tiene nombre. Se trata de una unión anónima, y se accede a sus miembros como si fueran miembros directos de la estructura. Para obtener más información sobre las uniones anónimas, vea la sección siguiente.  
   
- Evidentemente, en el ejemplo anterior se muestra un problema que también podría resolverse usando clases derivadas de una clase base común y bifurcando el código en función del tipo de tiempo de ejecución de cada objeto del contenedor.  Esto puede generar un código más fácil de mantener y comprender, pero también más lento que el uso de uniones.  Además, con una unión, puede almacenar tipos que no tienen nada que ver y cambiar dinámicamente el tipo del valor que se almacena sin cambiar el tipo de la variable de unión.  De este modo, puede crear una matriz heterogénea de MyUnionType, cuyos elementos almacenan diferentes valores de tipos diferentes.  
+ Evidentemente, en el ejemplo anterior se muestra un problema que también podría resolverse usando clases derivadas de una clase base común y bifurcando el código en función del tipo de tiempo de ejecución de cada objeto del contenedor. Esto puede generar un código más fácil de mantener y comprender, pero también más lento que el uso de uniones. Además, con una unión, puede almacenar tipos que no tienen nada que ver y cambiar dinámicamente el tipo del valor que se almacena sin cambiar el tipo de la variable de unión. De este modo, puede crear una matriz heterogénea de MyUnionType, cuyos elementos almacenan diferentes valores de tipos diferentes.  
   
- Tenga en cuenta que existe la posibilidad de que la estructura `Input` del ejemplo anterior se use indebidamente.  Es decisión del usuario usar el discriminador correctamente para acceder al miembro que contiene los datos.  Para evitar el uso indebido, haga que la unión sea privada y proporcione funciones de acceso especiales, como se muestra en el ejemplo siguiente.  
+ Tenga en cuenta que existe la posibilidad de que la estructura `Input` del ejemplo anterior se use indebidamente. Es decisión del usuario usar el discriminador correctamente para acceder al miembro que contiene los datos. Para evitar el uso indebido, haga que la unión sea privada y proporcione funciones de acceso especiales, como se muestra en el ejemplo siguiente.  
   
-## Uniones sin restricción \(C\+\+11\)  
- En C\+\+03 y versiones anteriores, una unión puede contener miembros de datos no estáticos con el tipo de clase siempre y cuando el tipo no tenga constructores, destructores ni operadores de asignación proporcionados por el usuario.  En C\+\+11, se quitaron estas restricciones.  Si incluye miembros de este tipo en la unión, el compilador marcará automáticamente como eliminadas las funciones miembro especiales que no proporcionase el usuario.  Si la unión es una unión anónima dentro de una clase o estructura, las funciones miembro especiales de la clase o estructura que no proporcionase el usuario se marcan como eliminadas.  En el siguiente ejemplo se muestra cómo controlar el caso en que uno de los miembros de la unión tiene un miembro que requiere este tratamiento especial:  
+## <a name="unrestricted-unions-c11"></a>Uniones sin restricción (C++11)  
+ En C++03 y versiones anteriores, una unión puede contener miembros de datos no estáticos con el tipo de clase siempre y cuando el tipo no tenga constructores, destructores ni operadores de asignación proporcionados por el usuario. En C++11, se quitaron estas restricciones. Si incluye miembros de este tipo en la unión, el compilador marcará automáticamente como eliminadas las funciones miembro especiales que no proporcionase el usuario. Si la unión es una unión anónima dentro de una clase o estructura, las funciones miembro especiales de la clase o estructura que no proporcionase el usuario se marcan como eliminadas. En el siguiente ejemplo se muestra cómo controlar el caso en que uno de los miembros de la unión tiene un miembro que requiere este tratamiento especial:  
   
-```  
+```cpp  
 // for MyVariant  
 #include <crtdbg.h>  
 #include <new>  
@@ -609,12 +624,12 @@ private:
   
 ```  
   
- Las uniones no pueden almacenar referencias.  Las uniones no admiten la herencia, por lo que una unión no puede usarse como una clase base, heredar de otra clase o tener funciones virtuales.  
+ Las uniones no pueden almacenar referencias. Las uniones no admiten la herencia, por lo que una unión no puede usarse como una clase base, heredar de otra clase o tener funciones virtuales.  
   
-## Inicializar uniones  
- Puede declarar e inicializar una unión en la misma instrucción mediante la asignación de una expresión entre llaves.  La expresión se evalúa y se asigna al primer campo de la unión.  
+## <a name="initializing-unions"></a>Inicializar uniones  
+ Puede declarar e inicializar una unión en la misma instrucción mediante la asignación de una expresión entre llaves. La expresión se evalúa y se asigna al primer campo de la unión.  
   
-```  
+```cpp  
 #include <iostream>  
 using namespace std;  
   
@@ -639,33 +654,30 @@ int main()
   
 ```  
   
- La unión `NumericType` se organiza en memoria \(conceptualmente\), como se muestra en la ilustración siguiente.  
+ La unión `NumericType` se organiza en memoria (conceptualmente), como se muestra en la ilustración siguiente.  
   
  ![Almacenamiento de datos en una unión de tipo numérico](../cpp/media/vc38ul1.png "vc38UL1")  
 Almacenamiento de datos en unión de tipo numérico  
   
-## uniones anónimas  
- Las uniones anónimas son uniones declaradas sin un elemento *class\-name* o *declarator\-list*.  
+## <a name="anonymous_unions"></a>Uniones anónimas  
+ Uniones anónimas son uniones declaradas sin un *nombre de la clase* o *lista de declaradores*.  
   
+```cpp  
+union  {  member-list  }    
 ```  
   
-union  
-{  member-list  }    
-```  
+Los nombres declarados en una unión anónima se utilizan directamente, como las variables no miembro. Por lo tanto, los nombres declarados en una unión anónima deben ser únicos en el ámbito circundante.  
   
- Los nombres declarados en una unión anónima se utilizan directamente, como las variables no miembro.  Por lo tanto, los nombres declarados en una unión anónima deben ser únicos en el ámbito circundante.  
+Además de las restricciones de uniones con nombre, las uniones anónimas están sujetas a estas restricciones adicionales:  
   
- Además de las restricciones enumeradas en [Datos de miembros de union](../misc/union-member-data.md), las uniones anónimas están sujetas a restricciones adicionales:  
-  
--   También deben declararse como **static** si se declaran en el ámbito de archivo o espacio de nombres.  
+-   También se deben declarar como **estático** si se declaran en el ámbito de archivo o espacio de nombres.  
   
 -   Solo pueden tener miembros públicos; los miembros privados y protegidos de uniones anónimas generan errores.  
   
 -   No pueden tener funciones miembro.  
   
-## Vea también  
- [Clases y structs](../cpp/classes-and-structs-cpp.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)   
- [Uniones anónimas](../misc/anonymous-unions.md)   
+## <a name="see-also"></a>Vea también  
+ [Clases y estructuras](../cpp/classes-and-structs-cpp.md)   
+ [Palabras clave](../cpp/keywords-cpp.md)   
  [class](../cpp/class-cpp.md)   
  [struct](../cpp/struct-cpp.md)

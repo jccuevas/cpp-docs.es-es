@@ -1,39 +1,57 @@
 ---
-title: "Informaci&#243;n general sobre los declaradores | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "declaradores, acerca de los declaradores"
+title: "Información general sobre los declaradores | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Informaci&#243;n general sobre los declaradores
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 4a8f795a23f4e93f02d5d6b5ce98d60555a432d6
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Los declaradores son los componentes de una declaración que especifican nombres de objetos o funciones. Los declaradores también especifican si el objeto con nombre es o no un objeto, puntero, referencia o matriz.  Aunque los declaradores no especifican el tipo base, modifican la información de tipo del tipo básico para especificar tipos derivados, como punteros, referencias y matrices.  Cuando se aplica a las funciones, el declarador funciona con el especificador de tipo para especificar completamente que el tipo de valor devuelto de una función es un objeto, puntero o referencia. (Especificadores, que se describen en [Declaraciones](../misc/declarations.md), transmiten propiedades tales como clase de almacenamiento y tipo. Modificadores, se describen en esta sección y en [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md), modifican los declaradores.) En la ilustración siguiente se muestra una declaración completa de `MyFunction` y se llama a los componentes de la declaración.  
+---
+# <a name="overview-of-declarators"></a>Información general sobre los declaradores
+Los declaradores son los componentes de una declaración que especifican nombres de objetos o funciones. Los declaradores también especifican si el objeto con nombre es o no un objeto, puntero, referencia o matriz.  Aunque los declaradores no especifican el tipo base, modifican la información de tipo del tipo básico para especificar tipos derivados, como punteros, referencias y matrices.  Cuando se aplica a las funciones, el declarador funciona con el especificador de tipo para especificar completamente que el tipo de valor devuelto de una función es un objeto, puntero o referencia. (Especificadores, que se describen en [declaraciones y definiciones](declarations-and-definitions-cpp.md), transmiten propiedades tales como la clase de tipo y el almacenamiento. Modificadores, se describen en esta sección y en [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md), modifican los declaradores.) En la ilustración siguiente se muestra una declaración completa de `MyFunction` y se llama a los componentes de la declaración.  
   
- ![Modificadores, especificadores y declaradores](../cpp/media/vc38qy1.png "vc38QY1")  
+ ![Modificadores, especificadores y declaradores](../cpp/media/vc38qy1.gif "vc38QY1")  
 Especificadores, modificadores y declaradores  
   
  **Específicos de Microsoft**  
   
- La mayoría de las palabras clave extendidas de Microsoft se pueden utilizar como modificadores para formar tipos derivados; no son especificadores ni declaradores. (Consulte [Modificadores Microsoft-Specific](../cpp/microsoft-specific-modifiers.md).)  
+ La mayoría de las palabras clave extendidas de Microsoft se pueden utilizar como modificadores para formar tipos derivados; no son especificadores ni declaradores. (Consulte [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md).)  
   
- **FIN de específicos de Microsoft**  
+ **FIN de Específicos de Microsoft**  
   
- Los declaradores aparecen en la sintaxis de declaración después de una lista opcional de especificadores. Estos especificadores se describen en [declaraciones.](../misc/declarations.md) Una declaración puede contener varios declaradores, pero cada declarador declara un solo nombre.  
+ Los declaradores aparecen en la sintaxis de declaración después de una lista opcional de especificadores. Estos especificadores se describen en [declaraciones.](declarations-and-definitions-cpp.md) Una declaración puede contener varios declaradores, pero cada declarador declara un solo nombre.  
   
  En la declaración de ejemplo siguiente se muestra cómo se combinan especificadores y declaradores para formar una declaración completa:  
   
@@ -41,7 +59,7 @@ Especificadores, modificadores y declaradores
 const char *pch, ch;  
 ```  
   
- En la declaración anterior, las palabras clave **const** y `char` constituyen la lista de especificadores. Se muestran dos declaradores: `*pch` y `ch`.  Una declaración que declara varias entidades está formada por un especificador de tipo seguido de una lista separada por comas de declaradores, finalizada con un punto y coma.  
+ En la declaración anterior, las palabras clave **const** y `char` forman parte de la lista de especificadores. Se muestran dos declaradores: `*pch` y `ch`.  Una declaración que declara varias entidades está formada por un especificador de tipo seguido de una lista separada por comas de declaradores, finalizada con un punto y coma.  
   
  **Declaradores de objetos simples**  
   
@@ -53,7 +71,7 @@ const char *pch, ch;
   
  **Declaradores de punteros, referencias y matrices**  
   
- Los operadores de puntero que se insertan delante del nombre hacen que el objeto sea un puntero o referencia.  El **\*** operador declara el nombre como puntero; el **&** operador declara como referencia.  
+ Los operadores de puntero que se insertan delante del nombre hacen que el objeto sea un puntero o referencia.  El ** \* ** operador declara el nombre como puntero; el ** & ** operador declara como referencia.  
   
 ```  
 int *i; // declarator is *i  
@@ -96,8 +114,6 @@ int i[2][2]; // two dimensional array
 int f(int a, int b, int c);  
 ```  
   
- Para obtener información sobre las listas de argumentos, vea [declaraciones de función](http://msdn.microsoft.com/es-es/3f9b4e14-60d2-47c1-acd8-4fa8fc988be7).  
-  
  Los punteros y referencias a funciones se declaran mediante la anteposición del puntero u operador de referencia al nombre de función, como se muestra a continuación.  Se requieren paréntesis, normalmente opcionales, para distinguir un puntero a una función de una función que devuelve un puntero:  
   
 ```  
@@ -113,7 +129,7 @@ int (X::* pmf)(); // pointer to member function of X returning int
 int* (X::* pmf)(); // pointer to member function returning pointer to int  
 ```  
   
- Consulte también [punteros a miembros](../cpp/pointers-to-members.md).  
+ Vea también [punteros a miembros](../cpp/pointers-to-members.md).  
   
  **Funciones y objetos en la misma declaración**  
   
@@ -151,7 +167,7 @@ PIFN pifnDispatchArray[7];
 int ( *pifnDispatchArray[7] )( char * );  
 ```  
   
- Para obtener más información sobre typedef, vea [especificador typedef](http://msdn.microsoft.com/es-es/cc96cf26-ba93-4179-951e-695d1f5fdcf1).  
+ Para obtener más información sobre typedef, vea [alias y definiciones de tipo](aliases-and-typedefs-cpp.md).  
   
  Los punteros, referencias y matrices de un solo tipo base se pueden combinar en una sola declaración (separados por comas), como  
   
@@ -186,7 +202,7 @@ int a, *b, c[5], **d, &e=a;
 ::nested-name-specifier * [cv-qualfiers]  
 ```  
   
- Dado que un declarador puede contener declaradores, es posible construir los tipos derivados más complejos, como matrices de punteros, funciones que devuelven matrices de punteros a función, mediante las reglas anteriores.  Para formar cada paso de la construcción, comience con el identificador que representa el tipo de datos base y aplique la regla de sintaxis anterior con la expresión anterior como `declarator`.  El orden de aplicación de las reglas de sintaxis debe ser el inverso de como se indica la expresión en inglés.  Si se aplica el *operador de puntero* regla de sintaxis en una expresión de matriz o función, utilice paréntesis si desea un puntero a la matriz o función, como se muestra en la última fila de la tabla siguiente.  
+ Dado que un declarador puede contener declaradores, es posible construir los tipos derivados más complejos, como matrices de punteros, funciones que devuelven matrices de punteros a función, mediante las reglas anteriores.  Para formar cada paso de la construcción, comience con el identificador que representa el tipo de datos base y aplique la regla de sintaxis anterior con la expresión anterior como `declarator`.  El orden de aplicación de las reglas de sintaxis debe ser el inverso de como se indica la expresión en inglés.  Si se aplica el *operador de puntero* regla de sintaxis en una expresión de matriz o función, utilice paréntesis si desea un puntero a la matriz o función, como se muestra en la última fila en la tabla siguiente.  
   
  En el ejemplo siguiente, se muestra la construcción de “puntero a matriz de 10 punteros a int”.  
   
@@ -197,4 +213,4 @@ int a, *b, c[5], **d, &e=a;
 |matriz de 10|`(*i)[10]`|4|  
 |puntero a|`*((*i)[10])`|6 y después 5|  
   
- Cuando se utilizan varios modificadores de puntero, referencia, matriz o función, los declaradores pueden resultar bastante complicados.  El tema [interpretar declaradores más complejos](../c-language/interpreting-more-complex-declarators.md) describe cómo leer la sintaxis de declarador más compleja.  El tema es aplicable a C y C++, aunque en C++, en cualquier lugar del * se utiliza para indicar un puntero, un nombre completo tal como MyClass::\* puede utilizarse para especificar un puntero a un miembro de una clase.
+ Cuando se utilizan varios modificadores de puntero, referencia, matriz o función, los declaradores pueden resultar bastante complicados.  El tema [interpretar declaradores más complejos](../c-language/interpreting-more-complex-declarators.md) describe cómo leer la sintaxis de declarador más compleja.  El tema es aplicable a C y C++, aunque en C++, en cualquier lugar del * se usa para indicar un puntero, un nombre calificado tal como MyClass::\* puede utilizarse para especificar un puntero a un miembro de una clase.

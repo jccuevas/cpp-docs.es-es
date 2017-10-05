@@ -1,61 +1,78 @@
 ---
-title: "_bstr_t (Operadores relacionales) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::operator>"
-  - "_bstr_t::operator=="
-  - "_bstr_t::operator>="
-  - "_bstr_t::operator!="
-  - "_bstr_t::operator<"
-  - "_bstr_t::operator<="
-  - "_bstr_t::operator!"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "!= (operador)"
-  - "< (operador), comparar objetos específicos"
-  - "<= (operador), con objetos específicos"
-  - "== (operador), con objetos específicos de Visual C++"
-  - "> (operador), comparar objetos específicos"
-  - ">= (operador), comparar objetos específicos"
-  - "operador !=, operadores relacionales"
-  - "operador <, bstr"
-  - "operador <=, bstr"
-  - "operador ==, bstr"
-  - "operador >, bstr"
-  - "operador >=, bstr"
-  - "operator!=, operadores relacionales"
-  - "operator<, bstr"
-  - "operator<=, bstr"
-  - "operator==, bstr"
-  - "operator>=, bstr"
-  - "operadores relacionales, _bstr_t (clase)"
+title: Operadores relacionales _bstr_t | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::operator>
+- _bstr_t::operator==
+- _bstr_t::operator>=
+- _bstr_t::operator!=
+- _bstr_t::operator<
+- _bstr_t::operator<=
+- _bstr_t::operator!
+dev_langs:
+- C++
+helpviewer_keywords:
+- '>= operator, comparing specific objects'
+- operator<=, bstr
+- '!= operator'
+- operator ==, bstr
+- operator!=, relational operators
+- < operator, comparing specific objects
+- relational operators, _bstr_t class
+- operator==, bstr
+- <= operator, with specific objects
+- operator <=, bstr
+- operator >=, bstr
+- operator !=, relational operators
+- '> operator, comparing specific objects'
+- operator<, bstr
+- == operator, with specific Visual C++ objects
+- operator>=, bstr
+- operator <, bstr
+- operator >, bstr
 ms.assetid: e153da72-37c3-4d8a-b8eb-730d65da64dd
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _bstr_t (Operadores relacionales)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 4af54cf348765453fea3dd59959e00f623bef7e0
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="bstrt-relational-operators"></a>_bstr_t (Operadores relacionales)
 **Específicos de Microsoft**  
   
  Compara dos objetos `_bstr_t`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-      bool operator!( ) const throw( );   
+      bool operator!( ) const throw( );   
 bool operator==(  
    const _bstr_t& str   
 ) const throw( );  
@@ -76,10 +93,10 @@ bool operator>=(
 ) const throw( );  
 ```  
   
-## Comentarios  
- Estos operadores comparan dos objetos `_bstr_t` lexicográficamente.  Los operadores devuelven **true** si las comparaciones se sostienen; si no, devuelven **false**.  
+## <a name="remarks"></a>Comentarios  
+ Estos operadores comparan dos objetos `_bstr_t` lexicográficamente. Los operadores devuelven **true** si las comparaciones se sostienen; en caso contrario, devuelve **false**.  
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
- [\_bstr\_t \(Clase\)](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>Vea también  
+ [_bstr_t (Clase)](../cpp/bstr-t-class.md)

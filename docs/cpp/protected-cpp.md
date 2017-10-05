@@ -1,33 +1,49 @@
 ---
-title: "protected (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "protected"
-  - "protected_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "protected (palabra clave) [C++]"
-  - "protected (palabra clave) [C++], acceso a miembros"
+title: Protected (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- protected
+- protected_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- protected keyword [C++], member access
+- protected keyword [C++]
 ms.assetid: 863d299f-fc0d-45d5-a1a7-bd24b7778a93
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# protected (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b65c73c7ecc3419f4a2a40e4bf693049226bd8b7
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-## Sintaxis  
+---
+# <a name="protected-c"></a>protected (C++)
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 protected:  
@@ -35,8 +51,8 @@ protected:
 protected base-class  
 ```  
   
-## Comentarios  
- La palabra clave `protected` especifica el acceso a los miembros de clase en *member\-list* hasta el especificador de acceso siguiente \(**public** o `private`\) o el final de la definición de clase.  Los miembros de clase declarados como `protected` solo los pueden utilizar los siguientes elementos:  
+## <a name="remarks"></a>Comentarios  
+ El `protected` palabra clave especifica el acceso a miembros de clase en el *lista de miembros* hasta el especificador de acceso siguiente (**público** o `private`) o el final de la definición de clase. Los miembros de clase declarados como `protected` solo los pueden utilizar los siguientes elementos:  
   
 -   Funciones miembro de la clase que declaró originalmente estos miembros.  
   
@@ -48,21 +64,21 @@ protected base-class
   
  Cuando precede al nombre de una clase base, la palabra clave `protected` especifica que los miembros públicos y protegidos de la clase base son miembros protegidos de sus clases derivadas.  
   
- Los miembros protegidos no son tan privados como los miembros `private`, que solo son accesibles a los miembros de la clase en que se declaran, pero no son tan públicos como los miembros **public**, que son accesibles en cualquier función.  
+ Los miembros protegidos no son tan privados como `private` miembros, que son accesibles únicamente a los miembros de la clase en el que se declaran, pero no son tan públicos como **público** miembros, que son accesibles en cualquier función.  
   
- Los miembros protegidos que también se declaran como **static** son accesibles a cualquier función miembro o friend de una clase derivada.  Los miembros protegidos que no se declaran como **static** son accesibles a las funciones miembro y friend en una clase derivada solo a través de un puntero a, una referencia a, o un objeto de la clase derivada.  
+ Los miembros protegidos que también se declaran como **estático** son accesibles a cualquier función miembro o friend de una clase derivada. Los miembros protegidos que no se declaran como **estático** son accesibles a sus amigos y funciones de miembro en una clase derivada solo a través de un puntero para hacer referencia a, o un objeto de la clase derivada.  
   
- Para obtener información relacionada, vea [friend](../cpp/friend-cpp.md), [public](../cpp/public-cpp.md), [private](../cpp/private-cpp.md) y la tabla de acceso a miembros en [Controlar el acceso a los miembros de clase](../misc/controlling-access-to-class-members.md).  
+ Para obtener información relacionada, consulte [friend](../cpp/friend-cpp.md), [público](../cpp/public-cpp.md), [privada](../cpp/private-cpp.md)y la tabla de acceso a miembros de [controlar el acceso a los miembros de clase](member-access-control-cpp.md) .  
   
-## Específicos de \/clr  
- En los tipos de CLR, las palabras clave de especificador de acceso de C\+\+ \(**public**, `private` y `protected`\) pueden afectar a la visibilidad de los tipos y los métodos con respecto a los ensamblados.  Para obtener más información, vea el tema sobre la [Visibilidad de tipos y de miembros](../misc/type-and-member-visibility.md).  
+## <a name="clr-specific"></a>Específicos de /clr  
+ En los tipos CLR, C++, obtener acceso a palabras clave de especificador (**público**, `private`, y `protected`) pueden afectar a la visibilidad de tipos y métodos con respecto a los ensamblados. Para obtener más información, consulte [Control de acceso de miembro](member-access-control-cpp.md).  
   
 > [!NOTE]
->  Los archivos compilados con [\/LN](../build/reference/ln-create-msil-module.md) no se ven afectados por este comportamiento.  En este caso, todas las clases administradas \(ya sean públicas o privadas\) estarán visibles.  
+>  Los archivos compilados con [/LN](../build/reference/ln-create-msil-module.md) no se ven afectados por este comportamiento. En este caso, todas las clases administradas (ya sean públicas o privadas) estarán visibles.  
   
-## Específicos de END \/clr  
+## <a name="end-clr-specific"></a>Específicos de END /clr  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // keyword_protected.cpp  
@@ -96,6 +112,6 @@ int main() {
 }  
 ```  
   
-## Vea también  
- [Controlar el acceso a los miembros de clase](../misc/controlling-access-to-class-members.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Controlar el acceso a los miembros de clase](member-access-control-cpp.md)   
+ [Palabras clave](../cpp/keywords-cpp.md)

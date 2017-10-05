@@ -1,49 +1,65 @@
 ---
-title: "continue (Instrucci&#243;n) (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "continue"
-  - "continue_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "continue (palabra clave) [C++]"
+title: "continuar la instrucción) (C++) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- continue
+- continue_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- continue keyword [C++]
 ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# continue (Instrucci&#243;n) (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 502254adc8b01966182f911af5a0dce8af36c1f3
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-Fuerza la transferencia del control a la expresión de control del bucle contenedor [do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md) o [while](../cpp/while-statement-cpp.md) más pequeño.  
+---
+# <a name="continue-statement-c"></a>continue (Instrucción) (C++)
+Fuerza la transferencia del control a la expresión de control de los más pequeño [hacer](../cpp/do-while-statement-cpp.md), [para](../cpp/for-statement-cpp.md), o [mientras](../cpp/while-statement-cpp.md) bucle.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 continue;  
 ```  
   
-## Comentarios  
- No se ejecuta ninguna de las instrucciones restantes de la iteración actual.  La siguiente iteración del bucle se determina del modo siguiente:  
+## <a name="remarks"></a>Comentarios  
+ No se ejecuta ninguna de las instrucciones restantes de la iteración actual. La siguiente iteración del bucle se determina del modo siguiente:  
   
 -   En un bucle `do` o `while`, la siguiente iteración se inicia reevaluando la expresión de control de la instrucción `do` o `while`.  
   
--   En un bucle `for` \(que use la sintaxis `for`\(`init-expr`; `cond-expr`; `loop-expr`\)\), se ejecuta la cláusula `loop-expr`.  A continuación, se evalúa de nuevo la cláusula `cond-expr` y, en función del resultado, el bucle finaliza o se produce otra iteración.  
+-   En un bucle `for` (que use la sintaxis `for`(`init-expr`; `cond-expr`; `loop-expr`)), se ejecuta la cláusula `loop-expr`. A continuación, se evalúa de nuevo la cláusula `cond-expr` y, en función del resultado, el bucle finaliza o se produce otra iteración.  
   
  En el ejemplo siguiente se muestra cómo se puede usar la instrucción `continue` para omitir secciones de código e iniciar la siguiente iteración de un bucle.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // continue_statement.cpp  
@@ -63,10 +79,13 @@ int main()
 }  
 ```  
   
-  **antes de continue**  
-**antes de continue**  
-**antes de continue**  
-**después del bucle do**   
-## Vea también  
- [Instrucciones de salto](../cpp/jump-statements-cpp.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)
+```Output  
+before the continue  
+before the continue  
+before the continue  
+after the do loop  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Jump Statements](../cpp/jump-statements-cpp.md)  (Instrucciones de salto)  
+ [Palabras clave](../cpp/keywords-cpp.md)

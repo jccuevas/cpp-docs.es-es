@@ -1,35 +1,51 @@
 ---
-title: "Punteros | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "declaraciones, punteros"
-  - "declaradores, punteros"
-  - "punteros"
-  - "punteros, declaraciones"
+title: Punteros (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, pointers
+- declarations, pointers
+- pointers
+- pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Punteros
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c164a934f14f7b65c159cf21feb576d0a8bdf36d
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="pointers-c"></a>Punteros (C++)
 Los punteros se declaran mediante la siguiente secuencia.  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers   
+[storage-class-specifiers] [cv-qualifiers] type-specifiers   
 [ms-modifier] declarator ;  
 ```  
   
@@ -39,17 +55,17 @@ Los punteros se declaran mediante la siguiente secuencia.
 * [cv-qualifiers] identifier [= expression]  
 ```  
   
- 1.  Los especificadores de la declaración:  
+ 1. Los especificadores de la declaración:  
   
--   Un especificador de clase de almacenamiento opcional.  Para obtener más información, vea [Especificadores](../cpp/specifiers.md).  
+-   Un especificador de clase de almacenamiento opcional. Para obtener más información, consulte [especificadores](../cpp/specifiers.md).  
   
 -   Una palabra clave `const` o `volatile` opcional que se aplica al tipo de objeto al que se apunta.  
   
 -   El especificador de tipo: el nombre de un tipo que representa el tipo del objeto al que se apunta.  
   
- 2.  El declarador:  
+ 2. El declarador:  
   
--   Un modificador opcional específico de Microsoft.  Para obtener más información, vea [Modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md).  
+-   Un modificador opcional específico de Microsoft. Para obtener más información, consulte [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
 -   El operador `*`.  
   
@@ -71,8 +87,6 @@ Los punteros se declaran mediante la siguiente secuencia.
 ```  
 * identifier [ [ constant-expression ] ]  
 ```  
-  
--   Sin embargo, los declaradores de puntero pueden ser más complejos.  Para obtener más información, vea [Declaradores](http://msdn.microsoft.com/es-es/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
   
 -   Varios declaradores y sus inicializadores pueden aparecer juntos en una sola declaración en una lista separada por comas detrás del especificador de declaración.  
   
@@ -100,7 +114,7 @@ static int *p = &i, *q = &j;
   
  En el ejemplo anterior, los punteros p y q apuntan a objetos de tipo `int` y se inicializan en las direcciones de i y j, respectivamente.  El especificador de clase de almacenamiento `static` se aplica a ambos punteros.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // pointer.cpp  
@@ -176,18 +190,21 @@ int main() {
 }  
 ```  
   
-  **0x0012FEC8**  
-**0x0012FEC8 2**  
-**0x0012FEC8 7**  
-**j es 10**  
-**0x00320850 5**  
-**0x00320850 0**  
-**0x00320854 10**  
-**0x00320858 20**  
-**0x0032085C 30**  
-**0x00320860 40**  
-**dog dog**   
-## Ejemplo  
+```Output  
+0x0012FEC8  
+0x0012FEC8 2  
+0x0012FEC8 7  
+j is 10  
+0x00320850 5  
+0x00320850 0  
+0x00320854 10  
+0x00320858 20  
+0x0032085C 30  
+0x00320860 40  
+dog dog  
+```  
+  
+## <a name="example"></a>Ejemplo  
  Otro ejemplo muestra el uso de punteros en estructuras de datos; en este caso, una lista vinculada.  
   
 ```  
@@ -248,18 +265,26 @@ int main() {
 }  
 ```  
   
-  **`a 45 d a 789 d q`a \(add node\)  d \(display list\)  q \(quit\)**  
-**enter a number:**   
-**a \(add node\)  d \(display list\)  q \(quit\)**  
-**node 1 \= 45**  
-**a \(add node\)  d \(display list\)  q \(quit\)**  
-**enter a number:**   
-**a \(add node\)  d \(display list\)  q \(quit\)**  
-**node 1 \= 45**  
-**node 2 \= 789**  
-**a \(add node\)  d \(display list\)  q \(quit\)**   
-## Vea también  
- [C\+\+ Abstract Declarators](http://msdn.microsoft.com/es-es/e7e18c18-0cad-4450-942b-d27e1d4dd088)   
- [Suma de tipos de puntero](../misc/addition-of-pointer-types.md)   
- [Operador de direccionamiento indirecto: \*](../cpp/indirection-operator-star.md)   
- [Operador address\-of: &](../cpp/address-of-operator-amp.md)
+```Output  
+  
+      a  
+45  
+d  
+a  
+789  
+d  
+qa (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+a (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+node 2 = 789  
+a (add node)  d (display list)  q (quit)  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Operador de direccionamiento indirecto: *](../cpp/indirection-operator-star.md)   
+ [address-of (Operador): &](../cpp/address-of-operator-amp.md)

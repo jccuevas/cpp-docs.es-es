@@ -1,30 +1,47 @@
 ---
-title: "tile_static (Palabra clave) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "tile_static_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tile_static (palabra clave)"
+title: tile_static (palabra clave) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- tile_static_CPP
+dev_langs:
+- C++
+helpviewer_keywords:
+- tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# tile_static (Palabra clave)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 499aa37bb082636dd2947fa6f64a5ecc3cdd5e10
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-La palabra clave `tile_static` se utiliza para declarar una variable a la que pueden tener acceso todos los subprocesos de un mosaico de subprocesos.  La duración de la variable comienza cuando la ejecución llega al punto de declaración y termina cuando vuelve la función del kernel.  Para obtener más información sobre el uso de mosaicos, vea [Usar mosaicos](../parallel/amp/using-tiles.md).  
+---
+# <a name="tilestatic-keyword"></a>tile_static (Palabra clave)
+La palabra clave `tile_static` se utiliza para declarar una variable a la que pueden tener acceso todos los subprocesos de un mosaico de subprocesos. La duración de la variable comienza cuando la ejecución llega al punto de declaración y termina cuando vuelve la función del kernel. Para obtener más información sobre el uso de iconos, consulte [usando iconos](../parallel/amp/using-tiles.md).  
   
  La palabra clave `tile_static` tiene las limitaciones siguientes:  
   
@@ -32,17 +49,16 @@ La palabra clave `tile_static` se utiliza para declarar una variable a la que pu
   
 -   No se puede usar en las variables que sean de tipo puntero o referencia.  
   
--   Una variable `tile_static` no puede tener inicializador.  Los constructores y destructores predeterminados no se invocan automáticamente.  
+-   Una variable `tile_static` no puede tener inicializador. Los constructores y destructores predeterminados no se invocan automáticamente.  
   
 -   El valor de una variable `tile_static` no inicializada es indefinido.  
   
 -   Si una variable de `tile_static` se declara en un gráfico de llamadas cuya raíz se especifica mediante una llamada no en mosaico a `parallel_for_each`, se genera una advertencia y el comportamiento de la variable es indefinido.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo una variable `tile_static` se puede usar para acumular datos entre varios subprocesos de un mosaico.  
   
 ```cpp  
-  
 // Sample data:  
 int sampledata[] = {  
     2, 2, 9, 7, 1, 4,  
@@ -154,8 +170,8 @@ for (int i = 0; i < 4; i++) {
   
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md)   
- [Información general sobre C\+\+ AMP](../parallel/amp/cpp-amp-overview.md)   
- [parallel\_for\_each \(Función\) \(C\+\+ AMP\)](../Topic/parallel_for_each%20Function%20\(C++%20AMP\).md)   
+ [Introducción a C++ AMP](../parallel/amp/cpp-amp-overview.md)   
+ [parallel_for_each (función) (C++ AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)   
  [Tutorial: Multiplicación de matrices](../parallel/amp/walkthrough-matrix-multiplication.md)

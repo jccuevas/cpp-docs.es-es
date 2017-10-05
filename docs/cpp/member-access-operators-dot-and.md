@@ -1,57 +1,71 @@
 ---
-title: "Operadores de acceso a miembros: . y -&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "."
-  - "->"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ". (operador)"
-  - "-> (operador)"
-  - "operador de punto (.)"
-  - "acceso a miembros"
-  - "acceso a miembros, expresiones"
-  - "acceso a miembros, operadores"
-  - "operadores [C++], acceso a miembros"
-  - "operadores postfijos"
+title: Operadores de acceso a miembro:. y -&gt; | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- .
+- ->
+dev_langs:
+- C++
+helpviewer_keywords:
+- member access, expressions
+- operators [C++], member access
+- dot operator (.)
+- -> operator
+- member access, operators
+- postfix operators
+- . operator
+- member access
 ms.assetid: f8fc3df9-d728-40c5-b384-276927f5f1b3
 caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operadores de acceso a miembros: . y -&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 7c4e69727c474cb89f931832da2dbde6e20c16b9
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-## Sintaxis  
+---
+# <a name="member-access-operators--and--gt"></a>Operadores de acceso a miembro:. y -&gt;
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      postfix-expression   
-      . name  
-postfix-expression –> name  
+postfix-expression . name  
+postfix-expression -> name  
 ```  
   
-## Comentarios  
- Los operadores de acceso a miembros **.** y **\-\>** se utilizan para hacer referencia a los miembros de estructuras, uniones y clases.  Las expresiones de acceso a miembros tienen el valor y el tipo del miembro seleccionado.  
+## <a name="remarks"></a>Comentarios  
+ Los operadores de acceso de miembro **.** y ** -> ** se usan para hacer referencia a los miembros de estructuras, uniones y clases. Las expresiones de acceso a miembros tienen el valor y el tipo del miembro seleccionado.  
   
  Hay dos formas de expresiones de acceso de miembro:  
   
-1.  En la primera forma, *postfix\-expression* representa un valor de tipo de estructura, clase o unión, y *name* designa un miembro de la estructura, unión o clase especificadas.  El valor de la operación es el de *name* y es un valor L si *postfix\-expression* es un valor L.  
+1.  En la primera forma, *postfix-expression* representa un valor de la estructura, clase o tipo de unión, y *nombre* nombra un miembro de la estructura especificada, unión o clase. El valor de la operación es de *nombre* y es un valor l si *postfix-expression* es un valor l.  
   
-2.  En la segunda forma, *postfix\-expression* representa un puntero a una estructura, unión o clase, y *name* designa un miembro de la estructura, unión o clase especificadas.  El valor es el de *name* y es un valor L.  El operador **–\>** desreferencia el puntero.  Por consiguiente, las expresiones *e***–\>**`member` y **\(\****e***\)**.`member` \(donde *e* representa un puntero\) producen resultados idénticos \(excepto cuando se sobrecargan los operadores **–\>** o **\***\).  
+2.  En la segunda forma, *postfix-expression* representa un puntero a una estructura, unión o clase, y *nombre* nombra un miembro de la estructura especificada, unión o clase. El valor es el de *nombre* y es un valor l. El ** -> ** operador de desreferencia el puntero. Por lo tanto, las expresiones *e* ** -> ** `member` y **(\****e***)**.`member` (donde *e* representa un puntero) producen resultados idénticos (excepto cuando los operadores ** -> ** o ** \* ** están sobrecargados).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestran dos formas del operador de acceso a miembros.  
   
 ```  
@@ -81,11 +95,13 @@ int main() {
 }  
 ```  
   
-  **2\/1\/1900**  
-**2\/1\/2000**   
-## Vea también  
- [Expresiones postfijas](../cpp/postfix-expressions.md)   
- [Operadores de C\+\+](../misc/cpp-operators.md)   
- [Operadores de C\+\+, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Clases y structs](../cpp/classes-and-structs-cpp.md)   
+```Output  
+2/1/1900  
+2/1/2000  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Expresiones de postfijo](../cpp/postfix-expressions.md)   
+ [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Clases y estructuras](../cpp/classes-and-structs-cpp.md)   
  [Miembros de estructura y de unión](../c-language/structure-and-union-members.md)

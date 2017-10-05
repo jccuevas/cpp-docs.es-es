@@ -1,44 +1,62 @@
 ---
-title: "deprecated (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "deprecated"
-  - "deprecated_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec (palabra clave) [C++], deprecated"
-  - "__declspec (palabra clave desusada)"
+title: en desuso (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 03/28/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- deprecated
+- deprecated_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++], deprecated
+- deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# deprecated (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9ac25648e2d19da82f6c213992699c237e05c01e
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-\(Específico de Microsoft\) Con las excepciones que se indican a continuación, la declaración **deprecated** proporciona la misma funcionalidad que la directiva pragma [deprecated](../preprocessor/deprecated-c-cpp.md):  
+---
+# <a name="deprecated-c"></a>en desuso (C++)
+Este tema trata sobre la específicos de Microsoft modificador declspec declaración en desuso. Para obtener información sobre C ++ 14 `[[deprecated]]` atributo y orientación sobre cuándo usar ese atributo frente al modificador declspec específicos de Microsoft o la directiva pragma, consulte [atributos estándar de C++](attributes2.md).
+
+ Con las excepciones que se indican a continuación, el **en desuso** declaración ofrece la misma funcionalidad que la [en desuso](../preprocessor/deprecated-c-cpp.md) pragma:  
   
--   La declaración **deprecated** permite especificar formas determinadas de sobrecargas de función como desusadas, mientras que la forma pragma se aplica a todas las formas sobrecargadas de un nombre de función.  
+-   El **en desuso** declaración permite especificar formas determinadas de sobrecargas de función como en desuso, mientras que la forma pragma se aplica a todas las formas sobrecargadas de un nombre de función.  
   
--   La declaración **deprecated** permite especificar un mensaje que se mostrará en tiempo de compilación.  El texto del mensaje puede proceder de una macro.  
+-   El **en desuso** declaración le permite especificar un mensaje que se mostrará en tiempo de compilación. El texto del mensaje puede proceder de una macro.  
   
--   Las macros solo se pueden marcar como desusadas con la directiva pragma **deprecated**.  
+-   Macros solo se pueden marcar como desusadas con la **en desuso** pragma.  
   
- Si el compilador encuentra el uso de un identificador desusado, se produce una advertencia [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).  
+ Si el compilador encuentra el uso de un identificador en desuso o la norma [ `[[deprecated]]` ](attributes2.md) atributo, un [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) se produce la advertencia.  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo marcar funciones como desusadas y cómo especificar un mensaje que se mostrará, en tiempo de compilación, cuando se use la función desusada.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo marcar funciones como en desuso y cómo especificar un mensaje que se mostrará, en tiempo de compilación, cuando se use la función en desuso.  
   
 ```  
 // deprecated.cpp  
@@ -57,8 +75,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo marcar clases como desusadas y cómo especificar un mensaje que se mostrará, en tiempo de compilación, cuando se use la clase desusada.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo marcar clases como en desuso y cómo especificar un mensaje que se mostrará, en tiempo de compilación, cuando se use la clase en desuso.  
   
 ```  
 // deprecate_class.cpp  
@@ -77,6 +95,6 @@ int main() {
 }  
 ```  
   
-## Vea también  
- [\_\_declspec](../cpp/declspec.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [__declspec](../cpp/declspec.md)   
+ [Palabras clave](../cpp/keywords-cpp.md)

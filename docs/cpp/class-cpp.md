@@ -1,84 +1,100 @@
 ---
-title: "class (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "class_cpp"
-  - "class"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "class (palabra clave) [C++]"
-  - "tipos de clase, Class (instrucciones)"
+title: clase (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- class_cpp
+- class
+dev_langs:
+- C++
+helpviewer_keywords:
+- class types, class statements
+- class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# class (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 7cdd7b7cefcd9f3826cfe426008bdf1eefde82f6
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="class-c"></a>class (C++)
 La palabra clave `class` declara un tipo de clase o define un objeto de un tipo de clase.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
       [template-spec]  
        class [ms-decl-spec] [tag [: base-list ]]  
 {  
-   member-list  
+   member-list  
 } [declarators];  
 [ class ] tag declarators;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `template-spec`  
- Especificaciones de plantilla opcionales.  Para obtener más información, vea [Especificaciones de plantilla](../Topic/Template%20Specifications.md).  
+ Especificaciones de plantilla opcionales. Para obtener más información, consulte [plantillas](templates-cpp.md).  
   
  `class`  
  Palabra clave `class`.  
   
  `ms-decl-spec`  
- Especificación opcional de clase de almacenamiento.  Para obtener más información, vea la palabra [\_\_declspec](../cpp/declspec.md).  
+ Especificación opcional de clase de almacenamiento. Para obtener más información, consulte el [__declspec](../cpp/declspec.md) palabra clave.  
   
  `tag`  
- Nombre del tipo asignado a la clase.  La etiqueta se convierte en una palabra reservada dentro del ámbito de la clase.  La etiqueta es opcional.  Si se omite, se define una clase anónima.  Para obtener más información, vea [Tipos de clase anónimos](../cpp/anonymous-class-types.md).  
+ Nombre del tipo asignado a la clase. La etiqueta se convierte en una palabra reservada dentro del ámbito de la clase. La etiqueta es opcional. Si se omite, se define una clase anónima. Para obtener más información, consulte [tipos de clase anónimos](../cpp/anonymous-class-types.md).  
   
  `base-list`  
- Lista opcional de clases o de estructuras de las que esta clase derivará sus miembros.  Vea [Clases base](../cpp/base-classes.md) para obtener más información.  Cada nombre de clase base o de estructura puede ir precedido de un especificador de acceso \([public](../cpp/public-cpp.md), [private](../cpp/private-cpp.md), [protected](../cpp/protected-cpp.md)\) y la palabra clave [virtual](../cpp/virtual-cpp.md).  Vea la tabla de acceso a miembros en [Controlar el acceso a miembros de clase](../misc/controlling-access-to-class-members.md) para obtener más información.  
+ Lista opcional de clases o de estructuras de las que esta clase derivará sus miembros. Vea [clases Base](../cpp/base-classes.md) para obtener más información. Cada nombre de clase o estructura base puede ir precedido de un especificador de acceso ([público](../cpp/public-cpp.md), [privada](../cpp/private-cpp.md), [protegido](../cpp/protected-cpp.md)) y la [virtuales](../cpp/virtual-cpp.md) palabra clave. Vea la tabla de acceso a miembros de [controlar el acceso a los miembros de clase](member-access-control-cpp.md) para obtener más información.  
   
  `member-list`  
- Lista de miembros de clase.  Vea [Información general sobre miembros de clase](../cpp/class-member-overview.md) para obtener más información.  
+ Lista de miembros de clase. Hacer referencia a [información general sobre miembros de clase](../cpp/class-member-overview.md) para obtener más información.  
   
  `declarators`  
- Lista de declaradores que especifica los nombres de una o más instancias del tipo de clase.  Los declaradores pueden incluir listas de inicializadores si todos los miembros de datos de la clase son `public`.  Esto es más frecuente en las estructuras, cuyos miembros de datos son `public` de forma predeterminada, que en las clases.  Vea [Información general sobre los declaradores](../cpp/overview-of-declarators.md) para obtener más información.  
+ Lista de declaradores que especifica los nombres de una o más instancias del tipo de clase. Los declaradores pueden incluir listas de inicializadores si todos los miembros de datos de la clase son `public`. Esto es más frecuente en las estructuras, cuyos miembros de datos son `public` de forma predeterminada, que en las clases. Vea [información general de los declaradores](../cpp/overview-of-declarators.md) para obtener más información.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Para obtener más información sobre las clases en general, vea uno de los temas siguientes:  
   
 -   [struct](../cpp/struct-cpp.md)  
   
 -   [union](../cpp/unions.md)  
   
--   [\_\_multiple\_inheritance](../cpp/inheritance-keywords.md)  
+-   [__multiple_inheritance](../cpp/inheritance-keywords.md)  
   
--   [\_\_single\_inheritance](../cpp/inheritance-keywords.md)  
+-   [__single_inheritance](../cpp/inheritance-keywords.md)  
   
--   [\_\_virtual\_inheritance](../cpp/inheritance-keywords.md)  
+-   [__virtual_inheritance](../cpp/inheritance-keywords.md)  
   
- Para obtener información sobre las clases administradas y los structs, vea [Clases y structs](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Para obtener información sobre las clases administradas y los structs, vea [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md)  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // class.cpp  
@@ -151,6 +167,6 @@ int main()
 }  
 ```  
   
-## Vea también  
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)   
+## <a name="see-also"></a>Vea también  
+ [Palabras clave](../cpp/keywords-cpp.md)   
  [Clases y structs](../cpp/classes-and-structs-cpp.md)

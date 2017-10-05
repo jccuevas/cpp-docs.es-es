@@ -1,55 +1,71 @@
 ---
-title: "Operador condicional: ? : | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "?:"
-  - "?"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "? : (operador)"
-  - "operadores condicionales"
+title: "¿Operador condicional:? : | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '?:'
+- '?'
+dev_langs:
+- C++
+helpviewer_keywords:
+- conditional operators
+- '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Operador condicional: ? :
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: f66e1eb9364503988178c70f3628b44fa3d5b93a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
 
-## Sintaxis  
+---
+# <a name="conditional-operator--"></a>¿Operador condicional:? :
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 expression ? expression : expression  
 ```  
   
-## Comentarios  
- El operador condicional \(**? :**\) es un operador ternario \(toma tres operandos\).  El operador condicional funciona del modo siguiente:  
+## <a name="remarks"></a>Comentarios  
+ El operador condicional (**?:**) es un operador ternario (toma tres operandos). El operador condicional funciona del modo siguiente:  
   
--   El primer operando se convierte implícitamente a `bool`.  Se evalúa y todos los efectos secundarios se completan antes de continuar.  
+-   El primer operando se convierte implícitamente a `bool`. Se evalúa y todos los efectos secundarios se completan antes de continuar.  
   
--   Si el primer operando se evalúa como **true** \(1\), se evalúa el segundo operando.  
+-   Si el primer operando se evalúa como **true** (1), que se evalúa el segundo operando.  
   
--   Si el primer operando se evalúa como **false** \(0\), se evalúa el tercer operando.  
+-   Si el primer operando se evalúa como **false** (0), que se evalúa el tercer operando.  
   
- El resultado del operador condicional es el resultado de cualquier operando que se evalúe, el segundo o el tercero.  Solo uno de los dos últimos operandos se evalúa en una expresión condicional.  
+ El resultado del operador condicional es el resultado de cualquier operando que se evalúe, el segundo o el tercero. Solo uno de los dos últimos operandos se evalúa en una expresión condicional.  
   
- Las expresiones condicionales tienen asociatividad de derecha a izquierda.  El primer operando debe ser de tipo entero o de tipo de puntero.  Las reglas siguientes se aplican a los operandos segundo y tercero:  
+ Las expresiones condicionales tienen asociatividad de derecha a izquierda. El primer operando debe ser de tipo entero o de tipo de puntero. Las reglas siguientes se aplican a los operandos segundo y tercero:  
   
 -   Si ambos operandos son del mismo tipo, el resultado es de ese tipo.  
   
--   Si ambos operandos son de tipos de aritmética o de enumeración, se realizan las conversiones aritméticas habituales \(que se describen en [Conversiones aritméticas](../misc/arithmetic-conversions.md)\) para convertirlos a un tipo común.  
+-   Si ambos operandos son de tipos de aritmética o de enumeración, las conversiones aritméticas habituales (se trata en [conversiones estándar](standard-conversions.md)) se realizan para convertirlos a un tipo común.  
   
 -   Si ambos operandos son de tipos de puntero o si uno es de un tipo de puntero y el otro es una expresión de constante que se evalúa como 0, las conversiones de puntero se realizan para convertirlos a un tipo común.  
   
@@ -59,14 +75,14 @@ expression ? expression : expression
   
 -   Si ambos operandos son del mismo tipo definido por el usuario, el tipo común es ese tipo.  
   
--   Si los operandos son de tipos diferentes y al menos uno de ellos tiene un tipo definido por el usuario, se usan reglas de lenguaje para determinar el tipo común.  \(Vea la advertencia más adelante\).  
+-   Si los operandos son de tipos diferentes y al menos uno de ellos tiene un tipo definido por el usuario, se usan reglas de lenguaje para determinar el tipo común. (Vea la advertencia más adelante).  
   
- Las combinaciones de los operandos segundo y tercero no incluidos en la lista anterior no son válidas.  El tipo del resultado es el tipo común, y es un valor L si tanto el segundo como el tercer operando son del mismo tipo y ambos son valores l.  
+ Las combinaciones de los operandos segundo y tercero no incluidos en la lista anterior no son válidas. El tipo del resultado es el tipo común, y es un valor L si tanto el segundo como el tercer operando son del mismo tipo y ambos son valores l.  
   
 > [!WARNING]
->  Si los tipos de los operandos segundo y tercero no son idénticos, se invocan reglas de conversión de tipo complejo, como se especifica en el estándar de C\+\+.  Estas conversiones pueden provocar un comportamiento inesperado, incluida la creación y destrucción de objetos temporales.  Por esta razón, recomendamos encarecidamente \(1\) evitar el uso de tipos definidos por el usuario como operandos con el operador condicional, o \(2\) si utiliza tipos definidos por el usuario, convertir explícitamente cada operando a un tipo común.  
+>  Si los tipos de los operandos segundo y tercero no son idénticos, se invocan reglas de conversión de tipo complejo, como se especifica en el estándar de C++. Estas conversiones pueden provocar un comportamiento inesperado, incluida la creación y destrucción de objetos temporales. Por esta razón, recomendamos encarecidamente (1) evitar el uso de tipos definidos por el usuario como operandos con el operador condicional, o (2) si utiliza tipos definidos por el usuario, convertir explícitamente cada operando a un tipo común.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // expre_Expressions_with_the_Conditional_Operator.cpp  
@@ -80,7 +96,6 @@ int main() {
 }  
 ```  
   
-## Vea también  
- [Operadores de C\+\+](../misc/cpp-operators.md)   
- [Operadores de C\+\+, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>Vea también  
+ [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operador de expresión condicional](../c-language/conditional-expression-operator.md)
