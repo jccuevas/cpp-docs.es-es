@@ -20,29 +20,15 @@ caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 918694610bd029c5cc6f67e7227a9a1461b1408b
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1ddb59d2ac448725de719423d1634f00e568d2c9
 ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cdefaultelementtraits-class"></a>Clase CDefaultElementTraits
-Esta clase proporciona funciones y métodos predeterminados para una clase de colección.  
+Esta clase proporciona las funciones y métodos de manera predeterminada para una clase de colección.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,7 +44,7 @@ class CDefaultElementTraits : public CElementTraitsBase<T>,
  El tipo de datos que se almacenará en la colección.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase proporciona funciones estáticas de forma predeterminada y los métodos para mover, copiar, comparar y hash de los elementos almacenados en un objeto de clase de colección. Esta clase deriva de sus funciones y métodos de [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md), [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md), y [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)y es utilizada por [CElementTraits](../../atl/reference/celementtraits-class.md), [CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md), y [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md).  
+ Esta clase proporciona métodos y funciones estáticas predeterminado para mover, copiar, comparar y hash elementos almacenados en un objeto de clase de colección. Esta clase deriva sus funciones y métodos de [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md), [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md), y [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)y es utilizada por [ CElementTraits](../../atl/reference/celementtraits-class.md), [CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md), y [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md).  
   
  Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).  
   
@@ -66,5 +52,5 @@ class CDefaultElementTraits : public CElementTraitsBase<T>,
  **Encabezado:** atlcoll.h  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

@@ -22,29 +22,15 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 347e7bf7cd9173fb2815f44fc052ec23ab4055a6
-ms.openlocfilehash: 7456d441d7b3fb74f404f29c893c492feab10ed9
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1e824c2b85e7f80ad93a1f154be7f2e680bd00a9
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
-# <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 (estructura)
-Utilizado por cualquier proyecto que utilice ATL.  
+# <a name="atlbasemodule70-structure"></a>Estructura de _ATL_BASE_MODULE70
+Usando ningún proyecto que usa ATL.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -63,7 +49,7 @@ struct _ATL_BASE_MODULE70 {
   
 ## <a name="members"></a>Miembros  
  `cbSize`  
- El tamaño de la estructura, utilizada para el control de versiones.  
+ El tamaño de la estructura que se utiliza para controlar las versiones.  
   
  `m_hInst`  
  El **hInstance** para este módulo (exe o dll).  
@@ -84,10 +70,10 @@ struct _ATL_BASE_MODULE70 {
  Usar para sincronizar el acceso a la **m_rgResourceInstance** matriz. Utilizada internamente por ATL.  
   
  **m_rgResourceInstance**  
- Matriz que se utiliza para buscar recursos en todas las instancias de recursos de los que es compatible con ATL. Utilizada internamente por ATL.  
+ Matriz que se utiliza para buscar recursos en todas las instancias de recursos de los cuales es compatible con ATL. Utilizada internamente por ATL.  
   
 ## <a name="remarks"></a>Comentarios  
- [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) se define como un typedef de `_ATL_BASE_MODULE70`.  
+ [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) se define como una definición de tipo de `_ATL_BASE_MODULE70`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcore.h  

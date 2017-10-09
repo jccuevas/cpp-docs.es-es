@@ -1,46 +1,49 @@
 ---
-title: "_countof (Macro) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_countof"
-  - "countof"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_countof (macro)"
-  - "countof (macro)"
+title: _countof (Macro) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _countof
+- countof
+dev_langs:
+- C++
+helpviewer_keywords:
+- countof macro
+- _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _countof (Macro)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 71d4310525f1d96184749b5b0b24cb0cf1da8512
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="countof-macro"></a>_countof (Macro)
 Calcula el número de elementos de una matriz asignada estáticamente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 size_t _countof(   
@@ -48,23 +51,23 @@ size_t _countof(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `array`  
  Nombre de una matriz.  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  Número de elementos de la matriz, expresados como un `size_t`.  
   
-## Comentarios  
- Asegúrese de que `array` es realmente una matriz, no un puntero.  En C, `_countof` producirá resultados erróneos si `array` es un puntero.  En C\+\+, `_countof` no se compilará si `array` es un puntero.  
+## <a name="remarks"></a>Comentarios  
+ Asegúrese de que `array` es realmente una matriz, no un puntero. En C, `_countof` producirá resultados erróneos si `array` es un puntero. En C++, `_countof` no se compilará si `array` es un puntero.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Macro|Encabezado necesario|  
-|-----------|--------------------------|  
-|`_countof`|\<stdlib.h\>|  
+|-----------|---------------------|  
+|`_countof`|\<stdlib.h>|  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_countof.cpp  
@@ -86,7 +89,10 @@ int main( void )
 }  
 ```  
   
-  **sizeof\(arr\) \= 40 bytes**  
-**\_countof\(arr\) \= 20 elementos**   
-## Vea también  
- [sizeof \(Operador\)](../../cpp/sizeof-operator.md)
+```Output  
+sizeof(arr) = 40 bytes  
+_countof(arr) = 20 elements  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [sizeof (Operador)](../../cpp/sizeof-operator.md)

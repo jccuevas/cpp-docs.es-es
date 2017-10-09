@@ -1,43 +1,44 @@
 ---
-title: "rmtmp | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "rmtmp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "rmtmp"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "rmtmp (función)"
+title: rmtmp | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- rmtmp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- rmtmp
+dev_langs:
+- C++
+helpviewer_keywords:
+- rmtmp function
 ms.assetid: d79f0364-39e8-42fb-a73a-63c22a646cd8
 caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# rmtmp
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d774d116afbd06c24a27101cdbeaf6c8602aac2f
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-Esta función POSIX está desusada.  En su lugar, use la función [\_rmtmp](../../c-runtime-library/reference/rmtmp.md) compatible con ISO C\+\+.
+---
+# <a name="rmtmp"></a>rmtmp
+Esta función POSIX está en desuso. En su lugar, use la función [_rmtmp](../../c-runtime-library/reference/rmtmp.md), compatible con ISO C++.

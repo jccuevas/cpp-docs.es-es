@@ -1,44 +1,47 @@
 ---
-title: "cgets | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "cgets"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cgets"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cgets (función)"
+title: cgets | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- cgets
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- cgets
+dev_langs:
+- C++
+helpviewer_keywords:
+- cgets function
 ms.assetid: 54faf257-5ed6-4301-be19-66d953e901fa
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# cgets
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 20f916f9168789dc9d95952ae05b087fdeab7ec8
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-Esta función POSIX está desusada.  En su lugar, use la función [\_cgets](../../c-runtime-library/cgets-cgetws.md), compatible con ISO C\+\+, o la función [\_cgets\_s](../../c-runtime-library/reference/cgets-s-cgetws-s.md), con mejoras de seguridad.  
+---
+# <a name="cgets"></a>cgets
+Esta función POSIX está en desuso. En su lugar, use la función [_cgets](../../c-runtime-library/cgets-cgetws.md), compatible con ISO C++, o la función [_cgets_s](../../c-runtime-library/reference/cgets-s-cgetws-s.md) con mejoras de seguridad.  
   
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución.  Para obtener más información, vea [Funciones de CRT no admitidas con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).
+>  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [HYPERLINK "http://msdn.microsoft.com/es-es/library/windows/apps/jj606124.aspx" \o "Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows" Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).

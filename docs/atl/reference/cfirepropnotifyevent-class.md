@@ -24,32 +24,18 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 1511a9e9ba287d12aade7c393887c6b5f8880b96
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1fb22263b877aaff3e30e56efff2a005bc024f2e
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent (clase)
 Esta clase proporciona métodos para notificar a los receptores del contenedor con respecto a los cambios de propiedad de control.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -69,7 +55,7 @@ class CFirePropNotifyEvent
 ## <a name="remarks"></a>Comentarios  
  `CFirePropNotifyEvent`tiene dos métodos que notifiquen a los receptores del contenedor que una propiedad de control ha cambiado o va a cambiar.  
   
- Si se deriva de la clase que implementa el control `IPropertyNotifySink`, `CFirePropNotifyEvent` los métodos se invocan cuando se llama a `FireOnRequestEdit` o `FireOnChanged`. Si no se deriva de la clase del control `IPropertyNotifySink`, las llamadas a estas funciones devuelven `S_OK`.  
+ Si se deriva la clase que implementa el control `IPropertyNotifySink`, `CFirePropNotifyEvent` métodos se invocan cuando se llama a `FireOnRequestEdit` o `FireOnChanged`. Si la clase del control no se deriva de `IPropertyNotifySink`, las llamadas a estas funciones devuelven `S_OK`.  
   
  Para obtener más información sobre la creación de controles, consulte el [Tutorial de ATL](../../atl/active-template-library-atl-tutorial.md).  
   
@@ -97,7 +83,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
  Esta función es segura llamar a incluso si el control no admite puntos de conexión.  
   
 ##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit  
- Notifica a todos conectados [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfaces (en cada punto de conexión del objeto) que es cambiar la propiedad del objeto especificado.  
+ Notifica a todos conectados [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfaces (en cada punto de conexión del objeto) que la propiedad del objeto especificado que se va a cambiar.  
   
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
@@ -117,5 +103,5 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
  Esta función es segura llamar a incluso si el control no admite puntos de conexión.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

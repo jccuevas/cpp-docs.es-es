@@ -1,53 +1,56 @@
 ---
-title: "_CrtSetReportHook2, _CrtSetReportHookW2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtSetReportHook2"
-  - "_CrtSetReportHookW2"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtSetReportHookW2"
-  - "CrtSetReportHook2"
-  - "_CrtSetReportHookW2"
-  - "_CrtSetReportHook2"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CrtSetReportHook2 (función)"
-  - "_CrtSetReportHook2 (función)"
-  - "_CrtSetReportHookW2 (función)"
-  - "CrtSetReportHookW2 (función)"
+title: _CrtSetReportHook2, _CrtSetReportHookW2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtSetReportHook2
+- _CrtSetReportHookW2
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtSetReportHookW2
+- CrtSetReportHook2
+- _CrtSetReportHookW2
+- _CrtSetReportHook2
+dev_langs:
+- C++
+helpviewer_keywords:
+- CrtSetReportHook2 function
+- _CrtSetReportHook2 function
+- _CrtSetReportHookW2 function
+- CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _CrtSetReportHook2, _CrtSetReportHookW2
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4f449a335eebc54fbfaf18ab94c853bb93a87cea
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-Las instalaciones o por una función cliente\- definido de informe enlazandola en el proceso de informe de depuración en tiempo de ejecución de C \(versión de depuración solo\).  
+---
+# <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
+Instala o desinstala una función de generación de informes definida por el cliente enlazándola al proceso de creación de informes de depuración en tiempo de ejecución de C (solo versión de depuración).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -61,56 +64,56 @@ int _CrtSetReportHookW2(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `mode`  
- La acción a realizar: `_CRT_RPTHOOK_INSTALL` o `_CRT_RPTHOOK_REMOVE`.  
+ Acción que se va a realizar: `_CRT_RPTHOOK_INSTALL` o `_CRT_RPTHOOK_REMOVE`.  
   
  `pfnNewHook`  
- Seleccione el enlace para instalar o quitar en la versión de estrecho\- carácter de esta función.  
+ Enlace de informe que se instala o quita en la versión de caracteres estrechos de esta función.  
   
  `pfnNewHook`  
- Seleccione el enlace para instalar o quitar en la versión de caracteres anchos de esta función.  
+ Enlace de informe que se instala o quita en la versión de caracteres anchos de esta función.  
   
-## Valor devuelto  
- \-1 si se encontró un error, con `EINVAL` o `ENOMEM` establezca; si no devuelve el recuento de referencias de `pfnNewHook` después de la llamada.  
+## <a name="return-value"></a>Valor devuelto  
+ -1 si se produce un error, con `EINVAL` o `ENOMEM` establecida; de lo contrario, devuelve el recuento de referencias de `pfnNewHook` después de la llamada.  
   
-## Comentarios  
- `_CrtSetReportHook2` y `_CrtSetReportHookW2` permiten enlace o zafan una función, mientras que [\_CrtSetReportHook](../../c-runtime-library/reference/crtsetreporthook.md) permite solo enlace una función.  
+## <a name="remarks"></a>Comentarios  
+ `_CrtSetReportHook2` y `_CrtSetReportHookW2` le permiten enlazar o desenlazar una función, mientras que [_CrtSetReportHook](../../c-runtime-library/reference/crtsetreporthook.md) solo permite enlazar una función.  
   
- `_CrtSetReportHook2` o `_CrtSetReportHookW2` debe utilizarse en lugar de `_CrtSetReportHook` cuando la llamada de enlace se hace en un archivo DLL y cuando varias DLL pueden cargar y estableciendo su propio enlace funciona.  En esta situación, los archivos DLL se puede descargar en un orden diferente que se cargaron y la función de enlace puede quedarse informar de DLL descargado.  Los bloqueos de la depuración el proceso si las funciones de enlace se agregaron con `_CrtSetReportHook`.  
+ Deben usarse `_CrtSetReportHook2` o `_CrtSetReportHookW2` en lugar de `_CrtSetReportHook` cuando la llamada al enlace se efectúa en un archivo DLL y cuando es posible que haya varios archivos DLL cargados que establezcan sus propias funciones de enlace. En tales circunstancias, los archivos DLL se pueden descargar en un orden diferente al que se han cargado y la función de enlace puede dejarse apuntando a un archivo DLL descargado. Los resultados de la depuración bloquean el proceso si las funciones de enlace se han agregado con `_CrtSetReportHook`.  
   
- Cualquier función de enlace agregada con `_CrtSetReportHook` se denomina si no hay funciones de enlace agregadas con `_CrtSetReportHook2` o `_CrtSetReportHookW2` o si todas las funciones de enlace agregadas con `_CrtSetReportHook2` y `_CrtSetReportHookW2` devuelven `FALSE`.  
+ Las funciones de enlace agregadas con `_CrtSetReportHook` se llaman si no se ha agregado ninguna función de enlace con `_CrtSetReportHook2` o `_CrtSetReportHookW2`, o si todas las funciones de enlace que se han agregado con `_CrtSetReportHook2` y `_CrtSetReportHookW2` devuelven `FALSE`.  
   
- La versión de caracteres anchos de esta función está disponible.  Las funciones de enlace de informe tienen una cadena cuyo tipo \(caracteres anchos o restringidos\) coincida con la versión de esta función utilizada.  Utilice el siguiente prototipo de función por vínculos de informe utilizados con la versión de caracteres anchos de esta función:  
+ Está disponible la versión con caracteres anchos de esta función. Las funciones de enlace de informe toman una cadena cuyo tipo (caracteres anchos o estrechos) debe coincidir con la versión de esta función que se usa. Use el prototipo de función siguiente con los enlaces de informe que se usan con la versión de caracteres anchos de dicha función:  
   
 ```  
 int YourReportHook( int reportType, wchar_t *message, int *returnValue );  
 ```  
   
- Utilice el siguiente prototipo por vínculos de informe de estrecho\- carácter:  
+ Use el prototipo siguiente con los enlaces de informe de caracteres estrechos:  
   
 ```  
 int YourReportHook( int reportType, char *message, int *returnValue );  
 ```  
   
- Estas funciones validan sus parámetros.  Si `mode` o `pfnNewNook` no es válido, estas funciones se invoca el controlador no válido de parámetro, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven \-1.  
+ Estas funciones validan sus parámetros. Si `mode` o `pfnNewNook` no es válido, estas funciones invocan al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven -1.  
   
 > [!NOTE]
 >  Si la aplicación se compila con `/clr` y se llama a la función de creación de informes una vez que la aplicación se ha cerrado, CLR inicia una excepción si la función de creación de informes llama a cualquier función de CRT.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|Encabezado opcional|  
-|------------|--------------------------|-------------------------|  
-|`_CrtSetReportHook2`|\<crtdbg.h\>|\<errno.h\>|  
-|`_CrtSetReportHookW2`|\<crtdbg.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_CrtSetReportHook2`|\<crtdbg.h>|\<errno.h>|  
+|`_CrtSetReportHookW2`|\<crtdbg.h>|\<errno.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Bibliotecas  
- Solo las versiones de depuración de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliotecas  
+ Solo versiones de depuración de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_setreporthook2.c  
@@ -244,7 +247,7 @@ int   main(int argc, char* argv[])
 }  
 ```  
   
-## Resultados  
+## <a name="output"></a>Salida  
   
 ```  
 _CrtSetReportHook2(_CRT_RPTHOOK_INSTALL, TestHook1) returned 0  
@@ -258,5 +261,5 @@ _CrtSetReportHook2(_CRT_RPTHOOK_REMOVE, TestHook2) returned 0
 _CrtSetReportHook2(_CRT_RPTHOOK_REMOVE, TestHook1) returned 0  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Rutinas de depuración](../../c-runtime-library/debug-routines.md)

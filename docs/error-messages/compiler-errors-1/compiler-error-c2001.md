@@ -1,41 +1,44 @@
 ---
-title: "Error del compilador C2001 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2001"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2001"
+title: Compilador Error C2001 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2001
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2001
 ms.assetid: 0c3a7821-d8e5-4398-ab5a-4116d46e8dda
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2001
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: aedba438451089aa2d71e06da7ce189ab97d4190
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2001"></a>C2001 de Error del compilador
 nueva línea en constante  
   
- Una constante de cadena no puede continuarse en una segunda línea a menos que se haga lo siguiente:  
+ Una constante de cadena no se puede continuar en una segunda línea a menos que haga lo siguiente:  
   
--   Terminar la primera línea con una barra diagonal inversa \(\\\).  
+-   Finalizar la primera línea con una barra diagonal inversa.  
   
--   Cerrar la cadena de la primera línea con un signo de comillas dobles \("\) y abrir la cadena de la línea siguiente con el mismo signo.  
+-   La cadena en la primera línea con un signo de comillas dobles de cierre y abra la cadena en la línea siguiente con otro signo de comillas dobles.  
   
- No basta con terminar la primera línea con \\n.  
+ Final de la primera línea con \n no es suficiente.  
   
-## Ejemplo  
- El código siguiente genera el error C2001:  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C2001:  
   
 ```  
 // C2001.cpp  
@@ -51,8 +54,8 @@ int main()
 }  
 ```  
   
-## Ejemplo  
- Los espacios al principio de la línea inmediatamente después de un carácter de continuación de línea se incluyen en la constante de cadena.  Ninguno de los ejemplos anteriores inserta un carácter de nueva línea en la constante de cadena.  A continuación se indica la forma de insertar un carácter de nueva línea:  
+## <a name="example"></a>Ejemplo  
+ Se incluyen espacios al principio de la línea siguiente después de un carácter de continuación de línea en la constante de cadena. Ninguno de los ejemplos mostrados anteriormente incrustar un carácter de nueva línea en la constante de cadena. Puede incrustar un carácter de nueva línea como se muestra aquí:  
   
 ```  
 // C2001b.cpp  

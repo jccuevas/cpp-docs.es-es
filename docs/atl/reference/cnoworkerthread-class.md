@@ -27,32 +27,18 @@ caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 4c38d778849a31d55a657fc1022c2e9f4a370eec
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 9d5722ece0c85c07445f22d93e4840b9188b246c
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cnoworkerthread-class"></a>Clase CNoWorkerThread
 Utilice esta clase como argumento para el `MonitorClass` parámetro de plantilla a las clases de caché si desea deshabilitar el mantenimiento de la memoria caché dinámica.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -77,7 +63,7 @@ class CNoWorkerThread
 ## <a name="remarks"></a>Comentarios  
  Esta clase proporciona la misma interfaz pública que [CWorkerThread](../../atl/reference/cworkerthread-class.md). Esta interfaz debe proporcionar el `MonitorClass` parámetro de plantilla a las clases de caché.  
   
- Los métodos de esta clase se implementan que no haga nada. Los métodos que devuelven un HRESULT siempre devuelven S_OK y los métodos que devuelven un identificador de subproceso o de identificador siempre devuelven 0.  
+ Los métodos de esta clase se implementan para no hacer nada. Los métodos que devuelven un valor HRESULT siempre devuelven S_OK y los métodos que devuelven un identificador de subproceso o de identificador siempre devuelven 0.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlutil.h  
