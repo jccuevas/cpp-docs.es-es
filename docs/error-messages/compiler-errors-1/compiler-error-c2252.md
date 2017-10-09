@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2252 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2252"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2252"
+title: Error del compilador C2252 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2252
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2252
 ms.assetid: fee74ab9-1997-4615-82fe-e6d1fe3aacd9
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2252
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c390c4d72d2f9919a07087e71b687ac832521b11
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-no se puede crear una instancia de la plantilla explícita en el ámbito actual  
+---
+# <a name="compiler-error-c2252"></a>Error del compilador C2252
+no se puede crear explícitamente instancias de plantilla en el ámbito actual  
   
- El compilador ha detectado un problema con una instancia explícita de una plantilla.  Por ejemplo, no puede crear instancias explícitamente de una plantilla en una función.  
+ El compilador detectó un problema con una instancia explícita de una plantilla.  Por ejemplo, no puede crear instancias explícitamente de una plantilla en una función.  
   
- El código siguiente genera el error C2252:  
+ El ejemplo siguiente genera C2252:  
   
 ```  
 // C2252.cpp  

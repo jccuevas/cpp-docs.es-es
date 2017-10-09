@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2050 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2050"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2050"
+title: C2050 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2050
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2050
 ms.assetid: 66aaed7d-00db-4ce1-a9d6-4447c1cf07ce
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C2050
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ab67a523b7cc65f29ab443fc189d0614026fc2cd
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-la expresión switch no es de tipo integral  
+---
+# <a name="compiler-error-c2050"></a>C2050 de Error del compilador
+expresión switch no entero  
   
- La expresión `switch` se está evaluando como un valor no entero.  Para resolver el error, utilice únicamente valores de tipo integral en las instrucciones switch.  
+ El `switch` expresión se evalúa como un valor no entero. Para resolver el error, use valores enteros solo en instrucciones switch.  
   
- El código siguiente genera el error C2050:  
+ El ejemplo siguiente genera C2050:  
   
 ```  
 // C2050.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2085 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2085"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2085"
+title: Compilador Error C2085 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2085
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2085
 ms.assetid: 0a86785c-8e6f-481b-8c7b-412220c1950d
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C2085
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 45805bbea2eca77ae81922088471e99de26be1e4
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'identificador' : no está en la lista de parámetros formales  
+---
+# <a name="compiler-error-c2085"></a>C2085 de Error del compilador
+'identificador': no en la lista de parámetros formales  
   
- El identificador se ha declarado en una definición de función, pero no en la lista de parámetros formales \(sólo en ANSI C\).  
+ El identificador se ha declarado en una definición de función pero no en la lista de parámetros formales. (Sólo en ANSI C)  
   
- El código siguiente genera el error C2085:  
+ El ejemplo siguiente genera C2085:  
   
 ```  
 // C2085.c  
@@ -44,4 +47,4 @@ void func1( void );
 int main( void ) {}  
 ```  
   
- Sin el punto y coma, `func1()` parecerá una definición de función, no un prototipo, por lo que `main` se definirá dentro de `func1()` y, con ello, se generará el error C2085 para el identificador `main`.
+ Con la falta de punto y coma, `func1()` es similar a una definición de función, no un prototipo, por lo que `main` se define en `func1()`, Error C2085 para el identificador `main`.

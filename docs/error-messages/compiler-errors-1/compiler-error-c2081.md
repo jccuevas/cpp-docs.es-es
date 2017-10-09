@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C2081 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2081"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2081"
+title: C2081 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2081
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2081
 ms.assetid: 7db9892d-364d-4178-a49d-f8398ece09a0
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C2081
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 20f9f98ca03b9ed71d360b1b7c8bb64494a58416
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'identificador' : el nombre de la lista de parámetros formales no es válido  
+---
+# <a name="compiler-error-c2081"></a>C2081 de Error del compilador
+'identificador': nombre en permitido de la lista de parámetros formales  
   
- El identificador ha originado un error de sintaxis.  
+ El identificador produjo un error de sintaxis.  
   
- La causa de este error puede ser el uso del estilo anterior para la lista de parámetros formales.  Deberá especificarse el tipo de los parámetros formales en la lista.  
+ Este error puede deberse a utilizando el estilo antiguo para la lista de parámetros formales. Debe especificar el tipo de parámetros formales en la lista de parámetros formales.  
   
- El código siguiente genera el error C2081:  
+ El ejemplo siguiente genera C2081:  
   
 ```  
 // C2081.c  

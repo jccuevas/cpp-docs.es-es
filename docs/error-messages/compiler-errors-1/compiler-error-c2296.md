@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C2296 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2296"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2296"
+title: Error del compilador C2296 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2296
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2296
 ms.assetid: 47d270f4-13ce-4c16-81e2-7d67c6c4a540
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2296
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e915df8a0ab9a9baa5b314f850434e41087be8b5
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'operator' : operando izquierdo incorrecto  
+---
+# <a name="compiler-error-c2296"></a>Error del compilador C2296
+'operador': operando izquierdo incorrecto  
   
  El operando izquierdo utilizado con `operator` no es válido.  
   
- Por ejemplo, el compilador puede ver una declaración donde se pretendía realizar una llamada a función.  
+ Por ejemplo, el compilador puede ver una declaración donde se pretendía realizar una llamada de función.  
   
- El código siguiente genera el error C2296:  
+ El ejemplo siguiente genera C2296:  
   
 ```  
 // C2296.cpp  

@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C2273 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2273"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2273"
+title: Error del compilador C2273 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2273
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2273
 ms.assetid: 3c682c66-97bf-4a23-a22c-d9a26a92bf95
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Error del compilador C2273
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 58f7f13303b9941cf07e90685d68d7114213ea2d
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-“tipo”: no es válido como lado derecho '\-\>' de operador  
+---
+# <a name="compiler-error-c2273"></a>Error del compilador C2273
+'type': no es válido como lado derecho del operador '->'  
   
- Hay un tipo como operando derecho de un operador `->`.  
+ Aparece un tipo como operando derecho de un `->` operador.  
   
- Este error puede producirse al intentar el acceso a una conversión de tipos definida por el usuario.  Utilice la palabra clave `operator` entre \-\> y `type`.  
+ Este error puede deberse a intentar obtener acceso a una conversión de tipo definido por el usuario. Use la palabra clave `operator` entre -> y `type`.  
   
- El código siguiente genera el error C2273:  
+ El ejemplo siguiente genera C2273:  
   
 ```  
 // C2273.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2195 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2195"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2195"
+title: Error del compilador C2195 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2195
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2195
 ms.assetid: 9f9f035c-9c51-4173-a8ea-c6f907fc5c63
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C2195
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 557d4dd0ae0f25326fed227ab9ad508e2ebce30d
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'identificador' : es un segmento de datos  
+---
+# <a name="compiler-error-c2195"></a>Error del compilador C2195
+'identificador': es un segmento de datos  
   
- El pragma `code_seg` utiliza un nombre de segmento utilizado con el pragma `data_seg`.  
+ El `code_seg` pragma utiliza un nombre de segmento usado con el `data_seg` pragma.  
   
- El código siguiente genera el error C2195:  
+ El ejemplo siguiente genera C2195:  
   
 ```  
 // C2195.cpp  

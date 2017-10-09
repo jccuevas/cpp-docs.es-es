@@ -1,5 +1,5 @@
 ---
-title: Error de compilador el error C2249 | Documentos de Microsoft
+title: Error del compilador C2249 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 043c28c9fa11dc28425c58aea2efc6a2cefe4065
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5878c28ed0b4fc2663c17021aa9e277ccaa8ad4e
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2249"></a>Error del compilador C2249
-'miembro': no hay ruta accesible para obtener acceso al miembro declarado en 'clase' base virtual  
+'member': ninguna ruta accesible para obtener acceso al miembro declarado en 'clase' base virtual  
   
  El `member` se hereda de un nonpublic `virtual` estructura o clase base.  
   

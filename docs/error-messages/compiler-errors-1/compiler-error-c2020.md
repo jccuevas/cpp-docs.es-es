@@ -1,29 +1,32 @@
 ---
-title: "Error del compilador C2020 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2020"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2020"
+title: C2020 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2020
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2020
 ms.assetid: 486f98ed-6574-4d82-89e3-74b5a61ed419
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C2020
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 02f15afa461a58388f0e01fc370368f2dd57f70f
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'miembro' : nueva definición de miembro 'clase'  
+---
+# <a name="compiler-error-c2020"></a>C2020 de Error del compilador
+'miembro': nueva definición de miembro de 'class'  
   
- Se ha vuelto a definir un miembro heredado de una clase o estructura base.  Los miembros heredados no pueden volver a definirse a menos que se declaren como `virtual` en la clase base.
+ Se vuelve a definir un miembro heredado de una clase base o una estructura. Los miembros heredados no se pueden volver a definir salvo que se declaren como `virtual` en la clase base.
