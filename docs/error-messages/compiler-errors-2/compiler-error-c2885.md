@@ -1,37 +1,40 @@
 ---
-title: "Error del compilador C2885 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2885"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2885"
+title: Error del compilador C2885 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2885
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Error del compilador C2885
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a19f209d53d7d0b37cddbf559fa3dc02ee50db7e
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'clase::identificador' : no es una declaración using válida en un ámbito de no clase  
+---
+# <a name="compiler-error-c2885"></a>Error del compilador C2885
+'Class:: identifier': no es una declaración using válida en un ámbito no clase  
   
- Se ha utilizado una declaración [using](../../cpp/using-declaration.md) incorrectamente.  
+ Se usa un [con](../../cpp/using-declaration.md) declaración incorrectamente.  
   
-## Ejemplo  
- Este error se puede generar como resultado del trabajo de conformidad del compilador realizado para Visual C\+\+ 2005: ya no es válido tener una declaración `using` de un tipo anidado; debe calificar explícitamente cada referencia realizada al tipo anidado, incluir el tipo en un espacio de nombres o crear una definición de tipos \(typedef\).  
+## <a name="example"></a>Ejemplo  
+ Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual C++ 2005: ya no es válido tener una `using` declaración a un tipo anidado; debe calificar explícitamente cada referencia realizada al tipo anidado, coloque el tipo en un nombre espacio o crear una definición de tipo.  
   
- El ejemplo siguiente genera el error C2885.  
+ El ejemplo siguiente genera C2885.  
   
 ```  
 // C2885.cpp  
@@ -60,10 +63,10 @@ int main () {
 }  
 ```  
   
-## Ejemplo  
- Si utiliza la palabra clave `using` con un miembro de clase, C\+\+ necesita que defina el miembro dentro de otra clase \(una clase derivada\).  
+## <a name="example"></a>Ejemplo  
+ Si usas el `using` palabra clave con un miembro de clase, C++ requiere que se defina el miembro dentro de otra clase (una clase derivada).  
   
- El ejemplo siguiente genera el error C2885.  
+ El ejemplo siguiente genera C2885.  
   
 ```  
 // C2885_b.cpp  

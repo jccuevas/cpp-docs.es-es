@@ -1,40 +1,43 @@
 ---
-title: "Error del compilador C2660 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2660"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2660"
+title: Error del compilador C2660 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2660
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Error del compilador C2660
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1a93046493897b69e4b557607d823566d82070f5
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2660"></a>Error del compilador C2660
 'función' : la función no acepta número parámetros  
   
  Se llama a la función con un número incorrecto de parámetros.  
   
- Puede producirse el error C2660 si se llama accidentalmente a una función de la API de Windows en lugar de llamar a una función miembro MFC del mismo nombre.  Para solucionar este problema:  
+ Puede producirse el error C2660 si se llama accidentalmente a una función de la API de Windows en lugar de llamar a una función miembro MFC del mismo nombre. Para solucionar este problema:  
   
 -   Ajuste la llamada de función para que siga el formato de la llamada a función miembro.  
   
--   Utilice el operador de resolución de ámbito \(`::`\) para indicar al compilador que realice una búsqueda del nombre de función en el espacio de nombres global.  
+-   Utilice el operador de resolución de ámbito (`::`) para indicar al compilador que realice una búsqueda del nombre de función en el espacio de nombres global.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera el error C2660.  
   
 ```  
@@ -47,8 +50,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- Este error también puede producirse si se intenta llamar directamente al método Dispose de un tipo administrado.  Para obtener más información, vea [Destructores y finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  El ejemplo siguiente genera el error C2660.  
+## <a name="example"></a>Ejemplo  
+ Este error también puede producirse si se intenta llamar directamente al método Dispose de un tipo administrado. Para obtener más información, consulte [destructores y finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). El ejemplo siguiente genera el error C2660.  
   
 ```  
 // C2660_a.cpp  
@@ -68,7 +71,7 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Se producirá el error C2660 si una clase derivada oculta una función.  
   
 ```  
@@ -98,7 +101,7 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Puede producirse el error C2660 si se invoca una propiedad indizada de forma incorrecta.  
   
 ```  
@@ -122,7 +125,7 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Puede producirse el error C2660 si se invoca una propiedad indizada de forma incorrecta.  
   
 ```  
@@ -144,7 +147,7 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Puede producirse el error C2660 si se define un nuevo operador en una clase de plantilla, pero el nuevo operador crea en dicha clase un objeto cuyo tipo es distinto al del tipo envolvente.  
   
 ```  

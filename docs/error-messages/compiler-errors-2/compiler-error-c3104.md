@@ -1,5 +1,5 @@
 ---
-title: C3104 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3104 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,25 +19,11 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 5df018fe26e66ed480ed2464c19c876adfac8dd1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 837ff564bc3b2795bce6de69caa85e1d1dcf2766
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3104"></a>Error del compilador C3104
@@ -45,9 +31,9 @@ argumento de atributo no válido
   
  Ha especificado un argumento no válido a un atributo.  
   
- Consulte [tipos de parámetro de atributo](../../windows/attribute-parameter-types-cpp-component-extensions.md) para obtener más información.  
+ Vea [tipos de parámetro de atributo](../../windows/attribute-parameter-types-cpp-component-extensions.md) para obtener más información.  
   
- Este error puede producirse como resultado del trabajo de conformidad del compilador realizado para Visual C++ 2005: cuando se pasan matrices administradas a atributos personalizados, el tipo de la matriz ya no se deduce de la lista de inicialización de agregado. Ahora, el compilador requiere que especifique el tipo de la matriz, así como la lista de inicializadores.  
+ Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual C++ 2005: cuando se pasan matrices administradas a atributos personalizados, el tipo de la matriz ya no se deduce de la lista de inicialización de agregado. Ahora, el compilador requiere especificar el tipo de la matriz, así como la lista de inicializadores.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera C3104.  

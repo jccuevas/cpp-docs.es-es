@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C2688 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2688"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2688"
+title: C2688 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2688
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2688
 ms.assetid: 168c9e9d-8f65-4664-af86-db71d3e6ee46
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Error del compilador C2688
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eaacdb4c7404dd370de31ad1bca6c07391279584
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'C2::fgrv': los resultados de covariante con herencia múltiple o virtual no son compatibles con funciones varargs  
+---
+# <a name="compiler-error-c2688"></a>C2688 de Error del compilador
+'C2:: fgrv': devueltos de covariante con varias o herencia virtual no se admite para las funciones varargs  
   
- Los tipos de valor devuelto de covariante no se admiten en Visual C\+\+ cuando una función contiene argumentos de variable.  
+ Tipos de valor devueltos de covariantes no se admiten en Visual C++ cuando una función contiene argumentos de variable.  
   
- Para resolver este error, defina las funciones para que no utilicen argumentos de variable o bien haga que los valores devueltos sean los mismos para todas las funciones virtuales.  
+ Para resolver este error, defina las funciones para que no se utilizan argumentos de variable o hacer que los valores devueltos el mismo para todas las funciones virtuales.  
   
- El código siguiente genera el error C2688:  
+ El ejemplo siguiente genera C2688:  
   
 ```  
 // C2688.cpp  

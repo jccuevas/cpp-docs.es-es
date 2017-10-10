@@ -1,5 +1,5 @@
 ---
-title: C2873 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C2873 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 6c4cb41ad915054bb5f597b8b0eee3bf57d876c9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4a4af3997ddf0921227c8e6448491c08e25f9957
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2873"></a>Error del compilador C2873
-'símbolo': no se puede utilizar el símbolo en una declaración using  
+'símbolo': símbolo no se puede utilizar en una declaración using  
   
- Un `using` directiva no existe una [espacio de nombres](../../cpp/namespaces-cpp.md) (palabra clave). Esto hace que el compilador interprete el código como incorrectamente un [mediante declaración](../../cpp/using-declaration.md) en lugar de un [mediante la directiva](../../cpp/namespaces-cpp.md#using_directives).
+ A `using` directiva es que falta un [espacio de nombres](../../cpp/namespaces-cpp.md) palabra clave. Esto hace que el compilador interprete el código como incorrectamente un [mediante declaración](../../cpp/using-declaration.md) en lugar de un [using (directiva)](../../cpp/namespaces-cpp.md#using_directives).

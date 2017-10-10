@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2910 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2910"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2910"
+title: Error del compilador C2910 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2910
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2910
 ms.assetid: 09c50e6a-e099-42f6-8ed6-d80e292a7a36
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2910
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: db1c4d7b4533d6bbfb0848c1dc16a7336ad81eb0
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'función' : no puede estar especializada de forma explícita  
+---
+# <a name="compiler-error-c2910"></a>Error del compilador C2910
+'función': no se puede especializar de forma explícita  
   
- El compilador ha detectado un intento de especializar explícitamente dos veces la misma función.  
+ El compilador detectó un intento de especializar de forma explícita una función dos veces.  
   
- El código siguiente genera el error C2910:  
+ El ejemplo siguiente genera el error C2910:  
   
 ```  
 // C2910.cpp  
@@ -40,9 +43,9 @@ template <> struct S<int> { void f() {} };
 template <> void S<int>::f() {}   // C2910 delete this specialization  
 ```  
   
- El error C2910 también puede producirse si se intenta especializar explícitamente un miembro que no sea de la plantilla.  Es decir, sólo se puede especializar explícitamente una plantilla de función.  
+ También puede generarse el error C2910 si se intenta especializar explícitamente un miembro no es de plantilla. Es decir, solo explícitamente pueden especializar una plantilla de función.  
   
- El código siguiente genera el error C2910:  
+ El ejemplo siguiente genera el error C2910:  
   
 ```  
 // C2910b.cpp  
@@ -63,11 +66,11 @@ template <> A<void>::A(void* p){}   // C2910
 // A<void>::A(void* p){}  
 ```  
   
- Este error también se producirá como resultado del trabajo de conformidad del compilador realizado para Visual Studio .NET 2003:  
+ Este error también se generará como resultado del trabajo de conformidad del compilador efectuado en Visual Studio .NET 2003:.  
   
- Para que el código sea válido en las versiones Visual Studio .NET 2003 y Visual Studio .NET de Visual C\+\+, quite `template <>`.  
+ Para obtener código será válido en las versiones de Visual Studio .NET 2003 y Visual Studio .NET de Visual C++, quite `template <>`.  
   
- El código siguiente genera el error C2910:  
+ El ejemplo siguiente genera el error C2910:  
   
 ```  
 // C2910c.cpp  

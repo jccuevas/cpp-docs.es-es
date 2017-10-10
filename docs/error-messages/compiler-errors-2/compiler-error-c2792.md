@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2792 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2792"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2792"
+title: C2792 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2792
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2792
 ms.assetid: 392cf748-4f5e-4e62-a364-3118d5658408
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2792
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 16a07fcc43ffde40a4ac540d3e5dbaa8891ea48e
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'super': esta palabra clave debe ir seguida de '::'  
+---
+# <a name="compiler-error-c2792"></a>C2792 de Error del compilador
+'super': esta palabra clave debe ir seguida por '::'  
   
- El único símbolo \(token\) que puede ir a continuación de la palabra clave `__super` es `::`.  
+ El token único que puede seguir la palabra clave `__super` es `::`.  
   
- El código siguiente genera el error C2792:  
+ El ejemplo siguiente genera C2792:  
   
 ```  
 // C2792.cpp  

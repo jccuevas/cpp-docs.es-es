@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2993 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2993"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2993"
+title: Error del compilador C2993 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2993
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2993
 ms.assetid: 4ffd2b78-654b-46aa-95a6-b62101cf91c8
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2993
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a6306b2c3c632d25ee6b37a025516f759cc126a6
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'identificador' : tipo no válido para el parámetro de plantilla 'parámetro' sin tipo definido  
+---
+# <a name="compiler-error-c2993"></a>Error del compilador C2993
+'identificador': tipo no válido para el parámetro de plantilla sin tipo 'parameter'  
   
- No se puede declarar una plantilla sin un argumento de estructura o unión.  Utilice punteros para pasar estructuras y uniones como parámetros de plantilla.  
+ No se puede declarar una plantilla con una estructura o unión argumento. Utilice punteros para pasar estructuras y uniones como parámetros de plantilla.  
   
- El código siguiente genera el error C2993:  
+ El ejemplo siguiente genera C2993:  
   
 ```  
 // C2993.cpp  
@@ -45,9 +48,9 @@ template <class T, struct MyStruct S>   // C2993
 class CMyClass {};  
 ```  
   
- Este error también puede producirse como resultado del trabajo de conformidad del compilador realizado para Visual Studio .NET 2003; no se permite el uso de parámetros de plantilla sin tipo definido de punto flotante.  El estándar C\+\+ no permite el uso de parámetros de plantilla sin tipo definido de punto flotante.  
+ Este error también se generará como resultado del trabajo de conformidad del compilador efectuado en Visual Studio .NET 2003: ya no se permite de parámetros de plantilla sin tipo de punto flotante. El estándar de C++ no permite parámetros de plantilla sin tipo de punto flotante.  
   
- Si se trata de una plantilla de función, utilice un argumento de función para transferir el parámetro de plantilla sin tipo definido de punto flotante \(este código será válido en las versiones Visual Studio .NET 2003 y Visual Studio .NET de Visual C\+\+\).  Si se trata de una plantilla de clase, no hay una solución sencilla.  
+ Si se trata de una plantilla de función, utilice un argumento de función para transferir en flotante punto parámetro de plantilla sin tipo (este código será válido en las versiones de Visual Studio .NET 2003 y Visual Studio .NET de Visual C++). Si es una plantilla de clase, no hay ninguna solución alternativa fácil.  
   
 ```  
 // C2993b.cpp  

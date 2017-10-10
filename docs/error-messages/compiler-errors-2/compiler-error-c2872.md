@@ -19,25 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c81fc315c4bb893b96876b7b67b42806a3246583
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 03bfb79a424b1272239826abf3056a8ab6228eec
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2872"></a>Error del compilador C2872
@@ -47,7 +33,7 @@ El compilador no puede determinar los símbolos que se hace referencia a. Más d
   
 El error C2872 puede producirse si un archivo de encabezado incluye un [using (directiva)](../../cpp/namespaces-cpp.md#using_directives), y se incluye un archivo de encabezado posteriores que contiene un tipo que también está en el espacio de nombres especificado en el `using` directiva. Especifique un `using` directiva sólo después de que todos los archivos de encabezado se especifican con `#include`.  
   
- Para obtener más información sobre el error C2872, vea los artículos de Knowledge Base [PRB: compilador errores cuando usas #import con XML en Visual C++ .NET](http://support.microsoft.com/kb/316317) y ["error C2872 de Error: 'Plataforma': símbolo ambiguo" mensaje de error cuando se usa el espacio de nombres Windows::Foundation::Metadata en Visual Studio 2013](https://support.microsoft.com/kb/2890859).  
+ Para obtener más información sobre el error C2872, vea los artículos de Knowledge Base [PRB: compilador errores cuando usas #import con XML en Visual C++ .NET](http://support.microsoft.com/kb/316317) y ["error C2872 de Error: 'Plataforma': símbolo ambiguo" mensaje de error cuando se usa el Espacio de nombres Windows::Foundation::Metadata en Visual Studio 2013](https://support.microsoft.com/kb/2890859).  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera el error C2872, ya que se realiza una referencia ambigua a una variable denominada `i`; dos variables con el mismo nombre que se encuentran dentro del ámbito:  

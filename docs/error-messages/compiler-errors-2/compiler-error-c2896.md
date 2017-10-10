@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2896 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2896"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2896"
+title: Error del compilador C2896 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2896
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2896
 ms.assetid: b600407b-cb05-42e3-9069-2aa6960f0eaa
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C2896
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b60848dcaa06bb41ec290e3fb91a65fda025a8df
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'función1' : no se puede utilizar la plantilla de función 'función2' como argumento  
+---
+# <a name="compiler-error-c2896"></a>Error del compilador C2896
+'función1': no se puede usar la plantilla de función 'función2' como argumento  
   
- Una plantilla de función no puede ser argumento de otra plantilla de función.  
+ Una plantilla de función no puede ser un argumento de otra plantilla de función.  
   
- El código siguiente genera el error C2896:  
+ El ejemplo siguiente genera C2896:  
   
 ```  
 // C2896.cpp  

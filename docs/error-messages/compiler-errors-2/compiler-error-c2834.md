@@ -1,29 +1,32 @@
 ---
-title: "Error del compilador C2834 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2834"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2834"
+title: Error del compilador C2834 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2834
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2834
 ms.assetid: 28f9f6eb-ab2a-4e64-aaaa-9d14f955de41
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C2834
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5b85b01fa832b0d14d01b6b7cbb5ef65107177ef
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'operator operador' se debe calificar globalmente  
+---
+# <a name="compiler-error-c2834"></a>Error del compilador C2834
+'operador' se debe calificar globalmente  
   
- Los operadores `new` y `delete` están asociados a la clase donde residen.  No se puede utilizar la resolución de ámbito para seleccionar una versión de `new` o `delete` de una clase diferente.  Para implementar varias formas del operador `new` o `delete`, cree una versión del operador con parámetros formales adicionales.
+ El `new` y `delete` operadores están asociados a la clase donde residen. Resolución de ámbito no se puede usar para seleccionar una versión de `new` o `delete` de una clase diferente. Para implementar varias formas de la `new` o `delete` (operador), cree una versión del operador con parámetros formales adicionales.

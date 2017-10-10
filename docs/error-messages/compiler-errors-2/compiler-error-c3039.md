@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: af2d6ef4fe93730265de6081fcb83f074dc6e4ec
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f3162ab8241781cda521fa4fc9dc51f14fa42897
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3039"></a>Error del compilador C3039
 'var': la variable de índice de la instrucción 'for' de OpenMP no puede ser una variable de reducción  
   
- Una variable de índice es implícitamente privada, por lo que no se puede usar la variable en un [reducción](../../parallel/openmp/reference/reduction.md) cláusula en la envolvente [paralelo](../../parallel/openmp/reference/parallel.md) directiva.  
+ Una variable de índice es implícitamente privada, por lo que no se puede usar la variable en una cláusula [reduction](../../parallel/openmp/reference/reduction.md) en la directiva [parallel](../../parallel/openmp/reference/parallel.md) envolvente.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera la advertencia C3039:  

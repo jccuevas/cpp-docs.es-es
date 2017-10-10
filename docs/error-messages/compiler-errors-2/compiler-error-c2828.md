@@ -1,35 +1,38 @@
 ---
-title: "Error del compilador C2828 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2828"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2828"
+title: Error del compilador C2828 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2828
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2828
 ms.assetid: d8df6ed4-5954-46c2-b59b-52881d4e923d
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Error del compilador C2828
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8a461ae14edfbdffa9bd30068a7e935fb44817a6
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'operador operador' no se puede reemplazar globalmente por un tipo unario  
+---
+# <a name="compiler-error-c2828"></a>Error del compilador C2828
+'operador' no se puede reemplazar globalmente por un tipo binario  
   
- El operador no puede tener una forma binaria fuera de un objeto.  
+ El operador no puede tener un formato binario fuera de un objeto.  
   
-### Se corrige mediante algunas de las siguientes posibles soluciones  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corregir mediante las siguientes posibles soluciones  
   
-1.  Convierta el operador sobrecargado en local respecto a un objeto.  
+1.  Convierta el operador sobrecargado local a un objeto.  
   
-2.  Elija el operador unario adecuado para sobrecargarlo.
+2.  Elija un operador unario adecuado a la sobrecarga.

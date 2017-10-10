@@ -1,48 +1,51 @@
 ---
-title: "Error del compilador C2801 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2801"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2801"
+title: Error del compilador C2801 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2801
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2801
 ms.assetid: 35dfc7ea-9e37-4e30-baa1-944dc61302f5
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2801
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 41e7956ace6c54cd55a2ed9f68f18c867bc80ad9
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'operator operador' debe ser un miembro no estático  
+---
+# <a name="compiler-error-c2801"></a>Error del compilador C2801
+'operador' debe ser un miembro no estático  
   
- Los operadores siguientes se pueden sobrecargar sólo como miembros no estáticos:  
+ Sólo como miembros no estáticos se pueden sobrecargar los operadores siguientes:  
   
--   Asignación `=`  
+-   Asignación`=`  
   
--   Acceso a miembros de clase `->`  
+-   Acceso a miembros de clase`->`  
   
--   Subíndices `[]`  
+-   Subíndices`[]`  
   
--   Llamada a función `()`  
+-   Llamada de función`()`  
   
- Posibles causas del error C2801:  
+ Posibles causas de C2801:  
   
--   El operador sobrecargado no es un miembro de clase, estructura o unión  
+-   Operador sobrecargado no es una clase, estructura o miembro de unión.  
   
--   El operador sobrecargado se ha declarado como `static`.  
+-   El operador sobrecargado se declara `static`.  
   
--   El código siguiente genera el error C2801:  
+-   El ejemplo siguiente genera C2801:  
   
 ```  
 // C2801.cpp  

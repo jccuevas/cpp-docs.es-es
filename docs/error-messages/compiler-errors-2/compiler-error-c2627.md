@@ -19,29 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 2d0354971d4f512c7ba98a1e6d0f7cb014cba5af
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2af1b475fb6eff2a37f333aa0ef5ed07eae791e2
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2627"></a>C2627 de Error del compilador
-'función': función miembro no permitida en unión anónima  
+'función': función miembro no permitida en una unión anónima  
   
  Un [unión anónima](../../cpp/unions.md#anonymous_unions) no puede tener funciones miembro.  
   

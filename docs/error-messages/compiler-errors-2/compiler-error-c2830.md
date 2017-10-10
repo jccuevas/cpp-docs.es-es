@@ -19,29 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1cbaa14c04aac55a09f646bfbe669a475e527add
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 44b64b447a9cc5482014c9304f9101f54f45c72c
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="compiler-error-c2830"></a>{1&gt;Error del compilador C2830&lt;1}
-solo pueden tener valores predeterminados los parámetros de ubicación para 'operator new'  
+# <a name="compiler-error-c2830"></a>Error del compilador C2830
+solo los parámetros de ubicación para 'operator new' pueden tener valores predeterminados  
   
 Los parámetros formales estándar para [new (operador)](../../standard-library/new-operators.md#op_new) no pueden tener valores predeterminados. Solo los parámetros de selección de ubicación definida por el usuario pueden especificar los valores predeterminados.
 
