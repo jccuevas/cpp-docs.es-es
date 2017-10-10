@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C2387 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2387"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2387"
+title: Error del compilador C2387 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2387
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2387
 ms.assetid: 6847b8e1-ffac-458d-ab88-0c92f72f2527
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2387
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 18233efc81a63a29c1350d1addb67f8ea20e877e
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'tipo' : clase base ambigua  
+---
+# <a name="compiler-error-c2387"></a>Error del compilador C2387
+'type': clase base ambigua  
   
- El compilador no pudo resolver inequívocamente una llamada a función porque la función existe en más de una clase base.  
+ El compilador no pudo resolver inequívocamente una llamada de función porque la función existe en más de una clase base.  
   
- Para resolver este error, quite una de las clases base de la herencia o explícitamente califique la llamada a función.  
+ Para resolver este error, quite una de las clases base de la herencia, o calificar explícitamente la llamada de función.  
   
- El código siguiente genera el error C2387:  
+ El ejemplo siguiente genera C2387:  
   
 ```  
 // C2387.cpp  

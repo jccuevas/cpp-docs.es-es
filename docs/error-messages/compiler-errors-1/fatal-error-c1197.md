@@ -1,37 +1,40 @@
 ---
-title: "Error irrecuperable C1197 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1197"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1197"
+title: Error irrecuperable C1197 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1197
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1197
 ms.assetid: 22b801b7-e792-41f6-a461-973c03c69f25
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Error irrecuperable C1197
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d0eb3ab152e9299d47210a6d2c1eb58e3f92a925
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-no se puede hacer referencia a 'mscorlib.dll\_1' porque el programa ya hacía referencia a 'mscorlib.dll\_2'  
+---
+# <a name="fatal-error-c1197"></a>Error irrecuperable C1197
+no puede hacer referencia 'a mscorlib.dll_1' como el programa ya hacía referencia 'a mscorlib.dll_2'  
   
- El compilador se corresponde con una versión de Common Language Runtime.  No obstante, se ha intentado hacer referencia a un archivo de Common Language Runtime de una versión anterior.  
+ El compilador se empareja con una versión de common language runtime.  Sin embargo, se ha intentado hacer referencia a una versión de un archivo de common language runtime desde una versión anterior.  
   
- Para resolver este error, haga referencia únicamente a archivos de la versión de Common Language Runtime incluida en la versión de Visual C\+\+ con la que esté compilando.  
+ Para resolver este error, sólo los archivos de referencia de la versión de common language runtime que se incluye con la versión de Visual C++ están compilando con.  
   
-## Ejemplo  
- El código siguiente genera el error C1197:  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C1197:  
   
 ```  
 // C1197.cpp  

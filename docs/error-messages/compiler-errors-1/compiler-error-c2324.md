@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2324 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2324"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2324"
+title: Error del compilador C2324 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2324
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2324
 ms.assetid: 215f0544-85b0-452d-825f-17a388b6a61c
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Error del compilador C2324
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 34ce2658607f673806d93579bc6d47a59d5206cd
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'identificador' : no se esperaba a la derecha de 'nombre'  
+---
+# <a name="compiler-error-c2324"></a>Error del compilador C2324
+'identificador': no se esperaba a la derecha de 'nombre'  
   
- Se llama a un destructor que utiliza un identificador incorrecto.  
+ Se llama a un destructor con un identificador incorrecto.  
   
- El código siguiente genera el error C2324:  
+ El ejemplo siguiente genera C2324:  
   
 ```  
 // C2324.cpp  

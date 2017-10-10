@@ -1,34 +1,37 @@
 ---
-title: "Error irrecuperable C1081 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1081"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1081"
+title: Error irrecuperable C1081 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1081
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1081
 ms.assetid: e58adf17-cbe1-4955-a5c7-80622bbba249
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error irrecuperable C1081
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 148e3e6035304eb155a478e5971defd9a0a55120
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="fatal-error-c1081"></a>Error irrecuperable C1081
 'símbolo': nombre de archivo demasiado largo  
   
- La longitud de un nombre de ruta de acceso a un archivo supera el valor `_MAX_PATH` \(fijado por STDLIB.h en 260 caracteres\).  Reduzca el nombre del archivo.  
+ La longitud de una ruta de acceso de archivo supera los `_MAX_PATH` (fijado por STDLIB.h en 260 caracteres). Acorte el nombre del archivo.  
   
- Si llama a CL.exe con un nombre de archivo corto, el compilador puede generar un nombre completo con ruta de acceso.  Por ejemplo, `cl -c myfile.cpp` puede hacer que el compilador genere:  
+ Si se llama a CL.exe con un nombre de archivo corto, el compilador puede necesitar generar una ruta de acceso completa. Por ejemplo, `cl -c myfile.cpp` puede hacer que el compilador genere:  
   
 ```  
 D:\<very-long-directory-path>\myfile.cpp  

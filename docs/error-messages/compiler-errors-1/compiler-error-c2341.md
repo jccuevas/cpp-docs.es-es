@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2341 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2341"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2341"
+title: Error del compilador C2341 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2341
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2341
 ms.assetid: aa2a7da5-e1c8-4225-9939-5bdc50158f31
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C2341
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5460ff70c95fd593539a16140c52fa1490bffc4e
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'nombre de sección' : se debe definir el segmento utilizando \#pragma data\_seg, code\_seg o una sección antes de su uso  
+---
+# <a name="compiler-error-c2341"></a>Error del compilador C2341
+'section name': se debe definir el segmento utilizando #pragma data_seg, code_seg o sección anterior para usar  
   
- Una instrucción [allocate](../../cpp/allocate.md) hace referencia a un segmento aún no definido por pragmas [code\_seg](../../preprocessor/code-seg.md), [data\_seg](../../preprocessor/data-seg.md) o [section](../../preprocessor/section.md).  
+ Un [asignar](../../cpp/allocate.md) instrucción hace referencia a un segmento aún no se ha definido por [code_seg](../../preprocessor/code-seg.md), [data_seg](../../preprocessor/data-seg.md), o [sección](../../preprocessor/section.md) pragma (directivas).  
   
- El código siguiente genera el error C2341:  
+ El ejemplo siguiente genera C2341:  
   
 ```  
 // C2341.cpp  

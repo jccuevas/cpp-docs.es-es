@@ -1,43 +1,46 @@
 ---
-title: "Error irrecuperable C1010 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1010"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1010"
+title: Error irrecuperable C1010 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1010
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error irrecuperable C1010
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 65a1842e8f7c920e053b3cdbcd41ea09583133b8
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-final de archivo inesperado al buscar la directiva de encabezado precompilado.Compruebe si olvidó agregar '\#include nombre' al código fuente?  
+---
+# <a name="fatal-error-c1010"></a>Error irrecuperable C1010
+final de archivo inesperado al buscar la directiva de encabezado precompilado. ¿Compruebe si olvidó agregar ' #include nombre ' a su origen?  
   
- Un archivo de inclusión especificado con [\/Yu](../../build/reference/yu-use-precompiled-header-file.md) no aparece enumerado en el archivo de código fuente.  Esta opción se habilita de manera predeterminada en la mayoría de los tipos de proyectos de Visual C\+\+ y "stdafx.h" es el archivo de inclusión predeterminado especificado mediante esta opción.  
+ Un archivo de inclusión especificado con [/Yu](../../build/reference/yu-use-precompiled-header-file.md) no aparece en el archivo de origen.  Esta opción está habilitada de forma predeterminada en la mayoría de los tipos de proyecto de Visual C++ y "stdafx.h" es el valor predeterminado incluye el archivo especificado por esta opción.  
   
  En el entorno de Visual Studio, utilice uno de los métodos siguientes para resolver este error:  
   
--   Si no utiliza encabezados precompilados en su proyecto, establezca la propiedad **Crear o usar encabezado precompilado** de archivos de código fuente en **No utilizar encabezados precompilados**.  Para establecer esta opción del compilador, siga estos pasos:  
+-   Si no se utilizan encabezados precompilados en su proyecto, establezca el **crear o utilizar encabezado precompilado** propiedad de archivos de código fuente **no utilizar encabezados precompilados**. Para establecer esta opción del compilador, siga estos pasos:  
   
-    1.  En el panel Explorador de soluciones del proyecto, haga clic con el botón secundario en el nombre del proyecto y, a continuación, haga clic en **Propiedades**.  
+    1.  En el panel Explorador de soluciones del proyecto, haga clic en el nombre del proyecto y, a continuación, haga clic en **propiedades**.  
   
-    2.  En el panel izquierdo, haga clic en la carpeta **C\/C\+\+**.  
+    2.  En el panel izquierdo, haga clic en el **C/C++** carpeta.  
   
-    3.  Haga clic en el nodo **Encabezados precompilados**.  
+    3.  Haga clic en el **encabezados precompilados** nodo.  
   
-    4.  En el panel derecho, haga clic en **Crear o usar encabezado precompilado** y, a continuación, haga clic en **No utilizar encabezados precompilados**.  
+    4.  En el panel derecho, haga clic en **crear o utilizar encabezado precompilado**y, a continuación, haga clic en **no utilizar encabezados precompilados**.  
   
--   Asegúrese de que no ha eliminado, cambiado de nombre ni quitado accidentalmente el archivo de encabezado \(de manera predeterminada, stdafx.h\) del proyecto actual.  Este archivo también se tiene que incluir delante de cualquier otro código en los archivos de código fuente utilizando **\#include "stdafx.h"**. \(Este archivo de encabezado se especifica como la propiedad del proyecto **Crear o usar encabezado precompilado a través del archivo**\)
+-   Asegúrese de que no accidentalmente han eliminado, cambiar o quitar el archivo de encabezado (de forma predeterminada, stdafx.h) del proyecto actual. Este archivo también debe incluirse antes que cualquier otro código en los archivos de origen con **#include "stdafx.h"**. (Este archivo de encabezado se especifica como **crear o utilizar encabezado Precompilado a través del archivo** propiedad del proyecto)

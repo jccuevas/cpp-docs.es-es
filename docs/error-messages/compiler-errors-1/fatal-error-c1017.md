@@ -1,36 +1,39 @@
 ---
-title: "Error irrecuperable C1017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1017"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1017"
+title: Error irrecuperable C1017 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1017
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1017
 ms.assetid: 5542e604-599d-4e36-8f83-1d454c5753c9
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error irrecuperable C1017
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 478a0a17ef8e0f0e6cb6589798d901837e7aff75
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="fatal-error-c1017"></a>Error irrecuperable C1017
 expresión constante de tipo entero no válida  
   
- Una directiva `#if` carece de expresión o ésta no ha sido evaluada como constante.  
+ La expresión en una `#if` directiva no existe o no se evaluaran como una constante.  
   
- Si una directiva `#if`, `#elif`, o `#else` utiliza constantes definidas mediante `#define`, éstas deberán tener valores que se evalúen como constante entera.  
+ Constantes que se definen mediante `#define` deben tener valores que se evalúan como una constante entera si se utilizan en una `#if`, `#elif`, o `#else` directiva.  
   
- El código siguiente genera el error C1017:  
+ El ejemplo siguiente genera C1017:  
   
 ```  
 // C1017.cpp  
@@ -49,9 +52,9 @@ expresión constante de tipo entero no válida
 #endif  
 ```  
   
- Debido a que `CONSTANT_NAME` se evalúa como cadena en vez de como número entero, la directiva `#if` generará el error irrecuperable C1017.  
+ Dado que `CONSTANT_NAME` se evalúa como una cadena y no es un entero, el `#if` directiva generará el error irrecuperable C1017.  
   
- En otros casos, el preprocesador evalúa como cero las constantes no definidas.  Esto puede dar lugar a resultados imprevistos, como se muestra en el ejemplo siguiente.  `YES` no se ha definido, por lo que se evalúa como cero.  La expresión `#if` `CONSTANT_NAME` se evalúa como false y el preprocesador quita el código que se iba a usar en `YES`.  `NO` tampoco se ha definido \(cero\), de modo que `#elif` `CONSTANT_NAME==NO` se evalúa como true \(`0 == 0`\), lo que hace que el preprocesador mantenga el código de la parte `#elif` de la instrucción, justo lo contrario al comportamiento esperado.  
+ En otros casos, el preprocesador se evalúa como una constante definida como cero. Esto puede provocar resultados no deseados, tal como se muestra en el ejemplo siguiente. `YES`no está definido, por lo que se evalúa como cero. La expresión `#if` `CONSTANT_NAME` se evalúa como false y el código que se utilizará en `YES` sea quitado por el preprocesador. `NO`También está definido (cero), de modo que `#elif` `CONSTANT_NAME==NO` se evalúa como true (`0 == 0`), lo que el preprocesador dejará el código en el `#elif` parte de la instrucción, justo lo contrario de lo esperado.  
   
 ```  
 // C1017c.cpp  
@@ -64,4 +67,4 @@ expresión constante de tipo entero no válida
 #endif  
 ```  
   
- Para ver exactamente cómo controla el compilador las directivas de preprocesador, utilice [\/P](../../build/reference/p-preprocess-to-a-file.md), [\/E](../../build/reference/e-preprocess-to-stdout.md) o [\/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md).
+ Para ver exactamente cómo controla el compilador las directivas de preprocesador, utilice [/P](../../build/reference/p-preprocess-to-a-file.md), [/E](../../build/reference/e-preprocess-to-stdout.md), o [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md).

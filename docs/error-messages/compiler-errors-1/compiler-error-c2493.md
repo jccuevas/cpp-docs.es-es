@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2493 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2493"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2493"
+title: Error del compilador C2493 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2493
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2493
 ms.assetid: 68316cd5-682b-49c3-b6ea-23c4e5d296cf
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2493
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5d44a9bff73eb32d0ff1f5dfd89f0238db29dc1a
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-formato de \_\_based no válido  
+---
+# <a name="compiler-error-c2493"></a>Error del compilador C2493
+formato no válido de __based  
   
- Una expresión `__based` debe estar basada en un puntero.  
+ Un `__based` expresión debe basarse en un puntero.  
   
- El código siguiente genera el error C2493:  
+ El ejemplo siguiente genera C2493:  
   
 ```  
 // C2493.cpp  

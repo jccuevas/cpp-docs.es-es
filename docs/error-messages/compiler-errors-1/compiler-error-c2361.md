@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2361 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2361"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2361"
+title: Error del compilador C2361 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2361
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2361
 ms.assetid: efbdaeb9-891c-4f7d-97da-89088a8413f3
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C2361
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3e80c1a1ebcd56b4125ef9aa43e904d9093fc8a9
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2361"></a>Error del compilador C2361
 la inicialización de 'identificador' se omite en la etiqueta 'default'  
   
- La inicialización de `identifier` se puede omitir en una instrucción `switch`.  No se puede omitir una declaración con un inicializador a menos que esté contenida dentro de un bloque. A menos que se declare en un bloque, la variable queda dentro del ámbito hasta el final de la instrucción `switch`.  
+ La inicialización de `identifier` puede omitirse en una `switch` instrucción. No se puede saltar más allá de una declaración con un inicializador a menos que la declaración está incluida en un bloque. (A menos que se declara dentro de un bloque, la variable queda dentro del ámbito hasta el final de la `switch` instrucción.)  
   
- El código siguiente genera el error C2361:  
+ El ejemplo siguiente genera C2361:  
   
 ```  
 // C2361.cpp  
