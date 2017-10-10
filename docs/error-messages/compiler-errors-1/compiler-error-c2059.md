@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2059 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2059"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2059"
+title: Error del compilador C2059 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2059
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# Error del compilador C2059
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dbf80ab803eaaacc29ac82657af130194417f1c7
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-error de sintaxis : 'símbolo \(token\)'  
+---
+# <a name="compiler-error-c2059"></a>Error del compilador C2059
+error de sintaxis: 'token'  
   
- El símbolo \(token\) originó un error de sintaxis.  
+ El token provocó un error de sintaxis.  
   
- El siguiente ejemplo se genera un mensaje de error para la línea que declara `j`.  
+ En el ejemplo siguiente se genera un mensaje de error de la línea que declara `j`.  
   
 ```  
 // C2059e.cpp  
@@ -38,11 +41,11 @@ error de sintaxis : 'símbolo \(token\)'
    int j*; // C2059   
 ```  
   
- Para determinar la causa del error, examine no solo la línea que aparece en el mensaje de error, sino también las líneas anteriores.  Si examina las líneas no produce ninguna pista sobre el problema, pruebe a marcar como comentario la línea que aparece en el mensaje de error y posiblemente varias líneas anteriores.  
+ Para determinar la causa del error, examine no sólo la línea que aparece en el mensaje de error, sino también las líneas por encima de él. Si examina las líneas no da ninguna pista sobre el problema, pruebe como comentario la línea que aparece en el mensaje de error y quizás varias líneas por encima de él.  
   
- Si el mensaje de error en un símbolo de manera siga una variable de `typedef` , asegúrese de que la variable esté definida en el código fuente.  
+ Si el mensaje de error se produce en un símbolo que sigue inmediatamente a un `typedef` variable, asegúrese de que la variable se define en el código fuente.  
   
- Se puede producir el error C2059 si un símbolo se evalúa como nothing, como puede ocurrir cuando **\/D**`symbol`**\=** se utiliza para compilar.  
+ Puede obtener C2059 si un símbolo se evalúa como nada, ya que puede ocurrir cuando **/D** `symbol`  **=**  se utiliza para compilar.  
   
 ```  
 // C2059a.cpp  
@@ -58,9 +61,9 @@ int main() {
 }  
 ```  
   
- Otro caso en el que puede producirse el error C2059 cuando se compila una aplicación que especifica una estructura en los argumentos predeterminados para una función.  El valor predeterminado de un argumento debe ser una expresión.  Un inicializador lista\- para el ejemplo, uno que se inicializaba a estructura no es una expresión.  Para resolver este problema, defina un constructor para realizar la inicialización necesaria.  
+ Otro caso en que puede producirse el error C2059 es cuando se compila una aplicación que especifica una estructura en los argumentos predeterminados para una función. El valor predeterminado de un argumento debe ser una expresión. Una lista de inicializadores, por ejemplo, uno que utiliza para inicializar una estructura, no es una expresión.  Para resolver este problema, defina un constructor para llevar a cabo la inicialización necesaria.  
   
- El código siguiente genera C2059:  
+ El ejemplo siguiente genera el error C2059:  
   
 ```  
 // C2059b.cpp  
@@ -76,11 +79,11 @@ void func(ag_type arg = {5, 7.0});   // C2059
 void func(ag_type arg = ag_type(5, 7.0));   // OK  
 ```  
   
- El error C2059 también se puede producir si se define una función o clase de plantilla miembro fuera de la clase.  Para obtener más información, [Artículo 241949 de Knowledge Base](http://support.microsoft.com/kb/241949)vea.  
+ El error C2059 también se puede producir si se define una clase de plantilla miembro o una función fuera de la clase. Para obtener información, consulte [el artículo de Knowledge Base 241949](http://support.microsoft.com/kb/241949).  
   
- Puede producirse el error C2059 a causa de una conversión incorrecta.  
+ C2059 puede producirse por una conversión de un formato incorrecto.  
   
- El código siguiente genera el error C2059:  
+ El ejemplo siguiente genera el error C2059:  
   
 ```  
 // C2059c.cpp  
@@ -96,9 +99,9 @@ int main() {
 }  
 ```  
   
- También puede producirse el error C2059 si se intenta crear un nombre de espacio de nombres que contenga un punto.  
+ También puede producirse el error C2059 si se intenta crear un nombre de espacio de nombres que contiene un punto.  
   
- El código siguiente genera el error C2059:  
+ El ejemplo siguiente genera el error C2059:  
   
 ```  
 // C2059d.cpp  
@@ -111,7 +114,7 @@ namespace A  {
 }  
 ```  
   
- C2059 puede aparecer cuando un operador que puede calificar un nombre \(`::`, `->`, y `.`\) debe ir seguido de la palabra clave `template`, como se muestra en este ejemplo:  
+ C2059 puede producirse cuando un operador que puede calificar un nombre (`::`, `->`, y `.`) debe ir seguida de la palabra clave `template`, tal y como se muestra en este ejemplo:  
   
 ```cpp  
 template <typename T> struct Allocator {  
@@ -126,7 +129,7 @@ template <typename X, typename AY> struct Container {
   
 ```  
   
- De forma predeterminada, C\+\+ supone que `AY::Rebind` no es una plantilla; por consiguiente, `<` siguiente se interpreta como signo menor que.  Debe indicar al compilador explícitamente que `Rebind` es una plantilla para poder correctamente analizar el corchete angular.  Para corregir este error, utilice la palabra clave de `template` en el nombre del tipo dependiente, como se muestra aquí:  
+ De forma predeterminada, C++ supone que `AY::Rebind` no es una plantilla; por lo tanto, los siguientes `<` se interpreta como una menor-que el inicio de sesión.  Debe indicar al compilador explícitamente que `Rebind` es una plantilla para que pueda analizar correctamente el corchete angular de cierre. Para corregir este error, utilice el `template` palabra clave en nombre del tipo dependientes, como se muestra aquí:  
   
 ```cpp  
 template <typename T> struct Allocator {  

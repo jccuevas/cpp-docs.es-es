@@ -19,26 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 74fdc75470600c29029c52e38ab2073e484dbde6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0378426777bc7ce831eee9ecb62170baf5e906b9
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2099"></a>Error del compilador C2099
@@ -57,13 +42,13 @@ j = *p;   // C2099 *p is not a constant
 ```  
   
 ## <a name="example"></a>Ejemplo  
- Error C2099 también puede producirse porque el compilador no puede efectuar el plegamiento constante sobre una expresión en **/fp: strict** porque la configuración de entorno de precisión punto flotante (vea [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md) para obtener más información) puede diferir de la compilación y en tiempo de ejecución.  
+ El error C2099 también puede producirse porque el compilador no puede efectuar el plegamiento constante sobre una expresión en **/fp:strict** , porque la configuración del entorno de precisión de punto flotante (vea [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md) para obtener más información) puede ser distinta en la compilación y en el tiempo de ejecución.  
   
  Cuando falla el plegamiento constante, el compilador invoca una inicialización dinámica, que no se permite en C.  
   
  Para resolver este error, compile el módulo como archivo .cpp o simplifique la expresión.  
   
- Para obtener más información, consulte [/fp (Especificar comportamiento de punto flotante)](../../build/reference/fp-specify-floating-point-behavior.md).  
+ Para obtener más información, consulte [/fp (Specify Floating-Point Behavior)](../../build/reference/fp-specify-floating-point-behavior.md).  
   
  El ejemplo siguiente genera la advertencia C2099.  
   

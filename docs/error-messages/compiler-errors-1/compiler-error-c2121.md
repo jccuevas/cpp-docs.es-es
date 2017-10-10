@@ -1,29 +1,32 @@
 ---
-title: "Error del compilador C2121 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2121"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2121"
+title: Error del compilador C2121 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2121
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2121
 ms.assetid: e04f32da-3736-4df3-8a1c-d687afcecf5c
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Error del compilador C2121
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 07ad88ecd1eca254572fdf3ae9d1e37090da6416
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'\#' : carácter no válido : es posible que sea el resultado de la expansión de una macro  
+---
+# <a name="compiler-error-c2121"></a>Error del compilador C2121
+'#': carácter no válido: posiblemente el resultado de una expansión de macro  
   
- Una macro incorrecta, que utiliza el operador de pegado de símbolos \(token\) \(\#\#\) en lugar del operador de generación de cadenas \(\#\), ha podido insertar un carácter \# no válido.
+ Un carácter # no válido se han insertado una macro incorrecta, que utiliza el operador de pegado de token (##) en lugar del operador de generación de cadenas (#).

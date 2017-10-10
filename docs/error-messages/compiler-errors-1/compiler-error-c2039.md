@@ -1,35 +1,38 @@
 ---
-title: "Error del compilador C2039 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2039"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2039"
+title: Error del compilador C2039 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2039
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2039
 ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Error del compilador C2039
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0a2fc962926a4a4d12232a9f785e7254fbcdb3f1
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2039"></a>Error del compilador C2039
 'identificador1' : no es un miembro de 'identificador2'  
   
  El código hace referencia o llama incorrectamente a un miembro de una estructura, clase o unión.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C2039.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C2039.  
   
 ```  
 // C2039.cpp  
@@ -43,8 +46,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C2039.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C2039.  
   
 ```  
 // C2039_b.cpp  
@@ -57,8 +60,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C2039.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C2039.  
   
 ```  
 // C2039_c.cpp  
@@ -74,8 +77,8 @@ int S::get_Count() { return 0; }   // C2039
 int S::Count::get() { return 0; }   // OK  
 ```  
   
-## Ejemplo  
- El error C2039 también puede producirse si intenta tener acceso incorrectamente a un indizador predeterminado.  El ejemplo siguiente define un componente creado en C\#.  
+## <a name="example"></a>Ejemplo  
+ El error C2039 también puede producirse si intenta tener acceso incorrectamente a un indizador predeterminado. El ejemplo siguiente define un componente creado en C#.  
   
 ```  
 // C2039_d.cs  
@@ -90,8 +93,8 @@ public class B {
 };  
 ```  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C2039.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C2039.  
   
 ```  
 // C2039_e.cpp  
@@ -108,8 +111,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- C2039 también puede producirse cuando se utilizan genéricos.  El ejemplo siguiente genera el error C2039.  
+## <a name="example"></a>Ejemplo  
+ C2039 también puede producirse cuando se utilizan genéricos. El ejemplo siguiente genera C2039.  
   
 ```  
 // C2039_f.cpp  
@@ -132,10 +135,10 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- C2039 se puede producir al intentar liberar los recursos administrados o no administrados.  Para obtener más información, vea [Destructores y finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
+## <a name="example"></a>Ejemplo  
+ C2039 se puede producir al intentar liberar los recursos administrados o no administrados. Para obtener más información, consulte [destructores y finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
   
- El ejemplo siguiente genera el error C2039.  
+ El ejemplo siguiente genera C2039.  
   
 ```  
 // C2039_g.cpp  

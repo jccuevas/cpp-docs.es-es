@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C2057 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2057"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2057"
+title: Error de compilador Error C2057 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2057
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2057
 ms.assetid: 038a99d6-1f5a-42fa-8449-03b4ff11ee0b
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Error del compilador C2057
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6e42871d8dd267d08282375de0df9efb4f828734
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2057"></a>Error C2057 de Error del compilador
 se esperaba una expresión constante  
   
  El contexto exige una expresión constante, una expresión cuyo valor se conoce en tiempo de compilación.  
   
  El compilador debe conocer el tamaño de un tipo en tiempo de compilación para poder asignar espacio para una instancia de ese tipo.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera el error C2057 y muestra cómo corregirlo:  
   
 ```  
@@ -43,7 +46,7 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  C tiene reglas más restrictivas para las expresiones de constante.  El ejemplo siguiente genera el error C2057 y muestra cómo corregirlo:  
   
 ```  

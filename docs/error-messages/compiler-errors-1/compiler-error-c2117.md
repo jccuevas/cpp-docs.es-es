@@ -1,38 +1,41 @@
 ---
-title: "Error del compilador C2117 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2117"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2117"
+title: Error del compilador C2117 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2117
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2117
 ms.assetid: b947379d-5861-42fc-ac26-170318579cbd
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2117
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3e326e7a7dde296439d1a9c24c1d042af63dc6f9
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'identificador' : desbordamiento de límites de matriz  
+---
+# <a name="compiler-error-c2117"></a>Error del compilador C2117
+'identificador': desbordamiento de límites de matriz  
   
  Una matriz tiene demasiados inicializadores:  
   
--   Los elementos y los inicializadores de la matriz no coinciden en tamaño y cantidad.  
+-   Inicializadores y elementos de la matriz no coinciden en tamaño y cantidad.  
   
--   El terminador nulo no tiene espacio en una cadena.  
+-   No hay espacio para el terminador nulo en una cadena.  
   
- El código siguiente genera el error C2117:  
+ El ejemplo siguiente genera C2117:  
   
 ```  
 // C2117.cpp  

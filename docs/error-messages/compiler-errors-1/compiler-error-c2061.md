@@ -1,38 +1,41 @@
 ---
-title: "Error del compilador C2061 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2061"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2061"
+title: C2061 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2061
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2061
 ms.assetid: b0e61c0c-a205-4820-b9aa-301d6c6fe6eb
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Error del compilador C2061
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 82518c78b49418c10cc0cd07ae59e58336af08f3
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-error de sintaxis : identificador 'identificador'  
+---
+# <a name="compiler-error-c2061"></a>C2061 de Error del compilador
+error de sintaxis: identificador 'identificador'  
   
- El compilador ha encontrado un identificador donde no se esperaba.  Asegúrese de que se declara `identifier` antes de utilizarlo.  
+ El compilador encontró un identificador donde no se esperaba. Asegúrese de que `identifier` se declara antes de utilizarla.  
   
- Los inicializadores pueden aparecer entre paréntesis.  Para evitar este problema, escriba el declarador entre paréntesis o conviértalo en un tipo `typedef`.  
+ Un inicializador puede aparecer entre paréntesis. Para evitar este problema, escriba el declarador entre paréntesis o conviértalo en un `typedef`.  
   
- También puede producirse este error cuando el compilador detecta una expresión como un argumento de plantilla de clase; utilice [typename](../../cpp/typename.md) para indicar al compilador que se trata de un tipo.  
+ Este error también se produce cuando el compilador detecta una expresión como un argumento de plantilla de clase; usar [typename](../../cpp/typename.md) para indicar al compilador es un tipo.  
   
- El código siguiente genera el error C2061:  
+ El ejemplo siguiente genera C2061:  
   
 ```  
 // C2061.cpp  
@@ -43,7 +46,7 @@ template < A a >   // C2061
 class c{};  
 ```  
   
- C2061 puede aparecer si pasa un nombre de instancia a [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md):  
+ C2061 puede aparecer si se pasa un nombre de instancia para [typeid](../../windows/typeid-cpp-component-extensions.md):  
   
 ```  
 // C2061b.cpp  
