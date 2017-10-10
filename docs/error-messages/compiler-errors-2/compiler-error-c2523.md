@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2523 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2523"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2523"
+title: Error del compilador C2523 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2523
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2523
 ms.assetid: 7951b700-8f37-45a0-beb4-a79ae0ced72e
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C2523
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d9ec6a9196498f210e680acf17efd34ac84faf77
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'clase::~identifier' : etiqueta del destructor o finalizador sin correspondencia  
+---
+# <a name="compiler-error-c2523"></a>Error del compilador C2523
+' clase:: ~ identificador ': error de coincidencia de etiqueta de destructor/finalizador  
   
- El nombre del destructor debe ser el nombre de clase precedido por una tilde \(`~`\).  El constructor y el destructor son los únicos miembros que tienen el mismo nombre que la clase.  
+ El nombre del destructor debe ser el nombre de clase precedido por una tilde (`~`). El constructor y el destructor son los únicos miembros que tienen el mismo nombre que la clase.  
   
- El código siguiente genera el error C2523:  
+ El ejemplo siguiente genera C2523:  
   
 ```  
 // C2523.cpp  

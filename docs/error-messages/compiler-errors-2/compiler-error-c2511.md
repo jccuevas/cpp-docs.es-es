@@ -1,40 +1,43 @@
 ---
-title: "Error del compilador C2511 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2511"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2511"
+title: Error del compilador C2511 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2511
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2511
 ms.assetid: df999efe-fe2b-418b-bb55-4af6a0592631
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2511
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1ba01f808fb4dd618291777c1da7490b3b95af3c
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'identificador' : la función miembro sobrecargada no se ha encontrado en 'clase'  
+---
+# <a name="compiler-error-c2511"></a>Error del compilador C2511
+'identificador': función miembro no se encuentra en 'class' sobrecargada  
   
- No hay declarada ninguna versión de la función con los parámetros especificados.  Causas posibles:  
+ Una versión de la función no se declara con los parámetros especificados.  Causas posibles:  
   
-1.  Se pasaron parámetros incorrectos a la función.  
+1.  Se pasan parámetros incorrectas a función.  
   
-2.  Se pasaron los parámetros en el orden equivocado.  
+2.  Parámetros pasados en un orden incorrecto.  
   
-3.  Nombres de parámetros mal escritos.  
+3.  Ortografía incorrecta de los nombres de parámetros.  
   
- El código siguiente genera el error C2511:  
+ El ejemplo siguiente genera C2511:  
   
 ```  
 // C2511.cpp  

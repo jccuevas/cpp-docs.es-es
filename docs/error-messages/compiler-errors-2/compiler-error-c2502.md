@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2502 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2502"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2502"
+title: Error del compilador C2502 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2502
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2502
 ms.assetid: affa0b86-15fc-4e17-b7f2-6aad4a3771c4
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C2502
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 396ec843c03843b506174308a5b548f50379c06f
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'identificador' : hay demasiados modificadores de acceso en la clase base  
+---
+# <a name="compiler-error-c2502"></a>Error del compilador C2502
+'identificador': hay demasiados modificadores de acceso en la clase base  
   
- La clase base tiene más de un modificador de acceso.  Sólo se permite un modificador de acceso \(`public`, `private` o `protected`\).  
+ La clase base tiene más de un modificador de acceso. Solo un modificador de acceso (`public`, `private`, o `protected`) está permitido.  
   
- El código siguiente genera el error C2502:  
+ El ejemplo siguiente genera C2502:  
   
 ```  
 // C2502.cpp  

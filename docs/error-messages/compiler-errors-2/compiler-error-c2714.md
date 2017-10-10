@@ -1,37 +1,40 @@
 ---
-title: "Error del compilador C2714 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2714"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2714"
+title: C2714 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2714
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2714
 ms.assetid: 401a5a42-660c-4bad-9d63-1a2d092bc489
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Error del compilador C2714
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1f0fc4847cc6f3ab50f840b1ed5a097cc405cff8
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-no se permite \_\_alignof\(void\)  
+---
+# <a name="compiler-error-c2714"></a>C2714 de Error del compilador
+no se permite __alignof (void)  
   
- Se ha pasado un valor no válido a un operador.  
+ Se pasó un valor no válido a un operador.  
   
- Para obtener más información, vea [\_\_alignof \(Operador\)](../../cpp/alignof-operator.md).  
+ Vea [operador __alignof](../../cpp/alignof-operator.md) para obtener más información.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C2714.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C2714.  
   
 ```  
 // C2714.cpp  

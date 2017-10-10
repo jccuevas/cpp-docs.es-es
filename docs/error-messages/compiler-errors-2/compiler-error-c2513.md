@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2513 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2513"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2513"
+title: Error del compilador C2513 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2513
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2513
 ms.assetid: ab5b21d3-61e2-4df7-8eea-6f14d6ba8620
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C2513
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7eb4e7c63821f449bf9677cb5fe03c448bbbc6ee
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'tipo' : no hay ninguna variable declarada antes de '\='  
+---
+# <a name="compiler-error-c2513"></a>Error del compilador C2513
+'type': no hay ninguna variable declarada antes de '='  
   
- El especificador de tipo aparece en la declaración sin identificador de variable.  
+ El especificador de tipo aparece en la declaración con ningún identificador de variable.  
   
- El código siguiente genera el error C2513:  
+ El ejemplo siguiente genera C2513:  
   
 ```  
 // C2513.cpp  
@@ -38,7 +41,7 @@ int main() {
 }  
 ```  
   
- Este error también puede producirse como resultado del trabajo de conformidad del compilador realizado para Visual Studio .NET 2003: ya no se permite la inicialización de un tipo typedef.  El estándar no permite la inicialización de un tipo typedef; ahora se genera un error de compilación.  
+ Este error también puede generarse como resultado del trabajo de conformidad del compilador realizado para Visual Studio .NET 2003: inicialización de una definición de tipo ya no se permite. La inicialización de una definición de tipo no está permitida por el estándar y ahora genera un error del compilador.  
   
 ```  
 // C2513b.cpp  
@@ -50,4 +53,4 @@ typedef struct S {
 // } S;  
 ```  
   
- Una alternativa sería eliminar `typedef` y definir una variable con una lista de inicializador de agregado, pero no es recomendable porque creará una variable con el mismo nombre que el tipo y ocultará el nombre del tipo.
+ Una alternativa sería eliminar `typedef` definir una variable con la lista de inicializadores agregado, pero esto no se recomienda porque creará una variable con el mismo nombre que el tipo y ocultar el nombre de tipo.

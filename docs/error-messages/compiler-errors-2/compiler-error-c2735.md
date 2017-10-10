@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2735 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2735"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2735"
+title: C2735 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2735
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2735
 ms.assetid: 6ce45600-7148-4bc0-8699-af0ef137571e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C2735
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1008ef6178a4220bac718e08ba31a36d5db3242f
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-no se permite la palabra clave 'palabra clave' en el especificador de tipo de parámetros formales  
+---
+# <a name="compiler-error-c2735"></a>C2735 de Error del compilador
+' palabra clave ' no está permitida en el especificador de tipo de parámetros formales  
   
  La palabra clave no es válida en este contexto.  
   
- El código siguiente genera el error C2735:  
+ El ejemplo siguiente genera C2735:  
   
 ```  
 // C2735.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2770 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2770"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2770"
+title: C2770 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2770
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2770
 ms.assetid: 100001b5-80b0-4971-8ff6-9023f443c926
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2770
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 81179a10cc58c1b22f974b4367d471dde87bdc65
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-argumentos de plantilla\_o\_genéricos explícitos para 'plantilla'  
+---
+# <a name="compiler-error-c2770"></a>C2770 de Error del compilador
+argumentos de plantilla_o_genéricos explícitos para 'plantilla'  
   
- Los candidatos de plantilla de función con argumentos de plantilla o genéricos explícitos han dado como resultado tipos de función no permitidos.  
+ Los candidatos de plantilla de función con argumentos genéricos o de plantilla explícitos dio como resultado tipos de función no permitidos.  
   
- El código siguiente genera el error C2770:  
+ El ejemplo siguiente genera C2770:  
   
 ```  
 // C2770.cpp  

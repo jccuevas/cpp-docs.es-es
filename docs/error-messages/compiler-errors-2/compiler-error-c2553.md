@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2553 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2553"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2553"
+title: Error del compilador C2553 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2553
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2553
 ms.assetid: 64bc1e9a-627f-4ce9-b7bc-dc911bdb9180
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C2553
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 623a09c54333ef62de7a7924cc4be02ff1b2c726
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'función\_base': el reemplazo del tipo de valor devuelto de la función virtual difiere de 'función\_de\_reemplazo'  
+---
+# <a name="compiler-error-c2553"></a>Error del compilador C2553
+'función_base': función virtual de reemplazo devolver tipo difiere de 'función_de_reemplazo'  
   
- Una función de una clase derivada intentó reemplazar una función virtual de una clase base, pero la función de la clase derivada no tenía el mismo tipo de valor devuelto que la función de la clase base.  La firma de una función de reemplazo debe coincidir con la firma de la función que se va a reemplazar.  
+ Una función en una clase derivada intentó reemplazar una función virtual en una clase base, pero la función de clase derivada no tenía el mismo tipo de valor devuelto que la función de clase base.  Una firma de la función de reemplazo debe coincidir con la firma de la función que se va a invalidar.  
   
- El código siguiente genera el error C2553:  
+ El ejemplo siguiente genera C2553:  
   
 ```  
 // C2553.cpp  

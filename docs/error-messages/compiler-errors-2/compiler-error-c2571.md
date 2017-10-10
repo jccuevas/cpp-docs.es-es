@@ -1,38 +1,41 @@
 ---
-title: "Error del compilador C2571 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2571"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2571"
+title: Error del compilador C2571 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2571
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2571
 ms.assetid: c6522616-dee9-4d7d-9bf8-30a7e1deaadf
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2571
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8bfb4f9af849efea2fa3aa8a84a57f1cfb4cd502
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'función' : la función virtual no puede estar en la unión 'unión'  
+---
+# <a name="compiler-error-c2571"></a>Error del compilador C2571
+'función': función virtual no puede estar en la unión 'unión'  
   
- Se ha declarado una unión con una función virtual.  Una función virtual sólo se puede declarar en una clase o estructura.  Posible solución:  
+ Se declara una unión con una función virtual. Puede declarar una función virtual solo en una clase o estructura.  Soluciones posibles:  
   
-1.  Cambie la unión por una clase o estructura.  
+1.  Cambie la unión a una clase o estructura.  
   
-2.  Convierta la función en no virtual.  
+2.  Hacer que la función no virtual.  
   
- El código siguiente genera el error C2571:  
+ El ejemplo siguiente genera C2571:  
   
 ```  
 // C2571.cpp  

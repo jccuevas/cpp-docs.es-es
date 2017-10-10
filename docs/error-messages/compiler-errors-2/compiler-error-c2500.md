@@ -1,38 +1,41 @@
 ---
-title: "Error del compilador C2500 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2500"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2500"
+title: Error del compilador C2500 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2500
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2500
 ms.assetid: 6bff8161-dc9a-48ca-91f1-fd2eefdbbc93
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C2500
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2b869ca0ba959e9b774a005298ef4456d0995156
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'identificador1' : 'identificador2' ya es una clase base directa  
+---
+# <a name="compiler-error-c2500"></a>Error del compilador C2500
+'identificador1': 'identificador2' ya es una clase base directa  
   
  Una clase o estructura aparece más de una vez en una lista de clases base.  
   
- Una base directa es una mencionada en la lista base.  Una base indirecta es una clase base de alguna de las clases que componen la lista base.  
+ Una base directa es una mencionada en la lista base. Una base indirecta es una clase base de una de las clases en la lista base.  
   
- Una clase no se puede especificar como clase base directa más de una vez.  Una clase no se puede utilizar como clase base indirecta más de una vez.  
+ Una clase no puede especificarse como una clase base directa más de una vez. Una clase puede utilizarse como una clase base indirecta más de una vez.  
   
- El código siguiente genera el error C2500:  
+ El ejemplo siguiente genera C2500:  
   
 ```  
 // C2500.cpp  

@@ -1,40 +1,43 @@
 ---
-title: "Error del compilador C2663 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2663"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2663"
+title: C2663 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2663
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2663
 ms.assetid: 1e93e368-fd52-42bf-9908-9b6df467c8c9
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C2663
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a9efe20b4a80b9ff6f337d32acd35320125008dc
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'función' : número sobrecargas no tienen ninguna conversión válida para el puntero 'this'  
+---
+# <a name="compiler-error-c2663"></a>C2663 de Error del compilador
+'función': número sobrecargas no tienen conversiones válidas para el puntero 'this'  
   
- El compilador no pudo convertir `this` a ninguna de las versiones sobrecargadas de la función miembro.  
+ El compilador no se pudo convertir `this` a cualquiera de las versiones sobrecargadas de la función miembro.  
   
- Este error puede producirse invocando una función miembro no\-`const` en un objeto `const`.  Posible solución:  
+ Este error puede deberse a invocar no`const` función miembro en un `const` objeto.  Soluciones posibles:  
   
-1.  Quite `const` de la declaración del objeto.  
+1.  Quitar el `const` de la declaración del objeto.  
   
-2.  Agregue `const` a una de las sobrecargas de función miembro.  
+2.  Agregar `const` a una de las sobrecargas de función miembro.  
   
- El código siguiente genera el error C2663:  
+ El ejemplo siguiente genera C2663:  
   
 ```  
 // C2663.cpp  

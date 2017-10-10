@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2550 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2550"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2550"
+title: Error del compilador C2550 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2550
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2550
 ms.assetid: 3293f53e-ee66-4035-920d-34e115c3a24c
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2550
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bc95d61f1e9a0242e206d1e2193715a64a5549b9
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'identificador' : las listas de inicializadores de constructor sólo se permiten en las definiciones de constructor  
+---
+# <a name="compiler-error-c2550"></a>Error del compilador C2550
+'identificador': listas de inicializadores de constructor sólo se permiten en las definiciones de constructor  
   
  Una lista de inicializadores de clase base se utiliza en la definición de una función que no es un constructor.  
   
- El código siguiente genera el error C2550:  
+ El ejemplo siguiente genera C2550:  
   
 ```  
 // C2550.cpp  

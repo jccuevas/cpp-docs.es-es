@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2701 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2701"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2701"
+title: C2701 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2701
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2701
 ms.assetid: 31cf2ab7-ced9-4f75-aa51-e169e20407fb
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2701
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9aff17907695e48661af7d6e9a6538af4f22ba4c
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'función' : plantilla de función no puede ser una función friend de una clase local  
+---
+# <a name="compiler-error-c2701"></a>C2701 de Error del compilador
+'función': una plantilla de función no puede ser una función friend de una clase local  
   
- Una clase local no puede tener una función de plantilla como función friend.  
+ Una clase local no puede tener una función de plantilla como una función friend.  
   
- El código siguiente genera el error C2701:  
+ El ejemplo siguiente genera C2701:  
   
 ```  
 // C2701.cpp  
