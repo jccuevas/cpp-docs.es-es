@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C3849 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3849"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3849"
+title: Error del compilador C3849 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3849
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Error del compilador C3849
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7fbe46ee4f83dc5477eeb67e0debf14fe4f9fad5
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-la llamada de estilo de función de una expresión de tipo 'tipo' perdería los calificadores const y volatile de todas las sobrecargas de operador número disponibles  
+---
+# <a name="compiler-error-c3849"></a>Error del compilador C3849
+llamada de estilo de función en una expresión de tipo 'tipo' perdería los calificadores const y volatile para el número de todas las sobrecargas de operador disponibles  
   
- Una variable con un tipo const o volatile especificado sólo puede llamar a funciones miembro definidas con calificaciones const o volatile iguales o superiores.  
+ Una variable con un tipo const o volatile especificado sólo puede llamar a miembros funciones definidas con calificaciones const o volatile igual o superior.  
   
- Para corregir este error, proporcione una función miembro adecuada.  No se puede ejecutar una conversión en un objeto calificado como const o volatile si dicha conversión implica la pérdida de calificación.  En una conversión se pueden ganar calificadores, pero no perderlos.  
+ Para corregir este error, proporcione una función miembro adecuada. No se puede ejecutar una conversión en un objeto const o volatile completo cuando la conversión produce pérdida de calificación. Puede obtener calificadores, pero no se pierde calificadores en una conversión.  
   
- Los ejemplos siguientes generan el error C3849:  
+ Los ejemplos siguientes generan C3849:  
   
 ```  
 // C3849.cpp  

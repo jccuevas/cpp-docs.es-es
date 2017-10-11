@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C3908 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3908"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3908"
+title: Error del compilador C3908 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3908
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3908
 ms.assetid: 3c322482-c79e-4197-a578-2ad9bc379d1a
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C3908
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 05b4f772c5c1acf8da9247f27fa92a947a0ffc5b
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-nivel de acceso menos restrictivo que el de 'construcción'  
+---
+# <a name="compiler-error-c3908"></a>Error del compilador C3908
+nivel de acceso menos restrictivo que 'construct'  
   
- Un método de descriptor de acceso de propiedad \(get o set\) no puede tener un nivel de acceso menos restrictivo que el especificado en la propia propiedad.  Ocurre lo mismo con los métodos de descriptor de acceso de evento.  
+ Un método de descriptor de acceso de propiedad (get o set) no puede tener acceso menos restrictivo que el acceso especificado en la propiedad en Sí.  De forma similar, para los métodos de descriptor de acceso de eventos.  
   
- Para obtener más información, vea [property](../../windows/property-cpp-component-extensions.md) y [event](../../windows/event-cpp-component-extensions.md).  
+ Para obtener más información, consulte [propiedad](../../windows/property-cpp-component-extensions.md) y [eventos](../../windows/event-cpp-component-extensions.md).  
   
- El código siguiente genera el error C3908:  
+ El ejemplo siguiente genera C3908:  
   
 ```  
 // C3908.cpp  

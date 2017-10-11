@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3707 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3707"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3707"
+title: Error del compilador C3707 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3707
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3707
 ms.assetid: ac63a5dd-7a4b-48d2-9f2a-be9cb090134c
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C3707
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7167ea0df9bc0846de16be40d722c63bfea11c32
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'función' : el método dispinterface debe tener un dispid  
+---
+# <a name="compiler-error-c3707"></a>Error del compilador C3707
+'función': el método dispinterface debe tener un dispid  
   
- Si se utiliza un método `dispinterface`, se le debe asignar un `dispid`.  Para corregir este error, asigne un `dispid` al método `dispinterface`, por ejemplo, quitando el comentario del atributo `id` en el método del ejemplo siguiente.  Para obtener más información, vea los atributos [dispinterface](../../windows/dispinterface.md) e [id](../../windows/id.md).  
+ Si utiliza un `dispinterface` método, se le debe asignar un `dispid`. Para corregir este error, asigne un `dispid` a la `dispinterface` método, por ejemplo, quitando el comentario de la `id` atributo en el método en el ejemplo siguiente. Para obtener más información, vea los atributos [dispinterface](../../windows/dispinterface.md) y [identificador](../../windows/id.md).  
   
- El código siguiente genera el error C3707:  
+ El ejemplo siguiente genera C3707:  
   
 ```  
 // C3707.cpp  

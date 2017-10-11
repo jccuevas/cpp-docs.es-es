@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3656 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3656"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3656"
+title: Error del compilador C3656 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3656
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3656
 ms.assetid: 88965d85-73b0-4b35-8020-0650c9c94cd8
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C3656
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bbb82f1684da4c7a3fe659f3892e7b1004a7f814
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'reemplazo' : no se puede repetir el especificador de reemplazo  
+---
+# <a name="compiler-error-c3656"></a>Error del compilador C3656
+'override': invalidar no se puede repetir el especificador  
   
- Una palabra clave de reemplazo explícito solo se puede especificar una vez.  Para obtener más información, vea [Reemplazos explícitos](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Una palabra clave de reemplazo explícito solo puede especificarse una vez. Para obtener más información, consulte [reemplazos explícitos](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
- El código siguiente genera el error C3656:  
+ El ejemplo siguiente genera C3656:  
   
 ```  
 // C3656.cpp  

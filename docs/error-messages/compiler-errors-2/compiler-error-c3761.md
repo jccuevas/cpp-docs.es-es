@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3761 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3761"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3761"
+title: Error del compilador C3761 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3761
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3761
 ms.assetid: 0c16f093-7a78-4838-b90b-0c67ef6e9270
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C3761
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eb2cfc3a240f0383ffc4890ba9187b9eb2d63b4c
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'función': 'retval' sólo puede aparecer en el último argumento de una función  
+---
+# <a name="compiler-error-c3761"></a>Error del compilador C3761
+'función': 'retval' solo puede aparecer en el último argumento de una función  
   
- El atributo [retval](../../windows/retval.md) se utilizó en un argumento de función que no era el último argumento de la lista.  
+ El [retval](../../windows/retval.md) atributo se utiliza en un argumento de función que no era el último argumento en la lista.  
   
- El código siguiente genera el error C3761:  
+ El ejemplo siguiente genera C3761:  
   
 ```  
 // C3761.cpp  

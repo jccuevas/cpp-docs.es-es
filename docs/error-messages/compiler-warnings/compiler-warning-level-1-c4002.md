@@ -1,5 +1,5 @@
 ---
-title: La advertencia C4002 de compilador advertencia (nivel 1) | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4002 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 983935ef0e48f94cee3ff08186f27502ea48a7d7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bb1e3512074b2767977367b30ac5d01dc5758b0
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-level-1-c4002"></a>Advertencia del compilador (nivel 1) C4002
@@ -46,7 +31,7 @@ hay demasiados parámetros reales para la macro 'identifier'
   
  El número de parámetros reales de la macro supera el número de parámetros formales de la definición de macro. El preprocesador obtiene los parámetros adicionales pero los omite durante la expansión de macro.  
   
- La advertencia C4002 puede aparecer al utilizar incorrectamente [Variadic Macros](../../preprocessor/variadic-macros.md).  
+ La advertencia C4002 puede aparecer al usar [Variadic Macros](../../preprocessor/variadic-macros.md)de manera incorrecta.  
   
  El ejemplo siguiente genera la advertencia C4002:  
   

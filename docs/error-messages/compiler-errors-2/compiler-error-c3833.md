@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3833 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3833"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3833"
+title: Error del compilador C3833 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3833
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3833
 ms.assetid: 8152be53-e01e-48cd-9eef-9de38723664c
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Error del compilador C3833
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 54fcbe6fff8efca4ffc3dd6c5791fc706eaa1191
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'tipo' : tipo de destino no válido para tipo\_de\_puntero  
+---
+# <a name="compiler-error-c3833"></a>Error del compilador C3833
+'type': tipo de destino no válido para tipo_de_puntero  
   
- Se declaró [interior\_ptr](../../windows/interior-ptr-cpp-cli.md) o [pin\_ptr](../Topic/pin_ptr%20\(C++-CLI\).md) incorrectamente.  
+ Un [interior_ptr](../../windows/interior-ptr-cpp-cli.md) o [pin_ptr](../../windows/pin-ptr-cpp-cli.md) se ha declarado incorrectamente.  
   
- El código siguiente genera el error C3833:  
+ El ejemplo siguiente genera C3833:  
   
 ```  
 // C3833.cpp  
@@ -50,7 +53,7 @@ int main() {
 }  
 ```  
   
- El código siguiente genera el error C3833:  
+ El ejemplo siguiente genera C3833:  
   
 ```  
 // C3833b.cpp  

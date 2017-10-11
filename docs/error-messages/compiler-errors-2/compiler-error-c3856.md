@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3856 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3856"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3856"
+title: Error del compilador C3856 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3856
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3856
 ms.assetid: 242d9322-c325-4f20-be58-b2be6da56d60
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C3856
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9d2f74872939a2237f2c816e348242ebd58c8b3e
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'tipo': la clase no es tipo de clase  
+---
+# <a name="compiler-error-c3856"></a>Error del compilador C3856
+'type': no es un tipo de clase  
   
- Este error suele producirse cuando hay más listas de parámetros genéricos o de plantilla en el momento de la definición que los que había en el momento de la declaración.  
+ La causa más común de este error es cuando hay más genérica o listas de parámetros de plantilla en el punto de definición que había en el punto de declaración.  
   
- El código siguiente genera el error C3856:  
+ El ejemplo siguiente genera C3856:  
   
 ```  
 // C3856.cpp  
@@ -62,7 +65,7 @@ template <class T1>
 struct S<T>::S1{};  
 ```  
   
- El error C3856 también puede producirse al utilizar clases genéricas:  
+ C3856 también puede producirse al usar genéricos:  
   
 ```  
 // C3856c.cpp  

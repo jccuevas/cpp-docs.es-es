@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3855 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3855"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3855"
+title: Error del compilador C3855 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3855
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3855
 ms.assetid: ed90f8c0-4154-4243-b066-493913df5727
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C3855
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 76d9101fd58d419db227803d3964198523ce3630
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'clase': el parámetro de tipo 'param' es incompatible con la declaración  
+---
+# <a name="compiler-error-c3855"></a>Error del compilador C3855
+'clase': parámetro de tipo 'param' no es compatible con la declaración  
   
- El compilador encontró parámetros genéricos o de plantilla sin tipo con nombres diferentes.  Esto puede ocurrir cuando un parámetro de plantilla especificado en la definición de una especialización de plantilla es incompatible con su declaración.  
+ El compilador encontró parámetros genéricos con nombres diferentes o plantilla sin tipo. Esto puede ocurrir cuando un parámetro de plantilla especificado en la definición de una especialización de plantilla es incompatible con su declaración.  
   
- El código siguiente genera el error C3855:  
+ El ejemplo siguiente genera C3855:  
   
 ```  
 // C3855.cpp  
@@ -55,7 +58,7 @@ template <int N>
 void C<N>::f() {}  
 ```  
   
- El error C3855 también puede producirse cuando se usan genéricos:  
+ C3855 también puede producirse al usar genéricos:  
   
 ```  
 // C3855c.cpp  

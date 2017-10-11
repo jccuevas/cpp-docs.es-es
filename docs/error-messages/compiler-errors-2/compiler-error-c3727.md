@@ -1,5 +1,5 @@
 ---
-title: C3727 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3727 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 1aabcb449b5d6933a7909820e02fafb3ddb0b18d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c3cd9728a8e4786caefe8a65fa9a6f9c8849ca01
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3727"></a>Error del compilador C3727
-'evento': un evento administrado debe ser una función miembro o un miembro de datos es un puntero a un delegado  
+'evento': un evento administrado debe ser una función miembro o un miembro de datos que es un puntero a un delegado  
   
  Los eventos de .NET deben ser un puntero a un tipo de delegado.  
 

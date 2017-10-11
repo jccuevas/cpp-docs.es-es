@@ -1,35 +1,38 @@
 ---
-title: "Error del compilador C3807 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3807"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3807"
+title: Error del compilador C3807 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3807
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3807
 ms.assetid: 7e2b0aab-8c61-4e71-b9c1-fcaeb6a1b5ea
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C3807
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc8e760d295cc0a4c2482449038ea09e89547425
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'tipo' : una clase con el atributo ComImport no puede derivar de 'tipo2', solamente se permite la implementación de interfaz  
+---
+# <a name="compiler-error-c3807"></a>Error del compilador C3807
+'type': una clase con el atributo ComImport no puede derivar de 'tipo2', se permite solo la implementación de interfaz  
   
- Un tipo derivado de <xref:System.Runtime.InteropServices.ComImportAttribute> sólo puede implementar una interfaz.  
+ Un tipo que deriva de <xref:System.Runtime.InteropServices.ComImportAttribute> sólo se puede implementar una interfaz.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C3807.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C3807.  
   
 ```  
 // C3807.cpp  

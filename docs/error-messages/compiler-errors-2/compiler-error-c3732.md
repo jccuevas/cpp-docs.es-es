@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3732 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3732"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3732"
+title: Error del compilador C3732 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3732
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3732
 ms.assetid: 2d55a7e1-9c39-4379-a093-2f7beb27e2ca
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C3732
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c545391883d4e2becd21fbb4b3279e3f0c1d60f1
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'interfaz': una interfaz personalizada que desencadena eventos COM no se puede derivar de IDispatch  
+---
+# <a name="compiler-error-c3732"></a>Error del compilador C3732
+'interfaz': una interfaz personalizada que desencadena eventos COM no puede heredar de IDispatch  
   
- Una interfaz que admite eventos COM no puede heredarse de `IDispatch`.  Para obtener más información, vea [Control de eventos en COM](../../cpp/event-handling-in-com.md).  
+ Una interfaz que admite eventos COM no puede heredar de `IDispatch`. Para obtener más información, consulte [control de eventos en COM](../../cpp/event-handling-in-com.md).  
   
- El ejemplo siguiente genera el error C3732:  
+ El siguiente genera el error C3732:  
   
 ```  
 // C3732.cpp  

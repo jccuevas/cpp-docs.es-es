@@ -51,25 +51,11 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 16d0f336ec66329d0a92a151e1bc224433b0b03a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 59ac61f0ae50f3a6b1d7170ea0b965c3bb8d0fe2
 ms.contentlocale: es-es
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3000-through-c3099"></a>C3000 de errores del compilador a través de C3099
@@ -101,12 +87,12 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C3016](compiler-error-c3016.md)|'*identificador*': variable de índice de la 'instrucción for' de OpenMP debe haber registrado el tipo entero|  
 |[Error del compilador C3017](compiler-error-c3017.md)|la forma de la prueba de terminación de la instrucción 'for' de OpenMP no es adecuada|  
 |[Error del compilador C3018](compiler-error-c3018.md)|'*identificador*': OpenMP 'for' incremento o la prueba debe utilizar la variable de índice '*variable*'|  
-|[Error del compilador C3019](compiler-error-c3019.md)|la forma del incremento de la instrucción 'for' de OpenMP no es adecuada|  
+|[Error del compilador C3019](compiler-error-c3019.md)|incremento de la 'instrucción for' de OpenMP con formato incorrecto|  
 |[Error del compilador C3020](compiler-error-c3020.md)|'*variable*': variable de índice de 'bucle for' de OpenMP no se puede modificar en el cuerpo del bucle|  
 |[Error del compilador C3021](compiler-error-c3021.md)|'*argumento*': argumento está vacío en OpenMP '*directiva*' directiva|  
 |[Error del compilador C3022](compiler-error-c3022.md)|'*directiva*': tipo de programación no válida de '*directiva*'de OpenMP'*directiva*' directiva|  
 |[Error del compilador C3023](compiler-error-c3023.md)|'*argumento*': se encontró en el argumento para OpenMP un token inesperado '*directiva*' cláusula|  
-|[Error del compilador C3024](compiler-error-c3024.md)|'schedule(runtime)': expresión chunk_size no permitida|  
+|[Error del compilador C3024](compiler-error-c3024.md)|'schedule(runtime)': expresión chunk_size no se permite|  
 |[Error del compilador C3025](compiler-error-c3025.md)|'*cláusula*': se esperaba una expresión integral|  
 |[Error del compilador C3026](compiler-error-c3026.md)|'*cláusula*': expresión constante debe ser positiva|  
 |[Error del compilador C3027](compiler-error-c3027.md)|'*cláusula*': se esperaba una expresión aritmética o de puntero|  
@@ -126,7 +112,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C3041](compiler-error-c3041.md)|'*identificador*': la variable de la cláusula 'copyprivate' debe ser privada en el contexto envolvente|  
 |[Error del compilador C3042](compiler-error-c3042.md)|las cláusulas 'copyprivate' y 'nowait' no pueden aparecer juntas en OpenMP '*directiva*' directiva|  
 |[Error del compilador C3043](compiler-error-c3043.md)|la directiva 'critical' de OpenMP no se puede anidar en una directiva 'critical' con el mismo nombre|  
-|[Error del compilador C3044](compiler-error-c3044.md)|'section': solamente se permite si se anida directamente bajo una directiva 'sections' de OpenMP|  
+|[Error del compilador C3044](compiler-error-c3044.md)|'section': solo permite anida directamente bajo una directiva 'sections' de OpenMP|  
 |[Error del compilador C3045](compiler-error-c3045.md)|Se esperaba una instrucción compuesta después de la directiva 'sections' de OpenMP. Falta '{'|  
 |[Error del compilador C3046](compiler-error-c3046.md)|Falta el bloque estructurado en la región '#pragma omp sections' de OpenMP|  
 |[Error del compilador C3047](compiler-error-c3047.md)|El bloque estructurado en la región 'sections' de OpenMP debe ir precedido de '#pragma omp section'|  
@@ -148,7 +134,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C3063](compiler-error-c3063.md)|operador '*operador*': todos los operandos deben tener el mismo tipo de enumeración|  
 |C3064 de Error del compilador|'*identificador*': debe ser un tipo simple o dar como resultado una|  
 |[Error del compilador C3065](compiler-error-c3065.md)|no se permite la declaración de propiedad en un ámbito que no es de clase|  
-|[Error del compilador C3066](compiler-error-c3066.md)|hay varias formas mediante las que se puede llamar a un objeto de este tipo con estos argumentos|  
+|[Error del compilador C3066](compiler-error-c3066.md)|Hay varias maneras de que un objeto de este tipo se puede llamar con estos argumentos|  
 |C3067 de Error del compilador|no se puede usar una lista de inicializadores con el operador integrados]|  
 |[Error del compilador C3068](compiler-error-c3068.md)|'*identificador*': una función 'naked' no puede contener objetos que requerirían desenredo si se produjera una excepción de C++|  
 |[Error del compilador C3069](compiler-error-c3069.md)|operador '*operador*': no se permite para el tipo de enumeración|  
@@ -156,19 +142,19 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C3071](compiler-error-c3071.md)|operador '*operador*' solo se puede aplicar a una instancia de una clase ref o un tipo de valor|  
 |[Error del compilador C3072](compiler-error-c3072.md)|operador '*operador*' no se puede aplicar a una instancia de un uso de clase ref, el operador unario '%' para convertir una instancia de un parámetro ref clase a un tipo de identificador|  
 |[Error del compilador C3073](compiler-error-c3073.md)|'*identificador*': clase ref no tiene un constructor de copias definido por el usuario|  
-|C3074 de Error del compilador|no se puede inicializar una matriz con un de inicializador entre paréntesis|  
+|C3074 de Error del compilador|no se puede inicializar una matriz con un inicializador entre paréntesis|  
 |[Error del compilador C3075](compiler-error-c3075.md)|'*identificador*': no se puede incrustar una instancia de un tipo de referencia, '*tipo*', en un tipo de valor|  
 |[Error del compilador C3076](compiler-error-c3076.md)|'*identificador*': no se puede incrustar una instancia de un tipo de referencia, '*tipo*', en un tipo nativo|  
 |[Error del compilador C3077](compiler-error-c3077.md)|'*identificador*': un finalizador solamente puede ser un miembro de un tipo de referencia|  
 |C3078 de Error del compilador|tamaño de la matriz debe especificarse en new (expresiones)|  
-|C3079 de Error del compilador|no se puede usar una lista de inicializadores como operando derecho de este operador de asignaciones|  
+|C3079 de Error del compilador|no se puede usar una lista de inicializadores como operando derecho de este operador de asignación|  
 |[Error del compilador C3080](compiler-error-c3080.md)|'*finalizador*': un finalizador no puede tener un especificador de clase de almacenamiento|  
 |C3081 de Error del compilador|Obsoleto.|  
 |Error del compilador C3082|Obsoleto.|  
 |[Error del compilador C3083](compiler-error-c3083.md)|'*identificador*': el símbolo a la izquierda de un '::' debe ser un tipo|  
 |[Error del compilador C3084](compiler-error-c3084.md)|'*identificador*': un destructor/finalizador no puede ser '*palabra clave*'|  
 |[Error del compilador C3085](compiler-error-c3085.md)|'*identificador*': un constructor no puede ser '*palabra clave*'|  
-|C3086 de Error del compilador|no se encuentra 'std::initializer_list': debe utilizar #include <lista_inicializadores>|  
+|C3086 de Error del compilador|no se puede encontrar 'std:: initializer_list': debe #include < initializer_list >|  
 |[Error del compilador C3087](compiler-error-c3087.md)|'*identificador*': llamada de '*declaración*' ya inicializa este miembro|  
 |C3088 de Error del compilador|'*clase*': constructor de atributo debe tener argumentos formales con nombre|  
 |C3089 de Error del compilador|'*identificador*': nombre de parámetro no coincide con el nombre de cualquier miembro de datos|  

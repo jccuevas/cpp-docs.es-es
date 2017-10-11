@@ -1,36 +1,39 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4010 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4010"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4010"
+title: Compilador advertencia (nivel 1) C4010 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4010
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4010
 ms.assetid: d607a9ff-8f8f-45c0-b07b-3b2f439e5485
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Advertencia del compilador (nivel 1) C4010
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b6a0c84d5138cf2ae8a7a6279d9dc0fde9fe9512
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-el comentario de una sola línea contiene un carácter de continuación de línea  
+---
+# <a name="compiler-warning-level-1-c4010"></a>Compilador advertencia (nivel 1) C4010
+comentario de una línea contiene el carácter de continuación de línea  
   
- Un comentario de una sola línea, que se inserta con \/\/, contiene una barra diagonal inversa \(\\\) que actúa como carácter de continuación de línea.  El compilador interpreta la siguiente línea como continuación y la trata como comentario.  
+ Un comentario de línea, que se introdujo por / /, contiene una barra diagonal inversa (\\) que actúa como un carácter de continuación de línea. El compilador considera que la línea siguiente para tener una continuación y lo trata como un comentario.  
   
- Algunos editores orientados a la sintaxis no indican la línea que sigue al carácter de continuación como comentario.  Omita la codificación de color de la sintaxis en las líneas que causan esta advertencia.  
+ Algunas sintaxis dirigen editores no indican la línea que sigue al carácter de continuación como un comentario. Omitir los colores en las líneas que causan esta advertencia de sintaxis.  
   
- El código siguiente genera el error C4010:  
+ El ejemplo siguiente genera C4010:  
   
 ```  
 // C4010.cpp  

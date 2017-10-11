@@ -1,35 +1,38 @@
 ---
-title: "Error del compilador C3738 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3738"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3738"
+title: Error del compilador C3738 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3738
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3738
 ms.assetid: dd3ee011-e204-4264-bf3a-da32c4ef7038
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C3738
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c143168981ed269a7bf830b4d5f345c1a063c425
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'convención de llamada': la convención de llamadas de la creación de instancias explícita debe coincidir con la de la plantilla cuya instancia se está creando  
+---
+# <a name="compiler-error-c3738"></a>Error del compilador C3738
+'convención de llamada': la convención de llamada de la creación de instancias explícita debe coincidir con el de la plantilla que se va a crear una instancia  
   
- Se recomienda que no se especifique una convención de llamadas en una creación de instancias explícita.  Pero si debe hacerlo, las convenciones de llamadas deben coincidir.  
+ Se recomienda que no especifican una convención de llamada de creación de instancias explícita. Si es necesario, sin embargo, deben coincidir con las convenciones de llamada.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C3738.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C3738.  
   
 ```  
 // C3738.cpp  

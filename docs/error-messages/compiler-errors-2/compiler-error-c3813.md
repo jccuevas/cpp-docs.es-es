@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 74c976fb090533ade91e5debf067371d5d3295c1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cabe753691b3d72ede25f0c25404d73fb63ceba8
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3813"></a>Error del compilador C3813
 una declaración de propiedad solo puede aparecer en la definición de un tipo WinRT o administrado  
   
-Un [propiedad](../../dotnet/how-to-use-properties-in-cpp-cli.md) sólo se pueden declarar dentro de un administrado o en tiempo de ejecución de Windows tipo. Los tipos nativos no admiten la palabra clave `property`.  
+A [propiedad](../../dotnet/how-to-use-properties-in-cpp-cli.md) solo puede declararse dentro de Windows Runtime o administrado tipo. Los tipos nativos no admiten la palabra clave `property`.  
   
 ## <a name="example"></a>Ejemplo  
 En el ejemplo siguiente se genera el error C3813 y se muestra cómo corregirlo:  

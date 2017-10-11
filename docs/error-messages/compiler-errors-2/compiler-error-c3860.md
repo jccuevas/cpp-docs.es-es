@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3860 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3860"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3860"
+title: Error del compilador C3860 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3860
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3860
 ms.assetid: 1fb5110d-594e-4f1c-8773-888233af1313
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C3860
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c7f06878b5d7c364704cd028ae87a5b43bd0d738
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-la lista de argumentos de tipo que sigue al nombre de tipo de clase debe enumerar los parámetros en el orden utilizado en la lista de parámetros de tipo  
+---
+# <a name="compiler-error-c3860"></a>Error del compilador C3860
+lista de argumentos de tipo que sigue al nombre de tipo de clase debe enumerar los parámetros en el orden utilizado en la lista de parámetros de tipo  
   
- Había una lista mal formada de argumentos genéricos o de plantilla.  
+ Una lista de argumentos de plantilla o genérico ya estaba mal formada.  
   
- El código siguiente genera el error C3860:  
+ El ejemplo siguiente genera C3860:  
   
 ```  
 // C3860.cpp  
@@ -56,7 +59,7 @@ template <class T2, class T1>
 void A<T2, T1>::f() {}  
 ```  
   
- El error C3860 también puede producirse al utilizar clases genéricas:  
+ C3860 también puede producirse al usar genéricos:  
   
 ```  
 // C3860c.cpp  

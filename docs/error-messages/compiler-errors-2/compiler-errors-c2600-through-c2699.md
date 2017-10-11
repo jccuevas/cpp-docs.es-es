@@ -67,26 +67,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 78e2d8ed0100bfa0ea39d0e4b2347d65153a4136
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ec696a2a1fa323850210ba87c637c07dd5577ea1
 ms.contentlocale: es-es
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2600-through-c2699"></a>Errores del compilador de C2600 a C2699
@@ -144,7 +129,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |C2642 de Error del compilador|Obsoleto.|  
 |C2643 de Error del compilador|Obsoleto.|  
 |C2644 de Error del compilador|Obsoleto.|  
-|[Error del compilador C2645](compiler-error-c2645.md)|no existe un nombre completo para puntero a miembro (se encontró ':: *')|  
+|[Error del compilador C2645](compiler-error-c2645.md)|ningún nombre completo para puntero a miembro (se encontró ':: *')|  
 |[Error del compilador C2646](compiler-error-c2646.md)|un struct/union anónimas en global o en el ámbito de espacio de nombres debe declararse como static|  
 |[Error del compilador C2647](compiler-error-c2647.md)|'*operador*': no se puede desreferenciar un '*type1*' en un '*type2*'|  
 |[Error del compilador C2648](compiler-error-c2648.md)|'*identificador*': uso de miembro como parámetro predeterminado requiere un miembro static|  
@@ -153,49 +138,49 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2651](compiler-error-c2651.md)|'*tipo*': izquierdo de '::' debe ser una clase, estructura o unión|  
 |[Error del compilador C2652](compiler-error-c2652.md)|'*identificador*': constructor de copias no válido: no debe ser el primer parámetro de un '*tipo*'|  
 |[Error del compilador C2653](compiler-error-c2653.md)|'*identificador*': no es un nombre de clase o espacio de nombres|  
-|[Error del compilador C2654](compiler-error-c2654.md)|'*identificador de*': intento de acceso a un miembro fuera de una función miembro|  
-|[Error del compilador C2655](compiler-error-c2655.md)|'*identificador de*': definición o nueva declaración no válida en el ámbito actual|  
-|[Error del compilador C2656](compiler-error-c2656.md)|'*función*': función no permitida como un campo de bits|  
-|[Error del compilador C2657](compiler-error-c2657.md)|'*clase*:: *' se encuentra al principio de una instrucción (¿olvidado especificar un tipo?)|  
-|[Error del compilador C2658](compiler-error-c2658.md)|'*identificador de*': nueva definición en struct/union anónimas|  
-|[Error del compilador C2659](compiler-error-c2659.md)|'*operador*': función como operando izquierdo|  
-|[Error del compilador C2660](compiler-error-c2660.md)|'*función*': la función no toma *número* argumentos|  
+|[Error del compilador C2654](compiler-error-c2654.md)|'*identificador*': intento de obtener acceso al miembro fuera de una función miembro|  
+|[Error del compilador C2655](compiler-error-c2655.md)|'*identificador*': definición o nueva declaración no válida en el ámbito actual|  
+|[Error del compilador C2656](compiler-error-c2656.md)|'*función*': función no está permitida como un campo de bits|  
+|[Error del compilador C2657](compiler-error-c2657.md)|'*clase*:: *' se encuentra al principio de una instrucción (¿olvidó especificar un tipo?)|  
+|[Error del compilador C2658](compiler-error-c2658.md)|'*identificador*': nueva definición en struct/union anónimas|  
+|[Error del compilador C2659](compiler-error-c2659.md)|'*operador*': función sobrecargada como operando izquierdo|  
+|[Error del compilador C2660](compiler-error-c2660.md)|'*función*': función no acepta *número* argumentos|  
 |[Error del compilador C2661](compiler-error-c2661.md)|'*función*': ninguna función sobrecargada acepta *número* argumentos|  
-|[Error del compilador C2662](compiler-error-c2662.md)|'*función*': no se puede convertir el puntero 'this' de '*tipo1*'a'*tipo2*'|  
+|[Error del compilador C2662](compiler-error-c2662.md)|'*función*': no se puede convertir el puntero 'this' de '*type1*'to'*type2*'|  
 |[Error del compilador C2663](compiler-error-c2663.md)|'*función*': *número* sobrecargas no tienen ninguna conversión válida para el puntero 'this'|  
-|[Error del compilador C2664](compiler-error-c2664.md)|'*función*': no se puede convertir el argumento *número* de '*tipo1*'a'*tipo2*'|  
-|[Error del compilador C2665](compiler-error-c2665.md)|'*función*': ninguno de los *número* sobrecargas pudieran convertir todos los tipos de argumento|  
+|[Error del compilador C2664](compiler-error-c2664.md)|'*función*': no se puede convertir el argumento *número* desde '*type1*'to'*type2*'|  
+|[Error del compilador C2665](compiler-error-c2665.md)|'*función*': ninguno de los *número* sobrecargas pudieron convertir todos los tipos de argumento|  
 |[Error del compilador C2666](compiler-error-c2666.md)|'*función*': *número* sobrecargas tienen conversiones similares|  
 |[Error del compilador C2667](compiler-error-c2667.md)|'*función*': ninguno de *número* sobrecargas tienen una conversión mejor|  
 |[Error del compilador C2668](compiler-error-c2668.md)|'*función*': llamada ambigua a una función sobrecargada|  
-|[Error del compilador C2669](compiler-error-c2669.md)|función miembro no permitida en unión anónima|  
+|[Error del compilador C2669](compiler-error-c2669.md)|función miembro no permitida en una unión anónima|  
 |[Error del compilador C2670](compiler-error-c2670.md)|'*función*': la plantilla de función no puede convertir el parámetro *número* de tipo '*tipo*'|  
-|[Error del compilador C2671](compiler-error-c2671.md)|'*función*': las funciones miembro static no tienen punteros 'this'|  
-|C2672 de Error del compilador|'*función*': ninguna coincidencia sobrecargado se encuentra la función|  
+|[Error del compilador C2671](compiler-error-c2671.md)|'*función*': las funciones miembro estáticas no tienen punteros 'this'|  
+|C2672 de Error del compilador|'*función*': ninguna sobrecarga ha encontrado una función|  
 |[Error del compilador C2673](compiler-error-c2673.md)|'*función*': las funciones globales no tienen punteros 'this'|  
 |[Error del compilador C2674](compiler-error-c2674.md)|no se permite una declaración genérica en este contexto|  
 |[Error del compilador C2675](compiler-error-c2675.md)|unario '*operador*': '*tipo*' no define este operador o una conversión a un tipo aceptable para el operador predefinido|  
 |[Error del compilador C2676](compiler-error-c2676.md)|binario '*operador*': '*tipo*' no define este operador o una conversión a un tipo aceptable para el operador predefinido|  
-|[Error del compilador C2677](compiler-error-c2677.md)|binario '*operador*': encuentra de ningún operador global que adopte el tipo '*tipo*' (o no hay ninguna conversión aceptable)|  
-|[Error del compilador C2678](compiler-error-c2678.md)|binario '*operador*': encontró no un operador que adopte un operando de la izquierda del tipo '*tipo*' (o no hay ninguna conversión aceptable)|  
-|[Error del compilador C2679](compiler-error-c2679.md)|binario '*operador*': encontró sin un operador que adopte un operando derecho del tipo '*tipo*' (o no hay ninguna conversión aceptable)|  
-|[Error del compilador C2680](compiler-error-c2680.md)|'*tipo*': tipo de destino no válido para *cast*|  
-|[Error del compilador C2681](compiler-error-c2681.md)|'*tipo*': tipo de expresión no válida para *cast*|  
-|[Error del compilador C2682](compiler-error-c2682.md)|no se puede utilizar '*cast*' para convertir de'*tipo1*'a'*tipo2*'|  
-|[Error del compilador C2683](compiler-error-c2683.md)|'*cast*': '*tipo*' no es un tipo polimórfico|  
-|C2684 de Error del compilador|'*declarador de*': no se admiten las funciones eliminadas o impagadas en clases administradas/WinRT|  
-|C2685 de Error del compilador|'*declarador de*': no se admiten funciones eliminadas o impagadas especificadores de restricción explícita|  
-|C2686 de Error del compilador|no se pueden sobrecargar funciones miembro static y no static con los mismos tipos de parámetros|  
-|[Error del compilador C2687](compiler-error-c2687.md)|'*tipo de*': declaración de excepción no puede ser 'void' o denotar un tipo incompleto, puntero o referencia a un tipo incompleto|  
-|[Error del compilador C2688](compiler-error-c2688.md)|'*tipo*::*miembro*': covariante con múltiples o herencia virtual no compatibles con funciones varargs|  
+|[Error del compilador C2677](compiler-error-c2677.md)|binario '*operador*': no encontró de ningún operador global que adopte el tipo '*tipo*' (o no hay ninguna conversión aceptable)|  
+|[Error del compilador C2678](compiler-error-c2678.md)|binario '*operador*': encontró ningún un operador que adopte un operando izquierdo de tipo '*tipo*' (o no hay ninguna conversión aceptable)|  
+|[Error del compilador C2679](compiler-error-c2679.md)|binario '*operador*': encontró ningún un operador que adopte un operando derecho del tipo '*tipo*' (o no hay ninguna conversión aceptable)|  
+|[Error del compilador C2680](compiler-error-c2680.md)|'*tipo*': tipo de destino no válido para *conversión*|  
+|[Error del compilador C2681](compiler-error-c2681.md)|'*tipo*': tipo de expresión no válida para *conversión*|  
+|[Error del compilador C2682](compiler-error-c2682.md)|no se puede usar '*conversión*' para convertir de'*type1*'to'*type2*'|  
+|[Error del compilador C2683](compiler-error-c2683.md)|'*conversión*': '*tipo*' no es un tipo polimórfico|  
+|C2684 de Error del compilador|'*declarador*': no se admiten las funciones establecidas como valor predeterminadas y eliminadas en clases administradas o WinRT|  
+|C2685 de Error del compilador|'*declarador*': no se admiten las funciones establecidas como valor predeterminadas y eliminadas con especificadores de restricción explícita|  
+|C2686 de Error del compilador|no se pueden sobrecargar funciones miembro estáticas y no estáticos con los mismos tipos de parámetro|  
+|[Error del compilador C2687](compiler-error-c2687.md)|'*tipo*': declaración de excepción no puede ser 'void' o denotar un tipo incompleto, puntero o referencia a un tipo incompleto|  
+|[Error del compilador C2688](compiler-error-c2688.md)|'*tipo*::*miembro*': devueltos de covariante con varias o herencia virtual no se admite para las funciones varargs|  
 |[Error del compilador C2689](compiler-error-c2689.md)|'*función*': no se puede definir una función friend en una clase local|  
-|[Error del compilador C2690](compiler-error-c2690.md)|'*operador*': no se puede realizar aritmética con punteros en una matriz administrada/WinRT|  
-|[Error del compilador C2691](compiler-error-c2691.md)|'*tipo de*': una matriz administrada/WinRT no puede tener este tipo de elemento|  
-|[Error del compilador C2692](compiler-error-c2692.md)|'*función*': funciones con prototipo totalmente necesarios en el compilador de C con el ' / clr' opción|  
-|[Error del compilador C2693](compiler-error-c2693.md)|'*operador*': comparación no válida de referencias a una matriz administrada/WinRT|  
-|[Error del compilador C2694](compiler-error-c2694.md)|'*override_function*': la función virtual de reemplazo tiene una especificación de excepción menos restrictiva que la función miembro virtual de clase base '*función_base*'|  
-|[Error del compilador C2695](compiler-error-c2695.md)|'*función_de_reemplazo*': reemplazar la función virtual difiere de '*función_base*' sólo por la convención de llamada|  
-|[Error del compilador C2696](compiler-error-c2696.md)|No se puede crear un objeto temporal de tipo administrado/WinRT '*tipo*'|  
+|[Error del compilador C2690](compiler-error-c2690.md)|'*operador*': no se puede realizar aritmética con punteros en una matriz administrada o WinRT|  
+|[Error del compilador C2691](compiler-error-c2691.md)|'*tipo*': una matriz administrada o WinRT no puede tener este tipo de elemento|  
+|[Error del compilador C2692](compiler-error-c2692.md)|'*función*': las funciones prototipos totalmente necesarias en el compilador de C con el ' / clr' opción|  
+|[Error del compilador C2693](compiler-error-c2693.md)|'*operador*': comparación no válida de referencias a una matriz administrada o WinRT|  
+|[Error del compilador C2694](compiler-error-c2694.md)|'*función_de_reemplazo*': función virtual de reemplazo tiene una especificación de excepción menos restrictiva que la función miembro virtual de clase base '*función_base*'|  
+|[Error del compilador C2695](compiler-error-c2695.md)|'*función_de_reemplazo*': función virtual de reemplazo es distinto de '*función_base*' sólo por la convención de llamada|  
+|[Error del compilador C2696](compiler-error-c2696.md)|No se puede crear un objeto temporal de tipo administrado o WinRT '*tipo*'|  
 |C2697 de Error del compilador|Obsoleto.|  
-|[Error del compilador C2698](compiler-error-c2698.md)|la declaración using para '*declaración1*' no puede coexistir con la declaración using existente para'*declaración2*'|  
+|[Error del compilador C2698](compiler-error-c2698.md)|la declaración using para '*declaration1*'no puede coexistir con la declaración using existente para'*declaration2*'|  
 

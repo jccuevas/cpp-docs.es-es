@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3709 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3709"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3709"
+title: Error del compilador C3709 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3709
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3709
 ms.assetid: d5576b04-2f93-420a-8f3e-8b8e987e8dab
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C3709
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4d56a4c18543ad71e524a4cc08eecd35ab6e7e2e
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'función': sintaxis incorrecta para especificar un evento en \_\_hook\/\_\_unhook  
+---
+# <a name="compiler-error-c3709"></a>Error del compilador C3709
+'función': sintaxis incorrecta para especificar un evento en __hook /\__unhook  
   
- Al especificar un origen de eventos con [\_\_hook](../../cpp/hook.md) o [\_\_unhook](../../cpp/unhook.md), el primer parámetro debe ser un método de evento válido y el segundo parámetro debe ser un objeto válido de origen de evento \(no un método\).  
+ Cuando se especifica un origen de eventos con [__hook](../../cpp/hook.md) o [__unhook](../../cpp/unhook.md), el primer parámetro debe ser un método de evento válido y el segundo parámetro debe ser un objeto de origen de evento válido (no un método).  
   
- El código siguiente genera el error C3709:  
+ El ejemplo siguiente genera C3709:  
   
 ```  
 // C3709.cpp  

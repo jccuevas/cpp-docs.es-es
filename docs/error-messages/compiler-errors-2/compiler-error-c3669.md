@@ -1,35 +1,38 @@
 ---
-title: "Error del compilador C3669 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3669"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3669"
+title: Error del compilador C3669 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3669
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3669
 ms.assetid: be9c7ae4-e96f-47ab-922a-39a3537d5ca6
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Error del compilador C3669
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 56e725bd03ecd1ba4f8ab3d77eeab6633a9ef062
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'miembro' : el especificador de reemplazo 'override' no se permite en constructores ni en funciones miembro estáticos  
+---
+# <a name="compiler-error-c3669"></a>Error del compilador C3669
+'member': especificador 'override' no se permite en funciones miembro estáticas o constructores de reemplazo  
   
- Se ha especificado incorrectamente un reemplazo.  Para obtener más información, vea [Reemplazos explícitos](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Se ha especificado incorrectamente un reemplazo. Para obtener más información, consulte [reemplazos explícitos](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C3669.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C3669.  
   
 ```  
 // C3669.cpp  

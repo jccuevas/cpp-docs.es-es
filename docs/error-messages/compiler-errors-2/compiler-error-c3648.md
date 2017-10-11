@@ -1,5 +1,5 @@
 ---
-title: C3648 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3648 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: bbc097048600700592d2ebb30d939ba216434d84
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5be1886ad2404f0c0eb30cb5511111e4e8e97180
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3648"></a>Error del compilador C3648
-esta sintaxis de invalidación explícita requiere /clr:oldSyntax  
+Esta sintaxis de reemplazo explícita requiere/CLR: oldSyntax  
   
-Cuando se compila para la última sintaxis administrada, el compilador encontró explícito invalidar sintaxis para las versiones anteriores que ya no se admiten.  
+Cuando se compila con la última sintaxis administrada, el compilador encontró explícito invalidar sintaxis para las versiones anteriores que ya no se admite.  
   
 Para obtener más información, consulte [reemplazos explícitos](../../windows/explicit-overrides-cpp-component-extensions.md).  
   

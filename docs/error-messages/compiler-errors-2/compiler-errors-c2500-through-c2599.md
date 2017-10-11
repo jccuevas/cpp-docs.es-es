@@ -65,25 +65,11 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: a41480c57b281c7a4fbb1e7697d11b5057b5da48
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31df41ea122c762428e153fe406efba1175c64f2
 ms.contentlocale: es-es
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2500-through-c2599"></a>C2500 de errores del compilador a través de C2599
@@ -140,25 +126,25 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2541](compiler-error-C2541.md)|'*identificador*': no se puede eliminar objetos que no sean punteros|  
 |[Error del compilador C2542](compiler-error-C2542.md)|'*identificador*': el objeto de clase no tiene ningún constructor para la inicialización|  
 |[Error del compilador C2543](compiler-error-C2543.md)|se esperaba ']' para el operador '[']|  
-|[Error del compilador C2544](compiler-error-C2544.md)|se esperaba ')' para el operador '()'|  
+|[Error del compilador C2544](compiler-error-C2544.md)|se esperaba ')' para el operador '()'.|  
 |[Error del compilador C2545](compiler-error-C2545.md)|'*operador*': no se puede encontrar el operador sobrecargado|  
 |C2546 de Error del compilador|'*identificador*': cuando se define un tipo en un PIA de no debe hacer referencia a los PIA en primer lugar y un PIA|  
 |C2547 de Error del compilador|'*identificador*': todos los parámetros de un método publicado deben tener un nombre explícito en la declaración|  
 |[Error del compilador C2548](compiler-error-C2548.md)|'*función*': falta el parámetro predeterminado para el parámetro *parámetro*|  
-|[Error del compilador C2549](compiler-error-C2549.md)|la conversión definida por el usuario no puede especificar un tipo de valor devuelto|  
+|[Error del compilador C2549](compiler-error-C2549.md)|conversión definida por el usuario no puede especificar un tipo de valor devuelto|  
 |[Error del compilador C2550](compiler-error-C2550.md)|'*identificador*': listas de inicializadores de constructor sólo se permiten en las definiciones de constructor|  
 |[Error del compilador C2551](compiler-error-C2551.md)|El tipo 'void *' necesita conversión explícita|  
 |[Error del compilador C2552](compiler-error-C2552.md)|'*identificador*': no agregados no se puede inicializar con una lista de inicializadores|  
-|[Error del compilador C2553](compiler-error-C2553.md)|'*tipo* *derived_class*::*función*': reemplazar la función virtual difiere del tipo de valor devuelto de '*tipo* *clase_base*::*función*'|  
+|[Error del compilador C2553](compiler-error-C2553.md)|'*tipo* *derived_class*::*función*': tipo de valor devuelto de función virtual de reemplazo es distinto de '*tipo* *base_ clase*::*función*'|  
 |[Error del compilador C2555](compiler-error-C2555.md)|'*derived_class*::*función*': función virtual de reemplazo tipo devuelto es diferente y no es covariante de '*clase_base*::*función*'|  
-|[Error del compilador C2556](compiler-error-C2556.md)|'*type1* *clase*::*función*': función sobrecargada sólo se diferencia por tipo de valor devuelto de '*type2* *clase*::*función*'|  
+|[Error del compilador C2556](compiler-error-C2556.md)|'*type1* *clase*::*función*': función sobrecargada sólo se diferencia por tipo de valor devuelto de '*type2* *(clase)*::*función*'|  
 |[Error del compilador C2557](compiler-error-C2557.md)|'*identificador*': los miembros privados y protegidos no se puede inicializar sin un constructor|  
 |[Error del compilador C2558](compiler-error-C2558.md)|clase*clase*': ningún constructor de copias disponible o el constructor de copias se declara 'explicit'|  
 |C2559 de Error del compilador|'*identificador*': no se pueden sobrecargar una función miembro sin el calificador de referencia con una función miembro con el calificador de referencia|  
 |C2560 de Error del compilador|'*identificador*': no se pueden sobrecargar una función miembro con el calificador de referencia con una función miembro sin el calificador de referencia|  
 |[Error del compilador C2561](compiler-error-C2561.md)|'*función*': función debe devolver un valor|  
 |[Error del compilador C2562](compiler-error-C2562.md)|'*función*': función 'void' Devuelve un valor|  
-|[Error del compilador C2563](compiler-error-C2563.md)|hay una falta de correspondencia en la lista de parámetros formales|  
+|[Error del compilador C2563](compiler-error-C2563.md)|Error de coincidencia en la lista de parámetros formales|  
 |Error del compilador C2564|Obsoleto.|  
 |C2565 de Error del compilador|'*identificador*': calificador de referencia no es válido para los constructores y destructores|  
 |[Error del compilador C2566](compiler-error-C2566.md)|función sobrecargada en expresión condicional|  
@@ -193,5 +179,5 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |C2595 de Error del compilador|'*identificador*' WinRT de un tipo de atributo debe ser sealed|  
 |C2596 de Error del compilador|'*identificador*' WinRT de un campo de atributo solo puede ser un 'public enum class', 'int', 'unsigned int', 'bool', 'Platform:: Type', 'Platform:: String' o 'Windows:: Foundation:: HResult'|  
 |[Error del compilador C2597](compiler-error-C2597.md)|referencia no válida a un miembro no estático '*identificador*'|  
-|[Error del compilador C2598](compiler-error-C2598.md)|la especificación de vinculación debe estar en el ámbito global|  
+|[Error del compilador C2598](compiler-error-C2598.md)|especificación de vinculación debe estar en el ámbito global|  
 |[Error del compilador C2599](compiler-error-C2599.md)|'*identificador*': no se permite la declaración adelantada de una enumeración administrada o WinRT|  

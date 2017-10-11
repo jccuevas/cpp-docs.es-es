@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3626 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3626"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3626"
+title: Error del compilador C3626 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3626
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3626
 ms.assetid: 43926e2b-1ba9-4a43-9343-c58449cbb336
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C3626
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9acd9c4e08c082d27fbc564031c515ca2a680d30
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'palabra clave': 'la palabra clave '\_\_event' sólo se puede utilizar en interfaces COM, funciones miembro y miembros de datos que sean punteros a delegados  
+---
+# <a name="compiler-error-c3626"></a>Error del compilador C3626
+'keyword': palabra clave '__event' solo puede usarse en interfaces COM, funciones miembro y miembros de datos que sean punteros a delegados  
   
- Se ha utilizado incorrectamente una palabra clave.  
+ Una palabra clave se usó incorrectamente.  
   
- El código siguiente genera el error C3626:  
+ El ejemplo siguiente genera C3626:  
   
 ```  
 // C3626.cpp  

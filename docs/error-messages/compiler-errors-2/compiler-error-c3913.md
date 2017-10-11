@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C3913 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3913"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3913"
+title: Error del compilador C3913 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3913
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3913
 ms.assetid: a678bfce-9524-470d-9f23-7d08ecb972c8
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C3913
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ad34e5b74be2b19d0638f6f4b42b6f3a0cf4ab78
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-una propiedad predeterminada debe estar indizada  
+---
+# <a name="compiler-error-c3913"></a>Error del compilador C3913
+propiedad predeterminada debe estar indizada  
   
- Se ha definido incorrectamente una propiedad predeterminada.  
+ Una propiedad predeterminada se definió incorrectamente.  
   
- Para obtener más información, vea [propiedad](../../windows/property-cpp-component-extensions.md).  
+ Para obtener más información, consulta [property](../../windows/property-cpp-component-extensions.md).  
   
- El código siguiente genera el error C3913:  
+ El ejemplo siguiente genera C3913:  
   
 ```  
 // C3913.cpp  

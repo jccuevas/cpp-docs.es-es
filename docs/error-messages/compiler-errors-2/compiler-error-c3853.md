@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3853 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3853"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3853"
+title: Error del compilador C3853 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3853
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3853
 ms.assetid: 5b71805d-52b4-44ec-80ae-37c68d876f6a
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Error del compilador C3853
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 54a05062cfc3f0871e16b500c8a3c4b6c3787b15
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'\=': no se puede reinicializar una referencia o trabajo mediante una referencia a función  
+---
+# <a name="compiler-error-c3853"></a>Error del compilador C3853
+'=': volver a inicializar una referencia o asignación a través de una referencia a la función no es válido  
   
- No se puede asignar a una referencia mediante una función, ya que las funciones no son valores L.  
+ No se puede asignar a una referencia a través de una función porque las funciones no son valores l.  
   
- Los ejemplos siguientes generan el error C3853:  
+ Los ejemplos siguientes generan C3853:  
   
 ```  
 // C3853.cpp  

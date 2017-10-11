@@ -47,25 +47,11 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 1d63e4faaafe9ba208e17857a8ac60723c6c5cf5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 87910db946d51d740c93134b7085e5af7d3ccadc
 ms.contentlocale: es-es
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>Compilador C3200 de errores a través de la advertencia C3299
@@ -127,7 +113,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C3246](compiler-error-c3246.md)|'*clase*': no puede heredar de '*clase_base*'tal y como se ha declarado como'*herencia*'|  
 |[Error del compilador C3247](compiler-error-c3247.md)|'*coclase*': una coclase no puede heredar de otra coclase*clase_base*'|  
 |[Error del compilador C3248](compiler-error-c3248.md)|Obsoleto. '*función*': función declarada como 'sealed' no se puede reemplazar por '*función*'|  
-|C3249 de Error del compilador|declaración o subexpresión no válida para la función 'constexpr'|  
+|C3249 de Error del compilador|instrucción no válida o subexpresión para la función 'constexpr'|  
 |C3250 de Error del compilador|'*declaración*': no se permite la declaración en el cuerpo de la función 'constexpr'|  
 |[Error del compilador C3251](compiler-error-c3251.md)|no se puede invocar el método de clase base en una instancia de tipo de valor|  
 |[Error del compilador C3252](compiler-error-c3252.md)|'*función*': no se puede reducir la accesibilidad de un método virtual en un tipo administrado o WinRT|  
@@ -137,7 +123,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |C3256 de Error del compilador|'*función*': uso de variables no genera una expresión constante|  
 |Error del compilador C3257|Obsoleto.|  
 |C3258 de Error del compilador|Obsoleto.|  
-|C3259 de Error del compilador|las funciones 'constexpr' solo pueden tener una instrucción return|  
+|C3259 de Error del compilador|funciones de 'constexpr' solo pueden tener una instrucción return|  
 |C3260 de Error del compilador|'*token*': omitiendo tokens inesperados antes del cuerpo lambda|  
 |C3261 de Error del compilador|una función que devuelve una matriz administrada o WinRT debe tener corchetes de matriz al final de la declaración: '*identificador*(...) []'|  
 |[Error del compilador C3262](compiler-error-c3262.md)|indización de matriz no válida: *número* Typo especificado para *número*-dimensional '*tipo*'|  
@@ -165,7 +151,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C3284](compiler-error-c3284.md)|las restricciones para el parámetro genérico '*parámetro*'de la función'*declarador*'debe coincidir con las restricciones para el parámetro genérico'*parámetro*'de la función'*declarador*'|  
 |[Error del compilador C3285](compiler-error-c3285.md)|para cada instrucción no puede funcionar en variables de tipo '*tipo*'|  
 |[Error del compilador C3286](compiler-error-c3286.md)|'*especificador*': una variable de iteración no puede tener especificadores de clase de almacenamiento|  
-|[Error del compilador C3287](compiler-error-c3287.md)|el tipo '*tipo*' (tipo de valor devuelto de GetEnumerator) debe tener una función de miembro MoveNext pública adecuada y la propiedad Current pública|  
+|[Error del compilador C3287](compiler-error-c3287.md)|el tipo '*tipo*' (tipo de valor devuelto de GetEnumerator) debe tener un adecuado función de miembro MoveNext pública y una propiedad Current pública|  
 |[Error del compilador C3288](compiler-error-c3288.md)|'*tipo*': desreferenciación no válida a un tipo de identificador|  
 |[Error del compilador C3289](compiler-error-c3289.md)|'*identificador*': no se puede indizar una propiedad trivial|  
 |[Error del compilador C3290](compiler-error-c3290.md)|'*tipo*': una propiedad trivial no puede tener tipo de referencia|  

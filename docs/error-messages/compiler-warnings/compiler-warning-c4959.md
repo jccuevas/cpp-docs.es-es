@@ -19,26 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: f7cde1151bd220415b950dcce089265be118de34
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 89413ece25d2a60b821765ec6e07d4ab574ea81a
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4959"></a>Advertencia del compilador C4959
@@ -48,7 +33,7 @@ no se puede definir la estructura no administrada 'type' en /clr:safe porque el 
   
  Para obtener más información, consulte [código puro y comprobable (C++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   
- Esta advertencia se emite como un error y puede deshabilitarse con la [advertencia](../../preprocessor/warning.md) pragma o [/wd](../../build/reference/compiler-option-warning-level.md) opción del compilador.  
+ Esta advertencia se emite como un error y puede deshabilitarse con pragma [warning](../../preprocessor/warning.md) o la opción del compilador [/wd](../../build/reference/compiler-option-warning-level.md) .  
   
  El ejemplo siguiente genera la advertencia C4959:  
   

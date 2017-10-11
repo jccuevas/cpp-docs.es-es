@@ -1,5 +1,5 @@
 ---
-title: C3610 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3610 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 31cef33981bbc2063bf68e433f9d3ba32780363d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0cacac87535864c6268d0f078566b9ab224e9151
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3610"></a>Error del compilador C3610
-'valuetype': tipo de valor debe ser 'boxing' antes de que se puede llamar el método 'método'  
+'valuetype': tipo de valor debe ser 'a una conversión boxing' antes de que puede llamar al método 'método'  
   
- De forma predeterminada, un tipo de valor no es en el montón administrado. Antes de que se puede llamar a métodos de las clases de .NET en tiempo de ejecución, como `Object`, debe mover el tipo de valor al montón administrado.  
+ De forma predeterminada, un tipo de valor no está en el montón administrado. Antes de que se puede llamar a métodos de las clases de .NET en tiempo de ejecución, como `Object`, debe mover el tipo de valor al montón administrado.  
   
  Solo es accesible mediante la opción del compilador obsoleta C3610 **/CLR: oldSyntax**.  
 

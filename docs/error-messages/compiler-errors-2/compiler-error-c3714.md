@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3714 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3714"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3714"
+title: Error del compilador C3714 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3714
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3714
 ms.assetid: 17718f75-5a37-4e42-912b-487e91008a95
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Error del compilador C3714
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7d58e06d99975fd4ccff9ea4bace755ff1d758cb
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'método': un método de control de eventos debe tener la misma convención de llamada que el origen 'método'  
+---
+# <a name="compiler-error-c3714"></a>Error del compilador C3714
+'método': un método de controlador de eventos debe tener la misma convención de llamada que el origen 'método'  
   
- Se definió un método de control de eventos que no utiliza la misma convención de llamada que el método del evento de origen.  Para resolver este error, dé al método de control de eventos la misma convención de llamada que la del método del evento de origen.  Por ejemplo, en el código de ejemplo siguiente, haga coincidir las convenciones de llamada de `handler1` y `event1` \([\_\_cdecl](../../cpp/cdecl.md) o [\_\_stdcall](../../cpp/stdcall.md) u otras\).  Quitar las palabras clave de convención de llamada de ambas declaraciones también resolverá el problema, haciendo que `event1` y `handler1` utilicen de forma predeterminada la convención de llamada [thiscall](../../cpp/thiscall.md).  Vea [Convenciones de llamada](../../cpp/calling-conventions.md) para obtener más información.  
+ Define un método de controlador de eventos que no utiliza la misma convención de llamada que el método de evento de origen. Para corregir este error, dé al método de controlador de eventos las mismas convenciones de llamada que los del método del evento de origen. Por ejemplo, en el código siguiente, realice las convenciones de llamada de `handler1` y `event1` coincidir con ([__cdecl](../../cpp/cdecl.md) o [__stdcall](../../cpp/stdcall.md) u otros). Quitar palabras clave de convención de llamada de ambas declaraciones también resuelve el problema y provocar `event1` y `handler1` en de forma predeterminada el [thiscall](../../cpp/thiscall.md) convención de llamada. Vea [convenciones de llamada](../../cpp/calling-conventions.md) para obtener más información.  
   
- El código siguiente genera el error C3714:  
+ El ejemplo siguiente genera C3714:  
   
 ```  
 // C3714.cpp  

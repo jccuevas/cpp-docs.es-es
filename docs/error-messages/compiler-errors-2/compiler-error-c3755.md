@@ -1,35 +1,38 @@
 ---
-title: "Error del compilador C3755 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3755"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3755"
+title: Error del compilador C3755 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3755
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3755
 ms.assetid: 9317b55e-a52e-4b87-b915-5a208d6eda38
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Error del compilador C3755
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c302a3a0a417b8668d18c8329b083648cb28ccab
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'delegado' : un delegado no se puede definir  
+---
+# <a name="compiler-error-c3755"></a>Error del compilador C3755
+'delegado': no se puede definir un delegado  
   
- Un [delegado](../../windows/delegate-cpp-component-extensions.md) se puede declarar, pero no definir.  
+ A [delegate (extensiones de componentes de C++)](../../windows/delegate-cpp-component-extensions.md) puede declarar, pero no definido.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C3755.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C3755.  
   
 ```  
 // C3755.cpp  
@@ -37,8 +40,8 @@ caps.handback.revision: 10
 delegate void MyDel() {};   // C3755  
 ```  
   
-## Ejemplo  
- C3755 también puede producirse si se intenta crear una plantilla de delegado.  El ejemplo siguiente genera el error C3755.  
+## <a name="example"></a>Ejemplo  
+ C3755 también puede producirse si intenta crear una plantilla de delegado. El ejemplo siguiente genera C3755.  
   
 ```  
 // C3755_b.cpp  

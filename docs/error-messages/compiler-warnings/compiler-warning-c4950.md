@@ -1,5 +1,5 @@
 ---
-title: C4950 de advertencia del compilador | Documentos de Microsoft
+title: Advertencia del compilador C4950 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: 937510b3fadf3dd2aff81defc08ea2c74b8b7dec
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6a922a0ee324afcf5f263abe2189e4071c5575c7
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4950"></a>Advertencia del compilador C4950
 'tipo_o_miembro': marcado como obsoleto  
   
-Un miembro o tipo se ha marcado como obsoleto con la <xref:System.ObsoleteAttribute>atributo.</xref:System.ObsoleteAttribute>  
+Un miembro o tipo se marcó como obsoleto con la <xref:System.ObsoleteAttribute> atributo.  
   
 La advertencia C4950 siempre se emite como un error. Puede desactivar esta advertencia mediante la [advertencia](../../preprocessor/warning.md) directiva pragma o [/wd](../../build/reference/compiler-option-warning-level.md) opción del compilador.  
   

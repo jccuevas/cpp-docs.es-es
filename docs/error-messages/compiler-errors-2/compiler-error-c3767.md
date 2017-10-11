@@ -1,5 +1,5 @@
 ---
-title: Compilador Error C3767 | Documentos de Microsoft
+title: Error del compilador C3767 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: b0cce511d895aae218c1b2ab04d129173b049983
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6ebbcbe30a0c9359116d259c36d702a968b333c9
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3767"></a>Error del compilador C3767
@@ -102,7 +87,7 @@ ref class Der : public Base {
 };  
 ```  
   
- En Visual C++ .NET 2002, el compilador cambió la forma en la búsqueda de símbolos. En algunos casos, habría buscado símbolos automáticamente en un espacio de nombres especificado. Ahora, usa búsqueda dependiente de argumentos.  
+ En Visual C++ .NET 2002, el compilador ha cambiado la forma en la búsqueda de símbolos. En algunos casos, habría buscado símbolos automáticamente en un espacio de nombres especificado. Ahora, usa búsqueda dependiente de argumentos.  
   
  El ejemplo siguiente genera C3767:  
   
@@ -123,7 +108,7 @@ int main() {
 }  
 ```  
   
- Para que el código sea válido en Visual C++ .NET 2003 y Visual C++ .NET 2002, declare la función friend en el ámbito de clase y la definición en el ámbito de espacio de nombres:  
+ Para que el código sea válido en Visual C++ .NET 2003 y Visual C++ .NET 2002, declare la función friend en el ámbito de clase y definirla en el ámbito de espacio de nombres:  
   
 ```  
 // C3767f.cpp  

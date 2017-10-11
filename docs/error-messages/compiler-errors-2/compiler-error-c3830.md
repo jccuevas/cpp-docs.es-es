@@ -1,5 +1,5 @@
 ---
-title: C3830 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3830 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 970a3f032ac367ec24cb5b036e3f3723732da754
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f2f821b1ba6dc523ba3a664fb9c8b658dee1c78f
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3830"></a>Error del compilador C3830
-'tipo1': no puede heredar de 'tipo2', valor de tipos sólo pueden heredar de clases de interfaz  
+'type1': no puede heredar de 'tipo2', valor de tipos sólo pueden heredar de clases de interfaz  
   
  Un tipo de valor no puede heredar una clase base.  Para obtener más información, consulte [clases y Structs](../../windows/classes-and-structs-cpp-component-extensions.md).  
   

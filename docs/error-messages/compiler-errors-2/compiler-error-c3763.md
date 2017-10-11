@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3763 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3763"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3763"
+title: Error del compilador C3763 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3763
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C3763
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 51810524b36a714404ce45a51186bc635dacebd3
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'tipo': 'retval' y 'out' sólo pueden aparecer en un tipo de puntero de datos  
+---
+# <a name="compiler-error-c3763"></a>Error del compilador C3763
+'type': 'retval' y 'out' solo puede aparecer en un tipo de puntero de datos  
   
- Los atributos [out](../Topic/out%20\(C++\).md) o [retval](../../windows/retval.md) sólo pueden aparecer en parámetros de tipo puntero.  Quite el atributo o convierta el parámetro en tipo puntero.  
+ El [out](../../windows/out-cpp.md) o [retval](../../windows/retval.md) atributos solo pueden aparecer en parámetros de tipo puntero. Quite el atributo o haga que el parámetro de tipo puntero.  
   
- El código siguiente genera el error C3763:  
+ El ejemplo siguiente genera C3763:  
   
 ```  
 // C3763.cpp  

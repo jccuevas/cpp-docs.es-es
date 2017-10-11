@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C3646 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3646"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3646"
+title: Error del compilador C3646 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3646
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3646
 ms.assetid: 4391ead2-9637-4ca3-aeda-5a991b18d66d
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Error del compilador C3646
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0bc9b2601a57e2be98c3a356cbd2ede69dc7be79
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'especificador' : especificador de reemplazo desconocido  
+---
+# <a name="compiler-error-c3646"></a>Error del compilador C3646
+'especificador': especificador de reemplazo desconocido  
   
- El compilador ha encontrado un símbolo \(token\) en la posición en la que esperaba encontrar un especificador de reemplazo, pero el compilador no ha reconocido el símbolo \(token\).  
+ El compilador encontró un token en la posición donde esperaba encontrar un especificador de reemplazo, pero no se reconoció el token por el compilador.  
   
- Para obtener más información, vea [Especificadores de invalidación](../../windows/override-specifiers-cpp-component-extensions.md).  
+ Para obtener más información, consulte [especificadores de reemplazo](../../windows/override-specifiers-cpp-component-extensions.md).  
   
- El código siguiente genera el error C3646:  
+ El ejemplo siguiente genera C3646:  
   
 ```  
 // C3646.cpp  
