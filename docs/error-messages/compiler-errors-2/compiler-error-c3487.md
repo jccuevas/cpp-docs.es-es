@@ -1,38 +1,41 @@
 ---
-title: "Error del compilador C3487 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3487"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3487"
+title: Error del compilador C3487 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3487
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3487
 ms.assetid: 39bda474-4418-4a79-98bf-2b22fa92eaaa
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C3487
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eb659f2d7971d1dd2ff27c438839336d4744767e
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3487"></a>Error del compilador C3487
 'return type': todas las expresiones return deben deducirse como el mismo tipo: antes era 'return type'  
   
- Una expresión lambda debe especificar su tipo de valor devuelto a menos que contenga una sola instrucción return.  Si una expresión lambda contiene varias instrucciones return, todas deben tener el mismo tipo.  
+ Una expresión lambda debe especificar su tipo de valor devuelto a menos que contenga una sola instrucción return. Si una expresión lambda contiene varias instrucciones return, todas deben tener el mismo tipo.  
   
-### Para corregir este error  
+### <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Especifique un tipo de valor devuelto final para la expresión lambda.  Compruebe que todos los valores devueltos de la expresión lambda son del mismo tipo o pueden convertirse implícitamente al tipo de valor devuelto.  
+-   Especifique un tipo de valor devuelto final para la expresión lambda. Compruebe que todos los valores devueltos de la expresión lambda son del mismo tipo o pueden convertirse implícitamente al tipo de valor devuelto.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se genera el error C3487 porque los tipos de valor devueltos de la expresión lambda no coinciden:  
   
 ```  
@@ -50,5 +53,5 @@ int* test(int* pi) {
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Expresiones lambda](../../cpp/lambda-expressions-in-cpp.md)

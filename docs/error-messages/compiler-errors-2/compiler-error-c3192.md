@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3192 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3192"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3192"
+title: C3192 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3192
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3192
 ms.assetid: 8b0083d4-706f-46f6-858a-e1d9af464cf8
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C3192
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f4b1dabfa305bc7d25daab60270ef07579bcf17
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-error de sintaxis : '^' no es un operador de prefijo \(¿pretendía utilizar '\*'?\)  
+---
+# <a name="compiler-error-c3192"></a>C3192 de Error del compilador
+error de sintaxis: ' ^' no es un operador de prefijo (¿quiso decir ' *'?)  
   
- Un controlador no se puede utilizar como un operador de desreferenciación.  
+ No se puede usar un identificador como un operador de desreferenciación.  
   
- El código siguiente genera el error C3192:  
+ El ejemplo siguiente genera C3192:  
   
 ```  
 // C3192.cpp  

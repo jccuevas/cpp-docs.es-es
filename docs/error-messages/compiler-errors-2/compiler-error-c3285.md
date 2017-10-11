@@ -19,26 +19,11 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 5fde3d0a9ec1126ec7c078ccd76c309a2184ecf9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a517ec1b163f3092b8dd161bee6cb348ab0129c1
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3285"></a>Error del compilador C3285
@@ -46,7 +31,7 @@ la instrucción for each no puede utilizarse en variables de tipo 'type'
   
  La instrucción `for each` repite un grupo de instrucciones incrustadas por cada elemento de una matriz o una colección de objetos.  
   
- Vea [para cada uno, en](../../dotnet/for-each-in.md) para obtener más información.  
+ Vea [for each, in](../../dotnet/for-each-in.md) para obtener más información.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera la advertencia C3285.  

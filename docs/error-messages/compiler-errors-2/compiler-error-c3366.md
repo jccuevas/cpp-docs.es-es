@@ -1,5 +1,5 @@
 ---
-title: Compilador Error C3366 | Documentos de Microsoft
+title: Error del compilador C3366 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 930114bfb06019f13b4f44cc51b72922237a62f6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b862e606b86eca0a7eb7f2ad1e91f2776c8c0b23
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3366"></a>Error del compilador C3366
-'variable': los miembros de datos estáticos de administran o WinRTtypes deben estar definidos dentro de la definición de clase  
+'variable': los miembros de datos estáticos de administrada o WinRTtypes deben estar definidos dentro de la definición de clase  
   
  Ha intentado hacer referencia a un miembro estático de una clase o interfaz .NET o WinRT fuera de la definición de esa clase o interfaz.  
   

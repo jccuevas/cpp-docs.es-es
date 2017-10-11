@@ -1,37 +1,40 @@
 ---
-title: "Error del compilador C3225 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3225"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3225"
+title: Error del compilador C3225 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3225
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Error del compilador C3225
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4cf62ba7b0c3b95f22c27172546ccdd253ed9279
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-el argumento de tipo genérico para 'arg' no puede ser 'tipo', debe ser un tipo de valor o un tipo de identificador  
+---
+# <a name="compiler-error-c3225"></a>Error del compilador C3225
+argumento de tipo genérico para 'arg' no puede ser 'tipo', debe ser un tipo de valor o tipo de identificador  
   
- El argumento de tipo genérico no es del tipo correcto.  
+ El argumento de tipo genérico no era del tipo correcto.  
   
- Para obtener más información, vea [Genéricos](../../windows/generics-cpp-component-extensions.md).  
+ Para obtener más información, consulte [Genéricos](../../windows/generics-cpp-component-extensions.md).  
   
-## Ejemplo  
- No puede crear instancias de un tipo genérico con un tipo nativo.  El ejemplo siguiente genera el error C3225.  
+## <a name="example"></a>Ejemplo  
+ No se puede crear una instancia de un tipo genérico con un tipo nativo. El ejemplo siguiente genera C3225.  
   
 ```  
 // C3225.cpp  
@@ -49,8 +52,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- El siguiente ejemplo crea un componente utilizando C\#.  Observe que la restricción especifica que sólo se pueden crear instancias del tipo genérico con un tipo de valor.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente crea un componente utilizando C#. Tenga en cuenta que la restricción especifica que sólo se puede crear instancias de tipo genérico con un tipo de valor.  
   
 ```  
 // C3225_b.cs  
@@ -59,8 +62,8 @@ int main() {
 public class MyList<T> where T: struct {}  
 ```  
   
-## Ejemplo  
- Este ejemplo utiliza el componente creado en C\# e infringe la restricción de que sólo se pueden crear instancias de MyList con un tipo de valor distinto de <xref:System.Nullable>.  El ejemplo siguiente genera el error C3225.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo utiliza el C#-componente creado e infringe la restricción de que sólo puede ser MyList crea una instancia con un tipo de valor distinto de <xref:System.Nullable>. El ejemplo siguiente genera C3225.  
   
 ```  
 // C3225_c.cpp  

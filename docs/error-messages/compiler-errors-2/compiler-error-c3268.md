@@ -1,5 +1,5 @@
 ---
-title: C3268 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3268 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 13f7af86f70cb1d8539db593cbf0170a71f66498
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bab3adb4d6fd916eedaec36d455252b6a5ade454
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3268"></a>Error del compilador C3268
 'function': una función genérica o una función miembro de una clase genérica no puede tener una lista de parámetros variable  
   
- El **/CLR: pure** y **/CLR: safe** opciones del compilador están desusadas en Visual Studio 2015.  
+ Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso en Visual Studio 2015.  
   
- Consulte [genéricos](../../windows/generics-cpp-component-extensions.md) para obtener más información.  
+ Vea [genéricos](../../windows/generics-cpp-component-extensions.md) para obtener más información.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera la advertencia C3268.  

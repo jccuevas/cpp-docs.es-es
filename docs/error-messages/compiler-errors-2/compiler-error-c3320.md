@@ -1,5 +1,5 @@
 ---
-title: C3320 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3320 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 4b4acfe97e38cf13e336b7c58ffc868c69cf7a09
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fbc375682bb42070d49dd08b711926462c17f32b
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3320"></a>Error del compilador C3320
 'tipo': el tipo no puede tener el mismo nombre que la propiedad de módulo 'nombre'  
   
-Un definido por el usuario tipo exportado (UDT), que podría ser una estructura, clase, enumeración o unión, no puede tener el mismo nombre como el parámetro pasado a la [módulo](../../windows/module-cpp.md) la propiedad de nombre del atributo.  
+Un exportados definidos por el usuario tipo (UDT), que podría ser una estructura, clase, enumeración o unión, no puede tener el mismo nombre que el parámetro pasado a la [módulo](../../windows/module-cpp.md) la propiedad de nombre del atributo.  
   
 ## <a name="example"></a>Ejemplo  
 El ejemplo siguiente genera la advertencia C3320:  

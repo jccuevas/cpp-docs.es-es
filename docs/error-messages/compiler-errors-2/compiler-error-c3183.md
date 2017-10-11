@@ -1,5 +1,5 @@
 ---
-title: C3183 de Error del compilador | Documentos de Microsoft
+title: Error de compilador el error C3183 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,28 +19,14 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 576cdae96028e9a9bc25d02a65cb56db0d0acea2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 80f8c8c6aa9c96338e37d9d709dd61337ccfae73
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="compiler-error-c3183"></a>C3183 de Error del compilador
+# <a name="compiler-error-c3183"></a>Error C3183 de Error de compilador
 no se puede definir class, struct o union sin nombre dentro del tipo administrado o WinRT 'type'  
   
 Un tipo que se incrusta en un tipo administrado o WinRT debe tener un nombre.  

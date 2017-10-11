@@ -1,5 +1,5 @@
 ---
-title: C3418 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3418 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 7af83ef00419f4eacadd8801259204bd33ede5fc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0ae644c17a39e574984dc8bb0689955fd1bef2be
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3418"></a>Error del compilador C3418
 el especificador de acceso 'especificador' no se admite  
   
-Un especificador de acceso CLR se especificó incorrectamente.  Para obtener más información, consulte la visibilidad de tipos y la visibilidad del miembro en [Cómo: definir y utilizar clases y Structs (C++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).  
+Un especificador de acceso CLR se especificó incorrectamente.  Para obtener más información, consulte visibilidad de tipos y la visibilidad de miembros en [Cómo: definir y utilizar clases y Structs (C++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).  
   
 ## <a name="example"></a>Ejemplo  
 El ejemplo siguiente genera la advertencia C3418.  

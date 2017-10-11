@@ -19,26 +19,11 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 83a215b1c4883ba7ed4b285af8c4efafe2cfaa05
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 42923edc2d238e7f0b64858561f7d23d211abd80
 ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3490"></a>Error del compilador C3490
@@ -51,7 +36,7 @@ ms.lasthandoff: 04/04/2017
 -   Elimine el modificador `const` de la declaración del método.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera C3490 porque modifica la variable miembro `_i` en un `const` método:  
+ El ejemplo siguiente genera C3490 porque modifica la variable miembro `_i` en un método `const` :  
   
 ```  
 // C3490a.cpp  

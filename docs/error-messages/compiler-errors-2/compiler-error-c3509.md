@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3509 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3509"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3509"
+title: Error del compilador C3509 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3509
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3509
 ms.assetid: cc2db39a-2f98-4e40-b803-496e585494e6
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Error del compilador C3509
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bb8fcb4c51ce0a7e69154e77ac5990898275ba16
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'tipo': tipo de valor devuelto de automatización no válido; cuando se marca un parámetro como 'retval', el tipo de valor devuelto debe ser 'void', 'HRESULT' o 'SCODE'  
+---
+# <a name="compiler-error-c3509"></a>Error del compilador C3509
+'type': tipo de valor devuelto de automatización no válido; Si un parámetro es marcada 'retval', el tipo de valor devuelto deben ser 'void', 'HRESULT' o 'SCODE'  
   
- Un método de una interfaz COM debe devolver void o HRESULT.  
+ Un método en una interfaz COM debe devolver void o HRESULT.  
   
- El código siguiente genera el error C3509:  
+ El ejemplo siguiente genera C3509:  
   
 ```  
 // C3509.cpp  

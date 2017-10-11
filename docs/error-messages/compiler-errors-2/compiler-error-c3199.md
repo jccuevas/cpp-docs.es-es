@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3199 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3199"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3199"
+title: C3199 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3199
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3199
 ms.assetid: e7a478d3-115a-40a3-991b-c7454fd2e28e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C3199
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 37443adbfdf65caba83656ca70ff799834fb4eac
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-uso no válido de pragmas de punto flotante: no se admiten excepciones en el modo no preciso  
+---
+# <a name="compiler-error-c3199"></a>C3199 de Error del compilador
+uso no válido de pragmas de punto flotante: excepciones no se admiten en el modo no es preciso  
   
- La pragma [float\_control](../../preprocessor/float-control.md) se utilizó para especificar el modelo de excepción en punto flotante con una configuración de [\/fp](../../build/reference/fp-specify-floating-point-behavior.md) distinta de **\/fp:precise**.  
+ El [float_control](../../preprocessor/float-control.md) pragma se utiliza para especificar el modelo de excepciones de punto flotante en una [/FP](../../build/reference/fp-specify-floating-point-behavior.md) valor distinto de **/fp: precisa**.  
   
- El código siguiente genera el error C3199:  
+ El ejemplo siguiente genera C3199:  
   
 ```  
 // C3199.cpp  

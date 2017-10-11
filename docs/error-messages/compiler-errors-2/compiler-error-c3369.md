@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: a8e195a4dba4964d0ed487ad4ebd189190467155
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 62cd3de9bca4e695d051e150c7dfa45dca28936a
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3369"></a>Error del compilador C3369
 'module name': idl_module ya se definió  
   
- El [idl_module](../../windows/idl-module.md) uso donde se define la DLL sólo puede aparecer una vez en un programa.  
+ El uso de [idl_module](../../windows/idl-module.md) donde se define la DLL solo puede aparecer una vez en un programa.  
   
  El ejemplo siguiente genera la advertencia C3369:  
   

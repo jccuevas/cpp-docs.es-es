@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3507 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3507"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3507"
+title: Error del compilador C3507 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3507
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3507
 ms.assetid: 75f89767-f6f9-40f6-9820-81a49e09abdf
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C3507
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 697732f9e9c37735db591fc5a90d2380806fb7eb
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-Un id. de programa no puede tener más de 39 caracteres 'id.'; tampoco puede contener ningún tipo de puntuación a excepción de '.' ni comenzar por un dígito  
+---
+# <a name="compiler-error-c3507"></a>Error del compilador C3507
+un ProgID puede tener no más de 39 caracteres 'id'; ni contener ningún signo de puntuación aparte de '.'; ni empezar por un dígito  
   
- El atributo [progid](../Topic/progid.md) no tiene restricciones sobre los valores que puede tomar.  
+ El [progid](../../windows/progid.md) atributo tiene restricciones en los valores que pueden llevar a cabo.  
   
- El código siguiente genera el error C3507:  
+ El ejemplo siguiente genera C3507:  
   
 ```  
 // C3507.cpp  

@@ -1,32 +1,35 @@
 ---
-title: "Compiler Error C3387 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3387"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3387"
+title: Error del compilador C3387 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3387
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3387
 ms.assetid: c54d9925-ed14-4976-b8db-e8d4dc84e536
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Compiler Error C3387
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 79b38cd1793509c92ec2d2941fbb3eb2e7121ee7
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'member' : \_\_declspec\(dllexport\)\/\_\_declspec\(dllimport\) no se puede aplicar a un miembro de un tipo WinRT o administrado  
+---
+# <a name="compiler-error-c3387"></a>Error del compilador C3387
+'member': __declspec (dllexport) /\__declspec (dllimport) no se puede aplicar a un miembro de una clase administrada o tipo WinRT  
   
- Los modificadores `dllimport` y [dllexport](../../cpp/dllexport-dllimport.md) `__declspec` no son válidos en miembros de un tipo de Windows en tiempo de ejecución o administrado.  
+ El `dllimport` y [dllexport](../../cpp/dllexport-dllimport.md) `__declspec` modificadores no son válidos en miembros de una clase administrada o de tipo en tiempo de ejecución de Windows.  
   
  El ejemplo siguiente genera el error C3387 y muestra cómo corregirlo:  
   
