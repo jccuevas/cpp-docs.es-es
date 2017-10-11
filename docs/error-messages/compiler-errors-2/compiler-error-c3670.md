@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3670 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3670"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3670"
+title: Error del compilador C3670 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3670
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3670
 ms.assetid: d0fa9c6e-8f90-48c7-9066-31b4fa5942eb
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Error del compilador C3670
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 773ee85df3e19245b665521be8d65055ffe3bf17
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'reemplazo': no se puede reemplazar el método de clase base inaccesible 'método'  
+---
+# <a name="compiler-error-c3670"></a>Error del compilador C3670
+'override': no se puede invalidar el método de clase base inaccesible 'método'  
   
- Sólo se puede reemplazar en una función cuyo nivel de acceso está disponible en un tipo derivado.  Para obtener más información, vea [Reemplazos explícitos](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Una invalidación sólo puede tener lugar en una función cuyo nivel de acceso hace que esté disponible en un tipo derivado. Para obtener más información, consulte [reemplazos explícitos](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
- El código siguiente genera el error C3670:  
+ El ejemplo siguiente genera C3670:  
   
 ```  
 // C3670.cpp  

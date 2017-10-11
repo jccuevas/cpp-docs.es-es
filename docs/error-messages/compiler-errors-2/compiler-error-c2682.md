@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C2682 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2682"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2682"
+title: C2682 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2682
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2682
 ms.assetid: 30c6a7c4-f5f7-4fe8-81a8-c48938521ab4
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Error del compilador C2682
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3df494f5d78a862e260fa4edfe0a2740e4fc8cdd
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-no se puede utilizar operador\_de\_conversión para convertir de 'tipo1' en 'tipo2'  
+---
+# <a name="compiler-error-c2682"></a>C2682 de Error del compilador
+no se puede utilizar operador_de_conversión para convertir de 'tipo1' a 'tipo2'  
   
- Un operador de conversión intentó realizar una conversión entre tipos incompatibles.  Por ejemplo, no se puede usar el operador [dynamic\_cast](../../cpp/dynamic-cast-operator.md) para convertir un puntero a una referencia.  El operador `dynamic_cast` no se puede utilizar para convertir calificadores.  Todos los calificadores de los tipos deben coincidir.  
+ Un operador de conversión intentó convertir entre tipos incompatibles. Por ejemplo, no puede usar el [dynamic_cast](../../cpp/dynamic-cast-operator.md) operador para convertir un puntero a una referencia. El `dynamic_cast` operador no se puede usar para desechar los calificadores. Deben coincidir con todos los calificadores de los tipos.  
   
- Se puede usar el operador `const_cast` para quitar atributos como `const`, `volatile` o `__unaligned`.  
+ Puede usar el `const_cast` operador para quitar atributos como `const`, `volatile`, o `__unaligned`.  
   
- El código siguiente genera el error C2682:  
+ El ejemplo siguiente genera C2682:  
   
 ```  
 // C2682.cpp  
@@ -42,7 +45,7 @@ void g(A* pa) {
 }  
 ```  
   
- El código siguiente genera el error C2682:  
+ El ejemplo siguiente genera C2682:  
   
 ```  
 // C2682b.cpp  

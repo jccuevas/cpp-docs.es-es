@@ -1,56 +1,59 @@
 ---
-title: "_initterm, _initterm_e | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_initterm_e"
-  - "_initterm"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_initterm_e"
-  - "initterm"
-  - "_initterm"
-  - "initterm_e"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "initterm (función)"
-  - "initterm_e (función)"
-  - "_initterm (función)"
-  - "_initterm_e (función)"
+title: _initterm, _initterm_e | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _initterm_e
+- _initterm
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _initterm_e
+- initterm
+- _initterm
+- initterm_e
+dev_langs:
+- C++
+helpviewer_keywords:
+- initterm function
+- initterm_e function
+- _initterm function
+- _initterm_e function
 ms.assetid: 85131efe-c747-429a-8897-bcdedb000172
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# _initterm, _initterm_e
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 377f8e19268a643b0237da66ba14a82fc7b6685b
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-Métodos internos que explican una tabla de punteros a función y se inicializan ellos.  
+---
+# <a name="initterm-initterme"></a>_initterm, _initterm_e
+Métodos internos que recorren una tabla de punteros de función y los inicializan.  
   
- El primer puntero es la ubicación inicial de la tabla y el segundo puntero es la ubicación de cierre.  
+ El primer puntero es la ubicación inicial de la tabla y el segundo puntero, la ubicación final.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void __cdecl _initterm(  
@@ -64,13 +67,13 @@ int __cdecl _initterm_e(
 );  
 ```  
   
-## Valor devuelto  
- Un código de error distinto de cero si una inicialización produce un error y produce un error; 0 si no se produce ningún error.  
+## <a name="return-value"></a>Valor devuelto  
+ Un código de error distinto de cero si se produce un error de inicialización y genera un error; 0 si no se produce ningún error.  
   
-## Comentarios  
- Estos métodos se llaman únicamente internamente durante la inicialización del programa de c\+\+.  No llame a estos métodos en un programa.  
+## <a name="remarks"></a>Comentarios  
+ Estos métodos solo se llaman internamente durante la inicialización de un programa de C++. No llame a estos métodos en un programa.  
   
- Cuando el recorrido de estos métodos una tabla de entradas de la función, ellos omitir las entradas de `NULL` y continúa.  
+ Cuando estos métodos recorren una tabla de entradas de función, omiten las entradas `NULL` y continúan.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)

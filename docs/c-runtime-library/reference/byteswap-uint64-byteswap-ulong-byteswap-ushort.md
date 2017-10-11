@@ -1,62 +1,65 @@
 ---
-title: "_byteswap_uint64, _byteswap_ulong, _byteswap_ushort | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_byteswap_uint64"
-  - "_byteswap_ulong"
-  - "_byteswap_ushort"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "byteswap_ulong"
-  - "_byteswap_ulong"
-  - "byteswap_uint64"
-  - "_byteswap_ushort"
-  - "_byteswap_uint64"
-  - "byteswap_ushort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_byteswap_uint64 (función)"
-  - "_byteswap_ulong (función)"
-  - "_byteswap_ushort (función)"
-  - "intercambio de bytes"
-  - "bytes, intercambio"
-  - "byteswap_uint64 (función)"
-  - "byteswap_ulong (función)"
-  - "byteswap_ushort (función)"
-  - "intercambio de bytes"
+title: _byteswap_uint64, _byteswap_ulong, _byteswap_ushort | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _byteswap_uint64
+- _byteswap_ulong
+- _byteswap_ushort
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- byteswap_ulong
+- _byteswap_ulong
+- byteswap_uint64
+- _byteswap_ushort
+- _byteswap_uint64
+- byteswap_ushort
+dev_langs:
+- C++
+helpviewer_keywords:
+- _byteswap_uint64 function
+- byteswap_uint64 function
+- swapping bytes
+- byte swapping
+- byteswap_ushort function
+- _byteswap_ushort function
+- bytes, swapping
+- byteswap_ulong function
+- _byteswap_ulong function
 ms.assetid: 83bda211-f02f-4cf0-8a78-d6de1f175970
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _byteswap_uint64, _byteswap_ulong, _byteswap_ushort
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 8d2a9830ca17061ae8e35520075b864cc4eba07e
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="byteswapuint64-byteswapulong-byteswapushort"></a>_byteswap_uint64, _byteswap_ulong, _byteswap_ushort
 Invierte el orden de bytes en un entero.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 unsigned short _byteswap_ushort (  
@@ -70,21 +73,21 @@ unsigned __int64 _byteswap_uint64 (
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `val`  
- El entero para invertir el orden de bytes.  
+ Valor entero para invertir el orden de bytes.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`_byteswap_ushort`|\<stdlib.h\>|  
-|`_byteswap_ulong`|\<stdlib.h\>|  
-|`_byteswap_uint64`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_byteswap_ushort`|\<stdlib.h>|  
+|`_byteswap_ulong`|\<stdlib.h>|  
+|`_byteswap_uint64`|\<stdlib.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_byteswap.c  
@@ -100,7 +103,10 @@ int main()
 }  
 ```  
   
-  **byteswap de 102030405060708 \= 807060504030201**  
-**byteswap de 1020304 \= 4030201**   
-## Vea también  
- [Rutinas de tiempo de ejecución por categoría](../../c-runtime-library/run-time-routines-by-category.md)
+```Output  
+byteswap of 102030405060708 = 807060504030201  
+byteswap of 1020304 = 4030201  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Rutinas en tiempo de ejecución por categoría](../../c-runtime-library/run-time-routines-by-category.md)

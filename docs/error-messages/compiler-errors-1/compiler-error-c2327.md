@@ -1,5 +1,5 @@
 ---
-title: Compilador Error C2327 | Documentos de Microsoft
+title: Error del compilador C2327 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 62834115e3ad9c9733326a1bc94e5fa51209f485
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2eefd1e3fb4f23087b0f08bf6a9ff55593d9a961
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2327"></a>Error del compilador C2327
 'símbolo': no es un nombre de tipo, estático o enumerador  
   
- Código de una clase anidada intenta obtener acceso a un miembro de la clase envolvente que no es un nombre de tipo, un miembro estático o enumerador.  
+ Código dentro de una clase anidada intenta tener acceso a un miembro de la clase envolvente que no es un nombre de tipo, un miembro estático o enumerador.  
   
- Al compilar con **/CLR**, una causa común de C2327 es una propiedad con el mismo nombre que el tipo de propiedad.  
+ Cuando se compila con **/CLR**, una causa común de C2327 es una propiedad con el mismo nombre que el tipo de propiedad.  
   
  El ejemplo siguiente genera C2327:  
   
@@ -66,7 +52,7 @@ public:
 };  
 ```  
   
- C2327 también puede producirse si el nombre de un miembro oculta el nombre de un tipo:  
+ C2327 también puede producirse si el nombre de un tipo está oculto por el nombre del miembro:  
   
 ```  
 // C2327b.cpp  
@@ -80,7 +66,7 @@ class S {
 };  
 ```  
   
- C2327 también puede producirse en esta situación, donde debe especificar el tipo de datos del parámetro:  
+ C2327 también puede producirse en esta situación, donde debe especificar completamente que el tipo de datos del parámetro:  
   
 ```  
 // C2327c.cpp  
@@ -129,7 +115,7 @@ namespace NA {
 }  
 ```  
   
-El siguiente ejemplo muestra C2327 cuando una propiedad tiene el mismo nombre que el tipo de propiedad:  
+En el siguiente ejemplo muestra C2327 cuando una propiedad tiene el mismo nombre que el tipo de propiedad:  
   
 ```  
 // C2327f.cpp  

@@ -1,5 +1,5 @@
 ---
-title: C3633 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3633 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 76b98ae31e8d8416360415fd5989975533d6fb66
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 982075cdaa72ddd5b1a4fdafdeaaf433b27bcf77
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3633"></a>Error del compilador C3633
 no se puede definir a 'miembro' como miembro de 'tipo' administrado  
   
-Miembros de datos de clase de referencia CLR no pueden ser de un tipo no POD de C++.  Sólo puede crear una instancia de un tipo nativo POD en un tipo CLR.  Por ejemplo, un tipo POD no puede contener un constructor de copias o un operador de asignación.  
+Los miembros de datos de clase de referencia CLR no pueden tener un tipo de C++ que no sean POD.  Sólo puede crear instancias de un tipo nativo POD en un tipo CLR.  Por ejemplo, un tipo POD no puede contener un constructor de copias o un operador de asignación.  
   
 ## <a name="example"></a>Ejemplo  
 El ejemplo siguiente genera C3633.  

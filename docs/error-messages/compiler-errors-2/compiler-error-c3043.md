@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: b3ba534b9b605b34290180c9f5d495c94e9d2b88
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2ec3f70fa176b8562067985b5b2d48ee2aa39b8e
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3043"></a>Error del compilador C3043
 la directiva 'critical' de OpenMP no se puede anidar en una directiva 'critical' con el mismo nombre  
   
- A [crítico](../../parallel/openmp/reference/critical.md) directiva no se pueden anidar en un `critical` directiva que usa el mismo nombre.  
+ Una directiva [critical](../../parallel/openmp/reference/critical.md) no se puede anidar en una directiva `critical` con el mismo nombre.  
   
  El ejemplo siguiente genera la advertencia C3043:  
   

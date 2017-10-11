@@ -99,30 +99,15 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ca0ae546af28c342db2e452bec432ced0437738a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 43efb76381db85f4f1d601cb6d83dd82074e960a
 ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW (Macros)
-Realiza el seguimiento del progreso de la aplicación generando un informe de depuración (únicamente una versión de depuración). Tenga en cuenta que *n* especifica el número de argumentos de `args`, y puede ser 0, 1, 2, 3, 4 o 5.  
+Realiza el seguimiento del progreso de la aplicación generando un informe de depuración (únicamente una versión de depuración). Tenga en cuenta que  *n*  especifica el número de argumentos en `args` y puede ser 0, 1, 2, 3, 4 o 5.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -169,7 +154,7 @@ _RPTFWn(
   
  Las macros `_RPTW` y `_RPTFW` son versiones de caracteres anchos de estas macros. Son como `wprintf` y toman las cadenas de caracteres anchos como argumentos.  
   
- Las macros `_RPT` llaman a la función [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) para generar un informe de depuración con un mensaje de usuario. Las macros `_RPTW` llaman a la función `_CrtDbgReportW` para generar el mismo informe con caracteres anchos. Las macros `_RPTF` y `_RPTFW` crean un informe de depuración con el archivo de origen y el número de línea donde se llamó a la macro del informe, además del mensaje de usuario. El mensaje de usuario se crea sustituyendo los argumentos `arg`[*n*] de la cadena `format` empleando las mismas reglas que se definen en la función [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
+ Las macros `_RPT` llaman a la función [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) para generar un informe de depuración con un mensaje de usuario. Las macros `_RPTW` llaman a la función `_CrtDbgReportW` para generar el mismo informe con caracteres anchos. Las macros `_RPTF` y `_RPTFW` crean un informe de depuración con el archivo de origen y el número de línea donde se llamó a la macro del informe, además del mensaje de usuario. El mensaje de usuario se crea al sustituir el `arg`[*n*] argumentos a la `format` de cadena, utilizando las mismas reglas definidas por el [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) función.  
   
  `_CrtDbgReport` o `_CrtDbgReportW` genera el informe de depuración y determina sus destinos en función de los modos de informe actuales y del archivo definido para `reportType`. Las funciones [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) y [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) se usan para definir los destinos de cada tipo de informe.  
   

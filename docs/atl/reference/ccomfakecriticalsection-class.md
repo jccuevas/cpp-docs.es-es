@@ -24,25 +24,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 2c1269288e03a8ac9f359dad9acf1a81ddbc84c2
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 6232a3e8b6c392361a1e57681e9ba4dff66d6aa4
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomfakecriticalsection-class"></a>Clase CComFakeCriticalSection
@@ -66,9 +52,9 @@ class CComFakeCriticalSection
 |[CComFakeCriticalSection::Unlock](#unlock)|No hace nada porque no hay ninguna sección crítica.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComFakeCriticalSection`refleja los métodos de [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Sin embargo, `CComFakeCriticalSection` no proporciona una sección crítica; por lo tanto, sus métodos no hacen nada.  
+ `CComFakeCriticalSection`refleja los métodos que se encuentra en [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Sin embargo, `CComFakeCriticalSection` no proporciona una sección crítica; por lo tanto, sus métodos no hacen nada.  
   
- Normalmente, se utiliza `CComFakeCriticalSection` a través de un `typedef` nombre, ya sea `AutoCriticalSection` o `CriticalSection`. Al usar [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) o [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), ambos `typedef` nombres hagan referencia a `CComFakeCriticalSection`. Al usar [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), hacen referencia a [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) y `CComCriticalSection`, respectivamente.  
+ Normalmente, se utiliza `CComFakeCriticalSection` a través de un `typedef` nombre, ya sea `AutoCriticalSection` o `CriticalSection`. Cuando se usa [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) o [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), ambos `typedef` nombres hagan referencia a `CComFakeCriticalSection`. Cuando se usa [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), hacen referencia a [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) y `CComCriticalSection`, respectivamente.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcore.h  
@@ -114,5 +100,5 @@ HRESULT Unlock() throw();
  Devuelve S_OK.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

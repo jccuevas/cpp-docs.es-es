@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 05edbf62dfe8d5ed916ccc971b8ae9a286e1aeb8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8c1b4ac942c4b17785b57d6206cd2f5a8724bd99
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3056"></a>Error del compilador C3056
 'símbolo': el símbolo no está en el mismo ámbito de la directiva 'threadprivate'  
   
- Un símbolo usado en un [threadprivate](../../parallel/openmp/reference/threadprivate.md) cláusula debe estar en el mismo ámbito que la `threadprivate` cláusula.  
+ Un símbolo usado en una cláusula [threadprivate](../../parallel/openmp/reference/threadprivate.md) debe estar en el mismo ámbito que la cláusula `threadprivate` .  
   
  El ejemplo siguiente genera la advertencia C3056:  
   

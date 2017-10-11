@@ -19,34 +19,19 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: aeb26c5a3b1add0f3b8ec3eb9ba9ae2c20fb094e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9a03e0dbb61dc6f57b1a6fe3cd345d46f78b05a9
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3415"></a>Error del compilador C3415
 Se encontraron varias secciones 'nombre_de_sección' con atributos diferentes ('valor')  
   
- Se especificaron valores en conflicto en [sección](../../preprocessor/section.md) pragma (directivas).  
+ Se especificaron valores en conflicto en pragmas [section](../../preprocessor/section.md) .  
   
- `value`es el valor actual de la sección, como se especifica en ntimage.h. Por ejemplo:  
+ `value` es el valor actual de la sección, como se especifica en ntimage.h. Por ejemplo:  
   
 ```  
 // Section contains extended relocations.  

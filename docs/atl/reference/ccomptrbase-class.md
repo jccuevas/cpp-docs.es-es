@@ -30,25 +30,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 65541d9e6f15bcc56811fa6a5d9d168737131108
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1e6bf79ce5de5d19468b3cbb230e16882483dc30
 ms.contentlocale: es-es
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomptrbase-class"></a>Clase CComPtrBase
@@ -93,11 +79,11 @@ class CComPtrBase
 |----------|-----------------|  
 |[CComPtrBase::operator T *](#operator_t_star)|El operador de conversión.|  
 |[¡CComPtrBase::operator!](#operator_not)|El operador NOT.|  
-|[CComPtrBase::operator siguiente](#operator_amp)|El siguiente operador.|  
+|[CComPtrBase::operator &](#operator_amp)|La & (operador).|  
 |[CComPtrBase::operator *](#operator_star)|El * operador.|  
-|[CComPtrBase::operator](#ccomptrbase__operator lt)|La menor-que el operador.|  
+|[CComPtrBase::operator <](#ccomptrbase__operator lt)|La menor-que el operador.|  
 |[CComPtrBase::operator ==](#operator_eq_eq)|El operador de igualdad.|  
-|[CComPtrBase::operator->](#operator_ptr)|El operador de puntero a miembros.|  
+|[CComPtrBase::operator ->](#operator_ptr)|El operador de puntero a miembros.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
@@ -238,7 +224,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
   
 ### <a name="parameters"></a>Parámetros  
  `pOther`  
- El **IUnknown \*** para comparar.  
+ El **IUnknown \***  para comparar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve true si los objetos son idénticos, y false en caso contrario.  
@@ -254,7 +240,7 @@ bool operator!() const throw();
  Devuelve true si el `CComHeapPtr` puntero es igual a NULL, false en caso contrario.  
   
 ##  <a name="operator_amp"></a>CComPtrBase::operator&amp;  
- El siguiente operador.  
+ La & (operador).  
   
 ```
 T** operator&() throw();

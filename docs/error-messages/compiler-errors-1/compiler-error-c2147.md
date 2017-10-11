@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2147 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2147"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2147"
+title: Error del compilador C2147 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2147
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2147
 ms.assetid: d1adb3bf-7ece-4815-922c-ad7492fb6670
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C2147
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f26a7df3605c01a56e8efcc0f569f9803a0755e4
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-error de sintaxis: 'identificador' es una palabra clave nueva  
+---
+# <a name="compiler-error-c2147"></a>Error del compilador C2147
+error de sintaxis: 'identificador' es una nueva palabra clave  
   
- Se utilizó un identificador que ahora es una palabra clave reservada en el lenguaje.  
+ Se utilizó un identificador que ahora es una palabra reservada en el lenguaje.  
   
- El código siguiente genera el error C2147:  
+ El ejemplo siguiente genera C2147:  
   
 ```  
 // C2147.cpp  

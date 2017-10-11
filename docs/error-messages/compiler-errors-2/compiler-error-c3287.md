@@ -19,26 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 9ebc689db4ede54ec8ae33e2f9bc0a90afe31c69
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b09d2af16ca6d38e476e7298b2b5fb61b2b30129
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3287"></a>Error del compilador C3287
@@ -46,7 +31,7 @@ El tipo 'type' (tipo de valor devuelto de GetEnumerator) debe tener una función
   
  Las clases de colección definidas por el usuario deben contener definiciones de `MoveNext` y `Current`.  
   
- Vea [Cómo: colección de Iterate Over a User-Defined con para cada](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) para obtener más información.  
+ Vea [How to: Iterate Over a User-Defined Collection with for each](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) para obtener más información.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera la advertencia C3287.  

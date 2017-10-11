@@ -22,28 +22,14 @@ caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: ea1d87d3d500fc08f3da16de6820ca003e899419
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 104596d55ee2580cbee3cfc916ad9ef7390ce4c1
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
-# <a name="atlmodule70-structure"></a>_ATL_MODULE70 (estructura)
+# <a name="atlmodule70-structure"></a>Estructura de _ATL_MODULE70
 Contiene los datos utilizados por cada módulo ATL.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -59,19 +45,19 @@ struct _ATL_MODULE70 {
   
 ## <a name="members"></a>Miembros  
  `cbSize`  
- El tamaño de la estructura, utilizada para el control de versiones.  
+ El tamaño de la estructura que se utiliza para controlar las versiones.  
   
  `m_nLockCnt`  
  Recuento de referencias para determinar cuánto tiempo permanecerá activo el módulo.  
   
  **m_pTermFuncs**  
- Funciones de pistas que se han registrado para llamar cuando se cierra ATL.  
+ Funciones de las pistas que se han registrado para llamar cuando se cierra ATL.  
   
  **m_csStaticDataInitAndTypeInfo**  
  Se usa para coordinar el acceso a datos internos en situaciones de multiproceso.  
   
 ## <a name="remarks"></a>Comentarios  
- [_ATL_MODULE](atl-typedefs.md#_atl_module) se define como un typedef de `_ATL_MODULE70`.  
+ [_ATL_MODULE](atl-typedefs.md#_atl_module) se define como una definición de tipo de `_ATL_MODULE70`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  

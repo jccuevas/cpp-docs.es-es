@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2531 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2531"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2531"
+title: Error del compilador C2531 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2531
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2531
 ms.assetid: c49afe15-55f8-4dc8-ac01-bf653622a7db
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2531
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5696fdd631f23f2ac53d5e9677085d8709817e38
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'identificador' : referencia no válida a un campo de bits  
+---
+# <a name="compiler-error-c2531"></a>Error del compilador C2531
+'identificador': referencia a un poco ilegal de campo  
   
- Las referencias a campos de bits no están permitidas.  
+ No se permiten las referencias a campos de bits.  
   
- El código siguiente genera el error C2531:  
+ El ejemplo siguiente genera C2531:  
   
 ```  
 // C2531.cpp  

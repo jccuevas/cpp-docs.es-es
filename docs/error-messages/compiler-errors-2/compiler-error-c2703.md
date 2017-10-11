@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2703 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2703"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2703"
+title: C2703 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2703
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2703
 ms.assetid: 384295c3-643d-47ae-a9a6-865b3036aa84
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C2703
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a11316af3f0b215842a517206fc0bcef8f7dff81
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-instrucción \_\_leave no válida  
+---
+# <a name="compiler-error-c2703"></a>C2703 de Error del compilador
+instrucción __leave no válida  
   
- Una instrucción `__leave` debe estar dentro de un bloque `__try`.  
+ A `__leave` instrucción debe estar dentro de un `__try` bloque.  
   
- El código siguiente genera el error C2703:  
+ El ejemplo siguiente genera C2703:  
   
 ```  
 // C2703.cpp  

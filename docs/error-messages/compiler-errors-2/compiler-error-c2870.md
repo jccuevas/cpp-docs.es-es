@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2870 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2870"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2870"
+title: Error del compilador C2870 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2870
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2870
 ms.assetid: 80523ee9-1fd3-4dc4-8a77-5083deb99066
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C2870
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 75b9189795c7351745e9624cfb9cc11259834b76
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'nombre' : una definición de espacio de nombres debe aparecer en el ámbito de archivo o directamente dentro de otra definición de espacio de nombres  
+---
+# <a name="compiler-error-c2870"></a>Error del compilador C2870
+'name': una definición de espacio de nombres debe aparecer en el ámbito de archivo o directamente dentro de otra definición de espacio de nombres  
   
- Se definió incorrectamente el espacio de nombres `name`.  Los espacios de nombres se deben definir en el ámbito de archivo \(fuera de todos los bloques y clases\) o de forma inmediata dentro de otro espacio de nombres.  
+ Define el espacio de nombres `name` incorrectamente. Espacios de nombres se deben definir en el ámbito de archivo (fuera de todos los bloques y clases) o se encuentran en otro espacio de nombres.  
   
- El código siguiente genera el error C2870:  
+ El ejemplo siguiente genera C2870:  
   
 ```  
 // C2870.cpp  

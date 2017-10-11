@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3854 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3854"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3854"
+title: Error del compilador C3854 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3854
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3854
 ms.assetid: 32a9ead0-c6c7-485a-8802-c7b1fe921d3a
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Error del compilador C3854
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 34285e8de195b2b7c516cf665f3b2cbf37039e6d
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-la expresión situada a la izquierda de '\=' se evalúa como una función.No se puede asignar a una función \(una función no es un valor L\)  
+---
+# <a name="compiler-error-c3854"></a>Error del compilador C3854
+expresión a la izquierda de '=' se evalúa como una función. No se puede asignar a una función (una función no es un valor l)  
   
- No se puede volver a inicializar una referencia.  Desreferenciar una función produce una función, que es un valor r\-value, para la que no se puede realizar una asignación.  Por tanto, no se puede asignar mediante una referencia a una función.  
+ No se puede reinicializar una referencia. Desreferenciar una referencia a una función produce una función, que es un valor r, al que no se puede asignar. Por lo tanto, no se puede asignar mediante una referencia a una función.  
   
- El código siguiente genera el error C3854:  
+ El ejemplo siguiente genera C3854:  
   
 ```  
 // C3854.cpp  

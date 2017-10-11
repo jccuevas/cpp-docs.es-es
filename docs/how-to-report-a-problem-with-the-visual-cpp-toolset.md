@@ -15,14 +15,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
 ms.openlocfilehash: 2ea129ac94cb1ddc7486ba69280dc0390896e088
+ms.contentlocale: es-es
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Cómo notificar un problema con el conjunto de herramientas de Visual C++
@@ -40,7 +37,7 @@ Si tiene problemas con el compilador, el enlazador u otras herramientas de Visua
   
  Sus informes son importantes para nosotros y para otros desarrolladores como usted. Gracias por ayudarnos a mejorar Visual C++.  
   
-##  <a name="a-namepreparea-how-to-prepare-your-report"></a><a name="prepare"></a> Cómo preparar un informe  
+##  <a name="prepare"></a> Cómo preparar un informe  
  Es importante crear un informe de alta calidad, ya que resulta muy difícil reproducir el problema que ha encontrado en la máquina si no aporta información completa. Cuanto mejor sea su informe, más eficazmente podremos recrear y diagnosticar el problema.  
   
  Como mínimo, el informe debe contener lo siguiente:  
@@ -144,7 +141,7 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
     Help menu, or open the Technical Support help file for more information   
 ```  
   
-####  <a name="a-namebackendcrasha-backend-code-generation-crash"></a><a name="backend_crash"></a> Bloqueo de back-end (generación de código)  
+####  <a name="backend_crash"></a> Bloqueo de back-end (generación de código)  
  Los bloqueos de back-end se producen durante la fase de generación de código del compilador. Normalmente, el compilador emitirá el mensaje [Error irrecuperable C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) y podría no hacer referencia al archivo de código fuente y al número de línea asociados al problema. A menudo mencionará un archivo compiler\utc\src\p2\main.c, pero puede pasar por alto este detalle.  
   
  Para este tipo de bloqueo, proporcione una [reproducción de vínculo](#link_repro) si usa la Generación de código en tiempo de vínculo (LTCG) o una [reproducción preprocesada](#preprocessed_repro) en caso de que no la use. LTGC se habilita mediante el argumento de línea de comandos `/GL` en cl.exe.  
@@ -217,7 +214,7 @@ CONTEXT:
   
  Para este tipo de bloqueo, proporcione una [reproducción de vínculo](#link_repro) si usa la Generación de código en tiempo de vínculo (LTCG) o una [reproducción preprocesada](#preprocessed_repro) en caso de que no la use. LTGC se habilita mediante el argumento de línea de comandos `/GL` en cl.exe.  
   
-##  <a name="a-namesenda-ways-to-send-your-report"></a><a name="send"></a> Maneras de enviar el informe  
+##  <a name="send"></a> Maneras de enviar el informe  
  Puede enviarnos el informe de varias maneras. Puede enviar un error a través de Microsoft Connect, por correo electrónico o mediante la herramienta Notificar un problema integrada en Visual Studio. La mejor opción para realizar la notificación depende del tipo de problema que haya encontrado, el grado de interacción que quiera tener con los ingenieros que investigan el informe y si quiere llevar un seguimiento del progreso o compartir el informe con la comunidad.  
   
 > [!NOTE]
@@ -268,7 +265,7 @@ Source code and repro steps:
 > [!TIP]
 >  En el caso de otros tipos de problemas en Visual Studio que no estén relacionados con el conjunto de herramientas (por ejemplo, problemas de la interfaz de usuario, funciones del IDE interrumpidas o bloqueos generales), la herramienta Notificar un problema puede ser una opción especialmente buena debido a sus funciones de captura de pantalla y su capacidad de grabar las acciones de la interfaz de usuario que producen el problema en cuestión. Microsoft Connect también puede ser una buena opción para informar sobre estos errores, pero carece de las funciones adicionales de la herramienta Notificar un problema. Nunca debe notificar sobre estos otros tipos de errores mediante el envío de un correo electrónico a compilercrash@microsoft.com.  
   
-##  <a name="a-namegeneratea-generating-repros"></a><a name="generate"></a> Generar reproducciones  
+##  <a name="generate"></a> Generar reproducciones  
  Una reproducción es un ejemplo de código completo y autocontenido en el que se muestra el problema sobre el que está informando. Una reproducción **no** es un fragmento de código. Debe ser un ejemplo completo que se compila y se ejecuta (o que se compilaría y se ejecutaría de no ser por los errores que produce el problema sobre el que está informando). Debe contener todas las directivas #include necesarias, incluso para los encabezados estándar.  
   
  Además, una buena reproducción se caracteriza por lo siguiente:  
@@ -285,7 +282,7 @@ Source code and repro steps:
   
  A continuación se muestran instrucciones para generar los distintos tipos de reproducciones que se usan para notificar los diversos problemas.  
   
-###  <a name="a-namepreprocessedreproa-preprocessed-repos"></a><a name="preprocessed_repro"></a> Reproducciones preprocesadas  
+###  <a name="preprocessed_repro"></a> Reproducciones preprocesadas  
  Una reproducción preprocesada es un archivo de código fuente único que muestra un problema y que se ha generado a partir de la salida del preprocesador de C mediante el procesamiento del archivo de código fuente original. Este proceso inserta los encabezados incluidos para quitar las dependencias de archivos de encabezado y archivos de código fuente adicionales, y también resuelve las macros, #ifdefs y otros comandos de preprocesador que podrían depender del entorno local.  
   
 > [!NOTE]
@@ -313,7 +310,7 @@ Source code and repro steps:
   
  Por último, adjunte esta reproducción al informe.  
   
-###  <a name="a-namelinkreproa-link-repros"></a><a name="link_repro"></a> Reproducciones de vínculo  
+###  <a name="link_repro"></a> Reproducciones de vínculo  
  Una reproducción de vínculo es un único directorio que contiene los artefactos de compilación que, en conjunto, muestran un problema que se produce en tiempo de vínculo, como un bloqueo de back-end relacionado con la Generación de código en tiempo de vínculo (LTCG) o un bloqueo del enlazador. Los artefactos de compilación incluidos son los necesarios como entrada del enlazador para que se pueda reproducir el problema. Las reproducciones de vínculo se pueden crear fácilmente mediante las funciones que proporciona el enlazador.  
   
 ##### <a name="to-generate-a-link-repro"></a>Para generar una reproducción de vínculo:  
@@ -332,12 +329,7 @@ Source code and repro steps:
   
  Por último, comprima todo el directorio en un archivo .zip o similar para empaquetar la reproducción y adjúntelo al informe.  
   
-###  <a name="a-nameotherreprosa-other-repros"></a><a name="other_repros"></a> Otras reproducciones  
+###  <a name="other_repros"></a> Otras reproducciones  
  Si no es posible reducir el problema a un solo archivo de código fuente o reproducción preprocesada y el problema no requiere una reproducción de vínculo, podemos investigar un proyecto IDE. El código incluido en el proyecto también debe ser mínimo y se le aplican todas las instrucciones de este documento.  
   
  Cree la reproducción como un proyecto IDE mínimo, comprima toda la estructura de directorios en un archivo .zip o similar para empaquetarlo y adjúntelo al informe.
-
-
-<!--HONumber=Feb17_HO4-->
-
-

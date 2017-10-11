@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3825 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3825"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3825"
+title: Error del compilador C3825 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3825
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3825
 ms.assetid: 18e204a1-f26e-42c6-8d74-2b49cc95f940
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Error del compilador C3825
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c3f8547cee8638fe5cda6c5b0a3d3ff375850406
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'class': una clase administrada o WinRT solo puede admitir eventos administrados o WinRT.  
+---
+# <a name="compiler-error-c3825"></a>Error del compilador C3825
+'class': administrada o WinRTclass puede solo compatibilidad administrada o WinRTevents  
   
- Solo los eventos .NET son compatibles con las clases administradas.  Solo los eventos de Windows en tiempo de ejecución son compatibles con las clases de Windows en tiempo de ejecución.  Para corregir este error en código administrado, cambie el parámetro de tipo de `event_source` y `event_receiver` de `native` a `managed`.  Otra solución sería quitar el atributo.  
+ Solo los eventos .NET son compatibles con las clases administradas. Solo los eventos de Windows en tiempo de ejecución son compatibles con las clases de Windows en tiempo de ejecución. Para corregir este error en código administrado, cambie el parámetro de tipo de `event_source` y `event_receiver` de `native` a `managed`. Otra solución sería quitar el atributo.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera el error C3825 y muestra cómo corregirlo:  
   
 ```  

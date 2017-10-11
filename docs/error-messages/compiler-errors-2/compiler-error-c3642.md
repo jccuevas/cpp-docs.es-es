@@ -1,38 +1,41 @@
 ---
-title: "Error del compilador C3642 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3642"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3642"
+title: Error del compilador C3642 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3642
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3642
 ms.assetid: 429790c2-9614-4d85-b31c-687c8d8f83ff
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Error del compilador C3642
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4b5d73344b99a42dfc4caf2b9f6b8cf7c9dc18bc
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'return\_type\/args' : no se puede llamar a una función con la convención de llamada \_\_clrcall desde código nativo  
+---
+# <a name="compiler-error-c3642"></a>Error del compilador C3642
+' return_type/args': no se puede llamar a una función con la convención de llamada de código nativo __clrcall  
   
- No se puede llamar a una función marcada con la convención de llamada [\_\_clrcall](../../cpp/clrcall.md) desde código nativo \(no administrado\).  
+ Una función que se marca con la [__clrcall](../../cpp/clrcall.md) convención de llamada no se puede llamar desde código nativo (no administrado).  
   
- *return\_type\/args* es el nombre de la función o el tipo de función de `__clrcall` que está intentando llamar.  Se utiliza un tipo cuando la llamada se realiza a través de un puntero a una función.  
+ *return_type/args* es el nombre de la función o el tipo de la `__clrcall` función que está intentando llamar.  Se utiliza un tipo al que está llamando a través de un puntero de función.  
   
- Para llamar a una función administrada desde un contexto nativo, puede agregar una función "contenedor" que llamará a la función `__clrcall`.  También puede usar el mecanismo de cálculo de referencias de CLR; para obtener más información, vea [Cómo: Calcular las referencias de punteros a función mediante PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md).  
+ Para llamar a una función administrada desde un contexto nativo, puede agregar una función de "contenedor" que llamará el `__clrcall` función. O bien, puede usar el mecanismo de cálculo de referencias de CLR; vea [Cómo: serializar punteros de función Using PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) para obtener más información.  
   
- El código siguiente genera el error C3642:  
+ El ejemplo siguiente genera C3642:  
   
 ```  
 // C3642.cpp  

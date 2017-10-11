@@ -30,26 +30,11 @@ caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c802f99eab05ea59971c69c53f999f1b8f12240f
+ms.translationtype: HT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ee67049241067285f564e59791f408347cc0c747
 ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="filename-search-functions"></a>Funciones de búsqueda de nombre de archivo
@@ -108,15 +93,15 @@ Estas funciones buscan y cierran búsquedas de los nombres de archivos especific
  `_A_SYSTEM`  
  Archivo de sistema. Normalmente no se ven con el comando **DIR** , a menos que se use la opción **/A** o **/A:S** . Valor: 0x04.  
   
- `_findnext` busca el siguiente nombre, si procede, que coincida con el argumento `filespec` especificado en una llamada anterior a `_findfirst`. El argumento `fileinfo` debe apuntar a una estructura inicializada por la llamada anterior a `_findfirst`. Si se encuentra una coincidencia, el contenido de la estructura `fileinfo` se cambia como se describió anteriormente. En caso contrario, se deja sin modificar. `_findclose` cierra el controlador de búsqueda especificado y libera todos los recursos asociados para `_findfirst` y `_findnext`. El identificador devuelto por `_findfirst` o `_findnext` debe pasarse primero a `_findclose`, antes de realizar operaciones de modificación, como la eliminación, en los directorios que forman las rutas de acceso que se les pasan.  
+ `_findnext` busca el siguiente nombre, si procede, que coincida con el argumento `filespec` especificado en una llamada anterior a `_findfirst`. El argumento `fileinfo` debe apuntar a una estructura inicializada por la llamada anterior a `_findfirst`. Si se encuentra una coincidencia, el contenido de la estructura `fileinfo` se cambia como se describió anteriormente. En caso contrario, se deja sin modificar. `_findclose` cierra el identificador de búsqueda especificado y libera todos los recursos asociados para `_findfirst` y `_findnext`. El identificador devuelto por `_findfirst` o `_findnext` debe pasarse primero a `_findclose`, antes de realizar operaciones de modificación, como la eliminación, en los directorios que forman las rutas de acceso que se les pasan.  
   
  Puede anidar las funciones `_find` . Por ejemplo, si una llamada a `_findfirst` o `_findnext` descubre que el archivo es un subdirectorio, puede iniciarse una nueva búsqueda con otra llamada a `_findfirst` o `_findnext`.  
   
- `_wfindfirst` y `_wfindnext` son versiones con caracteres anchos de `_findfirst` y `_findnext`. El argumento de la estructura de las versiones de caracteres anchos tiene el tipo de datos `_wfinddata_t` , que se define en IO.h y en Wchar.h. Los campos de este tipo de datos son los mismos que los del tipo de datos `_finddata_t` , excepto que, en `_wfinddata_t` , el campo de nombre es de tipo `wchar_t` en lugar de ser de tipo `char`. De lo contrario, `_wfindfirst` y `_wfindnext` se comportan de forma idéntica a `_findfirst` y `_findnext`.  
+ `_wfindfirst` y `_wfindnext` son versiones con caracteres anchos de `_findfirst` y `_findnext`, respectivamente. El argumento de la estructura de las versiones de caracteres anchos tiene el tipo de datos `_wfinddata_t` , que se define en IO.h y en Wchar.h. Los campos de este tipo de datos son los mismos que los del tipo de datos `_finddata_t` , excepto que, en `_wfinddata_t` , el campo de nombre es de tipo `wchar_t` en lugar de ser de tipo `char`. De lo contrario, `_wfindfirst` y `_wfindnext` se comportan de forma idéntica a `_findfirst` y `_findnext`.  
   
  `_findfirst` y `_findnext` usan el tipo de tiempo de 64 bits. Si debe usar el tipo de tiempo de 32 bits anterior, puede definir `_USE_32BIT_TIME_T`. Las versiones de estas funciones que tienen el sufijo `32` en sus nombres usan el tipo de tiempo de 32 bits y aquellas con el sufijo `64` usan el tipo de tiempo de 64 bits.  
   
- Las funciones `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`y `_wfindnext32i64` también se comportan igual que las versiones de tipo de tiempo de 32 bits de estas funciones, excepto que usan y devuelven longitudes de archivos de 64 bits. Las funciones `_findfirst64i32`, `_findnext64i32`, `_wfindfirst64i32` y `_wfindnext64i32` usan el tipo de tiempo de 64 bits, pero usan longitudes de archivos de 32 bits. Estas funciones usan variaciones adecuadas del tipo `_finddata_t` en el que los campos tienen distintos tipos para el tamaño de archivo y la hora.  
+ Las funciones `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`y `_wfindnext32i64` también se comportan igual que las versiones de tipo de tiempo de 32 bits de estas funciones, excepto que usan y devuelven longitudes de archivos de 64 bits. Las funciones `_findfirst64i32`, `_findnext64i32`, `_wfindfirst64i32`y `_wfindnext64i32` usan el tipo de tiempo de 64 bits, pero usan longitudes de archivos de 32 bits. Estas funciones usan variaciones adecuadas del tipo `_finddata_t` en el que los campos tienen distintos tipos para el tamaño de archivo y la hora.  
   
  `_finddata_t` es realmente una macro que se evalúa en `_finddata64i32_t` (o `_finddata32_t` si `_USE_32BIT_TIME_T` está definido). En la siguiente tabla se resumen las versiones de `_finddata_t`:  
   

@@ -1,5 +1,5 @@
 ---
-title: Error de compilador Error C3149 | Documentos de Microsoft
+title: Error del compilador C3149 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,37 +19,23 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 555b3a7ac8e0d1e5de8eacd763c9ee63101e5b78
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dc5abf02a3210ca3d7bd858662e0c02d4f42d75d
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3149"></a>Error del compilador C3149
-'tipo': no se puede usar este tipo aquí sin un 'char' de nivel superior  
+'type': no se puede usar este tipo aquí sin un 'char' de nivel superior  
   
- No se especificó correctamente una declaración.  
+ Una declaración no se especificó correctamente.  
   
- Por ejemplo, puede tiene definido un tipo CLR en el ámbito global y ha intentado crear una variable del tipo como parte de la definición. Ya no se admiten variables globales de tipos CLR, el compilador genera el error C3149.  
+ Por ejemplo, puede haber definido un tipo CLR en el ámbito global e intentó crear una variable del tipo como parte de la definición. Dado que no se permiten variables globales de tipos CLR, el compilador genera el error C3149.  
   
  Para resolver este error, declare las variables de tipos CLR dentro de una definición de función o tipo.  
   
- En el ejemplo siguiente genera el error C3149:  
+ El ejemplo siguiente genera el error C3149:  
   
 ```  
 // C3149.cpp  
@@ -62,7 +48,7 @@ int main() {
 }  
 ```  
   
- En el ejemplo siguiente genera el error C3149:  
+ El ejemplo siguiente genera el error C3149:  
   
 ```  
 // C3149b.cpp  

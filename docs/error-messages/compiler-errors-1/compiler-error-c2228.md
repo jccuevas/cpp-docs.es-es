@@ -19,26 +19,11 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 39bbed326de5fc0a367e9b7693d3975b766e9bfc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6960d2a34a6a68925e04e0812730025d1ce2ff92
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2228"></a>Error del compilador C2228
@@ -67,6 +52,6 @@ int main() {
   
  También verá este error si usa una sintaxis incorrecta al usar extensiones administradas. Mientras que en otros lenguajes de Visual Studio, puede usar el operador punto para tener acceso a un miembro de una clase administrada, un puntero al objeto en C++ significa que debe usar el operador -> para obtener acceso al miembro:  
   
- Problema:`String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`  
+ Erróneo: `String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`  
   
- Correcto:`String * myString = checkedListBox1->CheckedItems->Item[0]->ToString();`
+ Correcto: `String * myString = checkedListBox1->CheckedItems->Item[0]->ToString();`

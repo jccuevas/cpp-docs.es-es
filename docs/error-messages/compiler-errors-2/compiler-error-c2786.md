@@ -1,38 +1,41 @@
 ---
-title: "Error del compilador C2786 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2786"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2786"
+title: C2786 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2786
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2786
 ms.assetid: 6676d8c0-86dd-4a39-bdda-b75a35f4d137
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C2786
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d78b5664fa2853a3fe8f7934cba9ce5b8b3f782a
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'tipo' : operando no válido para \_\_uuidof  
+---
+# <a name="compiler-error-c2786"></a>C2786 de Error del compilador
+'type': operando no válido para __uuidof  
   
- El operador [\_\_uuidof](../../cpp/uuidof-operator.md) toma un tipo definido por el usuario con un GUID asociado, o un objeto de dicho tipo.  Causas posibles:  
+ El [__uuidof](../../cpp/uuidof-operator.md) operador tiene un tipo definido por el usuario con un GUID asociado, o un objeto de este tipo definido por el usuario.  Causas posibles:  
   
 1.  El argumento no es un tipo definido por el usuario.  
   
-2.  `__uuidof` no puede extraer el GUID del argumento.  
+2.  `__uuidof`no se puede extraer el GUID del argumento.  
   
- El código siguiente genera el error C2786:  
+ El ejemplo siguiente genera C2786:  
   
 ```  
 // C2786.cpp  

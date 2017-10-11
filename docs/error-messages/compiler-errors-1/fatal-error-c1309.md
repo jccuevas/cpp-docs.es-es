@@ -1,29 +1,32 @@
 ---
-title: "Error irrecuperable C1309 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1309"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1309"
+title: Error irrecuperable C1309 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1309
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1309
 ms.assetid: a95363d6-a4f3-45fb-9690-aa7e552093b7
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Error irrecuperable C1309
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 236b415691ede722696535e300363c989d06b61a
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-Las versiones de C2.DLL y PGODB \<versión\>.DLL no coinciden  
+---
+# <a name="fatal-error-c1309"></a>Error irrecuperable C1309
+Versiones de C2. DLL y PGODB\<versión >. ARCHIVO DLL  
   
- El conjunto de herramientas que está utilizando para compilar y usar [optimizaciones guiadas por perfiles](../../build/reference/profile-guided-optimizations.md) contiene componentes que no coinciden.  Si no puede solucionar manualmente este error, vuelva a instalar Visual C\+\+.
+ El conjunto de herramientas que se utiliza para crear y usar [optimizaciones guiadas por perfiles](../../build/reference/profile-guided-optimizations.md) contiene componentes que no coinciden.  Si no puede solucionar manualmente este error, vuelva a instalar Visual C++.

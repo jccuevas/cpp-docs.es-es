@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C3912 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3912"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3912"
+title: Error del compilador C3912 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3912
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3912
 ms.assetid: 674e050c-11fb-4db1-8bdf-a3e95b41161d
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C3912
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b5198258264688196a1ddc27059ab1f1349048c1
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'evento': el tipo de evento debe ser un tipo delegado  
+---
+# <a name="compiler-error-c3912"></a>Error del compilador C3912
+'evento': tipo de evento debe ser un tipo de delegado  
   
- Se declaró un evento pero no era del tipo apropiado.  
+ Un evento se ha declarado pero no era del tipo adecuado.  
   
- Para obtener más información, vea [evento](../../windows/event-cpp-component-extensions.md).  
+ Para obtener más información, consulte [eventos](../../windows/event-cpp-component-extensions.md).  
   
- El código siguiente genera el error C3912:  
+ El ejemplo siguiente genera C3912:  
   
 ```  
 // C3912.cpp  

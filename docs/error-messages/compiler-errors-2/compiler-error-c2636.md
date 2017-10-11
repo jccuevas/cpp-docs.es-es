@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2636 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2636"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2636"
+title: C2636 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2636
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2636
 ms.assetid: 379873ec-8d05-49f8-adf1-b067bc07bdb8
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2636
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b9aa491ec27c59a6fdc336a9ab148806e468a4aa
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'identificador' : el puntero a miembro de referencia no es válido  
+---
+# <a name="compiler-error-c2636"></a>C2636 de Error del compilador
+'identificador': puntero a miembro de referencia no es válido  
   
  Se ha declarado un puntero a un miembro de referencia.  
   
- El código siguiente genera el error C2636:  
+ El ejemplo siguiente genera C2636:  
   
 ```  
 // C2636.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2325 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2325"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2325"
+title: Error del compilador C2325 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2325
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2325
 ms.assetid: e6b0a186-3f2a-4adf-beae-fadd75492bf7
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2325
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9fd84bb01f23b077030174d8c5bc5bf6b1c3f21e
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'tipo' : tipo no esperado a la derecha de 'nombre  
+---
+# <a name="compiler-error-c2325"></a>Error del compilador C2325
+'type': tipo no esperado a la derecha de 'nombre'  
   
  Se realiza una llamada a un destructor de tipo incorrecto.  
   
- El código siguiente genera el error C2325:  
+ El ejemplo siguiente genera C2325:  
   
 ```  
 // C2325.cpp  

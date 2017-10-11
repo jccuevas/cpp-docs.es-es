@@ -24,25 +24,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 4cf4cad1a3b1a4ac0a21ef76a0eaca35732abf3a
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 5f37deebe0524ef0198e87a989b79d7a7ef49ede
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomobjectnolock-class"></a>Clase CComObjectNoLock
@@ -77,9 +63,9 @@ class CComObjectNoLock : public Base
 |[CComObjectNoLock::Release](#release)|Disminuye el recuento de referencias en el objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComObjectNoLock`es similar a [CComObject](../../atl/reference/ccomobject-class.md) en que implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para un objeto no agregado; sin embargo, `CComObjectNoLock` tiene cuenta no incremento el bloqueo de módulo en el constructor.  
+ `CComObjectNoLock`es similar a [CComObject](../../atl/reference/ccomobject-class.md) en que implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para un objeto; sin embargo, `CComObjectNoLock` tiene cuenta no incremento el bloqueo de módulo en el constructor.  
   
- ATL utiliza `CComObjectNoLock` internamente para generadores de clases. En general, no utilizará esta clase directamente.  
+ ATL usa `CComObjectNoLock` internamente para los generadores de clases. En general, no utilizará esta clase directamente.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `Base`  
@@ -97,7 +83,7 @@ STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor que puede ser útil para el diagnóstico o de pruebas.  
+ Un valor que puede ser útil para el diagnóstico o pruebas.  
   
 ##  <a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock  
  El constructor. A diferencia de [CComObject](../../atl/reference/ccomobject-class.md), no incrementa el recuento de bloqueos del módulo.  
@@ -130,7 +116,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
   
 ### <a name="parameters"></a>Parámetros  
  `iid`  
- [in] El identificador de la interfaz solicitada.  
+ [in] El identificador de la interfaz que se solicita.  
   
  `ppvObject`  
  [out] Un puntero al puntero de interfaz identificado por `iid`. Si el objeto no admite esta interfaz, `ppvObject` está establecido en **NULL**.  
@@ -146,8 +132,8 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- En compilaciones de depuración, **versión** devuelve un valor que puede ser útil para el diagnóstico o de pruebas. En versiones no depuradas, **versión** siempre devuelve 0.  
+ En las compilaciones de depuración, **versión** devuelve un valor que puede ser útil para el diagnóstico o pruebas. En las compilaciones de depuración no, **versión** siempre devuelve 0.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

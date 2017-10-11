@@ -1,35 +1,38 @@
 ---
-title: "Error del compilador C2674 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2674"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2674"
+title: C2674 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2674
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2674
 ms.assetid: 7cbd70d8-d992-44d7-a5cb-dd8cf9c759d2
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C2674
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5a71216ee0c9b9bb824e9518691bc71730bb7465
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2674"></a>C2674 de Error del compilador
 no se permite una declaración genérica en este contexto  
   
- Se ha declarado incorrectamente una declaración genérica.  Para obtener más información, vea [Genéricos](../../windows/generics-cpp-component-extensions.md).  
+ Un tipo genérico se ha declarado incorrectamente. Para obtener más información, consulte [Genéricos](../../windows/generics-cpp-component-extensions.md).  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C2674.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C2674.  
   
 ```  
 // C2674.cpp  

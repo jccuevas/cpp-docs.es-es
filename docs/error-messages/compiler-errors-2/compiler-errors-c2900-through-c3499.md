@@ -85,25 +85,11 @@ caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 6ef55aa655692e6ecbd1550bb1ace2eca01bdbad
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 535a1d42d9d43022bbf513b72bac18dd5accad82
 ms.contentlocale: es-es
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2900-through-c2999"></a>C2900 de errores del compilador a través de C2999
@@ -140,8 +126,8 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2921](compiler-error-c2921.md)|nueva definición: '*tipo*': clase de plantilla o genérico se está declarando de nuevo como*declaración*'|  
 |C2922 de Error del compilador|'*interfaz*': WinRT de una interfaz no puede contener miembros estáticos|  
 |[Error del compilador C2923](compiler-error-c2923.md)|'*tipo*': '*identificador*'no es un argumento de tipo template/generic válido para el parámetro'*parámetro*'|  
-|C2924 de Error del compilador|el argumento de la rutina __declspec(interrupción) no se encuentra en R2|  
-|C2925 de Error del compilador|la rutina __declspec(interrupción) no puede utilizar punto flotante|  
+|C2924 de Error del compilador|argumento de la rutina __declspec (interrupción) no está en R2|  
+|C2925 de Error del compilador|rutina __declspec (interrupción) no se puede utilizar punto flotante|  
 |C2926 de Error del compilador|'*identificador*': no se permite un inicializador de miembro predeterminado para un miembro de un struct anónimo dentro de una unión|  
 |[Error del compilador C2927](compiler-error-c2927.md)|'*identificador*': una plantilla de función debe llamarse con al menos un argumento|  
 |[Error del compilador C2928](compiler-error-c2928.md)|creación de instancias explícita; '*identificador*'no es una función o un miembro de datos estáticos de clase de plantilla'*clase*'|  
@@ -165,17 +151,17 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2946](compiler-error-c2946.md)|creación de instancias explícita; '*tipo*' no es una especialización de clase de plantilla|  
 |[Error del compilador C2947](compiler-error-c2947.md)|se esperaba ' >' para terminar los argumentos de plantilla, se encontró '*token*'|  
 |[Error del compilador C2948](compiler-error-c2948.md)|creación de instancias explícita; especificador de clase de almacenamiento '*especificador*' no está permitido en la especialización|  
-|C2949 de Error del compilador|thread_local no es compatible con /kernel|  
+|C2949 de Error del compilador|thread_local no se admite con/kernel|  
 |Error del compilador C2950|Obsoleto.|  
 |[Error del compilador C2951](compiler-error-c2951.md)|las declaraciones de plantilla o genérico solo se permiten en el espacio de nombres global, o ámbito de clase|  
 |[Error del compilador C2952](compiler-error-c2952.md)|'*declaración*': falta la lista de parámetros de plantilla o genérico de la declaración de plantilla/generic|  
 |[Error del compilador C2953](compiler-error-c2953.md)|'*tipo*': ya se ha definido la plantilla de clase|  
-|C2954 de Error del compilador|el argumento de palabra de instrucción no está en el intervalo|  
+|C2954 de Error del compilador|argumento de palabra de instrucción fuera del intervalo|  
 |[Error del compilador C2955](compiler-error-c2955.md)|'*tipo*': el uso de plantilla de clase/generic requiere la lista de argumentos de plantilla/generic|  
 |C2956 de Error del compilador|desasignación dimensionada función 'operator delete (void *, size_t)' se elegiría como función de desasignación de selección de ubicación.|  
 |[Error del compilador C2957](compiler-error-c2957.md)|'*token*': delimitador izquierdo no válido: se esperaba ' <'|  
 |[Error del compilador C2958](compiler-error-c2958.md)|la izquierda *delimitador* encontrado en '*archivo*(*line_number*)' no coincidió con correctamente|  
-|[Error del compilador C2959](compiler-error-c2959.md)|una clase genérica o función no puede ser miembro de una plantilla|  
+|[Error del compilador C2959](compiler-error-c2959.md)|una función o clase genérica no puede ser un miembro de una plantilla|  
 |C2960 de Error del compilador|Obsoleto.|  
 |C2961 de Error del compilador|'*función*': instancias explícitas incoherentes, una instancia explícita anterior no especificó '*argumento*'|  
 |[Error del compilador C2962](compiler-error-c2962.md)|error de sintaxis: '*token*': se esperaba la definición de función miembro de clase de plantilla finalizase con '}'|  
@@ -196,7 +182,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2977](compiler-error-c2977.md)|'*tipo*': hay demasiados argumentos de plantilla/generic|  
 |[Error del compilador C2978](compiler-error-c2978.md)|error de sintaxis: se esperaba '*palabraclave1*'o'*palabraclave2*'; se encontró el tipo'*tipo*'; no es de tipo no se admiten parámetros en genéricos|  
 |[Error del compilador C2979](compiler-error-c2979.md)|no se admite especializaciones explícitas en genéricos|  
-|C2980 de Error del compilador|El control de excepciones de C++ no se admite con /kernel|  
+|C2980 de Error del compilador|Control de excepciones de C++ no es compatible con/kernel|  
 |C2981 de Error del compilador|la forma dinámica de '*palabra clave*' no es compatible con/kernel|  
 |C2982 de Error del compilador|'*declaración*': diferentes __declspec(code_seg(...)) usa: fue '*identificador1*"ahora"*identificador2*'|  
 |C2983 de Error del compilador|'*declaración*': todas las declaraciones deben tener un __declspec(code_seg(...)) idénticos|  

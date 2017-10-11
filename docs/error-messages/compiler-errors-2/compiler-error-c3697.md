@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3697 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3697"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3697"
+title: Error del compilador C3697 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3697
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3697
 ms.assetid: 2d3f63c4-b7f8-421d-a7a5-2bf17fd054f9
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C3697
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0d14bd3de0fb2ddf6c44babb10c2ec1edcb87a21
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'calificador' : no se puede utilizar este calificador en '^'  
+---
+# <a name="compiler-error-c3697"></a>Error del compilador C3697
+'calificador': no se puede utilizar este calificador en ' ^'  
   
- Se ha aplicado un controlador de seguimiento \(^\) a un calificador para el que no estaba diseñado.  
+ El identificador de seguimiento (^) se aplicó a un calificador para el que no se diseñó.  
   
- El código siguiente genera el error C3697:  
+ El ejemplo siguiente genera C3697:  
   
 ```  
 // C3697.cpp  

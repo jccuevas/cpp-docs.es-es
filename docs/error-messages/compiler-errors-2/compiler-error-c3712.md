@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3712 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3712"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3712"
+title: Error del compilador C3712 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3712
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3712
 ms.assetid: 65b1fcaf-be89-4c55-9e40-25ec03457253
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C3712
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 69f23d7192bc72f5f287a3a5b84b7840f9d25310
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'método': un método de control de eventos debe devolver el mismo tipo que el método 'método' de origen  
+---
+# <a name="compiler-error-c3712"></a>Error del compilador C3712
+'método': un método de controlador de eventos debe devolver el mismo tipo que el origen 'método'  
   
- Se definió un método de control de eventos que no devuelve el mismo tipo que el método del evento de origen.  Para resolver este error, dé al método de control de eventos el mismo tipo de valor devuelto que el del método del evento de origen.  
+ Define un método de controlador de eventos que no devolvió el mismo tipo que el método de evento de origen. Para corregir este error, dé al método de controlador de eventos del mismo tipo de valor devuelto que el del método del evento de origen.  
   
- El código siguiente genera el error C3712:  
+ El ejemplo siguiente genera C3712:  
   
 ```  
 // C3712.cpp  

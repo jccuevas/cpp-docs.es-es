@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2451 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2451"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2451"
+title: Error del compilador C2451 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2451
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2451
 ms.assetid: a64c93a5-ab8d-4d39-ae57-9ee7ef803036
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2451
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3860005ee3c17d568dabb9d4a49174cc3ca14d34
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-la expresión condicional de tipo 'tipo' no es válida  
+---
+# <a name="compiler-error-c2451"></a>Error del compilador C2451
+expresión condicional del tipo 'tipo' no es válido  
   
  La expresión condicional se evalúa como un tipo entero.  
   
- El código siguiente genera el error C2451:  
+ El ejemplo siguiente genera C2451:  
   
 ```  
 // C2451.cpp  

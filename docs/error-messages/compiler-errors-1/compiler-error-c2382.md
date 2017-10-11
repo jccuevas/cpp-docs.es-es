@@ -19,32 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 0253c186855f8640b11dcb1a3ead7c27880d2fde
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 086a0675e877360d424346edfd2b32ea558514aa
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2382"></a>Error del compilador C2382
 'function': nueva definición; especificaciones de excepción diferentes  
   
- En [/Za](../../build/reference/za-ze-disable-language-extensions.md), este error indica que una sobrecarga de función se ha intentado solo en el [una especificación de excepción](../../cpp/exception-specifications-throw-cpp.md).  
+ En [/Za](../../build/reference/za-ze-disable-language-extensions.md), este error indica que intentó una sobrecarga de la función solo en la [especificación de excepción](../../cpp/exception-specifications-throw-cpp.md).  
   
  El ejemplo siguiente genera la advertencia C2382:  
   

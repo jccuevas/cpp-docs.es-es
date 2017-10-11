@@ -1,35 +1,38 @@
 ---
-title: "Error del compilador C3657 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3657"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3657"
+title: Error del compilador C3657 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3657
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3657
 ms.assetid: 89a28a18-4c17-43a1-bda6-deb52c32d203
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Error del compilador C3657
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2fec7db6488194ac80af45fa3cc37fb9a2bf1a8a
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-los destructores no pueden reemplazar o ser reemplazados explícitamente  
+---
+# <a name="compiler-error-c3657"></a>Error del compilador C3657
+los destructores no se pueden reemplazar de forma explícita o reemplazarse explícitamente  
   
- No se pueden reemplazar destructores o finalizadores explícitamente.  Para obtener más información, vea [Reemplazos explícitos](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Los destructores o finalizadores no se puede invalidar explícitamente. Para obtener más información, consulte [reemplazos explícitos](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C3657.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C3657.  
   
 ```  
 // C3657.cpp  

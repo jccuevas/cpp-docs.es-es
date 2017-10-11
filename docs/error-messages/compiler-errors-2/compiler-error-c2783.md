@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2783 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2783"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2783"
+title: C2783 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2783
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2783
 ms.assetid: 1ce94a11-bb8b-4be3-a222-f1f105da74b3
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Error del compilador C2783
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1fff9803fa54d1ea18d0ada78c816067731e8c41
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'declaración' : no se pudo deducir el argumento de plantilla para 'identificador'  
+---
+# <a name="compiler-error-c2783"></a>C2783 de Error del compilador
+'declaration': no se pudo deducir el argumento de plantilla para 'identificador'  
   
- El compilador no pudo determinar un argumento de plantilla.  No se pueden utilizar argumentos predeterminados para deducir un argumento de plantilla.  
+ El compilador no puede determinar un argumento de plantilla. Argumentos predeterminados no se pueden usar para deducir un argumento de plantilla.  
   
- El código siguiente genera el error C2783:  
+ El ejemplo siguiente genera C2783:  
   
 ```  
 // C2783.cpp  
@@ -44,7 +47,7 @@ int main() {
 }  
 ```  
   
- El error C2783 también puede producirse al utilizar clases genéricas:  
+ C2783 también puede producirse al usar genéricos:  
   
 ```  
 // C2783b.cpp  

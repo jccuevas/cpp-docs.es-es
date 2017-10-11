@@ -1,42 +1,45 @@
 ---
-title: "Error del compilador C3110 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3110"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3110"
+title: C3110 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3110
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3110
 ms.assetid: 821dc71f-896e-4b2d-af0e-aa9932934b7b
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C3110
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 573b7bbbe40929d291c10426e7826293e8dfd4bc
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'nombre\_de\_función' : no se puede sobrecargar un método de interfaz COM  
+---
+# <a name="compiler-error-c3110"></a>C3110 de Error del compilador
+'nombre_de_función': no se pueden sobrecargar un método de interfaz com.  
   
- Una interfaz precedida por un atributo de interfaz, como:  
+ Una interfaz que va precedida de un atributo de interfaz, como:  
   
--   [personalizadas](../../windows/custom-cpp.md)  
+-   [personalizado](../../windows/custom-cpp.md)  
   
 -   [dispinterface](../../windows/dispinterface.md)  
   
--   [dual](../Topic/dual.md)  
+-   [dual](../../windows/dual.md)  
   
--   [objeto](../Topic/object%20\(C++\).md)  
+-   [object](../../windows/object-cpp.md)  
   
- no se puede sobrecargar.  Por ejemplo:  
+ no se pueden sobrecargar. Por ejemplo:  
   
 ```  
 // C3110.cpp  

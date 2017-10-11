@@ -1,27 +1,30 @@
 ---
-title: "Clases compartidas por MFC y ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clases compartidas, clases"
+title: Clases compartidas por MFC y ATL | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- shared classes, classes
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Clases compartidas por MFC y ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 5e74a0fb32a9f0dc95837b9c8d633001ac79da8a
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="classes-shared-by-mfc-and-atl"></a>Clases compartidas por MFC y ATL
 En la tabla siguiente se enumera las clases que se comparten entre MFC y ATL.  
   
 |Clase|Descripción|Archivo de encabezado|  
@@ -30,12 +33,12 @@ En la tabla siguiente se enumera las clases que se comparten entre MFC y ATL.
 |[CFileTimeSpan](../../atl-mfc-shared/reference/cfiletimespan-class.md)|Proporciona métodos para administrar los valores de tiempo asociados a un archivo y fecha relativa.|atltime.h|  
 |[CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md)|Representa un objeto de cadena con un búfer de caracteres fijas.|CStringT.h|  
 |[CImage](../../atl-mfc-shared/reference/cimage-class.md)|Proporciona compatibilidad con mapas de bits mejorada, incluida la capacidad para cargar y guardar imágenes en formatos JPEG, GIF, BMP y gráficos de red portátiles (PNG).|atlimage.h|  
-|[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)|Encapsula el **FECHA** tipo de datos utilizado en la automatización OLE.|atlcomtime.h|  
+|[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)|Encapsula el **fecha** tipo de datos utilizado en la automatización OLE.|atlcomtime.h|  
 |[COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)|Representa un tiempo relativo, un intervalo de tiempo.|atlcomtime.h|  
-|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|Una clase similar a las ventanas [PUNTO](../../mfc/reference/point-structure1.md) estructura que también incluye funciones de miembro para manipular `CPoint` y **PUNTO** estructuras.|atltypes.h|  
-|[CRect](../../atl-mfc-shared/reference/crect-class.md)|Una clase similar a una ventana [RECT](../../mfc/reference/rect-structure1.md) estructura que también incluye funciones de miembro para manipular `CRect` objetos y Windows `RECT` estructuras.|atltypes.h|  
+|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|Una clase similar a las ventanas [punto](../../mfc/reference/point-structure1.md) estructura que también incluye funciones de miembro para manipular `CPoint` y **punto** estructuras.|atltypes.h|  
+|[CRect](../../atl-mfc-shared/reference/crect-class.md)|Una clase similar a una ventana de [RECT](../../mfc/reference/rect-structure1.md) estructura que también incluye funciones de miembro para manipular `CRect` objetos y Windows `RECT` estructuras.|atltypes.h|  
 |[CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)|Representa un `CSimpleStringT` objeto.|atlsimpstr.h|  
-|[CSize](../../atl-mfc-shared/reference/csize-class.md)|Una clase similar a la estructura de TAMAÑO de Windows, que implementa una coordenada relativa o la posición.|atltypes.h|  
+|[CSize](../../atl-mfc-shared/reference/csize-class.md)|Una clase similar a la estructura de tamaño de Windows, que implementa una coordenada relativa o la posición.|atltypes.h|  
 |[CStrBufT](../../atl-mfc-shared/reference/cstrbuft-class.md)|Proporciona la limpieza de recursos automático para `GetBuffer` y `ReleaseBuffer` llama en una existente `CStringT` objeto.|atlsimpstr.h|  
 |[CStringData](../../atl-mfc-shared/reference/cstringdata-class.md)|Representa los datos de un objeto de cadena.|atlsimpstr.h|  
 |[CStringT](../../atl-mfc-shared/reference/cstringt-class.md)|Representa un `CStringT` objeto.|CStringT.h (MFC dependiente) atlstr.h (independiente de MFC)|  
@@ -45,5 +48,6 @@ En la tabla siguiente se enumera las clases que se comparten entre MFC y ATL.
   
 ## <a name="see-also"></a>Vea también  
  [Clases compartidas de ATL y MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+
 
 

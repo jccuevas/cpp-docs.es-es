@@ -1,29 +1,32 @@
 ---
-title: "Error del compilador C2060 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2060"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2060"
+title: C2060 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2060
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2060
 ms.assetid: 2572deba-cc12-464e-9162-86252a3af061
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Error del compilador C2060
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: de8e6e4494f3897a65b7d04f3f41a8bbd10c9bc4
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-error de sintaxis : se encontró el final del archivo  
+---
+# <a name="compiler-error-c2060"></a>C2060 de Error del compilador
+error de sintaxis: se encontró el final del archivo  
   
- Se esperaba, al menos, un símbolo \(token\) más.
+ Se esperaba al menos uno más tokens.

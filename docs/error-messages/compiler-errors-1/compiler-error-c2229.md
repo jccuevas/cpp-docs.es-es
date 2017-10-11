@@ -1,38 +1,41 @@
 ---
-title: "Error del compilador C2229 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2229"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2229"
+title: Error del compilador C2229 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2229
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2229
 ms.assetid: 933c7cf2-a463-4e74-b0b4-59dedad987fb
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Error del compilador C2229
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c54e3affb39cb396df1caaafe6450d5c6ac80f6e
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-tipo 'identificador' tiene una matriz de tamaño cero no válida  
+---
+# <a name="compiler-error-c2229"></a>Error del compilador C2229
+tipo de 'identifier' tiene una matriz de tamaño cero no válida  
   
- Un miembro de un struct o campo de bits contiene una matriz de tamaño cero que no es el último miembro.  
+ Un miembro de un estructura o campo de bits contiene una matriz de tamaño cero que no es el último miembro.  
   
- Al ser posible tener una matriz de tamaño cero como último miembro del struct, se debe especificar su tamaño al asignar el struct.  
+ Dado que puede tener una matriz de tamaño cero como el último miembro de la estructura, debe especificar su tamaño al asignar la estructura.  
   
- Si la matriz de tamaño cero no es el último miembro del struct, el compilador no puede calcular el desplazamiento para los campos restantes.  
+ Si la matriz de tamaño cero no es el último miembro de la estructura, el compilador no puede calcular el desplazamiento para los campos restantes.  
   
- El código siguiente genera el error C2229:  
+ El ejemplo siguiente genera C2229:  
   
 ```  
 // C2229.cpp  

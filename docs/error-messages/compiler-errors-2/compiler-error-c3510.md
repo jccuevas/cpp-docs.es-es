@@ -1,38 +1,41 @@
 ---
-title: "Error del compilador C3510 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3510"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3510"
+title: Error del compilador C3510 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3510
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3510
 ms.assetid: c48387bc-0300-4a4d-97f7-3fb90f82a451
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Error del compilador C3510
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9603a4f94106d491ea5e14f30b36b1b230554ad2
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-no se puede ubicar la biblioteca de tipos dependiente 'biblioteca de tipos'  
+---
+# <a name="compiler-error-c3510"></a>Error del compilador C3510
+no se puede localizar el tipo dependiente 'biblioteca de tipos'  
   
- [no\_registry](../../preprocessor/no-registry.md) y [auto\_search](../../preprocessor/auto-search.md) se pasaron a `#import` pero el compilador no encuentra una biblioteca de tipos a la que se hace referencia.  
+ [no_registry](../../preprocessor/no-registry.md) y [auto_search](../../preprocessor/auto-search.md) se pasaron a `#import` , pero el compilador no pudo encontrar una biblioteca de tipos que se hace referencia.  
   
- Para corregir este error, asegúrese de que todas las bibliotecas de tipos y las bibliotecas de tipos a las que se hace referencia están disponibles para el compilador.  
+ Para resolver este error, asegúrese de que todas las bibliotecas de tipos y las bibliotecas de tipos que se hace referencia están disponibles para el compilador.  
   
- El código siguiente genera el error C3510:  
+ El ejemplo siguiente genera C3510:  
   
- Se supone que se compilaron las dos bibliotecas de tipos siguientes y que se eliminó C3510a.tlb o no en la ruta de acceso.  
+ Suponga que se crearon las siguientes dos bibliotecas de tipos, y que se eliminó C3510a.tlb o no en la ruta de acceso.  
   
 ```  
 // C3510a.idl  

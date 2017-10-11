@@ -26,29 +26,15 @@ caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 1cc2adef85c902b7ad12b152b35a7ef68e6abacb
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 01198e8de5f2eb1cbe0787bd287820d222875c20
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomsafearraybound-class"></a>Clase CComSafeArrayBound
-Esta clase es un contenedor para una [SAFEARRAYBOUND](http://msdn.microsoft.com/en-us/303a9bdb-71d6-4f14-8747-84cf84936c6d) estructura.  
+Esta clase es un contenedor para un [SAFEARRAYBOUND](http://msdn.microsoft.com/en-us/303a9bdb-71d6-4f14-8747-84cf84936c6d) estructura.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -66,17 +52,17 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 |[GetCount](#getcount)|Llame a este método para devolver el número de elementos.|  
 |[GetLowerBound](#getlowerbound)|Llame a este método para devolver el límite inferior.|  
 |[GetUpperBound](#getupperbound)|Llame a este método para devolver el límite superior.|  
-|[SetCount](#setcount)|Llame a este método para establecer el número de elementos.|  
+|[SetCount](#setcount)|Llamar a este método para establecer el número de elementos.|  
 |[SetLowerBound](#setlowerbound)|Llame a este método para establecer el límite inferior.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[operador =](#operator_eq)|Establece el `CComSafeArrayBound` en un nuevo valor.|  
+|[operador =](#operator_eq)|Establece el `CComSafeArrayBound` a un nuevo valor.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase es un contenedor para la **SAFEARRAYBOUND** estructura utilizada por [CComSafeArray](../../atl/reference/ccomsafearray-class.md). Proporciona métodos para consultar y establecer los límites superiores e inferiores de una sola dimensión de un `CComSafeArray` objeto y el número de elementos que contiene. Multidimensional `CComSafeArray` objeto utiliza una matriz de `CComSafeArrayBound` objetos, uno para cada dimensión. Por lo tanto, cuando se usan métodos como [GetCount](#getcount), tenga en cuenta que este método no devolverá el número total de elementos de una matriz multidimensional.  
+ Esta clase es un contenedor para la **SAFEARRAYBOUND** estructura usada por [CComSafeArray](../../atl/reference/ccomsafearray-class.md). Proporciona métodos para consultar y configurar los límites superiores e inferiores de una única dimensión de una `CComSafeArray` objeto y el número de elementos que contiene. Multidimensional `CComSafeArray` objeto utiliza una matriz de `CComSafeArrayBound` objetos, uno para cada dimensión. Por lo tanto, cuando se usan métodos como [GetCount](#getcount), tenga en cuenta que este método no devolverá el número total de elementos de una matriz multidimensional.  
   
  **Encabezado:** atlsafe.h  
   
@@ -95,10 +81,10 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
  Número de elementos de la matriz.  
   
  `lLowerBound`  
- El límite inferior desde la que se numera la matriz.  
+ El límite inferior de la que se asigna el número de la matriz.  
   
 ### <a name="remarks"></a>Comentarios  
- Si la matriz es tener acceso desde un programa de Visual C++, se recomienda que el límite inferior se define como 0. Es preferible utilizar un valor de límite inferior diferente si la matriz es para su uso con otros lenguajes, como Visual Basic.  
+ Si la matriz es para tener acceso desde un programa de Visual C++, se recomienda que el límite inferior se define como 0. Puede ser preferible utilizar un valor de límite inferior diferente si la matriz es para su uso con otros lenguajes, como Visual Basic.  
   
 ##  <a name="getcount"></a>CComSafeArrayBound::GetCount  
  Llame a este método para devolver el número de elementos.  
@@ -111,7 +97,7 @@ ULONG GetCount() const throw();
  Devuelve el número de elementos.  
   
 ### <a name="remarks"></a>Comentarios  
- Si el asociado `CComSafeArray` objeto representa una matriz multidimensional, este método sólo devolverá el número total de elementos en la dimensión del extremo derecho. Utilice [CComSafeArray::GetCount](../../atl/reference/ccomsafearray-class.md#getcount) para obtener el número total de elementos.  
+ Si el asociado `CComSafeArray` objeto representa una matriz multidimensional, este método solo devolverá el número total de elementos de la dimensión más a la derecha. Use [CComSafeArray::GetCount](../../atl/reference/ccomsafearray-class.md#getcount) para obtener el número total de elementos.  
   
 ##  <a name="getlowerbound"></a>CComSafeArrayBound::GetLowerBound  
  Llame a este método para devolver el límite inferior.  
@@ -137,7 +123,7 @@ LONG GetUpperBound() const throw();
  El límite superior depende del número de elementos y el valor de límite inferior. Por ejemplo, si el límite inferior es 0 y el número de elementos es 10, el límite superior se establecerá automáticamente al 9.  
   
 ##  <a name="operator_eq"></a>CComSafeArrayBound::operator =  
- Establece el `CComSafeArrayBound` en un nuevo valor.  
+ Establece el `CComSafeArrayBound` a un nuevo valor.  
   
 ```
 CComSafeArrayBound& operator= (const CComSafeArrayBound& bound) throw();
@@ -155,10 +141,10 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
  Devuelve un puntero a la `CComSafeArrayBound` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- El `CComSafeArrayBound` objeto se puede asignar mediante existente `CComSafeArrayBound`, o proporcionando el número de elementos, en el que el límite inferior del caso se establece en 0 de forma predeterminada.  
+ El `CComSafeArrayBound` objeto se puede asignar mediante una existente `CComSafeArrayBound`, o proporcionando el número de elementos, en el que el límite inferior del caso se establece en 0 de forma predeterminada.  
   
 ##  <a name="setcount"></a>CComSafeArrayBound::SetCount  
- Llame a este método para establecer el número de elementos.  
+ Llamar a este método para establecer el número de elementos.  
   
 ```
 ULONG SetCount(ULONG ulCount) throw();
@@ -186,10 +172,10 @@ LONG SetLowerBound(LONG lLowerBound) throw();
  Devuelve el nuevo límite inferior de la `CComSafeArrayBound` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- Si la matriz es tener acceso desde un programa de Visual C++, se recomienda que el límite inferior se define como 0. Es preferible utilizar un valor de límite inferior diferente si la matriz es para su uso con otros lenguajes, como Visual Basic.  
+ Si la matriz es para tener acceso desde un programa de Visual C++, se recomienda que el límite inferior se define como 0. Puede ser preferible utilizar un valor de límite inferior diferente si la matriz es para su uso con otros lenguajes, como Visual Basic.  
   
  El límite superior depende del número de elementos y el valor de límite inferior. Por ejemplo, si el límite inferior es 0 y el número de elementos es 10, el límite superior se establecerá automáticamente al 9.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

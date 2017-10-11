@@ -1,29 +1,32 @@
 ---
-title: "Error del compilador C2405 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2405"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2405"
+title: Error del compilador C2405 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2405
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2405
 ms.assetid: 14f6726d-e04b-4cce-8a85-4553fc38fcf7
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Error del compilador C2405
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c45da7edbbdd7ba0f414f29ca8b43102ab3b15c0
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-referencia adelantada corta no válida con desplazamiento  
+---
+# <a name="compiler-error-c2405"></a>Error del compilador C2405
+ilegal referencia adelantada corta con desplazamiento  
   
- Las referencias adelantadas cortas deben hacer referencia a una etiqueta solamente.  No se puede usar un desplazamiento adicional.
+ Las referencias adelantadas cortas deben hacer referencia a una etiqueta solamente. No se puede usar un desplazamiento adicional.

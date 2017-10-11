@@ -22,29 +22,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 1d1253b7a7d69024465627cc9fb37fcd2afba693
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 410d34d59da33b6d929abbe2af0798a6cf46238b
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cdefaultcomparetraits-class"></a>Clase CDefaultCompareTraits
-Esta clase proporciona las funciones de comparación de elemento de predeterminado.  
+Esta clase proporciona las funciones de comparación de elementos de predeterminado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -63,11 +49,11 @@ class CDefaultCompareTraits
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[CDefaultCompareTraits::CompareElements](#compareelements)|(Estático) Llame a esta función para comparar dos elementos son iguales.|  
+|[CDefaultCompareTraits::CompareElements](#compareelements)|(Estático) Llame a esta función para comparar la igualdad de dos elementos.|  
 |[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Estático) Llame a esta función para determinar el elemento mayor y menor.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase contiene dos funciones estáticas para comparar los elementos almacenados en un objeto de clase de colección. Esta clase es utilizada por el [CDefaultElementTraits clase](../../atl/reference/cdefaultelementtraits-class.md).  
+ Esta clase contiene dos funciones estáticas para comparar los elementos almacenados en un objeto de clase de colección. Esta clase se utiliza por la [CDefaultElementTraits clase](../../atl/reference/cdefaultelementtraits-class.md).  
   
  Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).  
   
@@ -75,7 +61,7 @@ class CDefaultCompareTraits
  **Encabezado:** atlcoll.h  
   
 ##  <a name="compareelements"></a>CDefaultCompareTraits::CompareElements  
- Llame a esta función para comparar dos elementos son iguales.  
+ Llame a esta función para comparar la igualdad de dos elementos.  
   
 ```
 static bool CompareElements(const T& element1, const T& element2);
@@ -89,10 +75,10 @@ static bool CompareElements(const T& element1, const T& element2);
  El segundo elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve true si los elementos de lo contrario, son iguales, false.  
+ Devuelve true si los elementos en caso contrario, son iguales, false.  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada de esta función es la igualdad ( `==`) (operador). Para objetos distintos tipos de datos simples, esta función necesite reemplazar.  
+ La implementación predeterminada de esta función es la igualdad ( `==`) operador. Para los objetos distintos de los tipos de datos simple, esta función puede deben invalidarse.  
   
 ##  <a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered  
  Llame a esta función para determinar el elemento mayor y menor.  
@@ -109,7 +95,7 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
  El segundo elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve un entero basado en la tabla siguiente:  
+ Devuelve un entero que se basa en la tabla siguiente:  
   
 |Condición|Valor devuelto|  
 |---------------|------------------|  
@@ -118,8 +104,8 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 |`element1` > `element2`|>0|  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada de esta función usa el `==`, ** \< **, y ** > ** operadores. Para objetos distintos tipos de datos simples, esta función necesite reemplazar.  
+ La implementación predeterminada de esta función usa la `==`,  **\<** , y  **>**  operadores. Para los objetos distintos de los tipos de datos simple, esta función puede deben invalidarse.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

@@ -29,32 +29,18 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 9359e2ab8c4a84ab66441e3eb8cfd39520fd4e8d
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: beb2052a2dc7a8efbf6820c51dc2ff7a1f227795
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomapartment-class"></a>Clase CComApartment
-Esta clase proporciona compatibilidad para la administración de un apartamento de un módulo EXE agrupada por subproceso.  
+Esta clase proporciona compatibilidad para administrar un apartamento de un módulo de archivo EXE agrupadas por subproceso.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -88,7 +74,7 @@ class CComApartment
 |[CComApartment::m_nLockCnt](#m_nlockcnt)|Contiene el recuento de bloqueo actual del subproceso.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComApartment`se utiliza por [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) para administrar un apartamento de un módulo EXE agrupada por subproceso. `CComApartment`Proporciona métodos para aumentar y disminuir el bloqueo de contar con un subproceso.  
+ `CComApartment`se utiliza por [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) para administrar un contenedor en un módulo de archivo EXE agrupadas por subproceso. `CComApartment`Proporciona métodos para aumentar y disminuir el bloqueo de contar con un subproceso.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
@@ -134,12 +120,12 @@ LONG Lock();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor que puede ser útil para el diagnóstico o de pruebas.  
+ Un valor que puede ser útil para el diagnóstico o pruebas.  
   
 ### <a name="remarks"></a>Comentarios  
- Llama a [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock).  
+ Llamado por el método [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock).  
   
- El recuento de bloqueos en el subproceso se utiliza para fines estadísticos.  
+ El recuento de bloqueos en el subproceso se usa para fines estadísticos.  
   
 ##  <a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
  Contiene el identificador del subproceso.  
@@ -170,13 +156,13 @@ LONG Unlock();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor que puede ser útil para el diagnóstico o de pruebas.  
+ Un valor que puede ser útil para el diagnóstico o pruebas.  
   
 ### <a name="remarks"></a>Comentarios  
- Llama a [CComAutoThreadModule::Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock).  
+ Llamado por el método [CComAutoThreadModule::Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock).  
   
- El recuento de bloqueos en el subproceso se utiliza para fines estadísticos.  
+ El recuento de bloqueos en el subproceso se usa para fines estadísticos.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

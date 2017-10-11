@@ -1,29 +1,32 @@
 ---
-title: "Advertencia del compilador C4746 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: C4746 de advertencia del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: 5e79ab46-6031-499a-a986-716c866b6c0e
 caps.latest.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 2
----
-# Advertencia del compilador C4746
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1b88f51aa9365c0795c8d3d944ba9f3a8db059d9
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-el acceso volatile '\<de expresión\>' se bajo \/volatile: \[ISO&#124;valor de MS\]; considere utilizar funciones intrínsecas de \_\_iso\_volatile\_load\/store.  
+---
+# <a name="compiler-warning-c4746"></a>C4746 de advertencia del compilador
+acceso volátil de '\<expresión >' está sujeta a /volatile: [iso &#124; ms] establecer; considere el uso de funciones intrínsecas de __iso_volatile_load/almacén.  
   
- Se emite C4746 siempre que una variable volatile se almacenan directamente.  Está diseñado para ayudar a los desarrolladores a identificar las ubicaciones de código afectadas por el modelo específico de volatile especificado actualmente \(que se puede controlar con la opción del compilador [\/volatile](../../build/reference/volatile-volatile-keyword-interpretation.md) \).  En particular, puede ser útil para localizar de barreras compilador\- generadas de memoria de hardware cuando se utiliza \/volatile:ms .  
+ C4746 se genera cada vez que se tiene acceso directamente a una variable volátil. Está diseñado para ayudar a los desarrolladores a identificar ubicaciones del código que se ven afectados por el modelo volátil específico que se especifica actualmente (que puede controlarse con el [/volatile](../../build/reference/volatile-volatile-keyword-interpretation.md) opción del compilador). En concreto, puede ser útil para localizar las barreras de memoria de hardware generados por el compilador cuando se utiliza /volatile:ms.  
   
- Función intrínseca de \_\_iso\_volatile\_load\/store se pueden utilizar explícitamente para tener acceso a memoria volátil sin verse afectado por el modelo volatile.  Mediante estos intrínseco no desencadenará C4746.  
+ El __iso_volatile_load/intrínsecos de almacén pueden utilizarse para un acceso explícito a memoria volátil sin que se vean afectados por el modelo volátil. Uso de estas funciones intrínsecas, no se desencadenará C4746.  
   
- De forma predeterminada, esta advertencia está desactivada.  Para obtener más información, vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+ De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.

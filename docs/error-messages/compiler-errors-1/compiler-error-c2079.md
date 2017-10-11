@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C2079 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2079"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2079"
+title: C2079 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2079
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2079
 ms.assetid: ca58d6d5-eccd-40b7-ba14-c003223c5bc7
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C2079
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 236e40ed865230416ddde9511420c1cf333d2687
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'identificador' utiliza clase\/struct\/unión sin definir 'nombre'  
+---
+# <a name="compiler-error-c2079"></a>C2079 de Error del compilador
+'identificador' utiliza clase/estructura/unión sin definir 'name'  
   
- El identificador especificado es una clase, un struct o una unión sin definir.  
+ El identificador especificado es una clase no definida, una estructura o unión.  
   
- Este error puede producirse inicializando una unión anónima.  
+ Este error puede deberse a inicializar una unión anónima.  
   
- El código siguiente genera el error C2079:  
+ El ejemplo siguiente genera C2079:  
   
 ```  
 // C2079.cpp  
@@ -52,7 +55,7 @@ int main( ) {
 }  
 ```  
   
- C2079 también puede producirse si intenta declarar un objeto en la pila de un tipo cuya declaración adelantada sólo está en el ámbito.  
+ C2079 también puede producirse si intenta declarar un objeto en la pila de un tipo cuya declaración adelantada sólo está en ámbito.  
   
 ```  
 // C2079c.cpp  

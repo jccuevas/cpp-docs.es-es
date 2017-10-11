@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3640 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3640"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3640"
+title: Error del compilador C3640 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3640
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3640
 ms.assetid: fcc56894-0f98-48af-8561-3bf7c7b2b93f
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Error del compilador C3640
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 493206e55be18d1e7cc00fec55dd2e111ad5026f
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'miembro' : se debe definir una función de una clase local de miembro virtual o a la que se haga referencia  
+---
+# <a name="compiler-error-c3640"></a>Error del compilador C3640
+'member': se debe definir una función miembro virtual o que se hace referencia de una clase local  
   
- El compilador exige que se definan ciertas funciones.  
+ El compilador requiere que se definan ciertas funciones.  
   
- El código siguiente genera el error C3640:  
+ El ejemplo siguiente genera C3640:  
   
 ```  
 // C3640.cpp  

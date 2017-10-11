@@ -1,38 +1,41 @@
 ---
-title: "Error del compilador C3706 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3706"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3706"
+title: Error del compilador C3706 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3706
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C3706
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 20f7e14d22e1994213624d88ccab098844aa6ac4
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'función' : debe ser una interfaz COM para desencadenar eventos COM  
+---
+# <a name="compiler-error-c3706"></a>Error del compilador C3706
+'función': debe ser una interfaz COM para desencadenar eventos COM  
   
- La interfaz de eventos que se utiliza para desencadenar eventos COM debe ser una interfaz COM.  En esta situación, la interfaz debería definirse usando un atributo de Visual C\+\+ o importarse usando [\#import](../../preprocessor/hash-import-directive-cpp.md) de una biblioteca de tipos con el atributo embedded\_idl de \#import.  
+ La interfaz de evento que se utiliza para desencadenar eventos COM debe ser una interfaz COM. En esta situación, la interfaz debería definirse con un atributo de Visual C++, o se importa utilizando [#import](../../preprocessor/hash-import-directive-cpp.md) desde una biblioteca de tipos con el atributo embedded_idl de #import.  
   
- Observe que las líneas `#include` de los archivos de encabezado ATL que se muestran en el ejemplo de abajo son necesarias para utilizar eventos COM.  Para resolver este error, convierta `IEvents` \(la interfaz de eventos\) en interfaz COM aplicando uno de los siguientes atributos a la definición de interfaz: [object](../Topic/object%20\(C++\).md), [dual](../Topic/dual.md) o [dispinterface](../../windows/dispinterface.md).  
+ Tenga en cuenta que el `#include` son necesarias para el uso de eventos COM líneas de los archivos de encabezado ATL se muestra en el ejemplo siguiente. Para corregir este error, asegúrese de `IEvents` (la interfaz de eventos) una interfaz COM aplicando uno de los siguientes atributos a la definición de interfaz: [objeto](../../windows/object-cpp.md), [dual](../../windows/dual.md), o [ dispinterface](../../windows/dispinterface.md).  
   
- Si una interfaz es de un archivo de encabezado generado por MIDL, el compilador no la reconocerá como una interfaz COM.  
+ Es una interfaz de un archivo de encabezado generado por MIDL, el compilador no reconocerlo como una interfaz COM.  
   
- El código siguiente genera el error C3706:  
+ El ejemplo siguiente genera C3706:  
   
 ```  
 // C3706.cpp  

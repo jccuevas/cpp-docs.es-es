@@ -1,35 +1,38 @@
 ---
-title: "Error del compilador C3240 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3240"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3240"
+title: Error del compilador C3240 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3240
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3240
 ms.assetid: 1a8dc213-b80c-47ae-ada0-e9554b635d1e
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Error del compilador C3240
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 988c0a54b6c748acc7236642263a6c18390a44ed
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'función' : debe ser una función miembro abstracta no sobrecargada de 'tipo'  
+---
+# <a name="compiler-error-c3240"></a>Error del compilador C3240
+'función': debe ser una función miembro abstracta no sobrecargada de 'tipo'  
   
- Un tipo base contenía una función que se había definido.  La función debe ser virtual.  
+ Un tipo base contenía una función que se definió. Función debe ser virtual.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C3240.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C3240.  
   
 ```  
 // C3240.cpp  

@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C2086 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2086"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2086"
+title: C2086 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2086
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2086
 ms.assetid: 4329bf72-90c8-444c-8524-4ef75e6b2139
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Error del compilador C2086
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 36270e50049889e5c6819a22b6b6e35d4c7d2caf
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'identificador' : nueva definición  
+---
+# <a name="compiler-error-c2086"></a>C2086 de Error del compilador
+'identificador': nueva definición  
   
- O el identificador está definido varias veces o alguna declaración difiere de otra anterior.  
+ El identificador está definido varias veces o alguna declaración difiere de uno anterior.  
   
- El error C2086 también puede ser el resultado de una compilación incremental para un ensamblado de C\# al que se haya hecho referencia.  Recompile el ensamblado de C\# para resolver este error.  
+ C2086 también puede ser el resultado de una generación incremental para un ensamblado que se hace referencia de C#. Vuelva a generar el ensamblado de C# para resolver este error.  
   
- El código siguiente genera el error C2086:  
+ El ejemplo siguiente genera C2086:  
   
 ```  
 // C2086.cpp  

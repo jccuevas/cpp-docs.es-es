@@ -1,5 +1,5 @@
 ---
-title: C3365 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3365 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 2ad4d2d5b926001fad668b62b6cbf0abe21542c0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2352ff83181fe1127e1faa60829d00f03508bccd
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3365"></a>Error del compilador C3365
 El operador 'operator': diferencia de operandos de tipo 'type1' y 'type2'  
   
-Se intentaron componer delegados con tipos diferentes.  Consulte [Cómo: definir y utilizar delegados (C++ / CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md) para obtener más información sobre los delegados.  
+Se intentaron componer delegados con tipos diferentes.  Vea [Cómo: definir y utilizar delegados (C++ / CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md) para obtener más información sobre los delegados.  
   
 ## <a name="example"></a>Ejemplo  
 El ejemplo siguiente genera la advertencia C3365:  

@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2787 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2787"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2787"
+title: C2787 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2787
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2787
 ms.assetid: 34cb57e6-cafe-4ce7-bcc6-53d194629bd0
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Error del compilador C2787
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 71924ae6e24eba04e27ec366ef73dedc2fa65263
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'identificador' : no se ha asociado ningún GUID a este objeto  
+---
+# <a name="compiler-error-c2787"></a>C2787 de Error del compilador
+'identificador': ningún GUID se ha asociado a este objeto  
   
- El operador [\_\_uuidof](../../cpp/uuidof-operator.md) toma un tipo definido por el usuario con un GUID asociado, o un objeto de dicho tipo.  Este error se produce cuando el argumento es un tipo definido por el usuario sin GUID.  
+ El [__uuidof](../../cpp/uuidof-operator.md) operador tiene un tipo definido por el usuario con un GUID asociado, o un objeto de este tipo definido por el usuario. Este error se produce cuando el argumento es un tipo definido por el usuario con ningún GUID.  
   
- El código siguiente genera el error C2787:  
+ El ejemplo siguiente genera C2787:  
   
 ```  
 // C2787.cpp  

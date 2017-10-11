@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2247 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2247"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2247"
+title: Error del compilador C2247 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2247
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2247
 ms.assetid: 72efa03e-615e-4ef9-aede-0a98654b20fd
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Error del compilador C2247
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 64eafb23ca83cb61ac9b45cf9c84ba69365f8198
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-No se puede tener acceso a 'identificador' porque 'clase' utiliza 'especificador' para heredar de 'clase'  
+---
+# <a name="compiler-error-c2247"></a>Error del compilador C2247
+'identificador' no es accesible porque 'clase' utiliza 'especificador' para heredar de 'class'  
   
- `identifier` se hereda de una clase declarada con acceso privado o protegido.  
+ `identifier`se hereda de una clase declarada con acceso privado o protegido.  
   
- El código siguiente genera el error C2247:  
+ El ejemplo siguiente genera C2247:  
   
 ```  
 // C2247.cpp  
@@ -41,9 +44,9 @@ class C : public B {} c;   // so even though C's B is public
 int j = c.i;               // C2247, i not accessible  
 ```  
   
- Este error también se puede producir como resultado del trabajo de compatibilidad del compilador realizado para Visual Studio .NET 2003: control de acceso con miembros protegidos .  Sólo se puede tener acceso a un miembro protegido \(n\) mediante una función miembro de una clase \(B\) que hereda de la clase \(A\) de la que es \(n\) miembro.  
+ Este error también puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio .NET 2003: control de acceso con miembros protegidos. Un miembro protegido (n) solo puede obtenerse a través de una función miembro de una clase (B) que hereda de la clase (A) de los cuales (n) es un miembro.  
   
- Para que el código sea válido en las versiones Visual Studio .NET 2003 y Visual Studio .NET de Visual C\+\+, declare el miembro como friend del tipo.  También es posible utilizar la herencia pública.  
+ Para el código que es válido en las versiones de Visual Studio .NET de Visual C++ y Visual Studio .NET 2003, declare el miembro como friend del tipo. También podría usarse la herencia pública.  
   
 ```  
 // C2247b.cpp  
@@ -66,9 +69,9 @@ void A::f() {
 }  
 ```  
   
- C2247 también se puede producir como resultado del trabajo de conformidad del compilador realizado para Visual Studio .NET 2003. ahora no se puede tener acceso a las clases base.  Una clase \(A\) que es una clase base privada para un tipo \(B\) no debería ser accesible para un tipo \(C\) que utiliza B como clase base.  
+ C2247 también puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio .NET 2003: base privada ahora clases inaccesible. Una clase (A) que es una clase base privada a un tipo no (B) debe estar accesible para un tipo (C) que utiliza B como clase base.  
   
- Para que el código sea válido en las versiones Visual Studio .NET 2003 y Visual Studio .NET de Visual C\+\+, utilice el operador de ámbito.  
+ Para el código que es válido en las versiones de Visual Studio .NET de Visual C++ y Visual Studio .NET 2003, utilice el operador de ámbito.  
   
 ```  
 // C2247c.cpp  

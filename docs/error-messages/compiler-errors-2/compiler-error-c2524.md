@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2524 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2524"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2524"
+title: Error del compilador C2524 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2524
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2524
 ms.assetid: e71d17f5-2fc2-416b-8dbd-e9bed85eb33a
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Error del compilador C2524
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f0b80ac9029f530b68afdc379d7660bba1ff76cb
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'destructor' : un destructor\/finalizador debe tener una lista de parámetros 'void'  
+---
+# <a name="compiler-error-c2524"></a>Error del compilador C2524
+'destructor': un destructor/finalizador debe tener una lista de parámetros 'void'  
   
- El destructor o finalizador tiene una lista de parámetros que no es [void](../../cpp/void-cpp.md).  No se permiten otros tipos de parámetros.  
+ El destructor o finalizador tiene una lista de parámetros que no es [void](../../cpp/void-cpp.md). No se permiten otros tipos de parámetros.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El código siguiente reproduce el error C2524.  
   
 ```  
@@ -42,7 +45,7 @@ class A {
 };  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El código siguiente reproduce el error C2524.  
   
 ```  

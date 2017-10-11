@@ -1,31 +1,34 @@
 ---
-title: "Error irrecuperable C1126 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1126"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1126"
+title: Error irrecuperable C1126 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1126
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1126
 ms.assetid: f22b26a6-8ad7-47cf-a237-196c8ea60aca
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error irrecuperable C1126
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4f5346a3adb5535242207ebc3a3c9b2fcffa7a40
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'identificador' : la asignación automática supera el tamaño  
+---
+# <a name="fatal-error-c1126"></a>Error irrecuperable C1126
+'identificador': la asignación automática supera el tamaño  
   
- El espacio asignado para las variables locales de una función \(más una cantidad limitada de espacio utilizada por el compilador, como, por ejemplo, 20 bytes adicionales para funciones intercambiables\) supera el límite.  
+ Espacio asignado para las variables locales de una función (más una cantidad limitada de espacio utilizado por el compilador, por ejemplo, 20 bytes adicionales para funciones intercambiables) supera el límite.  
   
- Para corregir este error, utilice `malloc` o `new` para asignar cantidades grandes de datos.
+ Para corregir este error, utilice `malloc` o `new` para asignar grandes cantidades de datos.

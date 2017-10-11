@@ -1,41 +1,44 @@
 ---
-title: "Error del compilador C2146 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2146"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2146"
+title: Error del compilador C2146 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2146
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Error del compilador C2146
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 92e94ae29c1a7a3fc6adfdc0b3e82f5ce4dfcaf0
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-error de sintaxis: falta 'símbolo \(token\)' delante del identificador 'identificador'  
+---
+# <a name="compiler-error-c2146"></a>Error del compilador C2146
+error de sintaxis: falta 'token' delante del identificador 'identificador'  
   
- El compilador esperaba `token` y encontró `identifier` en su lugar.  Causas posibles:  
+ El compilador esperado `token` y encuentra `identifier` en su lugar.  Causas posibles:  
   
-1.  Error de escritura o de uso de mayúsculas.  
+1.  Error de ortografía o uso de mayúsculas.  
   
 2.  Falta el especificador de tipo en la declaración del identificador.  
   
- Este error podría deberse a un error tipográfico.  El error [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) suele preceder a este error.  
+ Este error puede deberse a un error tipográfico. Error [error C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) suele preceder a este error.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C2146.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C2146.  
   
 ```  
 // C2146.cpp  
@@ -52,10 +55,10 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- Este error también puede producirse como resultado del trabajo de compatibilidad del compilador realizado para Visual Studio .NET 2003: falta la palabra clave `typename`.  
+## <a name="example"></a>Ejemplo  
+ Este error también puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio .NET 2003: faltan `typename` palabra clave.  
   
- El siguiente ejemplo compila en Visual Studio .NET 2002, pero genera errores en Visual Studio .NET 2003:  
+ El ejemplo siguiente se compila en Visual Studio .NET 2002, pero se producirá un error en Visual Studio .NET 2003:  
   
 ```  
 // C2146b.cpp  
@@ -76,12 +79,12 @@ template <typename T>
 typename X<T>::Y func() { }  
 ```  
   
-## Ejemplo  
- También podrá ver este error como resultado de un trabajo de compatibilidad del compilador realizado para Visual Studio .NET 2003: las especializaciones explícitas ya no buscan parámetros de plantilla desde plantillas principales.  
+## <a name="example"></a>Ejemplo  
+ También verá este error como resultado del trabajo de conformidad del compilador efectuado para Visual Studio .NET 2003: las especializaciones explícitas ya no buscan parámetros de plantilla desde la plantilla principal.  
   
- En la especialización explícita no se permite el uso de `T` desde la plantilla principal.  Para que el código sea válido en las versiones Visual Studio .NET 2003 y Visual Studio .NET de Visual C\+\+, reemplace todas las instancias del parámetro de plantilla en la especialización por el tipo especializado explícitamente.  
+ El uso de `T` no está permitido en la especialización explícita de la plantilla principal. Para que el código sea válido en las versiones de Visual Studio .NET 2003 y Visual Studio .NET de Visual C++, reemplace todas las instancias del parámetro de plantilla en la especialización por el tipo especializado explícitamente.  
   
- El código de ejemplo siguiente se compila en Visual Studio .NET, pero genera errores en Visual Studio .NET 2003:  
+ El ejemplo siguiente se compila en Visual Studio. NET, pero se producirá un error en Visual Studio .NET 2003:  
   
 ```  
 // C2146_c.cpp  

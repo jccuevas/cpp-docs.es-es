@@ -1,5 +1,5 @@
 ---
-title: C3195 de Error del compilador | Documentos de Microsoft
+title: Error de compilador Error C3195 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: ae4ca677380fd9b4052ecb1f41ba44899ed87768
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e6e95ce1592c98fae59869e0153ee27c0f727397
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="compiler-error-c3195"></a>C3195 de Error del compilador
+# <a name="compiler-error-c3195"></a>Error C3195 de Error del compilador
 'operador' : está reservado y no se puede utilizar como miembro de una clase ref o de un tipo de valor. Los operadores CLR o WinRT se deben definir mediante la palabra clave 'operator'  
   
-El compilador detectó una definición de operador con la sintaxis de Extensiones administradas para C++. Debe utilizar la sintaxis de C++ para los operadores.  
+El compilador detectó una definición de operador con la sintaxis de Extensiones administradas para C++. Debe usar la sintaxis de C++ para los operadores.  
   
 El ejemplo siguiente genera el error C3195 y muestra cómo corregirlo:  
   

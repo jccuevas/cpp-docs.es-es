@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 5fcf26ea1a5cb2565a1ad343536a86f0fb26ba08
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 86faa2a6ad2b29330062f9f10af3f91e661a4932
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3137"></a>C3137 de Error del compilador
-'propiedad': no se puede inicializar una propiedad  
+'property': no se puede inicializar una propiedad  
   
- No se puede inicializar una propiedad, por ejemplo, en la lista de inicializaciones de un constructor.  
+ No se puede inicializar una propiedad, por ejemplo, en la lista de inicialización de un constructor.  
   
  El ejemplo siguiente genera C3137:  
   

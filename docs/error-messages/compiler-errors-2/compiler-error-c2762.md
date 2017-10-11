@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2762 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2762"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2762"
+title: C2762 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2762
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2762
 ms.assetid: 8b81a801-fd48-40a1-8bee-0748795b12e4
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2762
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e121ab82b8e49fb1727e626eea7d060e8def2b8c
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'clase': expresión no válida como argumento de plantilla para 'argumento'  
+---
+# <a name="compiler-error-c2762"></a>C2762 de Error del compilador
+'class': expresión no válida como argumento de plantilla para 'argumento'  
   
- Al utilizar [\/Za](../../build/reference/za-ze-disable-language-extensions.md), el compilador no convertirá un integral en puntero.  
+ Cuando se usa [/Za](../../build/reference/za-ze-disable-language-extensions.md), el compilador no convertirá un integral a un puntero.  
   
- El código siguiente genera el error C2762:  
+ El ejemplo siguiente genera C2762:  
   
 ```  
 // C2762.cpp  

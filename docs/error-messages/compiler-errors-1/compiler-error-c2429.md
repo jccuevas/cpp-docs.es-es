@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: eb0c1bf407d1478451c246cf615d031ef6c45bf9
-ms.openlocfilehash: 7d2c27ccdba28720596984c46c9d24f9d29c7b15
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 18fd64199ff043b660bb205199b982ee2843cdcd
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2429"></a>C2429 de Error del compilador
-'*característica de lenguaje*'requiere el indicador de compilador'*opción del compilador*'  
+'*característica de lenguaje*'requiere la marca de compilador'*opción del compilador*'  
   
-La característica de idioma requiere una opción específica del compilador para obtener soporte técnico.  
+La característica de lenguaje requiere una opción del compilador específico para soporte técnico.  
   
-El error C2429: la característica de lenguaje 'anidado de namespace-definition' requiere el indicador de compilador ' / std:c ++ más reciente ' se genera si se intenta definir una *espacio de nombres compuesto*, un espacio de nombres que contiene uno o más nombres de espacio de nombres con ámbito anidado, a partir de Visual Studio 2015 Update 3. Compuesta de espacio de nombres no se permiten definiciones en C++ antes de C ++&17;. El compilador admite las definiciones de espacio de nombres compuestos cuando el [/std:c ++ últimas](../../build/reference/std-specify-language-standard-version.md) se especifica la opción del compilador:  
+El error C2429: la característica de lenguaje 'anidado de espacio de nombres-definición' requiere la marca de compilador ' / std:c ++ más reciente ' se genera si se intenta definir una *espacio de nombres compuesto*, un espacio de nombres que contiene uno o más nombres de espacio de nombres anidado de ámbito , a partir de Visual Studio 2015 Update 3. Compuesta espacio de nombres no se permiten definiciones en C++ antes de C ++ 17. El compilador admite las definiciones de espacio de nombres compuestos cuando el [/std:c ++ más reciente](../../build/reference/std-specify-language-standard-version.md) se especifica la opción del compilador:  
 ```cpp  
 // C2429a.cpp  
 namespace a::b { int i; } // C2429 starting in Visual C++ 2015 Update 3.  

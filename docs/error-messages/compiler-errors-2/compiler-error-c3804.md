@@ -1,37 +1,40 @@
 ---
-title: "Error del compilador C3804 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3804"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3804"
+title: Error del compilador C3804 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3804
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3804
 ms.assetid: 7c4cda28-ec96-4d04-937b-36dbd9944722
 caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# Error del compilador C3804
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 06c9292c2da106c4a4eaeb6de07c923c973e4ce7
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'descriptor de acceso\_propiedad': todos los métodos de descriptor de acceso de una propiedad deben ser estáticos o no estáticos  
+---
+# <a name="compiler-error-c3804"></a>Error del compilador C3804
+'property_accessor': los métodos de descriptor de acceso de una propiedad debe ser estáticos o no estáticos  
   
- Al definir una propiedad no trivial, las funciones del descriptor de acceso pueden ser estáticas o una instancia, pero no ambas.  
+ Al definir una propiedad no trivial, las funciones de descriptor de acceso pueden ser estáticas o instancia, pero no ambos.  
   
- Para obtener más información, vea [propiedad](../../windows/property-cpp-component-extensions.md).  
+ Vea [property](../../windows/property-cpp-component-extensions.md) para obtener más información.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C3804.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C3804.  
   
 ```  
 // C3804.cpp  

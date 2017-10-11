@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2862 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2862"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2862"
+title: Error del compilador C2862 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2862
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2862
 ms.assetid: c04d8499-b799-48a1-9fb4-7902a0b0ac8e
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2862
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d39cce24f46b8b0ef1ed21ac603feb95684b2f02
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'interfaz' : una interfaz sólo puede tener miembros públicos  
+---
+# <a name="compiler-error-c2862"></a>Error del compilador C2862
+'interfaz': una interfaz solo puede tener miembros públicos  
   
- Los miembros protegidos y privados sólo son accesibles desde otras funciones miembro.  Tales miembros no se usan en una interfaz, ya que ésta no proporciona implementaciones para ninguno de sus miembros.  
+ Protegido y se puede tener acceso a los miembros privados solo desde otras funciones miembro. Estos miembros no son ningún uso en una interfaz, ya que es posible que no proporcione implementaciones de cualquiera de sus miembros.  
   
- El código siguiente genera el error C2862:  
+ El ejemplo siguiente genera el error C2862:  
   
 ```  
 // C2862.cpp  

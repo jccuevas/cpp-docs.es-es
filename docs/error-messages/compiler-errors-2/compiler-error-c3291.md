@@ -19,32 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 231ccf64776c608131878caf9bdbe7e463903f6b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: da6145b3a3aecd5f550a58c009020fb24280349e
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3291"></a>Error del compilador C3291
 'default' : no puede ser el nombre de una propiedad trivial  
   
- Una propiedad trivial no puede denominarse `default`. Vea [propiedad](../../windows/property-cpp-component-extensions.md) para obtener más información.  
+ Una propiedad trivial no puede denominarse `default`. Vea [property](../../windows/property-cpp-component-extensions.md) para obtener más información.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera la advertencia C3291.  

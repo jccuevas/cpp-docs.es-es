@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2617 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2617"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2617"
+title: C2617 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2617
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2617
 ms.assetid: d6a435d2-7d95-4dbf-ad4a-abe4744f63e8
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C2617
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5e3272cb883469abbad5ee42538a7334ecd73d62
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'función' : instrucción return incoherente  
+---
+# <a name="compiler-error-c2617"></a>C2617 de Error del compilador
+'función': instrucción return incoherente  
   
- La función especificada no tiene un tipo de valor devuelto declarado, y una instrucción return anterior no proporcionó un valor.  
+ La función especificada no tiene un tipo de valor devuelto declarado y anterior devuelve la instrucción no proporcionó un valor.  
   
- El código siguiente genera el error C2617:  
+ El ejemplo siguiente genera C2617:  
   
 ```  
 // C2617.cpp  

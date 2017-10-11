@@ -1,35 +1,38 @@
 ---
-title: "Error del compilador C2179 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2179"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2179"
+title: Error del compilador C2179 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2179
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2179
 ms.assetid: f929bfc6-3964-4e54-87d6-7529b9b6c0b9
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C2179
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c0f311bcdbbdaa721e3897eae0a90ae892cf75d8
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'tipo' : un argumento de atributo no puede utilizar parámetros de tipo  
+---
+# <a name="compiler-error-c2179"></a>Error del compilador C2179
+'type': un argumento de atributo no puede utilizar parámetros de tipo  
   
- Un parámetro de tipo genérico se resuelve en tiempo de ejecución.  Pero un parámetro de atributo se debe resolver en tiempo de compilación.  Por consiguiente, no puede utilizar un parámetro de tipo genérico como argumento de atributo.  
+ Un parámetro de tipo genérico se resuelve en tiempo de ejecución. Sin embargo, un parámetro de atributo debe resolverse en tiempo de compilación. Por lo tanto, no puede usar un parámetro de tipo genérico como un argumento a un atributo.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C2179.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C2179.  
   
 ```  
 // C2179.cpp  

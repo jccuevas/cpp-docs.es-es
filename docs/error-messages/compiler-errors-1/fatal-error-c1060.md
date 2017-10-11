@@ -1,42 +1,45 @@
 ---
-title: "Error irrecuperable C1060 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1060"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1060"
+title: Error irrecuperable C1060 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1060
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1060
 ms.assetid: feaf305c-c84c-4160-b974-50e283412849
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Error irrecuperable C1060
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 36abe3a63515dcb3b8f07ce5d0d169329ed5f7ab
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="fatal-error-c1060"></a>Error irrecuperable C1060
 espacio de montón insuficiente en el compilador  
   
  El sistema operativo o la biblioteca en tiempo de ejecución no pueden satisfacer una solicitud de memoria.  
   
-### Para corregir este error pruebe las siguientes soluciones  
+### <a name="to-fix-this-error-try-the-following-possible-solutions"></a>Para corregir este error pruebe las siguientes soluciones  
   
-1.  Si el compilador también emite los errores [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) y [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md), use la opción [\/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) del compilador para reducir el límite de asignación de memoria.  Habrá más espacio de montón disponible para la aplicación si reduce la asignación de memoria restante.  
+1.  Si el compilador también emite los errores [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) y [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md), use la [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opción del compilador para reducir el límite de asignación de memoria. Habrá más espacio de montón disponible para la aplicación si reduce la asignación de memoria restante.  
   
-     Si la opción [\/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) ya está establecida, pruebe a quitarla.  El espacio de montón podría agotarse si el límite de asignación de memoria especificado en la opción es demasiado alto.  El compilador utilizará un límite predeterminado si quita la opción [\/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).  
+     Si el [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) ya está establecida, pruebe a quitarla. El espacio de montón podría agotarse si el límite de asignación de memoria especificado en la opción es demasiado alto. El compilador utilizará un límite predeterminado si quita la [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opción.  
   
-2.  Si está compilando en una plataforma de 64 bits, utilice el conjunto de herramientas del compilador de 64 bits.  Para obtener más información, vea [Cómo: Habilitar un conjunto de herramientas de Visual C\+\+ de 64 bits en la línea de comandos](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).  
+2.  Si está compilando en una plataforma de 64 bits, utilice el conjunto de herramientas del compilador de 64 bits. Para obtener información, consulte [Cómo: habilitar un 64-Bit Visual C++ Toolset en la línea de comandos](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).  
   
-3.  En Windows de 32 bits, pruebe a utilizar el conmutador de boot.ini [\/3GB](http://go.microsoft.com/fwlink/?LinkId=177831).  
+3.  En Windows de 32 bits, pruebe a usar la [/3 GB](http://go.microsoft.com/fwlink/?LinkId=177831) modificador de boot.ini.  
   
 4.  Aumente el tamaño del archivo de intercambio de Windows.  
   

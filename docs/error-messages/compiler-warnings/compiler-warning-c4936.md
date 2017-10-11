@@ -1,5 +1,5 @@
 ---
-title: Advertencia de compilador advertencia C4936 | Documentos de Microsoft
+title: Advertencia del compilador C4936 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,38 +19,23 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 58d702067c186eeeea94768a03836b64577961ca
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a4342c749c5db4d66f206209a146ad7d7aef7041
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4936"></a>Advertencia del compilador C4936
 __declspec se admite solamente cuando se compila con /clr o /clr:pure  
   
- El **/CLR: pure** opción del compilador está desusada en Visual Studio 2015.  
+ El **/CLR: pure** opción del compilador está en desuso en Visual Studio 2015.  
   
- Un `__declspec` se utilizó el modificador pero que `__declspec` modificador sólo es válido cuando se compila con uno de los [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) opciones.  
+ Se utilizó un modificador `__declspec` , pero ese modificador `__declspec` solo es válido cuando se compila con una de las opciones [/clr](../../build/reference/clr-common-language-runtime-compilation.md) .  
   
- Para obtener más información, consulte [appdomain](../../cpp/appdomain.md) y [proceso](../../cpp/process.md).  
+ Para más información, consulte [appdomain](../../cpp/appdomain.md) y [process](../../cpp/process.md).  
   
- La advertencia C4936 siempre se emite como error.  Puede deshabilitar la advertencia C4936 con el [advertencia](../../preprocessor/warning.md) pragma.  
+ La advertencia C4936 siempre se emite como error.  Puede deshabilitar la advertencia C4936 con la pragma [warning](../../preprocessor/warning.md) .  
   
  El ejemplo siguiente genera la advertencia C4936:  
   

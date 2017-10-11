@@ -1,42 +1,45 @@
 ---
-title: "Error del compilador C2530 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2530"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2530"
+title: Error del compilador C2530 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2530
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2530
 ms.assetid: b790a312-48df-4a6a-9e27-be2c5f32f16c
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C2530
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f9438937ad99e66d9e623e1e3703dc6496f8153a
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'identificador' : se deben inicializar las referencias  
+---
+# <a name="compiler-error-c2530"></a>Error del compilador C2530
+'identificador': se deben inicializar las referencias  
   
- Es necesario inicializar una referencia en el momento de declararla, a menos que ya se haya declarado:  
+ Debe inicializar una referencia cuando se ha declarado, a menos que ya se haya declarado:  
   
 -   Con la palabra clave [extern](../../cpp/using-extern-to-specify-linkage.md).  
   
--   Como miembro de una clase, estructura o unión \(y se ha inicializado en el constructor\).  
+-   Como miembro de una clase, estructura o unión (y se inicializa en el constructor).  
   
--   Como parámetro en una declaración o definición de función.  
+-   Como un parámetro en una definición o declaración de función.  
   
--   Como tipo de valor devuelto de una función.  
+-   Como el tipo de valor devuelto de una función.  
   
- El código siguiente genera el error C2530:  
+ El ejemplo siguiente genera C2530:  
   
 ```  
 // C2530.cpp  

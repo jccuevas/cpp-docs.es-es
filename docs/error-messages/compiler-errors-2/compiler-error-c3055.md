@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: f5c657322e901da8658e5d7d99e3d28c3392b579
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b85138c6183598c8db2ab89099aa66940f60e8cd
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3055"></a>Error del compilador C3055
 'símbolo': no se puede hacer referencia al símbolo antes de que se use en la directiva 'threadprivate'  
   
- Se hace referencia y, a continuación, se utiliza en un símbolo un [threadprivate](../../parallel/openmp/reference/threadprivate.md) cláusula, que no está permitido.  
+ Se hizo referencia a un símbolo y luego se lo usó en una cláusula [threadprivate](../../parallel/openmp/reference/threadprivate.md) , pero esto no se permite.  
   
  El ejemplo siguiente genera la advertencia C3055:  
   

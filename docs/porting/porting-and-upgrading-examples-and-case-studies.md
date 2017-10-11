@@ -15,34 +15,17 @@ caps.latest.revision: 5
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 293c8976ab74b980b27513e1f1a266102458e130
+ms.translationtype: HT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 554134b71c4dc45a828595c0c7dfb639940494df
 ms.contentlocale: es-es
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 10/09/2017
 
 ---
-# Migración y actualización: ejemplos y casos prácticos
-<a id="porting-and-upgrading-examples-and-case-studies" class="xliff"></a>
+# <a name="porting-and-upgrading-examples-and-case-studies"></a>Migración y actualización: ejemplos y casos prácticos
 Puede hacerse una idea de los tipos de problemas con los que se puede encontrar durante una migración de una versión anterior de Visual C++ a la versión actual leyendo los casos de migraciones correctas.  
   
-## Ejemplos de migraciones correctas
-<a id="examples-of-successful-migrations" class="xliff"></a>  
+## <a name="examples-of-successful-migrations"></a>Ejemplos de migraciones correctas  
  Aquí podrá ver lo que fue necesario para migrar algunas herramientas y ejemplos modestos a la última versión de Visual C++. Los problemas encontrados en estas migraciones son los problemas típicos que pueden darse en cualquier migración, pero con una excepción importante, que es el tamaño del código. Por supuesto, los ejemplos son muy breves y cortos en comparación con el código de aplicaciones reales.  
   
 -   [Scribble de MFC](../porting/porting-guide-mfc-scribble.md) es un ejemplo que usa los conceptos básicos de MFC.  
@@ -51,6 +34,5 @@ Puede hacerse una idea de los tipos de problemas con los que se puede encontrar 
   
 -   [Spy++](../porting/porting-guide-spy-increment.md) es una aplicación que inspecciona y proporciona información sobre los elementos de interfaz de usuario de las aplicaciones en ejecución.  
   
-## Vea también
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vea también  
  [Guía de migración y actualización de Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

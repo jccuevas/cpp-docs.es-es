@@ -19,29 +19,15 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: ecd5056d656865c893c60f63afbf7a558a839785
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8d396830b31e0d46781c3f008847f4cc9bd7bcc5
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2715"></a>C2715 de Error del compilador
-'tipo': no se puede iniciar o detectar este tipo  
+'type': no se puede producir o detectar este tipo  
   
  Tipos de valor no son argumentos válidos al usar el control de excepciones en código administrado (vea [Exception Handling](../../windows/exception-handling-cpp-component-extensions.md) para obtener más información).  
   

@@ -19,26 +19,11 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: b5b061112501cad028e8ca05f50b93651d2a11e6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d84314d20ea00e880981e418c2b5b11008f74229
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3480"></a>Error del compilador C3480
@@ -48,7 +33,7 @@ ms.lasthandoff: 04/12/2017
   
 ### <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Quite la variable de la lista de captura de la expresión lambda.  
+-   Quite la variable de la lista de capturas de la expresión lambda.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera el error C3480 porque la variable `global` no pertenece al ámbito de una función de inclusión:  

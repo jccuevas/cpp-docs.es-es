@@ -1,34 +1,37 @@
 ---
-title: "Error irrecuperable C1189 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1189"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1189"
+title: Error irrecuperable C1189 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1189
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1189
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Error irrecuperable C1189
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6e8d3c9ff44a436688accfe267141390d23c0eb5
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-\#error : mensaje de error suministrado por el usuario  
+---
+# <a name="fatal-error-c1189"></a>Error irrecuperable C1189
+\#Error: mensaje de error proporcionado por el usuario  
   
- La directiva `#error` genera el error C1189.  El desarrollador que codifica la directiva especifica el texto del mensaje de error.  Para obtener más información, vea [\#error \(Directiva\)](../../preprocessor/hash-error-directive-c-cpp.md).  
+ Genera el error C1189 el `#error` directiva. El desarrollador que codifica la directiva especifica el texto del mensaje de error. Para obtener más información, consulte [#error (directiva) (C/C ++)](../../preprocessor/hash-error-directive-c-cpp.md).  
   
- El ejemplo siguiente genera el error C1189.  En el ejemplo, el desarrollador emite un mensaje de error personalizado porque no se define el identificador `_WIN32`:  
+ El ejemplo siguiente genera el error C1189. En el ejemplo, el desarrollador emite un mensaje de error personalizado porque el `_WIN32` no está definido el identificador:  
   
 ```  
 // C1189.cpp  
@@ -38,7 +41,7 @@ caps.handback.revision: 13
 #endif  
 ```  
   
- Este error también podría aparecer si compila un proyecto ATL mediante la opción del compilador MIDL **\/robust**.  Utilice el modificador **\/robust** para compilar sólo [!INCLUDE[win2kfamily](../../c-runtime-library/includes/win2kfamily_md.md)] y versiones posteriores de Windows.  Para corregir este error, utilice uno de los siguientes procedimientos:  
+ También puede ver este error si se compila un proyecto ATL mediante el **/ robust** opción del compilador MIDL. Use la **/ robust** conmutador que se va a compilar sólo [!INCLUDE[win2kfamily](../../c-runtime-library/includes/win2kfamily_md.md)] y versiones posteriores de Windows. Para corregir este error, utilice uno de los procedimientos siguientes:  
   
 -   Cambie esta línea en el archivo dlldatax.c:  
   
@@ -52,7 +55,7 @@ caps.handback.revision: 13
 #define _WIN32_WINNT 0x0500   // for WinNT 4.0 or Windows 95 with DCOM  
 ```  
   
--   Use la página de propiedades **Avanzadas** en la carpeta de la página de propiedades **MIDL** para quitar el modificador **\/robust** y especificar, a continuación, el modificador **\/no\_robust**.  Para obtener más información, vea [Páginas de propiedades MIDL: Avanzadas](../../ide/midl-property-pages-advanced.md).  
+-   Use la **avanzadas** página de propiedades de la **MIDL** carpeta de la página de propiedades para quitar el **/ robust** cambiar y, a continuación, especifique la **/no_robust** conmutador. Para obtener más información, consulte [páginas de propiedades MIDL: avanzadas](../../ide/midl-property-pages-advanced.md).  
   
-## Vea también  
- [\#define \(Directiva\)](../../preprocessor/hash-define-directive-c-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [#define (directiva) (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

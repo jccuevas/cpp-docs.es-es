@@ -1,43 +1,44 @@
 ---
-title: "fileno | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fileno"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fileno"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "fileno (función)"
+title: fileno | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fileno
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- fileno
+dev_langs:
+- C++
+helpviewer_keywords:
+- fileno function
 ms.assetid: 8f33e1e0-0dc8-4311-b690-ec6e577a64b5
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# fileno
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ed8bcc239e2480c890f15855d568fd9838957214
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-Esta función POSIX está desusada.  En su lugar, use la función [\_fileno](../../c-runtime-library/reference/fileno.md) compatible con ISO C\+\+.
+---
+# <a name="fileno"></a>fileno
+Esta función POSIX está en desuso. En su lugar, use la función [_fileno](../../c-runtime-library/reference/fileno.md), compatible con ISO C++.

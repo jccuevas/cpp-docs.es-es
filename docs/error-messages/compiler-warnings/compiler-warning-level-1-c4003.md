@@ -1,34 +1,37 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4003 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4003"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4003"
+title: Compilador (nivel 1) de la advertencia C4003 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4003
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4003
 ms.assetid: 0ed1c285-4428-4c90-8131-86897e31f115
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Advertencia del compilador (nivel 1) C4003
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0e0ac3c216168ada4f2367adbac509b422aba310
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-warning-level-1-c4003"></a>Compilador C4003 de advertencia (nivel 1)
 no hay suficientes parámetros reales para la macro 'identificador'  
   
- El número de parámetros formales de la definición de macro supera el número de parámetros reales de la macro.  La expansión de macro reemplaza el texto vacío de los parámetros que faltan.  
+ El número de parámetros formales de la definición de macro supera el número de parámetros reales de la macro. Expansión de macro reemplaza el texto vacío para los parámetros que faltan.  
   
- El código siguiente genera el error C4003:  
+ El ejemplo siguiente genera C4003:  
   
 ```  
 // C4003.cpp  

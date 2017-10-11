@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2582 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2582"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2582"
+title: Error del compilador C2582 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2582
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2582
 ms.assetid: ee1b9378-8bcd-4792-b87e-6d7a466d29ed
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Error del compilador C2582
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f210884bcc1fa9519e4f5fef01035356502c527b
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-la función 'función' no está disponible en 'tipo'  
+---
+# <a name="compiler-error-c2582"></a>Error del compilador C2582
+función ' no está disponible en 'type'  
   
  Se intentó asignar a un objeto que no tiene un operador de asignación.  
   
- El código siguiente genera el error C2582:  
+ El ejemplo siguiente genera C2582:  
   
 ```  
 // C2582.cpp  

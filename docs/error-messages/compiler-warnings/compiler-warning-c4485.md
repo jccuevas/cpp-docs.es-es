@@ -1,39 +1,42 @@
 ---
-title: "Advertencia del compilador C4485 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4485"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4485"
+title: Advertencia del compilador C4485 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4485
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Advertencia del compilador C4485
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 435e49a857e3c448ac7e5f7ef00bb9032320aa25
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'función\_de\_reemplazo' : coincide con el método de clase de referencia base 'función\_de\_clase\_base', pero no está marcado como 'new' ni 'override'; se da por supuesto que es 'new' \(y 'virtual'\)  
+---
+# <a name="compiler-warning-c4485"></a>Advertencia del compilador C4485
+'función_de_reemplazo': coincide con el método de clase ref base 'función_de_clase_base', pero no está marcada 'new' u 'override'; se supone 'new' (y 'virtual')  
   
- Un descriptor de acceso reemplaza, con o sin la palabra clave `virtual`, una función de descriptor de acceso a clase base, pero el especificador `override` o `new` no formaba parte de la firma de función de reemplazo.  Agregue el especificador `new` y `override` para resolver esta advertencia.  
+ Reemplaza un descriptor de acceso, con o sin el `virtual` (palabra clave), una función de descriptor de acceso de la clase base, pero la `override` o `new` especificador no formaba parte de la firma de la función de reemplazo. Agregar el `new` o `override` especificador para resolver esta advertencia.  
   
- Para obtener más información, vea [override](../../windows/override-cpp-component-extensions.md) y [new \(nueva ranura en vtable\)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md).  
+ Vea [invalidar](../../windows/override-cpp-component-extensions.md) y [new (nueva ranura en vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) para obtener más información.  
   
- La advertencia C4485 siempre se emite como error.  Utilice la pragma [warning](../../preprocessor/warning.md) para suprimir C4485.  
+ C4485 siempre se emite como un error. Use la [advertencia](../../preprocessor/warning.md) pragma para suprimir C4485.  
   
-## Ejemplo  
- El ejemplo siguiente genera C4485:  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4485  
   
 ```  
 // C4485.cpp  

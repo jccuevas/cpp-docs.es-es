@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 892ce10f7d19266ce45d559ce35bc82946887c52
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c1f358201b36b73e1db41f2f72e1f92deb44f368
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1037"></a>Error irrecuperable C1037
 no se puede abrir el archivo objeto nombreArchivo  
   
- El archivo de objeto especificado por [/Fo](../../build/reference/fo-object-file-name.md) no se puede abrir.  
+ El archivo objeto especificado por [/Fo](../../build/reference/fo-object-file-name.md) no se puede abrir.  
   
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:  
   

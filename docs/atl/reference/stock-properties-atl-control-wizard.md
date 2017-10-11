@@ -1,41 +1,46 @@
 ---
-title: "Propiedades est&#225;ndar, Asistente para controles ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.control.stockprops"
-dev_langs: 
-  - "C++"
+title: "Propiedades estándar, ATL Control Asistente | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- vc.codewiz.class.atl.control.stockprops
+dev_langs:
+- C++
 ms.assetid: b27b0e60-08a6-43f4-ba6e-0a4e45147693
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Propiedades est&#225;ndar, Asistente para controles ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 5d878f0b0c30096e49a317956e083497b31ad2de
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-Esta página del asistente identifica las propiedades estándar que son compatibles con el control.  De forma predeterminada no se identifica ninguna propiedad.  
+---
+# Propiedades estándar, Asistente para controles ATL
+Esta página del asistente identifica las propiedades estándar compatibles con el control. De forma predeterminada, no se identifica ninguna propiedad.  
   
- **No compatible**  
- Indica las propiedades disponibles con las que el control no es compatible actualmente.  
+ **No se admite**  
+ Indica las propiedades disponibles que no se admiten actualmente para el control.  
   
  **Compatible**  
- Indica las propiedades con las que el control es compatible actualmente.  
+ Indica las propiedades que son compatibles actualmente con el control.  
   
 |Botón de transferencia|Descripción|  
-|----------------------------|-----------------|  
-|**\>**|Agrega a la lista **Compatible** el nombre de propiedad seleccionado actualmente en la lista **No admitida**.|  
-|**\>\>**|Agrega a la lista **Compatible** todos los nombres de propiedades disponibles en la lista **No admitida**.|  
-|**\<**|Quita el nombre de propiedad seleccionado actualmente en la lista **Compatible**.|  
-|**\<\<**|Quita todos los nombres de propiedades seleccionados actualmente en la lista **Compatible**.|  
+|---------------------|-----------------|  
+|**>**|Agrega a la **Supported** especifica el nombre de propiedad seleccionado actualmente en el **no admite** lista.|  
+|**>>**|Agrega a la **Supported** lista todos los nombres de propiedades disponibles en la **no admite** lista.|  
+|**<**|Quita el nombre de propiedad seleccionado actualmente en el **Supported** lista.|  
+|**<<**|Quita todos los nombres de propiedad que se muestran actualmente en el **Supported** lista.|  
   
 ## Vea también  
  [Asistente para controles ATL](../../atl/reference/atl-control-wizard.md)
+
+

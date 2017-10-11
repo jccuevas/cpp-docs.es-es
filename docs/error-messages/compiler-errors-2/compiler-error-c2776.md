@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2776 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2776"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2776"
+title: C2776 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2776
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2776
 ms.assetid: 9d80addc-62c7-40fc-a2cc-60303abb87df
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C2776
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5642335519263c3b191d1c14399f3d00f366a8c9
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-sólo se puede especificar un método 'get' por cada propiedad  
+---
+# <a name="compiler-error-c2776"></a>C2776 de Error del compilador
+se puede especificar un solo método 'get' por propiedad  
   
- Sólo se puede especificar una función `get` en el atributo extendido [property](../../cpp/property-cpp.md).  Este error se produce cuando se especifican varias funciones `get`.  
+ Solo se puede especificar uno `get` funcionando en el [propiedad](../../cpp/property-cpp.md) atributo extendido. Este error se produce cuando varias `get` las funciones se especifican.  
   
- El código siguiente genera el error C2776:  
+ El ejemplo siguiente genera C2776:  
   
 ```  
 // C2776.cpp  

@@ -1,5 +1,5 @@
 ---
-title: C3352 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3352 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,25 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: fb65402b78f777d4a2dcfce2a4366444a259e5d9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 65643abc883cfd0674dbb908c8ab26f274f65cd4
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3352"></a>Error del compilador C3352
@@ -45,7 +31,7 @@ ms.lasthandoff: 02/24/2017
   
  Las listas de parámetros para `function` y el delegado no coinciden.  
   
- Para obtener más información, consulte [delegado (extensiones de componentes de C++)](../../windows/delegate-cpp-component-extensions.md).  
+ Para obtener más información, consulte [delegate (extensiones de componentes de C++)](../../windows/delegate-cpp-component-extensions.md).  
   
  El ejemplo siguiente genera C3352:  
   

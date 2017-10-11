@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 7653c1340a10018480043c5cc3a2ececf81d6773
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7682dc0aa8421c7febbc2c8eafe576867ed70ed3
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3036"></a>Error del compilador C3036
 'operator': símbolo (token) de operador no válido en la cláusula 'reduction' de OpenMP  
   
- A [reducción](../../parallel/openmp/reference/reduction.md) cláusula no se especificó correctamente.  
+ Una cláusula [reduction](../../parallel/openmp/reference/reduction.md) no se especificó correctamente.  
   
  El ejemplo siguiente genera la advertencia C3036:  
   

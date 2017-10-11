@@ -1,5 +1,5 @@
 ---
-title: Compilador Error C2259 | Documentos de Microsoft
+title: Error del compilador C2259 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 0837d8f5e48ccf0de0ba8630801667da2ddb6bfa
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 865eea3ed69ea817aafea011e81033f2bd4ca5f4
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2259"></a>Error del compilador C2259
@@ -50,7 +35,7 @@ ms.lasthandoff: 02/24/2017
   
  Para obtener más información, consulte [clases abstractas implícitamente](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes).  
   
- En el ejemplo siguiente genera el error C2259:  
+ El ejemplo siguiente genera el error C2259:  
   
 ```  
 // C2259.cpp  
@@ -77,9 +62,9 @@ B b;  // OK, B defines func()
   
 -   Usar el operador de resolución de ámbito para los métodos de interfaz implementados en la clase derivada para calificar el nombre del método implementado con el nombre de la interfaz.  
   
- Error C2259 también se puede producir como resultado del trabajo de conformidad efectuado en Visual C++ 2005, **/Zc: wchar_t** es ahora de forma predeterminada. En esta situación, se puede resolver compilando con error C2599 **/Zc:wchar_t-**, para obtener el comportamiento de versiones anteriores o, preferiblemente, actualizando los tipos para que sean compatibles. Para obtener más información, vea [/Zc:wchar_t (wchar_t es un tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
+ Error C2259 también se puede producir como resultado del trabajo de conformidad efectuado en Visual C++ 2005, **/Zc: wchar_t** está ahora de forma predeterminada. En esta situación, se puede resolver compilando con C2599 **/Zc:wchar_t-**, para obtener el comportamiento de versiones anteriores, o bien, preferiblemente, actualizando los tipos para que sean compatibles. Para obtener más información, vea [/Zc:wchar_t (wchar_t es un tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   
- En el ejemplo siguiente genera el error C2259:  
+ El ejemplo siguiente genera el error C2259:  
   
 ```  
 // C2259b.cpp  
@@ -117,7 +102,7 @@ public:
 MyClass4 y;  
 ```  
   
- En el ejemplo siguiente genera el error C2259:  
+ El ejemplo siguiente genera el error C2259:  
   
 ```  
 // C2259c.cpp  

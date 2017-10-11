@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C3894 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3894"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3894"
+title: Error del compilador C3894 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3894
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3894
 ms.assetid: 6d5ac903-1dea-431d-8e3a-cebca4342983
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Error del compilador C3894
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 46dffabb57e871e1635738434e7efb4812850379
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'variable': el uso del valor L del miembro de datos estático initonly solamente se permite en el constructor de clase de la clase 'clase'  
+---
+# <a name="compiler-error-c3894"></a>Error del compilador C3894
+'var': solo se permite el uso de valor l del miembro de datos estático initonly en el constructor de clase de la clase 'class'  
   
- Los miembros de datos [initonly](../../dotnet/initonly-cpp-cli.md) estáticos sólo se pueden utilizar como valores L en su punto de declaración o en un constructor estático.  
+ Estática [initonly](../../dotnet/initonly-cpp-cli.md) miembros de datos solo pueden usarse como valores l en su punto de declaración o en un constructor estático.  
   
- Los miembros de datos initonly \(no estáticos\) de instancias sólo se pueden utilizar como valores L en su punto de declaración o en constructores \(no estáticos\) de instancias.  
+ Miembros de datos de instancia initonly (no estáticos) solo pueden usarse como valores l en su punto de declaración o en constructores de instancia (no estáticos).  
   
- El código siguiente genera el error C3894:  
+ El ejemplo siguiente genera C3894:  
   
 ```  
 // C3894.cpp  

@@ -23,32 +23,18 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: fa331e05d647b5e2b9a0a76581e75d6b40366f95
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: a777b3c1ae6056fe4ae414371cbed4eee1accd86
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="win32threadtraits-class"></a>Clase Win32ThreadTraits
 Esta clase proporciona la función de creación de un subproceso de Windows. Utilice esta clase si el subproceso no utiliza funciones de CRT.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -65,15 +51,15 @@ class Win32ThreadTraits
 |[Win32ThreadTraits::CreateThread](#createthread)|(Estático) Llame a esta función para crear un subproceso que no se debe utilizar funciones de CRT.|  
   
 ## <a name="remarks"></a>Comentarios  
- Rasgos de subproceso son clases que proporcionan una función de creación de un tipo particular de subproceso. La función de creación tiene la misma firma y la semántica que las ventanas [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) (función).  
+ Rasgos de subprocesos son clases que proporcionan una función de creación para un tipo determinado de subproceso. La función de creación tiene la misma firma y la semántica que las ventanas [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) función.  
   
- Rasgos de subproceso se utilizan las clases siguientes:  
+ Rasgos de subprocesos son utilizadas por las clases siguientes:  
   
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)  
   
 - [CWorkerThread](../../atl/reference/cworkerthread-class.md)  
   
- Si el subproceso se utilizar funciones de CRT, [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) en su lugar.  
+ Si el subproceso va a utilizar las funciones de CRT, use [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) en su lugar.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
@@ -99,7 +85,7 @@ static HANDLE CreateThread(
  El tamaño de pila para el nuevo subproceso.  
   
  `pfnThreadProc`  
- El procedimiento de subproceso del subproceso nuevo.  
+ El procedimiento de subproceso del nuevo subproceso.  
   
  `pvParam`  
  El parámetro que se pasa al procedimiento de subproceso.  
@@ -108,16 +94,16 @@ static HANDLE CreateThread(
  La creación de marcas (0 o CREATE_SUSPENDED).  
   
  `pdwThreadId`  
- [out] Dirección de la variable DWORD que se ejecuta correctamente, recibe el identificador de subproceso del subproceso recién creado.  
+ [out] Dirección de la variable DWORD que, si se ejecuta correctamente, recibe el identificador del subproceso del subproceso recién creado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve el identificador al subproceso recién creado o NULL en caso de error. Llame a [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) para obtener más información acerca del error.  
+ Devuelve el identificador para el subproceso recién creado o NULL en caso de error. Llame a [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) para obtener información de error extendida.  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) para obtener más información sobre los parámetros para esta función.  
+ Vea [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) para obtener más información sobre los parámetros para esta función.  
   
  Esta función llama a `CreateThread` para crear el subproceso.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

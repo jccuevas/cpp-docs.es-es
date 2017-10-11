@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3141 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3141"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3141"
+title: Error del compilador C3141 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3141
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3141
 ms.assetid: b4fd65c3-50cc-46cd-8de0-6a6d24cb9cda
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C3141
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 00266db4fde48b175b9374ca31a89b15ca13ced2
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'nombre\_de\_interfaz' : las interfaces sólo admiten herencia pública  
+---
+# <a name="compiler-error-c3141"></a>Error del compilador C3141
+'nombre_de_interfaz': interfaces sólo admiten herencia pública  
   
- Las interfaces definidas con la palabra clave [interface \(o \_\_interface\)](../../cpp/interface.md) sólo admiten la herencia pública.  
+ Las interfaces definidas con la [interface (o __interface)](../../cpp/interface.md) palabra clave sólo admiten herencia pública.  
   
- El código siguiente genera el error C3141:  
+ El ejemplo siguiente genera C3141:  
   
 ```  
 // C3141.cpp  

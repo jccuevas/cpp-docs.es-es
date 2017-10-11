@@ -19,37 +19,23 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: c429f81c64b7710b7edc2b8540d98e8c790e4062
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 97937579c12730fecfa89c69d9e7cf51229b5c6c
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
-# <a name="compiler-error-c2026"></a>Error de compilador un error C2026
-cadena demasiado grande; caracteres finales truncados  
+# <a name="compiler-error-c2026"></a>Error de C2026 de Error de compilador
+cadena demasiado grande, caracteres finales truncados  
   
- La cadena sobrepasaba el límite de 16380 caracteres de un solo byte.  
+ La cadena era mayor que el límite de 16380 caracteres de un solo byte.  
   
- Antes de la concatenación de cadenas adyacentes, una cadena no puede tener más de 16380 caracteres de un solo byte.  
+ Antes de la concatenación de cadenas adyacentes, una cadena no puede tener más de 16380 caracteres de byte único.  
   
  Una cadena Unicode de alrededor de la mitad de esta longitud generaría también este error.  
   
- Si tiene una cadena que se define como sigue, generará un error C2026:  
+ Si tiene una cadena que se define como sigue, genera un error C2026:  
   
 ```  
 char sz[] =  
@@ -59,7 +45,7 @@ long string here\
 ";  
 ```  
   
- Se puede dividir como sigue:  
+ Puede dividirla como sigue:  
   
 ```  
 char sz[] =  
@@ -69,4 +55,4 @@ imagine a really, really "
 ";  
 ```  
   
- Puede almacenar los literales de cadenas excepcionalmente largas (32K o más) en un recurso personalizado o un archivo externo. Consulte [crear un nuevo personalizado o recurso de datos](../../windows/creating-a-new-custom-or-data-resource.md) para obtener más información.
+ Puede que desee almacenar los literales de cadena excepcionalmente grande (32 KB o más) en un recurso personalizado o un archivo externo. Vea [crear un recurso de datos o personalizado nuevo](../../windows/creating-a-new-custom-or-data-resource.md) para obtener más información.

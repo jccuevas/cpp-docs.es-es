@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2586 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2586"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2586"
+title: Error del compilador C2586 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2586
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2586
 ms.assetid: dae703c7-5c38-4db6-8411-4d1b22713eb5
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2586
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c98f9a9f5e5f16cec23c8bc6de7efda7a7ce473d
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2586"></a>Error del compilador C2586
 sintaxis de conversión definida por el usuario incorrecta: direccionamientos indirectos no válidos  
   
- El direccionamiento indirecto de un operador de conversión no está permitido.  
+ No se permite el direccionamiento indirecto de un operador de conversión.  
   
- El código siguiente genera el error C2586:  
+ El ejemplo siguiente genera C2586:  
   
 ```  
 // c2586.cpp  

@@ -19,26 +19,11 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 7deb92709adbb5a10148c092985e9a7c9f463c0c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 932f12c5465d08db22c7bac977dfeab94d61f1f4
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4958"></a>Advertencia del compilador C4958
@@ -48,7 +33,7 @@ ms.lasthandoff: 04/12/2017
   
  Para obtener más información, consulte [código puro y comprobable (C++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   
- Esta advertencia se emite como un error y puede deshabilitarse con la [advertencia](../../preprocessor/warning.md) pragma o [/wd](../../build/reference/compiler-option-warning-level.md) opción del compilador.  
+ Esta advertencia se emite como un error y puede deshabilitarse con pragma [warning](../../preprocessor/warning.md) o la opción del compilador [/wd](../../build/reference/compiler-option-warning-level.md) .  
   
  El ejemplo siguiente genera la advertencia C4958:  
   
@@ -65,7 +50,7 @@ int main( ) {
 }  
 ```  
   
- El compilador implementa operaciones de matriz con aritmética de puntero. Por lo tanto, las matrices nativas no son comprobables; use una matriz de CLR en su lugar. Para obtener más información, consulte [matriz](../../windows/arrays-cpp-component-extensions.md).  
+ El compilador implementa operaciones de matriz con aritmética de puntero. Por lo tanto, las matrices nativas no son comprobables; use una matriz de CLR en su lugar. Para obtener más información, vea [Matriz](../../windows/arrays-cpp-component-extensions.md).  
   
  El ejemplo siguiente genera la advertencia C4958:  
   

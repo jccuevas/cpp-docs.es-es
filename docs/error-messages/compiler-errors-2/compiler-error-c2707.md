@@ -1,43 +1,46 @@
 ---
-title: "Error del compilador C2707 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2707"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2707"
+title: C2707 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2707
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Error del compilador C2707
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 46ca756cf6491506cefc38e34992fa5e3fb67429
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'identifier' : contexto incorrecto para la función intrínseca  
+---
+# <a name="compiler-error-c2707"></a>C2707 de Error del compilador
+'identifier': contexto incorrecto para la función intrínseca  
   
- Las funciones intrínsecas del control de excepciones estructurado no son válidas en algunos contextos:  
+ Funciones intrínsecas de control de excepciones estructurados no son válidas en algunos contextos:  
   
--   `_exception_code()` fuera de un filtro de excepción o de un bloque `__except`  
+-   `_exception_code()`fuera de un filtro de excepción o `__except` bloque  
   
--   `_exception_info()` fuera de un filtro de excepción  
+-   `_exception_info()`fuera de un filtro de excepción  
   
--   `_abnormal_termination()`  fuera de un bloque `__finally`  
+-   `_abnormal_termination()`fuera de un `__finally` bloque  
   
  Para resolver el error, asegúrese de que las funciones intrínsecas de control de excepciones se colocan en el contexto adecuado.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C2707.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C2707.  
   
 ```  
 // C2707.cpp  

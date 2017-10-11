@@ -21,29 +21,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 5191327e5e60935829750c7d1e04ba89fcddc771
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 932969a5d06a3bd06755ec60d43b3257a4de9785
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cdefaulthashtraits-class"></a>Clase CDefaultHashTraits
-Esta clase proporciona una función estática para calcular los valores hash.  
+Esta clase proporciona una función estática para calcular los valores de hash.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -65,7 +51,7 @@ class CDefaultHashTraits
 |[CDefaultHashTraits::Hash](#hash)|(Estático) Llame a esta función para calcular un valor hash para un elemento determinado.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase contiene una sola función estática que devuelve un valor hash para un elemento determinado. Esta clase es utilizada por el [CDefaultElementTraits clase](../../atl/reference/cdefaultelementtraits-class.md).  
+ Esta clase contiene una sola función estática que devuelve un valor hash para un elemento determinado. Esta clase se utiliza por la [CDefaultElementTraits clase](../../atl/reference/cdefaultelementtraits-class.md).  
   
  Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).  
   
@@ -84,11 +70,11 @@ static ULONG Hash(const T& element) throw();
  El elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve el valor hash.  
+ Devuelve el valor de hash.  
   
 ### <a name="remarks"></a>Comentarios  
- El algoritmo hash predeterminado es muy sencillo: el valor devuelto es el número de elemento. Reemplace esta función si es necesario un algoritmo más complicado.  
+ El algoritmo hash predeterminado es muy simple: el valor devuelto es el número de elemento. Reemplace esta función si es necesario un algoritmo más complicado.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

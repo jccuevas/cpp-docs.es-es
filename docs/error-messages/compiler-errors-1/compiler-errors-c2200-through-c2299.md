@@ -65,25 +65,11 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: f47a6fe23a8a0bf18f9c5c4399162d836667cab6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 07d87f9828bac1a025f9ac2375c79f29d96a89b4
 ms.contentlocale: es-es
-ms.lasthandoff: 04/28/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-errors-c2200-through-c2299"></a>C2200 de errores del compilador a C2299
@@ -99,7 +85,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2200](compiler-error-c2200.md)|'*función*': ya se ha definido (función)|  
 |[Error del compilador C2201](compiler-error-c2201.md)|'*identificador*': debe tener vinculación externa para exportar e importar|  
 |C2202 de Error del compilador|'*función*': no todas las rutas de acceso de control devuelven un valor|  
-|[Error del compilador C2203](compiler-error-c2203.md)|el operador delete no puede especificar límites para una matriz|  
+|[Error del compilador C2203](compiler-error-c2203.md)|Eliminar operador no puede especificar límites de matriz|  
 |[Error del compilador C2204](compiler-error-c2204.md)|'*tipo*': se encuentra entre paréntesis de definición de tipo|  
 |[Error del compilador C2205](compiler-error-c2205.md)|'*identificador*': no se puede inicializar variables extern con ámbito de bloque|  
 |[Error del compilador C2206](compiler-error-c2206.md)|'*función*': typedef no se puede usar para la definición de función|  
@@ -110,12 +96,12 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |C2211 de Error del compilador|Un destructor no virtual en una clase ref que se deriva de una clase ref con un destructor público también debe ser público|  
 |[Error del compilador C2212](compiler-error-c2212.md)|'*identificador*': __based no está disponible para punteros a funciones|  
 |[Error del compilador C2213](compiler-error-c2213.md)|'*identificador*': argumento no válido para __based|  
-|C2214 de Error del compilador|los punteros basados en 'void' requieren el uso de:>|  
+|C2214 de Error del compilador|los punteros basados en 'void' requieren el uso de: >|  
 |C2215 de Error del compilador|'*palabra clave*' no se puede usar con ' / arch: SSE'|  
 |[Error del compilador C2216](compiler-error-c2216.md)|'*palabraclave1*'no se puede usar con'*palabraclave2*'|  
 |[Error del compilador C2217](compiler-error-c2217.md)|'*atributo1*'requiere'*atributo2*'|  
 |[Error del compilador C2218](compiler-error-c2218.md)|'*calltype*' no se puede usar con ' / arch: IA32'|  
-|[Error del compilador C2219](compiler-error-c2219.md)|error de sintaxis: el calificador de tipo debe estar detrás de '*'|  
+|[Error del compilador C2219](compiler-error-c2219.md)|error de sintaxis: el calificador de tipo debe ser posterior a ' *'|  
 |[Error del compilador C2220](compiler-error-c2220.md)|Advertencia tratada como error - no '*filetype*' archivo generado|  
 |C2221 de Error del compilador|Obsoleto.|  
 |[Error del compilador C2222](compiler-error-c2222.md)|tipo inesperado '*tipo*': se esperaba una clase base o miembro|  
@@ -148,7 +134,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2249](compiler-error-c2249.md)|'*identificador*': ninguna ruta de acceso sea accesible a *accesibilidad* *miembro* declarado en la base virtual '*clase*'|  
 |[Error del compilador C2250](compiler-error-c2250.md)|'*identificador*': herencia ambigua de *clase*::*miembro*'|  
 |[Error del compilador C2251](compiler-error-c2251.md)|espacio de nombres '*espacio de nombres*'no tiene un miembro'*identificador*'-¿Quiso decir '*miembro*'?|  
-|[Error del compilador C2252](compiler-error-c2252.md)|la creación de instancias explícita de una plantilla solo puede tener lugar en el ámbito de espacio de nombres|  
+|[Error del compilador C2252](compiler-error-c2252.md)|creación de instancias explícita de una plantilla solo se puede producir en el ámbito de espacio de nombres|  
 |[Error del compilador C2253](compiler-error-c2253.md)|'*función*': el especificador puro o invalidación abstracto sólo se permite en la función virtual|  
 |[Error del compilador C2254](compiler-error-c2254.md)|'*función*': el especificador puro o invalidación abstracto no se permite en la función friend|  
 |[Error del compilador C2255](compiler-error-c2255.md)|'*elemento*': no se permite fuera de una definición de clase|  
@@ -175,13 +161,13 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2276](compiler-error-c2276.md)|'*operador*': operación no válida en la expresión de función miembro enlazada|  
 |[Error del compilador C2277](compiler-error-c2277.md)|'*función*': no se puede adquirir la dirección de esta función miembro|  
 |C2278 de Error del compilador|Obsoleto.|  
-|[Error del compilador C2279](compiler-error-c2279.md)|la especificación de la excepción no puede aparecer en una declaración de tipo typedef|  
-|[C2280 de Error del compilador](compiler-error-c2280.md)|'*clase*::*función*': intentando hacer referencia a una función eliminada|  
+|[Error del compilador C2279](compiler-error-c2279.md)|especificación de excepción no puede aparecer en una declaración typedef|  
+|[Error del compilador C2280](compiler-error-c2280.md)|'*clase*::*función*': intentando hacer referencia a una función eliminada|  
 |C2281 de Error del compilador|'*clase*::*función*': solo se puede eliminar una función en la primera declaración|  
 |C2282 de Error del compilador|'*function1*'no puede invalidar'*function2*'|  
 |[Error del compilador C2283](compiler-error-c2283.md)|'*identificador*': el especificador puro o invalidación abstracto no se permite en la clase o estructura sin nombre.|  
 |C2284 de Error del compilador|'*función*': argumento no válido para la función intrínseca, parámetro *número*|  
-|[Error del compilador C2285](compiler-error-c2285.md)|la representación de punteros a miembros ya se ha determinado; se ha omitido pragma|  
+|[Error del compilador C2285](compiler-error-c2285.md)|punteros a la representación de los miembros ya se ha determinado - se ha omitido pragma|  
 |[Error del compilador C2286](compiler-error-c2286.md)|punteros a miembros de '*identificador*' representación ya está establecida en *herencia* -se omite la declaración|  
 |[Error del compilador C2287](compiler-error-c2287.md)|'*identificador*': representación de herencia: '*inheritiance*'es menos general que requerido'*herencia*'|  
 |C2288 de Error del compilador|Obsoleto.|  
@@ -194,6 +180,6 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2295](compiler-error-c2295.md)|carácter de escape '*caracteres*': no es válido en la definición de macro|  
 |[Error del compilador C2296](compiler-error-c2296.md)|'*operador*': operando no es válido; tiene el tipo '*tipo*'|  
 |[Error del compilador C2297](compiler-error-c2297.md)|'*operador*': operando no es válido; tiene el tipo '*tipo*'|  
-|[Error del compilador C2298](compiler-error-c2298.md)|llamada perdida a la función de puntero a miembro|  
+|[Error del compilador C2298](compiler-error-c2298.md)|llamada a enlazar el puntero a una función miembro que falta|  
 |[Error del compilador C2299](compiler-error-c2299.md)|'*función*': cambio de comportamiento: una especialización explícita no puede ser un constructor de copias o el operador de asignación de copia|  
 

@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3887 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3887"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3887"
+title: Error del compilador C3887 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3887
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3887
 ms.assetid: a7e82426-ef99-437b-9562-2822004e18fe
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C3887
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7dccbd3a34764eedc53c69ddd69c693cc4782d2a
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'var' : el inicializador de un miembro de datos literal debe ser una expresión constante  
+---
+# <a name="compiler-error-c3887"></a>Error del compilador C3887
+'var': el inicializador de un miembro de datos literal debe ser una expresión constante  
   
- Un miembro de datos [literal](../../windows/literal-cpp-component-extensions.md) sólo se puede inicializar con una expresión constante.  
+ A [literal](../../windows/literal-cpp-component-extensions.md) miembro de datos solo se puede inicializar con una expresión constante.  
   
- El código siguiente genera el error C3887:  
+ El ejemplo siguiente genera C3887:  
   
 ```  
 // C3887.cpp  

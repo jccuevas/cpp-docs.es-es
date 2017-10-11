@@ -1,41 +1,44 @@
 ---
-title: "Error del compilador C3532 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3532"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3532"
+title: Error del compilador C3532 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3532
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Error del compilador C3532
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e78db21d00ea93378358a1147163276fb12bdfd5
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-"tipo": uso incorrecto de "auto"  
+---
+# <a name="compiler-error-c3532"></a>Error del compilador C3532
+'type': uso incorrecto de 'auto'  
   
- El tipo indicado no se puede declarar con la palabra clave `auto`.  Por ejemplo, no se puede usar la palabra clave `auto` para declarar una matriz o un tipo de valor devuelto por un método.  
+ No se puede declarar el tipo indicado con el `auto` palabra clave. Por ejemplo, no puede usar el `auto` palabra clave para declarar una matriz o un método de tipo de valor devuelto.  
   
-### Para corregir este error  
+### <a name="to-correct-this-error"></a>Para corregir este error  
   
 1.  Asegúrese de que la expresión de inicialización genera un tipo válido.  
   
-2.  Asegúrese de no declarar un matriz o un tipo de valor devuelto por un método.  
+2.  Asegúrese de que no se declara una matriz o un tipo de valor devuelto del método.  
   
-## Ejemplo  
- En el ejemplo siguiente se genera el error C3532 porque la palabra clave `auto` no puede declarar un tipo de valor devuelto por un método.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se genera el error C3532 porque el `auto` palabra clave no puede declarar un tipo de valor devuelto del método.  
   
 ```  
 // C3532a.cpp  
@@ -43,8 +46,8 @@ caps.handback.revision: 6
 auto f(){}   // C3532  
 ```  
   
-## Ejemplo  
- En el ejemplo siguiente se genera el error C3532 porque la palabra clave `auto` no puede declarar una matriz.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se genera el error C3532 porque el `auto` palabra clave no puede declarar una matriz.  
   
 ```  
 // C3532b.cpp  
@@ -61,5 +64,5 @@ int main()
 }  
 ```  
   
-## Vea también  
- [auto \(Palabra clave\)](../../cpp/auto-keyword.md)
+## <a name="see-also"></a>Vea también  
+ [Auto (palabra clave)](../../cpp/auto-keyword.md)

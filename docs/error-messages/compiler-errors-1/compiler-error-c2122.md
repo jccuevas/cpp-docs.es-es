@@ -1,29 +1,32 @@
 ---
-title: "Error del compilador C2122 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2122"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2122"
+title: Error del compilador C2122 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2122
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2122
 ms.assetid: bc060002-cd38-481b-a144-65af035ce851
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Error del compilador C2122
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8ac66254cfbb4352c0e40656254fe738e5b8b99e
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'identificador' : el parámetro de prototipos de la lista de nombres no es válido  
+---
+# <a name="compiler-error-c2122"></a>Error del compilador C2122
+'identificador': parámetro de prototipo en permitido de lista de nombre  
   
- El parámetro no es un tipo válido.  ANSI C no admite tipos definidos por el usuario.
+ El parámetro no es un tipo válido. ANSI C no admite tipos definidos por el usuario.

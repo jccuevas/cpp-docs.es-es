@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3190 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3190"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3190"
+title: C3190 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3190
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3190
 ms.assetid: 7c701afa-85a7-4f7a-8881-0662436ac244
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Error del compilador C3190
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 29d85c8a58b20c5a3c4492c56a66591e1509f2c4
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'creación de instancias' con los argumentos de plantilla proporcionados no crea instancias explícitas de ninguna función miembro de 'tipo'  
+---
+# <a name="compiler-error-c3190"></a>C3190 de Error del compilador
+'instancia' con los argumentos de plantilla proporcionados no es la creación de instancias explícita de ninguna función miembro de 'tipo'  
   
- El compilador ha detectado un intento de crear una instancia de una función explícita; sin embargo, los argumentos de tipo proporcionados no coinciden con ninguna de las funciones posibles.  
+ El compilador detectó un intento para realizar una creación de instancias de función explícita; Sin embargo, los argumentos de tipo proporcionado no coincide con cualquiera de las funciones posibles.  
   
- El código siguiente genera el error C3190:  
+ El ejemplo siguiente genera C3190:  
   
 ```  
 // C3190.cpp  

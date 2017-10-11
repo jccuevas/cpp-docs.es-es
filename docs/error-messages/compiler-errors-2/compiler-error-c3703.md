@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3703 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3703"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3703"
+title: Error del compilador C3703 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3703
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3703
 ms.assetid: 7e3677d9-f2be-4c26-998f-423564e9023c
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C3703
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e6ef53628f3a24dd3e6f7f387491fc959d70aa04
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'controlador de eventos': un método de control de eventos debe tener la misma clase de almacenamiento que el origen 'evento'  
+---
+# <a name="compiler-error-c3703"></a>Error del compilador C3703
+'controlador de eventos': un método de controlador de eventos debe tener la misma clase de almacenamiento que el origen 'event'  
   
- Un [evento](../../cpp/event-handling.md) tiene una clase de almacenamiento diferente que la del controlador de eventos al que está enlazado.  Por ejemplo, este error se produce si el controlador de eventos es una función miembro estática y el evento no lo es.  Para corregir este error, dé al evento y al controlador de eventos la misma clase de almacenamiento.  
+ Un [eventos](../../cpp/event-handling.md) tiene una clase de almacenamiento diferente que el controlador de eventos al que está enlazado. Por ejemplo, este error se produce si el controlador de eventos es una función miembro estática y el evento no es estático. Para corregir este error, dé al evento y el controlador de eventos la misma clase de almacenamiento.  
   
- El código siguiente genera el error C3703:  
+ El ejemplo siguiente genera C3703:  
   
 ```  
 // C3703.cpp  

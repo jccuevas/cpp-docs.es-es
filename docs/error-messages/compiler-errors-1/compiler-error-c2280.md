@@ -19,26 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: bec93f1ee238184cbb4eed0d98921fb28e94e222
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af19f0a0c347ab0f898a3a3d72b8cca5cb07dad8
 ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2280"></a>C2280 de Error del compilador  
@@ -136,7 +121,7 @@ void copy(base *p)
 }  
 ```  
 
-## <a name="example-variant-and-volatile-members"></a>Ejemplo: Los miembros de variantes y volatile  
+## <a name="example-variant-and-volatile-members"></a>Ejemplo: Los miembros de tipo Variant y volatile  
   
 Las versiones del compilador antes de Visual Studio 2015 Update 2 eran constructores y destructores para uniones anónimas predeterminados generados y no conformes. Estos ahora se declaran implícitamente como `deleted`. Esas versiones también permiten la definición implícita que no cumple las especificaciones de `default` copiar y constructores de movimiento y `default` copiar y mover los operadores de asignación de clases y estructuras que tienen `volatile` variables de miembro. El compilador ahora tiene en cuenta que tienen constructores no triviales y operadores de asignación y no genera `default` implementaciones. Cuando esta clase es un miembro de una unión o una unión anónima dentro de una clase, los constructores de copia y movimiento y operadores de asignación de copia y movimiento de la unión o clase se definen implícitamente como `deleted`. Para corregir este problema, debe declarar explícitamente las funciones miembro especiales necesarios.  
   

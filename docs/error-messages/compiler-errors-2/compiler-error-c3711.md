@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3711 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3711"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3711"
+title: Error del compilador C3711 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3711
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3711
 ms.assetid: 26d581cc-2153-4ee0-b814-a371184be3e1
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C3711
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0cfc4a2ffbbf65f1a1171a256ce08d5f498887a8
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'método': un método de origen de eventos no administrado debe devolver void o un tipo entero  
+---
+# <a name="compiler-error-c3711"></a>Error del compilador C3711
+'método': un método de origen de eventos no administrado debe devolver void o un tipo integral  
   
- Se ha definido un método en el origen de eventos que no devuelve void ni un tipo entero.  Para resolver este error, haga que tanto el evento como su controlador tengan un tipo de valor devuelto `void` o un tipo entero como `int` o `long`.  
+ Define un método en el origen de eventos que no devuelve void o un tipo entero. Para corregir este error, asegúrese del evento y el controlador de eventos tiene un tipo de valor devuelto de `void` o un tipo entero como `int` o `long`.  
   
- El código siguiente genera el error C3711:  
+ El ejemplo siguiente genera C3711:  
   
 ```  
 // C3711.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2810 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2810"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2810"
+title: Error del compilador C2810 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2810
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2810
 ms.assetid: f63e8f24-d7f6-42ac-904f-72ff49592ba6
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2810
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 80fdc399c5825b9bd625604e7f4366f98b9ee971
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'interfaz' : una interfaz sólo puede heredar de otra interfaz  
+---
+# <a name="compiler-error-c2810"></a>Error del compilador C2810
+'interfaz': una interfaz sólo puede heredar de otra interfaz  
   
- Una interfaz \([interface](../../cpp/interface.md)\) sólo se puede derivar de otra interfaz y no de una clase o struct.  
+ Un [interfaz](../../cpp/interface.md) sólo se puede heredar de otra interfaz y no puede heredar de una clase o struct.  
   
- El código siguiente genera el error C2810:  
+ El ejemplo siguiente genera C2810:  
   
 ```  
 // C2810.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2438 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2438"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2438"
+title: Error del compilador C2438 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2438
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2438
 ms.assetid: 3a0ab3ba-d0e4-4d8f-971d-e503397cc827
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2438
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1771d3c6c241db6430eaa66fece5562a3bc1349a
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-'identificador' : no se pueden inicializar datos de clase estáticos mediante un constructor  
+---
+# <a name="compiler-error-c2438"></a>Error del compilador C2438
+'identificador': no se puede inicializar datos de clase estática mediante un constructor  
   
- Se ha utilizado un constructor para inicializar un miembro estático de una clase.  Los miembros estáticos se deben inicializar en una definición situada fuera de la declaración de clase.  
+ Un constructor se utiliza para inicializar a un miembro estático de una clase. Los miembros estáticos deben inicializarse en una definición fuera de la declaración de clase.  
   
- El código siguiente genera el error C2438:  
+ El ejemplo siguiente genera C2438:  
   
 ```  
 // C2438.cpp  

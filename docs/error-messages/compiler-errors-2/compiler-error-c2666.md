@@ -19,26 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0aa7af12e49f152256c2efe7d16d02e1f1c45f68
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fb6c45ad153a428d090d05c8fa24c05eef024607
 ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2666"></a>C2666: Error de compilador
@@ -68,7 +53,7 @@ int main() {
   
 -   conversión de calificación no es igual que la conversión de identidad  
   
- Para los operadores binarios \<, >, \<=, y > = un pasado parámetro ahora se convierte implícitamente al tipo del operando si el tipo del parámetro define un operador de conversión definida por el usuario para convertir al tipo del operando. Ahora hay posible ambigüedad.  
+ Para los operadores binarios \<, >, \<= y > =, un pasado parámetro ahora se convierte implícitamente al tipo del operando si el tipo del parámetro define un operador de conversión definida por el usuario para convertir al tipo del operando. Ahora hay posible ambigüedad.  
   
  Para el código que es válido en las versiones de Visual Studio .NET de Visual C++ y Visual Studio .NET 2003, llame al operador de clase explícitamente mediante sintaxis de la función.  
   

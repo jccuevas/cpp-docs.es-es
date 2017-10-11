@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2552 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2552"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2552"
+title: Error del compilador C2552 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2552
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Error del compilador C2552
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0e001837ca3d9ea9e5c5db1770188d030e21d7d9
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2552"></a>Error del compilador C2552
 “identificador”: los no agregados no se pueden inicializar con la lista de inicializadores  
   
  El identificador de agregado se inicializó incorrectamente.  
   
- Los [Agregados](../../c-language/initializing-aggregate-types.md) se definen como:  
+ [Agregados](../../c-language/initializing-aggregate-types.md) se definen como:  
   
 -   Matrices  
   
@@ -42,7 +45,7 @@ caps.handback.revision: 12
   
     -   Funciones virtuales  
   
- Además, Visual C\+\+ no permite los tipos de datos en un agregado que contiene constructores.  
+ Además, Visual C++ no permite los tipos de datos en un agregado que contiene constructores.  
   
  Las siguientes son las razones por las que C2552 puede desencadenarse cuando se intenta una inicialización de agregado en un tipo:  
   
@@ -56,7 +59,7 @@ caps.handback.revision: 12
   
 -   Un tipo es una clase ref o una interfaz CLR.  
   
--   El tipo tiene una matriz de dimensión no fija \(matriz cero\) cuyos elementos tienen destructores.  
+-   El tipo tiene una matriz de dimensión no fija (matriz cero) cuyos elementos tienen destructores.  
   
  El código siguiente genera el error C2552:  
   

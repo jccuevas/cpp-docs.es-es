@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3241 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3241"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3241"
+title: Error del compilador C3241 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3241
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3241
 ms.assetid: 2ca14879-bba0-4a23-b22a-72cfff92d6a4
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Error del compilador C3241
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f704b466edc30fe3960ef0e2cedebad692015531
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'método' : 'interfaz' no ha especificado este método  
+---
+# <a name="compiler-error-c3241"></a>Error del compilador C3241
+'método': este método no se ha introducido 'Interface'  
   
- Al reemplazar explícitamente una función, la firma de la función debe coincidir exactamente con la declaración de la función que está siendo reemplazada.  
+ Al reemplazar explícitamente una función, la firma de la función debe coincidir exactamente con la declaración de la función que se va a reemplazar.  
   
- El código siguiente genera el error C3241:  
+ El ejemplo siguiente genera C3241:  
   
 ```  
 // C3241.cpp  

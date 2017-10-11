@@ -1,31 +1,34 @@
 ---
-title: "Error del compilador C2129 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2129"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2129"
+title: Error del compilador C2129 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2129
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2129
 ms.assetid: 21a8223e-1d22-4baa-9ca1-922b7f751dd0
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C2129
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e2c5bd1b79960f83ef6effeb064375d6b49e8f20
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-función static 'función' declarada pero no definida  
+---
+# <a name="compiler-error-c2129"></a>Error del compilador C2129
+función estática 'function' declarada pero no definida  
   
- Se ha realizado una referencia adelantada a una función `static` sin definir.  
+ Se hace referencia directa a un `static` función que nunca se define.  
   
- Las funciones `static` deben estar definidas en el ámbito del archivo.  Si se definen en otro archivo, deberán declararse como `extern`.
+ Un `static` función debe estar definida dentro de ámbito de archivo. Si la función se define en otro archivo, se debe declarar `extern`.

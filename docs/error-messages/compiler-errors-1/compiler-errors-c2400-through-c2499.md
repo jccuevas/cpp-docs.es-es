@@ -41,25 +41,11 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: bd3572d2941f911f10c067a24dd4e7323c3c3f8c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c6d0fde64db90c53e5a745551e378000f898fe7e
 ms.contentlocale: es-es
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>: De errores del compilador C2400 a C2499
@@ -77,7 +63,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2402](compiler-error-c2402.md)|'*identificador*': registro debe ser de índice en '*contexto*'|  
 |[Error del compilador C2403](compiler-error-c2403.md)|'*identificador*': registro debe ser base/índice en '*contexto*'|  
 |[Error del compilador C2404](compiler-error-c2404.md)|'*identificador*': registro no válido en '*contexto*'|  
-|[Error del compilador C2405](compiler-error-c2405.md)|referencia adelantada corta no válida con desplazamiento|  
+|[Error del compilador C2405](compiler-error-c2405.md)|ilegal referencia adelantada corta con desplazamiento|  
 |[Error del compilador C2406](compiler-error-c2406.md)|'*identificador*': nombre no definido en '*contexto*'|  
 |[Error del compilador C2407](compiler-error-c2407.md)|Registro 'float' no válido en '*contexto*'|  
 |[Error del compilador C2408](compiler-error-c2408.md)|tipo no válido en el operador PTR en '*contexto*'|  
@@ -120,7 +106,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2446](compiler-error-c2446.md)|'*operador*': no hay conversión de '*type_1*'to'*type_2*'|  
 |[Error del compilador C2447](compiler-error-c2447.md)|' {': falta el encabezado de función (¿lista formal de estilo anterior?)|  
 |[Error del compilador C2448](compiler-error-c2448.md)|'*identificador*': inicializador de estilo de función parece ser una definición de función|  
-|[Error del compilador C2449](compiler-error-c2449.md)|se encontró '{' en el ámbito de archivo (¿falta el encabezado de función?)|  
+|[Error del compilador C2449](compiler-error-c2449.md)|¿se encontró ' {' en el ámbito de archivo (encabezado de función que faltan)?|  
 |[Error del compilador C2450](compiler-error-c2450.md)|cambiar la expresión de tipo '*tipo*' no es válido|  
 |[Error del compilador C2451](compiler-error-c2451.md)|expresión condicional de tipo '*tipo*' no es válido|  
 |[Error del compilador C2452](compiler-error-c2452.md)|'*tipo*': tipo de origen no válido para safe_cast|  
@@ -139,7 +125,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2466](compiler-error-c2466.md)|no se puede asignar una matriz de tamaño constante 0|  
 |[Error del compilador C2467](compiler-error-c2467.md)|declaración no válida de anónimo '*user_defined_type*'|  
 |C2468 de Error del compilador|constructor no puede ser 'constexpr' en una clase o struct con clases base virtuales|  
-|[Error del compilador C2469](compiler-error-c2469.md)|'new': no puede asignar objetos 'void'|  
+|[Error del compilador C2469](compiler-error-c2469.md)|'new': no se puede asignar objetos 'void'|  
 |[Error del compilador C2470](compiler-error-c2470.md)|'*función*': parece una definición de función, pero no hay ningún parámetro lista; omitiendo cuerpo aparente|  
 |[Error del compilador C2471](compiler-error-c2471.md)|no se puede actualizar la base de datos de programa '*filename*'|  
 |[Error del compilador C2472](compiler-error-c2472.md)|'*función*' no se puede generar en código administrado: '*mensaje*'; compile con /clr para generar una imagen mixta|  
@@ -154,14 +140,14 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2482](compiler-error-c2482.md)|'*identificador*': la inicialización dinámica de datos locales de subproceso no se permite en código administrado o WINRT|  
 |[Error del compilador C2483](compiler-error-c2483.md)|'*identificador*': objeto con destructor o un tipo no agregada no pueden declararse con una duración de almacenamiento subproceso en código administrado o WINRT|  
 |[Error del compilador C2485](compiler-error-c2485.md)|'*identificador*': atributo extendido no reconocido|  
-|[Error del compilador C2486](compiler-error-c2486.md)|'__LOCAL_SIZE' solo se permite en la función con el atributo 'naked'|  
+|[Error del compilador C2486](compiler-error-c2486.md)|'__LOCAL_SIZE' sólo se permite en la función con el atributo 'naked'|  
 |[Error del compilador C2487](compiler-error-c2487.md)|'*identificador*': miembro de clase de interfaz dll no se puede declarar con la interfaz dll|  
 |[Error del compilador C2488](compiler-error-c2488.md)|'*identificador*': 'naked' sólo se puede aplicar a las definiciones de función no miembro|  
 |[Error del compilador C2489](compiler-error-c2489.md)|'*identificador*': no se permite en el ámbito de función en la función 'naked' una variable auto o register inicializada|  
 |[Error del compilador C2490](compiler-error-c2490.md)|'*palabra clave*' no se permite en la función con atributo 'naked'|  
 |[Error del compilador C2491](compiler-error-c2491.md)|'*identificador*': definición de dllimport *función* no permitido|  
 |[Error del compilador C2492](compiler-error-c2492.md)|'*variable*': datos con duración de almacenamiento de subprocesos no pueden tener una interfaz dll|  
-|[Error del compilador C2493](compiler-error-c2493.md)|formato de __based no válido|  
+|[Error del compilador C2493](compiler-error-c2493.md)|formato no válido de __based|  
 |[Error del compilador C2494](compiler-error-c2494.md)|'*palabra clave*' no se puede llamar desde dentro de una expresión de filtro o \_ \_bloque finally/finally|  
 |[Error del compilador C2495](compiler-error-c2495.md)|'*identificador*': '__declspec(noexcept)' solo puede aplicarse a definiciones o declaraciones de función|  
 |[Error del compilador C2496](compiler-error-c2496.md)|'*identificador*': 'selectany' solo puede aplicarse a los elementos de datos con vinculación externa|  

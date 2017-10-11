@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3705 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3705"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3705"
+title: Error del compilador C3705 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3705
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3705
 ms.assetid: 8361017d-5782-4214-a9d7-e9825fd29bc8
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C3705
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ba08854d9d9ac6f0e644a64a80133b1d8b70a167
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'función' : no se puede encontrar la interfaz de eventos  
+---
+# <a name="compiler-error-c3705"></a>Error del compilador C3705
+'función': no se puede encontrar la interfaz de eventos  
   
- Se debe definir una interfaz de eventos para poder utilizar eventos COM.  Observe que las líneas `#include` de los archivos de encabezado ATL que se muestran en el ejemplo de abajo son necesarias para utilizar eventos COM.  Para resolver este error, quite el código de comentario de la definición de la interfaz `IEvents` en el código de ejemplo.  
+ Debe definir una interfaz de eventos para usar eventos COM. Tenga en cuenta que el `#include` son necesarias para el uso de eventos COM líneas de los archivos de encabezado ATL se muestra en el ejemplo siguiente. Para corregir este error, quite el comentario de la definición de la `IEvents` interfaz en el código de ejemplo.  
   
- El código siguiente genera el error C3705:  
+ El ejemplo siguiente genera C3705:  
   
 ```  
 // C3705.cpp  

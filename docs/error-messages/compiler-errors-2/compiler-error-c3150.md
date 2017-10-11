@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: e0531a471bbaf43ad82b2c51ac11dd0a4aeff54c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 283bd2f529f465c227757da2a9ff2cd63bf878ab
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3150"></a>C3150 de Error del compilador
-'elemento': 'atributo' sólo se puede aplicar a una clase, interfaz, matriz o puntero  
+'element': 'atributo' sólo se puede aplicar a una clase, interfaz, matriz o puntero  
   
-`__gc`sólo puede utilizarse en una clase, interfaz o matriz.  
+`__gc`solo puede usarse en una clase, interfaz o matriz.  
   
  Solo es accesible mediante la opción del compilador obsoleta C3150 **/CLR: oldSyntax**.  
 

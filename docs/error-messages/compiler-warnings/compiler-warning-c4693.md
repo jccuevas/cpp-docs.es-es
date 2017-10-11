@@ -1,5 +1,5 @@
 ---
-title: C4693 de advertencia del compilador | Documentos de Microsoft
+title: Advertencia del compilador C4693 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0a2262d559f9771dc2ba4286e675de1bdea6c9ee
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bd881645b36e29be987850c1ceb9f3b4fd35b9d
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4693"></a>Advertencia del compilador C4693
 'class': una clase abstracta sealed no puede tener miembros de instancia 'Test'  
   
- Si un tipo se marca [sellado](../../windows/sealed-cpp-component-extensions.md) y [abstracta](../../windows/abstract-cpp-component-extensions.md), puede tener sólo miembros estáticos.  
+ Si un tipo se marca [sellado](../../windows/sealed-cpp-component-extensions.md) y [abstracta](../../windows/abstract-cpp-component-extensions.md), sólo puede tener miembros estáticos.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera la advertencia C4693.  

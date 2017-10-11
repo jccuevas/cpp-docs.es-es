@@ -1,37 +1,40 @@
 ---
-title: "Error del compilador C2749 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2749"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2749"
+title: C2749 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2749
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2749
 ms.assetid: a81aef36-cdca-4d78-89d5-b72eff2500b2
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2749
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 23eb174bd161f14351fae18ae4aba72f427da4ed
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'tipo' : solamente puede producir o detectar el identificador a una clase administrada con \/clr:safe  
+---
+# <a name="compiler-error-c2749"></a>C2749 de Error del compilador
+'type': solamente puede producir o detectar el identificador a una clase administrada con/CLR: safe  
   
- Al utilizar **\/clr:safe**, sólo puede producir o detectar un tipo de referencia.  
+ Cuando se usa **/CLR: safe**, solo se puede producir o detectar un tipo de referencia.  
   
- Para obtener más información, vea [\/clr \(Compilación de Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Para obtener más información, consulte [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Ejemplo  
- El código siguiente genera el error C2749:  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C2749:  
   
 ```  
 // C2749.cpp  

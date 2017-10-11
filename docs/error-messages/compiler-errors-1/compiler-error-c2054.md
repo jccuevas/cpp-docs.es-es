@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C2054 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2054"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2054"
+title: C2054 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2054
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2054
 ms.assetid: 37f7c612-0d7d-4728-9e67-ac4160555f48
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C2054
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1ab12a8395f3587f0fbdca5ad821cd9ec2241d25
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-se esperaba '\(' a continuación de 'identificador'  
+---
+# <a name="compiler-error-c2054"></a>C2054 de Error del compilador
+se esperaba ' (' seguir 'identifier'  
   
- El identificador de función se utiliza en un contexto que requiere paréntesis.  
+ Identificador de la función se utiliza en un contexto que requiere paréntesis.  
   
- Este error puede producirse por omitir un signo igual \(\=\) en una inicialización compleja.  
+ Este error puede deberse a la omisión de un signo igual (=) en una inicialización compleja.  
   
- El código siguiente genera el error C2054:  
+ El ejemplo siguiente genera C2054:  
   
 ```  
 // C2054.c  

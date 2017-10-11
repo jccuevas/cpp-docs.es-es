@@ -1,29 +1,32 @@
 ---
-title: "Error del compilador C2784 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2784"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2784"
+title: Compilador Error C2784 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2784
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2784
 ms.assetid: 3d761fe2-881c-48bd-afae-e2e714e20473
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Error del compilador C2784
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c65b03e098b1e0917e554052ee3c8ebfa7181193
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2784"></a>Compilador Error C2784
 'declaration' : no se pudo deducir el argumento de plantilla para 'type' de 'type'  
   
  El compilador no puede determinar un argumento de plantilla a partir de los argumentos de función proporcionados.  

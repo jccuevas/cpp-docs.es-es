@@ -24,25 +24,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: a06af7698afb24c1c2391b762673c7e3633018d4
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 8680fc73480fd95c8b2d613f716868d8162a96c8
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="celementtraitsbase-class"></a>Clase CElementTraitsBase
@@ -65,7 +51,7 @@ class CElementTraitsBase
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[CElementTraitsBase::INARGTYPE](#inargtype)|Tipo de datos que se va a usar para agregar elementos al objeto de la clase de colección.|  
+|[CElementTraitsBase::INARGTYPE](#inargtype)|El tipo de datos que se usará para agregar elementos al objeto de clase de colección.|  
 |[CElementTraitsBase::OUTARGTYPE](#outargtype)|El tipo de datos que se usará para recuperar los elementos de objeto de la clase de colección.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
@@ -76,7 +62,7 @@ class CElementTraitsBase
 |[CElementTraitsBase::RelocateElements](#relocateelements)|Llame a este método para cambiar la posición de elementos almacenados en un objeto de clase de colección.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase base define métodos para copiar y reubicación de elementos en una clase de colección. Se utilizan las clases de [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), y [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
+ Esta clase base define métodos para copiar y cambiar la ubicación de elementos en una clase de colección. Se utiliza por las clases de [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), y [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
   
  Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).  
   
@@ -104,7 +90,7 @@ static void CopyElements(
  Número de elementos que se van a copiar.  
   
 ### <a name="remarks"></a>Comentarios  
- Los elementos de origen y de destino no deben superponerse.  
+ No deben superponerse a los elementos de origen y de destino.  
   
 ##  <a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
  El tipo de datos que se usará para agregar elementos a la colección.  
@@ -132,17 +118,17 @@ static void RelocateElements(
   
 ### <a name="parameters"></a>Parámetros  
  `pDest`  
- Puntero al primer elemento que va a recibir los datos trasladados.  
+ Puntero al primer elemento que va a recibir los datos reubicados.  
   
  `pSrc`  
- Puntero al primer elemento para cambiar de posición.  
+ Puntero al primer elemento para cambiar la posición.  
   
  `nElements`  
- El número de elementos que se va a cambiar la posición.  
+ El número de elementos que se va a cambiar la ubicación.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método llama a [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), que es suficiente para la mayoría de los tipos de datos. Si los objetos que se mueven contienen punteros a sus propios miembros, necesitará invalidar este método.  
+ Este método llama a [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), lo que es suficiente para la mayoría de los tipos de datos. Si los objetos que se mueven contienen punteros a sus propios miembros, este método deberá reemplazarse.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la clase](../../atl/atl-class-overview.md)
+ [Información general de clases](../../atl/atl-class-overview.md)
 

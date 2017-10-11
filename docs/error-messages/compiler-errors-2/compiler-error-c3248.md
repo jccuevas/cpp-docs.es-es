@@ -1,5 +1,5 @@
 ---
-title: C3248 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3248 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 017e0f42e4e29b07600b5502362b4a60bdf906d9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a1cc7f831a1071e19f7009037e142c385904ea7f
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3248"></a>Error del compilador C3248
 'function1': la función declarada como '__sealed' no se puede reemplazar por 'function2'  
   
-Una clase derivada intentó reemplazar un **__sealed** método virtual.  
+Una clase derivada intentó reemplazar un método virtual **__sealed** .  
   
 Solo es accesible mediante la opción del compilador obsoleta C3248 **/CLR: oldSyntax**.  
 

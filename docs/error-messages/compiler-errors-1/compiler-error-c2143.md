@@ -1,5 +1,5 @@
 ---
-title: Compilador Error C2143 | Documentos de Microsoft
+title: Error del compilador C2143 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,21 @@ caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: faa9361da0091ec86628af19a03eadb133ea43cc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31ea645b9dd22fd15bbf4695935482d899a13386
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2143"></a>Error del compilador C2143
-error de sintaxis: falta 'símbolo1' delante de 'símbolo2'  
+error de sintaxis: falta 'token1' delante de 'token2'  
   
- El compilador esperaba un token específico (es decir, un elemento de lenguaje que no sea un espacio en blanco) y encuentra otro token en su lugar.  
+ El compilador esperaba un token específico (es decir, un elemento del lenguaje que no sea un espacio en blanco) y encuentra otro token en su lugar.  
   
- Para obtener información acerca de este error cuando se produce cuando se usa un bloque try de función, consulte [el artículo de Knowledge Base 241706](http://support.microsoft.com/kb/241706).  
+ Para obtener información sobre este error cuando se produce cuando se usa un bloque try de función, vea [el artículo de Knowledge Base 241706](http://support.microsoft.com/kb/241706).  
   
- Compruebe el [referencia del lenguaje C++](../../cpp/cpp-language-reference.md) para determinar que el código es sintácticamente incorrecto. Porque el compilador puede informar de este error después de encontrar la línea que causa el problema, compruebe varias líneas de código anteriores al error.  
+ Compruebe el [referencia del lenguaje C++](../../cpp/cpp-language-reference.md) para determinar donde el código es sintácticamente incorrecto. Dado que el compilador puede notificar este error después de que encuentre la línea que causa el problema, compruebe varias líneas de código que preceden el error.  
   
  C2143 puede producirse en diversas situaciones.  
   
@@ -65,7 +50,7 @@ class MyClass
   
 ```  
   
- De forma predeterminada, C++ supone que `Ty::PutFuncType` no es una plantilla; por lo tanto, la siguiente `<` se interpreta como un menor-que el inicio de sesión.  Debe indicar al compilador explícitamente que `PutFuncType` es una plantilla para que pueda analizar correctamente el corchete angular de cierre. Para corregir este error, utilice el `template` (palabra clave) en el nombre del tipo dependientes, como se muestra aquí:  
+ De forma predeterminada, C++ supone que `Ty::PutFuncType` no es una plantilla; por lo tanto, los siguientes `<` se interpreta como una menor-que el inicio de sesión.  Debe indicar al compilador explícitamente que `PutFuncType` es una plantilla para que pueda analizar correctamente el corchete angular de cierre. Para corregir este error, utilice el `template` palabra clave en nombre del tipo dependientes, como se muestra aquí:  
   
 ```cpp  
 class MyClass  
@@ -78,7 +63,7 @@ class MyClass
   
 ```  
   
- Error C2143 puede producirse cuando **/CLR** se utiliza y un `using` directiva tiene un error de sintaxis:  
+ Error C2143 puede producirse cuando **/CLR** se utiliza y una `using` directiva tiene un error de sintaxis:  
   
 ```cpp  
 // C2143a.cpp  
@@ -87,7 +72,7 @@ using namespace System.Reflection;   // C2143
 using namespace System::Reflection;  
 ```  
   
- También puede producirse cuando intenta compilar un archivo de código fuente utilizando sintaxis CLR sin usar también **/CLR**:  
+ También puede producirse cuando se intenta compilar un archivo de código fuente utilizando sintaxis CLR sin usar también **/CLR**:  
   
 ```cpp  
 // C2143b.cpp  
@@ -101,7 +86,7 @@ int main() {
 }  
 ```  
   
- El primer carácter no espacios en blanco que sigue un `if` instrucción debe ser un paréntesis izquierdo. El compilador no puede traducir nada:  
+ El primer carácter no espacios en blanco que sigue a un `if` instrucción debe ser un paréntesis izquierdo. El compilador no puede convertir cualquier otra cosa:  
   
 ```cpp  
 // C2143c.cpp  
@@ -116,7 +101,7 @@ int main() {
 }  
 ```  
   
- C2143 puede producirse cuando está en la línea donde se detectó el error falta una llave de cierre, un paréntesis o un punto y coma o en una de las líneas justo encima de:  
+ C2143 puede producirse cuando una llave de cierre, un paréntesis o un punto y coma falta en la línea donde se detectó el error o en una de las líneas inmediatamente anteriores:  
   
 ```cpp  
 // C2143d.cpp  
@@ -139,7 +124,7 @@ class + {};   // C2143 + is an invalid tag name
 class ValidName {};   // OK  
 ```  
   
- O bien, si una etiqueta no está conectada a una instrucción. Si debe colocar una etiqueta por sí mismo, por ejemplo, al final de una instrucción compuesta, adjuntarla a una instrucción nula:  
+ O bien, si una etiqueta no está conectada a una instrucción. Si se debe colocar una etiqueta por sí solo, por ejemplo, al final de una instrucción compuesta, adjuntarla a una instrucción null:  
   
 ```cpp  
 // C2143f.cpp  
@@ -153,7 +138,7 @@ void func1() {
 }  
 ```  
   
- El error puede producirse cuando se realiza una llamada incompleta a un tipo en la biblioteca estándar de C++:  
+ El error puede producirse cuando se realiza una llamada sin calificar a un tipo en la biblioteca estándar de C++:  
   
 ```cpp  
 // C2143g.cpp  
@@ -182,7 +167,7 @@ X<T>::Y X<T>::memFunc() {   // C2143
 }  
 ```  
   
- O bien, si intenta definir una creación de instancias explícita:  
+ O bien, si se intenta definir una creación de instancias explícita:  
   
 ```cpp  
 // C2143i.cpp  
@@ -195,7 +180,7 @@ template void PrintType(float i, float j){}   // C2143
 template void PrintType(float i, float j);   // OK  
 ```  
   
- En un programa de C, las variables deben declararse al principio de la función y no se puede declarar después de las instrucciones de declaración no ejecuta la función.  
+ En un programa C, las variables deben declararse al principio de la función y no pueden declararse después de la función ejecuta las instrucciones de declaración no.  
   
 ```C  
 // C2143j.c  

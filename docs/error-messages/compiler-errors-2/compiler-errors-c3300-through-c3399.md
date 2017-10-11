@@ -113,25 +113,11 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: cd62452e19eb25e4b5911a44cc3558a3fd154c6f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 58f9d6de7b350a4d03f0f938d459bcd50c390ca2
 ms.contentlocale: es-es
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3300-through-c3399"></a>C3300 de errores del compilador a través de la advertencia C3399
@@ -155,7 +141,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |C3308 de Error del compilador|' *función*': directa no se admite la llamada a través de la clase importada|  
 |[Error del compilador C3309](compiler-error-c3309.md)|'*macro*/*palabra clave*': nombre de módulo no puede ser una macro ni una palabra clave|  
 |C3310 de Error del compilador|'*identificador*': conflicto de nombres de módulo|  
-|C3311 de Error del compilador|se debe definir un atributo de módulo en un ámbito global|  
+|C3311 de Error del compilador|atributo de módulo debe definirse en el ámbito global|  
 |C3312 de Error del compilador|no se puede llamar '*identificador*'función encuentra para el tipo'*tipo*'|  
 |C3313 de Error del compilador|'*identificador*': variable no puede tener el tipo '*tipo*'|  
 |C3314 de Error del compilador|'*símbolo*': no un tipo de módulo IDL admitido|  
@@ -165,9 +151,9 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |C3318 de Error del compilador|'*tipo*': una matriz no puede tener un tipo de elemento que contiene 'auto'|  
 |C3319 de Error del compilador|Obsoleto.|  
 |[Error del compilador C3320](compiler-error-c3320.md)|'*tipo*': tipo no puede tener el mismo nombre que la propiedad de módulo 'name'|  
-|C3321 de Error del compilador|en este contexto no se espera ninguna lista de inicializadores|  
+|C3321 de Error del compilador|una lista de inicializadores es inesperada en este contexto|  
 |[Error del compilador C3322](compiler-error-c3322.md)|'*propiedad*': no es una propiedad válida para el atributo '*atributo*'|  
-|C3323 de Error del compilador|'alignas' y '__declspec(align)' no se permiten en declaraciones de función |  
+|C3323 de Error del compilador|'alignas' y '__declspec (Align)' no se permiten en las declaraciones de función|  
 |C3324 de Error del compilador|'*propiedad*': propiedad aparece más de una vez en el atributo '*atributo*'|  
 |C3325 de Error del compilador|'*atributo*': el atributo tiene demasiados argumentos|  
 |C3326 de Error del compilador|'*valor*': no es un valor válido para la propiedad '*propiedad*'del atributo'*atributo*'|  
@@ -180,10 +166,10 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C3333](compiler-error-c3333.md)|'*biblioteca*': #import biblioteca de tipos dañada no se puede|  
 |[Error del compilador C3334](compiler-error-c3334.md)|una biblioteca de tipos dañada no se puede importar (#import)|  
 |C3335 de Error del compilador|'*identificador*': puede haber a lo sumo una interfaz predeterminada para una coclase*clase*'|  
-|C3336 de Error del compilador|Esta operación se debe realizar en un ámbito de clase|  
+|C3336 de Error del compilador|Esta operación debe realizarse en el ámbito de clase|  
 |C3337 de Error del compilador|'*identificador*': defaultvtable debe ser un origen de eventos para una coclase*clase*'|  
 |C3338 de Error del compilador|'*identificador*': puede haber a lo sumo una interfaz predeterminada que sea también un origen de eventos para una coclase*clase*'|  
-|C3339 de Error del compilador|El parámetro template de la plantilla requiere que introduzca "class" o "typename" después de la lista de parámetros|  
+|C3339 de Error del compilador|parámetro de plantilla requiere 'class' o 'typename' después de la lista de parámetros|  
 |[Error del compilador C3340](compiler-error-c3340.md)|'*identificador*': interfaz no puede ser 'restricted' y 'default' en la coclase*clase*'|  
 |C3341 de Error del compilador|'*interfaz*': una interfaz defaultvtable debe ser 'dual' o 'custom'|  
 |[Error del compilador C3342](compiler-error-c3342.md)|'*identificador*': atributo ambiguo|  
@@ -221,7 +207,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C3374](compiler-error-c3374.md)|no se puede adquirir la dirección de ' *función*' a menos que la creación de instancia del delegado|  
 |[Error del compilador C3375](compiler-error-c3375.md)|'*función*': función delegada ambigua|  
 |C3376 de Error del compilador|'*plantilla*': se permiten solo plantillas de miembro de datos estáticos|  
-|C3377 de Error del compilador|'decltype(auto)' no se permite en una expresión new|  
+|C3377 de Error del compilador|no se permite 'decltype (Auto)' en una expresión new|  
 |C3378 de Error del compilador|una declaración se pueden exportar sólo desde una unidad de interfaz de módulo|  
 |[Error del compilador C3379](compiler-error-c3379.md)|'*clase*': una clase anidada no puede tener un especificador de acceso de ensamblado como parte de su declaración|  
 |[Error del compilador C3380](compiler-error-c3380.md)|'*especificador*': especificador de acceso al ensamblado no válido se permite 'public' o 'private'|  
@@ -240,7 +226,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C3393](compiler-error-c3393.md)|error de sintaxis en la cláusula de restricción: '*identificador*' no es un tipo|  
 |[Error del compilador C3394](compiler-error-c3394.md)|error de sintaxis en la cláusula de restricción: se encontró '*símbolo*' se esperaba un tipo.|  
 |[Error del compilador C3395](compiler-error-c3395.md)|' *función*': __declspec (dllexport) no se puede aplicar a una función con la convención de llamada __clrcall|  
-|[Error del compilador C3396](compiler-error-c3396.md)|'*class*. *miembro*': atributo personalizado no se encuentra en '*espacio de nombres*'|  
+|[Error del compilador C3396](compiler-error-c3396.md)|'*clase*. *miembro*': atributo personalizado no se encuentra en '*espacio de nombres*'|  
 |[Error del compilador C3397](compiler-error-c3397.md)|No se permite la inicialización de agregado en argumentos predeterminados|  
 |[Error del compilador C3398](compiler-error-c3398.md)|'*operador*': no se puede convertir de '*tipo*'to'*tipo*'. La expresión de origen debe ser un símbolo de función|  
 |[Error del compilador C3399](compiler-error-c3399.md)|'*tipo*': no se puede proporcionar argumentos cuando se crea una instancia de un parámetro genérico|  

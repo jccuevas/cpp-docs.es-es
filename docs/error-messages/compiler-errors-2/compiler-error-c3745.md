@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C3745 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3745"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3745"
+title: Error del compilador C3745 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3745
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3745
 ms.assetid: 1e64aec5-7e53-47e5-bc7d-3905230cfc66
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C3745
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 330e9c62e2235e1f352b64d1f236423d6786cc1d
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'función': sólo un evento se puede provocar mediante '\_\_raised'  
+---
+# <a name="compiler-error-c3745"></a>Error del compilador C3745
+'función': solo genera un evento puede ser' '  
   
- Sólo una función definida con la palabra clave [\_\_event](../../cpp/event.md) puede pasarse a la palabra clave [\_\_raise](../../cpp/raise.md).  
+ Sólo una función definida con la [__event](../../cpp/event.md) palabra clave puede pasarse a la [__raise](../../cpp/raise.md) palabra clave.  
   
- El código siguiente genera el error C3745:  
+ El ejemplo siguiente genera C3745:  
   
 ```  
 // C3745.cpp  

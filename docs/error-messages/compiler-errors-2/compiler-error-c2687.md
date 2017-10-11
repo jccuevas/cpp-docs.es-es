@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2687 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2687"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2687"
+title: C2687 de Error del compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2687
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2687
 ms.assetid: 1d24b24a-cd0f-41cc-975c-b08dcfb7f402
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2687
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6e74167bcc9637d2d9f0c39d0d3d36f960db5efa
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'tipo' : la declaración de excepción no puede ser 'void' o denotar un tipo, puntero o referencia incompleta a un tipo incompleto  
+---
+# <a name="compiler-error-c2687"></a>C2687 de Error del compilador
+'type': declaración de excepción no puede ser 'void' o denotar un tipo incompleto, puntero o referencia a un tipo incompleto  
   
- Para que un tipo sea parte de una declaración de excepción, debe estar definido y no ser void.  
+ Para que un tipo que forme parte de una declaración de excepción, debe ser definida y no es void.  
   
- El código siguiente genera el error C2687:  
+ El ejemplo siguiente genera C2687:  
   
 ```  
 // C2687.cpp  

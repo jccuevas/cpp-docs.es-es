@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2570 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2570"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2570"
+title: Error del compilador C2570 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2570
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2570
 ms.assetid: d65d0b32-2fac-464a-bcdf-0ebcedf3bf32
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2570
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6b5d53463e889504f202b7d50b8c5ac877f27cf8
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'identificador' : union no puede tener clases base  
+---
+# <a name="compiler-error-c2570"></a>Error del compilador C2570
+'identificador': union no puede tener clases base  
   
- Una unión se deriva de una clase, estructura o unión.  Esto no está permitido.  En su lugar, declare el tipo derivado como una clase o estructura.  
+ Una unión se deriva de una clase, estructura o unión. Esto no está permitido. Declare el tipo derivado como una clase o estructura en su lugar.  
   
- El código siguiente genera el error C2570:  
+ El ejemplo siguiente genera C2570:  
   
 ```  
 // C2570.cpp  

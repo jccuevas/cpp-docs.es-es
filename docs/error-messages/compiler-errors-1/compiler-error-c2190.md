@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2190 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2190"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2190"
+title: Error del compilador C2190 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2190
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2190
 ms.assetid: 34e15f85-d979-4948-80fc-46c414508a70
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2190
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d004d5a80e6907695f742faf6573c348662a479b
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-la primera lista de parámetros es más larga que la segunda  
+---
+# <a name="compiler-error-c2190"></a>Error del compilador C2190
+primera lista de parámetros más de segundo  
   
- Se ha declarado a una función de C por segunda vez con una lista de parámetros más corta.  C no admite funciones sobrecargadas.  
+ Una función de C se ha declarado una segunda vez con una lista de parámetros más corta. C no admite funciones sobrecargadas.  
   
- El código siguiente genera el error C2190:  
+ El ejemplo siguiente genera C2190:  
   
 ```  
 // C2190.c  

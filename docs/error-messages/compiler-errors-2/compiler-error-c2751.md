@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2751 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2751"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2751"
+title: Error de compilador Error C2751 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2751
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2751
 ms.assetid: 44a3abdf-8a87-4a09-b34b-532c220c310a
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Error del compilador C2751
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e6865276b3ca43db309e474f671a8423d3c307e6
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2751"></a>Error de C2751 de Error de compilador
 'parámetro': no se puede calificar el nombre de un parámetro de función  
   
- No se puede usar un nombre calificado como parámetro de función.  
+ No se puede utilizar un nombre completo como un parámetro de función.  
   
- El código siguiente genera el error C2751:  
+ El ejemplo siguiente genera el error C2751:  
   
 ```  
 // C2751.cpp  

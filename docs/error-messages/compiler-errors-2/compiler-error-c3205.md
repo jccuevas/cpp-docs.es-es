@@ -1,5 +1,5 @@
 ---
-title: C3205 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3205 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 368997af54b7fff2d057a8a94dfca86e2eda5762
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 46b42d19bd42bafbb6baf6b8af368bd10c9dd1ec
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3205"></a>Error del compilador C3205
 falta la lista de argumentos del parámetro de plantilla 'parámetro'  
   
-Un [plantilla](../../cpp/templates-cpp.md) parámetro no existe.  
+Falta un parámetro [template](../../cpp/templates-cpp.md) .  
   
 ## <a name="example"></a>Ejemplo  
 El ejemplo siguiente genera la advertencia C3205:  

@@ -19,33 +19,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 4229a9d9811bad46035451c5d64b7ed06da476d2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 84f725f64e22dc5da1736eb64696b03b0b7ea36a
 ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3181"></a>C3181 de Error del compilador
-'tipo': operando no válido de operador  
+'type': operando no válido para el operador  
   
 Se pasó un parámetro no válido a la [typeid](../../windows/typeid-cpp-component-extensions.md) operador. El parámetro debe ser un tipo administrado.  
   
-Tenga en cuenta que el compilador utiliza alias para tipos nativos que se asignan a los tipos de common language runtime.  
+Tenga en cuenta que el compilador utiliza alias para tipos nativos que se asignan a tipos en common language runtime.  
   
 El ejemplo siguiente genera C3181:  
   

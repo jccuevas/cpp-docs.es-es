@@ -1,36 +1,39 @@
 ---
-title: "Error del compilador C2011 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2011"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2011"
+title: Compilador Error C2011 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2011
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2011
 ms.assetid: 992c9d51-e850-4d53-b86b-02e73b38249c
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Error del compilador C2011
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f32048e0de21e5af2d4d52a0c703813b1a1ff8b
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2011"></a>C2011 de Error del compilador
 'identifier': nueva definición del tipo 'type'  
   
- El identificador ya se ha definido como `type`.  Busque nuevas definiciones del identificador.  
+ El identificador ya se ha definido como `type`. Busque nuevas definiciones del identificador.  
   
- También puede generarse el error C2011 si se importa varias veces un archivo de encabezado o una biblioteca de tipos al mismo archivo.  Para evitar inclusiones múltiples de los tipos definidos en un archivo de encabezado, aplique a este archivo restricciones de inclusión o una directiva [once](../../preprocessor/once.md) de `#pragma`.  
+ También puede generarse el error C2011 si se importa varias veces un archivo de encabezado o una biblioteca de tipos al mismo archivo. Para evitar inclusiones múltiples de los tipos definidos en un archivo de encabezado, utilice #include guards o un `#pragma` [una vez](../../preprocessor/once.md) la directiva en el archivo de encabezado.  
   
- Si necesita encontrar la declaración inicial del tipo redefinido, use la marca de compilador [\/P](../../build/reference/p-preprocess-to-a-file.md) para generar el resultado preprocesado que se ha pasado al compilador.  Con las herramientas de búsqueda de texto, puede buscar instancias del identificador redefinido en el archivo de salida.  
+ Si necesita encontrar la declaración del tipo redefinido inicial, puede utilizar el [/P](../../build/reference/p-preprocess-to-a-file.md) marca de compilador para generar el resultado preprocesado que se pasó al compilador. Con las herramientas de búsqueda de texto, puede buscar instancias del identificador redefinido en el archivo de salida.  
   
  El ejemplo siguiente genera el error C2011 y muestra cómo corregirlo:  
   

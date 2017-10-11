@@ -1,47 +1,50 @@
 ---
-title: "Error del compilador C3068 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3068"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3068"
+title: Error del compilador C3068 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3068
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3068
 ms.assetid: 613e3447-b4a8-4268-a661-297bed63ccdf
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C3068
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 413376428e33cbc703b3371589777ba4fed0c1f7
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'función' : una función 'naked' no puede contener objetos que requerirían desenredo si se produjera una excepción de C\+\+  
+---
+# <a name="compiler-error-c3068"></a>Error del compilador C3068
+'función': una función 'naked' no puede contener objetos que requerirían desenredo si se produjera una excepción de C++  
   
- El compilador no puedo efectuar el desenredo de la pila en una función [naked](../../cpp/naked-cpp.md) que produjo una excepción porque se creó un objeto temporal en la función y se especificó un control de excepciones de C\+\+ \([\/EHsc](../../build/reference/eh-exception-handling-model.md)\).  
+ El compilador no pudo realizar el desenredo de pila en una [naked](../../cpp/naked-cpp.md) función que produjo una excepción porque se creó un objeto temporal en la función y el control de excepciones de C++ ([/EHsc](../../build/reference/eh-exception-handling-model.md)) se ha especificado.  
   
- Para resolver este error, realice al menos una de las acciones siguientes:  
+ Para resolver este error, realice al menos una de las siguientes acciones:  
   
--   No compile con \/EHsc.  
+-   No se compile con/EHsc.  
   
 -   No marque la función como `naked`.  
   
 -   No cree un objeto temporal en la función.  
   
- Si una función crea un objeto temporal en la pila, si la función produce una excepción y está habilitado el control de excepciones de C\+\+, el compilador limpiará la pila si se produce una excepción.  
+ Si una función crea un objeto temporal en la pila, si la función produce una excepción, y si está habilitado el control de excepciones de C++, el compilador limpiará la pila si se produce una excepción.  
   
- Cuando se produce una excepción, el código generado por el compilador, llamado prólogo y epílogo y que no está presente en una función naked, se ejecuta para una función.  
+ Cuando se produce una excepción, compilador genera código, llamado prólogo y epílogo y que no están presentes en una función naked, se ejecuta para una función.  
   
-## Ejemplo  
- El código siguiente genera el error C3068:  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C3068:  
   
 ```  
 // C3068.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Error del compilador C2970 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2970"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2970"
+title: Error del compilador C2970 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2970
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2970
 ms.assetid: 21d90348-20d3-438c-b278-efdbfb93a7d2
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Error del compilador C2970
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc125b400a718805af2ee0829100c056fffa29a3
+ms.contentlocale: es-es
+ms.lasthandoff: 10/10/2017
 
-'clase' : parámetro de plantilla 'parámetro' : 'argumento' : no se puede usar una expresión que requiere objetos con vinculación interna como argumento sin tipo definido  
+---
+# <a name="compiler-error-c2970"></a>Error del compilador C2970
+'clase': parámetro de plantilla 'param': 'arg': no se puede usar una expresión que contenga objetos con vinculación interna como un argumento sin tipo  
   
- No se puede usar el nombre o dirección de una variable estática como argumento de plantilla.  La clase de plantilla espera un valor const que se pueda evaluar en tiempo de compilación.  
+ No se puede usar el nombre o la dirección de una variable estática como argumento de plantilla. La clase de plantilla espera un valor constante que se pueden evaluar en tiempo de compilación.  
   
- El código siguiente genera el error C2970:  
+ El ejemplo siguiente genera C2970:  
   
 ```  
 // C2970.cpp  

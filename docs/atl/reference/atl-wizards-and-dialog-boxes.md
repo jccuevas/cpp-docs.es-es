@@ -1,40 +1,45 @@
 ---
-title: "Asistentes y cuadros de di&#225;logo de ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, class wizards"
+title: "Cuadros de diálogo y asistentes ATL | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL, class wizards
 ms.assetid: 51cf002a-83bc-41ba-aeb8-364ea2331375
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Asistentes y cuadros de di&#225;logo de ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 4c335d5146e28d3331fac8b0073a6bd6c7d1def5
+ms.contentlocale: es-es
+ms.lasthandoff: 10/09/2017
 
-Los asistentes de Active Template Library \(ATL\) generan código de la plancha de caldera para las distintas clases de objetos COM.  Puede ejecutar los asistentes abriendo el menú contextual para un proyecto en **Explorador de soluciones** y eligiendo **Agregar**, **Clase**.  
+---
+# <a name="atl-wizards-and-dialog-boxes"></a>Cuadros de diálogo y asistentes ATL
+Los asistentes de Active Template Library (ATL) generan código reutilizable para diversos tipos de objetos COM. Puede ejecutar los asistentes, abra el menú contextual para un proyecto en **el Explorador de soluciones** y elegir **agregar**, **clase**.  
   
-## Artículos relacionados  
+## <a name="related-articles"></a>Artículos relacionados  
   
 |Título|Descripción|  
-|------------|-----------------|  
-|[Crear un proyecto ATL](../../atl/reference/creating-an-atl-project.md)|Describe el asistente para proyectos ATL y sus valores.|  
-|[ATL Simple Object](../../atl/reference/adding-an-atl-simple-object.md)|Crea un objeto básico.|  
-|[ATL Property Page](../../atl/reference/adding-an-atl-property-page.md)|Crea una página de propiedades básica.|  
-|[ATL OLE DB Provider](../../atl/reference/adding-an-atl-ole-db-provider.md)|Crear un proveedor OLE DB básico.|  
-|[ATL OLE DB Consumer](../../atl/reference/adding-an-atl-ole-db-consumer.md)|Crea un consumidor básico de OLE DB.|  
-|[ATL Dialog Box](../../atl/reference/adding-an-atl-dialog-box.md)|Crea un cuadro de diálogo básico.|  
-|[ATL Control](../../atl/reference/adding-an-atl-control.md)|Crea un control ActiveX básico.|  
-|[ATL COM\+ 1.0 Component](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)|Crea un componente básico de ATL COM\+ 1,0|  
-|[ATL Active Server Page Component](../../atl/reference/adding-an-atl-active-server-page-component.md)|Crea un componente básico de páginas Active Server ATL.|  
-|[ATL COM Desktop Components](../../atl/atl-com-desktop-components.md)|Vínculos a la documentación de ATL.|
+|-----------|-----------------|  
+|[Creación de un proyecto ATL](../../atl/reference/creating-an-atl-project.md)|Describe el Asistente para proyectos ATL y su configuración.|  
+|[Objeto Simple ATL](../../atl/reference/adding-an-atl-simple-object.md)|Crea un objeto básico.|  
+|[Página de propiedades ATL](../../atl/reference/adding-an-atl-property-page.md)|Crea una página de propiedades básicas.|  
+|[Proveedor OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)|Crea un proveedor de OLE DB básico.|  
+|[Consumidor OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)|Crea un consumidor OLE DB básico.|  
+|[Cuadro de diálogo ATL](../../atl/reference/adding-an-atl-dialog-box.md)|Crea un cuadro de diálogo básica.|  
+|[Controles de ATL](../../atl/reference/adding-an-atl-control.md)|Crea un control ActiveX básico.|  
+|[Componente COM + 1.0 ATL](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)|Crea un componente básico de COM + 1.0 ATL|  
+|[Componentes de páginas Active Server ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)|Crea un componente básico de páginas Active Server ATL.|  
+|[Componentes de escritorio COM de ATL](../../atl/atl-com-desktop-components.md)|Vínculos a la documentación de ATL.|
+
+
