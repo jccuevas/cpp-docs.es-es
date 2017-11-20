@@ -1,13 +1,8 @@
 ---
 redirect_url: /cpp/parallel/concrt/reference/reference-concurrency-runtime
-translationtype: Human Translation
-ms.sourcegitcommit: 03a061fec9fc378d33e7bbdbd13b6339778ea379
 ms.openlocfilehash: 803645b2fc6b72ca63a5988cbe9bf2a5d0080868
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-
-
-
-<!--HONumber=Feb17_HO4-->
-
-

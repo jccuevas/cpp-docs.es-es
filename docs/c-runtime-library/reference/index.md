@@ -1,13 +1,8 @@
 ---
 redirect_url: /cpp/c-runtime-library/crt-alphabetical-function-reference
-translationtype: Human Translation
-ms.sourcegitcommit: 26e4b29cc488ddc69872a90a00d66575eaacd1dc
 ms.openlocfilehash: d40af49cf3c39d0ba56d41876a4f76bb4212ea9a
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-
-
-
-<!--HONumber=Feb17_HO4-->
-
-

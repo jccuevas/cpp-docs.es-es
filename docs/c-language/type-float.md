@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - type float
 - exponent length
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - IEEE floating-point representation
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: cb53ac2375a5afa9ac3c2f1d2d7b2ba9de1b7141
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="type-float"></a>Tipo float
 Los números de punto flotante utilizan el formato IEEE (Institute of Electrical and Electronics Engineers). Los valores de precisión sencilla con el tipo float tienen 4 bytes, formados por un bit de signo, un exponente binario de 8 bits con exceso 127 y una mantisa de 23 bits. La mantisa representa un número entre 1,0 y 2,0. Puesto que el bit de alto nivel de la mantisa siempre es 1, no se almacena en el número. En esta representación se proporciona un intervalo de aproximadamente 3,4E-38 a 3,4E+38 para el tipo float.  

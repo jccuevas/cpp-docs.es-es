@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - external definitions
 - linkage [C++], external
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - visibility, variables
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 729d46f1e228127b712e1533c7eab5976f690663
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Especificadores de clase de almacenamiento para las declaraciones de nivel externo
 Las variables externas son variables en el ámbito de archivo. Se definen fuera de cualquier función y pueden estar disponibles para muchas funciones. Las funciones solo se pueden definir en el nivel externo y, por consiguiente, no pueden anidarse. De forma predeterminada, todas las referencias a variables y funciones externas del mismo nombre son referencias al mismo objeto, lo que significa que tienen “vinculación externa”. (Puede utilizar la palabra clave **static** para invalidar esto. Vea la información que aparece más adelante en esta sección para conocer más detalles sobre **static**).  

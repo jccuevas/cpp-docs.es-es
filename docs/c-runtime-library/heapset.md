@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _heapset
+apiname: _heapset
 apilocation:
 - msvcr90.dll
 - msvcr80.dll
@@ -22,8 +20,7 @@ apitype: DLLExport
 f1_keywords:
 - _heapset
 - heapset
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - checking heap
 - heapset function
@@ -31,31 +28,15 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 0bcd8094d0b07927c8f85baf81d6ae834d283d9d
-ms.contentlocale: es-es
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: e9449637887a05c64179c6b9d31712c8becfa87b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="heapset"></a>_heapset
 Comprueba que los montones mantienen una coherencia mínima y establece las entradas libres a un valor especificado.  
@@ -95,7 +76,7 @@ int _heapset(
 ## <a name="remarks"></a>Comentarios  
  La función `_heapset` muestra las ubicaciones de memoria libre o los nodos que se han sobrescrito accidentalmente.  
   
- `_heapset` comprueba la coherencia mínima en el montón y establece cada byte de las entradas libres del montón en el valor `fill`. Este valor conocido muestra las ubicaciones de memoria del montón que contienen nodos libres y las que contienen datos que se escribieron involuntariamente en la memoria liberada. Si el sistema operativo no admite `_heapset`(por ejemplo Windows 98), la función devuelve `_HEAPOK` y establece `errno` en `ENOSYS`.  
+ `_heapset` comprueba la coherencia mínima en el montón y, después, establece cada byte de las entradas libres del montón al valor `fill` . Este valor conocido muestra las ubicaciones de memoria del montón que contienen nodos libres y las que contienen datos que se escribieron involuntariamente en la memoria liberada. Si el sistema operativo no admite `_heapset`(por ejemplo Windows 98), la función devuelve `_HEAPOK` y establece `errno` en `ENOSYS`.  
   
 ## <a name="requirements"></a>Requisitos  
   

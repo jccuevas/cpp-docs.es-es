@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.io
-dev_langs:
-- C++
+f1_keywords: c.io
+dev_langs: C++
 helpviewer_keywords:
 - routines, console and port I/O
 - routines
@@ -20,30 +17,15 @@ helpviewer_keywords:
 - I/O [CRT], port
 - I/O routines, console and port I/O
 ms.assetid: 0eee1c92-9b3d-41e0-a43a-257e546eeec8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: f252a10b0d340b6fceac2c2372cdf991764c83c4
-ms.contentlocale: es-es
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 44d262e27b47de0826024cb26e7f19280c6ed54e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="console-and-port-io"></a>E/S de consola y de puerto
 Estas rutinas leen y escriben en la consola o en el puerto especificado. Las rutinas de E/S de consola no son compatibles con las rutinas de la biblioteca de E/S de secuencia o de E/S de bajo nivel. No es necesario abrir ni cerrar la consola o el puerto antes de ejecutar la E/S, por lo que no hay rutinas abiertas ni cerradas en esta categoría. En los sistemas operativos Windows, el resultado de estas funciones siempre se dirige a la consola y no se puede redirigir.  

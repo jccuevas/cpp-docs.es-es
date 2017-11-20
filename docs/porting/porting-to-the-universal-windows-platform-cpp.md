@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
-ms.openlocfilehash: 76a4bae07fd93a393084b6f108fead3ec32988f1
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: ffd33877602ebb666ffbd11ff76aa973927f307a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Migrar a la Plataforma universal de Windows (C++)
 En este tema encontrará información sobre cómo migrar código de C++ existente a la plataforma de aplicación de Windows 10, la Plataforma universal de Windows. Por *universal* se entiende que el código puede iniciarse en cualquier dispositivo que ejecute Windows 10, incluidos equipos de escritorio, teléfonos, tabletas y futuros dispositivos que ejecuten Windows 10. Puede crear un solo proyecto y una sola interfaz de usuario basada en XAML que funcione bien en cualquier dispositivo que ejecute Windows 10. Puede usar características de diseño dinámico XAML para que la interfaz de la aplicación se adapte a distintos tamaños de pantalla.  
   
- La documentación del Centro de desarrollo de Windows contiene una guía para portar aplicaciones de Windows 8.1 a la Plataforma universal de Windows. Vea [Portar de Windows Runtime 8 a UWP](https://msdn.microsoft.com/windows/uwp/porting/w8x-to-uwp-root). Aunque la guía se centra principalmente en el código de C#, la mayor parte es aplicable a C++. Los procedimientos siguientes contienen información más detallada.  
+ La documentación del Centro de desarrollo de Windows contiene una guía para portar aplicaciones de Windows 8.1 a la Plataforma universal de Windows. Consulte [Mover de Windows Runtime 8 a UWP](https://msdn.microsoft.com/windows/uwp/porting/w8x-to-uwp-root). Aunque la guía se centra principalmente en el código de C#, la mayor parte es aplicable a C++. Los procedimientos siguientes contienen información más detallada.  
   
  Este tema contiene los siguientes procedimientos para portar código a UWP.  
   
@@ -133,4 +115,3 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 ## <a name="see-also"></a>Vea también  
  [Guía de migración de Visual C++](../porting/porting-to-the-universal-windows-platform-cpp.md)   
  [Desarrollar aplicaciones para la Plataforma universal de Windows (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)
-

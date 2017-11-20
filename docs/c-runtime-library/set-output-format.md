@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _set_output_format
+apiname: _set_output_format
 apilocation:
 - msvcrt.dll
 - msvcr120.dll
@@ -22,8 +20,7 @@ apitype: DLLExport
 f1_keywords:
 - set_output_format
 - _set_output_format
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _TWO_DIGIT_EXPONENT constant
 - output formatting
@@ -31,31 +28,15 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 602f4460af0e08e6515fb4559bec2d49bbc56e75
-ms.contentlocale: es-es
-ms.lasthandoff: 03/07/2017
-
+ms.openlocfilehash: 937a452b145fd3d30518f8c4b786ab79b46d5cea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="setoutputformat"></a>_set_output_format
 Personaliza los formatos de salida que usan las funciones de E/S con formato.  
@@ -81,7 +62,7 @@ unsigned int _set_output_format(
 ## <a name="remarks"></a>Comentarios  
  `_set_output_format` se usa para configurar la salida de funciones de E/S con formato tales como [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). En la actualidad, la única convención de formato que esta función puede cambiar es el número de dígitos que se muestran en los exponentes de la salida de números de punto flotante.  
   
- De forma predeterminada, la salida de números de punto flotante con funciones como `printf_s`, `wprintf_s`y funciones relacionadas de la biblioteca de C estándar de Visual C++ imprime tres dígitos del exponente, incluso aunque no se requieran tres dígitos para representar el valor del exponente. Se utilizan ceros para rellenar el valor hasta los tres dígitos. `_set_output_format` le permite cambiar este comportamiento para que solo se impriman dos dígitos en el exponente, a menos que, debido al tamaño del exponente, sea necesario un tercer dígito.  
+ De forma predeterminada, la salida de números de punto flotante con funciones como `printf_s`, `wprintf_s`y funciones relacionadas de la biblioteca de C estándar de Visual C++ imprime tres dígitos del exponente, incluso aunque no se requieran tres dígitos para representar el valor del exponente. Se utilizan ceros para rellenar el valor hasta los tres dígitos. `_set_output_format` le permite cambiar este comportamiento para que solo se impriman dos dígitos en el exponente, a menos que sea necesario un tercer dígito debido al tamaño del exponente.  
   
  Para habilitar los exponentes de dos dígitos, llame a esta función con el parámetro `_TWO_DIGIT_EXPONENT`, como se muestra en el ejemplo. Para deshabilitar los exponentes de dos dígitos, llame a esta función con un argumento de 0.  
   

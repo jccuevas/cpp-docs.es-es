@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.files
-dev_langs:
-- C++
+f1_keywords: c.files
+dev_langs: C++
 helpviewer_keywords:
 - files [C++], handling
 - files [C++], opening
 - files [C++], manipulating
 ms.assetid: 48119e2e-e94f-4602-b08b-b72440f731d8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: fde5ffecc3046d181e5a0b6cfcd42ee3115fce97
-ms.contentlocale: es-es
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 2e35d3f9a248d280f4ba617da89eb3993414a525
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="file-handling"></a>Control de archivos
 Use estas rutinas para crear, eliminar y controlar archivos, y para establecer y comprobar permisos de acceso a archivos.  
@@ -52,7 +33,7 @@ Use estas rutinas para crear, eliminar y controlar archivos, y para establecer y
   
  Estas rutinas operan sobre los archivos designados por un descriptor de archivos.  
   
-|Rutina|Uso|  
+|Rutina|Use|  
 |-------------|---------|  
 |[_chsize](../c-runtime-library/reference/chsize.md),[_chsize_s](../c-runtime-library/reference/chsize-s.md)|Cambiar el tamaño del archivo|  
 |[_filelength, _filelengthi64](../c-runtime-library/reference/filelength-filelengthi64.md)|Obtener la longitud del archivo|  
@@ -67,7 +48,7 @@ Use estas rutinas para crear, eliminar y controlar archivos, y para establecer y
   
  Estas rutinas operan sobre archivos especificados por una ruta de acceso o un nombre de archivo.  
   
-|Rutina|Uso|  
+|Rutina|Use|  
 |-------------|---------|  
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md), [_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|Comprobar la configuración de los permisos de archivo|  
 |[_chmod, _wchmod](../c-runtime-library/reference/chmod-wchmod.md)|Cambiar la configuración de los permisos de archivo|  
@@ -85,7 +66,7 @@ Use estas rutinas para crear, eliminar y controlar archivos, y para establecer y
   
  Estas rutinas abren archivos.  
   
-|Rutina|Uso|  
+|Rutina|Use|  
 |-------------|---------|  
 |[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Abrir un archivo y devolver un puntero al archivo abierto|  
 |[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|Abrir un flujo con uso compartido de archivos y devolver un puntero al archivo abierto|  

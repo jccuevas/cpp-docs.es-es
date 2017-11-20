@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,8 +14,7 @@ f1_keywords:
 - _daylight
 - _tzname
 - daylight
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - time zones
 - time adjustments
@@ -30,31 +28,15 @@ helpviewer_keywords:
 - tzname function
 - time-zone variables
 ms.assetid: d06c7292-6b99-4aba-b284-16a96570c856
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 0b2b40db8d478eeb1570022bd1c901c2c28a883b
-ms.contentlocale: es-es
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: c2c14f4bf492b18107aefc744d6e443fdeef3fec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight, _dstbias, _timezone y _tzname
 `_daylight`, `_dstbias`, `_timezone` y `_tzname` se usan en algunas rutinas de fecha y hora para realizar ajustes de hora local. Estas variables globales han quedado en desuso en las versiones funcionales más seguras, que deben usarse en lugar de la variables globales.  

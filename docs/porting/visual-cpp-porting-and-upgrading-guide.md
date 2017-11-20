@@ -4,23 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: d548106a8820c9eea4e6c2956615fff8c6cd514c
-ms.contentlocale: es-es
-ms.lasthandoff: 06/01/2017
-
+ms.openlocfilehash: 274154eb0688bc974a34b511d0aa39d08bb27b61
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guía de migración y actualización de Visual C++
 Este tema proporciona a una guía para actualizar código de Visual C++. Esto incluye lograr que el código se compile y ejecute correctamente en una versión más reciente de las herramientas, así como sacar partido de las nuevas funciones de Visual Studio y del lenguaje. En este tema también se incluye información acerca de la migración de aplicaciones heredadas a plataformas más modernas.  
@@ -97,4 +94,3 @@ Este tema proporciona a una guía para actualizar código de Visual C++. Esto in
   
 ## <a name="see-also"></a>Vea también  
  [Visual C++](../visual-cpp-in-visual-studio.md)
-

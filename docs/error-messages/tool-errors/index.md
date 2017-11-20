@@ -1,13 +1,8 @@
 ---
 redirect_url: /cpp/error-messages/tool-errors/bscmake-errors-bk1500-through-bk4505
-translationtype: Human Translation
-ms.sourcegitcommit: 567ae1bdb057e8bde3ba6e109857350785682b60
 ms.openlocfilehash: 99f3f5abd2d6aeb57a385d667093798595551031
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-
-
-
-<!--HONumber=Feb17_HO4-->
-
-

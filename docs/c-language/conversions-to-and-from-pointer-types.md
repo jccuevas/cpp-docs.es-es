@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - pointers, converting
 - conversions, pointer
 - type casts, involving pointers
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 1751c19ba222bbdf9dfc30a290201289db1af850
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Conversiones entre tipos de puntero
 Un puntero a un tipo de valor se puede convertir en un puntero a un tipo diferente. Sin embargo, el resultado puede ser indefinido debido a los requisitos de alineación y a los tamaños de los tipos diferentes en el almacenamiento. Un puntero a un objeto se puede convertir en un puntero a un objeto cuyo tipo requiere una alineación de almacenamiento igual o menos estricta, y viceversa, sin necesidad de hacer cambios.  

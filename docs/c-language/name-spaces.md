@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - union keyword [C], tags
 - enumeration tags
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - tags, structure tags
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: ba0a5fcce92c0d8afe19e3b98d2ba20e1d22d6a4
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="name-spaces"></a>Espacios de nombres
 El compilador configura “espacios de nombres” para distinguir entre los identificadores utilizados para los diferentes tipos de elementos. Los nombres de cada espacio de nombres deben ser únicos para evitar conflictos, pero un nombre idéntico puede aparecer en más de un espacio de nombres. Esto significa que se puede utilizar el mismo identificador para dos o más elementos diferentes, siempre que los elementos estén en diferentes espacios de nombres. El compilador puede resolver referencias en función del contexto sintáctico del identificador en el programa.  

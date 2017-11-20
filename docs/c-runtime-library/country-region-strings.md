@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.strings
-dev_langs:
-- C++
-helpviewer_keywords:
-- country/region strings
+f1_keywords: c.strings
+dev_langs: C++
+helpviewer_keywords: country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 3c250e47688e5fbcb32779d58dd8fe8973cdc96c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: HT
-ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
-ms.openlocfilehash: 272ce38cee55661a3f4a1eb751c8808b355b59be
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 Las cadenas de país y la región se pueden combinar con una cadena de idioma para crear una especificación de configuración regional para las funciones `setlocale`, `_wsetlocale`, `_create_locale`y `_wcreate_locale` . Para listas de nombres de países o regiones compatibles con varias versiones del sistema operativo Windows, consulte la [Referencia de la API de compatibilidad con el idioma nacional (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). En las listas, la cadena de país o región puede ser cualquiera de los valores de país en la columna **Configuración regional (país o región de idioma)** o cualquiera de las abreviaturas de la columna de **Abreviatura de nombre de país o región**. Para información adicional sobre compatibilidad de idioma en el sistema operativo Windows por versión, consulte [Apéndice A: Comportamiento del producto](http://msdn.microsoft.com/goglobal/bb896001.aspx) en [MS-LCID]: Referencia de identificador de configuración regional (LCID) de Windows.  

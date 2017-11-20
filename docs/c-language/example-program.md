@@ -4,23 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 976b3c21e24a8e1e6c99664b31d32f85985d7f55
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="example-program"></a>Programa de ejemplo
 El siguiente programa de origen de C se compone de dos archivos de código fuente. Proporciona información general sobre las distintas declaraciones y definiciones posibles en un programa de C. En las secciones posteriores de este libro se describe cómo escribir estas declaraciones, definiciones e inicializaciones, y cómo utilizar las palabras clave de C **static** y `extern`. La función `printf` se declara en el archivo de encabezado de C STDIO.H.  

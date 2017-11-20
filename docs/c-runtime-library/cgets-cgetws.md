@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -24,8 +23,7 @@ f1_keywords:
 - cgetws
 - _cgetws
 - _cgets
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _cgetws function
 - strings [C++], getting from console
@@ -34,37 +32,21 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 57e2d4bf3c84c44917ccfea8ca6584f1c94f5200
-ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: ced8ca3ec392caf29cd3cbc41fe462bd24546f26
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
-Obtiene una cadena de caracteres de la consola. Hay disponibles versiones más seguras de estas funciones; consulte [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
+Obtiene una cadena de caracteres de la consola. Hay disponibles versiones más seguras de estas funciones; vea [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
   
 > [!IMPORTANT]
->  Estas funciones están obsoletas. A partir de Visual Studio 2015, no están disponibles en CRT. Las versiones seguras de estas funciones, _cgets_s y _cgetws_s, siguen estando disponibles. Para obtener información sobre estas funciones alternativas, consulte [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
+>  Estas funciones están obsoletas. A partir de Visual Studio 2015, no están disponibles en CRT. Las versiones seguras de estas funciones, _cgets_s y _cgetws_s, siguen estando disponibles. Para obtener información sobre estas funciones alternativas, vea [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
   
 > [!IMPORTANT]
 >  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
@@ -93,14 +75,14 @@ wchar_t *_cgetws(
  Ubicación de almacenamiento de los datos.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `_cgets` y `_cgetws` devuelven un puntero al principio de la cadena, en `buffer[2]`. Si `buffer` es `NULL`, estas funciones invocan al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, devuelven `NULL` y establecen `errno` en `EINVAL`.  
+ `_cgets` y `_cgetws` devuelven un puntero al principio de la cadena, en `buffer[2]`. Si `buffer` es `NULL`, estas funciones invocan el controlador de parámetros no válidos, como se describe en [Parameter Validation](../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, devuelven `NULL` y establecen `errno` en `EINVAL`.  
   
 ## <a name="remarks"></a>Comentarios  
  Estas funciones leen una cadena de caracteres de la consola y almacenan la cadena y su longitud en la ubicación que indica `buffer`. El parámetro `buffer` debe ser un puntero a una matriz de caracteres. El primer elemento de la matriz, `buffer[0]`, debe contener la longitud máxima (en caracteres) de la cadena que se va a leer. La matriz debe tener suficientes elementos para contener la cadena, un carácter de terminación nulo ('\0') y 2 bytes adicionales. La función lee los caracteres hasta una combinación de retorno de carro–salto de línea (CR-LF), o hasta que se lee el número de caracteres especificado. La cadena se almacena a partir de `buffer[2]`. Si la función lee una combinación CR-LF, almacena el carácter nulo ('\0'). A continuación, la función almacena la longitud real de la cadena en el segundo elemento de la matriz, `buffer[1]`.  
   
- Como todas las claves de edición están activas cuando se llama a `_cgets` o `_cgetws` desde una ventana de la consola, al pulsar F3 se repite la última entrada.  
+ Como todas las claves de edición están activas cuando se llama a `_cgets` o `_cgetws` desde una ventana de la consola, al presionar F3 se repite la última entrada.  
   
- En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulte [Sobrecargas de plantilla seguras](../c-runtime-library/secure-template-overloads.md).  
+ En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   

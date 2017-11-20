@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 01/10/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
-ms.openlocfilehash: d2707321719e5ff6afa84203fd79d975bb696960
-ms.contentlocale: es-es
-ms.lasthandoff: 06/30/2017
-
+ms.openlocfilehash: cdcfd815f520ff5d9e3931945eeb7b3597ec2393
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-
 # <a name="porting-third-party-libraries"></a>Migración de bibliotecas de terceros
 
 Cuando actualice un proyecto a la versión actual de Visual C++, también debe actualizar las bibliotecas que usa el proyecto para que así la biblioteca y el proyecto estén compilados con la misma versión y tipo de compilador. (Para obtener más información, vea [Información general sobre posibles problemas de actualización](overview-of-potential-upgrade-issues-visual-cpp.md)). 
@@ -42,4 +38,3 @@ En el caso de bibliotecas propiedad de terceros (que no son de código abierto),
   
 ## <a name="see-also"></a>Vea también  
  [Guía de migración y actualización de Visual C++](visual-cpp-porting-and-upgrading-guide.md)
-

@@ -4,46 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
 - _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
 - _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
 - secure template overloads
 ms.assetid: 562741d0-39c0-485e-8529-73d740f29f8f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 507270783542ca0f76632c180b23330653b0018f
-ms.contentlocale: es-es
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: 04eae2c263c8b26e44e8c1b05736061ad9291ef0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="secure-template-overloads"></a>Sobrecargas de plantilla seguras
 Microsoft ha dejado de usar muchas funciones de la biblioteca en tiempo de ejecución (CRT) en favor de versiones con seguridad mejorada. Por ejemplo, `strcpy_s` es la sustitución más segura para `strcpy`. Las funciones en desuso son orígenes comunes de errores de seguridad, ya que no impiden operaciones que pueden sobrescribir la memoria. De forma predeterminada, el compilador genera una advertencia de desuso cuando se usa una de estas funciones. La biblioteca CRT proporciona sobrecargas de plantilla de C++ para estas funciones con el fin de facilitar la transición a variantes más seguras.  

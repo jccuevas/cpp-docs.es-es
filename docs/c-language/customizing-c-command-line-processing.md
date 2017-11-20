@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _spawn functions
 - command line, processing
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - suppressing environment processing
 - _exec function
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 00194acd1aa72db73f75a2cb5aa5700df02be0a3
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="customizing-c-command-line-processing"></a>Personalizar el procesamiento de línea de comandos de C
 Si el programa no acepta argumentos de línea de comandos, puede guardar una pequeña cantidad de espacio suprimiendo el uso de la rutina de biblioteca que realiza el procesamiento de la línea de comandos. Esta rutina se denomina **_setargv**, o **_wsetargv** en el entorno de caracteres anchos, como se describe en [Expansión de argumentos comodín](../c-language/expanding-wildcard-arguments.md). Para suprimir su uso, defina una rutina que no haga nada en el archivo que contiene la función **main** y denomínela **_setargv**, o **_wsetargv** en el entorno de caracteres anchos. La llamada a **_setargv** o **_wsetargv** se satisface mediante la definición de **_setargv** o **_wsetargv** y no se carga la versión de la biblioteca.  

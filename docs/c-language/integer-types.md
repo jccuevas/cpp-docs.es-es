@@ -4,42 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - integer data type, integer types in C++
 - integer constants
 - integer types
 - integers, types
 ms.assetid: c8926a5e-0e98-4e37-9b05-ce97961379bd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 7b03bfad7912aa74c5520f6dfc23f70856188f0e
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 4b5ce16963e027771bd82a8e2820e0b9ba319806
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="integer-types"></a>Tipos enteros
 A cada constante entera se le asigna un tipo basado en su valor y en la manera en que se expresa. Puede forzar cualquier constante entera al tipo **long** anexando la letra **l** o **L** al final de la constante; puede forzarla para que sea del tipo `unsigned` anexando **u** o **U** al valor. La letra **l** minúscula se puede confundir con el dígito 1 y debe evitarse. Algunas formas de constantes enteras **long** son las siguientes:  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - extern keyword [C]
 - storage class specifiers, extern
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 0f11789f985c67b59b076bed7ec849a864688743
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="extern-storage-class-specifier"></a>extern (Especificador de clase de almacenamiento)
 Una variable declarada con el especificador de clase de almacenamiento `extern` es una referencia a una variable con el mismo nombre definido en el nivel externo en cualquiera de los archivos de código fuente del programa. La declaración interna `extern` se utiliza para hacer que la definición de variable de nivel externo esté visible en el bloque. A menos que se declare de otra manera en el nivel externo, una variable declarada con la palabra clave `extern` solo está visible en el bloque en el que se declara.  
